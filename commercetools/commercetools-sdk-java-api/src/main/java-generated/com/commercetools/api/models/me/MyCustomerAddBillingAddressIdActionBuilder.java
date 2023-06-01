@@ -1,10 +1,11 @@
-
 package com.commercetools.api.models.me;
 
-import java.util.*;
-
+import com.commercetools.api.models.me.MyCustomerUpdateAction;
+import com.commercetools.api.models.me.MyCustomerAddBillingAddressIdAction;
 import javax.annotation.Nullable;
-
+import java.util.*;
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -17,56 +18,67 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     MyCustomerAddBillingAddressIdAction myCustomerAddBillingAddressIdAction = MyCustomerAddBillingAddressIdAction.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class MyCustomerAddBillingAddressIdActionBuilder implements Builder<MyCustomerAddBillingAddressIdAction> {
 
+    
     @Nullable
     private String addressId;
-
+    
+    
     @Nullable
     private String addressKey;
 
+    
     /**
      *  <p><code>id</code> of the Address to become a billing address.</p>
      * @param addressId value to be set
      * @return Builder
      */
-
+    
     public MyCustomerAddBillingAddressIdActionBuilder addressId(@Nullable final String addressId) {
         this.addressId = addressId;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p><code>key</code> of the Address to become a billing address.</p>
      * @param addressKey value to be set
      * @return Builder
      */
-
+    
     public MyCustomerAddBillingAddressIdActionBuilder addressKey(@Nullable final String addressKey) {
         this.addressKey = addressKey;
         return this;
     }
+    
+    
 
     /**
      *  <p><code>id</code> of the Address to become a billing address.</p>
      * @return addressId
      */
-
+    
     @Nullable
-    public String getAddressId() {
+    public String getAddressId(){
         return this.addressId;
     }
-
+    
     /**
      *  <p><code>key</code> of the Address to become a billing address.</p>
      * @return addressKey
      */
-
+    
     @Nullable
-    public String getAddressKey() {
+    public String getAddressKey(){
         return this.addressKey;
     }
 
@@ -77,7 +89,7 @@ public class MyCustomerAddBillingAddressIdActionBuilder implements Builder<MyCus
     public MyCustomerAddBillingAddressIdAction build() {
         return new MyCustomerAddBillingAddressIdActionImpl(addressId, addressKey);
     }
-
+    
     /**
      * builds MyCustomerAddBillingAddressIdAction without checking for non-null required values
      * @return MyCustomerAddBillingAddressIdAction
@@ -88,7 +100,7 @@ public class MyCustomerAddBillingAddressIdActionBuilder implements Builder<MyCus
 
     /**
      * factory method for an instance of MyCustomerAddBillingAddressIdActionBuilder
-     * @return builder
+     * @return builder 
      */
     public static MyCustomerAddBillingAddressIdActionBuilder of() {
         return new MyCustomerAddBillingAddressIdActionBuilder();

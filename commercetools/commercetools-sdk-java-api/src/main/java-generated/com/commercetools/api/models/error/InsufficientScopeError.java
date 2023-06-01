@@ -1,16 +1,20 @@
-
 package com.commercetools.api.models.error;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
+import com.commercetools.api.models.error.ErrorObject;
+import com.commercetools.api.models.error.InsufficientScopeErrorImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * InsufficientScopeError
@@ -23,9 +27,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .message("{message}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = InsufficientScopeErrorImpl.class)
 public interface InsufficientScopeError extends ErrorObject {
 
@@ -34,13 +41,16 @@ public interface InsufficientScopeError extends ErrorObject {
      */
     String INSUFFICIENT_SCOPE = "insufficient_scope";
 
+
+
     /**
      * factory method
      * @return instance of InsufficientScopeError
      */
-    public static InsufficientScopeError of() {
+    public static InsufficientScopeError of(){
         return new InsufficientScopeErrorImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy InsufficientScopeError
@@ -77,7 +87,7 @@ public interface InsufficientScopeError extends ErrorObject {
     public static InsufficientScopeErrorBuilder builder() {
         return InsufficientScopeErrorBuilder.of();
     }
-
+    
     /**
      * create builder for InsufficientScopeError instance
      * @param template instance with prefilled values for the builder
@@ -86,6 +96,7 @@ public interface InsufficientScopeError extends ErrorObject {
     public static InsufficientScopeErrorBuilder builder(final InsufficientScopeError template) {
         return InsufficientScopeErrorBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -96,7 +107,7 @@ public interface InsufficientScopeError extends ErrorObject {
     default <T> T withInsufficientScopeError(Function<InsufficientScopeError, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

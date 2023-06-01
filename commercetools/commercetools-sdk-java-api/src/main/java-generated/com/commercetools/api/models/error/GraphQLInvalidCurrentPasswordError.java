@@ -1,17 +1,20 @@
-
 package com.commercetools.api.models.error;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
+import com.commercetools.api.models.error.GraphQLErrorObject;
+import com.commercetools.api.models.error.GraphQLInvalidCurrentPasswordErrorImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Returned when the current password of the Customer does not match.</p>
@@ -28,9 +31,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     GraphQLInvalidCurrentPasswordError graphQLInvalidCurrentPasswordError = GraphQLInvalidCurrentPasswordError.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = GraphQLInvalidCurrentPasswordErrorImpl.class)
 public interface GraphQLInvalidCurrentPasswordError extends GraphQLErrorObject {
 
@@ -47,13 +53,15 @@ public interface GraphQLInvalidCurrentPasswordError extends GraphQLErrorObject {
     @JsonProperty("code")
     public String getCode();
 
+
     /**
      * factory method
      * @return instance of GraphQLInvalidCurrentPasswordError
      */
-    public static GraphQLInvalidCurrentPasswordError of() {
+    public static GraphQLInvalidCurrentPasswordError of(){
         return new GraphQLInvalidCurrentPasswordErrorImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy GraphQLInvalidCurrentPasswordError
@@ -72,8 +80,7 @@ public interface GraphQLInvalidCurrentPasswordError extends GraphQLErrorObject {
      * @return copy instance
      */
     @Nullable
-    public static GraphQLInvalidCurrentPasswordError deepCopy(
-            @Nullable final GraphQLInvalidCurrentPasswordError template) {
+    public static GraphQLInvalidCurrentPasswordError deepCopy(@Nullable final GraphQLInvalidCurrentPasswordError template) {
         if (template == null) {
             return null;
         }
@@ -89,7 +96,7 @@ public interface GraphQLInvalidCurrentPasswordError extends GraphQLErrorObject {
     public static GraphQLInvalidCurrentPasswordErrorBuilder builder() {
         return GraphQLInvalidCurrentPasswordErrorBuilder.of();
     }
-
+    
     /**
      * create builder for GraphQLInvalidCurrentPasswordError instance
      * @param template instance with prefilled values for the builder
@@ -98,6 +105,7 @@ public interface GraphQLInvalidCurrentPasswordError extends GraphQLErrorObject {
     public static GraphQLInvalidCurrentPasswordErrorBuilder builder(final GraphQLInvalidCurrentPasswordError template) {
         return GraphQLInvalidCurrentPasswordErrorBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -108,7 +116,7 @@ public interface GraphQLInvalidCurrentPasswordError extends GraphQLErrorObject {
     default <T> T withGraphQLInvalidCurrentPasswordError(Function<GraphQLInvalidCurrentPasswordError, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

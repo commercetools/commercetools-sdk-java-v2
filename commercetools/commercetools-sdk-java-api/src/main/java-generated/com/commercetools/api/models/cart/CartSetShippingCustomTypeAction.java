@@ -1,19 +1,22 @@
-
 package com.commercetools.api.models.cart;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-
+import com.commercetools.api.models.cart.CartUpdateAction;
 import com.commercetools.api.models.type.FieldContainer;
 import com.commercetools.api.models.type.TypeResourceIdentifier;
+import com.commercetools.api.models.cart.CartSetShippingCustomTypeActionImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>This action sets, overwrites, or removes any existing Custom Type and Custom Fields for the Cart's <code>shippingMethod</code> or <code>shipping</code>.</p>
@@ -25,9 +28,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     CartSetShippingCustomTypeAction cartSetShippingCustomTypeAction = CartSetShippingCustomTypeAction.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = CartSetShippingCustomTypeActionImpl.class)
 public interface CartSetShippingCustomTypeAction extends CartUpdateAction {
 
@@ -40,10 +46,9 @@ public interface CartSetShippingCustomTypeAction extends CartUpdateAction {
      *  <p>The <code>shippingKey</code> of the Shipping to customize. Used to specify which Shipping Method to customize on a Cart with <code>Multiple</code> ShippingMode. Leave this empty to customize the one and only ShippingMethod on a <code>Single</code> ShippingMode Cart.</p>
      * @return shippingKey
      */
-
+    
     @JsonProperty("shippingKey")
     public String getShippingKey();
-
     /**
      *  <p>Defines the Type that extends the specified ShippingMethod with Custom Fields. If absent, any existing Type and Custom Fields are removed from the ShippingMethod.</p>
      * @return type
@@ -51,7 +56,6 @@ public interface CartSetShippingCustomTypeAction extends CartUpdateAction {
     @Valid
     @JsonProperty("type")
     public TypeResourceIdentifier getType();
-
     /**
      *  <p>Sets the Custom Fields fields for the <code>shippingMethod</code>.</p>
      * @return fields
@@ -64,30 +68,34 @@ public interface CartSetShippingCustomTypeAction extends CartUpdateAction {
      *  <p>The <code>shippingKey</code> of the Shipping to customize. Used to specify which Shipping Method to customize on a Cart with <code>Multiple</code> ShippingMode. Leave this empty to customize the one and only ShippingMethod on a <code>Single</code> ShippingMode Cart.</p>
      * @param shippingKey value to be set
      */
-
+    
     public void setShippingKey(final String shippingKey);
-
+    
+    
     /**
      *  <p>Defines the Type that extends the specified ShippingMethod with Custom Fields. If absent, any existing Type and Custom Fields are removed from the ShippingMethod.</p>
      * @param type value to be set
      */
-
+    
     public void setType(final TypeResourceIdentifier type);
-
+    
+    
     /**
      *  <p>Sets the Custom Fields fields for the <code>shippingMethod</code>.</p>
      * @param fields value to be set
      */
-
+    
     public void setFields(final FieldContainer fields);
+    
 
     /**
      * factory method
      * @return instance of CartSetShippingCustomTypeAction
      */
-    public static CartSetShippingCustomTypeAction of() {
+    public static CartSetShippingCustomTypeAction of(){
         return new CartSetShippingCustomTypeActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy CartSetShippingCustomTypeAction
@@ -126,7 +134,7 @@ public interface CartSetShippingCustomTypeAction extends CartUpdateAction {
     public static CartSetShippingCustomTypeActionBuilder builder() {
         return CartSetShippingCustomTypeActionBuilder.of();
     }
-
+    
     /**
      * create builder for CartSetShippingCustomTypeAction instance
      * @param template instance with prefilled values for the builder
@@ -135,6 +143,7 @@ public interface CartSetShippingCustomTypeAction extends CartUpdateAction {
     public static CartSetShippingCustomTypeActionBuilder builder(final CartSetShippingCustomTypeAction template) {
         return CartSetShippingCustomTypeActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -145,7 +154,7 @@ public interface CartSetShippingCustomTypeAction extends CartUpdateAction {
     default <T> T withCartSetShippingCustomTypeAction(Function<CartSetShippingCustomTypeAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

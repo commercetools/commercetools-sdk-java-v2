@@ -1,9 +1,11 @@
-
 package com.commercetools.api.predicates.query.error;
 
 import com.commercetools.api.predicates.query.*;
 
-public class GraphQLDuplicateEnumValuesErrorQueryBuilderDsl {
+import java.util.function.Function;
+
+
+public class GraphQLDuplicateEnumValuesErrorQueryBuilderDsl  {
     public GraphQLDuplicateEnumValuesErrorQueryBuilderDsl() {
     }
 
@@ -12,15 +14,12 @@ public class GraphQLDuplicateEnumValuesErrorQueryBuilderDsl {
     }
 
     public StringComparisonPredicateBuilder<GraphQLDuplicateEnumValuesErrorQueryBuilderDsl> code() {
-        return new StringComparisonPredicateBuilder<>(
-            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("code")),
-            p -> new CombinationQueryPredicate<>(p, GraphQLDuplicateEnumValuesErrorQueryBuilderDsl::of));
+        return new StringComparisonPredicateBuilder<>(BinaryQueryPredicate.of().left(new ConstantQueryPredicate("code")),
+        p -> new CombinationQueryPredicate<>(p, GraphQLDuplicateEnumValuesErrorQueryBuilderDsl::of));
     }
-
     public StringCollectionPredicateBuilder<GraphQLDuplicateEnumValuesErrorQueryBuilderDsl> duplicates() {
-        return new StringCollectionPredicateBuilder<>(
-            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("duplicates")),
-            p -> new CombinationQueryPredicate<>(p, GraphQLDuplicateEnumValuesErrorQueryBuilderDsl::of));
+        return new StringCollectionPredicateBuilder<>(BinaryQueryPredicate.of().left(new ConstantQueryPredicate("duplicates")),
+        p -> new CombinationQueryPredicate<>(p, GraphQLDuplicateEnumValuesErrorQueryBuilderDsl::of));
     }
-
+    
 }

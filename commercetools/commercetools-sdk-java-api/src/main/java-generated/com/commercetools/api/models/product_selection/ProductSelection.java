@@ -1,24 +1,27 @@
-
 package com.commercetools.api.models.product_selection;
-
-import java.time.*;
-import java.time.ZonedDateTime;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.common.BaseResource;
 import com.commercetools.api.models.common.CreatedBy;
 import com.commercetools.api.models.common.LastModifiedBy;
 import com.commercetools.api.models.common.LocalizedString;
+import com.commercetools.api.models.product_selection.ProductSelectionMode;
+import com.commercetools.api.models.product_selection.ProductSelectionTypeEnum;
 import com.commercetools.api.models.type.CustomFields;
+import java.time.ZonedDateTime;
+import com.commercetools.api.models.product_selection.ProductSelectionImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * ProductSelection
@@ -37,15 +40,15 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .mode(ProductSelectionMode.INDIVIDUAL)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = ProductSelectionImpl.class)
-public interface ProductSelection
-        extends BaseResource, ProductSelectionMixin, com.commercetools.api.models.DomainResource<ProductSelection>,
-        com.commercetools.api.models.Referencable<ProductSelection>,
-        com.commercetools.api.models.ResourceIdentifiable<ProductSelection>,
-        com.commercetools.api.models.Customizable<ProductSelection>, com.commercetools.api.models.WithKey {
+public interface ProductSelection extends BaseResource, ProductSelectionMixin, com.commercetools.api.models.DomainResource<ProductSelection>, com.commercetools.api.models.Referencable<ProductSelection>, com.commercetools.api.models.ResourceIdentifiable<ProductSelection>, com.commercetools.api.models.Customizable<ProductSelection>, com.commercetools.api.models.WithKey {
+
 
     /**
      *  <p>Unique identifier of the ProductSelection.</p>
@@ -54,7 +57,6 @@ public interface ProductSelection
     @NotNull
     @JsonProperty("id")
     public String getId();
-
     /**
      *  <p>Current version of the ProductSelection.</p>
      * @return version
@@ -62,7 +64,6 @@ public interface ProductSelection
     @NotNull
     @JsonProperty("version")
     public Long getVersion();
-
     /**
      *  <p>Date and time (UTC) the ProductSelection was initially created.</p>
      * @return createdAt
@@ -70,7 +71,6 @@ public interface ProductSelection
     @NotNull
     @JsonProperty("createdAt")
     public ZonedDateTime getCreatedAt();
-
     /**
      *  <p>Date and time (UTC) the ProductSelection was last updated.</p>
      * @return lastModifiedAt
@@ -78,7 +78,6 @@ public interface ProductSelection
     @NotNull
     @JsonProperty("lastModifiedAt")
     public ZonedDateTime getLastModifiedAt();
-
     /**
      *  <p>Present on resources updated after 1/02/2019 except for events not tracked.</p>
      * @return lastModifiedBy
@@ -86,7 +85,6 @@ public interface ProductSelection
     @Valid
     @JsonProperty("lastModifiedBy")
     public LastModifiedBy getLastModifiedBy();
-
     /**
      *  <p>Present on resources created after 1/02/2019 except for events not tracked.</p>
      * @return createdBy
@@ -94,15 +92,13 @@ public interface ProductSelection
     @Valid
     @JsonProperty("createdBy")
     public CreatedBy getCreatedBy();
-
     /**
      *  <p>User-defined unique identifier of the ProductSelection.</p>
      * @return key
      */
-
+    
     @JsonProperty("key")
     public String getKey();
-
     /**
      *  <p>Name of the ProductSelection.</p>
      * @return name
@@ -111,7 +107,6 @@ public interface ProductSelection
     @Valid
     @JsonProperty("name")
     public LocalizedString getName();
-
     /**
      *  <p>Number of Products that are currently assigned to this ProductSelection.</p>
      * @return productCount
@@ -119,7 +114,6 @@ public interface ProductSelection
     @NotNull
     @JsonProperty("productCount")
     public Integer getProductCount();
-
     /**
      *  <p>Specifies in which way the Products are assigned to the ProductSelection. Currently, the only way of doing this is to specify each Product individually, either by including or excluding them explicitly.</p>
      * @return type
@@ -127,7 +121,6 @@ public interface ProductSelection
     @Deprecated
     @JsonProperty("type")
     public ProductSelectionTypeEnum getType();
-
     /**
      *  <p>Specifies in which way the Products are assigned to the ProductSelection. Currently, the only way of doing this is to specify each Product individually, either by including or excluding them explicitly.</p>
      * @return mode
@@ -135,7 +128,6 @@ public interface ProductSelection
     @NotNull
     @JsonProperty("mode")
     public ProductSelectionMode getMode();
-
     /**
      *  <p>Custom Fields of the ProductSelection.</p>
      * @return custom
@@ -148,93 +140,106 @@ public interface ProductSelection
      *  <p>Unique identifier of the ProductSelection.</p>
      * @param id value to be set
      */
-
+    
     public void setId(final String id);
-
+    
+    
     /**
      *  <p>Current version of the ProductSelection.</p>
      * @param version value to be set
      */
-
+    
     public void setVersion(final Long version);
-
+    
+    
     /**
      *  <p>Date and time (UTC) the ProductSelection was initially created.</p>
      * @param createdAt value to be set
      */
-
+    
     public void setCreatedAt(final ZonedDateTime createdAt);
-
+    
+    
     /**
      *  <p>Date and time (UTC) the ProductSelection was last updated.</p>
      * @param lastModifiedAt value to be set
      */
-
+    
     public void setLastModifiedAt(final ZonedDateTime lastModifiedAt);
-
+    
+    
     /**
      *  <p>Present on resources updated after 1/02/2019 except for events not tracked.</p>
      * @param lastModifiedBy value to be set
      */
-
+    
     public void setLastModifiedBy(final LastModifiedBy lastModifiedBy);
-
+    
+    
     /**
      *  <p>Present on resources created after 1/02/2019 except for events not tracked.</p>
      * @param createdBy value to be set
      */
-
+    
     public void setCreatedBy(final CreatedBy createdBy);
-
+    
+    
     /**
      *  <p>User-defined unique identifier of the ProductSelection.</p>
      * @param key value to be set
      */
-
+    
     public void setKey(final String key);
-
+    
+    
     /**
      *  <p>Name of the ProductSelection.</p>
      * @param name value to be set
      */
-
+    
     public void setName(final LocalizedString name);
-
+    
+    
     /**
      *  <p>Number of Products that are currently assigned to this ProductSelection.</p>
      * @param productCount value to be set
      */
-
+    
     public void setProductCount(final Integer productCount);
-
+    
+    
     /**
      *  <p>Specifies in which way the Products are assigned to the ProductSelection. Currently, the only way of doing this is to specify each Product individually, either by including or excluding them explicitly.</p>
      * @param type value to be set
      */
     @Deprecated
     public void setType(final ProductSelectionTypeEnum type);
-
+    
+    
     /**
      *  <p>Specifies in which way the Products are assigned to the ProductSelection. Currently, the only way of doing this is to specify each Product individually, either by including or excluding them explicitly.</p>
      * @param mode value to be set
      */
-
+    
     public void setMode(final ProductSelectionMode mode);
-
+    
+    
     /**
      *  <p>Custom Fields of the ProductSelection.</p>
      * @param custom value to be set
      */
-
+    
     public void setCustom(final CustomFields custom);
+    
 
     /**
      * factory method
      * @return instance of ProductSelection
      */
-    public static ProductSelection of() {
+    public static ProductSelection of(){
         return new ProductSelectionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy ProductSelection
@@ -273,8 +278,7 @@ public interface ProductSelection
         instance.setVersion(template.getVersion());
         instance.setCreatedAt(template.getCreatedAt());
         instance.setLastModifiedAt(template.getLastModifiedAt());
-        instance.setLastModifiedBy(
-            com.commercetools.api.models.common.LastModifiedBy.deepCopy(template.getLastModifiedBy()));
+        instance.setLastModifiedBy(com.commercetools.api.models.common.LastModifiedBy.deepCopy(template.getLastModifiedBy()));
         instance.setCreatedBy(com.commercetools.api.models.common.CreatedBy.deepCopy(template.getCreatedBy()));
         instance.setKey(template.getKey());
         instance.setName(com.commercetools.api.models.common.LocalizedString.deepCopy(template.getName()));
@@ -292,7 +296,7 @@ public interface ProductSelection
     public static ProductSelectionBuilder builder() {
         return ProductSelectionBuilder.of();
     }
-
+    
     /**
      * create builder for ProductSelection instance
      * @param template instance with prefilled values for the builder
@@ -301,6 +305,7 @@ public interface ProductSelection
     public static ProductSelectionBuilder builder(final ProductSelection template) {
         return ProductSelectionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -311,11 +316,11 @@ public interface ProductSelection
     default <T> T withProductSelection(Function<ProductSelection, T> helper) {
         return helper.apply(this);
     }
-
     public static com.commercetools.api.models.common.ReferenceTypeId referenceTypeId() {
         return com.commercetools.api.models.common.ReferenceTypeId.PRODUCT_SELECTION;
     }
-
+    
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

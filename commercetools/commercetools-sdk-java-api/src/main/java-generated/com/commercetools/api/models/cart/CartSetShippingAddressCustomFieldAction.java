@@ -1,17 +1,21 @@
-
 package com.commercetools.api.models.cart;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
+import com.commercetools.api.models.cart.CartUpdateAction;
+import java.lang.Object;
+import com.commercetools.api.models.cart.CartSetShippingAddressCustomFieldActionImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * CartSetShippingAddressCustomFieldAction
@@ -24,9 +28,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .name("{name}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = CartSetShippingAddressCustomFieldActionImpl.class)
 public interface CartSetShippingAddressCustomFieldAction extends CartUpdateAction {
 
@@ -42,12 +49,11 @@ public interface CartSetShippingAddressCustomFieldAction extends CartUpdateActio
     @NotNull
     @JsonProperty("name")
     public String getName();
-
     /**
      *  <p>If <code>value</code> is absent or <code>null</code>, this field will be removed if it exists. Removing a field that does not exist returns an InvalidOperation error. If <code>value</code> is provided, it is set for the field defined by <code>name</code>.</p>
      * @return value
      */
-
+    
     @JsonProperty("value")
     public Object getValue();
 
@@ -55,23 +61,26 @@ public interface CartSetShippingAddressCustomFieldAction extends CartUpdateActio
      *  <p>Name of the Custom Field.</p>
      * @param name value to be set
      */
-
+    
     public void setName(final String name);
-
+    
+    
     /**
      *  <p>If <code>value</code> is absent or <code>null</code>, this field will be removed if it exists. Removing a field that does not exist returns an InvalidOperation error. If <code>value</code> is provided, it is set for the field defined by <code>name</code>.</p>
      * @param value value to be set
      */
-
+    
     public void setValue(final Object value);
+    
 
     /**
      * factory method
      * @return instance of CartSetShippingAddressCustomFieldAction
      */
-    public static CartSetShippingAddressCustomFieldAction of() {
+    public static CartSetShippingAddressCustomFieldAction of(){
         return new CartSetShippingAddressCustomFieldActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy CartSetShippingAddressCustomFieldAction
@@ -91,8 +100,7 @@ public interface CartSetShippingAddressCustomFieldAction extends CartUpdateActio
      * @return copy instance
      */
     @Nullable
-    public static CartSetShippingAddressCustomFieldAction deepCopy(
-            @Nullable final CartSetShippingAddressCustomFieldAction template) {
+    public static CartSetShippingAddressCustomFieldAction deepCopy(@Nullable final CartSetShippingAddressCustomFieldAction template) {
         if (template == null) {
             return null;
         }
@@ -109,16 +117,16 @@ public interface CartSetShippingAddressCustomFieldAction extends CartUpdateActio
     public static CartSetShippingAddressCustomFieldActionBuilder builder() {
         return CartSetShippingAddressCustomFieldActionBuilder.of();
     }
-
+    
     /**
      * create builder for CartSetShippingAddressCustomFieldAction instance
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static CartSetShippingAddressCustomFieldActionBuilder builder(
-            final CartSetShippingAddressCustomFieldAction template) {
+    public static CartSetShippingAddressCustomFieldActionBuilder builder(final CartSetShippingAddressCustomFieldAction template) {
         return CartSetShippingAddressCustomFieldActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -126,15 +134,14 @@ public interface CartSetShippingAddressCustomFieldAction extends CartUpdateActio
      * @param helper function to map the object
      * @return mapped value
      */
-    default <T> T withCartSetShippingAddressCustomFieldAction(
-            Function<CartSetShippingAddressCustomFieldAction, T> helper) {
+    default <T> T withCartSetShippingAddressCustomFieldAction(Function<CartSetShippingAddressCustomFieldAction, T> helper) {
         return helper.apply(this);
     }
-
     public static CartSetShippingAddressCustomFieldAction ofUnset(final String name) {
         return CartSetShippingAddressCustomFieldActionBuilder.of().name(name).build();
     }
-
+    
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

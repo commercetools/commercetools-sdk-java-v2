@@ -1,25 +1,27 @@
-
 package com.commercetools.importapi.models.common;
-
-import java.util.Arrays;
-import java.util.Optional;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-
+import java.lang.String;
+import java.util.Arrays;
+import java.util.Optional;
 import io.vrap.rmf.base.client.JsonEnum;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
  * ProductPriceModeEnum
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public interface ProductPriceModeEnum extends JsonEnum {
 
+    
     ProductPriceModeEnum EMBEDDED = ProductPriceModeEnumEnum.EMBEDDED;
-
+    
     ProductPriceModeEnum STANDALONE = ProductPriceModeEnumEnum.STANDALONE;
-
+    
     /**
      * possible values of ProductPriceModeEnum
      */
@@ -28,7 +30,7 @@ public interface ProductPriceModeEnum extends JsonEnum {
          * Embedded
          */
         EMBEDDED("Embedded"),
-
+        
         /**
          * Standalone
          */
@@ -85,7 +87,7 @@ public interface ProductPriceModeEnum extends JsonEnum {
             public String name() {
                 return value.toUpperCase();
             }
-
+            
             public String toString() {
                 return value;
             }
@@ -100,7 +102,7 @@ public interface ProductPriceModeEnum extends JsonEnum {
     public static Optional<ProductPriceModeEnum> findEnumViaJsonName(String jsonName) {
         return Arrays.stream(values()).filter(t -> t.getJsonName().equals(jsonName)).findFirst();
     }
-
+    
     /**
      * possible enum values
      * @return array of possible enum values
@@ -108,5 +110,5 @@ public interface ProductPriceModeEnum extends JsonEnum {
     public static ProductPriceModeEnum[] values() {
         return ProductPriceModeEnumEnum.values();
     }
-
+    
 }

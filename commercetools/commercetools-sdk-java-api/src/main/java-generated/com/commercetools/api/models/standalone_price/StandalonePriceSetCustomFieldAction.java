@@ -1,17 +1,21 @@
-
 package com.commercetools.api.models.standalone_price;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
+import com.commercetools.api.models.standalone_price.StandalonePriceUpdateAction;
+import java.lang.Object;
+import com.commercetools.api.models.standalone_price.StandalonePriceSetCustomFieldActionImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * StandalonePriceSetCustomFieldAction
@@ -24,9 +28,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .name("{name}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = StandalonePriceSetCustomFieldActionImpl.class)
 public interface StandalonePriceSetCustomFieldAction extends StandalonePriceUpdateAction {
 
@@ -42,12 +49,11 @@ public interface StandalonePriceSetCustomFieldAction extends StandalonePriceUpda
     @NotNull
     @JsonProperty("name")
     public String getName();
-
     /**
      *  <p>If <code>value</code> is absent or <code>null</code>, this field will be removed if it exists. Removing a field that does not exist returns an InvalidOperation error. If <code>value</code> is provided, it is set for the field defined by <code>name</code>.</p>
      * @return value
      */
-
+    
     @JsonProperty("value")
     public Object getValue();
 
@@ -55,23 +61,26 @@ public interface StandalonePriceSetCustomFieldAction extends StandalonePriceUpda
      *  <p>Name of the Custom Field.</p>
      * @param name value to be set
      */
-
+    
     public void setName(final String name);
-
+    
+    
     /**
      *  <p>If <code>value</code> is absent or <code>null</code>, this field will be removed if it exists. Removing a field that does not exist returns an InvalidOperation error. If <code>value</code> is provided, it is set for the field defined by <code>name</code>.</p>
      * @param value value to be set
      */
-
+    
     public void setValue(final Object value);
+    
 
     /**
      * factory method
      * @return instance of StandalonePriceSetCustomFieldAction
      */
-    public static StandalonePriceSetCustomFieldAction of() {
+    public static StandalonePriceSetCustomFieldAction of(){
         return new StandalonePriceSetCustomFieldActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy StandalonePriceSetCustomFieldAction
@@ -91,8 +100,7 @@ public interface StandalonePriceSetCustomFieldAction extends StandalonePriceUpda
      * @return copy instance
      */
     @Nullable
-    public static StandalonePriceSetCustomFieldAction deepCopy(
-            @Nullable final StandalonePriceSetCustomFieldAction template) {
+    public static StandalonePriceSetCustomFieldAction deepCopy(@Nullable final StandalonePriceSetCustomFieldAction template) {
         if (template == null) {
             return null;
         }
@@ -109,16 +117,16 @@ public interface StandalonePriceSetCustomFieldAction extends StandalonePriceUpda
     public static StandalonePriceSetCustomFieldActionBuilder builder() {
         return StandalonePriceSetCustomFieldActionBuilder.of();
     }
-
+    
     /**
      * create builder for StandalonePriceSetCustomFieldAction instance
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static StandalonePriceSetCustomFieldActionBuilder builder(
-            final StandalonePriceSetCustomFieldAction template) {
+    public static StandalonePriceSetCustomFieldActionBuilder builder(final StandalonePriceSetCustomFieldAction template) {
         return StandalonePriceSetCustomFieldActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -129,11 +137,11 @@ public interface StandalonePriceSetCustomFieldAction extends StandalonePriceUpda
     default <T> T withStandalonePriceSetCustomFieldAction(Function<StandalonePriceSetCustomFieldAction, T> helper) {
         return helper.apply(this);
     }
-
     public static StandalonePriceSetCustomFieldAction ofUnset(final String name) {
         return StandalonePriceSetCustomFieldActionBuilder.of().name(name).build();
     }
-
+    
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

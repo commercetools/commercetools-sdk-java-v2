@@ -1,9 +1,12 @@
-
 package com.commercetools.api.models.message;
 
+import com.commercetools.api.models.message.MessagePayload;
+import com.commercetools.api.models.quote_request.QuoteRequest;
+import com.commercetools.api.models.message.QuoteRequestCreatedMessagePayload;
+import javax.annotation.Nullable;
 import java.util.*;
 import java.util.function.Function;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -17,55 +20,61 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .quoteRequest(quoteRequestBuilder -> quoteRequestBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class QuoteRequestCreatedMessagePayloadBuilder implements Builder<QuoteRequestCreatedMessagePayload> {
 
+    
+    
     private com.commercetools.api.models.quote_request.QuoteRequest quoteRequest;
 
+    
     /**
      *  <p>Quote Request that was created.</p>
      * @param builder function to build the quoteRequest value
      * @return Builder
      */
-
-    public QuoteRequestCreatedMessagePayloadBuilder quoteRequest(
-            Function<com.commercetools.api.models.quote_request.QuoteRequestBuilder, com.commercetools.api.models.quote_request.QuoteRequestBuilder> builder) {
+    
+    public QuoteRequestCreatedMessagePayloadBuilder quoteRequest(Function<com.commercetools.api.models.quote_request.QuoteRequestBuilder, com.commercetools.api.models.quote_request.QuoteRequestBuilder> builder) {
         this.quoteRequest = builder.apply(com.commercetools.api.models.quote_request.QuoteRequestBuilder.of()).build();
         return this;
     }
-
+    
     /**
      *  <p>Quote Request that was created.</p>
      * @param builder function to build the quoteRequest value
      * @return Builder
      */
-
-    public QuoteRequestCreatedMessagePayloadBuilder withQuoteRequest(
-            Function<com.commercetools.api.models.quote_request.QuoteRequestBuilder, com.commercetools.api.models.quote_request.QuoteRequest> builder) {
+    
+    public QuoteRequestCreatedMessagePayloadBuilder withQuoteRequest(Function<com.commercetools.api.models.quote_request.QuoteRequestBuilder, com.commercetools.api.models.quote_request.QuoteRequest> builder) {
         this.quoteRequest = builder.apply(com.commercetools.api.models.quote_request.QuoteRequestBuilder.of());
         return this;
     }
-
+                    
     /**
      *  <p>Quote Request that was created.</p>
      * @param quoteRequest value to be set
      * @return Builder
      */
-
-    public QuoteRequestCreatedMessagePayloadBuilder quoteRequest(
-            final com.commercetools.api.models.quote_request.QuoteRequest quoteRequest) {
+    
+    public QuoteRequestCreatedMessagePayloadBuilder quoteRequest( final com.commercetools.api.models.quote_request.QuoteRequest quoteRequest) {
         this.quoteRequest = quoteRequest;
         return this;
     }
+    
+    
 
     /**
      *  <p>Quote Request that was created.</p>
      * @return quoteRequest
      */
-
-    public com.commercetools.api.models.quote_request.QuoteRequest getQuoteRequest() {
+    
+    
+    public com.commercetools.api.models.quote_request.QuoteRequest getQuoteRequest(){
         return this.quoteRequest;
     }
 
@@ -77,7 +86,7 @@ public class QuoteRequestCreatedMessagePayloadBuilder implements Builder<QuoteRe
         Objects.requireNonNull(quoteRequest, QuoteRequestCreatedMessagePayload.class + ": quoteRequest is missing");
         return new QuoteRequestCreatedMessagePayloadImpl(quoteRequest);
     }
-
+    
     /**
      * builds QuoteRequestCreatedMessagePayload without checking for non-null required values
      * @return QuoteRequestCreatedMessagePayload
@@ -88,7 +97,7 @@ public class QuoteRequestCreatedMessagePayloadBuilder implements Builder<QuoteRe
 
     /**
      * factory method for an instance of QuoteRequestCreatedMessagePayloadBuilder
-     * @return builder
+     * @return builder 
      */
     public static QuoteRequestCreatedMessagePayloadBuilder of() {
         return new QuoteRequestCreatedMessagePayloadBuilder();

@@ -1,35 +1,42 @@
-
 package com.commercetools.api.models.extension;
 
+import com.commercetools.api.models.extension.ExtensionChangeDestinationAction;
+import com.commercetools.api.models.extension.ExtensionChangeTriggersAction;
+import com.commercetools.api.models.extension.ExtensionSetKeyAction;
+import com.commercetools.api.models.extension.ExtensionSetTimeoutInMsAction;
+import com.commercetools.api.models.extension.ExtensionUpdateAction;
+import javax.annotation.Nullable;
 import java.util.*;
-
+import java.util.function.Function;
+import java.time.ZonedDateTime;
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
  * ExtensionUpdateActionBuilder
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class ExtensionUpdateActionBuilder {
 
     public com.commercetools.api.models.extension.ExtensionChangeDestinationActionBuilder changeDestinationBuilder() {
-        return com.commercetools.api.models.extension.ExtensionChangeDestinationActionBuilder.of();
+       return com.commercetools.api.models.extension.ExtensionChangeDestinationActionBuilder.of();
     }
-
     public com.commercetools.api.models.extension.ExtensionChangeTriggersActionBuilder changeTriggersBuilder() {
-        return com.commercetools.api.models.extension.ExtensionChangeTriggersActionBuilder.of();
+       return com.commercetools.api.models.extension.ExtensionChangeTriggersActionBuilder.of();
     }
-
     public com.commercetools.api.models.extension.ExtensionSetKeyActionBuilder setKeyBuilder() {
-        return com.commercetools.api.models.extension.ExtensionSetKeyActionBuilder.of();
+       return com.commercetools.api.models.extension.ExtensionSetKeyActionBuilder.of();
     }
-
     public com.commercetools.api.models.extension.ExtensionSetTimeoutInMsActionBuilder setTimeoutInMsBuilder() {
-        return com.commercetools.api.models.extension.ExtensionSetTimeoutInMsActionBuilder.of();
+       return com.commercetools.api.models.extension.ExtensionSetTimeoutInMsActionBuilder.of();
     }
 
     /**
      * factory method for an instance of ExtensionUpdateActionBuilder
-     * @return builder
+     * @return builder 
      */
     public static ExtensionUpdateActionBuilder of() {
         return new ExtensionUpdateActionBuilder();

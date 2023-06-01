@@ -1,11 +1,15 @@
-
 package com.commercetools.api.models.custom_object;
 
+import com.commercetools.api.models.common.BaseResource;
+import com.commercetools.api.models.common.CreatedBy;
+import com.commercetools.api.models.common.LastModifiedBy;
+import java.lang.Object;
+import java.time.ZonedDateTime;
+import com.commercetools.api.models.custom_object.CustomObject;
+import javax.annotation.Nullable;
 import java.util.*;
 import java.util.function.Function;
-
-import javax.annotation.Nullable;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -24,259 +28,307 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .key("{key}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class CustomObjectBuilder implements Builder<CustomObject> {
 
+    
+    
     private String id;
-
+    
+    
+    
     private Long version;
-
+    
+    
+    
     private java.time.ZonedDateTime createdAt;
-
+    
+    
+    
     private java.time.ZonedDateTime lastModifiedAt;
-
+    
+    
     @Nullable
     private com.commercetools.api.models.common.LastModifiedBy lastModifiedBy;
-
+    
+    
     @Nullable
     private com.commercetools.api.models.common.CreatedBy createdBy;
-
+    
+    
+    
     private String container;
-
+    
+    
+    
     private String key;
-
+    
+    
+    
     private java.lang.Object value;
 
+    
     /**
      *  <p>Unique identifier of the CustomObject.</p>
      * @param id value to be set
      * @return Builder
      */
-
-    public CustomObjectBuilder id(final String id) {
+    
+    public CustomObjectBuilder id( final String id) {
         this.id = id;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Current version of the CustomObject.</p>
      * @param version value to be set
      * @return Builder
      */
-
-    public CustomObjectBuilder version(final Long version) {
+    
+    public CustomObjectBuilder version( final Long version) {
         this.version = version;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Date and time (UTC) the CustomObject was initially created.</p>
      * @param createdAt value to be set
      * @return Builder
      */
-
-    public CustomObjectBuilder createdAt(final java.time.ZonedDateTime createdAt) {
+    
+    public CustomObjectBuilder createdAt( final java.time.ZonedDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Date and time (UTC) the CustomObject was last updated.</p>
      * @param lastModifiedAt value to be set
      * @return Builder
      */
-
-    public CustomObjectBuilder lastModifiedAt(final java.time.ZonedDateTime lastModifiedAt) {
+    
+    public CustomObjectBuilder lastModifiedAt( final java.time.ZonedDateTime lastModifiedAt) {
         this.lastModifiedAt = lastModifiedAt;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      * @param builder function to build the lastModifiedBy value
      * @return Builder
      */
-
-    public CustomObjectBuilder lastModifiedBy(
-            Function<com.commercetools.api.models.common.LastModifiedByBuilder, com.commercetools.api.models.common.LastModifiedByBuilder> builder) {
+    
+    public CustomObjectBuilder lastModifiedBy(Function<com.commercetools.api.models.common.LastModifiedByBuilder, com.commercetools.api.models.common.LastModifiedByBuilder> builder) {
         this.lastModifiedBy = builder.apply(com.commercetools.api.models.common.LastModifiedByBuilder.of()).build();
         return this;
     }
-
+    
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      * @param builder function to build the lastModifiedBy value
      * @return Builder
      */
-
-    public CustomObjectBuilder withLastModifiedBy(
-            Function<com.commercetools.api.models.common.LastModifiedByBuilder, com.commercetools.api.models.common.LastModifiedBy> builder) {
+    
+    public CustomObjectBuilder withLastModifiedBy(Function<com.commercetools.api.models.common.LastModifiedByBuilder, com.commercetools.api.models.common.LastModifiedBy> builder) {
         this.lastModifiedBy = builder.apply(com.commercetools.api.models.common.LastModifiedByBuilder.of());
         return this;
     }
-
+                    
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      * @param lastModifiedBy value to be set
      * @return Builder
      */
-
-    public CustomObjectBuilder lastModifiedBy(
-            @Nullable final com.commercetools.api.models.common.LastModifiedBy lastModifiedBy) {
+    
+    public CustomObjectBuilder lastModifiedBy(@Nullable final com.commercetools.api.models.common.LastModifiedBy lastModifiedBy) {
         this.lastModifiedBy = lastModifiedBy;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      * @param builder function to build the createdBy value
      * @return Builder
      */
-
-    public CustomObjectBuilder createdBy(
-            Function<com.commercetools.api.models.common.CreatedByBuilder, com.commercetools.api.models.common.CreatedByBuilder> builder) {
+    
+    public CustomObjectBuilder createdBy(Function<com.commercetools.api.models.common.CreatedByBuilder, com.commercetools.api.models.common.CreatedByBuilder> builder) {
         this.createdBy = builder.apply(com.commercetools.api.models.common.CreatedByBuilder.of()).build();
         return this;
     }
-
+    
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      * @param builder function to build the createdBy value
      * @return Builder
      */
-
-    public CustomObjectBuilder withCreatedBy(
-            Function<com.commercetools.api.models.common.CreatedByBuilder, com.commercetools.api.models.common.CreatedBy> builder) {
+    
+    public CustomObjectBuilder withCreatedBy(Function<com.commercetools.api.models.common.CreatedByBuilder, com.commercetools.api.models.common.CreatedBy> builder) {
         this.createdBy = builder.apply(com.commercetools.api.models.common.CreatedByBuilder.of());
         return this;
     }
-
+                    
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      * @param createdBy value to be set
      * @return Builder
      */
-
+    
     public CustomObjectBuilder createdBy(@Nullable final com.commercetools.api.models.common.CreatedBy createdBy) {
         this.createdBy = createdBy;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Namespace to group CustomObjects.</p>
      * @param container value to be set
      * @return Builder
      */
-
-    public CustomObjectBuilder container(final String container) {
+    
+    public CustomObjectBuilder container( final String container) {
         this.container = container;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>User-defined unique identifier of the CustomObject within the defined <code>container</code>.</p>
      * @param key value to be set
      * @return Builder
      */
-
-    public CustomObjectBuilder key(final String key) {
+    
+    public CustomObjectBuilder key( final String key) {
         this.key = key;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>JSON standard types Number, String, Boolean, Array, Object, and common API data types. For values of type Reference the integrity of the data is not guaranteed. If the referenced object is deleted, the API does not delete the corresponding reference to it and the <code>value</code> points to a non-existing object in such case.</p>
      * @param value value to be set
      * @return Builder
      */
-
-    public CustomObjectBuilder value(final java.lang.Object value) {
+    
+    public CustomObjectBuilder value( final java.lang.Object value) {
         this.value = value;
         return this;
     }
+    
+    
 
     /**
      *  <p>Unique identifier of the CustomObject.</p>
      * @return id
      */
-
-    public String getId() {
+    
+    
+    public String getId(){
         return this.id;
     }
-
+    
     /**
      *  <p>Current version of the CustomObject.</p>
      * @return version
      */
-
-    public Long getVersion() {
+    
+    
+    public Long getVersion(){
         return this.version;
     }
-
+    
     /**
      *  <p>Date and time (UTC) the CustomObject was initially created.</p>
      * @return createdAt
      */
-
-    public java.time.ZonedDateTime getCreatedAt() {
+    
+    
+    public java.time.ZonedDateTime getCreatedAt(){
         return this.createdAt;
     }
-
+    
     /**
      *  <p>Date and time (UTC) the CustomObject was last updated.</p>
      * @return lastModifiedAt
      */
-
-    public java.time.ZonedDateTime getLastModifiedAt() {
+    
+    
+    public java.time.ZonedDateTime getLastModifiedAt(){
         return this.lastModifiedAt;
     }
-
+    
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      * @return lastModifiedBy
      */
-
+    
     @Nullable
-    public com.commercetools.api.models.common.LastModifiedBy getLastModifiedBy() {
+    public com.commercetools.api.models.common.LastModifiedBy getLastModifiedBy(){
         return this.lastModifiedBy;
     }
-
+    
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      * @return createdBy
      */
-
+    
     @Nullable
-    public com.commercetools.api.models.common.CreatedBy getCreatedBy() {
+    public com.commercetools.api.models.common.CreatedBy getCreatedBy(){
         return this.createdBy;
     }
-
+    
     /**
      *  <p>Namespace to group CustomObjects.</p>
      * @return container
      */
-
-    public String getContainer() {
+    
+    
+    public String getContainer(){
         return this.container;
     }
-
+    
     /**
      *  <p>User-defined unique identifier of the CustomObject within the defined <code>container</code>.</p>
      * @return key
      */
-
-    public String getKey() {
+    
+    
+    public String getKey(){
         return this.key;
     }
-
+    
     /**
      *  <p>JSON standard types Number, String, Boolean, Array, Object, and common API data types. For values of type Reference the integrity of the data is not guaranteed. If the referenced object is deleted, the API does not delete the corresponding reference to it and the <code>value</code> points to a non-existing object in such case.</p>
      * @return value
      */
-
-    public java.lang.Object getValue() {
+    
+    
+    public java.lang.Object getValue(){
         return this.value;
     }
 
@@ -292,22 +344,20 @@ public class CustomObjectBuilder implements Builder<CustomObject> {
         Objects.requireNonNull(container, CustomObject.class + ": container is missing");
         Objects.requireNonNull(key, CustomObject.class + ": key is missing");
         Objects.requireNonNull(value, CustomObject.class + ": value is missing");
-        return new CustomObjectImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, container, key,
-            value);
+        return new CustomObjectImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, container, key, value);
     }
-
+    
     /**
      * builds CustomObject without checking for non-null required values
      * @return CustomObject
      */
     public CustomObject buildUnchecked() {
-        return new CustomObjectImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, container, key,
-            value);
+        return new CustomObjectImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, container, key, value);
     }
 
     /**
      * factory method for an instance of CustomObjectBuilder
-     * @return builder
+     * @return builder 
      */
     public static CustomObjectBuilder of() {
         return new CustomObjectBuilder();

@@ -1,20 +1,22 @@
-
 package com.commercetools.api.models.me;
-
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.cart.ExternalLineItemTotalPrice;
 import com.commercetools.api.models.common.Money;
+import com.commercetools.api.models.me.MyCartUpdateAction;
+import com.commercetools.api.models.me.MyCartChangeLineItemQuantityActionImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>When multiple shipping addresses are set for a Line Item, use the Remove LineItem and Add LineItem update action to change the shipping details. Since it is not possible for the API to infer how the overall change in the Line Item quantity should be distributed over the sub-quantities, the <code>shippingDetails</code> field is kept in its current state to avoid data loss.</p>
@@ -30,9 +32,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .quantity(0.3)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = MyCartChangeLineItemQuantityActionImpl.class)
 public interface MyCartChangeLineItemQuantityAction extends MyCartUpdateAction {
 
@@ -48,7 +53,6 @@ public interface MyCartChangeLineItemQuantityAction extends MyCartUpdateAction {
     @NotNull
     @JsonProperty("lineItemId")
     public String getLineItemId();
-
     /**
      *  <p>New value to set.</p>
      *  <p>If <code>0</code>, the Line Item is removed from the Cart.</p>
@@ -57,7 +61,6 @@ public interface MyCartChangeLineItemQuantityAction extends MyCartUpdateAction {
     @NotNull
     @JsonProperty("quantity")
     public Long getQuantity();
-
     /**
      *  <p>Sets the LineItem <code>price</code> to the given value when changing the quantity of a Line Item with the <code>ExternalPrice</code> LineItemPriceMode.</p>
      *  <p>The LineItem price is updated as described in LineItem Price selection.</p>
@@ -66,7 +69,6 @@ public interface MyCartChangeLineItemQuantityAction extends MyCartUpdateAction {
     @Valid
     @JsonProperty("externalPrice")
     public Money getExternalPrice();
-
     /**
      *  <p>Sets the LineItem <code>price</code> and <code>totalPrice</code> to the given value when changing the quantity of a Line Item with the <code>ExternalTotal</code> LineItemPriceMode.</p>
      * @return externalTotalPrice
@@ -79,39 +81,44 @@ public interface MyCartChangeLineItemQuantityAction extends MyCartUpdateAction {
      *  <p><code>id</code> of the LineItem to update.</p>
      * @param lineItemId value to be set
      */
-
+    
     public void setLineItemId(final String lineItemId);
-
+    
+    
     /**
      *  <p>New value to set.</p>
      *  <p>If <code>0</code>, the Line Item is removed from the Cart.</p>
      * @param quantity value to be set
      */
-
+    
     public void setQuantity(final Long quantity);
-
+    
+    
     /**
      *  <p>Sets the LineItem <code>price</code> to the given value when changing the quantity of a Line Item with the <code>ExternalPrice</code> LineItemPriceMode.</p>
      *  <p>The LineItem price is updated as described in LineItem Price selection.</p>
      * @param externalPrice value to be set
      */
-
+    
     public void setExternalPrice(final Money externalPrice);
-
+    
+    
     /**
      *  <p>Sets the LineItem <code>price</code> and <code>totalPrice</code> to the given value when changing the quantity of a Line Item with the <code>ExternalTotal</code> LineItemPriceMode.</p>
      * @param externalTotalPrice value to be set
      */
-
+    
     public void setExternalTotalPrice(final ExternalLineItemTotalPrice externalTotalPrice);
+    
 
     /**
      * factory method
      * @return instance of MyCartChangeLineItemQuantityAction
      */
-    public static MyCartChangeLineItemQuantityAction of() {
+    public static MyCartChangeLineItemQuantityAction of(){
         return new MyCartChangeLineItemQuantityActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy MyCartChangeLineItemQuantityAction
@@ -133,8 +140,7 @@ public interface MyCartChangeLineItemQuantityAction extends MyCartUpdateAction {
      * @return copy instance
      */
     @Nullable
-    public static MyCartChangeLineItemQuantityAction deepCopy(
-            @Nullable final MyCartChangeLineItemQuantityAction template) {
+    public static MyCartChangeLineItemQuantityAction deepCopy(@Nullable final MyCartChangeLineItemQuantityAction template) {
         if (template == null) {
             return null;
         }
@@ -142,8 +148,7 @@ public interface MyCartChangeLineItemQuantityAction extends MyCartUpdateAction {
         instance.setLineItemId(template.getLineItemId());
         instance.setQuantity(template.getQuantity());
         instance.setExternalPrice(com.commercetools.api.models.common.Money.deepCopy(template.getExternalPrice()));
-        instance.setExternalTotalPrice(
-            com.commercetools.api.models.cart.ExternalLineItemTotalPrice.deepCopy(template.getExternalTotalPrice()));
+        instance.setExternalTotalPrice(com.commercetools.api.models.cart.ExternalLineItemTotalPrice.deepCopy(template.getExternalTotalPrice()));
         return instance;
     }
 
@@ -154,7 +159,7 @@ public interface MyCartChangeLineItemQuantityAction extends MyCartUpdateAction {
     public static MyCartChangeLineItemQuantityActionBuilder builder() {
         return MyCartChangeLineItemQuantityActionBuilder.of();
     }
-
+    
     /**
      * create builder for MyCartChangeLineItemQuantityAction instance
      * @param template instance with prefilled values for the builder
@@ -163,6 +168,7 @@ public interface MyCartChangeLineItemQuantityAction extends MyCartUpdateAction {
     public static MyCartChangeLineItemQuantityActionBuilder builder(final MyCartChangeLineItemQuantityAction template) {
         return MyCartChangeLineItemQuantityActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -173,7 +179,7 @@ public interface MyCartChangeLineItemQuantityAction extends MyCartUpdateAction {
     default <T> T withMyCartChangeLineItemQuantityAction(Function<MyCartChangeLineItemQuantityAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

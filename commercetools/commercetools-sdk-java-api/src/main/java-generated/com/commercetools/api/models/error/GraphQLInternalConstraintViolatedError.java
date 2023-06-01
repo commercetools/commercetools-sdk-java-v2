@@ -1,17 +1,20 @@
-
 package com.commercetools.api.models.error;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
+import com.commercetools.api.models.error.GraphQLErrorObject;
+import com.commercetools.api.models.error.GraphQLInternalConstraintViolatedErrorImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Returned when certain API-specific constraints were not met. For example, the specified Discount Code was never applied and cannot be updated.</p>
@@ -23,9 +26,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     GraphQLInternalConstraintViolatedError graphQLInternalConstraintViolatedError = GraphQLInternalConstraintViolatedError.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = GraphQLInternalConstraintViolatedErrorImpl.class)
 public interface GraphQLInternalConstraintViolatedError extends GraphQLErrorObject {
 
@@ -42,13 +48,15 @@ public interface GraphQLInternalConstraintViolatedError extends GraphQLErrorObje
     @JsonProperty("code")
     public String getCode();
 
+
     /**
      * factory method
      * @return instance of GraphQLInternalConstraintViolatedError
      */
-    public static GraphQLInternalConstraintViolatedError of() {
+    public static GraphQLInternalConstraintViolatedError of(){
         return new GraphQLInternalConstraintViolatedErrorImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy GraphQLInternalConstraintViolatedError
@@ -67,8 +75,7 @@ public interface GraphQLInternalConstraintViolatedError extends GraphQLErrorObje
      * @return copy instance
      */
     @Nullable
-    public static GraphQLInternalConstraintViolatedError deepCopy(
-            @Nullable final GraphQLInternalConstraintViolatedError template) {
+    public static GraphQLInternalConstraintViolatedError deepCopy(@Nullable final GraphQLInternalConstraintViolatedError template) {
         if (template == null) {
             return null;
         }
@@ -84,16 +91,16 @@ public interface GraphQLInternalConstraintViolatedError extends GraphQLErrorObje
     public static GraphQLInternalConstraintViolatedErrorBuilder builder() {
         return GraphQLInternalConstraintViolatedErrorBuilder.of();
     }
-
+    
     /**
      * create builder for GraphQLInternalConstraintViolatedError instance
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static GraphQLInternalConstraintViolatedErrorBuilder builder(
-            final GraphQLInternalConstraintViolatedError template) {
+    public static GraphQLInternalConstraintViolatedErrorBuilder builder(final GraphQLInternalConstraintViolatedError template) {
         return GraphQLInternalConstraintViolatedErrorBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -101,11 +108,10 @@ public interface GraphQLInternalConstraintViolatedError extends GraphQLErrorObje
      * @param helper function to map the object
      * @return mapped value
      */
-    default <T> T withGraphQLInternalConstraintViolatedError(
-            Function<GraphQLInternalConstraintViolatedError, T> helper) {
+    default <T> T withGraphQLInternalConstraintViolatedError(Function<GraphQLInternalConstraintViolatedError, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

@@ -1,11 +1,12 @@
-
 package com.commercetools.api.models.customer;
 
+import com.commercetools.api.models.customer.CustomerUpdateAction;
+import com.commercetools.api.models.store.StoreResourceIdentifier;
+import com.commercetools.api.models.customer.CustomerSetStoresAction;
+import javax.annotation.Nullable;
 import java.util.*;
 import java.util.function.Function;
-
-import javax.annotation.Nullable;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -18,11 +19,15 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     CustomerSetStoresAction customerSetStoresAction = CustomerSetStoresAction.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class CustomerSetStoresActionBuilder implements Builder<CustomerSetStoresAction> {
 
+    
     @Nullable
     private java.util.List<com.commercetools.api.models.store.StoreResourceIdentifier> stores;
 
@@ -31,97 +36,93 @@ public class CustomerSetStoresActionBuilder implements Builder<CustomerSetStores
      * @param stores value to be set
      * @return Builder
      */
-
-    public CustomerSetStoresActionBuilder stores(
-            @Nullable final com.commercetools.api.models.store.StoreResourceIdentifier... stores) {
+    
+    public CustomerSetStoresActionBuilder stores(@Nullable final com.commercetools.api.models.store.StoreResourceIdentifier ...stores) {
         this.stores = new ArrayList<>(Arrays.asList(stores));
         return this;
     }
-
+    
     /**
      *  <p>ResourceIdentifier of the Stores to set.</p>
      * @param stores value to be set
      * @return Builder
      */
-
-    public CustomerSetStoresActionBuilder stores(
-            @Nullable final java.util.List<com.commercetools.api.models.store.StoreResourceIdentifier> stores) {
+    
+    public CustomerSetStoresActionBuilder stores(@Nullable final java.util.List<com.commercetools.api.models.store.StoreResourceIdentifier> stores) {
         this.stores = stores;
         return this;
     }
-
+    
     /**
      *  <p>ResourceIdentifier of the Stores to set.</p>
      * @param stores value to be set
      * @return Builder
      */
-
-    public CustomerSetStoresActionBuilder plusStores(
-            @Nullable final com.commercetools.api.models.store.StoreResourceIdentifier... stores) {
+    
+    public CustomerSetStoresActionBuilder plusStores(@Nullable final com.commercetools.api.models.store.StoreResourceIdentifier ...stores) {
         if (this.stores == null) {
             this.stores = new ArrayList<>();
         }
         this.stores.addAll(Arrays.asList(stores));
         return this;
     }
-
+    
+    
+    
     /**
      *  <p>ResourceIdentifier of the Stores to set.</p>
      * @param builder function to build the stores value
      * @return Builder
      */
-
-    public CustomerSetStoresActionBuilder plusStores(
-            Function<com.commercetools.api.models.store.StoreResourceIdentifierBuilder, com.commercetools.api.models.store.StoreResourceIdentifierBuilder> builder) {
+    
+    public CustomerSetStoresActionBuilder plusStores(Function<com.commercetools.api.models.store.StoreResourceIdentifierBuilder, com.commercetools.api.models.store.StoreResourceIdentifierBuilder> builder) {
         if (this.stores == null) {
             this.stores = new ArrayList<>();
         }
         this.stores.add(builder.apply(com.commercetools.api.models.store.StoreResourceIdentifierBuilder.of()).build());
         return this;
     }
-
+    
     /**
      *  <p>ResourceIdentifier of the Stores to set.</p>
      * @param builder function to build the stores value
      * @return Builder
      */
-
-    public CustomerSetStoresActionBuilder withStores(
-            Function<com.commercetools.api.models.store.StoreResourceIdentifierBuilder, com.commercetools.api.models.store.StoreResourceIdentifierBuilder> builder) {
+    
+    public CustomerSetStoresActionBuilder withStores(Function<com.commercetools.api.models.store.StoreResourceIdentifierBuilder, com.commercetools.api.models.store.StoreResourceIdentifierBuilder> builder) {
         this.stores = new ArrayList<>();
         this.stores.add(builder.apply(com.commercetools.api.models.store.StoreResourceIdentifierBuilder.of()).build());
         return this;
     }
-
+    
     /**
      *  <p>ResourceIdentifier of the Stores to set.</p>
      * @param builder function to build the stores value
      * @return Builder
      */
-
-    public CustomerSetStoresActionBuilder addStores(
-            Function<com.commercetools.api.models.store.StoreResourceIdentifierBuilder, com.commercetools.api.models.store.StoreResourceIdentifier> builder) {
+    
+    public CustomerSetStoresActionBuilder addStores(Function<com.commercetools.api.models.store.StoreResourceIdentifierBuilder, com.commercetools.api.models.store.StoreResourceIdentifier> builder) {
         return plusStores(builder.apply(com.commercetools.api.models.store.StoreResourceIdentifierBuilder.of()));
     }
-
+    
     /**
      *  <p>ResourceIdentifier of the Stores to set.</p>
      * @param builder function to build the stores value
      * @return Builder
      */
-
-    public CustomerSetStoresActionBuilder setStores(
-            Function<com.commercetools.api.models.store.StoreResourceIdentifierBuilder, com.commercetools.api.models.store.StoreResourceIdentifier> builder) {
+    
+    public CustomerSetStoresActionBuilder setStores(Function<com.commercetools.api.models.store.StoreResourceIdentifierBuilder, com.commercetools.api.models.store.StoreResourceIdentifier> builder) {
         return stores(builder.apply(com.commercetools.api.models.store.StoreResourceIdentifierBuilder.of()));
     }
+                    
 
     /**
      *  <p>ResourceIdentifier of the Stores to set.</p>
      * @return stores
      */
-
+    
     @Nullable
-    public java.util.List<com.commercetools.api.models.store.StoreResourceIdentifier> getStores() {
+    public java.util.List<com.commercetools.api.models.store.StoreResourceIdentifier> getStores(){
         return this.stores;
     }
 
@@ -132,7 +133,7 @@ public class CustomerSetStoresActionBuilder implements Builder<CustomerSetStores
     public CustomerSetStoresAction build() {
         return new CustomerSetStoresActionImpl(stores);
     }
-
+    
     /**
      * builds CustomerSetStoresAction without checking for non-null required values
      * @return CustomerSetStoresAction
@@ -143,7 +144,7 @@ public class CustomerSetStoresActionBuilder implements Builder<CustomerSetStores
 
     /**
      * factory method for an instance of CustomerSetStoresActionBuilder
-     * @return builder
+     * @return builder 
      */
     public static CustomerSetStoresActionBuilder of() {
         return new CustomerSetStoresActionBuilder();

@@ -1,19 +1,21 @@
-
 package com.commercetools.api.models.order_edit;
-
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
 
 import com.commercetools.api.models.cart.ExternalTaxAmountDraft;
 import com.commercetools.api.models.order.StagedOrderUpdateAction;
+import com.commercetools.api.models.order_edit.StagedOrderSetShippingMethodTaxAmountActionImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * StagedOrderSetShippingMethodTaxAmountAction
@@ -25,9 +27,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     StagedOrderSetShippingMethodTaxAmountAction stagedOrderSetShippingMethodTaxAmountAction = StagedOrderSetShippingMethodTaxAmountAction.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = StagedOrderSetShippingMethodTaxAmountActionImpl.class)
 public interface StagedOrderSetShippingMethodTaxAmountAction extends StagedOrderUpdateAction {
 
@@ -36,6 +41,13 @@ public interface StagedOrderSetShippingMethodTaxAmountAction extends StagedOrder
      */
     String SET_SHIPPING_METHOD_TAX_AMOUNT = "setShippingMethodTaxAmount";
 
+    /**
+     *  <p><code>key</code> of the ShippingMethod to update. This is required for Orders with <code>Multiple</code> ShippingMode.</p>
+     * @return shippingKey
+     */
+    
+    @JsonProperty("shippingKey")
+    public String getShippingKey();
     /**
      *  <p>Cannot be used in LineItemDraft or CustomLineItemDraft.</p>
      *  <p>Can only be set by these update actions:</p>
@@ -50,6 +62,14 @@ public interface StagedOrderSetShippingMethodTaxAmountAction extends StagedOrder
     public ExternalTaxAmountDraft getExternalTaxAmount();
 
     /**
+     *  <p><code>key</code> of the ShippingMethod to update. This is required for Orders with <code>Multiple</code> ShippingMode.</p>
+     * @param shippingKey value to be set
+     */
+    
+    public void setShippingKey(final String shippingKey);
+    
+    
+    /**
      *  <p>Cannot be used in LineItemDraft or CustomLineItemDraft.</p>
      *  <p>Can only be set by these update actions:</p>
      *  <ul>
@@ -58,25 +78,27 @@ public interface StagedOrderSetShippingMethodTaxAmountAction extends StagedOrder
      *  </ul>
      * @param externalTaxAmount value to be set
      */
-
+    
     public void setExternalTaxAmount(final ExternalTaxAmountDraft externalTaxAmount);
+    
 
     /**
      * factory method
      * @return instance of StagedOrderSetShippingMethodTaxAmountAction
      */
-    public static StagedOrderSetShippingMethodTaxAmountAction of() {
+    public static StagedOrderSetShippingMethodTaxAmountAction of(){
         return new StagedOrderSetShippingMethodTaxAmountActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy StagedOrderSetShippingMethodTaxAmountAction
      * @param template instance to be copied
      * @return copy instance
      */
-    public static StagedOrderSetShippingMethodTaxAmountAction of(
-            final StagedOrderSetShippingMethodTaxAmountAction template) {
+    public static StagedOrderSetShippingMethodTaxAmountAction of(final StagedOrderSetShippingMethodTaxAmountAction template) {
         StagedOrderSetShippingMethodTaxAmountActionImpl instance = new StagedOrderSetShippingMethodTaxAmountActionImpl();
+        instance.setShippingKey(template.getShippingKey());
         instance.setExternalTaxAmount(template.getExternalTaxAmount());
         return instance;
     }
@@ -87,14 +109,13 @@ public interface StagedOrderSetShippingMethodTaxAmountAction extends StagedOrder
      * @return copy instance
      */
     @Nullable
-    public static StagedOrderSetShippingMethodTaxAmountAction deepCopy(
-            @Nullable final StagedOrderSetShippingMethodTaxAmountAction template) {
+    public static StagedOrderSetShippingMethodTaxAmountAction deepCopy(@Nullable final StagedOrderSetShippingMethodTaxAmountAction template) {
         if (template == null) {
             return null;
         }
         StagedOrderSetShippingMethodTaxAmountActionImpl instance = new StagedOrderSetShippingMethodTaxAmountActionImpl();
-        instance.setExternalTaxAmount(
-            com.commercetools.api.models.cart.ExternalTaxAmountDraft.deepCopy(template.getExternalTaxAmount()));
+        instance.setShippingKey(template.getShippingKey());
+        instance.setExternalTaxAmount(com.commercetools.api.models.cart.ExternalTaxAmountDraft.deepCopy(template.getExternalTaxAmount()));
         return instance;
     }
 
@@ -105,16 +126,16 @@ public interface StagedOrderSetShippingMethodTaxAmountAction extends StagedOrder
     public static StagedOrderSetShippingMethodTaxAmountActionBuilder builder() {
         return StagedOrderSetShippingMethodTaxAmountActionBuilder.of();
     }
-
+    
     /**
      * create builder for StagedOrderSetShippingMethodTaxAmountAction instance
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static StagedOrderSetShippingMethodTaxAmountActionBuilder builder(
-            final StagedOrderSetShippingMethodTaxAmountAction template) {
+    public static StagedOrderSetShippingMethodTaxAmountActionBuilder builder(final StagedOrderSetShippingMethodTaxAmountAction template) {
         return StagedOrderSetShippingMethodTaxAmountActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -122,11 +143,10 @@ public interface StagedOrderSetShippingMethodTaxAmountAction extends StagedOrder
      * @param helper function to map the object
      * @return mapped value
      */
-    default <T> T withStagedOrderSetShippingMethodTaxAmountAction(
-            Function<StagedOrderSetShippingMethodTaxAmountAction, T> helper) {
+    default <T> T withStagedOrderSetShippingMethodTaxAmountAction(Function<StagedOrderSetShippingMethodTaxAmountAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

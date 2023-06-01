@@ -1,20 +1,21 @@
-
 package com.commercetools.api.models.error;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-import java.util.stream.Collectors;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
+import com.commercetools.api.models.error.ErrorObject;
 import com.commercetools.api.models.product.Attribute;
+import com.commercetools.api.models.error.DuplicateAttributeValuesErrorImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Returned when the <code>CombinationUnique</code> AttributeConstraint criteria are not met during an Update Product request.</p>
@@ -28,9 +29,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .plusAttributes(attributesBuilder -> attributesBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = DuplicateAttributeValuesErrorImpl.class)
 public interface DuplicateAttributeValuesError extends ErrorObject {
 
@@ -46,7 +50,6 @@ public interface DuplicateAttributeValuesError extends ErrorObject {
     @NotNull
     @JsonProperty("code")
     public String getCode();
-
     /**
      *  <p><code>"The set of attributes must be unique across all variants."</code></p>
      * @return message
@@ -54,7 +57,6 @@ public interface DuplicateAttributeValuesError extends ErrorObject {
     @NotNull
     @JsonProperty("message")
     public String getMessage();
-
     /**
      *  <p>Conflicting Attributes.</p>
      * @return attributes
@@ -68,31 +70,32 @@ public interface DuplicateAttributeValuesError extends ErrorObject {
      *  <p><code>"The set of attributes must be unique across all variants."</code></p>
      * @param message value to be set
      */
-
+    
     public void setMessage(final String message);
-
+    
+    
     /**
      *  <p>Conflicting Attributes.</p>
      * @param attributes values to be set
      */
-
+    
     @JsonIgnore
-    public void setAttributes(final Attribute... attributes);
-
+    public void setAttributes(final Attribute ...attributes);
     /**
      *  <p>Conflicting Attributes.</p>
      * @param attributes values to be set
      */
-
+    
     public void setAttributes(final List<Attribute> attributes);
 
     /**
      * factory method
      * @return instance of DuplicateAttributeValuesError
      */
-    public static DuplicateAttributeValuesError of() {
+    public static DuplicateAttributeValuesError of(){
         return new DuplicateAttributeValuesErrorImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy DuplicateAttributeValuesError
@@ -121,9 +124,7 @@ public interface DuplicateAttributeValuesError extends ErrorObject {
         instance.setMessage(template.getMessage());
         Optional.ofNullable(template.values()).ifPresent(t -> t.forEach(instance::setValue));
         instance.setAttributes(Optional.ofNullable(template.getAttributes())
-                .map(t -> t.stream()
-                        .map(com.commercetools.api.models.product.Attribute::deepCopy)
-                        .collect(Collectors.toList()))
+                .map(t -> t.stream().map(com.commercetools.api.models.product.Attribute::deepCopy).collect(Collectors.toList()))
                 .orElse(null));
         return instance;
     }
@@ -135,7 +136,7 @@ public interface DuplicateAttributeValuesError extends ErrorObject {
     public static DuplicateAttributeValuesErrorBuilder builder() {
         return DuplicateAttributeValuesErrorBuilder.of();
     }
-
+    
     /**
      * create builder for DuplicateAttributeValuesError instance
      * @param template instance with prefilled values for the builder
@@ -144,6 +145,7 @@ public interface DuplicateAttributeValuesError extends ErrorObject {
     public static DuplicateAttributeValuesErrorBuilder builder(final DuplicateAttributeValuesError template) {
         return DuplicateAttributeValuesErrorBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -154,7 +156,7 @@ public interface DuplicateAttributeValuesError extends ErrorObject {
     default <T> T withDuplicateAttributeValuesError(Function<DuplicateAttributeValuesError, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

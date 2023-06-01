@@ -1,35 +1,37 @@
-
 package com.commercetools.api.models.order;
-
-import java.util.Arrays;
-import java.util.Optional;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-
+import java.lang.String;
+import java.util.Arrays;
+import java.util.Optional;
 import io.vrap.rmf.base.client.JsonEnum;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
  * ShipmentState
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public interface ShipmentState extends JsonEnum {
 
+    
     ShipmentState SHIPPED = ShipmentStateEnum.SHIPPED;
-
+    
     ShipmentState DELIVERED = ShipmentStateEnum.DELIVERED;
-
+    
     ShipmentState READY = ShipmentStateEnum.READY;
-
+    
     ShipmentState PENDING = ShipmentStateEnum.PENDING;
-
+    
     ShipmentState DELAYED = ShipmentStateEnum.DELAYED;
-
+    
     ShipmentState PARTIAL = ShipmentStateEnum.PARTIAL;
-
+    
     ShipmentState BACKORDER = ShipmentStateEnum.BACKORDER;
-
+    
     /**
      * possible values of ShipmentState
      */
@@ -38,32 +40,32 @@ public interface ShipmentState extends JsonEnum {
          * Shipped
          */
         SHIPPED("Shipped"),
-
+        
         /**
          * Delivered
          */
         DELIVERED("Delivered"),
-
+        
         /**
          * Ready
          */
         READY("Ready"),
-
+        
         /**
          * Pending
          */
         PENDING("Pending"),
-
+        
         /**
          * Delayed
          */
         DELAYED("Delayed"),
-
+        
         /**
          * Partial
          */
         PARTIAL("Partial"),
-
+        
         /**
          * Backorder
          */
@@ -120,7 +122,7 @@ public interface ShipmentState extends JsonEnum {
             public String name() {
                 return value.toUpperCase();
             }
-
+            
             public String toString() {
                 return value;
             }
@@ -135,7 +137,7 @@ public interface ShipmentState extends JsonEnum {
     public static Optional<ShipmentState> findEnumViaJsonName(String jsonName) {
         return Arrays.stream(values()).filter(t -> t.getJsonName().equals(jsonName)).findFirst();
     }
-
+    
     /**
      * possible enum values
      * @return array of possible enum values
@@ -143,5 +145,5 @@ public interface ShipmentState extends JsonEnum {
     public static ShipmentState[] values() {
         return ShipmentStateEnum.values();
     }
-
+    
 }

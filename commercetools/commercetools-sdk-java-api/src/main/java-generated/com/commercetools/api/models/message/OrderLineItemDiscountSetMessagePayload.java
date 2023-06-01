@@ -1,23 +1,24 @@
-
 package com.commercetools.api.models.message;
-
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-import java.util.stream.Collectors;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.cart.DiscountedLineItemPriceForQuantity;
 import com.commercetools.api.models.cart.MethodTaxedPrice;
 import com.commercetools.api.models.cart.TaxedItemPrice;
 import com.commercetools.api.models.common.Money;
+import com.commercetools.api.models.message.OrderMessagePayload;
+import com.commercetools.api.models.message.OrderLineItemDiscountSetMessagePayloadImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Generated after a successful recalculation of a Discount on a Line Item.</p>
@@ -33,9 +34,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .plusTaxedPricePortions(taxedPricePortionsBuilder -> taxedPricePortionsBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = OrderLineItemDiscountSetMessagePayloadImpl.class)
 public interface OrderLineItemDiscountSetMessagePayload extends OrderMessagePayload {
 
@@ -51,7 +55,6 @@ public interface OrderLineItemDiscountSetMessagePayload extends OrderMessagePayl
     @NotNull
     @JsonProperty("lineItemId")
     public String getLineItemId();
-
     /**
      *  <p>Array of DiscountedLineItemPriceForQuantity after the Discount recalculation.</p>
      * @return discountedPricePerQuantity
@@ -60,7 +63,6 @@ public interface OrderLineItemDiscountSetMessagePayload extends OrderMessagePayl
     @Valid
     @JsonProperty("discountedPricePerQuantity")
     public List<DiscountedLineItemPriceForQuantity> getDiscountedPricePerQuantity();
-
     /**
      *  <p>Total Price of the Line Item after the Discount recalculation.</p>
      * @return totalPrice
@@ -69,7 +71,6 @@ public interface OrderLineItemDiscountSetMessagePayload extends OrderMessagePayl
     @Valid
     @JsonProperty("totalPrice")
     public Money getTotalPrice();
-
     /**
      *  <p>TaxedItemPrice of the Line Item after the Discount recalculation.</p>
      * @return taxedPrice
@@ -77,7 +78,6 @@ public interface OrderLineItemDiscountSetMessagePayload extends OrderMessagePayl
     @Valid
     @JsonProperty("taxedPrice")
     public TaxedItemPrice getTaxedPrice();
-
     /**
      *  <p>Taxed price of the Shipping Methods in a Cart with <code>Multi</code> ShippingMode.</p>
      * @return taxedPricePortions
@@ -91,61 +91,62 @@ public interface OrderLineItemDiscountSetMessagePayload extends OrderMessagePayl
      *  <p>Unique identifier for the Line Item.</p>
      * @param lineItemId value to be set
      */
-
+    
     public void setLineItemId(final String lineItemId);
-
+    
+    
     /**
      *  <p>Array of DiscountedLineItemPriceForQuantity after the Discount recalculation.</p>
      * @param discountedPricePerQuantity values to be set
      */
-
+    
     @JsonIgnore
-    public void setDiscountedPricePerQuantity(final DiscountedLineItemPriceForQuantity... discountedPricePerQuantity);
-
+    public void setDiscountedPricePerQuantity(final DiscountedLineItemPriceForQuantity ...discountedPricePerQuantity);
     /**
      *  <p>Array of DiscountedLineItemPriceForQuantity after the Discount recalculation.</p>
      * @param discountedPricePerQuantity values to be set
      */
-
-    public void setDiscountedPricePerQuantity(
-            final List<DiscountedLineItemPriceForQuantity> discountedPricePerQuantity);
-
+    
+    public void setDiscountedPricePerQuantity(final List<DiscountedLineItemPriceForQuantity> discountedPricePerQuantity);
+    
     /**
      *  <p>Total Price of the Line Item after the Discount recalculation.</p>
      * @param totalPrice value to be set
      */
-
+    
     public void setTotalPrice(final Money totalPrice);
-
+    
+    
     /**
      *  <p>TaxedItemPrice of the Line Item after the Discount recalculation.</p>
      * @param taxedPrice value to be set
      */
-
+    
     public void setTaxedPrice(final TaxedItemPrice taxedPrice);
-
+    
+    
     /**
      *  <p>Taxed price of the Shipping Methods in a Cart with <code>Multi</code> ShippingMode.</p>
      * @param taxedPricePortions values to be set
      */
-
+    
     @JsonIgnore
-    public void setTaxedPricePortions(final MethodTaxedPrice... taxedPricePortions);
-
+    public void setTaxedPricePortions(final MethodTaxedPrice ...taxedPricePortions);
     /**
      *  <p>Taxed price of the Shipping Methods in a Cart with <code>Multi</code> ShippingMode.</p>
      * @param taxedPricePortions values to be set
      */
-
+    
     public void setTaxedPricePortions(final List<MethodTaxedPrice> taxedPricePortions);
 
     /**
      * factory method
      * @return instance of OrderLineItemDiscountSetMessagePayload
      */
-    public static OrderLineItemDiscountSetMessagePayload of() {
+    public static OrderLineItemDiscountSetMessagePayload of(){
         return new OrderLineItemDiscountSetMessagePayloadImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy OrderLineItemDiscountSetMessagePayload
@@ -168,24 +169,19 @@ public interface OrderLineItemDiscountSetMessagePayload extends OrderMessagePayl
      * @return copy instance
      */
     @Nullable
-    public static OrderLineItemDiscountSetMessagePayload deepCopy(
-            @Nullable final OrderLineItemDiscountSetMessagePayload template) {
+    public static OrderLineItemDiscountSetMessagePayload deepCopy(@Nullable final OrderLineItemDiscountSetMessagePayload template) {
         if (template == null) {
             return null;
         }
         OrderLineItemDiscountSetMessagePayloadImpl instance = new OrderLineItemDiscountSetMessagePayloadImpl();
         instance.setLineItemId(template.getLineItemId());
         instance.setDiscountedPricePerQuantity(Optional.ofNullable(template.getDiscountedPricePerQuantity())
-                .map(t -> t.stream()
-                        .map(com.commercetools.api.models.cart.DiscountedLineItemPriceForQuantity::deepCopy)
-                        .collect(Collectors.toList()))
+                .map(t -> t.stream().map(com.commercetools.api.models.cart.DiscountedLineItemPriceForQuantity::deepCopy).collect(Collectors.toList()))
                 .orElse(null));
         instance.setTotalPrice(com.commercetools.api.models.common.Money.deepCopy(template.getTotalPrice()));
         instance.setTaxedPrice(com.commercetools.api.models.cart.TaxedItemPrice.deepCopy(template.getTaxedPrice()));
         instance.setTaxedPricePortions(Optional.ofNullable(template.getTaxedPricePortions())
-                .map(t -> t.stream()
-                        .map(com.commercetools.api.models.cart.MethodTaxedPrice::deepCopy)
-                        .collect(Collectors.toList()))
+                .map(t -> t.stream().map(com.commercetools.api.models.cart.MethodTaxedPrice::deepCopy).collect(Collectors.toList()))
                 .orElse(null));
         return instance;
     }
@@ -197,16 +193,16 @@ public interface OrderLineItemDiscountSetMessagePayload extends OrderMessagePayl
     public static OrderLineItemDiscountSetMessagePayloadBuilder builder() {
         return OrderLineItemDiscountSetMessagePayloadBuilder.of();
     }
-
+    
     /**
      * create builder for OrderLineItemDiscountSetMessagePayload instance
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static OrderLineItemDiscountSetMessagePayloadBuilder builder(
-            final OrderLineItemDiscountSetMessagePayload template) {
+    public static OrderLineItemDiscountSetMessagePayloadBuilder builder(final OrderLineItemDiscountSetMessagePayload template) {
         return OrderLineItemDiscountSetMessagePayloadBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -214,11 +210,10 @@ public interface OrderLineItemDiscountSetMessagePayload extends OrderMessagePayl
      * @param helper function to map the object
      * @return mapped value
      */
-    default <T> T withOrderLineItemDiscountSetMessagePayload(
-            Function<OrderLineItemDiscountSetMessagePayload, T> helper) {
+    default <T> T withOrderLineItemDiscountSetMessagePayload(Function<OrderLineItemDiscountSetMessagePayload, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

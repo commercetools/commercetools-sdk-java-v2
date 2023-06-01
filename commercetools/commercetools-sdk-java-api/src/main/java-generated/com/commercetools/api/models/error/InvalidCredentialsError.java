@@ -1,17 +1,20 @@
-
 package com.commercetools.api.models.error;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
+import com.commercetools.api.models.error.ErrorObject;
+import com.commercetools.api.models.error.InvalidCredentialsErrorImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Returned when a Customer with the given credentials (matching the given email/password pair) is not found and authentication fails.</p>
@@ -29,9 +32,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .message("{message}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = InvalidCredentialsErrorImpl.class)
 public interface InvalidCredentialsError extends ErrorObject {
 
@@ -47,7 +53,6 @@ public interface InvalidCredentialsError extends ErrorObject {
     @NotNull
     @JsonProperty("code")
     public String getCode();
-
     /**
      *  <p><code>"Account with the given credentials not found."</code></p>
      * @return message
@@ -60,16 +65,18 @@ public interface InvalidCredentialsError extends ErrorObject {
      *  <p><code>"Account with the given credentials not found."</code></p>
      * @param message value to be set
      */
-
+    
     public void setMessage(final String message);
+    
 
     /**
      * factory method
      * @return instance of InvalidCredentialsError
      */
-    public static InvalidCredentialsError of() {
+    public static InvalidCredentialsError of(){
         return new InvalidCredentialsErrorImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy InvalidCredentialsError
@@ -106,7 +113,7 @@ public interface InvalidCredentialsError extends ErrorObject {
     public static InvalidCredentialsErrorBuilder builder() {
         return InvalidCredentialsErrorBuilder.of();
     }
-
+    
     /**
      * create builder for InvalidCredentialsError instance
      * @param template instance with prefilled values for the builder
@@ -115,6 +122,7 @@ public interface InvalidCredentialsError extends ErrorObject {
     public static InvalidCredentialsErrorBuilder builder(final InvalidCredentialsError template) {
         return InvalidCredentialsErrorBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -125,7 +133,7 @@ public interface InvalidCredentialsError extends ErrorObject {
     default <T> T withInvalidCredentialsError(Function<InvalidCredentialsError, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

@@ -1,8 +1,11 @@
-
 package com.commercetools.api.models.business_unit;
 
+import com.commercetools.api.models.business_unit.BusinessUnitUpdateAction;
+import com.commercetools.api.models.business_unit.BusinessUnitChangeNameAction;
+import javax.annotation.Nullable;
 import java.util.*;
-
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -16,30 +19,39 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .name("{name}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class BusinessUnitChangeNameActionBuilder implements Builder<BusinessUnitChangeNameAction> {
 
+    
+    
     private String name;
 
+    
     /**
      *  <p>New name to set.</p>
      * @param name value to be set
      * @return Builder
      */
-
-    public BusinessUnitChangeNameActionBuilder name(final String name) {
+    
+    public BusinessUnitChangeNameActionBuilder name( final String name) {
         this.name = name;
         return this;
     }
+    
+    
 
     /**
      *  <p>New name to set.</p>
      * @return name
      */
-
-    public String getName() {
+    
+    
+    public String getName(){
         return this.name;
     }
 
@@ -51,7 +63,7 @@ public class BusinessUnitChangeNameActionBuilder implements Builder<BusinessUnit
         Objects.requireNonNull(name, BusinessUnitChangeNameAction.class + ": name is missing");
         return new BusinessUnitChangeNameActionImpl(name);
     }
-
+    
     /**
      * builds BusinessUnitChangeNameAction without checking for non-null required values
      * @return BusinessUnitChangeNameAction
@@ -62,7 +74,7 @@ public class BusinessUnitChangeNameActionBuilder implements Builder<BusinessUnit
 
     /**
      * factory method for an instance of BusinessUnitChangeNameActionBuilder
-     * @return builder
+     * @return builder 
      */
     public static BusinessUnitChangeNameActionBuilder of() {
         return new BusinessUnitChangeNameActionBuilder();

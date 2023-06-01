@@ -1,11 +1,11 @@
-
 package com.commercetools.importapi.models.order_patches;
 
+import com.commercetools.importapi.models.common.Address;
+import com.commercetools.importapi.models.order_patches.DeliveryAddressDraft;
+import javax.annotation.Nullable;
 import java.util.*;
 import java.util.function.Function;
-
-import javax.annotation.Nullable;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -19,79 +19,89 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .deliveryId("{deliveryId}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class DeliveryAddressDraftBuilder implements Builder<DeliveryAddressDraft> {
 
+    
+    
     private String deliveryId;
-
+    
+    
     @Nullable
     private com.commercetools.importapi.models.common.Address address;
 
+    
     /**
      * set the value to the deliveryId
      * @param deliveryId value to be set
      * @return Builder
      */
-
-    public DeliveryAddressDraftBuilder deliveryId(final String deliveryId) {
+    
+    public DeliveryAddressDraftBuilder deliveryId( final String deliveryId) {
         this.deliveryId = deliveryId;
         return this;
     }
-
+    
+    
+    
+    
     /**
      * set the value to the address using the builder function
      * @param builder function to build the address value
      * @return Builder
      */
-
-    public DeliveryAddressDraftBuilder address(
-            Function<com.commercetools.importapi.models.common.AddressBuilder, com.commercetools.importapi.models.common.AddressBuilder> builder) {
+    
+    public DeliveryAddressDraftBuilder address(Function<com.commercetools.importapi.models.common.AddressBuilder, com.commercetools.importapi.models.common.AddressBuilder> builder) {
         this.address = builder.apply(com.commercetools.importapi.models.common.AddressBuilder.of()).build();
         return this;
     }
-
+    
     /**
      * set the value to the address using the builder function
      * @param builder function to build the address value
      * @return Builder
      */
-
-    public DeliveryAddressDraftBuilder withAddress(
-            Function<com.commercetools.importapi.models.common.AddressBuilder, com.commercetools.importapi.models.common.Address> builder) {
+    
+    public DeliveryAddressDraftBuilder withAddress(Function<com.commercetools.importapi.models.common.AddressBuilder, com.commercetools.importapi.models.common.Address> builder) {
         this.address = builder.apply(com.commercetools.importapi.models.common.AddressBuilder.of());
         return this;
     }
-
+                    
     /**
      * set the value to the address
      * @param address value to be set
      * @return Builder
      */
-
-    public DeliveryAddressDraftBuilder address(
-            @Nullable final com.commercetools.importapi.models.common.Address address) {
+    
+    public DeliveryAddressDraftBuilder address(@Nullable final com.commercetools.importapi.models.common.Address address) {
         this.address = address;
         return this;
     }
+    
+    
 
     /**
      * value of deliveryId}
      * @return deliveryId
      */
-
-    public String getDeliveryId() {
+    
+    
+    public String getDeliveryId(){
         return this.deliveryId;
     }
-
+    
     /**
      * value of address}
      * @return address
      */
-
+    
     @Nullable
-    public com.commercetools.importapi.models.common.Address getAddress() {
+    public com.commercetools.importapi.models.common.Address getAddress(){
         return this.address;
     }
 
@@ -103,7 +113,7 @@ public class DeliveryAddressDraftBuilder implements Builder<DeliveryAddressDraft
         Objects.requireNonNull(deliveryId, DeliveryAddressDraft.class + ": deliveryId is missing");
         return new DeliveryAddressDraftImpl(deliveryId, address);
     }
-
+    
     /**
      * builds DeliveryAddressDraft without checking for non-null required values
      * @return DeliveryAddressDraft
@@ -114,7 +124,7 @@ public class DeliveryAddressDraftBuilder implements Builder<DeliveryAddressDraft
 
     /**
      * factory method for an instance of DeliveryAddressDraftBuilder
-     * @return builder
+     * @return builder 
      */
     public static DeliveryAddressDraftBuilder of() {
         return new DeliveryAddressDraftBuilder();

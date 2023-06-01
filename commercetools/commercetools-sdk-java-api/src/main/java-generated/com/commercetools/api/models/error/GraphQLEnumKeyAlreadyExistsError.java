@@ -1,17 +1,20 @@
-
 package com.commercetools.api.models.error;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
+import com.commercetools.api.models.error.GraphQLErrorObject;
+import com.commercetools.api.models.error.GraphQLEnumKeyAlreadyExistsErrorImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Returned when an AttributeEnumType or AttributeLocalizedEnumType contains a key that already exists.</p>
@@ -25,9 +28,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .conflictingAttributeName("{conflictingAttributeName}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = GraphQLEnumKeyAlreadyExistsErrorImpl.class)
 public interface GraphQLEnumKeyAlreadyExistsError extends GraphQLErrorObject {
 
@@ -43,7 +49,6 @@ public interface GraphQLEnumKeyAlreadyExistsError extends GraphQLErrorObject {
     @NotNull
     @JsonProperty("code")
     public String getCode();
-
     /**
      *  <p>Conflicting enum key.</p>
      * @return conflictingEnumKey
@@ -51,7 +56,6 @@ public interface GraphQLEnumKeyAlreadyExistsError extends GraphQLErrorObject {
     @NotNull
     @JsonProperty("conflictingEnumKey")
     public String getConflictingEnumKey();
-
     /**
      *  <p>Name of the conflicting Attribute.</p>
      * @return conflictingAttributeName
@@ -64,23 +68,26 @@ public interface GraphQLEnumKeyAlreadyExistsError extends GraphQLErrorObject {
      *  <p>Conflicting enum key.</p>
      * @param conflictingEnumKey value to be set
      */
-
+    
     public void setConflictingEnumKey(final String conflictingEnumKey);
-
+    
+    
     /**
      *  <p>Name of the conflicting Attribute.</p>
      * @param conflictingAttributeName value to be set
      */
-
+    
     public void setConflictingAttributeName(final String conflictingAttributeName);
+    
 
     /**
      * factory method
      * @return instance of GraphQLEnumKeyAlreadyExistsError
      */
-    public static GraphQLEnumKeyAlreadyExistsError of() {
+    public static GraphQLEnumKeyAlreadyExistsError of(){
         return new GraphQLEnumKeyAlreadyExistsErrorImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy GraphQLEnumKeyAlreadyExistsError
@@ -119,7 +126,7 @@ public interface GraphQLEnumKeyAlreadyExistsError extends GraphQLErrorObject {
     public static GraphQLEnumKeyAlreadyExistsErrorBuilder builder() {
         return GraphQLEnumKeyAlreadyExistsErrorBuilder.of();
     }
-
+    
     /**
      * create builder for GraphQLEnumKeyAlreadyExistsError instance
      * @param template instance with prefilled values for the builder
@@ -128,6 +135,7 @@ public interface GraphQLEnumKeyAlreadyExistsError extends GraphQLErrorObject {
     public static GraphQLEnumKeyAlreadyExistsErrorBuilder builder(final GraphQLEnumKeyAlreadyExistsError template) {
         return GraphQLEnumKeyAlreadyExistsErrorBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -138,7 +146,7 @@ public interface GraphQLEnumKeyAlreadyExistsError extends GraphQLErrorObject {
     default <T> T withGraphQLEnumKeyAlreadyExistsError(Function<GraphQLEnumKeyAlreadyExistsError, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

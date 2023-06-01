@@ -1,18 +1,21 @@
-
 package com.commercetools.api.models.me;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-
 import com.commercetools.api.models.common.BaseAddress;
+import com.commercetools.api.models.me.MyCartUpdateAction;
+import com.commercetools.api.models.me.MyCartSetBillingAddressActionImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * MyCartSetBillingAddressAction
@@ -24,9 +27,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     MyCartSetBillingAddressAction myCartSetBillingAddressAction = MyCartSetBillingAddressAction.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = MyCartSetBillingAddressActionImpl.class)
 public interface MyCartSetBillingAddressAction extends MyCartUpdateAction {
 
@@ -47,16 +53,18 @@ public interface MyCartSetBillingAddressAction extends MyCartUpdateAction {
      *  <p>Value to set. If empty, any existing value is removed.</p>
      * @param address value to be set
      */
-
+    
     public void setAddress(final BaseAddress address);
+    
 
     /**
      * factory method
      * @return instance of MyCartSetBillingAddressAction
      */
-    public static MyCartSetBillingAddressAction of() {
+    public static MyCartSetBillingAddressAction of(){
         return new MyCartSetBillingAddressActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy MyCartSetBillingAddressAction
@@ -91,7 +99,7 @@ public interface MyCartSetBillingAddressAction extends MyCartUpdateAction {
     public static MyCartSetBillingAddressActionBuilder builder() {
         return MyCartSetBillingAddressActionBuilder.of();
     }
-
+    
     /**
      * create builder for MyCartSetBillingAddressAction instance
      * @param template instance with prefilled values for the builder
@@ -100,6 +108,7 @@ public interface MyCartSetBillingAddressAction extends MyCartUpdateAction {
     public static MyCartSetBillingAddressActionBuilder builder(final MyCartSetBillingAddressAction template) {
         return MyCartSetBillingAddressActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -110,7 +119,7 @@ public interface MyCartSetBillingAddressAction extends MyCartUpdateAction {
     default <T> T withMyCartSetBillingAddressAction(Function<MyCartSetBillingAddressAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

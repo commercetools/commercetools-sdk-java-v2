@@ -1,18 +1,20 @@
-
 package com.commercetools.api.models.order_edit;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
-
 import com.commercetools.api.models.order.StagedOrderUpdateAction;
+import com.commercetools.api.models.order_edit.StagedOrderRemoveCustomLineItemActionImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * StagedOrderRemoveCustomLineItemAction
@@ -25,9 +27,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .customLineItemId("{customLineItemId}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = StagedOrderRemoveCustomLineItemActionImpl.class)
 public interface StagedOrderRemoveCustomLineItemAction extends StagedOrderUpdateAction {
 
@@ -48,16 +53,18 @@ public interface StagedOrderRemoveCustomLineItemAction extends StagedOrderUpdate
      * set customLineItemId
      * @param customLineItemId value to be set
      */
-
+    
     public void setCustomLineItemId(final String customLineItemId);
+    
 
     /**
      * factory method
      * @return instance of StagedOrderRemoveCustomLineItemAction
      */
-    public static StagedOrderRemoveCustomLineItemAction of() {
+    public static StagedOrderRemoveCustomLineItemAction of(){
         return new StagedOrderRemoveCustomLineItemActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy StagedOrderRemoveCustomLineItemAction
@@ -76,8 +83,7 @@ public interface StagedOrderRemoveCustomLineItemAction extends StagedOrderUpdate
      * @return copy instance
      */
     @Nullable
-    public static StagedOrderRemoveCustomLineItemAction deepCopy(
-            @Nullable final StagedOrderRemoveCustomLineItemAction template) {
+    public static StagedOrderRemoveCustomLineItemAction deepCopy(@Nullable final StagedOrderRemoveCustomLineItemAction template) {
         if (template == null) {
             return null;
         }
@@ -93,16 +99,16 @@ public interface StagedOrderRemoveCustomLineItemAction extends StagedOrderUpdate
     public static StagedOrderRemoveCustomLineItemActionBuilder builder() {
         return StagedOrderRemoveCustomLineItemActionBuilder.of();
     }
-
+    
     /**
      * create builder for StagedOrderRemoveCustomLineItemAction instance
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static StagedOrderRemoveCustomLineItemActionBuilder builder(
-            final StagedOrderRemoveCustomLineItemAction template) {
+    public static StagedOrderRemoveCustomLineItemActionBuilder builder(final StagedOrderRemoveCustomLineItemAction template) {
         return StagedOrderRemoveCustomLineItemActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -113,7 +119,7 @@ public interface StagedOrderRemoveCustomLineItemAction extends StagedOrderUpdate
     default <T> T withStagedOrderRemoveCustomLineItemAction(Function<StagedOrderRemoveCustomLineItemAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

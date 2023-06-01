@@ -1,9 +1,11 @@
-
 package com.commercetools.api.predicates.query.project;
 
 import com.commercetools.api.predicates.query.*;
 
-public class ProjectChangeCountriesActionQueryBuilderDsl {
+import java.util.function.Function;
+
+
+public class ProjectChangeCountriesActionQueryBuilderDsl  {
     public ProjectChangeCountriesActionQueryBuilderDsl() {
     }
 
@@ -12,15 +14,12 @@ public class ProjectChangeCountriesActionQueryBuilderDsl {
     }
 
     public StringComparisonPredicateBuilder<ProjectChangeCountriesActionQueryBuilderDsl> action() {
-        return new StringComparisonPredicateBuilder<>(
-            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("action")),
-            p -> new CombinationQueryPredicate<>(p, ProjectChangeCountriesActionQueryBuilderDsl::of));
+        return new StringComparisonPredicateBuilder<>(BinaryQueryPredicate.of().left(new ConstantQueryPredicate("action")),
+        p -> new CombinationQueryPredicate<>(p, ProjectChangeCountriesActionQueryBuilderDsl::of));
     }
-
     public StringCollectionPredicateBuilder<ProjectChangeCountriesActionQueryBuilderDsl> countries() {
-        return new StringCollectionPredicateBuilder<>(
-            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("countries")),
-            p -> new CombinationQueryPredicate<>(p, ProjectChangeCountriesActionQueryBuilderDsl::of));
+        return new StringCollectionPredicateBuilder<>(BinaryQueryPredicate.of().left(new ConstantQueryPredicate("countries")),
+        p -> new CombinationQueryPredicate<>(p, ProjectChangeCountriesActionQueryBuilderDsl::of));
     }
-
+    
 }

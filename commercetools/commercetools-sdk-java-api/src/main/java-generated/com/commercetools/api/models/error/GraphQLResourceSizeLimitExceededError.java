@@ -1,17 +1,20 @@
-
 package com.commercetools.api.models.error;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
+import com.commercetools.api.models.error.GraphQLErrorObject;
+import com.commercetools.api.models.error.GraphQLResourceSizeLimitExceededErrorImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Returned when the resource exceeds the maximum allowed size of 16 MB.</p>
@@ -23,9 +26,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     GraphQLResourceSizeLimitExceededError graphQLResourceSizeLimitExceededError = GraphQLResourceSizeLimitExceededError.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = GraphQLResourceSizeLimitExceededErrorImpl.class)
 public interface GraphQLResourceSizeLimitExceededError extends GraphQLErrorObject {
 
@@ -42,13 +48,15 @@ public interface GraphQLResourceSizeLimitExceededError extends GraphQLErrorObjec
     @JsonProperty("code")
     public String getCode();
 
+
     /**
      * factory method
      * @return instance of GraphQLResourceSizeLimitExceededError
      */
-    public static GraphQLResourceSizeLimitExceededError of() {
+    public static GraphQLResourceSizeLimitExceededError of(){
         return new GraphQLResourceSizeLimitExceededErrorImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy GraphQLResourceSizeLimitExceededError
@@ -67,8 +75,7 @@ public interface GraphQLResourceSizeLimitExceededError extends GraphQLErrorObjec
      * @return copy instance
      */
     @Nullable
-    public static GraphQLResourceSizeLimitExceededError deepCopy(
-            @Nullable final GraphQLResourceSizeLimitExceededError template) {
+    public static GraphQLResourceSizeLimitExceededError deepCopy(@Nullable final GraphQLResourceSizeLimitExceededError template) {
         if (template == null) {
             return null;
         }
@@ -84,16 +91,16 @@ public interface GraphQLResourceSizeLimitExceededError extends GraphQLErrorObjec
     public static GraphQLResourceSizeLimitExceededErrorBuilder builder() {
         return GraphQLResourceSizeLimitExceededErrorBuilder.of();
     }
-
+    
     /**
      * create builder for GraphQLResourceSizeLimitExceededError instance
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static GraphQLResourceSizeLimitExceededErrorBuilder builder(
-            final GraphQLResourceSizeLimitExceededError template) {
+    public static GraphQLResourceSizeLimitExceededErrorBuilder builder(final GraphQLResourceSizeLimitExceededError template) {
         return GraphQLResourceSizeLimitExceededErrorBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -104,7 +111,7 @@ public interface GraphQLResourceSizeLimitExceededError extends GraphQLErrorObjec
     default <T> T withGraphQLResourceSizeLimitExceededError(Function<GraphQLResourceSizeLimitExceededError, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

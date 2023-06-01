@@ -1,11 +1,11 @@
-
 package com.commercetools.importapi.models.order_patches;
 
+import com.commercetools.importapi.models.orders.TrackingData;
+import com.commercetools.importapi.models.order_patches.ParcelTrackingData;
+import javax.annotation.Nullable;
 import java.util.*;
 import java.util.function.Function;
-
-import javax.annotation.Nullable;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -19,79 +19,89 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .parcelId("{parcelId}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class ParcelTrackingDataBuilder implements Builder<ParcelTrackingData> {
 
+    
+    
     private String parcelId;
-
+    
+    
     @Nullable
     private com.commercetools.importapi.models.orders.TrackingData trackingData;
 
+    
     /**
      * set the value to the parcelId
      * @param parcelId value to be set
      * @return Builder
      */
-
-    public ParcelTrackingDataBuilder parcelId(final String parcelId) {
+    
+    public ParcelTrackingDataBuilder parcelId( final String parcelId) {
         this.parcelId = parcelId;
         return this;
     }
-
+    
+    
+    
+    
     /**
      * set the value to the trackingData using the builder function
      * @param builder function to build the trackingData value
      * @return Builder
      */
-
-    public ParcelTrackingDataBuilder trackingData(
-            Function<com.commercetools.importapi.models.orders.TrackingDataBuilder, com.commercetools.importapi.models.orders.TrackingDataBuilder> builder) {
+    
+    public ParcelTrackingDataBuilder trackingData(Function<com.commercetools.importapi.models.orders.TrackingDataBuilder, com.commercetools.importapi.models.orders.TrackingDataBuilder> builder) {
         this.trackingData = builder.apply(com.commercetools.importapi.models.orders.TrackingDataBuilder.of()).build();
         return this;
     }
-
+    
     /**
      * set the value to the trackingData using the builder function
      * @param builder function to build the trackingData value
      * @return Builder
      */
-
-    public ParcelTrackingDataBuilder withTrackingData(
-            Function<com.commercetools.importapi.models.orders.TrackingDataBuilder, com.commercetools.importapi.models.orders.TrackingData> builder) {
+    
+    public ParcelTrackingDataBuilder withTrackingData(Function<com.commercetools.importapi.models.orders.TrackingDataBuilder, com.commercetools.importapi.models.orders.TrackingData> builder) {
         this.trackingData = builder.apply(com.commercetools.importapi.models.orders.TrackingDataBuilder.of());
         return this;
     }
-
+                    
     /**
      * set the value to the trackingData
      * @param trackingData value to be set
      * @return Builder
      */
-
-    public ParcelTrackingDataBuilder trackingData(
-            @Nullable final com.commercetools.importapi.models.orders.TrackingData trackingData) {
+    
+    public ParcelTrackingDataBuilder trackingData(@Nullable final com.commercetools.importapi.models.orders.TrackingData trackingData) {
         this.trackingData = trackingData;
         return this;
     }
+    
+    
 
     /**
      * value of parcelId}
      * @return parcelId
      */
-
-    public String getParcelId() {
+    
+    
+    public String getParcelId(){
         return this.parcelId;
     }
-
+    
     /**
      * value of trackingData}
      * @return trackingData
      */
-
+    
     @Nullable
-    public com.commercetools.importapi.models.orders.TrackingData getTrackingData() {
+    public com.commercetools.importapi.models.orders.TrackingData getTrackingData(){
         return this.trackingData;
     }
 
@@ -103,7 +113,7 @@ public class ParcelTrackingDataBuilder implements Builder<ParcelTrackingData> {
         Objects.requireNonNull(parcelId, ParcelTrackingData.class + ": parcelId is missing");
         return new ParcelTrackingDataImpl(parcelId, trackingData);
     }
-
+    
     /**
      * builds ParcelTrackingData without checking for non-null required values
      * @return ParcelTrackingData
@@ -114,7 +124,7 @@ public class ParcelTrackingDataBuilder implements Builder<ParcelTrackingData> {
 
     /**
      * factory method for an instance of ParcelTrackingDataBuilder
-     * @return builder
+     * @return builder 
      */
     public static ParcelTrackingDataBuilder of() {
         return new ParcelTrackingDataBuilder();

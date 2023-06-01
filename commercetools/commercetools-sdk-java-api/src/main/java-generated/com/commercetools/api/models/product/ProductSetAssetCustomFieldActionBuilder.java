@@ -1,10 +1,12 @@
-
 package com.commercetools.api.models.product;
 
-import java.util.*;
-
+import com.commercetools.api.models.product.ProductUpdateAction;
+import java.lang.Object;
+import com.commercetools.api.models.product.ProductSetAssetCustomFieldAction;
 import javax.annotation.Nullable;
-
+import java.util.*;
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -18,174 +20,207 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .name("{name}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class ProductSetAssetCustomFieldActionBuilder implements Builder<ProductSetAssetCustomFieldAction> {
 
+    
     @Nullable
     private Long variantId;
-
+    
+    
     @Nullable
     private String sku;
-
+    
+    
     @Nullable
     private Boolean staged;
-
+    
+    
     @Nullable
     private String assetId;
-
+    
+    
     @Nullable
     private String assetKey;
-
+    
+    
+    
     private String name;
-
+    
+    
     @Nullable
     private java.lang.Object value;
 
+    
     /**
      *  <p>The <code>id</code> of the ProductVariant to update.</p>
      * @param variantId value to be set
      * @return Builder
      */
-
+    
     public ProductSetAssetCustomFieldActionBuilder variantId(@Nullable final Long variantId) {
         this.variantId = variantId;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>The <code>sku</code> of the ProductVariant to update.</p>
      * @param sku value to be set
      * @return Builder
      */
-
+    
     public ProductSetAssetCustomFieldActionBuilder sku(@Nullable final String sku) {
         this.sku = sku;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>If <code>true</code>, only the staged Asset is updated. If <code>false</code>, both the current and staged Asset is updated.</p>
      * @param staged value to be set
      * @return Builder
      */
-
+    
     public ProductSetAssetCustomFieldActionBuilder staged(@Nullable final Boolean staged) {
         this.staged = staged;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>The <code>id</code> of the Asset to update.</p>
      * @param assetId value to be set
      * @return Builder
      */
-
+    
     public ProductSetAssetCustomFieldActionBuilder assetId(@Nullable final String assetId) {
         this.assetId = assetId;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>The <code>key</code> of the Asset to update.</p>
      * @param assetKey value to be set
      * @return Builder
      */
-
+    
     public ProductSetAssetCustomFieldActionBuilder assetKey(@Nullable final String assetKey) {
         this.assetKey = assetKey;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Name of the Custom Field.</p>
      * @param name value to be set
      * @return Builder
      */
-
-    public ProductSetAssetCustomFieldActionBuilder name(final String name) {
+    
+    public ProductSetAssetCustomFieldActionBuilder name( final String name) {
         this.name = name;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>If <code>value</code> is absent or <code>null</code>, this field will be removed if it exists. Removing a field that does not exist returns an InvalidOperation error. If <code>value</code> is provided, it is set for the field defined by <code>name</code>.</p>
      * @param value value to be set
      * @return Builder
      */
-
+    
     public ProductSetAssetCustomFieldActionBuilder value(@Nullable final java.lang.Object value) {
         this.value = value;
         return this;
     }
+    
+    
 
     /**
      *  <p>The <code>id</code> of the ProductVariant to update.</p>
      * @return variantId
      */
-
+    
     @Nullable
-    public Long getVariantId() {
+    public Long getVariantId(){
         return this.variantId;
     }
-
+    
     /**
      *  <p>The <code>sku</code> of the ProductVariant to update.</p>
      * @return sku
      */
-
+    
     @Nullable
-    public String getSku() {
+    public String getSku(){
         return this.sku;
     }
-
+    
     /**
      *  <p>If <code>true</code>, only the staged Asset is updated. If <code>false</code>, both the current and staged Asset is updated.</p>
      * @return staged
      */
-
+    
     @Nullable
-    public Boolean getStaged() {
+    public Boolean getStaged(){
         return this.staged;
     }
-
+    
     /**
      *  <p>The <code>id</code> of the Asset to update.</p>
      * @return assetId
      */
-
+    
     @Nullable
-    public String getAssetId() {
+    public String getAssetId(){
         return this.assetId;
     }
-
+    
     /**
      *  <p>The <code>key</code> of the Asset to update.</p>
      * @return assetKey
      */
-
+    
     @Nullable
-    public String getAssetKey() {
+    public String getAssetKey(){
         return this.assetKey;
     }
-
+    
     /**
      *  <p>Name of the Custom Field.</p>
      * @return name
      */
-
-    public String getName() {
+    
+    
+    public String getName(){
         return this.name;
     }
-
+    
     /**
      *  <p>If <code>value</code> is absent or <code>null</code>, this field will be removed if it exists. Removing a field that does not exist returns an InvalidOperation error. If <code>value</code> is provided, it is set for the field defined by <code>name</code>.</p>
      * @return value
      */
-
+    
     @Nullable
-    public java.lang.Object getValue() {
+    public java.lang.Object getValue(){
         return this.value;
     }
 
@@ -197,7 +232,7 @@ public class ProductSetAssetCustomFieldActionBuilder implements Builder<ProductS
         Objects.requireNonNull(name, ProductSetAssetCustomFieldAction.class + ": name is missing");
         return new ProductSetAssetCustomFieldActionImpl(variantId, sku, staged, assetId, assetKey, name, value);
     }
-
+    
     /**
      * builds ProductSetAssetCustomFieldAction without checking for non-null required values
      * @return ProductSetAssetCustomFieldAction
@@ -208,7 +243,7 @@ public class ProductSetAssetCustomFieldActionBuilder implements Builder<ProductS
 
     /**
      * factory method for an instance of ProductSetAssetCustomFieldActionBuilder
-     * @return builder
+     * @return builder 
      */
     public static ProductSetAssetCustomFieldActionBuilder of() {
         return new ProductSetAssetCustomFieldActionBuilder();

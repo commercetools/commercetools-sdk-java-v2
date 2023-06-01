@@ -1,10 +1,11 @@
-
 package com.commercetools.api.models.order_edit;
 
-import java.util.*;
-
+import com.commercetools.api.models.order.StagedOrderUpdateAction;
+import com.commercetools.api.models.order_edit.StagedOrderSetPurchaseOrderNumberAction;
 import javax.annotation.Nullable;
-
+import java.util.*;
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -17,34 +18,39 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     StagedOrderSetPurchaseOrderNumberAction stagedOrderSetPurchaseOrderNumberAction = StagedOrderSetPurchaseOrderNumberAction.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
-public class StagedOrderSetPurchaseOrderNumberActionBuilder
-        implements Builder<StagedOrderSetPurchaseOrderNumberAction> {
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
+public class StagedOrderSetPurchaseOrderNumberActionBuilder implements Builder<StagedOrderSetPurchaseOrderNumberAction> {
 
+    
     @Nullable
     private String purchaseOrderNumber;
 
+    
     /**
      *  <p>Identifier for a purchase order, usually in a B2B context. The Purchase Order Number is typically entered by the Buyer and can also be used with Quotes.</p>
      * @param purchaseOrderNumber value to be set
      * @return Builder
      */
-
-    public StagedOrderSetPurchaseOrderNumberActionBuilder purchaseOrderNumber(
-            @Nullable final String purchaseOrderNumber) {
+    
+    public StagedOrderSetPurchaseOrderNumberActionBuilder purchaseOrderNumber(@Nullable final String purchaseOrderNumber) {
         this.purchaseOrderNumber = purchaseOrderNumber;
         return this;
     }
+    
+    
 
     /**
      *  <p>Identifier for a purchase order, usually in a B2B context. The Purchase Order Number is typically entered by the Buyer and can also be used with Quotes.</p>
      * @return purchaseOrderNumber
      */
-
+    
     @Nullable
-    public String getPurchaseOrderNumber() {
+    public String getPurchaseOrderNumber(){
         return this.purchaseOrderNumber;
     }
 
@@ -55,7 +61,7 @@ public class StagedOrderSetPurchaseOrderNumberActionBuilder
     public StagedOrderSetPurchaseOrderNumberAction build() {
         return new StagedOrderSetPurchaseOrderNumberActionImpl(purchaseOrderNumber);
     }
-
+    
     /**
      * builds StagedOrderSetPurchaseOrderNumberAction without checking for non-null required values
      * @return StagedOrderSetPurchaseOrderNumberAction
@@ -66,7 +72,7 @@ public class StagedOrderSetPurchaseOrderNumberActionBuilder
 
     /**
      * factory method for an instance of StagedOrderSetPurchaseOrderNumberActionBuilder
-     * @return builder
+     * @return builder 
      */
     public static StagedOrderSetPurchaseOrderNumberActionBuilder of() {
         return new StagedOrderSetPurchaseOrderNumberActionBuilder();
@@ -77,8 +83,7 @@ public class StagedOrderSetPurchaseOrderNumberActionBuilder
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static StagedOrderSetPurchaseOrderNumberActionBuilder of(
-            final StagedOrderSetPurchaseOrderNumberAction template) {
+    public static StagedOrderSetPurchaseOrderNumberActionBuilder of(final StagedOrderSetPurchaseOrderNumberAction template) {
         StagedOrderSetPurchaseOrderNumberActionBuilder builder = new StagedOrderSetPurchaseOrderNumberActionBuilder();
         builder.purchaseOrderNumber = template.getPurchaseOrderNumber();
         return builder;

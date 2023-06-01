@@ -1,18 +1,21 @@
-
 package com.commercetools.history.models.change;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
-
+import com.commercetools.history.models.change.Change;
 import com.commercetools.history.models.common.StagedQuoteState;
+import com.commercetools.history.models.change.ChangeStagedQuoteStateChangeImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Update action for <code>changeStagedQuoteState</code> on <code>staged-quote</code></p>
@@ -27,9 +30,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .previousValue(StagedQuoteState.IN_PROGRESS)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = ChangeStagedQuoteStateChangeImpl.class)
 public interface ChangeStagedQuoteStateChange extends Change {
 
@@ -45,7 +51,6 @@ public interface ChangeStagedQuoteStateChange extends Change {
     @NotNull
     @JsonProperty("type")
     public String getType();
-
     /**
      *
      * @return change
@@ -53,7 +58,6 @@ public interface ChangeStagedQuoteStateChange extends Change {
     @NotNull
     @JsonProperty("change")
     public String getChange();
-
     /**
      *
      * @return nextValue
@@ -61,7 +65,6 @@ public interface ChangeStagedQuoteStateChange extends Change {
     @NotNull
     @JsonProperty("nextValue")
     public StagedQuoteState getNextValue();
-
     /**
      *
      * @return previousValue
@@ -74,30 +77,34 @@ public interface ChangeStagedQuoteStateChange extends Change {
      * set change
      * @param change value to be set
      */
-
+    
     public void setChange(final String change);
-
+    
+    
     /**
      * set nextValue
      * @param nextValue value to be set
      */
-
+    
     public void setNextValue(final StagedQuoteState nextValue);
-
+    
+    
     /**
      * set previousValue
      * @param previousValue value to be set
      */
-
+    
     public void setPreviousValue(final StagedQuoteState previousValue);
+    
 
     /**
      * factory method
      * @return instance of ChangeStagedQuoteStateChange
      */
-    public static ChangeStagedQuoteStateChange of() {
+    public static ChangeStagedQuoteStateChange of(){
         return new ChangeStagedQuoteStateChangeImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy ChangeStagedQuoteStateChange
@@ -136,7 +143,7 @@ public interface ChangeStagedQuoteStateChange extends Change {
     public static ChangeStagedQuoteStateChangeBuilder builder() {
         return ChangeStagedQuoteStateChangeBuilder.of();
     }
-
+    
     /**
      * create builder for ChangeStagedQuoteStateChange instance
      * @param template instance with prefilled values for the builder
@@ -145,6 +152,7 @@ public interface ChangeStagedQuoteStateChange extends Change {
     public static ChangeStagedQuoteStateChangeBuilder builder(final ChangeStagedQuoteStateChange template) {
         return ChangeStagedQuoteStateChangeBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -155,7 +163,7 @@ public interface ChangeStagedQuoteStateChange extends Change {
     default <T> T withChangeStagedQuoteStateChange(Function<ChangeStagedQuoteStateChange, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

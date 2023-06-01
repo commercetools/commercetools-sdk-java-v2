@@ -1,17 +1,20 @@
-
 package com.commercetools.api.models.inventory;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
+import com.commercetools.api.models.inventory.InventoryEntryUpdateAction;
+import com.commercetools.api.models.inventory.InventoryEntryRemoveQuantityActionImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Updates <code>availableQuantity</code> based on the new <code>quantityOnStock</code> and amount of active reservations.</p>
@@ -24,9 +27,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .quantity(0.3)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = InventoryEntryRemoveQuantityActionImpl.class)
 public interface InventoryEntryRemoveQuantityAction extends InventoryEntryUpdateAction {
 
@@ -47,16 +53,18 @@ public interface InventoryEntryRemoveQuantityAction extends InventoryEntryUpdate
      *  <p>Value to remove from <code>quantityOnStock</code>.</p>
      * @param quantity value to be set
      */
-
+    
     public void setQuantity(final Long quantity);
+    
 
     /**
      * factory method
      * @return instance of InventoryEntryRemoveQuantityAction
      */
-    public static InventoryEntryRemoveQuantityAction of() {
+    public static InventoryEntryRemoveQuantityAction of(){
         return new InventoryEntryRemoveQuantityActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy InventoryEntryRemoveQuantityAction
@@ -75,8 +83,7 @@ public interface InventoryEntryRemoveQuantityAction extends InventoryEntryUpdate
      * @return copy instance
      */
     @Nullable
-    public static InventoryEntryRemoveQuantityAction deepCopy(
-            @Nullable final InventoryEntryRemoveQuantityAction template) {
+    public static InventoryEntryRemoveQuantityAction deepCopy(@Nullable final InventoryEntryRemoveQuantityAction template) {
         if (template == null) {
             return null;
         }
@@ -92,7 +99,7 @@ public interface InventoryEntryRemoveQuantityAction extends InventoryEntryUpdate
     public static InventoryEntryRemoveQuantityActionBuilder builder() {
         return InventoryEntryRemoveQuantityActionBuilder.of();
     }
-
+    
     /**
      * create builder for InventoryEntryRemoveQuantityAction instance
      * @param template instance with prefilled values for the builder
@@ -101,6 +108,7 @@ public interface InventoryEntryRemoveQuantityAction extends InventoryEntryUpdate
     public static InventoryEntryRemoveQuantityActionBuilder builder(final InventoryEntryRemoveQuantityAction template) {
         return InventoryEntryRemoveQuantityActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -111,7 +119,7 @@ public interface InventoryEntryRemoveQuantityAction extends InventoryEntryUpdate
     default <T> T withInventoryEntryRemoveQuantityAction(Function<InventoryEntryRemoveQuantityAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

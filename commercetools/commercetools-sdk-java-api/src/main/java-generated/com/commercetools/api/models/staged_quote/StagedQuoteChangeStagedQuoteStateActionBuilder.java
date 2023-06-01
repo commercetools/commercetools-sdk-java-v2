@@ -1,8 +1,12 @@
-
 package com.commercetools.api.models.staged_quote;
 
+import com.commercetools.api.models.staged_quote.StagedQuoteState;
+import com.commercetools.api.models.staged_quote.StagedQuoteUpdateAction;
+import com.commercetools.api.models.staged_quote.StagedQuoteChangeStagedQuoteStateAction;
+import javax.annotation.Nullable;
 import java.util.*;
-
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -16,32 +20,39 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .stagedQuoteState(StagedQuoteState.IN_PROGRESS)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
-public class StagedQuoteChangeStagedQuoteStateActionBuilder
-        implements Builder<StagedQuoteChangeStagedQuoteStateAction> {
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
+public class StagedQuoteChangeStagedQuoteStateActionBuilder implements Builder<StagedQuoteChangeStagedQuoteStateAction> {
 
+    
+    
     private com.commercetools.api.models.staged_quote.StagedQuoteState stagedQuoteState;
 
+    
     /**
      *  <p>New state to be set for the Staged Quote.</p>
      * @param stagedQuoteState value to be set
      * @return Builder
      */
-
-    public StagedQuoteChangeStagedQuoteStateActionBuilder stagedQuoteState(
-            final com.commercetools.api.models.staged_quote.StagedQuoteState stagedQuoteState) {
+    
+    public StagedQuoteChangeStagedQuoteStateActionBuilder stagedQuoteState( final com.commercetools.api.models.staged_quote.StagedQuoteState stagedQuoteState) {
         this.stagedQuoteState = stagedQuoteState;
         return this;
     }
+    
+    
 
     /**
      *  <p>New state to be set for the Staged Quote.</p>
      * @return stagedQuoteState
      */
-
-    public com.commercetools.api.models.staged_quote.StagedQuoteState getStagedQuoteState() {
+    
+    
+    public com.commercetools.api.models.staged_quote.StagedQuoteState getStagedQuoteState(){
         return this.stagedQuoteState;
     }
 
@@ -50,11 +61,10 @@ public class StagedQuoteChangeStagedQuoteStateActionBuilder
      * @return StagedQuoteChangeStagedQuoteStateAction
      */
     public StagedQuoteChangeStagedQuoteStateAction build() {
-        Objects.requireNonNull(stagedQuoteState,
-            StagedQuoteChangeStagedQuoteStateAction.class + ": stagedQuoteState is missing");
+        Objects.requireNonNull(stagedQuoteState, StagedQuoteChangeStagedQuoteStateAction.class + ": stagedQuoteState is missing");
         return new StagedQuoteChangeStagedQuoteStateActionImpl(stagedQuoteState);
     }
-
+    
     /**
      * builds StagedQuoteChangeStagedQuoteStateAction without checking for non-null required values
      * @return StagedQuoteChangeStagedQuoteStateAction
@@ -65,7 +75,7 @@ public class StagedQuoteChangeStagedQuoteStateActionBuilder
 
     /**
      * factory method for an instance of StagedQuoteChangeStagedQuoteStateActionBuilder
-     * @return builder
+     * @return builder 
      */
     public static StagedQuoteChangeStagedQuoteStateActionBuilder of() {
         return new StagedQuoteChangeStagedQuoteStateActionBuilder();
@@ -76,8 +86,7 @@ public class StagedQuoteChangeStagedQuoteStateActionBuilder
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static StagedQuoteChangeStagedQuoteStateActionBuilder of(
-            final StagedQuoteChangeStagedQuoteStateAction template) {
+    public static StagedQuoteChangeStagedQuoteStateActionBuilder of(final StagedQuoteChangeStagedQuoteStateAction template) {
         StagedQuoteChangeStagedQuoteStateActionBuilder builder = new StagedQuoteChangeStagedQuoteStateActionBuilder();
         builder.stagedQuoteState = template.getStagedQuoteState();
         return builder;

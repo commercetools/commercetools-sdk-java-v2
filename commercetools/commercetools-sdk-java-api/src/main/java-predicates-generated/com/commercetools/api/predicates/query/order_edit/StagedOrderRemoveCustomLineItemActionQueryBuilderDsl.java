@@ -1,9 +1,11 @@
-
 package com.commercetools.api.predicates.query.order_edit;
 
 import com.commercetools.api.predicates.query.*;
 
-public class StagedOrderRemoveCustomLineItemActionQueryBuilderDsl {
+import java.util.function.Function;
+
+
+public class StagedOrderRemoveCustomLineItemActionQueryBuilderDsl  {
     public StagedOrderRemoveCustomLineItemActionQueryBuilderDsl() {
     }
 
@@ -12,15 +14,12 @@ public class StagedOrderRemoveCustomLineItemActionQueryBuilderDsl {
     }
 
     public StringComparisonPredicateBuilder<StagedOrderRemoveCustomLineItemActionQueryBuilderDsl> action() {
-        return new StringComparisonPredicateBuilder<>(
-            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("action")),
-            p -> new CombinationQueryPredicate<>(p, StagedOrderRemoveCustomLineItemActionQueryBuilderDsl::of));
+        return new StringComparisonPredicateBuilder<>(BinaryQueryPredicate.of().left(new ConstantQueryPredicate("action")),
+        p -> new CombinationQueryPredicate<>(p, StagedOrderRemoveCustomLineItemActionQueryBuilderDsl::of));
     }
-
     public StringComparisonPredicateBuilder<StagedOrderRemoveCustomLineItemActionQueryBuilderDsl> customLineItemId() {
-        return new StringComparisonPredicateBuilder<>(
-            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("customLineItemId")),
-            p -> new CombinationQueryPredicate<>(p, StagedOrderRemoveCustomLineItemActionQueryBuilderDsl::of));
+        return new StringComparisonPredicateBuilder<>(BinaryQueryPredicate.of().left(new ConstantQueryPredicate("customLineItemId")),
+        p -> new CombinationQueryPredicate<>(p, StagedOrderRemoveCustomLineItemActionQueryBuilderDsl::of));
     }
-
+    
 }

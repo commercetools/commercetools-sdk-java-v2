@@ -1,9 +1,11 @@
-
 package com.commercetools.api.predicates.query.product;
 
 import com.commercetools.api.predicates.query.*;
 
-public class FacetResultsQueryBuilderDsl {
+import java.util.function.Function;
+
+
+public class FacetResultsQueryBuilderDsl  {
     public FacetResultsQueryBuilderDsl() {
     }
 
@@ -11,4 +13,5 @@ public class FacetResultsQueryBuilderDsl {
         return new FacetResultsQueryBuilderDsl();
     }
 
+    
 }

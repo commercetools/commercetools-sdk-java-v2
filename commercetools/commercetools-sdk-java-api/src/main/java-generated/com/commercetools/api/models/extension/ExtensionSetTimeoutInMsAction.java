@@ -1,16 +1,20 @@
-
 package com.commercetools.api.models.extension;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
+import com.commercetools.api.models.extension.ExtensionUpdateAction;
+import com.commercetools.api.models.extension.ExtensionSetTimeoutInMsActionImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * ExtensionSetTimeoutInMsAction
@@ -22,9 +26,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     ExtensionSetTimeoutInMsAction extensionSetTimeoutInMsAction = ExtensionSetTimeoutInMsAction.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = ExtensionSetTimeoutInMsActionImpl.class)
 public interface ExtensionSetTimeoutInMsAction extends ExtensionUpdateAction {
 
@@ -38,7 +45,7 @@ public interface ExtensionSetTimeoutInMsAction extends ExtensionUpdateAction {
      *  <p>This limit can be increased per Project after we review the performance impact. Please contact our support via the Support Portal and provide the Region, Project key, and use case.</p>
      * @return timeoutInMs
      */
-
+    
     @JsonProperty("timeoutInMs")
     public Integer getTimeoutInMs();
 
@@ -47,16 +54,18 @@ public interface ExtensionSetTimeoutInMsAction extends ExtensionUpdateAction {
      *  <p>This limit can be increased per Project after we review the performance impact. Please contact our support via the Support Portal and provide the Region, Project key, and use case.</p>
      * @param timeoutInMs value to be set
      */
-
+    
     public void setTimeoutInMs(final Integer timeoutInMs);
+    
 
     /**
      * factory method
      * @return instance of ExtensionSetTimeoutInMsAction
      */
-    public static ExtensionSetTimeoutInMsAction of() {
+    public static ExtensionSetTimeoutInMsAction of(){
         return new ExtensionSetTimeoutInMsActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy ExtensionSetTimeoutInMsAction
@@ -91,7 +100,7 @@ public interface ExtensionSetTimeoutInMsAction extends ExtensionUpdateAction {
     public static ExtensionSetTimeoutInMsActionBuilder builder() {
         return ExtensionSetTimeoutInMsActionBuilder.of();
     }
-
+    
     /**
      * create builder for ExtensionSetTimeoutInMsAction instance
      * @param template instance with prefilled values for the builder
@@ -100,6 +109,7 @@ public interface ExtensionSetTimeoutInMsAction extends ExtensionUpdateAction {
     public static ExtensionSetTimeoutInMsActionBuilder builder(final ExtensionSetTimeoutInMsAction template) {
         return ExtensionSetTimeoutInMsActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -110,7 +120,7 @@ public interface ExtensionSetTimeoutInMsAction extends ExtensionUpdateAction {
     default <T> T withExtensionSetTimeoutInMsAction(Function<ExtensionSetTimeoutInMsAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

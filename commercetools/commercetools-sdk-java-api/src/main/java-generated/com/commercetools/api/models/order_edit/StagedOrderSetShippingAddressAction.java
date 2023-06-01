@@ -1,19 +1,21 @@
-
 package com.commercetools.api.models.order_edit;
-
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
 
 import com.commercetools.api.models.common.BaseAddress;
 import com.commercetools.api.models.order.StagedOrderUpdateAction;
+import com.commercetools.api.models.order_edit.StagedOrderSetShippingAddressActionImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * StagedOrderSetShippingAddressAction
@@ -25,9 +27,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     StagedOrderSetShippingAddressAction stagedOrderSetShippingAddressAction = StagedOrderSetShippingAddressAction.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = StagedOrderSetShippingAddressActionImpl.class)
 public interface StagedOrderSetShippingAddressAction extends StagedOrderUpdateAction {
 
@@ -48,16 +53,18 @@ public interface StagedOrderSetShippingAddressAction extends StagedOrderUpdateAc
      *  <p>Polymorphic base type that represents a postal address and contact details. Depending on the read or write action, it can be either Address or AddressDraft that only differ in the data type for the optional <code>custom</code> field.</p>
      * @param address value to be set
      */
-
+    
     public void setAddress(final BaseAddress address);
+    
 
     /**
      * factory method
      * @return instance of StagedOrderSetShippingAddressAction
      */
-    public static StagedOrderSetShippingAddressAction of() {
+    public static StagedOrderSetShippingAddressAction of(){
         return new StagedOrderSetShippingAddressActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy StagedOrderSetShippingAddressAction
@@ -76,8 +83,7 @@ public interface StagedOrderSetShippingAddressAction extends StagedOrderUpdateAc
      * @return copy instance
      */
     @Nullable
-    public static StagedOrderSetShippingAddressAction deepCopy(
-            @Nullable final StagedOrderSetShippingAddressAction template) {
+    public static StagedOrderSetShippingAddressAction deepCopy(@Nullable final StagedOrderSetShippingAddressAction template) {
         if (template == null) {
             return null;
         }
@@ -93,16 +99,16 @@ public interface StagedOrderSetShippingAddressAction extends StagedOrderUpdateAc
     public static StagedOrderSetShippingAddressActionBuilder builder() {
         return StagedOrderSetShippingAddressActionBuilder.of();
     }
-
+    
     /**
      * create builder for StagedOrderSetShippingAddressAction instance
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static StagedOrderSetShippingAddressActionBuilder builder(
-            final StagedOrderSetShippingAddressAction template) {
+    public static StagedOrderSetShippingAddressActionBuilder builder(final StagedOrderSetShippingAddressAction template) {
         return StagedOrderSetShippingAddressActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -113,7 +119,7 @@ public interface StagedOrderSetShippingAddressAction extends StagedOrderUpdateAc
     default <T> T withStagedOrderSetShippingAddressAction(Function<StagedOrderSetShippingAddressAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

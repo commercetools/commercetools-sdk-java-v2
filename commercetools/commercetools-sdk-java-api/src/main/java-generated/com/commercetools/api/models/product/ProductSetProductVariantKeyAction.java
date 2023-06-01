@@ -1,16 +1,20 @@
-
 package com.commercetools.api.models.product;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
+import com.commercetools.api.models.product.ProductUpdateAction;
+import com.commercetools.api.models.product.ProductSetProductVariantKeyActionImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Either <code>variantId</code> or <code>sku</code> is required.</p>
@@ -22,9 +26,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     ProductSetProductVariantKeyAction productSetProductVariantKeyAction = ProductSetProductVariantKeyAction.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = ProductSetProductVariantKeyActionImpl.class)
 public interface ProductSetProductVariantKeyAction extends ProductUpdateAction {
 
@@ -37,31 +44,28 @@ public interface ProductSetProductVariantKeyAction extends ProductUpdateAction {
      *  <p>The <code>id</code> of the ProductVariant to update.</p>
      * @return variantId
      */
-
+    
     @JsonProperty("variantId")
     public Long getVariantId();
-
     /**
      *  <p>The <code>sku</code> of the ProductVariant to update.</p>
      * @return sku
      */
-
+    
     @JsonProperty("sku")
     public String getSku();
-
     /**
      *  <p>Value to set. Must be unique. If empty, any existing value will be removed.</p>
      * @return key
      */
-
+    
     @JsonProperty("key")
     public String getKey();
-
     /**
      *  <p>If <code>true</code>, only the staged <code>key</code> is set. If <code>false</code>, both the current and staged <code>key</code> are set.</p>
      * @return staged
      */
-
+    
     @JsonProperty("staged")
     public Boolean getStaged();
 
@@ -69,37 +73,42 @@ public interface ProductSetProductVariantKeyAction extends ProductUpdateAction {
      *  <p>The <code>id</code> of the ProductVariant to update.</p>
      * @param variantId value to be set
      */
-
+    
     public void setVariantId(final Long variantId);
-
+    
+    
     /**
      *  <p>The <code>sku</code> of the ProductVariant to update.</p>
      * @param sku value to be set
      */
-
+    
     public void setSku(final String sku);
-
+    
+    
     /**
      *  <p>Value to set. Must be unique. If empty, any existing value will be removed.</p>
      * @param key value to be set
      */
-
+    
     public void setKey(final String key);
-
+    
+    
     /**
      *  <p>If <code>true</code>, only the staged <code>key</code> is set. If <code>false</code>, both the current and staged <code>key</code> are set.</p>
      * @param staged value to be set
      */
-
+    
     public void setStaged(final Boolean staged);
+    
 
     /**
      * factory method
      * @return instance of ProductSetProductVariantKeyAction
      */
-    public static ProductSetProductVariantKeyAction of() {
+    public static ProductSetProductVariantKeyAction of(){
         return new ProductSetProductVariantKeyActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy ProductSetProductVariantKeyAction
@@ -121,8 +130,7 @@ public interface ProductSetProductVariantKeyAction extends ProductUpdateAction {
      * @return copy instance
      */
     @Nullable
-    public static ProductSetProductVariantKeyAction deepCopy(
-            @Nullable final ProductSetProductVariantKeyAction template) {
+    public static ProductSetProductVariantKeyAction deepCopy(@Nullable final ProductSetProductVariantKeyAction template) {
         if (template == null) {
             return null;
         }
@@ -141,7 +149,7 @@ public interface ProductSetProductVariantKeyAction extends ProductUpdateAction {
     public static ProductSetProductVariantKeyActionBuilder builder() {
         return ProductSetProductVariantKeyActionBuilder.of();
     }
-
+    
     /**
      * create builder for ProductSetProductVariantKeyAction instance
      * @param template instance with prefilled values for the builder
@@ -150,6 +158,7 @@ public interface ProductSetProductVariantKeyAction extends ProductUpdateAction {
     public static ProductSetProductVariantKeyActionBuilder builder(final ProductSetProductVariantKeyAction template) {
         return ProductSetProductVariantKeyActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -160,7 +169,7 @@ public interface ProductSetProductVariantKeyAction extends ProductUpdateAction {
     default <T> T withProductSetProductVariantKeyAction(Function<ProductSetProductVariantKeyAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

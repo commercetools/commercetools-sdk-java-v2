@@ -1,10 +1,12 @@
-
 package com.commercetools.importapi.models.common;
 
-import java.util.*;
-
+import com.commercetools.importapi.models.common.MoneyType;
+import com.commercetools.importapi.models.common.TypedMoney;
+import com.commercetools.importapi.models.common.Money;
 import javax.annotation.Nullable;
-
+import java.util.*;
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -19,76 +21,95 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .currencyCode("{currencyCode}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class MoneyBuilder implements Builder<Money> {
 
+    
     @Nullable
     private Integer fractionDigits;
-
+    
+    
+    
     private Long centAmount;
-
+    
+    
+    
     private String currencyCode;
 
+    
     /**
      * set the value to the fractionDigits
      * @param fractionDigits value to be set
      * @return Builder
      */
-
+    
     public MoneyBuilder fractionDigits(@Nullable final Integer fractionDigits) {
         this.fractionDigits = fractionDigits;
         return this;
     }
-
+    
+    
+    
+    
     /**
      * set the value to the centAmount
      * @param centAmount value to be set
      * @return Builder
      */
-
-    public MoneyBuilder centAmount(final Long centAmount) {
+    
+    public MoneyBuilder centAmount( final Long centAmount) {
         this.centAmount = centAmount;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>The currency code compliant to ISO 4217.</p>
      * @param currencyCode value to be set
      * @return Builder
      */
-
-    public MoneyBuilder currencyCode(final String currencyCode) {
+    
+    public MoneyBuilder currencyCode( final String currencyCode) {
         this.currencyCode = currencyCode;
         return this;
     }
+    
+    
 
     /**
      * value of fractionDigits}
      * @return fractionDigits
      */
-
+    
     @Nullable
-    public Integer getFractionDigits() {
+    public Integer getFractionDigits(){
         return this.fractionDigits;
     }
-
+    
     /**
      * value of centAmount}
      * @return centAmount
      */
-
-    public Long getCentAmount() {
+    
+    
+    public Long getCentAmount(){
         return this.centAmount;
     }
-
+    
     /**
      *  <p>The currency code compliant to ISO 4217.</p>
      * @return currencyCode
      */
-
-    public String getCurrencyCode() {
+    
+    
+    public String getCurrencyCode(){
         return this.currencyCode;
     }
 
@@ -101,7 +122,7 @@ public class MoneyBuilder implements Builder<Money> {
         Objects.requireNonNull(currencyCode, Money.class + ": currencyCode is missing");
         return new MoneyImpl(fractionDigits, centAmount, currencyCode);
     }
-
+    
     /**
      * builds Money without checking for non-null required values
      * @return Money
@@ -112,7 +133,7 @@ public class MoneyBuilder implements Builder<Money> {
 
     /**
      * factory method for an instance of MoneyBuilder
-     * @return builder
+     * @return builder 
      */
     public static MoneyBuilder of() {
         return new MoneyBuilder();

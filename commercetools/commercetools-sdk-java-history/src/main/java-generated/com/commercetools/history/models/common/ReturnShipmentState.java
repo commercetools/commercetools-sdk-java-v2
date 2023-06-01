@@ -1,29 +1,31 @@
-
 package com.commercetools.history.models.common;
-
-import java.util.Arrays;
-import java.util.Optional;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-
+import java.lang.String;
+import java.util.Arrays;
+import java.util.Optional;
 import io.vrap.rmf.base.client.JsonEnum;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
  * ReturnShipmentState
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public interface ReturnShipmentState extends JsonEnum {
 
+    
     ReturnShipmentState ADVISED = ReturnShipmentStateEnum.ADVISED;
-
+    
     ReturnShipmentState RETURNED = ReturnShipmentStateEnum.RETURNED;
-
+    
     ReturnShipmentState BACK_IN_STOCK = ReturnShipmentStateEnum.BACK_IN_STOCK;
-
+    
     ReturnShipmentState UNUSABLE = ReturnShipmentStateEnum.UNUSABLE;
-
+    
     /**
      * possible values of ReturnShipmentState
      */
@@ -32,17 +34,17 @@ public interface ReturnShipmentState extends JsonEnum {
          * Advised
          */
         ADVISED("Advised"),
-
+        
         /**
          * Returned
          */
         RETURNED("Returned"),
-
+        
         /**
          * BackInStock
          */
         BACK_IN_STOCK("BackInStock"),
-
+        
         /**
          * Unusable
          */
@@ -99,7 +101,7 @@ public interface ReturnShipmentState extends JsonEnum {
             public String name() {
                 return value.toUpperCase();
             }
-
+            
             public String toString() {
                 return value;
             }
@@ -114,7 +116,7 @@ public interface ReturnShipmentState extends JsonEnum {
     public static Optional<ReturnShipmentState> findEnumViaJsonName(String jsonName) {
         return Arrays.stream(values()).filter(t -> t.getJsonName().equals(jsonName)).findFirst();
     }
-
+    
     /**
      * possible enum values
      * @return array of possible enum values
@@ -122,5 +124,5 @@ public interface ReturnShipmentState extends JsonEnum {
     public static ReturnShipmentState[] values() {
         return ReturnShipmentStateEnum.values();
     }
-
+    
 }

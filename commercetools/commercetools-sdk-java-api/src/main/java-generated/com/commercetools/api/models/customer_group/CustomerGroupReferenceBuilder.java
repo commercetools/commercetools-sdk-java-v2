@@ -1,11 +1,13 @@
-
 package com.commercetools.api.models.customer_group;
 
+import com.commercetools.api.models.common.Reference;
+import com.commercetools.api.models.common.ReferenceTypeId;
+import com.commercetools.api.models.customer_group.CustomerGroup;
+import com.commercetools.api.models.customer_group.CustomerGroupReference;
+import javax.annotation.Nullable;
 import java.util.*;
 import java.util.function.Function;
-
-import javax.annotation.Nullable;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -19,79 +21,89 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .id("{id}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class CustomerGroupReferenceBuilder implements Builder<CustomerGroupReference> {
 
+    
+    
     private String id;
-
+    
+    
     @Nullable
     private com.commercetools.api.models.customer_group.CustomerGroup obj;
 
+    
     /**
      *  <p>Unique identifier of the referenced CustomerGroup.</p>
      * @param id value to be set
      * @return Builder
      */
-
-    public CustomerGroupReferenceBuilder id(final String id) {
+    
+    public CustomerGroupReferenceBuilder id( final String id) {
         this.id = id;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Contains the representation of the expanded CustomerGroup. Only present in responses to requests with Reference Expansion for CustomerGroups.</p>
      * @param builder function to build the obj value
      * @return Builder
      */
-
-    public CustomerGroupReferenceBuilder obj(
-            Function<com.commercetools.api.models.customer_group.CustomerGroupBuilder, com.commercetools.api.models.customer_group.CustomerGroupBuilder> builder) {
+    
+    public CustomerGroupReferenceBuilder obj(Function<com.commercetools.api.models.customer_group.CustomerGroupBuilder, com.commercetools.api.models.customer_group.CustomerGroupBuilder> builder) {
         this.obj = builder.apply(com.commercetools.api.models.customer_group.CustomerGroupBuilder.of()).build();
         return this;
     }
-
+    
     /**
      *  <p>Contains the representation of the expanded CustomerGroup. Only present in responses to requests with Reference Expansion for CustomerGroups.</p>
      * @param builder function to build the obj value
      * @return Builder
      */
-
-    public CustomerGroupReferenceBuilder withObj(
-            Function<com.commercetools.api.models.customer_group.CustomerGroupBuilder, com.commercetools.api.models.customer_group.CustomerGroup> builder) {
+    
+    public CustomerGroupReferenceBuilder withObj(Function<com.commercetools.api.models.customer_group.CustomerGroupBuilder, com.commercetools.api.models.customer_group.CustomerGroup> builder) {
         this.obj = builder.apply(com.commercetools.api.models.customer_group.CustomerGroupBuilder.of());
         return this;
     }
-
+                    
     /**
      *  <p>Contains the representation of the expanded CustomerGroup. Only present in responses to requests with Reference Expansion for CustomerGroups.</p>
      * @param obj value to be set
      * @return Builder
      */
-
-    public CustomerGroupReferenceBuilder obj(
-            @Nullable final com.commercetools.api.models.customer_group.CustomerGroup obj) {
+    
+    public CustomerGroupReferenceBuilder obj(@Nullable final com.commercetools.api.models.customer_group.CustomerGroup obj) {
         this.obj = obj;
         return this;
     }
+    
+    
 
     /**
      *  <p>Unique identifier of the referenced CustomerGroup.</p>
      * @return id
      */
-
-    public String getId() {
+    
+    
+    public String getId(){
         return this.id;
     }
-
+    
     /**
      *  <p>Contains the representation of the expanded CustomerGroup. Only present in responses to requests with Reference Expansion for CustomerGroups.</p>
      * @return obj
      */
-
+    
     @Nullable
-    public com.commercetools.api.models.customer_group.CustomerGroup getObj() {
+    public com.commercetools.api.models.customer_group.CustomerGroup getObj(){
         return this.obj;
     }
 
@@ -103,7 +115,7 @@ public class CustomerGroupReferenceBuilder implements Builder<CustomerGroupRefer
         Objects.requireNonNull(id, CustomerGroupReference.class + ": id is missing");
         return new CustomerGroupReferenceImpl(id, obj);
     }
-
+    
     /**
      * builds CustomerGroupReference without checking for non-null required values
      * @return CustomerGroupReference
@@ -114,7 +126,7 @@ public class CustomerGroupReferenceBuilder implements Builder<CustomerGroupRefer
 
     /**
      * factory method for an instance of CustomerGroupReferenceBuilder
-     * @return builder
+     * @return builder 
      */
     public static CustomerGroupReferenceBuilder of() {
         return new CustomerGroupReferenceBuilder();

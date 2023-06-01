@@ -1,18 +1,20 @@
-
 package com.commercetools.api.models.cart;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
+import com.commercetools.api.models.cart.DiscountedLineItemPrice;
+import com.commercetools.api.models.cart.DiscountedLineItemPriceForQuantityImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * DiscountedLineItemPriceForQuantity
@@ -26,11 +28,15 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .discountedPrice(discountedPriceBuilder -> discountedPriceBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = DiscountedLineItemPriceForQuantityImpl.class)
-public interface DiscountedLineItemPriceForQuantity {
+public interface DiscountedLineItemPriceForQuantity  {
+
 
     /**
      *  <p>Number of Line Items or Custom Line Items in the Cart.</p>
@@ -39,7 +45,6 @@ public interface DiscountedLineItemPriceForQuantity {
     @NotNull
     @JsonProperty("quantity")
     public Long getQuantity();
-
     /**
      *  <p>Discounted price of the Line Item or Custom Line Item.</p>
      * @return discountedPrice
@@ -53,23 +58,26 @@ public interface DiscountedLineItemPriceForQuantity {
      *  <p>Number of Line Items or Custom Line Items in the Cart.</p>
      * @param quantity value to be set
      */
-
+    
     public void setQuantity(final Long quantity);
-
+    
+    
     /**
      *  <p>Discounted price of the Line Item or Custom Line Item.</p>
      * @param discountedPrice value to be set
      */
-
+    
     public void setDiscountedPrice(final DiscountedLineItemPrice discountedPrice);
+    
 
     /**
      * factory method
      * @return instance of DiscountedLineItemPriceForQuantity
      */
-    public static DiscountedLineItemPriceForQuantity of() {
+    public static DiscountedLineItemPriceForQuantity of(){
         return new DiscountedLineItemPriceForQuantityImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy DiscountedLineItemPriceForQuantity
@@ -89,15 +97,13 @@ public interface DiscountedLineItemPriceForQuantity {
      * @return copy instance
      */
     @Nullable
-    public static DiscountedLineItemPriceForQuantity deepCopy(
-            @Nullable final DiscountedLineItemPriceForQuantity template) {
+    public static DiscountedLineItemPriceForQuantity deepCopy(@Nullable final DiscountedLineItemPriceForQuantity template) {
         if (template == null) {
             return null;
         }
         DiscountedLineItemPriceForQuantityImpl instance = new DiscountedLineItemPriceForQuantityImpl();
         instance.setQuantity(template.getQuantity());
-        instance.setDiscountedPrice(
-            com.commercetools.api.models.cart.DiscountedLineItemPrice.deepCopy(template.getDiscountedPrice()));
+        instance.setDiscountedPrice(com.commercetools.api.models.cart.DiscountedLineItemPrice.deepCopy(template.getDiscountedPrice()));
         return instance;
     }
 
@@ -108,7 +114,7 @@ public interface DiscountedLineItemPriceForQuantity {
     public static DiscountedLineItemPriceForQuantityBuilder builder() {
         return DiscountedLineItemPriceForQuantityBuilder.of();
     }
-
+    
     /**
      * create builder for DiscountedLineItemPriceForQuantity instance
      * @param template instance with prefilled values for the builder
@@ -117,6 +123,7 @@ public interface DiscountedLineItemPriceForQuantity {
     public static DiscountedLineItemPriceForQuantityBuilder builder(final DiscountedLineItemPriceForQuantity template) {
         return DiscountedLineItemPriceForQuantityBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -127,7 +134,7 @@ public interface DiscountedLineItemPriceForQuantity {
     default <T> T withDiscountedLineItemPriceForQuantity(Function<DiscountedLineItemPriceForQuantity, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

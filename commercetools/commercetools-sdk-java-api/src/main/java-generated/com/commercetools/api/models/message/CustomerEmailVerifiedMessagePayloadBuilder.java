@@ -1,8 +1,11 @@
-
 package com.commercetools.api.models.message;
 
+import com.commercetools.api.models.message.MessagePayload;
+import com.commercetools.api.models.message.CustomerEmailVerifiedMessagePayload;
+import javax.annotation.Nullable;
 import java.util.*;
-
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -15,10 +18,16 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     CustomerEmailVerifiedMessagePayload customerEmailVerifiedMessagePayload = CustomerEmailVerifiedMessagePayload.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class CustomerEmailVerifiedMessagePayloadBuilder implements Builder<CustomerEmailVerifiedMessagePayload> {
+
+
+
 
     /**
      * builds CustomerEmailVerifiedMessagePayload with checking for non-null required values
@@ -27,7 +36,7 @@ public class CustomerEmailVerifiedMessagePayloadBuilder implements Builder<Custo
     public CustomerEmailVerifiedMessagePayload build() {
         return new CustomerEmailVerifiedMessagePayloadImpl();
     }
-
+    
     /**
      * builds CustomerEmailVerifiedMessagePayload without checking for non-null required values
      * @return CustomerEmailVerifiedMessagePayload
@@ -38,7 +47,7 @@ public class CustomerEmailVerifiedMessagePayloadBuilder implements Builder<Custo
 
     /**
      * factory method for an instance of CustomerEmailVerifiedMessagePayloadBuilder
-     * @return builder
+     * @return builder 
      */
     public static CustomerEmailVerifiedMessagePayloadBuilder of() {
         return new CustomerEmailVerifiedMessagePayloadBuilder();

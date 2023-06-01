@@ -1,10 +1,12 @@
-
 package com.commercetools.api.models.standalone_price;
 
-import java.util.*;
-
+import com.commercetools.api.models.common.ReferenceTypeId;
+import com.commercetools.api.models.common.ResourceIdentifier;
+import com.commercetools.api.models.standalone_price.StandalonePriceResourceIdentifier;
 import javax.annotation.Nullable;
-
+import java.util.*;
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -17,56 +19,67 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     StandalonePriceResourceIdentifier standalonePriceResourceIdentifier = StandalonePriceResourceIdentifier.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class StandalonePriceResourceIdentifierBuilder implements Builder<StandalonePriceResourceIdentifier> {
 
+    
     @Nullable
     private String id;
-
+    
+    
     @Nullable
     private String key;
 
+    
     /**
      *  <p>Unique identifier of the referenced resource. Required if <code>key</code> is absent.</p>
      * @param id value to be set
      * @return Builder
      */
-
+    
     public StandalonePriceResourceIdentifierBuilder id(@Nullable final String id) {
         this.id = id;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>User-defined unique identifier of the referenced resource. Required if <code>id</code> is absent.</p>
      * @param key value to be set
      * @return Builder
      */
-
+    
     public StandalonePriceResourceIdentifierBuilder key(@Nullable final String key) {
         this.key = key;
         return this;
     }
+    
+    
 
     /**
      *  <p>Unique identifier of the referenced resource. Required if <code>key</code> is absent.</p>
      * @return id
      */
-
+    
     @Nullable
-    public String getId() {
+    public String getId(){
         return this.id;
     }
-
+    
     /**
      *  <p>User-defined unique identifier of the referenced resource. Required if <code>id</code> is absent.</p>
      * @return key
      */
-
+    
     @Nullable
-    public String getKey() {
+    public String getKey(){
         return this.key;
     }
 
@@ -77,7 +90,7 @@ public class StandalonePriceResourceIdentifierBuilder implements Builder<Standal
     public StandalonePriceResourceIdentifier build() {
         return new StandalonePriceResourceIdentifierImpl(id, key);
     }
-
+    
     /**
      * builds StandalonePriceResourceIdentifier without checking for non-null required values
      * @return StandalonePriceResourceIdentifier
@@ -88,7 +101,7 @@ public class StandalonePriceResourceIdentifierBuilder implements Builder<Standal
 
     /**
      * factory method for an instance of StandalonePriceResourceIdentifierBuilder
-     * @return builder
+     * @return builder 
      */
     public static StandalonePriceResourceIdentifierBuilder of() {
         return new StandalonePriceResourceIdentifierBuilder();

@@ -1,9 +1,13 @@
-
 package com.commercetools.importapi.models.importrequests;
 
+import com.commercetools.importapi.models.common.ImportResourceType;
+import com.commercetools.importapi.models.importrequests.ImportRequest;
+import com.commercetools.importapi.models.products.ProductImport;
+import com.commercetools.importapi.models.importrequests.ProductImportRequest;
+import javax.annotation.Nullable;
 import java.util.*;
 import java.util.function.Function;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -17,11 +21,16 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .plusResources(resourcesBuilder -> resourcesBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class ProductImportRequestBuilder implements Builder<ProductImportRequest> {
 
+    
+    
     private java.util.List<com.commercetools.importapi.models.products.ProductImport> resources;
 
     /**
@@ -29,98 +38,93 @@ public class ProductImportRequestBuilder implements Builder<ProductImportRequest
      * @param resources value to be set
      * @return Builder
      */
-
-    public ProductImportRequestBuilder resources(
-            final com.commercetools.importapi.models.products.ProductImport... resources) {
+    
+    public ProductImportRequestBuilder resources( final com.commercetools.importapi.models.products.ProductImport ...resources) {
         this.resources = new ArrayList<>(Arrays.asList(resources));
         return this;
     }
-
+    
     /**
      *  <p>The product import resources of this request.</p>
      * @param resources value to be set
      * @return Builder
      */
-
-    public ProductImportRequestBuilder resources(
-            final java.util.List<com.commercetools.importapi.models.products.ProductImport> resources) {
+    
+    public ProductImportRequestBuilder resources( final java.util.List<com.commercetools.importapi.models.products.ProductImport> resources) {
         this.resources = resources;
         return this;
     }
-
+    
     /**
      *  <p>The product import resources of this request.</p>
      * @param resources value to be set
      * @return Builder
      */
-
-    public ProductImportRequestBuilder plusResources(
-            final com.commercetools.importapi.models.products.ProductImport... resources) {
+    
+    public ProductImportRequestBuilder plusResources( final com.commercetools.importapi.models.products.ProductImport ...resources) {
         if (this.resources == null) {
             this.resources = new ArrayList<>();
         }
         this.resources.addAll(Arrays.asList(resources));
         return this;
     }
-
+    
+    
+    
     /**
      *  <p>The product import resources of this request.</p>
      * @param builder function to build the resources value
      * @return Builder
      */
-
-    public ProductImportRequestBuilder plusResources(
-            Function<com.commercetools.importapi.models.products.ProductImportBuilder, com.commercetools.importapi.models.products.ProductImportBuilder> builder) {
+    
+    public ProductImportRequestBuilder plusResources(Function<com.commercetools.importapi.models.products.ProductImportBuilder, com.commercetools.importapi.models.products.ProductImportBuilder> builder) {
         if (this.resources == null) {
             this.resources = new ArrayList<>();
         }
-        this.resources
-                .add(builder.apply(com.commercetools.importapi.models.products.ProductImportBuilder.of()).build());
+        this.resources.add(builder.apply(com.commercetools.importapi.models.products.ProductImportBuilder.of()).build());
         return this;
     }
-
+    
     /**
      *  <p>The product import resources of this request.</p>
      * @param builder function to build the resources value
      * @return Builder
      */
-
-    public ProductImportRequestBuilder withResources(
-            Function<com.commercetools.importapi.models.products.ProductImportBuilder, com.commercetools.importapi.models.products.ProductImportBuilder> builder) {
+    
+    public ProductImportRequestBuilder withResources(Function<com.commercetools.importapi.models.products.ProductImportBuilder, com.commercetools.importapi.models.products.ProductImportBuilder> builder) {
         this.resources = new ArrayList<>();
-        this.resources
-                .add(builder.apply(com.commercetools.importapi.models.products.ProductImportBuilder.of()).build());
+        this.resources.add(builder.apply(com.commercetools.importapi.models.products.ProductImportBuilder.of()).build());
         return this;
     }
-
+    
     /**
      *  <p>The product import resources of this request.</p>
      * @param builder function to build the resources value
      * @return Builder
      */
-
-    public ProductImportRequestBuilder addResources(
-            Function<com.commercetools.importapi.models.products.ProductImportBuilder, com.commercetools.importapi.models.products.ProductImport> builder) {
+    
+    public ProductImportRequestBuilder addResources(Function<com.commercetools.importapi.models.products.ProductImportBuilder, com.commercetools.importapi.models.products.ProductImport> builder) {
         return plusResources(builder.apply(com.commercetools.importapi.models.products.ProductImportBuilder.of()));
     }
-
+    
     /**
      *  <p>The product import resources of this request.</p>
      * @param builder function to build the resources value
      * @return Builder
      */
-
-    public ProductImportRequestBuilder setResources(
-            Function<com.commercetools.importapi.models.products.ProductImportBuilder, com.commercetools.importapi.models.products.ProductImport> builder) {
+    
+    public ProductImportRequestBuilder setResources(Function<com.commercetools.importapi.models.products.ProductImportBuilder, com.commercetools.importapi.models.products.ProductImport> builder) {
         return resources(builder.apply(com.commercetools.importapi.models.products.ProductImportBuilder.of()));
     }
+                    
 
     /**
      *  <p>The product import resources of this request.</p>
      * @return resources
      */
-
-    public java.util.List<com.commercetools.importapi.models.products.ProductImport> getResources() {
+    
+    
+    public java.util.List<com.commercetools.importapi.models.products.ProductImport> getResources(){
         return this.resources;
     }
 
@@ -132,7 +136,7 @@ public class ProductImportRequestBuilder implements Builder<ProductImportRequest
         Objects.requireNonNull(resources, ProductImportRequest.class + ": resources is missing");
         return new ProductImportRequestImpl(resources);
     }
-
+    
     /**
      * builds ProductImportRequest without checking for non-null required values
      * @return ProductImportRequest
@@ -143,7 +147,7 @@ public class ProductImportRequestBuilder implements Builder<ProductImportRequest
 
     /**
      * factory method for an instance of ProductImportRequestBuilder
-     * @return builder
+     * @return builder 
      */
     public static ProductImportRequestBuilder of() {
         return new ProductImportRequestBuilder();

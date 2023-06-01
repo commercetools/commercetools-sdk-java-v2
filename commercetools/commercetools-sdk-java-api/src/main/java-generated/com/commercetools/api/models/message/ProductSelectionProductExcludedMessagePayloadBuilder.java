@@ -1,9 +1,13 @@
-
 package com.commercetools.api.models.message;
 
+import com.commercetools.api.models.message.MessagePayload;
+import com.commercetools.api.models.product.ProductReference;
+import com.commercetools.api.models.product_selection.ProductVariantExclusion;
+import com.commercetools.api.models.message.ProductSelectionProductExcludedMessagePayload;
+import javax.annotation.Nullable;
 import java.util.*;
 import java.util.function.Function;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -18,106 +22,111 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .variantExclusion(variantExclusionBuilder -> variantExclusionBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
-public class ProductSelectionProductExcludedMessagePayloadBuilder
-        implements Builder<ProductSelectionProductExcludedMessagePayload> {
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
+public class ProductSelectionProductExcludedMessagePayloadBuilder implements Builder<ProductSelectionProductExcludedMessagePayload> {
 
+    
+    
     private com.commercetools.api.models.product.ProductReference product;
-
+    
+    
+    
     private com.commercetools.api.models.product_selection.ProductVariantExclusion variantExclusion;
 
+    
     /**
      *  <p>Product that was excluded from the Product Selection.</p>
      * @param builder function to build the product value
      * @return Builder
      */
-
-    public ProductSelectionProductExcludedMessagePayloadBuilder product(
-            Function<com.commercetools.api.models.product.ProductReferenceBuilder, com.commercetools.api.models.product.ProductReferenceBuilder> builder) {
+    
+    public ProductSelectionProductExcludedMessagePayloadBuilder product(Function<com.commercetools.api.models.product.ProductReferenceBuilder, com.commercetools.api.models.product.ProductReferenceBuilder> builder) {
         this.product = builder.apply(com.commercetools.api.models.product.ProductReferenceBuilder.of()).build();
         return this;
     }
-
+    
     /**
      *  <p>Product that was excluded from the Product Selection.</p>
      * @param builder function to build the product value
      * @return Builder
      */
-
-    public ProductSelectionProductExcludedMessagePayloadBuilder withProduct(
-            Function<com.commercetools.api.models.product.ProductReferenceBuilder, com.commercetools.api.models.product.ProductReference> builder) {
+    
+    public ProductSelectionProductExcludedMessagePayloadBuilder withProduct(Function<com.commercetools.api.models.product.ProductReferenceBuilder, com.commercetools.api.models.product.ProductReference> builder) {
         this.product = builder.apply(com.commercetools.api.models.product.ProductReferenceBuilder.of());
         return this;
     }
-
+                    
     /**
      *  <p>Product that was excluded from the Product Selection.</p>
      * @param product value to be set
      * @return Builder
      */
-
-    public ProductSelectionProductExcludedMessagePayloadBuilder product(
-            final com.commercetools.api.models.product.ProductReference product) {
+    
+    public ProductSelectionProductExcludedMessagePayloadBuilder product( final com.commercetools.api.models.product.ProductReference product) {
         this.product = product;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Product Variant Exclusion after the Exclude Product update action.</p>
      * @param builder function to build the variantExclusion value
      * @return Builder
      */
-
-    public ProductSelectionProductExcludedMessagePayloadBuilder variantExclusion(
-            Function<com.commercetools.api.models.product_selection.ProductVariantExclusionBuilder, com.commercetools.api.models.product_selection.ProductVariantExclusionBuilder> builder) {
-        this.variantExclusion = builder
-                .apply(com.commercetools.api.models.product_selection.ProductVariantExclusionBuilder.of())
-                .build();
+    
+    public ProductSelectionProductExcludedMessagePayloadBuilder variantExclusion(Function<com.commercetools.api.models.product_selection.ProductVariantExclusionBuilder, com.commercetools.api.models.product_selection.ProductVariantExclusionBuilder> builder) {
+        this.variantExclusion = builder.apply(com.commercetools.api.models.product_selection.ProductVariantExclusionBuilder.of()).build();
         return this;
     }
-
+    
     /**
      *  <p>Product Variant Exclusion after the Exclude Product update action.</p>
      * @param builder function to build the variantExclusion value
      * @return Builder
      */
-
-    public ProductSelectionProductExcludedMessagePayloadBuilder withVariantExclusion(
-            Function<com.commercetools.api.models.product_selection.ProductVariantExclusionBuilder, com.commercetools.api.models.product_selection.ProductVariantExclusion> builder) {
-        this.variantExclusion = builder
-                .apply(com.commercetools.api.models.product_selection.ProductVariantExclusionBuilder.of());
+    
+    public ProductSelectionProductExcludedMessagePayloadBuilder withVariantExclusion(Function<com.commercetools.api.models.product_selection.ProductVariantExclusionBuilder, com.commercetools.api.models.product_selection.ProductVariantExclusion> builder) {
+        this.variantExclusion = builder.apply(com.commercetools.api.models.product_selection.ProductVariantExclusionBuilder.of());
         return this;
     }
-
+                    
     /**
      *  <p>Product Variant Exclusion after the Exclude Product update action.</p>
      * @param variantExclusion value to be set
      * @return Builder
      */
-
-    public ProductSelectionProductExcludedMessagePayloadBuilder variantExclusion(
-            final com.commercetools.api.models.product_selection.ProductVariantExclusion variantExclusion) {
+    
+    public ProductSelectionProductExcludedMessagePayloadBuilder variantExclusion( final com.commercetools.api.models.product_selection.ProductVariantExclusion variantExclusion) {
         this.variantExclusion = variantExclusion;
         return this;
     }
+    
+    
 
     /**
      *  <p>Product that was excluded from the Product Selection.</p>
      * @return product
      */
-
-    public com.commercetools.api.models.product.ProductReference getProduct() {
+    
+    
+    public com.commercetools.api.models.product.ProductReference getProduct(){
         return this.product;
     }
-
+    
     /**
      *  <p>Product Variant Exclusion after the Exclude Product update action.</p>
      * @return variantExclusion
      */
-
-    public com.commercetools.api.models.product_selection.ProductVariantExclusion getVariantExclusion() {
+    
+    
+    public com.commercetools.api.models.product_selection.ProductVariantExclusion getVariantExclusion(){
         return this.variantExclusion;
     }
 
@@ -127,11 +136,10 @@ public class ProductSelectionProductExcludedMessagePayloadBuilder
      */
     public ProductSelectionProductExcludedMessagePayload build() {
         Objects.requireNonNull(product, ProductSelectionProductExcludedMessagePayload.class + ": product is missing");
-        Objects.requireNonNull(variantExclusion,
-            ProductSelectionProductExcludedMessagePayload.class + ": variantExclusion is missing");
+        Objects.requireNonNull(variantExclusion, ProductSelectionProductExcludedMessagePayload.class + ": variantExclusion is missing");
         return new ProductSelectionProductExcludedMessagePayloadImpl(product, variantExclusion);
     }
-
+    
     /**
      * builds ProductSelectionProductExcludedMessagePayload without checking for non-null required values
      * @return ProductSelectionProductExcludedMessagePayload
@@ -142,7 +150,7 @@ public class ProductSelectionProductExcludedMessagePayloadBuilder
 
     /**
      * factory method for an instance of ProductSelectionProductExcludedMessagePayloadBuilder
-     * @return builder
+     * @return builder 
      */
     public static ProductSelectionProductExcludedMessagePayloadBuilder of() {
         return new ProductSelectionProductExcludedMessagePayloadBuilder();
@@ -153,8 +161,7 @@ public class ProductSelectionProductExcludedMessagePayloadBuilder
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static ProductSelectionProductExcludedMessagePayloadBuilder of(
-            final ProductSelectionProductExcludedMessagePayload template) {
+    public static ProductSelectionProductExcludedMessagePayloadBuilder of(final ProductSelectionProductExcludedMessagePayload template) {
         ProductSelectionProductExcludedMessagePayloadBuilder builder = new ProductSelectionProductExcludedMessagePayloadBuilder();
         builder.product = template.getProduct();
         builder.variantExclusion = template.getVariantExclusion();

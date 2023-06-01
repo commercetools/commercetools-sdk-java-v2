@@ -1,16 +1,20 @@
-
 package com.commercetools.api.models.message;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
+import com.commercetools.api.models.message.MessagePayload;
+import com.commercetools.api.models.message.BusinessUnitDeletedMessagePayloadImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Generated after a successful Delete Business Unit request.</p>
@@ -22,9 +26,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     BusinessUnitDeletedMessagePayload businessUnitDeletedMessagePayload = BusinessUnitDeletedMessagePayload.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = BusinessUnitDeletedMessagePayloadImpl.class)
 public interface BusinessUnitDeletedMessagePayload extends MessagePayload {
 
@@ -33,13 +40,16 @@ public interface BusinessUnitDeletedMessagePayload extends MessagePayload {
      */
     String BUSINESS_UNIT_DELETED = "BusinessUnitDeleted";
 
+
+
     /**
      * factory method
      * @return instance of BusinessUnitDeletedMessagePayload
      */
-    public static BusinessUnitDeletedMessagePayload of() {
+    public static BusinessUnitDeletedMessagePayload of(){
         return new BusinessUnitDeletedMessagePayloadImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy BusinessUnitDeletedMessagePayload
@@ -57,8 +67,7 @@ public interface BusinessUnitDeletedMessagePayload extends MessagePayload {
      * @return copy instance
      */
     @Nullable
-    public static BusinessUnitDeletedMessagePayload deepCopy(
-            @Nullable final BusinessUnitDeletedMessagePayload template) {
+    public static BusinessUnitDeletedMessagePayload deepCopy(@Nullable final BusinessUnitDeletedMessagePayload template) {
         if (template == null) {
             return null;
         }
@@ -73,7 +82,7 @@ public interface BusinessUnitDeletedMessagePayload extends MessagePayload {
     public static BusinessUnitDeletedMessagePayloadBuilder builder() {
         return BusinessUnitDeletedMessagePayloadBuilder.of();
     }
-
+    
     /**
      * create builder for BusinessUnitDeletedMessagePayload instance
      * @param template instance with prefilled values for the builder
@@ -82,6 +91,7 @@ public interface BusinessUnitDeletedMessagePayload extends MessagePayload {
     public static BusinessUnitDeletedMessagePayloadBuilder builder(final BusinessUnitDeletedMessagePayload template) {
         return BusinessUnitDeletedMessagePayloadBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -92,7 +102,7 @@ public interface BusinessUnitDeletedMessagePayload extends MessagePayload {
     default <T> T withBusinessUnitDeletedMessagePayload(Function<BusinessUnitDeletedMessagePayload, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

@@ -1,9 +1,11 @@
-
 package com.commercetools.api.predicates.query.me;
 
 import com.commercetools.api.predicates.query.*;
 
-public class MyCustomerSetLastNameActionQueryBuilderDsl {
+import java.util.function.Function;
+
+
+public class MyCustomerSetLastNameActionQueryBuilderDsl  {
     public MyCustomerSetLastNameActionQueryBuilderDsl() {
     }
 
@@ -12,15 +14,12 @@ public class MyCustomerSetLastNameActionQueryBuilderDsl {
     }
 
     public StringComparisonPredicateBuilder<MyCustomerSetLastNameActionQueryBuilderDsl> action() {
-        return new StringComparisonPredicateBuilder<>(
-            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("action")),
-            p -> new CombinationQueryPredicate<>(p, MyCustomerSetLastNameActionQueryBuilderDsl::of));
+        return new StringComparisonPredicateBuilder<>(BinaryQueryPredicate.of().left(new ConstantQueryPredicate("action")),
+        p -> new CombinationQueryPredicate<>(p, MyCustomerSetLastNameActionQueryBuilderDsl::of));
     }
-
     public StringComparisonPredicateBuilder<MyCustomerSetLastNameActionQueryBuilderDsl> lastName() {
-        return new StringComparisonPredicateBuilder<>(
-            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("lastName")),
-            p -> new CombinationQueryPredicate<>(p, MyCustomerSetLastNameActionQueryBuilderDsl::of));
+        return new StringComparisonPredicateBuilder<>(BinaryQueryPredicate.of().left(new ConstantQueryPredicate("lastName")),
+        p -> new CombinationQueryPredicate<>(p, MyCustomerSetLastNameActionQueryBuilderDsl::of));
     }
-
+    
 }

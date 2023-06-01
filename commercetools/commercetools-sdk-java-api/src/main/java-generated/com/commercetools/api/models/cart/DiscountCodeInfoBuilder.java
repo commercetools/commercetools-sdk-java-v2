@@ -1,9 +1,12 @@
-
 package com.commercetools.api.models.cart;
 
+import com.commercetools.api.models.cart.DiscountCodeState;
+import com.commercetools.api.models.discount_code.DiscountCodeReference;
+import com.commercetools.api.models.cart.DiscountCodeInfo;
+import javax.annotation.Nullable;
 import java.util.*;
 import java.util.function.Function;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -18,78 +21,89 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .state(DiscountCodeState.NOT_ACTIVE)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class DiscountCodeInfoBuilder implements Builder<DiscountCodeInfo> {
 
+    
+    
     private com.commercetools.api.models.discount_code.DiscountCodeReference discountCode;
-
+    
+    
+    
     private com.commercetools.api.models.cart.DiscountCodeState state;
 
+    
     /**
      *  <p>Discount Code associated with the Cart or Order.</p>
      * @param builder function to build the discountCode value
      * @return Builder
      */
-
-    public DiscountCodeInfoBuilder discountCode(
-            Function<com.commercetools.api.models.discount_code.DiscountCodeReferenceBuilder, com.commercetools.api.models.discount_code.DiscountCodeReferenceBuilder> builder) {
-        this.discountCode = builder.apply(com.commercetools.api.models.discount_code.DiscountCodeReferenceBuilder.of())
-                .build();
+    
+    public DiscountCodeInfoBuilder discountCode(Function<com.commercetools.api.models.discount_code.DiscountCodeReferenceBuilder, com.commercetools.api.models.discount_code.DiscountCodeReferenceBuilder> builder) {
+        this.discountCode = builder.apply(com.commercetools.api.models.discount_code.DiscountCodeReferenceBuilder.of()).build();
         return this;
     }
-
+    
     /**
      *  <p>Discount Code associated with the Cart or Order.</p>
      * @param builder function to build the discountCode value
      * @return Builder
      */
-
-    public DiscountCodeInfoBuilder withDiscountCode(
-            Function<com.commercetools.api.models.discount_code.DiscountCodeReferenceBuilder, com.commercetools.api.models.discount_code.DiscountCodeReference> builder) {
+    
+    public DiscountCodeInfoBuilder withDiscountCode(Function<com.commercetools.api.models.discount_code.DiscountCodeReferenceBuilder, com.commercetools.api.models.discount_code.DiscountCodeReference> builder) {
         this.discountCode = builder.apply(com.commercetools.api.models.discount_code.DiscountCodeReferenceBuilder.of());
         return this;
     }
-
+                    
     /**
      *  <p>Discount Code associated with the Cart or Order.</p>
      * @param discountCode value to be set
      * @return Builder
      */
-
-    public DiscountCodeInfoBuilder discountCode(
-            final com.commercetools.api.models.discount_code.DiscountCodeReference discountCode) {
+    
+    public DiscountCodeInfoBuilder discountCode( final com.commercetools.api.models.discount_code.DiscountCodeReference discountCode) {
         this.discountCode = discountCode;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Indicates the state of the Discount Code applied to the Cart or Order.</p>
      * @param state value to be set
      * @return Builder
      */
-
-    public DiscountCodeInfoBuilder state(final com.commercetools.api.models.cart.DiscountCodeState state) {
+    
+    public DiscountCodeInfoBuilder state( final com.commercetools.api.models.cart.DiscountCodeState state) {
         this.state = state;
         return this;
     }
+    
+    
 
     /**
      *  <p>Discount Code associated with the Cart or Order.</p>
      * @return discountCode
      */
-
-    public com.commercetools.api.models.discount_code.DiscountCodeReference getDiscountCode() {
+    
+    
+    public com.commercetools.api.models.discount_code.DiscountCodeReference getDiscountCode(){
         return this.discountCode;
     }
-
+    
     /**
      *  <p>Indicates the state of the Discount Code applied to the Cart or Order.</p>
      * @return state
      */
-
-    public com.commercetools.api.models.cart.DiscountCodeState getState() {
+    
+    
+    public com.commercetools.api.models.cart.DiscountCodeState getState(){
         return this.state;
     }
 
@@ -102,7 +116,7 @@ public class DiscountCodeInfoBuilder implements Builder<DiscountCodeInfo> {
         Objects.requireNonNull(state, DiscountCodeInfo.class + ": state is missing");
         return new DiscountCodeInfoImpl(discountCode, state);
     }
-
+    
     /**
      * builds DiscountCodeInfo without checking for non-null required values
      * @return DiscountCodeInfo
@@ -113,7 +127,7 @@ public class DiscountCodeInfoBuilder implements Builder<DiscountCodeInfo> {
 
     /**
      * factory method for an instance of DiscountCodeInfoBuilder
-     * @return builder
+     * @return builder 
      */
     public static DiscountCodeInfoBuilder of() {
         return new DiscountCodeInfoBuilder();

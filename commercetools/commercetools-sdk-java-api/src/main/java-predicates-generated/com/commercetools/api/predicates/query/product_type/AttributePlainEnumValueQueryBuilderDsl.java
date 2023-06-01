@@ -1,9 +1,11 @@
-
 package com.commercetools.api.predicates.query.product_type;
 
 import com.commercetools.api.predicates.query.*;
 
-public class AttributePlainEnumValueQueryBuilderDsl {
+import java.util.function.Function;
+
+
+public class AttributePlainEnumValueQueryBuilderDsl  {
     public AttributePlainEnumValueQueryBuilderDsl() {
     }
 
@@ -13,13 +15,11 @@ public class AttributePlainEnumValueQueryBuilderDsl {
 
     public StringComparisonPredicateBuilder<AttributePlainEnumValueQueryBuilderDsl> key() {
         return new StringComparisonPredicateBuilder<>(BinaryQueryPredicate.of().left(new ConstantQueryPredicate("key")),
-            p -> new CombinationQueryPredicate<>(p, AttributePlainEnumValueQueryBuilderDsl::of));
+        p -> new CombinationQueryPredicate<>(p, AttributePlainEnumValueQueryBuilderDsl::of));
     }
-
     public StringComparisonPredicateBuilder<AttributePlainEnumValueQueryBuilderDsl> label() {
-        return new StringComparisonPredicateBuilder<>(
-            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("label")),
-            p -> new CombinationQueryPredicate<>(p, AttributePlainEnumValueQueryBuilderDsl::of));
+        return new StringComparisonPredicateBuilder<>(BinaryQueryPredicate.of().left(new ConstantQueryPredicate("label")),
+        p -> new CombinationQueryPredicate<>(p, AttributePlainEnumValueQueryBuilderDsl::of));
     }
-
+    
 }

@@ -1,17 +1,20 @@
-
 package com.commercetools.api.models.error;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
+import com.commercetools.api.models.error.ErrorObject;
+import com.commercetools.api.models.error.InvalidJsonInputErrorImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Returned when an invalid JSON input has been sent. Either the JSON is syntactically incorrect or does not conform to the expected shape (for example is missing a required field).</p>
@@ -26,9 +29,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .detailedErrorMessage("{detailedErrorMessage}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = InvalidJsonInputErrorImpl.class)
 public interface InvalidJsonInputError extends ErrorObject {
 
@@ -44,7 +50,6 @@ public interface InvalidJsonInputError extends ErrorObject {
     @NotNull
     @JsonProperty("code")
     public String getCode();
-
     /**
      *  <p><code>"Request body does not contain valid JSON."</code></p>
      * @return message
@@ -52,7 +57,6 @@ public interface InvalidJsonInputError extends ErrorObject {
     @NotNull
     @JsonProperty("message")
     public String getMessage();
-
     /**
      *  <p>Further explanation about why the JSON is invalid.</p>
      * @return detailedErrorMessage
@@ -65,23 +69,26 @@ public interface InvalidJsonInputError extends ErrorObject {
      *  <p><code>"Request body does not contain valid JSON."</code></p>
      * @param message value to be set
      */
-
+    
     public void setMessage(final String message);
-
+    
+    
     /**
      *  <p>Further explanation about why the JSON is invalid.</p>
      * @param detailedErrorMessage value to be set
      */
-
+    
     public void setDetailedErrorMessage(final String detailedErrorMessage);
+    
 
     /**
      * factory method
      * @return instance of InvalidJsonInputError
      */
-    public static InvalidJsonInputError of() {
+    public static InvalidJsonInputError of(){
         return new InvalidJsonInputErrorImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy InvalidJsonInputError
@@ -120,7 +127,7 @@ public interface InvalidJsonInputError extends ErrorObject {
     public static InvalidJsonInputErrorBuilder builder() {
         return InvalidJsonInputErrorBuilder.of();
     }
-
+    
     /**
      * create builder for InvalidJsonInputError instance
      * @param template instance with prefilled values for the builder
@@ -129,6 +136,7 @@ public interface InvalidJsonInputError extends ErrorObject {
     public static InvalidJsonInputErrorBuilder builder(final InvalidJsonInputError template) {
         return InvalidJsonInputErrorBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -139,7 +147,7 @@ public interface InvalidJsonInputError extends ErrorObject {
     default <T> T withInvalidJsonInputError(Function<InvalidJsonInputError, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

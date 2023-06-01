@@ -1,16 +1,20 @@
-
 package com.commercetools.api.models.error;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
+import com.commercetools.api.models.error.GraphQLErrorObject;
+import com.commercetools.api.models.error.GraphQLInvalidTokenErrorImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * GraphQLInvalidTokenError
@@ -22,9 +26,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     GraphQLInvalidTokenError graphQLInvalidTokenError = GraphQLInvalidTokenError.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = GraphQLInvalidTokenErrorImpl.class)
 public interface GraphQLInvalidTokenError extends GraphQLErrorObject {
 
@@ -33,13 +40,16 @@ public interface GraphQLInvalidTokenError extends GraphQLErrorObject {
      */
     String INVALID_TOKEN = "invalid_token";
 
+
+
     /**
      * factory method
      * @return instance of GraphQLInvalidTokenError
      */
-    public static GraphQLInvalidTokenError of() {
+    public static GraphQLInvalidTokenError of(){
         return new GraphQLInvalidTokenErrorImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy GraphQLInvalidTokenError
@@ -74,7 +84,7 @@ public interface GraphQLInvalidTokenError extends GraphQLErrorObject {
     public static GraphQLInvalidTokenErrorBuilder builder() {
         return GraphQLInvalidTokenErrorBuilder.of();
     }
-
+    
     /**
      * create builder for GraphQLInvalidTokenError instance
      * @param template instance with prefilled values for the builder
@@ -83,6 +93,7 @@ public interface GraphQLInvalidTokenError extends GraphQLErrorObject {
     public static GraphQLInvalidTokenErrorBuilder builder(final GraphQLInvalidTokenError template) {
         return GraphQLInvalidTokenErrorBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -93,7 +104,7 @@ public interface GraphQLInvalidTokenError extends GraphQLErrorObject {
     default <T> T withGraphQLInvalidTokenError(Function<GraphQLInvalidTokenError, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

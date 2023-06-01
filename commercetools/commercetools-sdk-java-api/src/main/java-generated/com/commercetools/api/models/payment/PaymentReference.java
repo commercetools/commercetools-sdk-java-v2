@@ -1,19 +1,22 @@
-
 package com.commercetools.api.models.payment;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
 import com.commercetools.api.models.common.Reference;
+import com.commercetools.api.models.common.ReferenceTypeId;
+import com.commercetools.api.models.payment.Payment;
+import com.commercetools.api.models.payment.PaymentReferenceImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Reference to a Payment.</p>
@@ -26,9 +29,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .id("{id}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = PaymentReferenceImpl.class)
 public interface PaymentReference extends Reference, com.commercetools.api.models.Identifiable<Payment> {
 
@@ -44,7 +50,6 @@ public interface PaymentReference extends Reference, com.commercetools.api.model
     @Valid
     @JsonProperty("obj")
     public Payment getObj();
-
     /**
      *  <p>Unique identifier of the referenced Payment.</p>
      * @return id
@@ -57,23 +62,26 @@ public interface PaymentReference extends Reference, com.commercetools.api.model
      *  <p>Contains the representation of the expanded Payment. Only present in responses to requests with Reference Expansion for Payments.</p>
      * @param obj value to be set
      */
-
+    
     public void setObj(final Payment obj);
-
+    
+    
     /**
      *  <p>Unique identifier of the referenced Payment.</p>
      * @param id value to be set
      */
-
+    
     public void setId(final String id);
+    
 
     /**
      * factory method
      * @return instance of PaymentReference
      */
-    public static PaymentReference of() {
+    public static PaymentReference of(){
         return new PaymentReferenceImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy PaymentReference
@@ -110,7 +118,7 @@ public interface PaymentReference extends Reference, com.commercetools.api.model
     public static PaymentReferenceBuilder builder() {
         return PaymentReferenceBuilder.of();
     }
-
+    
     /**
      * create builder for PaymentReference instance
      * @param template instance with prefilled values for the builder
@@ -119,6 +127,7 @@ public interface PaymentReference extends Reference, com.commercetools.api.model
     public static PaymentReferenceBuilder builder(final PaymentReference template) {
         return PaymentReferenceBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -129,7 +138,7 @@ public interface PaymentReference extends Reference, com.commercetools.api.model
     default <T> T withPaymentReference(Function<PaymentReference, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

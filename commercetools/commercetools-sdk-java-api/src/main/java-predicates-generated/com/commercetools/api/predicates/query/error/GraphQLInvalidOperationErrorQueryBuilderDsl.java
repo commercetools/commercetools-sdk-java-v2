@@ -1,9 +1,11 @@
-
 package com.commercetools.api.predicates.query.error;
 
 import com.commercetools.api.predicates.query.*;
 
-public class GraphQLInvalidOperationErrorQueryBuilderDsl {
+import java.util.function.Function;
+
+
+public class GraphQLInvalidOperationErrorQueryBuilderDsl  {
     public GraphQLInvalidOperationErrorQueryBuilderDsl() {
     }
 
@@ -12,9 +14,8 @@ public class GraphQLInvalidOperationErrorQueryBuilderDsl {
     }
 
     public StringComparisonPredicateBuilder<GraphQLInvalidOperationErrorQueryBuilderDsl> code() {
-        return new StringComparisonPredicateBuilder<>(
-            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("code")),
-            p -> new CombinationQueryPredicate<>(p, GraphQLInvalidOperationErrorQueryBuilderDsl::of));
+        return new StringComparisonPredicateBuilder<>(BinaryQueryPredicate.of().left(new ConstantQueryPredicate("code")),
+        p -> new CombinationQueryPredicate<>(p, GraphQLInvalidOperationErrorQueryBuilderDsl::of));
     }
-
+    
 }

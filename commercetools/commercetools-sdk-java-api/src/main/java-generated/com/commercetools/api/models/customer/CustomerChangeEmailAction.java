@@ -1,17 +1,20 @@
-
 package com.commercetools.api.models.customer;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
+import com.commercetools.api.models.customer.CustomerUpdateAction;
+import com.commercetools.api.models.customer.CustomerChangeEmailActionImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Changing the email of the Customer produces the CustomerEmailChanged Message.</p>
@@ -24,9 +27,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .email("{email}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = CustomerChangeEmailActionImpl.class)
 public interface CustomerChangeEmailAction extends CustomerUpdateAction {
 
@@ -47,16 +53,18 @@ public interface CustomerChangeEmailAction extends CustomerUpdateAction {
      *  <p>Value to set.</p>
      * @param email value to be set
      */
-
+    
     public void setEmail(final String email);
+    
 
     /**
      * factory method
      * @return instance of CustomerChangeEmailAction
      */
-    public static CustomerChangeEmailAction of() {
+    public static CustomerChangeEmailAction of(){
         return new CustomerChangeEmailActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy CustomerChangeEmailAction
@@ -91,7 +99,7 @@ public interface CustomerChangeEmailAction extends CustomerUpdateAction {
     public static CustomerChangeEmailActionBuilder builder() {
         return CustomerChangeEmailActionBuilder.of();
     }
-
+    
     /**
      * create builder for CustomerChangeEmailAction instance
      * @param template instance with prefilled values for the builder
@@ -100,6 +108,7 @@ public interface CustomerChangeEmailAction extends CustomerUpdateAction {
     public static CustomerChangeEmailActionBuilder builder(final CustomerChangeEmailAction template) {
         return CustomerChangeEmailActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -110,7 +119,7 @@ public interface CustomerChangeEmailAction extends CustomerUpdateAction {
     default <T> T withCustomerChangeEmailAction(Function<CustomerChangeEmailAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

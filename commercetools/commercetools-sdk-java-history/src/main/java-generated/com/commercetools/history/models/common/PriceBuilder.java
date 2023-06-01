@@ -1,9 +1,11 @@
-
 package com.commercetools.history.models.common;
 
+import com.commercetools.history.models.common.Money;
+import com.commercetools.history.models.common.Price;
+import javax.annotation.Nullable;
 import java.util.*;
 import java.util.function.Function;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -18,76 +20,89 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .value(valueBuilder -> valueBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class PriceBuilder implements Builder<Price> {
 
+    
+    
     private String id;
-
+    
+    
+    
     private com.commercetools.history.models.common.Money value;
 
+    
     /**
      * set the value to the id
      * @param id value to be set
      * @return Builder
      */
-
-    public PriceBuilder id(final String id) {
+    
+    public PriceBuilder id( final String id) {
         this.id = id;
         return this;
     }
-
+    
+    
+    
+    
     /**
      * set the value to the value using the builder function
      * @param builder function to build the value value
      * @return Builder
      */
-
-    public PriceBuilder value(
-            Function<com.commercetools.history.models.common.MoneyBuilder, com.commercetools.history.models.common.MoneyBuilder> builder) {
+    
+    public PriceBuilder value(Function<com.commercetools.history.models.common.MoneyBuilder, com.commercetools.history.models.common.MoneyBuilder> builder) {
         this.value = builder.apply(com.commercetools.history.models.common.MoneyBuilder.of()).build();
         return this;
     }
-
+    
     /**
      * set the value to the value using the builder function
      * @param builder function to build the value value
      * @return Builder
      */
-
-    public PriceBuilder withValue(
-            Function<com.commercetools.history.models.common.MoneyBuilder, com.commercetools.history.models.common.Money> builder) {
+    
+    public PriceBuilder withValue(Function<com.commercetools.history.models.common.MoneyBuilder, com.commercetools.history.models.common.Money> builder) {
         this.value = builder.apply(com.commercetools.history.models.common.MoneyBuilder.of());
         return this;
     }
-
+                    
     /**
      * set the value to the value
      * @param value value to be set
      * @return Builder
      */
-
-    public PriceBuilder value(final com.commercetools.history.models.common.Money value) {
+    
+    public PriceBuilder value( final com.commercetools.history.models.common.Money value) {
         this.value = value;
         return this;
     }
+    
+    
 
     /**
      * value of id}
      * @return id
      */
-
-    public String getId() {
+    
+    
+    public String getId(){
         return this.id;
     }
-
+    
     /**
      * value of value}
      * @return value
      */
-
-    public com.commercetools.history.models.common.Money getValue() {
+    
+    
+    public com.commercetools.history.models.common.Money getValue(){
         return this.value;
     }
 
@@ -100,7 +115,7 @@ public class PriceBuilder implements Builder<Price> {
         Objects.requireNonNull(value, Price.class + ": value is missing");
         return new PriceImpl(id, value);
     }
-
+    
     /**
      * builds Price without checking for non-null required values
      * @return Price
@@ -111,7 +126,7 @@ public class PriceBuilder implements Builder<Price> {
 
     /**
      * factory method for an instance of PriceBuilder
-     * @return builder
+     * @return builder 
      */
     public static PriceBuilder of() {
         return new PriceBuilder();

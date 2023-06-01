@@ -1,19 +1,21 @@
-
 package com.commercetools.api.models.me;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
 import com.commercetools.api.models.discount_code.DiscountCodeReference;
+import com.commercetools.api.models.me.MyCartUpdateAction;
+import com.commercetools.api.models.me.MyCartRemoveDiscountCodeActionImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * MyCartRemoveDiscountCodeAction
@@ -26,9 +28,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .discountCode(discountCodeBuilder -> discountCodeBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = MyCartRemoveDiscountCodeActionImpl.class)
 public interface MyCartRemoveDiscountCodeAction extends MyCartUpdateAction {
 
@@ -50,16 +55,18 @@ public interface MyCartRemoveDiscountCodeAction extends MyCartUpdateAction {
      *  <p>Discount Code to remove from the Cart.</p>
      * @param discountCode value to be set
      */
-
+    
     public void setDiscountCode(final DiscountCodeReference discountCode);
+    
 
     /**
      * factory method
      * @return instance of MyCartRemoveDiscountCodeAction
      */
-    public static MyCartRemoveDiscountCodeAction of() {
+    public static MyCartRemoveDiscountCodeAction of(){
         return new MyCartRemoveDiscountCodeActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy MyCartRemoveDiscountCodeAction
@@ -83,8 +90,7 @@ public interface MyCartRemoveDiscountCodeAction extends MyCartUpdateAction {
             return null;
         }
         MyCartRemoveDiscountCodeActionImpl instance = new MyCartRemoveDiscountCodeActionImpl();
-        instance.setDiscountCode(
-            com.commercetools.api.models.discount_code.DiscountCodeReference.deepCopy(template.getDiscountCode()));
+        instance.setDiscountCode(com.commercetools.api.models.discount_code.DiscountCodeReference.deepCopy(template.getDiscountCode()));
         return instance;
     }
 
@@ -95,7 +101,7 @@ public interface MyCartRemoveDiscountCodeAction extends MyCartUpdateAction {
     public static MyCartRemoveDiscountCodeActionBuilder builder() {
         return MyCartRemoveDiscountCodeActionBuilder.of();
     }
-
+    
     /**
      * create builder for MyCartRemoveDiscountCodeAction instance
      * @param template instance with prefilled values for the builder
@@ -104,6 +110,7 @@ public interface MyCartRemoveDiscountCodeAction extends MyCartUpdateAction {
     public static MyCartRemoveDiscountCodeActionBuilder builder(final MyCartRemoveDiscountCodeAction template) {
         return MyCartRemoveDiscountCodeActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -114,7 +121,7 @@ public interface MyCartRemoveDiscountCodeAction extends MyCartUpdateAction {
     default <T> T withMyCartRemoveDiscountCodeAction(Function<MyCartRemoveDiscountCodeAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

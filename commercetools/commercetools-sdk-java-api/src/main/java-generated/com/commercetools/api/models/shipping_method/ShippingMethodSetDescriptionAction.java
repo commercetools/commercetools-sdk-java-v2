@@ -1,16 +1,20 @@
-
 package com.commercetools.api.models.shipping_method;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
+import com.commercetools.api.models.shipping_method.ShippingMethodUpdateAction;
+import com.commercetools.api.models.shipping_method.ShippingMethodSetDescriptionActionImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * ShippingMethodSetDescriptionAction
@@ -22,9 +26,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     ShippingMethodSetDescriptionAction shippingMethodSetDescriptionAction = ShippingMethodSetDescriptionAction.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = ShippingMethodSetDescriptionActionImpl.class)
 @Deprecated
 public interface ShippingMethodSetDescriptionAction extends ShippingMethodUpdateAction {
@@ -38,7 +45,7 @@ public interface ShippingMethodSetDescriptionAction extends ShippingMethodUpdate
      *  <p>Value to set. If empty, any existing value will be removed.</p>
      * @return description
      */
-
+    
     @JsonProperty("description")
     public String getDescription();
 
@@ -46,16 +53,18 @@ public interface ShippingMethodSetDescriptionAction extends ShippingMethodUpdate
      *  <p>Value to set. If empty, any existing value will be removed.</p>
      * @param description value to be set
      */
-
+    
     public void setDescription(final String description);
+    
 
     /**
      * factory method
      * @return instance of ShippingMethodSetDescriptionAction
      */
-    public static ShippingMethodSetDescriptionAction of() {
+    public static ShippingMethodSetDescriptionAction of(){
         return new ShippingMethodSetDescriptionActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy ShippingMethodSetDescriptionAction
@@ -74,8 +83,7 @@ public interface ShippingMethodSetDescriptionAction extends ShippingMethodUpdate
      * @return copy instance
      */
     @Nullable
-    public static ShippingMethodSetDescriptionAction deepCopy(
-            @Nullable final ShippingMethodSetDescriptionAction template) {
+    public static ShippingMethodSetDescriptionAction deepCopy(@Nullable final ShippingMethodSetDescriptionAction template) {
         if (template == null) {
             return null;
         }
@@ -91,7 +99,7 @@ public interface ShippingMethodSetDescriptionAction extends ShippingMethodUpdate
     public static ShippingMethodSetDescriptionActionBuilder builder() {
         return ShippingMethodSetDescriptionActionBuilder.of();
     }
-
+    
     /**
      * create builder for ShippingMethodSetDescriptionAction instance
      * @param template instance with prefilled values for the builder
@@ -100,6 +108,7 @@ public interface ShippingMethodSetDescriptionAction extends ShippingMethodUpdate
     public static ShippingMethodSetDescriptionActionBuilder builder(final ShippingMethodSetDescriptionAction template) {
         return ShippingMethodSetDescriptionActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -110,7 +119,7 @@ public interface ShippingMethodSetDescriptionAction extends ShippingMethodUpdate
     default <T> T withShippingMethodSetDescriptionAction(Function<ShippingMethodSetDescriptionAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

@@ -1,18 +1,20 @@
-
 package com.commercetools.importapi.models.products;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
+import com.commercetools.importapi.models.products.SearchKeyword;
+import com.commercetools.importapi.models.products.SearchKeywordsImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Search keywords are primarily used by the suggester but are also considered for the full-text search. SearchKeywords is a JSON object where the keys are of IETF language tag. The value to a language tag key is an array of SearchKeyword for the specific language.</p>
@@ -41,11 +43,15 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .plus/^[a-z]{2}(-[A-Z]{2})?$/(/^[a-z]{2}(-[A-Z]{2})?$/Builder -> /^[a-z]{2}(-[A-Z]{2})?$/Builder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = SearchKeywordsImpl.class)
-public interface SearchKeywords {
+public interface SearchKeywords  {
+
 
     /**
      *
@@ -61,7 +67,7 @@ public interface SearchKeywords {
      * @param key property name
      * @param value property value
      */
-
+    
     @JsonAnySetter
     public void setValue(String key, List<SearchKeyword> value);
 
@@ -69,9 +75,10 @@ public interface SearchKeywords {
      * factory method
      * @return instance of SearchKeywords
      */
-    public static SearchKeywords of() {
+    public static SearchKeywords of(){
         return new SearchKeywordsImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy SearchKeywords
@@ -106,7 +113,7 @@ public interface SearchKeywords {
     public static SearchKeywordsBuilder builder() {
         return SearchKeywordsBuilder.of();
     }
-
+    
     /**
      * create builder for SearchKeywords instance
      * @param template instance with prefilled values for the builder
@@ -115,6 +122,7 @@ public interface SearchKeywords {
     public static SearchKeywordsBuilder builder(final SearchKeywords template) {
         return SearchKeywordsBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -125,7 +133,7 @@ public interface SearchKeywords {
     default <T> T withSearchKeywords(Function<SearchKeywords, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

@@ -1,19 +1,21 @@
-
 package com.commercetools.api.models.message;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
 import com.commercetools.api.models.common.Money;
+import com.commercetools.api.models.message.Message;
+import com.commercetools.api.models.message.StandalonePriceValueChangedMessageImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Generated after a successful Change Value update action.</p>
@@ -34,9 +36,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .staged(true)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = StandalonePriceValueChangedMessageImpl.class)
 public interface StandalonePriceValueChangedMessage extends Message {
 
@@ -53,7 +58,6 @@ public interface StandalonePriceValueChangedMessage extends Message {
     @Valid
     @JsonProperty("value")
     public Money getValue();
-
     /**
      *  <p>Whether the new value was applied to the current or the staged representation of the StandalonePrice. Staged changes are stored on the StagedStandalonePrice.</p>
      * @return staged
@@ -61,7 +65,6 @@ public interface StandalonePriceValueChangedMessage extends Message {
     @NotNull
     @JsonProperty("staged")
     public Boolean getStaged();
-
     /**
      *  <p>The old value of the updated StandalonePrice. Present on Messages created after 3 February 2023. Optional for backwards compatibility.</p>
      * @return oldValue
@@ -74,30 +77,34 @@ public interface StandalonePriceValueChangedMessage extends Message {
      *  <p>The new value of the updated StandalonePrice.</p>
      * @param value value to be set
      */
-
+    
     public void setValue(final Money value);
-
+    
+    
     /**
      *  <p>Whether the new value was applied to the current or the staged representation of the StandalonePrice. Staged changes are stored on the StagedStandalonePrice.</p>
      * @param staged value to be set
      */
-
+    
     public void setStaged(final Boolean staged);
-
+    
+    
     /**
      *  <p>The old value of the updated StandalonePrice. Present on Messages created after 3 February 2023. Optional for backwards compatibility.</p>
      * @param oldValue value to be set
      */
-
+    
     public void setOldValue(final Money oldValue);
+    
 
     /**
      * factory method
      * @return instance of StandalonePriceValueChangedMessage
      */
-    public static StandalonePriceValueChangedMessage of() {
+    public static StandalonePriceValueChangedMessage of(){
         return new StandalonePriceValueChangedMessageImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy StandalonePriceValueChangedMessage
@@ -128,8 +135,7 @@ public interface StandalonePriceValueChangedMessage extends Message {
      * @return copy instance
      */
     @Nullable
-    public static StandalonePriceValueChangedMessage deepCopy(
-            @Nullable final StandalonePriceValueChangedMessage template) {
+    public static StandalonePriceValueChangedMessage deepCopy(@Nullable final StandalonePriceValueChangedMessage template) {
         if (template == null) {
             return null;
         }
@@ -138,14 +144,12 @@ public interface StandalonePriceValueChangedMessage extends Message {
         instance.setVersion(template.getVersion());
         instance.setCreatedAt(template.getCreatedAt());
         instance.setLastModifiedAt(template.getLastModifiedAt());
-        instance.setLastModifiedBy(
-            com.commercetools.api.models.common.LastModifiedBy.deepCopy(template.getLastModifiedBy()));
+        instance.setLastModifiedBy(com.commercetools.api.models.common.LastModifiedBy.deepCopy(template.getLastModifiedBy()));
         instance.setCreatedBy(com.commercetools.api.models.common.CreatedBy.deepCopy(template.getCreatedBy()));
         instance.setSequenceNumber(template.getSequenceNumber());
         instance.setResource(com.commercetools.api.models.common.Reference.deepCopy(template.getResource()));
         instance.setResourceVersion(template.getResourceVersion());
-        instance.setResourceUserProvidedIdentifiers(com.commercetools.api.models.message.UserProvidedIdentifiers
-                .deepCopy(template.getResourceUserProvidedIdentifiers()));
+        instance.setResourceUserProvidedIdentifiers(com.commercetools.api.models.message.UserProvidedIdentifiers.deepCopy(template.getResourceUserProvidedIdentifiers()));
         instance.setValue(com.commercetools.api.models.common.Money.deepCopy(template.getValue()));
         instance.setStaged(template.getStaged());
         instance.setOldValue(com.commercetools.api.models.common.Money.deepCopy(template.getOldValue()));
@@ -159,7 +163,7 @@ public interface StandalonePriceValueChangedMessage extends Message {
     public static StandalonePriceValueChangedMessageBuilder builder() {
         return StandalonePriceValueChangedMessageBuilder.of();
     }
-
+    
     /**
      * create builder for StandalonePriceValueChangedMessage instance
      * @param template instance with prefilled values for the builder
@@ -168,6 +172,7 @@ public interface StandalonePriceValueChangedMessage extends Message {
     public static StandalonePriceValueChangedMessageBuilder builder(final StandalonePriceValueChangedMessage template) {
         return StandalonePriceValueChangedMessageBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -178,7 +183,7 @@ public interface StandalonePriceValueChangedMessage extends Message {
     default <T> T withStandalonePriceValueChangedMessage(Function<StandalonePriceValueChangedMessage, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

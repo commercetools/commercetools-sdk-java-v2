@@ -1,17 +1,23 @@
-
 package com.commercetools.api.models.shipping_method;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
+import com.commercetools.api.models.shipping_method.CartClassificationTier;
+import com.commercetools.api.models.shipping_method.CartScoreTier;
+import com.commercetools.api.models.shipping_method.CartValueTier;
+import com.commercetools.api.models.shipping_method.ShippingRateTierType;
 
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * ShippingRatePriceTier
@@ -25,16 +31,27 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             price(priceBuilder -> priceBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
 @JsonSubTypes({
-        @JsonSubTypes.Type(value = com.commercetools.api.models.shipping_method.CartClassificationTierImpl.class, name = CartClassificationTier.CART_CLASSIFICATION),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.shipping_method.CartScoreTierImpl.class, name = CartScoreTier.CART_SCORE),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.shipping_method.CartValueTierImpl.class, name = CartValueTier.CART_VALUE) })
-@JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.EXISTING_PROPERTY, property = "type", defaultImpl = ShippingRatePriceTierImpl.class, visible = true)
+   @JsonSubTypes.Type(value = com.commercetools.api.models.shipping_method.CartClassificationTierImpl.class, name = CartClassificationTier.CART_CLASSIFICATION),
+   @JsonSubTypes.Type(value = com.commercetools.api.models.shipping_method.CartScoreTierImpl.class, name = CartScoreTier.CART_SCORE),
+   @JsonSubTypes.Type(value = com.commercetools.api.models.shipping_method.CartValueTierImpl.class, name = CartValueTier.CART_VALUE)
+})
+@JsonTypeInfo(
+    use = JsonTypeInfo.Id.NAME,
+    include = JsonTypeInfo.As.EXISTING_PROPERTY,
+    property = "type",
+    defaultImpl = ShippingRatePriceTierImpl.class,
+    visible = true
+)
 @JsonDeserialize(as = ShippingRatePriceTierImpl.class)
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
-public interface ShippingRatePriceTier {
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
+public interface ShippingRatePriceTier  {
+
 
     /**
      *
@@ -43,6 +60,9 @@ public interface ShippingRatePriceTier {
     @NotNull
     @JsonProperty("type")
     public ShippingRateTierType getType();
+
+
+
 
     /**
      * factory method to create a deep copy of ShippingRatePriceTier
@@ -55,43 +75,39 @@ public interface ShippingRatePriceTier {
             return null;
         }
         if (template instanceof com.commercetools.api.models.shipping_method.CartClassificationTier) {
-            return com.commercetools.api.models.shipping_method.CartClassificationTier
-                    .deepCopy((com.commercetools.api.models.shipping_method.CartClassificationTier) template);
+            return com.commercetools.api.models.shipping_method.CartClassificationTier.deepCopy((com.commercetools.api.models.shipping_method.CartClassificationTier)template);
         }
         if (template instanceof com.commercetools.api.models.shipping_method.CartScoreTier) {
-            return com.commercetools.api.models.shipping_method.CartScoreTier
-                    .deepCopy((com.commercetools.api.models.shipping_method.CartScoreTier) template);
+            return com.commercetools.api.models.shipping_method.CartScoreTier.deepCopy((com.commercetools.api.models.shipping_method.CartScoreTier)template);
         }
         if (template instanceof com.commercetools.api.models.shipping_method.CartValueTier) {
-            return com.commercetools.api.models.shipping_method.CartValueTier
-                    .deepCopy((com.commercetools.api.models.shipping_method.CartValueTier) template);
+            return com.commercetools.api.models.shipping_method.CartValueTier.deepCopy((com.commercetools.api.models.shipping_method.CartValueTier)template);
         }
         ShippingRatePriceTierImpl instance = new ShippingRatePriceTierImpl();
         return instance;
     }
+
 
     /**
      * builder for cartClassification subtype
      * @return builder
      */
     public static com.commercetools.api.models.shipping_method.CartClassificationTierBuilder cartClassificationBuilder() {
-        return com.commercetools.api.models.shipping_method.CartClassificationTierBuilder.of();
+       return com.commercetools.api.models.shipping_method.CartClassificationTierBuilder.of();
     }
-
     /**
      * builder for cartScore subtype
      * @return builder
      */
     public static com.commercetools.api.models.shipping_method.CartScoreTierBuilder cartScoreBuilder() {
-        return com.commercetools.api.models.shipping_method.CartScoreTierBuilder.of();
+       return com.commercetools.api.models.shipping_method.CartScoreTierBuilder.of();
     }
-
     /**
      * builder for cartValue subtype
      * @return builder
      */
     public static com.commercetools.api.models.shipping_method.CartValueTierBuilder cartValueBuilder() {
-        return com.commercetools.api.models.shipping_method.CartValueTierBuilder.of();
+       return com.commercetools.api.models.shipping_method.CartValueTierBuilder.of();
     }
 
     /**
@@ -103,7 +119,7 @@ public interface ShippingRatePriceTier {
     default <T> T withShippingRatePriceTier(Function<ShippingRatePriceTier, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

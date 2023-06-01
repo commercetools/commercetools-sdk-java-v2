@@ -1,9 +1,12 @@
-
 package com.commercetools.importapi.models.errors;
 
+import com.commercetools.importapi.models.errors.ErrorObject;
+import com.commercetools.importapi.models.productvariants.Attribute;
+import com.commercetools.importapi.models.errors.DuplicateAttributeValueError;
+import javax.annotation.Nullable;
 import java.util.*;
 import java.util.function.Function;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -18,66 +21,78 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .attribute(attributeBuilder -> attributeBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class DuplicateAttributeValueErrorBuilder implements Builder<DuplicateAttributeValueError> {
 
+    
+    
     private String message;
-
+    
+    
+    
     private com.commercetools.importapi.models.productvariants.Attribute attribute;
 
+    
     /**
      * set the value to the message
      * @param message value to be set
      * @return Builder
      */
-
-    public DuplicateAttributeValueErrorBuilder message(final String message) {
+    
+    public DuplicateAttributeValueErrorBuilder message( final String message) {
         this.message = message;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>The attribute in conflict.</p>
      * @param attribute value to be set
      * @return Builder
      */
-
-    public DuplicateAttributeValueErrorBuilder attribute(
-            final com.commercetools.importapi.models.productvariants.Attribute attribute) {
+    
+    public DuplicateAttributeValueErrorBuilder attribute( final com.commercetools.importapi.models.productvariants.Attribute attribute) {
         this.attribute = attribute;
         return this;
     }
-
+    
+    
     /**
      *  <p>The attribute in conflict.</p>
      * @param builder function to build the attribute value
      * @return Builder
      */
-
-    public DuplicateAttributeValueErrorBuilder attribute(
-            Function<com.commercetools.importapi.models.productvariants.AttributeBuilder, Builder<? extends com.commercetools.importapi.models.productvariants.Attribute>> builder) {
-        this.attribute = builder.apply(com.commercetools.importapi.models.productvariants.AttributeBuilder.of())
-                .build();
+    
+    public DuplicateAttributeValueErrorBuilder attribute(Function<com.commercetools.importapi.models.productvariants.AttributeBuilder, Builder<? extends com.commercetools.importapi.models.productvariants.Attribute>> builder) {
+        this.attribute = builder.apply(com.commercetools.importapi.models.productvariants.AttributeBuilder.of()).build();
         return this;
     }
+                    
 
     /**
      * value of message}
      * @return message
      */
-
-    public String getMessage() {
+    
+    
+    public String getMessage(){
         return this.message;
     }
-
+    
     /**
      *  <p>The attribute in conflict.</p>
      * @return attribute
      */
-
-    public com.commercetools.importapi.models.productvariants.Attribute getAttribute() {
+    
+    
+    public com.commercetools.importapi.models.productvariants.Attribute getAttribute(){
         return this.attribute;
     }
 
@@ -90,7 +105,7 @@ public class DuplicateAttributeValueErrorBuilder implements Builder<DuplicateAtt
         Objects.requireNonNull(attribute, DuplicateAttributeValueError.class + ": attribute is missing");
         return new DuplicateAttributeValueErrorImpl(message, attribute);
     }
-
+    
     /**
      * builds DuplicateAttributeValueError without checking for non-null required values
      * @return DuplicateAttributeValueError
@@ -101,7 +116,7 @@ public class DuplicateAttributeValueErrorBuilder implements Builder<DuplicateAtt
 
     /**
      * factory method for an instance of DuplicateAttributeValueErrorBuilder
-     * @return builder
+     * @return builder 
      */
     public static DuplicateAttributeValueErrorBuilder of() {
         return new DuplicateAttributeValueErrorBuilder();

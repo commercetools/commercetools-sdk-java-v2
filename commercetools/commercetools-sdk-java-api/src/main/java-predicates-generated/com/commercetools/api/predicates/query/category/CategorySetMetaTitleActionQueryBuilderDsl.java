@@ -1,11 +1,11 @@
-
 package com.commercetools.api.predicates.query.category;
-
-import java.util.function.Function;
 
 import com.commercetools.api.predicates.query.*;
 
-public class CategorySetMetaTitleActionQueryBuilderDsl {
+import java.util.function.Function;
+
+
+public class CategorySetMetaTitleActionQueryBuilderDsl  {
     public CategorySetMetaTitleActionQueryBuilderDsl() {
     }
 
@@ -14,18 +14,16 @@ public class CategorySetMetaTitleActionQueryBuilderDsl {
     }
 
     public StringComparisonPredicateBuilder<CategorySetMetaTitleActionQueryBuilderDsl> action() {
-        return new StringComparisonPredicateBuilder<>(
-            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("action")),
-            p -> new CombinationQueryPredicate<>(p, CategorySetMetaTitleActionQueryBuilderDsl::of));
+        return new StringComparisonPredicateBuilder<>(BinaryQueryPredicate.of().left(new ConstantQueryPredicate("action")),
+        p -> new CombinationQueryPredicate<>(p, CategorySetMetaTitleActionQueryBuilderDsl::of));
     }
-
     public CombinationQueryPredicate<CategorySetMetaTitleActionQueryBuilderDsl> metaTitle(
-            Function<com.commercetools.api.predicates.query.common.LocalizedStringQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.common.LocalizedStringQueryBuilderDsl>> fn) {
-        return new CombinationQueryPredicate<>(
-            ContainerQueryPredicate.of()
-                    .parent(ConstantQueryPredicate.of().constant("metaTitle"))
-                    .inner(fn.apply(com.commercetools.api.predicates.query.common.LocalizedStringQueryBuilderDsl.of())),
+        Function<com.commercetools.api.predicates.query.common.LocalizedStringQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.common.LocalizedStringQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(ContainerQueryPredicate.of()
+            .parent(ConstantQueryPredicate.of().constant("metaTitle"))
+            .inner(fn.apply(com.commercetools.api.predicates.query.common.LocalizedStringQueryBuilderDsl.of())),
             CategorySetMetaTitleActionQueryBuilderDsl::of);
     }
-
+    
+    
 }

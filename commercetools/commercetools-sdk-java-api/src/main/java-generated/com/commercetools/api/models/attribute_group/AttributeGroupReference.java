@@ -1,19 +1,22 @@
-
 package com.commercetools.api.models.attribute_group;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
+import com.commercetools.api.models.attribute_group.AttributeGroup;
 import com.commercetools.api.models.common.Reference;
+import com.commercetools.api.models.common.ReferenceTypeId;
+import com.commercetools.api.models.attribute_group.AttributeGroupReferenceImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Reference to an AttributeGroup.</p>
@@ -26,9 +29,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .id("{id}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = AttributeGroupReferenceImpl.class)
 public interface AttributeGroupReference extends Reference, com.commercetools.api.models.Identifiable<AttributeGroup> {
 
@@ -44,7 +50,6 @@ public interface AttributeGroupReference extends Reference, com.commercetools.ap
     @Valid
     @JsonProperty("obj")
     public AttributeGroup getObj();
-
     /**
      *  <p>Platform-generated unique identifier of the referenced AttributeGroup.</p>
      * @return id
@@ -57,23 +62,26 @@ public interface AttributeGroupReference extends Reference, com.commercetools.ap
      *  <p>Contains the representation of the expanded AttributeGroup. Only present in responses to requests with Reference Expansion for AttributeGroup.</p>
      * @param obj value to be set
      */
-
+    
     public void setObj(final AttributeGroup obj);
-
+    
+    
     /**
      *  <p>Platform-generated unique identifier of the referenced AttributeGroup.</p>
      * @param id value to be set
      */
-
+    
     public void setId(final String id);
+    
 
     /**
      * factory method
      * @return instance of AttributeGroupReference
      */
-    public static AttributeGroupReference of() {
+    public static AttributeGroupReference of(){
         return new AttributeGroupReferenceImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy AttributeGroupReference
@@ -110,7 +118,7 @@ public interface AttributeGroupReference extends Reference, com.commercetools.ap
     public static AttributeGroupReferenceBuilder builder() {
         return AttributeGroupReferenceBuilder.of();
     }
-
+    
     /**
      * create builder for AttributeGroupReference instance
      * @param template instance with prefilled values for the builder
@@ -119,6 +127,7 @@ public interface AttributeGroupReference extends Reference, com.commercetools.ap
     public static AttributeGroupReferenceBuilder builder(final AttributeGroupReference template) {
         return AttributeGroupReferenceBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -129,7 +138,7 @@ public interface AttributeGroupReference extends Reference, com.commercetools.ap
     default <T> T withAttributeGroupReference(Function<AttributeGroupReference, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

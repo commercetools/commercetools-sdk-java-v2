@@ -1,9 +1,11 @@
-
 package com.commercetools.history.models.common;
 
+import com.commercetools.history.models.common.ItemShippingTarget;
+import com.commercetools.history.models.common.ItemShippingDetails;
+import javax.annotation.Nullable;
 import java.util.*;
 import java.util.function.Function;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -18,13 +20,20 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .valid(true)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class ItemShippingDetailsBuilder implements Builder<ItemShippingDetails> {
 
+    
+    
     private java.util.List<com.commercetools.history.models.common.ItemShippingTarget> targets;
-
+    
+    
+    
     private Boolean valid;
 
     /**
@@ -32,116 +41,117 @@ public class ItemShippingDetailsBuilder implements Builder<ItemShippingDetails> 
      * @param targets value to be set
      * @return Builder
      */
-
-    public ItemShippingDetailsBuilder targets(
-            final com.commercetools.history.models.common.ItemShippingTarget... targets) {
+    
+    public ItemShippingDetailsBuilder targets( final com.commercetools.history.models.common.ItemShippingTarget ...targets) {
         this.targets = new ArrayList<>(Arrays.asList(targets));
         return this;
     }
-
+    
     /**
      * set value to the targets
      * @param targets value to be set
      * @return Builder
      */
-
-    public ItemShippingDetailsBuilder targets(
-            final java.util.List<com.commercetools.history.models.common.ItemShippingTarget> targets) {
+    
+    public ItemShippingDetailsBuilder targets( final java.util.List<com.commercetools.history.models.common.ItemShippingTarget> targets) {
         this.targets = targets;
         return this;
     }
-
+    
     /**
      * add values to the targets
      * @param targets value to be set
      * @return Builder
      */
-
-    public ItemShippingDetailsBuilder plusTargets(
-            final com.commercetools.history.models.common.ItemShippingTarget... targets) {
+    
+    public ItemShippingDetailsBuilder plusTargets( final com.commercetools.history.models.common.ItemShippingTarget ...targets) {
         if (this.targets == null) {
             this.targets = new ArrayList<>();
         }
         this.targets.addAll(Arrays.asList(targets));
         return this;
     }
-
+    
+    
+    
     /**
      * add the value to the targets using the builder function
      * @param builder function to build the targets value
      * @return Builder
      */
-
-    public ItemShippingDetailsBuilder plusTargets(
-            Function<com.commercetools.history.models.common.ItemShippingTargetBuilder, com.commercetools.history.models.common.ItemShippingTargetBuilder> builder) {
+    
+    public ItemShippingDetailsBuilder plusTargets(Function<com.commercetools.history.models.common.ItemShippingTargetBuilder, com.commercetools.history.models.common.ItemShippingTargetBuilder> builder) {
         if (this.targets == null) {
             this.targets = new ArrayList<>();
         }
         this.targets.add(builder.apply(com.commercetools.history.models.common.ItemShippingTargetBuilder.of()).build());
         return this;
     }
-
+    
     /**
      * set the value to the targets using the builder function
      * @param builder function to build the targets value
      * @return Builder
      */
-
-    public ItemShippingDetailsBuilder withTargets(
-            Function<com.commercetools.history.models.common.ItemShippingTargetBuilder, com.commercetools.history.models.common.ItemShippingTargetBuilder> builder) {
+    
+    public ItemShippingDetailsBuilder withTargets(Function<com.commercetools.history.models.common.ItemShippingTargetBuilder, com.commercetools.history.models.common.ItemShippingTargetBuilder> builder) {
         this.targets = new ArrayList<>();
         this.targets.add(builder.apply(com.commercetools.history.models.common.ItemShippingTargetBuilder.of()).build());
         return this;
     }
-
+    
     /**
      * add the value to the targets using the builder function
      * @param builder function to build the targets value
      * @return Builder
      */
-
-    public ItemShippingDetailsBuilder addTargets(
-            Function<com.commercetools.history.models.common.ItemShippingTargetBuilder, com.commercetools.history.models.common.ItemShippingTarget> builder) {
+    
+    public ItemShippingDetailsBuilder addTargets(Function<com.commercetools.history.models.common.ItemShippingTargetBuilder, com.commercetools.history.models.common.ItemShippingTarget> builder) {
         return plusTargets(builder.apply(com.commercetools.history.models.common.ItemShippingTargetBuilder.of()));
     }
-
+    
     /**
      * set the value to the targets using the builder function
      * @param builder function to build the targets value
      * @return Builder
      */
-
-    public ItemShippingDetailsBuilder setTargets(
-            Function<com.commercetools.history.models.common.ItemShippingTargetBuilder, com.commercetools.history.models.common.ItemShippingTarget> builder) {
+    
+    public ItemShippingDetailsBuilder setTargets(Function<com.commercetools.history.models.common.ItemShippingTargetBuilder, com.commercetools.history.models.common.ItemShippingTarget> builder) {
         return targets(builder.apply(com.commercetools.history.models.common.ItemShippingTargetBuilder.of()));
     }
-
+                    
+    
+    
     /**
      *  <p>true if the quantity of the (custom) line item is equal to the sum of the sub-quantities in <code>targets</code>, <code>false</code> otherwise. A cart cannot be ordered when the value is <code>false</code>. The error InvalidItemShippingDetails will be triggered.</p>
      * @param valid value to be set
      * @return Builder
      */
-
-    public ItemShippingDetailsBuilder valid(final Boolean valid) {
+    
+    public ItemShippingDetailsBuilder valid( final Boolean valid) {
         this.valid = valid;
         return this;
     }
+    
+    
 
     /**
      * value of targets}
      * @return targets
      */
-
-    public java.util.List<com.commercetools.history.models.common.ItemShippingTarget> getTargets() {
+    
+    
+    public java.util.List<com.commercetools.history.models.common.ItemShippingTarget> getTargets(){
         return this.targets;
     }
-
+    
     /**
      *  <p>true if the quantity of the (custom) line item is equal to the sum of the sub-quantities in <code>targets</code>, <code>false</code> otherwise. A cart cannot be ordered when the value is <code>false</code>. The error InvalidItemShippingDetails will be triggered.</p>
      * @return valid
      */
-
-    public Boolean getValid() {
+    
+    
+    public Boolean getValid(){
         return this.valid;
     }
 
@@ -154,7 +164,7 @@ public class ItemShippingDetailsBuilder implements Builder<ItemShippingDetails> 
         Objects.requireNonNull(valid, ItemShippingDetails.class + ": valid is missing");
         return new ItemShippingDetailsImpl(targets, valid);
     }
-
+    
     /**
      * builds ItemShippingDetails without checking for non-null required values
      * @return ItemShippingDetails
@@ -165,7 +175,7 @@ public class ItemShippingDetailsBuilder implements Builder<ItemShippingDetails> 
 
     /**
      * factory method for an instance of ItemShippingDetailsBuilder
-     * @return builder
+     * @return builder 
      */
     public static ItemShippingDetailsBuilder of() {
         return new ItemShippingDetailsBuilder();

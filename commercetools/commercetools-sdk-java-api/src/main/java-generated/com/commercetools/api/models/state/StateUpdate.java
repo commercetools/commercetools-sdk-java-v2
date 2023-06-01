@@ -1,19 +1,20 @@
-
 package com.commercetools.api.models.state;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-import java.util.stream.Collectors;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
+import com.commercetools.api.models.state.StateUpdateAction;
+import com.commercetools.api.models.state.StateUpdateImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * StateUpdate
@@ -27,12 +28,15 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .plusActions(actionsBuilder -> actionsBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = StateUpdateImpl.class)
-public interface StateUpdate
-        extends com.commercetools.api.models.ResourceUpdate<StateUpdate, StateUpdateAction, StateUpdateBuilder> {
+public interface StateUpdate extends com.commercetools.api.models.ResourceUpdate<StateUpdate, StateUpdateAction, StateUpdateBuilder> {
+
 
     /**
      *  <p>Expected version of the State on which the changes should be applied. If the expected version does not match the actual version, a ConcurrentModification error is returned.</p>
@@ -41,7 +45,6 @@ public interface StateUpdate
     @NotNull
     @JsonProperty("version")
     public Long getVersion();
-
     /**
      *  <p>Update actions to be performed on the State.</p>
      * @return actions
@@ -55,31 +58,32 @@ public interface StateUpdate
      *  <p>Expected version of the State on which the changes should be applied. If the expected version does not match the actual version, a ConcurrentModification error is returned.</p>
      * @param version value to be set
      */
-
+    
     public void setVersion(final Long version);
-
+    
+    
     /**
      *  <p>Update actions to be performed on the State.</p>
      * @param actions values to be set
      */
-
+    
     @JsonIgnore
-    public void setActions(final StateUpdateAction... actions);
-
+    public void setActions(final StateUpdateAction ...actions);
     /**
      *  <p>Update actions to be performed on the State.</p>
      * @param actions values to be set
      */
-
+    
     public void setActions(final List<StateUpdateAction> actions);
 
     /**
      * factory method
      * @return instance of StateUpdate
      */
-    public static StateUpdate of() {
+    public static StateUpdate of(){
         return new StateUpdateImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy StateUpdate
@@ -106,9 +110,7 @@ public interface StateUpdate
         StateUpdateImpl instance = new StateUpdateImpl();
         instance.setVersion(template.getVersion());
         instance.setActions(Optional.ofNullable(template.getActions())
-                .map(t -> t.stream()
-                        .map(com.commercetools.api.models.state.StateUpdateAction::deepCopy)
-                        .collect(Collectors.toList()))
+                .map(t -> t.stream().map(com.commercetools.api.models.state.StateUpdateAction::deepCopy).collect(Collectors.toList()))
                 .orElse(null));
         return instance;
     }
@@ -120,7 +122,7 @@ public interface StateUpdate
     public static StateUpdateBuilder builder() {
         return StateUpdateBuilder.of();
     }
-
+    
     /**
      * create builder for StateUpdate instance
      * @param template instance with prefilled values for the builder
@@ -129,6 +131,7 @@ public interface StateUpdate
     public static StateUpdateBuilder builder(final StateUpdate template) {
         return StateUpdateBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -139,7 +142,7 @@ public interface StateUpdate
     default <T> T withStateUpdate(Function<StateUpdate, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

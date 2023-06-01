@@ -1,9 +1,12 @@
-
 package com.commercetools.api.models.message;
 
+import com.commercetools.api.models.message.MessagePayload;
+import com.commercetools.api.models.store.StoreKeyReference;
+import com.commercetools.api.models.message.ShoppingListStoreSetMessagePayload;
+import javax.annotation.Nullable;
 import java.util.*;
 import java.util.function.Function;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -17,55 +20,61 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .store(storeBuilder -> storeBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class ShoppingListStoreSetMessagePayloadBuilder implements Builder<ShoppingListStoreSetMessagePayload> {
 
+    
+    
     private com.commercetools.api.models.store.StoreKeyReference store;
 
+    
     /**
      *  <p>Reference to a Store by its key.</p>
      * @param builder function to build the store value
      * @return Builder
      */
-
-    public ShoppingListStoreSetMessagePayloadBuilder store(
-            Function<com.commercetools.api.models.store.StoreKeyReferenceBuilder, com.commercetools.api.models.store.StoreKeyReferenceBuilder> builder) {
+    
+    public ShoppingListStoreSetMessagePayloadBuilder store(Function<com.commercetools.api.models.store.StoreKeyReferenceBuilder, com.commercetools.api.models.store.StoreKeyReferenceBuilder> builder) {
         this.store = builder.apply(com.commercetools.api.models.store.StoreKeyReferenceBuilder.of()).build();
         return this;
     }
-
+    
     /**
      *  <p>Reference to a Store by its key.</p>
      * @param builder function to build the store value
      * @return Builder
      */
-
-    public ShoppingListStoreSetMessagePayloadBuilder withStore(
-            Function<com.commercetools.api.models.store.StoreKeyReferenceBuilder, com.commercetools.api.models.store.StoreKeyReference> builder) {
+    
+    public ShoppingListStoreSetMessagePayloadBuilder withStore(Function<com.commercetools.api.models.store.StoreKeyReferenceBuilder, com.commercetools.api.models.store.StoreKeyReference> builder) {
         this.store = builder.apply(com.commercetools.api.models.store.StoreKeyReferenceBuilder.of());
         return this;
     }
-
+                    
     /**
      *  <p>Reference to a Store by its key.</p>
      * @param store value to be set
      * @return Builder
      */
-
-    public ShoppingListStoreSetMessagePayloadBuilder store(
-            final com.commercetools.api.models.store.StoreKeyReference store) {
+    
+    public ShoppingListStoreSetMessagePayloadBuilder store( final com.commercetools.api.models.store.StoreKeyReference store) {
         this.store = store;
         return this;
     }
+    
+    
 
     /**
      *  <p>Reference to a Store by its key.</p>
      * @return store
      */
-
-    public com.commercetools.api.models.store.StoreKeyReference getStore() {
+    
+    
+    public com.commercetools.api.models.store.StoreKeyReference getStore(){
         return this.store;
     }
 
@@ -77,7 +86,7 @@ public class ShoppingListStoreSetMessagePayloadBuilder implements Builder<Shoppi
         Objects.requireNonNull(store, ShoppingListStoreSetMessagePayload.class + ": store is missing");
         return new ShoppingListStoreSetMessagePayloadImpl(store);
     }
-
+    
     /**
      * builds ShoppingListStoreSetMessagePayload without checking for non-null required values
      * @return ShoppingListStoreSetMessagePayload
@@ -88,7 +97,7 @@ public class ShoppingListStoreSetMessagePayloadBuilder implements Builder<Shoppi
 
     /**
      * factory method for an instance of ShoppingListStoreSetMessagePayloadBuilder
-     * @return builder
+     * @return builder 
      */
     public static ShoppingListStoreSetMessagePayloadBuilder of() {
         return new ShoppingListStoreSetMessagePayloadBuilder();

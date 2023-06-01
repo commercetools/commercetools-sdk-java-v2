@@ -1,17 +1,21 @@
-
 package com.commercetools.api.models.order;
 
-import java.time.*;
+import com.commercetools.api.models.order.OrderSearchQueryExpressionValue;
 import java.time.ZonedDateTime;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
+import com.commercetools.api.models.order.OrderSearchDateRangeValueImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * OrderSearchDateRangeValue
@@ -24,25 +28,28 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .field("{field}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = OrderSearchDateRangeValueImpl.class)
 public interface OrderSearchDateRangeValue extends OrderSearchQueryExpressionValue {
+
 
     /**
      *
      * @return gte
      */
-
+    
     @JsonProperty("gte")
     public ZonedDateTime getGte();
-
     /**
      *
      * @return lte
      */
-
+    
     @JsonProperty("lte")
     public ZonedDateTime getLte();
 
@@ -50,23 +57,26 @@ public interface OrderSearchDateRangeValue extends OrderSearchQueryExpressionVal
      * set gte
      * @param gte value to be set
      */
-
+    
     public void setGte(final ZonedDateTime gte);
-
+    
+    
     /**
      * set lte
      * @param lte value to be set
      */
-
+    
     public void setLte(final ZonedDateTime lte);
+    
 
     /**
      * factory method
      * @return instance of OrderSearchDateRangeValue
      */
-    public static OrderSearchDateRangeValue of() {
+    public static OrderSearchDateRangeValue of(){
         return new OrderSearchDateRangeValueImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy OrderSearchDateRangeValue
@@ -109,7 +119,7 @@ public interface OrderSearchDateRangeValue extends OrderSearchQueryExpressionVal
     public static OrderSearchDateRangeValueBuilder builder() {
         return OrderSearchDateRangeValueBuilder.of();
     }
-
+    
     /**
      * create builder for OrderSearchDateRangeValue instance
      * @param template instance with prefilled values for the builder
@@ -118,6 +128,7 @@ public interface OrderSearchDateRangeValue extends OrderSearchQueryExpressionVal
     public static OrderSearchDateRangeValueBuilder builder(final OrderSearchDateRangeValue template) {
         return OrderSearchDateRangeValueBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -128,7 +139,7 @@ public interface OrderSearchDateRangeValue extends OrderSearchQueryExpressionVal
     default <T> T withOrderSearchDateRangeValue(Function<OrderSearchDateRangeValue, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

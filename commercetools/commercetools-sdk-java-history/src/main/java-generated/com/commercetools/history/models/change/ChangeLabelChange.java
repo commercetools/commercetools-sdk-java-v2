@@ -1,19 +1,21 @@
-
 package com.commercetools.history.models.change;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
+import com.commercetools.history.models.change.Change;
 import com.commercetools.history.models.common.LocalizedString;
+import com.commercetools.history.models.change.ChangeLabelChangeImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * ChangeLabelChange
@@ -30,9 +32,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .previousValue(previousValueBuilder -> previousValueBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = ChangeLabelChangeImpl.class)
 public interface ChangeLabelChange extends Change {
 
@@ -48,7 +53,6 @@ public interface ChangeLabelChange extends Change {
     @NotNull
     @JsonProperty("type")
     public String getType();
-
     /**
      *  <p>Update action for <code>changeLabel</code> on product types and types</p>
      * @return change
@@ -56,7 +60,6 @@ public interface ChangeLabelChange extends Change {
     @NotNull
     @JsonProperty("change")
     public String getChange();
-
     /**
      *  <p>The name of the field definition to update (types).</p>
      * @return fieldName
@@ -64,7 +67,6 @@ public interface ChangeLabelChange extends Change {
     @NotNull
     @JsonProperty("fieldName")
     public String getFieldName();
-
     /**
      *  <p>The name of the attribute definition to update (product-type).</p>
      * @return attributeName
@@ -72,7 +74,6 @@ public interface ChangeLabelChange extends Change {
     @NotNull
     @JsonProperty("attributeName")
     public String getAttributeName();
-
     /**
      *
      * @return nextValue
@@ -81,7 +82,6 @@ public interface ChangeLabelChange extends Change {
     @Valid
     @JsonProperty("nextValue")
     public LocalizedString getNextValue();
-
     /**
      *
      * @return previousValue
@@ -95,44 +95,50 @@ public interface ChangeLabelChange extends Change {
      *  <p>Update action for <code>changeLabel</code> on product types and types</p>
      * @param change value to be set
      */
-
+    
     public void setChange(final String change);
-
+    
+    
     /**
      *  <p>The name of the field definition to update (types).</p>
      * @param fieldName value to be set
      */
-
+    
     public void setFieldName(final String fieldName);
-
+    
+    
     /**
      *  <p>The name of the attribute definition to update (product-type).</p>
      * @param attributeName value to be set
      */
-
+    
     public void setAttributeName(final String attributeName);
-
+    
+    
     /**
      * set nextValue
      * @param nextValue value to be set
      */
-
+    
     public void setNextValue(final LocalizedString nextValue);
-
+    
+    
     /**
      * set previousValue
      * @param previousValue value to be set
      */
-
+    
     public void setPreviousValue(final LocalizedString previousValue);
+    
 
     /**
      * factory method
      * @return instance of ChangeLabelChange
      */
-    public static ChangeLabelChange of() {
+    public static ChangeLabelChange of(){
         return new ChangeLabelChangeImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy ChangeLabelChange
@@ -163,10 +169,8 @@ public interface ChangeLabelChange extends Change {
         instance.setChange(template.getChange());
         instance.setFieldName(template.getFieldName());
         instance.setAttributeName(template.getAttributeName());
-        instance.setNextValue(
-            com.commercetools.history.models.common.LocalizedString.deepCopy(template.getNextValue()));
-        instance.setPreviousValue(
-            com.commercetools.history.models.common.LocalizedString.deepCopy(template.getPreviousValue()));
+        instance.setNextValue(com.commercetools.history.models.common.LocalizedString.deepCopy(template.getNextValue()));
+        instance.setPreviousValue(com.commercetools.history.models.common.LocalizedString.deepCopy(template.getPreviousValue()));
         return instance;
     }
 
@@ -177,7 +181,7 @@ public interface ChangeLabelChange extends Change {
     public static ChangeLabelChangeBuilder builder() {
         return ChangeLabelChangeBuilder.of();
     }
-
+    
     /**
      * create builder for ChangeLabelChange instance
      * @param template instance with prefilled values for the builder
@@ -186,6 +190,7 @@ public interface ChangeLabelChange extends Change {
     public static ChangeLabelChangeBuilder builder(final ChangeLabelChange template) {
         return ChangeLabelChangeBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -196,7 +201,7 @@ public interface ChangeLabelChange extends Change {
     default <T> T withChangeLabelChange(Function<ChangeLabelChange, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

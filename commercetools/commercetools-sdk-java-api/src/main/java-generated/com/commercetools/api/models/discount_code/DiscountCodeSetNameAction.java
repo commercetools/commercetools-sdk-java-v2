@@ -1,18 +1,21 @@
-
 package com.commercetools.api.models.discount_code;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-
 import com.commercetools.api.models.common.LocalizedString;
+import com.commercetools.api.models.discount_code.DiscountCodeUpdateAction;
+import com.commercetools.api.models.discount_code.DiscountCodeSetNameActionImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * DiscountCodeSetNameAction
@@ -24,9 +27,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     DiscountCodeSetNameAction discountCodeSetNameAction = DiscountCodeSetNameAction.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = DiscountCodeSetNameActionImpl.class)
 public interface DiscountCodeSetNameAction extends DiscountCodeUpdateAction {
 
@@ -47,16 +53,18 @@ public interface DiscountCodeSetNameAction extends DiscountCodeUpdateAction {
      *  <p>Value to set. If empty, any existing value will be removed.</p>
      * @param name value to be set
      */
-
+    
     public void setName(final LocalizedString name);
+    
 
     /**
      * factory method
      * @return instance of DiscountCodeSetNameAction
      */
-    public static DiscountCodeSetNameAction of() {
+    public static DiscountCodeSetNameAction of(){
         return new DiscountCodeSetNameActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy DiscountCodeSetNameAction
@@ -91,7 +99,7 @@ public interface DiscountCodeSetNameAction extends DiscountCodeUpdateAction {
     public static DiscountCodeSetNameActionBuilder builder() {
         return DiscountCodeSetNameActionBuilder.of();
     }
-
+    
     /**
      * create builder for DiscountCodeSetNameAction instance
      * @param template instance with prefilled values for the builder
@@ -100,6 +108,7 @@ public interface DiscountCodeSetNameAction extends DiscountCodeUpdateAction {
     public static DiscountCodeSetNameActionBuilder builder(final DiscountCodeSetNameAction template) {
         return DiscountCodeSetNameActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -110,7 +119,7 @@ public interface DiscountCodeSetNameAction extends DiscountCodeUpdateAction {
     default <T> T withDiscountCodeSetNameAction(Function<DiscountCodeSetNameAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

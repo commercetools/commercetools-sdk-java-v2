@@ -1,10 +1,12 @@
-
 package com.commercetools.api.models.order;
 
-import java.util.*;
-
+import com.commercetools.api.models.order.OrderUpdateAction;
+import com.commercetools.api.models.order.PaymentState;
+import com.commercetools.api.models.order.OrderChangePaymentStateAction;
 import javax.annotation.Nullable;
-
+import java.util.*;
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -17,33 +19,39 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     OrderChangePaymentStateAction orderChangePaymentStateAction = OrderChangePaymentStateAction.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class OrderChangePaymentStateActionBuilder implements Builder<OrderChangePaymentStateAction> {
 
+    
     @Nullable
     private com.commercetools.api.models.order.PaymentState paymentState;
 
+    
     /**
      * set the value to the paymentState
      * @param paymentState value to be set
      * @return Builder
      */
-
-    public OrderChangePaymentStateActionBuilder paymentState(
-            @Nullable final com.commercetools.api.models.order.PaymentState paymentState) {
+    
+    public OrderChangePaymentStateActionBuilder paymentState(@Nullable final com.commercetools.api.models.order.PaymentState paymentState) {
         this.paymentState = paymentState;
         return this;
     }
+    
+    
 
     /**
      * value of paymentState}
      * @return paymentState
      */
-
+    
     @Nullable
-    public com.commercetools.api.models.order.PaymentState getPaymentState() {
+    public com.commercetools.api.models.order.PaymentState getPaymentState(){
         return this.paymentState;
     }
 
@@ -54,7 +62,7 @@ public class OrderChangePaymentStateActionBuilder implements Builder<OrderChange
     public OrderChangePaymentStateAction build() {
         return new OrderChangePaymentStateActionImpl(paymentState);
     }
-
+    
     /**
      * builds OrderChangePaymentStateAction without checking for non-null required values
      * @return OrderChangePaymentStateAction
@@ -65,7 +73,7 @@ public class OrderChangePaymentStateActionBuilder implements Builder<OrderChange
 
     /**
      * factory method for an instance of OrderChangePaymentStateActionBuilder
-     * @return builder
+     * @return builder 
      */
     public static OrderChangePaymentStateActionBuilder of() {
         return new OrderChangePaymentStateActionBuilder();

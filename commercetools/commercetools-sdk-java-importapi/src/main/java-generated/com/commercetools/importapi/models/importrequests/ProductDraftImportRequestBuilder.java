@@ -1,9 +1,13 @@
-
 package com.commercetools.importapi.models.importrequests;
 
+import com.commercetools.importapi.models.common.ImportResourceType;
+import com.commercetools.importapi.models.importrequests.ImportRequest;
+import com.commercetools.importapi.models.productdrafts.ProductDraftImport;
+import com.commercetools.importapi.models.importrequests.ProductDraftImportRequest;
+import javax.annotation.Nullable;
 import java.util.*;
 import java.util.function.Function;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -17,11 +21,16 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .plusResources(resourcesBuilder -> resourcesBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class ProductDraftImportRequestBuilder implements Builder<ProductDraftImportRequest> {
 
+    
+    
     private java.util.List<com.commercetools.importapi.models.productdrafts.ProductDraftImport> resources;
 
     /**
@@ -29,100 +38,93 @@ public class ProductDraftImportRequestBuilder implements Builder<ProductDraftImp
      * @param resources value to be set
      * @return Builder
      */
-
-    public ProductDraftImportRequestBuilder resources(
-            final com.commercetools.importapi.models.productdrafts.ProductDraftImport... resources) {
+    
+    public ProductDraftImportRequestBuilder resources( final com.commercetools.importapi.models.productdrafts.ProductDraftImport ...resources) {
         this.resources = new ArrayList<>(Arrays.asList(resources));
         return this;
     }
-
+    
     /**
      *  <p>The product draft import resources of this request.</p>
      * @param resources value to be set
      * @return Builder
      */
-
-    public ProductDraftImportRequestBuilder resources(
-            final java.util.List<com.commercetools.importapi.models.productdrafts.ProductDraftImport> resources) {
+    
+    public ProductDraftImportRequestBuilder resources( final java.util.List<com.commercetools.importapi.models.productdrafts.ProductDraftImport> resources) {
         this.resources = resources;
         return this;
     }
-
+    
     /**
      *  <p>The product draft import resources of this request.</p>
      * @param resources value to be set
      * @return Builder
      */
-
-    public ProductDraftImportRequestBuilder plusResources(
-            final com.commercetools.importapi.models.productdrafts.ProductDraftImport... resources) {
+    
+    public ProductDraftImportRequestBuilder plusResources( final com.commercetools.importapi.models.productdrafts.ProductDraftImport ...resources) {
         if (this.resources == null) {
             this.resources = new ArrayList<>();
         }
         this.resources.addAll(Arrays.asList(resources));
         return this;
     }
-
+    
+    
+    
     /**
      *  <p>The product draft import resources of this request.</p>
      * @param builder function to build the resources value
      * @return Builder
      */
-
-    public ProductDraftImportRequestBuilder plusResources(
-            Function<com.commercetools.importapi.models.productdrafts.ProductDraftImportBuilder, com.commercetools.importapi.models.productdrafts.ProductDraftImportBuilder> builder) {
+    
+    public ProductDraftImportRequestBuilder plusResources(Function<com.commercetools.importapi.models.productdrafts.ProductDraftImportBuilder, com.commercetools.importapi.models.productdrafts.ProductDraftImportBuilder> builder) {
         if (this.resources == null) {
             this.resources = new ArrayList<>();
         }
-        this.resources.add(
-            builder.apply(com.commercetools.importapi.models.productdrafts.ProductDraftImportBuilder.of()).build());
+        this.resources.add(builder.apply(com.commercetools.importapi.models.productdrafts.ProductDraftImportBuilder.of()).build());
         return this;
     }
-
+    
     /**
      *  <p>The product draft import resources of this request.</p>
      * @param builder function to build the resources value
      * @return Builder
      */
-
-    public ProductDraftImportRequestBuilder withResources(
-            Function<com.commercetools.importapi.models.productdrafts.ProductDraftImportBuilder, com.commercetools.importapi.models.productdrafts.ProductDraftImportBuilder> builder) {
+    
+    public ProductDraftImportRequestBuilder withResources(Function<com.commercetools.importapi.models.productdrafts.ProductDraftImportBuilder, com.commercetools.importapi.models.productdrafts.ProductDraftImportBuilder> builder) {
         this.resources = new ArrayList<>();
-        this.resources.add(
-            builder.apply(com.commercetools.importapi.models.productdrafts.ProductDraftImportBuilder.of()).build());
+        this.resources.add(builder.apply(com.commercetools.importapi.models.productdrafts.ProductDraftImportBuilder.of()).build());
         return this;
     }
-
+    
     /**
      *  <p>The product draft import resources of this request.</p>
      * @param builder function to build the resources value
      * @return Builder
      */
-
-    public ProductDraftImportRequestBuilder addResources(
-            Function<com.commercetools.importapi.models.productdrafts.ProductDraftImportBuilder, com.commercetools.importapi.models.productdrafts.ProductDraftImport> builder) {
-        return plusResources(
-            builder.apply(com.commercetools.importapi.models.productdrafts.ProductDraftImportBuilder.of()));
+    
+    public ProductDraftImportRequestBuilder addResources(Function<com.commercetools.importapi.models.productdrafts.ProductDraftImportBuilder, com.commercetools.importapi.models.productdrafts.ProductDraftImport> builder) {
+        return plusResources(builder.apply(com.commercetools.importapi.models.productdrafts.ProductDraftImportBuilder.of()));
     }
-
+    
     /**
      *  <p>The product draft import resources of this request.</p>
      * @param builder function to build the resources value
      * @return Builder
      */
-
-    public ProductDraftImportRequestBuilder setResources(
-            Function<com.commercetools.importapi.models.productdrafts.ProductDraftImportBuilder, com.commercetools.importapi.models.productdrafts.ProductDraftImport> builder) {
-        return resources(
-            builder.apply(com.commercetools.importapi.models.productdrafts.ProductDraftImportBuilder.of()));
+    
+    public ProductDraftImportRequestBuilder setResources(Function<com.commercetools.importapi.models.productdrafts.ProductDraftImportBuilder, com.commercetools.importapi.models.productdrafts.ProductDraftImport> builder) {
+        return resources(builder.apply(com.commercetools.importapi.models.productdrafts.ProductDraftImportBuilder.of()));
     }
+                    
 
     /**
      *  <p>The product draft import resources of this request.</p>
      * @return resources
      */
-
-    public java.util.List<com.commercetools.importapi.models.productdrafts.ProductDraftImport> getResources() {
+    
+    
+    public java.util.List<com.commercetools.importapi.models.productdrafts.ProductDraftImport> getResources(){
         return this.resources;
     }
 
@@ -134,7 +136,7 @@ public class ProductDraftImportRequestBuilder implements Builder<ProductDraftImp
         Objects.requireNonNull(resources, ProductDraftImportRequest.class + ": resources is missing");
         return new ProductDraftImportRequestImpl(resources);
     }
-
+    
     /**
      * builds ProductDraftImportRequest without checking for non-null required values
      * @return ProductDraftImportRequest
@@ -145,7 +147,7 @@ public class ProductDraftImportRequestBuilder implements Builder<ProductDraftImp
 
     /**
      * factory method for an instance of ProductDraftImportRequestBuilder
-     * @return builder
+     * @return builder 
      */
     public static ProductDraftImportRequestBuilder of() {
         return new ProductDraftImportRequestBuilder();

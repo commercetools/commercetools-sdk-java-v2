@@ -1,10 +1,12 @@
-
 package com.commercetools.api.models.error;
 
-import java.util.*;
-
+import com.commercetools.api.models.common.ReferenceTypeId;
+import com.commercetools.api.models.error.GraphQLErrorObject;
+import com.commercetools.api.models.error.GraphQLReferencedResourceNotFoundError;
 import javax.annotation.Nullable;
-
+import java.util.*;
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -18,18 +20,27 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .typeId(ReferenceTypeId.ASSOCIATE_ROLE)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class GraphQLReferencedResourceNotFoundErrorBuilder implements Builder<GraphQLReferencedResourceNotFoundError> {
 
+    
+    
     private Map<String, java.lang.Object> values = new HashMap<>();
-
+    
+    
+    
     private com.commercetools.api.models.common.ReferenceTypeId typeId;
-
+    
+    
     @Nullable
     private String id;
-
+    
+    
     @Nullable
     private String key;
 
@@ -38,19 +49,19 @@ public class GraphQLReferencedResourceNotFoundErrorBuilder implements Builder<Gr
      * @param values properties to be set
      * @return Builder
      */
-
-    public GraphQLReferencedResourceNotFoundErrorBuilder values(final Map<String, java.lang.Object> values) {
+    
+    public GraphQLReferencedResourceNotFoundErrorBuilder values( final Map<String, java.lang.Object> values){
         this.values = values;
         return this;
     }
-
+    
     /**
      *  <p>Error-specific additional fields.</p>
      * @param key property name
      * @param value property value
      * @return Builder
      */
-
+    
     public GraphQLReferencedResourceNotFoundErrorBuilder addValue(final String key, final java.lang.Object value) {
         if (this.values == null) {
             values = new HashMap<>();
@@ -58,76 +69,87 @@ public class GraphQLReferencedResourceNotFoundErrorBuilder implements Builder<Gr
         values.put(key, value);
         return this;
     }
-
+    
+    
+    
     /**
      *  <p>Type of referenced resource.</p>
      * @param typeId value to be set
      * @return Builder
      */
-
-    public GraphQLReferencedResourceNotFoundErrorBuilder typeId(
-            final com.commercetools.api.models.common.ReferenceTypeId typeId) {
+    
+    public GraphQLReferencedResourceNotFoundErrorBuilder typeId( final com.commercetools.api.models.common.ReferenceTypeId typeId) {
         this.typeId = typeId;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Unique identifier of the referenced resource, if known.</p>
      * @param id value to be set
      * @return Builder
      */
-
+    
     public GraphQLReferencedResourceNotFoundErrorBuilder id(@Nullable final String id) {
         this.id = id;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>User-defined unique identifier of the referenced resource, if known.</p>
      * @param key value to be set
      * @return Builder
      */
-
+    
     public GraphQLReferencedResourceNotFoundErrorBuilder key(@Nullable final String key) {
         this.key = key;
         return this;
     }
+    
+    
 
     /**
      *  <p>Error-specific additional fields.</p>
      * @return pattern properties
      */
-
-    public Map<String, java.lang.Object> getValues() {
+    
+    
+    public Map<String, java.lang.Object> getValues(){
         return this.values;
     }
-
+    
     /**
      *  <p>Type of referenced resource.</p>
      * @return typeId
      */
-
-    public com.commercetools.api.models.common.ReferenceTypeId getTypeId() {
+    
+    
+    public com.commercetools.api.models.common.ReferenceTypeId getTypeId(){
         return this.typeId;
     }
-
+    
     /**
      *  <p>Unique identifier of the referenced resource, if known.</p>
      * @return id
      */
-
+    
     @Nullable
-    public String getId() {
+    public String getId(){
         return this.id;
     }
-
+    
     /**
      *  <p>User-defined unique identifier of the referenced resource, if known.</p>
      * @return key
      */
-
+    
     @Nullable
-    public String getKey() {
+    public String getKey(){
         return this.key;
     }
 
@@ -139,7 +161,7 @@ public class GraphQLReferencedResourceNotFoundErrorBuilder implements Builder<Gr
         Objects.requireNonNull(typeId, GraphQLReferencedResourceNotFoundError.class + ": typeId is missing");
         return new GraphQLReferencedResourceNotFoundErrorImpl(values, typeId, id, key);
     }
-
+    
     /**
      * builds GraphQLReferencedResourceNotFoundError without checking for non-null required values
      * @return GraphQLReferencedResourceNotFoundError
@@ -150,7 +172,7 @@ public class GraphQLReferencedResourceNotFoundErrorBuilder implements Builder<Gr
 
     /**
      * factory method for an instance of GraphQLReferencedResourceNotFoundErrorBuilder
-     * @return builder
+     * @return builder 
      */
     public static GraphQLReferencedResourceNotFoundErrorBuilder of() {
         return new GraphQLReferencedResourceNotFoundErrorBuilder();
@@ -161,8 +183,7 @@ public class GraphQLReferencedResourceNotFoundErrorBuilder implements Builder<Gr
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static GraphQLReferencedResourceNotFoundErrorBuilder of(
-            final GraphQLReferencedResourceNotFoundError template) {
+    public static GraphQLReferencedResourceNotFoundErrorBuilder of(final GraphQLReferencedResourceNotFoundError template) {
         GraphQLReferencedResourceNotFoundErrorBuilder builder = new GraphQLReferencedResourceNotFoundErrorBuilder();
         builder.values = template.values();
         builder.typeId = template.getTypeId();

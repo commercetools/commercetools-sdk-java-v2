@@ -1,19 +1,21 @@
-
 package com.commercetools.history.models.change;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
+import com.commercetools.history.models.change.Change;
 import com.commercetools.history.models.common.Address;
+import com.commercetools.history.models.change.RemoveBillingAddressIdChangeImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * RemoveBillingAddressIdChange
@@ -29,9 +31,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .address(addressBuilder -> addressBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = RemoveBillingAddressIdChangeImpl.class)
 public interface RemoveBillingAddressIdChange extends Change {
 
@@ -47,7 +52,6 @@ public interface RemoveBillingAddressIdChange extends Change {
     @NotNull
     @JsonProperty("change")
     public String getChange();
-
     /**
      *
      * @return type
@@ -55,7 +59,6 @@ public interface RemoveBillingAddressIdChange extends Change {
     @NotNull
     @JsonProperty("type")
     public String getType();
-
     /**
      *
      * @return nextValue
@@ -63,7 +66,6 @@ public interface RemoveBillingAddressIdChange extends Change {
     @NotNull
     @JsonProperty("nextValue")
     public List<String> getNextValue();
-
     /**
      *
      * @return previousValue
@@ -71,7 +73,6 @@ public interface RemoveBillingAddressIdChange extends Change {
     @NotNull
     @JsonProperty("previousValue")
     public List<String> getPreviousValue();
-
     /**
      *
      * @return address
@@ -85,53 +86,54 @@ public interface RemoveBillingAddressIdChange extends Change {
      *  <p>Update action for <code>removeBillingAddressId</code> action on customers.</p>
      * @param change value to be set
      */
-
+    
     public void setChange(final String change);
-
+    
+    
     /**
      * set nextValue
      * @param nextValue values to be set
      */
-
+    
     @JsonIgnore
-    public void setNextValue(final String... nextValue);
-
+    public void setNextValue(final String ...nextValue);
     /**
      * set nextValue
      * @param nextValue values to be set
      */
-
+    
     public void setNextValue(final List<String> nextValue);
-
+    
     /**
      * set previousValue
      * @param previousValue values to be set
      */
-
+    
     @JsonIgnore
-    public void setPreviousValue(final String... previousValue);
-
+    public void setPreviousValue(final String ...previousValue);
     /**
      * set previousValue
      * @param previousValue values to be set
      */
-
+    
     public void setPreviousValue(final List<String> previousValue);
-
+    
     /**
      * set address
      * @param address value to be set
      */
-
+    
     public void setAddress(final Address address);
+    
 
     /**
      * factory method
      * @return instance of RemoveBillingAddressIdChange
      */
-    public static RemoveBillingAddressIdChange of() {
+    public static RemoveBillingAddressIdChange of(){
         return new RemoveBillingAddressIdChangeImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy RemoveBillingAddressIdChange
@@ -159,8 +161,12 @@ public interface RemoveBillingAddressIdChange extends Change {
         }
         RemoveBillingAddressIdChangeImpl instance = new RemoveBillingAddressIdChangeImpl();
         instance.setChange(template.getChange());
-        instance.setNextValue(Optional.ofNullable(template.getNextValue()).map(ArrayList::new).orElse(null));
-        instance.setPreviousValue(Optional.ofNullable(template.getPreviousValue()).map(ArrayList::new).orElse(null));
+        instance.setNextValue(Optional.ofNullable(template.getNextValue())
+                .map(ArrayList::new)
+                .orElse(null));
+        instance.setPreviousValue(Optional.ofNullable(template.getPreviousValue())
+                .map(ArrayList::new)
+                .orElse(null));
         instance.setAddress(com.commercetools.history.models.common.Address.deepCopy(template.getAddress()));
         return instance;
     }
@@ -172,7 +178,7 @@ public interface RemoveBillingAddressIdChange extends Change {
     public static RemoveBillingAddressIdChangeBuilder builder() {
         return RemoveBillingAddressIdChangeBuilder.of();
     }
-
+    
     /**
      * create builder for RemoveBillingAddressIdChange instance
      * @param template instance with prefilled values for the builder
@@ -181,6 +187,7 @@ public interface RemoveBillingAddressIdChange extends Change {
     public static RemoveBillingAddressIdChangeBuilder builder(final RemoveBillingAddressIdChange template) {
         return RemoveBillingAddressIdChangeBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -191,7 +198,7 @@ public interface RemoveBillingAddressIdChange extends Change {
     default <T> T withRemoveBillingAddressIdChange(Function<RemoveBillingAddressIdChange, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

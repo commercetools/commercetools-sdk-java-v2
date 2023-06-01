@@ -1,11 +1,13 @@
-
 package com.commercetools.api.models.product_selection;
 
+import com.commercetools.api.models.product.ProductReference;
+import com.commercetools.api.models.product_selection.ProductVariantExclusion;
+import com.commercetools.api.models.product_selection.ProductVariantSelection;
+import com.commercetools.api.models.product_selection.AssignedProductReference;
+import javax.annotation.Nullable;
 import java.util.*;
 import java.util.function.Function;
-
-import javax.annotation.Nullable;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -19,153 +21,157 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .product(productBuilder -> productBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class AssignedProductReferenceBuilder implements Builder<AssignedProductReference> {
 
+    
+    
     private com.commercetools.api.models.product.ProductReference product;
-
+    
+    
     @Nullable
     private com.commercetools.api.models.product_selection.ProductVariantSelection variantSelection;
-
+    
+    
     @Nullable
     private com.commercetools.api.models.product_selection.ProductVariantExclusion variantExclusion;
 
+    
     /**
      *  <p>Reference to a Product that is assigned to the Product Selection.</p>
      * @param builder function to build the product value
      * @return Builder
      */
-
-    public AssignedProductReferenceBuilder product(
-            Function<com.commercetools.api.models.product.ProductReferenceBuilder, com.commercetools.api.models.product.ProductReferenceBuilder> builder) {
+    
+    public AssignedProductReferenceBuilder product(Function<com.commercetools.api.models.product.ProductReferenceBuilder, com.commercetools.api.models.product.ProductReferenceBuilder> builder) {
         this.product = builder.apply(com.commercetools.api.models.product.ProductReferenceBuilder.of()).build();
         return this;
     }
-
+    
     /**
      *  <p>Reference to a Product that is assigned to the Product Selection.</p>
      * @param builder function to build the product value
      * @return Builder
      */
-
-    public AssignedProductReferenceBuilder withProduct(
-            Function<com.commercetools.api.models.product.ProductReferenceBuilder, com.commercetools.api.models.product.ProductReference> builder) {
+    
+    public AssignedProductReferenceBuilder withProduct(Function<com.commercetools.api.models.product.ProductReferenceBuilder, com.commercetools.api.models.product.ProductReference> builder) {
         this.product = builder.apply(com.commercetools.api.models.product.ProductReferenceBuilder.of());
         return this;
     }
-
+                    
     /**
      *  <p>Reference to a Product that is assigned to the Product Selection.</p>
      * @param product value to be set
      * @return Builder
      */
-
-    public AssignedProductReferenceBuilder product(
-            final com.commercetools.api.models.product.ProductReference product) {
+    
+    public AssignedProductReferenceBuilder product( final com.commercetools.api.models.product.ProductReference product) {
         this.product = product;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>The Variants of the Product that are included from the Product Selection.</p>
      *  <p>This field may exist only in Product Selections with <code>Individual</code> ProductSelectionMode. In absence of this field, all Variants are deemed to be included.</p>
      * @param variantSelection value to be set
      * @return Builder
      */
-
-    public AssignedProductReferenceBuilder variantSelection(
-            @Nullable final com.commercetools.api.models.product_selection.ProductVariantSelection variantSelection) {
+    
+    public AssignedProductReferenceBuilder variantSelection(@Nullable final com.commercetools.api.models.product_selection.ProductVariantSelection variantSelection) {
         this.variantSelection = variantSelection;
         return this;
     }
-
+    
+    
     /**
      *  <p>The Variants of the Product that are included from the Product Selection.</p>
      *  <p>This field may exist only in Product Selections with <code>Individual</code> ProductSelectionMode. In absence of this field, all Variants are deemed to be included.</p>
      * @param builder function to build the variantSelection value
      * @return Builder
      */
-
-    public AssignedProductReferenceBuilder variantSelection(
-            Function<com.commercetools.api.models.product_selection.ProductVariantSelectionBuilder, Builder<? extends com.commercetools.api.models.product_selection.ProductVariantSelection>> builder) {
-        this.variantSelection = builder
-                .apply(com.commercetools.api.models.product_selection.ProductVariantSelectionBuilder.of())
-                .build();
+    
+    public AssignedProductReferenceBuilder variantSelection(Function<com.commercetools.api.models.product_selection.ProductVariantSelectionBuilder, Builder<? extends com.commercetools.api.models.product_selection.ProductVariantSelection>> builder) {
+        this.variantSelection = builder.apply(com.commercetools.api.models.product_selection.ProductVariantSelectionBuilder.of()).build();
         return this;
     }
-
+                    
+    
+    
     /**
      *  <p>The Variants of the Product that are excluded from the Product Selection.</p>
      *  <p>This field may exist only in Product Selections with <code>IndividualExclusion</code> ProductSelectionMode. In absence of this field, all Variants are deemed to be excluded.</p>
      * @param builder function to build the variantExclusion value
      * @return Builder
      */
-
-    public AssignedProductReferenceBuilder variantExclusion(
-            Function<com.commercetools.api.models.product_selection.ProductVariantExclusionBuilder, com.commercetools.api.models.product_selection.ProductVariantExclusionBuilder> builder) {
-        this.variantExclusion = builder
-                .apply(com.commercetools.api.models.product_selection.ProductVariantExclusionBuilder.of())
-                .build();
+    
+    public AssignedProductReferenceBuilder variantExclusion(Function<com.commercetools.api.models.product_selection.ProductVariantExclusionBuilder, com.commercetools.api.models.product_selection.ProductVariantExclusionBuilder> builder) {
+        this.variantExclusion = builder.apply(com.commercetools.api.models.product_selection.ProductVariantExclusionBuilder.of()).build();
         return this;
     }
-
+    
     /**
      *  <p>The Variants of the Product that are excluded from the Product Selection.</p>
      *  <p>This field may exist only in Product Selections with <code>IndividualExclusion</code> ProductSelectionMode. In absence of this field, all Variants are deemed to be excluded.</p>
      * @param builder function to build the variantExclusion value
      * @return Builder
      */
-
-    public AssignedProductReferenceBuilder withVariantExclusion(
-            Function<com.commercetools.api.models.product_selection.ProductVariantExclusionBuilder, com.commercetools.api.models.product_selection.ProductVariantExclusion> builder) {
-        this.variantExclusion = builder
-                .apply(com.commercetools.api.models.product_selection.ProductVariantExclusionBuilder.of());
+    
+    public AssignedProductReferenceBuilder withVariantExclusion(Function<com.commercetools.api.models.product_selection.ProductVariantExclusionBuilder, com.commercetools.api.models.product_selection.ProductVariantExclusion> builder) {
+        this.variantExclusion = builder.apply(com.commercetools.api.models.product_selection.ProductVariantExclusionBuilder.of());
         return this;
     }
-
+                    
     /**
      *  <p>The Variants of the Product that are excluded from the Product Selection.</p>
      *  <p>This field may exist only in Product Selections with <code>IndividualExclusion</code> ProductSelectionMode. In absence of this field, all Variants are deemed to be excluded.</p>
      * @param variantExclusion value to be set
      * @return Builder
      */
-
-    public AssignedProductReferenceBuilder variantExclusion(
-            @Nullable final com.commercetools.api.models.product_selection.ProductVariantExclusion variantExclusion) {
+    
+    public AssignedProductReferenceBuilder variantExclusion(@Nullable final com.commercetools.api.models.product_selection.ProductVariantExclusion variantExclusion) {
         this.variantExclusion = variantExclusion;
         return this;
     }
+    
+    
 
     /**
      *  <p>Reference to a Product that is assigned to the Product Selection.</p>
      * @return product
      */
-
-    public com.commercetools.api.models.product.ProductReference getProduct() {
+    
+    
+    public com.commercetools.api.models.product.ProductReference getProduct(){
         return this.product;
     }
-
+    
     /**
      *  <p>The Variants of the Product that are included from the Product Selection.</p>
      *  <p>This field may exist only in Product Selections with <code>Individual</code> ProductSelectionMode. In absence of this field, all Variants are deemed to be included.</p>
      * @return variantSelection
      */
-
+    
     @Nullable
-    public com.commercetools.api.models.product_selection.ProductVariantSelection getVariantSelection() {
+    public com.commercetools.api.models.product_selection.ProductVariantSelection getVariantSelection(){
         return this.variantSelection;
     }
-
+    
     /**
      *  <p>The Variants of the Product that are excluded from the Product Selection.</p>
      *  <p>This field may exist only in Product Selections with <code>IndividualExclusion</code> ProductSelectionMode. In absence of this field, all Variants are deemed to be excluded.</p>
      * @return variantExclusion
      */
-
+    
     @Nullable
-    public com.commercetools.api.models.product_selection.ProductVariantExclusion getVariantExclusion() {
+    public com.commercetools.api.models.product_selection.ProductVariantExclusion getVariantExclusion(){
         return this.variantExclusion;
     }
 
@@ -177,7 +183,7 @@ public class AssignedProductReferenceBuilder implements Builder<AssignedProductR
         Objects.requireNonNull(product, AssignedProductReference.class + ": product is missing");
         return new AssignedProductReferenceImpl(product, variantSelection, variantExclusion);
     }
-
+    
     /**
      * builds AssignedProductReference without checking for non-null required values
      * @return AssignedProductReference
@@ -188,7 +194,7 @@ public class AssignedProductReferenceBuilder implements Builder<AssignedProductR
 
     /**
      * factory method for an instance of AssignedProductReferenceBuilder
-     * @return builder
+     * @return builder 
      */
     public static AssignedProductReferenceBuilder of() {
         return new AssignedProductReferenceBuilder();

@@ -1,9 +1,12 @@
-
 package com.commercetools.api.models.product_type;
 
+import com.commercetools.api.models.product_type.AttributeLocalizedEnumValue;
+import com.commercetools.api.models.product_type.AttributeType;
+import com.commercetools.api.models.product_type.AttributeLocalizedEnumType;
+import javax.annotation.Nullable;
 import java.util.*;
 import java.util.function.Function;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -17,11 +20,16 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .plusValues(valuesBuilder -> valuesBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class AttributeLocalizedEnumTypeBuilder implements Builder<AttributeLocalizedEnumType> {
 
+    
+    
     private java.util.List<com.commercetools.api.models.product_type.AttributeLocalizedEnumValue> values;
 
     /**
@@ -29,99 +37,93 @@ public class AttributeLocalizedEnumTypeBuilder implements Builder<AttributeLocal
      * @param values value to be set
      * @return Builder
      */
-
-    public AttributeLocalizedEnumTypeBuilder values(
-            final com.commercetools.api.models.product_type.AttributeLocalizedEnumValue... values) {
+    
+    public AttributeLocalizedEnumTypeBuilder values( final com.commercetools.api.models.product_type.AttributeLocalizedEnumValue ...values) {
         this.values = new ArrayList<>(Arrays.asList(values));
         return this;
     }
-
+    
     /**
      *  <p>Available values that can be assigned to Products.</p>
      * @param values value to be set
      * @return Builder
      */
-
-    public AttributeLocalizedEnumTypeBuilder values(
-            final java.util.List<com.commercetools.api.models.product_type.AttributeLocalizedEnumValue> values) {
+    
+    public AttributeLocalizedEnumTypeBuilder values( final java.util.List<com.commercetools.api.models.product_type.AttributeLocalizedEnumValue> values) {
         this.values = values;
         return this;
     }
-
+    
     /**
      *  <p>Available values that can be assigned to Products.</p>
      * @param values value to be set
      * @return Builder
      */
-
-    public AttributeLocalizedEnumTypeBuilder plusValues(
-            final com.commercetools.api.models.product_type.AttributeLocalizedEnumValue... values) {
+    
+    public AttributeLocalizedEnumTypeBuilder plusValues( final com.commercetools.api.models.product_type.AttributeLocalizedEnumValue ...values) {
         if (this.values == null) {
             this.values = new ArrayList<>();
         }
         this.values.addAll(Arrays.asList(values));
         return this;
     }
-
+    
+    
+    
     /**
      *  <p>Available values that can be assigned to Products.</p>
      * @param builder function to build the values value
      * @return Builder
      */
-
-    public AttributeLocalizedEnumTypeBuilder plusValues(
-            Function<com.commercetools.api.models.product_type.AttributeLocalizedEnumValueBuilder, com.commercetools.api.models.product_type.AttributeLocalizedEnumValueBuilder> builder) {
+    
+    public AttributeLocalizedEnumTypeBuilder plusValues(Function<com.commercetools.api.models.product_type.AttributeLocalizedEnumValueBuilder, com.commercetools.api.models.product_type.AttributeLocalizedEnumValueBuilder> builder) {
         if (this.values == null) {
             this.values = new ArrayList<>();
         }
-        this.values.add(
-            builder.apply(com.commercetools.api.models.product_type.AttributeLocalizedEnumValueBuilder.of()).build());
+        this.values.add(builder.apply(com.commercetools.api.models.product_type.AttributeLocalizedEnumValueBuilder.of()).build());
         return this;
     }
-
+    
     /**
      *  <p>Available values that can be assigned to Products.</p>
      * @param builder function to build the values value
      * @return Builder
      */
-
-    public AttributeLocalizedEnumTypeBuilder withValues(
-            Function<com.commercetools.api.models.product_type.AttributeLocalizedEnumValueBuilder, com.commercetools.api.models.product_type.AttributeLocalizedEnumValueBuilder> builder) {
+    
+    public AttributeLocalizedEnumTypeBuilder withValues(Function<com.commercetools.api.models.product_type.AttributeLocalizedEnumValueBuilder, com.commercetools.api.models.product_type.AttributeLocalizedEnumValueBuilder> builder) {
         this.values = new ArrayList<>();
-        this.values.add(
-            builder.apply(com.commercetools.api.models.product_type.AttributeLocalizedEnumValueBuilder.of()).build());
+        this.values.add(builder.apply(com.commercetools.api.models.product_type.AttributeLocalizedEnumValueBuilder.of()).build());
         return this;
     }
-
+    
     /**
      *  <p>Available values that can be assigned to Products.</p>
      * @param builder function to build the values value
      * @return Builder
      */
-
-    public AttributeLocalizedEnumTypeBuilder addValues(
-            Function<com.commercetools.api.models.product_type.AttributeLocalizedEnumValueBuilder, com.commercetools.api.models.product_type.AttributeLocalizedEnumValue> builder) {
-        return plusValues(
-            builder.apply(com.commercetools.api.models.product_type.AttributeLocalizedEnumValueBuilder.of()));
+    
+    public AttributeLocalizedEnumTypeBuilder addValues(Function<com.commercetools.api.models.product_type.AttributeLocalizedEnumValueBuilder, com.commercetools.api.models.product_type.AttributeLocalizedEnumValue> builder) {
+        return plusValues(builder.apply(com.commercetools.api.models.product_type.AttributeLocalizedEnumValueBuilder.of()));
     }
-
+    
     /**
      *  <p>Available values that can be assigned to Products.</p>
      * @param builder function to build the values value
      * @return Builder
      */
-
-    public AttributeLocalizedEnumTypeBuilder setValues(
-            Function<com.commercetools.api.models.product_type.AttributeLocalizedEnumValueBuilder, com.commercetools.api.models.product_type.AttributeLocalizedEnumValue> builder) {
+    
+    public AttributeLocalizedEnumTypeBuilder setValues(Function<com.commercetools.api.models.product_type.AttributeLocalizedEnumValueBuilder, com.commercetools.api.models.product_type.AttributeLocalizedEnumValue> builder) {
         return values(builder.apply(com.commercetools.api.models.product_type.AttributeLocalizedEnumValueBuilder.of()));
     }
+                    
 
     /**
      *  <p>Available values that can be assigned to Products.</p>
      * @return values
      */
-
-    public java.util.List<com.commercetools.api.models.product_type.AttributeLocalizedEnumValue> getValues() {
+    
+    
+    public java.util.List<com.commercetools.api.models.product_type.AttributeLocalizedEnumValue> getValues(){
         return this.values;
     }
 
@@ -133,7 +135,7 @@ public class AttributeLocalizedEnumTypeBuilder implements Builder<AttributeLocal
         Objects.requireNonNull(values, AttributeLocalizedEnumType.class + ": values is missing");
         return new AttributeLocalizedEnumTypeImpl(values);
     }
-
+    
     /**
      * builds AttributeLocalizedEnumType without checking for non-null required values
      * @return AttributeLocalizedEnumType
@@ -144,7 +146,7 @@ public class AttributeLocalizedEnumTypeBuilder implements Builder<AttributeLocal
 
     /**
      * factory method for an instance of AttributeLocalizedEnumTypeBuilder
-     * @return builder
+     * @return builder 
      */
     public static AttributeLocalizedEnumTypeBuilder of() {
         return new AttributeLocalizedEnumTypeBuilder();

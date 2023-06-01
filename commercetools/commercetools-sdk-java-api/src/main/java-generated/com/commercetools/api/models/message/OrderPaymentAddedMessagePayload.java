@@ -1,19 +1,21 @@
-
 package com.commercetools.api.models.message;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
+import com.commercetools.api.models.message.MessagePayload;
 import com.commercetools.api.models.payment.PaymentReference;
+import com.commercetools.api.models.message.OrderPaymentAddedMessagePayloadImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Generated after a successful Add Payment update action or when a Payment is added via Order Edits.</p>
@@ -26,9 +28,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .payment(paymentBuilder -> paymentBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = OrderPaymentAddedMessagePayloadImpl.class)
 public interface OrderPaymentAddedMessagePayload extends MessagePayload {
 
@@ -50,16 +55,18 @@ public interface OrderPaymentAddedMessagePayload extends MessagePayload {
      *  <p>Payment that was added to the Order.</p>
      * @param payment value to be set
      */
-
+    
     public void setPayment(final PaymentReference payment);
+    
 
     /**
      * factory method
      * @return instance of OrderPaymentAddedMessagePayload
      */
-    public static OrderPaymentAddedMessagePayload of() {
+    public static OrderPaymentAddedMessagePayload of(){
         return new OrderPaymentAddedMessagePayloadImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy OrderPaymentAddedMessagePayload
@@ -94,7 +101,7 @@ public interface OrderPaymentAddedMessagePayload extends MessagePayload {
     public static OrderPaymentAddedMessagePayloadBuilder builder() {
         return OrderPaymentAddedMessagePayloadBuilder.of();
     }
-
+    
     /**
      * create builder for OrderPaymentAddedMessagePayload instance
      * @param template instance with prefilled values for the builder
@@ -103,6 +110,7 @@ public interface OrderPaymentAddedMessagePayload extends MessagePayload {
     public static OrderPaymentAddedMessagePayloadBuilder builder(final OrderPaymentAddedMessagePayload template) {
         return OrderPaymentAddedMessagePayloadBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -113,7 +121,7 @@ public interface OrderPaymentAddedMessagePayload extends MessagePayload {
     default <T> T withOrderPaymentAddedMessagePayload(Function<OrderPaymentAddedMessagePayload, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

@@ -1,18 +1,21 @@
-
 package com.commercetools.api.models.shipping_method;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-
 import com.commercetools.api.models.common.LocalizedString;
+import com.commercetools.api.models.shipping_method.ShippingMethodUpdateAction;
+import com.commercetools.api.models.shipping_method.ShippingMethodSetLocalizedDescriptionActionImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * ShippingMethodSetLocalizedDescriptionAction
@@ -24,9 +27,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     ShippingMethodSetLocalizedDescriptionAction shippingMethodSetLocalizedDescriptionAction = ShippingMethodSetLocalizedDescriptionAction.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = ShippingMethodSetLocalizedDescriptionActionImpl.class)
 public interface ShippingMethodSetLocalizedDescriptionAction extends ShippingMethodUpdateAction {
 
@@ -47,24 +53,25 @@ public interface ShippingMethodSetLocalizedDescriptionAction extends ShippingMet
      *  <p>Value to set. If empty, any existing value will be removed.</p>
      * @param localizedDescription value to be set
      */
-
+    
     public void setLocalizedDescription(final LocalizedString localizedDescription);
+    
 
     /**
      * factory method
      * @return instance of ShippingMethodSetLocalizedDescriptionAction
      */
-    public static ShippingMethodSetLocalizedDescriptionAction of() {
+    public static ShippingMethodSetLocalizedDescriptionAction of(){
         return new ShippingMethodSetLocalizedDescriptionActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy ShippingMethodSetLocalizedDescriptionAction
      * @param template instance to be copied
      * @return copy instance
      */
-    public static ShippingMethodSetLocalizedDescriptionAction of(
-            final ShippingMethodSetLocalizedDescriptionAction template) {
+    public static ShippingMethodSetLocalizedDescriptionAction of(final ShippingMethodSetLocalizedDescriptionAction template) {
         ShippingMethodSetLocalizedDescriptionActionImpl instance = new ShippingMethodSetLocalizedDescriptionActionImpl();
         instance.setLocalizedDescription(template.getLocalizedDescription());
         return instance;
@@ -76,14 +83,12 @@ public interface ShippingMethodSetLocalizedDescriptionAction extends ShippingMet
      * @return copy instance
      */
     @Nullable
-    public static ShippingMethodSetLocalizedDescriptionAction deepCopy(
-            @Nullable final ShippingMethodSetLocalizedDescriptionAction template) {
+    public static ShippingMethodSetLocalizedDescriptionAction deepCopy(@Nullable final ShippingMethodSetLocalizedDescriptionAction template) {
         if (template == null) {
             return null;
         }
         ShippingMethodSetLocalizedDescriptionActionImpl instance = new ShippingMethodSetLocalizedDescriptionActionImpl();
-        instance.setLocalizedDescription(
-            com.commercetools.api.models.common.LocalizedString.deepCopy(template.getLocalizedDescription()));
+        instance.setLocalizedDescription(com.commercetools.api.models.common.LocalizedString.deepCopy(template.getLocalizedDescription()));
         return instance;
     }
 
@@ -94,16 +99,16 @@ public interface ShippingMethodSetLocalizedDescriptionAction extends ShippingMet
     public static ShippingMethodSetLocalizedDescriptionActionBuilder builder() {
         return ShippingMethodSetLocalizedDescriptionActionBuilder.of();
     }
-
+    
     /**
      * create builder for ShippingMethodSetLocalizedDescriptionAction instance
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static ShippingMethodSetLocalizedDescriptionActionBuilder builder(
-            final ShippingMethodSetLocalizedDescriptionAction template) {
+    public static ShippingMethodSetLocalizedDescriptionActionBuilder builder(final ShippingMethodSetLocalizedDescriptionAction template) {
         return ShippingMethodSetLocalizedDescriptionActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -111,11 +116,10 @@ public interface ShippingMethodSetLocalizedDescriptionAction extends ShippingMet
      * @param helper function to map the object
      * @return mapped value
      */
-    default <T> T withShippingMethodSetLocalizedDescriptionAction(
-            Function<ShippingMethodSetLocalizedDescriptionAction, T> helper) {
+    default <T> T withShippingMethodSetLocalizedDescriptionAction(Function<ShippingMethodSetLocalizedDescriptionAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

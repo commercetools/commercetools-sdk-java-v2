@@ -1,10 +1,11 @@
-
 package com.commercetools.api.models.customer;
 
-import java.util.*;
-
+import com.commercetools.api.models.customer.CustomerUpdateAction;
+import com.commercetools.api.models.customer.CustomerRemoveAddressAction;
 import javax.annotation.Nullable;
-
+import java.util.*;
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -17,56 +18,67 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     CustomerRemoveAddressAction customerRemoveAddressAction = CustomerRemoveAddressAction.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class CustomerRemoveAddressActionBuilder implements Builder<CustomerRemoveAddressAction> {
 
+    
     @Nullable
     private String addressId;
-
+    
+    
     @Nullable
     private String addressKey;
 
+    
     /**
      *  <p><code>id</code> of the Address to remove.</p>
      * @param addressId value to be set
      * @return Builder
      */
-
+    
     public CustomerRemoveAddressActionBuilder addressId(@Nullable final String addressId) {
         this.addressId = addressId;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p><code>key</code> of the Address to remove.</p>
      * @param addressKey value to be set
      * @return Builder
      */
-
+    
     public CustomerRemoveAddressActionBuilder addressKey(@Nullable final String addressKey) {
         this.addressKey = addressKey;
         return this;
     }
+    
+    
 
     /**
      *  <p><code>id</code> of the Address to remove.</p>
      * @return addressId
      */
-
+    
     @Nullable
-    public String getAddressId() {
+    public String getAddressId(){
         return this.addressId;
     }
-
+    
     /**
      *  <p><code>key</code> of the Address to remove.</p>
      * @return addressKey
      */
-
+    
     @Nullable
-    public String getAddressKey() {
+    public String getAddressKey(){
         return this.addressKey;
     }
 
@@ -77,7 +89,7 @@ public class CustomerRemoveAddressActionBuilder implements Builder<CustomerRemov
     public CustomerRemoveAddressAction build() {
         return new CustomerRemoveAddressActionImpl(addressId, addressKey);
     }
-
+    
     /**
      * builds CustomerRemoveAddressAction without checking for non-null required values
      * @return CustomerRemoveAddressAction
@@ -88,7 +100,7 @@ public class CustomerRemoveAddressActionBuilder implements Builder<CustomerRemov
 
     /**
      * factory method for an instance of CustomerRemoveAddressActionBuilder
-     * @return builder
+     * @return builder 
      */
     public static CustomerRemoveAddressActionBuilder of() {
         return new CustomerRemoveAddressActionBuilder();

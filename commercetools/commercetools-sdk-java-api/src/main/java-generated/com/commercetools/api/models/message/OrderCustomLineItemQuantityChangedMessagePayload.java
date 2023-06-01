@@ -1,17 +1,20 @@
-
 package com.commercetools.api.models.message;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
+import com.commercetools.api.models.message.OrderMessagePayload;
+import com.commercetools.api.models.message.OrderCustomLineItemQuantityChangedMessagePayloadImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Generated after a successful Change Custom Line Item Quantity update action.</p>
@@ -26,9 +29,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .oldQuantity(0.3)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = OrderCustomLineItemQuantityChangedMessagePayloadImpl.class)
 public interface OrderCustomLineItemQuantityChangedMessagePayload extends OrderMessagePayload {
 
@@ -44,7 +50,6 @@ public interface OrderCustomLineItemQuantityChangedMessagePayload extends OrderM
     @NotNull
     @JsonProperty("customLineItemId")
     public String getCustomLineItemId();
-
     /**
      *  <p>Custom Line Item quantity after the Change Custom Line Item Quantity update action.</p>
      * @return quantity
@@ -52,7 +57,6 @@ public interface OrderCustomLineItemQuantityChangedMessagePayload extends OrderM
     @NotNull
     @JsonProperty("quantity")
     public Long getQuantity();
-
     /**
      *  <p>Custom Line Item quantity before the Change Custom Line Item Quantity update action.</p>
      * @return oldQuantity
@@ -65,38 +69,41 @@ public interface OrderCustomLineItemQuantityChangedMessagePayload extends OrderM
      *  <p>Unique identifier of the Custom Line Item.</p>
      * @param customLineItemId value to be set
      */
-
+    
     public void setCustomLineItemId(final String customLineItemId);
-
+    
+    
     /**
      *  <p>Custom Line Item quantity after the Change Custom Line Item Quantity update action.</p>
      * @param quantity value to be set
      */
-
+    
     public void setQuantity(final Long quantity);
-
+    
+    
     /**
      *  <p>Custom Line Item quantity before the Change Custom Line Item Quantity update action.</p>
      * @param oldQuantity value to be set
      */
-
+    
     public void setOldQuantity(final Long oldQuantity);
+    
 
     /**
      * factory method
      * @return instance of OrderCustomLineItemQuantityChangedMessagePayload
      */
-    public static OrderCustomLineItemQuantityChangedMessagePayload of() {
+    public static OrderCustomLineItemQuantityChangedMessagePayload of(){
         return new OrderCustomLineItemQuantityChangedMessagePayloadImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy OrderCustomLineItemQuantityChangedMessagePayload
      * @param template instance to be copied
      * @return copy instance
      */
-    public static OrderCustomLineItemQuantityChangedMessagePayload of(
-            final OrderCustomLineItemQuantityChangedMessagePayload template) {
+    public static OrderCustomLineItemQuantityChangedMessagePayload of(final OrderCustomLineItemQuantityChangedMessagePayload template) {
         OrderCustomLineItemQuantityChangedMessagePayloadImpl instance = new OrderCustomLineItemQuantityChangedMessagePayloadImpl();
         instance.setCustomLineItemId(template.getCustomLineItemId());
         instance.setQuantity(template.getQuantity());
@@ -110,8 +117,7 @@ public interface OrderCustomLineItemQuantityChangedMessagePayload extends OrderM
      * @return copy instance
      */
     @Nullable
-    public static OrderCustomLineItemQuantityChangedMessagePayload deepCopy(
-            @Nullable final OrderCustomLineItemQuantityChangedMessagePayload template) {
+    public static OrderCustomLineItemQuantityChangedMessagePayload deepCopy(@Nullable final OrderCustomLineItemQuantityChangedMessagePayload template) {
         if (template == null) {
             return null;
         }
@@ -129,16 +135,16 @@ public interface OrderCustomLineItemQuantityChangedMessagePayload extends OrderM
     public static OrderCustomLineItemQuantityChangedMessagePayloadBuilder builder() {
         return OrderCustomLineItemQuantityChangedMessagePayloadBuilder.of();
     }
-
+    
     /**
      * create builder for OrderCustomLineItemQuantityChangedMessagePayload instance
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static OrderCustomLineItemQuantityChangedMessagePayloadBuilder builder(
-            final OrderCustomLineItemQuantityChangedMessagePayload template) {
+    public static OrderCustomLineItemQuantityChangedMessagePayloadBuilder builder(final OrderCustomLineItemQuantityChangedMessagePayload template) {
         return OrderCustomLineItemQuantityChangedMessagePayloadBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -146,11 +152,10 @@ public interface OrderCustomLineItemQuantityChangedMessagePayload extends OrderM
      * @param helper function to map the object
      * @return mapped value
      */
-    default <T> T withOrderCustomLineItemQuantityChangedMessagePayload(
-            Function<OrderCustomLineItemQuantityChangedMessagePayload, T> helper) {
+    default <T> T withOrderCustomLineItemQuantityChangedMessagePayload(Function<OrderCustomLineItemQuantityChangedMessagePayload, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

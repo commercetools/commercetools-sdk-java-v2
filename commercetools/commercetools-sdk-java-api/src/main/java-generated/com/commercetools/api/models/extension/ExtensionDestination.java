@@ -1,17 +1,22 @@
-
 package com.commercetools.api.models.extension;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
+import com.commercetools.api.models.extension.AWSLambdaDestination;
+import com.commercetools.api.models.extension.GoogleCloudFunctionDestination;
+import com.commercetools.api.models.extension.HttpDestination;
 
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Generic type for destinations.</p>
@@ -26,16 +31,27 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             accessSecret("{accessSecret}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
 @JsonSubTypes({
-        @JsonSubTypes.Type(value = com.commercetools.api.models.extension.AWSLambdaDestinationImpl.class, name = AWSLambdaDestination.AWS_LAMBDA),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.extension.GoogleCloudFunctionDestinationImpl.class, name = GoogleCloudFunctionDestination.GOOGLE_CLOUD_FUNCTION),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.extension.HttpDestinationImpl.class, name = HttpDestination.HTTP) })
-@JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.EXISTING_PROPERTY, property = "type", defaultImpl = ExtensionDestinationImpl.class, visible = true)
+   @JsonSubTypes.Type(value = com.commercetools.api.models.extension.AWSLambdaDestinationImpl.class, name = AWSLambdaDestination.AWS_LAMBDA),
+   @JsonSubTypes.Type(value = com.commercetools.api.models.extension.GoogleCloudFunctionDestinationImpl.class, name = GoogleCloudFunctionDestination.GOOGLE_CLOUD_FUNCTION),
+   @JsonSubTypes.Type(value = com.commercetools.api.models.extension.HttpDestinationImpl.class, name = HttpDestination.HTTP)
+})
+@JsonTypeInfo(
+    use = JsonTypeInfo.Id.NAME,
+    include = JsonTypeInfo.As.EXISTING_PROPERTY,
+    property = "type",
+    defaultImpl = ExtensionDestinationImpl.class,
+    visible = true
+)
 @JsonDeserialize(as = ExtensionDestinationImpl.class)
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
-public interface ExtensionDestination {
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
+public interface ExtensionDestination  {
+
 
     /**
      *
@@ -44,6 +60,9 @@ public interface ExtensionDestination {
     @NotNull
     @JsonProperty("type")
     public String getType();
+
+
+
 
     /**
      * factory method to create a deep copy of ExtensionDestination
@@ -56,43 +75,39 @@ public interface ExtensionDestination {
             return null;
         }
         if (template instanceof com.commercetools.api.models.extension.AWSLambdaDestination) {
-            return com.commercetools.api.models.extension.AWSLambdaDestination
-                    .deepCopy((com.commercetools.api.models.extension.AWSLambdaDestination) template);
+            return com.commercetools.api.models.extension.AWSLambdaDestination.deepCopy((com.commercetools.api.models.extension.AWSLambdaDestination)template);
         }
         if (template instanceof com.commercetools.api.models.extension.GoogleCloudFunctionDestination) {
-            return com.commercetools.api.models.extension.GoogleCloudFunctionDestination
-                    .deepCopy((com.commercetools.api.models.extension.GoogleCloudFunctionDestination) template);
+            return com.commercetools.api.models.extension.GoogleCloudFunctionDestination.deepCopy((com.commercetools.api.models.extension.GoogleCloudFunctionDestination)template);
         }
         if (template instanceof com.commercetools.api.models.extension.HttpDestination) {
-            return com.commercetools.api.models.extension.HttpDestination
-                    .deepCopy((com.commercetools.api.models.extension.HttpDestination) template);
+            return com.commercetools.api.models.extension.HttpDestination.deepCopy((com.commercetools.api.models.extension.HttpDestination)template);
         }
         ExtensionDestinationImpl instance = new ExtensionDestinationImpl();
         return instance;
     }
+
 
     /**
      * builder for awsLambda subtype
      * @return builder
      */
     public static com.commercetools.api.models.extension.AWSLambdaDestinationBuilder awsLambdaBuilder() {
-        return com.commercetools.api.models.extension.AWSLambdaDestinationBuilder.of();
+       return com.commercetools.api.models.extension.AWSLambdaDestinationBuilder.of();
     }
-
     /**
      * builder for googleCloudFunction subtype
      * @return builder
      */
     public static com.commercetools.api.models.extension.GoogleCloudFunctionDestinationBuilder googleCloudFunctionBuilder() {
-        return com.commercetools.api.models.extension.GoogleCloudFunctionDestinationBuilder.of();
+       return com.commercetools.api.models.extension.GoogleCloudFunctionDestinationBuilder.of();
     }
-
     /**
      * builder for http subtype
      * @return builder
      */
     public static com.commercetools.api.models.extension.HttpDestinationBuilder httpBuilder() {
-        return com.commercetools.api.models.extension.HttpDestinationBuilder.of();
+       return com.commercetools.api.models.extension.HttpDestinationBuilder.of();
     }
 
     /**
@@ -104,7 +119,7 @@ public interface ExtensionDestination {
     default <T> T withExtensionDestination(Function<ExtensionDestination, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

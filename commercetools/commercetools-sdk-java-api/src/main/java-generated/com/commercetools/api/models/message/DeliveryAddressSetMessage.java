@@ -1,19 +1,21 @@
-
 package com.commercetools.api.models.message;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
 import com.commercetools.api.models.common.Address;
+import com.commercetools.api.models.message.OrderMessage;
+import com.commercetools.api.models.message.DeliveryAddressSetMessageImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Generated after a successful Set Delivery Address update action.</p>
@@ -33,9 +35,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .deliveryId("{deliveryId}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = DeliveryAddressSetMessageImpl.class)
 public interface DeliveryAddressSetMessage extends OrderMessage {
 
@@ -51,7 +56,6 @@ public interface DeliveryAddressSetMessage extends OrderMessage {
     @NotNull
     @JsonProperty("deliveryId")
     public String getDeliveryId();
-
     /**
      *  <p>Address after the Set Delivery Address update action.</p>
      * @return address
@@ -59,7 +63,6 @@ public interface DeliveryAddressSetMessage extends OrderMessage {
     @Valid
     @JsonProperty("address")
     public Address getAddress();
-
     /**
      *  <p>Address before the Set Delivery Address update action.</p>
      * @return oldAddress
@@ -67,12 +70,11 @@ public interface DeliveryAddressSetMessage extends OrderMessage {
     @Valid
     @JsonProperty("oldAddress")
     public Address getOldAddress();
-
     /**
      *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multi</code> ShippingMode.</p>
      * @return shippingKey
      */
-
+    
     @JsonProperty("shippingKey")
     public String getShippingKey();
 
@@ -80,37 +82,42 @@ public interface DeliveryAddressSetMessage extends OrderMessage {
      *  <p>Unique identifier of the Parcel.</p>
      * @param deliveryId value to be set
      */
-
+    
     public void setDeliveryId(final String deliveryId);
-
+    
+    
     /**
      *  <p>Address after the Set Delivery Address update action.</p>
      * @param address value to be set
      */
-
+    
     public void setAddress(final Address address);
-
+    
+    
     /**
      *  <p>Address before the Set Delivery Address update action.</p>
      * @param oldAddress value to be set
      */
-
+    
     public void setOldAddress(final Address oldAddress);
-
+    
+    
     /**
      *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multi</code> ShippingMode.</p>
      * @param shippingKey value to be set
      */
-
+    
     public void setShippingKey(final String shippingKey);
+    
 
     /**
      * factory method
      * @return instance of DeliveryAddressSetMessage
      */
-    public static DeliveryAddressSetMessage of() {
+    public static DeliveryAddressSetMessage of(){
         return new DeliveryAddressSetMessageImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy DeliveryAddressSetMessage
@@ -151,14 +158,12 @@ public interface DeliveryAddressSetMessage extends OrderMessage {
         instance.setVersion(template.getVersion());
         instance.setCreatedAt(template.getCreatedAt());
         instance.setLastModifiedAt(template.getLastModifiedAt());
-        instance.setLastModifiedBy(
-            com.commercetools.api.models.common.LastModifiedBy.deepCopy(template.getLastModifiedBy()));
+        instance.setLastModifiedBy(com.commercetools.api.models.common.LastModifiedBy.deepCopy(template.getLastModifiedBy()));
         instance.setCreatedBy(com.commercetools.api.models.common.CreatedBy.deepCopy(template.getCreatedBy()));
         instance.setSequenceNumber(template.getSequenceNumber());
         instance.setResource(com.commercetools.api.models.common.Reference.deepCopy(template.getResource()));
         instance.setResourceVersion(template.getResourceVersion());
-        instance.setResourceUserProvidedIdentifiers(com.commercetools.api.models.message.UserProvidedIdentifiers
-                .deepCopy(template.getResourceUserProvidedIdentifiers()));
+        instance.setResourceUserProvidedIdentifiers(com.commercetools.api.models.message.UserProvidedIdentifiers.deepCopy(template.getResourceUserProvidedIdentifiers()));
         instance.setDeliveryId(template.getDeliveryId());
         instance.setAddress(com.commercetools.api.models.common.Address.deepCopy(template.getAddress()));
         instance.setOldAddress(com.commercetools.api.models.common.Address.deepCopy(template.getOldAddress()));
@@ -173,7 +178,7 @@ public interface DeliveryAddressSetMessage extends OrderMessage {
     public static DeliveryAddressSetMessageBuilder builder() {
         return DeliveryAddressSetMessageBuilder.of();
     }
-
+    
     /**
      * create builder for DeliveryAddressSetMessage instance
      * @param template instance with prefilled values for the builder
@@ -182,6 +187,7 @@ public interface DeliveryAddressSetMessage extends OrderMessage {
     public static DeliveryAddressSetMessageBuilder builder(final DeliveryAddressSetMessage template) {
         return DeliveryAddressSetMessageBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -192,7 +198,7 @@ public interface DeliveryAddressSetMessage extends OrderMessage {
     default <T> T withDeliveryAddressSetMessage(Function<DeliveryAddressSetMessage, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

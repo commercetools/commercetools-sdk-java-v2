@@ -1,9 +1,11 @@
-
 package com.commercetools.api.models.inventory;
 
+import com.commercetools.api.models.inventory.InventoryEntryUpdateAction;
+import com.commercetools.api.models.inventory.InventoryEntryUpdate;
+import javax.annotation.Nullable;
 import java.util.*;
 import java.util.function.Function;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -18,110 +20,118 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .plusActions(actionsBuilder -> actionsBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class InventoryEntryUpdateBuilder implements Builder<InventoryEntryUpdate> {
 
+    
+    
     private Long version;
-
+    
+    
+    
     private java.util.List<com.commercetools.api.models.inventory.InventoryEntryUpdateAction> actions;
 
+    
     /**
      *  <p>Expected version of the InventoryEntry on which the changes should be applied. If the expected version does not match the actual version, a ConcurrentModification error is returned.</p>
      * @param version value to be set
      * @return Builder
      */
-
-    public InventoryEntryUpdateBuilder version(final Long version) {
+    
+    public InventoryEntryUpdateBuilder version( final Long version) {
         this.version = version;
         return this;
     }
-
+    
+    
+    
     /**
      *  <p>Update actions to be performed on the InventoryEntry.</p>
      * @param actions value to be set
      * @return Builder
      */
-
-    public InventoryEntryUpdateBuilder actions(
-            final com.commercetools.api.models.inventory.InventoryEntryUpdateAction... actions) {
+    
+    public InventoryEntryUpdateBuilder actions( final com.commercetools.api.models.inventory.InventoryEntryUpdateAction ...actions) {
         this.actions = new ArrayList<>(Arrays.asList(actions));
         return this;
     }
-
+    
     /**
      *  <p>Update actions to be performed on the InventoryEntry.</p>
      * @param actions value to be set
      * @return Builder
      */
-
-    public InventoryEntryUpdateBuilder actions(
-            final java.util.List<com.commercetools.api.models.inventory.InventoryEntryUpdateAction> actions) {
+    
+    public InventoryEntryUpdateBuilder actions( final java.util.List<com.commercetools.api.models.inventory.InventoryEntryUpdateAction> actions) {
         this.actions = actions;
         return this;
     }
-
+    
     /**
      *  <p>Update actions to be performed on the InventoryEntry.</p>
      * @param actions value to be set
      * @return Builder
      */
-
-    public InventoryEntryUpdateBuilder plusActions(
-            final com.commercetools.api.models.inventory.InventoryEntryUpdateAction... actions) {
+    
+    public InventoryEntryUpdateBuilder plusActions( final com.commercetools.api.models.inventory.InventoryEntryUpdateAction ...actions) {
         if (this.actions == null) {
             this.actions = new ArrayList<>();
         }
         this.actions.addAll(Arrays.asList(actions));
         return this;
     }
-
+    
+    
     /**
      *  <p>Update actions to be performed on the InventoryEntry.</p>
      * @param builder function to build the actions value
      * @return Builder
      */
-
-    public InventoryEntryUpdateBuilder plusActions(
-            Function<com.commercetools.api.models.inventory.InventoryEntryUpdateActionBuilder, Builder<? extends com.commercetools.api.models.inventory.InventoryEntryUpdateAction>> builder) {
+    
+    public InventoryEntryUpdateBuilder plusActions(Function<com.commercetools.api.models.inventory.InventoryEntryUpdateActionBuilder, Builder<? extends com.commercetools.api.models.inventory.InventoryEntryUpdateAction>> builder) {
         if (this.actions == null) {
             this.actions = new ArrayList<>();
         }
-        this.actions.add(
-            builder.apply(com.commercetools.api.models.inventory.InventoryEntryUpdateActionBuilder.of()).build());
+        this.actions.add(builder.apply(com.commercetools.api.models.inventory.InventoryEntryUpdateActionBuilder.of()).build());
         return this;
     }
-
+    
     /**
      *  <p>Update actions to be performed on the InventoryEntry.</p>
      * @param builder function to build the actions value
      * @return Builder
      */
-
-    public InventoryEntryUpdateBuilder withActions(
-            Function<com.commercetools.api.models.inventory.InventoryEntryUpdateActionBuilder, Builder<? extends com.commercetools.api.models.inventory.InventoryEntryUpdateAction>> builder) {
+    
+    public InventoryEntryUpdateBuilder withActions(Function<com.commercetools.api.models.inventory.InventoryEntryUpdateActionBuilder, Builder<? extends com.commercetools.api.models.inventory.InventoryEntryUpdateAction>> builder) {
         this.actions = new ArrayList<>();
-        this.actions.add(
-            builder.apply(com.commercetools.api.models.inventory.InventoryEntryUpdateActionBuilder.of()).build());
+        this.actions.add(builder.apply(com.commercetools.api.models.inventory.InventoryEntryUpdateActionBuilder.of()).build());
         return this;
     }
+                    
+    
 
     /**
      *  <p>Expected version of the InventoryEntry on which the changes should be applied. If the expected version does not match the actual version, a ConcurrentModification error is returned.</p>
      * @return version
      */
-
-    public Long getVersion() {
+    
+    
+    public Long getVersion(){
         return this.version;
     }
-
+    
     /**
      *  <p>Update actions to be performed on the InventoryEntry.</p>
      * @return actions
      */
-
-    public java.util.List<com.commercetools.api.models.inventory.InventoryEntryUpdateAction> getActions() {
+    
+    
+    public java.util.List<com.commercetools.api.models.inventory.InventoryEntryUpdateAction> getActions(){
         return this.actions;
     }
 
@@ -134,7 +144,7 @@ public class InventoryEntryUpdateBuilder implements Builder<InventoryEntryUpdate
         Objects.requireNonNull(actions, InventoryEntryUpdate.class + ": actions is missing");
         return new InventoryEntryUpdateImpl(version, actions);
     }
-
+    
     /**
      * builds InventoryEntryUpdate without checking for non-null required values
      * @return InventoryEntryUpdate
@@ -145,7 +155,7 @@ public class InventoryEntryUpdateBuilder implements Builder<InventoryEntryUpdate
 
     /**
      * factory method for an instance of InventoryEntryUpdateBuilder
-     * @return builder
+     * @return builder 
      */
     public static InventoryEntryUpdateBuilder of() {
         return new InventoryEntryUpdateBuilder();

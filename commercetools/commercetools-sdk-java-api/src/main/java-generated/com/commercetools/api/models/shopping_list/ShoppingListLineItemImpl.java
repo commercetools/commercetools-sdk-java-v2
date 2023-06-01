@@ -1,16 +1,23 @@
-
 package com.commercetools.api.models.shopping_list;
 
-import java.time.*;
-import java.util.*;
-
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
-
-import io.vrap.rmf.base.client.ModelBase;
+import com.commercetools.api.models.common.LocalizedString;
+import com.commercetools.api.models.product.ProductVariant;
+import com.commercetools.api.models.product_type.ProductTypeReference;
+import com.commercetools.api.models.type.CustomFields;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.ModelBase;
+import javax.validation.Valid;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.annotation.*;
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
@@ -18,45 +25,50 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
  *  <p>ShoppingListLineItems are Line Items that contain references to ProductVariants in a Product.</p>
  *  <p>In addition to standard Reference Expansion, a ShoppingListLineItem offers expansion on <code>productSlug</code> and <code>variant</code>, defined with the query parameter <code>expand</code>.</p>
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class ShoppingListLineItemImpl implements ShoppingListLineItem, ModelBase {
 
+    
     private java.time.ZonedDateTime addedAt;
-
+    
+    
     private com.commercetools.api.models.type.CustomFields custom;
-
+    
+    
     private java.time.ZonedDateTime deactivatedAt;
-
+    
+    
     private String id;
-
+    
+    
     private com.commercetools.api.models.common.LocalizedString name;
-
+    
+    
     private String productId;
-
+    
+    
     private com.commercetools.api.models.product_type.ProductTypeReference productType;
-
+    
+    
     private Long quantity;
-
+    
+    
     private Long variantId;
-
+    
+    
     private com.commercetools.api.models.product.ProductVariant variant;
-
+    
+    
     private com.commercetools.api.models.common.LocalizedString productSlug;
 
     /**
      * create instance with all properties
      */
     @JsonCreator
-    ShoppingListLineItemImpl(@JsonProperty("addedAt") final java.time.ZonedDateTime addedAt,
-            @JsonProperty("custom") final com.commercetools.api.models.type.CustomFields custom,
-            @JsonProperty("deactivatedAt") final java.time.ZonedDateTime deactivatedAt,
-            @JsonProperty("id") final String id,
-            @JsonProperty("name") final com.commercetools.api.models.common.LocalizedString name,
-            @JsonProperty("productId") final String productId,
-            @JsonProperty("productType") final com.commercetools.api.models.product_type.ProductTypeReference productType,
-            @JsonProperty("quantity") final Long quantity, @JsonProperty("variantId") final Long variantId,
-            @JsonProperty("variant") final com.commercetools.api.models.product.ProductVariant variant,
-            @JsonProperty("productSlug") final com.commercetools.api.models.common.LocalizedString productSlug) {
+    ShoppingListLineItemImpl(@JsonProperty("addedAt") final java.time.ZonedDateTime addedAt, @JsonProperty("custom") final com.commercetools.api.models.type.CustomFields custom, @JsonProperty("deactivatedAt") final java.time.ZonedDateTime deactivatedAt, @JsonProperty("id") final String id, @JsonProperty("name") final com.commercetools.api.models.common.LocalizedString name, @JsonProperty("productId") final String productId, @JsonProperty("productType") final com.commercetools.api.models.product_type.ProductTypeReference productType, @JsonProperty("quantity") final Long quantity, @JsonProperty("variantId") final Long variantId, @JsonProperty("variant") final com.commercetools.api.models.product.ProductVariant variant, @JsonProperty("productSlug") final com.commercetools.api.models.common.LocalizedString productSlug) {
         this.addedAt = addedAt;
         this.custom = custom;
         this.deactivatedAt = deactivatedAt;
@@ -69,7 +81,6 @@ public class ShoppingListLineItemImpl implements ShoppingListLineItem, ModelBase
         this.variant = variant;
         this.productSlug = productSlug;
     }
-
     /**
      * create empty instance
      */
@@ -79,150 +90,160 @@ public class ShoppingListLineItemImpl implements ShoppingListLineItem, ModelBase
     /**
      *  <p>Date and time (UTC) the ShoppingListLineItem was added to the ShoppingList.</p>
      */
-
-    public java.time.ZonedDateTime getAddedAt() {
+    
+    public java.time.ZonedDateTime getAddedAt(){
         return this.addedAt;
     }
-
+    
     /**
      *  <p>Custom Fields of the ShoppingListLineItem.</p>
      */
-
-    public com.commercetools.api.models.type.CustomFields getCustom() {
+    
+    public com.commercetools.api.models.type.CustomFields getCustom(){
         return this.custom;
     }
-
+    
     /**
      *  <p>If the Product or Product Variant is deleted, <code>deactivatedAt</code> is the date and time (UTC) of deletion.</p>
      *  <p>This data is updated in an eventual consistent manner when the Product Variant cannot be ordered anymore.</p>
      */
-
-    public java.time.ZonedDateTime getDeactivatedAt() {
+    
+    public java.time.ZonedDateTime getDeactivatedAt(){
         return this.deactivatedAt;
     }
-
+    
     /**
      *  <p>Unique identifier of the ShoppingListLineItem.</p>
      */
-
-    public String getId() {
+    
+    public String getId(){
         return this.id;
     }
-
+    
     /**
      *  <p>Name of the Product.</p>
      *  <p>This data is updated in an eventual consistent manner when the Product's name changes.</p>
      */
-
-    public com.commercetools.api.models.common.LocalizedString getName() {
+    
+    public com.commercetools.api.models.common.LocalizedString getName(){
         return this.name;
     }
-
+    
     /**
      *  <p>Unique identifier of a Product.</p>
      */
-
-    public String getProductId() {
+    
+    public String getProductId(){
         return this.productId;
     }
-
+    
     /**
      *  <p>The Product Type defining the Attributes of the Product.</p>
      */
-
-    public com.commercetools.api.models.product_type.ProductTypeReference getProductType() {
+    
+    public com.commercetools.api.models.product_type.ProductTypeReference getProductType(){
         return this.productType;
     }
-
+    
     /**
      *  <p>Number of Products in the ShoppingListLineItem.</p>
      */
-
-    public Long getQuantity() {
+    
+    public Long getQuantity(){
         return this.quantity;
     }
-
+    
     /**
      *  <p><code>id</code> of the ProductVariant the ShoppingListLineItem refers to. If not set, the ShoppingListLineItem refers to the Master Variant.</p>
      */
-
-    public Long getVariantId() {
+    
+    public Long getVariantId(){
         return this.variantId;
     }
-
+    
     /**
      *  <p>Data of the ProductVariant.</p>
      *  <p>Returned when expanded using <code>expand=lineItems[*].variant</code>. You cannot expand only a single element of the array.</p>
      */
-
-    public com.commercetools.api.models.product.ProductVariant getVariant() {
+    
+    public com.commercetools.api.models.product.ProductVariant getVariant(){
         return this.variant;
     }
-
+    
     /**
      *  <p>Slug of the current ProductData.</p>
      *  <p>Returned when expanded using <code>expand=lineItems[*].productSlug</code>. You cannot expand only a single element of the array.</p>
      */
-
-    public com.commercetools.api.models.common.LocalizedString getProductSlug() {
+    
+    public com.commercetools.api.models.common.LocalizedString getProductSlug(){
         return this.productSlug;
     }
 
-    public void setAddedAt(final java.time.ZonedDateTime addedAt) {
+    
+    public void setAddedAt(final java.time.ZonedDateTime addedAt){
         this.addedAt = addedAt;
     }
-
-    public void setCustom(final com.commercetools.api.models.type.CustomFields custom) {
+    
+    
+    public void setCustom(final com.commercetools.api.models.type.CustomFields custom){
         this.custom = custom;
     }
-
-    public void setDeactivatedAt(final java.time.ZonedDateTime deactivatedAt) {
+    
+    
+    public void setDeactivatedAt(final java.time.ZonedDateTime deactivatedAt){
         this.deactivatedAt = deactivatedAt;
     }
-
-    public void setId(final String id) {
+    
+    
+    public void setId(final String id){
         this.id = id;
     }
-
-    public void setName(final com.commercetools.api.models.common.LocalizedString name) {
+    
+    
+    public void setName(final com.commercetools.api.models.common.LocalizedString name){
         this.name = name;
     }
-
-    public void setProductId(final String productId) {
+    
+    
+    public void setProductId(final String productId){
         this.productId = productId;
     }
-
-    public void setProductType(final com.commercetools.api.models.product_type.ProductTypeReference productType) {
+    
+    
+    public void setProductType(final com.commercetools.api.models.product_type.ProductTypeReference productType){
         this.productType = productType;
     }
-
-    public void setQuantity(final Long quantity) {
+    
+    
+    public void setQuantity(final Long quantity){
         this.quantity = quantity;
     }
-
-    public void setVariantId(final Long variantId) {
+    
+    
+    public void setVariantId(final Long variantId){
         this.variantId = variantId;
     }
-
-    public void setVariant(final com.commercetools.api.models.product.ProductVariant variant) {
+    
+    
+    public void setVariant(final com.commercetools.api.models.product.ProductVariant variant){
         this.variant = variant;
     }
-
-    public void setProductSlug(final com.commercetools.api.models.common.LocalizedString productSlug) {
+    
+    
+    public void setProductSlug(final com.commercetools.api.models.common.LocalizedString productSlug){
         this.productSlug = productSlug;
     }
 
     @Override
     public boolean equals(Object o) {
-        if (this == o)
-            return true;
-
-        if (o == null || getClass() != o.getClass())
-            return false;
-
+        if (this == o) return true;
+    
+        if (o == null || getClass() != o.getClass()) return false;
+    
         ShoppingListLineItemImpl that = (ShoppingListLineItemImpl) o;
-
-        return new EqualsBuilder().append(addedAt, that.addedAt)
+    
+        return new EqualsBuilder()
+                .append(addedAt, that.addedAt)
                 .append(custom, that.custom)
                 .append(deactivatedAt, that.deactivatedAt)
                 .append(id, that.id)
@@ -235,21 +256,22 @@ public class ShoppingListLineItemImpl implements ShoppingListLineItem, ModelBase
                 .append(productSlug, that.productSlug)
                 .isEquals();
     }
-
+    
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(addedAt)
-                .append(custom)
-                .append(deactivatedAt)
-                .append(id)
-                .append(name)
-                .append(productId)
-                .append(productType)
-                .append(quantity)
-                .append(variantId)
-                .append(variant)
-                .append(productSlug)
-                .toHashCode();
+        return new HashCodeBuilder(17, 37)
+            .append(addedAt)
+            .append(custom)
+            .append(deactivatedAt)
+            .append(id)
+            .append(name)
+            .append(productId)
+            .append(productType)
+            .append(quantity)
+            .append(variantId)
+            .append(variant)
+            .append(productSlug)
+            .toHashCode();
     }
 
 }

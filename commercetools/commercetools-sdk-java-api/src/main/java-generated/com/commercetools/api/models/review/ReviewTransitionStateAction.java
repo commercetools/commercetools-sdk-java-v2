@@ -1,19 +1,21 @@
-
 package com.commercetools.api.models.review;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
+import com.commercetools.api.models.review.ReviewUpdateAction;
 import com.commercetools.api.models.state.StateResourceIdentifier;
+import com.commercetools.api.models.review.ReviewTransitionStateActionImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Transition to a new State. This update action produces the Review State Transition Message.</p>
@@ -26,9 +28,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .state(stateBuilder -> stateBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = ReviewTransitionStateActionImpl.class)
 public interface ReviewTransitionStateAction extends ReviewUpdateAction {
 
@@ -45,12 +50,11 @@ public interface ReviewTransitionStateAction extends ReviewUpdateAction {
     @Valid
     @JsonProperty("state")
     public StateResourceIdentifier getState();
-
     /**
      *  <p>Switch validations on or off.</p>
      * @return force
      */
-
+    
     @JsonProperty("force")
     public Boolean getForce();
 
@@ -58,23 +62,26 @@ public interface ReviewTransitionStateAction extends ReviewUpdateAction {
      *  <p>Value to set. If there is no State yet, the new State must be an initial State. If the existing State has <code>transitions</code> set, there must be a direct transition to the new State. If <code>transitions</code> is not set, no validation is performed. If the new State does not have the role <code>ReviewIncludedInStatistics</code>, the Review is not taken into account in the ratings statistics of the target.</p>
      * @param state value to be set
      */
-
+    
     public void setState(final StateResourceIdentifier state);
-
+    
+    
     /**
      *  <p>Switch validations on or off.</p>
      * @param force value to be set
      */
-
+    
     public void setForce(final Boolean force);
+    
 
     /**
      * factory method
      * @return instance of ReviewTransitionStateAction
      */
-    public static ReviewTransitionStateAction of() {
+    public static ReviewTransitionStateAction of(){
         return new ReviewTransitionStateActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy ReviewTransitionStateAction
@@ -111,7 +118,7 @@ public interface ReviewTransitionStateAction extends ReviewUpdateAction {
     public static ReviewTransitionStateActionBuilder builder() {
         return ReviewTransitionStateActionBuilder.of();
     }
-
+    
     /**
      * create builder for ReviewTransitionStateAction instance
      * @param template instance with prefilled values for the builder
@@ -120,6 +127,7 @@ public interface ReviewTransitionStateAction extends ReviewUpdateAction {
     public static ReviewTransitionStateActionBuilder builder(final ReviewTransitionStateAction template) {
         return ReviewTransitionStateActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -130,7 +138,7 @@ public interface ReviewTransitionStateAction extends ReviewUpdateAction {
     default <T> T withReviewTransitionStateAction(Function<ReviewTransitionStateAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

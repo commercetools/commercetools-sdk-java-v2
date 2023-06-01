@@ -1,17 +1,21 @@
-
 package com.commercetools.api.models.store;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-
+import com.commercetools.api.models.common.ReferenceTypeId;
 import com.commercetools.api.models.common.ResourceIdentifier;
+import com.commercetools.api.models.store.StoreResourceIdentifierImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>ResourceIdentifier to a Store.</p>
@@ -23,9 +27,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     StoreResourceIdentifier storeResourceIdentifier = StoreResourceIdentifier.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = StoreResourceIdentifierImpl.class)
 public interface StoreResourceIdentifier extends ResourceIdentifier, com.commercetools.api.models.Identifiable<Store> {
 
@@ -38,15 +45,14 @@ public interface StoreResourceIdentifier extends ResourceIdentifier, com.commerc
      *  <p>Unique ID of the referenced Store. Either <code>id</code> or <code>key</code> is required.</p>
      * @return id
      */
-
+    
     @JsonProperty("id")
     public String getId();
-
     /**
      *  <p>Unique key of the referenced Store. Either <code>id</code> or <code>key</code> is required.</p>
      * @return key
      */
-
+    
     @JsonProperty("key")
     public String getKey();
 
@@ -54,23 +60,26 @@ public interface StoreResourceIdentifier extends ResourceIdentifier, com.commerc
      *  <p>Unique ID of the referenced Store. Either <code>id</code> or <code>key</code> is required.</p>
      * @param id value to be set
      */
-
+    
     public void setId(final String id);
-
+    
+    
     /**
      *  <p>Unique key of the referenced Store. Either <code>id</code> or <code>key</code> is required.</p>
      * @param key value to be set
      */
-
+    
     public void setKey(final String key);
+    
 
     /**
      * factory method
      * @return instance of StoreResourceIdentifier
      */
-    public static StoreResourceIdentifier of() {
+    public static StoreResourceIdentifier of(){
         return new StoreResourceIdentifierImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy StoreResourceIdentifier
@@ -107,7 +116,7 @@ public interface StoreResourceIdentifier extends ResourceIdentifier, com.commerc
     public static StoreResourceIdentifierBuilder builder() {
         return StoreResourceIdentifierBuilder.of();
     }
-
+    
     /**
      * create builder for StoreResourceIdentifier instance
      * @param template instance with prefilled values for the builder
@@ -116,6 +125,7 @@ public interface StoreResourceIdentifier extends ResourceIdentifier, com.commerc
     public static StoreResourceIdentifierBuilder builder(final StoreResourceIdentifier template) {
         return StoreResourceIdentifierBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -126,7 +136,7 @@ public interface StoreResourceIdentifier extends ResourceIdentifier, com.commerc
     default <T> T withStoreResourceIdentifier(Function<StoreResourceIdentifier, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

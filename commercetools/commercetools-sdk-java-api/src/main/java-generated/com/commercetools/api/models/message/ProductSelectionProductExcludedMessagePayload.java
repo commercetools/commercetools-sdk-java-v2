@@ -1,20 +1,22 @@
-
 package com.commercetools.api.models.message;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
+import com.commercetools.api.models.message.MessagePayload;
 import com.commercetools.api.models.product.ProductReference;
 import com.commercetools.api.models.product_selection.ProductVariantExclusion;
+import com.commercetools.api.models.message.ProductSelectionProductExcludedMessagePayloadImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Generated after a successful Exclude Product update action.</p>
@@ -28,9 +30,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .variantExclusion(variantExclusionBuilder -> variantExclusionBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = ProductSelectionProductExcludedMessagePayloadImpl.class)
 public interface ProductSelectionProductExcludedMessagePayload extends MessagePayload {
 
@@ -47,7 +52,6 @@ public interface ProductSelectionProductExcludedMessagePayload extends MessagePa
     @Valid
     @JsonProperty("product")
     public ProductReference getProduct();
-
     /**
      *  <p>Product Variant Exclusion after the Exclude Product update action.</p>
      * @return variantExclusion
@@ -61,31 +65,33 @@ public interface ProductSelectionProductExcludedMessagePayload extends MessagePa
      *  <p>Product that was excluded from the Product Selection.</p>
      * @param product value to be set
      */
-
+    
     public void setProduct(final ProductReference product);
-
+    
+    
     /**
      *  <p>Product Variant Exclusion after the Exclude Product update action.</p>
      * @param variantExclusion value to be set
      */
-
+    
     public void setVariantExclusion(final ProductVariantExclusion variantExclusion);
+    
 
     /**
      * factory method
      * @return instance of ProductSelectionProductExcludedMessagePayload
      */
-    public static ProductSelectionProductExcludedMessagePayload of() {
+    public static ProductSelectionProductExcludedMessagePayload of(){
         return new ProductSelectionProductExcludedMessagePayloadImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy ProductSelectionProductExcludedMessagePayload
      * @param template instance to be copied
      * @return copy instance
      */
-    public static ProductSelectionProductExcludedMessagePayload of(
-            final ProductSelectionProductExcludedMessagePayload template) {
+    public static ProductSelectionProductExcludedMessagePayload of(final ProductSelectionProductExcludedMessagePayload template) {
         ProductSelectionProductExcludedMessagePayloadImpl instance = new ProductSelectionProductExcludedMessagePayloadImpl();
         instance.setProduct(template.getProduct());
         instance.setVariantExclusion(template.getVariantExclusion());
@@ -98,15 +104,13 @@ public interface ProductSelectionProductExcludedMessagePayload extends MessagePa
      * @return copy instance
      */
     @Nullable
-    public static ProductSelectionProductExcludedMessagePayload deepCopy(
-            @Nullable final ProductSelectionProductExcludedMessagePayload template) {
+    public static ProductSelectionProductExcludedMessagePayload deepCopy(@Nullable final ProductSelectionProductExcludedMessagePayload template) {
         if (template == null) {
             return null;
         }
         ProductSelectionProductExcludedMessagePayloadImpl instance = new ProductSelectionProductExcludedMessagePayloadImpl();
         instance.setProduct(com.commercetools.api.models.product.ProductReference.deepCopy(template.getProduct()));
-        instance.setVariantExclusion(com.commercetools.api.models.product_selection.ProductVariantExclusion
-                .deepCopy(template.getVariantExclusion()));
+        instance.setVariantExclusion(com.commercetools.api.models.product_selection.ProductVariantExclusion.deepCopy(template.getVariantExclusion()));
         return instance;
     }
 
@@ -117,16 +121,16 @@ public interface ProductSelectionProductExcludedMessagePayload extends MessagePa
     public static ProductSelectionProductExcludedMessagePayloadBuilder builder() {
         return ProductSelectionProductExcludedMessagePayloadBuilder.of();
     }
-
+    
     /**
      * create builder for ProductSelectionProductExcludedMessagePayload instance
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static ProductSelectionProductExcludedMessagePayloadBuilder builder(
-            final ProductSelectionProductExcludedMessagePayload template) {
+    public static ProductSelectionProductExcludedMessagePayloadBuilder builder(final ProductSelectionProductExcludedMessagePayload template) {
         return ProductSelectionProductExcludedMessagePayloadBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -134,11 +138,10 @@ public interface ProductSelectionProductExcludedMessagePayload extends MessagePa
      * @param helper function to map the object
      * @return mapped value
      */
-    default <T> T withProductSelectionProductExcludedMessagePayload(
-            Function<ProductSelectionProductExcludedMessagePayload, T> helper) {
+    default <T> T withProductSelectionProductExcludedMessagePayload(Function<ProductSelectionProductExcludedMessagePayload, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

@@ -1,19 +1,21 @@
-
 package com.commercetools.api.models.product_type;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-import java.util.stream.Collectors;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
+import com.commercetools.api.models.product_type.AttributeLocalizedEnumValue;
+import com.commercetools.api.models.product_type.AttributeType;
+import com.commercetools.api.models.product_type.AttributeLocalizedEnumTypeImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Attribute type for localized enum values. Useful for predefined language-specific values selectable in drop-down menus if only one value can be selected. Use AttributeSetType of AttributeLocalizedEnumValue instead if multiple values can be selected.</p>
@@ -26,9 +28,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .plusValues(valuesBuilder -> valuesBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = AttributeLocalizedEnumTypeImpl.class)
 public interface AttributeLocalizedEnumType extends AttributeType {
 
@@ -50,24 +55,24 @@ public interface AttributeLocalizedEnumType extends AttributeType {
      *  <p>Available values that can be assigned to Products.</p>
      * @param values values to be set
      */
-
+    
     @JsonIgnore
-    public void setValues(final AttributeLocalizedEnumValue... values);
-
+    public void setValues(final AttributeLocalizedEnumValue ...values);
     /**
      *  <p>Available values that can be assigned to Products.</p>
      * @param values values to be set
      */
-
+    
     public void setValues(final List<AttributeLocalizedEnumValue> values);
 
     /**
      * factory method
      * @return instance of AttributeLocalizedEnumType
      */
-    public static AttributeLocalizedEnumType of() {
+    public static AttributeLocalizedEnumType of(){
         return new AttributeLocalizedEnumTypeImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy AttributeLocalizedEnumType
@@ -92,9 +97,7 @@ public interface AttributeLocalizedEnumType extends AttributeType {
         }
         AttributeLocalizedEnumTypeImpl instance = new AttributeLocalizedEnumTypeImpl();
         instance.setValues(Optional.ofNullable(template.getValues())
-                .map(t -> t.stream()
-                        .map(com.commercetools.api.models.product_type.AttributeLocalizedEnumValue::deepCopy)
-                        .collect(Collectors.toList()))
+                .map(t -> t.stream().map(com.commercetools.api.models.product_type.AttributeLocalizedEnumValue::deepCopy).collect(Collectors.toList()))
                 .orElse(null));
         return instance;
     }
@@ -106,7 +109,7 @@ public interface AttributeLocalizedEnumType extends AttributeType {
     public static AttributeLocalizedEnumTypeBuilder builder() {
         return AttributeLocalizedEnumTypeBuilder.of();
     }
-
+    
     /**
      * create builder for AttributeLocalizedEnumType instance
      * @param template instance with prefilled values for the builder
@@ -115,6 +118,7 @@ public interface AttributeLocalizedEnumType extends AttributeType {
     public static AttributeLocalizedEnumTypeBuilder builder(final AttributeLocalizedEnumType template) {
         return AttributeLocalizedEnumTypeBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -125,7 +129,7 @@ public interface AttributeLocalizedEnumType extends AttributeType {
     default <T> T withAttributeLocalizedEnumType(Function<AttributeLocalizedEnumType, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

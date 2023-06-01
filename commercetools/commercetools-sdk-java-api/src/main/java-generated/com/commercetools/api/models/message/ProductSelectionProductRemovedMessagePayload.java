@@ -1,19 +1,21 @@
-
 package com.commercetools.api.models.message;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
+import com.commercetools.api.models.message.MessagePayload;
 import com.commercetools.api.models.product.ProductReference;
+import com.commercetools.api.models.message.ProductSelectionProductRemovedMessagePayloadImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Generated after a successful Remove Product update action.</p>
@@ -26,9 +28,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .product(productBuilder -> productBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = ProductSelectionProductRemovedMessagePayloadImpl.class)
 public interface ProductSelectionProductRemovedMessagePayload extends MessagePayload {
 
@@ -50,24 +55,25 @@ public interface ProductSelectionProductRemovedMessagePayload extends MessagePay
      *  <p>Product that was removed from the Product Selection.</p>
      * @param product value to be set
      */
-
+    
     public void setProduct(final ProductReference product);
+    
 
     /**
      * factory method
      * @return instance of ProductSelectionProductRemovedMessagePayload
      */
-    public static ProductSelectionProductRemovedMessagePayload of() {
+    public static ProductSelectionProductRemovedMessagePayload of(){
         return new ProductSelectionProductRemovedMessagePayloadImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy ProductSelectionProductRemovedMessagePayload
      * @param template instance to be copied
      * @return copy instance
      */
-    public static ProductSelectionProductRemovedMessagePayload of(
-            final ProductSelectionProductRemovedMessagePayload template) {
+    public static ProductSelectionProductRemovedMessagePayload of(final ProductSelectionProductRemovedMessagePayload template) {
         ProductSelectionProductRemovedMessagePayloadImpl instance = new ProductSelectionProductRemovedMessagePayloadImpl();
         instance.setProduct(template.getProduct());
         return instance;
@@ -79,8 +85,7 @@ public interface ProductSelectionProductRemovedMessagePayload extends MessagePay
      * @return copy instance
      */
     @Nullable
-    public static ProductSelectionProductRemovedMessagePayload deepCopy(
-            @Nullable final ProductSelectionProductRemovedMessagePayload template) {
+    public static ProductSelectionProductRemovedMessagePayload deepCopy(@Nullable final ProductSelectionProductRemovedMessagePayload template) {
         if (template == null) {
             return null;
         }
@@ -96,16 +101,16 @@ public interface ProductSelectionProductRemovedMessagePayload extends MessagePay
     public static ProductSelectionProductRemovedMessagePayloadBuilder builder() {
         return ProductSelectionProductRemovedMessagePayloadBuilder.of();
     }
-
+    
     /**
      * create builder for ProductSelectionProductRemovedMessagePayload instance
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static ProductSelectionProductRemovedMessagePayloadBuilder builder(
-            final ProductSelectionProductRemovedMessagePayload template) {
+    public static ProductSelectionProductRemovedMessagePayloadBuilder builder(final ProductSelectionProductRemovedMessagePayload template) {
         return ProductSelectionProductRemovedMessagePayloadBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -113,11 +118,10 @@ public interface ProductSelectionProductRemovedMessagePayload extends MessagePay
      * @param helper function to map the object
      * @return mapped value
      */
-    default <T> T withProductSelectionProductRemovedMessagePayload(
-            Function<ProductSelectionProductRemovedMessagePayload, T> helper) {
+    default <T> T withProductSelectionProductRemovedMessagePayload(Function<ProductSelectionProductRemovedMessagePayload, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

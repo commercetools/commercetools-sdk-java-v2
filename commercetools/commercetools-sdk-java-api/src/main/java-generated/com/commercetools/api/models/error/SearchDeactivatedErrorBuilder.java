@@ -1,8 +1,11 @@
-
 package com.commercetools.api.models.error;
 
+import com.commercetools.api.models.error.ErrorObject;
+import com.commercetools.api.models.error.SearchDeactivatedError;
+import javax.annotation.Nullable;
 import java.util.*;
-
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -16,44 +19,54 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .message("{message}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class SearchDeactivatedErrorBuilder implements Builder<SearchDeactivatedError> {
 
+    
+    
     private String message;
-
+    
+    
+    
     private Map<String, java.lang.Object> values = new HashMap<>();
 
+    
     /**
      *  <p><code>"The endpoint is deactivated for this project. Please enable it via the Project endpoint, via the Merchant Center in the Project settings, or reach out to Support to enable it."</code></p>
      * @param message value to be set
      * @return Builder
      */
-
-    public SearchDeactivatedErrorBuilder message(final String message) {
+    
+    public SearchDeactivatedErrorBuilder message( final String message) {
         this.message = message;
         return this;
     }
-
+    
+    
+    
     /**
      *  <p>Error-specific additional fields.</p>
      * @param values properties to be set
      * @return Builder
      */
-
-    public SearchDeactivatedErrorBuilder values(final Map<String, java.lang.Object> values) {
+    
+    public SearchDeactivatedErrorBuilder values( final Map<String, java.lang.Object> values){
         this.values = values;
         return this;
     }
-
+    
     /**
      *  <p>Error-specific additional fields.</p>
      * @param key property name
      * @param value property value
      * @return Builder
      */
-
+    
     public SearchDeactivatedErrorBuilder addValue(final String key, final java.lang.Object value) {
         if (this.values == null) {
             values = new HashMap<>();
@@ -61,22 +74,25 @@ public class SearchDeactivatedErrorBuilder implements Builder<SearchDeactivatedE
         values.put(key, value);
         return this;
     }
+    
 
     /**
      *  <p><code>"The endpoint is deactivated for this project. Please enable it via the Project endpoint, via the Merchant Center in the Project settings, or reach out to Support to enable it."</code></p>
      * @return message
      */
-
-    public String getMessage() {
+    
+    
+    public String getMessage(){
         return this.message;
     }
-
+    
     /**
      *  <p>Error-specific additional fields.</p>
      * @return pattern properties
      */
-
-    public Map<String, java.lang.Object> getValues() {
+    
+    
+    public Map<String, java.lang.Object> getValues(){
         return this.values;
     }
 
@@ -88,7 +104,7 @@ public class SearchDeactivatedErrorBuilder implements Builder<SearchDeactivatedE
         Objects.requireNonNull(message, SearchDeactivatedError.class + ": message is missing");
         return new SearchDeactivatedErrorImpl(message, values);
     }
-
+    
     /**
      * builds SearchDeactivatedError without checking for non-null required values
      * @return SearchDeactivatedError
@@ -99,7 +115,7 @@ public class SearchDeactivatedErrorBuilder implements Builder<SearchDeactivatedE
 
     /**
      * factory method for an instance of SearchDeactivatedErrorBuilder
-     * @return builder
+     * @return builder 
      */
     public static SearchDeactivatedErrorBuilder of() {
         return new SearchDeactivatedErrorBuilder();

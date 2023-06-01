@@ -1,8 +1,12 @@
-
 package com.commercetools.api.models.order_edit;
 
+import com.commercetools.api.models.order.ReturnShipmentState;
+import com.commercetools.api.models.order.StagedOrderUpdateAction;
+import com.commercetools.api.models.order_edit.StagedOrderSetReturnShipmentStateAction;
+import javax.annotation.Nullable;
 import java.util.*;
-
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -17,54 +21,67 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .shipmentState(ReturnShipmentState.ADVISED)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
-public class StagedOrderSetReturnShipmentStateActionBuilder
-        implements Builder<StagedOrderSetReturnShipmentStateAction> {
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
+public class StagedOrderSetReturnShipmentStateActionBuilder implements Builder<StagedOrderSetReturnShipmentStateAction> {
 
+    
+    
     private String returnItemId;
-
+    
+    
+    
     private com.commercetools.api.models.order.ReturnShipmentState shipmentState;
 
+    
     /**
      * set the value to the returnItemId
      * @param returnItemId value to be set
      * @return Builder
      */
-
-    public StagedOrderSetReturnShipmentStateActionBuilder returnItemId(final String returnItemId) {
+    
+    public StagedOrderSetReturnShipmentStateActionBuilder returnItemId( final String returnItemId) {
         this.returnItemId = returnItemId;
         return this;
     }
-
+    
+    
+    
+    
     /**
      * set the value to the shipmentState
      * @param shipmentState value to be set
      * @return Builder
      */
-
-    public StagedOrderSetReturnShipmentStateActionBuilder shipmentState(
-            final com.commercetools.api.models.order.ReturnShipmentState shipmentState) {
+    
+    public StagedOrderSetReturnShipmentStateActionBuilder shipmentState( final com.commercetools.api.models.order.ReturnShipmentState shipmentState) {
         this.shipmentState = shipmentState;
         return this;
     }
+    
+    
 
     /**
      * value of returnItemId}
      * @return returnItemId
      */
-
-    public String getReturnItemId() {
+    
+    
+    public String getReturnItemId(){
         return this.returnItemId;
     }
-
+    
     /**
      * value of shipmentState}
      * @return shipmentState
      */
-
-    public com.commercetools.api.models.order.ReturnShipmentState getShipmentState() {
+    
+    
+    public com.commercetools.api.models.order.ReturnShipmentState getShipmentState(){
         return this.shipmentState;
     }
 
@@ -73,13 +90,11 @@ public class StagedOrderSetReturnShipmentStateActionBuilder
      * @return StagedOrderSetReturnShipmentStateAction
      */
     public StagedOrderSetReturnShipmentStateAction build() {
-        Objects.requireNonNull(returnItemId,
-            StagedOrderSetReturnShipmentStateAction.class + ": returnItemId is missing");
-        Objects.requireNonNull(shipmentState,
-            StagedOrderSetReturnShipmentStateAction.class + ": shipmentState is missing");
+        Objects.requireNonNull(returnItemId, StagedOrderSetReturnShipmentStateAction.class + ": returnItemId is missing");
+        Objects.requireNonNull(shipmentState, StagedOrderSetReturnShipmentStateAction.class + ": shipmentState is missing");
         return new StagedOrderSetReturnShipmentStateActionImpl(returnItemId, shipmentState);
     }
-
+    
     /**
      * builds StagedOrderSetReturnShipmentStateAction without checking for non-null required values
      * @return StagedOrderSetReturnShipmentStateAction
@@ -90,7 +105,7 @@ public class StagedOrderSetReturnShipmentStateActionBuilder
 
     /**
      * factory method for an instance of StagedOrderSetReturnShipmentStateActionBuilder
-     * @return builder
+     * @return builder 
      */
     public static StagedOrderSetReturnShipmentStateActionBuilder of() {
         return new StagedOrderSetReturnShipmentStateActionBuilder();
@@ -101,8 +116,7 @@ public class StagedOrderSetReturnShipmentStateActionBuilder
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static StagedOrderSetReturnShipmentStateActionBuilder of(
-            final StagedOrderSetReturnShipmentStateAction template) {
+    public static StagedOrderSetReturnShipmentStateActionBuilder of(final StagedOrderSetReturnShipmentStateAction template) {
         StagedOrderSetReturnShipmentStateActionBuilder builder = new StagedOrderSetReturnShipmentStateActionBuilder();
         builder.returnItemId = template.getReturnItemId();
         builder.shipmentState = template.getShipmentState();

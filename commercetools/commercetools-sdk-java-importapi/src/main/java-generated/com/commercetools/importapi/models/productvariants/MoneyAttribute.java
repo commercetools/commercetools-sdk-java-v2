@@ -1,19 +1,21 @@
-
 package com.commercetools.importapi.models.productvariants;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
 import com.commercetools.importapi.models.common.TypedMoney;
+import com.commercetools.importapi.models.productvariants.Attribute;
+import com.commercetools.importapi.models.productvariants.MoneyAttributeImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>This type represents an attribute whose value is a money object.</p>
@@ -26,9 +28,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .value(valueBuilder -> valueBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = MoneyAttributeImpl.class)
 public interface MoneyAttribute extends Attribute {
 
@@ -50,16 +55,18 @@ public interface MoneyAttribute extends Attribute {
      * set value
      * @param value value to be set
      */
-
+    
     public void setValue(final TypedMoney value);
+    
 
     /**
      * factory method
      * @return instance of MoneyAttribute
      */
-    public static MoneyAttribute of() {
+    public static MoneyAttribute of(){
         return new MoneyAttributeImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy MoneyAttribute
@@ -96,7 +103,7 @@ public interface MoneyAttribute extends Attribute {
     public static MoneyAttributeBuilder builder() {
         return MoneyAttributeBuilder.of();
     }
-
+    
     /**
      * create builder for MoneyAttribute instance
      * @param template instance with prefilled values for the builder
@@ -105,6 +112,7 @@ public interface MoneyAttribute extends Attribute {
     public static MoneyAttributeBuilder builder(final MoneyAttribute template) {
         return MoneyAttributeBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -115,7 +123,7 @@ public interface MoneyAttribute extends Attribute {
     default <T> T withMoneyAttribute(Function<MoneyAttribute, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

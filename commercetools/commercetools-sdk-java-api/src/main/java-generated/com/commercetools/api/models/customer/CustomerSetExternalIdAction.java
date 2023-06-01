@@ -1,16 +1,20 @@
-
 package com.commercetools.api.models.customer;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
+import com.commercetools.api.models.customer.CustomerUpdateAction;
+import com.commercetools.api.models.customer.CustomerSetExternalIdActionImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * CustomerSetExternalIdAction
@@ -22,9 +26,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     CustomerSetExternalIdAction customerSetExternalIdAction = CustomerSetExternalIdAction.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = CustomerSetExternalIdActionImpl.class)
 public interface CustomerSetExternalIdAction extends CustomerUpdateAction {
 
@@ -37,7 +44,7 @@ public interface CustomerSetExternalIdAction extends CustomerUpdateAction {
      *  <p>Value to set. If empty, any existing value is removed.</p>
      * @return externalId
      */
-
+    
     @JsonProperty("externalId")
     public String getExternalId();
 
@@ -45,16 +52,18 @@ public interface CustomerSetExternalIdAction extends CustomerUpdateAction {
      *  <p>Value to set. If empty, any existing value is removed.</p>
      * @param externalId value to be set
      */
-
+    
     public void setExternalId(final String externalId);
+    
 
     /**
      * factory method
      * @return instance of CustomerSetExternalIdAction
      */
-    public static CustomerSetExternalIdAction of() {
+    public static CustomerSetExternalIdAction of(){
         return new CustomerSetExternalIdActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy CustomerSetExternalIdAction
@@ -89,7 +98,7 @@ public interface CustomerSetExternalIdAction extends CustomerUpdateAction {
     public static CustomerSetExternalIdActionBuilder builder() {
         return CustomerSetExternalIdActionBuilder.of();
     }
-
+    
     /**
      * create builder for CustomerSetExternalIdAction instance
      * @param template instance with prefilled values for the builder
@@ -98,6 +107,7 @@ public interface CustomerSetExternalIdAction extends CustomerUpdateAction {
     public static CustomerSetExternalIdActionBuilder builder(final CustomerSetExternalIdAction template) {
         return CustomerSetExternalIdActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -108,7 +118,7 @@ public interface CustomerSetExternalIdAction extends CustomerUpdateAction {
     default <T> T withCustomerSetExternalIdAction(Function<CustomerSetExternalIdAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

@@ -1,17 +1,21 @@
-
 package com.commercetools.history.models.change;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
+import com.commercetools.history.models.change.Change;
+import java.lang.Object;
+import com.commercetools.history.models.change.SetValueChangeImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * SetValueChange
@@ -24,9 +28,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .change("{change}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = SetValueChangeImpl.class)
 public interface SetValueChange extends Change {
 
@@ -42,7 +49,6 @@ public interface SetValueChange extends Change {
     @NotNull
     @JsonProperty("type")
     public String getType();
-
     /**
      *  <p>Update action for <code>setValue</code> on custom objects</p>
      * @return change
@@ -50,7 +56,6 @@ public interface SetValueChange extends Change {
     @NotNull
     @JsonProperty("change")
     public String getChange();
-
     /**
      *
      * @return nextValue
@@ -58,7 +63,6 @@ public interface SetValueChange extends Change {
     @NotNull
     @JsonProperty("nextValue")
     public Object getNextValue();
-
     /**
      *
      * @return previousValue
@@ -71,30 +75,34 @@ public interface SetValueChange extends Change {
      *  <p>Update action for <code>setValue</code> on custom objects</p>
      * @param change value to be set
      */
-
+    
     public void setChange(final String change);
-
+    
+    
     /**
      * set nextValue
      * @param nextValue value to be set
      */
-
+    
     public void setNextValue(final Object nextValue);
-
+    
+    
     /**
      * set previousValue
      * @param previousValue value to be set
      */
-
+    
     public void setPreviousValue(final Object previousValue);
+    
 
     /**
      * factory method
      * @return instance of SetValueChange
      */
-    public static SetValueChange of() {
+    public static SetValueChange of(){
         return new SetValueChangeImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy SetValueChange
@@ -133,7 +141,7 @@ public interface SetValueChange extends Change {
     public static SetValueChangeBuilder builder() {
         return SetValueChangeBuilder.of();
     }
-
+    
     /**
      * create builder for SetValueChange instance
      * @param template instance with prefilled values for the builder
@@ -142,6 +150,7 @@ public interface SetValueChange extends Change {
     public static SetValueChangeBuilder builder(final SetValueChange template) {
         return SetValueChangeBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -152,7 +161,7 @@ public interface SetValueChange extends Change {
     default <T> T withSetValueChange(Function<SetValueChange, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

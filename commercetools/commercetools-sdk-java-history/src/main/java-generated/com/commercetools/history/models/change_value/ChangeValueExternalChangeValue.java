@@ -1,17 +1,20 @@
-
 package com.commercetools.history.models.change_value;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
+import com.commercetools.history.models.change_value.ChangeValueChangeValue;
+import com.commercetools.history.models.change_value.ChangeValueExternalChangeValueImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Shape of the value for product discounts external value.</p>
@@ -23,9 +26,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     ChangeValueExternalChangeValue changeValueExternalChangeValue = ChangeValueExternalChangeValue.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = ChangeValueExternalChangeValueImpl.class)
 public interface ChangeValueExternalChangeValue extends ChangeValueChangeValue {
 
@@ -42,13 +48,15 @@ public interface ChangeValueExternalChangeValue extends ChangeValueChangeValue {
     @JsonProperty("type")
     public String getType();
 
+
     /**
      * factory method
      * @return instance of ChangeValueExternalChangeValue
      */
-    public static ChangeValueExternalChangeValue of() {
+    public static ChangeValueExternalChangeValue of(){
         return new ChangeValueExternalChangeValueImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy ChangeValueExternalChangeValue
@@ -81,7 +89,7 @@ public interface ChangeValueExternalChangeValue extends ChangeValueChangeValue {
     public static ChangeValueExternalChangeValueBuilder builder() {
         return ChangeValueExternalChangeValueBuilder.of();
     }
-
+    
     /**
      * create builder for ChangeValueExternalChangeValue instance
      * @param template instance with prefilled values for the builder
@@ -90,6 +98,7 @@ public interface ChangeValueExternalChangeValue extends ChangeValueChangeValue {
     public static ChangeValueExternalChangeValueBuilder builder(final ChangeValueExternalChangeValue template) {
         return ChangeValueExternalChangeValueBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -100,7 +109,7 @@ public interface ChangeValueExternalChangeValue extends ChangeValueChangeValue {
     default <T> T withChangeValueExternalChangeValue(Function<ChangeValueExternalChangeValue, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

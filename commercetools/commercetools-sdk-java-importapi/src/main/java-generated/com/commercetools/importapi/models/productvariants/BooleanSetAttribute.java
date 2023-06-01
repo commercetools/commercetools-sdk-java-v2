@@ -1,17 +1,20 @@
-
 package com.commercetools.importapi.models.productvariants;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
+import com.commercetools.importapi.models.productvariants.Attribute;
+import com.commercetools.importapi.models.productvariants.BooleanSetAttributeImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>This type represents an attribute whose value is set of boolean values.</p>
@@ -24,9 +27,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .plusValue(valueBuilder -> valueBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = BooleanSetAttributeImpl.class)
 public interface BooleanSetAttribute extends Attribute {
 
@@ -47,24 +53,24 @@ public interface BooleanSetAttribute extends Attribute {
      * set value
      * @param value values to be set
      */
-
+    
     @JsonIgnore
-    public void setValue(final Boolean... value);
-
+    public void setValue(final Boolean ...value);
     /**
      * set value
      * @param value values to be set
      */
-
+    
     public void setValue(final List<Boolean> value);
 
     /**
      * factory method
      * @return instance of BooleanSetAttribute
      */
-    public static BooleanSetAttribute of() {
+    public static BooleanSetAttribute of(){
         return new BooleanSetAttributeImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy BooleanSetAttribute
@@ -90,7 +96,9 @@ public interface BooleanSetAttribute extends Attribute {
         }
         BooleanSetAttributeImpl instance = new BooleanSetAttributeImpl();
         instance.setName(template.getName());
-        instance.setValue(Optional.ofNullable(template.getValue()).map(ArrayList::new).orElse(null));
+        instance.setValue(Optional.ofNullable(template.getValue())
+                .map(ArrayList::new)
+                .orElse(null));
         return instance;
     }
 
@@ -101,7 +109,7 @@ public interface BooleanSetAttribute extends Attribute {
     public static BooleanSetAttributeBuilder builder() {
         return BooleanSetAttributeBuilder.of();
     }
-
+    
     /**
      * create builder for BooleanSetAttribute instance
      * @param template instance with prefilled values for the builder
@@ -110,6 +118,7 @@ public interface BooleanSetAttribute extends Attribute {
     public static BooleanSetAttributeBuilder builder(final BooleanSetAttribute template) {
         return BooleanSetAttributeBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -120,7 +129,7 @@ public interface BooleanSetAttribute extends Attribute {
     default <T> T withBooleanSetAttribute(Function<BooleanSetAttribute, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

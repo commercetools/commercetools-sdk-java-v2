@@ -1,17 +1,20 @@
-
 package com.commercetools.api.models.error;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
+import com.commercetools.api.models.error.GraphQLErrorObject;
+import com.commercetools.api.models.error.GraphQLInvalidCredentialsErrorImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Returned when a Customer with the given credentials (matching the given email/password pair) is not found and authentication fails.</p>
@@ -28,9 +31,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     GraphQLInvalidCredentialsError graphQLInvalidCredentialsError = GraphQLInvalidCredentialsError.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = GraphQLInvalidCredentialsErrorImpl.class)
 public interface GraphQLInvalidCredentialsError extends GraphQLErrorObject {
 
@@ -47,13 +53,15 @@ public interface GraphQLInvalidCredentialsError extends GraphQLErrorObject {
     @JsonProperty("code")
     public String getCode();
 
+
     /**
      * factory method
      * @return instance of GraphQLInvalidCredentialsError
      */
-    public static GraphQLInvalidCredentialsError of() {
+    public static GraphQLInvalidCredentialsError of(){
         return new GraphQLInvalidCredentialsErrorImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy GraphQLInvalidCredentialsError
@@ -88,7 +96,7 @@ public interface GraphQLInvalidCredentialsError extends GraphQLErrorObject {
     public static GraphQLInvalidCredentialsErrorBuilder builder() {
         return GraphQLInvalidCredentialsErrorBuilder.of();
     }
-
+    
     /**
      * create builder for GraphQLInvalidCredentialsError instance
      * @param template instance with prefilled values for the builder
@@ -97,6 +105,7 @@ public interface GraphQLInvalidCredentialsError extends GraphQLErrorObject {
     public static GraphQLInvalidCredentialsErrorBuilder builder(final GraphQLInvalidCredentialsError template) {
         return GraphQLInvalidCredentialsErrorBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -107,7 +116,7 @@ public interface GraphQLInvalidCredentialsError extends GraphQLErrorObject {
     default <T> T withGraphQLInvalidCredentialsError(Function<GraphQLInvalidCredentialsError, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

@@ -1,11 +1,13 @@
-
 package com.commercetools.api.models.me;
 
+import com.commercetools.api.models.business_unit.BusinessUnitResourceIdentifier;
+import com.commercetools.api.models.business_unit.BusinessUnitType;
+import com.commercetools.api.models.me.MyBusinessUnitDraft;
+import com.commercetools.api.models.me.MyDivisionDraft;
+import javax.annotation.Nullable;
 import java.util.*;
 import java.util.function.Function;
-
-import javax.annotation.Nullable;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -21,422 +23,456 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .parentUnit(parentUnitBuilder -> parentUnitBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class MyDivisionDraftBuilder implements Builder<MyDivisionDraft> {
 
+    
+    
     private String key;
-
+    
+    
+    
     private String name;
-
+    
+    
     @Nullable
     private String contactEmail;
-
+    
+    
     @Nullable
     private com.commercetools.api.models.type.CustomFields custom;
-
+    
+    
     @Nullable
     private java.util.List<com.commercetools.api.models.common.BaseAddress> addresses;
-
+    
+    
     @Nullable
     private java.util.List<Integer> shippingAddresses;
-
+    
+    
     @Nullable
     private Integer defaultShippingAddress;
-
+    
+    
     @Nullable
     private java.util.List<Integer> billingAddresses;
-
+    
+    
     @Nullable
     private Integer defaultBillingAddress;
-
+    
+    
+    
     private com.commercetools.api.models.business_unit.BusinessUnitResourceIdentifier parentUnit;
 
+    
     /**
      *  <p>User-defined unique identifier for the BusinessUnit.</p>
      * @param key value to be set
      * @return Builder
      */
-
-    public MyDivisionDraftBuilder key(final String key) {
+    
+    public MyDivisionDraftBuilder key( final String key) {
         this.key = key;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Name of the Business Unit.</p>
      * @param name value to be set
      * @return Builder
      */
-
-    public MyDivisionDraftBuilder name(final String name) {
+    
+    public MyDivisionDraftBuilder name( final String name) {
         this.name = name;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Email address of the Business Unit.</p>
      * @param contactEmail value to be set
      * @return Builder
      */
-
+    
     public MyDivisionDraftBuilder contactEmail(@Nullable final String contactEmail) {
         this.contactEmail = contactEmail;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Custom Fields for the Business Unit.</p>
      * @param builder function to build the custom value
      * @return Builder
      */
-
-    public MyDivisionDraftBuilder custom(
-            Function<com.commercetools.api.models.type.CustomFieldsBuilder, com.commercetools.api.models.type.CustomFieldsBuilder> builder) {
+    
+    public MyDivisionDraftBuilder custom(Function<com.commercetools.api.models.type.CustomFieldsBuilder, com.commercetools.api.models.type.CustomFieldsBuilder> builder) {
         this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsBuilder.of()).build();
         return this;
     }
-
+    
     /**
      *  <p>Custom Fields for the Business Unit.</p>
      * @param builder function to build the custom value
      * @return Builder
      */
-
-    public MyDivisionDraftBuilder withCustom(
-            Function<com.commercetools.api.models.type.CustomFieldsBuilder, com.commercetools.api.models.type.CustomFields> builder) {
+    
+    public MyDivisionDraftBuilder withCustom(Function<com.commercetools.api.models.type.CustomFieldsBuilder, com.commercetools.api.models.type.CustomFields> builder) {
         this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsBuilder.of());
         return this;
     }
-
+                    
     /**
      *  <p>Custom Fields for the Business Unit.</p>
      * @param custom value to be set
      * @return Builder
      */
-
+    
     public MyDivisionDraftBuilder custom(@Nullable final com.commercetools.api.models.type.CustomFields custom) {
         this.custom = custom;
         return this;
     }
-
+    
+    
+    
     /**
      *  <p>Addresses used by the Business Unit.</p>
      * @param addresses value to be set
      * @return Builder
      */
-
-    public MyDivisionDraftBuilder addresses(
-            @Nullable final com.commercetools.api.models.common.BaseAddress... addresses) {
+    
+    public MyDivisionDraftBuilder addresses(@Nullable final com.commercetools.api.models.common.BaseAddress ...addresses) {
         this.addresses = new ArrayList<>(Arrays.asList(addresses));
         return this;
     }
-
+    
     /**
      *  <p>Addresses used by the Business Unit.</p>
      * @param addresses value to be set
      * @return Builder
      */
-
-    public MyDivisionDraftBuilder addresses(
-            @Nullable final java.util.List<com.commercetools.api.models.common.BaseAddress> addresses) {
+    
+    public MyDivisionDraftBuilder addresses(@Nullable final java.util.List<com.commercetools.api.models.common.BaseAddress> addresses) {
         this.addresses = addresses;
         return this;
     }
-
+    
     /**
      *  <p>Addresses used by the Business Unit.</p>
      * @param addresses value to be set
      * @return Builder
      */
-
-    public MyDivisionDraftBuilder plusAddresses(
-            @Nullable final com.commercetools.api.models.common.BaseAddress... addresses) {
+    
+    public MyDivisionDraftBuilder plusAddresses(@Nullable final com.commercetools.api.models.common.BaseAddress ...addresses) {
         if (this.addresses == null) {
             this.addresses = new ArrayList<>();
         }
         this.addresses.addAll(Arrays.asList(addresses));
         return this;
     }
-
+    
+    
+    
     /**
      *  <p>Addresses used by the Business Unit.</p>
      * @param builder function to build the addresses value
      * @return Builder
      */
-
-    public MyDivisionDraftBuilder plusAddresses(
-            Function<com.commercetools.api.models.common.BaseAddressBuilder, com.commercetools.api.models.common.BaseAddressBuilder> builder) {
+    
+    public MyDivisionDraftBuilder plusAddresses(Function<com.commercetools.api.models.common.BaseAddressBuilder, com.commercetools.api.models.common.BaseAddressBuilder> builder) {
         if (this.addresses == null) {
             this.addresses = new ArrayList<>();
         }
         this.addresses.add(builder.apply(com.commercetools.api.models.common.BaseAddressBuilder.of()).build());
         return this;
     }
-
+    
     /**
      *  <p>Addresses used by the Business Unit.</p>
      * @param builder function to build the addresses value
      * @return Builder
      */
-
-    public MyDivisionDraftBuilder withAddresses(
-            Function<com.commercetools.api.models.common.BaseAddressBuilder, com.commercetools.api.models.common.BaseAddressBuilder> builder) {
+    
+    public MyDivisionDraftBuilder withAddresses(Function<com.commercetools.api.models.common.BaseAddressBuilder, com.commercetools.api.models.common.BaseAddressBuilder> builder) {
         this.addresses = new ArrayList<>();
         this.addresses.add(builder.apply(com.commercetools.api.models.common.BaseAddressBuilder.of()).build());
         return this;
     }
-
+    
     /**
      *  <p>Addresses used by the Business Unit.</p>
      * @param builder function to build the addresses value
      * @return Builder
      */
-
-    public MyDivisionDraftBuilder addAddresses(
-            Function<com.commercetools.api.models.common.BaseAddressBuilder, com.commercetools.api.models.common.BaseAddress> builder) {
+    
+    public MyDivisionDraftBuilder addAddresses(Function<com.commercetools.api.models.common.BaseAddressBuilder, com.commercetools.api.models.common.BaseAddress> builder) {
         return plusAddresses(builder.apply(com.commercetools.api.models.common.BaseAddressBuilder.of()));
     }
-
+    
     /**
      *  <p>Addresses used by the Business Unit.</p>
      * @param builder function to build the addresses value
      * @return Builder
      */
-
-    public MyDivisionDraftBuilder setAddresses(
-            Function<com.commercetools.api.models.common.BaseAddressBuilder, com.commercetools.api.models.common.BaseAddress> builder) {
+    
+    public MyDivisionDraftBuilder setAddresses(Function<com.commercetools.api.models.common.BaseAddressBuilder, com.commercetools.api.models.common.BaseAddress> builder) {
         return addresses(builder.apply(com.commercetools.api.models.common.BaseAddressBuilder.of()));
     }
-
+                    
+    
     /**
      *  <p>Indexes of entries in <code>addresses</code> to set as shipping addresses. The <code>shippingAddressIds</code> of the Customer will be replaced by these addresses.</p>
      * @param shippingAddresses value to be set
      * @return Builder
      */
-
-    public MyDivisionDraftBuilder shippingAddresses(@Nullable final Integer... shippingAddresses) {
+    
+    public MyDivisionDraftBuilder shippingAddresses(@Nullable final Integer ...shippingAddresses) {
         this.shippingAddresses = new ArrayList<>(Arrays.asList(shippingAddresses));
         return this;
     }
-
+    
     /**
      *  <p>Indexes of entries in <code>addresses</code> to set as shipping addresses. The <code>shippingAddressIds</code> of the Customer will be replaced by these addresses.</p>
      * @param shippingAddresses value to be set
      * @return Builder
      */
-
+    
     public MyDivisionDraftBuilder shippingAddresses(@Nullable final java.util.List<Integer> shippingAddresses) {
         this.shippingAddresses = shippingAddresses;
         return this;
     }
-
+    
     /**
      *  <p>Indexes of entries in <code>addresses</code> to set as shipping addresses. The <code>shippingAddressIds</code> of the Customer will be replaced by these addresses.</p>
      * @param shippingAddresses value to be set
      * @return Builder
      */
-
-    public MyDivisionDraftBuilder plusShippingAddresses(@Nullable final Integer... shippingAddresses) {
+    
+    public MyDivisionDraftBuilder plusShippingAddresses(@Nullable final Integer ...shippingAddresses) {
         if (this.shippingAddresses == null) {
             this.shippingAddresses = new ArrayList<>();
         }
         this.shippingAddresses.addAll(Arrays.asList(shippingAddresses));
         return this;
     }
-
+    
+    
+    
+    
+    
     /**
      *  <p>Index of the entry in <code>addresses</code> to set as the default shipping address.</p>
      * @param defaultShippingAddress value to be set
      * @return Builder
      */
-
+    
     public MyDivisionDraftBuilder defaultShippingAddress(@Nullable final Integer defaultShippingAddress) {
         this.defaultShippingAddress = defaultShippingAddress;
         return this;
     }
-
+    
+    
+    
     /**
      *  <p>Indexes of entries in <code>addresses</code> to set as billing addresses. The <code>billingAddressIds</code> of the Customer will be replaced by these addresses.</p>
      * @param billingAddresses value to be set
      * @return Builder
      */
-
-    public MyDivisionDraftBuilder billingAddresses(@Nullable final Integer... billingAddresses) {
+    
+    public MyDivisionDraftBuilder billingAddresses(@Nullable final Integer ...billingAddresses) {
         this.billingAddresses = new ArrayList<>(Arrays.asList(billingAddresses));
         return this;
     }
-
+    
     /**
      *  <p>Indexes of entries in <code>addresses</code> to set as billing addresses. The <code>billingAddressIds</code> of the Customer will be replaced by these addresses.</p>
      * @param billingAddresses value to be set
      * @return Builder
      */
-
+    
     public MyDivisionDraftBuilder billingAddresses(@Nullable final java.util.List<Integer> billingAddresses) {
         this.billingAddresses = billingAddresses;
         return this;
     }
-
+    
     /**
      *  <p>Indexes of entries in <code>addresses</code> to set as billing addresses. The <code>billingAddressIds</code> of the Customer will be replaced by these addresses.</p>
      * @param billingAddresses value to be set
      * @return Builder
      */
-
-    public MyDivisionDraftBuilder plusBillingAddresses(@Nullable final Integer... billingAddresses) {
+    
+    public MyDivisionDraftBuilder plusBillingAddresses(@Nullable final Integer ...billingAddresses) {
         if (this.billingAddresses == null) {
             this.billingAddresses = new ArrayList<>();
         }
         this.billingAddresses.addAll(Arrays.asList(billingAddresses));
         return this;
     }
-
+    
+    
+    
+    
+    
     /**
      *  <p>Index of the entry in <code>addresses</code> to set as the default billing address.</p>
      * @param defaultBillingAddress value to be set
      * @return Builder
      */
-
+    
     public MyDivisionDraftBuilder defaultBillingAddress(@Nullable final Integer defaultBillingAddress) {
         this.defaultBillingAddress = defaultBillingAddress;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>The parent unit of this Division. Can be a Company or a Division.</p>
      * @param builder function to build the parentUnit value
      * @return Builder
      */
-
-    public MyDivisionDraftBuilder parentUnit(
-            Function<com.commercetools.api.models.business_unit.BusinessUnitResourceIdentifierBuilder, com.commercetools.api.models.business_unit.BusinessUnitResourceIdentifierBuilder> builder) {
-        this.parentUnit = builder
-                .apply(com.commercetools.api.models.business_unit.BusinessUnitResourceIdentifierBuilder.of())
-                .build();
+    
+    public MyDivisionDraftBuilder parentUnit(Function<com.commercetools.api.models.business_unit.BusinessUnitResourceIdentifierBuilder, com.commercetools.api.models.business_unit.BusinessUnitResourceIdentifierBuilder> builder) {
+        this.parentUnit = builder.apply(com.commercetools.api.models.business_unit.BusinessUnitResourceIdentifierBuilder.of()).build();
         return this;
     }
-
+    
     /**
      *  <p>The parent unit of this Division. Can be a Company or a Division.</p>
      * @param builder function to build the parentUnit value
      * @return Builder
      */
-
-    public MyDivisionDraftBuilder withParentUnit(
-            Function<com.commercetools.api.models.business_unit.BusinessUnitResourceIdentifierBuilder, com.commercetools.api.models.business_unit.BusinessUnitResourceIdentifier> builder) {
-        this.parentUnit = builder
-                .apply(com.commercetools.api.models.business_unit.BusinessUnitResourceIdentifierBuilder.of());
+    
+    public MyDivisionDraftBuilder withParentUnit(Function<com.commercetools.api.models.business_unit.BusinessUnitResourceIdentifierBuilder, com.commercetools.api.models.business_unit.BusinessUnitResourceIdentifier> builder) {
+        this.parentUnit = builder.apply(com.commercetools.api.models.business_unit.BusinessUnitResourceIdentifierBuilder.of());
         return this;
     }
-
+                    
     /**
      *  <p>The parent unit of this Division. Can be a Company or a Division.</p>
      * @param parentUnit value to be set
      * @return Builder
      */
-
-    public MyDivisionDraftBuilder parentUnit(
-            final com.commercetools.api.models.business_unit.BusinessUnitResourceIdentifier parentUnit) {
+    
+    public MyDivisionDraftBuilder parentUnit( final com.commercetools.api.models.business_unit.BusinessUnitResourceIdentifier parentUnit) {
         this.parentUnit = parentUnit;
         return this;
     }
+    
+    
 
     /**
      *  <p>User-defined unique identifier for the BusinessUnit.</p>
      * @return key
      */
-
-    public String getKey() {
+    
+    
+    public String getKey(){
         return this.key;
     }
-
+    
     /**
      *  <p>Name of the Business Unit.</p>
      * @return name
      */
-
-    public String getName() {
+    
+    
+    public String getName(){
         return this.name;
     }
-
+    
     /**
      *  <p>Email address of the Business Unit.</p>
      * @return contactEmail
      */
-
+    
     @Nullable
-    public String getContactEmail() {
+    public String getContactEmail(){
         return this.contactEmail;
     }
-
+    
     /**
      *  <p>Custom Fields for the Business Unit.</p>
      * @return custom
      */
-
+    
     @Nullable
-    public com.commercetools.api.models.type.CustomFields getCustom() {
+    public com.commercetools.api.models.type.CustomFields getCustom(){
         return this.custom;
     }
-
+    
     /**
      *  <p>Addresses used by the Business Unit.</p>
      * @return addresses
      */
-
+    
     @Nullable
-    public java.util.List<com.commercetools.api.models.common.BaseAddress> getAddresses() {
+    public java.util.List<com.commercetools.api.models.common.BaseAddress> getAddresses(){
         return this.addresses;
     }
-
+    
     /**
      *  <p>Indexes of entries in <code>addresses</code> to set as shipping addresses. The <code>shippingAddressIds</code> of the Customer will be replaced by these addresses.</p>
      * @return shippingAddresses
      */
-
+    
     @Nullable
-    public java.util.List<Integer> getShippingAddresses() {
+    public java.util.List<Integer> getShippingAddresses(){
         return this.shippingAddresses;
     }
-
+    
     /**
      *  <p>Index of the entry in <code>addresses</code> to set as the default shipping address.</p>
      * @return defaultShippingAddress
      */
-
+    
     @Nullable
-    public Integer getDefaultShippingAddress() {
+    public Integer getDefaultShippingAddress(){
         return this.defaultShippingAddress;
     }
-
+    
     /**
      *  <p>Indexes of entries in <code>addresses</code> to set as billing addresses. The <code>billingAddressIds</code> of the Customer will be replaced by these addresses.</p>
      * @return billingAddresses
      */
-
+    
     @Nullable
-    public java.util.List<Integer> getBillingAddresses() {
+    public java.util.List<Integer> getBillingAddresses(){
         return this.billingAddresses;
     }
-
+    
     /**
      *  <p>Index of the entry in <code>addresses</code> to set as the default billing address.</p>
      * @return defaultBillingAddress
      */
-
+    
     @Nullable
-    public Integer getDefaultBillingAddress() {
+    public Integer getDefaultBillingAddress(){
         return this.defaultBillingAddress;
     }
-
+    
     /**
      *  <p>The parent unit of this Division. Can be a Company or a Division.</p>
      * @return parentUnit
      */
-
-    public com.commercetools.api.models.business_unit.BusinessUnitResourceIdentifier getParentUnit() {
+    
+    
+    public com.commercetools.api.models.business_unit.BusinessUnitResourceIdentifier getParentUnit(){
         return this.parentUnit;
     }
 
@@ -448,22 +484,20 @@ public class MyDivisionDraftBuilder implements Builder<MyDivisionDraft> {
         Objects.requireNonNull(key, MyDivisionDraft.class + ": key is missing");
         Objects.requireNonNull(name, MyDivisionDraft.class + ": name is missing");
         Objects.requireNonNull(parentUnit, MyDivisionDraft.class + ": parentUnit is missing");
-        return new MyDivisionDraftImpl(key, name, contactEmail, custom, addresses, shippingAddresses,
-            defaultShippingAddress, billingAddresses, defaultBillingAddress, parentUnit);
+        return new MyDivisionDraftImpl(key, name, contactEmail, custom, addresses, shippingAddresses, defaultShippingAddress, billingAddresses, defaultBillingAddress, parentUnit);
     }
-
+    
     /**
      * builds MyDivisionDraft without checking for non-null required values
      * @return MyDivisionDraft
      */
     public MyDivisionDraft buildUnchecked() {
-        return new MyDivisionDraftImpl(key, name, contactEmail, custom, addresses, shippingAddresses,
-            defaultShippingAddress, billingAddresses, defaultBillingAddress, parentUnit);
+        return new MyDivisionDraftImpl(key, name, contactEmail, custom, addresses, shippingAddresses, defaultShippingAddress, billingAddresses, defaultBillingAddress, parentUnit);
     }
 
     /**
      * factory method for an instance of MyDivisionDraftBuilder
-     * @return builder
+     * @return builder 
      */
     public static MyDivisionDraftBuilder of() {
         return new MyDivisionDraftBuilder();

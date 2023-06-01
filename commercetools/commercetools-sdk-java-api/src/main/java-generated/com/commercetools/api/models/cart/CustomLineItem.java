@@ -1,15 +1,9 @@
-
 package com.commercetools.api.models.cart;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-import java.util.stream.Collectors;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
+import com.commercetools.api.models.cart.CustomLineItemPriceMode;
+import com.commercetools.api.models.cart.DiscountedLineItemPriceForQuantity;
+import com.commercetools.api.models.cart.ItemShippingDetails;
+import com.commercetools.api.models.cart.TaxedItemPrice;
 import com.commercetools.api.models.common.CentPrecisionMoney;
 import com.commercetools.api.models.common.LocalizedString;
 import com.commercetools.api.models.common.TypedMoney;
@@ -17,10 +11,20 @@ import com.commercetools.api.models.order.ItemState;
 import com.commercetools.api.models.tax_category.TaxCategoryReference;
 import com.commercetools.api.models.tax_category.TaxRate;
 import com.commercetools.api.models.type.CustomFields;
+import com.commercetools.api.models.cart.CustomLineItemImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>A generic item that can be added to the Cart but is not bound to a Product that can be used for discounts (negative money), vouchers, complex cart rules, additional services, or fees. You control the lifecycle of this item.</p>
@@ -41,11 +45,15 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .priceMode(CustomLineItemPriceMode.STANDARD)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = CustomLineItemImpl.class)
 public interface CustomLineItem extends com.commercetools.api.models.Customizable<CustomLineItem> {
+
 
     /**
      *  <p>Unique identifier of the Custom Line Item.</p>
@@ -54,7 +62,6 @@ public interface CustomLineItem extends com.commercetools.api.models.Customizabl
     @NotNull
     @JsonProperty("id")
     public String getId();
-
     /**
      *  <p>Name of the Custom Line Item.</p>
      * @return name
@@ -63,7 +70,6 @@ public interface CustomLineItem extends com.commercetools.api.models.Customizabl
     @Valid
     @JsonProperty("name")
     public LocalizedString getName();
-
     /**
      *  <p>Money value of the Custom Line Item.</p>
      * @return money
@@ -72,7 +78,6 @@ public interface CustomLineItem extends com.commercetools.api.models.Customizabl
     @Valid
     @JsonProperty("money")
     public TypedMoney getMoney();
-
     /**
      *  <p>Automatically set after the <code>taxRate</code> is set.</p>
      * @return taxedPrice
@@ -80,7 +85,6 @@ public interface CustomLineItem extends com.commercetools.api.models.Customizabl
     @Valid
     @JsonProperty("taxedPrice")
     public TaxedItemPrice getTaxedPrice();
-
     /**
      *  <p>Total price of the Custom Line Item (<code>money</code> multiplied by <code>quantity</code>). If the Custom Line Item is discounted, the total price is <code>discountedPricePerQuantity</code> multiplied by <code>quantity</code>.</p>
      *  <p>Includes taxes if the TaxRate <code>includedInPrice</code> is <code>true</code>.</p>
@@ -90,7 +94,6 @@ public interface CustomLineItem extends com.commercetools.api.models.Customizabl
     @Valid
     @JsonProperty("totalPrice")
     public CentPrecisionMoney getTotalPrice();
-
     /**
      *  <p>User-defined identifier used in a deep-link URL for the Custom Line Item. It matches the pattern <code>[a-zA-Z0-9_-]{2,256}</code>.</p>
      * @return slug
@@ -98,7 +101,6 @@ public interface CustomLineItem extends com.commercetools.api.models.Customizabl
     @NotNull
     @JsonProperty("slug")
     public String getSlug();
-
     /**
      *  <p>Number of Custom Line Items in the Cart.</p>
      * @return quantity
@@ -106,7 +108,6 @@ public interface CustomLineItem extends com.commercetools.api.models.Customizabl
     @NotNull
     @JsonProperty("quantity")
     public Long getQuantity();
-
     /**
      *  <p>State of the Custom Line Item in the Cart.</p>
      * @return state
@@ -115,7 +116,6 @@ public interface CustomLineItem extends com.commercetools.api.models.Customizabl
     @Valid
     @JsonProperty("state")
     public List<ItemState> getState();
-
     /**
      *  <p>Used to select a Tax Rate when a Cart has the <code>Platform</code> TaxMode.</p>
      * @return taxCategory
@@ -123,7 +123,6 @@ public interface CustomLineItem extends com.commercetools.api.models.Customizabl
     @Valid
     @JsonProperty("taxCategory")
     public TaxCategoryReference getTaxCategory();
-
     /**
      *  <ul>
      *   <li>For a Cart with <code>Platform</code> TaxMode, the <code>taxRate</code> of Custom Line Items is set automatically once a shipping address is set. The rate is based on the TaxCategory that applies for the shipping address.</li>
@@ -134,7 +133,6 @@ public interface CustomLineItem extends com.commercetools.api.models.Customizabl
     @Valid
     @JsonProperty("taxRate")
     public TaxRate getTaxRate();
-
     /**
      *  <p>Discounted price of a single quantity of the Custom Line Item.</p>
      * @return discountedPricePerQuantity
@@ -143,7 +141,6 @@ public interface CustomLineItem extends com.commercetools.api.models.Customizabl
     @Valid
     @JsonProperty("discountedPricePerQuantity")
     public List<DiscountedLineItemPriceForQuantity> getDiscountedPricePerQuantity();
-
     /**
      *  <p>Custom Fields of the Custom Line Item.</p>
      * @return custom
@@ -151,7 +148,6 @@ public interface CustomLineItem extends com.commercetools.api.models.Customizabl
     @Valid
     @JsonProperty("custom")
     public CustomFields getCustom();
-
     /**
      *  <p>Container for Custom Line Item-specific addresses.</p>
      * @return shippingDetails
@@ -159,7 +155,6 @@ public interface CustomLineItem extends com.commercetools.api.models.Customizabl
     @Valid
     @JsonProperty("shippingDetails")
     public ItemShippingDetails getShippingDetails();
-
     /**
      *  <p>Indicates whether Cart Discounts with a matching CartDiscountCustomLineItemsTarget are applied to the Custom Line Item.</p>
      * @return priceMode
@@ -172,74 +167,81 @@ public interface CustomLineItem extends com.commercetools.api.models.Customizabl
      *  <p>Unique identifier of the Custom Line Item.</p>
      * @param id value to be set
      */
-
+    
     public void setId(final String id);
-
+    
+    
     /**
      *  <p>Name of the Custom Line Item.</p>
      * @param name value to be set
      */
-
+    
     public void setName(final LocalizedString name);
-
+    
+    
     /**
      *  <p>Money value of the Custom Line Item.</p>
      * @param money value to be set
      */
-
+    
     public void setMoney(final TypedMoney money);
-
+    
+    
     /**
      *  <p>Automatically set after the <code>taxRate</code> is set.</p>
      * @param taxedPrice value to be set
      */
-
+    
     public void setTaxedPrice(final TaxedItemPrice taxedPrice);
-
+    
+    
     /**
      *  <p>Total price of the Custom Line Item (<code>money</code> multiplied by <code>quantity</code>). If the Custom Line Item is discounted, the total price is <code>discountedPricePerQuantity</code> multiplied by <code>quantity</code>.</p>
      *  <p>Includes taxes if the TaxRate <code>includedInPrice</code> is <code>true</code>.</p>
      * @param totalPrice value to be set
      */
-
+    
     public void setTotalPrice(final CentPrecisionMoney totalPrice);
-
+    
+    
     /**
      *  <p>User-defined identifier used in a deep-link URL for the Custom Line Item. It matches the pattern <code>[a-zA-Z0-9_-]{2,256}</code>.</p>
      * @param slug value to be set
      */
-
+    
     public void setSlug(final String slug);
-
+    
+    
     /**
      *  <p>Number of Custom Line Items in the Cart.</p>
      * @param quantity value to be set
      */
-
+    
     public void setQuantity(final Long quantity);
-
+    
+    
     /**
      *  <p>State of the Custom Line Item in the Cart.</p>
      * @param state values to be set
      */
-
+    
     @JsonIgnore
-    public void setState(final ItemState... state);
-
+    public void setState(final ItemState ...state);
     /**
      *  <p>State of the Custom Line Item in the Cart.</p>
      * @param state values to be set
      */
-
+    
     public void setState(final List<ItemState> state);
-
+    
     /**
      *  <p>Used to select a Tax Rate when a Cart has the <code>Platform</code> TaxMode.</p>
      * @param taxCategory value to be set
      */
-
+    
     public void setTaxCategory(final TaxCategoryReference taxCategory);
-
+    
+    
     /**
      *  <ul>
      *   <li>For a Cart with <code>Platform</code> TaxMode, the <code>taxRate</code> of Custom Line Items is set automatically once a shipping address is set. The rate is based on the TaxCategory that applies for the shipping address.</li>
@@ -247,53 +249,56 @@ public interface CustomLineItem extends com.commercetools.api.models.Customizabl
      *  </ul>
      * @param taxRate value to be set
      */
-
+    
     public void setTaxRate(final TaxRate taxRate);
-
+    
+    
     /**
      *  <p>Discounted price of a single quantity of the Custom Line Item.</p>
      * @param discountedPricePerQuantity values to be set
      */
-
+    
     @JsonIgnore
-    public void setDiscountedPricePerQuantity(final DiscountedLineItemPriceForQuantity... discountedPricePerQuantity);
-
+    public void setDiscountedPricePerQuantity(final DiscountedLineItemPriceForQuantity ...discountedPricePerQuantity);
     /**
      *  <p>Discounted price of a single quantity of the Custom Line Item.</p>
      * @param discountedPricePerQuantity values to be set
      */
-
-    public void setDiscountedPricePerQuantity(
-            final List<DiscountedLineItemPriceForQuantity> discountedPricePerQuantity);
-
+    
+    public void setDiscountedPricePerQuantity(final List<DiscountedLineItemPriceForQuantity> discountedPricePerQuantity);
+    
     /**
      *  <p>Custom Fields of the Custom Line Item.</p>
      * @param custom value to be set
      */
-
+    
     public void setCustom(final CustomFields custom);
-
+    
+    
     /**
      *  <p>Container for Custom Line Item-specific addresses.</p>
      * @param shippingDetails value to be set
      */
-
+    
     public void setShippingDetails(final ItemShippingDetails shippingDetails);
-
+    
+    
     /**
      *  <p>Indicates whether Cart Discounts with a matching CartDiscountCustomLineItemsTarget are applied to the Custom Line Item.</p>
      * @param priceMode value to be set
      */
-
+    
     public void setPriceMode(final CustomLineItemPriceMode priceMode);
+    
 
     /**
      * factory method
      * @return instance of CustomLineItem
      */
-    public static CustomLineItem of() {
+    public static CustomLineItem of(){
         return new CustomLineItemImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy CustomLineItem
@@ -334,26 +339,19 @@ public interface CustomLineItem extends com.commercetools.api.models.Customizabl
         instance.setName(com.commercetools.api.models.common.LocalizedString.deepCopy(template.getName()));
         instance.setMoney(com.commercetools.api.models.common.TypedMoney.deepCopy(template.getMoney()));
         instance.setTaxedPrice(com.commercetools.api.models.cart.TaxedItemPrice.deepCopy(template.getTaxedPrice()));
-        instance.setTotalPrice(
-            com.commercetools.api.models.common.CentPrecisionMoney.deepCopy(template.getTotalPrice()));
+        instance.setTotalPrice(com.commercetools.api.models.common.CentPrecisionMoney.deepCopy(template.getTotalPrice()));
         instance.setSlug(template.getSlug());
         instance.setQuantity(template.getQuantity());
         instance.setState(Optional.ofNullable(template.getState())
-                .map(t -> t.stream()
-                        .map(com.commercetools.api.models.order.ItemState::deepCopy)
-                        .collect(Collectors.toList()))
+                .map(t -> t.stream().map(com.commercetools.api.models.order.ItemState::deepCopy).collect(Collectors.toList()))
                 .orElse(null));
-        instance.setTaxCategory(
-            com.commercetools.api.models.tax_category.TaxCategoryReference.deepCopy(template.getTaxCategory()));
+        instance.setTaxCategory(com.commercetools.api.models.tax_category.TaxCategoryReference.deepCopy(template.getTaxCategory()));
         instance.setTaxRate(com.commercetools.api.models.tax_category.TaxRate.deepCopy(template.getTaxRate()));
         instance.setDiscountedPricePerQuantity(Optional.ofNullable(template.getDiscountedPricePerQuantity())
-                .map(t -> t.stream()
-                        .map(com.commercetools.api.models.cart.DiscountedLineItemPriceForQuantity::deepCopy)
-                        .collect(Collectors.toList()))
+                .map(t -> t.stream().map(com.commercetools.api.models.cart.DiscountedLineItemPriceForQuantity::deepCopy).collect(Collectors.toList()))
                 .orElse(null));
         instance.setCustom(com.commercetools.api.models.type.CustomFields.deepCopy(template.getCustom()));
-        instance.setShippingDetails(
-            com.commercetools.api.models.cart.ItemShippingDetails.deepCopy(template.getShippingDetails()));
+        instance.setShippingDetails(com.commercetools.api.models.cart.ItemShippingDetails.deepCopy(template.getShippingDetails()));
         instance.setPriceMode(template.getPriceMode());
         return instance;
     }
@@ -365,7 +363,7 @@ public interface CustomLineItem extends com.commercetools.api.models.Customizabl
     public static CustomLineItemBuilder builder() {
         return CustomLineItemBuilder.of();
     }
-
+    
     /**
      * create builder for CustomLineItem instance
      * @param template instance with prefilled values for the builder
@@ -374,6 +372,7 @@ public interface CustomLineItem extends com.commercetools.api.models.Customizabl
     public static CustomLineItemBuilder builder(final CustomLineItem template) {
         return CustomLineItemBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -384,7 +383,7 @@ public interface CustomLineItem extends com.commercetools.api.models.Customizabl
     default <T> T withCustomLineItem(Function<CustomLineItem, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

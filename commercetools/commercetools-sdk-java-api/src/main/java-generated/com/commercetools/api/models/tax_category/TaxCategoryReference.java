@@ -1,19 +1,22 @@
-
 package com.commercetools.api.models.tax_category;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
 import com.commercetools.api.models.common.Reference;
+import com.commercetools.api.models.common.ReferenceTypeId;
+import com.commercetools.api.models.tax_category.TaxCategory;
+import com.commercetools.api.models.tax_category.TaxCategoryReferenceImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Reference to a TaxCategory.</p>
@@ -26,9 +29,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .id("{id}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = TaxCategoryReferenceImpl.class)
 public interface TaxCategoryReference extends Reference, com.commercetools.api.models.Identifiable<TaxCategory> {
 
@@ -44,7 +50,6 @@ public interface TaxCategoryReference extends Reference, com.commercetools.api.m
     @Valid
     @JsonProperty("obj")
     public TaxCategory getObj();
-
     /**
      *  <p>Unique identifier of the referenced TaxCategory.</p>
      * @return id
@@ -57,23 +62,26 @@ public interface TaxCategoryReference extends Reference, com.commercetools.api.m
      *  <p>Contains the representation of the expanded TaxCategory. Only present in responses to requests with Reference Expansion for TaxCategories.</p>
      * @param obj value to be set
      */
-
+    
     public void setObj(final TaxCategory obj);
-
+    
+    
     /**
      *  <p>Unique identifier of the referenced TaxCategory.</p>
      * @param id value to be set
      */
-
+    
     public void setId(final String id);
+    
 
     /**
      * factory method
      * @return instance of TaxCategoryReference
      */
-    public static TaxCategoryReference of() {
+    public static TaxCategoryReference of(){
         return new TaxCategoryReferenceImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy TaxCategoryReference
@@ -110,7 +118,7 @@ public interface TaxCategoryReference extends Reference, com.commercetools.api.m
     public static TaxCategoryReferenceBuilder builder() {
         return TaxCategoryReferenceBuilder.of();
     }
-
+    
     /**
      * create builder for TaxCategoryReference instance
      * @param template instance with prefilled values for the builder
@@ -119,6 +127,7 @@ public interface TaxCategoryReference extends Reference, com.commercetools.api.m
     public static TaxCategoryReferenceBuilder builder(final TaxCategoryReference template) {
         return TaxCategoryReferenceBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -129,7 +138,7 @@ public interface TaxCategoryReference extends Reference, com.commercetools.api.m
     default <T> T withTaxCategoryReference(Function<TaxCategoryReference, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

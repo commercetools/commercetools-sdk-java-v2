@@ -1,21 +1,22 @@
-
 package com.commercetools.api.models.order_edit;
-
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.cart.ExternalLineItemTotalPrice;
 import com.commercetools.api.models.common.Money;
 import com.commercetools.api.models.order.StagedOrderUpdateAction;
+import com.commercetools.api.models.order_edit.StagedOrderChangeLineItemQuantityActionImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * StagedOrderChangeLineItemQuantityAction
@@ -29,9 +30,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .quantity(0.3)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = StagedOrderChangeLineItemQuantityActionImpl.class)
 public interface StagedOrderChangeLineItemQuantityAction extends StagedOrderUpdateAction {
 
@@ -47,7 +51,6 @@ public interface StagedOrderChangeLineItemQuantityAction extends StagedOrderUpda
     @NotNull
     @JsonProperty("lineItemId")
     public String getLineItemId();
-
     /**
      *
      * @return quantity
@@ -55,7 +58,6 @@ public interface StagedOrderChangeLineItemQuantityAction extends StagedOrderUpda
     @NotNull
     @JsonProperty("quantity")
     public Long getQuantity();
-
     /**
      *  <p>Draft type that stores amounts only in cent precision for the specified currency.</p>
      * @return externalPrice
@@ -63,7 +65,6 @@ public interface StagedOrderChangeLineItemQuantityAction extends StagedOrderUpda
     @Valid
     @JsonProperty("externalPrice")
     public Money getExternalPrice();
-
     /**
      *
      * @return externalTotalPrice
@@ -76,37 +77,42 @@ public interface StagedOrderChangeLineItemQuantityAction extends StagedOrderUpda
      * set lineItemId
      * @param lineItemId value to be set
      */
-
+    
     public void setLineItemId(final String lineItemId);
-
+    
+    
     /**
      * set quantity
      * @param quantity value to be set
      */
-
+    
     public void setQuantity(final Long quantity);
-
+    
+    
     /**
      *  <p>Draft type that stores amounts only in cent precision for the specified currency.</p>
      * @param externalPrice value to be set
      */
-
+    
     public void setExternalPrice(final Money externalPrice);
-
+    
+    
     /**
      * set externalTotalPrice
      * @param externalTotalPrice value to be set
      */
-
+    
     public void setExternalTotalPrice(final ExternalLineItemTotalPrice externalTotalPrice);
+    
 
     /**
      * factory method
      * @return instance of StagedOrderChangeLineItemQuantityAction
      */
-    public static StagedOrderChangeLineItemQuantityAction of() {
+    public static StagedOrderChangeLineItemQuantityAction of(){
         return new StagedOrderChangeLineItemQuantityActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy StagedOrderChangeLineItemQuantityAction
@@ -128,8 +134,7 @@ public interface StagedOrderChangeLineItemQuantityAction extends StagedOrderUpda
      * @return copy instance
      */
     @Nullable
-    public static StagedOrderChangeLineItemQuantityAction deepCopy(
-            @Nullable final StagedOrderChangeLineItemQuantityAction template) {
+    public static StagedOrderChangeLineItemQuantityAction deepCopy(@Nullable final StagedOrderChangeLineItemQuantityAction template) {
         if (template == null) {
             return null;
         }
@@ -137,8 +142,7 @@ public interface StagedOrderChangeLineItemQuantityAction extends StagedOrderUpda
         instance.setLineItemId(template.getLineItemId());
         instance.setQuantity(template.getQuantity());
         instance.setExternalPrice(com.commercetools.api.models.common.Money.deepCopy(template.getExternalPrice()));
-        instance.setExternalTotalPrice(
-            com.commercetools.api.models.cart.ExternalLineItemTotalPrice.deepCopy(template.getExternalTotalPrice()));
+        instance.setExternalTotalPrice(com.commercetools.api.models.cart.ExternalLineItemTotalPrice.deepCopy(template.getExternalTotalPrice()));
         return instance;
     }
 
@@ -149,16 +153,16 @@ public interface StagedOrderChangeLineItemQuantityAction extends StagedOrderUpda
     public static StagedOrderChangeLineItemQuantityActionBuilder builder() {
         return StagedOrderChangeLineItemQuantityActionBuilder.of();
     }
-
+    
     /**
      * create builder for StagedOrderChangeLineItemQuantityAction instance
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static StagedOrderChangeLineItemQuantityActionBuilder builder(
-            final StagedOrderChangeLineItemQuantityAction template) {
+    public static StagedOrderChangeLineItemQuantityActionBuilder builder(final StagedOrderChangeLineItemQuantityAction template) {
         return StagedOrderChangeLineItemQuantityActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -166,11 +170,10 @@ public interface StagedOrderChangeLineItemQuantityAction extends StagedOrderUpda
      * @param helper function to map the object
      * @return mapped value
      */
-    default <T> T withStagedOrderChangeLineItemQuantityAction(
-            Function<StagedOrderChangeLineItemQuantityAction, T> helper) {
+    default <T> T withStagedOrderChangeLineItemQuantityAction(Function<StagedOrderChangeLineItemQuantityAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

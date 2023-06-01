@@ -1,11 +1,11 @@
-
 package com.commercetools.api.predicates.query.business_unit;
-
-import java.util.function.Function;
 
 import com.commercetools.api.predicates.query.*;
 
-public class AssociateRoleAssignmentDraftQueryBuilderDsl {
+import java.util.function.Function;
+
+
+public class AssociateRoleAssignmentDraftQueryBuilderDsl  {
     public AssociateRoleAssignmentDraftQueryBuilderDsl() {
     }
 
@@ -14,19 +14,16 @@ public class AssociateRoleAssignmentDraftQueryBuilderDsl {
     }
 
     public CombinationQueryPredicate<AssociateRoleAssignmentDraftQueryBuilderDsl> associateRole(
-            Function<com.commercetools.api.predicates.query.associate_role.AssociateRoleResourceIdentifierQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.associate_role.AssociateRoleResourceIdentifierQueryBuilderDsl>> fn) {
+        Function<com.commercetools.api.predicates.query.associate_role.AssociateRoleResourceIdentifierQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.associate_role.AssociateRoleResourceIdentifierQueryBuilderDsl>> fn) {
         return new CombinationQueryPredicate<>(ContainerQueryPredicate.of()
-                .parent(ConstantQueryPredicate.of().constant("associateRole"))
-                .inner(fn.apply(
-                    com.commercetools.api.predicates.query.associate_role.AssociateRoleResourceIdentifierQueryBuilderDsl
-                            .of())),
+            .parent(ConstantQueryPredicate.of().constant("associateRole"))
+            .inner(fn.apply(com.commercetools.api.predicates.query.associate_role.AssociateRoleResourceIdentifierQueryBuilderDsl.of())),
             AssociateRoleAssignmentDraftQueryBuilderDsl::of);
     }
-
+    
     public StringComparisonPredicateBuilder<AssociateRoleAssignmentDraftQueryBuilderDsl> inheritance() {
-        return new StringComparisonPredicateBuilder<>(
-            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("inheritance")),
-            p -> new CombinationQueryPredicate<>(p, AssociateRoleAssignmentDraftQueryBuilderDsl::of));
+        return new StringComparisonPredicateBuilder<>(BinaryQueryPredicate.of().left(new ConstantQueryPredicate("inheritance")),
+        p -> new CombinationQueryPredicate<>(p, AssociateRoleAssignmentDraftQueryBuilderDsl::of));
     }
-
+    
 }

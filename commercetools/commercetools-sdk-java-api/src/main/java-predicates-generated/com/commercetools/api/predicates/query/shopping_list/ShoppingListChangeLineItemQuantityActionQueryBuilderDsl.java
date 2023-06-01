@@ -1,9 +1,11 @@
-
 package com.commercetools.api.predicates.query.shopping_list;
 
 import com.commercetools.api.predicates.query.*;
 
-public class ShoppingListChangeLineItemQuantityActionQueryBuilderDsl {
+import java.util.function.Function;
+
+
+public class ShoppingListChangeLineItemQuantityActionQueryBuilderDsl  {
     public ShoppingListChangeLineItemQuantityActionQueryBuilderDsl() {
     }
 
@@ -12,21 +14,16 @@ public class ShoppingListChangeLineItemQuantityActionQueryBuilderDsl {
     }
 
     public StringComparisonPredicateBuilder<ShoppingListChangeLineItemQuantityActionQueryBuilderDsl> action() {
-        return new StringComparisonPredicateBuilder<>(
-            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("action")),
-            p -> new CombinationQueryPredicate<>(p, ShoppingListChangeLineItemQuantityActionQueryBuilderDsl::of));
+        return new StringComparisonPredicateBuilder<>(BinaryQueryPredicate.of().left(new ConstantQueryPredicate("action")),
+        p -> new CombinationQueryPredicate<>(p, ShoppingListChangeLineItemQuantityActionQueryBuilderDsl::of));
     }
-
     public StringComparisonPredicateBuilder<ShoppingListChangeLineItemQuantityActionQueryBuilderDsl> lineItemId() {
-        return new StringComparisonPredicateBuilder<>(
-            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("lineItemId")),
-            p -> new CombinationQueryPredicate<>(p, ShoppingListChangeLineItemQuantityActionQueryBuilderDsl::of));
+        return new StringComparisonPredicateBuilder<>(BinaryQueryPredicate.of().left(new ConstantQueryPredicate("lineItemId")),
+        p -> new CombinationQueryPredicate<>(p, ShoppingListChangeLineItemQuantityActionQueryBuilderDsl::of));
     }
-
     public LongComparisonPredicateBuilder<ShoppingListChangeLineItemQuantityActionQueryBuilderDsl> quantity() {
-        return new LongComparisonPredicateBuilder<>(
-            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("quantity")),
-            p -> new CombinationQueryPredicate<>(p, ShoppingListChangeLineItemQuantityActionQueryBuilderDsl::of));
+        return new LongComparisonPredicateBuilder<>(BinaryQueryPredicate.of().left(new ConstantQueryPredicate("quantity")),
+        p -> new CombinationQueryPredicate<>(p, ShoppingListChangeLineItemQuantityActionQueryBuilderDsl::of));
     }
-
+    
 }

@@ -1,17 +1,20 @@
-
 package com.commercetools.importapi.models.customfields;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
+import com.commercetools.importapi.models.customfields.CustomField;
+import com.commercetools.importapi.models.customfields.BooleanSetFieldImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>A field with a boolean set value.</p>
@@ -24,9 +27,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .plusValue(valueBuilder -> valueBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = BooleanSetFieldImpl.class)
 public interface BooleanSetField extends CustomField {
 
@@ -47,24 +53,24 @@ public interface BooleanSetField extends CustomField {
      * set value
      * @param value values to be set
      */
-
+    
     @JsonIgnore
-    public void setValue(final Boolean... value);
-
+    public void setValue(final Boolean ...value);
     /**
      * set value
      * @param value values to be set
      */
-
+    
     public void setValue(final List<Boolean> value);
 
     /**
      * factory method
      * @return instance of BooleanSetField
      */
-    public static BooleanSetField of() {
+    public static BooleanSetField of(){
         return new BooleanSetFieldImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy BooleanSetField
@@ -88,7 +94,9 @@ public interface BooleanSetField extends CustomField {
             return null;
         }
         BooleanSetFieldImpl instance = new BooleanSetFieldImpl();
-        instance.setValue(Optional.ofNullable(template.getValue()).map(ArrayList::new).orElse(null));
+        instance.setValue(Optional.ofNullable(template.getValue())
+                .map(ArrayList::new)
+                .orElse(null));
         return instance;
     }
 
@@ -99,7 +107,7 @@ public interface BooleanSetField extends CustomField {
     public static BooleanSetFieldBuilder builder() {
         return BooleanSetFieldBuilder.of();
     }
-
+    
     /**
      * create builder for BooleanSetField instance
      * @param template instance with prefilled values for the builder
@@ -108,6 +116,7 @@ public interface BooleanSetField extends CustomField {
     public static BooleanSetFieldBuilder builder(final BooleanSetField template) {
         return BooleanSetFieldBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -118,7 +127,7 @@ public interface BooleanSetField extends CustomField {
     default <T> T withBooleanSetField(Function<BooleanSetField, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

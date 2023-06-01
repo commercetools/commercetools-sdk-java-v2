@@ -1,19 +1,22 @@
-
 package com.commercetools.api.models.standalone_price;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-
+import com.commercetools.api.models.standalone_price.StandalonePriceUpdateAction;
 import com.commercetools.api.models.type.FieldContainer;
 import com.commercetools.api.models.type.TypeResourceIdentifier;
+import com.commercetools.api.models.standalone_price.StandalonePriceSetCustomTypeActionImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * StandalonePriceSetCustomTypeAction
@@ -25,9 +28,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     StandalonePriceSetCustomTypeAction standalonePriceSetCustomTypeAction = StandalonePriceSetCustomTypeAction.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = StandalonePriceSetCustomTypeActionImpl.class)
 public interface StandalonePriceSetCustomTypeAction extends StandalonePriceUpdateAction {
 
@@ -43,7 +49,6 @@ public interface StandalonePriceSetCustomTypeAction extends StandalonePriceUpdat
     @Valid
     @JsonProperty("type")
     public TypeResourceIdentifier getType();
-
     /**
      *  <p>Sets the Custom Fields fields for the StandalonePrice.</p>
      * @return fields
@@ -56,23 +61,26 @@ public interface StandalonePriceSetCustomTypeAction extends StandalonePriceUpdat
      *  <p>Defines the Type that extends the StandalonePrice with Custom Fields. If absent, any existing Type and Custom Fields are removed from the StandalonePrice.</p>
      * @param type value to be set
      */
-
+    
     public void setType(final TypeResourceIdentifier type);
-
+    
+    
     /**
      *  <p>Sets the Custom Fields fields for the StandalonePrice.</p>
      * @param fields value to be set
      */
-
+    
     public void setFields(final FieldContainer fields);
+    
 
     /**
      * factory method
      * @return instance of StandalonePriceSetCustomTypeAction
      */
-    public static StandalonePriceSetCustomTypeAction of() {
+    public static StandalonePriceSetCustomTypeAction of(){
         return new StandalonePriceSetCustomTypeActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy StandalonePriceSetCustomTypeAction
@@ -92,8 +100,7 @@ public interface StandalonePriceSetCustomTypeAction extends StandalonePriceUpdat
      * @return copy instance
      */
     @Nullable
-    public static StandalonePriceSetCustomTypeAction deepCopy(
-            @Nullable final StandalonePriceSetCustomTypeAction template) {
+    public static StandalonePriceSetCustomTypeAction deepCopy(@Nullable final StandalonePriceSetCustomTypeAction template) {
         if (template == null) {
             return null;
         }
@@ -110,7 +117,7 @@ public interface StandalonePriceSetCustomTypeAction extends StandalonePriceUpdat
     public static StandalonePriceSetCustomTypeActionBuilder builder() {
         return StandalonePriceSetCustomTypeActionBuilder.of();
     }
-
+    
     /**
      * create builder for StandalonePriceSetCustomTypeAction instance
      * @param template instance with prefilled values for the builder
@@ -119,6 +126,7 @@ public interface StandalonePriceSetCustomTypeAction extends StandalonePriceUpdat
     public static StandalonePriceSetCustomTypeActionBuilder builder(final StandalonePriceSetCustomTypeAction template) {
         return StandalonePriceSetCustomTypeActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -129,7 +137,7 @@ public interface StandalonePriceSetCustomTypeAction extends StandalonePriceUpdat
     default <T> T withStandalonePriceSetCustomTypeAction(Function<StandalonePriceSetCustomTypeAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

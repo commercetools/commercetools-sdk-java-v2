@@ -1,19 +1,21 @@
-
 package com.commercetools.api.models.error;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
+import com.commercetools.api.models.error.GraphQLErrorObject;
 import com.commercetools.api.models.product.Attribute;
+import com.commercetools.api.models.error.GraphQLDuplicateAttributeValueErrorImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Returned when the <code>Unique</code> AttributeConstraint criteria are not met during an Update Product request.</p>
@@ -26,9 +28,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .attribute(attributeBuilder -> attributeBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = GraphQLDuplicateAttributeValueErrorImpl.class)
 public interface GraphQLDuplicateAttributeValueError extends GraphQLErrorObject {
 
@@ -44,7 +49,6 @@ public interface GraphQLDuplicateAttributeValueError extends GraphQLErrorObject 
     @NotNull
     @JsonProperty("code")
     public String getCode();
-
     /**
      *  <p>Conflicting Attributes.</p>
      * @return attribute
@@ -58,16 +62,18 @@ public interface GraphQLDuplicateAttributeValueError extends GraphQLErrorObject 
      *  <p>Conflicting Attributes.</p>
      * @param attribute value to be set
      */
-
+    
     public void setAttribute(final Attribute attribute);
+    
 
     /**
      * factory method
      * @return instance of GraphQLDuplicateAttributeValueError
      */
-    public static GraphQLDuplicateAttributeValueError of() {
+    public static GraphQLDuplicateAttributeValueError of(){
         return new GraphQLDuplicateAttributeValueErrorImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy GraphQLDuplicateAttributeValueError
@@ -87,8 +93,7 @@ public interface GraphQLDuplicateAttributeValueError extends GraphQLErrorObject 
      * @return copy instance
      */
     @Nullable
-    public static GraphQLDuplicateAttributeValueError deepCopy(
-            @Nullable final GraphQLDuplicateAttributeValueError template) {
+    public static GraphQLDuplicateAttributeValueError deepCopy(@Nullable final GraphQLDuplicateAttributeValueError template) {
         if (template == null) {
             return null;
         }
@@ -105,16 +110,16 @@ public interface GraphQLDuplicateAttributeValueError extends GraphQLErrorObject 
     public static GraphQLDuplicateAttributeValueErrorBuilder builder() {
         return GraphQLDuplicateAttributeValueErrorBuilder.of();
     }
-
+    
     /**
      * create builder for GraphQLDuplicateAttributeValueError instance
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static GraphQLDuplicateAttributeValueErrorBuilder builder(
-            final GraphQLDuplicateAttributeValueError template) {
+    public static GraphQLDuplicateAttributeValueErrorBuilder builder(final GraphQLDuplicateAttributeValueError template) {
         return GraphQLDuplicateAttributeValueErrorBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -125,7 +130,7 @@ public interface GraphQLDuplicateAttributeValueError extends GraphQLErrorObject 
     default <T> T withGraphQLDuplicateAttributeValueError(Function<GraphQLDuplicateAttributeValueError, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

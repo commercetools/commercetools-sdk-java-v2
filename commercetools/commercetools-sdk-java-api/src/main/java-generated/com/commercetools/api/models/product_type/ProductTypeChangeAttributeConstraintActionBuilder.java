@@ -1,8 +1,12 @@
-
 package com.commercetools.api.models.product_type;
 
+import com.commercetools.api.models.product_type.AttributeConstraintEnumDraft;
+import com.commercetools.api.models.product_type.ProductTypeUpdateAction;
+import com.commercetools.api.models.product_type.ProductTypeChangeAttributeConstraintAction;
+import javax.annotation.Nullable;
 import java.util.*;
-
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -17,54 +21,67 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .newValue(AttributeConstraintEnumDraft.NONE)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
-public class ProductTypeChangeAttributeConstraintActionBuilder
-        implements Builder<ProductTypeChangeAttributeConstraintAction> {
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
+public class ProductTypeChangeAttributeConstraintActionBuilder implements Builder<ProductTypeChangeAttributeConstraintAction> {
 
+    
+    
     private String attributeName;
-
+    
+    
+    
     private com.commercetools.api.models.product_type.AttributeConstraintEnumDraft newValue;
 
+    
     /**
      *  <p>Name of the AttributeDefinition to update.</p>
      * @param attributeName value to be set
      * @return Builder
      */
-
-    public ProductTypeChangeAttributeConstraintActionBuilder attributeName(final String attributeName) {
+    
+    public ProductTypeChangeAttributeConstraintActionBuilder attributeName( final String attributeName) {
         this.attributeName = attributeName;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p><code>None</code></p>
      * @param newValue value to be set
      * @return Builder
      */
-
-    public ProductTypeChangeAttributeConstraintActionBuilder newValue(
-            final com.commercetools.api.models.product_type.AttributeConstraintEnumDraft newValue) {
+    
+    public ProductTypeChangeAttributeConstraintActionBuilder newValue( final com.commercetools.api.models.product_type.AttributeConstraintEnumDraft newValue) {
         this.newValue = newValue;
         return this;
     }
+    
+    
 
     /**
      *  <p>Name of the AttributeDefinition to update.</p>
      * @return attributeName
      */
-
-    public String getAttributeName() {
+    
+    
+    public String getAttributeName(){
         return this.attributeName;
     }
-
+    
     /**
      *  <p><code>None</code></p>
      * @return newValue
      */
-
-    public com.commercetools.api.models.product_type.AttributeConstraintEnumDraft getNewValue() {
+    
+    
+    public com.commercetools.api.models.product_type.AttributeConstraintEnumDraft getNewValue(){
         return this.newValue;
     }
 
@@ -73,12 +90,11 @@ public class ProductTypeChangeAttributeConstraintActionBuilder
      * @return ProductTypeChangeAttributeConstraintAction
      */
     public ProductTypeChangeAttributeConstraintAction build() {
-        Objects.requireNonNull(attributeName,
-            ProductTypeChangeAttributeConstraintAction.class + ": attributeName is missing");
+        Objects.requireNonNull(attributeName, ProductTypeChangeAttributeConstraintAction.class + ": attributeName is missing");
         Objects.requireNonNull(newValue, ProductTypeChangeAttributeConstraintAction.class + ": newValue is missing");
         return new ProductTypeChangeAttributeConstraintActionImpl(attributeName, newValue);
     }
-
+    
     /**
      * builds ProductTypeChangeAttributeConstraintAction without checking for non-null required values
      * @return ProductTypeChangeAttributeConstraintAction
@@ -89,7 +105,7 @@ public class ProductTypeChangeAttributeConstraintActionBuilder
 
     /**
      * factory method for an instance of ProductTypeChangeAttributeConstraintActionBuilder
-     * @return builder
+     * @return builder 
      */
     public static ProductTypeChangeAttributeConstraintActionBuilder of() {
         return new ProductTypeChangeAttributeConstraintActionBuilder();
@@ -100,8 +116,7 @@ public class ProductTypeChangeAttributeConstraintActionBuilder
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static ProductTypeChangeAttributeConstraintActionBuilder of(
-            final ProductTypeChangeAttributeConstraintAction template) {
+    public static ProductTypeChangeAttributeConstraintActionBuilder of(final ProductTypeChangeAttributeConstraintAction template) {
         ProductTypeChangeAttributeConstraintActionBuilder builder = new ProductTypeChangeAttributeConstraintActionBuilder();
         builder.attributeName = template.getAttributeName();
         builder.newValue = template.getNewValue();

@@ -1,17 +1,24 @@
-
 package com.commercetools.api.models.cart_discount;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
+import com.commercetools.api.models.cart_discount.CartDiscountCustomLineItemsTarget;
+import com.commercetools.api.models.cart_discount.CartDiscountLineItemsTarget;
+import com.commercetools.api.models.cart_discount.CartDiscountShippingCostTarget;
+import com.commercetools.api.models.cart_discount.MultiBuyCustomLineItemsTarget;
+import com.commercetools.api.models.cart_discount.MultiBuyLineItemsTarget;
 
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * CartDiscountTarget
@@ -24,18 +31,29 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             predicate("{predicate}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
 @JsonSubTypes({
-        @JsonSubTypes.Type(value = com.commercetools.api.models.cart_discount.CartDiscountCustomLineItemsTargetImpl.class, name = CartDiscountCustomLineItemsTarget.CUSTOM_LINE_ITEMS),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.cart_discount.CartDiscountLineItemsTargetImpl.class, name = CartDiscountLineItemsTarget.LINE_ITEMS),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.cart_discount.CartDiscountShippingCostTargetImpl.class, name = CartDiscountShippingCostTarget.SHIPPING),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.cart_discount.MultiBuyCustomLineItemsTargetImpl.class, name = MultiBuyCustomLineItemsTarget.MULTI_BUY_CUSTOM_LINE_ITEMS),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.cart_discount.MultiBuyLineItemsTargetImpl.class, name = MultiBuyLineItemsTarget.MULTI_BUY_LINE_ITEMS) })
-@JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.EXISTING_PROPERTY, property = "type", defaultImpl = CartDiscountTargetImpl.class, visible = true)
+   @JsonSubTypes.Type(value = com.commercetools.api.models.cart_discount.CartDiscountCustomLineItemsTargetImpl.class, name = CartDiscountCustomLineItemsTarget.CUSTOM_LINE_ITEMS),
+   @JsonSubTypes.Type(value = com.commercetools.api.models.cart_discount.CartDiscountLineItemsTargetImpl.class, name = CartDiscountLineItemsTarget.LINE_ITEMS),
+   @JsonSubTypes.Type(value = com.commercetools.api.models.cart_discount.CartDiscountShippingCostTargetImpl.class, name = CartDiscountShippingCostTarget.SHIPPING),
+   @JsonSubTypes.Type(value = com.commercetools.api.models.cart_discount.MultiBuyCustomLineItemsTargetImpl.class, name = MultiBuyCustomLineItemsTarget.MULTI_BUY_CUSTOM_LINE_ITEMS),
+   @JsonSubTypes.Type(value = com.commercetools.api.models.cart_discount.MultiBuyLineItemsTargetImpl.class, name = MultiBuyLineItemsTarget.MULTI_BUY_LINE_ITEMS)
+})
+@JsonTypeInfo(
+    use = JsonTypeInfo.Id.NAME,
+    include = JsonTypeInfo.As.EXISTING_PROPERTY,
+    property = "type",
+    defaultImpl = CartDiscountTargetImpl.class,
+    visible = true
+)
 @JsonDeserialize(as = CartDiscountTargetImpl.class)
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
-public interface CartDiscountTarget {
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
+public interface CartDiscountTarget  {
+
 
     /**
      *
@@ -44,6 +62,9 @@ public interface CartDiscountTarget {
     @NotNull
     @JsonProperty("type")
     public String getType();
+
+
+
 
     /**
      * factory method to create a deep copy of CartDiscountTarget
@@ -56,67 +77,59 @@ public interface CartDiscountTarget {
             return null;
         }
         if (template instanceof com.commercetools.api.models.cart_discount.CartDiscountCustomLineItemsTarget) {
-            return com.commercetools.api.models.cart_discount.CartDiscountCustomLineItemsTarget
-                    .deepCopy((com.commercetools.api.models.cart_discount.CartDiscountCustomLineItemsTarget) template);
+            return com.commercetools.api.models.cart_discount.CartDiscountCustomLineItemsTarget.deepCopy((com.commercetools.api.models.cart_discount.CartDiscountCustomLineItemsTarget)template);
         }
         if (template instanceof com.commercetools.api.models.cart_discount.CartDiscountLineItemsTarget) {
-            return com.commercetools.api.models.cart_discount.CartDiscountLineItemsTarget
-                    .deepCopy((com.commercetools.api.models.cart_discount.CartDiscountLineItemsTarget) template);
+            return com.commercetools.api.models.cart_discount.CartDiscountLineItemsTarget.deepCopy((com.commercetools.api.models.cart_discount.CartDiscountLineItemsTarget)template);
         }
         if (template instanceof com.commercetools.api.models.cart_discount.CartDiscountShippingCostTarget) {
-            return com.commercetools.api.models.cart_discount.CartDiscountShippingCostTarget
-                    .deepCopy((com.commercetools.api.models.cart_discount.CartDiscountShippingCostTarget) template);
+            return com.commercetools.api.models.cart_discount.CartDiscountShippingCostTarget.deepCopy((com.commercetools.api.models.cart_discount.CartDiscountShippingCostTarget)template);
         }
         if (template instanceof com.commercetools.api.models.cart_discount.MultiBuyCustomLineItemsTarget) {
-            return com.commercetools.api.models.cart_discount.MultiBuyCustomLineItemsTarget
-                    .deepCopy((com.commercetools.api.models.cart_discount.MultiBuyCustomLineItemsTarget) template);
+            return com.commercetools.api.models.cart_discount.MultiBuyCustomLineItemsTarget.deepCopy((com.commercetools.api.models.cart_discount.MultiBuyCustomLineItemsTarget)template);
         }
         if (template instanceof com.commercetools.api.models.cart_discount.MultiBuyLineItemsTarget) {
-            return com.commercetools.api.models.cart_discount.MultiBuyLineItemsTarget
-                    .deepCopy((com.commercetools.api.models.cart_discount.MultiBuyLineItemsTarget) template);
+            return com.commercetools.api.models.cart_discount.MultiBuyLineItemsTarget.deepCopy((com.commercetools.api.models.cart_discount.MultiBuyLineItemsTarget)template);
         }
         CartDiscountTargetImpl instance = new CartDiscountTargetImpl();
         return instance;
     }
+
 
     /**
      * builder for customLineItems subtype
      * @return builder
      */
     public static com.commercetools.api.models.cart_discount.CartDiscountCustomLineItemsTargetBuilder customLineItemsBuilder() {
-        return com.commercetools.api.models.cart_discount.CartDiscountCustomLineItemsTargetBuilder.of();
+       return com.commercetools.api.models.cart_discount.CartDiscountCustomLineItemsTargetBuilder.of();
     }
-
     /**
      * builder for lineItems subtype
      * @return builder
      */
     public static com.commercetools.api.models.cart_discount.CartDiscountLineItemsTargetBuilder lineItemsBuilder() {
-        return com.commercetools.api.models.cart_discount.CartDiscountLineItemsTargetBuilder.of();
+       return com.commercetools.api.models.cart_discount.CartDiscountLineItemsTargetBuilder.of();
     }
-
     /**
      * builder for shipping subtype
      * @return builder
      */
     public static com.commercetools.api.models.cart_discount.CartDiscountShippingCostTargetBuilder shippingBuilder() {
-        return com.commercetools.api.models.cart_discount.CartDiscountShippingCostTargetBuilder.of();
+       return com.commercetools.api.models.cart_discount.CartDiscountShippingCostTargetBuilder.of();
     }
-
     /**
      * builder for multiBuyCustomLineItems subtype
      * @return builder
      */
     public static com.commercetools.api.models.cart_discount.MultiBuyCustomLineItemsTargetBuilder multiBuyCustomLineItemsBuilder() {
-        return com.commercetools.api.models.cart_discount.MultiBuyCustomLineItemsTargetBuilder.of();
+       return com.commercetools.api.models.cart_discount.MultiBuyCustomLineItemsTargetBuilder.of();
     }
-
     /**
      * builder for multiBuyLineItems subtype
      * @return builder
      */
     public static com.commercetools.api.models.cart_discount.MultiBuyLineItemsTargetBuilder multiBuyLineItemsBuilder() {
-        return com.commercetools.api.models.cart_discount.MultiBuyLineItemsTargetBuilder.of();
+       return com.commercetools.api.models.cart_discount.MultiBuyLineItemsTargetBuilder.of();
     }
 
     /**
@@ -128,7 +141,7 @@ public interface CartDiscountTarget {
     default <T> T withCartDiscountTarget(Function<CartDiscountTarget, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

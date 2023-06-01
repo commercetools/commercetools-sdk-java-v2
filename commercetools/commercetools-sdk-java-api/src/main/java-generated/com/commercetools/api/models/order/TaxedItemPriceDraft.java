@@ -1,19 +1,20 @@
-
 package com.commercetools.api.models.order;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
 import com.commercetools.api.models.common.Money;
+import com.commercetools.api.models.order.TaxedItemPriceDraftImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * TaxedItemPriceDraft
@@ -27,11 +28,15 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .totalGross(totalGrossBuilder -> totalGrossBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = TaxedItemPriceDraftImpl.class)
 public interface TaxedItemPriceDraft extends io.vrap.rmf.base.client.Draft<TaxedItemPriceDraft> {
+
 
     /**
      *  <p>Draft type that stores amounts only in cent precision for the specified currency.</p>
@@ -41,7 +46,6 @@ public interface TaxedItemPriceDraft extends io.vrap.rmf.base.client.Draft<Taxed
     @Valid
     @JsonProperty("totalNet")
     public Money getTotalNet();
-
     /**
      *  <p>Draft type that stores amounts only in cent precision for the specified currency.</p>
      * @return totalGross
@@ -55,23 +59,26 @@ public interface TaxedItemPriceDraft extends io.vrap.rmf.base.client.Draft<Taxed
      *  <p>Draft type that stores amounts only in cent precision for the specified currency.</p>
      * @param totalNet value to be set
      */
-
+    
     public void setTotalNet(final Money totalNet);
-
+    
+    
     /**
      *  <p>Draft type that stores amounts only in cent precision for the specified currency.</p>
      * @param totalGross value to be set
      */
-
+    
     public void setTotalGross(final Money totalGross);
+    
 
     /**
      * factory method
      * @return instance of TaxedItemPriceDraft
      */
-    public static TaxedItemPriceDraft of() {
+    public static TaxedItemPriceDraft of(){
         return new TaxedItemPriceDraftImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy TaxedItemPriceDraft
@@ -108,7 +115,7 @@ public interface TaxedItemPriceDraft extends io.vrap.rmf.base.client.Draft<Taxed
     public static TaxedItemPriceDraftBuilder builder() {
         return TaxedItemPriceDraftBuilder.of();
     }
-
+    
     /**
      * create builder for TaxedItemPriceDraft instance
      * @param template instance with prefilled values for the builder
@@ -117,6 +124,7 @@ public interface TaxedItemPriceDraft extends io.vrap.rmf.base.client.Draft<Taxed
     public static TaxedItemPriceDraftBuilder builder(final TaxedItemPriceDraft template) {
         return TaxedItemPriceDraftBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -127,7 +135,7 @@ public interface TaxedItemPriceDraft extends io.vrap.rmf.base.client.Draft<Taxed
     default <T> T withTaxedItemPriceDraft(Function<TaxedItemPriceDraft, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

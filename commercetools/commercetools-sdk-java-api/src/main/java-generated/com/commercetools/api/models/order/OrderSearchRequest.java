@@ -1,19 +1,21 @@
-
 package com.commercetools.api.models.order;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-import java.util.stream.Collectors;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
+import com.commercetools.api.models.order.OrderSearchQuery;
+import com.commercetools.api.models.order.OrderSearchSorting;
+import com.commercetools.api.models.order.OrderSearchRequestImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * OrderSearchRequest
@@ -26,11 +28,15 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .query(queryBuilder -> queryBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = OrderSearchRequestImpl.class)
-public interface OrderSearchRequest {
+public interface OrderSearchRequest  {
+
 
     /**
      *  <p>The Order search query.</p>
@@ -40,7 +46,6 @@ public interface OrderSearchRequest {
     @Valid
     @JsonProperty("query")
     public OrderSearchQuery getQuery();
-
     /**
      *  <p>Controls how results to your query are sorted. If not provided, the results are sorted by relevance in descending order.</p>
      * @return sort
@@ -48,20 +53,18 @@ public interface OrderSearchRequest {
     @Valid
     @JsonProperty("sort")
     public List<OrderSearchSorting> getSort();
-
     /**
      *  <p>The maximum number of search results to be returned.</p>
      * @return limit
      */
-
+    
     @JsonProperty("limit")
     public Integer getLimit();
-
     /**
      *  <p>The number of search results to be skipped in the response for pagination.</p>
      * @return offset
      */
-
+    
     @JsonProperty("offset")
     public Integer getOffset();
 
@@ -69,45 +72,48 @@ public interface OrderSearchRequest {
      *  <p>The Order search query.</p>
      * @param query value to be set
      */
-
+    
     public void setQuery(final OrderSearchQuery query);
-
+    
+    
     /**
      *  <p>Controls how results to your query are sorted. If not provided, the results are sorted by relevance in descending order.</p>
      * @param sort values to be set
      */
-
+    
     @JsonIgnore
-    public void setSort(final OrderSearchSorting... sort);
-
+    public void setSort(final OrderSearchSorting ...sort);
     /**
      *  <p>Controls how results to your query are sorted. If not provided, the results are sorted by relevance in descending order.</p>
      * @param sort values to be set
      */
-
+    
     public void setSort(final List<OrderSearchSorting> sort);
-
+    
     /**
      *  <p>The maximum number of search results to be returned.</p>
      * @param limit value to be set
      */
-
+    
     public void setLimit(final Integer limit);
-
+    
+    
     /**
      *  <p>The number of search results to be skipped in the response for pagination.</p>
      * @param offset value to be set
      */
-
+    
     public void setOffset(final Integer offset);
+    
 
     /**
      * factory method
      * @return instance of OrderSearchRequest
      */
-    public static OrderSearchRequest of() {
+    public static OrderSearchRequest of(){
         return new OrderSearchRequestImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy OrderSearchRequest
@@ -136,9 +142,7 @@ public interface OrderSearchRequest {
         OrderSearchRequestImpl instance = new OrderSearchRequestImpl();
         instance.setQuery(com.commercetools.api.models.order.OrderSearchQuery.deepCopy(template.getQuery()));
         instance.setSort(Optional.ofNullable(template.getSort())
-                .map(t -> t.stream()
-                        .map(com.commercetools.api.models.order.OrderSearchSorting::deepCopy)
-                        .collect(Collectors.toList()))
+                .map(t -> t.stream().map(com.commercetools.api.models.order.OrderSearchSorting::deepCopy).collect(Collectors.toList()))
                 .orElse(null));
         instance.setLimit(template.getLimit());
         instance.setOffset(template.getOffset());
@@ -152,7 +156,7 @@ public interface OrderSearchRequest {
     public static OrderSearchRequestBuilder builder() {
         return OrderSearchRequestBuilder.of();
     }
-
+    
     /**
      * create builder for OrderSearchRequest instance
      * @param template instance with prefilled values for the builder
@@ -161,6 +165,7 @@ public interface OrderSearchRequest {
     public static OrderSearchRequestBuilder builder(final OrderSearchRequest template) {
         return OrderSearchRequestBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -171,7 +176,7 @@ public interface OrderSearchRequest {
     default <T> T withOrderSearchRequest(Function<OrderSearchRequest, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

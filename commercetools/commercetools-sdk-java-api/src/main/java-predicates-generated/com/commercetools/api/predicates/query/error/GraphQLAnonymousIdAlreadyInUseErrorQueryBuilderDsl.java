@@ -1,9 +1,11 @@
-
 package com.commercetools.api.predicates.query.error;
 
 import com.commercetools.api.predicates.query.*;
 
-public class GraphQLAnonymousIdAlreadyInUseErrorQueryBuilderDsl {
+import java.util.function.Function;
+
+
+public class GraphQLAnonymousIdAlreadyInUseErrorQueryBuilderDsl  {
     public GraphQLAnonymousIdAlreadyInUseErrorQueryBuilderDsl() {
     }
 
@@ -12,9 +14,8 @@ public class GraphQLAnonymousIdAlreadyInUseErrorQueryBuilderDsl {
     }
 
     public StringComparisonPredicateBuilder<GraphQLAnonymousIdAlreadyInUseErrorQueryBuilderDsl> code() {
-        return new StringComparisonPredicateBuilder<>(
-            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("code")),
-            p -> new CombinationQueryPredicate<>(p, GraphQLAnonymousIdAlreadyInUseErrorQueryBuilderDsl::of));
+        return new StringComparisonPredicateBuilder<>(BinaryQueryPredicate.of().left(new ConstantQueryPredicate("code")),
+        p -> new CombinationQueryPredicate<>(p, GraphQLAnonymousIdAlreadyInUseErrorQueryBuilderDsl::of));
     }
-
+    
 }

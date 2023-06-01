@@ -1,8 +1,11 @@
-
 package com.commercetools.history.models.label;
 
+import com.commercetools.history.models.label.Label;
+import com.commercetools.history.models.label.CustomObjectLabel;
+import javax.annotation.Nullable;
 import java.util.*;
-
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -17,52 +20,67 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .container("{container}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class CustomObjectLabelBuilder implements Builder<CustomObjectLabel> {
 
+    
+    
     private String key;
-
+    
+    
+    
     private String container;
 
+    
     /**
      * set the value to the key
      * @param key value to be set
      * @return Builder
      */
-
-    public CustomObjectLabelBuilder key(final String key) {
+    
+    public CustomObjectLabelBuilder key( final String key) {
         this.key = key;
         return this;
     }
-
+    
+    
+    
+    
     /**
      * set the value to the container
      * @param container value to be set
      * @return Builder
      */
-
-    public CustomObjectLabelBuilder container(final String container) {
+    
+    public CustomObjectLabelBuilder container( final String container) {
         this.container = container;
         return this;
     }
+    
+    
 
     /**
      * value of key}
      * @return key
      */
-
-    public String getKey() {
+    
+    
+    public String getKey(){
         return this.key;
     }
-
+    
     /**
      * value of container}
      * @return container
      */
-
-    public String getContainer() {
+    
+    
+    public String getContainer(){
         return this.container;
     }
 
@@ -75,7 +93,7 @@ public class CustomObjectLabelBuilder implements Builder<CustomObjectLabel> {
         Objects.requireNonNull(container, CustomObjectLabel.class + ": container is missing");
         return new CustomObjectLabelImpl(key, container);
     }
-
+    
     /**
      * builds CustomObjectLabel without checking for non-null required values
      * @return CustomObjectLabel
@@ -86,7 +104,7 @@ public class CustomObjectLabelBuilder implements Builder<CustomObjectLabel> {
 
     /**
      * factory method for an instance of CustomObjectLabelBuilder
-     * @return builder
+     * @return builder 
      */
     public static CustomObjectLabelBuilder of() {
         return new CustomObjectLabelBuilder();

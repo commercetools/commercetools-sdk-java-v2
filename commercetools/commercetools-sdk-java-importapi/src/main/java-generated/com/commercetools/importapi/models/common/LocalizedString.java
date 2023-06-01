@@ -1,17 +1,20 @@
-
 package com.commercetools.importapi.models.common;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
 
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
+import com.commercetools.importapi.models.common.LocalizedStringImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</p>
@@ -29,11 +32,15 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             ./^[a-z]{2}(-[A-Z]{2})?$/("{/^[a-z]{2}(-[A-Z]{2})?$/}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = LocalizedStringImpl.class)
-public interface LocalizedString {
+public interface LocalizedString  {
+
 
     /**
      *
@@ -48,7 +55,7 @@ public interface LocalizedString {
      * @param key property name
      * @param value property value
      */
-
+    
     @JsonAnySetter
     public void setValue(String key, String value);
 
@@ -56,9 +63,10 @@ public interface LocalizedString {
      * factory method
      * @return instance of LocalizedString
      */
-    public static LocalizedString of() {
+    public static LocalizedString of(){
         return new LocalizedStringImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy LocalizedString
@@ -93,7 +101,7 @@ public interface LocalizedString {
     public static LocalizedStringBuilder builder() {
         return LocalizedStringBuilder.of();
     }
-
+    
     /**
      * create builder for LocalizedString instance
      * @param template instance with prefilled values for the builder
@@ -102,6 +110,7 @@ public interface LocalizedString {
     public static LocalizedStringBuilder builder(final LocalizedString template) {
         return LocalizedStringBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -112,7 +121,7 @@ public interface LocalizedString {
     default <T> T withLocalizedString(Function<LocalizedString, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

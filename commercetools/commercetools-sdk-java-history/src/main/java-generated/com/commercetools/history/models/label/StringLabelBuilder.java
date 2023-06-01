@@ -1,8 +1,11 @@
-
 package com.commercetools.history.models.label;
 
+import com.commercetools.history.models.label.Label;
+import com.commercetools.history.models.label.StringLabel;
+import javax.annotation.Nullable;
 import java.util.*;
-
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -16,30 +19,39 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .value("{value}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class StringLabelBuilder implements Builder<StringLabel> {
 
+    
+    
     private String value;
 
+    
     /**
      * set the value to the value
      * @param value value to be set
      * @return Builder
      */
-
-    public StringLabelBuilder value(final String value) {
+    
+    public StringLabelBuilder value( final String value) {
         this.value = value;
         return this;
     }
+    
+    
 
     /**
      * value of value}
      * @return value
      */
-
-    public String getValue() {
+    
+    
+    public String getValue(){
         return this.value;
     }
 
@@ -51,7 +63,7 @@ public class StringLabelBuilder implements Builder<StringLabel> {
         Objects.requireNonNull(value, StringLabel.class + ": value is missing");
         return new StringLabelImpl(value);
     }
-
+    
     /**
      * builds StringLabel without checking for non-null required values
      * @return StringLabel
@@ -62,7 +74,7 @@ public class StringLabelBuilder implements Builder<StringLabel> {
 
     /**
      * factory method for an instance of StringLabelBuilder
-     * @return builder
+     * @return builder 
      */
     public static StringLabelBuilder of() {
         return new StringLabelBuilder();

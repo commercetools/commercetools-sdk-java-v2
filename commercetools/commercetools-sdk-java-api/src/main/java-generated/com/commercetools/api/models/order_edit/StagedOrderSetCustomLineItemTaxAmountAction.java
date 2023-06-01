@@ -1,20 +1,21 @@
-
 package com.commercetools.api.models.order_edit;
-
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.cart.ExternalTaxAmountDraft;
 import com.commercetools.api.models.order.StagedOrderUpdateAction;
+import com.commercetools.api.models.order_edit.StagedOrderSetCustomLineItemTaxAmountActionImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * StagedOrderSetCustomLineItemTaxAmountAction
@@ -27,9 +28,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .customLineItemId("{customLineItemId}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = StagedOrderSetCustomLineItemTaxAmountActionImpl.class)
 public interface StagedOrderSetCustomLineItemTaxAmountAction extends StagedOrderUpdateAction {
 
@@ -45,7 +49,6 @@ public interface StagedOrderSetCustomLineItemTaxAmountAction extends StagedOrder
     @NotNull
     @JsonProperty("customLineItemId")
     public String getCustomLineItemId();
-
     /**
      *  <p>Cannot be used in LineItemDraft or CustomLineItemDraft.</p>
      *  <p>Can only be set by these update actions:</p>
@@ -63,9 +66,10 @@ public interface StagedOrderSetCustomLineItemTaxAmountAction extends StagedOrder
      * set customLineItemId
      * @param customLineItemId value to be set
      */
-
+    
     public void setCustomLineItemId(final String customLineItemId);
-
+    
+    
     /**
      *  <p>Cannot be used in LineItemDraft or CustomLineItemDraft.</p>
      *  <p>Can only be set by these update actions:</p>
@@ -75,24 +79,25 @@ public interface StagedOrderSetCustomLineItemTaxAmountAction extends StagedOrder
      *  </ul>
      * @param externalTaxAmount value to be set
      */
-
+    
     public void setExternalTaxAmount(final ExternalTaxAmountDraft externalTaxAmount);
+    
 
     /**
      * factory method
      * @return instance of StagedOrderSetCustomLineItemTaxAmountAction
      */
-    public static StagedOrderSetCustomLineItemTaxAmountAction of() {
+    public static StagedOrderSetCustomLineItemTaxAmountAction of(){
         return new StagedOrderSetCustomLineItemTaxAmountActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy StagedOrderSetCustomLineItemTaxAmountAction
      * @param template instance to be copied
      * @return copy instance
      */
-    public static StagedOrderSetCustomLineItemTaxAmountAction of(
-            final StagedOrderSetCustomLineItemTaxAmountAction template) {
+    public static StagedOrderSetCustomLineItemTaxAmountAction of(final StagedOrderSetCustomLineItemTaxAmountAction template) {
         StagedOrderSetCustomLineItemTaxAmountActionImpl instance = new StagedOrderSetCustomLineItemTaxAmountActionImpl();
         instance.setCustomLineItemId(template.getCustomLineItemId());
         instance.setExternalTaxAmount(template.getExternalTaxAmount());
@@ -105,15 +110,13 @@ public interface StagedOrderSetCustomLineItemTaxAmountAction extends StagedOrder
      * @return copy instance
      */
     @Nullable
-    public static StagedOrderSetCustomLineItemTaxAmountAction deepCopy(
-            @Nullable final StagedOrderSetCustomLineItemTaxAmountAction template) {
+    public static StagedOrderSetCustomLineItemTaxAmountAction deepCopy(@Nullable final StagedOrderSetCustomLineItemTaxAmountAction template) {
         if (template == null) {
             return null;
         }
         StagedOrderSetCustomLineItemTaxAmountActionImpl instance = new StagedOrderSetCustomLineItemTaxAmountActionImpl();
         instance.setCustomLineItemId(template.getCustomLineItemId());
-        instance.setExternalTaxAmount(
-            com.commercetools.api.models.cart.ExternalTaxAmountDraft.deepCopy(template.getExternalTaxAmount()));
+        instance.setExternalTaxAmount(com.commercetools.api.models.cart.ExternalTaxAmountDraft.deepCopy(template.getExternalTaxAmount()));
         return instance;
     }
 
@@ -124,16 +127,16 @@ public interface StagedOrderSetCustomLineItemTaxAmountAction extends StagedOrder
     public static StagedOrderSetCustomLineItemTaxAmountActionBuilder builder() {
         return StagedOrderSetCustomLineItemTaxAmountActionBuilder.of();
     }
-
+    
     /**
      * create builder for StagedOrderSetCustomLineItemTaxAmountAction instance
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static StagedOrderSetCustomLineItemTaxAmountActionBuilder builder(
-            final StagedOrderSetCustomLineItemTaxAmountAction template) {
+    public static StagedOrderSetCustomLineItemTaxAmountActionBuilder builder(final StagedOrderSetCustomLineItemTaxAmountAction template) {
         return StagedOrderSetCustomLineItemTaxAmountActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -141,11 +144,10 @@ public interface StagedOrderSetCustomLineItemTaxAmountAction extends StagedOrder
      * @param helper function to map the object
      * @return mapped value
      */
-    default <T> T withStagedOrderSetCustomLineItemTaxAmountAction(
-            Function<StagedOrderSetCustomLineItemTaxAmountAction, T> helper) {
+    default <T> T withStagedOrderSetCustomLineItemTaxAmountAction(Function<StagedOrderSetCustomLineItemTaxAmountAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

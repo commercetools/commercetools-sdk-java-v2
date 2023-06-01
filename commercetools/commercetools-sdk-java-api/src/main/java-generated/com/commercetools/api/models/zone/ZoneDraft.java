@@ -1,19 +1,20 @@
-
 package com.commercetools.api.models.zone;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-import java.util.stream.Collectors;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
+import com.commercetools.api.models.zone.Location;
+import com.commercetools.api.models.zone.ZoneDraftImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * ZoneDraft
@@ -26,20 +27,23 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .name("{name}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = ZoneDraftImpl.class)
 public interface ZoneDraft extends com.commercetools.api.models.WithKey, io.vrap.rmf.base.client.Draft<ZoneDraft> {
+
 
     /**
      *  <p>User-defined unique identifier for the Zone.</p>
      * @return key
      */
-
+    
     @JsonProperty("key")
     public String getKey();
-
     /**
      *  <p>Name of the Zone.</p>
      * @return name
@@ -47,15 +51,13 @@ public interface ZoneDraft extends com.commercetools.api.models.WithKey, io.vrap
     @NotNull
     @JsonProperty("name")
     public String getName();
-
     /**
      *  <p>Description of the Zone.</p>
      * @return description
      */
-
+    
     @JsonProperty("description")
     public String getDescription();
-
     /**
      *  <p>List of locations that belong to the Zone.</p>
      * @return locations
@@ -68,45 +70,48 @@ public interface ZoneDraft extends com.commercetools.api.models.WithKey, io.vrap
      *  <p>User-defined unique identifier for the Zone.</p>
      * @param key value to be set
      */
-
+    
     public void setKey(final String key);
-
+    
+    
     /**
      *  <p>Name of the Zone.</p>
      * @param name value to be set
      */
-
+    
     public void setName(final String name);
-
+    
+    
     /**
      *  <p>Description of the Zone.</p>
      * @param description value to be set
      */
-
+    
     public void setDescription(final String description);
-
+    
+    
     /**
      *  <p>List of locations that belong to the Zone.</p>
      * @param locations values to be set
      */
-
+    
     @JsonIgnore
-    public void setLocations(final Location... locations);
-
+    public void setLocations(final Location ...locations);
     /**
      *  <p>List of locations that belong to the Zone.</p>
      * @param locations values to be set
      */
-
+    
     public void setLocations(final List<Location> locations);
 
     /**
      * factory method
      * @return instance of ZoneDraft
      */
-    public static ZoneDraft of() {
+    public static ZoneDraft of(){
         return new ZoneDraftImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy ZoneDraft
@@ -137,9 +142,7 @@ public interface ZoneDraft extends com.commercetools.api.models.WithKey, io.vrap
         instance.setName(template.getName());
         instance.setDescription(template.getDescription());
         instance.setLocations(Optional.ofNullable(template.getLocations())
-                .map(t -> t.stream()
-                        .map(com.commercetools.api.models.zone.Location::deepCopy)
-                        .collect(Collectors.toList()))
+                .map(t -> t.stream().map(com.commercetools.api.models.zone.Location::deepCopy).collect(Collectors.toList()))
                 .orElse(null));
         return instance;
     }
@@ -151,7 +154,7 @@ public interface ZoneDraft extends com.commercetools.api.models.WithKey, io.vrap
     public static ZoneDraftBuilder builder() {
         return ZoneDraftBuilder.of();
     }
-
+    
     /**
      * create builder for ZoneDraft instance
      * @param template instance with prefilled values for the builder
@@ -160,6 +163,7 @@ public interface ZoneDraft extends com.commercetools.api.models.WithKey, io.vrap
     public static ZoneDraftBuilder builder(final ZoneDraft template) {
         return ZoneDraftBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -170,7 +174,7 @@ public interface ZoneDraft extends com.commercetools.api.models.WithKey, io.vrap
     default <T> T withZoneDraft(Function<ZoneDraft, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

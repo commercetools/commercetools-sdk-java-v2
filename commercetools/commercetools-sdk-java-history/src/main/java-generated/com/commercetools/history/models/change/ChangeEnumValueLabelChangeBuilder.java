@@ -1,8 +1,11 @@
-
 package com.commercetools.history.models.change;
 
+import com.commercetools.history.models.change.Change;
+import com.commercetools.history.models.change.ChangeEnumValueLabelChange;
+import javax.annotation.Nullable;
 import java.util.*;
-
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -20,118 +23,151 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .nextValue("{nextValue}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class ChangeEnumValueLabelChangeBuilder implements Builder<ChangeEnumValueLabelChange> {
 
+    
+    
     private String change;
-
+    
+    
+    
     private String fieldName;
-
+    
+    
+    
     private String valueKey;
-
+    
+    
+    
     private String previousValue;
-
+    
+    
+    
     private String nextValue;
 
+    
     /**
      *  <p>Update action for <code>changeEnumValueLabel</code> on types</p>
      * @param change value to be set
      * @return Builder
      */
-
-    public ChangeEnumValueLabelChangeBuilder change(final String change) {
+    
+    public ChangeEnumValueLabelChangeBuilder change( final String change) {
         this.change = change;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>The name of the field definition updated.</p>
      * @param fieldName value to be set
      * @return Builder
      */
-
-    public ChangeEnumValueLabelChangeBuilder fieldName(final String fieldName) {
+    
+    public ChangeEnumValueLabelChangeBuilder fieldName( final String fieldName) {
         this.fieldName = fieldName;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Key of the values that was updated</p>
      * @param valueKey value to be set
      * @return Builder
      */
-
-    public ChangeEnumValueLabelChangeBuilder valueKey(final String valueKey) {
+    
+    public ChangeEnumValueLabelChangeBuilder valueKey( final String valueKey) {
         this.valueKey = valueKey;
         return this;
     }
-
+    
+    
+    
+    
     /**
      * set the value to the previousValue
      * @param previousValue value to be set
      * @return Builder
      */
-
-    public ChangeEnumValueLabelChangeBuilder previousValue(final String previousValue) {
+    
+    public ChangeEnumValueLabelChangeBuilder previousValue( final String previousValue) {
         this.previousValue = previousValue;
         return this;
     }
-
+    
+    
+    
+    
     /**
      * set the value to the nextValue
      * @param nextValue value to be set
      * @return Builder
      */
-
-    public ChangeEnumValueLabelChangeBuilder nextValue(final String nextValue) {
+    
+    public ChangeEnumValueLabelChangeBuilder nextValue( final String nextValue) {
         this.nextValue = nextValue;
         return this;
     }
+    
+    
 
     /**
      *  <p>Update action for <code>changeEnumValueLabel</code> on types</p>
      * @return change
      */
-
-    public String getChange() {
+    
+    
+    public String getChange(){
         return this.change;
     }
-
+    
     /**
      *  <p>The name of the field definition updated.</p>
      * @return fieldName
      */
-
-    public String getFieldName() {
+    
+    
+    public String getFieldName(){
         return this.fieldName;
     }
-
+    
     /**
      *  <p>Key of the values that was updated</p>
      * @return valueKey
      */
-
-    public String getValueKey() {
+    
+    
+    public String getValueKey(){
         return this.valueKey;
     }
-
+    
     /**
      * value of previousValue}
      * @return previousValue
      */
-
-    public String getPreviousValue() {
+    
+    
+    public String getPreviousValue(){
         return this.previousValue;
     }
-
+    
     /**
      * value of nextValue}
      * @return nextValue
      */
-
-    public String getNextValue() {
+    
+    
+    public String getNextValue(){
         return this.nextValue;
     }
 
@@ -147,7 +183,7 @@ public class ChangeEnumValueLabelChangeBuilder implements Builder<ChangeEnumValu
         Objects.requireNonNull(nextValue, ChangeEnumValueLabelChange.class + ": nextValue is missing");
         return new ChangeEnumValueLabelChangeImpl(change, fieldName, valueKey, previousValue, nextValue);
     }
-
+    
     /**
      * builds ChangeEnumValueLabelChange without checking for non-null required values
      * @return ChangeEnumValueLabelChange
@@ -158,7 +194,7 @@ public class ChangeEnumValueLabelChangeBuilder implements Builder<ChangeEnumValu
 
     /**
      * factory method for an instance of ChangeEnumValueLabelChangeBuilder
-     * @return builder
+     * @return builder 
      */
     public static ChangeEnumValueLabelChangeBuilder of() {
         return new ChangeEnumValueLabelChangeBuilder();

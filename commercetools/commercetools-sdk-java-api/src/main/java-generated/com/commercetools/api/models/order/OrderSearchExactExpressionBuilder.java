@@ -1,9 +1,12 @@
-
 package com.commercetools.api.models.order;
 
+import com.commercetools.api.models.order.OrderSearchAnyValue;
+import com.commercetools.api.models.order.OrderSearchQueryExpression;
+import com.commercetools.api.models.order.OrderSearchExactExpression;
+import javax.annotation.Nullable;
 import java.util.*;
 import java.util.function.Function;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -17,54 +20,61 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .exact(exactBuilder -> exactBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class OrderSearchExactExpressionBuilder implements Builder<OrderSearchExactExpression> {
 
+    
+    
     private com.commercetools.api.models.order.OrderSearchAnyValue exact;
 
+    
     /**
      * set the value to the exact using the builder function
      * @param builder function to build the exact value
      * @return Builder
      */
-
-    public OrderSearchExactExpressionBuilder exact(
-            Function<com.commercetools.api.models.order.OrderSearchAnyValueBuilder, com.commercetools.api.models.order.OrderSearchAnyValueBuilder> builder) {
+    
+    public OrderSearchExactExpressionBuilder exact(Function<com.commercetools.api.models.order.OrderSearchAnyValueBuilder, com.commercetools.api.models.order.OrderSearchAnyValueBuilder> builder) {
         this.exact = builder.apply(com.commercetools.api.models.order.OrderSearchAnyValueBuilder.of()).build();
         return this;
     }
-
+    
     /**
      * set the value to the exact using the builder function
      * @param builder function to build the exact value
      * @return Builder
      */
-
-    public OrderSearchExactExpressionBuilder withExact(
-            Function<com.commercetools.api.models.order.OrderSearchAnyValueBuilder, com.commercetools.api.models.order.OrderSearchAnyValue> builder) {
+    
+    public OrderSearchExactExpressionBuilder withExact(Function<com.commercetools.api.models.order.OrderSearchAnyValueBuilder, com.commercetools.api.models.order.OrderSearchAnyValue> builder) {
         this.exact = builder.apply(com.commercetools.api.models.order.OrderSearchAnyValueBuilder.of());
         return this;
     }
-
+                    
     /**
      * set the value to the exact
      * @param exact value to be set
      * @return Builder
      */
-
-    public OrderSearchExactExpressionBuilder exact(final com.commercetools.api.models.order.OrderSearchAnyValue exact) {
+    
+    public OrderSearchExactExpressionBuilder exact( final com.commercetools.api.models.order.OrderSearchAnyValue exact) {
         this.exact = exact;
         return this;
     }
+    
+    
 
     /**
      * value of exact}
      * @return exact
      */
-
-    public com.commercetools.api.models.order.OrderSearchAnyValue getExact() {
+    
+    
+    public com.commercetools.api.models.order.OrderSearchAnyValue getExact(){
         return this.exact;
     }
 
@@ -76,7 +86,7 @@ public class OrderSearchExactExpressionBuilder implements Builder<OrderSearchExa
         Objects.requireNonNull(exact, OrderSearchExactExpression.class + ": exact is missing");
         return new OrderSearchExactExpressionImpl(exact);
     }
-
+    
     /**
      * builds OrderSearchExactExpression without checking for non-null required values
      * @return OrderSearchExactExpression
@@ -87,7 +97,7 @@ public class OrderSearchExactExpressionBuilder implements Builder<OrderSearchExa
 
     /**
      * factory method for an instance of OrderSearchExactExpressionBuilder
-     * @return builder
+     * @return builder 
      */
     public static OrderSearchExactExpressionBuilder of() {
         return new OrderSearchExactExpressionBuilder();

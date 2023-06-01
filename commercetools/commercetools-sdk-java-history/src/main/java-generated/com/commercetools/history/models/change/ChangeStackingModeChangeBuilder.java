@@ -1,8 +1,12 @@
-
 package com.commercetools.history.models.change;
 
+import com.commercetools.history.models.change.Change;
+import com.commercetools.history.models.common.StackingMode;
+import com.commercetools.history.models.change.ChangeStackingModeChange;
+import javax.annotation.Nullable;
 import java.util.*;
-
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -18,76 +22,95 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .previousValue(StackingMode.STACKING)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class ChangeStackingModeChangeBuilder implements Builder<ChangeStackingModeChange> {
 
+    
+    
     private String change;
-
+    
+    
+    
     private com.commercetools.history.models.common.StackingMode nextValue;
-
+    
+    
+    
     private com.commercetools.history.models.common.StackingMode previousValue;
 
+    
     /**
      *  <p>Update action for <code>changeStackingMode</code> on cart discounts</p>
      * @param change value to be set
      * @return Builder
      */
-
-    public ChangeStackingModeChangeBuilder change(final String change) {
+    
+    public ChangeStackingModeChangeBuilder change( final String change) {
         this.change = change;
         return this;
     }
-
+    
+    
+    
+    
     /**
      * set the value to the nextValue
      * @param nextValue value to be set
      * @return Builder
      */
-
-    public ChangeStackingModeChangeBuilder nextValue(
-            final com.commercetools.history.models.common.StackingMode nextValue) {
+    
+    public ChangeStackingModeChangeBuilder nextValue( final com.commercetools.history.models.common.StackingMode nextValue) {
         this.nextValue = nextValue;
         return this;
     }
-
+    
+    
+    
+    
     /**
      * set the value to the previousValue
      * @param previousValue value to be set
      * @return Builder
      */
-
-    public ChangeStackingModeChangeBuilder previousValue(
-            final com.commercetools.history.models.common.StackingMode previousValue) {
+    
+    public ChangeStackingModeChangeBuilder previousValue( final com.commercetools.history.models.common.StackingMode previousValue) {
         this.previousValue = previousValue;
         return this;
     }
+    
+    
 
     /**
      *  <p>Update action for <code>changeStackingMode</code> on cart discounts</p>
      * @return change
      */
-
-    public String getChange() {
+    
+    
+    public String getChange(){
         return this.change;
     }
-
+    
     /**
      * value of nextValue}
      * @return nextValue
      */
-
-    public com.commercetools.history.models.common.StackingMode getNextValue() {
+    
+    
+    public com.commercetools.history.models.common.StackingMode getNextValue(){
         return this.nextValue;
     }
-
+    
     /**
      * value of previousValue}
      * @return previousValue
      */
-
-    public com.commercetools.history.models.common.StackingMode getPreviousValue() {
+    
+    
+    public com.commercetools.history.models.common.StackingMode getPreviousValue(){
         return this.previousValue;
     }
 
@@ -101,7 +124,7 @@ public class ChangeStackingModeChangeBuilder implements Builder<ChangeStackingMo
         Objects.requireNonNull(previousValue, ChangeStackingModeChange.class + ": previousValue is missing");
         return new ChangeStackingModeChangeImpl(change, nextValue, previousValue);
     }
-
+    
     /**
      * builds ChangeStackingModeChange without checking for non-null required values
      * @return ChangeStackingModeChange
@@ -112,7 +135,7 @@ public class ChangeStackingModeChangeBuilder implements Builder<ChangeStackingMo
 
     /**
      * factory method for an instance of ChangeStackingModeChangeBuilder
-     * @return builder
+     * @return builder 
      */
     public static ChangeStackingModeChangeBuilder of() {
         return new ChangeStackingModeChangeBuilder();

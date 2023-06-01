@@ -1,19 +1,21 @@
-
 package com.commercetools.api.models.cart;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
 import com.commercetools.api.models.business_unit.BusinessUnitResourceIdentifier;
+import com.commercetools.api.models.cart.CartUpdateAction;
+import com.commercetools.api.models.cart.CartSetBusinessUnitActionImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Updates the Business Unit on the Cart. The Cart must have an existing Business Unit assigned already.</p>
@@ -26,9 +28,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .businessUnit(businessUnitBuilder -> businessUnitBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = CartSetBusinessUnitActionImpl.class)
 public interface CartSetBusinessUnitAction extends CartUpdateAction {
 
@@ -50,16 +55,18 @@ public interface CartSetBusinessUnitAction extends CartUpdateAction {
      *  <p>New Business Unit to assign to the Cart, which must have access to the Store that is set on the Cart.</p>
      * @param businessUnit value to be set
      */
-
+    
     public void setBusinessUnit(final BusinessUnitResourceIdentifier businessUnit);
+    
 
     /**
      * factory method
      * @return instance of CartSetBusinessUnitAction
      */
-    public static CartSetBusinessUnitAction of() {
+    public static CartSetBusinessUnitAction of(){
         return new CartSetBusinessUnitActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy CartSetBusinessUnitAction
@@ -83,8 +90,7 @@ public interface CartSetBusinessUnitAction extends CartUpdateAction {
             return null;
         }
         CartSetBusinessUnitActionImpl instance = new CartSetBusinessUnitActionImpl();
-        instance.setBusinessUnit(com.commercetools.api.models.business_unit.BusinessUnitResourceIdentifier
-                .deepCopy(template.getBusinessUnit()));
+        instance.setBusinessUnit(com.commercetools.api.models.business_unit.BusinessUnitResourceIdentifier.deepCopy(template.getBusinessUnit()));
         return instance;
     }
 
@@ -95,7 +101,7 @@ public interface CartSetBusinessUnitAction extends CartUpdateAction {
     public static CartSetBusinessUnitActionBuilder builder() {
         return CartSetBusinessUnitActionBuilder.of();
     }
-
+    
     /**
      * create builder for CartSetBusinessUnitAction instance
      * @param template instance with prefilled values for the builder
@@ -104,6 +110,7 @@ public interface CartSetBusinessUnitAction extends CartUpdateAction {
     public static CartSetBusinessUnitActionBuilder builder(final CartSetBusinessUnitAction template) {
         return CartSetBusinessUnitActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -114,7 +121,7 @@ public interface CartSetBusinessUnitAction extends CartUpdateAction {
     default <T> T withCartSetBusinessUnitAction(Function<CartSetBusinessUnitAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

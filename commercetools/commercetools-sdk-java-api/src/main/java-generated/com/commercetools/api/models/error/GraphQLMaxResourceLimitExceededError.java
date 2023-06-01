@@ -1,18 +1,21 @@
-
 package com.commercetools.api.models.error;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
-
 import com.commercetools.api.models.common.ReferenceTypeId;
+import com.commercetools.api.models.error.GraphQLErrorObject;
+import com.commercetools.api.models.error.GraphQLMaxResourceLimitExceededErrorImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Returned when a resource type cannot be created as it has reached its limits.</p>
@@ -26,9 +29,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .exceededResource(ReferenceTypeId.ASSOCIATE_ROLE)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = GraphQLMaxResourceLimitExceededErrorImpl.class)
 public interface GraphQLMaxResourceLimitExceededError extends GraphQLErrorObject {
 
@@ -44,7 +50,6 @@ public interface GraphQLMaxResourceLimitExceededError extends GraphQLErrorObject
     @NotNull
     @JsonProperty("code")
     public String getCode();
-
     /**
      *  <p>Resource type that reached its maximum limit of configured elements (for example, 100 Zones per Project).</p>
      * @return exceededResource
@@ -57,16 +62,18 @@ public interface GraphQLMaxResourceLimitExceededError extends GraphQLErrorObject
      *  <p>Resource type that reached its maximum limit of configured elements (for example, 100 Zones per Project).</p>
      * @param exceededResource value to be set
      */
-
+    
     public void setExceededResource(final ReferenceTypeId exceededResource);
+    
 
     /**
      * factory method
      * @return instance of GraphQLMaxResourceLimitExceededError
      */
-    public static GraphQLMaxResourceLimitExceededError of() {
+    public static GraphQLMaxResourceLimitExceededError of(){
         return new GraphQLMaxResourceLimitExceededErrorImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy GraphQLMaxResourceLimitExceededError
@@ -86,8 +93,7 @@ public interface GraphQLMaxResourceLimitExceededError extends GraphQLErrorObject
      * @return copy instance
      */
     @Nullable
-    public static GraphQLMaxResourceLimitExceededError deepCopy(
-            @Nullable final GraphQLMaxResourceLimitExceededError template) {
+    public static GraphQLMaxResourceLimitExceededError deepCopy(@Nullable final GraphQLMaxResourceLimitExceededError template) {
         if (template == null) {
             return null;
         }
@@ -104,16 +110,16 @@ public interface GraphQLMaxResourceLimitExceededError extends GraphQLErrorObject
     public static GraphQLMaxResourceLimitExceededErrorBuilder builder() {
         return GraphQLMaxResourceLimitExceededErrorBuilder.of();
     }
-
+    
     /**
      * create builder for GraphQLMaxResourceLimitExceededError instance
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static GraphQLMaxResourceLimitExceededErrorBuilder builder(
-            final GraphQLMaxResourceLimitExceededError template) {
+    public static GraphQLMaxResourceLimitExceededErrorBuilder builder(final GraphQLMaxResourceLimitExceededError template) {
         return GraphQLMaxResourceLimitExceededErrorBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -124,7 +130,7 @@ public interface GraphQLMaxResourceLimitExceededError extends GraphQLErrorObject
     default <T> T withGraphQLMaxResourceLimitExceededError(Function<GraphQLMaxResourceLimitExceededError, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

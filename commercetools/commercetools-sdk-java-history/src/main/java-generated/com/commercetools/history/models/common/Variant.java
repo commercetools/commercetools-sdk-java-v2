@@ -1,17 +1,20 @@
-
 package com.commercetools.history.models.common;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
 
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
+import com.commercetools.history.models.common.VariantImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * Variant
@@ -26,11 +29,15 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .key("{key}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = VariantImpl.class)
-public interface Variant {
+public interface Variant  {
+
 
     /**
      *
@@ -39,7 +46,6 @@ public interface Variant {
     @NotNull
     @JsonProperty("id")
     public Integer getId();
-
     /**
      *
      * @return sku
@@ -47,7 +53,6 @@ public interface Variant {
     @NotNull
     @JsonProperty("sku")
     public String getSku();
-
     /**
      *
      * @return key
@@ -60,30 +65,34 @@ public interface Variant {
      * set id
      * @param id value to be set
      */
-
+    
     public void setId(final Integer id);
-
+    
+    
     /**
      * set sku
      * @param sku value to be set
      */
-
+    
     public void setSku(final String sku);
-
+    
+    
     /**
      * set key
      * @param key value to be set
      */
-
+    
     public void setKey(final String key);
+    
 
     /**
      * factory method
      * @return instance of Variant
      */
-    public static Variant of() {
+    public static Variant of(){
         return new VariantImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy Variant
@@ -122,7 +131,7 @@ public interface Variant {
     public static VariantBuilder builder() {
         return VariantBuilder.of();
     }
-
+    
     /**
      * create builder for Variant instance
      * @param template instance with prefilled values for the builder
@@ -131,6 +140,7 @@ public interface Variant {
     public static VariantBuilder builder(final Variant template) {
         return VariantBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -141,7 +151,7 @@ public interface Variant {
     default <T> T withVariant(Function<Variant, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

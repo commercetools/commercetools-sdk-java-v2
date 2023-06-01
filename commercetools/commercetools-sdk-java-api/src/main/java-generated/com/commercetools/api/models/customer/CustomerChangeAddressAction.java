@@ -1,19 +1,21 @@
-
 package com.commercetools.api.models.customer;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
 import com.commercetools.api.models.common.BaseAddress;
+import com.commercetools.api.models.customer.CustomerUpdateAction;
+import com.commercetools.api.models.customer.CustomerChangeAddressActionImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Changing an address of the Customer produces the CustomerAddressChanged Message.</p>
@@ -27,9 +29,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .address(addressBuilder -> addressBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = CustomerChangeAddressActionImpl.class)
 public interface CustomerChangeAddressAction extends CustomerUpdateAction {
 
@@ -42,18 +47,16 @@ public interface CustomerChangeAddressAction extends CustomerUpdateAction {
      *  <p><code>id</code> of the Address to change.</p>
      * @return addressId
      */
-
+    
     @JsonProperty("addressId")
     public String getAddressId();
-
     /**
      *  <p><code>key</code> of the Address to change.</p>
      * @return addressKey
      */
-
+    
     @JsonProperty("addressKey")
     public String getAddressKey();
-
     /**
      *  <p>Value to set.</p>
      * @return address
@@ -67,30 +70,34 @@ public interface CustomerChangeAddressAction extends CustomerUpdateAction {
      *  <p><code>id</code> of the Address to change.</p>
      * @param addressId value to be set
      */
-
+    
     public void setAddressId(final String addressId);
-
+    
+    
     /**
      *  <p><code>key</code> of the Address to change.</p>
      * @param addressKey value to be set
      */
-
+    
     public void setAddressKey(final String addressKey);
-
+    
+    
     /**
      *  <p>Value to set.</p>
      * @param address value to be set
      */
-
+    
     public void setAddress(final BaseAddress address);
+    
 
     /**
      * factory method
      * @return instance of CustomerChangeAddressAction
      */
-    public static CustomerChangeAddressAction of() {
+    public static CustomerChangeAddressAction of(){
         return new CustomerChangeAddressActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy CustomerChangeAddressAction
@@ -129,7 +136,7 @@ public interface CustomerChangeAddressAction extends CustomerUpdateAction {
     public static CustomerChangeAddressActionBuilder builder() {
         return CustomerChangeAddressActionBuilder.of();
     }
-
+    
     /**
      * create builder for CustomerChangeAddressAction instance
      * @param template instance with prefilled values for the builder
@@ -138,6 +145,7 @@ public interface CustomerChangeAddressAction extends CustomerUpdateAction {
     public static CustomerChangeAddressActionBuilder builder(final CustomerChangeAddressAction template) {
         return CustomerChangeAddressActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -148,7 +156,7 @@ public interface CustomerChangeAddressAction extends CustomerUpdateAction {
     default <T> T withCustomerChangeAddressAction(Function<CustomerChangeAddressAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

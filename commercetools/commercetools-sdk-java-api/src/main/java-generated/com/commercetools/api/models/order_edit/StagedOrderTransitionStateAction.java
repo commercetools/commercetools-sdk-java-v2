@@ -1,20 +1,21 @@
-
 package com.commercetools.api.models.order_edit;
-
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.order.StagedOrderUpdateAction;
 import com.commercetools.api.models.state.StateResourceIdentifier;
+import com.commercetools.api.models.order_edit.StagedOrderTransitionStateActionImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * StagedOrderTransitionStateAction
@@ -27,9 +28,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .state(stateBuilder -> stateBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = StagedOrderTransitionStateActionImpl.class)
 public interface StagedOrderTransitionStateAction extends StagedOrderUpdateAction {
 
@@ -46,12 +50,11 @@ public interface StagedOrderTransitionStateAction extends StagedOrderUpdateActio
     @Valid
     @JsonProperty("state")
     public StateResourceIdentifier getState();
-
     /**
      *
      * @return force
      */
-
+    
     @JsonProperty("force")
     public Boolean getForce();
 
@@ -59,23 +62,26 @@ public interface StagedOrderTransitionStateAction extends StagedOrderUpdateActio
      *  <p>ResourceIdentifier to a State.</p>
      * @param state value to be set
      */
-
+    
     public void setState(final StateResourceIdentifier state);
-
+    
+    
     /**
      * set force
      * @param force value to be set
      */
-
+    
     public void setForce(final Boolean force);
+    
 
     /**
      * factory method
      * @return instance of StagedOrderTransitionStateAction
      */
-    public static StagedOrderTransitionStateAction of() {
+    public static StagedOrderTransitionStateAction of(){
         return new StagedOrderTransitionStateActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy StagedOrderTransitionStateAction
@@ -112,7 +118,7 @@ public interface StagedOrderTransitionStateAction extends StagedOrderUpdateActio
     public static StagedOrderTransitionStateActionBuilder builder() {
         return StagedOrderTransitionStateActionBuilder.of();
     }
-
+    
     /**
      * create builder for StagedOrderTransitionStateAction instance
      * @param template instance with prefilled values for the builder
@@ -121,6 +127,7 @@ public interface StagedOrderTransitionStateAction extends StagedOrderUpdateActio
     public static StagedOrderTransitionStateActionBuilder builder(final StagedOrderTransitionStateAction template) {
         return StagedOrderTransitionStateActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -131,7 +138,7 @@ public interface StagedOrderTransitionStateAction extends StagedOrderUpdateActio
     default <T> T withStagedOrderTransitionStateAction(Function<StagedOrderTransitionStateAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

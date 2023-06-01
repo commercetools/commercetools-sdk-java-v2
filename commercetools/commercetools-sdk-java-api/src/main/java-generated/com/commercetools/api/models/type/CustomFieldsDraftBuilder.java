@@ -1,11 +1,12 @@
-
 package com.commercetools.api.models.type;
 
+import com.commercetools.api.models.type.FieldContainer;
+import com.commercetools.api.models.type.TypeResourceIdentifier;
+import com.commercetools.api.models.type.CustomFieldsDraft;
+import javax.annotation.Nullable;
 import java.util.*;
 import java.util.function.Function;
-
-import javax.annotation.Nullable;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -19,102 +20,111 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .type(typeBuilder -> typeBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class CustomFieldsDraftBuilder implements Builder<CustomFieldsDraft> {
 
+    
+    
     private com.commercetools.api.models.type.TypeResourceIdentifier type;
-
+    
+    
     @Nullable
     private com.commercetools.api.models.type.FieldContainer fields;
 
+    
     /**
      *  <p><code>id</code> or <code>key</code> of the Type.</p>
      * @param builder function to build the type value
      * @return Builder
      */
-
-    public CustomFieldsDraftBuilder type(
-            Function<com.commercetools.api.models.type.TypeResourceIdentifierBuilder, com.commercetools.api.models.type.TypeResourceIdentifierBuilder> builder) {
+    
+    public CustomFieldsDraftBuilder type(Function<com.commercetools.api.models.type.TypeResourceIdentifierBuilder, com.commercetools.api.models.type.TypeResourceIdentifierBuilder> builder) {
         this.type = builder.apply(com.commercetools.api.models.type.TypeResourceIdentifierBuilder.of()).build();
         return this;
     }
-
+    
     /**
      *  <p><code>id</code> or <code>key</code> of the Type.</p>
      * @param builder function to build the type value
      * @return Builder
      */
-
-    public CustomFieldsDraftBuilder withType(
-            Function<com.commercetools.api.models.type.TypeResourceIdentifierBuilder, com.commercetools.api.models.type.TypeResourceIdentifier> builder) {
+    
+    public CustomFieldsDraftBuilder withType(Function<com.commercetools.api.models.type.TypeResourceIdentifierBuilder, com.commercetools.api.models.type.TypeResourceIdentifier> builder) {
         this.type = builder.apply(com.commercetools.api.models.type.TypeResourceIdentifierBuilder.of());
         return this;
     }
-
+                    
     /**
      *  <p><code>id</code> or <code>key</code> of the Type.</p>
      * @param type value to be set
      * @return Builder
      */
-
-    public CustomFieldsDraftBuilder type(final com.commercetools.api.models.type.TypeResourceIdentifier type) {
+    
+    public CustomFieldsDraftBuilder type( final com.commercetools.api.models.type.TypeResourceIdentifier type) {
         this.type = type;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Object containing the Custom Fields for the customized resource or data type.</p>
      * @param builder function to build the fields value
      * @return Builder
      */
-
-    public CustomFieldsDraftBuilder fields(
-            Function<com.commercetools.api.models.type.FieldContainerBuilder, com.commercetools.api.models.type.FieldContainerBuilder> builder) {
+    
+    public CustomFieldsDraftBuilder fields(Function<com.commercetools.api.models.type.FieldContainerBuilder, com.commercetools.api.models.type.FieldContainerBuilder> builder) {
         this.fields = builder.apply(com.commercetools.api.models.type.FieldContainerBuilder.of()).build();
         return this;
     }
-
+    
     /**
      *  <p>Object containing the Custom Fields for the customized resource or data type.</p>
      * @param builder function to build the fields value
      * @return Builder
      */
-
-    public CustomFieldsDraftBuilder withFields(
-            Function<com.commercetools.api.models.type.FieldContainerBuilder, com.commercetools.api.models.type.FieldContainer> builder) {
+    
+    public CustomFieldsDraftBuilder withFields(Function<com.commercetools.api.models.type.FieldContainerBuilder, com.commercetools.api.models.type.FieldContainer> builder) {
         this.fields = builder.apply(com.commercetools.api.models.type.FieldContainerBuilder.of());
         return this;
     }
-
+                    
     /**
      *  <p>Object containing the Custom Fields for the customized resource or data type.</p>
      * @param fields value to be set
      * @return Builder
      */
-
+    
     public CustomFieldsDraftBuilder fields(@Nullable final com.commercetools.api.models.type.FieldContainer fields) {
         this.fields = fields;
         return this;
     }
+    
+    
 
     /**
      *  <p><code>id</code> or <code>key</code> of the Type.</p>
      * @return type
      */
-
-    public com.commercetools.api.models.type.TypeResourceIdentifier getType() {
+    
+    
+    public com.commercetools.api.models.type.TypeResourceIdentifier getType(){
         return this.type;
     }
-
+    
     /**
      *  <p>Object containing the Custom Fields for the customized resource or data type.</p>
      * @return fields
      */
-
+    
     @Nullable
-    public com.commercetools.api.models.type.FieldContainer getFields() {
+    public com.commercetools.api.models.type.FieldContainer getFields(){
         return this.fields;
     }
 
@@ -126,7 +136,7 @@ public class CustomFieldsDraftBuilder implements Builder<CustomFieldsDraft> {
         Objects.requireNonNull(type, CustomFieldsDraft.class + ": type is missing");
         return new CustomFieldsDraftImpl(type, fields);
     }
-
+    
     /**
      * builds CustomFieldsDraft without checking for non-null required values
      * @return CustomFieldsDraft
@@ -137,7 +147,7 @@ public class CustomFieldsDraftBuilder implements Builder<CustomFieldsDraft> {
 
     /**
      * factory method for an instance of CustomFieldsDraftBuilder
-     * @return builder
+     * @return builder 
      */
     public static CustomFieldsDraftBuilder of() {
         return new CustomFieldsDraftBuilder();

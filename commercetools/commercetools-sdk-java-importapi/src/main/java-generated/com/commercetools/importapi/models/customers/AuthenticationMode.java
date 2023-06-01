@@ -1,32 +1,33 @@
-
 package com.commercetools.importapi.models.customers;
-
-import java.util.Arrays;
-import java.util.Optional;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-
+import java.lang.String;
+import java.util.Arrays;
+import java.util.Optional;
 import io.vrap.rmf.base.client.JsonEnum;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
  * AuthenticationMode
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public interface AuthenticationMode extends JsonEnum {
 
     /**
     	<p>If set, the <code>password</code> field is required for the Customer.</p>
-
+    	
     */
     AuthenticationMode PASSWORD = AuthenticationModeEnum.PASSWORD;
     /**
     	<p>If set, the <code>password</code> field is optional for the Customer.</p>
-
+    	
     */
     AuthenticationMode EXTERNAL_AUTH = AuthenticationModeEnum.EXTERNAL_AUTH;
-
+    
     /**
      * possible values of AuthenticationMode
      */
@@ -35,7 +36,7 @@ public interface AuthenticationMode extends JsonEnum {
          * Password
          */
         PASSWORD("Password"),
-
+        
         /**
          * ExternalAuth
          */
@@ -92,7 +93,7 @@ public interface AuthenticationMode extends JsonEnum {
             public String name() {
                 return value.toUpperCase();
             }
-
+            
             public String toString() {
                 return value;
             }
@@ -107,7 +108,7 @@ public interface AuthenticationMode extends JsonEnum {
     public static Optional<AuthenticationMode> findEnumViaJsonName(String jsonName) {
         return Arrays.stream(values()).filter(t -> t.getJsonName().equals(jsonName)).findFirst();
     }
-
+    
     /**
      * possible enum values
      * @return array of possible enum values
@@ -115,5 +116,5 @@ public interface AuthenticationMode extends JsonEnum {
     public static AuthenticationMode[] values() {
         return AuthenticationModeEnum.values();
     }
-
+    
 }

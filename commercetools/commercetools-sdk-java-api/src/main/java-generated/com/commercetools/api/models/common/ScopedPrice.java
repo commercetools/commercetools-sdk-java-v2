@@ -1,22 +1,25 @@
-
 package com.commercetools.api.models.common;
 
-import java.time.*;
-import java.time.ZonedDateTime;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
 import com.commercetools.api.models.channel.ChannelReference;
+import com.commercetools.api.models.common.DiscountedPrice;
+import com.commercetools.api.models.common.TypedMoney;
 import com.commercetools.api.models.customer_group.CustomerGroupReference;
 import com.commercetools.api.models.type.CustomFields;
+import java.time.ZonedDateTime;
+import com.commercetools.api.models.common.ScopedPriceImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Scoped Price is contained in a ProductVariant which is returned in response to a Product Projection Search request when Scoped Price Search is used.</p>
@@ -31,11 +34,15 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .currentValue(currentValueBuilder -> currentValueBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = ScopedPriceImpl.class)
 public interface ScopedPrice extends com.commercetools.api.models.Customizable<ScopedPrice> {
+
 
     /**
      *  <p>Platform-generated unique identifier of the Price.</p>
@@ -44,7 +51,6 @@ public interface ScopedPrice extends com.commercetools.api.models.Customizable<S
     @NotNull
     @JsonProperty("id")
     public String getId();
-
     /**
      *  <p>Original value of the Price.</p>
      * @return value
@@ -53,7 +59,6 @@ public interface ScopedPrice extends com.commercetools.api.models.Customizable<S
     @Valid
     @JsonProperty("value")
     public TypedMoney getValue();
-
     /**
      *  <p>If available, either the original price <code>value</code> or <code>discounted</code> value.</p>
      * @return currentValue
@@ -62,15 +67,13 @@ public interface ScopedPrice extends com.commercetools.api.models.Customizable<S
     @Valid
     @JsonProperty("currentValue")
     public TypedMoney getCurrentValue();
-
     /**
      *  <p>Country code of the geographic location.</p>
      * @return country
      */
-
+    
     @JsonProperty("country")
     public String getCountry();
-
     /**
      *  <p>Reference to a CustomerGroup.</p>
      * @return customerGroup
@@ -78,7 +81,6 @@ public interface ScopedPrice extends com.commercetools.api.models.Customizable<S
     @Valid
     @JsonProperty("customerGroup")
     public CustomerGroupReference getCustomerGroup();
-
     /**
      *  <p>Reference to a Channel.</p>
      * @return channel
@@ -86,23 +88,20 @@ public interface ScopedPrice extends com.commercetools.api.models.Customizable<S
     @Valid
     @JsonProperty("channel")
     public ChannelReference getChannel();
-
     /**
      *  <p>Date and time from which the Price is valid.</p>
      * @return validFrom
      */
-
+    
     @JsonProperty("validFrom")
     public ZonedDateTime getValidFrom();
-
     /**
      *  <p>Date and time until which the Price is valid.</p>
      * @return validUntil
      */
-
+    
     @JsonProperty("validUntil")
     public ZonedDateTime getValidUntil();
-
     /**
      *  <p>Is set when a matching ProductDiscount exists. If set, the Cart uses the discounted value for the Cart Price calculation.</p>
      *  <p>When a relative Product Discount is applied and the fractional part of the discounted Price is 0.5, the discounted Price is rounded half down in favor of the Customer.</p>
@@ -111,7 +110,6 @@ public interface ScopedPrice extends com.commercetools.api.models.Customizable<S
     @Valid
     @JsonProperty("discounted")
     public DiscountedPrice getDiscounted();
-
     /**
      *  <p>Custom Fields for the Price.</p>
      * @return custom
@@ -124,80 +122,91 @@ public interface ScopedPrice extends com.commercetools.api.models.Customizable<S
      *  <p>Platform-generated unique identifier of the Price.</p>
      * @param id value to be set
      */
-
+    
     public void setId(final String id);
-
+    
+    
     /**
      *  <p>Original value of the Price.</p>
      * @param value value to be set
      */
-
+    
     public void setValue(final TypedMoney value);
-
+    
+    
     /**
      *  <p>If available, either the original price <code>value</code> or <code>discounted</code> value.</p>
      * @param currentValue value to be set
      */
-
+    
     public void setCurrentValue(final TypedMoney currentValue);
-
+    
+    
     /**
      *  <p>Country code of the geographic location.</p>
      * @param country value to be set
      */
-
+    
     public void setCountry(final String country);
-
+    
+    
     /**
      *  <p>Reference to a CustomerGroup.</p>
      * @param customerGroup value to be set
      */
-
+    
     public void setCustomerGroup(final CustomerGroupReference customerGroup);
-
+    
+    
     /**
      *  <p>Reference to a Channel.</p>
      * @param channel value to be set
      */
-
+    
     public void setChannel(final ChannelReference channel);
-
+    
+    
     /**
      *  <p>Date and time from which the Price is valid.</p>
      * @param validFrom value to be set
      */
-
+    
     public void setValidFrom(final ZonedDateTime validFrom);
-
+    
+    
     /**
      *  <p>Date and time until which the Price is valid.</p>
      * @param validUntil value to be set
      */
-
+    
     public void setValidUntil(final ZonedDateTime validUntil);
-
+    
+    
     /**
      *  <p>Is set when a matching ProductDiscount exists. If set, the Cart uses the discounted value for the Cart Price calculation.</p>
      *  <p>When a relative Product Discount is applied and the fractional part of the discounted Price is 0.5, the discounted Price is rounded half down in favor of the Customer.</p>
      * @param discounted value to be set
      */
-
+    
     public void setDiscounted(final DiscountedPrice discounted);
-
+    
+    
     /**
      *  <p>Custom Fields for the Price.</p>
      * @param custom value to be set
      */
-
+    
     public void setCustom(final CustomFields custom);
+    
 
     /**
      * factory method
      * @return instance of ScopedPrice
      */
-    public static ScopedPrice of() {
+    public static ScopedPrice of(){
         return new ScopedPriceImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy ScopedPrice
@@ -234,8 +243,7 @@ public interface ScopedPrice extends com.commercetools.api.models.Customizable<S
         instance.setValue(com.commercetools.api.models.common.TypedMoney.deepCopy(template.getValue()));
         instance.setCurrentValue(com.commercetools.api.models.common.TypedMoney.deepCopy(template.getCurrentValue()));
         instance.setCountry(template.getCountry());
-        instance.setCustomerGroup(
-            com.commercetools.api.models.customer_group.CustomerGroupReference.deepCopy(template.getCustomerGroup()));
+        instance.setCustomerGroup(com.commercetools.api.models.customer_group.CustomerGroupReference.deepCopy(template.getCustomerGroup()));
         instance.setChannel(com.commercetools.api.models.channel.ChannelReference.deepCopy(template.getChannel()));
         instance.setValidFrom(template.getValidFrom());
         instance.setValidUntil(template.getValidUntil());
@@ -251,7 +259,7 @@ public interface ScopedPrice extends com.commercetools.api.models.Customizable<S
     public static ScopedPriceBuilder builder() {
         return ScopedPriceBuilder.of();
     }
-
+    
     /**
      * create builder for ScopedPrice instance
      * @param template instance with prefilled values for the builder
@@ -260,6 +268,7 @@ public interface ScopedPrice extends com.commercetools.api.models.Customizable<S
     public static ScopedPriceBuilder builder(final ScopedPrice template) {
         return ScopedPriceBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -270,7 +279,7 @@ public interface ScopedPrice extends com.commercetools.api.models.Customizable<S
     default <T> T withScopedPrice(Function<ScopedPrice, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

@@ -1,9 +1,12 @@
-
 package com.commercetools.history.models.change;
 
+import com.commercetools.history.models.change.Change;
+import com.commercetools.history.models.common.FieldDefinition;
+import com.commercetools.history.models.change.RemoveFieldDefinitionChange;
+import javax.annotation.Nullable;
 import java.util.*;
 import java.util.function.Function;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -18,77 +21,89 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .previousValue(previousValueBuilder -> previousValueBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class RemoveFieldDefinitionChangeBuilder implements Builder<RemoveFieldDefinitionChange> {
 
+    
+    
     private String change;
-
+    
+    
+    
     private com.commercetools.history.models.common.FieldDefinition previousValue;
 
+    
     /**
      *  <p>Update action for <code>removeFieldDefinition</code> on payments</p>
      * @param change value to be set
      * @return Builder
      */
-
-    public RemoveFieldDefinitionChangeBuilder change(final String change) {
+    
+    public RemoveFieldDefinitionChangeBuilder change( final String change) {
         this.change = change;
         return this;
     }
-
+    
+    
+    
+    
     /**
      * set the value to the previousValue using the builder function
      * @param builder function to build the previousValue value
      * @return Builder
      */
-
-    public RemoveFieldDefinitionChangeBuilder previousValue(
-            Function<com.commercetools.history.models.common.FieldDefinitionBuilder, com.commercetools.history.models.common.FieldDefinitionBuilder> builder) {
+    
+    public RemoveFieldDefinitionChangeBuilder previousValue(Function<com.commercetools.history.models.common.FieldDefinitionBuilder, com.commercetools.history.models.common.FieldDefinitionBuilder> builder) {
         this.previousValue = builder.apply(com.commercetools.history.models.common.FieldDefinitionBuilder.of()).build();
         return this;
     }
-
+    
     /**
      * set the value to the previousValue using the builder function
      * @param builder function to build the previousValue value
      * @return Builder
      */
-
-    public RemoveFieldDefinitionChangeBuilder withPreviousValue(
-            Function<com.commercetools.history.models.common.FieldDefinitionBuilder, com.commercetools.history.models.common.FieldDefinition> builder) {
+    
+    public RemoveFieldDefinitionChangeBuilder withPreviousValue(Function<com.commercetools.history.models.common.FieldDefinitionBuilder, com.commercetools.history.models.common.FieldDefinition> builder) {
         this.previousValue = builder.apply(com.commercetools.history.models.common.FieldDefinitionBuilder.of());
         return this;
     }
-
+                    
     /**
      * set the value to the previousValue
      * @param previousValue value to be set
      * @return Builder
      */
-
-    public RemoveFieldDefinitionChangeBuilder previousValue(
-            final com.commercetools.history.models.common.FieldDefinition previousValue) {
+    
+    public RemoveFieldDefinitionChangeBuilder previousValue( final com.commercetools.history.models.common.FieldDefinition previousValue) {
         this.previousValue = previousValue;
         return this;
     }
+    
+    
 
     /**
      *  <p>Update action for <code>removeFieldDefinition</code> on payments</p>
      * @return change
      */
-
-    public String getChange() {
+    
+    
+    public String getChange(){
         return this.change;
     }
-
+    
     /**
      * value of previousValue}
      * @return previousValue
      */
-
-    public com.commercetools.history.models.common.FieldDefinition getPreviousValue() {
+    
+    
+    public com.commercetools.history.models.common.FieldDefinition getPreviousValue(){
         return this.previousValue;
     }
 
@@ -101,7 +116,7 @@ public class RemoveFieldDefinitionChangeBuilder implements Builder<RemoveFieldDe
         Objects.requireNonNull(previousValue, RemoveFieldDefinitionChange.class + ": previousValue is missing");
         return new RemoveFieldDefinitionChangeImpl(change, previousValue);
     }
-
+    
     /**
      * builds RemoveFieldDefinitionChange without checking for non-null required values
      * @return RemoveFieldDefinitionChange
@@ -112,7 +127,7 @@ public class RemoveFieldDefinitionChangeBuilder implements Builder<RemoveFieldDe
 
     /**
      * factory method for an instance of RemoveFieldDefinitionChangeBuilder
-     * @return builder
+     * @return builder 
      */
     public static RemoveFieldDefinitionChangeBuilder of() {
         return new RemoveFieldDefinitionChangeBuilder();

@@ -1,11 +1,12 @@
-
 package com.commercetools.api.models.message;
 
+import com.commercetools.api.models.common.DiscountedPrice;
+import com.commercetools.api.models.message.MessagePayload;
+import com.commercetools.api.models.message.StandalonePriceDiscountSetMessagePayload;
+import javax.annotation.Nullable;
 import java.util.*;
 import java.util.function.Function;
-
-import javax.annotation.Nullable;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -18,58 +19,61 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     StandalonePriceDiscountSetMessagePayload standalonePriceDiscountSetMessagePayload = StandalonePriceDiscountSetMessagePayload.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
-public class StandalonePriceDiscountSetMessagePayloadBuilder
-        implements Builder<StandalonePriceDiscountSetMessagePayload> {
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
+public class StandalonePriceDiscountSetMessagePayloadBuilder implements Builder<StandalonePriceDiscountSetMessagePayload> {
 
+    
     @Nullable
     private com.commercetools.api.models.common.DiscountedPrice discounted;
 
+    
     /**
      *  <p>The new <code>discounted</code> value of the updated StandalonePrice.</p>
      * @param builder function to build the discounted value
      * @return Builder
      */
-
-    public StandalonePriceDiscountSetMessagePayloadBuilder discounted(
-            Function<com.commercetools.api.models.common.DiscountedPriceBuilder, com.commercetools.api.models.common.DiscountedPriceBuilder> builder) {
+    
+    public StandalonePriceDiscountSetMessagePayloadBuilder discounted(Function<com.commercetools.api.models.common.DiscountedPriceBuilder, com.commercetools.api.models.common.DiscountedPriceBuilder> builder) {
         this.discounted = builder.apply(com.commercetools.api.models.common.DiscountedPriceBuilder.of()).build();
         return this;
     }
-
+    
     /**
      *  <p>The new <code>discounted</code> value of the updated StandalonePrice.</p>
      * @param builder function to build the discounted value
      * @return Builder
      */
-
-    public StandalonePriceDiscountSetMessagePayloadBuilder withDiscounted(
-            Function<com.commercetools.api.models.common.DiscountedPriceBuilder, com.commercetools.api.models.common.DiscountedPrice> builder) {
+    
+    public StandalonePriceDiscountSetMessagePayloadBuilder withDiscounted(Function<com.commercetools.api.models.common.DiscountedPriceBuilder, com.commercetools.api.models.common.DiscountedPrice> builder) {
         this.discounted = builder.apply(com.commercetools.api.models.common.DiscountedPriceBuilder.of());
         return this;
     }
-
+                    
     /**
      *  <p>The new <code>discounted</code> value of the updated StandalonePrice.</p>
      * @param discounted value to be set
      * @return Builder
      */
-
-    public StandalonePriceDiscountSetMessagePayloadBuilder discounted(
-            @Nullable final com.commercetools.api.models.common.DiscountedPrice discounted) {
+    
+    public StandalonePriceDiscountSetMessagePayloadBuilder discounted(@Nullable final com.commercetools.api.models.common.DiscountedPrice discounted) {
         this.discounted = discounted;
         return this;
     }
+    
+    
 
     /**
      *  <p>The new <code>discounted</code> value of the updated StandalonePrice.</p>
      * @return discounted
      */
-
+    
     @Nullable
-    public com.commercetools.api.models.common.DiscountedPrice getDiscounted() {
+    public com.commercetools.api.models.common.DiscountedPrice getDiscounted(){
         return this.discounted;
     }
 
@@ -80,7 +84,7 @@ public class StandalonePriceDiscountSetMessagePayloadBuilder
     public StandalonePriceDiscountSetMessagePayload build() {
         return new StandalonePriceDiscountSetMessagePayloadImpl(discounted);
     }
-
+    
     /**
      * builds StandalonePriceDiscountSetMessagePayload without checking for non-null required values
      * @return StandalonePriceDiscountSetMessagePayload
@@ -91,7 +95,7 @@ public class StandalonePriceDiscountSetMessagePayloadBuilder
 
     /**
      * factory method for an instance of StandalonePriceDiscountSetMessagePayloadBuilder
-     * @return builder
+     * @return builder 
      */
     public static StandalonePriceDiscountSetMessagePayloadBuilder of() {
         return new StandalonePriceDiscountSetMessagePayloadBuilder();
@@ -102,8 +106,7 @@ public class StandalonePriceDiscountSetMessagePayloadBuilder
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static StandalonePriceDiscountSetMessagePayloadBuilder of(
-            final StandalonePriceDiscountSetMessagePayload template) {
+    public static StandalonePriceDiscountSetMessagePayloadBuilder of(final StandalonePriceDiscountSetMessagePayload template) {
         StandalonePriceDiscountSetMessagePayloadBuilder builder = new StandalonePriceDiscountSetMessagePayloadBuilder();
         builder.discounted = template.getDiscounted();
         return builder;

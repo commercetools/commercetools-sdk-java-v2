@@ -1,17 +1,21 @@
-
 package com.commercetools.api.models.state;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-
+import com.commercetools.api.models.common.ReferenceTypeId;
 import com.commercetools.api.models.common.ResourceIdentifier;
+import com.commercetools.api.models.state.StateResourceIdentifierImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>ResourceIdentifier to a State.</p>
@@ -23,9 +27,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     StateResourceIdentifier stateResourceIdentifier = StateResourceIdentifier.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = StateResourceIdentifierImpl.class)
 public interface StateResourceIdentifier extends ResourceIdentifier, com.commercetools.api.models.Identifiable<State> {
 
@@ -38,15 +45,14 @@ public interface StateResourceIdentifier extends ResourceIdentifier, com.commerc
      *  <p>Unique identifier of the referenced State. Either <code>id</code> or <code>key</code> is required.</p>
      * @return id
      */
-
+    
     @JsonProperty("id")
     public String getId();
-
     /**
      *  <p>User-defined unique identifier of the referenced State. Either <code>id</code> or <code>key</code> is required.</p>
      * @return key
      */
-
+    
     @JsonProperty("key")
     public String getKey();
 
@@ -54,23 +60,26 @@ public interface StateResourceIdentifier extends ResourceIdentifier, com.commerc
      *  <p>Unique identifier of the referenced State. Either <code>id</code> or <code>key</code> is required.</p>
      * @param id value to be set
      */
-
+    
     public void setId(final String id);
-
+    
+    
     /**
      *  <p>User-defined unique identifier of the referenced State. Either <code>id</code> or <code>key</code> is required.</p>
      * @param key value to be set
      */
-
+    
     public void setKey(final String key);
+    
 
     /**
      * factory method
      * @return instance of StateResourceIdentifier
      */
-    public static StateResourceIdentifier of() {
+    public static StateResourceIdentifier of(){
         return new StateResourceIdentifierImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy StateResourceIdentifier
@@ -107,7 +116,7 @@ public interface StateResourceIdentifier extends ResourceIdentifier, com.commerc
     public static StateResourceIdentifierBuilder builder() {
         return StateResourceIdentifierBuilder.of();
     }
-
+    
     /**
      * create builder for StateResourceIdentifier instance
      * @param template instance with prefilled values for the builder
@@ -116,6 +125,7 @@ public interface StateResourceIdentifier extends ResourceIdentifier, com.commerc
     public static StateResourceIdentifierBuilder builder(final StateResourceIdentifier template) {
         return StateResourceIdentifierBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -126,7 +136,7 @@ public interface StateResourceIdentifier extends ResourceIdentifier, com.commerc
     default <T> T withStateResourceIdentifier(Function<StateResourceIdentifier, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

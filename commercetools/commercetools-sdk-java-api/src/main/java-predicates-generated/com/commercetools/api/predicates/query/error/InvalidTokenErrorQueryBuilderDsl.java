@@ -1,9 +1,11 @@
-
 package com.commercetools.api.predicates.query.error;
 
 import com.commercetools.api.predicates.query.*;
 
-public class InvalidTokenErrorQueryBuilderDsl {
+import java.util.function.Function;
+
+
+public class InvalidTokenErrorQueryBuilderDsl  {
     public InvalidTokenErrorQueryBuilderDsl() {
     }
 
@@ -12,15 +14,12 @@ public class InvalidTokenErrorQueryBuilderDsl {
     }
 
     public StringComparisonPredicateBuilder<InvalidTokenErrorQueryBuilderDsl> code() {
-        return new StringComparisonPredicateBuilder<>(
-            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("code")),
-            p -> new CombinationQueryPredicate<>(p, InvalidTokenErrorQueryBuilderDsl::of));
+        return new StringComparisonPredicateBuilder<>(BinaryQueryPredicate.of().left(new ConstantQueryPredicate("code")),
+        p -> new CombinationQueryPredicate<>(p, InvalidTokenErrorQueryBuilderDsl::of));
     }
-
     public StringComparisonPredicateBuilder<InvalidTokenErrorQueryBuilderDsl> message() {
-        return new StringComparisonPredicateBuilder<>(
-            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("message")),
-            p -> new CombinationQueryPredicate<>(p, InvalidTokenErrorQueryBuilderDsl::of));
+        return new StringComparisonPredicateBuilder<>(BinaryQueryPredicate.of().left(new ConstantQueryPredicate("message")),
+        p -> new CombinationQueryPredicate<>(p, InvalidTokenErrorQueryBuilderDsl::of));
     }
-
+    
 }

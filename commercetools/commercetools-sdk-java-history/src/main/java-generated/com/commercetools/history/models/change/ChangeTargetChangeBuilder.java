@@ -1,9 +1,12 @@
-
 package com.commercetools.history.models.change;
 
+import com.commercetools.history.models.change.Change;
+import com.commercetools.history.models.change_value.ChangeTargetChangeValue;
+import com.commercetools.history.models.change.ChangeTargetChange;
+import javax.annotation.Nullable;
 import java.util.*;
 import java.util.function.Function;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -19,104 +22,117 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .previousValue(previousValueBuilder -> previousValueBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class ChangeTargetChangeBuilder implements Builder<ChangeTargetChange> {
 
+    
+    
     private String change;
-
+    
+    
+    
     private com.commercetools.history.models.change_value.ChangeTargetChangeValue nextValue;
-
+    
+    
+    
     private com.commercetools.history.models.change_value.ChangeTargetChangeValue previousValue;
 
+    
     /**
      *  <p>Update action for <code>changeTarget</code> on cart discounts</p>
      * @param change value to be set
      * @return Builder
      */
-
-    public ChangeTargetChangeBuilder change(final String change) {
+    
+    public ChangeTargetChangeBuilder change( final String change) {
         this.change = change;
         return this;
     }
-
+    
+    
+    
+    
     /**
      * set the value to the nextValue
      * @param nextValue value to be set
      * @return Builder
      */
-
-    public ChangeTargetChangeBuilder nextValue(
-            final com.commercetools.history.models.change_value.ChangeTargetChangeValue nextValue) {
+    
+    public ChangeTargetChangeBuilder nextValue( final com.commercetools.history.models.change_value.ChangeTargetChangeValue nextValue) {
         this.nextValue = nextValue;
         return this;
     }
-
+    
+    
     /**
      * set the value to the nextValue using the builder function
      * @param builder function to build the nextValue value
      * @return Builder
      */
-
-    public ChangeTargetChangeBuilder nextValue(
-            Function<com.commercetools.history.models.change_value.ChangeTargetChangeValueBuilder, Builder<? extends com.commercetools.history.models.change_value.ChangeTargetChangeValue>> builder) {
-        this.nextValue = builder
-                .apply(com.commercetools.history.models.change_value.ChangeTargetChangeValueBuilder.of())
-                .build();
+    
+    public ChangeTargetChangeBuilder nextValue(Function<com.commercetools.history.models.change_value.ChangeTargetChangeValueBuilder, Builder<? extends com.commercetools.history.models.change_value.ChangeTargetChangeValue>> builder) {
+        this.nextValue = builder.apply(com.commercetools.history.models.change_value.ChangeTargetChangeValueBuilder.of()).build();
         return this;
     }
-
+                    
+    
+    
     /**
      * set the value to the previousValue
      * @param previousValue value to be set
      * @return Builder
      */
-
-    public ChangeTargetChangeBuilder previousValue(
-            final com.commercetools.history.models.change_value.ChangeTargetChangeValue previousValue) {
+    
+    public ChangeTargetChangeBuilder previousValue( final com.commercetools.history.models.change_value.ChangeTargetChangeValue previousValue) {
         this.previousValue = previousValue;
         return this;
     }
-
+    
+    
     /**
      * set the value to the previousValue using the builder function
      * @param builder function to build the previousValue value
      * @return Builder
      */
-
-    public ChangeTargetChangeBuilder previousValue(
-            Function<com.commercetools.history.models.change_value.ChangeTargetChangeValueBuilder, Builder<? extends com.commercetools.history.models.change_value.ChangeTargetChangeValue>> builder) {
-        this.previousValue = builder
-                .apply(com.commercetools.history.models.change_value.ChangeTargetChangeValueBuilder.of())
-                .build();
+    
+    public ChangeTargetChangeBuilder previousValue(Function<com.commercetools.history.models.change_value.ChangeTargetChangeValueBuilder, Builder<? extends com.commercetools.history.models.change_value.ChangeTargetChangeValue>> builder) {
+        this.previousValue = builder.apply(com.commercetools.history.models.change_value.ChangeTargetChangeValueBuilder.of()).build();
         return this;
     }
+                    
 
     /**
      *  <p>Update action for <code>changeTarget</code> on cart discounts</p>
      * @return change
      */
-
-    public String getChange() {
+    
+    
+    public String getChange(){
         return this.change;
     }
-
+    
     /**
      * value of nextValue}
      * @return nextValue
      */
-
-    public com.commercetools.history.models.change_value.ChangeTargetChangeValue getNextValue() {
+    
+    
+    public com.commercetools.history.models.change_value.ChangeTargetChangeValue getNextValue(){
         return this.nextValue;
     }
-
+    
     /**
      * value of previousValue}
      * @return previousValue
      */
-
-    public com.commercetools.history.models.change_value.ChangeTargetChangeValue getPreviousValue() {
+    
+    
+    public com.commercetools.history.models.change_value.ChangeTargetChangeValue getPreviousValue(){
         return this.previousValue;
     }
 
@@ -130,7 +146,7 @@ public class ChangeTargetChangeBuilder implements Builder<ChangeTargetChange> {
         Objects.requireNonNull(previousValue, ChangeTargetChange.class + ": previousValue is missing");
         return new ChangeTargetChangeImpl(change, nextValue, previousValue);
     }
-
+    
     /**
      * builds ChangeTargetChange without checking for non-null required values
      * @return ChangeTargetChange
@@ -141,7 +157,7 @@ public class ChangeTargetChangeBuilder implements Builder<ChangeTargetChange> {
 
     /**
      * factory method for an instance of ChangeTargetChangeBuilder
-     * @return builder
+     * @return builder 
      */
     public static ChangeTargetChangeBuilder of() {
         return new ChangeTargetChangeBuilder();

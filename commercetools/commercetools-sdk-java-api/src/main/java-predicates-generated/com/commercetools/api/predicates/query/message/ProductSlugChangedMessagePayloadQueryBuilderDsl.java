@@ -1,11 +1,11 @@
-
 package com.commercetools.api.predicates.query.message;
-
-import java.util.function.Function;
 
 import com.commercetools.api.predicates.query.*;
 
-public class ProductSlugChangedMessagePayloadQueryBuilderDsl {
+import java.util.function.Function;
+
+
+public class ProductSlugChangedMessagePayloadQueryBuilderDsl  {
     public ProductSlugChangedMessagePayloadQueryBuilderDsl() {
     }
 
@@ -14,27 +14,24 @@ public class ProductSlugChangedMessagePayloadQueryBuilderDsl {
     }
 
     public StringComparisonPredicateBuilder<ProductSlugChangedMessagePayloadQueryBuilderDsl> type() {
-        return new StringComparisonPredicateBuilder<>(
-            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("type")),
-            p -> new CombinationQueryPredicate<>(p, ProductSlugChangedMessagePayloadQueryBuilderDsl::of));
+        return new StringComparisonPredicateBuilder<>(BinaryQueryPredicate.of().left(new ConstantQueryPredicate("type")),
+        p -> new CombinationQueryPredicate<>(p, ProductSlugChangedMessagePayloadQueryBuilderDsl::of));
     }
-
     public CombinationQueryPredicate<ProductSlugChangedMessagePayloadQueryBuilderDsl> slug(
-            Function<com.commercetools.api.predicates.query.common.LocalizedStringQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.common.LocalizedStringQueryBuilderDsl>> fn) {
-        return new CombinationQueryPredicate<>(
-            ContainerQueryPredicate.of()
-                    .parent(ConstantQueryPredicate.of().constant("slug"))
-                    .inner(fn.apply(com.commercetools.api.predicates.query.common.LocalizedStringQueryBuilderDsl.of())),
+        Function<com.commercetools.api.predicates.query.common.LocalizedStringQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.common.LocalizedStringQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(ContainerQueryPredicate.of()
+            .parent(ConstantQueryPredicate.of().constant("slug"))
+            .inner(fn.apply(com.commercetools.api.predicates.query.common.LocalizedStringQueryBuilderDsl.of())),
             ProductSlugChangedMessagePayloadQueryBuilderDsl::of);
     }
-
+    
     public CombinationQueryPredicate<ProductSlugChangedMessagePayloadQueryBuilderDsl> oldSlug(
-            Function<com.commercetools.api.predicates.query.common.LocalizedStringQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.common.LocalizedStringQueryBuilderDsl>> fn) {
-        return new CombinationQueryPredicate<>(
-            ContainerQueryPredicate.of()
-                    .parent(ConstantQueryPredicate.of().constant("oldSlug"))
-                    .inner(fn.apply(com.commercetools.api.predicates.query.common.LocalizedStringQueryBuilderDsl.of())),
+        Function<com.commercetools.api.predicates.query.common.LocalizedStringQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.common.LocalizedStringQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(ContainerQueryPredicate.of()
+            .parent(ConstantQueryPredicate.of().constant("oldSlug"))
+            .inner(fn.apply(com.commercetools.api.predicates.query.common.LocalizedStringQueryBuilderDsl.of())),
             ProductSlugChangedMessagePayloadQueryBuilderDsl::of);
     }
-
+    
+    
 }

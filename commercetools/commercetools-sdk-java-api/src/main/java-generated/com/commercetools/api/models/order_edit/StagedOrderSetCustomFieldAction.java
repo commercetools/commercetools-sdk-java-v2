@@ -1,18 +1,21 @@
-
 package com.commercetools.api.models.order_edit;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
-
 import com.commercetools.api.models.order.StagedOrderUpdateAction;
+import java.lang.Object;
+import com.commercetools.api.models.order_edit.StagedOrderSetCustomFieldActionImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * StagedOrderSetCustomFieldAction
@@ -25,9 +28,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .name("{name}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = StagedOrderSetCustomFieldActionImpl.class)
 public interface StagedOrderSetCustomFieldAction extends StagedOrderUpdateAction {
 
@@ -43,12 +49,11 @@ public interface StagedOrderSetCustomFieldAction extends StagedOrderUpdateAction
     @NotNull
     @JsonProperty("name")
     public String getName();
-
     /**
      *  <p>If <code>value</code> is absent or <code>null</code>, this field will be removed if it exists. Removing a field that does not exist returns an InvalidOperation error. If <code>value</code> is provided, it is set for the field defined by <code>name</code>.</p>
      * @return value
      */
-
+    
     @JsonProperty("value")
     public Object getValue();
 
@@ -56,23 +61,26 @@ public interface StagedOrderSetCustomFieldAction extends StagedOrderUpdateAction
      *  <p>Name of the Custom Field.</p>
      * @param name value to be set
      */
-
+    
     public void setName(final String name);
-
+    
+    
     /**
      *  <p>If <code>value</code> is absent or <code>null</code>, this field will be removed if it exists. Removing a field that does not exist returns an InvalidOperation error. If <code>value</code> is provided, it is set for the field defined by <code>name</code>.</p>
      * @param value value to be set
      */
-
+    
     public void setValue(final Object value);
+    
 
     /**
      * factory method
      * @return instance of StagedOrderSetCustomFieldAction
      */
-    public static StagedOrderSetCustomFieldAction of() {
+    public static StagedOrderSetCustomFieldAction of(){
         return new StagedOrderSetCustomFieldActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy StagedOrderSetCustomFieldAction
@@ -109,7 +117,7 @@ public interface StagedOrderSetCustomFieldAction extends StagedOrderUpdateAction
     public static StagedOrderSetCustomFieldActionBuilder builder() {
         return StagedOrderSetCustomFieldActionBuilder.of();
     }
-
+    
     /**
      * create builder for StagedOrderSetCustomFieldAction instance
      * @param template instance with prefilled values for the builder
@@ -118,6 +126,7 @@ public interface StagedOrderSetCustomFieldAction extends StagedOrderUpdateAction
     public static StagedOrderSetCustomFieldActionBuilder builder(final StagedOrderSetCustomFieldAction template) {
         return StagedOrderSetCustomFieldActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -128,11 +137,11 @@ public interface StagedOrderSetCustomFieldAction extends StagedOrderUpdateAction
     default <T> T withStagedOrderSetCustomFieldAction(Function<StagedOrderSetCustomFieldAction, T> helper) {
         return helper.apply(this);
     }
-
     public static StagedOrderSetCustomFieldAction ofUnset(final String name) {
         return StagedOrderSetCustomFieldActionBuilder.of().name(name).build();
     }
-
+    
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

@@ -1,17 +1,20 @@
-
 package com.commercetools.api.models.product;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
+import com.commercetools.api.models.product.ProductUpdateAction;
+import com.commercetools.api.models.product.ProductSetPriceKeyActionImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Sets the key of an Embedded Price. Produces the ProductPriceKeySet Message.</p>
@@ -24,9 +27,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .priceId("{priceId}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = ProductSetPriceKeyActionImpl.class)
 public interface ProductSetPriceKeyAction extends ProductUpdateAction {
 
@@ -42,20 +48,18 @@ public interface ProductSetPriceKeyAction extends ProductUpdateAction {
     @NotNull
     @JsonProperty("priceId")
     public String getPriceId();
-
     /**
      *  <p>If <code>true</code>, only the staged Embedded Price is updated. If <code>false</code>, both the current and staged Embedded Price are updated.</p>
      * @return staged
      */
-
+    
     @JsonProperty("staged")
     public Boolean getStaged();
-
     /**
      *  <p>Value to set. If empty, any existing value will be removed.</p>
      * @return key
      */
-
+    
     @JsonProperty("key")
     public String getKey();
 
@@ -63,30 +67,34 @@ public interface ProductSetPriceKeyAction extends ProductUpdateAction {
      *  <p>The <code>id</code> of the Price to set the key.</p>
      * @param priceId value to be set
      */
-
+    
     public void setPriceId(final String priceId);
-
+    
+    
     /**
      *  <p>If <code>true</code>, only the staged Embedded Price is updated. If <code>false</code>, both the current and staged Embedded Price are updated.</p>
      * @param staged value to be set
      */
-
+    
     public void setStaged(final Boolean staged);
-
+    
+    
     /**
      *  <p>Value to set. If empty, any existing value will be removed.</p>
      * @param key value to be set
      */
-
+    
     public void setKey(final String key);
+    
 
     /**
      * factory method
      * @return instance of ProductSetPriceKeyAction
      */
-    public static ProductSetPriceKeyAction of() {
+    public static ProductSetPriceKeyAction of(){
         return new ProductSetPriceKeyActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy ProductSetPriceKeyAction
@@ -125,7 +133,7 @@ public interface ProductSetPriceKeyAction extends ProductUpdateAction {
     public static ProductSetPriceKeyActionBuilder builder() {
         return ProductSetPriceKeyActionBuilder.of();
     }
-
+    
     /**
      * create builder for ProductSetPriceKeyAction instance
      * @param template instance with prefilled values for the builder
@@ -134,6 +142,7 @@ public interface ProductSetPriceKeyAction extends ProductUpdateAction {
     public static ProductSetPriceKeyActionBuilder builder(final ProductSetPriceKeyAction template) {
         return ProductSetPriceKeyActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -144,7 +153,7 @@ public interface ProductSetPriceKeyAction extends ProductUpdateAction {
     default <T> T withProductSetPriceKeyAction(Function<ProductSetPriceKeyAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

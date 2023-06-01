@@ -1,17 +1,20 @@
-
 package com.commercetools.history.models.common;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
 
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
+import com.commercetools.history.models.common.GeoLocationImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * GeoLocation
@@ -25,11 +28,15 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .plusCoordinates(coordinatesBuilder -> coordinatesBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = GeoLocationImpl.class)
-public interface GeoLocation {
+public interface GeoLocation  {
+
 
     /**
      *
@@ -38,7 +45,6 @@ public interface GeoLocation {
     @NotNull
     @JsonProperty("type")
     public String getType();
-
     /**
      *
      * @return coordinates
@@ -51,31 +57,32 @@ public interface GeoLocation {
      * set type
      * @param type value to be set
      */
-
+    
     public void setType(final String type);
-
+    
+    
     /**
      * set coordinates
      * @param coordinates values to be set
      */
-
+    
     @JsonIgnore
-    public void setCoordinates(final Integer... coordinates);
-
+    public void setCoordinates(final Integer ...coordinates);
     /**
      * set coordinates
      * @param coordinates values to be set
      */
-
+    
     public void setCoordinates(final List<Integer> coordinates);
 
     /**
      * factory method
      * @return instance of GeoLocation
      */
-    public static GeoLocation of() {
+    public static GeoLocation of(){
         return new GeoLocationImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy GeoLocation
@@ -101,7 +108,9 @@ public interface GeoLocation {
         }
         GeoLocationImpl instance = new GeoLocationImpl();
         instance.setType(template.getType());
-        instance.setCoordinates(Optional.ofNullable(template.getCoordinates()).map(ArrayList::new).orElse(null));
+        instance.setCoordinates(Optional.ofNullable(template.getCoordinates())
+                .map(ArrayList::new)
+                .orElse(null));
         return instance;
     }
 
@@ -112,7 +121,7 @@ public interface GeoLocation {
     public static GeoLocationBuilder builder() {
         return GeoLocationBuilder.of();
     }
-
+    
     /**
      * create builder for GeoLocation instance
      * @param template instance with prefilled values for the builder
@@ -121,6 +130,7 @@ public interface GeoLocation {
     public static GeoLocationBuilder builder(final GeoLocation template) {
         return GeoLocationBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -131,7 +141,7 @@ public interface GeoLocation {
     default <T> T withGeoLocation(Function<GeoLocation, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

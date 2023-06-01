@@ -1,8 +1,11 @@
-
 package com.commercetools.history.models.common;
 
-import java.util.*;
 
+import com.commercetools.history.models.common.Variant;
+import javax.annotation.Nullable;
+import java.util.*;
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -18,74 +21,95 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .key("{key}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class VariantBuilder implements Builder<Variant> {
 
+    
+    
     private Integer id;
-
+    
+    
+    
     private String sku;
-
+    
+    
+    
     private String key;
 
+    
     /**
      * set the value to the id
      * @param id value to be set
      * @return Builder
      */
-
-    public VariantBuilder id(final Integer id) {
+    
+    public VariantBuilder id( final Integer id) {
         this.id = id;
         return this;
     }
-
+    
+    
+    
+    
     /**
      * set the value to the sku
      * @param sku value to be set
      * @return Builder
      */
-
-    public VariantBuilder sku(final String sku) {
+    
+    public VariantBuilder sku( final String sku) {
         this.sku = sku;
         return this;
     }
-
+    
+    
+    
+    
     /**
      * set the value to the key
      * @param key value to be set
      * @return Builder
      */
-
-    public VariantBuilder key(final String key) {
+    
+    public VariantBuilder key( final String key) {
         this.key = key;
         return this;
     }
+    
+    
 
     /**
      * value of id}
      * @return id
      */
-
-    public Integer getId() {
+    
+    
+    public Integer getId(){
         return this.id;
     }
-
+    
     /**
      * value of sku}
      * @return sku
      */
-
-    public String getSku() {
+    
+    
+    public String getSku(){
         return this.sku;
     }
-
+    
     /**
      * value of key}
      * @return key
      */
-
-    public String getKey() {
+    
+    
+    public String getKey(){
         return this.key;
     }
 
@@ -99,7 +123,7 @@ public class VariantBuilder implements Builder<Variant> {
         Objects.requireNonNull(key, Variant.class + ": key is missing");
         return new VariantImpl(id, sku, key);
     }
-
+    
     /**
      * builds Variant without checking for non-null required values
      * @return Variant
@@ -110,7 +134,7 @@ public class VariantBuilder implements Builder<Variant> {
 
     /**
      * factory method for an instance of VariantBuilder
-     * @return builder
+     * @return builder 
      */
     public static VariantBuilder of() {
         return new VariantBuilder();

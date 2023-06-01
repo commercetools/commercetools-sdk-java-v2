@@ -1,9 +1,12 @@
-
 package com.commercetools.api.models.error;
 
+import com.commercetools.api.models.error.GraphQLErrorObject;
+import com.commercetools.api.models.product.ProductReference;
+import com.commercetools.api.models.error.GraphQLProductAssignmentMissingError;
+import javax.annotation.Nullable;
 import java.util.*;
 import java.util.function.Function;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -17,13 +20,20 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .product(productBuilder -> productBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class GraphQLProductAssignmentMissingErrorBuilder implements Builder<GraphQLProductAssignmentMissingError> {
 
+    
+    
     private Map<String, java.lang.Object> values = new HashMap<>();
-
+    
+    
+    
     private com.commercetools.api.models.product.ProductReference product;
 
     /**
@@ -31,19 +41,19 @@ public class GraphQLProductAssignmentMissingErrorBuilder implements Builder<Grap
      * @param values properties to be set
      * @return Builder
      */
-
-    public GraphQLProductAssignmentMissingErrorBuilder values(final Map<String, java.lang.Object> values) {
+    
+    public GraphQLProductAssignmentMissingErrorBuilder values( final Map<String, java.lang.Object> values){
         this.values = values;
         return this;
     }
-
+    
     /**
      *  <p>Error-specific additional fields.</p>
      * @param key property name
      * @param value property value
      * @return Builder
      */
-
+    
     public GraphQLProductAssignmentMissingErrorBuilder addValue(final String key, final java.lang.Object value) {
         if (this.values == null) {
             values = new HashMap<>();
@@ -51,58 +61,61 @@ public class GraphQLProductAssignmentMissingErrorBuilder implements Builder<Grap
         values.put(key, value);
         return this;
     }
-
+    
+    
+    
     /**
      *  <p>Reference to the Product for which the error was returned.</p>
      * @param builder function to build the product value
      * @return Builder
      */
-
-    public GraphQLProductAssignmentMissingErrorBuilder product(
-            Function<com.commercetools.api.models.product.ProductReferenceBuilder, com.commercetools.api.models.product.ProductReferenceBuilder> builder) {
+    
+    public GraphQLProductAssignmentMissingErrorBuilder product(Function<com.commercetools.api.models.product.ProductReferenceBuilder, com.commercetools.api.models.product.ProductReferenceBuilder> builder) {
         this.product = builder.apply(com.commercetools.api.models.product.ProductReferenceBuilder.of()).build();
         return this;
     }
-
+    
     /**
      *  <p>Reference to the Product for which the error was returned.</p>
      * @param builder function to build the product value
      * @return Builder
      */
-
-    public GraphQLProductAssignmentMissingErrorBuilder withProduct(
-            Function<com.commercetools.api.models.product.ProductReferenceBuilder, com.commercetools.api.models.product.ProductReference> builder) {
+    
+    public GraphQLProductAssignmentMissingErrorBuilder withProduct(Function<com.commercetools.api.models.product.ProductReferenceBuilder, com.commercetools.api.models.product.ProductReference> builder) {
         this.product = builder.apply(com.commercetools.api.models.product.ProductReferenceBuilder.of());
         return this;
     }
-
+                    
     /**
      *  <p>Reference to the Product for which the error was returned.</p>
      * @param product value to be set
      * @return Builder
      */
-
-    public GraphQLProductAssignmentMissingErrorBuilder product(
-            final com.commercetools.api.models.product.ProductReference product) {
+    
+    public GraphQLProductAssignmentMissingErrorBuilder product( final com.commercetools.api.models.product.ProductReference product) {
         this.product = product;
         return this;
     }
+    
+    
 
     /**
      *  <p>Error-specific additional fields.</p>
      * @return pattern properties
      */
-
-    public Map<String, java.lang.Object> getValues() {
+    
+    
+    public Map<String, java.lang.Object> getValues(){
         return this.values;
     }
-
+    
     /**
      *  <p>Reference to the Product for which the error was returned.</p>
      * @return product
      */
-
-    public com.commercetools.api.models.product.ProductReference getProduct() {
+    
+    
+    public com.commercetools.api.models.product.ProductReference getProduct(){
         return this.product;
     }
 
@@ -114,7 +127,7 @@ public class GraphQLProductAssignmentMissingErrorBuilder implements Builder<Grap
         Objects.requireNonNull(product, GraphQLProductAssignmentMissingError.class + ": product is missing");
         return new GraphQLProductAssignmentMissingErrorImpl(values, product);
     }
-
+    
     /**
      * builds GraphQLProductAssignmentMissingError without checking for non-null required values
      * @return GraphQLProductAssignmentMissingError
@@ -125,7 +138,7 @@ public class GraphQLProductAssignmentMissingErrorBuilder implements Builder<Grap
 
     /**
      * factory method for an instance of GraphQLProductAssignmentMissingErrorBuilder
-     * @return builder
+     * @return builder 
      */
     public static GraphQLProductAssignmentMissingErrorBuilder of() {
         return new GraphQLProductAssignmentMissingErrorBuilder();

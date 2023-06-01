@@ -1,19 +1,21 @@
-
 package com.commercetools.api.models.store;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
 import com.commercetools.api.models.channel.ChannelResourceIdentifier;
+import com.commercetools.api.models.store.StoreUpdateAction;
+import com.commercetools.api.models.store.StoreRemoveSupplyChannelActionImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>This update action produces the StoreSupplyChannelsChanged Message.</p>
@@ -26,9 +28,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .supplyChannel(supplyChannelBuilder -> supplyChannelBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = StoreRemoveSupplyChannelActionImpl.class)
 public interface StoreRemoveSupplyChannelAction extends StoreUpdateAction {
 
@@ -50,16 +55,18 @@ public interface StoreRemoveSupplyChannelAction extends StoreUpdateAction {
      *  <p>Value to remove. ResourceIdentifier of a Channel with the <code>InventorySupply</code> ChannelRoleEnum.</p>
      * @param supplyChannel value to be set
      */
-
+    
     public void setSupplyChannel(final ChannelResourceIdentifier supplyChannel);
+    
 
     /**
      * factory method
      * @return instance of StoreRemoveSupplyChannelAction
      */
-    public static StoreRemoveSupplyChannelAction of() {
+    public static StoreRemoveSupplyChannelAction of(){
         return new StoreRemoveSupplyChannelActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy StoreRemoveSupplyChannelAction
@@ -83,8 +90,7 @@ public interface StoreRemoveSupplyChannelAction extends StoreUpdateAction {
             return null;
         }
         StoreRemoveSupplyChannelActionImpl instance = new StoreRemoveSupplyChannelActionImpl();
-        instance.setSupplyChannel(
-            com.commercetools.api.models.channel.ChannelResourceIdentifier.deepCopy(template.getSupplyChannel()));
+        instance.setSupplyChannel(com.commercetools.api.models.channel.ChannelResourceIdentifier.deepCopy(template.getSupplyChannel()));
         return instance;
     }
 
@@ -95,7 +101,7 @@ public interface StoreRemoveSupplyChannelAction extends StoreUpdateAction {
     public static StoreRemoveSupplyChannelActionBuilder builder() {
         return StoreRemoveSupplyChannelActionBuilder.of();
     }
-
+    
     /**
      * create builder for StoreRemoveSupplyChannelAction instance
      * @param template instance with prefilled values for the builder
@@ -104,6 +110,7 @@ public interface StoreRemoveSupplyChannelAction extends StoreUpdateAction {
     public static StoreRemoveSupplyChannelActionBuilder builder(final StoreRemoveSupplyChannelAction template) {
         return StoreRemoveSupplyChannelActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -114,7 +121,7 @@ public interface StoreRemoveSupplyChannelAction extends StoreUpdateAction {
     default <T> T withStoreRemoveSupplyChannelAction(Function<StoreRemoveSupplyChannelAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

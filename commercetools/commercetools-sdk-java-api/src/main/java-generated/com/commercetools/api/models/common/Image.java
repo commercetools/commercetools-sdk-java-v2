@@ -1,18 +1,20 @@
-
 package com.commercetools.api.models.common;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
+import com.commercetools.api.models.common.ImageDimensions;
+import com.commercetools.api.models.common.ImageImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * Image
@@ -26,11 +28,15 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .dimensions(dimensionsBuilder -> dimensionsBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = ImageImpl.class)
-public interface Image {
+public interface Image  {
+
 
     /**
      *  <p>URL of the image in its original size that must be unique within a single ProductVariant. If the Project is hosted in the China (AWS, Ningxia) Region, verify that the URL is not blocked due to firewall restrictions.</p>
@@ -39,7 +45,6 @@ public interface Image {
     @NotNull
     @JsonProperty("url")
     public String getUrl();
-
     /**
      *  <p>Dimensions of the original image.</p>
      * @return dimensions
@@ -48,12 +53,11 @@ public interface Image {
     @Valid
     @JsonProperty("dimensions")
     public ImageDimensions getDimensions();
-
     /**
      *  <p>Custom label for the image.</p>
      * @return label
      */
-
+    
     @JsonProperty("label")
     public String getLabel();
 
@@ -61,30 +65,34 @@ public interface Image {
      *  <p>URL of the image in its original size that must be unique within a single ProductVariant. If the Project is hosted in the China (AWS, Ningxia) Region, verify that the URL is not blocked due to firewall restrictions.</p>
      * @param url value to be set
      */
-
+    
     public void setUrl(final String url);
-
+    
+    
     /**
      *  <p>Dimensions of the original image.</p>
      * @param dimensions value to be set
      */
-
+    
     public void setDimensions(final ImageDimensions dimensions);
-
+    
+    
     /**
      *  <p>Custom label for the image.</p>
      * @param label value to be set
      */
-
+    
     public void setLabel(final String label);
+    
 
     /**
      * factory method
      * @return instance of Image
      */
-    public static Image of() {
+    public static Image of(){
         return new ImageImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy Image
@@ -123,7 +131,7 @@ public interface Image {
     public static ImageBuilder builder() {
         return ImageBuilder.of();
     }
-
+    
     /**
      * create builder for Image instance
      * @param template instance with prefilled values for the builder
@@ -132,6 +140,7 @@ public interface Image {
     public static ImageBuilder builder(final Image template) {
         return ImageBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -142,7 +151,7 @@ public interface Image {
     default <T> T withImage(Function<Image, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

@@ -1,19 +1,20 @@
-
 package com.commercetools.api.models.product_selection;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-import java.util.stream.Collectors;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
+import com.commercetools.api.models.product_selection.ProductSelectionAssignment;
+import com.commercetools.api.models.product_selection.ProductsInStorePagedQueryResponseImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>PagedQueryResult containing an array of ProductSelectionAssignment.</p>
@@ -29,12 +30,15 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .plusResults(resultsBuilder -> resultsBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = ProductsInStorePagedQueryResponseImpl.class)
-public interface ProductsInStorePagedQueryResponse
-        extends com.commercetools.api.models.ResourcePagedQueryResponse<ProductSelectionAssignment> {
+public interface ProductsInStorePagedQueryResponse extends com.commercetools.api.models.ResourcePagedQueryResponse<ProductSelectionAssignment> {
+
 
     /**
      *  <p>Number of results requested.</p>
@@ -43,7 +47,6 @@ public interface ProductsInStorePagedQueryResponse
     @NotNull
     @JsonProperty("limit")
     public Long getLimit();
-
     /**
      *  <p>Number of elements skipped.</p>
      * @return offset
@@ -51,7 +54,6 @@ public interface ProductsInStorePagedQueryResponse
     @NotNull
     @JsonProperty("offset")
     public Long getOffset();
-
     /**
      *  <p>Actual number of results returned.</p>
      * @return count
@@ -59,15 +61,13 @@ public interface ProductsInStorePagedQueryResponse
     @NotNull
     @JsonProperty("count")
     public Long getCount();
-
     /**
      *  <p>Total number of results matching the query. This number is an estimation that is not strongly consistent. Unlike other endpoints, the Product Selection endpoint does not return this field by default. To get <code>total</code>, pass the query parameter <code>withTotal</code> set to <code>true</code>. When the results are filtered with a Query Predicate, <code>total</code> is subject to a limit.</p>
      * @return total
      */
-
+    
     @JsonProperty("total")
     public Long getTotal();
-
     /**
      *  <p>ProductSelectionAssignments matching the query.</p>
      * @return results
@@ -81,52 +81,56 @@ public interface ProductsInStorePagedQueryResponse
      *  <p>Number of results requested.</p>
      * @param limit value to be set
      */
-
+    
     public void setLimit(final Long limit);
-
+    
+    
     /**
      *  <p>Number of elements skipped.</p>
      * @param offset value to be set
      */
-
+    
     public void setOffset(final Long offset);
-
+    
+    
     /**
      *  <p>Actual number of results returned.</p>
      * @param count value to be set
      */
-
+    
     public void setCount(final Long count);
-
+    
+    
     /**
      *  <p>Total number of results matching the query. This number is an estimation that is not strongly consistent. Unlike other endpoints, the Product Selection endpoint does not return this field by default. To get <code>total</code>, pass the query parameter <code>withTotal</code> set to <code>true</code>. When the results are filtered with a Query Predicate, <code>total</code> is subject to a limit.</p>
      * @param total value to be set
      */
-
+    
     public void setTotal(final Long total);
-
+    
+    
     /**
      *  <p>ProductSelectionAssignments matching the query.</p>
      * @param results values to be set
      */
-
+    
     @JsonIgnore
-    public void setResults(final ProductSelectionAssignment... results);
-
+    public void setResults(final ProductSelectionAssignment ...results);
     /**
      *  <p>ProductSelectionAssignments matching the query.</p>
      * @param results values to be set
      */
-
+    
     public void setResults(final List<ProductSelectionAssignment> results);
 
     /**
      * factory method
      * @return instance of ProductsInStorePagedQueryResponse
      */
-    public static ProductsInStorePagedQueryResponse of() {
+    public static ProductsInStorePagedQueryResponse of(){
         return new ProductsInStorePagedQueryResponseImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy ProductsInStorePagedQueryResponse
@@ -149,8 +153,7 @@ public interface ProductsInStorePagedQueryResponse
      * @return copy instance
      */
     @Nullable
-    public static ProductsInStorePagedQueryResponse deepCopy(
-            @Nullable final ProductsInStorePagedQueryResponse template) {
+    public static ProductsInStorePagedQueryResponse deepCopy(@Nullable final ProductsInStorePagedQueryResponse template) {
         if (template == null) {
             return null;
         }
@@ -160,9 +163,7 @@ public interface ProductsInStorePagedQueryResponse
         instance.setCount(template.getCount());
         instance.setTotal(template.getTotal());
         instance.setResults(Optional.ofNullable(template.getResults())
-                .map(t -> t.stream()
-                        .map(com.commercetools.api.models.product_selection.ProductSelectionAssignment::deepCopy)
-                        .collect(Collectors.toList()))
+                .map(t -> t.stream().map(com.commercetools.api.models.product_selection.ProductSelectionAssignment::deepCopy).collect(Collectors.toList()))
                 .orElse(null));
         return instance;
     }
@@ -174,7 +175,7 @@ public interface ProductsInStorePagedQueryResponse
     public static ProductsInStorePagedQueryResponseBuilder builder() {
         return ProductsInStorePagedQueryResponseBuilder.of();
     }
-
+    
     /**
      * create builder for ProductsInStorePagedQueryResponse instance
      * @param template instance with prefilled values for the builder
@@ -183,6 +184,7 @@ public interface ProductsInStorePagedQueryResponse
     public static ProductsInStorePagedQueryResponseBuilder builder(final ProductsInStorePagedQueryResponse template) {
         return ProductsInStorePagedQueryResponseBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -193,7 +195,7 @@ public interface ProductsInStorePagedQueryResponse
     default <T> T withProductsInStorePagedQueryResponse(Function<ProductsInStorePagedQueryResponse, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

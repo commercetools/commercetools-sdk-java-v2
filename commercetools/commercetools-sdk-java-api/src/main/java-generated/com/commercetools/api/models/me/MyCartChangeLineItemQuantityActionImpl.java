@@ -1,16 +1,21 @@
-
 package com.commercetools.api.models.me;
 
-import java.time.*;
-import java.util.*;
-
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
-
-import io.vrap.rmf.base.client.ModelBase;
+import com.commercetools.api.models.cart.ExternalLineItemTotalPrice;
+import com.commercetools.api.models.common.Money;
+import com.commercetools.api.models.me.MyCartUpdateAction;
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.ModelBase;
+import javax.validation.Valid;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.annotation.*;
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
@@ -19,126 +24,133 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
  *  <p>To change the Line Item quantity and shipping details together, use this update action in combination with the Set LineItemShippingDetails update action in a single Cart update command.</p>
  *  <p>The LineItem price is set as described in LineItem Price selection.</p>
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class MyCartChangeLineItemQuantityActionImpl implements MyCartChangeLineItemQuantityAction, ModelBase {
 
+    
     private String action;
-
+    
+    
     private String lineItemId;
-
+    
+    
     private Long quantity;
-
+    
+    
     private com.commercetools.api.models.common.Money externalPrice;
-
+    
+    
     private com.commercetools.api.models.cart.ExternalLineItemTotalPrice externalTotalPrice;
 
     /**
      * create instance with all properties
      */
     @JsonCreator
-    MyCartChangeLineItemQuantityActionImpl(@JsonProperty("lineItemId") final String lineItemId,
-            @JsonProperty("quantity") final Long quantity,
-            @JsonProperty("externalPrice") final com.commercetools.api.models.common.Money externalPrice,
-            @JsonProperty("externalTotalPrice") final com.commercetools.api.models.cart.ExternalLineItemTotalPrice externalTotalPrice) {
+    MyCartChangeLineItemQuantityActionImpl(@JsonProperty("lineItemId") final String lineItemId, @JsonProperty("quantity") final Long quantity, @JsonProperty("externalPrice") final com.commercetools.api.models.common.Money externalPrice, @JsonProperty("externalTotalPrice") final com.commercetools.api.models.cart.ExternalLineItemTotalPrice externalTotalPrice) {
         this.lineItemId = lineItemId;
         this.quantity = quantity;
         this.externalPrice = externalPrice;
         this.externalTotalPrice = externalTotalPrice;
-        this.action = CHANGE_LINE_ITEM_QUANTITY;
+        this.action =  CHANGE_LINE_ITEM_QUANTITY;
     }
-
     /**
      * create empty instance
      */
     public MyCartChangeLineItemQuantityActionImpl() {
-        this.action = CHANGE_LINE_ITEM_QUANTITY;
+        this.action =  CHANGE_LINE_ITEM_QUANTITY;
     }
 
     /**
      *
      */
-
-    public String getAction() {
+    
+    public String getAction(){
         return this.action;
     }
-
+    
     /**
      *  <p><code>id</code> of the LineItem to update.</p>
      */
-
-    public String getLineItemId() {
+    
+    public String getLineItemId(){
         return this.lineItemId;
     }
-
+    
     /**
      *  <p>New value to set.</p>
      *  <p>If <code>0</code>, the Line Item is removed from the Cart.</p>
      */
-
-    public Long getQuantity() {
+    
+    public Long getQuantity(){
         return this.quantity;
     }
-
+    
     /**
      *  <p>Sets the LineItem <code>price</code> to the given value when changing the quantity of a Line Item with the <code>ExternalPrice</code> LineItemPriceMode.</p>
      *  <p>The LineItem price is updated as described in LineItem Price selection.</p>
      */
-
-    public com.commercetools.api.models.common.Money getExternalPrice() {
+    
+    public com.commercetools.api.models.common.Money getExternalPrice(){
         return this.externalPrice;
     }
-
+    
     /**
      *  <p>Sets the LineItem <code>price</code> and <code>totalPrice</code> to the given value when changing the quantity of a Line Item with the <code>ExternalTotal</code> LineItemPriceMode.</p>
      */
-
-    public com.commercetools.api.models.cart.ExternalLineItemTotalPrice getExternalTotalPrice() {
+    
+    public com.commercetools.api.models.cart.ExternalLineItemTotalPrice getExternalTotalPrice(){
         return this.externalTotalPrice;
     }
 
-    public void setLineItemId(final String lineItemId) {
+    
+    public void setLineItemId(final String lineItemId){
         this.lineItemId = lineItemId;
     }
-
-    public void setQuantity(final Long quantity) {
+    
+    
+    public void setQuantity(final Long quantity){
         this.quantity = quantity;
     }
-
-    public void setExternalPrice(final com.commercetools.api.models.common.Money externalPrice) {
+    
+    
+    public void setExternalPrice(final com.commercetools.api.models.common.Money externalPrice){
         this.externalPrice = externalPrice;
     }
-
-    public void setExternalTotalPrice(
-            final com.commercetools.api.models.cart.ExternalLineItemTotalPrice externalTotalPrice) {
+    
+    
+    public void setExternalTotalPrice(final com.commercetools.api.models.cart.ExternalLineItemTotalPrice externalTotalPrice){
         this.externalTotalPrice = externalTotalPrice;
     }
 
     @Override
     public boolean equals(Object o) {
-        if (this == o)
-            return true;
-
-        if (o == null || getClass() != o.getClass())
-            return false;
-
+        if (this == o) return true;
+    
+        if (o == null || getClass() != o.getClass()) return false;
+    
         MyCartChangeLineItemQuantityActionImpl that = (MyCartChangeLineItemQuantityActionImpl) o;
-
-        return new EqualsBuilder().append(action, that.action)
+    
+        return new EqualsBuilder()
+                .append(action, that.action)
                 .append(lineItemId, that.lineItemId)
                 .append(quantity, that.quantity)
                 .append(externalPrice, that.externalPrice)
                 .append(externalTotalPrice, that.externalTotalPrice)
                 .isEquals();
     }
-
+    
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(action)
-                .append(lineItemId)
-                .append(quantity)
-                .append(externalPrice)
-                .append(externalTotalPrice)
-                .toHashCode();
+        return new HashCodeBuilder(17, 37)
+            .append(action)
+            .append(lineItemId)
+            .append(quantity)
+            .append(externalPrice)
+            .append(externalTotalPrice)
+            .toHashCode();
     }
 
 }

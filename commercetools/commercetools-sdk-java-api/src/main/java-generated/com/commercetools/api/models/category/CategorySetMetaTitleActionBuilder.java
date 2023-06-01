@@ -1,11 +1,12 @@
-
 package com.commercetools.api.models.category;
 
+import com.commercetools.api.models.category.CategoryUpdateAction;
+import com.commercetools.api.models.common.LocalizedString;
+import com.commercetools.api.models.category.CategorySetMetaTitleAction;
+import javax.annotation.Nullable;
 import java.util.*;
 import java.util.function.Function;
-
-import javax.annotation.Nullable;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -18,57 +19,61 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     CategorySetMetaTitleAction categorySetMetaTitleAction = CategorySetMetaTitleAction.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class CategorySetMetaTitleActionBuilder implements Builder<CategorySetMetaTitleAction> {
 
+    
     @Nullable
     private com.commercetools.api.models.common.LocalizedString metaTitle;
 
+    
     /**
      *  <p>Value to set.</p>
      * @param builder function to build the metaTitle value
      * @return Builder
      */
-
-    public CategorySetMetaTitleActionBuilder metaTitle(
-            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
+    
+    public CategorySetMetaTitleActionBuilder metaTitle(Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
         this.metaTitle = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of()).build();
         return this;
     }
-
+    
     /**
      *  <p>Value to set.</p>
      * @param builder function to build the metaTitle value
      * @return Builder
      */
-
-    public CategorySetMetaTitleActionBuilder withMetaTitle(
-            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedString> builder) {
+    
+    public CategorySetMetaTitleActionBuilder withMetaTitle(Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedString> builder) {
         this.metaTitle = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of());
         return this;
     }
-
+                    
     /**
      *  <p>Value to set.</p>
      * @param metaTitle value to be set
      * @return Builder
      */
-
-    public CategorySetMetaTitleActionBuilder metaTitle(
-            @Nullable final com.commercetools.api.models.common.LocalizedString metaTitle) {
+    
+    public CategorySetMetaTitleActionBuilder metaTitle(@Nullable final com.commercetools.api.models.common.LocalizedString metaTitle) {
         this.metaTitle = metaTitle;
         return this;
     }
+    
+    
 
     /**
      *  <p>Value to set.</p>
      * @return metaTitle
      */
-
+    
     @Nullable
-    public com.commercetools.api.models.common.LocalizedString getMetaTitle() {
+    public com.commercetools.api.models.common.LocalizedString getMetaTitle(){
         return this.metaTitle;
     }
 
@@ -79,7 +84,7 @@ public class CategorySetMetaTitleActionBuilder implements Builder<CategorySetMet
     public CategorySetMetaTitleAction build() {
         return new CategorySetMetaTitleActionImpl(metaTitle);
     }
-
+    
     /**
      * builds CategorySetMetaTitleAction without checking for non-null required values
      * @return CategorySetMetaTitleAction
@@ -90,7 +95,7 @@ public class CategorySetMetaTitleActionBuilder implements Builder<CategorySetMet
 
     /**
      * factory method for an instance of CategorySetMetaTitleActionBuilder
-     * @return builder
+     * @return builder 
      */
     public static CategorySetMetaTitleActionBuilder of() {
         return new CategorySetMetaTitleActionBuilder();

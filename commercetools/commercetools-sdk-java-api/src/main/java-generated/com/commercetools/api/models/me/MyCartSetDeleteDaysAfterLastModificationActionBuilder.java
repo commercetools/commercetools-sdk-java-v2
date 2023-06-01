@@ -1,10 +1,11 @@
-
 package com.commercetools.api.models.me;
 
-import java.util.*;
-
+import com.commercetools.api.models.me.MyCartUpdateAction;
+import com.commercetools.api.models.me.MyCartSetDeleteDaysAfterLastModificationAction;
 import javax.annotation.Nullable;
-
+import java.util.*;
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -17,34 +18,39 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     MyCartSetDeleteDaysAfterLastModificationAction myCartSetDeleteDaysAfterLastModificationAction = MyCartSetDeleteDaysAfterLastModificationAction.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
-public class MyCartSetDeleteDaysAfterLastModificationActionBuilder
-        implements Builder<MyCartSetDeleteDaysAfterLastModificationAction> {
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
+public class MyCartSetDeleteDaysAfterLastModificationActionBuilder implements Builder<MyCartSetDeleteDaysAfterLastModificationAction> {
 
+    
     @Nullable
     private Integer deleteDaysAfterLastModification;
 
+    
     /**
      *  <p>Value to set. If not provided, the default value for this field configured in Project settings is assigned.</p>
      * @param deleteDaysAfterLastModification value to be set
      * @return Builder
      */
-
-    public MyCartSetDeleteDaysAfterLastModificationActionBuilder deleteDaysAfterLastModification(
-            @Nullable final Integer deleteDaysAfterLastModification) {
+    
+    public MyCartSetDeleteDaysAfterLastModificationActionBuilder deleteDaysAfterLastModification(@Nullable final Integer deleteDaysAfterLastModification) {
         this.deleteDaysAfterLastModification = deleteDaysAfterLastModification;
         return this;
     }
+    
+    
 
     /**
      *  <p>Value to set. If not provided, the default value for this field configured in Project settings is assigned.</p>
      * @return deleteDaysAfterLastModification
      */
-
+    
     @Nullable
-    public Integer getDeleteDaysAfterLastModification() {
+    public Integer getDeleteDaysAfterLastModification(){
         return this.deleteDaysAfterLastModification;
     }
 
@@ -55,7 +61,7 @@ public class MyCartSetDeleteDaysAfterLastModificationActionBuilder
     public MyCartSetDeleteDaysAfterLastModificationAction build() {
         return new MyCartSetDeleteDaysAfterLastModificationActionImpl(deleteDaysAfterLastModification);
     }
-
+    
     /**
      * builds MyCartSetDeleteDaysAfterLastModificationAction without checking for non-null required values
      * @return MyCartSetDeleteDaysAfterLastModificationAction
@@ -66,7 +72,7 @@ public class MyCartSetDeleteDaysAfterLastModificationActionBuilder
 
     /**
      * factory method for an instance of MyCartSetDeleteDaysAfterLastModificationActionBuilder
-     * @return builder
+     * @return builder 
      */
     public static MyCartSetDeleteDaysAfterLastModificationActionBuilder of() {
         return new MyCartSetDeleteDaysAfterLastModificationActionBuilder();
@@ -77,8 +83,7 @@ public class MyCartSetDeleteDaysAfterLastModificationActionBuilder
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static MyCartSetDeleteDaysAfterLastModificationActionBuilder of(
-            final MyCartSetDeleteDaysAfterLastModificationAction template) {
+    public static MyCartSetDeleteDaysAfterLastModificationActionBuilder of(final MyCartSetDeleteDaysAfterLastModificationAction template) {
         MyCartSetDeleteDaysAfterLastModificationActionBuilder builder = new MyCartSetDeleteDaysAfterLastModificationActionBuilder();
         builder.deleteDaysAfterLastModification = template.getDeleteDaysAfterLastModification();
         return builder;

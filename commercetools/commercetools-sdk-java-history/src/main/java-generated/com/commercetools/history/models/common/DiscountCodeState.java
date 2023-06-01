@@ -1,33 +1,35 @@
-
 package com.commercetools.history.models.common;
-
-import java.util.Arrays;
-import java.util.Optional;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-
+import java.lang.String;
+import java.util.Arrays;
+import java.util.Optional;
 import io.vrap.rmf.base.client.JsonEnum;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
  * DiscountCodeState
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public interface DiscountCodeState extends JsonEnum {
 
+    
     DiscountCodeState NOT_ACTIVE = DiscountCodeStateEnum.NOT_ACTIVE;
-
+    
     DiscountCodeState DOES_NOT_MATCH_CART = DiscountCodeStateEnum.DOES_NOT_MATCH_CART;
-
+    
     DiscountCodeState MATCHES_CART = DiscountCodeStateEnum.MATCHES_CART;
-
+    
     DiscountCodeState MAX_APPLICATION_REACHED = DiscountCodeStateEnum.MAX_APPLICATION_REACHED;
-
+    
     DiscountCodeState APPLICATION_STOPPED_BY_PREVIOUS_DISCOUNT = DiscountCodeStateEnum.APPLICATION_STOPPED_BY_PREVIOUS_DISCOUNT;
-
+    
     DiscountCodeState NOT_VALID = DiscountCodeStateEnum.NOT_VALID;
-
+    
     /**
      * possible values of DiscountCodeState
      */
@@ -36,27 +38,27 @@ public interface DiscountCodeState extends JsonEnum {
          * NotActive
          */
         NOT_ACTIVE("NotActive"),
-
+        
         /**
          * DoesNotMatchCart
          */
         DOES_NOT_MATCH_CART("DoesNotMatchCart"),
-
+        
         /**
          * MatchesCart
          */
         MATCHES_CART("MatchesCart"),
-
+        
         /**
          * MaxApplicationReached
          */
         MAX_APPLICATION_REACHED("MaxApplicationReached"),
-
+        
         /**
          * ApplicationStoppedByPreviousDiscount
          */
         APPLICATION_STOPPED_BY_PREVIOUS_DISCOUNT("ApplicationStoppedByPreviousDiscount"),
-
+        
         /**
          * NotValid
          */
@@ -113,7 +115,7 @@ public interface DiscountCodeState extends JsonEnum {
             public String name() {
                 return value.toUpperCase();
             }
-
+            
             public String toString() {
                 return value;
             }
@@ -128,7 +130,7 @@ public interface DiscountCodeState extends JsonEnum {
     public static Optional<DiscountCodeState> findEnumViaJsonName(String jsonName) {
         return Arrays.stream(values()).filter(t -> t.getJsonName().equals(jsonName)).findFirst();
     }
-
+    
     /**
      * possible enum values
      * @return array of possible enum values
@@ -136,5 +138,5 @@ public interface DiscountCodeState extends JsonEnum {
     public static DiscountCodeState[] values() {
         return DiscountCodeStateEnum.values();
     }
-
+    
 }

@@ -1,9 +1,12 @@
-
 package com.commercetools.api.models.order_edit;
 
+import com.commercetools.api.models.order.StagedOrderUpdateAction;
+import com.commercetools.api.models.order_edit.OrderEditUpdateAction;
+import com.commercetools.api.models.order_edit.OrderEditAddStagedActionAction;
+import javax.annotation.Nullable;
 import java.util.*;
 import java.util.function.Function;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -17,44 +20,50 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .stagedAction(stagedActionBuilder -> stagedActionBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class OrderEditAddStagedActionActionBuilder implements Builder<OrderEditAddStagedActionAction> {
 
+    
+    
     private com.commercetools.api.models.order.StagedOrderUpdateAction stagedAction;
 
+    
     /**
      * set the value to the stagedAction
      * @param stagedAction value to be set
      * @return Builder
      */
-
-    public OrderEditAddStagedActionActionBuilder stagedAction(
-            final com.commercetools.api.models.order.StagedOrderUpdateAction stagedAction) {
+    
+    public OrderEditAddStagedActionActionBuilder stagedAction( final com.commercetools.api.models.order.StagedOrderUpdateAction stagedAction) {
         this.stagedAction = stagedAction;
         return this;
     }
-
+    
+    
     /**
      * set the value to the stagedAction using the builder function
      * @param builder function to build the stagedAction value
      * @return Builder
      */
-
-    public OrderEditAddStagedActionActionBuilder stagedAction(
-            Function<com.commercetools.api.models.order.StagedOrderUpdateActionBuilder, Builder<? extends com.commercetools.api.models.order.StagedOrderUpdateAction>> builder) {
-        this.stagedAction = builder.apply(com.commercetools.api.models.order.StagedOrderUpdateActionBuilder.of())
-                .build();
+    
+    public OrderEditAddStagedActionActionBuilder stagedAction(Function<com.commercetools.api.models.order.StagedOrderUpdateActionBuilder, Builder<? extends com.commercetools.api.models.order.StagedOrderUpdateAction>> builder) {
+        this.stagedAction = builder.apply(com.commercetools.api.models.order.StagedOrderUpdateActionBuilder.of()).build();
         return this;
     }
+                    
 
     /**
      * value of stagedAction}
      * @return stagedAction
      */
-
-    public com.commercetools.api.models.order.StagedOrderUpdateAction getStagedAction() {
+    
+    
+    public com.commercetools.api.models.order.StagedOrderUpdateAction getStagedAction(){
         return this.stagedAction;
     }
 
@@ -66,7 +75,7 @@ public class OrderEditAddStagedActionActionBuilder implements Builder<OrderEditA
         Objects.requireNonNull(stagedAction, OrderEditAddStagedActionAction.class + ": stagedAction is missing");
         return new OrderEditAddStagedActionActionImpl(stagedAction);
     }
-
+    
     /**
      * builds OrderEditAddStagedActionAction without checking for non-null required values
      * @return OrderEditAddStagedActionAction
@@ -77,7 +86,7 @@ public class OrderEditAddStagedActionActionBuilder implements Builder<OrderEditA
 
     /**
      * factory method for an instance of OrderEditAddStagedActionActionBuilder
-     * @return builder
+     * @return builder 
      */
     public static OrderEditAddStagedActionActionBuilder of() {
         return new OrderEditAddStagedActionActionBuilder();

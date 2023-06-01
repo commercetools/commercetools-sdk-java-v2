@@ -1,19 +1,21 @@
-
 package com.commercetools.api.models.message;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
+import com.commercetools.api.models.message.MessagePayload;
 import com.commercetools.api.models.store.StoreKeyReference;
+import com.commercetools.api.models.message.BusinessUnitStoreAddedMessagePayloadImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Generated after a successful Add Store update action.</p>
@@ -26,9 +28,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .store(storeBuilder -> storeBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = BusinessUnitStoreAddedMessagePayloadImpl.class)
 public interface BusinessUnitStoreAddedMessagePayload extends MessagePayload {
 
@@ -50,16 +55,18 @@ public interface BusinessUnitStoreAddedMessagePayload extends MessagePayload {
      *  <p>The Store that was added to the Business Unit.</p>
      * @param store value to be set
      */
-
+    
     public void setStore(final StoreKeyReference store);
+    
 
     /**
      * factory method
      * @return instance of BusinessUnitStoreAddedMessagePayload
      */
-    public static BusinessUnitStoreAddedMessagePayload of() {
+    public static BusinessUnitStoreAddedMessagePayload of(){
         return new BusinessUnitStoreAddedMessagePayloadImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy BusinessUnitStoreAddedMessagePayload
@@ -78,8 +85,7 @@ public interface BusinessUnitStoreAddedMessagePayload extends MessagePayload {
      * @return copy instance
      */
     @Nullable
-    public static BusinessUnitStoreAddedMessagePayload deepCopy(
-            @Nullable final BusinessUnitStoreAddedMessagePayload template) {
+    public static BusinessUnitStoreAddedMessagePayload deepCopy(@Nullable final BusinessUnitStoreAddedMessagePayload template) {
         if (template == null) {
             return null;
         }
@@ -95,16 +101,16 @@ public interface BusinessUnitStoreAddedMessagePayload extends MessagePayload {
     public static BusinessUnitStoreAddedMessagePayloadBuilder builder() {
         return BusinessUnitStoreAddedMessagePayloadBuilder.of();
     }
-
+    
     /**
      * create builder for BusinessUnitStoreAddedMessagePayload instance
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static BusinessUnitStoreAddedMessagePayloadBuilder builder(
-            final BusinessUnitStoreAddedMessagePayload template) {
+    public static BusinessUnitStoreAddedMessagePayloadBuilder builder(final BusinessUnitStoreAddedMessagePayload template) {
         return BusinessUnitStoreAddedMessagePayloadBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -115,7 +121,7 @@ public interface BusinessUnitStoreAddedMessagePayload extends MessagePayload {
     default <T> T withBusinessUnitStoreAddedMessagePayload(Function<BusinessUnitStoreAddedMessagePayload, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

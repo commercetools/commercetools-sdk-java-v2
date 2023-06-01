@@ -1,18 +1,21 @@
-
 package com.commercetools.api.models.message;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
-
+import com.commercetools.api.models.message.MessagePayload;
 import com.commercetools.api.models.quote.QuoteState;
+import com.commercetools.api.models.message.QuoteStateChangedMessagePayloadImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Generated after a successful Change Quote State update action.</p>
@@ -26,9 +29,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .oldQuoteState(QuoteState.PENDING)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = QuoteStateChangedMessagePayloadImpl.class)
 public interface QuoteStateChangedMessagePayload extends MessagePayload {
 
@@ -44,7 +50,6 @@ public interface QuoteStateChangedMessagePayload extends MessagePayload {
     @NotNull
     @JsonProperty("quoteState")
     public QuoteState getQuoteState();
-
     /**
      *  <p>State of the Quote before the Change Quote State update action.</p>
      * @return oldQuoteState
@@ -57,23 +62,26 @@ public interface QuoteStateChangedMessagePayload extends MessagePayload {
      *  <p>State of the Quote after the Change Quote State update action.</p>
      * @param quoteState value to be set
      */
-
+    
     public void setQuoteState(final QuoteState quoteState);
-
+    
+    
     /**
      *  <p>State of the Quote before the Change Quote State update action.</p>
      * @param oldQuoteState value to be set
      */
-
+    
     public void setOldQuoteState(final QuoteState oldQuoteState);
+    
 
     /**
      * factory method
      * @return instance of QuoteStateChangedMessagePayload
      */
-    public static QuoteStateChangedMessagePayload of() {
+    public static QuoteStateChangedMessagePayload of(){
         return new QuoteStateChangedMessagePayloadImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy QuoteStateChangedMessagePayload
@@ -110,7 +118,7 @@ public interface QuoteStateChangedMessagePayload extends MessagePayload {
     public static QuoteStateChangedMessagePayloadBuilder builder() {
         return QuoteStateChangedMessagePayloadBuilder.of();
     }
-
+    
     /**
      * create builder for QuoteStateChangedMessagePayload instance
      * @param template instance with prefilled values for the builder
@@ -119,6 +127,7 @@ public interface QuoteStateChangedMessagePayload extends MessagePayload {
     public static QuoteStateChangedMessagePayloadBuilder builder(final QuoteStateChangedMessagePayload template) {
         return QuoteStateChangedMessagePayloadBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -129,7 +138,7 @@ public interface QuoteStateChangedMessagePayload extends MessagePayload {
     default <T> T withQuoteStateChangedMessagePayload(Function<QuoteStateChangedMessagePayload, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

@@ -1,19 +1,21 @@
-
 package com.commercetools.history.models.change;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
+import com.commercetools.history.models.change.Change;
 import com.commercetools.history.models.change_value.ValidFromAndUntilValue;
+import com.commercetools.history.models.change.SetValidFromAndUntilChangeImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * SetValidFromAndUntilChange
@@ -28,9 +30,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .nextValue(nextValueBuilder -> nextValueBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = SetValidFromAndUntilChangeImpl.class)
 public interface SetValidFromAndUntilChange extends Change {
 
@@ -46,7 +51,6 @@ public interface SetValidFromAndUntilChange extends Change {
     @NotNull
     @JsonProperty("type")
     public String getType();
-
     /**
      *
      * @return change
@@ -54,7 +58,6 @@ public interface SetValidFromAndUntilChange extends Change {
     @NotNull
     @JsonProperty("change")
     public String getChange();
-
     /**
      *  <p>Shape of the value for <code>setValidFromAndUntil</code> action</p>
      * @return previousValue
@@ -63,7 +66,6 @@ public interface SetValidFromAndUntilChange extends Change {
     @Valid
     @JsonProperty("previousValue")
     public ValidFromAndUntilValue getPreviousValue();
-
     /**
      *  <p>Shape of the value for <code>setValidFromAndUntil</code> action</p>
      * @return nextValue
@@ -77,30 +79,34 @@ public interface SetValidFromAndUntilChange extends Change {
      * set change
      * @param change value to be set
      */
-
+    
     public void setChange(final String change);
-
+    
+    
     /**
      *  <p>Shape of the value for <code>setValidFromAndUntil</code> action</p>
      * @param previousValue value to be set
      */
-
+    
     public void setPreviousValue(final ValidFromAndUntilValue previousValue);
-
+    
+    
     /**
      *  <p>Shape of the value for <code>setValidFromAndUntil</code> action</p>
      * @param nextValue value to be set
      */
-
+    
     public void setNextValue(final ValidFromAndUntilValue nextValue);
+    
 
     /**
      * factory method
      * @return instance of SetValidFromAndUntilChange
      */
-    public static SetValidFromAndUntilChange of() {
+    public static SetValidFromAndUntilChange of(){
         return new SetValidFromAndUntilChangeImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy SetValidFromAndUntilChange
@@ -127,10 +133,8 @@ public interface SetValidFromAndUntilChange extends Change {
         }
         SetValidFromAndUntilChangeImpl instance = new SetValidFromAndUntilChangeImpl();
         instance.setChange(template.getChange());
-        instance.setPreviousValue(
-            com.commercetools.history.models.change_value.ValidFromAndUntilValue.deepCopy(template.getPreviousValue()));
-        instance.setNextValue(
-            com.commercetools.history.models.change_value.ValidFromAndUntilValue.deepCopy(template.getNextValue()));
+        instance.setPreviousValue(com.commercetools.history.models.change_value.ValidFromAndUntilValue.deepCopy(template.getPreviousValue()));
+        instance.setNextValue(com.commercetools.history.models.change_value.ValidFromAndUntilValue.deepCopy(template.getNextValue()));
         return instance;
     }
 
@@ -141,7 +145,7 @@ public interface SetValidFromAndUntilChange extends Change {
     public static SetValidFromAndUntilChangeBuilder builder() {
         return SetValidFromAndUntilChangeBuilder.of();
     }
-
+    
     /**
      * create builder for SetValidFromAndUntilChange instance
      * @param template instance with prefilled values for the builder
@@ -150,6 +154,7 @@ public interface SetValidFromAndUntilChange extends Change {
     public static SetValidFromAndUntilChangeBuilder builder(final SetValidFromAndUntilChange template) {
         return SetValidFromAndUntilChangeBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -160,7 +165,7 @@ public interface SetValidFromAndUntilChange extends Change {
     default <T> T withSetValidFromAndUntilChange(Function<SetValidFromAndUntilChange, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

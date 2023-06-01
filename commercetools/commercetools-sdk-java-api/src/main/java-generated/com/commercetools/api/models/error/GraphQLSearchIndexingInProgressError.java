@@ -1,17 +1,20 @@
-
 package com.commercetools.api.models.error;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
+import com.commercetools.api.models.error.GraphQLErrorObject;
+import com.commercetools.api.models.error.GraphQLSearchIndexingInProgressErrorImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Returned when the indexing of Product information is still in progress for Projects that have indexing activated.</p>
@@ -23,9 +26,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     GraphQLSearchIndexingInProgressError graphQLSearchIndexingInProgressError = GraphQLSearchIndexingInProgressError.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = GraphQLSearchIndexingInProgressErrorImpl.class)
 public interface GraphQLSearchIndexingInProgressError extends GraphQLErrorObject {
 
@@ -42,13 +48,15 @@ public interface GraphQLSearchIndexingInProgressError extends GraphQLErrorObject
     @JsonProperty("code")
     public String getCode();
 
+
     /**
      * factory method
      * @return instance of GraphQLSearchIndexingInProgressError
      */
-    public static GraphQLSearchIndexingInProgressError of() {
+    public static GraphQLSearchIndexingInProgressError of(){
         return new GraphQLSearchIndexingInProgressErrorImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy GraphQLSearchIndexingInProgressError
@@ -67,8 +75,7 @@ public interface GraphQLSearchIndexingInProgressError extends GraphQLErrorObject
      * @return copy instance
      */
     @Nullable
-    public static GraphQLSearchIndexingInProgressError deepCopy(
-            @Nullable final GraphQLSearchIndexingInProgressError template) {
+    public static GraphQLSearchIndexingInProgressError deepCopy(@Nullable final GraphQLSearchIndexingInProgressError template) {
         if (template == null) {
             return null;
         }
@@ -84,16 +91,16 @@ public interface GraphQLSearchIndexingInProgressError extends GraphQLErrorObject
     public static GraphQLSearchIndexingInProgressErrorBuilder builder() {
         return GraphQLSearchIndexingInProgressErrorBuilder.of();
     }
-
+    
     /**
      * create builder for GraphQLSearchIndexingInProgressError instance
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static GraphQLSearchIndexingInProgressErrorBuilder builder(
-            final GraphQLSearchIndexingInProgressError template) {
+    public static GraphQLSearchIndexingInProgressErrorBuilder builder(final GraphQLSearchIndexingInProgressError template) {
         return GraphQLSearchIndexingInProgressErrorBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -104,7 +111,7 @@ public interface GraphQLSearchIndexingInProgressError extends GraphQLErrorObject
     default <T> T withGraphQLSearchIndexingInProgressError(Function<GraphQLSearchIndexingInProgressError, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

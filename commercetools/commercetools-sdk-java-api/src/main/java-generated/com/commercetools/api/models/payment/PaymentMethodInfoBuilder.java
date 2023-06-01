@@ -1,11 +1,11 @@
-
 package com.commercetools.api.models.payment;
 
+import com.commercetools.api.models.common.LocalizedString;
+import com.commercetools.api.models.payment.PaymentMethodInfo;
+import javax.annotation.Nullable;
 import java.util.*;
 import java.util.function.Function;
-
-import javax.annotation.Nullable;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -18,104 +18,117 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     PaymentMethodInfo paymentMethodInfo = PaymentMethodInfo.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class PaymentMethodInfoBuilder implements Builder<PaymentMethodInfo> {
 
+    
     @Nullable
     private String paymentInterface;
-
+    
+    
     @Nullable
     private String method;
-
+    
+    
     @Nullable
     private com.commercetools.api.models.common.LocalizedString name;
 
+    
     /**
      *  <p>Payment service that processes the Payment (for example, a PSP). Once set, it cannot be changed. The combination of <code>paymentInterface</code> and the <code>interfaceId</code> of a Payment must be unique.</p>
      * @param paymentInterface value to be set
      * @return Builder
      */
-
+    
     public PaymentMethodInfoBuilder paymentInterface(@Nullable final String paymentInterface) {
         this.paymentInterface = paymentInterface;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Payment method used, for example, credit card, or cash advance.</p>
      * @param method value to be set
      * @return Builder
      */
-
+    
     public PaymentMethodInfoBuilder method(@Nullable final String method) {
         this.method = method;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Localizable name of the payment method.</p>
      * @param builder function to build the name value
      * @return Builder
      */
-
-    public PaymentMethodInfoBuilder name(
-            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
+    
+    public PaymentMethodInfoBuilder name(Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
         this.name = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of()).build();
         return this;
     }
-
+    
     /**
      *  <p>Localizable name of the payment method.</p>
      * @param builder function to build the name value
      * @return Builder
      */
-
-    public PaymentMethodInfoBuilder withName(
-            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedString> builder) {
+    
+    public PaymentMethodInfoBuilder withName(Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedString> builder) {
         this.name = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of());
         return this;
     }
-
+                    
     /**
      *  <p>Localizable name of the payment method.</p>
      * @param name value to be set
      * @return Builder
      */
-
+    
     public PaymentMethodInfoBuilder name(@Nullable final com.commercetools.api.models.common.LocalizedString name) {
         this.name = name;
         return this;
     }
+    
+    
 
     /**
      *  <p>Payment service that processes the Payment (for example, a PSP). Once set, it cannot be changed. The combination of <code>paymentInterface</code> and the <code>interfaceId</code> of a Payment must be unique.</p>
      * @return paymentInterface
      */
-
+    
     @Nullable
-    public String getPaymentInterface() {
+    public String getPaymentInterface(){
         return this.paymentInterface;
     }
-
+    
     /**
      *  <p>Payment method used, for example, credit card, or cash advance.</p>
      * @return method
      */
-
+    
     @Nullable
-    public String getMethod() {
+    public String getMethod(){
         return this.method;
     }
-
+    
     /**
      *  <p>Localizable name of the payment method.</p>
      * @return name
      */
-
+    
     @Nullable
-    public com.commercetools.api.models.common.LocalizedString getName() {
+    public com.commercetools.api.models.common.LocalizedString getName(){
         return this.name;
     }
 
@@ -126,7 +139,7 @@ public class PaymentMethodInfoBuilder implements Builder<PaymentMethodInfo> {
     public PaymentMethodInfo build() {
         return new PaymentMethodInfoImpl(paymentInterface, method, name);
     }
-
+    
     /**
      * builds PaymentMethodInfo without checking for non-null required values
      * @return PaymentMethodInfo
@@ -137,7 +150,7 @@ public class PaymentMethodInfoBuilder implements Builder<PaymentMethodInfo> {
 
     /**
      * factory method for an instance of PaymentMethodInfoBuilder
-     * @return builder
+     * @return builder 
      */
     public static PaymentMethodInfoBuilder of() {
         return new PaymentMethodInfoBuilder();

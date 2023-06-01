@@ -1,19 +1,21 @@
-
 package com.commercetools.api.models.message;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
 import com.commercetools.api.models.cart.CustomLineItem;
+import com.commercetools.api.models.message.OrderMessagePayload;
+import com.commercetools.api.models.message.OrderCustomLineItemAddedMessagePayloadImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Generated after a successful Add Custom Line Item update action.</p>
@@ -26,9 +28,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .customLineItem(customLineItemBuilder -> customLineItemBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = OrderCustomLineItemAddedMessagePayloadImpl.class)
 public interface OrderCustomLineItemAddedMessagePayload extends OrderMessagePayload {
 
@@ -50,16 +55,18 @@ public interface OrderCustomLineItemAddedMessagePayload extends OrderMessagePayl
      *  <p>Custom Line Item that was added to the Order.</p>
      * @param customLineItem value to be set
      */
-
+    
     public void setCustomLineItem(final CustomLineItem customLineItem);
+    
 
     /**
      * factory method
      * @return instance of OrderCustomLineItemAddedMessagePayload
      */
-    public static OrderCustomLineItemAddedMessagePayload of() {
+    public static OrderCustomLineItemAddedMessagePayload of(){
         return new OrderCustomLineItemAddedMessagePayloadImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy OrderCustomLineItemAddedMessagePayload
@@ -78,14 +85,12 @@ public interface OrderCustomLineItemAddedMessagePayload extends OrderMessagePayl
      * @return copy instance
      */
     @Nullable
-    public static OrderCustomLineItemAddedMessagePayload deepCopy(
-            @Nullable final OrderCustomLineItemAddedMessagePayload template) {
+    public static OrderCustomLineItemAddedMessagePayload deepCopy(@Nullable final OrderCustomLineItemAddedMessagePayload template) {
         if (template == null) {
             return null;
         }
         OrderCustomLineItemAddedMessagePayloadImpl instance = new OrderCustomLineItemAddedMessagePayloadImpl();
-        instance.setCustomLineItem(
-            com.commercetools.api.models.cart.CustomLineItem.deepCopy(template.getCustomLineItem()));
+        instance.setCustomLineItem(com.commercetools.api.models.cart.CustomLineItem.deepCopy(template.getCustomLineItem()));
         return instance;
     }
 
@@ -96,16 +101,16 @@ public interface OrderCustomLineItemAddedMessagePayload extends OrderMessagePayl
     public static OrderCustomLineItemAddedMessagePayloadBuilder builder() {
         return OrderCustomLineItemAddedMessagePayloadBuilder.of();
     }
-
+    
     /**
      * create builder for OrderCustomLineItemAddedMessagePayload instance
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static OrderCustomLineItemAddedMessagePayloadBuilder builder(
-            final OrderCustomLineItemAddedMessagePayload template) {
+    public static OrderCustomLineItemAddedMessagePayloadBuilder builder(final OrderCustomLineItemAddedMessagePayload template) {
         return OrderCustomLineItemAddedMessagePayloadBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -113,11 +118,10 @@ public interface OrderCustomLineItemAddedMessagePayload extends OrderMessagePayl
      * @param helper function to map the object
      * @return mapped value
      */
-    default <T> T withOrderCustomLineItemAddedMessagePayload(
-            Function<OrderCustomLineItemAddedMessagePayload, T> helper) {
+    default <T> T withOrderCustomLineItemAddedMessagePayload(Function<OrderCustomLineItemAddedMessagePayload, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

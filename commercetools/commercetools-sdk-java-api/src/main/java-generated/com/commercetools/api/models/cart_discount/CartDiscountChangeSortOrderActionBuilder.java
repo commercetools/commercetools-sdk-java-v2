@@ -1,8 +1,11 @@
-
 package com.commercetools.api.models.cart_discount;
 
+import com.commercetools.api.models.cart_discount.CartDiscountUpdateAction;
+import com.commercetools.api.models.cart_discount.CartDiscountChangeSortOrderAction;
+import javax.annotation.Nullable;
 import java.util.*;
-
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -16,30 +19,39 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .sortOrder("{sortOrder}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class CartDiscountChangeSortOrderActionBuilder implements Builder<CartDiscountChangeSortOrderAction> {
 
+    
+    
     private String sortOrder;
 
+    
     /**
      *  <p>New value to set (between <code>0</code> and <code>1</code>). A Discount with a higher sortOrder is prioritized.</p>
      * @param sortOrder value to be set
      * @return Builder
      */
-
-    public CartDiscountChangeSortOrderActionBuilder sortOrder(final String sortOrder) {
+    
+    public CartDiscountChangeSortOrderActionBuilder sortOrder( final String sortOrder) {
         this.sortOrder = sortOrder;
         return this;
     }
+    
+    
 
     /**
      *  <p>New value to set (between <code>0</code> and <code>1</code>). A Discount with a higher sortOrder is prioritized.</p>
      * @return sortOrder
      */
-
-    public String getSortOrder() {
+    
+    
+    public String getSortOrder(){
         return this.sortOrder;
     }
 
@@ -51,7 +63,7 @@ public class CartDiscountChangeSortOrderActionBuilder implements Builder<CartDis
         Objects.requireNonNull(sortOrder, CartDiscountChangeSortOrderAction.class + ": sortOrder is missing");
         return new CartDiscountChangeSortOrderActionImpl(sortOrder);
     }
-
+    
     /**
      * builds CartDiscountChangeSortOrderAction without checking for non-null required values
      * @return CartDiscountChangeSortOrderAction
@@ -62,7 +74,7 @@ public class CartDiscountChangeSortOrderActionBuilder implements Builder<CartDis
 
     /**
      * factory method for an instance of CartDiscountChangeSortOrderActionBuilder
-     * @return builder
+     * @return builder 
      */
     public static CartDiscountChangeSortOrderActionBuilder of() {
         return new CartDiscountChangeSortOrderActionBuilder();

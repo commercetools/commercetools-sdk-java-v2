@@ -1,8 +1,12 @@
-
 package com.commercetools.api.models.product_type;
 
+import com.commercetools.api.models.product_type.ProductTypeUpdateAction;
+import com.commercetools.api.models.product_type.TextInputHint;
+import com.commercetools.api.models.product_type.ProductTypeChangeInputHintAction;
+import javax.annotation.Nullable;
 import java.util.*;
-
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -17,53 +21,67 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .newValue(TextInputHint.SINGLE_LINE)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class ProductTypeChangeInputHintActionBuilder implements Builder<ProductTypeChangeInputHintAction> {
 
+    
+    
     private String attributeName;
-
+    
+    
+    
     private com.commercetools.api.models.product_type.TextInputHint newValue;
 
+    
     /**
      *  <p>Name of the AttributeDefinition to update.</p>
      * @param attributeName value to be set
      * @return Builder
      */
-
-    public ProductTypeChangeInputHintActionBuilder attributeName(final String attributeName) {
+    
+    public ProductTypeChangeInputHintActionBuilder attributeName( final String attributeName) {
         this.attributeName = attributeName;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p><code>SingleLine</code> or <code>MultiLine</code></p>
      * @param newValue value to be set
      * @return Builder
      */
-
-    public ProductTypeChangeInputHintActionBuilder newValue(
-            final com.commercetools.api.models.product_type.TextInputHint newValue) {
+    
+    public ProductTypeChangeInputHintActionBuilder newValue( final com.commercetools.api.models.product_type.TextInputHint newValue) {
         this.newValue = newValue;
         return this;
     }
+    
+    
 
     /**
      *  <p>Name of the AttributeDefinition to update.</p>
      * @return attributeName
      */
-
-    public String getAttributeName() {
+    
+    
+    public String getAttributeName(){
         return this.attributeName;
     }
-
+    
     /**
      *  <p><code>SingleLine</code> or <code>MultiLine</code></p>
      * @return newValue
      */
-
-    public com.commercetools.api.models.product_type.TextInputHint getNewValue() {
+    
+    
+    public com.commercetools.api.models.product_type.TextInputHint getNewValue(){
         return this.newValue;
     }
 
@@ -76,7 +94,7 @@ public class ProductTypeChangeInputHintActionBuilder implements Builder<ProductT
         Objects.requireNonNull(newValue, ProductTypeChangeInputHintAction.class + ": newValue is missing");
         return new ProductTypeChangeInputHintActionImpl(attributeName, newValue);
     }
-
+    
     /**
      * builds ProductTypeChangeInputHintAction without checking for non-null required values
      * @return ProductTypeChangeInputHintAction
@@ -87,7 +105,7 @@ public class ProductTypeChangeInputHintActionBuilder implements Builder<ProductT
 
     /**
      * factory method for an instance of ProductTypeChangeInputHintActionBuilder
-     * @return builder
+     * @return builder 
      */
     public static ProductTypeChangeInputHintActionBuilder of() {
         return new ProductTypeChangeInputHintActionBuilder();

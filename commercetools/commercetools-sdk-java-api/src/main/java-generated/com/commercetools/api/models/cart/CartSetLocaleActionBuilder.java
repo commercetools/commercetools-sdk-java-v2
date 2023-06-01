@@ -1,10 +1,11 @@
-
 package com.commercetools.api.models.cart;
 
-import java.util.*;
-
+import com.commercetools.api.models.cart.CartUpdateAction;
+import com.commercetools.api.models.cart.CartSetLocaleAction;
 import javax.annotation.Nullable;
-
+import java.util.*;
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -17,32 +18,39 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     CartSetLocaleAction cartSetLocaleAction = CartSetLocaleAction.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class CartSetLocaleActionBuilder implements Builder<CartSetLocaleAction> {
 
+    
     @Nullable
     private String locale;
 
+    
     /**
      *  <p>Value to set. Must be one of the Project's <code>languages</code>. If empty, any existing value will be removed.</p>
      * @param locale value to be set
      * @return Builder
      */
-
+    
     public CartSetLocaleActionBuilder locale(@Nullable final String locale) {
         this.locale = locale;
         return this;
     }
+    
+    
 
     /**
      *  <p>Value to set. Must be one of the Project's <code>languages</code>. If empty, any existing value will be removed.</p>
      * @return locale
      */
-
+    
     @Nullable
-    public String getLocale() {
+    public String getLocale(){
         return this.locale;
     }
 
@@ -53,7 +61,7 @@ public class CartSetLocaleActionBuilder implements Builder<CartSetLocaleAction> 
     public CartSetLocaleAction build() {
         return new CartSetLocaleActionImpl(locale);
     }
-
+    
     /**
      * builds CartSetLocaleAction without checking for non-null required values
      * @return CartSetLocaleAction
@@ -64,7 +72,7 @@ public class CartSetLocaleActionBuilder implements Builder<CartSetLocaleAction> 
 
     /**
      * factory method for an instance of CartSetLocaleActionBuilder
-     * @return builder
+     * @return builder 
      */
     public static CartSetLocaleActionBuilder of() {
         return new CartSetLocaleActionBuilder();

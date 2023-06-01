@@ -1,17 +1,23 @@
-
 package com.commercetools.api.models.cart_discount;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
+import com.commercetools.api.models.cart_discount.CartDiscountValueAbsoluteDraft;
+import com.commercetools.api.models.cart_discount.CartDiscountValueFixedDraft;
+import com.commercetools.api.models.cart_discount.CartDiscountValueGiftLineItemDraft;
+import com.commercetools.api.models.cart_discount.CartDiscountValueRelativeDraft;
 
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * CartDiscountValueDraft
@@ -24,17 +30,28 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             plusMoney(moneyBuilder -> moneyBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
 @JsonSubTypes({
-        @JsonSubTypes.Type(value = com.commercetools.api.models.cart_discount.CartDiscountValueAbsoluteDraftImpl.class, name = CartDiscountValueAbsoluteDraft.ABSOLUTE),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.cart_discount.CartDiscountValueFixedDraftImpl.class, name = CartDiscountValueFixedDraft.FIXED),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.cart_discount.CartDiscountValueGiftLineItemDraftImpl.class, name = CartDiscountValueGiftLineItemDraft.GIFT_LINE_ITEM),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.cart_discount.CartDiscountValueRelativeDraftImpl.class, name = CartDiscountValueRelativeDraft.RELATIVE) })
-@JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.EXISTING_PROPERTY, property = "type", defaultImpl = CartDiscountValueDraftImpl.class, visible = true)
+   @JsonSubTypes.Type(value = com.commercetools.api.models.cart_discount.CartDiscountValueAbsoluteDraftImpl.class, name = CartDiscountValueAbsoluteDraft.ABSOLUTE),
+   @JsonSubTypes.Type(value = com.commercetools.api.models.cart_discount.CartDiscountValueFixedDraftImpl.class, name = CartDiscountValueFixedDraft.FIXED),
+   @JsonSubTypes.Type(value = com.commercetools.api.models.cart_discount.CartDiscountValueGiftLineItemDraftImpl.class, name = CartDiscountValueGiftLineItemDraft.GIFT_LINE_ITEM),
+   @JsonSubTypes.Type(value = com.commercetools.api.models.cart_discount.CartDiscountValueRelativeDraftImpl.class, name = CartDiscountValueRelativeDraft.RELATIVE)
+})
+@JsonTypeInfo(
+    use = JsonTypeInfo.Id.NAME,
+    include = JsonTypeInfo.As.EXISTING_PROPERTY,
+    property = "type",
+    defaultImpl = CartDiscountValueDraftImpl.class,
+    visible = true
+)
 @JsonDeserialize(as = CartDiscountValueDraftImpl.class)
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
-public interface CartDiscountValueDraft {
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
+public interface CartDiscountValueDraft  {
+
 
     /**
      *
@@ -43,6 +60,9 @@ public interface CartDiscountValueDraft {
     @NotNull
     @JsonProperty("type")
     public String getType();
+
+
+
 
     /**
      * factory method to create a deep copy of CartDiscountValueDraft
@@ -55,55 +75,49 @@ public interface CartDiscountValueDraft {
             return null;
         }
         if (template instanceof com.commercetools.api.models.cart_discount.CartDiscountValueAbsoluteDraft) {
-            return com.commercetools.api.models.cart_discount.CartDiscountValueAbsoluteDraft
-                    .deepCopy((com.commercetools.api.models.cart_discount.CartDiscountValueAbsoluteDraft) template);
+            return com.commercetools.api.models.cart_discount.CartDiscountValueAbsoluteDraft.deepCopy((com.commercetools.api.models.cart_discount.CartDiscountValueAbsoluteDraft)template);
         }
         if (template instanceof com.commercetools.api.models.cart_discount.CartDiscountValueFixedDraft) {
-            return com.commercetools.api.models.cart_discount.CartDiscountValueFixedDraft
-                    .deepCopy((com.commercetools.api.models.cart_discount.CartDiscountValueFixedDraft) template);
+            return com.commercetools.api.models.cart_discount.CartDiscountValueFixedDraft.deepCopy((com.commercetools.api.models.cart_discount.CartDiscountValueFixedDraft)template);
         }
         if (template instanceof com.commercetools.api.models.cart_discount.CartDiscountValueGiftLineItemDraft) {
-            return com.commercetools.api.models.cart_discount.CartDiscountValueGiftLineItemDraft
-                    .deepCopy((com.commercetools.api.models.cart_discount.CartDiscountValueGiftLineItemDraft) template);
+            return com.commercetools.api.models.cart_discount.CartDiscountValueGiftLineItemDraft.deepCopy((com.commercetools.api.models.cart_discount.CartDiscountValueGiftLineItemDraft)template);
         }
         if (template instanceof com.commercetools.api.models.cart_discount.CartDiscountValueRelativeDraft) {
-            return com.commercetools.api.models.cart_discount.CartDiscountValueRelativeDraft
-                    .deepCopy((com.commercetools.api.models.cart_discount.CartDiscountValueRelativeDraft) template);
+            return com.commercetools.api.models.cart_discount.CartDiscountValueRelativeDraft.deepCopy((com.commercetools.api.models.cart_discount.CartDiscountValueRelativeDraft)template);
         }
         CartDiscountValueDraftImpl instance = new CartDiscountValueDraftImpl();
         return instance;
     }
+
 
     /**
      * builder for absolute subtype
      * @return builder
      */
     public static com.commercetools.api.models.cart_discount.CartDiscountValueAbsoluteDraftBuilder absoluteBuilder() {
-        return com.commercetools.api.models.cart_discount.CartDiscountValueAbsoluteDraftBuilder.of();
+       return com.commercetools.api.models.cart_discount.CartDiscountValueAbsoluteDraftBuilder.of();
     }
-
     /**
      * builder for fixed subtype
      * @return builder
      */
     public static com.commercetools.api.models.cart_discount.CartDiscountValueFixedDraftBuilder fixedBuilder() {
-        return com.commercetools.api.models.cart_discount.CartDiscountValueFixedDraftBuilder.of();
+       return com.commercetools.api.models.cart_discount.CartDiscountValueFixedDraftBuilder.of();
     }
-
     /**
      * builder for giftLineItem subtype
      * @return builder
      */
     public static com.commercetools.api.models.cart_discount.CartDiscountValueGiftLineItemDraftBuilder giftLineItemBuilder() {
-        return com.commercetools.api.models.cart_discount.CartDiscountValueGiftLineItemDraftBuilder.of();
+       return com.commercetools.api.models.cart_discount.CartDiscountValueGiftLineItemDraftBuilder.of();
     }
-
     /**
      * builder for relative subtype
      * @return builder
      */
     public static com.commercetools.api.models.cart_discount.CartDiscountValueRelativeDraftBuilder relativeBuilder() {
-        return com.commercetools.api.models.cart_discount.CartDiscountValueRelativeDraftBuilder.of();
+       return com.commercetools.api.models.cart_discount.CartDiscountValueRelativeDraftBuilder.of();
     }
 
     /**
@@ -115,7 +129,7 @@ public interface CartDiscountValueDraft {
     default <T> T withCartDiscountValueDraft(Function<CartDiscountValueDraft, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

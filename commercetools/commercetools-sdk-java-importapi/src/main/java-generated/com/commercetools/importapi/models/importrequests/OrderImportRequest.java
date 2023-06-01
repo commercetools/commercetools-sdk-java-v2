@@ -1,20 +1,22 @@
-
 package com.commercetools.importapi.models.importrequests;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-import java.util.stream.Collectors;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
+import com.commercetools.importapi.models.common.ImportResourceType;
+import com.commercetools.importapi.models.importrequests.ImportRequest;
 import com.commercetools.importapi.models.orders.OrderImport;
+import com.commercetools.importapi.models.importrequests.OrderImportRequestImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>The request body to import Orders. Contains data for Orders to be created in a Project.</p>
@@ -27,9 +29,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .plusResources(resourcesBuilder -> resourcesBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = OrderImportRequestImpl.class)
 public interface OrderImportRequest extends ImportRequest {
 
@@ -51,24 +56,24 @@ public interface OrderImportRequest extends ImportRequest {
      *  <p>The order import resources of this request.</p>
      * @param resources values to be set
      */
-
+    
     @JsonIgnore
-    public void setResources(final OrderImport... resources);
-
+    public void setResources(final OrderImport ...resources);
     /**
      *  <p>The order import resources of this request.</p>
      * @param resources values to be set
      */
-
+    
     public void setResources(final List<OrderImport> resources);
 
     /**
      * factory method
      * @return instance of OrderImportRequest
      */
-    public static OrderImportRequest of() {
+    public static OrderImportRequest of(){
         return new OrderImportRequestImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy OrderImportRequest
@@ -93,9 +98,7 @@ public interface OrderImportRequest extends ImportRequest {
         }
         OrderImportRequestImpl instance = new OrderImportRequestImpl();
         instance.setResources(Optional.ofNullable(template.getResources())
-                .map(t -> t.stream()
-                        .map(com.commercetools.importapi.models.orders.OrderImport::deepCopy)
-                        .collect(Collectors.toList()))
+                .map(t -> t.stream().map(com.commercetools.importapi.models.orders.OrderImport::deepCopy).collect(Collectors.toList()))
                 .orElse(null));
         return instance;
     }
@@ -107,7 +110,7 @@ public interface OrderImportRequest extends ImportRequest {
     public static OrderImportRequestBuilder builder() {
         return OrderImportRequestBuilder.of();
     }
-
+    
     /**
      * create builder for OrderImportRequest instance
      * @param template instance with prefilled values for the builder
@@ -116,6 +119,7 @@ public interface OrderImportRequest extends ImportRequest {
     public static OrderImportRequestBuilder builder(final OrderImportRequest template) {
         return OrderImportRequestBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -126,7 +130,7 @@ public interface OrderImportRequest extends ImportRequest {
     default <T> T withOrderImportRequest(Function<OrderImportRequest, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

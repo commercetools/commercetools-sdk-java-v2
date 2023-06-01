@@ -1,20 +1,21 @@
-
 package com.commercetools.api.models.message;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-import java.util.stream.Collectors;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
 import com.commercetools.api.models.common.Price;
+import com.commercetools.api.models.message.MessagePayload;
+import com.commercetools.api.models.message.ProductPricesSetMessagePayloadImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Generated after a successful Set Embedded Prices update action.</p>
@@ -29,9 +30,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .staged(true)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = ProductPricesSetMessagePayloadImpl.class)
 public interface ProductPricesSetMessagePayload extends MessagePayload {
 
@@ -47,7 +51,6 @@ public interface ProductPricesSetMessagePayload extends MessagePayload {
     @NotNull
     @JsonProperty("variantId")
     public Long getVariantId();
-
     /**
      *  <p>The Embedded Prices that were set on the ProductVariant.</p>
      * @return prices
@@ -56,7 +59,6 @@ public interface ProductPricesSetMessagePayload extends MessagePayload {
     @Valid
     @JsonProperty("prices")
     public List<Price> getPrices();
-
     /**
      *  <p>Whether the update was only applied to the staged Product Projection.</p>
      * @return staged
@@ -69,38 +71,40 @@ public interface ProductPricesSetMessagePayload extends MessagePayload {
      *  <p>Unique identifier of the ProductVariant for which the Price was set.</p>
      * @param variantId value to be set
      */
-
+    
     public void setVariantId(final Long variantId);
-
+    
+    
     /**
      *  <p>The Embedded Prices that were set on the ProductVariant.</p>
      * @param prices values to be set
      */
-
+    
     @JsonIgnore
-    public void setPrices(final Price... prices);
-
+    public void setPrices(final Price ...prices);
     /**
      *  <p>The Embedded Prices that were set on the ProductVariant.</p>
      * @param prices values to be set
      */
-
+    
     public void setPrices(final List<Price> prices);
-
+    
     /**
      *  <p>Whether the update was only applied to the staged Product Projection.</p>
      * @param staged value to be set
      */
-
+    
     public void setStaged(final Boolean staged);
+    
 
     /**
      * factory method
      * @return instance of ProductPricesSetMessagePayload
      */
-    public static ProductPricesSetMessagePayload of() {
+    public static ProductPricesSetMessagePayload of(){
         return new ProductPricesSetMessagePayloadImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy ProductPricesSetMessagePayload
@@ -128,9 +132,7 @@ public interface ProductPricesSetMessagePayload extends MessagePayload {
         ProductPricesSetMessagePayloadImpl instance = new ProductPricesSetMessagePayloadImpl();
         instance.setVariantId(template.getVariantId());
         instance.setPrices(Optional.ofNullable(template.getPrices())
-                .map(t -> t.stream()
-                        .map(com.commercetools.api.models.common.Price::deepCopy)
-                        .collect(Collectors.toList()))
+                .map(t -> t.stream().map(com.commercetools.api.models.common.Price::deepCopy).collect(Collectors.toList()))
                 .orElse(null));
         instance.setStaged(template.getStaged());
         return instance;
@@ -143,7 +145,7 @@ public interface ProductPricesSetMessagePayload extends MessagePayload {
     public static ProductPricesSetMessagePayloadBuilder builder() {
         return ProductPricesSetMessagePayloadBuilder.of();
     }
-
+    
     /**
      * create builder for ProductPricesSetMessagePayload instance
      * @param template instance with prefilled values for the builder
@@ -152,6 +154,7 @@ public interface ProductPricesSetMessagePayload extends MessagePayload {
     public static ProductPricesSetMessagePayloadBuilder builder(final ProductPricesSetMessagePayload template) {
         return ProductPricesSetMessagePayloadBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -162,7 +165,7 @@ public interface ProductPricesSetMessagePayload extends MessagePayload {
     default <T> T withProductPricesSetMessagePayload(Function<ProductPricesSetMessagePayload, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

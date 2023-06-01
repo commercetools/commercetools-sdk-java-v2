@@ -1,8 +1,12 @@
-
 package com.commercetools.api.models.me;
 
+import com.commercetools.api.models.cart.TaxMode;
+import com.commercetools.api.models.me.MyCartUpdateAction;
+import com.commercetools.api.models.me.MyCartChangeTaxModeAction;
+import javax.annotation.Nullable;
 import java.util.*;
-
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -16,30 +20,39 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .taxMode(TaxMode.PLATFORM)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class MyCartChangeTaxModeActionBuilder implements Builder<MyCartChangeTaxModeAction> {
 
+    
+    
     private com.commercetools.api.models.cart.TaxMode taxMode;
 
+    
     /**
      *  <p>The new TaxMode.</p>
      * @param taxMode value to be set
      * @return Builder
      */
-
-    public MyCartChangeTaxModeActionBuilder taxMode(final com.commercetools.api.models.cart.TaxMode taxMode) {
+    
+    public MyCartChangeTaxModeActionBuilder taxMode( final com.commercetools.api.models.cart.TaxMode taxMode) {
         this.taxMode = taxMode;
         return this;
     }
+    
+    
 
     /**
      *  <p>The new TaxMode.</p>
      * @return taxMode
      */
-
-    public com.commercetools.api.models.cart.TaxMode getTaxMode() {
+    
+    
+    public com.commercetools.api.models.cart.TaxMode getTaxMode(){
         return this.taxMode;
     }
 
@@ -51,7 +64,7 @@ public class MyCartChangeTaxModeActionBuilder implements Builder<MyCartChangeTax
         Objects.requireNonNull(taxMode, MyCartChangeTaxModeAction.class + ": taxMode is missing");
         return new MyCartChangeTaxModeActionImpl(taxMode);
     }
-
+    
     /**
      * builds MyCartChangeTaxModeAction without checking for non-null required values
      * @return MyCartChangeTaxModeAction
@@ -62,7 +75,7 @@ public class MyCartChangeTaxModeActionBuilder implements Builder<MyCartChangeTax
 
     /**
      * factory method for an instance of MyCartChangeTaxModeActionBuilder
-     * @return builder
+     * @return builder 
      */
     public static MyCartChangeTaxModeActionBuilder of() {
         return new MyCartChangeTaxModeActionBuilder();

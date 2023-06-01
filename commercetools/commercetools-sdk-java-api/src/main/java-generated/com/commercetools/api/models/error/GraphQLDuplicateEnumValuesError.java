@@ -1,17 +1,20 @@
-
 package com.commercetools.api.models.error;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
+import com.commercetools.api.models.error.GraphQLErrorObject;
+import com.commercetools.api.models.error.GraphQLDuplicateEnumValuesErrorImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Returned when an AttributeEnumType or AttributeLocalizedEnumType contains duplicate keys.</p>
@@ -24,9 +27,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .plusDuplicates(duplicatesBuilder -> duplicatesBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = GraphQLDuplicateEnumValuesErrorImpl.class)
 public interface GraphQLDuplicateEnumValuesError extends GraphQLErrorObject {
 
@@ -42,7 +48,6 @@ public interface GraphQLDuplicateEnumValuesError extends GraphQLErrorObject {
     @NotNull
     @JsonProperty("code")
     public String getCode();
-
     /**
      *  <p>Duplicate keys.</p>
      * @return duplicates
@@ -55,24 +60,24 @@ public interface GraphQLDuplicateEnumValuesError extends GraphQLErrorObject {
      *  <p>Duplicate keys.</p>
      * @param duplicates values to be set
      */
-
+    
     @JsonIgnore
-    public void setDuplicates(final String... duplicates);
-
+    public void setDuplicates(final String ...duplicates);
     /**
      *  <p>Duplicate keys.</p>
      * @param duplicates values to be set
      */
-
+    
     public void setDuplicates(final List<String> duplicates);
 
     /**
      * factory method
      * @return instance of GraphQLDuplicateEnumValuesError
      */
-    public static GraphQLDuplicateEnumValuesError of() {
+    public static GraphQLDuplicateEnumValuesError of(){
         return new GraphQLDuplicateEnumValuesErrorImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy GraphQLDuplicateEnumValuesError
@@ -98,7 +103,9 @@ public interface GraphQLDuplicateEnumValuesError extends GraphQLErrorObject {
         }
         GraphQLDuplicateEnumValuesErrorImpl instance = new GraphQLDuplicateEnumValuesErrorImpl();
         Optional.ofNullable(template.values()).ifPresent(t -> t.forEach(instance::setValue));
-        instance.setDuplicates(Optional.ofNullable(template.getDuplicates()).map(ArrayList::new).orElse(null));
+        instance.setDuplicates(Optional.ofNullable(template.getDuplicates())
+                .map(ArrayList::new)
+                .orElse(null));
         return instance;
     }
 
@@ -109,7 +116,7 @@ public interface GraphQLDuplicateEnumValuesError extends GraphQLErrorObject {
     public static GraphQLDuplicateEnumValuesErrorBuilder builder() {
         return GraphQLDuplicateEnumValuesErrorBuilder.of();
     }
-
+    
     /**
      * create builder for GraphQLDuplicateEnumValuesError instance
      * @param template instance with prefilled values for the builder
@@ -118,6 +125,7 @@ public interface GraphQLDuplicateEnumValuesError extends GraphQLErrorObject {
     public static GraphQLDuplicateEnumValuesErrorBuilder builder(final GraphQLDuplicateEnumValuesError template) {
         return GraphQLDuplicateEnumValuesErrorBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -128,7 +136,7 @@ public interface GraphQLDuplicateEnumValuesError extends GraphQLErrorObject {
     default <T> T withGraphQLDuplicateEnumValuesError(Function<GraphQLDuplicateEnumValuesError, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

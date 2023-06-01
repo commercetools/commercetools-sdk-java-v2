@@ -1,100 +1,113 @@
-
 package com.commercetools.api.models.product_type;
 
-import java.time.*;
-import java.util.*;
-
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
-
-import io.vrap.rmf.base.client.ModelBase;
+import com.commercetools.api.models.common.LocalizedString;
+import com.commercetools.api.models.product_type.ProductTypeUpdateAction;
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.ModelBase;
+import javax.validation.Valid;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.annotation.*;
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
  * ProductTypeSetInputTipAction
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class ProductTypeSetInputTipActionImpl implements ProductTypeSetInputTipAction, ModelBase {
 
+    
     private String action;
-
+    
+    
     private String attributeName;
-
+    
+    
     private com.commercetools.api.models.common.LocalizedString inputTip;
 
     /**
      * create instance with all properties
      */
     @JsonCreator
-    ProductTypeSetInputTipActionImpl(@JsonProperty("attributeName") final String attributeName,
-            @JsonProperty("inputTip") final com.commercetools.api.models.common.LocalizedString inputTip) {
+    ProductTypeSetInputTipActionImpl(@JsonProperty("attributeName") final String attributeName, @JsonProperty("inputTip") final com.commercetools.api.models.common.LocalizedString inputTip) {
         this.attributeName = attributeName;
         this.inputTip = inputTip;
-        this.action = SET_INPUT_TIP;
+        this.action =  SET_INPUT_TIP;
     }
-
     /**
      * create empty instance
      */
     public ProductTypeSetInputTipActionImpl() {
-        this.action = SET_INPUT_TIP;
+        this.action =  SET_INPUT_TIP;
     }
 
     /**
      *
      */
-
-    public String getAction() {
+    
+    public String getAction(){
         return this.action;
     }
-
+    
     /**
      *  <p>Name of the AttributeDefinition to update.</p>
      */
-
-    public String getAttributeName() {
+    
+    public String getAttributeName(){
         return this.attributeName;
     }
-
+    
     /**
      *  <p>Value to set. If empty, any existing value will be removed.</p>
      */
-
-    public com.commercetools.api.models.common.LocalizedString getInputTip() {
+    
+    public com.commercetools.api.models.common.LocalizedString getInputTip(){
         return this.inputTip;
     }
 
-    public void setAttributeName(final String attributeName) {
+    
+    public void setAttributeName(final String attributeName){
         this.attributeName = attributeName;
     }
-
-    public void setInputTip(final com.commercetools.api.models.common.LocalizedString inputTip) {
+    
+    
+    public void setInputTip(final com.commercetools.api.models.common.LocalizedString inputTip){
         this.inputTip = inputTip;
     }
 
     @Override
     public boolean equals(Object o) {
-        if (this == o)
-            return true;
-
-        if (o == null || getClass() != o.getClass())
-            return false;
-
+        if (this == o) return true;
+    
+        if (o == null || getClass() != o.getClass()) return false;
+    
         ProductTypeSetInputTipActionImpl that = (ProductTypeSetInputTipActionImpl) o;
-
-        return new EqualsBuilder().append(action, that.action)
+    
+        return new EqualsBuilder()
+                .append(action, that.action)
                 .append(attributeName, that.attributeName)
                 .append(inputTip, that.inputTip)
                 .isEquals();
     }
-
+    
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(action).append(attributeName).append(inputTip).toHashCode();
+        return new HashCodeBuilder(17, 37)
+            .append(action)
+            .append(attributeName)
+            .append(inputTip)
+            .toHashCode();
     }
 
 }

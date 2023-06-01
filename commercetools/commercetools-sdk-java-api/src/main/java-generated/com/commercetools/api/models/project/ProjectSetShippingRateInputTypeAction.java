@@ -1,17 +1,21 @@
-
 package com.commercetools.api.models.project;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
+import com.commercetools.api.models.project.ProjectUpdateAction;
+import com.commercetools.api.models.project.ShippingRateInputType;
+import com.commercetools.api.models.project.ProjectSetShippingRateInputTypeActionImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * ProjectSetShippingRateInputTypeAction
@@ -23,9 +27,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     ProjectSetShippingRateInputTypeAction projectSetShippingRateInputTypeAction = ProjectSetShippingRateInputTypeAction.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = ProjectSetShippingRateInputTypeActionImpl.class)
 public interface ProjectSetShippingRateInputTypeAction extends ProjectUpdateAction {
 
@@ -46,16 +53,18 @@ public interface ProjectSetShippingRateInputTypeAction extends ProjectUpdateActi
      *  <p>Value to set. If empty, any existing value will be removed.</p>
      * @param shippingRateInputType value to be set
      */
-
+    
     public void setShippingRateInputType(final ShippingRateInputType shippingRateInputType);
+    
 
     /**
      * factory method
      * @return instance of ProjectSetShippingRateInputTypeAction
      */
-    public static ProjectSetShippingRateInputTypeAction of() {
+    public static ProjectSetShippingRateInputTypeAction of(){
         return new ProjectSetShippingRateInputTypeActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy ProjectSetShippingRateInputTypeAction
@@ -74,14 +83,12 @@ public interface ProjectSetShippingRateInputTypeAction extends ProjectUpdateActi
      * @return copy instance
      */
     @Nullable
-    public static ProjectSetShippingRateInputTypeAction deepCopy(
-            @Nullable final ProjectSetShippingRateInputTypeAction template) {
+    public static ProjectSetShippingRateInputTypeAction deepCopy(@Nullable final ProjectSetShippingRateInputTypeAction template) {
         if (template == null) {
             return null;
         }
         ProjectSetShippingRateInputTypeActionImpl instance = new ProjectSetShippingRateInputTypeActionImpl();
-        instance.setShippingRateInputType(
-            com.commercetools.api.models.project.ShippingRateInputType.deepCopy(template.getShippingRateInputType()));
+        instance.setShippingRateInputType(com.commercetools.api.models.project.ShippingRateInputType.deepCopy(template.getShippingRateInputType()));
         return instance;
     }
 
@@ -92,16 +99,16 @@ public interface ProjectSetShippingRateInputTypeAction extends ProjectUpdateActi
     public static ProjectSetShippingRateInputTypeActionBuilder builder() {
         return ProjectSetShippingRateInputTypeActionBuilder.of();
     }
-
+    
     /**
      * create builder for ProjectSetShippingRateInputTypeAction instance
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static ProjectSetShippingRateInputTypeActionBuilder builder(
-            final ProjectSetShippingRateInputTypeAction template) {
+    public static ProjectSetShippingRateInputTypeActionBuilder builder(final ProjectSetShippingRateInputTypeAction template) {
         return ProjectSetShippingRateInputTypeActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -112,11 +119,11 @@ public interface ProjectSetShippingRateInputTypeAction extends ProjectUpdateActi
     default <T> T withProjectSetShippingRateInputTypeAction(Function<ProjectSetShippingRateInputTypeAction, T> helper) {
         return helper.apply(this);
     }
-
     public static ProjectSetShippingRateInputTypeAction ofUnset() {
         return ProjectSetShippingRateInputTypeAction.of();
     }
-
+    
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

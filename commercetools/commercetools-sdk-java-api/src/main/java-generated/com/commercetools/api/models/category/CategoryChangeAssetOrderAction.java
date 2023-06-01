@@ -1,17 +1,20 @@
-
 package com.commercetools.api.models.category;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
+import com.commercetools.api.models.category.CategoryUpdateAction;
+import com.commercetools.api.models.category.CategoryChangeAssetOrderActionImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>This update action changes the order of the <code>assets</code> array. The new order is defined by listing the <code>id</code>s of the Assets.</p>
@@ -24,9 +27,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .plusAssetOrder(assetOrderBuilder -> assetOrderBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = CategoryChangeAssetOrderActionImpl.class)
 public interface CategoryChangeAssetOrderAction extends CategoryUpdateAction {
 
@@ -47,24 +53,24 @@ public interface CategoryChangeAssetOrderAction extends CategoryUpdateAction {
      *  <p>New value to set. Must contain all Asset <code>id</code>s.</p>
      * @param assetOrder values to be set
      */
-
+    
     @JsonIgnore
-    public void setAssetOrder(final String... assetOrder);
-
+    public void setAssetOrder(final String ...assetOrder);
     /**
      *  <p>New value to set. Must contain all Asset <code>id</code>s.</p>
      * @param assetOrder values to be set
      */
-
+    
     public void setAssetOrder(final List<String> assetOrder);
 
     /**
      * factory method
      * @return instance of CategoryChangeAssetOrderAction
      */
-    public static CategoryChangeAssetOrderAction of() {
+    public static CategoryChangeAssetOrderAction of(){
         return new CategoryChangeAssetOrderActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy CategoryChangeAssetOrderAction
@@ -88,7 +94,9 @@ public interface CategoryChangeAssetOrderAction extends CategoryUpdateAction {
             return null;
         }
         CategoryChangeAssetOrderActionImpl instance = new CategoryChangeAssetOrderActionImpl();
-        instance.setAssetOrder(Optional.ofNullable(template.getAssetOrder()).map(ArrayList::new).orElse(null));
+        instance.setAssetOrder(Optional.ofNullable(template.getAssetOrder())
+                .map(ArrayList::new)
+                .orElse(null));
         return instance;
     }
 
@@ -99,7 +107,7 @@ public interface CategoryChangeAssetOrderAction extends CategoryUpdateAction {
     public static CategoryChangeAssetOrderActionBuilder builder() {
         return CategoryChangeAssetOrderActionBuilder.of();
     }
-
+    
     /**
      * create builder for CategoryChangeAssetOrderAction instance
      * @param template instance with prefilled values for the builder
@@ -108,6 +116,7 @@ public interface CategoryChangeAssetOrderAction extends CategoryUpdateAction {
     public static CategoryChangeAssetOrderActionBuilder builder(final CategoryChangeAssetOrderAction template) {
         return CategoryChangeAssetOrderActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -118,7 +127,7 @@ public interface CategoryChangeAssetOrderAction extends CategoryUpdateAction {
     default <T> T withCategoryChangeAssetOrderAction(Function<CategoryChangeAssetOrderAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

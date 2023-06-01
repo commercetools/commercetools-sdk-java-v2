@@ -1,20 +1,22 @@
-
 package com.commercetools.history.models.change;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
+import com.commercetools.history.models.change.Change;
 import com.commercetools.history.models.common.TaxMode;
 import com.commercetools.history.models.common.TaxedItemPrice;
+import com.commercetools.history.models.change.SetOrderTaxedPriceChangeImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * SetOrderTaxedPriceChange
@@ -30,9 +32,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .previousValue(previousValueBuilder -> previousValueBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = SetOrderTaxedPriceChangeImpl.class)
 public interface SetOrderTaxedPriceChange extends Change {
 
@@ -48,7 +53,6 @@ public interface SetOrderTaxedPriceChange extends Change {
     @NotNull
     @JsonProperty("type")
     public String getType();
-
     /**
      *  <p>Update action for <code>setOrderTaxedPrice</code></p>
      * @return change
@@ -56,7 +60,6 @@ public interface SetOrderTaxedPriceChange extends Change {
     @NotNull
     @JsonProperty("change")
     public String getChange();
-
     /**
      *
      * @return taxMode
@@ -64,7 +67,6 @@ public interface SetOrderTaxedPriceChange extends Change {
     @NotNull
     @JsonProperty("taxMode")
     public TaxMode getTaxMode();
-
     /**
      *
      * @return nextValue
@@ -73,7 +75,6 @@ public interface SetOrderTaxedPriceChange extends Change {
     @Valid
     @JsonProperty("nextValue")
     public TaxedItemPrice getNextValue();
-
     /**
      *
      * @return previousValue
@@ -87,37 +88,42 @@ public interface SetOrderTaxedPriceChange extends Change {
      *  <p>Update action for <code>setOrderTaxedPrice</code></p>
      * @param change value to be set
      */
-
+    
     public void setChange(final String change);
-
+    
+    
     /**
      * set taxMode
      * @param taxMode value to be set
      */
-
+    
     public void setTaxMode(final TaxMode taxMode);
-
+    
+    
     /**
      * set nextValue
      * @param nextValue value to be set
      */
-
+    
     public void setNextValue(final TaxedItemPrice nextValue);
-
+    
+    
     /**
      * set previousValue
      * @param previousValue value to be set
      */
-
+    
     public void setPreviousValue(final TaxedItemPrice previousValue);
+    
 
     /**
      * factory method
      * @return instance of SetOrderTaxedPriceChange
      */
-    public static SetOrderTaxedPriceChange of() {
+    public static SetOrderTaxedPriceChange of(){
         return new SetOrderTaxedPriceChangeImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy SetOrderTaxedPriceChange
@@ -147,8 +153,7 @@ public interface SetOrderTaxedPriceChange extends Change {
         instance.setChange(template.getChange());
         instance.setTaxMode(template.getTaxMode());
         instance.setNextValue(com.commercetools.history.models.common.TaxedItemPrice.deepCopy(template.getNextValue()));
-        instance.setPreviousValue(
-            com.commercetools.history.models.common.TaxedItemPrice.deepCopy(template.getPreviousValue()));
+        instance.setPreviousValue(com.commercetools.history.models.common.TaxedItemPrice.deepCopy(template.getPreviousValue()));
         return instance;
     }
 
@@ -159,7 +164,7 @@ public interface SetOrderTaxedPriceChange extends Change {
     public static SetOrderTaxedPriceChangeBuilder builder() {
         return SetOrderTaxedPriceChangeBuilder.of();
     }
-
+    
     /**
      * create builder for SetOrderTaxedPriceChange instance
      * @param template instance with prefilled values for the builder
@@ -168,6 +173,7 @@ public interface SetOrderTaxedPriceChange extends Change {
     public static SetOrderTaxedPriceChangeBuilder builder(final SetOrderTaxedPriceChange template) {
         return SetOrderTaxedPriceChangeBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -178,7 +184,7 @@ public interface SetOrderTaxedPriceChange extends Change {
     default <T> T withSetOrderTaxedPriceChange(Function<SetOrderTaxedPriceChange, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

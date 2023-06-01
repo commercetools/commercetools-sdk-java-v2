@@ -1,9 +1,11 @@
-
 package com.commercetools.api.predicates.query.message;
 
 import com.commercetools.api.predicates.query.*;
 
-public class BusinessUnitDeletedMessagePayloadQueryBuilderDsl {
+import java.util.function.Function;
+
+
+public class BusinessUnitDeletedMessagePayloadQueryBuilderDsl  {
     public BusinessUnitDeletedMessagePayloadQueryBuilderDsl() {
     }
 
@@ -12,9 +14,8 @@ public class BusinessUnitDeletedMessagePayloadQueryBuilderDsl {
     }
 
     public StringComparisonPredicateBuilder<BusinessUnitDeletedMessagePayloadQueryBuilderDsl> type() {
-        return new StringComparisonPredicateBuilder<>(
-            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("type")),
-            p -> new CombinationQueryPredicate<>(p, BusinessUnitDeletedMessagePayloadQueryBuilderDsl::of));
+        return new StringComparisonPredicateBuilder<>(BinaryQueryPredicate.of().left(new ConstantQueryPredicate("type")),
+        p -> new CombinationQueryPredicate<>(p, BusinessUnitDeletedMessagePayloadQueryBuilderDsl::of));
     }
-
+    
 }

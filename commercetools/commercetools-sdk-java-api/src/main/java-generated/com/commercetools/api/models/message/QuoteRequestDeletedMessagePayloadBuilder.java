@@ -1,8 +1,11 @@
-
 package com.commercetools.api.models.message;
 
+import com.commercetools.api.models.message.MessagePayload;
+import com.commercetools.api.models.message.QuoteRequestDeletedMessagePayload;
+import javax.annotation.Nullable;
 import java.util.*;
-
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -15,10 +18,16 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     QuoteRequestDeletedMessagePayload quoteRequestDeletedMessagePayload = QuoteRequestDeletedMessagePayload.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class QuoteRequestDeletedMessagePayloadBuilder implements Builder<QuoteRequestDeletedMessagePayload> {
+
+
+
 
     /**
      * builds QuoteRequestDeletedMessagePayload with checking for non-null required values
@@ -27,7 +36,7 @@ public class QuoteRequestDeletedMessagePayloadBuilder implements Builder<QuoteRe
     public QuoteRequestDeletedMessagePayload build() {
         return new QuoteRequestDeletedMessagePayloadImpl();
     }
-
+    
     /**
      * builds QuoteRequestDeletedMessagePayload without checking for non-null required values
      * @return QuoteRequestDeletedMessagePayload
@@ -38,7 +47,7 @@ public class QuoteRequestDeletedMessagePayloadBuilder implements Builder<QuoteRe
 
     /**
      * factory method for an instance of QuoteRequestDeletedMessagePayloadBuilder
-     * @return builder
+     * @return builder 
      */
     public static QuoteRequestDeletedMessagePayloadBuilder of() {
         return new QuoteRequestDeletedMessagePayloadBuilder();

@@ -1,10 +1,11 @@
-
 package com.commercetools.api.models.shopping_list;
 
-import java.util.*;
-
+import com.commercetools.api.models.shopping_list.ShoppingListUpdateAction;
+import com.commercetools.api.models.shopping_list.ShoppingListSetDeleteDaysAfterLastModificationAction;
 import javax.annotation.Nullable;
-
+import java.util.*;
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -17,34 +18,39 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     ShoppingListSetDeleteDaysAfterLastModificationAction shoppingListSetDeleteDaysAfterLastModificationAction = ShoppingListSetDeleteDaysAfterLastModificationAction.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
-public class ShoppingListSetDeleteDaysAfterLastModificationActionBuilder
-        implements Builder<ShoppingListSetDeleteDaysAfterLastModificationAction> {
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
+public class ShoppingListSetDeleteDaysAfterLastModificationActionBuilder implements Builder<ShoppingListSetDeleteDaysAfterLastModificationAction> {
 
+    
     @Nullable
     private Long deleteDaysAfterLastModification;
 
+    
     /**
      *  <p>Value to set. If empty, any existing value will be removed.</p>
      * @param deleteDaysAfterLastModification value to be set
      * @return Builder
      */
-
-    public ShoppingListSetDeleteDaysAfterLastModificationActionBuilder deleteDaysAfterLastModification(
-            @Nullable final Long deleteDaysAfterLastModification) {
+    
+    public ShoppingListSetDeleteDaysAfterLastModificationActionBuilder deleteDaysAfterLastModification(@Nullable final Long deleteDaysAfterLastModification) {
         this.deleteDaysAfterLastModification = deleteDaysAfterLastModification;
         return this;
     }
+    
+    
 
     /**
      *  <p>Value to set. If empty, any existing value will be removed.</p>
      * @return deleteDaysAfterLastModification
      */
-
+    
     @Nullable
-    public Long getDeleteDaysAfterLastModification() {
+    public Long getDeleteDaysAfterLastModification(){
         return this.deleteDaysAfterLastModification;
     }
 
@@ -55,7 +61,7 @@ public class ShoppingListSetDeleteDaysAfterLastModificationActionBuilder
     public ShoppingListSetDeleteDaysAfterLastModificationAction build() {
         return new ShoppingListSetDeleteDaysAfterLastModificationActionImpl(deleteDaysAfterLastModification);
     }
-
+    
     /**
      * builds ShoppingListSetDeleteDaysAfterLastModificationAction without checking for non-null required values
      * @return ShoppingListSetDeleteDaysAfterLastModificationAction
@@ -66,7 +72,7 @@ public class ShoppingListSetDeleteDaysAfterLastModificationActionBuilder
 
     /**
      * factory method for an instance of ShoppingListSetDeleteDaysAfterLastModificationActionBuilder
-     * @return builder
+     * @return builder 
      */
     public static ShoppingListSetDeleteDaysAfterLastModificationActionBuilder of() {
         return new ShoppingListSetDeleteDaysAfterLastModificationActionBuilder();
@@ -77,8 +83,7 @@ public class ShoppingListSetDeleteDaysAfterLastModificationActionBuilder
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static ShoppingListSetDeleteDaysAfterLastModificationActionBuilder of(
-            final ShoppingListSetDeleteDaysAfterLastModificationAction template) {
+    public static ShoppingListSetDeleteDaysAfterLastModificationActionBuilder of(final ShoppingListSetDeleteDaysAfterLastModificationAction template) {
         ShoppingListSetDeleteDaysAfterLastModificationActionBuilder builder = new ShoppingListSetDeleteDaysAfterLastModificationActionBuilder();
         builder.deleteDaysAfterLastModification = template.getDeleteDaysAfterLastModification();
         return builder;

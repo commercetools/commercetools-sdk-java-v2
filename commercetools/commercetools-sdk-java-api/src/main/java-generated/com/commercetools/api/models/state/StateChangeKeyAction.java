@@ -1,17 +1,20 @@
-
 package com.commercetools.api.models.state;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
+import com.commercetools.api.models.state.StateUpdateAction;
+import com.commercetools.api.models.state.StateChangeKeyActionImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * StateChangeKeyAction
@@ -24,9 +27,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .key("{key}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = StateChangeKeyActionImpl.class)
 public interface StateChangeKeyAction extends StateUpdateAction {
 
@@ -47,16 +53,18 @@ public interface StateChangeKeyAction extends StateUpdateAction {
      *  <p>New value to set. Must not be empty.</p>
      * @param key value to be set
      */
-
+    
     public void setKey(final String key);
+    
 
     /**
      * factory method
      * @return instance of StateChangeKeyAction
      */
-    public static StateChangeKeyAction of() {
+    public static StateChangeKeyAction of(){
         return new StateChangeKeyActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy StateChangeKeyAction
@@ -91,7 +99,7 @@ public interface StateChangeKeyAction extends StateUpdateAction {
     public static StateChangeKeyActionBuilder builder() {
         return StateChangeKeyActionBuilder.of();
     }
-
+    
     /**
      * create builder for StateChangeKeyAction instance
      * @param template instance with prefilled values for the builder
@@ -100,6 +108,7 @@ public interface StateChangeKeyAction extends StateUpdateAction {
     public static StateChangeKeyActionBuilder builder(final StateChangeKeyAction template) {
         return StateChangeKeyActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -110,7 +119,7 @@ public interface StateChangeKeyAction extends StateUpdateAction {
     default <T> T withStateChangeKeyAction(Function<StateChangeKeyAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

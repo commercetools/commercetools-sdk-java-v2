@@ -1,16 +1,20 @@
-
 package com.commercetools.api.models.customer;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
+import com.commercetools.api.models.customer.CustomerUpdateAction;
+import com.commercetools.api.models.customer.CustomerSetSalutationActionImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * CustomerSetSalutationAction
@@ -22,9 +26,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     CustomerSetSalutationAction customerSetSalutationAction = CustomerSetSalutationAction.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = CustomerSetSalutationActionImpl.class)
 public interface CustomerSetSalutationAction extends CustomerUpdateAction {
 
@@ -37,7 +44,7 @@ public interface CustomerSetSalutationAction extends CustomerUpdateAction {
      *  <p>Value to set. If empty, any existing value is removed.</p>
      * @return salutation
      */
-
+    
     @JsonProperty("salutation")
     public String getSalutation();
 
@@ -45,16 +52,18 @@ public interface CustomerSetSalutationAction extends CustomerUpdateAction {
      *  <p>Value to set. If empty, any existing value is removed.</p>
      * @param salutation value to be set
      */
-
+    
     public void setSalutation(final String salutation);
+    
 
     /**
      * factory method
      * @return instance of CustomerSetSalutationAction
      */
-    public static CustomerSetSalutationAction of() {
+    public static CustomerSetSalutationAction of(){
         return new CustomerSetSalutationActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy CustomerSetSalutationAction
@@ -89,7 +98,7 @@ public interface CustomerSetSalutationAction extends CustomerUpdateAction {
     public static CustomerSetSalutationActionBuilder builder() {
         return CustomerSetSalutationActionBuilder.of();
     }
-
+    
     /**
      * create builder for CustomerSetSalutationAction instance
      * @param template instance with prefilled values for the builder
@@ -98,6 +107,7 @@ public interface CustomerSetSalutationAction extends CustomerUpdateAction {
     public static CustomerSetSalutationActionBuilder builder(final CustomerSetSalutationAction template) {
         return CustomerSetSalutationActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -108,7 +118,7 @@ public interface CustomerSetSalutationAction extends CustomerUpdateAction {
     default <T> T withCustomerSetSalutationAction(Function<CustomerSetSalutationAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

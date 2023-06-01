@@ -1,8 +1,11 @@
-
 package com.commercetools.api.models.cart_discount;
 
+import com.commercetools.api.models.cart_discount.CartDiscountValueDraft;
+import com.commercetools.api.models.cart_discount.CartDiscountValueRelativeDraft;
+import javax.annotation.Nullable;
 import java.util.*;
-
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -16,30 +19,39 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .permyriad(0.3)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class CartDiscountValueRelativeDraftBuilder implements Builder<CartDiscountValueRelativeDraft> {
 
+    
+    
     private Long permyriad;
 
+    
     /**
      *  <p>Fraction (per ten thousand) the price is reduced by. For example, <code>1000</code> will result in a 10% price reduction.</p>
      * @param permyriad value to be set
      * @return Builder
      */
-
-    public CartDiscountValueRelativeDraftBuilder permyriad(final Long permyriad) {
+    
+    public CartDiscountValueRelativeDraftBuilder permyriad( final Long permyriad) {
         this.permyriad = permyriad;
         return this;
     }
+    
+    
 
     /**
      *  <p>Fraction (per ten thousand) the price is reduced by. For example, <code>1000</code> will result in a 10% price reduction.</p>
      * @return permyriad
      */
-
-    public Long getPermyriad() {
+    
+    
+    public Long getPermyriad(){
         return this.permyriad;
     }
 
@@ -51,7 +63,7 @@ public class CartDiscountValueRelativeDraftBuilder implements Builder<CartDiscou
         Objects.requireNonNull(permyriad, CartDiscountValueRelativeDraft.class + ": permyriad is missing");
         return new CartDiscountValueRelativeDraftImpl(permyriad);
     }
-
+    
     /**
      * builds CartDiscountValueRelativeDraft without checking for non-null required values
      * @return CartDiscountValueRelativeDraft
@@ -62,7 +74,7 @@ public class CartDiscountValueRelativeDraftBuilder implements Builder<CartDiscou
 
     /**
      * factory method for an instance of CartDiscountValueRelativeDraftBuilder
-     * @return builder
+     * @return builder 
      */
     public static CartDiscountValueRelativeDraftBuilder of() {
         return new CartDiscountValueRelativeDraftBuilder();

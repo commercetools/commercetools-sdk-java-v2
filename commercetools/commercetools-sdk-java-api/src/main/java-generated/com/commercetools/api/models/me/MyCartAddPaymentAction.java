@@ -1,19 +1,21 @@
-
 package com.commercetools.api.models.me;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
+import com.commercetools.api.models.me.MyCartUpdateAction;
 import com.commercetools.api.models.payment.PaymentResourceIdentifier;
+import com.commercetools.api.models.me.MyCartAddPaymentActionImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * MyCartAddPaymentAction
@@ -26,9 +28,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .payment(paymentBuilder -> paymentBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = MyCartAddPaymentActionImpl.class)
 public interface MyCartAddPaymentAction extends MyCartUpdateAction {
 
@@ -50,16 +55,18 @@ public interface MyCartAddPaymentAction extends MyCartUpdateAction {
      *  <p>Payment to add to the Cart. Must not be assigned to another Order or active Cart already.</p>
      * @param payment value to be set
      */
-
+    
     public void setPayment(final PaymentResourceIdentifier payment);
+    
 
     /**
      * factory method
      * @return instance of MyCartAddPaymentAction
      */
-    public static MyCartAddPaymentAction of() {
+    public static MyCartAddPaymentAction of(){
         return new MyCartAddPaymentActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy MyCartAddPaymentAction
@@ -83,8 +90,7 @@ public interface MyCartAddPaymentAction extends MyCartUpdateAction {
             return null;
         }
         MyCartAddPaymentActionImpl instance = new MyCartAddPaymentActionImpl();
-        instance.setPayment(
-            com.commercetools.api.models.payment.PaymentResourceIdentifier.deepCopy(template.getPayment()));
+        instance.setPayment(com.commercetools.api.models.payment.PaymentResourceIdentifier.deepCopy(template.getPayment()));
         return instance;
     }
 
@@ -95,7 +101,7 @@ public interface MyCartAddPaymentAction extends MyCartUpdateAction {
     public static MyCartAddPaymentActionBuilder builder() {
         return MyCartAddPaymentActionBuilder.of();
     }
-
+    
     /**
      * create builder for MyCartAddPaymentAction instance
      * @param template instance with prefilled values for the builder
@@ -104,6 +110,7 @@ public interface MyCartAddPaymentAction extends MyCartUpdateAction {
     public static MyCartAddPaymentActionBuilder builder(final MyCartAddPaymentAction template) {
         return MyCartAddPaymentActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -114,7 +121,7 @@ public interface MyCartAddPaymentAction extends MyCartUpdateAction {
     default <T> T withMyCartAddPaymentAction(Function<MyCartAddPaymentAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

@@ -1,8 +1,11 @@
-
 package com.commercetools.history.models.change;
 
+import com.commercetools.history.models.change.Change;
+import com.commercetools.history.models.change.SetApplicationVersionChange;
+import javax.annotation.Nullable;
 import java.util.*;
-
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -18,74 +21,95 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .nextValue(1)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class SetApplicationVersionChangeBuilder implements Builder<SetApplicationVersionChange> {
 
+    
+    
     private String change;
-
+    
+    
+    
     private Integer previousValue;
-
+    
+    
+    
     private Integer nextValue;
 
+    
     /**
      *  <p>Internal Update action for <code>setApplicationVersion</code></p>
      * @param change value to be set
      * @return Builder
      */
-
-    public SetApplicationVersionChangeBuilder change(final String change) {
+    
+    public SetApplicationVersionChangeBuilder change( final String change) {
         this.change = change;
         return this;
     }
-
+    
+    
+    
+    
     /**
      * set the value to the previousValue
      * @param previousValue value to be set
      * @return Builder
      */
-
-    public SetApplicationVersionChangeBuilder previousValue(final Integer previousValue) {
+    
+    public SetApplicationVersionChangeBuilder previousValue( final Integer previousValue) {
         this.previousValue = previousValue;
         return this;
     }
-
+    
+    
+    
+    
     /**
      * set the value to the nextValue
      * @param nextValue value to be set
      * @return Builder
      */
-
-    public SetApplicationVersionChangeBuilder nextValue(final Integer nextValue) {
+    
+    public SetApplicationVersionChangeBuilder nextValue( final Integer nextValue) {
         this.nextValue = nextValue;
         return this;
     }
+    
+    
 
     /**
      *  <p>Internal Update action for <code>setApplicationVersion</code></p>
      * @return change
      */
-
-    public String getChange() {
+    
+    
+    public String getChange(){
         return this.change;
     }
-
+    
     /**
      * value of previousValue}
      * @return previousValue
      */
-
-    public Integer getPreviousValue() {
+    
+    
+    public Integer getPreviousValue(){
         return this.previousValue;
     }
-
+    
     /**
      * value of nextValue}
      * @return nextValue
      */
-
-    public Integer getNextValue() {
+    
+    
+    public Integer getNextValue(){
         return this.nextValue;
     }
 
@@ -99,7 +123,7 @@ public class SetApplicationVersionChangeBuilder implements Builder<SetApplicatio
         Objects.requireNonNull(nextValue, SetApplicationVersionChange.class + ": nextValue is missing");
         return new SetApplicationVersionChangeImpl(change, previousValue, nextValue);
     }
-
+    
     /**
      * builds SetApplicationVersionChange without checking for non-null required values
      * @return SetApplicationVersionChange
@@ -110,7 +134,7 @@ public class SetApplicationVersionChangeBuilder implements Builder<SetApplicatio
 
     /**
      * factory method for an instance of SetApplicationVersionChangeBuilder
-     * @return builder
+     * @return builder 
      */
     public static SetApplicationVersionChangeBuilder of() {
         return new SetApplicationVersionChangeBuilder();

@@ -1,19 +1,21 @@
-
 package com.commercetools.history.models.change;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
+import com.commercetools.history.models.change.Change;
 import com.commercetools.history.models.common.Price;
+import com.commercetools.history.models.change.ChangePriceChangeImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * ChangePriceChange
@@ -30,9 +32,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .nextValue(nextValueBuilder -> nextValueBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = ChangePriceChangeImpl.class)
 public interface ChangePriceChange extends Change {
 
@@ -48,7 +53,6 @@ public interface ChangePriceChange extends Change {
     @NotNull
     @JsonProperty("type")
     public String getType();
-
     /**
      *  <p>Update action for changing prices</p>
      * @return change
@@ -56,7 +60,6 @@ public interface ChangePriceChange extends Change {
     @NotNull
     @JsonProperty("change")
     public String getChange();
-
     /**
      *
      * @return catalogData
@@ -64,7 +67,6 @@ public interface ChangePriceChange extends Change {
     @NotNull
     @JsonProperty("catalogData")
     public String getCatalogData();
-
     /**
      *
      * @return priceId
@@ -72,7 +74,6 @@ public interface ChangePriceChange extends Change {
     @NotNull
     @JsonProperty("priceId")
     public String getPriceId();
-
     /**
      *
      * @return previousValue
@@ -81,7 +82,6 @@ public interface ChangePriceChange extends Change {
     @Valid
     @JsonProperty("previousValue")
     public Price getPreviousValue();
-
     /**
      *
      * @return nextValue
@@ -95,44 +95,50 @@ public interface ChangePriceChange extends Change {
      *  <p>Update action for changing prices</p>
      * @param change value to be set
      */
-
+    
     public void setChange(final String change);
-
+    
+    
     /**
      * set catalogData
      * @param catalogData value to be set
      */
-
+    
     public void setCatalogData(final String catalogData);
-
+    
+    
     /**
      * set priceId
      * @param priceId value to be set
      */
-
+    
     public void setPriceId(final String priceId);
-
+    
+    
     /**
      * set previousValue
      * @param previousValue value to be set
      */
-
+    
     public void setPreviousValue(final Price previousValue);
-
+    
+    
     /**
      * set nextValue
      * @param nextValue value to be set
      */
-
+    
     public void setNextValue(final Price nextValue);
+    
 
     /**
      * factory method
      * @return instance of ChangePriceChange
      */
-    public static ChangePriceChange of() {
+    public static ChangePriceChange of(){
         return new ChangePriceChangeImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy ChangePriceChange
@@ -175,7 +181,7 @@ public interface ChangePriceChange extends Change {
     public static ChangePriceChangeBuilder builder() {
         return ChangePriceChangeBuilder.of();
     }
-
+    
     /**
      * create builder for ChangePriceChange instance
      * @param template instance with prefilled values for the builder
@@ -184,6 +190,7 @@ public interface ChangePriceChange extends Change {
     public static ChangePriceChangeBuilder builder(final ChangePriceChange template) {
         return ChangePriceChangeBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -194,7 +201,7 @@ public interface ChangePriceChange extends Change {
     default <T> T withChangePriceChange(Function<ChangePriceChange, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

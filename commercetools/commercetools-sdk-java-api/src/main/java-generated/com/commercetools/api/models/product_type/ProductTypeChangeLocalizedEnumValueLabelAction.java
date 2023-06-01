@@ -1,18 +1,21 @@
-
 package com.commercetools.api.models.product_type;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
+import com.commercetools.api.models.product_type.AttributeLocalizedEnumValue;
+import com.commercetools.api.models.product_type.ProductTypeUpdateAction;
+import com.commercetools.api.models.product_type.ProductTypeChangeLocalizedEnumValueLabelActionImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Updates the label of a single enum <code>value</code> in an AttributeLocalizedEnumType AttributeDefinition, or AttributeSetType of AttributeLocalizedEnumType AttributeDefinition.</p>
@@ -27,9 +30,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .newValue(newValueBuilder -> newValueBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = ProductTypeChangeLocalizedEnumValueLabelActionImpl.class)
 public interface ProductTypeChangeLocalizedEnumValueLabelAction extends ProductTypeUpdateAction {
 
@@ -45,7 +51,6 @@ public interface ProductTypeChangeLocalizedEnumValueLabelAction extends ProductT
     @NotNull
     @JsonProperty("attributeName")
     public String getAttributeName();
-
     /**
      *  <p>New value to set. Must be different from the existing value.</p>
      * @return newValue
@@ -59,31 +64,33 @@ public interface ProductTypeChangeLocalizedEnumValueLabelAction extends ProductT
      *  <p>Name of the AttributeDefinition to update.</p>
      * @param attributeName value to be set
      */
-
+    
     public void setAttributeName(final String attributeName);
-
+    
+    
     /**
      *  <p>New value to set. Must be different from the existing value.</p>
      * @param newValue value to be set
      */
-
+    
     public void setNewValue(final AttributeLocalizedEnumValue newValue);
+    
 
     /**
      * factory method
      * @return instance of ProductTypeChangeLocalizedEnumValueLabelAction
      */
-    public static ProductTypeChangeLocalizedEnumValueLabelAction of() {
+    public static ProductTypeChangeLocalizedEnumValueLabelAction of(){
         return new ProductTypeChangeLocalizedEnumValueLabelActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy ProductTypeChangeLocalizedEnumValueLabelAction
      * @param template instance to be copied
      * @return copy instance
      */
-    public static ProductTypeChangeLocalizedEnumValueLabelAction of(
-            final ProductTypeChangeLocalizedEnumValueLabelAction template) {
+    public static ProductTypeChangeLocalizedEnumValueLabelAction of(final ProductTypeChangeLocalizedEnumValueLabelAction template) {
         ProductTypeChangeLocalizedEnumValueLabelActionImpl instance = new ProductTypeChangeLocalizedEnumValueLabelActionImpl();
         instance.setAttributeName(template.getAttributeName());
         instance.setNewValue(template.getNewValue());
@@ -96,15 +103,13 @@ public interface ProductTypeChangeLocalizedEnumValueLabelAction extends ProductT
      * @return copy instance
      */
     @Nullable
-    public static ProductTypeChangeLocalizedEnumValueLabelAction deepCopy(
-            @Nullable final ProductTypeChangeLocalizedEnumValueLabelAction template) {
+    public static ProductTypeChangeLocalizedEnumValueLabelAction deepCopy(@Nullable final ProductTypeChangeLocalizedEnumValueLabelAction template) {
         if (template == null) {
             return null;
         }
         ProductTypeChangeLocalizedEnumValueLabelActionImpl instance = new ProductTypeChangeLocalizedEnumValueLabelActionImpl();
         instance.setAttributeName(template.getAttributeName());
-        instance.setNewValue(
-            com.commercetools.api.models.product_type.AttributeLocalizedEnumValue.deepCopy(template.getNewValue()));
+        instance.setNewValue(com.commercetools.api.models.product_type.AttributeLocalizedEnumValue.deepCopy(template.getNewValue()));
         return instance;
     }
 
@@ -115,16 +120,16 @@ public interface ProductTypeChangeLocalizedEnumValueLabelAction extends ProductT
     public static ProductTypeChangeLocalizedEnumValueLabelActionBuilder builder() {
         return ProductTypeChangeLocalizedEnumValueLabelActionBuilder.of();
     }
-
+    
     /**
      * create builder for ProductTypeChangeLocalizedEnumValueLabelAction instance
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static ProductTypeChangeLocalizedEnumValueLabelActionBuilder builder(
-            final ProductTypeChangeLocalizedEnumValueLabelAction template) {
+    public static ProductTypeChangeLocalizedEnumValueLabelActionBuilder builder(final ProductTypeChangeLocalizedEnumValueLabelAction template) {
         return ProductTypeChangeLocalizedEnumValueLabelActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -132,11 +137,10 @@ public interface ProductTypeChangeLocalizedEnumValueLabelAction extends ProductT
      * @param helper function to map the object
      * @return mapped value
      */
-    default <T> T withProductTypeChangeLocalizedEnumValueLabelAction(
-            Function<ProductTypeChangeLocalizedEnumValueLabelAction, T> helper) {
+    default <T> T withProductTypeChangeLocalizedEnumValueLabelAction(Function<ProductTypeChangeLocalizedEnumValueLabelAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

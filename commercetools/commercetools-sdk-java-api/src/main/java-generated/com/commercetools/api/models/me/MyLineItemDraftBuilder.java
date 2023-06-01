@@ -1,11 +1,14 @@
-
 package com.commercetools.api.models.me;
 
+import com.commercetools.api.models.cart.ItemShippingDetailsDraft;
+import com.commercetools.api.models.channel.ChannelResourceIdentifier;
+import com.commercetools.api.models.type.CustomFieldsDraft;
+import java.time.ZonedDateTime;
+import com.commercetools.api.models.me.MyLineItemDraft;
+import javax.annotation.Nullable;
 import java.util.*;
 import java.util.function.Function;
-
-import javax.annotation.Nullable;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -18,334 +21,357 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     MyLineItemDraft myLineItemDraft = MyLineItemDraft.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class MyLineItemDraftBuilder implements Builder<MyLineItemDraft> {
 
+    
     @Nullable
     private String productId;
-
+    
+    
     @Nullable
     private Long variantId;
-
+    
+    
     @Nullable
     private String sku;
-
+    
+    
     @Nullable
     private Long quantity;
-
+    
+    
     @Nullable
     private java.time.ZonedDateTime addedAt;
-
+    
+    
     @Nullable
     private com.commercetools.api.models.channel.ChannelResourceIdentifier supplyChannel;
-
+    
+    
     @Nullable
     private com.commercetools.api.models.channel.ChannelResourceIdentifier distributionChannel;
-
+    
+    
     @Nullable
     private com.commercetools.api.models.cart.ItemShippingDetailsDraft shippingDetails;
-
+    
+    
     @Nullable
     private com.commercetools.api.models.type.CustomFieldsDraft custom;
 
+    
     /**
      *  <p><code>id</code> of the Product.</p>
      * @param productId value to be set
      * @return Builder
      */
-
+    
     public MyLineItemDraftBuilder productId(@Nullable final String productId) {
         this.productId = productId;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p><code>id</code> of the ProductVariant in the Product. If not provided, the Master Variant is used.</p>
      * @param variantId value to be set
      * @return Builder
      */
-
+    
     public MyLineItemDraftBuilder variantId(@Nullable final Long variantId) {
         this.variantId = variantId;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p><code>sku</code> of the ProductVariant.</p>
      * @param sku value to be set
      * @return Builder
      */
-
+    
     public MyLineItemDraftBuilder sku(@Nullable final String sku) {
         this.sku = sku;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Number of Product Variants to add to the Cart.</p>
      * @param quantity value to be set
      * @return Builder
      */
-
+    
     public MyLineItemDraftBuilder quantity(@Nullable final Long quantity) {
         this.quantity = quantity;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Date and time (UTC) the Product Variant is added to the Cart. If not set, it defaults to the current date and time.</p>
      *  <p>Optional for backwards compatibility reasons.</p>
      * @param addedAt value to be set
      * @return Builder
      */
-
+    
     public MyLineItemDraftBuilder addedAt(@Nullable final java.time.ZonedDateTime addedAt) {
         this.addedAt = addedAt;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Used to identify Inventory entries that must be reserved. The Channel must have the <code>InventorySupply</code> ChannelRoleEnum.</p>
      * @param builder function to build the supplyChannel value
      * @return Builder
      */
-
-    public MyLineItemDraftBuilder supplyChannel(
-            Function<com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder, com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder> builder) {
-        this.supplyChannel = builder.apply(com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder.of())
-                .build();
+    
+    public MyLineItemDraftBuilder supplyChannel(Function<com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder, com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder> builder) {
+        this.supplyChannel = builder.apply(com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder.of()).build();
         return this;
     }
-
+    
     /**
      *  <p>Used to identify Inventory entries that must be reserved. The Channel must have the <code>InventorySupply</code> ChannelRoleEnum.</p>
      * @param builder function to build the supplyChannel value
      * @return Builder
      */
-
-    public MyLineItemDraftBuilder withSupplyChannel(
-            Function<com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder, com.commercetools.api.models.channel.ChannelResourceIdentifier> builder) {
+    
+    public MyLineItemDraftBuilder withSupplyChannel(Function<com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder, com.commercetools.api.models.channel.ChannelResourceIdentifier> builder) {
         this.supplyChannel = builder.apply(com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder.of());
         return this;
     }
-
+                    
     /**
      *  <p>Used to identify Inventory entries that must be reserved. The Channel must have the <code>InventorySupply</code> ChannelRoleEnum.</p>
      * @param supplyChannel value to be set
      * @return Builder
      */
-
-    public MyLineItemDraftBuilder supplyChannel(
-            @Nullable final com.commercetools.api.models.channel.ChannelResourceIdentifier supplyChannel) {
+    
+    public MyLineItemDraftBuilder supplyChannel(@Nullable final com.commercetools.api.models.channel.ChannelResourceIdentifier supplyChannel) {
         this.supplyChannel = supplyChannel;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Used to select a Product Price. The Channel must have the <code>ProductDistribution</code> ChannelRoleEnum.</p>
      *  <p>If the Cart is bound to a Store with <code>distributionChannels</code> set, the Channel must match one of the Store's distribution channels.</p>
      * @param builder function to build the distributionChannel value
      * @return Builder
      */
-
-    public MyLineItemDraftBuilder distributionChannel(
-            Function<com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder, com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder> builder) {
-        this.distributionChannel = builder
-                .apply(com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder.of())
-                .build();
+    
+    public MyLineItemDraftBuilder distributionChannel(Function<com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder, com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder> builder) {
+        this.distributionChannel = builder.apply(com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder.of()).build();
         return this;
     }
-
+    
     /**
      *  <p>Used to select a Product Price. The Channel must have the <code>ProductDistribution</code> ChannelRoleEnum.</p>
      *  <p>If the Cart is bound to a Store with <code>distributionChannels</code> set, the Channel must match one of the Store's distribution channels.</p>
      * @param builder function to build the distributionChannel value
      * @return Builder
      */
-
-    public MyLineItemDraftBuilder withDistributionChannel(
-            Function<com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder, com.commercetools.api.models.channel.ChannelResourceIdentifier> builder) {
-        this.distributionChannel = builder
-                .apply(com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder.of());
+    
+    public MyLineItemDraftBuilder withDistributionChannel(Function<com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder, com.commercetools.api.models.channel.ChannelResourceIdentifier> builder) {
+        this.distributionChannel = builder.apply(com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder.of());
         return this;
     }
-
+                    
     /**
      *  <p>Used to select a Product Price. The Channel must have the <code>ProductDistribution</code> ChannelRoleEnum.</p>
      *  <p>If the Cart is bound to a Store with <code>distributionChannels</code> set, the Channel must match one of the Store's distribution channels.</p>
      * @param distributionChannel value to be set
      * @return Builder
      */
-
-    public MyLineItemDraftBuilder distributionChannel(
-            @Nullable final com.commercetools.api.models.channel.ChannelResourceIdentifier distributionChannel) {
+    
+    public MyLineItemDraftBuilder distributionChannel(@Nullable final com.commercetools.api.models.channel.ChannelResourceIdentifier distributionChannel) {
         this.distributionChannel = distributionChannel;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Container for Line Item-specific addresses.</p>
      * @param builder function to build the shippingDetails value
      * @return Builder
      */
-
-    public MyLineItemDraftBuilder shippingDetails(
-            Function<com.commercetools.api.models.cart.ItemShippingDetailsDraftBuilder, com.commercetools.api.models.cart.ItemShippingDetailsDraftBuilder> builder) {
-        this.shippingDetails = builder.apply(com.commercetools.api.models.cart.ItemShippingDetailsDraftBuilder.of())
-                .build();
+    
+    public MyLineItemDraftBuilder shippingDetails(Function<com.commercetools.api.models.cart.ItemShippingDetailsDraftBuilder, com.commercetools.api.models.cart.ItemShippingDetailsDraftBuilder> builder) {
+        this.shippingDetails = builder.apply(com.commercetools.api.models.cart.ItemShippingDetailsDraftBuilder.of()).build();
         return this;
     }
-
+    
     /**
      *  <p>Container for Line Item-specific addresses.</p>
      * @param builder function to build the shippingDetails value
      * @return Builder
      */
-
-    public MyLineItemDraftBuilder withShippingDetails(
-            Function<com.commercetools.api.models.cart.ItemShippingDetailsDraftBuilder, com.commercetools.api.models.cart.ItemShippingDetailsDraft> builder) {
+    
+    public MyLineItemDraftBuilder withShippingDetails(Function<com.commercetools.api.models.cart.ItemShippingDetailsDraftBuilder, com.commercetools.api.models.cart.ItemShippingDetailsDraft> builder) {
         this.shippingDetails = builder.apply(com.commercetools.api.models.cart.ItemShippingDetailsDraftBuilder.of());
         return this;
     }
-
+                    
     /**
      *  <p>Container for Line Item-specific addresses.</p>
      * @param shippingDetails value to be set
      * @return Builder
      */
-
-    public MyLineItemDraftBuilder shippingDetails(
-            @Nullable final com.commercetools.api.models.cart.ItemShippingDetailsDraft shippingDetails) {
+    
+    public MyLineItemDraftBuilder shippingDetails(@Nullable final com.commercetools.api.models.cart.ItemShippingDetailsDraft shippingDetails) {
         this.shippingDetails = shippingDetails;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Custom Fields for the Cart.</p>
      * @param builder function to build the custom value
      * @return Builder
      */
-
-    public MyLineItemDraftBuilder custom(
-            Function<com.commercetools.api.models.type.CustomFieldsDraftBuilder, com.commercetools.api.models.type.CustomFieldsDraftBuilder> builder) {
+    
+    public MyLineItemDraftBuilder custom(Function<com.commercetools.api.models.type.CustomFieldsDraftBuilder, com.commercetools.api.models.type.CustomFieldsDraftBuilder> builder) {
         this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsDraftBuilder.of()).build();
         return this;
     }
-
+    
     /**
      *  <p>Custom Fields for the Cart.</p>
      * @param builder function to build the custom value
      * @return Builder
      */
-
-    public MyLineItemDraftBuilder withCustom(
-            Function<com.commercetools.api.models.type.CustomFieldsDraftBuilder, com.commercetools.api.models.type.CustomFieldsDraft> builder) {
+    
+    public MyLineItemDraftBuilder withCustom(Function<com.commercetools.api.models.type.CustomFieldsDraftBuilder, com.commercetools.api.models.type.CustomFieldsDraft> builder) {
         this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsDraftBuilder.of());
         return this;
     }
-
+                    
     /**
      *  <p>Custom Fields for the Cart.</p>
      * @param custom value to be set
      * @return Builder
      */
-
+    
     public MyLineItemDraftBuilder custom(@Nullable final com.commercetools.api.models.type.CustomFieldsDraft custom) {
         this.custom = custom;
         return this;
     }
+    
+    
 
     /**
      *  <p><code>id</code> of the Product.</p>
      * @return productId
      */
-
+    
     @Nullable
-    public String getProductId() {
+    public String getProductId(){
         return this.productId;
     }
-
+    
     /**
      *  <p><code>id</code> of the ProductVariant in the Product. If not provided, the Master Variant is used.</p>
      * @return variantId
      */
-
+    
     @Nullable
-    public Long getVariantId() {
+    public Long getVariantId(){
         return this.variantId;
     }
-
+    
     /**
      *  <p><code>sku</code> of the ProductVariant.</p>
      * @return sku
      */
-
+    
     @Nullable
-    public String getSku() {
+    public String getSku(){
         return this.sku;
     }
-
+    
     /**
      *  <p>Number of Product Variants to add to the Cart.</p>
      * @return quantity
      */
-
+    
     @Nullable
-    public Long getQuantity() {
+    public Long getQuantity(){
         return this.quantity;
     }
-
+    
     /**
      *  <p>Date and time (UTC) the Product Variant is added to the Cart. If not set, it defaults to the current date and time.</p>
      *  <p>Optional for backwards compatibility reasons.</p>
      * @return addedAt
      */
-
+    
     @Nullable
-    public java.time.ZonedDateTime getAddedAt() {
+    public java.time.ZonedDateTime getAddedAt(){
         return this.addedAt;
     }
-
+    
     /**
      *  <p>Used to identify Inventory entries that must be reserved. The Channel must have the <code>InventorySupply</code> ChannelRoleEnum.</p>
      * @return supplyChannel
      */
-
+    
     @Nullable
-    public com.commercetools.api.models.channel.ChannelResourceIdentifier getSupplyChannel() {
+    public com.commercetools.api.models.channel.ChannelResourceIdentifier getSupplyChannel(){
         return this.supplyChannel;
     }
-
+    
     /**
      *  <p>Used to select a Product Price. The Channel must have the <code>ProductDistribution</code> ChannelRoleEnum.</p>
      *  <p>If the Cart is bound to a Store with <code>distributionChannels</code> set, the Channel must match one of the Store's distribution channels.</p>
      * @return distributionChannel
      */
-
+    
     @Nullable
-    public com.commercetools.api.models.channel.ChannelResourceIdentifier getDistributionChannel() {
+    public com.commercetools.api.models.channel.ChannelResourceIdentifier getDistributionChannel(){
         return this.distributionChannel;
     }
-
+    
     /**
      *  <p>Container for Line Item-specific addresses.</p>
      * @return shippingDetails
      */
-
+    
     @Nullable
-    public com.commercetools.api.models.cart.ItemShippingDetailsDraft getShippingDetails() {
+    public com.commercetools.api.models.cart.ItemShippingDetailsDraft getShippingDetails(){
         return this.shippingDetails;
     }
-
+    
     /**
      *  <p>Custom Fields for the Cart.</p>
      * @return custom
      */
-
+    
     @Nullable
-    public com.commercetools.api.models.type.CustomFieldsDraft getCustom() {
+    public com.commercetools.api.models.type.CustomFieldsDraft getCustom(){
         return this.custom;
     }
 
@@ -354,22 +380,20 @@ public class MyLineItemDraftBuilder implements Builder<MyLineItemDraft> {
      * @return MyLineItemDraft
      */
     public MyLineItemDraft build() {
-        return new MyLineItemDraftImpl(productId, variantId, sku, quantity, addedAt, supplyChannel, distributionChannel,
-            shippingDetails, custom);
+        return new MyLineItemDraftImpl(productId, variantId, sku, quantity, addedAt, supplyChannel, distributionChannel, shippingDetails, custom);
     }
-
+    
     /**
      * builds MyLineItemDraft without checking for non-null required values
      * @return MyLineItemDraft
      */
     public MyLineItemDraft buildUnchecked() {
-        return new MyLineItemDraftImpl(productId, variantId, sku, quantity, addedAt, supplyChannel, distributionChannel,
-            shippingDetails, custom);
+        return new MyLineItemDraftImpl(productId, variantId, sku, quantity, addedAt, supplyChannel, distributionChannel, shippingDetails, custom);
     }
 
     /**
      * factory method for an instance of MyLineItemDraftBuilder
-     * @return builder
+     * @return builder 
      */
     public static MyLineItemDraftBuilder of() {
         return new MyLineItemDraftBuilder();

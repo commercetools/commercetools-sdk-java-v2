@@ -1,8 +1,12 @@
-
 package com.commercetools.history.models.change;
 
+import com.commercetools.history.models.change.Change;
+import com.commercetools.history.models.common.RoundingMode;
+import com.commercetools.history.models.change.ChangeTaxRoundingModeChange;
+import javax.annotation.Nullable;
 import java.util.*;
-
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -18,76 +22,95 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .nextValue(RoundingMode.HALF_EVEN)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class ChangeTaxRoundingModeChangeBuilder implements Builder<ChangeTaxRoundingModeChange> {
 
+    
+    
     private String change;
-
+    
+    
+    
     private com.commercetools.history.models.common.RoundingMode previousValue;
-
+    
+    
+    
     private com.commercetools.history.models.common.RoundingMode nextValue;
 
+    
     /**
      *  <p>Shape of the action for <code>changeTaxRoundingMode</code></p>
      * @param change value to be set
      * @return Builder
      */
-
-    public ChangeTaxRoundingModeChangeBuilder change(final String change) {
+    
+    public ChangeTaxRoundingModeChangeBuilder change( final String change) {
         this.change = change;
         return this;
     }
-
+    
+    
+    
+    
     /**
      * set the value to the previousValue
      * @param previousValue value to be set
      * @return Builder
      */
-
-    public ChangeTaxRoundingModeChangeBuilder previousValue(
-            final com.commercetools.history.models.common.RoundingMode previousValue) {
+    
+    public ChangeTaxRoundingModeChangeBuilder previousValue( final com.commercetools.history.models.common.RoundingMode previousValue) {
         this.previousValue = previousValue;
         return this;
     }
-
+    
+    
+    
+    
     /**
      * set the value to the nextValue
      * @param nextValue value to be set
      * @return Builder
      */
-
-    public ChangeTaxRoundingModeChangeBuilder nextValue(
-            final com.commercetools.history.models.common.RoundingMode nextValue) {
+    
+    public ChangeTaxRoundingModeChangeBuilder nextValue( final com.commercetools.history.models.common.RoundingMode nextValue) {
         this.nextValue = nextValue;
         return this;
     }
+    
+    
 
     /**
      *  <p>Shape of the action for <code>changeTaxRoundingMode</code></p>
      * @return change
      */
-
-    public String getChange() {
+    
+    
+    public String getChange(){
         return this.change;
     }
-
+    
     /**
      * value of previousValue}
      * @return previousValue
      */
-
-    public com.commercetools.history.models.common.RoundingMode getPreviousValue() {
+    
+    
+    public com.commercetools.history.models.common.RoundingMode getPreviousValue(){
         return this.previousValue;
     }
-
+    
     /**
      * value of nextValue}
      * @return nextValue
      */
-
-    public com.commercetools.history.models.common.RoundingMode getNextValue() {
+    
+    
+    public com.commercetools.history.models.common.RoundingMode getNextValue(){
         return this.nextValue;
     }
 
@@ -101,7 +124,7 @@ public class ChangeTaxRoundingModeChangeBuilder implements Builder<ChangeTaxRoun
         Objects.requireNonNull(nextValue, ChangeTaxRoundingModeChange.class + ": nextValue is missing");
         return new ChangeTaxRoundingModeChangeImpl(change, previousValue, nextValue);
     }
-
+    
     /**
      * builds ChangeTaxRoundingModeChange without checking for non-null required values
      * @return ChangeTaxRoundingModeChange
@@ -112,7 +135,7 @@ public class ChangeTaxRoundingModeChangeBuilder implements Builder<ChangeTaxRoun
 
     /**
      * factory method for an instance of ChangeTaxRoundingModeChangeBuilder
-     * @return builder
+     * @return builder 
      */
     public static ChangeTaxRoundingModeChangeBuilder of() {
         return new ChangeTaxRoundingModeChangeBuilder();

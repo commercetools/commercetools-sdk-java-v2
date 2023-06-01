@@ -1,19 +1,22 @@
-
 package com.commercetools.api.models.quote;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-
+import com.commercetools.api.models.quote.QuoteUpdateAction;
 import com.commercetools.api.models.type.FieldContainer;
 import com.commercetools.api.models.type.TypeResourceIdentifier;
+import com.commercetools.api.models.quote.QuoteSetCustomTypeActionImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * QuoteSetCustomTypeAction
@@ -25,9 +28,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     QuoteSetCustomTypeAction quoteSetCustomTypeAction = QuoteSetCustomTypeAction.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = QuoteSetCustomTypeActionImpl.class)
 public interface QuoteSetCustomTypeAction extends QuoteUpdateAction {
 
@@ -43,7 +49,6 @@ public interface QuoteSetCustomTypeAction extends QuoteUpdateAction {
     @Valid
     @JsonProperty("type")
     public TypeResourceIdentifier getType();
-
     /**
      *  <p>Sets the Custom Fields fields for the Quote.</p>
      * @return fields
@@ -56,23 +61,26 @@ public interface QuoteSetCustomTypeAction extends QuoteUpdateAction {
      *  <p>Defines the Type that extends the Quote with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Quote.</p>
      * @param type value to be set
      */
-
+    
     public void setType(final TypeResourceIdentifier type);
-
+    
+    
     /**
      *  <p>Sets the Custom Fields fields for the Quote.</p>
      * @param fields value to be set
      */
-
+    
     public void setFields(final FieldContainer fields);
+    
 
     /**
      * factory method
      * @return instance of QuoteSetCustomTypeAction
      */
-    public static QuoteSetCustomTypeAction of() {
+    public static QuoteSetCustomTypeAction of(){
         return new QuoteSetCustomTypeActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy QuoteSetCustomTypeAction
@@ -109,7 +117,7 @@ public interface QuoteSetCustomTypeAction extends QuoteUpdateAction {
     public static QuoteSetCustomTypeActionBuilder builder() {
         return QuoteSetCustomTypeActionBuilder.of();
     }
-
+    
     /**
      * create builder for QuoteSetCustomTypeAction instance
      * @param template instance with prefilled values for the builder
@@ -118,6 +126,7 @@ public interface QuoteSetCustomTypeAction extends QuoteUpdateAction {
     public static QuoteSetCustomTypeActionBuilder builder(final QuoteSetCustomTypeAction template) {
         return QuoteSetCustomTypeActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -128,7 +137,7 @@ public interface QuoteSetCustomTypeAction extends QuoteUpdateAction {
     default <T> T withQuoteSetCustomTypeAction(Function<QuoteSetCustomTypeAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

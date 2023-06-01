@@ -1,17 +1,21 @@
-
 package com.commercetools.api.models.project;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
+import com.commercetools.api.models.project.ExternalOAuth;
+import com.commercetools.api.models.project.ProjectUpdateAction;
+import com.commercetools.api.models.project.ProjectSetExternalOAuthActionImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * ProjectSetExternalOAuthAction
@@ -23,9 +27,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     ProjectSetExternalOAuthAction projectSetExternalOAuthAction = ProjectSetExternalOAuthAction.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = ProjectSetExternalOAuthActionImpl.class)
 public interface ProjectSetExternalOAuthAction extends ProjectUpdateAction {
 
@@ -46,16 +53,18 @@ public interface ProjectSetExternalOAuthAction extends ProjectUpdateAction {
      *  <p>Value to set. If empty, any existing value will be removed.</p>
      * @param externalOAuth value to be set
      */
-
+    
     public void setExternalOAuth(final ExternalOAuth externalOAuth);
+    
 
     /**
      * factory method
      * @return instance of ProjectSetExternalOAuthAction
      */
-    public static ProjectSetExternalOAuthAction of() {
+    public static ProjectSetExternalOAuthAction of(){
         return new ProjectSetExternalOAuthActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy ProjectSetExternalOAuthAction
@@ -79,8 +88,7 @@ public interface ProjectSetExternalOAuthAction extends ProjectUpdateAction {
             return null;
         }
         ProjectSetExternalOAuthActionImpl instance = new ProjectSetExternalOAuthActionImpl();
-        instance.setExternalOAuth(
-            com.commercetools.api.models.project.ExternalOAuth.deepCopy(template.getExternalOAuth()));
+        instance.setExternalOAuth(com.commercetools.api.models.project.ExternalOAuth.deepCopy(template.getExternalOAuth()));
         return instance;
     }
 
@@ -91,7 +99,7 @@ public interface ProjectSetExternalOAuthAction extends ProjectUpdateAction {
     public static ProjectSetExternalOAuthActionBuilder builder() {
         return ProjectSetExternalOAuthActionBuilder.of();
     }
-
+    
     /**
      * create builder for ProjectSetExternalOAuthAction instance
      * @param template instance with prefilled values for the builder
@@ -100,6 +108,7 @@ public interface ProjectSetExternalOAuthAction extends ProjectUpdateAction {
     public static ProjectSetExternalOAuthActionBuilder builder(final ProjectSetExternalOAuthAction template) {
         return ProjectSetExternalOAuthActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -110,7 +119,7 @@ public interface ProjectSetExternalOAuthAction extends ProjectUpdateAction {
     default <T> T withProjectSetExternalOAuthAction(Function<ProjectSetExternalOAuthAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

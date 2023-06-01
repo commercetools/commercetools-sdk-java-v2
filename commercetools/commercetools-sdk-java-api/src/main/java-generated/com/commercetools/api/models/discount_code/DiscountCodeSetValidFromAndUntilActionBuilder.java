@@ -1,10 +1,12 @@
-
 package com.commercetools.api.models.discount_code;
 
-import java.util.*;
-
+import com.commercetools.api.models.discount_code.DiscountCodeUpdateAction;
+import java.time.ZonedDateTime;
+import com.commercetools.api.models.discount_code.DiscountCodeSetValidFromAndUntilAction;
 import javax.annotation.Nullable;
-
+import java.util.*;
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -17,57 +19,67 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     DiscountCodeSetValidFromAndUntilAction discountCodeSetValidFromAndUntilAction = DiscountCodeSetValidFromAndUntilAction.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class DiscountCodeSetValidFromAndUntilActionBuilder implements Builder<DiscountCodeSetValidFromAndUntilAction> {
 
+    
     @Nullable
     private java.time.ZonedDateTime validFrom;
-
+    
+    
     @Nullable
     private java.time.ZonedDateTime validUntil;
 
+    
     /**
      *  <p>Value to set that must be earlier than <code>validUntil</code>. If empty, any existing value will be removed.</p>
      * @param validFrom value to be set
      * @return Builder
      */
-
+    
     public DiscountCodeSetValidFromAndUntilActionBuilder validFrom(@Nullable final java.time.ZonedDateTime validFrom) {
         this.validFrom = validFrom;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Value to set that must be later than <code>validFrom</code>. If empty, any existing value will be removed.</p>
      * @param validUntil value to be set
      * @return Builder
      */
-
-    public DiscountCodeSetValidFromAndUntilActionBuilder validUntil(
-            @Nullable final java.time.ZonedDateTime validUntil) {
+    
+    public DiscountCodeSetValidFromAndUntilActionBuilder validUntil(@Nullable final java.time.ZonedDateTime validUntil) {
         this.validUntil = validUntil;
         return this;
     }
+    
+    
 
     /**
      *  <p>Value to set that must be earlier than <code>validUntil</code>. If empty, any existing value will be removed.</p>
      * @return validFrom
      */
-
+    
     @Nullable
-    public java.time.ZonedDateTime getValidFrom() {
+    public java.time.ZonedDateTime getValidFrom(){
         return this.validFrom;
     }
-
+    
     /**
      *  <p>Value to set that must be later than <code>validFrom</code>. If empty, any existing value will be removed.</p>
      * @return validUntil
      */
-
+    
     @Nullable
-    public java.time.ZonedDateTime getValidUntil() {
+    public java.time.ZonedDateTime getValidUntil(){
         return this.validUntil;
     }
 
@@ -78,7 +90,7 @@ public class DiscountCodeSetValidFromAndUntilActionBuilder implements Builder<Di
     public DiscountCodeSetValidFromAndUntilAction build() {
         return new DiscountCodeSetValidFromAndUntilActionImpl(validFrom, validUntil);
     }
-
+    
     /**
      * builds DiscountCodeSetValidFromAndUntilAction without checking for non-null required values
      * @return DiscountCodeSetValidFromAndUntilAction
@@ -89,7 +101,7 @@ public class DiscountCodeSetValidFromAndUntilActionBuilder implements Builder<Di
 
     /**
      * factory method for an instance of DiscountCodeSetValidFromAndUntilActionBuilder
-     * @return builder
+     * @return builder 
      */
     public static DiscountCodeSetValidFromAndUntilActionBuilder of() {
         return new DiscountCodeSetValidFromAndUntilActionBuilder();
@@ -100,8 +112,7 @@ public class DiscountCodeSetValidFromAndUntilActionBuilder implements Builder<Di
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static DiscountCodeSetValidFromAndUntilActionBuilder of(
-            final DiscountCodeSetValidFromAndUntilAction template) {
+    public static DiscountCodeSetValidFromAndUntilActionBuilder of(final DiscountCodeSetValidFromAndUntilAction template) {
         DiscountCodeSetValidFromAndUntilActionBuilder builder = new DiscountCodeSetValidFromAndUntilActionBuilder();
         builder.validFrom = template.getValidFrom();
         builder.validUntil = template.getValidUntil();

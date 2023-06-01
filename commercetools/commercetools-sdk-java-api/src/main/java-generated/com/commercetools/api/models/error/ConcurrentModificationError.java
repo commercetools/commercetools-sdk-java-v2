@@ -1,17 +1,20 @@
-
 package com.commercetools.api.models.error;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
+import com.commercetools.api.models.error.ErrorObject;
+import com.commercetools.api.models.error.ConcurrentModificationErrorImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Returned when the request conflicts with the current state of the involved resources. Typically, the request attempts to modify a resource that is out of date (that is modified by another client since it was last retrieved). The client application should resolve the conflict (with or without involving the end-user) before retrying the request.</p>
@@ -24,9 +27,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .message("{message}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = ConcurrentModificationErrorImpl.class)
 public interface ConcurrentModificationError extends ErrorObject {
 
@@ -42,7 +48,6 @@ public interface ConcurrentModificationError extends ErrorObject {
     @NotNull
     @JsonProperty("code")
     public String getCode();
-
     /**
      *  <p><code>"Object $resourceId has a different version than expected. Expected: $expectedVersion - Actual: $currentVersion."</code></p>
      * @return message
@@ -50,12 +55,11 @@ public interface ConcurrentModificationError extends ErrorObject {
     @NotNull
     @JsonProperty("message")
     public String getMessage();
-
     /**
      *  <p>Current version of the resource.</p>
      * @return currentVersion
      */
-
+    
     @JsonProperty("currentVersion")
     public Long getCurrentVersion();
 
@@ -63,23 +67,26 @@ public interface ConcurrentModificationError extends ErrorObject {
      *  <p><code>"Object $resourceId has a different version than expected. Expected: $expectedVersion - Actual: $currentVersion."</code></p>
      * @param message value to be set
      */
-
+    
     public void setMessage(final String message);
-
+    
+    
     /**
      *  <p>Current version of the resource.</p>
      * @param currentVersion value to be set
      */
-
+    
     public void setCurrentVersion(final Long currentVersion);
+    
 
     /**
      * factory method
      * @return instance of ConcurrentModificationError
      */
-    public static ConcurrentModificationError of() {
+    public static ConcurrentModificationError of(){
         return new ConcurrentModificationErrorImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy ConcurrentModificationError
@@ -118,7 +125,7 @@ public interface ConcurrentModificationError extends ErrorObject {
     public static ConcurrentModificationErrorBuilder builder() {
         return ConcurrentModificationErrorBuilder.of();
     }
-
+    
     /**
      * create builder for ConcurrentModificationError instance
      * @param template instance with prefilled values for the builder
@@ -127,6 +134,7 @@ public interface ConcurrentModificationError extends ErrorObject {
     public static ConcurrentModificationErrorBuilder builder(final ConcurrentModificationError template) {
         return ConcurrentModificationErrorBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -137,7 +145,7 @@ public interface ConcurrentModificationError extends ErrorObject {
     default <T> T withConcurrentModificationError(Function<ConcurrentModificationError, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

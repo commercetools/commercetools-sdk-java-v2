@@ -1,9 +1,12 @@
-
 package com.commercetools.api.models.error;
 
+import com.commercetools.api.models.error.GraphQLErrorObject;
+import com.commercetools.api.models.product.Attribute;
+import com.commercetools.api.models.error.GraphQLDuplicateAttributeValuesError;
+import javax.annotation.Nullable;
 import java.util.*;
 import java.util.function.Function;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -17,13 +20,20 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .plusAttributes(attributesBuilder -> attributesBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class GraphQLDuplicateAttributeValuesErrorBuilder implements Builder<GraphQLDuplicateAttributeValuesError> {
 
+    
+    
     private Map<String, java.lang.Object> values = new HashMap<>();
-
+    
+    
+    
     private java.util.List<com.commercetools.api.models.product.Attribute> attributes;
 
     /**
@@ -31,19 +41,19 @@ public class GraphQLDuplicateAttributeValuesErrorBuilder implements Builder<Grap
      * @param values properties to be set
      * @return Builder
      */
-
-    public GraphQLDuplicateAttributeValuesErrorBuilder values(final Map<String, java.lang.Object> values) {
+    
+    public GraphQLDuplicateAttributeValuesErrorBuilder values( final Map<String, java.lang.Object> values){
         this.values = values;
         return this;
     }
-
+    
     /**
      *  <p>Error-specific additional fields.</p>
      * @param key property name
      * @param value property value
      * @return Builder
      */
-
+    
     public GraphQLDuplicateAttributeValuesErrorBuilder addValue(final String key, final java.lang.Object value) {
         if (this.values == null) {
             values = new HashMap<>();
@@ -51,111 +61,110 @@ public class GraphQLDuplicateAttributeValuesErrorBuilder implements Builder<Grap
         values.put(key, value);
         return this;
     }
-
+    
+    
     /**
      *  <p>Conflicting Attributes.</p>
      * @param attributes value to be set
      * @return Builder
      */
-
-    public GraphQLDuplicateAttributeValuesErrorBuilder attributes(
-            final com.commercetools.api.models.product.Attribute... attributes) {
+    
+    public GraphQLDuplicateAttributeValuesErrorBuilder attributes( final com.commercetools.api.models.product.Attribute ...attributes) {
         this.attributes = new ArrayList<>(Arrays.asList(attributes));
         return this;
     }
-
+    
     /**
      *  <p>Conflicting Attributes.</p>
      * @param attributes value to be set
      * @return Builder
      */
-
-    public GraphQLDuplicateAttributeValuesErrorBuilder attributes(
-            final java.util.List<com.commercetools.api.models.product.Attribute> attributes) {
+    
+    public GraphQLDuplicateAttributeValuesErrorBuilder attributes( final java.util.List<com.commercetools.api.models.product.Attribute> attributes) {
         this.attributes = attributes;
         return this;
     }
-
+    
     /**
      *  <p>Conflicting Attributes.</p>
      * @param attributes value to be set
      * @return Builder
      */
-
-    public GraphQLDuplicateAttributeValuesErrorBuilder plusAttributes(
-            final com.commercetools.api.models.product.Attribute... attributes) {
+    
+    public GraphQLDuplicateAttributeValuesErrorBuilder plusAttributes( final com.commercetools.api.models.product.Attribute ...attributes) {
         if (this.attributes == null) {
             this.attributes = new ArrayList<>();
         }
         this.attributes.addAll(Arrays.asList(attributes));
         return this;
     }
-
+    
+    
+    
     /**
      *  <p>Conflicting Attributes.</p>
      * @param builder function to build the attributes value
      * @return Builder
      */
-
-    public GraphQLDuplicateAttributeValuesErrorBuilder plusAttributes(
-            Function<com.commercetools.api.models.product.AttributeBuilder, com.commercetools.api.models.product.AttributeBuilder> builder) {
+    
+    public GraphQLDuplicateAttributeValuesErrorBuilder plusAttributes(Function<com.commercetools.api.models.product.AttributeBuilder, com.commercetools.api.models.product.AttributeBuilder> builder) {
         if (this.attributes == null) {
             this.attributes = new ArrayList<>();
         }
         this.attributes.add(builder.apply(com.commercetools.api.models.product.AttributeBuilder.of()).build());
         return this;
     }
-
+    
     /**
      *  <p>Conflicting Attributes.</p>
      * @param builder function to build the attributes value
      * @return Builder
      */
-
-    public GraphQLDuplicateAttributeValuesErrorBuilder withAttributes(
-            Function<com.commercetools.api.models.product.AttributeBuilder, com.commercetools.api.models.product.AttributeBuilder> builder) {
+    
+    public GraphQLDuplicateAttributeValuesErrorBuilder withAttributes(Function<com.commercetools.api.models.product.AttributeBuilder, com.commercetools.api.models.product.AttributeBuilder> builder) {
         this.attributes = new ArrayList<>();
         this.attributes.add(builder.apply(com.commercetools.api.models.product.AttributeBuilder.of()).build());
         return this;
     }
-
+    
     /**
      *  <p>Conflicting Attributes.</p>
      * @param builder function to build the attributes value
      * @return Builder
      */
-
-    public GraphQLDuplicateAttributeValuesErrorBuilder addAttributes(
-            Function<com.commercetools.api.models.product.AttributeBuilder, com.commercetools.api.models.product.Attribute> builder) {
+    
+    public GraphQLDuplicateAttributeValuesErrorBuilder addAttributes(Function<com.commercetools.api.models.product.AttributeBuilder, com.commercetools.api.models.product.Attribute> builder) {
         return plusAttributes(builder.apply(com.commercetools.api.models.product.AttributeBuilder.of()));
     }
-
+    
     /**
      *  <p>Conflicting Attributes.</p>
      * @param builder function to build the attributes value
      * @return Builder
      */
-
-    public GraphQLDuplicateAttributeValuesErrorBuilder setAttributes(
-            Function<com.commercetools.api.models.product.AttributeBuilder, com.commercetools.api.models.product.Attribute> builder) {
+    
+    public GraphQLDuplicateAttributeValuesErrorBuilder setAttributes(Function<com.commercetools.api.models.product.AttributeBuilder, com.commercetools.api.models.product.Attribute> builder) {
         return attributes(builder.apply(com.commercetools.api.models.product.AttributeBuilder.of()));
     }
+                    
 
     /**
      *  <p>Error-specific additional fields.</p>
      * @return pattern properties
      */
-
-    public Map<String, java.lang.Object> getValues() {
+    
+    
+    public Map<String, java.lang.Object> getValues(){
         return this.values;
     }
-
+    
     /**
      *  <p>Conflicting Attributes.</p>
      * @return attributes
      */
-
-    public java.util.List<com.commercetools.api.models.product.Attribute> getAttributes() {
+    
+    
+    public java.util.List<com.commercetools.api.models.product.Attribute> getAttributes(){
         return this.attributes;
     }
 
@@ -167,7 +176,7 @@ public class GraphQLDuplicateAttributeValuesErrorBuilder implements Builder<Grap
         Objects.requireNonNull(attributes, GraphQLDuplicateAttributeValuesError.class + ": attributes is missing");
         return new GraphQLDuplicateAttributeValuesErrorImpl(values, attributes);
     }
-
+    
     /**
      * builds GraphQLDuplicateAttributeValuesError without checking for non-null required values
      * @return GraphQLDuplicateAttributeValuesError
@@ -178,7 +187,7 @@ public class GraphQLDuplicateAttributeValuesErrorBuilder implements Builder<Grap
 
     /**
      * factory method for an instance of GraphQLDuplicateAttributeValuesErrorBuilder
-     * @return builder
+     * @return builder 
      */
     public static GraphQLDuplicateAttributeValuesErrorBuilder of() {
         return new GraphQLDuplicateAttributeValuesErrorBuilder();

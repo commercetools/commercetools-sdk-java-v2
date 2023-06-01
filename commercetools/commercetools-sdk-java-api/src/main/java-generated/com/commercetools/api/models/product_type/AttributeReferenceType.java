@@ -1,17 +1,21 @@
-
 package com.commercetools.api.models.product_type;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
+import com.commercetools.api.models.product_type.AttributeReferenceTypeId;
+import com.commercetools.api.models.product_type.AttributeType;
+import com.commercetools.api.models.product_type.AttributeReferenceTypeImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * AttributeReferenceType
@@ -24,9 +28,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .referenceTypeId(AttributeReferenceTypeId.CART)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = AttributeReferenceTypeImpl.class)
 public interface AttributeReferenceType extends AttributeType {
 
@@ -47,16 +54,18 @@ public interface AttributeReferenceType extends AttributeType {
      *  <p>Name of the resource type that the value should reference.</p>
      * @param referenceTypeId value to be set
      */
-
+    
     public void setReferenceTypeId(final AttributeReferenceTypeId referenceTypeId);
+    
 
     /**
      * factory method
      * @return instance of AttributeReferenceType
      */
-    public static AttributeReferenceType of() {
+    public static AttributeReferenceType of(){
         return new AttributeReferenceTypeImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy AttributeReferenceType
@@ -91,7 +100,7 @@ public interface AttributeReferenceType extends AttributeType {
     public static AttributeReferenceTypeBuilder builder() {
         return AttributeReferenceTypeBuilder.of();
     }
-
+    
     /**
      * create builder for AttributeReferenceType instance
      * @param template instance with prefilled values for the builder
@@ -100,6 +109,7 @@ public interface AttributeReferenceType extends AttributeType {
     public static AttributeReferenceTypeBuilder builder(final AttributeReferenceType template) {
         return AttributeReferenceTypeBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -110,7 +120,7 @@ public interface AttributeReferenceType extends AttributeType {
     default <T> T withAttributeReferenceType(Function<AttributeReferenceType, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

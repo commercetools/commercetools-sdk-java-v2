@@ -1,8 +1,12 @@
-
 package com.commercetools.history.models.change;
 
+import com.commercetools.history.models.change.Change;
+import com.commercetools.history.models.common.StagedQuoteState;
+import com.commercetools.history.models.change.ChangeStagedQuoteStateChange;
+import javax.annotation.Nullable;
 import java.util.*;
-
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -18,76 +22,95 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .previousValue(StagedQuoteState.IN_PROGRESS)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class ChangeStagedQuoteStateChangeBuilder implements Builder<ChangeStagedQuoteStateChange> {
 
+    
+    
     private String change;
-
+    
+    
+    
     private com.commercetools.history.models.common.StagedQuoteState nextValue;
-
+    
+    
+    
     private com.commercetools.history.models.common.StagedQuoteState previousValue;
 
+    
     /**
      * set the value to the change
      * @param change value to be set
      * @return Builder
      */
-
-    public ChangeStagedQuoteStateChangeBuilder change(final String change) {
+    
+    public ChangeStagedQuoteStateChangeBuilder change( final String change) {
         this.change = change;
         return this;
     }
-
+    
+    
+    
+    
     /**
      * set the value to the nextValue
      * @param nextValue value to be set
      * @return Builder
      */
-
-    public ChangeStagedQuoteStateChangeBuilder nextValue(
-            final com.commercetools.history.models.common.StagedQuoteState nextValue) {
+    
+    public ChangeStagedQuoteStateChangeBuilder nextValue( final com.commercetools.history.models.common.StagedQuoteState nextValue) {
         this.nextValue = nextValue;
         return this;
     }
-
+    
+    
+    
+    
     /**
      * set the value to the previousValue
      * @param previousValue value to be set
      * @return Builder
      */
-
-    public ChangeStagedQuoteStateChangeBuilder previousValue(
-            final com.commercetools.history.models.common.StagedQuoteState previousValue) {
+    
+    public ChangeStagedQuoteStateChangeBuilder previousValue( final com.commercetools.history.models.common.StagedQuoteState previousValue) {
         this.previousValue = previousValue;
         return this;
     }
+    
+    
 
     /**
      * value of change}
      * @return change
      */
-
-    public String getChange() {
+    
+    
+    public String getChange(){
         return this.change;
     }
-
+    
     /**
      * value of nextValue}
      * @return nextValue
      */
-
-    public com.commercetools.history.models.common.StagedQuoteState getNextValue() {
+    
+    
+    public com.commercetools.history.models.common.StagedQuoteState getNextValue(){
         return this.nextValue;
     }
-
+    
     /**
      * value of previousValue}
      * @return previousValue
      */
-
-    public com.commercetools.history.models.common.StagedQuoteState getPreviousValue() {
+    
+    
+    public com.commercetools.history.models.common.StagedQuoteState getPreviousValue(){
         return this.previousValue;
     }
 
@@ -101,7 +124,7 @@ public class ChangeStagedQuoteStateChangeBuilder implements Builder<ChangeStaged
         Objects.requireNonNull(previousValue, ChangeStagedQuoteStateChange.class + ": previousValue is missing");
         return new ChangeStagedQuoteStateChangeImpl(change, nextValue, previousValue);
     }
-
+    
     /**
      * builds ChangeStagedQuoteStateChange without checking for non-null required values
      * @return ChangeStagedQuoteStateChange
@@ -112,7 +135,7 @@ public class ChangeStagedQuoteStateChangeBuilder implements Builder<ChangeStaged
 
     /**
      * factory method for an instance of ChangeStagedQuoteStateChangeBuilder
-     * @return builder
+     * @return builder 
      */
     public static ChangeStagedQuoteStateChangeBuilder of() {
         return new ChangeStagedQuoteStateChangeBuilder();

@@ -1,9 +1,12 @@
-
 package com.commercetools.api.models.me;
 
+import com.commercetools.api.models.common.LocalizedString;
+import com.commercetools.api.models.me.MyShoppingListUpdateAction;
+import com.commercetools.api.models.me.MyShoppingListChangeTextLineItemNameAction;
+import javax.annotation.Nullable;
 import java.util.*;
 import java.util.function.Function;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -18,78 +21,89 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .name(nameBuilder -> nameBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
-public class MyShoppingListChangeTextLineItemNameActionBuilder
-        implements Builder<MyShoppingListChangeTextLineItemNameAction> {
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
+public class MyShoppingListChangeTextLineItemNameActionBuilder implements Builder<MyShoppingListChangeTextLineItemNameAction> {
 
+    
+    
     private String textLineItemId;
-
+    
+    
+    
     private com.commercetools.api.models.common.LocalizedString name;
 
+    
     /**
      *  <p>The <code>id</code> of the TextLineItem to update.</p>
      * @param textLineItemId value to be set
      * @return Builder
      */
-
-    public MyShoppingListChangeTextLineItemNameActionBuilder textLineItemId(final String textLineItemId) {
+    
+    public MyShoppingListChangeTextLineItemNameActionBuilder textLineItemId( final String textLineItemId) {
         this.textLineItemId = textLineItemId;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>New value to set. Must not be empty.</p>
      * @param builder function to build the name value
      * @return Builder
      */
-
-    public MyShoppingListChangeTextLineItemNameActionBuilder name(
-            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
+    
+    public MyShoppingListChangeTextLineItemNameActionBuilder name(Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
         this.name = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of()).build();
         return this;
     }
-
+    
     /**
      *  <p>New value to set. Must not be empty.</p>
      * @param builder function to build the name value
      * @return Builder
      */
-
-    public MyShoppingListChangeTextLineItemNameActionBuilder withName(
-            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedString> builder) {
+    
+    public MyShoppingListChangeTextLineItemNameActionBuilder withName(Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedString> builder) {
         this.name = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of());
         return this;
     }
-
+                    
     /**
      *  <p>New value to set. Must not be empty.</p>
      * @param name value to be set
      * @return Builder
      */
-
-    public MyShoppingListChangeTextLineItemNameActionBuilder name(
-            final com.commercetools.api.models.common.LocalizedString name) {
+    
+    public MyShoppingListChangeTextLineItemNameActionBuilder name( final com.commercetools.api.models.common.LocalizedString name) {
         this.name = name;
         return this;
     }
+    
+    
 
     /**
      *  <p>The <code>id</code> of the TextLineItem to update.</p>
      * @return textLineItemId
      */
-
-    public String getTextLineItemId() {
+    
+    
+    public String getTextLineItemId(){
         return this.textLineItemId;
     }
-
+    
     /**
      *  <p>New value to set. Must not be empty.</p>
      * @return name
      */
-
-    public com.commercetools.api.models.common.LocalizedString getName() {
+    
+    
+    public com.commercetools.api.models.common.LocalizedString getName(){
         return this.name;
     }
 
@@ -98,12 +112,11 @@ public class MyShoppingListChangeTextLineItemNameActionBuilder
      * @return MyShoppingListChangeTextLineItemNameAction
      */
     public MyShoppingListChangeTextLineItemNameAction build() {
-        Objects.requireNonNull(textLineItemId,
-            MyShoppingListChangeTextLineItemNameAction.class + ": textLineItemId is missing");
+        Objects.requireNonNull(textLineItemId, MyShoppingListChangeTextLineItemNameAction.class + ": textLineItemId is missing");
         Objects.requireNonNull(name, MyShoppingListChangeTextLineItemNameAction.class + ": name is missing");
         return new MyShoppingListChangeTextLineItemNameActionImpl(textLineItemId, name);
     }
-
+    
     /**
      * builds MyShoppingListChangeTextLineItemNameAction without checking for non-null required values
      * @return MyShoppingListChangeTextLineItemNameAction
@@ -114,7 +127,7 @@ public class MyShoppingListChangeTextLineItemNameActionBuilder
 
     /**
      * factory method for an instance of MyShoppingListChangeTextLineItemNameActionBuilder
-     * @return builder
+     * @return builder 
      */
     public static MyShoppingListChangeTextLineItemNameActionBuilder of() {
         return new MyShoppingListChangeTextLineItemNameActionBuilder();
@@ -125,8 +138,7 @@ public class MyShoppingListChangeTextLineItemNameActionBuilder
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static MyShoppingListChangeTextLineItemNameActionBuilder of(
-            final MyShoppingListChangeTextLineItemNameAction template) {
+    public static MyShoppingListChangeTextLineItemNameActionBuilder of(final MyShoppingListChangeTextLineItemNameAction template) {
         MyShoppingListChangeTextLineItemNameActionBuilder builder = new MyShoppingListChangeTextLineItemNameActionBuilder();
         builder.textLineItemId = template.getTextLineItemId();
         builder.name = template.getName();

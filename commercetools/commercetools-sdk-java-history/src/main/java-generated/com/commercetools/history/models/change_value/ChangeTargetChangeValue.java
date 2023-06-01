@@ -1,17 +1,24 @@
-
 package com.commercetools.history.models.change_value;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
+import com.commercetools.history.models.change_value.ChangeTargetCustomLineItemsChangeValue;
+import com.commercetools.history.models.change_value.ChangeTargetLineItemsChangeValue;
+import com.commercetools.history.models.change_value.ChangeTargetMultiBuyCustomLineItemsChangeValue;
+import com.commercetools.history.models.change_value.ChangeTargetMultiBuyLineItemsChangeValue;
+import com.commercetools.history.models.change_value.ChangeTargetShippingChangeValue;
 
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * ChangeTargetChangeValue
@@ -24,18 +31,29 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             predicate("{predicate}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
 @JsonSubTypes({
-        @JsonSubTypes.Type(value = com.commercetools.history.models.change_value.ChangeTargetCustomLineItemsChangeValueImpl.class, name = ChangeTargetCustomLineItemsChangeValue.CUSTOM_LINE_ITEMS),
-        @JsonSubTypes.Type(value = com.commercetools.history.models.change_value.ChangeTargetLineItemsChangeValueImpl.class, name = ChangeTargetLineItemsChangeValue.LINE_ITEMS),
-        @JsonSubTypes.Type(value = com.commercetools.history.models.change_value.ChangeTargetMultiBuyCustomLineItemsChangeValueImpl.class, name = ChangeTargetMultiBuyCustomLineItemsChangeValue.MULTI_BUY_CUSTOM_LINE_ITEMS),
-        @JsonSubTypes.Type(value = com.commercetools.history.models.change_value.ChangeTargetMultiBuyLineItemsChangeValueImpl.class, name = ChangeTargetMultiBuyLineItemsChangeValue.MULTI_BUY_LINE_ITEMS),
-        @JsonSubTypes.Type(value = com.commercetools.history.models.change_value.ChangeTargetShippingChangeValueImpl.class, name = ChangeTargetShippingChangeValue.SHIPPING) })
-@JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.EXISTING_PROPERTY, property = "type", defaultImpl = ChangeTargetChangeValueImpl.class, visible = true)
+   @JsonSubTypes.Type(value = com.commercetools.history.models.change_value.ChangeTargetCustomLineItemsChangeValueImpl.class, name = ChangeTargetCustomLineItemsChangeValue.CUSTOM_LINE_ITEMS),
+   @JsonSubTypes.Type(value = com.commercetools.history.models.change_value.ChangeTargetLineItemsChangeValueImpl.class, name = ChangeTargetLineItemsChangeValue.LINE_ITEMS),
+   @JsonSubTypes.Type(value = com.commercetools.history.models.change_value.ChangeTargetMultiBuyCustomLineItemsChangeValueImpl.class, name = ChangeTargetMultiBuyCustomLineItemsChangeValue.MULTI_BUY_CUSTOM_LINE_ITEMS),
+   @JsonSubTypes.Type(value = com.commercetools.history.models.change_value.ChangeTargetMultiBuyLineItemsChangeValueImpl.class, name = ChangeTargetMultiBuyLineItemsChangeValue.MULTI_BUY_LINE_ITEMS),
+   @JsonSubTypes.Type(value = com.commercetools.history.models.change_value.ChangeTargetShippingChangeValueImpl.class, name = ChangeTargetShippingChangeValue.SHIPPING)
+})
+@JsonTypeInfo(
+    use = JsonTypeInfo.Id.NAME,
+    include = JsonTypeInfo.As.EXISTING_PROPERTY,
+    property = "type",
+    defaultImpl = ChangeTargetChangeValueImpl.class,
+    visible = true
+)
 @JsonDeserialize(as = ChangeTargetChangeValueImpl.class)
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
-public interface ChangeTargetChangeValue {
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
+public interface ChangeTargetChangeValue  {
+
 
     /**
      *
@@ -44,6 +62,9 @@ public interface ChangeTargetChangeValue {
     @NotNull
     @JsonProperty("type")
     public String getType();
+
+
+
 
     /**
      * factory method to create a deep copy of ChangeTargetChangeValue
@@ -56,68 +77,59 @@ public interface ChangeTargetChangeValue {
             return null;
         }
         if (template instanceof com.commercetools.history.models.change_value.ChangeTargetCustomLineItemsChangeValue) {
-            return com.commercetools.history.models.change_value.ChangeTargetCustomLineItemsChangeValue.deepCopy(
-                (com.commercetools.history.models.change_value.ChangeTargetCustomLineItemsChangeValue) template);
+            return com.commercetools.history.models.change_value.ChangeTargetCustomLineItemsChangeValue.deepCopy((com.commercetools.history.models.change_value.ChangeTargetCustomLineItemsChangeValue)template);
         }
         if (template instanceof com.commercetools.history.models.change_value.ChangeTargetLineItemsChangeValue) {
-            return com.commercetools.history.models.change_value.ChangeTargetLineItemsChangeValue.deepCopy(
-                (com.commercetools.history.models.change_value.ChangeTargetLineItemsChangeValue) template);
+            return com.commercetools.history.models.change_value.ChangeTargetLineItemsChangeValue.deepCopy((com.commercetools.history.models.change_value.ChangeTargetLineItemsChangeValue)template);
         }
         if (template instanceof com.commercetools.history.models.change_value.ChangeTargetMultiBuyCustomLineItemsChangeValue) {
-            return com.commercetools.history.models.change_value.ChangeTargetMultiBuyCustomLineItemsChangeValue
-                    .deepCopy(
-                        (com.commercetools.history.models.change_value.ChangeTargetMultiBuyCustomLineItemsChangeValue) template);
+            return com.commercetools.history.models.change_value.ChangeTargetMultiBuyCustomLineItemsChangeValue.deepCopy((com.commercetools.history.models.change_value.ChangeTargetMultiBuyCustomLineItemsChangeValue)template);
         }
         if (template instanceof com.commercetools.history.models.change_value.ChangeTargetMultiBuyLineItemsChangeValue) {
-            return com.commercetools.history.models.change_value.ChangeTargetMultiBuyLineItemsChangeValue.deepCopy(
-                (com.commercetools.history.models.change_value.ChangeTargetMultiBuyLineItemsChangeValue) template);
+            return com.commercetools.history.models.change_value.ChangeTargetMultiBuyLineItemsChangeValue.deepCopy((com.commercetools.history.models.change_value.ChangeTargetMultiBuyLineItemsChangeValue)template);
         }
         if (template instanceof com.commercetools.history.models.change_value.ChangeTargetShippingChangeValue) {
-            return com.commercetools.history.models.change_value.ChangeTargetShippingChangeValue
-                    .deepCopy((com.commercetools.history.models.change_value.ChangeTargetShippingChangeValue) template);
+            return com.commercetools.history.models.change_value.ChangeTargetShippingChangeValue.deepCopy((com.commercetools.history.models.change_value.ChangeTargetShippingChangeValue)template);
         }
         ChangeTargetChangeValueImpl instance = new ChangeTargetChangeValueImpl();
         return instance;
     }
+
 
     /**
      * builder for customLineItems subtype
      * @return builder
      */
     public static com.commercetools.history.models.change_value.ChangeTargetCustomLineItemsChangeValueBuilder customLineItemsBuilder() {
-        return com.commercetools.history.models.change_value.ChangeTargetCustomLineItemsChangeValueBuilder.of();
+       return com.commercetools.history.models.change_value.ChangeTargetCustomLineItemsChangeValueBuilder.of();
     }
-
     /**
      * builder for lineItems subtype
      * @return builder
      */
     public static com.commercetools.history.models.change_value.ChangeTargetLineItemsChangeValueBuilder lineItemsBuilder() {
-        return com.commercetools.history.models.change_value.ChangeTargetLineItemsChangeValueBuilder.of();
+       return com.commercetools.history.models.change_value.ChangeTargetLineItemsChangeValueBuilder.of();
     }
-
     /**
      * builder for multiBuyCustomLineItems subtype
      * @return builder
      */
     public static com.commercetools.history.models.change_value.ChangeTargetMultiBuyCustomLineItemsChangeValueBuilder multiBuyCustomLineItemsBuilder() {
-        return com.commercetools.history.models.change_value.ChangeTargetMultiBuyCustomLineItemsChangeValueBuilder.of();
+       return com.commercetools.history.models.change_value.ChangeTargetMultiBuyCustomLineItemsChangeValueBuilder.of();
     }
-
     /**
      * builder for multiBuyLineItems subtype
      * @return builder
      */
     public static com.commercetools.history.models.change_value.ChangeTargetMultiBuyLineItemsChangeValueBuilder multiBuyLineItemsBuilder() {
-        return com.commercetools.history.models.change_value.ChangeTargetMultiBuyLineItemsChangeValueBuilder.of();
+       return com.commercetools.history.models.change_value.ChangeTargetMultiBuyLineItemsChangeValueBuilder.of();
     }
-
     /**
      * builder for shipping subtype
      * @return builder
      */
     public static com.commercetools.history.models.change_value.ChangeTargetShippingChangeValueBuilder shippingBuilder() {
-        return com.commercetools.history.models.change_value.ChangeTargetShippingChangeValueBuilder.of();
+       return com.commercetools.history.models.change_value.ChangeTargetShippingChangeValueBuilder.of();
     }
 
     /**
@@ -129,7 +141,7 @@ public interface ChangeTargetChangeValue {
     default <T> T withChangeTargetChangeValue(Function<ChangeTargetChangeValue, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

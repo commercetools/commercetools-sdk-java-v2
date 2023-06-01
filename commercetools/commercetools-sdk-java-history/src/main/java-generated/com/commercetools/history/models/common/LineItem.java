@@ -1,18 +1,23 @@
-
 package com.commercetools.history.models.common;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
+import com.commercetools.history.models.common.CustomFields;
+import com.commercetools.history.models.common.LocalizedString;
+import com.commercetools.history.models.common.Reference;
+import com.commercetools.history.models.common.Variant;
+import com.commercetools.history.models.common.LineItemImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * LineItem
@@ -34,11 +39,15 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .variantId(1)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = LineItemImpl.class)
-public interface LineItem {
+public interface LineItem  {
+
 
     /**
      *
@@ -47,7 +56,6 @@ public interface LineItem {
     @NotNull
     @JsonProperty("addedAt")
     public String getAddedAt();
-
     /**
      *
      * @return custom
@@ -56,7 +64,6 @@ public interface LineItem {
     @Valid
     @JsonProperty("custom")
     public CustomFields getCustom();
-
     /**
      *
      * @return id
@@ -64,7 +71,6 @@ public interface LineItem {
     @NotNull
     @JsonProperty("id")
     public String getId();
-
     /**
      *
      * @return name
@@ -73,7 +79,6 @@ public interface LineItem {
     @Valid
     @JsonProperty("name")
     public LocalizedString getName();
-
     /**
      *
      * @return productId
@@ -81,7 +86,6 @@ public interface LineItem {
     @NotNull
     @JsonProperty("productId")
     public String getProductId();
-
     /**
      *
      * @return productSlug
@@ -90,7 +94,6 @@ public interface LineItem {
     @Valid
     @JsonProperty("productSlug")
     public LocalizedString getProductSlug();
-
     /**
      *
      * @return productType
@@ -99,7 +102,6 @@ public interface LineItem {
     @Valid
     @JsonProperty("productType")
     public Reference getProductType();
-
     /**
      *
      * @return quantity
@@ -107,7 +109,6 @@ public interface LineItem {
     @NotNull
     @JsonProperty("quantity")
     public Integer getQuantity();
-
     /**
      *
      * @return variant
@@ -116,7 +117,6 @@ public interface LineItem {
     @Valid
     @JsonProperty("variant")
     public Variant getVariant();
-
     /**
      *
      * @return variantId
@@ -129,79 +129,90 @@ public interface LineItem {
      * set addedAt
      * @param addedAt value to be set
      */
-
+    
     public void setAddedAt(final String addedAt);
-
+    
+    
     /**
      * set custom
      * @param custom value to be set
      */
-
+    
     public void setCustom(final CustomFields custom);
-
+    
+    
     /**
      * set id
      * @param id value to be set
      */
-
+    
     public void setId(final String id);
-
+    
+    
     /**
      * set name
      * @param name value to be set
      */
-
+    
     public void setName(final LocalizedString name);
-
+    
+    
     /**
      * set productId
      * @param productId value to be set
      */
-
+    
     public void setProductId(final String productId);
-
+    
+    
     /**
      * set productSlug
      * @param productSlug value to be set
      */
-
+    
     public void setProductSlug(final LocalizedString productSlug);
-
+    
+    
     /**
      * set productType
      * @param productType value to be set
      */
-
+    
     public void setProductType(final Reference productType);
-
+    
+    
     /**
      * set quantity
      * @param quantity value to be set
      */
-
+    
     public void setQuantity(final Integer quantity);
-
+    
+    
     /**
      * set variant
      * @param variant value to be set
      */
-
+    
     public void setVariant(final Variant variant);
-
+    
+    
     /**
      * set variantId
      * @param variantId value to be set
      */
-
+    
     public void setVariantId(final Integer variantId);
+    
 
     /**
      * factory method
      * @return instance of LineItem
      */
-    public static LineItem of() {
+    public static LineItem of(){
         return new LineItemImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy LineItem
@@ -239,8 +250,7 @@ public interface LineItem {
         instance.setId(template.getId());
         instance.setName(com.commercetools.history.models.common.LocalizedString.deepCopy(template.getName()));
         instance.setProductId(template.getProductId());
-        instance.setProductSlug(
-            com.commercetools.history.models.common.LocalizedString.deepCopy(template.getProductSlug()));
+        instance.setProductSlug(com.commercetools.history.models.common.LocalizedString.deepCopy(template.getProductSlug()));
         instance.setProductType(com.commercetools.history.models.common.Reference.deepCopy(template.getProductType()));
         instance.setQuantity(template.getQuantity());
         instance.setVariant(com.commercetools.history.models.common.Variant.deepCopy(template.getVariant()));
@@ -255,7 +265,7 @@ public interface LineItem {
     public static LineItemBuilder builder() {
         return LineItemBuilder.of();
     }
-
+    
     /**
      * create builder for LineItem instance
      * @param template instance with prefilled values for the builder
@@ -264,6 +274,7 @@ public interface LineItem {
     public static LineItemBuilder builder(final LineItem template) {
         return LineItemBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -274,7 +285,7 @@ public interface LineItem {
     default <T> T withLineItem(Function<LineItem, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

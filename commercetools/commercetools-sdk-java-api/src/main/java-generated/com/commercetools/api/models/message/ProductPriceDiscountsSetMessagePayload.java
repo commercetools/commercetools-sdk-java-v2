@@ -1,19 +1,21 @@
-
 package com.commercetools.api.models.message;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-import java.util.stream.Collectors;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
+import com.commercetools.api.models.message.MessagePayload;
+import com.commercetools.api.models.message.ProductPriceDiscountsSetUpdatedPrice;
+import com.commercetools.api.models.message.ProductPriceDiscountsSetMessagePayloadImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Generated after a Price is updated due to a Product Discount.</p>
@@ -26,9 +28,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .plusUpdatedPrices(updatedPricesBuilder -> updatedPricesBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = ProductPriceDiscountsSetMessagePayloadImpl.class)
 public interface ProductPriceDiscountsSetMessagePayload extends MessagePayload {
 
@@ -50,24 +55,24 @@ public interface ProductPriceDiscountsSetMessagePayload extends MessagePayload {
      *  <p>Array containing details about the Embedded Prices that were updated.</p>
      * @param updatedPrices values to be set
      */
-
+    
     @JsonIgnore
-    public void setUpdatedPrices(final ProductPriceDiscountsSetUpdatedPrice... updatedPrices);
-
+    public void setUpdatedPrices(final ProductPriceDiscountsSetUpdatedPrice ...updatedPrices);
     /**
      *  <p>Array containing details about the Embedded Prices that were updated.</p>
      * @param updatedPrices values to be set
      */
-
+    
     public void setUpdatedPrices(final List<ProductPriceDiscountsSetUpdatedPrice> updatedPrices);
 
     /**
      * factory method
      * @return instance of ProductPriceDiscountsSetMessagePayload
      */
-    public static ProductPriceDiscountsSetMessagePayload of() {
+    public static ProductPriceDiscountsSetMessagePayload of(){
         return new ProductPriceDiscountsSetMessagePayloadImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy ProductPriceDiscountsSetMessagePayload
@@ -86,16 +91,13 @@ public interface ProductPriceDiscountsSetMessagePayload extends MessagePayload {
      * @return copy instance
      */
     @Nullable
-    public static ProductPriceDiscountsSetMessagePayload deepCopy(
-            @Nullable final ProductPriceDiscountsSetMessagePayload template) {
+    public static ProductPriceDiscountsSetMessagePayload deepCopy(@Nullable final ProductPriceDiscountsSetMessagePayload template) {
         if (template == null) {
             return null;
         }
         ProductPriceDiscountsSetMessagePayloadImpl instance = new ProductPriceDiscountsSetMessagePayloadImpl();
         instance.setUpdatedPrices(Optional.ofNullable(template.getUpdatedPrices())
-                .map(t -> t.stream()
-                        .map(com.commercetools.api.models.message.ProductPriceDiscountsSetUpdatedPrice::deepCopy)
-                        .collect(Collectors.toList()))
+                .map(t -> t.stream().map(com.commercetools.api.models.message.ProductPriceDiscountsSetUpdatedPrice::deepCopy).collect(Collectors.toList()))
                 .orElse(null));
         return instance;
     }
@@ -107,16 +109,16 @@ public interface ProductPriceDiscountsSetMessagePayload extends MessagePayload {
     public static ProductPriceDiscountsSetMessagePayloadBuilder builder() {
         return ProductPriceDiscountsSetMessagePayloadBuilder.of();
     }
-
+    
     /**
      * create builder for ProductPriceDiscountsSetMessagePayload instance
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static ProductPriceDiscountsSetMessagePayloadBuilder builder(
-            final ProductPriceDiscountsSetMessagePayload template) {
+    public static ProductPriceDiscountsSetMessagePayloadBuilder builder(final ProductPriceDiscountsSetMessagePayload template) {
         return ProductPriceDiscountsSetMessagePayloadBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -124,11 +126,10 @@ public interface ProductPriceDiscountsSetMessagePayload extends MessagePayload {
      * @param helper function to map the object
      * @return mapped value
      */
-    default <T> T withProductPriceDiscountsSetMessagePayload(
-            Function<ProductPriceDiscountsSetMessagePayload, T> helper) {
+    default <T> T withProductPriceDiscountsSetMessagePayload(Function<ProductPriceDiscountsSetMessagePayload, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

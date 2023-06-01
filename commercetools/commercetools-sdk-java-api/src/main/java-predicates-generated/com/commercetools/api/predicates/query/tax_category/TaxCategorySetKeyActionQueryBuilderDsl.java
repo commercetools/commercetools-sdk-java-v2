@@ -1,9 +1,11 @@
-
 package com.commercetools.api.predicates.query.tax_category;
 
 import com.commercetools.api.predicates.query.*;
 
-public class TaxCategorySetKeyActionQueryBuilderDsl {
+import java.util.function.Function;
+
+
+public class TaxCategorySetKeyActionQueryBuilderDsl  {
     public TaxCategorySetKeyActionQueryBuilderDsl() {
     }
 
@@ -12,14 +14,12 @@ public class TaxCategorySetKeyActionQueryBuilderDsl {
     }
 
     public StringComparisonPredicateBuilder<TaxCategorySetKeyActionQueryBuilderDsl> action() {
-        return new StringComparisonPredicateBuilder<>(
-            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("action")),
-            p -> new CombinationQueryPredicate<>(p, TaxCategorySetKeyActionQueryBuilderDsl::of));
+        return new StringComparisonPredicateBuilder<>(BinaryQueryPredicate.of().left(new ConstantQueryPredicate("action")),
+        p -> new CombinationQueryPredicate<>(p, TaxCategorySetKeyActionQueryBuilderDsl::of));
     }
-
     public StringComparisonPredicateBuilder<TaxCategorySetKeyActionQueryBuilderDsl> key() {
         return new StringComparisonPredicateBuilder<>(BinaryQueryPredicate.of().left(new ConstantQueryPredicate("key")),
-            p -> new CombinationQueryPredicate<>(p, TaxCategorySetKeyActionQueryBuilderDsl::of));
+        p -> new CombinationQueryPredicate<>(p, TaxCategorySetKeyActionQueryBuilderDsl::of));
     }
-
+    
 }

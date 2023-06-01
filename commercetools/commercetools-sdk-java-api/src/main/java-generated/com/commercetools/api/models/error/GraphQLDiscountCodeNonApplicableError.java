@@ -1,18 +1,21 @@
-
 package com.commercetools.api.models.error;
 
-import java.time.*;
+import com.commercetools.api.models.error.GraphQLErrorObject;
 import java.time.ZonedDateTime;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
+import com.commercetools.api.models.error.GraphQLDiscountCodeNonApplicableErrorImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Returned when the Cart contains a Discount Code with a DiscountCodeState other than <code>MatchesCart</code>.</p>
@@ -29,9 +32,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     GraphQLDiscountCodeNonApplicableError graphQLDiscountCodeNonApplicableError = GraphQLDiscountCodeNonApplicableError.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = GraphQLDiscountCodeNonApplicableErrorImpl.class)
 public interface GraphQLDiscountCodeNonApplicableError extends GraphQLErrorObject {
 
@@ -47,52 +53,46 @@ public interface GraphQLDiscountCodeNonApplicableError extends GraphQLErrorObjec
     @NotNull
     @JsonProperty("code")
     public String getCode();
-
     /**
      *  <p>Discount Code passed to the Cart.</p>
      * @return discountCode
      */
-
+    
     @JsonProperty("discountCode")
     public String getDiscountCode();
-
     /**
      *  <p><code>"DoesNotExist"</code> or <code>"TimeRangeNonApplicable"</code></p>
      * @return reason
      */
-
+    
     @JsonProperty("reason")
     public String getReason();
-
     /**
      *  <p>Unique identifier of the Discount Code.</p>
      * @return discountCodeId
      */
-
+    
     @JsonProperty("discountCodeId")
     public String getDiscountCodeId();
-
     /**
      *  <p>Date and time (UTC) from which the Discount Code is valid.</p>
      * @return validFrom
      */
-
+    
     @JsonProperty("validFrom")
     public ZonedDateTime getValidFrom();
-
     /**
      *  <p>Date and time (UTC) until which the Discount Code is valid.</p>
      * @return validUntil
      */
-
+    
     @JsonProperty("validUntil")
     public ZonedDateTime getValidUntil();
-
     /**
      *  <p>Date and time (UTC) the Discount Code validity check was last performed.</p>
      * @return validityCheckTime
      */
-
+    
     @JsonProperty("validityCheckTime")
     public ZonedDateTime getValidityCheckTime();
 
@@ -100,51 +100,58 @@ public interface GraphQLDiscountCodeNonApplicableError extends GraphQLErrorObjec
      *  <p>Discount Code passed to the Cart.</p>
      * @param discountCode value to be set
      */
-
+    
     public void setDiscountCode(final String discountCode);
-
+    
+    
     /**
      *  <p><code>"DoesNotExist"</code> or <code>"TimeRangeNonApplicable"</code></p>
      * @param reason value to be set
      */
-
+    
     public void setReason(final String reason);
-
+    
+    
     /**
      *  <p>Unique identifier of the Discount Code.</p>
      * @param discountCodeId value to be set
      */
-
+    
     public void setDiscountCodeId(final String discountCodeId);
-
+    
+    
     /**
      *  <p>Date and time (UTC) from which the Discount Code is valid.</p>
      * @param validFrom value to be set
      */
-
+    
     public void setValidFrom(final ZonedDateTime validFrom);
-
+    
+    
     /**
      *  <p>Date and time (UTC) until which the Discount Code is valid.</p>
      * @param validUntil value to be set
      */
-
+    
     public void setValidUntil(final ZonedDateTime validUntil);
-
+    
+    
     /**
      *  <p>Date and time (UTC) the Discount Code validity check was last performed.</p>
      * @param validityCheckTime value to be set
      */
-
+    
     public void setValidityCheckTime(final ZonedDateTime validityCheckTime);
+    
 
     /**
      * factory method
      * @return instance of GraphQLDiscountCodeNonApplicableError
      */
-    public static GraphQLDiscountCodeNonApplicableError of() {
+    public static GraphQLDiscountCodeNonApplicableError of(){
         return new GraphQLDiscountCodeNonApplicableErrorImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy GraphQLDiscountCodeNonApplicableError
@@ -169,8 +176,7 @@ public interface GraphQLDiscountCodeNonApplicableError extends GraphQLErrorObjec
      * @return copy instance
      */
     @Nullable
-    public static GraphQLDiscountCodeNonApplicableError deepCopy(
-            @Nullable final GraphQLDiscountCodeNonApplicableError template) {
+    public static GraphQLDiscountCodeNonApplicableError deepCopy(@Nullable final GraphQLDiscountCodeNonApplicableError template) {
         if (template == null) {
             return null;
         }
@@ -192,16 +198,16 @@ public interface GraphQLDiscountCodeNonApplicableError extends GraphQLErrorObjec
     public static GraphQLDiscountCodeNonApplicableErrorBuilder builder() {
         return GraphQLDiscountCodeNonApplicableErrorBuilder.of();
     }
-
+    
     /**
      * create builder for GraphQLDiscountCodeNonApplicableError instance
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static GraphQLDiscountCodeNonApplicableErrorBuilder builder(
-            final GraphQLDiscountCodeNonApplicableError template) {
+    public static GraphQLDiscountCodeNonApplicableErrorBuilder builder(final GraphQLDiscountCodeNonApplicableError template) {
         return GraphQLDiscountCodeNonApplicableErrorBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -212,7 +218,7 @@ public interface GraphQLDiscountCodeNonApplicableError extends GraphQLErrorObjec
     default <T> T withGraphQLDiscountCodeNonApplicableError(Function<GraphQLDiscountCodeNonApplicableError, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

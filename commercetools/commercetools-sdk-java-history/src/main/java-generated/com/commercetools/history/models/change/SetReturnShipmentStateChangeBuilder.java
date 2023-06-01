@@ -1,8 +1,12 @@
-
 package com.commercetools.history.models.change;
 
+import com.commercetools.history.models.change.Change;
+import com.commercetools.history.models.common.ReturnShipmentState;
+import com.commercetools.history.models.change.SetReturnShipmentStateChange;
+import javax.annotation.Nullable;
 import java.util.*;
-
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -18,76 +22,95 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .previousValue(ReturnShipmentState.ADVISED)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class SetReturnShipmentStateChangeBuilder implements Builder<SetReturnShipmentStateChange> {
 
+    
+    
     private String change;
-
+    
+    
+    
     private com.commercetools.history.models.common.ReturnShipmentState nextValue;
-
+    
+    
+    
     private com.commercetools.history.models.common.ReturnShipmentState previousValue;
 
+    
     /**
      *  <p>Update action for <code>setReturnShipmentState</code></p>
      * @param change value to be set
      * @return Builder
      */
-
-    public SetReturnShipmentStateChangeBuilder change(final String change) {
+    
+    public SetReturnShipmentStateChangeBuilder change( final String change) {
         this.change = change;
         return this;
     }
-
+    
+    
+    
+    
     /**
      * set the value to the nextValue
      * @param nextValue value to be set
      * @return Builder
      */
-
-    public SetReturnShipmentStateChangeBuilder nextValue(
-            final com.commercetools.history.models.common.ReturnShipmentState nextValue) {
+    
+    public SetReturnShipmentStateChangeBuilder nextValue( final com.commercetools.history.models.common.ReturnShipmentState nextValue) {
         this.nextValue = nextValue;
         return this;
     }
-
+    
+    
+    
+    
     /**
      * set the value to the previousValue
      * @param previousValue value to be set
      * @return Builder
      */
-
-    public SetReturnShipmentStateChangeBuilder previousValue(
-            final com.commercetools.history.models.common.ReturnShipmentState previousValue) {
+    
+    public SetReturnShipmentStateChangeBuilder previousValue( final com.commercetools.history.models.common.ReturnShipmentState previousValue) {
         this.previousValue = previousValue;
         return this;
     }
+    
+    
 
     /**
      *  <p>Update action for <code>setReturnShipmentState</code></p>
      * @return change
      */
-
-    public String getChange() {
+    
+    
+    public String getChange(){
         return this.change;
     }
-
+    
     /**
      * value of nextValue}
      * @return nextValue
      */
-
-    public com.commercetools.history.models.common.ReturnShipmentState getNextValue() {
+    
+    
+    public com.commercetools.history.models.common.ReturnShipmentState getNextValue(){
         return this.nextValue;
     }
-
+    
     /**
      * value of previousValue}
      * @return previousValue
      */
-
-    public com.commercetools.history.models.common.ReturnShipmentState getPreviousValue() {
+    
+    
+    public com.commercetools.history.models.common.ReturnShipmentState getPreviousValue(){
         return this.previousValue;
     }
 
@@ -101,7 +124,7 @@ public class SetReturnShipmentStateChangeBuilder implements Builder<SetReturnShi
         Objects.requireNonNull(previousValue, SetReturnShipmentStateChange.class + ": previousValue is missing");
         return new SetReturnShipmentStateChangeImpl(change, nextValue, previousValue);
     }
-
+    
     /**
      * builds SetReturnShipmentStateChange without checking for non-null required values
      * @return SetReturnShipmentStateChange
@@ -112,7 +135,7 @@ public class SetReturnShipmentStateChangeBuilder implements Builder<SetReturnShi
 
     /**
      * factory method for an instance of SetReturnShipmentStateChangeBuilder
-     * @return builder
+     * @return builder 
      */
     public static SetReturnShipmentStateChangeBuilder of() {
         return new SetReturnShipmentStateChangeBuilder();

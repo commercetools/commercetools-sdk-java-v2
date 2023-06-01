@@ -1,17 +1,20 @@
-
 package com.commercetools.api.models.product_type;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
+import com.commercetools.api.models.product_type.ProductTypeUpdateAction;
+import com.commercetools.api.models.product_type.ProductTypeChangeAttributeNameActionImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Renames an AttributeDefinition and also renames all corresponding Attributes on all Products with this ProductType. The renaming of the Attributes is eventually consistent.</p>
@@ -26,9 +29,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .newAttributeName("{newAttributeName}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = ProductTypeChangeAttributeNameActionImpl.class)
 public interface ProductTypeChangeAttributeNameAction extends ProductTypeUpdateAction {
 
@@ -44,7 +50,6 @@ public interface ProductTypeChangeAttributeNameAction extends ProductTypeUpdateA
     @NotNull
     @JsonProperty("attributeName")
     public String getAttributeName();
-
     /**
      *  <p>New user-defined name of the Attribute that is unique with the Project.</p>
      *  <p>When using the same <code>name</code> for an Attribute in two or more ProductTypes, all fields of the AttributeDefinition of this Attribute must be the same across the ProductTypes. If not, an AttributeDefinitionAlreadyExists error is returned. An exception to this are the values of an <code>enum</code> or <code>lenum</code> type and sets thereof.</p>
@@ -58,24 +63,27 @@ public interface ProductTypeChangeAttributeNameAction extends ProductTypeUpdateA
      *  <p>Name of the AttributeDefinition to update.</p>
      * @param attributeName value to be set
      */
-
+    
     public void setAttributeName(final String attributeName);
-
+    
+    
     /**
      *  <p>New user-defined name of the Attribute that is unique with the Project.</p>
      *  <p>When using the same <code>name</code> for an Attribute in two or more ProductTypes, all fields of the AttributeDefinition of this Attribute must be the same across the ProductTypes. If not, an AttributeDefinitionAlreadyExists error is returned. An exception to this are the values of an <code>enum</code> or <code>lenum</code> type and sets thereof.</p>
      * @param newAttributeName value to be set
      */
-
+    
     public void setNewAttributeName(final String newAttributeName);
+    
 
     /**
      * factory method
      * @return instance of ProductTypeChangeAttributeNameAction
      */
-    public static ProductTypeChangeAttributeNameAction of() {
+    public static ProductTypeChangeAttributeNameAction of(){
         return new ProductTypeChangeAttributeNameActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy ProductTypeChangeAttributeNameAction
@@ -95,8 +103,7 @@ public interface ProductTypeChangeAttributeNameAction extends ProductTypeUpdateA
      * @return copy instance
      */
     @Nullable
-    public static ProductTypeChangeAttributeNameAction deepCopy(
-            @Nullable final ProductTypeChangeAttributeNameAction template) {
+    public static ProductTypeChangeAttributeNameAction deepCopy(@Nullable final ProductTypeChangeAttributeNameAction template) {
         if (template == null) {
             return null;
         }
@@ -113,16 +120,16 @@ public interface ProductTypeChangeAttributeNameAction extends ProductTypeUpdateA
     public static ProductTypeChangeAttributeNameActionBuilder builder() {
         return ProductTypeChangeAttributeNameActionBuilder.of();
     }
-
+    
     /**
      * create builder for ProductTypeChangeAttributeNameAction instance
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static ProductTypeChangeAttributeNameActionBuilder builder(
-            final ProductTypeChangeAttributeNameAction template) {
+    public static ProductTypeChangeAttributeNameActionBuilder builder(final ProductTypeChangeAttributeNameAction template) {
         return ProductTypeChangeAttributeNameActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -133,7 +140,7 @@ public interface ProductTypeChangeAttributeNameAction extends ProductTypeUpdateA
     default <T> T withProductTypeChangeAttributeNameAction(Function<ProductTypeChangeAttributeNameAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

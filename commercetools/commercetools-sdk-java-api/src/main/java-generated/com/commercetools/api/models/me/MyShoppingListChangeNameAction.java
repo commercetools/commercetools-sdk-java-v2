@@ -1,19 +1,21 @@
-
 package com.commercetools.api.models.me;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
 import com.commercetools.api.models.common.LocalizedString;
+import com.commercetools.api.models.me.MyShoppingListUpdateAction;
+import com.commercetools.api.models.me.MyShoppingListChangeNameActionImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * MyShoppingListChangeNameAction
@@ -26,9 +28,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .name(nameBuilder -> nameBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = MyShoppingListChangeNameActionImpl.class)
 public interface MyShoppingListChangeNameAction extends MyShoppingListUpdateAction {
 
@@ -50,16 +55,18 @@ public interface MyShoppingListChangeNameAction extends MyShoppingListUpdateActi
      *  <p>New value to set. Must not be empty.</p>
      * @param name value to be set
      */
-
+    
     public void setName(final LocalizedString name);
+    
 
     /**
      * factory method
      * @return instance of MyShoppingListChangeNameAction
      */
-    public static MyShoppingListChangeNameAction of() {
+    public static MyShoppingListChangeNameAction of(){
         return new MyShoppingListChangeNameActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy MyShoppingListChangeNameAction
@@ -94,7 +101,7 @@ public interface MyShoppingListChangeNameAction extends MyShoppingListUpdateActi
     public static MyShoppingListChangeNameActionBuilder builder() {
         return MyShoppingListChangeNameActionBuilder.of();
     }
-
+    
     /**
      * create builder for MyShoppingListChangeNameAction instance
      * @param template instance with prefilled values for the builder
@@ -103,6 +110,7 @@ public interface MyShoppingListChangeNameAction extends MyShoppingListUpdateActi
     public static MyShoppingListChangeNameActionBuilder builder(final MyShoppingListChangeNameAction template) {
         return MyShoppingListChangeNameActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -113,7 +121,7 @@ public interface MyShoppingListChangeNameAction extends MyShoppingListUpdateActi
     default <T> T withMyShoppingListChangeNameAction(Function<MyShoppingListChangeNameAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

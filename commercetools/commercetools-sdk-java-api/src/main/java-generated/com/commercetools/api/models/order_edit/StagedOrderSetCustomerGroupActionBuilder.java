@@ -1,11 +1,12 @@
-
 package com.commercetools.api.models.order_edit;
 
+import com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifier;
+import com.commercetools.api.models.order.StagedOrderUpdateAction;
+import com.commercetools.api.models.order_edit.StagedOrderSetCustomerGroupAction;
+import javax.annotation.Nullable;
 import java.util.*;
 import java.util.function.Function;
-
-import javax.annotation.Nullable;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -18,60 +19,61 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     StagedOrderSetCustomerGroupAction stagedOrderSetCustomerGroupAction = StagedOrderSetCustomerGroupAction.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class StagedOrderSetCustomerGroupActionBuilder implements Builder<StagedOrderSetCustomerGroupAction> {
 
+    
     @Nullable
     private com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifier customerGroup;
 
+    
     /**
      *  <p>ResourceIdentifier to a CustomerGroup.</p>
      * @param builder function to build the customerGroup value
      * @return Builder
      */
-
-    public StagedOrderSetCustomerGroupActionBuilder customerGroup(
-            Function<com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifierBuilder, com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifierBuilder> builder) {
-        this.customerGroup = builder
-                .apply(com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifierBuilder.of())
-                .build();
+    
+    public StagedOrderSetCustomerGroupActionBuilder customerGroup(Function<com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifierBuilder, com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifierBuilder> builder) {
+        this.customerGroup = builder.apply(com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifierBuilder.of()).build();
         return this;
     }
-
+    
     /**
      *  <p>ResourceIdentifier to a CustomerGroup.</p>
      * @param builder function to build the customerGroup value
      * @return Builder
      */
-
-    public StagedOrderSetCustomerGroupActionBuilder withCustomerGroup(
-            Function<com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifierBuilder, com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifier> builder) {
-        this.customerGroup = builder
-                .apply(com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifierBuilder.of());
+    
+    public StagedOrderSetCustomerGroupActionBuilder withCustomerGroup(Function<com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifierBuilder, com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifier> builder) {
+        this.customerGroup = builder.apply(com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifierBuilder.of());
         return this;
     }
-
+                    
     /**
      *  <p>ResourceIdentifier to a CustomerGroup.</p>
      * @param customerGroup value to be set
      * @return Builder
      */
-
-    public StagedOrderSetCustomerGroupActionBuilder customerGroup(
-            @Nullable final com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifier customerGroup) {
+    
+    public StagedOrderSetCustomerGroupActionBuilder customerGroup(@Nullable final com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifier customerGroup) {
         this.customerGroup = customerGroup;
         return this;
     }
+    
+    
 
     /**
      *  <p>ResourceIdentifier to a CustomerGroup.</p>
      * @return customerGroup
      */
-
+    
     @Nullable
-    public com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifier getCustomerGroup() {
+    public com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifier getCustomerGroup(){
         return this.customerGroup;
     }
 
@@ -82,7 +84,7 @@ public class StagedOrderSetCustomerGroupActionBuilder implements Builder<StagedO
     public StagedOrderSetCustomerGroupAction build() {
         return new StagedOrderSetCustomerGroupActionImpl(customerGroup);
     }
-
+    
     /**
      * builds StagedOrderSetCustomerGroupAction without checking for non-null required values
      * @return StagedOrderSetCustomerGroupAction
@@ -93,7 +95,7 @@ public class StagedOrderSetCustomerGroupActionBuilder implements Builder<StagedO
 
     /**
      * factory method for an instance of StagedOrderSetCustomerGroupActionBuilder
-     * @return builder
+     * @return builder 
      */
     public static StagedOrderSetCustomerGroupActionBuilder of() {
         return new StagedOrderSetCustomerGroupActionBuilder();

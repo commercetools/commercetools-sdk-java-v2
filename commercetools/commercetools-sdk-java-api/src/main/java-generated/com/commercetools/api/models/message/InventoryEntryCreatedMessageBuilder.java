@@ -1,11 +1,12 @@
-
 package com.commercetools.api.models.message;
 
+import com.commercetools.api.models.inventory.InventoryEntry;
+import com.commercetools.api.models.message.Message;
+import com.commercetools.api.models.message.InventoryEntryCreatedMessage;
+import javax.annotation.Nullable;
 import java.util.*;
 import java.util.function.Function;
-
-import javax.annotation.Nullable;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -26,371 +27,418 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .inventoryEntry(inventoryEntryBuilder -> inventoryEntryBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class InventoryEntryCreatedMessageBuilder implements Builder<InventoryEntryCreatedMessage> {
 
+    
+    
     private String id;
-
+    
+    
+    
     private Long version;
-
+    
+    
+    
     private java.time.ZonedDateTime createdAt;
-
+    
+    
+    
     private java.time.ZonedDateTime lastModifiedAt;
-
+    
+    
     @Nullable
     private com.commercetools.api.models.common.LastModifiedBy lastModifiedBy;
-
+    
+    
     @Nullable
     private com.commercetools.api.models.common.CreatedBy createdBy;
-
+    
+    
+    
     private Long sequenceNumber;
-
+    
+    
+    
     private com.commercetools.api.models.common.Reference resource;
-
+    
+    
+    
     private Long resourceVersion;
-
+    
+    
     @Nullable
     private com.commercetools.api.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers;
-
+    
+    
+    
     private com.commercetools.api.models.inventory.InventoryEntry inventoryEntry;
 
+    
     /**
      *  <p>Unique identifier of the Message. Can be used to track which Messages have been processed.</p>
      * @param id value to be set
      * @return Builder
      */
-
-    public InventoryEntryCreatedMessageBuilder id(final String id) {
+    
+    public InventoryEntryCreatedMessageBuilder id( final String id) {
         this.id = id;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Version of a resource. In case of Messages, this is always <code>1</code>.</p>
      * @param version value to be set
      * @return Builder
      */
-
-    public InventoryEntryCreatedMessageBuilder version(final Long version) {
+    
+    public InventoryEntryCreatedMessageBuilder version( final Long version) {
         this.version = version;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Date and time (UTC) the Message was generated.</p>
      * @param createdAt value to be set
      * @return Builder
      */
-
-    public InventoryEntryCreatedMessageBuilder createdAt(final java.time.ZonedDateTime createdAt) {
+    
+    public InventoryEntryCreatedMessageBuilder createdAt( final java.time.ZonedDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Value of <code>createdAt</code>.</p>
      * @param lastModifiedAt value to be set
      * @return Builder
      */
-
-    public InventoryEntryCreatedMessageBuilder lastModifiedAt(final java.time.ZonedDateTime lastModifiedAt) {
+    
+    public InventoryEntryCreatedMessageBuilder lastModifiedAt( final java.time.ZonedDateTime lastModifiedAt) {
         this.lastModifiedAt = lastModifiedAt;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Value of <code>createdBy</code>.</p>
      * @param builder function to build the lastModifiedBy value
      * @return Builder
      */
-
-    public InventoryEntryCreatedMessageBuilder lastModifiedBy(
-            Function<com.commercetools.api.models.common.LastModifiedByBuilder, com.commercetools.api.models.common.LastModifiedByBuilder> builder) {
+    
+    public InventoryEntryCreatedMessageBuilder lastModifiedBy(Function<com.commercetools.api.models.common.LastModifiedByBuilder, com.commercetools.api.models.common.LastModifiedByBuilder> builder) {
         this.lastModifiedBy = builder.apply(com.commercetools.api.models.common.LastModifiedByBuilder.of()).build();
         return this;
     }
-
+    
     /**
      *  <p>Value of <code>createdBy</code>.</p>
      * @param builder function to build the lastModifiedBy value
      * @return Builder
      */
-
-    public InventoryEntryCreatedMessageBuilder withLastModifiedBy(
-            Function<com.commercetools.api.models.common.LastModifiedByBuilder, com.commercetools.api.models.common.LastModifiedBy> builder) {
+    
+    public InventoryEntryCreatedMessageBuilder withLastModifiedBy(Function<com.commercetools.api.models.common.LastModifiedByBuilder, com.commercetools.api.models.common.LastModifiedBy> builder) {
         this.lastModifiedBy = builder.apply(com.commercetools.api.models.common.LastModifiedByBuilder.of());
         return this;
     }
-
+                    
     /**
      *  <p>Value of <code>createdBy</code>.</p>
      * @param lastModifiedBy value to be set
      * @return Builder
      */
-
-    public InventoryEntryCreatedMessageBuilder lastModifiedBy(
-            @Nullable final com.commercetools.api.models.common.LastModifiedBy lastModifiedBy) {
+    
+    public InventoryEntryCreatedMessageBuilder lastModifiedBy(@Nullable final com.commercetools.api.models.common.LastModifiedBy lastModifiedBy) {
         this.lastModifiedBy = lastModifiedBy;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      * @param builder function to build the createdBy value
      * @return Builder
      */
-
-    public InventoryEntryCreatedMessageBuilder createdBy(
-            Function<com.commercetools.api.models.common.CreatedByBuilder, com.commercetools.api.models.common.CreatedByBuilder> builder) {
+    
+    public InventoryEntryCreatedMessageBuilder createdBy(Function<com.commercetools.api.models.common.CreatedByBuilder, com.commercetools.api.models.common.CreatedByBuilder> builder) {
         this.createdBy = builder.apply(com.commercetools.api.models.common.CreatedByBuilder.of()).build();
         return this;
     }
-
+    
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      * @param builder function to build the createdBy value
      * @return Builder
      */
-
-    public InventoryEntryCreatedMessageBuilder withCreatedBy(
-            Function<com.commercetools.api.models.common.CreatedByBuilder, com.commercetools.api.models.common.CreatedBy> builder) {
+    
+    public InventoryEntryCreatedMessageBuilder withCreatedBy(Function<com.commercetools.api.models.common.CreatedByBuilder, com.commercetools.api.models.common.CreatedBy> builder) {
         this.createdBy = builder.apply(com.commercetools.api.models.common.CreatedByBuilder.of());
         return this;
     }
-
+                    
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      * @param createdBy value to be set
      * @return Builder
      */
-
-    public InventoryEntryCreatedMessageBuilder createdBy(
-            @Nullable final com.commercetools.api.models.common.CreatedBy createdBy) {
+    
+    public InventoryEntryCreatedMessageBuilder createdBy(@Nullable final com.commercetools.api.models.common.CreatedBy createdBy) {
         this.createdBy = createdBy;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Message number in relation to other Messages for a given resource. The <code>sequenceNumber</code> of the next Message for the resource is the successor of the <code>sequenceNumber</code> of the current Message. Meaning, the <code>sequenceNumber</code> of the next Message equals the <code>sequenceNumber</code> of the current Message + 1. <code>sequenceNumber</code> can be used to ensure that Messages are processed in the correct order for a particular resource.</p>
      * @param sequenceNumber value to be set
      * @return Builder
      */
-
-    public InventoryEntryCreatedMessageBuilder sequenceNumber(final Long sequenceNumber) {
+    
+    public InventoryEntryCreatedMessageBuilder sequenceNumber( final Long sequenceNumber) {
         this.sequenceNumber = sequenceNumber;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Reference to the resource on which the change or action was performed.</p>
      * @param resource value to be set
      * @return Builder
      */
-
-    public InventoryEntryCreatedMessageBuilder resource(final com.commercetools.api.models.common.Reference resource) {
+    
+    public InventoryEntryCreatedMessageBuilder resource( final com.commercetools.api.models.common.Reference resource) {
         this.resource = resource;
         return this;
     }
-
+    
+    
     /**
      *  <p>Reference to the resource on which the change or action was performed.</p>
      * @param builder function to build the resource value
      * @return Builder
      */
-
-    public InventoryEntryCreatedMessageBuilder resource(
-            Function<com.commercetools.api.models.common.ReferenceBuilder, Builder<? extends com.commercetools.api.models.common.Reference>> builder) {
+    
+    public InventoryEntryCreatedMessageBuilder resource(Function<com.commercetools.api.models.common.ReferenceBuilder, Builder<? extends com.commercetools.api.models.common.Reference>> builder) {
         this.resource = builder.apply(com.commercetools.api.models.common.ReferenceBuilder.of()).build();
         return this;
     }
-
+                    
+    
+    
     /**
      *  <p>Version of the resource on which the change or action was performed.</p>
      * @param resourceVersion value to be set
      * @return Builder
      */
-
-    public InventoryEntryCreatedMessageBuilder resourceVersion(final Long resourceVersion) {
+    
+    public InventoryEntryCreatedMessageBuilder resourceVersion( final Long resourceVersion) {
         this.resourceVersion = resourceVersion;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>User-provided identifiers of the resource, such as <code>key</code> or <code>externalId</code>. Only present if the resource has such identifiers.</p>
      * @param builder function to build the resourceUserProvidedIdentifiers value
      * @return Builder
      */
-
-    public InventoryEntryCreatedMessageBuilder resourceUserProvidedIdentifiers(
-            Function<com.commercetools.api.models.message.UserProvidedIdentifiersBuilder, com.commercetools.api.models.message.UserProvidedIdentifiersBuilder> builder) {
-        this.resourceUserProvidedIdentifiers = builder
-                .apply(com.commercetools.api.models.message.UserProvidedIdentifiersBuilder.of())
-                .build();
+    
+    public InventoryEntryCreatedMessageBuilder resourceUserProvidedIdentifiers(Function<com.commercetools.api.models.message.UserProvidedIdentifiersBuilder, com.commercetools.api.models.message.UserProvidedIdentifiersBuilder> builder) {
+        this.resourceUserProvidedIdentifiers = builder.apply(com.commercetools.api.models.message.UserProvidedIdentifiersBuilder.of()).build();
         return this;
     }
-
+    
     /**
      *  <p>User-provided identifiers of the resource, such as <code>key</code> or <code>externalId</code>. Only present if the resource has such identifiers.</p>
      * @param builder function to build the resourceUserProvidedIdentifiers value
      * @return Builder
      */
-
-    public InventoryEntryCreatedMessageBuilder withResourceUserProvidedIdentifiers(
-            Function<com.commercetools.api.models.message.UserProvidedIdentifiersBuilder, com.commercetools.api.models.message.UserProvidedIdentifiers> builder) {
-        this.resourceUserProvidedIdentifiers = builder
-                .apply(com.commercetools.api.models.message.UserProvidedIdentifiersBuilder.of());
+    
+    public InventoryEntryCreatedMessageBuilder withResourceUserProvidedIdentifiers(Function<com.commercetools.api.models.message.UserProvidedIdentifiersBuilder, com.commercetools.api.models.message.UserProvidedIdentifiers> builder) {
+        this.resourceUserProvidedIdentifiers = builder.apply(com.commercetools.api.models.message.UserProvidedIdentifiersBuilder.of());
         return this;
     }
-
+                    
     /**
      *  <p>User-provided identifiers of the resource, such as <code>key</code> or <code>externalId</code>. Only present if the resource has such identifiers.</p>
      * @param resourceUserProvidedIdentifiers value to be set
      * @return Builder
      */
-
-    public InventoryEntryCreatedMessageBuilder resourceUserProvidedIdentifiers(
-            @Nullable final com.commercetools.api.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers) {
+    
+    public InventoryEntryCreatedMessageBuilder resourceUserProvidedIdentifiers(@Nullable final com.commercetools.api.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers) {
         this.resourceUserProvidedIdentifiers = resourceUserProvidedIdentifiers;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>InventoryEntry that was created.</p>
      * @param builder function to build the inventoryEntry value
      * @return Builder
      */
-
-    public InventoryEntryCreatedMessageBuilder inventoryEntry(
-            Function<com.commercetools.api.models.inventory.InventoryEntryBuilder, com.commercetools.api.models.inventory.InventoryEntryBuilder> builder) {
+    
+    public InventoryEntryCreatedMessageBuilder inventoryEntry(Function<com.commercetools.api.models.inventory.InventoryEntryBuilder, com.commercetools.api.models.inventory.InventoryEntryBuilder> builder) {
         this.inventoryEntry = builder.apply(com.commercetools.api.models.inventory.InventoryEntryBuilder.of()).build();
         return this;
     }
-
+    
     /**
      *  <p>InventoryEntry that was created.</p>
      * @param builder function to build the inventoryEntry value
      * @return Builder
      */
-
-    public InventoryEntryCreatedMessageBuilder withInventoryEntry(
-            Function<com.commercetools.api.models.inventory.InventoryEntryBuilder, com.commercetools.api.models.inventory.InventoryEntry> builder) {
+    
+    public InventoryEntryCreatedMessageBuilder withInventoryEntry(Function<com.commercetools.api.models.inventory.InventoryEntryBuilder, com.commercetools.api.models.inventory.InventoryEntry> builder) {
         this.inventoryEntry = builder.apply(com.commercetools.api.models.inventory.InventoryEntryBuilder.of());
         return this;
     }
-
+                    
     /**
      *  <p>InventoryEntry that was created.</p>
      * @param inventoryEntry value to be set
      * @return Builder
      */
-
-    public InventoryEntryCreatedMessageBuilder inventoryEntry(
-            final com.commercetools.api.models.inventory.InventoryEntry inventoryEntry) {
+    
+    public InventoryEntryCreatedMessageBuilder inventoryEntry( final com.commercetools.api.models.inventory.InventoryEntry inventoryEntry) {
         this.inventoryEntry = inventoryEntry;
         return this;
     }
+    
+    
 
     /**
      *  <p>Unique identifier of the Message. Can be used to track which Messages have been processed.</p>
      * @return id
      */
-
-    public String getId() {
+    
+    
+    public String getId(){
         return this.id;
     }
-
+    
     /**
      *  <p>Version of a resource. In case of Messages, this is always <code>1</code>.</p>
      * @return version
      */
-
-    public Long getVersion() {
+    
+    
+    public Long getVersion(){
         return this.version;
     }
-
+    
     /**
      *  <p>Date and time (UTC) the Message was generated.</p>
      * @return createdAt
      */
-
-    public java.time.ZonedDateTime getCreatedAt() {
+    
+    
+    public java.time.ZonedDateTime getCreatedAt(){
         return this.createdAt;
     }
-
+    
     /**
      *  <p>Value of <code>createdAt</code>.</p>
      * @return lastModifiedAt
      */
-
-    public java.time.ZonedDateTime getLastModifiedAt() {
+    
+    
+    public java.time.ZonedDateTime getLastModifiedAt(){
         return this.lastModifiedAt;
     }
-
+    
     /**
      *  <p>Value of <code>createdBy</code>.</p>
      * @return lastModifiedBy
      */
-
+    
     @Nullable
-    public com.commercetools.api.models.common.LastModifiedBy getLastModifiedBy() {
+    public com.commercetools.api.models.common.LastModifiedBy getLastModifiedBy(){
         return this.lastModifiedBy;
     }
-
+    
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      * @return createdBy
      */
-
+    
     @Nullable
-    public com.commercetools.api.models.common.CreatedBy getCreatedBy() {
+    public com.commercetools.api.models.common.CreatedBy getCreatedBy(){
         return this.createdBy;
     }
-
+    
     /**
      *  <p>Message number in relation to other Messages for a given resource. The <code>sequenceNumber</code> of the next Message for the resource is the successor of the <code>sequenceNumber</code> of the current Message. Meaning, the <code>sequenceNumber</code> of the next Message equals the <code>sequenceNumber</code> of the current Message + 1. <code>sequenceNumber</code> can be used to ensure that Messages are processed in the correct order for a particular resource.</p>
      * @return sequenceNumber
      */
-
-    public Long getSequenceNumber() {
+    
+    
+    public Long getSequenceNumber(){
         return this.sequenceNumber;
     }
-
+    
     /**
      *  <p>Reference to the resource on which the change or action was performed.</p>
      * @return resource
      */
-
-    public com.commercetools.api.models.common.Reference getResource() {
+    
+    
+    public com.commercetools.api.models.common.Reference getResource(){
         return this.resource;
     }
-
+    
     /**
      *  <p>Version of the resource on which the change or action was performed.</p>
      * @return resourceVersion
      */
-
-    public Long getResourceVersion() {
+    
+    
+    public Long getResourceVersion(){
         return this.resourceVersion;
     }
-
+    
     /**
      *  <p>User-provided identifiers of the resource, such as <code>key</code> or <code>externalId</code>. Only present if the resource has such identifiers.</p>
      * @return resourceUserProvidedIdentifiers
      */
-
+    
     @Nullable
-    public com.commercetools.api.models.message.UserProvidedIdentifiers getResourceUserProvidedIdentifiers() {
+    public com.commercetools.api.models.message.UserProvidedIdentifiers getResourceUserProvidedIdentifiers(){
         return this.resourceUserProvidedIdentifiers;
     }
-
+    
     /**
      *  <p>InventoryEntry that was created.</p>
      * @return inventoryEntry
      */
-
-    public com.commercetools.api.models.inventory.InventoryEntry getInventoryEntry() {
+    
+    
+    public com.commercetools.api.models.inventory.InventoryEntry getInventoryEntry(){
         return this.inventoryEntry;
     }
 
@@ -407,22 +455,20 @@ public class InventoryEntryCreatedMessageBuilder implements Builder<InventoryEnt
         Objects.requireNonNull(resource, InventoryEntryCreatedMessage.class + ": resource is missing");
         Objects.requireNonNull(resourceVersion, InventoryEntryCreatedMessage.class + ": resourceVersion is missing");
         Objects.requireNonNull(inventoryEntry, InventoryEntryCreatedMessage.class + ": inventoryEntry is missing");
-        return new InventoryEntryCreatedMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy,
-            sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, inventoryEntry);
+        return new InventoryEntryCreatedMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, inventoryEntry);
     }
-
+    
     /**
      * builds InventoryEntryCreatedMessage without checking for non-null required values
      * @return InventoryEntryCreatedMessage
      */
     public InventoryEntryCreatedMessage buildUnchecked() {
-        return new InventoryEntryCreatedMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy,
-            sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, inventoryEntry);
+        return new InventoryEntryCreatedMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, inventoryEntry);
     }
 
     /**
      * factory method for an instance of InventoryEntryCreatedMessageBuilder
-     * @return builder
+     * @return builder 
      */
     public static InventoryEntryCreatedMessageBuilder of() {
         return new InventoryEntryCreatedMessageBuilder();

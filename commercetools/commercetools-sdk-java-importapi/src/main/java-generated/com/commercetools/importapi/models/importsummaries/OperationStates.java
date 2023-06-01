@@ -1,17 +1,20 @@
-
 package com.commercetools.importapi.models.importsummaries;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
 
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
+import com.commercetools.importapi.models.importsummaries.OperationStatesImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * OperationStates
@@ -29,11 +32,15 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .rejected(1)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = OperationStatesImpl.class)
-public interface OperationStates {
+public interface OperationStates  {
+
 
     /**
      *  <p>The number of resources in the <code>processing</code> state.</p>
@@ -42,7 +49,6 @@ public interface OperationStates {
     @NotNull
     @JsonProperty("processing")
     public Long getProcessing();
-
     /**
      *  <p>The number of resources in the <code>validationFailed</code> state.</p>
      * @return validationFailed
@@ -50,7 +56,6 @@ public interface OperationStates {
     @NotNull
     @JsonProperty("validationFailed")
     public Long getValidationFailed();
-
     /**
      *  <p>The number of resources in the <code>unresolved</code> state.</p>
      * @return unresolved
@@ -58,7 +63,6 @@ public interface OperationStates {
     @NotNull
     @JsonProperty("unresolved")
     public Long getUnresolved();
-
     /**
      *  <p>The number of resources in the <code>waitForMasterVariant</code> state.</p>
      * @return waitForMasterVariant
@@ -66,7 +70,6 @@ public interface OperationStates {
     @NotNull
     @JsonProperty("waitForMasterVariant")
     public Long getWaitForMasterVariant();
-
     /**
      *  <p>The number of resources in the <code>imported</code> state.</p>
      * @return imported
@@ -74,7 +77,6 @@ public interface OperationStates {
     @NotNull
     @JsonProperty("imported")
     public Long getImported();
-
     /**
      *  <p>The number of resources in the <code>rejected</code> state.</p>
      * @return rejected
@@ -87,51 +89,58 @@ public interface OperationStates {
      *  <p>The number of resources in the <code>processing</code> state.</p>
      * @param processing value to be set
      */
-
+    
     public void setProcessing(final Long processing);
-
+    
+    
     /**
      *  <p>The number of resources in the <code>validationFailed</code> state.</p>
      * @param validationFailed value to be set
      */
-
+    
     public void setValidationFailed(final Long validationFailed);
-
+    
+    
     /**
      *  <p>The number of resources in the <code>unresolved</code> state.</p>
      * @param unresolved value to be set
      */
-
+    
     public void setUnresolved(final Long unresolved);
-
+    
+    
     /**
      *  <p>The number of resources in the <code>waitForMasterVariant</code> state.</p>
      * @param waitForMasterVariant value to be set
      */
-
+    
     public void setWaitForMasterVariant(final Long waitForMasterVariant);
-
+    
+    
     /**
      *  <p>The number of resources in the <code>imported</code> state.</p>
      * @param imported value to be set
      */
-
+    
     public void setImported(final Long imported);
-
+    
+    
     /**
      *  <p>The number of resources in the <code>rejected</code> state.</p>
      * @param rejected value to be set
      */
-
+    
     public void setRejected(final Long rejected);
+    
 
     /**
      * factory method
      * @return instance of OperationStates
      */
-    public static OperationStates of() {
+    public static OperationStates of(){
         return new OperationStatesImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy OperationStates
@@ -176,7 +185,7 @@ public interface OperationStates {
     public static OperationStatesBuilder builder() {
         return OperationStatesBuilder.of();
     }
-
+    
     /**
      * create builder for OperationStates instance
      * @param template instance with prefilled values for the builder
@@ -185,6 +194,7 @@ public interface OperationStates {
     public static OperationStatesBuilder builder(final OperationStates template) {
         return OperationStatesBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -195,7 +205,7 @@ public interface OperationStates {
     default <T> T withOperationStates(Function<OperationStates, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

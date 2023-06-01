@@ -1,18 +1,20 @@
-
 package com.commercetools.api.models.order_edit;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
-
 import com.commercetools.api.models.order.StagedOrderUpdateAction;
+import com.commercetools.api.models.order_edit.StagedOrderRemoveItemShippingAddressActionImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * StagedOrderRemoveItemShippingAddressAction
@@ -25,9 +27,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .addressKey("{addressKey}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = StagedOrderRemoveItemShippingAddressActionImpl.class)
 public interface StagedOrderRemoveItemShippingAddressAction extends StagedOrderUpdateAction {
 
@@ -48,24 +53,25 @@ public interface StagedOrderRemoveItemShippingAddressAction extends StagedOrderU
      * set addressKey
      * @param addressKey value to be set
      */
-
+    
     public void setAddressKey(final String addressKey);
+    
 
     /**
      * factory method
      * @return instance of StagedOrderRemoveItemShippingAddressAction
      */
-    public static StagedOrderRemoveItemShippingAddressAction of() {
+    public static StagedOrderRemoveItemShippingAddressAction of(){
         return new StagedOrderRemoveItemShippingAddressActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy StagedOrderRemoveItemShippingAddressAction
      * @param template instance to be copied
      * @return copy instance
      */
-    public static StagedOrderRemoveItemShippingAddressAction of(
-            final StagedOrderRemoveItemShippingAddressAction template) {
+    public static StagedOrderRemoveItemShippingAddressAction of(final StagedOrderRemoveItemShippingAddressAction template) {
         StagedOrderRemoveItemShippingAddressActionImpl instance = new StagedOrderRemoveItemShippingAddressActionImpl();
         instance.setAddressKey(template.getAddressKey());
         return instance;
@@ -77,8 +83,7 @@ public interface StagedOrderRemoveItemShippingAddressAction extends StagedOrderU
      * @return copy instance
      */
     @Nullable
-    public static StagedOrderRemoveItemShippingAddressAction deepCopy(
-            @Nullable final StagedOrderRemoveItemShippingAddressAction template) {
+    public static StagedOrderRemoveItemShippingAddressAction deepCopy(@Nullable final StagedOrderRemoveItemShippingAddressAction template) {
         if (template == null) {
             return null;
         }
@@ -94,16 +99,16 @@ public interface StagedOrderRemoveItemShippingAddressAction extends StagedOrderU
     public static StagedOrderRemoveItemShippingAddressActionBuilder builder() {
         return StagedOrderRemoveItemShippingAddressActionBuilder.of();
     }
-
+    
     /**
      * create builder for StagedOrderRemoveItemShippingAddressAction instance
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static StagedOrderRemoveItemShippingAddressActionBuilder builder(
-            final StagedOrderRemoveItemShippingAddressAction template) {
+    public static StagedOrderRemoveItemShippingAddressActionBuilder builder(final StagedOrderRemoveItemShippingAddressAction template) {
         return StagedOrderRemoveItemShippingAddressActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -111,11 +116,10 @@ public interface StagedOrderRemoveItemShippingAddressAction extends StagedOrderU
      * @param helper function to map the object
      * @return mapped value
      */
-    default <T> T withStagedOrderRemoveItemShippingAddressAction(
-            Function<StagedOrderRemoveItemShippingAddressAction, T> helper) {
+    default <T> T withStagedOrderRemoveItemShippingAddressAction(Function<StagedOrderRemoveItemShippingAddressAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

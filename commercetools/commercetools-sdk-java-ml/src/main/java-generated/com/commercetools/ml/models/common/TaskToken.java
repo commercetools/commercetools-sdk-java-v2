@@ -1,17 +1,20 @@
-
 package com.commercetools.ml.models.common;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
 
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
+import com.commercetools.ml.models.common.TaskTokenImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Represents a URL path to poll to get the results of an Asynchronous Request.</p>
@@ -25,11 +28,15 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .uriPath("{uriPath}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = TaskTokenImpl.class)
-public interface TaskToken {
+public interface TaskToken  {
+
 
     /**
      *  <p>The ID for the task. Used to find the status of the task.</p>
@@ -38,7 +45,6 @@ public interface TaskToken {
     @NotNull
     @JsonProperty("taskId")
     public String getTaskId();
-
     /**
      *  <p>The URI path to poll for the status of the task.</p>
      * @return uriPath
@@ -51,23 +57,26 @@ public interface TaskToken {
      *  <p>The ID for the task. Used to find the status of the task.</p>
      * @param taskId value to be set
      */
-
+    
     public void setTaskId(final String taskId);
-
+    
+    
     /**
      *  <p>The URI path to poll for the status of the task.</p>
      * @param uriPath value to be set
      */
-
+    
     public void setUriPath(final String uriPath);
+    
 
     /**
      * factory method
      * @return instance of TaskToken
      */
-    public static TaskToken of() {
+    public static TaskToken of(){
         return new TaskTokenImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy TaskToken
@@ -104,7 +113,7 @@ public interface TaskToken {
     public static TaskTokenBuilder builder() {
         return TaskTokenBuilder.of();
     }
-
+    
     /**
      * create builder for TaskToken instance
      * @param template instance with prefilled values for the builder
@@ -113,6 +122,7 @@ public interface TaskToken {
     public static TaskTokenBuilder builder(final TaskToken template) {
         return TaskTokenBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -123,7 +133,7 @@ public interface TaskToken {
     default <T> T withTaskToken(Function<TaskToken, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

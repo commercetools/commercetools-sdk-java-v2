@@ -1,24 +1,25 @@
-
 package com.commercetools.api.models.message;
-
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-import java.util.stream.Collectors;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.channel.ChannelReference;
 import com.commercetools.api.models.common.LocalizedString;
+import com.commercetools.api.models.message.MessagePayload;
 import com.commercetools.api.models.store.ProductSelectionSetting;
 import com.commercetools.api.models.store_country.StoreCountry;
 import com.commercetools.api.models.type.CustomFields;
+import com.commercetools.api.models.message.StoreCreatedMessagePayloadImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Generated after a successful Create Store request.</p>
@@ -33,9 +34,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .plusProductSelections(productSelectionsBuilder -> productSelectionsBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = StoreCreatedMessagePayloadImpl.class)
 public interface StoreCreatedMessagePayload extends MessagePayload {
 
@@ -51,15 +55,13 @@ public interface StoreCreatedMessagePayload extends MessagePayload {
     @Valid
     @JsonProperty("name")
     public LocalizedString getName();
-
     /**
      *  <p>Languages of the Store that was created. Languages are represented as IETF language tags.</p>
      * @return languages
      */
-
+    
     @JsonProperty("languages")
     public List<String> getLanguages();
-
     /**
      *  <p>Countries of the Store that was created.</p>
      * @return countries
@@ -67,7 +69,6 @@ public interface StoreCreatedMessagePayload extends MessagePayload {
     @Valid
     @JsonProperty("countries")
     public List<StoreCountry> getCountries();
-
     /**
      *  <p>Distribution Channels of the Store that was created.</p>
      * @return distributionChannels
@@ -76,7 +77,6 @@ public interface StoreCreatedMessagePayload extends MessagePayload {
     @Valid
     @JsonProperty("distributionChannels")
     public List<ChannelReference> getDistributionChannels();
-
     /**
      *  <p>Supply Channels of the Store that was created.</p>
      * @return supplyChannels
@@ -85,7 +85,6 @@ public interface StoreCreatedMessagePayload extends MessagePayload {
     @Valid
     @JsonProperty("supplyChannels")
     public List<ChannelReference> getSupplyChannels();
-
     /**
      *  <p>ProductSelectionSettings of the Store that was created.</p>
      * @return productSelections
@@ -94,7 +93,6 @@ public interface StoreCreatedMessagePayload extends MessagePayload {
     @Valid
     @JsonProperty("productSelections")
     public List<ProductSelectionSetting> getProductSelections();
-
     /**
      *  <p>Custom Fields on the Store that was created.</p>
      * @return custom
@@ -107,98 +105,96 @@ public interface StoreCreatedMessagePayload extends MessagePayload {
      *  <p>The <code>name</code> of the Store that was created.</p>
      * @param name value to be set
      */
-
+    
     public void setName(final LocalizedString name);
-
+    
+    
     /**
      *  <p>Languages of the Store that was created. Languages are represented as IETF language tags.</p>
      * @param languages values to be set
      */
-
+    
     @JsonIgnore
-    public void setLanguages(final String... languages);
-
+    public void setLanguages(final String ...languages);
     /**
      *  <p>Languages of the Store that was created. Languages are represented as IETF language tags.</p>
      * @param languages values to be set
      */
-
+    
     public void setLanguages(final List<String> languages);
-
+    
     /**
      *  <p>Countries of the Store that was created.</p>
      * @param countries values to be set
      */
-
+    
     @JsonIgnore
-    public void setCountries(final StoreCountry... countries);
-
+    public void setCountries(final StoreCountry ...countries);
     /**
      *  <p>Countries of the Store that was created.</p>
      * @param countries values to be set
      */
-
+    
     public void setCountries(final List<StoreCountry> countries);
-
+    
     /**
      *  <p>Distribution Channels of the Store that was created.</p>
      * @param distributionChannels values to be set
      */
-
+    
     @JsonIgnore
-    public void setDistributionChannels(final ChannelReference... distributionChannels);
-
+    public void setDistributionChannels(final ChannelReference ...distributionChannels);
     /**
      *  <p>Distribution Channels of the Store that was created.</p>
      * @param distributionChannels values to be set
      */
-
+    
     public void setDistributionChannels(final List<ChannelReference> distributionChannels);
-
+    
     /**
      *  <p>Supply Channels of the Store that was created.</p>
      * @param supplyChannels values to be set
      */
-
+    
     @JsonIgnore
-    public void setSupplyChannels(final ChannelReference... supplyChannels);
-
+    public void setSupplyChannels(final ChannelReference ...supplyChannels);
     /**
      *  <p>Supply Channels of the Store that was created.</p>
      * @param supplyChannels values to be set
      */
-
+    
     public void setSupplyChannels(final List<ChannelReference> supplyChannels);
-
+    
     /**
      *  <p>ProductSelectionSettings of the Store that was created.</p>
      * @param productSelections values to be set
      */
-
+    
     @JsonIgnore
-    public void setProductSelections(final ProductSelectionSetting... productSelections);
-
+    public void setProductSelections(final ProductSelectionSetting ...productSelections);
     /**
      *  <p>ProductSelectionSettings of the Store that was created.</p>
      * @param productSelections values to be set
      */
-
+    
     public void setProductSelections(final List<ProductSelectionSetting> productSelections);
-
+    
     /**
      *  <p>Custom Fields on the Store that was created.</p>
      * @param custom value to be set
      */
-
+    
     public void setCustom(final CustomFields custom);
+    
 
     /**
      * factory method
      * @return instance of StoreCreatedMessagePayload
      */
-    public static StoreCreatedMessagePayload of() {
+    public static StoreCreatedMessagePayload of(){
         return new StoreCreatedMessagePayloadImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy StoreCreatedMessagePayload
@@ -229,26 +225,20 @@ public interface StoreCreatedMessagePayload extends MessagePayload {
         }
         StoreCreatedMessagePayloadImpl instance = new StoreCreatedMessagePayloadImpl();
         instance.setName(com.commercetools.api.models.common.LocalizedString.deepCopy(template.getName()));
-        instance.setLanguages(Optional.ofNullable(template.getLanguages()).map(ArrayList::new).orElse(null));
+        instance.setLanguages(Optional.ofNullable(template.getLanguages())
+                .map(ArrayList::new)
+                .orElse(null));
         instance.setCountries(Optional.ofNullable(template.getCountries())
-                .map(t -> t.stream()
-                        .map(com.commercetools.api.models.store_country.StoreCountry::deepCopy)
-                        .collect(Collectors.toList()))
+                .map(t -> t.stream().map(com.commercetools.api.models.store_country.StoreCountry::deepCopy).collect(Collectors.toList()))
                 .orElse(null));
         instance.setDistributionChannels(Optional.ofNullable(template.getDistributionChannels())
-                .map(t -> t.stream()
-                        .map(com.commercetools.api.models.channel.ChannelReference::deepCopy)
-                        .collect(Collectors.toList()))
+                .map(t -> t.stream().map(com.commercetools.api.models.channel.ChannelReference::deepCopy).collect(Collectors.toList()))
                 .orElse(null));
         instance.setSupplyChannels(Optional.ofNullable(template.getSupplyChannels())
-                .map(t -> t.stream()
-                        .map(com.commercetools.api.models.channel.ChannelReference::deepCopy)
-                        .collect(Collectors.toList()))
+                .map(t -> t.stream().map(com.commercetools.api.models.channel.ChannelReference::deepCopy).collect(Collectors.toList()))
                 .orElse(null));
         instance.setProductSelections(Optional.ofNullable(template.getProductSelections())
-                .map(t -> t.stream()
-                        .map(com.commercetools.api.models.store.ProductSelectionSetting::deepCopy)
-                        .collect(Collectors.toList()))
+                .map(t -> t.stream().map(com.commercetools.api.models.store.ProductSelectionSetting::deepCopy).collect(Collectors.toList()))
                 .orElse(null));
         instance.setCustom(com.commercetools.api.models.type.CustomFields.deepCopy(template.getCustom()));
         return instance;
@@ -261,7 +251,7 @@ public interface StoreCreatedMessagePayload extends MessagePayload {
     public static StoreCreatedMessagePayloadBuilder builder() {
         return StoreCreatedMessagePayloadBuilder.of();
     }
-
+    
     /**
      * create builder for StoreCreatedMessagePayload instance
      * @param template instance with prefilled values for the builder
@@ -270,6 +260,7 @@ public interface StoreCreatedMessagePayload extends MessagePayload {
     public static StoreCreatedMessagePayloadBuilder builder(final StoreCreatedMessagePayload template) {
         return StoreCreatedMessagePayloadBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -280,7 +271,7 @@ public interface StoreCreatedMessagePayload extends MessagePayload {
     default <T> T withStoreCreatedMessagePayload(Function<StoreCreatedMessagePayload, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

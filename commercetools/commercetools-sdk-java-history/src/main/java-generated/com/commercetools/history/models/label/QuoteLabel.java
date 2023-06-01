@@ -1,19 +1,21 @@
-
 package com.commercetools.history.models.label;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
 import com.commercetools.history.models.common.Reference;
+import com.commercetools.history.models.label.Label;
+import com.commercetools.history.models.label.QuoteLabelImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * QuoteLabel
@@ -29,9 +31,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .quoteRequest(quoteRequestBuilder -> quoteRequestBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = QuoteLabelImpl.class)
 public interface QuoteLabel extends Label {
 
@@ -47,7 +52,6 @@ public interface QuoteLabel extends Label {
     @NotNull
     @JsonProperty("type")
     public String getType();
-
     /**
      *
      * @return key
@@ -55,7 +59,6 @@ public interface QuoteLabel extends Label {
     @NotNull
     @JsonProperty("key")
     public String getKey();
-
     /**
      *
      * @return customer
@@ -64,7 +67,6 @@ public interface QuoteLabel extends Label {
     @Valid
     @JsonProperty("customer")
     public Reference getCustomer();
-
     /**
      *
      * @return stagedQuote
@@ -73,7 +75,6 @@ public interface QuoteLabel extends Label {
     @Valid
     @JsonProperty("stagedQuote")
     public Reference getStagedQuote();
-
     /**
      *
      * @return quoteRequest
@@ -87,37 +88,42 @@ public interface QuoteLabel extends Label {
      * set key
      * @param key value to be set
      */
-
+    
     public void setKey(final String key);
-
+    
+    
     /**
      * set customer
      * @param customer value to be set
      */
-
+    
     public void setCustomer(final Reference customer);
-
+    
+    
     /**
      * set stagedQuote
      * @param stagedQuote value to be set
      */
-
+    
     public void setStagedQuote(final Reference stagedQuote);
-
+    
+    
     /**
      * set quoteRequest
      * @param quoteRequest value to be set
      */
-
+    
     public void setQuoteRequest(final Reference quoteRequest);
+    
 
     /**
      * factory method
      * @return instance of QuoteLabel
      */
-    public static QuoteLabel of() {
+    public static QuoteLabel of(){
         return new QuoteLabelImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy QuoteLabel
@@ -147,8 +153,7 @@ public interface QuoteLabel extends Label {
         instance.setKey(template.getKey());
         instance.setCustomer(com.commercetools.history.models.common.Reference.deepCopy(template.getCustomer()));
         instance.setStagedQuote(com.commercetools.history.models.common.Reference.deepCopy(template.getStagedQuote()));
-        instance.setQuoteRequest(
-            com.commercetools.history.models.common.Reference.deepCopy(template.getQuoteRequest()));
+        instance.setQuoteRequest(com.commercetools.history.models.common.Reference.deepCopy(template.getQuoteRequest()));
         return instance;
     }
 
@@ -159,7 +164,7 @@ public interface QuoteLabel extends Label {
     public static QuoteLabelBuilder builder() {
         return QuoteLabelBuilder.of();
     }
-
+    
     /**
      * create builder for QuoteLabel instance
      * @param template instance with prefilled values for the builder
@@ -168,6 +173,7 @@ public interface QuoteLabel extends Label {
     public static QuoteLabelBuilder builder(final QuoteLabel template) {
         return QuoteLabelBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -178,7 +184,7 @@ public interface QuoteLabel extends Label {
     default <T> T withQuoteLabel(Function<QuoteLabel, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

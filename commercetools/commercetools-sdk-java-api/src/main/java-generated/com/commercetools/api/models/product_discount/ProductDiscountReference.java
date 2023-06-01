@@ -1,19 +1,22 @@
-
 package com.commercetools.api.models.product_discount;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
 import com.commercetools.api.models.common.Reference;
+import com.commercetools.api.models.common.ReferenceTypeId;
+import com.commercetools.api.models.product_discount.ProductDiscount;
+import com.commercetools.api.models.product_discount.ProductDiscountReferenceImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Reference to a ProductDiscount.</p>
@@ -26,12 +29,14 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .id("{id}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = ProductDiscountReferenceImpl.class)
-public interface ProductDiscountReference
-        extends Reference, com.commercetools.api.models.Identifiable<ProductDiscount> {
+public interface ProductDiscountReference extends Reference, com.commercetools.api.models.Identifiable<ProductDiscount> {
 
     /**
      * discriminator value for ProductDiscountReference
@@ -45,7 +50,6 @@ public interface ProductDiscountReference
     @Valid
     @JsonProperty("obj")
     public ProductDiscount getObj();
-
     /**
      *  <p>Unique identifier of the referenced ProductDiscount.</p>
      * @return id
@@ -58,23 +62,26 @@ public interface ProductDiscountReference
      *  <p>Contains the representation of the expanded ProductDiscount. Only present in responses to requests with Reference Expansion for ProductDiscounts.</p>
      * @param obj value to be set
      */
-
+    
     public void setObj(final ProductDiscount obj);
-
+    
+    
     /**
      *  <p>Unique identifier of the referenced ProductDiscount.</p>
      * @param id value to be set
      */
-
+    
     public void setId(final String id);
+    
 
     /**
      * factory method
      * @return instance of ProductDiscountReference
      */
-    public static ProductDiscountReference of() {
+    public static ProductDiscountReference of(){
         return new ProductDiscountReferenceImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy ProductDiscountReference
@@ -111,7 +118,7 @@ public interface ProductDiscountReference
     public static ProductDiscountReferenceBuilder builder() {
         return ProductDiscountReferenceBuilder.of();
     }
-
+    
     /**
      * create builder for ProductDiscountReference instance
      * @param template instance with prefilled values for the builder
@@ -120,6 +127,7 @@ public interface ProductDiscountReference
     public static ProductDiscountReferenceBuilder builder(final ProductDiscountReference template) {
         return ProductDiscountReferenceBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -130,7 +138,7 @@ public interface ProductDiscountReference
     default <T> T withProductDiscountReference(Function<ProductDiscountReference, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

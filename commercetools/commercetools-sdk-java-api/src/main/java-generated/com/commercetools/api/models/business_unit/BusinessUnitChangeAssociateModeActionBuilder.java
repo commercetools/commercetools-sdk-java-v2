@@ -1,8 +1,12 @@
-
 package com.commercetools.api.models.business_unit;
 
+import com.commercetools.api.models.business_unit.BusinessUnitAssociateMode;
+import com.commercetools.api.models.business_unit.BusinessUnitUpdateAction;
+import com.commercetools.api.models.business_unit.BusinessUnitChangeAssociateModeAction;
+import javax.annotation.Nullable;
 import java.util.*;
-
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -16,31 +20,39 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .associateMode(BusinessUnitAssociateMode.EXPLICIT)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class BusinessUnitChangeAssociateModeActionBuilder implements Builder<BusinessUnitChangeAssociateModeAction> {
 
+    
+    
     private com.commercetools.api.models.business_unit.BusinessUnitAssociateMode associateMode;
 
+    
     /**
      *  <p>The new value for <code>associateMode</code>.</p>
      * @param associateMode value to be set
      * @return Builder
      */
-
-    public BusinessUnitChangeAssociateModeActionBuilder associateMode(
-            final com.commercetools.api.models.business_unit.BusinessUnitAssociateMode associateMode) {
+    
+    public BusinessUnitChangeAssociateModeActionBuilder associateMode( final com.commercetools.api.models.business_unit.BusinessUnitAssociateMode associateMode) {
         this.associateMode = associateMode;
         return this;
     }
+    
+    
 
     /**
      *  <p>The new value for <code>associateMode</code>.</p>
      * @return associateMode
      */
-
-    public com.commercetools.api.models.business_unit.BusinessUnitAssociateMode getAssociateMode() {
+    
+    
+    public com.commercetools.api.models.business_unit.BusinessUnitAssociateMode getAssociateMode(){
         return this.associateMode;
     }
 
@@ -49,11 +61,10 @@ public class BusinessUnitChangeAssociateModeActionBuilder implements Builder<Bus
      * @return BusinessUnitChangeAssociateModeAction
      */
     public BusinessUnitChangeAssociateModeAction build() {
-        Objects.requireNonNull(associateMode,
-            BusinessUnitChangeAssociateModeAction.class + ": associateMode is missing");
+        Objects.requireNonNull(associateMode, BusinessUnitChangeAssociateModeAction.class + ": associateMode is missing");
         return new BusinessUnitChangeAssociateModeActionImpl(associateMode);
     }
-
+    
     /**
      * builds BusinessUnitChangeAssociateModeAction without checking for non-null required values
      * @return BusinessUnitChangeAssociateModeAction
@@ -64,7 +75,7 @@ public class BusinessUnitChangeAssociateModeActionBuilder implements Builder<Bus
 
     /**
      * factory method for an instance of BusinessUnitChangeAssociateModeActionBuilder
-     * @return builder
+     * @return builder 
      */
     public static BusinessUnitChangeAssociateModeActionBuilder of() {
         return new BusinessUnitChangeAssociateModeActionBuilder();
@@ -75,8 +86,7 @@ public class BusinessUnitChangeAssociateModeActionBuilder implements Builder<Bus
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static BusinessUnitChangeAssociateModeActionBuilder of(
-            final BusinessUnitChangeAssociateModeAction template) {
+    public static BusinessUnitChangeAssociateModeActionBuilder of(final BusinessUnitChangeAssociateModeAction template) {
         BusinessUnitChangeAssociateModeActionBuilder builder = new BusinessUnitChangeAssociateModeActionBuilder();
         builder.associateMode = template.getAssociateMode();
         return builder;

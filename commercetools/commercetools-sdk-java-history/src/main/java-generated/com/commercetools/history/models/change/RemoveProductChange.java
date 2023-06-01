@@ -1,19 +1,21 @@
-
 package com.commercetools.history.models.change;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
+import com.commercetools.history.models.change.Change;
 import com.commercetools.history.models.common.Reference;
+import com.commercetools.history.models.change.RemoveProductChangeImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * RemoveProductChange
@@ -27,9 +29,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .previousValue(previousValueBuilder -> previousValueBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = RemoveProductChangeImpl.class)
 public interface RemoveProductChange extends Change {
 
@@ -45,7 +50,6 @@ public interface RemoveProductChange extends Change {
     @NotNull
     @JsonProperty("type")
     public String getType();
-
     /**
      *  <p>Update action for when a product is unassigned from a product selection</p>
      * @return change
@@ -53,7 +57,6 @@ public interface RemoveProductChange extends Change {
     @NotNull
     @JsonProperty("change")
     public String getChange();
-
     /**
      *
      * @return previousValue
@@ -67,23 +70,26 @@ public interface RemoveProductChange extends Change {
      *  <p>Update action for when a product is unassigned from a product selection</p>
      * @param change value to be set
      */
-
+    
     public void setChange(final String change);
-
+    
+    
     /**
      * set previousValue
      * @param previousValue value to be set
      */
-
+    
     public void setPreviousValue(final Reference previousValue);
+    
 
     /**
      * factory method
      * @return instance of RemoveProductChange
      */
-    public static RemoveProductChange of() {
+    public static RemoveProductChange of(){
         return new RemoveProductChangeImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy RemoveProductChange
@@ -109,8 +115,7 @@ public interface RemoveProductChange extends Change {
         }
         RemoveProductChangeImpl instance = new RemoveProductChangeImpl();
         instance.setChange(template.getChange());
-        instance.setPreviousValue(
-            com.commercetools.history.models.common.Reference.deepCopy(template.getPreviousValue()));
+        instance.setPreviousValue(com.commercetools.history.models.common.Reference.deepCopy(template.getPreviousValue()));
         return instance;
     }
 
@@ -121,7 +126,7 @@ public interface RemoveProductChange extends Change {
     public static RemoveProductChangeBuilder builder() {
         return RemoveProductChangeBuilder.of();
     }
-
+    
     /**
      * create builder for RemoveProductChange instance
      * @param template instance with prefilled values for the builder
@@ -130,6 +135,7 @@ public interface RemoveProductChange extends Change {
     public static RemoveProductChangeBuilder builder(final RemoveProductChange template) {
         return RemoveProductChangeBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -140,7 +146,7 @@ public interface RemoveProductChange extends Change {
     default <T> T withRemoveProductChange(Function<RemoveProductChange, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

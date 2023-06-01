@@ -1,19 +1,21 @@
-
 package com.commercetools.api.models.message;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
 import com.commercetools.api.models.business_unit.BusinessUnit;
+import com.commercetools.api.models.message.MessagePayload;
+import com.commercetools.api.models.message.BusinessUnitCreatedMessagePayloadImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Generated after a successful Create Business Unit request.</p>
@@ -26,9 +28,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .businessUnit(businessUnitBuilder -> businessUnitBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = BusinessUnitCreatedMessagePayloadImpl.class)
 public interface BusinessUnitCreatedMessagePayload extends MessagePayload {
 
@@ -50,16 +55,18 @@ public interface BusinessUnitCreatedMessagePayload extends MessagePayload {
      *  <p>The Business Unit that was created.</p>
      * @param businessUnit value to be set
      */
-
+    
     public void setBusinessUnit(final BusinessUnit businessUnit);
+    
 
     /**
      * factory method
      * @return instance of BusinessUnitCreatedMessagePayload
      */
-    public static BusinessUnitCreatedMessagePayload of() {
+    public static BusinessUnitCreatedMessagePayload of(){
         return new BusinessUnitCreatedMessagePayloadImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy BusinessUnitCreatedMessagePayload
@@ -78,14 +85,12 @@ public interface BusinessUnitCreatedMessagePayload extends MessagePayload {
      * @return copy instance
      */
     @Nullable
-    public static BusinessUnitCreatedMessagePayload deepCopy(
-            @Nullable final BusinessUnitCreatedMessagePayload template) {
+    public static BusinessUnitCreatedMessagePayload deepCopy(@Nullable final BusinessUnitCreatedMessagePayload template) {
         if (template == null) {
             return null;
         }
         BusinessUnitCreatedMessagePayloadImpl instance = new BusinessUnitCreatedMessagePayloadImpl();
-        instance.setBusinessUnit(
-            com.commercetools.api.models.business_unit.BusinessUnit.deepCopy(template.getBusinessUnit()));
+        instance.setBusinessUnit(com.commercetools.api.models.business_unit.BusinessUnit.deepCopy(template.getBusinessUnit()));
         return instance;
     }
 
@@ -96,7 +101,7 @@ public interface BusinessUnitCreatedMessagePayload extends MessagePayload {
     public static BusinessUnitCreatedMessagePayloadBuilder builder() {
         return BusinessUnitCreatedMessagePayloadBuilder.of();
     }
-
+    
     /**
      * create builder for BusinessUnitCreatedMessagePayload instance
      * @param template instance with prefilled values for the builder
@@ -105,6 +110,7 @@ public interface BusinessUnitCreatedMessagePayload extends MessagePayload {
     public static BusinessUnitCreatedMessagePayloadBuilder builder(final BusinessUnitCreatedMessagePayload template) {
         return BusinessUnitCreatedMessagePayloadBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -115,7 +121,7 @@ public interface BusinessUnitCreatedMessagePayload extends MessagePayload {
     default <T> T withBusinessUnitCreatedMessagePayload(Function<BusinessUnitCreatedMessagePayload, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

@@ -1,17 +1,20 @@
-
 package com.commercetools.api.models.message;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
 
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
+import com.commercetools.api.models.message.MessagesConfigurationDraftImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Defines the configuration for the Messages Query feature for the Project.</p>
@@ -25,11 +28,15 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .deleteDaysAfterCreation(0.3)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = MessagesConfigurationDraftImpl.class)
 public interface MessagesConfigurationDraft extends io.vrap.rmf.base.client.Draft<MessagesConfigurationDraft> {
+
 
     /**
      *  <p>Setting to <code>true</code> activates the Messages Query feature.</p>
@@ -38,7 +45,6 @@ public interface MessagesConfigurationDraft extends io.vrap.rmf.base.client.Draf
     @NotNull
     @JsonProperty("enabled")
     public Boolean getEnabled();
-
     /**
      *  <p>Specifies the number of days each Message should be available via the Messages Query API. For Messages older than the specified period, it is not guaranteed that they are still accessible via the API.</p>
      * @return deleteDaysAfterCreation
@@ -51,23 +57,26 @@ public interface MessagesConfigurationDraft extends io.vrap.rmf.base.client.Draf
      *  <p>Setting to <code>true</code> activates the Messages Query feature.</p>
      * @param enabled value to be set
      */
-
+    
     public void setEnabled(final Boolean enabled);
-
+    
+    
     /**
      *  <p>Specifies the number of days each Message should be available via the Messages Query API. For Messages older than the specified period, it is not guaranteed that they are still accessible via the API.</p>
      * @param deleteDaysAfterCreation value to be set
      */
-
+    
     public void setDeleteDaysAfterCreation(final Integer deleteDaysAfterCreation);
+    
 
     /**
      * factory method
      * @return instance of MessagesConfigurationDraft
      */
-    public static MessagesConfigurationDraft of() {
+    public static MessagesConfigurationDraft of(){
         return new MessagesConfigurationDraftImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy MessagesConfigurationDraft
@@ -104,7 +113,7 @@ public interface MessagesConfigurationDraft extends io.vrap.rmf.base.client.Draf
     public static MessagesConfigurationDraftBuilder builder() {
         return MessagesConfigurationDraftBuilder.of();
     }
-
+    
     /**
      * create builder for MessagesConfigurationDraft instance
      * @param template instance with prefilled values for the builder
@@ -113,6 +122,7 @@ public interface MessagesConfigurationDraft extends io.vrap.rmf.base.client.Draf
     public static MessagesConfigurationDraftBuilder builder(final MessagesConfigurationDraft template) {
         return MessagesConfigurationDraftBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -123,7 +133,7 @@ public interface MessagesConfigurationDraft extends io.vrap.rmf.base.client.Draf
     default <T> T withMessagesConfigurationDraft(Function<MessagesConfigurationDraft, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

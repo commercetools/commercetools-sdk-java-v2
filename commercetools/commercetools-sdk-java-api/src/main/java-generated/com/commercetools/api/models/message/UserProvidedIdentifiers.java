@@ -1,18 +1,21 @@
-
 package com.commercetools.api.models.message;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-
 import com.commercetools.api.models.common.LocalizedString;
+import com.commercetools.api.models.message.ContainerAndKey;
+import com.commercetools.api.models.message.UserProvidedIdentifiersImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>User-provided identifiers present on the resource for which the Message is created. The value of the identifier stored in the Message corresponds to the one that was set on the resource at the version shown in <code>resourceVersion</code>.</p>
@@ -24,52 +27,51 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     UserProvidedIdentifiers userProvidedIdentifiers = UserProvidedIdentifiers.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = UserProvidedIdentifiersImpl.class)
-public interface UserProvidedIdentifiers {
+public interface UserProvidedIdentifiers  {
+
 
     /**
      *  <p>User-provided unique identifier of the resource.</p>
      * @return key
      */
-
+    
     @JsonProperty("key")
     public String getKey();
-
     /**
      *  <p>User-provided unique identifier of the resource.</p>
      * @return externalId
      */
-
+    
     @JsonProperty("externalId")
     public String getExternalId();
-
     /**
      *  <p>User-provided unique identifier of an Order.</p>
      * @return orderNumber
      */
-
+    
     @JsonProperty("orderNumber")
     public String getOrderNumber();
-
     /**
      *  <p>User-provided unique identifier of a Customer.</p>
      * @return customerNumber
      */
-
+    
     @JsonProperty("customerNumber")
     public String getCustomerNumber();
-
     /**
      *  <p>Unique SKU of a Product Variant.</p>
      * @return sku
      */
-
+    
     @JsonProperty("sku")
     public String getSku();
-
     /**
      *  <p>Unique identifier usually used in deep-link URLs for a Product. The value corresponds to the slug in the <code>current</code> Product Projection.</p>
      * @return slug
@@ -77,7 +79,6 @@ public interface UserProvidedIdentifiers {
     @Valid
     @JsonProperty("slug")
     public LocalizedString getSlug();
-
     /**
      *  <p>Unique identifier of a Custom Object.</p>
      * @return containerAndKey
@@ -90,58 +91,66 @@ public interface UserProvidedIdentifiers {
      *  <p>User-provided unique identifier of the resource.</p>
      * @param key value to be set
      */
-
+    
     public void setKey(final String key);
-
+    
+    
     /**
      *  <p>User-provided unique identifier of the resource.</p>
      * @param externalId value to be set
      */
-
+    
     public void setExternalId(final String externalId);
-
+    
+    
     /**
      *  <p>User-provided unique identifier of an Order.</p>
      * @param orderNumber value to be set
      */
-
+    
     public void setOrderNumber(final String orderNumber);
-
+    
+    
     /**
      *  <p>User-provided unique identifier of a Customer.</p>
      * @param customerNumber value to be set
      */
-
+    
     public void setCustomerNumber(final String customerNumber);
-
+    
+    
     /**
      *  <p>Unique SKU of a Product Variant.</p>
      * @param sku value to be set
      */
-
+    
     public void setSku(final String sku);
-
+    
+    
     /**
      *  <p>Unique identifier usually used in deep-link URLs for a Product. The value corresponds to the slug in the <code>current</code> Product Projection.</p>
      * @param slug value to be set
      */
-
+    
     public void setSlug(final LocalizedString slug);
-
+    
+    
     /**
      *  <p>Unique identifier of a Custom Object.</p>
      * @param containerAndKey value to be set
      */
-
+    
     public void setContainerAndKey(final ContainerAndKey containerAndKey);
+    
 
     /**
      * factory method
      * @return instance of UserProvidedIdentifiers
      */
-    public static UserProvidedIdentifiers of() {
+    public static UserProvidedIdentifiers of(){
         return new UserProvidedIdentifiersImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy UserProvidedIdentifiers
@@ -177,8 +186,7 @@ public interface UserProvidedIdentifiers {
         instance.setCustomerNumber(template.getCustomerNumber());
         instance.setSku(template.getSku());
         instance.setSlug(com.commercetools.api.models.common.LocalizedString.deepCopy(template.getSlug()));
-        instance.setContainerAndKey(
-            com.commercetools.api.models.message.ContainerAndKey.deepCopy(template.getContainerAndKey()));
+        instance.setContainerAndKey(com.commercetools.api.models.message.ContainerAndKey.deepCopy(template.getContainerAndKey()));
         return instance;
     }
 
@@ -189,7 +197,7 @@ public interface UserProvidedIdentifiers {
     public static UserProvidedIdentifiersBuilder builder() {
         return UserProvidedIdentifiersBuilder.of();
     }
-
+    
     /**
      * create builder for UserProvidedIdentifiers instance
      * @param template instance with prefilled values for the builder
@@ -198,6 +206,7 @@ public interface UserProvidedIdentifiers {
     public static UserProvidedIdentifiersBuilder builder(final UserProvidedIdentifiers template) {
         return UserProvidedIdentifiersBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -208,7 +217,7 @@ public interface UserProvidedIdentifiers {
     default <T> T withUserProvidedIdentifiers(Function<UserProvidedIdentifiers, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

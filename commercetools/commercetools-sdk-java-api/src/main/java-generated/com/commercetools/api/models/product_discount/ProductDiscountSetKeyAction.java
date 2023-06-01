@@ -1,16 +1,20 @@
-
 package com.commercetools.api.models.product_discount;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
+import com.commercetools.api.models.product_discount.ProductDiscountUpdateAction;
+import com.commercetools.api.models.product_discount.ProductDiscountSetKeyActionImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * ProductDiscountSetKeyAction
@@ -22,9 +26,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     ProductDiscountSetKeyAction productDiscountSetKeyAction = ProductDiscountSetKeyAction.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = ProductDiscountSetKeyActionImpl.class)
 public interface ProductDiscountSetKeyAction extends ProductDiscountUpdateAction {
 
@@ -37,7 +44,7 @@ public interface ProductDiscountSetKeyAction extends ProductDiscountUpdateAction
      *  <p>Value to set. If empty, any existing value will be removed.</p>
      * @return key
      */
-
+    
     @JsonProperty("key")
     public String getKey();
 
@@ -45,16 +52,18 @@ public interface ProductDiscountSetKeyAction extends ProductDiscountUpdateAction
      *  <p>Value to set. If empty, any existing value will be removed.</p>
      * @param key value to be set
      */
-
+    
     public void setKey(final String key);
+    
 
     /**
      * factory method
      * @return instance of ProductDiscountSetKeyAction
      */
-    public static ProductDiscountSetKeyAction of() {
+    public static ProductDiscountSetKeyAction of(){
         return new ProductDiscountSetKeyActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy ProductDiscountSetKeyAction
@@ -89,7 +98,7 @@ public interface ProductDiscountSetKeyAction extends ProductDiscountUpdateAction
     public static ProductDiscountSetKeyActionBuilder builder() {
         return ProductDiscountSetKeyActionBuilder.of();
     }
-
+    
     /**
      * create builder for ProductDiscountSetKeyAction instance
      * @param template instance with prefilled values for the builder
@@ -98,6 +107,7 @@ public interface ProductDiscountSetKeyAction extends ProductDiscountUpdateAction
     public static ProductDiscountSetKeyActionBuilder builder(final ProductDiscountSetKeyAction template) {
         return ProductDiscountSetKeyActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -108,11 +118,11 @@ public interface ProductDiscountSetKeyAction extends ProductDiscountUpdateAction
     default <T> T withProductDiscountSetKeyAction(Function<ProductDiscountSetKeyAction, T> helper) {
         return helper.apply(this);
     }
-
     public static ProductDiscountSetKeyAction ofUnset() {
         return ProductDiscountSetKeyAction.of();
     }
-
+    
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

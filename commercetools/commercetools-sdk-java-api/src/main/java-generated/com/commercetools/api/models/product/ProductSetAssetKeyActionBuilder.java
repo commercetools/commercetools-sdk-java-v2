@@ -1,10 +1,11 @@
-
 package com.commercetools.api.models.product;
 
-import java.util.*;
-
+import com.commercetools.api.models.product.ProductUpdateAction;
+import com.commercetools.api.models.product.ProductSetAssetKeyAction;
 import javax.annotation.Nullable;
-
+import java.util.*;
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -18,126 +19,151 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .assetId("{assetId}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class ProductSetAssetKeyActionBuilder implements Builder<ProductSetAssetKeyAction> {
 
+    
     @Nullable
     private Long variantId;
-
+    
+    
     @Nullable
     private String sku;
-
+    
+    
     @Nullable
     private Boolean staged;
-
+    
+    
+    
     private String assetId;
-
+    
+    
     @Nullable
     private String assetKey;
 
+    
     /**
      *  <p>The <code>id</code> of the ProductVariant to update.</p>
      * @param variantId value to be set
      * @return Builder
      */
-
+    
     public ProductSetAssetKeyActionBuilder variantId(@Nullable final Long variantId) {
         this.variantId = variantId;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>The <code>sku</code> of the ProductVariant to update.</p>
      * @param sku value to be set
      * @return Builder
      */
-
+    
     public ProductSetAssetKeyActionBuilder sku(@Nullable final String sku) {
         this.sku = sku;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>If <code>true</code>, only the staged Asset is updated. If <code>false</code>, both the current and staged Asset is updated.</p>
      * @param staged value to be set
      * @return Builder
      */
-
+    
     public ProductSetAssetKeyActionBuilder staged(@Nullable final Boolean staged) {
         this.staged = staged;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>The <code>id</code> of the Asset to update.</p>
      * @param assetId value to be set
      * @return Builder
      */
-
-    public ProductSetAssetKeyActionBuilder assetId(final String assetId) {
+    
+    public ProductSetAssetKeyActionBuilder assetId( final String assetId) {
         this.assetId = assetId;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Value to set. If empty, any existing value will be removed.</p>
      * @param assetKey value to be set
      * @return Builder
      */
-
+    
     public ProductSetAssetKeyActionBuilder assetKey(@Nullable final String assetKey) {
         this.assetKey = assetKey;
         return this;
     }
+    
+    
 
     /**
      *  <p>The <code>id</code> of the ProductVariant to update.</p>
      * @return variantId
      */
-
+    
     @Nullable
-    public Long getVariantId() {
+    public Long getVariantId(){
         return this.variantId;
     }
-
+    
     /**
      *  <p>The <code>sku</code> of the ProductVariant to update.</p>
      * @return sku
      */
-
+    
     @Nullable
-    public String getSku() {
+    public String getSku(){
         return this.sku;
     }
-
+    
     /**
      *  <p>If <code>true</code>, only the staged Asset is updated. If <code>false</code>, both the current and staged Asset is updated.</p>
      * @return staged
      */
-
+    
     @Nullable
-    public Boolean getStaged() {
+    public Boolean getStaged(){
         return this.staged;
     }
-
+    
     /**
      *  <p>The <code>id</code> of the Asset to update.</p>
      * @return assetId
      */
-
-    public String getAssetId() {
+    
+    
+    public String getAssetId(){
         return this.assetId;
     }
-
+    
     /**
      *  <p>Value to set. If empty, any existing value will be removed.</p>
      * @return assetKey
      */
-
+    
     @Nullable
-    public String getAssetKey() {
+    public String getAssetKey(){
         return this.assetKey;
     }
 
@@ -149,7 +175,7 @@ public class ProductSetAssetKeyActionBuilder implements Builder<ProductSetAssetK
         Objects.requireNonNull(assetId, ProductSetAssetKeyAction.class + ": assetId is missing");
         return new ProductSetAssetKeyActionImpl(variantId, sku, staged, assetId, assetKey);
     }
-
+    
     /**
      * builds ProductSetAssetKeyAction without checking for non-null required values
      * @return ProductSetAssetKeyAction
@@ -160,7 +186,7 @@ public class ProductSetAssetKeyActionBuilder implements Builder<ProductSetAssetK
 
     /**
      * factory method for an instance of ProductSetAssetKeyActionBuilder
-     * @return builder
+     * @return builder 
      */
     public static ProductSetAssetKeyActionBuilder of() {
         return new ProductSetAssetKeyActionBuilder();

@@ -1,16 +1,20 @@
-
 package com.commercetools.api.models.message;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
+import com.commercetools.api.models.message.Message;
+import com.commercetools.api.models.message.BusinessUnitContactEmailSetMessageImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Generated after a successful Set Contact Email update action.</p>
@@ -29,9 +33,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .resourceVersion(0.3)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = BusinessUnitContactEmailSetMessageImpl.class)
 public interface BusinessUnitContactEmailSetMessage extends Message {
 
@@ -44,7 +51,7 @@ public interface BusinessUnitContactEmailSetMessage extends Message {
      *  <p>The contact email that was updated on the Business Unit.</p>
      * @return contactEmail
      */
-
+    
     @JsonProperty("contactEmail")
     public String getContactEmail();
 
@@ -52,16 +59,18 @@ public interface BusinessUnitContactEmailSetMessage extends Message {
      *  <p>The contact email that was updated on the Business Unit.</p>
      * @param contactEmail value to be set
      */
-
+    
     public void setContactEmail(final String contactEmail);
+    
 
     /**
      * factory method
      * @return instance of BusinessUnitContactEmailSetMessage
      */
-    public static BusinessUnitContactEmailSetMessage of() {
+    public static BusinessUnitContactEmailSetMessage of(){
         return new BusinessUnitContactEmailSetMessageImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy BusinessUnitContactEmailSetMessage
@@ -90,8 +99,7 @@ public interface BusinessUnitContactEmailSetMessage extends Message {
      * @return copy instance
      */
     @Nullable
-    public static BusinessUnitContactEmailSetMessage deepCopy(
-            @Nullable final BusinessUnitContactEmailSetMessage template) {
+    public static BusinessUnitContactEmailSetMessage deepCopy(@Nullable final BusinessUnitContactEmailSetMessage template) {
         if (template == null) {
             return null;
         }
@@ -100,14 +108,12 @@ public interface BusinessUnitContactEmailSetMessage extends Message {
         instance.setVersion(template.getVersion());
         instance.setCreatedAt(template.getCreatedAt());
         instance.setLastModifiedAt(template.getLastModifiedAt());
-        instance.setLastModifiedBy(
-            com.commercetools.api.models.common.LastModifiedBy.deepCopy(template.getLastModifiedBy()));
+        instance.setLastModifiedBy(com.commercetools.api.models.common.LastModifiedBy.deepCopy(template.getLastModifiedBy()));
         instance.setCreatedBy(com.commercetools.api.models.common.CreatedBy.deepCopy(template.getCreatedBy()));
         instance.setSequenceNumber(template.getSequenceNumber());
         instance.setResource(com.commercetools.api.models.common.Reference.deepCopy(template.getResource()));
         instance.setResourceVersion(template.getResourceVersion());
-        instance.setResourceUserProvidedIdentifiers(com.commercetools.api.models.message.UserProvidedIdentifiers
-                .deepCopy(template.getResourceUserProvidedIdentifiers()));
+        instance.setResourceUserProvidedIdentifiers(com.commercetools.api.models.message.UserProvidedIdentifiers.deepCopy(template.getResourceUserProvidedIdentifiers()));
         instance.setContactEmail(template.getContactEmail());
         return instance;
     }
@@ -119,7 +125,7 @@ public interface BusinessUnitContactEmailSetMessage extends Message {
     public static BusinessUnitContactEmailSetMessageBuilder builder() {
         return BusinessUnitContactEmailSetMessageBuilder.of();
     }
-
+    
     /**
      * create builder for BusinessUnitContactEmailSetMessage instance
      * @param template instance with prefilled values for the builder
@@ -128,6 +134,7 @@ public interface BusinessUnitContactEmailSetMessage extends Message {
     public static BusinessUnitContactEmailSetMessageBuilder builder(final BusinessUnitContactEmailSetMessage template) {
         return BusinessUnitContactEmailSetMessageBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -138,7 +145,7 @@ public interface BusinessUnitContactEmailSetMessage extends Message {
     default <T> T withBusinessUnitContactEmailSetMessage(Function<BusinessUnitContactEmailSetMessage, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

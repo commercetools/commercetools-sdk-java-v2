@@ -1,20 +1,21 @@
-
 package com.commercetools.api.models.cart_discount;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-import java.util.stream.Collectors;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
+import com.commercetools.api.models.cart_discount.CartDiscountValue;
 import com.commercetools.api.models.common.CentPrecisionMoney;
+import com.commercetools.api.models.cart_discount.CartDiscountValueFixedImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Sets the DiscountedLineItemPrice of the CartDiscountLineItemsTarget or CartDiscountCustomLineItemsTarget to the value specified in the <code>money</code> field, if it is lower than the current Line Item price for the same currency. If the Line Item price is already discounted to a price equal to or lower than the respective price in the <code>money</code> field, this Discount is not applied.</p>
@@ -27,9 +28,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .plusMoney(moneyBuilder -> moneyBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = CartDiscountValueFixedImpl.class)
 public interface CartDiscountValueFixed extends CartDiscountValue {
 
@@ -51,24 +55,24 @@ public interface CartDiscountValueFixed extends CartDiscountValue {
      *  <p>Cent precision money values in different currencies.</p>
      * @param money values to be set
      */
-
+    
     @JsonIgnore
-    public void setMoney(final CentPrecisionMoney... money);
-
+    public void setMoney(final CentPrecisionMoney ...money);
     /**
      *  <p>Cent precision money values in different currencies.</p>
      * @param money values to be set
      */
-
+    
     public void setMoney(final List<CentPrecisionMoney> money);
 
     /**
      * factory method
      * @return instance of CartDiscountValueFixed
      */
-    public static CartDiscountValueFixed of() {
+    public static CartDiscountValueFixed of(){
         return new CartDiscountValueFixedImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy CartDiscountValueFixed
@@ -93,9 +97,7 @@ public interface CartDiscountValueFixed extends CartDiscountValue {
         }
         CartDiscountValueFixedImpl instance = new CartDiscountValueFixedImpl();
         instance.setMoney(Optional.ofNullable(template.getMoney())
-                .map(t -> t.stream()
-                        .map(com.commercetools.api.models.common.CentPrecisionMoney::deepCopy)
-                        .collect(Collectors.toList()))
+                .map(t -> t.stream().map(com.commercetools.api.models.common.CentPrecisionMoney::deepCopy).collect(Collectors.toList()))
                 .orElse(null));
         return instance;
     }
@@ -107,7 +109,7 @@ public interface CartDiscountValueFixed extends CartDiscountValue {
     public static CartDiscountValueFixedBuilder builder() {
         return CartDiscountValueFixedBuilder.of();
     }
-
+    
     /**
      * create builder for CartDiscountValueFixed instance
      * @param template instance with prefilled values for the builder
@@ -116,6 +118,7 @@ public interface CartDiscountValueFixed extends CartDiscountValue {
     public static CartDiscountValueFixedBuilder builder(final CartDiscountValueFixed template) {
         return CartDiscountValueFixedBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -126,7 +129,7 @@ public interface CartDiscountValueFixed extends CartDiscountValue {
     default <T> T withCartDiscountValueFixed(Function<CartDiscountValueFixed, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

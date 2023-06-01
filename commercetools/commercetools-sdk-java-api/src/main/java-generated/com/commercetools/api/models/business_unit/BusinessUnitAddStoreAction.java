@@ -1,19 +1,21 @@
-
 package com.commercetools.api.models.business_unit;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
+import com.commercetools.api.models.business_unit.BusinessUnitUpdateAction;
 import com.commercetools.api.models.store.StoreResourceIdentifier;
+import com.commercetools.api.models.business_unit.BusinessUnitAddStoreActionImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Adding a Store to a Business Unit generates a BusinessUnitStoreAdded Message. Only applicable when <code>storeMode</code> is <code>Explicit</code>.</p>
@@ -26,9 +28,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .store(storeBuilder -> storeBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = BusinessUnitAddStoreActionImpl.class)
 public interface BusinessUnitAddStoreAction extends BusinessUnitUpdateAction {
 
@@ -50,16 +55,18 @@ public interface BusinessUnitAddStoreAction extends BusinessUnitUpdateAction {
      *  <p>Store to add.</p>
      * @param store value to be set
      */
-
+    
     public void setStore(final StoreResourceIdentifier store);
+    
 
     /**
      * factory method
      * @return instance of BusinessUnitAddStoreAction
      */
-    public static BusinessUnitAddStoreAction of() {
+    public static BusinessUnitAddStoreAction of(){
         return new BusinessUnitAddStoreActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy BusinessUnitAddStoreAction
@@ -94,7 +101,7 @@ public interface BusinessUnitAddStoreAction extends BusinessUnitUpdateAction {
     public static BusinessUnitAddStoreActionBuilder builder() {
         return BusinessUnitAddStoreActionBuilder.of();
     }
-
+    
     /**
      * create builder for BusinessUnitAddStoreAction instance
      * @param template instance with prefilled values for the builder
@@ -103,6 +110,7 @@ public interface BusinessUnitAddStoreAction extends BusinessUnitUpdateAction {
     public static BusinessUnitAddStoreActionBuilder builder(final BusinessUnitAddStoreAction template) {
         return BusinessUnitAddStoreActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -113,7 +121,7 @@ public interface BusinessUnitAddStoreAction extends BusinessUnitUpdateAction {
     default <T> T withBusinessUnitAddStoreAction(Function<BusinessUnitAddStoreAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

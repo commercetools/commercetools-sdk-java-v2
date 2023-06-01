@@ -1,18 +1,21 @@
-
 package com.commercetools.api.models.product;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-
 import com.commercetools.api.models.common.LocalizedString;
+import com.commercetools.api.models.product.ProductUpdateAction;
+import com.commercetools.api.models.product.ProductSetMetaKeywordsActionImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * ProductSetMetaKeywordsAction
@@ -24,9 +27,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     ProductSetMetaKeywordsAction productSetMetaKeywordsAction = ProductSetMetaKeywordsAction.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = ProductSetMetaKeywordsActionImpl.class)
 public interface ProductSetMetaKeywordsAction extends ProductUpdateAction {
 
@@ -42,12 +48,11 @@ public interface ProductSetMetaKeywordsAction extends ProductUpdateAction {
     @Valid
     @JsonProperty("metaKeywords")
     public LocalizedString getMetaKeywords();
-
     /**
      *  <p>If <code>true</code>, only the staged <code>metaKeywords</code> is updated. If <code>false</code>, both the current and staged <code>metaKeywords</code> are updated.</p>
      * @return staged
      */
-
+    
     @JsonProperty("staged")
     public Boolean getStaged();
 
@@ -55,23 +60,26 @@ public interface ProductSetMetaKeywordsAction extends ProductUpdateAction {
      *  <p>Value to set. If empty, any existing value will be removed.</p>
      * @param metaKeywords value to be set
      */
-
+    
     public void setMetaKeywords(final LocalizedString metaKeywords);
-
+    
+    
     /**
      *  <p>If <code>true</code>, only the staged <code>metaKeywords</code> is updated. If <code>false</code>, both the current and staged <code>metaKeywords</code> are updated.</p>
      * @param staged value to be set
      */
-
+    
     public void setStaged(final Boolean staged);
+    
 
     /**
      * factory method
      * @return instance of ProductSetMetaKeywordsAction
      */
-    public static ProductSetMetaKeywordsAction of() {
+    public static ProductSetMetaKeywordsAction of(){
         return new ProductSetMetaKeywordsActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy ProductSetMetaKeywordsAction
@@ -96,8 +104,7 @@ public interface ProductSetMetaKeywordsAction extends ProductUpdateAction {
             return null;
         }
         ProductSetMetaKeywordsActionImpl instance = new ProductSetMetaKeywordsActionImpl();
-        instance.setMetaKeywords(
-            com.commercetools.api.models.common.LocalizedString.deepCopy(template.getMetaKeywords()));
+        instance.setMetaKeywords(com.commercetools.api.models.common.LocalizedString.deepCopy(template.getMetaKeywords()));
         instance.setStaged(template.getStaged());
         return instance;
     }
@@ -109,7 +116,7 @@ public interface ProductSetMetaKeywordsAction extends ProductUpdateAction {
     public static ProductSetMetaKeywordsActionBuilder builder() {
         return ProductSetMetaKeywordsActionBuilder.of();
     }
-
+    
     /**
      * create builder for ProductSetMetaKeywordsAction instance
      * @param template instance with prefilled values for the builder
@@ -118,6 +125,7 @@ public interface ProductSetMetaKeywordsAction extends ProductUpdateAction {
     public static ProductSetMetaKeywordsActionBuilder builder(final ProductSetMetaKeywordsAction template) {
         return ProductSetMetaKeywordsActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -128,7 +136,7 @@ public interface ProductSetMetaKeywordsAction extends ProductUpdateAction {
     default <T> T withProductSetMetaKeywordsAction(Function<ProductSetMetaKeywordsAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

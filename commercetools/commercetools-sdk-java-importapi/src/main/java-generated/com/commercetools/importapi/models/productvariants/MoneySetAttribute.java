@@ -1,20 +1,21 @@
-
 package com.commercetools.importapi.models.productvariants;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-import java.util.stream.Collectors;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
 import com.commercetools.importapi.models.common.TypedMoney;
+import com.commercetools.importapi.models.productvariants.Attribute;
+import com.commercetools.importapi.models.productvariants.MoneySetAttributeImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>This type represents an attribute whose value is a set of money objects.</p>
@@ -27,9 +28,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .plusValue(valueBuilder -> valueBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = MoneySetAttributeImpl.class)
 public interface MoneySetAttribute extends Attribute {
 
@@ -51,24 +55,24 @@ public interface MoneySetAttribute extends Attribute {
      * set value
      * @param value values to be set
      */
-
+    
     @JsonIgnore
-    public void setValue(final TypedMoney... value);
-
+    public void setValue(final TypedMoney ...value);
     /**
      * set value
      * @param value values to be set
      */
-
+    
     public void setValue(final List<TypedMoney> value);
 
     /**
      * factory method
      * @return instance of MoneySetAttribute
      */
-    public static MoneySetAttribute of() {
+    public static MoneySetAttribute of(){
         return new MoneySetAttributeImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy MoneySetAttribute
@@ -95,9 +99,7 @@ public interface MoneySetAttribute extends Attribute {
         MoneySetAttributeImpl instance = new MoneySetAttributeImpl();
         instance.setName(template.getName());
         instance.setValue(Optional.ofNullable(template.getValue())
-                .map(t -> t.stream()
-                        .map(com.commercetools.importapi.models.common.TypedMoney::deepCopy)
-                        .collect(Collectors.toList()))
+                .map(t -> t.stream().map(com.commercetools.importapi.models.common.TypedMoney::deepCopy).collect(Collectors.toList()))
                 .orElse(null));
         return instance;
     }
@@ -109,7 +111,7 @@ public interface MoneySetAttribute extends Attribute {
     public static MoneySetAttributeBuilder builder() {
         return MoneySetAttributeBuilder.of();
     }
-
+    
     /**
      * create builder for MoneySetAttribute instance
      * @param template instance with prefilled values for the builder
@@ -118,6 +120,7 @@ public interface MoneySetAttribute extends Attribute {
     public static MoneySetAttributeBuilder builder(final MoneySetAttribute template) {
         return MoneySetAttributeBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -128,7 +131,7 @@ public interface MoneySetAttribute extends Attribute {
     default <T> T withMoneySetAttribute(Function<MoneySetAttribute, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

@@ -1,18 +1,22 @@
-
 package com.commercetools.api.models.staged_quote;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-
 import com.commercetools.api.models.common.Reference;
+import com.commercetools.api.models.common.ReferenceTypeId;
+import com.commercetools.api.models.staged_quote.StagedQuote;
+import com.commercetools.api.models.staged_quote.StagedQuoteReferenceImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Reference to a StagedQuote.</p>
@@ -25,9 +29,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .id("{id}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = StagedQuoteReferenceImpl.class)
 public interface StagedQuoteReference extends Reference, com.commercetools.api.models.Identifiable<StagedQuote> {
 
@@ -48,16 +55,18 @@ public interface StagedQuoteReference extends Reference, com.commercetools.api.m
      *  <p>Contains the representation of the expanded StagedQuote. Only present in responses to requests with Reference Expansion for StagedQuote.</p>
      * @param obj value to be set
      */
-
+    
     public void setObj(final StagedQuote obj);
+    
 
     /**
      * factory method
      * @return instance of StagedQuoteReference
      */
-    public static StagedQuoteReference of() {
+    public static StagedQuoteReference of(){
         return new StagedQuoteReferenceImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy StagedQuoteReference
@@ -94,7 +103,7 @@ public interface StagedQuoteReference extends Reference, com.commercetools.api.m
     public static StagedQuoteReferenceBuilder builder() {
         return StagedQuoteReferenceBuilder.of();
     }
-
+    
     /**
      * create builder for StagedQuoteReference instance
      * @param template instance with prefilled values for the builder
@@ -103,6 +112,7 @@ public interface StagedQuoteReference extends Reference, com.commercetools.api.m
     public static StagedQuoteReferenceBuilder builder(final StagedQuoteReference template) {
         return StagedQuoteReferenceBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -113,7 +123,7 @@ public interface StagedQuoteReference extends Reference, com.commercetools.api.m
     default <T> T withStagedQuoteReference(Function<StagedQuoteReference, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

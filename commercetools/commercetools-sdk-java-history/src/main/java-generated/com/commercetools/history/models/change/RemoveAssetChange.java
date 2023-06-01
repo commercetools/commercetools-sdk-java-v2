@@ -1,19 +1,21 @@
-
 package com.commercetools.history.models.change;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
+import com.commercetools.history.models.change.Change;
 import com.commercetools.history.models.common.Asset;
+import com.commercetools.history.models.change.RemoveAssetChangeImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * RemoveAssetChange
@@ -27,9 +29,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .previousValue(previousValueBuilder -> previousValueBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = RemoveAssetChangeImpl.class)
 public interface RemoveAssetChange extends Change {
 
@@ -45,7 +50,6 @@ public interface RemoveAssetChange extends Change {
     @NotNull
     @JsonProperty("change")
     public String getChange();
-
     /**
      *
      * @return type
@@ -53,7 +57,6 @@ public interface RemoveAssetChange extends Change {
     @NotNull
     @JsonProperty("type")
     public String getType();
-
     /**
      *
      * @return previousValue
@@ -67,23 +70,26 @@ public interface RemoveAssetChange extends Change {
      *  <p>Update action for <code>removeAsset</code></p>
      * @param change value to be set
      */
-
+    
     public void setChange(final String change);
-
+    
+    
     /**
      * set previousValue
      * @param previousValue value to be set
      */
-
+    
     public void setPreviousValue(final Asset previousValue);
+    
 
     /**
      * factory method
      * @return instance of RemoveAssetChange
      */
-    public static RemoveAssetChange of() {
+    public static RemoveAssetChange of(){
         return new RemoveAssetChangeImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy RemoveAssetChange
@@ -120,7 +126,7 @@ public interface RemoveAssetChange extends Change {
     public static RemoveAssetChangeBuilder builder() {
         return RemoveAssetChangeBuilder.of();
     }
-
+    
     /**
      * create builder for RemoveAssetChange instance
      * @param template instance with prefilled values for the builder
@@ -129,6 +135,7 @@ public interface RemoveAssetChange extends Change {
     public static RemoveAssetChangeBuilder builder(final RemoveAssetChange template) {
         return RemoveAssetChangeBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -139,7 +146,7 @@ public interface RemoveAssetChange extends Change {
     default <T> T withRemoveAssetChange(Function<RemoveAssetChange, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

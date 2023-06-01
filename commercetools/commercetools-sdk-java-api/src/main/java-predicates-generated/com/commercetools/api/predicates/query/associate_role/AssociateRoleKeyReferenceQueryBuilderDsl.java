@@ -1,9 +1,11 @@
-
 package com.commercetools.api.predicates.query.associate_role;
 
 import com.commercetools.api.predicates.query.*;
 
-public class AssociateRoleKeyReferenceQueryBuilderDsl {
+import java.util.function.Function;
+
+
+public class AssociateRoleKeyReferenceQueryBuilderDsl  {
     public AssociateRoleKeyReferenceQueryBuilderDsl() {
     }
 
@@ -12,14 +14,12 @@ public class AssociateRoleKeyReferenceQueryBuilderDsl {
     }
 
     public StringComparisonPredicateBuilder<AssociateRoleKeyReferenceQueryBuilderDsl> typeId() {
-        return new StringComparisonPredicateBuilder<>(
-            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("typeId")),
-            p -> new CombinationQueryPredicate<>(p, AssociateRoleKeyReferenceQueryBuilderDsl::of));
+        return new StringComparisonPredicateBuilder<>(BinaryQueryPredicate.of().left(new ConstantQueryPredicate("typeId")),
+        p -> new CombinationQueryPredicate<>(p, AssociateRoleKeyReferenceQueryBuilderDsl::of));
     }
-
     public StringComparisonPredicateBuilder<AssociateRoleKeyReferenceQueryBuilderDsl> key() {
         return new StringComparisonPredicateBuilder<>(BinaryQueryPredicate.of().left(new ConstantQueryPredicate("key")),
-            p -> new CombinationQueryPredicate<>(p, AssociateRoleKeyReferenceQueryBuilderDsl::of));
+        p -> new CombinationQueryPredicate<>(p, AssociateRoleKeyReferenceQueryBuilderDsl::of));
     }
-
+    
 }

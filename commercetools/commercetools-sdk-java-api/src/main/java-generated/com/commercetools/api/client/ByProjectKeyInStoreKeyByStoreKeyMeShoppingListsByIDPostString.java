@@ -1,22 +1,38 @@
-
 package com.commercetools.api.client;
 
+import io.vrap.rmf.base.client.utils.Utils;
+
+import java.io.InputStream;
+import java.io.IOException;
+
 import java.net.URI;
+import java.net.URLConnection;
 import java.nio.charset.StandardCharsets;
+import java.nio.file.Files;
+
 import java.time.Duration;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
-import java.util.concurrent.CompletableFuture;
+import java.util.Map;
+import java.util.HashMap;
+import java.util.Optional;
 import java.util.function.Function;
 import java.util.function.Supplier;
 import java.util.stream.Collectors;
-
-import io.vrap.rmf.base.client.*;
+import java.util.concurrent.CompletableFuture;
 import io.vrap.rmf.base.client.utils.Generated;
+
+import javax.annotation.Nullable;
+
+import java.io.UnsupportedEncodingException;
+import java.net.URLEncoder;
+import io.vrap.rmf.base.client.*;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+
+import static io.vrap.rmf.base.client.utils.ClientUtils.blockingWait;
 
 /**
  *  <p>If a ShoppingList exists in a Project but does <em>not</em> have the <code>store</code> field, or the <code>store</code> field references a different Store, the ResourceNotFound error is returned.</p>
@@ -35,23 +51,20 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
  * }</code></pre>
  * </div>
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
-public class ByProjectKeyInStoreKeyByStoreKeyMeShoppingListsByIDPostString extends
-        StringBodyApiMethod<ByProjectKeyInStoreKeyByStoreKeyMeShoppingListsByIDPostString, com.commercetools.api.models.shopping_list.ShoppingList>
-        implements
-        com.commercetools.api.client.ConflictingTrait<ByProjectKeyInStoreKeyByStoreKeyMeShoppingListsByIDPostString>,
-        com.commercetools.api.client.ExpandableTrait<ByProjectKeyInStoreKeyByStoreKeyMeShoppingListsByIDPostString>,
-        com.commercetools.api.client.Deprecatable200Trait<ByProjectKeyInStoreKeyByStoreKeyMeShoppingListsByIDPostString>,
-        com.commercetools.api.client.ErrorableTrait<ByProjectKeyInStoreKeyByStoreKeyMeShoppingListsByIDPostString> {
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
+public class ByProjectKeyInStoreKeyByStoreKeyMeShoppingListsByIDPostString extends StringBodyApiMethod<ByProjectKeyInStoreKeyByStoreKeyMeShoppingListsByIDPostString, com.commercetools.api.models.shopping_list.ShoppingList> implements com.commercetools.api.client.ConflictingTrait<ByProjectKeyInStoreKeyByStoreKeyMeShoppingListsByIDPostString>, com.commercetools.api.client.ExpandableTrait<ByProjectKeyInStoreKeyByStoreKeyMeShoppingListsByIDPostString>, com.commercetools.api.client.Deprecatable200Trait<ByProjectKeyInStoreKeyByStoreKeyMeShoppingListsByIDPostString>, com.commercetools.api.client.ErrorableTrait<ByProjectKeyInStoreKeyByStoreKeyMeShoppingListsByIDPostString> {
 
+    
     private String projectKey;
     private String storeKey;
     private String ID;
-
+    
     private String myShoppingListUpdate;
 
-    public ByProjectKeyInStoreKeyByStoreKeyMeShoppingListsByIDPostString(final ApiHttpClient apiHttpClient,
-            String projectKey, String storeKey, String ID, String myShoppingListUpdate) {
+    public ByProjectKeyInStoreKeyByStoreKeyMeShoppingListsByIDPostString(final ApiHttpClient apiHttpClient, String projectKey, String storeKey, String ID, String myShoppingListUpdate) {
         super(apiHttpClient);
         this.projectKey = projectKey;
         this.storeKey = storeKey;
@@ -59,8 +72,7 @@ public class ByProjectKeyInStoreKeyByStoreKeyMeShoppingListsByIDPostString exten
         this.myShoppingListUpdate = myShoppingListUpdate;
     }
 
-    public ByProjectKeyInStoreKeyByStoreKeyMeShoppingListsByIDPostString(
-            ByProjectKeyInStoreKeyByStoreKeyMeShoppingListsByIDPostString t) {
+    public ByProjectKeyInStoreKeyByStoreKeyMeShoppingListsByIDPostString(ByProjectKeyInStoreKeyByStoreKeyMeShoppingListsByIDPostString t) {
         super(t);
         this.projectKey = t.projectKey;
         this.storeKey = t.storeKey;
@@ -71,55 +83,37 @@ public class ByProjectKeyInStoreKeyByStoreKeyMeShoppingListsByIDPostString exten
     @Override
     protected ApiHttpRequest buildHttpRequest() {
         List<String> params = new ArrayList<>(getQueryParamUriStrings());
-        String httpRequestPath = String.format("%s/in-store/key=%s/me/shopping-lists/%s", this.projectKey,
-            this.storeKey, this.ID);
+        String httpRequestPath = String.format("%s/in-store/key=%s/me/shopping-lists/%s", this.projectKey, this.storeKey, this.ID);
         if (!params.isEmpty()) {
             httpRequestPath += "?" + String.join("&", params);
         }
-        return new ApiHttpRequest(ApiHttpMethod.POST, URI.create(httpRequestPath), getHeaders(),
-            myShoppingListUpdate.getBytes(StandardCharsets.UTF_8));
-
+        return new ApiHttpRequest(ApiHttpMethod.POST, URI.create(httpRequestPath), getHeaders(), myShoppingListUpdate.getBytes(StandardCharsets.UTF_8));
+    
     }
 
     @Override
-    public ApiHttpResponse<com.commercetools.api.models.shopping_list.ShoppingList> executeBlocking(
-            final ApiHttpClient client, final Duration timeout) {
+    public ApiHttpResponse<com.commercetools.api.models.shopping_list.ShoppingList> executeBlocking(final ApiHttpClient client, final Duration timeout) {
         return executeBlocking(client, timeout, com.commercetools.api.models.shopping_list.ShoppingList.class);
     }
 
     @Override
-    public CompletableFuture<ApiHttpResponse<com.commercetools.api.models.shopping_list.ShoppingList>> execute(
-            final ApiHttpClient client) {
+    public CompletableFuture<ApiHttpResponse<com.commercetools.api.models.shopping_list.ShoppingList>> execute(final ApiHttpClient client) {
         return execute(client, com.commercetools.api.models.shopping_list.ShoppingList.class);
     }
 
-    public String getProjectKey() {
-        return this.projectKey;
-    }
-
-    public String getStoreKey() {
-        return this.storeKey;
-    }
-
-    public String getID() {
-        return this.ID;
-    }
+    public String getProjectKey() {return this.projectKey;}
+    public String getStoreKey() {return this.storeKey;}
+    public String getID() {return this.ID;}
 
     public List<String> getExpand() {
         return this.getQueryParam("expand");
     }
 
-    public void setProjectKey(final String projectKey) {
-        this.projectKey = projectKey;
-    }
-
-    public void setStoreKey(final String storeKey) {
-        this.storeKey = storeKey;
-    }
-
-    public void setID(final String ID) {
-        this.ID = ID;
-    }
+    public void setProjectKey(final String projectKey) { this.projectKey = projectKey; }
+    
+    public void setStoreKey(final String storeKey) { this.storeKey = storeKey; }
+    
+    public void setID(final String ID) { this.ID = ID; }
 
     /**
      * set expand with the specified value
@@ -130,7 +124,7 @@ public class ByProjectKeyInStoreKeyByStoreKeyMeShoppingListsByIDPostString exten
     public <TValue> ByProjectKeyInStoreKeyByStoreKeyMeShoppingListsByIDPostString withExpand(final TValue expand) {
         return copy().withQueryParam("expand", expand);
     }
-
+    
     /**
      * add additional expand query parameter
      * @param <TValue> value type
@@ -140,7 +134,7 @@ public class ByProjectKeyInStoreKeyByStoreKeyMeShoppingListsByIDPostString exten
     public <TValue> ByProjectKeyInStoreKeyByStoreKeyMeShoppingListsByIDPostString addExpand(final TValue expand) {
         return copy().addQueryParam("expand", expand);
     }
-
+    
     /**
      * set expand with the specified value
      * @param supplier supplier for the value to be set
@@ -149,7 +143,7 @@ public class ByProjectKeyInStoreKeyByStoreKeyMeShoppingListsByIDPostString exten
     public ByProjectKeyInStoreKeyByStoreKeyMeShoppingListsByIDPostString withExpand(final Supplier<String> supplier) {
         return copy().withQueryParam("expand", supplier.get());
     }
-
+    
     /**
      * add additional expand query parameter
      * @param supplier supplier for the value to be added
@@ -158,56 +152,50 @@ public class ByProjectKeyInStoreKeyByStoreKeyMeShoppingListsByIDPostString exten
     public ByProjectKeyInStoreKeyByStoreKeyMeShoppingListsByIDPostString addExpand(final Supplier<String> supplier) {
         return copy().addQueryParam("expand", supplier.get());
     }
-
+    
     /**
      * set expand with the specified value
      * @param op builder for the value to be set
      * @return ByProjectKeyInStoreKeyByStoreKeyMeShoppingListsByIDPostString
      */
-    public ByProjectKeyInStoreKeyByStoreKeyMeShoppingListsByIDPostString withExpand(
-            final Function<StringBuilder, StringBuilder> op) {
+    public ByProjectKeyInStoreKeyByStoreKeyMeShoppingListsByIDPostString withExpand(final Function<StringBuilder, StringBuilder> op) {
         return copy().withQueryParam("expand", op.apply(new StringBuilder()));
     }
-
+    
     /**
      * add additional expand query parameter
      * @param op builder for the value to be added
      * @return ByProjectKeyInStoreKeyByStoreKeyMeShoppingListsByIDPostString
      */
-    public ByProjectKeyInStoreKeyByStoreKeyMeShoppingListsByIDPostString addExpand(
-            final Function<StringBuilder, StringBuilder> op) {
+    public ByProjectKeyInStoreKeyByStoreKeyMeShoppingListsByIDPostString addExpand(final Function<StringBuilder, StringBuilder> op) {
         return copy().addQueryParam("expand", op.apply(new StringBuilder()));
     }
-
+    
     /**
      * set expand with the specified values
      * @param <TValue> value type
      * @param expand values to be set
      * @return ByProjectKeyInStoreKeyByStoreKeyMeShoppingListsByIDPostString
      */
-    public <TValue> ByProjectKeyInStoreKeyByStoreKeyMeShoppingListsByIDPostString withExpand(
-            final Collection<TValue> expand) {
-        return copy().withoutQueryParam("expand")
-                .addQueryParams(
-                    expand.stream().map(s -> new ParamEntry<>("expand", s.toString())).collect(Collectors.toList()));
+    public <TValue> ByProjectKeyInStoreKeyByStoreKeyMeShoppingListsByIDPostString withExpand(final Collection<TValue> expand) {
+        return copy().withoutQueryParam("expand").addQueryParams(expand.stream().map(s -> new ParamEntry<>("expand", s.toString())).collect(Collectors.toList())); 
     }
-
+    
     /**
      * add additional expand query parameters
      * @param <TValue> value type
      * @param expand values to be added
      * @return ByProjectKeyInStoreKeyByStoreKeyMeShoppingListsByIDPostString
      */
-    public <TValue> ByProjectKeyInStoreKeyByStoreKeyMeShoppingListsByIDPostString addExpand(
-            final Collection<TValue> expand) {
-        return copy().addQueryParams(
-            expand.stream().map(s -> new ParamEntry<>("expand", s.toString())).collect(Collectors.toList()));
+    public <TValue> ByProjectKeyInStoreKeyByStoreKeyMeShoppingListsByIDPostString addExpand(final Collection<TValue> expand) {
+        return copy().addQueryParams(expand.stream().map(s -> new ParamEntry<>("expand", s.toString())).collect(Collectors.toList())); 
     }
 
+    
     public String getBody() {
         return myShoppingListUpdate;
     }
-
+    
     public ByProjectKeyInStoreKeyByStoreKeyMeShoppingListsByIDPostString withBody(String myShoppingListUpdate) {
         ByProjectKeyInStoreKeyByStoreKeyMeShoppingListsByIDPostString t = copy();
         t.myShoppingListUpdate = myShoppingListUpdate;
@@ -216,28 +204,28 @@ public class ByProjectKeyInStoreKeyByStoreKeyMeShoppingListsByIDPostString exten
 
     @Override
     public boolean equals(Object o) {
-        if (this == o)
-            return true;
-
-        if (o == null || getClass() != o.getClass())
-            return false;
-
+        if (this == o) return true;
+    
+        if (o == null || getClass() != o.getClass()) return false;
+    
         ByProjectKeyInStoreKeyByStoreKeyMeShoppingListsByIDPostString that = (ByProjectKeyInStoreKeyByStoreKeyMeShoppingListsByIDPostString) o;
-
-        return new EqualsBuilder().append(projectKey, that.projectKey)
+    
+        return new EqualsBuilder()
+                .append(projectKey, that.projectKey)
                 .append(storeKey, that.storeKey)
                 .append(ID, that.ID)
                 .append(myShoppingListUpdate, that.myShoppingListUpdate)
                 .isEquals();
     }
-
+    
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(projectKey)
-                .append(storeKey)
-                .append(ID)
-                .append(myShoppingListUpdate)
-                .toHashCode();
+        return new HashCodeBuilder(17, 37)
+            .append(projectKey)
+            .append(storeKey)
+            .append(ID)
+            .append(myShoppingListUpdate)
+            .toHashCode();
     }
 
     @Override

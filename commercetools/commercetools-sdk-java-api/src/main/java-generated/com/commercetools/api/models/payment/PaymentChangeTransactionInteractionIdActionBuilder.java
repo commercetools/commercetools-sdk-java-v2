@@ -1,8 +1,11 @@
-
 package com.commercetools.api.models.payment;
 
+import com.commercetools.api.models.payment.PaymentUpdateAction;
+import com.commercetools.api.models.payment.PaymentChangeTransactionInteractionIdAction;
+import javax.annotation.Nullable;
 import java.util.*;
-
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -17,53 +20,67 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .interactionId("{interactionId}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
-public class PaymentChangeTransactionInteractionIdActionBuilder
-        implements Builder<PaymentChangeTransactionInteractionIdAction> {
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
+public class PaymentChangeTransactionInteractionIdActionBuilder implements Builder<PaymentChangeTransactionInteractionIdAction> {
 
+    
+    
     private String transactionId;
-
+    
+    
+    
     private String interactionId;
 
+    
     /**
      *  <p>Unique identifier of the Transaction.</p>
      * @param transactionId value to be set
      * @return Builder
      */
-
-    public PaymentChangeTransactionInteractionIdActionBuilder transactionId(final String transactionId) {
+    
+    public PaymentChangeTransactionInteractionIdActionBuilder transactionId( final String transactionId) {
         this.transactionId = transactionId;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>New value to set.</p>
      * @param interactionId value to be set
      * @return Builder
      */
-
-    public PaymentChangeTransactionInteractionIdActionBuilder interactionId(final String interactionId) {
+    
+    public PaymentChangeTransactionInteractionIdActionBuilder interactionId( final String interactionId) {
         this.interactionId = interactionId;
         return this;
     }
+    
+    
 
     /**
      *  <p>Unique identifier of the Transaction.</p>
      * @return transactionId
      */
-
-    public String getTransactionId() {
+    
+    
+    public String getTransactionId(){
         return this.transactionId;
     }
-
+    
     /**
      *  <p>New value to set.</p>
      * @return interactionId
      */
-
-    public String getInteractionId() {
+    
+    
+    public String getInteractionId(){
         return this.interactionId;
     }
 
@@ -72,13 +89,11 @@ public class PaymentChangeTransactionInteractionIdActionBuilder
      * @return PaymentChangeTransactionInteractionIdAction
      */
     public PaymentChangeTransactionInteractionIdAction build() {
-        Objects.requireNonNull(transactionId,
-            PaymentChangeTransactionInteractionIdAction.class + ": transactionId is missing");
-        Objects.requireNonNull(interactionId,
-            PaymentChangeTransactionInteractionIdAction.class + ": interactionId is missing");
+        Objects.requireNonNull(transactionId, PaymentChangeTransactionInteractionIdAction.class + ": transactionId is missing");
+        Objects.requireNonNull(interactionId, PaymentChangeTransactionInteractionIdAction.class + ": interactionId is missing");
         return new PaymentChangeTransactionInteractionIdActionImpl(transactionId, interactionId);
     }
-
+    
     /**
      * builds PaymentChangeTransactionInteractionIdAction without checking for non-null required values
      * @return PaymentChangeTransactionInteractionIdAction
@@ -89,7 +104,7 @@ public class PaymentChangeTransactionInteractionIdActionBuilder
 
     /**
      * factory method for an instance of PaymentChangeTransactionInteractionIdActionBuilder
-     * @return builder
+     * @return builder 
      */
     public static PaymentChangeTransactionInteractionIdActionBuilder of() {
         return new PaymentChangeTransactionInteractionIdActionBuilder();
@@ -100,8 +115,7 @@ public class PaymentChangeTransactionInteractionIdActionBuilder
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static PaymentChangeTransactionInteractionIdActionBuilder of(
-            final PaymentChangeTransactionInteractionIdAction template) {
+    public static PaymentChangeTransactionInteractionIdActionBuilder of(final PaymentChangeTransactionInteractionIdAction template) {
         PaymentChangeTransactionInteractionIdActionBuilder builder = new PaymentChangeTransactionInteractionIdActionBuilder();
         builder.transactionId = template.getTransactionId();
         builder.interactionId = template.getInteractionId();

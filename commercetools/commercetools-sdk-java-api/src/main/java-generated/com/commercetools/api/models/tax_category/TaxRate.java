@@ -1,19 +1,20 @@
-
 package com.commercetools.api.models.tax_category;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-import java.util.stream.Collectors;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
+import com.commercetools.api.models.tax_category.SubRate;
+import com.commercetools.api.models.tax_category.TaxRateImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * TaxRate
@@ -29,28 +30,30 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .country("{country}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = TaxRateImpl.class)
-public interface TaxRate {
+public interface TaxRate  {
+
 
     /**
      *  <p>Present if the TaxRate is part of a TaxCategory. Absent for external TaxRates in LineItem, CustomLineItem, and ShippingInfo.</p>
      * @return id
      */
-
+    
     @JsonProperty("id")
     public String getId();
-
     /**
      *  <p>User-defined unique identifier of the TaxRate. Present when set using TaxRateDraft. Not available for external TaxRates created using ExternalTaxRateDraft.</p>
      * @return key
      */
-
+    
     @JsonProperty("key")
     public String getKey();
-
     /**
      *  <p>Name of the TaxRate.</p>
      * @return name
@@ -58,7 +61,6 @@ public interface TaxRate {
     @NotNull
     @JsonProperty("name")
     public String getName();
-
     /**
      *  <p>Tax rate. If subrates are used, the amount must be the sum of all subrates.</p>
      * @return amount
@@ -66,7 +68,6 @@ public interface TaxRate {
     @NotNull
     @JsonProperty("amount")
     public Double getAmount();
-
     /**
      *  <p>If <code>true</code>, tax is included in Embedded Prices or Standalone Prices, and the <code>taxedPrice</code> is present on LineItems. In this case, the <code>totalNet</code> price on TaxedPrice includes the TaxRate.</p>
      * @return includedInPrice
@@ -74,7 +75,6 @@ public interface TaxRate {
     @NotNull
     @JsonProperty("includedInPrice")
     public Boolean getIncludedInPrice();
-
     /**
      *  <p>Country in which the tax rate is applied in ISO 3166-1 alpha-2 format.</p>
      * @return country
@@ -82,15 +82,13 @@ public interface TaxRate {
     @NotNull
     @JsonProperty("country")
     public String getCountry();
-
     /**
      *  <p>State within the country, such as Texas in the United States.</p>
      * @return state
      */
-
+    
     @JsonProperty("state")
     public String getState();
-
     /**
      *  <p>Used to calculate the taxPortions field in a Cart or Order. It is useful if the total tax of a country (such as the US) is a combination of multiple taxes (such as state and local taxes).</p>
      * @return subRates
@@ -103,73 +101,80 @@ public interface TaxRate {
      *  <p>Present if the TaxRate is part of a TaxCategory. Absent for external TaxRates in LineItem, CustomLineItem, and ShippingInfo.</p>
      * @param id value to be set
      */
-
+    
     public void setId(final String id);
-
+    
+    
     /**
      *  <p>User-defined unique identifier of the TaxRate. Present when set using TaxRateDraft. Not available for external TaxRates created using ExternalTaxRateDraft.</p>
      * @param key value to be set
      */
-
+    
     public void setKey(final String key);
-
+    
+    
     /**
      *  <p>Name of the TaxRate.</p>
      * @param name value to be set
      */
-
+    
     public void setName(final String name);
-
+    
+    
     /**
      *  <p>Tax rate. If subrates are used, the amount must be the sum of all subrates.</p>
      * @param amount value to be set
      */
-
+    
     public void setAmount(final Double amount);
-
+    
+    
     /**
      *  <p>If <code>true</code>, tax is included in Embedded Prices or Standalone Prices, and the <code>taxedPrice</code> is present on LineItems. In this case, the <code>totalNet</code> price on TaxedPrice includes the TaxRate.</p>
      * @param includedInPrice value to be set
      */
-
+    
     public void setIncludedInPrice(final Boolean includedInPrice);
-
+    
+    
     /**
      *  <p>Country in which the tax rate is applied in ISO 3166-1 alpha-2 format.</p>
      * @param country value to be set
      */
-
+    
     public void setCountry(final String country);
-
+    
+    
     /**
      *  <p>State within the country, such as Texas in the United States.</p>
      * @param state value to be set
      */
-
+    
     public void setState(final String state);
-
+    
+    
     /**
      *  <p>Used to calculate the taxPortions field in a Cart or Order. It is useful if the total tax of a country (such as the US) is a combination of multiple taxes (such as state and local taxes).</p>
      * @param subRates values to be set
      */
-
+    
     @JsonIgnore
-    public void setSubRates(final SubRate... subRates);
-
+    public void setSubRates(final SubRate ...subRates);
     /**
      *  <p>Used to calculate the taxPortions field in a Cart or Order. It is useful if the total tax of a country (such as the US) is a combination of multiple taxes (such as state and local taxes).</p>
      * @param subRates values to be set
      */
-
+    
     public void setSubRates(final List<SubRate> subRates);
 
     /**
      * factory method
      * @return instance of TaxRate
      */
-    public static TaxRate of() {
+    public static TaxRate of(){
         return new TaxRateImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy TaxRate
@@ -208,9 +213,7 @@ public interface TaxRate {
         instance.setCountry(template.getCountry());
         instance.setState(template.getState());
         instance.setSubRates(Optional.ofNullable(template.getSubRates())
-                .map(t -> t.stream()
-                        .map(com.commercetools.api.models.tax_category.SubRate::deepCopy)
-                        .collect(Collectors.toList()))
+                .map(t -> t.stream().map(com.commercetools.api.models.tax_category.SubRate::deepCopy).collect(Collectors.toList()))
                 .orElse(null));
         return instance;
     }
@@ -222,7 +225,7 @@ public interface TaxRate {
     public static TaxRateBuilder builder() {
         return TaxRateBuilder.of();
     }
-
+    
     /**
      * create builder for TaxRate instance
      * @param template instance with prefilled values for the builder
@@ -231,6 +234,7 @@ public interface TaxRate {
     public static TaxRateBuilder builder(final TaxRate template) {
         return TaxRateBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -241,7 +245,7 @@ public interface TaxRate {
     default <T> T withTaxRate(Function<TaxRate, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

@@ -1,39 +1,45 @@
-
 package com.commercetools.history.models.common;
 
-import java.time.*;
-import java.util.*;
-
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
-
-import io.vrap.rmf.base.client.ModelBase;
+import com.commercetools.history.models.common.SuggestTokenizer;
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.ModelBase;
+import javax.validation.Valid;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.annotation.*;
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
  * SearchKeyword
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class SearchKeywordImpl implements SearchKeyword, ModelBase {
 
+    
     private String text;
-
+    
+    
     private com.commercetools.history.models.common.SuggestTokenizer suggestTokenizer;
 
     /**
      * create instance with all properties
      */
     @JsonCreator
-    SearchKeywordImpl(@JsonProperty("text") final String text,
-            @JsonProperty("suggestTokenizer") final com.commercetools.history.models.common.SuggestTokenizer suggestTokenizer) {
+    SearchKeywordImpl(@JsonProperty("text") final String text, @JsonProperty("suggestTokenizer") final com.commercetools.history.models.common.SuggestTokenizer suggestTokenizer) {
         this.text = text;
         this.suggestTokenizer = suggestTokenizer;
     }
-
     /**
      * create empty instance
      */
@@ -43,43 +49,49 @@ public class SearchKeywordImpl implements SearchKeyword, ModelBase {
     /**
      *
      */
-
-    public String getText() {
+    
+    public String getText(){
         return this.text;
     }
-
+    
     /**
      *
      */
-
-    public com.commercetools.history.models.common.SuggestTokenizer getSuggestTokenizer() {
+    
+    public com.commercetools.history.models.common.SuggestTokenizer getSuggestTokenizer(){
         return this.suggestTokenizer;
     }
 
-    public void setText(final String text) {
+    
+    public void setText(final String text){
         this.text = text;
     }
-
-    public void setSuggestTokenizer(final com.commercetools.history.models.common.SuggestTokenizer suggestTokenizer) {
+    
+    
+    public void setSuggestTokenizer(final com.commercetools.history.models.common.SuggestTokenizer suggestTokenizer){
         this.suggestTokenizer = suggestTokenizer;
     }
 
     @Override
     public boolean equals(Object o) {
-        if (this == o)
-            return true;
-
-        if (o == null || getClass() != o.getClass())
-            return false;
-
+        if (this == o) return true;
+    
+        if (o == null || getClass() != o.getClass()) return false;
+    
         SearchKeywordImpl that = (SearchKeywordImpl) o;
-
-        return new EqualsBuilder().append(text, that.text).append(suggestTokenizer, that.suggestTokenizer).isEquals();
+    
+        return new EqualsBuilder()
+                .append(text, that.text)
+                .append(suggestTokenizer, that.suggestTokenizer)
+                .isEquals();
     }
-
+    
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(text).append(suggestTokenizer).toHashCode();
+        return new HashCodeBuilder(17, 37)
+            .append(text)
+            .append(suggestTokenizer)
+            .toHashCode();
     }
 
 }

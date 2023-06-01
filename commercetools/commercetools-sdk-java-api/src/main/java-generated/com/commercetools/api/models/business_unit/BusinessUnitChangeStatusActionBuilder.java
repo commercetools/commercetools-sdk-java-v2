@@ -1,8 +1,11 @@
-
 package com.commercetools.api.models.business_unit;
 
+import com.commercetools.api.models.business_unit.BusinessUnitUpdateAction;
+import com.commercetools.api.models.business_unit.BusinessUnitChangeStatusAction;
+import javax.annotation.Nullable;
 import java.util.*;
-
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -16,30 +19,39 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .status("{status}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class BusinessUnitChangeStatusActionBuilder implements Builder<BusinessUnitChangeStatusAction> {
 
+    
+    
     private String status;
 
+    
     /**
      *  <p>New status to set.</p>
      * @param status value to be set
      * @return Builder
      */
-
-    public BusinessUnitChangeStatusActionBuilder status(final String status) {
+    
+    public BusinessUnitChangeStatusActionBuilder status( final String status) {
         this.status = status;
         return this;
     }
+    
+    
 
     /**
      *  <p>New status to set.</p>
      * @return status
      */
-
-    public String getStatus() {
+    
+    
+    public String getStatus(){
         return this.status;
     }
 
@@ -51,7 +63,7 @@ public class BusinessUnitChangeStatusActionBuilder implements Builder<BusinessUn
         Objects.requireNonNull(status, BusinessUnitChangeStatusAction.class + ": status is missing");
         return new BusinessUnitChangeStatusActionImpl(status);
     }
-
+    
     /**
      * builds BusinessUnitChangeStatusAction without checking for non-null required values
      * @return BusinessUnitChangeStatusAction
@@ -62,7 +74,7 @@ public class BusinessUnitChangeStatusActionBuilder implements Builder<BusinessUn
 
     /**
      * factory method for an instance of BusinessUnitChangeStatusActionBuilder
-     * @return builder
+     * @return builder 
      */
     public static BusinessUnitChangeStatusActionBuilder of() {
         return new BusinessUnitChangeStatusActionBuilder();

@@ -1,19 +1,21 @@
-
 package com.commercetools.api.models.store;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
+import com.commercetools.api.models.store.StoreUpdateAction;
 import com.commercetools.api.models.store_country.StoreCountry;
+import com.commercetools.api.models.store.StoreRemoveCountryActionImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>This update action produces the StoreCountriesChanged Message. It has no effect if a given country is not present in a Store.</p>
@@ -26,9 +28,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .country(countryBuilder -> countryBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = StoreRemoveCountryActionImpl.class)
 public interface StoreRemoveCountryAction extends StoreUpdateAction {
 
@@ -50,16 +55,18 @@ public interface StoreRemoveCountryAction extends StoreUpdateAction {
      *  <p>Value to remove from <code>countries</code>.</p>
      * @param country value to be set
      */
-
+    
     public void setCountry(final StoreCountry country);
+    
 
     /**
      * factory method
      * @return instance of StoreRemoveCountryAction
      */
-    public static StoreRemoveCountryAction of() {
+    public static StoreRemoveCountryAction of(){
         return new StoreRemoveCountryActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy StoreRemoveCountryAction
@@ -94,7 +101,7 @@ public interface StoreRemoveCountryAction extends StoreUpdateAction {
     public static StoreRemoveCountryActionBuilder builder() {
         return StoreRemoveCountryActionBuilder.of();
     }
-
+    
     /**
      * create builder for StoreRemoveCountryAction instance
      * @param template instance with prefilled values for the builder
@@ -103,6 +110,7 @@ public interface StoreRemoveCountryAction extends StoreUpdateAction {
     public static StoreRemoveCountryActionBuilder builder(final StoreRemoveCountryAction template) {
         return StoreRemoveCountryActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -113,7 +121,7 @@ public interface StoreRemoveCountryAction extends StoreUpdateAction {
     default <T> T withStoreRemoveCountryAction(Function<StoreRemoveCountryAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

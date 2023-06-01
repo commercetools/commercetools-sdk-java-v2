@@ -1,9 +1,12 @@
-
 package com.commercetools.history.models.change;
 
+import com.commercetools.history.models.change.Change;
+import com.commercetools.history.models.common.Reference;
+import com.commercetools.history.models.change.TransitionStateChange;
+import javax.annotation.Nullable;
 import java.util.*;
 import java.util.function.Function;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -19,123 +22,139 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .nextValue(nextValueBuilder -> nextValueBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class TransitionStateChangeBuilder implements Builder<TransitionStateChange> {
 
+    
+    
     private String change;
-
+    
+    
+    
     private com.commercetools.history.models.common.Reference previousValue;
-
+    
+    
+    
     private com.commercetools.history.models.common.Reference nextValue;
 
+    
     /**
      *  <p>Shape of the action for <code>transitionState</code></p>
      * @param change value to be set
      * @return Builder
      */
-
-    public TransitionStateChangeBuilder change(final String change) {
+    
+    public TransitionStateChangeBuilder change( final String change) {
         this.change = change;
         return this;
     }
-
+    
+    
+    
+    
     /**
      * set the value to the previousValue using the builder function
      * @param builder function to build the previousValue value
      * @return Builder
      */
-
-    public TransitionStateChangeBuilder previousValue(
-            Function<com.commercetools.history.models.common.ReferenceBuilder, com.commercetools.history.models.common.ReferenceBuilder> builder) {
+    
+    public TransitionStateChangeBuilder previousValue(Function<com.commercetools.history.models.common.ReferenceBuilder, com.commercetools.history.models.common.ReferenceBuilder> builder) {
         this.previousValue = builder.apply(com.commercetools.history.models.common.ReferenceBuilder.of()).build();
         return this;
     }
-
+    
     /**
      * set the value to the previousValue using the builder function
      * @param builder function to build the previousValue value
      * @return Builder
      */
-
-    public TransitionStateChangeBuilder withPreviousValue(
-            Function<com.commercetools.history.models.common.ReferenceBuilder, com.commercetools.history.models.common.Reference> builder) {
+    
+    public TransitionStateChangeBuilder withPreviousValue(Function<com.commercetools.history.models.common.ReferenceBuilder, com.commercetools.history.models.common.Reference> builder) {
         this.previousValue = builder.apply(com.commercetools.history.models.common.ReferenceBuilder.of());
         return this;
     }
-
+                    
     /**
      * set the value to the previousValue
      * @param previousValue value to be set
      * @return Builder
      */
-
-    public TransitionStateChangeBuilder previousValue(
-            final com.commercetools.history.models.common.Reference previousValue) {
+    
+    public TransitionStateChangeBuilder previousValue( final com.commercetools.history.models.common.Reference previousValue) {
         this.previousValue = previousValue;
         return this;
     }
-
+    
+    
+    
+    
     /**
      * set the value to the nextValue using the builder function
      * @param builder function to build the nextValue value
      * @return Builder
      */
-
-    public TransitionStateChangeBuilder nextValue(
-            Function<com.commercetools.history.models.common.ReferenceBuilder, com.commercetools.history.models.common.ReferenceBuilder> builder) {
+    
+    public TransitionStateChangeBuilder nextValue(Function<com.commercetools.history.models.common.ReferenceBuilder, com.commercetools.history.models.common.ReferenceBuilder> builder) {
         this.nextValue = builder.apply(com.commercetools.history.models.common.ReferenceBuilder.of()).build();
         return this;
     }
-
+    
     /**
      * set the value to the nextValue using the builder function
      * @param builder function to build the nextValue value
      * @return Builder
      */
-
-    public TransitionStateChangeBuilder withNextValue(
-            Function<com.commercetools.history.models.common.ReferenceBuilder, com.commercetools.history.models.common.Reference> builder) {
+    
+    public TransitionStateChangeBuilder withNextValue(Function<com.commercetools.history.models.common.ReferenceBuilder, com.commercetools.history.models.common.Reference> builder) {
         this.nextValue = builder.apply(com.commercetools.history.models.common.ReferenceBuilder.of());
         return this;
     }
-
+                    
     /**
      * set the value to the nextValue
      * @param nextValue value to be set
      * @return Builder
      */
-
-    public TransitionStateChangeBuilder nextValue(final com.commercetools.history.models.common.Reference nextValue) {
+    
+    public TransitionStateChangeBuilder nextValue( final com.commercetools.history.models.common.Reference nextValue) {
         this.nextValue = nextValue;
         return this;
     }
+    
+    
 
     /**
      *  <p>Shape of the action for <code>transitionState</code></p>
      * @return change
      */
-
-    public String getChange() {
+    
+    
+    public String getChange(){
         return this.change;
     }
-
+    
     /**
      * value of previousValue}
      * @return previousValue
      */
-
-    public com.commercetools.history.models.common.Reference getPreviousValue() {
+    
+    
+    public com.commercetools.history.models.common.Reference getPreviousValue(){
         return this.previousValue;
     }
-
+    
     /**
      * value of nextValue}
      * @return nextValue
      */
-
-    public com.commercetools.history.models.common.Reference getNextValue() {
+    
+    
+    public com.commercetools.history.models.common.Reference getNextValue(){
         return this.nextValue;
     }
 
@@ -149,7 +168,7 @@ public class TransitionStateChangeBuilder implements Builder<TransitionStateChan
         Objects.requireNonNull(nextValue, TransitionStateChange.class + ": nextValue is missing");
         return new TransitionStateChangeImpl(change, previousValue, nextValue);
     }
-
+    
     /**
      * builds TransitionStateChange without checking for non-null required values
      * @return TransitionStateChange
@@ -160,7 +179,7 @@ public class TransitionStateChangeBuilder implements Builder<TransitionStateChan
 
     /**
      * factory method for an instance of TransitionStateChangeBuilder
-     * @return builder
+     * @return builder 
      */
     public static TransitionStateChangeBuilder of() {
         return new TransitionStateChangeBuilder();

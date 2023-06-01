@@ -1,19 +1,21 @@
-
 package com.commercetools.importapi.models.errors;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
+import com.commercetools.importapi.models.errors.ErrorObject;
 import com.commercetools.importapi.models.productvariants.Attribute;
+import com.commercetools.importapi.models.errors.DuplicateAttributeValueErrorImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>The <code>Unique</code> AttributeConstraintEnum was violated.</p>
@@ -27,9 +29,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .attribute(attributeBuilder -> attributeBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = DuplicateAttributeValueErrorImpl.class)
 public interface DuplicateAttributeValueError extends ErrorObject {
 
@@ -51,16 +56,18 @@ public interface DuplicateAttributeValueError extends ErrorObject {
      *  <p>The attribute in conflict.</p>
      * @param attribute value to be set
      */
-
+    
     public void setAttribute(final Attribute attribute);
+    
 
     /**
      * factory method
      * @return instance of DuplicateAttributeValueError
      */
-    public static DuplicateAttributeValueError of() {
+    public static DuplicateAttributeValueError of(){
         return new DuplicateAttributeValueErrorImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy DuplicateAttributeValueError
@@ -86,8 +93,7 @@ public interface DuplicateAttributeValueError extends ErrorObject {
         }
         DuplicateAttributeValueErrorImpl instance = new DuplicateAttributeValueErrorImpl();
         instance.setMessage(template.getMessage());
-        instance.setAttribute(
-            com.commercetools.importapi.models.productvariants.Attribute.deepCopy(template.getAttribute()));
+        instance.setAttribute(com.commercetools.importapi.models.productvariants.Attribute.deepCopy(template.getAttribute()));
         return instance;
     }
 
@@ -98,7 +104,7 @@ public interface DuplicateAttributeValueError extends ErrorObject {
     public static DuplicateAttributeValueErrorBuilder builder() {
         return DuplicateAttributeValueErrorBuilder.of();
     }
-
+    
     /**
      * create builder for DuplicateAttributeValueError instance
      * @param template instance with prefilled values for the builder
@@ -107,6 +113,7 @@ public interface DuplicateAttributeValueError extends ErrorObject {
     public static DuplicateAttributeValueErrorBuilder builder(final DuplicateAttributeValueError template) {
         return DuplicateAttributeValueErrorBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -117,7 +124,7 @@ public interface DuplicateAttributeValueError extends ErrorObject {
     default <T> T withDuplicateAttributeValueError(Function<DuplicateAttributeValueError, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

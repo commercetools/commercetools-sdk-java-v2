@@ -1,18 +1,20 @@
-
 package com.commercetools.history.models.common;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
+import com.commercetools.history.models.common.Reference;
+import com.commercetools.history.models.common.ReservationImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * Reservation
@@ -28,11 +30,15 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .checkoutStartedAt("{checkoutStartedAt}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = ReservationImpl.class)
-public interface Reservation {
+public interface Reservation  {
+
 
     /**
      *
@@ -41,7 +47,6 @@ public interface Reservation {
     @NotNull
     @JsonProperty("quantity")
     public Integer getQuantity();
-
     /**
      *
      * @return owner
@@ -50,7 +55,6 @@ public interface Reservation {
     @Valid
     @JsonProperty("owner")
     public Reference getOwner();
-
     /**
      *
      * @return createdAt
@@ -58,7 +62,6 @@ public interface Reservation {
     @NotNull
     @JsonProperty("createdAt")
     public String getCreatedAt();
-
     /**
      *
      * @return checkoutStartedAt
@@ -71,37 +74,42 @@ public interface Reservation {
      * set quantity
      * @param quantity value to be set
      */
-
+    
     public void setQuantity(final Integer quantity);
-
+    
+    
     /**
      * set owner
      * @param owner value to be set
      */
-
+    
     public void setOwner(final Reference owner);
-
+    
+    
     /**
      * set createdAt
      * @param createdAt value to be set
      */
-
+    
     public void setCreatedAt(final String createdAt);
-
+    
+    
     /**
      * set checkoutStartedAt
      * @param checkoutStartedAt value to be set
      */
-
+    
     public void setCheckoutStartedAt(final String checkoutStartedAt);
+    
 
     /**
      * factory method
      * @return instance of Reservation
      */
-    public static Reservation of() {
+    public static Reservation of(){
         return new ReservationImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy Reservation
@@ -142,7 +150,7 @@ public interface Reservation {
     public static ReservationBuilder builder() {
         return ReservationBuilder.of();
     }
-
+    
     /**
      * create builder for Reservation instance
      * @param template instance with prefilled values for the builder
@@ -151,6 +159,7 @@ public interface Reservation {
     public static ReservationBuilder builder(final Reservation template) {
         return ReservationBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -161,7 +170,7 @@ public interface Reservation {
     default <T> T withReservation(Function<Reservation, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

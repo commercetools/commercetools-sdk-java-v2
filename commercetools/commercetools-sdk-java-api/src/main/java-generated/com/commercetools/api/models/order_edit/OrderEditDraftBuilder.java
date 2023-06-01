@@ -1,11 +1,13 @@
-
 package com.commercetools.api.models.order_edit;
 
+import com.commercetools.api.models.order.OrderReference;
+import com.commercetools.api.models.order.StagedOrderUpdateAction;
+import com.commercetools.api.models.type.CustomFieldsDraft;
+import com.commercetools.api.models.order_edit.OrderEditDraft;
+import javax.annotation.Nullable;
 import java.util.*;
 import java.util.function.Function;
-
-import javax.annotation.Nullable;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -19,256 +21,274 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .resource(resourceBuilder -> resourceBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class OrderEditDraftBuilder implements Builder<OrderEditDraft> {
 
+    
     @Nullable
     private String key;
-
+    
+    
+    
     private com.commercetools.api.models.order.OrderReference resource;
-
+    
+    
     @Nullable
     private java.util.List<com.commercetools.api.models.order.StagedOrderUpdateAction> stagedActions;
-
+    
+    
     @Nullable
     private com.commercetools.api.models.type.CustomFieldsDraft custom;
-
+    
+    
     @Nullable
     private String comment;
-
+    
+    
     @Nullable
     private Boolean dryRun;
 
+    
     /**
      *  <p>User-defined unique identifier for the OrderEdit.</p>
      * @param key value to be set
      * @return Builder
      */
-
+    
     public OrderEditDraftBuilder key(@Nullable final String key) {
         this.key = key;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>The order to be updated with this edit.</p>
      * @param builder function to build the resource value
      * @return Builder
      */
-
-    public OrderEditDraftBuilder resource(
-            Function<com.commercetools.api.models.order.OrderReferenceBuilder, com.commercetools.api.models.order.OrderReferenceBuilder> builder) {
+    
+    public OrderEditDraftBuilder resource(Function<com.commercetools.api.models.order.OrderReferenceBuilder, com.commercetools.api.models.order.OrderReferenceBuilder> builder) {
         this.resource = builder.apply(com.commercetools.api.models.order.OrderReferenceBuilder.of()).build();
         return this;
     }
-
+    
     /**
      *  <p>The order to be updated with this edit.</p>
      * @param builder function to build the resource value
      * @return Builder
      */
-
-    public OrderEditDraftBuilder withResource(
-            Function<com.commercetools.api.models.order.OrderReferenceBuilder, com.commercetools.api.models.order.OrderReference> builder) {
+    
+    public OrderEditDraftBuilder withResource(Function<com.commercetools.api.models.order.OrderReferenceBuilder, com.commercetools.api.models.order.OrderReference> builder) {
         this.resource = builder.apply(com.commercetools.api.models.order.OrderReferenceBuilder.of());
         return this;
     }
-
+                    
     /**
      *  <p>The order to be updated with this edit.</p>
      * @param resource value to be set
      * @return Builder
      */
-
-    public OrderEditDraftBuilder resource(final com.commercetools.api.models.order.OrderReference resource) {
+    
+    public OrderEditDraftBuilder resource( final com.commercetools.api.models.order.OrderReference resource) {
         this.resource = resource;
         return this;
     }
-
+    
+    
+    
     /**
      *  <p>The actions to apply to <code>resource</code>.</p>
      * @param stagedActions value to be set
      * @return Builder
      */
-
-    public OrderEditDraftBuilder stagedActions(
-            @Nullable final com.commercetools.api.models.order.StagedOrderUpdateAction... stagedActions) {
+    
+    public OrderEditDraftBuilder stagedActions(@Nullable final com.commercetools.api.models.order.StagedOrderUpdateAction ...stagedActions) {
         this.stagedActions = new ArrayList<>(Arrays.asList(stagedActions));
         return this;
     }
-
+    
     /**
      *  <p>The actions to apply to <code>resource</code>.</p>
      * @param stagedActions value to be set
      * @return Builder
      */
-
-    public OrderEditDraftBuilder stagedActions(
-            @Nullable final java.util.List<com.commercetools.api.models.order.StagedOrderUpdateAction> stagedActions) {
+    
+    public OrderEditDraftBuilder stagedActions(@Nullable final java.util.List<com.commercetools.api.models.order.StagedOrderUpdateAction> stagedActions) {
         this.stagedActions = stagedActions;
         return this;
     }
-
+    
     /**
      *  <p>The actions to apply to <code>resource</code>.</p>
      * @param stagedActions value to be set
      * @return Builder
      */
-
-    public OrderEditDraftBuilder plusStagedActions(
-            @Nullable final com.commercetools.api.models.order.StagedOrderUpdateAction... stagedActions) {
+    
+    public OrderEditDraftBuilder plusStagedActions(@Nullable final com.commercetools.api.models.order.StagedOrderUpdateAction ...stagedActions) {
         if (this.stagedActions == null) {
             this.stagedActions = new ArrayList<>();
         }
         this.stagedActions.addAll(Arrays.asList(stagedActions));
         return this;
     }
-
+    
+    
     /**
      *  <p>The actions to apply to <code>resource</code>.</p>
      * @param builder function to build the stagedActions value
      * @return Builder
      */
-
-    public OrderEditDraftBuilder plusStagedActions(
-            Function<com.commercetools.api.models.order.StagedOrderUpdateActionBuilder, Builder<? extends com.commercetools.api.models.order.StagedOrderUpdateAction>> builder) {
+    
+    public OrderEditDraftBuilder plusStagedActions(Function<com.commercetools.api.models.order.StagedOrderUpdateActionBuilder, Builder<? extends com.commercetools.api.models.order.StagedOrderUpdateAction>> builder) {
         if (this.stagedActions == null) {
             this.stagedActions = new ArrayList<>();
         }
-        this.stagedActions
-                .add(builder.apply(com.commercetools.api.models.order.StagedOrderUpdateActionBuilder.of()).build());
+        this.stagedActions.add(builder.apply(com.commercetools.api.models.order.StagedOrderUpdateActionBuilder.of()).build());
         return this;
     }
-
+    
     /**
      *  <p>The actions to apply to <code>resource</code>.</p>
      * @param builder function to build the stagedActions value
      * @return Builder
      */
-
-    public OrderEditDraftBuilder withStagedActions(
-            Function<com.commercetools.api.models.order.StagedOrderUpdateActionBuilder, Builder<? extends com.commercetools.api.models.order.StagedOrderUpdateAction>> builder) {
+    
+    public OrderEditDraftBuilder withStagedActions(Function<com.commercetools.api.models.order.StagedOrderUpdateActionBuilder, Builder<? extends com.commercetools.api.models.order.StagedOrderUpdateAction>> builder) {
         this.stagedActions = new ArrayList<>();
-        this.stagedActions
-                .add(builder.apply(com.commercetools.api.models.order.StagedOrderUpdateActionBuilder.of()).build());
+        this.stagedActions.add(builder.apply(com.commercetools.api.models.order.StagedOrderUpdateActionBuilder.of()).build());
         return this;
     }
-
+                    
+    
+    
+    
     /**
      *  <p>The custom fields.</p>
      * @param builder function to build the custom value
      * @return Builder
      */
-
-    public OrderEditDraftBuilder custom(
-            Function<com.commercetools.api.models.type.CustomFieldsDraftBuilder, com.commercetools.api.models.type.CustomFieldsDraftBuilder> builder) {
+    
+    public OrderEditDraftBuilder custom(Function<com.commercetools.api.models.type.CustomFieldsDraftBuilder, com.commercetools.api.models.type.CustomFieldsDraftBuilder> builder) {
         this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsDraftBuilder.of()).build();
         return this;
     }
-
+    
     /**
      *  <p>The custom fields.</p>
      * @param builder function to build the custom value
      * @return Builder
      */
-
-    public OrderEditDraftBuilder withCustom(
-            Function<com.commercetools.api.models.type.CustomFieldsDraftBuilder, com.commercetools.api.models.type.CustomFieldsDraft> builder) {
+    
+    public OrderEditDraftBuilder withCustom(Function<com.commercetools.api.models.type.CustomFieldsDraftBuilder, com.commercetools.api.models.type.CustomFieldsDraft> builder) {
         this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsDraftBuilder.of());
         return this;
     }
-
+                    
     /**
      *  <p>The custom fields.</p>
      * @param custom value to be set
      * @return Builder
      */
-
+    
     public OrderEditDraftBuilder custom(@Nullable final com.commercetools.api.models.type.CustomFieldsDraft custom) {
         this.custom = custom;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>This field can be used to add additional textual information regarding the edit.</p>
      * @param comment value to be set
      * @return Builder
      */
-
+    
     public OrderEditDraftBuilder comment(@Nullable final String comment) {
         this.comment = comment;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>When set to <code>true</code> the edit is applied on the Order without persisting it.</p>
      * @param dryRun value to be set
      * @return Builder
      */
-
+    
     public OrderEditDraftBuilder dryRun(@Nullable final Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
     }
+    
+    
 
     /**
      *  <p>User-defined unique identifier for the OrderEdit.</p>
      * @return key
      */
-
+    
     @Nullable
-    public String getKey() {
+    public String getKey(){
         return this.key;
     }
-
+    
     /**
      *  <p>The order to be updated with this edit.</p>
      * @return resource
      */
-
-    public com.commercetools.api.models.order.OrderReference getResource() {
+    
+    
+    public com.commercetools.api.models.order.OrderReference getResource(){
         return this.resource;
     }
-
+    
     /**
      *  <p>The actions to apply to <code>resource</code>.</p>
      * @return stagedActions
      */
-
+    
     @Nullable
-    public java.util.List<com.commercetools.api.models.order.StagedOrderUpdateAction> getStagedActions() {
+    public java.util.List<com.commercetools.api.models.order.StagedOrderUpdateAction> getStagedActions(){
         return this.stagedActions;
     }
-
+    
     /**
      *  <p>The custom fields.</p>
      * @return custom
      */
-
+    
     @Nullable
-    public com.commercetools.api.models.type.CustomFieldsDraft getCustom() {
+    public com.commercetools.api.models.type.CustomFieldsDraft getCustom(){
         return this.custom;
     }
-
+    
     /**
      *  <p>This field can be used to add additional textual information regarding the edit.</p>
      * @return comment
      */
-
+    
     @Nullable
-    public String getComment() {
+    public String getComment(){
         return this.comment;
     }
-
+    
     /**
      *  <p>When set to <code>true</code> the edit is applied on the Order without persisting it.</p>
      * @return dryRun
      */
-
+    
     @Nullable
-    public Boolean getDryRun() {
+    public Boolean getDryRun(){
         return this.dryRun;
     }
 
@@ -280,7 +300,7 @@ public class OrderEditDraftBuilder implements Builder<OrderEditDraft> {
         Objects.requireNonNull(resource, OrderEditDraft.class + ": resource is missing");
         return new OrderEditDraftImpl(key, resource, stagedActions, custom, comment, dryRun);
     }
-
+    
     /**
      * builds OrderEditDraft without checking for non-null required values
      * @return OrderEditDraft
@@ -291,7 +311,7 @@ public class OrderEditDraftBuilder implements Builder<OrderEditDraft> {
 
     /**
      * factory method for an instance of OrderEditDraftBuilder
-     * @return builder
+     * @return builder 
      */
     public static OrderEditDraftBuilder of() {
         return new OrderEditDraftBuilder();

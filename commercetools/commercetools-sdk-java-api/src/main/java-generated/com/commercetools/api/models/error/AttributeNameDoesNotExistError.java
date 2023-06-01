@@ -1,17 +1,20 @@
-
 package com.commercetools.api.models.error;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
+import com.commercetools.api.models.error.ErrorObject;
+import com.commercetools.api.models.error.AttributeNameDoesNotExistErrorImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Returned when an AttributeDefinition does not exist for an Attribute <code>name</code>.</p>
@@ -26,9 +29,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .invalidAttributeName("{invalidAttributeName}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = AttributeNameDoesNotExistErrorImpl.class)
 public interface AttributeNameDoesNotExistError extends ErrorObject {
 
@@ -44,7 +50,6 @@ public interface AttributeNameDoesNotExistError extends ErrorObject {
     @NotNull
     @JsonProperty("code")
     public String getCode();
-
     /**
      *  <p><code>"Attribute definition for $attributeName does not exist on type $typeName."</code></p>
      * @return message
@@ -52,7 +57,6 @@ public interface AttributeNameDoesNotExistError extends ErrorObject {
     @NotNull
     @JsonProperty("message")
     public String getMessage();
-
     /**
      *  <p>Non-existent Attribute name.</p>
      * @return invalidAttributeName
@@ -65,23 +69,26 @@ public interface AttributeNameDoesNotExistError extends ErrorObject {
      *  <p><code>"Attribute definition for $attributeName does not exist on type $typeName."</code></p>
      * @param message value to be set
      */
-
+    
     public void setMessage(final String message);
-
+    
+    
     /**
      *  <p>Non-existent Attribute name.</p>
      * @param invalidAttributeName value to be set
      */
-
+    
     public void setInvalidAttributeName(final String invalidAttributeName);
+    
 
     /**
      * factory method
      * @return instance of AttributeNameDoesNotExistError
      */
-    public static AttributeNameDoesNotExistError of() {
+    public static AttributeNameDoesNotExistError of(){
         return new AttributeNameDoesNotExistErrorImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy AttributeNameDoesNotExistError
@@ -120,7 +127,7 @@ public interface AttributeNameDoesNotExistError extends ErrorObject {
     public static AttributeNameDoesNotExistErrorBuilder builder() {
         return AttributeNameDoesNotExistErrorBuilder.of();
     }
-
+    
     /**
      * create builder for AttributeNameDoesNotExistError instance
      * @param template instance with prefilled values for the builder
@@ -129,6 +136,7 @@ public interface AttributeNameDoesNotExistError extends ErrorObject {
     public static AttributeNameDoesNotExistErrorBuilder builder(final AttributeNameDoesNotExistError template) {
         return AttributeNameDoesNotExistErrorBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -139,7 +147,7 @@ public interface AttributeNameDoesNotExistError extends ErrorObject {
     default <T> T withAttributeNameDoesNotExistError(Function<AttributeNameDoesNotExistError, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

@@ -1,8 +1,12 @@
-
 package com.commercetools.importapi.models.common;
 
+import com.commercetools.importapi.models.common.KeyReference;
+import com.commercetools.importapi.models.common.ReferenceType;
+import com.commercetools.importapi.models.common.TypeKeyReference;
+import javax.annotation.Nullable;
 import java.util.*;
-
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -16,30 +20,39 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .key("{key}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class TypeKeyReferenceBuilder implements Builder<TypeKeyReference> {
 
+    
+    
     private String key;
 
+    
     /**
      * set the value to the key
      * @param key value to be set
      * @return Builder
      */
-
-    public TypeKeyReferenceBuilder key(final String key) {
+    
+    public TypeKeyReferenceBuilder key( final String key) {
         this.key = key;
         return this;
     }
+    
+    
 
     /**
      * value of key}
      * @return key
      */
-
-    public String getKey() {
+    
+    
+    public String getKey(){
         return this.key;
     }
 
@@ -51,7 +64,7 @@ public class TypeKeyReferenceBuilder implements Builder<TypeKeyReference> {
         Objects.requireNonNull(key, TypeKeyReference.class + ": key is missing");
         return new TypeKeyReferenceImpl(key);
     }
-
+    
     /**
      * builds TypeKeyReference without checking for non-null required values
      * @return TypeKeyReference
@@ -62,7 +75,7 @@ public class TypeKeyReferenceBuilder implements Builder<TypeKeyReference> {
 
     /**
      * factory method for an instance of TypeKeyReferenceBuilder
-     * @return builder
+     * @return builder 
      */
     public static TypeKeyReferenceBuilder of() {
         return new TypeKeyReferenceBuilder();

@@ -1,11 +1,11 @@
-
 package com.commercetools.api.predicates.query.order;
-
-import java.util.function.Function;
 
 import com.commercetools.api.predicates.query.*;
 
-public class OrderAddPaymentActionQueryBuilderDsl {
+import java.util.function.Function;
+
+
+public class OrderAddPaymentActionQueryBuilderDsl  {
     public OrderAddPaymentActionQueryBuilderDsl() {
     }
 
@@ -14,19 +14,16 @@ public class OrderAddPaymentActionQueryBuilderDsl {
     }
 
     public StringComparisonPredicateBuilder<OrderAddPaymentActionQueryBuilderDsl> action() {
-        return new StringComparisonPredicateBuilder<>(
-            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("action")),
-            p -> new CombinationQueryPredicate<>(p, OrderAddPaymentActionQueryBuilderDsl::of));
+        return new StringComparisonPredicateBuilder<>(BinaryQueryPredicate.of().left(new ConstantQueryPredicate("action")),
+        p -> new CombinationQueryPredicate<>(p, OrderAddPaymentActionQueryBuilderDsl::of));
     }
-
     public CombinationQueryPredicate<OrderAddPaymentActionQueryBuilderDsl> payment(
-            Function<com.commercetools.api.predicates.query.payment.PaymentResourceIdentifierQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.payment.PaymentResourceIdentifierQueryBuilderDsl>> fn) {
-        return new CombinationQueryPredicate<>(
-            ContainerQueryPredicate.of()
-                    .parent(ConstantQueryPredicate.of().constant("payment"))
-                    .inner(fn.apply(
-                        com.commercetools.api.predicates.query.payment.PaymentResourceIdentifierQueryBuilderDsl.of())),
+        Function<com.commercetools.api.predicates.query.payment.PaymentResourceIdentifierQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.payment.PaymentResourceIdentifierQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(ContainerQueryPredicate.of()
+            .parent(ConstantQueryPredicate.of().constant("payment"))
+            .inner(fn.apply(com.commercetools.api.predicates.query.payment.PaymentResourceIdentifierQueryBuilderDsl.of())),
             OrderAddPaymentActionQueryBuilderDsl::of);
     }
-
+    
+    
 }

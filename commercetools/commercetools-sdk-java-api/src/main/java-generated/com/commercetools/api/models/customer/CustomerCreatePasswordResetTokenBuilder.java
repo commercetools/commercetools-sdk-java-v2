@@ -1,10 +1,11 @@
-
 package com.commercetools.api.models.customer;
 
-import java.util.*;
 
+import com.commercetools.api.models.customer.CustomerCreatePasswordResetToken;
 import javax.annotation.Nullable;
-
+import java.util.*;
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -18,54 +19,67 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .email("{email}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class CustomerCreatePasswordResetTokenBuilder implements Builder<CustomerCreatePasswordResetToken> {
 
+    
+    
     private String email;
-
+    
+    
     @Nullable
     private Long ttlMinutes;
 
+    
     /**
      *  <p>Email address of the Customer treated as case-insensitive.</p>
      * @param email value to be set
      * @return Builder
      */
-
-    public CustomerCreatePasswordResetTokenBuilder email(final String email) {
+    
+    public CustomerCreatePasswordResetTokenBuilder email( final String email) {
         this.email = email;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Validity period of the generated token in minutes.</p>
      * @param ttlMinutes value to be set
      * @return Builder
      */
-
+    
     public CustomerCreatePasswordResetTokenBuilder ttlMinutes(@Nullable final Long ttlMinutes) {
         this.ttlMinutes = ttlMinutes;
         return this;
     }
+    
+    
 
     /**
      *  <p>Email address of the Customer treated as case-insensitive.</p>
      * @return email
      */
-
-    public String getEmail() {
+    
+    
+    public String getEmail(){
         return this.email;
     }
-
+    
     /**
      *  <p>Validity period of the generated token in minutes.</p>
      * @return ttlMinutes
      */
-
+    
     @Nullable
-    public Long getTtlMinutes() {
+    public Long getTtlMinutes(){
         return this.ttlMinutes;
     }
 
@@ -77,7 +91,7 @@ public class CustomerCreatePasswordResetTokenBuilder implements Builder<Customer
         Objects.requireNonNull(email, CustomerCreatePasswordResetToken.class + ": email is missing");
         return new CustomerCreatePasswordResetTokenImpl(email, ttlMinutes);
     }
-
+    
     /**
      * builds CustomerCreatePasswordResetToken without checking for non-null required values
      * @return CustomerCreatePasswordResetToken
@@ -88,7 +102,7 @@ public class CustomerCreatePasswordResetTokenBuilder implements Builder<Customer
 
     /**
      * factory method for an instance of CustomerCreatePasswordResetTokenBuilder
-     * @return builder
+     * @return builder 
      */
     public static CustomerCreatePasswordResetTokenBuilder of() {
         return new CustomerCreatePasswordResetTokenBuilder();

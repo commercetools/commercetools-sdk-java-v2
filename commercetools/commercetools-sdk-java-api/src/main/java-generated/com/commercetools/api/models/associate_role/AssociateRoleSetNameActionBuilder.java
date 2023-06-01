@@ -1,10 +1,11 @@
-
 package com.commercetools.api.models.associate_role;
 
-import java.util.*;
-
+import com.commercetools.api.models.associate_role.AssociateRoleUpdateAction;
+import com.commercetools.api.models.associate_role.AssociateRoleSetNameAction;
 import javax.annotation.Nullable;
-
+import java.util.*;
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -17,32 +18,39 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     AssociateRoleSetNameAction associateRoleSetNameAction = AssociateRoleSetNameAction.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class AssociateRoleSetNameActionBuilder implements Builder<AssociateRoleSetNameAction> {
 
+    
     @Nullable
     private String name;
 
+    
     /**
      *  <p>New name to set. If <code>name</code> is absent or <code>null</code>, the existing name, if any, will be removed.</p>
      * @param name value to be set
      * @return Builder
      */
-
+    
     public AssociateRoleSetNameActionBuilder name(@Nullable final String name) {
         this.name = name;
         return this;
     }
+    
+    
 
     /**
      *  <p>New name to set. If <code>name</code> is absent or <code>null</code>, the existing name, if any, will be removed.</p>
      * @return name
      */
-
+    
     @Nullable
-    public String getName() {
+    public String getName(){
         return this.name;
     }
 
@@ -53,7 +61,7 @@ public class AssociateRoleSetNameActionBuilder implements Builder<AssociateRoleS
     public AssociateRoleSetNameAction build() {
         return new AssociateRoleSetNameActionImpl(name);
     }
-
+    
     /**
      * builds AssociateRoleSetNameAction without checking for non-null required values
      * @return AssociateRoleSetNameAction
@@ -64,7 +72,7 @@ public class AssociateRoleSetNameActionBuilder implements Builder<AssociateRoleS
 
     /**
      * factory method for an instance of AssociateRoleSetNameActionBuilder
-     * @return builder
+     * @return builder 
      */
     public static AssociateRoleSetNameActionBuilder of() {
         return new AssociateRoleSetNameActionBuilder();

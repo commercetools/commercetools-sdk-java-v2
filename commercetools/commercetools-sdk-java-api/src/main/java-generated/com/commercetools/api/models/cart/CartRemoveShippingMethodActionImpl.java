@@ -1,27 +1,35 @@
-
 package com.commercetools.api.models.cart;
 
-import java.time.*;
-import java.util.*;
-
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
-
-import io.vrap.rmf.base.client.ModelBase;
+import com.commercetools.api.models.cart.CartUpdateAction;
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.ModelBase;
+import javax.validation.Valid;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.annotation.*;
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
  *  <p>Removes a Shipping Method from a Cart that has the <code>Multiple</code> ShippingMode.</p>
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class CartRemoveShippingMethodActionImpl implements CartRemoveShippingMethodAction, ModelBase {
 
+    
     private String action;
-
+    
+    
     private String shippingKey;
 
     /**
@@ -30,52 +38,56 @@ public class CartRemoveShippingMethodActionImpl implements CartRemoveShippingMet
     @JsonCreator
     CartRemoveShippingMethodActionImpl(@JsonProperty("shippingKey") final String shippingKey) {
         this.shippingKey = shippingKey;
-        this.action = REMOVE_SHIPPING_METHOD;
+        this.action =  REMOVE_SHIPPING_METHOD;
     }
-
     /**
      * create empty instance
      */
     public CartRemoveShippingMethodActionImpl() {
-        this.action = REMOVE_SHIPPING_METHOD;
+        this.action =  REMOVE_SHIPPING_METHOD;
     }
 
     /**
      *
      */
-
-    public String getAction() {
+    
+    public String getAction(){
         return this.action;
     }
-
+    
     /**
      *  <p>User-defined unique identifier of the Shipping Method to remove from the Cart.</p>
      */
-
-    public String getShippingKey() {
+    
+    public String getShippingKey(){
         return this.shippingKey;
     }
 
-    public void setShippingKey(final String shippingKey) {
+    
+    public void setShippingKey(final String shippingKey){
         this.shippingKey = shippingKey;
     }
 
     @Override
     public boolean equals(Object o) {
-        if (this == o)
-            return true;
-
-        if (o == null || getClass() != o.getClass())
-            return false;
-
+        if (this == o) return true;
+    
+        if (o == null || getClass() != o.getClass()) return false;
+    
         CartRemoveShippingMethodActionImpl that = (CartRemoveShippingMethodActionImpl) o;
-
-        return new EqualsBuilder().append(action, that.action).append(shippingKey, that.shippingKey).isEquals();
+    
+        return new EqualsBuilder()
+                .append(action, that.action)
+                .append(shippingKey, that.shippingKey)
+                .isEquals();
     }
-
+    
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(action).append(shippingKey).toHashCode();
+        return new HashCodeBuilder(17, 37)
+            .append(action)
+            .append(shippingKey)
+            .toHashCode();
     }
 
 }

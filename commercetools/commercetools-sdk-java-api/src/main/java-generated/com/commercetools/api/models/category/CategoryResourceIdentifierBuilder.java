@@ -1,10 +1,12 @@
-
 package com.commercetools.api.models.category;
 
-import java.util.*;
-
+import com.commercetools.api.models.common.ReferenceTypeId;
+import com.commercetools.api.models.common.ResourceIdentifier;
+import com.commercetools.api.models.category.CategoryResourceIdentifier;
 import javax.annotation.Nullable;
-
+import java.util.*;
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -17,56 +19,67 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     CategoryResourceIdentifier categoryResourceIdentifier = CategoryResourceIdentifier.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class CategoryResourceIdentifierBuilder implements Builder<CategoryResourceIdentifier> {
 
+    
     @Nullable
     private String id;
-
+    
+    
     @Nullable
     private String key;
 
+    
     /**
      *  <p>Unique identifier of the referenced Category. Either <code>id</code> or <code>key</code> is required.</p>
      * @param id value to be set
      * @return Builder
      */
-
+    
     public CategoryResourceIdentifierBuilder id(@Nullable final String id) {
         this.id = id;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>User-defined unique identifier of the referenced Category. Either <code>id</code> or <code>key</code> is required.</p>
      * @param key value to be set
      * @return Builder
      */
-
+    
     public CategoryResourceIdentifierBuilder key(@Nullable final String key) {
         this.key = key;
         return this;
     }
+    
+    
 
     /**
      *  <p>Unique identifier of the referenced Category. Either <code>id</code> or <code>key</code> is required.</p>
      * @return id
      */
-
+    
     @Nullable
-    public String getId() {
+    public String getId(){
         return this.id;
     }
-
+    
     /**
      *  <p>User-defined unique identifier of the referenced Category. Either <code>id</code> or <code>key</code> is required.</p>
      * @return key
      */
-
+    
     @Nullable
-    public String getKey() {
+    public String getKey(){
         return this.key;
     }
 
@@ -77,7 +90,7 @@ public class CategoryResourceIdentifierBuilder implements Builder<CategoryResour
     public CategoryResourceIdentifier build() {
         return new CategoryResourceIdentifierImpl(id, key);
     }
-
+    
     /**
      * builds CategoryResourceIdentifier without checking for non-null required values
      * @return CategoryResourceIdentifier
@@ -88,7 +101,7 @@ public class CategoryResourceIdentifierBuilder implements Builder<CategoryResour
 
     /**
      * factory method for an instance of CategoryResourceIdentifierBuilder
-     * @return builder
+     * @return builder 
      */
     public static CategoryResourceIdentifierBuilder of() {
         return new CategoryResourceIdentifierBuilder();

@@ -1,19 +1,21 @@
-
 package com.commercetools.api.models.error;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
+import com.commercetools.api.models.error.ErrorObject;
 import com.commercetools.api.models.order_edit.OrderEditPreviewFailure;
+import com.commercetools.api.models.error.EditPreviewFailedErrorImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Returned when a preview to find an appropriate Shipping Method for an OrderEdit could not be generated.</p>
@@ -28,9 +30,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .result(resultBuilder -> resultBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = EditPreviewFailedErrorImpl.class)
 public interface EditPreviewFailedError extends ErrorObject {
 
@@ -46,7 +51,6 @@ public interface EditPreviewFailedError extends ErrorObject {
     @NotNull
     @JsonProperty("code")
     public String getCode();
-
     /**
      *  <p><code>"Error while applying staged actions. ShippingMethods could not be determined."</code></p>
      * @return message
@@ -54,7 +58,6 @@ public interface EditPreviewFailedError extends ErrorObject {
     @NotNull
     @JsonProperty("message")
     public String getMessage();
-
     /**
      *  <p>State of the OrderEdit where the <code>stagedActions</code> cannot be applied to the Order.</p>
      * @return result
@@ -68,23 +71,26 @@ public interface EditPreviewFailedError extends ErrorObject {
      *  <p><code>"Error while applying staged actions. ShippingMethods could not be determined."</code></p>
      * @param message value to be set
      */
-
+    
     public void setMessage(final String message);
-
+    
+    
     /**
      *  <p>State of the OrderEdit where the <code>stagedActions</code> cannot be applied to the Order.</p>
      * @param result value to be set
      */
-
+    
     public void setResult(final OrderEditPreviewFailure result);
+    
 
     /**
      * factory method
      * @return instance of EditPreviewFailedError
      */
-    public static EditPreviewFailedError of() {
+    public static EditPreviewFailedError of(){
         return new EditPreviewFailedErrorImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy EditPreviewFailedError
@@ -112,8 +118,7 @@ public interface EditPreviewFailedError extends ErrorObject {
         EditPreviewFailedErrorImpl instance = new EditPreviewFailedErrorImpl();
         instance.setMessage(template.getMessage());
         Optional.ofNullable(template.values()).ifPresent(t -> t.forEach(instance::setValue));
-        instance.setResult(
-            com.commercetools.api.models.order_edit.OrderEditPreviewFailure.deepCopy(template.getResult()));
+        instance.setResult(com.commercetools.api.models.order_edit.OrderEditPreviewFailure.deepCopy(template.getResult()));
         return instance;
     }
 
@@ -124,7 +129,7 @@ public interface EditPreviewFailedError extends ErrorObject {
     public static EditPreviewFailedErrorBuilder builder() {
         return EditPreviewFailedErrorBuilder.of();
     }
-
+    
     /**
      * create builder for EditPreviewFailedError instance
      * @param template instance with prefilled values for the builder
@@ -133,6 +138,7 @@ public interface EditPreviewFailedError extends ErrorObject {
     public static EditPreviewFailedErrorBuilder builder(final EditPreviewFailedError template) {
         return EditPreviewFailedErrorBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -143,7 +149,7 @@ public interface EditPreviewFailedError extends ErrorObject {
     default <T> T withEditPreviewFailedError(Function<EditPreviewFailedError, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

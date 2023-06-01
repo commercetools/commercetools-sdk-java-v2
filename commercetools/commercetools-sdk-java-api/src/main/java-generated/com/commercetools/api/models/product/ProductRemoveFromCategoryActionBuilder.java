@@ -1,11 +1,12 @@
-
 package com.commercetools.api.models.product;
 
+import com.commercetools.api.models.category.CategoryResourceIdentifier;
+import com.commercetools.api.models.product.ProductUpdateAction;
+import com.commercetools.api.models.product.ProductRemoveFromCategoryAction;
+import javax.annotation.Nullable;
 import java.util.*;
 import java.util.function.Function;
-
-import javax.annotation.Nullable;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -19,80 +20,89 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .category(categoryBuilder -> categoryBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class ProductRemoveFromCategoryActionBuilder implements Builder<ProductRemoveFromCategoryAction> {
 
+    
+    
     private com.commercetools.api.models.category.CategoryResourceIdentifier category;
-
+    
+    
     @Nullable
     private Boolean staged;
 
+    
     /**
      *  <p>The Category to remove.</p>
      * @param builder function to build the category value
      * @return Builder
      */
-
-    public ProductRemoveFromCategoryActionBuilder category(
-            Function<com.commercetools.api.models.category.CategoryResourceIdentifierBuilder, com.commercetools.api.models.category.CategoryResourceIdentifierBuilder> builder) {
-        this.category = builder.apply(com.commercetools.api.models.category.CategoryResourceIdentifierBuilder.of())
-                .build();
+    
+    public ProductRemoveFromCategoryActionBuilder category(Function<com.commercetools.api.models.category.CategoryResourceIdentifierBuilder, com.commercetools.api.models.category.CategoryResourceIdentifierBuilder> builder) {
+        this.category = builder.apply(com.commercetools.api.models.category.CategoryResourceIdentifierBuilder.of()).build();
         return this;
     }
-
+    
     /**
      *  <p>The Category to remove.</p>
      * @param builder function to build the category value
      * @return Builder
      */
-
-    public ProductRemoveFromCategoryActionBuilder withCategory(
-            Function<com.commercetools.api.models.category.CategoryResourceIdentifierBuilder, com.commercetools.api.models.category.CategoryResourceIdentifier> builder) {
+    
+    public ProductRemoveFromCategoryActionBuilder withCategory(Function<com.commercetools.api.models.category.CategoryResourceIdentifierBuilder, com.commercetools.api.models.category.CategoryResourceIdentifier> builder) {
         this.category = builder.apply(com.commercetools.api.models.category.CategoryResourceIdentifierBuilder.of());
         return this;
     }
-
+                    
     /**
      *  <p>The Category to remove.</p>
      * @param category value to be set
      * @return Builder
      */
-
-    public ProductRemoveFromCategoryActionBuilder category(
-            final com.commercetools.api.models.category.CategoryResourceIdentifier category) {
+    
+    public ProductRemoveFromCategoryActionBuilder category( final com.commercetools.api.models.category.CategoryResourceIdentifier category) {
         this.category = category;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>If <code>true</code>, only the staged <code>categories</code> and <code>categoryOrderHints</code> are removed. If <code>false</code>, both the current and staged <code>categories</code> and <code>categoryOrderHints</code> are removed.</p>
      * @param staged value to be set
      * @return Builder
      */
-
+    
     public ProductRemoveFromCategoryActionBuilder staged(@Nullable final Boolean staged) {
         this.staged = staged;
         return this;
     }
+    
+    
 
     /**
      *  <p>The Category to remove.</p>
      * @return category
      */
-
-    public com.commercetools.api.models.category.CategoryResourceIdentifier getCategory() {
+    
+    
+    public com.commercetools.api.models.category.CategoryResourceIdentifier getCategory(){
         return this.category;
     }
-
+    
     /**
      *  <p>If <code>true</code>, only the staged <code>categories</code> and <code>categoryOrderHints</code> are removed. If <code>false</code>, both the current and staged <code>categories</code> and <code>categoryOrderHints</code> are removed.</p>
      * @return staged
      */
-
+    
     @Nullable
-    public Boolean getStaged() {
+    public Boolean getStaged(){
         return this.staged;
     }
 
@@ -104,7 +114,7 @@ public class ProductRemoveFromCategoryActionBuilder implements Builder<ProductRe
         Objects.requireNonNull(category, ProductRemoveFromCategoryAction.class + ": category is missing");
         return new ProductRemoveFromCategoryActionImpl(category, staged);
     }
-
+    
     /**
      * builds ProductRemoveFromCategoryAction without checking for non-null required values
      * @return ProductRemoveFromCategoryAction
@@ -115,7 +125,7 @@ public class ProductRemoveFromCategoryActionBuilder implements Builder<ProductRe
 
     /**
      * factory method for an instance of ProductRemoveFromCategoryActionBuilder
-     * @return builder
+     * @return builder 
      */
     public static ProductRemoveFromCategoryActionBuilder of() {
         return new ProductRemoveFromCategoryActionBuilder();

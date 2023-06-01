@@ -1,21 +1,22 @@
-
 package com.commercetools.history.models.change;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-import java.util.stream.Collectors;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
+import com.commercetools.history.models.change.Change;
 import com.commercetools.history.models.change_value.ParcelChangeValue;
 import com.commercetools.history.models.common.DeliveryItem;
+import com.commercetools.history.models.change.SetParcelItemsChangeImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * SetParcelItemsChange
@@ -31,9 +32,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .plusPreviousValue(previousValueBuilder -> previousValueBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = SetParcelItemsChangeImpl.class)
 public interface SetParcelItemsChange extends Change {
 
@@ -49,7 +53,6 @@ public interface SetParcelItemsChange extends Change {
     @NotNull
     @JsonProperty("type")
     public String getType();
-
     /**
      *  <p>Update action for <code>setParcelItems</code></p>
      * @return change
@@ -57,7 +60,6 @@ public interface SetParcelItemsChange extends Change {
     @NotNull
     @JsonProperty("change")
     public String getChange();
-
     /**
      *
      * @return parcel
@@ -66,7 +68,6 @@ public interface SetParcelItemsChange extends Change {
     @Valid
     @JsonProperty("parcel")
     public ParcelChangeValue getParcel();
-
     /**
      *
      * @return nextValue
@@ -75,7 +76,6 @@ public interface SetParcelItemsChange extends Change {
     @Valid
     @JsonProperty("nextValue")
     public List<DeliveryItem> getNextValue();
-
     /**
      *
      * @return previousValue
@@ -89,53 +89,54 @@ public interface SetParcelItemsChange extends Change {
      *  <p>Update action for <code>setParcelItems</code></p>
      * @param change value to be set
      */
-
+    
     public void setChange(final String change);
-
+    
+    
     /**
      * set parcel
      * @param parcel value to be set
      */
-
+    
     public void setParcel(final ParcelChangeValue parcel);
-
+    
+    
     /**
      * set nextValue
      * @param nextValue values to be set
      */
-
+    
     @JsonIgnore
-    public void setNextValue(final DeliveryItem... nextValue);
-
+    public void setNextValue(final DeliveryItem ...nextValue);
     /**
      * set nextValue
      * @param nextValue values to be set
      */
-
+    
     public void setNextValue(final List<DeliveryItem> nextValue);
-
+    
     /**
      * set previousValue
      * @param previousValue values to be set
      */
-
+    
     @JsonIgnore
-    public void setPreviousValue(final DeliveryItem... previousValue);
-
+    public void setPreviousValue(final DeliveryItem ...previousValue);
     /**
      * set previousValue
      * @param previousValue values to be set
      */
-
+    
     public void setPreviousValue(final List<DeliveryItem> previousValue);
 
     /**
      * factory method
      * @return instance of SetParcelItemsChange
      */
-    public static SetParcelItemsChange of() {
+    public static SetParcelItemsChange of(){
         return new SetParcelItemsChangeImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy SetParcelItemsChange
@@ -163,17 +164,12 @@ public interface SetParcelItemsChange extends Change {
         }
         SetParcelItemsChangeImpl instance = new SetParcelItemsChangeImpl();
         instance.setChange(template.getChange());
-        instance.setParcel(
-            com.commercetools.history.models.change_value.ParcelChangeValue.deepCopy(template.getParcel()));
+        instance.setParcel(com.commercetools.history.models.change_value.ParcelChangeValue.deepCopy(template.getParcel()));
         instance.setNextValue(Optional.ofNullable(template.getNextValue())
-                .map(t -> t.stream()
-                        .map(com.commercetools.history.models.common.DeliveryItem::deepCopy)
-                        .collect(Collectors.toList()))
+                .map(t -> t.stream().map(com.commercetools.history.models.common.DeliveryItem::deepCopy).collect(Collectors.toList()))
                 .orElse(null));
         instance.setPreviousValue(Optional.ofNullable(template.getPreviousValue())
-                .map(t -> t.stream()
-                        .map(com.commercetools.history.models.common.DeliveryItem::deepCopy)
-                        .collect(Collectors.toList()))
+                .map(t -> t.stream().map(com.commercetools.history.models.common.DeliveryItem::deepCopy).collect(Collectors.toList()))
                 .orElse(null));
         return instance;
     }
@@ -185,7 +181,7 @@ public interface SetParcelItemsChange extends Change {
     public static SetParcelItemsChangeBuilder builder() {
         return SetParcelItemsChangeBuilder.of();
     }
-
+    
     /**
      * create builder for SetParcelItemsChange instance
      * @param template instance with prefilled values for the builder
@@ -194,6 +190,7 @@ public interface SetParcelItemsChange extends Change {
     public static SetParcelItemsChangeBuilder builder(final SetParcelItemsChange template) {
         return SetParcelItemsChangeBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -204,7 +201,7 @@ public interface SetParcelItemsChange extends Change {
     default <T> T withSetParcelItemsChange(Function<SetParcelItemsChange, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

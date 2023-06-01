@@ -1,9 +1,11 @@
-
 package com.commercetools.api.models.cart;
 
+import com.commercetools.api.models.cart.DiscountedLineItemPrice;
+import com.commercetools.api.models.cart.DiscountedLineItemPriceForQuantity;
+import javax.annotation.Nullable;
 import java.util.*;
 import java.util.function.Function;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -18,78 +20,89 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .discountedPrice(discountedPriceBuilder -> discountedPriceBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class DiscountedLineItemPriceForQuantityBuilder implements Builder<DiscountedLineItemPriceForQuantity> {
 
+    
+    
     private Long quantity;
-
+    
+    
+    
     private com.commercetools.api.models.cart.DiscountedLineItemPrice discountedPrice;
 
+    
     /**
      *  <p>Number of Line Items or Custom Line Items in the Cart.</p>
      * @param quantity value to be set
      * @return Builder
      */
-
-    public DiscountedLineItemPriceForQuantityBuilder quantity(final Long quantity) {
+    
+    public DiscountedLineItemPriceForQuantityBuilder quantity( final Long quantity) {
         this.quantity = quantity;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Discounted price of the Line Item or Custom Line Item.</p>
      * @param builder function to build the discountedPrice value
      * @return Builder
      */
-
-    public DiscountedLineItemPriceForQuantityBuilder discountedPrice(
-            Function<com.commercetools.api.models.cart.DiscountedLineItemPriceBuilder, com.commercetools.api.models.cart.DiscountedLineItemPriceBuilder> builder) {
-        this.discountedPrice = builder.apply(com.commercetools.api.models.cart.DiscountedLineItemPriceBuilder.of())
-                .build();
+    
+    public DiscountedLineItemPriceForQuantityBuilder discountedPrice(Function<com.commercetools.api.models.cart.DiscountedLineItemPriceBuilder, com.commercetools.api.models.cart.DiscountedLineItemPriceBuilder> builder) {
+        this.discountedPrice = builder.apply(com.commercetools.api.models.cart.DiscountedLineItemPriceBuilder.of()).build();
         return this;
     }
-
+    
     /**
      *  <p>Discounted price of the Line Item or Custom Line Item.</p>
      * @param builder function to build the discountedPrice value
      * @return Builder
      */
-
-    public DiscountedLineItemPriceForQuantityBuilder withDiscountedPrice(
-            Function<com.commercetools.api.models.cart.DiscountedLineItemPriceBuilder, com.commercetools.api.models.cart.DiscountedLineItemPrice> builder) {
+    
+    public DiscountedLineItemPriceForQuantityBuilder withDiscountedPrice(Function<com.commercetools.api.models.cart.DiscountedLineItemPriceBuilder, com.commercetools.api.models.cart.DiscountedLineItemPrice> builder) {
         this.discountedPrice = builder.apply(com.commercetools.api.models.cart.DiscountedLineItemPriceBuilder.of());
         return this;
     }
-
+                    
     /**
      *  <p>Discounted price of the Line Item or Custom Line Item.</p>
      * @param discountedPrice value to be set
      * @return Builder
      */
-
-    public DiscountedLineItemPriceForQuantityBuilder discountedPrice(
-            final com.commercetools.api.models.cart.DiscountedLineItemPrice discountedPrice) {
+    
+    public DiscountedLineItemPriceForQuantityBuilder discountedPrice( final com.commercetools.api.models.cart.DiscountedLineItemPrice discountedPrice) {
         this.discountedPrice = discountedPrice;
         return this;
     }
+    
+    
 
     /**
      *  <p>Number of Line Items or Custom Line Items in the Cart.</p>
      * @return quantity
      */
-
-    public Long getQuantity() {
+    
+    
+    public Long getQuantity(){
         return this.quantity;
     }
-
+    
     /**
      *  <p>Discounted price of the Line Item or Custom Line Item.</p>
      * @return discountedPrice
      */
-
-    public com.commercetools.api.models.cart.DiscountedLineItemPrice getDiscountedPrice() {
+    
+    
+    public com.commercetools.api.models.cart.DiscountedLineItemPrice getDiscountedPrice(){
         return this.discountedPrice;
     }
 
@@ -99,11 +112,10 @@ public class DiscountedLineItemPriceForQuantityBuilder implements Builder<Discou
      */
     public DiscountedLineItemPriceForQuantity build() {
         Objects.requireNonNull(quantity, DiscountedLineItemPriceForQuantity.class + ": quantity is missing");
-        Objects.requireNonNull(discountedPrice,
-            DiscountedLineItemPriceForQuantity.class + ": discountedPrice is missing");
+        Objects.requireNonNull(discountedPrice, DiscountedLineItemPriceForQuantity.class + ": discountedPrice is missing");
         return new DiscountedLineItemPriceForQuantityImpl(quantity, discountedPrice);
     }
-
+    
     /**
      * builds DiscountedLineItemPriceForQuantity without checking for non-null required values
      * @return DiscountedLineItemPriceForQuantity
@@ -114,7 +126,7 @@ public class DiscountedLineItemPriceForQuantityBuilder implements Builder<Discou
 
     /**
      * factory method for an instance of DiscountedLineItemPriceForQuantityBuilder
-     * @return builder
+     * @return builder 
      */
     public static DiscountedLineItemPriceForQuantityBuilder of() {
         return new DiscountedLineItemPriceForQuantityBuilder();

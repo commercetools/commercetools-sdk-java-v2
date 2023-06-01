@@ -1,19 +1,22 @@
-
 package com.commercetools.api.models.product_type;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
 import com.commercetools.api.models.common.Reference;
+import com.commercetools.api.models.common.ReferenceTypeId;
+import com.commercetools.api.models.product_type.ProductType;
+import com.commercetools.api.models.product_type.ProductTypeReferenceImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Reference to a ProductType.</p>
@@ -26,9 +29,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .id("{id}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = ProductTypeReferenceImpl.class)
 public interface ProductTypeReference extends Reference, com.commercetools.api.models.Identifiable<ProductType> {
 
@@ -44,7 +50,6 @@ public interface ProductTypeReference extends Reference, com.commercetools.api.m
     @Valid
     @JsonProperty("obj")
     public ProductType getObj();
-
     /**
      *  <p>Unique identifier of the referenced ProductType.</p>
      * @return id
@@ -57,23 +62,26 @@ public interface ProductTypeReference extends Reference, com.commercetools.api.m
      *  <p>Contains the representation of the expanded ProductType. Only present in responses to requests with Reference Expansion for ProductTypes.</p>
      * @param obj value to be set
      */
-
+    
     public void setObj(final ProductType obj);
-
+    
+    
     /**
      *  <p>Unique identifier of the referenced ProductType.</p>
      * @param id value to be set
      */
-
+    
     public void setId(final String id);
+    
 
     /**
      * factory method
      * @return instance of ProductTypeReference
      */
-    public static ProductTypeReference of() {
+    public static ProductTypeReference of(){
         return new ProductTypeReferenceImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy ProductTypeReference
@@ -110,7 +118,7 @@ public interface ProductTypeReference extends Reference, com.commercetools.api.m
     public static ProductTypeReferenceBuilder builder() {
         return ProductTypeReferenceBuilder.of();
     }
-
+    
     /**
      * create builder for ProductTypeReference instance
      * @param template instance with prefilled values for the builder
@@ -119,6 +127,7 @@ public interface ProductTypeReference extends Reference, com.commercetools.api.m
     public static ProductTypeReferenceBuilder builder(final ProductTypeReference template) {
         return ProductTypeReferenceBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -129,7 +138,7 @@ public interface ProductTypeReference extends Reference, com.commercetools.api.m
     default <T> T withProductTypeReference(Function<ProductTypeReference, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

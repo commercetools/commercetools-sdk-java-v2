@@ -1,9 +1,12 @@
-
 package com.commercetools.api.models.me;
 
+import com.commercetools.api.models.common.LocalizedString;
+import com.commercetools.api.models.me.MyShoppingListUpdateAction;
+import com.commercetools.api.models.me.MyShoppingListChangeNameAction;
+import javax.annotation.Nullable;
 import java.util.*;
 import java.util.function.Function;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -17,54 +20,61 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .name(nameBuilder -> nameBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class MyShoppingListChangeNameActionBuilder implements Builder<MyShoppingListChangeNameAction> {
 
+    
+    
     private com.commercetools.api.models.common.LocalizedString name;
 
+    
     /**
      *  <p>New value to set. Must not be empty.</p>
      * @param builder function to build the name value
      * @return Builder
      */
-
-    public MyShoppingListChangeNameActionBuilder name(
-            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
+    
+    public MyShoppingListChangeNameActionBuilder name(Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
         this.name = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of()).build();
         return this;
     }
-
+    
     /**
      *  <p>New value to set. Must not be empty.</p>
      * @param builder function to build the name value
      * @return Builder
      */
-
-    public MyShoppingListChangeNameActionBuilder withName(
-            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedString> builder) {
+    
+    public MyShoppingListChangeNameActionBuilder withName(Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedString> builder) {
         this.name = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of());
         return this;
     }
-
+                    
     /**
      *  <p>New value to set. Must not be empty.</p>
      * @param name value to be set
      * @return Builder
      */
-
-    public MyShoppingListChangeNameActionBuilder name(final com.commercetools.api.models.common.LocalizedString name) {
+    
+    public MyShoppingListChangeNameActionBuilder name( final com.commercetools.api.models.common.LocalizedString name) {
         this.name = name;
         return this;
     }
+    
+    
 
     /**
      *  <p>New value to set. Must not be empty.</p>
      * @return name
      */
-
-    public com.commercetools.api.models.common.LocalizedString getName() {
+    
+    
+    public com.commercetools.api.models.common.LocalizedString getName(){
         return this.name;
     }
 
@@ -76,7 +86,7 @@ public class MyShoppingListChangeNameActionBuilder implements Builder<MyShopping
         Objects.requireNonNull(name, MyShoppingListChangeNameAction.class + ": name is missing");
         return new MyShoppingListChangeNameActionImpl(name);
     }
-
+    
     /**
      * builds MyShoppingListChangeNameAction without checking for non-null required values
      * @return MyShoppingListChangeNameAction
@@ -87,7 +97,7 @@ public class MyShoppingListChangeNameActionBuilder implements Builder<MyShopping
 
     /**
      * factory method for an instance of MyShoppingListChangeNameActionBuilder
-     * @return builder
+     * @return builder 
      */
     public static MyShoppingListChangeNameActionBuilder of() {
         return new MyShoppingListChangeNameActionBuilder();

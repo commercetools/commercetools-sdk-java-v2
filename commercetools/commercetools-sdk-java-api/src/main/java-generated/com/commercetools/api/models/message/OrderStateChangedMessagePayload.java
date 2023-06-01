@@ -1,18 +1,21 @@
-
 package com.commercetools.api.models.message;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
-
+import com.commercetools.api.models.message.OrderMessagePayload;
 import com.commercetools.api.models.order.OrderState;
+import com.commercetools.api.models.message.OrderStateChangedMessagePayloadImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Generated after a successful Change Order State update action.</p>
@@ -26,9 +29,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .oldOrderState(OrderState.OPEN)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = OrderStateChangedMessagePayloadImpl.class)
 public interface OrderStateChangedMessagePayload extends OrderMessagePayload {
 
@@ -44,7 +50,6 @@ public interface OrderStateChangedMessagePayload extends OrderMessagePayload {
     @NotNull
     @JsonProperty("orderState")
     public OrderState getOrderState();
-
     /**
      *  <p>OrderState before the Change Order State update action.</p>
      * @return oldOrderState
@@ -57,23 +62,26 @@ public interface OrderStateChangedMessagePayload extends OrderMessagePayload {
      *  <p>OrderState after the Change Order State update action.</p>
      * @param orderState value to be set
      */
-
+    
     public void setOrderState(final OrderState orderState);
-
+    
+    
     /**
      *  <p>OrderState before the Change Order State update action.</p>
      * @param oldOrderState value to be set
      */
-
+    
     public void setOldOrderState(final OrderState oldOrderState);
+    
 
     /**
      * factory method
      * @return instance of OrderStateChangedMessagePayload
      */
-    public static OrderStateChangedMessagePayload of() {
+    public static OrderStateChangedMessagePayload of(){
         return new OrderStateChangedMessagePayloadImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy OrderStateChangedMessagePayload
@@ -110,7 +118,7 @@ public interface OrderStateChangedMessagePayload extends OrderMessagePayload {
     public static OrderStateChangedMessagePayloadBuilder builder() {
         return OrderStateChangedMessagePayloadBuilder.of();
     }
-
+    
     /**
      * create builder for OrderStateChangedMessagePayload instance
      * @param template instance with prefilled values for the builder
@@ -119,6 +127,7 @@ public interface OrderStateChangedMessagePayload extends OrderMessagePayload {
     public static OrderStateChangedMessagePayloadBuilder builder(final OrderStateChangedMessagePayload template) {
         return OrderStateChangedMessagePayloadBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -129,7 +138,7 @@ public interface OrderStateChangedMessagePayload extends OrderMessagePayload {
     default <T> T withOrderStateChangedMessagePayload(Function<OrderStateChangedMessagePayload, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

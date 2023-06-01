@@ -1,9 +1,11 @@
-
 package com.commercetools.api.predicates.query.cart;
 
 import com.commercetools.api.predicates.query.*;
 
-public class DirectDiscountReferenceQueryBuilderDsl {
+import java.util.function.Function;
+
+
+public class DirectDiscountReferenceQueryBuilderDsl  {
     public DirectDiscountReferenceQueryBuilderDsl() {
     }
 
@@ -12,14 +14,12 @@ public class DirectDiscountReferenceQueryBuilderDsl {
     }
 
     public StringComparisonPredicateBuilder<DirectDiscountReferenceQueryBuilderDsl> typeId() {
-        return new StringComparisonPredicateBuilder<>(
-            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("typeId")),
-            p -> new CombinationQueryPredicate<>(p, DirectDiscountReferenceQueryBuilderDsl::of));
+        return new StringComparisonPredicateBuilder<>(BinaryQueryPredicate.of().left(new ConstantQueryPredicate("typeId")),
+        p -> new CombinationQueryPredicate<>(p, DirectDiscountReferenceQueryBuilderDsl::of));
     }
-
     public StringComparisonPredicateBuilder<DirectDiscountReferenceQueryBuilderDsl> id() {
         return new StringComparisonPredicateBuilder<>(BinaryQueryPredicate.of().left(new ConstantQueryPredicate("id")),
-            p -> new CombinationQueryPredicate<>(p, DirectDiscountReferenceQueryBuilderDsl::of));
+        p -> new CombinationQueryPredicate<>(p, DirectDiscountReferenceQueryBuilderDsl::of));
     }
-
+    
 }

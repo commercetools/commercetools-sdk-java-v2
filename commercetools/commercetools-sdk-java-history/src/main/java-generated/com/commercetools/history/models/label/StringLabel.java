@@ -1,17 +1,20 @@
-
 package com.commercetools.history.models.label;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
+import com.commercetools.history.models.label.Label;
+import com.commercetools.history.models.label.StringLabelImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * StringLabel
@@ -24,9 +27,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .value("{value}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = StringLabelImpl.class)
 public interface StringLabel extends Label {
 
@@ -42,7 +48,6 @@ public interface StringLabel extends Label {
     @NotNull
     @JsonProperty("type")
     public String getType();
-
     /**
      *
      * @return value
@@ -55,16 +60,18 @@ public interface StringLabel extends Label {
      * set value
      * @param value value to be set
      */
-
+    
     public void setValue(final String value);
+    
 
     /**
      * factory method
      * @return instance of StringLabel
      */
-    public static StringLabel of() {
+    public static StringLabel of(){
         return new StringLabelImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy StringLabel
@@ -99,7 +106,7 @@ public interface StringLabel extends Label {
     public static StringLabelBuilder builder() {
         return StringLabelBuilder.of();
     }
-
+    
     /**
      * create builder for StringLabel instance
      * @param template instance with prefilled values for the builder
@@ -108,6 +115,7 @@ public interface StringLabel extends Label {
     public static StringLabelBuilder builder(final StringLabel template) {
         return StringLabelBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -118,7 +126,7 @@ public interface StringLabel extends Label {
     default <T> T withStringLabel(Function<StringLabel, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

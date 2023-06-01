@@ -1,8 +1,11 @@
-
 package com.commercetools.api.models.me;
 
-import java.util.*;
 
+import com.commercetools.api.models.me.MyQuoteRequestDraft;
+import javax.annotation.Nullable;
+import java.util.*;
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -18,74 +21,95 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .comment("{comment}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class MyQuoteRequestDraftBuilder implements Builder<MyQuoteRequestDraft> {
 
+    
+    
     private String cartId;
-
+    
+    
+    
     private Long cartVersion;
-
+    
+    
+    
     private String comment;
 
+    
     /**
      *  <p><code>id</code> of the Cart from which the Quote Request is created.</p>
      * @param cartId value to be set
      * @return Builder
      */
-
-    public MyQuoteRequestDraftBuilder cartId(final String cartId) {
+    
+    public MyQuoteRequestDraftBuilder cartId( final String cartId) {
         this.cartId = cartId;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Current version of the Cart.</p>
      * @param cartVersion value to be set
      * @return Builder
      */
-
-    public MyQuoteRequestDraftBuilder cartVersion(final Long cartVersion) {
+    
+    public MyQuoteRequestDraftBuilder cartVersion( final Long cartVersion) {
         this.cartVersion = cartVersion;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Message from the Buyer included in the Quote Request.</p>
      * @param comment value to be set
      * @return Builder
      */
-
-    public MyQuoteRequestDraftBuilder comment(final String comment) {
+    
+    public MyQuoteRequestDraftBuilder comment( final String comment) {
         this.comment = comment;
         return this;
     }
+    
+    
 
     /**
      *  <p><code>id</code> of the Cart from which the Quote Request is created.</p>
      * @return cartId
      */
-
-    public String getCartId() {
+    
+    
+    public String getCartId(){
         return this.cartId;
     }
-
+    
     /**
      *  <p>Current version of the Cart.</p>
      * @return cartVersion
      */
-
-    public Long getCartVersion() {
+    
+    
+    public Long getCartVersion(){
         return this.cartVersion;
     }
-
+    
     /**
      *  <p>Message from the Buyer included in the Quote Request.</p>
      * @return comment
      */
-
-    public String getComment() {
+    
+    
+    public String getComment(){
         return this.comment;
     }
 
@@ -99,7 +123,7 @@ public class MyQuoteRequestDraftBuilder implements Builder<MyQuoteRequestDraft> 
         Objects.requireNonNull(comment, MyQuoteRequestDraft.class + ": comment is missing");
         return new MyQuoteRequestDraftImpl(cartId, cartVersion, comment);
     }
-
+    
     /**
      * builds MyQuoteRequestDraft without checking for non-null required values
      * @return MyQuoteRequestDraft
@@ -110,7 +134,7 @@ public class MyQuoteRequestDraftBuilder implements Builder<MyQuoteRequestDraft> 
 
     /**
      * factory method for an instance of MyQuoteRequestDraftBuilder
-     * @return builder
+     * @return builder 
      */
     public static MyQuoteRequestDraftBuilder of() {
         return new MyQuoteRequestDraftBuilder();

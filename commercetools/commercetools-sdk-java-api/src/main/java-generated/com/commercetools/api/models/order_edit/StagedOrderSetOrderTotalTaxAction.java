@@ -1,22 +1,22 @@
-
 package com.commercetools.api.models.order_edit;
-
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-import java.util.stream.Collectors;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.cart.TaxPortionDraft;
 import com.commercetools.api.models.common.Money;
 import com.commercetools.api.models.order.StagedOrderUpdateAction;
+import com.commercetools.api.models.order_edit.StagedOrderSetOrderTotalTaxActionImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * StagedOrderSetOrderTotalTaxAction
@@ -29,9 +29,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .externalTotalGross(externalTotalGrossBuilder -> externalTotalGrossBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = StagedOrderSetOrderTotalTaxActionImpl.class)
 public interface StagedOrderSetOrderTotalTaxAction extends StagedOrderUpdateAction {
 
@@ -48,7 +51,6 @@ public interface StagedOrderSetOrderTotalTaxAction extends StagedOrderUpdateActi
     @Valid
     @JsonProperty("externalTotalGross")
     public Money getExternalTotalGross();
-
     /**
      *
      * @return externalTaxPortions
@@ -61,31 +63,32 @@ public interface StagedOrderSetOrderTotalTaxAction extends StagedOrderUpdateActi
      *  <p>Draft type that stores amounts only in cent precision for the specified currency.</p>
      * @param externalTotalGross value to be set
      */
-
+    
     public void setExternalTotalGross(final Money externalTotalGross);
-
+    
+    
     /**
      * set externalTaxPortions
      * @param externalTaxPortions values to be set
      */
-
+    
     @JsonIgnore
-    public void setExternalTaxPortions(final TaxPortionDraft... externalTaxPortions);
-
+    public void setExternalTaxPortions(final TaxPortionDraft ...externalTaxPortions);
     /**
      * set externalTaxPortions
      * @param externalTaxPortions values to be set
      */
-
+    
     public void setExternalTaxPortions(final List<TaxPortionDraft> externalTaxPortions);
 
     /**
      * factory method
      * @return instance of StagedOrderSetOrderTotalTaxAction
      */
-    public static StagedOrderSetOrderTotalTaxAction of() {
+    public static StagedOrderSetOrderTotalTaxAction of(){
         return new StagedOrderSetOrderTotalTaxActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy StagedOrderSetOrderTotalTaxAction
@@ -105,18 +108,14 @@ public interface StagedOrderSetOrderTotalTaxAction extends StagedOrderUpdateActi
      * @return copy instance
      */
     @Nullable
-    public static StagedOrderSetOrderTotalTaxAction deepCopy(
-            @Nullable final StagedOrderSetOrderTotalTaxAction template) {
+    public static StagedOrderSetOrderTotalTaxAction deepCopy(@Nullable final StagedOrderSetOrderTotalTaxAction template) {
         if (template == null) {
             return null;
         }
         StagedOrderSetOrderTotalTaxActionImpl instance = new StagedOrderSetOrderTotalTaxActionImpl();
-        instance.setExternalTotalGross(
-            com.commercetools.api.models.common.Money.deepCopy(template.getExternalTotalGross()));
+        instance.setExternalTotalGross(com.commercetools.api.models.common.Money.deepCopy(template.getExternalTotalGross()));
         instance.setExternalTaxPortions(Optional.ofNullable(template.getExternalTaxPortions())
-                .map(t -> t.stream()
-                        .map(com.commercetools.api.models.cart.TaxPortionDraft::deepCopy)
-                        .collect(Collectors.toList()))
+                .map(t -> t.stream().map(com.commercetools.api.models.cart.TaxPortionDraft::deepCopy).collect(Collectors.toList()))
                 .orElse(null));
         return instance;
     }
@@ -128,7 +127,7 @@ public interface StagedOrderSetOrderTotalTaxAction extends StagedOrderUpdateActi
     public static StagedOrderSetOrderTotalTaxActionBuilder builder() {
         return StagedOrderSetOrderTotalTaxActionBuilder.of();
     }
-
+    
     /**
      * create builder for StagedOrderSetOrderTotalTaxAction instance
      * @param template instance with prefilled values for the builder
@@ -137,6 +136,7 @@ public interface StagedOrderSetOrderTotalTaxAction extends StagedOrderUpdateActi
     public static StagedOrderSetOrderTotalTaxActionBuilder builder(final StagedOrderSetOrderTotalTaxAction template) {
         return StagedOrderSetOrderTotalTaxActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -147,7 +147,7 @@ public interface StagedOrderSetOrderTotalTaxAction extends StagedOrderUpdateActi
     default <T> T withStagedOrderSetOrderTotalTaxAction(Function<StagedOrderSetOrderTotalTaxAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

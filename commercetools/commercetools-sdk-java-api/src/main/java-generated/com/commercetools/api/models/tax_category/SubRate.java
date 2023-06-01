@@ -1,17 +1,20 @@
-
 package com.commercetools.api.models.tax_category;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
 
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
+import com.commercetools.api.models.tax_category.SubRateImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>It is used to calculate the taxPortions field in a Cart or Order.</p>
@@ -25,11 +28,15 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .amount(0.3)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = SubRateImpl.class)
-public interface SubRate {
+public interface SubRate  {
+
 
     /**
      *  <p>Name of the SubRate.</p>
@@ -38,7 +45,6 @@ public interface SubRate {
     @NotNull
     @JsonProperty("name")
     public String getName();
-
     /**
      *
      * @return amount
@@ -51,23 +57,26 @@ public interface SubRate {
      *  <p>Name of the SubRate.</p>
      * @param name value to be set
      */
-
+    
     public void setName(final String name);
-
+    
+    
     /**
      * set amount
      * @param amount value to be set
      */
-
+    
     public void setAmount(final Double amount);
+    
 
     /**
      * factory method
      * @return instance of SubRate
      */
-    public static SubRate of() {
+    public static SubRate of(){
         return new SubRateImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy SubRate
@@ -104,7 +113,7 @@ public interface SubRate {
     public static SubRateBuilder builder() {
         return SubRateBuilder.of();
     }
-
+    
     /**
      * create builder for SubRate instance
      * @param template instance with prefilled values for the builder
@@ -113,6 +122,7 @@ public interface SubRate {
     public static SubRateBuilder builder(final SubRate template) {
         return SubRateBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -123,7 +133,7 @@ public interface SubRate {
     default <T> T withSubRate(Function<SubRate, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

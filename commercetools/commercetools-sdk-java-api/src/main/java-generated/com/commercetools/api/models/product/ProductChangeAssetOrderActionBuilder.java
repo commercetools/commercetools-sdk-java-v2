@@ -1,10 +1,11 @@
-
 package com.commercetools.api.models.product;
 
-import java.util.*;
-
+import com.commercetools.api.models.product.ProductUpdateAction;
+import com.commercetools.api.models.product.ProductChangeAssetOrderAction;
 import javax.annotation.Nullable;
-
+import java.util.*;
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -18,127 +19,148 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .plusAssetOrder(assetOrderBuilder -> assetOrderBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class ProductChangeAssetOrderActionBuilder implements Builder<ProductChangeAssetOrderAction> {
 
+    
     @Nullable
     private Long variantId;
-
+    
+    
     @Nullable
     private String sku;
-
+    
+    
     @Nullable
     private Boolean staged;
-
+    
+    
+    
     private java.util.List<String> assetOrder;
 
+    
     /**
      *  <p>The <code>id</code> of the ProductVariant to update.</p>
      * @param variantId value to be set
      * @return Builder
      */
-
+    
     public ProductChangeAssetOrderActionBuilder variantId(@Nullable final Long variantId) {
         this.variantId = variantId;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>The <code>sku</code> of the ProductVariant to update.</p>
      * @param sku value to be set
      * @return Builder
      */
-
+    
     public ProductChangeAssetOrderActionBuilder sku(@Nullable final String sku) {
         this.sku = sku;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>If <code>true</code>, only the staged <code>assets</code> is updated. If <code>false</code>, both the current and staged <code>assets</code> are updated.</p>
      * @param staged value to be set
      * @return Builder
      */
-
+    
     public ProductChangeAssetOrderActionBuilder staged(@Nullable final Boolean staged) {
         this.staged = staged;
         return this;
     }
-
+    
+    
+    
     /**
      *  <p>All existing Asset <code>id</code>s of the ProductVariant in the desired new order.</p>
      * @param assetOrder value to be set
      * @return Builder
      */
-
-    public ProductChangeAssetOrderActionBuilder assetOrder(final String... assetOrder) {
+    
+    public ProductChangeAssetOrderActionBuilder assetOrder( final String ...assetOrder) {
         this.assetOrder = new ArrayList<>(Arrays.asList(assetOrder));
         return this;
     }
-
+    
     /**
      *  <p>All existing Asset <code>id</code>s of the ProductVariant in the desired new order.</p>
      * @param assetOrder value to be set
      * @return Builder
      */
-
-    public ProductChangeAssetOrderActionBuilder assetOrder(final java.util.List<String> assetOrder) {
+    
+    public ProductChangeAssetOrderActionBuilder assetOrder( final java.util.List<String> assetOrder) {
         this.assetOrder = assetOrder;
         return this;
     }
-
+    
     /**
      *  <p>All existing Asset <code>id</code>s of the ProductVariant in the desired new order.</p>
      * @param assetOrder value to be set
      * @return Builder
      */
-
-    public ProductChangeAssetOrderActionBuilder plusAssetOrder(final String... assetOrder) {
+    
+    public ProductChangeAssetOrderActionBuilder plusAssetOrder( final String ...assetOrder) {
         if (this.assetOrder == null) {
             this.assetOrder = new ArrayList<>();
         }
         this.assetOrder.addAll(Arrays.asList(assetOrder));
         return this;
     }
+    
+    
+    
 
     /**
      *  <p>The <code>id</code> of the ProductVariant to update.</p>
      * @return variantId
      */
-
+    
     @Nullable
-    public Long getVariantId() {
+    public Long getVariantId(){
         return this.variantId;
     }
-
+    
     /**
      *  <p>The <code>sku</code> of the ProductVariant to update.</p>
      * @return sku
      */
-
+    
     @Nullable
-    public String getSku() {
+    public String getSku(){
         return this.sku;
     }
-
+    
     /**
      *  <p>If <code>true</code>, only the staged <code>assets</code> is updated. If <code>false</code>, both the current and staged <code>assets</code> are updated.</p>
      * @return staged
      */
-
+    
     @Nullable
-    public Boolean getStaged() {
+    public Boolean getStaged(){
         return this.staged;
     }
-
+    
     /**
      *  <p>All existing Asset <code>id</code>s of the ProductVariant in the desired new order.</p>
      * @return assetOrder
      */
-
-    public java.util.List<String> getAssetOrder() {
+    
+    
+    public java.util.List<String> getAssetOrder(){
         return this.assetOrder;
     }
 
@@ -150,7 +172,7 @@ public class ProductChangeAssetOrderActionBuilder implements Builder<ProductChan
         Objects.requireNonNull(assetOrder, ProductChangeAssetOrderAction.class + ": assetOrder is missing");
         return new ProductChangeAssetOrderActionImpl(variantId, sku, staged, assetOrder);
     }
-
+    
     /**
      * builds ProductChangeAssetOrderAction without checking for non-null required values
      * @return ProductChangeAssetOrderAction
@@ -161,7 +183,7 @@ public class ProductChangeAssetOrderActionBuilder implements Builder<ProductChan
 
     /**
      * factory method for an instance of ProductChangeAssetOrderActionBuilder
-     * @return builder
+     * @return builder 
      */
     public static ProductChangeAssetOrderActionBuilder of() {
         return new ProductChangeAssetOrderActionBuilder();

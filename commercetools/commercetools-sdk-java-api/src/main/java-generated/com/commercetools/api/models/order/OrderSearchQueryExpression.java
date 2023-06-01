@@ -1,16 +1,28 @@
-
 package com.commercetools.api.models.order;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
+import com.commercetools.api.models.order.OrderSearchDateRangeExpression;
+import com.commercetools.api.models.order.OrderSearchExactExpression;
+import com.commercetools.api.models.order.OrderSearchExistsExpression;
+import com.commercetools.api.models.order.OrderSearchFullTextExpression;
+import com.commercetools.api.models.order.OrderSearchLongRangeExpression;
+import com.commercetools.api.models.order.OrderSearchNumberRangeExpression;
+import com.commercetools.api.models.order.OrderSearchPrefixExpression;
+import com.commercetools.api.models.order.OrderSearchQuery;
+import com.commercetools.api.models.order.OrderSearchWildCardExpression;
+import com.commercetools.api.models.order.OrderSearchQueryExpressionImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * OrderSearchQueryExpression
@@ -22,19 +34,26 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     OrderSearchQueryExpression orderSearchQueryExpression = OrderSearchQueryExpression.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = OrderSearchQueryExpressionImpl.class)
 public interface OrderSearchQueryExpression extends OrderSearchQuery {
+
+
+
 
     /**
      * factory method
      * @return instance of OrderSearchQueryExpression
      */
-    public static OrderSearchQueryExpression of() {
+    public static OrderSearchQueryExpression of(){
         return new OrderSearchQueryExpressionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy OrderSearchQueryExpression
@@ -57,36 +76,28 @@ public interface OrderSearchQueryExpression extends OrderSearchQuery {
             return null;
         }
         if (template instanceof com.commercetools.api.models.order.OrderSearchDateRangeExpression) {
-            return com.commercetools.api.models.order.OrderSearchDateRangeExpression
-                    .deepCopy((com.commercetools.api.models.order.OrderSearchDateRangeExpression) template);
+            return com.commercetools.api.models.order.OrderSearchDateRangeExpression.deepCopy((com.commercetools.api.models.order.OrderSearchDateRangeExpression)template);
         }
         if (template instanceof com.commercetools.api.models.order.OrderSearchExactExpression) {
-            return com.commercetools.api.models.order.OrderSearchExactExpression
-                    .deepCopy((com.commercetools.api.models.order.OrderSearchExactExpression) template);
+            return com.commercetools.api.models.order.OrderSearchExactExpression.deepCopy((com.commercetools.api.models.order.OrderSearchExactExpression)template);
         }
         if (template instanceof com.commercetools.api.models.order.OrderSearchExistsExpression) {
-            return com.commercetools.api.models.order.OrderSearchExistsExpression
-                    .deepCopy((com.commercetools.api.models.order.OrderSearchExistsExpression) template);
+            return com.commercetools.api.models.order.OrderSearchExistsExpression.deepCopy((com.commercetools.api.models.order.OrderSearchExistsExpression)template);
         }
         if (template instanceof com.commercetools.api.models.order.OrderSearchFullTextExpression) {
-            return com.commercetools.api.models.order.OrderSearchFullTextExpression
-                    .deepCopy((com.commercetools.api.models.order.OrderSearchFullTextExpression) template);
+            return com.commercetools.api.models.order.OrderSearchFullTextExpression.deepCopy((com.commercetools.api.models.order.OrderSearchFullTextExpression)template);
         }
         if (template instanceof com.commercetools.api.models.order.OrderSearchLongRangeExpression) {
-            return com.commercetools.api.models.order.OrderSearchLongRangeExpression
-                    .deepCopy((com.commercetools.api.models.order.OrderSearchLongRangeExpression) template);
+            return com.commercetools.api.models.order.OrderSearchLongRangeExpression.deepCopy((com.commercetools.api.models.order.OrderSearchLongRangeExpression)template);
         }
         if (template instanceof com.commercetools.api.models.order.OrderSearchNumberRangeExpression) {
-            return com.commercetools.api.models.order.OrderSearchNumberRangeExpression
-                    .deepCopy((com.commercetools.api.models.order.OrderSearchNumberRangeExpression) template);
+            return com.commercetools.api.models.order.OrderSearchNumberRangeExpression.deepCopy((com.commercetools.api.models.order.OrderSearchNumberRangeExpression)template);
         }
         if (template instanceof com.commercetools.api.models.order.OrderSearchPrefixExpression) {
-            return com.commercetools.api.models.order.OrderSearchPrefixExpression
-                    .deepCopy((com.commercetools.api.models.order.OrderSearchPrefixExpression) template);
+            return com.commercetools.api.models.order.OrderSearchPrefixExpression.deepCopy((com.commercetools.api.models.order.OrderSearchPrefixExpression)template);
         }
         if (template instanceof com.commercetools.api.models.order.OrderSearchWildCardExpression) {
-            return com.commercetools.api.models.order.OrderSearchWildCardExpression
-                    .deepCopy((com.commercetools.api.models.order.OrderSearchWildCardExpression) template);
+            return com.commercetools.api.models.order.OrderSearchWildCardExpression.deepCopy((com.commercetools.api.models.order.OrderSearchWildCardExpression)template);
         }
         OrderSearchQueryExpressionImpl instance = new OrderSearchQueryExpressionImpl();
         return instance;
@@ -99,7 +110,7 @@ public interface OrderSearchQueryExpression extends OrderSearchQuery {
     public static OrderSearchQueryExpressionBuilder builder() {
         return OrderSearchQueryExpressionBuilder.of();
     }
-
+    
     /**
      * create builder for OrderSearchQueryExpression instance
      * @param template instance with prefilled values for the builder
@@ -108,6 +119,7 @@ public interface OrderSearchQueryExpression extends OrderSearchQuery {
     public static OrderSearchQueryExpressionBuilder builder(final OrderSearchQueryExpression template) {
         return OrderSearchQueryExpressionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -118,7 +130,7 @@ public interface OrderSearchQueryExpression extends OrderSearchQuery {
     default <T> T withOrderSearchQueryExpression(Function<OrderSearchQueryExpression, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

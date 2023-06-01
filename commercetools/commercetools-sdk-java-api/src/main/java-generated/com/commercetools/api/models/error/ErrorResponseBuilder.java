@@ -1,11 +1,12 @@
-
 package com.commercetools.api.models.error;
 
+import com.commercetools.api.models.error.AuthErrorResponse;
+import com.commercetools.api.models.error.ErrorObject;
+import com.commercetools.api.models.error.ErrorResponse;
+import javax.annotation.Nullable;
 import java.util.*;
 import java.util.function.Function;
-
-import javax.annotation.Nullable;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -20,136 +21,152 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .message("{message}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class ErrorResponseBuilder implements Builder<ErrorResponse> {
 
+    
+    
     private Integer statusCode;
-
+    
+    
+    
     private String message;
-
+    
+    
     @Nullable
     private java.util.List<com.commercetools.api.models.error.ErrorObject> errors;
 
+    
     /**
      *  <p>HTTP status code corresponding to the error.</p>
      * @param statusCode value to be set
      * @return Builder
      */
-
-    public ErrorResponseBuilder statusCode(final Integer statusCode) {
+    
+    public ErrorResponseBuilder statusCode( final Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>First error message in the <code>errors</code> array.</p>
      * @param message value to be set
      * @return Builder
      */
-
-    public ErrorResponseBuilder message(final String message) {
+    
+    public ErrorResponseBuilder message( final String message) {
         this.message = message;
         return this;
     }
-
+    
+    
+    
     /**
      *  <p>Errors returned for a request.</p>
      *  <p>A single error response can contain multiple errors if the errors are related to the same HTTP status code such as <code>400</code>.</p>
      * @param errors value to be set
      * @return Builder
      */
-
-    public ErrorResponseBuilder errors(@Nullable final com.commercetools.api.models.error.ErrorObject... errors) {
+    
+    public ErrorResponseBuilder errors(@Nullable final com.commercetools.api.models.error.ErrorObject ...errors) {
         this.errors = new ArrayList<>(Arrays.asList(errors));
         return this;
     }
-
+    
     /**
      *  <p>Errors returned for a request.</p>
      *  <p>A single error response can contain multiple errors if the errors are related to the same HTTP status code such as <code>400</code>.</p>
      * @param errors value to be set
      * @return Builder
      */
-
-    public ErrorResponseBuilder errors(
-            @Nullable final java.util.List<com.commercetools.api.models.error.ErrorObject> errors) {
+    
+    public ErrorResponseBuilder errors(@Nullable final java.util.List<com.commercetools.api.models.error.ErrorObject> errors) {
         this.errors = errors;
         return this;
     }
-
+    
     /**
      *  <p>Errors returned for a request.</p>
      *  <p>A single error response can contain multiple errors if the errors are related to the same HTTP status code such as <code>400</code>.</p>
      * @param errors value to be set
      * @return Builder
      */
-
-    public ErrorResponseBuilder plusErrors(@Nullable final com.commercetools.api.models.error.ErrorObject... errors) {
+    
+    public ErrorResponseBuilder plusErrors(@Nullable final com.commercetools.api.models.error.ErrorObject ...errors) {
         if (this.errors == null) {
             this.errors = new ArrayList<>();
         }
         this.errors.addAll(Arrays.asList(errors));
         return this;
     }
-
+    
+    
     /**
      *  <p>Errors returned for a request.</p>
      *  <p>A single error response can contain multiple errors if the errors are related to the same HTTP status code such as <code>400</code>.</p>
      * @param builder function to build the errors value
      * @return Builder
      */
-
-    public ErrorResponseBuilder plusErrors(
-            Function<com.commercetools.api.models.error.ErrorObjectBuilder, Builder<? extends com.commercetools.api.models.error.ErrorObject>> builder) {
+    
+    public ErrorResponseBuilder plusErrors(Function<com.commercetools.api.models.error.ErrorObjectBuilder, Builder<? extends com.commercetools.api.models.error.ErrorObject>> builder) {
         if (this.errors == null) {
             this.errors = new ArrayList<>();
         }
         this.errors.add(builder.apply(com.commercetools.api.models.error.ErrorObjectBuilder.of()).build());
         return this;
     }
-
+    
     /**
      *  <p>Errors returned for a request.</p>
      *  <p>A single error response can contain multiple errors if the errors are related to the same HTTP status code such as <code>400</code>.</p>
      * @param builder function to build the errors value
      * @return Builder
      */
-
-    public ErrorResponseBuilder withErrors(
-            Function<com.commercetools.api.models.error.ErrorObjectBuilder, Builder<? extends com.commercetools.api.models.error.ErrorObject>> builder) {
+    
+    public ErrorResponseBuilder withErrors(Function<com.commercetools.api.models.error.ErrorObjectBuilder, Builder<? extends com.commercetools.api.models.error.ErrorObject>> builder) {
         this.errors = new ArrayList<>();
         this.errors.add(builder.apply(com.commercetools.api.models.error.ErrorObjectBuilder.of()).build());
         return this;
     }
+                    
+    
 
     /**
      *  <p>HTTP status code corresponding to the error.</p>
      * @return statusCode
      */
-
-    public Integer getStatusCode() {
+    
+    
+    public Integer getStatusCode(){
         return this.statusCode;
     }
-
+    
     /**
      *  <p>First error message in the <code>errors</code> array.</p>
      * @return message
      */
-
-    public String getMessage() {
+    
+    
+    public String getMessage(){
         return this.message;
     }
-
+    
     /**
      *  <p>Errors returned for a request.</p>
      *  <p>A single error response can contain multiple errors if the errors are related to the same HTTP status code such as <code>400</code>.</p>
      * @return errors
      */
-
+    
     @Nullable
-    public java.util.List<com.commercetools.api.models.error.ErrorObject> getErrors() {
+    public java.util.List<com.commercetools.api.models.error.ErrorObject> getErrors(){
         return this.errors;
     }
 
@@ -162,7 +179,7 @@ public class ErrorResponseBuilder implements Builder<ErrorResponse> {
         Objects.requireNonNull(message, ErrorResponse.class + ": message is missing");
         return new ErrorResponseImpl(statusCode, message, errors);
     }
-
+    
     /**
      * builds ErrorResponse without checking for non-null required values
      * @return ErrorResponse
@@ -173,7 +190,7 @@ public class ErrorResponseBuilder implements Builder<ErrorResponse> {
 
     /**
      * factory method for an instance of ErrorResponseBuilder
-     * @return builder
+     * @return builder 
      */
     public static ErrorResponseBuilder of() {
         return new ErrorResponseBuilder();

@@ -1,19 +1,21 @@
-
 package com.commercetools.api.models.message;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
+import com.commercetools.api.models.message.MessagePayload;
 import com.commercetools.api.models.staged_quote.StagedQuote;
+import com.commercetools.api.models.message.StagedQuoteCreatedMessagePayloadImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Generated after a successful Create Staged Quote request.</p>
@@ -26,9 +28,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .stagedQuote(stagedQuoteBuilder -> stagedQuoteBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = StagedQuoteCreatedMessagePayloadImpl.class)
 public interface StagedQuoteCreatedMessagePayload extends MessagePayload {
 
@@ -50,16 +55,18 @@ public interface StagedQuoteCreatedMessagePayload extends MessagePayload {
      *  <p>Staged Quote that was created.</p>
      * @param stagedQuote value to be set
      */
-
+    
     public void setStagedQuote(final StagedQuote stagedQuote);
+    
 
     /**
      * factory method
      * @return instance of StagedQuoteCreatedMessagePayload
      */
-    public static StagedQuoteCreatedMessagePayload of() {
+    public static StagedQuoteCreatedMessagePayload of(){
         return new StagedQuoteCreatedMessagePayloadImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy StagedQuoteCreatedMessagePayload
@@ -83,8 +90,7 @@ public interface StagedQuoteCreatedMessagePayload extends MessagePayload {
             return null;
         }
         StagedQuoteCreatedMessagePayloadImpl instance = new StagedQuoteCreatedMessagePayloadImpl();
-        instance.setStagedQuote(
-            com.commercetools.api.models.staged_quote.StagedQuote.deepCopy(template.getStagedQuote()));
+        instance.setStagedQuote(com.commercetools.api.models.staged_quote.StagedQuote.deepCopy(template.getStagedQuote()));
         return instance;
     }
 
@@ -95,7 +101,7 @@ public interface StagedQuoteCreatedMessagePayload extends MessagePayload {
     public static StagedQuoteCreatedMessagePayloadBuilder builder() {
         return StagedQuoteCreatedMessagePayloadBuilder.of();
     }
-
+    
     /**
      * create builder for StagedQuoteCreatedMessagePayload instance
      * @param template instance with prefilled values for the builder
@@ -104,6 +110,7 @@ public interface StagedQuoteCreatedMessagePayload extends MessagePayload {
     public static StagedQuoteCreatedMessagePayloadBuilder builder(final StagedQuoteCreatedMessagePayload template) {
         return StagedQuoteCreatedMessagePayloadBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -114,7 +121,7 @@ public interface StagedQuoteCreatedMessagePayload extends MessagePayload {
     default <T> T withStagedQuoteCreatedMessagePayload(Function<StagedQuoteCreatedMessagePayload, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

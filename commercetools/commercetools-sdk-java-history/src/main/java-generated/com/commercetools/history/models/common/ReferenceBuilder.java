@@ -1,8 +1,11 @@
-
 package com.commercetools.history.models.common;
 
+import com.commercetools.history.models.common.ReferenceTypeId;
+import com.commercetools.history.models.common.Reference;
+import javax.annotation.Nullable;
 import java.util.*;
-
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -17,52 +20,67 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .typeId(ReferenceTypeId.CART)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class ReferenceBuilder implements Builder<Reference> {
 
+    
+    
     private String id;
-
+    
+    
+    
     private com.commercetools.history.models.common.ReferenceTypeId typeId;
 
+    
     /**
      * set the value to the id
      * @param id value to be set
      * @return Builder
      */
-
-    public ReferenceBuilder id(final String id) {
+    
+    public ReferenceBuilder id( final String id) {
         this.id = id;
         return this;
     }
-
+    
+    
+    
+    
     /**
      * set the value to the typeId
      * @param typeId value to be set
      * @return Builder
      */
-
-    public ReferenceBuilder typeId(final com.commercetools.history.models.common.ReferenceTypeId typeId) {
+    
+    public ReferenceBuilder typeId( final com.commercetools.history.models.common.ReferenceTypeId typeId) {
         this.typeId = typeId;
         return this;
     }
+    
+    
 
     /**
      * value of id}
      * @return id
      */
-
-    public String getId() {
+    
+    
+    public String getId(){
         return this.id;
     }
-
+    
     /**
      * value of typeId}
      * @return typeId
      */
-
-    public com.commercetools.history.models.common.ReferenceTypeId getTypeId() {
+    
+    
+    public com.commercetools.history.models.common.ReferenceTypeId getTypeId(){
         return this.typeId;
     }
 
@@ -75,7 +93,7 @@ public class ReferenceBuilder implements Builder<Reference> {
         Objects.requireNonNull(typeId, Reference.class + ": typeId is missing");
         return new ReferenceImpl(id, typeId);
     }
-
+    
     /**
      * builds Reference without checking for non-null required values
      * @return Reference
@@ -86,7 +104,7 @@ public class ReferenceBuilder implements Builder<Reference> {
 
     /**
      * factory method for an instance of ReferenceBuilder
-     * @return builder
+     * @return builder 
      */
     public static ReferenceBuilder of() {
         return new ReferenceBuilder();

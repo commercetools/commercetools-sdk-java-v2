@@ -1,9 +1,11 @@
-
 package com.commercetools.ml.models.image_search_config;
 
+import com.commercetools.ml.models.image_search_config.ImageSearchConfigUpdateAction;
+import com.commercetools.ml.models.image_search_config.ImageSearchConfigRequest;
+import javax.annotation.Nullable;
 import java.util.*;
 import java.util.function.Function;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -17,11 +19,16 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .plusActions(actionsBuilder -> actionsBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class ImageSearchConfigRequestBuilder implements Builder<ImageSearchConfigRequest> {
 
+    
+    
     private java.util.List<com.commercetools.ml.models.image_search_config.ImageSearchConfigUpdateAction> actions;
 
     /**
@@ -29,78 +36,73 @@ public class ImageSearchConfigRequestBuilder implements Builder<ImageSearchConfi
      * @param actions value to be set
      * @return Builder
      */
-
-    public ImageSearchConfigRequestBuilder actions(
-            final com.commercetools.ml.models.image_search_config.ImageSearchConfigUpdateAction... actions) {
+    
+    public ImageSearchConfigRequestBuilder actions( final com.commercetools.ml.models.image_search_config.ImageSearchConfigUpdateAction ...actions) {
         this.actions = new ArrayList<>(Arrays.asList(actions));
         return this;
     }
-
+    
     /**
      *  <p>The list of update actions to be performed on the project.</p>
      * @param actions value to be set
      * @return Builder
      */
-
-    public ImageSearchConfigRequestBuilder actions(
-            final java.util.List<com.commercetools.ml.models.image_search_config.ImageSearchConfigUpdateAction> actions) {
+    
+    public ImageSearchConfigRequestBuilder actions( final java.util.List<com.commercetools.ml.models.image_search_config.ImageSearchConfigUpdateAction> actions) {
         this.actions = actions;
         return this;
     }
-
+    
     /**
      *  <p>The list of update actions to be performed on the project.</p>
      * @param actions value to be set
      * @return Builder
      */
-
-    public ImageSearchConfigRequestBuilder plusActions(
-            final com.commercetools.ml.models.image_search_config.ImageSearchConfigUpdateAction... actions) {
+    
+    public ImageSearchConfigRequestBuilder plusActions( final com.commercetools.ml.models.image_search_config.ImageSearchConfigUpdateAction ...actions) {
         if (this.actions == null) {
             this.actions = new ArrayList<>();
         }
         this.actions.addAll(Arrays.asList(actions));
         return this;
     }
-
+    
+    
     /**
      *  <p>The list of update actions to be performed on the project.</p>
      * @param builder function to build the actions value
      * @return Builder
      */
-
-    public ImageSearchConfigRequestBuilder plusActions(
-            Function<com.commercetools.ml.models.image_search_config.ImageSearchConfigUpdateActionBuilder, Builder<? extends com.commercetools.ml.models.image_search_config.ImageSearchConfigUpdateAction>> builder) {
+    
+    public ImageSearchConfigRequestBuilder plusActions(Function<com.commercetools.ml.models.image_search_config.ImageSearchConfigUpdateActionBuilder, Builder<? extends com.commercetools.ml.models.image_search_config.ImageSearchConfigUpdateAction>> builder) {
         if (this.actions == null) {
             this.actions = new ArrayList<>();
         }
-        this.actions.add(
-            builder.apply(com.commercetools.ml.models.image_search_config.ImageSearchConfigUpdateActionBuilder.of())
-                    .build());
+        this.actions.add(builder.apply(com.commercetools.ml.models.image_search_config.ImageSearchConfigUpdateActionBuilder.of()).build());
         return this;
     }
-
+    
     /**
      *  <p>The list of update actions to be performed on the project.</p>
      * @param builder function to build the actions value
      * @return Builder
      */
-
-    public ImageSearchConfigRequestBuilder withActions(
-            Function<com.commercetools.ml.models.image_search_config.ImageSearchConfigUpdateActionBuilder, Builder<? extends com.commercetools.ml.models.image_search_config.ImageSearchConfigUpdateAction>> builder) {
+    
+    public ImageSearchConfigRequestBuilder withActions(Function<com.commercetools.ml.models.image_search_config.ImageSearchConfigUpdateActionBuilder, Builder<? extends com.commercetools.ml.models.image_search_config.ImageSearchConfigUpdateAction>> builder) {
         this.actions = new ArrayList<>();
-        this.actions.add(
-            builder.apply(com.commercetools.ml.models.image_search_config.ImageSearchConfigUpdateActionBuilder.of())
-                    .build());
+        this.actions.add(builder.apply(com.commercetools.ml.models.image_search_config.ImageSearchConfigUpdateActionBuilder.of()).build());
         return this;
     }
+                    
+    
 
     /**
      *  <p>The list of update actions to be performed on the project.</p>
      * @return actions
      */
-
-    public java.util.List<com.commercetools.ml.models.image_search_config.ImageSearchConfigUpdateAction> getActions() {
+    
+    
+    public java.util.List<com.commercetools.ml.models.image_search_config.ImageSearchConfigUpdateAction> getActions(){
         return this.actions;
     }
 
@@ -112,7 +114,7 @@ public class ImageSearchConfigRequestBuilder implements Builder<ImageSearchConfi
         Objects.requireNonNull(actions, ImageSearchConfigRequest.class + ": actions is missing");
         return new ImageSearchConfigRequestImpl(actions);
     }
-
+    
     /**
      * builds ImageSearchConfigRequest without checking for non-null required values
      * @return ImageSearchConfigRequest
@@ -123,7 +125,7 @@ public class ImageSearchConfigRequestBuilder implements Builder<ImageSearchConfi
 
     /**
      * factory method for an instance of ImageSearchConfigRequestBuilder
-     * @return builder
+     * @return builder 
      */
     public static ImageSearchConfigRequestBuilder of() {
         return new ImageSearchConfigRequestBuilder();

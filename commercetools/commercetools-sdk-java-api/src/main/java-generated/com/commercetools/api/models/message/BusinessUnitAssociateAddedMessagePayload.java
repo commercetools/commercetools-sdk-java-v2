@@ -1,19 +1,21 @@
-
 package com.commercetools.api.models.message;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
 import com.commercetools.api.models.business_unit.Associate;
+import com.commercetools.api.models.message.MessagePayload;
+import com.commercetools.api.models.message.BusinessUnitAssociateAddedMessagePayloadImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Generated after a successful Add Associate update action.</p>
@@ -26,9 +28,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .associate(associateBuilder -> associateBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = BusinessUnitAssociateAddedMessagePayloadImpl.class)
 public interface BusinessUnitAssociateAddedMessagePayload extends MessagePayload {
 
@@ -50,16 +55,18 @@ public interface BusinessUnitAssociateAddedMessagePayload extends MessagePayload
      *  <p>The Associate that was added to the Business Unit.</p>
      * @param associate value to be set
      */
-
+    
     public void setAssociate(final Associate associate);
+    
 
     /**
      * factory method
      * @return instance of BusinessUnitAssociateAddedMessagePayload
      */
-    public static BusinessUnitAssociateAddedMessagePayload of() {
+    public static BusinessUnitAssociateAddedMessagePayload of(){
         return new BusinessUnitAssociateAddedMessagePayloadImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy BusinessUnitAssociateAddedMessagePayload
@@ -78,8 +85,7 @@ public interface BusinessUnitAssociateAddedMessagePayload extends MessagePayload
      * @return copy instance
      */
     @Nullable
-    public static BusinessUnitAssociateAddedMessagePayload deepCopy(
-            @Nullable final BusinessUnitAssociateAddedMessagePayload template) {
+    public static BusinessUnitAssociateAddedMessagePayload deepCopy(@Nullable final BusinessUnitAssociateAddedMessagePayload template) {
         if (template == null) {
             return null;
         }
@@ -95,16 +101,16 @@ public interface BusinessUnitAssociateAddedMessagePayload extends MessagePayload
     public static BusinessUnitAssociateAddedMessagePayloadBuilder builder() {
         return BusinessUnitAssociateAddedMessagePayloadBuilder.of();
     }
-
+    
     /**
      * create builder for BusinessUnitAssociateAddedMessagePayload instance
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static BusinessUnitAssociateAddedMessagePayloadBuilder builder(
-            final BusinessUnitAssociateAddedMessagePayload template) {
+    public static BusinessUnitAssociateAddedMessagePayloadBuilder builder(final BusinessUnitAssociateAddedMessagePayload template) {
         return BusinessUnitAssociateAddedMessagePayloadBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -112,11 +118,10 @@ public interface BusinessUnitAssociateAddedMessagePayload extends MessagePayload
      * @param helper function to map the object
      * @return mapped value
      */
-    default <T> T withBusinessUnitAssociateAddedMessagePayload(
-            Function<BusinessUnitAssociateAddedMessagePayload, T> helper) {
+    default <T> T withBusinessUnitAssociateAddedMessagePayload(Function<BusinessUnitAssociateAddedMessagePayload, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

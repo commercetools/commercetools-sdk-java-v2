@@ -1,11 +1,12 @@
-
 package com.commercetools.api.models.cart;
 
+import com.commercetools.api.models.cart.CartUpdateAction;
+import com.commercetools.api.models.cart.ExternalTaxAmountDraft;
+import com.commercetools.api.models.cart.CartSetShippingMethodTaxAmountAction;
+import javax.annotation.Nullable;
 import java.util.*;
 import java.util.function.Function;
-
-import javax.annotation.Nullable;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -18,58 +19,89 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     CartSetShippingMethodTaxAmountAction cartSetShippingMethodTaxAmountAction = CartSetShippingMethodTaxAmountAction.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class CartSetShippingMethodTaxAmountActionBuilder implements Builder<CartSetShippingMethodTaxAmountAction> {
 
+    
+    @Nullable
+    private String shippingKey;
+    
+    
     @Nullable
     private com.commercetools.api.models.cart.ExternalTaxAmountDraft externalTaxAmount;
 
+    
     /**
-     *  <p>Value to set. If empty, any existing value is removed.</p>
-     * @param builder function to build the externalTaxAmount value
+     *  <p><code>key</code> of the ShippingMethod to update. This is required for Carts with <code>Multiple</code> ShippingMode.</p>
+     * @param shippingKey value to be set
      * @return Builder
      */
-
-    public CartSetShippingMethodTaxAmountActionBuilder externalTaxAmount(
-            Function<com.commercetools.api.models.cart.ExternalTaxAmountDraftBuilder, com.commercetools.api.models.cart.ExternalTaxAmountDraftBuilder> builder) {
-        this.externalTaxAmount = builder.apply(com.commercetools.api.models.cart.ExternalTaxAmountDraftBuilder.of())
-                .build();
+    
+    public CartSetShippingMethodTaxAmountActionBuilder shippingKey(@Nullable final String shippingKey) {
+        this.shippingKey = shippingKey;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Value to set. If empty, any existing value is removed.</p>
      * @param builder function to build the externalTaxAmount value
      * @return Builder
      */
-
-    public CartSetShippingMethodTaxAmountActionBuilder withExternalTaxAmount(
-            Function<com.commercetools.api.models.cart.ExternalTaxAmountDraftBuilder, com.commercetools.api.models.cart.ExternalTaxAmountDraft> builder) {
+    
+    public CartSetShippingMethodTaxAmountActionBuilder externalTaxAmount(Function<com.commercetools.api.models.cart.ExternalTaxAmountDraftBuilder, com.commercetools.api.models.cart.ExternalTaxAmountDraftBuilder> builder) {
+        this.externalTaxAmount = builder.apply(com.commercetools.api.models.cart.ExternalTaxAmountDraftBuilder.of()).build();
+        return this;
+    }
+    
+    /**
+     *  <p>Value to set. If empty, any existing value is removed.</p>
+     * @param builder function to build the externalTaxAmount value
+     * @return Builder
+     */
+    
+    public CartSetShippingMethodTaxAmountActionBuilder withExternalTaxAmount(Function<com.commercetools.api.models.cart.ExternalTaxAmountDraftBuilder, com.commercetools.api.models.cart.ExternalTaxAmountDraft> builder) {
         this.externalTaxAmount = builder.apply(com.commercetools.api.models.cart.ExternalTaxAmountDraftBuilder.of());
         return this;
     }
-
+                    
     /**
      *  <p>Value to set. If empty, any existing value is removed.</p>
      * @param externalTaxAmount value to be set
      * @return Builder
      */
-
-    public CartSetShippingMethodTaxAmountActionBuilder externalTaxAmount(
-            @Nullable final com.commercetools.api.models.cart.ExternalTaxAmountDraft externalTaxAmount) {
+    
+    public CartSetShippingMethodTaxAmountActionBuilder externalTaxAmount(@Nullable final com.commercetools.api.models.cart.ExternalTaxAmountDraft externalTaxAmount) {
         this.externalTaxAmount = externalTaxAmount;
         return this;
     }
+    
+    
 
+    /**
+     *  <p><code>key</code> of the ShippingMethod to update. This is required for Carts with <code>Multiple</code> ShippingMode.</p>
+     * @return shippingKey
+     */
+    
+    @Nullable
+    public String getShippingKey(){
+        return this.shippingKey;
+    }
+    
     /**
      *  <p>Value to set. If empty, any existing value is removed.</p>
      * @return externalTaxAmount
      */
-
+    
     @Nullable
-    public com.commercetools.api.models.cart.ExternalTaxAmountDraft getExternalTaxAmount() {
+    public com.commercetools.api.models.cart.ExternalTaxAmountDraft getExternalTaxAmount(){
         return this.externalTaxAmount;
     }
 
@@ -78,20 +110,20 @@ public class CartSetShippingMethodTaxAmountActionBuilder implements Builder<Cart
      * @return CartSetShippingMethodTaxAmountAction
      */
     public CartSetShippingMethodTaxAmountAction build() {
-        return new CartSetShippingMethodTaxAmountActionImpl(externalTaxAmount);
+        return new CartSetShippingMethodTaxAmountActionImpl(shippingKey, externalTaxAmount);
     }
-
+    
     /**
      * builds CartSetShippingMethodTaxAmountAction without checking for non-null required values
      * @return CartSetShippingMethodTaxAmountAction
      */
     public CartSetShippingMethodTaxAmountAction buildUnchecked() {
-        return new CartSetShippingMethodTaxAmountActionImpl(externalTaxAmount);
+        return new CartSetShippingMethodTaxAmountActionImpl(shippingKey, externalTaxAmount);
     }
 
     /**
      * factory method for an instance of CartSetShippingMethodTaxAmountActionBuilder
-     * @return builder
+     * @return builder 
      */
     public static CartSetShippingMethodTaxAmountActionBuilder of() {
         return new CartSetShippingMethodTaxAmountActionBuilder();
@@ -104,6 +136,7 @@ public class CartSetShippingMethodTaxAmountActionBuilder implements Builder<Cart
      */
     public static CartSetShippingMethodTaxAmountActionBuilder of(final CartSetShippingMethodTaxAmountAction template) {
         CartSetShippingMethodTaxAmountActionBuilder builder = new CartSetShippingMethodTaxAmountActionBuilder();
+        builder.shippingKey = template.getShippingKey();
         builder.externalTaxAmount = template.getExternalTaxAmount();
         return builder;
     }

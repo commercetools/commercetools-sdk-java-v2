@@ -1,19 +1,21 @@
-
 package com.commercetools.history.models.change;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
+import com.commercetools.history.models.change.Change;
 import com.commercetools.history.models.common.FieldDefinition;
+import com.commercetools.history.models.change.AddFieldDefinitionChangeImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * AddFieldDefinitionChange
@@ -27,9 +29,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .nextValue(nextValueBuilder -> nextValueBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = AddFieldDefinitionChangeImpl.class)
 public interface AddFieldDefinitionChange extends Change {
 
@@ -45,7 +50,6 @@ public interface AddFieldDefinitionChange extends Change {
     @NotNull
     @JsonProperty("type")
     public String getType();
-
     /**
      *  <p>Update action for <code>addFieldDefinition</code> on payments</p>
      * @return change
@@ -53,7 +57,6 @@ public interface AddFieldDefinitionChange extends Change {
     @NotNull
     @JsonProperty("change")
     public String getChange();
-
     /**
      *
      * @return nextValue
@@ -67,23 +70,26 @@ public interface AddFieldDefinitionChange extends Change {
      *  <p>Update action for <code>addFieldDefinition</code> on payments</p>
      * @param change value to be set
      */
-
+    
     public void setChange(final String change);
-
+    
+    
     /**
      * set nextValue
      * @param nextValue value to be set
      */
-
+    
     public void setNextValue(final FieldDefinition nextValue);
+    
 
     /**
      * factory method
      * @return instance of AddFieldDefinitionChange
      */
-    public static AddFieldDefinitionChange of() {
+    public static AddFieldDefinitionChange of(){
         return new AddFieldDefinitionChangeImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy AddFieldDefinitionChange
@@ -109,8 +115,7 @@ public interface AddFieldDefinitionChange extends Change {
         }
         AddFieldDefinitionChangeImpl instance = new AddFieldDefinitionChangeImpl();
         instance.setChange(template.getChange());
-        instance.setNextValue(
-            com.commercetools.history.models.common.FieldDefinition.deepCopy(template.getNextValue()));
+        instance.setNextValue(com.commercetools.history.models.common.FieldDefinition.deepCopy(template.getNextValue()));
         return instance;
     }
 
@@ -121,7 +126,7 @@ public interface AddFieldDefinitionChange extends Change {
     public static AddFieldDefinitionChangeBuilder builder() {
         return AddFieldDefinitionChangeBuilder.of();
     }
-
+    
     /**
      * create builder for AddFieldDefinitionChange instance
      * @param template instance with prefilled values for the builder
@@ -130,6 +135,7 @@ public interface AddFieldDefinitionChange extends Change {
     public static AddFieldDefinitionChangeBuilder builder(final AddFieldDefinitionChange template) {
         return AddFieldDefinitionChangeBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -140,7 +146,7 @@ public interface AddFieldDefinitionChange extends Change {
     default <T> T withAddFieldDefinitionChange(Function<AddFieldDefinitionChange, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

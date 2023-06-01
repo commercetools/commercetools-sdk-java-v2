@@ -1,17 +1,20 @@
-
 package com.commercetools.api.models.shopping_list;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
+import com.commercetools.api.models.shopping_list.ShoppingListUpdateAction;
+import com.commercetools.api.models.shopping_list.ShoppingListChangeLineItemQuantityActionImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * ShoppingListChangeLineItemQuantityAction
@@ -25,9 +28,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .quantity(0.3)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = ShoppingListChangeLineItemQuantityActionImpl.class)
 public interface ShoppingListChangeLineItemQuantityAction extends ShoppingListUpdateAction {
 
@@ -43,7 +49,6 @@ public interface ShoppingListChangeLineItemQuantityAction extends ShoppingListUp
     @NotNull
     @JsonProperty("lineItemId")
     public String getLineItemId();
-
     /**
      *  <p>New value to set. If <code>0</code>, the ShoppingListLineItem is removed from the ShoppingList.</p>
      * @return quantity
@@ -56,23 +61,26 @@ public interface ShoppingListChangeLineItemQuantityAction extends ShoppingListUp
      *  <p>The <code>id</code> of the ShoppingListLineItem to update.</p>
      * @param lineItemId value to be set
      */
-
+    
     public void setLineItemId(final String lineItemId);
-
+    
+    
     /**
      *  <p>New value to set. If <code>0</code>, the ShoppingListLineItem is removed from the ShoppingList.</p>
      * @param quantity value to be set
      */
-
+    
     public void setQuantity(final Long quantity);
+    
 
     /**
      * factory method
      * @return instance of ShoppingListChangeLineItemQuantityAction
      */
-    public static ShoppingListChangeLineItemQuantityAction of() {
+    public static ShoppingListChangeLineItemQuantityAction of(){
         return new ShoppingListChangeLineItemQuantityActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy ShoppingListChangeLineItemQuantityAction
@@ -92,8 +100,7 @@ public interface ShoppingListChangeLineItemQuantityAction extends ShoppingListUp
      * @return copy instance
      */
     @Nullable
-    public static ShoppingListChangeLineItemQuantityAction deepCopy(
-            @Nullable final ShoppingListChangeLineItemQuantityAction template) {
+    public static ShoppingListChangeLineItemQuantityAction deepCopy(@Nullable final ShoppingListChangeLineItemQuantityAction template) {
         if (template == null) {
             return null;
         }
@@ -110,16 +117,16 @@ public interface ShoppingListChangeLineItemQuantityAction extends ShoppingListUp
     public static ShoppingListChangeLineItemQuantityActionBuilder builder() {
         return ShoppingListChangeLineItemQuantityActionBuilder.of();
     }
-
+    
     /**
      * create builder for ShoppingListChangeLineItemQuantityAction instance
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static ShoppingListChangeLineItemQuantityActionBuilder builder(
-            final ShoppingListChangeLineItemQuantityAction template) {
+    public static ShoppingListChangeLineItemQuantityActionBuilder builder(final ShoppingListChangeLineItemQuantityAction template) {
         return ShoppingListChangeLineItemQuantityActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -127,11 +134,10 @@ public interface ShoppingListChangeLineItemQuantityAction extends ShoppingListUp
      * @param helper function to map the object
      * @return mapped value
      */
-    default <T> T withShoppingListChangeLineItemQuantityAction(
-            Function<ShoppingListChangeLineItemQuantityAction, T> helper) {
+    default <T> T withShoppingListChangeLineItemQuantityAction(Function<ShoppingListChangeLineItemQuantityAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

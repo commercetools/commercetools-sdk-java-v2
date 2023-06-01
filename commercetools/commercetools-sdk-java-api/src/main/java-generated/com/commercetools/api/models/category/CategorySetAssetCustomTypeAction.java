@@ -1,19 +1,22 @@
-
 package com.commercetools.api.models.category;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-
+import com.commercetools.api.models.category.CategoryUpdateAction;
 import com.commercetools.api.models.type.FieldContainer;
 import com.commercetools.api.models.type.TypeResourceIdentifier;
+import com.commercetools.api.models.category.CategorySetAssetCustomTypeActionImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * CategorySetAssetCustomTypeAction
@@ -25,9 +28,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     CategorySetAssetCustomTypeAction categorySetAssetCustomTypeAction = CategorySetAssetCustomTypeAction.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = CategorySetAssetCustomTypeActionImpl.class)
 public interface CategorySetAssetCustomTypeAction extends CategoryUpdateAction {
 
@@ -40,18 +46,16 @@ public interface CategorySetAssetCustomTypeAction extends CategoryUpdateAction {
      *  <p>New value to set. Either <code>assetId</code> or <code>assetKey</code> is required.</p>
      * @return assetId
      */
-
+    
     @JsonProperty("assetId")
     public String getAssetId();
-
     /**
      *  <p>New value to set. Either <code>assetId</code> or <code>assetKey</code> is required.</p>
      * @return assetKey
      */
-
+    
     @JsonProperty("assetKey")
     public String getAssetKey();
-
     /**
      *  <p>Defines the Type that extends the Asset with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Asset.</p>
      * @return type
@@ -59,7 +63,6 @@ public interface CategorySetAssetCustomTypeAction extends CategoryUpdateAction {
     @Valid
     @JsonProperty("type")
     public TypeResourceIdentifier getType();
-
     /**
      *  <p>Sets the Custom Fields fields for the Asset.</p>
      * @return fields
@@ -72,37 +75,42 @@ public interface CategorySetAssetCustomTypeAction extends CategoryUpdateAction {
      *  <p>New value to set. Either <code>assetId</code> or <code>assetKey</code> is required.</p>
      * @param assetId value to be set
      */
-
+    
     public void setAssetId(final String assetId);
-
+    
+    
     /**
      *  <p>New value to set. Either <code>assetId</code> or <code>assetKey</code> is required.</p>
      * @param assetKey value to be set
      */
-
+    
     public void setAssetKey(final String assetKey);
-
+    
+    
     /**
      *  <p>Defines the Type that extends the Asset with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Asset.</p>
      * @param type value to be set
      */
-
+    
     public void setType(final TypeResourceIdentifier type);
-
+    
+    
     /**
      *  <p>Sets the Custom Fields fields for the Asset.</p>
      * @param fields value to be set
      */
-
+    
     public void setFields(final FieldContainer fields);
+    
 
     /**
      * factory method
      * @return instance of CategorySetAssetCustomTypeAction
      */
-    public static CategorySetAssetCustomTypeAction of() {
+    public static CategorySetAssetCustomTypeAction of(){
         return new CategorySetAssetCustomTypeActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy CategorySetAssetCustomTypeAction
@@ -143,7 +151,7 @@ public interface CategorySetAssetCustomTypeAction extends CategoryUpdateAction {
     public static CategorySetAssetCustomTypeActionBuilder builder() {
         return CategorySetAssetCustomTypeActionBuilder.of();
     }
-
+    
     /**
      * create builder for CategorySetAssetCustomTypeAction instance
      * @param template instance with prefilled values for the builder
@@ -152,6 +160,7 @@ public interface CategorySetAssetCustomTypeAction extends CategoryUpdateAction {
     public static CategorySetAssetCustomTypeActionBuilder builder(final CategorySetAssetCustomTypeAction template) {
         return CategorySetAssetCustomTypeActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -162,7 +171,7 @@ public interface CategorySetAssetCustomTypeAction extends CategoryUpdateAction {
     default <T> T withCategorySetAssetCustomTypeAction(Function<CategorySetAssetCustomTypeAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

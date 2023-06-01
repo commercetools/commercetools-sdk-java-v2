@@ -1,19 +1,20 @@
-
 package com.commercetools.ml.models.category_recommendations;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
 import com.commercetools.ml.models.common.CategoryReference;
+import com.commercetools.ml.models.category_recommendations.ProjectCategoryRecommendationImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * ProjectCategoryRecommendation
@@ -28,11 +29,15 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .path("{path}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = ProjectCategoryRecommendationImpl.class)
-public interface ProjectCategoryRecommendation {
+public interface ProjectCategoryRecommendation  {
+
 
     /**
      *  <p>A category that is recommended for a product.</p>
@@ -42,7 +47,6 @@ public interface ProjectCategoryRecommendation {
     @Valid
     @JsonProperty("category")
     public CategoryReference getCategory();
-
     /**
      *  <p>Probability score for the category recommendation.</p>
      * @return confidence
@@ -50,7 +54,6 @@ public interface ProjectCategoryRecommendation {
     @NotNull
     @JsonProperty("confidence")
     public Double getConfidence();
-
     /**
      *  <p>Breadcrumb path to the recommended category. This only picks up one language, not all available languages for the category. English is prioritized, but if English data is not available, an arbitrary language is selected. Do not use this to identify a category,use the category ID from the category reference instead.</p>
      * @return path
@@ -63,30 +66,34 @@ public interface ProjectCategoryRecommendation {
      *  <p>A category that is recommended for a product.</p>
      * @param category value to be set
      */
-
+    
     public void setCategory(final CategoryReference category);
-
+    
+    
     /**
      *  <p>Probability score for the category recommendation.</p>
      * @param confidence value to be set
      */
-
+    
     public void setConfidence(final Double confidence);
-
+    
+    
     /**
      *  <p>Breadcrumb path to the recommended category. This only picks up one language, not all available languages for the category. English is prioritized, but if English data is not available, an arbitrary language is selected. Do not use this to identify a category,use the category ID from the category reference instead.</p>
      * @param path value to be set
      */
-
+    
     public void setPath(final String path);
+    
 
     /**
      * factory method
      * @return instance of ProjectCategoryRecommendation
      */
-    public static ProjectCategoryRecommendation of() {
+    public static ProjectCategoryRecommendation of(){
         return new ProjectCategoryRecommendationImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy ProjectCategoryRecommendation
@@ -125,7 +132,7 @@ public interface ProjectCategoryRecommendation {
     public static ProjectCategoryRecommendationBuilder builder() {
         return ProjectCategoryRecommendationBuilder.of();
     }
-
+    
     /**
      * create builder for ProjectCategoryRecommendation instance
      * @param template instance with prefilled values for the builder
@@ -134,6 +141,7 @@ public interface ProjectCategoryRecommendation {
     public static ProjectCategoryRecommendationBuilder builder(final ProjectCategoryRecommendation template) {
         return ProjectCategoryRecommendationBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -144,7 +152,7 @@ public interface ProjectCategoryRecommendation {
     default <T> T withProjectCategoryRecommendation(Function<ProjectCategoryRecommendation, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

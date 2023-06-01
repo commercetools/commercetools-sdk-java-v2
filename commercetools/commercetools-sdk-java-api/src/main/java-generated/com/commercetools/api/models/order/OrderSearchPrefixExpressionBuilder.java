@@ -1,9 +1,12 @@
-
 package com.commercetools.api.models.order;
 
+import com.commercetools.api.models.order.OrderSearchQueryExpression;
+import com.commercetools.api.models.order.OrderSearchStringValue;
+import com.commercetools.api.models.order.OrderSearchPrefixExpression;
+import javax.annotation.Nullable;
 import java.util.*;
 import java.util.function.Function;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -17,55 +20,61 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .prefix(prefixBuilder -> prefixBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class OrderSearchPrefixExpressionBuilder implements Builder<OrderSearchPrefixExpression> {
 
+    
+    
     private com.commercetools.api.models.order.OrderSearchStringValue prefix;
 
+    
     /**
      * set the value to the prefix using the builder function
      * @param builder function to build the prefix value
      * @return Builder
      */
-
-    public OrderSearchPrefixExpressionBuilder prefix(
-            Function<com.commercetools.api.models.order.OrderSearchStringValueBuilder, com.commercetools.api.models.order.OrderSearchStringValueBuilder> builder) {
+    
+    public OrderSearchPrefixExpressionBuilder prefix(Function<com.commercetools.api.models.order.OrderSearchStringValueBuilder, com.commercetools.api.models.order.OrderSearchStringValueBuilder> builder) {
         this.prefix = builder.apply(com.commercetools.api.models.order.OrderSearchStringValueBuilder.of()).build();
         return this;
     }
-
+    
     /**
      * set the value to the prefix using the builder function
      * @param builder function to build the prefix value
      * @return Builder
      */
-
-    public OrderSearchPrefixExpressionBuilder withPrefix(
-            Function<com.commercetools.api.models.order.OrderSearchStringValueBuilder, com.commercetools.api.models.order.OrderSearchStringValue> builder) {
+    
+    public OrderSearchPrefixExpressionBuilder withPrefix(Function<com.commercetools.api.models.order.OrderSearchStringValueBuilder, com.commercetools.api.models.order.OrderSearchStringValue> builder) {
         this.prefix = builder.apply(com.commercetools.api.models.order.OrderSearchStringValueBuilder.of());
         return this;
     }
-
+                    
     /**
      * set the value to the prefix
      * @param prefix value to be set
      * @return Builder
      */
-
-    public OrderSearchPrefixExpressionBuilder prefix(
-            final com.commercetools.api.models.order.OrderSearchStringValue prefix) {
+    
+    public OrderSearchPrefixExpressionBuilder prefix( final com.commercetools.api.models.order.OrderSearchStringValue prefix) {
         this.prefix = prefix;
         return this;
     }
+    
+    
 
     /**
      * value of prefix}
      * @return prefix
      */
-
-    public com.commercetools.api.models.order.OrderSearchStringValue getPrefix() {
+    
+    
+    public com.commercetools.api.models.order.OrderSearchStringValue getPrefix(){
         return this.prefix;
     }
 
@@ -77,7 +86,7 @@ public class OrderSearchPrefixExpressionBuilder implements Builder<OrderSearchPr
         Objects.requireNonNull(prefix, OrderSearchPrefixExpression.class + ": prefix is missing");
         return new OrderSearchPrefixExpressionImpl(prefix);
     }
-
+    
     /**
      * builds OrderSearchPrefixExpression without checking for non-null required values
      * @return OrderSearchPrefixExpression
@@ -88,7 +97,7 @@ public class OrderSearchPrefixExpressionBuilder implements Builder<OrderSearchPr
 
     /**
      * factory method for an instance of OrderSearchPrefixExpressionBuilder
-     * @return builder
+     * @return builder 
      */
     public static OrderSearchPrefixExpressionBuilder of() {
         return new OrderSearchPrefixExpressionBuilder();

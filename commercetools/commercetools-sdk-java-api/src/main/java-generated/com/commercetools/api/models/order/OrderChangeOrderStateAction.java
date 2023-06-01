@@ -1,17 +1,21 @@
-
 package com.commercetools.api.models.order;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
+import com.commercetools.api.models.order.OrderState;
+import com.commercetools.api.models.order.OrderUpdateAction;
+import com.commercetools.api.models.order.OrderChangeOrderStateActionImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * OrderChangeOrderStateAction
@@ -24,9 +28,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .orderState(OrderState.OPEN)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = OrderChangeOrderStateActionImpl.class)
 public interface OrderChangeOrderStateAction extends OrderUpdateAction {
 
@@ -47,16 +54,18 @@ public interface OrderChangeOrderStateAction extends OrderUpdateAction {
      * set orderState
      * @param orderState value to be set
      */
-
+    
     public void setOrderState(final OrderState orderState);
+    
 
     /**
      * factory method
      * @return instance of OrderChangeOrderStateAction
      */
-    public static OrderChangeOrderStateAction of() {
+    public static OrderChangeOrderStateAction of(){
         return new OrderChangeOrderStateActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy OrderChangeOrderStateAction
@@ -91,7 +100,7 @@ public interface OrderChangeOrderStateAction extends OrderUpdateAction {
     public static OrderChangeOrderStateActionBuilder builder() {
         return OrderChangeOrderStateActionBuilder.of();
     }
-
+    
     /**
      * create builder for OrderChangeOrderStateAction instance
      * @param template instance with prefilled values for the builder
@@ -100,6 +109,7 @@ public interface OrderChangeOrderStateAction extends OrderUpdateAction {
     public static OrderChangeOrderStateActionBuilder builder(final OrderChangeOrderStateAction template) {
         return OrderChangeOrderStateActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -110,7 +120,7 @@ public interface OrderChangeOrderStateAction extends OrderUpdateAction {
     default <T> T withOrderChangeOrderStateAction(Function<OrderChangeOrderStateAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

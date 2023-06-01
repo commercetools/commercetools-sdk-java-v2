@@ -1,16 +1,21 @@
-
 package com.commercetools.api.models.order;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
+import com.commercetools.api.models.order.OrderUpdateAction;
+import com.commercetools.api.models.order.PaymentState;
+import com.commercetools.api.models.order.OrderChangePaymentStateActionImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * OrderChangePaymentStateAction
@@ -22,9 +27,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     OrderChangePaymentStateAction orderChangePaymentStateAction = OrderChangePaymentStateAction.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = OrderChangePaymentStateActionImpl.class)
 public interface OrderChangePaymentStateAction extends OrderUpdateAction {
 
@@ -37,7 +45,7 @@ public interface OrderChangePaymentStateAction extends OrderUpdateAction {
      *
      * @return paymentState
      */
-
+    
     @JsonProperty("paymentState")
     public PaymentState getPaymentState();
 
@@ -45,16 +53,18 @@ public interface OrderChangePaymentStateAction extends OrderUpdateAction {
      * set paymentState
      * @param paymentState value to be set
      */
-
+    
     public void setPaymentState(final PaymentState paymentState);
+    
 
     /**
      * factory method
      * @return instance of OrderChangePaymentStateAction
      */
-    public static OrderChangePaymentStateAction of() {
+    public static OrderChangePaymentStateAction of(){
         return new OrderChangePaymentStateActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy OrderChangePaymentStateAction
@@ -89,7 +99,7 @@ public interface OrderChangePaymentStateAction extends OrderUpdateAction {
     public static OrderChangePaymentStateActionBuilder builder() {
         return OrderChangePaymentStateActionBuilder.of();
     }
-
+    
     /**
      * create builder for OrderChangePaymentStateAction instance
      * @param template instance with prefilled values for the builder
@@ -98,6 +108,7 @@ public interface OrderChangePaymentStateAction extends OrderUpdateAction {
     public static OrderChangePaymentStateActionBuilder builder(final OrderChangePaymentStateAction template) {
         return OrderChangePaymentStateActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -108,7 +119,7 @@ public interface OrderChangePaymentStateAction extends OrderUpdateAction {
     default <T> T withOrderChangePaymentStateAction(Function<OrderChangePaymentStateAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

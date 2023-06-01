@@ -1,10 +1,12 @@
-
 package com.commercetools.api.models.business_unit;
 
-import java.util.*;
-
+import com.commercetools.api.models.business_unit.BusinessUnitUpdateAction;
+import java.lang.Object;
+import com.commercetools.api.models.business_unit.BusinessUnitSetAddressCustomFieldAction;
 import javax.annotation.Nullable;
-
+import java.util.*;
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -19,77 +21,95 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .name("{name}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
-public class BusinessUnitSetAddressCustomFieldActionBuilder
-        implements Builder<BusinessUnitSetAddressCustomFieldAction> {
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
+public class BusinessUnitSetAddressCustomFieldActionBuilder implements Builder<BusinessUnitSetAddressCustomFieldAction> {
 
+    
+    
     private String addressId;
-
+    
+    
+    
     private String name;
-
+    
+    
     @Nullable
     private java.lang.Object value;
 
+    
     /**
      *  <p>ID of the address to be extended.</p>
      * @param addressId value to be set
      * @return Builder
      */
-
-    public BusinessUnitSetAddressCustomFieldActionBuilder addressId(final String addressId) {
+    
+    public BusinessUnitSetAddressCustomFieldActionBuilder addressId( final String addressId) {
         this.addressId = addressId;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Name of the Custom Field.</p>
      * @param name value to be set
      * @return Builder
      */
-
-    public BusinessUnitSetAddressCustomFieldActionBuilder name(final String name) {
+    
+    public BusinessUnitSetAddressCustomFieldActionBuilder name( final String name) {
         this.name = name;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>If <code>value</code> is absent or <code>null</code>, this field will be removed if it exists. Trying to remove a field that does not exist will fail with an InvalidOperation error. If <code>value</code> is provided, it is set for the field defined by <code>name</code>.</p>
      * @param value value to be set
      * @return Builder
      */
-
+    
     public BusinessUnitSetAddressCustomFieldActionBuilder value(@Nullable final java.lang.Object value) {
         this.value = value;
         return this;
     }
+    
+    
 
     /**
      *  <p>ID of the address to be extended.</p>
      * @return addressId
      */
-
-    public String getAddressId() {
+    
+    
+    public String getAddressId(){
         return this.addressId;
     }
-
+    
     /**
      *  <p>Name of the Custom Field.</p>
      * @return name
      */
-
-    public String getName() {
+    
+    
+    public String getName(){
         return this.name;
     }
-
+    
     /**
      *  <p>If <code>value</code> is absent or <code>null</code>, this field will be removed if it exists. Trying to remove a field that does not exist will fail with an InvalidOperation error. If <code>value</code> is provided, it is set for the field defined by <code>name</code>.</p>
      * @return value
      */
-
+    
     @Nullable
-    public java.lang.Object getValue() {
+    public java.lang.Object getValue(){
         return this.value;
     }
 
@@ -102,7 +122,7 @@ public class BusinessUnitSetAddressCustomFieldActionBuilder
         Objects.requireNonNull(name, BusinessUnitSetAddressCustomFieldAction.class + ": name is missing");
         return new BusinessUnitSetAddressCustomFieldActionImpl(addressId, name, value);
     }
-
+    
     /**
      * builds BusinessUnitSetAddressCustomFieldAction without checking for non-null required values
      * @return BusinessUnitSetAddressCustomFieldAction
@@ -113,7 +133,7 @@ public class BusinessUnitSetAddressCustomFieldActionBuilder
 
     /**
      * factory method for an instance of BusinessUnitSetAddressCustomFieldActionBuilder
-     * @return builder
+     * @return builder 
      */
     public static BusinessUnitSetAddressCustomFieldActionBuilder of() {
         return new BusinessUnitSetAddressCustomFieldActionBuilder();
@@ -124,8 +144,7 @@ public class BusinessUnitSetAddressCustomFieldActionBuilder
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static BusinessUnitSetAddressCustomFieldActionBuilder of(
-            final BusinessUnitSetAddressCustomFieldAction template) {
+    public static BusinessUnitSetAddressCustomFieldActionBuilder of(final BusinessUnitSetAddressCustomFieldAction template) {
         BusinessUnitSetAddressCustomFieldActionBuilder builder = new BusinessUnitSetAddressCustomFieldActionBuilder();
         builder.addressId = template.getAddressId();
         builder.name = template.getName();

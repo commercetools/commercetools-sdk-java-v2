@@ -1,71 +1,79 @@
-
 package com.commercetools.importapi.models.importrequests;
 
+import com.commercetools.importapi.models.common.ImportResourceType;
+import com.commercetools.importapi.models.importrequests.CategoryImportRequest;
+import com.commercetools.importapi.models.importrequests.CustomerImportRequest;
+import com.commercetools.importapi.models.importrequests.InventoryImportRequest;
+import com.commercetools.importapi.models.importrequests.OrderImportRequest;
+import com.commercetools.importapi.models.importrequests.OrderPatchImportRequest;
+import com.commercetools.importapi.models.importrequests.PriceImportRequest;
+import com.commercetools.importapi.models.importrequests.ProductDraftImportRequest;
+import com.commercetools.importapi.models.importrequests.ProductImportRequest;
+import com.commercetools.importapi.models.importrequests.ProductTypeImportRequest;
+import com.commercetools.importapi.models.importrequests.ProductVariantImportRequest;
+import com.commercetools.importapi.models.importrequests.ProductVariantPatchRequest;
+import com.commercetools.importapi.models.importrequests.StandalonePriceImportRequest;
+import com.commercetools.importapi.models.importrequests.TypeImportRequest;
+import com.commercetools.importapi.models.importrequests.ImportRequest;
+import javax.annotation.Nullable;
 import java.util.*;
-
+import java.util.function.Function;
+import java.time.ZonedDateTime;
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
  * ImportRequestBuilder
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class ImportRequestBuilder {
 
     public com.commercetools.importapi.models.importrequests.CategoryImportRequestBuilder categoryBuilder() {
-        return com.commercetools.importapi.models.importrequests.CategoryImportRequestBuilder.of();
+       return com.commercetools.importapi.models.importrequests.CategoryImportRequestBuilder.of();
     }
-
     public com.commercetools.importapi.models.importrequests.CustomerImportRequestBuilder customerBuilder() {
-        return com.commercetools.importapi.models.importrequests.CustomerImportRequestBuilder.of();
+       return com.commercetools.importapi.models.importrequests.CustomerImportRequestBuilder.of();
     }
-
     public com.commercetools.importapi.models.importrequests.InventoryImportRequestBuilder inventoryBuilder() {
-        return com.commercetools.importapi.models.importrequests.InventoryImportRequestBuilder.of();
+       return com.commercetools.importapi.models.importrequests.InventoryImportRequestBuilder.of();
     }
-
     public com.commercetools.importapi.models.importrequests.OrderImportRequestBuilder orderBuilder() {
-        return com.commercetools.importapi.models.importrequests.OrderImportRequestBuilder.of();
+       return com.commercetools.importapi.models.importrequests.OrderImportRequestBuilder.of();
     }
-
     public com.commercetools.importapi.models.importrequests.OrderPatchImportRequestBuilder orderPatchBuilder() {
-        return com.commercetools.importapi.models.importrequests.OrderPatchImportRequestBuilder.of();
+       return com.commercetools.importapi.models.importrequests.OrderPatchImportRequestBuilder.of();
     }
-
     public com.commercetools.importapi.models.importrequests.PriceImportRequestBuilder priceBuilder() {
-        return com.commercetools.importapi.models.importrequests.PriceImportRequestBuilder.of();
+       return com.commercetools.importapi.models.importrequests.PriceImportRequestBuilder.of();
     }
-
     public com.commercetools.importapi.models.importrequests.ProductDraftImportRequestBuilder productDraftBuilder() {
-        return com.commercetools.importapi.models.importrequests.ProductDraftImportRequestBuilder.of();
+       return com.commercetools.importapi.models.importrequests.ProductDraftImportRequestBuilder.of();
     }
-
     public com.commercetools.importapi.models.importrequests.ProductImportRequestBuilder productBuilder() {
-        return com.commercetools.importapi.models.importrequests.ProductImportRequestBuilder.of();
+       return com.commercetools.importapi.models.importrequests.ProductImportRequestBuilder.of();
     }
-
     public com.commercetools.importapi.models.importrequests.ProductTypeImportRequestBuilder productTypeBuilder() {
-        return com.commercetools.importapi.models.importrequests.ProductTypeImportRequestBuilder.of();
+       return com.commercetools.importapi.models.importrequests.ProductTypeImportRequestBuilder.of();
     }
-
     public com.commercetools.importapi.models.importrequests.ProductVariantImportRequestBuilder productVariantBuilder() {
-        return com.commercetools.importapi.models.importrequests.ProductVariantImportRequestBuilder.of();
+       return com.commercetools.importapi.models.importrequests.ProductVariantImportRequestBuilder.of();
     }
-
     public com.commercetools.importapi.models.importrequests.ProductVariantPatchRequestBuilder productVariantPatchBuilder() {
-        return com.commercetools.importapi.models.importrequests.ProductVariantPatchRequestBuilder.of();
+       return com.commercetools.importapi.models.importrequests.ProductVariantPatchRequestBuilder.of();
     }
-
     public com.commercetools.importapi.models.importrequests.StandalonePriceImportRequestBuilder standalonePriceBuilder() {
-        return com.commercetools.importapi.models.importrequests.StandalonePriceImportRequestBuilder.of();
+       return com.commercetools.importapi.models.importrequests.StandalonePriceImportRequestBuilder.of();
     }
-
     public com.commercetools.importapi.models.importrequests.TypeImportRequestBuilder typeBuilder() {
-        return com.commercetools.importapi.models.importrequests.TypeImportRequestBuilder.of();
+       return com.commercetools.importapi.models.importrequests.TypeImportRequestBuilder.of();
     }
 
     /**
      * factory method for an instance of ImportRequestBuilder
-     * @return builder
+     * @return builder 
      */
     public static ImportRequestBuilder of() {
         return new ImportRequestBuilder();

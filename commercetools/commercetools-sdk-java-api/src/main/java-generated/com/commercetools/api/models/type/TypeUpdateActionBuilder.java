@@ -1,75 +1,82 @@
-
 package com.commercetools.api.models.type;
 
+import com.commercetools.api.models.type.TypeAddEnumValueAction;
+import com.commercetools.api.models.type.TypeAddFieldDefinitionAction;
+import com.commercetools.api.models.type.TypeAddLocalizedEnumValueAction;
+import com.commercetools.api.models.type.TypeChangeEnumValueLabelAction;
+import com.commercetools.api.models.type.TypeChangeEnumValueOrderAction;
+import com.commercetools.api.models.type.TypeChangeFieldDefinitionOrderAction;
+import com.commercetools.api.models.type.TypeChangeInputHintAction;
+import com.commercetools.api.models.type.TypeChangeKeyAction;
+import com.commercetools.api.models.type.TypeChangeLabelAction;
+import com.commercetools.api.models.type.TypeChangeLocalizedEnumValueLabelAction;
+import com.commercetools.api.models.type.TypeChangeLocalizedEnumValueOrderAction;
+import com.commercetools.api.models.type.TypeChangeNameAction;
+import com.commercetools.api.models.type.TypeRemoveFieldDefinitionAction;
+import com.commercetools.api.models.type.TypeSetDescriptionAction;
+import com.commercetools.api.models.type.TypeUpdateAction;
+import javax.annotation.Nullable;
 import java.util.*;
-
+import java.util.function.Function;
+import java.time.ZonedDateTime;
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
  * TypeUpdateActionBuilder
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class TypeUpdateActionBuilder {
 
     public com.commercetools.api.models.type.TypeAddEnumValueActionBuilder addEnumValueBuilder() {
-        return com.commercetools.api.models.type.TypeAddEnumValueActionBuilder.of();
+       return com.commercetools.api.models.type.TypeAddEnumValueActionBuilder.of();
     }
-
     public com.commercetools.api.models.type.TypeAddFieldDefinitionActionBuilder addFieldDefinitionBuilder() {
-        return com.commercetools.api.models.type.TypeAddFieldDefinitionActionBuilder.of();
+       return com.commercetools.api.models.type.TypeAddFieldDefinitionActionBuilder.of();
     }
-
     public com.commercetools.api.models.type.TypeAddLocalizedEnumValueActionBuilder addLocalizedEnumValueBuilder() {
-        return com.commercetools.api.models.type.TypeAddLocalizedEnumValueActionBuilder.of();
+       return com.commercetools.api.models.type.TypeAddLocalizedEnumValueActionBuilder.of();
     }
-
     public com.commercetools.api.models.type.TypeChangeEnumValueLabelActionBuilder changeEnumValueLabelBuilder() {
-        return com.commercetools.api.models.type.TypeChangeEnumValueLabelActionBuilder.of();
+       return com.commercetools.api.models.type.TypeChangeEnumValueLabelActionBuilder.of();
     }
-
     public com.commercetools.api.models.type.TypeChangeEnumValueOrderActionBuilder changeEnumValueOrderBuilder() {
-        return com.commercetools.api.models.type.TypeChangeEnumValueOrderActionBuilder.of();
+       return com.commercetools.api.models.type.TypeChangeEnumValueOrderActionBuilder.of();
     }
-
     public com.commercetools.api.models.type.TypeChangeFieldDefinitionOrderActionBuilder changeFieldDefinitionOrderBuilder() {
-        return com.commercetools.api.models.type.TypeChangeFieldDefinitionOrderActionBuilder.of();
+       return com.commercetools.api.models.type.TypeChangeFieldDefinitionOrderActionBuilder.of();
     }
-
     public com.commercetools.api.models.type.TypeChangeInputHintActionBuilder changeInputHintBuilder() {
-        return com.commercetools.api.models.type.TypeChangeInputHintActionBuilder.of();
+       return com.commercetools.api.models.type.TypeChangeInputHintActionBuilder.of();
     }
-
     public com.commercetools.api.models.type.TypeChangeKeyActionBuilder changeKeyBuilder() {
-        return com.commercetools.api.models.type.TypeChangeKeyActionBuilder.of();
+       return com.commercetools.api.models.type.TypeChangeKeyActionBuilder.of();
     }
-
     public com.commercetools.api.models.type.TypeChangeLabelActionBuilder changeLabelBuilder() {
-        return com.commercetools.api.models.type.TypeChangeLabelActionBuilder.of();
+       return com.commercetools.api.models.type.TypeChangeLabelActionBuilder.of();
     }
-
     public com.commercetools.api.models.type.TypeChangeLocalizedEnumValueLabelActionBuilder changeLocalizedEnumValueLabelBuilder() {
-        return com.commercetools.api.models.type.TypeChangeLocalizedEnumValueLabelActionBuilder.of();
+       return com.commercetools.api.models.type.TypeChangeLocalizedEnumValueLabelActionBuilder.of();
     }
-
     public com.commercetools.api.models.type.TypeChangeLocalizedEnumValueOrderActionBuilder changeLocalizedEnumValueOrderBuilder() {
-        return com.commercetools.api.models.type.TypeChangeLocalizedEnumValueOrderActionBuilder.of();
+       return com.commercetools.api.models.type.TypeChangeLocalizedEnumValueOrderActionBuilder.of();
     }
-
     public com.commercetools.api.models.type.TypeChangeNameActionBuilder changeNameBuilder() {
-        return com.commercetools.api.models.type.TypeChangeNameActionBuilder.of();
+       return com.commercetools.api.models.type.TypeChangeNameActionBuilder.of();
     }
-
     public com.commercetools.api.models.type.TypeRemoveFieldDefinitionActionBuilder removeFieldDefinitionBuilder() {
-        return com.commercetools.api.models.type.TypeRemoveFieldDefinitionActionBuilder.of();
+       return com.commercetools.api.models.type.TypeRemoveFieldDefinitionActionBuilder.of();
     }
-
     public com.commercetools.api.models.type.TypeSetDescriptionActionBuilder setDescriptionBuilder() {
-        return com.commercetools.api.models.type.TypeSetDescriptionActionBuilder.of();
+       return com.commercetools.api.models.type.TypeSetDescriptionActionBuilder.of();
     }
 
     /**
      * factory method for an instance of TypeUpdateActionBuilder
-     * @return builder
+     * @return builder 
      */
     public static TypeUpdateActionBuilder of() {
         return new TypeUpdateActionBuilder();

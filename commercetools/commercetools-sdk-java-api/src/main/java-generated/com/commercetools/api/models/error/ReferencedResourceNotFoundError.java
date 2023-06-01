@@ -1,18 +1,21 @@
-
 package com.commercetools.api.models.error;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
-
 import com.commercetools.api.models.common.ReferenceTypeId;
+import com.commercetools.api.models.error.ErrorObject;
+import com.commercetools.api.models.error.ReferencedResourceNotFoundErrorImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Returned when a resource referenced by a Reference or a ResourceIdentifier could not be found.</p>
@@ -26,9 +29,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .typeId(ReferenceTypeId.ASSOCIATE_ROLE)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = ReferencedResourceNotFoundErrorImpl.class)
 public interface ReferencedResourceNotFoundError extends ErrorObject {
 
@@ -44,7 +50,6 @@ public interface ReferencedResourceNotFoundError extends ErrorObject {
     @NotNull
     @JsonProperty("code")
     public String getCode();
-
     /**
      *  <p><code>"The referenced object of type $typeId $predicate was not found. It either doesn't exist, or it can't be accessed from this endpoint (e.g., if the endpoint filters by store or customer account)."</code></p>
      * @return message
@@ -52,7 +57,6 @@ public interface ReferencedResourceNotFoundError extends ErrorObject {
     @NotNull
     @JsonProperty("message")
     public String getMessage();
-
     /**
      *  <p>Type of referenced resource.</p>
      * @return typeId
@@ -60,20 +64,18 @@ public interface ReferencedResourceNotFoundError extends ErrorObject {
     @NotNull
     @JsonProperty("typeId")
     public ReferenceTypeId getTypeId();
-
     /**
      *  <p>Unique identifier of the referenced resource, if known.</p>
      * @return id
      */
-
+    
     @JsonProperty("id")
     public String getId();
-
     /**
      *  <p>User-defined unique identifier of the referenced resource, if known.</p>
      * @return key
      */
-
+    
     @JsonProperty("key")
     public String getKey();
 
@@ -81,37 +83,42 @@ public interface ReferencedResourceNotFoundError extends ErrorObject {
      *  <p><code>"The referenced object of type $typeId $predicate was not found. It either doesn't exist, or it can't be accessed from this endpoint (e.g., if the endpoint filters by store or customer account)."</code></p>
      * @param message value to be set
      */
-
+    
     public void setMessage(final String message);
-
+    
+    
     /**
      *  <p>Type of referenced resource.</p>
      * @param typeId value to be set
      */
-
+    
     public void setTypeId(final ReferenceTypeId typeId);
-
+    
+    
     /**
      *  <p>Unique identifier of the referenced resource, if known.</p>
      * @param id value to be set
      */
-
+    
     public void setId(final String id);
-
+    
+    
     /**
      *  <p>User-defined unique identifier of the referenced resource, if known.</p>
      * @param key value to be set
      */
-
+    
     public void setKey(final String key);
+    
 
     /**
      * factory method
      * @return instance of ReferencedResourceNotFoundError
      */
-    public static ReferencedResourceNotFoundError of() {
+    public static ReferencedResourceNotFoundError of(){
         return new ReferencedResourceNotFoundErrorImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy ReferencedResourceNotFoundError
@@ -154,7 +161,7 @@ public interface ReferencedResourceNotFoundError extends ErrorObject {
     public static ReferencedResourceNotFoundErrorBuilder builder() {
         return ReferencedResourceNotFoundErrorBuilder.of();
     }
-
+    
     /**
      * create builder for ReferencedResourceNotFoundError instance
      * @param template instance with prefilled values for the builder
@@ -163,6 +170,7 @@ public interface ReferencedResourceNotFoundError extends ErrorObject {
     public static ReferencedResourceNotFoundErrorBuilder builder(final ReferencedResourceNotFoundError template) {
         return ReferencedResourceNotFoundErrorBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -173,7 +181,7 @@ public interface ReferencedResourceNotFoundError extends ErrorObject {
     default <T> T withReferencedResourceNotFoundError(Function<ReferencedResourceNotFoundError, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

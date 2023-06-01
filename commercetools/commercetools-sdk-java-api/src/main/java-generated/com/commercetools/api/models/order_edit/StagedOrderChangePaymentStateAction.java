@@ -1,18 +1,21 @@
-
 package com.commercetools.api.models.order_edit;
-
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
 
 import com.commercetools.api.models.order.PaymentState;
 import com.commercetools.api.models.order.StagedOrderUpdateAction;
+import com.commercetools.api.models.order_edit.StagedOrderChangePaymentStateActionImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * StagedOrderChangePaymentStateAction
@@ -24,9 +27,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     StagedOrderChangePaymentStateAction stagedOrderChangePaymentStateAction = StagedOrderChangePaymentStateAction.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = StagedOrderChangePaymentStateActionImpl.class)
 public interface StagedOrderChangePaymentStateAction extends StagedOrderUpdateAction {
 
@@ -39,7 +45,7 @@ public interface StagedOrderChangePaymentStateAction extends StagedOrderUpdateAc
      *
      * @return paymentState
      */
-
+    
     @JsonProperty("paymentState")
     public PaymentState getPaymentState();
 
@@ -47,16 +53,18 @@ public interface StagedOrderChangePaymentStateAction extends StagedOrderUpdateAc
      * set paymentState
      * @param paymentState value to be set
      */
-
+    
     public void setPaymentState(final PaymentState paymentState);
+    
 
     /**
      * factory method
      * @return instance of StagedOrderChangePaymentStateAction
      */
-    public static StagedOrderChangePaymentStateAction of() {
+    public static StagedOrderChangePaymentStateAction of(){
         return new StagedOrderChangePaymentStateActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy StagedOrderChangePaymentStateAction
@@ -75,8 +83,7 @@ public interface StagedOrderChangePaymentStateAction extends StagedOrderUpdateAc
      * @return copy instance
      */
     @Nullable
-    public static StagedOrderChangePaymentStateAction deepCopy(
-            @Nullable final StagedOrderChangePaymentStateAction template) {
+    public static StagedOrderChangePaymentStateAction deepCopy(@Nullable final StagedOrderChangePaymentStateAction template) {
         if (template == null) {
             return null;
         }
@@ -92,16 +99,16 @@ public interface StagedOrderChangePaymentStateAction extends StagedOrderUpdateAc
     public static StagedOrderChangePaymentStateActionBuilder builder() {
         return StagedOrderChangePaymentStateActionBuilder.of();
     }
-
+    
     /**
      * create builder for StagedOrderChangePaymentStateAction instance
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static StagedOrderChangePaymentStateActionBuilder builder(
-            final StagedOrderChangePaymentStateAction template) {
+    public static StagedOrderChangePaymentStateActionBuilder builder(final StagedOrderChangePaymentStateAction template) {
         return StagedOrderChangePaymentStateActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -112,7 +119,7 @@ public interface StagedOrderChangePaymentStateAction extends StagedOrderUpdateAc
     default <T> T withStagedOrderChangePaymentStateAction(Function<StagedOrderChangePaymentStateAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

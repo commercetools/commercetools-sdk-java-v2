@@ -1,11 +1,11 @@
-
 package com.commercetools.api.predicates.query.product;
-
-import java.util.function.Function;
 
 import com.commercetools.api.predicates.query.*;
 
-public class SearchKeywordQueryBuilderDsl {
+import java.util.function.Function;
+
+
+public class SearchKeywordQueryBuilderDsl  {
     public SearchKeywordQueryBuilderDsl() {
     }
 
@@ -14,17 +14,16 @@ public class SearchKeywordQueryBuilderDsl {
     }
 
     public StringComparisonPredicateBuilder<SearchKeywordQueryBuilderDsl> text() {
-        return new StringComparisonPredicateBuilder<>(
-            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("text")),
-            p -> new CombinationQueryPredicate<>(p, SearchKeywordQueryBuilderDsl::of));
+        return new StringComparisonPredicateBuilder<>(BinaryQueryPredicate.of().left(new ConstantQueryPredicate("text")),
+        p -> new CombinationQueryPredicate<>(p, SearchKeywordQueryBuilderDsl::of));
     }
-
     public CombinationQueryPredicate<SearchKeywordQueryBuilderDsl> suggestTokenizer(
-            Function<com.commercetools.api.predicates.query.product.SuggestTokenizerQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.product.SuggestTokenizerQueryBuilderDsl>> fn) {
+        Function<com.commercetools.api.predicates.query.product.SuggestTokenizerQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.product.SuggestTokenizerQueryBuilderDsl>> fn) {
         return new CombinationQueryPredicate<>(ContainerQueryPredicate.of()
-                .parent(ConstantQueryPredicate.of().constant("suggestTokenizer"))
-                .inner(fn.apply(com.commercetools.api.predicates.query.product.SuggestTokenizerQueryBuilderDsl.of())),
+            .parent(ConstantQueryPredicate.of().constant("suggestTokenizer"))
+            .inner(fn.apply(com.commercetools.api.predicates.query.product.SuggestTokenizerQueryBuilderDsl.of())),
             SearchKeywordQueryBuilderDsl::of);
     }
-
+    
+    
 }

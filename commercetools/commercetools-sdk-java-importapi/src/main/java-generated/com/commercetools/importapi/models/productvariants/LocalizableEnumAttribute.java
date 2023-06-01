@@ -1,17 +1,20 @@
-
 package com.commercetools.importapi.models.productvariants;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
+import com.commercetools.importapi.models.productvariants.Attribute;
+import com.commercetools.importapi.models.productvariants.LocalizableEnumAttributeImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>This type represents an attribute whose value is a localized enum. The attribute value refers to the key of the enum value.</p>
@@ -24,9 +27,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .value("{value}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = LocalizableEnumAttributeImpl.class)
 public interface LocalizableEnumAttribute extends Attribute {
 
@@ -47,16 +53,18 @@ public interface LocalizableEnumAttribute extends Attribute {
      * set value
      * @param value value to be set
      */
-
+    
     public void setValue(final String value);
+    
 
     /**
      * factory method
      * @return instance of LocalizableEnumAttribute
      */
-    public static LocalizableEnumAttribute of() {
+    public static LocalizableEnumAttribute of(){
         return new LocalizableEnumAttributeImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy LocalizableEnumAttribute
@@ -93,7 +101,7 @@ public interface LocalizableEnumAttribute extends Attribute {
     public static LocalizableEnumAttributeBuilder builder() {
         return LocalizableEnumAttributeBuilder.of();
     }
-
+    
     /**
      * create builder for LocalizableEnumAttribute instance
      * @param template instance with prefilled values for the builder
@@ -102,6 +110,7 @@ public interface LocalizableEnumAttribute extends Attribute {
     public static LocalizableEnumAttributeBuilder builder(final LocalizableEnumAttribute template) {
         return LocalizableEnumAttributeBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -112,7 +121,7 @@ public interface LocalizableEnumAttribute extends Attribute {
     default <T> T withLocalizableEnumAttribute(Function<LocalizableEnumAttribute, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

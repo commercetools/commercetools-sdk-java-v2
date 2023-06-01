@@ -1,11 +1,13 @@
-
 package com.commercetools.api.models.order_edit;
 
+import com.commercetools.api.models.order.StagedOrderUpdateAction;
+import com.commercetools.api.models.type.FieldContainer;
+import com.commercetools.api.models.type.TypeResourceIdentifier;
+import com.commercetools.api.models.order_edit.StagedOrderSetParcelCustomTypeAction;
+import javax.annotation.Nullable;
 import java.util.*;
 import java.util.function.Function;
-
-import javax.annotation.Nullable;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -19,128 +21,139 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .parcelId("{parcelId}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class StagedOrderSetParcelCustomTypeActionBuilder implements Builder<StagedOrderSetParcelCustomTypeAction> {
 
+    
+    
     private String parcelId;
-
+    
+    
     @Nullable
     private com.commercetools.api.models.type.TypeResourceIdentifier type;
-
+    
+    
     @Nullable
     private com.commercetools.api.models.type.FieldContainer fields;
 
+    
     /**
      * set the value to the parcelId
      * @param parcelId value to be set
      * @return Builder
      */
-
-    public StagedOrderSetParcelCustomTypeActionBuilder parcelId(final String parcelId) {
+    
+    public StagedOrderSetParcelCustomTypeActionBuilder parcelId( final String parcelId) {
         this.parcelId = parcelId;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Defines the Type that extends the Parcel with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Parcel.</p>
      * @param builder function to build the type value
      * @return Builder
      */
-
-    public StagedOrderSetParcelCustomTypeActionBuilder type(
-            Function<com.commercetools.api.models.type.TypeResourceIdentifierBuilder, com.commercetools.api.models.type.TypeResourceIdentifierBuilder> builder) {
+    
+    public StagedOrderSetParcelCustomTypeActionBuilder type(Function<com.commercetools.api.models.type.TypeResourceIdentifierBuilder, com.commercetools.api.models.type.TypeResourceIdentifierBuilder> builder) {
         this.type = builder.apply(com.commercetools.api.models.type.TypeResourceIdentifierBuilder.of()).build();
         return this;
     }
-
+    
     /**
      *  <p>Defines the Type that extends the Parcel with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Parcel.</p>
      * @param builder function to build the type value
      * @return Builder
      */
-
-    public StagedOrderSetParcelCustomTypeActionBuilder withType(
-            Function<com.commercetools.api.models.type.TypeResourceIdentifierBuilder, com.commercetools.api.models.type.TypeResourceIdentifier> builder) {
+    
+    public StagedOrderSetParcelCustomTypeActionBuilder withType(Function<com.commercetools.api.models.type.TypeResourceIdentifierBuilder, com.commercetools.api.models.type.TypeResourceIdentifier> builder) {
         this.type = builder.apply(com.commercetools.api.models.type.TypeResourceIdentifierBuilder.of());
         return this;
     }
-
+                    
     /**
      *  <p>Defines the Type that extends the Parcel with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Parcel.</p>
      * @param type value to be set
      * @return Builder
      */
-
-    public StagedOrderSetParcelCustomTypeActionBuilder type(
-            @Nullable final com.commercetools.api.models.type.TypeResourceIdentifier type) {
+    
+    public StagedOrderSetParcelCustomTypeActionBuilder type(@Nullable final com.commercetools.api.models.type.TypeResourceIdentifier type) {
         this.type = type;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Sets the Custom Fields fields for the Parcel.</p>
      * @param builder function to build the fields value
      * @return Builder
      */
-
-    public StagedOrderSetParcelCustomTypeActionBuilder fields(
-            Function<com.commercetools.api.models.type.FieldContainerBuilder, com.commercetools.api.models.type.FieldContainerBuilder> builder) {
+    
+    public StagedOrderSetParcelCustomTypeActionBuilder fields(Function<com.commercetools.api.models.type.FieldContainerBuilder, com.commercetools.api.models.type.FieldContainerBuilder> builder) {
         this.fields = builder.apply(com.commercetools.api.models.type.FieldContainerBuilder.of()).build();
         return this;
     }
-
+    
     /**
      *  <p>Sets the Custom Fields fields for the Parcel.</p>
      * @param builder function to build the fields value
      * @return Builder
      */
-
-    public StagedOrderSetParcelCustomTypeActionBuilder withFields(
-            Function<com.commercetools.api.models.type.FieldContainerBuilder, com.commercetools.api.models.type.FieldContainer> builder) {
+    
+    public StagedOrderSetParcelCustomTypeActionBuilder withFields(Function<com.commercetools.api.models.type.FieldContainerBuilder, com.commercetools.api.models.type.FieldContainer> builder) {
         this.fields = builder.apply(com.commercetools.api.models.type.FieldContainerBuilder.of());
         return this;
     }
-
+                    
     /**
      *  <p>Sets the Custom Fields fields for the Parcel.</p>
      * @param fields value to be set
      * @return Builder
      */
-
-    public StagedOrderSetParcelCustomTypeActionBuilder fields(
-            @Nullable final com.commercetools.api.models.type.FieldContainer fields) {
+    
+    public StagedOrderSetParcelCustomTypeActionBuilder fields(@Nullable final com.commercetools.api.models.type.FieldContainer fields) {
         this.fields = fields;
         return this;
     }
+    
+    
 
     /**
      * value of parcelId}
      * @return parcelId
      */
-
-    public String getParcelId() {
+    
+    
+    public String getParcelId(){
         return this.parcelId;
     }
-
+    
     /**
      *  <p>Defines the Type that extends the Parcel with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Parcel.</p>
      * @return type
      */
-
+    
     @Nullable
-    public com.commercetools.api.models.type.TypeResourceIdentifier getType() {
+    public com.commercetools.api.models.type.TypeResourceIdentifier getType(){
         return this.type;
     }
-
+    
     /**
      *  <p>Sets the Custom Fields fields for the Parcel.</p>
      * @return fields
      */
-
+    
     @Nullable
-    public com.commercetools.api.models.type.FieldContainer getFields() {
+    public com.commercetools.api.models.type.FieldContainer getFields(){
         return this.fields;
     }
 
@@ -152,7 +165,7 @@ public class StagedOrderSetParcelCustomTypeActionBuilder implements Builder<Stag
         Objects.requireNonNull(parcelId, StagedOrderSetParcelCustomTypeAction.class + ": parcelId is missing");
         return new StagedOrderSetParcelCustomTypeActionImpl(parcelId, type, fields);
     }
-
+    
     /**
      * builds StagedOrderSetParcelCustomTypeAction without checking for non-null required values
      * @return StagedOrderSetParcelCustomTypeAction
@@ -163,7 +176,7 @@ public class StagedOrderSetParcelCustomTypeActionBuilder implements Builder<Stag
 
     /**
      * factory method for an instance of StagedOrderSetParcelCustomTypeActionBuilder
-     * @return builder
+     * @return builder 
      */
     public static StagedOrderSetParcelCustomTypeActionBuilder of() {
         return new StagedOrderSetParcelCustomTypeActionBuilder();

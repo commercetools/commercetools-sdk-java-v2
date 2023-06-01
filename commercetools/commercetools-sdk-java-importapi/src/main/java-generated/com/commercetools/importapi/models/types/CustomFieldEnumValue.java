@@ -1,17 +1,20 @@
-
 package com.commercetools.importapi.models.types;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
 
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
+import com.commercetools.importapi.models.types.CustomFieldEnumValueImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Defines an allowed value of a CustomFieldEnumType field.</p>
@@ -25,11 +28,15 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .label("{label}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = CustomFieldEnumValueImpl.class)
-public interface CustomFieldEnumValue {
+public interface CustomFieldEnumValue  {
+
 
     /**
      *  <p>Key of the value used as a programmatic identifier.</p>
@@ -38,7 +45,6 @@ public interface CustomFieldEnumValue {
     @NotNull
     @JsonProperty("key")
     public String getKey();
-
     /**
      *  <p>Descriptive label of the value.</p>
      * @return label
@@ -51,23 +57,26 @@ public interface CustomFieldEnumValue {
      *  <p>Key of the value used as a programmatic identifier.</p>
      * @param key value to be set
      */
-
+    
     public void setKey(final String key);
-
+    
+    
     /**
      *  <p>Descriptive label of the value.</p>
      * @param label value to be set
      */
-
+    
     public void setLabel(final String label);
+    
 
     /**
      * factory method
      * @return instance of CustomFieldEnumValue
      */
-    public static CustomFieldEnumValue of() {
+    public static CustomFieldEnumValue of(){
         return new CustomFieldEnumValueImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy CustomFieldEnumValue
@@ -104,7 +113,7 @@ public interface CustomFieldEnumValue {
     public static CustomFieldEnumValueBuilder builder() {
         return CustomFieldEnumValueBuilder.of();
     }
-
+    
     /**
      * create builder for CustomFieldEnumValue instance
      * @param template instance with prefilled values for the builder
@@ -113,6 +122,7 @@ public interface CustomFieldEnumValue {
     public static CustomFieldEnumValueBuilder builder(final CustomFieldEnumValue template) {
         return CustomFieldEnumValueBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -123,7 +133,7 @@ public interface CustomFieldEnumValue {
     default <T> T withCustomFieldEnumValue(Function<CustomFieldEnumValue, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

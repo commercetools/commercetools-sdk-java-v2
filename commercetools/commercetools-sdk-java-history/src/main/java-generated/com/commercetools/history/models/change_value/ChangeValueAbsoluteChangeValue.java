@@ -1,20 +1,21 @@
-
 package com.commercetools.history.models.change_value;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-import java.util.stream.Collectors;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
+import com.commercetools.history.models.change_value.ChangeValueChangeValue;
 import com.commercetools.history.models.common.Money;
+import com.commercetools.history.models.change_value.ChangeValueAbsoluteChangeValueImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Shape of the value for cart discounts absolute value.</p>
@@ -27,9 +28,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .plusMoney(moneyBuilder -> moneyBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = ChangeValueAbsoluteChangeValueImpl.class)
 public interface ChangeValueAbsoluteChangeValue extends ChangeValueChangeValue {
 
@@ -45,7 +49,6 @@ public interface ChangeValueAbsoluteChangeValue extends ChangeValueChangeValue {
     @NotNull
     @JsonProperty("type")
     public String getType();
-
     /**
      *
      * @return money
@@ -59,24 +62,24 @@ public interface ChangeValueAbsoluteChangeValue extends ChangeValueChangeValue {
      * set money
      * @param money values to be set
      */
-
+    
     @JsonIgnore
-    public void setMoney(final Money... money);
-
+    public void setMoney(final Money ...money);
     /**
      * set money
      * @param money values to be set
      */
-
+    
     public void setMoney(final List<Money> money);
 
     /**
      * factory method
      * @return instance of ChangeValueAbsoluteChangeValue
      */
-    public static ChangeValueAbsoluteChangeValue of() {
+    public static ChangeValueAbsoluteChangeValue of(){
         return new ChangeValueAbsoluteChangeValueImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy ChangeValueAbsoluteChangeValue
@@ -101,9 +104,7 @@ public interface ChangeValueAbsoluteChangeValue extends ChangeValueChangeValue {
         }
         ChangeValueAbsoluteChangeValueImpl instance = new ChangeValueAbsoluteChangeValueImpl();
         instance.setMoney(Optional.ofNullable(template.getMoney())
-                .map(t -> t.stream()
-                        .map(com.commercetools.history.models.common.Money::deepCopy)
-                        .collect(Collectors.toList()))
+                .map(t -> t.stream().map(com.commercetools.history.models.common.Money::deepCopy).collect(Collectors.toList()))
                 .orElse(null));
         return instance;
     }
@@ -115,7 +116,7 @@ public interface ChangeValueAbsoluteChangeValue extends ChangeValueChangeValue {
     public static ChangeValueAbsoluteChangeValueBuilder builder() {
         return ChangeValueAbsoluteChangeValueBuilder.of();
     }
-
+    
     /**
      * create builder for ChangeValueAbsoluteChangeValue instance
      * @param template instance with prefilled values for the builder
@@ -124,6 +125,7 @@ public interface ChangeValueAbsoluteChangeValue extends ChangeValueChangeValue {
     public static ChangeValueAbsoluteChangeValueBuilder builder(final ChangeValueAbsoluteChangeValue template) {
         return ChangeValueAbsoluteChangeValueBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -134,7 +136,7 @@ public interface ChangeValueAbsoluteChangeValue extends ChangeValueChangeValue {
     default <T> T withChangeValueAbsoluteChangeValue(Function<ChangeValueAbsoluteChangeValue, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

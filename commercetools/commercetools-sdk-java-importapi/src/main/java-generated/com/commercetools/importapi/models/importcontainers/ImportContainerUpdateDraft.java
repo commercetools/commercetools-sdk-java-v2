@@ -1,18 +1,20 @@
-
 package com.commercetools.importapi.models.importcontainers;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
-
 import com.commercetools.importapi.models.common.ImportResourceType;
+import com.commercetools.importapi.models.importcontainers.ImportContainerUpdateDraftImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>The representation sent to the server when updating an import container.</p>
@@ -25,11 +27,15 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .version(0.3)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = ImportContainerUpdateDraftImpl.class)
 public interface ImportContainerUpdateDraft extends io.vrap.rmf.base.client.Draft<ImportContainerUpdateDraft> {
+
 
     /**
      *  <p>Current version of the ImportContainer.</p>
@@ -38,12 +44,11 @@ public interface ImportContainerUpdateDraft extends io.vrap.rmf.base.client.Draf
     @NotNull
     @JsonProperty("version")
     public Long getVersion();
-
     /**
      *  <p>The resource type to be imported. If not given, the ImportContainer is able to import all of the supported ImportResourceTypes.</p>
      * @return resourceType
      */
-
+    
     @JsonProperty("resourceType")
     public ImportResourceType getResourceType();
 
@@ -51,23 +56,26 @@ public interface ImportContainerUpdateDraft extends io.vrap.rmf.base.client.Draf
      *  <p>Current version of the ImportContainer.</p>
      * @param version value to be set
      */
-
+    
     public void setVersion(final Long version);
-
+    
+    
     /**
      *  <p>The resource type to be imported. If not given, the ImportContainer is able to import all of the supported ImportResourceTypes.</p>
      * @param resourceType value to be set
      */
-
+    
     public void setResourceType(final ImportResourceType resourceType);
+    
 
     /**
      * factory method
      * @return instance of ImportContainerUpdateDraft
      */
-    public static ImportContainerUpdateDraft of() {
+    public static ImportContainerUpdateDraft of(){
         return new ImportContainerUpdateDraftImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy ImportContainerUpdateDraft
@@ -104,7 +112,7 @@ public interface ImportContainerUpdateDraft extends io.vrap.rmf.base.client.Draf
     public static ImportContainerUpdateDraftBuilder builder() {
         return ImportContainerUpdateDraftBuilder.of();
     }
-
+    
     /**
      * create builder for ImportContainerUpdateDraft instance
      * @param template instance with prefilled values for the builder
@@ -113,6 +121,7 @@ public interface ImportContainerUpdateDraft extends io.vrap.rmf.base.client.Draf
     public static ImportContainerUpdateDraftBuilder builder(final ImportContainerUpdateDraft template) {
         return ImportContainerUpdateDraftBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -123,7 +132,7 @@ public interface ImportContainerUpdateDraft extends io.vrap.rmf.base.client.Draf
     default <T> T withImportContainerUpdateDraft(Function<ImportContainerUpdateDraft, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

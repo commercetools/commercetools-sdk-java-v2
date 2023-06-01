@@ -1,19 +1,21 @@
-
 package com.commercetools.api.models.error;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
 import com.commercetools.api.models.common.Price;
+import com.commercetools.api.models.error.GraphQLErrorObject;
+import com.commercetools.api.models.error.GraphQLDuplicatePriceKeyErrorImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Returned when a Price key conflicts with an existing key.</p>
@@ -27,9 +29,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .conflictingPrice(conflictingPriceBuilder -> conflictingPriceBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = GraphQLDuplicatePriceKeyErrorImpl.class)
 public interface GraphQLDuplicatePriceKeyError extends GraphQLErrorObject {
 
@@ -45,7 +50,6 @@ public interface GraphQLDuplicatePriceKeyError extends GraphQLErrorObject {
     @NotNull
     @JsonProperty("code")
     public String getCode();
-
     /**
      *  <p>Conflicting Embedded Price.</p>
      * @return conflictingPrice
@@ -59,16 +63,18 @@ public interface GraphQLDuplicatePriceKeyError extends GraphQLErrorObject {
      *  <p>Conflicting Embedded Price.</p>
      * @param conflictingPrice value to be set
      */
-
+    
     public void setConflictingPrice(final Price conflictingPrice);
+    
 
     /**
      * factory method
      * @return instance of GraphQLDuplicatePriceKeyError
      */
-    public static GraphQLDuplicatePriceKeyError of() {
+    public static GraphQLDuplicatePriceKeyError of(){
         return new GraphQLDuplicatePriceKeyErrorImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy GraphQLDuplicatePriceKeyError
@@ -94,8 +100,7 @@ public interface GraphQLDuplicatePriceKeyError extends GraphQLErrorObject {
         }
         GraphQLDuplicatePriceKeyErrorImpl instance = new GraphQLDuplicatePriceKeyErrorImpl();
         Optional.ofNullable(template.values()).ifPresent(t -> t.forEach(instance::setValue));
-        instance.setConflictingPrice(
-            com.commercetools.api.models.common.Price.deepCopy(template.getConflictingPrice()));
+        instance.setConflictingPrice(com.commercetools.api.models.common.Price.deepCopy(template.getConflictingPrice()));
         return instance;
     }
 
@@ -106,7 +111,7 @@ public interface GraphQLDuplicatePriceKeyError extends GraphQLErrorObject {
     public static GraphQLDuplicatePriceKeyErrorBuilder builder() {
         return GraphQLDuplicatePriceKeyErrorBuilder.of();
     }
-
+    
     /**
      * create builder for GraphQLDuplicatePriceKeyError instance
      * @param template instance with prefilled values for the builder
@@ -115,6 +120,7 @@ public interface GraphQLDuplicatePriceKeyError extends GraphQLErrorObject {
     public static GraphQLDuplicatePriceKeyErrorBuilder builder(final GraphQLDuplicatePriceKeyError template) {
         return GraphQLDuplicatePriceKeyErrorBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -125,7 +131,7 @@ public interface GraphQLDuplicatePriceKeyError extends GraphQLErrorObject {
     default <T> T withGraphQLDuplicatePriceKeyError(Function<GraphQLDuplicatePriceKeyError, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

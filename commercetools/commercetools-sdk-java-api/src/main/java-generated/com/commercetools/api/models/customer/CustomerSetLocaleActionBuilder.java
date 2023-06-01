@@ -1,10 +1,11 @@
-
 package com.commercetools.api.models.customer;
 
-import java.util.*;
-
+import com.commercetools.api.models.customer.CustomerUpdateAction;
+import com.commercetools.api.models.customer.CustomerSetLocaleAction;
 import javax.annotation.Nullable;
-
+import java.util.*;
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -17,32 +18,39 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     CustomerSetLocaleAction customerSetLocaleAction = CustomerSetLocaleAction.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class CustomerSetLocaleActionBuilder implements Builder<CustomerSetLocaleAction> {
 
+    
     @Nullable
     private String locale;
 
+    
     /**
      *  <p>Value to set. Must be one of the languages supported by the Project.</p>
      * @param locale value to be set
      * @return Builder
      */
-
+    
     public CustomerSetLocaleActionBuilder locale(@Nullable final String locale) {
         this.locale = locale;
         return this;
     }
+    
+    
 
     /**
      *  <p>Value to set. Must be one of the languages supported by the Project.</p>
      * @return locale
      */
-
+    
     @Nullable
-    public String getLocale() {
+    public String getLocale(){
         return this.locale;
     }
 
@@ -53,7 +61,7 @@ public class CustomerSetLocaleActionBuilder implements Builder<CustomerSetLocale
     public CustomerSetLocaleAction build() {
         return new CustomerSetLocaleActionImpl(locale);
     }
-
+    
     /**
      * builds CustomerSetLocaleAction without checking for non-null required values
      * @return CustomerSetLocaleAction
@@ -64,7 +72,7 @@ public class CustomerSetLocaleActionBuilder implements Builder<CustomerSetLocale
 
     /**
      * factory method for an instance of CustomerSetLocaleActionBuilder
-     * @return builder
+     * @return builder 
      */
     public static CustomerSetLocaleActionBuilder of() {
         return new CustomerSetLocaleActionBuilder();

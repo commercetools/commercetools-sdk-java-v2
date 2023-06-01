@@ -1,17 +1,20 @@
-
 package com.commercetools.api.models.me;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
 
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
+import com.commercetools.api.models.me.MyOrderFromCartDraftImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>When creating B2B Orders, the Customer must have the <code>MyOrderFromCartDraft</code> Permission.</p>
@@ -25,11 +28,15 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .version(0.3)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = MyOrderFromCartDraftImpl.class)
 public interface MyOrderFromCartDraft extends io.vrap.rmf.base.client.Draft<MyOrderFromCartDraft> {
+
 
     /**
      *  <p>Unique identifier of the Cart that initiates an Order creation.</p>
@@ -38,7 +45,6 @@ public interface MyOrderFromCartDraft extends io.vrap.rmf.base.client.Draft<MyOr
     @NotNull
     @JsonProperty("id")
     public String getId();
-
     /**
      *
      * @return version
@@ -51,23 +57,26 @@ public interface MyOrderFromCartDraft extends io.vrap.rmf.base.client.Draft<MyOr
      *  <p>Unique identifier of the Cart that initiates an Order creation.</p>
      * @param id value to be set
      */
-
+    
     public void setId(final String id);
-
+    
+    
     /**
      * set version
      * @param version value to be set
      */
-
+    
     public void setVersion(final Long version);
+    
 
     /**
      * factory method
      * @return instance of MyOrderFromCartDraft
      */
-    public static MyOrderFromCartDraft of() {
+    public static MyOrderFromCartDraft of(){
         return new MyOrderFromCartDraftImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy MyOrderFromCartDraft
@@ -104,7 +113,7 @@ public interface MyOrderFromCartDraft extends io.vrap.rmf.base.client.Draft<MyOr
     public static MyOrderFromCartDraftBuilder builder() {
         return MyOrderFromCartDraftBuilder.of();
     }
-
+    
     /**
      * create builder for MyOrderFromCartDraft instance
      * @param template instance with prefilled values for the builder
@@ -113,6 +122,7 @@ public interface MyOrderFromCartDraft extends io.vrap.rmf.base.client.Draft<MyOr
     public static MyOrderFromCartDraftBuilder builder(final MyOrderFromCartDraft template) {
         return MyOrderFromCartDraftBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -123,7 +133,7 @@ public interface MyOrderFromCartDraft extends io.vrap.rmf.base.client.Draft<MyOr
     default <T> T withMyOrderFromCartDraft(Function<MyOrderFromCartDraft, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

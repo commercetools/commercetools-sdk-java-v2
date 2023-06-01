@@ -1,17 +1,20 @@
-
 package com.commercetools.api.models.error;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
+import com.commercetools.api.models.error.GraphQLErrorObject;
+import com.commercetools.api.models.error.GraphQLShippingMethodDoesNotMatchCartErrorImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Returned when the Cart contains a ShippingMethod that is not allowed for the Cart. In this case, the ShippingMethodState value is <code>DoesNotMatchCart</code>.</p>
@@ -24,9 +27,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     GraphQLShippingMethodDoesNotMatchCartError graphQLShippingMethodDoesNotMatchCartError = GraphQLShippingMethodDoesNotMatchCartError.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = GraphQLShippingMethodDoesNotMatchCartErrorImpl.class)
 public interface GraphQLShippingMethodDoesNotMatchCartError extends GraphQLErrorObject {
 
@@ -43,21 +49,22 @@ public interface GraphQLShippingMethodDoesNotMatchCartError extends GraphQLError
     @JsonProperty("code")
     public String getCode();
 
+
     /**
      * factory method
      * @return instance of GraphQLShippingMethodDoesNotMatchCartError
      */
-    public static GraphQLShippingMethodDoesNotMatchCartError of() {
+    public static GraphQLShippingMethodDoesNotMatchCartError of(){
         return new GraphQLShippingMethodDoesNotMatchCartErrorImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy GraphQLShippingMethodDoesNotMatchCartError
      * @param template instance to be copied
      * @return copy instance
      */
-    public static GraphQLShippingMethodDoesNotMatchCartError of(
-            final GraphQLShippingMethodDoesNotMatchCartError template) {
+    public static GraphQLShippingMethodDoesNotMatchCartError of(final GraphQLShippingMethodDoesNotMatchCartError template) {
         GraphQLShippingMethodDoesNotMatchCartErrorImpl instance = new GraphQLShippingMethodDoesNotMatchCartErrorImpl();
         Optional.ofNullable(template.values()).ifPresent(t -> t.forEach(instance::setValue));
         return instance;
@@ -69,8 +76,7 @@ public interface GraphQLShippingMethodDoesNotMatchCartError extends GraphQLError
      * @return copy instance
      */
     @Nullable
-    public static GraphQLShippingMethodDoesNotMatchCartError deepCopy(
-            @Nullable final GraphQLShippingMethodDoesNotMatchCartError template) {
+    public static GraphQLShippingMethodDoesNotMatchCartError deepCopy(@Nullable final GraphQLShippingMethodDoesNotMatchCartError template) {
         if (template == null) {
             return null;
         }
@@ -86,16 +92,16 @@ public interface GraphQLShippingMethodDoesNotMatchCartError extends GraphQLError
     public static GraphQLShippingMethodDoesNotMatchCartErrorBuilder builder() {
         return GraphQLShippingMethodDoesNotMatchCartErrorBuilder.of();
     }
-
+    
     /**
      * create builder for GraphQLShippingMethodDoesNotMatchCartError instance
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static GraphQLShippingMethodDoesNotMatchCartErrorBuilder builder(
-            final GraphQLShippingMethodDoesNotMatchCartError template) {
+    public static GraphQLShippingMethodDoesNotMatchCartErrorBuilder builder(final GraphQLShippingMethodDoesNotMatchCartError template) {
         return GraphQLShippingMethodDoesNotMatchCartErrorBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -103,11 +109,10 @@ public interface GraphQLShippingMethodDoesNotMatchCartError extends GraphQLError
      * @param helper function to map the object
      * @return mapped value
      */
-    default <T> T withGraphQLShippingMethodDoesNotMatchCartError(
-            Function<GraphQLShippingMethodDoesNotMatchCartError, T> helper) {
+    default <T> T withGraphQLShippingMethodDoesNotMatchCartError(Function<GraphQLShippingMethodDoesNotMatchCartError, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

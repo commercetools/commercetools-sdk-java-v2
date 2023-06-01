@@ -1,17 +1,21 @@
-
 package com.commercetools.importapi.models.common;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
+import com.commercetools.importapi.models.common.KeyReference;
+import com.commercetools.importapi.models.common.ReferenceType;
+import com.commercetools.importapi.models.common.CustomObjectKeyReferenceImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>References a key value document by key.</p>
@@ -25,9 +29,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .container("{container}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = CustomObjectKeyReferenceImpl.class)
 public interface CustomObjectKeyReference extends KeyReference {
 
@@ -48,16 +55,18 @@ public interface CustomObjectKeyReference extends KeyReference {
      * set container
      * @param container value to be set
      */
-
+    
     public void setContainer(final String container);
+    
 
     /**
      * factory method
      * @return instance of CustomObjectKeyReference
      */
-    public static CustomObjectKeyReference of() {
+    public static CustomObjectKeyReference of(){
         return new CustomObjectKeyReferenceImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy CustomObjectKeyReference
@@ -94,7 +103,7 @@ public interface CustomObjectKeyReference extends KeyReference {
     public static CustomObjectKeyReferenceBuilder builder() {
         return CustomObjectKeyReferenceBuilder.of();
     }
-
+    
     /**
      * create builder for CustomObjectKeyReference instance
      * @param template instance with prefilled values for the builder
@@ -103,6 +112,7 @@ public interface CustomObjectKeyReference extends KeyReference {
     public static CustomObjectKeyReferenceBuilder builder(final CustomObjectKeyReference template) {
         return CustomObjectKeyReferenceBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -113,7 +123,7 @@ public interface CustomObjectKeyReference extends KeyReference {
     default <T> T withCustomObjectKeyReference(Function<CustomObjectKeyReference, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

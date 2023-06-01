@@ -1,11 +1,13 @@
-
 package com.commercetools.api.models.type;
 
+import com.commercetools.api.models.common.LocalizedString;
+import com.commercetools.api.models.type.FieldDefinition;
+import com.commercetools.api.models.type.ResourceTypeId;
+import com.commercetools.api.models.type.TypeDraft;
+import javax.annotation.Nullable;
 import java.util.*;
 import java.util.function.Function;
-
-import javax.annotation.Nullable;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -21,276 +23,291 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .plusResourceTypeIds(resourceTypeIdsBuilder -> resourceTypeIdsBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class TypeDraftBuilder implements Builder<TypeDraft> {
 
+    
+    
     private String key;
-
+    
+    
+    
     private com.commercetools.api.models.common.LocalizedString name;
-
+    
+    
     @Nullable
     private com.commercetools.api.models.common.LocalizedString description;
-
+    
+    
+    
     private java.util.List<com.commercetools.api.models.type.ResourceTypeId> resourceTypeIds;
-
+    
+    
     @Nullable
     private java.util.List<com.commercetools.api.models.type.FieldDefinition> fieldDefinitions;
 
+    
     /**
      *  <p>User-defined unique identifier for the Type.</p>
      * @param key value to be set
      * @return Builder
      */
-
-    public TypeDraftBuilder key(final String key) {
+    
+    public TypeDraftBuilder key( final String key) {
         this.key = key;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Name of the Type.</p>
      * @param builder function to build the name value
      * @return Builder
      */
-
-    public TypeDraftBuilder name(
-            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
+    
+    public TypeDraftBuilder name(Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
         this.name = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of()).build();
         return this;
     }
-
+    
     /**
      *  <p>Name of the Type.</p>
      * @param builder function to build the name value
      * @return Builder
      */
-
-    public TypeDraftBuilder withName(
-            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedString> builder) {
+    
+    public TypeDraftBuilder withName(Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedString> builder) {
         this.name = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of());
         return this;
     }
-
+                    
     /**
      *  <p>Name of the Type.</p>
      * @param name value to be set
      * @return Builder
      */
-
-    public TypeDraftBuilder name(final com.commercetools.api.models.common.LocalizedString name) {
+    
+    public TypeDraftBuilder name( final com.commercetools.api.models.common.LocalizedString name) {
         this.name = name;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Description of the Type.</p>
      * @param builder function to build the description value
      * @return Builder
      */
-
-    public TypeDraftBuilder description(
-            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
+    
+    public TypeDraftBuilder description(Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
         this.description = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of()).build();
         return this;
     }
-
+    
     /**
      *  <p>Description of the Type.</p>
      * @param builder function to build the description value
      * @return Builder
      */
-
-    public TypeDraftBuilder withDescription(
-            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedString> builder) {
+    
+    public TypeDraftBuilder withDescription(Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedString> builder) {
         this.description = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of());
         return this;
     }
-
+                    
     /**
      *  <p>Description of the Type.</p>
      * @param description value to be set
      * @return Builder
      */
-
-    public TypeDraftBuilder description(
-            @Nullable final com.commercetools.api.models.common.LocalizedString description) {
+    
+    public TypeDraftBuilder description(@Nullable final com.commercetools.api.models.common.LocalizedString description) {
         this.description = description;
         return this;
     }
-
+    
+    
+    
     /**
      *  <p>Resources and/or data types for which the Type is defined.</p>
      * @param resourceTypeIds value to be set
      * @return Builder
      */
-
-    public TypeDraftBuilder resourceTypeIds(final com.commercetools.api.models.type.ResourceTypeId... resourceTypeIds) {
+    
+    public TypeDraftBuilder resourceTypeIds( final com.commercetools.api.models.type.ResourceTypeId ...resourceTypeIds) {
         this.resourceTypeIds = new ArrayList<>(Arrays.asList(resourceTypeIds));
         return this;
     }
-
+    
     /**
      *  <p>Resources and/or data types for which the Type is defined.</p>
      * @param resourceTypeIds value to be set
      * @return Builder
      */
-
-    public TypeDraftBuilder resourceTypeIds(
-            final java.util.List<com.commercetools.api.models.type.ResourceTypeId> resourceTypeIds) {
+    
+    public TypeDraftBuilder resourceTypeIds( final java.util.List<com.commercetools.api.models.type.ResourceTypeId> resourceTypeIds) {
         this.resourceTypeIds = resourceTypeIds;
         return this;
     }
-
+    
     /**
      *  <p>Resources and/or data types for which the Type is defined.</p>
      * @param resourceTypeIds value to be set
      * @return Builder
      */
-
-    public TypeDraftBuilder plusResourceTypeIds(
-            final com.commercetools.api.models.type.ResourceTypeId... resourceTypeIds) {
+    
+    public TypeDraftBuilder plusResourceTypeIds( final com.commercetools.api.models.type.ResourceTypeId ...resourceTypeIds) {
         if (this.resourceTypeIds == null) {
             this.resourceTypeIds = new ArrayList<>();
         }
         this.resourceTypeIds.addAll(Arrays.asList(resourceTypeIds));
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Defines Custom Fields.</p>
      * @param fieldDefinitions value to be set
      * @return Builder
      */
-
-    public TypeDraftBuilder fieldDefinitions(
-            @Nullable final com.commercetools.api.models.type.FieldDefinition... fieldDefinitions) {
+    
+    public TypeDraftBuilder fieldDefinitions(@Nullable final com.commercetools.api.models.type.FieldDefinition ...fieldDefinitions) {
         this.fieldDefinitions = new ArrayList<>(Arrays.asList(fieldDefinitions));
         return this;
     }
-
+    
     /**
      *  <p>Defines Custom Fields.</p>
      * @param fieldDefinitions value to be set
      * @return Builder
      */
-
-    public TypeDraftBuilder fieldDefinitions(
-            @Nullable final java.util.List<com.commercetools.api.models.type.FieldDefinition> fieldDefinitions) {
+    
+    public TypeDraftBuilder fieldDefinitions(@Nullable final java.util.List<com.commercetools.api.models.type.FieldDefinition> fieldDefinitions) {
         this.fieldDefinitions = fieldDefinitions;
         return this;
     }
-
+    
     /**
      *  <p>Defines Custom Fields.</p>
      * @param fieldDefinitions value to be set
      * @return Builder
      */
-
-    public TypeDraftBuilder plusFieldDefinitions(
-            @Nullable final com.commercetools.api.models.type.FieldDefinition... fieldDefinitions) {
+    
+    public TypeDraftBuilder plusFieldDefinitions(@Nullable final com.commercetools.api.models.type.FieldDefinition ...fieldDefinitions) {
         if (this.fieldDefinitions == null) {
             this.fieldDefinitions = new ArrayList<>();
         }
         this.fieldDefinitions.addAll(Arrays.asList(fieldDefinitions));
         return this;
     }
-
+    
+    
+    
     /**
      *  <p>Defines Custom Fields.</p>
      * @param builder function to build the fieldDefinitions value
      * @return Builder
      */
-
-    public TypeDraftBuilder plusFieldDefinitions(
-            Function<com.commercetools.api.models.type.FieldDefinitionBuilder, com.commercetools.api.models.type.FieldDefinitionBuilder> builder) {
+    
+    public TypeDraftBuilder plusFieldDefinitions(Function<com.commercetools.api.models.type.FieldDefinitionBuilder, com.commercetools.api.models.type.FieldDefinitionBuilder> builder) {
         if (this.fieldDefinitions == null) {
             this.fieldDefinitions = new ArrayList<>();
         }
         this.fieldDefinitions.add(builder.apply(com.commercetools.api.models.type.FieldDefinitionBuilder.of()).build());
         return this;
     }
-
+    
     /**
      *  <p>Defines Custom Fields.</p>
      * @param builder function to build the fieldDefinitions value
      * @return Builder
      */
-
-    public TypeDraftBuilder withFieldDefinitions(
-            Function<com.commercetools.api.models.type.FieldDefinitionBuilder, com.commercetools.api.models.type.FieldDefinitionBuilder> builder) {
+    
+    public TypeDraftBuilder withFieldDefinitions(Function<com.commercetools.api.models.type.FieldDefinitionBuilder, com.commercetools.api.models.type.FieldDefinitionBuilder> builder) {
         this.fieldDefinitions = new ArrayList<>();
         this.fieldDefinitions.add(builder.apply(com.commercetools.api.models.type.FieldDefinitionBuilder.of()).build());
         return this;
     }
-
+    
     /**
      *  <p>Defines Custom Fields.</p>
      * @param builder function to build the fieldDefinitions value
      * @return Builder
      */
-
-    public TypeDraftBuilder addFieldDefinitions(
-            Function<com.commercetools.api.models.type.FieldDefinitionBuilder, com.commercetools.api.models.type.FieldDefinition> builder) {
+    
+    public TypeDraftBuilder addFieldDefinitions(Function<com.commercetools.api.models.type.FieldDefinitionBuilder, com.commercetools.api.models.type.FieldDefinition> builder) {
         return plusFieldDefinitions(builder.apply(com.commercetools.api.models.type.FieldDefinitionBuilder.of()));
     }
-
+    
     /**
      *  <p>Defines Custom Fields.</p>
      * @param builder function to build the fieldDefinitions value
      * @return Builder
      */
-
-    public TypeDraftBuilder setFieldDefinitions(
-            Function<com.commercetools.api.models.type.FieldDefinitionBuilder, com.commercetools.api.models.type.FieldDefinition> builder) {
+    
+    public TypeDraftBuilder setFieldDefinitions(Function<com.commercetools.api.models.type.FieldDefinitionBuilder, com.commercetools.api.models.type.FieldDefinition> builder) {
         return fieldDefinitions(builder.apply(com.commercetools.api.models.type.FieldDefinitionBuilder.of()));
     }
+                    
 
     /**
      *  <p>User-defined unique identifier for the Type.</p>
      * @return key
      */
-
-    public String getKey() {
+    
+    
+    public String getKey(){
         return this.key;
     }
-
+    
     /**
      *  <p>Name of the Type.</p>
      * @return name
      */
-
-    public com.commercetools.api.models.common.LocalizedString getName() {
+    
+    
+    public com.commercetools.api.models.common.LocalizedString getName(){
         return this.name;
     }
-
+    
     /**
      *  <p>Description of the Type.</p>
      * @return description
      */
-
+    
     @Nullable
-    public com.commercetools.api.models.common.LocalizedString getDescription() {
+    public com.commercetools.api.models.common.LocalizedString getDescription(){
         return this.description;
     }
-
+    
     /**
      *  <p>Resources and/or data types for which the Type is defined.</p>
      * @return resourceTypeIds
      */
-
-    public java.util.List<com.commercetools.api.models.type.ResourceTypeId> getResourceTypeIds() {
+    
+    
+    public java.util.List<com.commercetools.api.models.type.ResourceTypeId> getResourceTypeIds(){
         return this.resourceTypeIds;
     }
-
+    
     /**
      *  <p>Defines Custom Fields.</p>
      * @return fieldDefinitions
      */
-
+    
     @Nullable
-    public java.util.List<com.commercetools.api.models.type.FieldDefinition> getFieldDefinitions() {
+    public java.util.List<com.commercetools.api.models.type.FieldDefinition> getFieldDefinitions(){
         return this.fieldDefinitions;
     }
 
@@ -304,7 +321,7 @@ public class TypeDraftBuilder implements Builder<TypeDraft> {
         Objects.requireNonNull(resourceTypeIds, TypeDraft.class + ": resourceTypeIds is missing");
         return new TypeDraftImpl(key, name, description, resourceTypeIds, fieldDefinitions);
     }
-
+    
     /**
      * builds TypeDraft without checking for non-null required values
      * @return TypeDraft
@@ -315,7 +332,7 @@ public class TypeDraftBuilder implements Builder<TypeDraft> {
 
     /**
      * factory method for an instance of TypeDraftBuilder
-     * @return builder
+     * @return builder 
      */
     public static TypeDraftBuilder of() {
         return new TypeDraftBuilder();

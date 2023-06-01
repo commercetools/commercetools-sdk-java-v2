@@ -1,9 +1,13 @@
-
 package com.commercetools.history.models.change_value;
 
+import com.commercetools.history.models.common.Address;
+import com.commercetools.history.models.common.DeliveryItem;
+import com.commercetools.history.models.common.Parcel;
+import com.commercetools.history.models.change_value.DeliveryChangeValue;
+import javax.annotation.Nullable;
 import java.util.*;
 import java.util.function.Function;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -19,15 +23,24 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .plusParcels(parcelsBuilder -> parcelsBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class DeliveryChangeValueBuilder implements Builder<DeliveryChangeValue> {
 
+    
+    
     private java.util.List<com.commercetools.history.models.common.DeliveryItem> items;
-
+    
+    
+    
     private com.commercetools.history.models.common.Address address;
-
+    
+    
+    
     private java.util.List<com.commercetools.history.models.common.Parcel> parcels;
 
     /**
@@ -35,234 +48,234 @@ public class DeliveryChangeValueBuilder implements Builder<DeliveryChangeValue> 
      * @param items value to be set
      * @return Builder
      */
-
-    public DeliveryChangeValueBuilder items(final com.commercetools.history.models.common.DeliveryItem... items) {
+    
+    public DeliveryChangeValueBuilder items( final com.commercetools.history.models.common.DeliveryItem ...items) {
         this.items = new ArrayList<>(Arrays.asList(items));
         return this;
     }
-
+    
     /**
      * set value to the items
      * @param items value to be set
      * @return Builder
      */
-
-    public DeliveryChangeValueBuilder items(
-            final java.util.List<com.commercetools.history.models.common.DeliveryItem> items) {
+    
+    public DeliveryChangeValueBuilder items( final java.util.List<com.commercetools.history.models.common.DeliveryItem> items) {
         this.items = items;
         return this;
     }
-
+    
     /**
      * add values to the items
      * @param items value to be set
      * @return Builder
      */
-
-    public DeliveryChangeValueBuilder plusItems(final com.commercetools.history.models.common.DeliveryItem... items) {
+    
+    public DeliveryChangeValueBuilder plusItems( final com.commercetools.history.models.common.DeliveryItem ...items) {
         if (this.items == null) {
             this.items = new ArrayList<>();
         }
         this.items.addAll(Arrays.asList(items));
         return this;
     }
-
+    
+    
+    
     /**
      * add the value to the items using the builder function
      * @param builder function to build the items value
      * @return Builder
      */
-
-    public DeliveryChangeValueBuilder plusItems(
-            Function<com.commercetools.history.models.common.DeliveryItemBuilder, com.commercetools.history.models.common.DeliveryItemBuilder> builder) {
+    
+    public DeliveryChangeValueBuilder plusItems(Function<com.commercetools.history.models.common.DeliveryItemBuilder, com.commercetools.history.models.common.DeliveryItemBuilder> builder) {
         if (this.items == null) {
             this.items = new ArrayList<>();
         }
         this.items.add(builder.apply(com.commercetools.history.models.common.DeliveryItemBuilder.of()).build());
         return this;
     }
-
+    
     /**
      * set the value to the items using the builder function
      * @param builder function to build the items value
      * @return Builder
      */
-
-    public DeliveryChangeValueBuilder withItems(
-            Function<com.commercetools.history.models.common.DeliveryItemBuilder, com.commercetools.history.models.common.DeliveryItemBuilder> builder) {
+    
+    public DeliveryChangeValueBuilder withItems(Function<com.commercetools.history.models.common.DeliveryItemBuilder, com.commercetools.history.models.common.DeliveryItemBuilder> builder) {
         this.items = new ArrayList<>();
         this.items.add(builder.apply(com.commercetools.history.models.common.DeliveryItemBuilder.of()).build());
         return this;
     }
-
+    
     /**
      * add the value to the items using the builder function
      * @param builder function to build the items value
      * @return Builder
      */
-
-    public DeliveryChangeValueBuilder addItems(
-            Function<com.commercetools.history.models.common.DeliveryItemBuilder, com.commercetools.history.models.common.DeliveryItem> builder) {
+    
+    public DeliveryChangeValueBuilder addItems(Function<com.commercetools.history.models.common.DeliveryItemBuilder, com.commercetools.history.models.common.DeliveryItem> builder) {
         return plusItems(builder.apply(com.commercetools.history.models.common.DeliveryItemBuilder.of()));
     }
-
+    
     /**
      * set the value to the items using the builder function
      * @param builder function to build the items value
      * @return Builder
      */
-
-    public DeliveryChangeValueBuilder setItems(
-            Function<com.commercetools.history.models.common.DeliveryItemBuilder, com.commercetools.history.models.common.DeliveryItem> builder) {
+    
+    public DeliveryChangeValueBuilder setItems(Function<com.commercetools.history.models.common.DeliveryItemBuilder, com.commercetools.history.models.common.DeliveryItem> builder) {
         return items(builder.apply(com.commercetools.history.models.common.DeliveryItemBuilder.of()));
     }
-
+                    
+    
+    
     /**
      * set the value to the address using the builder function
      * @param builder function to build the address value
      * @return Builder
      */
-
-    public DeliveryChangeValueBuilder address(
-            Function<com.commercetools.history.models.common.AddressBuilder, com.commercetools.history.models.common.AddressBuilder> builder) {
+    
+    public DeliveryChangeValueBuilder address(Function<com.commercetools.history.models.common.AddressBuilder, com.commercetools.history.models.common.AddressBuilder> builder) {
         this.address = builder.apply(com.commercetools.history.models.common.AddressBuilder.of()).build();
         return this;
     }
-
+    
     /**
      * set the value to the address using the builder function
      * @param builder function to build the address value
      * @return Builder
      */
-
-    public DeliveryChangeValueBuilder withAddress(
-            Function<com.commercetools.history.models.common.AddressBuilder, com.commercetools.history.models.common.Address> builder) {
+    
+    public DeliveryChangeValueBuilder withAddress(Function<com.commercetools.history.models.common.AddressBuilder, com.commercetools.history.models.common.Address> builder) {
         this.address = builder.apply(com.commercetools.history.models.common.AddressBuilder.of());
         return this;
     }
-
+                    
     /**
      * set the value to the address
      * @param address value to be set
      * @return Builder
      */
-
-    public DeliveryChangeValueBuilder address(final com.commercetools.history.models.common.Address address) {
+    
+    public DeliveryChangeValueBuilder address( final com.commercetools.history.models.common.Address address) {
         this.address = address;
         return this;
     }
-
+    
+    
+    
     /**
      * set values to the parcels
      * @param parcels value to be set
      * @return Builder
      */
-
-    public DeliveryChangeValueBuilder parcels(final com.commercetools.history.models.common.Parcel... parcels) {
+    
+    public DeliveryChangeValueBuilder parcels( final com.commercetools.history.models.common.Parcel ...parcels) {
         this.parcels = new ArrayList<>(Arrays.asList(parcels));
         return this;
     }
-
+    
     /**
      * set value to the parcels
      * @param parcels value to be set
      * @return Builder
      */
-
-    public DeliveryChangeValueBuilder parcels(
-            final java.util.List<com.commercetools.history.models.common.Parcel> parcels) {
+    
+    public DeliveryChangeValueBuilder parcels( final java.util.List<com.commercetools.history.models.common.Parcel> parcels) {
         this.parcels = parcels;
         return this;
     }
-
+    
     /**
      * add values to the parcels
      * @param parcels value to be set
      * @return Builder
      */
-
-    public DeliveryChangeValueBuilder plusParcels(final com.commercetools.history.models.common.Parcel... parcels) {
+    
+    public DeliveryChangeValueBuilder plusParcels( final com.commercetools.history.models.common.Parcel ...parcels) {
         if (this.parcels == null) {
             this.parcels = new ArrayList<>();
         }
         this.parcels.addAll(Arrays.asList(parcels));
         return this;
     }
-
+    
+    
+    
     /**
      * add the value to the parcels using the builder function
      * @param builder function to build the parcels value
      * @return Builder
      */
-
-    public DeliveryChangeValueBuilder plusParcels(
-            Function<com.commercetools.history.models.common.ParcelBuilder, com.commercetools.history.models.common.ParcelBuilder> builder) {
+    
+    public DeliveryChangeValueBuilder plusParcels(Function<com.commercetools.history.models.common.ParcelBuilder, com.commercetools.history.models.common.ParcelBuilder> builder) {
         if (this.parcels == null) {
             this.parcels = new ArrayList<>();
         }
         this.parcels.add(builder.apply(com.commercetools.history.models.common.ParcelBuilder.of()).build());
         return this;
     }
-
+    
     /**
      * set the value to the parcels using the builder function
      * @param builder function to build the parcels value
      * @return Builder
      */
-
-    public DeliveryChangeValueBuilder withParcels(
-            Function<com.commercetools.history.models.common.ParcelBuilder, com.commercetools.history.models.common.ParcelBuilder> builder) {
+    
+    public DeliveryChangeValueBuilder withParcels(Function<com.commercetools.history.models.common.ParcelBuilder, com.commercetools.history.models.common.ParcelBuilder> builder) {
         this.parcels = new ArrayList<>();
         this.parcels.add(builder.apply(com.commercetools.history.models.common.ParcelBuilder.of()).build());
         return this;
     }
-
+    
     /**
      * add the value to the parcels using the builder function
      * @param builder function to build the parcels value
      * @return Builder
      */
-
-    public DeliveryChangeValueBuilder addParcels(
-            Function<com.commercetools.history.models.common.ParcelBuilder, com.commercetools.history.models.common.Parcel> builder) {
+    
+    public DeliveryChangeValueBuilder addParcels(Function<com.commercetools.history.models.common.ParcelBuilder, com.commercetools.history.models.common.Parcel> builder) {
         return plusParcels(builder.apply(com.commercetools.history.models.common.ParcelBuilder.of()));
     }
-
+    
     /**
      * set the value to the parcels using the builder function
      * @param builder function to build the parcels value
      * @return Builder
      */
-
-    public DeliveryChangeValueBuilder setParcels(
-            Function<com.commercetools.history.models.common.ParcelBuilder, com.commercetools.history.models.common.Parcel> builder) {
+    
+    public DeliveryChangeValueBuilder setParcels(Function<com.commercetools.history.models.common.ParcelBuilder, com.commercetools.history.models.common.Parcel> builder) {
         return parcels(builder.apply(com.commercetools.history.models.common.ParcelBuilder.of()));
     }
+                    
 
     /**
      * value of items}
      * @return items
      */
-
-    public java.util.List<com.commercetools.history.models.common.DeliveryItem> getItems() {
+    
+    
+    public java.util.List<com.commercetools.history.models.common.DeliveryItem> getItems(){
         return this.items;
     }
-
+    
     /**
      * value of address}
      * @return address
      */
-
-    public com.commercetools.history.models.common.Address getAddress() {
+    
+    
+    public com.commercetools.history.models.common.Address getAddress(){
         return this.address;
     }
-
+    
     /**
      * value of parcels}
      * @return parcels
      */
-
-    public java.util.List<com.commercetools.history.models.common.Parcel> getParcels() {
+    
+    
+    public java.util.List<com.commercetools.history.models.common.Parcel> getParcels(){
         return this.parcels;
     }
 
@@ -276,7 +289,7 @@ public class DeliveryChangeValueBuilder implements Builder<DeliveryChangeValue> 
         Objects.requireNonNull(parcels, DeliveryChangeValue.class + ": parcels is missing");
         return new DeliveryChangeValueImpl(items, address, parcels);
     }
-
+    
     /**
      * builds DeliveryChangeValue without checking for non-null required values
      * @return DeliveryChangeValue
@@ -287,7 +300,7 @@ public class DeliveryChangeValueBuilder implements Builder<DeliveryChangeValue> 
 
     /**
      * factory method for an instance of DeliveryChangeValueBuilder
-     * @return builder
+     * @return builder 
      */
     public static DeliveryChangeValueBuilder of() {
         return new DeliveryChangeValueBuilder();

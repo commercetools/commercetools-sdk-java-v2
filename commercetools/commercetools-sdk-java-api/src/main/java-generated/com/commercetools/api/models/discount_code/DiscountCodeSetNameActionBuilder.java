@@ -1,11 +1,12 @@
-
 package com.commercetools.api.models.discount_code;
 
+import com.commercetools.api.models.common.LocalizedString;
+import com.commercetools.api.models.discount_code.DiscountCodeUpdateAction;
+import com.commercetools.api.models.discount_code.DiscountCodeSetNameAction;
+import javax.annotation.Nullable;
 import java.util.*;
 import java.util.function.Function;
-
-import javax.annotation.Nullable;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -18,57 +19,61 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     DiscountCodeSetNameAction discountCodeSetNameAction = DiscountCodeSetNameAction.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class DiscountCodeSetNameActionBuilder implements Builder<DiscountCodeSetNameAction> {
 
+    
     @Nullable
     private com.commercetools.api.models.common.LocalizedString name;
 
+    
     /**
      *  <p>Value to set. If empty, any existing value will be removed.</p>
      * @param builder function to build the name value
      * @return Builder
      */
-
-    public DiscountCodeSetNameActionBuilder name(
-            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
+    
+    public DiscountCodeSetNameActionBuilder name(Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
         this.name = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of()).build();
         return this;
     }
-
+    
     /**
      *  <p>Value to set. If empty, any existing value will be removed.</p>
      * @param builder function to build the name value
      * @return Builder
      */
-
-    public DiscountCodeSetNameActionBuilder withName(
-            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedString> builder) {
+    
+    public DiscountCodeSetNameActionBuilder withName(Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedString> builder) {
         this.name = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of());
         return this;
     }
-
+                    
     /**
      *  <p>Value to set. If empty, any existing value will be removed.</p>
      * @param name value to be set
      * @return Builder
      */
-
-    public DiscountCodeSetNameActionBuilder name(
-            @Nullable final com.commercetools.api.models.common.LocalizedString name) {
+    
+    public DiscountCodeSetNameActionBuilder name(@Nullable final com.commercetools.api.models.common.LocalizedString name) {
         this.name = name;
         return this;
     }
+    
+    
 
     /**
      *  <p>Value to set. If empty, any existing value will be removed.</p>
      * @return name
      */
-
+    
     @Nullable
-    public com.commercetools.api.models.common.LocalizedString getName() {
+    public com.commercetools.api.models.common.LocalizedString getName(){
         return this.name;
     }
 
@@ -79,7 +84,7 @@ public class DiscountCodeSetNameActionBuilder implements Builder<DiscountCodeSet
     public DiscountCodeSetNameAction build() {
         return new DiscountCodeSetNameActionImpl(name);
     }
-
+    
     /**
      * builds DiscountCodeSetNameAction without checking for non-null required values
      * @return DiscountCodeSetNameAction
@@ -90,7 +95,7 @@ public class DiscountCodeSetNameActionBuilder implements Builder<DiscountCodeSet
 
     /**
      * factory method for an instance of DiscountCodeSetNameActionBuilder
-     * @return builder
+     * @return builder 
      */
     public static DiscountCodeSetNameActionBuilder of() {
         return new DiscountCodeSetNameActionBuilder();

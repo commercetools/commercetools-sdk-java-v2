@@ -1,11 +1,13 @@
-
 package com.commercetools.api.models.business_unit;
 
+import com.commercetools.api.models.business_unit.BusinessUnitStoreMode;
+import com.commercetools.api.models.business_unit.BusinessUnitUpdateAction;
+import com.commercetools.api.models.store.StoreResourceIdentifier;
+import com.commercetools.api.models.business_unit.BusinessUnitSetStoreModeAction;
+import javax.annotation.Nullable;
 import java.util.*;
 import java.util.function.Function;
-
-import javax.annotation.Nullable;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -19,133 +21,138 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .storeMode(BusinessUnitStoreMode.EXPLICIT)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class BusinessUnitSetStoreModeActionBuilder implements Builder<BusinessUnitSetStoreModeAction> {
 
+    
+    
     private com.commercetools.api.models.business_unit.BusinessUnitStoreMode storeMode;
-
+    
+    
     @Nullable
     private java.util.List<com.commercetools.api.models.store.StoreResourceIdentifier> stores;
 
+    
     /**
      *  <p>Set to <code>Explicit</code> to specify Stores for the Business Unit. Set to <code>FromParent</code> to inherit Stores from a parent.</p>
      * @param storeMode value to be set
      * @return Builder
      */
-
-    public BusinessUnitSetStoreModeActionBuilder storeMode(
-            final com.commercetools.api.models.business_unit.BusinessUnitStoreMode storeMode) {
+    
+    public BusinessUnitSetStoreModeActionBuilder storeMode( final com.commercetools.api.models.business_unit.BusinessUnitStoreMode storeMode) {
         this.storeMode = storeMode;
         return this;
     }
-
+    
+    
+    
     /**
      *  <p>Set the Stores the Business Unit is associated with. Can only be set if <code>storeMode</code> is <code>Explicit</code>.</p>
      * @param stores value to be set
      * @return Builder
      */
-
-    public BusinessUnitSetStoreModeActionBuilder stores(
-            @Nullable final com.commercetools.api.models.store.StoreResourceIdentifier... stores) {
+    
+    public BusinessUnitSetStoreModeActionBuilder stores(@Nullable final com.commercetools.api.models.store.StoreResourceIdentifier ...stores) {
         this.stores = new ArrayList<>(Arrays.asList(stores));
         return this;
     }
-
+    
     /**
      *  <p>Set the Stores the Business Unit is associated with. Can only be set if <code>storeMode</code> is <code>Explicit</code>.</p>
      * @param stores value to be set
      * @return Builder
      */
-
-    public BusinessUnitSetStoreModeActionBuilder stores(
-            @Nullable final java.util.List<com.commercetools.api.models.store.StoreResourceIdentifier> stores) {
+    
+    public BusinessUnitSetStoreModeActionBuilder stores(@Nullable final java.util.List<com.commercetools.api.models.store.StoreResourceIdentifier> stores) {
         this.stores = stores;
         return this;
     }
-
+    
     /**
      *  <p>Set the Stores the Business Unit is associated with. Can only be set if <code>storeMode</code> is <code>Explicit</code>.</p>
      * @param stores value to be set
      * @return Builder
      */
-
-    public BusinessUnitSetStoreModeActionBuilder plusStores(
-            @Nullable final com.commercetools.api.models.store.StoreResourceIdentifier... stores) {
+    
+    public BusinessUnitSetStoreModeActionBuilder plusStores(@Nullable final com.commercetools.api.models.store.StoreResourceIdentifier ...stores) {
         if (this.stores == null) {
             this.stores = new ArrayList<>();
         }
         this.stores.addAll(Arrays.asList(stores));
         return this;
     }
-
+    
+    
+    
     /**
      *  <p>Set the Stores the Business Unit is associated with. Can only be set if <code>storeMode</code> is <code>Explicit</code>.</p>
      * @param builder function to build the stores value
      * @return Builder
      */
-
-    public BusinessUnitSetStoreModeActionBuilder plusStores(
-            Function<com.commercetools.api.models.store.StoreResourceIdentifierBuilder, com.commercetools.api.models.store.StoreResourceIdentifierBuilder> builder) {
+    
+    public BusinessUnitSetStoreModeActionBuilder plusStores(Function<com.commercetools.api.models.store.StoreResourceIdentifierBuilder, com.commercetools.api.models.store.StoreResourceIdentifierBuilder> builder) {
         if (this.stores == null) {
             this.stores = new ArrayList<>();
         }
         this.stores.add(builder.apply(com.commercetools.api.models.store.StoreResourceIdentifierBuilder.of()).build());
         return this;
     }
-
+    
     /**
      *  <p>Set the Stores the Business Unit is associated with. Can only be set if <code>storeMode</code> is <code>Explicit</code>.</p>
      * @param builder function to build the stores value
      * @return Builder
      */
-
-    public BusinessUnitSetStoreModeActionBuilder withStores(
-            Function<com.commercetools.api.models.store.StoreResourceIdentifierBuilder, com.commercetools.api.models.store.StoreResourceIdentifierBuilder> builder) {
+    
+    public BusinessUnitSetStoreModeActionBuilder withStores(Function<com.commercetools.api.models.store.StoreResourceIdentifierBuilder, com.commercetools.api.models.store.StoreResourceIdentifierBuilder> builder) {
         this.stores = new ArrayList<>();
         this.stores.add(builder.apply(com.commercetools.api.models.store.StoreResourceIdentifierBuilder.of()).build());
         return this;
     }
-
+    
     /**
      *  <p>Set the Stores the Business Unit is associated with. Can only be set if <code>storeMode</code> is <code>Explicit</code>.</p>
      * @param builder function to build the stores value
      * @return Builder
      */
-
-    public BusinessUnitSetStoreModeActionBuilder addStores(
-            Function<com.commercetools.api.models.store.StoreResourceIdentifierBuilder, com.commercetools.api.models.store.StoreResourceIdentifier> builder) {
+    
+    public BusinessUnitSetStoreModeActionBuilder addStores(Function<com.commercetools.api.models.store.StoreResourceIdentifierBuilder, com.commercetools.api.models.store.StoreResourceIdentifier> builder) {
         return plusStores(builder.apply(com.commercetools.api.models.store.StoreResourceIdentifierBuilder.of()));
     }
-
+    
     /**
      *  <p>Set the Stores the Business Unit is associated with. Can only be set if <code>storeMode</code> is <code>Explicit</code>.</p>
      * @param builder function to build the stores value
      * @return Builder
      */
-
-    public BusinessUnitSetStoreModeActionBuilder setStores(
-            Function<com.commercetools.api.models.store.StoreResourceIdentifierBuilder, com.commercetools.api.models.store.StoreResourceIdentifier> builder) {
+    
+    public BusinessUnitSetStoreModeActionBuilder setStores(Function<com.commercetools.api.models.store.StoreResourceIdentifierBuilder, com.commercetools.api.models.store.StoreResourceIdentifier> builder) {
         return stores(builder.apply(com.commercetools.api.models.store.StoreResourceIdentifierBuilder.of()));
     }
+                    
 
     /**
      *  <p>Set to <code>Explicit</code> to specify Stores for the Business Unit. Set to <code>FromParent</code> to inherit Stores from a parent.</p>
      * @return storeMode
      */
-
-    public com.commercetools.api.models.business_unit.BusinessUnitStoreMode getStoreMode() {
+    
+    
+    public com.commercetools.api.models.business_unit.BusinessUnitStoreMode getStoreMode(){
         return this.storeMode;
     }
-
+    
     /**
      *  <p>Set the Stores the Business Unit is associated with. Can only be set if <code>storeMode</code> is <code>Explicit</code>.</p>
      * @return stores
      */
-
+    
     @Nullable
-    public java.util.List<com.commercetools.api.models.store.StoreResourceIdentifier> getStores() {
+    public java.util.List<com.commercetools.api.models.store.StoreResourceIdentifier> getStores(){
         return this.stores;
     }
 
@@ -157,7 +164,7 @@ public class BusinessUnitSetStoreModeActionBuilder implements Builder<BusinessUn
         Objects.requireNonNull(storeMode, BusinessUnitSetStoreModeAction.class + ": storeMode is missing");
         return new BusinessUnitSetStoreModeActionImpl(storeMode, stores);
     }
-
+    
     /**
      * builds BusinessUnitSetStoreModeAction without checking for non-null required values
      * @return BusinessUnitSetStoreModeAction
@@ -168,7 +175,7 @@ public class BusinessUnitSetStoreModeActionBuilder implements Builder<BusinessUn
 
     /**
      * factory method for an instance of BusinessUnitSetStoreModeActionBuilder
-     * @return builder
+     * @return builder 
      */
     public static BusinessUnitSetStoreModeActionBuilder of() {
         return new BusinessUnitSetStoreModeActionBuilder();

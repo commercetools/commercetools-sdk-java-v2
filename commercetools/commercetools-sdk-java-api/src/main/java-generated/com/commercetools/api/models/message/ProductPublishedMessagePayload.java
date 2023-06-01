@@ -1,20 +1,22 @@
-
 package com.commercetools.api.models.message;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
 import com.commercetools.api.models.cart.ProductPublishScope;
+import com.commercetools.api.models.message.MessagePayload;
 import com.commercetools.api.models.product.ProductProjection;
+import com.commercetools.api.models.message.ProductPublishedMessagePayloadImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Generated after a successful Publish update action.</p>
@@ -29,9 +31,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .scope(ProductPublishScope.ALL)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = ProductPublishedMessagePayloadImpl.class)
 public interface ProductPublishedMessagePayload extends MessagePayload {
 
@@ -47,7 +52,6 @@ public interface ProductPublishedMessagePayload extends MessagePayload {
     @NotNull
     @JsonProperty("removedImageUrls")
     public List<String> getRemovedImageUrls();
-
     /**
      *  <p>Current Product Projection of the Product at the time of creation.</p>
      * @return productProjection
@@ -56,7 +60,6 @@ public interface ProductPublishedMessagePayload extends MessagePayload {
     @Valid
     @JsonProperty("productProjection")
     public ProductProjection getProductProjection();
-
     /**
      *  <p>Publishing Scope that was used during the Publish update action.</p>
      * @return scope
@@ -69,38 +72,40 @@ public interface ProductPublishedMessagePayload extends MessagePayload {
      *  <p>List of image URLs which were removed during the Publish update action.</p>
      * @param removedImageUrls values to be set
      */
-
+    
     @JsonIgnore
-    public void setRemovedImageUrls(final String... removedImageUrls);
-
+    public void setRemovedImageUrls(final String ...removedImageUrls);
     /**
      *  <p>List of image URLs which were removed during the Publish update action.</p>
      * @param removedImageUrls values to be set
      */
-
+    
     public void setRemovedImageUrls(final List<String> removedImageUrls);
-
+    
     /**
      *  <p>Current Product Projection of the Product at the time of creation.</p>
      * @param productProjection value to be set
      */
-
+    
     public void setProductProjection(final ProductProjection productProjection);
-
+    
+    
     /**
      *  <p>Publishing Scope that was used during the Publish update action.</p>
      * @param scope value to be set
      */
-
+    
     public void setScope(final ProductPublishScope scope);
+    
 
     /**
      * factory method
      * @return instance of ProductPublishedMessagePayload
      */
-    public static ProductPublishedMessagePayload of() {
+    public static ProductPublishedMessagePayload of(){
         return new ProductPublishedMessagePayloadImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy ProductPublishedMessagePayload
@@ -126,10 +131,10 @@ public interface ProductPublishedMessagePayload extends MessagePayload {
             return null;
         }
         ProductPublishedMessagePayloadImpl instance = new ProductPublishedMessagePayloadImpl();
-        instance.setRemovedImageUrls(
-            Optional.ofNullable(template.getRemovedImageUrls()).map(ArrayList::new).orElse(null));
-        instance.setProductProjection(
-            com.commercetools.api.models.product.ProductProjection.deepCopy(template.getProductProjection()));
+        instance.setRemovedImageUrls(Optional.ofNullable(template.getRemovedImageUrls())
+                .map(ArrayList::new)
+                .orElse(null));
+        instance.setProductProjection(com.commercetools.api.models.product.ProductProjection.deepCopy(template.getProductProjection()));
         instance.setScope(template.getScope());
         return instance;
     }
@@ -141,7 +146,7 @@ public interface ProductPublishedMessagePayload extends MessagePayload {
     public static ProductPublishedMessagePayloadBuilder builder() {
         return ProductPublishedMessagePayloadBuilder.of();
     }
-
+    
     /**
      * create builder for ProductPublishedMessagePayload instance
      * @param template instance with prefilled values for the builder
@@ -150,6 +155,7 @@ public interface ProductPublishedMessagePayload extends MessagePayload {
     public static ProductPublishedMessagePayloadBuilder builder(final ProductPublishedMessagePayload template) {
         return ProductPublishedMessagePayloadBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -160,7 +166,7 @@ public interface ProductPublishedMessagePayload extends MessagePayload {
     default <T> T withProductPublishedMessagePayload(Function<ProductPublishedMessagePayload, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

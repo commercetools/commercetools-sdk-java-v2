@@ -1,9 +1,11 @@
-
 package com.commercetools.api.predicates.query.error;
 
 import com.commercetools.api.predicates.query.*;
 
-public class BadGatewayErrorQueryBuilderDsl {
+import java.util.function.Function;
+
+
+public class BadGatewayErrorQueryBuilderDsl  {
     public BadGatewayErrorQueryBuilderDsl() {
     }
 
@@ -12,15 +14,12 @@ public class BadGatewayErrorQueryBuilderDsl {
     }
 
     public StringComparisonPredicateBuilder<BadGatewayErrorQueryBuilderDsl> code() {
-        return new StringComparisonPredicateBuilder<>(
-            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("code")),
-            p -> new CombinationQueryPredicate<>(p, BadGatewayErrorQueryBuilderDsl::of));
+        return new StringComparisonPredicateBuilder<>(BinaryQueryPredicate.of().left(new ConstantQueryPredicate("code")),
+        p -> new CombinationQueryPredicate<>(p, BadGatewayErrorQueryBuilderDsl::of));
     }
-
     public StringComparisonPredicateBuilder<BadGatewayErrorQueryBuilderDsl> message() {
-        return new StringComparisonPredicateBuilder<>(
-            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("message")),
-            p -> new CombinationQueryPredicate<>(p, BadGatewayErrorQueryBuilderDsl::of));
+        return new StringComparisonPredicateBuilder<>(BinaryQueryPredicate.of().left(new ConstantQueryPredicate("message")),
+        p -> new CombinationQueryPredicate<>(p, BadGatewayErrorQueryBuilderDsl::of));
     }
-
+    
 }

@@ -1,16 +1,21 @@
-
 package com.commercetools.api.models.project;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
+import com.commercetools.api.models.project.ShippingRateInputType;
+import com.commercetools.api.models.shipping_method.ShippingRateTierType;
+import com.commercetools.api.models.project.CartScoreTypeImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Used when the ShippingRate maps to an abstract Cart categorization expressed by integers (such as shipping scores or weight ranges).</p>
@@ -22,9 +27,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     CartScoreType cartScoreType = CartScoreType.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = CartScoreTypeImpl.class)
 public interface CartScoreType extends ShippingRateInputType {
 
@@ -33,13 +41,16 @@ public interface CartScoreType extends ShippingRateInputType {
      */
     String CART_SCORE = "CartScore";
 
+
+
     /**
      * factory method
      * @return instance of CartScoreType
      */
-    public static CartScoreType of() {
+    public static CartScoreType of(){
         return new CartScoreTypeImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy CartScoreType
@@ -72,7 +83,7 @@ public interface CartScoreType extends ShippingRateInputType {
     public static CartScoreTypeBuilder builder() {
         return CartScoreTypeBuilder.of();
     }
-
+    
     /**
      * create builder for CartScoreType instance
      * @param template instance with prefilled values for the builder
@@ -81,6 +92,7 @@ public interface CartScoreType extends ShippingRateInputType {
     public static CartScoreTypeBuilder builder(final CartScoreType template) {
         return CartScoreTypeBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -91,7 +103,7 @@ public interface CartScoreType extends ShippingRateInputType {
     default <T> T withCartScoreType(Function<CartScoreType, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

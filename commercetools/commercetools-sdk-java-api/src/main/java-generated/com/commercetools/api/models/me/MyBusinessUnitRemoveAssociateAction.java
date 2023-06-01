@@ -1,19 +1,21 @@
-
 package com.commercetools.api.models.me;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
 import com.commercetools.api.models.customer.CustomerResourceIdentifier;
+import com.commercetools.api.models.me.MyBusinessUnitUpdateAction;
+import com.commercetools.api.models.me.MyBusinessUnitRemoveAssociateActionImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Removing an Associate from a Business Unit generates a BusinessUnitAssociateRemoved Message.</p>
@@ -26,9 +28,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .customer(customerBuilder -> customerBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = MyBusinessUnitRemoveAssociateActionImpl.class)
 public interface MyBusinessUnitRemoveAssociateAction extends MyBusinessUnitUpdateAction {
 
@@ -50,16 +55,18 @@ public interface MyBusinessUnitRemoveAssociateAction extends MyBusinessUnitUpdat
      *  <p>Associate to remove.</p>
      * @param customer value to be set
      */
-
+    
     public void setCustomer(final CustomerResourceIdentifier customer);
+    
 
     /**
      * factory method
      * @return instance of MyBusinessUnitRemoveAssociateAction
      */
-    public static MyBusinessUnitRemoveAssociateAction of() {
+    public static MyBusinessUnitRemoveAssociateAction of(){
         return new MyBusinessUnitRemoveAssociateActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy MyBusinessUnitRemoveAssociateAction
@@ -78,14 +85,12 @@ public interface MyBusinessUnitRemoveAssociateAction extends MyBusinessUnitUpdat
      * @return copy instance
      */
     @Nullable
-    public static MyBusinessUnitRemoveAssociateAction deepCopy(
-            @Nullable final MyBusinessUnitRemoveAssociateAction template) {
+    public static MyBusinessUnitRemoveAssociateAction deepCopy(@Nullable final MyBusinessUnitRemoveAssociateAction template) {
         if (template == null) {
             return null;
         }
         MyBusinessUnitRemoveAssociateActionImpl instance = new MyBusinessUnitRemoveAssociateActionImpl();
-        instance.setCustomer(
-            com.commercetools.api.models.customer.CustomerResourceIdentifier.deepCopy(template.getCustomer()));
+        instance.setCustomer(com.commercetools.api.models.customer.CustomerResourceIdentifier.deepCopy(template.getCustomer()));
         return instance;
     }
 
@@ -96,16 +101,16 @@ public interface MyBusinessUnitRemoveAssociateAction extends MyBusinessUnitUpdat
     public static MyBusinessUnitRemoveAssociateActionBuilder builder() {
         return MyBusinessUnitRemoveAssociateActionBuilder.of();
     }
-
+    
     /**
      * create builder for MyBusinessUnitRemoveAssociateAction instance
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static MyBusinessUnitRemoveAssociateActionBuilder builder(
-            final MyBusinessUnitRemoveAssociateAction template) {
+    public static MyBusinessUnitRemoveAssociateActionBuilder builder(final MyBusinessUnitRemoveAssociateAction template) {
         return MyBusinessUnitRemoveAssociateActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -116,7 +121,7 @@ public interface MyBusinessUnitRemoveAssociateAction extends MyBusinessUnitUpdat
     default <T> T withMyBusinessUnitRemoveAssociateAction(Function<MyBusinessUnitRemoveAssociateAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

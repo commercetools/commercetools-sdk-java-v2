@@ -1,8 +1,11 @@
-
 package com.commercetools.api.models.product_type;
 
+import com.commercetools.api.models.product_type.AttributeType;
+import com.commercetools.api.models.product_type.AttributeNumberType;
+import javax.annotation.Nullable;
 import java.util.*;
-
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -15,10 +18,16 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     AttributeNumberType attributeNumberType = AttributeNumberType.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class AttributeNumberTypeBuilder implements Builder<AttributeNumberType> {
+
+
+
 
     /**
      * builds AttributeNumberType with checking for non-null required values
@@ -27,7 +36,7 @@ public class AttributeNumberTypeBuilder implements Builder<AttributeNumberType> 
     public AttributeNumberType build() {
         return new AttributeNumberTypeImpl();
     }
-
+    
     /**
      * builds AttributeNumberType without checking for non-null required values
      * @return AttributeNumberType
@@ -38,7 +47,7 @@ public class AttributeNumberTypeBuilder implements Builder<AttributeNumberType> 
 
     /**
      * factory method for an instance of AttributeNumberTypeBuilder
-     * @return builder
+     * @return builder 
      */
     public static AttributeNumberTypeBuilder of() {
         return new AttributeNumberTypeBuilder();

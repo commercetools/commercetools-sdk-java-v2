@@ -1,11 +1,13 @@
-
 package com.commercetools.api.models.error;
 
+import com.commercetools.api.models.channel.ChannelResourceIdentifier;
+import com.commercetools.api.models.channel.ChannelRoleEnum;
+import com.commercetools.api.models.error.ErrorObject;
+import com.commercetools.api.models.error.MissingRoleOnChannelError;
+import javax.annotation.Nullable;
 import java.util.*;
 import java.util.function.Function;
-
-import javax.annotation.Nullable;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -20,49 +22,62 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .missingRole(ChannelRoleEnum.INVENTORY_SUPPLY)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class MissingRoleOnChannelErrorBuilder implements Builder<MissingRoleOnChannelError> {
 
+    
+    
     private String message;
-
+    
+    
+    
     private Map<String, java.lang.Object> values = new HashMap<>();
-
+    
+    
     @Nullable
     private com.commercetools.api.models.channel.ChannelResourceIdentifier channel;
-
+    
+    
+    
     private com.commercetools.api.models.channel.ChannelRoleEnum missingRole;
 
+    
     /**
      *  <p><code>"Given channel with $idOrKeyOfChannel does not have the required role $role."</code></p>
      * @param message value to be set
      * @return Builder
      */
-
-    public MissingRoleOnChannelErrorBuilder message(final String message) {
+    
+    public MissingRoleOnChannelErrorBuilder message( final String message) {
         this.message = message;
         return this;
     }
-
+    
+    
+    
     /**
      *  <p>Error-specific additional fields.</p>
      * @param values properties to be set
      * @return Builder
      */
-
-    public MissingRoleOnChannelErrorBuilder values(final Map<String, java.lang.Object> values) {
+    
+    public MissingRoleOnChannelErrorBuilder values( final Map<String, java.lang.Object> values){
         this.values = values;
         return this;
     }
-
+    
     /**
      *  <p>Error-specific additional fields.</p>
      * @param key property name
      * @param value property value
      * @return Builder
      */
-
+    
     public MissingRoleOnChannelErrorBuilder addValue(final String key, final java.lang.Object value) {
         if (this.values == null) {
             values = new HashMap<>();
@@ -70,44 +85,45 @@ public class MissingRoleOnChannelErrorBuilder implements Builder<MissingRoleOnCh
         values.put(key, value);
         return this;
     }
-
+    
+    
+    
     /**
      *  <p>ResourceIdentifier to a given Channel.</p>
      * @param builder function to build the channel value
      * @return Builder
      */
-
-    public MissingRoleOnChannelErrorBuilder channel(
-            Function<com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder, com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder> builder) {
-        this.channel = builder.apply(com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder.of())
-                .build();
+    
+    public MissingRoleOnChannelErrorBuilder channel(Function<com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder, com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder> builder) {
+        this.channel = builder.apply(com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder.of()).build();
         return this;
     }
-
+    
     /**
      *  <p>ResourceIdentifier to a given Channel.</p>
      * @param builder function to build the channel value
      * @return Builder
      */
-
-    public MissingRoleOnChannelErrorBuilder withChannel(
-            Function<com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder, com.commercetools.api.models.channel.ChannelResourceIdentifier> builder) {
+    
+    public MissingRoleOnChannelErrorBuilder withChannel(Function<com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder, com.commercetools.api.models.channel.ChannelResourceIdentifier> builder) {
         this.channel = builder.apply(com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder.of());
         return this;
     }
-
+                    
     /**
      *  <p>ResourceIdentifier to a given Channel.</p>
      * @param channel value to be set
      * @return Builder
      */
-
-    public MissingRoleOnChannelErrorBuilder channel(
-            @Nullable final com.commercetools.api.models.channel.ChannelResourceIdentifier channel) {
+    
+    public MissingRoleOnChannelErrorBuilder channel(@Nullable final com.commercetools.api.models.channel.ChannelResourceIdentifier channel) {
         this.channel = channel;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <ul>
      *   <li><code>ProductDistribution</code> for Product Distribution Channels allowed for the Store. Also required for Standalone Prices.</li>
@@ -116,41 +132,44 @@ public class MissingRoleOnChannelErrorBuilder implements Builder<MissingRoleOnCh
      * @param missingRole value to be set
      * @return Builder
      */
-
-    public MissingRoleOnChannelErrorBuilder missingRole(
-            final com.commercetools.api.models.channel.ChannelRoleEnum missingRole) {
+    
+    public MissingRoleOnChannelErrorBuilder missingRole( final com.commercetools.api.models.channel.ChannelRoleEnum missingRole) {
         this.missingRole = missingRole;
         return this;
     }
+    
+    
 
     /**
      *  <p><code>"Given channel with $idOrKeyOfChannel does not have the required role $role."</code></p>
      * @return message
      */
-
-    public String getMessage() {
+    
+    
+    public String getMessage(){
         return this.message;
     }
-
+    
     /**
      *  <p>Error-specific additional fields.</p>
      * @return pattern properties
      */
-
-    public Map<String, java.lang.Object> getValues() {
+    
+    
+    public Map<String, java.lang.Object> getValues(){
         return this.values;
     }
-
+    
     /**
      *  <p>ResourceIdentifier to a given Channel.</p>
      * @return channel
      */
-
+    
     @Nullable
-    public com.commercetools.api.models.channel.ChannelResourceIdentifier getChannel() {
+    public com.commercetools.api.models.channel.ChannelResourceIdentifier getChannel(){
         return this.channel;
     }
-
+    
     /**
      *  <ul>
      *   <li><code>ProductDistribution</code> for Product Distribution Channels allowed for the Store. Also required for Standalone Prices.</li>
@@ -158,8 +177,9 @@ public class MissingRoleOnChannelErrorBuilder implements Builder<MissingRoleOnCh
      *  </ul>
      * @return missingRole
      */
-
-    public com.commercetools.api.models.channel.ChannelRoleEnum getMissingRole() {
+    
+    
+    public com.commercetools.api.models.channel.ChannelRoleEnum getMissingRole(){
         return this.missingRole;
     }
 
@@ -172,7 +192,7 @@ public class MissingRoleOnChannelErrorBuilder implements Builder<MissingRoleOnCh
         Objects.requireNonNull(missingRole, MissingRoleOnChannelError.class + ": missingRole is missing");
         return new MissingRoleOnChannelErrorImpl(message, values, channel, missingRole);
     }
-
+    
     /**
      * builds MissingRoleOnChannelError without checking for non-null required values
      * @return MissingRoleOnChannelError
@@ -183,7 +203,7 @@ public class MissingRoleOnChannelErrorBuilder implements Builder<MissingRoleOnCh
 
     /**
      * factory method for an instance of MissingRoleOnChannelErrorBuilder
-     * @return builder
+     * @return builder 
      */
     public static MissingRoleOnChannelErrorBuilder of() {
         return new MissingRoleOnChannelErrorBuilder();

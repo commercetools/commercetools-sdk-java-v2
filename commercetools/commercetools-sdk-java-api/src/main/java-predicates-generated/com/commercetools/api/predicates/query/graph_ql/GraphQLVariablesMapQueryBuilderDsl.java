@@ -1,9 +1,11 @@
-
 package com.commercetools.api.predicates.query.graph_ql;
 
 import com.commercetools.api.predicates.query.*;
 
-public class GraphQLVariablesMapQueryBuilderDsl {
+import java.util.function.Function;
+
+
+public class GraphQLVariablesMapQueryBuilderDsl  {
     public GraphQLVariablesMapQueryBuilderDsl() {
     }
 
@@ -11,4 +13,5 @@ public class GraphQLVariablesMapQueryBuilderDsl {
         return new GraphQLVariablesMapQueryBuilderDsl();
     }
 
+    
 }

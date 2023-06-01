@@ -1,19 +1,21 @@
-
 package com.commercetools.importapi.models.customfields;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
 import com.commercetools.importapi.models.common.LocalizedString;
+import com.commercetools.importapi.models.customfields.CustomField;
+import com.commercetools.importapi.models.customfields.LocalizedStringFieldImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>A field with a localized string value.</p>
@@ -26,9 +28,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .value(valueBuilder -> valueBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = LocalizedStringFieldImpl.class)
 public interface LocalizedStringField extends CustomField {
 
@@ -60,16 +65,18 @@ public interface LocalizedStringField extends CustomField {
      *  </code></pre>
      * @param value value to be set
      */
-
+    
     public void setValue(final LocalizedString value);
+    
 
     /**
      * factory method
      * @return instance of LocalizedStringField
      */
-    public static LocalizedStringField of() {
+    public static LocalizedStringField of(){
         return new LocalizedStringFieldImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy LocalizedStringField
@@ -104,7 +111,7 @@ public interface LocalizedStringField extends CustomField {
     public static LocalizedStringFieldBuilder builder() {
         return LocalizedStringFieldBuilder.of();
     }
-
+    
     /**
      * create builder for LocalizedStringField instance
      * @param template instance with prefilled values for the builder
@@ -113,6 +120,7 @@ public interface LocalizedStringField extends CustomField {
     public static LocalizedStringFieldBuilder builder(final LocalizedStringField template) {
         return LocalizedStringFieldBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -123,7 +131,7 @@ public interface LocalizedStringField extends CustomField {
     default <T> T withLocalizedStringField(Function<LocalizedStringField, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

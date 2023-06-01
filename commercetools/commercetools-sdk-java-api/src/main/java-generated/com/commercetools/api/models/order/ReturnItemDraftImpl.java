@@ -1,47 +1,55 @@
-
 package com.commercetools.api.models.order;
 
-import java.time.*;
-import java.util.*;
-
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
-
-import io.vrap.rmf.base.client.ModelBase;
+import com.commercetools.api.models.order.ReturnShipmentState;
+import com.commercetools.api.models.type.CustomFieldsDraft;
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.ModelBase;
+import javax.validation.Valid;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.annotation.*;
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
  * ReturnItemDraft
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class ReturnItemDraftImpl implements ReturnItemDraft, ModelBase {
 
+    
     private Long quantity;
-
+    
+    
     private String lineItemId;
-
+    
+    
     private String customLineItemId;
-
+    
+    
     private String comment;
-
+    
+    
     private com.commercetools.api.models.order.ReturnShipmentState shipmentState;
-
+    
+    
     private com.commercetools.api.models.type.CustomFieldsDraft custom;
 
     /**
      * create instance with all properties
      */
     @JsonCreator
-    ReturnItemDraftImpl(@JsonProperty("quantity") final Long quantity,
-            @JsonProperty("lineItemId") final String lineItemId,
-            @JsonProperty("customLineItemId") final String customLineItemId,
-            @JsonProperty("comment") final String comment,
-            @JsonProperty("shipmentState") final com.commercetools.api.models.order.ReturnShipmentState shipmentState,
-            @JsonProperty("custom") final com.commercetools.api.models.type.CustomFieldsDraft custom) {
+    ReturnItemDraftImpl(@JsonProperty("quantity") final Long quantity, @JsonProperty("lineItemId") final String lineItemId, @JsonProperty("customLineItemId") final String customLineItemId, @JsonProperty("comment") final String comment, @JsonProperty("shipmentState") final com.commercetools.api.models.order.ReturnShipmentState shipmentState, @JsonProperty("custom") final com.commercetools.api.models.type.CustomFieldsDraft custom) {
         this.quantity = quantity;
         this.lineItemId = lineItemId;
         this.customLineItemId = customLineItemId;
@@ -49,7 +57,6 @@ public class ReturnItemDraftImpl implements ReturnItemDraft, ModelBase {
         this.shipmentState = shipmentState;
         this.custom = custom;
     }
-
     /**
      * create empty instance
      */
@@ -59,86 +66,91 @@ public class ReturnItemDraftImpl implements ReturnItemDraft, ModelBase {
     /**
      *
      */
-
-    public Long getQuantity() {
+    
+    public Long getQuantity(){
         return this.quantity;
     }
-
+    
     /**
      *
      */
-
-    public String getLineItemId() {
+    
+    public String getLineItemId(){
         return this.lineItemId;
     }
-
+    
     /**
      *
      */
-
-    public String getCustomLineItemId() {
+    
+    public String getCustomLineItemId(){
         return this.customLineItemId;
     }
-
+    
     /**
      *
      */
-
-    public String getComment() {
+    
+    public String getComment(){
         return this.comment;
     }
-
+    
     /**
      *
      */
-
-    public com.commercetools.api.models.order.ReturnShipmentState getShipmentState() {
+    
+    public com.commercetools.api.models.order.ReturnShipmentState getShipmentState(){
         return this.shipmentState;
     }
-
+    
     /**
      *  <p>Custom Fields of this return item.</p>
      */
-
-    public com.commercetools.api.models.type.CustomFieldsDraft getCustom() {
+    
+    public com.commercetools.api.models.type.CustomFieldsDraft getCustom(){
         return this.custom;
     }
 
-    public void setQuantity(final Long quantity) {
+    
+    public void setQuantity(final Long quantity){
         this.quantity = quantity;
     }
-
-    public void setLineItemId(final String lineItemId) {
+    
+    
+    public void setLineItemId(final String lineItemId){
         this.lineItemId = lineItemId;
     }
-
-    public void setCustomLineItemId(final String customLineItemId) {
+    
+    
+    public void setCustomLineItemId(final String customLineItemId){
         this.customLineItemId = customLineItemId;
     }
-
-    public void setComment(final String comment) {
+    
+    
+    public void setComment(final String comment){
         this.comment = comment;
     }
-
-    public void setShipmentState(final com.commercetools.api.models.order.ReturnShipmentState shipmentState) {
+    
+    
+    public void setShipmentState(final com.commercetools.api.models.order.ReturnShipmentState shipmentState){
         this.shipmentState = shipmentState;
     }
-
-    public void setCustom(final com.commercetools.api.models.type.CustomFieldsDraft custom) {
+    
+    
+    public void setCustom(final com.commercetools.api.models.type.CustomFieldsDraft custom){
         this.custom = custom;
     }
 
     @Override
     public boolean equals(Object o) {
-        if (this == o)
-            return true;
-
-        if (o == null || getClass() != o.getClass())
-            return false;
-
+        if (this == o) return true;
+    
+        if (o == null || getClass() != o.getClass()) return false;
+    
         ReturnItemDraftImpl that = (ReturnItemDraftImpl) o;
-
-        return new EqualsBuilder().append(quantity, that.quantity)
+    
+        return new EqualsBuilder()
+                .append(quantity, that.quantity)
                 .append(lineItemId, that.lineItemId)
                 .append(customLineItemId, that.customLineItemId)
                 .append(comment, that.comment)
@@ -146,16 +158,17 @@ public class ReturnItemDraftImpl implements ReturnItemDraft, ModelBase {
                 .append(custom, that.custom)
                 .isEquals();
     }
-
+    
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(quantity)
-                .append(lineItemId)
-                .append(customLineItemId)
-                .append(comment)
-                .append(shipmentState)
-                .append(custom)
-                .toHashCode();
+        return new HashCodeBuilder(17, 37)
+            .append(quantity)
+            .append(lineItemId)
+            .append(customLineItemId)
+            .append(comment)
+            .append(shipmentState)
+            .append(custom)
+            .toHashCode();
     }
 
 }

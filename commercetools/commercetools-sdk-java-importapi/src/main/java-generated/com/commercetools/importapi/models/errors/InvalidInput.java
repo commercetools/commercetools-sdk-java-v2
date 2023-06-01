@@ -1,16 +1,20 @@
-
 package com.commercetools.importapi.models.errors;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
+import com.commercetools.importapi.models.errors.ErrorObject;
+import com.commercetools.importapi.models.errors.InvalidInputImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>An invalid input has been sent to the service. The client application should validate the input according to the constraints described in the error message before sending the request again.</p>
@@ -23,9 +27,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .message("{message}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = InvalidInputImpl.class)
 public interface InvalidInput extends ErrorObject {
 
@@ -34,13 +41,16 @@ public interface InvalidInput extends ErrorObject {
      */
     String INVALID_INPUT = "InvalidInput";
 
+
+
     /**
      * factory method
      * @return instance of InvalidInput
      */
-    public static InvalidInput of() {
+    public static InvalidInput of(){
         return new InvalidInputImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy InvalidInput
@@ -75,7 +85,7 @@ public interface InvalidInput extends ErrorObject {
     public static InvalidInputBuilder builder() {
         return InvalidInputBuilder.of();
     }
-
+    
     /**
      * create builder for InvalidInput instance
      * @param template instance with prefilled values for the builder
@@ -84,6 +94,7 @@ public interface InvalidInput extends ErrorObject {
     public static InvalidInputBuilder builder(final InvalidInput template) {
         return InvalidInputBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -94,7 +105,7 @@ public interface InvalidInput extends ErrorObject {
     default <T> T withInvalidInput(Function<InvalidInput, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

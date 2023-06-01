@@ -1,19 +1,21 @@
-
 package com.commercetools.api.models.shipping_method;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
+import com.commercetools.api.models.shipping_method.ShippingMethodUpdateAction;
 import com.commercetools.api.models.zone.ZoneResourceIdentifier;
+import com.commercetools.api.models.shipping_method.ShippingMethodRemoveZoneActionImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * ShippingMethodRemoveZoneAction
@@ -26,9 +28,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .zone(zoneBuilder -> zoneBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = ShippingMethodRemoveZoneActionImpl.class)
 public interface ShippingMethodRemoveZoneAction extends ShippingMethodUpdateAction {
 
@@ -50,16 +55,18 @@ public interface ShippingMethodRemoveZoneAction extends ShippingMethodUpdateActi
      *  <p>Value to remove from <code>zoneRates</code>.</p>
      * @param zone value to be set
      */
-
+    
     public void setZone(final ZoneResourceIdentifier zone);
+    
 
     /**
      * factory method
      * @return instance of ShippingMethodRemoveZoneAction
      */
-    public static ShippingMethodRemoveZoneAction of() {
+    public static ShippingMethodRemoveZoneAction of(){
         return new ShippingMethodRemoveZoneActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy ShippingMethodRemoveZoneAction
@@ -94,7 +101,7 @@ public interface ShippingMethodRemoveZoneAction extends ShippingMethodUpdateActi
     public static ShippingMethodRemoveZoneActionBuilder builder() {
         return ShippingMethodRemoveZoneActionBuilder.of();
     }
-
+    
     /**
      * create builder for ShippingMethodRemoveZoneAction instance
      * @param template instance with prefilled values for the builder
@@ -103,6 +110,7 @@ public interface ShippingMethodRemoveZoneAction extends ShippingMethodUpdateActi
     public static ShippingMethodRemoveZoneActionBuilder builder(final ShippingMethodRemoveZoneAction template) {
         return ShippingMethodRemoveZoneActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -113,7 +121,7 @@ public interface ShippingMethodRemoveZoneAction extends ShippingMethodUpdateActi
     default <T> T withShippingMethodRemoveZoneAction(Function<ShippingMethodRemoveZoneAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

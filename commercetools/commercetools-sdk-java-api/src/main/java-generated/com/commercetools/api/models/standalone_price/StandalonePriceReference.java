@@ -1,18 +1,22 @@
-
 package com.commercetools.api.models.standalone_price;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-
 import com.commercetools.api.models.common.Reference;
+import com.commercetools.api.models.common.ReferenceTypeId;
+import com.commercetools.api.models.standalone_price.StandalonePrice;
+import com.commercetools.api.models.standalone_price.StandalonePriceReferenceImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Reference to a StandalonePrice.</p>
@@ -25,9 +29,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .id("{id}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = StandalonePriceReferenceImpl.class)
 public interface StandalonePriceReference extends Reference {
 
@@ -48,16 +55,18 @@ public interface StandalonePriceReference extends Reference {
      *  <p>Contains the representation of the expanded StandalonePrice. Only present in responses to requests with Reference Expansion for StandalonePrice.</p>
      * @param obj value to be set
      */
-
+    
     public void setObj(final StandalonePrice obj);
+    
 
     /**
      * factory method
      * @return instance of StandalonePriceReference
      */
-    public static StandalonePriceReference of() {
+    public static StandalonePriceReference of(){
         return new StandalonePriceReferenceImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy StandalonePriceReference
@@ -94,7 +103,7 @@ public interface StandalonePriceReference extends Reference {
     public static StandalonePriceReferenceBuilder builder() {
         return StandalonePriceReferenceBuilder.of();
     }
-
+    
     /**
      * create builder for StandalonePriceReference instance
      * @param template instance with prefilled values for the builder
@@ -103,6 +112,7 @@ public interface StandalonePriceReference extends Reference {
     public static StandalonePriceReferenceBuilder builder(final StandalonePriceReference template) {
         return StandalonePriceReferenceBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -113,7 +123,7 @@ public interface StandalonePriceReference extends Reference {
     default <T> T withStandalonePriceReference(Function<StandalonePriceReference, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

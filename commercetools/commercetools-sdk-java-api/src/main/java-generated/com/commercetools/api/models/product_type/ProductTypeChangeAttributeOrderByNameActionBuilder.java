@@ -1,8 +1,11 @@
-
 package com.commercetools.api.models.product_type;
 
+import com.commercetools.api.models.product_type.ProductTypeUpdateAction;
+import com.commercetools.api.models.product_type.ProductTypeChangeAttributeOrderByNameAction;
+import javax.annotation.Nullable;
 import java.util.*;
-
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -16,12 +19,16 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .plusAttributeNames(attributeNamesBuilder -> attributeNamesBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
-public class ProductTypeChangeAttributeOrderByNameActionBuilder
-        implements Builder<ProductTypeChangeAttributeOrderByNameAction> {
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
+public class ProductTypeChangeAttributeOrderByNameActionBuilder implements Builder<ProductTypeChangeAttributeOrderByNameAction> {
 
+    
+    
     private java.util.List<String> attributeNames;
 
     /**
@@ -29,44 +36,47 @@ public class ProductTypeChangeAttributeOrderByNameActionBuilder
      * @param attributeNames value to be set
      * @return Builder
      */
-
-    public ProductTypeChangeAttributeOrderByNameActionBuilder attributeNames(final String... attributeNames) {
+    
+    public ProductTypeChangeAttributeOrderByNameActionBuilder attributeNames( final String ...attributeNames) {
         this.attributeNames = new ArrayList<>(Arrays.asList(attributeNames));
         return this;
     }
-
+    
     /**
      *  <p>Names of Attributes to reorder. This array must include all Attributes currently present on a ProductType in a different order.</p>
      * @param attributeNames value to be set
      * @return Builder
      */
-
-    public ProductTypeChangeAttributeOrderByNameActionBuilder attributeNames(
-            final java.util.List<String> attributeNames) {
+    
+    public ProductTypeChangeAttributeOrderByNameActionBuilder attributeNames( final java.util.List<String> attributeNames) {
         this.attributeNames = attributeNames;
         return this;
     }
-
+    
     /**
      *  <p>Names of Attributes to reorder. This array must include all Attributes currently present on a ProductType in a different order.</p>
      * @param attributeNames value to be set
      * @return Builder
      */
-
-    public ProductTypeChangeAttributeOrderByNameActionBuilder plusAttributeNames(final String... attributeNames) {
+    
+    public ProductTypeChangeAttributeOrderByNameActionBuilder plusAttributeNames( final String ...attributeNames) {
         if (this.attributeNames == null) {
             this.attributeNames = new ArrayList<>();
         }
         this.attributeNames.addAll(Arrays.asList(attributeNames));
         return this;
     }
+    
+    
+    
 
     /**
      *  <p>Names of Attributes to reorder. This array must include all Attributes currently present on a ProductType in a different order.</p>
      * @return attributeNames
      */
-
-    public java.util.List<String> getAttributeNames() {
+    
+    
+    public java.util.List<String> getAttributeNames(){
         return this.attributeNames;
     }
 
@@ -75,11 +85,10 @@ public class ProductTypeChangeAttributeOrderByNameActionBuilder
      * @return ProductTypeChangeAttributeOrderByNameAction
      */
     public ProductTypeChangeAttributeOrderByNameAction build() {
-        Objects.requireNonNull(attributeNames,
-            ProductTypeChangeAttributeOrderByNameAction.class + ": attributeNames is missing");
+        Objects.requireNonNull(attributeNames, ProductTypeChangeAttributeOrderByNameAction.class + ": attributeNames is missing");
         return new ProductTypeChangeAttributeOrderByNameActionImpl(attributeNames);
     }
-
+    
     /**
      * builds ProductTypeChangeAttributeOrderByNameAction without checking for non-null required values
      * @return ProductTypeChangeAttributeOrderByNameAction
@@ -90,7 +99,7 @@ public class ProductTypeChangeAttributeOrderByNameActionBuilder
 
     /**
      * factory method for an instance of ProductTypeChangeAttributeOrderByNameActionBuilder
-     * @return builder
+     * @return builder 
      */
     public static ProductTypeChangeAttributeOrderByNameActionBuilder of() {
         return new ProductTypeChangeAttributeOrderByNameActionBuilder();
@@ -101,8 +110,7 @@ public class ProductTypeChangeAttributeOrderByNameActionBuilder
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static ProductTypeChangeAttributeOrderByNameActionBuilder of(
-            final ProductTypeChangeAttributeOrderByNameAction template) {
+    public static ProductTypeChangeAttributeOrderByNameActionBuilder of(final ProductTypeChangeAttributeOrderByNameAction template) {
         ProductTypeChangeAttributeOrderByNameActionBuilder builder = new ProductTypeChangeAttributeOrderByNameActionBuilder();
         builder.attributeNames = template.getAttributeNames();
         return builder;

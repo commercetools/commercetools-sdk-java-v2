@@ -1,10 +1,12 @@
-
 package com.commercetools.importapi.models.productvariants;
 
-import java.util.*;
-
+import com.commercetools.importapi.models.productvariants.Attribute;
+import java.time.ZonedDateTime;
+import com.commercetools.importapi.models.productvariants.DateTimeAttribute;
 import javax.annotation.Nullable;
-
+import java.util.*;
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -18,54 +20,67 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .value(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class DateTimeAttributeBuilder implements Builder<DateTimeAttribute> {
 
+    
     @Nullable
     private String name;
-
+    
+    
+    
     private java.time.ZonedDateTime value;
 
+    
     /**
      *  <p>The name of this attribute must match a name of the product types attribute definitions. The name is required if this type is used in a product variant and must not be set when used in a product variant patch.</p>
      * @param name value to be set
      * @return Builder
      */
-
+    
     public DateTimeAttributeBuilder name(@Nullable final String name) {
         this.name = name;
         return this;
     }
-
+    
+    
+    
+    
     /**
      * set the value to the value
      * @param value value to be set
      * @return Builder
      */
-
-    public DateTimeAttributeBuilder value(final java.time.ZonedDateTime value) {
+    
+    public DateTimeAttributeBuilder value( final java.time.ZonedDateTime value) {
         this.value = value;
         return this;
     }
+    
+    
 
     /**
      *  <p>The name of this attribute must match a name of the product types attribute definitions. The name is required if this type is used in a product variant and must not be set when used in a product variant patch.</p>
      * @return name
      */
-
+    
     @Nullable
-    public String getName() {
+    public String getName(){
         return this.name;
     }
-
+    
     /**
      * value of value}
      * @return value
      */
-
-    public java.time.ZonedDateTime getValue() {
+    
+    
+    public java.time.ZonedDateTime getValue(){
         return this.value;
     }
 
@@ -77,7 +92,7 @@ public class DateTimeAttributeBuilder implements Builder<DateTimeAttribute> {
         Objects.requireNonNull(value, DateTimeAttribute.class + ": value is missing");
         return new DateTimeAttributeImpl(name, value);
     }
-
+    
     /**
      * builds DateTimeAttribute without checking for non-null required values
      * @return DateTimeAttribute
@@ -88,7 +103,7 @@ public class DateTimeAttributeBuilder implements Builder<DateTimeAttribute> {
 
     /**
      * factory method for an instance of DateTimeAttributeBuilder
-     * @return builder
+     * @return builder 
      */
     public static DateTimeAttributeBuilder of() {
         return new DateTimeAttributeBuilder();

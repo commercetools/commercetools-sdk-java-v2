@@ -1,17 +1,20 @@
-
 package com.commercetools.api.models.error;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
+import com.commercetools.api.models.error.ErrorObject;
+import com.commercetools.api.models.error.RequiredFieldErrorImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Returned when a value is not defined for a required field.</p>
@@ -25,9 +28,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .field("{field}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = RequiredFieldErrorImpl.class)
 public interface RequiredFieldError extends ErrorObject {
 
@@ -43,7 +49,6 @@ public interface RequiredFieldError extends ErrorObject {
     @NotNull
     @JsonProperty("code")
     public String getCode();
-
     /**
      *  <p><code>"A value is required for field $field."</code></p>
      * @return message
@@ -51,7 +56,6 @@ public interface RequiredFieldError extends ErrorObject {
     @NotNull
     @JsonProperty("message")
     public String getMessage();
-
     /**
      *  <p>Name of the field missing the value.</p>
      * @return field
@@ -64,23 +68,26 @@ public interface RequiredFieldError extends ErrorObject {
      *  <p><code>"A value is required for field $field."</code></p>
      * @param message value to be set
      */
-
+    
     public void setMessage(final String message);
-
+    
+    
     /**
      *  <p>Name of the field missing the value.</p>
      * @param field value to be set
      */
-
+    
     public void setField(final String field);
+    
 
     /**
      * factory method
      * @return instance of RequiredFieldError
      */
-    public static RequiredFieldError of() {
+    public static RequiredFieldError of(){
         return new RequiredFieldErrorImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy RequiredFieldError
@@ -119,7 +126,7 @@ public interface RequiredFieldError extends ErrorObject {
     public static RequiredFieldErrorBuilder builder() {
         return RequiredFieldErrorBuilder.of();
     }
-
+    
     /**
      * create builder for RequiredFieldError instance
      * @param template instance with prefilled values for the builder
@@ -128,6 +135,7 @@ public interface RequiredFieldError extends ErrorObject {
     public static RequiredFieldErrorBuilder builder(final RequiredFieldError template) {
         return RequiredFieldErrorBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -138,7 +146,7 @@ public interface RequiredFieldError extends ErrorObject {
     default <T> T withRequiredFieldError(Function<RequiredFieldError, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

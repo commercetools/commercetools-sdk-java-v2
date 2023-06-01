@@ -1,16 +1,21 @@
-
 package com.commercetools.api.models.common;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
+import com.commercetools.api.models.common.MoneyType;
+import com.commercetools.api.models.common.TypedMoneyDraft;
+import com.commercetools.api.models.common.CentPrecisionMoneyDraftImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>This draft type is the alternative to Money.</p>
@@ -24,12 +29,14 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .currencyCode("{currencyCode}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = CentPrecisionMoneyDraftImpl.class)
-public interface CentPrecisionMoneyDraft
-        extends TypedMoneyDraft, io.vrap.rmf.base.client.Draft<CentPrecisionMoneyDraft> {
+public interface CentPrecisionMoneyDraft extends TypedMoneyDraft, io.vrap.rmf.base.client.Draft<CentPrecisionMoneyDraft> {
 
     /**
      * discriminator value for CentPrecisionMoneyDraft
@@ -40,7 +47,7 @@ public interface CentPrecisionMoneyDraft
      *  <p>This field is optional for cent precision. If provided, it must be equal to the default number of fraction digits for the specified currency.</p>
      * @return fractionDigits
      */
-
+    
     @JsonProperty("fractionDigits")
     public Integer getFractionDigits();
 
@@ -48,16 +55,18 @@ public interface CentPrecisionMoneyDraft
      *  <p>This field is optional for cent precision. If provided, it must be equal to the default number of fraction digits for the specified currency.</p>
      * @param fractionDigits value to be set
      */
-
+    
     public void setFractionDigits(final Integer fractionDigits);
+    
 
     /**
      * factory method
      * @return instance of CentPrecisionMoneyDraft
      */
-    public static CentPrecisionMoneyDraft of() {
+    public static CentPrecisionMoneyDraft of(){
         return new CentPrecisionMoneyDraftImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy CentPrecisionMoneyDraft
@@ -96,7 +105,7 @@ public interface CentPrecisionMoneyDraft
     public static CentPrecisionMoneyDraftBuilder builder() {
         return CentPrecisionMoneyDraftBuilder.of();
     }
-
+    
     /**
      * create builder for CentPrecisionMoneyDraft instance
      * @param template instance with prefilled values for the builder
@@ -105,6 +114,7 @@ public interface CentPrecisionMoneyDraft
     public static CentPrecisionMoneyDraftBuilder builder(final CentPrecisionMoneyDraft template) {
         return CentPrecisionMoneyDraftBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -115,11 +125,9 @@ public interface CentPrecisionMoneyDraft
     default <T> T withCentPrecisionMoneyDraft(Function<CentPrecisionMoneyDraft, T> helper) {
         return helper.apply(this);
     }
-
     public static CentPrecisionMoneyDraft of(final javax.money.MonetaryAmount monetaryAmount) {
         return MoneyUtil.draftOf(monetaryAmount);
     }
-
     public static CentPrecisionMoneyDraft of(final CentPrecisionMoney template) {
         CentPrecisionMoneyDraftImpl instance = new CentPrecisionMoneyDraftImpl();
         instance.setCentAmount(template.getCentAmount());
@@ -127,7 +135,8 @@ public interface CentPrecisionMoneyDraft
         instance.setFractionDigits(template.getFractionDigits());
         return instance;
     }
-
+    
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

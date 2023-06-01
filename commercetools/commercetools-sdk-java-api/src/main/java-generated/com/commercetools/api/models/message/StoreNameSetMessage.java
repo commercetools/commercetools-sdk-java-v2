@@ -1,19 +1,21 @@
-
 package com.commercetools.api.models.message;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-import java.util.stream.Collectors;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-
 import com.commercetools.api.models.common.LocalizedString;
+import com.commercetools.api.models.message.Message;
+import com.commercetools.api.models.message.StoreNameSetMessageImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Generated after a successful Set Name update action.</p>
@@ -32,9 +34,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .resourceVersion(0.3)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = StoreNameSetMessageImpl.class)
 public interface StoreNameSetMessage extends Message {
 
@@ -50,7 +55,6 @@ public interface StoreNameSetMessage extends Message {
     @Valid
     @JsonProperty("name")
     public LocalizedString getName();
-
     /**
      *  <p>Names set for the Store in different locales.</p>
      * @return nameAllLocales
@@ -63,31 +67,32 @@ public interface StoreNameSetMessage extends Message {
      *  <p>Name of the Store set during the Set Name update action.</p>
      * @param name value to be set
      */
-
+    
     public void setName(final LocalizedString name);
-
+    
+    
     /**
      *  <p>Names set for the Store in different locales.</p>
      * @param nameAllLocales values to be set
      */
-
+    
     @JsonIgnore
-    public void setNameAllLocales(final LocalizedString... nameAllLocales);
-
+    public void setNameAllLocales(final LocalizedString ...nameAllLocales);
     /**
      *  <p>Names set for the Store in different locales.</p>
      * @param nameAllLocales values to be set
      */
-
+    
     public void setNameAllLocales(final List<LocalizedString> nameAllLocales);
 
     /**
      * factory method
      * @return instance of StoreNameSetMessage
      */
-    public static StoreNameSetMessage of() {
+    public static StoreNameSetMessage of(){
         return new StoreNameSetMessageImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy StoreNameSetMessage
@@ -126,19 +131,15 @@ public interface StoreNameSetMessage extends Message {
         instance.setVersion(template.getVersion());
         instance.setCreatedAt(template.getCreatedAt());
         instance.setLastModifiedAt(template.getLastModifiedAt());
-        instance.setLastModifiedBy(
-            com.commercetools.api.models.common.LastModifiedBy.deepCopy(template.getLastModifiedBy()));
+        instance.setLastModifiedBy(com.commercetools.api.models.common.LastModifiedBy.deepCopy(template.getLastModifiedBy()));
         instance.setCreatedBy(com.commercetools.api.models.common.CreatedBy.deepCopy(template.getCreatedBy()));
         instance.setSequenceNumber(template.getSequenceNumber());
         instance.setResource(com.commercetools.api.models.common.Reference.deepCopy(template.getResource()));
         instance.setResourceVersion(template.getResourceVersion());
-        instance.setResourceUserProvidedIdentifiers(com.commercetools.api.models.message.UserProvidedIdentifiers
-                .deepCopy(template.getResourceUserProvidedIdentifiers()));
+        instance.setResourceUserProvidedIdentifiers(com.commercetools.api.models.message.UserProvidedIdentifiers.deepCopy(template.getResourceUserProvidedIdentifiers()));
         instance.setName(com.commercetools.api.models.common.LocalizedString.deepCopy(template.getName()));
         instance.setNameAllLocales(Optional.ofNullable(template.getNameAllLocales())
-                .map(t -> t.stream()
-                        .map(com.commercetools.api.models.common.LocalizedString::deepCopy)
-                        .collect(Collectors.toList()))
+                .map(t -> t.stream().map(com.commercetools.api.models.common.LocalizedString::deepCopy).collect(Collectors.toList()))
                 .orElse(null));
         return instance;
     }
@@ -150,7 +151,7 @@ public interface StoreNameSetMessage extends Message {
     public static StoreNameSetMessageBuilder builder() {
         return StoreNameSetMessageBuilder.of();
     }
-
+    
     /**
      * create builder for StoreNameSetMessage instance
      * @param template instance with prefilled values for the builder
@@ -159,6 +160,7 @@ public interface StoreNameSetMessage extends Message {
     public static StoreNameSetMessageBuilder builder(final StoreNameSetMessage template) {
         return StoreNameSetMessageBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -169,7 +171,7 @@ public interface StoreNameSetMessage extends Message {
     default <T> T withStoreNameSetMessage(Function<StoreNameSetMessage, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

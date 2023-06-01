@@ -1,19 +1,21 @@
-
 package com.commercetools.api.models.message;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
+import com.commercetools.api.models.message.MessagePayload;
 import com.commercetools.api.models.product_selection.ProductSelection;
+import com.commercetools.api.models.message.ProductSelectionCreatedMessagePayloadImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Generated after a successful Create Product Selection request.</p>
@@ -26,9 +28,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .productSelection(productSelectionBuilder -> productSelectionBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = ProductSelectionCreatedMessagePayloadImpl.class)
 public interface ProductSelectionCreatedMessagePayload extends MessagePayload {
 
@@ -50,16 +55,18 @@ public interface ProductSelectionCreatedMessagePayload extends MessagePayload {
      *  <p>Product Selection that was created.</p>
      * @param productSelection value to be set
      */
-
+    
     public void setProductSelection(final ProductSelection productSelection);
+    
 
     /**
      * factory method
      * @return instance of ProductSelectionCreatedMessagePayload
      */
-    public static ProductSelectionCreatedMessagePayload of() {
+    public static ProductSelectionCreatedMessagePayload of(){
         return new ProductSelectionCreatedMessagePayloadImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy ProductSelectionCreatedMessagePayload
@@ -78,14 +85,12 @@ public interface ProductSelectionCreatedMessagePayload extends MessagePayload {
      * @return copy instance
      */
     @Nullable
-    public static ProductSelectionCreatedMessagePayload deepCopy(
-            @Nullable final ProductSelectionCreatedMessagePayload template) {
+    public static ProductSelectionCreatedMessagePayload deepCopy(@Nullable final ProductSelectionCreatedMessagePayload template) {
         if (template == null) {
             return null;
         }
         ProductSelectionCreatedMessagePayloadImpl instance = new ProductSelectionCreatedMessagePayloadImpl();
-        instance.setProductSelection(
-            com.commercetools.api.models.product_selection.ProductSelection.deepCopy(template.getProductSelection()));
+        instance.setProductSelection(com.commercetools.api.models.product_selection.ProductSelection.deepCopy(template.getProductSelection()));
         return instance;
     }
 
@@ -96,16 +101,16 @@ public interface ProductSelectionCreatedMessagePayload extends MessagePayload {
     public static ProductSelectionCreatedMessagePayloadBuilder builder() {
         return ProductSelectionCreatedMessagePayloadBuilder.of();
     }
-
+    
     /**
      * create builder for ProductSelectionCreatedMessagePayload instance
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static ProductSelectionCreatedMessagePayloadBuilder builder(
-            final ProductSelectionCreatedMessagePayload template) {
+    public static ProductSelectionCreatedMessagePayloadBuilder builder(final ProductSelectionCreatedMessagePayload template) {
         return ProductSelectionCreatedMessagePayloadBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -116,7 +121,7 @@ public interface ProductSelectionCreatedMessagePayload extends MessagePayload {
     default <T> T withProductSelectionCreatedMessagePayload(Function<ProductSelectionCreatedMessagePayload, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

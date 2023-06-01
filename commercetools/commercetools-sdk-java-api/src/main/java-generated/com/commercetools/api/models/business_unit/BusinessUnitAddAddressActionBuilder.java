@@ -1,9 +1,12 @@
-
 package com.commercetools.api.models.business_unit;
 
+import com.commercetools.api.models.business_unit.BusinessUnitUpdateAction;
+import com.commercetools.api.models.common.BaseAddress;
+import com.commercetools.api.models.business_unit.BusinessUnitAddAddressAction;
+import javax.annotation.Nullable;
 import java.util.*;
 import java.util.function.Function;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -17,54 +20,61 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .address(addressBuilder -> addressBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class BusinessUnitAddAddressActionBuilder implements Builder<BusinessUnitAddAddressAction> {
 
+    
+    
     private com.commercetools.api.models.common.BaseAddress address;
 
+    
     /**
      *  <p>Address to add to the addresses of the Business Unit.</p>
      * @param builder function to build the address value
      * @return Builder
      */
-
-    public BusinessUnitAddAddressActionBuilder address(
-            Function<com.commercetools.api.models.common.BaseAddressBuilder, com.commercetools.api.models.common.BaseAddressBuilder> builder) {
+    
+    public BusinessUnitAddAddressActionBuilder address(Function<com.commercetools.api.models.common.BaseAddressBuilder, com.commercetools.api.models.common.BaseAddressBuilder> builder) {
         this.address = builder.apply(com.commercetools.api.models.common.BaseAddressBuilder.of()).build();
         return this;
     }
-
+    
     /**
      *  <p>Address to add to the addresses of the Business Unit.</p>
      * @param builder function to build the address value
      * @return Builder
      */
-
-    public BusinessUnitAddAddressActionBuilder withAddress(
-            Function<com.commercetools.api.models.common.BaseAddressBuilder, com.commercetools.api.models.common.BaseAddress> builder) {
+    
+    public BusinessUnitAddAddressActionBuilder withAddress(Function<com.commercetools.api.models.common.BaseAddressBuilder, com.commercetools.api.models.common.BaseAddress> builder) {
         this.address = builder.apply(com.commercetools.api.models.common.BaseAddressBuilder.of());
         return this;
     }
-
+                    
     /**
      *  <p>Address to add to the addresses of the Business Unit.</p>
      * @param address value to be set
      * @return Builder
      */
-
-    public BusinessUnitAddAddressActionBuilder address(final com.commercetools.api.models.common.BaseAddress address) {
+    
+    public BusinessUnitAddAddressActionBuilder address( final com.commercetools.api.models.common.BaseAddress address) {
         this.address = address;
         return this;
     }
+    
+    
 
     /**
      *  <p>Address to add to the addresses of the Business Unit.</p>
      * @return address
      */
-
-    public com.commercetools.api.models.common.BaseAddress getAddress() {
+    
+    
+    public com.commercetools.api.models.common.BaseAddress getAddress(){
         return this.address;
     }
 
@@ -76,7 +86,7 @@ public class BusinessUnitAddAddressActionBuilder implements Builder<BusinessUnit
         Objects.requireNonNull(address, BusinessUnitAddAddressAction.class + ": address is missing");
         return new BusinessUnitAddAddressActionImpl(address);
     }
-
+    
     /**
      * builds BusinessUnitAddAddressAction without checking for non-null required values
      * @return BusinessUnitAddAddressAction
@@ -87,7 +97,7 @@ public class BusinessUnitAddAddressActionBuilder implements Builder<BusinessUnit
 
     /**
      * factory method for an instance of BusinessUnitAddAddressActionBuilder
-     * @return builder
+     * @return builder 
      */
     public static BusinessUnitAddAddressActionBuilder of() {
         return new BusinessUnitAddAddressActionBuilder();

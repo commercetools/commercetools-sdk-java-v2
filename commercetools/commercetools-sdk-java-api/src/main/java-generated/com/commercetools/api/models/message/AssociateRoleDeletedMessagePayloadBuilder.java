@@ -1,8 +1,11 @@
-
 package com.commercetools.api.models.message;
 
+import com.commercetools.api.models.message.MessagePayload;
+import com.commercetools.api.models.message.AssociateRoleDeletedMessagePayload;
+import javax.annotation.Nullable;
 import java.util.*;
-
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -15,10 +18,16 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     AssociateRoleDeletedMessagePayload associateRoleDeletedMessagePayload = AssociateRoleDeletedMessagePayload.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class AssociateRoleDeletedMessagePayloadBuilder implements Builder<AssociateRoleDeletedMessagePayload> {
+
+
+
 
     /**
      * builds AssociateRoleDeletedMessagePayload with checking for non-null required values
@@ -27,7 +36,7 @@ public class AssociateRoleDeletedMessagePayloadBuilder implements Builder<Associ
     public AssociateRoleDeletedMessagePayload build() {
         return new AssociateRoleDeletedMessagePayloadImpl();
     }
-
+    
     /**
      * builds AssociateRoleDeletedMessagePayload without checking for non-null required values
      * @return AssociateRoleDeletedMessagePayload
@@ -38,7 +47,7 @@ public class AssociateRoleDeletedMessagePayloadBuilder implements Builder<Associ
 
     /**
      * factory method for an instance of AssociateRoleDeletedMessagePayloadBuilder
-     * @return builder
+     * @return builder 
      */
     public static AssociateRoleDeletedMessagePayloadBuilder of() {
         return new AssociateRoleDeletedMessagePayloadBuilder();

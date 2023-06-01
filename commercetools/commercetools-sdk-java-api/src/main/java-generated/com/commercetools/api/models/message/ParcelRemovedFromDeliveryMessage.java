@@ -1,19 +1,21 @@
-
 package com.commercetools.api.models.message;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
+import com.commercetools.api.models.message.OrderMessage;
 import com.commercetools.api.models.order.Parcel;
+import com.commercetools.api.models.message.ParcelRemovedFromDeliveryMessageImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Generated after a successful Remove Parcel From Delivery update action.</p>
@@ -34,9 +36,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .parcel(parcelBuilder -> parcelBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = ParcelRemovedFromDeliveryMessageImpl.class)
 public interface ParcelRemovedFromDeliveryMessage extends OrderMessage {
 
@@ -52,7 +57,6 @@ public interface ParcelRemovedFromDeliveryMessage extends OrderMessage {
     @NotNull
     @JsonProperty("deliveryId")
     public String getDeliveryId();
-
     /**
      *  <p>Parcel that was removed from the Delivery.</p>
      * @return parcel
@@ -61,12 +65,11 @@ public interface ParcelRemovedFromDeliveryMessage extends OrderMessage {
     @Valid
     @JsonProperty("parcel")
     public Parcel getParcel();
-
     /**
      *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multi</code> ShippingMode.</p>
      * @return shippingKey
      */
-
+    
     @JsonProperty("shippingKey")
     public String getShippingKey();
 
@@ -74,30 +77,34 @@ public interface ParcelRemovedFromDeliveryMessage extends OrderMessage {
      *  <p>Unique identifier of the Delivery.</p>
      * @param deliveryId value to be set
      */
-
+    
     public void setDeliveryId(final String deliveryId);
-
+    
+    
     /**
      *  <p>Parcel that was removed from the Delivery.</p>
      * @param parcel value to be set
      */
-
+    
     public void setParcel(final Parcel parcel);
-
+    
+    
     /**
      *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multi</code> ShippingMode.</p>
      * @param shippingKey value to be set
      */
-
+    
     public void setShippingKey(final String shippingKey);
+    
 
     /**
      * factory method
      * @return instance of ParcelRemovedFromDeliveryMessage
      */
-    public static ParcelRemovedFromDeliveryMessage of() {
+    public static ParcelRemovedFromDeliveryMessage of(){
         return new ParcelRemovedFromDeliveryMessageImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy ParcelRemovedFromDeliveryMessage
@@ -137,14 +144,12 @@ public interface ParcelRemovedFromDeliveryMessage extends OrderMessage {
         instance.setVersion(template.getVersion());
         instance.setCreatedAt(template.getCreatedAt());
         instance.setLastModifiedAt(template.getLastModifiedAt());
-        instance.setLastModifiedBy(
-            com.commercetools.api.models.common.LastModifiedBy.deepCopy(template.getLastModifiedBy()));
+        instance.setLastModifiedBy(com.commercetools.api.models.common.LastModifiedBy.deepCopy(template.getLastModifiedBy()));
         instance.setCreatedBy(com.commercetools.api.models.common.CreatedBy.deepCopy(template.getCreatedBy()));
         instance.setSequenceNumber(template.getSequenceNumber());
         instance.setResource(com.commercetools.api.models.common.Reference.deepCopy(template.getResource()));
         instance.setResourceVersion(template.getResourceVersion());
-        instance.setResourceUserProvidedIdentifiers(com.commercetools.api.models.message.UserProvidedIdentifiers
-                .deepCopy(template.getResourceUserProvidedIdentifiers()));
+        instance.setResourceUserProvidedIdentifiers(com.commercetools.api.models.message.UserProvidedIdentifiers.deepCopy(template.getResourceUserProvidedIdentifiers()));
         instance.setDeliveryId(template.getDeliveryId());
         instance.setParcel(com.commercetools.api.models.order.Parcel.deepCopy(template.getParcel()));
         instance.setShippingKey(template.getShippingKey());
@@ -158,7 +163,7 @@ public interface ParcelRemovedFromDeliveryMessage extends OrderMessage {
     public static ParcelRemovedFromDeliveryMessageBuilder builder() {
         return ParcelRemovedFromDeliveryMessageBuilder.of();
     }
-
+    
     /**
      * create builder for ParcelRemovedFromDeliveryMessage instance
      * @param template instance with prefilled values for the builder
@@ -167,6 +172,7 @@ public interface ParcelRemovedFromDeliveryMessage extends OrderMessage {
     public static ParcelRemovedFromDeliveryMessageBuilder builder(final ParcelRemovedFromDeliveryMessage template) {
         return ParcelRemovedFromDeliveryMessageBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -177,7 +183,7 @@ public interface ParcelRemovedFromDeliveryMessage extends OrderMessage {
     default <T> T withParcelRemovedFromDeliveryMessage(Function<ParcelRemovedFromDeliveryMessage, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

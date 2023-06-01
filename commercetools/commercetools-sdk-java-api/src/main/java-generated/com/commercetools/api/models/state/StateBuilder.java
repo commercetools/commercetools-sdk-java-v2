@@ -1,11 +1,18 @@
-
 package com.commercetools.api.models.state;
 
+import com.commercetools.api.models.common.BaseResource;
+import com.commercetools.api.models.common.CreatedBy;
+import com.commercetools.api.models.common.LastModifiedBy;
+import com.commercetools.api.models.common.LocalizedString;
+import com.commercetools.api.models.state.StateReference;
+import com.commercetools.api.models.state.StateRoleEnum;
+import com.commercetools.api.models.state.StateTypeEnum;
+import java.time.ZonedDateTime;
+import com.commercetools.api.models.state.State;
+import javax.annotation.Nullable;
 import java.util.*;
 import java.util.function.Function;
-
-import javax.annotation.Nullable;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -26,310 +33,365 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .builtIn(true)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class StateBuilder implements Builder<State> {
 
+    
+    
     private String id;
-
+    
+    
+    
     private Long version;
-
+    
+    
+    
     private java.time.ZonedDateTime createdAt;
-
+    
+    
+    
     private java.time.ZonedDateTime lastModifiedAt;
-
+    
+    
     @Nullable
     private com.commercetools.api.models.common.LastModifiedBy lastModifiedBy;
-
+    
+    
     @Nullable
     private com.commercetools.api.models.common.CreatedBy createdBy;
-
+    
+    
+    
     private String key;
-
+    
+    
+    
     private com.commercetools.api.models.state.StateTypeEnum type;
-
+    
+    
     @Nullable
     private com.commercetools.api.models.common.LocalizedString name;
-
+    
+    
     @Nullable
     private com.commercetools.api.models.common.LocalizedString description;
-
+    
+    
+    
     private Boolean initial;
-
+    
+    
+    
     private Boolean builtIn;
-
+    
+    
     @Nullable
     private java.util.List<com.commercetools.api.models.state.StateRoleEnum> roles;
-
+    
+    
     @Nullable
     private java.util.List<com.commercetools.api.models.state.StateReference> transitions;
 
+    
     /**
      *  <p>Unique identifier of the State.</p>
      * @param id value to be set
      * @return Builder
      */
-
-    public StateBuilder id(final String id) {
+    
+    public StateBuilder id( final String id) {
         this.id = id;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Current version of the State.</p>
      * @param version value to be set
      * @return Builder
      */
-
-    public StateBuilder version(final Long version) {
+    
+    public StateBuilder version( final Long version) {
         this.version = version;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Date and time (UTC) the State was initially created.</p>
      * @param createdAt value to be set
      * @return Builder
      */
-
-    public StateBuilder createdAt(final java.time.ZonedDateTime createdAt) {
+    
+    public StateBuilder createdAt( final java.time.ZonedDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Date and time (UTC) the State was last updated.</p>
      * @param lastModifiedAt value to be set
      * @return Builder
      */
-
-    public StateBuilder lastModifiedAt(final java.time.ZonedDateTime lastModifiedAt) {
+    
+    public StateBuilder lastModifiedAt( final java.time.ZonedDateTime lastModifiedAt) {
         this.lastModifiedAt = lastModifiedAt;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      * @param builder function to build the lastModifiedBy value
      * @return Builder
      */
-
-    public StateBuilder lastModifiedBy(
-            Function<com.commercetools.api.models.common.LastModifiedByBuilder, com.commercetools.api.models.common.LastModifiedByBuilder> builder) {
+    
+    public StateBuilder lastModifiedBy(Function<com.commercetools.api.models.common.LastModifiedByBuilder, com.commercetools.api.models.common.LastModifiedByBuilder> builder) {
         this.lastModifiedBy = builder.apply(com.commercetools.api.models.common.LastModifiedByBuilder.of()).build();
         return this;
     }
-
+    
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      * @param builder function to build the lastModifiedBy value
      * @return Builder
      */
-
-    public StateBuilder withLastModifiedBy(
-            Function<com.commercetools.api.models.common.LastModifiedByBuilder, com.commercetools.api.models.common.LastModifiedBy> builder) {
+    
+    public StateBuilder withLastModifiedBy(Function<com.commercetools.api.models.common.LastModifiedByBuilder, com.commercetools.api.models.common.LastModifiedBy> builder) {
         this.lastModifiedBy = builder.apply(com.commercetools.api.models.common.LastModifiedByBuilder.of());
         return this;
     }
-
+                    
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      * @param lastModifiedBy value to be set
      * @return Builder
      */
-
-    public StateBuilder lastModifiedBy(
-            @Nullable final com.commercetools.api.models.common.LastModifiedBy lastModifiedBy) {
+    
+    public StateBuilder lastModifiedBy(@Nullable final com.commercetools.api.models.common.LastModifiedBy lastModifiedBy) {
         this.lastModifiedBy = lastModifiedBy;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      * @param builder function to build the createdBy value
      * @return Builder
      */
-
-    public StateBuilder createdBy(
-            Function<com.commercetools.api.models.common.CreatedByBuilder, com.commercetools.api.models.common.CreatedByBuilder> builder) {
+    
+    public StateBuilder createdBy(Function<com.commercetools.api.models.common.CreatedByBuilder, com.commercetools.api.models.common.CreatedByBuilder> builder) {
         this.createdBy = builder.apply(com.commercetools.api.models.common.CreatedByBuilder.of()).build();
         return this;
     }
-
+    
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      * @param builder function to build the createdBy value
      * @return Builder
      */
-
-    public StateBuilder withCreatedBy(
-            Function<com.commercetools.api.models.common.CreatedByBuilder, com.commercetools.api.models.common.CreatedBy> builder) {
+    
+    public StateBuilder withCreatedBy(Function<com.commercetools.api.models.common.CreatedByBuilder, com.commercetools.api.models.common.CreatedBy> builder) {
         this.createdBy = builder.apply(com.commercetools.api.models.common.CreatedByBuilder.of());
         return this;
     }
-
+                    
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      * @param createdBy value to be set
      * @return Builder
      */
-
+    
     public StateBuilder createdBy(@Nullable final com.commercetools.api.models.common.CreatedBy createdBy) {
         this.createdBy = createdBy;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>User-defined unique identifier of the State.</p>
      * @param key value to be set
      * @return Builder
      */
-
-    public StateBuilder key(final String key) {
+    
+    public StateBuilder key( final String key) {
         this.key = key;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Indicates to which resource or object types the State is assigned to.</p>
      * @param type value to be set
      * @return Builder
      */
-
-    public StateBuilder type(final com.commercetools.api.models.state.StateTypeEnum type) {
+    
+    public StateBuilder type( final com.commercetools.api.models.state.StateTypeEnum type) {
         this.type = type;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Name of the State.</p>
      * @param builder function to build the name value
      * @return Builder
      */
-
-    public StateBuilder name(
-            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
+    
+    public StateBuilder name(Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
         this.name = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of()).build();
         return this;
     }
-
+    
     /**
      *  <p>Name of the State.</p>
      * @param builder function to build the name value
      * @return Builder
      */
-
-    public StateBuilder withName(
-            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedString> builder) {
+    
+    public StateBuilder withName(Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedString> builder) {
         this.name = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of());
         return this;
     }
-
+                    
     /**
      *  <p>Name of the State.</p>
      * @param name value to be set
      * @return Builder
      */
-
+    
     public StateBuilder name(@Nullable final com.commercetools.api.models.common.LocalizedString name) {
         this.name = name;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Description of the State.</p>
      * @param builder function to build the description value
      * @return Builder
      */
-
-    public StateBuilder description(
-            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
+    
+    public StateBuilder description(Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
         this.description = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of()).build();
         return this;
     }
-
+    
     /**
      *  <p>Description of the State.</p>
      * @param builder function to build the description value
      * @return Builder
      */
-
-    public StateBuilder withDescription(
-            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedString> builder) {
+    
+    public StateBuilder withDescription(Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedString> builder) {
         this.description = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of());
         return this;
     }
-
+                    
     /**
      *  <p>Description of the State.</p>
      * @param description value to be set
      * @return Builder
      */
-
+    
     public StateBuilder description(@Nullable final com.commercetools.api.models.common.LocalizedString description) {
         this.description = description;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p><code>true</code> for an initial State, the first State in a workflow.</p>
      * @param initial value to be set
      * @return Builder
      */
-
-    public StateBuilder initial(final Boolean initial) {
+    
+    public StateBuilder initial( final Boolean initial) {
         this.initial = initial;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p><code>true</code> for States that are an integral part of the Project. Those States cannot be deleted and their <code>key</code> cannot be changed.</p>
      * @param builtIn value to be set
      * @return Builder
      */
-
-    public StateBuilder builtIn(final Boolean builtIn) {
+    
+    public StateBuilder builtIn( final Boolean builtIn) {
         this.builtIn = builtIn;
         return this;
     }
-
+    
+    
+    
     /**
      *  <p>Roles the State can fulfill for Reviews and Line Items.</p>
      * @param roles value to be set
      * @return Builder
      */
-
-    public StateBuilder roles(@Nullable final com.commercetools.api.models.state.StateRoleEnum... roles) {
+    
+    public StateBuilder roles(@Nullable final com.commercetools.api.models.state.StateRoleEnum ...roles) {
         this.roles = new ArrayList<>(Arrays.asList(roles));
         return this;
     }
-
+    
     /**
      *  <p>Roles the State can fulfill for Reviews and Line Items.</p>
      * @param roles value to be set
      * @return Builder
      */
-
+    
     public StateBuilder roles(@Nullable final java.util.List<com.commercetools.api.models.state.StateRoleEnum> roles) {
         this.roles = roles;
         return this;
     }
-
+    
     /**
      *  <p>Roles the State can fulfill for Reviews and Line Items.</p>
      * @param roles value to be set
      * @return Builder
      */
-
-    public StateBuilder plusRoles(@Nullable final com.commercetools.api.models.state.StateRoleEnum... roles) {
+    
+    public StateBuilder plusRoles(@Nullable final com.commercetools.api.models.state.StateRoleEnum ...roles) {
         if (this.roles == null) {
             this.roles = new ArrayList<>();
         }
         this.roles.addAll(Arrays.asList(roles));
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <ul>
      *   <li>list of States of the same <code>type</code> that the current State can be transitioned to. For example, when the current State is the <em>Initial</em> State of StateType <code>OrderState</code> and this list contains the reference to the <em>Shipped</em> <code>OrderState</code>, the transition <em>Initial</em> -&gt; <em>Shipped</em> is allowed.</li>
@@ -339,12 +401,12 @@ public class StateBuilder implements Builder<State> {
      * @param transitions value to be set
      * @return Builder
      */
-
-    public StateBuilder transitions(@Nullable final com.commercetools.api.models.state.StateReference... transitions) {
+    
+    public StateBuilder transitions(@Nullable final com.commercetools.api.models.state.StateReference ...transitions) {
         this.transitions = new ArrayList<>(Arrays.asList(transitions));
         return this;
     }
-
+    
     /**
      *  <ul>
      *   <li>list of States of the same <code>type</code> that the current State can be transitioned to. For example, when the current State is the <em>Initial</em> State of StateType <code>OrderState</code> and this list contains the reference to the <em>Shipped</em> <code>OrderState</code>, the transition <em>Initial</em> -&gt; <em>Shipped</em> is allowed.</li>
@@ -354,13 +416,12 @@ public class StateBuilder implements Builder<State> {
      * @param transitions value to be set
      * @return Builder
      */
-
-    public StateBuilder transitions(
-            @Nullable final java.util.List<com.commercetools.api.models.state.StateReference> transitions) {
+    
+    public StateBuilder transitions(@Nullable final java.util.List<com.commercetools.api.models.state.StateReference> transitions) {
         this.transitions = transitions;
         return this;
     }
-
+    
     /**
      *  <ul>
      *   <li>list of States of the same <code>type</code> that the current State can be transitioned to. For example, when the current State is the <em>Initial</em> State of StateType <code>OrderState</code> and this list contains the reference to the <em>Shipped</em> <code>OrderState</code>, the transition <em>Initial</em> -&gt; <em>Shipped</em> is allowed.</li>
@@ -370,16 +431,17 @@ public class StateBuilder implements Builder<State> {
      * @param transitions value to be set
      * @return Builder
      */
-
-    public StateBuilder plusTransitions(
-            @Nullable final com.commercetools.api.models.state.StateReference... transitions) {
+    
+    public StateBuilder plusTransitions(@Nullable final com.commercetools.api.models.state.StateReference ...transitions) {
         if (this.transitions == null) {
             this.transitions = new ArrayList<>();
         }
         this.transitions.addAll(Arrays.asList(transitions));
         return this;
     }
-
+    
+    
+    
     /**
      *  <ul>
      *   <li>list of States of the same <code>type</code> that the current State can be transitioned to. For example, when the current State is the <em>Initial</em> State of StateType <code>OrderState</code> and this list contains the reference to the <em>Shipped</em> <code>OrderState</code>, the transition <em>Initial</em> -&gt; <em>Shipped</em> is allowed.</li>
@@ -389,16 +451,15 @@ public class StateBuilder implements Builder<State> {
      * @param builder function to build the transitions value
      * @return Builder
      */
-
-    public StateBuilder plusTransitions(
-            Function<com.commercetools.api.models.state.StateReferenceBuilder, com.commercetools.api.models.state.StateReferenceBuilder> builder) {
+    
+    public StateBuilder plusTransitions(Function<com.commercetools.api.models.state.StateReferenceBuilder, com.commercetools.api.models.state.StateReferenceBuilder> builder) {
         if (this.transitions == null) {
             this.transitions = new ArrayList<>();
         }
         this.transitions.add(builder.apply(com.commercetools.api.models.state.StateReferenceBuilder.of()).build());
         return this;
     }
-
+    
     /**
      *  <ul>
      *   <li>list of States of the same <code>type</code> that the current State can be transitioned to. For example, when the current State is the <em>Initial</em> State of StateType <code>OrderState</code> and this list contains the reference to the <em>Shipped</em> <code>OrderState</code>, the transition <em>Initial</em> -&gt; <em>Shipped</em> is allowed.</li>
@@ -408,14 +469,13 @@ public class StateBuilder implements Builder<State> {
      * @param builder function to build the transitions value
      * @return Builder
      */
-
-    public StateBuilder withTransitions(
-            Function<com.commercetools.api.models.state.StateReferenceBuilder, com.commercetools.api.models.state.StateReferenceBuilder> builder) {
+    
+    public StateBuilder withTransitions(Function<com.commercetools.api.models.state.StateReferenceBuilder, com.commercetools.api.models.state.StateReferenceBuilder> builder) {
         this.transitions = new ArrayList<>();
         this.transitions.add(builder.apply(com.commercetools.api.models.state.StateReferenceBuilder.of()).build());
         return this;
     }
-
+    
     /**
      *  <ul>
      *   <li>list of States of the same <code>type</code> that the current State can be transitioned to. For example, when the current State is the <em>Initial</em> State of StateType <code>OrderState</code> and this list contains the reference to the <em>Shipped</em> <code>OrderState</code>, the transition <em>Initial</em> -&gt; <em>Shipped</em> is allowed.</li>
@@ -425,12 +485,11 @@ public class StateBuilder implements Builder<State> {
      * @param builder function to build the transitions value
      * @return Builder
      */
-
-    public StateBuilder addTransitions(
-            Function<com.commercetools.api.models.state.StateReferenceBuilder, com.commercetools.api.models.state.StateReference> builder) {
+    
+    public StateBuilder addTransitions(Function<com.commercetools.api.models.state.StateReferenceBuilder, com.commercetools.api.models.state.StateReference> builder) {
         return plusTransitions(builder.apply(com.commercetools.api.models.state.StateReferenceBuilder.of()));
     }
-
+    
     /**
      *  <ul>
      *   <li>list of States of the same <code>type</code> that the current State can be transitioned to. For example, when the current State is the <em>Initial</em> State of StateType <code>OrderState</code> and this list contains the reference to the <em>Shipped</em> <code>OrderState</code>, the transition <em>Initial</em> -&gt; <em>Shipped</em> is allowed.</li>
@@ -440,134 +499,142 @@ public class StateBuilder implements Builder<State> {
      * @param builder function to build the transitions value
      * @return Builder
      */
-
-    public StateBuilder setTransitions(
-            Function<com.commercetools.api.models.state.StateReferenceBuilder, com.commercetools.api.models.state.StateReference> builder) {
+    
+    public StateBuilder setTransitions(Function<com.commercetools.api.models.state.StateReferenceBuilder, com.commercetools.api.models.state.StateReference> builder) {
         return transitions(builder.apply(com.commercetools.api.models.state.StateReferenceBuilder.of()));
     }
+                    
 
     /**
      *  <p>Unique identifier of the State.</p>
      * @return id
      */
-
-    public String getId() {
+    
+    
+    public String getId(){
         return this.id;
     }
-
+    
     /**
      *  <p>Current version of the State.</p>
      * @return version
      */
-
-    public Long getVersion() {
+    
+    
+    public Long getVersion(){
         return this.version;
     }
-
+    
     /**
      *  <p>Date and time (UTC) the State was initially created.</p>
      * @return createdAt
      */
-
-    public java.time.ZonedDateTime getCreatedAt() {
+    
+    
+    public java.time.ZonedDateTime getCreatedAt(){
         return this.createdAt;
     }
-
+    
     /**
      *  <p>Date and time (UTC) the State was last updated.</p>
      * @return lastModifiedAt
      */
-
-    public java.time.ZonedDateTime getLastModifiedAt() {
+    
+    
+    public java.time.ZonedDateTime getLastModifiedAt(){
         return this.lastModifiedAt;
     }
-
+    
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      * @return lastModifiedBy
      */
-
+    
     @Nullable
-    public com.commercetools.api.models.common.LastModifiedBy getLastModifiedBy() {
+    public com.commercetools.api.models.common.LastModifiedBy getLastModifiedBy(){
         return this.lastModifiedBy;
     }
-
+    
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      * @return createdBy
      */
-
+    
     @Nullable
-    public com.commercetools.api.models.common.CreatedBy getCreatedBy() {
+    public com.commercetools.api.models.common.CreatedBy getCreatedBy(){
         return this.createdBy;
     }
-
+    
     /**
      *  <p>User-defined unique identifier of the State.</p>
      * @return key
      */
-
-    public String getKey() {
+    
+    
+    public String getKey(){
         return this.key;
     }
-
+    
     /**
      *  <p>Indicates to which resource or object types the State is assigned to.</p>
      * @return type
      */
-
-    public com.commercetools.api.models.state.StateTypeEnum getType() {
+    
+    
+    public com.commercetools.api.models.state.StateTypeEnum getType(){
         return this.type;
     }
-
+    
     /**
      *  <p>Name of the State.</p>
      * @return name
      */
-
+    
     @Nullable
-    public com.commercetools.api.models.common.LocalizedString getName() {
+    public com.commercetools.api.models.common.LocalizedString getName(){
         return this.name;
     }
-
+    
     /**
      *  <p>Description of the State.</p>
      * @return description
      */
-
+    
     @Nullable
-    public com.commercetools.api.models.common.LocalizedString getDescription() {
+    public com.commercetools.api.models.common.LocalizedString getDescription(){
         return this.description;
     }
-
+    
     /**
      *  <p><code>true</code> for an initial State, the first State in a workflow.</p>
      * @return initial
      */
-
-    public Boolean getInitial() {
+    
+    
+    public Boolean getInitial(){
         return this.initial;
     }
-
+    
     /**
      *  <p><code>true</code> for States that are an integral part of the Project. Those States cannot be deleted and their <code>key</code> cannot be changed.</p>
      * @return builtIn
      */
-
-    public Boolean getBuiltIn() {
+    
+    
+    public Boolean getBuiltIn(){
         return this.builtIn;
     }
-
+    
     /**
      *  <p>Roles the State can fulfill for Reviews and Line Items.</p>
      * @return roles
      */
-
+    
     @Nullable
-    public java.util.List<com.commercetools.api.models.state.StateRoleEnum> getRoles() {
+    public java.util.List<com.commercetools.api.models.state.StateRoleEnum> getRoles(){
         return this.roles;
     }
-
+    
     /**
      *  <ul>
      *   <li>list of States of the same <code>type</code> that the current State can be transitioned to. For example, when the current State is the <em>Initial</em> State of StateType <code>OrderState</code> and this list contains the reference to the <em>Shipped</em> <code>OrderState</code>, the transition <em>Initial</em> -&gt; <em>Shipped</em> is allowed.</li>
@@ -576,9 +643,9 @@ public class StateBuilder implements Builder<State> {
      *  </ul>
      * @return transitions
      */
-
+    
     @Nullable
-    public java.util.List<com.commercetools.api.models.state.StateReference> getTransitions() {
+    public java.util.List<com.commercetools.api.models.state.StateReference> getTransitions(){
         return this.transitions;
     }
 
@@ -595,22 +662,20 @@ public class StateBuilder implements Builder<State> {
         Objects.requireNonNull(type, State.class + ": type is missing");
         Objects.requireNonNull(initial, State.class + ": initial is missing");
         Objects.requireNonNull(builtIn, State.class + ": builtIn is missing");
-        return new StateImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, key, type, name,
-            description, initial, builtIn, roles, transitions);
+        return new StateImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, key, type, name, description, initial, builtIn, roles, transitions);
     }
-
+    
     /**
      * builds State without checking for non-null required values
      * @return State
      */
     public State buildUnchecked() {
-        return new StateImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, key, type, name,
-            description, initial, builtIn, roles, transitions);
+        return new StateImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, key, type, name, description, initial, builtIn, roles, transitions);
     }
 
     /**
      * factory method for an instance of StateBuilder
-     * @return builder
+     * @return builder 
      */
     public static StateBuilder of() {
         return new StateBuilder();

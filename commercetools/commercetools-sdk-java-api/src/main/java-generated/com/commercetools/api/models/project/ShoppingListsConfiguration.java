@@ -1,16 +1,20 @@
-
 package com.commercetools.api.models.project;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
 
-import javax.annotation.Nullable;
+import com.commercetools.api.models.project.ShoppingListsConfigurationImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * ShoppingListsConfiguration
@@ -22,17 +26,21 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     ShoppingListsConfiguration shoppingListsConfiguration = ShoppingListsConfiguration.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = ShoppingListsConfigurationImpl.class)
-public interface ShoppingListsConfiguration {
+public interface ShoppingListsConfiguration  {
+
 
     /**
      *  <p>Default value for the <code>deleteDaysAfterLastModification</code> parameter of the ShoppingListDraft. This field may not be present on Projects created before January 2020.</p>
      * @return deleteDaysAfterLastModification
      */
-
+    
     @JsonProperty("deleteDaysAfterLastModification")
     public Long getDeleteDaysAfterLastModification();
 
@@ -40,16 +48,18 @@ public interface ShoppingListsConfiguration {
      *  <p>Default value for the <code>deleteDaysAfterLastModification</code> parameter of the ShoppingListDraft. This field may not be present on Projects created before January 2020.</p>
      * @param deleteDaysAfterLastModification value to be set
      */
-
+    
     public void setDeleteDaysAfterLastModification(final Long deleteDaysAfterLastModification);
+    
 
     /**
      * factory method
      * @return instance of ShoppingListsConfiguration
      */
-    public static ShoppingListsConfiguration of() {
+    public static ShoppingListsConfiguration of(){
         return new ShoppingListsConfigurationImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy ShoppingListsConfiguration
@@ -84,7 +94,7 @@ public interface ShoppingListsConfiguration {
     public static ShoppingListsConfigurationBuilder builder() {
         return ShoppingListsConfigurationBuilder.of();
     }
-
+    
     /**
      * create builder for ShoppingListsConfiguration instance
      * @param template instance with prefilled values for the builder
@@ -93,6 +103,7 @@ public interface ShoppingListsConfiguration {
     public static ShoppingListsConfigurationBuilder builder(final ShoppingListsConfiguration template) {
         return ShoppingListsConfigurationBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -103,7 +114,7 @@ public interface ShoppingListsConfiguration {
     default <T> T withShoppingListsConfiguration(Function<ShoppingListsConfiguration, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

@@ -1,17 +1,20 @@
-
 package com.commercetools.api.models.cart_discount;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
+import com.commercetools.api.models.cart_discount.CartDiscountUpdateAction;
+import com.commercetools.api.models.cart_discount.CartDiscountChangeCartPredicateActionImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * CartDiscountChangeCartPredicateAction
@@ -24,9 +27,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .cartPredicate("{cartPredicate}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = CartDiscountChangeCartPredicateActionImpl.class)
 public interface CartDiscountChangeCartPredicateAction extends CartDiscountUpdateAction {
 
@@ -47,16 +53,18 @@ public interface CartDiscountChangeCartPredicateAction extends CartDiscountUpdat
      *  <p>New value to set.</p>
      * @param cartPredicate value to be set
      */
-
+    
     public void setCartPredicate(final String cartPredicate);
+    
 
     /**
      * factory method
      * @return instance of CartDiscountChangeCartPredicateAction
      */
-    public static CartDiscountChangeCartPredicateAction of() {
+    public static CartDiscountChangeCartPredicateAction of(){
         return new CartDiscountChangeCartPredicateActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy CartDiscountChangeCartPredicateAction
@@ -75,8 +83,7 @@ public interface CartDiscountChangeCartPredicateAction extends CartDiscountUpdat
      * @return copy instance
      */
     @Nullable
-    public static CartDiscountChangeCartPredicateAction deepCopy(
-            @Nullable final CartDiscountChangeCartPredicateAction template) {
+    public static CartDiscountChangeCartPredicateAction deepCopy(@Nullable final CartDiscountChangeCartPredicateAction template) {
         if (template == null) {
             return null;
         }
@@ -92,16 +99,16 @@ public interface CartDiscountChangeCartPredicateAction extends CartDiscountUpdat
     public static CartDiscountChangeCartPredicateActionBuilder builder() {
         return CartDiscountChangeCartPredicateActionBuilder.of();
     }
-
+    
     /**
      * create builder for CartDiscountChangeCartPredicateAction instance
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static CartDiscountChangeCartPredicateActionBuilder builder(
-            final CartDiscountChangeCartPredicateAction template) {
+    public static CartDiscountChangeCartPredicateActionBuilder builder(final CartDiscountChangeCartPredicateAction template) {
         return CartDiscountChangeCartPredicateActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -112,7 +119,7 @@ public interface CartDiscountChangeCartPredicateAction extends CartDiscountUpdat
     default <T> T withCartDiscountChangeCartPredicateAction(Function<CartDiscountChangeCartPredicateAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

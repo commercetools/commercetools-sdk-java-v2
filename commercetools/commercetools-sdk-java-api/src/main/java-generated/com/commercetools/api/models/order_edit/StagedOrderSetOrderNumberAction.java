@@ -1,17 +1,20 @@
-
 package com.commercetools.api.models.order_edit;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-
 import com.commercetools.api.models.order.StagedOrderUpdateAction;
+import com.commercetools.api.models.order_edit.StagedOrderSetOrderNumberActionImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * StagedOrderSetOrderNumberAction
@@ -23,9 +26,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     StagedOrderSetOrderNumberAction stagedOrderSetOrderNumberAction = StagedOrderSetOrderNumberAction.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = StagedOrderSetOrderNumberActionImpl.class)
 public interface StagedOrderSetOrderNumberAction extends StagedOrderUpdateAction {
 
@@ -38,7 +44,7 @@ public interface StagedOrderSetOrderNumberAction extends StagedOrderUpdateAction
      *
      * @return orderNumber
      */
-
+    
     @JsonProperty("orderNumber")
     public String getOrderNumber();
 
@@ -46,16 +52,18 @@ public interface StagedOrderSetOrderNumberAction extends StagedOrderUpdateAction
      * set orderNumber
      * @param orderNumber value to be set
      */
-
+    
     public void setOrderNumber(final String orderNumber);
+    
 
     /**
      * factory method
      * @return instance of StagedOrderSetOrderNumberAction
      */
-    public static StagedOrderSetOrderNumberAction of() {
+    public static StagedOrderSetOrderNumberAction of(){
         return new StagedOrderSetOrderNumberActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy StagedOrderSetOrderNumberAction
@@ -90,7 +98,7 @@ public interface StagedOrderSetOrderNumberAction extends StagedOrderUpdateAction
     public static StagedOrderSetOrderNumberActionBuilder builder() {
         return StagedOrderSetOrderNumberActionBuilder.of();
     }
-
+    
     /**
      * create builder for StagedOrderSetOrderNumberAction instance
      * @param template instance with prefilled values for the builder
@@ -99,6 +107,7 @@ public interface StagedOrderSetOrderNumberAction extends StagedOrderUpdateAction
     public static StagedOrderSetOrderNumberActionBuilder builder(final StagedOrderSetOrderNumberAction template) {
         return StagedOrderSetOrderNumberActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -109,7 +118,7 @@ public interface StagedOrderSetOrderNumberAction extends StagedOrderUpdateAction
     default <T> T withStagedOrderSetOrderNumberAction(Function<StagedOrderSetOrderNumberAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

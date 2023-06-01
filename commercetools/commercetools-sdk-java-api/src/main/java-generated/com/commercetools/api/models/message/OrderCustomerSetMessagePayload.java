@@ -1,19 +1,22 @@
-
 package com.commercetools.api.models.message;
-
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
 
 import com.commercetools.api.models.customer.CustomerReference;
 import com.commercetools.api.models.customer_group.CustomerGroupReference;
+import com.commercetools.api.models.message.OrderMessagePayload;
+import com.commercetools.api.models.message.OrderCustomerSetMessagePayloadImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Generated after a successful Set Customer Id update action.</p>
@@ -25,9 +28,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     OrderCustomerSetMessagePayload orderCustomerSetMessagePayload = OrderCustomerSetMessagePayload.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = OrderCustomerSetMessagePayloadImpl.class)
 public interface OrderCustomerSetMessagePayload extends OrderMessagePayload {
 
@@ -43,7 +49,6 @@ public interface OrderCustomerSetMessagePayload extends OrderMessagePayload {
     @Valid
     @JsonProperty("customer")
     public CustomerReference getCustomer();
-
     /**
      *  <p>CustomerGroup on the Order after the Set Customer Id update action.</p>
      * @return customerGroup
@@ -51,7 +56,6 @@ public interface OrderCustomerSetMessagePayload extends OrderMessagePayload {
     @Valid
     @JsonProperty("customerGroup")
     public CustomerGroupReference getCustomerGroup();
-
     /**
      *  <p>Customer on the Order before the Set Customer Id update action.</p>
      * @return oldCustomer
@@ -59,7 +63,6 @@ public interface OrderCustomerSetMessagePayload extends OrderMessagePayload {
     @Valid
     @JsonProperty("oldCustomer")
     public CustomerReference getOldCustomer();
-
     /**
      *  <p>CustomerGroup on the Order before the Set Customer Id update action.</p>
      * @return oldCustomerGroup
@@ -72,37 +75,42 @@ public interface OrderCustomerSetMessagePayload extends OrderMessagePayload {
      *  <p>Customer on the Order after the Set Customer Id update action.</p>
      * @param customer value to be set
      */
-
+    
     public void setCustomer(final CustomerReference customer);
-
+    
+    
     /**
      *  <p>CustomerGroup on the Order after the Set Customer Id update action.</p>
      * @param customerGroup value to be set
      */
-
+    
     public void setCustomerGroup(final CustomerGroupReference customerGroup);
-
+    
+    
     /**
      *  <p>Customer on the Order before the Set Customer Id update action.</p>
      * @param oldCustomer value to be set
      */
-
+    
     public void setOldCustomer(final CustomerReference oldCustomer);
-
+    
+    
     /**
      *  <p>CustomerGroup on the Order before the Set Customer Id update action.</p>
      * @param oldCustomerGroup value to be set
      */
-
+    
     public void setOldCustomerGroup(final CustomerGroupReference oldCustomerGroup);
+    
 
     /**
      * factory method
      * @return instance of OrderCustomerSetMessagePayload
      */
-    public static OrderCustomerSetMessagePayload of() {
+    public static OrderCustomerSetMessagePayload of(){
         return new OrderCustomerSetMessagePayloadImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy OrderCustomerSetMessagePayload
@@ -130,12 +138,9 @@ public interface OrderCustomerSetMessagePayload extends OrderMessagePayload {
         }
         OrderCustomerSetMessagePayloadImpl instance = new OrderCustomerSetMessagePayloadImpl();
         instance.setCustomer(com.commercetools.api.models.customer.CustomerReference.deepCopy(template.getCustomer()));
-        instance.setCustomerGroup(
-            com.commercetools.api.models.customer_group.CustomerGroupReference.deepCopy(template.getCustomerGroup()));
-        instance.setOldCustomer(
-            com.commercetools.api.models.customer.CustomerReference.deepCopy(template.getOldCustomer()));
-        instance.setOldCustomerGroup(com.commercetools.api.models.customer_group.CustomerGroupReference
-                .deepCopy(template.getOldCustomerGroup()));
+        instance.setCustomerGroup(com.commercetools.api.models.customer_group.CustomerGroupReference.deepCopy(template.getCustomerGroup()));
+        instance.setOldCustomer(com.commercetools.api.models.customer.CustomerReference.deepCopy(template.getOldCustomer()));
+        instance.setOldCustomerGroup(com.commercetools.api.models.customer_group.CustomerGroupReference.deepCopy(template.getOldCustomerGroup()));
         return instance;
     }
 
@@ -146,7 +151,7 @@ public interface OrderCustomerSetMessagePayload extends OrderMessagePayload {
     public static OrderCustomerSetMessagePayloadBuilder builder() {
         return OrderCustomerSetMessagePayloadBuilder.of();
     }
-
+    
     /**
      * create builder for OrderCustomerSetMessagePayload instance
      * @param template instance with prefilled values for the builder
@@ -155,6 +160,7 @@ public interface OrderCustomerSetMessagePayload extends OrderMessagePayload {
     public static OrderCustomerSetMessagePayloadBuilder builder(final OrderCustomerSetMessagePayload template) {
         return OrderCustomerSetMessagePayloadBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -165,7 +171,7 @@ public interface OrderCustomerSetMessagePayload extends OrderMessagePayload {
     default <T> T withOrderCustomerSetMessagePayload(Function<OrderCustomerSetMessagePayload, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

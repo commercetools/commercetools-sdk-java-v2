@@ -1,10 +1,12 @@
-
 package com.commercetools.api.models.me;
 
-import java.util.*;
-
+import com.commercetools.api.models.me.MyShoppingListUpdateAction;
+import java.lang.Object;
+import com.commercetools.api.models.me.MyShoppingListSetCustomFieldAction;
 import javax.annotation.Nullable;
-
+import java.util.*;
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -18,54 +20,67 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .name("{name}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class MyShoppingListSetCustomFieldActionBuilder implements Builder<MyShoppingListSetCustomFieldAction> {
 
+    
+    
     private String name;
-
+    
+    
     @Nullable
     private java.lang.Object value;
 
+    
     /**
      *  <p>Name of the Custom Field.</p>
      * @param name value to be set
      * @return Builder
      */
-
-    public MyShoppingListSetCustomFieldActionBuilder name(final String name) {
+    
+    public MyShoppingListSetCustomFieldActionBuilder name( final String name) {
         this.name = name;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>If <code>value</code> is absent or <code>null</code>, this field will be removed if it exists. Removing a field that does not exist returns an InvalidOperation error. If <code>value</code> is provided, it is set for the field defined by <code>name</code>.</p>
      * @param value value to be set
      * @return Builder
      */
-
+    
     public MyShoppingListSetCustomFieldActionBuilder value(@Nullable final java.lang.Object value) {
         this.value = value;
         return this;
     }
+    
+    
 
     /**
      *  <p>Name of the Custom Field.</p>
      * @return name
      */
-
-    public String getName() {
+    
+    
+    public String getName(){
         return this.name;
     }
-
+    
     /**
      *  <p>If <code>value</code> is absent or <code>null</code>, this field will be removed if it exists. Removing a field that does not exist returns an InvalidOperation error. If <code>value</code> is provided, it is set for the field defined by <code>name</code>.</p>
      * @return value
      */
-
+    
     @Nullable
-    public java.lang.Object getValue() {
+    public java.lang.Object getValue(){
         return this.value;
     }
 
@@ -77,7 +92,7 @@ public class MyShoppingListSetCustomFieldActionBuilder implements Builder<MyShop
         Objects.requireNonNull(name, MyShoppingListSetCustomFieldAction.class + ": name is missing");
         return new MyShoppingListSetCustomFieldActionImpl(name, value);
     }
-
+    
     /**
      * builds MyShoppingListSetCustomFieldAction without checking for non-null required values
      * @return MyShoppingListSetCustomFieldAction
@@ -88,7 +103,7 @@ public class MyShoppingListSetCustomFieldActionBuilder implements Builder<MyShop
 
     /**
      * factory method for an instance of MyShoppingListSetCustomFieldActionBuilder
-     * @return builder
+     * @return builder 
      */
     public static MyShoppingListSetCustomFieldActionBuilder of() {
         return new MyShoppingListSetCustomFieldActionBuilder();

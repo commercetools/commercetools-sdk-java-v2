@@ -1,8 +1,12 @@
-
 package com.commercetools.importapi.models.orders;
 
+import com.commercetools.importapi.models.orders.ShippingRateInput;
+import com.commercetools.importapi.models.orders.ShippingRateInputType;
+import com.commercetools.importapi.models.orders.ScoreShippingRateInput;
+import javax.annotation.Nullable;
 import java.util.*;
-
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -16,30 +20,39 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .score(0.3)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class ScoreShippingRateInputBuilder implements Builder<ScoreShippingRateInput> {
 
+    
+    
     private Double score;
 
+    
     /**
      * set the value to the score
      * @param score value to be set
      * @return Builder
      */
-
-    public ScoreShippingRateInputBuilder score(final Double score) {
+    
+    public ScoreShippingRateInputBuilder score( final Double score) {
         this.score = score;
         return this;
     }
+    
+    
 
     /**
      * value of score}
      * @return score
      */
-
-    public Double getScore() {
+    
+    
+    public Double getScore(){
         return this.score;
     }
 
@@ -51,7 +64,7 @@ public class ScoreShippingRateInputBuilder implements Builder<ScoreShippingRateI
         Objects.requireNonNull(score, ScoreShippingRateInput.class + ": score is missing");
         return new ScoreShippingRateInputImpl(score);
     }
-
+    
     /**
      * builds ScoreShippingRateInput without checking for non-null required values
      * @return ScoreShippingRateInput
@@ -62,7 +75,7 @@ public class ScoreShippingRateInputBuilder implements Builder<ScoreShippingRateI
 
     /**
      * factory method for an instance of ScoreShippingRateInputBuilder
-     * @return builder
+     * @return builder 
      */
     public static ScoreShippingRateInputBuilder of() {
         return new ScoreShippingRateInputBuilder();

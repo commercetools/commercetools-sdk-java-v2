@@ -1,20 +1,22 @@
-
 package com.commercetools.history.models.change;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
+import com.commercetools.history.models.change.Change;
 import com.commercetools.history.models.change_value.AssetChangeValue;
 import com.commercetools.history.models.common.LocalizedString;
+import com.commercetools.history.models.change.ChangeAssetNameChangeImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * ChangeAssetNameChange
@@ -30,9 +32,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .previousValue(previousValueBuilder -> previousValueBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = ChangeAssetNameChangeImpl.class)
 public interface ChangeAssetNameChange extends Change {
 
@@ -48,7 +53,6 @@ public interface ChangeAssetNameChange extends Change {
     @NotNull
     @JsonProperty("change")
     public String getChange();
-
     /**
      *
      * @return type
@@ -56,7 +60,6 @@ public interface ChangeAssetNameChange extends Change {
     @NotNull
     @JsonProperty("type")
     public String getType();
-
     /**
      *
      * @return asset
@@ -65,7 +68,6 @@ public interface ChangeAssetNameChange extends Change {
     @Valid
     @JsonProperty("asset")
     public AssetChangeValue getAsset();
-
     /**
      *
      * @return nextValue
@@ -74,7 +76,6 @@ public interface ChangeAssetNameChange extends Change {
     @Valid
     @JsonProperty("nextValue")
     public LocalizedString getNextValue();
-
     /**
      *
      * @return previousValue
@@ -88,37 +89,42 @@ public interface ChangeAssetNameChange extends Change {
      *  <p>Update action for <code>changeAssetName</code></p>
      * @param change value to be set
      */
-
+    
     public void setChange(final String change);
-
+    
+    
     /**
      * set asset
      * @param asset value to be set
      */
-
+    
     public void setAsset(final AssetChangeValue asset);
-
+    
+    
     /**
      * set nextValue
      * @param nextValue value to be set
      */
-
+    
     public void setNextValue(final LocalizedString nextValue);
-
+    
+    
     /**
      * set previousValue
      * @param previousValue value to be set
      */
-
+    
     public void setPreviousValue(final LocalizedString previousValue);
+    
 
     /**
      * factory method
      * @return instance of ChangeAssetNameChange
      */
-    public static ChangeAssetNameChange of() {
+    public static ChangeAssetNameChange of(){
         return new ChangeAssetNameChangeImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy ChangeAssetNameChange
@@ -147,10 +153,8 @@ public interface ChangeAssetNameChange extends Change {
         ChangeAssetNameChangeImpl instance = new ChangeAssetNameChangeImpl();
         instance.setChange(template.getChange());
         instance.setAsset(com.commercetools.history.models.change_value.AssetChangeValue.deepCopy(template.getAsset()));
-        instance.setNextValue(
-            com.commercetools.history.models.common.LocalizedString.deepCopy(template.getNextValue()));
-        instance.setPreviousValue(
-            com.commercetools.history.models.common.LocalizedString.deepCopy(template.getPreviousValue()));
+        instance.setNextValue(com.commercetools.history.models.common.LocalizedString.deepCopy(template.getNextValue()));
+        instance.setPreviousValue(com.commercetools.history.models.common.LocalizedString.deepCopy(template.getPreviousValue()));
         return instance;
     }
 
@@ -161,7 +165,7 @@ public interface ChangeAssetNameChange extends Change {
     public static ChangeAssetNameChangeBuilder builder() {
         return ChangeAssetNameChangeBuilder.of();
     }
-
+    
     /**
      * create builder for ChangeAssetNameChange instance
      * @param template instance with prefilled values for the builder
@@ -170,6 +174,7 @@ public interface ChangeAssetNameChange extends Change {
     public static ChangeAssetNameChangeBuilder builder(final ChangeAssetNameChange template) {
         return ChangeAssetNameChangeBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -180,7 +185,7 @@ public interface ChangeAssetNameChange extends Change {
     default <T> T withChangeAssetNameChange(Function<ChangeAssetNameChange, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

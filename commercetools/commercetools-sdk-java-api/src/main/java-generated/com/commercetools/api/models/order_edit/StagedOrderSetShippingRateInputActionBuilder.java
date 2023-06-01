@@ -1,11 +1,12 @@
-
 package com.commercetools.api.models.order_edit;
 
+import com.commercetools.api.models.cart.ShippingRateInputDraft;
+import com.commercetools.api.models.order.StagedOrderUpdateAction;
+import com.commercetools.api.models.order_edit.StagedOrderSetShippingRateInputAction;
+import javax.annotation.Nullable;
 import java.util.*;
 import java.util.function.Function;
-
-import javax.annotation.Nullable;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -18,46 +19,50 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     StagedOrderSetShippingRateInputAction stagedOrderSetShippingRateInputAction = StagedOrderSetShippingRateInputAction.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class StagedOrderSetShippingRateInputActionBuilder implements Builder<StagedOrderSetShippingRateInputAction> {
 
+    
     @Nullable
     private com.commercetools.api.models.cart.ShippingRateInputDraft shippingRateInput;
 
+    
     /**
      *  <p>Generic type holding specifc ShippingRateInputDraft types.</p>
      * @param shippingRateInput value to be set
      * @return Builder
      */
-
-    public StagedOrderSetShippingRateInputActionBuilder shippingRateInput(
-            @Nullable final com.commercetools.api.models.cart.ShippingRateInputDraft shippingRateInput) {
+    
+    public StagedOrderSetShippingRateInputActionBuilder shippingRateInput(@Nullable final com.commercetools.api.models.cart.ShippingRateInputDraft shippingRateInput) {
         this.shippingRateInput = shippingRateInput;
         return this;
     }
-
+    
+    
     /**
      *  <p>Generic type holding specifc ShippingRateInputDraft types.</p>
      * @param builder function to build the shippingRateInput value
      * @return Builder
      */
-
-    public StagedOrderSetShippingRateInputActionBuilder shippingRateInput(
-            Function<com.commercetools.api.models.cart.ShippingRateInputDraftBuilder, Builder<? extends com.commercetools.api.models.cart.ShippingRateInputDraft>> builder) {
-        this.shippingRateInput = builder.apply(com.commercetools.api.models.cart.ShippingRateInputDraftBuilder.of())
-                .build();
+    
+    public StagedOrderSetShippingRateInputActionBuilder shippingRateInput(Function<com.commercetools.api.models.cart.ShippingRateInputDraftBuilder, Builder<? extends com.commercetools.api.models.cart.ShippingRateInputDraft>> builder) {
+        this.shippingRateInput = builder.apply(com.commercetools.api.models.cart.ShippingRateInputDraftBuilder.of()).build();
         return this;
     }
+                    
 
     /**
      *  <p>Generic type holding specifc ShippingRateInputDraft types.</p>
      * @return shippingRateInput
      */
-
+    
     @Nullable
-    public com.commercetools.api.models.cart.ShippingRateInputDraft getShippingRateInput() {
+    public com.commercetools.api.models.cart.ShippingRateInputDraft getShippingRateInput(){
         return this.shippingRateInput;
     }
 
@@ -68,7 +73,7 @@ public class StagedOrderSetShippingRateInputActionBuilder implements Builder<Sta
     public StagedOrderSetShippingRateInputAction build() {
         return new StagedOrderSetShippingRateInputActionImpl(shippingRateInput);
     }
-
+    
     /**
      * builds StagedOrderSetShippingRateInputAction without checking for non-null required values
      * @return StagedOrderSetShippingRateInputAction
@@ -79,7 +84,7 @@ public class StagedOrderSetShippingRateInputActionBuilder implements Builder<Sta
 
     /**
      * factory method for an instance of StagedOrderSetShippingRateInputActionBuilder
-     * @return builder
+     * @return builder 
      */
     public static StagedOrderSetShippingRateInputActionBuilder of() {
         return new StagedOrderSetShippingRateInputActionBuilder();
@@ -90,8 +95,7 @@ public class StagedOrderSetShippingRateInputActionBuilder implements Builder<Sta
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static StagedOrderSetShippingRateInputActionBuilder of(
-            final StagedOrderSetShippingRateInputAction template) {
+    public static StagedOrderSetShippingRateInputActionBuilder of(final StagedOrderSetShippingRateInputAction template) {
         StagedOrderSetShippingRateInputActionBuilder builder = new StagedOrderSetShippingRateInputActionBuilder();
         builder.shippingRateInput = template.getShippingRateInput();
         return builder;

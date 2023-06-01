@@ -1,19 +1,21 @@
-
 package com.commercetools.api.models.message;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
 import com.commercetools.api.models.common.Address;
+import com.commercetools.api.models.message.OrderMessagePayload;
+import com.commercetools.api.models.message.DeliveryAddressSetMessagePayloadImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Generated after a successful Set Delivery Address update action.</p>
@@ -26,9 +28,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .deliveryId("{deliveryId}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = DeliveryAddressSetMessagePayloadImpl.class)
 public interface DeliveryAddressSetMessagePayload extends OrderMessagePayload {
 
@@ -44,7 +49,6 @@ public interface DeliveryAddressSetMessagePayload extends OrderMessagePayload {
     @NotNull
     @JsonProperty("deliveryId")
     public String getDeliveryId();
-
     /**
      *  <p>Address after the Set Delivery Address update action.</p>
      * @return address
@@ -52,7 +56,6 @@ public interface DeliveryAddressSetMessagePayload extends OrderMessagePayload {
     @Valid
     @JsonProperty("address")
     public Address getAddress();
-
     /**
      *  <p>Address before the Set Delivery Address update action.</p>
      * @return oldAddress
@@ -60,12 +63,11 @@ public interface DeliveryAddressSetMessagePayload extends OrderMessagePayload {
     @Valid
     @JsonProperty("oldAddress")
     public Address getOldAddress();
-
     /**
      *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multi</code> ShippingMode.</p>
      * @return shippingKey
      */
-
+    
     @JsonProperty("shippingKey")
     public String getShippingKey();
 
@@ -73,37 +75,42 @@ public interface DeliveryAddressSetMessagePayload extends OrderMessagePayload {
      *  <p>Unique identifier of the Parcel.</p>
      * @param deliveryId value to be set
      */
-
+    
     public void setDeliveryId(final String deliveryId);
-
+    
+    
     /**
      *  <p>Address after the Set Delivery Address update action.</p>
      * @param address value to be set
      */
-
+    
     public void setAddress(final Address address);
-
+    
+    
     /**
      *  <p>Address before the Set Delivery Address update action.</p>
      * @param oldAddress value to be set
      */
-
+    
     public void setOldAddress(final Address oldAddress);
-
+    
+    
     /**
      *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multi</code> ShippingMode.</p>
      * @param shippingKey value to be set
      */
-
+    
     public void setShippingKey(final String shippingKey);
+    
 
     /**
      * factory method
      * @return instance of DeliveryAddressSetMessagePayload
      */
-    public static DeliveryAddressSetMessagePayload of() {
+    public static DeliveryAddressSetMessagePayload of(){
         return new DeliveryAddressSetMessagePayloadImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy DeliveryAddressSetMessagePayload
@@ -144,7 +151,7 @@ public interface DeliveryAddressSetMessagePayload extends OrderMessagePayload {
     public static DeliveryAddressSetMessagePayloadBuilder builder() {
         return DeliveryAddressSetMessagePayloadBuilder.of();
     }
-
+    
     /**
      * create builder for DeliveryAddressSetMessagePayload instance
      * @param template instance with prefilled values for the builder
@@ -153,6 +160,7 @@ public interface DeliveryAddressSetMessagePayload extends OrderMessagePayload {
     public static DeliveryAddressSetMessagePayloadBuilder builder(final DeliveryAddressSetMessagePayload template) {
         return DeliveryAddressSetMessagePayloadBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -163,7 +171,7 @@ public interface DeliveryAddressSetMessagePayload extends OrderMessagePayload {
     default <T> T withDeliveryAddressSetMessagePayload(Function<DeliveryAddressSetMessagePayload, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

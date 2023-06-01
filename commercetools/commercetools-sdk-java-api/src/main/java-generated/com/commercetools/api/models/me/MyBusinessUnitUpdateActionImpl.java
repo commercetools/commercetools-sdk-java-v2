@@ -1,25 +1,49 @@
-
 package com.commercetools.api.models.me;
 
-import java.time.*;
-import java.util.*;
-
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
-
-import io.vrap.rmf.base.client.ModelBase;
+import com.commercetools.api.models.me.MyBusinessUnitAddAddressAction;
+import com.commercetools.api.models.me.MyBusinessUnitAddBillingAddressIdAction;
+import com.commercetools.api.models.me.MyBusinessUnitAddShippingAddressIdAction;
+import com.commercetools.api.models.me.MyBusinessUnitChangeAddressAction;
+import com.commercetools.api.models.me.MyBusinessUnitChangeAssociateAction;
+import com.commercetools.api.models.me.MyBusinessUnitChangeNameAction;
+import com.commercetools.api.models.me.MyBusinessUnitChangeParentUnitAction;
+import com.commercetools.api.models.me.MyBusinessUnitRemoveAddressAction;
+import com.commercetools.api.models.me.MyBusinessUnitRemoveAssociateAction;
+import com.commercetools.api.models.me.MyBusinessUnitRemoveBillingAddressIdAction;
+import com.commercetools.api.models.me.MyBusinessUnitRemoveShippingAddressIdAction;
+import com.commercetools.api.models.me.MyBusinessUnitSetAddressCustomFieldAction;
+import com.commercetools.api.models.me.MyBusinessUnitSetAddressCustomTypeAction;
+import com.commercetools.api.models.me.MyBusinessUnitSetContactEmailAction;
+import com.commercetools.api.models.me.MyBusinessUnitSetCustomFieldAction;
+import com.commercetools.api.models.me.MyBusinessUnitSetCustomTypeAction;
+import com.commercetools.api.models.me.MyBusinessUnitSetDefaultBillingAddressAction;
+import com.commercetools.api.models.me.MyBusinessUnitSetDefaultShippingAddressAction;
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.ModelBase;
+import javax.validation.Valid;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.annotation.*;
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
  * MyBusinessUnitUpdateAction
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class MyBusinessUnitUpdateActionImpl implements MyBusinessUnitUpdateAction, ModelBase {
 
+    
     private String action;
 
     /**
@@ -29,7 +53,6 @@ public class MyBusinessUnitUpdateActionImpl implements MyBusinessUnitUpdateActio
     MyBusinessUnitUpdateActionImpl(@JsonProperty("action") final String action) {
         this.action = action;
     }
-
     /**
      * create empty instance
      */
@@ -39,27 +62,30 @@ public class MyBusinessUnitUpdateActionImpl implements MyBusinessUnitUpdateActio
     /**
      *
      */
-
-    public String getAction() {
+    
+    public String getAction(){
         return this.action;
     }
 
+
     @Override
     public boolean equals(Object o) {
-        if (this == o)
-            return true;
-
-        if (o == null || getClass() != o.getClass())
-            return false;
-
+        if (this == o) return true;
+    
+        if (o == null || getClass() != o.getClass()) return false;
+    
         MyBusinessUnitUpdateActionImpl that = (MyBusinessUnitUpdateActionImpl) o;
-
-        return new EqualsBuilder().append(action, that.action).isEquals();
+    
+        return new EqualsBuilder()
+                .append(action, that.action)
+                .isEquals();
     }
-
+    
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(action).toHashCode();
+        return new HashCodeBuilder(17, 37)
+            .append(action)
+            .toHashCode();
     }
 
 }

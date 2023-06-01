@@ -1,19 +1,21 @@
-
 package com.commercetools.api.models.message;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
+import com.commercetools.api.models.message.MessagePayload;
 import com.commercetools.api.models.store.StoreKeyReference;
+import com.commercetools.api.models.message.BusinessUnitStoreRemovedMessagePayloadImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * BusinessUnitStoreRemovedMessagePayload
@@ -26,9 +28,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .store(storeBuilder -> storeBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = BusinessUnitStoreRemovedMessagePayloadImpl.class)
 public interface BusinessUnitStoreRemovedMessagePayload extends MessagePayload {
 
@@ -50,16 +55,18 @@ public interface BusinessUnitStoreRemovedMessagePayload extends MessagePayload {
      *  <p>The Store that was removed from the Business Unit.</p>
      * @param store value to be set
      */
-
+    
     public void setStore(final StoreKeyReference store);
+    
 
     /**
      * factory method
      * @return instance of BusinessUnitStoreRemovedMessagePayload
      */
-    public static BusinessUnitStoreRemovedMessagePayload of() {
+    public static BusinessUnitStoreRemovedMessagePayload of(){
         return new BusinessUnitStoreRemovedMessagePayloadImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy BusinessUnitStoreRemovedMessagePayload
@@ -78,8 +85,7 @@ public interface BusinessUnitStoreRemovedMessagePayload extends MessagePayload {
      * @return copy instance
      */
     @Nullable
-    public static BusinessUnitStoreRemovedMessagePayload deepCopy(
-            @Nullable final BusinessUnitStoreRemovedMessagePayload template) {
+    public static BusinessUnitStoreRemovedMessagePayload deepCopy(@Nullable final BusinessUnitStoreRemovedMessagePayload template) {
         if (template == null) {
             return null;
         }
@@ -95,16 +101,16 @@ public interface BusinessUnitStoreRemovedMessagePayload extends MessagePayload {
     public static BusinessUnitStoreRemovedMessagePayloadBuilder builder() {
         return BusinessUnitStoreRemovedMessagePayloadBuilder.of();
     }
-
+    
     /**
      * create builder for BusinessUnitStoreRemovedMessagePayload instance
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static BusinessUnitStoreRemovedMessagePayloadBuilder builder(
-            final BusinessUnitStoreRemovedMessagePayload template) {
+    public static BusinessUnitStoreRemovedMessagePayloadBuilder builder(final BusinessUnitStoreRemovedMessagePayload template) {
         return BusinessUnitStoreRemovedMessagePayloadBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -112,11 +118,10 @@ public interface BusinessUnitStoreRemovedMessagePayload extends MessagePayload {
      * @param helper function to map the object
      * @return mapped value
      */
-    default <T> T withBusinessUnitStoreRemovedMessagePayload(
-            Function<BusinessUnitStoreRemovedMessagePayload, T> helper) {
+    default <T> T withBusinessUnitStoreRemovedMessagePayload(Function<BusinessUnitStoreRemovedMessagePayload, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

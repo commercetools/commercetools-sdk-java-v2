@@ -1,17 +1,20 @@
-
 package com.commercetools.api.models.error;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
+import com.commercetools.api.models.error.GraphQLErrorObject;
+import com.commercetools.api.models.error.GraphQLInvalidItemShippingDetailsErrorImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Returned when Line Item or Custom Line Item quantities set under ItemShippingDetails do not match the sum of the quantities in their respective shipping details.</p>
@@ -26,9 +29,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .itemId("{itemId}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = GraphQLInvalidItemShippingDetailsErrorImpl.class)
 public interface GraphQLInvalidItemShippingDetailsError extends GraphQLErrorObject {
 
@@ -44,7 +50,6 @@ public interface GraphQLInvalidItemShippingDetailsError extends GraphQLErrorObje
     @NotNull
     @JsonProperty("code")
     public String getCode();
-
     /**
      *  <p><code>"LineItem"</code> or <code>"CustomLineItem"</code></p>
      * @return subject
@@ -52,7 +57,6 @@ public interface GraphQLInvalidItemShippingDetailsError extends GraphQLErrorObje
     @NotNull
     @JsonProperty("subject")
     public String getSubject();
-
     /**
      *  <p>Unique identifier of the Line Item or Custom Line Item.</p>
      * @return itemId
@@ -65,23 +69,26 @@ public interface GraphQLInvalidItemShippingDetailsError extends GraphQLErrorObje
      *  <p><code>"LineItem"</code> or <code>"CustomLineItem"</code></p>
      * @param subject value to be set
      */
-
+    
     public void setSubject(final String subject);
-
+    
+    
     /**
      *  <p>Unique identifier of the Line Item or Custom Line Item.</p>
      * @param itemId value to be set
      */
-
+    
     public void setItemId(final String itemId);
+    
 
     /**
      * factory method
      * @return instance of GraphQLInvalidItemShippingDetailsError
      */
-    public static GraphQLInvalidItemShippingDetailsError of() {
+    public static GraphQLInvalidItemShippingDetailsError of(){
         return new GraphQLInvalidItemShippingDetailsErrorImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy GraphQLInvalidItemShippingDetailsError
@@ -102,8 +109,7 @@ public interface GraphQLInvalidItemShippingDetailsError extends GraphQLErrorObje
      * @return copy instance
      */
     @Nullable
-    public static GraphQLInvalidItemShippingDetailsError deepCopy(
-            @Nullable final GraphQLInvalidItemShippingDetailsError template) {
+    public static GraphQLInvalidItemShippingDetailsError deepCopy(@Nullable final GraphQLInvalidItemShippingDetailsError template) {
         if (template == null) {
             return null;
         }
@@ -121,16 +127,16 @@ public interface GraphQLInvalidItemShippingDetailsError extends GraphQLErrorObje
     public static GraphQLInvalidItemShippingDetailsErrorBuilder builder() {
         return GraphQLInvalidItemShippingDetailsErrorBuilder.of();
     }
-
+    
     /**
      * create builder for GraphQLInvalidItemShippingDetailsError instance
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static GraphQLInvalidItemShippingDetailsErrorBuilder builder(
-            final GraphQLInvalidItemShippingDetailsError template) {
+    public static GraphQLInvalidItemShippingDetailsErrorBuilder builder(final GraphQLInvalidItemShippingDetailsError template) {
         return GraphQLInvalidItemShippingDetailsErrorBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -138,11 +144,10 @@ public interface GraphQLInvalidItemShippingDetailsError extends GraphQLErrorObje
      * @param helper function to map the object
      * @return mapped value
      */
-    default <T> T withGraphQLInvalidItemShippingDetailsError(
-            Function<GraphQLInvalidItemShippingDetailsError, T> helper) {
+    default <T> T withGraphQLInvalidItemShippingDetailsError(Function<GraphQLInvalidItemShippingDetailsError, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

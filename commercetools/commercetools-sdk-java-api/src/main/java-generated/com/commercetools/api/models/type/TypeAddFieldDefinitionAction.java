@@ -1,18 +1,21 @@
-
 package com.commercetools.api.models.type;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
+import com.commercetools.api.models.type.FieldDefinition;
+import com.commercetools.api.models.type.TypeUpdateAction;
+import com.commercetools.api.models.type.TypeAddFieldDefinitionActionImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Defines a new field for a Type. Adding new required fields to a Type that is already referenced by existing entities can put those entities in a temporarily inconsistent state.</p>
@@ -26,9 +29,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .fieldDefinition(fieldDefinitionBuilder -> fieldDefinitionBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = TypeAddFieldDefinitionActionImpl.class)
 public interface TypeAddFieldDefinitionAction extends TypeUpdateAction {
 
@@ -50,16 +56,18 @@ public interface TypeAddFieldDefinitionAction extends TypeUpdateAction {
      *  <p>Value to append to the array.</p>
      * @param fieldDefinition value to be set
      */
-
+    
     public void setFieldDefinition(final FieldDefinition fieldDefinition);
+    
 
     /**
      * factory method
      * @return instance of TypeAddFieldDefinitionAction
      */
-    public static TypeAddFieldDefinitionAction of() {
+    public static TypeAddFieldDefinitionAction of(){
         return new TypeAddFieldDefinitionActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy TypeAddFieldDefinitionAction
@@ -83,8 +91,7 @@ public interface TypeAddFieldDefinitionAction extends TypeUpdateAction {
             return null;
         }
         TypeAddFieldDefinitionActionImpl instance = new TypeAddFieldDefinitionActionImpl();
-        instance.setFieldDefinition(
-            com.commercetools.api.models.type.FieldDefinition.deepCopy(template.getFieldDefinition()));
+        instance.setFieldDefinition(com.commercetools.api.models.type.FieldDefinition.deepCopy(template.getFieldDefinition()));
         return instance;
     }
 
@@ -95,7 +102,7 @@ public interface TypeAddFieldDefinitionAction extends TypeUpdateAction {
     public static TypeAddFieldDefinitionActionBuilder builder() {
         return TypeAddFieldDefinitionActionBuilder.of();
     }
-
+    
     /**
      * create builder for TypeAddFieldDefinitionAction instance
      * @param template instance with prefilled values for the builder
@@ -104,6 +111,7 @@ public interface TypeAddFieldDefinitionAction extends TypeUpdateAction {
     public static TypeAddFieldDefinitionActionBuilder builder(final TypeAddFieldDefinitionAction template) {
         return TypeAddFieldDefinitionActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -114,7 +122,7 @@ public interface TypeAddFieldDefinitionAction extends TypeUpdateAction {
     default <T> T withTypeAddFieldDefinitionAction(Function<TypeAddFieldDefinitionAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

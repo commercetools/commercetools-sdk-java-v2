@@ -1,10 +1,11 @@
-
 package com.commercetools.api.models.zone;
 
-import java.util.*;
-
+import com.commercetools.api.models.zone.ZoneUpdateAction;
+import com.commercetools.api.models.zone.ZoneSetKeyAction;
 import javax.annotation.Nullable;
-
+import java.util.*;
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -17,32 +18,39 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     ZoneSetKeyAction zoneSetKeyAction = ZoneSetKeyAction.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class ZoneSetKeyActionBuilder implements Builder<ZoneSetKeyAction> {
 
+    
     @Nullable
     private String key;
 
+    
     /**
      *  <p>If <code>key</code> is absent or <code>null</code>, the existing key, if any, will be removed.</p>
      * @param key value to be set
      * @return Builder
      */
-
+    
     public ZoneSetKeyActionBuilder key(@Nullable final String key) {
         this.key = key;
         return this;
     }
+    
+    
 
     /**
      *  <p>If <code>key</code> is absent or <code>null</code>, the existing key, if any, will be removed.</p>
      * @return key
      */
-
+    
     @Nullable
-    public String getKey() {
+    public String getKey(){
         return this.key;
     }
 
@@ -53,7 +61,7 @@ public class ZoneSetKeyActionBuilder implements Builder<ZoneSetKeyAction> {
     public ZoneSetKeyAction build() {
         return new ZoneSetKeyActionImpl(key);
     }
-
+    
     /**
      * builds ZoneSetKeyAction without checking for non-null required values
      * @return ZoneSetKeyAction
@@ -64,7 +72,7 @@ public class ZoneSetKeyActionBuilder implements Builder<ZoneSetKeyAction> {
 
     /**
      * factory method for an instance of ZoneSetKeyActionBuilder
-     * @return builder
+     * @return builder 
      */
     public static ZoneSetKeyActionBuilder of() {
         return new ZoneSetKeyActionBuilder();

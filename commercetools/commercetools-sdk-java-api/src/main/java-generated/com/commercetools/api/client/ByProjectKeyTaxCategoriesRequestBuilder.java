@@ -1,18 +1,26 @@
-
 package com.commercetools.api.client;
 
+import java.util.ArrayList;
+import java.util.List;
+import java.util.function.Function;
 import java.util.function.UnaryOperator;
 
 import io.vrap.rmf.base.client.ApiHttpClient;
+import io.vrap.rmf.base.client.ApiMethod;
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class ByProjectKeyTaxCategoriesRequestBuilder implements ByProjectKeyTaxCategoriesRequestBuilderMixin {
 
     private final ApiHttpClient apiHttpClient;
     private final String projectKey;
+    
 
-    public ByProjectKeyTaxCategoriesRequestBuilder(final ApiHttpClient apiHttpClient, final String projectKey) {
+    public ByProjectKeyTaxCategoriesRequestBuilder (final ApiHttpClient apiHttpClient,final String projectKey) {
         this.apiHttpClient = apiHttpClient;
         this.projectKey = projectKey;
     }
@@ -20,27 +28,28 @@ public class ByProjectKeyTaxCategoriesRequestBuilder implements ByProjectKeyTaxC
     public ByProjectKeyTaxCategoriesGet get() {
         return new ByProjectKeyTaxCategoriesGet(apiHttpClient, projectKey);
     }
-
-    public ByProjectKeyTaxCategoriesPost post(
-            com.commercetools.api.models.tax_category.TaxCategoryDraft taxCategoryDraft) {
+    
+    
+    
+    public ByProjectKeyTaxCategoriesPost post(com.commercetools.api.models.tax_category.TaxCategoryDraft taxCategoryDraft) {
         return new ByProjectKeyTaxCategoriesPost(apiHttpClient, projectKey, taxCategoryDraft);
     }
-
+    
+    
     public ByProjectKeyTaxCategoriesPostString post(final String taxCategoryDraft) {
         return new ByProjectKeyTaxCategoriesPostString(apiHttpClient, projectKey, taxCategoryDraft);
     }
-
-    public ByProjectKeyTaxCategoriesPost post(
-            UnaryOperator<com.commercetools.api.models.tax_category.TaxCategoryDraftBuilder> op) {
+    public ByProjectKeyTaxCategoriesPost post(UnaryOperator<com.commercetools.api.models.tax_category.TaxCategoryDraftBuilder> op) {
         return post(op.apply(com.commercetools.api.models.tax_category.TaxCategoryDraftBuilder.of()).build());
     }
 
+    
     public ByProjectKeyTaxCategoriesKeyByKeyRequestBuilder withKey(String key) {
         return new ByProjectKeyTaxCategoriesKeyByKeyRequestBuilder(apiHttpClient, projectKey, key);
     }
-
+    
     public ByProjectKeyTaxCategoriesByIDRequestBuilder withId(String ID) {
         return new ByProjectKeyTaxCategoriesByIDRequestBuilder(apiHttpClient, projectKey, ID);
     }
-
+    
 }

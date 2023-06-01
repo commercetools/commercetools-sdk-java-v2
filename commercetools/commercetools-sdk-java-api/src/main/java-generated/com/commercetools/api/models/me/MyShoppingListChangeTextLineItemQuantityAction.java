@@ -1,17 +1,20 @@
-
 package com.commercetools.api.models.me;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
+import com.commercetools.api.models.me.MyShoppingListUpdateAction;
+import com.commercetools.api.models.me.MyShoppingListChangeTextLineItemQuantityActionImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * MyShoppingListChangeTextLineItemQuantityAction
@@ -25,9 +28,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .quantity(0.3)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = MyShoppingListChangeTextLineItemQuantityActionImpl.class)
 public interface MyShoppingListChangeTextLineItemQuantityAction extends MyShoppingListUpdateAction {
 
@@ -43,7 +49,6 @@ public interface MyShoppingListChangeTextLineItemQuantityAction extends MyShoppi
     @NotNull
     @JsonProperty("textLineItemId")
     public String getTextLineItemId();
-
     /**
      *  <p>New value to set. If <code>0</code>, the TextLineItem is removed from the ShoppingList.</p>
      * @return quantity
@@ -56,31 +61,33 @@ public interface MyShoppingListChangeTextLineItemQuantityAction extends MyShoppi
      *  <p>The <code>id</code> of the TextLineItem to update.</p>
      * @param textLineItemId value to be set
      */
-
+    
     public void setTextLineItemId(final String textLineItemId);
-
+    
+    
     /**
      *  <p>New value to set. If <code>0</code>, the TextLineItem is removed from the ShoppingList.</p>
      * @param quantity value to be set
      */
-
+    
     public void setQuantity(final Long quantity);
+    
 
     /**
      * factory method
      * @return instance of MyShoppingListChangeTextLineItemQuantityAction
      */
-    public static MyShoppingListChangeTextLineItemQuantityAction of() {
+    public static MyShoppingListChangeTextLineItemQuantityAction of(){
         return new MyShoppingListChangeTextLineItemQuantityActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy MyShoppingListChangeTextLineItemQuantityAction
      * @param template instance to be copied
      * @return copy instance
      */
-    public static MyShoppingListChangeTextLineItemQuantityAction of(
-            final MyShoppingListChangeTextLineItemQuantityAction template) {
+    public static MyShoppingListChangeTextLineItemQuantityAction of(final MyShoppingListChangeTextLineItemQuantityAction template) {
         MyShoppingListChangeTextLineItemQuantityActionImpl instance = new MyShoppingListChangeTextLineItemQuantityActionImpl();
         instance.setTextLineItemId(template.getTextLineItemId());
         instance.setQuantity(template.getQuantity());
@@ -93,8 +100,7 @@ public interface MyShoppingListChangeTextLineItemQuantityAction extends MyShoppi
      * @return copy instance
      */
     @Nullable
-    public static MyShoppingListChangeTextLineItemQuantityAction deepCopy(
-            @Nullable final MyShoppingListChangeTextLineItemQuantityAction template) {
+    public static MyShoppingListChangeTextLineItemQuantityAction deepCopy(@Nullable final MyShoppingListChangeTextLineItemQuantityAction template) {
         if (template == null) {
             return null;
         }
@@ -111,16 +117,16 @@ public interface MyShoppingListChangeTextLineItemQuantityAction extends MyShoppi
     public static MyShoppingListChangeTextLineItemQuantityActionBuilder builder() {
         return MyShoppingListChangeTextLineItemQuantityActionBuilder.of();
     }
-
+    
     /**
      * create builder for MyShoppingListChangeTextLineItemQuantityAction instance
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static MyShoppingListChangeTextLineItemQuantityActionBuilder builder(
-            final MyShoppingListChangeTextLineItemQuantityAction template) {
+    public static MyShoppingListChangeTextLineItemQuantityActionBuilder builder(final MyShoppingListChangeTextLineItemQuantityAction template) {
         return MyShoppingListChangeTextLineItemQuantityActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -128,11 +134,10 @@ public interface MyShoppingListChangeTextLineItemQuantityAction extends MyShoppi
      * @param helper function to map the object
      * @return mapped value
      */
-    default <T> T withMyShoppingListChangeTextLineItemQuantityAction(
-            Function<MyShoppingListChangeTextLineItemQuantityAction, T> helper) {
+    default <T> T withMyShoppingListChangeTextLineItemQuantityAction(Function<MyShoppingListChangeTextLineItemQuantityAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

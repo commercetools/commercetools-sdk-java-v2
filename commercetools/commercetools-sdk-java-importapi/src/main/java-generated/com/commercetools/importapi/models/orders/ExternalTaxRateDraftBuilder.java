@@ -1,11 +1,11 @@
-
 package com.commercetools.importapi.models.orders;
 
+import com.commercetools.importapi.models.prices.SubRate;
+import com.commercetools.importapi.models.orders.ExternalTaxRateDraft;
+import javax.annotation.Nullable;
 import java.util.*;
 import java.util.function.Function;
-
-import javax.annotation.Nullable;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -20,226 +20,250 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .country("{country}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class ExternalTaxRateDraftBuilder implements Builder<ExternalTaxRateDraft> {
 
+    
+    
     private String name;
-
+    
+    
     @Nullable
     private Double amount;
-
+    
+    
+    
     private String country;
-
+    
+    
     @Nullable
     private String state;
-
+    
+    
     @Nullable
     private java.util.List<com.commercetools.importapi.models.prices.SubRate> subRates;
-
+    
+    
     @Nullable
     private Boolean includedInPrice;
 
+    
     /**
      * set the value to the name
      * @param name value to be set
      * @return Builder
      */
-
-    public ExternalTaxRateDraftBuilder name(final String name) {
+    
+    public ExternalTaxRateDraftBuilder name( final String name) {
         this.name = name;
         return this;
     }
-
+    
+    
+    
+    
     /**
      * set the value to the amount
      * @param amount value to be set
      * @return Builder
      */
-
+    
     public ExternalTaxRateDraftBuilder amount(@Nullable final Double amount) {
         this.amount = amount;
         return this;
     }
-
+    
+    
+    
+    
     /**
      * set the value to the country
      * @param country value to be set
      * @return Builder
      */
-
-    public ExternalTaxRateDraftBuilder country(final String country) {
+    
+    public ExternalTaxRateDraftBuilder country( final String country) {
         this.country = country;
         return this;
     }
-
+    
+    
+    
+    
     /**
      * set the value to the state
      * @param state value to be set
      * @return Builder
      */
-
+    
     public ExternalTaxRateDraftBuilder state(@Nullable final String state) {
         this.state = state;
         return this;
     }
-
+    
+    
+    
     /**
      * set values to the subRates
      * @param subRates value to be set
      * @return Builder
      */
-
-    public ExternalTaxRateDraftBuilder subRates(
-            @Nullable final com.commercetools.importapi.models.prices.SubRate... subRates) {
+    
+    public ExternalTaxRateDraftBuilder subRates(@Nullable final com.commercetools.importapi.models.prices.SubRate ...subRates) {
         this.subRates = new ArrayList<>(Arrays.asList(subRates));
         return this;
     }
-
+    
     /**
      * set value to the subRates
      * @param subRates value to be set
      * @return Builder
      */
-
-    public ExternalTaxRateDraftBuilder subRates(
-            @Nullable final java.util.List<com.commercetools.importapi.models.prices.SubRate> subRates) {
+    
+    public ExternalTaxRateDraftBuilder subRates(@Nullable final java.util.List<com.commercetools.importapi.models.prices.SubRate> subRates) {
         this.subRates = subRates;
         return this;
     }
-
+    
     /**
      * add values to the subRates
      * @param subRates value to be set
      * @return Builder
      */
-
-    public ExternalTaxRateDraftBuilder plusSubRates(
-            @Nullable final com.commercetools.importapi.models.prices.SubRate... subRates) {
+    
+    public ExternalTaxRateDraftBuilder plusSubRates(@Nullable final com.commercetools.importapi.models.prices.SubRate ...subRates) {
         if (this.subRates == null) {
             this.subRates = new ArrayList<>();
         }
         this.subRates.addAll(Arrays.asList(subRates));
         return this;
     }
-
+    
+    
+    
     /**
      * add the value to the subRates using the builder function
      * @param builder function to build the subRates value
      * @return Builder
      */
-
-    public ExternalTaxRateDraftBuilder plusSubRates(
-            Function<com.commercetools.importapi.models.prices.SubRateBuilder, com.commercetools.importapi.models.prices.SubRateBuilder> builder) {
+    
+    public ExternalTaxRateDraftBuilder plusSubRates(Function<com.commercetools.importapi.models.prices.SubRateBuilder, com.commercetools.importapi.models.prices.SubRateBuilder> builder) {
         if (this.subRates == null) {
             this.subRates = new ArrayList<>();
         }
         this.subRates.add(builder.apply(com.commercetools.importapi.models.prices.SubRateBuilder.of()).build());
         return this;
     }
-
+    
     /**
      * set the value to the subRates using the builder function
      * @param builder function to build the subRates value
      * @return Builder
      */
-
-    public ExternalTaxRateDraftBuilder withSubRates(
-            Function<com.commercetools.importapi.models.prices.SubRateBuilder, com.commercetools.importapi.models.prices.SubRateBuilder> builder) {
+    
+    public ExternalTaxRateDraftBuilder withSubRates(Function<com.commercetools.importapi.models.prices.SubRateBuilder, com.commercetools.importapi.models.prices.SubRateBuilder> builder) {
         this.subRates = new ArrayList<>();
         this.subRates.add(builder.apply(com.commercetools.importapi.models.prices.SubRateBuilder.of()).build());
         return this;
     }
-
+    
     /**
      * add the value to the subRates using the builder function
      * @param builder function to build the subRates value
      * @return Builder
      */
-
-    public ExternalTaxRateDraftBuilder addSubRates(
-            Function<com.commercetools.importapi.models.prices.SubRateBuilder, com.commercetools.importapi.models.prices.SubRate> builder) {
+    
+    public ExternalTaxRateDraftBuilder addSubRates(Function<com.commercetools.importapi.models.prices.SubRateBuilder, com.commercetools.importapi.models.prices.SubRate> builder) {
         return plusSubRates(builder.apply(com.commercetools.importapi.models.prices.SubRateBuilder.of()));
     }
-
+    
     /**
      * set the value to the subRates using the builder function
      * @param builder function to build the subRates value
      * @return Builder
      */
-
-    public ExternalTaxRateDraftBuilder setSubRates(
-            Function<com.commercetools.importapi.models.prices.SubRateBuilder, com.commercetools.importapi.models.prices.SubRate> builder) {
+    
+    public ExternalTaxRateDraftBuilder setSubRates(Function<com.commercetools.importapi.models.prices.SubRateBuilder, com.commercetools.importapi.models.prices.SubRate> builder) {
         return subRates(builder.apply(com.commercetools.importapi.models.prices.SubRateBuilder.of()));
     }
-
+                    
+    
+    
     /**
      * set the value to the includedInPrice
      * @param includedInPrice value to be set
      * @return Builder
      */
-
+    
     public ExternalTaxRateDraftBuilder includedInPrice(@Nullable final Boolean includedInPrice) {
         this.includedInPrice = includedInPrice;
         return this;
     }
+    
+    
 
     /**
      * value of name}
      * @return name
      */
-
-    public String getName() {
+    
+    
+    public String getName(){
         return this.name;
     }
-
+    
     /**
      * value of amount}
      * @return amount
      */
-
+    
     @Nullable
-    public Double getAmount() {
+    public Double getAmount(){
         return this.amount;
     }
-
+    
     /**
      * value of country}
      * @return country
      */
-
-    public String getCountry() {
+    
+    
+    public String getCountry(){
         return this.country;
     }
-
+    
     /**
      * value of state}
      * @return state
      */
-
+    
     @Nullable
-    public String getState() {
+    public String getState(){
         return this.state;
     }
-
+    
     /**
      * value of subRates}
      * @return subRates
      */
-
+    
     @Nullable
-    public java.util.List<com.commercetools.importapi.models.prices.SubRate> getSubRates() {
+    public java.util.List<com.commercetools.importapi.models.prices.SubRate> getSubRates(){
         return this.subRates;
     }
-
+    
     /**
      * value of includedInPrice}
      * @return includedInPrice
      */
-
+    
     @Nullable
-    public Boolean getIncludedInPrice() {
+    public Boolean getIncludedInPrice(){
         return this.includedInPrice;
     }
 
@@ -252,7 +276,7 @@ public class ExternalTaxRateDraftBuilder implements Builder<ExternalTaxRateDraft
         Objects.requireNonNull(country, ExternalTaxRateDraft.class + ": country is missing");
         return new ExternalTaxRateDraftImpl(name, amount, country, state, subRates, includedInPrice);
     }
-
+    
     /**
      * builds ExternalTaxRateDraft without checking for non-null required values
      * @return ExternalTaxRateDraft
@@ -263,7 +287,7 @@ public class ExternalTaxRateDraftBuilder implements Builder<ExternalTaxRateDraft
 
     /**
      * factory method for an instance of ExternalTaxRateDraftBuilder
-     * @return builder
+     * @return builder 
      */
     public static ExternalTaxRateDraftBuilder of() {
         return new ExternalTaxRateDraftBuilder();

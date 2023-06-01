@@ -1,9 +1,11 @@
-
 package com.commercetools.api.predicates.query.project;
 
 import com.commercetools.api.predicates.query.*;
 
-public class ProjectChangeNameActionQueryBuilderDsl {
+import java.util.function.Function;
+
+
+public class ProjectChangeNameActionQueryBuilderDsl  {
     public ProjectChangeNameActionQueryBuilderDsl() {
     }
 
@@ -12,15 +14,12 @@ public class ProjectChangeNameActionQueryBuilderDsl {
     }
 
     public StringComparisonPredicateBuilder<ProjectChangeNameActionQueryBuilderDsl> action() {
-        return new StringComparisonPredicateBuilder<>(
-            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("action")),
-            p -> new CombinationQueryPredicate<>(p, ProjectChangeNameActionQueryBuilderDsl::of));
+        return new StringComparisonPredicateBuilder<>(BinaryQueryPredicate.of().left(new ConstantQueryPredicate("action")),
+        p -> new CombinationQueryPredicate<>(p, ProjectChangeNameActionQueryBuilderDsl::of));
     }
-
     public StringComparisonPredicateBuilder<ProjectChangeNameActionQueryBuilderDsl> name() {
-        return new StringComparisonPredicateBuilder<>(
-            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("name")),
-            p -> new CombinationQueryPredicate<>(p, ProjectChangeNameActionQueryBuilderDsl::of));
+        return new StringComparisonPredicateBuilder<>(BinaryQueryPredicate.of().left(new ConstantQueryPredicate("name")),
+        p -> new CombinationQueryPredicate<>(p, ProjectChangeNameActionQueryBuilderDsl::of));
     }
-
+    
 }

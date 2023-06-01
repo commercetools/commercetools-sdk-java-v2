@@ -1,9 +1,12 @@
-
 package com.commercetools.api.models.message;
 
+import com.commercetools.api.models.common.Price;
+import com.commercetools.api.models.message.MessagePayload;
+import com.commercetools.api.models.message.ProductPriceAddedMessagePayload;
+import javax.annotation.Nullable;
 import java.util.*;
 import java.util.function.Function;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -19,98 +22,117 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .staged(true)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class ProductPriceAddedMessagePayloadBuilder implements Builder<ProductPriceAddedMessagePayload> {
 
+    
+    
     private Long variantId;
-
+    
+    
+    
     private com.commercetools.api.models.common.Price price;
-
+    
+    
+    
     private Boolean staged;
 
+    
     /**
      *  <p>Unique identifier of the ProductVariant for which the Price was added.</p>
      * @param variantId value to be set
      * @return Builder
      */
-
-    public ProductPriceAddedMessagePayloadBuilder variantId(final Long variantId) {
+    
+    public ProductPriceAddedMessagePayloadBuilder variantId( final Long variantId) {
         this.variantId = variantId;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>The Embedded Price that was added to the ProductVariant.</p>
      * @param builder function to build the price value
      * @return Builder
      */
-
-    public ProductPriceAddedMessagePayloadBuilder price(
-            Function<com.commercetools.api.models.common.PriceBuilder, com.commercetools.api.models.common.PriceBuilder> builder) {
+    
+    public ProductPriceAddedMessagePayloadBuilder price(Function<com.commercetools.api.models.common.PriceBuilder, com.commercetools.api.models.common.PriceBuilder> builder) {
         this.price = builder.apply(com.commercetools.api.models.common.PriceBuilder.of()).build();
         return this;
     }
-
+    
     /**
      *  <p>The Embedded Price that was added to the ProductVariant.</p>
      * @param builder function to build the price value
      * @return Builder
      */
-
-    public ProductPriceAddedMessagePayloadBuilder withPrice(
-            Function<com.commercetools.api.models.common.PriceBuilder, com.commercetools.api.models.common.Price> builder) {
+    
+    public ProductPriceAddedMessagePayloadBuilder withPrice(Function<com.commercetools.api.models.common.PriceBuilder, com.commercetools.api.models.common.Price> builder) {
         this.price = builder.apply(com.commercetools.api.models.common.PriceBuilder.of());
         return this;
     }
-
+                    
     /**
      *  <p>The Embedded Price that was added to the ProductVariant.</p>
      * @param price value to be set
      * @return Builder
      */
-
-    public ProductPriceAddedMessagePayloadBuilder price(final com.commercetools.api.models.common.Price price) {
+    
+    public ProductPriceAddedMessagePayloadBuilder price( final com.commercetools.api.models.common.Price price) {
         this.price = price;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Whether the update was only applied to the staged Product Projection.</p>
      * @param staged value to be set
      * @return Builder
      */
-
-    public ProductPriceAddedMessagePayloadBuilder staged(final Boolean staged) {
+    
+    public ProductPriceAddedMessagePayloadBuilder staged( final Boolean staged) {
         this.staged = staged;
         return this;
     }
+    
+    
 
     /**
      *  <p>Unique identifier of the ProductVariant for which the Price was added.</p>
      * @return variantId
      */
-
-    public Long getVariantId() {
+    
+    
+    public Long getVariantId(){
         return this.variantId;
     }
-
+    
     /**
      *  <p>The Embedded Price that was added to the ProductVariant.</p>
      * @return price
      */
-
-    public com.commercetools.api.models.common.Price getPrice() {
+    
+    
+    public com.commercetools.api.models.common.Price getPrice(){
         return this.price;
     }
-
+    
     /**
      *  <p>Whether the update was only applied to the staged Product Projection.</p>
      * @return staged
      */
-
-    public Boolean getStaged() {
+    
+    
+    public Boolean getStaged(){
         return this.staged;
     }
 
@@ -124,7 +146,7 @@ public class ProductPriceAddedMessagePayloadBuilder implements Builder<ProductPr
         Objects.requireNonNull(staged, ProductPriceAddedMessagePayload.class + ": staged is missing");
         return new ProductPriceAddedMessagePayloadImpl(variantId, price, staged);
     }
-
+    
     /**
      * builds ProductPriceAddedMessagePayload without checking for non-null required values
      * @return ProductPriceAddedMessagePayload
@@ -135,7 +157,7 @@ public class ProductPriceAddedMessagePayloadBuilder implements Builder<ProductPr
 
     /**
      * factory method for an instance of ProductPriceAddedMessagePayloadBuilder
-     * @return builder
+     * @return builder 
      */
     public static ProductPriceAddedMessagePayloadBuilder of() {
         return new ProductPriceAddedMessagePayloadBuilder();

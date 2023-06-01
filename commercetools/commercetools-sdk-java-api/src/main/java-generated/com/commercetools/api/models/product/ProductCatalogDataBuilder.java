@@ -1,9 +1,11 @@
-
 package com.commercetools.api.models.product;
 
+import com.commercetools.api.models.product.ProductData;
+import com.commercetools.api.models.product.ProductCatalogData;
+import javax.annotation.Nullable;
 import java.util.*;
 import java.util.function.Function;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -20,144 +22,167 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .hasStagedChanges(true)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class ProductCatalogDataBuilder implements Builder<ProductCatalogData> {
 
+    
+    
     private Boolean published;
-
+    
+    
+    
     private com.commercetools.api.models.product.ProductData current;
-
+    
+    
+    
     private com.commercetools.api.models.product.ProductData staged;
-
+    
+    
+    
     private Boolean hasStagedChanges;
 
+    
     /**
      *  <p><code>true</code> if the Product is published.</p>
      * @param published value to be set
      * @return Builder
      */
-
-    public ProductCatalogDataBuilder published(final Boolean published) {
+    
+    public ProductCatalogDataBuilder published( final Boolean published) {
         this.published = published;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Current (published) data of the Product.</p>
      * @param builder function to build the current value
      * @return Builder
      */
-
-    public ProductCatalogDataBuilder current(
-            Function<com.commercetools.api.models.product.ProductDataBuilder, com.commercetools.api.models.product.ProductDataBuilder> builder) {
+    
+    public ProductCatalogDataBuilder current(Function<com.commercetools.api.models.product.ProductDataBuilder, com.commercetools.api.models.product.ProductDataBuilder> builder) {
         this.current = builder.apply(com.commercetools.api.models.product.ProductDataBuilder.of()).build();
         return this;
     }
-
+    
     /**
      *  <p>Current (published) data of the Product.</p>
      * @param builder function to build the current value
      * @return Builder
      */
-
-    public ProductCatalogDataBuilder withCurrent(
-            Function<com.commercetools.api.models.product.ProductDataBuilder, com.commercetools.api.models.product.ProductData> builder) {
+    
+    public ProductCatalogDataBuilder withCurrent(Function<com.commercetools.api.models.product.ProductDataBuilder, com.commercetools.api.models.product.ProductData> builder) {
         this.current = builder.apply(com.commercetools.api.models.product.ProductDataBuilder.of());
         return this;
     }
-
+                    
     /**
      *  <p>Current (published) data of the Product.</p>
      * @param current value to be set
      * @return Builder
      */
-
-    public ProductCatalogDataBuilder current(final com.commercetools.api.models.product.ProductData current) {
+    
+    public ProductCatalogDataBuilder current( final com.commercetools.api.models.product.ProductData current) {
         this.current = current;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Staged (unpublished) data of the Product.</p>
      * @param builder function to build the staged value
      * @return Builder
      */
-
-    public ProductCatalogDataBuilder staged(
-            Function<com.commercetools.api.models.product.ProductDataBuilder, com.commercetools.api.models.product.ProductDataBuilder> builder) {
+    
+    public ProductCatalogDataBuilder staged(Function<com.commercetools.api.models.product.ProductDataBuilder, com.commercetools.api.models.product.ProductDataBuilder> builder) {
         this.staged = builder.apply(com.commercetools.api.models.product.ProductDataBuilder.of()).build();
         return this;
     }
-
+    
     /**
      *  <p>Staged (unpublished) data of the Product.</p>
      * @param builder function to build the staged value
      * @return Builder
      */
-
-    public ProductCatalogDataBuilder withStaged(
-            Function<com.commercetools.api.models.product.ProductDataBuilder, com.commercetools.api.models.product.ProductData> builder) {
+    
+    public ProductCatalogDataBuilder withStaged(Function<com.commercetools.api.models.product.ProductDataBuilder, com.commercetools.api.models.product.ProductData> builder) {
         this.staged = builder.apply(com.commercetools.api.models.product.ProductDataBuilder.of());
         return this;
     }
-
+                    
     /**
      *  <p>Staged (unpublished) data of the Product.</p>
      * @param staged value to be set
      * @return Builder
      */
-
-    public ProductCatalogDataBuilder staged(final com.commercetools.api.models.product.ProductData staged) {
+    
+    public ProductCatalogDataBuilder staged( final com.commercetools.api.models.product.ProductData staged) {
         this.staged = staged;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p><code>true</code> if the <code>staged</code> data is different from the <code>current</code> data.</p>
      * @param hasStagedChanges value to be set
      * @return Builder
      */
-
-    public ProductCatalogDataBuilder hasStagedChanges(final Boolean hasStagedChanges) {
+    
+    public ProductCatalogDataBuilder hasStagedChanges( final Boolean hasStagedChanges) {
         this.hasStagedChanges = hasStagedChanges;
         return this;
     }
+    
+    
 
     /**
      *  <p><code>true</code> if the Product is published.</p>
      * @return published
      */
-
-    public Boolean getPublished() {
+    
+    
+    public Boolean getPublished(){
         return this.published;
     }
-
+    
     /**
      *  <p>Current (published) data of the Product.</p>
      * @return current
      */
-
-    public com.commercetools.api.models.product.ProductData getCurrent() {
+    
+    
+    public com.commercetools.api.models.product.ProductData getCurrent(){
         return this.current;
     }
-
+    
     /**
      *  <p>Staged (unpublished) data of the Product.</p>
      * @return staged
      */
-
-    public com.commercetools.api.models.product.ProductData getStaged() {
+    
+    
+    public com.commercetools.api.models.product.ProductData getStaged(){
         return this.staged;
     }
-
+    
     /**
      *  <p><code>true</code> if the <code>staged</code> data is different from the <code>current</code> data.</p>
      * @return hasStagedChanges
      */
-
-    public Boolean getHasStagedChanges() {
+    
+    
+    public Boolean getHasStagedChanges(){
         return this.hasStagedChanges;
     }
 
@@ -172,7 +197,7 @@ public class ProductCatalogDataBuilder implements Builder<ProductCatalogData> {
         Objects.requireNonNull(hasStagedChanges, ProductCatalogData.class + ": hasStagedChanges is missing");
         return new ProductCatalogDataImpl(published, current, staged, hasStagedChanges);
     }
-
+    
     /**
      * builds ProductCatalogData without checking for non-null required values
      * @return ProductCatalogData
@@ -183,7 +208,7 @@ public class ProductCatalogDataBuilder implements Builder<ProductCatalogData> {
 
     /**
      * factory method for an instance of ProductCatalogDataBuilder
-     * @return builder
+     * @return builder 
      */
     public static ProductCatalogDataBuilder of() {
         return new ProductCatalogDataBuilder();

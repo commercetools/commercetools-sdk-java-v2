@@ -1,17 +1,20 @@
-
 package com.commercetools.api.models.error;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
+import com.commercetools.api.models.error.ErrorObject;
+import com.commercetools.api.models.error.NoMatchingProductDiscountFoundErrorImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Returned when a Product Discount could not be found that could be applied to the Price of a Product Variant.</p>
@@ -25,9 +28,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .message("{message}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = NoMatchingProductDiscountFoundErrorImpl.class)
 public interface NoMatchingProductDiscountFoundError extends ErrorObject {
 
@@ -43,7 +49,6 @@ public interface NoMatchingProductDiscountFoundError extends ErrorObject {
     @NotNull
     @JsonProperty("code")
     public String getCode();
-
     /**
      *  <p><code>"Couldn't find a matching product discount for: productId=$productId, variantId=$variantId, price=$price."</code></p>
      * @return message
@@ -56,16 +61,18 @@ public interface NoMatchingProductDiscountFoundError extends ErrorObject {
      *  <p><code>"Couldn't find a matching product discount for: productId=$productId, variantId=$variantId, price=$price."</code></p>
      * @param message value to be set
      */
-
+    
     public void setMessage(final String message);
+    
 
     /**
      * factory method
      * @return instance of NoMatchingProductDiscountFoundError
      */
-    public static NoMatchingProductDiscountFoundError of() {
+    public static NoMatchingProductDiscountFoundError of(){
         return new NoMatchingProductDiscountFoundErrorImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy NoMatchingProductDiscountFoundError
@@ -85,8 +92,7 @@ public interface NoMatchingProductDiscountFoundError extends ErrorObject {
      * @return copy instance
      */
     @Nullable
-    public static NoMatchingProductDiscountFoundError deepCopy(
-            @Nullable final NoMatchingProductDiscountFoundError template) {
+    public static NoMatchingProductDiscountFoundError deepCopy(@Nullable final NoMatchingProductDiscountFoundError template) {
         if (template == null) {
             return null;
         }
@@ -103,16 +109,16 @@ public interface NoMatchingProductDiscountFoundError extends ErrorObject {
     public static NoMatchingProductDiscountFoundErrorBuilder builder() {
         return NoMatchingProductDiscountFoundErrorBuilder.of();
     }
-
+    
     /**
      * create builder for NoMatchingProductDiscountFoundError instance
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static NoMatchingProductDiscountFoundErrorBuilder builder(
-            final NoMatchingProductDiscountFoundError template) {
+    public static NoMatchingProductDiscountFoundErrorBuilder builder(final NoMatchingProductDiscountFoundError template) {
         return NoMatchingProductDiscountFoundErrorBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -123,7 +129,7 @@ public interface NoMatchingProductDiscountFoundError extends ErrorObject {
     default <T> T withNoMatchingProductDiscountFoundError(Function<NoMatchingProductDiscountFoundError, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

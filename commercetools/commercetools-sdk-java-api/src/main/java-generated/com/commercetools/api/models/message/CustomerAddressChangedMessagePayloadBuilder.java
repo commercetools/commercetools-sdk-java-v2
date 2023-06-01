@@ -1,9 +1,12 @@
-
 package com.commercetools.api.models.message;
 
+import com.commercetools.api.models.common.Address;
+import com.commercetools.api.models.message.MessagePayload;
+import com.commercetools.api.models.message.CustomerAddressChangedMessagePayload;
+import javax.annotation.Nullable;
 import java.util.*;
 import java.util.function.Function;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -17,55 +20,61 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .address(addressBuilder -> addressBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class CustomerAddressChangedMessagePayloadBuilder implements Builder<CustomerAddressChangedMessagePayload> {
 
+    
+    
     private com.commercetools.api.models.common.Address address;
 
+    
     /**
      *  <p>Address that was set during the Change Address update action.</p>
      * @param builder function to build the address value
      * @return Builder
      */
-
-    public CustomerAddressChangedMessagePayloadBuilder address(
-            Function<com.commercetools.api.models.common.AddressBuilder, com.commercetools.api.models.common.AddressBuilder> builder) {
+    
+    public CustomerAddressChangedMessagePayloadBuilder address(Function<com.commercetools.api.models.common.AddressBuilder, com.commercetools.api.models.common.AddressBuilder> builder) {
         this.address = builder.apply(com.commercetools.api.models.common.AddressBuilder.of()).build();
         return this;
     }
-
+    
     /**
      *  <p>Address that was set during the Change Address update action.</p>
      * @param builder function to build the address value
      * @return Builder
      */
-
-    public CustomerAddressChangedMessagePayloadBuilder withAddress(
-            Function<com.commercetools.api.models.common.AddressBuilder, com.commercetools.api.models.common.Address> builder) {
+    
+    public CustomerAddressChangedMessagePayloadBuilder withAddress(Function<com.commercetools.api.models.common.AddressBuilder, com.commercetools.api.models.common.Address> builder) {
         this.address = builder.apply(com.commercetools.api.models.common.AddressBuilder.of());
         return this;
     }
-
+                    
     /**
      *  <p>Address that was set during the Change Address update action.</p>
      * @param address value to be set
      * @return Builder
      */
-
-    public CustomerAddressChangedMessagePayloadBuilder address(
-            final com.commercetools.api.models.common.Address address) {
+    
+    public CustomerAddressChangedMessagePayloadBuilder address( final com.commercetools.api.models.common.Address address) {
         this.address = address;
         return this;
     }
+    
+    
 
     /**
      *  <p>Address that was set during the Change Address update action.</p>
      * @return address
      */
-
-    public com.commercetools.api.models.common.Address getAddress() {
+    
+    
+    public com.commercetools.api.models.common.Address getAddress(){
         return this.address;
     }
 
@@ -77,7 +86,7 @@ public class CustomerAddressChangedMessagePayloadBuilder implements Builder<Cust
         Objects.requireNonNull(address, CustomerAddressChangedMessagePayload.class + ": address is missing");
         return new CustomerAddressChangedMessagePayloadImpl(address);
     }
-
+    
     /**
      * builds CustomerAddressChangedMessagePayload without checking for non-null required values
      * @return CustomerAddressChangedMessagePayload
@@ -88,7 +97,7 @@ public class CustomerAddressChangedMessagePayloadBuilder implements Builder<Cust
 
     /**
      * factory method for an instance of CustomerAddressChangedMessagePayloadBuilder
-     * @return builder
+     * @return builder 
      */
     public static CustomerAddressChangedMessagePayloadBuilder of() {
         return new CustomerAddressChangedMessagePayloadBuilder();

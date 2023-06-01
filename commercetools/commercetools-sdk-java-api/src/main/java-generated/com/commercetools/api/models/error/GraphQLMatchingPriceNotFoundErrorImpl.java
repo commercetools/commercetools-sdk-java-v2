@@ -1,16 +1,21 @@
-
 package com.commercetools.api.models.error;
 
-import java.time.*;
-import java.util.*;
-
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
-
-import io.vrap.rmf.base.client.ModelBase;
+import com.commercetools.api.models.channel.ChannelReference;
+import com.commercetools.api.models.customer_group.CustomerGroupReference;
+import com.commercetools.api.models.error.GraphQLErrorObject;
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.ModelBase;
+import javax.validation.Valid;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.annotation.*;
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
@@ -24,34 +29,41 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
  *   <li>Create Order from Cart and Create Order in Store from Cart requests on My Orders.</li>
  *  </ul>
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class GraphQLMatchingPriceNotFoundErrorImpl implements GraphQLMatchingPriceNotFoundError, ModelBase {
 
+    
     private String code;
-
+    
+    
     private Map<String, java.lang.Object> values;
-
+    
+    
     private String productId;
-
+    
+    
     private Integer variantId;
-
+    
+    
     private String currency;
-
+    
+    
     private String country;
-
+    
+    
     private com.commercetools.api.models.customer_group.CustomerGroupReference customerGroup;
-
+    
+    
     private com.commercetools.api.models.channel.ChannelReference channel;
 
     /**
      * create instance with all properties
      */
     @JsonCreator
-    GraphQLMatchingPriceNotFoundErrorImpl(@JsonProperty("values") final Map<String, java.lang.Object> values,
-            @JsonProperty("productId") final String productId, @JsonProperty("variantId") final Integer variantId,
-            @JsonProperty("currency") final String currency, @JsonProperty("country") final String country,
-            @JsonProperty("customerGroup") final com.commercetools.api.models.customer_group.CustomerGroupReference customerGroup,
-            @JsonProperty("channel") final com.commercetools.api.models.channel.ChannelReference channel) {
+    GraphQLMatchingPriceNotFoundErrorImpl(@JsonProperty("values") final Map<String, java.lang.Object> values, @JsonProperty("productId") final String productId, @JsonProperty("variantId") final Integer variantId, @JsonProperty("currency") final String currency, @JsonProperty("country") final String country, @JsonProperty("customerGroup") final com.commercetools.api.models.customer_group.CustomerGroupReference customerGroup, @JsonProperty("channel") final com.commercetools.api.models.channel.ChannelReference channel) {
         this.values = values;
         this.productId = productId;
         this.variantId = variantId;
@@ -59,123 +71,127 @@ public class GraphQLMatchingPriceNotFoundErrorImpl implements GraphQLMatchingPri
         this.country = country;
         this.customerGroup = customerGroup;
         this.channel = channel;
-        this.code = MATCHING_PRICE_NOT_FOUND;
+        this.code =  MATCHING_PRICE_NOT_FOUND;
     }
-
     /**
      * create empty instance
      */
     public GraphQLMatchingPriceNotFoundErrorImpl() {
-        this.code = MATCHING_PRICE_NOT_FOUND;
+        this.code =  MATCHING_PRICE_NOT_FOUND;
     }
 
     /**
      *
      */
-
-    public String getCode() {
+    
+    public String getCode(){
         return this.code;
     }
-
+    
     /**
      *  <p>Error-specific additional fields.</p>
      */
-
-    public Map<String, java.lang.Object> values() {
+    
+    public Map<String,java.lang.Object> values() {
         return values;
     }
-
+    
     /**
      *  <p>Unique identifier of a Product.</p>
      */
-
-    public String getProductId() {
+    
+    public String getProductId(){
         return this.productId;
     }
-
+    
     /**
      *  <p>Unique identifier of a ProductVariant in the Product.</p>
      */
-
-    public Integer getVariantId() {
+    
+    public Integer getVariantId(){
         return this.variantId;
     }
-
+    
     /**
      *  <p>Currency code of the country.</p>
      */
-
-    public String getCurrency() {
+    
+    public String getCurrency(){
         return this.currency;
     }
-
+    
     /**
      *  <p>Country code of the geographic location.</p>
      */
-
-    public String getCountry() {
+    
+    public String getCountry(){
         return this.country;
     }
-
+    
     /**
      *  <p>Customer Group associated with the Price.</p>
      */
-
-    public com.commercetools.api.models.customer_group.CustomerGroupReference getCustomerGroup() {
+    
+    public com.commercetools.api.models.customer_group.CustomerGroupReference getCustomerGroup(){
         return this.customerGroup;
     }
-
+    
     /**
      *  <p>Channel associated with the Price.</p>
      */
-
-    public com.commercetools.api.models.channel.ChannelReference getChannel() {
+    
+    public com.commercetools.api.models.channel.ChannelReference getChannel(){
         return this.channel;
     }
 
+    
     public void setValue(String key, java.lang.Object value) {
         if (values == null) {
             values = new HashMap<>();
         }
         values.put(key, value);
     }
-
-    public void setProductId(final String productId) {
+    
+    
+    public void setProductId(final String productId){
         this.productId = productId;
     }
-
-    public void setVariantId(final Integer variantId) {
+    
+    
+    public void setVariantId(final Integer variantId){
         this.variantId = variantId;
     }
-
-    public void setCurrency(final String currency) {
+    
+    
+    public void setCurrency(final String currency){
         this.currency = currency;
     }
-
-    public void setCountry(final String country) {
+    
+    
+    public void setCountry(final String country){
         this.country = country;
     }
-
-    public void setCustomerGroup(
-            final com.commercetools.api.models.customer_group.CustomerGroupReference customerGroup) {
+    
+    
+    public void setCustomerGroup(final com.commercetools.api.models.customer_group.CustomerGroupReference customerGroup){
         this.customerGroup = customerGroup;
     }
-
-    public void setChannel(final com.commercetools.api.models.channel.ChannelReference channel) {
+    
+    
+    public void setChannel(final com.commercetools.api.models.channel.ChannelReference channel){
         this.channel = channel;
     }
 
     @Override
     public boolean equals(Object o) {
-        if (this == o)
-            return true;
-
-        if (o == null || getClass() != o.getClass())
-            return false;
-
+        if (this == o) return true;
+    
+        if (o == null || getClass() != o.getClass()) return false;
+    
         GraphQLMatchingPriceNotFoundErrorImpl that = (GraphQLMatchingPriceNotFoundErrorImpl) o;
-
-        return new EqualsBuilder().append(code, that.code)
+    
+        return new EqualsBuilder()
+                .append(code, that.code)
                 .append(values, that.values)
                 .append(productId, that.productId)
                 .append(variantId, that.variantId)
@@ -185,18 +201,19 @@ public class GraphQLMatchingPriceNotFoundErrorImpl implements GraphQLMatchingPri
                 .append(channel, that.channel)
                 .isEquals();
     }
-
+    
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(code)
-                .append(values)
-                .append(productId)
-                .append(variantId)
-                .append(currency)
-                .append(country)
-                .append(customerGroup)
-                .append(channel)
-                .toHashCode();
+        return new HashCodeBuilder(17, 37)
+            .append(code)
+            .append(values)
+            .append(productId)
+            .append(variantId)
+            .append(currency)
+            .append(country)
+            .append(customerGroup)
+            .append(channel)
+            .toHashCode();
     }
 
 }

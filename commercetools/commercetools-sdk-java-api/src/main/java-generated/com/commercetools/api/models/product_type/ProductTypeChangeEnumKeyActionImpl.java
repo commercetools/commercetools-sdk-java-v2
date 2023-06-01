@@ -1,16 +1,19 @@
-
 package com.commercetools.api.models.product_type;
 
-import java.time.*;
-import java.util.*;
-
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
-
-import io.vrap.rmf.base.client.ModelBase;
+import com.commercetools.api.models.product_type.ProductTypeUpdateAction;
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.ModelBase;
+import javax.validation.Valid;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.annotation.*;
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
@@ -19,100 +22,112 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
  *  <p>If the AttributeDefinition does not contain an enum with the referenced key, a EnumKeyDoesNotExist error is returned.</p>
  *  <p>All Products will be updated to the new key in an eventually consistent way.</p>
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class ProductTypeChangeEnumKeyActionImpl implements ProductTypeChangeEnumKeyAction, ModelBase {
 
+    
     private String action;
-
+    
+    
     private String attributeName;
-
+    
+    
     private String key;
-
+    
+    
     private String newKey;
 
     /**
      * create instance with all properties
      */
     @JsonCreator
-    ProductTypeChangeEnumKeyActionImpl(@JsonProperty("attributeName") final String attributeName,
-            @JsonProperty("key") final String key, @JsonProperty("newKey") final String newKey) {
+    ProductTypeChangeEnumKeyActionImpl(@JsonProperty("attributeName") final String attributeName, @JsonProperty("key") final String key, @JsonProperty("newKey") final String newKey) {
         this.attributeName = attributeName;
         this.key = key;
         this.newKey = newKey;
-        this.action = CHANGE_ENUM_KEY;
+        this.action =  CHANGE_ENUM_KEY;
     }
-
     /**
      * create empty instance
      */
     public ProductTypeChangeEnumKeyActionImpl() {
-        this.action = CHANGE_ENUM_KEY;
+        this.action =  CHANGE_ENUM_KEY;
     }
 
     /**
      *
      */
-
-    public String getAction() {
+    
+    public String getAction(){
         return this.action;
     }
-
+    
     /**
      *  <p>Name of the AttributeDefinition to update.</p>
      */
-
-    public String getAttributeName() {
+    
+    public String getAttributeName(){
         return this.attributeName;
     }
-
+    
     /**
      *  <p>Existing key to be changed.</p>
      */
-
-    public String getKey() {
+    
+    public String getKey(){
         return this.key;
     }
-
+    
     /**
      *  <p>New key to be set.</p>
      */
-
-    public String getNewKey() {
+    
+    public String getNewKey(){
         return this.newKey;
     }
 
-    public void setAttributeName(final String attributeName) {
+    
+    public void setAttributeName(final String attributeName){
         this.attributeName = attributeName;
     }
-
-    public void setKey(final String key) {
+    
+    
+    public void setKey(final String key){
         this.key = key;
     }
-
-    public void setNewKey(final String newKey) {
+    
+    
+    public void setNewKey(final String newKey){
         this.newKey = newKey;
     }
 
     @Override
     public boolean equals(Object o) {
-        if (this == o)
-            return true;
-
-        if (o == null || getClass() != o.getClass())
-            return false;
-
+        if (this == o) return true;
+    
+        if (o == null || getClass() != o.getClass()) return false;
+    
         ProductTypeChangeEnumKeyActionImpl that = (ProductTypeChangeEnumKeyActionImpl) o;
-
-        return new EqualsBuilder().append(action, that.action)
+    
+        return new EqualsBuilder()
+                .append(action, that.action)
                 .append(attributeName, that.attributeName)
                 .append(key, that.key)
                 .append(newKey, that.newKey)
                 .isEquals();
     }
-
+    
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(action).append(attributeName).append(key).append(newKey).toHashCode();
+        return new HashCodeBuilder(17, 37)
+            .append(action)
+            .append(attributeName)
+            .append(key)
+            .append(newKey)
+            .toHashCode();
     }
 
 }

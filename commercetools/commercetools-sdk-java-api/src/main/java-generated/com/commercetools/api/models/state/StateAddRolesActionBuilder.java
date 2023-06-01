@@ -1,8 +1,12 @@
-
 package com.commercetools.api.models.state;
 
+import com.commercetools.api.models.state.StateRoleEnum;
+import com.commercetools.api.models.state.StateUpdateAction;
+import com.commercetools.api.models.state.StateAddRolesAction;
+import javax.annotation.Nullable;
 import java.util.*;
-
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -16,11 +20,16 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .plusRoles(rolesBuilder -> rolesBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class StateAddRolesActionBuilder implements Builder<StateAddRolesAction> {
 
+    
+    
     private java.util.List<com.commercetools.api.models.state.StateRoleEnum> roles;
 
     /**
@@ -28,44 +37,47 @@ public class StateAddRolesActionBuilder implements Builder<StateAddRolesAction> 
      * @param roles value to be set
      * @return Builder
      */
-
-    public StateAddRolesActionBuilder roles(final com.commercetools.api.models.state.StateRoleEnum... roles) {
+    
+    public StateAddRolesActionBuilder roles( final com.commercetools.api.models.state.StateRoleEnum ...roles) {
         this.roles = new ArrayList<>(Arrays.asList(roles));
         return this;
     }
-
+    
     /**
      *  <p>Value to append to the array.</p>
      * @param roles value to be set
      * @return Builder
      */
-
-    public StateAddRolesActionBuilder roles(
-            final java.util.List<com.commercetools.api.models.state.StateRoleEnum> roles) {
+    
+    public StateAddRolesActionBuilder roles( final java.util.List<com.commercetools.api.models.state.StateRoleEnum> roles) {
         this.roles = roles;
         return this;
     }
-
+    
     /**
      *  <p>Value to append to the array.</p>
      * @param roles value to be set
      * @return Builder
      */
-
-    public StateAddRolesActionBuilder plusRoles(final com.commercetools.api.models.state.StateRoleEnum... roles) {
+    
+    public StateAddRolesActionBuilder plusRoles( final com.commercetools.api.models.state.StateRoleEnum ...roles) {
         if (this.roles == null) {
             this.roles = new ArrayList<>();
         }
         this.roles.addAll(Arrays.asList(roles));
         return this;
     }
+    
+    
+    
 
     /**
      *  <p>Value to append to the array.</p>
      * @return roles
      */
-
-    public java.util.List<com.commercetools.api.models.state.StateRoleEnum> getRoles() {
+    
+    
+    public java.util.List<com.commercetools.api.models.state.StateRoleEnum> getRoles(){
         return this.roles;
     }
 
@@ -77,7 +89,7 @@ public class StateAddRolesActionBuilder implements Builder<StateAddRolesAction> 
         Objects.requireNonNull(roles, StateAddRolesAction.class + ": roles is missing");
         return new StateAddRolesActionImpl(roles);
     }
-
+    
     /**
      * builds StateAddRolesAction without checking for non-null required values
      * @return StateAddRolesAction
@@ -88,7 +100,7 @@ public class StateAddRolesActionBuilder implements Builder<StateAddRolesAction> 
 
     /**
      * factory method for an instance of StateAddRolesActionBuilder
-     * @return builder
+     * @return builder 
      */
     public static StateAddRolesActionBuilder of() {
         return new StateAddRolesActionBuilder();

@@ -1,20 +1,22 @@
-
 package com.commercetools.api.models.cart_discount;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
+import com.commercetools.api.models.cart_discount.CartDiscountValueDraft;
 import com.commercetools.api.models.channel.ChannelResourceIdentifier;
 import com.commercetools.api.models.product.ProductResourceIdentifier;
+import com.commercetools.api.models.cart_discount.CartDiscountValueGiftLineItemDraftImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * CartDiscountValueGiftLineItemDraft
@@ -28,12 +30,14 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .variantId(0.3)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = CartDiscountValueGiftLineItemDraftImpl.class)
-public interface CartDiscountValueGiftLineItemDraft
-        extends CartDiscountValueDraft, io.vrap.rmf.base.client.Draft<CartDiscountValueGiftLineItemDraft> {
+public interface CartDiscountValueGiftLineItemDraft extends CartDiscountValueDraft, io.vrap.rmf.base.client.Draft<CartDiscountValueGiftLineItemDraft> {
 
     /**
      * discriminator value for CartDiscountValueGiftLineItemDraft
@@ -48,7 +52,6 @@ public interface CartDiscountValueGiftLineItemDraft
     @Valid
     @JsonProperty("product")
     public ProductResourceIdentifier getProduct();
-
     /**
      *  <p>ProductVariant of the Product.</p>
      * @return variantId
@@ -56,7 +59,6 @@ public interface CartDiscountValueGiftLineItemDraft
     @NotNull
     @JsonProperty("variantId")
     public Long getVariantId();
-
     /**
      *  <p>Channel must have the role <code>InventorySupply</code>.</p>
      * @return supplyChannel
@@ -64,7 +66,6 @@ public interface CartDiscountValueGiftLineItemDraft
     @Valid
     @JsonProperty("supplyChannel")
     public ChannelResourceIdentifier getSupplyChannel();
-
     /**
      *  <p>Channel must have the role <code>ProductDistribution</code>.</p>
      * @return distributionChannel
@@ -77,37 +78,42 @@ public interface CartDiscountValueGiftLineItemDraft
      *  <p>ResourceIdentifier of a Product.</p>
      * @param product value to be set
      */
-
+    
     public void setProduct(final ProductResourceIdentifier product);
-
+    
+    
     /**
      *  <p>ProductVariant of the Product.</p>
      * @param variantId value to be set
      */
-
+    
     public void setVariantId(final Long variantId);
-
+    
+    
     /**
      *  <p>Channel must have the role <code>InventorySupply</code>.</p>
      * @param supplyChannel value to be set
      */
-
+    
     public void setSupplyChannel(final ChannelResourceIdentifier supplyChannel);
-
+    
+    
     /**
      *  <p>Channel must have the role <code>ProductDistribution</code>.</p>
      * @param distributionChannel value to be set
      */
-
+    
     public void setDistributionChannel(final ChannelResourceIdentifier distributionChannel);
+    
 
     /**
      * factory method
      * @return instance of CartDiscountValueGiftLineItemDraft
      */
-    public static CartDiscountValueGiftLineItemDraft of() {
+    public static CartDiscountValueGiftLineItemDraft of(){
         return new CartDiscountValueGiftLineItemDraftImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy CartDiscountValueGiftLineItemDraft
@@ -129,19 +135,15 @@ public interface CartDiscountValueGiftLineItemDraft
      * @return copy instance
      */
     @Nullable
-    public static CartDiscountValueGiftLineItemDraft deepCopy(
-            @Nullable final CartDiscountValueGiftLineItemDraft template) {
+    public static CartDiscountValueGiftLineItemDraft deepCopy(@Nullable final CartDiscountValueGiftLineItemDraft template) {
         if (template == null) {
             return null;
         }
         CartDiscountValueGiftLineItemDraftImpl instance = new CartDiscountValueGiftLineItemDraftImpl();
-        instance.setProduct(
-            com.commercetools.api.models.product.ProductResourceIdentifier.deepCopy(template.getProduct()));
+        instance.setProduct(com.commercetools.api.models.product.ProductResourceIdentifier.deepCopy(template.getProduct()));
         instance.setVariantId(template.getVariantId());
-        instance.setSupplyChannel(
-            com.commercetools.api.models.channel.ChannelResourceIdentifier.deepCopy(template.getSupplyChannel()));
-        instance.setDistributionChannel(
-            com.commercetools.api.models.channel.ChannelResourceIdentifier.deepCopy(template.getDistributionChannel()));
+        instance.setSupplyChannel(com.commercetools.api.models.channel.ChannelResourceIdentifier.deepCopy(template.getSupplyChannel()));
+        instance.setDistributionChannel(com.commercetools.api.models.channel.ChannelResourceIdentifier.deepCopy(template.getDistributionChannel()));
         return instance;
     }
 
@@ -152,7 +154,7 @@ public interface CartDiscountValueGiftLineItemDraft
     public static CartDiscountValueGiftLineItemDraftBuilder builder() {
         return CartDiscountValueGiftLineItemDraftBuilder.of();
     }
-
+    
     /**
      * create builder for CartDiscountValueGiftLineItemDraft instance
      * @param template instance with prefilled values for the builder
@@ -161,6 +163,7 @@ public interface CartDiscountValueGiftLineItemDraft
     public static CartDiscountValueGiftLineItemDraftBuilder builder(final CartDiscountValueGiftLineItemDraft template) {
         return CartDiscountValueGiftLineItemDraftBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -171,7 +174,7 @@ public interface CartDiscountValueGiftLineItemDraft
     default <T> T withCartDiscountValueGiftLineItemDraft(Function<CartDiscountValueGiftLineItemDraft, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

@@ -1,9 +1,11 @@
-
 package com.commercetools.api.predicates.query.cart;
 
 import com.commercetools.api.predicates.query.*;
 
-public class CartSetShippingAddressCustomFieldActionQueryBuilderDsl {
+import java.util.function.Function;
+
+
+public class CartSetShippingAddressCustomFieldActionQueryBuilderDsl  {
     public CartSetShippingAddressCustomFieldActionQueryBuilderDsl() {
     }
 
@@ -12,21 +14,16 @@ public class CartSetShippingAddressCustomFieldActionQueryBuilderDsl {
     }
 
     public StringComparisonPredicateBuilder<CartSetShippingAddressCustomFieldActionQueryBuilderDsl> action() {
-        return new StringComparisonPredicateBuilder<>(
-            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("action")),
-            p -> new CombinationQueryPredicate<>(p, CartSetShippingAddressCustomFieldActionQueryBuilderDsl::of));
+        return new StringComparisonPredicateBuilder<>(BinaryQueryPredicate.of().left(new ConstantQueryPredicate("action")),
+        p -> new CombinationQueryPredicate<>(p, CartSetShippingAddressCustomFieldActionQueryBuilderDsl::of));
     }
-
     public StringComparisonPredicateBuilder<CartSetShippingAddressCustomFieldActionQueryBuilderDsl> name() {
-        return new StringComparisonPredicateBuilder<>(
-            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("name")),
-            p -> new CombinationQueryPredicate<>(p, CartSetShippingAddressCustomFieldActionQueryBuilderDsl::of));
+        return new StringComparisonPredicateBuilder<>(BinaryQueryPredicate.of().left(new ConstantQueryPredicate("name")),
+        p -> new CombinationQueryPredicate<>(p, CartSetShippingAddressCustomFieldActionQueryBuilderDsl::of));
     }
-
     public StringComparisonPredicateBuilder<CartSetShippingAddressCustomFieldActionQueryBuilderDsl> value() {
-        return new StringComparisonPredicateBuilder<>(
-            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("value")),
-            p -> new CombinationQueryPredicate<>(p, CartSetShippingAddressCustomFieldActionQueryBuilderDsl::of));
+        return new StringComparisonPredicateBuilder<>(BinaryQueryPredicate.of().left(new ConstantQueryPredicate("value")),
+        p -> new CombinationQueryPredicate<>(p, CartSetShippingAddressCustomFieldActionQueryBuilderDsl::of));
     }
-
+    
 }

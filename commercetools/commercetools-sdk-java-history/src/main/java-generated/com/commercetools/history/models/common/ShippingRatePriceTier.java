@@ -1,17 +1,20 @@
-
 package com.commercetools.history.models.common;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
+import com.commercetools.history.models.common.ShippingRateTierType;
+import com.commercetools.history.models.common.ShippingRatePriceTierImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * ShippingRatePriceTier
@@ -24,11 +27,15 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .type(ShippingRateTierType.CART_VALUE)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = ShippingRatePriceTierImpl.class)
-public interface ShippingRatePriceTier {
+public interface ShippingRatePriceTier  {
+
 
     /**
      *
@@ -42,16 +49,18 @@ public interface ShippingRatePriceTier {
      * set type
      * @param type value to be set
      */
-
+    
     public void setType(final ShippingRateTierType type);
+    
 
     /**
      * factory method
      * @return instance of ShippingRatePriceTier
      */
-    public static ShippingRatePriceTier of() {
+    public static ShippingRatePriceTier of(){
         return new ShippingRatePriceTierImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy ShippingRatePriceTier
@@ -86,7 +95,7 @@ public interface ShippingRatePriceTier {
     public static ShippingRatePriceTierBuilder builder() {
         return ShippingRatePriceTierBuilder.of();
     }
-
+    
     /**
      * create builder for ShippingRatePriceTier instance
      * @param template instance with prefilled values for the builder
@@ -95,6 +104,7 @@ public interface ShippingRatePriceTier {
     public static ShippingRatePriceTierBuilder builder(final ShippingRatePriceTier template) {
         return ShippingRatePriceTierBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -105,7 +115,7 @@ public interface ShippingRatePriceTier {
     default <T> T withShippingRatePriceTier(Function<ShippingRatePriceTier, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

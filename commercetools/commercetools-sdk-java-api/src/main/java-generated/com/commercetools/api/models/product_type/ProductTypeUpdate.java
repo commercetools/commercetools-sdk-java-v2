@@ -1,19 +1,20 @@
-
 package com.commercetools.api.models.product_type;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-import java.util.stream.Collectors;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
+import com.commercetools.api.models.product_type.ProductTypeUpdateAction;
+import com.commercetools.api.models.product_type.ProductTypeUpdateImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * ProductTypeUpdate
@@ -27,12 +28,15 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .plusActions(actionsBuilder -> actionsBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = ProductTypeUpdateImpl.class)
-public interface ProductTypeUpdate extends
-        com.commercetools.api.models.ResourceUpdate<ProductTypeUpdate, ProductTypeUpdateAction, ProductTypeUpdateBuilder> {
+public interface ProductTypeUpdate extends com.commercetools.api.models.ResourceUpdate<ProductTypeUpdate, ProductTypeUpdateAction, ProductTypeUpdateBuilder> {
+
 
     /**
      *  <p>Expected version of the ProductType on which the changes should be applied. If the expected version does not match the actual version, a ConcurrentModification error is returned.</p>
@@ -41,7 +45,6 @@ public interface ProductTypeUpdate extends
     @NotNull
     @JsonProperty("version")
     public Long getVersion();
-
     /**
      *  <p>Update actions to be performed on the ProductType.</p>
      * @return actions
@@ -55,31 +58,32 @@ public interface ProductTypeUpdate extends
      *  <p>Expected version of the ProductType on which the changes should be applied. If the expected version does not match the actual version, a ConcurrentModification error is returned.</p>
      * @param version value to be set
      */
-
+    
     public void setVersion(final Long version);
-
+    
+    
     /**
      *  <p>Update actions to be performed on the ProductType.</p>
      * @param actions values to be set
      */
-
+    
     @JsonIgnore
-    public void setActions(final ProductTypeUpdateAction... actions);
-
+    public void setActions(final ProductTypeUpdateAction ...actions);
     /**
      *  <p>Update actions to be performed on the ProductType.</p>
      * @param actions values to be set
      */
-
+    
     public void setActions(final List<ProductTypeUpdateAction> actions);
 
     /**
      * factory method
      * @return instance of ProductTypeUpdate
      */
-    public static ProductTypeUpdate of() {
+    public static ProductTypeUpdate of(){
         return new ProductTypeUpdateImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy ProductTypeUpdate
@@ -106,9 +110,7 @@ public interface ProductTypeUpdate extends
         ProductTypeUpdateImpl instance = new ProductTypeUpdateImpl();
         instance.setVersion(template.getVersion());
         instance.setActions(Optional.ofNullable(template.getActions())
-                .map(t -> t.stream()
-                        .map(com.commercetools.api.models.product_type.ProductTypeUpdateAction::deepCopy)
-                        .collect(Collectors.toList()))
+                .map(t -> t.stream().map(com.commercetools.api.models.product_type.ProductTypeUpdateAction::deepCopy).collect(Collectors.toList()))
                 .orElse(null));
         return instance;
     }
@@ -120,7 +122,7 @@ public interface ProductTypeUpdate extends
     public static ProductTypeUpdateBuilder builder() {
         return ProductTypeUpdateBuilder.of();
     }
-
+    
     /**
      * create builder for ProductTypeUpdate instance
      * @param template instance with prefilled values for the builder
@@ -129,6 +131,7 @@ public interface ProductTypeUpdate extends
     public static ProductTypeUpdateBuilder builder(final ProductTypeUpdate template) {
         return ProductTypeUpdateBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -139,7 +142,7 @@ public interface ProductTypeUpdate extends
     default <T> T withProductTypeUpdate(Function<ProductTypeUpdate, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

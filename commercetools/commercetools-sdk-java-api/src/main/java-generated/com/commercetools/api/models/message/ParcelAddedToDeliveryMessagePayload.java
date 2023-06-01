@@ -1,20 +1,22 @@
-
 package com.commercetools.api.models.message;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
+import com.commercetools.api.models.message.OrderMessagePayload;
 import com.commercetools.api.models.order.Delivery;
 import com.commercetools.api.models.order.Parcel;
+import com.commercetools.api.models.message.ParcelAddedToDeliveryMessagePayloadImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Generated after a successful Add Parcel To Delivery update action.</p>
@@ -28,9 +30,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .parcel(parcelBuilder -> parcelBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = ParcelAddedToDeliveryMessagePayloadImpl.class)
 public interface ParcelAddedToDeliveryMessagePayload extends OrderMessagePayload {
 
@@ -47,7 +52,6 @@ public interface ParcelAddedToDeliveryMessagePayload extends OrderMessagePayload
     @Valid
     @JsonProperty("delivery")
     public Delivery getDelivery();
-
     /**
      *  <p>Parcel that was added to the Delivery.</p>
      * @return parcel
@@ -56,12 +60,11 @@ public interface ParcelAddedToDeliveryMessagePayload extends OrderMessagePayload
     @Valid
     @JsonProperty("parcel")
     public Parcel getParcel();
-
     /**
      *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multi</code> ShippingMode.</p>
      * @return shippingKey
      */
-
+    
     @JsonProperty("shippingKey")
     public String getShippingKey();
 
@@ -69,30 +72,34 @@ public interface ParcelAddedToDeliveryMessagePayload extends OrderMessagePayload
      *  <p>Unique identifier of the Delivery.</p>
      * @param delivery value to be set
      */
-
+    
     public void setDelivery(final Delivery delivery);
-
+    
+    
     /**
      *  <p>Parcel that was added to the Delivery.</p>
      * @param parcel value to be set
      */
-
+    
     public void setParcel(final Parcel parcel);
-
+    
+    
     /**
      *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multi</code> ShippingMode.</p>
      * @param shippingKey value to be set
      */
-
+    
     public void setShippingKey(final String shippingKey);
+    
 
     /**
      * factory method
      * @return instance of ParcelAddedToDeliveryMessagePayload
      */
-    public static ParcelAddedToDeliveryMessagePayload of() {
+    public static ParcelAddedToDeliveryMessagePayload of(){
         return new ParcelAddedToDeliveryMessagePayloadImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy ParcelAddedToDeliveryMessagePayload
@@ -113,8 +120,7 @@ public interface ParcelAddedToDeliveryMessagePayload extends OrderMessagePayload
      * @return copy instance
      */
     @Nullable
-    public static ParcelAddedToDeliveryMessagePayload deepCopy(
-            @Nullable final ParcelAddedToDeliveryMessagePayload template) {
+    public static ParcelAddedToDeliveryMessagePayload deepCopy(@Nullable final ParcelAddedToDeliveryMessagePayload template) {
         if (template == null) {
             return null;
         }
@@ -132,16 +138,16 @@ public interface ParcelAddedToDeliveryMessagePayload extends OrderMessagePayload
     public static ParcelAddedToDeliveryMessagePayloadBuilder builder() {
         return ParcelAddedToDeliveryMessagePayloadBuilder.of();
     }
-
+    
     /**
      * create builder for ParcelAddedToDeliveryMessagePayload instance
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static ParcelAddedToDeliveryMessagePayloadBuilder builder(
-            final ParcelAddedToDeliveryMessagePayload template) {
+    public static ParcelAddedToDeliveryMessagePayloadBuilder builder(final ParcelAddedToDeliveryMessagePayload template) {
         return ParcelAddedToDeliveryMessagePayloadBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -152,7 +158,7 @@ public interface ParcelAddedToDeliveryMessagePayload extends OrderMessagePayload
     default <T> T withParcelAddedToDeliveryMessagePayload(Function<ParcelAddedToDeliveryMessagePayload, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

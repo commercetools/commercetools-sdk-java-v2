@@ -1,18 +1,21 @@
-
 package com.commercetools.api.models.message;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-
 import com.commercetools.api.models.business_unit.BusinessUnitKeyReference;
+import com.commercetools.api.models.message.MessagePayload;
+import com.commercetools.api.models.message.BusinessUnitParentUnitChangedMessagePayloadImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Generated after a successful Change Parent Unit update action.</p>
@@ -24,9 +27,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     BusinessUnitParentUnitChangedMessagePayload businessUnitParentUnitChangedMessagePayload = BusinessUnitParentUnitChangedMessagePayload.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = BusinessUnitParentUnitChangedMessagePayloadImpl.class)
 public interface BusinessUnitParentUnitChangedMessagePayload extends MessagePayload {
 
@@ -42,7 +48,6 @@ public interface BusinessUnitParentUnitChangedMessagePayload extends MessagePayl
     @Valid
     @JsonProperty("oldParentUnit")
     public BusinessUnitKeyReference getOldParentUnit();
-
     /**
      *  <p>Parent unit of the Business Unit after the Change Parent Unit update action.</p>
      * @return newParentUnit
@@ -55,31 +60,33 @@ public interface BusinessUnitParentUnitChangedMessagePayload extends MessagePayl
      *  <p>Parent unit of the Business Unit before the Change Parent Unit update action.</p>
      * @param oldParentUnit value to be set
      */
-
+    
     public void setOldParentUnit(final BusinessUnitKeyReference oldParentUnit);
-
+    
+    
     /**
      *  <p>Parent unit of the Business Unit after the Change Parent Unit update action.</p>
      * @param newParentUnit value to be set
      */
-
+    
     public void setNewParentUnit(final BusinessUnitKeyReference newParentUnit);
+    
 
     /**
      * factory method
      * @return instance of BusinessUnitParentUnitChangedMessagePayload
      */
-    public static BusinessUnitParentUnitChangedMessagePayload of() {
+    public static BusinessUnitParentUnitChangedMessagePayload of(){
         return new BusinessUnitParentUnitChangedMessagePayloadImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy BusinessUnitParentUnitChangedMessagePayload
      * @param template instance to be copied
      * @return copy instance
      */
-    public static BusinessUnitParentUnitChangedMessagePayload of(
-            final BusinessUnitParentUnitChangedMessagePayload template) {
+    public static BusinessUnitParentUnitChangedMessagePayload of(final BusinessUnitParentUnitChangedMessagePayload template) {
         BusinessUnitParentUnitChangedMessagePayloadImpl instance = new BusinessUnitParentUnitChangedMessagePayloadImpl();
         instance.setOldParentUnit(template.getOldParentUnit());
         instance.setNewParentUnit(template.getNewParentUnit());
@@ -92,16 +99,13 @@ public interface BusinessUnitParentUnitChangedMessagePayload extends MessagePayl
      * @return copy instance
      */
     @Nullable
-    public static BusinessUnitParentUnitChangedMessagePayload deepCopy(
-            @Nullable final BusinessUnitParentUnitChangedMessagePayload template) {
+    public static BusinessUnitParentUnitChangedMessagePayload deepCopy(@Nullable final BusinessUnitParentUnitChangedMessagePayload template) {
         if (template == null) {
             return null;
         }
         BusinessUnitParentUnitChangedMessagePayloadImpl instance = new BusinessUnitParentUnitChangedMessagePayloadImpl();
-        instance.setOldParentUnit(
-            com.commercetools.api.models.business_unit.BusinessUnitKeyReference.deepCopy(template.getOldParentUnit()));
-        instance.setNewParentUnit(
-            com.commercetools.api.models.business_unit.BusinessUnitKeyReference.deepCopy(template.getNewParentUnit()));
+        instance.setOldParentUnit(com.commercetools.api.models.business_unit.BusinessUnitKeyReference.deepCopy(template.getOldParentUnit()));
+        instance.setNewParentUnit(com.commercetools.api.models.business_unit.BusinessUnitKeyReference.deepCopy(template.getNewParentUnit()));
         return instance;
     }
 
@@ -112,16 +116,16 @@ public interface BusinessUnitParentUnitChangedMessagePayload extends MessagePayl
     public static BusinessUnitParentUnitChangedMessagePayloadBuilder builder() {
         return BusinessUnitParentUnitChangedMessagePayloadBuilder.of();
     }
-
+    
     /**
      * create builder for BusinessUnitParentUnitChangedMessagePayload instance
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static BusinessUnitParentUnitChangedMessagePayloadBuilder builder(
-            final BusinessUnitParentUnitChangedMessagePayload template) {
+    public static BusinessUnitParentUnitChangedMessagePayloadBuilder builder(final BusinessUnitParentUnitChangedMessagePayload template) {
         return BusinessUnitParentUnitChangedMessagePayloadBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -129,11 +133,10 @@ public interface BusinessUnitParentUnitChangedMessagePayload extends MessagePayl
      * @param helper function to map the object
      * @return mapped value
      */
-    default <T> T withBusinessUnitParentUnitChangedMessagePayload(
-            Function<BusinessUnitParentUnitChangedMessagePayload, T> helper) {
+    default <T> T withBusinessUnitParentUnitChangedMessagePayload(Function<BusinessUnitParentUnitChangedMessagePayload, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

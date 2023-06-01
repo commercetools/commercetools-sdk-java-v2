@@ -1,19 +1,20 @@
-
 package com.commercetools.api.models.order;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-import java.util.stream.Collectors;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
+import com.commercetools.api.models.order.Order;
+import com.commercetools.api.models.order.OrderPagedQueryResponseImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * OrderPagedQueryResponse
@@ -29,11 +30,15 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .plusResults(resultsBuilder -> resultsBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = OrderPagedQueryResponseImpl.class)
 public interface OrderPagedQueryResponse extends com.commercetools.api.models.ResourcePagedQueryResponse<Order> {
+
 
     /**
      *  <p>Number of results requested.</p>
@@ -42,7 +47,6 @@ public interface OrderPagedQueryResponse extends com.commercetools.api.models.Re
     @NotNull
     @JsonProperty("limit")
     public Long getLimit();
-
     /**
      *
      * @return count
@@ -50,15 +54,13 @@ public interface OrderPagedQueryResponse extends com.commercetools.api.models.Re
     @NotNull
     @JsonProperty("count")
     public Long getCount();
-
     /**
      *
      * @return total
      */
-
+    
     @JsonProperty("total")
     public Long getTotal();
-
     /**
      *  <p>Number of elements skipped.</p>
      * @return offset
@@ -66,7 +68,6 @@ public interface OrderPagedQueryResponse extends com.commercetools.api.models.Re
     @NotNull
     @JsonProperty("offset")
     public Long getOffset();
-
     /**
      *
      * @return results
@@ -80,52 +81,56 @@ public interface OrderPagedQueryResponse extends com.commercetools.api.models.Re
      *  <p>Number of results requested.</p>
      * @param limit value to be set
      */
-
+    
     public void setLimit(final Long limit);
-
+    
+    
     /**
      * set count
      * @param count value to be set
      */
-
+    
     public void setCount(final Long count);
-
+    
+    
     /**
      * set total
      * @param total value to be set
      */
-
+    
     public void setTotal(final Long total);
-
+    
+    
     /**
      *  <p>Number of elements skipped.</p>
      * @param offset value to be set
      */
-
+    
     public void setOffset(final Long offset);
-
+    
+    
     /**
      * set results
      * @param results values to be set
      */
-
+    
     @JsonIgnore
-    public void setResults(final Order... results);
-
+    public void setResults(final Order ...results);
     /**
      * set results
      * @param results values to be set
      */
-
+    
     public void setResults(final List<Order> results);
 
     /**
      * factory method
      * @return instance of OrderPagedQueryResponse
      */
-    public static OrderPagedQueryResponse of() {
+    public static OrderPagedQueryResponse of(){
         return new OrderPagedQueryResponseImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy OrderPagedQueryResponse
@@ -158,9 +163,7 @@ public interface OrderPagedQueryResponse extends com.commercetools.api.models.Re
         instance.setTotal(template.getTotal());
         instance.setOffset(template.getOffset());
         instance.setResults(Optional.ofNullable(template.getResults())
-                .map(t -> t.stream()
-                        .map(com.commercetools.api.models.order.Order::deepCopy)
-                        .collect(Collectors.toList()))
+                .map(t -> t.stream().map(com.commercetools.api.models.order.Order::deepCopy).collect(Collectors.toList()))
                 .orElse(null));
         return instance;
     }
@@ -172,7 +175,7 @@ public interface OrderPagedQueryResponse extends com.commercetools.api.models.Re
     public static OrderPagedQueryResponseBuilder builder() {
         return OrderPagedQueryResponseBuilder.of();
     }
-
+    
     /**
      * create builder for OrderPagedQueryResponse instance
      * @param template instance with prefilled values for the builder
@@ -181,6 +184,7 @@ public interface OrderPagedQueryResponse extends com.commercetools.api.models.Re
     public static OrderPagedQueryResponseBuilder builder(final OrderPagedQueryResponse template) {
         return OrderPagedQueryResponseBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -191,7 +195,7 @@ public interface OrderPagedQueryResponse extends com.commercetools.api.models.Re
     default <T> T withOrderPagedQueryResponse(Function<OrderPagedQueryResponse, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

@@ -1,17 +1,20 @@
-
 package com.commercetools.api.models.me;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
+import com.commercetools.api.models.me.MyQuoteChangeMyQuoteStateAction;
 
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * MyQuoteUpdateAction
@@ -24,14 +27,25 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             quoteState(MyQuoteState.DECLINED)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
 @JsonSubTypes({
-        @JsonSubTypes.Type(value = com.commercetools.api.models.me.MyQuoteChangeMyQuoteStateActionImpl.class, name = MyQuoteChangeMyQuoteStateAction.CHANGE_MY_QUOTE_STATE) })
-@JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.EXISTING_PROPERTY, property = "action", defaultImpl = MyQuoteUpdateActionImpl.class, visible = true)
+   @JsonSubTypes.Type(value = com.commercetools.api.models.me.MyQuoteChangeMyQuoteStateActionImpl.class, name = MyQuoteChangeMyQuoteStateAction.CHANGE_MY_QUOTE_STATE)
+})
+@JsonTypeInfo(
+    use = JsonTypeInfo.Id.NAME,
+    include = JsonTypeInfo.As.EXISTING_PROPERTY,
+    property = "action",
+    defaultImpl = MyQuoteUpdateActionImpl.class,
+    visible = true
+)
 @JsonDeserialize(as = MyQuoteUpdateActionImpl.class)
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public interface MyQuoteUpdateAction extends com.commercetools.api.models.ResourceUpdateAction<MyQuoteUpdateAction> {
+
 
     /**
      *
@@ -40,6 +54,9 @@ public interface MyQuoteUpdateAction extends com.commercetools.api.models.Resour
     @NotNull
     @JsonProperty("action")
     public String getAction();
+
+
+
 
     /**
      * factory method to create a deep copy of MyQuoteUpdateAction
@@ -52,19 +69,19 @@ public interface MyQuoteUpdateAction extends com.commercetools.api.models.Resour
             return null;
         }
         if (template instanceof com.commercetools.api.models.me.MyQuoteChangeMyQuoteStateAction) {
-            return com.commercetools.api.models.me.MyQuoteChangeMyQuoteStateAction
-                    .deepCopy((com.commercetools.api.models.me.MyQuoteChangeMyQuoteStateAction) template);
+            return com.commercetools.api.models.me.MyQuoteChangeMyQuoteStateAction.deepCopy((com.commercetools.api.models.me.MyQuoteChangeMyQuoteStateAction)template);
         }
         MyQuoteUpdateActionImpl instance = new MyQuoteUpdateActionImpl();
         return instance;
     }
+
 
     /**
      * builder for changeMyQuoteState subtype
      * @return builder
      */
     public static com.commercetools.api.models.me.MyQuoteChangeMyQuoteStateActionBuilder changeMyQuoteStateBuilder() {
-        return com.commercetools.api.models.me.MyQuoteChangeMyQuoteStateActionBuilder.of();
+       return com.commercetools.api.models.me.MyQuoteChangeMyQuoteStateActionBuilder.of();
     }
 
     /**
@@ -76,7 +93,7 @@ public interface MyQuoteUpdateAction extends com.commercetools.api.models.Resour
     default <T> T withMyQuoteUpdateAction(Function<MyQuoteUpdateAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

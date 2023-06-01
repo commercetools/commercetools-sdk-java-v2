@@ -1,20 +1,22 @@
-
 package com.commercetools.api.models.error;
-
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.channel.ChannelReference;
 import com.commercetools.api.models.customer_group.CustomerGroupReference;
+import com.commercetools.api.models.error.ErrorObject;
+import com.commercetools.api.models.error.MatchingPriceNotFoundErrorImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Returned when the Product Variant does not have a Price according to the Product <code>priceMode</code> value for a selected currency, country, Customer Group, or Channel.</p>
@@ -36,9 +38,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .variantId(1)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = MatchingPriceNotFoundErrorImpl.class)
 public interface MatchingPriceNotFoundError extends ErrorObject {
 
@@ -54,7 +59,6 @@ public interface MatchingPriceNotFoundError extends ErrorObject {
     @NotNull
     @JsonProperty("code")
     public String getCode();
-
     /**
      *  <p><code>"The variant $variantId of product $productId does not contain a price for currency $currencyCode, $country, $customerGroup, $channel."</code></p>
      * @return message
@@ -62,7 +66,6 @@ public interface MatchingPriceNotFoundError extends ErrorObject {
     @NotNull
     @JsonProperty("message")
     public String getMessage();
-
     /**
      *  <p>Unique identifier of a Product.</p>
      * @return productId
@@ -70,7 +73,6 @@ public interface MatchingPriceNotFoundError extends ErrorObject {
     @NotNull
     @JsonProperty("productId")
     public String getProductId();
-
     /**
      *  <p>Unique identifier of a ProductVariant in the Product.</p>
      * @return variantId
@@ -78,23 +80,20 @@ public interface MatchingPriceNotFoundError extends ErrorObject {
     @NotNull
     @JsonProperty("variantId")
     public Integer getVariantId();
-
     /**
      *  <p>Currency code of the country.</p>
      * @return currency
      */
-
+    
     @JsonProperty("currency")
     public String getCurrency();
-
     /**
      *  <p>Country code of the geographic location.</p>
      * @return country
      */
-
+    
     @JsonProperty("country")
     public String getCountry();
-
     /**
      *  <p>Customer Group associated with the Price.</p>
      * @return customerGroup
@@ -102,7 +101,6 @@ public interface MatchingPriceNotFoundError extends ErrorObject {
     @Valid
     @JsonProperty("customerGroup")
     public CustomerGroupReference getCustomerGroup();
-
     /**
      *  <p>Channel associated with the Price.</p>
      * @return channel
@@ -115,58 +113,66 @@ public interface MatchingPriceNotFoundError extends ErrorObject {
      *  <p><code>"The variant $variantId of product $productId does not contain a price for currency $currencyCode, $country, $customerGroup, $channel."</code></p>
      * @param message value to be set
      */
-
+    
     public void setMessage(final String message);
-
+    
+    
     /**
      *  <p>Unique identifier of a Product.</p>
      * @param productId value to be set
      */
-
+    
     public void setProductId(final String productId);
-
+    
+    
     /**
      *  <p>Unique identifier of a ProductVariant in the Product.</p>
      * @param variantId value to be set
      */
-
+    
     public void setVariantId(final Integer variantId);
-
+    
+    
     /**
      *  <p>Currency code of the country.</p>
      * @param currency value to be set
      */
-
+    
     public void setCurrency(final String currency);
-
+    
+    
     /**
      *  <p>Country code of the geographic location.</p>
      * @param country value to be set
      */
-
+    
     public void setCountry(final String country);
-
+    
+    
     /**
      *  <p>Customer Group associated with the Price.</p>
      * @param customerGroup value to be set
      */
-
+    
     public void setCustomerGroup(final CustomerGroupReference customerGroup);
-
+    
+    
     /**
      *  <p>Channel associated with the Price.</p>
      * @param channel value to be set
      */
-
+    
     public void setChannel(final ChannelReference channel);
+    
 
     /**
      * factory method
      * @return instance of MatchingPriceNotFoundError
      */
-    public static MatchingPriceNotFoundError of() {
+    public static MatchingPriceNotFoundError of(){
         return new MatchingPriceNotFoundErrorImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy MatchingPriceNotFoundError
@@ -203,8 +209,7 @@ public interface MatchingPriceNotFoundError extends ErrorObject {
         instance.setVariantId(template.getVariantId());
         instance.setCurrency(template.getCurrency());
         instance.setCountry(template.getCountry());
-        instance.setCustomerGroup(
-            com.commercetools.api.models.customer_group.CustomerGroupReference.deepCopy(template.getCustomerGroup()));
+        instance.setCustomerGroup(com.commercetools.api.models.customer_group.CustomerGroupReference.deepCopy(template.getCustomerGroup()));
         instance.setChannel(com.commercetools.api.models.channel.ChannelReference.deepCopy(template.getChannel()));
         return instance;
     }
@@ -216,7 +221,7 @@ public interface MatchingPriceNotFoundError extends ErrorObject {
     public static MatchingPriceNotFoundErrorBuilder builder() {
         return MatchingPriceNotFoundErrorBuilder.of();
     }
-
+    
     /**
      * create builder for MatchingPriceNotFoundError instance
      * @param template instance with prefilled values for the builder
@@ -225,6 +230,7 @@ public interface MatchingPriceNotFoundError extends ErrorObject {
     public static MatchingPriceNotFoundErrorBuilder builder(final MatchingPriceNotFoundError template) {
         return MatchingPriceNotFoundErrorBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -235,7 +241,7 @@ public interface MatchingPriceNotFoundError extends ErrorObject {
     default <T> T withMatchingPriceNotFoundError(Function<MatchingPriceNotFoundError, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

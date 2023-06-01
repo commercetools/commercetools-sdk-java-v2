@@ -1,10 +1,11 @@
-
 package com.commercetools.api.models.store;
 
-import java.util.*;
-
+import com.commercetools.api.models.store.StoreUpdateAction;
+import com.commercetools.api.models.store.StoreSetLanguagesAction;
 import javax.annotation.Nullable;
-
+import java.util.*;
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -17,11 +18,15 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     StoreSetLanguagesAction storeSetLanguagesAction = StoreSetLanguagesAction.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class StoreSetLanguagesActionBuilder implements Builder<StoreSetLanguagesAction> {
 
+    
     @Nullable
     private java.util.List<String> languages;
 
@@ -30,44 +35,47 @@ public class StoreSetLanguagesActionBuilder implements Builder<StoreSetLanguages
      * @param languages value to be set
      * @return Builder
      */
-
-    public StoreSetLanguagesActionBuilder languages(@Nullable final String... languages) {
+    
+    public StoreSetLanguagesActionBuilder languages(@Nullable final String ...languages) {
         this.languages = new ArrayList<>(Arrays.asList(languages));
         return this;
     }
-
+    
     /**
      *  <p>Value to set.</p>
      * @param languages value to be set
      * @return Builder
      */
-
+    
     public StoreSetLanguagesActionBuilder languages(@Nullable final java.util.List<String> languages) {
         this.languages = languages;
         return this;
     }
-
+    
     /**
      *  <p>Value to set.</p>
      * @param languages value to be set
      * @return Builder
      */
-
-    public StoreSetLanguagesActionBuilder plusLanguages(@Nullable final String... languages) {
+    
+    public StoreSetLanguagesActionBuilder plusLanguages(@Nullable final String ...languages) {
         if (this.languages == null) {
             this.languages = new ArrayList<>();
         }
         this.languages.addAll(Arrays.asList(languages));
         return this;
     }
+    
+    
+    
 
     /**
      *  <p>Value to set.</p>
      * @return languages
      */
-
+    
     @Nullable
-    public java.util.List<String> getLanguages() {
+    public java.util.List<String> getLanguages(){
         return this.languages;
     }
 
@@ -78,7 +86,7 @@ public class StoreSetLanguagesActionBuilder implements Builder<StoreSetLanguages
     public StoreSetLanguagesAction build() {
         return new StoreSetLanguagesActionImpl(languages);
     }
-
+    
     /**
      * builds StoreSetLanguagesAction without checking for non-null required values
      * @return StoreSetLanguagesAction
@@ -89,7 +97,7 @@ public class StoreSetLanguagesActionBuilder implements Builder<StoreSetLanguages
 
     /**
      * factory method for an instance of StoreSetLanguagesActionBuilder
-     * @return builder
+     * @return builder 
      */
     public static StoreSetLanguagesActionBuilder of() {
         return new StoreSetLanguagesActionBuilder();

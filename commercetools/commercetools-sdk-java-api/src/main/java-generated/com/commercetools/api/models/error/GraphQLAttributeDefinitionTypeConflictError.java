@@ -1,17 +1,20 @@
-
 package com.commercetools.api.models.error;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
+import com.commercetools.api.models.error.GraphQLErrorObject;
+import com.commercetools.api.models.error.GraphQLAttributeDefinitionTypeConflictErrorImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Returned when the <code>type</code> is different for an AttributeDefinition using the same <code>name</code> in multiple Product Types.</p>
@@ -27,9 +30,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .conflictingAttributeName("{conflictingAttributeName}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = GraphQLAttributeDefinitionTypeConflictErrorImpl.class)
 public interface GraphQLAttributeDefinitionTypeConflictError extends GraphQLErrorObject {
 
@@ -45,7 +51,6 @@ public interface GraphQLAttributeDefinitionTypeConflictError extends GraphQLErro
     @NotNull
     @JsonProperty("code")
     public String getCode();
-
     /**
      *  <p>Unique identifier of the Product Type containing the conflicting name.</p>
      * @return conflictingProductTypeId
@@ -53,7 +58,6 @@ public interface GraphQLAttributeDefinitionTypeConflictError extends GraphQLErro
     @NotNull
     @JsonProperty("conflictingProductTypeId")
     public String getConflictingProductTypeId();
-
     /**
      *  <p>Name of the Product Type containing the conflicting name.</p>
      * @return conflictingProductTypeName
@@ -61,7 +65,6 @@ public interface GraphQLAttributeDefinitionTypeConflictError extends GraphQLErro
     @NotNull
     @JsonProperty("conflictingProductTypeName")
     public String getConflictingProductTypeName();
-
     /**
      *  <p>Name of the conflicting Attribute.</p>
      * @return conflictingAttributeName
@@ -74,38 +77,41 @@ public interface GraphQLAttributeDefinitionTypeConflictError extends GraphQLErro
      *  <p>Unique identifier of the Product Type containing the conflicting name.</p>
      * @param conflictingProductTypeId value to be set
      */
-
+    
     public void setConflictingProductTypeId(final String conflictingProductTypeId);
-
+    
+    
     /**
      *  <p>Name of the Product Type containing the conflicting name.</p>
      * @param conflictingProductTypeName value to be set
      */
-
+    
     public void setConflictingProductTypeName(final String conflictingProductTypeName);
-
+    
+    
     /**
      *  <p>Name of the conflicting Attribute.</p>
      * @param conflictingAttributeName value to be set
      */
-
+    
     public void setConflictingAttributeName(final String conflictingAttributeName);
+    
 
     /**
      * factory method
      * @return instance of GraphQLAttributeDefinitionTypeConflictError
      */
-    public static GraphQLAttributeDefinitionTypeConflictError of() {
+    public static GraphQLAttributeDefinitionTypeConflictError of(){
         return new GraphQLAttributeDefinitionTypeConflictErrorImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy GraphQLAttributeDefinitionTypeConflictError
      * @param template instance to be copied
      * @return copy instance
      */
-    public static GraphQLAttributeDefinitionTypeConflictError of(
-            final GraphQLAttributeDefinitionTypeConflictError template) {
+    public static GraphQLAttributeDefinitionTypeConflictError of(final GraphQLAttributeDefinitionTypeConflictError template) {
         GraphQLAttributeDefinitionTypeConflictErrorImpl instance = new GraphQLAttributeDefinitionTypeConflictErrorImpl();
         Optional.ofNullable(template.values()).ifPresent(t -> t.forEach(instance::setValue));
         instance.setConflictingProductTypeId(template.getConflictingProductTypeId());
@@ -120,8 +126,7 @@ public interface GraphQLAttributeDefinitionTypeConflictError extends GraphQLErro
      * @return copy instance
      */
     @Nullable
-    public static GraphQLAttributeDefinitionTypeConflictError deepCopy(
-            @Nullable final GraphQLAttributeDefinitionTypeConflictError template) {
+    public static GraphQLAttributeDefinitionTypeConflictError deepCopy(@Nullable final GraphQLAttributeDefinitionTypeConflictError template) {
         if (template == null) {
             return null;
         }
@@ -140,16 +145,16 @@ public interface GraphQLAttributeDefinitionTypeConflictError extends GraphQLErro
     public static GraphQLAttributeDefinitionTypeConflictErrorBuilder builder() {
         return GraphQLAttributeDefinitionTypeConflictErrorBuilder.of();
     }
-
+    
     /**
      * create builder for GraphQLAttributeDefinitionTypeConflictError instance
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static GraphQLAttributeDefinitionTypeConflictErrorBuilder builder(
-            final GraphQLAttributeDefinitionTypeConflictError template) {
+    public static GraphQLAttributeDefinitionTypeConflictErrorBuilder builder(final GraphQLAttributeDefinitionTypeConflictError template) {
         return GraphQLAttributeDefinitionTypeConflictErrorBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -157,11 +162,10 @@ public interface GraphQLAttributeDefinitionTypeConflictError extends GraphQLErro
      * @param helper function to map the object
      * @return mapped value
      */
-    default <T> T withGraphQLAttributeDefinitionTypeConflictError(
-            Function<GraphQLAttributeDefinitionTypeConflictError, T> helper) {
+    default <T> T withGraphQLAttributeDefinitionTypeConflictError(Function<GraphQLAttributeDefinitionTypeConflictError, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

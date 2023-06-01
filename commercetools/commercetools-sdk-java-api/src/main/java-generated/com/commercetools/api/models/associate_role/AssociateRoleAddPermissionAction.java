@@ -1,17 +1,21 @@
-
 package com.commercetools.api.models.associate_role;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
+import com.commercetools.api.models.associate_role.AssociateRoleUpdateAction;
+import com.commercetools.api.models.associate_role.Permission;
+import com.commercetools.api.models.associate_role.AssociateRoleAddPermissionActionImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Adding a Permission to an AssociateRole generates an AssociateRolePermissionAdded Message.</p>
@@ -24,9 +28,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .permission(Permission.ADD_CHILD_UNITS)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = AssociateRoleAddPermissionActionImpl.class)
 public interface AssociateRoleAddPermissionAction extends AssociateRoleUpdateAction {
 
@@ -47,16 +54,18 @@ public interface AssociateRoleAddPermissionAction extends AssociateRoleUpdateAct
      *  <p>Permission to be added to the AssociateRole.</p>
      * @param permission value to be set
      */
-
+    
     public void setPermission(final Permission permission);
+    
 
     /**
      * factory method
      * @return instance of AssociateRoleAddPermissionAction
      */
-    public static AssociateRoleAddPermissionAction of() {
+    public static AssociateRoleAddPermissionAction of(){
         return new AssociateRoleAddPermissionActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy AssociateRoleAddPermissionAction
@@ -91,7 +100,7 @@ public interface AssociateRoleAddPermissionAction extends AssociateRoleUpdateAct
     public static AssociateRoleAddPermissionActionBuilder builder() {
         return AssociateRoleAddPermissionActionBuilder.of();
     }
-
+    
     /**
      * create builder for AssociateRoleAddPermissionAction instance
      * @param template instance with prefilled values for the builder
@@ -100,6 +109,7 @@ public interface AssociateRoleAddPermissionAction extends AssociateRoleUpdateAct
     public static AssociateRoleAddPermissionActionBuilder builder(final AssociateRoleAddPermissionAction template) {
         return AssociateRoleAddPermissionActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -110,7 +120,7 @@ public interface AssociateRoleAddPermissionAction extends AssociateRoleUpdateAct
     default <T> T withAssociateRoleAddPermissionAction(Function<AssociateRoleAddPermissionAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

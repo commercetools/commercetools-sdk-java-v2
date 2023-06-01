@@ -1,8 +1,11 @@
-
 package com.commercetools.api.models.cart;
 
+import com.commercetools.api.models.cart.ShippingRateInput;
+import com.commercetools.api.models.cart.ScoreShippingRateInput;
+import javax.annotation.Nullable;
 import java.util.*;
-
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -16,30 +19,39 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .score(0.3)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class ScoreShippingRateInputBuilder implements Builder<ScoreShippingRateInput> {
 
+    
+    
     private Long score;
 
+    
     /**
      *  <p>Abstract value for categorizing a Cart.</p>
      * @param score value to be set
      * @return Builder
      */
-
-    public ScoreShippingRateInputBuilder score(final Long score) {
+    
+    public ScoreShippingRateInputBuilder score( final Long score) {
         this.score = score;
         return this;
     }
+    
+    
 
     /**
      *  <p>Abstract value for categorizing a Cart.</p>
      * @return score
      */
-
-    public Long getScore() {
+    
+    
+    public Long getScore(){
         return this.score;
     }
 
@@ -51,7 +63,7 @@ public class ScoreShippingRateInputBuilder implements Builder<ScoreShippingRateI
         Objects.requireNonNull(score, ScoreShippingRateInput.class + ": score is missing");
         return new ScoreShippingRateInputImpl(score);
     }
-
+    
     /**
      * builds ScoreShippingRateInput without checking for non-null required values
      * @return ScoreShippingRateInput
@@ -62,7 +74,7 @@ public class ScoreShippingRateInputBuilder implements Builder<ScoreShippingRateI
 
     /**
      * factory method for an instance of ScoreShippingRateInputBuilder
-     * @return builder
+     * @return builder 
      */
     public static ScoreShippingRateInputBuilder of() {
         return new ScoreShippingRateInputBuilder();

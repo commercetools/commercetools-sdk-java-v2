@@ -1,19 +1,21 @@
-
 package com.commercetools.ml.models.category_recommendations;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-import java.util.stream.Collectors;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
+import com.commercetools.ml.models.category_recommendations.ProjectCategoryRecommendation;
+import com.commercetools.ml.models.category_recommendations.ProjectCategoryRecommendationMeta;
+import com.commercetools.ml.models.category_recommendations.ProjectCategoryRecommendationPagedQueryResponseImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * ProjectCategoryRecommendationPagedQueryResponse
@@ -30,11 +32,15 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .meta(metaBuilder -> metaBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = ProjectCategoryRecommendationPagedQueryResponseImpl.class)
-public interface ProjectCategoryRecommendationPagedQueryResponse {
+public interface ProjectCategoryRecommendationPagedQueryResponse  {
+
 
     /**
      *
@@ -43,7 +49,6 @@ public interface ProjectCategoryRecommendationPagedQueryResponse {
     @NotNull
     @JsonProperty("count")
     public Long getCount();
-
     /**
      *
      * @return total
@@ -51,7 +56,6 @@ public interface ProjectCategoryRecommendationPagedQueryResponse {
     @NotNull
     @JsonProperty("total")
     public Long getTotal();
-
     /**
      *  <p>Number of elements skipped.</p>
      * @return offset
@@ -59,7 +63,6 @@ public interface ProjectCategoryRecommendationPagedQueryResponse {
     @NotNull
     @JsonProperty("offset")
     public Long getOffset();
-
     /**
      *
      * @return results
@@ -68,7 +71,6 @@ public interface ProjectCategoryRecommendationPagedQueryResponse {
     @Valid
     @JsonProperty("results")
     public List<ProjectCategoryRecommendation> getResults();
-
     /**
      *
      * @return meta
@@ -82,60 +84,63 @@ public interface ProjectCategoryRecommendationPagedQueryResponse {
      * set count
      * @param count value to be set
      */
-
+    
     public void setCount(final Long count);
-
+    
+    
     /**
      * set total
      * @param total value to be set
      */
-
+    
     public void setTotal(final Long total);
-
+    
+    
     /**
      *  <p>Number of elements skipped.</p>
      * @param offset value to be set
      */
-
+    
     public void setOffset(final Long offset);
-
+    
+    
     /**
      * set results
      * @param results values to be set
      */
-
+    
     @JsonIgnore
-    public void setResults(final ProjectCategoryRecommendation... results);
-
+    public void setResults(final ProjectCategoryRecommendation ...results);
     /**
      * set results
      * @param results values to be set
      */
-
+    
     public void setResults(final List<ProjectCategoryRecommendation> results);
-
+    
     /**
      * set meta
      * @param meta value to be set
      */
-
+    
     public void setMeta(final ProjectCategoryRecommendationMeta meta);
+    
 
     /**
      * factory method
      * @return instance of ProjectCategoryRecommendationPagedQueryResponse
      */
-    public static ProjectCategoryRecommendationPagedQueryResponse of() {
+    public static ProjectCategoryRecommendationPagedQueryResponse of(){
         return new ProjectCategoryRecommendationPagedQueryResponseImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy ProjectCategoryRecommendationPagedQueryResponse
      * @param template instance to be copied
      * @return copy instance
      */
-    public static ProjectCategoryRecommendationPagedQueryResponse of(
-            final ProjectCategoryRecommendationPagedQueryResponse template) {
+    public static ProjectCategoryRecommendationPagedQueryResponse of(final ProjectCategoryRecommendationPagedQueryResponse template) {
         ProjectCategoryRecommendationPagedQueryResponseImpl instance = new ProjectCategoryRecommendationPagedQueryResponseImpl();
         instance.setCount(template.getCount());
         instance.setTotal(template.getTotal());
@@ -151,8 +156,7 @@ public interface ProjectCategoryRecommendationPagedQueryResponse {
      * @return copy instance
      */
     @Nullable
-    public static ProjectCategoryRecommendationPagedQueryResponse deepCopy(
-            @Nullable final ProjectCategoryRecommendationPagedQueryResponse template) {
+    public static ProjectCategoryRecommendationPagedQueryResponse deepCopy(@Nullable final ProjectCategoryRecommendationPagedQueryResponse template) {
         if (template == null) {
             return null;
         }
@@ -161,13 +165,9 @@ public interface ProjectCategoryRecommendationPagedQueryResponse {
         instance.setTotal(template.getTotal());
         instance.setOffset(template.getOffset());
         instance.setResults(Optional.ofNullable(template.getResults())
-                .map(t -> t.stream()
-                        .map(
-                            com.commercetools.ml.models.category_recommendations.ProjectCategoryRecommendation::deepCopy)
-                        .collect(Collectors.toList()))
+                .map(t -> t.stream().map(com.commercetools.ml.models.category_recommendations.ProjectCategoryRecommendation::deepCopy).collect(Collectors.toList()))
                 .orElse(null));
-        instance.setMeta(com.commercetools.ml.models.category_recommendations.ProjectCategoryRecommendationMeta
-                .deepCopy(template.getMeta()));
+        instance.setMeta(com.commercetools.ml.models.category_recommendations.ProjectCategoryRecommendationMeta.deepCopy(template.getMeta()));
         return instance;
     }
 
@@ -178,16 +178,16 @@ public interface ProjectCategoryRecommendationPagedQueryResponse {
     public static ProjectCategoryRecommendationPagedQueryResponseBuilder builder() {
         return ProjectCategoryRecommendationPagedQueryResponseBuilder.of();
     }
-
+    
     /**
      * create builder for ProjectCategoryRecommendationPagedQueryResponse instance
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static ProjectCategoryRecommendationPagedQueryResponseBuilder builder(
-            final ProjectCategoryRecommendationPagedQueryResponse template) {
+    public static ProjectCategoryRecommendationPagedQueryResponseBuilder builder(final ProjectCategoryRecommendationPagedQueryResponse template) {
         return ProjectCategoryRecommendationPagedQueryResponseBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -195,11 +195,10 @@ public interface ProjectCategoryRecommendationPagedQueryResponse {
      * @param helper function to map the object
      * @return mapped value
      */
-    default <T> T withProjectCategoryRecommendationPagedQueryResponse(
-            Function<ProjectCategoryRecommendationPagedQueryResponse, T> helper) {
+    default <T> T withProjectCategoryRecommendationPagedQueryResponse(Function<ProjectCategoryRecommendationPagedQueryResponse, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

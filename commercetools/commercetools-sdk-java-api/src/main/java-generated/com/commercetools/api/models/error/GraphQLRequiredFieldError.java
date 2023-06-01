@@ -1,17 +1,20 @@
-
 package com.commercetools.api.models.error;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
+import com.commercetools.api.models.error.GraphQLErrorObject;
+import com.commercetools.api.models.error.GraphQLRequiredFieldErrorImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Returned when a value is not defined for a required field.</p>
@@ -24,9 +27,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .field("{field}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = GraphQLRequiredFieldErrorImpl.class)
 public interface GraphQLRequiredFieldError extends GraphQLErrorObject {
 
@@ -42,7 +48,6 @@ public interface GraphQLRequiredFieldError extends GraphQLErrorObject {
     @NotNull
     @JsonProperty("code")
     public String getCode();
-
     /**
      *  <p>Name of the field missing the value.</p>
      * @return field
@@ -55,16 +60,18 @@ public interface GraphQLRequiredFieldError extends GraphQLErrorObject {
      *  <p>Name of the field missing the value.</p>
      * @param field value to be set
      */
-
+    
     public void setField(final String field);
+    
 
     /**
      * factory method
      * @return instance of GraphQLRequiredFieldError
      */
-    public static GraphQLRequiredFieldError of() {
+    public static GraphQLRequiredFieldError of(){
         return new GraphQLRequiredFieldErrorImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy GraphQLRequiredFieldError
@@ -101,7 +108,7 @@ public interface GraphQLRequiredFieldError extends GraphQLErrorObject {
     public static GraphQLRequiredFieldErrorBuilder builder() {
         return GraphQLRequiredFieldErrorBuilder.of();
     }
-
+    
     /**
      * create builder for GraphQLRequiredFieldError instance
      * @param template instance with prefilled values for the builder
@@ -110,6 +117,7 @@ public interface GraphQLRequiredFieldError extends GraphQLErrorObject {
     public static GraphQLRequiredFieldErrorBuilder builder(final GraphQLRequiredFieldError template) {
         return GraphQLRequiredFieldErrorBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -120,7 +128,7 @@ public interface GraphQLRequiredFieldError extends GraphQLErrorObject {
     default <T> T withGraphQLRequiredFieldError(Function<GraphQLRequiredFieldError, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

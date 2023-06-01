@@ -1,9 +1,12 @@
-
 package com.commercetools.api.models.store;
 
+import com.commercetools.api.models.store.StoreUpdateAction;
+import com.commercetools.api.models.store_country.StoreCountry;
+import com.commercetools.api.models.store.StoreAddCountryAction;
+import javax.annotation.Nullable;
 import java.util.*;
 import java.util.function.Function;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -17,54 +20,61 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .country(countryBuilder -> countryBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class StoreAddCountryActionBuilder implements Builder<StoreAddCountryAction> {
 
+    
+    
     private com.commercetools.api.models.store_country.StoreCountry country;
 
+    
     /**
      *  <p>Value to append to <code>countries</code>.</p>
      * @param builder function to build the country value
      * @return Builder
      */
-
-    public StoreAddCountryActionBuilder country(
-            Function<com.commercetools.api.models.store_country.StoreCountryBuilder, com.commercetools.api.models.store_country.StoreCountryBuilder> builder) {
+    
+    public StoreAddCountryActionBuilder country(Function<com.commercetools.api.models.store_country.StoreCountryBuilder, com.commercetools.api.models.store_country.StoreCountryBuilder> builder) {
         this.country = builder.apply(com.commercetools.api.models.store_country.StoreCountryBuilder.of()).build();
         return this;
     }
-
+    
     /**
      *  <p>Value to append to <code>countries</code>.</p>
      * @param builder function to build the country value
      * @return Builder
      */
-
-    public StoreAddCountryActionBuilder withCountry(
-            Function<com.commercetools.api.models.store_country.StoreCountryBuilder, com.commercetools.api.models.store_country.StoreCountry> builder) {
+    
+    public StoreAddCountryActionBuilder withCountry(Function<com.commercetools.api.models.store_country.StoreCountryBuilder, com.commercetools.api.models.store_country.StoreCountry> builder) {
         this.country = builder.apply(com.commercetools.api.models.store_country.StoreCountryBuilder.of());
         return this;
     }
-
+                    
     /**
      *  <p>Value to append to <code>countries</code>.</p>
      * @param country value to be set
      * @return Builder
      */
-
-    public StoreAddCountryActionBuilder country(final com.commercetools.api.models.store_country.StoreCountry country) {
+    
+    public StoreAddCountryActionBuilder country( final com.commercetools.api.models.store_country.StoreCountry country) {
         this.country = country;
         return this;
     }
+    
+    
 
     /**
      *  <p>Value to append to <code>countries</code>.</p>
      * @return country
      */
-
-    public com.commercetools.api.models.store_country.StoreCountry getCountry() {
+    
+    
+    public com.commercetools.api.models.store_country.StoreCountry getCountry(){
         return this.country;
     }
 
@@ -76,7 +86,7 @@ public class StoreAddCountryActionBuilder implements Builder<StoreAddCountryActi
         Objects.requireNonNull(country, StoreAddCountryAction.class + ": country is missing");
         return new StoreAddCountryActionImpl(country);
     }
-
+    
     /**
      * builds StoreAddCountryAction without checking for non-null required values
      * @return StoreAddCountryAction
@@ -87,7 +97,7 @@ public class StoreAddCountryActionBuilder implements Builder<StoreAddCountryActi
 
     /**
      * factory method for an instance of StoreAddCountryActionBuilder
-     * @return builder
+     * @return builder 
      */
     public static StoreAddCountryActionBuilder of() {
         return new StoreAddCountryActionBuilder();

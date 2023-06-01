@@ -1,8 +1,11 @@
-
 package com.commercetools.api.models.cart;
 
+import com.commercetools.api.models.cart.CartUpdateAction;
+import com.commercetools.api.models.cart.CartRemoveCustomLineItemAction;
+import javax.annotation.Nullable;
 import java.util.*;
-
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -16,30 +19,39 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .customLineItemId("{customLineItemId}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class CartRemoveCustomLineItemActionBuilder implements Builder<CartRemoveCustomLineItemAction> {
 
+    
+    
     private String customLineItemId;
 
+    
     /**
      *  <p><code>id</code> of the Custom Line Item to remove.</p>
      * @param customLineItemId value to be set
      * @return Builder
      */
-
-    public CartRemoveCustomLineItemActionBuilder customLineItemId(final String customLineItemId) {
+    
+    public CartRemoveCustomLineItemActionBuilder customLineItemId( final String customLineItemId) {
         this.customLineItemId = customLineItemId;
         return this;
     }
+    
+    
 
     /**
      *  <p><code>id</code> of the Custom Line Item to remove.</p>
      * @return customLineItemId
      */
-
-    public String getCustomLineItemId() {
+    
+    
+    public String getCustomLineItemId(){
         return this.customLineItemId;
     }
 
@@ -48,11 +60,10 @@ public class CartRemoveCustomLineItemActionBuilder implements Builder<CartRemove
      * @return CartRemoveCustomLineItemAction
      */
     public CartRemoveCustomLineItemAction build() {
-        Objects.requireNonNull(customLineItemId,
-            CartRemoveCustomLineItemAction.class + ": customLineItemId is missing");
+        Objects.requireNonNull(customLineItemId, CartRemoveCustomLineItemAction.class + ": customLineItemId is missing");
         return new CartRemoveCustomLineItemActionImpl(customLineItemId);
     }
-
+    
     /**
      * builds CartRemoveCustomLineItemAction without checking for non-null required values
      * @return CartRemoveCustomLineItemAction
@@ -63,7 +74,7 @@ public class CartRemoveCustomLineItemActionBuilder implements Builder<CartRemove
 
     /**
      * factory method for an instance of CartRemoveCustomLineItemActionBuilder
-     * @return builder
+     * @return builder 
      */
     public static CartRemoveCustomLineItemActionBuilder of() {
         return new CartRemoveCustomLineItemActionBuilder();

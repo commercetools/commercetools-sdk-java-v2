@@ -1,16 +1,20 @@
-
 package com.commercetools.api.models.business_unit;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
+import com.commercetools.api.models.business_unit.BusinessUnitUpdateAction;
+import com.commercetools.api.models.business_unit.BusinessUnitAddBillingAddressIdActionImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Adding a billing address to a Business Unit generates a BusinessUnitBillingAddressAdded Message.</p>
@@ -22,9 +26,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     BusinessUnitAddBillingAddressIdAction businessUnitAddBillingAddressIdAction = BusinessUnitAddBillingAddressIdAction.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = BusinessUnitAddBillingAddressIdActionImpl.class)
 public interface BusinessUnitAddBillingAddressIdAction extends BusinessUnitUpdateAction {
 
@@ -37,15 +44,14 @@ public interface BusinessUnitAddBillingAddressIdAction extends BusinessUnitUpdat
      *  <p>ID of the address to add as a billing address. Either <code>addressId</code> or <code>addressKey</code> is required.</p>
      * @return addressId
      */
-
+    
     @JsonProperty("addressId")
     public String getAddressId();
-
     /**
      *  <p>Key of the address to add as a billing address. Either <code>addressId</code> or <code>addressKey</code> is required.</p>
      * @return addressKey
      */
-
+    
     @JsonProperty("addressKey")
     public String getAddressKey();
 
@@ -53,23 +59,26 @@ public interface BusinessUnitAddBillingAddressIdAction extends BusinessUnitUpdat
      *  <p>ID of the address to add as a billing address. Either <code>addressId</code> or <code>addressKey</code> is required.</p>
      * @param addressId value to be set
      */
-
+    
     public void setAddressId(final String addressId);
-
+    
+    
     /**
      *  <p>Key of the address to add as a billing address. Either <code>addressId</code> or <code>addressKey</code> is required.</p>
      * @param addressKey value to be set
      */
-
+    
     public void setAddressKey(final String addressKey);
+    
 
     /**
      * factory method
      * @return instance of BusinessUnitAddBillingAddressIdAction
      */
-    public static BusinessUnitAddBillingAddressIdAction of() {
+    public static BusinessUnitAddBillingAddressIdAction of(){
         return new BusinessUnitAddBillingAddressIdActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy BusinessUnitAddBillingAddressIdAction
@@ -89,8 +98,7 @@ public interface BusinessUnitAddBillingAddressIdAction extends BusinessUnitUpdat
      * @return copy instance
      */
     @Nullable
-    public static BusinessUnitAddBillingAddressIdAction deepCopy(
-            @Nullable final BusinessUnitAddBillingAddressIdAction template) {
+    public static BusinessUnitAddBillingAddressIdAction deepCopy(@Nullable final BusinessUnitAddBillingAddressIdAction template) {
         if (template == null) {
             return null;
         }
@@ -107,16 +115,16 @@ public interface BusinessUnitAddBillingAddressIdAction extends BusinessUnitUpdat
     public static BusinessUnitAddBillingAddressIdActionBuilder builder() {
         return BusinessUnitAddBillingAddressIdActionBuilder.of();
     }
-
+    
     /**
      * create builder for BusinessUnitAddBillingAddressIdAction instance
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static BusinessUnitAddBillingAddressIdActionBuilder builder(
-            final BusinessUnitAddBillingAddressIdAction template) {
+    public static BusinessUnitAddBillingAddressIdActionBuilder builder(final BusinessUnitAddBillingAddressIdAction template) {
         return BusinessUnitAddBillingAddressIdActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -127,7 +135,7 @@ public interface BusinessUnitAddBillingAddressIdAction extends BusinessUnitUpdat
     default <T> T withBusinessUnitAddBillingAddressIdAction(Function<BusinessUnitAddBillingAddressIdAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

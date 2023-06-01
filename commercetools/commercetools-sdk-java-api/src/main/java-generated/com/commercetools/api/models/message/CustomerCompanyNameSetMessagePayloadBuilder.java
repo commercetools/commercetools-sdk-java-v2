@@ -1,10 +1,11 @@
-
 package com.commercetools.api.models.message;
 
-import java.util.*;
-
+import com.commercetools.api.models.message.MessagePayload;
+import com.commercetools.api.models.message.CustomerCompanyNameSetMessagePayload;
 import javax.annotation.Nullable;
-
+import java.util.*;
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -17,32 +18,39 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     CustomerCompanyNameSetMessagePayload customerCompanyNameSetMessagePayload = CustomerCompanyNameSetMessagePayload.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class CustomerCompanyNameSetMessagePayloadBuilder implements Builder<CustomerCompanyNameSetMessagePayload> {
 
+    
     @Nullable
     private String companyName;
 
+    
     /**
      *  <p>The <code>companyName</code> that was set during the Set Company Name update action.</p>
      * @param companyName value to be set
      * @return Builder
      */
-
+    
     public CustomerCompanyNameSetMessagePayloadBuilder companyName(@Nullable final String companyName) {
         this.companyName = companyName;
         return this;
     }
+    
+    
 
     /**
      *  <p>The <code>companyName</code> that was set during the Set Company Name update action.</p>
      * @return companyName
      */
-
+    
     @Nullable
-    public String getCompanyName() {
+    public String getCompanyName(){
         return this.companyName;
     }
 
@@ -53,7 +61,7 @@ public class CustomerCompanyNameSetMessagePayloadBuilder implements Builder<Cust
     public CustomerCompanyNameSetMessagePayload build() {
         return new CustomerCompanyNameSetMessagePayloadImpl(companyName);
     }
-
+    
     /**
      * builds CustomerCompanyNameSetMessagePayload without checking for non-null required values
      * @return CustomerCompanyNameSetMessagePayload
@@ -64,7 +72,7 @@ public class CustomerCompanyNameSetMessagePayloadBuilder implements Builder<Cust
 
     /**
      * factory method for an instance of CustomerCompanyNameSetMessagePayloadBuilder
-     * @return builder
+     * @return builder 
      */
     public static CustomerCompanyNameSetMessagePayloadBuilder of() {
         return new CustomerCompanyNameSetMessagePayloadBuilder();

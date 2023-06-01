@@ -1,18 +1,21 @@
-
 package com.commercetools.api.models.message;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-
 import com.commercetools.api.models.customer_group.CustomerGroupReference;
+import com.commercetools.api.models.message.OrderMessagePayload;
+import com.commercetools.api.models.message.OrderCustomerGroupSetMessagePayloadImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Generated after a successful Set Customer Group update action.</p>
@@ -24,9 +27,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     OrderCustomerGroupSetMessagePayload orderCustomerGroupSetMessagePayload = OrderCustomerGroupSetMessagePayload.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = OrderCustomerGroupSetMessagePayloadImpl.class)
 public interface OrderCustomerGroupSetMessagePayload extends OrderMessagePayload {
 
@@ -42,7 +48,6 @@ public interface OrderCustomerGroupSetMessagePayload extends OrderMessagePayload
     @Valid
     @JsonProperty("customerGroup")
     public CustomerGroupReference getCustomerGroup();
-
     /**
      *  <p>CustomerGroup on the Order before the Set Customer Group update action.</p>
      * @return oldCustomerGroup
@@ -55,23 +60,26 @@ public interface OrderCustomerGroupSetMessagePayload extends OrderMessagePayload
      *  <p>CustomerGroup on the Order after the Set Customer Group update action.</p>
      * @param customerGroup value to be set
      */
-
+    
     public void setCustomerGroup(final CustomerGroupReference customerGroup);
-
+    
+    
     /**
      *  <p>CustomerGroup on the Order before the Set Customer Group update action.</p>
      * @param oldCustomerGroup value to be set
      */
-
+    
     public void setOldCustomerGroup(final CustomerGroupReference oldCustomerGroup);
+    
 
     /**
      * factory method
      * @return instance of OrderCustomerGroupSetMessagePayload
      */
-    public static OrderCustomerGroupSetMessagePayload of() {
+    public static OrderCustomerGroupSetMessagePayload of(){
         return new OrderCustomerGroupSetMessagePayloadImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy OrderCustomerGroupSetMessagePayload
@@ -91,16 +99,13 @@ public interface OrderCustomerGroupSetMessagePayload extends OrderMessagePayload
      * @return copy instance
      */
     @Nullable
-    public static OrderCustomerGroupSetMessagePayload deepCopy(
-            @Nullable final OrderCustomerGroupSetMessagePayload template) {
+    public static OrderCustomerGroupSetMessagePayload deepCopy(@Nullable final OrderCustomerGroupSetMessagePayload template) {
         if (template == null) {
             return null;
         }
         OrderCustomerGroupSetMessagePayloadImpl instance = new OrderCustomerGroupSetMessagePayloadImpl();
-        instance.setCustomerGroup(
-            com.commercetools.api.models.customer_group.CustomerGroupReference.deepCopy(template.getCustomerGroup()));
-        instance.setOldCustomerGroup(com.commercetools.api.models.customer_group.CustomerGroupReference
-                .deepCopy(template.getOldCustomerGroup()));
+        instance.setCustomerGroup(com.commercetools.api.models.customer_group.CustomerGroupReference.deepCopy(template.getCustomerGroup()));
+        instance.setOldCustomerGroup(com.commercetools.api.models.customer_group.CustomerGroupReference.deepCopy(template.getOldCustomerGroup()));
         return instance;
     }
 
@@ -111,16 +116,16 @@ public interface OrderCustomerGroupSetMessagePayload extends OrderMessagePayload
     public static OrderCustomerGroupSetMessagePayloadBuilder builder() {
         return OrderCustomerGroupSetMessagePayloadBuilder.of();
     }
-
+    
     /**
      * create builder for OrderCustomerGroupSetMessagePayload instance
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static OrderCustomerGroupSetMessagePayloadBuilder builder(
-            final OrderCustomerGroupSetMessagePayload template) {
+    public static OrderCustomerGroupSetMessagePayloadBuilder builder(final OrderCustomerGroupSetMessagePayload template) {
         return OrderCustomerGroupSetMessagePayloadBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -131,7 +136,7 @@ public interface OrderCustomerGroupSetMessagePayload extends OrderMessagePayload
     default <T> T withOrderCustomerGroupSetMessagePayload(Function<OrderCustomerGroupSetMessagePayload, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

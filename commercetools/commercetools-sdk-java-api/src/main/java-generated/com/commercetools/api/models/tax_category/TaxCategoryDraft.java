@@ -1,19 +1,20 @@
-
 package com.commercetools.api.models.tax_category;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-import java.util.stream.Collectors;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
+import com.commercetools.api.models.tax_category.TaxRateDraft;
+import com.commercetools.api.models.tax_category.TaxCategoryDraftImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * TaxCategoryDraft
@@ -26,12 +27,15 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .name("{name}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = TaxCategoryDraftImpl.class)
-public interface TaxCategoryDraft
-        extends com.commercetools.api.models.WithKey, io.vrap.rmf.base.client.Draft<TaxCategoryDraft> {
+public interface TaxCategoryDraft extends com.commercetools.api.models.WithKey, io.vrap.rmf.base.client.Draft<TaxCategoryDraft> {
+
 
     /**
      *  <p>Name of the TaxCategory.</p>
@@ -40,15 +44,13 @@ public interface TaxCategoryDraft
     @NotNull
     @JsonProperty("name")
     public String getName();
-
     /**
      *  <p>Description of the TaxCategory.</p>
      * @return description
      */
-
+    
     @JsonProperty("description")
     public String getDescription();
-
     /**
      *  <p>Tax rates and subrates of states and countries.</p>
      * @return rates
@@ -56,12 +58,11 @@ public interface TaxCategoryDraft
     @Valid
     @JsonProperty("rates")
     public List<TaxRateDraft> getRates();
-
     /**
      *  <p>User-defined unique identifier for the TaxCategory.</p>
      * @return key
      */
-
+    
     @JsonProperty("key")
     public String getKey();
 
@@ -69,45 +70,48 @@ public interface TaxCategoryDraft
      *  <p>Name of the TaxCategory.</p>
      * @param name value to be set
      */
-
+    
     public void setName(final String name);
-
+    
+    
     /**
      *  <p>Description of the TaxCategory.</p>
      * @param description value to be set
      */
-
+    
     public void setDescription(final String description);
-
+    
+    
     /**
      *  <p>Tax rates and subrates of states and countries.</p>
      * @param rates values to be set
      */
-
+    
     @JsonIgnore
-    public void setRates(final TaxRateDraft... rates);
-
+    public void setRates(final TaxRateDraft ...rates);
     /**
      *  <p>Tax rates and subrates of states and countries.</p>
      * @param rates values to be set
      */
-
+    
     public void setRates(final List<TaxRateDraft> rates);
-
+    
     /**
      *  <p>User-defined unique identifier for the TaxCategory.</p>
      * @param key value to be set
      */
-
+    
     public void setKey(final String key);
+    
 
     /**
      * factory method
      * @return instance of TaxCategoryDraft
      */
-    public static TaxCategoryDraft of() {
+    public static TaxCategoryDraft of(){
         return new TaxCategoryDraftImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy TaxCategoryDraft
@@ -137,9 +141,7 @@ public interface TaxCategoryDraft
         instance.setName(template.getName());
         instance.setDescription(template.getDescription());
         instance.setRates(Optional.ofNullable(template.getRates())
-                .map(t -> t.stream()
-                        .map(com.commercetools.api.models.tax_category.TaxRateDraft::deepCopy)
-                        .collect(Collectors.toList()))
+                .map(t -> t.stream().map(com.commercetools.api.models.tax_category.TaxRateDraft::deepCopy).collect(Collectors.toList()))
                 .orElse(null));
         instance.setKey(template.getKey());
         return instance;
@@ -152,7 +154,7 @@ public interface TaxCategoryDraft
     public static TaxCategoryDraftBuilder builder() {
         return TaxCategoryDraftBuilder.of();
     }
-
+    
     /**
      * create builder for TaxCategoryDraft instance
      * @param template instance with prefilled values for the builder
@@ -161,6 +163,7 @@ public interface TaxCategoryDraft
     public static TaxCategoryDraftBuilder builder(final TaxCategoryDraft template) {
         return TaxCategoryDraftBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -171,7 +174,7 @@ public interface TaxCategoryDraft
     default <T> T withTaxCategoryDraft(Function<TaxCategoryDraft, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

@@ -1,17 +1,20 @@
-
 package com.commercetools.importapi.models.customfields;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
+import com.commercetools.importapi.models.customfields.CustomField;
+import com.commercetools.importapi.models.customfields.LocalizedEnumSetFieldImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>A field with a localized enum set value.</p>
@@ -24,9 +27,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .plusValue(valueBuilder -> valueBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = LocalizedEnumSetFieldImpl.class)
 public interface LocalizedEnumSetField extends CustomField {
 
@@ -47,24 +53,24 @@ public interface LocalizedEnumSetField extends CustomField {
      * set value
      * @param value values to be set
      */
-
+    
     @JsonIgnore
-    public void setValue(final String... value);
-
+    public void setValue(final String ...value);
     /**
      * set value
      * @param value values to be set
      */
-
+    
     public void setValue(final List<String> value);
 
     /**
      * factory method
      * @return instance of LocalizedEnumSetField
      */
-    public static LocalizedEnumSetField of() {
+    public static LocalizedEnumSetField of(){
         return new LocalizedEnumSetFieldImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy LocalizedEnumSetField
@@ -88,7 +94,9 @@ public interface LocalizedEnumSetField extends CustomField {
             return null;
         }
         LocalizedEnumSetFieldImpl instance = new LocalizedEnumSetFieldImpl();
-        instance.setValue(Optional.ofNullable(template.getValue()).map(ArrayList::new).orElse(null));
+        instance.setValue(Optional.ofNullable(template.getValue())
+                .map(ArrayList::new)
+                .orElse(null));
         return instance;
     }
 
@@ -99,7 +107,7 @@ public interface LocalizedEnumSetField extends CustomField {
     public static LocalizedEnumSetFieldBuilder builder() {
         return LocalizedEnumSetFieldBuilder.of();
     }
-
+    
     /**
      * create builder for LocalizedEnumSetField instance
      * @param template instance with prefilled values for the builder
@@ -108,6 +116,7 @@ public interface LocalizedEnumSetField extends CustomField {
     public static LocalizedEnumSetFieldBuilder builder(final LocalizedEnumSetField template) {
         return LocalizedEnumSetFieldBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -118,7 +127,7 @@ public interface LocalizedEnumSetField extends CustomField {
     default <T> T withLocalizedEnumSetField(Function<LocalizedEnumSetField, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

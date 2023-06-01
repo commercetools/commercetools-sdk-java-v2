@@ -1,17 +1,20 @@
-
 package com.commercetools.api.models.cart;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
 
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
+import com.commercetools.api.models.cart.ItemShippingTargetImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Determines the address (as a reference to an address in <code>itemShippingAddresses</code>) and the quantity shipped to the address.</p>
@@ -26,11 +29,15 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .quantity(0.3)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = ItemShippingTargetImpl.class)
-public interface ItemShippingTarget {
+public interface ItemShippingTarget  {
+
 
     /**
      *  <p>Key of the address in the Cart <code>itemShippingAddresses</code>. Duplicate address keys are not allowed.</p>
@@ -39,7 +46,6 @@ public interface ItemShippingTarget {
     @NotNull
     @JsonProperty("addressKey")
     public String getAddressKey();
-
     /**
      *  <p>Quantity of Line Items or Custom Line Items shipped to the address with the specified <code>addressKey</code>.</p>
      *  <p>If a quantity is updated to <code>0</code> when defining ItemShippingDetailsDraft, the <code>targets</code> are removed from a Line Item or Custom Line Item in the resulting ItemShippingDetails.</p>
@@ -48,13 +54,12 @@ public interface ItemShippingTarget {
     @NotNull
     @JsonProperty("quantity")
     public Long getQuantity();
-
     /**
      *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multiple</code> ShippingMode.</p>
      *  <p>It connects Line Item quantities with individual shipping addresses.</p>
      * @return shippingMethodKey
      */
-
+    
     @JsonProperty("shippingMethodKey")
     public String getShippingMethodKey();
 
@@ -62,32 +67,36 @@ public interface ItemShippingTarget {
      *  <p>Key of the address in the Cart <code>itemShippingAddresses</code>. Duplicate address keys are not allowed.</p>
      * @param addressKey value to be set
      */
-
+    
     public void setAddressKey(final String addressKey);
-
+    
+    
     /**
      *  <p>Quantity of Line Items or Custom Line Items shipped to the address with the specified <code>addressKey</code>.</p>
      *  <p>If a quantity is updated to <code>0</code> when defining ItemShippingDetailsDraft, the <code>targets</code> are removed from a Line Item or Custom Line Item in the resulting ItemShippingDetails.</p>
      * @param quantity value to be set
      */
-
+    
     public void setQuantity(final Long quantity);
-
+    
+    
     /**
      *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multiple</code> ShippingMode.</p>
      *  <p>It connects Line Item quantities with individual shipping addresses.</p>
      * @param shippingMethodKey value to be set
      */
-
+    
     public void setShippingMethodKey(final String shippingMethodKey);
+    
 
     /**
      * factory method
      * @return instance of ItemShippingTarget
      */
-    public static ItemShippingTarget of() {
+    public static ItemShippingTarget of(){
         return new ItemShippingTargetImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy ItemShippingTarget
@@ -126,7 +135,7 @@ public interface ItemShippingTarget {
     public static ItemShippingTargetBuilder builder() {
         return ItemShippingTargetBuilder.of();
     }
-
+    
     /**
      * create builder for ItemShippingTarget instance
      * @param template instance with prefilled values for the builder
@@ -135,6 +144,7 @@ public interface ItemShippingTarget {
     public static ItemShippingTargetBuilder builder(final ItemShippingTarget template) {
         return ItemShippingTargetBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -145,7 +155,7 @@ public interface ItemShippingTarget {
     default <T> T withItemShippingTarget(Function<ItemShippingTarget, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

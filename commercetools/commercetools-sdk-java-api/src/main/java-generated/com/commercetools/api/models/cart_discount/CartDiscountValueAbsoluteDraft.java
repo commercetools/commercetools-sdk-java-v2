@@ -1,20 +1,21 @@
-
 package com.commercetools.api.models.cart_discount;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-import java.util.stream.Collectors;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
+import com.commercetools.api.models.cart_discount.CartDiscountValueDraft;
 import com.commercetools.api.models.common.Money;
+import com.commercetools.api.models.cart_discount.CartDiscountValueAbsoluteDraftImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * CartDiscountValueAbsoluteDraft
@@ -27,12 +28,14 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .plusMoney(moneyBuilder -> moneyBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = CartDiscountValueAbsoluteDraftImpl.class)
-public interface CartDiscountValueAbsoluteDraft
-        extends CartDiscountValueDraft, io.vrap.rmf.base.client.Draft<CartDiscountValueAbsoluteDraft> {
+public interface CartDiscountValueAbsoluteDraft extends CartDiscountValueDraft, io.vrap.rmf.base.client.Draft<CartDiscountValueAbsoluteDraft> {
 
     /**
      * discriminator value for CartDiscountValueAbsoluteDraft
@@ -52,24 +55,24 @@ public interface CartDiscountValueAbsoluteDraft
      *  <p>Money values in different currencies. An absolute Cart Discount will only match a price if this array contains a value with the same currency. If it contains 10&euro; and 15$, the matching &euro; price will be decreased by 10&euro; and the matching $ price will be decreased by 15$.</p>
      * @param money values to be set
      */
-
+    
     @JsonIgnore
-    public void setMoney(final Money... money);
-
+    public void setMoney(final Money ...money);
     /**
      *  <p>Money values in different currencies. An absolute Cart Discount will only match a price if this array contains a value with the same currency. If it contains 10&euro; and 15$, the matching &euro; price will be decreased by 10&euro; and the matching $ price will be decreased by 15$.</p>
      * @param money values to be set
      */
-
+    
     public void setMoney(final List<Money> money);
 
     /**
      * factory method
      * @return instance of CartDiscountValueAbsoluteDraft
      */
-    public static CartDiscountValueAbsoluteDraft of() {
+    public static CartDiscountValueAbsoluteDraft of(){
         return new CartDiscountValueAbsoluteDraftImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy CartDiscountValueAbsoluteDraft
@@ -94,9 +97,7 @@ public interface CartDiscountValueAbsoluteDraft
         }
         CartDiscountValueAbsoluteDraftImpl instance = new CartDiscountValueAbsoluteDraftImpl();
         instance.setMoney(Optional.ofNullable(template.getMoney())
-                .map(t -> t.stream()
-                        .map(com.commercetools.api.models.common.Money::deepCopy)
-                        .collect(Collectors.toList()))
+                .map(t -> t.stream().map(com.commercetools.api.models.common.Money::deepCopy).collect(Collectors.toList()))
                 .orElse(null));
         return instance;
     }
@@ -108,7 +109,7 @@ public interface CartDiscountValueAbsoluteDraft
     public static CartDiscountValueAbsoluteDraftBuilder builder() {
         return CartDiscountValueAbsoluteDraftBuilder.of();
     }
-
+    
     /**
      * create builder for CartDiscountValueAbsoluteDraft instance
      * @param template instance with prefilled values for the builder
@@ -117,6 +118,7 @@ public interface CartDiscountValueAbsoluteDraft
     public static CartDiscountValueAbsoluteDraftBuilder builder(final CartDiscountValueAbsoluteDraft template) {
         return CartDiscountValueAbsoluteDraftBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -127,7 +129,7 @@ public interface CartDiscountValueAbsoluteDraft
     default <T> T withCartDiscountValueAbsoluteDraft(Function<CartDiscountValueAbsoluteDraft, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

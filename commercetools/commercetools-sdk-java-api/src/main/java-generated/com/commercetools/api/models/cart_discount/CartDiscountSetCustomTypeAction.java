@@ -1,19 +1,22 @@
-
 package com.commercetools.api.models.cart_discount;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-
+import com.commercetools.api.models.cart_discount.CartDiscountUpdateAction;
 import com.commercetools.api.models.type.FieldContainer;
 import com.commercetools.api.models.type.TypeResourceIdentifier;
+import com.commercetools.api.models.cart_discount.CartDiscountSetCustomTypeActionImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * CartDiscountSetCustomTypeAction
@@ -25,9 +28,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     CartDiscountSetCustomTypeAction cartDiscountSetCustomTypeAction = CartDiscountSetCustomTypeAction.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = CartDiscountSetCustomTypeActionImpl.class)
 public interface CartDiscountSetCustomTypeAction extends CartDiscountUpdateAction {
 
@@ -43,7 +49,6 @@ public interface CartDiscountSetCustomTypeAction extends CartDiscountUpdateActio
     @Valid
     @JsonProperty("type")
     public TypeResourceIdentifier getType();
-
     /**
      *  <p>Sets the Custom Fields fields for the CartDiscount.</p>
      * @return fields
@@ -56,23 +61,26 @@ public interface CartDiscountSetCustomTypeAction extends CartDiscountUpdateActio
      *  <p>Defines the Type that extends the CartDiscount with Custom Fields. If absent, any existing Type and Custom Fields are removed from the CartDiscount.</p>
      * @param type value to be set
      */
-
+    
     public void setType(final TypeResourceIdentifier type);
-
+    
+    
     /**
      *  <p>Sets the Custom Fields fields for the CartDiscount.</p>
      * @param fields value to be set
      */
-
+    
     public void setFields(final FieldContainer fields);
+    
 
     /**
      * factory method
      * @return instance of CartDiscountSetCustomTypeAction
      */
-    public static CartDiscountSetCustomTypeAction of() {
+    public static CartDiscountSetCustomTypeAction of(){
         return new CartDiscountSetCustomTypeActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy CartDiscountSetCustomTypeAction
@@ -109,7 +117,7 @@ public interface CartDiscountSetCustomTypeAction extends CartDiscountUpdateActio
     public static CartDiscountSetCustomTypeActionBuilder builder() {
         return CartDiscountSetCustomTypeActionBuilder.of();
     }
-
+    
     /**
      * create builder for CartDiscountSetCustomTypeAction instance
      * @param template instance with prefilled values for the builder
@@ -118,6 +126,7 @@ public interface CartDiscountSetCustomTypeAction extends CartDiscountUpdateActio
     public static CartDiscountSetCustomTypeActionBuilder builder(final CartDiscountSetCustomTypeAction template) {
         return CartDiscountSetCustomTypeActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -128,7 +137,7 @@ public interface CartDiscountSetCustomTypeAction extends CartDiscountUpdateActio
     default <T> T withCartDiscountSetCustomTypeAction(Function<CartDiscountSetCustomTypeAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

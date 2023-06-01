@@ -1,18 +1,21 @@
-
 package com.commercetools.api.models.message;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-
 import com.commercetools.api.models.customer_group.CustomerGroupReference;
+import com.commercetools.api.models.message.MessagePayload;
+import com.commercetools.api.models.message.CustomerGroupSetMessagePayloadImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Generated after a successful Set Customer Group update action.</p>
@@ -24,9 +27,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     CustomerGroupSetMessagePayload customerGroupSetMessagePayload = CustomerGroupSetMessagePayload.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = CustomerGroupSetMessagePayloadImpl.class)
 public interface CustomerGroupSetMessagePayload extends MessagePayload {
 
@@ -47,16 +53,18 @@ public interface CustomerGroupSetMessagePayload extends MessagePayload {
      *  <p>Customer Group that was set during the Set Customer Group update action.</p>
      * @param customerGroup value to be set
      */
-
+    
     public void setCustomerGroup(final CustomerGroupReference customerGroup);
+    
 
     /**
      * factory method
      * @return instance of CustomerGroupSetMessagePayload
      */
-    public static CustomerGroupSetMessagePayload of() {
+    public static CustomerGroupSetMessagePayload of(){
         return new CustomerGroupSetMessagePayloadImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy CustomerGroupSetMessagePayload
@@ -80,8 +88,7 @@ public interface CustomerGroupSetMessagePayload extends MessagePayload {
             return null;
         }
         CustomerGroupSetMessagePayloadImpl instance = new CustomerGroupSetMessagePayloadImpl();
-        instance.setCustomerGroup(
-            com.commercetools.api.models.customer_group.CustomerGroupReference.deepCopy(template.getCustomerGroup()));
+        instance.setCustomerGroup(com.commercetools.api.models.customer_group.CustomerGroupReference.deepCopy(template.getCustomerGroup()));
         return instance;
     }
 
@@ -92,7 +99,7 @@ public interface CustomerGroupSetMessagePayload extends MessagePayload {
     public static CustomerGroupSetMessagePayloadBuilder builder() {
         return CustomerGroupSetMessagePayloadBuilder.of();
     }
-
+    
     /**
      * create builder for CustomerGroupSetMessagePayload instance
      * @param template instance with prefilled values for the builder
@@ -101,6 +108,7 @@ public interface CustomerGroupSetMessagePayload extends MessagePayload {
     public static CustomerGroupSetMessagePayloadBuilder builder(final CustomerGroupSetMessagePayload template) {
         return CustomerGroupSetMessagePayloadBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -111,7 +119,7 @@ public interface CustomerGroupSetMessagePayload extends MessagePayload {
     default <T> T withCustomerGroupSetMessagePayload(Function<CustomerGroupSetMessagePayload, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

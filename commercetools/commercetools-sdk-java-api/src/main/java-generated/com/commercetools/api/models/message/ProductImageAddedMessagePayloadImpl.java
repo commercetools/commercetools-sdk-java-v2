@@ -1,117 +1,132 @@
-
 package com.commercetools.api.models.message;
 
-import java.time.*;
-import java.util.*;
-
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
-
-import io.vrap.rmf.base.client.ModelBase;
+import com.commercetools.api.models.common.Image;
+import com.commercetools.api.models.message.MessagePayload;
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.ModelBase;
+import javax.validation.Valid;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.annotation.*;
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
  *  <p>Generated after a successful Add External Image update action or after the successful upload of an image.</p>
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class ProductImageAddedMessagePayloadImpl implements ProductImageAddedMessagePayload, ModelBase {
 
+    
     private String type;
-
+    
+    
     private Long variantId;
-
+    
+    
     private com.commercetools.api.models.common.Image image;
-
+    
+    
     private Boolean staged;
 
     /**
      * create instance with all properties
      */
     @JsonCreator
-    ProductImageAddedMessagePayloadImpl(@JsonProperty("variantId") final Long variantId,
-            @JsonProperty("image") final com.commercetools.api.models.common.Image image,
-            @JsonProperty("staged") final Boolean staged) {
+    ProductImageAddedMessagePayloadImpl(@JsonProperty("variantId") final Long variantId, @JsonProperty("image") final com.commercetools.api.models.common.Image image, @JsonProperty("staged") final Boolean staged) {
         this.variantId = variantId;
         this.image = image;
         this.staged = staged;
-        this.type = PRODUCT_IMAGE_ADDED;
+        this.type =  PRODUCT_IMAGE_ADDED;
     }
-
     /**
      * create empty instance
      */
     public ProductImageAddedMessagePayloadImpl() {
-        this.type = PRODUCT_IMAGE_ADDED;
+        this.type =  PRODUCT_IMAGE_ADDED;
     }
 
     /**
      *
      */
-
-    public String getType() {
+    
+    public String getType(){
         return this.type;
     }
-
+    
     /**
      *  <p>Unique identifier of the Product Variant to which the Image was added.</p>
      */
-
-    public Long getVariantId() {
+    
+    public Long getVariantId(){
         return this.variantId;
     }
-
+    
     /**
      *  <p>Image that was added.</p>
      */
-
-    public com.commercetools.api.models.common.Image getImage() {
+    
+    public com.commercetools.api.models.common.Image getImage(){
         return this.image;
     }
-
+    
     /**
      *  <p>Whether the update was only applied to the staged Product Projection.</p>
      */
-
-    public Boolean getStaged() {
+    
+    public Boolean getStaged(){
         return this.staged;
     }
 
-    public void setVariantId(final Long variantId) {
+    
+    public void setVariantId(final Long variantId){
         this.variantId = variantId;
     }
-
-    public void setImage(final com.commercetools.api.models.common.Image image) {
+    
+    
+    public void setImage(final com.commercetools.api.models.common.Image image){
         this.image = image;
     }
-
-    public void setStaged(final Boolean staged) {
+    
+    
+    public void setStaged(final Boolean staged){
         this.staged = staged;
     }
 
     @Override
     public boolean equals(Object o) {
-        if (this == o)
-            return true;
-
-        if (o == null || getClass() != o.getClass())
-            return false;
-
+        if (this == o) return true;
+    
+        if (o == null || getClass() != o.getClass()) return false;
+    
         ProductImageAddedMessagePayloadImpl that = (ProductImageAddedMessagePayloadImpl) o;
-
-        return new EqualsBuilder().append(type, that.type)
+    
+        return new EqualsBuilder()
+                .append(type, that.type)
                 .append(variantId, that.variantId)
                 .append(image, that.image)
                 .append(staged, that.staged)
                 .isEquals();
     }
-
+    
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(type).append(variantId).append(image).append(staged).toHashCode();
+        return new HashCodeBuilder(17, 37)
+            .append(type)
+            .append(variantId)
+            .append(image)
+            .append(staged)
+            .toHashCode();
     }
 
 }

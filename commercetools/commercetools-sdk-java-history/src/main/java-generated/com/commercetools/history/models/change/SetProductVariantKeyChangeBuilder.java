@@ -1,8 +1,11 @@
-
 package com.commercetools.history.models.change;
 
+import com.commercetools.history.models.change.Change;
+import com.commercetools.history.models.change.SetProductVariantKeyChange;
+import javax.annotation.Nullable;
 import java.util.*;
-
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -19,96 +22,123 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .nextValue("{nextValue}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class SetProductVariantKeyChangeBuilder implements Builder<SetProductVariantKeyChange> {
 
+    
+    
     private String change;
-
+    
+    
+    
     private String catalogData;
-
+    
+    
+    
     private String previousValue;
-
+    
+    
+    
     private String nextValue;
 
+    
     /**
      *  <p>Update action for <code>setProductVariantKey</code></p>
      * @param change value to be set
      * @return Builder
      */
-
-    public SetProductVariantKeyChangeBuilder change(final String change) {
+    
+    public SetProductVariantKeyChangeBuilder change( final String change) {
         this.change = change;
         return this;
     }
-
+    
+    
+    
+    
     /**
      * set the value to the catalogData
      * @param catalogData value to be set
      * @return Builder
      */
-
-    public SetProductVariantKeyChangeBuilder catalogData(final String catalogData) {
+    
+    public SetProductVariantKeyChangeBuilder catalogData( final String catalogData) {
         this.catalogData = catalogData;
         return this;
     }
-
+    
+    
+    
+    
     /**
      * set the value to the previousValue
      * @param previousValue value to be set
      * @return Builder
      */
-
-    public SetProductVariantKeyChangeBuilder previousValue(final String previousValue) {
+    
+    public SetProductVariantKeyChangeBuilder previousValue( final String previousValue) {
         this.previousValue = previousValue;
         return this;
     }
-
+    
+    
+    
+    
     /**
      * set the value to the nextValue
      * @param nextValue value to be set
      * @return Builder
      */
-
-    public SetProductVariantKeyChangeBuilder nextValue(final String nextValue) {
+    
+    public SetProductVariantKeyChangeBuilder nextValue( final String nextValue) {
         this.nextValue = nextValue;
         return this;
     }
+    
+    
 
     /**
      *  <p>Update action for <code>setProductVariantKey</code></p>
      * @return change
      */
-
-    public String getChange() {
+    
+    
+    public String getChange(){
         return this.change;
     }
-
+    
     /**
      * value of catalogData}
      * @return catalogData
      */
-
-    public String getCatalogData() {
+    
+    
+    public String getCatalogData(){
         return this.catalogData;
     }
-
+    
     /**
      * value of previousValue}
      * @return previousValue
      */
-
-    public String getPreviousValue() {
+    
+    
+    public String getPreviousValue(){
         return this.previousValue;
     }
-
+    
     /**
      * value of nextValue}
      * @return nextValue
      */
-
-    public String getNextValue() {
+    
+    
+    public String getNextValue(){
         return this.nextValue;
     }
 
@@ -123,7 +153,7 @@ public class SetProductVariantKeyChangeBuilder implements Builder<SetProductVari
         Objects.requireNonNull(nextValue, SetProductVariantKeyChange.class + ": nextValue is missing");
         return new SetProductVariantKeyChangeImpl(change, catalogData, previousValue, nextValue);
     }
-
+    
     /**
      * builds SetProductVariantKeyChange without checking for non-null required values
      * @return SetProductVariantKeyChange
@@ -134,7 +164,7 @@ public class SetProductVariantKeyChangeBuilder implements Builder<SetProductVari
 
     /**
      * factory method for an instance of SetProductVariantKeyChangeBuilder
-     * @return builder
+     * @return builder 
      */
     public static SetProductVariantKeyChangeBuilder of() {
         return new SetProductVariantKeyChangeBuilder();

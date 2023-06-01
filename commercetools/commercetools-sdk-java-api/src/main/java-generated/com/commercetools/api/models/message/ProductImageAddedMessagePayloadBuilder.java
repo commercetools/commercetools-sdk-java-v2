@@ -1,9 +1,12 @@
-
 package com.commercetools.api.models.message;
 
+import com.commercetools.api.models.common.Image;
+import com.commercetools.api.models.message.MessagePayload;
+import com.commercetools.api.models.message.ProductImageAddedMessagePayload;
+import javax.annotation.Nullable;
 import java.util.*;
 import java.util.function.Function;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -19,98 +22,117 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .staged(true)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class ProductImageAddedMessagePayloadBuilder implements Builder<ProductImageAddedMessagePayload> {
 
+    
+    
     private Long variantId;
-
+    
+    
+    
     private com.commercetools.api.models.common.Image image;
-
+    
+    
+    
     private Boolean staged;
 
+    
     /**
      *  <p>Unique identifier of the Product Variant to which the Image was added.</p>
      * @param variantId value to be set
      * @return Builder
      */
-
-    public ProductImageAddedMessagePayloadBuilder variantId(final Long variantId) {
+    
+    public ProductImageAddedMessagePayloadBuilder variantId( final Long variantId) {
         this.variantId = variantId;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Image that was added.</p>
      * @param builder function to build the image value
      * @return Builder
      */
-
-    public ProductImageAddedMessagePayloadBuilder image(
-            Function<com.commercetools.api.models.common.ImageBuilder, com.commercetools.api.models.common.ImageBuilder> builder) {
+    
+    public ProductImageAddedMessagePayloadBuilder image(Function<com.commercetools.api.models.common.ImageBuilder, com.commercetools.api.models.common.ImageBuilder> builder) {
         this.image = builder.apply(com.commercetools.api.models.common.ImageBuilder.of()).build();
         return this;
     }
-
+    
     /**
      *  <p>Image that was added.</p>
      * @param builder function to build the image value
      * @return Builder
      */
-
-    public ProductImageAddedMessagePayloadBuilder withImage(
-            Function<com.commercetools.api.models.common.ImageBuilder, com.commercetools.api.models.common.Image> builder) {
+    
+    public ProductImageAddedMessagePayloadBuilder withImage(Function<com.commercetools.api.models.common.ImageBuilder, com.commercetools.api.models.common.Image> builder) {
         this.image = builder.apply(com.commercetools.api.models.common.ImageBuilder.of());
         return this;
     }
-
+                    
     /**
      *  <p>Image that was added.</p>
      * @param image value to be set
      * @return Builder
      */
-
-    public ProductImageAddedMessagePayloadBuilder image(final com.commercetools.api.models.common.Image image) {
+    
+    public ProductImageAddedMessagePayloadBuilder image( final com.commercetools.api.models.common.Image image) {
         this.image = image;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Whether the update was only applied to the staged Product Projection.</p>
      * @param staged value to be set
      * @return Builder
      */
-
-    public ProductImageAddedMessagePayloadBuilder staged(final Boolean staged) {
+    
+    public ProductImageAddedMessagePayloadBuilder staged( final Boolean staged) {
         this.staged = staged;
         return this;
     }
+    
+    
 
     /**
      *  <p>Unique identifier of the Product Variant to which the Image was added.</p>
      * @return variantId
      */
-
-    public Long getVariantId() {
+    
+    
+    public Long getVariantId(){
         return this.variantId;
     }
-
+    
     /**
      *  <p>Image that was added.</p>
      * @return image
      */
-
-    public com.commercetools.api.models.common.Image getImage() {
+    
+    
+    public com.commercetools.api.models.common.Image getImage(){
         return this.image;
     }
-
+    
     /**
      *  <p>Whether the update was only applied to the staged Product Projection.</p>
      * @return staged
      */
-
-    public Boolean getStaged() {
+    
+    
+    public Boolean getStaged(){
         return this.staged;
     }
 
@@ -124,7 +146,7 @@ public class ProductImageAddedMessagePayloadBuilder implements Builder<ProductIm
         Objects.requireNonNull(staged, ProductImageAddedMessagePayload.class + ": staged is missing");
         return new ProductImageAddedMessagePayloadImpl(variantId, image, staged);
     }
-
+    
     /**
      * builds ProductImageAddedMessagePayload without checking for non-null required values
      * @return ProductImageAddedMessagePayload
@@ -135,7 +157,7 @@ public class ProductImageAddedMessagePayloadBuilder implements Builder<ProductIm
 
     /**
      * factory method for an instance of ProductImageAddedMessagePayloadBuilder
-     * @return builder
+     * @return builder 
      */
     public static ProductImageAddedMessagePayloadBuilder of() {
         return new ProductImageAddedMessagePayloadBuilder();

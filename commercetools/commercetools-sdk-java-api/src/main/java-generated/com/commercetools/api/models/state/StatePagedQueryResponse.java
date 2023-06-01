@@ -1,19 +1,20 @@
-
 package com.commercetools.api.models.state;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-import java.util.stream.Collectors;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
+import com.commercetools.api.models.state.State;
+import com.commercetools.api.models.state.StatePagedQueryResponseImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>PagedQueryResult with <code>results</code> containing an array of State.</p>
@@ -29,11 +30,15 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .plusResults(resultsBuilder -> resultsBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = StatePagedQueryResponseImpl.class)
 public interface StatePagedQueryResponse extends com.commercetools.api.models.ResourcePagedQueryResponse<State> {
+
 
     /**
      *  <p>Number of results requested.</p>
@@ -42,7 +47,6 @@ public interface StatePagedQueryResponse extends com.commercetools.api.models.Re
     @NotNull
     @JsonProperty("limit")
     public Long getLimit();
-
     /**
      *  <p>Number of elements skipped.</p>
      * @return offset
@@ -50,7 +54,6 @@ public interface StatePagedQueryResponse extends com.commercetools.api.models.Re
     @NotNull
     @JsonProperty("offset")
     public Long getOffset();
-
     /**
      *  <p>Actual number of results returned.</p>
      * @return count
@@ -58,15 +61,13 @@ public interface StatePagedQueryResponse extends com.commercetools.api.models.Re
     @NotNull
     @JsonProperty("count")
     public Long getCount();
-
     /**
      *  <p>Total number of results matching the query. This number is an estimation that is not strongly consistent. This field is returned by default. For improved performance, calculating this field can be deactivated by using the query parameter <code>withTotal=false</code>. When the results are filtered with a Query Predicate, <code>total</code> is subject to a limit.</p>
      * @return total
      */
-
+    
     @JsonProperty("total")
     public Long getTotal();
-
     /**
      *  <p>States matching the query.</p>
      * @return results
@@ -80,52 +81,56 @@ public interface StatePagedQueryResponse extends com.commercetools.api.models.Re
      *  <p>Number of results requested.</p>
      * @param limit value to be set
      */
-
+    
     public void setLimit(final Long limit);
-
+    
+    
     /**
      *  <p>Number of elements skipped.</p>
      * @param offset value to be set
      */
-
+    
     public void setOffset(final Long offset);
-
+    
+    
     /**
      *  <p>Actual number of results returned.</p>
      * @param count value to be set
      */
-
+    
     public void setCount(final Long count);
-
+    
+    
     /**
      *  <p>Total number of results matching the query. This number is an estimation that is not strongly consistent. This field is returned by default. For improved performance, calculating this field can be deactivated by using the query parameter <code>withTotal=false</code>. When the results are filtered with a Query Predicate, <code>total</code> is subject to a limit.</p>
      * @param total value to be set
      */
-
+    
     public void setTotal(final Long total);
-
+    
+    
     /**
      *  <p>States matching the query.</p>
      * @param results values to be set
      */
-
+    
     @JsonIgnore
-    public void setResults(final State... results);
-
+    public void setResults(final State ...results);
     /**
      *  <p>States matching the query.</p>
      * @param results values to be set
      */
-
+    
     public void setResults(final List<State> results);
 
     /**
      * factory method
      * @return instance of StatePagedQueryResponse
      */
-    public static StatePagedQueryResponse of() {
+    public static StatePagedQueryResponse of(){
         return new StatePagedQueryResponseImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy StatePagedQueryResponse
@@ -158,9 +163,7 @@ public interface StatePagedQueryResponse extends com.commercetools.api.models.Re
         instance.setCount(template.getCount());
         instance.setTotal(template.getTotal());
         instance.setResults(Optional.ofNullable(template.getResults())
-                .map(t -> t.stream()
-                        .map(com.commercetools.api.models.state.State::deepCopy)
-                        .collect(Collectors.toList()))
+                .map(t -> t.stream().map(com.commercetools.api.models.state.State::deepCopy).collect(Collectors.toList()))
                 .orElse(null));
         return instance;
     }
@@ -172,7 +175,7 @@ public interface StatePagedQueryResponse extends com.commercetools.api.models.Re
     public static StatePagedQueryResponseBuilder builder() {
         return StatePagedQueryResponseBuilder.of();
     }
-
+    
     /**
      * create builder for StatePagedQueryResponse instance
      * @param template instance with prefilled values for the builder
@@ -181,6 +184,7 @@ public interface StatePagedQueryResponse extends com.commercetools.api.models.Re
     public static StatePagedQueryResponseBuilder builder(final StatePagedQueryResponse template) {
         return StatePagedQueryResponseBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -191,7 +195,7 @@ public interface StatePagedQueryResponse extends com.commercetools.api.models.Re
     default <T> T withStatePagedQueryResponse(Function<StatePagedQueryResponse, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

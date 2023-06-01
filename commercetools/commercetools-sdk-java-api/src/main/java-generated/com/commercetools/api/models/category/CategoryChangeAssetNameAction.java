@@ -1,19 +1,21 @@
-
 package com.commercetools.api.models.category;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
+import com.commercetools.api.models.category.CategoryUpdateAction;
 import com.commercetools.api.models.common.LocalizedString;
+import com.commercetools.api.models.category.CategoryChangeAssetNameActionImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * CategoryChangeAssetNameAction
@@ -26,9 +28,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .name(nameBuilder -> nameBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = CategoryChangeAssetNameActionImpl.class)
 public interface CategoryChangeAssetNameAction extends CategoryUpdateAction {
 
@@ -41,18 +46,16 @@ public interface CategoryChangeAssetNameAction extends CategoryUpdateAction {
      *  <p>New value to set. Either <code>assetId</code> or <code>assetKey</code> is required.</p>
      * @return assetId
      */
-
+    
     @JsonProperty("assetId")
     public String getAssetId();
-
     /**
      *  <p>New value to set. Either <code>assetId</code> or <code>assetKey</code> is required.</p>
      * @return assetKey
      */
-
+    
     @JsonProperty("assetKey")
     public String getAssetKey();
-
     /**
      *  <p>New value to set. Must not be empty.</p>
      * @return name
@@ -66,30 +69,34 @@ public interface CategoryChangeAssetNameAction extends CategoryUpdateAction {
      *  <p>New value to set. Either <code>assetId</code> or <code>assetKey</code> is required.</p>
      * @param assetId value to be set
      */
-
+    
     public void setAssetId(final String assetId);
-
+    
+    
     /**
      *  <p>New value to set. Either <code>assetId</code> or <code>assetKey</code> is required.</p>
      * @param assetKey value to be set
      */
-
+    
     public void setAssetKey(final String assetKey);
-
+    
+    
     /**
      *  <p>New value to set. Must not be empty.</p>
      * @param name value to be set
      */
-
+    
     public void setName(final LocalizedString name);
+    
 
     /**
      * factory method
      * @return instance of CategoryChangeAssetNameAction
      */
-    public static CategoryChangeAssetNameAction of() {
+    public static CategoryChangeAssetNameAction of(){
         return new CategoryChangeAssetNameActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy CategoryChangeAssetNameAction
@@ -128,7 +135,7 @@ public interface CategoryChangeAssetNameAction extends CategoryUpdateAction {
     public static CategoryChangeAssetNameActionBuilder builder() {
         return CategoryChangeAssetNameActionBuilder.of();
     }
-
+    
     /**
      * create builder for CategoryChangeAssetNameAction instance
      * @param template instance with prefilled values for the builder
@@ -137,6 +144,7 @@ public interface CategoryChangeAssetNameAction extends CategoryUpdateAction {
     public static CategoryChangeAssetNameActionBuilder builder(final CategoryChangeAssetNameAction template) {
         return CategoryChangeAssetNameActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -147,7 +155,7 @@ public interface CategoryChangeAssetNameAction extends CategoryUpdateAction {
     default <T> T withCategoryChangeAssetNameAction(Function<CategoryChangeAssetNameAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

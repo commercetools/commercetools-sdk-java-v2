@@ -1,18 +1,22 @@
-
 package com.commercetools.api.models.order;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
+import com.commercetools.api.models.order.OrderSearchQueryExpression;
+import com.commercetools.api.models.order.OrderSearchSortMode;
+import com.commercetools.api.models.order.OrderSearchSortOrder;
+import com.commercetools.api.models.order.OrderSearchSortingImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * OrderSearchSorting
@@ -25,11 +29,15 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .field("{field}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = OrderSearchSortingImpl.class)
-public interface OrderSearchSorting {
+public interface OrderSearchSorting  {
+
 
     /**
      *
@@ -38,31 +46,27 @@ public interface OrderSearchSorting {
     @NotNull
     @JsonProperty("field")
     public String getField();
-
     /**
      *
      * @return language
      */
-
+    
     @JsonProperty("language")
     public String getLanguage();
-
     /**
      *
      * @return order
      */
-
+    
     @JsonProperty("order")
     public OrderSearchSortOrder getOrder();
-
     /**
      *
      * @return mode
      */
-
+    
     @JsonProperty("mode")
     public OrderSearchSortMode getMode();
-
     /**
      *
      * @return filter
@@ -75,44 +79,50 @@ public interface OrderSearchSorting {
      * set field
      * @param field value to be set
      */
-
+    
     public void setField(final String field);
-
+    
+    
     /**
      * set language
      * @param language value to be set
      */
-
+    
     public void setLanguage(final String language);
-
+    
+    
     /**
      * set order
      * @param order value to be set
      */
-
+    
     public void setOrder(final OrderSearchSortOrder order);
-
+    
+    
     /**
      * set mode
      * @param mode value to be set
      */
-
+    
     public void setMode(final OrderSearchSortMode mode);
-
+    
+    
     /**
      * set filter
      * @param filter value to be set
      */
-
+    
     public void setFilter(final OrderSearchQueryExpression filter);
+    
 
     /**
      * factory method
      * @return instance of OrderSearchSorting
      */
-    public static OrderSearchSorting of() {
+    public static OrderSearchSorting of(){
         return new OrderSearchSortingImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy OrderSearchSorting
@@ -144,8 +154,7 @@ public interface OrderSearchSorting {
         instance.setLanguage(template.getLanguage());
         instance.setOrder(template.getOrder());
         instance.setMode(template.getMode());
-        instance.setFilter(
-            com.commercetools.api.models.order.OrderSearchQueryExpression.deepCopy(template.getFilter()));
+        instance.setFilter(com.commercetools.api.models.order.OrderSearchQueryExpression.deepCopy(template.getFilter()));
         return instance;
     }
 
@@ -156,7 +165,7 @@ public interface OrderSearchSorting {
     public static OrderSearchSortingBuilder builder() {
         return OrderSearchSortingBuilder.of();
     }
-
+    
     /**
      * create builder for OrderSearchSorting instance
      * @param template instance with prefilled values for the builder
@@ -165,6 +174,7 @@ public interface OrderSearchSorting {
     public static OrderSearchSortingBuilder builder(final OrderSearchSorting template) {
         return OrderSearchSortingBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -175,7 +185,7 @@ public interface OrderSearchSorting {
     default <T> T withOrderSearchSorting(Function<OrderSearchSorting, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

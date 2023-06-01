@@ -1,20 +1,22 @@
-
 package com.commercetools.api.models.common;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-import java.util.stream.Collectors;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
+import com.commercetools.api.models.common.AssetSource;
+import com.commercetools.api.models.common.LocalizedString;
 import com.commercetools.api.models.type.CustomFieldsDraft;
+import com.commercetools.api.models.common.AssetDraftImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * AssetDraft
@@ -28,12 +30,15 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .name(nameBuilder -> nameBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = AssetDraftImpl.class)
-public interface AssetDraft extends com.commercetools.api.models.CustomizableDraft<AssetDraft>,
-        com.commercetools.api.models.WithKey, io.vrap.rmf.base.client.Draft<AssetDraft> {
+public interface AssetDraft extends com.commercetools.api.models.CustomizableDraft<AssetDraft>, com.commercetools.api.models.WithKey, io.vrap.rmf.base.client.Draft<AssetDraft> {
+
 
     /**
      *
@@ -43,7 +48,6 @@ public interface AssetDraft extends com.commercetools.api.models.CustomizableDra
     @Valid
     @JsonProperty("sources")
     public List<AssetSource> getSources();
-
     /**
      *  <p>Name of the Asset.</p>
      * @return name
@@ -52,7 +56,6 @@ public interface AssetDraft extends com.commercetools.api.models.CustomizableDra
     @Valid
     @JsonProperty("name")
     public LocalizedString getName();
-
     /**
      *  <p>Description of the Asset.</p>
      * @return description
@@ -60,15 +63,13 @@ public interface AssetDraft extends com.commercetools.api.models.CustomizableDra
     @Valid
     @JsonProperty("description")
     public LocalizedString getDescription();
-
     /**
      *  <p>Keywords for categorizing and organizing Assets.</p>
      * @return tags
      */
-
+    
     @JsonProperty("tags")
     public List<String> getTags();
-
     /**
      *  <p>Custom Fields defined for the Asset.</p>
      * @return custom
@@ -76,12 +77,11 @@ public interface AssetDraft extends com.commercetools.api.models.CustomizableDra
     @Valid
     @JsonProperty("custom")
     public CustomFieldsDraft getCustom();
-
     /**
      *  <p>User-defined unique identifier for the Asset.</p>
      * @return key
      */
-
+    
     @JsonProperty("key")
     public String getKey();
 
@@ -89,67 +89,70 @@ public interface AssetDraft extends com.commercetools.api.models.CustomizableDra
      * set sources
      * @param sources values to be set
      */
-
+    
     @JsonIgnore
-    public void setSources(final AssetSource... sources);
-
+    public void setSources(final AssetSource ...sources);
     /**
      * set sources
      * @param sources values to be set
      */
-
+    
     public void setSources(final List<AssetSource> sources);
-
+    
     /**
      *  <p>Name of the Asset.</p>
      * @param name value to be set
      */
-
+    
     public void setName(final LocalizedString name);
-
+    
+    
     /**
      *  <p>Description of the Asset.</p>
      * @param description value to be set
      */
-
+    
     public void setDescription(final LocalizedString description);
-
+    
+    
     /**
      *  <p>Keywords for categorizing and organizing Assets.</p>
      * @param tags values to be set
      */
-
+    
     @JsonIgnore
-    public void setTags(final String... tags);
-
+    public void setTags(final String ...tags);
     /**
      *  <p>Keywords for categorizing and organizing Assets.</p>
      * @param tags values to be set
      */
-
+    
     public void setTags(final List<String> tags);
-
+    
     /**
      *  <p>Custom Fields defined for the Asset.</p>
      * @param custom value to be set
      */
-
+    
     public void setCustom(final CustomFieldsDraft custom);
-
+    
+    
     /**
      *  <p>User-defined unique identifier for the Asset.</p>
      * @param key value to be set
      */
-
+    
     public void setKey(final String key);
+    
 
     /**
      * factory method
      * @return instance of AssetDraft
      */
-    public static AssetDraft of() {
+    public static AssetDraft of(){
         return new AssetDraftImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy AssetDraft
@@ -179,14 +182,13 @@ public interface AssetDraft extends com.commercetools.api.models.CustomizableDra
         }
         AssetDraftImpl instance = new AssetDraftImpl();
         instance.setSources(Optional.ofNullable(template.getSources())
-                .map(t -> t.stream()
-                        .map(com.commercetools.api.models.common.AssetSource::deepCopy)
-                        .collect(Collectors.toList()))
+                .map(t -> t.stream().map(com.commercetools.api.models.common.AssetSource::deepCopy).collect(Collectors.toList()))
                 .orElse(null));
         instance.setName(com.commercetools.api.models.common.LocalizedString.deepCopy(template.getName()));
-        instance.setDescription(
-            com.commercetools.api.models.common.LocalizedString.deepCopy(template.getDescription()));
-        instance.setTags(Optional.ofNullable(template.getTags()).map(ArrayList::new).orElse(null));
+        instance.setDescription(com.commercetools.api.models.common.LocalizedString.deepCopy(template.getDescription()));
+        instance.setTags(Optional.ofNullable(template.getTags())
+                .map(ArrayList::new)
+                .orElse(null));
         instance.setCustom(com.commercetools.api.models.type.CustomFieldsDraft.deepCopy(template.getCustom()));
         instance.setKey(template.getKey());
         return instance;
@@ -199,7 +201,7 @@ public interface AssetDraft extends com.commercetools.api.models.CustomizableDra
     public static AssetDraftBuilder builder() {
         return AssetDraftBuilder.of();
     }
-
+    
     /**
      * create builder for AssetDraft instance
      * @param template instance with prefilled values for the builder
@@ -208,6 +210,7 @@ public interface AssetDraft extends com.commercetools.api.models.CustomizableDra
     public static AssetDraftBuilder builder(final AssetDraft template) {
         return AssetDraftBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -218,7 +221,7 @@ public interface AssetDraft extends com.commercetools.api.models.CustomizableDra
     default <T> T withAssetDraft(Function<AssetDraft, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

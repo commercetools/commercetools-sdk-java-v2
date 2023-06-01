@@ -1,19 +1,21 @@
-
 package com.commercetools.api.models.message;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-import java.util.stream.Collectors;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-
 import com.commercetools.api.models.common.LocalizedString;
+import com.commercetools.api.models.message.MessagePayload;
+import com.commercetools.api.models.message.StoreNameSetMessagePayloadImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Generated after a successful Set Name update action.</p>
@@ -25,9 +27,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     StoreNameSetMessagePayload storeNameSetMessagePayload = StoreNameSetMessagePayload.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = StoreNameSetMessagePayloadImpl.class)
 public interface StoreNameSetMessagePayload extends MessagePayload {
 
@@ -43,7 +48,6 @@ public interface StoreNameSetMessagePayload extends MessagePayload {
     @Valid
     @JsonProperty("name")
     public LocalizedString getName();
-
     /**
      *  <p>Names set for the Store in different locales.</p>
      * @return nameAllLocales
@@ -56,31 +60,32 @@ public interface StoreNameSetMessagePayload extends MessagePayload {
      *  <p>Name of the Store set during the Set Name update action.</p>
      * @param name value to be set
      */
-
+    
     public void setName(final LocalizedString name);
-
+    
+    
     /**
      *  <p>Names set for the Store in different locales.</p>
      * @param nameAllLocales values to be set
      */
-
+    
     @JsonIgnore
-    public void setNameAllLocales(final LocalizedString... nameAllLocales);
-
+    public void setNameAllLocales(final LocalizedString ...nameAllLocales);
     /**
      *  <p>Names set for the Store in different locales.</p>
      * @param nameAllLocales values to be set
      */
-
+    
     public void setNameAllLocales(final List<LocalizedString> nameAllLocales);
 
     /**
      * factory method
      * @return instance of StoreNameSetMessagePayload
      */
-    public static StoreNameSetMessagePayload of() {
+    public static StoreNameSetMessagePayload of(){
         return new StoreNameSetMessagePayloadImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy StoreNameSetMessagePayload
@@ -107,9 +112,7 @@ public interface StoreNameSetMessagePayload extends MessagePayload {
         StoreNameSetMessagePayloadImpl instance = new StoreNameSetMessagePayloadImpl();
         instance.setName(com.commercetools.api.models.common.LocalizedString.deepCopy(template.getName()));
         instance.setNameAllLocales(Optional.ofNullable(template.getNameAllLocales())
-                .map(t -> t.stream()
-                        .map(com.commercetools.api.models.common.LocalizedString::deepCopy)
-                        .collect(Collectors.toList()))
+                .map(t -> t.stream().map(com.commercetools.api.models.common.LocalizedString::deepCopy).collect(Collectors.toList()))
                 .orElse(null));
         return instance;
     }
@@ -121,7 +124,7 @@ public interface StoreNameSetMessagePayload extends MessagePayload {
     public static StoreNameSetMessagePayloadBuilder builder() {
         return StoreNameSetMessagePayloadBuilder.of();
     }
-
+    
     /**
      * create builder for StoreNameSetMessagePayload instance
      * @param template instance with prefilled values for the builder
@@ -130,6 +133,7 @@ public interface StoreNameSetMessagePayload extends MessagePayload {
     public static StoreNameSetMessagePayloadBuilder builder(final StoreNameSetMessagePayload template) {
         return StoreNameSetMessagePayloadBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -140,7 +144,7 @@ public interface StoreNameSetMessagePayload extends MessagePayload {
     default <T> T withStoreNameSetMessagePayload(Function<StoreNameSetMessagePayload, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

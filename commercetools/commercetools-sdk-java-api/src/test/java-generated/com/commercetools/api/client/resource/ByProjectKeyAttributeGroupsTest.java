@@ -1,29 +1,30 @@
-
 package com.commercetools.api.client.resource;
 
-import java.nio.charset.StandardCharsets;
-import java.util.concurrent.CompletableFuture;
-
+import io.vrap.rmf.base.client.*;
+import io.vrap.rmf.base.client.error.ApiServerException;
+import io.vrap.rmf.base.client.error.ApiClientException;
+import io.vrap.rmf.base.client.VrapHttpClient;
 import com.commercetools.api.client.ApiRoot;
 import com.tngtech.junit.dataprovider.DataProvider;
 import com.tngtech.junit.dataprovider.DataProviderExtension;
 import com.tngtech.junit.dataprovider.UseDataProvider;
 import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
-import io.vrap.rmf.base.client.*;
-import io.vrap.rmf.base.client.ApiHttpClient;
-import io.vrap.rmf.base.client.ApiHttpRequest;
-import io.vrap.rmf.base.client.VrapHttpClient;
-import io.vrap.rmf.base.client.error.ApiClientException;
-import io.vrap.rmf.base.client.error.ApiServerException;
-import io.vrap.rmf.base.client.utils.Generated;
-
-import org.assertj.core.api.Assertions;
+import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestTemplate;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.Mockito;
+import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.ApiHttpClient;
+import io.vrap.rmf.base.client.ApiHttpRequest;
+import org.assertj.core.api.Assertions;
 
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+import java.nio.charset.StandardCharsets;
+import java.util.concurrent.CompletableFuture;
+
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @ExtendWith(UseDataProviderExtension.class)
 @ExtendWith(DataProviderExtension.class)
 public class ByProjectKeyAttributeGroupsTest {
@@ -41,100 +42,199 @@ public class ByProjectKeyAttributeGroupsTest {
 
     @TestTemplate
     @UseDataProvider("executeMethodParameters")
-    public void executeServerException(ClientRequestCommand<?> httpRequest) throws Exception {
-        Mockito.when(httpClientMock.execute(Mockito.any()))
-                .thenReturn(CompletableFuture.completedFuture(
-                    new ApiHttpResponse<>(500, null, "".getBytes(StandardCharsets.UTF_8), "Oops!")));
+    public void executeServerException(ClientRequestCommand<?> httpRequest) throws Exception{
+        Mockito.when(httpClientMock.execute(Mockito.any())).thenReturn(CompletableFuture.completedFuture(
+                       new ApiHttpResponse<>(500, null, "".getBytes(StandardCharsets.UTF_8), "Oops!")));
 
-        Assertions.assertThatThrownBy(() -> client.execute(httpRequest).toCompletableFuture().get())
-                .hasCauseInstanceOf(ApiServerException.class);
+        Assertions.assertThatThrownBy(
+               () -> client.execute(httpRequest).toCompletableFuture().get()).hasCauseInstanceOf(ApiServerException.class); 
     }
 
     @TestTemplate
     @UseDataProvider("executeMethodParameters")
-    public void executeClientException(ClientRequestCommand<?> httpRequest) throws Exception {
-        Mockito.when(httpClientMock.execute(Mockito.any()))
-                .thenReturn(CompletableFuture.completedFuture(
-                    new ApiHttpResponse<>(400, null, "".getBytes(StandardCharsets.UTF_8), "Oops!")));
+    public void executeClientException(ClientRequestCommand<?> httpRequest) throws Exception{
+        Mockito.when(httpClientMock.execute(Mockito.any())).thenReturn(CompletableFuture.completedFuture(
+                       new ApiHttpResponse<>(400, null, "".getBytes(StandardCharsets.UTF_8), "Oops!")));
 
-        Assertions.assertThatThrownBy(() -> client.execute(httpRequest).toCompletableFuture().get())
-                .hasCauseInstanceOf(ApiClientException.class);
+        Assertions.assertThatThrownBy(
+           () -> client.execute(httpRequest).toCompletableFuture().get()).hasCauseInstanceOf(ApiClientException.class);
     }
 
     @DataProvider
     public static Object[][] requestWithMethodParameters() {
-        return new Object[][] {
-                new Object[] { apiRoot.withProjectKey("test_projectKey")
-                        .attributeGroups()
-                        .get()
-                        .withExpand("expand")
-                        .createHttpRequest(), "get", "test_projectKey/attribute-groups?expand=expand", },
-                new Object[] { apiRoot.withProjectKey("test_projectKey")
-                        .attributeGroups()
-                        .get()
-                        .withSort("sort")
-                        .createHttpRequest(), "get", "test_projectKey/attribute-groups?sort=sort", },
-                new Object[] { apiRoot.withProjectKey("test_projectKey")
-                        .attributeGroups()
-                        .get()
-                        .withLimit(7)
-                        .createHttpRequest(), "get", "test_projectKey/attribute-groups?limit=7", },
-                new Object[] { apiRoot.withProjectKey("test_projectKey")
-                        .attributeGroups()
-                        .get()
-                        .withOffset(3)
-                        .createHttpRequest(), "get", "test_projectKey/attribute-groups?offset=3", },
-                new Object[] { apiRoot.withProjectKey("test_projectKey")
-                        .attributeGroups()
-                        .get()
-                        .withWithTotal(true)
-                        .createHttpRequest(), "get", "test_projectKey/attribute-groups?withTotal=true", },
-                new Object[] { apiRoot.withProjectKey("test_projectKey")
-                        .attributeGroups()
-                        .get()
-                        .withWhere("where")
-                        .createHttpRequest(), "get", "test_projectKey/attribute-groups?where=where", },
-                new Object[] {
-                        apiRoot.withProjectKey("test_projectKey")
-                                .attributeGroups()
-                                .get()
-                                .withPredicateVar("varName", "var.varName")
-                                .createHttpRequest(),
-                        "get", "test_projectKey/attribute-groups?var.varName=var.varName", },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").attributeGroups().get().createHttpRequest(),
-                        "get", "test_projectKey/attribute-groups", },
-                new Object[] { apiRoot.withProjectKey("test_projectKey")
-                        .attributeGroups()
-                        .post(com.commercetools.api.models.attribute_group.AttributeGroupDraft.of())
-                        .withExpand("expand")
-                        .createHttpRequest(), "post", "test_projectKey/attribute-groups?expand=expand", },
-                new Object[] { apiRoot.withProjectKey("test_projectKey")
-                        .attributeGroups()
-                        .post(com.commercetools.api.models.attribute_group.AttributeGroupDraft.of())
-                        .createHttpRequest(), "post", "test_projectKey/attribute-groups", } };
+       return new Object [][] {
+               new Object[] {           
+                   apiRoot
+                   .withProjectKey("test_projectKey")
+                   .attributeGroups()
+                   .get()
+                   .withExpand("expand")
+                   .createHttpRequest(),
+                   "get",
+                   "test_projectKey/attribute-groups?expand=expand",
+               },
+               new Object[] {           
+                   apiRoot
+                   .withProjectKey("test_projectKey")
+                   .attributeGroups()
+                   .get()
+                   .withSort("sort")
+                   .createHttpRequest(),
+                   "get",
+                   "test_projectKey/attribute-groups?sort=sort",
+               },
+               new Object[] {           
+                   apiRoot
+                   .withProjectKey("test_projectKey")
+                   .attributeGroups()
+                   .get()
+                   .withLimit(7)
+                   .createHttpRequest(),
+                   "get",
+                   "test_projectKey/attribute-groups?limit=7",
+               },
+               new Object[] {           
+                   apiRoot
+                   .withProjectKey("test_projectKey")
+                   .attributeGroups()
+                   .get()
+                   .withOffset(3)
+                   .createHttpRequest(),
+                   "get",
+                   "test_projectKey/attribute-groups?offset=3",
+               },
+               new Object[] {           
+                   apiRoot
+                   .withProjectKey("test_projectKey")
+                   .attributeGroups()
+                   .get()
+                   .withWithTotal(true)
+                   .createHttpRequest(),
+                   "get",
+                   "test_projectKey/attribute-groups?withTotal=true",
+               },
+               new Object[] {           
+                   apiRoot
+                   .withProjectKey("test_projectKey")
+                   .attributeGroups()
+                   .get()
+                   .withWhere("where")
+                   .createHttpRequest(),
+                   "get",
+                   "test_projectKey/attribute-groups?where=where",
+               },
+               new Object[] {           
+                   apiRoot
+                   .withProjectKey("test_projectKey")
+                   .attributeGroups()
+                   .get()
+                   .withPredicateVar("varName", "var.varName")
+                   .createHttpRequest(),
+                   "get",
+                   "test_projectKey/attribute-groups?var.varName=var.varName",
+               },
+               new Object[] {           
+                   apiRoot
+                   .withProjectKey("test_projectKey")
+                   .attributeGroups()
+                   .get()
+                   .createHttpRequest(),
+                   "get",
+                   "test_projectKey/attribute-groups",
+               },
+               new Object[] {           
+                   apiRoot
+                   .withProjectKey("test_projectKey")
+                   .attributeGroups()
+                   .post(com.commercetools.api.models.attribute_group.AttributeGroupDraft.of())
+                   .withExpand("expand")
+                   .createHttpRequest(),
+                   "post",
+                   "test_projectKey/attribute-groups?expand=expand",
+               },
+               new Object[] {           
+                   apiRoot
+                   .withProjectKey("test_projectKey")
+                   .attributeGroups()
+                   .post(com.commercetools.api.models.attribute_group.AttributeGroupDraft.of())
+                   .createHttpRequest(),
+                   "post",
+                   "test_projectKey/attribute-groups",
+               }
+       };
     }
 
     @DataProvider
     public static Object[][] executeMethodParameters() {
-        return new Object[][] {
-                new Object[] {
-                        apiRoot.withProjectKey("test_projectKey").attributeGroups().get().withExpand("expand"), },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").attributeGroups().get().withSort("sort"), },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").attributeGroups().get().withLimit(7), },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").attributeGroups().get().withOffset(3), },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").attributeGroups().get().withWithTotal(true), },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").attributeGroups().get().withWhere("where"), },
-                new Object[] { apiRoot.withProjectKey("test_projectKey")
-                        .attributeGroups()
-                        .get()
-                        .withPredicateVar("varName", "var.varName"), },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").attributeGroups().get(), },
-                new Object[] { apiRoot.withProjectKey("test_projectKey")
-                        .attributeGroups()
-                        .post(com.commercetools.api.models.attribute_group.AttributeGroupDraft.of())
-                        .withExpand("expand"), },
-                new Object[] { apiRoot.withProjectKey("test_projectKey")
-                        .attributeGroups()
-                        .post(com.commercetools.api.models.attribute_group.AttributeGroupDraft.of()), } };
+       return new Object [][] {
+               new Object[] {           
+                   apiRoot
+                   .withProjectKey("test_projectKey")
+                   .attributeGroups()
+                   .get()
+                   .withExpand("expand"),
+               },
+               new Object[] {           
+                   apiRoot
+                   .withProjectKey("test_projectKey")
+                   .attributeGroups()
+                   .get()
+                   .withSort("sort"),
+               },
+               new Object[] {           
+                   apiRoot
+                   .withProjectKey("test_projectKey")
+                   .attributeGroups()
+                   .get()
+                   .withLimit(7),
+               },
+               new Object[] {           
+                   apiRoot
+                   .withProjectKey("test_projectKey")
+                   .attributeGroups()
+                   .get()
+                   .withOffset(3),
+               },
+               new Object[] {           
+                   apiRoot
+                   .withProjectKey("test_projectKey")
+                   .attributeGroups()
+                   .get()
+                   .withWithTotal(true),
+               },
+               new Object[] {           
+                   apiRoot
+                   .withProjectKey("test_projectKey")
+                   .attributeGroups()
+                   .get()
+                   .withWhere("where"),
+               },
+               new Object[] {           
+                   apiRoot
+                   .withProjectKey("test_projectKey")
+                   .attributeGroups()
+                   .get()
+                   .withPredicateVar("varName", "var.varName"),
+               },
+               new Object[] {           
+                   apiRoot
+                   .withProjectKey("test_projectKey")
+                   .attributeGroups()
+                   .get(),
+               },
+               new Object[] {           
+                   apiRoot
+                   .withProjectKey("test_projectKey")
+                   .attributeGroups()
+                   .post(com.commercetools.api.models.attribute_group.AttributeGroupDraft.of())
+                   .withExpand("expand"),
+               },
+               new Object[] {           
+                   apiRoot
+                   .withProjectKey("test_projectKey")
+                   .attributeGroups()
+                   .post(com.commercetools.api.models.attribute_group.AttributeGroupDraft.of()),
+               }
+       };
     }
 }

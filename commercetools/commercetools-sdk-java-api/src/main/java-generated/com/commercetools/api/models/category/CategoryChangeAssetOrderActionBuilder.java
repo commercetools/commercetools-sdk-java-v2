@@ -1,8 +1,11 @@
-
 package com.commercetools.api.models.category;
 
+import com.commercetools.api.models.category.CategoryUpdateAction;
+import com.commercetools.api.models.category.CategoryChangeAssetOrderAction;
+import javax.annotation.Nullable;
 import java.util.*;
-
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -16,11 +19,16 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .plusAssetOrder(assetOrderBuilder -> assetOrderBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class CategoryChangeAssetOrderActionBuilder implements Builder<CategoryChangeAssetOrderAction> {
 
+    
+    
     private java.util.List<String> assetOrder;
 
     /**
@@ -28,43 +36,47 @@ public class CategoryChangeAssetOrderActionBuilder implements Builder<CategoryCh
      * @param assetOrder value to be set
      * @return Builder
      */
-
-    public CategoryChangeAssetOrderActionBuilder assetOrder(final String... assetOrder) {
+    
+    public CategoryChangeAssetOrderActionBuilder assetOrder( final String ...assetOrder) {
         this.assetOrder = new ArrayList<>(Arrays.asList(assetOrder));
         return this;
     }
-
+    
     /**
      *  <p>New value to set. Must contain all Asset <code>id</code>s.</p>
      * @param assetOrder value to be set
      * @return Builder
      */
-
-    public CategoryChangeAssetOrderActionBuilder assetOrder(final java.util.List<String> assetOrder) {
+    
+    public CategoryChangeAssetOrderActionBuilder assetOrder( final java.util.List<String> assetOrder) {
         this.assetOrder = assetOrder;
         return this;
     }
-
+    
     /**
      *  <p>New value to set. Must contain all Asset <code>id</code>s.</p>
      * @param assetOrder value to be set
      * @return Builder
      */
-
-    public CategoryChangeAssetOrderActionBuilder plusAssetOrder(final String... assetOrder) {
+    
+    public CategoryChangeAssetOrderActionBuilder plusAssetOrder( final String ...assetOrder) {
         if (this.assetOrder == null) {
             this.assetOrder = new ArrayList<>();
         }
         this.assetOrder.addAll(Arrays.asList(assetOrder));
         return this;
     }
+    
+    
+    
 
     /**
      *  <p>New value to set. Must contain all Asset <code>id</code>s.</p>
      * @return assetOrder
      */
-
-    public java.util.List<String> getAssetOrder() {
+    
+    
+    public java.util.List<String> getAssetOrder(){
         return this.assetOrder;
     }
 
@@ -76,7 +88,7 @@ public class CategoryChangeAssetOrderActionBuilder implements Builder<CategoryCh
         Objects.requireNonNull(assetOrder, CategoryChangeAssetOrderAction.class + ": assetOrder is missing");
         return new CategoryChangeAssetOrderActionImpl(assetOrder);
     }
-
+    
     /**
      * builds CategoryChangeAssetOrderAction without checking for non-null required values
      * @return CategoryChangeAssetOrderAction
@@ -87,7 +99,7 @@ public class CategoryChangeAssetOrderActionBuilder implements Builder<CategoryCh
 
     /**
      * factory method for an instance of CategoryChangeAssetOrderActionBuilder
-     * @return builder
+     * @return builder 
      */
     public static CategoryChangeAssetOrderActionBuilder of() {
         return new CategoryChangeAssetOrderActionBuilder();

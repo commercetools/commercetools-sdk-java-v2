@@ -1,9 +1,11 @@
-
 package com.commercetools.api.predicates.query.error;
 
 import com.commercetools.api.predicates.query.*;
 
-public class GraphQLQueryTimedOutErrorQueryBuilderDsl {
+import java.util.function.Function;
+
+
+public class GraphQLQueryTimedOutErrorQueryBuilderDsl  {
     public GraphQLQueryTimedOutErrorQueryBuilderDsl() {
     }
 
@@ -12,9 +14,8 @@ public class GraphQLQueryTimedOutErrorQueryBuilderDsl {
     }
 
     public StringComparisonPredicateBuilder<GraphQLQueryTimedOutErrorQueryBuilderDsl> code() {
-        return new StringComparisonPredicateBuilder<>(
-            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("code")),
-            p -> new CombinationQueryPredicate<>(p, GraphQLQueryTimedOutErrorQueryBuilderDsl::of));
+        return new StringComparisonPredicateBuilder<>(BinaryQueryPredicate.of().left(new ConstantQueryPredicate("code")),
+        p -> new CombinationQueryPredicate<>(p, GraphQLQueryTimedOutErrorQueryBuilderDsl::of));
     }
-
+    
 }

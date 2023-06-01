@@ -1,22 +1,23 @@
-
 package com.commercetools.importapi.models.inventories;
-
-import java.time.*;
-import java.time.ZonedDateTime;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.importapi.models.common.ChannelKeyReference;
 import com.commercetools.importapi.models.common.ImportResource;
 import com.commercetools.importapi.models.customfields.Custom;
+import java.time.ZonedDateTime;
+import com.commercetools.importapi.models.inventories.InventoryImportImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>The data representation for an Inventory to be imported that is persisted as a Inventory in the Project.</p>
@@ -31,11 +32,15 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .quantityOnStock(0.3)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = InventoryImportImpl.class)
 public interface InventoryImport extends ImportResource {
+
 
     /**
      *  <p>Maps to <code>Inventory.sku</code></p>
@@ -44,7 +49,6 @@ public interface InventoryImport extends ImportResource {
     @NotNull
     @JsonProperty("sku")
     public String getSku();
-
     /**
      *  <p>Maps to <code>Inventory.quantityOnStock</code></p>
      * @return quantityOnStock
@@ -52,23 +56,20 @@ public interface InventoryImport extends ImportResource {
     @NotNull
     @JsonProperty("quantityOnStock")
     public Long getQuantityOnStock();
-
     /**
      *  <p>Maps to <code>Inventory.restockableInDays</code></p>
      * @return restockableInDays
      */
-
+    
     @JsonProperty("restockableInDays")
     public Long getRestockableInDays();
-
     /**
      *  <p>Maps to <code>Inventory.expectedDelivery</code></p>
      * @return expectedDelivery
      */
-
+    
     @JsonProperty("expectedDelivery")
     public ZonedDateTime getExpectedDelivery();
-
     /**
      *  <p>Maps to <code>Inventory.supplyChannel</code></p>
      * @return supplyChannel
@@ -76,7 +77,6 @@ public interface InventoryImport extends ImportResource {
     @Valid
     @JsonProperty("supplyChannel")
     public ChannelKeyReference getSupplyChannel();
-
     /**
      *  <p>Maps to <code>Inventory.custom</code>.</p>
      * @return custom
@@ -89,51 +89,58 @@ public interface InventoryImport extends ImportResource {
      *  <p>Maps to <code>Inventory.sku</code></p>
      * @param sku value to be set
      */
-
+    
     public void setSku(final String sku);
-
+    
+    
     /**
      *  <p>Maps to <code>Inventory.quantityOnStock</code></p>
      * @param quantityOnStock value to be set
      */
-
+    
     public void setQuantityOnStock(final Long quantityOnStock);
-
+    
+    
     /**
      *  <p>Maps to <code>Inventory.restockableInDays</code></p>
      * @param restockableInDays value to be set
      */
-
+    
     public void setRestockableInDays(final Long restockableInDays);
-
+    
+    
     /**
      *  <p>Maps to <code>Inventory.expectedDelivery</code></p>
      * @param expectedDelivery value to be set
      */
-
+    
     public void setExpectedDelivery(final ZonedDateTime expectedDelivery);
-
+    
+    
     /**
      *  <p>Maps to <code>Inventory.supplyChannel</code></p>
      * @param supplyChannel value to be set
      */
-
+    
     public void setSupplyChannel(final ChannelKeyReference supplyChannel);
-
+    
+    
     /**
      *  <p>Maps to <code>Inventory.custom</code>.</p>
      * @param custom value to be set
      */
-
+    
     public void setCustom(final Custom custom);
+    
 
     /**
      * factory method
      * @return instance of InventoryImport
      */
-    public static InventoryImport of() {
+    public static InventoryImport of(){
         return new InventoryImportImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy InventoryImport
@@ -168,8 +175,7 @@ public interface InventoryImport extends ImportResource {
         instance.setQuantityOnStock(template.getQuantityOnStock());
         instance.setRestockableInDays(template.getRestockableInDays());
         instance.setExpectedDelivery(template.getExpectedDelivery());
-        instance.setSupplyChannel(
-            com.commercetools.importapi.models.common.ChannelKeyReference.deepCopy(template.getSupplyChannel()));
+        instance.setSupplyChannel(com.commercetools.importapi.models.common.ChannelKeyReference.deepCopy(template.getSupplyChannel()));
         instance.setCustom(com.commercetools.importapi.models.customfields.Custom.deepCopy(template.getCustom()));
         return instance;
     }
@@ -181,7 +187,7 @@ public interface InventoryImport extends ImportResource {
     public static InventoryImportBuilder builder() {
         return InventoryImportBuilder.of();
     }
-
+    
     /**
      * create builder for InventoryImport instance
      * @param template instance with prefilled values for the builder
@@ -190,6 +196,7 @@ public interface InventoryImport extends ImportResource {
     public static InventoryImportBuilder builder(final InventoryImport template) {
         return InventoryImportBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -200,7 +207,7 @@ public interface InventoryImport extends ImportResource {
     default <T> T withInventoryImport(Function<InventoryImport, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

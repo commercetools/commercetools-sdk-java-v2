@@ -1,17 +1,20 @@
-
 package com.commercetools.api.models.message;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
 
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
+import com.commercetools.api.models.message.MessagesConfigurationImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Holds the configuration for the Messages Query feature for the Project.</p>
@@ -24,11 +27,15 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .enabled(true)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = MessagesConfigurationImpl.class)
-public interface MessagesConfiguration {
+public interface MessagesConfiguration  {
+
 
     /**
      *  <p>When <code>true</code>, the Messages Query feature is active.</p>
@@ -37,12 +44,11 @@ public interface MessagesConfiguration {
     @NotNull
     @JsonProperty("enabled")
     public Boolean getEnabled();
-
     /**
      *  <p>Specifies the number of days each Message should be available via the Messages Query API. For Messages older than the specified period, it is not guaranteed that they are still accessible via the API. This field may not be present on Projects created before 8 October 2018.</p>
      * @return deleteDaysAfterCreation
      */
-
+    
     @JsonProperty("deleteDaysAfterCreation")
     public Integer getDeleteDaysAfterCreation();
 
@@ -50,23 +56,26 @@ public interface MessagesConfiguration {
      *  <p>When <code>true</code>, the Messages Query feature is active.</p>
      * @param enabled value to be set
      */
-
+    
     public void setEnabled(final Boolean enabled);
-
+    
+    
     /**
      *  <p>Specifies the number of days each Message should be available via the Messages Query API. For Messages older than the specified period, it is not guaranteed that they are still accessible via the API. This field may not be present on Projects created before 8 October 2018.</p>
      * @param deleteDaysAfterCreation value to be set
      */
-
+    
     public void setDeleteDaysAfterCreation(final Integer deleteDaysAfterCreation);
+    
 
     /**
      * factory method
      * @return instance of MessagesConfiguration
      */
-    public static MessagesConfiguration of() {
+    public static MessagesConfiguration of(){
         return new MessagesConfigurationImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy MessagesConfiguration
@@ -103,7 +112,7 @@ public interface MessagesConfiguration {
     public static MessagesConfigurationBuilder builder() {
         return MessagesConfigurationBuilder.of();
     }
-
+    
     /**
      * create builder for MessagesConfiguration instance
      * @param template instance with prefilled values for the builder
@@ -112,6 +121,7 @@ public interface MessagesConfiguration {
     public static MessagesConfigurationBuilder builder(final MessagesConfiguration template) {
         return MessagesConfigurationBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -122,7 +132,7 @@ public interface MessagesConfiguration {
     default <T> T withMessagesConfiguration(Function<MessagesConfiguration, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

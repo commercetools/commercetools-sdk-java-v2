@@ -1,18 +1,21 @@
-
 package com.commercetools.history.models.common;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
+import com.commercetools.history.models.common.CustomFields;
+import com.commercetools.history.models.common.LocalizedString;
+import com.commercetools.history.models.common.AssetImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * Asset
@@ -29,11 +32,15 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .key("{key}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = AssetImpl.class)
-public interface Asset {
+public interface Asset  {
+
 
     /**
      *
@@ -42,7 +49,6 @@ public interface Asset {
     @NotNull
     @JsonProperty("id")
     public String getId();
-
     /**
      *
      * @return name
@@ -51,7 +57,6 @@ public interface Asset {
     @Valid
     @JsonProperty("name")
     public LocalizedString getName();
-
     /**
      *
      * @return description
@@ -60,7 +65,6 @@ public interface Asset {
     @Valid
     @JsonProperty("description")
     public LocalizedString getDescription();
-
     /**
      *
      * @return custom
@@ -69,7 +73,6 @@ public interface Asset {
     @Valid
     @JsonProperty("custom")
     public CustomFields getCustom();
-
     /**
      *
      * @return key
@@ -82,44 +85,50 @@ public interface Asset {
      * set id
      * @param id value to be set
      */
-
+    
     public void setId(final String id);
-
+    
+    
     /**
      * set name
      * @param name value to be set
      */
-
+    
     public void setName(final LocalizedString name);
-
+    
+    
     /**
      * set description
      * @param description value to be set
      */
-
+    
     public void setDescription(final LocalizedString description);
-
+    
+    
     /**
      * set custom
      * @param custom value to be set
      */
-
+    
     public void setCustom(final CustomFields custom);
-
+    
+    
     /**
      * set key
      * @param key value to be set
      */
-
+    
     public void setKey(final String key);
+    
 
     /**
      * factory method
      * @return instance of Asset
      */
-    public static Asset of() {
+    public static Asset of(){
         return new AssetImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy Asset
@@ -149,8 +158,7 @@ public interface Asset {
         AssetImpl instance = new AssetImpl();
         instance.setId(template.getId());
         instance.setName(com.commercetools.history.models.common.LocalizedString.deepCopy(template.getName()));
-        instance.setDescription(
-            com.commercetools.history.models.common.LocalizedString.deepCopy(template.getDescription()));
+        instance.setDescription(com.commercetools.history.models.common.LocalizedString.deepCopy(template.getDescription()));
         instance.setCustom(com.commercetools.history.models.common.CustomFields.deepCopy(template.getCustom()));
         instance.setKey(template.getKey());
         return instance;
@@ -163,7 +171,7 @@ public interface Asset {
     public static AssetBuilder builder() {
         return AssetBuilder.of();
     }
-
+    
     /**
      * create builder for Asset instance
      * @param template instance with prefilled values for the builder
@@ -172,6 +180,7 @@ public interface Asset {
     public static AssetBuilder builder(final Asset template) {
         return AssetBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -182,7 +191,7 @@ public interface Asset {
     default <T> T withAsset(Function<Asset, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

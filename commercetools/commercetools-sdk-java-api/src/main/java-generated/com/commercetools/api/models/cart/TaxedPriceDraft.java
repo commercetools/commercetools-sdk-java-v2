@@ -1,20 +1,21 @@
-
 package com.commercetools.api.models.cart;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-import java.util.stream.Collectors;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
+import com.commercetools.api.models.cart.TaxPortionDraft;
 import com.commercetools.api.models.common.Money;
+import com.commercetools.api.models.cart.TaxedPriceDraftImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * TaxedPriceDraft
@@ -29,11 +30,15 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .plusTaxPortions(taxPortionsBuilder -> taxPortionsBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = TaxedPriceDraftImpl.class)
 public interface TaxedPriceDraft extends io.vrap.rmf.base.client.Draft<TaxedPriceDraft> {
+
 
     /**
      *  <p>Total net price of the Line Item or Custom Line Item.</p>
@@ -43,7 +48,6 @@ public interface TaxedPriceDraft extends io.vrap.rmf.base.client.Draft<TaxedPric
     @Valid
     @JsonProperty("totalNet")
     public Money getTotalNet();
-
     /**
      *  <p>Total gross price of the Line Item or Custom Line Item.</p>
      * @return totalGross
@@ -52,7 +56,6 @@ public interface TaxedPriceDraft extends io.vrap.rmf.base.client.Draft<TaxedPric
     @Valid
     @JsonProperty("totalGross")
     public Money getTotalGross();
-
     /**
      *  <p>Taxable portions added to the <code>totalGross</code>.</p>
      *  <p>Calculated from the TaxRates.</p>
@@ -67,40 +70,42 @@ public interface TaxedPriceDraft extends io.vrap.rmf.base.client.Draft<TaxedPric
      *  <p>Total net price of the Line Item or Custom Line Item.</p>
      * @param totalNet value to be set
      */
-
+    
     public void setTotalNet(final Money totalNet);
-
+    
+    
     /**
      *  <p>Total gross price of the Line Item or Custom Line Item.</p>
      * @param totalGross value to be set
      */
-
+    
     public void setTotalGross(final Money totalGross);
-
+    
+    
     /**
      *  <p>Taxable portions added to the <code>totalGross</code>.</p>
      *  <p>Calculated from the TaxRates.</p>
      * @param taxPortions values to be set
      */
-
+    
     @JsonIgnore
-    public void setTaxPortions(final TaxPortionDraft... taxPortions);
-
+    public void setTaxPortions(final TaxPortionDraft ...taxPortions);
     /**
      *  <p>Taxable portions added to the <code>totalGross</code>.</p>
      *  <p>Calculated from the TaxRates.</p>
      * @param taxPortions values to be set
      */
-
+    
     public void setTaxPortions(final List<TaxPortionDraft> taxPortions);
 
     /**
      * factory method
      * @return instance of TaxedPriceDraft
      */
-    public static TaxedPriceDraft of() {
+    public static TaxedPriceDraft of(){
         return new TaxedPriceDraftImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy TaxedPriceDraft
@@ -129,9 +134,7 @@ public interface TaxedPriceDraft extends io.vrap.rmf.base.client.Draft<TaxedPric
         instance.setTotalNet(com.commercetools.api.models.common.Money.deepCopy(template.getTotalNet()));
         instance.setTotalGross(com.commercetools.api.models.common.Money.deepCopy(template.getTotalGross()));
         instance.setTaxPortions(Optional.ofNullable(template.getTaxPortions())
-                .map(t -> t.stream()
-                        .map(com.commercetools.api.models.cart.TaxPortionDraft::deepCopy)
-                        .collect(Collectors.toList()))
+                .map(t -> t.stream().map(com.commercetools.api.models.cart.TaxPortionDraft::deepCopy).collect(Collectors.toList()))
                 .orElse(null));
         return instance;
     }
@@ -143,7 +146,7 @@ public interface TaxedPriceDraft extends io.vrap.rmf.base.client.Draft<TaxedPric
     public static TaxedPriceDraftBuilder builder() {
         return TaxedPriceDraftBuilder.of();
     }
-
+    
     /**
      * create builder for TaxedPriceDraft instance
      * @param template instance with prefilled values for the builder
@@ -152,6 +155,7 @@ public interface TaxedPriceDraft extends io.vrap.rmf.base.client.Draft<TaxedPric
     public static TaxedPriceDraftBuilder builder(final TaxedPriceDraft template) {
         return TaxedPriceDraftBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -162,7 +166,7 @@ public interface TaxedPriceDraft extends io.vrap.rmf.base.client.Draft<TaxedPric
     default <T> T withTaxedPriceDraft(Function<TaxedPriceDraft, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

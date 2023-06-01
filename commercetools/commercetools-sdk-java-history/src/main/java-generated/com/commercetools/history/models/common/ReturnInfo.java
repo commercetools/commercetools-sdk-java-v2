@@ -1,19 +1,20 @@
-
 package com.commercetools.history.models.common;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-import java.util.stream.Collectors;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
+import com.commercetools.history.models.common.ReturnItem;
+import com.commercetools.history.models.common.ReturnInfoImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * ReturnInfo
@@ -28,11 +29,15 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .returnDate("{returnDate}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = ReturnInfoImpl.class)
-public interface ReturnInfo {
+public interface ReturnInfo  {
+
 
     /**
      *
@@ -42,7 +47,6 @@ public interface ReturnInfo {
     @Valid
     @JsonProperty("items")
     public List<ReturnItem> getItems();
-
     /**
      *  <p>Identifies, which return tracking ID is connected to this particular return.</p>
      * @return returnTrackingId
@@ -50,7 +54,6 @@ public interface ReturnInfo {
     @NotNull
     @JsonProperty("returnTrackingId")
     public String getReturnTrackingId();
-
     /**
      *
      * @return returnDate
@@ -63,38 +66,40 @@ public interface ReturnInfo {
      * set items
      * @param items values to be set
      */
-
+    
     @JsonIgnore
-    public void setItems(final ReturnItem... items);
-
+    public void setItems(final ReturnItem ...items);
     /**
      * set items
      * @param items values to be set
      */
-
+    
     public void setItems(final List<ReturnItem> items);
-
+    
     /**
      *  <p>Identifies, which return tracking ID is connected to this particular return.</p>
      * @param returnTrackingId value to be set
      */
-
+    
     public void setReturnTrackingId(final String returnTrackingId);
-
+    
+    
     /**
      * set returnDate
      * @param returnDate value to be set
      */
-
+    
     public void setReturnDate(final String returnDate);
+    
 
     /**
      * factory method
      * @return instance of ReturnInfo
      */
-    public static ReturnInfo of() {
+    public static ReturnInfo of(){
         return new ReturnInfoImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy ReturnInfo
@@ -121,9 +126,7 @@ public interface ReturnInfo {
         }
         ReturnInfoImpl instance = new ReturnInfoImpl();
         instance.setItems(Optional.ofNullable(template.getItems())
-                .map(t -> t.stream()
-                        .map(com.commercetools.history.models.common.ReturnItem::deepCopy)
-                        .collect(Collectors.toList()))
+                .map(t -> t.stream().map(com.commercetools.history.models.common.ReturnItem::deepCopy).collect(Collectors.toList()))
                 .orElse(null));
         instance.setReturnTrackingId(template.getReturnTrackingId());
         instance.setReturnDate(template.getReturnDate());
@@ -137,7 +140,7 @@ public interface ReturnInfo {
     public static ReturnInfoBuilder builder() {
         return ReturnInfoBuilder.of();
     }
-
+    
     /**
      * create builder for ReturnInfo instance
      * @param template instance with prefilled values for the builder
@@ -146,6 +149,7 @@ public interface ReturnInfo {
     public static ReturnInfoBuilder builder(final ReturnInfo template) {
         return ReturnInfoBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -156,7 +160,7 @@ public interface ReturnInfo {
     default <T> T withReturnInfo(Function<ReturnInfo, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

@@ -1,9 +1,14 @@
-
 package com.commercetools.api.models.product;
 
+import com.commercetools.api.models.product.FacetResult;
+import com.commercetools.api.models.product.FacetTerm;
+import com.commercetools.api.models.product.FacetTypes;
+import com.commercetools.api.models.product.TermFacetResultType;
+import com.commercetools.api.models.product.TermFacetResult;
+import javax.annotation.Nullable;
 import java.util.*;
 import java.util.function.Function;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -21,193 +26,222 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .plusTerms(termsBuilder -> termsBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class TermFacetResultBuilder implements Builder<TermFacetResult> {
 
+    
+    
     private com.commercetools.api.models.product.TermFacetResultType dataType;
-
+    
+    
+    
     private Long missing;
-
+    
+    
+    
     private Long total;
-
+    
+    
+    
     private Long other;
-
+    
+    
+    
     private java.util.List<com.commercetools.api.models.product.FacetTerm> terms;
 
+    
     /**
      * set the value to the dataType
      * @param dataType value to be set
      * @return Builder
      */
-
-    public TermFacetResultBuilder dataType(final com.commercetools.api.models.product.TermFacetResultType dataType) {
+    
+    public TermFacetResultBuilder dataType( final com.commercetools.api.models.product.TermFacetResultType dataType) {
         this.dataType = dataType;
         return this;
     }
-
+    
+    
+    
+    
     /**
      * set the value to the missing
      * @param missing value to be set
      * @return Builder
      */
-
-    public TermFacetResultBuilder missing(final Long missing) {
+    
+    public TermFacetResultBuilder missing( final Long missing) {
         this.missing = missing;
         return this;
     }
-
+    
+    
+    
+    
     /**
      * set the value to the total
      * @param total value to be set
      * @return Builder
      */
-
-    public TermFacetResultBuilder total(final Long total) {
+    
+    public TermFacetResultBuilder total( final Long total) {
         this.total = total;
         return this;
     }
-
+    
+    
+    
+    
     /**
      * set the value to the other
      * @param other value to be set
      * @return Builder
      */
-
-    public TermFacetResultBuilder other(final Long other) {
+    
+    public TermFacetResultBuilder other( final Long other) {
         this.other = other;
         return this;
     }
-
+    
+    
+    
     /**
      * set values to the terms
      * @param terms value to be set
      * @return Builder
      */
-
-    public TermFacetResultBuilder terms(final com.commercetools.api.models.product.FacetTerm... terms) {
+    
+    public TermFacetResultBuilder terms( final com.commercetools.api.models.product.FacetTerm ...terms) {
         this.terms = new ArrayList<>(Arrays.asList(terms));
         return this;
     }
-
+    
     /**
      * set value to the terms
      * @param terms value to be set
      * @return Builder
      */
-
-    public TermFacetResultBuilder terms(final java.util.List<com.commercetools.api.models.product.FacetTerm> terms) {
+    
+    public TermFacetResultBuilder terms( final java.util.List<com.commercetools.api.models.product.FacetTerm> terms) {
         this.terms = terms;
         return this;
     }
-
+    
     /**
      * add values to the terms
      * @param terms value to be set
      * @return Builder
      */
-
-    public TermFacetResultBuilder plusTerms(final com.commercetools.api.models.product.FacetTerm... terms) {
+    
+    public TermFacetResultBuilder plusTerms( final com.commercetools.api.models.product.FacetTerm ...terms) {
         if (this.terms == null) {
             this.terms = new ArrayList<>();
         }
         this.terms.addAll(Arrays.asList(terms));
         return this;
     }
-
+    
+    
+    
     /**
      * add the value to the terms using the builder function
      * @param builder function to build the terms value
      * @return Builder
      */
-
-    public TermFacetResultBuilder plusTerms(
-            Function<com.commercetools.api.models.product.FacetTermBuilder, com.commercetools.api.models.product.FacetTermBuilder> builder) {
+    
+    public TermFacetResultBuilder plusTerms(Function<com.commercetools.api.models.product.FacetTermBuilder, com.commercetools.api.models.product.FacetTermBuilder> builder) {
         if (this.terms == null) {
             this.terms = new ArrayList<>();
         }
         this.terms.add(builder.apply(com.commercetools.api.models.product.FacetTermBuilder.of()).build());
         return this;
     }
-
+    
     /**
      * set the value to the terms using the builder function
      * @param builder function to build the terms value
      * @return Builder
      */
-
-    public TermFacetResultBuilder withTerms(
-            Function<com.commercetools.api.models.product.FacetTermBuilder, com.commercetools.api.models.product.FacetTermBuilder> builder) {
+    
+    public TermFacetResultBuilder withTerms(Function<com.commercetools.api.models.product.FacetTermBuilder, com.commercetools.api.models.product.FacetTermBuilder> builder) {
         this.terms = new ArrayList<>();
         this.terms.add(builder.apply(com.commercetools.api.models.product.FacetTermBuilder.of()).build());
         return this;
     }
-
+    
     /**
      * add the value to the terms using the builder function
      * @param builder function to build the terms value
      * @return Builder
      */
-
-    public TermFacetResultBuilder addTerms(
-            Function<com.commercetools.api.models.product.FacetTermBuilder, com.commercetools.api.models.product.FacetTerm> builder) {
+    
+    public TermFacetResultBuilder addTerms(Function<com.commercetools.api.models.product.FacetTermBuilder, com.commercetools.api.models.product.FacetTerm> builder) {
         return plusTerms(builder.apply(com.commercetools.api.models.product.FacetTermBuilder.of()));
     }
-
+    
     /**
      * set the value to the terms using the builder function
      * @param builder function to build the terms value
      * @return Builder
      */
-
-    public TermFacetResultBuilder setTerms(
-            Function<com.commercetools.api.models.product.FacetTermBuilder, com.commercetools.api.models.product.FacetTerm> builder) {
+    
+    public TermFacetResultBuilder setTerms(Function<com.commercetools.api.models.product.FacetTermBuilder, com.commercetools.api.models.product.FacetTerm> builder) {
         return terms(builder.apply(com.commercetools.api.models.product.FacetTermBuilder.of()));
     }
+                    
 
     /**
      * value of dataType}
      * @return dataType
      */
-
-    public com.commercetools.api.models.product.TermFacetResultType getDataType() {
+    
+    
+    public com.commercetools.api.models.product.TermFacetResultType getDataType(){
         return this.dataType;
     }
-
+    
     /**
      * value of missing}
      * @return missing
      */
-
-    public Long getMissing() {
+    
+    
+    public Long getMissing(){
         return this.missing;
     }
-
+    
     /**
      * value of total}
      * @return total
      */
-
-    public Long getTotal() {
+    
+    
+    public Long getTotal(){
         return this.total;
     }
-
+    
     /**
      * value of other}
      * @return other
      */
-
-    public Long getOther() {
+    
+    
+    public Long getOther(){
         return this.other;
     }
-
+    
     /**
      * value of terms}
      * @return terms
      */
-
-    public java.util.List<com.commercetools.api.models.product.FacetTerm> getTerms() {
+    
+    
+    public java.util.List<com.commercetools.api.models.product.FacetTerm> getTerms(){
         return this.terms;
     }
 
@@ -223,7 +257,7 @@ public class TermFacetResultBuilder implements Builder<TermFacetResult> {
         Objects.requireNonNull(terms, TermFacetResult.class + ": terms is missing");
         return new TermFacetResultImpl(dataType, missing, total, other, terms);
     }
-
+    
     /**
      * builds TermFacetResult without checking for non-null required values
      * @return TermFacetResult
@@ -234,7 +268,7 @@ public class TermFacetResultBuilder implements Builder<TermFacetResult> {
 
     /**
      * factory method for an instance of TermFacetResultBuilder
-     * @return builder
+     * @return builder 
      */
     public static TermFacetResultBuilder of() {
         return new TermFacetResultBuilder();

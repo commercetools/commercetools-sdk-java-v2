@@ -1,10 +1,11 @@
-
 package com.commercetools.importapi.models.order_patches;
 
-import java.util.*;
-
+import com.commercetools.importapi.models.order_patches.ReturnShipmentState;
+import com.commercetools.importapi.models.order_patches.ReturnItemDraft;
 import javax.annotation.Nullable;
-
+import java.util.*;
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -19,125 +20,151 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .shipmentState(ReturnShipmentState.ADVISED)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class ReturnItemDraftBuilder implements Builder<ReturnItemDraft> {
 
+    
+    
     private Double quantity;
-
+    
+    
     @Nullable
     private String lineItemId;
-
+    
+    
     @Nullable
     private String customLineItemId;
-
+    
+    
     @Nullable
     private String comment;
-
+    
+    
+    
     private com.commercetools.importapi.models.order_patches.ReturnShipmentState shipmentState;
 
+    
     /**
      * set the value to the quantity
      * @param quantity value to be set
      * @return Builder
      */
-
-    public ReturnItemDraftBuilder quantity(final Double quantity) {
+    
+    public ReturnItemDraftBuilder quantity( final Double quantity) {
         this.quantity = quantity;
         return this;
     }
-
+    
+    
+    
+    
     /**
      * set the value to the lineItemId
      * @param lineItemId value to be set
      * @return Builder
      */
-
+    
     public ReturnItemDraftBuilder lineItemId(@Nullable final String lineItemId) {
         this.lineItemId = lineItemId;
         return this;
     }
-
+    
+    
+    
+    
     /**
      * set the value to the customLineItemId
      * @param customLineItemId value to be set
      * @return Builder
      */
-
+    
     public ReturnItemDraftBuilder customLineItemId(@Nullable final String customLineItemId) {
         this.customLineItemId = customLineItemId;
         return this;
     }
-
+    
+    
+    
+    
     /**
      * set the value to the comment
      * @param comment value to be set
      * @return Builder
      */
-
+    
     public ReturnItemDraftBuilder comment(@Nullable final String comment) {
         this.comment = comment;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Maps to <code>ReturnItem.shipmentState</code></p>
      * @param shipmentState value to be set
      * @return Builder
      */
-
-    public ReturnItemDraftBuilder shipmentState(
-            final com.commercetools.importapi.models.order_patches.ReturnShipmentState shipmentState) {
+    
+    public ReturnItemDraftBuilder shipmentState( final com.commercetools.importapi.models.order_patches.ReturnShipmentState shipmentState) {
         this.shipmentState = shipmentState;
         return this;
     }
+    
+    
 
     /**
      * value of quantity}
      * @return quantity
      */
-
-    public Double getQuantity() {
+    
+    
+    public Double getQuantity(){
         return this.quantity;
     }
-
+    
     /**
      * value of lineItemId}
      * @return lineItemId
      */
-
+    
     @Nullable
-    public String getLineItemId() {
+    public String getLineItemId(){
         return this.lineItemId;
     }
-
+    
     /**
      * value of customLineItemId}
      * @return customLineItemId
      */
-
+    
     @Nullable
-    public String getCustomLineItemId() {
+    public String getCustomLineItemId(){
         return this.customLineItemId;
     }
-
+    
     /**
      * value of comment}
      * @return comment
      */
-
+    
     @Nullable
-    public String getComment() {
+    public String getComment(){
         return this.comment;
     }
-
+    
     /**
      *  <p>Maps to <code>ReturnItem.shipmentState</code></p>
      * @return shipmentState
      */
-
-    public com.commercetools.importapi.models.order_patches.ReturnShipmentState getShipmentState() {
+    
+    
+    public com.commercetools.importapi.models.order_patches.ReturnShipmentState getShipmentState(){
         return this.shipmentState;
     }
 
@@ -150,7 +177,7 @@ public class ReturnItemDraftBuilder implements Builder<ReturnItemDraft> {
         Objects.requireNonNull(shipmentState, ReturnItemDraft.class + ": shipmentState is missing");
         return new ReturnItemDraftImpl(quantity, lineItemId, customLineItemId, comment, shipmentState);
     }
-
+    
     /**
      * builds ReturnItemDraft without checking for non-null required values
      * @return ReturnItemDraft
@@ -161,7 +188,7 @@ public class ReturnItemDraftBuilder implements Builder<ReturnItemDraft> {
 
     /**
      * factory method for an instance of ReturnItemDraftBuilder
-     * @return builder
+     * @return builder 
      */
     public static ReturnItemDraftBuilder of() {
         return new ReturnItemDraftBuilder();

@@ -1,18 +1,21 @@
-
 package com.commercetools.importapi.models.productvariants;
 
-import java.time.*;
+import com.commercetools.importapi.models.productvariants.Attribute;
 import java.time.LocalTime;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
+import com.commercetools.importapi.models.productvariants.TimeSetAttributeImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>This type represents an attribute whose value is a set of times.</p>
@@ -25,9 +28,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .plusValue(valueBuilder -> valueBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = TimeSetAttributeImpl.class)
 public interface TimeSetAttribute extends Attribute {
 
@@ -48,24 +54,24 @@ public interface TimeSetAttribute extends Attribute {
      * set value
      * @param value values to be set
      */
-
+    
     @JsonIgnore
-    public void setValue(final LocalTime... value);
-
+    public void setValue(final LocalTime ...value);
     /**
      * set value
      * @param value values to be set
      */
-
+    
     public void setValue(final List<LocalTime> value);
 
     /**
      * factory method
      * @return instance of TimeSetAttribute
      */
-    public static TimeSetAttribute of() {
+    public static TimeSetAttribute of(){
         return new TimeSetAttributeImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy TimeSetAttribute
@@ -91,7 +97,9 @@ public interface TimeSetAttribute extends Attribute {
         }
         TimeSetAttributeImpl instance = new TimeSetAttributeImpl();
         instance.setName(template.getName());
-        instance.setValue(Optional.ofNullable(template.getValue()).map(ArrayList::new).orElse(null));
+        instance.setValue(Optional.ofNullable(template.getValue())
+                .map(ArrayList::new)
+                .orElse(null));
         return instance;
     }
 
@@ -102,7 +110,7 @@ public interface TimeSetAttribute extends Attribute {
     public static TimeSetAttributeBuilder builder() {
         return TimeSetAttributeBuilder.of();
     }
-
+    
     /**
      * create builder for TimeSetAttribute instance
      * @param template instance with prefilled values for the builder
@@ -111,6 +119,7 @@ public interface TimeSetAttribute extends Attribute {
     public static TimeSetAttributeBuilder builder(final TimeSetAttribute template) {
         return TimeSetAttributeBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -121,7 +130,7 @@ public interface TimeSetAttribute extends Attribute {
     default <T> T withTimeSetAttribute(Function<TimeSetAttribute, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

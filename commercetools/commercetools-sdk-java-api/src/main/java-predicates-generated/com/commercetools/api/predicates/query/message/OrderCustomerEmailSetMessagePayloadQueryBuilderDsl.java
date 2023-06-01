@@ -1,9 +1,11 @@
-
 package com.commercetools.api.predicates.query.message;
 
 import com.commercetools.api.predicates.query.*;
 
-public class OrderCustomerEmailSetMessagePayloadQueryBuilderDsl {
+import java.util.function.Function;
+
+
+public class OrderCustomerEmailSetMessagePayloadQueryBuilderDsl  {
     public OrderCustomerEmailSetMessagePayloadQueryBuilderDsl() {
     }
 
@@ -12,21 +14,16 @@ public class OrderCustomerEmailSetMessagePayloadQueryBuilderDsl {
     }
 
     public StringComparisonPredicateBuilder<OrderCustomerEmailSetMessagePayloadQueryBuilderDsl> type() {
-        return new StringComparisonPredicateBuilder<>(
-            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("type")),
-            p -> new CombinationQueryPredicate<>(p, OrderCustomerEmailSetMessagePayloadQueryBuilderDsl::of));
+        return new StringComparisonPredicateBuilder<>(BinaryQueryPredicate.of().left(new ConstantQueryPredicate("type")),
+        p -> new CombinationQueryPredicate<>(p, OrderCustomerEmailSetMessagePayloadQueryBuilderDsl::of));
     }
-
     public StringComparisonPredicateBuilder<OrderCustomerEmailSetMessagePayloadQueryBuilderDsl> email() {
-        return new StringComparisonPredicateBuilder<>(
-            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("email")),
-            p -> new CombinationQueryPredicate<>(p, OrderCustomerEmailSetMessagePayloadQueryBuilderDsl::of));
+        return new StringComparisonPredicateBuilder<>(BinaryQueryPredicate.of().left(new ConstantQueryPredicate("email")),
+        p -> new CombinationQueryPredicate<>(p, OrderCustomerEmailSetMessagePayloadQueryBuilderDsl::of));
     }
-
     public StringComparisonPredicateBuilder<OrderCustomerEmailSetMessagePayloadQueryBuilderDsl> oldEmail() {
-        return new StringComparisonPredicateBuilder<>(
-            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("oldEmail")),
-            p -> new CombinationQueryPredicate<>(p, OrderCustomerEmailSetMessagePayloadQueryBuilderDsl::of));
+        return new StringComparisonPredicateBuilder<>(BinaryQueryPredicate.of().left(new ConstantQueryPredicate("oldEmail")),
+        p -> new CombinationQueryPredicate<>(p, OrderCustomerEmailSetMessagePayloadQueryBuilderDsl::of));
     }
-
+    
 }

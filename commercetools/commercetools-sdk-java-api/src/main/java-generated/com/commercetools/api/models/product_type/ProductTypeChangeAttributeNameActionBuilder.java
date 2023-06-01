@@ -1,8 +1,11 @@
-
 package com.commercetools.api.models.product_type;
 
+import com.commercetools.api.models.product_type.ProductTypeUpdateAction;
+import com.commercetools.api.models.product_type.ProductTypeChangeAttributeNameAction;
+import javax.annotation.Nullable;
 import java.util.*;
-
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -17,54 +20,69 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .newAttributeName("{newAttributeName}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class ProductTypeChangeAttributeNameActionBuilder implements Builder<ProductTypeChangeAttributeNameAction> {
 
+    
+    
     private String attributeName;
-
+    
+    
+    
     private String newAttributeName;
 
+    
     /**
      *  <p>Name of the AttributeDefinition to update.</p>
      * @param attributeName value to be set
      * @return Builder
      */
-
-    public ProductTypeChangeAttributeNameActionBuilder attributeName(final String attributeName) {
+    
+    public ProductTypeChangeAttributeNameActionBuilder attributeName( final String attributeName) {
         this.attributeName = attributeName;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>New user-defined name of the Attribute that is unique with the Project.</p>
      *  <p>When using the same <code>name</code> for an Attribute in two or more ProductTypes, all fields of the AttributeDefinition of this Attribute must be the same across the ProductTypes. If not, an AttributeDefinitionAlreadyExists error is returned. An exception to this are the values of an <code>enum</code> or <code>lenum</code> type and sets thereof.</p>
      * @param newAttributeName value to be set
      * @return Builder
      */
-
-    public ProductTypeChangeAttributeNameActionBuilder newAttributeName(final String newAttributeName) {
+    
+    public ProductTypeChangeAttributeNameActionBuilder newAttributeName( final String newAttributeName) {
         this.newAttributeName = newAttributeName;
         return this;
     }
+    
+    
 
     /**
      *  <p>Name of the AttributeDefinition to update.</p>
      * @return attributeName
      */
-
-    public String getAttributeName() {
+    
+    
+    public String getAttributeName(){
         return this.attributeName;
     }
-
+    
     /**
      *  <p>New user-defined name of the Attribute that is unique with the Project.</p>
      *  <p>When using the same <code>name</code> for an Attribute in two or more ProductTypes, all fields of the AttributeDefinition of this Attribute must be the same across the ProductTypes. If not, an AttributeDefinitionAlreadyExists error is returned. An exception to this are the values of an <code>enum</code> or <code>lenum</code> type and sets thereof.</p>
      * @return newAttributeName
      */
-
-    public String getNewAttributeName() {
+    
+    
+    public String getNewAttributeName(){
         return this.newAttributeName;
     }
 
@@ -73,13 +91,11 @@ public class ProductTypeChangeAttributeNameActionBuilder implements Builder<Prod
      * @return ProductTypeChangeAttributeNameAction
      */
     public ProductTypeChangeAttributeNameAction build() {
-        Objects.requireNonNull(attributeName,
-            ProductTypeChangeAttributeNameAction.class + ": attributeName is missing");
-        Objects.requireNonNull(newAttributeName,
-            ProductTypeChangeAttributeNameAction.class + ": newAttributeName is missing");
+        Objects.requireNonNull(attributeName, ProductTypeChangeAttributeNameAction.class + ": attributeName is missing");
+        Objects.requireNonNull(newAttributeName, ProductTypeChangeAttributeNameAction.class + ": newAttributeName is missing");
         return new ProductTypeChangeAttributeNameActionImpl(attributeName, newAttributeName);
     }
-
+    
     /**
      * builds ProductTypeChangeAttributeNameAction without checking for non-null required values
      * @return ProductTypeChangeAttributeNameAction
@@ -90,7 +106,7 @@ public class ProductTypeChangeAttributeNameActionBuilder implements Builder<Prod
 
     /**
      * factory method for an instance of ProductTypeChangeAttributeNameActionBuilder
-     * @return builder
+     * @return builder 
      */
     public static ProductTypeChangeAttributeNameActionBuilder of() {
         return new ProductTypeChangeAttributeNameActionBuilder();

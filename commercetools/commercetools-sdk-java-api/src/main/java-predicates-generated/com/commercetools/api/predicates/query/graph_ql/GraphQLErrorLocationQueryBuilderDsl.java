@@ -1,9 +1,11 @@
-
 package com.commercetools.api.predicates.query.graph_ql;
 
 import com.commercetools.api.predicates.query.*;
 
-public class GraphQLErrorLocationQueryBuilderDsl {
+import java.util.function.Function;
+
+
+public class GraphQLErrorLocationQueryBuilderDsl  {
     public GraphQLErrorLocationQueryBuilderDsl() {
     }
 
@@ -13,13 +15,11 @@ public class GraphQLErrorLocationQueryBuilderDsl {
 
     public LongComparisonPredicateBuilder<GraphQLErrorLocationQueryBuilderDsl> line() {
         return new LongComparisonPredicateBuilder<>(BinaryQueryPredicate.of().left(new ConstantQueryPredicate("line")),
-            p -> new CombinationQueryPredicate<>(p, GraphQLErrorLocationQueryBuilderDsl::of));
+        p -> new CombinationQueryPredicate<>(p, GraphQLErrorLocationQueryBuilderDsl::of));
     }
-
     public LongComparisonPredicateBuilder<GraphQLErrorLocationQueryBuilderDsl> column() {
-        return new LongComparisonPredicateBuilder<>(
-            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("column")),
-            p -> new CombinationQueryPredicate<>(p, GraphQLErrorLocationQueryBuilderDsl::of));
+        return new LongComparisonPredicateBuilder<>(BinaryQueryPredicate.of().left(new ConstantQueryPredicate("column")),
+        p -> new CombinationQueryPredicate<>(p, GraphQLErrorLocationQueryBuilderDsl::of));
     }
-
+    
 }

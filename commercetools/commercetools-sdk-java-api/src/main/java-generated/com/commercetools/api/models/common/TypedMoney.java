@@ -1,17 +1,23 @@
-
 package com.commercetools.api.models.common;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
+import com.commercetools.api.models.common.CentPrecisionMoney;
+import com.commercetools.api.models.common.HighPrecisionMoney;
+import com.commercetools.api.models.common.Money;
+import com.commercetools.api.models.common.MoneyType;
 
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Base polymorphic read-only Money type which is stored in cent precision or high precision. The actual type is determined by the <code>type</code> field.</p>
@@ -26,15 +32,26 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             fractionDigits(0.3)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
 @JsonSubTypes({
-        @JsonSubTypes.Type(value = com.commercetools.api.models.common.CentPrecisionMoneyImpl.class, name = CentPrecisionMoney.CENT_PRECISION),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.common.HighPrecisionMoneyImpl.class, name = HighPrecisionMoney.HIGH_PRECISION) })
-@JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.EXISTING_PROPERTY, property = "type", defaultImpl = TypedMoneyImpl.class, visible = true)
+   @JsonSubTypes.Type(value = com.commercetools.api.models.common.CentPrecisionMoneyImpl.class, name = CentPrecisionMoney.CENT_PRECISION),
+   @JsonSubTypes.Type(value = com.commercetools.api.models.common.HighPrecisionMoneyImpl.class, name = HighPrecisionMoney.HIGH_PRECISION)
+})
+@JsonTypeInfo(
+    use = JsonTypeInfo.Id.NAME,
+    include = JsonTypeInfo.As.EXISTING_PROPERTY,
+    property = "type",
+    defaultImpl = TypedMoneyImpl.class,
+    visible = true
+)
 @JsonDeserialize(as = TypedMoneyImpl.class)
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public interface TypedMoney extends Money {
+
 
     /**
      *  <p>MoneyType supports two different values, one for amounts in cent precision and another one for sub-cent amounts up to 20 fraction digits.</p>
@@ -43,7 +60,6 @@ public interface TypedMoney extends Money {
     @NotNull
     @JsonProperty("type")
     public MoneyType getType();
-
     /**
      *  <p>Number of digits after the decimal separator:</p>
      *  <ul>
@@ -64,8 +80,11 @@ public interface TypedMoney extends Money {
      *  </ul>
      * @param fractionDigits value to be set
      */
-
+    
     public void setFractionDigits(final Integer fractionDigits);
+    
+
+
 
     /**
      * factory method to create a deep copy of TypedMoney
@@ -78,12 +97,10 @@ public interface TypedMoney extends Money {
             return null;
         }
         if (template instanceof com.commercetools.api.models.common.CentPrecisionMoney) {
-            return com.commercetools.api.models.common.CentPrecisionMoney
-                    .deepCopy((com.commercetools.api.models.common.CentPrecisionMoney) template);
+            return com.commercetools.api.models.common.CentPrecisionMoney.deepCopy((com.commercetools.api.models.common.CentPrecisionMoney)template);
         }
         if (template instanceof com.commercetools.api.models.common.HighPrecisionMoney) {
-            return com.commercetools.api.models.common.HighPrecisionMoney
-                    .deepCopy((com.commercetools.api.models.common.HighPrecisionMoney) template);
+            return com.commercetools.api.models.common.HighPrecisionMoney.deepCopy((com.commercetools.api.models.common.HighPrecisionMoney)template);
         }
         TypedMoneyImpl instance = new TypedMoneyImpl();
         instance.setCentAmount(template.getCentAmount());
@@ -92,20 +109,20 @@ public interface TypedMoney extends Money {
         return instance;
     }
 
+
     /**
      * builder for centPrecision subtype
      * @return builder
      */
     public static com.commercetools.api.models.common.CentPrecisionMoneyBuilder centPrecisionBuilder() {
-        return com.commercetools.api.models.common.CentPrecisionMoneyBuilder.of();
+       return com.commercetools.api.models.common.CentPrecisionMoneyBuilder.of();
     }
-
     /**
      * builder for highPrecision subtype
      * @return builder
      */
     public static com.commercetools.api.models.common.HighPrecisionMoneyBuilder highPrecisionBuilder() {
-        return com.commercetools.api.models.common.HighPrecisionMoneyBuilder.of();
+       return com.commercetools.api.models.common.HighPrecisionMoneyBuilder.of();
     }
 
     /**
@@ -117,12 +134,12 @@ public interface TypedMoney extends Money {
     default <T> T withTypedMoney(Function<TypedMoney, T> helper) {
         return helper.apply(this);
     }
-
     @Override
     default javax.money.MonetaryOperator createMoneyOperator() {
         return MoneyUtil::of;
     }
-
+    
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

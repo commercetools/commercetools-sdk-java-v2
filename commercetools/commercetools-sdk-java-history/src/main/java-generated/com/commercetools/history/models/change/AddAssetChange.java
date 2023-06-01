@@ -1,19 +1,21 @@
-
 package com.commercetools.history.models.change;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
+import com.commercetools.history.models.change.Change;
 import com.commercetools.history.models.common.Asset;
+import com.commercetools.history.models.change.AddAssetChangeImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * AddAssetChange
@@ -28,9 +30,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .previousValue(previousValueBuilder -> previousValueBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = AddAssetChangeImpl.class)
 public interface AddAssetChange extends Change {
 
@@ -46,7 +51,6 @@ public interface AddAssetChange extends Change {
     @NotNull
     @JsonProperty("change")
     public String getChange();
-
     /**
      *
      * @return type
@@ -54,7 +58,6 @@ public interface AddAssetChange extends Change {
     @NotNull
     @JsonProperty("type")
     public String getType();
-
     /**
      *
      * @return nextValue
@@ -63,7 +66,6 @@ public interface AddAssetChange extends Change {
     @Valid
     @JsonProperty("nextValue")
     public Asset getNextValue();
-
     /**
      *
      * @return previousValue
@@ -77,30 +79,34 @@ public interface AddAssetChange extends Change {
      *  <p>Update action for <code>addAsset</code></p>
      * @param change value to be set
      */
-
+    
     public void setChange(final String change);
-
+    
+    
     /**
      * set nextValue
      * @param nextValue value to be set
      */
-
+    
     public void setNextValue(final Asset nextValue);
-
+    
+    
     /**
      * set previousValue
      * @param previousValue value to be set
      */
-
+    
     public void setPreviousValue(final Asset previousValue);
+    
 
     /**
      * factory method
      * @return instance of AddAssetChange
      */
-    public static AddAssetChange of() {
+    public static AddAssetChange of(){
         return new AddAssetChangeImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy AddAssetChange
@@ -139,7 +145,7 @@ public interface AddAssetChange extends Change {
     public static AddAssetChangeBuilder builder() {
         return AddAssetChangeBuilder.of();
     }
-
+    
     /**
      * create builder for AddAssetChange instance
      * @param template instance with prefilled values for the builder
@@ -148,6 +154,7 @@ public interface AddAssetChange extends Change {
     public static AddAssetChangeBuilder builder(final AddAssetChange template) {
         return AddAssetChangeBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -158,7 +165,7 @@ public interface AddAssetChange extends Change {
     default <T> T withAddAssetChange(Function<AddAssetChange, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

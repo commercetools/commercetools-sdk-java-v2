@@ -1,9 +1,11 @@
-
 package com.commercetools.api.predicates.query.me;
 
 import com.commercetools.api.predicates.query.*;
 
-public class MyCartChangeTaxModeActionQueryBuilderDsl {
+import java.util.function.Function;
+
+
+public class MyCartChangeTaxModeActionQueryBuilderDsl  {
     public MyCartChangeTaxModeActionQueryBuilderDsl() {
     }
 
@@ -12,15 +14,12 @@ public class MyCartChangeTaxModeActionQueryBuilderDsl {
     }
 
     public StringComparisonPredicateBuilder<MyCartChangeTaxModeActionQueryBuilderDsl> action() {
-        return new StringComparisonPredicateBuilder<>(
-            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("action")),
-            p -> new CombinationQueryPredicate<>(p, MyCartChangeTaxModeActionQueryBuilderDsl::of));
+        return new StringComparisonPredicateBuilder<>(BinaryQueryPredicate.of().left(new ConstantQueryPredicate("action")),
+        p -> new CombinationQueryPredicate<>(p, MyCartChangeTaxModeActionQueryBuilderDsl::of));
     }
-
     public StringComparisonPredicateBuilder<MyCartChangeTaxModeActionQueryBuilderDsl> taxMode() {
-        return new StringComparisonPredicateBuilder<>(
-            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("taxMode")),
-            p -> new CombinationQueryPredicate<>(p, MyCartChangeTaxModeActionQueryBuilderDsl::of));
+        return new StringComparisonPredicateBuilder<>(BinaryQueryPredicate.of().left(new ConstantQueryPredicate("taxMode")),
+        p -> new CombinationQueryPredicate<>(p, MyCartChangeTaxModeActionQueryBuilderDsl::of));
     }
-
+    
 }

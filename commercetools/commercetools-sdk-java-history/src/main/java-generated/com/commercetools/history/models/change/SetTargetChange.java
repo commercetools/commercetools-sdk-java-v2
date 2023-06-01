@@ -1,19 +1,21 @@
-
 package com.commercetools.history.models.change;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
+import com.commercetools.history.models.change.Change;
 import com.commercetools.history.models.common.Reference;
+import com.commercetools.history.models.change.SetTargetChangeImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * SetTargetChange
@@ -28,9 +30,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .nextValue(nextValueBuilder -> nextValueBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = SetTargetChangeImpl.class)
 public interface SetTargetChange extends Change {
 
@@ -46,7 +51,6 @@ public interface SetTargetChange extends Change {
     @NotNull
     @JsonProperty("type")
     public String getType();
-
     /**
      *  <p>Shape of the action for <code>setTarget</code></p>
      * @return change
@@ -54,7 +58,6 @@ public interface SetTargetChange extends Change {
     @NotNull
     @JsonProperty("change")
     public String getChange();
-
     /**
      *
      * @return previousValue
@@ -63,7 +66,6 @@ public interface SetTargetChange extends Change {
     @Valid
     @JsonProperty("previousValue")
     public Reference getPreviousValue();
-
     /**
      *
      * @return nextValue
@@ -77,30 +79,34 @@ public interface SetTargetChange extends Change {
      *  <p>Shape of the action for <code>setTarget</code></p>
      * @param change value to be set
      */
-
+    
     public void setChange(final String change);
-
+    
+    
     /**
      * set previousValue
      * @param previousValue value to be set
      */
-
+    
     public void setPreviousValue(final Reference previousValue);
-
+    
+    
     /**
      * set nextValue
      * @param nextValue value to be set
      */
-
+    
     public void setNextValue(final Reference nextValue);
+    
 
     /**
      * factory method
      * @return instance of SetTargetChange
      */
-    public static SetTargetChange of() {
+    public static SetTargetChange of(){
         return new SetTargetChangeImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy SetTargetChange
@@ -127,8 +133,7 @@ public interface SetTargetChange extends Change {
         }
         SetTargetChangeImpl instance = new SetTargetChangeImpl();
         instance.setChange(template.getChange());
-        instance.setPreviousValue(
-            com.commercetools.history.models.common.Reference.deepCopy(template.getPreviousValue()));
+        instance.setPreviousValue(com.commercetools.history.models.common.Reference.deepCopy(template.getPreviousValue()));
         instance.setNextValue(com.commercetools.history.models.common.Reference.deepCopy(template.getNextValue()));
         return instance;
     }
@@ -140,7 +145,7 @@ public interface SetTargetChange extends Change {
     public static SetTargetChangeBuilder builder() {
         return SetTargetChangeBuilder.of();
     }
-
+    
     /**
      * create builder for SetTargetChange instance
      * @param template instance with prefilled values for the builder
@@ -149,6 +154,7 @@ public interface SetTargetChange extends Change {
     public static SetTargetChangeBuilder builder(final SetTargetChange template) {
         return SetTargetChangeBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -159,7 +165,7 @@ public interface SetTargetChange extends Change {
     default <T> T withSetTargetChange(Function<SetTargetChange, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

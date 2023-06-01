@@ -1,8 +1,11 @@
-
 package com.commercetools.importapi.models.customfields;
 
+import com.commercetools.importapi.models.customfields.CustomField;
+import com.commercetools.importapi.models.customfields.BooleanSetField;
+import javax.annotation.Nullable;
 import java.util.*;
-
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -16,11 +19,16 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .plusValue(valueBuilder -> valueBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class BooleanSetFieldBuilder implements Builder<BooleanSetField> {
 
+    
+    
     private java.util.List<Boolean> value;
 
     /**
@@ -28,43 +36,47 @@ public class BooleanSetFieldBuilder implements Builder<BooleanSetField> {
      * @param value value to be set
      * @return Builder
      */
-
-    public BooleanSetFieldBuilder value(final Boolean... value) {
+    
+    public BooleanSetFieldBuilder value( final Boolean ...value) {
         this.value = new ArrayList<>(Arrays.asList(value));
         return this;
     }
-
+    
     /**
      * set value to the value
      * @param value value to be set
      * @return Builder
      */
-
-    public BooleanSetFieldBuilder value(final java.util.List<Boolean> value) {
+    
+    public BooleanSetFieldBuilder value( final java.util.List<Boolean> value) {
         this.value = value;
         return this;
     }
-
+    
     /**
      * add values to the value
      * @param value value to be set
      * @return Builder
      */
-
-    public BooleanSetFieldBuilder plusValue(final Boolean... value) {
+    
+    public BooleanSetFieldBuilder plusValue( final Boolean ...value) {
         if (this.value == null) {
             this.value = new ArrayList<>();
         }
         this.value.addAll(Arrays.asList(value));
         return this;
     }
+    
+    
+    
 
     /**
      * value of value}
      * @return value
      */
-
-    public java.util.List<Boolean> getValue() {
+    
+    
+    public java.util.List<Boolean> getValue(){
         return this.value;
     }
 
@@ -76,7 +88,7 @@ public class BooleanSetFieldBuilder implements Builder<BooleanSetField> {
         Objects.requireNonNull(value, BooleanSetField.class + ": value is missing");
         return new BooleanSetFieldImpl(value);
     }
-
+    
     /**
      * builds BooleanSetField without checking for non-null required values
      * @return BooleanSetField
@@ -87,7 +99,7 @@ public class BooleanSetFieldBuilder implements Builder<BooleanSetField> {
 
     /**
      * factory method for an instance of BooleanSetFieldBuilder
-     * @return builder
+     * @return builder 
      */
     public static BooleanSetFieldBuilder of() {
         return new BooleanSetFieldBuilder();

@@ -1,8 +1,11 @@
-
 package com.commercetools.api.models.attribute_group;
 
-import java.util.*;
 
+import com.commercetools.api.models.attribute_group.AttributeReference;
+import javax.annotation.Nullable;
+import java.util.*;
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -16,30 +19,39 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .key("{key}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class AttributeReferenceBuilder implements Builder<AttributeReference> {
 
+    
+    
     private String key;
 
+    
     /**
      *  <p>The Attribute's <code>name</code> as given in its AttributeDefinition.</p>
      * @param key value to be set
      * @return Builder
      */
-
-    public AttributeReferenceBuilder key(final String key) {
+    
+    public AttributeReferenceBuilder key( final String key) {
         this.key = key;
         return this;
     }
+    
+    
 
     /**
      *  <p>The Attribute's <code>name</code> as given in its AttributeDefinition.</p>
      * @return key
      */
-
-    public String getKey() {
+    
+    
+    public String getKey(){
         return this.key;
     }
 
@@ -51,7 +63,7 @@ public class AttributeReferenceBuilder implements Builder<AttributeReference> {
         Objects.requireNonNull(key, AttributeReference.class + ": key is missing");
         return new AttributeReferenceImpl(key);
     }
-
+    
     /**
      * builds AttributeReference without checking for non-null required values
      * @return AttributeReference
@@ -62,7 +74,7 @@ public class AttributeReferenceBuilder implements Builder<AttributeReference> {
 
     /**
      * factory method for an instance of AttributeReferenceBuilder
-     * @return builder
+     * @return builder 
      */
     public static AttributeReferenceBuilder of() {
         return new AttributeReferenceBuilder();

@@ -1,21 +1,22 @@
-
 package com.commercetools.importapi.models.order_patches;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-import java.util.stream.Collectors;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
 import com.commercetools.importapi.models.common.Address;
+import com.commercetools.importapi.models.order_patches.DeliveryParcelDraft;
 import com.commercetools.importapi.models.orders.DeliveryItem;
+import com.commercetools.importapi.models.order_patches.DeliveryDraftImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * DeliveryDraft
@@ -29,11 +30,15 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .plusParcels(parcelsBuilder -> parcelsBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = DeliveryDraftImpl.class)
 public interface DeliveryDraft extends io.vrap.rmf.base.client.Draft<DeliveryDraft> {
+
 
     /**
      *
@@ -43,7 +48,6 @@ public interface DeliveryDraft extends io.vrap.rmf.base.client.Draft<DeliveryDra
     @Valid
     @JsonProperty("items")
     public List<DeliveryItem> getItems();
-
     /**
      *
      * @return address
@@ -51,7 +55,6 @@ public interface DeliveryDraft extends io.vrap.rmf.base.client.Draft<DeliveryDra
     @Valid
     @JsonProperty("address")
     public Address getAddress();
-
     /**
      *
      * @return parcels
@@ -65,46 +68,46 @@ public interface DeliveryDraft extends io.vrap.rmf.base.client.Draft<DeliveryDra
      * set items
      * @param items values to be set
      */
-
+    
     @JsonIgnore
-    public void setItems(final DeliveryItem... items);
-
+    public void setItems(final DeliveryItem ...items);
     /**
      * set items
      * @param items values to be set
      */
-
+    
     public void setItems(final List<DeliveryItem> items);
-
+    
     /**
      * set address
      * @param address value to be set
      */
-
+    
     public void setAddress(final Address address);
-
+    
+    
     /**
      * set parcels
      * @param parcels values to be set
      */
-
+    
     @JsonIgnore
-    public void setParcels(final DeliveryParcelDraft... parcels);
-
+    public void setParcels(final DeliveryParcelDraft ...parcels);
     /**
      * set parcels
      * @param parcels values to be set
      */
-
+    
     public void setParcels(final List<DeliveryParcelDraft> parcels);
 
     /**
      * factory method
      * @return instance of DeliveryDraft
      */
-    public static DeliveryDraft of() {
+    public static DeliveryDraft of(){
         return new DeliveryDraftImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy DeliveryDraft
@@ -131,15 +134,11 @@ public interface DeliveryDraft extends io.vrap.rmf.base.client.Draft<DeliveryDra
         }
         DeliveryDraftImpl instance = new DeliveryDraftImpl();
         instance.setItems(Optional.ofNullable(template.getItems())
-                .map(t -> t.stream()
-                        .map(com.commercetools.importapi.models.orders.DeliveryItem::deepCopy)
-                        .collect(Collectors.toList()))
+                .map(t -> t.stream().map(com.commercetools.importapi.models.orders.DeliveryItem::deepCopy).collect(Collectors.toList()))
                 .orElse(null));
         instance.setAddress(com.commercetools.importapi.models.common.Address.deepCopy(template.getAddress()));
         instance.setParcels(Optional.ofNullable(template.getParcels())
-                .map(t -> t.stream()
-                        .map(com.commercetools.importapi.models.order_patches.DeliveryParcelDraft::deepCopy)
-                        .collect(Collectors.toList()))
+                .map(t -> t.stream().map(com.commercetools.importapi.models.order_patches.DeliveryParcelDraft::deepCopy).collect(Collectors.toList()))
                 .orElse(null));
         return instance;
     }
@@ -151,7 +150,7 @@ public interface DeliveryDraft extends io.vrap.rmf.base.client.Draft<DeliveryDra
     public static DeliveryDraftBuilder builder() {
         return DeliveryDraftBuilder.of();
     }
-
+    
     /**
      * create builder for DeliveryDraft instance
      * @param template instance with prefilled values for the builder
@@ -160,6 +159,7 @@ public interface DeliveryDraft extends io.vrap.rmf.base.client.Draft<DeliveryDra
     public static DeliveryDraftBuilder builder(final DeliveryDraft template) {
         return DeliveryDraftBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -170,7 +170,7 @@ public interface DeliveryDraft extends io.vrap.rmf.base.client.Draft<DeliveryDra
     default <T> T withDeliveryDraft(Function<DeliveryDraft, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

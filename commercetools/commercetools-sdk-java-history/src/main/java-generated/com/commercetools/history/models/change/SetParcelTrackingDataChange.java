@@ -1,20 +1,22 @@
-
 package com.commercetools.history.models.change;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
+import com.commercetools.history.models.change.Change;
 import com.commercetools.history.models.change_value.ParcelChangeValue;
 import com.commercetools.history.models.common.TrackingData;
+import com.commercetools.history.models.change.SetParcelTrackingDataChangeImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * SetParcelTrackingDataChange
@@ -30,9 +32,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .previousValue(previousValueBuilder -> previousValueBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = SetParcelTrackingDataChangeImpl.class)
 public interface SetParcelTrackingDataChange extends Change {
 
@@ -48,7 +53,6 @@ public interface SetParcelTrackingDataChange extends Change {
     @NotNull
     @JsonProperty("type")
     public String getType();
-
     /**
      *  <p>Update action for <code>setParcelTrackingData</code></p>
      * @return change
@@ -56,7 +60,6 @@ public interface SetParcelTrackingDataChange extends Change {
     @NotNull
     @JsonProperty("change")
     public String getChange();
-
     /**
      *
      * @return parcel
@@ -65,7 +68,6 @@ public interface SetParcelTrackingDataChange extends Change {
     @Valid
     @JsonProperty("parcel")
     public ParcelChangeValue getParcel();
-
     /**
      *
      * @return nextValue
@@ -74,7 +76,6 @@ public interface SetParcelTrackingDataChange extends Change {
     @Valid
     @JsonProperty("nextValue")
     public TrackingData getNextValue();
-
     /**
      *
      * @return previousValue
@@ -88,37 +89,42 @@ public interface SetParcelTrackingDataChange extends Change {
      *  <p>Update action for <code>setParcelTrackingData</code></p>
      * @param change value to be set
      */
-
+    
     public void setChange(final String change);
-
+    
+    
     /**
      * set parcel
      * @param parcel value to be set
      */
-
+    
     public void setParcel(final ParcelChangeValue parcel);
-
+    
+    
     /**
      * set nextValue
      * @param nextValue value to be set
      */
-
+    
     public void setNextValue(final TrackingData nextValue);
-
+    
+    
     /**
      * set previousValue
      * @param previousValue value to be set
      */
-
+    
     public void setPreviousValue(final TrackingData previousValue);
+    
 
     /**
      * factory method
      * @return instance of SetParcelTrackingDataChange
      */
-    public static SetParcelTrackingDataChange of() {
+    public static SetParcelTrackingDataChange of(){
         return new SetParcelTrackingDataChangeImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy SetParcelTrackingDataChange
@@ -146,11 +152,9 @@ public interface SetParcelTrackingDataChange extends Change {
         }
         SetParcelTrackingDataChangeImpl instance = new SetParcelTrackingDataChangeImpl();
         instance.setChange(template.getChange());
-        instance.setParcel(
-            com.commercetools.history.models.change_value.ParcelChangeValue.deepCopy(template.getParcel()));
+        instance.setParcel(com.commercetools.history.models.change_value.ParcelChangeValue.deepCopy(template.getParcel()));
         instance.setNextValue(com.commercetools.history.models.common.TrackingData.deepCopy(template.getNextValue()));
-        instance.setPreviousValue(
-            com.commercetools.history.models.common.TrackingData.deepCopy(template.getPreviousValue()));
+        instance.setPreviousValue(com.commercetools.history.models.common.TrackingData.deepCopy(template.getPreviousValue()));
         return instance;
     }
 
@@ -161,7 +165,7 @@ public interface SetParcelTrackingDataChange extends Change {
     public static SetParcelTrackingDataChangeBuilder builder() {
         return SetParcelTrackingDataChangeBuilder.of();
     }
-
+    
     /**
      * create builder for SetParcelTrackingDataChange instance
      * @param template instance with prefilled values for the builder
@@ -170,6 +174,7 @@ public interface SetParcelTrackingDataChange extends Change {
     public static SetParcelTrackingDataChangeBuilder builder(final SetParcelTrackingDataChange template) {
         return SetParcelTrackingDataChangeBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -180,7 +185,7 @@ public interface SetParcelTrackingDataChange extends Change {
     default <T> T withSetParcelTrackingDataChange(Function<SetParcelTrackingDataChange, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

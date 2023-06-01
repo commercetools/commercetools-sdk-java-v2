@@ -1,8 +1,12 @@
-
 package com.commercetools.api.models.cart;
 
+import com.commercetools.api.models.cart.CartUpdateAction;
+import com.commercetools.api.models.cart.RoundingMode;
+import com.commercetools.api.models.cart.CartChangeTaxRoundingModeAction;
+import javax.annotation.Nullable;
 import java.util.*;
-
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -16,31 +20,39 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .taxRoundingMode(RoundingMode.HALF_EVEN)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class CartChangeTaxRoundingModeActionBuilder implements Builder<CartChangeTaxRoundingModeAction> {
 
+    
+    
     private com.commercetools.api.models.cart.RoundingMode taxRoundingMode;
 
+    
     /**
      *  <p>New value to set.</p>
      * @param taxRoundingMode value to be set
      * @return Builder
      */
-
-    public CartChangeTaxRoundingModeActionBuilder taxRoundingMode(
-            final com.commercetools.api.models.cart.RoundingMode taxRoundingMode) {
+    
+    public CartChangeTaxRoundingModeActionBuilder taxRoundingMode( final com.commercetools.api.models.cart.RoundingMode taxRoundingMode) {
         this.taxRoundingMode = taxRoundingMode;
         return this;
     }
+    
+    
 
     /**
      *  <p>New value to set.</p>
      * @return taxRoundingMode
      */
-
-    public com.commercetools.api.models.cart.RoundingMode getTaxRoundingMode() {
+    
+    
+    public com.commercetools.api.models.cart.RoundingMode getTaxRoundingMode(){
         return this.taxRoundingMode;
     }
 
@@ -52,7 +64,7 @@ public class CartChangeTaxRoundingModeActionBuilder implements Builder<CartChang
         Objects.requireNonNull(taxRoundingMode, CartChangeTaxRoundingModeAction.class + ": taxRoundingMode is missing");
         return new CartChangeTaxRoundingModeActionImpl(taxRoundingMode);
     }
-
+    
     /**
      * builds CartChangeTaxRoundingModeAction without checking for non-null required values
      * @return CartChangeTaxRoundingModeAction
@@ -63,7 +75,7 @@ public class CartChangeTaxRoundingModeActionBuilder implements Builder<CartChang
 
     /**
      * factory method for an instance of CartChangeTaxRoundingModeActionBuilder
-     * @return builder
+     * @return builder 
      */
     public static CartChangeTaxRoundingModeActionBuilder of() {
         return new CartChangeTaxRoundingModeActionBuilder();

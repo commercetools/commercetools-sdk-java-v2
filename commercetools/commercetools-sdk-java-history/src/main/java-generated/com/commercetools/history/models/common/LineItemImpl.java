@@ -1,59 +1,69 @@
-
 package com.commercetools.history.models.common;
 
-import java.time.*;
-import java.util.*;
-
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
-
-import io.vrap.rmf.base.client.ModelBase;
+import com.commercetools.history.models.common.CustomFields;
+import com.commercetools.history.models.common.LocalizedString;
+import com.commercetools.history.models.common.Reference;
+import com.commercetools.history.models.common.Variant;
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.ModelBase;
+import javax.validation.Valid;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.annotation.*;
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
  * LineItem
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class LineItemImpl implements LineItem, ModelBase {
 
+    
     private String addedAt;
-
+    
+    
     private com.commercetools.history.models.common.CustomFields custom;
-
+    
+    
     private String id;
-
+    
+    
     private com.commercetools.history.models.common.LocalizedString name;
-
+    
+    
     private String productId;
-
+    
+    
     private com.commercetools.history.models.common.LocalizedString productSlug;
-
+    
+    
     private com.commercetools.history.models.common.Reference productType;
-
+    
+    
     private Integer quantity;
-
+    
+    
     private com.commercetools.history.models.common.Variant variant;
-
+    
+    
     private Integer variantId;
 
     /**
      * create instance with all properties
      */
     @JsonCreator
-    LineItemImpl(@JsonProperty("addedAt") final String addedAt,
-            @JsonProperty("custom") final com.commercetools.history.models.common.CustomFields custom,
-            @JsonProperty("id") final String id,
-            @JsonProperty("name") final com.commercetools.history.models.common.LocalizedString name,
-            @JsonProperty("productId") final String productId,
-            @JsonProperty("productSlug") final com.commercetools.history.models.common.LocalizedString productSlug,
-            @JsonProperty("productType") final com.commercetools.history.models.common.Reference productType,
-            @JsonProperty("quantity") final Integer quantity,
-            @JsonProperty("variant") final com.commercetools.history.models.common.Variant variant,
-            @JsonProperty("variantId") final Integer variantId) {
+    LineItemImpl(@JsonProperty("addedAt") final String addedAt, @JsonProperty("custom") final com.commercetools.history.models.common.CustomFields custom, @JsonProperty("id") final String id, @JsonProperty("name") final com.commercetools.history.models.common.LocalizedString name, @JsonProperty("productId") final String productId, @JsonProperty("productSlug") final com.commercetools.history.models.common.LocalizedString productSlug, @JsonProperty("productType") final com.commercetools.history.models.common.Reference productType, @JsonProperty("quantity") final Integer quantity, @JsonProperty("variant") final com.commercetools.history.models.common.Variant variant, @JsonProperty("variantId") final Integer variantId) {
         this.addedAt = addedAt;
         this.custom = custom;
         this.id = id;
@@ -65,7 +75,6 @@ public class LineItemImpl implements LineItem, ModelBase {
         this.variant = variant;
         this.variantId = variantId;
     }
-
     /**
      * create empty instance
      */
@@ -75,134 +84,143 @@ public class LineItemImpl implements LineItem, ModelBase {
     /**
      *
      */
-
-    public String getAddedAt() {
+    
+    public String getAddedAt(){
         return this.addedAt;
     }
-
+    
     /**
      *
      */
-
-    public com.commercetools.history.models.common.CustomFields getCustom() {
+    
+    public com.commercetools.history.models.common.CustomFields getCustom(){
         return this.custom;
     }
-
+    
     /**
      *
      */
-
-    public String getId() {
+    
+    public String getId(){
         return this.id;
     }
-
+    
     /**
      *
      */
-
-    public com.commercetools.history.models.common.LocalizedString getName() {
+    
+    public com.commercetools.history.models.common.LocalizedString getName(){
         return this.name;
     }
-
+    
     /**
      *
      */
-
-    public String getProductId() {
+    
+    public String getProductId(){
         return this.productId;
     }
-
+    
     /**
      *
      */
-
-    public com.commercetools.history.models.common.LocalizedString getProductSlug() {
+    
+    public com.commercetools.history.models.common.LocalizedString getProductSlug(){
         return this.productSlug;
     }
-
+    
     /**
      *
      */
-
-    public com.commercetools.history.models.common.Reference getProductType() {
+    
+    public com.commercetools.history.models.common.Reference getProductType(){
         return this.productType;
     }
-
+    
     /**
      *
      */
-
-    public Integer getQuantity() {
+    
+    public Integer getQuantity(){
         return this.quantity;
     }
-
+    
     /**
      *
      */
-
-    public com.commercetools.history.models.common.Variant getVariant() {
+    
+    public com.commercetools.history.models.common.Variant getVariant(){
         return this.variant;
     }
-
+    
     /**
      *
      */
-
-    public Integer getVariantId() {
+    
+    public Integer getVariantId(){
         return this.variantId;
     }
 
-    public void setAddedAt(final String addedAt) {
+    
+    public void setAddedAt(final String addedAt){
         this.addedAt = addedAt;
     }
-
-    public void setCustom(final com.commercetools.history.models.common.CustomFields custom) {
+    
+    
+    public void setCustom(final com.commercetools.history.models.common.CustomFields custom){
         this.custom = custom;
     }
-
-    public void setId(final String id) {
+    
+    
+    public void setId(final String id){
         this.id = id;
     }
-
-    public void setName(final com.commercetools.history.models.common.LocalizedString name) {
+    
+    
+    public void setName(final com.commercetools.history.models.common.LocalizedString name){
         this.name = name;
     }
-
-    public void setProductId(final String productId) {
+    
+    
+    public void setProductId(final String productId){
         this.productId = productId;
     }
-
-    public void setProductSlug(final com.commercetools.history.models.common.LocalizedString productSlug) {
+    
+    
+    public void setProductSlug(final com.commercetools.history.models.common.LocalizedString productSlug){
         this.productSlug = productSlug;
     }
-
-    public void setProductType(final com.commercetools.history.models.common.Reference productType) {
+    
+    
+    public void setProductType(final com.commercetools.history.models.common.Reference productType){
         this.productType = productType;
     }
-
-    public void setQuantity(final Integer quantity) {
+    
+    
+    public void setQuantity(final Integer quantity){
         this.quantity = quantity;
     }
-
-    public void setVariant(final com.commercetools.history.models.common.Variant variant) {
+    
+    
+    public void setVariant(final com.commercetools.history.models.common.Variant variant){
         this.variant = variant;
     }
-
-    public void setVariantId(final Integer variantId) {
+    
+    
+    public void setVariantId(final Integer variantId){
         this.variantId = variantId;
     }
 
     @Override
     public boolean equals(Object o) {
-        if (this == o)
-            return true;
-
-        if (o == null || getClass() != o.getClass())
-            return false;
-
+        if (this == o) return true;
+    
+        if (o == null || getClass() != o.getClass()) return false;
+    
         LineItemImpl that = (LineItemImpl) o;
-
-        return new EqualsBuilder().append(addedAt, that.addedAt)
+    
+        return new EqualsBuilder()
+                .append(addedAt, that.addedAt)
                 .append(custom, that.custom)
                 .append(id, that.id)
                 .append(name, that.name)
@@ -214,20 +232,21 @@ public class LineItemImpl implements LineItem, ModelBase {
                 .append(variantId, that.variantId)
                 .isEquals();
     }
-
+    
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(addedAt)
-                .append(custom)
-                .append(id)
-                .append(name)
-                .append(productId)
-                .append(productSlug)
-                .append(productType)
-                .append(quantity)
-                .append(variant)
-                .append(variantId)
-                .toHashCode();
+        return new HashCodeBuilder(17, 37)
+            .append(addedAt)
+            .append(custom)
+            .append(id)
+            .append(name)
+            .append(productId)
+            .append(productSlug)
+            .append(productType)
+            .append(quantity)
+            .append(variant)
+            .append(variantId)
+            .toHashCode();
     }
 
 }

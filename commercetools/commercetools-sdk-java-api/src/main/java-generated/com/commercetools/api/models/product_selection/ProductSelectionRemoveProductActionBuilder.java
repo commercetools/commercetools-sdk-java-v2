@@ -1,9 +1,12 @@
-
 package com.commercetools.api.models.product_selection;
 
+import com.commercetools.api.models.product.ProductResourceIdentifier;
+import com.commercetools.api.models.product_selection.ProductSelectionUpdateAction;
+import com.commercetools.api.models.product_selection.ProductSelectionRemoveProductAction;
+import javax.annotation.Nullable;
 import java.util.*;
 import java.util.function.Function;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -17,56 +20,61 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .product(productBuilder -> productBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class ProductSelectionRemoveProductActionBuilder implements Builder<ProductSelectionRemoveProductAction> {
 
+    
+    
     private com.commercetools.api.models.product.ProductResourceIdentifier product;
 
+    
     /**
      *  <p>ResourceIdentifier of the Product</p>
      * @param builder function to build the product value
      * @return Builder
      */
-
-    public ProductSelectionRemoveProductActionBuilder product(
-            Function<com.commercetools.api.models.product.ProductResourceIdentifierBuilder, com.commercetools.api.models.product.ProductResourceIdentifierBuilder> builder) {
-        this.product = builder.apply(com.commercetools.api.models.product.ProductResourceIdentifierBuilder.of())
-                .build();
+    
+    public ProductSelectionRemoveProductActionBuilder product(Function<com.commercetools.api.models.product.ProductResourceIdentifierBuilder, com.commercetools.api.models.product.ProductResourceIdentifierBuilder> builder) {
+        this.product = builder.apply(com.commercetools.api.models.product.ProductResourceIdentifierBuilder.of()).build();
         return this;
     }
-
+    
     /**
      *  <p>ResourceIdentifier of the Product</p>
      * @param builder function to build the product value
      * @return Builder
      */
-
-    public ProductSelectionRemoveProductActionBuilder withProduct(
-            Function<com.commercetools.api.models.product.ProductResourceIdentifierBuilder, com.commercetools.api.models.product.ProductResourceIdentifier> builder) {
+    
+    public ProductSelectionRemoveProductActionBuilder withProduct(Function<com.commercetools.api.models.product.ProductResourceIdentifierBuilder, com.commercetools.api.models.product.ProductResourceIdentifier> builder) {
         this.product = builder.apply(com.commercetools.api.models.product.ProductResourceIdentifierBuilder.of());
         return this;
     }
-
+                    
     /**
      *  <p>ResourceIdentifier of the Product</p>
      * @param product value to be set
      * @return Builder
      */
-
-    public ProductSelectionRemoveProductActionBuilder product(
-            final com.commercetools.api.models.product.ProductResourceIdentifier product) {
+    
+    public ProductSelectionRemoveProductActionBuilder product( final com.commercetools.api.models.product.ProductResourceIdentifier product) {
         this.product = product;
         return this;
     }
+    
+    
 
     /**
      *  <p>ResourceIdentifier of the Product</p>
      * @return product
      */
-
-    public com.commercetools.api.models.product.ProductResourceIdentifier getProduct() {
+    
+    
+    public com.commercetools.api.models.product.ProductResourceIdentifier getProduct(){
         return this.product;
     }
 
@@ -78,7 +86,7 @@ public class ProductSelectionRemoveProductActionBuilder implements Builder<Produ
         Objects.requireNonNull(product, ProductSelectionRemoveProductAction.class + ": product is missing");
         return new ProductSelectionRemoveProductActionImpl(product);
     }
-
+    
     /**
      * builds ProductSelectionRemoveProductAction without checking for non-null required values
      * @return ProductSelectionRemoveProductAction
@@ -89,7 +97,7 @@ public class ProductSelectionRemoveProductActionBuilder implements Builder<Produ
 
     /**
      * factory method for an instance of ProductSelectionRemoveProductActionBuilder
-     * @return builder
+     * @return builder 
      */
     public static ProductSelectionRemoveProductActionBuilder of() {
         return new ProductSelectionRemoveProductActionBuilder();

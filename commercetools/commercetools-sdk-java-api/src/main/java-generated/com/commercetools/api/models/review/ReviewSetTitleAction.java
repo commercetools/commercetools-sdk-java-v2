@@ -1,16 +1,20 @@
-
 package com.commercetools.api.models.review;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
+import com.commercetools.api.models.review.ReviewUpdateAction;
+import com.commercetools.api.models.review.ReviewSetTitleActionImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * ReviewSetTitleAction
@@ -22,9 +26,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     ReviewSetTitleAction reviewSetTitleAction = ReviewSetTitleAction.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = ReviewSetTitleActionImpl.class)
 public interface ReviewSetTitleAction extends ReviewUpdateAction {
 
@@ -37,7 +44,7 @@ public interface ReviewSetTitleAction extends ReviewUpdateAction {
      *  <p>Value to set. If empty, any existing value will be removed.</p>
      * @return title
      */
-
+    
     @JsonProperty("title")
     public String getTitle();
 
@@ -45,16 +52,18 @@ public interface ReviewSetTitleAction extends ReviewUpdateAction {
      *  <p>Value to set. If empty, any existing value will be removed.</p>
      * @param title value to be set
      */
-
+    
     public void setTitle(final String title);
+    
 
     /**
      * factory method
      * @return instance of ReviewSetTitleAction
      */
-    public static ReviewSetTitleAction of() {
+    public static ReviewSetTitleAction of(){
         return new ReviewSetTitleActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy ReviewSetTitleAction
@@ -89,7 +98,7 @@ public interface ReviewSetTitleAction extends ReviewUpdateAction {
     public static ReviewSetTitleActionBuilder builder() {
         return ReviewSetTitleActionBuilder.of();
     }
-
+    
     /**
      * create builder for ReviewSetTitleAction instance
      * @param template instance with prefilled values for the builder
@@ -98,6 +107,7 @@ public interface ReviewSetTitleAction extends ReviewUpdateAction {
     public static ReviewSetTitleActionBuilder builder(final ReviewSetTitleAction template) {
         return ReviewSetTitleActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -108,7 +118,7 @@ public interface ReviewSetTitleAction extends ReviewUpdateAction {
     default <T> T withReviewSetTitleAction(Function<ReviewSetTitleAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

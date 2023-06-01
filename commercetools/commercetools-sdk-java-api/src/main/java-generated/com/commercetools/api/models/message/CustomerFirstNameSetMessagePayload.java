@@ -1,16 +1,20 @@
-
 package com.commercetools.api.models.message;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
+import com.commercetools.api.models.message.MessagePayload;
+import com.commercetools.api.models.message.CustomerFirstNameSetMessagePayloadImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Generated after a successful Set First Name update action.</p>
@@ -22,9 +26,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     CustomerFirstNameSetMessagePayload customerFirstNameSetMessagePayload = CustomerFirstNameSetMessagePayload.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = CustomerFirstNameSetMessagePayloadImpl.class)
 public interface CustomerFirstNameSetMessagePayload extends MessagePayload {
 
@@ -37,7 +44,7 @@ public interface CustomerFirstNameSetMessagePayload extends MessagePayload {
      *  <p>The <code>firstName</code> that was set during the Set First Name update action.</p>
      * @return firstName
      */
-
+    
     @JsonProperty("firstName")
     public String getFirstName();
 
@@ -45,16 +52,18 @@ public interface CustomerFirstNameSetMessagePayload extends MessagePayload {
      *  <p>The <code>firstName</code> that was set during the Set First Name update action.</p>
      * @param firstName value to be set
      */
-
+    
     public void setFirstName(final String firstName);
+    
 
     /**
      * factory method
      * @return instance of CustomerFirstNameSetMessagePayload
      */
-    public static CustomerFirstNameSetMessagePayload of() {
+    public static CustomerFirstNameSetMessagePayload of(){
         return new CustomerFirstNameSetMessagePayloadImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy CustomerFirstNameSetMessagePayload
@@ -73,8 +82,7 @@ public interface CustomerFirstNameSetMessagePayload extends MessagePayload {
      * @return copy instance
      */
     @Nullable
-    public static CustomerFirstNameSetMessagePayload deepCopy(
-            @Nullable final CustomerFirstNameSetMessagePayload template) {
+    public static CustomerFirstNameSetMessagePayload deepCopy(@Nullable final CustomerFirstNameSetMessagePayload template) {
         if (template == null) {
             return null;
         }
@@ -90,7 +98,7 @@ public interface CustomerFirstNameSetMessagePayload extends MessagePayload {
     public static CustomerFirstNameSetMessagePayloadBuilder builder() {
         return CustomerFirstNameSetMessagePayloadBuilder.of();
     }
-
+    
     /**
      * create builder for CustomerFirstNameSetMessagePayload instance
      * @param template instance with prefilled values for the builder
@@ -99,6 +107,7 @@ public interface CustomerFirstNameSetMessagePayload extends MessagePayload {
     public static CustomerFirstNameSetMessagePayloadBuilder builder(final CustomerFirstNameSetMessagePayload template) {
         return CustomerFirstNameSetMessagePayloadBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -109,7 +118,7 @@ public interface CustomerFirstNameSetMessagePayload extends MessagePayload {
     default <T> T withCustomerFirstNameSetMessagePayload(Function<CustomerFirstNameSetMessagePayload, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

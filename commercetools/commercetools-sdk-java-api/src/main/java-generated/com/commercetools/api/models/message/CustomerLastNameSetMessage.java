@@ -1,16 +1,20 @@
-
 package com.commercetools.api.models.message;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
+import com.commercetools.api.models.message.Message;
+import com.commercetools.api.models.message.CustomerLastNameSetMessageImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Generated after a successful Set Last Name update action.</p>
@@ -29,9 +33,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .resourceVersion(0.3)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = CustomerLastNameSetMessageImpl.class)
 public interface CustomerLastNameSetMessage extends Message {
 
@@ -44,7 +51,7 @@ public interface CustomerLastNameSetMessage extends Message {
      *  <p>The <code>lastName</code> that was set during the Set Last Name update action.</p>
      * @return lastName
      */
-
+    
     @JsonProperty("lastName")
     public String getLastName();
 
@@ -52,16 +59,18 @@ public interface CustomerLastNameSetMessage extends Message {
      *  <p>The <code>lastName</code> that was set during the Set Last Name update action.</p>
      * @param lastName value to be set
      */
-
+    
     public void setLastName(final String lastName);
+    
 
     /**
      * factory method
      * @return instance of CustomerLastNameSetMessage
      */
-    public static CustomerLastNameSetMessage of() {
+    public static CustomerLastNameSetMessage of(){
         return new CustomerLastNameSetMessageImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy CustomerLastNameSetMessage
@@ -99,14 +108,12 @@ public interface CustomerLastNameSetMessage extends Message {
         instance.setVersion(template.getVersion());
         instance.setCreatedAt(template.getCreatedAt());
         instance.setLastModifiedAt(template.getLastModifiedAt());
-        instance.setLastModifiedBy(
-            com.commercetools.api.models.common.LastModifiedBy.deepCopy(template.getLastModifiedBy()));
+        instance.setLastModifiedBy(com.commercetools.api.models.common.LastModifiedBy.deepCopy(template.getLastModifiedBy()));
         instance.setCreatedBy(com.commercetools.api.models.common.CreatedBy.deepCopy(template.getCreatedBy()));
         instance.setSequenceNumber(template.getSequenceNumber());
         instance.setResource(com.commercetools.api.models.common.Reference.deepCopy(template.getResource()));
         instance.setResourceVersion(template.getResourceVersion());
-        instance.setResourceUserProvidedIdentifiers(com.commercetools.api.models.message.UserProvidedIdentifiers
-                .deepCopy(template.getResourceUserProvidedIdentifiers()));
+        instance.setResourceUserProvidedIdentifiers(com.commercetools.api.models.message.UserProvidedIdentifiers.deepCopy(template.getResourceUserProvidedIdentifiers()));
         instance.setLastName(template.getLastName());
         return instance;
     }
@@ -118,7 +125,7 @@ public interface CustomerLastNameSetMessage extends Message {
     public static CustomerLastNameSetMessageBuilder builder() {
         return CustomerLastNameSetMessageBuilder.of();
     }
-
+    
     /**
      * create builder for CustomerLastNameSetMessage instance
      * @param template instance with prefilled values for the builder
@@ -127,6 +134,7 @@ public interface CustomerLastNameSetMessage extends Message {
     public static CustomerLastNameSetMessageBuilder builder(final CustomerLastNameSetMessage template) {
         return CustomerLastNameSetMessageBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -137,7 +145,7 @@ public interface CustomerLastNameSetMessage extends Message {
     default <T> T withCustomerLastNameSetMessage(Function<CustomerLastNameSetMessage, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

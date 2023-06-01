@@ -1,20 +1,22 @@
-
 package com.commercetools.api.models.message;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
+import com.commercetools.api.models.message.Message;
 import com.commercetools.api.models.product.ProductReference;
 import com.commercetools.api.models.product_selection.ProductVariantSelection;
+import com.commercetools.api.models.message.ProductSelectionProductAddedMessageImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Generated after a successful Add Product update action.</p>
@@ -35,9 +37,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .variantSelection(variantSelectionBuilder -> variantSelectionBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = ProductSelectionProductAddedMessageImpl.class)
 public interface ProductSelectionProductAddedMessage extends Message {
 
@@ -54,7 +59,6 @@ public interface ProductSelectionProductAddedMessage extends Message {
     @Valid
     @JsonProperty("product")
     public ProductReference getProduct();
-
     /**
      *  <p>Product Variant Selection after the Add Product update action.</p>
      * @return variantSelection
@@ -68,23 +72,26 @@ public interface ProductSelectionProductAddedMessage extends Message {
      *  <p>Product that was added to the Product Selection.</p>
      * @param product value to be set
      */
-
+    
     public void setProduct(final ProductReference product);
-
+    
+    
     /**
      *  <p>Product Variant Selection after the Add Product update action.</p>
      * @param variantSelection value to be set
      */
-
+    
     public void setVariantSelection(final ProductVariantSelection variantSelection);
+    
 
     /**
      * factory method
      * @return instance of ProductSelectionProductAddedMessage
      */
-    public static ProductSelectionProductAddedMessage of() {
+    public static ProductSelectionProductAddedMessage of(){
         return new ProductSelectionProductAddedMessageImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy ProductSelectionProductAddedMessage
@@ -114,8 +121,7 @@ public interface ProductSelectionProductAddedMessage extends Message {
      * @return copy instance
      */
     @Nullable
-    public static ProductSelectionProductAddedMessage deepCopy(
-            @Nullable final ProductSelectionProductAddedMessage template) {
+    public static ProductSelectionProductAddedMessage deepCopy(@Nullable final ProductSelectionProductAddedMessage template) {
         if (template == null) {
             return null;
         }
@@ -124,17 +130,14 @@ public interface ProductSelectionProductAddedMessage extends Message {
         instance.setVersion(template.getVersion());
         instance.setCreatedAt(template.getCreatedAt());
         instance.setLastModifiedAt(template.getLastModifiedAt());
-        instance.setLastModifiedBy(
-            com.commercetools.api.models.common.LastModifiedBy.deepCopy(template.getLastModifiedBy()));
+        instance.setLastModifiedBy(com.commercetools.api.models.common.LastModifiedBy.deepCopy(template.getLastModifiedBy()));
         instance.setCreatedBy(com.commercetools.api.models.common.CreatedBy.deepCopy(template.getCreatedBy()));
         instance.setSequenceNumber(template.getSequenceNumber());
         instance.setResource(com.commercetools.api.models.common.Reference.deepCopy(template.getResource()));
         instance.setResourceVersion(template.getResourceVersion());
-        instance.setResourceUserProvidedIdentifiers(com.commercetools.api.models.message.UserProvidedIdentifiers
-                .deepCopy(template.getResourceUserProvidedIdentifiers()));
+        instance.setResourceUserProvidedIdentifiers(com.commercetools.api.models.message.UserProvidedIdentifiers.deepCopy(template.getResourceUserProvidedIdentifiers()));
         instance.setProduct(com.commercetools.api.models.product.ProductReference.deepCopy(template.getProduct()));
-        instance.setVariantSelection(com.commercetools.api.models.product_selection.ProductVariantSelection
-                .deepCopy(template.getVariantSelection()));
+        instance.setVariantSelection(com.commercetools.api.models.product_selection.ProductVariantSelection.deepCopy(template.getVariantSelection()));
         return instance;
     }
 
@@ -145,16 +148,16 @@ public interface ProductSelectionProductAddedMessage extends Message {
     public static ProductSelectionProductAddedMessageBuilder builder() {
         return ProductSelectionProductAddedMessageBuilder.of();
     }
-
+    
     /**
      * create builder for ProductSelectionProductAddedMessage instance
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static ProductSelectionProductAddedMessageBuilder builder(
-            final ProductSelectionProductAddedMessage template) {
+    public static ProductSelectionProductAddedMessageBuilder builder(final ProductSelectionProductAddedMessage template) {
         return ProductSelectionProductAddedMessageBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -165,7 +168,7 @@ public interface ProductSelectionProductAddedMessage extends Message {
     default <T> T withProductSelectionProductAddedMessage(Function<ProductSelectionProductAddedMessage, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

@@ -1,9 +1,11 @@
-
 package com.commercetools.api.predicates.query.product_discount;
 
 import com.commercetools.api.predicates.query.*;
 
-public class ProductDiscountChangeIsActiveActionQueryBuilderDsl {
+import java.util.function.Function;
+
+
+public class ProductDiscountChangeIsActiveActionQueryBuilderDsl  {
     public ProductDiscountChangeIsActiveActionQueryBuilderDsl() {
     }
 
@@ -12,15 +14,12 @@ public class ProductDiscountChangeIsActiveActionQueryBuilderDsl {
     }
 
     public StringComparisonPredicateBuilder<ProductDiscountChangeIsActiveActionQueryBuilderDsl> action() {
-        return new StringComparisonPredicateBuilder<>(
-            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("action")),
-            p -> new CombinationQueryPredicate<>(p, ProductDiscountChangeIsActiveActionQueryBuilderDsl::of));
+        return new StringComparisonPredicateBuilder<>(BinaryQueryPredicate.of().left(new ConstantQueryPredicate("action")),
+        p -> new CombinationQueryPredicate<>(p, ProductDiscountChangeIsActiveActionQueryBuilderDsl::of));
     }
-
     public BooleanComparisonPredicateBuilder<ProductDiscountChangeIsActiveActionQueryBuilderDsl> isActive() {
-        return new BooleanComparisonPredicateBuilder<>(
-            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("isActive")),
-            p -> new CombinationQueryPredicate<>(p, ProductDiscountChangeIsActiveActionQueryBuilderDsl::of));
+        return new BooleanComparisonPredicateBuilder<>(BinaryQueryPredicate.of().left(new ConstantQueryPredicate("isActive")),
+        p -> new CombinationQueryPredicate<>(p, ProductDiscountChangeIsActiveActionQueryBuilderDsl::of));
     }
-
+    
 }

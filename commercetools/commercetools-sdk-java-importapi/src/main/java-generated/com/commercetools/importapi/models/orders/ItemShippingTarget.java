@@ -1,17 +1,20 @@
-
 package com.commercetools.importapi.models.orders;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
 
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
+import com.commercetools.importapi.models.orders.ItemShippingTargetImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>The item's shipping target.</p>
@@ -25,11 +28,15 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .quantity(0.3)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = ItemShippingTargetImpl.class)
-public interface ItemShippingTarget {
+public interface ItemShippingTarget  {
+
 
     /**
      *  <p>Maps to <code>ItemShippingTarget.addressKey</code>.</p>
@@ -38,7 +45,6 @@ public interface ItemShippingTarget {
     @NotNull
     @JsonProperty("addressKey")
     public String getAddressKey();
-
     /**
      *  <p>Maps to <code>ItemShippingTarget.quantity</code>.</p>
      * @return quantity
@@ -51,23 +57,26 @@ public interface ItemShippingTarget {
      *  <p>Maps to <code>ItemShippingTarget.addressKey</code>.</p>
      * @param addressKey value to be set
      */
-
+    
     public void setAddressKey(final String addressKey);
-
+    
+    
     /**
      *  <p>Maps to <code>ItemShippingTarget.quantity</code>.</p>
      * @param quantity value to be set
      */
-
+    
     public void setQuantity(final Double quantity);
+    
 
     /**
      * factory method
      * @return instance of ItemShippingTarget
      */
-    public static ItemShippingTarget of() {
+    public static ItemShippingTarget of(){
         return new ItemShippingTargetImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy ItemShippingTarget
@@ -104,7 +113,7 @@ public interface ItemShippingTarget {
     public static ItemShippingTargetBuilder builder() {
         return ItemShippingTargetBuilder.of();
     }
-
+    
     /**
      * create builder for ItemShippingTarget instance
      * @param template instance with prefilled values for the builder
@@ -113,6 +122,7 @@ public interface ItemShippingTarget {
     public static ItemShippingTargetBuilder builder(final ItemShippingTarget template) {
         return ItemShippingTargetBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -123,7 +133,7 @@ public interface ItemShippingTarget {
     default <T> T withItemShippingTarget(Function<ItemShippingTarget, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

@@ -1,11 +1,12 @@
-
 package com.commercetools.history.models.change_value;
 
+import com.commercetools.history.models.change_value.ChangeValueChangeValue;
+import com.commercetools.history.models.common.Reference;
+import com.commercetools.history.models.change_value.ChangeValueGiftLineItemChangeValue;
+import javax.annotation.Nullable;
 import java.util.*;
 import java.util.function.Function;
-
-import javax.annotation.Nullable;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -21,173 +22,189 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .distributionChannel(distributionChannelBuilder -> distributionChannelBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class ChangeValueGiftLineItemChangeValueBuilder implements Builder<ChangeValueGiftLineItemChangeValue> {
 
+    
+    
     private com.commercetools.history.models.common.Reference product;
-
+    
+    
+    
     private Integer variantId;
-
+    
+    
     @Nullable
     private com.commercetools.history.models.common.Reference supplyChannel;
-
+    
+    
+    
     private com.commercetools.history.models.common.Reference distributionChannel;
 
+    
     /**
      * set the value to the product using the builder function
      * @param builder function to build the product value
      * @return Builder
      */
-
-    public ChangeValueGiftLineItemChangeValueBuilder product(
-            Function<com.commercetools.history.models.common.ReferenceBuilder, com.commercetools.history.models.common.ReferenceBuilder> builder) {
+    
+    public ChangeValueGiftLineItemChangeValueBuilder product(Function<com.commercetools.history.models.common.ReferenceBuilder, com.commercetools.history.models.common.ReferenceBuilder> builder) {
         this.product = builder.apply(com.commercetools.history.models.common.ReferenceBuilder.of()).build();
         return this;
     }
-
+    
     /**
      * set the value to the product using the builder function
      * @param builder function to build the product value
      * @return Builder
      */
-
-    public ChangeValueGiftLineItemChangeValueBuilder withProduct(
-            Function<com.commercetools.history.models.common.ReferenceBuilder, com.commercetools.history.models.common.Reference> builder) {
+    
+    public ChangeValueGiftLineItemChangeValueBuilder withProduct(Function<com.commercetools.history.models.common.ReferenceBuilder, com.commercetools.history.models.common.Reference> builder) {
         this.product = builder.apply(com.commercetools.history.models.common.ReferenceBuilder.of());
         return this;
     }
-
+                    
     /**
      * set the value to the product
      * @param product value to be set
      * @return Builder
      */
-
-    public ChangeValueGiftLineItemChangeValueBuilder product(
-            final com.commercetools.history.models.common.Reference product) {
+    
+    public ChangeValueGiftLineItemChangeValueBuilder product( final com.commercetools.history.models.common.Reference product) {
         this.product = product;
         return this;
     }
-
+    
+    
+    
+    
     /**
      * set the value to the variantId
      * @param variantId value to be set
      * @return Builder
      */
-
-    public ChangeValueGiftLineItemChangeValueBuilder variantId(final Integer variantId) {
+    
+    public ChangeValueGiftLineItemChangeValueBuilder variantId( final Integer variantId) {
         this.variantId = variantId;
         return this;
     }
-
+    
+    
+    
+    
     /**
      * set the value to the supplyChannel using the builder function
      * @param builder function to build the supplyChannel value
      * @return Builder
      */
-
-    public ChangeValueGiftLineItemChangeValueBuilder supplyChannel(
-            Function<com.commercetools.history.models.common.ReferenceBuilder, com.commercetools.history.models.common.ReferenceBuilder> builder) {
+    
+    public ChangeValueGiftLineItemChangeValueBuilder supplyChannel(Function<com.commercetools.history.models.common.ReferenceBuilder, com.commercetools.history.models.common.ReferenceBuilder> builder) {
         this.supplyChannel = builder.apply(com.commercetools.history.models.common.ReferenceBuilder.of()).build();
         return this;
     }
-
+    
     /**
      * set the value to the supplyChannel using the builder function
      * @param builder function to build the supplyChannel value
      * @return Builder
      */
-
-    public ChangeValueGiftLineItemChangeValueBuilder withSupplyChannel(
-            Function<com.commercetools.history.models.common.ReferenceBuilder, com.commercetools.history.models.common.Reference> builder) {
+    
+    public ChangeValueGiftLineItemChangeValueBuilder withSupplyChannel(Function<com.commercetools.history.models.common.ReferenceBuilder, com.commercetools.history.models.common.Reference> builder) {
         this.supplyChannel = builder.apply(com.commercetools.history.models.common.ReferenceBuilder.of());
         return this;
     }
-
+                    
     /**
      * set the value to the supplyChannel
      * @param supplyChannel value to be set
      * @return Builder
      */
-
-    public ChangeValueGiftLineItemChangeValueBuilder supplyChannel(
-            @Nullable final com.commercetools.history.models.common.Reference supplyChannel) {
+    
+    public ChangeValueGiftLineItemChangeValueBuilder supplyChannel(@Nullable final com.commercetools.history.models.common.Reference supplyChannel) {
         this.supplyChannel = supplyChannel;
         return this;
     }
-
+    
+    
+    
+    
     /**
      * set the value to the distributionChannel using the builder function
      * @param builder function to build the distributionChannel value
      * @return Builder
      */
-
-    public ChangeValueGiftLineItemChangeValueBuilder distributionChannel(
-            Function<com.commercetools.history.models.common.ReferenceBuilder, com.commercetools.history.models.common.ReferenceBuilder> builder) {
+    
+    public ChangeValueGiftLineItemChangeValueBuilder distributionChannel(Function<com.commercetools.history.models.common.ReferenceBuilder, com.commercetools.history.models.common.ReferenceBuilder> builder) {
         this.distributionChannel = builder.apply(com.commercetools.history.models.common.ReferenceBuilder.of()).build();
         return this;
     }
-
+    
     /**
      * set the value to the distributionChannel using the builder function
      * @param builder function to build the distributionChannel value
      * @return Builder
      */
-
-    public ChangeValueGiftLineItemChangeValueBuilder withDistributionChannel(
-            Function<com.commercetools.history.models.common.ReferenceBuilder, com.commercetools.history.models.common.Reference> builder) {
+    
+    public ChangeValueGiftLineItemChangeValueBuilder withDistributionChannel(Function<com.commercetools.history.models.common.ReferenceBuilder, com.commercetools.history.models.common.Reference> builder) {
         this.distributionChannel = builder.apply(com.commercetools.history.models.common.ReferenceBuilder.of());
         return this;
     }
-
+                    
     /**
      * set the value to the distributionChannel
      * @param distributionChannel value to be set
      * @return Builder
      */
-
-    public ChangeValueGiftLineItemChangeValueBuilder distributionChannel(
-            final com.commercetools.history.models.common.Reference distributionChannel) {
+    
+    public ChangeValueGiftLineItemChangeValueBuilder distributionChannel( final com.commercetools.history.models.common.Reference distributionChannel) {
         this.distributionChannel = distributionChannel;
         return this;
     }
+    
+    
 
     /**
      * value of product}
      * @return product
      */
-
-    public com.commercetools.history.models.common.Reference getProduct() {
+    
+    
+    public com.commercetools.history.models.common.Reference getProduct(){
         return this.product;
     }
-
+    
     /**
      * value of variantId}
      * @return variantId
      */
-
-    public Integer getVariantId() {
+    
+    
+    public Integer getVariantId(){
         return this.variantId;
     }
-
+    
     /**
      * value of supplyChannel}
      * @return supplyChannel
      */
-
+    
     @Nullable
-    public com.commercetools.history.models.common.Reference getSupplyChannel() {
+    public com.commercetools.history.models.common.Reference getSupplyChannel(){
         return this.supplyChannel;
     }
-
+    
     /**
      * value of distributionChannel}
      * @return distributionChannel
      */
-
-    public com.commercetools.history.models.common.Reference getDistributionChannel() {
+    
+    
+    public com.commercetools.history.models.common.Reference getDistributionChannel(){
         return this.distributionChannel;
     }
 
@@ -198,11 +215,10 @@ public class ChangeValueGiftLineItemChangeValueBuilder implements Builder<Change
     public ChangeValueGiftLineItemChangeValue build() {
         Objects.requireNonNull(product, ChangeValueGiftLineItemChangeValue.class + ": product is missing");
         Objects.requireNonNull(variantId, ChangeValueGiftLineItemChangeValue.class + ": variantId is missing");
-        Objects.requireNonNull(distributionChannel,
-            ChangeValueGiftLineItemChangeValue.class + ": distributionChannel is missing");
+        Objects.requireNonNull(distributionChannel, ChangeValueGiftLineItemChangeValue.class + ": distributionChannel is missing");
         return new ChangeValueGiftLineItemChangeValueImpl(product, variantId, supplyChannel, distributionChannel);
     }
-
+    
     /**
      * builds ChangeValueGiftLineItemChangeValue without checking for non-null required values
      * @return ChangeValueGiftLineItemChangeValue
@@ -213,7 +229,7 @@ public class ChangeValueGiftLineItemChangeValueBuilder implements Builder<Change
 
     /**
      * factory method for an instance of ChangeValueGiftLineItemChangeValueBuilder
-     * @return builder
+     * @return builder 
      */
     public static ChangeValueGiftLineItemChangeValueBuilder of() {
         return new ChangeValueGiftLineItemChangeValueBuilder();

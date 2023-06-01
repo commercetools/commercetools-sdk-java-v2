@@ -1,8 +1,12 @@
-
 package com.commercetools.api.models.project;
 
+import com.commercetools.api.models.project.ShippingRateInputType;
+import com.commercetools.api.models.shipping_method.ShippingRateTierType;
+import com.commercetools.api.models.project.CartValueType;
+import javax.annotation.Nullable;
 import java.util.*;
-
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -15,10 +19,16 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     CartValueType cartValueType = CartValueType.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class CartValueTypeBuilder implements Builder<CartValueType> {
+
+
+
 
     /**
      * builds CartValueType with checking for non-null required values
@@ -27,7 +37,7 @@ public class CartValueTypeBuilder implements Builder<CartValueType> {
     public CartValueType build() {
         return new CartValueTypeImpl();
     }
-
+    
     /**
      * builds CartValueType without checking for non-null required values
      * @return CartValueType
@@ -38,7 +48,7 @@ public class CartValueTypeBuilder implements Builder<CartValueType> {
 
     /**
      * factory method for an instance of CartValueTypeBuilder
-     * @return builder
+     * @return builder 
      */
     public static CartValueTypeBuilder of() {
         return new CartValueTypeBuilder();

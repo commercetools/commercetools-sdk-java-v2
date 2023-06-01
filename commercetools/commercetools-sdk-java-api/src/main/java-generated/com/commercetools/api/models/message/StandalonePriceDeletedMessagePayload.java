@@ -1,16 +1,20 @@
-
 package com.commercetools.api.models.message;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
+import com.commercetools.api.models.message.MessagePayload;
+import com.commercetools.api.models.message.StandalonePriceDeletedMessagePayloadImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Generated after a successful Delete StandalonePrice request.</p>
@@ -22,9 +26,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     StandalonePriceDeletedMessagePayload standalonePriceDeletedMessagePayload = StandalonePriceDeletedMessagePayload.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = StandalonePriceDeletedMessagePayloadImpl.class)
 public interface StandalonePriceDeletedMessagePayload extends MessagePayload {
 
@@ -33,13 +40,16 @@ public interface StandalonePriceDeletedMessagePayload extends MessagePayload {
      */
     String STANDALONE_PRICE_DELETED = "StandalonePriceDeleted";
 
+
+
     /**
      * factory method
      * @return instance of StandalonePriceDeletedMessagePayload
      */
-    public static StandalonePriceDeletedMessagePayload of() {
+    public static StandalonePriceDeletedMessagePayload of(){
         return new StandalonePriceDeletedMessagePayloadImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy StandalonePriceDeletedMessagePayload
@@ -57,8 +67,7 @@ public interface StandalonePriceDeletedMessagePayload extends MessagePayload {
      * @return copy instance
      */
     @Nullable
-    public static StandalonePriceDeletedMessagePayload deepCopy(
-            @Nullable final StandalonePriceDeletedMessagePayload template) {
+    public static StandalonePriceDeletedMessagePayload deepCopy(@Nullable final StandalonePriceDeletedMessagePayload template) {
         if (template == null) {
             return null;
         }
@@ -73,16 +82,16 @@ public interface StandalonePriceDeletedMessagePayload extends MessagePayload {
     public static StandalonePriceDeletedMessagePayloadBuilder builder() {
         return StandalonePriceDeletedMessagePayloadBuilder.of();
     }
-
+    
     /**
      * create builder for StandalonePriceDeletedMessagePayload instance
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static StandalonePriceDeletedMessagePayloadBuilder builder(
-            final StandalonePriceDeletedMessagePayload template) {
+    public static StandalonePriceDeletedMessagePayloadBuilder builder(final StandalonePriceDeletedMessagePayload template) {
         return StandalonePriceDeletedMessagePayloadBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -93,7 +102,7 @@ public interface StandalonePriceDeletedMessagePayload extends MessagePayload {
     default <T> T withStandalonePriceDeletedMessagePayload(Function<StandalonePriceDeletedMessagePayload, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

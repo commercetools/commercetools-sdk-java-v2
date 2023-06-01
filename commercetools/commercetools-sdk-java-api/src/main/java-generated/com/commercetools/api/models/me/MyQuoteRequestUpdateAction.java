@@ -1,17 +1,20 @@
-
 package com.commercetools.api.models.me;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
+import com.commercetools.api.models.me.MyQuoteRequestCancelAction;
 
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * MyQuoteRequestUpdateAction
@@ -23,15 +26,25 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     MyQuoteRequestUpdateAction myQuoteRequestUpdateAction = MyQuoteRequestUpdateAction.cancelQuoteRequestBuilder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
 @JsonSubTypes({
-        @JsonSubTypes.Type(value = com.commercetools.api.models.me.MyQuoteRequestCancelActionImpl.class, name = MyQuoteRequestCancelAction.CANCEL_QUOTE_REQUEST) })
-@JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.EXISTING_PROPERTY, property = "action", defaultImpl = MyQuoteRequestUpdateActionImpl.class, visible = true)
+   @JsonSubTypes.Type(value = com.commercetools.api.models.me.MyQuoteRequestCancelActionImpl.class, name = MyQuoteRequestCancelAction.CANCEL_QUOTE_REQUEST)
+})
+@JsonTypeInfo(
+    use = JsonTypeInfo.Id.NAME,
+    include = JsonTypeInfo.As.EXISTING_PROPERTY,
+    property = "action",
+    defaultImpl = MyQuoteRequestUpdateActionImpl.class,
+    visible = true
+)
 @JsonDeserialize(as = MyQuoteRequestUpdateActionImpl.class)
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
-public interface MyQuoteRequestUpdateAction
-        extends com.commercetools.api.models.ResourceUpdateAction<MyQuoteRequestUpdateAction> {
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
+public interface MyQuoteRequestUpdateAction extends com.commercetools.api.models.ResourceUpdateAction<MyQuoteRequestUpdateAction> {
+
 
     /**
      *
@@ -40,6 +53,9 @@ public interface MyQuoteRequestUpdateAction
     @NotNull
     @JsonProperty("action")
     public String getAction();
+
+
+
 
     /**
      * factory method to create a deep copy of MyQuoteRequestUpdateAction
@@ -52,19 +68,19 @@ public interface MyQuoteRequestUpdateAction
             return null;
         }
         if (template instanceof com.commercetools.api.models.me.MyQuoteRequestCancelAction) {
-            return com.commercetools.api.models.me.MyQuoteRequestCancelAction
-                    .deepCopy((com.commercetools.api.models.me.MyQuoteRequestCancelAction) template);
+            return com.commercetools.api.models.me.MyQuoteRequestCancelAction.deepCopy((com.commercetools.api.models.me.MyQuoteRequestCancelAction)template);
         }
         MyQuoteRequestUpdateActionImpl instance = new MyQuoteRequestUpdateActionImpl();
         return instance;
     }
+
 
     /**
      * builder for cancelQuoteRequest subtype
      * @return builder
      */
     public static com.commercetools.api.models.me.MyQuoteRequestCancelActionBuilder cancelQuoteRequestBuilder() {
-        return com.commercetools.api.models.me.MyQuoteRequestCancelActionBuilder.of();
+       return com.commercetools.api.models.me.MyQuoteRequestCancelActionBuilder.of();
     }
 
     /**
@@ -76,7 +92,7 @@ public interface MyQuoteRequestUpdateAction
     default <T> T withMyQuoteRequestUpdateAction(Function<MyQuoteRequestUpdateAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

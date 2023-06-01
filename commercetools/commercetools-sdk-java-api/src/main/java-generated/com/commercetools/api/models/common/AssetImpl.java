@@ -1,50 +1,59 @@
-
 package com.commercetools.api.models.common;
 
-import java.time.*;
-import java.util.*;
-
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
-
-import io.vrap.rmf.base.client.ModelBase;
+import com.commercetools.api.models.common.AssetSource;
+import com.commercetools.api.models.common.LocalizedString;
+import com.commercetools.api.models.type.CustomFields;
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.ModelBase;
+import javax.validation.Valid;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.annotation.*;
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
  * Asset
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class AssetImpl implements Asset, ModelBase {
 
+    
     private String id;
-
+    
+    
     private java.util.List<com.commercetools.api.models.common.AssetSource> sources;
-
+    
+    
     private com.commercetools.api.models.common.LocalizedString name;
-
+    
+    
     private com.commercetools.api.models.common.LocalizedString description;
-
+    
+    
     private java.util.List<String> tags;
-
+    
+    
     private com.commercetools.api.models.type.CustomFields custom;
-
+    
+    
     private String key;
 
     /**
      * create instance with all properties
      */
     @JsonCreator
-    AssetImpl(@JsonProperty("id") final String id,
-            @JsonProperty("sources") final java.util.List<com.commercetools.api.models.common.AssetSource> sources,
-            @JsonProperty("name") final com.commercetools.api.models.common.LocalizedString name,
-            @JsonProperty("description") final com.commercetools.api.models.common.LocalizedString description,
-            @JsonProperty("tags") final java.util.List<String> tags,
-            @JsonProperty("custom") final com.commercetools.api.models.type.CustomFields custom,
-            @JsonProperty("key") final String key) {
+    AssetImpl(@JsonProperty("id") final String id, @JsonProperty("sources") final java.util.List<com.commercetools.api.models.common.AssetSource> sources, @JsonProperty("name") final com.commercetools.api.models.common.LocalizedString name, @JsonProperty("description") final com.commercetools.api.models.common.LocalizedString description, @JsonProperty("tags") final java.util.List<String> tags, @JsonProperty("custom") final com.commercetools.api.models.type.CustomFields custom, @JsonProperty("key") final String key) {
         this.id = id;
         this.sources = sources;
         this.name = name;
@@ -53,7 +62,6 @@ public class AssetImpl implements Asset, ModelBase {
         this.custom = custom;
         this.key = key;
     }
-
     /**
      * create empty instance
      */
@@ -63,106 +71,114 @@ public class AssetImpl implements Asset, ModelBase {
     /**
      *  <p>Unique identifier of the Asset.</p>
      */
-
-    public String getId() {
+    
+    public String getId(){
         return this.id;
     }
-
+    
     /**
      *
      */
-
-    public java.util.List<com.commercetools.api.models.common.AssetSource> getSources() {
+    
+    public java.util.List<com.commercetools.api.models.common.AssetSource> getSources(){
         return this.sources;
     }
-
+    
     /**
      *  <p>Name of the Asset.</p>
      */
-
-    public com.commercetools.api.models.common.LocalizedString getName() {
+    
+    public com.commercetools.api.models.common.LocalizedString getName(){
         return this.name;
     }
-
+    
     /**
      *  <p>Description of the Asset.</p>
      */
-
-    public com.commercetools.api.models.common.LocalizedString getDescription() {
+    
+    public com.commercetools.api.models.common.LocalizedString getDescription(){
         return this.description;
     }
-
+    
     /**
      *  <p>Keywords for categorizing and organizing Assets.</p>
      */
-
-    public java.util.List<String> getTags() {
+    
+    public java.util.List<String> getTags(){
         return this.tags;
     }
-
+    
     /**
      *  <p>Custom Fields defined for the Asset.</p>
      */
-
-    public com.commercetools.api.models.type.CustomFields getCustom() {
+    
+    public com.commercetools.api.models.type.CustomFields getCustom(){
         return this.custom;
     }
-
+    
     /**
      *  <p>User-defined unique identifier of the Asset.</p>
      */
-
-    public String getKey() {
+    
+    public String getKey(){
         return this.key;
     }
 
-    public void setId(final String id) {
+    
+    public void setId(final String id){
         this.id = id;
     }
-
-    public void setSources(final com.commercetools.api.models.common.AssetSource... sources) {
-        this.sources = new ArrayList<>(Arrays.asList(sources));
+    
+    
+    public void setSources(final com.commercetools.api.models.common.AssetSource ...sources){
+       this.sources = new ArrayList<>(Arrays.asList(sources));
     }
-
-    public void setSources(final java.util.List<com.commercetools.api.models.common.AssetSource> sources) {
-        this.sources = sources;
+    
+    
+    public void setSources(final java.util.List<com.commercetools.api.models.common.AssetSource> sources){
+       this.sources = sources;
     }
-
-    public void setName(final com.commercetools.api.models.common.LocalizedString name) {
+    
+    
+    public void setName(final com.commercetools.api.models.common.LocalizedString name){
         this.name = name;
     }
-
-    public void setDescription(final com.commercetools.api.models.common.LocalizedString description) {
+    
+    
+    public void setDescription(final com.commercetools.api.models.common.LocalizedString description){
         this.description = description;
     }
-
-    public void setTags(final String... tags) {
-        this.tags = new ArrayList<>(Arrays.asList(tags));
+    
+    
+    public void setTags(final String ...tags){
+       this.tags = new ArrayList<>(Arrays.asList(tags));
     }
-
-    public void setTags(final java.util.List<String> tags) {
-        this.tags = tags;
+    
+    
+    public void setTags(final java.util.List<String> tags){
+       this.tags = tags;
     }
-
-    public void setCustom(final com.commercetools.api.models.type.CustomFields custom) {
+    
+    
+    public void setCustom(final com.commercetools.api.models.type.CustomFields custom){
         this.custom = custom;
     }
-
-    public void setKey(final String key) {
+    
+    
+    public void setKey(final String key){
         this.key = key;
     }
 
     @Override
     public boolean equals(Object o) {
-        if (this == o)
-            return true;
-
-        if (o == null || getClass() != o.getClass())
-            return false;
-
+        if (this == o) return true;
+    
+        if (o == null || getClass() != o.getClass()) return false;
+    
         AssetImpl that = (AssetImpl) o;
-
-        return new EqualsBuilder().append(id, that.id)
+    
+        return new EqualsBuilder()
+                .append(id, that.id)
                 .append(sources, that.sources)
                 .append(name, that.name)
                 .append(description, that.description)
@@ -171,17 +187,18 @@ public class AssetImpl implements Asset, ModelBase {
                 .append(key, that.key)
                 .isEquals();
     }
-
+    
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(id)
-                .append(sources)
-                .append(name)
-                .append(description)
-                .append(tags)
-                .append(custom)
-                .append(key)
-                .toHashCode();
+        return new HashCodeBuilder(17, 37)
+            .append(id)
+            .append(sources)
+            .append(name)
+            .append(description)
+            .append(tags)
+            .append(custom)
+            .append(key)
+            .toHashCode();
     }
 
 }

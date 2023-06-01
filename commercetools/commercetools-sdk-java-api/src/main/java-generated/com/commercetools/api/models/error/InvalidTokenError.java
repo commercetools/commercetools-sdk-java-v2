@@ -1,16 +1,20 @@
-
 package com.commercetools.api.models.error;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
+import com.commercetools.api.models.error.ErrorObject;
+import com.commercetools.api.models.error.InvalidTokenErrorImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * InvalidTokenError
@@ -23,9 +27,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .message("{message}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = InvalidTokenErrorImpl.class)
 public interface InvalidTokenError extends ErrorObject {
 
@@ -34,13 +41,16 @@ public interface InvalidTokenError extends ErrorObject {
      */
     String INVALID_TOKEN = "invalid_token";
 
+
+
     /**
      * factory method
      * @return instance of InvalidTokenError
      */
-    public static InvalidTokenError of() {
+    public static InvalidTokenError of(){
         return new InvalidTokenErrorImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy InvalidTokenError
@@ -77,7 +87,7 @@ public interface InvalidTokenError extends ErrorObject {
     public static InvalidTokenErrorBuilder builder() {
         return InvalidTokenErrorBuilder.of();
     }
-
+    
     /**
      * create builder for InvalidTokenError instance
      * @param template instance with prefilled values for the builder
@@ -86,6 +96,7 @@ public interface InvalidTokenError extends ErrorObject {
     public static InvalidTokenErrorBuilder builder(final InvalidTokenError template) {
         return InvalidTokenErrorBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -96,7 +107,7 @@ public interface InvalidTokenError extends ErrorObject {
     default <T> T withInvalidTokenError(Function<InvalidTokenError, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

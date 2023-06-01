@@ -1,20 +1,21 @@
-
 package com.commercetools.api.models.order_edit;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-import java.util.stream.Collectors;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
 import com.commercetools.api.models.error.ErrorObject;
+import com.commercetools.api.models.order_edit.OrderEditResult;
+import com.commercetools.api.models.order_edit.OrderEditPreviewFailureImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * OrderEditPreviewFailure
@@ -27,9 +28,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .plusErrors(errorsBuilder -> errorsBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = OrderEditPreviewFailureImpl.class)
 public interface OrderEditPreviewFailure extends OrderEditResult {
 
@@ -51,24 +55,24 @@ public interface OrderEditPreviewFailure extends OrderEditResult {
      * set errors
      * @param errors values to be set
      */
-
+    
     @JsonIgnore
-    public void setErrors(final ErrorObject... errors);
-
+    public void setErrors(final ErrorObject ...errors);
     /**
      * set errors
      * @param errors values to be set
      */
-
+    
     public void setErrors(final List<ErrorObject> errors);
 
     /**
      * factory method
      * @return instance of OrderEditPreviewFailure
      */
-    public static OrderEditPreviewFailure of() {
+    public static OrderEditPreviewFailure of(){
         return new OrderEditPreviewFailureImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy OrderEditPreviewFailure
@@ -93,9 +97,7 @@ public interface OrderEditPreviewFailure extends OrderEditResult {
         }
         OrderEditPreviewFailureImpl instance = new OrderEditPreviewFailureImpl();
         instance.setErrors(Optional.ofNullable(template.getErrors())
-                .map(t -> t.stream()
-                        .map(com.commercetools.api.models.error.ErrorObject::deepCopy)
-                        .collect(Collectors.toList()))
+                .map(t -> t.stream().map(com.commercetools.api.models.error.ErrorObject::deepCopy).collect(Collectors.toList()))
                 .orElse(null));
         return instance;
     }
@@ -107,7 +109,7 @@ public interface OrderEditPreviewFailure extends OrderEditResult {
     public static OrderEditPreviewFailureBuilder builder() {
         return OrderEditPreviewFailureBuilder.of();
     }
-
+    
     /**
      * create builder for OrderEditPreviewFailure instance
      * @param template instance with prefilled values for the builder
@@ -116,6 +118,7 @@ public interface OrderEditPreviewFailure extends OrderEditResult {
     public static OrderEditPreviewFailureBuilder builder(final OrderEditPreviewFailure template) {
         return OrderEditPreviewFailureBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -126,7 +129,7 @@ public interface OrderEditPreviewFailure extends OrderEditResult {
     default <T> T withOrderEditPreviewFailure(Function<OrderEditPreviewFailure, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

@@ -1,11 +1,13 @@
-
 package com.commercetools.api.models.business_unit;
 
+import com.commercetools.api.models.business_unit.BusinessUnit;
+import com.commercetools.api.models.common.Reference;
+import com.commercetools.api.models.common.ReferenceTypeId;
+import com.commercetools.api.models.business_unit.BusinessUnitReference;
+import javax.annotation.Nullable;
 import java.util.*;
 import java.util.function.Function;
-
-import javax.annotation.Nullable;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -19,67 +21,78 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .id("{id}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class BusinessUnitReferenceBuilder implements Builder<BusinessUnitReference> {
 
+    
+    
     private String id;
-
+    
+    
     @Nullable
     private com.commercetools.api.models.business_unit.BusinessUnit obj;
 
+    
     /**
      *  <p>Unique identifier of the referenced BusinessUnit.</p>
      * @param id value to be set
      * @return Builder
      */
-
-    public BusinessUnitReferenceBuilder id(final String id) {
+    
+    public BusinessUnitReferenceBuilder id( final String id) {
         this.id = id;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Contains the representation of the expanded BusinessUnit. Only present in responses to requests with Reference Expansion for BusinessUnit.</p>
      * @param obj value to be set
      * @return Builder
      */
-
-    public BusinessUnitReferenceBuilder obj(
-            @Nullable final com.commercetools.api.models.business_unit.BusinessUnit obj) {
+    
+    public BusinessUnitReferenceBuilder obj(@Nullable final com.commercetools.api.models.business_unit.BusinessUnit obj) {
         this.obj = obj;
         return this;
     }
-
+    
+    
     /**
      *  <p>Contains the representation of the expanded BusinessUnit. Only present in responses to requests with Reference Expansion for BusinessUnit.</p>
      * @param builder function to build the obj value
      * @return Builder
      */
-
-    public BusinessUnitReferenceBuilder obj(
-            Function<com.commercetools.api.models.business_unit.BusinessUnitBuilder, Builder<? extends com.commercetools.api.models.business_unit.BusinessUnit>> builder) {
+    
+    public BusinessUnitReferenceBuilder obj(Function<com.commercetools.api.models.business_unit.BusinessUnitBuilder, Builder<? extends com.commercetools.api.models.business_unit.BusinessUnit>> builder) {
         this.obj = builder.apply(com.commercetools.api.models.business_unit.BusinessUnitBuilder.of()).build();
         return this;
     }
+                    
 
     /**
      *  <p>Unique identifier of the referenced BusinessUnit.</p>
      * @return id
      */
-
-    public String getId() {
+    
+    
+    public String getId(){
         return this.id;
     }
-
+    
     /**
      *  <p>Contains the representation of the expanded BusinessUnit. Only present in responses to requests with Reference Expansion for BusinessUnit.</p>
      * @return obj
      */
-
+    
     @Nullable
-    public com.commercetools.api.models.business_unit.BusinessUnit getObj() {
+    public com.commercetools.api.models.business_unit.BusinessUnit getObj(){
         return this.obj;
     }
 
@@ -91,7 +104,7 @@ public class BusinessUnitReferenceBuilder implements Builder<BusinessUnitReferen
         Objects.requireNonNull(id, BusinessUnitReference.class + ": id is missing");
         return new BusinessUnitReferenceImpl(id, obj);
     }
-
+    
     /**
      * builds BusinessUnitReference without checking for non-null required values
      * @return BusinessUnitReference
@@ -102,7 +115,7 @@ public class BusinessUnitReferenceBuilder implements Builder<BusinessUnitReferen
 
     /**
      * factory method for an instance of BusinessUnitReferenceBuilder
-     * @return builder
+     * @return builder 
      */
     public static BusinessUnitReferenceBuilder of() {
         return new BusinessUnitReferenceBuilder();

@@ -1,17 +1,20 @@
-
 package com.commercetools.api.models.project;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
+import com.commercetools.api.models.project.ProjectUpdateAction;
+import com.commercetools.api.models.project.ProjectChangeCountriesActionImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * ProjectChangeCountriesAction
@@ -24,9 +27,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .plusCountries(countriesBuilder -> countriesBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = ProjectChangeCountriesActionImpl.class)
 public interface ProjectChangeCountriesAction extends ProjectUpdateAction {
 
@@ -47,24 +53,24 @@ public interface ProjectChangeCountriesAction extends ProjectUpdateAction {
      *  <p>New value to set. Must not be empty.</p>
      * @param countries values to be set
      */
-
+    
     @JsonIgnore
-    public void setCountries(final String... countries);
-
+    public void setCountries(final String ...countries);
     /**
      *  <p>New value to set. Must not be empty.</p>
      * @param countries values to be set
      */
-
+    
     public void setCountries(final List<String> countries);
 
     /**
      * factory method
      * @return instance of ProjectChangeCountriesAction
      */
-    public static ProjectChangeCountriesAction of() {
+    public static ProjectChangeCountriesAction of(){
         return new ProjectChangeCountriesActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy ProjectChangeCountriesAction
@@ -88,7 +94,9 @@ public interface ProjectChangeCountriesAction extends ProjectUpdateAction {
             return null;
         }
         ProjectChangeCountriesActionImpl instance = new ProjectChangeCountriesActionImpl();
-        instance.setCountries(Optional.ofNullable(template.getCountries()).map(ArrayList::new).orElse(null));
+        instance.setCountries(Optional.ofNullable(template.getCountries())
+                .map(ArrayList::new)
+                .orElse(null));
         return instance;
     }
 
@@ -99,7 +107,7 @@ public interface ProjectChangeCountriesAction extends ProjectUpdateAction {
     public static ProjectChangeCountriesActionBuilder builder() {
         return ProjectChangeCountriesActionBuilder.of();
     }
-
+    
     /**
      * create builder for ProjectChangeCountriesAction instance
      * @param template instance with prefilled values for the builder
@@ -108,6 +116,7 @@ public interface ProjectChangeCountriesAction extends ProjectUpdateAction {
     public static ProjectChangeCountriesActionBuilder builder(final ProjectChangeCountriesAction template) {
         return ProjectChangeCountriesActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -118,7 +127,7 @@ public interface ProjectChangeCountriesAction extends ProjectUpdateAction {
     default <T> T withProjectChangeCountriesAction(Function<ProjectChangeCountriesAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

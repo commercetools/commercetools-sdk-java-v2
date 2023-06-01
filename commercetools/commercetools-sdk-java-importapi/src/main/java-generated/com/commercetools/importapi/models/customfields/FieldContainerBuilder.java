@@ -1,8 +1,11 @@
-
 package com.commercetools.importapi.models.customfields;
 
+import com.commercetools.importapi.models.customfields.CustomField;
+import com.commercetools.importapi.models.customfields.FieldContainer;
+import javax.annotation.Nullable;
 import java.util.*;
-
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -16,11 +19,16 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .//(//Builder -> //Builder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class FieldContainerBuilder implements Builder<FieldContainer> {
 
+    
+    
     private Map<String, com.commercetools.importapi.models.customfields.CustomField> values = new HashMap<>();
 
     /**
@@ -28,35 +36,35 @@ public class FieldContainerBuilder implements Builder<FieldContainer> {
      * @param values properties to be set
      * @return Builder
      */
-
-    public FieldContainerBuilder values(
-            final Map<String, com.commercetools.importapi.models.customfields.CustomField> values) {
+    
+    public FieldContainerBuilder values( final Map<String, com.commercetools.importapi.models.customfields.CustomField> values){
         this.values = values;
         return this;
     }
-
+    
     /**
      *  <p>Mapping from the custom field name to the actual value.</p>
      * @param key property name
      * @param value property value
      * @return Builder
      */
-
-    public FieldContainerBuilder addValue(final String key,
-            final com.commercetools.importapi.models.customfields.CustomField value) {
+    
+    public FieldContainerBuilder addValue(final String key, final com.commercetools.importapi.models.customfields.CustomField value) {
         if (this.values == null) {
             values = new HashMap<>();
         }
         values.put(key, value);
         return this;
     }
+    
 
     /**
      *  <p>Mapping from the custom field name to the actual value.</p>
      * @return pattern properties
      */
-
-    public Map<String, com.commercetools.importapi.models.customfields.CustomField> getValues() {
+    
+    
+    public Map<String, com.commercetools.importapi.models.customfields.CustomField> getValues(){
         return this.values;
     }
 
@@ -67,7 +75,7 @@ public class FieldContainerBuilder implements Builder<FieldContainer> {
     public FieldContainer build() {
         return new FieldContainerImpl(values);
     }
-
+    
     /**
      * builds FieldContainer without checking for non-null required values
      * @return FieldContainer
@@ -78,7 +86,7 @@ public class FieldContainerBuilder implements Builder<FieldContainer> {
 
     /**
      * factory method for an instance of FieldContainerBuilder
-     * @return builder
+     * @return builder 
      */
     public static FieldContainerBuilder of() {
         return new FieldContainerBuilder();

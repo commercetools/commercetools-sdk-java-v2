@@ -1,17 +1,21 @@
-
 package com.commercetools.api.models.product_discount;
 
-import java.time.*;
+import com.commercetools.api.models.product_discount.ProductDiscountUpdateAction;
 import java.time.ZonedDateTime;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
+import com.commercetools.api.models.product_discount.ProductDiscountSetValidUntilActionImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * ProductDiscountSetValidUntilAction
@@ -23,9 +27,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     ProductDiscountSetValidUntilAction productDiscountSetValidUntilAction = ProductDiscountSetValidUntilAction.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = ProductDiscountSetValidUntilActionImpl.class)
 public interface ProductDiscountSetValidUntilAction extends ProductDiscountUpdateAction {
 
@@ -38,7 +45,7 @@ public interface ProductDiscountSetValidUntilAction extends ProductDiscountUpdat
      *  <p>Value to set. If empty, any existing value will be removed. Take Eventual Consistency into account for calculated undiscounted values.</p>
      * @return validUntil
      */
-
+    
     @JsonProperty("validUntil")
     public ZonedDateTime getValidUntil();
 
@@ -46,16 +53,18 @@ public interface ProductDiscountSetValidUntilAction extends ProductDiscountUpdat
      *  <p>Value to set. If empty, any existing value will be removed. Take Eventual Consistency into account for calculated undiscounted values.</p>
      * @param validUntil value to be set
      */
-
+    
     public void setValidUntil(final ZonedDateTime validUntil);
+    
 
     /**
      * factory method
      * @return instance of ProductDiscountSetValidUntilAction
      */
-    public static ProductDiscountSetValidUntilAction of() {
+    public static ProductDiscountSetValidUntilAction of(){
         return new ProductDiscountSetValidUntilActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy ProductDiscountSetValidUntilAction
@@ -74,8 +83,7 @@ public interface ProductDiscountSetValidUntilAction extends ProductDiscountUpdat
      * @return copy instance
      */
     @Nullable
-    public static ProductDiscountSetValidUntilAction deepCopy(
-            @Nullable final ProductDiscountSetValidUntilAction template) {
+    public static ProductDiscountSetValidUntilAction deepCopy(@Nullable final ProductDiscountSetValidUntilAction template) {
         if (template == null) {
             return null;
         }
@@ -91,7 +99,7 @@ public interface ProductDiscountSetValidUntilAction extends ProductDiscountUpdat
     public static ProductDiscountSetValidUntilActionBuilder builder() {
         return ProductDiscountSetValidUntilActionBuilder.of();
     }
-
+    
     /**
      * create builder for ProductDiscountSetValidUntilAction instance
      * @param template instance with prefilled values for the builder
@@ -100,6 +108,7 @@ public interface ProductDiscountSetValidUntilAction extends ProductDiscountUpdat
     public static ProductDiscountSetValidUntilActionBuilder builder(final ProductDiscountSetValidUntilAction template) {
         return ProductDiscountSetValidUntilActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -110,7 +119,7 @@ public interface ProductDiscountSetValidUntilAction extends ProductDiscountUpdat
     default <T> T withProductDiscountSetValidUntilAction(Function<ProductDiscountSetValidUntilAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

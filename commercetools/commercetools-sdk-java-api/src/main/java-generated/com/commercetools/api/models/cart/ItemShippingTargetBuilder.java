@@ -1,10 +1,11 @@
-
 package com.commercetools.api.models.cart;
 
-import java.util.*;
 
+import com.commercetools.api.models.cart.ItemShippingTarget;
 import javax.annotation.Nullable;
-
+import java.util.*;
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -19,80 +20,99 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .quantity(0.3)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class ItemShippingTargetBuilder implements Builder<ItemShippingTarget> {
 
+    
+    
     private String addressKey;
-
+    
+    
+    
     private Long quantity;
-
+    
+    
     @Nullable
     private String shippingMethodKey;
 
+    
     /**
      *  <p>Key of the address in the Cart <code>itemShippingAddresses</code>. Duplicate address keys are not allowed.</p>
      * @param addressKey value to be set
      * @return Builder
      */
-
-    public ItemShippingTargetBuilder addressKey(final String addressKey) {
+    
+    public ItemShippingTargetBuilder addressKey( final String addressKey) {
         this.addressKey = addressKey;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Quantity of Line Items or Custom Line Items shipped to the address with the specified <code>addressKey</code>.</p>
      *  <p>If a quantity is updated to <code>0</code> when defining ItemShippingDetailsDraft, the <code>targets</code> are removed from a Line Item or Custom Line Item in the resulting ItemShippingDetails.</p>
      * @param quantity value to be set
      * @return Builder
      */
-
-    public ItemShippingTargetBuilder quantity(final Long quantity) {
+    
+    public ItemShippingTargetBuilder quantity( final Long quantity) {
         this.quantity = quantity;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multiple</code> ShippingMode.</p>
      *  <p>It connects Line Item quantities with individual shipping addresses.</p>
      * @param shippingMethodKey value to be set
      * @return Builder
      */
-
+    
     public ItemShippingTargetBuilder shippingMethodKey(@Nullable final String shippingMethodKey) {
         this.shippingMethodKey = shippingMethodKey;
         return this;
     }
+    
+    
 
     /**
      *  <p>Key of the address in the Cart <code>itemShippingAddresses</code>. Duplicate address keys are not allowed.</p>
      * @return addressKey
      */
-
-    public String getAddressKey() {
+    
+    
+    public String getAddressKey(){
         return this.addressKey;
     }
-
+    
     /**
      *  <p>Quantity of Line Items or Custom Line Items shipped to the address with the specified <code>addressKey</code>.</p>
      *  <p>If a quantity is updated to <code>0</code> when defining ItemShippingDetailsDraft, the <code>targets</code> are removed from a Line Item or Custom Line Item in the resulting ItemShippingDetails.</p>
      * @return quantity
      */
-
-    public Long getQuantity() {
+    
+    
+    public Long getQuantity(){
         return this.quantity;
     }
-
+    
     /**
      *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multiple</code> ShippingMode.</p>
      *  <p>It connects Line Item quantities with individual shipping addresses.</p>
      * @return shippingMethodKey
      */
-
+    
     @Nullable
-    public String getShippingMethodKey() {
+    public String getShippingMethodKey(){
         return this.shippingMethodKey;
     }
 
@@ -105,7 +125,7 @@ public class ItemShippingTargetBuilder implements Builder<ItemShippingTarget> {
         Objects.requireNonNull(quantity, ItemShippingTarget.class + ": quantity is missing");
         return new ItemShippingTargetImpl(addressKey, quantity, shippingMethodKey);
     }
-
+    
     /**
      * builds ItemShippingTarget without checking for non-null required values
      * @return ItemShippingTarget
@@ -116,7 +136,7 @@ public class ItemShippingTargetBuilder implements Builder<ItemShippingTarget> {
 
     /**
      * factory method for an instance of ItemShippingTargetBuilder
-     * @return builder
+     * @return builder 
      */
     public static ItemShippingTargetBuilder of() {
         return new ItemShippingTargetBuilder();

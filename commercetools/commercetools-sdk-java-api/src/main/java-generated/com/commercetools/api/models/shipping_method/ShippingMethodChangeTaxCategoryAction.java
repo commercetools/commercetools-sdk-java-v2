@@ -1,19 +1,21 @@
-
 package com.commercetools.api.models.shipping_method;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
+import com.commercetools.api.models.shipping_method.ShippingMethodUpdateAction;
 import com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifier;
+import com.commercetools.api.models.shipping_method.ShippingMethodChangeTaxCategoryActionImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * ShippingMethodChangeTaxCategoryAction
@@ -26,9 +28,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .taxCategory(taxCategoryBuilder -> taxCategoryBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = ShippingMethodChangeTaxCategoryActionImpl.class)
 public interface ShippingMethodChangeTaxCategoryAction extends ShippingMethodUpdateAction {
 
@@ -50,16 +55,18 @@ public interface ShippingMethodChangeTaxCategoryAction extends ShippingMethodUpd
      *  <p>Value to set.</p>
      * @param taxCategory value to be set
      */
-
+    
     public void setTaxCategory(final TaxCategoryResourceIdentifier taxCategory);
+    
 
     /**
      * factory method
      * @return instance of ShippingMethodChangeTaxCategoryAction
      */
-    public static ShippingMethodChangeTaxCategoryAction of() {
+    public static ShippingMethodChangeTaxCategoryAction of(){
         return new ShippingMethodChangeTaxCategoryActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy ShippingMethodChangeTaxCategoryAction
@@ -78,14 +85,12 @@ public interface ShippingMethodChangeTaxCategoryAction extends ShippingMethodUpd
      * @return copy instance
      */
     @Nullable
-    public static ShippingMethodChangeTaxCategoryAction deepCopy(
-            @Nullable final ShippingMethodChangeTaxCategoryAction template) {
+    public static ShippingMethodChangeTaxCategoryAction deepCopy(@Nullable final ShippingMethodChangeTaxCategoryAction template) {
         if (template == null) {
             return null;
         }
         ShippingMethodChangeTaxCategoryActionImpl instance = new ShippingMethodChangeTaxCategoryActionImpl();
-        instance.setTaxCategory(com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifier
-                .deepCopy(template.getTaxCategory()));
+        instance.setTaxCategory(com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifier.deepCopy(template.getTaxCategory()));
         return instance;
     }
 
@@ -96,16 +101,16 @@ public interface ShippingMethodChangeTaxCategoryAction extends ShippingMethodUpd
     public static ShippingMethodChangeTaxCategoryActionBuilder builder() {
         return ShippingMethodChangeTaxCategoryActionBuilder.of();
     }
-
+    
     /**
      * create builder for ShippingMethodChangeTaxCategoryAction instance
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static ShippingMethodChangeTaxCategoryActionBuilder builder(
-            final ShippingMethodChangeTaxCategoryAction template) {
+    public static ShippingMethodChangeTaxCategoryActionBuilder builder(final ShippingMethodChangeTaxCategoryAction template) {
         return ShippingMethodChangeTaxCategoryActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -116,7 +121,7 @@ public interface ShippingMethodChangeTaxCategoryAction extends ShippingMethodUpd
     default <T> T withShippingMethodChangeTaxCategoryAction(Function<ShippingMethodChangeTaxCategoryAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

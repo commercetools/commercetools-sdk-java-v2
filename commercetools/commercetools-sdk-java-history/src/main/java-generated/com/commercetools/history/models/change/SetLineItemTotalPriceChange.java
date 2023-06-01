@@ -1,20 +1,22 @@
-
 package com.commercetools.history.models.change;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
+import com.commercetools.history.models.change.Change;
 import com.commercetools.history.models.common.LocalizedString;
 import com.commercetools.history.models.common.Money;
+import com.commercetools.history.models.change.SetLineItemTotalPriceChangeImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * SetLineItemTotalPriceChange
@@ -30,9 +32,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .previousValue(previousValueBuilder -> previousValueBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = SetLineItemTotalPriceChangeImpl.class)
 public interface SetLineItemTotalPriceChange extends Change {
 
@@ -48,7 +53,6 @@ public interface SetLineItemTotalPriceChange extends Change {
     @NotNull
     @JsonProperty("type")
     public String getType();
-
     /**
      *  <p>Update action for <code>setLineItemTotalPrice</code></p>
      * @return change
@@ -56,7 +60,6 @@ public interface SetLineItemTotalPriceChange extends Change {
     @NotNull
     @JsonProperty("change")
     public String getChange();
-
     /**
      *
      * @return lineItem
@@ -65,7 +68,6 @@ public interface SetLineItemTotalPriceChange extends Change {
     @Valid
     @JsonProperty("lineItem")
     public LocalizedString getLineItem();
-
     /**
      *
      * @return nextValue
@@ -74,7 +76,6 @@ public interface SetLineItemTotalPriceChange extends Change {
     @Valid
     @JsonProperty("nextValue")
     public Money getNextValue();
-
     /**
      *
      * @return previousValue
@@ -88,37 +89,42 @@ public interface SetLineItemTotalPriceChange extends Change {
      *  <p>Update action for <code>setLineItemTotalPrice</code></p>
      * @param change value to be set
      */
-
+    
     public void setChange(final String change);
-
+    
+    
     /**
      * set lineItem
      * @param lineItem value to be set
      */
-
+    
     public void setLineItem(final LocalizedString lineItem);
-
+    
+    
     /**
      * set nextValue
      * @param nextValue value to be set
      */
-
+    
     public void setNextValue(final Money nextValue);
-
+    
+    
     /**
      * set previousValue
      * @param previousValue value to be set
      */
-
+    
     public void setPreviousValue(final Money previousValue);
+    
 
     /**
      * factory method
      * @return instance of SetLineItemTotalPriceChange
      */
-    public static SetLineItemTotalPriceChange of() {
+    public static SetLineItemTotalPriceChange of(){
         return new SetLineItemTotalPriceChangeImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy SetLineItemTotalPriceChange
@@ -159,7 +165,7 @@ public interface SetLineItemTotalPriceChange extends Change {
     public static SetLineItemTotalPriceChangeBuilder builder() {
         return SetLineItemTotalPriceChangeBuilder.of();
     }
-
+    
     /**
      * create builder for SetLineItemTotalPriceChange instance
      * @param template instance with prefilled values for the builder
@@ -168,6 +174,7 @@ public interface SetLineItemTotalPriceChange extends Change {
     public static SetLineItemTotalPriceChangeBuilder builder(final SetLineItemTotalPriceChange template) {
         return SetLineItemTotalPriceChangeBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -178,7 +185,7 @@ public interface SetLineItemTotalPriceChange extends Change {
     default <T> T withSetLineItemTotalPriceChange(Function<SetLineItemTotalPriceChange, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

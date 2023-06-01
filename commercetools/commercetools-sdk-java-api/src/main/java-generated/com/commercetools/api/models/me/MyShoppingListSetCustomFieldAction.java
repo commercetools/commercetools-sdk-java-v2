@@ -1,17 +1,21 @@
-
 package com.commercetools.api.models.me;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
+import com.commercetools.api.models.me.MyShoppingListUpdateAction;
+import java.lang.Object;
+import com.commercetools.api.models.me.MyShoppingListSetCustomFieldActionImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * MyShoppingListSetCustomFieldAction
@@ -24,9 +28,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .name("{name}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = MyShoppingListSetCustomFieldActionImpl.class)
 public interface MyShoppingListSetCustomFieldAction extends MyShoppingListUpdateAction {
 
@@ -42,12 +49,11 @@ public interface MyShoppingListSetCustomFieldAction extends MyShoppingListUpdate
     @NotNull
     @JsonProperty("name")
     public String getName();
-
     /**
      *  <p>If <code>value</code> is absent or <code>null</code>, this field will be removed if it exists. Removing a field that does not exist returns an InvalidOperation error. If <code>value</code> is provided, it is set for the field defined by <code>name</code>.</p>
      * @return value
      */
-
+    
     @JsonProperty("value")
     public Object getValue();
 
@@ -55,23 +61,26 @@ public interface MyShoppingListSetCustomFieldAction extends MyShoppingListUpdate
      *  <p>Name of the Custom Field.</p>
      * @param name value to be set
      */
-
+    
     public void setName(final String name);
-
+    
+    
     /**
      *  <p>If <code>value</code> is absent or <code>null</code>, this field will be removed if it exists. Removing a field that does not exist returns an InvalidOperation error. If <code>value</code> is provided, it is set for the field defined by <code>name</code>.</p>
      * @param value value to be set
      */
-
+    
     public void setValue(final Object value);
+    
 
     /**
      * factory method
      * @return instance of MyShoppingListSetCustomFieldAction
      */
-    public static MyShoppingListSetCustomFieldAction of() {
+    public static MyShoppingListSetCustomFieldAction of(){
         return new MyShoppingListSetCustomFieldActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy MyShoppingListSetCustomFieldAction
@@ -91,8 +100,7 @@ public interface MyShoppingListSetCustomFieldAction extends MyShoppingListUpdate
      * @return copy instance
      */
     @Nullable
-    public static MyShoppingListSetCustomFieldAction deepCopy(
-            @Nullable final MyShoppingListSetCustomFieldAction template) {
+    public static MyShoppingListSetCustomFieldAction deepCopy(@Nullable final MyShoppingListSetCustomFieldAction template) {
         if (template == null) {
             return null;
         }
@@ -109,7 +117,7 @@ public interface MyShoppingListSetCustomFieldAction extends MyShoppingListUpdate
     public static MyShoppingListSetCustomFieldActionBuilder builder() {
         return MyShoppingListSetCustomFieldActionBuilder.of();
     }
-
+    
     /**
      * create builder for MyShoppingListSetCustomFieldAction instance
      * @param template instance with prefilled values for the builder
@@ -118,6 +126,7 @@ public interface MyShoppingListSetCustomFieldAction extends MyShoppingListUpdate
     public static MyShoppingListSetCustomFieldActionBuilder builder(final MyShoppingListSetCustomFieldAction template) {
         return MyShoppingListSetCustomFieldActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -128,7 +137,7 @@ public interface MyShoppingListSetCustomFieldAction extends MyShoppingListUpdate
     default <T> T withMyShoppingListSetCustomFieldAction(Function<MyShoppingListSetCustomFieldAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

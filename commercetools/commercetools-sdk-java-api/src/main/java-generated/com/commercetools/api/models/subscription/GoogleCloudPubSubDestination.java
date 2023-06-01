@@ -1,17 +1,20 @@
-
 package com.commercetools.api.models.subscription;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
+import com.commercetools.api.models.subscription.Destination;
+import com.commercetools.api.models.subscription.GoogleCloudPubSubDestinationImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Destination for Google Cloud Pub/Sub that can be used for Pull subscriptions as well as for Push subscriptions. The <code>topic</code> must give the <code>pubsub.topics.publish</code> permission to the service account <code>subscriptions@commercetools-platform.iam.gserviceaccount.com</code>. If used with the CloudEventsFormat, the message conforms to the PubSub Protocol Binding of the Structured Content Mode.</p>
@@ -25,9 +28,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .topic("{topic}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = GoogleCloudPubSubDestinationImpl.class)
 public interface GoogleCloudPubSubDestination extends Destination {
 
@@ -43,7 +49,6 @@ public interface GoogleCloudPubSubDestination extends Destination {
     @NotNull
     @JsonProperty("projectId")
     public String getProjectId();
-
     /**
      *  <p>Name of the topic.</p>
      * @return topic
@@ -56,23 +61,26 @@ public interface GoogleCloudPubSubDestination extends Destination {
      *  <p>ID of the Google Cloud project that contains the Pub/Sub topic.</p>
      * @param projectId value to be set
      */
-
+    
     public void setProjectId(final String projectId);
-
+    
+    
     /**
      *  <p>Name of the topic.</p>
      * @param topic value to be set
      */
-
+    
     public void setTopic(final String topic);
+    
 
     /**
      * factory method
      * @return instance of GoogleCloudPubSubDestination
      */
-    public static GoogleCloudPubSubDestination of() {
+    public static GoogleCloudPubSubDestination of(){
         return new GoogleCloudPubSubDestinationImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy GoogleCloudPubSubDestination
@@ -109,7 +117,7 @@ public interface GoogleCloudPubSubDestination extends Destination {
     public static GoogleCloudPubSubDestinationBuilder builder() {
         return GoogleCloudPubSubDestinationBuilder.of();
     }
-
+    
     /**
      * create builder for GoogleCloudPubSubDestination instance
      * @param template instance with prefilled values for the builder
@@ -118,6 +126,7 @@ public interface GoogleCloudPubSubDestination extends Destination {
     public static GoogleCloudPubSubDestinationBuilder builder(final GoogleCloudPubSubDestination template) {
         return GoogleCloudPubSubDestinationBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -128,7 +137,7 @@ public interface GoogleCloudPubSubDestination extends Destination {
     default <T> T withGoogleCloudPubSubDestination(Function<GoogleCloudPubSubDestination, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

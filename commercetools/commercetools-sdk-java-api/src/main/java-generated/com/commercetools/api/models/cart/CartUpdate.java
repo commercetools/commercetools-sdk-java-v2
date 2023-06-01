@@ -1,19 +1,20 @@
-
 package com.commercetools.api.models.cart;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-import java.util.stream.Collectors;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
+import com.commercetools.api.models.cart.CartUpdateAction;
+import com.commercetools.api.models.cart.CartUpdateImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * CartUpdate
@@ -27,12 +28,15 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .plusActions(actionsBuilder -> actionsBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = CartUpdateImpl.class)
-public interface CartUpdate
-        extends com.commercetools.api.models.ResourceUpdate<CartUpdate, CartUpdateAction, CartUpdateBuilder> {
+public interface CartUpdate extends com.commercetools.api.models.ResourceUpdate<CartUpdate, CartUpdateAction, CartUpdateBuilder> {
+
 
     /**
      *  <p>Expected version of the Cart on which the changes apply. If the expected version does not match the actual version, a 409 Conflict is returned.</p>
@@ -41,7 +45,6 @@ public interface CartUpdate
     @NotNull
     @JsonProperty("version")
     public Long getVersion();
-
     /**
      *  <p>Update actions to be performed on the Cart.</p>
      * @return actions
@@ -55,31 +58,32 @@ public interface CartUpdate
      *  <p>Expected version of the Cart on which the changes apply. If the expected version does not match the actual version, a 409 Conflict is returned.</p>
      * @param version value to be set
      */
-
+    
     public void setVersion(final Long version);
-
+    
+    
     /**
      *  <p>Update actions to be performed on the Cart.</p>
      * @param actions values to be set
      */
-
+    
     @JsonIgnore
-    public void setActions(final CartUpdateAction... actions);
-
+    public void setActions(final CartUpdateAction ...actions);
     /**
      *  <p>Update actions to be performed on the Cart.</p>
      * @param actions values to be set
      */
-
+    
     public void setActions(final List<CartUpdateAction> actions);
 
     /**
      * factory method
      * @return instance of CartUpdate
      */
-    public static CartUpdate of() {
+    public static CartUpdate of(){
         return new CartUpdateImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy CartUpdate
@@ -106,9 +110,7 @@ public interface CartUpdate
         CartUpdateImpl instance = new CartUpdateImpl();
         instance.setVersion(template.getVersion());
         instance.setActions(Optional.ofNullable(template.getActions())
-                .map(t -> t.stream()
-                        .map(com.commercetools.api.models.cart.CartUpdateAction::deepCopy)
-                        .collect(Collectors.toList()))
+                .map(t -> t.stream().map(com.commercetools.api.models.cart.CartUpdateAction::deepCopy).collect(Collectors.toList()))
                 .orElse(null));
         return instance;
     }
@@ -120,7 +122,7 @@ public interface CartUpdate
     public static CartUpdateBuilder builder() {
         return CartUpdateBuilder.of();
     }
-
+    
     /**
      * create builder for CartUpdate instance
      * @param template instance with prefilled values for the builder
@@ -129,6 +131,7 @@ public interface CartUpdate
     public static CartUpdateBuilder builder(final CartUpdate template) {
         return CartUpdateBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -139,7 +142,7 @@ public interface CartUpdate
     default <T> T withCartUpdate(Function<CartUpdate, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

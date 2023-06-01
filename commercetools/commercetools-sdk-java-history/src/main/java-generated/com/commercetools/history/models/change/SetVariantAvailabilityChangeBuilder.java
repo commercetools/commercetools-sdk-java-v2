@@ -1,9 +1,12 @@
-
 package com.commercetools.history.models.change;
 
+import com.commercetools.history.models.change.Change;
+import com.commercetools.history.models.common.ProductVariantAvailability;
+import com.commercetools.history.models.change.SetVariantAvailabilityChange;
+import javax.annotation.Nullable;
 import java.util.*;
 import java.util.function.Function;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -21,172 +24,195 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .nextValue(nextValueBuilder -> nextValueBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class SetVariantAvailabilityChangeBuilder implements Builder<SetVariantAvailabilityChange> {
 
+    
+    
     private String change;
-
+    
+    
+    
     private String catalogData;
-
+    
+    
+    
     private String variant;
-
+    
+    
+    
     private com.commercetools.history.models.common.ProductVariantAvailability previousValue;
-
+    
+    
+    
     private com.commercetools.history.models.common.ProductVariantAvailability nextValue;
 
+    
     /**
      *  <p>Update action for <code>setVariantAvailability</code></p>
      * @param change value to be set
      * @return Builder
      */
-
-    public SetVariantAvailabilityChangeBuilder change(final String change) {
+    
+    public SetVariantAvailabilityChangeBuilder change( final String change) {
         this.change = change;
         return this;
     }
-
+    
+    
+    
+    
     /**
      * set the value to the catalogData
      * @param catalogData value to be set
      * @return Builder
      */
-
-    public SetVariantAvailabilityChangeBuilder catalogData(final String catalogData) {
+    
+    public SetVariantAvailabilityChangeBuilder catalogData( final String catalogData) {
         this.catalogData = catalogData;
         return this;
     }
-
+    
+    
+    
+    
     /**
      * set the value to the variant
      * @param variant value to be set
      * @return Builder
      */
-
-    public SetVariantAvailabilityChangeBuilder variant(final String variant) {
+    
+    public SetVariantAvailabilityChangeBuilder variant( final String variant) {
         this.variant = variant;
         return this;
     }
-
+    
+    
+    
+    
     /**
      * set the value to the previousValue using the builder function
      * @param builder function to build the previousValue value
      * @return Builder
      */
-
-    public SetVariantAvailabilityChangeBuilder previousValue(
-            Function<com.commercetools.history.models.common.ProductVariantAvailabilityBuilder, com.commercetools.history.models.common.ProductVariantAvailabilityBuilder> builder) {
-        this.previousValue = builder
-                .apply(com.commercetools.history.models.common.ProductVariantAvailabilityBuilder.of())
-                .build();
+    
+    public SetVariantAvailabilityChangeBuilder previousValue(Function<com.commercetools.history.models.common.ProductVariantAvailabilityBuilder, com.commercetools.history.models.common.ProductVariantAvailabilityBuilder> builder) {
+        this.previousValue = builder.apply(com.commercetools.history.models.common.ProductVariantAvailabilityBuilder.of()).build();
         return this;
     }
-
+    
     /**
      * set the value to the previousValue using the builder function
      * @param builder function to build the previousValue value
      * @return Builder
      */
-
-    public SetVariantAvailabilityChangeBuilder withPreviousValue(
-            Function<com.commercetools.history.models.common.ProductVariantAvailabilityBuilder, com.commercetools.history.models.common.ProductVariantAvailability> builder) {
-        this.previousValue = builder
-                .apply(com.commercetools.history.models.common.ProductVariantAvailabilityBuilder.of());
+    
+    public SetVariantAvailabilityChangeBuilder withPreviousValue(Function<com.commercetools.history.models.common.ProductVariantAvailabilityBuilder, com.commercetools.history.models.common.ProductVariantAvailability> builder) {
+        this.previousValue = builder.apply(com.commercetools.history.models.common.ProductVariantAvailabilityBuilder.of());
         return this;
     }
-
+                    
     /**
      * set the value to the previousValue
      * @param previousValue value to be set
      * @return Builder
      */
-
-    public SetVariantAvailabilityChangeBuilder previousValue(
-            final com.commercetools.history.models.common.ProductVariantAvailability previousValue) {
+    
+    public SetVariantAvailabilityChangeBuilder previousValue( final com.commercetools.history.models.common.ProductVariantAvailability previousValue) {
         this.previousValue = previousValue;
         return this;
     }
-
+    
+    
+    
+    
     /**
      * set the value to the nextValue using the builder function
      * @param builder function to build the nextValue value
      * @return Builder
      */
-
-    public SetVariantAvailabilityChangeBuilder nextValue(
-            Function<com.commercetools.history.models.common.ProductVariantAvailabilityBuilder, com.commercetools.history.models.common.ProductVariantAvailabilityBuilder> builder) {
-        this.nextValue = builder.apply(com.commercetools.history.models.common.ProductVariantAvailabilityBuilder.of())
-                .build();
+    
+    public SetVariantAvailabilityChangeBuilder nextValue(Function<com.commercetools.history.models.common.ProductVariantAvailabilityBuilder, com.commercetools.history.models.common.ProductVariantAvailabilityBuilder> builder) {
+        this.nextValue = builder.apply(com.commercetools.history.models.common.ProductVariantAvailabilityBuilder.of()).build();
         return this;
     }
-
+    
     /**
      * set the value to the nextValue using the builder function
      * @param builder function to build the nextValue value
      * @return Builder
      */
-
-    public SetVariantAvailabilityChangeBuilder withNextValue(
-            Function<com.commercetools.history.models.common.ProductVariantAvailabilityBuilder, com.commercetools.history.models.common.ProductVariantAvailability> builder) {
+    
+    public SetVariantAvailabilityChangeBuilder withNextValue(Function<com.commercetools.history.models.common.ProductVariantAvailabilityBuilder, com.commercetools.history.models.common.ProductVariantAvailability> builder) {
         this.nextValue = builder.apply(com.commercetools.history.models.common.ProductVariantAvailabilityBuilder.of());
         return this;
     }
-
+                    
     /**
      * set the value to the nextValue
      * @param nextValue value to be set
      * @return Builder
      */
-
-    public SetVariantAvailabilityChangeBuilder nextValue(
-            final com.commercetools.history.models.common.ProductVariantAvailability nextValue) {
+    
+    public SetVariantAvailabilityChangeBuilder nextValue( final com.commercetools.history.models.common.ProductVariantAvailability nextValue) {
         this.nextValue = nextValue;
         return this;
     }
+    
+    
 
     /**
      *  <p>Update action for <code>setVariantAvailability</code></p>
      * @return change
      */
-
-    public String getChange() {
+    
+    
+    public String getChange(){
         return this.change;
     }
-
+    
     /**
      * value of catalogData}
      * @return catalogData
      */
-
-    public String getCatalogData() {
+    
+    
+    public String getCatalogData(){
         return this.catalogData;
     }
-
+    
     /**
      * value of variant}
      * @return variant
      */
-
-    public String getVariant() {
+    
+    
+    public String getVariant(){
         return this.variant;
     }
-
+    
     /**
      * value of previousValue}
      * @return previousValue
      */
-
-    public com.commercetools.history.models.common.ProductVariantAvailability getPreviousValue() {
+    
+    
+    public com.commercetools.history.models.common.ProductVariantAvailability getPreviousValue(){
         return this.previousValue;
     }
-
+    
     /**
      * value of nextValue}
      * @return nextValue
      */
-
-    public com.commercetools.history.models.common.ProductVariantAvailability getNextValue() {
+    
+    
+    public com.commercetools.history.models.common.ProductVariantAvailability getNextValue(){
         return this.nextValue;
     }
 
@@ -202,7 +228,7 @@ public class SetVariantAvailabilityChangeBuilder implements Builder<SetVariantAv
         Objects.requireNonNull(nextValue, SetVariantAvailabilityChange.class + ": nextValue is missing");
         return new SetVariantAvailabilityChangeImpl(change, catalogData, variant, previousValue, nextValue);
     }
-
+    
     /**
      * builds SetVariantAvailabilityChange without checking for non-null required values
      * @return SetVariantAvailabilityChange
@@ -213,7 +239,7 @@ public class SetVariantAvailabilityChangeBuilder implements Builder<SetVariantAv
 
     /**
      * factory method for an instance of SetVariantAvailabilityChangeBuilder
-     * @return builder
+     * @return builder 
      */
     public static SetVariantAvailabilityChangeBuilder of() {
         return new SetVariantAvailabilityChangeBuilder();

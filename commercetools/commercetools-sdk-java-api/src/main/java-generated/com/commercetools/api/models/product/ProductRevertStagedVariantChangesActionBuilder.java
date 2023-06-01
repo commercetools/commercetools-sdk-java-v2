@@ -1,8 +1,11 @@
-
 package com.commercetools.api.models.product;
 
+import com.commercetools.api.models.product.ProductUpdateAction;
+import com.commercetools.api.models.product.ProductRevertStagedVariantChangesAction;
+import javax.annotation.Nullable;
 import java.util.*;
-
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -16,31 +19,39 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .variantId(0.3)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
-public class ProductRevertStagedVariantChangesActionBuilder
-        implements Builder<ProductRevertStagedVariantChangesAction> {
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
+public class ProductRevertStagedVariantChangesActionBuilder implements Builder<ProductRevertStagedVariantChangesAction> {
 
+    
+    
     private Long variantId;
 
+    
     /**
      *  <p>The <code>id</code> of the ProductVariant to revert.</p>
      * @param variantId value to be set
      * @return Builder
      */
-
-    public ProductRevertStagedVariantChangesActionBuilder variantId(final Long variantId) {
+    
+    public ProductRevertStagedVariantChangesActionBuilder variantId( final Long variantId) {
         this.variantId = variantId;
         return this;
     }
+    
+    
 
     /**
      *  <p>The <code>id</code> of the ProductVariant to revert.</p>
      * @return variantId
      */
-
-    public Long getVariantId() {
+    
+    
+    public Long getVariantId(){
         return this.variantId;
     }
 
@@ -52,7 +63,7 @@ public class ProductRevertStagedVariantChangesActionBuilder
         Objects.requireNonNull(variantId, ProductRevertStagedVariantChangesAction.class + ": variantId is missing");
         return new ProductRevertStagedVariantChangesActionImpl(variantId);
     }
-
+    
     /**
      * builds ProductRevertStagedVariantChangesAction without checking for non-null required values
      * @return ProductRevertStagedVariantChangesAction
@@ -63,7 +74,7 @@ public class ProductRevertStagedVariantChangesActionBuilder
 
     /**
      * factory method for an instance of ProductRevertStagedVariantChangesActionBuilder
-     * @return builder
+     * @return builder 
      */
     public static ProductRevertStagedVariantChangesActionBuilder of() {
         return new ProductRevertStagedVariantChangesActionBuilder();
@@ -74,8 +85,7 @@ public class ProductRevertStagedVariantChangesActionBuilder
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static ProductRevertStagedVariantChangesActionBuilder of(
-            final ProductRevertStagedVariantChangesAction template) {
+    public static ProductRevertStagedVariantChangesActionBuilder of(final ProductRevertStagedVariantChangesAction template) {
         ProductRevertStagedVariantChangesActionBuilder builder = new ProductRevertStagedVariantChangesActionBuilder();
         builder.variantId = template.getVariantId();
         return builder;

@@ -1,10 +1,11 @@
-
 package com.commercetools.api.models.product;
 
-import java.util.*;
-
+import com.commercetools.api.models.product.ProductUpdateAction;
+import com.commercetools.api.models.product.ProductSetPriceKeyAction;
 import javax.annotation.Nullable;
-
+import java.util.*;
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -18,78 +19,95 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .priceId("{priceId}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class ProductSetPriceKeyActionBuilder implements Builder<ProductSetPriceKeyAction> {
 
+    
+    
     private String priceId;
-
+    
+    
     @Nullable
     private Boolean staged;
-
+    
+    
     @Nullable
     private String key;
 
+    
     /**
      *  <p>The <code>id</code> of the Price to set the key.</p>
      * @param priceId value to be set
      * @return Builder
      */
-
-    public ProductSetPriceKeyActionBuilder priceId(final String priceId) {
+    
+    public ProductSetPriceKeyActionBuilder priceId( final String priceId) {
         this.priceId = priceId;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>If <code>true</code>, only the staged Embedded Price is updated. If <code>false</code>, both the current and staged Embedded Price are updated.</p>
      * @param staged value to be set
      * @return Builder
      */
-
+    
     public ProductSetPriceKeyActionBuilder staged(@Nullable final Boolean staged) {
         this.staged = staged;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Value to set. If empty, any existing value will be removed.</p>
      * @param key value to be set
      * @return Builder
      */
-
+    
     public ProductSetPriceKeyActionBuilder key(@Nullable final String key) {
         this.key = key;
         return this;
     }
+    
+    
 
     /**
      *  <p>The <code>id</code> of the Price to set the key.</p>
      * @return priceId
      */
-
-    public String getPriceId() {
+    
+    
+    public String getPriceId(){
         return this.priceId;
     }
-
+    
     /**
      *  <p>If <code>true</code>, only the staged Embedded Price is updated. If <code>false</code>, both the current and staged Embedded Price are updated.</p>
      * @return staged
      */
-
+    
     @Nullable
-    public Boolean getStaged() {
+    public Boolean getStaged(){
         return this.staged;
     }
-
+    
     /**
      *  <p>Value to set. If empty, any existing value will be removed.</p>
      * @return key
      */
-
+    
     @Nullable
-    public String getKey() {
+    public String getKey(){
         return this.key;
     }
 
@@ -101,7 +119,7 @@ public class ProductSetPriceKeyActionBuilder implements Builder<ProductSetPriceK
         Objects.requireNonNull(priceId, ProductSetPriceKeyAction.class + ": priceId is missing");
         return new ProductSetPriceKeyActionImpl(priceId, staged, key);
     }
-
+    
     /**
      * builds ProductSetPriceKeyAction without checking for non-null required values
      * @return ProductSetPriceKeyAction
@@ -112,7 +130,7 @@ public class ProductSetPriceKeyActionBuilder implements Builder<ProductSetPriceK
 
     /**
      * factory method for an instance of ProductSetPriceKeyActionBuilder
-     * @return builder
+     * @return builder 
      */
     public static ProductSetPriceKeyActionBuilder of() {
         return new ProductSetPriceKeyActionBuilder();

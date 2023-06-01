@@ -1,9 +1,11 @@
-
 package com.commercetools.api.predicates.query.error;
 
 import com.commercetools.api.predicates.query.*;
 
-public class GraphQLSemanticErrorErrorQueryBuilderDsl {
+import java.util.function.Function;
+
+
+public class GraphQLSemanticErrorErrorQueryBuilderDsl  {
     public GraphQLSemanticErrorErrorQueryBuilderDsl() {
     }
 
@@ -12,9 +14,8 @@ public class GraphQLSemanticErrorErrorQueryBuilderDsl {
     }
 
     public StringComparisonPredicateBuilder<GraphQLSemanticErrorErrorQueryBuilderDsl> code() {
-        return new StringComparisonPredicateBuilder<>(
-            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("code")),
-            p -> new CombinationQueryPredicate<>(p, GraphQLSemanticErrorErrorQueryBuilderDsl::of));
+        return new StringComparisonPredicateBuilder<>(BinaryQueryPredicate.of().left(new ConstantQueryPredicate("code")),
+        p -> new CombinationQueryPredicate<>(p, GraphQLSemanticErrorErrorQueryBuilderDsl::of));
     }
-
+    
 }

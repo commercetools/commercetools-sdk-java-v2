@@ -1,16 +1,20 @@
-
 package com.commercetools.api.models.inventory;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
+import com.commercetools.api.models.inventory.InventoryEntryUpdateAction;
+import com.commercetools.api.models.inventory.InventoryEntrySetKeyActionImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * InventoryEntrySetKeyAction
@@ -22,9 +26,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     InventoryEntrySetKeyAction inventoryEntrySetKeyAction = InventoryEntrySetKeyAction.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = InventoryEntrySetKeyActionImpl.class)
 public interface InventoryEntrySetKeyAction extends InventoryEntryUpdateAction {
 
@@ -37,7 +44,7 @@ public interface InventoryEntrySetKeyAction extends InventoryEntryUpdateAction {
      *  <p>Value to set. If empty, any existing value will be removed.</p>
      * @return key
      */
-
+    
     @JsonProperty("key")
     public String getKey();
 
@@ -45,16 +52,18 @@ public interface InventoryEntrySetKeyAction extends InventoryEntryUpdateAction {
      *  <p>Value to set. If empty, any existing value will be removed.</p>
      * @param key value to be set
      */
-
+    
     public void setKey(final String key);
+    
 
     /**
      * factory method
      * @return instance of InventoryEntrySetKeyAction
      */
-    public static InventoryEntrySetKeyAction of() {
+    public static InventoryEntrySetKeyAction of(){
         return new InventoryEntrySetKeyActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy InventoryEntrySetKeyAction
@@ -89,7 +98,7 @@ public interface InventoryEntrySetKeyAction extends InventoryEntryUpdateAction {
     public static InventoryEntrySetKeyActionBuilder builder() {
         return InventoryEntrySetKeyActionBuilder.of();
     }
-
+    
     /**
      * create builder for InventoryEntrySetKeyAction instance
      * @param template instance with prefilled values for the builder
@@ -98,6 +107,7 @@ public interface InventoryEntrySetKeyAction extends InventoryEntryUpdateAction {
     public static InventoryEntrySetKeyActionBuilder builder(final InventoryEntrySetKeyAction template) {
         return InventoryEntrySetKeyActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -108,11 +118,11 @@ public interface InventoryEntrySetKeyAction extends InventoryEntryUpdateAction {
     default <T> T withInventoryEntrySetKeyAction(Function<InventoryEntrySetKeyAction, T> helper) {
         return helper.apply(this);
     }
-
     public static InventoryEntrySetKeyAction ofUnset() {
         return InventoryEntrySetKeyAction.of();
     }
-
+    
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

@@ -1,11 +1,11 @@
-
 package com.commercetools.api.predicates.query.message;
-
-import java.util.function.Function;
 
 import com.commercetools.api.predicates.query.*;
 
-public class CategoryCreatedMessagePayloadQueryBuilderDsl {
+import java.util.function.Function;
+
+
+public class CategoryCreatedMessagePayloadQueryBuilderDsl  {
     public CategoryCreatedMessagePayloadQueryBuilderDsl() {
     }
 
@@ -14,18 +14,16 @@ public class CategoryCreatedMessagePayloadQueryBuilderDsl {
     }
 
     public StringComparisonPredicateBuilder<CategoryCreatedMessagePayloadQueryBuilderDsl> type() {
-        return new StringComparisonPredicateBuilder<>(
-            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("type")),
-            p -> new CombinationQueryPredicate<>(p, CategoryCreatedMessagePayloadQueryBuilderDsl::of));
+        return new StringComparisonPredicateBuilder<>(BinaryQueryPredicate.of().left(new ConstantQueryPredicate("type")),
+        p -> new CombinationQueryPredicate<>(p, CategoryCreatedMessagePayloadQueryBuilderDsl::of));
     }
-
     public CombinationQueryPredicate<CategoryCreatedMessagePayloadQueryBuilderDsl> category(
-            Function<com.commercetools.api.predicates.query.category.CategoryQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.category.CategoryQueryBuilderDsl>> fn) {
-        return new CombinationQueryPredicate<>(
-            ContainerQueryPredicate.of()
-                    .parent(ConstantQueryPredicate.of().constant("category"))
-                    .inner(fn.apply(com.commercetools.api.predicates.query.category.CategoryQueryBuilderDsl.of())),
+        Function<com.commercetools.api.predicates.query.category.CategoryQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.category.CategoryQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(ContainerQueryPredicate.of()
+            .parent(ConstantQueryPredicate.of().constant("category"))
+            .inner(fn.apply(com.commercetools.api.predicates.query.category.CategoryQueryBuilderDsl.of())),
             CategoryCreatedMessagePayloadQueryBuilderDsl::of);
     }
-
+    
+    
 }

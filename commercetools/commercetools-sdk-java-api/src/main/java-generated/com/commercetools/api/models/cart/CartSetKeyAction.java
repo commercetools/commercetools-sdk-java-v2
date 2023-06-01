@@ -1,16 +1,20 @@
-
 package com.commercetools.api.models.cart;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
+import com.commercetools.api.models.cart.CartUpdateAction;
+import com.commercetools.api.models.cart.CartSetKeyActionImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * CartSetKeyAction
@@ -22,9 +26,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     CartSetKeyAction cartSetKeyAction = CartSetKeyAction.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = CartSetKeyActionImpl.class)
 public interface CartSetKeyAction extends CartUpdateAction {
 
@@ -37,7 +44,7 @@ public interface CartSetKeyAction extends CartUpdateAction {
      *  <p>Value to set. If empty, any existing key will be removed.</p>
      * @return key
      */
-
+    
     @JsonProperty("key")
     public String getKey();
 
@@ -45,16 +52,18 @@ public interface CartSetKeyAction extends CartUpdateAction {
      *  <p>Value to set. If empty, any existing key will be removed.</p>
      * @param key value to be set
      */
-
+    
     public void setKey(final String key);
+    
 
     /**
      * factory method
      * @return instance of CartSetKeyAction
      */
-    public static CartSetKeyAction of() {
+    public static CartSetKeyAction of(){
         return new CartSetKeyActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy CartSetKeyAction
@@ -89,7 +98,7 @@ public interface CartSetKeyAction extends CartUpdateAction {
     public static CartSetKeyActionBuilder builder() {
         return CartSetKeyActionBuilder.of();
     }
-
+    
     /**
      * create builder for CartSetKeyAction instance
      * @param template instance with prefilled values for the builder
@@ -98,6 +107,7 @@ public interface CartSetKeyAction extends CartUpdateAction {
     public static CartSetKeyActionBuilder builder(final CartSetKeyAction template) {
         return CartSetKeyActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -108,11 +118,11 @@ public interface CartSetKeyAction extends CartUpdateAction {
     default <T> T withCartSetKeyAction(Function<CartSetKeyAction, T> helper) {
         return helper.apply(this);
     }
-
     public static CartSetKeyAction ofUnset() {
         return CartSetKeyAction.of();
     }
-
+    
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

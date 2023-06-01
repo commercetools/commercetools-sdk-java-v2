@@ -1,107 +1,114 @@
-
 package com.commercetools.importapi.models.customfields;
 
+import com.commercetools.importapi.models.customfields.BooleanField;
+import com.commercetools.importapi.models.customfields.BooleanSetField;
+import com.commercetools.importapi.models.customfields.DateField;
+import com.commercetools.importapi.models.customfields.DateSetField;
+import com.commercetools.importapi.models.customfields.DateTimeField;
+import com.commercetools.importapi.models.customfields.DateTimeSetField;
+import com.commercetools.importapi.models.customfields.EnumField;
+import com.commercetools.importapi.models.customfields.EnumSetField;
+import com.commercetools.importapi.models.customfields.LocalizedEnumField;
+import com.commercetools.importapi.models.customfields.LocalizedEnumSetField;
+import com.commercetools.importapi.models.customfields.LocalizedStringField;
+import com.commercetools.importapi.models.customfields.LocalizedStringSetField;
+import com.commercetools.importapi.models.customfields.MoneyField;
+import com.commercetools.importapi.models.customfields.MoneySetField;
+import com.commercetools.importapi.models.customfields.NumberField;
+import com.commercetools.importapi.models.customfields.NumberSetField;
+import com.commercetools.importapi.models.customfields.ReferenceField;
+import com.commercetools.importapi.models.customfields.ReferenceSetField;
+import com.commercetools.importapi.models.customfields.StringField;
+import com.commercetools.importapi.models.customfields.StringSetField;
+import com.commercetools.importapi.models.customfields.TimeField;
+import com.commercetools.importapi.models.customfields.TimeSetField;
+import com.commercetools.importapi.models.customfields.CustomField;
+import javax.annotation.Nullable;
 import java.util.*;
-
+import java.util.function.Function;
+import java.time.ZonedDateTime;
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
  * CustomFieldBuilder
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class CustomFieldBuilder {
 
     public com.commercetools.importapi.models.customfields.BooleanFieldBuilder booleanBuilder() {
-        return com.commercetools.importapi.models.customfields.BooleanFieldBuilder.of();
+       return com.commercetools.importapi.models.customfields.BooleanFieldBuilder.of();
     }
-
     public com.commercetools.importapi.models.customfields.BooleanSetFieldBuilder booleanSetBuilder() {
-        return com.commercetools.importapi.models.customfields.BooleanSetFieldBuilder.of();
+       return com.commercetools.importapi.models.customfields.BooleanSetFieldBuilder.of();
     }
-
     public com.commercetools.importapi.models.customfields.DateFieldBuilder dateBuilder() {
-        return com.commercetools.importapi.models.customfields.DateFieldBuilder.of();
+       return com.commercetools.importapi.models.customfields.DateFieldBuilder.of();
     }
-
     public com.commercetools.importapi.models.customfields.DateSetFieldBuilder dateSetBuilder() {
-        return com.commercetools.importapi.models.customfields.DateSetFieldBuilder.of();
+       return com.commercetools.importapi.models.customfields.DateSetFieldBuilder.of();
     }
-
     public com.commercetools.importapi.models.customfields.DateTimeFieldBuilder dateTimeBuilder() {
-        return com.commercetools.importapi.models.customfields.DateTimeFieldBuilder.of();
+       return com.commercetools.importapi.models.customfields.DateTimeFieldBuilder.of();
     }
-
     public com.commercetools.importapi.models.customfields.DateTimeSetFieldBuilder dateTimeSetBuilder() {
-        return com.commercetools.importapi.models.customfields.DateTimeSetFieldBuilder.of();
+       return com.commercetools.importapi.models.customfields.DateTimeSetFieldBuilder.of();
     }
-
     public com.commercetools.importapi.models.customfields.EnumFieldBuilder enumBuilder() {
-        return com.commercetools.importapi.models.customfields.EnumFieldBuilder.of();
+       return com.commercetools.importapi.models.customfields.EnumFieldBuilder.of();
     }
-
     public com.commercetools.importapi.models.customfields.EnumSetFieldBuilder enumSetBuilder() {
-        return com.commercetools.importapi.models.customfields.EnumSetFieldBuilder.of();
+       return com.commercetools.importapi.models.customfields.EnumSetFieldBuilder.of();
     }
-
     public com.commercetools.importapi.models.customfields.LocalizedEnumFieldBuilder localizedEnumBuilder() {
-        return com.commercetools.importapi.models.customfields.LocalizedEnumFieldBuilder.of();
+       return com.commercetools.importapi.models.customfields.LocalizedEnumFieldBuilder.of();
     }
-
     public com.commercetools.importapi.models.customfields.LocalizedEnumSetFieldBuilder localizedEnumSetBuilder() {
-        return com.commercetools.importapi.models.customfields.LocalizedEnumSetFieldBuilder.of();
+       return com.commercetools.importapi.models.customfields.LocalizedEnumSetFieldBuilder.of();
     }
-
     public com.commercetools.importapi.models.customfields.LocalizedStringFieldBuilder localizedStringBuilder() {
-        return com.commercetools.importapi.models.customfields.LocalizedStringFieldBuilder.of();
+       return com.commercetools.importapi.models.customfields.LocalizedStringFieldBuilder.of();
     }
-
     public com.commercetools.importapi.models.customfields.LocalizedStringSetFieldBuilder localizedStringSetBuilder() {
-        return com.commercetools.importapi.models.customfields.LocalizedStringSetFieldBuilder.of();
+       return com.commercetools.importapi.models.customfields.LocalizedStringSetFieldBuilder.of();
     }
-
     public com.commercetools.importapi.models.customfields.MoneyFieldBuilder moneyBuilder() {
-        return com.commercetools.importapi.models.customfields.MoneyFieldBuilder.of();
+       return com.commercetools.importapi.models.customfields.MoneyFieldBuilder.of();
     }
-
     public com.commercetools.importapi.models.customfields.MoneySetFieldBuilder moneySetBuilder() {
-        return com.commercetools.importapi.models.customfields.MoneySetFieldBuilder.of();
+       return com.commercetools.importapi.models.customfields.MoneySetFieldBuilder.of();
     }
-
     public com.commercetools.importapi.models.customfields.NumberFieldBuilder numberBuilder() {
-        return com.commercetools.importapi.models.customfields.NumberFieldBuilder.of();
+       return com.commercetools.importapi.models.customfields.NumberFieldBuilder.of();
     }
-
     public com.commercetools.importapi.models.customfields.NumberSetFieldBuilder numberSetBuilder() {
-        return com.commercetools.importapi.models.customfields.NumberSetFieldBuilder.of();
+       return com.commercetools.importapi.models.customfields.NumberSetFieldBuilder.of();
     }
-
     public com.commercetools.importapi.models.customfields.ReferenceFieldBuilder referenceBuilder() {
-        return com.commercetools.importapi.models.customfields.ReferenceFieldBuilder.of();
+       return com.commercetools.importapi.models.customfields.ReferenceFieldBuilder.of();
     }
-
     public com.commercetools.importapi.models.customfields.ReferenceSetFieldBuilder referenceSetBuilder() {
-        return com.commercetools.importapi.models.customfields.ReferenceSetFieldBuilder.of();
+       return com.commercetools.importapi.models.customfields.ReferenceSetFieldBuilder.of();
     }
-
     public com.commercetools.importapi.models.customfields.StringFieldBuilder stringBuilder() {
-        return com.commercetools.importapi.models.customfields.StringFieldBuilder.of();
+       return com.commercetools.importapi.models.customfields.StringFieldBuilder.of();
     }
-
     public com.commercetools.importapi.models.customfields.StringSetFieldBuilder stringSetBuilder() {
-        return com.commercetools.importapi.models.customfields.StringSetFieldBuilder.of();
+       return com.commercetools.importapi.models.customfields.StringSetFieldBuilder.of();
     }
-
     public com.commercetools.importapi.models.customfields.TimeFieldBuilder timeBuilder() {
-        return com.commercetools.importapi.models.customfields.TimeFieldBuilder.of();
+       return com.commercetools.importapi.models.customfields.TimeFieldBuilder.of();
     }
-
     public com.commercetools.importapi.models.customfields.TimeSetFieldBuilder timeSetBuilder() {
-        return com.commercetools.importapi.models.customfields.TimeSetFieldBuilder.of();
+       return com.commercetools.importapi.models.customfields.TimeSetFieldBuilder.of();
     }
 
     /**
      * factory method for an instance of CustomFieldBuilder
-     * @return builder
+     * @return builder 
      */
     public static CustomFieldBuilder of() {
         return new CustomFieldBuilder();

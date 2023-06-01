@@ -1,9 +1,12 @@
-
 package com.commercetools.api.models.store;
 
+import com.commercetools.api.models.channel.ChannelResourceIdentifier;
+import com.commercetools.api.models.store.StoreUpdateAction;
+import com.commercetools.api.models.store.StoreAddSupplyChannelAction;
+import javax.annotation.Nullable;
 import java.util.*;
 import java.util.function.Function;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -17,56 +20,61 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .supplyChannel(supplyChannelBuilder -> supplyChannelBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class StoreAddSupplyChannelActionBuilder implements Builder<StoreAddSupplyChannelAction> {
 
+    
+    
     private com.commercetools.api.models.channel.ChannelResourceIdentifier supplyChannel;
 
+    
     /**
      *  <p>Value to append.</p>
      * @param builder function to build the supplyChannel value
      * @return Builder
      */
-
-    public StoreAddSupplyChannelActionBuilder supplyChannel(
-            Function<com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder, com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder> builder) {
-        this.supplyChannel = builder.apply(com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder.of())
-                .build();
+    
+    public StoreAddSupplyChannelActionBuilder supplyChannel(Function<com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder, com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder> builder) {
+        this.supplyChannel = builder.apply(com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder.of()).build();
         return this;
     }
-
+    
     /**
      *  <p>Value to append.</p>
      * @param builder function to build the supplyChannel value
      * @return Builder
      */
-
-    public StoreAddSupplyChannelActionBuilder withSupplyChannel(
-            Function<com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder, com.commercetools.api.models.channel.ChannelResourceIdentifier> builder) {
+    
+    public StoreAddSupplyChannelActionBuilder withSupplyChannel(Function<com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder, com.commercetools.api.models.channel.ChannelResourceIdentifier> builder) {
         this.supplyChannel = builder.apply(com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder.of());
         return this;
     }
-
+                    
     /**
      *  <p>Value to append.</p>
      * @param supplyChannel value to be set
      * @return Builder
      */
-
-    public StoreAddSupplyChannelActionBuilder supplyChannel(
-            final com.commercetools.api.models.channel.ChannelResourceIdentifier supplyChannel) {
+    
+    public StoreAddSupplyChannelActionBuilder supplyChannel( final com.commercetools.api.models.channel.ChannelResourceIdentifier supplyChannel) {
         this.supplyChannel = supplyChannel;
         return this;
     }
+    
+    
 
     /**
      *  <p>Value to append.</p>
      * @return supplyChannel
      */
-
-    public com.commercetools.api.models.channel.ChannelResourceIdentifier getSupplyChannel() {
+    
+    
+    public com.commercetools.api.models.channel.ChannelResourceIdentifier getSupplyChannel(){
         return this.supplyChannel;
     }
 
@@ -78,7 +86,7 @@ public class StoreAddSupplyChannelActionBuilder implements Builder<StoreAddSuppl
         Objects.requireNonNull(supplyChannel, StoreAddSupplyChannelAction.class + ": supplyChannel is missing");
         return new StoreAddSupplyChannelActionImpl(supplyChannel);
     }
-
+    
     /**
      * builds StoreAddSupplyChannelAction without checking for non-null required values
      * @return StoreAddSupplyChannelAction
@@ -89,7 +97,7 @@ public class StoreAddSupplyChannelActionBuilder implements Builder<StoreAddSuppl
 
     /**
      * factory method for an instance of StoreAddSupplyChannelActionBuilder
-     * @return builder
+     * @return builder 
      */
     public static StoreAddSupplyChannelActionBuilder of() {
         return new StoreAddSupplyChannelActionBuilder();

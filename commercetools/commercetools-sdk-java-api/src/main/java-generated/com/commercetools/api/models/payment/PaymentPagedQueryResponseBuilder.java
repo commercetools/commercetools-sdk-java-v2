@@ -1,11 +1,11 @@
-
 package com.commercetools.api.models.payment;
 
+import com.commercetools.api.models.payment.Payment;
+import com.commercetools.api.models.payment.PaymentPagedQueryResponse;
+import javax.annotation.Nullable;
 import java.util.*;
 import java.util.function.Function;
-
-import javax.annotation.Nullable;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -22,196 +22,222 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .plusResults(resultsBuilder -> resultsBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class PaymentPagedQueryResponseBuilder implements Builder<PaymentPagedQueryResponse> {
 
+    
+    
     private Long limit;
-
+    
+    
+    
     private Long count;
-
+    
+    
     @Nullable
     private Long total;
-
+    
+    
+    
     private Long offset;
-
+    
+    
+    
     private java.util.List<com.commercetools.api.models.payment.Payment> results;
 
+    
     /**
      *  <p>Number of results requested.</p>
      * @param limit value to be set
      * @return Builder
      */
-
-    public PaymentPagedQueryResponseBuilder limit(final Long limit) {
+    
+    public PaymentPagedQueryResponseBuilder limit( final Long limit) {
         this.limit = limit;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Actual number of results returned.</p>
      * @param count value to be set
      * @return Builder
      */
-
-    public PaymentPagedQueryResponseBuilder count(final Long count) {
+    
+    public PaymentPagedQueryResponseBuilder count( final Long count) {
         this.count = count;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Total number of results matching the query. This number is an estimation that is not strongly consistent. This field is returned by default. For improved performance, calculating this field can be deactivated by using the query parameter <code>withTotal=false</code>. When the results are filtered with a Query Predicate, <code>total</code> is subject to a limit.</p>
      * @param total value to be set
      * @return Builder
      */
-
+    
     public PaymentPagedQueryResponseBuilder total(@Nullable final Long total) {
         this.total = total;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Number of elements skipped.</p>
      * @param offset value to be set
      * @return Builder
      */
-
-    public PaymentPagedQueryResponseBuilder offset(final Long offset) {
+    
+    public PaymentPagedQueryResponseBuilder offset( final Long offset) {
         this.offset = offset;
         return this;
     }
-
+    
+    
+    
     /**
      *  <p>Payments matching the query.</p>
      * @param results value to be set
      * @return Builder
      */
-
-    public PaymentPagedQueryResponseBuilder results(final com.commercetools.api.models.payment.Payment... results) {
+    
+    public PaymentPagedQueryResponseBuilder results( final com.commercetools.api.models.payment.Payment ...results) {
         this.results = new ArrayList<>(Arrays.asList(results));
         return this;
     }
-
+    
     /**
      *  <p>Payments matching the query.</p>
      * @param results value to be set
      * @return Builder
      */
-
-    public PaymentPagedQueryResponseBuilder results(
-            final java.util.List<com.commercetools.api.models.payment.Payment> results) {
+    
+    public PaymentPagedQueryResponseBuilder results( final java.util.List<com.commercetools.api.models.payment.Payment> results) {
         this.results = results;
         return this;
     }
-
+    
     /**
      *  <p>Payments matching the query.</p>
      * @param results value to be set
      * @return Builder
      */
-
-    public PaymentPagedQueryResponseBuilder plusResults(final com.commercetools.api.models.payment.Payment... results) {
+    
+    public PaymentPagedQueryResponseBuilder plusResults( final com.commercetools.api.models.payment.Payment ...results) {
         if (this.results == null) {
             this.results = new ArrayList<>();
         }
         this.results.addAll(Arrays.asList(results));
         return this;
     }
-
+    
+    
+    
     /**
      *  <p>Payments matching the query.</p>
      * @param builder function to build the results value
      * @return Builder
      */
-
-    public PaymentPagedQueryResponseBuilder plusResults(
-            Function<com.commercetools.api.models.payment.PaymentBuilder, com.commercetools.api.models.payment.PaymentBuilder> builder) {
+    
+    public PaymentPagedQueryResponseBuilder plusResults(Function<com.commercetools.api.models.payment.PaymentBuilder, com.commercetools.api.models.payment.PaymentBuilder> builder) {
         if (this.results == null) {
             this.results = new ArrayList<>();
         }
         this.results.add(builder.apply(com.commercetools.api.models.payment.PaymentBuilder.of()).build());
         return this;
     }
-
+    
     /**
      *  <p>Payments matching the query.</p>
      * @param builder function to build the results value
      * @return Builder
      */
-
-    public PaymentPagedQueryResponseBuilder withResults(
-            Function<com.commercetools.api.models.payment.PaymentBuilder, com.commercetools.api.models.payment.PaymentBuilder> builder) {
+    
+    public PaymentPagedQueryResponseBuilder withResults(Function<com.commercetools.api.models.payment.PaymentBuilder, com.commercetools.api.models.payment.PaymentBuilder> builder) {
         this.results = new ArrayList<>();
         this.results.add(builder.apply(com.commercetools.api.models.payment.PaymentBuilder.of()).build());
         return this;
     }
-
+    
     /**
      *  <p>Payments matching the query.</p>
      * @param builder function to build the results value
      * @return Builder
      */
-
-    public PaymentPagedQueryResponseBuilder addResults(
-            Function<com.commercetools.api.models.payment.PaymentBuilder, com.commercetools.api.models.payment.Payment> builder) {
+    
+    public PaymentPagedQueryResponseBuilder addResults(Function<com.commercetools.api.models.payment.PaymentBuilder, com.commercetools.api.models.payment.Payment> builder) {
         return plusResults(builder.apply(com.commercetools.api.models.payment.PaymentBuilder.of()));
     }
-
+    
     /**
      *  <p>Payments matching the query.</p>
      * @param builder function to build the results value
      * @return Builder
      */
-
-    public PaymentPagedQueryResponseBuilder setResults(
-            Function<com.commercetools.api.models.payment.PaymentBuilder, com.commercetools.api.models.payment.Payment> builder) {
+    
+    public PaymentPagedQueryResponseBuilder setResults(Function<com.commercetools.api.models.payment.PaymentBuilder, com.commercetools.api.models.payment.Payment> builder) {
         return results(builder.apply(com.commercetools.api.models.payment.PaymentBuilder.of()));
     }
+                    
 
     /**
      *  <p>Number of results requested.</p>
      * @return limit
      */
-
-    public Long getLimit() {
+    
+    
+    public Long getLimit(){
         return this.limit;
     }
-
+    
     /**
      *  <p>Actual number of results returned.</p>
      * @return count
      */
-
-    public Long getCount() {
+    
+    
+    public Long getCount(){
         return this.count;
     }
-
+    
     /**
      *  <p>Total number of results matching the query. This number is an estimation that is not strongly consistent. This field is returned by default. For improved performance, calculating this field can be deactivated by using the query parameter <code>withTotal=false</code>. When the results are filtered with a Query Predicate, <code>total</code> is subject to a limit.</p>
      * @return total
      */
-
+    
     @Nullable
-    public Long getTotal() {
+    public Long getTotal(){
         return this.total;
     }
-
+    
     /**
      *  <p>Number of elements skipped.</p>
      * @return offset
      */
-
-    public Long getOffset() {
+    
+    
+    public Long getOffset(){
         return this.offset;
     }
-
+    
     /**
      *  <p>Payments matching the query.</p>
      * @return results
      */
-
-    public java.util.List<com.commercetools.api.models.payment.Payment> getResults() {
+    
+    
+    public java.util.List<com.commercetools.api.models.payment.Payment> getResults(){
         return this.results;
     }
 
@@ -226,7 +252,7 @@ public class PaymentPagedQueryResponseBuilder implements Builder<PaymentPagedQue
         Objects.requireNonNull(results, PaymentPagedQueryResponse.class + ": results is missing");
         return new PaymentPagedQueryResponseImpl(limit, count, total, offset, results);
     }
-
+    
     /**
      * builds PaymentPagedQueryResponse without checking for non-null required values
      * @return PaymentPagedQueryResponse
@@ -237,7 +263,7 @@ public class PaymentPagedQueryResponseBuilder implements Builder<PaymentPagedQue
 
     /**
      * factory method for an instance of PaymentPagedQueryResponseBuilder
-     * @return builder
+     * @return builder 
      */
     public static PaymentPagedQueryResponseBuilder of() {
         return new PaymentPagedQueryResponseBuilder();

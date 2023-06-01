@@ -1,17 +1,21 @@
-
 package com.commercetools.api.models.error;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
+import com.commercetools.api.models.error.ErrorObject;
+import java.lang.Object;
+import com.commercetools.api.models.error.InvalidFieldErrorImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Returned when a field has an invalid value.</p>
@@ -25,9 +29,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .field("{field}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = InvalidFieldErrorImpl.class)
 public interface InvalidFieldError extends ErrorObject {
 
@@ -43,7 +50,6 @@ public interface InvalidFieldError extends ErrorObject {
     @NotNull
     @JsonProperty("code")
     public String getCode();
-
     /**
      *  <p><code>"The value $invalidValue is not valid for field $field."</code></p>
      * @return message
@@ -51,7 +57,6 @@ public interface InvalidFieldError extends ErrorObject {
     @NotNull
     @JsonProperty("message")
     public String getMessage();
-
     /**
      *  <p>Name of the field with the invalid value.</p>
      * @return field
@@ -59,7 +64,6 @@ public interface InvalidFieldError extends ErrorObject {
     @NotNull
     @JsonProperty("field")
     public String getField();
-
     /**
      *  <p>Value invalid for the field.</p>
      * @return invalidValue
@@ -67,12 +71,11 @@ public interface InvalidFieldError extends ErrorObject {
     @NotNull
     @JsonProperty("invalidValue")
     public Object getInvalidValue();
-
     /**
      *  <p>Fixed set of allowed values for the field, if any.</p>
      * @return allowedValues
      */
-
+    
     @JsonProperty("allowedValues")
     public List<Object> getAllowedValues();
 
@@ -80,45 +83,48 @@ public interface InvalidFieldError extends ErrorObject {
      *  <p><code>"The value $invalidValue is not valid for field $field."</code></p>
      * @param message value to be set
      */
-
+    
     public void setMessage(final String message);
-
+    
+    
     /**
      *  <p>Name of the field with the invalid value.</p>
      * @param field value to be set
      */
-
+    
     public void setField(final String field);
-
+    
+    
     /**
      *  <p>Value invalid for the field.</p>
      * @param invalidValue value to be set
      */
-
+    
     public void setInvalidValue(final Object invalidValue);
-
+    
+    
     /**
      *  <p>Fixed set of allowed values for the field, if any.</p>
      * @param allowedValues values to be set
      */
-
+    
     @JsonIgnore
-    public void setAllowedValues(final Object... allowedValues);
-
+    public void setAllowedValues(final Object ...allowedValues);
     /**
      *  <p>Fixed set of allowed values for the field, if any.</p>
      * @param allowedValues values to be set
      */
-
+    
     public void setAllowedValues(final List<Object> allowedValues);
 
     /**
      * factory method
      * @return instance of InvalidFieldError
      */
-    public static InvalidFieldError of() {
+    public static InvalidFieldError of(){
         return new InvalidFieldErrorImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy InvalidFieldError
@@ -150,7 +156,9 @@ public interface InvalidFieldError extends ErrorObject {
         Optional.ofNullable(template.values()).ifPresent(t -> t.forEach(instance::setValue));
         instance.setField(template.getField());
         instance.setInvalidValue(template.getInvalidValue());
-        instance.setAllowedValues(Optional.ofNullable(template.getAllowedValues()).map(ArrayList::new).orElse(null));
+        instance.setAllowedValues(Optional.ofNullable(template.getAllowedValues())
+                .map(ArrayList::new)
+                .orElse(null));
         return instance;
     }
 
@@ -161,7 +169,7 @@ public interface InvalidFieldError extends ErrorObject {
     public static InvalidFieldErrorBuilder builder() {
         return InvalidFieldErrorBuilder.of();
     }
-
+    
     /**
      * create builder for InvalidFieldError instance
      * @param template instance with prefilled values for the builder
@@ -170,6 +178,7 @@ public interface InvalidFieldError extends ErrorObject {
     public static InvalidFieldErrorBuilder builder(final InvalidFieldError template) {
         return InvalidFieldErrorBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -180,7 +189,7 @@ public interface InvalidFieldError extends ErrorObject {
     default <T> T withInvalidFieldError(Function<InvalidFieldError, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

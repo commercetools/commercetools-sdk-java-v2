@@ -1,16 +1,17 @@
-
 package com.commercetools.api.client;
 
-import java.util.List;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import java.util.List;
 
 /**
  * ProjectionselectingTrait
  * @param <T> type of extending interface
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
-public interface ProjectionselectingTrait<T extends ProjectionselectingTrait<T>> {
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
+public interface ProjectionselectingTrait<T extends ProjectionselectingTrait<T>>  {
     List<String> getStaged();
 
     /**
@@ -20,7 +21,7 @@ public interface ProjectionselectingTrait<T extends ProjectionselectingTrait<T>>
      * @return ProjectionselectingTrait
      */
     <TValue> ProjectionselectingTrait<T> withStaged(final TValue staged);
-
+    
     /**
      * add additional staged query parameter
      * @param staged value to be added
@@ -29,13 +30,14 @@ public interface ProjectionselectingTrait<T extends ProjectionselectingTrait<T>>
      */
     <TValue> ProjectionselectingTrait<T> addStaged(final TValue staged);
 
+    
     default ProjectionselectingTrait<T> asProjectionselectingTrait() {
         return this;
     }
-
+    
     @SuppressWarnings("unchecked")
     default T asProjectionselectingTraitToBaseType() {
-        return (T) this;
+        return (T)this;
     }
-
+    
 }

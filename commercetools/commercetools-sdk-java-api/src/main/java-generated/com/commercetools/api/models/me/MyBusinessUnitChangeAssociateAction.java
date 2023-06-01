@@ -1,19 +1,21 @@
-
 package com.commercetools.api.models.me;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
 import com.commercetools.api.models.business_unit.AssociateDraft;
+import com.commercetools.api.models.me.MyBusinessUnitUpdateAction;
+import com.commercetools.api.models.me.MyBusinessUnitChangeAssociateActionImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Updating the Associate on a Business Unit generates the BusinessUnitAssociateChanged Message.</p>
@@ -26,9 +28,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .associate(associateBuilder -> associateBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = MyBusinessUnitChangeAssociateActionImpl.class)
 public interface MyBusinessUnitChangeAssociateAction extends MyBusinessUnitUpdateAction {
 
@@ -50,16 +55,18 @@ public interface MyBusinessUnitChangeAssociateAction extends MyBusinessUnitUpdat
      *  <p>The Associate to add.</p>
      * @param associate value to be set
      */
-
+    
     public void setAssociate(final AssociateDraft associate);
+    
 
     /**
      * factory method
      * @return instance of MyBusinessUnitChangeAssociateAction
      */
-    public static MyBusinessUnitChangeAssociateAction of() {
+    public static MyBusinessUnitChangeAssociateAction of(){
         return new MyBusinessUnitChangeAssociateActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy MyBusinessUnitChangeAssociateAction
@@ -78,14 +85,12 @@ public interface MyBusinessUnitChangeAssociateAction extends MyBusinessUnitUpdat
      * @return copy instance
      */
     @Nullable
-    public static MyBusinessUnitChangeAssociateAction deepCopy(
-            @Nullable final MyBusinessUnitChangeAssociateAction template) {
+    public static MyBusinessUnitChangeAssociateAction deepCopy(@Nullable final MyBusinessUnitChangeAssociateAction template) {
         if (template == null) {
             return null;
         }
         MyBusinessUnitChangeAssociateActionImpl instance = new MyBusinessUnitChangeAssociateActionImpl();
-        instance.setAssociate(
-            com.commercetools.api.models.business_unit.AssociateDraft.deepCopy(template.getAssociate()));
+        instance.setAssociate(com.commercetools.api.models.business_unit.AssociateDraft.deepCopy(template.getAssociate()));
         return instance;
     }
 
@@ -96,16 +101,16 @@ public interface MyBusinessUnitChangeAssociateAction extends MyBusinessUnitUpdat
     public static MyBusinessUnitChangeAssociateActionBuilder builder() {
         return MyBusinessUnitChangeAssociateActionBuilder.of();
     }
-
+    
     /**
      * create builder for MyBusinessUnitChangeAssociateAction instance
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static MyBusinessUnitChangeAssociateActionBuilder builder(
-            final MyBusinessUnitChangeAssociateAction template) {
+    public static MyBusinessUnitChangeAssociateActionBuilder builder(final MyBusinessUnitChangeAssociateAction template) {
         return MyBusinessUnitChangeAssociateActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -116,7 +121,7 @@ public interface MyBusinessUnitChangeAssociateAction extends MyBusinessUnitUpdat
     default <T> T withMyBusinessUnitChangeAssociateAction(Function<MyBusinessUnitChangeAssociateAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

@@ -1,19 +1,21 @@
-
 package com.commercetools.api.models.message;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
 import com.commercetools.api.models.category.CategoryReference;
+import com.commercetools.api.models.message.MessagePayload;
+import com.commercetools.api.models.message.ProductAddedToCategoryMessagePayloadImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Generated after a successful Add To Category update action.</p>
@@ -27,9 +29,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .staged(true)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = ProductAddedToCategoryMessagePayloadImpl.class)
 public interface ProductAddedToCategoryMessagePayload extends MessagePayload {
 
@@ -46,7 +51,6 @@ public interface ProductAddedToCategoryMessagePayload extends MessagePayload {
     @Valid
     @JsonProperty("category")
     public CategoryReference getCategory();
-
     /**
      *  <p>Whether the update was only applied to the staged Product Projection.</p>
      * @return staged
@@ -59,23 +63,26 @@ public interface ProductAddedToCategoryMessagePayload extends MessagePayload {
      *  <p>Category the Product was added to.</p>
      * @param category value to be set
      */
-
+    
     public void setCategory(final CategoryReference category);
-
+    
+    
     /**
      *  <p>Whether the update was only applied to the staged Product Projection.</p>
      * @param staged value to be set
      */
-
+    
     public void setStaged(final Boolean staged);
+    
 
     /**
      * factory method
      * @return instance of ProductAddedToCategoryMessagePayload
      */
-    public static ProductAddedToCategoryMessagePayload of() {
+    public static ProductAddedToCategoryMessagePayload of(){
         return new ProductAddedToCategoryMessagePayloadImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy ProductAddedToCategoryMessagePayload
@@ -95,8 +102,7 @@ public interface ProductAddedToCategoryMessagePayload extends MessagePayload {
      * @return copy instance
      */
     @Nullable
-    public static ProductAddedToCategoryMessagePayload deepCopy(
-            @Nullable final ProductAddedToCategoryMessagePayload template) {
+    public static ProductAddedToCategoryMessagePayload deepCopy(@Nullable final ProductAddedToCategoryMessagePayload template) {
         if (template == null) {
             return null;
         }
@@ -113,16 +119,16 @@ public interface ProductAddedToCategoryMessagePayload extends MessagePayload {
     public static ProductAddedToCategoryMessagePayloadBuilder builder() {
         return ProductAddedToCategoryMessagePayloadBuilder.of();
     }
-
+    
     /**
      * create builder for ProductAddedToCategoryMessagePayload instance
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static ProductAddedToCategoryMessagePayloadBuilder builder(
-            final ProductAddedToCategoryMessagePayload template) {
+    public static ProductAddedToCategoryMessagePayloadBuilder builder(final ProductAddedToCategoryMessagePayload template) {
         return ProductAddedToCategoryMessagePayloadBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -133,7 +139,7 @@ public interface ProductAddedToCategoryMessagePayload extends MessagePayload {
     default <T> T withProductAddedToCategoryMessagePayload(Function<ProductAddedToCategoryMessagePayload, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

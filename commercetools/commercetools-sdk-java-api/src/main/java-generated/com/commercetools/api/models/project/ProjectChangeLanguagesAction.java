@@ -1,17 +1,20 @@
-
 package com.commercetools.api.models.project;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
+import com.commercetools.api.models.project.ProjectUpdateAction;
+import com.commercetools.api.models.project.ProjectChangeLanguagesActionImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Removing a language used by a Store returns a LanguageUsedInStores error.</p>
@@ -24,9 +27,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .plusLanguages(languagesBuilder -> languagesBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = ProjectChangeLanguagesActionImpl.class)
 public interface ProjectChangeLanguagesAction extends ProjectUpdateAction {
 
@@ -47,24 +53,24 @@ public interface ProjectChangeLanguagesAction extends ProjectUpdateAction {
      *  <p>New value to set. Must not be empty.</p>
      * @param languages values to be set
      */
-
+    
     @JsonIgnore
-    public void setLanguages(final String... languages);
-
+    public void setLanguages(final String ...languages);
     /**
      *  <p>New value to set. Must not be empty.</p>
      * @param languages values to be set
      */
-
+    
     public void setLanguages(final List<String> languages);
 
     /**
      * factory method
      * @return instance of ProjectChangeLanguagesAction
      */
-    public static ProjectChangeLanguagesAction of() {
+    public static ProjectChangeLanguagesAction of(){
         return new ProjectChangeLanguagesActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy ProjectChangeLanguagesAction
@@ -88,7 +94,9 @@ public interface ProjectChangeLanguagesAction extends ProjectUpdateAction {
             return null;
         }
         ProjectChangeLanguagesActionImpl instance = new ProjectChangeLanguagesActionImpl();
-        instance.setLanguages(Optional.ofNullable(template.getLanguages()).map(ArrayList::new).orElse(null));
+        instance.setLanguages(Optional.ofNullable(template.getLanguages())
+                .map(ArrayList::new)
+                .orElse(null));
         return instance;
     }
 
@@ -99,7 +107,7 @@ public interface ProjectChangeLanguagesAction extends ProjectUpdateAction {
     public static ProjectChangeLanguagesActionBuilder builder() {
         return ProjectChangeLanguagesActionBuilder.of();
     }
-
+    
     /**
      * create builder for ProjectChangeLanguagesAction instance
      * @param template instance with prefilled values for the builder
@@ -108,6 +116,7 @@ public interface ProjectChangeLanguagesAction extends ProjectUpdateAction {
     public static ProjectChangeLanguagesActionBuilder builder(final ProjectChangeLanguagesAction template) {
         return ProjectChangeLanguagesActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -118,7 +127,7 @@ public interface ProjectChangeLanguagesAction extends ProjectUpdateAction {
     default <T> T withProjectChangeLanguagesAction(Function<ProjectChangeLanguagesAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

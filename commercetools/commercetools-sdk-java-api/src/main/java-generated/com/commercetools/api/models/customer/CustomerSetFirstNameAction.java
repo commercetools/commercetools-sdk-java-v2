@@ -1,16 +1,20 @@
-
 package com.commercetools.api.models.customer;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
+import com.commercetools.api.models.customer.CustomerUpdateAction;
+import com.commercetools.api.models.customer.CustomerSetFirstNameActionImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * CustomerSetFirstNameAction
@@ -22,9 +26,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     CustomerSetFirstNameAction customerSetFirstNameAction = CustomerSetFirstNameAction.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = CustomerSetFirstNameActionImpl.class)
 public interface CustomerSetFirstNameAction extends CustomerUpdateAction {
 
@@ -37,7 +44,7 @@ public interface CustomerSetFirstNameAction extends CustomerUpdateAction {
      *  <p>Value to set. If empty, any existing value is removed.</p>
      * @return firstName
      */
-
+    
     @JsonProperty("firstName")
     public String getFirstName();
 
@@ -45,16 +52,18 @@ public interface CustomerSetFirstNameAction extends CustomerUpdateAction {
      *  <p>Value to set. If empty, any existing value is removed.</p>
      * @param firstName value to be set
      */
-
+    
     public void setFirstName(final String firstName);
+    
 
     /**
      * factory method
      * @return instance of CustomerSetFirstNameAction
      */
-    public static CustomerSetFirstNameAction of() {
+    public static CustomerSetFirstNameAction of(){
         return new CustomerSetFirstNameActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy CustomerSetFirstNameAction
@@ -89,7 +98,7 @@ public interface CustomerSetFirstNameAction extends CustomerUpdateAction {
     public static CustomerSetFirstNameActionBuilder builder() {
         return CustomerSetFirstNameActionBuilder.of();
     }
-
+    
     /**
      * create builder for CustomerSetFirstNameAction instance
      * @param template instance with prefilled values for the builder
@@ -98,6 +107,7 @@ public interface CustomerSetFirstNameAction extends CustomerUpdateAction {
     public static CustomerSetFirstNameActionBuilder builder(final CustomerSetFirstNameAction template) {
         return CustomerSetFirstNameActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -108,7 +118,7 @@ public interface CustomerSetFirstNameAction extends CustomerUpdateAction {
     default <T> T withCustomerSetFirstNameAction(Function<CustomerSetFirstNameAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

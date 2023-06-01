@@ -1,19 +1,20 @@
-
 package com.commercetools.api.models.me;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-import java.util.stream.Collectors;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
+import com.commercetools.api.models.me.MyShoppingListUpdateAction;
+import com.commercetools.api.models.me.MyShoppingListUpdateImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * MyShoppingListUpdate
@@ -27,12 +28,15 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .plusActions(actionsBuilder -> actionsBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = MyShoppingListUpdateImpl.class)
-public interface MyShoppingListUpdate extends
-        com.commercetools.api.models.ResourceUpdate<MyShoppingListUpdate, MyShoppingListUpdateAction, MyShoppingListUpdateBuilder> {
+public interface MyShoppingListUpdate extends com.commercetools.api.models.ResourceUpdate<MyShoppingListUpdate, MyShoppingListUpdateAction, MyShoppingListUpdateBuilder> {
+
 
     /**
      *  <p>Expected version of the ShoppingList on which the changes should be applied. If the expected version does not match the actual version, a 409 Conflict will be returned.</p>
@@ -41,7 +45,6 @@ public interface MyShoppingListUpdate extends
     @NotNull
     @JsonProperty("version")
     public Long getVersion();
-
     /**
      *  <p>List of update actions to be performed on the ShoppingList.</p>
      * @return actions
@@ -55,31 +58,32 @@ public interface MyShoppingListUpdate extends
      *  <p>Expected version of the ShoppingList on which the changes should be applied. If the expected version does not match the actual version, a 409 Conflict will be returned.</p>
      * @param version value to be set
      */
-
+    
     public void setVersion(final Long version);
-
+    
+    
     /**
      *  <p>List of update actions to be performed on the ShoppingList.</p>
      * @param actions values to be set
      */
-
+    
     @JsonIgnore
-    public void setActions(final MyShoppingListUpdateAction... actions);
-
+    public void setActions(final MyShoppingListUpdateAction ...actions);
     /**
      *  <p>List of update actions to be performed on the ShoppingList.</p>
      * @param actions values to be set
      */
-
+    
     public void setActions(final List<MyShoppingListUpdateAction> actions);
 
     /**
      * factory method
      * @return instance of MyShoppingListUpdate
      */
-    public static MyShoppingListUpdate of() {
+    public static MyShoppingListUpdate of(){
         return new MyShoppingListUpdateImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy MyShoppingListUpdate
@@ -106,9 +110,7 @@ public interface MyShoppingListUpdate extends
         MyShoppingListUpdateImpl instance = new MyShoppingListUpdateImpl();
         instance.setVersion(template.getVersion());
         instance.setActions(Optional.ofNullable(template.getActions())
-                .map(t -> t.stream()
-                        .map(com.commercetools.api.models.me.MyShoppingListUpdateAction::deepCopy)
-                        .collect(Collectors.toList()))
+                .map(t -> t.stream().map(com.commercetools.api.models.me.MyShoppingListUpdateAction::deepCopy).collect(Collectors.toList()))
                 .orElse(null));
         return instance;
     }
@@ -120,7 +122,7 @@ public interface MyShoppingListUpdate extends
     public static MyShoppingListUpdateBuilder builder() {
         return MyShoppingListUpdateBuilder.of();
     }
-
+    
     /**
      * create builder for MyShoppingListUpdate instance
      * @param template instance with prefilled values for the builder
@@ -129,6 +131,7 @@ public interface MyShoppingListUpdate extends
     public static MyShoppingListUpdateBuilder builder(final MyShoppingListUpdate template) {
         return MyShoppingListUpdateBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -139,7 +142,7 @@ public interface MyShoppingListUpdate extends
     default <T> T withMyShoppingListUpdate(Function<MyShoppingListUpdate, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

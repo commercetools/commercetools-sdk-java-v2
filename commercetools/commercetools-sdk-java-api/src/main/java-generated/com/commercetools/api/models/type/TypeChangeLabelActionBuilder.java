@@ -1,9 +1,12 @@
-
 package com.commercetools.api.models.type;
 
+import com.commercetools.api.models.common.LocalizedString;
+import com.commercetools.api.models.type.TypeUpdateAction;
+import com.commercetools.api.models.type.TypeChangeLabelAction;
+import javax.annotation.Nullable;
 import java.util.*;
 import java.util.function.Function;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -18,76 +21,89 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .label(labelBuilder -> labelBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class TypeChangeLabelActionBuilder implements Builder<TypeChangeLabelAction> {
 
+    
+    
     private String fieldName;
-
+    
+    
+    
     private com.commercetools.api.models.common.LocalizedString label;
 
+    
     /**
      *  <p>Name of the Field Definition to update.</p>
      * @param fieldName value to be set
      * @return Builder
      */
-
-    public TypeChangeLabelActionBuilder fieldName(final String fieldName) {
+    
+    public TypeChangeLabelActionBuilder fieldName( final String fieldName) {
         this.fieldName = fieldName;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>JSON object where the keys are of type Locale, and the values are the strings used for the corresponding language.</p>
      * @param builder function to build the label value
      * @return Builder
      */
-
-    public TypeChangeLabelActionBuilder label(
-            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
+    
+    public TypeChangeLabelActionBuilder label(Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
         this.label = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of()).build();
         return this;
     }
-
+    
     /**
      *  <p>JSON object where the keys are of type Locale, and the values are the strings used for the corresponding language.</p>
      * @param builder function to build the label value
      * @return Builder
      */
-
-    public TypeChangeLabelActionBuilder withLabel(
-            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedString> builder) {
+    
+    public TypeChangeLabelActionBuilder withLabel(Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedString> builder) {
         this.label = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of());
         return this;
     }
-
+                    
     /**
      *  <p>JSON object where the keys are of type Locale, and the values are the strings used for the corresponding language.</p>
      * @param label value to be set
      * @return Builder
      */
-
-    public TypeChangeLabelActionBuilder label(final com.commercetools.api.models.common.LocalizedString label) {
+    
+    public TypeChangeLabelActionBuilder label( final com.commercetools.api.models.common.LocalizedString label) {
         this.label = label;
         return this;
     }
+    
+    
 
     /**
      *  <p>Name of the Field Definition to update.</p>
      * @return fieldName
      */
-
-    public String getFieldName() {
+    
+    
+    public String getFieldName(){
         return this.fieldName;
     }
-
+    
     /**
      *  <p>JSON object where the keys are of type Locale, and the values are the strings used for the corresponding language.</p>
      * @return label
      */
-
-    public com.commercetools.api.models.common.LocalizedString getLabel() {
+    
+    
+    public com.commercetools.api.models.common.LocalizedString getLabel(){
         return this.label;
     }
 
@@ -100,7 +116,7 @@ public class TypeChangeLabelActionBuilder implements Builder<TypeChangeLabelActi
         Objects.requireNonNull(label, TypeChangeLabelAction.class + ": label is missing");
         return new TypeChangeLabelActionImpl(fieldName, label);
     }
-
+    
     /**
      * builds TypeChangeLabelAction without checking for non-null required values
      * @return TypeChangeLabelAction
@@ -111,7 +127,7 @@ public class TypeChangeLabelActionBuilder implements Builder<TypeChangeLabelActi
 
     /**
      * factory method for an instance of TypeChangeLabelActionBuilder
-     * @return builder
+     * @return builder 
      */
     public static TypeChangeLabelActionBuilder of() {
         return new TypeChangeLabelActionBuilder();

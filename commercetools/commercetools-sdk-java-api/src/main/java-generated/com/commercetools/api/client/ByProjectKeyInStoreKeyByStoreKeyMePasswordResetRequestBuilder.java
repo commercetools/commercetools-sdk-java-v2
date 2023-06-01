@@ -1,39 +1,43 @@
-
 package com.commercetools.api.client;
 
+import java.util.ArrayList;
+import java.util.List;
+import java.util.function.Function;
 import java.util.function.UnaryOperator;
 
 import io.vrap.rmf.base.client.ApiHttpClient;
+import io.vrap.rmf.base.client.ApiMethod;
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
-public class ByProjectKeyInStoreKeyByStoreKeyMePasswordResetRequestBuilder {
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
+public class ByProjectKeyInStoreKeyByStoreKeyMePasswordResetRequestBuilder  {
 
     private final ApiHttpClient apiHttpClient;
     private final String projectKey;
     private final String storeKey;
+    
 
-    public ByProjectKeyInStoreKeyByStoreKeyMePasswordResetRequestBuilder(final ApiHttpClient apiHttpClient,
-            final String projectKey, final String storeKey) {
+    public ByProjectKeyInStoreKeyByStoreKeyMePasswordResetRequestBuilder (final ApiHttpClient apiHttpClient,final String projectKey,final String storeKey) {
         this.apiHttpClient = apiHttpClient;
         this.projectKey = projectKey;
         this.storeKey = storeKey;
     }
 
-    public ByProjectKeyInStoreKeyByStoreKeyMePasswordResetPost post(
-            com.commercetools.api.models.customer.MyCustomerResetPassword myCustomerResetPassword) {
-        return new ByProjectKeyInStoreKeyByStoreKeyMePasswordResetPost(apiHttpClient, projectKey, storeKey,
-            myCustomerResetPassword);
+    public ByProjectKeyInStoreKeyByStoreKeyMePasswordResetPost post(com.commercetools.api.models.customer.MyCustomerResetPassword myCustomerResetPassword) {
+        return new ByProjectKeyInStoreKeyByStoreKeyMePasswordResetPost(apiHttpClient, projectKey, storeKey, myCustomerResetPassword);
     }
-
+    
+    
     public ByProjectKeyInStoreKeyByStoreKeyMePasswordResetPostString post(final String myCustomerResetPassword) {
-        return new ByProjectKeyInStoreKeyByStoreKeyMePasswordResetPostString(apiHttpClient, projectKey, storeKey,
-            myCustomerResetPassword);
+        return new ByProjectKeyInStoreKeyByStoreKeyMePasswordResetPostString(apiHttpClient, projectKey, storeKey, myCustomerResetPassword);
     }
-
-    public ByProjectKeyInStoreKeyByStoreKeyMePasswordResetPost post(
-            UnaryOperator<com.commercetools.api.models.customer.MyCustomerResetPasswordBuilder> op) {
+    public ByProjectKeyInStoreKeyByStoreKeyMePasswordResetPost post(UnaryOperator<com.commercetools.api.models.customer.MyCustomerResetPasswordBuilder> op) {
         return post(op.apply(com.commercetools.api.models.customer.MyCustomerResetPasswordBuilder.of()).build());
     }
 
+    
 }

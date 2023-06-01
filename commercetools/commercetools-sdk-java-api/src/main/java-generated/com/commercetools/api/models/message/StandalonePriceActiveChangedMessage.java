@@ -1,17 +1,20 @@
-
 package com.commercetools.api.models.message;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
+import com.commercetools.api.models.message.Message;
+import com.commercetools.api.models.message.StandalonePriceActiveChangedMessageImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Generated after a successful Change Active update action.</p>
@@ -32,9 +35,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .oldActive(true)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = StandalonePriceActiveChangedMessageImpl.class)
 public interface StandalonePriceActiveChangedMessage extends Message {
 
@@ -50,7 +56,6 @@ public interface StandalonePriceActiveChangedMessage extends Message {
     @NotNull
     @JsonProperty("active")
     public Boolean getActive();
-
     /**
      *  <p>Value of the <code>active</code> field of the StandalonePrice before the Change Active update action.</p>
      * @return oldActive
@@ -63,23 +68,26 @@ public interface StandalonePriceActiveChangedMessage extends Message {
      *  <p>Value of the <code>active</code> field of the StandalonePrice after the Change Active update action.</p>
      * @param active value to be set
      */
-
+    
     public void setActive(final Boolean active);
-
+    
+    
     /**
      *  <p>Value of the <code>active</code> field of the StandalonePrice before the Change Active update action.</p>
      * @param oldActive value to be set
      */
-
+    
     public void setOldActive(final Boolean oldActive);
+    
 
     /**
      * factory method
      * @return instance of StandalonePriceActiveChangedMessage
      */
-    public static StandalonePriceActiveChangedMessage of() {
+    public static StandalonePriceActiveChangedMessage of(){
         return new StandalonePriceActiveChangedMessageImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy StandalonePriceActiveChangedMessage
@@ -109,8 +117,7 @@ public interface StandalonePriceActiveChangedMessage extends Message {
      * @return copy instance
      */
     @Nullable
-    public static StandalonePriceActiveChangedMessage deepCopy(
-            @Nullable final StandalonePriceActiveChangedMessage template) {
+    public static StandalonePriceActiveChangedMessage deepCopy(@Nullable final StandalonePriceActiveChangedMessage template) {
         if (template == null) {
             return null;
         }
@@ -119,14 +126,12 @@ public interface StandalonePriceActiveChangedMessage extends Message {
         instance.setVersion(template.getVersion());
         instance.setCreatedAt(template.getCreatedAt());
         instance.setLastModifiedAt(template.getLastModifiedAt());
-        instance.setLastModifiedBy(
-            com.commercetools.api.models.common.LastModifiedBy.deepCopy(template.getLastModifiedBy()));
+        instance.setLastModifiedBy(com.commercetools.api.models.common.LastModifiedBy.deepCopy(template.getLastModifiedBy()));
         instance.setCreatedBy(com.commercetools.api.models.common.CreatedBy.deepCopy(template.getCreatedBy()));
         instance.setSequenceNumber(template.getSequenceNumber());
         instance.setResource(com.commercetools.api.models.common.Reference.deepCopy(template.getResource()));
         instance.setResourceVersion(template.getResourceVersion());
-        instance.setResourceUserProvidedIdentifiers(com.commercetools.api.models.message.UserProvidedIdentifiers
-                .deepCopy(template.getResourceUserProvidedIdentifiers()));
+        instance.setResourceUserProvidedIdentifiers(com.commercetools.api.models.message.UserProvidedIdentifiers.deepCopy(template.getResourceUserProvidedIdentifiers()));
         instance.setActive(template.getActive());
         instance.setOldActive(template.getOldActive());
         return instance;
@@ -139,16 +144,16 @@ public interface StandalonePriceActiveChangedMessage extends Message {
     public static StandalonePriceActiveChangedMessageBuilder builder() {
         return StandalonePriceActiveChangedMessageBuilder.of();
     }
-
+    
     /**
      * create builder for StandalonePriceActiveChangedMessage instance
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static StandalonePriceActiveChangedMessageBuilder builder(
-            final StandalonePriceActiveChangedMessage template) {
+    public static StandalonePriceActiveChangedMessageBuilder builder(final StandalonePriceActiveChangedMessage template) {
         return StandalonePriceActiveChangedMessageBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -159,7 +164,7 @@ public interface StandalonePriceActiveChangedMessage extends Message {
     default <T> T withStandalonePriceActiveChangedMessage(Function<StandalonePriceActiveChangedMessage, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

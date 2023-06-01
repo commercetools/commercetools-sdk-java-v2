@@ -1,16 +1,20 @@
-
 package com.commercetools.api.models.me;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
+import com.commercetools.api.models.me.MyBusinessUnitUpdateAction;
+import com.commercetools.api.models.me.MyBusinessUnitRemoveAddressActionImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Removing the address from a Business Unit generates the BusinessUnitAddressRemoved Message.</p>
@@ -22,9 +26,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     MyBusinessUnitRemoveAddressAction myBusinessUnitRemoveAddressAction = MyBusinessUnitRemoveAddressAction.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = MyBusinessUnitRemoveAddressActionImpl.class)
 public interface MyBusinessUnitRemoveAddressAction extends MyBusinessUnitUpdateAction {
 
@@ -37,15 +44,14 @@ public interface MyBusinessUnitRemoveAddressAction extends MyBusinessUnitUpdateA
      *  <p>ID of the address to be removed. Either <code>addressId</code> or <code>addressKey</code> is required.</p>
      * @return addressId
      */
-
+    
     @JsonProperty("addressId")
     public String getAddressId();
-
     /**
      *  <p>Key of the address to be removed. Either <code>addressId</code> or <code>addressKey</code> is required.</p>
      * @return addressKey
      */
-
+    
     @JsonProperty("addressKey")
     public String getAddressKey();
 
@@ -53,23 +59,26 @@ public interface MyBusinessUnitRemoveAddressAction extends MyBusinessUnitUpdateA
      *  <p>ID of the address to be removed. Either <code>addressId</code> or <code>addressKey</code> is required.</p>
      * @param addressId value to be set
      */
-
+    
     public void setAddressId(final String addressId);
-
+    
+    
     /**
      *  <p>Key of the address to be removed. Either <code>addressId</code> or <code>addressKey</code> is required.</p>
      * @param addressKey value to be set
      */
-
+    
     public void setAddressKey(final String addressKey);
+    
 
     /**
      * factory method
      * @return instance of MyBusinessUnitRemoveAddressAction
      */
-    public static MyBusinessUnitRemoveAddressAction of() {
+    public static MyBusinessUnitRemoveAddressAction of(){
         return new MyBusinessUnitRemoveAddressActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy MyBusinessUnitRemoveAddressAction
@@ -89,8 +98,7 @@ public interface MyBusinessUnitRemoveAddressAction extends MyBusinessUnitUpdateA
      * @return copy instance
      */
     @Nullable
-    public static MyBusinessUnitRemoveAddressAction deepCopy(
-            @Nullable final MyBusinessUnitRemoveAddressAction template) {
+    public static MyBusinessUnitRemoveAddressAction deepCopy(@Nullable final MyBusinessUnitRemoveAddressAction template) {
         if (template == null) {
             return null;
         }
@@ -107,7 +115,7 @@ public interface MyBusinessUnitRemoveAddressAction extends MyBusinessUnitUpdateA
     public static MyBusinessUnitRemoveAddressActionBuilder builder() {
         return MyBusinessUnitRemoveAddressActionBuilder.of();
     }
-
+    
     /**
      * create builder for MyBusinessUnitRemoveAddressAction instance
      * @param template instance with prefilled values for the builder
@@ -116,6 +124,7 @@ public interface MyBusinessUnitRemoveAddressAction extends MyBusinessUnitUpdateA
     public static MyBusinessUnitRemoveAddressActionBuilder builder(final MyBusinessUnitRemoveAddressAction template) {
         return MyBusinessUnitRemoveAddressActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -126,7 +135,7 @@ public interface MyBusinessUnitRemoveAddressAction extends MyBusinessUnitUpdateA
     default <T> T withMyBusinessUnitRemoveAddressAction(Function<MyBusinessUnitRemoveAddressAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

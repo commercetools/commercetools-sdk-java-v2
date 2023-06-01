@@ -1,9 +1,12 @@
-
 package com.commercetools.importapi.models.customfields;
 
+import com.commercetools.importapi.models.common.LocalizedString;
+import com.commercetools.importapi.models.customfields.CustomField;
+import com.commercetools.importapi.models.customfields.LocalizedStringField;
+import javax.annotation.Nullable;
 import java.util.*;
 import java.util.function.Function;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -17,13 +20,19 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .value(valueBuilder -> valueBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class LocalizedStringFieldBuilder implements Builder<LocalizedStringField> {
 
+    
+    
     private com.commercetools.importapi.models.common.LocalizedString value;
 
+    
     /**
      *  <p>A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</p>
      *  <pre><code>{
@@ -34,13 +43,12 @@ public class LocalizedStringFieldBuilder implements Builder<LocalizedStringField
      * @param builder function to build the value value
      * @return Builder
      */
-
-    public LocalizedStringFieldBuilder value(
-            Function<com.commercetools.importapi.models.common.LocalizedStringBuilder, com.commercetools.importapi.models.common.LocalizedStringBuilder> builder) {
+    
+    public LocalizedStringFieldBuilder value(Function<com.commercetools.importapi.models.common.LocalizedStringBuilder, com.commercetools.importapi.models.common.LocalizedStringBuilder> builder) {
         this.value = builder.apply(com.commercetools.importapi.models.common.LocalizedStringBuilder.of()).build();
         return this;
     }
-
+    
     /**
      *  <p>A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</p>
      *  <pre><code>{
@@ -51,13 +59,12 @@ public class LocalizedStringFieldBuilder implements Builder<LocalizedStringField
      * @param builder function to build the value value
      * @return Builder
      */
-
-    public LocalizedStringFieldBuilder withValue(
-            Function<com.commercetools.importapi.models.common.LocalizedStringBuilder, com.commercetools.importapi.models.common.LocalizedString> builder) {
+    
+    public LocalizedStringFieldBuilder withValue(Function<com.commercetools.importapi.models.common.LocalizedStringBuilder, com.commercetools.importapi.models.common.LocalizedString> builder) {
         this.value = builder.apply(com.commercetools.importapi.models.common.LocalizedStringBuilder.of());
         return this;
     }
-
+                    
     /**
      *  <p>A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</p>
      *  <pre><code>{
@@ -68,11 +75,13 @@ public class LocalizedStringFieldBuilder implements Builder<LocalizedStringField
      * @param value value to be set
      * @return Builder
      */
-
-    public LocalizedStringFieldBuilder value(final com.commercetools.importapi.models.common.LocalizedString value) {
+    
+    public LocalizedStringFieldBuilder value( final com.commercetools.importapi.models.common.LocalizedString value) {
         this.value = value;
         return this;
     }
+    
+    
 
     /**
      *  <p>A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</p>
@@ -83,8 +92,9 @@ public class LocalizedStringFieldBuilder implements Builder<LocalizedStringField
      *  </code></pre>
      * @return value
      */
-
-    public com.commercetools.importapi.models.common.LocalizedString getValue() {
+    
+    
+    public com.commercetools.importapi.models.common.LocalizedString getValue(){
         return this.value;
     }
 
@@ -96,7 +106,7 @@ public class LocalizedStringFieldBuilder implements Builder<LocalizedStringField
         Objects.requireNonNull(value, LocalizedStringField.class + ": value is missing");
         return new LocalizedStringFieldImpl(value);
     }
-
+    
     /**
      * builds LocalizedStringField without checking for non-null required values
      * @return LocalizedStringField
@@ -107,7 +117,7 @@ public class LocalizedStringFieldBuilder implements Builder<LocalizedStringField
 
     /**
      * factory method for an instance of LocalizedStringFieldBuilder
-     * @return builder
+     * @return builder 
      */
     public static LocalizedStringFieldBuilder of() {
         return new LocalizedStringFieldBuilder();

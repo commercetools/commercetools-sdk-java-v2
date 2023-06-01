@@ -1,20 +1,22 @@
-
 package com.commercetools.api.models.project;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-import java.util.stream.Collectors;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
+import com.commercetools.api.models.project.ShippingRateInputType;
+import com.commercetools.api.models.shipping_method.ShippingRateTierType;
 import com.commercetools.api.models.type.CustomFieldLocalizedEnumValue;
+import com.commercetools.api.models.project.CartClassificationTypeImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Used when the ShippingRate maps to an abstract Cart categorization expressed by strings (for example, <code>Light</code>, <code>Medium</code>, or <code>Heavy</code>). Only keys defined in the <code>values</code> array can be used to create a tier or to set a value of the <code>shippingRateInput</code> on the Cart. Keys must be unique.</p>
@@ -27,9 +29,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .plusValues(valuesBuilder -> valuesBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = CartClassificationTypeImpl.class)
 public interface CartClassificationType extends ShippingRateInputType {
 
@@ -51,24 +56,24 @@ public interface CartClassificationType extends ShippingRateInputType {
      *  <p>The classification items that can be used for specifying any ShippingRatePriceTier.</p>
      * @param values values to be set
      */
-
+    
     @JsonIgnore
-    public void setValues(final CustomFieldLocalizedEnumValue... values);
-
+    public void setValues(final CustomFieldLocalizedEnumValue ...values);
     /**
      *  <p>The classification items that can be used for specifying any ShippingRatePriceTier.</p>
      * @param values values to be set
      */
-
+    
     public void setValues(final List<CustomFieldLocalizedEnumValue> values);
 
     /**
      * factory method
      * @return instance of CartClassificationType
      */
-    public static CartClassificationType of() {
+    public static CartClassificationType of(){
         return new CartClassificationTypeImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy CartClassificationType
@@ -93,9 +98,7 @@ public interface CartClassificationType extends ShippingRateInputType {
         }
         CartClassificationTypeImpl instance = new CartClassificationTypeImpl();
         instance.setValues(Optional.ofNullable(template.getValues())
-                .map(t -> t.stream()
-                        .map(com.commercetools.api.models.type.CustomFieldLocalizedEnumValue::deepCopy)
-                        .collect(Collectors.toList()))
+                .map(t -> t.stream().map(com.commercetools.api.models.type.CustomFieldLocalizedEnumValue::deepCopy).collect(Collectors.toList()))
                 .orElse(null));
         return instance;
     }
@@ -107,7 +110,7 @@ public interface CartClassificationType extends ShippingRateInputType {
     public static CartClassificationTypeBuilder builder() {
         return CartClassificationTypeBuilder.of();
     }
-
+    
     /**
      * create builder for CartClassificationType instance
      * @param template instance with prefilled values for the builder
@@ -116,6 +119,7 @@ public interface CartClassificationType extends ShippingRateInputType {
     public static CartClassificationTypeBuilder builder(final CartClassificationType template) {
         return CartClassificationTypeBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -126,7 +130,7 @@ public interface CartClassificationType extends ShippingRateInputType {
     default <T> T withCartClassificationType(Function<CartClassificationType, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

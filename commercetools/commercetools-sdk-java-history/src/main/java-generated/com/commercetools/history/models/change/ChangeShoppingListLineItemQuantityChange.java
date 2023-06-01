@@ -1,19 +1,21 @@
-
 package com.commercetools.history.models.change;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
+import com.commercetools.history.models.change.Change;
 import com.commercetools.history.models.change_value.ShoppingListLineItemValue;
+import com.commercetools.history.models.change.ChangeShoppingListLineItemQuantityChangeImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * ChangeShoppingListLineItemQuantityChange
@@ -29,9 +31,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .nextValue(1)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = ChangeShoppingListLineItemQuantityChangeImpl.class)
 public interface ChangeShoppingListLineItemQuantityChange extends Change {
 
@@ -47,7 +52,6 @@ public interface ChangeShoppingListLineItemQuantityChange extends Change {
     @NotNull
     @JsonProperty("type")
     public String getType();
-
     /**
      *
      * @return change
@@ -55,7 +59,6 @@ public interface ChangeShoppingListLineItemQuantityChange extends Change {
     @NotNull
     @JsonProperty("change")
     public String getChange();
-
     /**
      *
      * @return lineItem
@@ -64,7 +67,6 @@ public interface ChangeShoppingListLineItemQuantityChange extends Change {
     @Valid
     @JsonProperty("lineItem")
     public ShoppingListLineItemValue getLineItem();
-
     /**
      *
      * @return previousValue
@@ -72,7 +74,6 @@ public interface ChangeShoppingListLineItemQuantityChange extends Change {
     @NotNull
     @JsonProperty("previousValue")
     public Integer getPreviousValue();
-
     /**
      *
      * @return nextValue
@@ -85,37 +86,42 @@ public interface ChangeShoppingListLineItemQuantityChange extends Change {
      * set change
      * @param change value to be set
      */
-
+    
     public void setChange(final String change);
-
+    
+    
     /**
      * set lineItem
      * @param lineItem value to be set
      */
-
+    
     public void setLineItem(final ShoppingListLineItemValue lineItem);
-
+    
+    
     /**
      * set previousValue
      * @param previousValue value to be set
      */
-
+    
     public void setPreviousValue(final Integer previousValue);
-
+    
+    
     /**
      * set nextValue
      * @param nextValue value to be set
      */
-
+    
     public void setNextValue(final Integer nextValue);
+    
 
     /**
      * factory method
      * @return instance of ChangeShoppingListLineItemQuantityChange
      */
-    public static ChangeShoppingListLineItemQuantityChange of() {
+    public static ChangeShoppingListLineItemQuantityChange of(){
         return new ChangeShoppingListLineItemQuantityChangeImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy ChangeShoppingListLineItemQuantityChange
@@ -137,15 +143,13 @@ public interface ChangeShoppingListLineItemQuantityChange extends Change {
      * @return copy instance
      */
     @Nullable
-    public static ChangeShoppingListLineItemQuantityChange deepCopy(
-            @Nullable final ChangeShoppingListLineItemQuantityChange template) {
+    public static ChangeShoppingListLineItemQuantityChange deepCopy(@Nullable final ChangeShoppingListLineItemQuantityChange template) {
         if (template == null) {
             return null;
         }
         ChangeShoppingListLineItemQuantityChangeImpl instance = new ChangeShoppingListLineItemQuantityChangeImpl();
         instance.setChange(template.getChange());
-        instance.setLineItem(
-            com.commercetools.history.models.change_value.ShoppingListLineItemValue.deepCopy(template.getLineItem()));
+        instance.setLineItem(com.commercetools.history.models.change_value.ShoppingListLineItemValue.deepCopy(template.getLineItem()));
         instance.setPreviousValue(template.getPreviousValue());
         instance.setNextValue(template.getNextValue());
         return instance;
@@ -158,16 +162,16 @@ public interface ChangeShoppingListLineItemQuantityChange extends Change {
     public static ChangeShoppingListLineItemQuantityChangeBuilder builder() {
         return ChangeShoppingListLineItemQuantityChangeBuilder.of();
     }
-
+    
     /**
      * create builder for ChangeShoppingListLineItemQuantityChange instance
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static ChangeShoppingListLineItemQuantityChangeBuilder builder(
-            final ChangeShoppingListLineItemQuantityChange template) {
+    public static ChangeShoppingListLineItemQuantityChangeBuilder builder(final ChangeShoppingListLineItemQuantityChange template) {
         return ChangeShoppingListLineItemQuantityChangeBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -175,11 +179,10 @@ public interface ChangeShoppingListLineItemQuantityChange extends Change {
      * @param helper function to map the object
      * @return mapped value
      */
-    default <T> T withChangeShoppingListLineItemQuantityChange(
-            Function<ChangeShoppingListLineItemQuantityChange, T> helper) {
+    default <T> T withChangeShoppingListLineItemQuantityChange(Function<ChangeShoppingListLineItemQuantityChange, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

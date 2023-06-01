@@ -1,10 +1,11 @@
-
 package com.commercetools.api.models.order_edit;
 
-import java.util.*;
-
+import com.commercetools.api.models.order.StagedOrderUpdateAction;
+import com.commercetools.api.models.order_edit.StagedOrderSetCustomerEmailAction;
 import javax.annotation.Nullable;
-
+import java.util.*;
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -17,32 +18,39 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     StagedOrderSetCustomerEmailAction stagedOrderSetCustomerEmailAction = StagedOrderSetCustomerEmailAction.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class StagedOrderSetCustomerEmailActionBuilder implements Builder<StagedOrderSetCustomerEmailAction> {
 
+    
     @Nullable
     private String email;
 
+    
     /**
      * set the value to the email
      * @param email value to be set
      * @return Builder
      */
-
+    
     public StagedOrderSetCustomerEmailActionBuilder email(@Nullable final String email) {
         this.email = email;
         return this;
     }
+    
+    
 
     /**
      * value of email}
      * @return email
      */
-
+    
     @Nullable
-    public String getEmail() {
+    public String getEmail(){
         return this.email;
     }
 
@@ -53,7 +61,7 @@ public class StagedOrderSetCustomerEmailActionBuilder implements Builder<StagedO
     public StagedOrderSetCustomerEmailAction build() {
         return new StagedOrderSetCustomerEmailActionImpl(email);
     }
-
+    
     /**
      * builds StagedOrderSetCustomerEmailAction without checking for non-null required values
      * @return StagedOrderSetCustomerEmailAction
@@ -64,7 +72,7 @@ public class StagedOrderSetCustomerEmailActionBuilder implements Builder<StagedO
 
     /**
      * factory method for an instance of StagedOrderSetCustomerEmailActionBuilder
-     * @return builder
+     * @return builder 
      */
     public static StagedOrderSetCustomerEmailActionBuilder of() {
         return new StagedOrderSetCustomerEmailActionBuilder();

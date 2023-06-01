@@ -1,49 +1,58 @@
-
 package com.commercetools.importapi.models.common;
 
-import java.time.*;
-import java.util.*;
-
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
-
-import io.vrap.rmf.base.client.ModelBase;
+import com.commercetools.importapi.models.common.MoneyType;
+import com.commercetools.importapi.models.common.TypedMoney;
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.ModelBase;
+import javax.validation.Valid;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.annotation.*;
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
  * HighPrecisionMoney
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class HighPrecisionMoneyImpl implements HighPrecisionMoney, ModelBase {
 
+    
     private com.commercetools.importapi.models.common.MoneyType type;
-
+    
+    
     private Integer fractionDigits;
-
+    
+    
     private Long centAmount;
-
+    
+    
     private String currencyCode;
-
+    
+    
     private Long preciseAmount;
 
     /**
      * create instance with all properties
      */
     @JsonCreator
-    HighPrecisionMoneyImpl(@JsonProperty("fractionDigits") final Integer fractionDigits,
-            @JsonProperty("centAmount") final Long centAmount, @JsonProperty("currencyCode") final String currencyCode,
-            @JsonProperty("preciseAmount") final Long preciseAmount) {
+    HighPrecisionMoneyImpl(@JsonProperty("fractionDigits") final Integer fractionDigits, @JsonProperty("centAmount") final Long centAmount, @JsonProperty("currencyCode") final String currencyCode, @JsonProperty("preciseAmount") final Long preciseAmount) {
         this.fractionDigits = fractionDigits;
         this.centAmount = centAmount;
         this.currencyCode = currencyCode;
         this.preciseAmount = preciseAmount;
         this.type = MoneyType.findEnum("highPrecision");
     }
-
     /**
      * create empty instance
      */
@@ -54,85 +63,89 @@ public class HighPrecisionMoneyImpl implements HighPrecisionMoney, ModelBase {
     /**
      *
      */
-
-    public com.commercetools.importapi.models.common.MoneyType getType() {
+    
+    public com.commercetools.importapi.models.common.MoneyType getType(){
         return this.type;
     }
-
+    
     /**
      *
      */
-
-    public Integer getFractionDigits() {
+    
+    public Integer getFractionDigits(){
         return this.fractionDigits;
     }
-
+    
     /**
      *
      */
-
-    public Long getCentAmount() {
+    
+    public Long getCentAmount(){
         return this.centAmount;
     }
-
+    
     /**
      *  <p>The currency code compliant to ISO 4217.</p>
      */
-
-    public String getCurrencyCode() {
+    
+    public String getCurrencyCode(){
         return this.currencyCode;
     }
-
+    
     /**
      *
      */
-
-    public Long getPreciseAmount() {
+    
+    public Long getPreciseAmount(){
         return this.preciseAmount;
     }
 
-    public void setFractionDigits(final Integer fractionDigits) {
+    
+    public void setFractionDigits(final Integer fractionDigits){
         this.fractionDigits = fractionDigits;
     }
-
-    public void setCentAmount(final Long centAmount) {
+    
+    
+    public void setCentAmount(final Long centAmount){
         this.centAmount = centAmount;
     }
-
-    public void setCurrencyCode(final String currencyCode) {
+    
+    
+    public void setCurrencyCode(final String currencyCode){
         this.currencyCode = currencyCode;
     }
-
-    public void setPreciseAmount(final Long preciseAmount) {
+    
+    
+    public void setPreciseAmount(final Long preciseAmount){
         this.preciseAmount = preciseAmount;
     }
 
     @Override
     public boolean equals(Object o) {
-        if (this == o)
-            return true;
-
-        if (o == null || getClass() != o.getClass())
-            return false;
-
+        if (this == o) return true;
+    
+        if (o == null || getClass() != o.getClass()) return false;
+    
         HighPrecisionMoneyImpl that = (HighPrecisionMoneyImpl) o;
-
-        return new EqualsBuilder().append(type, that.type)
+    
+        return new EqualsBuilder()
+                .append(type, that.type)
                 .append(fractionDigits, that.fractionDigits)
                 .append(centAmount, that.centAmount)
                 .append(currencyCode, that.currencyCode)
                 .append(preciseAmount, that.preciseAmount)
                 .isEquals();
     }
-
+    
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(type)
-                .append(fractionDigits)
-                .append(centAmount)
-                .append(currencyCode)
-                .append(preciseAmount)
-                .toHashCode();
+        return new HashCodeBuilder(17, 37)
+            .append(type)
+            .append(fractionDigits)
+            .append(centAmount)
+            .append(currencyCode)
+            .append(preciseAmount)
+            .toHashCode();
     }
 
 }

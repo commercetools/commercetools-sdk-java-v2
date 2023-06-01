@@ -1,19 +1,21 @@
-
 package com.commercetools.api.models.message;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
 import com.commercetools.api.models.common.Address;
+import com.commercetools.api.models.message.MessagePayload;
+import com.commercetools.api.models.message.BusinessUnitAddressChangedMessagePayloadImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Generated after a successful Change Address update action.</p>
@@ -26,9 +28,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .address(addressBuilder -> addressBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = BusinessUnitAddressChangedMessagePayloadImpl.class)
 public interface BusinessUnitAddressChangedMessagePayload extends MessagePayload {
 
@@ -50,16 +55,18 @@ public interface BusinessUnitAddressChangedMessagePayload extends MessagePayload
      *  <p>Updated address of the Business Unit.</p>
      * @param address value to be set
      */
-
+    
     public void setAddress(final Address address);
+    
 
     /**
      * factory method
      * @return instance of BusinessUnitAddressChangedMessagePayload
      */
-    public static BusinessUnitAddressChangedMessagePayload of() {
+    public static BusinessUnitAddressChangedMessagePayload of(){
         return new BusinessUnitAddressChangedMessagePayloadImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy BusinessUnitAddressChangedMessagePayload
@@ -78,8 +85,7 @@ public interface BusinessUnitAddressChangedMessagePayload extends MessagePayload
      * @return copy instance
      */
     @Nullable
-    public static BusinessUnitAddressChangedMessagePayload deepCopy(
-            @Nullable final BusinessUnitAddressChangedMessagePayload template) {
+    public static BusinessUnitAddressChangedMessagePayload deepCopy(@Nullable final BusinessUnitAddressChangedMessagePayload template) {
         if (template == null) {
             return null;
         }
@@ -95,16 +101,16 @@ public interface BusinessUnitAddressChangedMessagePayload extends MessagePayload
     public static BusinessUnitAddressChangedMessagePayloadBuilder builder() {
         return BusinessUnitAddressChangedMessagePayloadBuilder.of();
     }
-
+    
     /**
      * create builder for BusinessUnitAddressChangedMessagePayload instance
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static BusinessUnitAddressChangedMessagePayloadBuilder builder(
-            final BusinessUnitAddressChangedMessagePayload template) {
+    public static BusinessUnitAddressChangedMessagePayloadBuilder builder(final BusinessUnitAddressChangedMessagePayload template) {
         return BusinessUnitAddressChangedMessagePayloadBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -112,11 +118,10 @@ public interface BusinessUnitAddressChangedMessagePayload extends MessagePayload
      * @param helper function to map the object
      * @return mapped value
      */
-    default <T> T withBusinessUnitAddressChangedMessagePayload(
-            Function<BusinessUnitAddressChangedMessagePayload, T> helper) {
+    default <T> T withBusinessUnitAddressChangedMessagePayload(Function<BusinessUnitAddressChangedMessagePayload, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

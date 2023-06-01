@@ -1,11 +1,12 @@
-
 package com.commercetools.api.models.store;
 
+import com.commercetools.api.models.channel.ChannelResourceIdentifier;
+import com.commercetools.api.models.store.StoreUpdateAction;
+import com.commercetools.api.models.store.StoreSetDistributionChannelsAction;
+import javax.annotation.Nullable;
 import java.util.*;
 import java.util.function.Function;
-
-import javax.annotation.Nullable;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -18,11 +19,15 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     StoreSetDistributionChannelsAction storeSetDistributionChannelsAction = StoreSetDistributionChannelsAction.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class StoreSetDistributionChannelsActionBuilder implements Builder<StoreSetDistributionChannelsAction> {
 
+    
     @Nullable
     private java.util.List<com.commercetools.api.models.channel.ChannelResourceIdentifier> distributionChannels;
 
@@ -31,101 +36,93 @@ public class StoreSetDistributionChannelsActionBuilder implements Builder<StoreS
      * @param distributionChannels value to be set
      * @return Builder
      */
-
-    public StoreSetDistributionChannelsActionBuilder distributionChannels(
-            @Nullable final com.commercetools.api.models.channel.ChannelResourceIdentifier... distributionChannels) {
+    
+    public StoreSetDistributionChannelsActionBuilder distributionChannels(@Nullable final com.commercetools.api.models.channel.ChannelResourceIdentifier ...distributionChannels) {
         this.distributionChannels = new ArrayList<>(Arrays.asList(distributionChannels));
         return this;
     }
-
+    
     /**
      *  <p>Value to set. If not defined, the Store's <code>distributionChannels</code> are unset.</p>
      * @param distributionChannels value to be set
      * @return Builder
      */
-
-    public StoreSetDistributionChannelsActionBuilder distributionChannels(
-            @Nullable final java.util.List<com.commercetools.api.models.channel.ChannelResourceIdentifier> distributionChannels) {
+    
+    public StoreSetDistributionChannelsActionBuilder distributionChannels(@Nullable final java.util.List<com.commercetools.api.models.channel.ChannelResourceIdentifier> distributionChannels) {
         this.distributionChannels = distributionChannels;
         return this;
     }
-
+    
     /**
      *  <p>Value to set. If not defined, the Store's <code>distributionChannels</code> are unset.</p>
      * @param distributionChannels value to be set
      * @return Builder
      */
-
-    public StoreSetDistributionChannelsActionBuilder plusDistributionChannels(
-            @Nullable final com.commercetools.api.models.channel.ChannelResourceIdentifier... distributionChannels) {
+    
+    public StoreSetDistributionChannelsActionBuilder plusDistributionChannels(@Nullable final com.commercetools.api.models.channel.ChannelResourceIdentifier ...distributionChannels) {
         if (this.distributionChannels == null) {
             this.distributionChannels = new ArrayList<>();
         }
         this.distributionChannels.addAll(Arrays.asList(distributionChannels));
         return this;
     }
-
+    
+    
+    
     /**
      *  <p>Value to set. If not defined, the Store's <code>distributionChannels</code> are unset.</p>
      * @param builder function to build the distributionChannels value
      * @return Builder
      */
-
-    public StoreSetDistributionChannelsActionBuilder plusDistributionChannels(
-            Function<com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder, com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder> builder) {
+    
+    public StoreSetDistributionChannelsActionBuilder plusDistributionChannels(Function<com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder, com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder> builder) {
         if (this.distributionChannels == null) {
             this.distributionChannels = new ArrayList<>();
         }
-        this.distributionChannels
-                .add(builder.apply(com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder.of()).build());
+        this.distributionChannels.add(builder.apply(com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder.of()).build());
         return this;
     }
-
+    
     /**
      *  <p>Value to set. If not defined, the Store's <code>distributionChannels</code> are unset.</p>
      * @param builder function to build the distributionChannels value
      * @return Builder
      */
-
-    public StoreSetDistributionChannelsActionBuilder withDistributionChannels(
-            Function<com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder, com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder> builder) {
+    
+    public StoreSetDistributionChannelsActionBuilder withDistributionChannels(Function<com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder, com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder> builder) {
         this.distributionChannels = new ArrayList<>();
-        this.distributionChannels
-                .add(builder.apply(com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder.of()).build());
+        this.distributionChannels.add(builder.apply(com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder.of()).build());
         return this;
     }
-
+    
     /**
      *  <p>Value to set. If not defined, the Store's <code>distributionChannels</code> are unset.</p>
      * @param builder function to build the distributionChannels value
      * @return Builder
      */
-
-    public StoreSetDistributionChannelsActionBuilder addDistributionChannels(
-            Function<com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder, com.commercetools.api.models.channel.ChannelResourceIdentifier> builder) {
-        return plusDistributionChannels(
-            builder.apply(com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder.of()));
+    
+    public StoreSetDistributionChannelsActionBuilder addDistributionChannels(Function<com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder, com.commercetools.api.models.channel.ChannelResourceIdentifier> builder) {
+        return plusDistributionChannels(builder.apply(com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder.of()));
     }
-
+    
     /**
      *  <p>Value to set. If not defined, the Store's <code>distributionChannels</code> are unset.</p>
      * @param builder function to build the distributionChannels value
      * @return Builder
      */
-
-    public StoreSetDistributionChannelsActionBuilder setDistributionChannels(
-            Function<com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder, com.commercetools.api.models.channel.ChannelResourceIdentifier> builder) {
-        return distributionChannels(
-            builder.apply(com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder.of()));
+    
+    public StoreSetDistributionChannelsActionBuilder setDistributionChannels(Function<com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder, com.commercetools.api.models.channel.ChannelResourceIdentifier> builder) {
+        return distributionChannels(builder.apply(com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder.of()));
     }
+                    
 
     /**
      *  <p>Value to set. If not defined, the Store's <code>distributionChannels</code> are unset.</p>
      * @return distributionChannels
      */
-
+    
     @Nullable
-    public java.util.List<com.commercetools.api.models.channel.ChannelResourceIdentifier> getDistributionChannels() {
+    public java.util.List<com.commercetools.api.models.channel.ChannelResourceIdentifier> getDistributionChannels(){
         return this.distributionChannels;
     }
 
@@ -136,7 +133,7 @@ public class StoreSetDistributionChannelsActionBuilder implements Builder<StoreS
     public StoreSetDistributionChannelsAction build() {
         return new StoreSetDistributionChannelsActionImpl(distributionChannels);
     }
-
+    
     /**
      * builds StoreSetDistributionChannelsAction without checking for non-null required values
      * @return StoreSetDistributionChannelsAction
@@ -147,7 +144,7 @@ public class StoreSetDistributionChannelsActionBuilder implements Builder<StoreS
 
     /**
      * factory method for an instance of StoreSetDistributionChannelsActionBuilder
-     * @return builder
+     * @return builder 
      */
     public static StoreSetDistributionChannelsActionBuilder of() {
         return new StoreSetDistributionChannelsActionBuilder();

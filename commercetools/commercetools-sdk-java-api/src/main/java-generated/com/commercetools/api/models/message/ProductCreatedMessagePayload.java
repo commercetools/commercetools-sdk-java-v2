@@ -1,19 +1,21 @@
-
 package com.commercetools.api.models.message;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
+import com.commercetools.api.models.message.MessagePayload;
 import com.commercetools.api.models.product.ProductProjection;
+import com.commercetools.api.models.message.ProductCreatedMessagePayloadImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Generated after a successful Create Product request.</p>
@@ -26,9 +28,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .productProjection(productProjectionBuilder -> productProjectionBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = ProductCreatedMessagePayloadImpl.class)
 public interface ProductCreatedMessagePayload extends MessagePayload {
 
@@ -50,16 +55,18 @@ public interface ProductCreatedMessagePayload extends MessagePayload {
      *  <p>The staged Product Projection of the Product at the time of creation.</p>
      * @param productProjection value to be set
      */
-
+    
     public void setProductProjection(final ProductProjection productProjection);
+    
 
     /**
      * factory method
      * @return instance of ProductCreatedMessagePayload
      */
-    public static ProductCreatedMessagePayload of() {
+    public static ProductCreatedMessagePayload of(){
         return new ProductCreatedMessagePayloadImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy ProductCreatedMessagePayload
@@ -83,8 +90,7 @@ public interface ProductCreatedMessagePayload extends MessagePayload {
             return null;
         }
         ProductCreatedMessagePayloadImpl instance = new ProductCreatedMessagePayloadImpl();
-        instance.setProductProjection(
-            com.commercetools.api.models.product.ProductProjection.deepCopy(template.getProductProjection()));
+        instance.setProductProjection(com.commercetools.api.models.product.ProductProjection.deepCopy(template.getProductProjection()));
         return instance;
     }
 
@@ -95,7 +101,7 @@ public interface ProductCreatedMessagePayload extends MessagePayload {
     public static ProductCreatedMessagePayloadBuilder builder() {
         return ProductCreatedMessagePayloadBuilder.of();
     }
-
+    
     /**
      * create builder for ProductCreatedMessagePayload instance
      * @param template instance with prefilled values for the builder
@@ -104,6 +110,7 @@ public interface ProductCreatedMessagePayload extends MessagePayload {
     public static ProductCreatedMessagePayloadBuilder builder(final ProductCreatedMessagePayload template) {
         return ProductCreatedMessagePayloadBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -114,7 +121,7 @@ public interface ProductCreatedMessagePayload extends MessagePayload {
     default <T> T withProductCreatedMessagePayload(Function<ProductCreatedMessagePayload, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

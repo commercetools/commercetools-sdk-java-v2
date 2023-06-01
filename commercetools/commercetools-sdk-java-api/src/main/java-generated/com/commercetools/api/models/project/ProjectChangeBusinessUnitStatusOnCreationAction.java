@@ -1,17 +1,21 @@
-
 package com.commercetools.api.models.project;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
+import com.commercetools.api.models.project.BusinessUnitConfigurationStatus;
+import com.commercetools.api.models.project.ProjectUpdateAction;
+import com.commercetools.api.models.project.ProjectChangeBusinessUnitStatusOnCreationActionImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * ProjectChangeBusinessUnitStatusOnCreationAction
@@ -24,9 +28,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .status(BusinessUnitConfigurationStatus.ACTIVE)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = ProjectChangeBusinessUnitStatusOnCreationActionImpl.class)
 public interface ProjectChangeBusinessUnitStatusOnCreationAction extends ProjectUpdateAction {
 
@@ -47,24 +54,25 @@ public interface ProjectChangeBusinessUnitStatusOnCreationAction extends Project
      *  <p>Status for Business Units created using the My Business Unit endpoint.</p>
      * @param status value to be set
      */
-
+    
     public void setStatus(final BusinessUnitConfigurationStatus status);
+    
 
     /**
      * factory method
      * @return instance of ProjectChangeBusinessUnitStatusOnCreationAction
      */
-    public static ProjectChangeBusinessUnitStatusOnCreationAction of() {
+    public static ProjectChangeBusinessUnitStatusOnCreationAction of(){
         return new ProjectChangeBusinessUnitStatusOnCreationActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy ProjectChangeBusinessUnitStatusOnCreationAction
      * @param template instance to be copied
      * @return copy instance
      */
-    public static ProjectChangeBusinessUnitStatusOnCreationAction of(
-            final ProjectChangeBusinessUnitStatusOnCreationAction template) {
+    public static ProjectChangeBusinessUnitStatusOnCreationAction of(final ProjectChangeBusinessUnitStatusOnCreationAction template) {
         ProjectChangeBusinessUnitStatusOnCreationActionImpl instance = new ProjectChangeBusinessUnitStatusOnCreationActionImpl();
         instance.setStatus(template.getStatus());
         return instance;
@@ -76,8 +84,7 @@ public interface ProjectChangeBusinessUnitStatusOnCreationAction extends Project
      * @return copy instance
      */
     @Nullable
-    public static ProjectChangeBusinessUnitStatusOnCreationAction deepCopy(
-            @Nullable final ProjectChangeBusinessUnitStatusOnCreationAction template) {
+    public static ProjectChangeBusinessUnitStatusOnCreationAction deepCopy(@Nullable final ProjectChangeBusinessUnitStatusOnCreationAction template) {
         if (template == null) {
             return null;
         }
@@ -93,16 +100,16 @@ public interface ProjectChangeBusinessUnitStatusOnCreationAction extends Project
     public static ProjectChangeBusinessUnitStatusOnCreationActionBuilder builder() {
         return ProjectChangeBusinessUnitStatusOnCreationActionBuilder.of();
     }
-
+    
     /**
      * create builder for ProjectChangeBusinessUnitStatusOnCreationAction instance
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static ProjectChangeBusinessUnitStatusOnCreationActionBuilder builder(
-            final ProjectChangeBusinessUnitStatusOnCreationAction template) {
+    public static ProjectChangeBusinessUnitStatusOnCreationActionBuilder builder(final ProjectChangeBusinessUnitStatusOnCreationAction template) {
         return ProjectChangeBusinessUnitStatusOnCreationActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -110,11 +117,10 @@ public interface ProjectChangeBusinessUnitStatusOnCreationAction extends Project
      * @param helper function to map the object
      * @return mapped value
      */
-    default <T> T withProjectChangeBusinessUnitStatusOnCreationAction(
-            Function<ProjectChangeBusinessUnitStatusOnCreationAction, T> helper) {
+    default <T> T withProjectChangeBusinessUnitStatusOnCreationAction(Function<ProjectChangeBusinessUnitStatusOnCreationAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

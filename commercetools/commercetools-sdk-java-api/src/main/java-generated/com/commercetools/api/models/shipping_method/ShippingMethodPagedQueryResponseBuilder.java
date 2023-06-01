@@ -1,11 +1,11 @@
-
 package com.commercetools.api.models.shipping_method;
 
+import com.commercetools.api.models.shipping_method.ShippingMethod;
+import com.commercetools.api.models.shipping_method.ShippingMethodPagedQueryResponse;
+import javax.annotation.Nullable;
 import java.util.*;
 import java.util.function.Function;
-
-import javax.annotation.Nullable;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -20,204 +20,222 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .plusResults(resultsBuilder -> resultsBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class ShippingMethodPagedQueryResponseBuilder implements Builder<ShippingMethodPagedQueryResponse> {
 
+    
     @Nullable
     private Long limit;
-
+    
+    
+    
     private Long count;
-
+    
+    
     @Nullable
     private Long total;
-
+    
+    
     @Nullable
     private Long offset;
-
+    
+    
+    
     private java.util.List<com.commercetools.api.models.shipping_method.ShippingMethod> results;
 
+    
     /**
      *  <p>Number of results requested.</p>
      * @param limit value to be set
      * @return Builder
      */
-
+    
     public ShippingMethodPagedQueryResponseBuilder limit(@Nullable final Long limit) {
         this.limit = limit;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Actual number of results returned.</p>
      * @param count value to be set
      * @return Builder
      */
-
-    public ShippingMethodPagedQueryResponseBuilder count(final Long count) {
+    
+    public ShippingMethodPagedQueryResponseBuilder count( final Long count) {
         this.count = count;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Total number of results matching the query. This number is an estimation that is not strongly consistent. This field is returned by default. For improved performance, calculating this field can be deactivated by using the query parameter <code>withTotal=false</code>. When the results are filtered with a Query Predicate, <code>total</code> is subject to a limit.</p>
      * @param total value to be set
      * @return Builder
      */
-
+    
     public ShippingMethodPagedQueryResponseBuilder total(@Nullable final Long total) {
         this.total = total;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Number of elements skipped.</p>
      * @param offset value to be set
      * @return Builder
      */
-
+    
     public ShippingMethodPagedQueryResponseBuilder offset(@Nullable final Long offset) {
         this.offset = offset;
         return this;
     }
-
+    
+    
+    
     /**
      *  <p>Shipping Methods matching the query.</p>
      * @param results value to be set
      * @return Builder
      */
-
-    public ShippingMethodPagedQueryResponseBuilder results(
-            final com.commercetools.api.models.shipping_method.ShippingMethod... results) {
+    
+    public ShippingMethodPagedQueryResponseBuilder results( final com.commercetools.api.models.shipping_method.ShippingMethod ...results) {
         this.results = new ArrayList<>(Arrays.asList(results));
         return this;
     }
-
+    
     /**
      *  <p>Shipping Methods matching the query.</p>
      * @param results value to be set
      * @return Builder
      */
-
-    public ShippingMethodPagedQueryResponseBuilder results(
-            final java.util.List<com.commercetools.api.models.shipping_method.ShippingMethod> results) {
+    
+    public ShippingMethodPagedQueryResponseBuilder results( final java.util.List<com.commercetools.api.models.shipping_method.ShippingMethod> results) {
         this.results = results;
         return this;
     }
-
+    
     /**
      *  <p>Shipping Methods matching the query.</p>
      * @param results value to be set
      * @return Builder
      */
-
-    public ShippingMethodPagedQueryResponseBuilder plusResults(
-            final com.commercetools.api.models.shipping_method.ShippingMethod... results) {
+    
+    public ShippingMethodPagedQueryResponseBuilder plusResults( final com.commercetools.api.models.shipping_method.ShippingMethod ...results) {
         if (this.results == null) {
             this.results = new ArrayList<>();
         }
         this.results.addAll(Arrays.asList(results));
         return this;
     }
-
+    
+    
+    
     /**
      *  <p>Shipping Methods matching the query.</p>
      * @param builder function to build the results value
      * @return Builder
      */
-
-    public ShippingMethodPagedQueryResponseBuilder plusResults(
-            Function<com.commercetools.api.models.shipping_method.ShippingMethodBuilder, com.commercetools.api.models.shipping_method.ShippingMethodBuilder> builder) {
+    
+    public ShippingMethodPagedQueryResponseBuilder plusResults(Function<com.commercetools.api.models.shipping_method.ShippingMethodBuilder, com.commercetools.api.models.shipping_method.ShippingMethodBuilder> builder) {
         if (this.results == null) {
             this.results = new ArrayList<>();
         }
-        this.results
-                .add(builder.apply(com.commercetools.api.models.shipping_method.ShippingMethodBuilder.of()).build());
+        this.results.add(builder.apply(com.commercetools.api.models.shipping_method.ShippingMethodBuilder.of()).build());
         return this;
     }
-
+    
     /**
      *  <p>Shipping Methods matching the query.</p>
      * @param builder function to build the results value
      * @return Builder
      */
-
-    public ShippingMethodPagedQueryResponseBuilder withResults(
-            Function<com.commercetools.api.models.shipping_method.ShippingMethodBuilder, com.commercetools.api.models.shipping_method.ShippingMethodBuilder> builder) {
+    
+    public ShippingMethodPagedQueryResponseBuilder withResults(Function<com.commercetools.api.models.shipping_method.ShippingMethodBuilder, com.commercetools.api.models.shipping_method.ShippingMethodBuilder> builder) {
         this.results = new ArrayList<>();
-        this.results
-                .add(builder.apply(com.commercetools.api.models.shipping_method.ShippingMethodBuilder.of()).build());
+        this.results.add(builder.apply(com.commercetools.api.models.shipping_method.ShippingMethodBuilder.of()).build());
         return this;
     }
-
+    
     /**
      *  <p>Shipping Methods matching the query.</p>
      * @param builder function to build the results value
      * @return Builder
      */
-
-    public ShippingMethodPagedQueryResponseBuilder addResults(
-            Function<com.commercetools.api.models.shipping_method.ShippingMethodBuilder, com.commercetools.api.models.shipping_method.ShippingMethod> builder) {
+    
+    public ShippingMethodPagedQueryResponseBuilder addResults(Function<com.commercetools.api.models.shipping_method.ShippingMethodBuilder, com.commercetools.api.models.shipping_method.ShippingMethod> builder) {
         return plusResults(builder.apply(com.commercetools.api.models.shipping_method.ShippingMethodBuilder.of()));
     }
-
+    
     /**
      *  <p>Shipping Methods matching the query.</p>
      * @param builder function to build the results value
      * @return Builder
      */
-
-    public ShippingMethodPagedQueryResponseBuilder setResults(
-            Function<com.commercetools.api.models.shipping_method.ShippingMethodBuilder, com.commercetools.api.models.shipping_method.ShippingMethod> builder) {
+    
+    public ShippingMethodPagedQueryResponseBuilder setResults(Function<com.commercetools.api.models.shipping_method.ShippingMethodBuilder, com.commercetools.api.models.shipping_method.ShippingMethod> builder) {
         return results(builder.apply(com.commercetools.api.models.shipping_method.ShippingMethodBuilder.of()));
     }
+                    
 
     /**
      *  <p>Number of results requested.</p>
      * @return limit
      */
-
+    
     @Nullable
-    public Long getLimit() {
+    public Long getLimit(){
         return this.limit;
     }
-
+    
     /**
      *  <p>Actual number of results returned.</p>
      * @return count
      */
-
-    public Long getCount() {
+    
+    
+    public Long getCount(){
         return this.count;
     }
-
+    
     /**
      *  <p>Total number of results matching the query. This number is an estimation that is not strongly consistent. This field is returned by default. For improved performance, calculating this field can be deactivated by using the query parameter <code>withTotal=false</code>. When the results are filtered with a Query Predicate, <code>total</code> is subject to a limit.</p>
      * @return total
      */
-
+    
     @Nullable
-    public Long getTotal() {
+    public Long getTotal(){
         return this.total;
     }
-
+    
     /**
      *  <p>Number of elements skipped.</p>
      * @return offset
      */
-
+    
     @Nullable
-    public Long getOffset() {
+    public Long getOffset(){
         return this.offset;
     }
-
+    
     /**
      *  <p>Shipping Methods matching the query.</p>
      * @return results
      */
-
-    public java.util.List<com.commercetools.api.models.shipping_method.ShippingMethod> getResults() {
+    
+    
+    public java.util.List<com.commercetools.api.models.shipping_method.ShippingMethod> getResults(){
         return this.results;
     }
 
@@ -230,7 +248,7 @@ public class ShippingMethodPagedQueryResponseBuilder implements Builder<Shipping
         Objects.requireNonNull(results, ShippingMethodPagedQueryResponse.class + ": results is missing");
         return new ShippingMethodPagedQueryResponseImpl(limit, count, total, offset, results);
     }
-
+    
     /**
      * builds ShippingMethodPagedQueryResponse without checking for non-null required values
      * @return ShippingMethodPagedQueryResponse
@@ -241,7 +259,7 @@ public class ShippingMethodPagedQueryResponseBuilder implements Builder<Shipping
 
     /**
      * factory method for an instance of ShippingMethodPagedQueryResponseBuilder
-     * @return builder
+     * @return builder 
      */
     public static ShippingMethodPagedQueryResponseBuilder of() {
         return new ShippingMethodPagedQueryResponseBuilder();

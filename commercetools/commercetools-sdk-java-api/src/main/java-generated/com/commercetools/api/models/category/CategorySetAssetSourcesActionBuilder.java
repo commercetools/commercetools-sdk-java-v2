@@ -1,11 +1,12 @@
-
 package com.commercetools.api.models.category;
 
+import com.commercetools.api.models.category.CategoryUpdateAction;
+import com.commercetools.api.models.common.AssetSource;
+import com.commercetools.api.models.category.CategorySetAssetSourcesAction;
+import javax.annotation.Nullable;
 import java.util.*;
 import java.util.function.Function;
-
-import javax.annotation.Nullable;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -19,156 +20,166 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .plusSources(sourcesBuilder -> sourcesBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class CategorySetAssetSourcesActionBuilder implements Builder<CategorySetAssetSourcesAction> {
 
+    
     @Nullable
     private String assetId;
-
+    
+    
     @Nullable
     private String assetKey;
-
+    
+    
+    
     private java.util.List<com.commercetools.api.models.common.AssetSource> sources;
 
+    
     /**
      *  <p>New value to set. Either <code>assetId</code> or <code>assetKey</code> is required.</p>
      * @param assetId value to be set
      * @return Builder
      */
-
+    
     public CategorySetAssetSourcesActionBuilder assetId(@Nullable final String assetId) {
         this.assetId = assetId;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>New value to set. Either <code>assetId</code> or <code>assetKey</code> is required.</p>
      * @param assetKey value to be set
      * @return Builder
      */
-
+    
     public CategorySetAssetSourcesActionBuilder assetKey(@Nullable final String assetKey) {
         this.assetKey = assetKey;
         return this;
     }
-
+    
+    
+    
     /**
      *  <p>Must not be empty. At least one entry is required.</p>
      * @param sources value to be set
      * @return Builder
      */
-
-    public CategorySetAssetSourcesActionBuilder sources(
-            final com.commercetools.api.models.common.AssetSource... sources) {
+    
+    public CategorySetAssetSourcesActionBuilder sources( final com.commercetools.api.models.common.AssetSource ...sources) {
         this.sources = new ArrayList<>(Arrays.asList(sources));
         return this;
     }
-
+    
     /**
      *  <p>Must not be empty. At least one entry is required.</p>
      * @param sources value to be set
      * @return Builder
      */
-
-    public CategorySetAssetSourcesActionBuilder sources(
-            final java.util.List<com.commercetools.api.models.common.AssetSource> sources) {
+    
+    public CategorySetAssetSourcesActionBuilder sources( final java.util.List<com.commercetools.api.models.common.AssetSource> sources) {
         this.sources = sources;
         return this;
     }
-
+    
     /**
      *  <p>Must not be empty. At least one entry is required.</p>
      * @param sources value to be set
      * @return Builder
      */
-
-    public CategorySetAssetSourcesActionBuilder plusSources(
-            final com.commercetools.api.models.common.AssetSource... sources) {
+    
+    public CategorySetAssetSourcesActionBuilder plusSources( final com.commercetools.api.models.common.AssetSource ...sources) {
         if (this.sources == null) {
             this.sources = new ArrayList<>();
         }
         this.sources.addAll(Arrays.asList(sources));
         return this;
     }
-
+    
+    
+    
     /**
      *  <p>Must not be empty. At least one entry is required.</p>
      * @param builder function to build the sources value
      * @return Builder
      */
-
-    public CategorySetAssetSourcesActionBuilder plusSources(
-            Function<com.commercetools.api.models.common.AssetSourceBuilder, com.commercetools.api.models.common.AssetSourceBuilder> builder) {
+    
+    public CategorySetAssetSourcesActionBuilder plusSources(Function<com.commercetools.api.models.common.AssetSourceBuilder, com.commercetools.api.models.common.AssetSourceBuilder> builder) {
         if (this.sources == null) {
             this.sources = new ArrayList<>();
         }
         this.sources.add(builder.apply(com.commercetools.api.models.common.AssetSourceBuilder.of()).build());
         return this;
     }
-
+    
     /**
      *  <p>Must not be empty. At least one entry is required.</p>
      * @param builder function to build the sources value
      * @return Builder
      */
-
-    public CategorySetAssetSourcesActionBuilder withSources(
-            Function<com.commercetools.api.models.common.AssetSourceBuilder, com.commercetools.api.models.common.AssetSourceBuilder> builder) {
+    
+    public CategorySetAssetSourcesActionBuilder withSources(Function<com.commercetools.api.models.common.AssetSourceBuilder, com.commercetools.api.models.common.AssetSourceBuilder> builder) {
         this.sources = new ArrayList<>();
         this.sources.add(builder.apply(com.commercetools.api.models.common.AssetSourceBuilder.of()).build());
         return this;
     }
-
+    
     /**
      *  <p>Must not be empty. At least one entry is required.</p>
      * @param builder function to build the sources value
      * @return Builder
      */
-
-    public CategorySetAssetSourcesActionBuilder addSources(
-            Function<com.commercetools.api.models.common.AssetSourceBuilder, com.commercetools.api.models.common.AssetSource> builder) {
+    
+    public CategorySetAssetSourcesActionBuilder addSources(Function<com.commercetools.api.models.common.AssetSourceBuilder, com.commercetools.api.models.common.AssetSource> builder) {
         return plusSources(builder.apply(com.commercetools.api.models.common.AssetSourceBuilder.of()));
     }
-
+    
     /**
      *  <p>Must not be empty. At least one entry is required.</p>
      * @param builder function to build the sources value
      * @return Builder
      */
-
-    public CategorySetAssetSourcesActionBuilder setSources(
-            Function<com.commercetools.api.models.common.AssetSourceBuilder, com.commercetools.api.models.common.AssetSource> builder) {
+    
+    public CategorySetAssetSourcesActionBuilder setSources(Function<com.commercetools.api.models.common.AssetSourceBuilder, com.commercetools.api.models.common.AssetSource> builder) {
         return sources(builder.apply(com.commercetools.api.models.common.AssetSourceBuilder.of()));
     }
+                    
 
     /**
      *  <p>New value to set. Either <code>assetId</code> or <code>assetKey</code> is required.</p>
      * @return assetId
      */
-
+    
     @Nullable
-    public String getAssetId() {
+    public String getAssetId(){
         return this.assetId;
     }
-
+    
     /**
      *  <p>New value to set. Either <code>assetId</code> or <code>assetKey</code> is required.</p>
      * @return assetKey
      */
-
+    
     @Nullable
-    public String getAssetKey() {
+    public String getAssetKey(){
         return this.assetKey;
     }
-
+    
     /**
      *  <p>Must not be empty. At least one entry is required.</p>
      * @return sources
      */
-
-    public java.util.List<com.commercetools.api.models.common.AssetSource> getSources() {
+    
+    
+    public java.util.List<com.commercetools.api.models.common.AssetSource> getSources(){
         return this.sources;
     }
 
@@ -180,7 +191,7 @@ public class CategorySetAssetSourcesActionBuilder implements Builder<CategorySet
         Objects.requireNonNull(sources, CategorySetAssetSourcesAction.class + ": sources is missing");
         return new CategorySetAssetSourcesActionImpl(assetId, assetKey, sources);
     }
-
+    
     /**
      * builds CategorySetAssetSourcesAction without checking for non-null required values
      * @return CategorySetAssetSourcesAction
@@ -191,7 +202,7 @@ public class CategorySetAssetSourcesActionBuilder implements Builder<CategorySet
 
     /**
      * factory method for an instance of CategorySetAssetSourcesActionBuilder
-     * @return builder
+     * @return builder 
      */
     public static CategorySetAssetSourcesActionBuilder of() {
         return new CategorySetAssetSourcesActionBuilder();

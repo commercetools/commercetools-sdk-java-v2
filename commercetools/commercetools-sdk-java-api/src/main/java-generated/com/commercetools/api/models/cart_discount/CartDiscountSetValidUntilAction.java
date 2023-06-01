@@ -1,17 +1,21 @@
-
 package com.commercetools.api.models.cart_discount;
 
-import java.time.*;
+import com.commercetools.api.models.cart_discount.CartDiscountUpdateAction;
 import java.time.ZonedDateTime;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
+import com.commercetools.api.models.cart_discount.CartDiscountSetValidUntilActionImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * CartDiscountSetValidUntilAction
@@ -23,9 +27,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     CartDiscountSetValidUntilAction cartDiscountSetValidUntilAction = CartDiscountSetValidUntilAction.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = CartDiscountSetValidUntilActionImpl.class)
 public interface CartDiscountSetValidUntilAction extends CartDiscountUpdateAction {
 
@@ -38,7 +45,7 @@ public interface CartDiscountSetValidUntilAction extends CartDiscountUpdateActio
      *  <p>Value to set. If empty, any existing value will be removed.</p>
      * @return validUntil
      */
-
+    
     @JsonProperty("validUntil")
     public ZonedDateTime getValidUntil();
 
@@ -46,16 +53,18 @@ public interface CartDiscountSetValidUntilAction extends CartDiscountUpdateActio
      *  <p>Value to set. If empty, any existing value will be removed.</p>
      * @param validUntil value to be set
      */
-
+    
     public void setValidUntil(final ZonedDateTime validUntil);
+    
 
     /**
      * factory method
      * @return instance of CartDiscountSetValidUntilAction
      */
-    public static CartDiscountSetValidUntilAction of() {
+    public static CartDiscountSetValidUntilAction of(){
         return new CartDiscountSetValidUntilActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy CartDiscountSetValidUntilAction
@@ -90,7 +99,7 @@ public interface CartDiscountSetValidUntilAction extends CartDiscountUpdateActio
     public static CartDiscountSetValidUntilActionBuilder builder() {
         return CartDiscountSetValidUntilActionBuilder.of();
     }
-
+    
     /**
      * create builder for CartDiscountSetValidUntilAction instance
      * @param template instance with prefilled values for the builder
@@ -99,6 +108,7 @@ public interface CartDiscountSetValidUntilAction extends CartDiscountUpdateActio
     public static CartDiscountSetValidUntilActionBuilder builder(final CartDiscountSetValidUntilAction template) {
         return CartDiscountSetValidUntilActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -109,7 +119,7 @@ public interface CartDiscountSetValidUntilAction extends CartDiscountUpdateActio
     default <T> T withCartDiscountSetValidUntilAction(Function<CartDiscountSetValidUntilAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

@@ -1,8 +1,12 @@
-
 package com.commercetools.api.models.message;
 
+import com.commercetools.api.models.message.OrderMessagePayload;
+import com.commercetools.api.models.order.ReturnShipmentState;
+import com.commercetools.api.models.message.OrderReturnShipmentStateChangedMessagePayload;
+import javax.annotation.Nullable;
 import java.util.*;
-
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -17,54 +21,67 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .returnShipmentState(ReturnShipmentState.ADVISED)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
-public class OrderReturnShipmentStateChangedMessagePayloadBuilder
-        implements Builder<OrderReturnShipmentStateChangedMessagePayload> {
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
+public class OrderReturnShipmentStateChangedMessagePayloadBuilder implements Builder<OrderReturnShipmentStateChangedMessagePayload> {
 
+    
+    
     private String returnItemId;
-
+    
+    
+    
     private com.commercetools.api.models.order.ReturnShipmentState returnShipmentState;
 
+    
     /**
      *  <p>Unique identifier of the ReturnItem.</p>
      * @param returnItemId value to be set
      * @return Builder
      */
-
-    public OrderReturnShipmentStateChangedMessagePayloadBuilder returnItemId(final String returnItemId) {
+    
+    public OrderReturnShipmentStateChangedMessagePayloadBuilder returnItemId( final String returnItemId) {
         this.returnItemId = returnItemId;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>State of the ReturnItem after the Set Return Shipment State update action.</p>
      * @param returnShipmentState value to be set
      * @return Builder
      */
-
-    public OrderReturnShipmentStateChangedMessagePayloadBuilder returnShipmentState(
-            final com.commercetools.api.models.order.ReturnShipmentState returnShipmentState) {
+    
+    public OrderReturnShipmentStateChangedMessagePayloadBuilder returnShipmentState( final com.commercetools.api.models.order.ReturnShipmentState returnShipmentState) {
         this.returnShipmentState = returnShipmentState;
         return this;
     }
+    
+    
 
     /**
      *  <p>Unique identifier of the ReturnItem.</p>
      * @return returnItemId
      */
-
-    public String getReturnItemId() {
+    
+    
+    public String getReturnItemId(){
         return this.returnItemId;
     }
-
+    
     /**
      *  <p>State of the ReturnItem after the Set Return Shipment State update action.</p>
      * @return returnShipmentState
      */
-
-    public com.commercetools.api.models.order.ReturnShipmentState getReturnShipmentState() {
+    
+    
+    public com.commercetools.api.models.order.ReturnShipmentState getReturnShipmentState(){
         return this.returnShipmentState;
     }
 
@@ -73,13 +90,11 @@ public class OrderReturnShipmentStateChangedMessagePayloadBuilder
      * @return OrderReturnShipmentStateChangedMessagePayload
      */
     public OrderReturnShipmentStateChangedMessagePayload build() {
-        Objects.requireNonNull(returnItemId,
-            OrderReturnShipmentStateChangedMessagePayload.class + ": returnItemId is missing");
-        Objects.requireNonNull(returnShipmentState,
-            OrderReturnShipmentStateChangedMessagePayload.class + ": returnShipmentState is missing");
+        Objects.requireNonNull(returnItemId, OrderReturnShipmentStateChangedMessagePayload.class + ": returnItemId is missing");
+        Objects.requireNonNull(returnShipmentState, OrderReturnShipmentStateChangedMessagePayload.class + ": returnShipmentState is missing");
         return new OrderReturnShipmentStateChangedMessagePayloadImpl(returnItemId, returnShipmentState);
     }
-
+    
     /**
      * builds OrderReturnShipmentStateChangedMessagePayload without checking for non-null required values
      * @return OrderReturnShipmentStateChangedMessagePayload
@@ -90,7 +105,7 @@ public class OrderReturnShipmentStateChangedMessagePayloadBuilder
 
     /**
      * factory method for an instance of OrderReturnShipmentStateChangedMessagePayloadBuilder
-     * @return builder
+     * @return builder 
      */
     public static OrderReturnShipmentStateChangedMessagePayloadBuilder of() {
         return new OrderReturnShipmentStateChangedMessagePayloadBuilder();
@@ -101,8 +116,7 @@ public class OrderReturnShipmentStateChangedMessagePayloadBuilder
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static OrderReturnShipmentStateChangedMessagePayloadBuilder of(
-            final OrderReturnShipmentStateChangedMessagePayload template) {
+    public static OrderReturnShipmentStateChangedMessagePayloadBuilder of(final OrderReturnShipmentStateChangedMessagePayload template) {
         OrderReturnShipmentStateChangedMessagePayloadBuilder builder = new OrderReturnShipmentStateChangedMessagePayloadBuilder();
         builder.returnItemId = template.getReturnItemId();
         builder.returnShipmentState = template.getReturnShipmentState();

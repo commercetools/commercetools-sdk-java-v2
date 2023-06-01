@@ -1,10 +1,11 @@
-
 package com.commercetools.api.models.order;
 
-import java.util.*;
-
+import com.commercetools.api.models.order.OrderUpdateAction;
+import com.commercetools.api.models.order.OrderRemoveDeliveryAction;
 import javax.annotation.Nullable;
-
+import java.util.*;
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -17,56 +18,67 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     OrderRemoveDeliveryAction orderRemoveDeliveryAction = OrderRemoveDeliveryAction.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class OrderRemoveDeliveryActionBuilder implements Builder<OrderRemoveDeliveryAction> {
 
+    
     @Nullable
     private String deliveryId;
-
+    
+    
     @Nullable
     private String deliveryKey;
 
+    
     /**
      *  <p>Either <code>deliveryId</code> or <code>deliveryKey</code> is required for this update action.</p>
      * @param deliveryId value to be set
      * @return Builder
      */
-
+    
     public OrderRemoveDeliveryActionBuilder deliveryId(@Nullable final String deliveryId) {
         this.deliveryId = deliveryId;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Either <code>deliveryId</code> or <code>deliveryKey</code> is required for this update action.</p>
      * @param deliveryKey value to be set
      * @return Builder
      */
-
+    
     public OrderRemoveDeliveryActionBuilder deliveryKey(@Nullable final String deliveryKey) {
         this.deliveryKey = deliveryKey;
         return this;
     }
+    
+    
 
     /**
      *  <p>Either <code>deliveryId</code> or <code>deliveryKey</code> is required for this update action.</p>
      * @return deliveryId
      */
-
+    
     @Nullable
-    public String getDeliveryId() {
+    public String getDeliveryId(){
         return this.deliveryId;
     }
-
+    
     /**
      *  <p>Either <code>deliveryId</code> or <code>deliveryKey</code> is required for this update action.</p>
      * @return deliveryKey
      */
-
+    
     @Nullable
-    public String getDeliveryKey() {
+    public String getDeliveryKey(){
         return this.deliveryKey;
     }
 
@@ -77,7 +89,7 @@ public class OrderRemoveDeliveryActionBuilder implements Builder<OrderRemoveDeli
     public OrderRemoveDeliveryAction build() {
         return new OrderRemoveDeliveryActionImpl(deliveryId, deliveryKey);
     }
-
+    
     /**
      * builds OrderRemoveDeliveryAction without checking for non-null required values
      * @return OrderRemoveDeliveryAction
@@ -88,7 +100,7 @@ public class OrderRemoveDeliveryActionBuilder implements Builder<OrderRemoveDeli
 
     /**
      * factory method for an instance of OrderRemoveDeliveryActionBuilder
-     * @return builder
+     * @return builder 
      */
     public static OrderRemoveDeliveryActionBuilder of() {
         return new OrderRemoveDeliveryActionBuilder();

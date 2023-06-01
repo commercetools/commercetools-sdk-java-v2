@@ -1,11 +1,12 @@
-
 package com.commercetools.api.models.extension;
 
+import com.commercetools.api.models.extension.ExtensionDestination;
+import com.commercetools.api.models.extension.HttpDestinationAuthentication;
+import com.commercetools.api.models.extension.HttpDestination;
+import javax.annotation.Nullable;
 import java.util.*;
 import java.util.function.Function;
-
-import javax.annotation.Nullable;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -19,69 +20,78 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .url("{url}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class HttpDestinationBuilder implements Builder<HttpDestination> {
 
+    
+    
     private String url;
-
+    
+    
     @Nullable
     private com.commercetools.api.models.extension.HttpDestinationAuthentication authentication;
 
+    
     /**
      *  <p>URL to the target destination. If the Project is hosted in the China (AWS, Ningxia) Region, verify that the URL is not blocked due to firewall restrictions.</p>
      * @param url value to be set
      * @return Builder
      */
-
-    public HttpDestinationBuilder url(final String url) {
+    
+    public HttpDestinationBuilder url( final String url) {
         this.url = url;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Authentication methods (such as <code>Basic</code> or <code>Bearer</code>).</p>
      * @param authentication value to be set
      * @return Builder
      */
-
-    public HttpDestinationBuilder authentication(
-            @Nullable final com.commercetools.api.models.extension.HttpDestinationAuthentication authentication) {
+    
+    public HttpDestinationBuilder authentication(@Nullable final com.commercetools.api.models.extension.HttpDestinationAuthentication authentication) {
         this.authentication = authentication;
         return this;
     }
-
+    
+    
     /**
      *  <p>Authentication methods (such as <code>Basic</code> or <code>Bearer</code>).</p>
      * @param builder function to build the authentication value
      * @return Builder
      */
-
-    public HttpDestinationBuilder authentication(
-            Function<com.commercetools.api.models.extension.HttpDestinationAuthenticationBuilder, Builder<? extends com.commercetools.api.models.extension.HttpDestinationAuthentication>> builder) {
-        this.authentication = builder
-                .apply(com.commercetools.api.models.extension.HttpDestinationAuthenticationBuilder.of())
-                .build();
+    
+    public HttpDestinationBuilder authentication(Function<com.commercetools.api.models.extension.HttpDestinationAuthenticationBuilder, Builder<? extends com.commercetools.api.models.extension.HttpDestinationAuthentication>> builder) {
+        this.authentication = builder.apply(com.commercetools.api.models.extension.HttpDestinationAuthenticationBuilder.of()).build();
         return this;
     }
+                    
 
     /**
      *  <p>URL to the target destination. If the Project is hosted in the China (AWS, Ningxia) Region, verify that the URL is not blocked due to firewall restrictions.</p>
      * @return url
      */
-
-    public String getUrl() {
+    
+    
+    public String getUrl(){
         return this.url;
     }
-
+    
     /**
      *  <p>Authentication methods (such as <code>Basic</code> or <code>Bearer</code>).</p>
      * @return authentication
      */
-
+    
     @Nullable
-    public com.commercetools.api.models.extension.HttpDestinationAuthentication getAuthentication() {
+    public com.commercetools.api.models.extension.HttpDestinationAuthentication getAuthentication(){
         return this.authentication;
     }
 
@@ -93,7 +103,7 @@ public class HttpDestinationBuilder implements Builder<HttpDestination> {
         Objects.requireNonNull(url, HttpDestination.class + ": url is missing");
         return new HttpDestinationImpl(url, authentication);
     }
-
+    
     /**
      * builds HttpDestination without checking for non-null required values
      * @return HttpDestination
@@ -104,7 +114,7 @@ public class HttpDestinationBuilder implements Builder<HttpDestination> {
 
     /**
      * factory method for an instance of HttpDestinationBuilder
-     * @return builder
+     * @return builder 
      */
     public static HttpDestinationBuilder of() {
         return new HttpDestinationBuilder();

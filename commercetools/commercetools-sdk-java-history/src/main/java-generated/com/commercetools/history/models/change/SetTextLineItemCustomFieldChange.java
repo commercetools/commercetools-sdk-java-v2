@@ -1,19 +1,22 @@
-
 package com.commercetools.history.models.change;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
+import com.commercetools.history.models.change.Change;
 import com.commercetools.history.models.change_value.TextLineItemValue;
+import java.lang.Object;
+import com.commercetools.history.models.change.SetTextLineItemCustomFieldChangeImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * SetTextLineItemCustomFieldChange
@@ -29,9 +32,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .textLineItem(textLineItemBuilder -> textLineItemBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = SetTextLineItemCustomFieldChangeImpl.class)
 public interface SetTextLineItemCustomFieldChange extends Change {
 
@@ -47,7 +53,6 @@ public interface SetTextLineItemCustomFieldChange extends Change {
     @NotNull
     @JsonProperty("type")
     public String getType();
-
     /**
      *  <p>Update action for <code>setTextLineItemCustomField</code></p>
      * @return change
@@ -55,7 +60,6 @@ public interface SetTextLineItemCustomFieldChange extends Change {
     @NotNull
     @JsonProperty("change")
     public String getChange();
-
     /**
      *
      * @return name
@@ -63,7 +67,6 @@ public interface SetTextLineItemCustomFieldChange extends Change {
     @NotNull
     @JsonProperty("name")
     public String getName();
-
     /**
      *
      * @return customTypeId
@@ -71,7 +74,6 @@ public interface SetTextLineItemCustomFieldChange extends Change {
     @NotNull
     @JsonProperty("customTypeId")
     public String getCustomTypeId();
-
     /**
      *
      * @return textLineItem
@@ -80,7 +82,6 @@ public interface SetTextLineItemCustomFieldChange extends Change {
     @Valid
     @JsonProperty("textLineItem")
     public TextLineItemValue getTextLineItem();
-
     /**
      *
      * @return nextValue
@@ -88,7 +89,6 @@ public interface SetTextLineItemCustomFieldChange extends Change {
     @NotNull
     @JsonProperty("nextValue")
     public Object getNextValue();
-
     /**
      *
      * @return previousValue
@@ -101,51 +101,58 @@ public interface SetTextLineItemCustomFieldChange extends Change {
      *  <p>Update action for <code>setTextLineItemCustomField</code></p>
      * @param change value to be set
      */
-
+    
     public void setChange(final String change);
-
+    
+    
     /**
      * set name
      * @param name value to be set
      */
-
+    
     public void setName(final String name);
-
+    
+    
     /**
      * set customTypeId
      * @param customTypeId value to be set
      */
-
+    
     public void setCustomTypeId(final String customTypeId);
-
+    
+    
     /**
      * set textLineItem
      * @param textLineItem value to be set
      */
-
+    
     public void setTextLineItem(final TextLineItemValue textLineItem);
-
+    
+    
     /**
      * set nextValue
      * @param nextValue value to be set
      */
-
+    
     public void setNextValue(final Object nextValue);
-
+    
+    
     /**
      * set previousValue
      * @param previousValue value to be set
      */
-
+    
     public void setPreviousValue(final Object previousValue);
+    
 
     /**
      * factory method
      * @return instance of SetTextLineItemCustomFieldChange
      */
-    public static SetTextLineItemCustomFieldChange of() {
+    public static SetTextLineItemCustomFieldChange of(){
         return new SetTextLineItemCustomFieldChangeImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy SetTextLineItemCustomFieldChange
@@ -177,8 +184,7 @@ public interface SetTextLineItemCustomFieldChange extends Change {
         instance.setChange(template.getChange());
         instance.setName(template.getName());
         instance.setCustomTypeId(template.getCustomTypeId());
-        instance.setTextLineItem(
-            com.commercetools.history.models.change_value.TextLineItemValue.deepCopy(template.getTextLineItem()));
+        instance.setTextLineItem(com.commercetools.history.models.change_value.TextLineItemValue.deepCopy(template.getTextLineItem()));
         instance.setNextValue(template.getNextValue());
         instance.setPreviousValue(template.getPreviousValue());
         return instance;
@@ -191,7 +197,7 @@ public interface SetTextLineItemCustomFieldChange extends Change {
     public static SetTextLineItemCustomFieldChangeBuilder builder() {
         return SetTextLineItemCustomFieldChangeBuilder.of();
     }
-
+    
     /**
      * create builder for SetTextLineItemCustomFieldChange instance
      * @param template instance with prefilled values for the builder
@@ -200,6 +206,7 @@ public interface SetTextLineItemCustomFieldChange extends Change {
     public static SetTextLineItemCustomFieldChangeBuilder builder(final SetTextLineItemCustomFieldChange template) {
         return SetTextLineItemCustomFieldChangeBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -210,7 +217,7 @@ public interface SetTextLineItemCustomFieldChange extends Change {
     default <T> T withSetTextLineItemCustomFieldChange(Function<SetTextLineItemCustomFieldChange, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

@@ -1,10 +1,12 @@
-
 package com.commercetools.api.models.order_edit;
 
-import java.util.*;
-
+import com.commercetools.api.models.order.StagedOrderUpdateAction;
+import java.lang.Object;
+import com.commercetools.api.models.order_edit.StagedOrderSetParcelCustomFieldAction;
 import javax.annotation.Nullable;
-
+import java.util.*;
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -19,76 +21,95 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .name("{name}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class StagedOrderSetParcelCustomFieldActionBuilder implements Builder<StagedOrderSetParcelCustomFieldAction> {
 
+    
+    
     private String parcelId;
-
+    
+    
+    
     private String name;
-
+    
+    
     @Nullable
     private java.lang.Object value;
 
+    
     /**
      * set the value to the parcelId
      * @param parcelId value to be set
      * @return Builder
      */
-
-    public StagedOrderSetParcelCustomFieldActionBuilder parcelId(final String parcelId) {
+    
+    public StagedOrderSetParcelCustomFieldActionBuilder parcelId( final String parcelId) {
         this.parcelId = parcelId;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Name of the Custom Field.</p>
      * @param name value to be set
      * @return Builder
      */
-
-    public StagedOrderSetParcelCustomFieldActionBuilder name(final String name) {
+    
+    public StagedOrderSetParcelCustomFieldActionBuilder name( final String name) {
         this.name = name;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>If <code>value</code> is absent or <code>null</code>, this field will be removed if it exists. Removing a field that does not exist returns an InvalidOperation error. If <code>value</code> is provided, it is set for the field defined by <code>name</code>.</p>
      * @param value value to be set
      * @return Builder
      */
-
+    
     public StagedOrderSetParcelCustomFieldActionBuilder value(@Nullable final java.lang.Object value) {
         this.value = value;
         return this;
     }
+    
+    
 
     /**
      * value of parcelId}
      * @return parcelId
      */
-
-    public String getParcelId() {
+    
+    
+    public String getParcelId(){
         return this.parcelId;
     }
-
+    
     /**
      *  <p>Name of the Custom Field.</p>
      * @return name
      */
-
-    public String getName() {
+    
+    
+    public String getName(){
         return this.name;
     }
-
+    
     /**
      *  <p>If <code>value</code> is absent or <code>null</code>, this field will be removed if it exists. Removing a field that does not exist returns an InvalidOperation error. If <code>value</code> is provided, it is set for the field defined by <code>name</code>.</p>
      * @return value
      */
-
+    
     @Nullable
-    public java.lang.Object getValue() {
+    public java.lang.Object getValue(){
         return this.value;
     }
 
@@ -101,7 +122,7 @@ public class StagedOrderSetParcelCustomFieldActionBuilder implements Builder<Sta
         Objects.requireNonNull(name, StagedOrderSetParcelCustomFieldAction.class + ": name is missing");
         return new StagedOrderSetParcelCustomFieldActionImpl(parcelId, name, value);
     }
-
+    
     /**
      * builds StagedOrderSetParcelCustomFieldAction without checking for non-null required values
      * @return StagedOrderSetParcelCustomFieldAction
@@ -112,7 +133,7 @@ public class StagedOrderSetParcelCustomFieldActionBuilder implements Builder<Sta
 
     /**
      * factory method for an instance of StagedOrderSetParcelCustomFieldActionBuilder
-     * @return builder
+     * @return builder 
      */
     public static StagedOrderSetParcelCustomFieldActionBuilder of() {
         return new StagedOrderSetParcelCustomFieldActionBuilder();
@@ -123,8 +144,7 @@ public class StagedOrderSetParcelCustomFieldActionBuilder implements Builder<Sta
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static StagedOrderSetParcelCustomFieldActionBuilder of(
-            final StagedOrderSetParcelCustomFieldAction template) {
+    public static StagedOrderSetParcelCustomFieldActionBuilder of(final StagedOrderSetParcelCustomFieldAction template) {
         StagedOrderSetParcelCustomFieldActionBuilder builder = new StagedOrderSetParcelCustomFieldActionBuilder();
         builder.parcelId = template.getParcelId();
         builder.name = template.getName();

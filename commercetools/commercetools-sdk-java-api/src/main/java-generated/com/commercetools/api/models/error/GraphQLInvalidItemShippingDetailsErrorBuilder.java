@@ -1,8 +1,11 @@
-
 package com.commercetools.api.models.error;
 
+import com.commercetools.api.models.error.GraphQLErrorObject;
+import com.commercetools.api.models.error.GraphQLInvalidItemShippingDetailsError;
+import javax.annotation.Nullable;
 import java.util.*;
-
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -17,15 +20,24 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .itemId("{itemId}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class GraphQLInvalidItemShippingDetailsErrorBuilder implements Builder<GraphQLInvalidItemShippingDetailsError> {
 
+    
+    
     private Map<String, java.lang.Object> values = new HashMap<>();
-
+    
+    
+    
     private String subject;
-
+    
+    
+    
     private String itemId;
 
     /**
@@ -33,19 +45,19 @@ public class GraphQLInvalidItemShippingDetailsErrorBuilder implements Builder<Gr
      * @param values properties to be set
      * @return Builder
      */
-
-    public GraphQLInvalidItemShippingDetailsErrorBuilder values(final Map<String, java.lang.Object> values) {
+    
+    public GraphQLInvalidItemShippingDetailsErrorBuilder values( final Map<String, java.lang.Object> values){
         this.values = values;
         return this;
     }
-
+    
     /**
      *  <p>Error-specific additional fields.</p>
      * @param key property name
      * @param value property value
      * @return Builder
      */
-
+    
     public GraphQLInvalidItemShippingDetailsErrorBuilder addValue(final String key, final java.lang.Object value) {
         if (this.values == null) {
             values = new HashMap<>();
@@ -53,53 +65,63 @@ public class GraphQLInvalidItemShippingDetailsErrorBuilder implements Builder<Gr
         values.put(key, value);
         return this;
     }
-
+    
+    
+    
     /**
      *  <p><code>"LineItem"</code> or <code>"CustomLineItem"</code></p>
      * @param subject value to be set
      * @return Builder
      */
-
-    public GraphQLInvalidItemShippingDetailsErrorBuilder subject(final String subject) {
+    
+    public GraphQLInvalidItemShippingDetailsErrorBuilder subject( final String subject) {
         this.subject = subject;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Unique identifier of the Line Item or Custom Line Item.</p>
      * @param itemId value to be set
      * @return Builder
      */
-
-    public GraphQLInvalidItemShippingDetailsErrorBuilder itemId(final String itemId) {
+    
+    public GraphQLInvalidItemShippingDetailsErrorBuilder itemId( final String itemId) {
         this.itemId = itemId;
         return this;
     }
+    
+    
 
     /**
      *  <p>Error-specific additional fields.</p>
      * @return pattern properties
      */
-
-    public Map<String, java.lang.Object> getValues() {
+    
+    
+    public Map<String, java.lang.Object> getValues(){
         return this.values;
     }
-
+    
     /**
      *  <p><code>"LineItem"</code> or <code>"CustomLineItem"</code></p>
      * @return subject
      */
-
-    public String getSubject() {
+    
+    
+    public String getSubject(){
         return this.subject;
     }
-
+    
     /**
      *  <p>Unique identifier of the Line Item or Custom Line Item.</p>
      * @return itemId
      */
-
-    public String getItemId() {
+    
+    
+    public String getItemId(){
         return this.itemId;
     }
 
@@ -112,7 +134,7 @@ public class GraphQLInvalidItemShippingDetailsErrorBuilder implements Builder<Gr
         Objects.requireNonNull(itemId, GraphQLInvalidItemShippingDetailsError.class + ": itemId is missing");
         return new GraphQLInvalidItemShippingDetailsErrorImpl(values, subject, itemId);
     }
-
+    
     /**
      * builds GraphQLInvalidItemShippingDetailsError without checking for non-null required values
      * @return GraphQLInvalidItemShippingDetailsError
@@ -123,7 +145,7 @@ public class GraphQLInvalidItemShippingDetailsErrorBuilder implements Builder<Gr
 
     /**
      * factory method for an instance of GraphQLInvalidItemShippingDetailsErrorBuilder
-     * @return builder
+     * @return builder 
      */
     public static GraphQLInvalidItemShippingDetailsErrorBuilder of() {
         return new GraphQLInvalidItemShippingDetailsErrorBuilder();
@@ -134,8 +156,7 @@ public class GraphQLInvalidItemShippingDetailsErrorBuilder implements Builder<Gr
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static GraphQLInvalidItemShippingDetailsErrorBuilder of(
-            final GraphQLInvalidItemShippingDetailsError template) {
+    public static GraphQLInvalidItemShippingDetailsErrorBuilder of(final GraphQLInvalidItemShippingDetailsError template) {
         GraphQLInvalidItemShippingDetailsErrorBuilder builder = new GraphQLInvalidItemShippingDetailsErrorBuilder();
         builder.values = template.values();
         builder.subject = template.getSubject();

@@ -1,18 +1,21 @@
-
 package com.commercetools.ml.models.image_search_config;
 
-import java.time.*;
+import com.commercetools.ml.models.image_search_config.ImageSearchConfigStatus;
 import java.time.ZonedDateTime;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
+import com.commercetools.ml.models.image_search_config.ImageSearchConfigResponseImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * ImageSearchConfigResponse
@@ -26,11 +29,15 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .lastModifiedAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = ImageSearchConfigResponseImpl.class)
-public interface ImageSearchConfigResponse {
+public interface ImageSearchConfigResponse  {
+
 
     /**
      *  <p>The image search activation status.</p>
@@ -39,7 +46,6 @@ public interface ImageSearchConfigResponse {
     @NotNull
     @JsonProperty("status")
     public ImageSearchConfigStatus getStatus();
-
     /**
      *
      * @return lastModifiedAt
@@ -52,23 +58,26 @@ public interface ImageSearchConfigResponse {
      *  <p>The image search activation status.</p>
      * @param status value to be set
      */
-
+    
     public void setStatus(final ImageSearchConfigStatus status);
-
+    
+    
     /**
      * set lastModifiedAt
      * @param lastModifiedAt value to be set
      */
-
+    
     public void setLastModifiedAt(final ZonedDateTime lastModifiedAt);
+    
 
     /**
      * factory method
      * @return instance of ImageSearchConfigResponse
      */
-    public static ImageSearchConfigResponse of() {
+    public static ImageSearchConfigResponse of(){
         return new ImageSearchConfigResponseImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy ImageSearchConfigResponse
@@ -105,7 +114,7 @@ public interface ImageSearchConfigResponse {
     public static ImageSearchConfigResponseBuilder builder() {
         return ImageSearchConfigResponseBuilder.of();
     }
-
+    
     /**
      * create builder for ImageSearchConfigResponse instance
      * @param template instance with prefilled values for the builder
@@ -114,6 +123,7 @@ public interface ImageSearchConfigResponse {
     public static ImageSearchConfigResponseBuilder builder(final ImageSearchConfigResponse template) {
         return ImageSearchConfigResponseBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -124,7 +134,7 @@ public interface ImageSearchConfigResponse {
     default <T> T withImageSearchConfigResponse(Function<ImageSearchConfigResponse, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

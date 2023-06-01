@@ -1,17 +1,21 @@
-
 package com.commercetools.api.models.message;
 
-import java.time.*;
+import com.commercetools.api.models.message.MessagePayload;
 import java.time.LocalDate;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
+import com.commercetools.api.models.message.CustomerDateOfBirthSetMessagePayloadImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Generated after a successful Set Date of Birth update action.</p>
@@ -23,9 +27,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     CustomerDateOfBirthSetMessagePayload customerDateOfBirthSetMessagePayload = CustomerDateOfBirthSetMessagePayload.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = CustomerDateOfBirthSetMessagePayloadImpl.class)
 public interface CustomerDateOfBirthSetMessagePayload extends MessagePayload {
 
@@ -38,7 +45,7 @@ public interface CustomerDateOfBirthSetMessagePayload extends MessagePayload {
      *  <p>The <code>dateOfBirth</code> that was set during the Set Date of Birth update action.</p>
      * @return dateOfBirth
      */
-
+    
     @JsonProperty("dateOfBirth")
     public LocalDate getDateOfBirth();
 
@@ -46,16 +53,18 @@ public interface CustomerDateOfBirthSetMessagePayload extends MessagePayload {
      *  <p>The <code>dateOfBirth</code> that was set during the Set Date of Birth update action.</p>
      * @param dateOfBirth value to be set
      */
-
+    
     public void setDateOfBirth(final LocalDate dateOfBirth);
+    
 
     /**
      * factory method
      * @return instance of CustomerDateOfBirthSetMessagePayload
      */
-    public static CustomerDateOfBirthSetMessagePayload of() {
+    public static CustomerDateOfBirthSetMessagePayload of(){
         return new CustomerDateOfBirthSetMessagePayloadImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy CustomerDateOfBirthSetMessagePayload
@@ -74,8 +83,7 @@ public interface CustomerDateOfBirthSetMessagePayload extends MessagePayload {
      * @return copy instance
      */
     @Nullable
-    public static CustomerDateOfBirthSetMessagePayload deepCopy(
-            @Nullable final CustomerDateOfBirthSetMessagePayload template) {
+    public static CustomerDateOfBirthSetMessagePayload deepCopy(@Nullable final CustomerDateOfBirthSetMessagePayload template) {
         if (template == null) {
             return null;
         }
@@ -91,16 +99,16 @@ public interface CustomerDateOfBirthSetMessagePayload extends MessagePayload {
     public static CustomerDateOfBirthSetMessagePayloadBuilder builder() {
         return CustomerDateOfBirthSetMessagePayloadBuilder.of();
     }
-
+    
     /**
      * create builder for CustomerDateOfBirthSetMessagePayload instance
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static CustomerDateOfBirthSetMessagePayloadBuilder builder(
-            final CustomerDateOfBirthSetMessagePayload template) {
+    public static CustomerDateOfBirthSetMessagePayloadBuilder builder(final CustomerDateOfBirthSetMessagePayload template) {
         return CustomerDateOfBirthSetMessagePayloadBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -111,7 +119,7 @@ public interface CustomerDateOfBirthSetMessagePayload extends MessagePayload {
     default <T> T withCustomerDateOfBirthSetMessagePayload(Function<CustomerDateOfBirthSetMessagePayload, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

@@ -1,19 +1,22 @@
-
 package com.commercetools.history.models.change;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
+import com.commercetools.history.models.change.Change;
 import com.commercetools.history.models.change_value.AssetChangeValue;
+import java.lang.Object;
+import com.commercetools.history.models.change.SetAssetCustomFieldChangeImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * SetAssetCustomFieldChange
@@ -29,9 +32,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .asset(assetBuilder -> assetBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = SetAssetCustomFieldChangeImpl.class)
 public interface SetAssetCustomFieldChange extends Change {
 
@@ -47,7 +53,6 @@ public interface SetAssetCustomFieldChange extends Change {
     @NotNull
     @JsonProperty("change")
     public String getChange();
-
     /**
      *
      * @return type
@@ -55,7 +60,6 @@ public interface SetAssetCustomFieldChange extends Change {
     @NotNull
     @JsonProperty("type")
     public String getType();
-
     /**
      *
      * @return name
@@ -63,7 +67,6 @@ public interface SetAssetCustomFieldChange extends Change {
     @NotNull
     @JsonProperty("name")
     public String getName();
-
     /**
      *
      * @return customTypeId
@@ -71,7 +74,6 @@ public interface SetAssetCustomFieldChange extends Change {
     @NotNull
     @JsonProperty("customTypeId")
     public String getCustomTypeId();
-
     /**
      *
      * @return asset
@@ -80,7 +82,6 @@ public interface SetAssetCustomFieldChange extends Change {
     @Valid
     @JsonProperty("asset")
     public AssetChangeValue getAsset();
-
     /**
      *
      * @return nextValue
@@ -88,7 +89,6 @@ public interface SetAssetCustomFieldChange extends Change {
     @NotNull
     @JsonProperty("nextValue")
     public Object getNextValue();
-
     /**
      *
      * @return previousValue
@@ -101,51 +101,58 @@ public interface SetAssetCustomFieldChange extends Change {
      *  <p>Update action for <code>setAssetCustomField</code></p>
      * @param change value to be set
      */
-
+    
     public void setChange(final String change);
-
+    
+    
     /**
      * set name
      * @param name value to be set
      */
-
+    
     public void setName(final String name);
-
+    
+    
     /**
      * set customTypeId
      * @param customTypeId value to be set
      */
-
+    
     public void setCustomTypeId(final String customTypeId);
-
+    
+    
     /**
      * set asset
      * @param asset value to be set
      */
-
+    
     public void setAsset(final AssetChangeValue asset);
-
+    
+    
     /**
      * set nextValue
      * @param nextValue value to be set
      */
-
+    
     public void setNextValue(final Object nextValue);
-
+    
+    
     /**
      * set previousValue
      * @param previousValue value to be set
      */
-
+    
     public void setPreviousValue(final Object previousValue);
+    
 
     /**
      * factory method
      * @return instance of SetAssetCustomFieldChange
      */
-    public static SetAssetCustomFieldChange of() {
+    public static SetAssetCustomFieldChange of(){
         return new SetAssetCustomFieldChangeImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy SetAssetCustomFieldChange
@@ -190,7 +197,7 @@ public interface SetAssetCustomFieldChange extends Change {
     public static SetAssetCustomFieldChangeBuilder builder() {
         return SetAssetCustomFieldChangeBuilder.of();
     }
-
+    
     /**
      * create builder for SetAssetCustomFieldChange instance
      * @param template instance with prefilled values for the builder
@@ -199,6 +206,7 @@ public interface SetAssetCustomFieldChange extends Change {
     public static SetAssetCustomFieldChangeBuilder builder(final SetAssetCustomFieldChange template) {
         return SetAssetCustomFieldChangeBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -209,7 +217,7 @@ public interface SetAssetCustomFieldChange extends Change {
     default <T> T withSetAssetCustomFieldChange(Function<SetAssetCustomFieldChange, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

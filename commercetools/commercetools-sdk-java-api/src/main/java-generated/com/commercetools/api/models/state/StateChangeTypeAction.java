@@ -1,17 +1,21 @@
-
 package com.commercetools.api.models.state;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
+import com.commercetools.api.models.state.StateTypeEnum;
+import com.commercetools.api.models.state.StateUpdateAction;
+import com.commercetools.api.models.state.StateChangeTypeActionImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * StateChangeTypeAction
@@ -24,9 +28,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .type(StateTypeEnum.ORDER_STATE)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = StateChangeTypeActionImpl.class)
 public interface StateChangeTypeAction extends StateUpdateAction {
 
@@ -47,16 +54,18 @@ public interface StateChangeTypeAction extends StateUpdateAction {
      *  <p>Resource or object types the State shall be assigned to. Must not be empty.</p>
      * @param type value to be set
      */
-
+    
     public void setType(final StateTypeEnum type);
+    
 
     /**
      * factory method
      * @return instance of StateChangeTypeAction
      */
-    public static StateChangeTypeAction of() {
+    public static StateChangeTypeAction of(){
         return new StateChangeTypeActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy StateChangeTypeAction
@@ -91,7 +100,7 @@ public interface StateChangeTypeAction extends StateUpdateAction {
     public static StateChangeTypeActionBuilder builder() {
         return StateChangeTypeActionBuilder.of();
     }
-
+    
     /**
      * create builder for StateChangeTypeAction instance
      * @param template instance with prefilled values for the builder
@@ -100,6 +109,7 @@ public interface StateChangeTypeAction extends StateUpdateAction {
     public static StateChangeTypeActionBuilder builder(final StateChangeTypeAction template) {
         return StateChangeTypeActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -110,7 +120,7 @@ public interface StateChangeTypeAction extends StateUpdateAction {
     default <T> T withStateChangeTypeAction(Function<StateChangeTypeAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

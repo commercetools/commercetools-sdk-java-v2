@@ -1,10 +1,11 @@
-
 package com.commercetools.api.models.cart;
 
-import java.util.*;
-
+import com.commercetools.api.models.cart.CartUpdateAction;
+import com.commercetools.api.models.cart.CartSetCustomerEmailAction;
 import javax.annotation.Nullable;
-
+import java.util.*;
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -17,32 +18,39 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     CartSetCustomerEmailAction cartSetCustomerEmailAction = CartSetCustomerEmailAction.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class CartSetCustomerEmailActionBuilder implements Builder<CartSetCustomerEmailAction> {
 
+    
     @Nullable
     private String email;
 
+    
     /**
      *  <p>Value to set. If empty, any existing value is removed.</p>
      * @param email value to be set
      * @return Builder
      */
-
+    
     public CartSetCustomerEmailActionBuilder email(@Nullable final String email) {
         this.email = email;
         return this;
     }
+    
+    
 
     /**
      *  <p>Value to set. If empty, any existing value is removed.</p>
      * @return email
      */
-
+    
     @Nullable
-    public String getEmail() {
+    public String getEmail(){
         return this.email;
     }
 
@@ -53,7 +61,7 @@ public class CartSetCustomerEmailActionBuilder implements Builder<CartSetCustome
     public CartSetCustomerEmailAction build() {
         return new CartSetCustomerEmailActionImpl(email);
     }
-
+    
     /**
      * builds CartSetCustomerEmailAction without checking for non-null required values
      * @return CartSetCustomerEmailAction
@@ -64,7 +72,7 @@ public class CartSetCustomerEmailActionBuilder implements Builder<CartSetCustome
 
     /**
      * factory method for an instance of CartSetCustomerEmailActionBuilder
-     * @return builder
+     * @return builder 
      */
     public static CartSetCustomerEmailActionBuilder of() {
         return new CartSetCustomerEmailActionBuilder();

@@ -1,20 +1,22 @@
-
 package com.commercetools.api.models.order_edit;
-
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
 
 import com.commercetools.api.models.order.StagedOrderUpdateAction;
 import com.commercetools.api.models.type.FieldContainer;
 import com.commercetools.api.models.type.TypeResourceIdentifier;
+import com.commercetools.api.models.order_edit.StagedOrderSetDeliveryAddressCustomTypeActionImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * StagedOrderSetDeliveryAddressCustomTypeAction
@@ -26,9 +28,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     StagedOrderSetDeliveryAddressCustomTypeAction stagedOrderSetDeliveryAddressCustomTypeAction = StagedOrderSetDeliveryAddressCustomTypeAction.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = StagedOrderSetDeliveryAddressCustomTypeActionImpl.class)
 public interface StagedOrderSetDeliveryAddressCustomTypeAction extends StagedOrderUpdateAction {
 
@@ -41,18 +46,16 @@ public interface StagedOrderSetDeliveryAddressCustomTypeAction extends StagedOrd
      *  <p>Either <code>deliveryId</code> or <code>deliveryKey</code> is required for this update action.</p>
      * @return deliveryId
      */
-
+    
     @JsonProperty("deliveryId")
     public String getDeliveryId();
-
     /**
      *  <p>Either <code>deliveryId</code> or <code>deliveryKey</code> is required for this update action.</p>
      * @return deliveryKey
      */
-
+    
     @JsonProperty("deliveryKey")
     public String getDeliveryKey();
-
     /**
      *  <p>Defines the Type that extends the <code>address</code> in a Delivery with Custom Fields. If absent, any existing Type and Custom Fields are removed from the <code>address</code> in a Delivery.</p>
      * @return type
@@ -60,7 +63,6 @@ public interface StagedOrderSetDeliveryAddressCustomTypeAction extends StagedOrd
     @Valid
     @JsonProperty("type")
     public TypeResourceIdentifier getType();
-
     /**
      *  <p>Sets the Custom Fields fields for the <code>address</code> in a Delivery.</p>
      * @return fields
@@ -73,45 +75,49 @@ public interface StagedOrderSetDeliveryAddressCustomTypeAction extends StagedOrd
      *  <p>Either <code>deliveryId</code> or <code>deliveryKey</code> is required for this update action.</p>
      * @param deliveryId value to be set
      */
-
+    
     public void setDeliveryId(final String deliveryId);
-
+    
+    
     /**
      *  <p>Either <code>deliveryId</code> or <code>deliveryKey</code> is required for this update action.</p>
      * @param deliveryKey value to be set
      */
-
+    
     public void setDeliveryKey(final String deliveryKey);
-
+    
+    
     /**
      *  <p>Defines the Type that extends the <code>address</code> in a Delivery with Custom Fields. If absent, any existing Type and Custom Fields are removed from the <code>address</code> in a Delivery.</p>
      * @param type value to be set
      */
-
+    
     public void setType(final TypeResourceIdentifier type);
-
+    
+    
     /**
      *  <p>Sets the Custom Fields fields for the <code>address</code> in a Delivery.</p>
      * @param fields value to be set
      */
-
+    
     public void setFields(final FieldContainer fields);
+    
 
     /**
      * factory method
      * @return instance of StagedOrderSetDeliveryAddressCustomTypeAction
      */
-    public static StagedOrderSetDeliveryAddressCustomTypeAction of() {
+    public static StagedOrderSetDeliveryAddressCustomTypeAction of(){
         return new StagedOrderSetDeliveryAddressCustomTypeActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy StagedOrderSetDeliveryAddressCustomTypeAction
      * @param template instance to be copied
      * @return copy instance
      */
-    public static StagedOrderSetDeliveryAddressCustomTypeAction of(
-            final StagedOrderSetDeliveryAddressCustomTypeAction template) {
+    public static StagedOrderSetDeliveryAddressCustomTypeAction of(final StagedOrderSetDeliveryAddressCustomTypeAction template) {
         StagedOrderSetDeliveryAddressCustomTypeActionImpl instance = new StagedOrderSetDeliveryAddressCustomTypeActionImpl();
         instance.setDeliveryId(template.getDeliveryId());
         instance.setDeliveryKey(template.getDeliveryKey());
@@ -126,8 +132,7 @@ public interface StagedOrderSetDeliveryAddressCustomTypeAction extends StagedOrd
      * @return copy instance
      */
     @Nullable
-    public static StagedOrderSetDeliveryAddressCustomTypeAction deepCopy(
-            @Nullable final StagedOrderSetDeliveryAddressCustomTypeAction template) {
+    public static StagedOrderSetDeliveryAddressCustomTypeAction deepCopy(@Nullable final StagedOrderSetDeliveryAddressCustomTypeAction template) {
         if (template == null) {
             return null;
         }
@@ -146,16 +151,16 @@ public interface StagedOrderSetDeliveryAddressCustomTypeAction extends StagedOrd
     public static StagedOrderSetDeliveryAddressCustomTypeActionBuilder builder() {
         return StagedOrderSetDeliveryAddressCustomTypeActionBuilder.of();
     }
-
+    
     /**
      * create builder for StagedOrderSetDeliveryAddressCustomTypeAction instance
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static StagedOrderSetDeliveryAddressCustomTypeActionBuilder builder(
-            final StagedOrderSetDeliveryAddressCustomTypeAction template) {
+    public static StagedOrderSetDeliveryAddressCustomTypeActionBuilder builder(final StagedOrderSetDeliveryAddressCustomTypeAction template) {
         return StagedOrderSetDeliveryAddressCustomTypeActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -163,11 +168,10 @@ public interface StagedOrderSetDeliveryAddressCustomTypeAction extends StagedOrd
      * @param helper function to map the object
      * @return mapped value
      */
-    default <T> T withStagedOrderSetDeliveryAddressCustomTypeAction(
-            Function<StagedOrderSetDeliveryAddressCustomTypeAction, T> helper) {
+    default <T> T withStagedOrderSetDeliveryAddressCustomTypeAction(Function<StagedOrderSetDeliveryAddressCustomTypeAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

@@ -1,10 +1,11 @@
-
 package com.commercetools.api.models.payment;
 
-import java.util.*;
-
+import com.commercetools.api.models.payment.PaymentUpdateAction;
+import com.commercetools.api.models.payment.PaymentSetKeyAction;
 import javax.annotation.Nullable;
-
+import java.util.*;
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -17,32 +18,39 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     PaymentSetKeyAction paymentSetKeyAction = PaymentSetKeyAction.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class PaymentSetKeyActionBuilder implements Builder<PaymentSetKeyAction> {
 
+    
     @Nullable
     private String key;
 
+    
     /**
      *  <p>Value to set. If <code>key</code> is absent or <code>null</code>, the existing key, if any, will be removed.</p>
      * @param key value to be set
      * @return Builder
      */
-
+    
     public PaymentSetKeyActionBuilder key(@Nullable final String key) {
         this.key = key;
         return this;
     }
+    
+    
 
     /**
      *  <p>Value to set. If <code>key</code> is absent or <code>null</code>, the existing key, if any, will be removed.</p>
      * @return key
      */
-
+    
     @Nullable
-    public String getKey() {
+    public String getKey(){
         return this.key;
     }
 
@@ -53,7 +61,7 @@ public class PaymentSetKeyActionBuilder implements Builder<PaymentSetKeyAction> 
     public PaymentSetKeyAction build() {
         return new PaymentSetKeyActionImpl(key);
     }
-
+    
     /**
      * builds PaymentSetKeyAction without checking for non-null required values
      * @return PaymentSetKeyAction
@@ -64,7 +72,7 @@ public class PaymentSetKeyActionBuilder implements Builder<PaymentSetKeyAction> 
 
     /**
      * factory method for an instance of PaymentSetKeyActionBuilder
-     * @return builder
+     * @return builder 
      */
     public static PaymentSetKeyActionBuilder of() {
         return new PaymentSetKeyActionBuilder();

@@ -1,16 +1,20 @@
-
 package com.commercetools.api.models.message;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
+import com.commercetools.api.models.message.MessagePayload;
+import com.commercetools.api.models.message.CustomerTitleSetMessagePayloadImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Generated after a successful Set Title update action.</p>
@@ -22,9 +26,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     CustomerTitleSetMessagePayload customerTitleSetMessagePayload = CustomerTitleSetMessagePayload.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = CustomerTitleSetMessagePayloadImpl.class)
 public interface CustomerTitleSetMessagePayload extends MessagePayload {
 
@@ -37,7 +44,7 @@ public interface CustomerTitleSetMessagePayload extends MessagePayload {
      *  <p>The <code>title</code> that was set during the Set Title update action.</p>
      * @return title
      */
-
+    
     @JsonProperty("title")
     public String getTitle();
 
@@ -45,16 +52,18 @@ public interface CustomerTitleSetMessagePayload extends MessagePayload {
      *  <p>The <code>title</code> that was set during the Set Title update action.</p>
      * @param title value to be set
      */
-
+    
     public void setTitle(final String title);
+    
 
     /**
      * factory method
      * @return instance of CustomerTitleSetMessagePayload
      */
-    public static CustomerTitleSetMessagePayload of() {
+    public static CustomerTitleSetMessagePayload of(){
         return new CustomerTitleSetMessagePayloadImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy CustomerTitleSetMessagePayload
@@ -89,7 +98,7 @@ public interface CustomerTitleSetMessagePayload extends MessagePayload {
     public static CustomerTitleSetMessagePayloadBuilder builder() {
         return CustomerTitleSetMessagePayloadBuilder.of();
     }
-
+    
     /**
      * create builder for CustomerTitleSetMessagePayload instance
      * @param template instance with prefilled values for the builder
@@ -98,6 +107,7 @@ public interface CustomerTitleSetMessagePayload extends MessagePayload {
     public static CustomerTitleSetMessagePayloadBuilder builder(final CustomerTitleSetMessagePayload template) {
         return CustomerTitleSetMessagePayloadBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -108,7 +118,7 @@ public interface CustomerTitleSetMessagePayload extends MessagePayload {
     default <T> T withCustomerTitleSetMessagePayload(Function<CustomerTitleSetMessagePayload, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

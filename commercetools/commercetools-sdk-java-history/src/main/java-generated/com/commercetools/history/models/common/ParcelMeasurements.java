@@ -1,17 +1,20 @@
-
 package com.commercetools.history.models.common;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
 
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
+import com.commercetools.history.models.common.ParcelMeasurementsImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * ParcelMeasurements
@@ -27,11 +30,15 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .weightInGram(1)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = ParcelMeasurementsImpl.class)
-public interface ParcelMeasurements {
+public interface ParcelMeasurements  {
+
 
     /**
      *
@@ -40,7 +47,6 @@ public interface ParcelMeasurements {
     @NotNull
     @JsonProperty("heightInMillimeter")
     public Integer getHeightInMillimeter();
-
     /**
      *
      * @return lengthInMillimeter
@@ -48,7 +54,6 @@ public interface ParcelMeasurements {
     @NotNull
     @JsonProperty("lengthInMillimeter")
     public Integer getLengthInMillimeter();
-
     /**
      *
      * @return widthInMillimeter
@@ -56,7 +61,6 @@ public interface ParcelMeasurements {
     @NotNull
     @JsonProperty("widthInMillimeter")
     public Integer getWidthInMillimeter();
-
     /**
      *
      * @return weightInGram
@@ -69,37 +73,42 @@ public interface ParcelMeasurements {
      * set heightInMillimeter
      * @param heightInMillimeter value to be set
      */
-
+    
     public void setHeightInMillimeter(final Integer heightInMillimeter);
-
+    
+    
     /**
      * set lengthInMillimeter
      * @param lengthInMillimeter value to be set
      */
-
+    
     public void setLengthInMillimeter(final Integer lengthInMillimeter);
-
+    
+    
     /**
      * set widthInMillimeter
      * @param widthInMillimeter value to be set
      */
-
+    
     public void setWidthInMillimeter(final Integer widthInMillimeter);
-
+    
+    
     /**
      * set weightInGram
      * @param weightInGram value to be set
      */
-
+    
     public void setWeightInGram(final Integer weightInGram);
+    
 
     /**
      * factory method
      * @return instance of ParcelMeasurements
      */
-    public static ParcelMeasurements of() {
+    public static ParcelMeasurements of(){
         return new ParcelMeasurementsImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy ParcelMeasurements
@@ -140,7 +149,7 @@ public interface ParcelMeasurements {
     public static ParcelMeasurementsBuilder builder() {
         return ParcelMeasurementsBuilder.of();
     }
-
+    
     /**
      * create builder for ParcelMeasurements instance
      * @param template instance with prefilled values for the builder
@@ -149,6 +158,7 @@ public interface ParcelMeasurements {
     public static ParcelMeasurementsBuilder builder(final ParcelMeasurements template) {
         return ParcelMeasurementsBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -159,7 +169,7 @@ public interface ParcelMeasurements {
     default <T> T withParcelMeasurements(Function<ParcelMeasurements, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

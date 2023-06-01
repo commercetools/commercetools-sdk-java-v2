@@ -1,19 +1,22 @@
-
 package com.commercetools.api.models.quote_request;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-
+import com.commercetools.api.models.quote_request.QuoteRequestUpdateAction;
 import com.commercetools.api.models.type.FieldContainer;
 import com.commercetools.api.models.type.TypeResourceIdentifier;
+import com.commercetools.api.models.quote_request.QuoteRequestSetCustomTypeActionImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * QuoteRequestSetCustomTypeAction
@@ -25,9 +28,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     QuoteRequestSetCustomTypeAction quoteRequestSetCustomTypeAction = QuoteRequestSetCustomTypeAction.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = QuoteRequestSetCustomTypeActionImpl.class)
 public interface QuoteRequestSetCustomTypeAction extends QuoteRequestUpdateAction {
 
@@ -43,7 +49,6 @@ public interface QuoteRequestSetCustomTypeAction extends QuoteRequestUpdateActio
     @Valid
     @JsonProperty("type")
     public TypeResourceIdentifier getType();
-
     /**
      *  <p>Sets the Custom Fields fields for the QuoteRequest.</p>
      * @return fields
@@ -56,23 +61,26 @@ public interface QuoteRequestSetCustomTypeAction extends QuoteRequestUpdateActio
      *  <p>Defines the Type that extends the QuoteRequest with Custom Fields. If absent, any existing Type and Custom Fields are removed from the QuoteRequest.</p>
      * @param type value to be set
      */
-
+    
     public void setType(final TypeResourceIdentifier type);
-
+    
+    
     /**
      *  <p>Sets the Custom Fields fields for the QuoteRequest.</p>
      * @param fields value to be set
      */
-
+    
     public void setFields(final FieldContainer fields);
+    
 
     /**
      * factory method
      * @return instance of QuoteRequestSetCustomTypeAction
      */
-    public static QuoteRequestSetCustomTypeAction of() {
+    public static QuoteRequestSetCustomTypeAction of(){
         return new QuoteRequestSetCustomTypeActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy QuoteRequestSetCustomTypeAction
@@ -109,7 +117,7 @@ public interface QuoteRequestSetCustomTypeAction extends QuoteRequestUpdateActio
     public static QuoteRequestSetCustomTypeActionBuilder builder() {
         return QuoteRequestSetCustomTypeActionBuilder.of();
     }
-
+    
     /**
      * create builder for QuoteRequestSetCustomTypeAction instance
      * @param template instance with prefilled values for the builder
@@ -118,6 +126,7 @@ public interface QuoteRequestSetCustomTypeAction extends QuoteRequestUpdateActio
     public static QuoteRequestSetCustomTypeActionBuilder builder(final QuoteRequestSetCustomTypeAction template) {
         return QuoteRequestSetCustomTypeActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -128,7 +137,7 @@ public interface QuoteRequestSetCustomTypeAction extends QuoteRequestUpdateActio
     default <T> T withQuoteRequestSetCustomTypeAction(Function<QuoteRequestSetCustomTypeAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

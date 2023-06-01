@@ -1,8 +1,11 @@
-
 package com.commercetools.api.models.message;
 
+import com.commercetools.api.models.message.MessagePayload;
+import com.commercetools.api.models.message.AssociateRoleNameChangedMessagePayload;
+import javax.annotation.Nullable;
 import java.util.*;
-
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -16,30 +19,39 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .name("{name}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class AssociateRoleNameChangedMessagePayloadBuilder implements Builder<AssociateRoleNameChangedMessagePayload> {
 
+    
+    
     private String name;
 
+    
     /**
      *  <p>Updated name of the AssociateRole.</p>
      * @param name value to be set
      * @return Builder
      */
-
-    public AssociateRoleNameChangedMessagePayloadBuilder name(final String name) {
+    
+    public AssociateRoleNameChangedMessagePayloadBuilder name( final String name) {
         this.name = name;
         return this;
     }
+    
+    
 
     /**
      *  <p>Updated name of the AssociateRole.</p>
      * @return name
      */
-
-    public String getName() {
+    
+    
+    public String getName(){
         return this.name;
     }
 
@@ -51,7 +63,7 @@ public class AssociateRoleNameChangedMessagePayloadBuilder implements Builder<As
         Objects.requireNonNull(name, AssociateRoleNameChangedMessagePayload.class + ": name is missing");
         return new AssociateRoleNameChangedMessagePayloadImpl(name);
     }
-
+    
     /**
      * builds AssociateRoleNameChangedMessagePayload without checking for non-null required values
      * @return AssociateRoleNameChangedMessagePayload
@@ -62,7 +74,7 @@ public class AssociateRoleNameChangedMessagePayloadBuilder implements Builder<As
 
     /**
      * factory method for an instance of AssociateRoleNameChangedMessagePayloadBuilder
-     * @return builder
+     * @return builder 
      */
     public static AssociateRoleNameChangedMessagePayloadBuilder of() {
         return new AssociateRoleNameChangedMessagePayloadBuilder();
@@ -73,8 +85,7 @@ public class AssociateRoleNameChangedMessagePayloadBuilder implements Builder<As
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static AssociateRoleNameChangedMessagePayloadBuilder of(
-            final AssociateRoleNameChangedMessagePayload template) {
+    public static AssociateRoleNameChangedMessagePayloadBuilder of(final AssociateRoleNameChangedMessagePayload template) {
         AssociateRoleNameChangedMessagePayloadBuilder builder = new AssociateRoleNameChangedMessagePayloadBuilder();
         builder.name = template.getName();
         return builder;

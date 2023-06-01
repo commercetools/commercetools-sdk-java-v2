@@ -1,19 +1,20 @@
-
 package com.commercetools.importapi.models.orders;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
 import com.commercetools.importapi.models.common.TypedMoney;
+import com.commercetools.importapi.models.orders.TaxPortionImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * TaxPortion
@@ -27,20 +28,23 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .amount(amountBuilder -> amountBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = TaxPortionImpl.class)
-public interface TaxPortion {
+public interface TaxPortion  {
+
 
     /**
      *
      * @return name
      */
-
+    
     @JsonProperty("name")
     public String getName();
-
     /**
      *
      * @return rate
@@ -48,7 +52,6 @@ public interface TaxPortion {
     @NotNull
     @JsonProperty("rate")
     public Double getRate();
-
     /**
      *
      * @return amount
@@ -62,30 +65,34 @@ public interface TaxPortion {
      * set name
      * @param name value to be set
      */
-
+    
     public void setName(final String name);
-
+    
+    
     /**
      * set rate
      * @param rate value to be set
      */
-
+    
     public void setRate(final Double rate);
-
+    
+    
     /**
      * set amount
      * @param amount value to be set
      */
-
+    
     public void setAmount(final TypedMoney amount);
+    
 
     /**
      * factory method
      * @return instance of TaxPortion
      */
-    public static TaxPortion of() {
+    public static TaxPortion of(){
         return new TaxPortionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy TaxPortion
@@ -124,7 +131,7 @@ public interface TaxPortion {
     public static TaxPortionBuilder builder() {
         return TaxPortionBuilder.of();
     }
-
+    
     /**
      * create builder for TaxPortion instance
      * @param template instance with prefilled values for the builder
@@ -133,6 +140,7 @@ public interface TaxPortion {
     public static TaxPortionBuilder builder(final TaxPortion template) {
         return TaxPortionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -143,7 +151,7 @@ public interface TaxPortion {
     default <T> T withTaxPortion(Function<TaxPortion, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

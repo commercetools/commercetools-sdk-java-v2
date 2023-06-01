@@ -1,16 +1,20 @@
-
 package com.commercetools.importapi.models.types;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
+import com.commercetools.importapi.models.types.FieldType;
+import com.commercetools.importapi.models.types.CustomFieldBooleanTypeImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Field type for Boolean values.</p>
@@ -22,9 +26,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     CustomFieldBooleanType customFieldBooleanType = CustomFieldBooleanType.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = CustomFieldBooleanTypeImpl.class)
 public interface CustomFieldBooleanType extends FieldType {
 
@@ -33,13 +40,16 @@ public interface CustomFieldBooleanType extends FieldType {
      */
     String BOOLEAN = "Boolean";
 
+
+
     /**
      * factory method
      * @return instance of CustomFieldBooleanType
      */
-    public static CustomFieldBooleanType of() {
+    public static CustomFieldBooleanType of(){
         return new CustomFieldBooleanTypeImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy CustomFieldBooleanType
@@ -72,7 +82,7 @@ public interface CustomFieldBooleanType extends FieldType {
     public static CustomFieldBooleanTypeBuilder builder() {
         return CustomFieldBooleanTypeBuilder.of();
     }
-
+    
     /**
      * create builder for CustomFieldBooleanType instance
      * @param template instance with prefilled values for the builder
@@ -81,6 +91,7 @@ public interface CustomFieldBooleanType extends FieldType {
     public static CustomFieldBooleanTypeBuilder builder(final CustomFieldBooleanType template) {
         return CustomFieldBooleanTypeBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -91,7 +102,7 @@ public interface CustomFieldBooleanType extends FieldType {
     default <T> T withCustomFieldBooleanType(Function<CustomFieldBooleanType, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

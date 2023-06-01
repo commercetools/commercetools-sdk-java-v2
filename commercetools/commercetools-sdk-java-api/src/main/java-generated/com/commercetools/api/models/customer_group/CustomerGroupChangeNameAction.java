@@ -1,17 +1,20 @@
-
 package com.commercetools.api.models.customer_group;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
+import com.commercetools.api.models.customer_group.CustomerGroupUpdateAction;
+import com.commercetools.api.models.customer_group.CustomerGroupChangeNameActionImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * CustomerGroupChangeNameAction
@@ -24,9 +27,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .name("{name}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = CustomerGroupChangeNameActionImpl.class)
 public interface CustomerGroupChangeNameAction extends CustomerGroupUpdateAction {
 
@@ -47,16 +53,18 @@ public interface CustomerGroupChangeNameAction extends CustomerGroupUpdateAction
      *  <p>New name of the CustomerGroup.</p>
      * @param name value to be set
      */
-
+    
     public void setName(final String name);
+    
 
     /**
      * factory method
      * @return instance of CustomerGroupChangeNameAction
      */
-    public static CustomerGroupChangeNameAction of() {
+    public static CustomerGroupChangeNameAction of(){
         return new CustomerGroupChangeNameActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy CustomerGroupChangeNameAction
@@ -91,7 +99,7 @@ public interface CustomerGroupChangeNameAction extends CustomerGroupUpdateAction
     public static CustomerGroupChangeNameActionBuilder builder() {
         return CustomerGroupChangeNameActionBuilder.of();
     }
-
+    
     /**
      * create builder for CustomerGroupChangeNameAction instance
      * @param template instance with prefilled values for the builder
@@ -100,6 +108,7 @@ public interface CustomerGroupChangeNameAction extends CustomerGroupUpdateAction
     public static CustomerGroupChangeNameActionBuilder builder(final CustomerGroupChangeNameAction template) {
         return CustomerGroupChangeNameActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -110,7 +119,7 @@ public interface CustomerGroupChangeNameAction extends CustomerGroupUpdateAction
     default <T> T withCustomerGroupChangeNameAction(Function<CustomerGroupChangeNameAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

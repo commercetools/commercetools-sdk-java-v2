@@ -1,9 +1,12 @@
-
 package com.commercetools.history.models.change;
 
+import com.commercetools.history.models.change.Change;
+import com.commercetools.history.models.common.LocalizedString;
+import com.commercetools.history.models.change.ChangeLocalizedEnumValueLabelChange;
+import javax.annotation.Nullable;
 import java.util.*;
 import java.util.function.Function;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -22,190 +25,223 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .nextValue(nextValueBuilder -> nextValueBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class ChangeLocalizedEnumValueLabelChangeBuilder implements Builder<ChangeLocalizedEnumValueLabelChange> {
 
+    
+    
     private String change;
-
+    
+    
+    
     private String fieldName;
-
+    
+    
+    
     private String attributeName;
-
+    
+    
+    
     private String valueKey;
-
+    
+    
+    
     private com.commercetools.history.models.common.LocalizedString previousValue;
-
+    
+    
+    
     private com.commercetools.history.models.common.LocalizedString nextValue;
 
+    
     /**
      *  <p>Update action for <code>changeLocalizedEnumValueLabel</code> on types</p>
      * @param change value to be set
      * @return Builder
      */
-
-    public ChangeLocalizedEnumValueLabelChangeBuilder change(final String change) {
+    
+    public ChangeLocalizedEnumValueLabelChangeBuilder change( final String change) {
         this.change = change;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>The name of the field definition updated.</p>
      * @param fieldName value to be set
      * @return Builder
      */
-
-    public ChangeLocalizedEnumValueLabelChangeBuilder fieldName(final String fieldName) {
+    
+    public ChangeLocalizedEnumValueLabelChangeBuilder fieldName( final String fieldName) {
         this.fieldName = fieldName;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>The name of the attribute updated.</p>
      * @param attributeName value to be set
      * @return Builder
      */
-
-    public ChangeLocalizedEnumValueLabelChangeBuilder attributeName(final String attributeName) {
+    
+    public ChangeLocalizedEnumValueLabelChangeBuilder attributeName( final String attributeName) {
         this.attributeName = attributeName;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Key of the values that was updated</p>
      * @param valueKey value to be set
      * @return Builder
      */
-
-    public ChangeLocalizedEnumValueLabelChangeBuilder valueKey(final String valueKey) {
+    
+    public ChangeLocalizedEnumValueLabelChangeBuilder valueKey( final String valueKey) {
         this.valueKey = valueKey;
         return this;
     }
-
+    
+    
+    
+    
     /**
      * set the value to the previousValue using the builder function
      * @param builder function to build the previousValue value
      * @return Builder
      */
-
-    public ChangeLocalizedEnumValueLabelChangeBuilder previousValue(
-            Function<com.commercetools.history.models.common.LocalizedStringBuilder, com.commercetools.history.models.common.LocalizedStringBuilder> builder) {
+    
+    public ChangeLocalizedEnumValueLabelChangeBuilder previousValue(Function<com.commercetools.history.models.common.LocalizedStringBuilder, com.commercetools.history.models.common.LocalizedStringBuilder> builder) {
         this.previousValue = builder.apply(com.commercetools.history.models.common.LocalizedStringBuilder.of()).build();
         return this;
     }
-
+    
     /**
      * set the value to the previousValue using the builder function
      * @param builder function to build the previousValue value
      * @return Builder
      */
-
-    public ChangeLocalizedEnumValueLabelChangeBuilder withPreviousValue(
-            Function<com.commercetools.history.models.common.LocalizedStringBuilder, com.commercetools.history.models.common.LocalizedString> builder) {
+    
+    public ChangeLocalizedEnumValueLabelChangeBuilder withPreviousValue(Function<com.commercetools.history.models.common.LocalizedStringBuilder, com.commercetools.history.models.common.LocalizedString> builder) {
         this.previousValue = builder.apply(com.commercetools.history.models.common.LocalizedStringBuilder.of());
         return this;
     }
-
+                    
     /**
      * set the value to the previousValue
      * @param previousValue value to be set
      * @return Builder
      */
-
-    public ChangeLocalizedEnumValueLabelChangeBuilder previousValue(
-            final com.commercetools.history.models.common.LocalizedString previousValue) {
+    
+    public ChangeLocalizedEnumValueLabelChangeBuilder previousValue( final com.commercetools.history.models.common.LocalizedString previousValue) {
         this.previousValue = previousValue;
         return this;
     }
-
+    
+    
+    
+    
     /**
      * set the value to the nextValue using the builder function
      * @param builder function to build the nextValue value
      * @return Builder
      */
-
-    public ChangeLocalizedEnumValueLabelChangeBuilder nextValue(
-            Function<com.commercetools.history.models.common.LocalizedStringBuilder, com.commercetools.history.models.common.LocalizedStringBuilder> builder) {
+    
+    public ChangeLocalizedEnumValueLabelChangeBuilder nextValue(Function<com.commercetools.history.models.common.LocalizedStringBuilder, com.commercetools.history.models.common.LocalizedStringBuilder> builder) {
         this.nextValue = builder.apply(com.commercetools.history.models.common.LocalizedStringBuilder.of()).build();
         return this;
     }
-
+    
     /**
      * set the value to the nextValue using the builder function
      * @param builder function to build the nextValue value
      * @return Builder
      */
-
-    public ChangeLocalizedEnumValueLabelChangeBuilder withNextValue(
-            Function<com.commercetools.history.models.common.LocalizedStringBuilder, com.commercetools.history.models.common.LocalizedString> builder) {
+    
+    public ChangeLocalizedEnumValueLabelChangeBuilder withNextValue(Function<com.commercetools.history.models.common.LocalizedStringBuilder, com.commercetools.history.models.common.LocalizedString> builder) {
         this.nextValue = builder.apply(com.commercetools.history.models.common.LocalizedStringBuilder.of());
         return this;
     }
-
+                    
     /**
      * set the value to the nextValue
      * @param nextValue value to be set
      * @return Builder
      */
-
-    public ChangeLocalizedEnumValueLabelChangeBuilder nextValue(
-            final com.commercetools.history.models.common.LocalizedString nextValue) {
+    
+    public ChangeLocalizedEnumValueLabelChangeBuilder nextValue( final com.commercetools.history.models.common.LocalizedString nextValue) {
         this.nextValue = nextValue;
         return this;
     }
+    
+    
 
     /**
      *  <p>Update action for <code>changeLocalizedEnumValueLabel</code> on types</p>
      * @return change
      */
-
-    public String getChange() {
+    
+    
+    public String getChange(){
         return this.change;
     }
-
+    
     /**
      *  <p>The name of the field definition updated.</p>
      * @return fieldName
      */
-
-    public String getFieldName() {
+    
+    
+    public String getFieldName(){
         return this.fieldName;
     }
-
+    
     /**
      *  <p>The name of the attribute updated.</p>
      * @return attributeName
      */
-
-    public String getAttributeName() {
+    
+    
+    public String getAttributeName(){
         return this.attributeName;
     }
-
+    
     /**
      *  <p>Key of the values that was updated</p>
      * @return valueKey
      */
-
-    public String getValueKey() {
+    
+    
+    public String getValueKey(){
         return this.valueKey;
     }
-
+    
     /**
      * value of previousValue}
      * @return previousValue
      */
-
-    public com.commercetools.history.models.common.LocalizedString getPreviousValue() {
+    
+    
+    public com.commercetools.history.models.common.LocalizedString getPreviousValue(){
         return this.previousValue;
     }
-
+    
     /**
      * value of nextValue}
      * @return nextValue
      */
-
-    public com.commercetools.history.models.common.LocalizedString getNextValue() {
+    
+    
+    public com.commercetools.history.models.common.LocalizedString getNextValue(){
         return this.nextValue;
     }
 
@@ -220,22 +256,20 @@ public class ChangeLocalizedEnumValueLabelChangeBuilder implements Builder<Chang
         Objects.requireNonNull(valueKey, ChangeLocalizedEnumValueLabelChange.class + ": valueKey is missing");
         Objects.requireNonNull(previousValue, ChangeLocalizedEnumValueLabelChange.class + ": previousValue is missing");
         Objects.requireNonNull(nextValue, ChangeLocalizedEnumValueLabelChange.class + ": nextValue is missing");
-        return new ChangeLocalizedEnumValueLabelChangeImpl(change, fieldName, attributeName, valueKey, previousValue,
-            nextValue);
+        return new ChangeLocalizedEnumValueLabelChangeImpl(change, fieldName, attributeName, valueKey, previousValue, nextValue);
     }
-
+    
     /**
      * builds ChangeLocalizedEnumValueLabelChange without checking for non-null required values
      * @return ChangeLocalizedEnumValueLabelChange
      */
     public ChangeLocalizedEnumValueLabelChange buildUnchecked() {
-        return new ChangeLocalizedEnumValueLabelChangeImpl(change, fieldName, attributeName, valueKey, previousValue,
-            nextValue);
+        return new ChangeLocalizedEnumValueLabelChangeImpl(change, fieldName, attributeName, valueKey, previousValue, nextValue);
     }
 
     /**
      * factory method for an instance of ChangeLocalizedEnumValueLabelChangeBuilder
-     * @return builder
+     * @return builder 
      */
     public static ChangeLocalizedEnumValueLabelChangeBuilder of() {
         return new ChangeLocalizedEnumValueLabelChangeBuilder();

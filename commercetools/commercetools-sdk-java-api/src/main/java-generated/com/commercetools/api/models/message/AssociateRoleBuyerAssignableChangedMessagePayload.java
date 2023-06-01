@@ -1,17 +1,20 @@
-
 package com.commercetools.api.models.message;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
+import com.commercetools.api.models.message.MessagePayload;
+import com.commercetools.api.models.message.AssociateRoleBuyerAssignableChangedMessagePayloadImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Generated after a successful Change BuyerAssignable update action.</p>
@@ -24,9 +27,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .buyerAssignable(true)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = AssociateRoleBuyerAssignableChangedMessagePayloadImpl.class)
 public interface AssociateRoleBuyerAssignableChangedMessagePayload extends MessagePayload {
 
@@ -47,24 +53,25 @@ public interface AssociateRoleBuyerAssignableChangedMessagePayload extends Messa
      *  <p>The new value of the <code>buyerAssignable</code> field of the AssociateRole.</p>
      * @param buyerAssignable value to be set
      */
-
+    
     public void setBuyerAssignable(final Boolean buyerAssignable);
+    
 
     /**
      * factory method
      * @return instance of AssociateRoleBuyerAssignableChangedMessagePayload
      */
-    public static AssociateRoleBuyerAssignableChangedMessagePayload of() {
+    public static AssociateRoleBuyerAssignableChangedMessagePayload of(){
         return new AssociateRoleBuyerAssignableChangedMessagePayloadImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy AssociateRoleBuyerAssignableChangedMessagePayload
      * @param template instance to be copied
      * @return copy instance
      */
-    public static AssociateRoleBuyerAssignableChangedMessagePayload of(
-            final AssociateRoleBuyerAssignableChangedMessagePayload template) {
+    public static AssociateRoleBuyerAssignableChangedMessagePayload of(final AssociateRoleBuyerAssignableChangedMessagePayload template) {
         AssociateRoleBuyerAssignableChangedMessagePayloadImpl instance = new AssociateRoleBuyerAssignableChangedMessagePayloadImpl();
         instance.setBuyerAssignable(template.getBuyerAssignable());
         return instance;
@@ -76,8 +83,7 @@ public interface AssociateRoleBuyerAssignableChangedMessagePayload extends Messa
      * @return copy instance
      */
     @Nullable
-    public static AssociateRoleBuyerAssignableChangedMessagePayload deepCopy(
-            @Nullable final AssociateRoleBuyerAssignableChangedMessagePayload template) {
+    public static AssociateRoleBuyerAssignableChangedMessagePayload deepCopy(@Nullable final AssociateRoleBuyerAssignableChangedMessagePayload template) {
         if (template == null) {
             return null;
         }
@@ -93,16 +99,16 @@ public interface AssociateRoleBuyerAssignableChangedMessagePayload extends Messa
     public static AssociateRoleBuyerAssignableChangedMessagePayloadBuilder builder() {
         return AssociateRoleBuyerAssignableChangedMessagePayloadBuilder.of();
     }
-
+    
     /**
      * create builder for AssociateRoleBuyerAssignableChangedMessagePayload instance
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static AssociateRoleBuyerAssignableChangedMessagePayloadBuilder builder(
-            final AssociateRoleBuyerAssignableChangedMessagePayload template) {
+    public static AssociateRoleBuyerAssignableChangedMessagePayloadBuilder builder(final AssociateRoleBuyerAssignableChangedMessagePayload template) {
         return AssociateRoleBuyerAssignableChangedMessagePayloadBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -110,11 +116,10 @@ public interface AssociateRoleBuyerAssignableChangedMessagePayload extends Messa
      * @param helper function to map the object
      * @return mapped value
      */
-    default <T> T withAssociateRoleBuyerAssignableChangedMessagePayload(
-            Function<AssociateRoleBuyerAssignableChangedMessagePayload, T> helper) {
+    default <T> T withAssociateRoleBuyerAssignableChangedMessagePayload(Function<AssociateRoleBuyerAssignableChangedMessagePayload, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

@@ -1,17 +1,21 @@
-
 package com.commercetools.api.models.product;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-
 import com.commercetools.api.models.cart.ProductPublishScope;
+import com.commercetools.api.models.product.ProductUpdateAction;
+import com.commercetools.api.models.product.ProductPublishActionImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Publishes product data from the Product's staged projection to its current projection. Produces the ProductPublished Message.</p>
@@ -23,9 +27,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     ProductPublishAction productPublishAction = ProductPublishAction.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = ProductPublishActionImpl.class)
 public interface ProductPublishAction extends ProductUpdateAction {
 
@@ -38,7 +45,7 @@ public interface ProductPublishAction extends ProductUpdateAction {
      *  <p><code>All</code> or <code>Prices</code></p>
      * @return scope
      */
-
+    
     @JsonProperty("scope")
     public ProductPublishScope getScope();
 
@@ -46,16 +53,18 @@ public interface ProductPublishAction extends ProductUpdateAction {
      *  <p><code>All</code> or <code>Prices</code></p>
      * @param scope value to be set
      */
-
+    
     public void setScope(final ProductPublishScope scope);
+    
 
     /**
      * factory method
      * @return instance of ProductPublishAction
      */
-    public static ProductPublishAction of() {
+    public static ProductPublishAction of(){
         return new ProductPublishActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy ProductPublishAction
@@ -90,7 +99,7 @@ public interface ProductPublishAction extends ProductUpdateAction {
     public static ProductPublishActionBuilder builder() {
         return ProductPublishActionBuilder.of();
     }
-
+    
     /**
      * create builder for ProductPublishAction instance
      * @param template instance with prefilled values for the builder
@@ -99,6 +108,7 @@ public interface ProductPublishAction extends ProductUpdateAction {
     public static ProductPublishActionBuilder builder(final ProductPublishAction template) {
         return ProductPublishActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -109,7 +119,7 @@ public interface ProductPublishAction extends ProductUpdateAction {
     default <T> T withProductPublishAction(Function<ProductPublishAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

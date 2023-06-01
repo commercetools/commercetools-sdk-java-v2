@@ -1,19 +1,22 @@
-
 package com.commercetools.api.models.associate_role;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-
+import com.commercetools.api.models.associate_role.AssociateRoleUpdateAction;
 import com.commercetools.api.models.type.FieldContainer;
 import com.commercetools.api.models.type.TypeResourceIdentifier;
+import com.commercetools.api.models.associate_role.AssociateRoleSetCustomTypeActionImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * AssociateRoleSetCustomTypeAction
@@ -25,9 +28,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     AssociateRoleSetCustomTypeAction associateRoleSetCustomTypeAction = AssociateRoleSetCustomTypeAction.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = AssociateRoleSetCustomTypeActionImpl.class)
 public interface AssociateRoleSetCustomTypeAction extends AssociateRoleUpdateAction {
 
@@ -43,7 +49,6 @@ public interface AssociateRoleSetCustomTypeAction extends AssociateRoleUpdateAct
     @Valid
     @JsonProperty("type")
     public TypeResourceIdentifier getType();
-
     /**
      *  <p>Sets the Custom Fields for the AssociateRole.</p>
      * @return fields
@@ -56,23 +61,26 @@ public interface AssociateRoleSetCustomTypeAction extends AssociateRoleUpdateAct
      *  <p>Defines the Type that extends the AssociateRole with Custom Fields. If absent, any existing Type and Custom Fields are removed from the AssociateRole.</p>
      * @param type value to be set
      */
-
+    
     public void setType(final TypeResourceIdentifier type);
-
+    
+    
     /**
      *  <p>Sets the Custom Fields for the AssociateRole.</p>
      * @param fields value to be set
      */
-
+    
     public void setFields(final FieldContainer fields);
+    
 
     /**
      * factory method
      * @return instance of AssociateRoleSetCustomTypeAction
      */
-    public static AssociateRoleSetCustomTypeAction of() {
+    public static AssociateRoleSetCustomTypeAction of(){
         return new AssociateRoleSetCustomTypeActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy AssociateRoleSetCustomTypeAction
@@ -109,7 +117,7 @@ public interface AssociateRoleSetCustomTypeAction extends AssociateRoleUpdateAct
     public static AssociateRoleSetCustomTypeActionBuilder builder() {
         return AssociateRoleSetCustomTypeActionBuilder.of();
     }
-
+    
     /**
      * create builder for AssociateRoleSetCustomTypeAction instance
      * @param template instance with prefilled values for the builder
@@ -118,6 +126,7 @@ public interface AssociateRoleSetCustomTypeAction extends AssociateRoleUpdateAct
     public static AssociateRoleSetCustomTypeActionBuilder builder(final AssociateRoleSetCustomTypeAction template) {
         return AssociateRoleSetCustomTypeActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -128,7 +137,7 @@ public interface AssociateRoleSetCustomTypeAction extends AssociateRoleUpdateAct
     default <T> T withAssociateRoleSetCustomTypeAction(Function<AssociateRoleSetCustomTypeAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

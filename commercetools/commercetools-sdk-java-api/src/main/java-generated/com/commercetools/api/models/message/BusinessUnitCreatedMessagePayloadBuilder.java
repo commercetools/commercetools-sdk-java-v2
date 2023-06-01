@@ -1,9 +1,12 @@
-
 package com.commercetools.api.models.message;
 
+import com.commercetools.api.models.business_unit.BusinessUnit;
+import com.commercetools.api.models.message.MessagePayload;
+import com.commercetools.api.models.message.BusinessUnitCreatedMessagePayload;
+import javax.annotation.Nullable;
 import java.util.*;
 import java.util.function.Function;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -17,43 +20,50 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .businessUnit(businessUnitBuilder -> businessUnitBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class BusinessUnitCreatedMessagePayloadBuilder implements Builder<BusinessUnitCreatedMessagePayload> {
 
+    
+    
     private com.commercetools.api.models.business_unit.BusinessUnit businessUnit;
 
+    
     /**
      *  <p>The Business Unit that was created.</p>
      * @param businessUnit value to be set
      * @return Builder
      */
-
-    public BusinessUnitCreatedMessagePayloadBuilder businessUnit(
-            final com.commercetools.api.models.business_unit.BusinessUnit businessUnit) {
+    
+    public BusinessUnitCreatedMessagePayloadBuilder businessUnit( final com.commercetools.api.models.business_unit.BusinessUnit businessUnit) {
         this.businessUnit = businessUnit;
         return this;
     }
-
+    
+    
     /**
      *  <p>The Business Unit that was created.</p>
      * @param builder function to build the businessUnit value
      * @return Builder
      */
-
-    public BusinessUnitCreatedMessagePayloadBuilder businessUnit(
-            Function<com.commercetools.api.models.business_unit.BusinessUnitBuilder, Builder<? extends com.commercetools.api.models.business_unit.BusinessUnit>> builder) {
+    
+    public BusinessUnitCreatedMessagePayloadBuilder businessUnit(Function<com.commercetools.api.models.business_unit.BusinessUnitBuilder, Builder<? extends com.commercetools.api.models.business_unit.BusinessUnit>> builder) {
         this.businessUnit = builder.apply(com.commercetools.api.models.business_unit.BusinessUnitBuilder.of()).build();
         return this;
     }
+                    
 
     /**
      *  <p>The Business Unit that was created.</p>
      * @return businessUnit
      */
-
-    public com.commercetools.api.models.business_unit.BusinessUnit getBusinessUnit() {
+    
+    
+    public com.commercetools.api.models.business_unit.BusinessUnit getBusinessUnit(){
         return this.businessUnit;
     }
 
@@ -65,7 +75,7 @@ public class BusinessUnitCreatedMessagePayloadBuilder implements Builder<Busines
         Objects.requireNonNull(businessUnit, BusinessUnitCreatedMessagePayload.class + ": businessUnit is missing");
         return new BusinessUnitCreatedMessagePayloadImpl(businessUnit);
     }
-
+    
     /**
      * builds BusinessUnitCreatedMessagePayload without checking for non-null required values
      * @return BusinessUnitCreatedMessagePayload
@@ -76,7 +86,7 @@ public class BusinessUnitCreatedMessagePayloadBuilder implements Builder<Busines
 
     /**
      * factory method for an instance of BusinessUnitCreatedMessagePayloadBuilder
-     * @return builder
+     * @return builder 
      */
     public static BusinessUnitCreatedMessagePayloadBuilder of() {
         return new BusinessUnitCreatedMessagePayloadBuilder();

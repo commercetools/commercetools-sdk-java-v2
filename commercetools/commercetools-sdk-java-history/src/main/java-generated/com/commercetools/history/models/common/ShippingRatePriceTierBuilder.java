@@ -1,8 +1,11 @@
-
 package com.commercetools.history.models.common;
 
+import com.commercetools.history.models.common.ShippingRateTierType;
+import com.commercetools.history.models.common.ShippingRatePriceTier;
+import javax.annotation.Nullable;
 import java.util.*;
-
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -16,30 +19,39 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .type(ShippingRateTierType.CART_VALUE)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class ShippingRatePriceTierBuilder implements Builder<ShippingRatePriceTier> {
 
+    
+    
     private com.commercetools.history.models.common.ShippingRateTierType type;
 
+    
     /**
      * set the value to the type
      * @param type value to be set
      * @return Builder
      */
-
-    public ShippingRatePriceTierBuilder type(final com.commercetools.history.models.common.ShippingRateTierType type) {
+    
+    public ShippingRatePriceTierBuilder type( final com.commercetools.history.models.common.ShippingRateTierType type) {
         this.type = type;
         return this;
     }
+    
+    
 
     /**
      * value of type}
      * @return type
      */
-
-    public com.commercetools.history.models.common.ShippingRateTierType getType() {
+    
+    
+    public com.commercetools.history.models.common.ShippingRateTierType getType(){
         return this.type;
     }
 
@@ -51,7 +63,7 @@ public class ShippingRatePriceTierBuilder implements Builder<ShippingRatePriceTi
         Objects.requireNonNull(type, ShippingRatePriceTier.class + ": type is missing");
         return new ShippingRatePriceTierImpl(type);
     }
-
+    
     /**
      * builds ShippingRatePriceTier without checking for non-null required values
      * @return ShippingRatePriceTier
@@ -62,7 +74,7 @@ public class ShippingRatePriceTierBuilder implements Builder<ShippingRatePriceTi
 
     /**
      * factory method for an instance of ShippingRatePriceTierBuilder
-     * @return builder
+     * @return builder 
      */
     public static ShippingRatePriceTierBuilder of() {
         return new ShippingRatePriceTierBuilder();

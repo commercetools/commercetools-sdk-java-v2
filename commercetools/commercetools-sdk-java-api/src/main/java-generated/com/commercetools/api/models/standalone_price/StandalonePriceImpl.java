@@ -1,84 +1,103 @@
-
 package com.commercetools.api.models.standalone_price;
 
-import java.time.*;
-import java.util.*;
-
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
-
-import io.vrap.rmf.base.client.ModelBase;
+import com.commercetools.api.models.channel.ChannelReference;
+import com.commercetools.api.models.common.BaseResource;
+import com.commercetools.api.models.common.CreatedBy;
+import com.commercetools.api.models.common.DiscountedPrice;
+import com.commercetools.api.models.common.LastModifiedBy;
+import com.commercetools.api.models.common.PriceTier;
+import com.commercetools.api.models.common.TypedMoney;
+import com.commercetools.api.models.customer_group.CustomerGroupReference;
+import com.commercetools.api.models.standalone_price.StagedStandalonePrice;
+import com.commercetools.api.models.type.CustomFields;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.ModelBase;
+import javax.validation.Valid;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.annotation.*;
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
  * StandalonePrice
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class StandalonePriceImpl implements StandalonePrice, ModelBase {
 
+    
     private String id;
-
+    
+    
     private Long version;
-
+    
+    
     private java.time.ZonedDateTime createdAt;
-
+    
+    
     private java.time.ZonedDateTime lastModifiedAt;
-
+    
+    
     private com.commercetools.api.models.common.LastModifiedBy lastModifiedBy;
-
+    
+    
     private com.commercetools.api.models.common.CreatedBy createdBy;
-
+    
+    
     private String key;
-
+    
+    
     private String sku;
-
+    
+    
     private com.commercetools.api.models.common.TypedMoney value;
-
+    
+    
     private String country;
-
+    
+    
     private com.commercetools.api.models.customer_group.CustomerGroupReference customerGroup;
-
+    
+    
     private com.commercetools.api.models.channel.ChannelReference channel;
-
+    
+    
     private java.time.ZonedDateTime validFrom;
-
+    
+    
     private java.time.ZonedDateTime validUntil;
-
+    
+    
     private java.util.List<com.commercetools.api.models.common.PriceTier> tiers;
-
+    
+    
     private com.commercetools.api.models.common.DiscountedPrice discounted;
-
+    
+    
     private com.commercetools.api.models.type.CustomFields custom;
-
+    
+    
     private com.commercetools.api.models.standalone_price.StagedStandalonePrice staged;
-
+    
+    
     private Boolean active;
 
     /**
      * create instance with all properties
      */
     @JsonCreator
-    StandalonePriceImpl(@JsonProperty("id") final String id, @JsonProperty("version") final Long version,
-            @JsonProperty("createdAt") final java.time.ZonedDateTime createdAt,
-            @JsonProperty("lastModifiedAt") final java.time.ZonedDateTime lastModifiedAt,
-            @JsonProperty("lastModifiedBy") final com.commercetools.api.models.common.LastModifiedBy lastModifiedBy,
-            @JsonProperty("createdBy") final com.commercetools.api.models.common.CreatedBy createdBy,
-            @JsonProperty("key") final String key, @JsonProperty("sku") final String sku,
-            @JsonProperty("value") final com.commercetools.api.models.common.TypedMoney value,
-            @JsonProperty("country") final String country,
-            @JsonProperty("customerGroup") final com.commercetools.api.models.customer_group.CustomerGroupReference customerGroup,
-            @JsonProperty("channel") final com.commercetools.api.models.channel.ChannelReference channel,
-            @JsonProperty("validFrom") final java.time.ZonedDateTime validFrom,
-            @JsonProperty("validUntil") final java.time.ZonedDateTime validUntil,
-            @JsonProperty("tiers") final java.util.List<com.commercetools.api.models.common.PriceTier> tiers,
-            @JsonProperty("discounted") final com.commercetools.api.models.common.DiscountedPrice discounted,
-            @JsonProperty("custom") final com.commercetools.api.models.type.CustomFields custom,
-            @JsonProperty("staged") final com.commercetools.api.models.standalone_price.StagedStandalonePrice staged,
-            @JsonProperty("active") final Boolean active) {
+    StandalonePriceImpl(@JsonProperty("id") final String id, @JsonProperty("version") final Long version, @JsonProperty("createdAt") final java.time.ZonedDateTime createdAt, @JsonProperty("lastModifiedAt") final java.time.ZonedDateTime lastModifiedAt, @JsonProperty("lastModifiedBy") final com.commercetools.api.models.common.LastModifiedBy lastModifiedBy, @JsonProperty("createdBy") final com.commercetools.api.models.common.CreatedBy createdBy, @JsonProperty("key") final String key, @JsonProperty("sku") final String sku, @JsonProperty("value") final com.commercetools.api.models.common.TypedMoney value, @JsonProperty("country") final String country, @JsonProperty("customerGroup") final com.commercetools.api.models.customer_group.CustomerGroupReference customerGroup, @JsonProperty("channel") final com.commercetools.api.models.channel.ChannelReference channel, @JsonProperty("validFrom") final java.time.ZonedDateTime validFrom, @JsonProperty("validUntil") final java.time.ZonedDateTime validUntil, @JsonProperty("tiers") final java.util.List<com.commercetools.api.models.common.PriceTier> tiers, @JsonProperty("discounted") final com.commercetools.api.models.common.DiscountedPrice discounted, @JsonProperty("custom") final com.commercetools.api.models.type.CustomFields custom, @JsonProperty("staged") final com.commercetools.api.models.standalone_price.StagedStandalonePrice staged, @JsonProperty("active") final Boolean active) {
         this.id = id;
         this.version = version;
         this.createdAt = createdAt;
@@ -99,7 +118,6 @@ public class StandalonePriceImpl implements StandalonePrice, ModelBase {
         this.staged = staged;
         this.active = active;
     }
-
     /**
      * create empty instance
      */
@@ -109,247 +127,265 @@ public class StandalonePriceImpl implements StandalonePrice, ModelBase {
     /**
      *  <p>Unique identifier of the StandalonePrice.</p>
      */
-
-    public String getId() {
+    
+    public String getId(){
         return this.id;
     }
-
+    
     /**
      *  <p>Current version of the StandalonePrice.</p>
      */
-
-    public Long getVersion() {
+    
+    public Long getVersion(){
         return this.version;
     }
-
+    
     /**
      *  <p>Date and time (UTC) the StandalonePrice was initially created.</p>
      */
-
-    public java.time.ZonedDateTime getCreatedAt() {
+    
+    public java.time.ZonedDateTime getCreatedAt(){
         return this.createdAt;
     }
-
+    
     /**
      *  <p>Date and time (UTC) the StandalonePrice was last updated.</p>
      */
-
-    public java.time.ZonedDateTime getLastModifiedAt() {
+    
+    public java.time.ZonedDateTime getLastModifiedAt(){
         return this.lastModifiedAt;
     }
-
+    
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      */
-
-    public com.commercetools.api.models.common.LastModifiedBy getLastModifiedBy() {
+    
+    public com.commercetools.api.models.common.LastModifiedBy getLastModifiedBy(){
         return this.lastModifiedBy;
     }
-
+    
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      */
-
-    public com.commercetools.api.models.common.CreatedBy getCreatedBy() {
+    
+    public com.commercetools.api.models.common.CreatedBy getCreatedBy(){
         return this.createdBy;
     }
-
+    
     /**
      *  <p>User-defined unique identifier of the StandalonePrice.</p>
      */
-
-    public String getKey() {
+    
+    public String getKey(){
         return this.key;
     }
-
+    
     /**
      *  <p>SKU of the ProductVariant to which this Price is associated.</p>
      */
-
-    public String getSku() {
+    
+    public String getSku(){
         return this.sku;
     }
-
+    
     /**
      *  <p>Money value of this Price.</p>
      */
-
-    public com.commercetools.api.models.common.TypedMoney getValue() {
+    
+    public com.commercetools.api.models.common.TypedMoney getValue(){
         return this.value;
     }
-
+    
     /**
      *  <p>Country for which this Price is valid.</p>
      */
-
-    public String getCountry() {
+    
+    public String getCountry(){
         return this.country;
     }
-
+    
     /**
      *  <p>CustomerGroup for which this Price is valid.</p>
      */
-
-    public com.commercetools.api.models.customer_group.CustomerGroupReference getCustomerGroup() {
+    
+    public com.commercetools.api.models.customer_group.CustomerGroupReference getCustomerGroup(){
         return this.customerGroup;
     }
-
+    
     /**
      *  <p>Product distribution Channel for which this Price is valid.</p>
      */
-
-    public com.commercetools.api.models.channel.ChannelReference getChannel() {
+    
+    public com.commercetools.api.models.channel.ChannelReference getChannel(){
         return this.channel;
     }
-
+    
     /**
      *  <p>Date from which the Price is valid.</p>
      */
-
-    public java.time.ZonedDateTime getValidFrom() {
+    
+    public java.time.ZonedDateTime getValidFrom(){
         return this.validFrom;
     }
-
+    
     /**
      *  <p>Date until the Price is valid. Standalone Prices that are no longer valid are not automatically deleted, but they can be deleted if necessary.</p>
      */
-
-    public java.time.ZonedDateTime getValidUntil() {
+    
+    public java.time.ZonedDateTime getValidUntil(){
         return this.validUntil;
     }
-
+    
     /**
      *  <p>Price tiers if any are defined.</p>
      */
-
-    public java.util.List<com.commercetools.api.models.common.PriceTier> getTiers() {
+    
+    public java.util.List<com.commercetools.api.models.common.PriceTier> getTiers(){
         return this.tiers;
     }
-
+    
     /**
      *  <p>Set if a matching ProductDiscount exists. If set, the API uses the <code>discounted</code> value for the LineItem Price selection. When a relative discount is applied and the fraction part of the <code>discounted</code> price is 0.5, the discounted price is rounded in favor of the customer with the half down rounding.</p>
      */
-
-    public com.commercetools.api.models.common.DiscountedPrice getDiscounted() {
+    
+    public com.commercetools.api.models.common.DiscountedPrice getDiscounted(){
         return this.discounted;
     }
-
+    
     /**
      *  <p>Custom Fields for the StandalonePrice.</p>
      */
-
-    public com.commercetools.api.models.type.CustomFields getCustom() {
+    
+    public com.commercetools.api.models.type.CustomFields getCustom(){
         return this.custom;
     }
-
+    
     /**
      *  <p>Staged changes of the StandalonePrice. Only present if the StandalonePrice has staged changes.</p>
      */
-
-    public com.commercetools.api.models.standalone_price.StagedStandalonePrice getStaged() {
+    
+    public com.commercetools.api.models.standalone_price.StagedStandalonePrice getStaged(){
         return this.staged;
     }
-
+    
     /**
      *  <p>If set to <code>true</code>, the StandalonePrice is considered during price selection. If set to <code>false</code>, the StandalonePrice is not considered during price selection.</p>
      */
-
-    public Boolean getActive() {
+    
+    public Boolean getActive(){
         return this.active;
     }
 
-    public void setId(final String id) {
+    
+    public void setId(final String id){
         this.id = id;
     }
-
-    public void setVersion(final Long version) {
+    
+    
+    public void setVersion(final Long version){
         this.version = version;
     }
-
-    public void setCreatedAt(final java.time.ZonedDateTime createdAt) {
+    
+    
+    public void setCreatedAt(final java.time.ZonedDateTime createdAt){
         this.createdAt = createdAt;
     }
-
-    public void setLastModifiedAt(final java.time.ZonedDateTime lastModifiedAt) {
+    
+    
+    public void setLastModifiedAt(final java.time.ZonedDateTime lastModifiedAt){
         this.lastModifiedAt = lastModifiedAt;
     }
-
-    public void setLastModifiedBy(final com.commercetools.api.models.common.LastModifiedBy lastModifiedBy) {
+    
+    
+    public void setLastModifiedBy(final com.commercetools.api.models.common.LastModifiedBy lastModifiedBy){
         this.lastModifiedBy = lastModifiedBy;
     }
-
-    public void setCreatedBy(final com.commercetools.api.models.common.CreatedBy createdBy) {
+    
+    
+    public void setCreatedBy(final com.commercetools.api.models.common.CreatedBy createdBy){
         this.createdBy = createdBy;
     }
-
-    public void setKey(final String key) {
+    
+    
+    public void setKey(final String key){
         this.key = key;
     }
-
-    public void setSku(final String sku) {
+    
+    
+    public void setSku(final String sku){
         this.sku = sku;
     }
-
-    public void setValue(final com.commercetools.api.models.common.TypedMoney value) {
+    
+    
+    public void setValue(final com.commercetools.api.models.common.TypedMoney value){
         this.value = value;
     }
-
-    public void setCountry(final String country) {
+    
+    
+    public void setCountry(final String country){
         this.country = country;
     }
-
-    public void setCustomerGroup(
-            final com.commercetools.api.models.customer_group.CustomerGroupReference customerGroup) {
+    
+    
+    public void setCustomerGroup(final com.commercetools.api.models.customer_group.CustomerGroupReference customerGroup){
         this.customerGroup = customerGroup;
     }
-
-    public void setChannel(final com.commercetools.api.models.channel.ChannelReference channel) {
+    
+    
+    public void setChannel(final com.commercetools.api.models.channel.ChannelReference channel){
         this.channel = channel;
     }
-
-    public void setValidFrom(final java.time.ZonedDateTime validFrom) {
+    
+    
+    public void setValidFrom(final java.time.ZonedDateTime validFrom){
         this.validFrom = validFrom;
     }
-
-    public void setValidUntil(final java.time.ZonedDateTime validUntil) {
+    
+    
+    public void setValidUntil(final java.time.ZonedDateTime validUntil){
         this.validUntil = validUntil;
     }
-
-    public void setTiers(final com.commercetools.api.models.common.PriceTier... tiers) {
-        this.tiers = new ArrayList<>(Arrays.asList(tiers));
+    
+    
+    public void setTiers(final com.commercetools.api.models.common.PriceTier ...tiers){
+       this.tiers = new ArrayList<>(Arrays.asList(tiers));
     }
-
-    public void setTiers(final java.util.List<com.commercetools.api.models.common.PriceTier> tiers) {
-        this.tiers = tiers;
+    
+    
+    public void setTiers(final java.util.List<com.commercetools.api.models.common.PriceTier> tiers){
+       this.tiers = tiers;
     }
-
-    public void setDiscounted(final com.commercetools.api.models.common.DiscountedPrice discounted) {
+    
+    
+    public void setDiscounted(final com.commercetools.api.models.common.DiscountedPrice discounted){
         this.discounted = discounted;
     }
-
-    public void setCustom(final com.commercetools.api.models.type.CustomFields custom) {
+    
+    
+    public void setCustom(final com.commercetools.api.models.type.CustomFields custom){
         this.custom = custom;
     }
-
-    public void setStaged(final com.commercetools.api.models.standalone_price.StagedStandalonePrice staged) {
+    
+    
+    public void setStaged(final com.commercetools.api.models.standalone_price.StagedStandalonePrice staged){
         this.staged = staged;
     }
-
-    public void setActive(final Boolean active) {
+    
+    
+    public void setActive(final Boolean active){
         this.active = active;
     }
 
     @Override
     public boolean equals(Object o) {
-        if (this == o)
-            return true;
-
-        if (o == null || getClass() != o.getClass())
-            return false;
-
+        if (this == o) return true;
+    
+        if (o == null || getClass() != o.getClass()) return false;
+    
         StandalonePriceImpl that = (StandalonePriceImpl) o;
-
-        return new EqualsBuilder().append(id, that.id)
+    
+        return new EqualsBuilder()
+                .append(id, that.id)
                 .append(version, that.version)
                 .append(createdAt, that.createdAt)
                 .append(lastModifiedAt, that.lastModifiedAt)
@@ -370,29 +406,30 @@ public class StandalonePriceImpl implements StandalonePrice, ModelBase {
                 .append(active, that.active)
                 .isEquals();
     }
-
+    
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(id)
-                .append(version)
-                .append(createdAt)
-                .append(lastModifiedAt)
-                .append(lastModifiedBy)
-                .append(createdBy)
-                .append(key)
-                .append(sku)
-                .append(value)
-                .append(country)
-                .append(customerGroup)
-                .append(channel)
-                .append(validFrom)
-                .append(validUntil)
-                .append(tiers)
-                .append(discounted)
-                .append(custom)
-                .append(staged)
-                .append(active)
-                .toHashCode();
+        return new HashCodeBuilder(17, 37)
+            .append(id)
+            .append(version)
+            .append(createdAt)
+            .append(lastModifiedAt)
+            .append(lastModifiedBy)
+            .append(createdBy)
+            .append(key)
+            .append(sku)
+            .append(value)
+            .append(country)
+            .append(customerGroup)
+            .append(channel)
+            .append(validFrom)
+            .append(validUntil)
+            .append(tiers)
+            .append(discounted)
+            .append(custom)
+            .append(staged)
+            .append(active)
+            .toHashCode();
     }
 
 }

@@ -1,24 +1,28 @@
-
 package com.commercetools.importapi.models.orders;
-
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-import java.util.stream.Collectors;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.importapi.models.common.ChannelKeyReference;
 import com.commercetools.importapi.models.common.LocalizedString;
 import com.commercetools.importapi.models.common.ProductKeyReference;
 import com.commercetools.importapi.models.customfields.Custom;
+import com.commercetools.importapi.models.orders.ItemShippingDetailsDraft;
+import com.commercetools.importapi.models.orders.ItemState;
+import com.commercetools.importapi.models.orders.LineItemPrice;
+import com.commercetools.importapi.models.orders.LineItemProductVariantImportDraft;
 import com.commercetools.importapi.models.prices.TaxRate;
+import com.commercetools.importapi.models.orders.LineItemImportDraftImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Represents an individual Line Item in an Order. A line item is a snapshot of a product at the time it was added to the order.</p>
@@ -35,11 +39,15 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .quantity(0.3)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = LineItemImportDraftImpl.class)
 public interface LineItemImportDraft extends io.vrap.rmf.base.client.Draft<LineItemImportDraft> {
+
 
     /**
      *  <p>Maps to <code>LineItem.productId</code>.</p>
@@ -48,7 +56,6 @@ public interface LineItemImportDraft extends io.vrap.rmf.base.client.Draft<LineI
     @Valid
     @JsonProperty("product")
     public ProductKeyReference getProduct();
-
     /**
      *  <p>Maps to <code>LineItem.name</code>.</p>
      * @return name
@@ -57,7 +64,6 @@ public interface LineItemImportDraft extends io.vrap.rmf.base.client.Draft<LineI
     @Valid
     @JsonProperty("name")
     public LocalizedString getName();
-
     /**
      *  <p>Maps to <code>ProductVariantImportDraft</code>.</p>
      * @return variant
@@ -66,7 +72,6 @@ public interface LineItemImportDraft extends io.vrap.rmf.base.client.Draft<LineI
     @Valid
     @JsonProperty("variant")
     public LineItemProductVariantImportDraft getVariant();
-
     /**
      *  <p>Maps to <code>LineItem.price</code>.</p>
      * @return price
@@ -75,7 +80,6 @@ public interface LineItemImportDraft extends io.vrap.rmf.base.client.Draft<LineI
     @Valid
     @JsonProperty("price")
     public LineItemPrice getPrice();
-
     /**
      *  <p>Maps to <code>LineItem.quantity</code>.</p>
      * @return quantity
@@ -83,7 +87,6 @@ public interface LineItemImportDraft extends io.vrap.rmf.base.client.Draft<LineI
     @NotNull
     @JsonProperty("quantity")
     public Double getQuantity();
-
     /**
      *
      * @return state
@@ -91,7 +94,6 @@ public interface LineItemImportDraft extends io.vrap.rmf.base.client.Draft<LineI
     @Valid
     @JsonProperty("state")
     public List<ItemState> getState();
-
     /**
      *  <p>Maps to <code>LineItem.supplyChannel</code>. The Reference to the Supply Channel with which the LineItem is associated. If referenced Supply Channel does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary Supply Channel is created.</p>
      * @return supplyChannel
@@ -99,7 +101,6 @@ public interface LineItemImportDraft extends io.vrap.rmf.base.client.Draft<LineI
     @Valid
     @JsonProperty("supplyChannel")
     public ChannelKeyReference getSupplyChannel();
-
     /**
      *  <p>Maps to <code>LineItem.distributionChannel</code>. The Reference to the Distribution Channel with which the LineItem is associated. If referenced CustomerGroup does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary Distribution Channel is created.</p>
      * @return distributionChannel
@@ -107,7 +108,6 @@ public interface LineItemImportDraft extends io.vrap.rmf.base.client.Draft<LineI
     @Valid
     @JsonProperty("distributionChannel")
     public ChannelKeyReference getDistributionChannel();
-
     /**
      *  <p>Maps to <code>LineItem.taxRate</code>.</p>
      * @return taxRate
@@ -115,7 +115,6 @@ public interface LineItemImportDraft extends io.vrap.rmf.base.client.Draft<LineI
     @Valid
     @JsonProperty("taxRate")
     public TaxRate getTaxRate();
-
     /**
      *  <p>Maps to LineItem.shippingDetails.</p>
      * @return shippingDetails
@@ -123,7 +122,6 @@ public interface LineItemImportDraft extends io.vrap.rmf.base.client.Draft<LineI
     @Valid
     @JsonProperty("shippingDetails")
     public ItemShippingDetailsDraft getShippingDetails();
-
     /**
      *  <p>Custom Fields for this Line Item.</p>
      * @return custom
@@ -136,94 +134,104 @@ public interface LineItemImportDraft extends io.vrap.rmf.base.client.Draft<LineI
      *  <p>Maps to <code>LineItem.productId</code>.</p>
      * @param product value to be set
      */
-
+    
     public void setProduct(final ProductKeyReference product);
-
+    
+    
     /**
      *  <p>Maps to <code>LineItem.name</code>.</p>
      * @param name value to be set
      */
-
+    
     public void setName(final LocalizedString name);
-
+    
+    
     /**
      *  <p>Maps to <code>ProductVariantImportDraft</code>.</p>
      * @param variant value to be set
      */
-
+    
     public void setVariant(final LineItemProductVariantImportDraft variant);
-
+    
+    
     /**
      *  <p>Maps to <code>LineItem.price</code>.</p>
      * @param price value to be set
      */
-
+    
     public void setPrice(final LineItemPrice price);
-
+    
+    
     /**
      *  <p>Maps to <code>LineItem.quantity</code>.</p>
      * @param quantity value to be set
      */
-
+    
     public void setQuantity(final Double quantity);
-
+    
+    
     /**
      * set state
      * @param state values to be set
      */
-
+    
     @JsonIgnore
-    public void setState(final ItemState... state);
-
+    public void setState(final ItemState ...state);
     /**
      * set state
      * @param state values to be set
      */
-
+    
     public void setState(final List<ItemState> state);
-
+    
     /**
      *  <p>Maps to <code>LineItem.supplyChannel</code>. The Reference to the Supply Channel with which the LineItem is associated. If referenced Supply Channel does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary Supply Channel is created.</p>
      * @param supplyChannel value to be set
      */
-
+    
     public void setSupplyChannel(final ChannelKeyReference supplyChannel);
-
+    
+    
     /**
      *  <p>Maps to <code>LineItem.distributionChannel</code>. The Reference to the Distribution Channel with which the LineItem is associated. If referenced CustomerGroup does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary Distribution Channel is created.</p>
      * @param distributionChannel value to be set
      */
-
+    
     public void setDistributionChannel(final ChannelKeyReference distributionChannel);
-
+    
+    
     /**
      *  <p>Maps to <code>LineItem.taxRate</code>.</p>
      * @param taxRate value to be set
      */
-
+    
     public void setTaxRate(final TaxRate taxRate);
-
+    
+    
     /**
      *  <p>Maps to LineItem.shippingDetails.</p>
      * @param shippingDetails value to be set
      */
-
+    
     public void setShippingDetails(final ItemShippingDetailsDraft shippingDetails);
-
+    
+    
     /**
      *  <p>Custom Fields for this Line Item.</p>
      * @param custom value to be set
      */
-
+    
     public void setCustom(final Custom custom);
+    
 
     /**
      * factory method
      * @return instance of LineItemImportDraft
      */
-    public static LineItemImportDraft of() {
+    public static LineItemImportDraft of(){
         return new LineItemImportDraftImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy LineItemImportDraft
@@ -257,25 +265,18 @@ public interface LineItemImportDraft extends io.vrap.rmf.base.client.Draft<LineI
             return null;
         }
         LineItemImportDraftImpl instance = new LineItemImportDraftImpl();
-        instance.setProduct(
-            com.commercetools.importapi.models.common.ProductKeyReference.deepCopy(template.getProduct()));
+        instance.setProduct(com.commercetools.importapi.models.common.ProductKeyReference.deepCopy(template.getProduct()));
         instance.setName(com.commercetools.importapi.models.common.LocalizedString.deepCopy(template.getName()));
-        instance.setVariant(com.commercetools.importapi.models.orders.LineItemProductVariantImportDraft
-                .deepCopy(template.getVariant()));
+        instance.setVariant(com.commercetools.importapi.models.orders.LineItemProductVariantImportDraft.deepCopy(template.getVariant()));
         instance.setPrice(com.commercetools.importapi.models.orders.LineItemPrice.deepCopy(template.getPrice()));
         instance.setQuantity(template.getQuantity());
         instance.setState(Optional.ofNullable(template.getState())
-                .map(t -> t.stream()
-                        .map(com.commercetools.importapi.models.orders.ItemState::deepCopy)
-                        .collect(Collectors.toList()))
+                .map(t -> t.stream().map(com.commercetools.importapi.models.orders.ItemState::deepCopy).collect(Collectors.toList()))
                 .orElse(null));
-        instance.setSupplyChannel(
-            com.commercetools.importapi.models.common.ChannelKeyReference.deepCopy(template.getSupplyChannel()));
-        instance.setDistributionChannel(
-            com.commercetools.importapi.models.common.ChannelKeyReference.deepCopy(template.getDistributionChannel()));
+        instance.setSupplyChannel(com.commercetools.importapi.models.common.ChannelKeyReference.deepCopy(template.getSupplyChannel()));
+        instance.setDistributionChannel(com.commercetools.importapi.models.common.ChannelKeyReference.deepCopy(template.getDistributionChannel()));
         instance.setTaxRate(com.commercetools.importapi.models.prices.TaxRate.deepCopy(template.getTaxRate()));
-        instance.setShippingDetails(
-            com.commercetools.importapi.models.orders.ItemShippingDetailsDraft.deepCopy(template.getShippingDetails()));
+        instance.setShippingDetails(com.commercetools.importapi.models.orders.ItemShippingDetailsDraft.deepCopy(template.getShippingDetails()));
         instance.setCustom(com.commercetools.importapi.models.customfields.Custom.deepCopy(template.getCustom()));
         return instance;
     }
@@ -287,7 +288,7 @@ public interface LineItemImportDraft extends io.vrap.rmf.base.client.Draft<LineI
     public static LineItemImportDraftBuilder builder() {
         return LineItemImportDraftBuilder.of();
     }
-
+    
     /**
      * create builder for LineItemImportDraft instance
      * @param template instance with prefilled values for the builder
@@ -296,6 +297,7 @@ public interface LineItemImportDraft extends io.vrap.rmf.base.client.Draft<LineI
     public static LineItemImportDraftBuilder builder(final LineItemImportDraft template) {
         return LineItemImportDraftBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -306,7 +308,7 @@ public interface LineItemImportDraft extends io.vrap.rmf.base.client.Draft<LineI
     default <T> T withLineItemImportDraft(Function<LineItemImportDraft, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

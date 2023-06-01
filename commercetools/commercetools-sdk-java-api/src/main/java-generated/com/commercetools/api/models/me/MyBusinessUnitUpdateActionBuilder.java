@@ -1,91 +1,98 @@
-
 package com.commercetools.api.models.me;
 
+import com.commercetools.api.models.me.MyBusinessUnitAddAddressAction;
+import com.commercetools.api.models.me.MyBusinessUnitAddBillingAddressIdAction;
+import com.commercetools.api.models.me.MyBusinessUnitAddShippingAddressIdAction;
+import com.commercetools.api.models.me.MyBusinessUnitChangeAddressAction;
+import com.commercetools.api.models.me.MyBusinessUnitChangeAssociateAction;
+import com.commercetools.api.models.me.MyBusinessUnitChangeNameAction;
+import com.commercetools.api.models.me.MyBusinessUnitChangeParentUnitAction;
+import com.commercetools.api.models.me.MyBusinessUnitRemoveAddressAction;
+import com.commercetools.api.models.me.MyBusinessUnitRemoveAssociateAction;
+import com.commercetools.api.models.me.MyBusinessUnitRemoveBillingAddressIdAction;
+import com.commercetools.api.models.me.MyBusinessUnitRemoveShippingAddressIdAction;
+import com.commercetools.api.models.me.MyBusinessUnitSetAddressCustomFieldAction;
+import com.commercetools.api.models.me.MyBusinessUnitSetAddressCustomTypeAction;
+import com.commercetools.api.models.me.MyBusinessUnitSetContactEmailAction;
+import com.commercetools.api.models.me.MyBusinessUnitSetCustomFieldAction;
+import com.commercetools.api.models.me.MyBusinessUnitSetCustomTypeAction;
+import com.commercetools.api.models.me.MyBusinessUnitSetDefaultBillingAddressAction;
+import com.commercetools.api.models.me.MyBusinessUnitSetDefaultShippingAddressAction;
+import com.commercetools.api.models.me.MyBusinessUnitUpdateAction;
+import javax.annotation.Nullable;
 import java.util.*;
-
+import java.util.function.Function;
+import java.time.ZonedDateTime;
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
  * MyBusinessUnitUpdateActionBuilder
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class MyBusinessUnitUpdateActionBuilder {
 
     public com.commercetools.api.models.me.MyBusinessUnitAddAddressActionBuilder addAddressBuilder() {
-        return com.commercetools.api.models.me.MyBusinessUnitAddAddressActionBuilder.of();
+       return com.commercetools.api.models.me.MyBusinessUnitAddAddressActionBuilder.of();
     }
-
     public com.commercetools.api.models.me.MyBusinessUnitAddBillingAddressIdActionBuilder addBillingAddressIdBuilder() {
-        return com.commercetools.api.models.me.MyBusinessUnitAddBillingAddressIdActionBuilder.of();
+       return com.commercetools.api.models.me.MyBusinessUnitAddBillingAddressIdActionBuilder.of();
     }
-
     public com.commercetools.api.models.me.MyBusinessUnitAddShippingAddressIdActionBuilder addShippingAddressIdBuilder() {
-        return com.commercetools.api.models.me.MyBusinessUnitAddShippingAddressIdActionBuilder.of();
+       return com.commercetools.api.models.me.MyBusinessUnitAddShippingAddressIdActionBuilder.of();
     }
-
     public com.commercetools.api.models.me.MyBusinessUnitChangeAddressActionBuilder changeAddressBuilder() {
-        return com.commercetools.api.models.me.MyBusinessUnitChangeAddressActionBuilder.of();
+       return com.commercetools.api.models.me.MyBusinessUnitChangeAddressActionBuilder.of();
     }
-
     public com.commercetools.api.models.me.MyBusinessUnitChangeAssociateActionBuilder changeAssociateBuilder() {
-        return com.commercetools.api.models.me.MyBusinessUnitChangeAssociateActionBuilder.of();
+       return com.commercetools.api.models.me.MyBusinessUnitChangeAssociateActionBuilder.of();
     }
-
     public com.commercetools.api.models.me.MyBusinessUnitChangeNameActionBuilder changeNameBuilder() {
-        return com.commercetools.api.models.me.MyBusinessUnitChangeNameActionBuilder.of();
+       return com.commercetools.api.models.me.MyBusinessUnitChangeNameActionBuilder.of();
     }
-
     public com.commercetools.api.models.me.MyBusinessUnitChangeParentUnitActionBuilder changeParentUnitBuilder() {
-        return com.commercetools.api.models.me.MyBusinessUnitChangeParentUnitActionBuilder.of();
+       return com.commercetools.api.models.me.MyBusinessUnitChangeParentUnitActionBuilder.of();
     }
-
     public com.commercetools.api.models.me.MyBusinessUnitRemoveAddressActionBuilder removeAddressBuilder() {
-        return com.commercetools.api.models.me.MyBusinessUnitRemoveAddressActionBuilder.of();
+       return com.commercetools.api.models.me.MyBusinessUnitRemoveAddressActionBuilder.of();
     }
-
     public com.commercetools.api.models.me.MyBusinessUnitRemoveAssociateActionBuilder removeAssociateBuilder() {
-        return com.commercetools.api.models.me.MyBusinessUnitRemoveAssociateActionBuilder.of();
+       return com.commercetools.api.models.me.MyBusinessUnitRemoveAssociateActionBuilder.of();
     }
-
     public com.commercetools.api.models.me.MyBusinessUnitRemoveBillingAddressIdActionBuilder removeBillingAddressIdBuilder() {
-        return com.commercetools.api.models.me.MyBusinessUnitRemoveBillingAddressIdActionBuilder.of();
+       return com.commercetools.api.models.me.MyBusinessUnitRemoveBillingAddressIdActionBuilder.of();
     }
-
     public com.commercetools.api.models.me.MyBusinessUnitRemoveShippingAddressIdActionBuilder removeShippingAddressIdBuilder() {
-        return com.commercetools.api.models.me.MyBusinessUnitRemoveShippingAddressIdActionBuilder.of();
+       return com.commercetools.api.models.me.MyBusinessUnitRemoveShippingAddressIdActionBuilder.of();
     }
-
     public com.commercetools.api.models.me.MyBusinessUnitSetAddressCustomFieldActionBuilder setAddressCustomFieldBuilder() {
-        return com.commercetools.api.models.me.MyBusinessUnitSetAddressCustomFieldActionBuilder.of();
+       return com.commercetools.api.models.me.MyBusinessUnitSetAddressCustomFieldActionBuilder.of();
     }
-
     public com.commercetools.api.models.me.MyBusinessUnitSetAddressCustomTypeActionBuilder setAddressCustomTypeBuilder() {
-        return com.commercetools.api.models.me.MyBusinessUnitSetAddressCustomTypeActionBuilder.of();
+       return com.commercetools.api.models.me.MyBusinessUnitSetAddressCustomTypeActionBuilder.of();
     }
-
     public com.commercetools.api.models.me.MyBusinessUnitSetContactEmailActionBuilder setContactEmailBuilder() {
-        return com.commercetools.api.models.me.MyBusinessUnitSetContactEmailActionBuilder.of();
+       return com.commercetools.api.models.me.MyBusinessUnitSetContactEmailActionBuilder.of();
     }
-
     public com.commercetools.api.models.me.MyBusinessUnitSetCustomFieldActionBuilder setCustomFieldBuilder() {
-        return com.commercetools.api.models.me.MyBusinessUnitSetCustomFieldActionBuilder.of();
+       return com.commercetools.api.models.me.MyBusinessUnitSetCustomFieldActionBuilder.of();
     }
-
     public com.commercetools.api.models.me.MyBusinessUnitSetCustomTypeActionBuilder setCustomTypeBuilder() {
-        return com.commercetools.api.models.me.MyBusinessUnitSetCustomTypeActionBuilder.of();
+       return com.commercetools.api.models.me.MyBusinessUnitSetCustomTypeActionBuilder.of();
     }
-
     public com.commercetools.api.models.me.MyBusinessUnitSetDefaultBillingAddressActionBuilder setDefaultBillingAddressBuilder() {
-        return com.commercetools.api.models.me.MyBusinessUnitSetDefaultBillingAddressActionBuilder.of();
+       return com.commercetools.api.models.me.MyBusinessUnitSetDefaultBillingAddressActionBuilder.of();
     }
-
     public com.commercetools.api.models.me.MyBusinessUnitSetDefaultShippingAddressActionBuilder setDefaultShippingAddressBuilder() {
-        return com.commercetools.api.models.me.MyBusinessUnitSetDefaultShippingAddressActionBuilder.of();
+       return com.commercetools.api.models.me.MyBusinessUnitSetDefaultShippingAddressActionBuilder.of();
     }
 
     /**
      * factory method for an instance of MyBusinessUnitUpdateActionBuilder
-     * @return builder
+     * @return builder 
      */
     public static MyBusinessUnitUpdateActionBuilder of() {
         return new MyBusinessUnitUpdateActionBuilder();

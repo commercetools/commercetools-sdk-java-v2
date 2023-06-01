@@ -1,19 +1,21 @@
-
 package com.commercetools.api.models.business_unit;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-import java.util.stream.Collectors;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-
+import com.commercetools.api.models.business_unit.BusinessUnitUpdateAction;
 import com.commercetools.api.models.store.StoreResourceIdentifier;
+import com.commercetools.api.models.business_unit.BusinessUnitSetStoresActionImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Sets the Stores of the Business Unit. Can only be set if the Business Unit <code>storeMode</code> is <code>Explicit</code>. Carts and Orders created after the Set Stores update must use the new Stores of the Business Unit and, if set, their Product Selections, and Channels. Orders created before the Set Stores update action remain unchanged. Setting the Stores on a Business Unit generates a BusinessUnitStoresSet Message.</p>
@@ -25,9 +27,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     BusinessUnitSetStoresAction businessUnitSetStoresAction = BusinessUnitSetStoresAction.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = BusinessUnitSetStoresActionImpl.class)
 public interface BusinessUnitSetStoresAction extends BusinessUnitUpdateAction {
 
@@ -48,24 +53,24 @@ public interface BusinessUnitSetStoresAction extends BusinessUnitUpdateAction {
      *  <p>Stores to set. Overrides the current list of Stores.</p>
      * @param stores values to be set
      */
-
+    
     @JsonIgnore
-    public void setStores(final StoreResourceIdentifier... stores);
-
+    public void setStores(final StoreResourceIdentifier ...stores);
     /**
      *  <p>Stores to set. Overrides the current list of Stores.</p>
      * @param stores values to be set
      */
-
+    
     public void setStores(final List<StoreResourceIdentifier> stores);
 
     /**
      * factory method
      * @return instance of BusinessUnitSetStoresAction
      */
-    public static BusinessUnitSetStoresAction of() {
+    public static BusinessUnitSetStoresAction of(){
         return new BusinessUnitSetStoresActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy BusinessUnitSetStoresAction
@@ -90,9 +95,7 @@ public interface BusinessUnitSetStoresAction extends BusinessUnitUpdateAction {
         }
         BusinessUnitSetStoresActionImpl instance = new BusinessUnitSetStoresActionImpl();
         instance.setStores(Optional.ofNullable(template.getStores())
-                .map(t -> t.stream()
-                        .map(com.commercetools.api.models.store.StoreResourceIdentifier::deepCopy)
-                        .collect(Collectors.toList()))
+                .map(t -> t.stream().map(com.commercetools.api.models.store.StoreResourceIdentifier::deepCopy).collect(Collectors.toList()))
                 .orElse(null));
         return instance;
     }
@@ -104,7 +107,7 @@ public interface BusinessUnitSetStoresAction extends BusinessUnitUpdateAction {
     public static BusinessUnitSetStoresActionBuilder builder() {
         return BusinessUnitSetStoresActionBuilder.of();
     }
-
+    
     /**
      * create builder for BusinessUnitSetStoresAction instance
      * @param template instance with prefilled values for the builder
@@ -113,6 +116,7 @@ public interface BusinessUnitSetStoresAction extends BusinessUnitUpdateAction {
     public static BusinessUnitSetStoresActionBuilder builder(final BusinessUnitSetStoresAction template) {
         return BusinessUnitSetStoresActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -123,7 +127,7 @@ public interface BusinessUnitSetStoresAction extends BusinessUnitUpdateAction {
     default <T> T withBusinessUnitSetStoresAction(Function<BusinessUnitSetStoresAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

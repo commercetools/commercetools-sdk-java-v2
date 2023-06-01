@@ -1,17 +1,21 @@
-
 package com.commercetools.history.models.change;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
+import com.commercetools.history.models.change.Change;
+import java.lang.Object;
+import com.commercetools.history.models.change.AddPropertyChangeImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * AddPropertyChange
@@ -25,9 +29,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .path("{path}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = AddPropertyChangeImpl.class)
 public interface AddPropertyChange extends Change {
 
@@ -43,7 +50,6 @@ public interface AddPropertyChange extends Change {
     @NotNull
     @JsonProperty("type")
     public String getType();
-
     /**
      *  <p>Update action for <code>addProperty</code> on custom objects</p>
      * @return change
@@ -51,7 +57,6 @@ public interface AddPropertyChange extends Change {
     @NotNull
     @JsonProperty("change")
     public String getChange();
-
     /**
      *  <p>Value path to the property that was added</p>
      * @return path
@@ -59,7 +64,6 @@ public interface AddPropertyChange extends Change {
     @NotNull
     @JsonProperty("path")
     public String getPath();
-
     /**
      *
      * @return nextValue
@@ -72,30 +76,34 @@ public interface AddPropertyChange extends Change {
      *  <p>Update action for <code>addProperty</code> on custom objects</p>
      * @param change value to be set
      */
-
+    
     public void setChange(final String change);
-
+    
+    
     /**
      *  <p>Value path to the property that was added</p>
      * @param path value to be set
      */
-
+    
     public void setPath(final String path);
-
+    
+    
     /**
      * set nextValue
      * @param nextValue value to be set
      */
-
+    
     public void setNextValue(final Object nextValue);
+    
 
     /**
      * factory method
      * @return instance of AddPropertyChange
      */
-    public static AddPropertyChange of() {
+    public static AddPropertyChange of(){
         return new AddPropertyChangeImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy AddPropertyChange
@@ -134,7 +142,7 @@ public interface AddPropertyChange extends Change {
     public static AddPropertyChangeBuilder builder() {
         return AddPropertyChangeBuilder.of();
     }
-
+    
     /**
      * create builder for AddPropertyChange instance
      * @param template instance with prefilled values for the builder
@@ -143,6 +151,7 @@ public interface AddPropertyChange extends Change {
     public static AddPropertyChangeBuilder builder(final AddPropertyChange template) {
         return AddPropertyChangeBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -153,7 +162,7 @@ public interface AddPropertyChange extends Change {
     default <T> T withAddPropertyChange(Function<AddPropertyChange, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

@@ -1,18 +1,23 @@
-
 package com.commercetools.api.models.order;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-import java.util.stream.Collectors;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
+import com.commercetools.api.models.order.DeliveryItem;
+import com.commercetools.api.models.order.OrderUpdateAction;
+import com.commercetools.api.models.order.ParcelMeasurements;
+import com.commercetools.api.models.order.TrackingData;
+import com.commercetools.api.models.order.OrderAddParcelToDeliveryActionImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * OrderAddParcelToDeliveryAction
@@ -24,9 +29,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     OrderAddParcelToDeliveryAction orderAddParcelToDeliveryAction = OrderAddParcelToDeliveryAction.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = OrderAddParcelToDeliveryActionImpl.class)
 public interface OrderAddParcelToDeliveryAction extends OrderUpdateAction {
 
@@ -39,18 +47,16 @@ public interface OrderAddParcelToDeliveryAction extends OrderUpdateAction {
      *  <p>Either <code>deliveryId</code> or <code>deliveryKey</code> is required for this update action.</p>
      * @return deliveryId
      */
-
+    
     @JsonProperty("deliveryId")
     public String getDeliveryId();
-
     /**
      *  <p>Either <code>deliveryId</code> or <code>deliveryKey</code> is required for this update action.</p>
      * @return deliveryKey
      */
-
+    
     @JsonProperty("deliveryKey")
     public String getDeliveryKey();
-
     /**
      *
      * @return measurements
@@ -58,7 +64,6 @@ public interface OrderAddParcelToDeliveryAction extends OrderUpdateAction {
     @Valid
     @JsonProperty("measurements")
     public ParcelMeasurements getMeasurements();
-
     /**
      *
      * @return trackingData
@@ -66,7 +71,6 @@ public interface OrderAddParcelToDeliveryAction extends OrderUpdateAction {
     @Valid
     @JsonProperty("trackingData")
     public TrackingData getTrackingData();
-
     /**
      *
      * @return items
@@ -79,52 +83,56 @@ public interface OrderAddParcelToDeliveryAction extends OrderUpdateAction {
      *  <p>Either <code>deliveryId</code> or <code>deliveryKey</code> is required for this update action.</p>
      * @param deliveryId value to be set
      */
-
+    
     public void setDeliveryId(final String deliveryId);
-
+    
+    
     /**
      *  <p>Either <code>deliveryId</code> or <code>deliveryKey</code> is required for this update action.</p>
      * @param deliveryKey value to be set
      */
-
+    
     public void setDeliveryKey(final String deliveryKey);
-
+    
+    
     /**
      * set measurements
      * @param measurements value to be set
      */
-
+    
     public void setMeasurements(final ParcelMeasurements measurements);
-
+    
+    
     /**
      * set trackingData
      * @param trackingData value to be set
      */
-
+    
     public void setTrackingData(final TrackingData trackingData);
-
+    
+    
     /**
      * set items
      * @param items values to be set
      */
-
+    
     @JsonIgnore
-    public void setItems(final DeliveryItem... items);
-
+    public void setItems(final DeliveryItem ...items);
     /**
      * set items
      * @param items values to be set
      */
-
+    
     public void setItems(final List<DeliveryItem> items);
 
     /**
      * factory method
      * @return instance of OrderAddParcelToDeliveryAction
      */
-    public static OrderAddParcelToDeliveryAction of() {
+    public static OrderAddParcelToDeliveryAction of(){
         return new OrderAddParcelToDeliveryActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy OrderAddParcelToDeliveryAction
@@ -154,13 +162,10 @@ public interface OrderAddParcelToDeliveryAction extends OrderUpdateAction {
         OrderAddParcelToDeliveryActionImpl instance = new OrderAddParcelToDeliveryActionImpl();
         instance.setDeliveryId(template.getDeliveryId());
         instance.setDeliveryKey(template.getDeliveryKey());
-        instance.setMeasurements(
-            com.commercetools.api.models.order.ParcelMeasurements.deepCopy(template.getMeasurements()));
+        instance.setMeasurements(com.commercetools.api.models.order.ParcelMeasurements.deepCopy(template.getMeasurements()));
         instance.setTrackingData(com.commercetools.api.models.order.TrackingData.deepCopy(template.getTrackingData()));
         instance.setItems(Optional.ofNullable(template.getItems())
-                .map(t -> t.stream()
-                        .map(com.commercetools.api.models.order.DeliveryItem::deepCopy)
-                        .collect(Collectors.toList()))
+                .map(t -> t.stream().map(com.commercetools.api.models.order.DeliveryItem::deepCopy).collect(Collectors.toList()))
                 .orElse(null));
         return instance;
     }
@@ -172,7 +177,7 @@ public interface OrderAddParcelToDeliveryAction extends OrderUpdateAction {
     public static OrderAddParcelToDeliveryActionBuilder builder() {
         return OrderAddParcelToDeliveryActionBuilder.of();
     }
-
+    
     /**
      * create builder for OrderAddParcelToDeliveryAction instance
      * @param template instance with prefilled values for the builder
@@ -181,6 +186,7 @@ public interface OrderAddParcelToDeliveryAction extends OrderUpdateAction {
     public static OrderAddParcelToDeliveryActionBuilder builder(final OrderAddParcelToDeliveryAction template) {
         return OrderAddParcelToDeliveryActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -191,7 +197,7 @@ public interface OrderAddParcelToDeliveryAction extends OrderUpdateAction {
     default <T> T withOrderAddParcelToDeliveryAction(Function<OrderAddParcelToDeliveryAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

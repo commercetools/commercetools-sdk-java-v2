@@ -1,11 +1,12 @@
-
 package com.commercetools.ml.models.similar_products;
 
+import com.commercetools.ml.models.similar_products.ProductSetSelector;
+import com.commercetools.ml.models.similar_products.SimilarityMeasures;
+import com.commercetools.ml.models.similar_products.SimilarProductSearchRequest;
+import javax.annotation.Nullable;
 import java.util.*;
 import java.util.function.Function;
-
-import javax.annotation.Nullable;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -18,310 +19,328 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     SimilarProductSearchRequest similarProductSearchRequest = SimilarProductSearchRequest.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class SimilarProductSearchRequestBuilder implements Builder<SimilarProductSearchRequest> {
 
+    
     @Nullable
     private Long limit;
-
+    
+    
     @Nullable
     private Long offset;
-
+    
+    
     @Nullable
     private String language;
-
+    
+    
     @Nullable
     private String currencyCode;
-
+    
+    
     @Nullable
     private com.commercetools.ml.models.similar_products.SimilarityMeasures similarityMeasures;
-
+    
+    
     @Nullable
     private java.util.List<com.commercetools.ml.models.similar_products.ProductSetSelector> productSetSelectors;
-
+    
+    
     @Nullable
     private Double confidenceMin;
-
+    
+    
     @Nullable
     private Double confidenceMax;
 
+    
     /**
      *  <p>Number of results requested.</p>
      * @param limit value to be set
      * @return Builder
      */
-
+    
     public SimilarProductSearchRequestBuilder limit(@Nullable final Long limit) {
         this.limit = limit;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Number of elements skipped.</p>
      * @param offset value to be set
      * @return Builder
      */
-
+    
     public SimilarProductSearchRequestBuilder offset(@Nullable final Long offset) {
         this.offset = offset;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>language tag used to prioritize language for text comparisons.</p>
      * @param language value to be set
      * @return Builder
      */
-
+    
     public SimilarProductSearchRequestBuilder language(@Nullable final String language) {
         this.language = language;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>The three-digit currency code to compare prices in. When a product has multiple prices, all prices for the product are converted to the currency provided by the currency attribute and the median price is calculated for comparison. Currencies are converted using the ECB currency exchange rates at the time the request is made. Of the currency codes, only currencies with currency exchange rates provided by the ECB are supported.</p>
      * @param currencyCode value to be set
      * @return Builder
      */
-
+    
     public SimilarProductSearchRequestBuilder currencyCode(@Nullable final String currencyCode) {
         this.currencyCode = currencyCode;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p><code>similarityMeasures</code> defines the attributes taken into account to measure product similarity.</p>
      * @param builder function to build the similarityMeasures value
      * @return Builder
      */
-
-    public SimilarProductSearchRequestBuilder similarityMeasures(
-            Function<com.commercetools.ml.models.similar_products.SimilarityMeasuresBuilder, com.commercetools.ml.models.similar_products.SimilarityMeasuresBuilder> builder) {
-        this.similarityMeasures = builder
-                .apply(com.commercetools.ml.models.similar_products.SimilarityMeasuresBuilder.of())
-                .build();
+    
+    public SimilarProductSearchRequestBuilder similarityMeasures(Function<com.commercetools.ml.models.similar_products.SimilarityMeasuresBuilder, com.commercetools.ml.models.similar_products.SimilarityMeasuresBuilder> builder) {
+        this.similarityMeasures = builder.apply(com.commercetools.ml.models.similar_products.SimilarityMeasuresBuilder.of()).build();
         return this;
     }
-
+    
     /**
      *  <p><code>similarityMeasures</code> defines the attributes taken into account to measure product similarity.</p>
      * @param builder function to build the similarityMeasures value
      * @return Builder
      */
-
-    public SimilarProductSearchRequestBuilder withSimilarityMeasures(
-            Function<com.commercetools.ml.models.similar_products.SimilarityMeasuresBuilder, com.commercetools.ml.models.similar_products.SimilarityMeasures> builder) {
-        this.similarityMeasures = builder
-                .apply(com.commercetools.ml.models.similar_products.SimilarityMeasuresBuilder.of());
+    
+    public SimilarProductSearchRequestBuilder withSimilarityMeasures(Function<com.commercetools.ml.models.similar_products.SimilarityMeasuresBuilder, com.commercetools.ml.models.similar_products.SimilarityMeasures> builder) {
+        this.similarityMeasures = builder.apply(com.commercetools.ml.models.similar_products.SimilarityMeasuresBuilder.of());
         return this;
     }
-
+                    
     /**
      *  <p><code>similarityMeasures</code> defines the attributes taken into account to measure product similarity.</p>
      * @param similarityMeasures value to be set
      * @return Builder
      */
-
-    public SimilarProductSearchRequestBuilder similarityMeasures(
-            @Nullable final com.commercetools.ml.models.similar_products.SimilarityMeasures similarityMeasures) {
+    
+    public SimilarProductSearchRequestBuilder similarityMeasures(@Nullable final com.commercetools.ml.models.similar_products.SimilarityMeasures similarityMeasures) {
         this.similarityMeasures = similarityMeasures;
         return this;
     }
-
+    
+    
+    
     /**
      *  <p>Array of length 2 of ProductSetSelector</p>
      * @param productSetSelectors value to be set
      * @return Builder
      */
-
-    public SimilarProductSearchRequestBuilder productSetSelectors(
-            @Nullable final com.commercetools.ml.models.similar_products.ProductSetSelector... productSetSelectors) {
+    
+    public SimilarProductSearchRequestBuilder productSetSelectors(@Nullable final com.commercetools.ml.models.similar_products.ProductSetSelector ...productSetSelectors) {
         this.productSetSelectors = new ArrayList<>(Arrays.asList(productSetSelectors));
         return this;
     }
-
+    
     /**
      *  <p>Array of length 2 of ProductSetSelector</p>
      * @param productSetSelectors value to be set
      * @return Builder
      */
-
-    public SimilarProductSearchRequestBuilder productSetSelectors(
-            @Nullable final java.util.List<com.commercetools.ml.models.similar_products.ProductSetSelector> productSetSelectors) {
+    
+    public SimilarProductSearchRequestBuilder productSetSelectors(@Nullable final java.util.List<com.commercetools.ml.models.similar_products.ProductSetSelector> productSetSelectors) {
         this.productSetSelectors = productSetSelectors;
         return this;
     }
-
+    
     /**
      *  <p>Array of length 2 of ProductSetSelector</p>
      * @param productSetSelectors value to be set
      * @return Builder
      */
-
-    public SimilarProductSearchRequestBuilder plusProductSetSelectors(
-            @Nullable final com.commercetools.ml.models.similar_products.ProductSetSelector... productSetSelectors) {
+    
+    public SimilarProductSearchRequestBuilder plusProductSetSelectors(@Nullable final com.commercetools.ml.models.similar_products.ProductSetSelector ...productSetSelectors) {
         if (this.productSetSelectors == null) {
             this.productSetSelectors = new ArrayList<>();
         }
         this.productSetSelectors.addAll(Arrays.asList(productSetSelectors));
         return this;
     }
-
+    
+    
+    
     /**
      *  <p>Array of length 2 of ProductSetSelector</p>
      * @param builder function to build the productSetSelectors value
      * @return Builder
      */
-
-    public SimilarProductSearchRequestBuilder plusProductSetSelectors(
-            Function<com.commercetools.ml.models.similar_products.ProductSetSelectorBuilder, com.commercetools.ml.models.similar_products.ProductSetSelectorBuilder> builder) {
+    
+    public SimilarProductSearchRequestBuilder plusProductSetSelectors(Function<com.commercetools.ml.models.similar_products.ProductSetSelectorBuilder, com.commercetools.ml.models.similar_products.ProductSetSelectorBuilder> builder) {
         if (this.productSetSelectors == null) {
             this.productSetSelectors = new ArrayList<>();
         }
-        this.productSetSelectors.add(
-            builder.apply(com.commercetools.ml.models.similar_products.ProductSetSelectorBuilder.of()).build());
+        this.productSetSelectors.add(builder.apply(com.commercetools.ml.models.similar_products.ProductSetSelectorBuilder.of()).build());
         return this;
     }
-
+    
     /**
      *  <p>Array of length 2 of ProductSetSelector</p>
      * @param builder function to build the productSetSelectors value
      * @return Builder
      */
-
-    public SimilarProductSearchRequestBuilder withProductSetSelectors(
-            Function<com.commercetools.ml.models.similar_products.ProductSetSelectorBuilder, com.commercetools.ml.models.similar_products.ProductSetSelectorBuilder> builder) {
+    
+    public SimilarProductSearchRequestBuilder withProductSetSelectors(Function<com.commercetools.ml.models.similar_products.ProductSetSelectorBuilder, com.commercetools.ml.models.similar_products.ProductSetSelectorBuilder> builder) {
         this.productSetSelectors = new ArrayList<>();
-        this.productSetSelectors.add(
-            builder.apply(com.commercetools.ml.models.similar_products.ProductSetSelectorBuilder.of()).build());
+        this.productSetSelectors.add(builder.apply(com.commercetools.ml.models.similar_products.ProductSetSelectorBuilder.of()).build());
         return this;
     }
-
+    
     /**
      *  <p>Array of length 2 of ProductSetSelector</p>
      * @param builder function to build the productSetSelectors value
      * @return Builder
      */
-
-    public SimilarProductSearchRequestBuilder addProductSetSelectors(
-            Function<com.commercetools.ml.models.similar_products.ProductSetSelectorBuilder, com.commercetools.ml.models.similar_products.ProductSetSelector> builder) {
-        return plusProductSetSelectors(
-            builder.apply(com.commercetools.ml.models.similar_products.ProductSetSelectorBuilder.of()));
+    
+    public SimilarProductSearchRequestBuilder addProductSetSelectors(Function<com.commercetools.ml.models.similar_products.ProductSetSelectorBuilder, com.commercetools.ml.models.similar_products.ProductSetSelector> builder) {
+        return plusProductSetSelectors(builder.apply(com.commercetools.ml.models.similar_products.ProductSetSelectorBuilder.of()));
     }
-
+    
     /**
      *  <p>Array of length 2 of ProductSetSelector</p>
      * @param builder function to build the productSetSelectors value
      * @return Builder
      */
-
-    public SimilarProductSearchRequestBuilder setProductSetSelectors(
-            Function<com.commercetools.ml.models.similar_products.ProductSetSelectorBuilder, com.commercetools.ml.models.similar_products.ProductSetSelector> builder) {
-        return productSetSelectors(
-            builder.apply(com.commercetools.ml.models.similar_products.ProductSetSelectorBuilder.of()));
+    
+    public SimilarProductSearchRequestBuilder setProductSetSelectors(Function<com.commercetools.ml.models.similar_products.ProductSetSelectorBuilder, com.commercetools.ml.models.similar_products.ProductSetSelector> builder) {
+        return productSetSelectors(builder.apply(com.commercetools.ml.models.similar_products.ProductSetSelectorBuilder.of()));
     }
-
+                    
+    
+    
     /**
      * set the value to the confidenceMin
      * @param confidenceMin value to be set
      * @return Builder
      */
-
+    
     public SimilarProductSearchRequestBuilder confidenceMin(@Nullable final Double confidenceMin) {
         this.confidenceMin = confidenceMin;
         return this;
     }
-
+    
+    
+    
+    
     /**
      * set the value to the confidenceMax
      * @param confidenceMax value to be set
      * @return Builder
      */
-
+    
     public SimilarProductSearchRequestBuilder confidenceMax(@Nullable final Double confidenceMax) {
         this.confidenceMax = confidenceMax;
         return this;
     }
+    
+    
 
     /**
      *  <p>Number of results requested.</p>
      * @return limit
      */
-
+    
     @Nullable
-    public Long getLimit() {
+    public Long getLimit(){
         return this.limit;
     }
-
+    
     /**
      *  <p>Number of elements skipped.</p>
      * @return offset
      */
-
+    
     @Nullable
-    public Long getOffset() {
+    public Long getOffset(){
         return this.offset;
     }
-
+    
     /**
      *  <p>language tag used to prioritize language for text comparisons.</p>
      * @return language
      */
-
+    
     @Nullable
-    public String getLanguage() {
+    public String getLanguage(){
         return this.language;
     }
-
+    
     /**
      *  <p>The three-digit currency code to compare prices in. When a product has multiple prices, all prices for the product are converted to the currency provided by the currency attribute and the median price is calculated for comparison. Currencies are converted using the ECB currency exchange rates at the time the request is made. Of the currency codes, only currencies with currency exchange rates provided by the ECB are supported.</p>
      * @return currencyCode
      */
-
+    
     @Nullable
-    public String getCurrencyCode() {
+    public String getCurrencyCode(){
         return this.currencyCode;
     }
-
+    
     /**
      *  <p><code>similarityMeasures</code> defines the attributes taken into account to measure product similarity.</p>
      * @return similarityMeasures
      */
-
+    
     @Nullable
-    public com.commercetools.ml.models.similar_products.SimilarityMeasures getSimilarityMeasures() {
+    public com.commercetools.ml.models.similar_products.SimilarityMeasures getSimilarityMeasures(){
         return this.similarityMeasures;
     }
-
+    
     /**
      *  <p>Array of length 2 of ProductSetSelector</p>
      * @return productSetSelectors
      */
-
+    
     @Nullable
-    public java.util.List<com.commercetools.ml.models.similar_products.ProductSetSelector> getProductSetSelectors() {
+    public java.util.List<com.commercetools.ml.models.similar_products.ProductSetSelector> getProductSetSelectors(){
         return this.productSetSelectors;
     }
-
+    
     /**
      * value of confidenceMin}
      * @return confidenceMin
      */
-
+    
     @Nullable
-    public Double getConfidenceMin() {
+    public Double getConfidenceMin(){
         return this.confidenceMin;
     }
-
+    
     /**
      * value of confidenceMax}
      * @return confidenceMax
      */
-
+    
     @Nullable
-    public Double getConfidenceMax() {
+    public Double getConfidenceMax(){
         return this.confidenceMax;
     }
 
@@ -330,22 +349,20 @@ public class SimilarProductSearchRequestBuilder implements Builder<SimilarProduc
      * @return SimilarProductSearchRequest
      */
     public SimilarProductSearchRequest build() {
-        return new SimilarProductSearchRequestImpl(limit, offset, language, currencyCode, similarityMeasures,
-            productSetSelectors, confidenceMin, confidenceMax);
+        return new SimilarProductSearchRequestImpl(limit, offset, language, currencyCode, similarityMeasures, productSetSelectors, confidenceMin, confidenceMax);
     }
-
+    
     /**
      * builds SimilarProductSearchRequest without checking for non-null required values
      * @return SimilarProductSearchRequest
      */
     public SimilarProductSearchRequest buildUnchecked() {
-        return new SimilarProductSearchRequestImpl(limit, offset, language, currencyCode, similarityMeasures,
-            productSetSelectors, confidenceMin, confidenceMax);
+        return new SimilarProductSearchRequestImpl(limit, offset, language, currencyCode, similarityMeasures, productSetSelectors, confidenceMin, confidenceMax);
     }
 
     /**
      * factory method for an instance of SimilarProductSearchRequestBuilder
-     * @return builder
+     * @return builder 
      */
     public static SimilarProductSearchRequestBuilder of() {
         return new SimilarProductSearchRequestBuilder();

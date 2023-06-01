@@ -1,18 +1,26 @@
-
 package com.commercetools.api.client;
 
+import java.util.ArrayList;
+import java.util.List;
+import java.util.function.Function;
 import java.util.function.UnaryOperator;
 
 import io.vrap.rmf.base.client.ApiHttpClient;
+import io.vrap.rmf.base.client.ApiMethod;
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class ByProjectKeyShippingMethodsRequestBuilder implements ByProjectKeyShippingMethodsRequestBuilderMixin {
 
     private final ApiHttpClient apiHttpClient;
     private final String projectKey;
+    
 
-    public ByProjectKeyShippingMethodsRequestBuilder(final ApiHttpClient apiHttpClient, final String projectKey) {
+    public ByProjectKeyShippingMethodsRequestBuilder (final ApiHttpClient apiHttpClient,final String projectKey) {
         this.apiHttpClient = apiHttpClient;
         this.projectKey = projectKey;
     }
@@ -20,43 +28,44 @@ public class ByProjectKeyShippingMethodsRequestBuilder implements ByProjectKeySh
     public ByProjectKeyShippingMethodsGet get() {
         return new ByProjectKeyShippingMethodsGet(apiHttpClient, projectKey);
     }
-
-    public ByProjectKeyShippingMethodsPost post(
-            com.commercetools.api.models.shipping_method.ShippingMethodDraft shippingMethodDraft) {
+    
+    
+    
+    public ByProjectKeyShippingMethodsPost post(com.commercetools.api.models.shipping_method.ShippingMethodDraft shippingMethodDraft) {
         return new ByProjectKeyShippingMethodsPost(apiHttpClient, projectKey, shippingMethodDraft);
     }
-
+    
+    
     public ByProjectKeyShippingMethodsPostString post(final String shippingMethodDraft) {
         return new ByProjectKeyShippingMethodsPostString(apiHttpClient, projectKey, shippingMethodDraft);
     }
-
-    public ByProjectKeyShippingMethodsPost post(
-            UnaryOperator<com.commercetools.api.models.shipping_method.ShippingMethodDraftBuilder> op) {
+    public ByProjectKeyShippingMethodsPost post(UnaryOperator<com.commercetools.api.models.shipping_method.ShippingMethodDraftBuilder> op) {
         return post(op.apply(com.commercetools.api.models.shipping_method.ShippingMethodDraftBuilder.of()).build());
     }
 
+    
     public ByProjectKeyShippingMethodsKeyByKeyRequestBuilder withKey(String key) {
         return new ByProjectKeyShippingMethodsKeyByKeyRequestBuilder(apiHttpClient, projectKey, key);
     }
-
+    
     public ByProjectKeyShippingMethodsMatchingCartRequestBuilder matchingCart() {
         return new ByProjectKeyShippingMethodsMatchingCartRequestBuilder(apiHttpClient, projectKey);
     }
-
+    
     public ByProjectKeyShippingMethodsMatchingCartLocationRequestBuilder matchingCartLocation() {
         return new ByProjectKeyShippingMethodsMatchingCartLocationRequestBuilder(apiHttpClient, projectKey);
     }
-
+    
     public ByProjectKeyShippingMethodsMatchingOrdereditRequestBuilder matchingOrderedit() {
         return new ByProjectKeyShippingMethodsMatchingOrdereditRequestBuilder(apiHttpClient, projectKey);
     }
-
+    
     public ByProjectKeyShippingMethodsMatchingLocationRequestBuilder matchingLocation() {
         return new ByProjectKeyShippingMethodsMatchingLocationRequestBuilder(apiHttpClient, projectKey);
     }
-
+    
     public ByProjectKeyShippingMethodsByIDRequestBuilder withId(String ID) {
         return new ByProjectKeyShippingMethodsByIDRequestBuilder(apiHttpClient, projectKey, ID);
     }
-
+    
 }

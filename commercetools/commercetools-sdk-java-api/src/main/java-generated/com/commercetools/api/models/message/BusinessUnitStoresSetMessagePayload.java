@@ -1,20 +1,21 @@
-
 package com.commercetools.api.models.message;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-import java.util.stream.Collectors;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
+import com.commercetools.api.models.message.MessagePayload;
 import com.commercetools.api.models.store.StoreKeyReference;
+import com.commercetools.api.models.message.BusinessUnitStoresSetMessagePayloadImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Generated after a successful Set Stores update action.</p>
@@ -27,9 +28,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .plusStores(storesBuilder -> storesBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = BusinessUnitStoresSetMessagePayloadImpl.class)
 public interface BusinessUnitStoresSetMessagePayload extends MessagePayload {
 
@@ -51,24 +55,24 @@ public interface BusinessUnitStoresSetMessagePayload extends MessagePayload {
      *  <p>Stores of the Business Unit after the Set Stores update action.</p>
      * @param stores values to be set
      */
-
+    
     @JsonIgnore
-    public void setStores(final StoreKeyReference... stores);
-
+    public void setStores(final StoreKeyReference ...stores);
     /**
      *  <p>Stores of the Business Unit after the Set Stores update action.</p>
      * @param stores values to be set
      */
-
+    
     public void setStores(final List<StoreKeyReference> stores);
 
     /**
      * factory method
      * @return instance of BusinessUnitStoresSetMessagePayload
      */
-    public static BusinessUnitStoresSetMessagePayload of() {
+    public static BusinessUnitStoresSetMessagePayload of(){
         return new BusinessUnitStoresSetMessagePayloadImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy BusinessUnitStoresSetMessagePayload
@@ -87,16 +91,13 @@ public interface BusinessUnitStoresSetMessagePayload extends MessagePayload {
      * @return copy instance
      */
     @Nullable
-    public static BusinessUnitStoresSetMessagePayload deepCopy(
-            @Nullable final BusinessUnitStoresSetMessagePayload template) {
+    public static BusinessUnitStoresSetMessagePayload deepCopy(@Nullable final BusinessUnitStoresSetMessagePayload template) {
         if (template == null) {
             return null;
         }
         BusinessUnitStoresSetMessagePayloadImpl instance = new BusinessUnitStoresSetMessagePayloadImpl();
         instance.setStores(Optional.ofNullable(template.getStores())
-                .map(t -> t.stream()
-                        .map(com.commercetools.api.models.store.StoreKeyReference::deepCopy)
-                        .collect(Collectors.toList()))
+                .map(t -> t.stream().map(com.commercetools.api.models.store.StoreKeyReference::deepCopy).collect(Collectors.toList()))
                 .orElse(null));
         return instance;
     }
@@ -108,16 +109,16 @@ public interface BusinessUnitStoresSetMessagePayload extends MessagePayload {
     public static BusinessUnitStoresSetMessagePayloadBuilder builder() {
         return BusinessUnitStoresSetMessagePayloadBuilder.of();
     }
-
+    
     /**
      * create builder for BusinessUnitStoresSetMessagePayload instance
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static BusinessUnitStoresSetMessagePayloadBuilder builder(
-            final BusinessUnitStoresSetMessagePayload template) {
+    public static BusinessUnitStoresSetMessagePayloadBuilder builder(final BusinessUnitStoresSetMessagePayload template) {
         return BusinessUnitStoresSetMessagePayloadBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -128,7 +129,7 @@ public interface BusinessUnitStoresSetMessagePayload extends MessagePayload {
     default <T> T withBusinessUnitStoresSetMessagePayload(Function<BusinessUnitStoresSetMessagePayload, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

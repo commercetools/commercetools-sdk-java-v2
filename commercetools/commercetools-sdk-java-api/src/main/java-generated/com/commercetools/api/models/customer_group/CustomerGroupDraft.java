@@ -1,19 +1,20 @@
-
 package com.commercetools.api.models.customer_group;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
 import com.commercetools.api.models.type.CustomFieldsDraft;
+import com.commercetools.api.models.customer_group.CustomerGroupDraftImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * CustomerGroupDraft
@@ -26,21 +27,23 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .groupName("{groupName}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = CustomerGroupDraftImpl.class)
-public interface CustomerGroupDraft extends com.commercetools.api.models.CustomizableDraft<CustomerGroupDraft>,
-        com.commercetools.api.models.WithKey, io.vrap.rmf.base.client.Draft<CustomerGroupDraft> {
+public interface CustomerGroupDraft extends com.commercetools.api.models.CustomizableDraft<CustomerGroupDraft>, com.commercetools.api.models.WithKey, io.vrap.rmf.base.client.Draft<CustomerGroupDraft> {
+
 
     /**
      *  <p>User-defined unique identifier for the CustomerGroup.</p>
      * @return key
      */
-
+    
     @JsonProperty("key")
     public String getKey();
-
     /**
      *  <p>Unique value which must be different from any value used for <code>name</code> in CustomerGroup in the Project. If not, a DuplicateField error is returned.</p>
      * @return groupName
@@ -48,7 +51,6 @@ public interface CustomerGroupDraft extends com.commercetools.api.models.Customi
     @NotNull
     @JsonProperty("groupName")
     public String getGroupName();
-
     /**
      *  <p>Custom Fields for the CustomerGroup.</p>
      * @return custom
@@ -61,30 +63,34 @@ public interface CustomerGroupDraft extends com.commercetools.api.models.Customi
      *  <p>User-defined unique identifier for the CustomerGroup.</p>
      * @param key value to be set
      */
-
+    
     public void setKey(final String key);
-
+    
+    
     /**
      *  <p>Unique value which must be different from any value used for <code>name</code> in CustomerGroup in the Project. If not, a DuplicateField error is returned.</p>
      * @param groupName value to be set
      */
-
+    
     public void setGroupName(final String groupName);
-
+    
+    
     /**
      *  <p>Custom Fields for the CustomerGroup.</p>
      * @param custom value to be set
      */
-
+    
     public void setCustom(final CustomFieldsDraft custom);
+    
 
     /**
      * factory method
      * @return instance of CustomerGroupDraft
      */
-    public static CustomerGroupDraft of() {
+    public static CustomerGroupDraft of(){
         return new CustomerGroupDraftImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy CustomerGroupDraft
@@ -123,7 +129,7 @@ public interface CustomerGroupDraft extends com.commercetools.api.models.Customi
     public static CustomerGroupDraftBuilder builder() {
         return CustomerGroupDraftBuilder.of();
     }
-
+    
     /**
      * create builder for CustomerGroupDraft instance
      * @param template instance with prefilled values for the builder
@@ -132,6 +138,7 @@ public interface CustomerGroupDraft extends com.commercetools.api.models.Customi
     public static CustomerGroupDraftBuilder builder(final CustomerGroupDraft template) {
         return CustomerGroupDraftBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -142,7 +149,7 @@ public interface CustomerGroupDraft extends com.commercetools.api.models.Customi
     default <T> T withCustomerGroupDraft(Function<CustomerGroupDraft, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

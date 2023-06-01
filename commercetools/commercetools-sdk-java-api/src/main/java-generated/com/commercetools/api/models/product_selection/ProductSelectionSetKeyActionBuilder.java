@@ -1,10 +1,11 @@
-
 package com.commercetools.api.models.product_selection;
 
-import java.util.*;
-
+import com.commercetools.api.models.product_selection.ProductSelectionUpdateAction;
+import com.commercetools.api.models.product_selection.ProductSelectionSetKeyAction;
 import javax.annotation.Nullable;
-
+import java.util.*;
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -17,32 +18,39 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     ProductSelectionSetKeyAction productSelectionSetKeyAction = ProductSelectionSetKeyAction.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class ProductSelectionSetKeyActionBuilder implements Builder<ProductSelectionSetKeyAction> {
 
+    
     @Nullable
     private String key;
 
+    
     /**
      *  <p>If <code>key</code> is absent or <code>null</code>, the existing key, if any, will be removed.</p>
      * @param key value to be set
      * @return Builder
      */
-
+    
     public ProductSelectionSetKeyActionBuilder key(@Nullable final String key) {
         this.key = key;
         return this;
     }
+    
+    
 
     /**
      *  <p>If <code>key</code> is absent or <code>null</code>, the existing key, if any, will be removed.</p>
      * @return key
      */
-
+    
     @Nullable
-    public String getKey() {
+    public String getKey(){
         return this.key;
     }
 
@@ -53,7 +61,7 @@ public class ProductSelectionSetKeyActionBuilder implements Builder<ProductSelec
     public ProductSelectionSetKeyAction build() {
         return new ProductSelectionSetKeyActionImpl(key);
     }
-
+    
     /**
      * builds ProductSelectionSetKeyAction without checking for non-null required values
      * @return ProductSelectionSetKeyAction
@@ -64,7 +72,7 @@ public class ProductSelectionSetKeyActionBuilder implements Builder<ProductSelec
 
     /**
      * factory method for an instance of ProductSelectionSetKeyActionBuilder
-     * @return builder
+     * @return builder 
      */
     public static ProductSelectionSetKeyActionBuilder of() {
         return new ProductSelectionSetKeyActionBuilder();

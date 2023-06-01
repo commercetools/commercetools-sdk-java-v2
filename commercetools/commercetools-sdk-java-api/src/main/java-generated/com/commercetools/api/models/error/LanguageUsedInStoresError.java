@@ -1,17 +1,20 @@
-
 package com.commercetools.api.models.error;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
+import com.commercetools.api.models.error.ErrorObject;
+import com.commercetools.api.models.error.LanguageUsedInStoresErrorImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Returned when a language cannot be removed from a Project as it is being used by a Store.</p>
@@ -25,9 +28,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .message("{message}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = LanguageUsedInStoresErrorImpl.class)
 public interface LanguageUsedInStoresError extends ErrorObject {
 
@@ -43,7 +49,6 @@ public interface LanguageUsedInStoresError extends ErrorObject {
     @NotNull
     @JsonProperty("code")
     public String getCode();
-
     /**
      *  <p><code>"Language(s) in use by a store cannot be deleted. Remove them in all the stores of this project first."</code></p>
      * @return message
@@ -56,16 +61,18 @@ public interface LanguageUsedInStoresError extends ErrorObject {
      *  <p><code>"Language(s) in use by a store cannot be deleted. Remove them in all the stores of this project first."</code></p>
      * @param message value to be set
      */
-
+    
     public void setMessage(final String message);
+    
 
     /**
      * factory method
      * @return instance of LanguageUsedInStoresError
      */
-    public static LanguageUsedInStoresError of() {
+    public static LanguageUsedInStoresError of(){
         return new LanguageUsedInStoresErrorImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy LanguageUsedInStoresError
@@ -102,7 +109,7 @@ public interface LanguageUsedInStoresError extends ErrorObject {
     public static LanguageUsedInStoresErrorBuilder builder() {
         return LanguageUsedInStoresErrorBuilder.of();
     }
-
+    
     /**
      * create builder for LanguageUsedInStoresError instance
      * @param template instance with prefilled values for the builder
@@ -111,6 +118,7 @@ public interface LanguageUsedInStoresError extends ErrorObject {
     public static LanguageUsedInStoresErrorBuilder builder(final LanguageUsedInStoresError template) {
         return LanguageUsedInStoresErrorBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -121,7 +129,7 @@ public interface LanguageUsedInStoresError extends ErrorObject {
     default <T> T withLanguageUsedInStoresError(Function<LanguageUsedInStoresError, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

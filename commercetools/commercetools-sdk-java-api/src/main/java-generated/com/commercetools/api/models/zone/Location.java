@@ -1,17 +1,20 @@
-
 package com.commercetools.api.models.zone;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
 
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
+import com.commercetools.api.models.zone.LocationImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>A geographical location representing a country and optionally a state within this country. A location can only be assigned to one Zone.</p>
@@ -24,11 +27,15 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .country("{country}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = LocationImpl.class)
-public interface Location {
+public interface Location  {
+
 
     /**
      *  <p>Country code of the geographic location.</p>
@@ -37,12 +44,11 @@ public interface Location {
     @NotNull
     @JsonProperty("country")
     public String getCountry();
-
     /**
      *  <p>State within the country.</p>
      * @return state
      */
-
+    
     @JsonProperty("state")
     public String getState();
 
@@ -50,23 +56,26 @@ public interface Location {
      *  <p>Country code of the geographic location.</p>
      * @param country value to be set
      */
-
+    
     public void setCountry(final String country);
-
+    
+    
     /**
      *  <p>State within the country.</p>
      * @param state value to be set
      */
-
+    
     public void setState(final String state);
+    
 
     /**
      * factory method
      * @return instance of Location
      */
-    public static Location of() {
+    public static Location of(){
         return new LocationImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy Location
@@ -103,7 +112,7 @@ public interface Location {
     public static LocationBuilder builder() {
         return LocationBuilder.of();
     }
-
+    
     /**
      * create builder for Location instance
      * @param template instance with prefilled values for the builder
@@ -112,6 +121,7 @@ public interface Location {
     public static LocationBuilder builder(final Location template) {
         return LocationBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -122,7 +132,7 @@ public interface Location {
     default <T> T withLocation(Function<Location, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

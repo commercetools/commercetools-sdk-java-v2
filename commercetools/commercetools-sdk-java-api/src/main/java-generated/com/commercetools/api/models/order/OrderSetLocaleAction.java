@@ -1,16 +1,20 @@
-
 package com.commercetools.api.models.order;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
+import com.commercetools.api.models.order.OrderUpdateAction;
+import com.commercetools.api.models.order.OrderSetLocaleActionImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * OrderSetLocaleAction
@@ -22,9 +26,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     OrderSetLocaleAction orderSetLocaleAction = OrderSetLocaleAction.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = OrderSetLocaleActionImpl.class)
 public interface OrderSetLocaleAction extends OrderUpdateAction {
 
@@ -37,7 +44,7 @@ public interface OrderSetLocaleAction extends OrderUpdateAction {
      *
      * @return locale
      */
-
+    
     @JsonProperty("locale")
     public String getLocale();
 
@@ -45,16 +52,18 @@ public interface OrderSetLocaleAction extends OrderUpdateAction {
      * set locale
      * @param locale value to be set
      */
-
+    
     public void setLocale(final String locale);
+    
 
     /**
      * factory method
      * @return instance of OrderSetLocaleAction
      */
-    public static OrderSetLocaleAction of() {
+    public static OrderSetLocaleAction of(){
         return new OrderSetLocaleActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy OrderSetLocaleAction
@@ -89,7 +98,7 @@ public interface OrderSetLocaleAction extends OrderUpdateAction {
     public static OrderSetLocaleActionBuilder builder() {
         return OrderSetLocaleActionBuilder.of();
     }
-
+    
     /**
      * create builder for OrderSetLocaleAction instance
      * @param template instance with prefilled values for the builder
@@ -98,6 +107,7 @@ public interface OrderSetLocaleAction extends OrderUpdateAction {
     public static OrderSetLocaleActionBuilder builder(final OrderSetLocaleAction template) {
         return OrderSetLocaleActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -108,7 +118,7 @@ public interface OrderSetLocaleAction extends OrderUpdateAction {
     default <T> T withOrderSetLocaleAction(Function<OrderSetLocaleAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

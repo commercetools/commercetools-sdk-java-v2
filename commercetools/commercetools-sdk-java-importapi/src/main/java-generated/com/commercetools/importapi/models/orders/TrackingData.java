@@ -1,16 +1,20 @@
-
 package com.commercetools.importapi.models.orders;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
 
-import javax.annotation.Nullable;
+import com.commercetools.importapi.models.orders.TrackingDataImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * TrackingData
@@ -22,49 +26,49 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     TrackingData trackingData = TrackingData.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = TrackingDataImpl.class)
-public interface TrackingData {
+public interface TrackingData  {
+
 
     /**
      *
      * @return trackingId
      */
-
+    
     @JsonProperty("trackingId")
     public String getTrackingId();
-
     /**
      *
      * @return carrier
      */
-
+    
     @JsonProperty("carrier")
     public String getCarrier();
-
     /**
      *
      * @return provider
      */
-
+    
     @JsonProperty("provider")
     public String getProvider();
-
     /**
      *
      * @return providerTransaction
      */
-
+    
     @JsonProperty("providerTransaction")
     public String getProviderTransaction();
-
     /**
      *
      * @return isReturn
      */
-
+    
     @JsonProperty("isReturn")
     public Boolean getIsReturn();
 
@@ -72,44 +76,50 @@ public interface TrackingData {
      * set trackingId
      * @param trackingId value to be set
      */
-
+    
     public void setTrackingId(final String trackingId);
-
+    
+    
     /**
      * set carrier
      * @param carrier value to be set
      */
-
+    
     public void setCarrier(final String carrier);
-
+    
+    
     /**
      * set provider
      * @param provider value to be set
      */
-
+    
     public void setProvider(final String provider);
-
+    
+    
     /**
      * set providerTransaction
      * @param providerTransaction value to be set
      */
-
+    
     public void setProviderTransaction(final String providerTransaction);
-
+    
+    
     /**
      * set isReturn
      * @param isReturn value to be set
      */
-
+    
     public void setIsReturn(final Boolean isReturn);
+    
 
     /**
      * factory method
      * @return instance of TrackingData
      */
-    public static TrackingData of() {
+    public static TrackingData of(){
         return new TrackingDataImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy TrackingData
@@ -152,7 +162,7 @@ public interface TrackingData {
     public static TrackingDataBuilder builder() {
         return TrackingDataBuilder.of();
     }
-
+    
     /**
      * create builder for TrackingData instance
      * @param template instance with prefilled values for the builder
@@ -161,6 +171,7 @@ public interface TrackingData {
     public static TrackingDataBuilder builder(final TrackingData template) {
         return TrackingDataBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -171,7 +182,7 @@ public interface TrackingData {
     default <T> T withTrackingData(Function<TrackingData, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

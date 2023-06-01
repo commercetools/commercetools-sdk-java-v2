@@ -1,17 +1,21 @@
-
 package com.commercetools.api.models.payment;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
+import com.commercetools.api.models.payment.PaymentUpdateAction;
+import com.commercetools.api.models.payment.TransactionState;
+import com.commercetools.api.models.payment.PaymentChangeTransactionStateActionImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Changing the TransactionState generates the PaymentTransactionStateChanged Message.</p>
@@ -25,9 +29,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .state(TransactionState.INITIAL)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = PaymentChangeTransactionStateActionImpl.class)
 public interface PaymentChangeTransactionStateAction extends PaymentUpdateAction {
 
@@ -43,7 +50,6 @@ public interface PaymentChangeTransactionStateAction extends PaymentUpdateAction
     @NotNull
     @JsonProperty("transactionId")
     public String getTransactionId();
-
     /**
      *  <p>New TransactionState.</p>
      * @return state
@@ -56,23 +62,26 @@ public interface PaymentChangeTransactionStateAction extends PaymentUpdateAction
      *  <p>Unique identifier of the Transaction.</p>
      * @param transactionId value to be set
      */
-
+    
     public void setTransactionId(final String transactionId);
-
+    
+    
     /**
      *  <p>New TransactionState.</p>
      * @param state value to be set
      */
-
+    
     public void setState(final TransactionState state);
+    
 
     /**
      * factory method
      * @return instance of PaymentChangeTransactionStateAction
      */
-    public static PaymentChangeTransactionStateAction of() {
+    public static PaymentChangeTransactionStateAction of(){
         return new PaymentChangeTransactionStateActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy PaymentChangeTransactionStateAction
@@ -92,8 +101,7 @@ public interface PaymentChangeTransactionStateAction extends PaymentUpdateAction
      * @return copy instance
      */
     @Nullable
-    public static PaymentChangeTransactionStateAction deepCopy(
-            @Nullable final PaymentChangeTransactionStateAction template) {
+    public static PaymentChangeTransactionStateAction deepCopy(@Nullable final PaymentChangeTransactionStateAction template) {
         if (template == null) {
             return null;
         }
@@ -110,16 +118,16 @@ public interface PaymentChangeTransactionStateAction extends PaymentUpdateAction
     public static PaymentChangeTransactionStateActionBuilder builder() {
         return PaymentChangeTransactionStateActionBuilder.of();
     }
-
+    
     /**
      * create builder for PaymentChangeTransactionStateAction instance
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static PaymentChangeTransactionStateActionBuilder builder(
-            final PaymentChangeTransactionStateAction template) {
+    public static PaymentChangeTransactionStateActionBuilder builder(final PaymentChangeTransactionStateAction template) {
         return PaymentChangeTransactionStateActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -130,7 +138,7 @@ public interface PaymentChangeTransactionStateAction extends PaymentUpdateAction
     default <T> T withPaymentChangeTransactionStateAction(Function<PaymentChangeTransactionStateAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

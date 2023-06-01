@@ -1,18 +1,20 @@
-
 package com.commercetools.api.models.payment;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-
 import com.commercetools.api.models.common.LocalizedString;
+import com.commercetools.api.models.payment.PaymentMethodInfoImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * PaymentMethodInfo
@@ -24,28 +26,30 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     PaymentMethodInfo paymentMethodInfo = PaymentMethodInfo.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = PaymentMethodInfoImpl.class)
-public interface PaymentMethodInfo {
+public interface PaymentMethodInfo  {
+
 
     /**
      *  <p>Payment service that processes the Payment (for example, a PSP). Once set, it cannot be changed. The combination of <code>paymentInterface</code> and the <code>interfaceId</code> of a Payment must be unique.</p>
      * @return paymentInterface
      */
-
+    
     @JsonProperty("paymentInterface")
     public String getPaymentInterface();
-
     /**
      *  <p>Payment method used, for example, credit card, or cash advance.</p>
      * @return method
      */
-
+    
     @JsonProperty("method")
     public String getMethod();
-
     /**
      *  <p>Localizable name of the payment method.</p>
      * @return name
@@ -58,30 +62,34 @@ public interface PaymentMethodInfo {
      *  <p>Payment service that processes the Payment (for example, a PSP). Once set, it cannot be changed. The combination of <code>paymentInterface</code> and the <code>interfaceId</code> of a Payment must be unique.</p>
      * @param paymentInterface value to be set
      */
-
+    
     public void setPaymentInterface(final String paymentInterface);
-
+    
+    
     /**
      *  <p>Payment method used, for example, credit card, or cash advance.</p>
      * @param method value to be set
      */
-
+    
     public void setMethod(final String method);
-
+    
+    
     /**
      *  <p>Localizable name of the payment method.</p>
      * @param name value to be set
      */
-
+    
     public void setName(final LocalizedString name);
+    
 
     /**
      * factory method
      * @return instance of PaymentMethodInfo
      */
-    public static PaymentMethodInfo of() {
+    public static PaymentMethodInfo of(){
         return new PaymentMethodInfoImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy PaymentMethodInfo
@@ -120,7 +128,7 @@ public interface PaymentMethodInfo {
     public static PaymentMethodInfoBuilder builder() {
         return PaymentMethodInfoBuilder.of();
     }
-
+    
     /**
      * create builder for PaymentMethodInfo instance
      * @param template instance with prefilled values for the builder
@@ -129,6 +137,7 @@ public interface PaymentMethodInfo {
     public static PaymentMethodInfoBuilder builder(final PaymentMethodInfo template) {
         return PaymentMethodInfoBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -139,7 +148,7 @@ public interface PaymentMethodInfo {
     default <T> T withPaymentMethodInfo(Function<PaymentMethodInfo, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

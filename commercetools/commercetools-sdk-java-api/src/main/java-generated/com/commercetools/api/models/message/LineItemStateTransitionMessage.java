@@ -1,20 +1,22 @@
-
 package com.commercetools.api.models.message;
 
-import java.time.*;
-import java.time.ZonedDateTime;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
+import com.commercetools.api.models.message.OrderMessage;
 import com.commercetools.api.models.state.StateReference;
+import java.time.ZonedDateTime;
+import com.commercetools.api.models.message.LineItemStateTransitionMessageImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Generated after a successful Transition Line Item State update action.</p>
@@ -38,9 +40,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .toState(toStateBuilder -> toStateBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = LineItemStateTransitionMessageImpl.class)
 public interface LineItemStateTransitionMessage extends OrderMessage {
 
@@ -56,7 +61,6 @@ public interface LineItemStateTransitionMessage extends OrderMessage {
     @NotNull
     @JsonProperty("lineItemId")
     public String getLineItemId();
-
     /**
      *  <p>Date and time (UTC) when the transition of the Line Item State was performed.</p>
      * @return transitionDate
@@ -64,7 +68,6 @@ public interface LineItemStateTransitionMessage extends OrderMessage {
     @NotNull
     @JsonProperty("transitionDate")
     public ZonedDateTime getTransitionDate();
-
     /**
      *  <p>Number of Line Items for which the State was transitioned.</p>
      * @return quantity
@@ -72,7 +75,6 @@ public interface LineItemStateTransitionMessage extends OrderMessage {
     @NotNull
     @JsonProperty("quantity")
     public Long getQuantity();
-
     /**
      *  <p>State the Line Item was transitioned from.</p>
      * @return fromState
@@ -81,7 +83,6 @@ public interface LineItemStateTransitionMessage extends OrderMessage {
     @Valid
     @JsonProperty("fromState")
     public StateReference getFromState();
-
     /**
      *  <p>State the Line Item was transitioned to.</p>
      * @return toState
@@ -95,44 +96,50 @@ public interface LineItemStateTransitionMessage extends OrderMessage {
      *  <p>Unique identifier of the Line Item.</p>
      * @param lineItemId value to be set
      */
-
+    
     public void setLineItemId(final String lineItemId);
-
+    
+    
     /**
      *  <p>Date and time (UTC) when the transition of the Line Item State was performed.</p>
      * @param transitionDate value to be set
      */
-
+    
     public void setTransitionDate(final ZonedDateTime transitionDate);
-
+    
+    
     /**
      *  <p>Number of Line Items for which the State was transitioned.</p>
      * @param quantity value to be set
      */
-
+    
     public void setQuantity(final Long quantity);
-
+    
+    
     /**
      *  <p>State the Line Item was transitioned from.</p>
      * @param fromState value to be set
      */
-
+    
     public void setFromState(final StateReference fromState);
-
+    
+    
     /**
      *  <p>State the Line Item was transitioned to.</p>
      * @param toState value to be set
      */
-
+    
     public void setToState(final StateReference toState);
+    
 
     /**
      * factory method
      * @return instance of LineItemStateTransitionMessage
      */
-    public static LineItemStateTransitionMessage of() {
+    public static LineItemStateTransitionMessage of(){
         return new LineItemStateTransitionMessageImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy LineItemStateTransitionMessage
@@ -174,14 +181,12 @@ public interface LineItemStateTransitionMessage extends OrderMessage {
         instance.setVersion(template.getVersion());
         instance.setCreatedAt(template.getCreatedAt());
         instance.setLastModifiedAt(template.getLastModifiedAt());
-        instance.setLastModifiedBy(
-            com.commercetools.api.models.common.LastModifiedBy.deepCopy(template.getLastModifiedBy()));
+        instance.setLastModifiedBy(com.commercetools.api.models.common.LastModifiedBy.deepCopy(template.getLastModifiedBy()));
         instance.setCreatedBy(com.commercetools.api.models.common.CreatedBy.deepCopy(template.getCreatedBy()));
         instance.setSequenceNumber(template.getSequenceNumber());
         instance.setResource(com.commercetools.api.models.common.Reference.deepCopy(template.getResource()));
         instance.setResourceVersion(template.getResourceVersion());
-        instance.setResourceUserProvidedIdentifiers(com.commercetools.api.models.message.UserProvidedIdentifiers
-                .deepCopy(template.getResourceUserProvidedIdentifiers()));
+        instance.setResourceUserProvidedIdentifiers(com.commercetools.api.models.message.UserProvidedIdentifiers.deepCopy(template.getResourceUserProvidedIdentifiers()));
         instance.setLineItemId(template.getLineItemId());
         instance.setTransitionDate(template.getTransitionDate());
         instance.setQuantity(template.getQuantity());
@@ -197,7 +202,7 @@ public interface LineItemStateTransitionMessage extends OrderMessage {
     public static LineItemStateTransitionMessageBuilder builder() {
         return LineItemStateTransitionMessageBuilder.of();
     }
-
+    
     /**
      * create builder for LineItemStateTransitionMessage instance
      * @param template instance with prefilled values for the builder
@@ -206,6 +211,7 @@ public interface LineItemStateTransitionMessage extends OrderMessage {
     public static LineItemStateTransitionMessageBuilder builder(final LineItemStateTransitionMessage template) {
         return LineItemStateTransitionMessageBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -216,7 +222,7 @@ public interface LineItemStateTransitionMessage extends OrderMessage {
     default <T> T withLineItemStateTransitionMessage(Function<LineItemStateTransitionMessage, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

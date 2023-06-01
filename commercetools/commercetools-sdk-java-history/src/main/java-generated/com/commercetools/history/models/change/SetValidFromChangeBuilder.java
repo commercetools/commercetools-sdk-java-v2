@@ -1,8 +1,11 @@
-
 package com.commercetools.history.models.change;
 
+import com.commercetools.history.models.change.Change;
+import com.commercetools.history.models.change.SetValidFromChange;
+import javax.annotation.Nullable;
 import java.util.*;
-
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -18,74 +21,95 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .nextValue("{nextValue}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class SetValidFromChangeBuilder implements Builder<SetValidFromChange> {
 
+    
+    
     private String change;
-
+    
+    
+    
     private String previousValue;
-
+    
+    
+    
     private String nextValue;
 
+    
     /**
      *  <p>Shape of the action for <code>setValidFrom</code></p>
      * @param change value to be set
      * @return Builder
      */
-
-    public SetValidFromChangeBuilder change(final String change) {
+    
+    public SetValidFromChangeBuilder change( final String change) {
         this.change = change;
         return this;
     }
-
+    
+    
+    
+    
     /**
      * set the value to the previousValue
      * @param previousValue value to be set
      * @return Builder
      */
-
-    public SetValidFromChangeBuilder previousValue(final String previousValue) {
+    
+    public SetValidFromChangeBuilder previousValue( final String previousValue) {
         this.previousValue = previousValue;
         return this;
     }
-
+    
+    
+    
+    
     /**
      * set the value to the nextValue
      * @param nextValue value to be set
      * @return Builder
      */
-
-    public SetValidFromChangeBuilder nextValue(final String nextValue) {
+    
+    public SetValidFromChangeBuilder nextValue( final String nextValue) {
         this.nextValue = nextValue;
         return this;
     }
+    
+    
 
     /**
      *  <p>Shape of the action for <code>setValidFrom</code></p>
      * @return change
      */
-
-    public String getChange() {
+    
+    
+    public String getChange(){
         return this.change;
     }
-
+    
     /**
      * value of previousValue}
      * @return previousValue
      */
-
-    public String getPreviousValue() {
+    
+    
+    public String getPreviousValue(){
         return this.previousValue;
     }
-
+    
     /**
      * value of nextValue}
      * @return nextValue
      */
-
-    public String getNextValue() {
+    
+    
+    public String getNextValue(){
         return this.nextValue;
     }
 
@@ -99,7 +123,7 @@ public class SetValidFromChangeBuilder implements Builder<SetValidFromChange> {
         Objects.requireNonNull(nextValue, SetValidFromChange.class + ": nextValue is missing");
         return new SetValidFromChangeImpl(change, previousValue, nextValue);
     }
-
+    
     /**
      * builds SetValidFromChange without checking for non-null required values
      * @return SetValidFromChange
@@ -110,7 +134,7 @@ public class SetValidFromChangeBuilder implements Builder<SetValidFromChange> {
 
     /**
      * factory method for an instance of SetValidFromChangeBuilder
-     * @return builder
+     * @return builder 
      */
     public static SetValidFromChangeBuilder of() {
         return new SetValidFromChangeBuilder();

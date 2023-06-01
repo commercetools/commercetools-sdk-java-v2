@@ -1,8 +1,11 @@
-
 package com.commercetools.history.models.change;
 
+import com.commercetools.history.models.change.Change;
+import com.commercetools.history.models.change.SetExternalIdChange;
+import javax.annotation.Nullable;
 import java.util.*;
-
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -18,74 +21,95 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .nextValue("{nextValue}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class SetExternalIdChangeBuilder implements Builder<SetExternalIdChange> {
 
+    
+    
     private String change;
-
+    
+    
+    
     private String previousValue;
-
+    
+    
+    
     private String nextValue;
 
+    
     /**
      *  <p>Shape of the action for <code>setExternalId</code></p>
      * @param change value to be set
      * @return Builder
      */
-
-    public SetExternalIdChangeBuilder change(final String change) {
+    
+    public SetExternalIdChangeBuilder change( final String change) {
         this.change = change;
         return this;
     }
-
+    
+    
+    
+    
     /**
      * set the value to the previousValue
      * @param previousValue value to be set
      * @return Builder
      */
-
-    public SetExternalIdChangeBuilder previousValue(final String previousValue) {
+    
+    public SetExternalIdChangeBuilder previousValue( final String previousValue) {
         this.previousValue = previousValue;
         return this;
     }
-
+    
+    
+    
+    
     /**
      * set the value to the nextValue
      * @param nextValue value to be set
      * @return Builder
      */
-
-    public SetExternalIdChangeBuilder nextValue(final String nextValue) {
+    
+    public SetExternalIdChangeBuilder nextValue( final String nextValue) {
         this.nextValue = nextValue;
         return this;
     }
+    
+    
 
     /**
      *  <p>Shape of the action for <code>setExternalId</code></p>
      * @return change
      */
-
-    public String getChange() {
+    
+    
+    public String getChange(){
         return this.change;
     }
-
+    
     /**
      * value of previousValue}
      * @return previousValue
      */
-
-    public String getPreviousValue() {
+    
+    
+    public String getPreviousValue(){
         return this.previousValue;
     }
-
+    
     /**
      * value of nextValue}
      * @return nextValue
      */
-
-    public String getNextValue() {
+    
+    
+    public String getNextValue(){
         return this.nextValue;
     }
 
@@ -99,7 +123,7 @@ public class SetExternalIdChangeBuilder implements Builder<SetExternalIdChange> 
         Objects.requireNonNull(nextValue, SetExternalIdChange.class + ": nextValue is missing");
         return new SetExternalIdChangeImpl(change, previousValue, nextValue);
     }
-
+    
     /**
      * builds SetExternalIdChange without checking for non-null required values
      * @return SetExternalIdChange
@@ -110,7 +134,7 @@ public class SetExternalIdChangeBuilder implements Builder<SetExternalIdChange> 
 
     /**
      * factory method for an instance of SetExternalIdChangeBuilder
-     * @return builder
+     * @return builder 
      */
     public static SetExternalIdChangeBuilder of() {
         return new SetExternalIdChangeBuilder();

@@ -1,20 +1,21 @@
-
 package com.commercetools.importapi.models.productvariants;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-import java.util.stream.Collectors;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
 import com.commercetools.importapi.models.common.LocalizedString;
+import com.commercetools.importapi.models.productvariants.Attribute;
+import com.commercetools.importapi.models.productvariants.LocalizableTextSetAttributeImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>This type represents an attribute whose value is a localized text.</p>
@@ -27,9 +28,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .plusValue(valueBuilder -> valueBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = LocalizableTextSetAttributeImpl.class)
 public interface LocalizableTextSetAttribute extends Attribute {
 
@@ -51,24 +55,24 @@ public interface LocalizableTextSetAttribute extends Attribute {
      * set value
      * @param value values to be set
      */
-
+    
     @JsonIgnore
-    public void setValue(final LocalizedString... value);
-
+    public void setValue(final LocalizedString ...value);
     /**
      * set value
      * @param value values to be set
      */
-
+    
     public void setValue(final List<LocalizedString> value);
 
     /**
      * factory method
      * @return instance of LocalizableTextSetAttribute
      */
-    public static LocalizableTextSetAttribute of() {
+    public static LocalizableTextSetAttribute of(){
         return new LocalizableTextSetAttributeImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy LocalizableTextSetAttribute
@@ -95,9 +99,7 @@ public interface LocalizableTextSetAttribute extends Attribute {
         LocalizableTextSetAttributeImpl instance = new LocalizableTextSetAttributeImpl();
         instance.setName(template.getName());
         instance.setValue(Optional.ofNullable(template.getValue())
-                .map(t -> t.stream()
-                        .map(com.commercetools.importapi.models.common.LocalizedString::deepCopy)
-                        .collect(Collectors.toList()))
+                .map(t -> t.stream().map(com.commercetools.importapi.models.common.LocalizedString::deepCopy).collect(Collectors.toList()))
                 .orElse(null));
         return instance;
     }
@@ -109,7 +111,7 @@ public interface LocalizableTextSetAttribute extends Attribute {
     public static LocalizableTextSetAttributeBuilder builder() {
         return LocalizableTextSetAttributeBuilder.of();
     }
-
+    
     /**
      * create builder for LocalizableTextSetAttribute instance
      * @param template instance with prefilled values for the builder
@@ -118,6 +120,7 @@ public interface LocalizableTextSetAttribute extends Attribute {
     public static LocalizableTextSetAttributeBuilder builder(final LocalizableTextSetAttribute template) {
         return LocalizableTextSetAttributeBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -128,7 +131,7 @@ public interface LocalizableTextSetAttribute extends Attribute {
     default <T> T withLocalizableTextSetAttribute(Function<LocalizableTextSetAttribute, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

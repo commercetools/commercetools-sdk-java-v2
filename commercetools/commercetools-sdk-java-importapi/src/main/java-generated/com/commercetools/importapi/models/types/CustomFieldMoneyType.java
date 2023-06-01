@@ -1,16 +1,20 @@
-
 package com.commercetools.importapi.models.types;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
+import com.commercetools.importapi.models.types.FieldType;
+import com.commercetools.importapi.models.types.CustomFieldMoneyTypeImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Field type for CentPrecisionMoney values.</p>
@@ -22,9 +26,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     CustomFieldMoneyType customFieldMoneyType = CustomFieldMoneyType.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = CustomFieldMoneyTypeImpl.class)
 public interface CustomFieldMoneyType extends FieldType {
 
@@ -33,13 +40,16 @@ public interface CustomFieldMoneyType extends FieldType {
      */
     String MONEY = "Money";
 
+
+
     /**
      * factory method
      * @return instance of CustomFieldMoneyType
      */
-    public static CustomFieldMoneyType of() {
+    public static CustomFieldMoneyType of(){
         return new CustomFieldMoneyTypeImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy CustomFieldMoneyType
@@ -72,7 +82,7 @@ public interface CustomFieldMoneyType extends FieldType {
     public static CustomFieldMoneyTypeBuilder builder() {
         return CustomFieldMoneyTypeBuilder.of();
     }
-
+    
     /**
      * create builder for CustomFieldMoneyType instance
      * @param template instance with prefilled values for the builder
@@ -81,6 +91,7 @@ public interface CustomFieldMoneyType extends FieldType {
     public static CustomFieldMoneyTypeBuilder builder(final CustomFieldMoneyType template) {
         return CustomFieldMoneyTypeBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -91,7 +102,7 @@ public interface CustomFieldMoneyType extends FieldType {
     default <T> T withCustomFieldMoneyType(Function<CustomFieldMoneyType, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

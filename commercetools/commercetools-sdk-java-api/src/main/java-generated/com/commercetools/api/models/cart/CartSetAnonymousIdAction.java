@@ -1,16 +1,20 @@
-
 package com.commercetools.api.models.cart;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
+import com.commercetools.api.models.cart.CartUpdateAction;
+import com.commercetools.api.models.cart.CartSetAnonymousIdActionImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * CartSetAnonymousIdAction
@@ -22,9 +26,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     CartSetAnonymousIdAction cartSetAnonymousIdAction = CartSetAnonymousIdAction.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = CartSetAnonymousIdActionImpl.class)
 public interface CartSetAnonymousIdAction extends CartUpdateAction {
 
@@ -37,7 +44,7 @@ public interface CartSetAnonymousIdAction extends CartUpdateAction {
      *  <p>Value to set. If empty, any existing value is removed.</p>
      * @return anonymousId
      */
-
+    
     @JsonProperty("anonymousId")
     public String getAnonymousId();
 
@@ -45,16 +52,18 @@ public interface CartSetAnonymousIdAction extends CartUpdateAction {
      *  <p>Value to set. If empty, any existing value is removed.</p>
      * @param anonymousId value to be set
      */
-
+    
     public void setAnonymousId(final String anonymousId);
+    
 
     /**
      * factory method
      * @return instance of CartSetAnonymousIdAction
      */
-    public static CartSetAnonymousIdAction of() {
+    public static CartSetAnonymousIdAction of(){
         return new CartSetAnonymousIdActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy CartSetAnonymousIdAction
@@ -89,7 +98,7 @@ public interface CartSetAnonymousIdAction extends CartUpdateAction {
     public static CartSetAnonymousIdActionBuilder builder() {
         return CartSetAnonymousIdActionBuilder.of();
     }
-
+    
     /**
      * create builder for CartSetAnonymousIdAction instance
      * @param template instance with prefilled values for the builder
@@ -98,6 +107,7 @@ public interface CartSetAnonymousIdAction extends CartUpdateAction {
     public static CartSetAnonymousIdActionBuilder builder(final CartSetAnonymousIdAction template) {
         return CartSetAnonymousIdActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -108,7 +118,7 @@ public interface CartSetAnonymousIdAction extends CartUpdateAction {
     default <T> T withCartSetAnonymousIdAction(Function<CartSetAnonymousIdAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

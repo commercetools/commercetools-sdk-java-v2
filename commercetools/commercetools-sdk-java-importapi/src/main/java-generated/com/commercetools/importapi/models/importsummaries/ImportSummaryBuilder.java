@@ -1,9 +1,11 @@
-
 package com.commercetools.importapi.models.importsummaries;
 
+import com.commercetools.importapi.models.importsummaries.OperationStates;
+import com.commercetools.importapi.models.importsummaries.ImportSummary;
+import javax.annotation.Nullable;
 import java.util.*;
 import java.util.function.Function;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -18,78 +20,89 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .total(1)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class ImportSummaryBuilder implements Builder<ImportSummary> {
 
+    
+    
     private com.commercetools.importapi.models.importsummaries.OperationStates states;
-
+    
+    
+    
     private Long total;
 
+    
     /**
      *  <p>The import status of an ImportContainer given by the number of resources in each Processing State.</p>
      * @param builder function to build the states value
      * @return Builder
      */
-
-    public ImportSummaryBuilder states(
-            Function<com.commercetools.importapi.models.importsummaries.OperationStatesBuilder, com.commercetools.importapi.models.importsummaries.OperationStatesBuilder> builder) {
-        this.states = builder.apply(com.commercetools.importapi.models.importsummaries.OperationStatesBuilder.of())
-                .build();
+    
+    public ImportSummaryBuilder states(Function<com.commercetools.importapi.models.importsummaries.OperationStatesBuilder, com.commercetools.importapi.models.importsummaries.OperationStatesBuilder> builder) {
+        this.states = builder.apply(com.commercetools.importapi.models.importsummaries.OperationStatesBuilder.of()).build();
         return this;
     }
-
+    
     /**
      *  <p>The import status of an ImportContainer given by the number of resources in each Processing State.</p>
      * @param builder function to build the states value
      * @return Builder
      */
-
-    public ImportSummaryBuilder withStates(
-            Function<com.commercetools.importapi.models.importsummaries.OperationStatesBuilder, com.commercetools.importapi.models.importsummaries.OperationStates> builder) {
+    
+    public ImportSummaryBuilder withStates(Function<com.commercetools.importapi.models.importsummaries.OperationStatesBuilder, com.commercetools.importapi.models.importsummaries.OperationStates> builder) {
         this.states = builder.apply(com.commercetools.importapi.models.importsummaries.OperationStatesBuilder.of());
         return this;
     }
-
+                    
     /**
      *  <p>The import status of an ImportContainer given by the number of resources in each Processing State.</p>
      * @param states value to be set
      * @return Builder
      */
-
-    public ImportSummaryBuilder states(
-            final com.commercetools.importapi.models.importsummaries.OperationStates states) {
+    
+    public ImportSummaryBuilder states( final com.commercetools.importapi.models.importsummaries.OperationStates states) {
         this.states = states;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>The total number of ImportOperations received for this Import Summary.</p>
      * @param total value to be set
      * @return Builder
      */
-
-    public ImportSummaryBuilder total(final Long total) {
+    
+    public ImportSummaryBuilder total( final Long total) {
         this.total = total;
         return this;
     }
+    
+    
 
     /**
      *  <p>The import status of an ImportContainer given by the number of resources in each Processing State.</p>
      * @return states
      */
-
-    public com.commercetools.importapi.models.importsummaries.OperationStates getStates() {
+    
+    
+    public com.commercetools.importapi.models.importsummaries.OperationStates getStates(){
         return this.states;
     }
-
+    
     /**
      *  <p>The total number of ImportOperations received for this Import Summary.</p>
      * @return total
      */
-
-    public Long getTotal() {
+    
+    
+    public Long getTotal(){
         return this.total;
     }
 
@@ -102,7 +115,7 @@ public class ImportSummaryBuilder implements Builder<ImportSummary> {
         Objects.requireNonNull(total, ImportSummary.class + ": total is missing");
         return new ImportSummaryImpl(states, total);
     }
-
+    
     /**
      * builds ImportSummary without checking for non-null required values
      * @return ImportSummary
@@ -113,7 +126,7 @@ public class ImportSummaryBuilder implements Builder<ImportSummary> {
 
     /**
      * factory method for an instance of ImportSummaryBuilder
-     * @return builder
+     * @return builder 
      */
     public static ImportSummaryBuilder of() {
         return new ImportSummaryBuilder();

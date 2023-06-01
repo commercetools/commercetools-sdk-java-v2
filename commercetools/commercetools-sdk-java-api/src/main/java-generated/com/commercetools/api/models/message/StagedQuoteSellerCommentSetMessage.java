@@ -1,17 +1,20 @@
-
 package com.commercetools.api.models.message;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
+import com.commercetools.api.models.message.Message;
+import com.commercetools.api.models.message.StagedQuoteSellerCommentSetMessageImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Generated after a successful Set Seller Comment update action.</p>
@@ -31,9 +34,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .sellerComment("{sellerComment}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = StagedQuoteSellerCommentSetMessageImpl.class)
 public interface StagedQuoteSellerCommentSetMessage extends Message {
 
@@ -54,16 +60,18 @@ public interface StagedQuoteSellerCommentSetMessage extends Message {
      *  <p><code>sellerComment</code> on the StagedQuote after a successful Set Seller Comment update action.</p>
      * @param sellerComment value to be set
      */
-
+    
     public void setSellerComment(final String sellerComment);
+    
 
     /**
      * factory method
      * @return instance of StagedQuoteSellerCommentSetMessage
      */
-    public static StagedQuoteSellerCommentSetMessage of() {
+    public static StagedQuoteSellerCommentSetMessage of(){
         return new StagedQuoteSellerCommentSetMessageImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy StagedQuoteSellerCommentSetMessage
@@ -92,8 +100,7 @@ public interface StagedQuoteSellerCommentSetMessage extends Message {
      * @return copy instance
      */
     @Nullable
-    public static StagedQuoteSellerCommentSetMessage deepCopy(
-            @Nullable final StagedQuoteSellerCommentSetMessage template) {
+    public static StagedQuoteSellerCommentSetMessage deepCopy(@Nullable final StagedQuoteSellerCommentSetMessage template) {
         if (template == null) {
             return null;
         }
@@ -102,14 +109,12 @@ public interface StagedQuoteSellerCommentSetMessage extends Message {
         instance.setVersion(template.getVersion());
         instance.setCreatedAt(template.getCreatedAt());
         instance.setLastModifiedAt(template.getLastModifiedAt());
-        instance.setLastModifiedBy(
-            com.commercetools.api.models.common.LastModifiedBy.deepCopy(template.getLastModifiedBy()));
+        instance.setLastModifiedBy(com.commercetools.api.models.common.LastModifiedBy.deepCopy(template.getLastModifiedBy()));
         instance.setCreatedBy(com.commercetools.api.models.common.CreatedBy.deepCopy(template.getCreatedBy()));
         instance.setSequenceNumber(template.getSequenceNumber());
         instance.setResource(com.commercetools.api.models.common.Reference.deepCopy(template.getResource()));
         instance.setResourceVersion(template.getResourceVersion());
-        instance.setResourceUserProvidedIdentifiers(com.commercetools.api.models.message.UserProvidedIdentifiers
-                .deepCopy(template.getResourceUserProvidedIdentifiers()));
+        instance.setResourceUserProvidedIdentifiers(com.commercetools.api.models.message.UserProvidedIdentifiers.deepCopy(template.getResourceUserProvidedIdentifiers()));
         instance.setSellerComment(template.getSellerComment());
         return instance;
     }
@@ -121,7 +126,7 @@ public interface StagedQuoteSellerCommentSetMessage extends Message {
     public static StagedQuoteSellerCommentSetMessageBuilder builder() {
         return StagedQuoteSellerCommentSetMessageBuilder.of();
     }
-
+    
     /**
      * create builder for StagedQuoteSellerCommentSetMessage instance
      * @param template instance with prefilled values for the builder
@@ -130,6 +135,7 @@ public interface StagedQuoteSellerCommentSetMessage extends Message {
     public static StagedQuoteSellerCommentSetMessageBuilder builder(final StagedQuoteSellerCommentSetMessage template) {
         return StagedQuoteSellerCommentSetMessageBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -140,7 +146,7 @@ public interface StagedQuoteSellerCommentSetMessage extends Message {
     default <T> T withStagedQuoteSellerCommentSetMessage(Function<StagedQuoteSellerCommentSetMessage, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

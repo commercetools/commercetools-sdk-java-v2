@@ -1,8 +1,11 @@
-
 package com.commercetools.api.models.product;
 
+import java.lang.Object;
+import com.commercetools.api.models.product.Attribute;
+import javax.annotation.Nullable;
 import java.util.*;
-
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -16,26 +19,37 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .name("{name}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class AttributeBuilder implements Builder<Attribute> {
 
+    
+    
     private String name;
-
+    
+    
+    
     private java.lang.Object value;
 
+    
     /**
      *  <p>Name of the Attribute.</p>
      * @param name value to be set
      * @return Builder
      */
-
-    public AttributeBuilder name(final String name) {
+    
+    public AttributeBuilder name( final String name) {
         this.name = name;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>The AttributeType determines the format of the Attribute <code>value</code> to be provided:</p>
      *  <ul>
@@ -49,21 +63,24 @@ public class AttributeBuilder implements Builder<Attribute> {
      * @param value value to be set
      * @return Builder
      */
-
-    public AttributeBuilder value(final java.lang.Object value) {
+    
+    public AttributeBuilder value( final java.lang.Object value) {
         this.value = value;
         return this;
     }
+    
+    
 
     /**
      *  <p>Name of the Attribute.</p>
      * @return name
      */
-
-    public String getName() {
+    
+    
+    public String getName(){
         return this.name;
     }
-
+    
     /**
      *  <p>The AttributeType determines the format of the Attribute <code>value</code> to be provided:</p>
      *  <ul>
@@ -76,8 +93,9 @@ public class AttributeBuilder implements Builder<Attribute> {
      *  </ul>
      * @return value
      */
-
-    public java.lang.Object getValue() {
+    
+    
+    public java.lang.Object getValue(){
         return this.value;
     }
 
@@ -90,7 +108,7 @@ public class AttributeBuilder implements Builder<Attribute> {
         Objects.requireNonNull(value, Attribute.class + ": value is missing");
         return new AttributeImpl(name, value);
     }
-
+    
     /**
      * builds Attribute without checking for non-null required values
      * @return Attribute
@@ -101,7 +119,7 @@ public class AttributeBuilder implements Builder<Attribute> {
 
     /**
      * factory method for an instance of AttributeBuilder
-     * @return builder
+     * @return builder 
      */
     public static AttributeBuilder of() {
         return new AttributeBuilder();

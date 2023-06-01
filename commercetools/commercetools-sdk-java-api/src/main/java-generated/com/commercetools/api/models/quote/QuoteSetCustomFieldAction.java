@@ -1,17 +1,21 @@
-
 package com.commercetools.api.models.quote;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
+import com.commercetools.api.models.quote.QuoteUpdateAction;
+import java.lang.Object;
+import com.commercetools.api.models.quote.QuoteSetCustomFieldActionImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * QuoteSetCustomFieldAction
@@ -24,9 +28,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .name("{name}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = QuoteSetCustomFieldActionImpl.class)
 public interface QuoteSetCustomFieldAction extends QuoteUpdateAction {
 
@@ -42,12 +49,11 @@ public interface QuoteSetCustomFieldAction extends QuoteUpdateAction {
     @NotNull
     @JsonProperty("name")
     public String getName();
-
     /**
      *  <p>If <code>value</code> is absent or <code>null</code>, this field will be removed if it exists. Removing a field that does not exist returns an InvalidOperation error. If <code>value</code> is provided, it is set for the field defined by <code>name</code>.</p>
      * @return value
      */
-
+    
     @JsonProperty("value")
     public Object getValue();
 
@@ -55,23 +61,26 @@ public interface QuoteSetCustomFieldAction extends QuoteUpdateAction {
      *  <p>Name of the Custom Field.</p>
      * @param name value to be set
      */
-
+    
     public void setName(final String name);
-
+    
+    
     /**
      *  <p>If <code>value</code> is absent or <code>null</code>, this field will be removed if it exists. Removing a field that does not exist returns an InvalidOperation error. If <code>value</code> is provided, it is set for the field defined by <code>name</code>.</p>
      * @param value value to be set
      */
-
+    
     public void setValue(final Object value);
+    
 
     /**
      * factory method
      * @return instance of QuoteSetCustomFieldAction
      */
-    public static QuoteSetCustomFieldAction of() {
+    public static QuoteSetCustomFieldAction of(){
         return new QuoteSetCustomFieldActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy QuoteSetCustomFieldAction
@@ -108,7 +117,7 @@ public interface QuoteSetCustomFieldAction extends QuoteUpdateAction {
     public static QuoteSetCustomFieldActionBuilder builder() {
         return QuoteSetCustomFieldActionBuilder.of();
     }
-
+    
     /**
      * create builder for QuoteSetCustomFieldAction instance
      * @param template instance with prefilled values for the builder
@@ -117,6 +126,7 @@ public interface QuoteSetCustomFieldAction extends QuoteUpdateAction {
     public static QuoteSetCustomFieldActionBuilder builder(final QuoteSetCustomFieldAction template) {
         return QuoteSetCustomFieldActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -127,11 +137,11 @@ public interface QuoteSetCustomFieldAction extends QuoteUpdateAction {
     default <T> T withQuoteSetCustomFieldAction(Function<QuoteSetCustomFieldAction, T> helper) {
         return helper.apply(this);
     }
-
     public static QuoteSetCustomFieldAction ofUnset(final String name) {
         return QuoteSetCustomFieldActionBuilder.of().name(name).build();
     }
-
+    
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

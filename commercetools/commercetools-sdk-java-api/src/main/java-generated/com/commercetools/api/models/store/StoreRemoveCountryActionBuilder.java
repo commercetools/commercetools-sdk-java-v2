@@ -1,9 +1,12 @@
-
 package com.commercetools.api.models.store;
 
+import com.commercetools.api.models.store.StoreUpdateAction;
+import com.commercetools.api.models.store_country.StoreCountry;
+import com.commercetools.api.models.store.StoreRemoveCountryAction;
+import javax.annotation.Nullable;
 import java.util.*;
 import java.util.function.Function;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -17,55 +20,61 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .country(countryBuilder -> countryBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class StoreRemoveCountryActionBuilder implements Builder<StoreRemoveCountryAction> {
 
+    
+    
     private com.commercetools.api.models.store_country.StoreCountry country;
 
+    
     /**
      *  <p>Value to remove from <code>countries</code>.</p>
      * @param builder function to build the country value
      * @return Builder
      */
-
-    public StoreRemoveCountryActionBuilder country(
-            Function<com.commercetools.api.models.store_country.StoreCountryBuilder, com.commercetools.api.models.store_country.StoreCountryBuilder> builder) {
+    
+    public StoreRemoveCountryActionBuilder country(Function<com.commercetools.api.models.store_country.StoreCountryBuilder, com.commercetools.api.models.store_country.StoreCountryBuilder> builder) {
         this.country = builder.apply(com.commercetools.api.models.store_country.StoreCountryBuilder.of()).build();
         return this;
     }
-
+    
     /**
      *  <p>Value to remove from <code>countries</code>.</p>
      * @param builder function to build the country value
      * @return Builder
      */
-
-    public StoreRemoveCountryActionBuilder withCountry(
-            Function<com.commercetools.api.models.store_country.StoreCountryBuilder, com.commercetools.api.models.store_country.StoreCountry> builder) {
+    
+    public StoreRemoveCountryActionBuilder withCountry(Function<com.commercetools.api.models.store_country.StoreCountryBuilder, com.commercetools.api.models.store_country.StoreCountry> builder) {
         this.country = builder.apply(com.commercetools.api.models.store_country.StoreCountryBuilder.of());
         return this;
     }
-
+                    
     /**
      *  <p>Value to remove from <code>countries</code>.</p>
      * @param country value to be set
      * @return Builder
      */
-
-    public StoreRemoveCountryActionBuilder country(
-            final com.commercetools.api.models.store_country.StoreCountry country) {
+    
+    public StoreRemoveCountryActionBuilder country( final com.commercetools.api.models.store_country.StoreCountry country) {
         this.country = country;
         return this;
     }
+    
+    
 
     /**
      *  <p>Value to remove from <code>countries</code>.</p>
      * @return country
      */
-
-    public com.commercetools.api.models.store_country.StoreCountry getCountry() {
+    
+    
+    public com.commercetools.api.models.store_country.StoreCountry getCountry(){
         return this.country;
     }
 
@@ -77,7 +86,7 @@ public class StoreRemoveCountryActionBuilder implements Builder<StoreRemoveCount
         Objects.requireNonNull(country, StoreRemoveCountryAction.class + ": country is missing");
         return new StoreRemoveCountryActionImpl(country);
     }
-
+    
     /**
      * builds StoreRemoveCountryAction without checking for non-null required values
      * @return StoreRemoveCountryAction
@@ -88,7 +97,7 @@ public class StoreRemoveCountryActionBuilder implements Builder<StoreRemoveCount
 
     /**
      * factory method for an instance of StoreRemoveCountryActionBuilder
-     * @return builder
+     * @return builder 
      */
     public static StoreRemoveCountryActionBuilder of() {
         return new StoreRemoveCountryActionBuilder();

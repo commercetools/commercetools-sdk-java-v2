@@ -1,17 +1,21 @@
-
 package com.commercetools.history.models.common;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
+import com.commercetools.history.models.common.ReturnPaymentState;
+import com.commercetools.history.models.common.ReturnShipmentState;
+import com.commercetools.history.models.common.ReturnItemImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * ReturnItem
@@ -31,11 +35,15 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .createdAt("{createdAt}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = ReturnItemImpl.class)
-public interface ReturnItem {
+public interface ReturnItem  {
+
 
     /**
      *
@@ -44,7 +52,6 @@ public interface ReturnItem {
     @NotNull
     @JsonProperty("id")
     public String getId();
-
     /**
      *
      * @return quantity
@@ -52,7 +59,6 @@ public interface ReturnItem {
     @NotNull
     @JsonProperty("quantity")
     public Integer getQuantity();
-
     /**
      *
      * @return type
@@ -60,7 +66,6 @@ public interface ReturnItem {
     @NotNull
     @JsonProperty("type")
     public String getType();
-
     /**
      *
      * @return comment
@@ -68,7 +73,6 @@ public interface ReturnItem {
     @NotNull
     @JsonProperty("comment")
     public String getComment();
-
     /**
      *
      * @return shipmentState
@@ -76,7 +80,6 @@ public interface ReturnItem {
     @NotNull
     @JsonProperty("shipmentState")
     public ReturnShipmentState getShipmentState();
-
     /**
      *
      * @return paymentState
@@ -84,7 +87,6 @@ public interface ReturnItem {
     @NotNull
     @JsonProperty("paymentState")
     public ReturnPaymentState getPaymentState();
-
     /**
      *
      * @return lastModifiedAt
@@ -92,7 +94,6 @@ public interface ReturnItem {
     @NotNull
     @JsonProperty("lastModifiedAt")
     public String getLastModifiedAt();
-
     /**
      *
      * @return createdAt
@@ -105,65 +106,74 @@ public interface ReturnItem {
      * set id
      * @param id value to be set
      */
-
+    
     public void setId(final String id);
-
+    
+    
     /**
      * set quantity
      * @param quantity value to be set
      */
-
+    
     public void setQuantity(final Integer quantity);
-
+    
+    
     /**
      * set type
      * @param type value to be set
      */
-
+    
     public void setType(final String type);
-
+    
+    
     /**
      * set comment
      * @param comment value to be set
      */
-
+    
     public void setComment(final String comment);
-
+    
+    
     /**
      * set shipmentState
      * @param shipmentState value to be set
      */
-
+    
     public void setShipmentState(final ReturnShipmentState shipmentState);
-
+    
+    
     /**
      * set paymentState
      * @param paymentState value to be set
      */
-
+    
     public void setPaymentState(final ReturnPaymentState paymentState);
-
+    
+    
     /**
      * set lastModifiedAt
      * @param lastModifiedAt value to be set
      */
-
+    
     public void setLastModifiedAt(final String lastModifiedAt);
-
+    
+    
     /**
      * set createdAt
      * @param createdAt value to be set
      */
-
+    
     public void setCreatedAt(final String createdAt);
+    
 
     /**
      * factory method
      * @return instance of ReturnItem
      */
-    public static ReturnItem of() {
+    public static ReturnItem of(){
         return new ReturnItemImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy ReturnItem
@@ -212,7 +222,7 @@ public interface ReturnItem {
     public static ReturnItemBuilder builder() {
         return ReturnItemBuilder.of();
     }
-
+    
     /**
      * create builder for ReturnItem instance
      * @param template instance with prefilled values for the builder
@@ -221,6 +231,7 @@ public interface ReturnItem {
     public static ReturnItemBuilder builder(final ReturnItem template) {
         return ReturnItemBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -231,7 +242,7 @@ public interface ReturnItem {
     default <T> T withReturnItem(Function<ReturnItem, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

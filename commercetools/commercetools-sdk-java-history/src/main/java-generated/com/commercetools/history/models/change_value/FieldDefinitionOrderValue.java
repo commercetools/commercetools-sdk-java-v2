@@ -1,19 +1,20 @@
-
 package com.commercetools.history.models.change_value;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
 import com.commercetools.history.models.common.LocalizedString;
+import com.commercetools.history.models.change_value.FieldDefinitionOrderValueImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Shape of the value for action <code>changeFieldDefinitionOrder</code></p>
@@ -27,11 +28,15 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .label(labelBuilder -> labelBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = FieldDefinitionOrderValueImpl.class)
-public interface FieldDefinitionOrderValue {
+public interface FieldDefinitionOrderValue  {
+
 
     /**
      *
@@ -40,7 +45,6 @@ public interface FieldDefinitionOrderValue {
     @NotNull
     @JsonProperty("name")
     public String getName();
-
     /**
      *
      * @return label
@@ -54,23 +58,26 @@ public interface FieldDefinitionOrderValue {
      * set name
      * @param name value to be set
      */
-
+    
     public void setName(final String name);
-
+    
+    
     /**
      * set label
      * @param label value to be set
      */
-
+    
     public void setLabel(final LocalizedString label);
+    
 
     /**
      * factory method
      * @return instance of FieldDefinitionOrderValue
      */
-    public static FieldDefinitionOrderValue of() {
+    public static FieldDefinitionOrderValue of(){
         return new FieldDefinitionOrderValueImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy FieldDefinitionOrderValue
@@ -107,7 +114,7 @@ public interface FieldDefinitionOrderValue {
     public static FieldDefinitionOrderValueBuilder builder() {
         return FieldDefinitionOrderValueBuilder.of();
     }
-
+    
     /**
      * create builder for FieldDefinitionOrderValue instance
      * @param template instance with prefilled values for the builder
@@ -116,6 +123,7 @@ public interface FieldDefinitionOrderValue {
     public static FieldDefinitionOrderValueBuilder builder(final FieldDefinitionOrderValue template) {
         return FieldDefinitionOrderValueBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -126,7 +134,7 @@ public interface FieldDefinitionOrderValue {
     default <T> T withFieldDefinitionOrderValue(Function<FieldDefinitionOrderValue, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

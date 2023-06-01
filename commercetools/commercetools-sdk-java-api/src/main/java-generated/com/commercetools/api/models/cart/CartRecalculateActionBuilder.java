@@ -1,10 +1,11 @@
-
 package com.commercetools.api.models.cart;
 
-import java.util.*;
-
+import com.commercetools.api.models.cart.CartUpdateAction;
+import com.commercetools.api.models.cart.CartRecalculateAction;
 import javax.annotation.Nullable;
-
+import java.util.*;
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -17,14 +18,19 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     CartRecalculateAction cartRecalculateAction = CartRecalculateAction.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class CartRecalculateActionBuilder implements Builder<CartRecalculateAction> {
 
+    
     @Nullable
     private Boolean updateProductData;
 
+    
     /**
      *  <ul>
      *   <li>Leave empty or set to <code>false</code> to only update the Prices and TaxRates of the Line Items.</li>
@@ -33,11 +39,13 @@ public class CartRecalculateActionBuilder implements Builder<CartRecalculateActi
      * @param updateProductData value to be set
      * @return Builder
      */
-
+    
     public CartRecalculateActionBuilder updateProductData(@Nullable final Boolean updateProductData) {
         this.updateProductData = updateProductData;
         return this;
     }
+    
+    
 
     /**
      *  <ul>
@@ -46,9 +54,9 @@ public class CartRecalculateActionBuilder implements Builder<CartRecalculateActi
      *  </ul>
      * @return updateProductData
      */
-
+    
     @Nullable
-    public Boolean getUpdateProductData() {
+    public Boolean getUpdateProductData(){
         return this.updateProductData;
     }
 
@@ -59,7 +67,7 @@ public class CartRecalculateActionBuilder implements Builder<CartRecalculateActi
     public CartRecalculateAction build() {
         return new CartRecalculateActionImpl(updateProductData);
     }
-
+    
     /**
      * builds CartRecalculateAction without checking for non-null required values
      * @return CartRecalculateAction
@@ -70,7 +78,7 @@ public class CartRecalculateActionBuilder implements Builder<CartRecalculateActi
 
     /**
      * factory method for an instance of CartRecalculateActionBuilder
-     * @return builder
+     * @return builder 
      */
     public static CartRecalculateActionBuilder of() {
         return new CartRecalculateActionBuilder();

@@ -1,9 +1,12 @@
-
 package com.commercetools.history.models.change;
 
+import com.commercetools.history.models.change.Change;
+import com.commercetools.history.models.common.AttributeDefinition;
+import com.commercetools.history.models.change.AddAttributeDefinitionChange;
+import javax.annotation.Nullable;
 import java.util.*;
 import java.util.function.Function;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -18,77 +21,89 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .nextValue(nextValueBuilder -> nextValueBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class AddAttributeDefinitionChangeBuilder implements Builder<AddAttributeDefinitionChange> {
 
+    
+    
     private String change;
-
+    
+    
+    
     private com.commercetools.history.models.common.AttributeDefinition nextValue;
 
+    
     /**
      *  <p>Update action for <code>addAttributeDefinition</code> on product types</p>
      * @param change value to be set
      * @return Builder
      */
-
-    public AddAttributeDefinitionChangeBuilder change(final String change) {
+    
+    public AddAttributeDefinitionChangeBuilder change( final String change) {
         this.change = change;
         return this;
     }
-
+    
+    
+    
+    
     /**
      * set the value to the nextValue using the builder function
      * @param builder function to build the nextValue value
      * @return Builder
      */
-
-    public AddAttributeDefinitionChangeBuilder nextValue(
-            Function<com.commercetools.history.models.common.AttributeDefinitionBuilder, com.commercetools.history.models.common.AttributeDefinitionBuilder> builder) {
+    
+    public AddAttributeDefinitionChangeBuilder nextValue(Function<com.commercetools.history.models.common.AttributeDefinitionBuilder, com.commercetools.history.models.common.AttributeDefinitionBuilder> builder) {
         this.nextValue = builder.apply(com.commercetools.history.models.common.AttributeDefinitionBuilder.of()).build();
         return this;
     }
-
+    
     /**
      * set the value to the nextValue using the builder function
      * @param builder function to build the nextValue value
      * @return Builder
      */
-
-    public AddAttributeDefinitionChangeBuilder withNextValue(
-            Function<com.commercetools.history.models.common.AttributeDefinitionBuilder, com.commercetools.history.models.common.AttributeDefinition> builder) {
+    
+    public AddAttributeDefinitionChangeBuilder withNextValue(Function<com.commercetools.history.models.common.AttributeDefinitionBuilder, com.commercetools.history.models.common.AttributeDefinition> builder) {
         this.nextValue = builder.apply(com.commercetools.history.models.common.AttributeDefinitionBuilder.of());
         return this;
     }
-
+                    
     /**
      * set the value to the nextValue
      * @param nextValue value to be set
      * @return Builder
      */
-
-    public AddAttributeDefinitionChangeBuilder nextValue(
-            final com.commercetools.history.models.common.AttributeDefinition nextValue) {
+    
+    public AddAttributeDefinitionChangeBuilder nextValue( final com.commercetools.history.models.common.AttributeDefinition nextValue) {
         this.nextValue = nextValue;
         return this;
     }
+    
+    
 
     /**
      *  <p>Update action for <code>addAttributeDefinition</code> on product types</p>
      * @return change
      */
-
-    public String getChange() {
+    
+    
+    public String getChange(){
         return this.change;
     }
-
+    
     /**
      * value of nextValue}
      * @return nextValue
      */
-
-    public com.commercetools.history.models.common.AttributeDefinition getNextValue() {
+    
+    
+    public com.commercetools.history.models.common.AttributeDefinition getNextValue(){
         return this.nextValue;
     }
 
@@ -101,7 +116,7 @@ public class AddAttributeDefinitionChangeBuilder implements Builder<AddAttribute
         Objects.requireNonNull(nextValue, AddAttributeDefinitionChange.class + ": nextValue is missing");
         return new AddAttributeDefinitionChangeImpl(change, nextValue);
     }
-
+    
     /**
      * builds AddAttributeDefinitionChange without checking for non-null required values
      * @return AddAttributeDefinitionChange
@@ -112,7 +127,7 @@ public class AddAttributeDefinitionChangeBuilder implements Builder<AddAttribute
 
     /**
      * factory method for an instance of AddAttributeDefinitionChangeBuilder
-     * @return builder
+     * @return builder 
      */
     public static AddAttributeDefinitionChangeBuilder of() {
         return new AddAttributeDefinitionChangeBuilder();

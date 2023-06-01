@@ -1,20 +1,22 @@
-
 package com.commercetools.history.models.change;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
+import com.commercetools.history.models.change.Change;
 import com.commercetools.history.models.common.LocalizedString;
 import com.commercetools.history.models.common.Money;
+import com.commercetools.history.models.change.SetCustomLineItemMoneyChangeImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * SetCustomLineItemMoneyChange
@@ -31,9 +33,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .previousValue(previousValueBuilder -> previousValueBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = SetCustomLineItemMoneyChangeImpl.class)
 public interface SetCustomLineItemMoneyChange extends Change {
 
@@ -49,7 +54,6 @@ public interface SetCustomLineItemMoneyChange extends Change {
     @NotNull
     @JsonProperty("type")
     public String getType();
-
     /**
      *  <p>Update action for <code>setCustomLineItemMoney</code></p>
      * @return change
@@ -57,7 +61,6 @@ public interface SetCustomLineItemMoneyChange extends Change {
     @NotNull
     @JsonProperty("change")
     public String getChange();
-
     /**
      *
      * @return customLineItem
@@ -66,7 +69,6 @@ public interface SetCustomLineItemMoneyChange extends Change {
     @Valid
     @JsonProperty("customLineItem")
     public LocalizedString getCustomLineItem();
-
     /**
      *
      * @return customLineItemId
@@ -74,7 +76,6 @@ public interface SetCustomLineItemMoneyChange extends Change {
     @NotNull
     @JsonProperty("customLineItemId")
     public String getCustomLineItemId();
-
     /**
      *
      * @return nextValue
@@ -83,7 +84,6 @@ public interface SetCustomLineItemMoneyChange extends Change {
     @Valid
     @JsonProperty("nextValue")
     public Money getNextValue();
-
     /**
      *
      * @return previousValue
@@ -97,44 +97,50 @@ public interface SetCustomLineItemMoneyChange extends Change {
      *  <p>Update action for <code>setCustomLineItemMoney</code></p>
      * @param change value to be set
      */
-
+    
     public void setChange(final String change);
-
+    
+    
     /**
      * set customLineItem
      * @param customLineItem value to be set
      */
-
+    
     public void setCustomLineItem(final LocalizedString customLineItem);
-
+    
+    
     /**
      * set customLineItemId
      * @param customLineItemId value to be set
      */
-
+    
     public void setCustomLineItemId(final String customLineItemId);
-
+    
+    
     /**
      * set nextValue
      * @param nextValue value to be set
      */
-
+    
     public void setNextValue(final Money nextValue);
-
+    
+    
     /**
      * set previousValue
      * @param previousValue value to be set
      */
-
+    
     public void setPreviousValue(final Money previousValue);
+    
 
     /**
      * factory method
      * @return instance of SetCustomLineItemMoneyChange
      */
-    public static SetCustomLineItemMoneyChange of() {
+    public static SetCustomLineItemMoneyChange of(){
         return new SetCustomLineItemMoneyChangeImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy SetCustomLineItemMoneyChange
@@ -163,8 +169,7 @@ public interface SetCustomLineItemMoneyChange extends Change {
         }
         SetCustomLineItemMoneyChangeImpl instance = new SetCustomLineItemMoneyChangeImpl();
         instance.setChange(template.getChange());
-        instance.setCustomLineItem(
-            com.commercetools.history.models.common.LocalizedString.deepCopy(template.getCustomLineItem()));
+        instance.setCustomLineItem(com.commercetools.history.models.common.LocalizedString.deepCopy(template.getCustomLineItem()));
         instance.setCustomLineItemId(template.getCustomLineItemId());
         instance.setNextValue(com.commercetools.history.models.common.Money.deepCopy(template.getNextValue()));
         instance.setPreviousValue(com.commercetools.history.models.common.Money.deepCopy(template.getPreviousValue()));
@@ -178,7 +183,7 @@ public interface SetCustomLineItemMoneyChange extends Change {
     public static SetCustomLineItemMoneyChangeBuilder builder() {
         return SetCustomLineItemMoneyChangeBuilder.of();
     }
-
+    
     /**
      * create builder for SetCustomLineItemMoneyChange instance
      * @param template instance with prefilled values for the builder
@@ -187,6 +192,7 @@ public interface SetCustomLineItemMoneyChange extends Change {
     public static SetCustomLineItemMoneyChangeBuilder builder(final SetCustomLineItemMoneyChange template) {
         return SetCustomLineItemMoneyChangeBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -197,7 +203,7 @@ public interface SetCustomLineItemMoneyChange extends Change {
     default <T> T withSetCustomLineItemMoneyChange(Function<SetCustomLineItemMoneyChange, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

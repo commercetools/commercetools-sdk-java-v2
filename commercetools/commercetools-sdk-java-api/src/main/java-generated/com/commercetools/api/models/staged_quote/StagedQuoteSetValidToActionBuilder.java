@@ -1,10 +1,12 @@
-
 package com.commercetools.api.models.staged_quote;
 
-import java.util.*;
-
+import com.commercetools.api.models.staged_quote.StagedQuoteUpdateAction;
+import java.time.ZonedDateTime;
+import com.commercetools.api.models.staged_quote.StagedQuoteSetValidToAction;
 import javax.annotation.Nullable;
-
+import java.util.*;
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -17,32 +19,39 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     StagedQuoteSetValidToAction stagedQuoteSetValidToAction = StagedQuoteSetValidToAction.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class StagedQuoteSetValidToActionBuilder implements Builder<StagedQuoteSetValidToAction> {
 
+    
     @Nullable
     private java.time.ZonedDateTime validTo;
 
+    
     /**
      *  <p>If <code>validTo</code> is absent or <code>null</code>, this field will be removed if it exists.</p>
      * @param validTo value to be set
      * @return Builder
      */
-
+    
     public StagedQuoteSetValidToActionBuilder validTo(@Nullable final java.time.ZonedDateTime validTo) {
         this.validTo = validTo;
         return this;
     }
+    
+    
 
     /**
      *  <p>If <code>validTo</code> is absent or <code>null</code>, this field will be removed if it exists.</p>
      * @return validTo
      */
-
+    
     @Nullable
-    public java.time.ZonedDateTime getValidTo() {
+    public java.time.ZonedDateTime getValidTo(){
         return this.validTo;
     }
 
@@ -53,7 +62,7 @@ public class StagedQuoteSetValidToActionBuilder implements Builder<StagedQuoteSe
     public StagedQuoteSetValidToAction build() {
         return new StagedQuoteSetValidToActionImpl(validTo);
     }
-
+    
     /**
      * builds StagedQuoteSetValidToAction without checking for non-null required values
      * @return StagedQuoteSetValidToAction
@@ -64,7 +73,7 @@ public class StagedQuoteSetValidToActionBuilder implements Builder<StagedQuoteSe
 
     /**
      * factory method for an instance of StagedQuoteSetValidToActionBuilder
-     * @return builder
+     * @return builder 
      */
     public static StagedQuoteSetValidToActionBuilder of() {
         return new StagedQuoteSetValidToActionBuilder();

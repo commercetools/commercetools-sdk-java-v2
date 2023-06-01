@@ -1,17 +1,20 @@
-
 package com.commercetools.history.models.label;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
+import com.commercetools.history.models.label.Label;
+import com.commercetools.history.models.label.OrderLabelImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * OrderLabel
@@ -25,9 +28,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .orderNumber("{orderNumber}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = OrderLabelImpl.class)
 public interface OrderLabel extends Label {
 
@@ -43,7 +49,6 @@ public interface OrderLabel extends Label {
     @NotNull
     @JsonProperty("type")
     public String getType();
-
     /**
      *
      * @return customerEmail
@@ -51,7 +56,6 @@ public interface OrderLabel extends Label {
     @NotNull
     @JsonProperty("customerEmail")
     public String getCustomerEmail();
-
     /**
      *
      * @return orderNumber
@@ -64,23 +68,26 @@ public interface OrderLabel extends Label {
      * set customerEmail
      * @param customerEmail value to be set
      */
-
+    
     public void setCustomerEmail(final String customerEmail);
-
+    
+    
     /**
      * set orderNumber
      * @param orderNumber value to be set
      */
-
+    
     public void setOrderNumber(final String orderNumber);
+    
 
     /**
      * factory method
      * @return instance of OrderLabel
      */
-    public static OrderLabel of() {
+    public static OrderLabel of(){
         return new OrderLabelImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy OrderLabel
@@ -117,7 +124,7 @@ public interface OrderLabel extends Label {
     public static OrderLabelBuilder builder() {
         return OrderLabelBuilder.of();
     }
-
+    
     /**
      * create builder for OrderLabel instance
      * @param template instance with prefilled values for the builder
@@ -126,6 +133,7 @@ public interface OrderLabel extends Label {
     public static OrderLabelBuilder builder(final OrderLabel template) {
         return OrderLabelBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -136,7 +144,7 @@ public interface OrderLabel extends Label {
     default <T> T withOrderLabel(Function<OrderLabel, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

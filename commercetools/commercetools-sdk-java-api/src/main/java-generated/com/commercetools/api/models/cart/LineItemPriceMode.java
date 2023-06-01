@@ -1,32 +1,33 @@
-
 package com.commercetools.api.models.cart;
-
-import java.util.Arrays;
-import java.util.Optional;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-
+import java.lang.String;
+import java.util.Arrays;
+import java.util.Optional;
 import io.vrap.rmf.base.client.JsonEnum;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
  *  <p>This mode indicates how the price is set for the Line Item.</p>
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public interface LineItemPriceMode extends JsonEnum {
 
     /**
     	<p>The <a href="ctp:api:type:LineItemPriceSelection">price is selected</a> from the Product Variant.
     	This is the default mode.</p>
-
+    	
     */
     LineItemPriceMode PLATFORM = LineItemPriceModeEnum.PLATFORM;
     /**
     	<p>The Line Item price is set externally.
     	Cart Discounts can apply to Line Items with this price mode.
     	All update actions that change the quantity of a Line Item with this price mode require the <code>externalPrice</code> field to be given.</p>
-
+    	
     */
     LineItemPriceMode EXTERNAL_PRICE = LineItemPriceModeEnum.EXTERNAL_PRICE;
     /**
@@ -35,10 +36,10 @@ public interface LineItemPriceMode extends JsonEnum {
     	Although a Line Item with this price mode has both <code>price</code> and <code>totalPrice</code> set externally, only <code>totalPrice</code> is used to calculate the total price of a Cart.
     	All update actions that change the quantity of a Line Item with this price mode can set the new price with the <code>externalTotal</code> field.
     	If the <code>externalTotal</code> field is not given in the update actions, the external price is unset and the price mode is set to <code>Platform</code>.</p>
-
+    	
     */
     LineItemPriceMode EXTERNAL_TOTAL = LineItemPriceModeEnum.EXTERNAL_TOTAL;
-
+    
     /**
      * possible values of LineItemPriceMode
      */
@@ -47,12 +48,12 @@ public interface LineItemPriceMode extends JsonEnum {
          * Platform
          */
         PLATFORM("Platform"),
-
+        
         /**
          * ExternalPrice
          */
         EXTERNAL_PRICE("ExternalPrice"),
-
+        
         /**
          * ExternalTotal
          */
@@ -109,7 +110,7 @@ public interface LineItemPriceMode extends JsonEnum {
             public String name() {
                 return value.toUpperCase();
             }
-
+            
             public String toString() {
                 return value;
             }
@@ -124,7 +125,7 @@ public interface LineItemPriceMode extends JsonEnum {
     public static Optional<LineItemPriceMode> findEnumViaJsonName(String jsonName) {
         return Arrays.stream(values()).filter(t -> t.getJsonName().equals(jsonName)).findFirst();
     }
-
+    
     /**
      * possible enum values
      * @return array of possible enum values
@@ -132,5 +133,5 @@ public interface LineItemPriceMode extends JsonEnum {
     public static LineItemPriceMode[] values() {
         return LineItemPriceModeEnum.values();
     }
-
+    
 }

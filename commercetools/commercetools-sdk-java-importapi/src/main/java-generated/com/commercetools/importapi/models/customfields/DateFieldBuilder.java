@@ -1,8 +1,12 @@
-
 package com.commercetools.importapi.models.customfields;
 
+import com.commercetools.importapi.models.customfields.CustomField;
+import java.time.LocalDate;
+import com.commercetools.importapi.models.customfields.DateField;
+import javax.annotation.Nullable;
 import java.util.*;
-
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -16,30 +20,39 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .value(LocalDate.parse("2022-01-01"))
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class DateFieldBuilder implements Builder<DateField> {
 
+    
+    
     private java.time.LocalDate value;
 
+    
     /**
      * set the value to the value
      * @param value value to be set
      * @return Builder
      */
-
-    public DateFieldBuilder value(final java.time.LocalDate value) {
+    
+    public DateFieldBuilder value( final java.time.LocalDate value) {
         this.value = value;
         return this;
     }
+    
+    
 
     /**
      * value of value}
      * @return value
      */
-
-    public java.time.LocalDate getValue() {
+    
+    
+    public java.time.LocalDate getValue(){
         return this.value;
     }
 
@@ -51,7 +64,7 @@ public class DateFieldBuilder implements Builder<DateField> {
         Objects.requireNonNull(value, DateField.class + ": value is missing");
         return new DateFieldImpl(value);
     }
-
+    
     /**
      * builds DateField without checking for non-null required values
      * @return DateField
@@ -62,7 +75,7 @@ public class DateFieldBuilder implements Builder<DateField> {
 
     /**
      * factory method for an instance of DateFieldBuilder
-     * @return builder
+     * @return builder 
      */
     public static DateFieldBuilder of() {
         return new DateFieldBuilder();

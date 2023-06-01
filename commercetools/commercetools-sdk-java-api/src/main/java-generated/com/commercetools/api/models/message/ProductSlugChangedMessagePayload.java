@@ -1,19 +1,21 @@
-
 package com.commercetools.api.models.message;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
 import com.commercetools.api.models.common.LocalizedString;
+import com.commercetools.api.models.message.MessagePayload;
+import com.commercetools.api.models.message.ProductSlugChangedMessagePayloadImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Generated after a successful Change Slug update action.</p>
@@ -26,9 +28,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .slug(slugBuilder -> slugBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = ProductSlugChangedMessagePayloadImpl.class)
 public interface ProductSlugChangedMessagePayload extends MessagePayload {
 
@@ -45,7 +50,6 @@ public interface ProductSlugChangedMessagePayload extends MessagePayload {
     @Valid
     @JsonProperty("slug")
     public LocalizedString getSlug();
-
     /**
      *  <p>The slug of the Product before the Change Slug update action.</p>
      * @return oldSlug
@@ -58,23 +62,26 @@ public interface ProductSlugChangedMessagePayload extends MessagePayload {
      *  <p>The slug of the Product after the Change Slug update action.</p>
      * @param slug value to be set
      */
-
+    
     public void setSlug(final LocalizedString slug);
-
+    
+    
     /**
      *  <p>The slug of the Product before the Change Slug update action.</p>
      * @param oldSlug value to be set
      */
-
+    
     public void setOldSlug(final LocalizedString oldSlug);
+    
 
     /**
      * factory method
      * @return instance of ProductSlugChangedMessagePayload
      */
-    public static ProductSlugChangedMessagePayload of() {
+    public static ProductSlugChangedMessagePayload of(){
         return new ProductSlugChangedMessagePayloadImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy ProductSlugChangedMessagePayload
@@ -111,7 +118,7 @@ public interface ProductSlugChangedMessagePayload extends MessagePayload {
     public static ProductSlugChangedMessagePayloadBuilder builder() {
         return ProductSlugChangedMessagePayloadBuilder.of();
     }
-
+    
     /**
      * create builder for ProductSlugChangedMessagePayload instance
      * @param template instance with prefilled values for the builder
@@ -120,6 +127,7 @@ public interface ProductSlugChangedMessagePayload extends MessagePayload {
     public static ProductSlugChangedMessagePayloadBuilder builder(final ProductSlugChangedMessagePayload template) {
         return ProductSlugChangedMessagePayloadBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -130,7 +138,7 @@ public interface ProductSlugChangedMessagePayload extends MessagePayload {
     default <T> T withProductSlugChangedMessagePayload(Function<ProductSlugChangedMessagePayload, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

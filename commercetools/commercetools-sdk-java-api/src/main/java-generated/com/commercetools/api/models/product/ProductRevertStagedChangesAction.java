@@ -1,16 +1,20 @@
-
 package com.commercetools.api.models.product;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
+import com.commercetools.api.models.product.ProductUpdateAction;
+import com.commercetools.api.models.product.ProductRevertStagedChangesActionImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Reverts the staged version of a Product to the current version. Produces the ProductRevertedStagedChanges Message.</p>
@@ -22,9 +26,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     ProductRevertStagedChangesAction productRevertStagedChangesAction = ProductRevertStagedChangesAction.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = ProductRevertStagedChangesActionImpl.class)
 public interface ProductRevertStagedChangesAction extends ProductUpdateAction {
 
@@ -33,13 +40,16 @@ public interface ProductRevertStagedChangesAction extends ProductUpdateAction {
      */
     String REVERT_STAGED_CHANGES = "revertStagedChanges";
 
+
+
     /**
      * factory method
      * @return instance of ProductRevertStagedChangesAction
      */
-    public static ProductRevertStagedChangesAction of() {
+    public static ProductRevertStagedChangesAction of(){
         return new ProductRevertStagedChangesActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy ProductRevertStagedChangesAction
@@ -72,7 +82,7 @@ public interface ProductRevertStagedChangesAction extends ProductUpdateAction {
     public static ProductRevertStagedChangesActionBuilder builder() {
         return ProductRevertStagedChangesActionBuilder.of();
     }
-
+    
     /**
      * create builder for ProductRevertStagedChangesAction instance
      * @param template instance with prefilled values for the builder
@@ -81,6 +91,7 @@ public interface ProductRevertStagedChangesAction extends ProductUpdateAction {
     public static ProductRevertStagedChangesActionBuilder builder(final ProductRevertStagedChangesAction template) {
         return ProductRevertStagedChangesActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -91,7 +102,7 @@ public interface ProductRevertStagedChangesAction extends ProductUpdateAction {
     default <T> T withProductRevertStagedChangesAction(Function<ProductRevertStagedChangesAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

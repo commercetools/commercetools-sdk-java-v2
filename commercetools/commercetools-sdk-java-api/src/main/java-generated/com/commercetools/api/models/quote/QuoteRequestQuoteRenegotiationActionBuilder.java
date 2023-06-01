@@ -1,10 +1,11 @@
-
 package com.commercetools.api.models.quote;
 
-import java.util.*;
-
+import com.commercetools.api.models.quote.QuoteUpdateAction;
+import com.commercetools.api.models.quote.QuoteRequestQuoteRenegotiationAction;
 import javax.annotation.Nullable;
-
+import java.util.*;
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -17,32 +18,39 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     QuoteRequestQuoteRenegotiationAction quoteRequestQuoteRenegotiationAction = QuoteRequestQuoteRenegotiationAction.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class QuoteRequestQuoteRenegotiationActionBuilder implements Builder<QuoteRequestQuoteRenegotiationAction> {
 
+    
     @Nullable
     private String buyerComment;
 
+    
     /**
      *  <p>Message from the Buyer regarding the Quote renegotiation request.</p>
      * @param buyerComment value to be set
      * @return Builder
      */
-
+    
     public QuoteRequestQuoteRenegotiationActionBuilder buyerComment(@Nullable final String buyerComment) {
         this.buyerComment = buyerComment;
         return this;
     }
+    
+    
 
     /**
      *  <p>Message from the Buyer regarding the Quote renegotiation request.</p>
      * @return buyerComment
      */
-
+    
     @Nullable
-    public String getBuyerComment() {
+    public String getBuyerComment(){
         return this.buyerComment;
     }
 
@@ -53,7 +61,7 @@ public class QuoteRequestQuoteRenegotiationActionBuilder implements Builder<Quot
     public QuoteRequestQuoteRenegotiationAction build() {
         return new QuoteRequestQuoteRenegotiationActionImpl(buyerComment);
     }
-
+    
     /**
      * builds QuoteRequestQuoteRenegotiationAction without checking for non-null required values
      * @return QuoteRequestQuoteRenegotiationAction
@@ -64,7 +72,7 @@ public class QuoteRequestQuoteRenegotiationActionBuilder implements Builder<Quot
 
     /**
      * factory method for an instance of QuoteRequestQuoteRenegotiationActionBuilder
-     * @return builder
+     * @return builder 
      */
     public static QuoteRequestQuoteRenegotiationActionBuilder of() {
         return new QuoteRequestQuoteRenegotiationActionBuilder();

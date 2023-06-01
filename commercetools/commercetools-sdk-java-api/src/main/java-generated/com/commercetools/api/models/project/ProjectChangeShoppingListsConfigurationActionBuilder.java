@@ -1,9 +1,12 @@
-
 package com.commercetools.api.models.project;
 
+import com.commercetools.api.models.project.ProjectUpdateAction;
+import com.commercetools.api.models.project.ShoppingListsConfiguration;
+import com.commercetools.api.models.project.ProjectChangeShoppingListsConfigurationAction;
+import javax.annotation.Nullable;
 import java.util.*;
 import java.util.function.Function;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -17,59 +20,61 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .shoppingListsConfiguration(shoppingListsConfigurationBuilder -> shoppingListsConfigurationBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
-public class ProjectChangeShoppingListsConfigurationActionBuilder
-        implements Builder<ProjectChangeShoppingListsConfigurationAction> {
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
+public class ProjectChangeShoppingListsConfigurationActionBuilder implements Builder<ProjectChangeShoppingListsConfigurationAction> {
 
+    
+    
     private com.commercetools.api.models.project.ShoppingListsConfiguration shoppingListsConfiguration;
 
+    
     /**
      *  <p>Configuration for the Shopping Lists feature.</p>
      * @param builder function to build the shoppingListsConfiguration value
      * @return Builder
      */
-
-    public ProjectChangeShoppingListsConfigurationActionBuilder shoppingListsConfiguration(
-            Function<com.commercetools.api.models.project.ShoppingListsConfigurationBuilder, com.commercetools.api.models.project.ShoppingListsConfigurationBuilder> builder) {
-        this.shoppingListsConfiguration = builder
-                .apply(com.commercetools.api.models.project.ShoppingListsConfigurationBuilder.of())
-                .build();
+    
+    public ProjectChangeShoppingListsConfigurationActionBuilder shoppingListsConfiguration(Function<com.commercetools.api.models.project.ShoppingListsConfigurationBuilder, com.commercetools.api.models.project.ShoppingListsConfigurationBuilder> builder) {
+        this.shoppingListsConfiguration = builder.apply(com.commercetools.api.models.project.ShoppingListsConfigurationBuilder.of()).build();
         return this;
     }
-
+    
     /**
      *  <p>Configuration for the Shopping Lists feature.</p>
      * @param builder function to build the shoppingListsConfiguration value
      * @return Builder
      */
-
-    public ProjectChangeShoppingListsConfigurationActionBuilder withShoppingListsConfiguration(
-            Function<com.commercetools.api.models.project.ShoppingListsConfigurationBuilder, com.commercetools.api.models.project.ShoppingListsConfiguration> builder) {
-        this.shoppingListsConfiguration = builder
-                .apply(com.commercetools.api.models.project.ShoppingListsConfigurationBuilder.of());
+    
+    public ProjectChangeShoppingListsConfigurationActionBuilder withShoppingListsConfiguration(Function<com.commercetools.api.models.project.ShoppingListsConfigurationBuilder, com.commercetools.api.models.project.ShoppingListsConfiguration> builder) {
+        this.shoppingListsConfiguration = builder.apply(com.commercetools.api.models.project.ShoppingListsConfigurationBuilder.of());
         return this;
     }
-
+                    
     /**
      *  <p>Configuration for the Shopping Lists feature.</p>
      * @param shoppingListsConfiguration value to be set
      * @return Builder
      */
-
-    public ProjectChangeShoppingListsConfigurationActionBuilder shoppingListsConfiguration(
-            final com.commercetools.api.models.project.ShoppingListsConfiguration shoppingListsConfiguration) {
+    
+    public ProjectChangeShoppingListsConfigurationActionBuilder shoppingListsConfiguration( final com.commercetools.api.models.project.ShoppingListsConfiguration shoppingListsConfiguration) {
         this.shoppingListsConfiguration = shoppingListsConfiguration;
         return this;
     }
+    
+    
 
     /**
      *  <p>Configuration for the Shopping Lists feature.</p>
      * @return shoppingListsConfiguration
      */
-
-    public com.commercetools.api.models.project.ShoppingListsConfiguration getShoppingListsConfiguration() {
+    
+    
+    public com.commercetools.api.models.project.ShoppingListsConfiguration getShoppingListsConfiguration(){
         return this.shoppingListsConfiguration;
     }
 
@@ -78,11 +83,10 @@ public class ProjectChangeShoppingListsConfigurationActionBuilder
      * @return ProjectChangeShoppingListsConfigurationAction
      */
     public ProjectChangeShoppingListsConfigurationAction build() {
-        Objects.requireNonNull(shoppingListsConfiguration,
-            ProjectChangeShoppingListsConfigurationAction.class + ": shoppingListsConfiguration is missing");
+        Objects.requireNonNull(shoppingListsConfiguration, ProjectChangeShoppingListsConfigurationAction.class + ": shoppingListsConfiguration is missing");
         return new ProjectChangeShoppingListsConfigurationActionImpl(shoppingListsConfiguration);
     }
-
+    
     /**
      * builds ProjectChangeShoppingListsConfigurationAction without checking for non-null required values
      * @return ProjectChangeShoppingListsConfigurationAction
@@ -93,7 +97,7 @@ public class ProjectChangeShoppingListsConfigurationActionBuilder
 
     /**
      * factory method for an instance of ProjectChangeShoppingListsConfigurationActionBuilder
-     * @return builder
+     * @return builder 
      */
     public static ProjectChangeShoppingListsConfigurationActionBuilder of() {
         return new ProjectChangeShoppingListsConfigurationActionBuilder();
@@ -104,8 +108,7 @@ public class ProjectChangeShoppingListsConfigurationActionBuilder
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static ProjectChangeShoppingListsConfigurationActionBuilder of(
-            final ProjectChangeShoppingListsConfigurationAction template) {
+    public static ProjectChangeShoppingListsConfigurationActionBuilder of(final ProjectChangeShoppingListsConfigurationAction template) {
         ProjectChangeShoppingListsConfigurationActionBuilder builder = new ProjectChangeShoppingListsConfigurationActionBuilder();
         builder.shoppingListsConfiguration = template.getShoppingListsConfiguration();
         return builder;

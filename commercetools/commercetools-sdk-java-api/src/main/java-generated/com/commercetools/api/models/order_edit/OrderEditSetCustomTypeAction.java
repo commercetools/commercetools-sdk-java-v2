@@ -1,19 +1,22 @@
-
 package com.commercetools.api.models.order_edit;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-
+import com.commercetools.api.models.order_edit.OrderEditUpdateAction;
 import com.commercetools.api.models.type.FieldContainer;
 import com.commercetools.api.models.type.TypeResourceIdentifier;
+import com.commercetools.api.models.order_edit.OrderEditSetCustomTypeActionImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * OrderEditSetCustomTypeAction
@@ -25,9 +28,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     OrderEditSetCustomTypeAction orderEditSetCustomTypeAction = OrderEditSetCustomTypeAction.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = OrderEditSetCustomTypeActionImpl.class)
 public interface OrderEditSetCustomTypeAction extends OrderEditUpdateAction {
 
@@ -43,7 +49,6 @@ public interface OrderEditSetCustomTypeAction extends OrderEditUpdateAction {
     @Valid
     @JsonProperty("type")
     public TypeResourceIdentifier getType();
-
     /**
      *  <p>Sets the Custom Fields fields for the OrderEdit.</p>
      * @return fields
@@ -56,23 +61,26 @@ public interface OrderEditSetCustomTypeAction extends OrderEditUpdateAction {
      *  <p>Defines the Type that extends the OrderEdit with Custom Fields. If absent, any existing Type and Custom Fields are removed from the OrderEdit.</p>
      * @param type value to be set
      */
-
+    
     public void setType(final TypeResourceIdentifier type);
-
+    
+    
     /**
      *  <p>Sets the Custom Fields fields for the OrderEdit.</p>
      * @param fields value to be set
      */
-
+    
     public void setFields(final FieldContainer fields);
+    
 
     /**
      * factory method
      * @return instance of OrderEditSetCustomTypeAction
      */
-    public static OrderEditSetCustomTypeAction of() {
+    public static OrderEditSetCustomTypeAction of(){
         return new OrderEditSetCustomTypeActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy OrderEditSetCustomTypeAction
@@ -109,7 +117,7 @@ public interface OrderEditSetCustomTypeAction extends OrderEditUpdateAction {
     public static OrderEditSetCustomTypeActionBuilder builder() {
         return OrderEditSetCustomTypeActionBuilder.of();
     }
-
+    
     /**
      * create builder for OrderEditSetCustomTypeAction instance
      * @param template instance with prefilled values for the builder
@@ -118,6 +126,7 @@ public interface OrderEditSetCustomTypeAction extends OrderEditUpdateAction {
     public static OrderEditSetCustomTypeActionBuilder builder(final OrderEditSetCustomTypeAction template) {
         return OrderEditSetCustomTypeActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -128,7 +137,7 @@ public interface OrderEditSetCustomTypeAction extends OrderEditUpdateAction {
     default <T> T withOrderEditSetCustomTypeAction(Function<OrderEditSetCustomTypeAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

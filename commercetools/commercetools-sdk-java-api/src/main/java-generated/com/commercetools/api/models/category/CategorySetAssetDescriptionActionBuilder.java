@@ -1,11 +1,12 @@
-
 package com.commercetools.api.models.category;
 
+import com.commercetools.api.models.category.CategoryUpdateAction;
+import com.commercetools.api.models.common.LocalizedString;
+import com.commercetools.api.models.category.CategorySetAssetDescriptionAction;
+import javax.annotation.Nullable;
 import java.util.*;
 import java.util.function.Function;
-
-import javax.annotation.Nullable;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -18,105 +19,117 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     CategorySetAssetDescriptionAction categorySetAssetDescriptionAction = CategorySetAssetDescriptionAction.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class CategorySetAssetDescriptionActionBuilder implements Builder<CategorySetAssetDescriptionAction> {
 
+    
     @Nullable
     private String assetId;
-
+    
+    
     @Nullable
     private String assetKey;
-
+    
+    
     @Nullable
     private com.commercetools.api.models.common.LocalizedString description;
 
+    
     /**
      *  <p>New value to set. Either <code>assetId</code> or <code>assetKey</code> is required.</p>
      * @param assetId value to be set
      * @return Builder
      */
-
+    
     public CategorySetAssetDescriptionActionBuilder assetId(@Nullable final String assetId) {
         this.assetId = assetId;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>New value to set. Either <code>assetId</code> or <code>assetKey</code> is required.</p>
      * @param assetKey value to be set
      * @return Builder
      */
-
+    
     public CategorySetAssetDescriptionActionBuilder assetKey(@Nullable final String assetKey) {
         this.assetKey = assetKey;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Value to set. If empty, any existing value will be removed.</p>
      * @param builder function to build the description value
      * @return Builder
      */
-
-    public CategorySetAssetDescriptionActionBuilder description(
-            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
+    
+    public CategorySetAssetDescriptionActionBuilder description(Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
         this.description = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of()).build();
         return this;
     }
-
+    
     /**
      *  <p>Value to set. If empty, any existing value will be removed.</p>
      * @param builder function to build the description value
      * @return Builder
      */
-
-    public CategorySetAssetDescriptionActionBuilder withDescription(
-            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedString> builder) {
+    
+    public CategorySetAssetDescriptionActionBuilder withDescription(Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedString> builder) {
         this.description = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of());
         return this;
     }
-
+                    
     /**
      *  <p>Value to set. If empty, any existing value will be removed.</p>
      * @param description value to be set
      * @return Builder
      */
-
-    public CategorySetAssetDescriptionActionBuilder description(
-            @Nullable final com.commercetools.api.models.common.LocalizedString description) {
+    
+    public CategorySetAssetDescriptionActionBuilder description(@Nullable final com.commercetools.api.models.common.LocalizedString description) {
         this.description = description;
         return this;
     }
+    
+    
 
     /**
      *  <p>New value to set. Either <code>assetId</code> or <code>assetKey</code> is required.</p>
      * @return assetId
      */
-
+    
     @Nullable
-    public String getAssetId() {
+    public String getAssetId(){
         return this.assetId;
     }
-
+    
     /**
      *  <p>New value to set. Either <code>assetId</code> or <code>assetKey</code> is required.</p>
      * @return assetKey
      */
-
+    
     @Nullable
-    public String getAssetKey() {
+    public String getAssetKey(){
         return this.assetKey;
     }
-
+    
     /**
      *  <p>Value to set. If empty, any existing value will be removed.</p>
      * @return description
      */
-
+    
     @Nullable
-    public com.commercetools.api.models.common.LocalizedString getDescription() {
+    public com.commercetools.api.models.common.LocalizedString getDescription(){
         return this.description;
     }
 
@@ -127,7 +140,7 @@ public class CategorySetAssetDescriptionActionBuilder implements Builder<Categor
     public CategorySetAssetDescriptionAction build() {
         return new CategorySetAssetDescriptionActionImpl(assetId, assetKey, description);
     }
-
+    
     /**
      * builds CategorySetAssetDescriptionAction without checking for non-null required values
      * @return CategorySetAssetDescriptionAction
@@ -138,7 +151,7 @@ public class CategorySetAssetDescriptionActionBuilder implements Builder<Categor
 
     /**
      * factory method for an instance of CategorySetAssetDescriptionActionBuilder
-     * @return builder
+     * @return builder 
      */
     public static CategorySetAssetDescriptionActionBuilder of() {
         return new CategorySetAssetDescriptionActionBuilder();

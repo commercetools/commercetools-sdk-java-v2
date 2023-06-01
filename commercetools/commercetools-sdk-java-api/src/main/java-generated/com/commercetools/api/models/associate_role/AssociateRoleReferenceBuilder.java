@@ -1,11 +1,13 @@
-
 package com.commercetools.api.models.associate_role;
 
+import com.commercetools.api.models.associate_role.AssociateRole;
+import com.commercetools.api.models.common.Reference;
+import com.commercetools.api.models.common.ReferenceTypeId;
+import com.commercetools.api.models.associate_role.AssociateRoleReference;
+import javax.annotation.Nullable;
 import java.util.*;
 import java.util.function.Function;
-
-import javax.annotation.Nullable;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -19,79 +21,89 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .id("{id}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class AssociateRoleReferenceBuilder implements Builder<AssociateRoleReference> {
 
+    
+    
     private String id;
-
+    
+    
     @Nullable
     private com.commercetools.api.models.associate_role.AssociateRole obj;
 
+    
     /**
      *  <p>Unique identifier of the referenced AssociateRole.</p>
      * @param id value to be set
      * @return Builder
      */
-
-    public AssociateRoleReferenceBuilder id(final String id) {
+    
+    public AssociateRoleReferenceBuilder id( final String id) {
         this.id = id;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Contains the representation of the expanded AssociateRole. Only present in responses to requests with Reference Expansion for AssociateRole.</p>
      * @param builder function to build the obj value
      * @return Builder
      */
-
-    public AssociateRoleReferenceBuilder obj(
-            Function<com.commercetools.api.models.associate_role.AssociateRoleBuilder, com.commercetools.api.models.associate_role.AssociateRoleBuilder> builder) {
+    
+    public AssociateRoleReferenceBuilder obj(Function<com.commercetools.api.models.associate_role.AssociateRoleBuilder, com.commercetools.api.models.associate_role.AssociateRoleBuilder> builder) {
         this.obj = builder.apply(com.commercetools.api.models.associate_role.AssociateRoleBuilder.of()).build();
         return this;
     }
-
+    
     /**
      *  <p>Contains the representation of the expanded AssociateRole. Only present in responses to requests with Reference Expansion for AssociateRole.</p>
      * @param builder function to build the obj value
      * @return Builder
      */
-
-    public AssociateRoleReferenceBuilder withObj(
-            Function<com.commercetools.api.models.associate_role.AssociateRoleBuilder, com.commercetools.api.models.associate_role.AssociateRole> builder) {
+    
+    public AssociateRoleReferenceBuilder withObj(Function<com.commercetools.api.models.associate_role.AssociateRoleBuilder, com.commercetools.api.models.associate_role.AssociateRole> builder) {
         this.obj = builder.apply(com.commercetools.api.models.associate_role.AssociateRoleBuilder.of());
         return this;
     }
-
+                    
     /**
      *  <p>Contains the representation of the expanded AssociateRole. Only present in responses to requests with Reference Expansion for AssociateRole.</p>
      * @param obj value to be set
      * @return Builder
      */
-
-    public AssociateRoleReferenceBuilder obj(
-            @Nullable final com.commercetools.api.models.associate_role.AssociateRole obj) {
+    
+    public AssociateRoleReferenceBuilder obj(@Nullable final com.commercetools.api.models.associate_role.AssociateRole obj) {
         this.obj = obj;
         return this;
     }
+    
+    
 
     /**
      *  <p>Unique identifier of the referenced AssociateRole.</p>
      * @return id
      */
-
-    public String getId() {
+    
+    
+    public String getId(){
         return this.id;
     }
-
+    
     /**
      *  <p>Contains the representation of the expanded AssociateRole. Only present in responses to requests with Reference Expansion for AssociateRole.</p>
      * @return obj
      */
-
+    
     @Nullable
-    public com.commercetools.api.models.associate_role.AssociateRole getObj() {
+    public com.commercetools.api.models.associate_role.AssociateRole getObj(){
         return this.obj;
     }
 
@@ -103,7 +115,7 @@ public class AssociateRoleReferenceBuilder implements Builder<AssociateRoleRefer
         Objects.requireNonNull(id, AssociateRoleReference.class + ": id is missing");
         return new AssociateRoleReferenceImpl(id, obj);
     }
-
+    
     /**
      * builds AssociateRoleReference without checking for non-null required values
      * @return AssociateRoleReference
@@ -114,7 +126,7 @@ public class AssociateRoleReferenceBuilder implements Builder<AssociateRoleRefer
 
     /**
      * factory method for an instance of AssociateRoleReferenceBuilder
-     * @return builder
+     * @return builder 
      */
     public static AssociateRoleReferenceBuilder of() {
         return new AssociateRoleReferenceBuilder();

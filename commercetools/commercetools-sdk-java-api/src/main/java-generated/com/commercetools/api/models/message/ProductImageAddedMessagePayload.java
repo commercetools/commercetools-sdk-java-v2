@@ -1,19 +1,21 @@
-
 package com.commercetools.api.models.message;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
 import com.commercetools.api.models.common.Image;
+import com.commercetools.api.models.message.MessagePayload;
+import com.commercetools.api.models.message.ProductImageAddedMessagePayloadImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Generated after a successful Add External Image update action or after the successful upload of an image.</p>
@@ -28,9 +30,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .staged(true)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = ProductImageAddedMessagePayloadImpl.class)
 public interface ProductImageAddedMessagePayload extends MessagePayload {
 
@@ -46,7 +51,6 @@ public interface ProductImageAddedMessagePayload extends MessagePayload {
     @NotNull
     @JsonProperty("variantId")
     public Long getVariantId();
-
     /**
      *  <p>Image that was added.</p>
      * @return image
@@ -55,7 +59,6 @@ public interface ProductImageAddedMessagePayload extends MessagePayload {
     @Valid
     @JsonProperty("image")
     public Image getImage();
-
     /**
      *  <p>Whether the update was only applied to the staged Product Projection.</p>
      * @return staged
@@ -68,30 +71,34 @@ public interface ProductImageAddedMessagePayload extends MessagePayload {
      *  <p>Unique identifier of the Product Variant to which the Image was added.</p>
      * @param variantId value to be set
      */
-
+    
     public void setVariantId(final Long variantId);
-
+    
+    
     /**
      *  <p>Image that was added.</p>
      * @param image value to be set
      */
-
+    
     public void setImage(final Image image);
-
+    
+    
     /**
      *  <p>Whether the update was only applied to the staged Product Projection.</p>
      * @param staged value to be set
      */
-
+    
     public void setStaged(final Boolean staged);
+    
 
     /**
      * factory method
      * @return instance of ProductImageAddedMessagePayload
      */
-    public static ProductImageAddedMessagePayload of() {
+    public static ProductImageAddedMessagePayload of(){
         return new ProductImageAddedMessagePayloadImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy ProductImageAddedMessagePayload
@@ -130,7 +137,7 @@ public interface ProductImageAddedMessagePayload extends MessagePayload {
     public static ProductImageAddedMessagePayloadBuilder builder() {
         return ProductImageAddedMessagePayloadBuilder.of();
     }
-
+    
     /**
      * create builder for ProductImageAddedMessagePayload instance
      * @param template instance with prefilled values for the builder
@@ -139,6 +146,7 @@ public interface ProductImageAddedMessagePayload extends MessagePayload {
     public static ProductImageAddedMessagePayloadBuilder builder(final ProductImageAddedMessagePayload template) {
         return ProductImageAddedMessagePayloadBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -149,7 +157,7 @@ public interface ProductImageAddedMessagePayload extends MessagePayload {
     default <T> T withProductImageAddedMessagePayload(Function<ProductImageAddedMessagePayload, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

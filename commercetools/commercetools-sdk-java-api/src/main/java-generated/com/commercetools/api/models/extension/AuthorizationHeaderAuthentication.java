@@ -1,17 +1,20 @@
-
 package com.commercetools.api.models.extension;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
+import com.commercetools.api.models.extension.HttpDestinationAuthentication;
+import com.commercetools.api.models.extension.AuthorizationHeaderAuthenticationImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>The <code>Authorization</code> header will be set to the content of <code>headerValue</code>. The authentication scheme (such as <code>Basic</code> or <code>Bearer</code>) should be included in the <code>headerValue</code>.</p>
@@ -25,9 +28,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .headerValue("{headerValue}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = AuthorizationHeaderAuthenticationImpl.class)
 public interface AuthorizationHeaderAuthentication extends HttpDestinationAuthentication {
 
@@ -48,16 +54,18 @@ public interface AuthorizationHeaderAuthentication extends HttpDestinationAuthen
      *  <p>Partially hidden on retrieval for security reasons.</p>
      * @param headerValue value to be set
      */
-
+    
     public void setHeaderValue(final String headerValue);
+    
 
     /**
      * factory method
      * @return instance of AuthorizationHeaderAuthentication
      */
-    public static AuthorizationHeaderAuthentication of() {
+    public static AuthorizationHeaderAuthentication of(){
         return new AuthorizationHeaderAuthenticationImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy AuthorizationHeaderAuthentication
@@ -76,8 +84,7 @@ public interface AuthorizationHeaderAuthentication extends HttpDestinationAuthen
      * @return copy instance
      */
     @Nullable
-    public static AuthorizationHeaderAuthentication deepCopy(
-            @Nullable final AuthorizationHeaderAuthentication template) {
+    public static AuthorizationHeaderAuthentication deepCopy(@Nullable final AuthorizationHeaderAuthentication template) {
         if (template == null) {
             return null;
         }
@@ -93,7 +100,7 @@ public interface AuthorizationHeaderAuthentication extends HttpDestinationAuthen
     public static AuthorizationHeaderAuthenticationBuilder builder() {
         return AuthorizationHeaderAuthenticationBuilder.of();
     }
-
+    
     /**
      * create builder for AuthorizationHeaderAuthentication instance
      * @param template instance with prefilled values for the builder
@@ -102,6 +109,7 @@ public interface AuthorizationHeaderAuthentication extends HttpDestinationAuthen
     public static AuthorizationHeaderAuthenticationBuilder builder(final AuthorizationHeaderAuthentication template) {
         return AuthorizationHeaderAuthenticationBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -112,7 +120,7 @@ public interface AuthorizationHeaderAuthentication extends HttpDestinationAuthen
     default <T> T withAuthorizationHeaderAuthentication(Function<AuthorizationHeaderAuthentication, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

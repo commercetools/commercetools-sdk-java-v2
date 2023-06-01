@@ -1,11 +1,13 @@
-
 package com.commercetools.api.models.order_edit;
 
+import com.commercetools.api.models.order.StagedOrderUpdateAction;
+import com.commercetools.api.models.type.FieldContainer;
+import com.commercetools.api.models.type.TypeResourceIdentifier;
+import com.commercetools.api.models.order_edit.StagedOrderSetDeliveryAddressCustomTypeAction;
+import javax.annotation.Nullable;
 import java.util.*;
 import java.util.function.Function;
-
-import javax.annotation.Nullable;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -18,155 +20,167 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     StagedOrderSetDeliveryAddressCustomTypeAction stagedOrderSetDeliveryAddressCustomTypeAction = StagedOrderSetDeliveryAddressCustomTypeAction.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
-public class StagedOrderSetDeliveryAddressCustomTypeActionBuilder
-        implements Builder<StagedOrderSetDeliveryAddressCustomTypeAction> {
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
+public class StagedOrderSetDeliveryAddressCustomTypeActionBuilder implements Builder<StagedOrderSetDeliveryAddressCustomTypeAction> {
 
+    
     @Nullable
     private String deliveryId;
-
+    
+    
     @Nullable
     private String deliveryKey;
-
+    
+    
     @Nullable
     private com.commercetools.api.models.type.TypeResourceIdentifier type;
-
+    
+    
     @Nullable
     private com.commercetools.api.models.type.FieldContainer fields;
 
+    
     /**
      *  <p>Either <code>deliveryId</code> or <code>deliveryKey</code> is required for this update action.</p>
      * @param deliveryId value to be set
      * @return Builder
      */
-
+    
     public StagedOrderSetDeliveryAddressCustomTypeActionBuilder deliveryId(@Nullable final String deliveryId) {
         this.deliveryId = deliveryId;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Either <code>deliveryId</code> or <code>deliveryKey</code> is required for this update action.</p>
      * @param deliveryKey value to be set
      * @return Builder
      */
-
+    
     public StagedOrderSetDeliveryAddressCustomTypeActionBuilder deliveryKey(@Nullable final String deliveryKey) {
         this.deliveryKey = deliveryKey;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Defines the Type that extends the <code>address</code> in a Delivery with Custom Fields. If absent, any existing Type and Custom Fields are removed from the <code>address</code> in a Delivery.</p>
      * @param builder function to build the type value
      * @return Builder
      */
-
-    public StagedOrderSetDeliveryAddressCustomTypeActionBuilder type(
-            Function<com.commercetools.api.models.type.TypeResourceIdentifierBuilder, com.commercetools.api.models.type.TypeResourceIdentifierBuilder> builder) {
+    
+    public StagedOrderSetDeliveryAddressCustomTypeActionBuilder type(Function<com.commercetools.api.models.type.TypeResourceIdentifierBuilder, com.commercetools.api.models.type.TypeResourceIdentifierBuilder> builder) {
         this.type = builder.apply(com.commercetools.api.models.type.TypeResourceIdentifierBuilder.of()).build();
         return this;
     }
-
+    
     /**
      *  <p>Defines the Type that extends the <code>address</code> in a Delivery with Custom Fields. If absent, any existing Type and Custom Fields are removed from the <code>address</code> in a Delivery.</p>
      * @param builder function to build the type value
      * @return Builder
      */
-
-    public StagedOrderSetDeliveryAddressCustomTypeActionBuilder withType(
-            Function<com.commercetools.api.models.type.TypeResourceIdentifierBuilder, com.commercetools.api.models.type.TypeResourceIdentifier> builder) {
+    
+    public StagedOrderSetDeliveryAddressCustomTypeActionBuilder withType(Function<com.commercetools.api.models.type.TypeResourceIdentifierBuilder, com.commercetools.api.models.type.TypeResourceIdentifier> builder) {
         this.type = builder.apply(com.commercetools.api.models.type.TypeResourceIdentifierBuilder.of());
         return this;
     }
-
+                    
     /**
      *  <p>Defines the Type that extends the <code>address</code> in a Delivery with Custom Fields. If absent, any existing Type and Custom Fields are removed from the <code>address</code> in a Delivery.</p>
      * @param type value to be set
      * @return Builder
      */
-
-    public StagedOrderSetDeliveryAddressCustomTypeActionBuilder type(
-            @Nullable final com.commercetools.api.models.type.TypeResourceIdentifier type) {
+    
+    public StagedOrderSetDeliveryAddressCustomTypeActionBuilder type(@Nullable final com.commercetools.api.models.type.TypeResourceIdentifier type) {
         this.type = type;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Sets the Custom Fields fields for the <code>address</code> in a Delivery.</p>
      * @param builder function to build the fields value
      * @return Builder
      */
-
-    public StagedOrderSetDeliveryAddressCustomTypeActionBuilder fields(
-            Function<com.commercetools.api.models.type.FieldContainerBuilder, com.commercetools.api.models.type.FieldContainerBuilder> builder) {
+    
+    public StagedOrderSetDeliveryAddressCustomTypeActionBuilder fields(Function<com.commercetools.api.models.type.FieldContainerBuilder, com.commercetools.api.models.type.FieldContainerBuilder> builder) {
         this.fields = builder.apply(com.commercetools.api.models.type.FieldContainerBuilder.of()).build();
         return this;
     }
-
+    
     /**
      *  <p>Sets the Custom Fields fields for the <code>address</code> in a Delivery.</p>
      * @param builder function to build the fields value
      * @return Builder
      */
-
-    public StagedOrderSetDeliveryAddressCustomTypeActionBuilder withFields(
-            Function<com.commercetools.api.models.type.FieldContainerBuilder, com.commercetools.api.models.type.FieldContainer> builder) {
+    
+    public StagedOrderSetDeliveryAddressCustomTypeActionBuilder withFields(Function<com.commercetools.api.models.type.FieldContainerBuilder, com.commercetools.api.models.type.FieldContainer> builder) {
         this.fields = builder.apply(com.commercetools.api.models.type.FieldContainerBuilder.of());
         return this;
     }
-
+                    
     /**
      *  <p>Sets the Custom Fields fields for the <code>address</code> in a Delivery.</p>
      * @param fields value to be set
      * @return Builder
      */
-
-    public StagedOrderSetDeliveryAddressCustomTypeActionBuilder fields(
-            @Nullable final com.commercetools.api.models.type.FieldContainer fields) {
+    
+    public StagedOrderSetDeliveryAddressCustomTypeActionBuilder fields(@Nullable final com.commercetools.api.models.type.FieldContainer fields) {
         this.fields = fields;
         return this;
     }
+    
+    
 
     /**
      *  <p>Either <code>deliveryId</code> or <code>deliveryKey</code> is required for this update action.</p>
      * @return deliveryId
      */
-
+    
     @Nullable
-    public String getDeliveryId() {
+    public String getDeliveryId(){
         return this.deliveryId;
     }
-
+    
     /**
      *  <p>Either <code>deliveryId</code> or <code>deliveryKey</code> is required for this update action.</p>
      * @return deliveryKey
      */
-
+    
     @Nullable
-    public String getDeliveryKey() {
+    public String getDeliveryKey(){
         return this.deliveryKey;
     }
-
+    
     /**
      *  <p>Defines the Type that extends the <code>address</code> in a Delivery with Custom Fields. If absent, any existing Type and Custom Fields are removed from the <code>address</code> in a Delivery.</p>
      * @return type
      */
-
+    
     @Nullable
-    public com.commercetools.api.models.type.TypeResourceIdentifier getType() {
+    public com.commercetools.api.models.type.TypeResourceIdentifier getType(){
         return this.type;
     }
-
+    
     /**
      *  <p>Sets the Custom Fields fields for the <code>address</code> in a Delivery.</p>
      * @return fields
      */
-
+    
     @Nullable
-    public com.commercetools.api.models.type.FieldContainer getFields() {
+    public com.commercetools.api.models.type.FieldContainer getFields(){
         return this.fields;
     }
 
@@ -177,7 +191,7 @@ public class StagedOrderSetDeliveryAddressCustomTypeActionBuilder
     public StagedOrderSetDeliveryAddressCustomTypeAction build() {
         return new StagedOrderSetDeliveryAddressCustomTypeActionImpl(deliveryId, deliveryKey, type, fields);
     }
-
+    
     /**
      * builds StagedOrderSetDeliveryAddressCustomTypeAction without checking for non-null required values
      * @return StagedOrderSetDeliveryAddressCustomTypeAction
@@ -188,7 +202,7 @@ public class StagedOrderSetDeliveryAddressCustomTypeActionBuilder
 
     /**
      * factory method for an instance of StagedOrderSetDeliveryAddressCustomTypeActionBuilder
-     * @return builder
+     * @return builder 
      */
     public static StagedOrderSetDeliveryAddressCustomTypeActionBuilder of() {
         return new StagedOrderSetDeliveryAddressCustomTypeActionBuilder();
@@ -199,8 +213,7 @@ public class StagedOrderSetDeliveryAddressCustomTypeActionBuilder
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static StagedOrderSetDeliveryAddressCustomTypeActionBuilder of(
-            final StagedOrderSetDeliveryAddressCustomTypeAction template) {
+    public static StagedOrderSetDeliveryAddressCustomTypeActionBuilder of(final StagedOrderSetDeliveryAddressCustomTypeAction template) {
         StagedOrderSetDeliveryAddressCustomTypeActionBuilder builder = new StagedOrderSetDeliveryAddressCustomTypeActionBuilder();
         builder.deliveryId = template.getDeliveryId();
         builder.deliveryKey = template.getDeliveryKey();

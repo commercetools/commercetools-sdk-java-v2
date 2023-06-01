@@ -1,10 +1,12 @@
-
 package com.commercetools.api.models.product;
 
-import java.util.*;
-
+import com.commercetools.api.models.product.ProductUpdateAction;
+import java.lang.Object;
+import com.commercetools.api.models.product.ProductSetAttributeAction;
 import javax.annotation.Nullable;
-
+import java.util.*;
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -18,58 +20,77 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .name("{name}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class ProductSetAttributeActionBuilder implements Builder<ProductSetAttributeAction> {
 
+    
     @Nullable
     private Long variantId;
-
+    
+    
     @Nullable
     private String sku;
-
+    
+    
+    
     private String name;
-
+    
+    
     @Nullable
     private java.lang.Object value;
-
+    
+    
     @Nullable
     private Boolean staged;
 
+    
     /**
      *  <p>The <code>id</code> of the ProductVariant to update.</p>
      * @param variantId value to be set
      * @return Builder
      */
-
+    
     public ProductSetAttributeActionBuilder variantId(@Nullable final Long variantId) {
         this.variantId = variantId;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>The <code>sku</code> of the ProductVariant to update.</p>
      * @param sku value to be set
      * @return Builder
      */
-
+    
     public ProductSetAttributeActionBuilder sku(@Nullable final String sku) {
         this.sku = sku;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>The name of the Attribute to set.</p>
      * @param name value to be set
      * @return Builder
      */
-
-    public ProductSetAttributeActionBuilder name(final String name) {
+    
+    public ProductSetAttributeActionBuilder name( final String name) {
         this.name = name;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Value to set for the Attribute. If empty, any existing value will be removed.</p>
      *  <p>The AttributeType determines the format of the Attribute <code>value</code> to be provided:</p>
@@ -84,52 +105,58 @@ public class ProductSetAttributeActionBuilder implements Builder<ProductSetAttri
      * @param value value to be set
      * @return Builder
      */
-
+    
     public ProductSetAttributeActionBuilder value(@Nullable final java.lang.Object value) {
         this.value = value;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>If <code>true</code>, only the staged Attribute is set. If <code>false</code>, both current and staged Attribute is set.</p>
      * @param staged value to be set
      * @return Builder
      */
-
+    
     public ProductSetAttributeActionBuilder staged(@Nullable final Boolean staged) {
         this.staged = staged;
         return this;
     }
+    
+    
 
     /**
      *  <p>The <code>id</code> of the ProductVariant to update.</p>
      * @return variantId
      */
-
+    
     @Nullable
-    public Long getVariantId() {
+    public Long getVariantId(){
         return this.variantId;
     }
-
+    
     /**
      *  <p>The <code>sku</code> of the ProductVariant to update.</p>
      * @return sku
      */
-
+    
     @Nullable
-    public String getSku() {
+    public String getSku(){
         return this.sku;
     }
-
+    
     /**
      *  <p>The name of the Attribute to set.</p>
      * @return name
      */
-
-    public String getName() {
+    
+    
+    public String getName(){
         return this.name;
     }
-
+    
     /**
      *  <p>Value to set for the Attribute. If empty, any existing value will be removed.</p>
      *  <p>The AttributeType determines the format of the Attribute <code>value</code> to be provided:</p>
@@ -143,19 +170,19 @@ public class ProductSetAttributeActionBuilder implements Builder<ProductSetAttri
      *  </ul>
      * @return value
      */
-
+    
     @Nullable
-    public java.lang.Object getValue() {
+    public java.lang.Object getValue(){
         return this.value;
     }
-
+    
     /**
      *  <p>If <code>true</code>, only the staged Attribute is set. If <code>false</code>, both current and staged Attribute is set.</p>
      * @return staged
      */
-
+    
     @Nullable
-    public Boolean getStaged() {
+    public Boolean getStaged(){
         return this.staged;
     }
 
@@ -167,7 +194,7 @@ public class ProductSetAttributeActionBuilder implements Builder<ProductSetAttri
         Objects.requireNonNull(name, ProductSetAttributeAction.class + ": name is missing");
         return new ProductSetAttributeActionImpl(variantId, sku, name, value, staged);
     }
-
+    
     /**
      * builds ProductSetAttributeAction without checking for non-null required values
      * @return ProductSetAttributeAction
@@ -178,7 +205,7 @@ public class ProductSetAttributeActionBuilder implements Builder<ProductSetAttri
 
     /**
      * factory method for an instance of ProductSetAttributeActionBuilder
-     * @return builder
+     * @return builder 
      */
     public static ProductSetAttributeActionBuilder of() {
         return new ProductSetAttributeActionBuilder();

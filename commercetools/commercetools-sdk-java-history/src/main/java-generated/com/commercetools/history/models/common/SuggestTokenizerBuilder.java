@@ -1,8 +1,11 @@
-
 package com.commercetools.history.models.common;
 
-import java.util.*;
 
+import com.commercetools.history.models.common.SuggestTokenizer;
+import javax.annotation.Nullable;
+import java.util.*;
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -16,30 +19,39 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .type("{type}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class SuggestTokenizerBuilder implements Builder<SuggestTokenizer> {
 
+    
+    
     private String type;
 
+    
     /**
      * set the value to the type
      * @param type value to be set
      * @return Builder
      */
-
-    public SuggestTokenizerBuilder type(final String type) {
+    
+    public SuggestTokenizerBuilder type( final String type) {
         this.type = type;
         return this;
     }
+    
+    
 
     /**
      * value of type}
      * @return type
      */
-
-    public String getType() {
+    
+    
+    public String getType(){
         return this.type;
     }
 
@@ -51,7 +63,7 @@ public class SuggestTokenizerBuilder implements Builder<SuggestTokenizer> {
         Objects.requireNonNull(type, SuggestTokenizer.class + ": type is missing");
         return new SuggestTokenizerImpl(type);
     }
-
+    
     /**
      * builds SuggestTokenizer without checking for non-null required values
      * @return SuggestTokenizer
@@ -62,7 +74,7 @@ public class SuggestTokenizerBuilder implements Builder<SuggestTokenizer> {
 
     /**
      * factory method for an instance of SuggestTokenizerBuilder
-     * @return builder
+     * @return builder 
      */
     public static SuggestTokenizerBuilder of() {
         return new SuggestTokenizerBuilder();

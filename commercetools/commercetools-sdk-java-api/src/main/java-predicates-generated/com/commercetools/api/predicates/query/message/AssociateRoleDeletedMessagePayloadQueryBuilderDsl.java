@@ -1,9 +1,11 @@
-
 package com.commercetools.api.predicates.query.message;
 
 import com.commercetools.api.predicates.query.*;
 
-public class AssociateRoleDeletedMessagePayloadQueryBuilderDsl {
+import java.util.function.Function;
+
+
+public class AssociateRoleDeletedMessagePayloadQueryBuilderDsl  {
     public AssociateRoleDeletedMessagePayloadQueryBuilderDsl() {
     }
 
@@ -12,9 +14,8 @@ public class AssociateRoleDeletedMessagePayloadQueryBuilderDsl {
     }
 
     public StringComparisonPredicateBuilder<AssociateRoleDeletedMessagePayloadQueryBuilderDsl> type() {
-        return new StringComparisonPredicateBuilder<>(
-            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("type")),
-            p -> new CombinationQueryPredicate<>(p, AssociateRoleDeletedMessagePayloadQueryBuilderDsl::of));
+        return new StringComparisonPredicateBuilder<>(BinaryQueryPredicate.of().left(new ConstantQueryPredicate("type")),
+        p -> new CombinationQueryPredicate<>(p, AssociateRoleDeletedMessagePayloadQueryBuilderDsl::of));
     }
-
+    
 }

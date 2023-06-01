@@ -1,19 +1,21 @@
-
 package com.commercetools.api.models.message;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-import java.util.stream.Collectors;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-
+import com.commercetools.api.models.message.MessagePayload;
 import com.commercetools.api.models.store_country.StoreCountry;
+import com.commercetools.api.models.message.StoreCountriesChangedMessagePayloadImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Generated after a successful Add Country, Remove Country, or Set Countries update action.</p>
@@ -25,9 +27,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     StoreCountriesChangedMessagePayload storeCountriesChangedMessagePayload = StoreCountriesChangedMessagePayload.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = StoreCountriesChangedMessagePayloadImpl.class)
 public interface StoreCountriesChangedMessagePayload extends MessagePayload {
 
@@ -43,7 +48,6 @@ public interface StoreCountriesChangedMessagePayload extends MessagePayload {
     @Valid
     @JsonProperty("addedCountries")
     public List<StoreCountry> getAddedCountries();
-
     /**
      *  <p>Countries removed from the Store.</p>
      * @return removedCountries
@@ -56,39 +60,38 @@ public interface StoreCountriesChangedMessagePayload extends MessagePayload {
      *  <p>Countries added to the Store.</p>
      * @param addedCountries values to be set
      */
-
+    
     @JsonIgnore
-    public void setAddedCountries(final StoreCountry... addedCountries);
-
+    public void setAddedCountries(final StoreCountry ...addedCountries);
     /**
      *  <p>Countries added to the Store.</p>
      * @param addedCountries values to be set
      */
-
+    
     public void setAddedCountries(final List<StoreCountry> addedCountries);
-
+    
     /**
      *  <p>Countries removed from the Store.</p>
      * @param removedCountries values to be set
      */
-
+    
     @JsonIgnore
-    public void setRemovedCountries(final StoreCountry... removedCountries);
-
+    public void setRemovedCountries(final StoreCountry ...removedCountries);
     /**
      *  <p>Countries removed from the Store.</p>
      * @param removedCountries values to be set
      */
-
+    
     public void setRemovedCountries(final List<StoreCountry> removedCountries);
 
     /**
      * factory method
      * @return instance of StoreCountriesChangedMessagePayload
      */
-    public static StoreCountriesChangedMessagePayload of() {
+    public static StoreCountriesChangedMessagePayload of(){
         return new StoreCountriesChangedMessagePayloadImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy StoreCountriesChangedMessagePayload
@@ -108,21 +111,16 @@ public interface StoreCountriesChangedMessagePayload extends MessagePayload {
      * @return copy instance
      */
     @Nullable
-    public static StoreCountriesChangedMessagePayload deepCopy(
-            @Nullable final StoreCountriesChangedMessagePayload template) {
+    public static StoreCountriesChangedMessagePayload deepCopy(@Nullable final StoreCountriesChangedMessagePayload template) {
         if (template == null) {
             return null;
         }
         StoreCountriesChangedMessagePayloadImpl instance = new StoreCountriesChangedMessagePayloadImpl();
         instance.setAddedCountries(Optional.ofNullable(template.getAddedCountries())
-                .map(t -> t.stream()
-                        .map(com.commercetools.api.models.store_country.StoreCountry::deepCopy)
-                        .collect(Collectors.toList()))
+                .map(t -> t.stream().map(com.commercetools.api.models.store_country.StoreCountry::deepCopy).collect(Collectors.toList()))
                 .orElse(null));
         instance.setRemovedCountries(Optional.ofNullable(template.getRemovedCountries())
-                .map(t -> t.stream()
-                        .map(com.commercetools.api.models.store_country.StoreCountry::deepCopy)
-                        .collect(Collectors.toList()))
+                .map(t -> t.stream().map(com.commercetools.api.models.store_country.StoreCountry::deepCopy).collect(Collectors.toList()))
                 .orElse(null));
         return instance;
     }
@@ -134,16 +132,16 @@ public interface StoreCountriesChangedMessagePayload extends MessagePayload {
     public static StoreCountriesChangedMessagePayloadBuilder builder() {
         return StoreCountriesChangedMessagePayloadBuilder.of();
     }
-
+    
     /**
      * create builder for StoreCountriesChangedMessagePayload instance
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static StoreCountriesChangedMessagePayloadBuilder builder(
-            final StoreCountriesChangedMessagePayload template) {
+    public static StoreCountriesChangedMessagePayloadBuilder builder(final StoreCountriesChangedMessagePayload template) {
         return StoreCountriesChangedMessagePayloadBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -154,7 +152,7 @@ public interface StoreCountriesChangedMessagePayload extends MessagePayload {
     default <T> T withStoreCountriesChangedMessagePayload(Function<StoreCountriesChangedMessagePayload, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

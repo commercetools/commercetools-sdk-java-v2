@@ -1,25 +1,26 @@
-
 package com.commercetools.api.models.cart;
-
-import java.util.Arrays;
-import java.util.Optional;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-
+import java.lang.String;
+import java.util.Arrays;
+import java.util.Optional;
 import io.vrap.rmf.base.client.JsonEnum;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
  *  <p>Indicates how a Line Item is added to a Cart.</p>
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public interface LineItemMode extends JsonEnum {
 
     /**
     	<p>The Line Item is added during <a href="/../api/projects/carts#create-cart">Cart creation</a> or using the <a href="ctp:api:type:CartAddLineItemAction">Add LineItem</a> update action.
     	The Line Item quantity can be changed without restriction.</p>
-
+    	
     */
     LineItemMode STANDARD = LineItemModeEnum.STANDARD;
     /**
@@ -28,10 +29,10 @@ public interface LineItemMode extends JsonEnum {
     	If the gift is <a href="ctp:api:type:CartRemoveLineItemAction">removed</a>, an entry is added to the <code>refusedGifts</code> array and the discount won't be applied to the Cart.
     	The price cannot be changed <a href="ctp:api:type:CartSetLineItemTotalPriceAction">externally</a>.</p>
     	<p>All other updates, such as the ones related to Custom Fields, can be used.</p>
-
+    	
     */
     LineItemMode GIFT_LINE_ITEM = LineItemModeEnum.GIFT_LINE_ITEM;
-
+    
     /**
      * possible values of LineItemMode
      */
@@ -40,7 +41,7 @@ public interface LineItemMode extends JsonEnum {
          * Standard
          */
         STANDARD("Standard"),
-
+        
         /**
          * GiftLineItem
          */
@@ -97,7 +98,7 @@ public interface LineItemMode extends JsonEnum {
             public String name() {
                 return value.toUpperCase();
             }
-
+            
             public String toString() {
                 return value;
             }
@@ -112,7 +113,7 @@ public interface LineItemMode extends JsonEnum {
     public static Optional<LineItemMode> findEnumViaJsonName(String jsonName) {
         return Arrays.stream(values()).filter(t -> t.getJsonName().equals(jsonName)).findFirst();
     }
-
+    
     /**
      * possible enum values
      * @return array of possible enum values
@@ -120,5 +121,5 @@ public interface LineItemMode extends JsonEnum {
     public static LineItemMode[] values() {
         return LineItemModeEnum.values();
     }
-
+    
 }

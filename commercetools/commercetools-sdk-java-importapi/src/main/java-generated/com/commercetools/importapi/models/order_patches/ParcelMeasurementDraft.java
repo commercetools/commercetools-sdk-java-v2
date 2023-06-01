@@ -1,19 +1,20 @@
-
 package com.commercetools.importapi.models.order_patches;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
 import com.commercetools.importapi.models.orders.ParcelMeasurements;
+import com.commercetools.importapi.models.order_patches.ParcelMeasurementDraftImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * ParcelMeasurementDraft
@@ -26,11 +27,15 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .parcelId("{parcelId}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = ParcelMeasurementDraftImpl.class)
 public interface ParcelMeasurementDraft extends io.vrap.rmf.base.client.Draft<ParcelMeasurementDraft> {
+
 
     /**
      *
@@ -39,7 +44,6 @@ public interface ParcelMeasurementDraft extends io.vrap.rmf.base.client.Draft<Pa
     @NotNull
     @JsonProperty("parcelId")
     public String getParcelId();
-
     /**
      *
      * @return measurements
@@ -52,23 +56,26 @@ public interface ParcelMeasurementDraft extends io.vrap.rmf.base.client.Draft<Pa
      * set parcelId
      * @param parcelId value to be set
      */
-
+    
     public void setParcelId(final String parcelId);
-
+    
+    
     /**
      * set measurements
      * @param measurements value to be set
      */
-
+    
     public void setMeasurements(final ParcelMeasurements measurements);
+    
 
     /**
      * factory method
      * @return instance of ParcelMeasurementDraft
      */
-    public static ParcelMeasurementDraft of() {
+    public static ParcelMeasurementDraft of(){
         return new ParcelMeasurementDraftImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy ParcelMeasurementDraft
@@ -94,8 +101,7 @@ public interface ParcelMeasurementDraft extends io.vrap.rmf.base.client.Draft<Pa
         }
         ParcelMeasurementDraftImpl instance = new ParcelMeasurementDraftImpl();
         instance.setParcelId(template.getParcelId());
-        instance.setMeasurements(
-            com.commercetools.importapi.models.orders.ParcelMeasurements.deepCopy(template.getMeasurements()));
+        instance.setMeasurements(com.commercetools.importapi.models.orders.ParcelMeasurements.deepCopy(template.getMeasurements()));
         return instance;
     }
 
@@ -106,7 +112,7 @@ public interface ParcelMeasurementDraft extends io.vrap.rmf.base.client.Draft<Pa
     public static ParcelMeasurementDraftBuilder builder() {
         return ParcelMeasurementDraftBuilder.of();
     }
-
+    
     /**
      * create builder for ParcelMeasurementDraft instance
      * @param template instance with prefilled values for the builder
@@ -115,6 +121,7 @@ public interface ParcelMeasurementDraft extends io.vrap.rmf.base.client.Draft<Pa
     public static ParcelMeasurementDraftBuilder builder(final ParcelMeasurementDraft template) {
         return ParcelMeasurementDraftBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -125,7 +132,7 @@ public interface ParcelMeasurementDraft extends io.vrap.rmf.base.client.Draft<Pa
     default <T> T withParcelMeasurementDraft(Function<ParcelMeasurementDraft, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

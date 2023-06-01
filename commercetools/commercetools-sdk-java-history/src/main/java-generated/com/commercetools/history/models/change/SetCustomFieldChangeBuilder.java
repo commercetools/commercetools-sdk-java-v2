@@ -1,8 +1,12 @@
-
 package com.commercetools.history.models.change;
 
+import com.commercetools.history.models.change.Change;
+import java.lang.Object;
+import com.commercetools.history.models.change.SetCustomFieldChange;
+import javax.annotation.Nullable;
 import java.util.*;
-
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -18,118 +22,151 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .customTypeId("{customTypeId}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class SetCustomFieldChangeBuilder implements Builder<SetCustomFieldChange> {
 
+    
+    
     private String change;
-
+    
+    
+    
     private String name;
-
+    
+    
+    
     private String customTypeId;
-
+    
+    
+    
     private java.lang.Object nextValue;
-
+    
+    
+    
     private java.lang.Object previousValue;
 
+    
     /**
      *  <p>Update action for setting a custom field</p>
      * @param change value to be set
      * @return Builder
      */
-
-    public SetCustomFieldChangeBuilder change(final String change) {
+    
+    public SetCustomFieldChangeBuilder change( final String change) {
         this.change = change;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Custom field name</p>
      * @param name value to be set
      * @return Builder
      */
-
-    public SetCustomFieldChangeBuilder name(final String name) {
+    
+    public SetCustomFieldChangeBuilder name( final String name) {
         this.name = name;
         return this;
     }
-
+    
+    
+    
+    
     /**
      * set the value to the customTypeId
      * @param customTypeId value to be set
      * @return Builder
      */
-
-    public SetCustomFieldChangeBuilder customTypeId(final String customTypeId) {
+    
+    public SetCustomFieldChangeBuilder customTypeId( final String customTypeId) {
         this.customTypeId = customTypeId;
         return this;
     }
-
+    
+    
+    
+    
     /**
      * set the value to the nextValue
      * @param nextValue value to be set
      * @return Builder
      */
-
-    public SetCustomFieldChangeBuilder nextValue(final java.lang.Object nextValue) {
+    
+    public SetCustomFieldChangeBuilder nextValue( final java.lang.Object nextValue) {
         this.nextValue = nextValue;
         return this;
     }
-
+    
+    
+    
+    
     /**
      * set the value to the previousValue
      * @param previousValue value to be set
      * @return Builder
      */
-
-    public SetCustomFieldChangeBuilder previousValue(final java.lang.Object previousValue) {
+    
+    public SetCustomFieldChangeBuilder previousValue( final java.lang.Object previousValue) {
         this.previousValue = previousValue;
         return this;
     }
+    
+    
 
     /**
      *  <p>Update action for setting a custom field</p>
      * @return change
      */
-
-    public String getChange() {
+    
+    
+    public String getChange(){
         return this.change;
     }
-
+    
     /**
      *  <p>Custom field name</p>
      * @return name
      */
-
-    public String getName() {
+    
+    
+    public String getName(){
         return this.name;
     }
-
+    
     /**
      * value of customTypeId}
      * @return customTypeId
      */
-
-    public String getCustomTypeId() {
+    
+    
+    public String getCustomTypeId(){
         return this.customTypeId;
     }
-
+    
     /**
      * value of nextValue}
      * @return nextValue
      */
-
-    public java.lang.Object getNextValue() {
+    
+    
+    public java.lang.Object getNextValue(){
         return this.nextValue;
     }
-
+    
     /**
      * value of previousValue}
      * @return previousValue
      */
-
-    public java.lang.Object getPreviousValue() {
+    
+    
+    public java.lang.Object getPreviousValue(){
         return this.previousValue;
     }
 
@@ -145,7 +182,7 @@ public class SetCustomFieldChangeBuilder implements Builder<SetCustomFieldChange
         Objects.requireNonNull(previousValue, SetCustomFieldChange.class + ": previousValue is missing");
         return new SetCustomFieldChangeImpl(change, name, customTypeId, nextValue, previousValue);
     }
-
+    
     /**
      * builds SetCustomFieldChange without checking for non-null required values
      * @return SetCustomFieldChange
@@ -156,7 +193,7 @@ public class SetCustomFieldChangeBuilder implements Builder<SetCustomFieldChange
 
     /**
      * factory method for an instance of SetCustomFieldChangeBuilder
-     * @return builder
+     * @return builder 
      */
     public static SetCustomFieldChangeBuilder of() {
         return new SetCustomFieldChangeBuilder();

@@ -1,9 +1,13 @@
-
 package com.commercetools.api.models.error;
 
+import com.commercetools.api.models.error.GraphQLErrorObject;
+import com.commercetools.api.models.product.ProductReference;
+import com.commercetools.api.models.product_selection.ProductVariantSelection;
+import com.commercetools.api.models.error.GraphQLProductPresentWithDifferentVariantSelectionError;
+import javax.annotation.Nullable;
 import java.util.*;
 import java.util.function.Function;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -18,16 +22,24 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .existingVariantSelection(existingVariantSelectionBuilder -> existingVariantSelectionBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
-public class GraphQLProductPresentWithDifferentVariantSelectionErrorBuilder
-        implements Builder<GraphQLProductPresentWithDifferentVariantSelectionError> {
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
+public class GraphQLProductPresentWithDifferentVariantSelectionErrorBuilder implements Builder<GraphQLProductPresentWithDifferentVariantSelectionError> {
 
+    
+    
     private Map<String, java.lang.Object> values = new HashMap<>();
-
+    
+    
+    
     private com.commercetools.api.models.product.ProductReference product;
-
+    
+    
+    
     private com.commercetools.api.models.product_selection.ProductVariantSelection existingVariantSelection;
 
     /**
@@ -35,115 +47,116 @@ public class GraphQLProductPresentWithDifferentVariantSelectionErrorBuilder
      * @param values properties to be set
      * @return Builder
      */
-
-    public GraphQLProductPresentWithDifferentVariantSelectionErrorBuilder values(
-            final Map<String, java.lang.Object> values) {
+    
+    public GraphQLProductPresentWithDifferentVariantSelectionErrorBuilder values( final Map<String, java.lang.Object> values){
         this.values = values;
         return this;
     }
-
+    
     /**
      *  <p>Error-specific additional fields.</p>
      * @param key property name
      * @param value property value
      * @return Builder
      */
-
-    public GraphQLProductPresentWithDifferentVariantSelectionErrorBuilder addValue(final String key,
-            final java.lang.Object value) {
+    
+    public GraphQLProductPresentWithDifferentVariantSelectionErrorBuilder addValue(final String key, final java.lang.Object value) {
         if (this.values == null) {
             values = new HashMap<>();
         }
         values.put(key, value);
         return this;
     }
-
+    
+    
+    
     /**
      *  <p>Reference to the Product for which the error was returned.</p>
      * @param builder function to build the product value
      * @return Builder
      */
-
-    public GraphQLProductPresentWithDifferentVariantSelectionErrorBuilder product(
-            Function<com.commercetools.api.models.product.ProductReferenceBuilder, com.commercetools.api.models.product.ProductReferenceBuilder> builder) {
+    
+    public GraphQLProductPresentWithDifferentVariantSelectionErrorBuilder product(Function<com.commercetools.api.models.product.ProductReferenceBuilder, com.commercetools.api.models.product.ProductReferenceBuilder> builder) {
         this.product = builder.apply(com.commercetools.api.models.product.ProductReferenceBuilder.of()).build();
         return this;
     }
-
+    
     /**
      *  <p>Reference to the Product for which the error was returned.</p>
      * @param builder function to build the product value
      * @return Builder
      */
-
-    public GraphQLProductPresentWithDifferentVariantSelectionErrorBuilder withProduct(
-            Function<com.commercetools.api.models.product.ProductReferenceBuilder, com.commercetools.api.models.product.ProductReference> builder) {
+    
+    public GraphQLProductPresentWithDifferentVariantSelectionErrorBuilder withProduct(Function<com.commercetools.api.models.product.ProductReferenceBuilder, com.commercetools.api.models.product.ProductReference> builder) {
         this.product = builder.apply(com.commercetools.api.models.product.ProductReferenceBuilder.of());
         return this;
     }
-
+                    
     /**
      *  <p>Reference to the Product for which the error was returned.</p>
      * @param product value to be set
      * @return Builder
      */
-
-    public GraphQLProductPresentWithDifferentVariantSelectionErrorBuilder product(
-            final com.commercetools.api.models.product.ProductReference product) {
+    
+    public GraphQLProductPresentWithDifferentVariantSelectionErrorBuilder product( final com.commercetools.api.models.product.ProductReference product) {
         this.product = product;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Existing Product Variant Selection or Exclusion for the Product in the Product Selection.</p>
      * @param existingVariantSelection value to be set
      * @return Builder
      */
-
-    public GraphQLProductPresentWithDifferentVariantSelectionErrorBuilder existingVariantSelection(
-            final com.commercetools.api.models.product_selection.ProductVariantSelection existingVariantSelection) {
+    
+    public GraphQLProductPresentWithDifferentVariantSelectionErrorBuilder existingVariantSelection( final com.commercetools.api.models.product_selection.ProductVariantSelection existingVariantSelection) {
         this.existingVariantSelection = existingVariantSelection;
         return this;
     }
-
+    
+    
     /**
      *  <p>Existing Product Variant Selection or Exclusion for the Product in the Product Selection.</p>
      * @param builder function to build the existingVariantSelection value
      * @return Builder
      */
-
-    public GraphQLProductPresentWithDifferentVariantSelectionErrorBuilder existingVariantSelection(
-            Function<com.commercetools.api.models.product_selection.ProductVariantSelectionBuilder, Builder<? extends com.commercetools.api.models.product_selection.ProductVariantSelection>> builder) {
-        this.existingVariantSelection = builder
-                .apply(com.commercetools.api.models.product_selection.ProductVariantSelectionBuilder.of())
-                .build();
+    
+    public GraphQLProductPresentWithDifferentVariantSelectionErrorBuilder existingVariantSelection(Function<com.commercetools.api.models.product_selection.ProductVariantSelectionBuilder, Builder<? extends com.commercetools.api.models.product_selection.ProductVariantSelection>> builder) {
+        this.existingVariantSelection = builder.apply(com.commercetools.api.models.product_selection.ProductVariantSelectionBuilder.of()).build();
         return this;
     }
+                    
 
     /**
      *  <p>Error-specific additional fields.</p>
      * @return pattern properties
      */
-
-    public Map<String, java.lang.Object> getValues() {
+    
+    
+    public Map<String, java.lang.Object> getValues(){
         return this.values;
     }
-
+    
     /**
      *  <p>Reference to the Product for which the error was returned.</p>
      * @return product
      */
-
-    public com.commercetools.api.models.product.ProductReference getProduct() {
+    
+    
+    public com.commercetools.api.models.product.ProductReference getProduct(){
         return this.product;
     }
-
+    
     /**
      *  <p>Existing Product Variant Selection or Exclusion for the Product in the Product Selection.</p>
      * @return existingVariantSelection
      */
-
-    public com.commercetools.api.models.product_selection.ProductVariantSelection getExistingVariantSelection() {
+    
+    
+    public com.commercetools.api.models.product_selection.ProductVariantSelection getExistingVariantSelection(){
         return this.existingVariantSelection;
     }
 
@@ -152,26 +165,22 @@ public class GraphQLProductPresentWithDifferentVariantSelectionErrorBuilder
      * @return GraphQLProductPresentWithDifferentVariantSelectionError
      */
     public GraphQLProductPresentWithDifferentVariantSelectionError build() {
-        Objects.requireNonNull(product,
-            GraphQLProductPresentWithDifferentVariantSelectionError.class + ": product is missing");
-        Objects.requireNonNull(existingVariantSelection,
-            GraphQLProductPresentWithDifferentVariantSelectionError.class + ": existingVariantSelection is missing");
-        return new GraphQLProductPresentWithDifferentVariantSelectionErrorImpl(values, product,
-            existingVariantSelection);
+        Objects.requireNonNull(product, GraphQLProductPresentWithDifferentVariantSelectionError.class + ": product is missing");
+        Objects.requireNonNull(existingVariantSelection, GraphQLProductPresentWithDifferentVariantSelectionError.class + ": existingVariantSelection is missing");
+        return new GraphQLProductPresentWithDifferentVariantSelectionErrorImpl(values, product, existingVariantSelection);
     }
-
+    
     /**
      * builds GraphQLProductPresentWithDifferentVariantSelectionError without checking for non-null required values
      * @return GraphQLProductPresentWithDifferentVariantSelectionError
      */
     public GraphQLProductPresentWithDifferentVariantSelectionError buildUnchecked() {
-        return new GraphQLProductPresentWithDifferentVariantSelectionErrorImpl(values, product,
-            existingVariantSelection);
+        return new GraphQLProductPresentWithDifferentVariantSelectionErrorImpl(values, product, existingVariantSelection);
     }
 
     /**
      * factory method for an instance of GraphQLProductPresentWithDifferentVariantSelectionErrorBuilder
-     * @return builder
+     * @return builder 
      */
     public static GraphQLProductPresentWithDifferentVariantSelectionErrorBuilder of() {
         return new GraphQLProductPresentWithDifferentVariantSelectionErrorBuilder();
@@ -182,8 +191,7 @@ public class GraphQLProductPresentWithDifferentVariantSelectionErrorBuilder
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static GraphQLProductPresentWithDifferentVariantSelectionErrorBuilder of(
-            final GraphQLProductPresentWithDifferentVariantSelectionError template) {
+    public static GraphQLProductPresentWithDifferentVariantSelectionErrorBuilder of(final GraphQLProductPresentWithDifferentVariantSelectionError template) {
         GraphQLProductPresentWithDifferentVariantSelectionErrorBuilder builder = new GraphQLProductPresentWithDifferentVariantSelectionErrorBuilder();
         builder.values = template.values();
         builder.product = template.getProduct();

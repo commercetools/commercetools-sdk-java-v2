@@ -1,19 +1,20 @@
-
 package com.commercetools.history.models.change_history;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-import java.util.stream.Collectors;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
+import com.commercetools.history.models.change_history.ErrorObject;
+import com.commercetools.history.models.change_history.ErrorResponseImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * ErrorResponse
@@ -27,11 +28,15 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .message("{message}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = ErrorResponseImpl.class)
-public interface ErrorResponse {
+public interface ErrorResponse  {
+
 
     /**
      *
@@ -40,7 +45,6 @@ public interface ErrorResponse {
     @NotNull
     @JsonProperty("statusCode")
     public Integer getStatusCode();
-
     /**
      *
      * @return message
@@ -48,23 +52,20 @@ public interface ErrorResponse {
     @NotNull
     @JsonProperty("message")
     public String getMessage();
-
     /**
      *
      * @return error
      */
-
+    
     @JsonProperty("error")
     public String getError();
-
     /**
      *
      * @return error_description
      */
-
+    
     @JsonProperty("error_description")
     public String getErrorDescription();
-
     /**
      *
      * @return errors
@@ -77,52 +78,56 @@ public interface ErrorResponse {
      * set statusCode
      * @param statusCode value to be set
      */
-
+    
     public void setStatusCode(final Integer statusCode);
-
+    
+    
     /**
      * set message
      * @param message value to be set
      */
-
+    
     public void setMessage(final String message);
-
+    
+    
     /**
      * set error
      * @param error value to be set
      */
-
+    
     public void setError(final String error);
-
+    
+    
     /**
      * set error_description
      * @param errorDescription value to be set
      */
-
+    
     public void setErrorDescription(final String errorDescription);
-
+    
+    
     /**
      * set errors
      * @param errors values to be set
      */
-
+    
     @JsonIgnore
-    public void setErrors(final ErrorObject... errors);
-
+    public void setErrors(final ErrorObject ...errors);
     /**
      * set errors
      * @param errors values to be set
      */
-
+    
     public void setErrors(final List<ErrorObject> errors);
 
     /**
      * factory method
      * @return instance of ErrorResponse
      */
-    public static ErrorResponse of() {
+    public static ErrorResponse of(){
         return new ErrorResponseImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy ErrorResponse
@@ -155,9 +160,7 @@ public interface ErrorResponse {
         instance.setError(template.getError());
         instance.setErrorDescription(template.getErrorDescription());
         instance.setErrors(Optional.ofNullable(template.getErrors())
-                .map(t -> t.stream()
-                        .map(com.commercetools.history.models.change_history.ErrorObject::deepCopy)
-                        .collect(Collectors.toList()))
+                .map(t -> t.stream().map(com.commercetools.history.models.change_history.ErrorObject::deepCopy).collect(Collectors.toList()))
                 .orElse(null));
         return instance;
     }
@@ -169,7 +172,7 @@ public interface ErrorResponse {
     public static ErrorResponseBuilder builder() {
         return ErrorResponseBuilder.of();
     }
-
+    
     /**
      * create builder for ErrorResponse instance
      * @param template instance with prefilled values for the builder
@@ -178,6 +181,7 @@ public interface ErrorResponse {
     public static ErrorResponseBuilder builder(final ErrorResponse template) {
         return ErrorResponseBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -188,7 +192,7 @@ public interface ErrorResponse {
     default <T> T withErrorResponse(Function<ErrorResponse, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

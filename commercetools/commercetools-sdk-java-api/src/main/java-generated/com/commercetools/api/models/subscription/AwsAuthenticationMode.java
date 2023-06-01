@@ -1,32 +1,33 @@
-
 package com.commercetools.api.models.subscription;
-
-import java.util.Arrays;
-import java.util.Optional;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-
+import java.lang.String;
+import java.util.Arrays;
+import java.util.Optional;
 import io.vrap.rmf.base.client.JsonEnum;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
  *  <p>Defines the method of authentication for AWS SQS and SNS Destinations.</p>
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public interface AwsAuthenticationMode extends JsonEnum {
 
     /**
     	<p>Subscriptions with <code>Credentials</code> authentication mode are authenticated using an <code>accessKey</code> and <code>accessSecret</code> pair. This is the default authentication mode for backwards compatibility.</p>
-
+    	
     */
     AwsAuthenticationMode CREDENTIALS = AwsAuthenticationModeEnum.CREDENTIALS;
     /**
     	<p>Subscriptions with <code>IAM</code> authentication mode are authenticated using Identity and Access Management (IAM). For this authentication mode, the following user requires permissions to send messages to the queue or publish to the topic: <code>arn:aws-cn:iam::417094354346:user/subscriptions</code> if the Project is hosted in the China (AWS, Ningxia) Region; <code>arn:aws:iam::362576667341:user/subscriptions</code> for all other <a href="/../api/general-concepts#regions">Regions</a>. This is the recommended authentication mode, as it doesn't require additional key management.</p>
-
+    	
     */
     AwsAuthenticationMode IAM = AwsAuthenticationModeEnum.IAM;
-
+    
     /**
      * possible values of AwsAuthenticationMode
      */
@@ -35,7 +36,7 @@ public interface AwsAuthenticationMode extends JsonEnum {
          * Credentials
          */
         CREDENTIALS("Credentials"),
-
+        
         /**
          * IAM
          */
@@ -92,7 +93,7 @@ public interface AwsAuthenticationMode extends JsonEnum {
             public String name() {
                 return value.toUpperCase();
             }
-
+            
             public String toString() {
                 return value;
             }
@@ -107,7 +108,7 @@ public interface AwsAuthenticationMode extends JsonEnum {
     public static Optional<AwsAuthenticationMode> findEnumViaJsonName(String jsonName) {
         return Arrays.stream(values()).filter(t -> t.getJsonName().equals(jsonName)).findFirst();
     }
-
+    
     /**
      * possible enum values
      * @return array of possible enum values
@@ -115,5 +116,5 @@ public interface AwsAuthenticationMode extends JsonEnum {
     public static AwsAuthenticationMode[] values() {
         return AwsAuthenticationModeEnum.values();
     }
-
+    
 }

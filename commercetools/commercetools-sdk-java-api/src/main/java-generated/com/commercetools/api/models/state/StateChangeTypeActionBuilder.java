@@ -1,8 +1,12 @@
-
 package com.commercetools.api.models.state;
 
+import com.commercetools.api.models.state.StateTypeEnum;
+import com.commercetools.api.models.state.StateUpdateAction;
+import com.commercetools.api.models.state.StateChangeTypeAction;
+import javax.annotation.Nullable;
 import java.util.*;
-
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -16,30 +20,39 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .type(StateTypeEnum.ORDER_STATE)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class StateChangeTypeActionBuilder implements Builder<StateChangeTypeAction> {
 
+    
+    
     private com.commercetools.api.models.state.StateTypeEnum type;
 
+    
     /**
      *  <p>Resource or object types the State shall be assigned to. Must not be empty.</p>
      * @param type value to be set
      * @return Builder
      */
-
-    public StateChangeTypeActionBuilder type(final com.commercetools.api.models.state.StateTypeEnum type) {
+    
+    public StateChangeTypeActionBuilder type( final com.commercetools.api.models.state.StateTypeEnum type) {
         this.type = type;
         return this;
     }
+    
+    
 
     /**
      *  <p>Resource or object types the State shall be assigned to. Must not be empty.</p>
      * @return type
      */
-
-    public com.commercetools.api.models.state.StateTypeEnum getType() {
+    
+    
+    public com.commercetools.api.models.state.StateTypeEnum getType(){
         return this.type;
     }
 
@@ -51,7 +64,7 @@ public class StateChangeTypeActionBuilder implements Builder<StateChangeTypeActi
         Objects.requireNonNull(type, StateChangeTypeAction.class + ": type is missing");
         return new StateChangeTypeActionImpl(type);
     }
-
+    
     /**
      * builds StateChangeTypeAction without checking for non-null required values
      * @return StateChangeTypeAction
@@ -62,7 +75,7 @@ public class StateChangeTypeActionBuilder implements Builder<StateChangeTypeActi
 
     /**
      * factory method for an instance of StateChangeTypeActionBuilder
-     * @return builder
+     * @return builder 
      */
     public static StateChangeTypeActionBuilder of() {
         return new StateChangeTypeActionBuilder();

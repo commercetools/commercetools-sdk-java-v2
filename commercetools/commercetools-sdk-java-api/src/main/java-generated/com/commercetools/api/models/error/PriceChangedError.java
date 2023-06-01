@@ -1,17 +1,20 @@
-
 package com.commercetools.api.models.error;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
+import com.commercetools.api.models.error.ErrorObject;
+import com.commercetools.api.models.error.PriceChangedErrorImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Returned when the Price, Tax Rate, or Shipping Rate of some Line Items changed since they were last added to the Cart.</p>
@@ -31,9 +34,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .shipping(true)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = PriceChangedErrorImpl.class)
 public interface PriceChangedError extends ErrorObject {
 
@@ -49,7 +55,6 @@ public interface PriceChangedError extends ErrorObject {
     @NotNull
     @JsonProperty("code")
     public String getCode();
-
     /**
      *  <p>Plain text description of the reason for the Price change. For example, <code>"The price or tax of some line items changed at the time of placing the order: $lineItems."</code>.</p>
      * @return message
@@ -57,7 +62,6 @@ public interface PriceChangedError extends ErrorObject {
     @NotNull
     @JsonProperty("message")
     public String getMessage();
-
     /**
      *  <p>Unique identifiers of the Line Items for which the Price or TaxRate has changed.</p>
      * @return lineItems
@@ -65,7 +69,6 @@ public interface PriceChangedError extends ErrorObject {
     @NotNull
     @JsonProperty("lineItems")
     public List<String> getLineItems();
-
     /**
      *  <p><code>true</code> if the ShippingRate has changed.</p>
      * @return shipping
@@ -78,38 +81,40 @@ public interface PriceChangedError extends ErrorObject {
      *  <p>Plain text description of the reason for the Price change. For example, <code>"The price or tax of some line items changed at the time of placing the order: $lineItems."</code>.</p>
      * @param message value to be set
      */
-
+    
     public void setMessage(final String message);
-
+    
+    
     /**
      *  <p>Unique identifiers of the Line Items for which the Price or TaxRate has changed.</p>
      * @param lineItems values to be set
      */
-
+    
     @JsonIgnore
-    public void setLineItems(final String... lineItems);
-
+    public void setLineItems(final String ...lineItems);
     /**
      *  <p>Unique identifiers of the Line Items for which the Price or TaxRate has changed.</p>
      * @param lineItems values to be set
      */
-
+    
     public void setLineItems(final List<String> lineItems);
-
+    
     /**
      *  <p><code>true</code> if the ShippingRate has changed.</p>
      * @param shipping value to be set
      */
-
+    
     public void setShipping(final Boolean shipping);
+    
 
     /**
      * factory method
      * @return instance of PriceChangedError
      */
-    public static PriceChangedError of() {
+    public static PriceChangedError of(){
         return new PriceChangedErrorImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy PriceChangedError
@@ -138,7 +143,9 @@ public interface PriceChangedError extends ErrorObject {
         PriceChangedErrorImpl instance = new PriceChangedErrorImpl();
         instance.setMessage(template.getMessage());
         Optional.ofNullable(template.values()).ifPresent(t -> t.forEach(instance::setValue));
-        instance.setLineItems(Optional.ofNullable(template.getLineItems()).map(ArrayList::new).orElse(null));
+        instance.setLineItems(Optional.ofNullable(template.getLineItems())
+                .map(ArrayList::new)
+                .orElse(null));
         instance.setShipping(template.getShipping());
         return instance;
     }
@@ -150,7 +157,7 @@ public interface PriceChangedError extends ErrorObject {
     public static PriceChangedErrorBuilder builder() {
         return PriceChangedErrorBuilder.of();
     }
-
+    
     /**
      * create builder for PriceChangedError instance
      * @param template instance with prefilled values for the builder
@@ -159,6 +166,7 @@ public interface PriceChangedError extends ErrorObject {
     public static PriceChangedErrorBuilder builder(final PriceChangedError template) {
         return PriceChangedErrorBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -169,7 +177,7 @@ public interface PriceChangedError extends ErrorObject {
     default <T> T withPriceChangedError(Function<PriceChangedError, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

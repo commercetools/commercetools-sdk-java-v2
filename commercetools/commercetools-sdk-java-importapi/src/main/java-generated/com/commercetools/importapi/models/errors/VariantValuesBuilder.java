@@ -1,11 +1,12 @@
-
 package com.commercetools.importapi.models.errors;
 
+import com.commercetools.importapi.models.prices.PriceImport;
+import com.commercetools.importapi.models.productvariants.Attribute;
+import com.commercetools.importapi.models.errors.VariantValues;
+import javax.annotation.Nullable;
 import java.util.*;
 import java.util.function.Function;
-
-import javax.annotation.Nullable;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -20,210 +21,217 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .plusAttributes(attributesBuilder -> attributesBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class VariantValuesBuilder implements Builder<VariantValues> {
 
+    
     @Nullable
     private String sku;
-
+    
+    
+    
     private java.util.List<com.commercetools.importapi.models.prices.PriceImport> prices;
-
+    
+    
+    
     private java.util.List<com.commercetools.importapi.models.productvariants.Attribute> attributes;
 
+    
     /**
      * set the value to the sku
      * @param sku value to be set
      * @return Builder
      */
-
+    
     public VariantValuesBuilder sku(@Nullable final String sku) {
         this.sku = sku;
         return this;
     }
-
+    
+    
+    
     /**
      * set values to the prices
      * @param prices value to be set
      * @return Builder
      */
-
-    public VariantValuesBuilder prices(final com.commercetools.importapi.models.prices.PriceImport... prices) {
+    
+    public VariantValuesBuilder prices( final com.commercetools.importapi.models.prices.PriceImport ...prices) {
         this.prices = new ArrayList<>(Arrays.asList(prices));
         return this;
     }
-
+    
     /**
      * set value to the prices
      * @param prices value to be set
      * @return Builder
      */
-
-    public VariantValuesBuilder prices(
-            final java.util.List<com.commercetools.importapi.models.prices.PriceImport> prices) {
+    
+    public VariantValuesBuilder prices( final java.util.List<com.commercetools.importapi.models.prices.PriceImport> prices) {
         this.prices = prices;
         return this;
     }
-
+    
     /**
      * add values to the prices
      * @param prices value to be set
      * @return Builder
      */
-
-    public VariantValuesBuilder plusPrices(final com.commercetools.importapi.models.prices.PriceImport... prices) {
+    
+    public VariantValuesBuilder plusPrices( final com.commercetools.importapi.models.prices.PriceImport ...prices) {
         if (this.prices == null) {
             this.prices = new ArrayList<>();
         }
         this.prices.addAll(Arrays.asList(prices));
         return this;
     }
-
+    
+    
+    
     /**
      * add the value to the prices using the builder function
      * @param builder function to build the prices value
      * @return Builder
      */
-
-    public VariantValuesBuilder plusPrices(
-            Function<com.commercetools.importapi.models.prices.PriceImportBuilder, com.commercetools.importapi.models.prices.PriceImportBuilder> builder) {
+    
+    public VariantValuesBuilder plusPrices(Function<com.commercetools.importapi.models.prices.PriceImportBuilder, com.commercetools.importapi.models.prices.PriceImportBuilder> builder) {
         if (this.prices == null) {
             this.prices = new ArrayList<>();
         }
         this.prices.add(builder.apply(com.commercetools.importapi.models.prices.PriceImportBuilder.of()).build());
         return this;
     }
-
+    
     /**
      * set the value to the prices using the builder function
      * @param builder function to build the prices value
      * @return Builder
      */
-
-    public VariantValuesBuilder withPrices(
-            Function<com.commercetools.importapi.models.prices.PriceImportBuilder, com.commercetools.importapi.models.prices.PriceImportBuilder> builder) {
+    
+    public VariantValuesBuilder withPrices(Function<com.commercetools.importapi.models.prices.PriceImportBuilder, com.commercetools.importapi.models.prices.PriceImportBuilder> builder) {
         this.prices = new ArrayList<>();
         this.prices.add(builder.apply(com.commercetools.importapi.models.prices.PriceImportBuilder.of()).build());
         return this;
     }
-
+    
     /**
      * add the value to the prices using the builder function
      * @param builder function to build the prices value
      * @return Builder
      */
-
-    public VariantValuesBuilder addPrices(
-            Function<com.commercetools.importapi.models.prices.PriceImportBuilder, com.commercetools.importapi.models.prices.PriceImport> builder) {
+    
+    public VariantValuesBuilder addPrices(Function<com.commercetools.importapi.models.prices.PriceImportBuilder, com.commercetools.importapi.models.prices.PriceImport> builder) {
         return plusPrices(builder.apply(com.commercetools.importapi.models.prices.PriceImportBuilder.of()));
     }
-
+    
     /**
      * set the value to the prices using the builder function
      * @param builder function to build the prices value
      * @return Builder
      */
-
-    public VariantValuesBuilder setPrices(
-            Function<com.commercetools.importapi.models.prices.PriceImportBuilder, com.commercetools.importapi.models.prices.PriceImport> builder) {
+    
+    public VariantValuesBuilder setPrices(Function<com.commercetools.importapi.models.prices.PriceImportBuilder, com.commercetools.importapi.models.prices.PriceImport> builder) {
         return prices(builder.apply(com.commercetools.importapi.models.prices.PriceImportBuilder.of()));
     }
-
+                    
+    
     /**
      * set values to the attributes
      * @param attributes value to be set
      * @return Builder
      */
-
-    public VariantValuesBuilder attributes(
-            final com.commercetools.importapi.models.productvariants.Attribute... attributes) {
+    
+    public VariantValuesBuilder attributes( final com.commercetools.importapi.models.productvariants.Attribute ...attributes) {
         this.attributes = new ArrayList<>(Arrays.asList(attributes));
         return this;
     }
-
+    
     /**
      * set value to the attributes
      * @param attributes value to be set
      * @return Builder
      */
-
-    public VariantValuesBuilder attributes(
-            final java.util.List<com.commercetools.importapi.models.productvariants.Attribute> attributes) {
+    
+    public VariantValuesBuilder attributes( final java.util.List<com.commercetools.importapi.models.productvariants.Attribute> attributes) {
         this.attributes = attributes;
         return this;
     }
-
+    
     /**
      * add values to the attributes
      * @param attributes value to be set
      * @return Builder
      */
-
-    public VariantValuesBuilder plusAttributes(
-            final com.commercetools.importapi.models.productvariants.Attribute... attributes) {
+    
+    public VariantValuesBuilder plusAttributes( final com.commercetools.importapi.models.productvariants.Attribute ...attributes) {
         if (this.attributes == null) {
             this.attributes = new ArrayList<>();
         }
         this.attributes.addAll(Arrays.asList(attributes));
         return this;
     }
-
+    
+    
     /**
      * add a value to the attributes using the builder function
      * @param builder function to build the attributes value
      * @return Builder
      */
-
-    public VariantValuesBuilder plusAttributes(
-            Function<com.commercetools.importapi.models.productvariants.AttributeBuilder, Builder<? extends com.commercetools.importapi.models.productvariants.Attribute>> builder) {
+    
+    public VariantValuesBuilder plusAttributes(Function<com.commercetools.importapi.models.productvariants.AttributeBuilder, Builder<? extends com.commercetools.importapi.models.productvariants.Attribute>> builder) {
         if (this.attributes == null) {
             this.attributes = new ArrayList<>();
         }
-        this.attributes
-                .add(builder.apply(com.commercetools.importapi.models.productvariants.AttributeBuilder.of()).build());
+        this.attributes.add(builder.apply(com.commercetools.importapi.models.productvariants.AttributeBuilder.of()).build());
         return this;
     }
-
+    
     /**
      * set the value to the attributes using the builder function
      * @param builder function to build the attributes value
      * @return Builder
      */
-
-    public VariantValuesBuilder withAttributes(
-            Function<com.commercetools.importapi.models.productvariants.AttributeBuilder, Builder<? extends com.commercetools.importapi.models.productvariants.Attribute>> builder) {
+    
+    public VariantValuesBuilder withAttributes(Function<com.commercetools.importapi.models.productvariants.AttributeBuilder, Builder<? extends com.commercetools.importapi.models.productvariants.Attribute>> builder) {
         this.attributes = new ArrayList<>();
-        this.attributes
-                .add(builder.apply(com.commercetools.importapi.models.productvariants.AttributeBuilder.of()).build());
+        this.attributes.add(builder.apply(com.commercetools.importapi.models.productvariants.AttributeBuilder.of()).build());
         return this;
     }
+                    
+    
 
     /**
      * value of sku}
      * @return sku
      */
-
+    
     @Nullable
-    public String getSku() {
+    public String getSku(){
         return this.sku;
     }
-
+    
     /**
      * value of prices}
      * @return prices
      */
-
-    public java.util.List<com.commercetools.importapi.models.prices.PriceImport> getPrices() {
+    
+    
+    public java.util.List<com.commercetools.importapi.models.prices.PriceImport> getPrices(){
         return this.prices;
     }
-
+    
     /**
      * value of attributes}
      * @return attributes
      */
-
-    public java.util.List<com.commercetools.importapi.models.productvariants.Attribute> getAttributes() {
+    
+    
+    public java.util.List<com.commercetools.importapi.models.productvariants.Attribute> getAttributes(){
         return this.attributes;
     }
 
@@ -236,7 +244,7 @@ public class VariantValuesBuilder implements Builder<VariantValues> {
         Objects.requireNonNull(attributes, VariantValues.class + ": attributes is missing");
         return new VariantValuesImpl(sku, prices, attributes);
     }
-
+    
     /**
      * builds VariantValues without checking for non-null required values
      * @return VariantValues
@@ -247,7 +255,7 @@ public class VariantValuesBuilder implements Builder<VariantValues> {
 
     /**
      * factory method for an instance of VariantValuesBuilder
-     * @return builder
+     * @return builder 
      */
     public static VariantValuesBuilder of() {
         return new VariantValuesBuilder();

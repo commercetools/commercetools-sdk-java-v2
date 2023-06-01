@@ -1,17 +1,20 @@
-
 package com.commercetools.history.models.change_value;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
 
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
+import com.commercetools.history.models.change_value.ShippingMethodChangeValueImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * ShippingMethodChangeValue
@@ -25,11 +28,15 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .name("{name}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = ShippingMethodChangeValueImpl.class)
-public interface ShippingMethodChangeValue {
+public interface ShippingMethodChangeValue  {
+
 
     /**
      *
@@ -38,7 +45,6 @@ public interface ShippingMethodChangeValue {
     @NotNull
     @JsonProperty("id")
     public String getId();
-
     /**
      *
      * @return name
@@ -51,23 +57,26 @@ public interface ShippingMethodChangeValue {
      * set id
      * @param id value to be set
      */
-
+    
     public void setId(final String id);
-
+    
+    
     /**
      * set name
      * @param name value to be set
      */
-
+    
     public void setName(final String name);
+    
 
     /**
      * factory method
      * @return instance of ShippingMethodChangeValue
      */
-    public static ShippingMethodChangeValue of() {
+    public static ShippingMethodChangeValue of(){
         return new ShippingMethodChangeValueImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy ShippingMethodChangeValue
@@ -104,7 +113,7 @@ public interface ShippingMethodChangeValue {
     public static ShippingMethodChangeValueBuilder builder() {
         return ShippingMethodChangeValueBuilder.of();
     }
-
+    
     /**
      * create builder for ShippingMethodChangeValue instance
      * @param template instance with prefilled values for the builder
@@ -113,6 +122,7 @@ public interface ShippingMethodChangeValue {
     public static ShippingMethodChangeValueBuilder builder(final ShippingMethodChangeValue template) {
         return ShippingMethodChangeValueBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -123,7 +133,7 @@ public interface ShippingMethodChangeValue {
     default <T> T withShippingMethodChangeValue(Function<ShippingMethodChangeValue, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

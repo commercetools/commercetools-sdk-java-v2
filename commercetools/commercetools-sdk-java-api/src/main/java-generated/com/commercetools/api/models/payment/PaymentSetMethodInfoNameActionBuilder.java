@@ -1,11 +1,12 @@
-
 package com.commercetools.api.models.payment;
 
+import com.commercetools.api.models.common.LocalizedString;
+import com.commercetools.api.models.payment.PaymentUpdateAction;
+import com.commercetools.api.models.payment.PaymentSetMethodInfoNameAction;
+import javax.annotation.Nullable;
 import java.util.*;
 import java.util.function.Function;
-
-import javax.annotation.Nullable;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -18,57 +19,61 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     PaymentSetMethodInfoNameAction paymentSetMethodInfoNameAction = PaymentSetMethodInfoNameAction.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class PaymentSetMethodInfoNameActionBuilder implements Builder<PaymentSetMethodInfoNameAction> {
 
+    
     @Nullable
     private com.commercetools.api.models.common.LocalizedString name;
 
+    
     /**
      *  <p>Value to set. If empty, any existing value will be removed.</p>
      * @param builder function to build the name value
      * @return Builder
      */
-
-    public PaymentSetMethodInfoNameActionBuilder name(
-            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
+    
+    public PaymentSetMethodInfoNameActionBuilder name(Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
         this.name = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of()).build();
         return this;
     }
-
+    
     /**
      *  <p>Value to set. If empty, any existing value will be removed.</p>
      * @param builder function to build the name value
      * @return Builder
      */
-
-    public PaymentSetMethodInfoNameActionBuilder withName(
-            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedString> builder) {
+    
+    public PaymentSetMethodInfoNameActionBuilder withName(Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedString> builder) {
         this.name = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of());
         return this;
     }
-
+                    
     /**
      *  <p>Value to set. If empty, any existing value will be removed.</p>
      * @param name value to be set
      * @return Builder
      */
-
-    public PaymentSetMethodInfoNameActionBuilder name(
-            @Nullable final com.commercetools.api.models.common.LocalizedString name) {
+    
+    public PaymentSetMethodInfoNameActionBuilder name(@Nullable final com.commercetools.api.models.common.LocalizedString name) {
         this.name = name;
         return this;
     }
+    
+    
 
     /**
      *  <p>Value to set. If empty, any existing value will be removed.</p>
      * @return name
      */
-
+    
     @Nullable
-    public com.commercetools.api.models.common.LocalizedString getName() {
+    public com.commercetools.api.models.common.LocalizedString getName(){
         return this.name;
     }
 
@@ -79,7 +84,7 @@ public class PaymentSetMethodInfoNameActionBuilder implements Builder<PaymentSet
     public PaymentSetMethodInfoNameAction build() {
         return new PaymentSetMethodInfoNameActionImpl(name);
     }
-
+    
     /**
      * builds PaymentSetMethodInfoNameAction without checking for non-null required values
      * @return PaymentSetMethodInfoNameAction
@@ -90,7 +95,7 @@ public class PaymentSetMethodInfoNameActionBuilder implements Builder<PaymentSet
 
     /**
      * factory method for an instance of PaymentSetMethodInfoNameActionBuilder
-     * @return builder
+     * @return builder 
      */
     public static PaymentSetMethodInfoNameActionBuilder of() {
         return new PaymentSetMethodInfoNameActionBuilder();

@@ -1,39 +1,45 @@
-
 package com.commercetools.api.models.product;
 
-import java.time.*;
-import java.util.*;
-
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
-
-import io.vrap.rmf.base.client.ModelBase;
+import com.commercetools.api.models.product.SuggestTokenizer;
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.ModelBase;
+import javax.validation.Valid;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.annotation.*;
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
  * SearchKeyword
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class SearchKeywordImpl implements SearchKeyword, ModelBase {
 
+    
     private String text;
-
+    
+    
     private com.commercetools.api.models.product.SuggestTokenizer suggestTokenizer;
 
     /**
      * create instance with all properties
      */
     @JsonCreator
-    SearchKeywordImpl(@JsonProperty("text") final String text,
-            @JsonProperty("suggestTokenizer") final com.commercetools.api.models.product.SuggestTokenizer suggestTokenizer) {
+    SearchKeywordImpl(@JsonProperty("text") final String text, @JsonProperty("suggestTokenizer") final com.commercetools.api.models.product.SuggestTokenizer suggestTokenizer) {
         this.text = text;
         this.suggestTokenizer = suggestTokenizer;
     }
-
     /**
      * create empty instance
      */
@@ -43,43 +49,49 @@ public class SearchKeywordImpl implements SearchKeyword, ModelBase {
     /**
      *  <p>Text to return in the result of a suggest query.</p>
      */
-
-    public String getText() {
+    
+    public String getText(){
         return this.text;
     }
-
+    
     /**
      *  <p>If no tokenizer is defined, the <code>text</code> is used as a single token.</p>
      */
-
-    public com.commercetools.api.models.product.SuggestTokenizer getSuggestTokenizer() {
+    
+    public com.commercetools.api.models.product.SuggestTokenizer getSuggestTokenizer(){
         return this.suggestTokenizer;
     }
 
-    public void setText(final String text) {
+    
+    public void setText(final String text){
         this.text = text;
     }
-
-    public void setSuggestTokenizer(final com.commercetools.api.models.product.SuggestTokenizer suggestTokenizer) {
+    
+    
+    public void setSuggestTokenizer(final com.commercetools.api.models.product.SuggestTokenizer suggestTokenizer){
         this.suggestTokenizer = suggestTokenizer;
     }
 
     @Override
     public boolean equals(Object o) {
-        if (this == o)
-            return true;
-
-        if (o == null || getClass() != o.getClass())
-            return false;
-
+        if (this == o) return true;
+    
+        if (o == null || getClass() != o.getClass()) return false;
+    
         SearchKeywordImpl that = (SearchKeywordImpl) o;
-
-        return new EqualsBuilder().append(text, that.text).append(suggestTokenizer, that.suggestTokenizer).isEquals();
+    
+        return new EqualsBuilder()
+                .append(text, that.text)
+                .append(suggestTokenizer, that.suggestTokenizer)
+                .isEquals();
     }
-
+    
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(text).append(suggestTokenizer).toHashCode();
+        return new HashCodeBuilder(17, 37)
+            .append(text)
+            .append(suggestTokenizer)
+            .toHashCode();
     }
 
 }

@@ -1,16 +1,20 @@
-
 package com.commercetools.api.models.shipping_method;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
+import com.commercetools.api.models.shipping_method.ShippingMethodUpdateAction;
+import com.commercetools.api.models.shipping_method.ShippingMethodSetPredicateActionImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * ShippingMethodSetPredicateAction
@@ -22,9 +26,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     ShippingMethodSetPredicateAction shippingMethodSetPredicateAction = ShippingMethodSetPredicateAction.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = ShippingMethodSetPredicateActionImpl.class)
 public interface ShippingMethodSetPredicateAction extends ShippingMethodUpdateAction {
 
@@ -37,7 +44,7 @@ public interface ShippingMethodSetPredicateAction extends ShippingMethodUpdateAc
      *  <p>A valid Cart predicate. If <code>predicate</code> is absent or <code>null</code>, it is removed if it exists.</p>
      * @return predicate
      */
-
+    
     @JsonProperty("predicate")
     public String getPredicate();
 
@@ -45,16 +52,18 @@ public interface ShippingMethodSetPredicateAction extends ShippingMethodUpdateAc
      *  <p>A valid Cart predicate. If <code>predicate</code> is absent or <code>null</code>, it is removed if it exists.</p>
      * @param predicate value to be set
      */
-
+    
     public void setPredicate(final String predicate);
+    
 
     /**
      * factory method
      * @return instance of ShippingMethodSetPredicateAction
      */
-    public static ShippingMethodSetPredicateAction of() {
+    public static ShippingMethodSetPredicateAction of(){
         return new ShippingMethodSetPredicateActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy ShippingMethodSetPredicateAction
@@ -89,7 +98,7 @@ public interface ShippingMethodSetPredicateAction extends ShippingMethodUpdateAc
     public static ShippingMethodSetPredicateActionBuilder builder() {
         return ShippingMethodSetPredicateActionBuilder.of();
     }
-
+    
     /**
      * create builder for ShippingMethodSetPredicateAction instance
      * @param template instance with prefilled values for the builder
@@ -98,6 +107,7 @@ public interface ShippingMethodSetPredicateAction extends ShippingMethodUpdateAc
     public static ShippingMethodSetPredicateActionBuilder builder(final ShippingMethodSetPredicateAction template) {
         return ShippingMethodSetPredicateActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -108,7 +118,7 @@ public interface ShippingMethodSetPredicateAction extends ShippingMethodUpdateAc
     default <T> T withShippingMethodSetPredicateAction(Function<ShippingMethodSetPredicateAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

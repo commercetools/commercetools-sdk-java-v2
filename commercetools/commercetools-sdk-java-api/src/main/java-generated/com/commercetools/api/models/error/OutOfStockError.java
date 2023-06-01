@@ -1,17 +1,20 @@
-
 package com.commercetools.api.models.error;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
+import com.commercetools.api.models.error.ErrorObject;
+import com.commercetools.api.models.error.OutOfStockErrorImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Returned when some of the Line Items are out of stock at the time of placing an Order.</p>
@@ -31,9 +34,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .plusSkus(skusBuilder -> skusBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = OutOfStockErrorImpl.class)
 public interface OutOfStockError extends ErrorObject {
 
@@ -49,7 +55,6 @@ public interface OutOfStockError extends ErrorObject {
     @NotNull
     @JsonProperty("code")
     public String getCode();
-
     /**
      *  <p><code>"Some line items are out of stock at the time of placing the order: $itemSku."</code></p>
      * @return message
@@ -57,7 +62,6 @@ public interface OutOfStockError extends ErrorObject {
     @NotNull
     @JsonProperty("message")
     public String getMessage();
-
     /**
      *  <p>Unique identifiers of the Line Items that are out of stock.</p>
      * @return lineItems
@@ -65,7 +69,6 @@ public interface OutOfStockError extends ErrorObject {
     @NotNull
     @JsonProperty("lineItems")
     public List<String> getLineItems();
-
     /**
      *  <p>SKUs of the Line Items that are out of stock.</p>
      * @return skus
@@ -78,46 +81,46 @@ public interface OutOfStockError extends ErrorObject {
      *  <p><code>"Some line items are out of stock at the time of placing the order: $itemSku."</code></p>
      * @param message value to be set
      */
-
+    
     public void setMessage(final String message);
-
+    
+    
     /**
      *  <p>Unique identifiers of the Line Items that are out of stock.</p>
      * @param lineItems values to be set
      */
-
+    
     @JsonIgnore
-    public void setLineItems(final String... lineItems);
-
+    public void setLineItems(final String ...lineItems);
     /**
      *  <p>Unique identifiers of the Line Items that are out of stock.</p>
      * @param lineItems values to be set
      */
-
+    
     public void setLineItems(final List<String> lineItems);
-
+    
     /**
      *  <p>SKUs of the Line Items that are out of stock.</p>
      * @param skus values to be set
      */
-
+    
     @JsonIgnore
-    public void setSkus(final String... skus);
-
+    public void setSkus(final String ...skus);
     /**
      *  <p>SKUs of the Line Items that are out of stock.</p>
      * @param skus values to be set
      */
-
+    
     public void setSkus(final List<String> skus);
 
     /**
      * factory method
      * @return instance of OutOfStockError
      */
-    public static OutOfStockError of() {
+    public static OutOfStockError of(){
         return new OutOfStockErrorImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy OutOfStockError
@@ -146,8 +149,12 @@ public interface OutOfStockError extends ErrorObject {
         OutOfStockErrorImpl instance = new OutOfStockErrorImpl();
         instance.setMessage(template.getMessage());
         Optional.ofNullable(template.values()).ifPresent(t -> t.forEach(instance::setValue));
-        instance.setLineItems(Optional.ofNullable(template.getLineItems()).map(ArrayList::new).orElse(null));
-        instance.setSkus(Optional.ofNullable(template.getSkus()).map(ArrayList::new).orElse(null));
+        instance.setLineItems(Optional.ofNullable(template.getLineItems())
+                .map(ArrayList::new)
+                .orElse(null));
+        instance.setSkus(Optional.ofNullable(template.getSkus())
+                .map(ArrayList::new)
+                .orElse(null));
         return instance;
     }
 
@@ -158,7 +165,7 @@ public interface OutOfStockError extends ErrorObject {
     public static OutOfStockErrorBuilder builder() {
         return OutOfStockErrorBuilder.of();
     }
-
+    
     /**
      * create builder for OutOfStockError instance
      * @param template instance with prefilled values for the builder
@@ -167,6 +174,7 @@ public interface OutOfStockError extends ErrorObject {
     public static OutOfStockErrorBuilder builder(final OutOfStockError template) {
         return OutOfStockErrorBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -177,7 +185,7 @@ public interface OutOfStockError extends ErrorObject {
     default <T> T withOutOfStockError(Function<OutOfStockError, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

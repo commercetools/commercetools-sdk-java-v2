@@ -1,11 +1,11 @@
-
 package com.commercetools.api.predicates.query.message;
-
-import java.util.function.Function;
 
 import com.commercetools.api.predicates.query.*;
 
-public class StagedQuoteCreatedMessagePayloadQueryBuilderDsl {
+import java.util.function.Function;
+
+
+public class StagedQuoteCreatedMessagePayloadQueryBuilderDsl  {
     public StagedQuoteCreatedMessagePayloadQueryBuilderDsl() {
     }
 
@@ -14,17 +14,16 @@ public class StagedQuoteCreatedMessagePayloadQueryBuilderDsl {
     }
 
     public StringComparisonPredicateBuilder<StagedQuoteCreatedMessagePayloadQueryBuilderDsl> type() {
-        return new StringComparisonPredicateBuilder<>(
-            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("type")),
-            p -> new CombinationQueryPredicate<>(p, StagedQuoteCreatedMessagePayloadQueryBuilderDsl::of));
+        return new StringComparisonPredicateBuilder<>(BinaryQueryPredicate.of().left(new ConstantQueryPredicate("type")),
+        p -> new CombinationQueryPredicate<>(p, StagedQuoteCreatedMessagePayloadQueryBuilderDsl::of));
     }
-
     public CombinationQueryPredicate<StagedQuoteCreatedMessagePayloadQueryBuilderDsl> stagedQuote(
-            Function<com.commercetools.api.predicates.query.staged_quote.StagedQuoteQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.staged_quote.StagedQuoteQueryBuilderDsl>> fn) {
+        Function<com.commercetools.api.predicates.query.staged_quote.StagedQuoteQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.staged_quote.StagedQuoteQueryBuilderDsl>> fn) {
         return new CombinationQueryPredicate<>(ContainerQueryPredicate.of()
-                .parent(ConstantQueryPredicate.of().constant("stagedQuote"))
-                .inner(fn.apply(com.commercetools.api.predicates.query.staged_quote.StagedQuoteQueryBuilderDsl.of())),
+            .parent(ConstantQueryPredicate.of().constant("stagedQuote"))
+            .inner(fn.apply(com.commercetools.api.predicates.query.staged_quote.StagedQuoteQueryBuilderDsl.of())),
             StagedQuoteCreatedMessagePayloadQueryBuilderDsl::of);
     }
-
+    
+    
 }

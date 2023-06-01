@@ -1,19 +1,21 @@
-
 package com.commercetools.api.models.category;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
+import com.commercetools.api.models.category.CategoryUpdateAction;
 import com.commercetools.api.models.common.AssetDraft;
+import com.commercetools.api.models.category.CategoryAddAssetActionImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * CategoryAddAssetAction
@@ -26,9 +28,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .asset(assetBuilder -> assetBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = CategoryAddAssetActionImpl.class)
 public interface CategoryAddAssetAction extends CategoryUpdateAction {
 
@@ -45,12 +50,11 @@ public interface CategoryAddAssetAction extends CategoryUpdateAction {
     @Valid
     @JsonProperty("asset")
     public AssetDraft getAsset();
-
     /**
      *  <p>Position in the array at which the Asset should be put. When specified, the value must be between <code>0</code> and the total number of Assets minus <code>1</code>.</p>
      * @return position
      */
-
+    
     @JsonProperty("position")
     public Integer getPosition();
 
@@ -58,23 +62,26 @@ public interface CategoryAddAssetAction extends CategoryUpdateAction {
      *  <p>Value to append.</p>
      * @param asset value to be set
      */
-
+    
     public void setAsset(final AssetDraft asset);
-
+    
+    
     /**
      *  <p>Position in the array at which the Asset should be put. When specified, the value must be between <code>0</code> and the total number of Assets minus <code>1</code>.</p>
      * @param position value to be set
      */
-
+    
     public void setPosition(final Integer position);
+    
 
     /**
      * factory method
      * @return instance of CategoryAddAssetAction
      */
-    public static CategoryAddAssetAction of() {
+    public static CategoryAddAssetAction of(){
         return new CategoryAddAssetActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy CategoryAddAssetAction
@@ -111,7 +118,7 @@ public interface CategoryAddAssetAction extends CategoryUpdateAction {
     public static CategoryAddAssetActionBuilder builder() {
         return CategoryAddAssetActionBuilder.of();
     }
-
+    
     /**
      * create builder for CategoryAddAssetAction instance
      * @param template instance with prefilled values for the builder
@@ -120,6 +127,7 @@ public interface CategoryAddAssetAction extends CategoryUpdateAction {
     public static CategoryAddAssetActionBuilder builder(final CategoryAddAssetAction template) {
         return CategoryAddAssetActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -130,7 +138,7 @@ public interface CategoryAddAssetAction extends CategoryUpdateAction {
     default <T> T withCategoryAddAssetAction(Function<CategoryAddAssetAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

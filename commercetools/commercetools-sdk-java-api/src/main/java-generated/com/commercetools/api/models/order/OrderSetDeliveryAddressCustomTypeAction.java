@@ -1,19 +1,22 @@
-
 package com.commercetools.api.models.order;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-
+import com.commercetools.api.models.order.OrderUpdateAction;
 import com.commercetools.api.models.type.FieldContainer;
 import com.commercetools.api.models.type.TypeResourceIdentifier;
+import com.commercetools.api.models.order.OrderSetDeliveryAddressCustomTypeActionImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * OrderSetDeliveryAddressCustomTypeAction
@@ -25,9 +28,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     OrderSetDeliveryAddressCustomTypeAction orderSetDeliveryAddressCustomTypeAction = OrderSetDeliveryAddressCustomTypeAction.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = OrderSetDeliveryAddressCustomTypeActionImpl.class)
 public interface OrderSetDeliveryAddressCustomTypeAction extends OrderUpdateAction {
 
@@ -40,18 +46,16 @@ public interface OrderSetDeliveryAddressCustomTypeAction extends OrderUpdateActi
      *  <p>Either <code>deliveryId</code> or <code>deliveryKey</code> is required for this update action.</p>
      * @return deliveryId
      */
-
+    
     @JsonProperty("deliveryId")
     public String getDeliveryId();
-
     /**
      *  <p>Either <code>deliveryId</code> or <code>deliveryKey</code> is required for this update action.</p>
      * @return deliveryKey
      */
-
+    
     @JsonProperty("deliveryKey")
     public String getDeliveryKey();
-
     /**
      *  <p>Defines the Type that extends the <code>address</code> in a Delivery with Custom Fields. If absent, any existing Type and Custom Fields are removed from the <code>address</code> in a Delivery.</p>
      * @return type
@@ -59,7 +63,6 @@ public interface OrderSetDeliveryAddressCustomTypeAction extends OrderUpdateActi
     @Valid
     @JsonProperty("type")
     public TypeResourceIdentifier getType();
-
     /**
      *  <p>Sets the Custom Fields fields for the <code>address</code> in a Delivery.</p>
      * @return fields
@@ -72,37 +75,42 @@ public interface OrderSetDeliveryAddressCustomTypeAction extends OrderUpdateActi
      *  <p>Either <code>deliveryId</code> or <code>deliveryKey</code> is required for this update action.</p>
      * @param deliveryId value to be set
      */
-
+    
     public void setDeliveryId(final String deliveryId);
-
+    
+    
     /**
      *  <p>Either <code>deliveryId</code> or <code>deliveryKey</code> is required for this update action.</p>
      * @param deliveryKey value to be set
      */
-
+    
     public void setDeliveryKey(final String deliveryKey);
-
+    
+    
     /**
      *  <p>Defines the Type that extends the <code>address</code> in a Delivery with Custom Fields. If absent, any existing Type and Custom Fields are removed from the <code>address</code> in a Delivery.</p>
      * @param type value to be set
      */
-
+    
     public void setType(final TypeResourceIdentifier type);
-
+    
+    
     /**
      *  <p>Sets the Custom Fields fields for the <code>address</code> in a Delivery.</p>
      * @param fields value to be set
      */
-
+    
     public void setFields(final FieldContainer fields);
+    
 
     /**
      * factory method
      * @return instance of OrderSetDeliveryAddressCustomTypeAction
      */
-    public static OrderSetDeliveryAddressCustomTypeAction of() {
+    public static OrderSetDeliveryAddressCustomTypeAction of(){
         return new OrderSetDeliveryAddressCustomTypeActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy OrderSetDeliveryAddressCustomTypeAction
@@ -124,8 +132,7 @@ public interface OrderSetDeliveryAddressCustomTypeAction extends OrderUpdateActi
      * @return copy instance
      */
     @Nullable
-    public static OrderSetDeliveryAddressCustomTypeAction deepCopy(
-            @Nullable final OrderSetDeliveryAddressCustomTypeAction template) {
+    public static OrderSetDeliveryAddressCustomTypeAction deepCopy(@Nullable final OrderSetDeliveryAddressCustomTypeAction template) {
         if (template == null) {
             return null;
         }
@@ -144,16 +151,16 @@ public interface OrderSetDeliveryAddressCustomTypeAction extends OrderUpdateActi
     public static OrderSetDeliveryAddressCustomTypeActionBuilder builder() {
         return OrderSetDeliveryAddressCustomTypeActionBuilder.of();
     }
-
+    
     /**
      * create builder for OrderSetDeliveryAddressCustomTypeAction instance
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static OrderSetDeliveryAddressCustomTypeActionBuilder builder(
-            final OrderSetDeliveryAddressCustomTypeAction template) {
+    public static OrderSetDeliveryAddressCustomTypeActionBuilder builder(final OrderSetDeliveryAddressCustomTypeAction template) {
         return OrderSetDeliveryAddressCustomTypeActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -161,11 +168,10 @@ public interface OrderSetDeliveryAddressCustomTypeAction extends OrderUpdateActi
      * @param helper function to map the object
      * @return mapped value
      */
-    default <T> T withOrderSetDeliveryAddressCustomTypeAction(
-            Function<OrderSetDeliveryAddressCustomTypeAction, T> helper) {
+    default <T> T withOrderSetDeliveryAddressCustomTypeAction(Function<OrderSetDeliveryAddressCustomTypeAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

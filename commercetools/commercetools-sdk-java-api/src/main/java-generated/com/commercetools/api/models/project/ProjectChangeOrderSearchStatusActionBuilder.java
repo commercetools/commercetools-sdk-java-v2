@@ -1,8 +1,12 @@
-
 package com.commercetools.api.models.project;
 
+import com.commercetools.api.models.project.OrderSearchStatus;
+import com.commercetools.api.models.project.ProjectUpdateAction;
+import com.commercetools.api.models.project.ProjectChangeOrderSearchStatusAction;
+import javax.annotation.Nullable;
 import java.util.*;
-
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -16,31 +20,39 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .status(OrderSearchStatus.ACTIVATED)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class ProjectChangeOrderSearchStatusActionBuilder implements Builder<ProjectChangeOrderSearchStatusAction> {
 
+    
+    
     private com.commercetools.api.models.project.OrderSearchStatus status;
 
+    
     /**
      *  <p>Activates or deactivates the Order Search feature. Activation will trigger building a search index for the Orders in the Project.</p>
      * @param status value to be set
      * @return Builder
      */
-
-    public ProjectChangeOrderSearchStatusActionBuilder status(
-            final com.commercetools.api.models.project.OrderSearchStatus status) {
+    
+    public ProjectChangeOrderSearchStatusActionBuilder status( final com.commercetools.api.models.project.OrderSearchStatus status) {
         this.status = status;
         return this;
     }
+    
+    
 
     /**
      *  <p>Activates or deactivates the Order Search feature. Activation will trigger building a search index for the Orders in the Project.</p>
      * @return status
      */
-
-    public com.commercetools.api.models.project.OrderSearchStatus getStatus() {
+    
+    
+    public com.commercetools.api.models.project.OrderSearchStatus getStatus(){
         return this.status;
     }
 
@@ -52,7 +64,7 @@ public class ProjectChangeOrderSearchStatusActionBuilder implements Builder<Proj
         Objects.requireNonNull(status, ProjectChangeOrderSearchStatusAction.class + ": status is missing");
         return new ProjectChangeOrderSearchStatusActionImpl(status);
     }
-
+    
     /**
      * builds ProjectChangeOrderSearchStatusAction without checking for non-null required values
      * @return ProjectChangeOrderSearchStatusAction
@@ -63,7 +75,7 @@ public class ProjectChangeOrderSearchStatusActionBuilder implements Builder<Proj
 
     /**
      * factory method for an instance of ProjectChangeOrderSearchStatusActionBuilder
-     * @return builder
+     * @return builder 
      */
     public static ProjectChangeOrderSearchStatusActionBuilder of() {
         return new ProjectChangeOrderSearchStatusActionBuilder();

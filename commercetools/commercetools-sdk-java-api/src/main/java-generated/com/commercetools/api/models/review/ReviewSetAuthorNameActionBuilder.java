@@ -1,10 +1,11 @@
-
 package com.commercetools.api.models.review;
 
-import java.util.*;
-
+import com.commercetools.api.models.review.ReviewUpdateAction;
+import com.commercetools.api.models.review.ReviewSetAuthorNameAction;
 import javax.annotation.Nullable;
-
+import java.util.*;
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -17,32 +18,39 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     ReviewSetAuthorNameAction reviewSetAuthorNameAction = ReviewSetAuthorNameAction.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class ReviewSetAuthorNameActionBuilder implements Builder<ReviewSetAuthorNameAction> {
 
+    
     @Nullable
     private String authorName;
 
+    
     /**
      *  <p>Value to set. If empty, any existing value will be removed.</p>
      * @param authorName value to be set
      * @return Builder
      */
-
+    
     public ReviewSetAuthorNameActionBuilder authorName(@Nullable final String authorName) {
         this.authorName = authorName;
         return this;
     }
+    
+    
 
     /**
      *  <p>Value to set. If empty, any existing value will be removed.</p>
      * @return authorName
      */
-
+    
     @Nullable
-    public String getAuthorName() {
+    public String getAuthorName(){
         return this.authorName;
     }
 
@@ -53,7 +61,7 @@ public class ReviewSetAuthorNameActionBuilder implements Builder<ReviewSetAuthor
     public ReviewSetAuthorNameAction build() {
         return new ReviewSetAuthorNameActionImpl(authorName);
     }
-
+    
     /**
      * builds ReviewSetAuthorNameAction without checking for non-null required values
      * @return ReviewSetAuthorNameAction
@@ -64,7 +72,7 @@ public class ReviewSetAuthorNameActionBuilder implements Builder<ReviewSetAuthor
 
     /**
      * factory method for an instance of ReviewSetAuthorNameActionBuilder
-     * @return builder
+     * @return builder 
      */
     public static ReviewSetAuthorNameActionBuilder of() {
         return new ReviewSetAuthorNameActionBuilder();

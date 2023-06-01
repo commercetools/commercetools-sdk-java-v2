@@ -1,9 +1,11 @@
-
 package com.commercetools.api.predicates.query.product_type;
 
 import com.commercetools.api.predicates.query.*;
 
-public class AttributeTextTypeQueryBuilderDsl {
+import java.util.function.Function;
+
+
+public class AttributeTextTypeQueryBuilderDsl  {
     public AttributeTextTypeQueryBuilderDsl() {
     }
 
@@ -12,9 +14,8 @@ public class AttributeTextTypeQueryBuilderDsl {
     }
 
     public StringComparisonPredicateBuilder<AttributeTextTypeQueryBuilderDsl> name() {
-        return new StringComparisonPredicateBuilder<>(
-            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("name")),
-            p -> new CombinationQueryPredicate<>(p, AttributeTextTypeQueryBuilderDsl::of));
+        return new StringComparisonPredicateBuilder<>(BinaryQueryPredicate.of().left(new ConstantQueryPredicate("name")),
+        p -> new CombinationQueryPredicate<>(p, AttributeTextTypeQueryBuilderDsl::of));
     }
-
+    
 }

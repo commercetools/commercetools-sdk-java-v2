@@ -1,17 +1,20 @@
-
 package com.commercetools.api.models.type;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
+import com.commercetools.api.models.type.TypeUpdateAction;
+import com.commercetools.api.models.type.TypeChangeFieldDefinitionOrderActionImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * TypeChangeFieldDefinitionOrderAction
@@ -24,9 +27,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .plusFieldNames(fieldNamesBuilder -> fieldNamesBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = TypeChangeFieldDefinitionOrderActionImpl.class)
 public interface TypeChangeFieldDefinitionOrderAction extends TypeUpdateAction {
 
@@ -47,24 +53,24 @@ public interface TypeChangeFieldDefinitionOrderAction extends TypeUpdateAction {
      *  <p>Must match the set of <code>name</code>s of FieldDefinitions (up to order).</p>
      * @param fieldNames values to be set
      */
-
+    
     @JsonIgnore
-    public void setFieldNames(final String... fieldNames);
-
+    public void setFieldNames(final String ...fieldNames);
     /**
      *  <p>Must match the set of <code>name</code>s of FieldDefinitions (up to order).</p>
      * @param fieldNames values to be set
      */
-
+    
     public void setFieldNames(final List<String> fieldNames);
 
     /**
      * factory method
      * @return instance of TypeChangeFieldDefinitionOrderAction
      */
-    public static TypeChangeFieldDefinitionOrderAction of() {
+    public static TypeChangeFieldDefinitionOrderAction of(){
         return new TypeChangeFieldDefinitionOrderActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy TypeChangeFieldDefinitionOrderAction
@@ -83,13 +89,14 @@ public interface TypeChangeFieldDefinitionOrderAction extends TypeUpdateAction {
      * @return copy instance
      */
     @Nullable
-    public static TypeChangeFieldDefinitionOrderAction deepCopy(
-            @Nullable final TypeChangeFieldDefinitionOrderAction template) {
+    public static TypeChangeFieldDefinitionOrderAction deepCopy(@Nullable final TypeChangeFieldDefinitionOrderAction template) {
         if (template == null) {
             return null;
         }
         TypeChangeFieldDefinitionOrderActionImpl instance = new TypeChangeFieldDefinitionOrderActionImpl();
-        instance.setFieldNames(Optional.ofNullable(template.getFieldNames()).map(ArrayList::new).orElse(null));
+        instance.setFieldNames(Optional.ofNullable(template.getFieldNames())
+                .map(ArrayList::new)
+                .orElse(null));
         return instance;
     }
 
@@ -100,16 +107,16 @@ public interface TypeChangeFieldDefinitionOrderAction extends TypeUpdateAction {
     public static TypeChangeFieldDefinitionOrderActionBuilder builder() {
         return TypeChangeFieldDefinitionOrderActionBuilder.of();
     }
-
+    
     /**
      * create builder for TypeChangeFieldDefinitionOrderAction instance
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static TypeChangeFieldDefinitionOrderActionBuilder builder(
-            final TypeChangeFieldDefinitionOrderAction template) {
+    public static TypeChangeFieldDefinitionOrderActionBuilder builder(final TypeChangeFieldDefinitionOrderAction template) {
         return TypeChangeFieldDefinitionOrderActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -120,7 +127,7 @@ public interface TypeChangeFieldDefinitionOrderAction extends TypeUpdateAction {
     default <T> T withTypeChangeFieldDefinitionOrderAction(Function<TypeChangeFieldDefinitionOrderAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

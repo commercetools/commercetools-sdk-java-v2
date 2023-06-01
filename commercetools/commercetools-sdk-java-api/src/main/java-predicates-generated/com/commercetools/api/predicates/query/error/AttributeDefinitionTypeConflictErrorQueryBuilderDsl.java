@@ -1,9 +1,11 @@
-
 package com.commercetools.api.predicates.query.error;
 
 import com.commercetools.api.predicates.query.*;
 
-public class AttributeDefinitionTypeConflictErrorQueryBuilderDsl {
+import java.util.function.Function;
+
+
+public class AttributeDefinitionTypeConflictErrorQueryBuilderDsl  {
     public AttributeDefinitionTypeConflictErrorQueryBuilderDsl() {
     }
 
@@ -12,33 +14,24 @@ public class AttributeDefinitionTypeConflictErrorQueryBuilderDsl {
     }
 
     public StringComparisonPredicateBuilder<AttributeDefinitionTypeConflictErrorQueryBuilderDsl> code() {
-        return new StringComparisonPredicateBuilder<>(
-            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("code")),
-            p -> new CombinationQueryPredicate<>(p, AttributeDefinitionTypeConflictErrorQueryBuilderDsl::of));
+        return new StringComparisonPredicateBuilder<>(BinaryQueryPredicate.of().left(new ConstantQueryPredicate("code")),
+        p -> new CombinationQueryPredicate<>(p, AttributeDefinitionTypeConflictErrorQueryBuilderDsl::of));
     }
-
     public StringComparisonPredicateBuilder<AttributeDefinitionTypeConflictErrorQueryBuilderDsl> message() {
-        return new StringComparisonPredicateBuilder<>(
-            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("message")),
-            p -> new CombinationQueryPredicate<>(p, AttributeDefinitionTypeConflictErrorQueryBuilderDsl::of));
+        return new StringComparisonPredicateBuilder<>(BinaryQueryPredicate.of().left(new ConstantQueryPredicate("message")),
+        p -> new CombinationQueryPredicate<>(p, AttributeDefinitionTypeConflictErrorQueryBuilderDsl::of));
     }
-
     public StringComparisonPredicateBuilder<AttributeDefinitionTypeConflictErrorQueryBuilderDsl> conflictingProductTypeId() {
-        return new StringComparisonPredicateBuilder<>(
-            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("conflictingProductTypeId")),
-            p -> new CombinationQueryPredicate<>(p, AttributeDefinitionTypeConflictErrorQueryBuilderDsl::of));
+        return new StringComparisonPredicateBuilder<>(BinaryQueryPredicate.of().left(new ConstantQueryPredicate("conflictingProductTypeId")),
+        p -> new CombinationQueryPredicate<>(p, AttributeDefinitionTypeConflictErrorQueryBuilderDsl::of));
     }
-
     public StringComparisonPredicateBuilder<AttributeDefinitionTypeConflictErrorQueryBuilderDsl> conflictingProductTypeName() {
-        return new StringComparisonPredicateBuilder<>(
-            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("conflictingProductTypeName")),
-            p -> new CombinationQueryPredicate<>(p, AttributeDefinitionTypeConflictErrorQueryBuilderDsl::of));
+        return new StringComparisonPredicateBuilder<>(BinaryQueryPredicate.of().left(new ConstantQueryPredicate("conflictingProductTypeName")),
+        p -> new CombinationQueryPredicate<>(p, AttributeDefinitionTypeConflictErrorQueryBuilderDsl::of));
     }
-
     public StringComparisonPredicateBuilder<AttributeDefinitionTypeConflictErrorQueryBuilderDsl> conflictingAttributeName() {
-        return new StringComparisonPredicateBuilder<>(
-            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("conflictingAttributeName")),
-            p -> new CombinationQueryPredicate<>(p, AttributeDefinitionTypeConflictErrorQueryBuilderDsl::of));
+        return new StringComparisonPredicateBuilder<>(BinaryQueryPredicate.of().left(new ConstantQueryPredicate("conflictingAttributeName")),
+        p -> new CombinationQueryPredicate<>(p, AttributeDefinitionTypeConflictErrorQueryBuilderDsl::of));
     }
-
+    
 }

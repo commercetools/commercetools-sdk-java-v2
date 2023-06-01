@@ -1,17 +1,21 @@
-
 package com.commercetools.api.models.order;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-
+import com.commercetools.api.models.common.ReferenceTypeId;
 import com.commercetools.api.models.common.ResourceIdentifier;
+import com.commercetools.api.models.order.OrderResourceIdentifierImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * OrderResourceIdentifier
@@ -23,9 +27,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     OrderResourceIdentifier orderResourceIdentifier = OrderResourceIdentifier.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = OrderResourceIdentifierImpl.class)
 public interface OrderResourceIdentifier extends ResourceIdentifier, com.commercetools.api.models.Identifiable<Order> {
 
@@ -34,13 +41,16 @@ public interface OrderResourceIdentifier extends ResourceIdentifier, com.commerc
      */
     String ORDER = "order";
 
+
+
     /**
      * factory method
      * @return instance of OrderResourceIdentifier
      */
-    public static OrderResourceIdentifier of() {
+    public static OrderResourceIdentifier of(){
         return new OrderResourceIdentifierImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy OrderResourceIdentifier
@@ -77,7 +87,7 @@ public interface OrderResourceIdentifier extends ResourceIdentifier, com.commerc
     public static OrderResourceIdentifierBuilder builder() {
         return OrderResourceIdentifierBuilder.of();
     }
-
+    
     /**
      * create builder for OrderResourceIdentifier instance
      * @param template instance with prefilled values for the builder
@@ -86,6 +96,7 @@ public interface OrderResourceIdentifier extends ResourceIdentifier, com.commerc
     public static OrderResourceIdentifierBuilder builder(final OrderResourceIdentifier template) {
         return OrderResourceIdentifierBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -96,7 +107,7 @@ public interface OrderResourceIdentifier extends ResourceIdentifier, com.commerc
     default <T> T withOrderResourceIdentifier(Function<OrderResourceIdentifier, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

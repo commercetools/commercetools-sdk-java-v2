@@ -1,20 +1,21 @@
-
 package com.commercetools.api.models.message;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-import java.util.stream.Collectors;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
+import com.commercetools.api.models.message.OrderMessage;
 import com.commercetools.api.models.order.DeliveryItem;
+import com.commercetools.api.models.message.DeliveryItemsUpdatedMessageImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Generated after a successful Set Delivery Items update action.</p>
@@ -36,9 +37,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .plusOldItems(oldItemsBuilder -> oldItemsBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = DeliveryItemsUpdatedMessageImpl.class)
 public interface DeliveryItemsUpdatedMessage extends OrderMessage {
 
@@ -54,7 +58,6 @@ public interface DeliveryItemsUpdatedMessage extends OrderMessage {
     @NotNull
     @JsonProperty("deliveryId")
     public String getDeliveryId();
-
     /**
      *  <p>Delivery Items after the Set Delivery Items update action.</p>
      * @return items
@@ -63,7 +66,6 @@ public interface DeliveryItemsUpdatedMessage extends OrderMessage {
     @Valid
     @JsonProperty("items")
     public List<DeliveryItem> getItems();
-
     /**
      *  <p>Delivery Items before the Set Delivery Items update action.</p>
      * @return oldItems
@@ -72,12 +74,11 @@ public interface DeliveryItemsUpdatedMessage extends OrderMessage {
     @Valid
     @JsonProperty("oldItems")
     public List<DeliveryItem> getOldItems();
-
     /**
      *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multi</code> ShippingMode.</p>
      * @return shippingKey
      */
-
+    
     @JsonProperty("shippingKey")
     public String getShippingKey();
 
@@ -85,53 +86,54 @@ public interface DeliveryItemsUpdatedMessage extends OrderMessage {
      *  <p>Unique identifier of the Delivery.</p>
      * @param deliveryId value to be set
      */
-
+    
     public void setDeliveryId(final String deliveryId);
-
+    
+    
     /**
      *  <p>Delivery Items after the Set Delivery Items update action.</p>
      * @param items values to be set
      */
-
+    
     @JsonIgnore
-    public void setItems(final DeliveryItem... items);
-
+    public void setItems(final DeliveryItem ...items);
     /**
      *  <p>Delivery Items after the Set Delivery Items update action.</p>
      * @param items values to be set
      */
-
+    
     public void setItems(final List<DeliveryItem> items);
-
+    
     /**
      *  <p>Delivery Items before the Set Delivery Items update action.</p>
      * @param oldItems values to be set
      */
-
+    
     @JsonIgnore
-    public void setOldItems(final DeliveryItem... oldItems);
-
+    public void setOldItems(final DeliveryItem ...oldItems);
     /**
      *  <p>Delivery Items before the Set Delivery Items update action.</p>
      * @param oldItems values to be set
      */
-
+    
     public void setOldItems(final List<DeliveryItem> oldItems);
-
+    
     /**
      *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multi</code> ShippingMode.</p>
      * @param shippingKey value to be set
      */
-
+    
     public void setShippingKey(final String shippingKey);
+    
 
     /**
      * factory method
      * @return instance of DeliveryItemsUpdatedMessage
      */
-    public static DeliveryItemsUpdatedMessage of() {
+    public static DeliveryItemsUpdatedMessage of(){
         return new DeliveryItemsUpdatedMessageImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy DeliveryItemsUpdatedMessage
@@ -172,24 +174,18 @@ public interface DeliveryItemsUpdatedMessage extends OrderMessage {
         instance.setVersion(template.getVersion());
         instance.setCreatedAt(template.getCreatedAt());
         instance.setLastModifiedAt(template.getLastModifiedAt());
-        instance.setLastModifiedBy(
-            com.commercetools.api.models.common.LastModifiedBy.deepCopy(template.getLastModifiedBy()));
+        instance.setLastModifiedBy(com.commercetools.api.models.common.LastModifiedBy.deepCopy(template.getLastModifiedBy()));
         instance.setCreatedBy(com.commercetools.api.models.common.CreatedBy.deepCopy(template.getCreatedBy()));
         instance.setSequenceNumber(template.getSequenceNumber());
         instance.setResource(com.commercetools.api.models.common.Reference.deepCopy(template.getResource()));
         instance.setResourceVersion(template.getResourceVersion());
-        instance.setResourceUserProvidedIdentifiers(com.commercetools.api.models.message.UserProvidedIdentifiers
-                .deepCopy(template.getResourceUserProvidedIdentifiers()));
+        instance.setResourceUserProvidedIdentifiers(com.commercetools.api.models.message.UserProvidedIdentifiers.deepCopy(template.getResourceUserProvidedIdentifiers()));
         instance.setDeliveryId(template.getDeliveryId());
         instance.setItems(Optional.ofNullable(template.getItems())
-                .map(t -> t.stream()
-                        .map(com.commercetools.api.models.order.DeliveryItem::deepCopy)
-                        .collect(Collectors.toList()))
+                .map(t -> t.stream().map(com.commercetools.api.models.order.DeliveryItem::deepCopy).collect(Collectors.toList()))
                 .orElse(null));
         instance.setOldItems(Optional.ofNullable(template.getOldItems())
-                .map(t -> t.stream()
-                        .map(com.commercetools.api.models.order.DeliveryItem::deepCopy)
-                        .collect(Collectors.toList()))
+                .map(t -> t.stream().map(com.commercetools.api.models.order.DeliveryItem::deepCopy).collect(Collectors.toList()))
                 .orElse(null));
         instance.setShippingKey(template.getShippingKey());
         return instance;
@@ -202,7 +198,7 @@ public interface DeliveryItemsUpdatedMessage extends OrderMessage {
     public static DeliveryItemsUpdatedMessageBuilder builder() {
         return DeliveryItemsUpdatedMessageBuilder.of();
     }
-
+    
     /**
      * create builder for DeliveryItemsUpdatedMessage instance
      * @param template instance with prefilled values for the builder
@@ -211,6 +207,7 @@ public interface DeliveryItemsUpdatedMessage extends OrderMessage {
     public static DeliveryItemsUpdatedMessageBuilder builder(final DeliveryItemsUpdatedMessage template) {
         return DeliveryItemsUpdatedMessageBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -221,7 +218,7 @@ public interface DeliveryItemsUpdatedMessage extends OrderMessage {
     default <T> T withDeliveryItemsUpdatedMessage(Function<DeliveryItemsUpdatedMessage, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

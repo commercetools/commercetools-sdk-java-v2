@@ -1,9 +1,11 @@
-
 package com.commercetools.api.predicates.query.error;
 
 import com.commercetools.api.predicates.query.*;
 
-public class GraphQLInvalidJsonInputErrorQueryBuilderDsl {
+import java.util.function.Function;
+
+
+public class GraphQLInvalidJsonInputErrorQueryBuilderDsl  {
     public GraphQLInvalidJsonInputErrorQueryBuilderDsl() {
     }
 
@@ -12,15 +14,12 @@ public class GraphQLInvalidJsonInputErrorQueryBuilderDsl {
     }
 
     public StringComparisonPredicateBuilder<GraphQLInvalidJsonInputErrorQueryBuilderDsl> code() {
-        return new StringComparisonPredicateBuilder<>(
-            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("code")),
-            p -> new CombinationQueryPredicate<>(p, GraphQLInvalidJsonInputErrorQueryBuilderDsl::of));
+        return new StringComparisonPredicateBuilder<>(BinaryQueryPredicate.of().left(new ConstantQueryPredicate("code")),
+        p -> new CombinationQueryPredicate<>(p, GraphQLInvalidJsonInputErrorQueryBuilderDsl::of));
     }
-
     public StringComparisonPredicateBuilder<GraphQLInvalidJsonInputErrorQueryBuilderDsl> detailedErrorMessage() {
-        return new StringComparisonPredicateBuilder<>(
-            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("detailedErrorMessage")),
-            p -> new CombinationQueryPredicate<>(p, GraphQLInvalidJsonInputErrorQueryBuilderDsl::of));
+        return new StringComparisonPredicateBuilder<>(BinaryQueryPredicate.of().left(new ConstantQueryPredicate("detailedErrorMessage")),
+        p -> new CombinationQueryPredicate<>(p, GraphQLInvalidJsonInputErrorQueryBuilderDsl::of));
     }
-
+    
 }

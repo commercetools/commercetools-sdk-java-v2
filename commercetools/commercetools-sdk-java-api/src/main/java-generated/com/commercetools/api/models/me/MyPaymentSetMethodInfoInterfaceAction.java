@@ -1,17 +1,20 @@
-
 package com.commercetools.api.models.me;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
+import com.commercetools.api.models.me.MyPaymentUpdateAction;
+import com.commercetools.api.models.me.MyPaymentSetMethodInfoInterfaceActionImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * MyPaymentSetMethodInfoInterfaceAction
@@ -24,9 +27,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .interface("{interface}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = MyPaymentSetMethodInfoInterfaceActionImpl.class)
 public interface MyPaymentSetMethodInfoInterfaceAction extends MyPaymentUpdateAction {
 
@@ -47,16 +53,18 @@ public interface MyPaymentSetMethodInfoInterfaceAction extends MyPaymentUpdateAc
      *  <p>Value to set. Once set, the <code>paymentInterface</code> of the <code>paymentMethodInfo</code> cannot be changed.</p>
      * @param _interface value to be set
      */
-
+    
     public void setInterface(final String _interface);
+    
 
     /**
      * factory method
      * @return instance of MyPaymentSetMethodInfoInterfaceAction
      */
-    public static MyPaymentSetMethodInfoInterfaceAction of() {
+    public static MyPaymentSetMethodInfoInterfaceAction of(){
         return new MyPaymentSetMethodInfoInterfaceActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy MyPaymentSetMethodInfoInterfaceAction
@@ -75,8 +83,7 @@ public interface MyPaymentSetMethodInfoInterfaceAction extends MyPaymentUpdateAc
      * @return copy instance
      */
     @Nullable
-    public static MyPaymentSetMethodInfoInterfaceAction deepCopy(
-            @Nullable final MyPaymentSetMethodInfoInterfaceAction template) {
+    public static MyPaymentSetMethodInfoInterfaceAction deepCopy(@Nullable final MyPaymentSetMethodInfoInterfaceAction template) {
         if (template == null) {
             return null;
         }
@@ -92,16 +99,16 @@ public interface MyPaymentSetMethodInfoInterfaceAction extends MyPaymentUpdateAc
     public static MyPaymentSetMethodInfoInterfaceActionBuilder builder() {
         return MyPaymentSetMethodInfoInterfaceActionBuilder.of();
     }
-
+    
     /**
      * create builder for MyPaymentSetMethodInfoInterfaceAction instance
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static MyPaymentSetMethodInfoInterfaceActionBuilder builder(
-            final MyPaymentSetMethodInfoInterfaceAction template) {
+    public static MyPaymentSetMethodInfoInterfaceActionBuilder builder(final MyPaymentSetMethodInfoInterfaceAction template) {
         return MyPaymentSetMethodInfoInterfaceActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -112,7 +119,7 @@ public interface MyPaymentSetMethodInfoInterfaceAction extends MyPaymentUpdateAc
     default <T> T withMyPaymentSetMethodInfoInterfaceAction(Function<MyPaymentSetMethodInfoInterfaceAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

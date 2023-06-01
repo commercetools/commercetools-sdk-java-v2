@@ -1,29 +1,30 @@
-
 package com.commercetools.api.client.resource;
 
-import java.nio.charset.StandardCharsets;
-import java.util.concurrent.CompletableFuture;
-
+import io.vrap.rmf.base.client.*;
+import io.vrap.rmf.base.client.error.ApiServerException;
+import io.vrap.rmf.base.client.error.ApiClientException;
+import io.vrap.rmf.base.client.VrapHttpClient;
 import com.commercetools.api.client.ApiRoot;
 import com.tngtech.junit.dataprovider.DataProvider;
 import com.tngtech.junit.dataprovider.DataProviderExtension;
 import com.tngtech.junit.dataprovider.UseDataProvider;
 import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
-import io.vrap.rmf.base.client.*;
-import io.vrap.rmf.base.client.ApiHttpClient;
-import io.vrap.rmf.base.client.ApiHttpRequest;
-import io.vrap.rmf.base.client.VrapHttpClient;
-import io.vrap.rmf.base.client.error.ApiClientException;
-import io.vrap.rmf.base.client.error.ApiServerException;
-import io.vrap.rmf.base.client.utils.Generated;
-
-import org.assertj.core.api.Assertions;
+import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestTemplate;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.Mockito;
+import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.ApiHttpClient;
+import io.vrap.rmf.base.client.ApiHttpRequest;
+import org.assertj.core.api.Assertions;
 
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+import java.nio.charset.StandardCharsets;
+import java.util.concurrent.CompletableFuture;
+
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @ExtendWith(UseDataProviderExtension.class)
 @ExtendWith(DataProviderExtension.class)
 public class ByProjectKeyInStoreKeyByStoreKeyMeOrdersTest {
@@ -41,177 +42,239 @@ public class ByProjectKeyInStoreKeyByStoreKeyMeOrdersTest {
 
     @TestTemplate
     @UseDataProvider("executeMethodParameters")
-    public void executeServerException(ClientRequestCommand<?> httpRequest) throws Exception {
-        Mockito.when(httpClientMock.execute(Mockito.any()))
-                .thenReturn(CompletableFuture.completedFuture(
-                    new ApiHttpResponse<>(500, null, "".getBytes(StandardCharsets.UTF_8), "Oops!")));
+    public void executeServerException(ClientRequestCommand<?> httpRequest) throws Exception{
+        Mockito.when(httpClientMock.execute(Mockito.any())).thenReturn(CompletableFuture.completedFuture(
+                       new ApiHttpResponse<>(500, null, "".getBytes(StandardCharsets.UTF_8), "Oops!")));
 
-        Assertions.assertThatThrownBy(() -> client.execute(httpRequest).toCompletableFuture().get())
-                .hasCauseInstanceOf(ApiServerException.class);
+        Assertions.assertThatThrownBy(
+               () -> client.execute(httpRequest).toCompletableFuture().get()).hasCauseInstanceOf(ApiServerException.class); 
     }
 
     @TestTemplate
     @UseDataProvider("executeMethodParameters")
-    public void executeClientException(ClientRequestCommand<?> httpRequest) throws Exception {
-        Mockito.when(httpClientMock.execute(Mockito.any()))
-                .thenReturn(CompletableFuture.completedFuture(
-                    new ApiHttpResponse<>(400, null, "".getBytes(StandardCharsets.UTF_8), "Oops!")));
+    public void executeClientException(ClientRequestCommand<?> httpRequest) throws Exception{
+        Mockito.when(httpClientMock.execute(Mockito.any())).thenReturn(CompletableFuture.completedFuture(
+                       new ApiHttpResponse<>(400, null, "".getBytes(StandardCharsets.UTF_8), "Oops!")));
 
-        Assertions.assertThatThrownBy(() -> client.execute(httpRequest).toCompletableFuture().get())
-                .hasCauseInstanceOf(ApiClientException.class);
+        Assertions.assertThatThrownBy(
+           () -> client.execute(httpRequest).toCompletableFuture().get()).hasCauseInstanceOf(ApiClientException.class);
     }
 
     @DataProvider
     public static Object[][] requestWithMethodParameters() {
-        return new Object[][] {
-                new Object[] {
-                        apiRoot.withProjectKey("test_projectKey")
-                                .inStoreKeyWithStoreKeyValue("test_storeKey")
-                                .me()
-                                .orders()
-                                .get()
-                                .withExpand("expand")
-                                .createHttpRequest(),
-                        "get", "test_projectKey/in-store/key=test_storeKey/me/orders?expand=expand", },
-                new Object[] {
-                        apiRoot.withProjectKey("test_projectKey")
-                                .inStoreKeyWithStoreKeyValue("test_storeKey")
-                                .me()
-                                .orders()
-                                .get()
-                                .withSort("sort")
-                                .createHttpRequest(),
-                        "get", "test_projectKey/in-store/key=test_storeKey/me/orders?sort=sort", },
-                new Object[] {
-                        apiRoot.withProjectKey("test_projectKey")
-                                .inStoreKeyWithStoreKeyValue("test_storeKey")
-                                .me()
-                                .orders()
-                                .get()
-                                .withLimit(7)
-                                .createHttpRequest(),
-                        "get", "test_projectKey/in-store/key=test_storeKey/me/orders?limit=7", },
-                new Object[] {
-                        apiRoot.withProjectKey("test_projectKey")
-                                .inStoreKeyWithStoreKeyValue("test_storeKey")
-                                .me()
-                                .orders()
-                                .get()
-                                .withOffset(3)
-                                .createHttpRequest(),
-                        "get", "test_projectKey/in-store/key=test_storeKey/me/orders?offset=3", },
-                new Object[] {
-                        apiRoot.withProjectKey("test_projectKey")
-                                .inStoreKeyWithStoreKeyValue("test_storeKey")
-                                .me()
-                                .orders()
-                                .get()
-                                .withWithTotal(true)
-                                .createHttpRequest(),
-                        "get", "test_projectKey/in-store/key=test_storeKey/me/orders?withTotal=true", },
-                new Object[] {
-                        apiRoot.withProjectKey("test_projectKey")
-                                .inStoreKeyWithStoreKeyValue("test_storeKey")
-                                .me()
-                                .orders()
-                                .get()
-                                .withWhere("where")
-                                .createHttpRequest(),
-                        "get", "test_projectKey/in-store/key=test_storeKey/me/orders?where=where", },
-                new Object[] {
-                        apiRoot.withProjectKey("test_projectKey")
-                                .inStoreKeyWithStoreKeyValue("test_storeKey")
-                                .me()
-                                .orders()
-                                .get()
-                                .withPredicateVar("varName", "var.varName")
-                                .createHttpRequest(),
-                        "get", "test_projectKey/in-store/key=test_storeKey/me/orders?var.varName=var.varName", },
-                new Object[] { apiRoot.withProjectKey("test_projectKey")
-                        .inStoreKeyWithStoreKeyValue("test_storeKey")
-                        .me()
-                        .orders()
-                        .get()
-                        .createHttpRequest(), "get", "test_projectKey/in-store/key=test_storeKey/me/orders", },
-                new Object[] {
-                        apiRoot.withProjectKey("test_projectKey")
-                                .inStoreKeyWithStoreKeyValue("test_storeKey")
-                                .me()
-                                .orders()
-                                .post(com.commercetools.api.models.me.MyOrderFromCartDraft.of())
-                                .withExpand("expand")
-                                .createHttpRequest(),
-                        "post", "test_projectKey/in-store/key=test_storeKey/me/orders?expand=expand", },
-                new Object[] {
-                        apiRoot.withProjectKey("test_projectKey")
-                                .inStoreKeyWithStoreKeyValue("test_storeKey")
-                                .me()
-                                .orders()
-                                .post(com.commercetools.api.models.me.MyOrderFromCartDraft.of())
-                                .createHttpRequest(),
-                        "post", "test_projectKey/in-store/key=test_storeKey/me/orders", } };
+       return new Object [][] {
+               new Object[] {           
+                   apiRoot
+                   .withProjectKey("test_projectKey")
+                   .inStoreKeyWithStoreKeyValue("test_storeKey")
+                   .me()
+                   .orders()
+                   .get()
+                   .withExpand("expand")
+                   .createHttpRequest(),
+                   "get",
+                   "test_projectKey/in-store/key=test_storeKey/me/orders?expand=expand",
+               },
+               new Object[] {           
+                   apiRoot
+                   .withProjectKey("test_projectKey")
+                   .inStoreKeyWithStoreKeyValue("test_storeKey")
+                   .me()
+                   .orders()
+                   .get()
+                   .withSort("sort")
+                   .createHttpRequest(),
+                   "get",
+                   "test_projectKey/in-store/key=test_storeKey/me/orders?sort=sort",
+               },
+               new Object[] {           
+                   apiRoot
+                   .withProjectKey("test_projectKey")
+                   .inStoreKeyWithStoreKeyValue("test_storeKey")
+                   .me()
+                   .orders()
+                   .get()
+                   .withLimit(7)
+                   .createHttpRequest(),
+                   "get",
+                   "test_projectKey/in-store/key=test_storeKey/me/orders?limit=7",
+               },
+               new Object[] {           
+                   apiRoot
+                   .withProjectKey("test_projectKey")
+                   .inStoreKeyWithStoreKeyValue("test_storeKey")
+                   .me()
+                   .orders()
+                   .get()
+                   .withOffset(3)
+                   .createHttpRequest(),
+                   "get",
+                   "test_projectKey/in-store/key=test_storeKey/me/orders?offset=3",
+               },
+               new Object[] {           
+                   apiRoot
+                   .withProjectKey("test_projectKey")
+                   .inStoreKeyWithStoreKeyValue("test_storeKey")
+                   .me()
+                   .orders()
+                   .get()
+                   .withWithTotal(true)
+                   .createHttpRequest(),
+                   "get",
+                   "test_projectKey/in-store/key=test_storeKey/me/orders?withTotal=true",
+               },
+               new Object[] {           
+                   apiRoot
+                   .withProjectKey("test_projectKey")
+                   .inStoreKeyWithStoreKeyValue("test_storeKey")
+                   .me()
+                   .orders()
+                   .get()
+                   .withWhere("where")
+                   .createHttpRequest(),
+                   "get",
+                   "test_projectKey/in-store/key=test_storeKey/me/orders?where=where",
+               },
+               new Object[] {           
+                   apiRoot
+                   .withProjectKey("test_projectKey")
+                   .inStoreKeyWithStoreKeyValue("test_storeKey")
+                   .me()
+                   .orders()
+                   .get()
+                   .withPredicateVar("varName", "var.varName")
+                   .createHttpRequest(),
+                   "get",
+                   "test_projectKey/in-store/key=test_storeKey/me/orders?var.varName=var.varName",
+               },
+               new Object[] {           
+                   apiRoot
+                   .withProjectKey("test_projectKey")
+                   .inStoreKeyWithStoreKeyValue("test_storeKey")
+                   .me()
+                   .orders()
+                   .get()
+                   .createHttpRequest(),
+                   "get",
+                   "test_projectKey/in-store/key=test_storeKey/me/orders",
+               },
+               new Object[] {           
+                   apiRoot
+                   .withProjectKey("test_projectKey")
+                   .inStoreKeyWithStoreKeyValue("test_storeKey")
+                   .me()
+                   .orders()
+                   .post(com.commercetools.api.models.me.MyOrderFromCartDraft.of())
+                   .withExpand("expand")
+                   .createHttpRequest(),
+                   "post",
+                   "test_projectKey/in-store/key=test_storeKey/me/orders?expand=expand",
+               },
+               new Object[] {           
+                   apiRoot
+                   .withProjectKey("test_projectKey")
+                   .inStoreKeyWithStoreKeyValue("test_storeKey")
+                   .me()
+                   .orders()
+                   .post(com.commercetools.api.models.me.MyOrderFromCartDraft.of())
+                   .createHttpRequest(),
+                   "post",
+                   "test_projectKey/in-store/key=test_storeKey/me/orders",
+               }
+       };
     }
 
     @DataProvider
     public static Object[][] executeMethodParameters() {
-        return new Object[][] {
-                new Object[] { apiRoot.withProjectKey("test_projectKey")
-                        .inStoreKeyWithStoreKeyValue("test_storeKey")
-                        .me()
-                        .orders()
-                        .get()
-                        .withExpand("expand"), },
-                new Object[] { apiRoot.withProjectKey("test_projectKey")
-                        .inStoreKeyWithStoreKeyValue("test_storeKey")
-                        .me()
-                        .orders()
-                        .get()
-                        .withSort("sort"), },
-                new Object[] { apiRoot.withProjectKey("test_projectKey")
-                        .inStoreKeyWithStoreKeyValue("test_storeKey")
-                        .me()
-                        .orders()
-                        .get()
-                        .withLimit(7), },
-                new Object[] { apiRoot.withProjectKey("test_projectKey")
-                        .inStoreKeyWithStoreKeyValue("test_storeKey")
-                        .me()
-                        .orders()
-                        .get()
-                        .withOffset(3), },
-                new Object[] { apiRoot.withProjectKey("test_projectKey")
-                        .inStoreKeyWithStoreKeyValue("test_storeKey")
-                        .me()
-                        .orders()
-                        .get()
-                        .withWithTotal(true), },
-                new Object[] { apiRoot.withProjectKey("test_projectKey")
-                        .inStoreKeyWithStoreKeyValue("test_storeKey")
-                        .me()
-                        .orders()
-                        .get()
-                        .withWhere("where"), },
-                new Object[] { apiRoot.withProjectKey("test_projectKey")
-                        .inStoreKeyWithStoreKeyValue("test_storeKey")
-                        .me()
-                        .orders()
-                        .get()
-                        .withPredicateVar("varName", "var.varName"), },
-                new Object[] { apiRoot.withProjectKey("test_projectKey")
-                        .inStoreKeyWithStoreKeyValue("test_storeKey")
-                        .me()
-                        .orders()
-                        .get(), },
-                new Object[] { apiRoot.withProjectKey("test_projectKey")
-                        .inStoreKeyWithStoreKeyValue("test_storeKey")
-                        .me()
-                        .orders()
-                        .post(com.commercetools.api.models.me.MyOrderFromCartDraft.of())
-                        .withExpand("expand"), },
-                new Object[] { apiRoot.withProjectKey("test_projectKey")
-                        .inStoreKeyWithStoreKeyValue("test_storeKey")
-                        .me()
-                        .orders()
-                        .post(com.commercetools.api.models.me.MyOrderFromCartDraft.of()), } };
+       return new Object [][] {
+               new Object[] {           
+                   apiRoot
+                   .withProjectKey("test_projectKey")
+                   .inStoreKeyWithStoreKeyValue("test_storeKey")
+                   .me()
+                   .orders()
+                   .get()
+                   .withExpand("expand"),
+               },
+               new Object[] {           
+                   apiRoot
+                   .withProjectKey("test_projectKey")
+                   .inStoreKeyWithStoreKeyValue("test_storeKey")
+                   .me()
+                   .orders()
+                   .get()
+                   .withSort("sort"),
+               },
+               new Object[] {           
+                   apiRoot
+                   .withProjectKey("test_projectKey")
+                   .inStoreKeyWithStoreKeyValue("test_storeKey")
+                   .me()
+                   .orders()
+                   .get()
+                   .withLimit(7),
+               },
+               new Object[] {           
+                   apiRoot
+                   .withProjectKey("test_projectKey")
+                   .inStoreKeyWithStoreKeyValue("test_storeKey")
+                   .me()
+                   .orders()
+                   .get()
+                   .withOffset(3),
+               },
+               new Object[] {           
+                   apiRoot
+                   .withProjectKey("test_projectKey")
+                   .inStoreKeyWithStoreKeyValue("test_storeKey")
+                   .me()
+                   .orders()
+                   .get()
+                   .withWithTotal(true),
+               },
+               new Object[] {           
+                   apiRoot
+                   .withProjectKey("test_projectKey")
+                   .inStoreKeyWithStoreKeyValue("test_storeKey")
+                   .me()
+                   .orders()
+                   .get()
+                   .withWhere("where"),
+               },
+               new Object[] {           
+                   apiRoot
+                   .withProjectKey("test_projectKey")
+                   .inStoreKeyWithStoreKeyValue("test_storeKey")
+                   .me()
+                   .orders()
+                   .get()
+                   .withPredicateVar("varName", "var.varName"),
+               },
+               new Object[] {           
+                   apiRoot
+                   .withProjectKey("test_projectKey")
+                   .inStoreKeyWithStoreKeyValue("test_storeKey")
+                   .me()
+                   .orders()
+                   .get(),
+               },
+               new Object[] {           
+                   apiRoot
+                   .withProjectKey("test_projectKey")
+                   .inStoreKeyWithStoreKeyValue("test_storeKey")
+                   .me()
+                   .orders()
+                   .post(com.commercetools.api.models.me.MyOrderFromCartDraft.of())
+                   .withExpand("expand"),
+               },
+               new Object[] {           
+                   apiRoot
+                   .withProjectKey("test_projectKey")
+                   .inStoreKeyWithStoreKeyValue("test_storeKey")
+                   .me()
+                   .orders()
+                   .post(com.commercetools.api.models.me.MyOrderFromCartDraft.of()),
+               }
+       };
     }
 }

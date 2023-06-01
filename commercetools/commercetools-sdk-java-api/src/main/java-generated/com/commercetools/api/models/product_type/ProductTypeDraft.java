@@ -1,19 +1,20 @@
-
 package com.commercetools.api.models.product_type;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-import java.util.stream.Collectors;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
+import com.commercetools.api.models.product_type.AttributeDefinitionDraft;
+import com.commercetools.api.models.product_type.ProductTypeDraftImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * ProductTypeDraft
@@ -27,21 +28,23 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .description("{description}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = ProductTypeDraftImpl.class)
-public interface ProductTypeDraft
-        extends com.commercetools.api.models.WithKey, io.vrap.rmf.base.client.Draft<ProductTypeDraft> {
+public interface ProductTypeDraft extends com.commercetools.api.models.WithKey, io.vrap.rmf.base.client.Draft<ProductTypeDraft> {
+
 
     /**
      *  <p>User-defined unique identifier for the ProductType.</p>
      * @return key
      */
-
+    
     @JsonProperty("key")
     public String getKey();
-
     /**
      *  <p>Name of the ProductType.</p>
      * @return name
@@ -49,7 +52,6 @@ public interface ProductTypeDraft
     @NotNull
     @JsonProperty("name")
     public String getName();
-
     /**
      *  <p>Description of the ProductType.</p>
      * @return description
@@ -57,7 +59,6 @@ public interface ProductTypeDraft
     @NotNull
     @JsonProperty("description")
     public String getDescription();
-
     /**
      *  <p>Attributes to specify for the ProductType. Products of this ProductType have these Attributes available on their ProductVariants.</p>
      * @return attributes
@@ -70,45 +71,48 @@ public interface ProductTypeDraft
      *  <p>User-defined unique identifier for the ProductType.</p>
      * @param key value to be set
      */
-
+    
     public void setKey(final String key);
-
+    
+    
     /**
      *  <p>Name of the ProductType.</p>
      * @param name value to be set
      */
-
+    
     public void setName(final String name);
-
+    
+    
     /**
      *  <p>Description of the ProductType.</p>
      * @param description value to be set
      */
-
+    
     public void setDescription(final String description);
-
+    
+    
     /**
      *  <p>Attributes to specify for the ProductType. Products of this ProductType have these Attributes available on their ProductVariants.</p>
      * @param attributes values to be set
      */
-
+    
     @JsonIgnore
-    public void setAttributes(final AttributeDefinitionDraft... attributes);
-
+    public void setAttributes(final AttributeDefinitionDraft ...attributes);
     /**
      *  <p>Attributes to specify for the ProductType. Products of this ProductType have these Attributes available on their ProductVariants.</p>
      * @param attributes values to be set
      */
-
+    
     public void setAttributes(final List<AttributeDefinitionDraft> attributes);
 
     /**
      * factory method
      * @return instance of ProductTypeDraft
      */
-    public static ProductTypeDraft of() {
+    public static ProductTypeDraft of(){
         return new ProductTypeDraftImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy ProductTypeDraft
@@ -139,9 +143,7 @@ public interface ProductTypeDraft
         instance.setName(template.getName());
         instance.setDescription(template.getDescription());
         instance.setAttributes(Optional.ofNullable(template.getAttributes())
-                .map(t -> t.stream()
-                        .map(com.commercetools.api.models.product_type.AttributeDefinitionDraft::deepCopy)
-                        .collect(Collectors.toList()))
+                .map(t -> t.stream().map(com.commercetools.api.models.product_type.AttributeDefinitionDraft::deepCopy).collect(Collectors.toList()))
                 .orElse(null));
         return instance;
     }
@@ -153,7 +155,7 @@ public interface ProductTypeDraft
     public static ProductTypeDraftBuilder builder() {
         return ProductTypeDraftBuilder.of();
     }
-
+    
     /**
      * create builder for ProductTypeDraft instance
      * @param template instance with prefilled values for the builder
@@ -162,6 +164,7 @@ public interface ProductTypeDraft
     public static ProductTypeDraftBuilder builder(final ProductTypeDraft template) {
         return ProductTypeDraftBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -172,7 +175,7 @@ public interface ProductTypeDraft
     default <T> T withProductTypeDraft(Function<ProductTypeDraft, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

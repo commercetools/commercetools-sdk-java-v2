@@ -1,19 +1,21 @@
-
 package com.commercetools.history.models.change_value;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
+import com.commercetools.history.models.change_value.ChangeValueChangeValue;
 import com.commercetools.history.models.common.Reference;
+import com.commercetools.history.models.change_value.ChangeValueGiftLineItemChangeValueImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Shape of the value for cart discounts gift line item value.</p>
@@ -28,9 +30,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .distributionChannel(distributionChannelBuilder -> distributionChannelBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = ChangeValueGiftLineItemChangeValueImpl.class)
 public interface ChangeValueGiftLineItemChangeValue extends ChangeValueChangeValue {
 
@@ -46,7 +51,6 @@ public interface ChangeValueGiftLineItemChangeValue extends ChangeValueChangeVal
     @NotNull
     @JsonProperty("type")
     public String getType();
-
     /**
      *
      * @return product
@@ -55,7 +59,6 @@ public interface ChangeValueGiftLineItemChangeValue extends ChangeValueChangeVal
     @Valid
     @JsonProperty("product")
     public Reference getProduct();
-
     /**
      *
      * @return variantId
@@ -63,7 +66,6 @@ public interface ChangeValueGiftLineItemChangeValue extends ChangeValueChangeVal
     @NotNull
     @JsonProperty("variantId")
     public Integer getVariantId();
-
     /**
      *
      * @return supplyChannel
@@ -71,7 +73,6 @@ public interface ChangeValueGiftLineItemChangeValue extends ChangeValueChangeVal
     @Valid
     @JsonProperty("supplyChannel")
     public Reference getSupplyChannel();
-
     /**
      *
      * @return distributionChannel
@@ -85,37 +86,42 @@ public interface ChangeValueGiftLineItemChangeValue extends ChangeValueChangeVal
      * set product
      * @param product value to be set
      */
-
+    
     public void setProduct(final Reference product);
-
+    
+    
     /**
      * set variantId
      * @param variantId value to be set
      */
-
+    
     public void setVariantId(final Integer variantId);
-
+    
+    
     /**
      * set supplyChannel
      * @param supplyChannel value to be set
      */
-
+    
     public void setSupplyChannel(final Reference supplyChannel);
-
+    
+    
     /**
      * set distributionChannel
      * @param distributionChannel value to be set
      */
-
+    
     public void setDistributionChannel(final Reference distributionChannel);
+    
 
     /**
      * factory method
      * @return instance of ChangeValueGiftLineItemChangeValue
      */
-    public static ChangeValueGiftLineItemChangeValue of() {
+    public static ChangeValueGiftLineItemChangeValue of(){
         return new ChangeValueGiftLineItemChangeValueImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy ChangeValueGiftLineItemChangeValue
@@ -137,18 +143,15 @@ public interface ChangeValueGiftLineItemChangeValue extends ChangeValueChangeVal
      * @return copy instance
      */
     @Nullable
-    public static ChangeValueGiftLineItemChangeValue deepCopy(
-            @Nullable final ChangeValueGiftLineItemChangeValue template) {
+    public static ChangeValueGiftLineItemChangeValue deepCopy(@Nullable final ChangeValueGiftLineItemChangeValue template) {
         if (template == null) {
             return null;
         }
         ChangeValueGiftLineItemChangeValueImpl instance = new ChangeValueGiftLineItemChangeValueImpl();
         instance.setProduct(com.commercetools.history.models.common.Reference.deepCopy(template.getProduct()));
         instance.setVariantId(template.getVariantId());
-        instance.setSupplyChannel(
-            com.commercetools.history.models.common.Reference.deepCopy(template.getSupplyChannel()));
-        instance.setDistributionChannel(
-            com.commercetools.history.models.common.Reference.deepCopy(template.getDistributionChannel()));
+        instance.setSupplyChannel(com.commercetools.history.models.common.Reference.deepCopy(template.getSupplyChannel()));
+        instance.setDistributionChannel(com.commercetools.history.models.common.Reference.deepCopy(template.getDistributionChannel()));
         return instance;
     }
 
@@ -159,7 +162,7 @@ public interface ChangeValueGiftLineItemChangeValue extends ChangeValueChangeVal
     public static ChangeValueGiftLineItemChangeValueBuilder builder() {
         return ChangeValueGiftLineItemChangeValueBuilder.of();
     }
-
+    
     /**
      * create builder for ChangeValueGiftLineItemChangeValue instance
      * @param template instance with prefilled values for the builder
@@ -168,6 +171,7 @@ public interface ChangeValueGiftLineItemChangeValue extends ChangeValueChangeVal
     public static ChangeValueGiftLineItemChangeValueBuilder builder(final ChangeValueGiftLineItemChangeValue template) {
         return ChangeValueGiftLineItemChangeValueBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -178,7 +182,7 @@ public interface ChangeValueGiftLineItemChangeValue extends ChangeValueChangeVal
     default <T> T withChangeValueGiftLineItemChangeValue(Function<ChangeValueGiftLineItemChangeValue, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

@@ -1,11 +1,12 @@
-
 package com.commercetools.api.models.payment;
 
+import com.commercetools.api.models.customer.CustomerResourceIdentifier;
+import com.commercetools.api.models.payment.PaymentUpdateAction;
+import com.commercetools.api.models.payment.PaymentSetCustomerAction;
+import javax.annotation.Nullable;
 import java.util.*;
 import java.util.function.Function;
-
-import javax.annotation.Nullable;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -18,58 +19,61 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     PaymentSetCustomerAction paymentSetCustomerAction = PaymentSetCustomerAction.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class PaymentSetCustomerActionBuilder implements Builder<PaymentSetCustomerAction> {
 
+    
     @Nullable
     private com.commercetools.api.models.customer.CustomerResourceIdentifier customer;
 
+    
     /**
      *  <p>Value to set. If empty, any existing reference is removed.</p>
      * @param builder function to build the customer value
      * @return Builder
      */
-
-    public PaymentSetCustomerActionBuilder customer(
-            Function<com.commercetools.api.models.customer.CustomerResourceIdentifierBuilder, com.commercetools.api.models.customer.CustomerResourceIdentifierBuilder> builder) {
-        this.customer = builder.apply(com.commercetools.api.models.customer.CustomerResourceIdentifierBuilder.of())
-                .build();
+    
+    public PaymentSetCustomerActionBuilder customer(Function<com.commercetools.api.models.customer.CustomerResourceIdentifierBuilder, com.commercetools.api.models.customer.CustomerResourceIdentifierBuilder> builder) {
+        this.customer = builder.apply(com.commercetools.api.models.customer.CustomerResourceIdentifierBuilder.of()).build();
         return this;
     }
-
+    
     /**
      *  <p>Value to set. If empty, any existing reference is removed.</p>
      * @param builder function to build the customer value
      * @return Builder
      */
-
-    public PaymentSetCustomerActionBuilder withCustomer(
-            Function<com.commercetools.api.models.customer.CustomerResourceIdentifierBuilder, com.commercetools.api.models.customer.CustomerResourceIdentifier> builder) {
+    
+    public PaymentSetCustomerActionBuilder withCustomer(Function<com.commercetools.api.models.customer.CustomerResourceIdentifierBuilder, com.commercetools.api.models.customer.CustomerResourceIdentifier> builder) {
         this.customer = builder.apply(com.commercetools.api.models.customer.CustomerResourceIdentifierBuilder.of());
         return this;
     }
-
+                    
     /**
      *  <p>Value to set. If empty, any existing reference is removed.</p>
      * @param customer value to be set
      * @return Builder
      */
-
-    public PaymentSetCustomerActionBuilder customer(
-            @Nullable final com.commercetools.api.models.customer.CustomerResourceIdentifier customer) {
+    
+    public PaymentSetCustomerActionBuilder customer(@Nullable final com.commercetools.api.models.customer.CustomerResourceIdentifier customer) {
         this.customer = customer;
         return this;
     }
+    
+    
 
     /**
      *  <p>Value to set. If empty, any existing reference is removed.</p>
      * @return customer
      */
-
+    
     @Nullable
-    public com.commercetools.api.models.customer.CustomerResourceIdentifier getCustomer() {
+    public com.commercetools.api.models.customer.CustomerResourceIdentifier getCustomer(){
         return this.customer;
     }
 
@@ -80,7 +84,7 @@ public class PaymentSetCustomerActionBuilder implements Builder<PaymentSetCustom
     public PaymentSetCustomerAction build() {
         return new PaymentSetCustomerActionImpl(customer);
     }
-
+    
     /**
      * builds PaymentSetCustomerAction without checking for non-null required values
      * @return PaymentSetCustomerAction
@@ -91,7 +95,7 @@ public class PaymentSetCustomerActionBuilder implements Builder<PaymentSetCustom
 
     /**
      * factory method for an instance of PaymentSetCustomerActionBuilder
-     * @return builder
+     * @return builder 
      */
     public static PaymentSetCustomerActionBuilder of() {
         return new PaymentSetCustomerActionBuilder();

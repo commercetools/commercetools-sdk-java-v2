@@ -1,8 +1,12 @@
-
 package com.commercetools.api.models.associate_role;
 
+import com.commercetools.api.models.associate_role.AssociateRoleUpdateAction;
+import com.commercetools.api.models.associate_role.Permission;
+import com.commercetools.api.models.associate_role.AssociateRoleAddPermissionAction;
+import javax.annotation.Nullable;
 import java.util.*;
-
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -16,31 +20,39 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .permission(Permission.ADD_CHILD_UNITS)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class AssociateRoleAddPermissionActionBuilder implements Builder<AssociateRoleAddPermissionAction> {
 
+    
+    
     private com.commercetools.api.models.associate_role.Permission permission;
 
+    
     /**
      *  <p>Permission to be added to the AssociateRole.</p>
      * @param permission value to be set
      * @return Builder
      */
-
-    public AssociateRoleAddPermissionActionBuilder permission(
-            final com.commercetools.api.models.associate_role.Permission permission) {
+    
+    public AssociateRoleAddPermissionActionBuilder permission( final com.commercetools.api.models.associate_role.Permission permission) {
         this.permission = permission;
         return this;
     }
+    
+    
 
     /**
      *  <p>Permission to be added to the AssociateRole.</p>
      * @return permission
      */
-
-    public com.commercetools.api.models.associate_role.Permission getPermission() {
+    
+    
+    public com.commercetools.api.models.associate_role.Permission getPermission(){
         return this.permission;
     }
 
@@ -52,7 +64,7 @@ public class AssociateRoleAddPermissionActionBuilder implements Builder<Associat
         Objects.requireNonNull(permission, AssociateRoleAddPermissionAction.class + ": permission is missing");
         return new AssociateRoleAddPermissionActionImpl(permission);
     }
-
+    
     /**
      * builds AssociateRoleAddPermissionAction without checking for non-null required values
      * @return AssociateRoleAddPermissionAction
@@ -63,7 +75,7 @@ public class AssociateRoleAddPermissionActionBuilder implements Builder<Associat
 
     /**
      * factory method for an instance of AssociateRoleAddPermissionActionBuilder
-     * @return builder
+     * @return builder 
      */
     public static AssociateRoleAddPermissionActionBuilder of() {
         return new AssociateRoleAddPermissionActionBuilder();

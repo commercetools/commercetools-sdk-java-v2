@@ -1,19 +1,20 @@
-
 package com.commercetools.api.models.order;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-import java.util.stream.Collectors;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
+import com.commercetools.api.models.order.Hit;
+import com.commercetools.api.models.order.OrderPagedSearchResponseImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * OrderPagedSearchResponse
@@ -27,11 +28,15 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .plusHits(hitsBuilder -> hitsBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = OrderPagedSearchResponseImpl.class)
-public interface OrderPagedSearchResponse {
+public interface OrderPagedSearchResponse  {
+
 
     /**
      *  <p>Total number of results matching the query.</p>
@@ -40,23 +45,20 @@ public interface OrderPagedSearchResponse {
     @NotNull
     @JsonProperty("total")
     public Long getTotal();
-
     /**
      *  <p>Number of elements skipped.</p>
      * @return offset
      */
-
+    
     @JsonProperty("offset")
     public Long getOffset();
-
     /**
      *  <p>Number of results requested.</p>
      * @return limit
      */
-
+    
     @JsonProperty("limit")
     public Long getLimit();
-
     /**
      *  <p>Actual results.</p>
      * @return hits
@@ -70,45 +72,48 @@ public interface OrderPagedSearchResponse {
      *  <p>Total number of results matching the query.</p>
      * @param total value to be set
      */
-
+    
     public void setTotal(final Long total);
-
+    
+    
     /**
      *  <p>Number of elements skipped.</p>
      * @param offset value to be set
      */
-
+    
     public void setOffset(final Long offset);
-
+    
+    
     /**
      *  <p>Number of results requested.</p>
      * @param limit value to be set
      */
-
+    
     public void setLimit(final Long limit);
-
+    
+    
     /**
      *  <p>Actual results.</p>
      * @param hits values to be set
      */
-
+    
     @JsonIgnore
-    public void setHits(final Hit... hits);
-
+    public void setHits(final Hit ...hits);
     /**
      *  <p>Actual results.</p>
      * @param hits values to be set
      */
-
+    
     public void setHits(final List<Hit> hits);
 
     /**
      * factory method
      * @return instance of OrderPagedSearchResponse
      */
-    public static OrderPagedSearchResponse of() {
+    public static OrderPagedSearchResponse of(){
         return new OrderPagedSearchResponseImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy OrderPagedSearchResponse
@@ -151,7 +156,7 @@ public interface OrderPagedSearchResponse {
     public static OrderPagedSearchResponseBuilder builder() {
         return OrderPagedSearchResponseBuilder.of();
     }
-
+    
     /**
      * create builder for OrderPagedSearchResponse instance
      * @param template instance with prefilled values for the builder
@@ -160,6 +165,7 @@ public interface OrderPagedSearchResponse {
     public static OrderPagedSearchResponseBuilder builder(final OrderPagedSearchResponse template) {
         return OrderPagedSearchResponseBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -170,7 +176,7 @@ public interface OrderPagedSearchResponse {
     default <T> T withOrderPagedSearchResponse(Function<OrderPagedSearchResponse, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

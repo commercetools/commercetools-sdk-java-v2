@@ -1,9 +1,13 @@
-
 package com.commercetools.api.models.message;
 
+import com.commercetools.api.models.cart.ProductPublishScope;
+import com.commercetools.api.models.message.MessagePayload;
+import com.commercetools.api.models.product.ProductProjection;
+import com.commercetools.api.models.message.ProductPublishedMessagePayload;
+import javax.annotation.Nullable;
 import java.util.*;
 import java.util.function.Function;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -19,15 +23,24 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .scope(ProductPublishScope.ALL)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class ProductPublishedMessagePayloadBuilder implements Builder<ProductPublishedMessagePayload> {
 
+    
+    
     private java.util.List<String> removedImageUrls;
-
+    
+    
+    
     private com.commercetools.api.models.product.ProductProjection productProjection;
-
+    
+    
+    
     private com.commercetools.api.models.cart.ProductPublishScope scope;
 
     /**
@@ -35,110 +48,117 @@ public class ProductPublishedMessagePayloadBuilder implements Builder<ProductPub
      * @param removedImageUrls value to be set
      * @return Builder
      */
-
-    public ProductPublishedMessagePayloadBuilder removedImageUrls(final String... removedImageUrls) {
+    
+    public ProductPublishedMessagePayloadBuilder removedImageUrls( final String ...removedImageUrls) {
         this.removedImageUrls = new ArrayList<>(Arrays.asList(removedImageUrls));
         return this;
     }
-
+    
     /**
      *  <p>List of image URLs which were removed during the Publish update action.</p>
      * @param removedImageUrls value to be set
      * @return Builder
      */
-
-    public ProductPublishedMessagePayloadBuilder removedImageUrls(final java.util.List<String> removedImageUrls) {
+    
+    public ProductPublishedMessagePayloadBuilder removedImageUrls( final java.util.List<String> removedImageUrls) {
         this.removedImageUrls = removedImageUrls;
         return this;
     }
-
+    
     /**
      *  <p>List of image URLs which were removed during the Publish update action.</p>
      * @param removedImageUrls value to be set
      * @return Builder
      */
-
-    public ProductPublishedMessagePayloadBuilder plusRemovedImageUrls(final String... removedImageUrls) {
+    
+    public ProductPublishedMessagePayloadBuilder plusRemovedImageUrls( final String ...removedImageUrls) {
         if (this.removedImageUrls == null) {
             this.removedImageUrls = new ArrayList<>();
         }
         this.removedImageUrls.addAll(Arrays.asList(removedImageUrls));
         return this;
     }
-
+    
+    
+    
+    
+    
     /**
      *  <p>Current Product Projection of the Product at the time of creation.</p>
      * @param builder function to build the productProjection value
      * @return Builder
      */
-
-    public ProductPublishedMessagePayloadBuilder productProjection(
-            Function<com.commercetools.api.models.product.ProductProjectionBuilder, com.commercetools.api.models.product.ProductProjectionBuilder> builder) {
-        this.productProjection = builder.apply(com.commercetools.api.models.product.ProductProjectionBuilder.of())
-                .build();
+    
+    public ProductPublishedMessagePayloadBuilder productProjection(Function<com.commercetools.api.models.product.ProductProjectionBuilder, com.commercetools.api.models.product.ProductProjectionBuilder> builder) {
+        this.productProjection = builder.apply(com.commercetools.api.models.product.ProductProjectionBuilder.of()).build();
         return this;
     }
-
+    
     /**
      *  <p>Current Product Projection of the Product at the time of creation.</p>
      * @param builder function to build the productProjection value
      * @return Builder
      */
-
-    public ProductPublishedMessagePayloadBuilder withProductProjection(
-            Function<com.commercetools.api.models.product.ProductProjectionBuilder, com.commercetools.api.models.product.ProductProjection> builder) {
+    
+    public ProductPublishedMessagePayloadBuilder withProductProjection(Function<com.commercetools.api.models.product.ProductProjectionBuilder, com.commercetools.api.models.product.ProductProjection> builder) {
         this.productProjection = builder.apply(com.commercetools.api.models.product.ProductProjectionBuilder.of());
         return this;
     }
-
+                    
     /**
      *  <p>Current Product Projection of the Product at the time of creation.</p>
      * @param productProjection value to be set
      * @return Builder
      */
-
-    public ProductPublishedMessagePayloadBuilder productProjection(
-            final com.commercetools.api.models.product.ProductProjection productProjection) {
+    
+    public ProductPublishedMessagePayloadBuilder productProjection( final com.commercetools.api.models.product.ProductProjection productProjection) {
         this.productProjection = productProjection;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Publishing Scope that was used during the Publish update action.</p>
      * @param scope value to be set
      * @return Builder
      */
-
-    public ProductPublishedMessagePayloadBuilder scope(
-            final com.commercetools.api.models.cart.ProductPublishScope scope) {
+    
+    public ProductPublishedMessagePayloadBuilder scope( final com.commercetools.api.models.cart.ProductPublishScope scope) {
         this.scope = scope;
         return this;
     }
+    
+    
 
     /**
      *  <p>List of image URLs which were removed during the Publish update action.</p>
      * @return removedImageUrls
      */
-
-    public java.util.List<String> getRemovedImageUrls() {
+    
+    
+    public java.util.List<String> getRemovedImageUrls(){
         return this.removedImageUrls;
     }
-
+    
     /**
      *  <p>Current Product Projection of the Product at the time of creation.</p>
      * @return productProjection
      */
-
-    public com.commercetools.api.models.product.ProductProjection getProductProjection() {
+    
+    
+    public com.commercetools.api.models.product.ProductProjection getProductProjection(){
         return this.productProjection;
     }
-
+    
     /**
      *  <p>Publishing Scope that was used during the Publish update action.</p>
      * @return scope
      */
-
-    public com.commercetools.api.models.cart.ProductPublishScope getScope() {
+    
+    
+    public com.commercetools.api.models.cart.ProductPublishScope getScope(){
         return this.scope;
     }
 
@@ -147,14 +167,12 @@ public class ProductPublishedMessagePayloadBuilder implements Builder<ProductPub
      * @return ProductPublishedMessagePayload
      */
     public ProductPublishedMessagePayload build() {
-        Objects.requireNonNull(removedImageUrls,
-            ProductPublishedMessagePayload.class + ": removedImageUrls is missing");
-        Objects.requireNonNull(productProjection,
-            ProductPublishedMessagePayload.class + ": productProjection is missing");
+        Objects.requireNonNull(removedImageUrls, ProductPublishedMessagePayload.class + ": removedImageUrls is missing");
+        Objects.requireNonNull(productProjection, ProductPublishedMessagePayload.class + ": productProjection is missing");
         Objects.requireNonNull(scope, ProductPublishedMessagePayload.class + ": scope is missing");
         return new ProductPublishedMessagePayloadImpl(removedImageUrls, productProjection, scope);
     }
-
+    
     /**
      * builds ProductPublishedMessagePayload without checking for non-null required values
      * @return ProductPublishedMessagePayload
@@ -165,7 +183,7 @@ public class ProductPublishedMessagePayloadBuilder implements Builder<ProductPub
 
     /**
      * factory method for an instance of ProductPublishedMessagePayloadBuilder
-     * @return builder
+     * @return builder 
      */
     public static ProductPublishedMessagePayloadBuilder of() {
         return new ProductPublishedMessagePayloadBuilder();

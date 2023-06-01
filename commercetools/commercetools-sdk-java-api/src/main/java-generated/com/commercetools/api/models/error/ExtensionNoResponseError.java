@@ -1,17 +1,20 @@
-
 package com.commercetools.api.models.error;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
+import com.commercetools.api.models.error.ErrorObject;
+import com.commercetools.api.models.error.ExtensionNoResponseErrorImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Returned when the API Extension does not respond within the time limit, or could not be reached.</p>
@@ -25,9 +28,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .extensionId("{extensionId}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = ExtensionNoResponseErrorImpl.class)
 public interface ExtensionNoResponseError extends ErrorObject {
 
@@ -43,7 +49,6 @@ public interface ExtensionNoResponseError extends ErrorObject {
     @NotNull
     @JsonProperty("code")
     public String getCode();
-
     /**
      *  <p><code>"Extension did not respond in time."</code></p>
      * @return message
@@ -51,7 +56,6 @@ public interface ExtensionNoResponseError extends ErrorObject {
     @NotNull
     @JsonProperty("message")
     public String getMessage();
-
     /**
      *  <p>Unique identifier of the API Extension.</p>
      * @return extensionId
@@ -59,12 +63,11 @@ public interface ExtensionNoResponseError extends ErrorObject {
     @NotNull
     @JsonProperty("extensionId")
     public String getExtensionId();
-
     /**
      *  <p>User-defined unique identifier of the API Extension, if available.</p>
      * @return extensionKey
      */
-
+    
     @JsonProperty("extensionKey")
     public String getExtensionKey();
 
@@ -72,30 +75,34 @@ public interface ExtensionNoResponseError extends ErrorObject {
      *  <p><code>"Extension did not respond in time."</code></p>
      * @param message value to be set
      */
-
+    
     public void setMessage(final String message);
-
+    
+    
     /**
      *  <p>Unique identifier of the API Extension.</p>
      * @param extensionId value to be set
      */
-
+    
     public void setExtensionId(final String extensionId);
-
+    
+    
     /**
      *  <p>User-defined unique identifier of the API Extension, if available.</p>
      * @param extensionKey value to be set
      */
-
+    
     public void setExtensionKey(final String extensionKey);
+    
 
     /**
      * factory method
      * @return instance of ExtensionNoResponseError
      */
-    public static ExtensionNoResponseError of() {
+    public static ExtensionNoResponseError of(){
         return new ExtensionNoResponseErrorImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy ExtensionNoResponseError
@@ -136,7 +143,7 @@ public interface ExtensionNoResponseError extends ErrorObject {
     public static ExtensionNoResponseErrorBuilder builder() {
         return ExtensionNoResponseErrorBuilder.of();
     }
-
+    
     /**
      * create builder for ExtensionNoResponseError instance
      * @param template instance with prefilled values for the builder
@@ -145,6 +152,7 @@ public interface ExtensionNoResponseError extends ErrorObject {
     public static ExtensionNoResponseErrorBuilder builder(final ExtensionNoResponseError template) {
         return ExtensionNoResponseErrorBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -155,7 +163,7 @@ public interface ExtensionNoResponseError extends ErrorObject {
     default <T> T withExtensionNoResponseError(Function<ExtensionNoResponseError, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

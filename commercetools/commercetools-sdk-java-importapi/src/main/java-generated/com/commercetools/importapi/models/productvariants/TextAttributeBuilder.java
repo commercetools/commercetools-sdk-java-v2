@@ -1,10 +1,11 @@
-
 package com.commercetools.importapi.models.productvariants;
 
-import java.util.*;
-
+import com.commercetools.importapi.models.productvariants.Attribute;
+import com.commercetools.importapi.models.productvariants.TextAttribute;
 import javax.annotation.Nullable;
-
+import java.util.*;
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -18,54 +19,67 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .value("{value}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class TextAttributeBuilder implements Builder<TextAttribute> {
 
+    
     @Nullable
     private String name;
-
+    
+    
+    
     private String value;
 
+    
     /**
      *  <p>The name of this attribute must match a name of the product types attribute definitions. The name is required if this type is used in a product variant and must not be set when used in a product variant patch.</p>
      * @param name value to be set
      * @return Builder
      */
-
+    
     public TextAttributeBuilder name(@Nullable final String name) {
         this.name = name;
         return this;
     }
-
+    
+    
+    
+    
     /**
      * set the value to the value
      * @param value value to be set
      * @return Builder
      */
-
-    public TextAttributeBuilder value(final String value) {
+    
+    public TextAttributeBuilder value( final String value) {
         this.value = value;
         return this;
     }
+    
+    
 
     /**
      *  <p>The name of this attribute must match a name of the product types attribute definitions. The name is required if this type is used in a product variant and must not be set when used in a product variant patch.</p>
      * @return name
      */
-
+    
     @Nullable
-    public String getName() {
+    public String getName(){
         return this.name;
     }
-
+    
     /**
      * value of value}
      * @return value
      */
-
-    public String getValue() {
+    
+    
+    public String getValue(){
         return this.value;
     }
 
@@ -77,7 +91,7 @@ public class TextAttributeBuilder implements Builder<TextAttribute> {
         Objects.requireNonNull(value, TextAttribute.class + ": value is missing");
         return new TextAttributeImpl(name, value);
     }
-
+    
     /**
      * builds TextAttribute without checking for non-null required values
      * @return TextAttribute
@@ -88,7 +102,7 @@ public class TextAttributeBuilder implements Builder<TextAttribute> {
 
     /**
      * factory method for an instance of TextAttributeBuilder
-     * @return builder
+     * @return builder 
      */
     public static TextAttributeBuilder of() {
         return new TextAttributeBuilder();

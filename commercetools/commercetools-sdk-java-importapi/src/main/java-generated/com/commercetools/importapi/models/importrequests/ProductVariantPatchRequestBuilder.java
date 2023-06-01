@@ -1,9 +1,13 @@
-
 package com.commercetools.importapi.models.importrequests;
 
+import com.commercetools.importapi.models.common.ImportResourceType;
+import com.commercetools.importapi.models.importrequests.ImportRequest;
+import com.commercetools.importapi.models.productvariants.ProductVariantPatch;
+import com.commercetools.importapi.models.importrequests.ProductVariantPatchRequest;
+import javax.annotation.Nullable;
 import java.util.*;
 import java.util.function.Function;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -17,11 +21,16 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .plusPatches(patchesBuilder -> patchesBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class ProductVariantPatchRequestBuilder implements Builder<ProductVariantPatchRequest> {
 
+    
+    
     private java.util.List<com.commercetools.importapi.models.productvariants.ProductVariantPatch> patches;
 
     /**
@@ -29,100 +38,93 @@ public class ProductVariantPatchRequestBuilder implements Builder<ProductVariant
      * @param patches value to be set
      * @return Builder
      */
-
-    public ProductVariantPatchRequestBuilder patches(
-            final com.commercetools.importapi.models.productvariants.ProductVariantPatch... patches) {
+    
+    public ProductVariantPatchRequestBuilder patches( final com.commercetools.importapi.models.productvariants.ProductVariantPatch ...patches) {
         this.patches = new ArrayList<>(Arrays.asList(patches));
         return this;
     }
-
+    
     /**
      *  <p>The product variant patches of this request.</p>
      * @param patches value to be set
      * @return Builder
      */
-
-    public ProductVariantPatchRequestBuilder patches(
-            final java.util.List<com.commercetools.importapi.models.productvariants.ProductVariantPatch> patches) {
+    
+    public ProductVariantPatchRequestBuilder patches( final java.util.List<com.commercetools.importapi.models.productvariants.ProductVariantPatch> patches) {
         this.patches = patches;
         return this;
     }
-
+    
     /**
      *  <p>The product variant patches of this request.</p>
      * @param patches value to be set
      * @return Builder
      */
-
-    public ProductVariantPatchRequestBuilder plusPatches(
-            final com.commercetools.importapi.models.productvariants.ProductVariantPatch... patches) {
+    
+    public ProductVariantPatchRequestBuilder plusPatches( final com.commercetools.importapi.models.productvariants.ProductVariantPatch ...patches) {
         if (this.patches == null) {
             this.patches = new ArrayList<>();
         }
         this.patches.addAll(Arrays.asList(patches));
         return this;
     }
-
+    
+    
+    
     /**
      *  <p>The product variant patches of this request.</p>
      * @param builder function to build the patches value
      * @return Builder
      */
-
-    public ProductVariantPatchRequestBuilder plusPatches(
-            Function<com.commercetools.importapi.models.productvariants.ProductVariantPatchBuilder, com.commercetools.importapi.models.productvariants.ProductVariantPatchBuilder> builder) {
+    
+    public ProductVariantPatchRequestBuilder plusPatches(Function<com.commercetools.importapi.models.productvariants.ProductVariantPatchBuilder, com.commercetools.importapi.models.productvariants.ProductVariantPatchBuilder> builder) {
         if (this.patches == null) {
             this.patches = new ArrayList<>();
         }
-        this.patches.add(
-            builder.apply(com.commercetools.importapi.models.productvariants.ProductVariantPatchBuilder.of()).build());
+        this.patches.add(builder.apply(com.commercetools.importapi.models.productvariants.ProductVariantPatchBuilder.of()).build());
         return this;
     }
-
+    
     /**
      *  <p>The product variant patches of this request.</p>
      * @param builder function to build the patches value
      * @return Builder
      */
-
-    public ProductVariantPatchRequestBuilder withPatches(
-            Function<com.commercetools.importapi.models.productvariants.ProductVariantPatchBuilder, com.commercetools.importapi.models.productvariants.ProductVariantPatchBuilder> builder) {
+    
+    public ProductVariantPatchRequestBuilder withPatches(Function<com.commercetools.importapi.models.productvariants.ProductVariantPatchBuilder, com.commercetools.importapi.models.productvariants.ProductVariantPatchBuilder> builder) {
         this.patches = new ArrayList<>();
-        this.patches.add(
-            builder.apply(com.commercetools.importapi.models.productvariants.ProductVariantPatchBuilder.of()).build());
+        this.patches.add(builder.apply(com.commercetools.importapi.models.productvariants.ProductVariantPatchBuilder.of()).build());
         return this;
     }
-
+    
     /**
      *  <p>The product variant patches of this request.</p>
      * @param builder function to build the patches value
      * @return Builder
      */
-
-    public ProductVariantPatchRequestBuilder addPatches(
-            Function<com.commercetools.importapi.models.productvariants.ProductVariantPatchBuilder, com.commercetools.importapi.models.productvariants.ProductVariantPatch> builder) {
-        return plusPatches(
-            builder.apply(com.commercetools.importapi.models.productvariants.ProductVariantPatchBuilder.of()));
+    
+    public ProductVariantPatchRequestBuilder addPatches(Function<com.commercetools.importapi.models.productvariants.ProductVariantPatchBuilder, com.commercetools.importapi.models.productvariants.ProductVariantPatch> builder) {
+        return plusPatches(builder.apply(com.commercetools.importapi.models.productvariants.ProductVariantPatchBuilder.of()));
     }
-
+    
     /**
      *  <p>The product variant patches of this request.</p>
      * @param builder function to build the patches value
      * @return Builder
      */
-
-    public ProductVariantPatchRequestBuilder setPatches(
-            Function<com.commercetools.importapi.models.productvariants.ProductVariantPatchBuilder, com.commercetools.importapi.models.productvariants.ProductVariantPatch> builder) {
-        return patches(
-            builder.apply(com.commercetools.importapi.models.productvariants.ProductVariantPatchBuilder.of()));
+    
+    public ProductVariantPatchRequestBuilder setPatches(Function<com.commercetools.importapi.models.productvariants.ProductVariantPatchBuilder, com.commercetools.importapi.models.productvariants.ProductVariantPatch> builder) {
+        return patches(builder.apply(com.commercetools.importapi.models.productvariants.ProductVariantPatchBuilder.of()));
     }
+                    
 
     /**
      *  <p>The product variant patches of this request.</p>
      * @return patches
      */
-
-    public java.util.List<com.commercetools.importapi.models.productvariants.ProductVariantPatch> getPatches() {
+    
+    
+    public java.util.List<com.commercetools.importapi.models.productvariants.ProductVariantPatch> getPatches(){
         return this.patches;
     }
 
@@ -134,7 +136,7 @@ public class ProductVariantPatchRequestBuilder implements Builder<ProductVariant
         Objects.requireNonNull(patches, ProductVariantPatchRequest.class + ": patches is missing");
         return new ProductVariantPatchRequestImpl(patches);
     }
-
+    
     /**
      * builds ProductVariantPatchRequest without checking for non-null required values
      * @return ProductVariantPatchRequest
@@ -145,7 +147,7 @@ public class ProductVariantPatchRequestBuilder implements Builder<ProductVariant
 
     /**
      * factory method for an instance of ProductVariantPatchRequestBuilder
-     * @return builder
+     * @return builder 
      */
     public static ProductVariantPatchRequestBuilder of() {
         return new ProductVariantPatchRequestBuilder();

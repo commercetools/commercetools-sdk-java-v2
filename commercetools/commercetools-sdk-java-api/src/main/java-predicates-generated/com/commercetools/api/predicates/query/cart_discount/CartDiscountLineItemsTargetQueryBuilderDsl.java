@@ -1,9 +1,11 @@
-
 package com.commercetools.api.predicates.query.cart_discount;
 
 import com.commercetools.api.predicates.query.*;
 
-public class CartDiscountLineItemsTargetQueryBuilderDsl {
+import java.util.function.Function;
+
+
+public class CartDiscountLineItemsTargetQueryBuilderDsl  {
     public CartDiscountLineItemsTargetQueryBuilderDsl() {
     }
 
@@ -12,15 +14,12 @@ public class CartDiscountLineItemsTargetQueryBuilderDsl {
     }
 
     public StringComparisonPredicateBuilder<CartDiscountLineItemsTargetQueryBuilderDsl> type() {
-        return new StringComparisonPredicateBuilder<>(
-            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("type")),
-            p -> new CombinationQueryPredicate<>(p, CartDiscountLineItemsTargetQueryBuilderDsl::of));
+        return new StringComparisonPredicateBuilder<>(BinaryQueryPredicate.of().left(new ConstantQueryPredicate("type")),
+        p -> new CombinationQueryPredicate<>(p, CartDiscountLineItemsTargetQueryBuilderDsl::of));
     }
-
     public StringComparisonPredicateBuilder<CartDiscountLineItemsTargetQueryBuilderDsl> predicate() {
-        return new StringComparisonPredicateBuilder<>(
-            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("predicate")),
-            p -> new CombinationQueryPredicate<>(p, CartDiscountLineItemsTargetQueryBuilderDsl::of));
+        return new StringComparisonPredicateBuilder<>(BinaryQueryPredicate.of().left(new ConstantQueryPredicate("predicate")),
+        p -> new CombinationQueryPredicate<>(p, CartDiscountLineItemsTargetQueryBuilderDsl::of));
     }
-
+    
 }

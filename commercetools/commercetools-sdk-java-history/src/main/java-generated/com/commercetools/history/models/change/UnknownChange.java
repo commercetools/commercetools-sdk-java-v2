@@ -1,17 +1,21 @@
-
 package com.commercetools.history.models.change;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
+import com.commercetools.history.models.change.Change;
+import java.lang.Object;
+import com.commercetools.history.models.change.UnknownChangeImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * UnknownChange
@@ -24,9 +28,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .change("{change}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = UnknownChangeImpl.class)
 public interface UnknownChange extends Change {
 
@@ -42,7 +49,6 @@ public interface UnknownChange extends Change {
     @NotNull
     @JsonProperty("type")
     public String getType();
-
     /**
      *
      * @return change
@@ -50,7 +56,6 @@ public interface UnknownChange extends Change {
     @NotNull
     @JsonProperty("change")
     public String getChange();
-
     /**
      *
      * @return previousValue
@@ -58,7 +63,6 @@ public interface UnknownChange extends Change {
     @NotNull
     @JsonProperty("previousValue")
     public Object getPreviousValue();
-
     /**
      *
      * @return nextValue
@@ -71,30 +75,34 @@ public interface UnknownChange extends Change {
      * set change
      * @param change value to be set
      */
-
+    
     public void setChange(final String change);
-
+    
+    
     /**
      * set previousValue
      * @param previousValue value to be set
      */
-
+    
     public void setPreviousValue(final Object previousValue);
-
+    
+    
     /**
      * set nextValue
      * @param nextValue value to be set
      */
-
+    
     public void setNextValue(final Object nextValue);
+    
 
     /**
      * factory method
      * @return instance of UnknownChange
      */
-    public static UnknownChange of() {
+    public static UnknownChange of(){
         return new UnknownChangeImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy UnknownChange
@@ -133,7 +141,7 @@ public interface UnknownChange extends Change {
     public static UnknownChangeBuilder builder() {
         return UnknownChangeBuilder.of();
     }
-
+    
     /**
      * create builder for UnknownChange instance
      * @param template instance with prefilled values for the builder
@@ -142,6 +150,7 @@ public interface UnknownChange extends Change {
     public static UnknownChangeBuilder builder(final UnknownChange template) {
         return UnknownChangeBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -152,7 +161,7 @@ public interface UnknownChange extends Change {
     default <T> T withUnknownChange(Function<UnknownChange, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

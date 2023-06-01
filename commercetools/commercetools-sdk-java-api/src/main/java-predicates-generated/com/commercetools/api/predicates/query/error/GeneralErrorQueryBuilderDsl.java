@@ -1,9 +1,11 @@
-
 package com.commercetools.api.predicates.query.error;
 
 import com.commercetools.api.predicates.query.*;
 
-public class GeneralErrorQueryBuilderDsl {
+import java.util.function.Function;
+
+
+public class GeneralErrorQueryBuilderDsl  {
     public GeneralErrorQueryBuilderDsl() {
     }
 
@@ -12,15 +14,12 @@ public class GeneralErrorQueryBuilderDsl {
     }
 
     public StringComparisonPredicateBuilder<GeneralErrorQueryBuilderDsl> code() {
-        return new StringComparisonPredicateBuilder<>(
-            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("code")),
-            p -> new CombinationQueryPredicate<>(p, GeneralErrorQueryBuilderDsl::of));
+        return new StringComparisonPredicateBuilder<>(BinaryQueryPredicate.of().left(new ConstantQueryPredicate("code")),
+        p -> new CombinationQueryPredicate<>(p, GeneralErrorQueryBuilderDsl::of));
     }
-
     public StringComparisonPredicateBuilder<GeneralErrorQueryBuilderDsl> message() {
-        return new StringComparisonPredicateBuilder<>(
-            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("message")),
-            p -> new CombinationQueryPredicate<>(p, GeneralErrorQueryBuilderDsl::of));
+        return new StringComparisonPredicateBuilder<>(BinaryQueryPredicate.of().left(new ConstantQueryPredicate("message")),
+        p -> new CombinationQueryPredicate<>(p, GeneralErrorQueryBuilderDsl::of));
     }
-
+    
 }

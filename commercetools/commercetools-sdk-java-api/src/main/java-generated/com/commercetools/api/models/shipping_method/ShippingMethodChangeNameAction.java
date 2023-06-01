@@ -1,17 +1,20 @@
-
 package com.commercetools.api.models.shipping_method;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
+import com.commercetools.api.models.shipping_method.ShippingMethodUpdateAction;
+import com.commercetools.api.models.shipping_method.ShippingMethodChangeNameActionImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * ShippingMethodChangeNameAction
@@ -24,9 +27,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .name("{name}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = ShippingMethodChangeNameActionImpl.class)
 public interface ShippingMethodChangeNameAction extends ShippingMethodUpdateAction {
 
@@ -47,16 +53,18 @@ public interface ShippingMethodChangeNameAction extends ShippingMethodUpdateActi
      *  <p>Value to set. Must not be empty.</p>
      * @param name value to be set
      */
-
+    
     public void setName(final String name);
+    
 
     /**
      * factory method
      * @return instance of ShippingMethodChangeNameAction
      */
-    public static ShippingMethodChangeNameAction of() {
+    public static ShippingMethodChangeNameAction of(){
         return new ShippingMethodChangeNameActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy ShippingMethodChangeNameAction
@@ -91,7 +99,7 @@ public interface ShippingMethodChangeNameAction extends ShippingMethodUpdateActi
     public static ShippingMethodChangeNameActionBuilder builder() {
         return ShippingMethodChangeNameActionBuilder.of();
     }
-
+    
     /**
      * create builder for ShippingMethodChangeNameAction instance
      * @param template instance with prefilled values for the builder
@@ -100,6 +108,7 @@ public interface ShippingMethodChangeNameAction extends ShippingMethodUpdateActi
     public static ShippingMethodChangeNameActionBuilder builder(final ShippingMethodChangeNameAction template) {
         return ShippingMethodChangeNameActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -110,7 +119,7 @@ public interface ShippingMethodChangeNameAction extends ShippingMethodUpdateActi
     default <T> T withShippingMethodChangeNameAction(Function<ShippingMethodChangeNameAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

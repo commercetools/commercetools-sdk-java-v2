@@ -1,21 +1,21 @@
-
 package com.commercetools.importapi.models.errors;
-
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-import java.util.stream.Collectors;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.importapi.models.prices.PriceImport;
 import com.commercetools.importapi.models.productvariants.Attribute;
+import com.commercetools.importapi.models.errors.VariantValuesImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * VariantValues
@@ -29,20 +29,23 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .plusAttributes(attributesBuilder -> attributesBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = VariantValuesImpl.class)
-public interface VariantValues {
+public interface VariantValues  {
+
 
     /**
      *
      * @return sku
      */
-
+    
     @JsonProperty("sku")
     public String getSku();
-
     /**
      *
      * @return prices
@@ -51,7 +54,6 @@ public interface VariantValues {
     @Valid
     @JsonProperty("prices")
     public List<PriceImport> getPrices();
-
     /**
      *
      * @return attributes
@@ -65,46 +67,46 @@ public interface VariantValues {
      * set sku
      * @param sku value to be set
      */
-
+    
     public void setSku(final String sku);
-
+    
+    
     /**
      * set prices
      * @param prices values to be set
      */
-
+    
     @JsonIgnore
-    public void setPrices(final PriceImport... prices);
-
+    public void setPrices(final PriceImport ...prices);
     /**
      * set prices
      * @param prices values to be set
      */
-
+    
     public void setPrices(final List<PriceImport> prices);
-
+    
     /**
      * set attributes
      * @param attributes values to be set
      */
-
+    
     @JsonIgnore
-    public void setAttributes(final Attribute... attributes);
-
+    public void setAttributes(final Attribute ...attributes);
     /**
      * set attributes
      * @param attributes values to be set
      */
-
+    
     public void setAttributes(final List<Attribute> attributes);
 
     /**
      * factory method
      * @return instance of VariantValues
      */
-    public static VariantValues of() {
+    public static VariantValues of(){
         return new VariantValuesImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy VariantValues
@@ -132,14 +134,10 @@ public interface VariantValues {
         VariantValuesImpl instance = new VariantValuesImpl();
         instance.setSku(template.getSku());
         instance.setPrices(Optional.ofNullable(template.getPrices())
-                .map(t -> t.stream()
-                        .map(com.commercetools.importapi.models.prices.PriceImport::deepCopy)
-                        .collect(Collectors.toList()))
+                .map(t -> t.stream().map(com.commercetools.importapi.models.prices.PriceImport::deepCopy).collect(Collectors.toList()))
                 .orElse(null));
         instance.setAttributes(Optional.ofNullable(template.getAttributes())
-                .map(t -> t.stream()
-                        .map(com.commercetools.importapi.models.productvariants.Attribute::deepCopy)
-                        .collect(Collectors.toList()))
+                .map(t -> t.stream().map(com.commercetools.importapi.models.productvariants.Attribute::deepCopy).collect(Collectors.toList()))
                 .orElse(null));
         return instance;
     }
@@ -151,7 +149,7 @@ public interface VariantValues {
     public static VariantValuesBuilder builder() {
         return VariantValuesBuilder.of();
     }
-
+    
     /**
      * create builder for VariantValues instance
      * @param template instance with prefilled values for the builder
@@ -160,6 +158,7 @@ public interface VariantValues {
     public static VariantValuesBuilder builder(final VariantValues template) {
         return VariantValuesBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -170,7 +169,7 @@ public interface VariantValues {
     default <T> T withVariantValues(Function<VariantValues, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

@@ -1,9 +1,11 @@
-
 package com.commercetools.api.predicates.query.error;
 
 import com.commercetools.api.predicates.query.*;
 
-public class QueryComplexityLimitExceededErrorQueryBuilderDsl {
+import java.util.function.Function;
+
+
+public class QueryComplexityLimitExceededErrorQueryBuilderDsl  {
     public QueryComplexityLimitExceededErrorQueryBuilderDsl() {
     }
 
@@ -12,15 +14,12 @@ public class QueryComplexityLimitExceededErrorQueryBuilderDsl {
     }
 
     public StringComparisonPredicateBuilder<QueryComplexityLimitExceededErrorQueryBuilderDsl> code() {
-        return new StringComparisonPredicateBuilder<>(
-            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("code")),
-            p -> new CombinationQueryPredicate<>(p, QueryComplexityLimitExceededErrorQueryBuilderDsl::of));
+        return new StringComparisonPredicateBuilder<>(BinaryQueryPredicate.of().left(new ConstantQueryPredicate("code")),
+        p -> new CombinationQueryPredicate<>(p, QueryComplexityLimitExceededErrorQueryBuilderDsl::of));
     }
-
     public StringComparisonPredicateBuilder<QueryComplexityLimitExceededErrorQueryBuilderDsl> message() {
-        return new StringComparisonPredicateBuilder<>(
-            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("message")),
-            p -> new CombinationQueryPredicate<>(p, QueryComplexityLimitExceededErrorQueryBuilderDsl::of));
+        return new StringComparisonPredicateBuilder<>(BinaryQueryPredicate.of().left(new ConstantQueryPredicate("message")),
+        p -> new CombinationQueryPredicate<>(p, QueryComplexityLimitExceededErrorQueryBuilderDsl::of));
     }
-
+    
 }

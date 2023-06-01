@@ -1,9 +1,11 @@
-
 package com.commercetools.api.predicates.query.review;
 
 import com.commercetools.api.predicates.query.*;
 
-public class ReviewSetKeyActionQueryBuilderDsl {
+import java.util.function.Function;
+
+
+public class ReviewSetKeyActionQueryBuilderDsl  {
     public ReviewSetKeyActionQueryBuilderDsl() {
     }
 
@@ -12,14 +14,12 @@ public class ReviewSetKeyActionQueryBuilderDsl {
     }
 
     public StringComparisonPredicateBuilder<ReviewSetKeyActionQueryBuilderDsl> action() {
-        return new StringComparisonPredicateBuilder<>(
-            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("action")),
-            p -> new CombinationQueryPredicate<>(p, ReviewSetKeyActionQueryBuilderDsl::of));
+        return new StringComparisonPredicateBuilder<>(BinaryQueryPredicate.of().left(new ConstantQueryPredicate("action")),
+        p -> new CombinationQueryPredicate<>(p, ReviewSetKeyActionQueryBuilderDsl::of));
     }
-
     public StringComparisonPredicateBuilder<ReviewSetKeyActionQueryBuilderDsl> key() {
         return new StringComparisonPredicateBuilder<>(BinaryQueryPredicate.of().left(new ConstantQueryPredicate("key")),
-            p -> new CombinationQueryPredicate<>(p, ReviewSetKeyActionQueryBuilderDsl::of));
+        p -> new CombinationQueryPredicate<>(p, ReviewSetKeyActionQueryBuilderDsl::of));
     }
-
+    
 }

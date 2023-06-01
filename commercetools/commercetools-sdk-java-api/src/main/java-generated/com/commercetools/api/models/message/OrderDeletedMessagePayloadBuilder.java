@@ -1,9 +1,12 @@
-
 package com.commercetools.api.models.message;
 
+import com.commercetools.api.models.message.OrderMessagePayload;
+import com.commercetools.api.models.order.Order;
+import com.commercetools.api.models.message.OrderDeletedMessagePayload;
+import javax.annotation.Nullable;
 import java.util.*;
 import java.util.function.Function;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -17,54 +20,61 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .order(orderBuilder -> orderBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class OrderDeletedMessagePayloadBuilder implements Builder<OrderDeletedMessagePayload> {
 
+    
+    
     private com.commercetools.api.models.order.Order order;
 
+    
     /**
      *  <p>Order that has been deleted.</p>
      * @param builder function to build the order value
      * @return Builder
      */
-
-    public OrderDeletedMessagePayloadBuilder order(
-            Function<com.commercetools.api.models.order.OrderBuilder, com.commercetools.api.models.order.OrderBuilder> builder) {
+    
+    public OrderDeletedMessagePayloadBuilder order(Function<com.commercetools.api.models.order.OrderBuilder, com.commercetools.api.models.order.OrderBuilder> builder) {
         this.order = builder.apply(com.commercetools.api.models.order.OrderBuilder.of()).build();
         return this;
     }
-
+    
     /**
      *  <p>Order that has been deleted.</p>
      * @param builder function to build the order value
      * @return Builder
      */
-
-    public OrderDeletedMessagePayloadBuilder withOrder(
-            Function<com.commercetools.api.models.order.OrderBuilder, com.commercetools.api.models.order.Order> builder) {
+    
+    public OrderDeletedMessagePayloadBuilder withOrder(Function<com.commercetools.api.models.order.OrderBuilder, com.commercetools.api.models.order.Order> builder) {
         this.order = builder.apply(com.commercetools.api.models.order.OrderBuilder.of());
         return this;
     }
-
+                    
     /**
      *  <p>Order that has been deleted.</p>
      * @param order value to be set
      * @return Builder
      */
-
-    public OrderDeletedMessagePayloadBuilder order(final com.commercetools.api.models.order.Order order) {
+    
+    public OrderDeletedMessagePayloadBuilder order( final com.commercetools.api.models.order.Order order) {
         this.order = order;
         return this;
     }
+    
+    
 
     /**
      *  <p>Order that has been deleted.</p>
      * @return order
      */
-
-    public com.commercetools.api.models.order.Order getOrder() {
+    
+    
+    public com.commercetools.api.models.order.Order getOrder(){
         return this.order;
     }
 
@@ -76,7 +86,7 @@ public class OrderDeletedMessagePayloadBuilder implements Builder<OrderDeletedMe
         Objects.requireNonNull(order, OrderDeletedMessagePayload.class + ": order is missing");
         return new OrderDeletedMessagePayloadImpl(order);
     }
-
+    
     /**
      * builds OrderDeletedMessagePayload without checking for non-null required values
      * @return OrderDeletedMessagePayload
@@ -87,7 +97,7 @@ public class OrderDeletedMessagePayloadBuilder implements Builder<OrderDeletedMe
 
     /**
      * factory method for an instance of OrderDeletedMessagePayloadBuilder
-     * @return builder
+     * @return builder 
      */
     public static OrderDeletedMessagePayloadBuilder of() {
         return new OrderDeletedMessagePayloadBuilder();

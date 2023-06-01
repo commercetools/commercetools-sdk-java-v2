@@ -1,19 +1,21 @@
-
 package com.commercetools.api.models.order_edit;
-
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.cart.RoundingMode;
 import com.commercetools.api.models.order.StagedOrderUpdateAction;
+import com.commercetools.api.models.order_edit.StagedOrderChangeTaxRoundingModeActionImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * StagedOrderChangeTaxRoundingModeAction
@@ -26,9 +28,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .taxRoundingMode(RoundingMode.HALF_EVEN)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = StagedOrderChangeTaxRoundingModeActionImpl.class)
 public interface StagedOrderChangeTaxRoundingModeAction extends StagedOrderUpdateAction {
 
@@ -49,16 +54,18 @@ public interface StagedOrderChangeTaxRoundingModeAction extends StagedOrderUpdat
      *  <p>Determines how monetary values are rounded.</p>
      * @param taxRoundingMode value to be set
      */
-
+    
     public void setTaxRoundingMode(final RoundingMode taxRoundingMode);
+    
 
     /**
      * factory method
      * @return instance of StagedOrderChangeTaxRoundingModeAction
      */
-    public static StagedOrderChangeTaxRoundingModeAction of() {
+    public static StagedOrderChangeTaxRoundingModeAction of(){
         return new StagedOrderChangeTaxRoundingModeActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy StagedOrderChangeTaxRoundingModeAction
@@ -77,8 +84,7 @@ public interface StagedOrderChangeTaxRoundingModeAction extends StagedOrderUpdat
      * @return copy instance
      */
     @Nullable
-    public static StagedOrderChangeTaxRoundingModeAction deepCopy(
-            @Nullable final StagedOrderChangeTaxRoundingModeAction template) {
+    public static StagedOrderChangeTaxRoundingModeAction deepCopy(@Nullable final StagedOrderChangeTaxRoundingModeAction template) {
         if (template == null) {
             return null;
         }
@@ -94,16 +100,16 @@ public interface StagedOrderChangeTaxRoundingModeAction extends StagedOrderUpdat
     public static StagedOrderChangeTaxRoundingModeActionBuilder builder() {
         return StagedOrderChangeTaxRoundingModeActionBuilder.of();
     }
-
+    
     /**
      * create builder for StagedOrderChangeTaxRoundingModeAction instance
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static StagedOrderChangeTaxRoundingModeActionBuilder builder(
-            final StagedOrderChangeTaxRoundingModeAction template) {
+    public static StagedOrderChangeTaxRoundingModeActionBuilder builder(final StagedOrderChangeTaxRoundingModeAction template) {
         return StagedOrderChangeTaxRoundingModeActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -111,11 +117,10 @@ public interface StagedOrderChangeTaxRoundingModeAction extends StagedOrderUpdat
      * @param helper function to map the object
      * @return mapped value
      */
-    default <T> T withStagedOrderChangeTaxRoundingModeAction(
-            Function<StagedOrderChangeTaxRoundingModeAction, T> helper) {
+    default <T> T withStagedOrderChangeTaxRoundingModeAction(Function<StagedOrderChangeTaxRoundingModeAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

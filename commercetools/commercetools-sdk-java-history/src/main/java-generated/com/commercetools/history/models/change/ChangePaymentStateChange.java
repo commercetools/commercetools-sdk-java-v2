@@ -1,18 +1,21 @@
-
 package com.commercetools.history.models.change;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
-
+import com.commercetools.history.models.change.Change;
 import com.commercetools.history.models.common.PaymentState;
+import com.commercetools.history.models.change.ChangePaymentStateChangeImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * ChangePaymentStateChange
@@ -27,9 +30,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .previousValue(PaymentState.BALANCE_DUE)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = ChangePaymentStateChangeImpl.class)
 public interface ChangePaymentStateChange extends Change {
 
@@ -45,7 +51,6 @@ public interface ChangePaymentStateChange extends Change {
     @NotNull
     @JsonProperty("type")
     public String getType();
-
     /**
      *  <p>Update action for <code>changePaymentState</code></p>
      * @return change
@@ -53,7 +58,6 @@ public interface ChangePaymentStateChange extends Change {
     @NotNull
     @JsonProperty("change")
     public String getChange();
-
     /**
      *
      * @return nextValue
@@ -61,7 +65,6 @@ public interface ChangePaymentStateChange extends Change {
     @NotNull
     @JsonProperty("nextValue")
     public PaymentState getNextValue();
-
     /**
      *
      * @return previousValue
@@ -74,30 +77,34 @@ public interface ChangePaymentStateChange extends Change {
      *  <p>Update action for <code>changePaymentState</code></p>
      * @param change value to be set
      */
-
+    
     public void setChange(final String change);
-
+    
+    
     /**
      * set nextValue
      * @param nextValue value to be set
      */
-
+    
     public void setNextValue(final PaymentState nextValue);
-
+    
+    
     /**
      * set previousValue
      * @param previousValue value to be set
      */
-
+    
     public void setPreviousValue(final PaymentState previousValue);
+    
 
     /**
      * factory method
      * @return instance of ChangePaymentStateChange
      */
-    public static ChangePaymentStateChange of() {
+    public static ChangePaymentStateChange of(){
         return new ChangePaymentStateChangeImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy ChangePaymentStateChange
@@ -136,7 +143,7 @@ public interface ChangePaymentStateChange extends Change {
     public static ChangePaymentStateChangeBuilder builder() {
         return ChangePaymentStateChangeBuilder.of();
     }
-
+    
     /**
      * create builder for ChangePaymentStateChange instance
      * @param template instance with prefilled values for the builder
@@ -145,6 +152,7 @@ public interface ChangePaymentStateChange extends Change {
     public static ChangePaymentStateChangeBuilder builder(final ChangePaymentStateChange template) {
         return ChangePaymentStateChangeBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -155,7 +163,7 @@ public interface ChangePaymentStateChange extends Change {
     default <T> T withChangePaymentStateChange(Function<ChangePaymentStateChange, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

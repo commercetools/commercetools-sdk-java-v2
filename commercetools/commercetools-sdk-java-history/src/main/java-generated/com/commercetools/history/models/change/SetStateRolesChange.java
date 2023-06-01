@@ -1,18 +1,21 @@
-
 package com.commercetools.history.models.change;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
-
+import com.commercetools.history.models.change.Change;
 import com.commercetools.history.models.common.StateRole;
+import com.commercetools.history.models.change.SetStateRolesChangeImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * SetStateRolesChange
@@ -27,9 +30,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .plusNextValue(nextValueBuilder -> nextValueBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = SetStateRolesChangeImpl.class)
 public interface SetStateRolesChange extends Change {
 
@@ -45,7 +51,6 @@ public interface SetStateRolesChange extends Change {
     @NotNull
     @JsonProperty("type")
     public String getType();
-
     /**
      *
      * @return change
@@ -53,7 +58,6 @@ public interface SetStateRolesChange extends Change {
     @NotNull
     @JsonProperty("change")
     public String getChange();
-
     /**
      *
      * @return previousValue
@@ -61,7 +65,6 @@ public interface SetStateRolesChange extends Change {
     @NotNull
     @JsonProperty("previousValue")
     public List<StateRole> getPreviousValue();
-
     /**
      *
      * @return nextValue
@@ -74,46 +77,46 @@ public interface SetStateRolesChange extends Change {
      * set change
      * @param change value to be set
      */
-
+    
     public void setChange(final String change);
-
+    
+    
     /**
      * set previousValue
      * @param previousValue values to be set
      */
-
+    
     @JsonIgnore
-    public void setPreviousValue(final StateRole... previousValue);
-
+    public void setPreviousValue(final StateRole ...previousValue);
     /**
      * set previousValue
      * @param previousValue values to be set
      */
-
+    
     public void setPreviousValue(final List<StateRole> previousValue);
-
+    
     /**
      * set nextValue
      * @param nextValue values to be set
      */
-
+    
     @JsonIgnore
-    public void setNextValue(final StateRole... nextValue);
-
+    public void setNextValue(final StateRole ...nextValue);
     /**
      * set nextValue
      * @param nextValue values to be set
      */
-
+    
     public void setNextValue(final List<StateRole> nextValue);
 
     /**
      * factory method
      * @return instance of SetStateRolesChange
      */
-    public static SetStateRolesChange of() {
+    public static SetStateRolesChange of(){
         return new SetStateRolesChangeImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy SetStateRolesChange
@@ -140,8 +143,12 @@ public interface SetStateRolesChange extends Change {
         }
         SetStateRolesChangeImpl instance = new SetStateRolesChangeImpl();
         instance.setChange(template.getChange());
-        instance.setPreviousValue(Optional.ofNullable(template.getPreviousValue()).map(ArrayList::new).orElse(null));
-        instance.setNextValue(Optional.ofNullable(template.getNextValue()).map(ArrayList::new).orElse(null));
+        instance.setPreviousValue(Optional.ofNullable(template.getPreviousValue())
+                .map(ArrayList::new)
+                .orElse(null));
+        instance.setNextValue(Optional.ofNullable(template.getNextValue())
+                .map(ArrayList::new)
+                .orElse(null));
         return instance;
     }
 
@@ -152,7 +159,7 @@ public interface SetStateRolesChange extends Change {
     public static SetStateRolesChangeBuilder builder() {
         return SetStateRolesChangeBuilder.of();
     }
-
+    
     /**
      * create builder for SetStateRolesChange instance
      * @param template instance with prefilled values for the builder
@@ -161,6 +168,7 @@ public interface SetStateRolesChange extends Change {
     public static SetStateRolesChangeBuilder builder(final SetStateRolesChange template) {
         return SetStateRolesChangeBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -171,7 +179,7 @@ public interface SetStateRolesChange extends Change {
     default <T> T withSetStateRolesChange(Function<SetStateRolesChange, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

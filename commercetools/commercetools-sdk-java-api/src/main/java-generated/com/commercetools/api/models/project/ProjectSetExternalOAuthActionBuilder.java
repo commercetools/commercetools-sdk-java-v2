@@ -1,11 +1,12 @@
-
 package com.commercetools.api.models.project;
 
+import com.commercetools.api.models.project.ExternalOAuth;
+import com.commercetools.api.models.project.ProjectUpdateAction;
+import com.commercetools.api.models.project.ProjectSetExternalOAuthAction;
+import javax.annotation.Nullable;
 import java.util.*;
 import java.util.function.Function;
-
-import javax.annotation.Nullable;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -18,57 +19,61 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     ProjectSetExternalOAuthAction projectSetExternalOAuthAction = ProjectSetExternalOAuthAction.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class ProjectSetExternalOAuthActionBuilder implements Builder<ProjectSetExternalOAuthAction> {
 
+    
     @Nullable
     private com.commercetools.api.models.project.ExternalOAuth externalOAuth;
 
+    
     /**
      *  <p>Value to set. If empty, any existing value will be removed.</p>
      * @param builder function to build the externalOAuth value
      * @return Builder
      */
-
-    public ProjectSetExternalOAuthActionBuilder externalOAuth(
-            Function<com.commercetools.api.models.project.ExternalOAuthBuilder, com.commercetools.api.models.project.ExternalOAuthBuilder> builder) {
+    
+    public ProjectSetExternalOAuthActionBuilder externalOAuth(Function<com.commercetools.api.models.project.ExternalOAuthBuilder, com.commercetools.api.models.project.ExternalOAuthBuilder> builder) {
         this.externalOAuth = builder.apply(com.commercetools.api.models.project.ExternalOAuthBuilder.of()).build();
         return this;
     }
-
+    
     /**
      *  <p>Value to set. If empty, any existing value will be removed.</p>
      * @param builder function to build the externalOAuth value
      * @return Builder
      */
-
-    public ProjectSetExternalOAuthActionBuilder withExternalOAuth(
-            Function<com.commercetools.api.models.project.ExternalOAuthBuilder, com.commercetools.api.models.project.ExternalOAuth> builder) {
+    
+    public ProjectSetExternalOAuthActionBuilder withExternalOAuth(Function<com.commercetools.api.models.project.ExternalOAuthBuilder, com.commercetools.api.models.project.ExternalOAuth> builder) {
         this.externalOAuth = builder.apply(com.commercetools.api.models.project.ExternalOAuthBuilder.of());
         return this;
     }
-
+                    
     /**
      *  <p>Value to set. If empty, any existing value will be removed.</p>
      * @param externalOAuth value to be set
      * @return Builder
      */
-
-    public ProjectSetExternalOAuthActionBuilder externalOAuth(
-            @Nullable final com.commercetools.api.models.project.ExternalOAuth externalOAuth) {
+    
+    public ProjectSetExternalOAuthActionBuilder externalOAuth(@Nullable final com.commercetools.api.models.project.ExternalOAuth externalOAuth) {
         this.externalOAuth = externalOAuth;
         return this;
     }
+    
+    
 
     /**
      *  <p>Value to set. If empty, any existing value will be removed.</p>
      * @return externalOAuth
      */
-
+    
     @Nullable
-    public com.commercetools.api.models.project.ExternalOAuth getExternalOAuth() {
+    public com.commercetools.api.models.project.ExternalOAuth getExternalOAuth(){
         return this.externalOAuth;
     }
 
@@ -79,7 +84,7 @@ public class ProjectSetExternalOAuthActionBuilder implements Builder<ProjectSetE
     public ProjectSetExternalOAuthAction build() {
         return new ProjectSetExternalOAuthActionImpl(externalOAuth);
     }
-
+    
     /**
      * builds ProjectSetExternalOAuthAction without checking for non-null required values
      * @return ProjectSetExternalOAuthAction
@@ -90,7 +95,7 @@ public class ProjectSetExternalOAuthActionBuilder implements Builder<ProjectSetE
 
     /**
      * factory method for an instance of ProjectSetExternalOAuthActionBuilder
-     * @return builder
+     * @return builder 
      */
     public static ProjectSetExternalOAuthActionBuilder of() {
         return new ProjectSetExternalOAuthActionBuilder();

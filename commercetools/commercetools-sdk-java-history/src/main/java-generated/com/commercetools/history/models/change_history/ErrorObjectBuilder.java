@@ -1,8 +1,11 @@
-
 package com.commercetools.history.models.change_history;
 
-import java.util.*;
 
+import com.commercetools.history.models.change_history.ErrorObject;
+import javax.annotation.Nullable;
+import java.util.*;
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -17,52 +20,67 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .message("{message}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class ErrorObjectBuilder implements Builder<ErrorObject> {
 
+    
+    
     private String code;
-
+    
+    
+    
     private String message;
 
+    
     /**
      * set the value to the code
      * @param code value to be set
      * @return Builder
      */
-
-    public ErrorObjectBuilder code(final String code) {
+    
+    public ErrorObjectBuilder code( final String code) {
         this.code = code;
         return this;
     }
-
+    
+    
+    
+    
     /**
      * set the value to the message
      * @param message value to be set
      * @return Builder
      */
-
-    public ErrorObjectBuilder message(final String message) {
+    
+    public ErrorObjectBuilder message( final String message) {
         this.message = message;
         return this;
     }
+    
+    
 
     /**
      * value of code}
      * @return code
      */
-
-    public String getCode() {
+    
+    
+    public String getCode(){
         return this.code;
     }
-
+    
     /**
      * value of message}
      * @return message
      */
-
-    public String getMessage() {
+    
+    
+    public String getMessage(){
         return this.message;
     }
 
@@ -75,7 +93,7 @@ public class ErrorObjectBuilder implements Builder<ErrorObject> {
         Objects.requireNonNull(message, ErrorObject.class + ": message is missing");
         return new ErrorObjectImpl(code, message);
     }
-
+    
     /**
      * builds ErrorObject without checking for non-null required values
      * @return ErrorObject
@@ -86,7 +104,7 @@ public class ErrorObjectBuilder implements Builder<ErrorObject> {
 
     /**
      * factory method for an instance of ErrorObjectBuilder
-     * @return builder
+     * @return builder 
      */
     public static ErrorObjectBuilder of() {
         return new ErrorObjectBuilder();

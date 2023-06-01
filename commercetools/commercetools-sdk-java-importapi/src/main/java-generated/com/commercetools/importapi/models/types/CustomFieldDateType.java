@@ -1,16 +1,20 @@
-
 package com.commercetools.importapi.models.types;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
+import com.commercetools.importapi.models.types.FieldType;
+import com.commercetools.importapi.models.types.CustomFieldDateTypeImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Field type for Date values.</p>
@@ -22,9 +26,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     CustomFieldDateType customFieldDateType = CustomFieldDateType.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = CustomFieldDateTypeImpl.class)
 public interface CustomFieldDateType extends FieldType {
 
@@ -33,13 +40,16 @@ public interface CustomFieldDateType extends FieldType {
      */
     String DATE = "Date";
 
+
+
     /**
      * factory method
      * @return instance of CustomFieldDateType
      */
-    public static CustomFieldDateType of() {
+    public static CustomFieldDateType of(){
         return new CustomFieldDateTypeImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy CustomFieldDateType
@@ -72,7 +82,7 @@ public interface CustomFieldDateType extends FieldType {
     public static CustomFieldDateTypeBuilder builder() {
         return CustomFieldDateTypeBuilder.of();
     }
-
+    
     /**
      * create builder for CustomFieldDateType instance
      * @param template instance with prefilled values for the builder
@@ -81,6 +91,7 @@ public interface CustomFieldDateType extends FieldType {
     public static CustomFieldDateTypeBuilder builder(final CustomFieldDateType template) {
         return CustomFieldDateTypeBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -91,7 +102,7 @@ public interface CustomFieldDateType extends FieldType {
     default <T> T withCustomFieldDateType(Function<CustomFieldDateType, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

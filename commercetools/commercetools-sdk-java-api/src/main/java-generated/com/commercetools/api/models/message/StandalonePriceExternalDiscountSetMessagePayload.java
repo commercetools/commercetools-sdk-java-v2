@@ -1,18 +1,21 @@
-
 package com.commercetools.api.models.message;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-
 import com.commercetools.api.models.common.DiscountedPrice;
+import com.commercetools.api.models.message.MessagePayload;
+import com.commercetools.api.models.message.StandalonePriceExternalDiscountSetMessagePayloadImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Generated after a successful Set Discounted Price update action.</p>
@@ -24,9 +27,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     StandalonePriceExternalDiscountSetMessagePayload standalonePriceExternalDiscountSetMessagePayload = StandalonePriceExternalDiscountSetMessagePayload.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = StandalonePriceExternalDiscountSetMessagePayloadImpl.class)
 public interface StandalonePriceExternalDiscountSetMessagePayload extends MessagePayload {
 
@@ -47,24 +53,25 @@ public interface StandalonePriceExternalDiscountSetMessagePayload extends Messag
      *  <p>The <code>discounted</code> value of the StandalonePrice after the Set Discounted Price update action.</p>
      * @param discounted value to be set
      */
-
+    
     public void setDiscounted(final DiscountedPrice discounted);
+    
 
     /**
      * factory method
      * @return instance of StandalonePriceExternalDiscountSetMessagePayload
      */
-    public static StandalonePriceExternalDiscountSetMessagePayload of() {
+    public static StandalonePriceExternalDiscountSetMessagePayload of(){
         return new StandalonePriceExternalDiscountSetMessagePayloadImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy StandalonePriceExternalDiscountSetMessagePayload
      * @param template instance to be copied
      * @return copy instance
      */
-    public static StandalonePriceExternalDiscountSetMessagePayload of(
-            final StandalonePriceExternalDiscountSetMessagePayload template) {
+    public static StandalonePriceExternalDiscountSetMessagePayload of(final StandalonePriceExternalDiscountSetMessagePayload template) {
         StandalonePriceExternalDiscountSetMessagePayloadImpl instance = new StandalonePriceExternalDiscountSetMessagePayloadImpl();
         instance.setDiscounted(template.getDiscounted());
         return instance;
@@ -76,8 +83,7 @@ public interface StandalonePriceExternalDiscountSetMessagePayload extends Messag
      * @return copy instance
      */
     @Nullable
-    public static StandalonePriceExternalDiscountSetMessagePayload deepCopy(
-            @Nullable final StandalonePriceExternalDiscountSetMessagePayload template) {
+    public static StandalonePriceExternalDiscountSetMessagePayload deepCopy(@Nullable final StandalonePriceExternalDiscountSetMessagePayload template) {
         if (template == null) {
             return null;
         }
@@ -93,16 +99,16 @@ public interface StandalonePriceExternalDiscountSetMessagePayload extends Messag
     public static StandalonePriceExternalDiscountSetMessagePayloadBuilder builder() {
         return StandalonePriceExternalDiscountSetMessagePayloadBuilder.of();
     }
-
+    
     /**
      * create builder for StandalonePriceExternalDiscountSetMessagePayload instance
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static StandalonePriceExternalDiscountSetMessagePayloadBuilder builder(
-            final StandalonePriceExternalDiscountSetMessagePayload template) {
+    public static StandalonePriceExternalDiscountSetMessagePayloadBuilder builder(final StandalonePriceExternalDiscountSetMessagePayload template) {
         return StandalonePriceExternalDiscountSetMessagePayloadBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -110,11 +116,10 @@ public interface StandalonePriceExternalDiscountSetMessagePayload extends Messag
      * @param helper function to map the object
      * @return mapped value
      */
-    default <T> T withStandalonePriceExternalDiscountSetMessagePayload(
-            Function<StandalonePriceExternalDiscountSetMessagePayload, T> helper) {
+    default <T> T withStandalonePriceExternalDiscountSetMessagePayload(Function<StandalonePriceExternalDiscountSetMessagePayload, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

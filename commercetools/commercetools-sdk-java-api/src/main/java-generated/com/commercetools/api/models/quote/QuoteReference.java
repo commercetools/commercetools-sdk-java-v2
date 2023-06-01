@@ -1,18 +1,22 @@
-
 package com.commercetools.api.models.quote;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-
 import com.commercetools.api.models.common.Reference;
+import com.commercetools.api.models.common.ReferenceTypeId;
+import com.commercetools.api.models.quote.Quote;
+import com.commercetools.api.models.quote.QuoteReferenceImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Reference to a Quote.</p>
@@ -25,9 +29,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .id("{id}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = QuoteReferenceImpl.class)
 public interface QuoteReference extends Reference, com.commercetools.api.models.Identifiable<Quote> {
 
@@ -48,16 +55,18 @@ public interface QuoteReference extends Reference, com.commercetools.api.models.
      *  <p>Contains the representation of the expanded Quote. Only present in responses to requests with Reference Expansion for Quote.</p>
      * @param obj value to be set
      */
-
+    
     public void setObj(final Quote obj);
+    
 
     /**
      * factory method
      * @return instance of QuoteReference
      */
-    public static QuoteReference of() {
+    public static QuoteReference of(){
         return new QuoteReferenceImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy QuoteReference
@@ -94,7 +103,7 @@ public interface QuoteReference extends Reference, com.commercetools.api.models.
     public static QuoteReferenceBuilder builder() {
         return QuoteReferenceBuilder.of();
     }
-
+    
     /**
      * create builder for QuoteReference instance
      * @param template instance with prefilled values for the builder
@@ -103,6 +112,7 @@ public interface QuoteReference extends Reference, com.commercetools.api.models.
     public static QuoteReferenceBuilder builder(final QuoteReference template) {
         return QuoteReferenceBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -113,7 +123,7 @@ public interface QuoteReference extends Reference, com.commercetools.api.models.
     default <T> T withQuoteReference(Function<QuoteReference, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

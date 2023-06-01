@@ -1,18 +1,21 @@
-
 package com.commercetools.api.models.order;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
+import com.commercetools.api.models.order.OrderUpdateAction;
+import com.commercetools.api.models.order.TrackingData;
+import com.commercetools.api.models.order.OrderSetParcelTrackingDataActionImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * OrderSetParcelTrackingDataAction
@@ -25,9 +28,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .parcelId("{parcelId}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = OrderSetParcelTrackingDataActionImpl.class)
 public interface OrderSetParcelTrackingDataAction extends OrderUpdateAction {
 
@@ -43,7 +49,6 @@ public interface OrderSetParcelTrackingDataAction extends OrderUpdateAction {
     @NotNull
     @JsonProperty("parcelId")
     public String getParcelId();
-
     /**
      *
      * @return trackingData
@@ -56,23 +61,26 @@ public interface OrderSetParcelTrackingDataAction extends OrderUpdateAction {
      * set parcelId
      * @param parcelId value to be set
      */
-
+    
     public void setParcelId(final String parcelId);
-
+    
+    
     /**
      * set trackingData
      * @param trackingData value to be set
      */
-
+    
     public void setTrackingData(final TrackingData trackingData);
+    
 
     /**
      * factory method
      * @return instance of OrderSetParcelTrackingDataAction
      */
-    public static OrderSetParcelTrackingDataAction of() {
+    public static OrderSetParcelTrackingDataAction of(){
         return new OrderSetParcelTrackingDataActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy OrderSetParcelTrackingDataAction
@@ -109,7 +117,7 @@ public interface OrderSetParcelTrackingDataAction extends OrderUpdateAction {
     public static OrderSetParcelTrackingDataActionBuilder builder() {
         return OrderSetParcelTrackingDataActionBuilder.of();
     }
-
+    
     /**
      * create builder for OrderSetParcelTrackingDataAction instance
      * @param template instance with prefilled values for the builder
@@ -118,6 +126,7 @@ public interface OrderSetParcelTrackingDataAction extends OrderUpdateAction {
     public static OrderSetParcelTrackingDataActionBuilder builder(final OrderSetParcelTrackingDataAction template) {
         return OrderSetParcelTrackingDataActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -128,7 +137,7 @@ public interface OrderSetParcelTrackingDataAction extends OrderUpdateAction {
     default <T> T withOrderSetParcelTrackingDataAction(Function<OrderSetParcelTrackingDataAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

@@ -1,19 +1,21 @@
-
 package com.commercetools.api.models.cart;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
+import com.commercetools.api.models.cart.ExternalTaxRateDraft;
 import com.commercetools.api.models.common.Money;
+import com.commercetools.api.models.cart.ExternalTaxAmountDraftImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Cannot be used in LineItemDraft or CustomLineItemDraft.</p>
@@ -32,11 +34,15 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .taxRate(taxRateBuilder -> taxRateBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = ExternalTaxAmountDraftImpl.class)
 public interface ExternalTaxAmountDraft extends io.vrap.rmf.base.client.Draft<ExternalTaxAmountDraft> {
+
 
     /**
      *  <p>Total gross amount (<code>totalNet</code> + <code>taxPortions</code>) of the Line Item or Custom Line Item.</p>
@@ -46,7 +52,6 @@ public interface ExternalTaxAmountDraft extends io.vrap.rmf.base.client.Draft<Ex
     @Valid
     @JsonProperty("totalGross")
     public Money getTotalGross();
-
     /**
      *  <p>Tax Rates and subrates of states and countries.</p>
      * @return taxRate
@@ -60,23 +65,26 @@ public interface ExternalTaxAmountDraft extends io.vrap.rmf.base.client.Draft<Ex
      *  <p>Total gross amount (<code>totalNet</code> + <code>taxPortions</code>) of the Line Item or Custom Line Item.</p>
      * @param totalGross value to be set
      */
-
+    
     public void setTotalGross(final Money totalGross);
-
+    
+    
     /**
      *  <p>Tax Rates and subrates of states and countries.</p>
      * @param taxRate value to be set
      */
-
+    
     public void setTaxRate(final ExternalTaxRateDraft taxRate);
+    
 
     /**
      * factory method
      * @return instance of ExternalTaxAmountDraft
      */
-    public static ExternalTaxAmountDraft of() {
+    public static ExternalTaxAmountDraft of(){
         return new ExternalTaxAmountDraftImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy ExternalTaxAmountDraft
@@ -113,7 +121,7 @@ public interface ExternalTaxAmountDraft extends io.vrap.rmf.base.client.Draft<Ex
     public static ExternalTaxAmountDraftBuilder builder() {
         return ExternalTaxAmountDraftBuilder.of();
     }
-
+    
     /**
      * create builder for ExternalTaxAmountDraft instance
      * @param template instance with prefilled values for the builder
@@ -122,6 +130,7 @@ public interface ExternalTaxAmountDraft extends io.vrap.rmf.base.client.Draft<Ex
     public static ExternalTaxAmountDraftBuilder builder(final ExternalTaxAmountDraft template) {
         return ExternalTaxAmountDraftBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -132,7 +141,7 @@ public interface ExternalTaxAmountDraft extends io.vrap.rmf.base.client.Draft<Ex
     default <T> T withExternalTaxAmountDraft(Function<ExternalTaxAmountDraft, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

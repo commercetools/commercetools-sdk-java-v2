@@ -1,9 +1,11 @@
-
 package com.commercetools.api.models.product_discount;
 
+import com.commercetools.api.models.product_discount.ProductDiscountUpdateAction;
+import com.commercetools.api.models.product_discount.ProductDiscountUpdate;
+import javax.annotation.Nullable;
 import java.util.*;
 import java.util.function.Function;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -18,112 +20,118 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .plusActions(actionsBuilder -> actionsBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class ProductDiscountUpdateBuilder implements Builder<ProductDiscountUpdate> {
 
+    
+    
     private Long version;
-
+    
+    
+    
     private java.util.List<com.commercetools.api.models.product_discount.ProductDiscountUpdateAction> actions;
 
+    
     /**
      *  <p>Expected version of the ProductDiscount on which the changes should be applied. If the expected version does not match the actual version, a ConcurrentModification error is returned.</p>
      * @param version value to be set
      * @return Builder
      */
-
-    public ProductDiscountUpdateBuilder version(final Long version) {
+    
+    public ProductDiscountUpdateBuilder version( final Long version) {
         this.version = version;
         return this;
     }
-
+    
+    
+    
     /**
      *  <p>Update actions to be performed on the ProductDiscount.</p>
      * @param actions value to be set
      * @return Builder
      */
-
-    public ProductDiscountUpdateBuilder actions(
-            final com.commercetools.api.models.product_discount.ProductDiscountUpdateAction... actions) {
+    
+    public ProductDiscountUpdateBuilder actions( final com.commercetools.api.models.product_discount.ProductDiscountUpdateAction ...actions) {
         this.actions = new ArrayList<>(Arrays.asList(actions));
         return this;
     }
-
+    
     /**
      *  <p>Update actions to be performed on the ProductDiscount.</p>
      * @param actions value to be set
      * @return Builder
      */
-
-    public ProductDiscountUpdateBuilder actions(
-            final java.util.List<com.commercetools.api.models.product_discount.ProductDiscountUpdateAction> actions) {
+    
+    public ProductDiscountUpdateBuilder actions( final java.util.List<com.commercetools.api.models.product_discount.ProductDiscountUpdateAction> actions) {
         this.actions = actions;
         return this;
     }
-
+    
     /**
      *  <p>Update actions to be performed on the ProductDiscount.</p>
      * @param actions value to be set
      * @return Builder
      */
-
-    public ProductDiscountUpdateBuilder plusActions(
-            final com.commercetools.api.models.product_discount.ProductDiscountUpdateAction... actions) {
+    
+    public ProductDiscountUpdateBuilder plusActions( final com.commercetools.api.models.product_discount.ProductDiscountUpdateAction ...actions) {
         if (this.actions == null) {
             this.actions = new ArrayList<>();
         }
         this.actions.addAll(Arrays.asList(actions));
         return this;
     }
-
+    
+    
     /**
      *  <p>Update actions to be performed on the ProductDiscount.</p>
      * @param builder function to build the actions value
      * @return Builder
      */
-
-    public ProductDiscountUpdateBuilder plusActions(
-            Function<com.commercetools.api.models.product_discount.ProductDiscountUpdateActionBuilder, Builder<? extends com.commercetools.api.models.product_discount.ProductDiscountUpdateAction>> builder) {
+    
+    public ProductDiscountUpdateBuilder plusActions(Function<com.commercetools.api.models.product_discount.ProductDiscountUpdateActionBuilder, Builder<? extends com.commercetools.api.models.product_discount.ProductDiscountUpdateAction>> builder) {
         if (this.actions == null) {
             this.actions = new ArrayList<>();
         }
-        this.actions.add(
-            builder.apply(com.commercetools.api.models.product_discount.ProductDiscountUpdateActionBuilder.of())
-                    .build());
+        this.actions.add(builder.apply(com.commercetools.api.models.product_discount.ProductDiscountUpdateActionBuilder.of()).build());
         return this;
     }
-
+    
     /**
      *  <p>Update actions to be performed on the ProductDiscount.</p>
      * @param builder function to build the actions value
      * @return Builder
      */
-
-    public ProductDiscountUpdateBuilder withActions(
-            Function<com.commercetools.api.models.product_discount.ProductDiscountUpdateActionBuilder, Builder<? extends com.commercetools.api.models.product_discount.ProductDiscountUpdateAction>> builder) {
+    
+    public ProductDiscountUpdateBuilder withActions(Function<com.commercetools.api.models.product_discount.ProductDiscountUpdateActionBuilder, Builder<? extends com.commercetools.api.models.product_discount.ProductDiscountUpdateAction>> builder) {
         this.actions = new ArrayList<>();
-        this.actions.add(
-            builder.apply(com.commercetools.api.models.product_discount.ProductDiscountUpdateActionBuilder.of())
-                    .build());
+        this.actions.add(builder.apply(com.commercetools.api.models.product_discount.ProductDiscountUpdateActionBuilder.of()).build());
         return this;
     }
+                    
+    
 
     /**
      *  <p>Expected version of the ProductDiscount on which the changes should be applied. If the expected version does not match the actual version, a ConcurrentModification error is returned.</p>
      * @return version
      */
-
-    public Long getVersion() {
+    
+    
+    public Long getVersion(){
         return this.version;
     }
-
+    
     /**
      *  <p>Update actions to be performed on the ProductDiscount.</p>
      * @return actions
      */
-
-    public java.util.List<com.commercetools.api.models.product_discount.ProductDiscountUpdateAction> getActions() {
+    
+    
+    public java.util.List<com.commercetools.api.models.product_discount.ProductDiscountUpdateAction> getActions(){
         return this.actions;
     }
 
@@ -136,7 +144,7 @@ public class ProductDiscountUpdateBuilder implements Builder<ProductDiscountUpda
         Objects.requireNonNull(actions, ProductDiscountUpdate.class + ": actions is missing");
         return new ProductDiscountUpdateImpl(version, actions);
     }
-
+    
     /**
      * builds ProductDiscountUpdate without checking for non-null required values
      * @return ProductDiscountUpdate
@@ -147,7 +155,7 @@ public class ProductDiscountUpdateBuilder implements Builder<ProductDiscountUpda
 
     /**
      * factory method for an instance of ProductDiscountUpdateBuilder
-     * @return builder
+     * @return builder 
      */
     public static ProductDiscountUpdateBuilder of() {
         return new ProductDiscountUpdateBuilder();

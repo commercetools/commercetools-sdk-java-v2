@@ -1,17 +1,20 @@
-
 package com.commercetools.history.models.change;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
+import com.commercetools.history.models.change.Change;
+import com.commercetools.history.models.change.SetVatIdChangeImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * SetVatIdChange
@@ -26,9 +29,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .nextValue("{nextValue}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = SetVatIdChangeImpl.class)
 public interface SetVatIdChange extends Change {
 
@@ -44,7 +50,6 @@ public interface SetVatIdChange extends Change {
     @NotNull
     @JsonProperty("type")
     public String getType();
-
     /**
      *  <p>Shape of the action for <code>setVatId</code></p>
      * @return change
@@ -52,7 +57,6 @@ public interface SetVatIdChange extends Change {
     @NotNull
     @JsonProperty("change")
     public String getChange();
-
     /**
      *
      * @return previousValue
@@ -60,7 +64,6 @@ public interface SetVatIdChange extends Change {
     @NotNull
     @JsonProperty("previousValue")
     public String getPreviousValue();
-
     /**
      *
      * @return nextValue
@@ -73,30 +76,34 @@ public interface SetVatIdChange extends Change {
      *  <p>Shape of the action for <code>setVatId</code></p>
      * @param change value to be set
      */
-
+    
     public void setChange(final String change);
-
+    
+    
     /**
      * set previousValue
      * @param previousValue value to be set
      */
-
+    
     public void setPreviousValue(final String previousValue);
-
+    
+    
     /**
      * set nextValue
      * @param nextValue value to be set
      */
-
+    
     public void setNextValue(final String nextValue);
+    
 
     /**
      * factory method
      * @return instance of SetVatIdChange
      */
-    public static SetVatIdChange of() {
+    public static SetVatIdChange of(){
         return new SetVatIdChangeImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy SetVatIdChange
@@ -135,7 +142,7 @@ public interface SetVatIdChange extends Change {
     public static SetVatIdChangeBuilder builder() {
         return SetVatIdChangeBuilder.of();
     }
-
+    
     /**
      * create builder for SetVatIdChange instance
      * @param template instance with prefilled values for the builder
@@ -144,6 +151,7 @@ public interface SetVatIdChange extends Change {
     public static SetVatIdChangeBuilder builder(final SetVatIdChange template) {
         return SetVatIdChangeBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -154,7 +162,7 @@ public interface SetVatIdChange extends Change {
     default <T> T withSetVatIdChange(Function<SetVatIdChange, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

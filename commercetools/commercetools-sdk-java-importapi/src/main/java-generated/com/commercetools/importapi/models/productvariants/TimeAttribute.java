@@ -1,18 +1,21 @@
-
 package com.commercetools.importapi.models.productvariants;
 
-import java.time.*;
+import com.commercetools.importapi.models.productvariants.Attribute;
 import java.time.LocalTime;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
+import com.commercetools.importapi.models.productvariants.TimeAttributeImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>This type represents an attribute whose value is a time.</p>
@@ -25,9 +28,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .value(LocalTime.parse("12:00:00.301"))
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = TimeAttributeImpl.class)
 public interface TimeAttribute extends Attribute {
 
@@ -48,16 +54,18 @@ public interface TimeAttribute extends Attribute {
      * set value
      * @param value value to be set
      */
-
+    
     public void setValue(final LocalTime value);
+    
 
     /**
      * factory method
      * @return instance of TimeAttribute
      */
-    public static TimeAttribute of() {
+    public static TimeAttribute of(){
         return new TimeAttributeImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy TimeAttribute
@@ -94,7 +102,7 @@ public interface TimeAttribute extends Attribute {
     public static TimeAttributeBuilder builder() {
         return TimeAttributeBuilder.of();
     }
-
+    
     /**
      * create builder for TimeAttribute instance
      * @param template instance with prefilled values for the builder
@@ -103,6 +111,7 @@ public interface TimeAttribute extends Attribute {
     public static TimeAttributeBuilder builder(final TimeAttribute template) {
         return TimeAttributeBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -113,7 +122,7 @@ public interface TimeAttribute extends Attribute {
     default <T> T withTimeAttribute(Function<TimeAttribute, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

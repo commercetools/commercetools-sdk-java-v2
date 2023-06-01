@@ -1,20 +1,21 @@
-
 package com.commercetools.api.models.order_edit;
-
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.cart.ExternalTaxRateDraft;
 import com.commercetools.api.models.order.StagedOrderUpdateAction;
+import com.commercetools.api.models.order_edit.StagedOrderSetCustomLineItemTaxRateActionImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * StagedOrderSetCustomLineItemTaxRateAction
@@ -27,9 +28,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .customLineItemId("{customLineItemId}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = StagedOrderSetCustomLineItemTaxRateActionImpl.class)
 public interface StagedOrderSetCustomLineItemTaxRateAction extends StagedOrderUpdateAction {
 
@@ -45,7 +49,6 @@ public interface StagedOrderSetCustomLineItemTaxRateAction extends StagedOrderUp
     @NotNull
     @JsonProperty("customLineItemId")
     public String getCustomLineItemId();
-
     /**
      *  <p>Controls calculation of taxed prices for Line Items, Custom Line Items, and Shipping Methods as explained in Cart tax calculation.</p>
      * @return externalTaxRate
@@ -58,31 +61,33 @@ public interface StagedOrderSetCustomLineItemTaxRateAction extends StagedOrderUp
      * set customLineItemId
      * @param customLineItemId value to be set
      */
-
+    
     public void setCustomLineItemId(final String customLineItemId);
-
+    
+    
     /**
      *  <p>Controls calculation of taxed prices for Line Items, Custom Line Items, and Shipping Methods as explained in Cart tax calculation.</p>
      * @param externalTaxRate value to be set
      */
-
+    
     public void setExternalTaxRate(final ExternalTaxRateDraft externalTaxRate);
+    
 
     /**
      * factory method
      * @return instance of StagedOrderSetCustomLineItemTaxRateAction
      */
-    public static StagedOrderSetCustomLineItemTaxRateAction of() {
+    public static StagedOrderSetCustomLineItemTaxRateAction of(){
         return new StagedOrderSetCustomLineItemTaxRateActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy StagedOrderSetCustomLineItemTaxRateAction
      * @param template instance to be copied
      * @return copy instance
      */
-    public static StagedOrderSetCustomLineItemTaxRateAction of(
-            final StagedOrderSetCustomLineItemTaxRateAction template) {
+    public static StagedOrderSetCustomLineItemTaxRateAction of(final StagedOrderSetCustomLineItemTaxRateAction template) {
         StagedOrderSetCustomLineItemTaxRateActionImpl instance = new StagedOrderSetCustomLineItemTaxRateActionImpl();
         instance.setCustomLineItemId(template.getCustomLineItemId());
         instance.setExternalTaxRate(template.getExternalTaxRate());
@@ -95,15 +100,13 @@ public interface StagedOrderSetCustomLineItemTaxRateAction extends StagedOrderUp
      * @return copy instance
      */
     @Nullable
-    public static StagedOrderSetCustomLineItemTaxRateAction deepCopy(
-            @Nullable final StagedOrderSetCustomLineItemTaxRateAction template) {
+    public static StagedOrderSetCustomLineItemTaxRateAction deepCopy(@Nullable final StagedOrderSetCustomLineItemTaxRateAction template) {
         if (template == null) {
             return null;
         }
         StagedOrderSetCustomLineItemTaxRateActionImpl instance = new StagedOrderSetCustomLineItemTaxRateActionImpl();
         instance.setCustomLineItemId(template.getCustomLineItemId());
-        instance.setExternalTaxRate(
-            com.commercetools.api.models.cart.ExternalTaxRateDraft.deepCopy(template.getExternalTaxRate()));
+        instance.setExternalTaxRate(com.commercetools.api.models.cart.ExternalTaxRateDraft.deepCopy(template.getExternalTaxRate()));
         return instance;
     }
 
@@ -114,16 +117,16 @@ public interface StagedOrderSetCustomLineItemTaxRateAction extends StagedOrderUp
     public static StagedOrderSetCustomLineItemTaxRateActionBuilder builder() {
         return StagedOrderSetCustomLineItemTaxRateActionBuilder.of();
     }
-
+    
     /**
      * create builder for StagedOrderSetCustomLineItemTaxRateAction instance
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static StagedOrderSetCustomLineItemTaxRateActionBuilder builder(
-            final StagedOrderSetCustomLineItemTaxRateAction template) {
+    public static StagedOrderSetCustomLineItemTaxRateActionBuilder builder(final StagedOrderSetCustomLineItemTaxRateAction template) {
         return StagedOrderSetCustomLineItemTaxRateActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -131,11 +134,10 @@ public interface StagedOrderSetCustomLineItemTaxRateAction extends StagedOrderUp
      * @param helper function to map the object
      * @return mapped value
      */
-    default <T> T withStagedOrderSetCustomLineItemTaxRateAction(
-            Function<StagedOrderSetCustomLineItemTaxRateAction, T> helper) {
+    default <T> T withStagedOrderSetCustomLineItemTaxRateAction(Function<StagedOrderSetCustomLineItemTaxRateAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

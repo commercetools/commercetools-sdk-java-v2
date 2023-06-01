@@ -1,9 +1,12 @@
-
 package com.commercetools.api.models.product_selection;
 
+import com.commercetools.api.models.common.LocalizedString;
+import com.commercetools.api.models.product_selection.ProductSelectionUpdateAction;
+import com.commercetools.api.models.product_selection.ProductSelectionChangeNameAction;
+import javax.annotation.Nullable;
 import java.util.*;
 import java.util.function.Function;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -17,55 +20,61 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .name(nameBuilder -> nameBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class ProductSelectionChangeNameActionBuilder implements Builder<ProductSelectionChangeNameAction> {
 
+    
+    
     private com.commercetools.api.models.common.LocalizedString name;
 
+    
     /**
      *  <p>The new name to be set for the ProductSelection.</p>
      * @param builder function to build the name value
      * @return Builder
      */
-
-    public ProductSelectionChangeNameActionBuilder name(
-            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
+    
+    public ProductSelectionChangeNameActionBuilder name(Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
         this.name = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of()).build();
         return this;
     }
-
+    
     /**
      *  <p>The new name to be set for the ProductSelection.</p>
      * @param builder function to build the name value
      * @return Builder
      */
-
-    public ProductSelectionChangeNameActionBuilder withName(
-            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedString> builder) {
+    
+    public ProductSelectionChangeNameActionBuilder withName(Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedString> builder) {
         this.name = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of());
         return this;
     }
-
+                    
     /**
      *  <p>The new name to be set for the ProductSelection.</p>
      * @param name value to be set
      * @return Builder
      */
-
-    public ProductSelectionChangeNameActionBuilder name(
-            final com.commercetools.api.models.common.LocalizedString name) {
+    
+    public ProductSelectionChangeNameActionBuilder name( final com.commercetools.api.models.common.LocalizedString name) {
         this.name = name;
         return this;
     }
+    
+    
 
     /**
      *  <p>The new name to be set for the ProductSelection.</p>
      * @return name
      */
-
-    public com.commercetools.api.models.common.LocalizedString getName() {
+    
+    
+    public com.commercetools.api.models.common.LocalizedString getName(){
         return this.name;
     }
 
@@ -77,7 +86,7 @@ public class ProductSelectionChangeNameActionBuilder implements Builder<ProductS
         Objects.requireNonNull(name, ProductSelectionChangeNameAction.class + ": name is missing");
         return new ProductSelectionChangeNameActionImpl(name);
     }
-
+    
     /**
      * builds ProductSelectionChangeNameAction without checking for non-null required values
      * @return ProductSelectionChangeNameAction
@@ -88,7 +97,7 @@ public class ProductSelectionChangeNameActionBuilder implements Builder<ProductS
 
     /**
      * factory method for an instance of ProductSelectionChangeNameActionBuilder
-     * @return builder
+     * @return builder 
      */
     public static ProductSelectionChangeNameActionBuilder of() {
         return new ProductSelectionChangeNameActionBuilder();

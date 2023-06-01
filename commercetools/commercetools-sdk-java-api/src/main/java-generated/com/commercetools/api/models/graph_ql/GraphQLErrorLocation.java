@@ -1,17 +1,20 @@
-
 package com.commercetools.api.models.graph_ql;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
 
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
+import com.commercetools.api.models.graph_ql.GraphQLErrorLocationImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * GraphQLErrorLocation
@@ -25,11 +28,15 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .column(1)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = GraphQLErrorLocationImpl.class)
-public interface GraphQLErrorLocation {
+public interface GraphQLErrorLocation  {
+
 
     /**
      *
@@ -38,7 +45,6 @@ public interface GraphQLErrorLocation {
     @NotNull
     @JsonProperty("line")
     public Integer getLine();
-
     /**
      *
      * @return column
@@ -51,23 +57,26 @@ public interface GraphQLErrorLocation {
      * set line
      * @param line value to be set
      */
-
+    
     public void setLine(final Integer line);
-
+    
+    
     /**
      * set column
      * @param column value to be set
      */
-
+    
     public void setColumn(final Integer column);
+    
 
     /**
      * factory method
      * @return instance of GraphQLErrorLocation
      */
-    public static GraphQLErrorLocation of() {
+    public static GraphQLErrorLocation of(){
         return new GraphQLErrorLocationImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy GraphQLErrorLocation
@@ -104,7 +113,7 @@ public interface GraphQLErrorLocation {
     public static GraphQLErrorLocationBuilder builder() {
         return GraphQLErrorLocationBuilder.of();
     }
-
+    
     /**
      * create builder for GraphQLErrorLocation instance
      * @param template instance with prefilled values for the builder
@@ -113,6 +122,7 @@ public interface GraphQLErrorLocation {
     public static GraphQLErrorLocationBuilder builder(final GraphQLErrorLocation template) {
         return GraphQLErrorLocationBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -123,7 +133,7 @@ public interface GraphQLErrorLocation {
     default <T> T withGraphQLErrorLocation(Function<GraphQLErrorLocation, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

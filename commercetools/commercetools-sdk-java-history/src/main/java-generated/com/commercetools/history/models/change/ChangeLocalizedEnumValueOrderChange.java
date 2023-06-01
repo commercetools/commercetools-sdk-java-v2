@@ -1,20 +1,21 @@
-
 package com.commercetools.history.models.change;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-import java.util.stream.Collectors;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
+import com.commercetools.history.models.change.Change;
 import com.commercetools.history.models.change_value.LocalizedEnumValue;
+import com.commercetools.history.models.change.ChangeLocalizedEnumValueOrderChangeImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * ChangeLocalizedEnumValueOrderChange
@@ -31,9 +32,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .plusPreviousValue(previousValueBuilder -> previousValueBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = ChangeLocalizedEnumValueOrderChangeImpl.class)
 public interface ChangeLocalizedEnumValueOrderChange extends Change {
 
@@ -49,7 +53,6 @@ public interface ChangeLocalizedEnumValueOrderChange extends Change {
     @NotNull
     @JsonProperty("type")
     public String getType();
-
     /**
      *  <p>Update action for <code>changeLocalizedEnumValueOrder</code> on types and product types</p>
      * @return change
@@ -57,7 +60,6 @@ public interface ChangeLocalizedEnumValueOrderChange extends Change {
     @NotNull
     @JsonProperty("change")
     public String getChange();
-
     /**
      *  <p>The name of the field definition updated.</p>
      * @return fieldName
@@ -65,7 +67,6 @@ public interface ChangeLocalizedEnumValueOrderChange extends Change {
     @NotNull
     @JsonProperty("fieldName")
     public String getFieldName();
-
     /**
      *  <p>The name of the attribute updated.</p>
      * @return attributeName
@@ -73,7 +74,6 @@ public interface ChangeLocalizedEnumValueOrderChange extends Change {
     @NotNull
     @JsonProperty("attributeName")
     public String getAttributeName();
-
     /**
      *
      * @return nextValue
@@ -82,7 +82,6 @@ public interface ChangeLocalizedEnumValueOrderChange extends Change {
     @Valid
     @JsonProperty("nextValue")
     public List<LocalizedEnumValue> getNextValue();
-
     /**
      *
      * @return previousValue
@@ -96,60 +95,62 @@ public interface ChangeLocalizedEnumValueOrderChange extends Change {
      *  <p>Update action for <code>changeLocalizedEnumValueOrder</code> on types and product types</p>
      * @param change value to be set
      */
-
+    
     public void setChange(final String change);
-
+    
+    
     /**
      *  <p>The name of the field definition updated.</p>
      * @param fieldName value to be set
      */
-
+    
     public void setFieldName(final String fieldName);
-
+    
+    
     /**
      *  <p>The name of the attribute updated.</p>
      * @param attributeName value to be set
      */
-
+    
     public void setAttributeName(final String attributeName);
-
+    
+    
     /**
      * set nextValue
      * @param nextValue values to be set
      */
-
+    
     @JsonIgnore
-    public void setNextValue(final LocalizedEnumValue... nextValue);
-
+    public void setNextValue(final LocalizedEnumValue ...nextValue);
     /**
      * set nextValue
      * @param nextValue values to be set
      */
-
+    
     public void setNextValue(final List<LocalizedEnumValue> nextValue);
-
+    
     /**
      * set previousValue
      * @param previousValue values to be set
      */
-
+    
     @JsonIgnore
-    public void setPreviousValue(final LocalizedEnumValue... previousValue);
-
+    public void setPreviousValue(final LocalizedEnumValue ...previousValue);
     /**
      * set previousValue
      * @param previousValue values to be set
      */
-
+    
     public void setPreviousValue(final List<LocalizedEnumValue> previousValue);
 
     /**
      * factory method
      * @return instance of ChangeLocalizedEnumValueOrderChange
      */
-    public static ChangeLocalizedEnumValueOrderChange of() {
+    public static ChangeLocalizedEnumValueOrderChange of(){
         return new ChangeLocalizedEnumValueOrderChangeImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy ChangeLocalizedEnumValueOrderChange
@@ -172,8 +173,7 @@ public interface ChangeLocalizedEnumValueOrderChange extends Change {
      * @return copy instance
      */
     @Nullable
-    public static ChangeLocalizedEnumValueOrderChange deepCopy(
-            @Nullable final ChangeLocalizedEnumValueOrderChange template) {
+    public static ChangeLocalizedEnumValueOrderChange deepCopy(@Nullable final ChangeLocalizedEnumValueOrderChange template) {
         if (template == null) {
             return null;
         }
@@ -182,14 +182,10 @@ public interface ChangeLocalizedEnumValueOrderChange extends Change {
         instance.setFieldName(template.getFieldName());
         instance.setAttributeName(template.getAttributeName());
         instance.setNextValue(Optional.ofNullable(template.getNextValue())
-                .map(t -> t.stream()
-                        .map(com.commercetools.history.models.change_value.LocalizedEnumValue::deepCopy)
-                        .collect(Collectors.toList()))
+                .map(t -> t.stream().map(com.commercetools.history.models.change_value.LocalizedEnumValue::deepCopy).collect(Collectors.toList()))
                 .orElse(null));
         instance.setPreviousValue(Optional.ofNullable(template.getPreviousValue())
-                .map(t -> t.stream()
-                        .map(com.commercetools.history.models.change_value.LocalizedEnumValue::deepCopy)
-                        .collect(Collectors.toList()))
+                .map(t -> t.stream().map(com.commercetools.history.models.change_value.LocalizedEnumValue::deepCopy).collect(Collectors.toList()))
                 .orElse(null));
         return instance;
     }
@@ -201,16 +197,16 @@ public interface ChangeLocalizedEnumValueOrderChange extends Change {
     public static ChangeLocalizedEnumValueOrderChangeBuilder builder() {
         return ChangeLocalizedEnumValueOrderChangeBuilder.of();
     }
-
+    
     /**
      * create builder for ChangeLocalizedEnumValueOrderChange instance
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static ChangeLocalizedEnumValueOrderChangeBuilder builder(
-            final ChangeLocalizedEnumValueOrderChange template) {
+    public static ChangeLocalizedEnumValueOrderChangeBuilder builder(final ChangeLocalizedEnumValueOrderChange template) {
         return ChangeLocalizedEnumValueOrderChangeBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -221,7 +217,7 @@ public interface ChangeLocalizedEnumValueOrderChange extends Change {
     default <T> T withChangeLocalizedEnumValueOrderChange(Function<ChangeLocalizedEnumValueOrderChange, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

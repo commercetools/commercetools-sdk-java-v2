@@ -1,10 +1,12 @@
-
 package com.commercetools.api.models.order;
 
-import java.util.*;
-
+import com.commercetools.api.models.order.OrderUpdateAction;
+import com.commercetools.api.models.order.ShipmentState;
+import com.commercetools.api.models.order.OrderChangeShipmentStateAction;
 import javax.annotation.Nullable;
-
+import java.util.*;
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -17,33 +19,39 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     OrderChangeShipmentStateAction orderChangeShipmentStateAction = OrderChangeShipmentStateAction.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class OrderChangeShipmentStateActionBuilder implements Builder<OrderChangeShipmentStateAction> {
 
+    
     @Nullable
     private com.commercetools.api.models.order.ShipmentState shipmentState;
 
+    
     /**
      * set the value to the shipmentState
      * @param shipmentState value to be set
      * @return Builder
      */
-
-    public OrderChangeShipmentStateActionBuilder shipmentState(
-            @Nullable final com.commercetools.api.models.order.ShipmentState shipmentState) {
+    
+    public OrderChangeShipmentStateActionBuilder shipmentState(@Nullable final com.commercetools.api.models.order.ShipmentState shipmentState) {
         this.shipmentState = shipmentState;
         return this;
     }
+    
+    
 
     /**
      * value of shipmentState}
      * @return shipmentState
      */
-
+    
     @Nullable
-    public com.commercetools.api.models.order.ShipmentState getShipmentState() {
+    public com.commercetools.api.models.order.ShipmentState getShipmentState(){
         return this.shipmentState;
     }
 
@@ -54,7 +62,7 @@ public class OrderChangeShipmentStateActionBuilder implements Builder<OrderChang
     public OrderChangeShipmentStateAction build() {
         return new OrderChangeShipmentStateActionImpl(shipmentState);
     }
-
+    
     /**
      * builds OrderChangeShipmentStateAction without checking for non-null required values
      * @return OrderChangeShipmentStateAction
@@ -65,7 +73,7 @@ public class OrderChangeShipmentStateActionBuilder implements Builder<OrderChang
 
     /**
      * factory method for an instance of OrderChangeShipmentStateActionBuilder
-     * @return builder
+     * @return builder 
      */
     public static OrderChangeShipmentStateActionBuilder of() {
         return new OrderChangeShipmentStateActionBuilder();

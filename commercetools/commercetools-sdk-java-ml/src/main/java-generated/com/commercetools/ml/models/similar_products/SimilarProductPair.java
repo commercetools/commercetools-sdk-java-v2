@@ -1,19 +1,20 @@
-
 package com.commercetools.ml.models.similar_products;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-import java.util.stream.Collectors;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
+import com.commercetools.ml.models.similar_products.SimilarProduct;
+import com.commercetools.ml.models.similar_products.SimilarProductPairImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>A pair of SimilarProducts</p>
@@ -27,11 +28,15 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .plusProducts(productsBuilder -> productsBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = SimilarProductPairImpl.class)
-public interface SimilarProductPair {
+public interface SimilarProductPair  {
+
 
     /**
      *  <p>The probability of product similarity.</p>
@@ -40,7 +45,6 @@ public interface SimilarProductPair {
     @NotNull
     @JsonProperty("confidence")
     public Double getConfidence();
-
     /**
      *
      * @return products
@@ -54,31 +58,32 @@ public interface SimilarProductPair {
      *  <p>The probability of product similarity.</p>
      * @param confidence value to be set
      */
-
+    
     public void setConfidence(final Double confidence);
-
+    
+    
     /**
      * set products
      * @param products values to be set
      */
-
+    
     @JsonIgnore
-    public void setProducts(final SimilarProduct... products);
-
+    public void setProducts(final SimilarProduct ...products);
     /**
      * set products
      * @param products values to be set
      */
-
+    
     public void setProducts(final List<SimilarProduct> products);
 
     /**
      * factory method
      * @return instance of SimilarProductPair
      */
-    public static SimilarProductPair of() {
+    public static SimilarProductPair of(){
         return new SimilarProductPairImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy SimilarProductPair
@@ -105,9 +110,7 @@ public interface SimilarProductPair {
         SimilarProductPairImpl instance = new SimilarProductPairImpl();
         instance.setConfidence(template.getConfidence());
         instance.setProducts(Optional.ofNullable(template.getProducts())
-                .map(t -> t.stream()
-                        .map(com.commercetools.ml.models.similar_products.SimilarProduct::deepCopy)
-                        .collect(Collectors.toList()))
+                .map(t -> t.stream().map(com.commercetools.ml.models.similar_products.SimilarProduct::deepCopy).collect(Collectors.toList()))
                 .orElse(null));
         return instance;
     }
@@ -119,7 +122,7 @@ public interface SimilarProductPair {
     public static SimilarProductPairBuilder builder() {
         return SimilarProductPairBuilder.of();
     }
-
+    
     /**
      * create builder for SimilarProductPair instance
      * @param template instance with prefilled values for the builder
@@ -128,6 +131,7 @@ public interface SimilarProductPair {
     public static SimilarProductPairBuilder builder(final SimilarProductPair template) {
         return SimilarProductPairBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -138,7 +142,7 @@ public interface SimilarProductPair {
     default <T> T withSimilarProductPair(Function<SimilarProductPair, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

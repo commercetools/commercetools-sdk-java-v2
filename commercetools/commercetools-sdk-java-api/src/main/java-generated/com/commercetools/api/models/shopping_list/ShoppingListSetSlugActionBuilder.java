@@ -1,11 +1,12 @@
-
 package com.commercetools.api.models.shopping_list;
 
+import com.commercetools.api.models.common.LocalizedString;
+import com.commercetools.api.models.shopping_list.ShoppingListUpdateAction;
+import com.commercetools.api.models.shopping_list.ShoppingListSetSlugAction;
+import javax.annotation.Nullable;
 import java.util.*;
 import java.util.function.Function;
-
-import javax.annotation.Nullable;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -18,57 +19,61 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     ShoppingListSetSlugAction shoppingListSetSlugAction = ShoppingListSetSlugAction.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class ShoppingListSetSlugActionBuilder implements Builder<ShoppingListSetSlugAction> {
 
+    
     @Nullable
     private com.commercetools.api.models.common.LocalizedString slug;
 
+    
     /**
      *  <p>Value to set. If empty, any existing value will be removed. Each slug is unique across a Project, but a ShoppingList can have the same slug for different languages. Must match the pattern <code>^[A-Za-z0-9_-]{2,256}+$</code></p>
      * @param builder function to build the slug value
      * @return Builder
      */
-
-    public ShoppingListSetSlugActionBuilder slug(
-            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
+    
+    public ShoppingListSetSlugActionBuilder slug(Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
         this.slug = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of()).build();
         return this;
     }
-
+    
     /**
      *  <p>Value to set. If empty, any existing value will be removed. Each slug is unique across a Project, but a ShoppingList can have the same slug for different languages. Must match the pattern <code>^[A-Za-z0-9_-]{2,256}+$</code></p>
      * @param builder function to build the slug value
      * @return Builder
      */
-
-    public ShoppingListSetSlugActionBuilder withSlug(
-            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedString> builder) {
+    
+    public ShoppingListSetSlugActionBuilder withSlug(Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedString> builder) {
         this.slug = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of());
         return this;
     }
-
+                    
     /**
      *  <p>Value to set. If empty, any existing value will be removed. Each slug is unique across a Project, but a ShoppingList can have the same slug for different languages. Must match the pattern <code>^[A-Za-z0-9_-]{2,256}+$</code></p>
      * @param slug value to be set
      * @return Builder
      */
-
-    public ShoppingListSetSlugActionBuilder slug(
-            @Nullable final com.commercetools.api.models.common.LocalizedString slug) {
+    
+    public ShoppingListSetSlugActionBuilder slug(@Nullable final com.commercetools.api.models.common.LocalizedString slug) {
         this.slug = slug;
         return this;
     }
+    
+    
 
     /**
      *  <p>Value to set. If empty, any existing value will be removed. Each slug is unique across a Project, but a ShoppingList can have the same slug for different languages. Must match the pattern <code>^[A-Za-z0-9_-]{2,256}+$</code></p>
      * @return slug
      */
-
+    
     @Nullable
-    public com.commercetools.api.models.common.LocalizedString getSlug() {
+    public com.commercetools.api.models.common.LocalizedString getSlug(){
         return this.slug;
     }
 
@@ -79,7 +84,7 @@ public class ShoppingListSetSlugActionBuilder implements Builder<ShoppingListSet
     public ShoppingListSetSlugAction build() {
         return new ShoppingListSetSlugActionImpl(slug);
     }
-
+    
     /**
      * builds ShoppingListSetSlugAction without checking for non-null required values
      * @return ShoppingListSetSlugAction
@@ -90,7 +95,7 @@ public class ShoppingListSetSlugActionBuilder implements Builder<ShoppingListSet
 
     /**
      * factory method for an instance of ShoppingListSetSlugActionBuilder
-     * @return builder
+     * @return builder 
      */
     public static ShoppingListSetSlugActionBuilder of() {
         return new ShoppingListSetSlugActionBuilder();

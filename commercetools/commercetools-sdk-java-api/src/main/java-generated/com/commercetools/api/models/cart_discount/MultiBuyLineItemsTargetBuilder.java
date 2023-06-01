@@ -1,10 +1,12 @@
-
 package com.commercetools.api.models.cart_discount;
 
-import java.util.*;
-
+import com.commercetools.api.models.cart_discount.CartDiscountTarget;
+import com.commercetools.api.models.cart_discount.SelectionMode;
+import com.commercetools.api.models.cart_discount.MultiBuyLineItemsTarget;
 import javax.annotation.Nullable;
-
+import java.util.*;
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -21,121 +23,151 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .selectionMode(SelectionMode.CHEAPEST)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class MultiBuyLineItemsTargetBuilder implements Builder<MultiBuyLineItemsTarget> {
 
+    
+    
     private String predicate;
-
+    
+    
+    
     private Integer triggerQuantity;
-
+    
+    
+    
     private Integer discountedQuantity;
-
+    
+    
     @Nullable
     private Integer maxOccurrence;
-
+    
+    
+    
     private com.commercetools.api.models.cart_discount.SelectionMode selectionMode;
 
+    
     /**
      *  <p>Valid LineItem target predicate. The Discount will be applied to Line Items that are matched by the predicate.</p>
      * @param predicate value to be set
      * @return Builder
      */
-
-    public MultiBuyLineItemsTargetBuilder predicate(final String predicate) {
+    
+    public MultiBuyLineItemsTargetBuilder predicate( final String predicate) {
         this.predicate = predicate;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Number of Line Items to be present in order to trigger an application of this Discount.</p>
      * @param triggerQuantity value to be set
      * @return Builder
      */
-
-    public MultiBuyLineItemsTargetBuilder triggerQuantity(final Integer triggerQuantity) {
+    
+    public MultiBuyLineItemsTargetBuilder triggerQuantity( final Integer triggerQuantity) {
         this.triggerQuantity = triggerQuantity;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Number of Line Items that are discounted per application of this Discount.</p>
      * @param discountedQuantity value to be set
      * @return Builder
      */
-
-    public MultiBuyLineItemsTargetBuilder discountedQuantity(final Integer discountedQuantity) {
+    
+    public MultiBuyLineItemsTargetBuilder discountedQuantity( final Integer discountedQuantity) {
         this.discountedQuantity = discountedQuantity;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Maximum number of times this Discount can be applied.</p>
      * @param maxOccurrence value to be set
      * @return Builder
      */
-
+    
     public MultiBuyLineItemsTargetBuilder maxOccurrence(@Nullable final Integer maxOccurrence) {
         this.maxOccurrence = maxOccurrence;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Discounts particular Line Items only according to the SelectionMode.</p>
      * @param selectionMode value to be set
      * @return Builder
      */
-
-    public MultiBuyLineItemsTargetBuilder selectionMode(
-            final com.commercetools.api.models.cart_discount.SelectionMode selectionMode) {
+    
+    public MultiBuyLineItemsTargetBuilder selectionMode( final com.commercetools.api.models.cart_discount.SelectionMode selectionMode) {
         this.selectionMode = selectionMode;
         return this;
     }
+    
+    
 
     /**
      *  <p>Valid LineItem target predicate. The Discount will be applied to Line Items that are matched by the predicate.</p>
      * @return predicate
      */
-
-    public String getPredicate() {
+    
+    
+    public String getPredicate(){
         return this.predicate;
     }
-
+    
     /**
      *  <p>Number of Line Items to be present in order to trigger an application of this Discount.</p>
      * @return triggerQuantity
      */
-
-    public Integer getTriggerQuantity() {
+    
+    
+    public Integer getTriggerQuantity(){
         return this.triggerQuantity;
     }
-
+    
     /**
      *  <p>Number of Line Items that are discounted per application of this Discount.</p>
      * @return discountedQuantity
      */
-
-    public Integer getDiscountedQuantity() {
+    
+    
+    public Integer getDiscountedQuantity(){
         return this.discountedQuantity;
     }
-
+    
     /**
      *  <p>Maximum number of times this Discount can be applied.</p>
      * @return maxOccurrence
      */
-
+    
     @Nullable
-    public Integer getMaxOccurrence() {
+    public Integer getMaxOccurrence(){
         return this.maxOccurrence;
     }
-
+    
     /**
      *  <p>Discounts particular Line Items only according to the SelectionMode.</p>
      * @return selectionMode
      */
-
-    public com.commercetools.api.models.cart_discount.SelectionMode getSelectionMode() {
+    
+    
+    public com.commercetools.api.models.cart_discount.SelectionMode getSelectionMode(){
         return this.selectionMode;
     }
 
@@ -148,22 +180,20 @@ public class MultiBuyLineItemsTargetBuilder implements Builder<MultiBuyLineItems
         Objects.requireNonNull(triggerQuantity, MultiBuyLineItemsTarget.class + ": triggerQuantity is missing");
         Objects.requireNonNull(discountedQuantity, MultiBuyLineItemsTarget.class + ": discountedQuantity is missing");
         Objects.requireNonNull(selectionMode, MultiBuyLineItemsTarget.class + ": selectionMode is missing");
-        return new MultiBuyLineItemsTargetImpl(predicate, triggerQuantity, discountedQuantity, maxOccurrence,
-            selectionMode);
+        return new MultiBuyLineItemsTargetImpl(predicate, triggerQuantity, discountedQuantity, maxOccurrence, selectionMode);
     }
-
+    
     /**
      * builds MultiBuyLineItemsTarget without checking for non-null required values
      * @return MultiBuyLineItemsTarget
      */
     public MultiBuyLineItemsTarget buildUnchecked() {
-        return new MultiBuyLineItemsTargetImpl(predicate, triggerQuantity, discountedQuantity, maxOccurrence,
-            selectionMode);
+        return new MultiBuyLineItemsTargetImpl(predicate, triggerQuantity, discountedQuantity, maxOccurrence, selectionMode);
     }
 
     /**
      * factory method for an instance of MultiBuyLineItemsTargetBuilder
-     * @return builder
+     * @return builder 
      */
     public static MultiBuyLineItemsTargetBuilder of() {
         return new MultiBuyLineItemsTargetBuilder();

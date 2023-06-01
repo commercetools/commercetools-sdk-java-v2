@@ -1,16 +1,21 @@
-
 package com.commercetools.importapi.models.common;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
+import com.commercetools.importapi.models.common.KeyReference;
+import com.commercetools.importapi.models.common.ReferenceType;
+import com.commercetools.importapi.models.common.StateKeyReferenceImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>References a state by key.</p>
@@ -23,9 +28,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .key("{key}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = StateKeyReferenceImpl.class)
 public interface StateKeyReference extends KeyReference {
 
@@ -34,13 +42,16 @@ public interface StateKeyReference extends KeyReference {
      */
     String STATE = "state";
 
+
+
     /**
      * factory method
      * @return instance of StateKeyReference
      */
-    public static StateKeyReference of() {
+    public static StateKeyReference of(){
         return new StateKeyReferenceImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy StateKeyReference
@@ -75,7 +86,7 @@ public interface StateKeyReference extends KeyReference {
     public static StateKeyReferenceBuilder builder() {
         return StateKeyReferenceBuilder.of();
     }
-
+    
     /**
      * create builder for StateKeyReference instance
      * @param template instance with prefilled values for the builder
@@ -84,6 +95,7 @@ public interface StateKeyReference extends KeyReference {
     public static StateKeyReferenceBuilder builder(final StateKeyReference template) {
         return StateKeyReferenceBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -94,7 +106,7 @@ public interface StateKeyReference extends KeyReference {
     default <T> T withStateKeyReference(Function<StateKeyReference, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

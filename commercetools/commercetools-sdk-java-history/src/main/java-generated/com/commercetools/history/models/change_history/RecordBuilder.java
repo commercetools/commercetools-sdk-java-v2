@@ -1,9 +1,15 @@
-
 package com.commercetools.history.models.change_history;
 
+import com.commercetools.history.models.change.Change;
+import com.commercetools.history.models.change_history.ModifiedBy;
+import com.commercetools.history.models.common.KeyReference;
+import com.commercetools.history.models.common.Reference;
+import com.commercetools.history.models.label.Label;
+import com.commercetools.history.models.change_history.Record;
+import javax.annotation.Nullable;
 import java.util.*;
 import java.util.function.Function;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -27,450 +33,507 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .withoutChanges(true)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class RecordBuilder implements Builder<Record> {
 
+    
+    
     private Integer version;
-
+    
+    
+    
     private Integer previousVersion;
-
+    
+    
+    
     private String type;
-
+    
+    
+    
     private com.commercetools.history.models.change_history.ModifiedBy modifiedBy;
-
+    
+    
+    
     private String modifiedAt;
-
+    
+    
+    
     private com.commercetools.history.models.label.Label label;
-
+    
+    
+    
     private com.commercetools.history.models.label.Label previousLabel;
-
+    
+    
+    
     private java.util.List<com.commercetools.history.models.change.Change> changes;
-
+    
+    
+    
     private com.commercetools.history.models.common.Reference resource;
-
+    
+    
+    
     private java.util.List<com.commercetools.history.models.common.KeyReference> stores;
-
+    
+    
+    
     private Boolean withoutChanges;
 
+    
     /**
      *  <p>Version of the resource after the change.</p>
      * @param version value to be set
      * @return Builder
      */
-
-    public RecordBuilder version(final Integer version) {
+    
+    public RecordBuilder version( final Integer version) {
         this.version = version;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Version of the resource before the change.</p>
      * @param previousVersion value to be set
      * @return Builder
      */
-
-    public RecordBuilder previousVersion(final Integer previousVersion) {
+    
+    public RecordBuilder previousVersion( final Integer previousVersion) {
         this.previousVersion = previousVersion;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Type of the change (creation, update or deletion).</p>
      * @param type value to be set
      * @return Builder
      */
-
-    public RecordBuilder type(final String type) {
+    
+    public RecordBuilder type( final String type) {
         this.type = type;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Information about the user or the API client who performed the change.</p>
      * @param builder function to build the modifiedBy value
      * @return Builder
      */
-
-    public RecordBuilder modifiedBy(
-            Function<com.commercetools.history.models.change_history.ModifiedByBuilder, com.commercetools.history.models.change_history.ModifiedByBuilder> builder) {
+    
+    public RecordBuilder modifiedBy(Function<com.commercetools.history.models.change_history.ModifiedByBuilder, com.commercetools.history.models.change_history.ModifiedByBuilder> builder) {
         this.modifiedBy = builder.apply(com.commercetools.history.models.change_history.ModifiedByBuilder.of()).build();
         return this;
     }
-
+    
     /**
      *  <p>Information about the user or the API client who performed the change.</p>
      * @param builder function to build the modifiedBy value
      * @return Builder
      */
-
-    public RecordBuilder withModifiedBy(
-            Function<com.commercetools.history.models.change_history.ModifiedByBuilder, com.commercetools.history.models.change_history.ModifiedBy> builder) {
+    
+    public RecordBuilder withModifiedBy(Function<com.commercetools.history.models.change_history.ModifiedByBuilder, com.commercetools.history.models.change_history.ModifiedBy> builder) {
         this.modifiedBy = builder.apply(com.commercetools.history.models.change_history.ModifiedByBuilder.of());
         return this;
     }
-
+                    
     /**
      *  <p>Information about the user or the API client who performed the change.</p>
      * @param modifiedBy value to be set
      * @return Builder
      */
-
-    public RecordBuilder modifiedBy(final com.commercetools.history.models.change_history.ModifiedBy modifiedBy) {
+    
+    public RecordBuilder modifiedBy( final com.commercetools.history.models.change_history.ModifiedBy modifiedBy) {
         this.modifiedBy = modifiedBy;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Date and time when the change was made.</p>
      * @param modifiedAt value to be set
      * @return Builder
      */
-
-    public RecordBuilder modifiedAt(final String modifiedAt) {
+    
+    public RecordBuilder modifiedAt( final String modifiedAt) {
         this.modifiedAt = modifiedAt;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Information that describes the resource after the change.</p>
      * @param label value to be set
      * @return Builder
      */
-
-    public RecordBuilder label(final com.commercetools.history.models.label.Label label) {
+    
+    public RecordBuilder label( final com.commercetools.history.models.label.Label label) {
         this.label = label;
         return this;
     }
-
+    
+    
     /**
      *  <p>Information that describes the resource after the change.</p>
      * @param builder function to build the label value
      * @return Builder
      */
-
-    public RecordBuilder label(
-            Function<com.commercetools.history.models.label.LabelBuilder, Builder<? extends com.commercetools.history.models.label.Label>> builder) {
+    
+    public RecordBuilder label(Function<com.commercetools.history.models.label.LabelBuilder, Builder<? extends com.commercetools.history.models.label.Label>> builder) {
         this.label = builder.apply(com.commercetools.history.models.label.LabelBuilder.of()).build();
         return this;
     }
-
+                    
+    
+    
     /**
      *  <p>Information that describes the resource before the change.</p>
      * @param previousLabel value to be set
      * @return Builder
      */
-
-    public RecordBuilder previousLabel(final com.commercetools.history.models.label.Label previousLabel) {
+    
+    public RecordBuilder previousLabel( final com.commercetools.history.models.label.Label previousLabel) {
         this.previousLabel = previousLabel;
         return this;
     }
-
+    
+    
     /**
      *  <p>Information that describes the resource before the change.</p>
      * @param builder function to build the previousLabel value
      * @return Builder
      */
-
-    public RecordBuilder previousLabel(
-            Function<com.commercetools.history.models.label.LabelBuilder, Builder<? extends com.commercetools.history.models.label.Label>> builder) {
+    
+    public RecordBuilder previousLabel(Function<com.commercetools.history.models.label.LabelBuilder, Builder<? extends com.commercetools.history.models.label.Label>> builder) {
         this.previousLabel = builder.apply(com.commercetools.history.models.label.LabelBuilder.of()).build();
         return this;
     }
-
+                    
+    
     /**
      *  <p>Shows the differences in the resource between <code>previousVersion</code> and <code>version</code>. The value is not identical to the actual array of update actions sent and is not limited to update actions (see, for example, Optimistic Concurrency Control).</p>
      * @param changes value to be set
      * @return Builder
      */
-
-    public RecordBuilder changes(final com.commercetools.history.models.change.Change... changes) {
+    
+    public RecordBuilder changes( final com.commercetools.history.models.change.Change ...changes) {
         this.changes = new ArrayList<>(Arrays.asList(changes));
         return this;
     }
-
+    
     /**
      *  <p>Shows the differences in the resource between <code>previousVersion</code> and <code>version</code>. The value is not identical to the actual array of update actions sent and is not limited to update actions (see, for example, Optimistic Concurrency Control).</p>
      * @param changes value to be set
      * @return Builder
      */
-
-    public RecordBuilder changes(final java.util.List<com.commercetools.history.models.change.Change> changes) {
+    
+    public RecordBuilder changes( final java.util.List<com.commercetools.history.models.change.Change> changes) {
         this.changes = changes;
         return this;
     }
-
+    
     /**
      *  <p>Shows the differences in the resource between <code>previousVersion</code> and <code>version</code>. The value is not identical to the actual array of update actions sent and is not limited to update actions (see, for example, Optimistic Concurrency Control).</p>
      * @param changes value to be set
      * @return Builder
      */
-
-    public RecordBuilder plusChanges(final com.commercetools.history.models.change.Change... changes) {
+    
+    public RecordBuilder plusChanges( final com.commercetools.history.models.change.Change ...changes) {
         if (this.changes == null) {
             this.changes = new ArrayList<>();
         }
         this.changes.addAll(Arrays.asList(changes));
         return this;
     }
-
+    
+    
     /**
      *  <p>Shows the differences in the resource between <code>previousVersion</code> and <code>version</code>. The value is not identical to the actual array of update actions sent and is not limited to update actions (see, for example, Optimistic Concurrency Control).</p>
      * @param builder function to build the changes value
      * @return Builder
      */
-
-    public RecordBuilder plusChanges(
-            Function<com.commercetools.history.models.change.ChangeBuilder, Builder<? extends com.commercetools.history.models.change.Change>> builder) {
+    
+    public RecordBuilder plusChanges(Function<com.commercetools.history.models.change.ChangeBuilder, Builder<? extends com.commercetools.history.models.change.Change>> builder) {
         if (this.changes == null) {
             this.changes = new ArrayList<>();
         }
         this.changes.add(builder.apply(com.commercetools.history.models.change.ChangeBuilder.of()).build());
         return this;
     }
-
+    
     /**
      *  <p>Shows the differences in the resource between <code>previousVersion</code> and <code>version</code>. The value is not identical to the actual array of update actions sent and is not limited to update actions (see, for example, Optimistic Concurrency Control).</p>
      * @param builder function to build the changes value
      * @return Builder
      */
-
-    public RecordBuilder withChanges(
-            Function<com.commercetools.history.models.change.ChangeBuilder, Builder<? extends com.commercetools.history.models.change.Change>> builder) {
+    
+    public RecordBuilder withChanges(Function<com.commercetools.history.models.change.ChangeBuilder, Builder<? extends com.commercetools.history.models.change.Change>> builder) {
         this.changes = new ArrayList<>();
         this.changes.add(builder.apply(com.commercetools.history.models.change.ChangeBuilder.of()).build());
         return this;
     }
-
+                    
+    
+    
+    
     /**
      *  <p>Reference to the changed resource.</p>
      * @param builder function to build the resource value
      * @return Builder
      */
-
-    public RecordBuilder resource(
-            Function<com.commercetools.history.models.common.ReferenceBuilder, com.commercetools.history.models.common.ReferenceBuilder> builder) {
+    
+    public RecordBuilder resource(Function<com.commercetools.history.models.common.ReferenceBuilder, com.commercetools.history.models.common.ReferenceBuilder> builder) {
         this.resource = builder.apply(com.commercetools.history.models.common.ReferenceBuilder.of()).build();
         return this;
     }
-
+    
     /**
      *  <p>Reference to the changed resource.</p>
      * @param builder function to build the resource value
      * @return Builder
      */
-
-    public RecordBuilder withResource(
-            Function<com.commercetools.history.models.common.ReferenceBuilder, com.commercetools.history.models.common.Reference> builder) {
+    
+    public RecordBuilder withResource(Function<com.commercetools.history.models.common.ReferenceBuilder, com.commercetools.history.models.common.Reference> builder) {
         this.resource = builder.apply(com.commercetools.history.models.common.ReferenceBuilder.of());
         return this;
     }
-
+                    
     /**
      *  <p>Reference to the changed resource.</p>
      * @param resource value to be set
      * @return Builder
      */
-
-    public RecordBuilder resource(final com.commercetools.history.models.common.Reference resource) {
+    
+    public RecordBuilder resource( final com.commercetools.history.models.common.Reference resource) {
         this.resource = resource;
         return this;
     }
-
+    
+    
+    
     /**
      *  <p>References to the Stores attached to the Change.</p>
      * @param stores value to be set
      * @return Builder
      */
-
-    public RecordBuilder stores(final com.commercetools.history.models.common.KeyReference... stores) {
+    
+    public RecordBuilder stores( final com.commercetools.history.models.common.KeyReference ...stores) {
         this.stores = new ArrayList<>(Arrays.asList(stores));
         return this;
     }
-
+    
     /**
      *  <p>References to the Stores attached to the Change.</p>
      * @param stores value to be set
      * @return Builder
      */
-
-    public RecordBuilder stores(final java.util.List<com.commercetools.history.models.common.KeyReference> stores) {
+    
+    public RecordBuilder stores( final java.util.List<com.commercetools.history.models.common.KeyReference> stores) {
         this.stores = stores;
         return this;
     }
-
+    
     /**
      *  <p>References to the Stores attached to the Change.</p>
      * @param stores value to be set
      * @return Builder
      */
-
-    public RecordBuilder plusStores(final com.commercetools.history.models.common.KeyReference... stores) {
+    
+    public RecordBuilder plusStores( final com.commercetools.history.models.common.KeyReference ...stores) {
         if (this.stores == null) {
             this.stores = new ArrayList<>();
         }
         this.stores.addAll(Arrays.asList(stores));
         return this;
     }
-
+    
+    
+    
     /**
      *  <p>References to the Stores attached to the Change.</p>
      * @param builder function to build the stores value
      * @return Builder
      */
-
-    public RecordBuilder plusStores(
-            Function<com.commercetools.history.models.common.KeyReferenceBuilder, com.commercetools.history.models.common.KeyReferenceBuilder> builder) {
+    
+    public RecordBuilder plusStores(Function<com.commercetools.history.models.common.KeyReferenceBuilder, com.commercetools.history.models.common.KeyReferenceBuilder> builder) {
         if (this.stores == null) {
             this.stores = new ArrayList<>();
         }
         this.stores.add(builder.apply(com.commercetools.history.models.common.KeyReferenceBuilder.of()).build());
         return this;
     }
-
+    
     /**
      *  <p>References to the Stores attached to the Change.</p>
      * @param builder function to build the stores value
      * @return Builder
      */
-
-    public RecordBuilder withStores(
-            Function<com.commercetools.history.models.common.KeyReferenceBuilder, com.commercetools.history.models.common.KeyReferenceBuilder> builder) {
+    
+    public RecordBuilder withStores(Function<com.commercetools.history.models.common.KeyReferenceBuilder, com.commercetools.history.models.common.KeyReferenceBuilder> builder) {
         this.stores = new ArrayList<>();
         this.stores.add(builder.apply(com.commercetools.history.models.common.KeyReferenceBuilder.of()).build());
         return this;
     }
-
+    
     /**
      *  <p>References to the Stores attached to the Change.</p>
      * @param builder function to build the stores value
      * @return Builder
      */
-
-    public RecordBuilder addStores(
-            Function<com.commercetools.history.models.common.KeyReferenceBuilder, com.commercetools.history.models.common.KeyReference> builder) {
+    
+    public RecordBuilder addStores(Function<com.commercetools.history.models.common.KeyReferenceBuilder, com.commercetools.history.models.common.KeyReference> builder) {
         return plusStores(builder.apply(com.commercetools.history.models.common.KeyReferenceBuilder.of()));
     }
-
+    
     /**
      *  <p>References to the Stores attached to the Change.</p>
      * @param builder function to build the stores value
      * @return Builder
      */
-
-    public RecordBuilder setStores(
-            Function<com.commercetools.history.models.common.KeyReferenceBuilder, com.commercetools.history.models.common.KeyReference> builder) {
+    
+    public RecordBuilder setStores(Function<com.commercetools.history.models.common.KeyReferenceBuilder, com.commercetools.history.models.common.KeyReference> builder) {
         return stores(builder.apply(com.commercetools.history.models.common.KeyReferenceBuilder.of()));
     }
-
+                    
+    
+    
     /**
      *  <p><code>true</code> if no change was detected. The version number of the resource can be increased even without any change in the resource.</p>
      * @param withoutChanges value to be set
      * @return Builder
      */
-
-    public RecordBuilder withoutChanges(final Boolean withoutChanges) {
+    
+    public RecordBuilder withoutChanges( final Boolean withoutChanges) {
         this.withoutChanges = withoutChanges;
         return this;
     }
+    
+    
 
     /**
      *  <p>Version of the resource after the change.</p>
      * @return version
      */
-
-    public Integer getVersion() {
+    
+    
+    public Integer getVersion(){
         return this.version;
     }
-
+    
     /**
      *  <p>Version of the resource before the change.</p>
      * @return previousVersion
      */
-
-    public Integer getPreviousVersion() {
+    
+    
+    public Integer getPreviousVersion(){
         return this.previousVersion;
     }
-
+    
     /**
      *  <p>Type of the change (creation, update or deletion).</p>
      * @return type
      */
-
-    public String getType() {
+    
+    
+    public String getType(){
         return this.type;
     }
-
+    
     /**
      *  <p>Information about the user or the API client who performed the change.</p>
      * @return modifiedBy
      */
-
-    public com.commercetools.history.models.change_history.ModifiedBy getModifiedBy() {
+    
+    
+    public com.commercetools.history.models.change_history.ModifiedBy getModifiedBy(){
         return this.modifiedBy;
     }
-
+    
     /**
      *  <p>Date and time when the change was made.</p>
      * @return modifiedAt
      */
-
-    public String getModifiedAt() {
+    
+    
+    public String getModifiedAt(){
         return this.modifiedAt;
     }
-
+    
     /**
      *  <p>Information that describes the resource after the change.</p>
      * @return label
      */
-
-    public com.commercetools.history.models.label.Label getLabel() {
+    
+    
+    public com.commercetools.history.models.label.Label getLabel(){
         return this.label;
     }
-
+    
     /**
      *  <p>Information that describes the resource before the change.</p>
      * @return previousLabel
      */
-
-    public com.commercetools.history.models.label.Label getPreviousLabel() {
+    
+    
+    public com.commercetools.history.models.label.Label getPreviousLabel(){
         return this.previousLabel;
     }
-
+    
     /**
      *  <p>Shows the differences in the resource between <code>previousVersion</code> and <code>version</code>. The value is not identical to the actual array of update actions sent and is not limited to update actions (see, for example, Optimistic Concurrency Control).</p>
      * @return changes
      */
-
-    public java.util.List<com.commercetools.history.models.change.Change> getChanges() {
+    
+    
+    public java.util.List<com.commercetools.history.models.change.Change> getChanges(){
         return this.changes;
     }
-
+    
     /**
      *  <p>Reference to the changed resource.</p>
      * @return resource
      */
-
-    public com.commercetools.history.models.common.Reference getResource() {
+    
+    
+    public com.commercetools.history.models.common.Reference getResource(){
         return this.resource;
     }
-
+    
     /**
      *  <p>References to the Stores attached to the Change.</p>
      * @return stores
      */
-
-    public java.util.List<com.commercetools.history.models.common.KeyReference> getStores() {
+    
+    
+    public java.util.List<com.commercetools.history.models.common.KeyReference> getStores(){
         return this.stores;
     }
-
+    
     /**
      *  <p><code>true</code> if no change was detected. The version number of the resource can be increased even without any change in the resource.</p>
      * @return withoutChanges
      */
-
-    public Boolean getWithoutChanges() {
+    
+    
+    public Boolean getWithoutChanges(){
         return this.withoutChanges;
     }
 
@@ -490,22 +553,20 @@ public class RecordBuilder implements Builder<Record> {
         Objects.requireNonNull(resource, Record.class + ": resource is missing");
         Objects.requireNonNull(stores, Record.class + ": stores is missing");
         Objects.requireNonNull(withoutChanges, Record.class + ": withoutChanges is missing");
-        return new RecordImpl(version, previousVersion, type, modifiedBy, modifiedAt, label, previousLabel, changes,
-            resource, stores, withoutChanges);
+        return new RecordImpl(version, previousVersion, type, modifiedBy, modifiedAt, label, previousLabel, changes, resource, stores, withoutChanges);
     }
-
+    
     /**
      * builds Record without checking for non-null required values
      * @return Record
      */
     public Record buildUnchecked() {
-        return new RecordImpl(version, previousVersion, type, modifiedBy, modifiedAt, label, previousLabel, changes,
-            resource, stores, withoutChanges);
+        return new RecordImpl(version, previousVersion, type, modifiedBy, modifiedAt, label, previousLabel, changes, resource, stores, withoutChanges);
     }
 
     /**
      * factory method for an instance of RecordBuilder
-     * @return builder
+     * @return builder 
      */
     public static RecordBuilder of() {
         return new RecordBuilder();

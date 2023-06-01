@@ -1,17 +1,20 @@
-
 package com.commercetools.api.models.business_unit;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
+import com.commercetools.api.models.business_unit.BusinessUnitUpdateAction;
+import com.commercetools.api.models.business_unit.BusinessUnitChangeStatusActionImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Changing the status of a Business Unit generates a BusinessUnitStatusChanged Message.</p>
@@ -24,9 +27,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .status("{status}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = BusinessUnitChangeStatusActionImpl.class)
 public interface BusinessUnitChangeStatusAction extends BusinessUnitUpdateAction {
 
@@ -47,16 +53,18 @@ public interface BusinessUnitChangeStatusAction extends BusinessUnitUpdateAction
      *  <p>New status to set.</p>
      * @param status value to be set
      */
-
+    
     public void setStatus(final String status);
+    
 
     /**
      * factory method
      * @return instance of BusinessUnitChangeStatusAction
      */
-    public static BusinessUnitChangeStatusAction of() {
+    public static BusinessUnitChangeStatusAction of(){
         return new BusinessUnitChangeStatusActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy BusinessUnitChangeStatusAction
@@ -91,7 +99,7 @@ public interface BusinessUnitChangeStatusAction extends BusinessUnitUpdateAction
     public static BusinessUnitChangeStatusActionBuilder builder() {
         return BusinessUnitChangeStatusActionBuilder.of();
     }
-
+    
     /**
      * create builder for BusinessUnitChangeStatusAction instance
      * @param template instance with prefilled values for the builder
@@ -100,6 +108,7 @@ public interface BusinessUnitChangeStatusAction extends BusinessUnitUpdateAction
     public static BusinessUnitChangeStatusActionBuilder builder(final BusinessUnitChangeStatusAction template) {
         return BusinessUnitChangeStatusActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -110,7 +119,7 @@ public interface BusinessUnitChangeStatusAction extends BusinessUnitUpdateAction
     default <T> T withBusinessUnitChangeStatusAction(Function<BusinessUnitChangeStatusAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

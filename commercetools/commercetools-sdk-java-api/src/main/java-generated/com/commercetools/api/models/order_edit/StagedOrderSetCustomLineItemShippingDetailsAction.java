@@ -1,20 +1,21 @@
-
 package com.commercetools.api.models.order_edit;
-
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.cart.ItemShippingDetailsDraft;
 import com.commercetools.api.models.order.StagedOrderUpdateAction;
+import com.commercetools.api.models.order_edit.StagedOrderSetCustomLineItemShippingDetailsActionImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * StagedOrderSetCustomLineItemShippingDetailsAction
@@ -27,9 +28,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .customLineItemId("{customLineItemId}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = StagedOrderSetCustomLineItemShippingDetailsActionImpl.class)
 public interface StagedOrderSetCustomLineItemShippingDetailsAction extends StagedOrderUpdateAction {
 
@@ -45,7 +49,6 @@ public interface StagedOrderSetCustomLineItemShippingDetailsAction extends Stage
     @NotNull
     @JsonProperty("customLineItemId")
     public String getCustomLineItemId();
-
     /**
      *  <p>For order creation and updates, the sum of the <code>targets</code> must match the quantity of the Line Items or Custom Line Items.</p>
      * @return shippingDetails
@@ -58,31 +61,33 @@ public interface StagedOrderSetCustomLineItemShippingDetailsAction extends Stage
      * set customLineItemId
      * @param customLineItemId value to be set
      */
-
+    
     public void setCustomLineItemId(final String customLineItemId);
-
+    
+    
     /**
      *  <p>For order creation and updates, the sum of the <code>targets</code> must match the quantity of the Line Items or Custom Line Items.</p>
      * @param shippingDetails value to be set
      */
-
+    
     public void setShippingDetails(final ItemShippingDetailsDraft shippingDetails);
+    
 
     /**
      * factory method
      * @return instance of StagedOrderSetCustomLineItemShippingDetailsAction
      */
-    public static StagedOrderSetCustomLineItemShippingDetailsAction of() {
+    public static StagedOrderSetCustomLineItemShippingDetailsAction of(){
         return new StagedOrderSetCustomLineItemShippingDetailsActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy StagedOrderSetCustomLineItemShippingDetailsAction
      * @param template instance to be copied
      * @return copy instance
      */
-    public static StagedOrderSetCustomLineItemShippingDetailsAction of(
-            final StagedOrderSetCustomLineItemShippingDetailsAction template) {
+    public static StagedOrderSetCustomLineItemShippingDetailsAction of(final StagedOrderSetCustomLineItemShippingDetailsAction template) {
         StagedOrderSetCustomLineItemShippingDetailsActionImpl instance = new StagedOrderSetCustomLineItemShippingDetailsActionImpl();
         instance.setCustomLineItemId(template.getCustomLineItemId());
         instance.setShippingDetails(template.getShippingDetails());
@@ -95,15 +100,13 @@ public interface StagedOrderSetCustomLineItemShippingDetailsAction extends Stage
      * @return copy instance
      */
     @Nullable
-    public static StagedOrderSetCustomLineItemShippingDetailsAction deepCopy(
-            @Nullable final StagedOrderSetCustomLineItemShippingDetailsAction template) {
+    public static StagedOrderSetCustomLineItemShippingDetailsAction deepCopy(@Nullable final StagedOrderSetCustomLineItemShippingDetailsAction template) {
         if (template == null) {
             return null;
         }
         StagedOrderSetCustomLineItemShippingDetailsActionImpl instance = new StagedOrderSetCustomLineItemShippingDetailsActionImpl();
         instance.setCustomLineItemId(template.getCustomLineItemId());
-        instance.setShippingDetails(
-            com.commercetools.api.models.cart.ItemShippingDetailsDraft.deepCopy(template.getShippingDetails()));
+        instance.setShippingDetails(com.commercetools.api.models.cart.ItemShippingDetailsDraft.deepCopy(template.getShippingDetails()));
         return instance;
     }
 
@@ -114,16 +117,16 @@ public interface StagedOrderSetCustomLineItemShippingDetailsAction extends Stage
     public static StagedOrderSetCustomLineItemShippingDetailsActionBuilder builder() {
         return StagedOrderSetCustomLineItemShippingDetailsActionBuilder.of();
     }
-
+    
     /**
      * create builder for StagedOrderSetCustomLineItemShippingDetailsAction instance
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static StagedOrderSetCustomLineItemShippingDetailsActionBuilder builder(
-            final StagedOrderSetCustomLineItemShippingDetailsAction template) {
+    public static StagedOrderSetCustomLineItemShippingDetailsActionBuilder builder(final StagedOrderSetCustomLineItemShippingDetailsAction template) {
         return StagedOrderSetCustomLineItemShippingDetailsActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -131,11 +134,10 @@ public interface StagedOrderSetCustomLineItemShippingDetailsAction extends Stage
      * @param helper function to map the object
      * @return mapped value
      */
-    default <T> T withStagedOrderSetCustomLineItemShippingDetailsAction(
-            Function<StagedOrderSetCustomLineItemShippingDetailsAction, T> helper) {
+    default <T> T withStagedOrderSetCustomLineItemShippingDetailsAction(Function<StagedOrderSetCustomLineItemShippingDetailsAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

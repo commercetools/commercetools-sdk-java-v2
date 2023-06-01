@@ -1,19 +1,21 @@
-
 package com.commercetools.history.models.change;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
+import com.commercetools.history.models.change.Change;
 import com.commercetools.history.models.common.Transaction;
+import com.commercetools.history.models.change.AddTransactionChangeImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * AddTransactionChange
@@ -27,9 +29,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .nextValue(nextValueBuilder -> nextValueBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = AddTransactionChangeImpl.class)
 public interface AddTransactionChange extends Change {
 
@@ -45,7 +50,6 @@ public interface AddTransactionChange extends Change {
     @NotNull
     @JsonProperty("type")
     public String getType();
-
     /**
      *  <p>Update action for <code>addTransaction</code> on payments</p>
      * @return change
@@ -53,7 +57,6 @@ public interface AddTransactionChange extends Change {
     @NotNull
     @JsonProperty("change")
     public String getChange();
-
     /**
      *
      * @return nextValue
@@ -67,23 +70,26 @@ public interface AddTransactionChange extends Change {
      *  <p>Update action for <code>addTransaction</code> on payments</p>
      * @param change value to be set
      */
-
+    
     public void setChange(final String change);
-
+    
+    
     /**
      * set nextValue
      * @param nextValue value to be set
      */
-
+    
     public void setNextValue(final Transaction nextValue);
+    
 
     /**
      * factory method
      * @return instance of AddTransactionChange
      */
-    public static AddTransactionChange of() {
+    public static AddTransactionChange of(){
         return new AddTransactionChangeImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy AddTransactionChange
@@ -120,7 +126,7 @@ public interface AddTransactionChange extends Change {
     public static AddTransactionChangeBuilder builder() {
         return AddTransactionChangeBuilder.of();
     }
-
+    
     /**
      * create builder for AddTransactionChange instance
      * @param template instance with prefilled values for the builder
@@ -129,6 +135,7 @@ public interface AddTransactionChange extends Change {
     public static AddTransactionChangeBuilder builder(final AddTransactionChange template) {
         return AddTransactionChangeBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -139,7 +146,7 @@ public interface AddTransactionChange extends Change {
     default <T> T withAddTransactionChange(Function<AddTransactionChange, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

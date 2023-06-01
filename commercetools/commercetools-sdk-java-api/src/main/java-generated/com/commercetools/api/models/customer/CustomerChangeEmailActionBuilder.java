@@ -1,8 +1,11 @@
-
 package com.commercetools.api.models.customer;
 
+import com.commercetools.api.models.customer.CustomerUpdateAction;
+import com.commercetools.api.models.customer.CustomerChangeEmailAction;
+import javax.annotation.Nullable;
 import java.util.*;
-
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -16,30 +19,39 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .email("{email}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class CustomerChangeEmailActionBuilder implements Builder<CustomerChangeEmailAction> {
 
+    
+    
     private String email;
 
+    
     /**
      *  <p>Value to set.</p>
      * @param email value to be set
      * @return Builder
      */
-
-    public CustomerChangeEmailActionBuilder email(final String email) {
+    
+    public CustomerChangeEmailActionBuilder email( final String email) {
         this.email = email;
         return this;
     }
+    
+    
 
     /**
      *  <p>Value to set.</p>
      * @return email
      */
-
-    public String getEmail() {
+    
+    
+    public String getEmail(){
         return this.email;
     }
 
@@ -51,7 +63,7 @@ public class CustomerChangeEmailActionBuilder implements Builder<CustomerChangeE
         Objects.requireNonNull(email, CustomerChangeEmailAction.class + ": email is missing");
         return new CustomerChangeEmailActionImpl(email);
     }
-
+    
     /**
      * builds CustomerChangeEmailAction without checking for non-null required values
      * @return CustomerChangeEmailAction
@@ -62,7 +74,7 @@ public class CustomerChangeEmailActionBuilder implements Builder<CustomerChangeE
 
     /**
      * factory method for an instance of CustomerChangeEmailActionBuilder
-     * @return builder
+     * @return builder 
      */
     public static CustomerChangeEmailActionBuilder of() {
         return new CustomerChangeEmailActionBuilder();

@@ -1,18 +1,20 @@
-
 package com.commercetools.history.models.common;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
+import com.commercetools.history.models.common.Reference;
+import com.commercetools.history.models.common.ItemStateImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * ItemState
@@ -26,11 +28,15 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .state(stateBuilder -> stateBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = ItemStateImpl.class)
-public interface ItemState {
+public interface ItemState  {
+
 
     /**
      *
@@ -39,7 +45,6 @@ public interface ItemState {
     @NotNull
     @JsonProperty("quantity")
     public Integer getQuantity();
-
     /**
      *
      * @return state
@@ -53,23 +58,26 @@ public interface ItemState {
      * set quantity
      * @param quantity value to be set
      */
-
+    
     public void setQuantity(final Integer quantity);
-
+    
+    
     /**
      * set state
      * @param state value to be set
      */
-
+    
     public void setState(final Reference state);
+    
 
     /**
      * factory method
      * @return instance of ItemState
      */
-    public static ItemState of() {
+    public static ItemState of(){
         return new ItemStateImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy ItemState
@@ -106,7 +114,7 @@ public interface ItemState {
     public static ItemStateBuilder builder() {
         return ItemStateBuilder.of();
     }
-
+    
     /**
      * create builder for ItemState instance
      * @param template instance with prefilled values for the builder
@@ -115,6 +123,7 @@ public interface ItemState {
     public static ItemStateBuilder builder(final ItemState template) {
         return ItemStateBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -125,7 +134,7 @@ public interface ItemState {
     default <T> T withItemState(Function<ItemState, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

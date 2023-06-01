@@ -1,16 +1,21 @@
-
 package com.commercetools.api.models.associate_role;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
+import com.commercetools.api.models.associate_role.AssociateRoleUpdateAction;
+import com.commercetools.api.models.associate_role.Permission;
+import com.commercetools.api.models.associate_role.AssociateRoleSetPermissionsActionImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Updating the Permissions on an AssociateRole generates an AssociateRolePermissionsSet Message.</p>
@@ -22,9 +27,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     AssociateRoleSetPermissionsAction associateRoleSetPermissionsAction = AssociateRoleSetPermissionsAction.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = AssociateRoleSetPermissionsActionImpl.class)
 public interface AssociateRoleSetPermissionsAction extends AssociateRoleUpdateAction {
 
@@ -37,7 +45,7 @@ public interface AssociateRoleSetPermissionsAction extends AssociateRoleUpdateAc
      *  <p>Overrides the current list of Permissions for the AssociateRole.</p>
      * @return permissions
      */
-
+    
     @JsonProperty("permissions")
     public List<Permission> getPermissions();
 
@@ -45,24 +53,24 @@ public interface AssociateRoleSetPermissionsAction extends AssociateRoleUpdateAc
      *  <p>Overrides the current list of Permissions for the AssociateRole.</p>
      * @param permissions values to be set
      */
-
+    
     @JsonIgnore
-    public void setPermissions(final Permission... permissions);
-
+    public void setPermissions(final Permission ...permissions);
     /**
      *  <p>Overrides the current list of Permissions for the AssociateRole.</p>
      * @param permissions values to be set
      */
-
+    
     public void setPermissions(final List<Permission> permissions);
 
     /**
      * factory method
      * @return instance of AssociateRoleSetPermissionsAction
      */
-    public static AssociateRoleSetPermissionsAction of() {
+    public static AssociateRoleSetPermissionsAction of(){
         return new AssociateRoleSetPermissionsActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy AssociateRoleSetPermissionsAction
@@ -81,13 +89,14 @@ public interface AssociateRoleSetPermissionsAction extends AssociateRoleUpdateAc
      * @return copy instance
      */
     @Nullable
-    public static AssociateRoleSetPermissionsAction deepCopy(
-            @Nullable final AssociateRoleSetPermissionsAction template) {
+    public static AssociateRoleSetPermissionsAction deepCopy(@Nullable final AssociateRoleSetPermissionsAction template) {
         if (template == null) {
             return null;
         }
         AssociateRoleSetPermissionsActionImpl instance = new AssociateRoleSetPermissionsActionImpl();
-        instance.setPermissions(Optional.ofNullable(template.getPermissions()).map(ArrayList::new).orElse(null));
+        instance.setPermissions(Optional.ofNullable(template.getPermissions())
+                .map(ArrayList::new)
+                .orElse(null));
         return instance;
     }
 
@@ -98,7 +107,7 @@ public interface AssociateRoleSetPermissionsAction extends AssociateRoleUpdateAc
     public static AssociateRoleSetPermissionsActionBuilder builder() {
         return AssociateRoleSetPermissionsActionBuilder.of();
     }
-
+    
     /**
      * create builder for AssociateRoleSetPermissionsAction instance
      * @param template instance with prefilled values for the builder
@@ -107,6 +116,7 @@ public interface AssociateRoleSetPermissionsAction extends AssociateRoleUpdateAc
     public static AssociateRoleSetPermissionsActionBuilder builder(final AssociateRoleSetPermissionsAction template) {
         return AssociateRoleSetPermissionsActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -117,7 +127,7 @@ public interface AssociateRoleSetPermissionsAction extends AssociateRoleUpdateAc
     default <T> T withAssociateRoleSetPermissionsAction(Function<AssociateRoleSetPermissionsAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

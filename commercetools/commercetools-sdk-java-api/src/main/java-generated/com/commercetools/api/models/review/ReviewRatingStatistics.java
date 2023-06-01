@@ -1,18 +1,20 @@
-
 package com.commercetools.api.models.review;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
+import java.lang.Object;
+import com.commercetools.api.models.review.ReviewRatingStatisticsImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * ReviewRatingStatistics
@@ -29,11 +31,15 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .ratingsDistribution(ratingsDistributionBuilder -> ratingsDistributionBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = ReviewRatingStatisticsImpl.class)
-public interface ReviewRatingStatistics {
+public interface ReviewRatingStatistics  {
+
 
     /**
      *  <p>Average rating of one target This number is rounded with 5 decimals.</p>
@@ -42,7 +48,6 @@ public interface ReviewRatingStatistics {
     @NotNull
     @JsonProperty("averageRating")
     public Double getAverageRating();
-
     /**
      *  <p>Highest rating of one target</p>
      * @return highestRating
@@ -50,7 +55,6 @@ public interface ReviewRatingStatistics {
     @NotNull
     @JsonProperty("highestRating")
     public Double getHighestRating();
-
     /**
      *  <p>Lowest rating of one target</p>
      * @return lowestRating
@@ -58,7 +62,6 @@ public interface ReviewRatingStatistics {
     @NotNull
     @JsonProperty("lowestRating")
     public Double getLowestRating();
-
     /**
      *  <p>Number of ratings taken into account</p>
      * @return count
@@ -66,7 +69,6 @@ public interface ReviewRatingStatistics {
     @NotNull
     @JsonProperty("count")
     public Integer getCount();
-
     /**
      *  <p>Full distribution of the ratings. The keys are the different ratings and the values are the count of reviews having this rating. Only the used ratings appear in this object.</p>
      * @return ratingsDistribution
@@ -80,44 +82,50 @@ public interface ReviewRatingStatistics {
      *  <p>Average rating of one target This number is rounded with 5 decimals.</p>
      * @param averageRating value to be set
      */
-
+    
     public void setAverageRating(final Double averageRating);
-
+    
+    
     /**
      *  <p>Highest rating of one target</p>
      * @param highestRating value to be set
      */
-
+    
     public void setHighestRating(final Double highestRating);
-
+    
+    
     /**
      *  <p>Lowest rating of one target</p>
      * @param lowestRating value to be set
      */
-
+    
     public void setLowestRating(final Double lowestRating);
-
+    
+    
     /**
      *  <p>Number of ratings taken into account</p>
      * @param count value to be set
      */
-
+    
     public void setCount(final Integer count);
-
+    
+    
     /**
      *  <p>Full distribution of the ratings. The keys are the different ratings and the values are the count of reviews having this rating. Only the used ratings appear in this object.</p>
      * @param ratingsDistribution value to be set
      */
-
+    
     public void setRatingsDistribution(final Object ratingsDistribution);
+    
 
     /**
      * factory method
      * @return instance of ReviewRatingStatistics
      */
-    public static ReviewRatingStatistics of() {
+    public static ReviewRatingStatistics of(){
         return new ReviewRatingStatisticsImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy ReviewRatingStatistics
@@ -160,7 +168,7 @@ public interface ReviewRatingStatistics {
     public static ReviewRatingStatisticsBuilder builder() {
         return ReviewRatingStatisticsBuilder.of();
     }
-
+    
     /**
      * create builder for ReviewRatingStatistics instance
      * @param template instance with prefilled values for the builder
@@ -169,6 +177,7 @@ public interface ReviewRatingStatistics {
     public static ReviewRatingStatisticsBuilder builder(final ReviewRatingStatistics template) {
         return ReviewRatingStatisticsBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -179,7 +188,7 @@ public interface ReviewRatingStatistics {
     default <T> T withReviewRatingStatistics(Function<ReviewRatingStatistics, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

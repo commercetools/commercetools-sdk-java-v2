@@ -1,19 +1,22 @@
-
 package com.commercetools.api.models.customer;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
 import com.commercetools.api.models.common.Reference;
+import com.commercetools.api.models.common.ReferenceTypeId;
+import com.commercetools.api.models.customer.Customer;
+import com.commercetools.api.models.customer.CustomerReferenceImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Reference to a Customer.</p>
@@ -26,9 +29,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .id("{id}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = CustomerReferenceImpl.class)
 public interface CustomerReference extends Reference, com.commercetools.api.models.Identifiable<Customer> {
 
@@ -44,7 +50,6 @@ public interface CustomerReference extends Reference, com.commercetools.api.mode
     @Valid
     @JsonProperty("obj")
     public Customer getObj();
-
     /**
      *  <p>Unique identifier of the referenced Customer.</p>
      * @return id
@@ -57,23 +62,26 @@ public interface CustomerReference extends Reference, com.commercetools.api.mode
      *  <p>Contains the representation of the expanded Customer. Only present in responses to requests with Reference Expansion for Customers.</p>
      * @param obj value to be set
      */
-
+    
     public void setObj(final Customer obj);
-
+    
+    
     /**
      *  <p>Unique identifier of the referenced Customer.</p>
      * @param id value to be set
      */
-
+    
     public void setId(final String id);
+    
 
     /**
      * factory method
      * @return instance of CustomerReference
      */
-    public static CustomerReference of() {
+    public static CustomerReference of(){
         return new CustomerReferenceImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy CustomerReference
@@ -110,7 +118,7 @@ public interface CustomerReference extends Reference, com.commercetools.api.mode
     public static CustomerReferenceBuilder builder() {
         return CustomerReferenceBuilder.of();
     }
-
+    
     /**
      * create builder for CustomerReference instance
      * @param template instance with prefilled values for the builder
@@ -119,6 +127,7 @@ public interface CustomerReference extends Reference, com.commercetools.api.mode
     public static CustomerReferenceBuilder builder(final CustomerReference template) {
         return CustomerReferenceBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -129,7 +138,7 @@ public interface CustomerReference extends Reference, com.commercetools.api.mode
     default <T> T withCustomerReference(Function<CustomerReference, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

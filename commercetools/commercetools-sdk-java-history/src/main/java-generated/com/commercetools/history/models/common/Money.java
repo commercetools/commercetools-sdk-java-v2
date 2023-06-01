@@ -1,17 +1,20 @@
-
 package com.commercetools.history.models.common;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
+import com.commercetools.history.models.common.MoneyType;
+import com.commercetools.history.models.common.MoneyImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * Money
@@ -27,11 +30,15 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .type(MoneyType.CENT_PRECISION)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = MoneyImpl.class)
-public interface Money {
+public interface Money  {
+
 
     /**
      *  <p>Currency code compliant to ISO 4217.</p>
@@ -40,7 +47,6 @@ public interface Money {
     @NotNull
     @JsonProperty("currencyCode")
     public String getCurrencyCode();
-
     /**
      *
      * @return centAmount
@@ -48,7 +54,6 @@ public interface Money {
     @NotNull
     @JsonProperty("centAmount")
     public Integer getCentAmount();
-
     /**
      *
      * @return fractionDigits
@@ -56,7 +61,6 @@ public interface Money {
     @NotNull
     @JsonProperty("fractionDigits")
     public Integer getFractionDigits();
-
     /**
      *
      * @return type
@@ -69,37 +73,42 @@ public interface Money {
      *  <p>Currency code compliant to ISO 4217.</p>
      * @param currencyCode value to be set
      */
-
+    
     public void setCurrencyCode(final String currencyCode);
-
+    
+    
     /**
      * set centAmount
      * @param centAmount value to be set
      */
-
+    
     public void setCentAmount(final Integer centAmount);
-
+    
+    
     /**
      * set fractionDigits
      * @param fractionDigits value to be set
      */
-
+    
     public void setFractionDigits(final Integer fractionDigits);
-
+    
+    
     /**
      * set type
      * @param type value to be set
      */
-
+    
     public void setType(final MoneyType type);
+    
 
     /**
      * factory method
      * @return instance of Money
      */
-    public static Money of() {
+    public static Money of(){
         return new MoneyImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy Money
@@ -140,7 +149,7 @@ public interface Money {
     public static MoneyBuilder builder() {
         return MoneyBuilder.of();
     }
-
+    
     /**
      * create builder for Money instance
      * @param template instance with prefilled values for the builder
@@ -149,6 +158,7 @@ public interface Money {
     public static MoneyBuilder builder(final Money template) {
         return MoneyBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -159,7 +169,7 @@ public interface Money {
     default <T> T withMoney(Function<Money, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

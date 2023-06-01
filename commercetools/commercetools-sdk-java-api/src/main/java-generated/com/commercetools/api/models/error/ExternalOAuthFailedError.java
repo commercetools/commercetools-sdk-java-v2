@@ -1,17 +1,20 @@
-
 package com.commercetools.api.models.error;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
+import com.commercetools.api.models.error.ErrorObject;
+import com.commercetools.api.models.error.ExternalOAuthFailedErrorImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Returned when an external OAuth Introspection endpoint does not return a response within the time limit, or the response isn't compliant with RFC 7662 (for example, an HTTP status code like <code>500</code>).</p>
@@ -24,9 +27,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .message("{message}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = ExternalOAuthFailedErrorImpl.class)
 public interface ExternalOAuthFailedError extends ErrorObject {
 
@@ -42,7 +48,6 @@ public interface ExternalOAuthFailedError extends ErrorObject {
     @NotNull
     @JsonProperty("code")
     public String getCode();
-
     /**
      *  <p>Plain text description detailing the external OAuth error. For example, <code>"External OAuth did not respond in time."</code>.</p>
      * @return message
@@ -55,16 +60,18 @@ public interface ExternalOAuthFailedError extends ErrorObject {
      *  <p>Plain text description detailing the external OAuth error. For example, <code>"External OAuth did not respond in time."</code>.</p>
      * @param message value to be set
      */
-
+    
     public void setMessage(final String message);
+    
 
     /**
      * factory method
      * @return instance of ExternalOAuthFailedError
      */
-    public static ExternalOAuthFailedError of() {
+    public static ExternalOAuthFailedError of(){
         return new ExternalOAuthFailedErrorImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy ExternalOAuthFailedError
@@ -101,7 +108,7 @@ public interface ExternalOAuthFailedError extends ErrorObject {
     public static ExternalOAuthFailedErrorBuilder builder() {
         return ExternalOAuthFailedErrorBuilder.of();
     }
-
+    
     /**
      * create builder for ExternalOAuthFailedError instance
      * @param template instance with prefilled values for the builder
@@ -110,6 +117,7 @@ public interface ExternalOAuthFailedError extends ErrorObject {
     public static ExternalOAuthFailedErrorBuilder builder(final ExternalOAuthFailedError template) {
         return ExternalOAuthFailedErrorBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -120,7 +128,7 @@ public interface ExternalOAuthFailedError extends ErrorObject {
     default <T> T withExternalOAuthFailedError(Function<ExternalOAuthFailedError, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

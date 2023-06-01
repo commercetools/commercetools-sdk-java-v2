@@ -1,18 +1,28 @@
-
 package com.commercetools.importapi.models.order_patches;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-import java.util.stream.Collectors;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
+import com.commercetools.importapi.models.order_patches.DeliveryAddressDraft;
+import com.commercetools.importapi.models.order_patches.DeliveryDraft;
+import com.commercetools.importapi.models.order_patches.DeliveryParcel;
+import com.commercetools.importapi.models.order_patches.ParcelItems;
+import com.commercetools.importapi.models.order_patches.ParcelMeasurementDraft;
+import com.commercetools.importapi.models.order_patches.ParcelTrackingData;
+import com.commercetools.importapi.models.order_patches.RemoveDeliveryDraft;
+import com.commercetools.importapi.models.order_patches.RemoveParcelFromDeliveryDraft;
+import com.commercetools.importapi.models.order_patches.ReturnInfo;
+import com.commercetools.importapi.models.order_patches.OrderFieldImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Order fields that needs to be added or updated.</p>
@@ -24,11 +34,15 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     OrderField orderField = OrderField.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = OrderFieldImpl.class)
-public interface OrderField {
+public interface OrderField  {
+
 
     /**
      *  <p>Maps to <code>Order.returnInfo</code></p>
@@ -37,7 +51,6 @@ public interface OrderField {
     @Valid
     @JsonProperty("addReturnInfo")
     public ReturnInfo getAddReturnInfo();
-
     /**
      *  <p>Maps to <code>Order.delivery</code></p>
      * @return addParcelToDelivery
@@ -45,7 +58,6 @@ public interface OrderField {
     @Valid
     @JsonProperty("addParcelToDelivery")
     public DeliveryParcel getAddParcelToDelivery();
-
     /**
      *  <p>Maps to <code>Order.delivery</code></p>
      * @return addDeliveries
@@ -53,7 +65,6 @@ public interface OrderField {
     @Valid
     @JsonProperty("addDeliveries")
     public List<DeliveryDraft> getAddDeliveries();
-
     /**
      *  <p>Maps to <code>Order.removeDelivery</code></p>
      * @return removeDelivery
@@ -61,7 +72,6 @@ public interface OrderField {
     @Valid
     @JsonProperty("removeDelivery")
     public RemoveDeliveryDraft getRemoveDelivery();
-
     /**
      *  <p>Maps to <code>Order.removeParcelFromDelivery</code></p>
      * @return removeParcelFromDelivery
@@ -69,7 +79,6 @@ public interface OrderField {
     @Valid
     @JsonProperty("removeParcelFromDelivery")
     public RemoveParcelFromDeliveryDraft getRemoveParcelFromDelivery();
-
     /**
      *  <p>Maps to <code>Order.addressDraft</code></p>
      * @return setDeliveryAddress
@@ -77,7 +86,6 @@ public interface OrderField {
     @Valid
     @JsonProperty("setDeliveryAddress")
     public DeliveryAddressDraft getSetDeliveryAddress();
-
     /**
      *  <p>Maps to <code>Order.parcelMeasurements</code></p>
      * @return setParcelMeasurements
@@ -85,7 +93,6 @@ public interface OrderField {
     @Valid
     @JsonProperty("setParcelMeasurements")
     public ParcelMeasurementDraft getSetParcelMeasurements();
-
     /**
      *  <p>Maps to <code>Order.parcelTrackingData</code></p>
      * @return setParcelTrackingData
@@ -93,7 +100,6 @@ public interface OrderField {
     @Valid
     @JsonProperty("setParcelTrackingData")
     public ParcelTrackingData getSetParcelTrackingData();
-
     /**
      *  <p>Maps to <code>Order.parcelItems</code></p>
      * @return setParcelItems
@@ -106,88 +112,94 @@ public interface OrderField {
      *  <p>Maps to <code>Order.returnInfo</code></p>
      * @param addReturnInfo value to be set
      */
-
+    
     public void setAddReturnInfo(final ReturnInfo addReturnInfo);
-
+    
+    
     /**
      *  <p>Maps to <code>Order.delivery</code></p>
      * @param addParcelToDelivery value to be set
      */
-
+    
     public void setAddParcelToDelivery(final DeliveryParcel addParcelToDelivery);
-
+    
+    
     /**
      *  <p>Maps to <code>Order.delivery</code></p>
      * @param addDeliveries values to be set
      */
-
+    
     @JsonIgnore
-    public void setAddDeliveries(final DeliveryDraft... addDeliveries);
-
+    public void setAddDeliveries(final DeliveryDraft ...addDeliveries);
     /**
      *  <p>Maps to <code>Order.delivery</code></p>
      * @param addDeliveries values to be set
      */
-
+    
     public void setAddDeliveries(final List<DeliveryDraft> addDeliveries);
-
+    
     /**
      *  <p>Maps to <code>Order.removeDelivery</code></p>
      * @param removeDelivery value to be set
      */
-
+    
     public void setRemoveDelivery(final RemoveDeliveryDraft removeDelivery);
-
+    
+    
     /**
      *  <p>Maps to <code>Order.removeParcelFromDelivery</code></p>
      * @param removeParcelFromDelivery value to be set
      */
-
+    
     public void setRemoveParcelFromDelivery(final RemoveParcelFromDeliveryDraft removeParcelFromDelivery);
-
+    
+    
     /**
      *  <p>Maps to <code>Order.addressDraft</code></p>
      * @param setDeliveryAddress value to be set
      */
-
+    
     public void setSetDeliveryAddress(final DeliveryAddressDraft setDeliveryAddress);
-
+    
+    
     /**
      *  <p>Maps to <code>Order.parcelMeasurements</code></p>
      * @param setParcelMeasurements value to be set
      */
-
+    
     public void setSetParcelMeasurements(final ParcelMeasurementDraft setParcelMeasurements);
-
+    
+    
     /**
      *  <p>Maps to <code>Order.parcelTrackingData</code></p>
      * @param setParcelTrackingData value to be set
      */
-
+    
     public void setSetParcelTrackingData(final ParcelTrackingData setParcelTrackingData);
-
+    
+    
     /**
      *  <p>Maps to <code>Order.parcelItems</code></p>
      * @param setParcelItems values to be set
      */
-
+    
     @JsonIgnore
-    public void setSetParcelItems(final ParcelItems... setParcelItems);
-
+    public void setSetParcelItems(final ParcelItems ...setParcelItems);
     /**
      *  <p>Maps to <code>Order.parcelItems</code></p>
      * @param setParcelItems values to be set
      */
-
+    
     public void setSetParcelItems(final List<ParcelItems> setParcelItems);
 
     /**
      * factory method
      * @return instance of OrderField
      */
-    public static OrderField of() {
+    public static OrderField of(){
         return new OrderFieldImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy OrderField
@@ -219,30 +231,18 @@ public interface OrderField {
             return null;
         }
         OrderFieldImpl instance = new OrderFieldImpl();
-        instance.setAddReturnInfo(
-            com.commercetools.importapi.models.order_patches.ReturnInfo.deepCopy(template.getAddReturnInfo()));
-        instance.setAddParcelToDelivery(com.commercetools.importapi.models.order_patches.DeliveryParcel
-                .deepCopy(template.getAddParcelToDelivery()));
+        instance.setAddReturnInfo(com.commercetools.importapi.models.order_patches.ReturnInfo.deepCopy(template.getAddReturnInfo()));
+        instance.setAddParcelToDelivery(com.commercetools.importapi.models.order_patches.DeliveryParcel.deepCopy(template.getAddParcelToDelivery()));
         instance.setAddDeliveries(Optional.ofNullable(template.getAddDeliveries())
-                .map(t -> t.stream()
-                        .map(com.commercetools.importapi.models.order_patches.DeliveryDraft::deepCopy)
-                        .collect(Collectors.toList()))
+                .map(t -> t.stream().map(com.commercetools.importapi.models.order_patches.DeliveryDraft::deepCopy).collect(Collectors.toList()))
                 .orElse(null));
-        instance.setRemoveDelivery(com.commercetools.importapi.models.order_patches.RemoveDeliveryDraft
-                .deepCopy(template.getRemoveDelivery()));
-        instance.setRemoveParcelFromDelivery(
-            com.commercetools.importapi.models.order_patches.RemoveParcelFromDeliveryDraft
-                    .deepCopy(template.getRemoveParcelFromDelivery()));
-        instance.setSetDeliveryAddress(com.commercetools.importapi.models.order_patches.DeliveryAddressDraft
-                .deepCopy(template.getSetDeliveryAddress()));
-        instance.setSetParcelMeasurements(com.commercetools.importapi.models.order_patches.ParcelMeasurementDraft
-                .deepCopy(template.getSetParcelMeasurements()));
-        instance.setSetParcelTrackingData(com.commercetools.importapi.models.order_patches.ParcelTrackingData
-                .deepCopy(template.getSetParcelTrackingData()));
+        instance.setRemoveDelivery(com.commercetools.importapi.models.order_patches.RemoveDeliveryDraft.deepCopy(template.getRemoveDelivery()));
+        instance.setRemoveParcelFromDelivery(com.commercetools.importapi.models.order_patches.RemoveParcelFromDeliveryDraft.deepCopy(template.getRemoveParcelFromDelivery()));
+        instance.setSetDeliveryAddress(com.commercetools.importapi.models.order_patches.DeliveryAddressDraft.deepCopy(template.getSetDeliveryAddress()));
+        instance.setSetParcelMeasurements(com.commercetools.importapi.models.order_patches.ParcelMeasurementDraft.deepCopy(template.getSetParcelMeasurements()));
+        instance.setSetParcelTrackingData(com.commercetools.importapi.models.order_patches.ParcelTrackingData.deepCopy(template.getSetParcelTrackingData()));
         instance.setSetParcelItems(Optional.ofNullable(template.getSetParcelItems())
-                .map(t -> t.stream()
-                        .map(com.commercetools.importapi.models.order_patches.ParcelItems::deepCopy)
-                        .collect(Collectors.toList()))
+                .map(t -> t.stream().map(com.commercetools.importapi.models.order_patches.ParcelItems::deepCopy).collect(Collectors.toList()))
                 .orElse(null));
         return instance;
     }
@@ -254,7 +254,7 @@ public interface OrderField {
     public static OrderFieldBuilder builder() {
         return OrderFieldBuilder.of();
     }
-
+    
     /**
      * create builder for OrderField instance
      * @param template instance with prefilled values for the builder
@@ -263,6 +263,7 @@ public interface OrderField {
     public static OrderFieldBuilder builder(final OrderField template) {
         return OrderFieldBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -273,7 +274,7 @@ public interface OrderField {
     default <T> T withOrderField(Function<OrderField, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

@@ -1,10 +1,11 @@
-
 package com.commercetools.api.models.message;
 
-import java.util.*;
-
+import com.commercetools.api.models.message.OrderMessagePayload;
+import com.commercetools.api.models.message.OrderCustomerEmailSetMessagePayload;
 import javax.annotation.Nullable;
-
+import java.util.*;
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -17,56 +18,67 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     OrderCustomerEmailSetMessagePayload orderCustomerEmailSetMessagePayload = OrderCustomerEmailSetMessagePayload.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class OrderCustomerEmailSetMessagePayloadBuilder implements Builder<OrderCustomerEmailSetMessagePayload> {
 
+    
     @Nullable
     private String email;
-
+    
+    
     @Nullable
     private String oldEmail;
 
+    
     /**
      *  <p>Email address on the Order after the Set Customer Email update action.</p>
      * @param email value to be set
      * @return Builder
      */
-
+    
     public OrderCustomerEmailSetMessagePayloadBuilder email(@Nullable final String email) {
         this.email = email;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Email address on the Order before the Set Customer Email update action.</p>
      * @param oldEmail value to be set
      * @return Builder
      */
-
+    
     public OrderCustomerEmailSetMessagePayloadBuilder oldEmail(@Nullable final String oldEmail) {
         this.oldEmail = oldEmail;
         return this;
     }
+    
+    
 
     /**
      *  <p>Email address on the Order after the Set Customer Email update action.</p>
      * @return email
      */
-
+    
     @Nullable
-    public String getEmail() {
+    public String getEmail(){
         return this.email;
     }
-
+    
     /**
      *  <p>Email address on the Order before the Set Customer Email update action.</p>
      * @return oldEmail
      */
-
+    
     @Nullable
-    public String getOldEmail() {
+    public String getOldEmail(){
         return this.oldEmail;
     }
 
@@ -77,7 +89,7 @@ public class OrderCustomerEmailSetMessagePayloadBuilder implements Builder<Order
     public OrderCustomerEmailSetMessagePayload build() {
         return new OrderCustomerEmailSetMessagePayloadImpl(email, oldEmail);
     }
-
+    
     /**
      * builds OrderCustomerEmailSetMessagePayload without checking for non-null required values
      * @return OrderCustomerEmailSetMessagePayload
@@ -88,7 +100,7 @@ public class OrderCustomerEmailSetMessagePayloadBuilder implements Builder<Order
 
     /**
      * factory method for an instance of OrderCustomerEmailSetMessagePayloadBuilder
-     * @return builder
+     * @return builder 
      */
     public static OrderCustomerEmailSetMessagePayloadBuilder of() {
         return new OrderCustomerEmailSetMessagePayloadBuilder();

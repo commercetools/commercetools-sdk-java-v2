@@ -1,9 +1,11 @@
-
 package com.commercetools.api.models.cart;
 
+import com.commercetools.api.models.cart.CartUpdateAction;
+import com.commercetools.api.models.cart.CartUpdate;
+import javax.annotation.Nullable;
 import java.util.*;
 import java.util.function.Function;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -18,105 +20,118 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .plusActions(actionsBuilder -> actionsBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class CartUpdateBuilder implements Builder<CartUpdate> {
 
+    
+    
     private Long version;
-
+    
+    
+    
     private java.util.List<com.commercetools.api.models.cart.CartUpdateAction> actions;
 
+    
     /**
      *  <p>Expected version of the Cart on which the changes apply. If the expected version does not match the actual version, a 409 Conflict is returned.</p>
      * @param version value to be set
      * @return Builder
      */
-
-    public CartUpdateBuilder version(final Long version) {
+    
+    public CartUpdateBuilder version( final Long version) {
         this.version = version;
         return this;
     }
-
+    
+    
+    
     /**
      *  <p>Update actions to be performed on the Cart.</p>
      * @param actions value to be set
      * @return Builder
      */
-
-    public CartUpdateBuilder actions(final com.commercetools.api.models.cart.CartUpdateAction... actions) {
+    
+    public CartUpdateBuilder actions( final com.commercetools.api.models.cart.CartUpdateAction ...actions) {
         this.actions = new ArrayList<>(Arrays.asList(actions));
         return this;
     }
-
+    
     /**
      *  <p>Update actions to be performed on the Cart.</p>
      * @param actions value to be set
      * @return Builder
      */
-
-    public CartUpdateBuilder actions(final java.util.List<com.commercetools.api.models.cart.CartUpdateAction> actions) {
+    
+    public CartUpdateBuilder actions( final java.util.List<com.commercetools.api.models.cart.CartUpdateAction> actions) {
         this.actions = actions;
         return this;
     }
-
+    
     /**
      *  <p>Update actions to be performed on the Cart.</p>
      * @param actions value to be set
      * @return Builder
      */
-
-    public CartUpdateBuilder plusActions(final com.commercetools.api.models.cart.CartUpdateAction... actions) {
+    
+    public CartUpdateBuilder plusActions( final com.commercetools.api.models.cart.CartUpdateAction ...actions) {
         if (this.actions == null) {
             this.actions = new ArrayList<>();
         }
         this.actions.addAll(Arrays.asList(actions));
         return this;
     }
-
+    
+    
     /**
      *  <p>Update actions to be performed on the Cart.</p>
      * @param builder function to build the actions value
      * @return Builder
      */
-
-    public CartUpdateBuilder plusActions(
-            Function<com.commercetools.api.models.cart.CartUpdateActionBuilder, Builder<? extends com.commercetools.api.models.cart.CartUpdateAction>> builder) {
+    
+    public CartUpdateBuilder plusActions(Function<com.commercetools.api.models.cart.CartUpdateActionBuilder, Builder<? extends com.commercetools.api.models.cart.CartUpdateAction>> builder) {
         if (this.actions == null) {
             this.actions = new ArrayList<>();
         }
         this.actions.add(builder.apply(com.commercetools.api.models.cart.CartUpdateActionBuilder.of()).build());
         return this;
     }
-
+    
     /**
      *  <p>Update actions to be performed on the Cart.</p>
      * @param builder function to build the actions value
      * @return Builder
      */
-
-    public CartUpdateBuilder withActions(
-            Function<com.commercetools.api.models.cart.CartUpdateActionBuilder, Builder<? extends com.commercetools.api.models.cart.CartUpdateAction>> builder) {
+    
+    public CartUpdateBuilder withActions(Function<com.commercetools.api.models.cart.CartUpdateActionBuilder, Builder<? extends com.commercetools.api.models.cart.CartUpdateAction>> builder) {
         this.actions = new ArrayList<>();
         this.actions.add(builder.apply(com.commercetools.api.models.cart.CartUpdateActionBuilder.of()).build());
         return this;
     }
+                    
+    
 
     /**
      *  <p>Expected version of the Cart on which the changes apply. If the expected version does not match the actual version, a 409 Conflict is returned.</p>
      * @return version
      */
-
-    public Long getVersion() {
+    
+    
+    public Long getVersion(){
         return this.version;
     }
-
+    
     /**
      *  <p>Update actions to be performed on the Cart.</p>
      * @return actions
      */
-
-    public java.util.List<com.commercetools.api.models.cart.CartUpdateAction> getActions() {
+    
+    
+    public java.util.List<com.commercetools.api.models.cart.CartUpdateAction> getActions(){
         return this.actions;
     }
 
@@ -129,7 +144,7 @@ public class CartUpdateBuilder implements Builder<CartUpdate> {
         Objects.requireNonNull(actions, CartUpdate.class + ": actions is missing");
         return new CartUpdateImpl(version, actions);
     }
-
+    
     /**
      * builds CartUpdate without checking for non-null required values
      * @return CartUpdate
@@ -140,7 +155,7 @@ public class CartUpdateBuilder implements Builder<CartUpdate> {
 
     /**
      * factory method for an instance of CartUpdateBuilder
-     * @return builder
+     * @return builder 
      */
     public static CartUpdateBuilder of() {
         return new CartUpdateBuilder();

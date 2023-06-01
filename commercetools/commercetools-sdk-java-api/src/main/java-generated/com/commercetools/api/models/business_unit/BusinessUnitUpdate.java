@@ -1,19 +1,20 @@
-
 package com.commercetools.api.models.business_unit;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-import java.util.stream.Collectors;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
+import com.commercetools.api.models.business_unit.BusinessUnitUpdateAction;
+import com.commercetools.api.models.business_unit.BusinessUnitUpdateImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * BusinessUnitUpdate
@@ -27,12 +28,15 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .plusActions(actionsBuilder -> actionsBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = BusinessUnitUpdateImpl.class)
-public interface BusinessUnitUpdate extends
-        com.commercetools.api.models.ResourceUpdate<BusinessUnitUpdate, BusinessUnitUpdateAction, BusinessUnitUpdateBuilder> {
+public interface BusinessUnitUpdate extends com.commercetools.api.models.ResourceUpdate<  BusinessUnitUpdate, BusinessUnitUpdateAction, BusinessUnitUpdateBuilder> {
+
 
     /**
      *  <p>Expected version of the BusinessUnit on which the changes should be applied. If the expected version does not match the actual version, a 409 Conflict error will be returned.</p>
@@ -41,7 +45,6 @@ public interface BusinessUnitUpdate extends
     @NotNull
     @JsonProperty("version")
     public Long getVersion();
-
     /**
      *  <p>Update actions to be performed on the BusinessUnit.</p>
      * @return actions
@@ -55,31 +58,32 @@ public interface BusinessUnitUpdate extends
      *  <p>Expected version of the BusinessUnit on which the changes should be applied. If the expected version does not match the actual version, a 409 Conflict error will be returned.</p>
      * @param version value to be set
      */
-
+    
     public void setVersion(final Long version);
-
+    
+    
     /**
      *  <p>Update actions to be performed on the BusinessUnit.</p>
      * @param actions values to be set
      */
-
+    
     @JsonIgnore
-    public void setActions(final BusinessUnitUpdateAction... actions);
-
+    public void setActions(final BusinessUnitUpdateAction ...actions);
     /**
      *  <p>Update actions to be performed on the BusinessUnit.</p>
      * @param actions values to be set
      */
-
+    
     public void setActions(final List<BusinessUnitUpdateAction> actions);
 
     /**
      * factory method
      * @return instance of BusinessUnitUpdate
      */
-    public static BusinessUnitUpdate of() {
+    public static BusinessUnitUpdate of(){
         return new BusinessUnitUpdateImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy BusinessUnitUpdate
@@ -106,9 +110,7 @@ public interface BusinessUnitUpdate extends
         BusinessUnitUpdateImpl instance = new BusinessUnitUpdateImpl();
         instance.setVersion(template.getVersion());
         instance.setActions(Optional.ofNullable(template.getActions())
-                .map(t -> t.stream()
-                        .map(com.commercetools.api.models.business_unit.BusinessUnitUpdateAction::deepCopy)
-                        .collect(Collectors.toList()))
+                .map(t -> t.stream().map(com.commercetools.api.models.business_unit.BusinessUnitUpdateAction::deepCopy).collect(Collectors.toList()))
                 .orElse(null));
         return instance;
     }
@@ -120,7 +122,7 @@ public interface BusinessUnitUpdate extends
     public static BusinessUnitUpdateBuilder builder() {
         return BusinessUnitUpdateBuilder.of();
     }
-
+    
     /**
      * create builder for BusinessUnitUpdate instance
      * @param template instance with prefilled values for the builder
@@ -129,6 +131,7 @@ public interface BusinessUnitUpdate extends
     public static BusinessUnitUpdateBuilder builder(final BusinessUnitUpdate template) {
         return BusinessUnitUpdateBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -139,7 +142,7 @@ public interface BusinessUnitUpdate extends
     default <T> T withBusinessUnitUpdate(Function<BusinessUnitUpdate, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

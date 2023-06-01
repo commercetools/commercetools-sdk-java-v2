@@ -1,32 +1,33 @@
-
 package com.commercetools.api.models.cart_discount;
-
-import java.util.Arrays;
-import java.util.Optional;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-
+import java.lang.String;
+import java.util.Arrays;
+import java.util.Optional;
 import io.vrap.rmf.base.client.JsonEnum;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
  *  <p>Defines which matching items are to be discounted.</p>
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public interface SelectionMode extends JsonEnum {
 
     /**
     	<p>Select the cheapest items.</p>
-
+    	
     */
     SelectionMode CHEAPEST = SelectionModeEnum.CHEAPEST;
     /**
     	<p>Select the most expensive items.</p>
-
+    	
     */
     SelectionMode MOST_EXPENSIVE = SelectionModeEnum.MOST_EXPENSIVE;
-
+    
     /**
      * possible values of SelectionMode
      */
@@ -35,7 +36,7 @@ public interface SelectionMode extends JsonEnum {
          * Cheapest
          */
         CHEAPEST("Cheapest"),
-
+        
         /**
          * MostExpensive
          */
@@ -92,7 +93,7 @@ public interface SelectionMode extends JsonEnum {
             public String name() {
                 return value.toUpperCase();
             }
-
+            
             public String toString() {
                 return value;
             }
@@ -107,7 +108,7 @@ public interface SelectionMode extends JsonEnum {
     public static Optional<SelectionMode> findEnumViaJsonName(String jsonName) {
         return Arrays.stream(values()).filter(t -> t.getJsonName().equals(jsonName)).findFirst();
     }
-
+    
     /**
      * possible enum values
      * @return array of possible enum values
@@ -115,5 +116,5 @@ public interface SelectionMode extends JsonEnum {
     public static SelectionMode[] values() {
         return SelectionModeEnum.values();
     }
-
+    
 }

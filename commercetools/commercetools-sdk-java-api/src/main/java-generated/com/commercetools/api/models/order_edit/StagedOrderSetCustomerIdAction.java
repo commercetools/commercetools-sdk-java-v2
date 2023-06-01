@@ -1,17 +1,20 @@
-
 package com.commercetools.api.models.order_edit;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-
 import com.commercetools.api.models.order.StagedOrderUpdateAction;
+import com.commercetools.api.models.order_edit.StagedOrderSetCustomerIdActionImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * StagedOrderSetCustomerIdAction
@@ -23,9 +26,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     StagedOrderSetCustomerIdAction stagedOrderSetCustomerIdAction = StagedOrderSetCustomerIdAction.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = StagedOrderSetCustomerIdActionImpl.class)
 public interface StagedOrderSetCustomerIdAction extends StagedOrderUpdateAction {
 
@@ -38,7 +44,7 @@ public interface StagedOrderSetCustomerIdAction extends StagedOrderUpdateAction 
      *
      * @return customerId
      */
-
+    
     @JsonProperty("customerId")
     public String getCustomerId();
 
@@ -46,16 +52,18 @@ public interface StagedOrderSetCustomerIdAction extends StagedOrderUpdateAction 
      * set customerId
      * @param customerId value to be set
      */
-
+    
     public void setCustomerId(final String customerId);
+    
 
     /**
      * factory method
      * @return instance of StagedOrderSetCustomerIdAction
      */
-    public static StagedOrderSetCustomerIdAction of() {
+    public static StagedOrderSetCustomerIdAction of(){
         return new StagedOrderSetCustomerIdActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy StagedOrderSetCustomerIdAction
@@ -90,7 +98,7 @@ public interface StagedOrderSetCustomerIdAction extends StagedOrderUpdateAction 
     public static StagedOrderSetCustomerIdActionBuilder builder() {
         return StagedOrderSetCustomerIdActionBuilder.of();
     }
-
+    
     /**
      * create builder for StagedOrderSetCustomerIdAction instance
      * @param template instance with prefilled values for the builder
@@ -99,6 +107,7 @@ public interface StagedOrderSetCustomerIdAction extends StagedOrderUpdateAction 
     public static StagedOrderSetCustomerIdActionBuilder builder(final StagedOrderSetCustomerIdAction template) {
         return StagedOrderSetCustomerIdActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -109,7 +118,7 @@ public interface StagedOrderSetCustomerIdAction extends StagedOrderUpdateAction 
     default <T> T withStagedOrderSetCustomerIdAction(Function<StagedOrderSetCustomerIdAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

@@ -1,8 +1,11 @@
-
 package com.commercetools.api.models.zone;
 
+import com.commercetools.api.models.zone.ZoneUpdateAction;
+import com.commercetools.api.models.zone.ZoneChangeNameAction;
+import javax.annotation.Nullable;
 import java.util.*;
-
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -16,30 +19,39 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .name("{name}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class ZoneChangeNameActionBuilder implements Builder<ZoneChangeNameAction> {
 
+    
+    
     private String name;
 
+    
     /**
      *  <p>New name of the Zone.</p>
      * @param name value to be set
      * @return Builder
      */
-
-    public ZoneChangeNameActionBuilder name(final String name) {
+    
+    public ZoneChangeNameActionBuilder name( final String name) {
         this.name = name;
         return this;
     }
+    
+    
 
     /**
      *  <p>New name of the Zone.</p>
      * @return name
      */
-
-    public String getName() {
+    
+    
+    public String getName(){
         return this.name;
     }
 
@@ -51,7 +63,7 @@ public class ZoneChangeNameActionBuilder implements Builder<ZoneChangeNameAction
         Objects.requireNonNull(name, ZoneChangeNameAction.class + ": name is missing");
         return new ZoneChangeNameActionImpl(name);
     }
-
+    
     /**
      * builds ZoneChangeNameAction without checking for non-null required values
      * @return ZoneChangeNameAction
@@ -62,7 +74,7 @@ public class ZoneChangeNameActionBuilder implements Builder<ZoneChangeNameAction
 
     /**
      * factory method for an instance of ZoneChangeNameActionBuilder
-     * @return builder
+     * @return builder 
      */
     public static ZoneChangeNameActionBuilder of() {
         return new ZoneChangeNameActionBuilder();

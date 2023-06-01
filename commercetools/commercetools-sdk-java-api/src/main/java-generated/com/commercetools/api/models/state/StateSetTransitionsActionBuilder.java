@@ -1,11 +1,12 @@
-
 package com.commercetools.api.models.state;
 
+import com.commercetools.api.models.state.StateResourceIdentifier;
+import com.commercetools.api.models.state.StateUpdateAction;
+import com.commercetools.api.models.state.StateSetTransitionsAction;
+import javax.annotation.Nullable;
 import java.util.*;
 import java.util.function.Function;
-
-import javax.annotation.Nullable;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -18,11 +19,15 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     StateSetTransitionsAction stateSetTransitionsAction = StateSetTransitionsAction.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class StateSetTransitionsActionBuilder implements Builder<StateSetTransitionsAction> {
 
+    
     @Nullable
     private java.util.List<com.commercetools.api.models.state.StateResourceIdentifier> transitions;
 
@@ -34,13 +39,12 @@ public class StateSetTransitionsActionBuilder implements Builder<StateSetTransit
      * @param transitions value to be set
      * @return Builder
      */
-
-    public StateSetTransitionsActionBuilder transitions(
-            @Nullable final com.commercetools.api.models.state.StateResourceIdentifier... transitions) {
+    
+    public StateSetTransitionsActionBuilder transitions(@Nullable final com.commercetools.api.models.state.StateResourceIdentifier ...transitions) {
         this.transitions = new ArrayList<>(Arrays.asList(transitions));
         return this;
     }
-
+    
     /**
      *  <p>Value to set. If empty, any existing value will be removed.</p>
      *  <p>Possible transformations of the current State to other States of the same <code>type</code> (for example, <em>Initial</em> -&gt; <em>Shipped</em>). When performing a <code>transitionState</code> update action and <code>transitions</code> is set, the currently referenced State must have a transition to the new State.</p>
@@ -49,13 +53,12 @@ public class StateSetTransitionsActionBuilder implements Builder<StateSetTransit
      * @param transitions value to be set
      * @return Builder
      */
-
-    public StateSetTransitionsActionBuilder transitions(
-            @Nullable final java.util.List<com.commercetools.api.models.state.StateResourceIdentifier> transitions) {
+    
+    public StateSetTransitionsActionBuilder transitions(@Nullable final java.util.List<com.commercetools.api.models.state.StateResourceIdentifier> transitions) {
         this.transitions = transitions;
         return this;
     }
-
+    
     /**
      *  <p>Value to set. If empty, any existing value will be removed.</p>
      *  <p>Possible transformations of the current State to other States of the same <code>type</code> (for example, <em>Initial</em> -&gt; <em>Shipped</em>). When performing a <code>transitionState</code> update action and <code>transitions</code> is set, the currently referenced State must have a transition to the new State.</p>
@@ -64,16 +67,17 @@ public class StateSetTransitionsActionBuilder implements Builder<StateSetTransit
      * @param transitions value to be set
      * @return Builder
      */
-
-    public StateSetTransitionsActionBuilder plusTransitions(
-            @Nullable final com.commercetools.api.models.state.StateResourceIdentifier... transitions) {
+    
+    public StateSetTransitionsActionBuilder plusTransitions(@Nullable final com.commercetools.api.models.state.StateResourceIdentifier ...transitions) {
         if (this.transitions == null) {
             this.transitions = new ArrayList<>();
         }
         this.transitions.addAll(Arrays.asList(transitions));
         return this;
     }
-
+    
+    
+    
     /**
      *  <p>Value to set. If empty, any existing value will be removed.</p>
      *  <p>Possible transformations of the current State to other States of the same <code>type</code> (for example, <em>Initial</em> -&gt; <em>Shipped</em>). When performing a <code>transitionState</code> update action and <code>transitions</code> is set, the currently referenced State must have a transition to the new State.</p>
@@ -82,17 +86,15 @@ public class StateSetTransitionsActionBuilder implements Builder<StateSetTransit
      * @param builder function to build the transitions value
      * @return Builder
      */
-
-    public StateSetTransitionsActionBuilder plusTransitions(
-            Function<com.commercetools.api.models.state.StateResourceIdentifierBuilder, com.commercetools.api.models.state.StateResourceIdentifierBuilder> builder) {
+    
+    public StateSetTransitionsActionBuilder plusTransitions(Function<com.commercetools.api.models.state.StateResourceIdentifierBuilder, com.commercetools.api.models.state.StateResourceIdentifierBuilder> builder) {
         if (this.transitions == null) {
             this.transitions = new ArrayList<>();
         }
-        this.transitions
-                .add(builder.apply(com.commercetools.api.models.state.StateResourceIdentifierBuilder.of()).build());
+        this.transitions.add(builder.apply(com.commercetools.api.models.state.StateResourceIdentifierBuilder.of()).build());
         return this;
     }
-
+    
     /**
      *  <p>Value to set. If empty, any existing value will be removed.</p>
      *  <p>Possible transformations of the current State to other States of the same <code>type</code> (for example, <em>Initial</em> -&gt; <em>Shipped</em>). When performing a <code>transitionState</code> update action and <code>transitions</code> is set, the currently referenced State must have a transition to the new State.</p>
@@ -101,15 +103,13 @@ public class StateSetTransitionsActionBuilder implements Builder<StateSetTransit
      * @param builder function to build the transitions value
      * @return Builder
      */
-
-    public StateSetTransitionsActionBuilder withTransitions(
-            Function<com.commercetools.api.models.state.StateResourceIdentifierBuilder, com.commercetools.api.models.state.StateResourceIdentifierBuilder> builder) {
+    
+    public StateSetTransitionsActionBuilder withTransitions(Function<com.commercetools.api.models.state.StateResourceIdentifierBuilder, com.commercetools.api.models.state.StateResourceIdentifierBuilder> builder) {
         this.transitions = new ArrayList<>();
-        this.transitions
-                .add(builder.apply(com.commercetools.api.models.state.StateResourceIdentifierBuilder.of()).build());
+        this.transitions.add(builder.apply(com.commercetools.api.models.state.StateResourceIdentifierBuilder.of()).build());
         return this;
     }
-
+    
     /**
      *  <p>Value to set. If empty, any existing value will be removed.</p>
      *  <p>Possible transformations of the current State to other States of the same <code>type</code> (for example, <em>Initial</em> -&gt; <em>Shipped</em>). When performing a <code>transitionState</code> update action and <code>transitions</code> is set, the currently referenced State must have a transition to the new State.</p>
@@ -118,12 +118,11 @@ public class StateSetTransitionsActionBuilder implements Builder<StateSetTransit
      * @param builder function to build the transitions value
      * @return Builder
      */
-
-    public StateSetTransitionsActionBuilder addTransitions(
-            Function<com.commercetools.api.models.state.StateResourceIdentifierBuilder, com.commercetools.api.models.state.StateResourceIdentifier> builder) {
+    
+    public StateSetTransitionsActionBuilder addTransitions(Function<com.commercetools.api.models.state.StateResourceIdentifierBuilder, com.commercetools.api.models.state.StateResourceIdentifier> builder) {
         return plusTransitions(builder.apply(com.commercetools.api.models.state.StateResourceIdentifierBuilder.of()));
     }
-
+    
     /**
      *  <p>Value to set. If empty, any existing value will be removed.</p>
      *  <p>Possible transformations of the current State to other States of the same <code>type</code> (for example, <em>Initial</em> -&gt; <em>Shipped</em>). When performing a <code>transitionState</code> update action and <code>transitions</code> is set, the currently referenced State must have a transition to the new State.</p>
@@ -132,11 +131,11 @@ public class StateSetTransitionsActionBuilder implements Builder<StateSetTransit
      * @param builder function to build the transitions value
      * @return Builder
      */
-
-    public StateSetTransitionsActionBuilder setTransitions(
-            Function<com.commercetools.api.models.state.StateResourceIdentifierBuilder, com.commercetools.api.models.state.StateResourceIdentifier> builder) {
+    
+    public StateSetTransitionsActionBuilder setTransitions(Function<com.commercetools.api.models.state.StateResourceIdentifierBuilder, com.commercetools.api.models.state.StateResourceIdentifier> builder) {
         return transitions(builder.apply(com.commercetools.api.models.state.StateResourceIdentifierBuilder.of()));
     }
+                    
 
     /**
      *  <p>Value to set. If empty, any existing value will be removed.</p>
@@ -145,9 +144,9 @@ public class StateSetTransitionsActionBuilder implements Builder<StateSetTransit
      *  <p>When performing a <code>transitionState</code> update action, any other State of the same <code>type</code> can be transitioned to.</p>
      * @return transitions
      */
-
+    
     @Nullable
-    public java.util.List<com.commercetools.api.models.state.StateResourceIdentifier> getTransitions() {
+    public java.util.List<com.commercetools.api.models.state.StateResourceIdentifier> getTransitions(){
         return this.transitions;
     }
 
@@ -158,7 +157,7 @@ public class StateSetTransitionsActionBuilder implements Builder<StateSetTransit
     public StateSetTransitionsAction build() {
         return new StateSetTransitionsActionImpl(transitions);
     }
-
+    
     /**
      * builds StateSetTransitionsAction without checking for non-null required values
      * @return StateSetTransitionsAction
@@ -169,7 +168,7 @@ public class StateSetTransitionsActionBuilder implements Builder<StateSetTransit
 
     /**
      * factory method for an instance of StateSetTransitionsActionBuilder
-     * @return builder
+     * @return builder 
      */
     public static StateSetTransitionsActionBuilder of() {
         return new StateSetTransitionsActionBuilder();

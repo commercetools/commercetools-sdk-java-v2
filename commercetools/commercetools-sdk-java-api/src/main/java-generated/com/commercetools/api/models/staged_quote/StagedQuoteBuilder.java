@@ -1,11 +1,21 @@
-
 package com.commercetools.api.models.staged_quote;
 
+import com.commercetools.api.models.business_unit.BusinessUnitKeyReference;
+import com.commercetools.api.models.cart.CartReference;
+import com.commercetools.api.models.common.BaseResource;
+import com.commercetools.api.models.common.CreatedBy;
+import com.commercetools.api.models.common.LastModifiedBy;
+import com.commercetools.api.models.customer.CustomerReference;
+import com.commercetools.api.models.quote_request.QuoteRequestReference;
+import com.commercetools.api.models.staged_quote.StagedQuoteState;
+import com.commercetools.api.models.state.StateReference;
+import com.commercetools.api.models.type.CustomFields;
+import java.time.ZonedDateTime;
+import com.commercetools.api.models.staged_quote.StagedQuote;
+import javax.annotation.Nullable;
 import java.util.*;
 import java.util.function.Function;
-
-import javax.annotation.Nullable;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -25,603 +35,663 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .quotationCart(quotationCartBuilder -> quotationCartBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class StagedQuoteBuilder implements Builder<StagedQuote> {
 
+    
+    
     private String id;
-
+    
+    
+    
     private Long version;
-
+    
+    
+    
     private java.time.ZonedDateTime createdAt;
-
+    
+    
+    
     private java.time.ZonedDateTime lastModifiedAt;
-
+    
+    
     @Nullable
     private String key;
-
+    
+    
     @Nullable
     private com.commercetools.api.models.common.LastModifiedBy lastModifiedBy;
-
+    
+    
     @Nullable
     private com.commercetools.api.models.common.CreatedBy createdBy;
-
+    
+    
+    
     private com.commercetools.api.models.staged_quote.StagedQuoteState stagedQuoteState;
-
+    
+    
     @Nullable
     private com.commercetools.api.models.customer.CustomerReference customer;
-
+    
+    
+    
     private com.commercetools.api.models.quote_request.QuoteRequestReference quoteRequest;
-
+    
+    
+    
     private com.commercetools.api.models.cart.CartReference quotationCart;
-
+    
+    
     @Nullable
     private java.time.ZonedDateTime validTo;
-
+    
+    
     @Nullable
     private String sellerComment;
-
+    
+    
     @Nullable
     private com.commercetools.api.models.type.CustomFields custom;
-
+    
+    
     @Nullable
     private com.commercetools.api.models.state.StateReference state;
-
+    
+    
     @Nullable
     private String purchaseOrderNumber;
-
+    
+    
     @Nullable
     private com.commercetools.api.models.business_unit.BusinessUnitKeyReference businessUnit;
 
+    
     /**
      *  <p>The unique ID of the StagedQuote.</p>
      * @param id value to be set
      * @return Builder
      */
-
-    public StagedQuoteBuilder id(final String id) {
+    
+    public StagedQuoteBuilder id( final String id) {
         this.id = id;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Current version of the StagedQuote.</p>
      * @param version value to be set
      * @return Builder
      */
-
-    public StagedQuoteBuilder version(final Long version) {
+    
+    public StagedQuoteBuilder version( final Long version) {
         this.version = version;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Date and time (UTC) the StagedQuote was initially created.</p>
      * @param createdAt value to be set
      * @return Builder
      */
-
-    public StagedQuoteBuilder createdAt(final java.time.ZonedDateTime createdAt) {
+    
+    public StagedQuoteBuilder createdAt( final java.time.ZonedDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Date and time (UTC) the StagedQuote was last updated.</p>
      * @param lastModifiedAt value to be set
      * @return Builder
      */
-
-    public StagedQuoteBuilder lastModifiedAt(final java.time.ZonedDateTime lastModifiedAt) {
+    
+    public StagedQuoteBuilder lastModifiedAt( final java.time.ZonedDateTime lastModifiedAt) {
         this.lastModifiedAt = lastModifiedAt;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>User-specific unique identifier of the staged quote.</p>
      * @param key value to be set
      * @return Builder
      */
-
+    
     public StagedQuoteBuilder key(@Nullable final String key) {
         this.key = key;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      * @param builder function to build the lastModifiedBy value
      * @return Builder
      */
-
-    public StagedQuoteBuilder lastModifiedBy(
-            Function<com.commercetools.api.models.common.LastModifiedByBuilder, com.commercetools.api.models.common.LastModifiedByBuilder> builder) {
+    
+    public StagedQuoteBuilder lastModifiedBy(Function<com.commercetools.api.models.common.LastModifiedByBuilder, com.commercetools.api.models.common.LastModifiedByBuilder> builder) {
         this.lastModifiedBy = builder.apply(com.commercetools.api.models.common.LastModifiedByBuilder.of()).build();
         return this;
     }
-
+    
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      * @param builder function to build the lastModifiedBy value
      * @return Builder
      */
-
-    public StagedQuoteBuilder withLastModifiedBy(
-            Function<com.commercetools.api.models.common.LastModifiedByBuilder, com.commercetools.api.models.common.LastModifiedBy> builder) {
+    
+    public StagedQuoteBuilder withLastModifiedBy(Function<com.commercetools.api.models.common.LastModifiedByBuilder, com.commercetools.api.models.common.LastModifiedBy> builder) {
         this.lastModifiedBy = builder.apply(com.commercetools.api.models.common.LastModifiedByBuilder.of());
         return this;
     }
-
+                    
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      * @param lastModifiedBy value to be set
      * @return Builder
      */
-
-    public StagedQuoteBuilder lastModifiedBy(
-            @Nullable final com.commercetools.api.models.common.LastModifiedBy lastModifiedBy) {
+    
+    public StagedQuoteBuilder lastModifiedBy(@Nullable final com.commercetools.api.models.common.LastModifiedBy lastModifiedBy) {
         this.lastModifiedBy = lastModifiedBy;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      * @param builder function to build the createdBy value
      * @return Builder
      */
-
-    public StagedQuoteBuilder createdBy(
-            Function<com.commercetools.api.models.common.CreatedByBuilder, com.commercetools.api.models.common.CreatedByBuilder> builder) {
+    
+    public StagedQuoteBuilder createdBy(Function<com.commercetools.api.models.common.CreatedByBuilder, com.commercetools.api.models.common.CreatedByBuilder> builder) {
         this.createdBy = builder.apply(com.commercetools.api.models.common.CreatedByBuilder.of()).build();
         return this;
     }
-
+    
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      * @param builder function to build the createdBy value
      * @return Builder
      */
-
-    public StagedQuoteBuilder withCreatedBy(
-            Function<com.commercetools.api.models.common.CreatedByBuilder, com.commercetools.api.models.common.CreatedBy> builder) {
+    
+    public StagedQuoteBuilder withCreatedBy(Function<com.commercetools.api.models.common.CreatedByBuilder, com.commercetools.api.models.common.CreatedBy> builder) {
         this.createdBy = builder.apply(com.commercetools.api.models.common.CreatedByBuilder.of());
         return this;
     }
-
+                    
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      * @param createdBy value to be set
      * @return Builder
      */
-
+    
     public StagedQuoteBuilder createdBy(@Nullable final com.commercetools.api.models.common.CreatedBy createdBy) {
         this.createdBy = createdBy;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Predefined states tracking the status of the Staged Quote.</p>
      * @param stagedQuoteState value to be set
      * @return Builder
      */
-
-    public StagedQuoteBuilder stagedQuoteState(
-            final com.commercetools.api.models.staged_quote.StagedQuoteState stagedQuoteState) {
+    
+    public StagedQuoteBuilder stagedQuoteState( final com.commercetools.api.models.staged_quote.StagedQuoteState stagedQuoteState) {
         this.stagedQuoteState = stagedQuoteState;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>The Buyer who requested the Quote.</p>
      * @param builder function to build the customer value
      * @return Builder
      */
-
-    public StagedQuoteBuilder customer(
-            Function<com.commercetools.api.models.customer.CustomerReferenceBuilder, com.commercetools.api.models.customer.CustomerReferenceBuilder> builder) {
+    
+    public StagedQuoteBuilder customer(Function<com.commercetools.api.models.customer.CustomerReferenceBuilder, com.commercetools.api.models.customer.CustomerReferenceBuilder> builder) {
         this.customer = builder.apply(com.commercetools.api.models.customer.CustomerReferenceBuilder.of()).build();
         return this;
     }
-
+    
     /**
      *  <p>The Buyer who requested the Quote.</p>
      * @param builder function to build the customer value
      * @return Builder
      */
-
-    public StagedQuoteBuilder withCustomer(
-            Function<com.commercetools.api.models.customer.CustomerReferenceBuilder, com.commercetools.api.models.customer.CustomerReference> builder) {
+    
+    public StagedQuoteBuilder withCustomer(Function<com.commercetools.api.models.customer.CustomerReferenceBuilder, com.commercetools.api.models.customer.CustomerReference> builder) {
         this.customer = builder.apply(com.commercetools.api.models.customer.CustomerReferenceBuilder.of());
         return this;
     }
-
+                    
     /**
      *  <p>The Buyer who requested the Quote.</p>
      * @param customer value to be set
      * @return Builder
      */
-
-    public StagedQuoteBuilder customer(
-            @Nullable final com.commercetools.api.models.customer.CustomerReference customer) {
+    
+    public StagedQuoteBuilder customer(@Nullable final com.commercetools.api.models.customer.CustomerReference customer) {
         this.customer = customer;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Quote Request related to the Staged Quote.</p>
      * @param builder function to build the quoteRequest value
      * @return Builder
      */
-
-    public StagedQuoteBuilder quoteRequest(
-            Function<com.commercetools.api.models.quote_request.QuoteRequestReferenceBuilder, com.commercetools.api.models.quote_request.QuoteRequestReferenceBuilder> builder) {
-        this.quoteRequest = builder.apply(com.commercetools.api.models.quote_request.QuoteRequestReferenceBuilder.of())
-                .build();
+    
+    public StagedQuoteBuilder quoteRequest(Function<com.commercetools.api.models.quote_request.QuoteRequestReferenceBuilder, com.commercetools.api.models.quote_request.QuoteRequestReferenceBuilder> builder) {
+        this.quoteRequest = builder.apply(com.commercetools.api.models.quote_request.QuoteRequestReferenceBuilder.of()).build();
         return this;
     }
-
+    
     /**
      *  <p>Quote Request related to the Staged Quote.</p>
      * @param builder function to build the quoteRequest value
      * @return Builder
      */
-
-    public StagedQuoteBuilder withQuoteRequest(
-            Function<com.commercetools.api.models.quote_request.QuoteRequestReferenceBuilder, com.commercetools.api.models.quote_request.QuoteRequestReference> builder) {
+    
+    public StagedQuoteBuilder withQuoteRequest(Function<com.commercetools.api.models.quote_request.QuoteRequestReferenceBuilder, com.commercetools.api.models.quote_request.QuoteRequestReference> builder) {
         this.quoteRequest = builder.apply(com.commercetools.api.models.quote_request.QuoteRequestReferenceBuilder.of());
         return this;
     }
-
+                    
     /**
      *  <p>Quote Request related to the Staged Quote.</p>
      * @param quoteRequest value to be set
      * @return Builder
      */
-
-    public StagedQuoteBuilder quoteRequest(
-            final com.commercetools.api.models.quote_request.QuoteRequestReference quoteRequest) {
+    
+    public StagedQuoteBuilder quoteRequest( final com.commercetools.api.models.quote_request.QuoteRequestReference quoteRequest) {
         this.quoteRequest = quoteRequest;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Cart containing the offered items. May contain either DirectDiscounts or CartDiscounts.</p>
      * @param builder function to build the quotationCart value
      * @return Builder
      */
-
-    public StagedQuoteBuilder quotationCart(
-            Function<com.commercetools.api.models.cart.CartReferenceBuilder, com.commercetools.api.models.cart.CartReferenceBuilder> builder) {
+    
+    public StagedQuoteBuilder quotationCart(Function<com.commercetools.api.models.cart.CartReferenceBuilder, com.commercetools.api.models.cart.CartReferenceBuilder> builder) {
         this.quotationCart = builder.apply(com.commercetools.api.models.cart.CartReferenceBuilder.of()).build();
         return this;
     }
-
+    
     /**
      *  <p>Cart containing the offered items. May contain either DirectDiscounts or CartDiscounts.</p>
      * @param builder function to build the quotationCart value
      * @return Builder
      */
-
-    public StagedQuoteBuilder withQuotationCart(
-            Function<com.commercetools.api.models.cart.CartReferenceBuilder, com.commercetools.api.models.cart.CartReference> builder) {
+    
+    public StagedQuoteBuilder withQuotationCart(Function<com.commercetools.api.models.cart.CartReferenceBuilder, com.commercetools.api.models.cart.CartReference> builder) {
         this.quotationCart = builder.apply(com.commercetools.api.models.cart.CartReferenceBuilder.of());
         return this;
     }
-
+                    
     /**
      *  <p>Cart containing the offered items. May contain either DirectDiscounts or CartDiscounts.</p>
      * @param quotationCart value to be set
      * @return Builder
      */
-
-    public StagedQuoteBuilder quotationCart(final com.commercetools.api.models.cart.CartReference quotationCart) {
+    
+    public StagedQuoteBuilder quotationCart( final com.commercetools.api.models.cart.CartReference quotationCart) {
         this.quotationCart = quotationCart;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Expiration date for the Quote.</p>
      * @param validTo value to be set
      * @return Builder
      */
-
+    
     public StagedQuoteBuilder validTo(@Nullable final java.time.ZonedDateTime validTo) {
         this.validTo = validTo;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Message from the Seller included in the offer.</p>
      * @param sellerComment value to be set
      * @return Builder
      */
-
+    
     public StagedQuoteBuilder sellerComment(@Nullable final String sellerComment) {
         this.sellerComment = sellerComment;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Custom Fields of the Staged Quote.</p>
      * @param builder function to build the custom value
      * @return Builder
      */
-
-    public StagedQuoteBuilder custom(
-            Function<com.commercetools.api.models.type.CustomFieldsBuilder, com.commercetools.api.models.type.CustomFieldsBuilder> builder) {
+    
+    public StagedQuoteBuilder custom(Function<com.commercetools.api.models.type.CustomFieldsBuilder, com.commercetools.api.models.type.CustomFieldsBuilder> builder) {
         this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsBuilder.of()).build();
         return this;
     }
-
+    
     /**
      *  <p>Custom Fields of the Staged Quote.</p>
      * @param builder function to build the custom value
      * @return Builder
      */
-
-    public StagedQuoteBuilder withCustom(
-            Function<com.commercetools.api.models.type.CustomFieldsBuilder, com.commercetools.api.models.type.CustomFields> builder) {
+    
+    public StagedQuoteBuilder withCustom(Function<com.commercetools.api.models.type.CustomFieldsBuilder, com.commercetools.api.models.type.CustomFields> builder) {
         this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsBuilder.of());
         return this;
     }
-
+                    
     /**
      *  <p>Custom Fields of the Staged Quote.</p>
      * @param custom value to be set
      * @return Builder
      */
-
+    
     public StagedQuoteBuilder custom(@Nullable final com.commercetools.api.models.type.CustomFields custom) {
         this.custom = custom;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>State of the Staged Quote. This reference can point to a State in a custom workflow.</p>
      * @param builder function to build the state value
      * @return Builder
      */
-
-    public StagedQuoteBuilder state(
-            Function<com.commercetools.api.models.state.StateReferenceBuilder, com.commercetools.api.models.state.StateReferenceBuilder> builder) {
+    
+    public StagedQuoteBuilder state(Function<com.commercetools.api.models.state.StateReferenceBuilder, com.commercetools.api.models.state.StateReferenceBuilder> builder) {
         this.state = builder.apply(com.commercetools.api.models.state.StateReferenceBuilder.of()).build();
         return this;
     }
-
+    
     /**
      *  <p>State of the Staged Quote. This reference can point to a State in a custom workflow.</p>
      * @param builder function to build the state value
      * @return Builder
      */
-
-    public StagedQuoteBuilder withState(
-            Function<com.commercetools.api.models.state.StateReferenceBuilder, com.commercetools.api.models.state.StateReference> builder) {
+    
+    public StagedQuoteBuilder withState(Function<com.commercetools.api.models.state.StateReferenceBuilder, com.commercetools.api.models.state.StateReference> builder) {
         this.state = builder.apply(com.commercetools.api.models.state.StateReferenceBuilder.of());
         return this;
     }
-
+                    
     /**
      *  <p>State of the Staged Quote. This reference can point to a State in a custom workflow.</p>
      * @param state value to be set
      * @return Builder
      */
-
+    
     public StagedQuoteBuilder state(@Nullable final com.commercetools.api.models.state.StateReference state) {
         this.state = state;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>The Purchase Order Number is typically set by the Buyer on a QuoteRequest to track the purchase order during the quote and order flow.</p>
      * @param purchaseOrderNumber value to be set
      * @return Builder
      */
-
+    
     public StagedQuoteBuilder purchaseOrderNumber(@Nullable final String purchaseOrderNumber) {
         this.purchaseOrderNumber = purchaseOrderNumber;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>The BusinessUnit for the Staged Quote.</p>
      * @param builder function to build the businessUnit value
      * @return Builder
      */
-
-    public StagedQuoteBuilder businessUnit(
-            Function<com.commercetools.api.models.business_unit.BusinessUnitKeyReferenceBuilder, com.commercetools.api.models.business_unit.BusinessUnitKeyReferenceBuilder> builder) {
-        this.businessUnit = builder
-                .apply(com.commercetools.api.models.business_unit.BusinessUnitKeyReferenceBuilder.of())
-                .build();
+    
+    public StagedQuoteBuilder businessUnit(Function<com.commercetools.api.models.business_unit.BusinessUnitKeyReferenceBuilder, com.commercetools.api.models.business_unit.BusinessUnitKeyReferenceBuilder> builder) {
+        this.businessUnit = builder.apply(com.commercetools.api.models.business_unit.BusinessUnitKeyReferenceBuilder.of()).build();
         return this;
     }
-
+    
     /**
      *  <p>The BusinessUnit for the Staged Quote.</p>
      * @param builder function to build the businessUnit value
      * @return Builder
      */
-
-    public StagedQuoteBuilder withBusinessUnit(
-            Function<com.commercetools.api.models.business_unit.BusinessUnitKeyReferenceBuilder, com.commercetools.api.models.business_unit.BusinessUnitKeyReference> builder) {
-        this.businessUnit = builder
-                .apply(com.commercetools.api.models.business_unit.BusinessUnitKeyReferenceBuilder.of());
+    
+    public StagedQuoteBuilder withBusinessUnit(Function<com.commercetools.api.models.business_unit.BusinessUnitKeyReferenceBuilder, com.commercetools.api.models.business_unit.BusinessUnitKeyReference> builder) {
+        this.businessUnit = builder.apply(com.commercetools.api.models.business_unit.BusinessUnitKeyReferenceBuilder.of());
         return this;
     }
-
+                    
     /**
      *  <p>The BusinessUnit for the Staged Quote.</p>
      * @param businessUnit value to be set
      * @return Builder
      */
-
-    public StagedQuoteBuilder businessUnit(
-            @Nullable final com.commercetools.api.models.business_unit.BusinessUnitKeyReference businessUnit) {
+    
+    public StagedQuoteBuilder businessUnit(@Nullable final com.commercetools.api.models.business_unit.BusinessUnitKeyReference businessUnit) {
         this.businessUnit = businessUnit;
         return this;
     }
+    
+    
 
     /**
      *  <p>The unique ID of the StagedQuote.</p>
      * @return id
      */
-
-    public String getId() {
+    
+    
+    public String getId(){
         return this.id;
     }
-
+    
     /**
      *  <p>Current version of the StagedQuote.</p>
      * @return version
      */
-
-    public Long getVersion() {
+    
+    
+    public Long getVersion(){
         return this.version;
     }
-
+    
     /**
      *  <p>Date and time (UTC) the StagedQuote was initially created.</p>
      * @return createdAt
      */
-
-    public java.time.ZonedDateTime getCreatedAt() {
+    
+    
+    public java.time.ZonedDateTime getCreatedAt(){
         return this.createdAt;
     }
-
+    
     /**
      *  <p>Date and time (UTC) the StagedQuote was last updated.</p>
      * @return lastModifiedAt
      */
-
-    public java.time.ZonedDateTime getLastModifiedAt() {
+    
+    
+    public java.time.ZonedDateTime getLastModifiedAt(){
         return this.lastModifiedAt;
     }
-
+    
     /**
      *  <p>User-specific unique identifier of the staged quote.</p>
      * @return key
      */
-
+    
     @Nullable
-    public String getKey() {
+    public String getKey(){
         return this.key;
     }
-
+    
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      * @return lastModifiedBy
      */
-
+    
     @Nullable
-    public com.commercetools.api.models.common.LastModifiedBy getLastModifiedBy() {
+    public com.commercetools.api.models.common.LastModifiedBy getLastModifiedBy(){
         return this.lastModifiedBy;
     }
-
+    
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      * @return createdBy
      */
-
+    
     @Nullable
-    public com.commercetools.api.models.common.CreatedBy getCreatedBy() {
+    public com.commercetools.api.models.common.CreatedBy getCreatedBy(){
         return this.createdBy;
     }
-
+    
     /**
      *  <p>Predefined states tracking the status of the Staged Quote.</p>
      * @return stagedQuoteState
      */
-
-    public com.commercetools.api.models.staged_quote.StagedQuoteState getStagedQuoteState() {
+    
+    
+    public com.commercetools.api.models.staged_quote.StagedQuoteState getStagedQuoteState(){
         return this.stagedQuoteState;
     }
-
+    
     /**
      *  <p>The Buyer who requested the Quote.</p>
      * @return customer
      */
-
+    
     @Nullable
-    public com.commercetools.api.models.customer.CustomerReference getCustomer() {
+    public com.commercetools.api.models.customer.CustomerReference getCustomer(){
         return this.customer;
     }
-
+    
     /**
      *  <p>Quote Request related to the Staged Quote.</p>
      * @return quoteRequest
      */
-
-    public com.commercetools.api.models.quote_request.QuoteRequestReference getQuoteRequest() {
+    
+    
+    public com.commercetools.api.models.quote_request.QuoteRequestReference getQuoteRequest(){
         return this.quoteRequest;
     }
-
+    
     /**
      *  <p>Cart containing the offered items. May contain either DirectDiscounts or CartDiscounts.</p>
      * @return quotationCart
      */
-
-    public com.commercetools.api.models.cart.CartReference getQuotationCart() {
+    
+    
+    public com.commercetools.api.models.cart.CartReference getQuotationCart(){
         return this.quotationCart;
     }
-
+    
     /**
      *  <p>Expiration date for the Quote.</p>
      * @return validTo
      */
-
+    
     @Nullable
-    public java.time.ZonedDateTime getValidTo() {
+    public java.time.ZonedDateTime getValidTo(){
         return this.validTo;
     }
-
+    
     /**
      *  <p>Message from the Seller included in the offer.</p>
      * @return sellerComment
      */
-
+    
     @Nullable
-    public String getSellerComment() {
+    public String getSellerComment(){
         return this.sellerComment;
     }
-
+    
     /**
      *  <p>Custom Fields of the Staged Quote.</p>
      * @return custom
      */
-
+    
     @Nullable
-    public com.commercetools.api.models.type.CustomFields getCustom() {
+    public com.commercetools.api.models.type.CustomFields getCustom(){
         return this.custom;
     }
-
+    
     /**
      *  <p>State of the Staged Quote. This reference can point to a State in a custom workflow.</p>
      * @return state
      */
-
+    
     @Nullable
-    public com.commercetools.api.models.state.StateReference getState() {
+    public com.commercetools.api.models.state.StateReference getState(){
         return this.state;
     }
-
+    
     /**
      *  <p>The Purchase Order Number is typically set by the Buyer on a QuoteRequest to track the purchase order during the quote and order flow.</p>
      * @return purchaseOrderNumber
      */
-
+    
     @Nullable
-    public String getPurchaseOrderNumber() {
+    public String getPurchaseOrderNumber(){
         return this.purchaseOrderNumber;
     }
-
+    
     /**
      *  <p>The BusinessUnit for the Staged Quote.</p>
      * @return businessUnit
      */
-
+    
     @Nullable
-    public com.commercetools.api.models.business_unit.BusinessUnitKeyReference getBusinessUnit() {
+    public com.commercetools.api.models.business_unit.BusinessUnitKeyReference getBusinessUnit(){
         return this.businessUnit;
     }
 
@@ -637,24 +707,20 @@ public class StagedQuoteBuilder implements Builder<StagedQuote> {
         Objects.requireNonNull(stagedQuoteState, StagedQuote.class + ": stagedQuoteState is missing");
         Objects.requireNonNull(quoteRequest, StagedQuote.class + ": quoteRequest is missing");
         Objects.requireNonNull(quotationCart, StagedQuote.class + ": quotationCart is missing");
-        return new StagedQuoteImpl(id, version, createdAt, lastModifiedAt, key, lastModifiedBy, createdBy,
-            stagedQuoteState, customer, quoteRequest, quotationCart, validTo, sellerComment, custom, state,
-            purchaseOrderNumber, businessUnit);
+        return new StagedQuoteImpl(id, version, createdAt, lastModifiedAt, key, lastModifiedBy, createdBy, stagedQuoteState, customer, quoteRequest, quotationCart, validTo, sellerComment, custom, state, purchaseOrderNumber, businessUnit);
     }
-
+    
     /**
      * builds StagedQuote without checking for non-null required values
      * @return StagedQuote
      */
     public StagedQuote buildUnchecked() {
-        return new StagedQuoteImpl(id, version, createdAt, lastModifiedAt, key, lastModifiedBy, createdBy,
-            stagedQuoteState, customer, quoteRequest, quotationCart, validTo, sellerComment, custom, state,
-            purchaseOrderNumber, businessUnit);
+        return new StagedQuoteImpl(id, version, createdAt, lastModifiedAt, key, lastModifiedBy, createdBy, stagedQuoteState, customer, quoteRequest, quotationCart, validTo, sellerComment, custom, state, purchaseOrderNumber, businessUnit);
     }
 
     /**
      * factory method for an instance of StagedQuoteBuilder
-     * @return builder
+     * @return builder 
      */
     public static StagedQuoteBuilder of() {
         return new StagedQuoteBuilder();

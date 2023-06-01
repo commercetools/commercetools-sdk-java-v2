@@ -1,8 +1,11 @@
-
 package com.commercetools.history.models.common;
 
-import java.util.*;
 
+import com.commercetools.history.models.common.LocalizedString;
+import javax.annotation.Nullable;
+import java.util.*;
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -16,11 +19,16 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             ./^[a-z]{2}(-[A-Z]{2})?$/("{/^[a-z]{2}(-[A-Z]{2})?$/}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class LocalizedStringBuilder implements Builder<LocalizedString> {
 
+    
+    
     private Map<String, String> values = new HashMap<>();
 
     /**
@@ -28,19 +36,19 @@ public class LocalizedStringBuilder implements Builder<LocalizedString> {
      * @param values properties to be set
      * @return Builder
      */
-
-    public LocalizedStringBuilder values(final Map<String, String> values) {
+    
+    public LocalizedStringBuilder values( final Map<String, String> values){
         this.values = values;
         return this;
     }
-
+    
     /**
      * assign a pattern property to the builder
      * @param key property name
      * @param value property value
      * @return Builder
      */
-
+    
     public LocalizedStringBuilder addValue(final String key, final String value) {
         if (this.values == null) {
             values = new HashMap<>();
@@ -48,13 +56,15 @@ public class LocalizedStringBuilder implements Builder<LocalizedString> {
         values.put(key, value);
         return this;
     }
+    
 
     /**
      * values of pattern properties
      * @return pattern properties
      */
-
-    public Map<String, String> getValues() {
+    
+    
+    public Map<String, String> getValues(){
         return this.values;
     }
 
@@ -65,7 +75,7 @@ public class LocalizedStringBuilder implements Builder<LocalizedString> {
     public LocalizedString build() {
         return new LocalizedStringImpl(values);
     }
-
+    
     /**
      * builds LocalizedString without checking for non-null required values
      * @return LocalizedString
@@ -76,7 +86,7 @@ public class LocalizedStringBuilder implements Builder<LocalizedString> {
 
     /**
      * factory method for an instance of LocalizedStringBuilder
-     * @return builder
+     * @return builder 
      */
     public static LocalizedStringBuilder of() {
         return new LocalizedStringBuilder();

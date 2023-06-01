@@ -1,20 +1,21 @@
-
 package com.commercetools.api.models.standalone_price;
-
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.common.DiscountedPrice;
 import com.commercetools.api.models.common.TypedMoney;
+import com.commercetools.api.models.standalone_price.StagedStandalonePriceImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Staged changes on a Standalone Price. To update the <code>value</code> property of a Staged Standalone Price, use the corresponding update action. To apply all staged changes to the Standalone Price, use the <code>applyStagedChanges</code> update action.</p>
@@ -27,11 +28,15 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .value(valueBuilder -> valueBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = StagedStandalonePriceImpl.class)
-public interface StagedStandalonePrice {
+public interface StagedStandalonePrice  {
+
 
     /**
      *  <p>Money value of the StagedStandalonePrice.</p>
@@ -41,7 +46,6 @@ public interface StagedStandalonePrice {
     @Valid
     @JsonProperty("value")
     public TypedMoney getValue();
-
     /**
      *  <p>Discounted price for the StagedStandalonePrice.</p>
      * @return discounted
@@ -54,23 +58,26 @@ public interface StagedStandalonePrice {
      *  <p>Money value of the StagedStandalonePrice.</p>
      * @param value value to be set
      */
-
+    
     public void setValue(final TypedMoney value);
-
+    
+    
     /**
      *  <p>Discounted price for the StagedStandalonePrice.</p>
      * @param discounted value to be set
      */
-
+    
     public void setDiscounted(final DiscountedPrice discounted);
+    
 
     /**
      * factory method
      * @return instance of StagedStandalonePrice
      */
-    public static StagedStandalonePrice of() {
+    public static StagedStandalonePrice of(){
         return new StagedStandalonePriceImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy StagedStandalonePrice
@@ -107,7 +114,7 @@ public interface StagedStandalonePrice {
     public static StagedStandalonePriceBuilder builder() {
         return StagedStandalonePriceBuilder.of();
     }
-
+    
     /**
      * create builder for StagedStandalonePrice instance
      * @param template instance with prefilled values for the builder
@@ -116,6 +123,7 @@ public interface StagedStandalonePrice {
     public static StagedStandalonePriceBuilder builder(final StagedStandalonePrice template) {
         return StagedStandalonePriceBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -126,7 +134,7 @@ public interface StagedStandalonePrice {
     default <T> T withStagedStandalonePrice(Function<StagedStandalonePrice, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

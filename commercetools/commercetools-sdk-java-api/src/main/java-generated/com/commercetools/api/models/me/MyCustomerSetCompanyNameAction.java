@@ -1,16 +1,20 @@
-
 package com.commercetools.api.models.me;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
+import com.commercetools.api.models.me.MyCustomerUpdateAction;
+import com.commercetools.api.models.me.MyCustomerSetCompanyNameActionImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Setting the <code>companyName</code> field on the Customer produces the CustomerCompanyNameSet Message.</p>
@@ -22,9 +26,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     MyCustomerSetCompanyNameAction myCustomerSetCompanyNameAction = MyCustomerSetCompanyNameAction.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = MyCustomerSetCompanyNameActionImpl.class)
 public interface MyCustomerSetCompanyNameAction extends MyCustomerUpdateAction {
 
@@ -37,7 +44,7 @@ public interface MyCustomerSetCompanyNameAction extends MyCustomerUpdateAction {
      *  <p>Value to set. If empty, any existing value is removed.</p>
      * @return companyName
      */
-
+    
     @JsonProperty("companyName")
     public String getCompanyName();
 
@@ -45,16 +52,18 @@ public interface MyCustomerSetCompanyNameAction extends MyCustomerUpdateAction {
      *  <p>Value to set. If empty, any existing value is removed.</p>
      * @param companyName value to be set
      */
-
+    
     public void setCompanyName(final String companyName);
+    
 
     /**
      * factory method
      * @return instance of MyCustomerSetCompanyNameAction
      */
-    public static MyCustomerSetCompanyNameAction of() {
+    public static MyCustomerSetCompanyNameAction of(){
         return new MyCustomerSetCompanyNameActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy MyCustomerSetCompanyNameAction
@@ -89,7 +98,7 @@ public interface MyCustomerSetCompanyNameAction extends MyCustomerUpdateAction {
     public static MyCustomerSetCompanyNameActionBuilder builder() {
         return MyCustomerSetCompanyNameActionBuilder.of();
     }
-
+    
     /**
      * create builder for MyCustomerSetCompanyNameAction instance
      * @param template instance with prefilled values for the builder
@@ -98,6 +107,7 @@ public interface MyCustomerSetCompanyNameAction extends MyCustomerUpdateAction {
     public static MyCustomerSetCompanyNameActionBuilder builder(final MyCustomerSetCompanyNameAction template) {
         return MyCustomerSetCompanyNameActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -108,7 +118,7 @@ public interface MyCustomerSetCompanyNameAction extends MyCustomerUpdateAction {
     default <T> T withMyCustomerSetCompanyNameAction(Function<MyCustomerSetCompanyNameAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

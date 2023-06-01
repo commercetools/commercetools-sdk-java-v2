@@ -1,50 +1,59 @@
-
 package com.commercetools.api.models.order;
 
-import java.time.*;
-import java.util.*;
-
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
-
-import io.vrap.rmf.base.client.ModelBase;
+import com.commercetools.api.models.order.OrderSearchQueryExpression;
+import com.commercetools.api.models.order.OrderSearchSortMode;
+import com.commercetools.api.models.order.OrderSearchSortOrder;
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.ModelBase;
+import javax.validation.Valid;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.annotation.*;
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
  * OrderSearchSorting
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class OrderSearchSortingImpl implements OrderSearchSorting, ModelBase {
 
+    
     private String field;
-
+    
+    
     private String language;
-
+    
+    
     private com.commercetools.api.models.order.OrderSearchSortOrder order;
-
+    
+    
     private com.commercetools.api.models.order.OrderSearchSortMode mode;
-
+    
+    
     private com.commercetools.api.models.order.OrderSearchQueryExpression filter;
 
     /**
      * create instance with all properties
      */
     @JsonCreator
-    OrderSearchSortingImpl(@JsonProperty("field") final String field, @JsonProperty("language") final String language,
-            @JsonProperty("order") final com.commercetools.api.models.order.OrderSearchSortOrder order,
-            @JsonProperty("mode") final com.commercetools.api.models.order.OrderSearchSortMode mode,
-            @JsonProperty("filter") final com.commercetools.api.models.order.OrderSearchQueryExpression filter) {
+    OrderSearchSortingImpl(@JsonProperty("field") final String field, @JsonProperty("language") final String language, @JsonProperty("order") final com.commercetools.api.models.order.OrderSearchSortOrder order, @JsonProperty("mode") final com.commercetools.api.models.order.OrderSearchSortMode mode, @JsonProperty("filter") final com.commercetools.api.models.order.OrderSearchQueryExpression filter) {
         this.field = field;
         this.language = language;
         this.order = order;
         this.mode = mode;
         this.filter = filter;
     }
-
     /**
      * create empty instance
      */
@@ -54,89 +63,94 @@ public class OrderSearchSortingImpl implements OrderSearchSorting, ModelBase {
     /**
      *
      */
-
-    public String getField() {
+    
+    public String getField(){
         return this.field;
     }
-
+    
     /**
      *
      */
-
-    public String getLanguage() {
+    
+    public String getLanguage(){
         return this.language;
     }
-
+    
     /**
      *
      */
-
-    public com.commercetools.api.models.order.OrderSearchSortOrder getOrder() {
+    
+    public com.commercetools.api.models.order.OrderSearchSortOrder getOrder(){
         return this.order;
     }
-
+    
     /**
      *
      */
-
-    public com.commercetools.api.models.order.OrderSearchSortMode getMode() {
+    
+    public com.commercetools.api.models.order.OrderSearchSortMode getMode(){
         return this.mode;
     }
-
+    
     /**
      *
      */
-
-    public com.commercetools.api.models.order.OrderSearchQueryExpression getFilter() {
+    
+    public com.commercetools.api.models.order.OrderSearchQueryExpression getFilter(){
         return this.filter;
     }
 
-    public void setField(final String field) {
+    
+    public void setField(final String field){
         this.field = field;
     }
-
-    public void setLanguage(final String language) {
+    
+    
+    public void setLanguage(final String language){
         this.language = language;
     }
-
-    public void setOrder(final com.commercetools.api.models.order.OrderSearchSortOrder order) {
+    
+    
+    public void setOrder(final com.commercetools.api.models.order.OrderSearchSortOrder order){
         this.order = order;
     }
-
-    public void setMode(final com.commercetools.api.models.order.OrderSearchSortMode mode) {
+    
+    
+    public void setMode(final com.commercetools.api.models.order.OrderSearchSortMode mode){
         this.mode = mode;
     }
-
-    public void setFilter(final com.commercetools.api.models.order.OrderSearchQueryExpression filter) {
+    
+    
+    public void setFilter(final com.commercetools.api.models.order.OrderSearchQueryExpression filter){
         this.filter = filter;
     }
 
     @Override
     public boolean equals(Object o) {
-        if (this == o)
-            return true;
-
-        if (o == null || getClass() != o.getClass())
-            return false;
-
+        if (this == o) return true;
+    
+        if (o == null || getClass() != o.getClass()) return false;
+    
         OrderSearchSortingImpl that = (OrderSearchSortingImpl) o;
-
-        return new EqualsBuilder().append(field, that.field)
+    
+        return new EqualsBuilder()
+                .append(field, that.field)
                 .append(language, that.language)
                 .append(order, that.order)
                 .append(mode, that.mode)
                 .append(filter, that.filter)
                 .isEquals();
     }
-
+    
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(field)
-                .append(language)
-                .append(order)
-                .append(mode)
-                .append(filter)
-                .toHashCode();
+        return new HashCodeBuilder(17, 37)
+            .append(field)
+            .append(language)
+            .append(order)
+            .append(mode)
+            .append(filter)
+            .toHashCode();
     }
 
 }

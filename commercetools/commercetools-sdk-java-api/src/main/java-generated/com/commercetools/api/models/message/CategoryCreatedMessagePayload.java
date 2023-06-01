@@ -1,19 +1,21 @@
-
 package com.commercetools.api.models.message;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
 import com.commercetools.api.models.category.Category;
+import com.commercetools.api.models.message.MessagePayload;
+import com.commercetools.api.models.message.CategoryCreatedMessagePayloadImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Generated after a successful Create Category request.</p>
@@ -26,9 +28,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .category(categoryBuilder -> categoryBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = CategoryCreatedMessagePayloadImpl.class)
 public interface CategoryCreatedMessagePayload extends MessagePayload {
 
@@ -50,16 +55,18 @@ public interface CategoryCreatedMessagePayload extends MessagePayload {
      *  <p>Category that was created.</p>
      * @param category value to be set
      */
-
+    
     public void setCategory(final Category category);
+    
 
     /**
      * factory method
      * @return instance of CategoryCreatedMessagePayload
      */
-    public static CategoryCreatedMessagePayload of() {
+    public static CategoryCreatedMessagePayload of(){
         return new CategoryCreatedMessagePayloadImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy CategoryCreatedMessagePayload
@@ -94,7 +101,7 @@ public interface CategoryCreatedMessagePayload extends MessagePayload {
     public static CategoryCreatedMessagePayloadBuilder builder() {
         return CategoryCreatedMessagePayloadBuilder.of();
     }
-
+    
     /**
      * create builder for CategoryCreatedMessagePayload instance
      * @param template instance with prefilled values for the builder
@@ -103,6 +110,7 @@ public interface CategoryCreatedMessagePayload extends MessagePayload {
     public static CategoryCreatedMessagePayloadBuilder builder(final CategoryCreatedMessagePayload template) {
         return CategoryCreatedMessagePayloadBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -113,7 +121,7 @@ public interface CategoryCreatedMessagePayload extends MessagePayload {
     default <T> T withCategoryCreatedMessagePayload(Function<CategoryCreatedMessagePayload, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

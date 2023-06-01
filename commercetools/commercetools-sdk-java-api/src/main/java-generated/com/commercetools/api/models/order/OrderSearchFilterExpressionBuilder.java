@@ -1,9 +1,12 @@
-
 package com.commercetools.api.models.order;
 
+import com.commercetools.api.models.order.OrderSearchCompoundExpression;
+import com.commercetools.api.models.order.OrderSearchQueryExpression;
+import com.commercetools.api.models.order.OrderSearchFilterExpression;
+import javax.annotation.Nullable;
 import java.util.*;
 import java.util.function.Function;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -17,11 +20,16 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .plusFilter(filterBuilder -> filterBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class OrderSearchFilterExpressionBuilder implements Builder<OrderSearchFilterExpression> {
 
+    
+    
     private java.util.List<com.commercetools.api.models.order.OrderSearchQueryExpression> filter;
 
     /**
@@ -29,98 +37,93 @@ public class OrderSearchFilterExpressionBuilder implements Builder<OrderSearchFi
      * @param filter value to be set
      * @return Builder
      */
-
-    public OrderSearchFilterExpressionBuilder filter(
-            final com.commercetools.api.models.order.OrderSearchQueryExpression... filter) {
+    
+    public OrderSearchFilterExpressionBuilder filter( final com.commercetools.api.models.order.OrderSearchQueryExpression ...filter) {
         this.filter = new ArrayList<>(Arrays.asList(filter));
         return this;
     }
-
+    
     /**
      * set value to the filter
      * @param filter value to be set
      * @return Builder
      */
-
-    public OrderSearchFilterExpressionBuilder filter(
-            final java.util.List<com.commercetools.api.models.order.OrderSearchQueryExpression> filter) {
+    
+    public OrderSearchFilterExpressionBuilder filter( final java.util.List<com.commercetools.api.models.order.OrderSearchQueryExpression> filter) {
         this.filter = filter;
         return this;
     }
-
+    
     /**
      * add values to the filter
      * @param filter value to be set
      * @return Builder
      */
-
-    public OrderSearchFilterExpressionBuilder plusFilter(
-            final com.commercetools.api.models.order.OrderSearchQueryExpression... filter) {
+    
+    public OrderSearchFilterExpressionBuilder plusFilter( final com.commercetools.api.models.order.OrderSearchQueryExpression ...filter) {
         if (this.filter == null) {
             this.filter = new ArrayList<>();
         }
         this.filter.addAll(Arrays.asList(filter));
         return this;
     }
-
+    
+    
+    
     /**
      * add the value to the filter using the builder function
      * @param builder function to build the filter value
      * @return Builder
      */
-
-    public OrderSearchFilterExpressionBuilder plusFilter(
-            Function<com.commercetools.api.models.order.OrderSearchQueryExpressionBuilder, com.commercetools.api.models.order.OrderSearchQueryExpressionBuilder> builder) {
+    
+    public OrderSearchFilterExpressionBuilder plusFilter(Function<com.commercetools.api.models.order.OrderSearchQueryExpressionBuilder, com.commercetools.api.models.order.OrderSearchQueryExpressionBuilder> builder) {
         if (this.filter == null) {
             this.filter = new ArrayList<>();
         }
-        this.filter
-                .add(builder.apply(com.commercetools.api.models.order.OrderSearchQueryExpressionBuilder.of()).build());
+        this.filter.add(builder.apply(com.commercetools.api.models.order.OrderSearchQueryExpressionBuilder.of()).build());
         return this;
     }
-
+    
     /**
      * set the value to the filter using the builder function
      * @param builder function to build the filter value
      * @return Builder
      */
-
-    public OrderSearchFilterExpressionBuilder withFilter(
-            Function<com.commercetools.api.models.order.OrderSearchQueryExpressionBuilder, com.commercetools.api.models.order.OrderSearchQueryExpressionBuilder> builder) {
+    
+    public OrderSearchFilterExpressionBuilder withFilter(Function<com.commercetools.api.models.order.OrderSearchQueryExpressionBuilder, com.commercetools.api.models.order.OrderSearchQueryExpressionBuilder> builder) {
         this.filter = new ArrayList<>();
-        this.filter
-                .add(builder.apply(com.commercetools.api.models.order.OrderSearchQueryExpressionBuilder.of()).build());
+        this.filter.add(builder.apply(com.commercetools.api.models.order.OrderSearchQueryExpressionBuilder.of()).build());
         return this;
     }
-
+    
     /**
      * add the value to the filter using the builder function
      * @param builder function to build the filter value
      * @return Builder
      */
-
-    public OrderSearchFilterExpressionBuilder addFilter(
-            Function<com.commercetools.api.models.order.OrderSearchQueryExpressionBuilder, com.commercetools.api.models.order.OrderSearchQueryExpression> builder) {
+    
+    public OrderSearchFilterExpressionBuilder addFilter(Function<com.commercetools.api.models.order.OrderSearchQueryExpressionBuilder, com.commercetools.api.models.order.OrderSearchQueryExpression> builder) {
         return plusFilter(builder.apply(com.commercetools.api.models.order.OrderSearchQueryExpressionBuilder.of()));
     }
-
+    
     /**
      * set the value to the filter using the builder function
      * @param builder function to build the filter value
      * @return Builder
      */
-
-    public OrderSearchFilterExpressionBuilder setFilter(
-            Function<com.commercetools.api.models.order.OrderSearchQueryExpressionBuilder, com.commercetools.api.models.order.OrderSearchQueryExpression> builder) {
+    
+    public OrderSearchFilterExpressionBuilder setFilter(Function<com.commercetools.api.models.order.OrderSearchQueryExpressionBuilder, com.commercetools.api.models.order.OrderSearchQueryExpression> builder) {
         return filter(builder.apply(com.commercetools.api.models.order.OrderSearchQueryExpressionBuilder.of()));
     }
+                    
 
     /**
      * value of filter}
      * @return filter
      */
-
-    public java.util.List<com.commercetools.api.models.order.OrderSearchQueryExpression> getFilter() {
+    
+    
+    public java.util.List<com.commercetools.api.models.order.OrderSearchQueryExpression> getFilter(){
         return this.filter;
     }
 
@@ -132,7 +135,7 @@ public class OrderSearchFilterExpressionBuilder implements Builder<OrderSearchFi
         Objects.requireNonNull(filter, OrderSearchFilterExpression.class + ": filter is missing");
         return new OrderSearchFilterExpressionImpl(filter);
     }
-
+    
     /**
      * builds OrderSearchFilterExpression without checking for non-null required values
      * @return OrderSearchFilterExpression
@@ -143,7 +146,7 @@ public class OrderSearchFilterExpressionBuilder implements Builder<OrderSearchFi
 
     /**
      * factory method for an instance of OrderSearchFilterExpressionBuilder
-     * @return builder
+     * @return builder 
      */
     public static OrderSearchFilterExpressionBuilder of() {
         return new OrderSearchFilterExpressionBuilder();

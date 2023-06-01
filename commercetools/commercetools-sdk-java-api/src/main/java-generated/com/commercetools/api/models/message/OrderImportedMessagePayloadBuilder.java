@@ -1,9 +1,12 @@
-
 package com.commercetools.api.models.message;
 
+import com.commercetools.api.models.message.OrderMessagePayload;
+import com.commercetools.api.models.order.Order;
+import com.commercetools.api.models.message.OrderImportedMessagePayload;
+import javax.annotation.Nullable;
 import java.util.*;
 import java.util.function.Function;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -17,54 +20,61 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .order(orderBuilder -> orderBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class OrderImportedMessagePayloadBuilder implements Builder<OrderImportedMessagePayload> {
 
+    
+    
     private com.commercetools.api.models.order.Order order;
 
+    
     /**
      *  <p>Order that was imported.</p>
      * @param builder function to build the order value
      * @return Builder
      */
-
-    public OrderImportedMessagePayloadBuilder order(
-            Function<com.commercetools.api.models.order.OrderBuilder, com.commercetools.api.models.order.OrderBuilder> builder) {
+    
+    public OrderImportedMessagePayloadBuilder order(Function<com.commercetools.api.models.order.OrderBuilder, com.commercetools.api.models.order.OrderBuilder> builder) {
         this.order = builder.apply(com.commercetools.api.models.order.OrderBuilder.of()).build();
         return this;
     }
-
+    
     /**
      *  <p>Order that was imported.</p>
      * @param builder function to build the order value
      * @return Builder
      */
-
-    public OrderImportedMessagePayloadBuilder withOrder(
-            Function<com.commercetools.api.models.order.OrderBuilder, com.commercetools.api.models.order.Order> builder) {
+    
+    public OrderImportedMessagePayloadBuilder withOrder(Function<com.commercetools.api.models.order.OrderBuilder, com.commercetools.api.models.order.Order> builder) {
         this.order = builder.apply(com.commercetools.api.models.order.OrderBuilder.of());
         return this;
     }
-
+                    
     /**
      *  <p>Order that was imported.</p>
      * @param order value to be set
      * @return Builder
      */
-
-    public OrderImportedMessagePayloadBuilder order(final com.commercetools.api.models.order.Order order) {
+    
+    public OrderImportedMessagePayloadBuilder order( final com.commercetools.api.models.order.Order order) {
         this.order = order;
         return this;
     }
+    
+    
 
     /**
      *  <p>Order that was imported.</p>
      * @return order
      */
-
-    public com.commercetools.api.models.order.Order getOrder() {
+    
+    
+    public com.commercetools.api.models.order.Order getOrder(){
         return this.order;
     }
 
@@ -76,7 +86,7 @@ public class OrderImportedMessagePayloadBuilder implements Builder<OrderImported
         Objects.requireNonNull(order, OrderImportedMessagePayload.class + ": order is missing");
         return new OrderImportedMessagePayloadImpl(order);
     }
-
+    
     /**
      * builds OrderImportedMessagePayload without checking for non-null required values
      * @return OrderImportedMessagePayload
@@ -87,7 +97,7 @@ public class OrderImportedMessagePayloadBuilder implements Builder<OrderImported
 
     /**
      * factory method for an instance of OrderImportedMessagePayloadBuilder
-     * @return builder
+     * @return builder 
      */
     public static OrderImportedMessagePayloadBuilder of() {
         return new OrderImportedMessagePayloadBuilder();

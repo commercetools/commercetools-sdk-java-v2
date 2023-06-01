@@ -1,19 +1,21 @@
-
 package com.commercetools.api.models.customer;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
 import com.commercetools.api.models.cart.CartResourceIdentifier;
+import com.commercetools.api.models.customer.AnonymousCartSignInMode;
+import com.commercetools.api.models.customer.CustomerSigninImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * CustomerSignin
@@ -27,11 +29,15 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .password("{password}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = CustomerSigninImpl.class)
-public interface CustomerSignin {
+public interface CustomerSignin  {
+
 
     /**
      *  <p>Email address of the Customer treated as case-insensitive.</p>
@@ -40,7 +46,6 @@ public interface CustomerSignin {
     @NotNull
     @JsonProperty("email")
     public String getEmail();
-
     /**
      *  <p>Password of the Customer.</p>
      * @return password
@@ -48,7 +53,6 @@ public interface CustomerSignin {
     @NotNull
     @JsonProperty("password")
     public String getPassword();
-
     /**
      *  <p>Deprecated since it is now possible to identify an anonymous cart by using its <code>id</code> or external <code>key</code>.</p>
      * @return anonymousCartId
@@ -56,7 +60,6 @@ public interface CustomerSignin {
     @Deprecated
     @JsonProperty("anonymousCartId")
     public String getAnonymousCartId();
-
     /**
      *  <p>Identifies a Cart that will be assigned to the Customer.</p>
      * @return anonymousCart
@@ -64,7 +67,6 @@ public interface CustomerSignin {
     @Valid
     @JsonProperty("anonymousCart")
     public CartResourceIdentifier getAnonymousCart();
-
     /**
      *  <ul>
      *   <li>Set to <code>MergeWithExistingCustomerCart</code> if LineItems of the anonymous Cart should be merged with the active Customer Cart that has been modified most recently.</li>
@@ -72,18 +74,16 @@ public interface CustomerSignin {
      *  </ul>
      * @return anonymousCartSignInMode
      */
-
+    
     @JsonProperty("anonymousCartSignInMode")
     public AnonymousCartSignInMode getAnonymousCartSignInMode();
-
     /**
      *  <p>If both <code>anonymousCart</code> and <code>anonymousId</code> are provided, the <code>anonymousId</code> on the CustomerSignin must match that of the anonymous Cart. Otherwise a 400 Bad Request <code>Invalid Operation</code> error is returned with the message: "Cart with the ID cart-id does not have the expected anonymousId.".</p>
      * @return anonymousId
      */
-
+    
     @JsonProperty("anonymousId")
     public String getAnonymousId();
-
     /**
      *  <ul>
      *   <li>If <code>true</code>, the LineItem Product data (<code>name</code>, <code>variant</code>, and <code>productType</code>) of the returned Cart will be updated.</li>
@@ -91,7 +91,7 @@ public interface CustomerSignin {
      *  </ul>
      * @return updateProductData
      */
-
+    
     @JsonProperty("updateProductData")
     public Boolean getUpdateProductData();
 
@@ -99,30 +99,34 @@ public interface CustomerSignin {
      *  <p>Email address of the Customer treated as case-insensitive.</p>
      * @param email value to be set
      */
-
+    
     public void setEmail(final String email);
-
+    
+    
     /**
      *  <p>Password of the Customer.</p>
      * @param password value to be set
      */
-
+    
     public void setPassword(final String password);
-
+    
+    
     /**
      *  <p>Deprecated since it is now possible to identify an anonymous cart by using its <code>id</code> or external <code>key</code>.</p>
      * @param anonymousCartId value to be set
      */
     @Deprecated
     public void setAnonymousCartId(final String anonymousCartId);
-
+    
+    
     /**
      *  <p>Identifies a Cart that will be assigned to the Customer.</p>
      * @param anonymousCart value to be set
      */
-
+    
     public void setAnonymousCart(final CartResourceIdentifier anonymousCart);
-
+    
+    
     /**
      *  <ul>
      *   <li>Set to <code>MergeWithExistingCustomerCart</code> if LineItems of the anonymous Cart should be merged with the active Customer Cart that has been modified most recently.</li>
@@ -130,16 +134,18 @@ public interface CustomerSignin {
      *  </ul>
      * @param anonymousCartSignInMode value to be set
      */
-
+    
     public void setAnonymousCartSignInMode(final AnonymousCartSignInMode anonymousCartSignInMode);
-
+    
+    
     /**
      *  <p>If both <code>anonymousCart</code> and <code>anonymousId</code> are provided, the <code>anonymousId</code> on the CustomerSignin must match that of the anonymous Cart. Otherwise a 400 Bad Request <code>Invalid Operation</code> error is returned with the message: "Cart with the ID cart-id does not have the expected anonymousId.".</p>
      * @param anonymousId value to be set
      */
-
+    
     public void setAnonymousId(final String anonymousId);
-
+    
+    
     /**
      *  <ul>
      *   <li>If <code>true</code>, the LineItem Product data (<code>name</code>, <code>variant</code>, and <code>productType</code>) of the returned Cart will be updated.</li>
@@ -147,16 +153,18 @@ public interface CustomerSignin {
      *  </ul>
      * @param updateProductData value to be set
      */
-
+    
     public void setUpdateProductData(final Boolean updateProductData);
+    
 
     /**
      * factory method
      * @return instance of CustomerSignin
      */
-    public static CustomerSignin of() {
+    public static CustomerSignin of(){
         return new CustomerSigninImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy CustomerSignin
@@ -189,8 +197,7 @@ public interface CustomerSignin {
         instance.setEmail(template.getEmail());
         instance.setPassword(template.getPassword());
         instance.setAnonymousCartId(template.getAnonymousCartId());
-        instance.setAnonymousCart(
-            com.commercetools.api.models.cart.CartResourceIdentifier.deepCopy(template.getAnonymousCart()));
+        instance.setAnonymousCart(com.commercetools.api.models.cart.CartResourceIdentifier.deepCopy(template.getAnonymousCart()));
         instance.setAnonymousCartSignInMode(template.getAnonymousCartSignInMode());
         instance.setAnonymousId(template.getAnonymousId());
         instance.setUpdateProductData(template.getUpdateProductData());
@@ -204,7 +211,7 @@ public interface CustomerSignin {
     public static CustomerSigninBuilder builder() {
         return CustomerSigninBuilder.of();
     }
-
+    
     /**
      * create builder for CustomerSignin instance
      * @param template instance with prefilled values for the builder
@@ -213,6 +220,7 @@ public interface CustomerSignin {
     public static CustomerSigninBuilder builder(final CustomerSignin template) {
         return CustomerSigninBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -223,7 +231,7 @@ public interface CustomerSignin {
     default <T> T withCustomerSignin(Function<CustomerSignin, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

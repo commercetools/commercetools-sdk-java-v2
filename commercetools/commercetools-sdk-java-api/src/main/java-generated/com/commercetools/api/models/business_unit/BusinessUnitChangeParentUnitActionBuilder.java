@@ -1,9 +1,12 @@
-
 package com.commercetools.api.models.business_unit;
 
+import com.commercetools.api.models.business_unit.BusinessUnitResourceIdentifier;
+import com.commercetools.api.models.business_unit.BusinessUnitUpdateAction;
+import com.commercetools.api.models.business_unit.BusinessUnitChangeParentUnitAction;
+import javax.annotation.Nullable;
 import java.util.*;
 import java.util.function.Function;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -17,58 +20,61 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .parentUnit(parentUnitBuilder -> parentUnitBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class BusinessUnitChangeParentUnitActionBuilder implements Builder<BusinessUnitChangeParentUnitAction> {
 
+    
+    
     private com.commercetools.api.models.business_unit.BusinessUnitResourceIdentifier parentUnit;
 
+    
     /**
      *  <p>New parent unit of the Business Unit.</p>
      * @param builder function to build the parentUnit value
      * @return Builder
      */
-
-    public BusinessUnitChangeParentUnitActionBuilder parentUnit(
-            Function<com.commercetools.api.models.business_unit.BusinessUnitResourceIdentifierBuilder, com.commercetools.api.models.business_unit.BusinessUnitResourceIdentifierBuilder> builder) {
-        this.parentUnit = builder
-                .apply(com.commercetools.api.models.business_unit.BusinessUnitResourceIdentifierBuilder.of())
-                .build();
+    
+    public BusinessUnitChangeParentUnitActionBuilder parentUnit(Function<com.commercetools.api.models.business_unit.BusinessUnitResourceIdentifierBuilder, com.commercetools.api.models.business_unit.BusinessUnitResourceIdentifierBuilder> builder) {
+        this.parentUnit = builder.apply(com.commercetools.api.models.business_unit.BusinessUnitResourceIdentifierBuilder.of()).build();
         return this;
     }
-
+    
     /**
      *  <p>New parent unit of the Business Unit.</p>
      * @param builder function to build the parentUnit value
      * @return Builder
      */
-
-    public BusinessUnitChangeParentUnitActionBuilder withParentUnit(
-            Function<com.commercetools.api.models.business_unit.BusinessUnitResourceIdentifierBuilder, com.commercetools.api.models.business_unit.BusinessUnitResourceIdentifier> builder) {
-        this.parentUnit = builder
-                .apply(com.commercetools.api.models.business_unit.BusinessUnitResourceIdentifierBuilder.of());
+    
+    public BusinessUnitChangeParentUnitActionBuilder withParentUnit(Function<com.commercetools.api.models.business_unit.BusinessUnitResourceIdentifierBuilder, com.commercetools.api.models.business_unit.BusinessUnitResourceIdentifier> builder) {
+        this.parentUnit = builder.apply(com.commercetools.api.models.business_unit.BusinessUnitResourceIdentifierBuilder.of());
         return this;
     }
-
+                    
     /**
      *  <p>New parent unit of the Business Unit.</p>
      * @param parentUnit value to be set
      * @return Builder
      */
-
-    public BusinessUnitChangeParentUnitActionBuilder parentUnit(
-            final com.commercetools.api.models.business_unit.BusinessUnitResourceIdentifier parentUnit) {
+    
+    public BusinessUnitChangeParentUnitActionBuilder parentUnit( final com.commercetools.api.models.business_unit.BusinessUnitResourceIdentifier parentUnit) {
         this.parentUnit = parentUnit;
         return this;
     }
+    
+    
 
     /**
      *  <p>New parent unit of the Business Unit.</p>
      * @return parentUnit
      */
-
-    public com.commercetools.api.models.business_unit.BusinessUnitResourceIdentifier getParentUnit() {
+    
+    
+    public com.commercetools.api.models.business_unit.BusinessUnitResourceIdentifier getParentUnit(){
         return this.parentUnit;
     }
 
@@ -80,7 +86,7 @@ public class BusinessUnitChangeParentUnitActionBuilder implements Builder<Busine
         Objects.requireNonNull(parentUnit, BusinessUnitChangeParentUnitAction.class + ": parentUnit is missing");
         return new BusinessUnitChangeParentUnitActionImpl(parentUnit);
     }
-
+    
     /**
      * builds BusinessUnitChangeParentUnitAction without checking for non-null required values
      * @return BusinessUnitChangeParentUnitAction
@@ -91,7 +97,7 @@ public class BusinessUnitChangeParentUnitActionBuilder implements Builder<Busine
 
     /**
      * factory method for an instance of BusinessUnitChangeParentUnitActionBuilder
-     * @return builder
+     * @return builder 
      */
     public static BusinessUnitChangeParentUnitActionBuilder of() {
         return new BusinessUnitChangeParentUnitActionBuilder();

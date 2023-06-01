@@ -1,25 +1,27 @@
-
 package com.commercetools.history.models.common;
-
-import java.util.Arrays;
-import java.util.Optional;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-
+import java.lang.String;
+import java.util.Arrays;
+import java.util.Optional;
 import io.vrap.rmf.base.client.JsonEnum;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
  * StateRole
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public interface StateRole extends JsonEnum {
 
+    
     StateRole REVIEW_INCLUDED_IN_STATISTICS = StateRoleEnum.REVIEW_INCLUDED_IN_STATISTICS;
-
+    
     StateRole RETURN = StateRoleEnum.RETURN;
-
+    
     /**
      * possible values of StateRole
      */
@@ -28,7 +30,7 @@ public interface StateRole extends JsonEnum {
          * ReviewIncludedInStatistics
          */
         REVIEW_INCLUDED_IN_STATISTICS("ReviewIncludedInStatistics"),
-
+        
         /**
          * Return
          */
@@ -85,7 +87,7 @@ public interface StateRole extends JsonEnum {
             public String name() {
                 return value.toUpperCase();
             }
-
+            
             public String toString() {
                 return value;
             }
@@ -100,7 +102,7 @@ public interface StateRole extends JsonEnum {
     public static Optional<StateRole> findEnumViaJsonName(String jsonName) {
         return Arrays.stream(values()).filter(t -> t.getJsonName().equals(jsonName)).findFirst();
     }
-
+    
     /**
      * possible enum values
      * @return array of possible enum values
@@ -108,5 +110,5 @@ public interface StateRole extends JsonEnum {
     public static StateRole[] values() {
         return StateRoleEnum.values();
     }
-
+    
 }

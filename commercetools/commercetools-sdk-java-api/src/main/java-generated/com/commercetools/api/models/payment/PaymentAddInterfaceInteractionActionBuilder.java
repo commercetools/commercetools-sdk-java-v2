@@ -1,11 +1,13 @@
-
 package com.commercetools.api.models.payment;
 
+import com.commercetools.api.models.payment.PaymentUpdateAction;
+import com.commercetools.api.models.type.FieldContainer;
+import com.commercetools.api.models.type.TypeResourceIdentifier;
+import com.commercetools.api.models.payment.PaymentAddInterfaceInteractionAction;
+import javax.annotation.Nullable;
 import java.util.*;
 import java.util.function.Function;
-
-import javax.annotation.Nullable;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -19,104 +21,111 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .type(typeBuilder -> typeBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class PaymentAddInterfaceInteractionActionBuilder implements Builder<PaymentAddInterfaceInteractionAction> {
 
+    
+    
     private com.commercetools.api.models.type.TypeResourceIdentifier type;
-
+    
+    
     @Nullable
     private com.commercetools.api.models.type.FieldContainer fields;
 
+    
     /**
      *  <p>ResourceIdentifier of a Type.</p>
      * @param builder function to build the type value
      * @return Builder
      */
-
-    public PaymentAddInterfaceInteractionActionBuilder type(
-            Function<com.commercetools.api.models.type.TypeResourceIdentifierBuilder, com.commercetools.api.models.type.TypeResourceIdentifierBuilder> builder) {
+    
+    public PaymentAddInterfaceInteractionActionBuilder type(Function<com.commercetools.api.models.type.TypeResourceIdentifierBuilder, com.commercetools.api.models.type.TypeResourceIdentifierBuilder> builder) {
         this.type = builder.apply(com.commercetools.api.models.type.TypeResourceIdentifierBuilder.of()).build();
         return this;
     }
-
+    
     /**
      *  <p>ResourceIdentifier of a Type.</p>
      * @param builder function to build the type value
      * @return Builder
      */
-
-    public PaymentAddInterfaceInteractionActionBuilder withType(
-            Function<com.commercetools.api.models.type.TypeResourceIdentifierBuilder, com.commercetools.api.models.type.TypeResourceIdentifier> builder) {
+    
+    public PaymentAddInterfaceInteractionActionBuilder withType(Function<com.commercetools.api.models.type.TypeResourceIdentifierBuilder, com.commercetools.api.models.type.TypeResourceIdentifier> builder) {
         this.type = builder.apply(com.commercetools.api.models.type.TypeResourceIdentifierBuilder.of());
         return this;
     }
-
+                    
     /**
      *  <p>ResourceIdentifier of a Type.</p>
      * @param type value to be set
      * @return Builder
      */
-
-    public PaymentAddInterfaceInteractionActionBuilder type(
-            final com.commercetools.api.models.type.TypeResourceIdentifier type) {
+    
+    public PaymentAddInterfaceInteractionActionBuilder type( final com.commercetools.api.models.type.TypeResourceIdentifier type) {
         this.type = type;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Custom Fields as per FieldDefinitions of the Type.</p>
      * @param builder function to build the fields value
      * @return Builder
      */
-
-    public PaymentAddInterfaceInteractionActionBuilder fields(
-            Function<com.commercetools.api.models.type.FieldContainerBuilder, com.commercetools.api.models.type.FieldContainerBuilder> builder) {
+    
+    public PaymentAddInterfaceInteractionActionBuilder fields(Function<com.commercetools.api.models.type.FieldContainerBuilder, com.commercetools.api.models.type.FieldContainerBuilder> builder) {
         this.fields = builder.apply(com.commercetools.api.models.type.FieldContainerBuilder.of()).build();
         return this;
     }
-
+    
     /**
      *  <p>Custom Fields as per FieldDefinitions of the Type.</p>
      * @param builder function to build the fields value
      * @return Builder
      */
-
-    public PaymentAddInterfaceInteractionActionBuilder withFields(
-            Function<com.commercetools.api.models.type.FieldContainerBuilder, com.commercetools.api.models.type.FieldContainer> builder) {
+    
+    public PaymentAddInterfaceInteractionActionBuilder withFields(Function<com.commercetools.api.models.type.FieldContainerBuilder, com.commercetools.api.models.type.FieldContainer> builder) {
         this.fields = builder.apply(com.commercetools.api.models.type.FieldContainerBuilder.of());
         return this;
     }
-
+                    
     /**
      *  <p>Custom Fields as per FieldDefinitions of the Type.</p>
      * @param fields value to be set
      * @return Builder
      */
-
-    public PaymentAddInterfaceInteractionActionBuilder fields(
-            @Nullable final com.commercetools.api.models.type.FieldContainer fields) {
+    
+    public PaymentAddInterfaceInteractionActionBuilder fields(@Nullable final com.commercetools.api.models.type.FieldContainer fields) {
         this.fields = fields;
         return this;
     }
+    
+    
 
     /**
      *  <p>ResourceIdentifier of a Type.</p>
      * @return type
      */
-
-    public com.commercetools.api.models.type.TypeResourceIdentifier getType() {
+    
+    
+    public com.commercetools.api.models.type.TypeResourceIdentifier getType(){
         return this.type;
     }
-
+    
     /**
      *  <p>Custom Fields as per FieldDefinitions of the Type.</p>
      * @return fields
      */
-
+    
     @Nullable
-    public com.commercetools.api.models.type.FieldContainer getFields() {
+    public com.commercetools.api.models.type.FieldContainer getFields(){
         return this.fields;
     }
 
@@ -128,7 +137,7 @@ public class PaymentAddInterfaceInteractionActionBuilder implements Builder<Paym
         Objects.requireNonNull(type, PaymentAddInterfaceInteractionAction.class + ": type is missing");
         return new PaymentAddInterfaceInteractionActionImpl(type, fields);
     }
-
+    
     /**
      * builds PaymentAddInterfaceInteractionAction without checking for non-null required values
      * @return PaymentAddInterfaceInteractionAction
@@ -139,7 +148,7 @@ public class PaymentAddInterfaceInteractionActionBuilder implements Builder<Paym
 
     /**
      * factory method for an instance of PaymentAddInterfaceInteractionActionBuilder
-     * @return builder
+     * @return builder 
      */
     public static PaymentAddInterfaceInteractionActionBuilder of() {
         return new PaymentAddInterfaceInteractionActionBuilder();

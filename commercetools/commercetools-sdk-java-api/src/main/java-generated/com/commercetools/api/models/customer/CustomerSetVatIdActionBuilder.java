@@ -1,10 +1,11 @@
-
 package com.commercetools.api.models.customer;
 
-import java.util.*;
-
+import com.commercetools.api.models.customer.CustomerUpdateAction;
+import com.commercetools.api.models.customer.CustomerSetVatIdAction;
 import javax.annotation.Nullable;
-
+import java.util.*;
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -17,32 +18,39 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     CustomerSetVatIdAction customerSetVatIdAction = CustomerSetVatIdAction.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class CustomerSetVatIdActionBuilder implements Builder<CustomerSetVatIdAction> {
 
+    
     @Nullable
     private String vatId;
 
+    
     /**
      *  <p>Value to set. If empty, any existing value is removed.</p>
      * @param vatId value to be set
      * @return Builder
      */
-
+    
     public CustomerSetVatIdActionBuilder vatId(@Nullable final String vatId) {
         this.vatId = vatId;
         return this;
     }
+    
+    
 
     /**
      *  <p>Value to set. If empty, any existing value is removed.</p>
      * @return vatId
      */
-
+    
     @Nullable
-    public String getVatId() {
+    public String getVatId(){
         return this.vatId;
     }
 
@@ -53,7 +61,7 @@ public class CustomerSetVatIdActionBuilder implements Builder<CustomerSetVatIdAc
     public CustomerSetVatIdAction build() {
         return new CustomerSetVatIdActionImpl(vatId);
     }
-
+    
     /**
      * builds CustomerSetVatIdAction without checking for non-null required values
      * @return CustomerSetVatIdAction
@@ -64,7 +72,7 @@ public class CustomerSetVatIdActionBuilder implements Builder<CustomerSetVatIdAc
 
     /**
      * factory method for an instance of CustomerSetVatIdActionBuilder
-     * @return builder
+     * @return builder 
      */
     public static CustomerSetVatIdActionBuilder of() {
         return new CustomerSetVatIdActionBuilder();

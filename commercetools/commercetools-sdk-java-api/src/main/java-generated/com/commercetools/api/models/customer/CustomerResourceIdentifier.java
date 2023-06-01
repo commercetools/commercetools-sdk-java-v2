@@ -1,17 +1,21 @@
-
 package com.commercetools.api.models.customer;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-
+import com.commercetools.api.models.common.ReferenceTypeId;
 import com.commercetools.api.models.common.ResourceIdentifier;
+import com.commercetools.api.models.customer.CustomerResourceIdentifierImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>ResourceIdentifier to a Customer. Either <code>id</code> or <code>key</code> is required.</p>
@@ -23,12 +27,14 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     CustomerResourceIdentifier customerResourceIdentifier = CustomerResourceIdentifier.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = CustomerResourceIdentifierImpl.class)
-public interface CustomerResourceIdentifier
-        extends ResourceIdentifier, com.commercetools.api.models.Identifiable<Customer> {
+public interface CustomerResourceIdentifier extends ResourceIdentifier, com.commercetools.api.models.Identifiable<Customer> {
 
     /**
      * discriminator value for CustomerResourceIdentifier
@@ -39,15 +45,14 @@ public interface CustomerResourceIdentifier
      *  <p>Unique identifier of the referenced Customer.</p>
      * @return id
      */
-
+    
     @JsonProperty("id")
     public String getId();
-
     /**
      *  <p>User-defined unique identifier of the referenced Customer.</p>
      * @return key
      */
-
+    
     @JsonProperty("key")
     public String getKey();
 
@@ -55,23 +60,26 @@ public interface CustomerResourceIdentifier
      *  <p>Unique identifier of the referenced Customer.</p>
      * @param id value to be set
      */
-
+    
     public void setId(final String id);
-
+    
+    
     /**
      *  <p>User-defined unique identifier of the referenced Customer.</p>
      * @param key value to be set
      */
-
+    
     public void setKey(final String key);
+    
 
     /**
      * factory method
      * @return instance of CustomerResourceIdentifier
      */
-    public static CustomerResourceIdentifier of() {
+    public static CustomerResourceIdentifier of(){
         return new CustomerResourceIdentifierImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy CustomerResourceIdentifier
@@ -108,7 +116,7 @@ public interface CustomerResourceIdentifier
     public static CustomerResourceIdentifierBuilder builder() {
         return CustomerResourceIdentifierBuilder.of();
     }
-
+    
     /**
      * create builder for CustomerResourceIdentifier instance
      * @param template instance with prefilled values for the builder
@@ -117,6 +125,7 @@ public interface CustomerResourceIdentifier
     public static CustomerResourceIdentifierBuilder builder(final CustomerResourceIdentifier template) {
         return CustomerResourceIdentifierBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -127,7 +136,7 @@ public interface CustomerResourceIdentifier
     default <T> T withCustomerResourceIdentifier(Function<CustomerResourceIdentifier, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

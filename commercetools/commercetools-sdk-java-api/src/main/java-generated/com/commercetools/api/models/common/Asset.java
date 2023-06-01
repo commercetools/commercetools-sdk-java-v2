@@ -1,20 +1,22 @@
-
 package com.commercetools.api.models.common;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-import java.util.stream.Collectors;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
+import com.commercetools.api.models.common.AssetSource;
+import com.commercetools.api.models.common.LocalizedString;
 import com.commercetools.api.models.type.CustomFields;
+import com.commercetools.api.models.common.AssetImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * Asset
@@ -29,11 +31,15 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .name(nameBuilder -> nameBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = AssetImpl.class)
 public interface Asset extends com.commercetools.api.models.Customizable<Asset>, com.commercetools.api.models.WithKey {
+
 
     /**
      *  <p>Unique identifier of the Asset.</p>
@@ -42,7 +48,6 @@ public interface Asset extends com.commercetools.api.models.Customizable<Asset>,
     @NotNull
     @JsonProperty("id")
     public String getId();
-
     /**
      *
      * @return sources
@@ -51,7 +56,6 @@ public interface Asset extends com.commercetools.api.models.Customizable<Asset>,
     @Valid
     @JsonProperty("sources")
     public List<AssetSource> getSources();
-
     /**
      *  <p>Name of the Asset.</p>
      * @return name
@@ -60,7 +64,6 @@ public interface Asset extends com.commercetools.api.models.Customizable<Asset>,
     @Valid
     @JsonProperty("name")
     public LocalizedString getName();
-
     /**
      *  <p>Description of the Asset.</p>
      * @return description
@@ -68,15 +71,13 @@ public interface Asset extends com.commercetools.api.models.Customizable<Asset>,
     @Valid
     @JsonProperty("description")
     public LocalizedString getDescription();
-
     /**
      *  <p>Keywords for categorizing and organizing Assets.</p>
      * @return tags
      */
-
+    
     @JsonProperty("tags")
     public List<String> getTags();
-
     /**
      *  <p>Custom Fields defined for the Asset.</p>
      * @return custom
@@ -84,12 +85,11 @@ public interface Asset extends com.commercetools.api.models.Customizable<Asset>,
     @Valid
     @JsonProperty("custom")
     public CustomFields getCustom();
-
     /**
      *  <p>User-defined unique identifier of the Asset.</p>
      * @return key
      */
-
+    
     @JsonProperty("key")
     public String getKey();
 
@@ -97,74 +97,78 @@ public interface Asset extends com.commercetools.api.models.Customizable<Asset>,
      *  <p>Unique identifier of the Asset.</p>
      * @param id value to be set
      */
-
+    
     public void setId(final String id);
-
+    
+    
     /**
      * set sources
      * @param sources values to be set
      */
-
+    
     @JsonIgnore
-    public void setSources(final AssetSource... sources);
-
+    public void setSources(final AssetSource ...sources);
     /**
      * set sources
      * @param sources values to be set
      */
-
+    
     public void setSources(final List<AssetSource> sources);
-
+    
     /**
      *  <p>Name of the Asset.</p>
      * @param name value to be set
      */
-
+    
     public void setName(final LocalizedString name);
-
+    
+    
     /**
      *  <p>Description of the Asset.</p>
      * @param description value to be set
      */
-
+    
     public void setDescription(final LocalizedString description);
-
+    
+    
     /**
      *  <p>Keywords for categorizing and organizing Assets.</p>
      * @param tags values to be set
      */
-
+    
     @JsonIgnore
-    public void setTags(final String... tags);
-
+    public void setTags(final String ...tags);
     /**
      *  <p>Keywords for categorizing and organizing Assets.</p>
      * @param tags values to be set
      */
-
+    
     public void setTags(final List<String> tags);
-
+    
     /**
      *  <p>Custom Fields defined for the Asset.</p>
      * @param custom value to be set
      */
-
+    
     public void setCustom(final CustomFields custom);
-
+    
+    
     /**
      *  <p>User-defined unique identifier of the Asset.</p>
      * @param key value to be set
      */
-
+    
     public void setKey(final String key);
+    
 
     /**
      * factory method
      * @return instance of Asset
      */
-    public static Asset of() {
+    public static Asset of(){
         return new AssetImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy Asset
@@ -196,14 +200,13 @@ public interface Asset extends com.commercetools.api.models.Customizable<Asset>,
         AssetImpl instance = new AssetImpl();
         instance.setId(template.getId());
         instance.setSources(Optional.ofNullable(template.getSources())
-                .map(t -> t.stream()
-                        .map(com.commercetools.api.models.common.AssetSource::deepCopy)
-                        .collect(Collectors.toList()))
+                .map(t -> t.stream().map(com.commercetools.api.models.common.AssetSource::deepCopy).collect(Collectors.toList()))
                 .orElse(null));
         instance.setName(com.commercetools.api.models.common.LocalizedString.deepCopy(template.getName()));
-        instance.setDescription(
-            com.commercetools.api.models.common.LocalizedString.deepCopy(template.getDescription()));
-        instance.setTags(Optional.ofNullable(template.getTags()).map(ArrayList::new).orElse(null));
+        instance.setDescription(com.commercetools.api.models.common.LocalizedString.deepCopy(template.getDescription()));
+        instance.setTags(Optional.ofNullable(template.getTags())
+                .map(ArrayList::new)
+                .orElse(null));
         instance.setCustom(com.commercetools.api.models.type.CustomFields.deepCopy(template.getCustom()));
         instance.setKey(template.getKey());
         return instance;
@@ -216,7 +219,7 @@ public interface Asset extends com.commercetools.api.models.Customizable<Asset>,
     public static AssetBuilder builder() {
         return AssetBuilder.of();
     }
-
+    
     /**
      * create builder for Asset instance
      * @param template instance with prefilled values for the builder
@@ -225,6 +228,7 @@ public interface Asset extends com.commercetools.api.models.Customizable<Asset>,
     public static AssetBuilder builder(final Asset template) {
         return AssetBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -235,7 +239,7 @@ public interface Asset extends com.commercetools.api.models.Customizable<Asset>,
     default <T> T withAsset(Function<Asset, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

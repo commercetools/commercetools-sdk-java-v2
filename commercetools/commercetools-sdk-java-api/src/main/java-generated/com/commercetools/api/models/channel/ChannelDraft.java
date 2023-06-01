@@ -1,22 +1,24 @@
-
 package com.commercetools.api.models.channel;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
+import com.commercetools.api.models.channel.ChannelRoleEnum;
 import com.commercetools.api.models.common.BaseAddress;
 import com.commercetools.api.models.common.GeoJson;
 import com.commercetools.api.models.common.LocalizedString;
 import com.commercetools.api.models.type.CustomFieldsDraft;
+import com.commercetools.api.models.channel.ChannelDraftImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * ChannelDraft
@@ -29,12 +31,15 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .key("{key}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = ChannelDraftImpl.class)
-public interface ChannelDraft extends com.commercetools.api.models.CustomizableDraft<ChannelDraft>,
-        com.commercetools.api.models.WithKey, io.vrap.rmf.base.client.Draft<ChannelDraft> {
+public interface ChannelDraft extends com.commercetools.api.models.CustomizableDraft<ChannelDraft>, com.commercetools.api.models.WithKey, io.vrap.rmf.base.client.Draft<ChannelDraft> {
+
 
     /**
      *  <p>User-defined unique identifier for the Channel.</p>
@@ -43,15 +48,13 @@ public interface ChannelDraft extends com.commercetools.api.models.CustomizableD
     @NotNull
     @JsonProperty("key")
     public String getKey();
-
     /**
      *  <p>Roles of the Channel. Each channel must have at least one role. If not specified, then <code>InventorySupply</code> is assigned by default.</p>
      * @return roles
      */
-
+    
     @JsonProperty("roles")
     public List<ChannelRoleEnum> getRoles();
-
     /**
      *  <p>Name of the Channel.</p>
      * @return name
@@ -59,7 +62,6 @@ public interface ChannelDraft extends com.commercetools.api.models.CustomizableD
     @Valid
     @JsonProperty("name")
     public LocalizedString getName();
-
     /**
      *  <p>Description of the Channel.</p>
      * @return description
@@ -67,7 +69,6 @@ public interface ChannelDraft extends com.commercetools.api.models.CustomizableD
     @Valid
     @JsonProperty("description")
     public LocalizedString getDescription();
-
     /**
      *  <p>Address where the Channel is located.</p>
      * @return address
@@ -75,7 +76,6 @@ public interface ChannelDraft extends com.commercetools.api.models.CustomizableD
     @Valid
     @JsonProperty("address")
     public BaseAddress getAddress();
-
     /**
      *  <p>Custom fields defined for the Channel.</p>
      * @return custom
@@ -83,7 +83,6 @@ public interface ChannelDraft extends com.commercetools.api.models.CustomizableD
     @Valid
     @JsonProperty("custom")
     public CustomFieldsDraft getCustom();
-
     /**
      *  <p>GeoJSON geometry object encoding the geo location of the Channel. Currently, only the Point type is supported.</p>
      * @return geoLocation
@@ -96,66 +95,72 @@ public interface ChannelDraft extends com.commercetools.api.models.CustomizableD
      *  <p>User-defined unique identifier for the Channel.</p>
      * @param key value to be set
      */
-
+    
     public void setKey(final String key);
-
+    
+    
     /**
      *  <p>Roles of the Channel. Each channel must have at least one role. If not specified, then <code>InventorySupply</code> is assigned by default.</p>
      * @param roles values to be set
      */
-
+    
     @JsonIgnore
-    public void setRoles(final ChannelRoleEnum... roles);
-
+    public void setRoles(final ChannelRoleEnum ...roles);
     /**
      *  <p>Roles of the Channel. Each channel must have at least one role. If not specified, then <code>InventorySupply</code> is assigned by default.</p>
      * @param roles values to be set
      */
-
+    
     public void setRoles(final List<ChannelRoleEnum> roles);
-
+    
     /**
      *  <p>Name of the Channel.</p>
      * @param name value to be set
      */
-
+    
     public void setName(final LocalizedString name);
-
+    
+    
     /**
      *  <p>Description of the Channel.</p>
      * @param description value to be set
      */
-
+    
     public void setDescription(final LocalizedString description);
-
+    
+    
     /**
      *  <p>Address where the Channel is located.</p>
      * @param address value to be set
      */
-
+    
     public void setAddress(final BaseAddress address);
-
+    
+    
     /**
      *  <p>Custom fields defined for the Channel.</p>
      * @param custom value to be set
      */
-
+    
     public void setCustom(final CustomFieldsDraft custom);
-
+    
+    
     /**
      *  <p>GeoJSON geometry object encoding the geo location of the Channel. Currently, only the Point type is supported.</p>
      * @param geoLocation value to be set
      */
-
+    
     public void setGeoLocation(final GeoJson geoLocation);
+    
 
     /**
      * factory method
      * @return instance of ChannelDraft
      */
-    public static ChannelDraft of() {
+    public static ChannelDraft of(){
         return new ChannelDraftImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy ChannelDraft
@@ -186,10 +191,11 @@ public interface ChannelDraft extends com.commercetools.api.models.CustomizableD
         }
         ChannelDraftImpl instance = new ChannelDraftImpl();
         instance.setKey(template.getKey());
-        instance.setRoles(Optional.ofNullable(template.getRoles()).map(ArrayList::new).orElse(null));
+        instance.setRoles(Optional.ofNullable(template.getRoles())
+                .map(ArrayList::new)
+                .orElse(null));
         instance.setName(com.commercetools.api.models.common.LocalizedString.deepCopy(template.getName()));
-        instance.setDescription(
-            com.commercetools.api.models.common.LocalizedString.deepCopy(template.getDescription()));
+        instance.setDescription(com.commercetools.api.models.common.LocalizedString.deepCopy(template.getDescription()));
         instance.setAddress(com.commercetools.api.models.common.BaseAddress.deepCopy(template.getAddress()));
         instance.setCustom(com.commercetools.api.models.type.CustomFieldsDraft.deepCopy(template.getCustom()));
         instance.setGeoLocation(com.commercetools.api.models.common.GeoJson.deepCopy(template.getGeoLocation()));
@@ -203,7 +209,7 @@ public interface ChannelDraft extends com.commercetools.api.models.CustomizableD
     public static ChannelDraftBuilder builder() {
         return ChannelDraftBuilder.of();
     }
-
+    
     /**
      * create builder for ChannelDraft instance
      * @param template instance with prefilled values for the builder
@@ -212,6 +218,7 @@ public interface ChannelDraft extends com.commercetools.api.models.CustomizableD
     public static ChannelDraftBuilder builder(final ChannelDraft template) {
         return ChannelDraftBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -222,7 +229,7 @@ public interface ChannelDraft extends com.commercetools.api.models.CustomizableD
     default <T> T withChannelDraft(Function<ChannelDraft, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

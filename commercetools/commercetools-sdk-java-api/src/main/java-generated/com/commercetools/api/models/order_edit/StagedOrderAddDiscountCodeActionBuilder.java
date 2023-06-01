@@ -1,8 +1,11 @@
-
 package com.commercetools.api.models.order_edit;
 
+import com.commercetools.api.models.order.StagedOrderUpdateAction;
+import com.commercetools.api.models.order_edit.StagedOrderAddDiscountCodeAction;
+import javax.annotation.Nullable;
 import java.util.*;
-
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -16,30 +19,39 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .code("{code}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class StagedOrderAddDiscountCodeActionBuilder implements Builder<StagedOrderAddDiscountCodeAction> {
 
+    
+    
     private String code;
 
+    
     /**
      * set the value to the code
      * @param code value to be set
      * @return Builder
      */
-
-    public StagedOrderAddDiscountCodeActionBuilder code(final String code) {
+    
+    public StagedOrderAddDiscountCodeActionBuilder code( final String code) {
         this.code = code;
         return this;
     }
+    
+    
 
     /**
      * value of code}
      * @return code
      */
-
-    public String getCode() {
+    
+    
+    public String getCode(){
         return this.code;
     }
 
@@ -51,7 +63,7 @@ public class StagedOrderAddDiscountCodeActionBuilder implements Builder<StagedOr
         Objects.requireNonNull(code, StagedOrderAddDiscountCodeAction.class + ": code is missing");
         return new StagedOrderAddDiscountCodeActionImpl(code);
     }
-
+    
     /**
      * builds StagedOrderAddDiscountCodeAction without checking for non-null required values
      * @return StagedOrderAddDiscountCodeAction
@@ -62,7 +74,7 @@ public class StagedOrderAddDiscountCodeActionBuilder implements Builder<StagedOr
 
     /**
      * factory method for an instance of StagedOrderAddDiscountCodeActionBuilder
-     * @return builder
+     * @return builder 
      */
     public static StagedOrderAddDiscountCodeActionBuilder of() {
         return new StagedOrderAddDiscountCodeActionBuilder();

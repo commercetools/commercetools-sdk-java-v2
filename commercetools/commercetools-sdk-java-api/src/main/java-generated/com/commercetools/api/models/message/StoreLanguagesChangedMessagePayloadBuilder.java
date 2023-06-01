@@ -1,10 +1,11 @@
-
 package com.commercetools.api.models.message;
 
-import java.util.*;
-
+import com.commercetools.api.models.message.MessagePayload;
+import com.commercetools.api.models.message.StoreLanguagesChangedMessagePayload;
 import javax.annotation.Nullable;
-
+import java.util.*;
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -17,14 +18,19 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     StoreLanguagesChangedMessagePayload storeLanguagesChangedMessagePayload = StoreLanguagesChangedMessagePayload.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class StoreLanguagesChangedMessagePayloadBuilder implements Builder<StoreLanguagesChangedMessagePayload> {
 
+    
     @Nullable
     private java.util.List<String> addedLanguages;
-
+    
+    
     @Nullable
     private java.util.List<String> removedLanguages;
 
@@ -33,92 +39,96 @@ public class StoreLanguagesChangedMessagePayloadBuilder implements Builder<Store
      * @param addedLanguages value to be set
      * @return Builder
      */
-
-    public StoreLanguagesChangedMessagePayloadBuilder addedLanguages(@Nullable final String... addedLanguages) {
+    
+    public StoreLanguagesChangedMessagePayloadBuilder addedLanguages(@Nullable final String ...addedLanguages) {
         this.addedLanguages = new ArrayList<>(Arrays.asList(addedLanguages));
         return this;
     }
-
+    
     /**
      *  <p>Locales added to the Store after the Set Languages update action.</p>
      * @param addedLanguages value to be set
      * @return Builder
      */
-
-    public StoreLanguagesChangedMessagePayloadBuilder addedLanguages(
-            @Nullable final java.util.List<String> addedLanguages) {
+    
+    public StoreLanguagesChangedMessagePayloadBuilder addedLanguages(@Nullable final java.util.List<String> addedLanguages) {
         this.addedLanguages = addedLanguages;
         return this;
     }
-
+    
     /**
      *  <p>Locales added to the Store after the Set Languages update action.</p>
      * @param addedLanguages value to be set
      * @return Builder
      */
-
-    public StoreLanguagesChangedMessagePayloadBuilder plusAddedLanguages(@Nullable final String... addedLanguages) {
+    
+    public StoreLanguagesChangedMessagePayloadBuilder plusAddedLanguages(@Nullable final String ...addedLanguages) {
         if (this.addedLanguages == null) {
             this.addedLanguages = new ArrayList<>();
         }
         this.addedLanguages.addAll(Arrays.asList(addedLanguages));
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Locales removed from the Store during the Set Languages update action.</p>
      * @param removedLanguages value to be set
      * @return Builder
      */
-
-    public StoreLanguagesChangedMessagePayloadBuilder removedLanguages(@Nullable final String... removedLanguages) {
+    
+    public StoreLanguagesChangedMessagePayloadBuilder removedLanguages(@Nullable final String ...removedLanguages) {
         this.removedLanguages = new ArrayList<>(Arrays.asList(removedLanguages));
         return this;
     }
-
+    
     /**
      *  <p>Locales removed from the Store during the Set Languages update action.</p>
      * @param removedLanguages value to be set
      * @return Builder
      */
-
-    public StoreLanguagesChangedMessagePayloadBuilder removedLanguages(
-            @Nullable final java.util.List<String> removedLanguages) {
+    
+    public StoreLanguagesChangedMessagePayloadBuilder removedLanguages(@Nullable final java.util.List<String> removedLanguages) {
         this.removedLanguages = removedLanguages;
         return this;
     }
-
+    
     /**
      *  <p>Locales removed from the Store during the Set Languages update action.</p>
      * @param removedLanguages value to be set
      * @return Builder
      */
-
-    public StoreLanguagesChangedMessagePayloadBuilder plusRemovedLanguages(@Nullable final String... removedLanguages) {
+    
+    public StoreLanguagesChangedMessagePayloadBuilder plusRemovedLanguages(@Nullable final String ...removedLanguages) {
         if (this.removedLanguages == null) {
             this.removedLanguages = new ArrayList<>();
         }
         this.removedLanguages.addAll(Arrays.asList(removedLanguages));
         return this;
     }
+    
+    
+    
 
     /**
      *  <p>Locales added to the Store after the Set Languages update action.</p>
      * @return addedLanguages
      */
-
+    
     @Nullable
-    public java.util.List<String> getAddedLanguages() {
+    public java.util.List<String> getAddedLanguages(){
         return this.addedLanguages;
     }
-
+    
     /**
      *  <p>Locales removed from the Store during the Set Languages update action.</p>
      * @return removedLanguages
      */
-
+    
     @Nullable
-    public java.util.List<String> getRemovedLanguages() {
+    public java.util.List<String> getRemovedLanguages(){
         return this.removedLanguages;
     }
 
@@ -129,7 +139,7 @@ public class StoreLanguagesChangedMessagePayloadBuilder implements Builder<Store
     public StoreLanguagesChangedMessagePayload build() {
         return new StoreLanguagesChangedMessagePayloadImpl(addedLanguages, removedLanguages);
     }
-
+    
     /**
      * builds StoreLanguagesChangedMessagePayload without checking for non-null required values
      * @return StoreLanguagesChangedMessagePayload
@@ -140,7 +150,7 @@ public class StoreLanguagesChangedMessagePayloadBuilder implements Builder<Store
 
     /**
      * factory method for an instance of StoreLanguagesChangedMessagePayloadBuilder
-     * @return builder
+     * @return builder 
      */
     public static StoreLanguagesChangedMessagePayloadBuilder of() {
         return new StoreLanguagesChangedMessagePayloadBuilder();

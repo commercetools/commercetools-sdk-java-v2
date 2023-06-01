@@ -1,16 +1,20 @@
-
 package com.commercetools.importapi.models.errors;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
+import com.commercetools.importapi.models.errors.ErrorObject;
+import com.commercetools.importapi.models.errors.AccessDeniedErrorImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>This is the generic error code for access denied. In case of a wrong scope, an InvalidScopeError will be returned.</p>
@@ -23,9 +27,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .message("{message}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = AccessDeniedErrorImpl.class)
 public interface AccessDeniedError extends ErrorObject {
 
@@ -34,13 +41,16 @@ public interface AccessDeniedError extends ErrorObject {
      */
     String ACCESS_DENIED = "access_denied";
 
+
+
     /**
      * factory method
      * @return instance of AccessDeniedError
      */
-    public static AccessDeniedError of() {
+    public static AccessDeniedError of(){
         return new AccessDeniedErrorImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy AccessDeniedError
@@ -75,7 +85,7 @@ public interface AccessDeniedError extends ErrorObject {
     public static AccessDeniedErrorBuilder builder() {
         return AccessDeniedErrorBuilder.of();
     }
-
+    
     /**
      * create builder for AccessDeniedError instance
      * @param template instance with prefilled values for the builder
@@ -84,6 +94,7 @@ public interface AccessDeniedError extends ErrorObject {
     public static AccessDeniedErrorBuilder builder(final AccessDeniedError template) {
         return AccessDeniedErrorBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -94,7 +105,7 @@ public interface AccessDeniedError extends ErrorObject {
     default <T> T withAccessDeniedError(Function<AccessDeniedError, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

@@ -1,16 +1,17 @@
-
 package com.commercetools.api.client;
 
-import java.util.List;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import java.util.List;
 
 /**
  * LocaleprojectingTrait
  * @param <T> type of extending interface
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
-public interface LocaleprojectingTrait<T extends LocaleprojectingTrait<T>> {
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
+public interface LocaleprojectingTrait<T extends LocaleprojectingTrait<T>>  {
     List<String> getLocaleProjection();
 
     /**
@@ -20,7 +21,7 @@ public interface LocaleprojectingTrait<T extends LocaleprojectingTrait<T>> {
      * @return LocaleprojectingTrait
      */
     <TValue> LocaleprojectingTrait<T> withLocaleProjection(final TValue localeProjection);
-
+    
     /**
      * add additional localeProjection query parameter
      * @param localeProjection value to be added
@@ -29,13 +30,14 @@ public interface LocaleprojectingTrait<T extends LocaleprojectingTrait<T>> {
      */
     <TValue> LocaleprojectingTrait<T> addLocaleProjection(final TValue localeProjection);
 
+    
     default LocaleprojectingTrait<T> asLocaleprojectingTrait() {
         return this;
     }
-
+    
     @SuppressWarnings("unchecked")
     default T asLocaleprojectingTraitToBaseType() {
-        return (T) this;
+        return (T)this;
     }
-
+    
 }

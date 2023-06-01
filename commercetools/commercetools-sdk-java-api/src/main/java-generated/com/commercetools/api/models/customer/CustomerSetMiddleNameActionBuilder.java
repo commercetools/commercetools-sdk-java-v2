@@ -1,10 +1,11 @@
-
 package com.commercetools.api.models.customer;
 
-import java.util.*;
-
+import com.commercetools.api.models.customer.CustomerUpdateAction;
+import com.commercetools.api.models.customer.CustomerSetMiddleNameAction;
 import javax.annotation.Nullable;
-
+import java.util.*;
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -17,32 +18,39 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     CustomerSetMiddleNameAction customerSetMiddleNameAction = CustomerSetMiddleNameAction.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class CustomerSetMiddleNameActionBuilder implements Builder<CustomerSetMiddleNameAction> {
 
+    
     @Nullable
     private String middleName;
 
+    
     /**
      *  <p>Value to set. If empty, any existing value is removed.</p>
      * @param middleName value to be set
      * @return Builder
      */
-
+    
     public CustomerSetMiddleNameActionBuilder middleName(@Nullable final String middleName) {
         this.middleName = middleName;
         return this;
     }
+    
+    
 
     /**
      *  <p>Value to set. If empty, any existing value is removed.</p>
      * @return middleName
      */
-
+    
     @Nullable
-    public String getMiddleName() {
+    public String getMiddleName(){
         return this.middleName;
     }
 
@@ -53,7 +61,7 @@ public class CustomerSetMiddleNameActionBuilder implements Builder<CustomerSetMi
     public CustomerSetMiddleNameAction build() {
         return new CustomerSetMiddleNameActionImpl(middleName);
     }
-
+    
     /**
      * builds CustomerSetMiddleNameAction without checking for non-null required values
      * @return CustomerSetMiddleNameAction
@@ -64,7 +72,7 @@ public class CustomerSetMiddleNameActionBuilder implements Builder<CustomerSetMi
 
     /**
      * factory method for an instance of CustomerSetMiddleNameActionBuilder
-     * @return builder
+     * @return builder 
      */
     public static CustomerSetMiddleNameActionBuilder of() {
         return new CustomerSetMiddleNameActionBuilder();

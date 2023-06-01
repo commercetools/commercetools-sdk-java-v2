@@ -1,79 +1,96 @@
-
 package com.commercetools.api.models.shopping_list;
 
-import java.time.*;
-import java.util.*;
-
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
-
-import io.vrap.rmf.base.client.ModelBase;
+import com.commercetools.api.models.common.BaseResource;
+import com.commercetools.api.models.common.CreatedBy;
+import com.commercetools.api.models.common.LastModifiedBy;
+import com.commercetools.api.models.common.LocalizedString;
+import com.commercetools.api.models.customer.CustomerReference;
+import com.commercetools.api.models.shopping_list.ShoppingListLineItem;
+import com.commercetools.api.models.shopping_list.TextLineItem;
+import com.commercetools.api.models.store.StoreKeyReference;
+import com.commercetools.api.models.type.CustomFields;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.ModelBase;
+import javax.validation.Valid;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.annotation.*;
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
  * ShoppingList
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class ShoppingListImpl implements ShoppingList, ModelBase {
 
+    
     private String id;
-
+    
+    
     private Long version;
-
+    
+    
     private java.time.ZonedDateTime createdAt;
-
+    
+    
     private java.time.ZonedDateTime lastModifiedAt;
-
+    
+    
     private com.commercetools.api.models.common.LocalizedString name;
-
+    
+    
     private String key;
-
+    
+    
     private com.commercetools.api.models.customer.CustomerReference customer;
-
+    
+    
     private com.commercetools.api.models.common.LocalizedString slug;
-
+    
+    
     private com.commercetools.api.models.common.LocalizedString description;
-
+    
+    
     private java.util.List<com.commercetools.api.models.shopping_list.ShoppingListLineItem> lineItems;
-
+    
+    
     private java.util.List<com.commercetools.api.models.shopping_list.TextLineItem> textLineItems;
-
+    
+    
     private Long deleteDaysAfterLastModification;
-
+    
+    
     private String anonymousId;
-
+    
+    
     private com.commercetools.api.models.store.StoreKeyReference store;
-
+    
+    
     private com.commercetools.api.models.type.CustomFields custom;
-
+    
+    
     private com.commercetools.api.models.common.LastModifiedBy lastModifiedBy;
-
+    
+    
     private com.commercetools.api.models.common.CreatedBy createdBy;
 
     /**
      * create instance with all properties
      */
     @JsonCreator
-    ShoppingListImpl(@JsonProperty("id") final String id, @JsonProperty("version") final Long version,
-            @JsonProperty("createdAt") final java.time.ZonedDateTime createdAt,
-            @JsonProperty("lastModifiedAt") final java.time.ZonedDateTime lastModifiedAt,
-            @JsonProperty("name") final com.commercetools.api.models.common.LocalizedString name,
-            @JsonProperty("key") final String key,
-            @JsonProperty("customer") final com.commercetools.api.models.customer.CustomerReference customer,
-            @JsonProperty("slug") final com.commercetools.api.models.common.LocalizedString slug,
-            @JsonProperty("description") final com.commercetools.api.models.common.LocalizedString description,
-            @JsonProperty("lineItems") final java.util.List<com.commercetools.api.models.shopping_list.ShoppingListLineItem> lineItems,
-            @JsonProperty("textLineItems") final java.util.List<com.commercetools.api.models.shopping_list.TextLineItem> textLineItems,
-            @JsonProperty("deleteDaysAfterLastModification") final Long deleteDaysAfterLastModification,
-            @JsonProperty("anonymousId") final String anonymousId,
-            @JsonProperty("store") final com.commercetools.api.models.store.StoreKeyReference store,
-            @JsonProperty("custom") final com.commercetools.api.models.type.CustomFields custom,
-            @JsonProperty("lastModifiedBy") final com.commercetools.api.models.common.LastModifiedBy lastModifiedBy,
-            @JsonProperty("createdBy") final com.commercetools.api.models.common.CreatedBy createdBy) {
+    ShoppingListImpl(@JsonProperty("id") final String id, @JsonProperty("version") final Long version, @JsonProperty("createdAt") final java.time.ZonedDateTime createdAt, @JsonProperty("lastModifiedAt") final java.time.ZonedDateTime lastModifiedAt, @JsonProperty("name") final com.commercetools.api.models.common.LocalizedString name, @JsonProperty("key") final String key, @JsonProperty("customer") final com.commercetools.api.models.customer.CustomerReference customer, @JsonProperty("slug") final com.commercetools.api.models.common.LocalizedString slug, @JsonProperty("description") final com.commercetools.api.models.common.LocalizedString description, @JsonProperty("lineItems") final java.util.List<com.commercetools.api.models.shopping_list.ShoppingListLineItem> lineItems, @JsonProperty("textLineItems") final java.util.List<com.commercetools.api.models.shopping_list.TextLineItem> textLineItems, @JsonProperty("deleteDaysAfterLastModification") final Long deleteDaysAfterLastModification, @JsonProperty("anonymousId") final String anonymousId, @JsonProperty("store") final com.commercetools.api.models.store.StoreKeyReference store, @JsonProperty("custom") final com.commercetools.api.models.type.CustomFields custom, @JsonProperty("lastModifiedBy") final com.commercetools.api.models.common.LastModifiedBy lastModifiedBy, @JsonProperty("createdBy") final com.commercetools.api.models.common.CreatedBy createdBy) {
         this.id = id;
         this.version = version;
         this.createdAt = createdAt;
@@ -92,7 +109,6 @@ public class ShoppingListImpl implements ShoppingList, ModelBase {
         this.lastModifiedBy = lastModifiedBy;
         this.createdBy = createdBy;
     }
-
     /**
      * create empty instance
      */
@@ -102,228 +118,244 @@ public class ShoppingListImpl implements ShoppingList, ModelBase {
     /**
      *  <p>Unique identifier of the ShoppingList.</p>
      */
-
-    public String getId() {
+    
+    public String getId(){
         return this.id;
     }
-
+    
     /**
      *  <p>Current version of the ShoppingList.</p>
      */
-
-    public Long getVersion() {
+    
+    public Long getVersion(){
         return this.version;
     }
-
+    
     /**
      *  <p>Date and time (UTC) the ShoppingList was initially created.</p>
      */
-
-    public java.time.ZonedDateTime getCreatedAt() {
+    
+    public java.time.ZonedDateTime getCreatedAt(){
         return this.createdAt;
     }
-
+    
     /**
      *  <p>Date and time (UTC) the ShoppingList was last updated.</p>
      */
-
-    public java.time.ZonedDateTime getLastModifiedAt() {
+    
+    public java.time.ZonedDateTime getLastModifiedAt(){
         return this.lastModifiedAt;
     }
-
+    
     /**
      *  <p>Name of the ShoppingList.</p>
      */
-
-    public com.commercetools.api.models.common.LocalizedString getName() {
+    
+    public com.commercetools.api.models.common.LocalizedString getName(){
         return this.name;
     }
-
+    
     /**
      *  <p>User-defined unique identifier of the ShoppingList.</p>
      */
-
-    public String getKey() {
+    
+    public String getKey(){
         return this.key;
     }
-
+    
     /**
      *  <p>Reference to a Customer associated with the ShoppingList.</p>
      */
-
-    public com.commercetools.api.models.customer.CustomerReference getCustomer() {
+    
+    public com.commercetools.api.models.customer.CustomerReference getCustomer(){
         return this.customer;
     }
-
+    
     /**
      *  <p>Human-readable identifiers usually used as deep-link URL to the related ShoppingList. Each slug is unique across a Project, but a ShoppingList can have the same slug for different languages. The slug must match the pattern <code>[a-zA-Z0-9_-]{2,256}</code>. For good performance, indexes are provided for the first 15 <code>languages</code> set on the Project.</p>
      */
-
-    public com.commercetools.api.models.common.LocalizedString getSlug() {
+    
+    public com.commercetools.api.models.common.LocalizedString getSlug(){
         return this.slug;
     }
-
+    
     /**
      *  <p>Description of the ShoppingList.</p>
      */
-
-    public com.commercetools.api.models.common.LocalizedString getDescription() {
+    
+    public com.commercetools.api.models.common.LocalizedString getDescription(){
         return this.description;
     }
-
+    
     /**
      *  <p>Line Items (containing Products) of the ShoppingList.</p>
      */
-
-    public java.util.List<com.commercetools.api.models.shopping_list.ShoppingListLineItem> getLineItems() {
+    
+    public java.util.List<com.commercetools.api.models.shopping_list.ShoppingListLineItem> getLineItems(){
         return this.lineItems;
     }
-
+    
     /**
      *  <p>Line Items (containing text values) of the ShoppingList.</p>
      */
-
-    public java.util.List<com.commercetools.api.models.shopping_list.TextLineItem> getTextLineItems() {
+    
+    public java.util.List<com.commercetools.api.models.shopping_list.TextLineItem> getTextLineItems(){
         return this.textLineItems;
     }
-
+    
     /**
      *  <p>Number of days after which the ShoppingList will be automatically deleted if it has not been modified.</p>
      */
-
-    public Long getDeleteDaysAfterLastModification() {
+    
+    public Long getDeleteDaysAfterLastModification(){
         return this.deleteDaysAfterLastModification;
     }
-
+    
     /**
      *  <p>Identifies ShoppingLists belonging to an anonymous session.</p>
      */
-
-    public String getAnonymousId() {
+    
+    public String getAnonymousId(){
         return this.anonymousId;
     }
-
+    
     /**
      *  <p>Store to which the ShoppingList is assigned.</p>
      */
-
-    public com.commercetools.api.models.store.StoreKeyReference getStore() {
+    
+    public com.commercetools.api.models.store.StoreKeyReference getStore(){
         return this.store;
     }
-
+    
     /**
      *  <p>Custom Fields defined for the ShoppingList.</p>
      */
-
-    public com.commercetools.api.models.type.CustomFields getCustom() {
+    
+    public com.commercetools.api.models.type.CustomFields getCustom(){
         return this.custom;
     }
-
+    
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      */
-
-    public com.commercetools.api.models.common.LastModifiedBy getLastModifiedBy() {
+    
+    public com.commercetools.api.models.common.LastModifiedBy getLastModifiedBy(){
         return this.lastModifiedBy;
     }
-
+    
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      */
-
-    public com.commercetools.api.models.common.CreatedBy getCreatedBy() {
+    
+    public com.commercetools.api.models.common.CreatedBy getCreatedBy(){
         return this.createdBy;
     }
 
-    public void setId(final String id) {
+    
+    public void setId(final String id){
         this.id = id;
     }
-
-    public void setVersion(final Long version) {
+    
+    
+    public void setVersion(final Long version){
         this.version = version;
     }
-
-    public void setCreatedAt(final java.time.ZonedDateTime createdAt) {
+    
+    
+    public void setCreatedAt(final java.time.ZonedDateTime createdAt){
         this.createdAt = createdAt;
     }
-
-    public void setLastModifiedAt(final java.time.ZonedDateTime lastModifiedAt) {
+    
+    
+    public void setLastModifiedAt(final java.time.ZonedDateTime lastModifiedAt){
         this.lastModifiedAt = lastModifiedAt;
     }
-
-    public void setName(final com.commercetools.api.models.common.LocalizedString name) {
+    
+    
+    public void setName(final com.commercetools.api.models.common.LocalizedString name){
         this.name = name;
     }
-
-    public void setKey(final String key) {
+    
+    
+    public void setKey(final String key){
         this.key = key;
     }
-
-    public void setCustomer(final com.commercetools.api.models.customer.CustomerReference customer) {
+    
+    
+    public void setCustomer(final com.commercetools.api.models.customer.CustomerReference customer){
         this.customer = customer;
     }
-
-    public void setSlug(final com.commercetools.api.models.common.LocalizedString slug) {
+    
+    
+    public void setSlug(final com.commercetools.api.models.common.LocalizedString slug){
         this.slug = slug;
     }
-
-    public void setDescription(final com.commercetools.api.models.common.LocalizedString description) {
+    
+    
+    public void setDescription(final com.commercetools.api.models.common.LocalizedString description){
         this.description = description;
     }
-
-    public void setLineItems(final com.commercetools.api.models.shopping_list.ShoppingListLineItem... lineItems) {
-        this.lineItems = new ArrayList<>(Arrays.asList(lineItems));
+    
+    
+    public void setLineItems(final com.commercetools.api.models.shopping_list.ShoppingListLineItem ...lineItems){
+       this.lineItems = new ArrayList<>(Arrays.asList(lineItems));
     }
-
-    public void setLineItems(
-            final java.util.List<com.commercetools.api.models.shopping_list.ShoppingListLineItem> lineItems) {
-        this.lineItems = lineItems;
+    
+    
+    public void setLineItems(final java.util.List<com.commercetools.api.models.shopping_list.ShoppingListLineItem> lineItems){
+       this.lineItems = lineItems;
     }
-
-    public void setTextLineItems(final com.commercetools.api.models.shopping_list.TextLineItem... textLineItems) {
-        this.textLineItems = new ArrayList<>(Arrays.asList(textLineItems));
+    
+    
+    public void setTextLineItems(final com.commercetools.api.models.shopping_list.TextLineItem ...textLineItems){
+       this.textLineItems = new ArrayList<>(Arrays.asList(textLineItems));
     }
-
-    public void setTextLineItems(
-            final java.util.List<com.commercetools.api.models.shopping_list.TextLineItem> textLineItems) {
-        this.textLineItems = textLineItems;
+    
+    
+    public void setTextLineItems(final java.util.List<com.commercetools.api.models.shopping_list.TextLineItem> textLineItems){
+       this.textLineItems = textLineItems;
     }
-
-    public void setDeleteDaysAfterLastModification(final Long deleteDaysAfterLastModification) {
+    
+    
+    public void setDeleteDaysAfterLastModification(final Long deleteDaysAfterLastModification){
         this.deleteDaysAfterLastModification = deleteDaysAfterLastModification;
     }
-
-    public void setAnonymousId(final String anonymousId) {
+    
+    
+    public void setAnonymousId(final String anonymousId){
         this.anonymousId = anonymousId;
     }
-
-    public void setStore(final com.commercetools.api.models.store.StoreKeyReference store) {
+    
+    
+    public void setStore(final com.commercetools.api.models.store.StoreKeyReference store){
         this.store = store;
     }
-
-    public void setCustom(final com.commercetools.api.models.type.CustomFields custom) {
+    
+    
+    public void setCustom(final com.commercetools.api.models.type.CustomFields custom){
         this.custom = custom;
     }
-
-    public void setLastModifiedBy(final com.commercetools.api.models.common.LastModifiedBy lastModifiedBy) {
+    
+    
+    public void setLastModifiedBy(final com.commercetools.api.models.common.LastModifiedBy lastModifiedBy){
         this.lastModifiedBy = lastModifiedBy;
     }
-
-    public void setCreatedBy(final com.commercetools.api.models.common.CreatedBy createdBy) {
+    
+    
+    public void setCreatedBy(final com.commercetools.api.models.common.CreatedBy createdBy){
         this.createdBy = createdBy;
     }
 
     @Override
     public boolean equals(Object o) {
-        if (this == o)
-            return true;
-
-        if (o == null || getClass() != o.getClass())
-            return false;
-
+        if (this == o) return true;
+    
+        if (o == null || getClass() != o.getClass()) return false;
+    
         ShoppingListImpl that = (ShoppingListImpl) o;
-
-        return new EqualsBuilder().append(id, that.id)
+    
+        return new EqualsBuilder()
+                .append(id, that.id)
                 .append(version, that.version)
                 .append(createdAt, that.createdAt)
                 .append(lastModifiedAt, that.lastModifiedAt)
@@ -342,27 +374,28 @@ public class ShoppingListImpl implements ShoppingList, ModelBase {
                 .append(createdBy, that.createdBy)
                 .isEquals();
     }
-
+    
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(id)
-                .append(version)
-                .append(createdAt)
-                .append(lastModifiedAt)
-                .append(name)
-                .append(key)
-                .append(customer)
-                .append(slug)
-                .append(description)
-                .append(lineItems)
-                .append(textLineItems)
-                .append(deleteDaysAfterLastModification)
-                .append(anonymousId)
-                .append(store)
-                .append(custom)
-                .append(lastModifiedBy)
-                .append(createdBy)
-                .toHashCode();
+        return new HashCodeBuilder(17, 37)
+            .append(id)
+            .append(version)
+            .append(createdAt)
+            .append(lastModifiedAt)
+            .append(name)
+            .append(key)
+            .append(customer)
+            .append(slug)
+            .append(description)
+            .append(lineItems)
+            .append(textLineItems)
+            .append(deleteDaysAfterLastModification)
+            .append(anonymousId)
+            .append(store)
+            .append(custom)
+            .append(lastModifiedBy)
+            .append(createdBy)
+            .toHashCode();
     }
 
 }

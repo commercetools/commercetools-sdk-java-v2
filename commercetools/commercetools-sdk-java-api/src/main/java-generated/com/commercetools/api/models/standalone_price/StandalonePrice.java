@@ -1,15 +1,4 @@
-
 package com.commercetools.api.models.standalone_price;
-
-import java.time.*;
-import java.time.ZonedDateTime;
-import java.util.*;
-import java.util.function.Function;
-import java.util.stream.Collectors;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.channel.ChannelReference;
 import com.commercetools.api.models.common.BaseResource;
@@ -19,11 +8,23 @@ import com.commercetools.api.models.common.LastModifiedBy;
 import com.commercetools.api.models.common.PriceTier;
 import com.commercetools.api.models.common.TypedMoney;
 import com.commercetools.api.models.customer_group.CustomerGroupReference;
+import com.commercetools.api.models.standalone_price.StagedStandalonePrice;
 import com.commercetools.api.models.type.CustomFields;
+import java.time.ZonedDateTime;
+import com.commercetools.api.models.standalone_price.StandalonePriceImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * StandalonePrice
@@ -42,15 +43,15 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .active(true)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = StandalonePriceImpl.class)
-public interface StandalonePrice
-        extends BaseResource, StandalonePriceMixin, com.commercetools.api.models.DomainResource<StandalonePrice>,
-        com.commercetools.api.models.Referencable<StandalonePrice>,
-        com.commercetools.api.models.ResourceIdentifiable<StandalonePrice>,
-        com.commercetools.api.models.Customizable<StandalonePrice>, com.commercetools.api.models.WithKey {
+public interface StandalonePrice extends BaseResource, StandalonePriceMixin, com.commercetools.api.models.DomainResource<StandalonePrice>, com.commercetools.api.models.Referencable<StandalonePrice>, com.commercetools.api.models.ResourceIdentifiable<StandalonePrice>, com.commercetools.api.models.Customizable<StandalonePrice>, com.commercetools.api.models.WithKey {
+
 
     /**
      *  <p>Unique identifier of the StandalonePrice.</p>
@@ -59,7 +60,6 @@ public interface StandalonePrice
     @NotNull
     @JsonProperty("id")
     public String getId();
-
     /**
      *  <p>Current version of the StandalonePrice.</p>
      * @return version
@@ -67,7 +67,6 @@ public interface StandalonePrice
     @NotNull
     @JsonProperty("version")
     public Long getVersion();
-
     /**
      *  <p>Date and time (UTC) the StandalonePrice was initially created.</p>
      * @return createdAt
@@ -75,7 +74,6 @@ public interface StandalonePrice
     @NotNull
     @JsonProperty("createdAt")
     public ZonedDateTime getCreatedAt();
-
     /**
      *  <p>Date and time (UTC) the StandalonePrice was last updated.</p>
      * @return lastModifiedAt
@@ -83,7 +81,6 @@ public interface StandalonePrice
     @NotNull
     @JsonProperty("lastModifiedAt")
     public ZonedDateTime getLastModifiedAt();
-
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      * @return lastModifiedBy
@@ -91,7 +88,6 @@ public interface StandalonePrice
     @Valid
     @JsonProperty("lastModifiedBy")
     public LastModifiedBy getLastModifiedBy();
-
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      * @return createdBy
@@ -99,15 +95,13 @@ public interface StandalonePrice
     @Valid
     @JsonProperty("createdBy")
     public CreatedBy getCreatedBy();
-
     /**
      *  <p>User-defined unique identifier of the StandalonePrice.</p>
      * @return key
      */
-
+    
     @JsonProperty("key")
     public String getKey();
-
     /**
      *  <p>SKU of the ProductVariant to which this Price is associated.</p>
      * @return sku
@@ -115,7 +109,6 @@ public interface StandalonePrice
     @NotNull
     @JsonProperty("sku")
     public String getSku();
-
     /**
      *  <p>Money value of this Price.</p>
      * @return value
@@ -124,15 +117,13 @@ public interface StandalonePrice
     @Valid
     @JsonProperty("value")
     public TypedMoney getValue();
-
     /**
      *  <p>Country for which this Price is valid.</p>
      * @return country
      */
-
+    
     @JsonProperty("country")
     public String getCountry();
-
     /**
      *  <p>CustomerGroup for which this Price is valid.</p>
      * @return customerGroup
@@ -140,7 +131,6 @@ public interface StandalonePrice
     @Valid
     @JsonProperty("customerGroup")
     public CustomerGroupReference getCustomerGroup();
-
     /**
      *  <p>Product distribution Channel for which this Price is valid.</p>
      * @return channel
@@ -148,23 +138,20 @@ public interface StandalonePrice
     @Valid
     @JsonProperty("channel")
     public ChannelReference getChannel();
-
     /**
      *  <p>Date from which the Price is valid.</p>
      * @return validFrom
      */
-
+    
     @JsonProperty("validFrom")
     public ZonedDateTime getValidFrom();
-
     /**
      *  <p>Date until the Price is valid. Standalone Prices that are no longer valid are not automatically deleted, but they can be deleted if necessary.</p>
      * @return validUntil
      */
-
+    
     @JsonProperty("validUntil")
     public ZonedDateTime getValidUntil();
-
     /**
      *  <p>Price tiers if any are defined.</p>
      * @return tiers
@@ -172,7 +159,6 @@ public interface StandalonePrice
     @Valid
     @JsonProperty("tiers")
     public List<PriceTier> getTiers();
-
     /**
      *  <p>Set if a matching ProductDiscount exists. If set, the API uses the <code>discounted</code> value for the LineItem Price selection. When a relative discount is applied and the fraction part of the <code>discounted</code> price is 0.5, the discounted price is rounded in favor of the customer with the half down rounding.</p>
      * @return discounted
@@ -180,7 +166,6 @@ public interface StandalonePrice
     @Valid
     @JsonProperty("discounted")
     public DiscountedPrice getDiscounted();
-
     /**
      *  <p>Custom Fields for the StandalonePrice.</p>
      * @return custom
@@ -188,7 +173,6 @@ public interface StandalonePrice
     @Valid
     @JsonProperty("custom")
     public CustomFields getCustom();
-
     /**
      *  <p>Staged changes of the StandalonePrice. Only present if the StandalonePrice has staged changes.</p>
      * @return staged
@@ -196,7 +180,6 @@ public interface StandalonePrice
     @Valid
     @JsonProperty("staged")
     public StagedStandalonePrice getStaged();
-
     /**
      *  <p>If set to <code>true</code>, the StandalonePrice is considered during price selection. If set to <code>false</code>, the StandalonePrice is not considered during price selection.</p>
      * @return active
@@ -209,150 +192,168 @@ public interface StandalonePrice
      *  <p>Unique identifier of the StandalonePrice.</p>
      * @param id value to be set
      */
-
+    
     public void setId(final String id);
-
+    
+    
     /**
      *  <p>Current version of the StandalonePrice.</p>
      * @param version value to be set
      */
-
+    
     public void setVersion(final Long version);
-
+    
+    
     /**
      *  <p>Date and time (UTC) the StandalonePrice was initially created.</p>
      * @param createdAt value to be set
      */
-
+    
     public void setCreatedAt(final ZonedDateTime createdAt);
-
+    
+    
     /**
      *  <p>Date and time (UTC) the StandalonePrice was last updated.</p>
      * @param lastModifiedAt value to be set
      */
-
+    
     public void setLastModifiedAt(final ZonedDateTime lastModifiedAt);
-
+    
+    
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      * @param lastModifiedBy value to be set
      */
-
+    
     public void setLastModifiedBy(final LastModifiedBy lastModifiedBy);
-
+    
+    
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      * @param createdBy value to be set
      */
-
+    
     public void setCreatedBy(final CreatedBy createdBy);
-
+    
+    
     /**
      *  <p>User-defined unique identifier of the StandalonePrice.</p>
      * @param key value to be set
      */
-
+    
     public void setKey(final String key);
-
+    
+    
     /**
      *  <p>SKU of the ProductVariant to which this Price is associated.</p>
      * @param sku value to be set
      */
-
+    
     public void setSku(final String sku);
-
+    
+    
     /**
      *  <p>Money value of this Price.</p>
      * @param value value to be set
      */
-
+    
     public void setValue(final TypedMoney value);
-
+    
+    
     /**
      *  <p>Country for which this Price is valid.</p>
      * @param country value to be set
      */
-
+    
     public void setCountry(final String country);
-
+    
+    
     /**
      *  <p>CustomerGroup for which this Price is valid.</p>
      * @param customerGroup value to be set
      */
-
+    
     public void setCustomerGroup(final CustomerGroupReference customerGroup);
-
+    
+    
     /**
      *  <p>Product distribution Channel for which this Price is valid.</p>
      * @param channel value to be set
      */
-
+    
     public void setChannel(final ChannelReference channel);
-
+    
+    
     /**
      *  <p>Date from which the Price is valid.</p>
      * @param validFrom value to be set
      */
-
+    
     public void setValidFrom(final ZonedDateTime validFrom);
-
+    
+    
     /**
      *  <p>Date until the Price is valid. Standalone Prices that are no longer valid are not automatically deleted, but they can be deleted if necessary.</p>
      * @param validUntil value to be set
      */
-
+    
     public void setValidUntil(final ZonedDateTime validUntil);
-
+    
+    
     /**
      *  <p>Price tiers if any are defined.</p>
      * @param tiers values to be set
      */
-
+    
     @JsonIgnore
-    public void setTiers(final PriceTier... tiers);
-
+    public void setTiers(final PriceTier ...tiers);
     /**
      *  <p>Price tiers if any are defined.</p>
      * @param tiers values to be set
      */
-
+    
     public void setTiers(final List<PriceTier> tiers);
-
+    
     /**
      *  <p>Set if a matching ProductDiscount exists. If set, the API uses the <code>discounted</code> value for the LineItem Price selection. When a relative discount is applied and the fraction part of the <code>discounted</code> price is 0.5, the discounted price is rounded in favor of the customer with the half down rounding.</p>
      * @param discounted value to be set
      */
-
+    
     public void setDiscounted(final DiscountedPrice discounted);
-
+    
+    
     /**
      *  <p>Custom Fields for the StandalonePrice.</p>
      * @param custom value to be set
      */
-
+    
     public void setCustom(final CustomFields custom);
-
+    
+    
     /**
      *  <p>Staged changes of the StandalonePrice. Only present if the StandalonePrice has staged changes.</p>
      * @param staged value to be set
      */
-
+    
     public void setStaged(final StagedStandalonePrice staged);
-
+    
+    
     /**
      *  <p>If set to <code>true</code>, the StandalonePrice is considered during price selection. If set to <code>false</code>, the StandalonePrice is not considered during price selection.</p>
      * @param active value to be set
      */
-
+    
     public void setActive(final Boolean active);
+    
 
     /**
      * factory method
      * @return instance of StandalonePrice
      */
-    public static StandalonePrice of() {
+    public static StandalonePrice of(){
         return new StandalonePriceImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy StandalonePrice
@@ -398,27 +399,22 @@ public interface StandalonePrice
         instance.setVersion(template.getVersion());
         instance.setCreatedAt(template.getCreatedAt());
         instance.setLastModifiedAt(template.getLastModifiedAt());
-        instance.setLastModifiedBy(
-            com.commercetools.api.models.common.LastModifiedBy.deepCopy(template.getLastModifiedBy()));
+        instance.setLastModifiedBy(com.commercetools.api.models.common.LastModifiedBy.deepCopy(template.getLastModifiedBy()));
         instance.setCreatedBy(com.commercetools.api.models.common.CreatedBy.deepCopy(template.getCreatedBy()));
         instance.setKey(template.getKey());
         instance.setSku(template.getSku());
         instance.setValue(com.commercetools.api.models.common.TypedMoney.deepCopy(template.getValue()));
         instance.setCountry(template.getCountry());
-        instance.setCustomerGroup(
-            com.commercetools.api.models.customer_group.CustomerGroupReference.deepCopy(template.getCustomerGroup()));
+        instance.setCustomerGroup(com.commercetools.api.models.customer_group.CustomerGroupReference.deepCopy(template.getCustomerGroup()));
         instance.setChannel(com.commercetools.api.models.channel.ChannelReference.deepCopy(template.getChannel()));
         instance.setValidFrom(template.getValidFrom());
         instance.setValidUntil(template.getValidUntil());
         instance.setTiers(Optional.ofNullable(template.getTiers())
-                .map(t -> t.stream()
-                        .map(com.commercetools.api.models.common.PriceTier::deepCopy)
-                        .collect(Collectors.toList()))
+                .map(t -> t.stream().map(com.commercetools.api.models.common.PriceTier::deepCopy).collect(Collectors.toList()))
                 .orElse(null));
         instance.setDiscounted(com.commercetools.api.models.common.DiscountedPrice.deepCopy(template.getDiscounted()));
         instance.setCustom(com.commercetools.api.models.type.CustomFields.deepCopy(template.getCustom()));
-        instance.setStaged(
-            com.commercetools.api.models.standalone_price.StagedStandalonePrice.deepCopy(template.getStaged()));
+        instance.setStaged(com.commercetools.api.models.standalone_price.StagedStandalonePrice.deepCopy(template.getStaged()));
         instance.setActive(template.getActive());
         return instance;
     }
@@ -430,7 +426,7 @@ public interface StandalonePrice
     public static StandalonePriceBuilder builder() {
         return StandalonePriceBuilder.of();
     }
-
+    
     /**
      * create builder for StandalonePrice instance
      * @param template instance with prefilled values for the builder
@@ -439,6 +435,7 @@ public interface StandalonePrice
     public static StandalonePriceBuilder builder(final StandalonePrice template) {
         return StandalonePriceBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -449,11 +446,11 @@ public interface StandalonePrice
     default <T> T withStandalonePrice(Function<StandalonePrice, T> helper) {
         return helper.apply(this);
     }
-
     public static com.commercetools.api.models.common.ReferenceTypeId referenceTypeId() {
         return com.commercetools.api.models.common.ReferenceTypeId.STANDALONE_PRICE;
     }
-
+    
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

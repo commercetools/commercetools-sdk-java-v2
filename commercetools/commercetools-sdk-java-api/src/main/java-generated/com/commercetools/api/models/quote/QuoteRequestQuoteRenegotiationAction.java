@@ -1,16 +1,20 @@
-
 package com.commercetools.api.models.quote;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
+import com.commercetools.api.models.quote.QuoteUpdateAction;
+import com.commercetools.api.models.quote.QuoteRequestQuoteRenegotiationActionImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Represents the Buyer requesting renegotiation for a Quote. Valid for Quotes in a <code>Pending</code> or <code>Failed</code> state.</p>
@@ -22,9 +26,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     QuoteRequestQuoteRenegotiationAction quoteRequestQuoteRenegotiationAction = QuoteRequestQuoteRenegotiationAction.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = QuoteRequestQuoteRenegotiationActionImpl.class)
 public interface QuoteRequestQuoteRenegotiationAction extends QuoteUpdateAction {
 
@@ -37,7 +44,7 @@ public interface QuoteRequestQuoteRenegotiationAction extends QuoteUpdateAction 
      *  <p>Message from the Buyer regarding the Quote renegotiation request.</p>
      * @return buyerComment
      */
-
+    
     @JsonProperty("buyerComment")
     public String getBuyerComment();
 
@@ -45,16 +52,18 @@ public interface QuoteRequestQuoteRenegotiationAction extends QuoteUpdateAction 
      *  <p>Message from the Buyer regarding the Quote renegotiation request.</p>
      * @param buyerComment value to be set
      */
-
+    
     public void setBuyerComment(final String buyerComment);
+    
 
     /**
      * factory method
      * @return instance of QuoteRequestQuoteRenegotiationAction
      */
-    public static QuoteRequestQuoteRenegotiationAction of() {
+    public static QuoteRequestQuoteRenegotiationAction of(){
         return new QuoteRequestQuoteRenegotiationActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy QuoteRequestQuoteRenegotiationAction
@@ -73,8 +82,7 @@ public interface QuoteRequestQuoteRenegotiationAction extends QuoteUpdateAction 
      * @return copy instance
      */
     @Nullable
-    public static QuoteRequestQuoteRenegotiationAction deepCopy(
-            @Nullable final QuoteRequestQuoteRenegotiationAction template) {
+    public static QuoteRequestQuoteRenegotiationAction deepCopy(@Nullable final QuoteRequestQuoteRenegotiationAction template) {
         if (template == null) {
             return null;
         }
@@ -90,16 +98,16 @@ public interface QuoteRequestQuoteRenegotiationAction extends QuoteUpdateAction 
     public static QuoteRequestQuoteRenegotiationActionBuilder builder() {
         return QuoteRequestQuoteRenegotiationActionBuilder.of();
     }
-
+    
     /**
      * create builder for QuoteRequestQuoteRenegotiationAction instance
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static QuoteRequestQuoteRenegotiationActionBuilder builder(
-            final QuoteRequestQuoteRenegotiationAction template) {
+    public static QuoteRequestQuoteRenegotiationActionBuilder builder(final QuoteRequestQuoteRenegotiationAction template) {
         return QuoteRequestQuoteRenegotiationActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -110,7 +118,7 @@ public interface QuoteRequestQuoteRenegotiationAction extends QuoteUpdateAction 
     default <T> T withQuoteRequestQuoteRenegotiationAction(Function<QuoteRequestQuoteRenegotiationAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

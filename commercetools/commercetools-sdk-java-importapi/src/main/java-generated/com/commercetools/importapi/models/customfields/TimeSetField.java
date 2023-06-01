@@ -1,18 +1,21 @@
-
 package com.commercetools.importapi.models.customfields;
 
-import java.time.*;
+import com.commercetools.importapi.models.customfields.CustomField;
 import java.time.LocalTime;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
+import com.commercetools.importapi.models.customfields.TimeSetFieldImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>A field with a time set value.</p>
@@ -25,9 +28,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .plusValue(valueBuilder -> valueBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = TimeSetFieldImpl.class)
 public interface TimeSetField extends CustomField {
 
@@ -48,24 +54,24 @@ public interface TimeSetField extends CustomField {
      * set value
      * @param value values to be set
      */
-
+    
     @JsonIgnore
-    public void setValue(final LocalTime... value);
-
+    public void setValue(final LocalTime ...value);
     /**
      * set value
      * @param value values to be set
      */
-
+    
     public void setValue(final List<LocalTime> value);
 
     /**
      * factory method
      * @return instance of TimeSetField
      */
-    public static TimeSetField of() {
+    public static TimeSetField of(){
         return new TimeSetFieldImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy TimeSetField
@@ -89,7 +95,9 @@ public interface TimeSetField extends CustomField {
             return null;
         }
         TimeSetFieldImpl instance = new TimeSetFieldImpl();
-        instance.setValue(Optional.ofNullable(template.getValue()).map(ArrayList::new).orElse(null));
+        instance.setValue(Optional.ofNullable(template.getValue())
+                .map(ArrayList::new)
+                .orElse(null));
         return instance;
     }
 
@@ -100,7 +108,7 @@ public interface TimeSetField extends CustomField {
     public static TimeSetFieldBuilder builder() {
         return TimeSetFieldBuilder.of();
     }
-
+    
     /**
      * create builder for TimeSetField instance
      * @param template instance with prefilled values for the builder
@@ -109,6 +117,7 @@ public interface TimeSetField extends CustomField {
     public static TimeSetFieldBuilder builder(final TimeSetField template) {
         return TimeSetFieldBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -119,7 +128,7 @@ public interface TimeSetField extends CustomField {
     default <T> T withTimeSetField(Function<TimeSetField, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

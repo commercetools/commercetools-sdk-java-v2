@@ -1,9 +1,12 @@
-
 package com.commercetools.api.models.discount_code;
 
+import com.commercetools.api.models.cart_discount.CartDiscountResourceIdentifier;
+import com.commercetools.api.models.discount_code.DiscountCodeUpdateAction;
+import com.commercetools.api.models.discount_code.DiscountCodeChangeCartDiscountsAction;
+import javax.annotation.Nullable;
 import java.util.*;
 import java.util.function.Function;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -17,11 +20,16 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .plusCartDiscounts(cartDiscountsBuilder -> cartDiscountsBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class DiscountCodeChangeCartDiscountsActionBuilder implements Builder<DiscountCodeChangeCartDiscountsAction> {
 
+    
+    
     private java.util.List<com.commercetools.api.models.cart_discount.CartDiscountResourceIdentifier> cartDiscounts;
 
     /**
@@ -29,102 +37,93 @@ public class DiscountCodeChangeCartDiscountsActionBuilder implements Builder<Dis
      * @param cartDiscounts value to be set
      * @return Builder
      */
-
-    public DiscountCodeChangeCartDiscountsActionBuilder cartDiscounts(
-            final com.commercetools.api.models.cart_discount.CartDiscountResourceIdentifier... cartDiscounts) {
+    
+    public DiscountCodeChangeCartDiscountsActionBuilder cartDiscounts( final com.commercetools.api.models.cart_discount.CartDiscountResourceIdentifier ...cartDiscounts) {
         this.cartDiscounts = new ArrayList<>(Arrays.asList(cartDiscounts));
         return this;
     }
-
+    
     /**
      *  <p>New value to set.</p>
      * @param cartDiscounts value to be set
      * @return Builder
      */
-
-    public DiscountCodeChangeCartDiscountsActionBuilder cartDiscounts(
-            final java.util.List<com.commercetools.api.models.cart_discount.CartDiscountResourceIdentifier> cartDiscounts) {
+    
+    public DiscountCodeChangeCartDiscountsActionBuilder cartDiscounts( final java.util.List<com.commercetools.api.models.cart_discount.CartDiscountResourceIdentifier> cartDiscounts) {
         this.cartDiscounts = cartDiscounts;
         return this;
     }
-
+    
     /**
      *  <p>New value to set.</p>
      * @param cartDiscounts value to be set
      * @return Builder
      */
-
-    public DiscountCodeChangeCartDiscountsActionBuilder plusCartDiscounts(
-            final com.commercetools.api.models.cart_discount.CartDiscountResourceIdentifier... cartDiscounts) {
+    
+    public DiscountCodeChangeCartDiscountsActionBuilder plusCartDiscounts( final com.commercetools.api.models.cart_discount.CartDiscountResourceIdentifier ...cartDiscounts) {
         if (this.cartDiscounts == null) {
             this.cartDiscounts = new ArrayList<>();
         }
         this.cartDiscounts.addAll(Arrays.asList(cartDiscounts));
         return this;
     }
-
+    
+    
+    
     /**
      *  <p>New value to set.</p>
      * @param builder function to build the cartDiscounts value
      * @return Builder
      */
-
-    public DiscountCodeChangeCartDiscountsActionBuilder plusCartDiscounts(
-            Function<com.commercetools.api.models.cart_discount.CartDiscountResourceIdentifierBuilder, com.commercetools.api.models.cart_discount.CartDiscountResourceIdentifierBuilder> builder) {
+    
+    public DiscountCodeChangeCartDiscountsActionBuilder plusCartDiscounts(Function<com.commercetools.api.models.cart_discount.CartDiscountResourceIdentifierBuilder, com.commercetools.api.models.cart_discount.CartDiscountResourceIdentifierBuilder> builder) {
         if (this.cartDiscounts == null) {
             this.cartDiscounts = new ArrayList<>();
         }
-        this.cartDiscounts.add(
-            builder.apply(com.commercetools.api.models.cart_discount.CartDiscountResourceIdentifierBuilder.of())
-                    .build());
+        this.cartDiscounts.add(builder.apply(com.commercetools.api.models.cart_discount.CartDiscountResourceIdentifierBuilder.of()).build());
         return this;
     }
-
+    
     /**
      *  <p>New value to set.</p>
      * @param builder function to build the cartDiscounts value
      * @return Builder
      */
-
-    public DiscountCodeChangeCartDiscountsActionBuilder withCartDiscounts(
-            Function<com.commercetools.api.models.cart_discount.CartDiscountResourceIdentifierBuilder, com.commercetools.api.models.cart_discount.CartDiscountResourceIdentifierBuilder> builder) {
+    
+    public DiscountCodeChangeCartDiscountsActionBuilder withCartDiscounts(Function<com.commercetools.api.models.cart_discount.CartDiscountResourceIdentifierBuilder, com.commercetools.api.models.cart_discount.CartDiscountResourceIdentifierBuilder> builder) {
         this.cartDiscounts = new ArrayList<>();
-        this.cartDiscounts.add(
-            builder.apply(com.commercetools.api.models.cart_discount.CartDiscountResourceIdentifierBuilder.of())
-                    .build());
+        this.cartDiscounts.add(builder.apply(com.commercetools.api.models.cart_discount.CartDiscountResourceIdentifierBuilder.of()).build());
         return this;
     }
-
+    
     /**
      *  <p>New value to set.</p>
      * @param builder function to build the cartDiscounts value
      * @return Builder
      */
-
-    public DiscountCodeChangeCartDiscountsActionBuilder addCartDiscounts(
-            Function<com.commercetools.api.models.cart_discount.CartDiscountResourceIdentifierBuilder, com.commercetools.api.models.cart_discount.CartDiscountResourceIdentifier> builder) {
-        return plusCartDiscounts(
-            builder.apply(com.commercetools.api.models.cart_discount.CartDiscountResourceIdentifierBuilder.of()));
+    
+    public DiscountCodeChangeCartDiscountsActionBuilder addCartDiscounts(Function<com.commercetools.api.models.cart_discount.CartDiscountResourceIdentifierBuilder, com.commercetools.api.models.cart_discount.CartDiscountResourceIdentifier> builder) {
+        return plusCartDiscounts(builder.apply(com.commercetools.api.models.cart_discount.CartDiscountResourceIdentifierBuilder.of()));
     }
-
+    
     /**
      *  <p>New value to set.</p>
      * @param builder function to build the cartDiscounts value
      * @return Builder
      */
-
-    public DiscountCodeChangeCartDiscountsActionBuilder setCartDiscounts(
-            Function<com.commercetools.api.models.cart_discount.CartDiscountResourceIdentifierBuilder, com.commercetools.api.models.cart_discount.CartDiscountResourceIdentifier> builder) {
-        return cartDiscounts(
-            builder.apply(com.commercetools.api.models.cart_discount.CartDiscountResourceIdentifierBuilder.of()));
+    
+    public DiscountCodeChangeCartDiscountsActionBuilder setCartDiscounts(Function<com.commercetools.api.models.cart_discount.CartDiscountResourceIdentifierBuilder, com.commercetools.api.models.cart_discount.CartDiscountResourceIdentifier> builder) {
+        return cartDiscounts(builder.apply(com.commercetools.api.models.cart_discount.CartDiscountResourceIdentifierBuilder.of()));
     }
+                    
 
     /**
      *  <p>New value to set.</p>
      * @return cartDiscounts
      */
-
-    public java.util.List<com.commercetools.api.models.cart_discount.CartDiscountResourceIdentifier> getCartDiscounts() {
+    
+    
+    public java.util.List<com.commercetools.api.models.cart_discount.CartDiscountResourceIdentifier> getCartDiscounts(){
         return this.cartDiscounts;
     }
 
@@ -133,11 +132,10 @@ public class DiscountCodeChangeCartDiscountsActionBuilder implements Builder<Dis
      * @return DiscountCodeChangeCartDiscountsAction
      */
     public DiscountCodeChangeCartDiscountsAction build() {
-        Objects.requireNonNull(cartDiscounts,
-            DiscountCodeChangeCartDiscountsAction.class + ": cartDiscounts is missing");
+        Objects.requireNonNull(cartDiscounts, DiscountCodeChangeCartDiscountsAction.class + ": cartDiscounts is missing");
         return new DiscountCodeChangeCartDiscountsActionImpl(cartDiscounts);
     }
-
+    
     /**
      * builds DiscountCodeChangeCartDiscountsAction without checking for non-null required values
      * @return DiscountCodeChangeCartDiscountsAction
@@ -148,7 +146,7 @@ public class DiscountCodeChangeCartDiscountsActionBuilder implements Builder<Dis
 
     /**
      * factory method for an instance of DiscountCodeChangeCartDiscountsActionBuilder
-     * @return builder
+     * @return builder 
      */
     public static DiscountCodeChangeCartDiscountsActionBuilder of() {
         return new DiscountCodeChangeCartDiscountsActionBuilder();
@@ -159,8 +157,7 @@ public class DiscountCodeChangeCartDiscountsActionBuilder implements Builder<Dis
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static DiscountCodeChangeCartDiscountsActionBuilder of(
-            final DiscountCodeChangeCartDiscountsAction template) {
+    public static DiscountCodeChangeCartDiscountsActionBuilder of(final DiscountCodeChangeCartDiscountsAction template) {
         DiscountCodeChangeCartDiscountsActionBuilder builder = new DiscountCodeChangeCartDiscountsActionBuilder();
         builder.cartDiscounts = template.getCartDiscounts();
         return builder;

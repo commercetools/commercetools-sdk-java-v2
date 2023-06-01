@@ -1,19 +1,21 @@
-
 package com.commercetools.history.models.change;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
+import com.commercetools.history.models.change.Change;
 import com.commercetools.history.models.common.ItemShippingDetails;
+import com.commercetools.history.models.change.SetCustomLineItemShippingDetailsChangeImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * SetCustomLineItemShippingDetailsChange
@@ -29,9 +31,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .previousValue(previousValueBuilder -> previousValueBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = SetCustomLineItemShippingDetailsChangeImpl.class)
 public interface SetCustomLineItemShippingDetailsChange extends Change {
 
@@ -47,7 +52,6 @@ public interface SetCustomLineItemShippingDetailsChange extends Change {
     @NotNull
     @JsonProperty("type")
     public String getType();
-
     /**
      *  <p>Update action for <code>setCustomLineItemShippingDetails</code></p>
      * @return change
@@ -55,7 +59,6 @@ public interface SetCustomLineItemShippingDetailsChange extends Change {
     @NotNull
     @JsonProperty("change")
     public String getChange();
-
     /**
      *
      * @return customLineItemId
@@ -63,7 +66,6 @@ public interface SetCustomLineItemShippingDetailsChange extends Change {
     @NotNull
     @JsonProperty("customLineItemId")
     public String getCustomLineItemId();
-
     /**
      *
      * @return nextValue
@@ -72,7 +74,6 @@ public interface SetCustomLineItemShippingDetailsChange extends Change {
     @Valid
     @JsonProperty("nextValue")
     public ItemShippingDetails getNextValue();
-
     /**
      *
      * @return previousValue
@@ -86,37 +87,42 @@ public interface SetCustomLineItemShippingDetailsChange extends Change {
      *  <p>Update action for <code>setCustomLineItemShippingDetails</code></p>
      * @param change value to be set
      */
-
+    
     public void setChange(final String change);
-
+    
+    
     /**
      * set customLineItemId
      * @param customLineItemId value to be set
      */
-
+    
     public void setCustomLineItemId(final String customLineItemId);
-
+    
+    
     /**
      * set nextValue
      * @param nextValue value to be set
      */
-
+    
     public void setNextValue(final ItemShippingDetails nextValue);
-
+    
+    
     /**
      * set previousValue
      * @param previousValue value to be set
      */
-
+    
     public void setPreviousValue(final ItemShippingDetails previousValue);
+    
 
     /**
      * factory method
      * @return instance of SetCustomLineItemShippingDetailsChange
      */
-    public static SetCustomLineItemShippingDetailsChange of() {
+    public static SetCustomLineItemShippingDetailsChange of(){
         return new SetCustomLineItemShippingDetailsChangeImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy SetCustomLineItemShippingDetailsChange
@@ -138,18 +144,15 @@ public interface SetCustomLineItemShippingDetailsChange extends Change {
      * @return copy instance
      */
     @Nullable
-    public static SetCustomLineItemShippingDetailsChange deepCopy(
-            @Nullable final SetCustomLineItemShippingDetailsChange template) {
+    public static SetCustomLineItemShippingDetailsChange deepCopy(@Nullable final SetCustomLineItemShippingDetailsChange template) {
         if (template == null) {
             return null;
         }
         SetCustomLineItemShippingDetailsChangeImpl instance = new SetCustomLineItemShippingDetailsChangeImpl();
         instance.setChange(template.getChange());
         instance.setCustomLineItemId(template.getCustomLineItemId());
-        instance.setNextValue(
-            com.commercetools.history.models.common.ItemShippingDetails.deepCopy(template.getNextValue()));
-        instance.setPreviousValue(
-            com.commercetools.history.models.common.ItemShippingDetails.deepCopy(template.getPreviousValue()));
+        instance.setNextValue(com.commercetools.history.models.common.ItemShippingDetails.deepCopy(template.getNextValue()));
+        instance.setPreviousValue(com.commercetools.history.models.common.ItemShippingDetails.deepCopy(template.getPreviousValue()));
         return instance;
     }
 
@@ -160,16 +163,16 @@ public interface SetCustomLineItemShippingDetailsChange extends Change {
     public static SetCustomLineItemShippingDetailsChangeBuilder builder() {
         return SetCustomLineItemShippingDetailsChangeBuilder.of();
     }
-
+    
     /**
      * create builder for SetCustomLineItemShippingDetailsChange instance
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static SetCustomLineItemShippingDetailsChangeBuilder builder(
-            final SetCustomLineItemShippingDetailsChange template) {
+    public static SetCustomLineItemShippingDetailsChangeBuilder builder(final SetCustomLineItemShippingDetailsChange template) {
         return SetCustomLineItemShippingDetailsChangeBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -177,11 +180,10 @@ public interface SetCustomLineItemShippingDetailsChange extends Change {
      * @param helper function to map the object
      * @return mapped value
      */
-    default <T> T withSetCustomLineItemShippingDetailsChange(
-            Function<SetCustomLineItemShippingDetailsChange, T> helper) {
+    default <T> T withSetCustomLineItemShippingDetailsChange(Function<SetCustomLineItemShippingDetailsChange, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

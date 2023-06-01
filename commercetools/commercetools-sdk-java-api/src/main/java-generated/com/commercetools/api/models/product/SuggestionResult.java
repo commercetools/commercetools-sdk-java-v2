@@ -1,18 +1,20 @@
-
 package com.commercetools.api.models.product;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
+import com.commercetools.api.models.product.Suggestion;
+import com.commercetools.api.models.product.SuggestionResultImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * SuggestionResult
@@ -25,11 +27,15 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .plus/searchKeywords.[a-z]{2}(-[A-Z]{2})?/(/searchKeywords.[a-z]{2}(-[A-Z]{2})?/Builder -> /searchKeywords.[a-z]{2}(-[A-Z]{2})?/Builder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = SuggestionResultImpl.class)
-public interface SuggestionResult {
+public interface SuggestionResult  {
+
 
     /**
      *
@@ -45,7 +51,7 @@ public interface SuggestionResult {
      * @param key property name
      * @param value property value
      */
-
+    
     @JsonAnySetter
     public void setValue(String key, List<Suggestion> value);
 
@@ -53,9 +59,10 @@ public interface SuggestionResult {
      * factory method
      * @return instance of SuggestionResult
      */
-    public static SuggestionResult of() {
+    public static SuggestionResult of(){
         return new SuggestionResultImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy SuggestionResult
@@ -90,7 +97,7 @@ public interface SuggestionResult {
     public static SuggestionResultBuilder builder() {
         return SuggestionResultBuilder.of();
     }
-
+    
     /**
      * create builder for SuggestionResult instance
      * @param template instance with prefilled values for the builder
@@ -99,6 +106,7 @@ public interface SuggestionResult {
     public static SuggestionResultBuilder builder(final SuggestionResult template) {
         return SuggestionResultBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -109,7 +117,7 @@ public interface SuggestionResult {
     default <T> T withSuggestionResult(Function<SuggestionResult, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

@@ -1,17 +1,20 @@
-
 package com.commercetools.api.models.common;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
+import com.commercetools.api.models.common.GeoJson;
+import com.commercetools.api.models.common.GeoJsonPointImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * GeoJsonPoint
@@ -24,9 +27,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .plusCoordinates(coordinatesBuilder -> coordinatesBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = GeoJsonPointImpl.class)
 public interface GeoJsonPoint extends GeoJson {
 
@@ -47,24 +53,24 @@ public interface GeoJsonPoint extends GeoJson {
      *  <p>Longitude (stored on index <code>[0]</code>) and latitude (stored on index <code>[1]</code>) of the Point.</p>
      * @param coordinates values to be set
      */
-
+    
     @JsonIgnore
-    public void setCoordinates(final Double... coordinates);
-
+    public void setCoordinates(final Double ...coordinates);
     /**
      *  <p>Longitude (stored on index <code>[0]</code>) and latitude (stored on index <code>[1]</code>) of the Point.</p>
      * @param coordinates values to be set
      */
-
+    
     public void setCoordinates(final List<Double> coordinates);
 
     /**
      * factory method
      * @return instance of GeoJsonPoint
      */
-    public static GeoJsonPoint of() {
+    public static GeoJsonPoint of(){
         return new GeoJsonPointImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy GeoJsonPoint
@@ -88,7 +94,9 @@ public interface GeoJsonPoint extends GeoJson {
             return null;
         }
         GeoJsonPointImpl instance = new GeoJsonPointImpl();
-        instance.setCoordinates(Optional.ofNullable(template.getCoordinates()).map(ArrayList::new).orElse(null));
+        instance.setCoordinates(Optional.ofNullable(template.getCoordinates())
+                .map(ArrayList::new)
+                .orElse(null));
         return instance;
     }
 
@@ -99,7 +107,7 @@ public interface GeoJsonPoint extends GeoJson {
     public static GeoJsonPointBuilder builder() {
         return GeoJsonPointBuilder.of();
     }
-
+    
     /**
      * create builder for GeoJsonPoint instance
      * @param template instance with prefilled values for the builder
@@ -108,6 +116,7 @@ public interface GeoJsonPoint extends GeoJson {
     public static GeoJsonPointBuilder builder(final GeoJsonPoint template) {
         return GeoJsonPointBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -118,7 +127,7 @@ public interface GeoJsonPoint extends GeoJson {
     default <T> T withGeoJsonPoint(Function<GeoJsonPoint, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

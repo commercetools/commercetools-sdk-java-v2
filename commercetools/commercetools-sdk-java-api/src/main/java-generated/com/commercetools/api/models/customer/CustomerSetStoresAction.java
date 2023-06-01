@@ -1,19 +1,21 @@
-
 package com.commercetools.api.models.customer;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-import java.util.stream.Collectors;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-
+import com.commercetools.api.models.customer.CustomerUpdateAction;
 import com.commercetools.api.models.store.StoreResourceIdentifier;
+import com.commercetools.api.models.customer.CustomerSetStoresActionImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Sets the Stores the Customer account is associated with. If no Stores are specified, the Customer becomes a global Customer.</p>
@@ -25,9 +27,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     CustomerSetStoresAction customerSetStoresAction = CustomerSetStoresAction.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = CustomerSetStoresActionImpl.class)
 public interface CustomerSetStoresAction extends CustomerUpdateAction {
 
@@ -48,24 +53,24 @@ public interface CustomerSetStoresAction extends CustomerUpdateAction {
      *  <p>ResourceIdentifier of the Stores to set.</p>
      * @param stores values to be set
      */
-
+    
     @JsonIgnore
-    public void setStores(final StoreResourceIdentifier... stores);
-
+    public void setStores(final StoreResourceIdentifier ...stores);
     /**
      *  <p>ResourceIdentifier of the Stores to set.</p>
      * @param stores values to be set
      */
-
+    
     public void setStores(final List<StoreResourceIdentifier> stores);
 
     /**
      * factory method
      * @return instance of CustomerSetStoresAction
      */
-    public static CustomerSetStoresAction of() {
+    public static CustomerSetStoresAction of(){
         return new CustomerSetStoresActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy CustomerSetStoresAction
@@ -90,9 +95,7 @@ public interface CustomerSetStoresAction extends CustomerUpdateAction {
         }
         CustomerSetStoresActionImpl instance = new CustomerSetStoresActionImpl();
         instance.setStores(Optional.ofNullable(template.getStores())
-                .map(t -> t.stream()
-                        .map(com.commercetools.api.models.store.StoreResourceIdentifier::deepCopy)
-                        .collect(Collectors.toList()))
+                .map(t -> t.stream().map(com.commercetools.api.models.store.StoreResourceIdentifier::deepCopy).collect(Collectors.toList()))
                 .orElse(null));
         return instance;
     }
@@ -104,7 +107,7 @@ public interface CustomerSetStoresAction extends CustomerUpdateAction {
     public static CustomerSetStoresActionBuilder builder() {
         return CustomerSetStoresActionBuilder.of();
     }
-
+    
     /**
      * create builder for CustomerSetStoresAction instance
      * @param template instance with prefilled values for the builder
@@ -113,6 +116,7 @@ public interface CustomerSetStoresAction extends CustomerUpdateAction {
     public static CustomerSetStoresActionBuilder builder(final CustomerSetStoresAction template) {
         return CustomerSetStoresActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -123,7 +127,7 @@ public interface CustomerSetStoresAction extends CustomerUpdateAction {
     default <T> T withCustomerSetStoresAction(Function<CustomerSetStoresAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

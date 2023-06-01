@@ -1,10 +1,11 @@
-
 package com.commercetools.api.models.me;
 
-import java.util.*;
-
+import com.commercetools.api.models.me.MyCustomerUpdateAction;
+import com.commercetools.api.models.me.MyCustomerSetVatIdAction;
 import javax.annotation.Nullable;
-
+import java.util.*;
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -17,32 +18,39 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     MyCustomerSetVatIdAction myCustomerSetVatIdAction = MyCustomerSetVatIdAction.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class MyCustomerSetVatIdActionBuilder implements Builder<MyCustomerSetVatIdAction> {
 
+    
     @Nullable
     private String vatId;
 
+    
     /**
      *  <p>Value to set. If empty, any existing value is removed.</p>
      * @param vatId value to be set
      * @return Builder
      */
-
+    
     public MyCustomerSetVatIdActionBuilder vatId(@Nullable final String vatId) {
         this.vatId = vatId;
         return this;
     }
+    
+    
 
     /**
      *  <p>Value to set. If empty, any existing value is removed.</p>
      * @return vatId
      */
-
+    
     @Nullable
-    public String getVatId() {
+    public String getVatId(){
         return this.vatId;
     }
 
@@ -53,7 +61,7 @@ public class MyCustomerSetVatIdActionBuilder implements Builder<MyCustomerSetVat
     public MyCustomerSetVatIdAction build() {
         return new MyCustomerSetVatIdActionImpl(vatId);
     }
-
+    
     /**
      * builds MyCustomerSetVatIdAction without checking for non-null required values
      * @return MyCustomerSetVatIdAction
@@ -64,7 +72,7 @@ public class MyCustomerSetVatIdActionBuilder implements Builder<MyCustomerSetVat
 
     /**
      * factory method for an instance of MyCustomerSetVatIdActionBuilder
-     * @return builder
+     * @return builder 
      */
     public static MyCustomerSetVatIdActionBuilder of() {
         return new MyCustomerSetVatIdActionBuilder();

@@ -1,9 +1,11 @@
-
 package com.commercetools.api.predicates.query.inventory;
 
 import com.commercetools.api.predicates.query.*;
 
-public class InventoryEntryResourceIdentifierQueryBuilderDsl {
+import java.util.function.Function;
+
+
+public class InventoryEntryResourceIdentifierQueryBuilderDsl  {
     public InventoryEntryResourceIdentifierQueryBuilderDsl() {
     }
 
@@ -12,19 +14,16 @@ public class InventoryEntryResourceIdentifierQueryBuilderDsl {
     }
 
     public StringComparisonPredicateBuilder<InventoryEntryResourceIdentifierQueryBuilderDsl> typeId() {
-        return new StringComparisonPredicateBuilder<>(
-            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("typeId")),
-            p -> new CombinationQueryPredicate<>(p, InventoryEntryResourceIdentifierQueryBuilderDsl::of));
+        return new StringComparisonPredicateBuilder<>(BinaryQueryPredicate.of().left(new ConstantQueryPredicate("typeId")),
+        p -> new CombinationQueryPredicate<>(p, InventoryEntryResourceIdentifierQueryBuilderDsl::of));
     }
-
     public StringComparisonPredicateBuilder<InventoryEntryResourceIdentifierQueryBuilderDsl> id() {
         return new StringComparisonPredicateBuilder<>(BinaryQueryPredicate.of().left(new ConstantQueryPredicate("id")),
-            p -> new CombinationQueryPredicate<>(p, InventoryEntryResourceIdentifierQueryBuilderDsl::of));
+        p -> new CombinationQueryPredicate<>(p, InventoryEntryResourceIdentifierQueryBuilderDsl::of));
     }
-
     public StringComparisonPredicateBuilder<InventoryEntryResourceIdentifierQueryBuilderDsl> key() {
         return new StringComparisonPredicateBuilder<>(BinaryQueryPredicate.of().left(new ConstantQueryPredicate("key")),
-            p -> new CombinationQueryPredicate<>(p, InventoryEntryResourceIdentifierQueryBuilderDsl::of));
+        p -> new CombinationQueryPredicate<>(p, InventoryEntryResourceIdentifierQueryBuilderDsl::of));
     }
-
+    
 }

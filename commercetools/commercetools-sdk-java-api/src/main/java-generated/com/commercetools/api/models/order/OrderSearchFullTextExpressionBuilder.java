@@ -1,9 +1,12 @@
-
 package com.commercetools.api.models.order;
 
+import com.commercetools.api.models.order.OrderSearchFullTextValue;
+import com.commercetools.api.models.order.OrderSearchQueryExpression;
+import com.commercetools.api.models.order.OrderSearchFullTextExpression;
+import javax.annotation.Nullable;
 import java.util.*;
 import java.util.function.Function;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -17,55 +20,61 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .fullText(fullTextBuilder -> fullTextBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class OrderSearchFullTextExpressionBuilder implements Builder<OrderSearchFullTextExpression> {
 
+    
+    
     private com.commercetools.api.models.order.OrderSearchFullTextValue fullText;
 
+    
     /**
      * set the value to the fullText using the builder function
      * @param builder function to build the fullText value
      * @return Builder
      */
-
-    public OrderSearchFullTextExpressionBuilder fullText(
-            Function<com.commercetools.api.models.order.OrderSearchFullTextValueBuilder, com.commercetools.api.models.order.OrderSearchFullTextValueBuilder> builder) {
+    
+    public OrderSearchFullTextExpressionBuilder fullText(Function<com.commercetools.api.models.order.OrderSearchFullTextValueBuilder, com.commercetools.api.models.order.OrderSearchFullTextValueBuilder> builder) {
         this.fullText = builder.apply(com.commercetools.api.models.order.OrderSearchFullTextValueBuilder.of()).build();
         return this;
     }
-
+    
     /**
      * set the value to the fullText using the builder function
      * @param builder function to build the fullText value
      * @return Builder
      */
-
-    public OrderSearchFullTextExpressionBuilder withFullText(
-            Function<com.commercetools.api.models.order.OrderSearchFullTextValueBuilder, com.commercetools.api.models.order.OrderSearchFullTextValue> builder) {
+    
+    public OrderSearchFullTextExpressionBuilder withFullText(Function<com.commercetools.api.models.order.OrderSearchFullTextValueBuilder, com.commercetools.api.models.order.OrderSearchFullTextValue> builder) {
         this.fullText = builder.apply(com.commercetools.api.models.order.OrderSearchFullTextValueBuilder.of());
         return this;
     }
-
+                    
     /**
      * set the value to the fullText
      * @param fullText value to be set
      * @return Builder
      */
-
-    public OrderSearchFullTextExpressionBuilder fullText(
-            final com.commercetools.api.models.order.OrderSearchFullTextValue fullText) {
+    
+    public OrderSearchFullTextExpressionBuilder fullText( final com.commercetools.api.models.order.OrderSearchFullTextValue fullText) {
         this.fullText = fullText;
         return this;
     }
+    
+    
 
     /**
      * value of fullText}
      * @return fullText
      */
-
-    public com.commercetools.api.models.order.OrderSearchFullTextValue getFullText() {
+    
+    
+    public com.commercetools.api.models.order.OrderSearchFullTextValue getFullText(){
         return this.fullText;
     }
 
@@ -77,7 +86,7 @@ public class OrderSearchFullTextExpressionBuilder implements Builder<OrderSearch
         Objects.requireNonNull(fullText, OrderSearchFullTextExpression.class + ": fullText is missing");
         return new OrderSearchFullTextExpressionImpl(fullText);
     }
-
+    
     /**
      * builds OrderSearchFullTextExpression without checking for non-null required values
      * @return OrderSearchFullTextExpression
@@ -88,7 +97,7 @@ public class OrderSearchFullTextExpressionBuilder implements Builder<OrderSearch
 
     /**
      * factory method for an instance of OrderSearchFullTextExpressionBuilder
-     * @return builder
+     * @return builder 
      */
     public static OrderSearchFullTextExpressionBuilder of() {
         return new OrderSearchFullTextExpressionBuilder();

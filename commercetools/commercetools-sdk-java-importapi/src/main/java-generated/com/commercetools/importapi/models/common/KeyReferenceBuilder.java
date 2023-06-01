@@ -1,99 +1,107 @@
-
 package com.commercetools.importapi.models.common;
 
+import com.commercetools.importapi.models.common.CartDiscountKeyReference;
+import com.commercetools.importapi.models.common.CartKeyReference;
+import com.commercetools.importapi.models.common.CategoryKeyReference;
+import com.commercetools.importapi.models.common.ChannelKeyReference;
+import com.commercetools.importapi.models.common.CustomObjectKeyReference;
+import com.commercetools.importapi.models.common.CustomerGroupKeyReference;
+import com.commercetools.importapi.models.common.CustomerKeyReference;
+import com.commercetools.importapi.models.common.DiscountCodeKeyReference;
+import com.commercetools.importapi.models.common.OrderKeyReference;
+import com.commercetools.importapi.models.common.PaymentKeyReference;
+import com.commercetools.importapi.models.common.PriceKeyReference;
+import com.commercetools.importapi.models.common.ProductDiscountKeyReference;
+import com.commercetools.importapi.models.common.ProductKeyReference;
+import com.commercetools.importapi.models.common.ProductTypeKeyReference;
+import com.commercetools.importapi.models.common.ProductVariantKeyReference;
+import com.commercetools.importapi.models.common.ReferenceType;
+import com.commercetools.importapi.models.common.ShippingMethodKeyReference;
+import com.commercetools.importapi.models.common.StateKeyReference;
+import com.commercetools.importapi.models.common.StoreKeyReference;
+import com.commercetools.importapi.models.common.TaxCategoryKeyReference;
+import com.commercetools.importapi.models.common.TypeKeyReference;
+import com.commercetools.importapi.models.common.KeyReference;
+import javax.annotation.Nullable;
 import java.util.*;
-
+import java.util.function.Function;
+import java.time.ZonedDateTime;
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
  * KeyReferenceBuilder
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class KeyReferenceBuilder {
 
     public com.commercetools.importapi.models.common.CartDiscountKeyReferenceBuilder cartDiscountBuilder() {
-        return com.commercetools.importapi.models.common.CartDiscountKeyReferenceBuilder.of();
+       return com.commercetools.importapi.models.common.CartDiscountKeyReferenceBuilder.of();
     }
-
     public com.commercetools.importapi.models.common.CartKeyReferenceBuilder cartBuilder() {
-        return com.commercetools.importapi.models.common.CartKeyReferenceBuilder.of();
+       return com.commercetools.importapi.models.common.CartKeyReferenceBuilder.of();
     }
-
     public com.commercetools.importapi.models.common.CategoryKeyReferenceBuilder categoryBuilder() {
-        return com.commercetools.importapi.models.common.CategoryKeyReferenceBuilder.of();
+       return com.commercetools.importapi.models.common.CategoryKeyReferenceBuilder.of();
     }
-
     public com.commercetools.importapi.models.common.ChannelKeyReferenceBuilder channelBuilder() {
-        return com.commercetools.importapi.models.common.ChannelKeyReferenceBuilder.of();
+       return com.commercetools.importapi.models.common.ChannelKeyReferenceBuilder.of();
     }
-
     public com.commercetools.importapi.models.common.CustomObjectKeyReferenceBuilder keyValueDocumentBuilder() {
-        return com.commercetools.importapi.models.common.CustomObjectKeyReferenceBuilder.of();
+       return com.commercetools.importapi.models.common.CustomObjectKeyReferenceBuilder.of();
     }
-
     public com.commercetools.importapi.models.common.CustomerGroupKeyReferenceBuilder customerGroupBuilder() {
-        return com.commercetools.importapi.models.common.CustomerGroupKeyReferenceBuilder.of();
+       return com.commercetools.importapi.models.common.CustomerGroupKeyReferenceBuilder.of();
     }
-
     public com.commercetools.importapi.models.common.CustomerKeyReferenceBuilder customerBuilder() {
-        return com.commercetools.importapi.models.common.CustomerKeyReferenceBuilder.of();
+       return com.commercetools.importapi.models.common.CustomerKeyReferenceBuilder.of();
     }
-
     public com.commercetools.importapi.models.common.DiscountCodeKeyReferenceBuilder discountCodeBuilder() {
-        return com.commercetools.importapi.models.common.DiscountCodeKeyReferenceBuilder.of();
+       return com.commercetools.importapi.models.common.DiscountCodeKeyReferenceBuilder.of();
     }
-
     public com.commercetools.importapi.models.common.OrderKeyReferenceBuilder orderBuilder() {
-        return com.commercetools.importapi.models.common.OrderKeyReferenceBuilder.of();
+       return com.commercetools.importapi.models.common.OrderKeyReferenceBuilder.of();
     }
-
     public com.commercetools.importapi.models.common.PaymentKeyReferenceBuilder paymentBuilder() {
-        return com.commercetools.importapi.models.common.PaymentKeyReferenceBuilder.of();
+       return com.commercetools.importapi.models.common.PaymentKeyReferenceBuilder.of();
     }
-
     public com.commercetools.importapi.models.common.PriceKeyReferenceBuilder priceBuilder() {
-        return com.commercetools.importapi.models.common.PriceKeyReferenceBuilder.of();
+       return com.commercetools.importapi.models.common.PriceKeyReferenceBuilder.of();
     }
-
     public com.commercetools.importapi.models.common.ProductDiscountKeyReferenceBuilder productDiscountBuilder() {
-        return com.commercetools.importapi.models.common.ProductDiscountKeyReferenceBuilder.of();
+       return com.commercetools.importapi.models.common.ProductDiscountKeyReferenceBuilder.of();
     }
-
     public com.commercetools.importapi.models.common.ProductKeyReferenceBuilder productBuilder() {
-        return com.commercetools.importapi.models.common.ProductKeyReferenceBuilder.of();
+       return com.commercetools.importapi.models.common.ProductKeyReferenceBuilder.of();
     }
-
     public com.commercetools.importapi.models.common.ProductTypeKeyReferenceBuilder productTypeBuilder() {
-        return com.commercetools.importapi.models.common.ProductTypeKeyReferenceBuilder.of();
+       return com.commercetools.importapi.models.common.ProductTypeKeyReferenceBuilder.of();
     }
-
     public com.commercetools.importapi.models.common.ProductVariantKeyReferenceBuilder productVariantBuilder() {
-        return com.commercetools.importapi.models.common.ProductVariantKeyReferenceBuilder.of();
+       return com.commercetools.importapi.models.common.ProductVariantKeyReferenceBuilder.of();
     }
-
     public com.commercetools.importapi.models.common.ShippingMethodKeyReferenceBuilder shippingMethodBuilder() {
-        return com.commercetools.importapi.models.common.ShippingMethodKeyReferenceBuilder.of();
+       return com.commercetools.importapi.models.common.ShippingMethodKeyReferenceBuilder.of();
     }
-
     public com.commercetools.importapi.models.common.StateKeyReferenceBuilder stateBuilder() {
-        return com.commercetools.importapi.models.common.StateKeyReferenceBuilder.of();
+       return com.commercetools.importapi.models.common.StateKeyReferenceBuilder.of();
     }
-
     public com.commercetools.importapi.models.common.StoreKeyReferenceBuilder storeBuilder() {
-        return com.commercetools.importapi.models.common.StoreKeyReferenceBuilder.of();
+       return com.commercetools.importapi.models.common.StoreKeyReferenceBuilder.of();
     }
-
     public com.commercetools.importapi.models.common.TaxCategoryKeyReferenceBuilder taxCategoryBuilder() {
-        return com.commercetools.importapi.models.common.TaxCategoryKeyReferenceBuilder.of();
+       return com.commercetools.importapi.models.common.TaxCategoryKeyReferenceBuilder.of();
     }
-
     public com.commercetools.importapi.models.common.TypeKeyReferenceBuilder typeBuilder() {
-        return com.commercetools.importapi.models.common.TypeKeyReferenceBuilder.of();
+       return com.commercetools.importapi.models.common.TypeKeyReferenceBuilder.of();
     }
 
     /**
      * factory method for an instance of KeyReferenceBuilder
-     * @return builder
+     * @return builder 
      */
     public static KeyReferenceBuilder of() {
         return new KeyReferenceBuilder();

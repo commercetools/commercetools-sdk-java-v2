@@ -1,8 +1,11 @@
-
 package com.commercetools.history.models.change_value;
 
-import java.util.*;
 
+import com.commercetools.history.models.change_value.CustomShippingMethodChangeValue;
+import javax.annotation.Nullable;
+import java.util.*;
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -16,30 +19,39 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .name("{name}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class CustomShippingMethodChangeValueBuilder implements Builder<CustomShippingMethodChangeValue> {
 
+    
+    
     private String name;
 
+    
     /**
      * set the value to the name
      * @param name value to be set
      * @return Builder
      */
-
-    public CustomShippingMethodChangeValueBuilder name(final String name) {
+    
+    public CustomShippingMethodChangeValueBuilder name( final String name) {
         this.name = name;
         return this;
     }
+    
+    
 
     /**
      * value of name}
      * @return name
      */
-
-    public String getName() {
+    
+    
+    public String getName(){
         return this.name;
     }
 
@@ -51,7 +63,7 @@ public class CustomShippingMethodChangeValueBuilder implements Builder<CustomShi
         Objects.requireNonNull(name, CustomShippingMethodChangeValue.class + ": name is missing");
         return new CustomShippingMethodChangeValueImpl(name);
     }
-
+    
     /**
      * builds CustomShippingMethodChangeValue without checking for non-null required values
      * @return CustomShippingMethodChangeValue
@@ -62,7 +74,7 @@ public class CustomShippingMethodChangeValueBuilder implements Builder<CustomShi
 
     /**
      * factory method for an instance of CustomShippingMethodChangeValueBuilder
-     * @return builder
+     * @return builder 
      */
     public static CustomShippingMethodChangeValueBuilder of() {
         return new CustomShippingMethodChangeValueBuilder();

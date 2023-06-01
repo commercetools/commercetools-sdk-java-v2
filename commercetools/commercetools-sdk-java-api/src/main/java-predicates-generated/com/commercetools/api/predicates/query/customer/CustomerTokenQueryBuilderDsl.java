@@ -1,9 +1,11 @@
-
 package com.commercetools.api.predicates.query.customer;
 
 import com.commercetools.api.predicates.query.*;
 
-public class CustomerTokenQueryBuilderDsl {
+import java.util.function.Function;
+
+
+public class CustomerTokenQueryBuilderDsl  {
     public CustomerTokenQueryBuilderDsl() {
     }
 
@@ -13,37 +15,27 @@ public class CustomerTokenQueryBuilderDsl {
 
     public StringComparisonPredicateBuilder<CustomerTokenQueryBuilderDsl> id() {
         return new StringComparisonPredicateBuilder<>(BinaryQueryPredicate.of().left(new ConstantQueryPredicate("id")),
-            p -> new CombinationQueryPredicate<>(p, CustomerTokenQueryBuilderDsl::of));
+        p -> new CombinationQueryPredicate<>(p, CustomerTokenQueryBuilderDsl::of));
     }
-
     public DateTimeComparisonPredicateBuilder<CustomerTokenQueryBuilderDsl> createdAt() {
-        return new DateTimeComparisonPredicateBuilder<>(
-            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("createdAt")),
-            p -> new CombinationQueryPredicate<>(p, CustomerTokenQueryBuilderDsl::of));
+        return new DateTimeComparisonPredicateBuilder<>(BinaryQueryPredicate.of().left(new ConstantQueryPredicate("createdAt")),
+        p -> new CombinationQueryPredicate<>(p, CustomerTokenQueryBuilderDsl::of));
     }
-
     public DateTimeComparisonPredicateBuilder<CustomerTokenQueryBuilderDsl> lastModifiedAt() {
-        return new DateTimeComparisonPredicateBuilder<>(
-            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("lastModifiedAt")),
-            p -> new CombinationQueryPredicate<>(p, CustomerTokenQueryBuilderDsl::of));
+        return new DateTimeComparisonPredicateBuilder<>(BinaryQueryPredicate.of().left(new ConstantQueryPredicate("lastModifiedAt")),
+        p -> new CombinationQueryPredicate<>(p, CustomerTokenQueryBuilderDsl::of));
     }
-
     public StringComparisonPredicateBuilder<CustomerTokenQueryBuilderDsl> customerId() {
-        return new StringComparisonPredicateBuilder<>(
-            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("customerId")),
-            p -> new CombinationQueryPredicate<>(p, CustomerTokenQueryBuilderDsl::of));
+        return new StringComparisonPredicateBuilder<>(BinaryQueryPredicate.of().left(new ConstantQueryPredicate("customerId")),
+        p -> new CombinationQueryPredicate<>(p, CustomerTokenQueryBuilderDsl::of));
     }
-
     public DateTimeComparisonPredicateBuilder<CustomerTokenQueryBuilderDsl> expiresAt() {
-        return new DateTimeComparisonPredicateBuilder<>(
-            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("expiresAt")),
-            p -> new CombinationQueryPredicate<>(p, CustomerTokenQueryBuilderDsl::of));
+        return new DateTimeComparisonPredicateBuilder<>(BinaryQueryPredicate.of().left(new ConstantQueryPredicate("expiresAt")),
+        p -> new CombinationQueryPredicate<>(p, CustomerTokenQueryBuilderDsl::of));
     }
-
     public StringComparisonPredicateBuilder<CustomerTokenQueryBuilderDsl> value() {
-        return new StringComparisonPredicateBuilder<>(
-            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("value")),
-            p -> new CombinationQueryPredicate<>(p, CustomerTokenQueryBuilderDsl::of));
+        return new StringComparisonPredicateBuilder<>(BinaryQueryPredicate.of().left(new ConstantQueryPredicate("value")),
+        p -> new CombinationQueryPredicate<>(p, CustomerTokenQueryBuilderDsl::of));
     }
-
+    
 }

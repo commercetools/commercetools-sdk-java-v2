@@ -1,19 +1,20 @@
-
 package com.commercetools.api.models.type;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
 import com.commercetools.api.models.common.LocalizedString;
+import com.commercetools.api.models.type.CustomFieldLocalizedEnumValueImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Defines an allowed value of a CustomFieldLocalizedEnumType field.</p>
@@ -27,11 +28,15 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .label(labelBuilder -> labelBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = CustomFieldLocalizedEnumValueImpl.class)
-public interface CustomFieldLocalizedEnumValue {
+public interface CustomFieldLocalizedEnumValue  {
+
 
     /**
      *  <p>Key of the value used as a programmatic identifier.</p>
@@ -40,7 +45,6 @@ public interface CustomFieldLocalizedEnumValue {
     @NotNull
     @JsonProperty("key")
     public String getKey();
-
     /**
      *  <p>Descriptive localized label of the value.</p>
      * @return label
@@ -54,23 +58,26 @@ public interface CustomFieldLocalizedEnumValue {
      *  <p>Key of the value used as a programmatic identifier.</p>
      * @param key value to be set
      */
-
+    
     public void setKey(final String key);
-
+    
+    
     /**
      *  <p>Descriptive localized label of the value.</p>
      * @param label value to be set
      */
-
+    
     public void setLabel(final LocalizedString label);
+    
 
     /**
      * factory method
      * @return instance of CustomFieldLocalizedEnumValue
      */
-    public static CustomFieldLocalizedEnumValue of() {
+    public static CustomFieldLocalizedEnumValue of(){
         return new CustomFieldLocalizedEnumValueImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy CustomFieldLocalizedEnumValue
@@ -107,7 +114,7 @@ public interface CustomFieldLocalizedEnumValue {
     public static CustomFieldLocalizedEnumValueBuilder builder() {
         return CustomFieldLocalizedEnumValueBuilder.of();
     }
-
+    
     /**
      * create builder for CustomFieldLocalizedEnumValue instance
      * @param template instance with prefilled values for the builder
@@ -116,6 +123,7 @@ public interface CustomFieldLocalizedEnumValue {
     public static CustomFieldLocalizedEnumValueBuilder builder(final CustomFieldLocalizedEnumValue template) {
         return CustomFieldLocalizedEnumValueBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -126,7 +134,7 @@ public interface CustomFieldLocalizedEnumValue {
     default <T> T withCustomFieldLocalizedEnumValue(Function<CustomFieldLocalizedEnumValue, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

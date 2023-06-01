@@ -1,8 +1,11 @@
-
 package com.commercetools.api.models.shipping_method;
 
+import com.commercetools.api.models.shipping_method.ShippingMethodUpdateAction;
+import com.commercetools.api.models.shipping_method.ShippingMethodChangeIsDefaultAction;
+import javax.annotation.Nullable;
 import java.util.*;
-
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -16,30 +19,39 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .isDefault(true)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class ShippingMethodChangeIsDefaultActionBuilder implements Builder<ShippingMethodChangeIsDefaultAction> {
 
+    
+    
     private Boolean isDefault;
 
+    
     /**
      *  <p>Value to set. Only one ShippingMethod can be default in a Project.</p>
      * @param isDefault value to be set
      * @return Builder
      */
-
-    public ShippingMethodChangeIsDefaultActionBuilder isDefault(final Boolean isDefault) {
+    
+    public ShippingMethodChangeIsDefaultActionBuilder isDefault( final Boolean isDefault) {
         this.isDefault = isDefault;
         return this;
     }
+    
+    
 
     /**
      *  <p>Value to set. Only one ShippingMethod can be default in a Project.</p>
      * @return isDefault
      */
-
-    public Boolean getIsDefault() {
+    
+    
+    public Boolean getIsDefault(){
         return this.isDefault;
     }
 
@@ -51,7 +63,7 @@ public class ShippingMethodChangeIsDefaultActionBuilder implements Builder<Shipp
         Objects.requireNonNull(isDefault, ShippingMethodChangeIsDefaultAction.class + ": isDefault is missing");
         return new ShippingMethodChangeIsDefaultActionImpl(isDefault);
     }
-
+    
     /**
      * builds ShippingMethodChangeIsDefaultAction without checking for non-null required values
      * @return ShippingMethodChangeIsDefaultAction
@@ -62,7 +74,7 @@ public class ShippingMethodChangeIsDefaultActionBuilder implements Builder<Shipp
 
     /**
      * factory method for an instance of ShippingMethodChangeIsDefaultActionBuilder
-     * @return builder
+     * @return builder 
      */
     public static ShippingMethodChangeIsDefaultActionBuilder of() {
         return new ShippingMethodChangeIsDefaultActionBuilder();

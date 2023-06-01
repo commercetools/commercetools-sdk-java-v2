@@ -1,17 +1,20 @@
-
 package com.commercetools.api.models.cart;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
+import com.commercetools.api.models.cart.CartUpdateAction;
+import com.commercetools.api.models.cart.CartRemoveShippingMethodActionImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Removes a Shipping Method from a Cart that has the <code>Multiple</code> ShippingMode.</p>
@@ -24,9 +27,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .shippingKey("{shippingKey}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = CartRemoveShippingMethodActionImpl.class)
 public interface CartRemoveShippingMethodAction extends CartUpdateAction {
 
@@ -47,16 +53,18 @@ public interface CartRemoveShippingMethodAction extends CartUpdateAction {
      *  <p>User-defined unique identifier of the Shipping Method to remove from the Cart.</p>
      * @param shippingKey value to be set
      */
-
+    
     public void setShippingKey(final String shippingKey);
+    
 
     /**
      * factory method
      * @return instance of CartRemoveShippingMethodAction
      */
-    public static CartRemoveShippingMethodAction of() {
+    public static CartRemoveShippingMethodAction of(){
         return new CartRemoveShippingMethodActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy CartRemoveShippingMethodAction
@@ -91,7 +99,7 @@ public interface CartRemoveShippingMethodAction extends CartUpdateAction {
     public static CartRemoveShippingMethodActionBuilder builder() {
         return CartRemoveShippingMethodActionBuilder.of();
     }
-
+    
     /**
      * create builder for CartRemoveShippingMethodAction instance
      * @param template instance with prefilled values for the builder
@@ -100,6 +108,7 @@ public interface CartRemoveShippingMethodAction extends CartUpdateAction {
     public static CartRemoveShippingMethodActionBuilder builder(final CartRemoveShippingMethodAction template) {
         return CartRemoveShippingMethodActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -110,7 +119,7 @@ public interface CartRemoveShippingMethodAction extends CartUpdateAction {
     default <T> T withCartRemoveShippingMethodAction(Function<CartRemoveShippingMethodAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

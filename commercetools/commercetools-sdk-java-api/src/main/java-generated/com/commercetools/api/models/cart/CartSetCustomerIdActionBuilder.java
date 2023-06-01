@@ -1,10 +1,11 @@
-
 package com.commercetools.api.models.cart;
 
-import java.util.*;
-
+import com.commercetools.api.models.cart.CartUpdateAction;
+import com.commercetools.api.models.cart.CartSetCustomerIdAction;
 import javax.annotation.Nullable;
-
+import java.util.*;
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -17,32 +18,39 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     CartSetCustomerIdAction cartSetCustomerIdAction = CartSetCustomerIdAction.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class CartSetCustomerIdActionBuilder implements Builder<CartSetCustomerIdAction> {
 
+    
     @Nullable
     private String customerId;
 
+    
     /**
      *  <p><code>id</code> of an existing Customer. If empty, any value is removed.</p>
      * @param customerId value to be set
      * @return Builder
      */
-
+    
     public CartSetCustomerIdActionBuilder customerId(@Nullable final String customerId) {
         this.customerId = customerId;
         return this;
     }
+    
+    
 
     /**
      *  <p><code>id</code> of an existing Customer. If empty, any value is removed.</p>
      * @return customerId
      */
-
+    
     @Nullable
-    public String getCustomerId() {
+    public String getCustomerId(){
         return this.customerId;
     }
 
@@ -53,7 +61,7 @@ public class CartSetCustomerIdActionBuilder implements Builder<CartSetCustomerId
     public CartSetCustomerIdAction build() {
         return new CartSetCustomerIdActionImpl(customerId);
     }
-
+    
     /**
      * builds CartSetCustomerIdAction without checking for non-null required values
      * @return CartSetCustomerIdAction
@@ -64,7 +72,7 @@ public class CartSetCustomerIdActionBuilder implements Builder<CartSetCustomerId
 
     /**
      * factory method for an instance of CartSetCustomerIdActionBuilder
-     * @return builder
+     * @return builder 
      */
     public static CartSetCustomerIdActionBuilder of() {
         return new CartSetCustomerIdActionBuilder();

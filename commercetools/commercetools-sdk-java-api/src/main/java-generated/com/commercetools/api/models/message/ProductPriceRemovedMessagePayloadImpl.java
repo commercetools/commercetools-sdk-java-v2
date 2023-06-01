@@ -1,117 +1,132 @@
-
 package com.commercetools.api.models.message;
 
-import java.time.*;
-import java.util.*;
-
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
-
-import io.vrap.rmf.base.client.ModelBase;
+import com.commercetools.api.models.common.Price;
+import com.commercetools.api.models.message.MessagePayload;
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.ModelBase;
+import javax.validation.Valid;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.annotation.*;
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
  *  <p>Generated after a successful Remove Embedded Price update action.</p>
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class ProductPriceRemovedMessagePayloadImpl implements ProductPriceRemovedMessagePayload, ModelBase {
 
+    
     private String type;
-
+    
+    
     private Long variantId;
-
+    
+    
     private com.commercetools.api.models.common.Price price;
-
+    
+    
     private Boolean staged;
 
     /**
      * create instance with all properties
      */
     @JsonCreator
-    ProductPriceRemovedMessagePayloadImpl(@JsonProperty("variantId") final Long variantId,
-            @JsonProperty("price") final com.commercetools.api.models.common.Price price,
-            @JsonProperty("staged") final Boolean staged) {
+    ProductPriceRemovedMessagePayloadImpl(@JsonProperty("variantId") final Long variantId, @JsonProperty("price") final com.commercetools.api.models.common.Price price, @JsonProperty("staged") final Boolean staged) {
         this.variantId = variantId;
         this.price = price;
         this.staged = staged;
-        this.type = PRODUCT_PRICE_REMOVED;
+        this.type =  PRODUCT_PRICE_REMOVED;
     }
-
     /**
      * create empty instance
      */
     public ProductPriceRemovedMessagePayloadImpl() {
-        this.type = PRODUCT_PRICE_REMOVED;
+        this.type =  PRODUCT_PRICE_REMOVED;
     }
 
     /**
      *
      */
-
-    public String getType() {
+    
+    public String getType(){
         return this.type;
     }
-
+    
     /**
      *  <p>Unique identifier of the ProductVariant for which the Price was removed.</p>
      */
-
-    public Long getVariantId() {
+    
+    public Long getVariantId(){
         return this.variantId;
     }
-
+    
     /**
      *  <p>The Embedded Price that was removed from the ProductVariant.</p>
      */
-
-    public com.commercetools.api.models.common.Price getPrice() {
+    
+    public com.commercetools.api.models.common.Price getPrice(){
         return this.price;
     }
-
+    
     /**
      *  <p>Whether the update was only applied to the staged Product Projection.</p>
      */
-
-    public Boolean getStaged() {
+    
+    public Boolean getStaged(){
         return this.staged;
     }
 
-    public void setVariantId(final Long variantId) {
+    
+    public void setVariantId(final Long variantId){
         this.variantId = variantId;
     }
-
-    public void setPrice(final com.commercetools.api.models.common.Price price) {
+    
+    
+    public void setPrice(final com.commercetools.api.models.common.Price price){
         this.price = price;
     }
-
-    public void setStaged(final Boolean staged) {
+    
+    
+    public void setStaged(final Boolean staged){
         this.staged = staged;
     }
 
     @Override
     public boolean equals(Object o) {
-        if (this == o)
-            return true;
-
-        if (o == null || getClass() != o.getClass())
-            return false;
-
+        if (this == o) return true;
+    
+        if (o == null || getClass() != o.getClass()) return false;
+    
         ProductPriceRemovedMessagePayloadImpl that = (ProductPriceRemovedMessagePayloadImpl) o;
-
-        return new EqualsBuilder().append(type, that.type)
+    
+        return new EqualsBuilder()
+                .append(type, that.type)
                 .append(variantId, that.variantId)
                 .append(price, that.price)
                 .append(staged, that.staged)
                 .isEquals();
     }
-
+    
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(type).append(variantId).append(price).append(staged).toHashCode();
+        return new HashCodeBuilder(17, 37)
+            .append(type)
+            .append(variantId)
+            .append(price)
+            .append(staged)
+            .toHashCode();
     }
 
 }

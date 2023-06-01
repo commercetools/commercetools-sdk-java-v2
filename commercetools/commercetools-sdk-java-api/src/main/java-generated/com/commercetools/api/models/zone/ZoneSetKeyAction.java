@@ -1,16 +1,20 @@
-
 package com.commercetools.api.models.zone;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
+import com.commercetools.api.models.zone.ZoneUpdateAction;
+import com.commercetools.api.models.zone.ZoneSetKeyActionImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * ZoneSetKeyAction
@@ -22,9 +26,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     ZoneSetKeyAction zoneSetKeyAction = ZoneSetKeyAction.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = ZoneSetKeyActionImpl.class)
 public interface ZoneSetKeyAction extends ZoneUpdateAction {
 
@@ -37,7 +44,7 @@ public interface ZoneSetKeyAction extends ZoneUpdateAction {
      *  <p>If <code>key</code> is absent or <code>null</code>, the existing key, if any, will be removed.</p>
      * @return key
      */
-
+    
     @JsonProperty("key")
     public String getKey();
 
@@ -45,16 +52,18 @@ public interface ZoneSetKeyAction extends ZoneUpdateAction {
      *  <p>If <code>key</code> is absent or <code>null</code>, the existing key, if any, will be removed.</p>
      * @param key value to be set
      */
-
+    
     public void setKey(final String key);
+    
 
     /**
      * factory method
      * @return instance of ZoneSetKeyAction
      */
-    public static ZoneSetKeyAction of() {
+    public static ZoneSetKeyAction of(){
         return new ZoneSetKeyActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy ZoneSetKeyAction
@@ -89,7 +98,7 @@ public interface ZoneSetKeyAction extends ZoneUpdateAction {
     public static ZoneSetKeyActionBuilder builder() {
         return ZoneSetKeyActionBuilder.of();
     }
-
+    
     /**
      * create builder for ZoneSetKeyAction instance
      * @param template instance with prefilled values for the builder
@@ -98,6 +107,7 @@ public interface ZoneSetKeyAction extends ZoneUpdateAction {
     public static ZoneSetKeyActionBuilder builder(final ZoneSetKeyAction template) {
         return ZoneSetKeyActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -108,7 +118,7 @@ public interface ZoneSetKeyAction extends ZoneUpdateAction {
     default <T> T withZoneSetKeyAction(Function<ZoneSetKeyAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

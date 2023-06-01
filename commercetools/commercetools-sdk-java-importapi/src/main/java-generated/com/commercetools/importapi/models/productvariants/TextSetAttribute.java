@@ -1,17 +1,20 @@
-
 package com.commercetools.importapi.models.productvariants;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
+import com.commercetools.importapi.models.productvariants.Attribute;
+import com.commercetools.importapi.models.productvariants.TextSetAttributeImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>This type represents an attribute whose value is a set of strings.</p>
@@ -24,9 +27,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .plusValue(valueBuilder -> valueBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = TextSetAttributeImpl.class)
 public interface TextSetAttribute extends Attribute {
 
@@ -47,24 +53,24 @@ public interface TextSetAttribute extends Attribute {
      * set value
      * @param value values to be set
      */
-
+    
     @JsonIgnore
-    public void setValue(final String... value);
-
+    public void setValue(final String ...value);
     /**
      * set value
      * @param value values to be set
      */
-
+    
     public void setValue(final List<String> value);
 
     /**
      * factory method
      * @return instance of TextSetAttribute
      */
-    public static TextSetAttribute of() {
+    public static TextSetAttribute of(){
         return new TextSetAttributeImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy TextSetAttribute
@@ -90,7 +96,9 @@ public interface TextSetAttribute extends Attribute {
         }
         TextSetAttributeImpl instance = new TextSetAttributeImpl();
         instance.setName(template.getName());
-        instance.setValue(Optional.ofNullable(template.getValue()).map(ArrayList::new).orElse(null));
+        instance.setValue(Optional.ofNullable(template.getValue())
+                .map(ArrayList::new)
+                .orElse(null));
         return instance;
     }
 
@@ -101,7 +109,7 @@ public interface TextSetAttribute extends Attribute {
     public static TextSetAttributeBuilder builder() {
         return TextSetAttributeBuilder.of();
     }
-
+    
     /**
      * create builder for TextSetAttribute instance
      * @param template instance with prefilled values for the builder
@@ -110,6 +118,7 @@ public interface TextSetAttribute extends Attribute {
     public static TextSetAttributeBuilder builder(final TextSetAttribute template) {
         return TextSetAttributeBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -120,7 +129,7 @@ public interface TextSetAttribute extends Attribute {
     default <T> T withTextSetAttribute(Function<TextSetAttribute, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

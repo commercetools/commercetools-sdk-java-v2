@@ -1,29 +1,31 @@
-
 package com.commercetools.api.models.product_selection;
-
-import java.util.Arrays;
-import java.util.Optional;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-
+import java.lang.String;
+import java.util.Arrays;
+import java.util.Optional;
 import io.vrap.rmf.base.client.JsonEnum;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
  * ProductVariantSelectionTypeEnum
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public interface ProductVariantSelectionTypeEnum extends JsonEnum {
 
+    
     ProductVariantSelectionTypeEnum INCLUSION = ProductVariantSelectionTypeEnumEnum.INCLUSION;
-
+    
     ProductVariantSelectionTypeEnum EXCLUSION = ProductVariantSelectionTypeEnumEnum.EXCLUSION;
-
+    
     ProductVariantSelectionTypeEnum INCLUDE_ONLY = ProductVariantSelectionTypeEnumEnum.INCLUDE_ONLY;
-
+    
     ProductVariantSelectionTypeEnum INCLUDE_ALL_EXCEPT = ProductVariantSelectionTypeEnumEnum.INCLUDE_ALL_EXCEPT;
-
+    
     /**
      * possible values of ProductVariantSelectionTypeEnum
      */
@@ -32,17 +34,17 @@ public interface ProductVariantSelectionTypeEnum extends JsonEnum {
          * inclusion
          */
         INCLUSION("inclusion"),
-
+        
         /**
          * exclusion
          */
         EXCLUSION("exclusion"),
-
+        
         /**
          * includeOnly
          */
         INCLUDE_ONLY("includeOnly"),
-
+        
         /**
          * includeAllExcept
          */
@@ -99,7 +101,7 @@ public interface ProductVariantSelectionTypeEnum extends JsonEnum {
             public String name() {
                 return value.toUpperCase();
             }
-
+            
             public String toString() {
                 return value;
             }
@@ -114,7 +116,7 @@ public interface ProductVariantSelectionTypeEnum extends JsonEnum {
     public static Optional<ProductVariantSelectionTypeEnum> findEnumViaJsonName(String jsonName) {
         return Arrays.stream(values()).filter(t -> t.getJsonName().equals(jsonName)).findFirst();
     }
-
+    
     /**
      * possible enum values
      * @return array of possible enum values
@@ -122,5 +124,5 @@ public interface ProductVariantSelectionTypeEnum extends JsonEnum {
     public static ProductVariantSelectionTypeEnum[] values() {
         return ProductVariantSelectionTypeEnumEnum.values();
     }
-
+    
 }

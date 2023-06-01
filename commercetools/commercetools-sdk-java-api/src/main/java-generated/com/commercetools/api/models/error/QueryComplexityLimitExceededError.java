@@ -1,17 +1,20 @@
-
 package com.commercetools.api.models.error;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
+import com.commercetools.api.models.error.ErrorObject;
+import com.commercetools.api.models.error.QueryComplexityLimitExceededErrorImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * QueryComplexityLimitExceededError
@@ -24,9 +27,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .message("{message}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = QueryComplexityLimitExceededErrorImpl.class)
 public interface QueryComplexityLimitExceededError extends ErrorObject {
 
@@ -42,7 +48,6 @@ public interface QueryComplexityLimitExceededError extends ErrorObject {
     @NotNull
     @JsonProperty("code")
     public String getCode();
-
     /**
      *
      * @return message
@@ -55,16 +60,18 @@ public interface QueryComplexityLimitExceededError extends ErrorObject {
      * set message
      * @param message value to be set
      */
-
+    
     public void setMessage(final String message);
+    
 
     /**
      * factory method
      * @return instance of QueryComplexityLimitExceededError
      */
-    public static QueryComplexityLimitExceededError of() {
+    public static QueryComplexityLimitExceededError of(){
         return new QueryComplexityLimitExceededErrorImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy QueryComplexityLimitExceededError
@@ -84,8 +91,7 @@ public interface QueryComplexityLimitExceededError extends ErrorObject {
      * @return copy instance
      */
     @Nullable
-    public static QueryComplexityLimitExceededError deepCopy(
-            @Nullable final QueryComplexityLimitExceededError template) {
+    public static QueryComplexityLimitExceededError deepCopy(@Nullable final QueryComplexityLimitExceededError template) {
         if (template == null) {
             return null;
         }
@@ -102,7 +108,7 @@ public interface QueryComplexityLimitExceededError extends ErrorObject {
     public static QueryComplexityLimitExceededErrorBuilder builder() {
         return QueryComplexityLimitExceededErrorBuilder.of();
     }
-
+    
     /**
      * create builder for QueryComplexityLimitExceededError instance
      * @param template instance with prefilled values for the builder
@@ -111,6 +117,7 @@ public interface QueryComplexityLimitExceededError extends ErrorObject {
     public static QueryComplexityLimitExceededErrorBuilder builder(final QueryComplexityLimitExceededError template) {
         return QueryComplexityLimitExceededErrorBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -121,7 +128,7 @@ public interface QueryComplexityLimitExceededError extends ErrorObject {
     default <T> T withQueryComplexityLimitExceededError(Function<QueryComplexityLimitExceededError, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

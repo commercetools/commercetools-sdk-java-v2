@@ -1,17 +1,20 @@
-
 package com.commercetools.api.models.cart;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
+import com.commercetools.api.models.cart.ShippingRateInput;
+import com.commercetools.api.models.cart.ScoreShippingRateInputImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * ScoreShippingRateInput
@@ -24,9 +27,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .score(0.3)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = ScoreShippingRateInputImpl.class)
 public interface ScoreShippingRateInput extends ShippingRateInput {
 
@@ -47,16 +53,18 @@ public interface ScoreShippingRateInput extends ShippingRateInput {
      *  <p>Abstract value for categorizing a Cart.</p>
      * @param score value to be set
      */
-
+    
     public void setScore(final Long score);
+    
 
     /**
      * factory method
      * @return instance of ScoreShippingRateInput
      */
-    public static ScoreShippingRateInput of() {
+    public static ScoreShippingRateInput of(){
         return new ScoreShippingRateInputImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy ScoreShippingRateInput
@@ -91,7 +99,7 @@ public interface ScoreShippingRateInput extends ShippingRateInput {
     public static ScoreShippingRateInputBuilder builder() {
         return ScoreShippingRateInputBuilder.of();
     }
-
+    
     /**
      * create builder for ScoreShippingRateInput instance
      * @param template instance with prefilled values for the builder
@@ -100,6 +108,7 @@ public interface ScoreShippingRateInput extends ShippingRateInput {
     public static ScoreShippingRateInputBuilder builder(final ScoreShippingRateInput template) {
         return ScoreShippingRateInputBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -110,7 +119,7 @@ public interface ScoreShippingRateInput extends ShippingRateInput {
     default <T> T withScoreShippingRateInput(Function<ScoreShippingRateInput, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

@@ -1,8 +1,11 @@
-
 package com.commercetools.api.models.product;
 
+import com.commercetools.api.models.product.ProductUpdateAction;
+import com.commercetools.api.models.product.ProductRevertStagedChangesAction;
+import javax.annotation.Nullable;
 import java.util.*;
-
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -15,10 +18,16 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     ProductRevertStagedChangesAction productRevertStagedChangesAction = ProductRevertStagedChangesAction.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class ProductRevertStagedChangesActionBuilder implements Builder<ProductRevertStagedChangesAction> {
+
+
+
 
     /**
      * builds ProductRevertStagedChangesAction with checking for non-null required values
@@ -27,7 +36,7 @@ public class ProductRevertStagedChangesActionBuilder implements Builder<ProductR
     public ProductRevertStagedChangesAction build() {
         return new ProductRevertStagedChangesActionImpl();
     }
-
+    
     /**
      * builds ProductRevertStagedChangesAction without checking for non-null required values
      * @return ProductRevertStagedChangesAction
@@ -38,7 +47,7 @@ public class ProductRevertStagedChangesActionBuilder implements Builder<ProductR
 
     /**
      * factory method for an instance of ProductRevertStagedChangesActionBuilder
-     * @return builder
+     * @return builder 
      */
     public static ProductRevertStagedChangesActionBuilder of() {
         return new ProductRevertStagedChangesActionBuilder();

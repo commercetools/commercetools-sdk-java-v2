@@ -1,8 +1,11 @@
-
 package com.commercetools.importapi.models.importsummaries;
 
-import java.util.*;
 
+import com.commercetools.importapi.models.importsummaries.OperationStates;
+import javax.annotation.Nullable;
+import java.util.*;
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -21,140 +24,179 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .rejected(1)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class OperationStatesBuilder implements Builder<OperationStates> {
 
+    
+    
     private Long processing;
-
+    
+    
+    
     private Long validationFailed;
-
+    
+    
+    
     private Long unresolved;
-
+    
+    
+    
     private Long waitForMasterVariant;
-
+    
+    
+    
     private Long imported;
-
+    
+    
+    
     private Long rejected;
 
+    
     /**
      *  <p>The number of resources in the <code>processing</code> state.</p>
      * @param processing value to be set
      * @return Builder
      */
-
-    public OperationStatesBuilder processing(final Long processing) {
+    
+    public OperationStatesBuilder processing( final Long processing) {
         this.processing = processing;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>The number of resources in the <code>validationFailed</code> state.</p>
      * @param validationFailed value to be set
      * @return Builder
      */
-
-    public OperationStatesBuilder validationFailed(final Long validationFailed) {
+    
+    public OperationStatesBuilder validationFailed( final Long validationFailed) {
         this.validationFailed = validationFailed;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>The number of resources in the <code>unresolved</code> state.</p>
      * @param unresolved value to be set
      * @return Builder
      */
-
-    public OperationStatesBuilder unresolved(final Long unresolved) {
+    
+    public OperationStatesBuilder unresolved( final Long unresolved) {
         this.unresolved = unresolved;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>The number of resources in the <code>waitForMasterVariant</code> state.</p>
      * @param waitForMasterVariant value to be set
      * @return Builder
      */
-
-    public OperationStatesBuilder waitForMasterVariant(final Long waitForMasterVariant) {
+    
+    public OperationStatesBuilder waitForMasterVariant( final Long waitForMasterVariant) {
         this.waitForMasterVariant = waitForMasterVariant;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>The number of resources in the <code>imported</code> state.</p>
      * @param imported value to be set
      * @return Builder
      */
-
-    public OperationStatesBuilder imported(final Long imported) {
+    
+    public OperationStatesBuilder imported( final Long imported) {
         this.imported = imported;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>The number of resources in the <code>rejected</code> state.</p>
      * @param rejected value to be set
      * @return Builder
      */
-
-    public OperationStatesBuilder rejected(final Long rejected) {
+    
+    public OperationStatesBuilder rejected( final Long rejected) {
         this.rejected = rejected;
         return this;
     }
+    
+    
 
     /**
      *  <p>The number of resources in the <code>processing</code> state.</p>
      * @return processing
      */
-
-    public Long getProcessing() {
+    
+    
+    public Long getProcessing(){
         return this.processing;
     }
-
+    
     /**
      *  <p>The number of resources in the <code>validationFailed</code> state.</p>
      * @return validationFailed
      */
-
-    public Long getValidationFailed() {
+    
+    
+    public Long getValidationFailed(){
         return this.validationFailed;
     }
-
+    
     /**
      *  <p>The number of resources in the <code>unresolved</code> state.</p>
      * @return unresolved
      */
-
-    public Long getUnresolved() {
+    
+    
+    public Long getUnresolved(){
         return this.unresolved;
     }
-
+    
     /**
      *  <p>The number of resources in the <code>waitForMasterVariant</code> state.</p>
      * @return waitForMasterVariant
      */
-
-    public Long getWaitForMasterVariant() {
+    
+    
+    public Long getWaitForMasterVariant(){
         return this.waitForMasterVariant;
     }
-
+    
     /**
      *  <p>The number of resources in the <code>imported</code> state.</p>
      * @return imported
      */
-
-    public Long getImported() {
+    
+    
+    public Long getImported(){
         return this.imported;
     }
-
+    
     /**
      *  <p>The number of resources in the <code>rejected</code> state.</p>
      * @return rejected
      */
-
-    public Long getRejected() {
+    
+    
+    public Long getRejected(){
         return this.rejected;
     }
 
@@ -169,22 +211,20 @@ public class OperationStatesBuilder implements Builder<OperationStates> {
         Objects.requireNonNull(waitForMasterVariant, OperationStates.class + ": waitForMasterVariant is missing");
         Objects.requireNonNull(imported, OperationStates.class + ": imported is missing");
         Objects.requireNonNull(rejected, OperationStates.class + ": rejected is missing");
-        return new OperationStatesImpl(processing, validationFailed, unresolved, waitForMasterVariant, imported,
-            rejected);
+        return new OperationStatesImpl(processing, validationFailed, unresolved, waitForMasterVariant, imported, rejected);
     }
-
+    
     /**
      * builds OperationStates without checking for non-null required values
      * @return OperationStates
      */
     public OperationStates buildUnchecked() {
-        return new OperationStatesImpl(processing, validationFailed, unresolved, waitForMasterVariant, imported,
-            rejected);
+        return new OperationStatesImpl(processing, validationFailed, unresolved, waitForMasterVariant, imported, rejected);
     }
 
     /**
      * factory method for an instance of OperationStatesBuilder
-     * @return builder
+     * @return builder 
      */
     public static OperationStatesBuilder of() {
         return new OperationStatesBuilder();

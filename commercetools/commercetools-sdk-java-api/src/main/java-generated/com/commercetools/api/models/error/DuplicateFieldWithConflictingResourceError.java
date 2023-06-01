@@ -1,19 +1,22 @@
-
 package com.commercetools.api.models.error;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
 import com.commercetools.api.models.common.Reference;
+import com.commercetools.api.models.error.ErrorObject;
+import java.lang.Object;
+import com.commercetools.api.models.error.DuplicateFieldWithConflictingResourceErrorImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Returned when a field value conflicts with an existing value stored in a particular resource causing a duplicate.</p>
@@ -28,9 +31,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .conflictingResource(conflictingResourceBuilder -> conflictingResourceBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = DuplicateFieldWithConflictingResourceErrorImpl.class)
 public interface DuplicateFieldWithConflictingResourceError extends ErrorObject {
 
@@ -46,7 +52,6 @@ public interface DuplicateFieldWithConflictingResourceError extends ErrorObject 
     @NotNull
     @JsonProperty("code")
     public String getCode();
-
     /**
      *  <p><code>"A duplicate value $duplicateValue exists for field $field on $conflictingResource."</code></p>
      * @return message
@@ -54,7 +59,6 @@ public interface DuplicateFieldWithConflictingResourceError extends ErrorObject 
     @NotNull
     @JsonProperty("message")
     public String getMessage();
-
     /**
      *  <p>Name of the conflicting field.</p>
      * @return field
@@ -62,7 +66,6 @@ public interface DuplicateFieldWithConflictingResourceError extends ErrorObject 
     @NotNull
     @JsonProperty("field")
     public String getField();
-
     /**
      *  <p>Conflicting duplicate value.</p>
      * @return duplicateValue
@@ -70,7 +73,6 @@ public interface DuplicateFieldWithConflictingResourceError extends ErrorObject 
     @NotNull
     @JsonProperty("duplicateValue")
     public Object getDuplicateValue();
-
     /**
      *  <p>Reference to the resource that has the conflicting value.</p>
      * @return conflictingResource
@@ -84,45 +86,49 @@ public interface DuplicateFieldWithConflictingResourceError extends ErrorObject 
      *  <p><code>"A duplicate value $duplicateValue exists for field $field on $conflictingResource."</code></p>
      * @param message value to be set
      */
-
+    
     public void setMessage(final String message);
-
+    
+    
     /**
      *  <p>Name of the conflicting field.</p>
      * @param field value to be set
      */
-
+    
     public void setField(final String field);
-
+    
+    
     /**
      *  <p>Conflicting duplicate value.</p>
      * @param duplicateValue value to be set
      */
-
+    
     public void setDuplicateValue(final Object duplicateValue);
-
+    
+    
     /**
      *  <p>Reference to the resource that has the conflicting value.</p>
      * @param conflictingResource value to be set
      */
-
+    
     public void setConflictingResource(final Reference conflictingResource);
+    
 
     /**
      * factory method
      * @return instance of DuplicateFieldWithConflictingResourceError
      */
-    public static DuplicateFieldWithConflictingResourceError of() {
+    public static DuplicateFieldWithConflictingResourceError of(){
         return new DuplicateFieldWithConflictingResourceErrorImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy DuplicateFieldWithConflictingResourceError
      * @param template instance to be copied
      * @return copy instance
      */
-    public static DuplicateFieldWithConflictingResourceError of(
-            final DuplicateFieldWithConflictingResourceError template) {
+    public static DuplicateFieldWithConflictingResourceError of(final DuplicateFieldWithConflictingResourceError template) {
         DuplicateFieldWithConflictingResourceErrorImpl instance = new DuplicateFieldWithConflictingResourceErrorImpl();
         instance.setMessage(template.getMessage());
         Optional.ofNullable(template.values()).ifPresent(t -> t.forEach(instance::setValue));
@@ -138,8 +144,7 @@ public interface DuplicateFieldWithConflictingResourceError extends ErrorObject 
      * @return copy instance
      */
     @Nullable
-    public static DuplicateFieldWithConflictingResourceError deepCopy(
-            @Nullable final DuplicateFieldWithConflictingResourceError template) {
+    public static DuplicateFieldWithConflictingResourceError deepCopy(@Nullable final DuplicateFieldWithConflictingResourceError template) {
         if (template == null) {
             return null;
         }
@@ -148,8 +153,7 @@ public interface DuplicateFieldWithConflictingResourceError extends ErrorObject 
         Optional.ofNullable(template.values()).ifPresent(t -> t.forEach(instance::setValue));
         instance.setField(template.getField());
         instance.setDuplicateValue(template.getDuplicateValue());
-        instance.setConflictingResource(
-            com.commercetools.api.models.common.Reference.deepCopy(template.getConflictingResource()));
+        instance.setConflictingResource(com.commercetools.api.models.common.Reference.deepCopy(template.getConflictingResource()));
         return instance;
     }
 
@@ -160,16 +164,16 @@ public interface DuplicateFieldWithConflictingResourceError extends ErrorObject 
     public static DuplicateFieldWithConflictingResourceErrorBuilder builder() {
         return DuplicateFieldWithConflictingResourceErrorBuilder.of();
     }
-
+    
     /**
      * create builder for DuplicateFieldWithConflictingResourceError instance
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static DuplicateFieldWithConflictingResourceErrorBuilder builder(
-            final DuplicateFieldWithConflictingResourceError template) {
+    public static DuplicateFieldWithConflictingResourceErrorBuilder builder(final DuplicateFieldWithConflictingResourceError template) {
         return DuplicateFieldWithConflictingResourceErrorBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -177,11 +181,10 @@ public interface DuplicateFieldWithConflictingResourceError extends ErrorObject 
      * @param helper function to map the object
      * @return mapped value
      */
-    default <T> T withDuplicateFieldWithConflictingResourceError(
-            Function<DuplicateFieldWithConflictingResourceError, T> helper) {
+    default <T> T withDuplicateFieldWithConflictingResourceError(Function<DuplicateFieldWithConflictingResourceError, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

@@ -1,19 +1,21 @@
-
 package com.commercetools.history.models.change;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
+import com.commercetools.history.models.change.Change;
 import com.commercetools.history.models.common.LocalizedString;
+import com.commercetools.history.models.change.SetMetaTitleChangeImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * SetMetaTitleChange
@@ -28,9 +30,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .nextValue(nextValueBuilder -> nextValueBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = SetMetaTitleChangeImpl.class)
 public interface SetMetaTitleChange extends Change {
 
@@ -46,7 +51,6 @@ public interface SetMetaTitleChange extends Change {
     @NotNull
     @JsonProperty("type")
     public String getType();
-
     /**
      *  <p>Shape of the action for <code>setMetaTitle</code></p>
      * @return change
@@ -54,7 +58,6 @@ public interface SetMetaTitleChange extends Change {
     @NotNull
     @JsonProperty("change")
     public String getChange();
-
     /**
      *
      * @return previousValue
@@ -63,7 +66,6 @@ public interface SetMetaTitleChange extends Change {
     @Valid
     @JsonProperty("previousValue")
     public LocalizedString getPreviousValue();
-
     /**
      *
      * @return nextValue
@@ -77,30 +79,34 @@ public interface SetMetaTitleChange extends Change {
      *  <p>Shape of the action for <code>setMetaTitle</code></p>
      * @param change value to be set
      */
-
+    
     public void setChange(final String change);
-
+    
+    
     /**
      * set previousValue
      * @param previousValue value to be set
      */
-
+    
     public void setPreviousValue(final LocalizedString previousValue);
-
+    
+    
     /**
      * set nextValue
      * @param nextValue value to be set
      */
-
+    
     public void setNextValue(final LocalizedString nextValue);
+    
 
     /**
      * factory method
      * @return instance of SetMetaTitleChange
      */
-    public static SetMetaTitleChange of() {
+    public static SetMetaTitleChange of(){
         return new SetMetaTitleChangeImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy SetMetaTitleChange
@@ -127,10 +133,8 @@ public interface SetMetaTitleChange extends Change {
         }
         SetMetaTitleChangeImpl instance = new SetMetaTitleChangeImpl();
         instance.setChange(template.getChange());
-        instance.setPreviousValue(
-            com.commercetools.history.models.common.LocalizedString.deepCopy(template.getPreviousValue()));
-        instance.setNextValue(
-            com.commercetools.history.models.common.LocalizedString.deepCopy(template.getNextValue()));
+        instance.setPreviousValue(com.commercetools.history.models.common.LocalizedString.deepCopy(template.getPreviousValue()));
+        instance.setNextValue(com.commercetools.history.models.common.LocalizedString.deepCopy(template.getNextValue()));
         return instance;
     }
 
@@ -141,7 +145,7 @@ public interface SetMetaTitleChange extends Change {
     public static SetMetaTitleChangeBuilder builder() {
         return SetMetaTitleChangeBuilder.of();
     }
-
+    
     /**
      * create builder for SetMetaTitleChange instance
      * @param template instance with prefilled values for the builder
@@ -150,6 +154,7 @@ public interface SetMetaTitleChange extends Change {
     public static SetMetaTitleChangeBuilder builder(final SetMetaTitleChange template) {
         return SetMetaTitleChangeBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -160,7 +165,7 @@ public interface SetMetaTitleChange extends Change {
     default <T> T withSetMetaTitleChange(Function<SetMetaTitleChange, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

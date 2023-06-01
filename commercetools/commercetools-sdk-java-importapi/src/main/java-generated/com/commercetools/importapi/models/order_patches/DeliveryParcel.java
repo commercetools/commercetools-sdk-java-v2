@@ -1,22 +1,22 @@
-
 package com.commercetools.importapi.models.order_patches;
-
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-import java.util.stream.Collectors;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.importapi.models.orders.DeliveryItem;
 import com.commercetools.importapi.models.orders.ParcelMeasurements;
 import com.commercetools.importapi.models.orders.TrackingData;
+import com.commercetools.importapi.models.order_patches.DeliveryParcelImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * DeliveryParcel
@@ -29,11 +29,15 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .deliveryId("{deliveryId}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = DeliveryParcelImpl.class)
-public interface DeliveryParcel {
+public interface DeliveryParcel  {
+
 
     /**
      *
@@ -42,7 +46,6 @@ public interface DeliveryParcel {
     @NotNull
     @JsonProperty("deliveryId")
     public String getDeliveryId();
-
     /**
      *
      * @return measurements
@@ -50,7 +53,6 @@ public interface DeliveryParcel {
     @Valid
     @JsonProperty("measurements")
     public ParcelMeasurements getMeasurements();
-
     /**
      *
      * @return trackingData
@@ -58,7 +60,6 @@ public interface DeliveryParcel {
     @Valid
     @JsonProperty("trackingData")
     public TrackingData getTrackingData();
-
     /**
      *
      * @return items
@@ -71,45 +72,48 @@ public interface DeliveryParcel {
      * set deliveryId
      * @param deliveryId value to be set
      */
-
+    
     public void setDeliveryId(final String deliveryId);
-
+    
+    
     /**
      * set measurements
      * @param measurements value to be set
      */
-
+    
     public void setMeasurements(final ParcelMeasurements measurements);
-
+    
+    
     /**
      * set trackingData
      * @param trackingData value to be set
      */
-
+    
     public void setTrackingData(final TrackingData trackingData);
-
+    
+    
     /**
      * set items
      * @param items values to be set
      */
-
+    
     @JsonIgnore
-    public void setItems(final DeliveryItem... items);
-
+    public void setItems(final DeliveryItem ...items);
     /**
      * set items
      * @param items values to be set
      */
-
+    
     public void setItems(final List<DeliveryItem> items);
 
     /**
      * factory method
      * @return instance of DeliveryParcel
      */
-    public static DeliveryParcel of() {
+    public static DeliveryParcel of(){
         return new DeliveryParcelImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy DeliveryParcel
@@ -137,14 +141,10 @@ public interface DeliveryParcel {
         }
         DeliveryParcelImpl instance = new DeliveryParcelImpl();
         instance.setDeliveryId(template.getDeliveryId());
-        instance.setMeasurements(
-            com.commercetools.importapi.models.orders.ParcelMeasurements.deepCopy(template.getMeasurements()));
-        instance.setTrackingData(
-            com.commercetools.importapi.models.orders.TrackingData.deepCopy(template.getTrackingData()));
+        instance.setMeasurements(com.commercetools.importapi.models.orders.ParcelMeasurements.deepCopy(template.getMeasurements()));
+        instance.setTrackingData(com.commercetools.importapi.models.orders.TrackingData.deepCopy(template.getTrackingData()));
         instance.setItems(Optional.ofNullable(template.getItems())
-                .map(t -> t.stream()
-                        .map(com.commercetools.importapi.models.orders.DeliveryItem::deepCopy)
-                        .collect(Collectors.toList()))
+                .map(t -> t.stream().map(com.commercetools.importapi.models.orders.DeliveryItem::deepCopy).collect(Collectors.toList()))
                 .orElse(null));
         return instance;
     }
@@ -156,7 +156,7 @@ public interface DeliveryParcel {
     public static DeliveryParcelBuilder builder() {
         return DeliveryParcelBuilder.of();
     }
-
+    
     /**
      * create builder for DeliveryParcel instance
      * @param template instance with prefilled values for the builder
@@ -165,6 +165,7 @@ public interface DeliveryParcel {
     public static DeliveryParcelBuilder builder(final DeliveryParcel template) {
         return DeliveryParcelBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -175,7 +176,7 @@ public interface DeliveryParcel {
     default <T> T withDeliveryParcel(Function<DeliveryParcel, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

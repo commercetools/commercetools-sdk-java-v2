@@ -1,19 +1,21 @@
-
 package com.commercetools.api.models.me;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
 import com.commercetools.api.models.common.BaseAddress;
+import com.commercetools.api.models.me.MyCartUpdateAction;
+import com.commercetools.api.models.me.MyCartUpdateItemShippingAddressActionImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Updates an address in <code>itemShippingAddresses</code> by keeping the Address <code>key</code>.</p>
@@ -26,9 +28,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .address(addressBuilder -> addressBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = MyCartUpdateItemShippingAddressActionImpl.class)
 public interface MyCartUpdateItemShippingAddressAction extends MyCartUpdateAction {
 
@@ -50,16 +55,18 @@ public interface MyCartUpdateItemShippingAddressAction extends MyCartUpdateActio
      *  <p>The new Address with the same <code>key</code> as the Address it will replace.</p>
      * @param address value to be set
      */
-
+    
     public void setAddress(final BaseAddress address);
+    
 
     /**
      * factory method
      * @return instance of MyCartUpdateItemShippingAddressAction
      */
-    public static MyCartUpdateItemShippingAddressAction of() {
+    public static MyCartUpdateItemShippingAddressAction of(){
         return new MyCartUpdateItemShippingAddressActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy MyCartUpdateItemShippingAddressAction
@@ -78,8 +85,7 @@ public interface MyCartUpdateItemShippingAddressAction extends MyCartUpdateActio
      * @return copy instance
      */
     @Nullable
-    public static MyCartUpdateItemShippingAddressAction deepCopy(
-            @Nullable final MyCartUpdateItemShippingAddressAction template) {
+    public static MyCartUpdateItemShippingAddressAction deepCopy(@Nullable final MyCartUpdateItemShippingAddressAction template) {
         if (template == null) {
             return null;
         }
@@ -95,16 +101,16 @@ public interface MyCartUpdateItemShippingAddressAction extends MyCartUpdateActio
     public static MyCartUpdateItemShippingAddressActionBuilder builder() {
         return MyCartUpdateItemShippingAddressActionBuilder.of();
     }
-
+    
     /**
      * create builder for MyCartUpdateItemShippingAddressAction instance
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static MyCartUpdateItemShippingAddressActionBuilder builder(
-            final MyCartUpdateItemShippingAddressAction template) {
+    public static MyCartUpdateItemShippingAddressActionBuilder builder(final MyCartUpdateItemShippingAddressAction template) {
         return MyCartUpdateItemShippingAddressActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -115,7 +121,7 @@ public interface MyCartUpdateItemShippingAddressAction extends MyCartUpdateActio
     default <T> T withMyCartUpdateItemShippingAddressAction(Function<MyCartUpdateItemShippingAddressAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

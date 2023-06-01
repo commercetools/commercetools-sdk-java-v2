@@ -1,16 +1,20 @@
-
 package com.commercetools.api.models.product_selection;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
+import com.commercetools.api.models.product_selection.ProductSelectionUpdateAction;
+import com.commercetools.api.models.product_selection.ProductSelectionSetKeyActionImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * ProductSelectionSetKeyAction
@@ -22,9 +26,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     ProductSelectionSetKeyAction productSelectionSetKeyAction = ProductSelectionSetKeyAction.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = ProductSelectionSetKeyActionImpl.class)
 public interface ProductSelectionSetKeyAction extends ProductSelectionUpdateAction {
 
@@ -37,7 +44,7 @@ public interface ProductSelectionSetKeyAction extends ProductSelectionUpdateActi
      *  <p>If <code>key</code> is absent or <code>null</code>, the existing key, if any, will be removed.</p>
      * @return key
      */
-
+    
     @JsonProperty("key")
     public String getKey();
 
@@ -45,16 +52,18 @@ public interface ProductSelectionSetKeyAction extends ProductSelectionUpdateActi
      *  <p>If <code>key</code> is absent or <code>null</code>, the existing key, if any, will be removed.</p>
      * @param key value to be set
      */
-
+    
     public void setKey(final String key);
+    
 
     /**
      * factory method
      * @return instance of ProductSelectionSetKeyAction
      */
-    public static ProductSelectionSetKeyAction of() {
+    public static ProductSelectionSetKeyAction of(){
         return new ProductSelectionSetKeyActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy ProductSelectionSetKeyAction
@@ -89,7 +98,7 @@ public interface ProductSelectionSetKeyAction extends ProductSelectionUpdateActi
     public static ProductSelectionSetKeyActionBuilder builder() {
         return ProductSelectionSetKeyActionBuilder.of();
     }
-
+    
     /**
      * create builder for ProductSelectionSetKeyAction instance
      * @param template instance with prefilled values for the builder
@@ -98,6 +107,7 @@ public interface ProductSelectionSetKeyAction extends ProductSelectionUpdateActi
     public static ProductSelectionSetKeyActionBuilder builder(final ProductSelectionSetKeyAction template) {
         return ProductSelectionSetKeyActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -108,11 +118,11 @@ public interface ProductSelectionSetKeyAction extends ProductSelectionUpdateActi
     default <T> T withProductSelectionSetKeyAction(Function<ProductSelectionSetKeyAction, T> helper) {
         return helper.apply(this);
     }
-
     public static ProductSelectionSetKeyAction ofUnset() {
         return ProductSelectionSetKeyAction.of();
     }
-
+    
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

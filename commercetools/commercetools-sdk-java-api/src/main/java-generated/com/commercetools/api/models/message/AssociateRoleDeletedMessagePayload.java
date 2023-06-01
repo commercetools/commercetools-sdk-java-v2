@@ -1,16 +1,20 @@
-
 package com.commercetools.api.models.message;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
+import com.commercetools.api.models.message.MessagePayload;
+import com.commercetools.api.models.message.AssociateRoleDeletedMessagePayloadImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Generated after a successful Delete AssociateRole request.</p>
@@ -22,9 +26,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     AssociateRoleDeletedMessagePayload associateRoleDeletedMessagePayload = AssociateRoleDeletedMessagePayload.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = AssociateRoleDeletedMessagePayloadImpl.class)
 public interface AssociateRoleDeletedMessagePayload extends MessagePayload {
 
@@ -33,13 +40,16 @@ public interface AssociateRoleDeletedMessagePayload extends MessagePayload {
      */
     String ASSOCIATE_ROLE_DELETED = "AssociateRoleDeleted";
 
+
+
     /**
      * factory method
      * @return instance of AssociateRoleDeletedMessagePayload
      */
-    public static AssociateRoleDeletedMessagePayload of() {
+    public static AssociateRoleDeletedMessagePayload of(){
         return new AssociateRoleDeletedMessagePayloadImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy AssociateRoleDeletedMessagePayload
@@ -57,8 +67,7 @@ public interface AssociateRoleDeletedMessagePayload extends MessagePayload {
      * @return copy instance
      */
     @Nullable
-    public static AssociateRoleDeletedMessagePayload deepCopy(
-            @Nullable final AssociateRoleDeletedMessagePayload template) {
+    public static AssociateRoleDeletedMessagePayload deepCopy(@Nullable final AssociateRoleDeletedMessagePayload template) {
         if (template == null) {
             return null;
         }
@@ -73,7 +82,7 @@ public interface AssociateRoleDeletedMessagePayload extends MessagePayload {
     public static AssociateRoleDeletedMessagePayloadBuilder builder() {
         return AssociateRoleDeletedMessagePayloadBuilder.of();
     }
-
+    
     /**
      * create builder for AssociateRoleDeletedMessagePayload instance
      * @param template instance with prefilled values for the builder
@@ -82,6 +91,7 @@ public interface AssociateRoleDeletedMessagePayload extends MessagePayload {
     public static AssociateRoleDeletedMessagePayloadBuilder builder(final AssociateRoleDeletedMessagePayload template) {
         return AssociateRoleDeletedMessagePayloadBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -92,7 +102,7 @@ public interface AssociateRoleDeletedMessagePayload extends MessagePayload {
     default <T> T withAssociateRoleDeletedMessagePayload(Function<AssociateRoleDeletedMessagePayload, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

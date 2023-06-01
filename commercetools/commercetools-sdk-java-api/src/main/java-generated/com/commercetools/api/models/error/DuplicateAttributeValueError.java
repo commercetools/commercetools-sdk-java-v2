@@ -1,19 +1,21 @@
-
 package com.commercetools.api.models.error;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
+import com.commercetools.api.models.error.ErrorObject;
 import com.commercetools.api.models.product.Attribute;
+import com.commercetools.api.models.error.DuplicateAttributeValueErrorImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Returned when the <code>Unique</code> AttributeConstraint criteria are not met during an Update Product request.</p>
@@ -27,9 +29,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .attribute(attributeBuilder -> attributeBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = DuplicateAttributeValueErrorImpl.class)
 public interface DuplicateAttributeValueError extends ErrorObject {
 
@@ -45,7 +50,6 @@ public interface DuplicateAttributeValueError extends ErrorObject {
     @NotNull
     @JsonProperty("code")
     public String getCode();
-
     /**
      *  <p><code>"Attribute can't have the same value in a different variant."</code></p>
      * @return message
@@ -53,7 +57,6 @@ public interface DuplicateAttributeValueError extends ErrorObject {
     @NotNull
     @JsonProperty("message")
     public String getMessage();
-
     /**
      *  <p>Conflicting Attributes.</p>
      * @return attribute
@@ -67,23 +70,26 @@ public interface DuplicateAttributeValueError extends ErrorObject {
      *  <p><code>"Attribute can't have the same value in a different variant."</code></p>
      * @param message value to be set
      */
-
+    
     public void setMessage(final String message);
-
+    
+    
     /**
      *  <p>Conflicting Attributes.</p>
      * @param attribute value to be set
      */
-
+    
     public void setAttribute(final Attribute attribute);
+    
 
     /**
      * factory method
      * @return instance of DuplicateAttributeValueError
      */
-    public static DuplicateAttributeValueError of() {
+    public static DuplicateAttributeValueError of(){
         return new DuplicateAttributeValueErrorImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy DuplicateAttributeValueError
@@ -122,7 +128,7 @@ public interface DuplicateAttributeValueError extends ErrorObject {
     public static DuplicateAttributeValueErrorBuilder builder() {
         return DuplicateAttributeValueErrorBuilder.of();
     }
-
+    
     /**
      * create builder for DuplicateAttributeValueError instance
      * @param template instance with prefilled values for the builder
@@ -131,6 +137,7 @@ public interface DuplicateAttributeValueError extends ErrorObject {
     public static DuplicateAttributeValueErrorBuilder builder(final DuplicateAttributeValueError template) {
         return DuplicateAttributeValueErrorBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -141,7 +148,7 @@ public interface DuplicateAttributeValueError extends ErrorObject {
     default <T> T withDuplicateAttributeValueError(Function<DuplicateAttributeValueError, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

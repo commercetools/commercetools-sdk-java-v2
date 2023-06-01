@@ -1,16 +1,20 @@
-
 package com.commercetools.api.models.message;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
+import com.commercetools.api.models.message.OrderMessagePayload;
+import com.commercetools.api.models.message.OrderPurchaseOrderNumberSetMessagePayloadImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Generated after a successful Set PurchaseOrderNumber update action.</p>
@@ -22,9 +26,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     OrderPurchaseOrderNumberSetMessagePayload orderPurchaseOrderNumberSetMessagePayload = OrderPurchaseOrderNumberSetMessagePayload.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = OrderPurchaseOrderNumberSetMessagePayloadImpl.class)
 public interface OrderPurchaseOrderNumberSetMessagePayload extends OrderMessagePayload {
 
@@ -37,15 +44,14 @@ public interface OrderPurchaseOrderNumberSetMessagePayload extends OrderMessageP
      *  <p>Purchase order number on the Order after the Set PurchaseOrderNumber update action.</p>
      * @return purchaseOrderNumber
      */
-
+    
     @JsonProperty("purchaseOrderNumber")
     public String getPurchaseOrderNumber();
-
     /**
      *  <p>Purchase order number on the Order before the Set PurchaseOrderNumber update action.</p>
      * @return oldPurchaseOrderNumber
      */
-
+    
     @JsonProperty("oldPurchaseOrderNumber")
     public String getOldPurchaseOrderNumber();
 
@@ -53,31 +59,33 @@ public interface OrderPurchaseOrderNumberSetMessagePayload extends OrderMessageP
      *  <p>Purchase order number on the Order after the Set PurchaseOrderNumber update action.</p>
      * @param purchaseOrderNumber value to be set
      */
-
+    
     public void setPurchaseOrderNumber(final String purchaseOrderNumber);
-
+    
+    
     /**
      *  <p>Purchase order number on the Order before the Set PurchaseOrderNumber update action.</p>
      * @param oldPurchaseOrderNumber value to be set
      */
-
+    
     public void setOldPurchaseOrderNumber(final String oldPurchaseOrderNumber);
+    
 
     /**
      * factory method
      * @return instance of OrderPurchaseOrderNumberSetMessagePayload
      */
-    public static OrderPurchaseOrderNumberSetMessagePayload of() {
+    public static OrderPurchaseOrderNumberSetMessagePayload of(){
         return new OrderPurchaseOrderNumberSetMessagePayloadImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy OrderPurchaseOrderNumberSetMessagePayload
      * @param template instance to be copied
      * @return copy instance
      */
-    public static OrderPurchaseOrderNumberSetMessagePayload of(
-            final OrderPurchaseOrderNumberSetMessagePayload template) {
+    public static OrderPurchaseOrderNumberSetMessagePayload of(final OrderPurchaseOrderNumberSetMessagePayload template) {
         OrderPurchaseOrderNumberSetMessagePayloadImpl instance = new OrderPurchaseOrderNumberSetMessagePayloadImpl();
         instance.setPurchaseOrderNumber(template.getPurchaseOrderNumber());
         instance.setOldPurchaseOrderNumber(template.getOldPurchaseOrderNumber());
@@ -90,8 +98,7 @@ public interface OrderPurchaseOrderNumberSetMessagePayload extends OrderMessageP
      * @return copy instance
      */
     @Nullable
-    public static OrderPurchaseOrderNumberSetMessagePayload deepCopy(
-            @Nullable final OrderPurchaseOrderNumberSetMessagePayload template) {
+    public static OrderPurchaseOrderNumberSetMessagePayload deepCopy(@Nullable final OrderPurchaseOrderNumberSetMessagePayload template) {
         if (template == null) {
             return null;
         }
@@ -108,16 +115,16 @@ public interface OrderPurchaseOrderNumberSetMessagePayload extends OrderMessageP
     public static OrderPurchaseOrderNumberSetMessagePayloadBuilder builder() {
         return OrderPurchaseOrderNumberSetMessagePayloadBuilder.of();
     }
-
+    
     /**
      * create builder for OrderPurchaseOrderNumberSetMessagePayload instance
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static OrderPurchaseOrderNumberSetMessagePayloadBuilder builder(
-            final OrderPurchaseOrderNumberSetMessagePayload template) {
+    public static OrderPurchaseOrderNumberSetMessagePayloadBuilder builder(final OrderPurchaseOrderNumberSetMessagePayload template) {
         return OrderPurchaseOrderNumberSetMessagePayloadBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -125,11 +132,10 @@ public interface OrderPurchaseOrderNumberSetMessagePayload extends OrderMessageP
      * @param helper function to map the object
      * @return mapped value
      */
-    default <T> T withOrderPurchaseOrderNumberSetMessagePayload(
-            Function<OrderPurchaseOrderNumberSetMessagePayload, T> helper) {
+    default <T> T withOrderPurchaseOrderNumberSetMessagePayload(Function<OrderPurchaseOrderNumberSetMessagePayload, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

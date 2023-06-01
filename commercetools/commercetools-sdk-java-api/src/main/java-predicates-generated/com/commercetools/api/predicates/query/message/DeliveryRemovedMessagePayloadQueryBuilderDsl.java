@@ -1,11 +1,11 @@
-
 package com.commercetools.api.predicates.query.message;
-
-import java.util.function.Function;
 
 import com.commercetools.api.predicates.query.*;
 
-public class DeliveryRemovedMessagePayloadQueryBuilderDsl {
+import java.util.function.Function;
+
+
+public class DeliveryRemovedMessagePayloadQueryBuilderDsl  {
     public DeliveryRemovedMessagePayloadQueryBuilderDsl() {
     }
 
@@ -14,24 +14,20 @@ public class DeliveryRemovedMessagePayloadQueryBuilderDsl {
     }
 
     public StringComparisonPredicateBuilder<DeliveryRemovedMessagePayloadQueryBuilderDsl> type() {
-        return new StringComparisonPredicateBuilder<>(
-            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("type")),
-            p -> new CombinationQueryPredicate<>(p, DeliveryRemovedMessagePayloadQueryBuilderDsl::of));
+        return new StringComparisonPredicateBuilder<>(BinaryQueryPredicate.of().left(new ConstantQueryPredicate("type")),
+        p -> new CombinationQueryPredicate<>(p, DeliveryRemovedMessagePayloadQueryBuilderDsl::of));
     }
-
     public CombinationQueryPredicate<DeliveryRemovedMessagePayloadQueryBuilderDsl> delivery(
-            Function<com.commercetools.api.predicates.query.order.DeliveryQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.order.DeliveryQueryBuilderDsl>> fn) {
-        return new CombinationQueryPredicate<>(
-            ContainerQueryPredicate.of()
-                    .parent(ConstantQueryPredicate.of().constant("delivery"))
-                    .inner(fn.apply(com.commercetools.api.predicates.query.order.DeliveryQueryBuilderDsl.of())),
+        Function<com.commercetools.api.predicates.query.order.DeliveryQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.order.DeliveryQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(ContainerQueryPredicate.of()
+            .parent(ConstantQueryPredicate.of().constant("delivery"))
+            .inner(fn.apply(com.commercetools.api.predicates.query.order.DeliveryQueryBuilderDsl.of())),
             DeliveryRemovedMessagePayloadQueryBuilderDsl::of);
     }
-
+    
     public StringComparisonPredicateBuilder<DeliveryRemovedMessagePayloadQueryBuilderDsl> shippingKey() {
-        return new StringComparisonPredicateBuilder<>(
-            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("shippingKey")),
-            p -> new CombinationQueryPredicate<>(p, DeliveryRemovedMessagePayloadQueryBuilderDsl::of));
+        return new StringComparisonPredicateBuilder<>(BinaryQueryPredicate.of().left(new ConstantQueryPredicate("shippingKey")),
+        p -> new CombinationQueryPredicate<>(p, DeliveryRemovedMessagePayloadQueryBuilderDsl::of));
     }
-
+    
 }

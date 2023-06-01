@@ -1,21 +1,22 @@
-
 package com.commercetools.history.models.change;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-import java.util.stream.Collectors;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
+import com.commercetools.history.models.change.Change;
 import com.commercetools.history.models.change_value.AssetChangeValue;
 import com.commercetools.history.models.common.AssetSource;
+import com.commercetools.history.models.change.SetAssetSourcesChangeImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * SetAssetSourcesChange
@@ -31,9 +32,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .plusPreviousValue(previousValueBuilder -> previousValueBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = SetAssetSourcesChangeImpl.class)
 public interface SetAssetSourcesChange extends Change {
 
@@ -49,7 +53,6 @@ public interface SetAssetSourcesChange extends Change {
     @NotNull
     @JsonProperty("change")
     public String getChange();
-
     /**
      *
      * @return type
@@ -57,7 +60,6 @@ public interface SetAssetSourcesChange extends Change {
     @NotNull
     @JsonProperty("type")
     public String getType();
-
     /**
      *
      * @return asset
@@ -66,7 +68,6 @@ public interface SetAssetSourcesChange extends Change {
     @Valid
     @JsonProperty("asset")
     public AssetChangeValue getAsset();
-
     /**
      *
      * @return nextValue
@@ -75,7 +76,6 @@ public interface SetAssetSourcesChange extends Change {
     @Valid
     @JsonProperty("nextValue")
     public List<AssetSource> getNextValue();
-
     /**
      *
      * @return previousValue
@@ -89,53 +89,54 @@ public interface SetAssetSourcesChange extends Change {
      *  <p>Update action for <code>setAssetSources</code></p>
      * @param change value to be set
      */
-
+    
     public void setChange(final String change);
-
+    
+    
     /**
      * set asset
      * @param asset value to be set
      */
-
+    
     public void setAsset(final AssetChangeValue asset);
-
+    
+    
     /**
      * set nextValue
      * @param nextValue values to be set
      */
-
+    
     @JsonIgnore
-    public void setNextValue(final AssetSource... nextValue);
-
+    public void setNextValue(final AssetSource ...nextValue);
     /**
      * set nextValue
      * @param nextValue values to be set
      */
-
+    
     public void setNextValue(final List<AssetSource> nextValue);
-
+    
     /**
      * set previousValue
      * @param previousValue values to be set
      */
-
+    
     @JsonIgnore
-    public void setPreviousValue(final AssetSource... previousValue);
-
+    public void setPreviousValue(final AssetSource ...previousValue);
     /**
      * set previousValue
      * @param previousValue values to be set
      */
-
+    
     public void setPreviousValue(final List<AssetSource> previousValue);
 
     /**
      * factory method
      * @return instance of SetAssetSourcesChange
      */
-    public static SetAssetSourcesChange of() {
+    public static SetAssetSourcesChange of(){
         return new SetAssetSourcesChangeImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy SetAssetSourcesChange
@@ -165,14 +166,10 @@ public interface SetAssetSourcesChange extends Change {
         instance.setChange(template.getChange());
         instance.setAsset(com.commercetools.history.models.change_value.AssetChangeValue.deepCopy(template.getAsset()));
         instance.setNextValue(Optional.ofNullable(template.getNextValue())
-                .map(t -> t.stream()
-                        .map(com.commercetools.history.models.common.AssetSource::deepCopy)
-                        .collect(Collectors.toList()))
+                .map(t -> t.stream().map(com.commercetools.history.models.common.AssetSource::deepCopy).collect(Collectors.toList()))
                 .orElse(null));
         instance.setPreviousValue(Optional.ofNullable(template.getPreviousValue())
-                .map(t -> t.stream()
-                        .map(com.commercetools.history.models.common.AssetSource::deepCopy)
-                        .collect(Collectors.toList()))
+                .map(t -> t.stream().map(com.commercetools.history.models.common.AssetSource::deepCopy).collect(Collectors.toList()))
                 .orElse(null));
         return instance;
     }
@@ -184,7 +181,7 @@ public interface SetAssetSourcesChange extends Change {
     public static SetAssetSourcesChangeBuilder builder() {
         return SetAssetSourcesChangeBuilder.of();
     }
-
+    
     /**
      * create builder for SetAssetSourcesChange instance
      * @param template instance with prefilled values for the builder
@@ -193,6 +190,7 @@ public interface SetAssetSourcesChange extends Change {
     public static SetAssetSourcesChangeBuilder builder(final SetAssetSourcesChange template) {
         return SetAssetSourcesChangeBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -203,7 +201,7 @@ public interface SetAssetSourcesChange extends Change {
     default <T> T withSetAssetSourcesChange(Function<SetAssetSourcesChange, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

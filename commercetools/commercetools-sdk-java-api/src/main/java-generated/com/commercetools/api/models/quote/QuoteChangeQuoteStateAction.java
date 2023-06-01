@@ -1,17 +1,21 @@
-
 package com.commercetools.api.models.quote;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
+import com.commercetools.api.models.quote.QuoteState;
+import com.commercetools.api.models.quote.QuoteUpdateAction;
+import com.commercetools.api.models.quote.QuoteChangeQuoteStateActionImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * QuoteChangeQuoteStateAction
@@ -24,9 +28,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .quoteState(QuoteState.PENDING)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = QuoteChangeQuoteStateActionImpl.class)
 public interface QuoteChangeQuoteStateAction extends QuoteUpdateAction {
 
@@ -47,16 +54,18 @@ public interface QuoteChangeQuoteStateAction extends QuoteUpdateAction {
      *  <p>New state to be set for the Quote.</p>
      * @param quoteState value to be set
      */
-
+    
     public void setQuoteState(final QuoteState quoteState);
+    
 
     /**
      * factory method
      * @return instance of QuoteChangeQuoteStateAction
      */
-    public static QuoteChangeQuoteStateAction of() {
+    public static QuoteChangeQuoteStateAction of(){
         return new QuoteChangeQuoteStateActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy QuoteChangeQuoteStateAction
@@ -91,7 +100,7 @@ public interface QuoteChangeQuoteStateAction extends QuoteUpdateAction {
     public static QuoteChangeQuoteStateActionBuilder builder() {
         return QuoteChangeQuoteStateActionBuilder.of();
     }
-
+    
     /**
      * create builder for QuoteChangeQuoteStateAction instance
      * @param template instance with prefilled values for the builder
@@ -100,6 +109,7 @@ public interface QuoteChangeQuoteStateAction extends QuoteUpdateAction {
     public static QuoteChangeQuoteStateActionBuilder builder(final QuoteChangeQuoteStateAction template) {
         return QuoteChangeQuoteStateActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -110,7 +120,7 @@ public interface QuoteChangeQuoteStateAction extends QuoteUpdateAction {
     default <T> T withQuoteChangeQuoteStateAction(Function<QuoteChangeQuoteStateAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

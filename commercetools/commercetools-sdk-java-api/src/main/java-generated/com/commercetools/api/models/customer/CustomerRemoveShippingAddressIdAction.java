@@ -1,16 +1,20 @@
-
 package com.commercetools.api.models.customer;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
+import com.commercetools.api.models.customer.CustomerUpdateAction;
+import com.commercetools.api.models.customer.CustomerRemoveShippingAddressIdActionImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Removes a shipping address from <code>shippingAddressesIds</code>. If the shipping address is the default shipping address, the <code>defaultShippingAddressId</code> is unset. Either <code>addressId</code> or <code>addressKey</code> is required.</p>
@@ -22,9 +26,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     CustomerRemoveShippingAddressIdAction customerRemoveShippingAddressIdAction = CustomerRemoveShippingAddressIdAction.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = CustomerRemoveShippingAddressIdActionImpl.class)
 public interface CustomerRemoveShippingAddressIdAction extends CustomerUpdateAction {
 
@@ -37,15 +44,14 @@ public interface CustomerRemoveShippingAddressIdAction extends CustomerUpdateAct
      *  <p><code>id</code> of the Address to remove from <code>shippingAddressesIds</code>.</p>
      * @return addressId
      */
-
+    
     @JsonProperty("addressId")
     public String getAddressId();
-
     /**
      *  <p><code>key</code> of the Address to remove from <code>shippingAddressesIds</code>.</p>
      * @return addressKey
      */
-
+    
     @JsonProperty("addressKey")
     public String getAddressKey();
 
@@ -53,23 +59,26 @@ public interface CustomerRemoveShippingAddressIdAction extends CustomerUpdateAct
      *  <p><code>id</code> of the Address to remove from <code>shippingAddressesIds</code>.</p>
      * @param addressId value to be set
      */
-
+    
     public void setAddressId(final String addressId);
-
+    
+    
     /**
      *  <p><code>key</code> of the Address to remove from <code>shippingAddressesIds</code>.</p>
      * @param addressKey value to be set
      */
-
+    
     public void setAddressKey(final String addressKey);
+    
 
     /**
      * factory method
      * @return instance of CustomerRemoveShippingAddressIdAction
      */
-    public static CustomerRemoveShippingAddressIdAction of() {
+    public static CustomerRemoveShippingAddressIdAction of(){
         return new CustomerRemoveShippingAddressIdActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy CustomerRemoveShippingAddressIdAction
@@ -89,8 +98,7 @@ public interface CustomerRemoveShippingAddressIdAction extends CustomerUpdateAct
      * @return copy instance
      */
     @Nullable
-    public static CustomerRemoveShippingAddressIdAction deepCopy(
-            @Nullable final CustomerRemoveShippingAddressIdAction template) {
+    public static CustomerRemoveShippingAddressIdAction deepCopy(@Nullable final CustomerRemoveShippingAddressIdAction template) {
         if (template == null) {
             return null;
         }
@@ -107,16 +115,16 @@ public interface CustomerRemoveShippingAddressIdAction extends CustomerUpdateAct
     public static CustomerRemoveShippingAddressIdActionBuilder builder() {
         return CustomerRemoveShippingAddressIdActionBuilder.of();
     }
-
+    
     /**
      * create builder for CustomerRemoveShippingAddressIdAction instance
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static CustomerRemoveShippingAddressIdActionBuilder builder(
-            final CustomerRemoveShippingAddressIdAction template) {
+    public static CustomerRemoveShippingAddressIdActionBuilder builder(final CustomerRemoveShippingAddressIdAction template) {
         return CustomerRemoveShippingAddressIdActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -127,7 +135,7 @@ public interface CustomerRemoveShippingAddressIdAction extends CustomerUpdateAct
     default <T> T withCustomerRemoveShippingAddressIdAction(Function<CustomerRemoveShippingAddressIdAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

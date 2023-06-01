@@ -1,17 +1,21 @@
-
 package com.commercetools.api.models.quote;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-
+import com.commercetools.api.models.common.ReferenceTypeId;
 import com.commercetools.api.models.common.ResourceIdentifier;
+import com.commercetools.api.models.quote.QuoteResourceIdentifierImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>ResourceIdentifier to a Quote.</p>
@@ -23,9 +27,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     QuoteResourceIdentifier quoteResourceIdentifier = QuoteResourceIdentifier.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = QuoteResourceIdentifierImpl.class)
 public interface QuoteResourceIdentifier extends ResourceIdentifier, com.commercetools.api.models.Identifiable<Quote> {
 
@@ -34,13 +41,16 @@ public interface QuoteResourceIdentifier extends ResourceIdentifier, com.commerc
      */
     String QUOTE = "quote";
 
+
+
     /**
      * factory method
      * @return instance of QuoteResourceIdentifier
      */
-    public static QuoteResourceIdentifier of() {
+    public static QuoteResourceIdentifier of(){
         return new QuoteResourceIdentifierImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy QuoteResourceIdentifier
@@ -77,7 +87,7 @@ public interface QuoteResourceIdentifier extends ResourceIdentifier, com.commerc
     public static QuoteResourceIdentifierBuilder builder() {
         return QuoteResourceIdentifierBuilder.of();
     }
-
+    
     /**
      * create builder for QuoteResourceIdentifier instance
      * @param template instance with prefilled values for the builder
@@ -86,6 +96,7 @@ public interface QuoteResourceIdentifier extends ResourceIdentifier, com.commerc
     public static QuoteResourceIdentifierBuilder builder(final QuoteResourceIdentifier template) {
         return QuoteResourceIdentifierBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -96,7 +107,7 @@ public interface QuoteResourceIdentifier extends ResourceIdentifier, com.commerc
     default <T> T withQuoteResourceIdentifier(Function<QuoteResourceIdentifier, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

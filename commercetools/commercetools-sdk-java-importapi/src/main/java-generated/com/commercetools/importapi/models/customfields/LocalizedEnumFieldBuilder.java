@@ -1,8 +1,11 @@
-
 package com.commercetools.importapi.models.customfields;
 
+import com.commercetools.importapi.models.customfields.CustomField;
+import com.commercetools.importapi.models.customfields.LocalizedEnumField;
+import javax.annotation.Nullable;
 import java.util.*;
-
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -16,30 +19,39 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .value("{value}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class LocalizedEnumFieldBuilder implements Builder<LocalizedEnumField> {
 
+    
+    
     private String value;
 
+    
     /**
      * set the value to the value
      * @param value value to be set
      * @return Builder
      */
-
-    public LocalizedEnumFieldBuilder value(final String value) {
+    
+    public LocalizedEnumFieldBuilder value( final String value) {
         this.value = value;
         return this;
     }
+    
+    
 
     /**
      * value of value}
      * @return value
      */
-
-    public String getValue() {
+    
+    
+    public String getValue(){
         return this.value;
     }
 
@@ -51,7 +63,7 @@ public class LocalizedEnumFieldBuilder implements Builder<LocalizedEnumField> {
         Objects.requireNonNull(value, LocalizedEnumField.class + ": value is missing");
         return new LocalizedEnumFieldImpl(value);
     }
-
+    
     /**
      * builds LocalizedEnumField without checking for non-null required values
      * @return LocalizedEnumField
@@ -62,7 +74,7 @@ public class LocalizedEnumFieldBuilder implements Builder<LocalizedEnumField> {
 
     /**
      * factory method for an instance of LocalizedEnumFieldBuilder
-     * @return builder
+     * @return builder 
      */
     public static LocalizedEnumFieldBuilder of() {
         return new LocalizedEnumFieldBuilder();

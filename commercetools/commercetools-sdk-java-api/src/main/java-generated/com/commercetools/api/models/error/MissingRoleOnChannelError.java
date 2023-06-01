@@ -1,20 +1,22 @@
-
 package com.commercetools.api.models.error;
-
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.channel.ChannelResourceIdentifier;
 import com.commercetools.api.models.channel.ChannelRoleEnum;
+import com.commercetools.api.models.error.ErrorObject;
+import com.commercetools.api.models.error.MissingRoleOnChannelErrorImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Returned when one of the following states occur:</p>
@@ -37,9 +39,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .missingRole(ChannelRoleEnum.INVENTORY_SUPPLY)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = MissingRoleOnChannelErrorImpl.class)
 public interface MissingRoleOnChannelError extends ErrorObject {
 
@@ -55,7 +60,6 @@ public interface MissingRoleOnChannelError extends ErrorObject {
     @NotNull
     @JsonProperty("code")
     public String getCode();
-
     /**
      *  <p><code>"Given channel with $idOrKeyOfChannel does not have the required role $role."</code></p>
      * @return message
@@ -63,7 +67,6 @@ public interface MissingRoleOnChannelError extends ErrorObject {
     @NotNull
     @JsonProperty("message")
     public String getMessage();
-
     /**
      *  <p>ResourceIdentifier to a given Channel.</p>
      * @return channel
@@ -71,7 +74,6 @@ public interface MissingRoleOnChannelError extends ErrorObject {
     @Valid
     @JsonProperty("channel")
     public ChannelResourceIdentifier getChannel();
-
     /**
      *  <ul>
      *   <li><code>ProductDistribution</code> for Product Distribution Channels allowed for the Store. Also required for Standalone Prices.</li>
@@ -87,16 +89,18 @@ public interface MissingRoleOnChannelError extends ErrorObject {
      *  <p><code>"Given channel with $idOrKeyOfChannel does not have the required role $role."</code></p>
      * @param message value to be set
      */
-
+    
     public void setMessage(final String message);
-
+    
+    
     /**
      *  <p>ResourceIdentifier to a given Channel.</p>
      * @param channel value to be set
      */
-
+    
     public void setChannel(final ChannelResourceIdentifier channel);
-
+    
+    
     /**
      *  <ul>
      *   <li><code>ProductDistribution</code> for Product Distribution Channels allowed for the Store. Also required for Standalone Prices.</li>
@@ -104,16 +108,18 @@ public interface MissingRoleOnChannelError extends ErrorObject {
      *  </ul>
      * @param missingRole value to be set
      */
-
+    
     public void setMissingRole(final ChannelRoleEnum missingRole);
+    
 
     /**
      * factory method
      * @return instance of MissingRoleOnChannelError
      */
-    public static MissingRoleOnChannelError of() {
+    public static MissingRoleOnChannelError of(){
         return new MissingRoleOnChannelErrorImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy MissingRoleOnChannelError
@@ -142,8 +148,7 @@ public interface MissingRoleOnChannelError extends ErrorObject {
         MissingRoleOnChannelErrorImpl instance = new MissingRoleOnChannelErrorImpl();
         instance.setMessage(template.getMessage());
         Optional.ofNullable(template.values()).ifPresent(t -> t.forEach(instance::setValue));
-        instance.setChannel(
-            com.commercetools.api.models.channel.ChannelResourceIdentifier.deepCopy(template.getChannel()));
+        instance.setChannel(com.commercetools.api.models.channel.ChannelResourceIdentifier.deepCopy(template.getChannel()));
         instance.setMissingRole(template.getMissingRole());
         return instance;
     }
@@ -155,7 +160,7 @@ public interface MissingRoleOnChannelError extends ErrorObject {
     public static MissingRoleOnChannelErrorBuilder builder() {
         return MissingRoleOnChannelErrorBuilder.of();
     }
-
+    
     /**
      * create builder for MissingRoleOnChannelError instance
      * @param template instance with prefilled values for the builder
@@ -164,6 +169,7 @@ public interface MissingRoleOnChannelError extends ErrorObject {
     public static MissingRoleOnChannelErrorBuilder builder(final MissingRoleOnChannelError template) {
         return MissingRoleOnChannelErrorBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -174,7 +180,7 @@ public interface MissingRoleOnChannelError extends ErrorObject {
     default <T> T withMissingRoleOnChannelError(Function<MissingRoleOnChannelError, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

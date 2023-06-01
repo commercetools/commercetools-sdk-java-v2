@@ -1,8 +1,11 @@
-
 package com.commercetools.history.models.change_value;
 
-import java.util.*;
 
+import com.commercetools.history.models.change_value.ValidFromAndUntilValue;
+import javax.annotation.Nullable;
+import java.util.*;
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -17,52 +20,67 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .validUntil("{validUntil}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class ValidFromAndUntilValueBuilder implements Builder<ValidFromAndUntilValue> {
 
+    
+    
     private String validFrom;
-
+    
+    
+    
     private String validUntil;
 
+    
     /**
      * set the value to the validFrom
      * @param validFrom value to be set
      * @return Builder
      */
-
-    public ValidFromAndUntilValueBuilder validFrom(final String validFrom) {
+    
+    public ValidFromAndUntilValueBuilder validFrom( final String validFrom) {
         this.validFrom = validFrom;
         return this;
     }
-
+    
+    
+    
+    
     /**
      * set the value to the validUntil
      * @param validUntil value to be set
      * @return Builder
      */
-
-    public ValidFromAndUntilValueBuilder validUntil(final String validUntil) {
+    
+    public ValidFromAndUntilValueBuilder validUntil( final String validUntil) {
         this.validUntil = validUntil;
         return this;
     }
+    
+    
 
     /**
      * value of validFrom}
      * @return validFrom
      */
-
-    public String getValidFrom() {
+    
+    
+    public String getValidFrom(){
         return this.validFrom;
     }
-
+    
     /**
      * value of validUntil}
      * @return validUntil
      */
-
-    public String getValidUntil() {
+    
+    
+    public String getValidUntil(){
         return this.validUntil;
     }
 
@@ -75,7 +93,7 @@ public class ValidFromAndUntilValueBuilder implements Builder<ValidFromAndUntilV
         Objects.requireNonNull(validUntil, ValidFromAndUntilValue.class + ": validUntil is missing");
         return new ValidFromAndUntilValueImpl(validFrom, validUntil);
     }
-
+    
     /**
      * builds ValidFromAndUntilValue without checking for non-null required values
      * @return ValidFromAndUntilValue
@@ -86,7 +104,7 @@ public class ValidFromAndUntilValueBuilder implements Builder<ValidFromAndUntilV
 
     /**
      * factory method for an instance of ValidFromAndUntilValueBuilder
-     * @return builder
+     * @return builder 
      */
     public static ValidFromAndUntilValueBuilder of() {
         return new ValidFromAndUntilValueBuilder();

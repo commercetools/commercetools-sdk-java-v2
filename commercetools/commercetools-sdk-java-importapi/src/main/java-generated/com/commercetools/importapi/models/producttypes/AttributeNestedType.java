@@ -1,19 +1,21 @@
-
 package com.commercetools.importapi.models.producttypes;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
 import com.commercetools.importapi.models.common.ProductTypeKeyReference;
+import com.commercetools.importapi.models.producttypes.AttributeType;
+import com.commercetools.importapi.models.producttypes.AttributeNestedTypeImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * AttributeNestedType
@@ -26,9 +28,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .typeReference(typeReferenceBuilder -> typeReferenceBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = AttributeNestedTypeImpl.class)
 public interface AttributeNestedType extends AttributeType {
 
@@ -50,16 +55,18 @@ public interface AttributeNestedType extends AttributeType {
      *  <p>References a product type by key.</p>
      * @param typeReference value to be set
      */
-
+    
     public void setTypeReference(final ProductTypeKeyReference typeReference);
+    
 
     /**
      * factory method
      * @return instance of AttributeNestedType
      */
-    public static AttributeNestedType of() {
+    public static AttributeNestedType of(){
         return new AttributeNestedTypeImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy AttributeNestedType
@@ -83,8 +90,7 @@ public interface AttributeNestedType extends AttributeType {
             return null;
         }
         AttributeNestedTypeImpl instance = new AttributeNestedTypeImpl();
-        instance.setTypeReference(
-            com.commercetools.importapi.models.common.ProductTypeKeyReference.deepCopy(template.getTypeReference()));
+        instance.setTypeReference(com.commercetools.importapi.models.common.ProductTypeKeyReference.deepCopy(template.getTypeReference()));
         return instance;
     }
 
@@ -95,7 +101,7 @@ public interface AttributeNestedType extends AttributeType {
     public static AttributeNestedTypeBuilder builder() {
         return AttributeNestedTypeBuilder.of();
     }
-
+    
     /**
      * create builder for AttributeNestedType instance
      * @param template instance with prefilled values for the builder
@@ -104,6 +110,7 @@ public interface AttributeNestedType extends AttributeType {
     public static AttributeNestedTypeBuilder builder(final AttributeNestedType template) {
         return AttributeNestedTypeBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -114,7 +121,7 @@ public interface AttributeNestedType extends AttributeType {
     default <T> T withAttributeNestedType(Function<AttributeNestedType, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

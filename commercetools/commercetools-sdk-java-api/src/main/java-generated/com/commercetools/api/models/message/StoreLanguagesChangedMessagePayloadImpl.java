@@ -1,108 +1,122 @@
-
 package com.commercetools.api.models.message;
 
-import java.time.*;
-import java.util.*;
-
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
-
-import io.vrap.rmf.base.client.ModelBase;
+import com.commercetools.api.models.message.MessagePayload;
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.ModelBase;
+import javax.validation.Valid;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.annotation.*;
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
  *  <p>Generated after a successful Set Languages update action.</p>
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class StoreLanguagesChangedMessagePayloadImpl implements StoreLanguagesChangedMessagePayload, ModelBase {
 
+    
     private String type;
-
+    
+    
     private java.util.List<String> addedLanguages;
-
+    
+    
     private java.util.List<String> removedLanguages;
 
     /**
      * create instance with all properties
      */
     @JsonCreator
-    StoreLanguagesChangedMessagePayloadImpl(@JsonProperty("addedLanguages") final java.util.List<String> addedLanguages,
-            @JsonProperty("removedLanguages") final java.util.List<String> removedLanguages) {
+    StoreLanguagesChangedMessagePayloadImpl(@JsonProperty("addedLanguages") final java.util.List<String> addedLanguages, @JsonProperty("removedLanguages") final java.util.List<String> removedLanguages) {
         this.addedLanguages = addedLanguages;
         this.removedLanguages = removedLanguages;
-        this.type = STORE_LANGUAGES_CHANGED;
+        this.type =  STORE_LANGUAGES_CHANGED;
     }
-
     /**
      * create empty instance
      */
     public StoreLanguagesChangedMessagePayloadImpl() {
-        this.type = STORE_LANGUAGES_CHANGED;
+        this.type =  STORE_LANGUAGES_CHANGED;
     }
 
     /**
      *
      */
-
-    public String getType() {
+    
+    public String getType(){
         return this.type;
     }
-
+    
     /**
      *  <p>Locales added to the Store after the Set Languages update action.</p>
      */
-
-    public java.util.List<String> getAddedLanguages() {
+    
+    public java.util.List<String> getAddedLanguages(){
         return this.addedLanguages;
     }
-
+    
     /**
      *  <p>Locales removed from the Store during the Set Languages update action.</p>
      */
-
-    public java.util.List<String> getRemovedLanguages() {
+    
+    public java.util.List<String> getRemovedLanguages(){
         return this.removedLanguages;
     }
 
-    public void setAddedLanguages(final String... addedLanguages) {
-        this.addedLanguages = new ArrayList<>(Arrays.asList(addedLanguages));
+    
+    public void setAddedLanguages(final String ...addedLanguages){
+       this.addedLanguages = new ArrayList<>(Arrays.asList(addedLanguages));
     }
-
-    public void setAddedLanguages(final java.util.List<String> addedLanguages) {
-        this.addedLanguages = addedLanguages;
+    
+    
+    public void setAddedLanguages(final java.util.List<String> addedLanguages){
+       this.addedLanguages = addedLanguages;
     }
-
-    public void setRemovedLanguages(final String... removedLanguages) {
-        this.removedLanguages = new ArrayList<>(Arrays.asList(removedLanguages));
+    
+    
+    public void setRemovedLanguages(final String ...removedLanguages){
+       this.removedLanguages = new ArrayList<>(Arrays.asList(removedLanguages));
     }
-
-    public void setRemovedLanguages(final java.util.List<String> removedLanguages) {
-        this.removedLanguages = removedLanguages;
+    
+    
+    public void setRemovedLanguages(final java.util.List<String> removedLanguages){
+       this.removedLanguages = removedLanguages;
     }
 
     @Override
     public boolean equals(Object o) {
-        if (this == o)
-            return true;
-
-        if (o == null || getClass() != o.getClass())
-            return false;
-
+        if (this == o) return true;
+    
+        if (o == null || getClass() != o.getClass()) return false;
+    
         StoreLanguagesChangedMessagePayloadImpl that = (StoreLanguagesChangedMessagePayloadImpl) o;
-
-        return new EqualsBuilder().append(type, that.type)
+    
+        return new EqualsBuilder()
+                .append(type, that.type)
                 .append(addedLanguages, that.addedLanguages)
                 .append(removedLanguages, that.removedLanguages)
                 .isEquals();
     }
-
+    
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(type).append(addedLanguages).append(removedLanguages).toHashCode();
+        return new HashCodeBuilder(17, 37)
+            .append(type)
+            .append(addedLanguages)
+            .append(removedLanguages)
+            .toHashCode();
     }
 
 }

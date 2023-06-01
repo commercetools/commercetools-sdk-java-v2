@@ -1,21 +1,22 @@
-
 package com.commercetools.api.models.quote_request;
-
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.cart.CartResourceIdentifier;
 import com.commercetools.api.models.state.StateReference;
 import com.commercetools.api.models.type.CustomFieldsDraft;
+import com.commercetools.api.models.quote_request.QuoteRequestDraftImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * QuoteRequestDraft
@@ -30,12 +31,15 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .comment("{comment}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = QuoteRequestDraftImpl.class)
-public interface QuoteRequestDraft
-        extends com.commercetools.api.models.WithKey, io.vrap.rmf.base.client.Draft<QuoteRequestDraft> {
+public interface QuoteRequestDraft extends com.commercetools.api.models.WithKey, io.vrap.rmf.base.client.Draft<QuoteRequestDraft> {
+
 
     /**
      *  <p>Cart for which a Quote is requested. Anonymous Carts, Carts with Discount Codes, or Carts with a <code>Multiple</code> ShippingMode are not supported.</p>
@@ -45,7 +49,6 @@ public interface QuoteRequestDraft
     @Valid
     @JsonProperty("cart")
     public CartResourceIdentifier getCart();
-
     /**
      *  <p>Current version of the referenced Cart.</p>
      * @return cartVersion
@@ -53,15 +56,13 @@ public interface QuoteRequestDraft
     @NotNull
     @JsonProperty("cartVersion")
     public Long getCartVersion();
-
     /**
      *  <p>User-defined unique identifier for the QuoteRequest.</p>
      * @return key
      */
-
+    
     @JsonProperty("key")
     public String getKey();
-
     /**
      *  <p>Message from the Buyer included in the Quote Request.</p>
      * @return comment
@@ -69,7 +70,6 @@ public interface QuoteRequestDraft
     @NotNull
     @JsonProperty("comment")
     public String getComment();
-
     /**
      *  <p>Custom Fields to be added to the Quote Request.</p>
      * @return custom
@@ -77,20 +77,18 @@ public interface QuoteRequestDraft
     @Valid
     @JsonProperty("custom")
     public CustomFieldsDraft getCustom();
-
     /**
-     *  <p>State of this Quote Request. This reference can point to a State in a custom workflow.</p>
+     *  <p>State of the Quote Request. This reference can point to a State in a custom workflow.</p>
      * @return state
      */
     @Valid
     @JsonProperty("state")
     public StateReference getState();
-
     /**
      *  <p>Identifier for a purchase order, usually in a B2B context. The Purchase Order Number is typically entered by the Buyer.</p>
      * @return purchaseOrderNumber
      */
-
+    
     @JsonProperty("purchaseOrderNumber")
     public String getPurchaseOrderNumber();
 
@@ -98,58 +96,66 @@ public interface QuoteRequestDraft
      *  <p>Cart for which a Quote is requested. Anonymous Carts, Carts with Discount Codes, or Carts with a <code>Multiple</code> ShippingMode are not supported.</p>
      * @param cart value to be set
      */
-
+    
     public void setCart(final CartResourceIdentifier cart);
-
+    
+    
     /**
      *  <p>Current version of the referenced Cart.</p>
      * @param cartVersion value to be set
      */
-
+    
     public void setCartVersion(final Long cartVersion);
-
+    
+    
     /**
      *  <p>User-defined unique identifier for the QuoteRequest.</p>
      * @param key value to be set
      */
-
+    
     public void setKey(final String key);
-
+    
+    
     /**
      *  <p>Message from the Buyer included in the Quote Request.</p>
      * @param comment value to be set
      */
-
+    
     public void setComment(final String comment);
-
+    
+    
     /**
      *  <p>Custom Fields to be added to the Quote Request.</p>
      * @param custom value to be set
      */
-
+    
     public void setCustom(final CustomFieldsDraft custom);
-
+    
+    
     /**
-     *  <p>State of this Quote Request. This reference can point to a State in a custom workflow.</p>
+     *  <p>State of the Quote Request. This reference can point to a State in a custom workflow.</p>
      * @param state value to be set
      */
-
+    
     public void setState(final StateReference state);
-
+    
+    
     /**
      *  <p>Identifier for a purchase order, usually in a B2B context. The Purchase Order Number is typically entered by the Buyer.</p>
      * @param purchaseOrderNumber value to be set
      */
-
+    
     public void setPurchaseOrderNumber(final String purchaseOrderNumber);
+    
 
     /**
      * factory method
      * @return instance of QuoteRequestDraft
      */
-    public static QuoteRequestDraft of() {
+    public static QuoteRequestDraft of(){
         return new QuoteRequestDraftImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy QuoteRequestDraft
@@ -196,7 +202,7 @@ public interface QuoteRequestDraft
     public static QuoteRequestDraftBuilder builder() {
         return QuoteRequestDraftBuilder.of();
     }
-
+    
     /**
      * create builder for QuoteRequestDraft instance
      * @param template instance with prefilled values for the builder
@@ -205,6 +211,7 @@ public interface QuoteRequestDraft
     public static QuoteRequestDraftBuilder builder(final QuoteRequestDraft template) {
         return QuoteRequestDraftBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -215,7 +222,7 @@ public interface QuoteRequestDraft
     default <T> T withQuoteRequestDraft(Function<QuoteRequestDraft, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

@@ -1,11 +1,11 @@
-
 package com.commercetools.api.predicates.query.state;
-
-import java.util.function.Function;
 
 import com.commercetools.api.predicates.query.*;
 
-public class StateUpdateQueryBuilderDsl {
+import java.util.function.Function;
+
+
+public class StateUpdateQueryBuilderDsl  {
     public StateUpdateQueryBuilderDsl() {
     }
 
@@ -14,22 +14,19 @@ public class StateUpdateQueryBuilderDsl {
     }
 
     public LongComparisonPredicateBuilder<StateUpdateQueryBuilderDsl> version() {
-        return new LongComparisonPredicateBuilder<>(
-            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("version")),
-            p -> new CombinationQueryPredicate<>(p, StateUpdateQueryBuilderDsl::of));
+        return new LongComparisonPredicateBuilder<>(BinaryQueryPredicate.of().left(new ConstantQueryPredicate("version")),
+        p -> new CombinationQueryPredicate<>(p, StateUpdateQueryBuilderDsl::of));
     }
-
     public CombinationQueryPredicate<StateUpdateQueryBuilderDsl> actions(
-            Function<com.commercetools.api.predicates.query.state.StateUpdateActionQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.state.StateUpdateActionQueryBuilderDsl>> fn) {
+        Function<com.commercetools.api.predicates.query.state.StateUpdateActionQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.state.StateUpdateActionQueryBuilderDsl>> fn) {
         return new CombinationQueryPredicate<>(ContainerQueryPredicate.of()
-                .parent(ConstantQueryPredicate.of().constant("actions"))
-                .inner(fn.apply(com.commercetools.api.predicates.query.state.StateUpdateActionQueryBuilderDsl.of())),
+            .parent(ConstantQueryPredicate.of().constant("actions"))
+            .inner(fn.apply(com.commercetools.api.predicates.query.state.StateUpdateActionQueryBuilderDsl.of())),
             StateUpdateQueryBuilderDsl::of);
     }
-
     public CollectionPredicateBuilder<StateUpdateQueryBuilderDsl> actions() {
         return new CollectionPredicateBuilder<>(BinaryQueryPredicate.of().left(new ConstantQueryPredicate("actions")),
-            p -> new CombinationQueryPredicate<>(p, StateUpdateQueryBuilderDsl::of));
+                p -> new CombinationQueryPredicate<>(p, StateUpdateQueryBuilderDsl::of));
     }
-
+    
 }

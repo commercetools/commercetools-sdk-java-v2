@@ -1,17 +1,20 @@
-
 package com.commercetools.api.models.message;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
+import com.commercetools.api.models.message.Message;
+import com.commercetools.api.models.message.ProductRevertedStagedChangesMessageImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Generated after a successful Revert Staged Changes update action.</p>
@@ -31,9 +34,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .plusRemovedImageUrls(removedImageUrlsBuilder -> removedImageUrlsBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = ProductRevertedStagedChangesMessageImpl.class)
 public interface ProductRevertedStagedChangesMessage extends Message {
 
@@ -54,24 +60,24 @@ public interface ProductRevertedStagedChangesMessage extends Message {
      *  <p>List of image URLs that were removed during the Revert Staged Changes update action.</p>
      * @param removedImageUrls values to be set
      */
-
+    
     @JsonIgnore
-    public void setRemovedImageUrls(final String... removedImageUrls);
-
+    public void setRemovedImageUrls(final String ...removedImageUrls);
     /**
      *  <p>List of image URLs that were removed during the Revert Staged Changes update action.</p>
      * @param removedImageUrls values to be set
      */
-
+    
     public void setRemovedImageUrls(final List<String> removedImageUrls);
 
     /**
      * factory method
      * @return instance of ProductRevertedStagedChangesMessage
      */
-    public static ProductRevertedStagedChangesMessage of() {
+    public static ProductRevertedStagedChangesMessage of(){
         return new ProductRevertedStagedChangesMessageImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy ProductRevertedStagedChangesMessage
@@ -100,8 +106,7 @@ public interface ProductRevertedStagedChangesMessage extends Message {
      * @return copy instance
      */
     @Nullable
-    public static ProductRevertedStagedChangesMessage deepCopy(
-            @Nullable final ProductRevertedStagedChangesMessage template) {
+    public static ProductRevertedStagedChangesMessage deepCopy(@Nullable final ProductRevertedStagedChangesMessage template) {
         if (template == null) {
             return null;
         }
@@ -110,16 +115,15 @@ public interface ProductRevertedStagedChangesMessage extends Message {
         instance.setVersion(template.getVersion());
         instance.setCreatedAt(template.getCreatedAt());
         instance.setLastModifiedAt(template.getLastModifiedAt());
-        instance.setLastModifiedBy(
-            com.commercetools.api.models.common.LastModifiedBy.deepCopy(template.getLastModifiedBy()));
+        instance.setLastModifiedBy(com.commercetools.api.models.common.LastModifiedBy.deepCopy(template.getLastModifiedBy()));
         instance.setCreatedBy(com.commercetools.api.models.common.CreatedBy.deepCopy(template.getCreatedBy()));
         instance.setSequenceNumber(template.getSequenceNumber());
         instance.setResource(com.commercetools.api.models.common.Reference.deepCopy(template.getResource()));
         instance.setResourceVersion(template.getResourceVersion());
-        instance.setResourceUserProvidedIdentifiers(com.commercetools.api.models.message.UserProvidedIdentifiers
-                .deepCopy(template.getResourceUserProvidedIdentifiers()));
-        instance.setRemovedImageUrls(
-            Optional.ofNullable(template.getRemovedImageUrls()).map(ArrayList::new).orElse(null));
+        instance.setResourceUserProvidedIdentifiers(com.commercetools.api.models.message.UserProvidedIdentifiers.deepCopy(template.getResourceUserProvidedIdentifiers()));
+        instance.setRemovedImageUrls(Optional.ofNullable(template.getRemovedImageUrls())
+                .map(ArrayList::new)
+                .orElse(null));
         return instance;
     }
 
@@ -130,16 +134,16 @@ public interface ProductRevertedStagedChangesMessage extends Message {
     public static ProductRevertedStagedChangesMessageBuilder builder() {
         return ProductRevertedStagedChangesMessageBuilder.of();
     }
-
+    
     /**
      * create builder for ProductRevertedStagedChangesMessage instance
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static ProductRevertedStagedChangesMessageBuilder builder(
-            final ProductRevertedStagedChangesMessage template) {
+    public static ProductRevertedStagedChangesMessageBuilder builder(final ProductRevertedStagedChangesMessage template) {
         return ProductRevertedStagedChangesMessageBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -150,7 +154,7 @@ public interface ProductRevertedStagedChangesMessage extends Message {
     default <T> T withProductRevertedStagedChangesMessage(Function<ProductRevertedStagedChangesMessage, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

@@ -1,9 +1,11 @@
-
 package com.commercetools.importapi.models.producttypes;
 
+import com.commercetools.importapi.models.producttypes.AttributeType;
+import com.commercetools.importapi.models.producttypes.AttributeSetType;
+import javax.annotation.Nullable;
 import java.util.*;
 import java.util.function.Function;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -17,44 +19,50 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .elementType(elementTypeBuilder -> elementTypeBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class AttributeSetTypeBuilder implements Builder<AttributeSetType> {
 
+    
+    
     private com.commercetools.importapi.models.producttypes.AttributeType elementType;
 
+    
     /**
      * set the value to the elementType
      * @param elementType value to be set
      * @return Builder
      */
-
-    public AttributeSetTypeBuilder elementType(
-            final com.commercetools.importapi.models.producttypes.AttributeType elementType) {
+    
+    public AttributeSetTypeBuilder elementType( final com.commercetools.importapi.models.producttypes.AttributeType elementType) {
         this.elementType = elementType;
         return this;
     }
-
+    
+    
     /**
      * set the value to the elementType using the builder function
      * @param builder function to build the elementType value
      * @return Builder
      */
-
-    public AttributeSetTypeBuilder elementType(
-            Function<com.commercetools.importapi.models.producttypes.AttributeTypeBuilder, Builder<? extends com.commercetools.importapi.models.producttypes.AttributeType>> builder) {
-        this.elementType = builder.apply(com.commercetools.importapi.models.producttypes.AttributeTypeBuilder.of())
-                .build();
+    
+    public AttributeSetTypeBuilder elementType(Function<com.commercetools.importapi.models.producttypes.AttributeTypeBuilder, Builder<? extends com.commercetools.importapi.models.producttypes.AttributeType>> builder) {
+        this.elementType = builder.apply(com.commercetools.importapi.models.producttypes.AttributeTypeBuilder.of()).build();
         return this;
     }
+                    
 
     /**
      * value of elementType}
      * @return elementType
      */
-
-    public com.commercetools.importapi.models.producttypes.AttributeType getElementType() {
+    
+    
+    public com.commercetools.importapi.models.producttypes.AttributeType getElementType(){
         return this.elementType;
     }
 
@@ -66,7 +74,7 @@ public class AttributeSetTypeBuilder implements Builder<AttributeSetType> {
         Objects.requireNonNull(elementType, AttributeSetType.class + ": elementType is missing");
         return new AttributeSetTypeImpl(elementType);
     }
-
+    
     /**
      * builds AttributeSetType without checking for non-null required values
      * @return AttributeSetType
@@ -77,7 +85,7 @@ public class AttributeSetTypeBuilder implements Builder<AttributeSetType> {
 
     /**
      * factory method for an instance of AttributeSetTypeBuilder
-     * @return builder
+     * @return builder 
      */
     public static AttributeSetTypeBuilder of() {
         return new AttributeSetTypeBuilder();

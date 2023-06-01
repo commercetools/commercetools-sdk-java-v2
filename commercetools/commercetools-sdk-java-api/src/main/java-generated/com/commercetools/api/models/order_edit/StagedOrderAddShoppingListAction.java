@@ -1,21 +1,22 @@
-
 package com.commercetools.api.models.order_edit;
-
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.channel.ChannelResourceIdentifier;
 import com.commercetools.api.models.order.StagedOrderUpdateAction;
 import com.commercetools.api.models.shopping_list.ShoppingListResourceIdentifier;
+import com.commercetools.api.models.order_edit.StagedOrderAddShoppingListActionImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * StagedOrderAddShoppingListAction
@@ -28,9 +29,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .shoppingList(shoppingListBuilder -> shoppingListBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = StagedOrderAddShoppingListActionImpl.class)
 public interface StagedOrderAddShoppingListAction extends StagedOrderUpdateAction {
 
@@ -47,7 +51,6 @@ public interface StagedOrderAddShoppingListAction extends StagedOrderUpdateActio
     @Valid
     @JsonProperty("shoppingList")
     public ShoppingListResourceIdentifier getShoppingList();
-
     /**
      *  <p>ResourceIdentifier to a Channel.</p>
      * @return supplyChannel
@@ -55,7 +58,6 @@ public interface StagedOrderAddShoppingListAction extends StagedOrderUpdateActio
     @Valid
     @JsonProperty("supplyChannel")
     public ChannelResourceIdentifier getSupplyChannel();
-
     /**
      *  <p>ResourceIdentifier to a Channel.</p>
      * @return distributionChannel
@@ -68,30 +70,34 @@ public interface StagedOrderAddShoppingListAction extends StagedOrderUpdateActio
      *  <p>ResourceIdentifier to a ShoppingList.</p>
      * @param shoppingList value to be set
      */
-
+    
     public void setShoppingList(final ShoppingListResourceIdentifier shoppingList);
-
+    
+    
     /**
      *  <p>ResourceIdentifier to a Channel.</p>
      * @param supplyChannel value to be set
      */
-
+    
     public void setSupplyChannel(final ChannelResourceIdentifier supplyChannel);
-
+    
+    
     /**
      *  <p>ResourceIdentifier to a Channel.</p>
      * @param distributionChannel value to be set
      */
-
+    
     public void setDistributionChannel(final ChannelResourceIdentifier distributionChannel);
+    
 
     /**
      * factory method
      * @return instance of StagedOrderAddShoppingListAction
      */
-    public static StagedOrderAddShoppingListAction of() {
+    public static StagedOrderAddShoppingListAction of(){
         return new StagedOrderAddShoppingListActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy StagedOrderAddShoppingListAction
@@ -117,12 +123,9 @@ public interface StagedOrderAddShoppingListAction extends StagedOrderUpdateActio
             return null;
         }
         StagedOrderAddShoppingListActionImpl instance = new StagedOrderAddShoppingListActionImpl();
-        instance.setShoppingList(com.commercetools.api.models.shopping_list.ShoppingListResourceIdentifier
-                .deepCopy(template.getShoppingList()));
-        instance.setSupplyChannel(
-            com.commercetools.api.models.channel.ChannelResourceIdentifier.deepCopy(template.getSupplyChannel()));
-        instance.setDistributionChannel(
-            com.commercetools.api.models.channel.ChannelResourceIdentifier.deepCopy(template.getDistributionChannel()));
+        instance.setShoppingList(com.commercetools.api.models.shopping_list.ShoppingListResourceIdentifier.deepCopy(template.getShoppingList()));
+        instance.setSupplyChannel(com.commercetools.api.models.channel.ChannelResourceIdentifier.deepCopy(template.getSupplyChannel()));
+        instance.setDistributionChannel(com.commercetools.api.models.channel.ChannelResourceIdentifier.deepCopy(template.getDistributionChannel()));
         return instance;
     }
 
@@ -133,7 +136,7 @@ public interface StagedOrderAddShoppingListAction extends StagedOrderUpdateActio
     public static StagedOrderAddShoppingListActionBuilder builder() {
         return StagedOrderAddShoppingListActionBuilder.of();
     }
-
+    
     /**
      * create builder for StagedOrderAddShoppingListAction instance
      * @param template instance with prefilled values for the builder
@@ -142,6 +145,7 @@ public interface StagedOrderAddShoppingListAction extends StagedOrderUpdateActio
     public static StagedOrderAddShoppingListActionBuilder builder(final StagedOrderAddShoppingListAction template) {
         return StagedOrderAddShoppingListActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -152,7 +156,7 @@ public interface StagedOrderAddShoppingListAction extends StagedOrderUpdateActio
     default <T> T withStagedOrderAddShoppingListAction(Function<StagedOrderAddShoppingListAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

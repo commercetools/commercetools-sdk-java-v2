@@ -1,8 +1,11 @@
-
 package com.commercetools.api.models.cart_discount;
 
+import com.commercetools.api.models.cart_discount.CartDiscountUpdateAction;
+import com.commercetools.api.models.cart_discount.CartDiscountChangeCartPredicateAction;
+import javax.annotation.Nullable;
 import java.util.*;
-
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -16,30 +19,39 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .cartPredicate("{cartPredicate}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class CartDiscountChangeCartPredicateActionBuilder implements Builder<CartDiscountChangeCartPredicateAction> {
 
+    
+    
     private String cartPredicate;
 
+    
     /**
      *  <p>New value to set.</p>
      * @param cartPredicate value to be set
      * @return Builder
      */
-
-    public CartDiscountChangeCartPredicateActionBuilder cartPredicate(final String cartPredicate) {
+    
+    public CartDiscountChangeCartPredicateActionBuilder cartPredicate( final String cartPredicate) {
         this.cartPredicate = cartPredicate;
         return this;
     }
+    
+    
 
     /**
      *  <p>New value to set.</p>
      * @return cartPredicate
      */
-
-    public String getCartPredicate() {
+    
+    
+    public String getCartPredicate(){
         return this.cartPredicate;
     }
 
@@ -48,11 +60,10 @@ public class CartDiscountChangeCartPredicateActionBuilder implements Builder<Car
      * @return CartDiscountChangeCartPredicateAction
      */
     public CartDiscountChangeCartPredicateAction build() {
-        Objects.requireNonNull(cartPredicate,
-            CartDiscountChangeCartPredicateAction.class + ": cartPredicate is missing");
+        Objects.requireNonNull(cartPredicate, CartDiscountChangeCartPredicateAction.class + ": cartPredicate is missing");
         return new CartDiscountChangeCartPredicateActionImpl(cartPredicate);
     }
-
+    
     /**
      * builds CartDiscountChangeCartPredicateAction without checking for non-null required values
      * @return CartDiscountChangeCartPredicateAction
@@ -63,7 +74,7 @@ public class CartDiscountChangeCartPredicateActionBuilder implements Builder<Car
 
     /**
      * factory method for an instance of CartDiscountChangeCartPredicateActionBuilder
-     * @return builder
+     * @return builder 
      */
     public static CartDiscountChangeCartPredicateActionBuilder of() {
         return new CartDiscountChangeCartPredicateActionBuilder();
@@ -74,8 +85,7 @@ public class CartDiscountChangeCartPredicateActionBuilder implements Builder<Car
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static CartDiscountChangeCartPredicateActionBuilder of(
-            final CartDiscountChangeCartPredicateAction template) {
+    public static CartDiscountChangeCartPredicateActionBuilder of(final CartDiscountChangeCartPredicateAction template) {
         CartDiscountChangeCartPredicateActionBuilder builder = new CartDiscountChangeCartPredicateActionBuilder();
         builder.cartPredicate = template.getCartPredicate();
         return builder;

@@ -1,14 +1,4 @@
-
 package com.commercetools.importapi.models.products;
-
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-import java.util.stream.Collectors;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.importapi.models.common.CategoryKeyReference;
 import com.commercetools.importapi.models.common.ImportResource;
@@ -17,10 +7,21 @@ import com.commercetools.importapi.models.common.ProductPriceModeEnum;
 import com.commercetools.importapi.models.common.ProductTypeKeyReference;
 import com.commercetools.importapi.models.common.StateKeyReference;
 import com.commercetools.importapi.models.common.TaxCategoryKeyReference;
+import com.commercetools.importapi.models.products.SearchKeywords;
+import com.commercetools.importapi.models.products.ProductImportImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>The data representation for a Product to be imported that is persisted as a Product in the Project.</p>
@@ -37,11 +38,15 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .slug(slugBuilder -> slugBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = ProductImportImpl.class)
 public interface ProductImport extends ImportResource {
+
 
     /**
      *  <p>Maps to <code>Product.name</code>.</p>
@@ -51,7 +56,6 @@ public interface ProductImport extends ImportResource {
     @Valid
     @JsonProperty("name")
     public LocalizedString getName();
-
     /**
      *  <p>The <code>productType</code> of a Product. Maps to <code>Product.productType</code>. The Reference to the ProductType with which the Product is associated. If referenced ProductType does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary ProductType is created.</p>
      * @return productType
@@ -60,7 +64,6 @@ public interface ProductImport extends ImportResource {
     @Valid
     @JsonProperty("productType")
     public ProductTypeKeyReference getProductType();
-
     /**
      *  <p>Human-readable identifiers usually used as deep-link URL to the related product. Each slug must be unique across a Project, but a product can have the same slug for different languages. Allowed are alphabetic, numeric, underscore (_) and hyphen (-) characters.</p>
      * @return slug
@@ -69,7 +72,6 @@ public interface ProductImport extends ImportResource {
     @Valid
     @JsonProperty("slug")
     public LocalizedString getSlug();
-
     /**
      *  <p>Maps to <code>Product.description</code>.</p>
      * @return description
@@ -77,7 +79,6 @@ public interface ProductImport extends ImportResource {
     @Valid
     @JsonProperty("description")
     public LocalizedString getDescription();
-
     /**
      *  <p>Maps to <code>Product.categories</code>. The References to the Categories with which the Product is associated. If referenced Categories do not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary Categories are created.</p>
      * @return categories
@@ -85,7 +86,6 @@ public interface ProductImport extends ImportResource {
     @Valid
     @JsonProperty("categories")
     public List<CategoryKeyReference> getCategories();
-
     /**
      *  <p>A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</p>
      *  <pre><code>{
@@ -98,7 +98,6 @@ public interface ProductImport extends ImportResource {
     @Valid
     @JsonProperty("metaTitle")
     public LocalizedString getMetaTitle();
-
     /**
      *  <p>A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</p>
      *  <pre><code>{
@@ -111,7 +110,6 @@ public interface ProductImport extends ImportResource {
     @Valid
     @JsonProperty("metaDescription")
     public LocalizedString getMetaDescription();
-
     /**
      *  <p>A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</p>
      *  <pre><code>{
@@ -124,7 +122,6 @@ public interface ProductImport extends ImportResource {
     @Valid
     @JsonProperty("metaKeywords")
     public LocalizedString getMetaKeywords();
-
     /**
      *  <p>The Reference to the TaxCategory with which the Product is associated. If referenced TaxCategory does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary TaxCategory is created.</p>
      * @return taxCategory
@@ -132,7 +129,6 @@ public interface ProductImport extends ImportResource {
     @Valid
     @JsonProperty("taxCategory")
     public TaxCategoryKeyReference getTaxCategory();
-
     /**
      *  <p>Search keywords are primarily used by the suggester but are also considered for the full-text search. SearchKeywords is a JSON object where the keys are of IETF language tag. The value to a language tag key is an array of SearchKeyword for the specific language.</p>
      *  <pre><code>{
@@ -156,7 +152,6 @@ public interface ProductImport extends ImportResource {
     @Valid
     @JsonProperty("searchKeywords")
     public SearchKeywords getSearchKeywords();
-
     /**
      *  <p>The Reference to the State with which the Product is associated. If referenced State does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary State is created.</p>
      * @return state
@@ -164,20 +159,18 @@ public interface ProductImport extends ImportResource {
     @Valid
     @JsonProperty("state")
     public StateKeyReference getState();
-
     /**
      *  <p>If <code>publish</code> is set to either <code>true</code> or <code>false</code>, both staged and current projections are set to the same value provided by the import data. If <code>publish</code> is not set, the staged projection is set to the provided import data, but the current projection stays unchanged. However, if the import data contains no update, that is, if it matches the staged projection of the existing Product, the import induces no change in the existing Product whether <code>publish</code> is set or not.</p>
      * @return publish
      */
-
+    
     @JsonProperty("publish")
     public Boolean getPublish();
-
     /**
      *  <p>Determines the type of Prices the API uses. See ProductPriceMode for more details. If not provided, the existing <code>Product.priceMode</code> is not changed.</p>
      * @return priceMode
      */
-
+    
     @JsonProperty("priceMode")
     public ProductPriceModeEnum getPriceMode();
 
@@ -185,45 +178,48 @@ public interface ProductImport extends ImportResource {
      *  <p>Maps to <code>Product.name</code>.</p>
      * @param name value to be set
      */
-
+    
     public void setName(final LocalizedString name);
-
+    
+    
     /**
      *  <p>The <code>productType</code> of a Product. Maps to <code>Product.productType</code>. The Reference to the ProductType with which the Product is associated. If referenced ProductType does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary ProductType is created.</p>
      * @param productType value to be set
      */
-
+    
     public void setProductType(final ProductTypeKeyReference productType);
-
+    
+    
     /**
      *  <p>Human-readable identifiers usually used as deep-link URL to the related product. Each slug must be unique across a Project, but a product can have the same slug for different languages. Allowed are alphabetic, numeric, underscore (_) and hyphen (-) characters.</p>
      * @param slug value to be set
      */
-
+    
     public void setSlug(final LocalizedString slug);
-
+    
+    
     /**
      *  <p>Maps to <code>Product.description</code>.</p>
      * @param description value to be set
      */
-
+    
     public void setDescription(final LocalizedString description);
-
+    
+    
     /**
      *  <p>Maps to <code>Product.categories</code>. The References to the Categories with which the Product is associated. If referenced Categories do not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary Categories are created.</p>
      * @param categories values to be set
      */
-
+    
     @JsonIgnore
-    public void setCategories(final CategoryKeyReference... categories);
-
+    public void setCategories(final CategoryKeyReference ...categories);
     /**
      *  <p>Maps to <code>Product.categories</code>. The References to the Categories with which the Product is associated. If referenced Categories do not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary Categories are created.</p>
      * @param categories values to be set
      */
-
+    
     public void setCategories(final List<CategoryKeyReference> categories);
-
+    
     /**
      *  <p>A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</p>
      *  <pre><code>{
@@ -233,9 +229,10 @@ public interface ProductImport extends ImportResource {
      *  </code></pre>
      * @param metaTitle value to be set
      */
-
+    
     public void setMetaTitle(final LocalizedString metaTitle);
-
+    
+    
     /**
      *  <p>A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</p>
      *  <pre><code>{
@@ -245,9 +242,10 @@ public interface ProductImport extends ImportResource {
      *  </code></pre>
      * @param metaDescription value to be set
      */
-
+    
     public void setMetaDescription(final LocalizedString metaDescription);
-
+    
+    
     /**
      *  <p>A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</p>
      *  <pre><code>{
@@ -257,16 +255,18 @@ public interface ProductImport extends ImportResource {
      *  </code></pre>
      * @param metaKeywords value to be set
      */
-
+    
     public void setMetaKeywords(final LocalizedString metaKeywords);
-
+    
+    
     /**
      *  <p>The Reference to the TaxCategory with which the Product is associated. If referenced TaxCategory does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary TaxCategory is created.</p>
      * @param taxCategory value to be set
      */
-
+    
     public void setTaxCategory(final TaxCategoryKeyReference taxCategory);
-
+    
+    
     /**
      *  <p>Search keywords are primarily used by the suggester but are also considered for the full-text search. SearchKeywords is a JSON object where the keys are of IETF language tag. The value to a language tag key is an array of SearchKeyword for the specific language.</p>
      *  <pre><code>{
@@ -287,37 +287,42 @@ public interface ProductImport extends ImportResource {
      *  </code></pre>
      * @param searchKeywords value to be set
      */
-
+    
     public void setSearchKeywords(final SearchKeywords searchKeywords);
-
+    
+    
     /**
      *  <p>The Reference to the State with which the Product is associated. If referenced State does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary State is created.</p>
      * @param state value to be set
      */
-
+    
     public void setState(final StateKeyReference state);
-
+    
+    
     /**
      *  <p>If <code>publish</code> is set to either <code>true</code> or <code>false</code>, both staged and current projections are set to the same value provided by the import data. If <code>publish</code> is not set, the staged projection is set to the provided import data, but the current projection stays unchanged. However, if the import data contains no update, that is, if it matches the staged projection of the existing Product, the import induces no change in the existing Product whether <code>publish</code> is set or not.</p>
      * @param publish value to be set
      */
-
+    
     public void setPublish(final Boolean publish);
-
+    
+    
     /**
      *  <p>Determines the type of Prices the API uses. See ProductPriceMode for more details. If not provided, the existing <code>Product.priceMode</code> is not changed.</p>
      * @param priceMode value to be set
      */
-
+    
     public void setPriceMode(final ProductPriceModeEnum priceMode);
+    
 
     /**
      * factory method
      * @return instance of ProductImport
      */
-    public static ProductImport of() {
+    public static ProductImport of(){
         return new ProductImportImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy ProductImport
@@ -356,26 +361,17 @@ public interface ProductImport extends ImportResource {
         ProductImportImpl instance = new ProductImportImpl();
         instance.setKey(template.getKey());
         instance.setName(com.commercetools.importapi.models.common.LocalizedString.deepCopy(template.getName()));
-        instance.setProductType(
-            com.commercetools.importapi.models.common.ProductTypeKeyReference.deepCopy(template.getProductType()));
+        instance.setProductType(com.commercetools.importapi.models.common.ProductTypeKeyReference.deepCopy(template.getProductType()));
         instance.setSlug(com.commercetools.importapi.models.common.LocalizedString.deepCopy(template.getSlug()));
-        instance.setDescription(
-            com.commercetools.importapi.models.common.LocalizedString.deepCopy(template.getDescription()));
+        instance.setDescription(com.commercetools.importapi.models.common.LocalizedString.deepCopy(template.getDescription()));
         instance.setCategories(Optional.ofNullable(template.getCategories())
-                .map(t -> t.stream()
-                        .map(com.commercetools.importapi.models.common.CategoryKeyReference::deepCopy)
-                        .collect(Collectors.toList()))
+                .map(t -> t.stream().map(com.commercetools.importapi.models.common.CategoryKeyReference::deepCopy).collect(Collectors.toList()))
                 .orElse(null));
-        instance.setMetaTitle(
-            com.commercetools.importapi.models.common.LocalizedString.deepCopy(template.getMetaTitle()));
-        instance.setMetaDescription(
-            com.commercetools.importapi.models.common.LocalizedString.deepCopy(template.getMetaDescription()));
-        instance.setMetaKeywords(
-            com.commercetools.importapi.models.common.LocalizedString.deepCopy(template.getMetaKeywords()));
-        instance.setTaxCategory(
-            com.commercetools.importapi.models.common.TaxCategoryKeyReference.deepCopy(template.getTaxCategory()));
-        instance.setSearchKeywords(
-            com.commercetools.importapi.models.products.SearchKeywords.deepCopy(template.getSearchKeywords()));
+        instance.setMetaTitle(com.commercetools.importapi.models.common.LocalizedString.deepCopy(template.getMetaTitle()));
+        instance.setMetaDescription(com.commercetools.importapi.models.common.LocalizedString.deepCopy(template.getMetaDescription()));
+        instance.setMetaKeywords(com.commercetools.importapi.models.common.LocalizedString.deepCopy(template.getMetaKeywords()));
+        instance.setTaxCategory(com.commercetools.importapi.models.common.TaxCategoryKeyReference.deepCopy(template.getTaxCategory()));
+        instance.setSearchKeywords(com.commercetools.importapi.models.products.SearchKeywords.deepCopy(template.getSearchKeywords()));
         instance.setState(com.commercetools.importapi.models.common.StateKeyReference.deepCopy(template.getState()));
         instance.setPublish(template.getPublish());
         instance.setPriceMode(template.getPriceMode());
@@ -389,7 +385,7 @@ public interface ProductImport extends ImportResource {
     public static ProductImportBuilder builder() {
         return ProductImportBuilder.of();
     }
-
+    
     /**
      * create builder for ProductImport instance
      * @param template instance with prefilled values for the builder
@@ -398,6 +394,7 @@ public interface ProductImport extends ImportResource {
     public static ProductImportBuilder builder(final ProductImport template) {
         return ProductImportBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -408,7 +405,7 @@ public interface ProductImport extends ImportResource {
     default <T> T withProductImport(Function<ProductImport, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

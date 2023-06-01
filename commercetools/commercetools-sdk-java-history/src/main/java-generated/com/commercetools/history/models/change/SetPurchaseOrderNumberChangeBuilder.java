@@ -1,8 +1,11 @@
-
 package com.commercetools.history.models.change;
 
+import com.commercetools.history.models.change.Change;
+import com.commercetools.history.models.change.SetPurchaseOrderNumberChange;
+import javax.annotation.Nullable;
 import java.util.*;
-
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -18,74 +21,95 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .nextValue("{nextValue}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class SetPurchaseOrderNumberChangeBuilder implements Builder<SetPurchaseOrderNumberChange> {
 
+    
+    
     private String change;
-
+    
+    
+    
     private String previousValue;
-
+    
+    
+    
     private String nextValue;
 
+    
     /**
      *  <p>Update action for <code>setPurchaseOrderNumber</code>.</p>
      * @param change value to be set
      * @return Builder
      */
-
-    public SetPurchaseOrderNumberChangeBuilder change(final String change) {
+    
+    public SetPurchaseOrderNumberChangeBuilder change( final String change) {
         this.change = change;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Purchase Order number prior to the update action.</p>
      * @param previousValue value to be set
      * @return Builder
      */
-
-    public SetPurchaseOrderNumberChangeBuilder previousValue(final String previousValue) {
+    
+    public SetPurchaseOrderNumberChangeBuilder previousValue( final String previousValue) {
         this.previousValue = previousValue;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Purchase Order number after the update action.</p>
      * @param nextValue value to be set
      * @return Builder
      */
-
-    public SetPurchaseOrderNumberChangeBuilder nextValue(final String nextValue) {
+    
+    public SetPurchaseOrderNumberChangeBuilder nextValue( final String nextValue) {
         this.nextValue = nextValue;
         return this;
     }
+    
+    
 
     /**
      *  <p>Update action for <code>setPurchaseOrderNumber</code>.</p>
      * @return change
      */
-
-    public String getChange() {
+    
+    
+    public String getChange(){
         return this.change;
     }
-
+    
     /**
      *  <p>Purchase Order number prior to the update action.</p>
      * @return previousValue
      */
-
-    public String getPreviousValue() {
+    
+    
+    public String getPreviousValue(){
         return this.previousValue;
     }
-
+    
     /**
      *  <p>Purchase Order number after the update action.</p>
      * @return nextValue
      */
-
-    public String getNextValue() {
+    
+    
+    public String getNextValue(){
         return this.nextValue;
     }
 
@@ -99,7 +123,7 @@ public class SetPurchaseOrderNumberChangeBuilder implements Builder<SetPurchaseO
         Objects.requireNonNull(nextValue, SetPurchaseOrderNumberChange.class + ": nextValue is missing");
         return new SetPurchaseOrderNumberChangeImpl(change, previousValue, nextValue);
     }
-
+    
     /**
      * builds SetPurchaseOrderNumberChange without checking for non-null required values
      * @return SetPurchaseOrderNumberChange
@@ -110,7 +134,7 @@ public class SetPurchaseOrderNumberChangeBuilder implements Builder<SetPurchaseO
 
     /**
      * factory method for an instance of SetPurchaseOrderNumberChangeBuilder
-     * @return builder
+     * @return builder 
      */
     public static SetPurchaseOrderNumberChangeBuilder of() {
         return new SetPurchaseOrderNumberChangeBuilder();

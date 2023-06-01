@@ -1,17 +1,20 @@
-
 package com.commercetools.api.models.error;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
+import com.commercetools.api.models.error.ErrorObject;
+import com.commercetools.api.models.error.AttributeDefinitionTypeConflictErrorImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Returned when the <code>type</code> is different for an AttributeDefinition using the same <code>name</code> in multiple Product Types.</p>
@@ -28,9 +31,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .conflictingAttributeName("{conflictingAttributeName}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = AttributeDefinitionTypeConflictErrorImpl.class)
 public interface AttributeDefinitionTypeConflictError extends ErrorObject {
 
@@ -46,7 +52,6 @@ public interface AttributeDefinitionTypeConflictError extends ErrorObject {
     @NotNull
     @JsonProperty("code")
     public String getCode();
-
     /**
      *  <p><code>"The attribute with name $attributeName has a different type on product type $productTypeName."</code></p>
      * @return message
@@ -54,7 +59,6 @@ public interface AttributeDefinitionTypeConflictError extends ErrorObject {
     @NotNull
     @JsonProperty("message")
     public String getMessage();
-
     /**
      *  <p>Unique identifier of the Product Type containing the conflicting name.</p>
      * @return conflictingProductTypeId
@@ -62,7 +66,6 @@ public interface AttributeDefinitionTypeConflictError extends ErrorObject {
     @NotNull
     @JsonProperty("conflictingProductTypeId")
     public String getConflictingProductTypeId();
-
     /**
      *  <p>Name of the Product Type containing the conflicting name.</p>
      * @return conflictingProductTypeName
@@ -70,7 +73,6 @@ public interface AttributeDefinitionTypeConflictError extends ErrorObject {
     @NotNull
     @JsonProperty("conflictingProductTypeName")
     public String getConflictingProductTypeName();
-
     /**
      *  <p>Name of the conflicting Attribute.</p>
      * @return conflictingAttributeName
@@ -83,37 +85,42 @@ public interface AttributeDefinitionTypeConflictError extends ErrorObject {
      *  <p><code>"The attribute with name $attributeName has a different type on product type $productTypeName."</code></p>
      * @param message value to be set
      */
-
+    
     public void setMessage(final String message);
-
+    
+    
     /**
      *  <p>Unique identifier of the Product Type containing the conflicting name.</p>
      * @param conflictingProductTypeId value to be set
      */
-
+    
     public void setConflictingProductTypeId(final String conflictingProductTypeId);
-
+    
+    
     /**
      *  <p>Name of the Product Type containing the conflicting name.</p>
      * @param conflictingProductTypeName value to be set
      */
-
+    
     public void setConflictingProductTypeName(final String conflictingProductTypeName);
-
+    
+    
     /**
      *  <p>Name of the conflicting Attribute.</p>
      * @param conflictingAttributeName value to be set
      */
-
+    
     public void setConflictingAttributeName(final String conflictingAttributeName);
+    
 
     /**
      * factory method
      * @return instance of AttributeDefinitionTypeConflictError
      */
-    public static AttributeDefinitionTypeConflictError of() {
+    public static AttributeDefinitionTypeConflictError of(){
         return new AttributeDefinitionTypeConflictErrorImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy AttributeDefinitionTypeConflictError
@@ -136,8 +143,7 @@ public interface AttributeDefinitionTypeConflictError extends ErrorObject {
      * @return copy instance
      */
     @Nullable
-    public static AttributeDefinitionTypeConflictError deepCopy(
-            @Nullable final AttributeDefinitionTypeConflictError template) {
+    public static AttributeDefinitionTypeConflictError deepCopy(@Nullable final AttributeDefinitionTypeConflictError template) {
         if (template == null) {
             return null;
         }
@@ -157,16 +163,16 @@ public interface AttributeDefinitionTypeConflictError extends ErrorObject {
     public static AttributeDefinitionTypeConflictErrorBuilder builder() {
         return AttributeDefinitionTypeConflictErrorBuilder.of();
     }
-
+    
     /**
      * create builder for AttributeDefinitionTypeConflictError instance
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static AttributeDefinitionTypeConflictErrorBuilder builder(
-            final AttributeDefinitionTypeConflictError template) {
+    public static AttributeDefinitionTypeConflictErrorBuilder builder(final AttributeDefinitionTypeConflictError template) {
         return AttributeDefinitionTypeConflictErrorBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -177,7 +183,7 @@ public interface AttributeDefinitionTypeConflictError extends ErrorObject {
     default <T> T withAttributeDefinitionTypeConflictError(Function<AttributeDefinitionTypeConflictError, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

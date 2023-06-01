@@ -1,22 +1,23 @@
-
 package com.commercetools.api.models.shipping_method;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-import java.util.stream.Collectors;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
 import com.commercetools.api.models.common.LocalizedString;
+import com.commercetools.api.models.shipping_method.ZoneRateDraft;
 import com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifier;
 import com.commercetools.api.models.type.CustomFieldsDraft;
+import com.commercetools.api.models.shipping_method.ShippingMethodDraftImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * ShippingMethodDraft
@@ -32,21 +33,23 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .isDefault(true)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = ShippingMethodDraftImpl.class)
-public interface ShippingMethodDraft extends com.commercetools.api.models.CustomizableDraft<ShippingMethodDraft>,
-        com.commercetools.api.models.WithKey, io.vrap.rmf.base.client.Draft<ShippingMethodDraft> {
+public interface ShippingMethodDraft extends com.commercetools.api.models.CustomizableDraft<ShippingMethodDraft>, com.commercetools.api.models.WithKey, io.vrap.rmf.base.client.Draft<ShippingMethodDraft> {
+
 
     /**
      *  <p>User-defined unique identifier for the ShippingMethod.</p>
      * @return key
      */
-
+    
     @JsonProperty("key")
     public String getKey();
-
     /**
      *  <p>Name of the ShippingMethod.</p>
      * @return name
@@ -54,7 +57,6 @@ public interface ShippingMethodDraft extends com.commercetools.api.models.Custom
     @NotNull
     @JsonProperty("name")
     public String getName();
-
     /**
      *  <p>Localized name of the ShippingMethod.</p>
      * @return localizedName
@@ -62,7 +64,6 @@ public interface ShippingMethodDraft extends com.commercetools.api.models.Custom
     @Valid
     @JsonProperty("localizedName")
     public LocalizedString getLocalizedName();
-
     /**
      *  <p>Description of the ShippingMethod.</p>
      * @return description
@@ -70,7 +71,6 @@ public interface ShippingMethodDraft extends com.commercetools.api.models.Custom
     @Deprecated
     @JsonProperty("description")
     public String getDescription();
-
     /**
      *  <p>Localized description of the ShippingMethod.</p>
      * @return localizedDescription
@@ -78,7 +78,6 @@ public interface ShippingMethodDraft extends com.commercetools.api.models.Custom
     @Valid
     @JsonProperty("localizedDescription")
     public LocalizedString getLocalizedDescription();
-
     /**
      *  <p>TaxCategory for all ZoneRates of the ShippingMethod.</p>
      * @return taxCategory
@@ -87,7 +86,6 @@ public interface ShippingMethodDraft extends com.commercetools.api.models.Custom
     @Valid
     @JsonProperty("taxCategory")
     public TaxCategoryResourceIdentifier getTaxCategory();
-
     /**
      *  <p>Defines ShippingRates (prices) for specific zones.</p>
      * @return zoneRates
@@ -96,7 +94,6 @@ public interface ShippingMethodDraft extends com.commercetools.api.models.Custom
     @Valid
     @JsonProperty("zoneRates")
     public List<ZoneRateDraft> getZoneRates();
-
     /**
      *  <p>If <code>true</code> the ShippingMethod will be the Project's default ShippingMethod.</p>
      * @return isDefault
@@ -104,15 +101,13 @@ public interface ShippingMethodDraft extends com.commercetools.api.models.Custom
     @NotNull
     @JsonProperty("isDefault")
     public Boolean getIsDefault();
-
     /**
      *  <p>Valid Cart predicate to select a ShippingMethod for a Cart.</p>
      * @return predicate
      */
-
+    
     @JsonProperty("predicate")
     public String getPredicate();
-
     /**
      *  <p>Custom Fields for the ShippingMethod.</p>
      * @return custom
@@ -125,87 +120,96 @@ public interface ShippingMethodDraft extends com.commercetools.api.models.Custom
      *  <p>User-defined unique identifier for the ShippingMethod.</p>
      * @param key value to be set
      */
-
+    
     public void setKey(final String key);
-
+    
+    
     /**
      *  <p>Name of the ShippingMethod.</p>
      * @param name value to be set
      */
-
+    
     public void setName(final String name);
-
+    
+    
     /**
      *  <p>Localized name of the ShippingMethod.</p>
      * @param localizedName value to be set
      */
-
+    
     public void setLocalizedName(final LocalizedString localizedName);
-
+    
+    
     /**
      *  <p>Description of the ShippingMethod.</p>
      * @param description value to be set
      */
     @Deprecated
     public void setDescription(final String description);
-
+    
+    
     /**
      *  <p>Localized description of the ShippingMethod.</p>
      * @param localizedDescription value to be set
      */
-
+    
     public void setLocalizedDescription(final LocalizedString localizedDescription);
-
+    
+    
     /**
      *  <p>TaxCategory for all ZoneRates of the ShippingMethod.</p>
      * @param taxCategory value to be set
      */
-
+    
     public void setTaxCategory(final TaxCategoryResourceIdentifier taxCategory);
-
+    
+    
     /**
      *  <p>Defines ShippingRates (prices) for specific zones.</p>
      * @param zoneRates values to be set
      */
-
+    
     @JsonIgnore
-    public void setZoneRates(final ZoneRateDraft... zoneRates);
-
+    public void setZoneRates(final ZoneRateDraft ...zoneRates);
     /**
      *  <p>Defines ShippingRates (prices) for specific zones.</p>
      * @param zoneRates values to be set
      */
-
+    
     public void setZoneRates(final List<ZoneRateDraft> zoneRates);
-
+    
     /**
      *  <p>If <code>true</code> the ShippingMethod will be the Project's default ShippingMethod.</p>
      * @param isDefault value to be set
      */
-
+    
     public void setIsDefault(final Boolean isDefault);
-
+    
+    
     /**
      *  <p>Valid Cart predicate to select a ShippingMethod for a Cart.</p>
      * @param predicate value to be set
      */
-
+    
     public void setPredicate(final String predicate);
-
+    
+    
     /**
      *  <p>Custom Fields for the ShippingMethod.</p>
      * @param custom value to be set
      */
-
+    
     public void setCustom(final CustomFieldsDraft custom);
+    
 
     /**
      * factory method
      * @return instance of ShippingMethodDraft
      */
-    public static ShippingMethodDraft of() {
+    public static ShippingMethodDraft of(){
         return new ShippingMethodDraftImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy ShippingMethodDraft
@@ -240,17 +244,12 @@ public interface ShippingMethodDraft extends com.commercetools.api.models.Custom
         ShippingMethodDraftImpl instance = new ShippingMethodDraftImpl();
         instance.setKey(template.getKey());
         instance.setName(template.getName());
-        instance.setLocalizedName(
-            com.commercetools.api.models.common.LocalizedString.deepCopy(template.getLocalizedName()));
+        instance.setLocalizedName(com.commercetools.api.models.common.LocalizedString.deepCopy(template.getLocalizedName()));
         instance.setDescription(template.getDescription());
-        instance.setLocalizedDescription(
-            com.commercetools.api.models.common.LocalizedString.deepCopy(template.getLocalizedDescription()));
-        instance.setTaxCategory(com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifier
-                .deepCopy(template.getTaxCategory()));
+        instance.setLocalizedDescription(com.commercetools.api.models.common.LocalizedString.deepCopy(template.getLocalizedDescription()));
+        instance.setTaxCategory(com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifier.deepCopy(template.getTaxCategory()));
         instance.setZoneRates(Optional.ofNullable(template.getZoneRates())
-                .map(t -> t.stream()
-                        .map(com.commercetools.api.models.shipping_method.ZoneRateDraft::deepCopy)
-                        .collect(Collectors.toList()))
+                .map(t -> t.stream().map(com.commercetools.api.models.shipping_method.ZoneRateDraft::deepCopy).collect(Collectors.toList()))
                 .orElse(null));
         instance.setIsDefault(template.getIsDefault());
         instance.setPredicate(template.getPredicate());
@@ -265,7 +264,7 @@ public interface ShippingMethodDraft extends com.commercetools.api.models.Custom
     public static ShippingMethodDraftBuilder builder() {
         return ShippingMethodDraftBuilder.of();
     }
-
+    
     /**
      * create builder for ShippingMethodDraft instance
      * @param template instance with prefilled values for the builder
@@ -274,6 +273,7 @@ public interface ShippingMethodDraft extends com.commercetools.api.models.Custom
     public static ShippingMethodDraftBuilder builder(final ShippingMethodDraft template) {
         return ShippingMethodDraftBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -284,7 +284,7 @@ public interface ShippingMethodDraft extends com.commercetools.api.models.Custom
     default <T> T withShippingMethodDraft(Function<ShippingMethodDraft, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

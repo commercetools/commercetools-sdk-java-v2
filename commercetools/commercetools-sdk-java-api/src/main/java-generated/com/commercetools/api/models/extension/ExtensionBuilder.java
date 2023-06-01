@@ -1,11 +1,16 @@
-
 package com.commercetools.api.models.extension;
 
+import com.commercetools.api.models.common.BaseResource;
+import com.commercetools.api.models.common.CreatedBy;
+import com.commercetools.api.models.common.LastModifiedBy;
+import com.commercetools.api.models.extension.ExtensionDestination;
+import com.commercetools.api.models.extension.ExtensionTrigger;
+import java.time.ZonedDateTime;
+import com.commercetools.api.models.extension.Extension;
+import javax.annotation.Nullable;
 import java.util.*;
 import java.util.function.Function;
-
-import javax.annotation.Nullable;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -24,374 +29,417 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .plusTriggers(triggersBuilder -> triggersBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class ExtensionBuilder implements Builder<Extension> {
 
+    
+    
     private String id;
-
+    
+    
+    
     private Long version;
-
+    
+    
+    
     private java.time.ZonedDateTime createdAt;
-
+    
+    
+    
     private java.time.ZonedDateTime lastModifiedAt;
-
+    
+    
     @Nullable
     private com.commercetools.api.models.common.LastModifiedBy lastModifiedBy;
-
+    
+    
     @Nullable
     private com.commercetools.api.models.common.CreatedBy createdBy;
-
+    
+    
     @Nullable
     private String key;
-
+    
+    
+    
     private com.commercetools.api.models.extension.ExtensionDestination destination;
-
+    
+    
+    
     private java.util.List<com.commercetools.api.models.extension.ExtensionTrigger> triggers;
-
+    
+    
     @Nullable
     private Integer timeoutInMs;
 
+    
     /**
      *  <p>Unique identifier of the Extension.</p>
      * @param id value to be set
      * @return Builder
      */
-
-    public ExtensionBuilder id(final String id) {
+    
+    public ExtensionBuilder id( final String id) {
         this.id = id;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Current version of the Extension.</p>
      * @param version value to be set
      * @return Builder
      */
-
-    public ExtensionBuilder version(final Long version) {
+    
+    public ExtensionBuilder version( final Long version) {
         this.version = version;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Date and time (UTC) the Extension was initially created.</p>
      * @param createdAt value to be set
      * @return Builder
      */
-
-    public ExtensionBuilder createdAt(final java.time.ZonedDateTime createdAt) {
+    
+    public ExtensionBuilder createdAt( final java.time.ZonedDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Date and time (UTC) the Extension was last updated.</p>
      * @param lastModifiedAt value to be set
      * @return Builder
      */
-
-    public ExtensionBuilder lastModifiedAt(final java.time.ZonedDateTime lastModifiedAt) {
+    
+    public ExtensionBuilder lastModifiedAt( final java.time.ZonedDateTime lastModifiedAt) {
         this.lastModifiedAt = lastModifiedAt;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      * @param builder function to build the lastModifiedBy value
      * @return Builder
      */
-
-    public ExtensionBuilder lastModifiedBy(
-            Function<com.commercetools.api.models.common.LastModifiedByBuilder, com.commercetools.api.models.common.LastModifiedByBuilder> builder) {
+    
+    public ExtensionBuilder lastModifiedBy(Function<com.commercetools.api.models.common.LastModifiedByBuilder, com.commercetools.api.models.common.LastModifiedByBuilder> builder) {
         this.lastModifiedBy = builder.apply(com.commercetools.api.models.common.LastModifiedByBuilder.of()).build();
         return this;
     }
-
+    
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      * @param builder function to build the lastModifiedBy value
      * @return Builder
      */
-
-    public ExtensionBuilder withLastModifiedBy(
-            Function<com.commercetools.api.models.common.LastModifiedByBuilder, com.commercetools.api.models.common.LastModifiedBy> builder) {
+    
+    public ExtensionBuilder withLastModifiedBy(Function<com.commercetools.api.models.common.LastModifiedByBuilder, com.commercetools.api.models.common.LastModifiedBy> builder) {
         this.lastModifiedBy = builder.apply(com.commercetools.api.models.common.LastModifiedByBuilder.of());
         return this;
     }
-
+                    
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      * @param lastModifiedBy value to be set
      * @return Builder
      */
-
-    public ExtensionBuilder lastModifiedBy(
-            @Nullable final com.commercetools.api.models.common.LastModifiedBy lastModifiedBy) {
+    
+    public ExtensionBuilder lastModifiedBy(@Nullable final com.commercetools.api.models.common.LastModifiedBy lastModifiedBy) {
         this.lastModifiedBy = lastModifiedBy;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      * @param builder function to build the createdBy value
      * @return Builder
      */
-
-    public ExtensionBuilder createdBy(
-            Function<com.commercetools.api.models.common.CreatedByBuilder, com.commercetools.api.models.common.CreatedByBuilder> builder) {
+    
+    public ExtensionBuilder createdBy(Function<com.commercetools.api.models.common.CreatedByBuilder, com.commercetools.api.models.common.CreatedByBuilder> builder) {
         this.createdBy = builder.apply(com.commercetools.api.models.common.CreatedByBuilder.of()).build();
         return this;
     }
-
+    
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      * @param builder function to build the createdBy value
      * @return Builder
      */
-
-    public ExtensionBuilder withCreatedBy(
-            Function<com.commercetools.api.models.common.CreatedByBuilder, com.commercetools.api.models.common.CreatedBy> builder) {
+    
+    public ExtensionBuilder withCreatedBy(Function<com.commercetools.api.models.common.CreatedByBuilder, com.commercetools.api.models.common.CreatedBy> builder) {
         this.createdBy = builder.apply(com.commercetools.api.models.common.CreatedByBuilder.of());
         return this;
     }
-
+                    
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      * @param createdBy value to be set
      * @return Builder
      */
-
+    
     public ExtensionBuilder createdBy(@Nullable final com.commercetools.api.models.common.CreatedBy createdBy) {
         this.createdBy = createdBy;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>User-defined unique identifier of the Extension.</p>
      * @param key value to be set
      * @return Builder
      */
-
+    
     public ExtensionBuilder key(@Nullable final String key) {
         this.key = key;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>The configuration for the Extension, including its type, location and authentication details.</p>
      * @param destination value to be set
      * @return Builder
      */
-
-    public ExtensionBuilder destination(final com.commercetools.api.models.extension.ExtensionDestination destination) {
+    
+    public ExtensionBuilder destination( final com.commercetools.api.models.extension.ExtensionDestination destination) {
         this.destination = destination;
         return this;
     }
-
+    
+    
     /**
      *  <p>The configuration for the Extension, including its type, location and authentication details.</p>
      * @param builder function to build the destination value
      * @return Builder
      */
-
-    public ExtensionBuilder destination(
-            Function<com.commercetools.api.models.extension.ExtensionDestinationBuilder, Builder<? extends com.commercetools.api.models.extension.ExtensionDestination>> builder) {
-        this.destination = builder.apply(com.commercetools.api.models.extension.ExtensionDestinationBuilder.of())
-                .build();
+    
+    public ExtensionBuilder destination(Function<com.commercetools.api.models.extension.ExtensionDestinationBuilder, Builder<? extends com.commercetools.api.models.extension.ExtensionDestination>> builder) {
+        this.destination = builder.apply(com.commercetools.api.models.extension.ExtensionDestinationBuilder.of()).build();
         return this;
     }
-
+                    
+    
     /**
      *  <p>Describes what triggers the Extension.</p>
      * @param triggers value to be set
      * @return Builder
      */
-
-    public ExtensionBuilder triggers(final com.commercetools.api.models.extension.ExtensionTrigger... triggers) {
+    
+    public ExtensionBuilder triggers( final com.commercetools.api.models.extension.ExtensionTrigger ...triggers) {
         this.triggers = new ArrayList<>(Arrays.asList(triggers));
         return this;
     }
-
+    
     /**
      *  <p>Describes what triggers the Extension.</p>
      * @param triggers value to be set
      * @return Builder
      */
-
-    public ExtensionBuilder triggers(
-            final java.util.List<com.commercetools.api.models.extension.ExtensionTrigger> triggers) {
+    
+    public ExtensionBuilder triggers( final java.util.List<com.commercetools.api.models.extension.ExtensionTrigger> triggers) {
         this.triggers = triggers;
         return this;
     }
-
+    
     /**
      *  <p>Describes what triggers the Extension.</p>
      * @param triggers value to be set
      * @return Builder
      */
-
-    public ExtensionBuilder plusTriggers(final com.commercetools.api.models.extension.ExtensionTrigger... triggers) {
+    
+    public ExtensionBuilder plusTriggers( final com.commercetools.api.models.extension.ExtensionTrigger ...triggers) {
         if (this.triggers == null) {
             this.triggers = new ArrayList<>();
         }
         this.triggers.addAll(Arrays.asList(triggers));
         return this;
     }
-
+    
+    
+    
     /**
      *  <p>Describes what triggers the Extension.</p>
      * @param builder function to build the triggers value
      * @return Builder
      */
-
-    public ExtensionBuilder plusTriggers(
-            Function<com.commercetools.api.models.extension.ExtensionTriggerBuilder, com.commercetools.api.models.extension.ExtensionTriggerBuilder> builder) {
+    
+    public ExtensionBuilder plusTriggers(Function<com.commercetools.api.models.extension.ExtensionTriggerBuilder, com.commercetools.api.models.extension.ExtensionTriggerBuilder> builder) {
         if (this.triggers == null) {
             this.triggers = new ArrayList<>();
         }
         this.triggers.add(builder.apply(com.commercetools.api.models.extension.ExtensionTriggerBuilder.of()).build());
         return this;
     }
-
+    
     /**
      *  <p>Describes what triggers the Extension.</p>
      * @param builder function to build the triggers value
      * @return Builder
      */
-
-    public ExtensionBuilder withTriggers(
-            Function<com.commercetools.api.models.extension.ExtensionTriggerBuilder, com.commercetools.api.models.extension.ExtensionTriggerBuilder> builder) {
+    
+    public ExtensionBuilder withTriggers(Function<com.commercetools.api.models.extension.ExtensionTriggerBuilder, com.commercetools.api.models.extension.ExtensionTriggerBuilder> builder) {
         this.triggers = new ArrayList<>();
         this.triggers.add(builder.apply(com.commercetools.api.models.extension.ExtensionTriggerBuilder.of()).build());
         return this;
     }
-
+    
     /**
      *  <p>Describes what triggers the Extension.</p>
      * @param builder function to build the triggers value
      * @return Builder
      */
-
-    public ExtensionBuilder addTriggers(
-            Function<com.commercetools.api.models.extension.ExtensionTriggerBuilder, com.commercetools.api.models.extension.ExtensionTrigger> builder) {
+    
+    public ExtensionBuilder addTriggers(Function<com.commercetools.api.models.extension.ExtensionTriggerBuilder, com.commercetools.api.models.extension.ExtensionTrigger> builder) {
         return plusTriggers(builder.apply(com.commercetools.api.models.extension.ExtensionTriggerBuilder.of()));
     }
-
+    
     /**
      *  <p>Describes what triggers the Extension.</p>
      * @param builder function to build the triggers value
      * @return Builder
      */
-
-    public ExtensionBuilder setTriggers(
-            Function<com.commercetools.api.models.extension.ExtensionTriggerBuilder, com.commercetools.api.models.extension.ExtensionTrigger> builder) {
+    
+    public ExtensionBuilder setTriggers(Function<com.commercetools.api.models.extension.ExtensionTriggerBuilder, com.commercetools.api.models.extension.ExtensionTrigger> builder) {
         return triggers(builder.apply(com.commercetools.api.models.extension.ExtensionTriggerBuilder.of()));
     }
-
+                    
+    
+    
     /**
      *  <p>Maximum time (in milliseconds) that the Extension can respond within. If no timeout is provided, the default value is used for all types of Extensions. The maximum value is 10000 ms (10 seconds) for <code>payment</code> Extensions and 2000 ms (2 seconds) for all other Extensions.</p>
      * @param timeoutInMs value to be set
      * @return Builder
      */
-
+    
     public ExtensionBuilder timeoutInMs(@Nullable final Integer timeoutInMs) {
         this.timeoutInMs = timeoutInMs;
         return this;
     }
+    
+    
 
     /**
      *  <p>Unique identifier of the Extension.</p>
      * @return id
      */
-
-    public String getId() {
+    
+    
+    public String getId(){
         return this.id;
     }
-
+    
     /**
      *  <p>Current version of the Extension.</p>
      * @return version
      */
-
-    public Long getVersion() {
+    
+    
+    public Long getVersion(){
         return this.version;
     }
-
+    
     /**
      *  <p>Date and time (UTC) the Extension was initially created.</p>
      * @return createdAt
      */
-
-    public java.time.ZonedDateTime getCreatedAt() {
+    
+    
+    public java.time.ZonedDateTime getCreatedAt(){
         return this.createdAt;
     }
-
+    
     /**
      *  <p>Date and time (UTC) the Extension was last updated.</p>
      * @return lastModifiedAt
      */
-
-    public java.time.ZonedDateTime getLastModifiedAt() {
+    
+    
+    public java.time.ZonedDateTime getLastModifiedAt(){
         return this.lastModifiedAt;
     }
-
+    
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      * @return lastModifiedBy
      */
-
+    
     @Nullable
-    public com.commercetools.api.models.common.LastModifiedBy getLastModifiedBy() {
+    public com.commercetools.api.models.common.LastModifiedBy getLastModifiedBy(){
         return this.lastModifiedBy;
     }
-
+    
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      * @return createdBy
      */
-
+    
     @Nullable
-    public com.commercetools.api.models.common.CreatedBy getCreatedBy() {
+    public com.commercetools.api.models.common.CreatedBy getCreatedBy(){
         return this.createdBy;
     }
-
+    
     /**
      *  <p>User-defined unique identifier of the Extension.</p>
      * @return key
      */
-
+    
     @Nullable
-    public String getKey() {
+    public String getKey(){
         return this.key;
     }
-
+    
     /**
      *  <p>The configuration for the Extension, including its type, location and authentication details.</p>
      * @return destination
      */
-
-    public com.commercetools.api.models.extension.ExtensionDestination getDestination() {
+    
+    
+    public com.commercetools.api.models.extension.ExtensionDestination getDestination(){
         return this.destination;
     }
-
+    
     /**
      *  <p>Describes what triggers the Extension.</p>
      * @return triggers
      */
-
-    public java.util.List<com.commercetools.api.models.extension.ExtensionTrigger> getTriggers() {
+    
+    
+    public java.util.List<com.commercetools.api.models.extension.ExtensionTrigger> getTriggers(){
         return this.triggers;
     }
-
+    
     /**
      *  <p>Maximum time (in milliseconds) that the Extension can respond within. If no timeout is provided, the default value is used for all types of Extensions. The maximum value is 10000 ms (10 seconds) for <code>payment</code> Extensions and 2000 ms (2 seconds) for all other Extensions.</p>
      * @return timeoutInMs
      */
-
+    
     @Nullable
-    public Integer getTimeoutInMs() {
+    public Integer getTimeoutInMs(){
         return this.timeoutInMs;
     }
 
@@ -406,22 +454,20 @@ public class ExtensionBuilder implements Builder<Extension> {
         Objects.requireNonNull(lastModifiedAt, Extension.class + ": lastModifiedAt is missing");
         Objects.requireNonNull(destination, Extension.class + ": destination is missing");
         Objects.requireNonNull(triggers, Extension.class + ": triggers is missing");
-        return new ExtensionImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, key, destination,
-            triggers, timeoutInMs);
+        return new ExtensionImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, key, destination, triggers, timeoutInMs);
     }
-
+    
     /**
      * builds Extension without checking for non-null required values
      * @return Extension
      */
     public Extension buildUnchecked() {
-        return new ExtensionImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, key, destination,
-            triggers, timeoutInMs);
+        return new ExtensionImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, key, destination, triggers, timeoutInMs);
     }
 
     /**
      * factory method for an instance of ExtensionBuilder
-     * @return builder
+     * @return builder 
      */
     public static ExtensionBuilder of() {
         return new ExtensionBuilder();

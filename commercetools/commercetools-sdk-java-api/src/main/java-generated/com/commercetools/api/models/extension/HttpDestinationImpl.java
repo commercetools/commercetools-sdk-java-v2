@@ -1,101 +1,113 @@
-
 package com.commercetools.api.models.extension;
 
-import java.time.*;
-import java.util.*;
-
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
-
-import io.vrap.rmf.base.client.ModelBase;
+import com.commercetools.api.models.extension.ExtensionDestination;
+import com.commercetools.api.models.extension.HttpDestinationAuthentication;
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.ModelBase;
+import javax.validation.Valid;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.annotation.*;
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
  *  <p>We recommend an encrypted <code>HTTPS</code> connection for production setups. However, we also accept unencrypted <code>HTTP</code> connections for development purposes. HTTP redirects will not be followed and cache headers will be ignored.</p>
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class HttpDestinationImpl implements HttpDestination, ModelBase {
 
+    
     private String type;
-
+    
+    
     private String url;
-
+    
+    
     private com.commercetools.api.models.extension.HttpDestinationAuthentication authentication;
 
     /**
      * create instance with all properties
      */
     @JsonCreator
-    HttpDestinationImpl(@JsonProperty("url") final String url,
-            @JsonProperty("authentication") final com.commercetools.api.models.extension.HttpDestinationAuthentication authentication) {
+    HttpDestinationImpl(@JsonProperty("url") final String url, @JsonProperty("authentication") final com.commercetools.api.models.extension.HttpDestinationAuthentication authentication) {
         this.url = url;
         this.authentication = authentication;
-        this.type = HTTP;
+        this.type =  HTTP;
     }
-
     /**
      * create empty instance
      */
     public HttpDestinationImpl() {
-        this.type = HTTP;
+        this.type =  HTTP;
     }
 
     /**
      *
      */
-
-    public String getType() {
+    
+    public String getType(){
         return this.type;
     }
-
+    
     /**
      *  <p>URL to the target destination. If the Project is hosted in the China (AWS, Ningxia) Region, verify that the URL is not blocked due to firewall restrictions.</p>
      */
-
-    public String getUrl() {
+    
+    public String getUrl(){
         return this.url;
     }
-
+    
     /**
      *  <p>Authentication methods (such as <code>Basic</code> or <code>Bearer</code>).</p>
      */
-
-    public com.commercetools.api.models.extension.HttpDestinationAuthentication getAuthentication() {
+    
+    public com.commercetools.api.models.extension.HttpDestinationAuthentication getAuthentication(){
         return this.authentication;
     }
 
-    public void setUrl(final String url) {
+    
+    public void setUrl(final String url){
         this.url = url;
     }
-
-    public void setAuthentication(
-            final com.commercetools.api.models.extension.HttpDestinationAuthentication authentication) {
+    
+    
+    public void setAuthentication(final com.commercetools.api.models.extension.HttpDestinationAuthentication authentication){
         this.authentication = authentication;
     }
 
     @Override
     public boolean equals(Object o) {
-        if (this == o)
-            return true;
-
-        if (o == null || getClass() != o.getClass())
-            return false;
-
+        if (this == o) return true;
+    
+        if (o == null || getClass() != o.getClass()) return false;
+    
         HttpDestinationImpl that = (HttpDestinationImpl) o;
-
-        return new EqualsBuilder().append(type, that.type)
+    
+        return new EqualsBuilder()
+                .append(type, that.type)
                 .append(url, that.url)
                 .append(authentication, that.authentication)
                 .isEquals();
     }
-
+    
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(type).append(url).append(authentication).toHashCode();
+        return new HashCodeBuilder(17, 37)
+            .append(type)
+            .append(url)
+            .append(authentication)
+            .toHashCode();
     }
 
 }

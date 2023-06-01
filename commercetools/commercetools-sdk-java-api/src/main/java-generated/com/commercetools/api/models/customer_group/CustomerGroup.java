@@ -1,23 +1,24 @@
-
 package com.commercetools.api.models.customer_group;
-
-import java.time.*;
-import java.time.ZonedDateTime;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.common.BaseResource;
 import com.commercetools.api.models.common.CreatedBy;
 import com.commercetools.api.models.common.LastModifiedBy;
 import com.commercetools.api.models.type.CustomFields;
+import java.time.ZonedDateTime;
+import com.commercetools.api.models.customer_group.CustomerGroupImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * CustomerGroup
@@ -34,15 +35,15 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .name("{name}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = CustomerGroupImpl.class)
-public interface CustomerGroup
-        extends BaseResource, CustomerGroupMixin, com.commercetools.api.models.DomainResource<CustomerGroup>,
-        com.commercetools.api.models.Referencable<CustomerGroup>,
-        com.commercetools.api.models.ResourceIdentifiable<CustomerGroup>,
-        com.commercetools.api.models.Customizable<CustomerGroup>, com.commercetools.api.models.WithKey {
+public interface CustomerGroup extends BaseResource, CustomerGroupMixin, com.commercetools.api.models.DomainResource<CustomerGroup>, com.commercetools.api.models.Referencable<CustomerGroup>, com.commercetools.api.models.ResourceIdentifiable<CustomerGroup>, com.commercetools.api.models.Customizable<CustomerGroup>, com.commercetools.api.models.WithKey {
+
 
     /**
      *  <p>Unique identifier of the CustomerGroup.</p>
@@ -51,7 +52,6 @@ public interface CustomerGroup
     @NotNull
     @JsonProperty("id")
     public String getId();
-
     /**
      *  <p>Current version of the CustomerGroup.</p>
      * @return version
@@ -59,7 +59,6 @@ public interface CustomerGroup
     @NotNull
     @JsonProperty("version")
     public Long getVersion();
-
     /**
      *  <p>Date and time (UTC) the CustomerGroup was initially created.</p>
      * @return createdAt
@@ -67,7 +66,6 @@ public interface CustomerGroup
     @NotNull
     @JsonProperty("createdAt")
     public ZonedDateTime getCreatedAt();
-
     /**
      *  <p>Date and time (UTC) the CustomerGroup was last updated.</p>
      * @return lastModifiedAt
@@ -75,7 +73,6 @@ public interface CustomerGroup
     @NotNull
     @JsonProperty("lastModifiedAt")
     public ZonedDateTime getLastModifiedAt();
-
     /**
      *  <p>Present on resources updated after 1 February 2019 except for events not tracked.</p>
      * @return lastModifiedBy
@@ -83,7 +80,6 @@ public interface CustomerGroup
     @Valid
     @JsonProperty("lastModifiedBy")
     public LastModifiedBy getLastModifiedBy();
-
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      * @return createdBy
@@ -91,15 +87,13 @@ public interface CustomerGroup
     @Valid
     @JsonProperty("createdBy")
     public CreatedBy getCreatedBy();
-
     /**
      *  <p>User-defined unique identifier for the CustomerGroup.</p>
      * @return key
      */
-
+    
     @JsonProperty("key")
     public String getKey();
-
     /**
      *  <p>Unique name of the CustomerGroup.</p>
      * @return name
@@ -107,7 +101,6 @@ public interface CustomerGroup
     @NotNull
     @JsonProperty("name")
     public String getName();
-
     /**
      *  <p>Custom Fields for the CustomerGroup.</p>
      * @return custom
@@ -120,72 +113,82 @@ public interface CustomerGroup
      *  <p>Unique identifier of the CustomerGroup.</p>
      * @param id value to be set
      */
-
+    
     public void setId(final String id);
-
+    
+    
     /**
      *  <p>Current version of the CustomerGroup.</p>
      * @param version value to be set
      */
-
+    
     public void setVersion(final Long version);
-
+    
+    
     /**
      *  <p>Date and time (UTC) the CustomerGroup was initially created.</p>
      * @param createdAt value to be set
      */
-
+    
     public void setCreatedAt(final ZonedDateTime createdAt);
-
+    
+    
     /**
      *  <p>Date and time (UTC) the CustomerGroup was last updated.</p>
      * @param lastModifiedAt value to be set
      */
-
+    
     public void setLastModifiedAt(final ZonedDateTime lastModifiedAt);
-
+    
+    
     /**
      *  <p>Present on resources updated after 1 February 2019 except for events not tracked.</p>
      * @param lastModifiedBy value to be set
      */
-
+    
     public void setLastModifiedBy(final LastModifiedBy lastModifiedBy);
-
+    
+    
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      * @param createdBy value to be set
      */
-
+    
     public void setCreatedBy(final CreatedBy createdBy);
-
+    
+    
     /**
      *  <p>User-defined unique identifier for the CustomerGroup.</p>
      * @param key value to be set
      */
-
+    
     public void setKey(final String key);
-
+    
+    
     /**
      *  <p>Unique name of the CustomerGroup.</p>
      * @param name value to be set
      */
-
+    
     public void setName(final String name);
-
+    
+    
     /**
      *  <p>Custom Fields for the CustomerGroup.</p>
      * @param custom value to be set
      */
-
+    
     public void setCustom(final CustomFields custom);
+    
 
     /**
      * factory method
      * @return instance of CustomerGroup
      */
-    public static CustomerGroup of() {
+    public static CustomerGroup of(){
         return new CustomerGroupImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy CustomerGroup
@@ -221,8 +224,7 @@ public interface CustomerGroup
         instance.setVersion(template.getVersion());
         instance.setCreatedAt(template.getCreatedAt());
         instance.setLastModifiedAt(template.getLastModifiedAt());
-        instance.setLastModifiedBy(
-            com.commercetools.api.models.common.LastModifiedBy.deepCopy(template.getLastModifiedBy()));
+        instance.setLastModifiedBy(com.commercetools.api.models.common.LastModifiedBy.deepCopy(template.getLastModifiedBy()));
         instance.setCreatedBy(com.commercetools.api.models.common.CreatedBy.deepCopy(template.getCreatedBy()));
         instance.setKey(template.getKey());
         instance.setName(template.getName());
@@ -237,7 +239,7 @@ public interface CustomerGroup
     public static CustomerGroupBuilder builder() {
         return CustomerGroupBuilder.of();
     }
-
+    
     /**
      * create builder for CustomerGroup instance
      * @param template instance with prefilled values for the builder
@@ -246,6 +248,7 @@ public interface CustomerGroup
     public static CustomerGroupBuilder builder(final CustomerGroup template) {
         return CustomerGroupBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -256,11 +259,11 @@ public interface CustomerGroup
     default <T> T withCustomerGroup(Function<CustomerGroup, T> helper) {
         return helper.apply(this);
     }
-
     public static com.commercetools.api.models.common.ReferenceTypeId referenceTypeId() {
         return com.commercetools.api.models.common.ReferenceTypeId.CUSTOMER_GROUP;
     }
-
+    
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

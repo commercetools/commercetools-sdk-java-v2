@@ -1,9 +1,12 @@
-
 package com.commercetools.api.models.extension;
 
+import com.commercetools.api.models.extension.ExtensionDestination;
+import com.commercetools.api.models.extension.ExtensionUpdateAction;
+import com.commercetools.api.models.extension.ExtensionChangeDestinationAction;
+import javax.annotation.Nullable;
 import java.util.*;
 import java.util.function.Function;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -17,44 +20,50 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .destination(destinationBuilder -> destinationBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class ExtensionChangeDestinationActionBuilder implements Builder<ExtensionChangeDestinationAction> {
 
+    
+    
     private com.commercetools.api.models.extension.ExtensionDestination destination;
 
+    
     /**
      *  <p>New value to set. Must not be empty.</p>
      * @param destination value to be set
      * @return Builder
      */
-
-    public ExtensionChangeDestinationActionBuilder destination(
-            final com.commercetools.api.models.extension.ExtensionDestination destination) {
+    
+    public ExtensionChangeDestinationActionBuilder destination( final com.commercetools.api.models.extension.ExtensionDestination destination) {
         this.destination = destination;
         return this;
     }
-
+    
+    
     /**
      *  <p>New value to set. Must not be empty.</p>
      * @param builder function to build the destination value
      * @return Builder
      */
-
-    public ExtensionChangeDestinationActionBuilder destination(
-            Function<com.commercetools.api.models.extension.ExtensionDestinationBuilder, Builder<? extends com.commercetools.api.models.extension.ExtensionDestination>> builder) {
-        this.destination = builder.apply(com.commercetools.api.models.extension.ExtensionDestinationBuilder.of())
-                .build();
+    
+    public ExtensionChangeDestinationActionBuilder destination(Function<com.commercetools.api.models.extension.ExtensionDestinationBuilder, Builder<? extends com.commercetools.api.models.extension.ExtensionDestination>> builder) {
+        this.destination = builder.apply(com.commercetools.api.models.extension.ExtensionDestinationBuilder.of()).build();
         return this;
     }
+                    
 
     /**
      *  <p>New value to set. Must not be empty.</p>
      * @return destination
      */
-
-    public com.commercetools.api.models.extension.ExtensionDestination getDestination() {
+    
+    
+    public com.commercetools.api.models.extension.ExtensionDestination getDestination(){
         return this.destination;
     }
 
@@ -66,7 +75,7 @@ public class ExtensionChangeDestinationActionBuilder implements Builder<Extensio
         Objects.requireNonNull(destination, ExtensionChangeDestinationAction.class + ": destination is missing");
         return new ExtensionChangeDestinationActionImpl(destination);
     }
-
+    
     /**
      * builds ExtensionChangeDestinationAction without checking for non-null required values
      * @return ExtensionChangeDestinationAction
@@ -77,7 +86,7 @@ public class ExtensionChangeDestinationActionBuilder implements Builder<Extensio
 
     /**
      * factory method for an instance of ExtensionChangeDestinationActionBuilder
-     * @return builder
+     * @return builder 
      */
     public static ExtensionChangeDestinationActionBuilder of() {
         return new ExtensionChangeDestinationActionBuilder();

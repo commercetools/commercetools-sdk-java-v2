@@ -1,18 +1,21 @@
-
 package com.commercetools.importapi.models.productvariants;
 
-import java.time.*;
+import com.commercetools.importapi.models.productvariants.Attribute;
 import java.time.ZonedDateTime;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
+import com.commercetools.importapi.models.productvariants.DateTimeSetAttributeImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>This type represents an attribute whose value is a set of dates with time.</p>
@@ -25,9 +28,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .plusValue(valueBuilder -> valueBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = DateTimeSetAttributeImpl.class)
 public interface DateTimeSetAttribute extends Attribute {
 
@@ -48,24 +54,24 @@ public interface DateTimeSetAttribute extends Attribute {
      * set value
      * @param value values to be set
      */
-
+    
     @JsonIgnore
-    public void setValue(final ZonedDateTime... value);
-
+    public void setValue(final ZonedDateTime ...value);
     /**
      * set value
      * @param value values to be set
      */
-
+    
     public void setValue(final List<ZonedDateTime> value);
 
     /**
      * factory method
      * @return instance of DateTimeSetAttribute
      */
-    public static DateTimeSetAttribute of() {
+    public static DateTimeSetAttribute of(){
         return new DateTimeSetAttributeImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy DateTimeSetAttribute
@@ -91,7 +97,9 @@ public interface DateTimeSetAttribute extends Attribute {
         }
         DateTimeSetAttributeImpl instance = new DateTimeSetAttributeImpl();
         instance.setName(template.getName());
-        instance.setValue(Optional.ofNullable(template.getValue()).map(ArrayList::new).orElse(null));
+        instance.setValue(Optional.ofNullable(template.getValue())
+                .map(ArrayList::new)
+                .orElse(null));
         return instance;
     }
 
@@ -102,7 +110,7 @@ public interface DateTimeSetAttribute extends Attribute {
     public static DateTimeSetAttributeBuilder builder() {
         return DateTimeSetAttributeBuilder.of();
     }
-
+    
     /**
      * create builder for DateTimeSetAttribute instance
      * @param template instance with prefilled values for the builder
@@ -111,6 +119,7 @@ public interface DateTimeSetAttribute extends Attribute {
     public static DateTimeSetAttributeBuilder builder(final DateTimeSetAttribute template) {
         return DateTimeSetAttributeBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -121,7 +130,7 @@ public interface DateTimeSetAttribute extends Attribute {
     default <T> T withDateTimeSetAttribute(Function<DateTimeSetAttribute, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

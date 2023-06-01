@@ -1,9 +1,11 @@
-
 package com.commercetools.api.predicates.query.error;
 
 import com.commercetools.api.predicates.query.*;
 
-public class GraphQLConcurrentModificationErrorQueryBuilderDsl {
+import java.util.function.Function;
+
+
+public class GraphQLConcurrentModificationErrorQueryBuilderDsl  {
     public GraphQLConcurrentModificationErrorQueryBuilderDsl() {
     }
 
@@ -12,15 +14,12 @@ public class GraphQLConcurrentModificationErrorQueryBuilderDsl {
     }
 
     public StringComparisonPredicateBuilder<GraphQLConcurrentModificationErrorQueryBuilderDsl> code() {
-        return new StringComparisonPredicateBuilder<>(
-            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("code")),
-            p -> new CombinationQueryPredicate<>(p, GraphQLConcurrentModificationErrorQueryBuilderDsl::of));
+        return new StringComparisonPredicateBuilder<>(BinaryQueryPredicate.of().left(new ConstantQueryPredicate("code")),
+        p -> new CombinationQueryPredicate<>(p, GraphQLConcurrentModificationErrorQueryBuilderDsl::of));
     }
-
     public LongComparisonPredicateBuilder<GraphQLConcurrentModificationErrorQueryBuilderDsl> currentVersion() {
-        return new LongComparisonPredicateBuilder<>(
-            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("currentVersion")),
-            p -> new CombinationQueryPredicate<>(p, GraphQLConcurrentModificationErrorQueryBuilderDsl::of));
+        return new LongComparisonPredicateBuilder<>(BinaryQueryPredicate.of().left(new ConstantQueryPredicate("currentVersion")),
+        p -> new CombinationQueryPredicate<>(p, GraphQLConcurrentModificationErrorQueryBuilderDsl::of));
     }
-
+    
 }

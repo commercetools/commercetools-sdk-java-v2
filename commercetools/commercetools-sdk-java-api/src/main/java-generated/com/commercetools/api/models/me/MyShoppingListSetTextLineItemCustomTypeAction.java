@@ -1,20 +1,22 @@
-
 package com.commercetools.api.models.me;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
+import com.commercetools.api.models.me.MyShoppingListUpdateAction;
 import com.commercetools.api.models.type.FieldContainer;
 import com.commercetools.api.models.type.TypeResourceIdentifier;
+import com.commercetools.api.models.me.MyShoppingListSetTextLineItemCustomTypeActionImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * MyShoppingListSetTextLineItemCustomTypeAction
@@ -27,9 +29,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .textLineItemId("{textLineItemId}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = MyShoppingListSetTextLineItemCustomTypeActionImpl.class)
 public interface MyShoppingListSetTextLineItemCustomTypeAction extends MyShoppingListUpdateAction {
 
@@ -45,7 +50,6 @@ public interface MyShoppingListSetTextLineItemCustomTypeAction extends MyShoppin
     @NotNull
     @JsonProperty("textLineItemId")
     public String getTextLineItemId();
-
     /**
      *  <p>Defines the Type that extends the TextLineItem with Custom Fields. If absent, any existing Type and Custom Fields are removed from the TextLineItem.</p>
      * @return type
@@ -53,7 +57,6 @@ public interface MyShoppingListSetTextLineItemCustomTypeAction extends MyShoppin
     @Valid
     @JsonProperty("type")
     public TypeResourceIdentifier getType();
-
     /**
      *  <p>Sets the Custom Fields fields for the TextLineItem.</p>
      * @return fields
@@ -66,38 +69,41 @@ public interface MyShoppingListSetTextLineItemCustomTypeAction extends MyShoppin
      *  <p>The <code>id</code> of the TextLineItem to update.</p>
      * @param textLineItemId value to be set
      */
-
+    
     public void setTextLineItemId(final String textLineItemId);
-
+    
+    
     /**
      *  <p>Defines the Type that extends the TextLineItem with Custom Fields. If absent, any existing Type and Custom Fields are removed from the TextLineItem.</p>
      * @param type value to be set
      */
-
+    
     public void setType(final TypeResourceIdentifier type);
-
+    
+    
     /**
      *  <p>Sets the Custom Fields fields for the TextLineItem.</p>
      * @param fields value to be set
      */
-
+    
     public void setFields(final FieldContainer fields);
+    
 
     /**
      * factory method
      * @return instance of MyShoppingListSetTextLineItemCustomTypeAction
      */
-    public static MyShoppingListSetTextLineItemCustomTypeAction of() {
+    public static MyShoppingListSetTextLineItemCustomTypeAction of(){
         return new MyShoppingListSetTextLineItemCustomTypeActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy MyShoppingListSetTextLineItemCustomTypeAction
      * @param template instance to be copied
      * @return copy instance
      */
-    public static MyShoppingListSetTextLineItemCustomTypeAction of(
-            final MyShoppingListSetTextLineItemCustomTypeAction template) {
+    public static MyShoppingListSetTextLineItemCustomTypeAction of(final MyShoppingListSetTextLineItemCustomTypeAction template) {
         MyShoppingListSetTextLineItemCustomTypeActionImpl instance = new MyShoppingListSetTextLineItemCustomTypeActionImpl();
         instance.setTextLineItemId(template.getTextLineItemId());
         instance.setType(template.getType());
@@ -111,8 +117,7 @@ public interface MyShoppingListSetTextLineItemCustomTypeAction extends MyShoppin
      * @return copy instance
      */
     @Nullable
-    public static MyShoppingListSetTextLineItemCustomTypeAction deepCopy(
-            @Nullable final MyShoppingListSetTextLineItemCustomTypeAction template) {
+    public static MyShoppingListSetTextLineItemCustomTypeAction deepCopy(@Nullable final MyShoppingListSetTextLineItemCustomTypeAction template) {
         if (template == null) {
             return null;
         }
@@ -130,16 +135,16 @@ public interface MyShoppingListSetTextLineItemCustomTypeAction extends MyShoppin
     public static MyShoppingListSetTextLineItemCustomTypeActionBuilder builder() {
         return MyShoppingListSetTextLineItemCustomTypeActionBuilder.of();
     }
-
+    
     /**
      * create builder for MyShoppingListSetTextLineItemCustomTypeAction instance
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static MyShoppingListSetTextLineItemCustomTypeActionBuilder builder(
-            final MyShoppingListSetTextLineItemCustomTypeAction template) {
+    public static MyShoppingListSetTextLineItemCustomTypeActionBuilder builder(final MyShoppingListSetTextLineItemCustomTypeAction template) {
         return MyShoppingListSetTextLineItemCustomTypeActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -147,11 +152,10 @@ public interface MyShoppingListSetTextLineItemCustomTypeAction extends MyShoppin
      * @param helper function to map the object
      * @return mapped value
      */
-    default <T> T withMyShoppingListSetTextLineItemCustomTypeAction(
-            Function<MyShoppingListSetTextLineItemCustomTypeAction, T> helper) {
+    default <T> T withMyShoppingListSetTextLineItemCustomTypeAction(Function<MyShoppingListSetTextLineItemCustomTypeAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

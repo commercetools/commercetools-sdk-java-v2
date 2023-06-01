@@ -1,19 +1,22 @@
-
 package com.commercetools.api.models.cart;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-
+import com.commercetools.api.models.cart.CartUpdateAction;
 import com.commercetools.api.models.type.FieldContainer;
 import com.commercetools.api.models.type.TypeResourceIdentifier;
+import com.commercetools.api.models.cart.CartSetCustomTypeActionImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * CartSetCustomTypeAction
@@ -25,9 +28,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     CartSetCustomTypeAction cartSetCustomTypeAction = CartSetCustomTypeAction.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = CartSetCustomTypeActionImpl.class)
 public interface CartSetCustomTypeAction extends CartUpdateAction {
 
@@ -43,7 +49,6 @@ public interface CartSetCustomTypeAction extends CartUpdateAction {
     @Valid
     @JsonProperty("type")
     public TypeResourceIdentifier getType();
-
     /**
      *  <p>Sets the Custom Fields fields for the Cart.</p>
      * @return fields
@@ -56,23 +61,26 @@ public interface CartSetCustomTypeAction extends CartUpdateAction {
      *  <p>Defines the Type that extends the Cart with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Cart.</p>
      * @param type value to be set
      */
-
+    
     public void setType(final TypeResourceIdentifier type);
-
+    
+    
     /**
      *  <p>Sets the Custom Fields fields for the Cart.</p>
      * @param fields value to be set
      */
-
+    
     public void setFields(final FieldContainer fields);
+    
 
     /**
      * factory method
      * @return instance of CartSetCustomTypeAction
      */
-    public static CartSetCustomTypeAction of() {
+    public static CartSetCustomTypeAction of(){
         return new CartSetCustomTypeActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy CartSetCustomTypeAction
@@ -109,7 +117,7 @@ public interface CartSetCustomTypeAction extends CartUpdateAction {
     public static CartSetCustomTypeActionBuilder builder() {
         return CartSetCustomTypeActionBuilder.of();
     }
-
+    
     /**
      * create builder for CartSetCustomTypeAction instance
      * @param template instance with prefilled values for the builder
@@ -118,6 +126,7 @@ public interface CartSetCustomTypeAction extends CartUpdateAction {
     public static CartSetCustomTypeActionBuilder builder(final CartSetCustomTypeAction template) {
         return CartSetCustomTypeActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -128,7 +137,7 @@ public interface CartSetCustomTypeAction extends CartUpdateAction {
     default <T> T withCartSetCustomTypeAction(Function<CartSetCustomTypeAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

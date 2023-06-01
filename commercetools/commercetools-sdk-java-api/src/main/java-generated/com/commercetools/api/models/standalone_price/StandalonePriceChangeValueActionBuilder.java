@@ -1,11 +1,12 @@
-
 package com.commercetools.api.models.standalone_price;
 
+import com.commercetools.api.models.common.Money;
+import com.commercetools.api.models.standalone_price.StandalonePriceUpdateAction;
+import com.commercetools.api.models.standalone_price.StandalonePriceChangeValueAction;
+import javax.annotation.Nullable;
 import java.util.*;
 import java.util.function.Function;
-
-import javax.annotation.Nullable;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -19,78 +20,89 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .value(valueBuilder -> valueBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class StandalonePriceChangeValueActionBuilder implements Builder<StandalonePriceChangeValueAction> {
 
+    
+    
     private com.commercetools.api.models.common.Money value;
-
+    
+    
     @Nullable
     private Boolean staged;
 
+    
     /**
      *  <p>New value to set. Must not be empty.</p>
      * @param builder function to build the value value
      * @return Builder
      */
-
-    public StandalonePriceChangeValueActionBuilder value(
-            Function<com.commercetools.api.models.common.MoneyBuilder, com.commercetools.api.models.common.MoneyBuilder> builder) {
+    
+    public StandalonePriceChangeValueActionBuilder value(Function<com.commercetools.api.models.common.MoneyBuilder, com.commercetools.api.models.common.MoneyBuilder> builder) {
         this.value = builder.apply(com.commercetools.api.models.common.MoneyBuilder.of()).build();
         return this;
     }
-
+    
     /**
      *  <p>New value to set. Must not be empty.</p>
      * @param builder function to build the value value
      * @return Builder
      */
-
-    public StandalonePriceChangeValueActionBuilder withValue(
-            Function<com.commercetools.api.models.common.MoneyBuilder, com.commercetools.api.models.common.Money> builder) {
+    
+    public StandalonePriceChangeValueActionBuilder withValue(Function<com.commercetools.api.models.common.MoneyBuilder, com.commercetools.api.models.common.Money> builder) {
         this.value = builder.apply(com.commercetools.api.models.common.MoneyBuilder.of());
         return this;
     }
-
+                    
     /**
      *  <p>New value to set. Must not be empty.</p>
      * @param value value to be set
      * @return Builder
      */
-
-    public StandalonePriceChangeValueActionBuilder value(final com.commercetools.api.models.common.Money value) {
+    
+    public StandalonePriceChangeValueActionBuilder value( final com.commercetools.api.models.common.Money value) {
         this.value = value;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>If set to <code>true</code> the update action applies to the StagedStandalonePrice. If set to <code>false</code>, the update action applies to the current StandalonePrice.</p>
      * @param staged value to be set
      * @return Builder
      */
-
+    
     public StandalonePriceChangeValueActionBuilder staged(@Nullable final Boolean staged) {
         this.staged = staged;
         return this;
     }
+    
+    
 
     /**
      *  <p>New value to set. Must not be empty.</p>
      * @return value
      */
-
-    public com.commercetools.api.models.common.Money getValue() {
+    
+    
+    public com.commercetools.api.models.common.Money getValue(){
         return this.value;
     }
-
+    
     /**
      *  <p>If set to <code>true</code> the update action applies to the StagedStandalonePrice. If set to <code>false</code>, the update action applies to the current StandalonePrice.</p>
      * @return staged
      */
-
+    
     @Nullable
-    public Boolean getStaged() {
+    public Boolean getStaged(){
         return this.staged;
     }
 
@@ -102,7 +114,7 @@ public class StandalonePriceChangeValueActionBuilder implements Builder<Standalo
         Objects.requireNonNull(value, StandalonePriceChangeValueAction.class + ": value is missing");
         return new StandalonePriceChangeValueActionImpl(value, staged);
     }
-
+    
     /**
      * builds StandalonePriceChangeValueAction without checking for non-null required values
      * @return StandalonePriceChangeValueAction
@@ -113,7 +125,7 @@ public class StandalonePriceChangeValueActionBuilder implements Builder<Standalo
 
     /**
      * factory method for an instance of StandalonePriceChangeValueActionBuilder
-     * @return builder
+     * @return builder 
      */
     public static StandalonePriceChangeValueActionBuilder of() {
         return new StandalonePriceChangeValueActionBuilder();

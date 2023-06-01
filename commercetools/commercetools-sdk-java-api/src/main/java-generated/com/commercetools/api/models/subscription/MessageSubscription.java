@@ -1,17 +1,20 @@
-
 package com.commercetools.api.models.subscription;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
+import com.commercetools.api.models.subscription.MessageSubscriptionResourceTypeId;
+import com.commercetools.api.models.subscription.MessageSubscriptionImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>For supported resources and message types, see Message Types. Messages will be delivered even if the Messages Query HTTP API is not enabled.</p>
@@ -25,11 +28,15 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .resourceTypeId(MessageSubscriptionResourceTypeId.ASSOCIATE_ROLE)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = MessageSubscriptionImpl.class)
-public interface MessageSubscription {
+public interface MessageSubscription  {
+
 
     /**
      *  <p>Unique identifier for the type of resource, for example, <code>order</code>.</p>
@@ -38,12 +45,11 @@ public interface MessageSubscription {
     @NotNull
     @JsonProperty("resourceTypeId")
     public MessageSubscriptionResourceTypeId getResourceTypeId();
-
     /**
      *  <p>Must contain valid message types for the resource. For example, for resource type <code>product</code> the message type <code>ProductPublished</code> is valid. If no <code>types</code> of messages are given, the Subscription will receive all messages for this resource.</p>
      * @return types
      */
-
+    
     @JsonProperty("types")
     public List<String> getTypes();
 
@@ -51,31 +57,32 @@ public interface MessageSubscription {
      *  <p>Unique identifier for the type of resource, for example, <code>order</code>.</p>
      * @param resourceTypeId value to be set
      */
-
+    
     public void setResourceTypeId(final MessageSubscriptionResourceTypeId resourceTypeId);
-
+    
+    
     /**
      *  <p>Must contain valid message types for the resource. For example, for resource type <code>product</code> the message type <code>ProductPublished</code> is valid. If no <code>types</code> of messages are given, the Subscription will receive all messages for this resource.</p>
      * @param types values to be set
      */
-
+    
     @JsonIgnore
-    public void setTypes(final String... types);
-
+    public void setTypes(final String ...types);
     /**
      *  <p>Must contain valid message types for the resource. For example, for resource type <code>product</code> the message type <code>ProductPublished</code> is valid. If no <code>types</code> of messages are given, the Subscription will receive all messages for this resource.</p>
      * @param types values to be set
      */
-
+    
     public void setTypes(final List<String> types);
 
     /**
      * factory method
      * @return instance of MessageSubscription
      */
-    public static MessageSubscription of() {
+    public static MessageSubscription of(){
         return new MessageSubscriptionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy MessageSubscription
@@ -101,7 +108,9 @@ public interface MessageSubscription {
         }
         MessageSubscriptionImpl instance = new MessageSubscriptionImpl();
         instance.setResourceTypeId(template.getResourceTypeId());
-        instance.setTypes(Optional.ofNullable(template.getTypes()).map(ArrayList::new).orElse(null));
+        instance.setTypes(Optional.ofNullable(template.getTypes())
+                .map(ArrayList::new)
+                .orElse(null));
         return instance;
     }
 
@@ -112,7 +121,7 @@ public interface MessageSubscription {
     public static MessageSubscriptionBuilder builder() {
         return MessageSubscriptionBuilder.of();
     }
-
+    
     /**
      * create builder for MessageSubscription instance
      * @param template instance with prefilled values for the builder
@@ -121,6 +130,7 @@ public interface MessageSubscription {
     public static MessageSubscriptionBuilder builder(final MessageSubscription template) {
         return MessageSubscriptionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -131,7 +141,7 @@ public interface MessageSubscription {
     default <T> T withMessageSubscription(Function<MessageSubscription, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

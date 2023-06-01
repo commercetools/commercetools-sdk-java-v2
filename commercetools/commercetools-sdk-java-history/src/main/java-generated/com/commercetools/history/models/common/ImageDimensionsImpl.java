@@ -1,27 +1,35 @@
-
 package com.commercetools.history.models.common;
 
-import java.time.*;
-import java.util.*;
 
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
-
-import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.ModelBase;
+import javax.validation.Valid;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.annotation.*;
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
  * ImageDimensions
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class ImageDimensionsImpl implements ImageDimensions, ModelBase {
 
+    
     private Integer w;
-
+    
+    
     private Integer h;
 
     /**
@@ -32,7 +40,6 @@ public class ImageDimensionsImpl implements ImageDimensions, ModelBase {
         this.w = w;
         this.h = h;
     }
-
     /**
      * create empty instance
      */
@@ -42,43 +49,49 @@ public class ImageDimensionsImpl implements ImageDimensions, ModelBase {
     /**
      *
      */
-
-    public Integer getW() {
+    
+    public Integer getW(){
         return this.w;
     }
-
+    
     /**
      *
      */
-
-    public Integer getH() {
+    
+    public Integer getH(){
         return this.h;
     }
 
-    public void setW(final Integer w) {
+    
+    public void setW(final Integer w){
         this.w = w;
     }
-
-    public void setH(final Integer h) {
+    
+    
+    public void setH(final Integer h){
         this.h = h;
     }
 
     @Override
     public boolean equals(Object o) {
-        if (this == o)
-            return true;
-
-        if (o == null || getClass() != o.getClass())
-            return false;
-
+        if (this == o) return true;
+    
+        if (o == null || getClass() != o.getClass()) return false;
+    
         ImageDimensionsImpl that = (ImageDimensionsImpl) o;
-
-        return new EqualsBuilder().append(w, that.w).append(h, that.h).isEquals();
+    
+        return new EqualsBuilder()
+                .append(w, that.w)
+                .append(h, that.h)
+                .isEquals();
     }
-
+    
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(w).append(h).toHashCode();
+        return new HashCodeBuilder(17, 37)
+            .append(w)
+            .append(h)
+            .toHashCode();
     }
 
 }

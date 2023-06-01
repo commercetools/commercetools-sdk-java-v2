@@ -1,19 +1,21 @@
-
 package com.commercetools.api.models.me;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
 import com.commercetools.api.models.common.LocalizedString;
+import com.commercetools.api.models.me.MyShoppingListUpdateAction;
+import com.commercetools.api.models.me.MyShoppingListChangeTextLineItemNameActionImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * MyShoppingListChangeTextLineItemNameAction
@@ -27,9 +29,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .name(nameBuilder -> nameBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = MyShoppingListChangeTextLineItemNameActionImpl.class)
 public interface MyShoppingListChangeTextLineItemNameAction extends MyShoppingListUpdateAction {
 
@@ -45,7 +50,6 @@ public interface MyShoppingListChangeTextLineItemNameAction extends MyShoppingLi
     @NotNull
     @JsonProperty("textLineItemId")
     public String getTextLineItemId();
-
     /**
      *  <p>New value to set. Must not be empty.</p>
      * @return name
@@ -59,31 +63,33 @@ public interface MyShoppingListChangeTextLineItemNameAction extends MyShoppingLi
      *  <p>The <code>id</code> of the TextLineItem to update.</p>
      * @param textLineItemId value to be set
      */
-
+    
     public void setTextLineItemId(final String textLineItemId);
-
+    
+    
     /**
      *  <p>New value to set. Must not be empty.</p>
      * @param name value to be set
      */
-
+    
     public void setName(final LocalizedString name);
+    
 
     /**
      * factory method
      * @return instance of MyShoppingListChangeTextLineItemNameAction
      */
-    public static MyShoppingListChangeTextLineItemNameAction of() {
+    public static MyShoppingListChangeTextLineItemNameAction of(){
         return new MyShoppingListChangeTextLineItemNameActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy MyShoppingListChangeTextLineItemNameAction
      * @param template instance to be copied
      * @return copy instance
      */
-    public static MyShoppingListChangeTextLineItemNameAction of(
-            final MyShoppingListChangeTextLineItemNameAction template) {
+    public static MyShoppingListChangeTextLineItemNameAction of(final MyShoppingListChangeTextLineItemNameAction template) {
         MyShoppingListChangeTextLineItemNameActionImpl instance = new MyShoppingListChangeTextLineItemNameActionImpl();
         instance.setTextLineItemId(template.getTextLineItemId());
         instance.setName(template.getName());
@@ -96,8 +102,7 @@ public interface MyShoppingListChangeTextLineItemNameAction extends MyShoppingLi
      * @return copy instance
      */
     @Nullable
-    public static MyShoppingListChangeTextLineItemNameAction deepCopy(
-            @Nullable final MyShoppingListChangeTextLineItemNameAction template) {
+    public static MyShoppingListChangeTextLineItemNameAction deepCopy(@Nullable final MyShoppingListChangeTextLineItemNameAction template) {
         if (template == null) {
             return null;
         }
@@ -114,16 +119,16 @@ public interface MyShoppingListChangeTextLineItemNameAction extends MyShoppingLi
     public static MyShoppingListChangeTextLineItemNameActionBuilder builder() {
         return MyShoppingListChangeTextLineItemNameActionBuilder.of();
     }
-
+    
     /**
      * create builder for MyShoppingListChangeTextLineItemNameAction instance
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static MyShoppingListChangeTextLineItemNameActionBuilder builder(
-            final MyShoppingListChangeTextLineItemNameAction template) {
+    public static MyShoppingListChangeTextLineItemNameActionBuilder builder(final MyShoppingListChangeTextLineItemNameAction template) {
         return MyShoppingListChangeTextLineItemNameActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -131,11 +136,10 @@ public interface MyShoppingListChangeTextLineItemNameAction extends MyShoppingLi
      * @param helper function to map the object
      * @return mapped value
      */
-    default <T> T withMyShoppingListChangeTextLineItemNameAction(
-            Function<MyShoppingListChangeTextLineItemNameAction, T> helper) {
+    default <T> T withMyShoppingListChangeTextLineItemNameAction(Function<MyShoppingListChangeTextLineItemNameAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

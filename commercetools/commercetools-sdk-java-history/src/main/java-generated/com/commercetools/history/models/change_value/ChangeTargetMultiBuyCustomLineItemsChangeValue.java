@@ -1,18 +1,21 @@
-
 package com.commercetools.history.models.change_value;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
-
+import com.commercetools.history.models.change_value.ChangeTargetChangeValue;
 import com.commercetools.history.models.common.SelectionMode;
+import com.commercetools.history.models.change_value.ChangeTargetMultiBuyCustomLineItemsChangeValueImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Shape of the value for cart discounts multiBuyCustomLineItems target.</p>
@@ -29,9 +32,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .selectionMode(SelectionMode.CHEAPEST)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = ChangeTargetMultiBuyCustomLineItemsChangeValueImpl.class)
 public interface ChangeTargetMultiBuyCustomLineItemsChangeValue extends ChangeTargetChangeValue {
 
@@ -47,7 +53,6 @@ public interface ChangeTargetMultiBuyCustomLineItemsChangeValue extends ChangeTa
     @NotNull
     @JsonProperty("type")
     public String getType();
-
     /**
      *
      * @return predicate
@@ -55,7 +60,6 @@ public interface ChangeTargetMultiBuyCustomLineItemsChangeValue extends ChangeTa
     @NotNull
     @JsonProperty("predicate")
     public String getPredicate();
-
     /**
      *  <p>Quantity of line items that need to be present in order to trigger an application of this discount.</p>
      * @return triggerQuantity
@@ -63,7 +67,6 @@ public interface ChangeTargetMultiBuyCustomLineItemsChangeValue extends ChangeTa
     @NotNull
     @JsonProperty("triggerQuantity")
     public Integer getTriggerQuantity();
-
     /**
      *  <p>Quantity of line items that are discounted per application of this discount.</p>
      * @return discountedQuantity
@@ -71,7 +74,6 @@ public interface ChangeTargetMultiBuyCustomLineItemsChangeValue extends ChangeTa
     @NotNull
     @JsonProperty("discountedQuantity")
     public Integer getDiscountedQuantity();
-
     /**
      *  <p>Maximum number of applications of this discount.</p>
      * @return maxOccurrence
@@ -79,7 +81,6 @@ public interface ChangeTargetMultiBuyCustomLineItemsChangeValue extends ChangeTa
     @NotNull
     @JsonProperty("maxOccurrence")
     public Integer getMaxOccurrence();
-
     /**
      *
      * @return selectionMode
@@ -92,52 +93,57 @@ public interface ChangeTargetMultiBuyCustomLineItemsChangeValue extends ChangeTa
      * set predicate
      * @param predicate value to be set
      */
-
+    
     public void setPredicate(final String predicate);
-
+    
+    
     /**
      *  <p>Quantity of line items that need to be present in order to trigger an application of this discount.</p>
      * @param triggerQuantity value to be set
      */
-
+    
     public void setTriggerQuantity(final Integer triggerQuantity);
-
+    
+    
     /**
      *  <p>Quantity of line items that are discounted per application of this discount.</p>
      * @param discountedQuantity value to be set
      */
-
+    
     public void setDiscountedQuantity(final Integer discountedQuantity);
-
+    
+    
     /**
      *  <p>Maximum number of applications of this discount.</p>
      * @param maxOccurrence value to be set
      */
-
+    
     public void setMaxOccurrence(final Integer maxOccurrence);
-
+    
+    
     /**
      * set selectionMode
      * @param selectionMode value to be set
      */
-
+    
     public void setSelectionMode(final SelectionMode selectionMode);
+    
 
     /**
      * factory method
      * @return instance of ChangeTargetMultiBuyCustomLineItemsChangeValue
      */
-    public static ChangeTargetMultiBuyCustomLineItemsChangeValue of() {
+    public static ChangeTargetMultiBuyCustomLineItemsChangeValue of(){
         return new ChangeTargetMultiBuyCustomLineItemsChangeValueImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy ChangeTargetMultiBuyCustomLineItemsChangeValue
      * @param template instance to be copied
      * @return copy instance
      */
-    public static ChangeTargetMultiBuyCustomLineItemsChangeValue of(
-            final ChangeTargetMultiBuyCustomLineItemsChangeValue template) {
+    public static ChangeTargetMultiBuyCustomLineItemsChangeValue of(final ChangeTargetMultiBuyCustomLineItemsChangeValue template) {
         ChangeTargetMultiBuyCustomLineItemsChangeValueImpl instance = new ChangeTargetMultiBuyCustomLineItemsChangeValueImpl();
         instance.setPredicate(template.getPredicate());
         instance.setTriggerQuantity(template.getTriggerQuantity());
@@ -153,8 +159,7 @@ public interface ChangeTargetMultiBuyCustomLineItemsChangeValue extends ChangeTa
      * @return copy instance
      */
     @Nullable
-    public static ChangeTargetMultiBuyCustomLineItemsChangeValue deepCopy(
-            @Nullable final ChangeTargetMultiBuyCustomLineItemsChangeValue template) {
+    public static ChangeTargetMultiBuyCustomLineItemsChangeValue deepCopy(@Nullable final ChangeTargetMultiBuyCustomLineItemsChangeValue template) {
         if (template == null) {
             return null;
         }
@@ -174,16 +179,16 @@ public interface ChangeTargetMultiBuyCustomLineItemsChangeValue extends ChangeTa
     public static ChangeTargetMultiBuyCustomLineItemsChangeValueBuilder builder() {
         return ChangeTargetMultiBuyCustomLineItemsChangeValueBuilder.of();
     }
-
+    
     /**
      * create builder for ChangeTargetMultiBuyCustomLineItemsChangeValue instance
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static ChangeTargetMultiBuyCustomLineItemsChangeValueBuilder builder(
-            final ChangeTargetMultiBuyCustomLineItemsChangeValue template) {
+    public static ChangeTargetMultiBuyCustomLineItemsChangeValueBuilder builder(final ChangeTargetMultiBuyCustomLineItemsChangeValue template) {
         return ChangeTargetMultiBuyCustomLineItemsChangeValueBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -191,11 +196,10 @@ public interface ChangeTargetMultiBuyCustomLineItemsChangeValue extends ChangeTa
      * @param helper function to map the object
      * @return mapped value
      */
-    default <T> T withChangeTargetMultiBuyCustomLineItemsChangeValue(
-            Function<ChangeTargetMultiBuyCustomLineItemsChangeValue, T> helper) {
+    default <T> T withChangeTargetMultiBuyCustomLineItemsChangeValue(Function<ChangeTargetMultiBuyCustomLineItemsChangeValue, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

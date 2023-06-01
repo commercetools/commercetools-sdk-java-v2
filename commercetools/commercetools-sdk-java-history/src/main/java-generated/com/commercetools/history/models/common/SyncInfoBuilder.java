@@ -1,9 +1,11 @@
-
 package com.commercetools.history.models.common;
 
+import com.commercetools.history.models.common.Reference;
+import com.commercetools.history.models.common.SyncInfo;
+import javax.annotation.Nullable;
 import java.util.*;
 import java.util.function.Function;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -19,98 +21,117 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .syncedAt("{syncedAt}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class SyncInfoBuilder implements Builder<SyncInfo> {
 
+    
+    
     private com.commercetools.history.models.common.Reference channel;
-
+    
+    
+    
     private String externalId;
-
+    
+    
+    
     private String syncedAt;
 
+    
     /**
      * set the value to the channel using the builder function
      * @param builder function to build the channel value
      * @return Builder
      */
-
-    public SyncInfoBuilder channel(
-            Function<com.commercetools.history.models.common.ReferenceBuilder, com.commercetools.history.models.common.ReferenceBuilder> builder) {
+    
+    public SyncInfoBuilder channel(Function<com.commercetools.history.models.common.ReferenceBuilder, com.commercetools.history.models.common.ReferenceBuilder> builder) {
         this.channel = builder.apply(com.commercetools.history.models.common.ReferenceBuilder.of()).build();
         return this;
     }
-
+    
     /**
      * set the value to the channel using the builder function
      * @param builder function to build the channel value
      * @return Builder
      */
-
-    public SyncInfoBuilder withChannel(
-            Function<com.commercetools.history.models.common.ReferenceBuilder, com.commercetools.history.models.common.Reference> builder) {
+    
+    public SyncInfoBuilder withChannel(Function<com.commercetools.history.models.common.ReferenceBuilder, com.commercetools.history.models.common.Reference> builder) {
         this.channel = builder.apply(com.commercetools.history.models.common.ReferenceBuilder.of());
         return this;
     }
-
+                    
     /**
      * set the value to the channel
      * @param channel value to be set
      * @return Builder
      */
-
-    public SyncInfoBuilder channel(final com.commercetools.history.models.common.Reference channel) {
+    
+    public SyncInfoBuilder channel( final com.commercetools.history.models.common.Reference channel) {
         this.channel = channel;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Can be used to reference an external order instance, file etc.</p>
      * @param externalId value to be set
      * @return Builder
      */
-
-    public SyncInfoBuilder externalId(final String externalId) {
+    
+    public SyncInfoBuilder externalId( final String externalId) {
         this.externalId = externalId;
         return this;
     }
-
+    
+    
+    
+    
     /**
      * set the value to the syncedAt
      * @param syncedAt value to be set
      * @return Builder
      */
-
-    public SyncInfoBuilder syncedAt(final String syncedAt) {
+    
+    public SyncInfoBuilder syncedAt( final String syncedAt) {
         this.syncedAt = syncedAt;
         return this;
     }
+    
+    
 
     /**
      * value of channel}
      * @return channel
      */
-
-    public com.commercetools.history.models.common.Reference getChannel() {
+    
+    
+    public com.commercetools.history.models.common.Reference getChannel(){
         return this.channel;
     }
-
+    
     /**
      *  <p>Can be used to reference an external order instance, file etc.</p>
      * @return externalId
      */
-
-    public String getExternalId() {
+    
+    
+    public String getExternalId(){
         return this.externalId;
     }
-
+    
     /**
      * value of syncedAt}
      * @return syncedAt
      */
-
-    public String getSyncedAt() {
+    
+    
+    public String getSyncedAt(){
         return this.syncedAt;
     }
 
@@ -124,7 +145,7 @@ public class SyncInfoBuilder implements Builder<SyncInfo> {
         Objects.requireNonNull(syncedAt, SyncInfo.class + ": syncedAt is missing");
         return new SyncInfoImpl(channel, externalId, syncedAt);
     }
-
+    
     /**
      * builds SyncInfo without checking for non-null required values
      * @return SyncInfo
@@ -135,7 +156,7 @@ public class SyncInfoBuilder implements Builder<SyncInfo> {
 
     /**
      * factory method for an instance of SyncInfoBuilder
-     * @return builder
+     * @return builder 
      */
     public static SyncInfoBuilder of() {
         return new SyncInfoBuilder();

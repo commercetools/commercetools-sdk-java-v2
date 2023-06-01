@@ -1,9 +1,12 @@
-
 package com.commercetools.api.models.error;
 
+import com.commercetools.api.models.common.Price;
+import com.commercetools.api.models.error.GraphQLErrorObject;
+import com.commercetools.api.models.error.GraphQLDuplicatePriceKeyError;
+import javax.annotation.Nullable;
 import java.util.*;
 import java.util.function.Function;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -17,13 +20,20 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .conflictingPrice(conflictingPriceBuilder -> conflictingPriceBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class GraphQLDuplicatePriceKeyErrorBuilder implements Builder<GraphQLDuplicatePriceKeyError> {
 
+    
+    
     private Map<String, java.lang.Object> values = new HashMap<>();
-
+    
+    
+    
     private com.commercetools.api.models.common.Price conflictingPrice;
 
     /**
@@ -31,19 +41,19 @@ public class GraphQLDuplicatePriceKeyErrorBuilder implements Builder<GraphQLDupl
      * @param values properties to be set
      * @return Builder
      */
-
-    public GraphQLDuplicatePriceKeyErrorBuilder values(final Map<String, java.lang.Object> values) {
+    
+    public GraphQLDuplicatePriceKeyErrorBuilder values( final Map<String, java.lang.Object> values){
         this.values = values;
         return this;
     }
-
+    
     /**
      *  <p>Error-specific additional fields.</p>
      * @param key property name
      * @param value property value
      * @return Builder
      */
-
+    
     public GraphQLDuplicatePriceKeyErrorBuilder addValue(final String key, final java.lang.Object value) {
         if (this.values == null) {
             values = new HashMap<>();
@@ -51,58 +61,61 @@ public class GraphQLDuplicatePriceKeyErrorBuilder implements Builder<GraphQLDupl
         values.put(key, value);
         return this;
     }
-
+    
+    
+    
     /**
      *  <p>Conflicting Embedded Price.</p>
      * @param builder function to build the conflictingPrice value
      * @return Builder
      */
-
-    public GraphQLDuplicatePriceKeyErrorBuilder conflictingPrice(
-            Function<com.commercetools.api.models.common.PriceBuilder, com.commercetools.api.models.common.PriceBuilder> builder) {
+    
+    public GraphQLDuplicatePriceKeyErrorBuilder conflictingPrice(Function<com.commercetools.api.models.common.PriceBuilder, com.commercetools.api.models.common.PriceBuilder> builder) {
         this.conflictingPrice = builder.apply(com.commercetools.api.models.common.PriceBuilder.of()).build();
         return this;
     }
-
+    
     /**
      *  <p>Conflicting Embedded Price.</p>
      * @param builder function to build the conflictingPrice value
      * @return Builder
      */
-
-    public GraphQLDuplicatePriceKeyErrorBuilder withConflictingPrice(
-            Function<com.commercetools.api.models.common.PriceBuilder, com.commercetools.api.models.common.Price> builder) {
+    
+    public GraphQLDuplicatePriceKeyErrorBuilder withConflictingPrice(Function<com.commercetools.api.models.common.PriceBuilder, com.commercetools.api.models.common.Price> builder) {
         this.conflictingPrice = builder.apply(com.commercetools.api.models.common.PriceBuilder.of());
         return this;
     }
-
+                    
     /**
      *  <p>Conflicting Embedded Price.</p>
      * @param conflictingPrice value to be set
      * @return Builder
      */
-
-    public GraphQLDuplicatePriceKeyErrorBuilder conflictingPrice(
-            final com.commercetools.api.models.common.Price conflictingPrice) {
+    
+    public GraphQLDuplicatePriceKeyErrorBuilder conflictingPrice( final com.commercetools.api.models.common.Price conflictingPrice) {
         this.conflictingPrice = conflictingPrice;
         return this;
     }
+    
+    
 
     /**
      *  <p>Error-specific additional fields.</p>
      * @return pattern properties
      */
-
-    public Map<String, java.lang.Object> getValues() {
+    
+    
+    public Map<String, java.lang.Object> getValues(){
         return this.values;
     }
-
+    
     /**
      *  <p>Conflicting Embedded Price.</p>
      * @return conflictingPrice
      */
-
-    public com.commercetools.api.models.common.Price getConflictingPrice() {
+    
+    
+    public com.commercetools.api.models.common.Price getConflictingPrice(){
         return this.conflictingPrice;
     }
 
@@ -114,7 +127,7 @@ public class GraphQLDuplicatePriceKeyErrorBuilder implements Builder<GraphQLDupl
         Objects.requireNonNull(conflictingPrice, GraphQLDuplicatePriceKeyError.class + ": conflictingPrice is missing");
         return new GraphQLDuplicatePriceKeyErrorImpl(values, conflictingPrice);
     }
-
+    
     /**
      * builds GraphQLDuplicatePriceKeyError without checking for non-null required values
      * @return GraphQLDuplicatePriceKeyError
@@ -125,7 +138,7 @@ public class GraphQLDuplicatePriceKeyErrorBuilder implements Builder<GraphQLDupl
 
     /**
      * factory method for an instance of GraphQLDuplicatePriceKeyErrorBuilder
-     * @return builder
+     * @return builder 
      */
     public static GraphQLDuplicatePriceKeyErrorBuilder of() {
         return new GraphQLDuplicatePriceKeyErrorBuilder();

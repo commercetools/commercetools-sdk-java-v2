@@ -1,19 +1,21 @@
-
 package com.commercetools.api.models.order_edit;
-
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
 
 import com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifier;
 import com.commercetools.api.models.order.StagedOrderUpdateAction;
+import com.commercetools.api.models.order_edit.StagedOrderSetCustomerGroupActionImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * StagedOrderSetCustomerGroupAction
@@ -25,9 +27,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     StagedOrderSetCustomerGroupAction stagedOrderSetCustomerGroupAction = StagedOrderSetCustomerGroupAction.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = StagedOrderSetCustomerGroupActionImpl.class)
 public interface StagedOrderSetCustomerGroupAction extends StagedOrderUpdateAction {
 
@@ -48,16 +53,18 @@ public interface StagedOrderSetCustomerGroupAction extends StagedOrderUpdateActi
      *  <p>ResourceIdentifier to a CustomerGroup.</p>
      * @param customerGroup value to be set
      */
-
+    
     public void setCustomerGroup(final CustomerGroupResourceIdentifier customerGroup);
+    
 
     /**
      * factory method
      * @return instance of StagedOrderSetCustomerGroupAction
      */
-    public static StagedOrderSetCustomerGroupAction of() {
+    public static StagedOrderSetCustomerGroupAction of(){
         return new StagedOrderSetCustomerGroupActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy StagedOrderSetCustomerGroupAction
@@ -76,14 +83,12 @@ public interface StagedOrderSetCustomerGroupAction extends StagedOrderUpdateActi
      * @return copy instance
      */
     @Nullable
-    public static StagedOrderSetCustomerGroupAction deepCopy(
-            @Nullable final StagedOrderSetCustomerGroupAction template) {
+    public static StagedOrderSetCustomerGroupAction deepCopy(@Nullable final StagedOrderSetCustomerGroupAction template) {
         if (template == null) {
             return null;
         }
         StagedOrderSetCustomerGroupActionImpl instance = new StagedOrderSetCustomerGroupActionImpl();
-        instance.setCustomerGroup(com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifier
-                .deepCopy(template.getCustomerGroup()));
+        instance.setCustomerGroup(com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifier.deepCopy(template.getCustomerGroup()));
         return instance;
     }
 
@@ -94,7 +99,7 @@ public interface StagedOrderSetCustomerGroupAction extends StagedOrderUpdateActi
     public static StagedOrderSetCustomerGroupActionBuilder builder() {
         return StagedOrderSetCustomerGroupActionBuilder.of();
     }
-
+    
     /**
      * create builder for StagedOrderSetCustomerGroupAction instance
      * @param template instance with prefilled values for the builder
@@ -103,6 +108,7 @@ public interface StagedOrderSetCustomerGroupAction extends StagedOrderUpdateActi
     public static StagedOrderSetCustomerGroupActionBuilder builder(final StagedOrderSetCustomerGroupAction template) {
         return StagedOrderSetCustomerGroupActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -113,7 +119,7 @@ public interface StagedOrderSetCustomerGroupAction extends StagedOrderUpdateActi
     default <T> T withStagedOrderSetCustomerGroupAction(Function<StagedOrderSetCustomerGroupAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

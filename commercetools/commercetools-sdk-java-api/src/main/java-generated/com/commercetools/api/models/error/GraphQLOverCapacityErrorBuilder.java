@@ -1,8 +1,11 @@
-
 package com.commercetools.api.models.error;
 
+import com.commercetools.api.models.error.GraphQLErrorObject;
+import com.commercetools.api.models.error.GraphQLOverCapacityError;
+import javax.annotation.Nullable;
 import java.util.*;
-
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -15,11 +18,16 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     GraphQLOverCapacityError graphQLOverCapacityError = GraphQLOverCapacityError.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class GraphQLOverCapacityErrorBuilder implements Builder<GraphQLOverCapacityError> {
 
+    
+    
     private Map<String, java.lang.Object> values = new HashMap<>();
 
     /**
@@ -27,19 +35,19 @@ public class GraphQLOverCapacityErrorBuilder implements Builder<GraphQLOverCapac
      * @param values properties to be set
      * @return Builder
      */
-
-    public GraphQLOverCapacityErrorBuilder values(final Map<String, java.lang.Object> values) {
+    
+    public GraphQLOverCapacityErrorBuilder values( final Map<String, java.lang.Object> values){
         this.values = values;
         return this;
     }
-
+    
     /**
      *  <p>Error-specific additional fields.</p>
      * @param key property name
      * @param value property value
      * @return Builder
      */
-
+    
     public GraphQLOverCapacityErrorBuilder addValue(final String key, final java.lang.Object value) {
         if (this.values == null) {
             values = new HashMap<>();
@@ -47,13 +55,15 @@ public class GraphQLOverCapacityErrorBuilder implements Builder<GraphQLOverCapac
         values.put(key, value);
         return this;
     }
+    
 
     /**
      *  <p>Error-specific additional fields.</p>
      * @return pattern properties
      */
-
-    public Map<String, java.lang.Object> getValues() {
+    
+    
+    public Map<String, java.lang.Object> getValues(){
         return this.values;
     }
 
@@ -64,7 +74,7 @@ public class GraphQLOverCapacityErrorBuilder implements Builder<GraphQLOverCapac
     public GraphQLOverCapacityError build() {
         return new GraphQLOverCapacityErrorImpl(values);
     }
-
+    
     /**
      * builds GraphQLOverCapacityError without checking for non-null required values
      * @return GraphQLOverCapacityError
@@ -75,7 +85,7 @@ public class GraphQLOverCapacityErrorBuilder implements Builder<GraphQLOverCapac
 
     /**
      * factory method for an instance of GraphQLOverCapacityErrorBuilder
-     * @return builder
+     * @return builder 
      */
     public static GraphQLOverCapacityErrorBuilder of() {
         return new GraphQLOverCapacityErrorBuilder();

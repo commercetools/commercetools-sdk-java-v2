@@ -1,17 +1,20 @@
-
 package com.commercetools.api.models.subscription;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
+import com.commercetools.api.models.subscription.ChangeSubscriptionResourceTypeId;
+import com.commercetools.api.models.subscription.ChangeSubscriptionImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Notification about changes to a resource. The payload format differs for resource creation, update, and deletion.</p>
@@ -24,11 +27,15 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .resourceTypeId(ChangeSubscriptionResourceTypeId.BUSINESS_UNIT)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = ChangeSubscriptionImpl.class)
-public interface ChangeSubscription {
+public interface ChangeSubscription  {
+
 
     /**
      *  <p>Unique identifier for the type of resource, for example, <code>cart</code>.</p>
@@ -42,16 +49,18 @@ public interface ChangeSubscription {
      *  <p>Unique identifier for the type of resource, for example, <code>cart</code>.</p>
      * @param resourceTypeId value to be set
      */
-
+    
     public void setResourceTypeId(final ChangeSubscriptionResourceTypeId resourceTypeId);
+    
 
     /**
      * factory method
      * @return instance of ChangeSubscription
      */
-    public static ChangeSubscription of() {
+    public static ChangeSubscription of(){
         return new ChangeSubscriptionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy ChangeSubscription
@@ -86,7 +95,7 @@ public interface ChangeSubscription {
     public static ChangeSubscriptionBuilder builder() {
         return ChangeSubscriptionBuilder.of();
     }
-
+    
     /**
      * create builder for ChangeSubscription instance
      * @param template instance with prefilled values for the builder
@@ -95,6 +104,7 @@ public interface ChangeSubscription {
     public static ChangeSubscriptionBuilder builder(final ChangeSubscription template) {
         return ChangeSubscriptionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -105,7 +115,7 @@ public interface ChangeSubscription {
     default <T> T withChangeSubscription(Function<ChangeSubscription, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

@@ -1,9 +1,11 @@
-
 package com.commercetools.api.predicates.query.product_type;
 
 import com.commercetools.api.predicates.query.*;
 
-public class ProductTypeRemoveAttributeDefinitionActionQueryBuilderDsl {
+import java.util.function.Function;
+
+
+public class ProductTypeRemoveAttributeDefinitionActionQueryBuilderDsl  {
     public ProductTypeRemoveAttributeDefinitionActionQueryBuilderDsl() {
     }
 
@@ -12,15 +14,12 @@ public class ProductTypeRemoveAttributeDefinitionActionQueryBuilderDsl {
     }
 
     public StringComparisonPredicateBuilder<ProductTypeRemoveAttributeDefinitionActionQueryBuilderDsl> action() {
-        return new StringComparisonPredicateBuilder<>(
-            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("action")),
-            p -> new CombinationQueryPredicate<>(p, ProductTypeRemoveAttributeDefinitionActionQueryBuilderDsl::of));
+        return new StringComparisonPredicateBuilder<>(BinaryQueryPredicate.of().left(new ConstantQueryPredicate("action")),
+        p -> new CombinationQueryPredicate<>(p, ProductTypeRemoveAttributeDefinitionActionQueryBuilderDsl::of));
     }
-
     public StringComparisonPredicateBuilder<ProductTypeRemoveAttributeDefinitionActionQueryBuilderDsl> name() {
-        return new StringComparisonPredicateBuilder<>(
-            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("name")),
-            p -> new CombinationQueryPredicate<>(p, ProductTypeRemoveAttributeDefinitionActionQueryBuilderDsl::of));
+        return new StringComparisonPredicateBuilder<>(BinaryQueryPredicate.of().left(new ConstantQueryPredicate("name")),
+        p -> new CombinationQueryPredicate<>(p, ProductTypeRemoveAttributeDefinitionActionQueryBuilderDsl::of));
     }
-
+    
 }

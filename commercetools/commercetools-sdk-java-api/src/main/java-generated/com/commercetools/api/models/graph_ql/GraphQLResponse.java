@@ -1,18 +1,21 @@
-
 package com.commercetools.api.models.graph_ql;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-import java.util.stream.Collectors;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
+import com.commercetools.api.models.graph_ql.GraphQLError;
+import java.lang.Object;
+import com.commercetools.api.models.graph_ql.GraphQLResponseImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * GraphQLResponse
@@ -24,20 +27,23 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     GraphQLResponse graphQLResponse = GraphQLResponse.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = GraphQLResponseImpl.class)
-public interface GraphQLResponse {
+public interface GraphQLResponse  {
+
 
     /**
      *
      * @return data
      */
-
+    
     @JsonProperty("data")
     public Object getData();
-
     /**
      *
      * @return errors
@@ -50,31 +56,32 @@ public interface GraphQLResponse {
      * set data
      * @param data value to be set
      */
-
+    
     public void setData(final Object data);
-
+    
+    
     /**
      * set errors
      * @param errors values to be set
      */
-
+    
     @JsonIgnore
-    public void setErrors(final GraphQLError... errors);
-
+    public void setErrors(final GraphQLError ...errors);
     /**
      * set errors
      * @param errors values to be set
      */
-
+    
     public void setErrors(final List<GraphQLError> errors);
 
     /**
      * factory method
      * @return instance of GraphQLResponse
      */
-    public static GraphQLResponse of() {
+    public static GraphQLResponse of(){
         return new GraphQLResponseImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy GraphQLResponse
@@ -101,9 +108,7 @@ public interface GraphQLResponse {
         GraphQLResponseImpl instance = new GraphQLResponseImpl();
         instance.setData(template.getData());
         instance.setErrors(Optional.ofNullable(template.getErrors())
-                .map(t -> t.stream()
-                        .map(com.commercetools.api.models.graph_ql.GraphQLError::deepCopy)
-                        .collect(Collectors.toList()))
+                .map(t -> t.stream().map(com.commercetools.api.models.graph_ql.GraphQLError::deepCopy).collect(Collectors.toList()))
                 .orElse(null));
         return instance;
     }
@@ -115,7 +120,7 @@ public interface GraphQLResponse {
     public static GraphQLResponseBuilder builder() {
         return GraphQLResponseBuilder.of();
     }
-
+    
     /**
      * create builder for GraphQLResponse instance
      * @param template instance with prefilled values for the builder
@@ -124,6 +129,7 @@ public interface GraphQLResponse {
     public static GraphQLResponseBuilder builder(final GraphQLResponse template) {
         return GraphQLResponseBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -134,7 +140,7 @@ public interface GraphQLResponse {
     default <T> T withGraphQLResponse(Function<GraphQLResponse, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

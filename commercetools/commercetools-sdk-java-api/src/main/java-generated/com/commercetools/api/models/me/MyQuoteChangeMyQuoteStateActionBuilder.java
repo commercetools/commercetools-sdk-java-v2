@@ -1,8 +1,12 @@
-
 package com.commercetools.api.models.me;
 
+import com.commercetools.api.models.me.MyQuoteState;
+import com.commercetools.api.models.me.MyQuoteUpdateAction;
+import com.commercetools.api.models.me.MyQuoteChangeMyQuoteStateAction;
+import javax.annotation.Nullable;
 import java.util.*;
-
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -16,31 +20,39 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .quoteState(MyQuoteState.DECLINED)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class MyQuoteChangeMyQuoteStateActionBuilder implements Builder<MyQuoteChangeMyQuoteStateAction> {
 
+    
+    
     private com.commercetools.api.models.me.MyQuoteState quoteState;
 
+    
     /**
      *  <p>New state to be set for the Quote.</p>
      * @param quoteState value to be set
      * @return Builder
      */
-
-    public MyQuoteChangeMyQuoteStateActionBuilder quoteState(
-            final com.commercetools.api.models.me.MyQuoteState quoteState) {
+    
+    public MyQuoteChangeMyQuoteStateActionBuilder quoteState( final com.commercetools.api.models.me.MyQuoteState quoteState) {
         this.quoteState = quoteState;
         return this;
     }
+    
+    
 
     /**
      *  <p>New state to be set for the Quote.</p>
      * @return quoteState
      */
-
-    public com.commercetools.api.models.me.MyQuoteState getQuoteState() {
+    
+    
+    public com.commercetools.api.models.me.MyQuoteState getQuoteState(){
         return this.quoteState;
     }
 
@@ -52,7 +64,7 @@ public class MyQuoteChangeMyQuoteStateActionBuilder implements Builder<MyQuoteCh
         Objects.requireNonNull(quoteState, MyQuoteChangeMyQuoteStateAction.class + ": quoteState is missing");
         return new MyQuoteChangeMyQuoteStateActionImpl(quoteState);
     }
-
+    
     /**
      * builds MyQuoteChangeMyQuoteStateAction without checking for non-null required values
      * @return MyQuoteChangeMyQuoteStateAction
@@ -63,7 +75,7 @@ public class MyQuoteChangeMyQuoteStateActionBuilder implements Builder<MyQuoteCh
 
     /**
      * factory method for an instance of MyQuoteChangeMyQuoteStateActionBuilder
-     * @return builder
+     * @return builder 
      */
     public static MyQuoteChangeMyQuoteStateActionBuilder of() {
         return new MyQuoteChangeMyQuoteStateActionBuilder();

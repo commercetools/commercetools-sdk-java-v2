@@ -1,9 +1,12 @@
-
 package com.commercetools.history.models.change;
 
+import com.commercetools.history.models.change.Change;
+import com.commercetools.history.models.common.TextLineItem;
+import com.commercetools.history.models.change.RemoveTextLineItemChange;
+import javax.annotation.Nullable;
 import java.util.*;
 import java.util.function.Function;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -19,124 +22,139 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .nextValue(nextValueBuilder -> nextValueBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class RemoveTextLineItemChangeBuilder implements Builder<RemoveTextLineItemChange> {
 
+    
+    
     private String change;
-
+    
+    
+    
     private com.commercetools.history.models.common.TextLineItem previousValue;
-
+    
+    
+    
     private com.commercetools.history.models.common.TextLineItem nextValue;
 
+    
     /**
      * set the value to the change
      * @param change value to be set
      * @return Builder
      */
-
-    public RemoveTextLineItemChangeBuilder change(final String change) {
+    
+    public RemoveTextLineItemChangeBuilder change( final String change) {
         this.change = change;
         return this;
     }
-
+    
+    
+    
+    
     /**
      * set the value to the previousValue using the builder function
      * @param builder function to build the previousValue value
      * @return Builder
      */
-
-    public RemoveTextLineItemChangeBuilder previousValue(
-            Function<com.commercetools.history.models.common.TextLineItemBuilder, com.commercetools.history.models.common.TextLineItemBuilder> builder) {
+    
+    public RemoveTextLineItemChangeBuilder previousValue(Function<com.commercetools.history.models.common.TextLineItemBuilder, com.commercetools.history.models.common.TextLineItemBuilder> builder) {
         this.previousValue = builder.apply(com.commercetools.history.models.common.TextLineItemBuilder.of()).build();
         return this;
     }
-
+    
     /**
      * set the value to the previousValue using the builder function
      * @param builder function to build the previousValue value
      * @return Builder
      */
-
-    public RemoveTextLineItemChangeBuilder withPreviousValue(
-            Function<com.commercetools.history.models.common.TextLineItemBuilder, com.commercetools.history.models.common.TextLineItem> builder) {
+    
+    public RemoveTextLineItemChangeBuilder withPreviousValue(Function<com.commercetools.history.models.common.TextLineItemBuilder, com.commercetools.history.models.common.TextLineItem> builder) {
         this.previousValue = builder.apply(com.commercetools.history.models.common.TextLineItemBuilder.of());
         return this;
     }
-
+                    
     /**
      * set the value to the previousValue
      * @param previousValue value to be set
      * @return Builder
      */
-
-    public RemoveTextLineItemChangeBuilder previousValue(
-            final com.commercetools.history.models.common.TextLineItem previousValue) {
+    
+    public RemoveTextLineItemChangeBuilder previousValue( final com.commercetools.history.models.common.TextLineItem previousValue) {
         this.previousValue = previousValue;
         return this;
     }
-
+    
+    
+    
+    
     /**
      * set the value to the nextValue using the builder function
      * @param builder function to build the nextValue value
      * @return Builder
      */
-
-    public RemoveTextLineItemChangeBuilder nextValue(
-            Function<com.commercetools.history.models.common.TextLineItemBuilder, com.commercetools.history.models.common.TextLineItemBuilder> builder) {
+    
+    public RemoveTextLineItemChangeBuilder nextValue(Function<com.commercetools.history.models.common.TextLineItemBuilder, com.commercetools.history.models.common.TextLineItemBuilder> builder) {
         this.nextValue = builder.apply(com.commercetools.history.models.common.TextLineItemBuilder.of()).build();
         return this;
     }
-
+    
     /**
      * set the value to the nextValue using the builder function
      * @param builder function to build the nextValue value
      * @return Builder
      */
-
-    public RemoveTextLineItemChangeBuilder withNextValue(
-            Function<com.commercetools.history.models.common.TextLineItemBuilder, com.commercetools.history.models.common.TextLineItem> builder) {
+    
+    public RemoveTextLineItemChangeBuilder withNextValue(Function<com.commercetools.history.models.common.TextLineItemBuilder, com.commercetools.history.models.common.TextLineItem> builder) {
         this.nextValue = builder.apply(com.commercetools.history.models.common.TextLineItemBuilder.of());
         return this;
     }
-
+                    
     /**
      * set the value to the nextValue
      * @param nextValue value to be set
      * @return Builder
      */
-
-    public RemoveTextLineItemChangeBuilder nextValue(
-            final com.commercetools.history.models.common.TextLineItem nextValue) {
+    
+    public RemoveTextLineItemChangeBuilder nextValue( final com.commercetools.history.models.common.TextLineItem nextValue) {
         this.nextValue = nextValue;
         return this;
     }
+    
+    
 
     /**
      * value of change}
      * @return change
      */
-
-    public String getChange() {
+    
+    
+    public String getChange(){
         return this.change;
     }
-
+    
     /**
      * value of previousValue}
      * @return previousValue
      */
-
-    public com.commercetools.history.models.common.TextLineItem getPreviousValue() {
+    
+    
+    public com.commercetools.history.models.common.TextLineItem getPreviousValue(){
         return this.previousValue;
     }
-
+    
     /**
      * value of nextValue}
      * @return nextValue
      */
-
-    public com.commercetools.history.models.common.TextLineItem getNextValue() {
+    
+    
+    public com.commercetools.history.models.common.TextLineItem getNextValue(){
         return this.nextValue;
     }
 
@@ -150,7 +168,7 @@ public class RemoveTextLineItemChangeBuilder implements Builder<RemoveTextLineIt
         Objects.requireNonNull(nextValue, RemoveTextLineItemChange.class + ": nextValue is missing");
         return new RemoveTextLineItemChangeImpl(change, previousValue, nextValue);
     }
-
+    
     /**
      * builds RemoveTextLineItemChange without checking for non-null required values
      * @return RemoveTextLineItemChange
@@ -161,7 +179,7 @@ public class RemoveTextLineItemChangeBuilder implements Builder<RemoveTextLineIt
 
     /**
      * factory method for an instance of RemoveTextLineItemChangeBuilder
-     * @return builder
+     * @return builder 
      */
     public static RemoveTextLineItemChangeBuilder of() {
         return new RemoveTextLineItemChangeBuilder();

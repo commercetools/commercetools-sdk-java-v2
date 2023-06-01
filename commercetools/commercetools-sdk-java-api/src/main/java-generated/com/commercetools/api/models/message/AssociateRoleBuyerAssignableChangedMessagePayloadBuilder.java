@@ -1,8 +1,11 @@
-
 package com.commercetools.api.models.message;
 
+import com.commercetools.api.models.message.MessagePayload;
+import com.commercetools.api.models.message.AssociateRoleBuyerAssignableChangedMessagePayload;
+import javax.annotation.Nullable;
 import java.util.*;
-
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -16,31 +19,39 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .buyerAssignable(true)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
-public class AssociateRoleBuyerAssignableChangedMessagePayloadBuilder
-        implements Builder<AssociateRoleBuyerAssignableChangedMessagePayload> {
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
+public class AssociateRoleBuyerAssignableChangedMessagePayloadBuilder implements Builder<AssociateRoleBuyerAssignableChangedMessagePayload> {
 
+    
+    
     private Boolean buyerAssignable;
 
+    
     /**
      *  <p>The new value of the <code>buyerAssignable</code> field of the AssociateRole.</p>
      * @param buyerAssignable value to be set
      * @return Builder
      */
-
-    public AssociateRoleBuyerAssignableChangedMessagePayloadBuilder buyerAssignable(final Boolean buyerAssignable) {
+    
+    public AssociateRoleBuyerAssignableChangedMessagePayloadBuilder buyerAssignable( final Boolean buyerAssignable) {
         this.buyerAssignable = buyerAssignable;
         return this;
     }
+    
+    
 
     /**
      *  <p>The new value of the <code>buyerAssignable</code> field of the AssociateRole.</p>
      * @return buyerAssignable
      */
-
-    public Boolean getBuyerAssignable() {
+    
+    
+    public Boolean getBuyerAssignable(){
         return this.buyerAssignable;
     }
 
@@ -49,11 +60,10 @@ public class AssociateRoleBuyerAssignableChangedMessagePayloadBuilder
      * @return AssociateRoleBuyerAssignableChangedMessagePayload
      */
     public AssociateRoleBuyerAssignableChangedMessagePayload build() {
-        Objects.requireNonNull(buyerAssignable,
-            AssociateRoleBuyerAssignableChangedMessagePayload.class + ": buyerAssignable is missing");
+        Objects.requireNonNull(buyerAssignable, AssociateRoleBuyerAssignableChangedMessagePayload.class + ": buyerAssignable is missing");
         return new AssociateRoleBuyerAssignableChangedMessagePayloadImpl(buyerAssignable);
     }
-
+    
     /**
      * builds AssociateRoleBuyerAssignableChangedMessagePayload without checking for non-null required values
      * @return AssociateRoleBuyerAssignableChangedMessagePayload
@@ -64,7 +74,7 @@ public class AssociateRoleBuyerAssignableChangedMessagePayloadBuilder
 
     /**
      * factory method for an instance of AssociateRoleBuyerAssignableChangedMessagePayloadBuilder
-     * @return builder
+     * @return builder 
      */
     public static AssociateRoleBuyerAssignableChangedMessagePayloadBuilder of() {
         return new AssociateRoleBuyerAssignableChangedMessagePayloadBuilder();
@@ -75,8 +85,7 @@ public class AssociateRoleBuyerAssignableChangedMessagePayloadBuilder
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static AssociateRoleBuyerAssignableChangedMessagePayloadBuilder of(
-            final AssociateRoleBuyerAssignableChangedMessagePayload template) {
+    public static AssociateRoleBuyerAssignableChangedMessagePayloadBuilder of(final AssociateRoleBuyerAssignableChangedMessagePayload template) {
         AssociateRoleBuyerAssignableChangedMessagePayloadBuilder builder = new AssociateRoleBuyerAssignableChangedMessagePayloadBuilder();
         builder.buyerAssignable = template.getBuyerAssignable();
         return builder;

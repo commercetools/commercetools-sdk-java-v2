@@ -1,9 +1,11 @@
-
 package com.commercetools.api.predicates.query.quote;
 
 import com.commercetools.api.predicates.query.*;
 
-public class QuoteChangeQuoteStateActionQueryBuilderDsl {
+import java.util.function.Function;
+
+
+public class QuoteChangeQuoteStateActionQueryBuilderDsl  {
     public QuoteChangeQuoteStateActionQueryBuilderDsl() {
     }
 
@@ -12,15 +14,12 @@ public class QuoteChangeQuoteStateActionQueryBuilderDsl {
     }
 
     public StringComparisonPredicateBuilder<QuoteChangeQuoteStateActionQueryBuilderDsl> action() {
-        return new StringComparisonPredicateBuilder<>(
-            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("action")),
-            p -> new CombinationQueryPredicate<>(p, QuoteChangeQuoteStateActionQueryBuilderDsl::of));
+        return new StringComparisonPredicateBuilder<>(BinaryQueryPredicate.of().left(new ConstantQueryPredicate("action")),
+        p -> new CombinationQueryPredicate<>(p, QuoteChangeQuoteStateActionQueryBuilderDsl::of));
     }
-
     public StringComparisonPredicateBuilder<QuoteChangeQuoteStateActionQueryBuilderDsl> quoteState() {
-        return new StringComparisonPredicateBuilder<>(
-            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("quoteState")),
-            p -> new CombinationQueryPredicate<>(p, QuoteChangeQuoteStateActionQueryBuilderDsl::of));
+        return new StringComparisonPredicateBuilder<>(BinaryQueryPredicate.of().left(new ConstantQueryPredicate("quoteState")),
+        p -> new CombinationQueryPredicate<>(p, QuoteChangeQuoteStateActionQueryBuilderDsl::of));
     }
-
+    
 }

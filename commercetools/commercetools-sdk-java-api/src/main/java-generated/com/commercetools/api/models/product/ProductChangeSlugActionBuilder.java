@@ -1,11 +1,12 @@
-
 package com.commercetools.api.models.product;
 
+import com.commercetools.api.models.common.LocalizedString;
+import com.commercetools.api.models.product.ProductUpdateAction;
+import com.commercetools.api.models.product.ProductChangeSlugAction;
+import javax.annotation.Nullable;
 import java.util.*;
 import java.util.function.Function;
-
-import javax.annotation.Nullable;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -19,78 +20,89 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .slug(slugBuilder -> slugBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class ProductChangeSlugActionBuilder implements Builder<ProductChangeSlugAction> {
 
+    
+    
     private com.commercetools.api.models.common.LocalizedString slug;
-
+    
+    
     @Nullable
     private Boolean staged;
 
+    
     /**
      *  <p>Value to set. Must not be empty. A Product can have the same slug for different Locales, but it must be unique across the Project. Must match the pattern <code>^[A-Za-z0-9_-]{2,256}+$</code>.</p>
      * @param builder function to build the slug value
      * @return Builder
      */
-
-    public ProductChangeSlugActionBuilder slug(
-            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
+    
+    public ProductChangeSlugActionBuilder slug(Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
         this.slug = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of()).build();
         return this;
     }
-
+    
     /**
      *  <p>Value to set. Must not be empty. A Product can have the same slug for different Locales, but it must be unique across the Project. Must match the pattern <code>^[A-Za-z0-9_-]{2,256}+$</code>.</p>
      * @param builder function to build the slug value
      * @return Builder
      */
-
-    public ProductChangeSlugActionBuilder withSlug(
-            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedString> builder) {
+    
+    public ProductChangeSlugActionBuilder withSlug(Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedString> builder) {
         this.slug = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of());
         return this;
     }
-
+                    
     /**
      *  <p>Value to set. Must not be empty. A Product can have the same slug for different Locales, but it must be unique across the Project. Must match the pattern <code>^[A-Za-z0-9_-]{2,256}+$</code>.</p>
      * @param slug value to be set
      * @return Builder
      */
-
-    public ProductChangeSlugActionBuilder slug(final com.commercetools.api.models.common.LocalizedString slug) {
+    
+    public ProductChangeSlugActionBuilder slug( final com.commercetools.api.models.common.LocalizedString slug) {
         this.slug = slug;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>If <code>true</code>, only the staged <code>slug</code> is updated. If <code>false</code>, both the current and staged <code>slug</code> are updated.</p>
      * @param staged value to be set
      * @return Builder
      */
-
+    
     public ProductChangeSlugActionBuilder staged(@Nullable final Boolean staged) {
         this.staged = staged;
         return this;
     }
+    
+    
 
     /**
      *  <p>Value to set. Must not be empty. A Product can have the same slug for different Locales, but it must be unique across the Project. Must match the pattern <code>^[A-Za-z0-9_-]{2,256}+$</code>.</p>
      * @return slug
      */
-
-    public com.commercetools.api.models.common.LocalizedString getSlug() {
+    
+    
+    public com.commercetools.api.models.common.LocalizedString getSlug(){
         return this.slug;
     }
-
+    
     /**
      *  <p>If <code>true</code>, only the staged <code>slug</code> is updated. If <code>false</code>, both the current and staged <code>slug</code> are updated.</p>
      * @return staged
      */
-
+    
     @Nullable
-    public Boolean getStaged() {
+    public Boolean getStaged(){
         return this.staged;
     }
 
@@ -102,7 +114,7 @@ public class ProductChangeSlugActionBuilder implements Builder<ProductChangeSlug
         Objects.requireNonNull(slug, ProductChangeSlugAction.class + ": slug is missing");
         return new ProductChangeSlugActionImpl(slug, staged);
     }
-
+    
     /**
      * builds ProductChangeSlugAction without checking for non-null required values
      * @return ProductChangeSlugAction
@@ -113,7 +125,7 @@ public class ProductChangeSlugActionBuilder implements Builder<ProductChangeSlug
 
     /**
      * factory method for an instance of ProductChangeSlugActionBuilder
-     * @return builder
+     * @return builder 
      */
     public static ProductChangeSlugActionBuilder of() {
         return new ProductChangeSlugActionBuilder();

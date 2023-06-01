@@ -1,8 +1,12 @@
-
 package com.commercetools.api.models.type;
 
+import com.commercetools.api.models.type.CustomFieldReferenceValue;
+import com.commercetools.api.models.type.FieldType;
+import com.commercetools.api.models.type.CustomFieldReferenceType;
+import javax.annotation.Nullable;
 import java.util.*;
-
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -16,31 +20,39 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .referenceTypeId(CustomFieldReferenceValue.CART)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class CustomFieldReferenceTypeBuilder implements Builder<CustomFieldReferenceType> {
 
+    
+    
     private com.commercetools.api.models.type.CustomFieldReferenceValue referenceTypeId;
 
+    
     /**
      *  <p>Resource type the Custom Field can reference.</p>
      * @param referenceTypeId value to be set
      * @return Builder
      */
-
-    public CustomFieldReferenceTypeBuilder referenceTypeId(
-            final com.commercetools.api.models.type.CustomFieldReferenceValue referenceTypeId) {
+    
+    public CustomFieldReferenceTypeBuilder referenceTypeId( final com.commercetools.api.models.type.CustomFieldReferenceValue referenceTypeId) {
         this.referenceTypeId = referenceTypeId;
         return this;
     }
+    
+    
 
     /**
      *  <p>Resource type the Custom Field can reference.</p>
      * @return referenceTypeId
      */
-
-    public com.commercetools.api.models.type.CustomFieldReferenceValue getReferenceTypeId() {
+    
+    
+    public com.commercetools.api.models.type.CustomFieldReferenceValue getReferenceTypeId(){
         return this.referenceTypeId;
     }
 
@@ -52,7 +64,7 @@ public class CustomFieldReferenceTypeBuilder implements Builder<CustomFieldRefer
         Objects.requireNonNull(referenceTypeId, CustomFieldReferenceType.class + ": referenceTypeId is missing");
         return new CustomFieldReferenceTypeImpl(referenceTypeId);
     }
-
+    
     /**
      * builds CustomFieldReferenceType without checking for non-null required values
      * @return CustomFieldReferenceType
@@ -63,7 +75,7 @@ public class CustomFieldReferenceTypeBuilder implements Builder<CustomFieldRefer
 
     /**
      * factory method for an instance of CustomFieldReferenceTypeBuilder
-     * @return builder
+     * @return builder 
      */
     public static CustomFieldReferenceTypeBuilder of() {
         return new CustomFieldReferenceTypeBuilder();

@@ -1,10 +1,11 @@
-
 package com.commercetools.api.models.customer;
 
-import java.util.*;
-
+import com.commercetools.api.models.customer.AnonymousCartSignInMode;
+import com.commercetools.api.models.customer.MyCustomerSignin;
 import javax.annotation.Nullable;
-
+import java.util.*;
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -19,43 +20,59 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .password("{password}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class MyCustomerSigninBuilder implements Builder<MyCustomerSignin> {
 
+    
+    
     private String email;
-
+    
+    
+    
     private String password;
-
+    
+    
     @Nullable
     private com.commercetools.api.models.customer.AnonymousCartSignInMode activeCartSignInMode;
-
+    
+    
     @Nullable
     private Boolean updateProductData;
 
+    
     /**
      *  <p>Email address of the Customer treated as case-insensitive.</p>
      * @param email value to be set
      * @return Builder
      */
-
-    public MyCustomerSigninBuilder email(final String email) {
+    
+    public MyCustomerSigninBuilder email( final String email) {
         this.email = email;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Password of the Customer.</p>
      * @param password value to be set
      * @return Builder
      */
-
-    public MyCustomerSigninBuilder password(final String password) {
+    
+    public MyCustomerSigninBuilder password( final String password) {
         this.password = password;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <ul>
      *   <li>If <code>MergeWithExistingCustomerCart</code>, LineItems of the anonymous Cart are merged with the recently modified active Customer Cart.</li>
@@ -64,13 +81,15 @@ public class MyCustomerSigninBuilder implements Builder<MyCustomerSignin> {
      * @param activeCartSignInMode value to be set
      * @return Builder
      */
-
-    public MyCustomerSigninBuilder activeCartSignInMode(
-            @Nullable final com.commercetools.api.models.customer.AnonymousCartSignInMode activeCartSignInMode) {
+    
+    public MyCustomerSigninBuilder activeCartSignInMode(@Nullable final com.commercetools.api.models.customer.AnonymousCartSignInMode activeCartSignInMode) {
         this.activeCartSignInMode = activeCartSignInMode;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <ul>
      *   <li>If <code>true</code>, the LineItem Product data (<code>name</code>, <code>variant</code>, and <code>productType</code>) of the returned Cart is updated.</li>
@@ -79,30 +98,34 @@ public class MyCustomerSigninBuilder implements Builder<MyCustomerSignin> {
      * @param updateProductData value to be set
      * @return Builder
      */
-
+    
     public MyCustomerSigninBuilder updateProductData(@Nullable final Boolean updateProductData) {
         this.updateProductData = updateProductData;
         return this;
     }
+    
+    
 
     /**
      *  <p>Email address of the Customer treated as case-insensitive.</p>
      * @return email
      */
-
-    public String getEmail() {
+    
+    
+    public String getEmail(){
         return this.email;
     }
-
+    
     /**
      *  <p>Password of the Customer.</p>
      * @return password
      */
-
-    public String getPassword() {
+    
+    
+    public String getPassword(){
         return this.password;
     }
-
+    
     /**
      *  <ul>
      *   <li>If <code>MergeWithExistingCustomerCart</code>, LineItems of the anonymous Cart are merged with the recently modified active Customer Cart.</li>
@@ -110,12 +133,12 @@ public class MyCustomerSigninBuilder implements Builder<MyCustomerSignin> {
      *  </ul>
      * @return activeCartSignInMode
      */
-
+    
     @Nullable
-    public com.commercetools.api.models.customer.AnonymousCartSignInMode getActiveCartSignInMode() {
+    public com.commercetools.api.models.customer.AnonymousCartSignInMode getActiveCartSignInMode(){
         return this.activeCartSignInMode;
     }
-
+    
     /**
      *  <ul>
      *   <li>If <code>true</code>, the LineItem Product data (<code>name</code>, <code>variant</code>, and <code>productType</code>) of the returned Cart is updated.</li>
@@ -123,9 +146,9 @@ public class MyCustomerSigninBuilder implements Builder<MyCustomerSignin> {
      *  </ul>
      * @return updateProductData
      */
-
+    
     @Nullable
-    public Boolean getUpdateProductData() {
+    public Boolean getUpdateProductData(){
         return this.updateProductData;
     }
 
@@ -138,7 +161,7 @@ public class MyCustomerSigninBuilder implements Builder<MyCustomerSignin> {
         Objects.requireNonNull(password, MyCustomerSignin.class + ": password is missing");
         return new MyCustomerSigninImpl(email, password, activeCartSignInMode, updateProductData);
     }
-
+    
     /**
      * builds MyCustomerSignin without checking for non-null required values
      * @return MyCustomerSignin
@@ -149,7 +172,7 @@ public class MyCustomerSigninBuilder implements Builder<MyCustomerSignin> {
 
     /**
      * factory method for an instance of MyCustomerSigninBuilder
-     * @return builder
+     * @return builder 
      */
     public static MyCustomerSigninBuilder of() {
         return new MyCustomerSigninBuilder();

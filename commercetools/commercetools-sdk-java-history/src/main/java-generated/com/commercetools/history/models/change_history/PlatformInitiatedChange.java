@@ -1,33 +1,35 @@
-
 package com.commercetools.history.models.change_history;
-
-import java.util.Arrays;
-import java.util.Optional;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-
+import java.lang.String;
+import java.util.Arrays;
+import java.util.Optional;
 import io.vrap.rmf.base.client.JsonEnum;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
  * PlatformInitiatedChange
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public interface PlatformInitiatedChange extends JsonEnum {
 
+    
     PlatformInitiatedChange EXCLUDE_ALL = PlatformInitiatedChangeEnum.EXCLUDE_ALL;
-
+    
     PlatformInitiatedChange CHANGE_LINE_ITEM_NAME = PlatformInitiatedChangeEnum.CHANGE_LINE_ITEM_NAME;
-
+    
     PlatformInitiatedChange CHANGE_REVIEW_RATING_STATISTICS = PlatformInitiatedChangeEnum.CHANGE_REVIEW_RATING_STATISTICS;
-
+    
     PlatformInitiatedChange SET_APPLICATION_VERSION = PlatformInitiatedChangeEnum.SET_APPLICATION_VERSION;
-
+    
     PlatformInitiatedChange SET_IS_VALID = PlatformInitiatedChangeEnum.SET_IS_VALID;
-
+    
     PlatformInitiatedChange SET_VARIANT_AVAILABILITY = PlatformInitiatedChangeEnum.SET_VARIANT_AVAILABILITY;
-
+    
     /**
      * possible values of PlatformInitiatedChange
      */
@@ -36,27 +38,27 @@ public interface PlatformInitiatedChange extends JsonEnum {
          * excludeAll
          */
         EXCLUDE_ALL("excludeAll"),
-
+        
         /**
          * changeLineItemName
          */
         CHANGE_LINE_ITEM_NAME("changeLineItemName"),
-
+        
         /**
          * changeReviewRatingStatistics
          */
         CHANGE_REVIEW_RATING_STATISTICS("changeReviewRatingStatistics"),
-
+        
         /**
          * setApplicationVersion
          */
         SET_APPLICATION_VERSION("setApplicationVersion"),
-
+        
         /**
          * setIsValid
          */
         SET_IS_VALID("setIsValid"),
-
+        
         /**
          * setVariantAvailability
          */
@@ -113,7 +115,7 @@ public interface PlatformInitiatedChange extends JsonEnum {
             public String name() {
                 return value.toUpperCase();
             }
-
+            
             public String toString() {
                 return value;
             }
@@ -128,7 +130,7 @@ public interface PlatformInitiatedChange extends JsonEnum {
     public static Optional<PlatformInitiatedChange> findEnumViaJsonName(String jsonName) {
         return Arrays.stream(values()).filter(t -> t.getJsonName().equals(jsonName)).findFirst();
     }
-
+    
     /**
      * possible enum values
      * @return array of possible enum values
@@ -136,5 +138,5 @@ public interface PlatformInitiatedChange extends JsonEnum {
     public static PlatformInitiatedChange[] values() {
         return PlatformInitiatedChangeEnum.values();
     }
-
+    
 }

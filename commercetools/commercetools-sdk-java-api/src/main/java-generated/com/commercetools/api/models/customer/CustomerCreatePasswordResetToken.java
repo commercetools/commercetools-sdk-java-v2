@@ -1,17 +1,20 @@
-
 package com.commercetools.api.models.customer;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
 
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
+import com.commercetools.api.models.customer.CustomerCreatePasswordResetTokenImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * CustomerCreatePasswordResetToken
@@ -24,11 +27,15 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .email("{email}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = CustomerCreatePasswordResetTokenImpl.class)
-public interface CustomerCreatePasswordResetToken {
+public interface CustomerCreatePasswordResetToken  {
+
 
     /**
      *  <p>Email address of the Customer treated as case-insensitive.</p>
@@ -37,12 +44,11 @@ public interface CustomerCreatePasswordResetToken {
     @NotNull
     @JsonProperty("email")
     public String getEmail();
-
     /**
      *  <p>Validity period of the generated token in minutes.</p>
      * @return ttlMinutes
      */
-
+    
     @JsonProperty("ttlMinutes")
     public Long getTtlMinutes();
 
@@ -50,23 +56,26 @@ public interface CustomerCreatePasswordResetToken {
      *  <p>Email address of the Customer treated as case-insensitive.</p>
      * @param email value to be set
      */
-
+    
     public void setEmail(final String email);
-
+    
+    
     /**
      *  <p>Validity period of the generated token in minutes.</p>
      * @param ttlMinutes value to be set
      */
-
+    
     public void setTtlMinutes(final Long ttlMinutes);
+    
 
     /**
      * factory method
      * @return instance of CustomerCreatePasswordResetToken
      */
-    public static CustomerCreatePasswordResetToken of() {
+    public static CustomerCreatePasswordResetToken of(){
         return new CustomerCreatePasswordResetTokenImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy CustomerCreatePasswordResetToken
@@ -103,7 +112,7 @@ public interface CustomerCreatePasswordResetToken {
     public static CustomerCreatePasswordResetTokenBuilder builder() {
         return CustomerCreatePasswordResetTokenBuilder.of();
     }
-
+    
     /**
      * create builder for CustomerCreatePasswordResetToken instance
      * @param template instance with prefilled values for the builder
@@ -112,6 +121,7 @@ public interface CustomerCreatePasswordResetToken {
     public static CustomerCreatePasswordResetTokenBuilder builder(final CustomerCreatePasswordResetToken template) {
         return CustomerCreatePasswordResetTokenBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -122,7 +132,7 @@ public interface CustomerCreatePasswordResetToken {
     default <T> T withCustomerCreatePasswordResetToken(Function<CustomerCreatePasswordResetToken, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

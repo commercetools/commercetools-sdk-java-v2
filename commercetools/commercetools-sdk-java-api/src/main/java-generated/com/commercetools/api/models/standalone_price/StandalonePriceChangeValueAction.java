@@ -1,19 +1,21 @@
-
 package com.commercetools.api.models.standalone_price;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
 import com.commercetools.api.models.common.Money;
+import com.commercetools.api.models.standalone_price.StandalonePriceUpdateAction;
+import com.commercetools.api.models.standalone_price.StandalonePriceChangeValueActionImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Updating the value of a StandalonePrice produces the StandalonePriceValueChangedMessage.</p>
@@ -26,9 +28,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .value(valueBuilder -> valueBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = StandalonePriceChangeValueActionImpl.class)
 public interface StandalonePriceChangeValueAction extends StandalonePriceUpdateAction {
 
@@ -45,12 +50,11 @@ public interface StandalonePriceChangeValueAction extends StandalonePriceUpdateA
     @Valid
     @JsonProperty("value")
     public Money getValue();
-
     /**
      *  <p>If set to <code>true</code> the update action applies to the StagedStandalonePrice. If set to <code>false</code>, the update action applies to the current StandalonePrice.</p>
      * @return staged
      */
-
+    
     @JsonProperty("staged")
     public Boolean getStaged();
 
@@ -58,23 +62,26 @@ public interface StandalonePriceChangeValueAction extends StandalonePriceUpdateA
      *  <p>New value to set. Must not be empty.</p>
      * @param value value to be set
      */
-
+    
     public void setValue(final Money value);
-
+    
+    
     /**
      *  <p>If set to <code>true</code> the update action applies to the StagedStandalonePrice. If set to <code>false</code>, the update action applies to the current StandalonePrice.</p>
      * @param staged value to be set
      */
-
+    
     public void setStaged(final Boolean staged);
+    
 
     /**
      * factory method
      * @return instance of StandalonePriceChangeValueAction
      */
-    public static StandalonePriceChangeValueAction of() {
+    public static StandalonePriceChangeValueAction of(){
         return new StandalonePriceChangeValueActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy StandalonePriceChangeValueAction
@@ -111,7 +118,7 @@ public interface StandalonePriceChangeValueAction extends StandalonePriceUpdateA
     public static StandalonePriceChangeValueActionBuilder builder() {
         return StandalonePriceChangeValueActionBuilder.of();
     }
-
+    
     /**
      * create builder for StandalonePriceChangeValueAction instance
      * @param template instance with prefilled values for the builder
@@ -120,6 +127,7 @@ public interface StandalonePriceChangeValueAction extends StandalonePriceUpdateA
     public static StandalonePriceChangeValueActionBuilder builder(final StandalonePriceChangeValueAction template) {
         return StandalonePriceChangeValueActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -130,7 +138,7 @@ public interface StandalonePriceChangeValueAction extends StandalonePriceUpdateA
     default <T> T withStandalonePriceChangeValueAction(Function<StandalonePriceChangeValueAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

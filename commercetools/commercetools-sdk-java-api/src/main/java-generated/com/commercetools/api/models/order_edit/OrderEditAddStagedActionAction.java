@@ -1,19 +1,21 @@
-
 package com.commercetools.api.models.order_edit;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
 import com.commercetools.api.models.order.StagedOrderUpdateAction;
+import com.commercetools.api.models.order_edit.OrderEditUpdateAction;
+import com.commercetools.api.models.order_edit.OrderEditAddStagedActionActionImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * OrderEditAddStagedActionAction
@@ -26,9 +28,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .stagedAction(stagedActionBuilder -> stagedActionBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = OrderEditAddStagedActionActionImpl.class)
 public interface OrderEditAddStagedActionAction extends OrderEditUpdateAction {
 
@@ -50,16 +55,18 @@ public interface OrderEditAddStagedActionAction extends OrderEditUpdateAction {
      * set stagedAction
      * @param stagedAction value to be set
      */
-
+    
     public void setStagedAction(final StagedOrderUpdateAction stagedAction);
+    
 
     /**
      * factory method
      * @return instance of OrderEditAddStagedActionAction
      */
-    public static OrderEditAddStagedActionAction of() {
+    public static OrderEditAddStagedActionAction of(){
         return new OrderEditAddStagedActionActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy OrderEditAddStagedActionAction
@@ -83,8 +90,7 @@ public interface OrderEditAddStagedActionAction extends OrderEditUpdateAction {
             return null;
         }
         OrderEditAddStagedActionActionImpl instance = new OrderEditAddStagedActionActionImpl();
-        instance.setStagedAction(
-            com.commercetools.api.models.order.StagedOrderUpdateAction.deepCopy(template.getStagedAction()));
+        instance.setStagedAction(com.commercetools.api.models.order.StagedOrderUpdateAction.deepCopy(template.getStagedAction()));
         return instance;
     }
 
@@ -95,7 +101,7 @@ public interface OrderEditAddStagedActionAction extends OrderEditUpdateAction {
     public static OrderEditAddStagedActionActionBuilder builder() {
         return OrderEditAddStagedActionActionBuilder.of();
     }
-
+    
     /**
      * create builder for OrderEditAddStagedActionAction instance
      * @param template instance with prefilled values for the builder
@@ -104,6 +110,7 @@ public interface OrderEditAddStagedActionAction extends OrderEditUpdateAction {
     public static OrderEditAddStagedActionActionBuilder builder(final OrderEditAddStagedActionAction template) {
         return OrderEditAddStagedActionActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -114,7 +121,7 @@ public interface OrderEditAddStagedActionAction extends OrderEditUpdateAction {
     default <T> T withOrderEditAddStagedActionAction(Function<OrderEditAddStagedActionAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

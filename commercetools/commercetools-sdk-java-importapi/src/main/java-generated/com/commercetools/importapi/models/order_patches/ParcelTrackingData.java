@@ -1,19 +1,20 @@
-
 package com.commercetools.importapi.models.order_patches;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
 import com.commercetools.importapi.models.orders.TrackingData;
+import com.commercetools.importapi.models.order_patches.ParcelTrackingDataImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * ParcelTrackingData
@@ -26,11 +27,15 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .parcelId("{parcelId}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = ParcelTrackingDataImpl.class)
-public interface ParcelTrackingData {
+public interface ParcelTrackingData  {
+
 
     /**
      *
@@ -39,7 +44,6 @@ public interface ParcelTrackingData {
     @NotNull
     @JsonProperty("parcelId")
     public String getParcelId();
-
     /**
      *
      * @return trackingData
@@ -52,23 +56,26 @@ public interface ParcelTrackingData {
      * set parcelId
      * @param parcelId value to be set
      */
-
+    
     public void setParcelId(final String parcelId);
-
+    
+    
     /**
      * set trackingData
      * @param trackingData value to be set
      */
-
+    
     public void setTrackingData(final TrackingData trackingData);
+    
 
     /**
      * factory method
      * @return instance of ParcelTrackingData
      */
-    public static ParcelTrackingData of() {
+    public static ParcelTrackingData of(){
         return new ParcelTrackingDataImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy ParcelTrackingData
@@ -94,8 +101,7 @@ public interface ParcelTrackingData {
         }
         ParcelTrackingDataImpl instance = new ParcelTrackingDataImpl();
         instance.setParcelId(template.getParcelId());
-        instance.setTrackingData(
-            com.commercetools.importapi.models.orders.TrackingData.deepCopy(template.getTrackingData()));
+        instance.setTrackingData(com.commercetools.importapi.models.orders.TrackingData.deepCopy(template.getTrackingData()));
         return instance;
     }
 
@@ -106,7 +112,7 @@ public interface ParcelTrackingData {
     public static ParcelTrackingDataBuilder builder() {
         return ParcelTrackingDataBuilder.of();
     }
-
+    
     /**
      * create builder for ParcelTrackingData instance
      * @param template instance with prefilled values for the builder
@@ -115,6 +121,7 @@ public interface ParcelTrackingData {
     public static ParcelTrackingDataBuilder builder(final ParcelTrackingData template) {
         return ParcelTrackingDataBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -125,7 +132,7 @@ public interface ParcelTrackingData {
     default <T> T withParcelTrackingData(Function<ParcelTrackingData, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

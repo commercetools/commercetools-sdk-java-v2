@@ -1,11 +1,14 @@
-
 package com.commercetools.api.models.subscription;
 
+import com.commercetools.api.models.subscription.ChangeSubscription;
+import com.commercetools.api.models.subscription.DeliveryFormat;
+import com.commercetools.api.models.subscription.Destination;
+import com.commercetools.api.models.subscription.MessageSubscription;
+import com.commercetools.api.models.subscription.SubscriptionDraft;
+import javax.annotation.Nullable;
 import java.util.*;
 import java.util.function.Function;
-
-import javax.annotation.Nullable;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -19,22 +22,31 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .destination(destinationBuilder -> destinationBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class SubscriptionDraftBuilder implements Builder<SubscriptionDraft> {
 
+    
     @Nullable
     private java.util.List<com.commercetools.api.models.subscription.ChangeSubscription> changes;
-
+    
+    
+    
     private com.commercetools.api.models.subscription.Destination destination;
-
+    
+    
     @Nullable
     private String key;
-
+    
+    
     @Nullable
     private java.util.List<com.commercetools.api.models.subscription.MessageSubscription> messages;
-
+    
+    
     @Nullable
     private com.commercetools.api.models.subscription.DeliveryFormat format;
 
@@ -43,288 +55,282 @@ public class SubscriptionDraftBuilder implements Builder<SubscriptionDraft> {
      * @param changes value to be set
      * @return Builder
      */
-
-    public SubscriptionDraftBuilder changes(
-            @Nullable final com.commercetools.api.models.subscription.ChangeSubscription... changes) {
+    
+    public SubscriptionDraftBuilder changes(@Nullable final com.commercetools.api.models.subscription.ChangeSubscription ...changes) {
         this.changes = new ArrayList<>(Arrays.asList(changes));
         return this;
     }
-
+    
     /**
      *  <p>Change notifications to be subscribed to.</p>
      * @param changes value to be set
      * @return Builder
      */
-
-    public SubscriptionDraftBuilder changes(
-            @Nullable final java.util.List<com.commercetools.api.models.subscription.ChangeSubscription> changes) {
+    
+    public SubscriptionDraftBuilder changes(@Nullable final java.util.List<com.commercetools.api.models.subscription.ChangeSubscription> changes) {
         this.changes = changes;
         return this;
     }
-
+    
     /**
      *  <p>Change notifications to be subscribed to.</p>
      * @param changes value to be set
      * @return Builder
      */
-
-    public SubscriptionDraftBuilder plusChanges(
-            @Nullable final com.commercetools.api.models.subscription.ChangeSubscription... changes) {
+    
+    public SubscriptionDraftBuilder plusChanges(@Nullable final com.commercetools.api.models.subscription.ChangeSubscription ...changes) {
         if (this.changes == null) {
             this.changes = new ArrayList<>();
         }
         this.changes.addAll(Arrays.asList(changes));
         return this;
     }
-
+    
+    
+    
     /**
      *  <p>Change notifications to be subscribed to.</p>
      * @param builder function to build the changes value
      * @return Builder
      */
-
-    public SubscriptionDraftBuilder plusChanges(
-            Function<com.commercetools.api.models.subscription.ChangeSubscriptionBuilder, com.commercetools.api.models.subscription.ChangeSubscriptionBuilder> builder) {
+    
+    public SubscriptionDraftBuilder plusChanges(Function<com.commercetools.api.models.subscription.ChangeSubscriptionBuilder, com.commercetools.api.models.subscription.ChangeSubscriptionBuilder> builder) {
         if (this.changes == null) {
             this.changes = new ArrayList<>();
         }
-        this.changes
-                .add(builder.apply(com.commercetools.api.models.subscription.ChangeSubscriptionBuilder.of()).build());
+        this.changes.add(builder.apply(com.commercetools.api.models.subscription.ChangeSubscriptionBuilder.of()).build());
         return this;
     }
-
+    
     /**
      *  <p>Change notifications to be subscribed to.</p>
      * @param builder function to build the changes value
      * @return Builder
      */
-
-    public SubscriptionDraftBuilder withChanges(
-            Function<com.commercetools.api.models.subscription.ChangeSubscriptionBuilder, com.commercetools.api.models.subscription.ChangeSubscriptionBuilder> builder) {
+    
+    public SubscriptionDraftBuilder withChanges(Function<com.commercetools.api.models.subscription.ChangeSubscriptionBuilder, com.commercetools.api.models.subscription.ChangeSubscriptionBuilder> builder) {
         this.changes = new ArrayList<>();
-        this.changes
-                .add(builder.apply(com.commercetools.api.models.subscription.ChangeSubscriptionBuilder.of()).build());
+        this.changes.add(builder.apply(com.commercetools.api.models.subscription.ChangeSubscriptionBuilder.of()).build());
         return this;
     }
-
+    
     /**
      *  <p>Change notifications to be subscribed to.</p>
      * @param builder function to build the changes value
      * @return Builder
      */
-
-    public SubscriptionDraftBuilder addChanges(
-            Function<com.commercetools.api.models.subscription.ChangeSubscriptionBuilder, com.commercetools.api.models.subscription.ChangeSubscription> builder) {
+    
+    public SubscriptionDraftBuilder addChanges(Function<com.commercetools.api.models.subscription.ChangeSubscriptionBuilder, com.commercetools.api.models.subscription.ChangeSubscription> builder) {
         return plusChanges(builder.apply(com.commercetools.api.models.subscription.ChangeSubscriptionBuilder.of()));
     }
-
+    
     /**
      *  <p>Change notifications to be subscribed to.</p>
      * @param builder function to build the changes value
      * @return Builder
      */
-
-    public SubscriptionDraftBuilder setChanges(
-            Function<com.commercetools.api.models.subscription.ChangeSubscriptionBuilder, com.commercetools.api.models.subscription.ChangeSubscription> builder) {
+    
+    public SubscriptionDraftBuilder setChanges(Function<com.commercetools.api.models.subscription.ChangeSubscriptionBuilder, com.commercetools.api.models.subscription.ChangeSubscription> builder) {
         return changes(builder.apply(com.commercetools.api.models.subscription.ChangeSubscriptionBuilder.of()));
     }
-
+                    
+    
+    
     /**
      *  <p>Messaging service to which the messages are sent.</p>
      * @param destination value to be set
      * @return Builder
      */
-
-    public SubscriptionDraftBuilder destination(
-            final com.commercetools.api.models.subscription.Destination destination) {
+    
+    public SubscriptionDraftBuilder destination( final com.commercetools.api.models.subscription.Destination destination) {
         this.destination = destination;
         return this;
     }
-
+    
+    
     /**
      *  <p>Messaging service to which the messages are sent.</p>
      * @param builder function to build the destination value
      * @return Builder
      */
-
-    public SubscriptionDraftBuilder destination(
-            Function<com.commercetools.api.models.subscription.DestinationBuilder, Builder<? extends com.commercetools.api.models.subscription.Destination>> builder) {
+    
+    public SubscriptionDraftBuilder destination(Function<com.commercetools.api.models.subscription.DestinationBuilder, Builder<? extends com.commercetools.api.models.subscription.Destination>> builder) {
         this.destination = builder.apply(com.commercetools.api.models.subscription.DestinationBuilder.of()).build();
         return this;
     }
-
+                    
+    
+    
     /**
      *  <p>User-defined unique identifier for the Subscription.</p>
      * @param key value to be set
      * @return Builder
      */
-
+    
     public SubscriptionDraftBuilder key(@Nullable final String key) {
         this.key = key;
         return this;
     }
-
+    
+    
+    
     /**
      *  <p>Messages to be subscribed to.</p>
      * @param messages value to be set
      * @return Builder
      */
-
-    public SubscriptionDraftBuilder messages(
-            @Nullable final com.commercetools.api.models.subscription.MessageSubscription... messages) {
+    
+    public SubscriptionDraftBuilder messages(@Nullable final com.commercetools.api.models.subscription.MessageSubscription ...messages) {
         this.messages = new ArrayList<>(Arrays.asList(messages));
         return this;
     }
-
+    
     /**
      *  <p>Messages to be subscribed to.</p>
      * @param messages value to be set
      * @return Builder
      */
-
-    public SubscriptionDraftBuilder messages(
-            @Nullable final java.util.List<com.commercetools.api.models.subscription.MessageSubscription> messages) {
+    
+    public SubscriptionDraftBuilder messages(@Nullable final java.util.List<com.commercetools.api.models.subscription.MessageSubscription> messages) {
         this.messages = messages;
         return this;
     }
-
+    
     /**
      *  <p>Messages to be subscribed to.</p>
      * @param messages value to be set
      * @return Builder
      */
-
-    public SubscriptionDraftBuilder plusMessages(
-            @Nullable final com.commercetools.api.models.subscription.MessageSubscription... messages) {
+    
+    public SubscriptionDraftBuilder plusMessages(@Nullable final com.commercetools.api.models.subscription.MessageSubscription ...messages) {
         if (this.messages == null) {
             this.messages = new ArrayList<>();
         }
         this.messages.addAll(Arrays.asList(messages));
         return this;
     }
-
+    
+    
+    
     /**
      *  <p>Messages to be subscribed to.</p>
      * @param builder function to build the messages value
      * @return Builder
      */
-
-    public SubscriptionDraftBuilder plusMessages(
-            Function<com.commercetools.api.models.subscription.MessageSubscriptionBuilder, com.commercetools.api.models.subscription.MessageSubscriptionBuilder> builder) {
+    
+    public SubscriptionDraftBuilder plusMessages(Function<com.commercetools.api.models.subscription.MessageSubscriptionBuilder, com.commercetools.api.models.subscription.MessageSubscriptionBuilder> builder) {
         if (this.messages == null) {
             this.messages = new ArrayList<>();
         }
-        this.messages
-                .add(builder.apply(com.commercetools.api.models.subscription.MessageSubscriptionBuilder.of()).build());
+        this.messages.add(builder.apply(com.commercetools.api.models.subscription.MessageSubscriptionBuilder.of()).build());
         return this;
     }
-
+    
     /**
      *  <p>Messages to be subscribed to.</p>
      * @param builder function to build the messages value
      * @return Builder
      */
-
-    public SubscriptionDraftBuilder withMessages(
-            Function<com.commercetools.api.models.subscription.MessageSubscriptionBuilder, com.commercetools.api.models.subscription.MessageSubscriptionBuilder> builder) {
+    
+    public SubscriptionDraftBuilder withMessages(Function<com.commercetools.api.models.subscription.MessageSubscriptionBuilder, com.commercetools.api.models.subscription.MessageSubscriptionBuilder> builder) {
         this.messages = new ArrayList<>();
-        this.messages
-                .add(builder.apply(com.commercetools.api.models.subscription.MessageSubscriptionBuilder.of()).build());
+        this.messages.add(builder.apply(com.commercetools.api.models.subscription.MessageSubscriptionBuilder.of()).build());
         return this;
     }
-
+    
     /**
      *  <p>Messages to be subscribed to.</p>
      * @param builder function to build the messages value
      * @return Builder
      */
-
-    public SubscriptionDraftBuilder addMessages(
-            Function<com.commercetools.api.models.subscription.MessageSubscriptionBuilder, com.commercetools.api.models.subscription.MessageSubscription> builder) {
+    
+    public SubscriptionDraftBuilder addMessages(Function<com.commercetools.api.models.subscription.MessageSubscriptionBuilder, com.commercetools.api.models.subscription.MessageSubscription> builder) {
         return plusMessages(builder.apply(com.commercetools.api.models.subscription.MessageSubscriptionBuilder.of()));
     }
-
+    
     /**
      *  <p>Messages to be subscribed to.</p>
      * @param builder function to build the messages value
      * @return Builder
      */
-
-    public SubscriptionDraftBuilder setMessages(
-            Function<com.commercetools.api.models.subscription.MessageSubscriptionBuilder, com.commercetools.api.models.subscription.MessageSubscription> builder) {
+    
+    public SubscriptionDraftBuilder setMessages(Function<com.commercetools.api.models.subscription.MessageSubscriptionBuilder, com.commercetools.api.models.subscription.MessageSubscription> builder) {
         return messages(builder.apply(com.commercetools.api.models.subscription.MessageSubscriptionBuilder.of()));
     }
-
+                    
+    
+    
     /**
      *  <p>Format in which the payload is delivered. When not provided, the PlatformFormat is selected by default.</p>
      * @param format value to be set
      * @return Builder
      */
-
-    public SubscriptionDraftBuilder format(
-            @Nullable final com.commercetools.api.models.subscription.DeliveryFormat format) {
+    
+    public SubscriptionDraftBuilder format(@Nullable final com.commercetools.api.models.subscription.DeliveryFormat format) {
         this.format = format;
         return this;
     }
-
+    
+    
     /**
      *  <p>Format in which the payload is delivered. When not provided, the PlatformFormat is selected by default.</p>
      * @param builder function to build the format value
      * @return Builder
      */
-
-    public SubscriptionDraftBuilder format(
-            Function<com.commercetools.api.models.subscription.DeliveryFormatBuilder, Builder<? extends com.commercetools.api.models.subscription.DeliveryFormat>> builder) {
+    
+    public SubscriptionDraftBuilder format(Function<com.commercetools.api.models.subscription.DeliveryFormatBuilder, Builder<? extends com.commercetools.api.models.subscription.DeliveryFormat>> builder) {
         this.format = builder.apply(com.commercetools.api.models.subscription.DeliveryFormatBuilder.of()).build();
         return this;
     }
+                    
 
     /**
      *  <p>Change notifications to be subscribed to.</p>
      * @return changes
      */
-
+    
     @Nullable
-    public java.util.List<com.commercetools.api.models.subscription.ChangeSubscription> getChanges() {
+    public java.util.List<com.commercetools.api.models.subscription.ChangeSubscription> getChanges(){
         return this.changes;
     }
-
+    
     /**
      *  <p>Messaging service to which the messages are sent.</p>
      * @return destination
      */
-
-    public com.commercetools.api.models.subscription.Destination getDestination() {
+    
+    
+    public com.commercetools.api.models.subscription.Destination getDestination(){
         return this.destination;
     }
-
+    
     /**
      *  <p>User-defined unique identifier for the Subscription.</p>
      * @return key
      */
-
+    
     @Nullable
-    public String getKey() {
+    public String getKey(){
         return this.key;
     }
-
+    
     /**
      *  <p>Messages to be subscribed to.</p>
      * @return messages
      */
-
+    
     @Nullable
-    public java.util.List<com.commercetools.api.models.subscription.MessageSubscription> getMessages() {
+    public java.util.List<com.commercetools.api.models.subscription.MessageSubscription> getMessages(){
         return this.messages;
     }
-
+    
     /**
      *  <p>Format in which the payload is delivered. When not provided, the PlatformFormat is selected by default.</p>
      * @return format
      */
-
+    
     @Nullable
-    public com.commercetools.api.models.subscription.DeliveryFormat getFormat() {
+    public com.commercetools.api.models.subscription.DeliveryFormat getFormat(){
         return this.format;
     }
 
@@ -336,7 +342,7 @@ public class SubscriptionDraftBuilder implements Builder<SubscriptionDraft> {
         Objects.requireNonNull(destination, SubscriptionDraft.class + ": destination is missing");
         return new SubscriptionDraftImpl(changes, destination, key, messages, format);
     }
-
+    
     /**
      * builds SubscriptionDraft without checking for non-null required values
      * @return SubscriptionDraft
@@ -347,7 +353,7 @@ public class SubscriptionDraftBuilder implements Builder<SubscriptionDraft> {
 
     /**
      * factory method for an instance of SubscriptionDraftBuilder
-     * @return builder
+     * @return builder 
      */
     public static SubscriptionDraftBuilder of() {
         return new SubscriptionDraftBuilder();

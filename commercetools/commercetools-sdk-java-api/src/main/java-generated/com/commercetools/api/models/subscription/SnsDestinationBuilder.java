@@ -1,10 +1,12 @@
-
 package com.commercetools.api.models.subscription;
 
-import java.util.*;
-
+import com.commercetools.api.models.subscription.AwsAuthenticationMode;
+import com.commercetools.api.models.subscription.Destination;
+import com.commercetools.api.models.subscription.SnsDestination;
 import javax.annotation.Nullable;
-
+import java.util.*;
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -18,103 +20,123 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .topicArn("{topicArn}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class SnsDestinationBuilder implements Builder<SnsDestination> {
 
+    
     @Nullable
     private String accessKey;
-
+    
+    
     @Nullable
     private String accessSecret;
-
+    
+    
+    
     private String topicArn;
-
+    
+    
     @Nullable
     private com.commercetools.api.models.subscription.AwsAuthenticationMode authenticationMode;
 
+    
     /**
      *  <p>Only present if <code>authenticationMode</code> is set to <code>Credentials</code>.</p>
      * @param accessKey value to be set
      * @return Builder
      */
-
+    
     public SnsDestinationBuilder accessKey(@Nullable final String accessKey) {
         this.accessKey = accessKey;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Only present if <code>authenticationMode</code> is set to <code>Credentials</code>.</p>
      * @param accessSecret value to be set
      * @return Builder
      */
-
+    
     public SnsDestinationBuilder accessSecret(@Nullable final String accessSecret) {
         this.accessSecret = accessSecret;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Amazon Resource Name (ARN) of the topic.</p>
      * @param topicArn value to be set
      * @return Builder
      */
-
-    public SnsDestinationBuilder topicArn(final String topicArn) {
+    
+    public SnsDestinationBuilder topicArn( final String topicArn) {
         this.topicArn = topicArn;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Defines the method of authentication for the SNS topic.</p>
      * @param authenticationMode value to be set
      * @return Builder
      */
-
-    public SnsDestinationBuilder authenticationMode(
-            @Nullable final com.commercetools.api.models.subscription.AwsAuthenticationMode authenticationMode) {
+    
+    public SnsDestinationBuilder authenticationMode(@Nullable final com.commercetools.api.models.subscription.AwsAuthenticationMode authenticationMode) {
         this.authenticationMode = authenticationMode;
         return this;
     }
+    
+    
 
     /**
      *  <p>Only present if <code>authenticationMode</code> is set to <code>Credentials</code>.</p>
      * @return accessKey
      */
-
+    
     @Nullable
-    public String getAccessKey() {
+    public String getAccessKey(){
         return this.accessKey;
     }
-
+    
     /**
      *  <p>Only present if <code>authenticationMode</code> is set to <code>Credentials</code>.</p>
      * @return accessSecret
      */
-
+    
     @Nullable
-    public String getAccessSecret() {
+    public String getAccessSecret(){
         return this.accessSecret;
     }
-
+    
     /**
      *  <p>Amazon Resource Name (ARN) of the topic.</p>
      * @return topicArn
      */
-
-    public String getTopicArn() {
+    
+    
+    public String getTopicArn(){
         return this.topicArn;
     }
-
+    
     /**
      *  <p>Defines the method of authentication for the SNS topic.</p>
      * @return authenticationMode
      */
-
+    
     @Nullable
-    public com.commercetools.api.models.subscription.AwsAuthenticationMode getAuthenticationMode() {
+    public com.commercetools.api.models.subscription.AwsAuthenticationMode getAuthenticationMode(){
         return this.authenticationMode;
     }
 
@@ -126,7 +148,7 @@ public class SnsDestinationBuilder implements Builder<SnsDestination> {
         Objects.requireNonNull(topicArn, SnsDestination.class + ": topicArn is missing");
         return new SnsDestinationImpl(accessKey, accessSecret, topicArn, authenticationMode);
     }
-
+    
     /**
      * builds SnsDestination without checking for non-null required values
      * @return SnsDestination
@@ -137,7 +159,7 @@ public class SnsDestinationBuilder implements Builder<SnsDestination> {
 
     /**
      * factory method for an instance of SnsDestinationBuilder
-     * @return builder
+     * @return builder 
      */
     public static SnsDestinationBuilder of() {
         return new SnsDestinationBuilder();

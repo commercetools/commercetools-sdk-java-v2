@@ -1,18 +1,21 @@
-
 package com.commercetools.api.models.customer;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-
+import com.commercetools.api.models.customer.CustomerUpdateAction;
 import com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifier;
+import com.commercetools.api.models.customer.CustomerSetCustomerGroupActionImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Setting the Customer Group of the Customer produces the CustomerGroupSet Message.</p>
@@ -24,9 +27,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     CustomerSetCustomerGroupAction customerSetCustomerGroupAction = CustomerSetCustomerGroupAction.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = CustomerSetCustomerGroupActionImpl.class)
 public interface CustomerSetCustomerGroupAction extends CustomerUpdateAction {
 
@@ -47,16 +53,18 @@ public interface CustomerSetCustomerGroupAction extends CustomerUpdateAction {
      *  <p>Value to set. If empty, any existing value is removed.</p>
      * @param customerGroup value to be set
      */
-
+    
     public void setCustomerGroup(final CustomerGroupResourceIdentifier customerGroup);
+    
 
     /**
      * factory method
      * @return instance of CustomerSetCustomerGroupAction
      */
-    public static CustomerSetCustomerGroupAction of() {
+    public static CustomerSetCustomerGroupAction of(){
         return new CustomerSetCustomerGroupActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy CustomerSetCustomerGroupAction
@@ -80,8 +88,7 @@ public interface CustomerSetCustomerGroupAction extends CustomerUpdateAction {
             return null;
         }
         CustomerSetCustomerGroupActionImpl instance = new CustomerSetCustomerGroupActionImpl();
-        instance.setCustomerGroup(com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifier
-                .deepCopy(template.getCustomerGroup()));
+        instance.setCustomerGroup(com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifier.deepCopy(template.getCustomerGroup()));
         return instance;
     }
 
@@ -92,7 +99,7 @@ public interface CustomerSetCustomerGroupAction extends CustomerUpdateAction {
     public static CustomerSetCustomerGroupActionBuilder builder() {
         return CustomerSetCustomerGroupActionBuilder.of();
     }
-
+    
     /**
      * create builder for CustomerSetCustomerGroupAction instance
      * @param template instance with prefilled values for the builder
@@ -101,6 +108,7 @@ public interface CustomerSetCustomerGroupAction extends CustomerUpdateAction {
     public static CustomerSetCustomerGroupActionBuilder builder(final CustomerSetCustomerGroupAction template) {
         return CustomerSetCustomerGroupActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -111,7 +119,7 @@ public interface CustomerSetCustomerGroupAction extends CustomerUpdateAction {
     default <T> T withCustomerSetCustomerGroupAction(Function<CustomerSetCustomerGroupAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

@@ -1,10 +1,11 @@
-
 package com.commercetools.api.models.error;
 
-import java.util.*;
-
+import com.commercetools.api.models.error.GraphQLErrorObject;
+import com.commercetools.api.models.error.GraphQLConcurrentModificationError;
 import javax.annotation.Nullable;
-
+import java.util.*;
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -17,13 +18,19 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     GraphQLConcurrentModificationError graphQLConcurrentModificationError = GraphQLConcurrentModificationError.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class GraphQLConcurrentModificationErrorBuilder implements Builder<GraphQLConcurrentModificationError> {
 
+    
+    
     private Map<String, java.lang.Object> values = new HashMap<>();
-
+    
+    
     @Nullable
     private Long currentVersion;
 
@@ -32,19 +39,19 @@ public class GraphQLConcurrentModificationErrorBuilder implements Builder<GraphQ
      * @param values properties to be set
      * @return Builder
      */
-
-    public GraphQLConcurrentModificationErrorBuilder values(final Map<String, java.lang.Object> values) {
+    
+    public GraphQLConcurrentModificationErrorBuilder values( final Map<String, java.lang.Object> values){
         this.values = values;
         return this;
     }
-
+    
     /**
      *  <p>Error-specific additional fields.</p>
      * @param key property name
      * @param value property value
      * @return Builder
      */
-
+    
     public GraphQLConcurrentModificationErrorBuilder addValue(final String key, final java.lang.Object value) {
         if (this.values == null) {
             values = new HashMap<>();
@@ -52,34 +59,39 @@ public class GraphQLConcurrentModificationErrorBuilder implements Builder<GraphQ
         values.put(key, value);
         return this;
     }
-
+    
+    
+    
     /**
      *  <p>Current version of the resource.</p>
      * @param currentVersion value to be set
      * @return Builder
      */
-
+    
     public GraphQLConcurrentModificationErrorBuilder currentVersion(@Nullable final Long currentVersion) {
         this.currentVersion = currentVersion;
         return this;
     }
+    
+    
 
     /**
      *  <p>Error-specific additional fields.</p>
      * @return pattern properties
      */
-
-    public Map<String, java.lang.Object> getValues() {
+    
+    
+    public Map<String, java.lang.Object> getValues(){
         return this.values;
     }
-
+    
     /**
      *  <p>Current version of the resource.</p>
      * @return currentVersion
      */
-
+    
     @Nullable
-    public Long getCurrentVersion() {
+    public Long getCurrentVersion(){
         return this.currentVersion;
     }
 
@@ -90,7 +102,7 @@ public class GraphQLConcurrentModificationErrorBuilder implements Builder<GraphQ
     public GraphQLConcurrentModificationError build() {
         return new GraphQLConcurrentModificationErrorImpl(values, currentVersion);
     }
-
+    
     /**
      * builds GraphQLConcurrentModificationError without checking for non-null required values
      * @return GraphQLConcurrentModificationError
@@ -101,7 +113,7 @@ public class GraphQLConcurrentModificationErrorBuilder implements Builder<GraphQ
 
     /**
      * factory method for an instance of GraphQLConcurrentModificationErrorBuilder
-     * @return builder
+     * @return builder 
      */
     public static GraphQLConcurrentModificationErrorBuilder of() {
         return new GraphQLConcurrentModificationErrorBuilder();

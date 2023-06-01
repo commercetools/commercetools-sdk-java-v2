@@ -1,27 +1,36 @@
-
 package com.commercetools.api.models.staged_quote;
 
-import java.time.*;
-import java.util.*;
-
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
-
-import io.vrap.rmf.base.client.ModelBase;
+import com.commercetools.api.models.staged_quote.StagedQuoteUpdateAction;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.ModelBase;
+import javax.validation.Valid;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.annotation.*;
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
  * StagedQuoteSetValidToAction
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class StagedQuoteSetValidToActionImpl implements StagedQuoteSetValidToAction, ModelBase {
 
+    
     private String action;
-
+    
+    
     private java.time.ZonedDateTime validTo;
 
     /**
@@ -30,52 +39,56 @@ public class StagedQuoteSetValidToActionImpl implements StagedQuoteSetValidToAct
     @JsonCreator
     StagedQuoteSetValidToActionImpl(@JsonProperty("validTo") final java.time.ZonedDateTime validTo) {
         this.validTo = validTo;
-        this.action = SET_VALID_TO;
+        this.action =  SET_VALID_TO;
     }
-
     /**
      * create empty instance
      */
     public StagedQuoteSetValidToActionImpl() {
-        this.action = SET_VALID_TO;
+        this.action =  SET_VALID_TO;
     }
 
     /**
      *
      */
-
-    public String getAction() {
+    
+    public String getAction(){
         return this.action;
     }
-
+    
     /**
      *  <p>If <code>validTo</code> is absent or <code>null</code>, this field will be removed if it exists.</p>
      */
-
-    public java.time.ZonedDateTime getValidTo() {
+    
+    public java.time.ZonedDateTime getValidTo(){
         return this.validTo;
     }
 
-    public void setValidTo(final java.time.ZonedDateTime validTo) {
+    
+    public void setValidTo(final java.time.ZonedDateTime validTo){
         this.validTo = validTo;
     }
 
     @Override
     public boolean equals(Object o) {
-        if (this == o)
-            return true;
-
-        if (o == null || getClass() != o.getClass())
-            return false;
-
+        if (this == o) return true;
+    
+        if (o == null || getClass() != o.getClass()) return false;
+    
         StagedQuoteSetValidToActionImpl that = (StagedQuoteSetValidToActionImpl) o;
-
-        return new EqualsBuilder().append(action, that.action).append(validTo, that.validTo).isEquals();
+    
+        return new EqualsBuilder()
+                .append(action, that.action)
+                .append(validTo, that.validTo)
+                .isEquals();
     }
-
+    
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(action).append(validTo).toHashCode();
+        return new HashCodeBuilder(17, 37)
+            .append(action)
+            .append(validTo)
+            .toHashCode();
     }
 
 }

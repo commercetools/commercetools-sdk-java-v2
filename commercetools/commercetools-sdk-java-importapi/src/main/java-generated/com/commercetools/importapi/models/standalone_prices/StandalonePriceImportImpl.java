@@ -1,61 +1,76 @@
-
 package com.commercetools.importapi.models.standalone_prices;
 
-import java.time.*;
-import java.util.*;
-
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
-
-import io.vrap.rmf.base.client.ModelBase;
+import com.commercetools.importapi.models.common.ChannelKeyReference;
+import com.commercetools.importapi.models.common.CustomerGroupKeyReference;
+import com.commercetools.importapi.models.common.DiscountedPrice;
+import com.commercetools.importapi.models.common.ImportResource;
+import com.commercetools.importapi.models.common.PriceTier;
+import com.commercetools.importapi.models.common.TypedMoney;
+import com.commercetools.importapi.models.customfields.Custom;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.ModelBase;
+import javax.validation.Valid;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.annotation.*;
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
  *  <p>The data representation for a Standalone Price to be imported that is persisted as a Standalone Price in the Project.</p>
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class StandalonePriceImportImpl implements StandalonePriceImport, ModelBase {
 
+    
     private String key;
-
+    
+    
     private String sku;
-
+    
+    
     private com.commercetools.importapi.models.common.TypedMoney value;
-
+    
+    
     private String country;
-
+    
+    
     private com.commercetools.importapi.models.common.CustomerGroupKeyReference customerGroup;
-
+    
+    
     private com.commercetools.importapi.models.common.ChannelKeyReference channel;
-
+    
+    
     private java.time.ZonedDateTime validFrom;
-
+    
+    
     private java.time.ZonedDateTime validUntil;
-
+    
+    
     private java.util.List<com.commercetools.importapi.models.common.PriceTier> tiers;
-
+    
+    
     private com.commercetools.importapi.models.common.DiscountedPrice discounted;
-
+    
+    
     private com.commercetools.importapi.models.customfields.Custom custom;
 
     /**
      * create instance with all properties
      */
     @JsonCreator
-    StandalonePriceImportImpl(@JsonProperty("key") final String key, @JsonProperty("sku") final String sku,
-            @JsonProperty("value") final com.commercetools.importapi.models.common.TypedMoney value,
-            @JsonProperty("country") final String country,
-            @JsonProperty("customerGroup") final com.commercetools.importapi.models.common.CustomerGroupKeyReference customerGroup,
-            @JsonProperty("channel") final com.commercetools.importapi.models.common.ChannelKeyReference channel,
-            @JsonProperty("validFrom") final java.time.ZonedDateTime validFrom,
-            @JsonProperty("validUntil") final java.time.ZonedDateTime validUntil,
-            @JsonProperty("tiers") final java.util.List<com.commercetools.importapi.models.common.PriceTier> tiers,
-            @JsonProperty("discounted") final com.commercetools.importapi.models.common.DiscountedPrice discounted,
-            @JsonProperty("custom") final com.commercetools.importapi.models.customfields.Custom custom) {
+    StandalonePriceImportImpl(@JsonProperty("key") final String key, @JsonProperty("sku") final String sku, @JsonProperty("value") final com.commercetools.importapi.models.common.TypedMoney value, @JsonProperty("country") final String country, @JsonProperty("customerGroup") final com.commercetools.importapi.models.common.CustomerGroupKeyReference customerGroup, @JsonProperty("channel") final com.commercetools.importapi.models.common.ChannelKeyReference channel, @JsonProperty("validFrom") final java.time.ZonedDateTime validFrom, @JsonProperty("validUntil") final java.time.ZonedDateTime validUntil, @JsonProperty("tiers") final java.util.List<com.commercetools.importapi.models.common.PriceTier> tiers, @JsonProperty("discounted") final com.commercetools.importapi.models.common.DiscountedPrice discounted, @JsonProperty("custom") final com.commercetools.importapi.models.customfields.Custom custom) {
         this.key = key;
         this.sku = sku;
         this.value = value;
@@ -68,7 +83,6 @@ public class StandalonePriceImportImpl implements StandalonePriceImport, ModelBa
         this.discounted = discounted;
         this.custom = custom;
     }
-
     /**
      * create empty instance
      */
@@ -78,151 +92,161 @@ public class StandalonePriceImportImpl implements StandalonePriceImport, ModelBa
     /**
      *  <p>User-defined unique identifier for the Standalone Price.</p>
      */
-
-    public String getKey() {
+    
+    public String getKey(){
         return this.key;
     }
-
+    
     /**
      *  <p>Identifies the ProductVariant to which this Standalone Price is associated. This value is not validated to exist in Product Variants.</p>
      */
-
-    public String getSku() {
+    
+    public String getSku(){
         return this.sku;
     }
-
+    
     /**
      *  <p>Sets the money value of this Price.</p>
      */
-
-    public com.commercetools.importapi.models.common.TypedMoney getValue() {
+    
+    public com.commercetools.importapi.models.common.TypedMoney getValue(){
         return this.value;
     }
-
+    
     /**
      *  <p>Sets the country for which this Price is valid.</p>
      */
-
-    public String getCountry() {
+    
+    public String getCountry(){
         return this.country;
     }
-
+    
     /**
      *  <p>Sets the CustomerGroup for which this Price is valid.</p>
      */
-
-    public com.commercetools.importapi.models.common.CustomerGroupKeyReference getCustomerGroup() {
+    
+    public com.commercetools.importapi.models.common.CustomerGroupKeyReference getCustomerGroup(){
         return this.customerGroup;
     }
-
+    
     /**
      *  <p>Sets the product distribution Channel for which this Price is valid</p>
      */
-
-    public com.commercetools.importapi.models.common.ChannelKeyReference getChannel() {
+    
+    public com.commercetools.importapi.models.common.ChannelKeyReference getChannel(){
         return this.channel;
     }
-
+    
     /**
      *  <p>Sets the date from which the Price is valid.</p>
      */
-
-    public java.time.ZonedDateTime getValidFrom() {
+    
+    public java.time.ZonedDateTime getValidFrom(){
         return this.validFrom;
     }
-
+    
     /**
      *  <p>Sets the date until the Price is valid.</p>
      */
-
-    public java.time.ZonedDateTime getValidUntil() {
+    
+    public java.time.ZonedDateTime getValidUntil(){
         return this.validUntil;
     }
-
+    
     /**
      *  <p>Sets price tiers.</p>
      */
-
-    public java.util.List<com.commercetools.importapi.models.common.PriceTier> getTiers() {
+    
+    public java.util.List<com.commercetools.importapi.models.common.PriceTier> getTiers(){
         return this.tiers;
     }
-
+    
     /**
      *  <p>Sets a discounted price for this Price that is different from the base price with value.</p>
      */
-
-    public com.commercetools.importapi.models.common.DiscountedPrice getDiscounted() {
+    
+    public com.commercetools.importapi.models.common.DiscountedPrice getDiscounted(){
         return this.discounted;
     }
-
+    
     /**
      *  <p>Custom Fields for the StandalonePrice.</p>
      */
-
-    public com.commercetools.importapi.models.customfields.Custom getCustom() {
+    
+    public com.commercetools.importapi.models.customfields.Custom getCustom(){
         return this.custom;
     }
 
-    public void setKey(final String key) {
+    
+    public void setKey(final String key){
         this.key = key;
     }
-
-    public void setSku(final String sku) {
+    
+    
+    public void setSku(final String sku){
         this.sku = sku;
     }
-
-    public void setValue(final com.commercetools.importapi.models.common.TypedMoney value) {
+    
+    
+    public void setValue(final com.commercetools.importapi.models.common.TypedMoney value){
         this.value = value;
     }
-
-    public void setCountry(final String country) {
+    
+    
+    public void setCountry(final String country){
         this.country = country;
     }
-
-    public void setCustomerGroup(
-            final com.commercetools.importapi.models.common.CustomerGroupKeyReference customerGroup) {
+    
+    
+    public void setCustomerGroup(final com.commercetools.importapi.models.common.CustomerGroupKeyReference customerGroup){
         this.customerGroup = customerGroup;
     }
-
-    public void setChannel(final com.commercetools.importapi.models.common.ChannelKeyReference channel) {
+    
+    
+    public void setChannel(final com.commercetools.importapi.models.common.ChannelKeyReference channel){
         this.channel = channel;
     }
-
-    public void setValidFrom(final java.time.ZonedDateTime validFrom) {
+    
+    
+    public void setValidFrom(final java.time.ZonedDateTime validFrom){
         this.validFrom = validFrom;
     }
-
-    public void setValidUntil(final java.time.ZonedDateTime validUntil) {
+    
+    
+    public void setValidUntil(final java.time.ZonedDateTime validUntil){
         this.validUntil = validUntil;
     }
-
-    public void setTiers(final com.commercetools.importapi.models.common.PriceTier... tiers) {
-        this.tiers = new ArrayList<>(Arrays.asList(tiers));
+    
+    
+    public void setTiers(final com.commercetools.importapi.models.common.PriceTier ...tiers){
+       this.tiers = new ArrayList<>(Arrays.asList(tiers));
     }
-
-    public void setTiers(final java.util.List<com.commercetools.importapi.models.common.PriceTier> tiers) {
-        this.tiers = tiers;
+    
+    
+    public void setTiers(final java.util.List<com.commercetools.importapi.models.common.PriceTier> tiers){
+       this.tiers = tiers;
     }
-
-    public void setDiscounted(final com.commercetools.importapi.models.common.DiscountedPrice discounted) {
+    
+    
+    public void setDiscounted(final com.commercetools.importapi.models.common.DiscountedPrice discounted){
         this.discounted = discounted;
     }
-
-    public void setCustom(final com.commercetools.importapi.models.customfields.Custom custom) {
+    
+    
+    public void setCustom(final com.commercetools.importapi.models.customfields.Custom custom){
         this.custom = custom;
     }
 
     @Override
     public boolean equals(Object o) {
-        if (this == o)
-            return true;
-
-        if (o == null || getClass() != o.getClass())
-            return false;
-
+        if (this == o) return true;
+    
+        if (o == null || getClass() != o.getClass()) return false;
+    
         StandalonePriceImportImpl that = (StandalonePriceImportImpl) o;
-
-        return new EqualsBuilder().append(key, that.key)
+    
+        return new EqualsBuilder()
+                .append(key, that.key)
                 .append(sku, that.sku)
                 .append(value, that.value)
                 .append(country, that.country)
@@ -235,21 +259,22 @@ public class StandalonePriceImportImpl implements StandalonePriceImport, ModelBa
                 .append(custom, that.custom)
                 .isEquals();
     }
-
+    
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(key)
-                .append(sku)
-                .append(value)
-                .append(country)
-                .append(customerGroup)
-                .append(channel)
-                .append(validFrom)
-                .append(validUntil)
-                .append(tiers)
-                .append(discounted)
-                .append(custom)
-                .toHashCode();
+        return new HashCodeBuilder(17, 37)
+            .append(key)
+            .append(sku)
+            .append(value)
+            .append(country)
+            .append(customerGroup)
+            .append(channel)
+            .append(validFrom)
+            .append(validUntil)
+            .append(tiers)
+            .append(discounted)
+            .append(custom)
+            .toHashCode();
     }
 
 }

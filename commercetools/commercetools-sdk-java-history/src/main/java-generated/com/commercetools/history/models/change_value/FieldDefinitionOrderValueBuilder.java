@@ -1,9 +1,11 @@
-
 package com.commercetools.history.models.change_value;
 
+import com.commercetools.history.models.common.LocalizedString;
+import com.commercetools.history.models.change_value.FieldDefinitionOrderValue;
+import javax.annotation.Nullable;
 import java.util.*;
 import java.util.function.Function;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -18,76 +20,89 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .label(labelBuilder -> labelBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class FieldDefinitionOrderValueBuilder implements Builder<FieldDefinitionOrderValue> {
 
+    
+    
     private String name;
-
+    
+    
+    
     private com.commercetools.history.models.common.LocalizedString label;
 
+    
     /**
      * set the value to the name
      * @param name value to be set
      * @return Builder
      */
-
-    public FieldDefinitionOrderValueBuilder name(final String name) {
+    
+    public FieldDefinitionOrderValueBuilder name( final String name) {
         this.name = name;
         return this;
     }
-
+    
+    
+    
+    
     /**
      * set the value to the label using the builder function
      * @param builder function to build the label value
      * @return Builder
      */
-
-    public FieldDefinitionOrderValueBuilder label(
-            Function<com.commercetools.history.models.common.LocalizedStringBuilder, com.commercetools.history.models.common.LocalizedStringBuilder> builder) {
+    
+    public FieldDefinitionOrderValueBuilder label(Function<com.commercetools.history.models.common.LocalizedStringBuilder, com.commercetools.history.models.common.LocalizedStringBuilder> builder) {
         this.label = builder.apply(com.commercetools.history.models.common.LocalizedStringBuilder.of()).build();
         return this;
     }
-
+    
     /**
      * set the value to the label using the builder function
      * @param builder function to build the label value
      * @return Builder
      */
-
-    public FieldDefinitionOrderValueBuilder withLabel(
-            Function<com.commercetools.history.models.common.LocalizedStringBuilder, com.commercetools.history.models.common.LocalizedString> builder) {
+    
+    public FieldDefinitionOrderValueBuilder withLabel(Function<com.commercetools.history.models.common.LocalizedStringBuilder, com.commercetools.history.models.common.LocalizedString> builder) {
         this.label = builder.apply(com.commercetools.history.models.common.LocalizedStringBuilder.of());
         return this;
     }
-
+                    
     /**
      * set the value to the label
      * @param label value to be set
      * @return Builder
      */
-
-    public FieldDefinitionOrderValueBuilder label(final com.commercetools.history.models.common.LocalizedString label) {
+    
+    public FieldDefinitionOrderValueBuilder label( final com.commercetools.history.models.common.LocalizedString label) {
         this.label = label;
         return this;
     }
+    
+    
 
     /**
      * value of name}
      * @return name
      */
-
-    public String getName() {
+    
+    
+    public String getName(){
         return this.name;
     }
-
+    
     /**
      * value of label}
      * @return label
      */
-
-    public com.commercetools.history.models.common.LocalizedString getLabel() {
+    
+    
+    public com.commercetools.history.models.common.LocalizedString getLabel(){
         return this.label;
     }
 
@@ -100,7 +115,7 @@ public class FieldDefinitionOrderValueBuilder implements Builder<FieldDefinition
         Objects.requireNonNull(label, FieldDefinitionOrderValue.class + ": label is missing");
         return new FieldDefinitionOrderValueImpl(name, label);
     }
-
+    
     /**
      * builds FieldDefinitionOrderValue without checking for non-null required values
      * @return FieldDefinitionOrderValue
@@ -111,7 +126,7 @@ public class FieldDefinitionOrderValueBuilder implements Builder<FieldDefinition
 
     /**
      * factory method for an instance of FieldDefinitionOrderValueBuilder
-     * @return builder
+     * @return builder 
      */
     public static FieldDefinitionOrderValueBuilder of() {
         return new FieldDefinitionOrderValueBuilder();

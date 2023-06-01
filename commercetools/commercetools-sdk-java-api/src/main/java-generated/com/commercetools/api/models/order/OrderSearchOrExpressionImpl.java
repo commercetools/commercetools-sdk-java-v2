@@ -1,36 +1,42 @@
-
 package com.commercetools.api.models.order;
 
-import java.time.*;
-import java.util.*;
-
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
-
-import io.vrap.rmf.base.client.ModelBase;
+import com.commercetools.api.models.order.OrderSearchCompoundExpression;
+import com.commercetools.api.models.order.OrderSearchQuery;
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.ModelBase;
+import javax.validation.Valid;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.annotation.*;
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
  * OrderSearchOrExpression
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class OrderSearchOrExpressionImpl implements OrderSearchOrExpression, ModelBase {
 
+    
     private java.util.List<com.commercetools.api.models.order.OrderSearchQuery> or;
 
     /**
      * create instance with all properties
      */
     @JsonCreator
-    OrderSearchOrExpressionImpl(
-            @JsonProperty("or") final java.util.List<com.commercetools.api.models.order.OrderSearchQuery> or) {
+    OrderSearchOrExpressionImpl(@JsonProperty("or") final java.util.List<com.commercetools.api.models.order.OrderSearchQuery> or) {
         this.or = or;
     }
-
     /**
      * create empty instance
      */
@@ -40,35 +46,39 @@ public class OrderSearchOrExpressionImpl implements OrderSearchOrExpression, Mod
     /**
      *
      */
-
-    public java.util.List<com.commercetools.api.models.order.OrderSearchQuery> getOr() {
+    
+    public java.util.List<com.commercetools.api.models.order.OrderSearchQuery> getOr(){
         return this.or;
     }
 
-    public void setOr(final com.commercetools.api.models.order.OrderSearchQuery... or) {
-        this.or = new ArrayList<>(Arrays.asList(or));
+    
+    public void setOr(final com.commercetools.api.models.order.OrderSearchQuery ...or){
+       this.or = new ArrayList<>(Arrays.asList(or));
     }
-
-    public void setOr(final java.util.List<com.commercetools.api.models.order.OrderSearchQuery> or) {
-        this.or = or;
+    
+    
+    public void setOr(final java.util.List<com.commercetools.api.models.order.OrderSearchQuery> or){
+       this.or = or;
     }
 
     @Override
     public boolean equals(Object o) {
-        if (this == o)
-            return true;
-
-        if (o == null || getClass() != o.getClass())
-            return false;
-
+        if (this == o) return true;
+    
+        if (o == null || getClass() != o.getClass()) return false;
+    
         OrderSearchOrExpressionImpl that = (OrderSearchOrExpressionImpl) o;
-
-        return new EqualsBuilder().append(or, that.or).isEquals();
+    
+        return new EqualsBuilder()
+                .append(or, that.or)
+                .isEquals();
     }
-
+    
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(or).toHashCode();
+        return new HashCodeBuilder(17, 37)
+            .append(or)
+            .toHashCode();
     }
 
 }

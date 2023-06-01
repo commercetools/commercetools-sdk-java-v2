@@ -1,8 +1,12 @@
-
 package com.commercetools.api.models.message;
 
+import com.commercetools.api.models.business_unit.BusinessUnitStatus;
+import com.commercetools.api.models.message.MessagePayload;
+import com.commercetools.api.models.message.BusinessUnitStatusChangedMessagePayload;
+import javax.annotation.Nullable;
 import java.util.*;
-
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -16,32 +20,39 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .active(BusinessUnitStatus.ACTIVE)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
-public class BusinessUnitStatusChangedMessagePayloadBuilder
-        implements Builder<BusinessUnitStatusChangedMessagePayload> {
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
+public class BusinessUnitStatusChangedMessagePayloadBuilder implements Builder<BusinessUnitStatusChangedMessagePayload> {
 
+    
+    
     private com.commercetools.api.models.business_unit.BusinessUnitStatus active;
 
+    
     /**
      *  <p>Updated status of the Business Unit.</p>
      * @param active value to be set
      * @return Builder
      */
-
-    public BusinessUnitStatusChangedMessagePayloadBuilder active(
-            final com.commercetools.api.models.business_unit.BusinessUnitStatus active) {
+    
+    public BusinessUnitStatusChangedMessagePayloadBuilder active( final com.commercetools.api.models.business_unit.BusinessUnitStatus active) {
         this.active = active;
         return this;
     }
+    
+    
 
     /**
      *  <p>Updated status of the Business Unit.</p>
      * @return active
      */
-
-    public com.commercetools.api.models.business_unit.BusinessUnitStatus getActive() {
+    
+    
+    public com.commercetools.api.models.business_unit.BusinessUnitStatus getActive(){
         return this.active;
     }
 
@@ -53,7 +64,7 @@ public class BusinessUnitStatusChangedMessagePayloadBuilder
         Objects.requireNonNull(active, BusinessUnitStatusChangedMessagePayload.class + ": active is missing");
         return new BusinessUnitStatusChangedMessagePayloadImpl(active);
     }
-
+    
     /**
      * builds BusinessUnitStatusChangedMessagePayload without checking for non-null required values
      * @return BusinessUnitStatusChangedMessagePayload
@@ -64,7 +75,7 @@ public class BusinessUnitStatusChangedMessagePayloadBuilder
 
     /**
      * factory method for an instance of BusinessUnitStatusChangedMessagePayloadBuilder
-     * @return builder
+     * @return builder 
      */
     public static BusinessUnitStatusChangedMessagePayloadBuilder of() {
         return new BusinessUnitStatusChangedMessagePayloadBuilder();
@@ -75,8 +86,7 @@ public class BusinessUnitStatusChangedMessagePayloadBuilder
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static BusinessUnitStatusChangedMessagePayloadBuilder of(
-            final BusinessUnitStatusChangedMessagePayload template) {
+    public static BusinessUnitStatusChangedMessagePayloadBuilder of(final BusinessUnitStatusChangedMessagePayload template) {
         BusinessUnitStatusChangedMessagePayloadBuilder builder = new BusinessUnitStatusChangedMessagePayloadBuilder();
         builder.active = template.getActive();
         return builder;

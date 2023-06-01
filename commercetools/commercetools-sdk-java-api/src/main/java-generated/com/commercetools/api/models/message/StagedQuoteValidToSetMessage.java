@@ -1,18 +1,21 @@
-
 package com.commercetools.api.models.message;
 
-import java.time.*;
+import com.commercetools.api.models.message.Message;
 import java.time.ZonedDateTime;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
+import com.commercetools.api.models.message.StagedQuoteValidToSetMessageImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Generated after a successful Set Valid To update action.</p>
@@ -32,9 +35,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .validTo(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = StagedQuoteValidToSetMessageImpl.class)
 public interface StagedQuoteValidToSetMessage extends Message {
 
@@ -55,16 +61,18 @@ public interface StagedQuoteValidToSetMessage extends Message {
      *  <p>Expiration date for the Staged Quote after the Set Valid To update action.</p>
      * @param validTo value to be set
      */
-
+    
     public void setValidTo(final ZonedDateTime validTo);
+    
 
     /**
      * factory method
      * @return instance of StagedQuoteValidToSetMessage
      */
-    public static StagedQuoteValidToSetMessage of() {
+    public static StagedQuoteValidToSetMessage of(){
         return new StagedQuoteValidToSetMessageImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy StagedQuoteValidToSetMessage
@@ -102,14 +110,12 @@ public interface StagedQuoteValidToSetMessage extends Message {
         instance.setVersion(template.getVersion());
         instance.setCreatedAt(template.getCreatedAt());
         instance.setLastModifiedAt(template.getLastModifiedAt());
-        instance.setLastModifiedBy(
-            com.commercetools.api.models.common.LastModifiedBy.deepCopy(template.getLastModifiedBy()));
+        instance.setLastModifiedBy(com.commercetools.api.models.common.LastModifiedBy.deepCopy(template.getLastModifiedBy()));
         instance.setCreatedBy(com.commercetools.api.models.common.CreatedBy.deepCopy(template.getCreatedBy()));
         instance.setSequenceNumber(template.getSequenceNumber());
         instance.setResource(com.commercetools.api.models.common.Reference.deepCopy(template.getResource()));
         instance.setResourceVersion(template.getResourceVersion());
-        instance.setResourceUserProvidedIdentifiers(com.commercetools.api.models.message.UserProvidedIdentifiers
-                .deepCopy(template.getResourceUserProvidedIdentifiers()));
+        instance.setResourceUserProvidedIdentifiers(com.commercetools.api.models.message.UserProvidedIdentifiers.deepCopy(template.getResourceUserProvidedIdentifiers()));
         instance.setValidTo(template.getValidTo());
         return instance;
     }
@@ -121,7 +127,7 @@ public interface StagedQuoteValidToSetMessage extends Message {
     public static StagedQuoteValidToSetMessageBuilder builder() {
         return StagedQuoteValidToSetMessageBuilder.of();
     }
-
+    
     /**
      * create builder for StagedQuoteValidToSetMessage instance
      * @param template instance with prefilled values for the builder
@@ -130,6 +136,7 @@ public interface StagedQuoteValidToSetMessage extends Message {
     public static StagedQuoteValidToSetMessageBuilder builder(final StagedQuoteValidToSetMessage template) {
         return StagedQuoteValidToSetMessageBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -140,7 +147,7 @@ public interface StagedQuoteValidToSetMessage extends Message {
     default <T> T withStagedQuoteValidToSetMessage(Function<StagedQuoteValidToSetMessage, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

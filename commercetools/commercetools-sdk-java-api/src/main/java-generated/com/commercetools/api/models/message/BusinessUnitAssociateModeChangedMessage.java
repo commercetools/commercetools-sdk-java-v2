@@ -1,18 +1,21 @@
-
 package com.commercetools.api.models.message;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
-
 import com.commercetools.api.models.business_unit.BusinessUnitAssociateMode;
+import com.commercetools.api.models.message.Message;
+import com.commercetools.api.models.message.BusinessUnitAssociateModeChangedMessageImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Generated after a successful Change Associate Mode update action.</p>
@@ -33,9 +36,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .oldAssociateMode(BusinessUnitAssociateMode.EXPLICIT)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = BusinessUnitAssociateModeChangedMessageImpl.class)
 public interface BusinessUnitAssociateModeChangedMessage extends Message {
 
@@ -51,7 +57,6 @@ public interface BusinessUnitAssociateModeChangedMessage extends Message {
     @NotNull
     @JsonProperty("associateMode")
     public BusinessUnitAssociateMode getAssociateMode();
-
     /**
      *  <p>BusinessUnitAssociateMode of the Business Unit before the Change Associate Mode update action.</p>
      * @return oldAssociateMode
@@ -64,23 +69,26 @@ public interface BusinessUnitAssociateModeChangedMessage extends Message {
      *  <p>BusinessUnitAssociateMode of the Business Unit after the Change Associate Mode update action.</p>
      * @param associateMode value to be set
      */
-
+    
     public void setAssociateMode(final BusinessUnitAssociateMode associateMode);
-
+    
+    
     /**
      *  <p>BusinessUnitAssociateMode of the Business Unit before the Change Associate Mode update action.</p>
      * @param oldAssociateMode value to be set
      */
-
+    
     public void setOldAssociateMode(final BusinessUnitAssociateMode oldAssociateMode);
+    
 
     /**
      * factory method
      * @return instance of BusinessUnitAssociateModeChangedMessage
      */
-    public static BusinessUnitAssociateModeChangedMessage of() {
+    public static BusinessUnitAssociateModeChangedMessage of(){
         return new BusinessUnitAssociateModeChangedMessageImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy BusinessUnitAssociateModeChangedMessage
@@ -110,8 +118,7 @@ public interface BusinessUnitAssociateModeChangedMessage extends Message {
      * @return copy instance
      */
     @Nullable
-    public static BusinessUnitAssociateModeChangedMessage deepCopy(
-            @Nullable final BusinessUnitAssociateModeChangedMessage template) {
+    public static BusinessUnitAssociateModeChangedMessage deepCopy(@Nullable final BusinessUnitAssociateModeChangedMessage template) {
         if (template == null) {
             return null;
         }
@@ -120,14 +127,12 @@ public interface BusinessUnitAssociateModeChangedMessage extends Message {
         instance.setVersion(template.getVersion());
         instance.setCreatedAt(template.getCreatedAt());
         instance.setLastModifiedAt(template.getLastModifiedAt());
-        instance.setLastModifiedBy(
-            com.commercetools.api.models.common.LastModifiedBy.deepCopy(template.getLastModifiedBy()));
+        instance.setLastModifiedBy(com.commercetools.api.models.common.LastModifiedBy.deepCopy(template.getLastModifiedBy()));
         instance.setCreatedBy(com.commercetools.api.models.common.CreatedBy.deepCopy(template.getCreatedBy()));
         instance.setSequenceNumber(template.getSequenceNumber());
         instance.setResource(com.commercetools.api.models.common.Reference.deepCopy(template.getResource()));
         instance.setResourceVersion(template.getResourceVersion());
-        instance.setResourceUserProvidedIdentifiers(com.commercetools.api.models.message.UserProvidedIdentifiers
-                .deepCopy(template.getResourceUserProvidedIdentifiers()));
+        instance.setResourceUserProvidedIdentifiers(com.commercetools.api.models.message.UserProvidedIdentifiers.deepCopy(template.getResourceUserProvidedIdentifiers()));
         instance.setAssociateMode(template.getAssociateMode());
         instance.setOldAssociateMode(template.getOldAssociateMode());
         return instance;
@@ -140,16 +145,16 @@ public interface BusinessUnitAssociateModeChangedMessage extends Message {
     public static BusinessUnitAssociateModeChangedMessageBuilder builder() {
         return BusinessUnitAssociateModeChangedMessageBuilder.of();
     }
-
+    
     /**
      * create builder for BusinessUnitAssociateModeChangedMessage instance
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static BusinessUnitAssociateModeChangedMessageBuilder builder(
-            final BusinessUnitAssociateModeChangedMessage template) {
+    public static BusinessUnitAssociateModeChangedMessageBuilder builder(final BusinessUnitAssociateModeChangedMessage template) {
         return BusinessUnitAssociateModeChangedMessageBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -157,11 +162,10 @@ public interface BusinessUnitAssociateModeChangedMessage extends Message {
      * @param helper function to map the object
      * @return mapped value
      */
-    default <T> T withBusinessUnitAssociateModeChangedMessage(
-            Function<BusinessUnitAssociateModeChangedMessage, T> helper) {
+    default <T> T withBusinessUnitAssociateModeChangedMessage(Function<BusinessUnitAssociateModeChangedMessage, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

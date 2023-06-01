@@ -1,16 +1,20 @@
-
 package com.commercetools.api.models.cart;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
+import com.commercetools.api.models.cart.CartUpdateAction;
+import com.commercetools.api.models.cart.CartSetLocaleActionImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * CartSetLocaleAction
@@ -22,9 +26,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     CartSetLocaleAction cartSetLocaleAction = CartSetLocaleAction.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = CartSetLocaleActionImpl.class)
 public interface CartSetLocaleAction extends CartUpdateAction {
 
@@ -37,7 +44,7 @@ public interface CartSetLocaleAction extends CartUpdateAction {
      *  <p>Value to set. Must be one of the Project's <code>languages</code>. If empty, any existing value will be removed.</p>
      * @return locale
      */
-
+    
     @JsonProperty("locale")
     public String getLocale();
 
@@ -45,16 +52,18 @@ public interface CartSetLocaleAction extends CartUpdateAction {
      *  <p>Value to set. Must be one of the Project's <code>languages</code>. If empty, any existing value will be removed.</p>
      * @param locale value to be set
      */
-
+    
     public void setLocale(final String locale);
+    
 
     /**
      * factory method
      * @return instance of CartSetLocaleAction
      */
-    public static CartSetLocaleAction of() {
+    public static CartSetLocaleAction of(){
         return new CartSetLocaleActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy CartSetLocaleAction
@@ -89,7 +98,7 @@ public interface CartSetLocaleAction extends CartUpdateAction {
     public static CartSetLocaleActionBuilder builder() {
         return CartSetLocaleActionBuilder.of();
     }
-
+    
     /**
      * create builder for CartSetLocaleAction instance
      * @param template instance with prefilled values for the builder
@@ -98,6 +107,7 @@ public interface CartSetLocaleAction extends CartUpdateAction {
     public static CartSetLocaleActionBuilder builder(final CartSetLocaleAction template) {
         return CartSetLocaleActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -108,7 +118,7 @@ public interface CartSetLocaleAction extends CartUpdateAction {
     default <T> T withCartSetLocaleAction(Function<CartSetLocaleAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

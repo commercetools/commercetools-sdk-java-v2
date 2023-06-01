@@ -1,17 +1,21 @@
-
 package com.commercetools.api.models.product_type;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
+import com.commercetools.api.models.product_type.ProductTypeUpdateAction;
+import com.commercetools.api.models.product_type.TextInputHint;
+import com.commercetools.api.models.product_type.ProductTypeChangeInputHintActionImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Updates the <code>inputHint</code> of an AttributeDefinition.</p>
@@ -25,9 +29,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .newValue(TextInputHint.SINGLE_LINE)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = ProductTypeChangeInputHintActionImpl.class)
 public interface ProductTypeChangeInputHintAction extends ProductTypeUpdateAction {
 
@@ -43,7 +50,6 @@ public interface ProductTypeChangeInputHintAction extends ProductTypeUpdateActio
     @NotNull
     @JsonProperty("attributeName")
     public String getAttributeName();
-
     /**
      *  <p><code>SingleLine</code> or <code>MultiLine</code></p>
      * @return newValue
@@ -56,23 +62,26 @@ public interface ProductTypeChangeInputHintAction extends ProductTypeUpdateActio
      *  <p>Name of the AttributeDefinition to update.</p>
      * @param attributeName value to be set
      */
-
+    
     public void setAttributeName(final String attributeName);
-
+    
+    
     /**
      *  <p><code>SingleLine</code> or <code>MultiLine</code></p>
      * @param newValue value to be set
      */
-
+    
     public void setNewValue(final TextInputHint newValue);
+    
 
     /**
      * factory method
      * @return instance of ProductTypeChangeInputHintAction
      */
-    public static ProductTypeChangeInputHintAction of() {
+    public static ProductTypeChangeInputHintAction of(){
         return new ProductTypeChangeInputHintActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy ProductTypeChangeInputHintAction
@@ -109,7 +118,7 @@ public interface ProductTypeChangeInputHintAction extends ProductTypeUpdateActio
     public static ProductTypeChangeInputHintActionBuilder builder() {
         return ProductTypeChangeInputHintActionBuilder.of();
     }
-
+    
     /**
      * create builder for ProductTypeChangeInputHintAction instance
      * @param template instance with prefilled values for the builder
@@ -118,6 +127,7 @@ public interface ProductTypeChangeInputHintAction extends ProductTypeUpdateActio
     public static ProductTypeChangeInputHintActionBuilder builder(final ProductTypeChangeInputHintAction template) {
         return ProductTypeChangeInputHintActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -128,7 +138,7 @@ public interface ProductTypeChangeInputHintAction extends ProductTypeUpdateActio
     default <T> T withProductTypeChangeInputHintAction(Function<ProductTypeChangeInputHintAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

@@ -1,9 +1,11 @@
-
 package com.commercetools.api.predicates.query.product_type;
 
 import com.commercetools.api.predicates.query.*;
 
-public class ProductTypeChangeAttributeNameActionQueryBuilderDsl {
+import java.util.function.Function;
+
+
+public class ProductTypeChangeAttributeNameActionQueryBuilderDsl  {
     public ProductTypeChangeAttributeNameActionQueryBuilderDsl() {
     }
 
@@ -12,21 +14,16 @@ public class ProductTypeChangeAttributeNameActionQueryBuilderDsl {
     }
 
     public StringComparisonPredicateBuilder<ProductTypeChangeAttributeNameActionQueryBuilderDsl> action() {
-        return new StringComparisonPredicateBuilder<>(
-            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("action")),
-            p -> new CombinationQueryPredicate<>(p, ProductTypeChangeAttributeNameActionQueryBuilderDsl::of));
+        return new StringComparisonPredicateBuilder<>(BinaryQueryPredicate.of().left(new ConstantQueryPredicate("action")),
+        p -> new CombinationQueryPredicate<>(p, ProductTypeChangeAttributeNameActionQueryBuilderDsl::of));
     }
-
     public StringComparisonPredicateBuilder<ProductTypeChangeAttributeNameActionQueryBuilderDsl> attributeName() {
-        return new StringComparisonPredicateBuilder<>(
-            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("attributeName")),
-            p -> new CombinationQueryPredicate<>(p, ProductTypeChangeAttributeNameActionQueryBuilderDsl::of));
+        return new StringComparisonPredicateBuilder<>(BinaryQueryPredicate.of().left(new ConstantQueryPredicate("attributeName")),
+        p -> new CombinationQueryPredicate<>(p, ProductTypeChangeAttributeNameActionQueryBuilderDsl::of));
     }
-
     public StringComparisonPredicateBuilder<ProductTypeChangeAttributeNameActionQueryBuilderDsl> newAttributeName() {
-        return new StringComparisonPredicateBuilder<>(
-            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("newAttributeName")),
-            p -> new CombinationQueryPredicate<>(p, ProductTypeChangeAttributeNameActionQueryBuilderDsl::of));
+        return new StringComparisonPredicateBuilder<>(BinaryQueryPredicate.of().left(new ConstantQueryPredicate("newAttributeName")),
+        p -> new CombinationQueryPredicate<>(p, ProductTypeChangeAttributeNameActionQueryBuilderDsl::of));
     }
-
+    
 }

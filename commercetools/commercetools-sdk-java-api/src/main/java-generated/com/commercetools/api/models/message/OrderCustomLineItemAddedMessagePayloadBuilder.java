@@ -1,9 +1,12 @@
-
 package com.commercetools.api.models.message;
 
+import com.commercetools.api.models.cart.CustomLineItem;
+import com.commercetools.api.models.message.OrderMessagePayload;
+import com.commercetools.api.models.message.OrderCustomLineItemAddedMessagePayload;
+import javax.annotation.Nullable;
 import java.util.*;
 import java.util.function.Function;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -17,55 +20,61 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .customLineItem(customLineItemBuilder -> customLineItemBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class OrderCustomLineItemAddedMessagePayloadBuilder implements Builder<OrderCustomLineItemAddedMessagePayload> {
 
+    
+    
     private com.commercetools.api.models.cart.CustomLineItem customLineItem;
 
+    
     /**
      *  <p>Custom Line Item that was added to the Order.</p>
      * @param builder function to build the customLineItem value
      * @return Builder
      */
-
-    public OrderCustomLineItemAddedMessagePayloadBuilder customLineItem(
-            Function<com.commercetools.api.models.cart.CustomLineItemBuilder, com.commercetools.api.models.cart.CustomLineItemBuilder> builder) {
+    
+    public OrderCustomLineItemAddedMessagePayloadBuilder customLineItem(Function<com.commercetools.api.models.cart.CustomLineItemBuilder, com.commercetools.api.models.cart.CustomLineItemBuilder> builder) {
         this.customLineItem = builder.apply(com.commercetools.api.models.cart.CustomLineItemBuilder.of()).build();
         return this;
     }
-
+    
     /**
      *  <p>Custom Line Item that was added to the Order.</p>
      * @param builder function to build the customLineItem value
      * @return Builder
      */
-
-    public OrderCustomLineItemAddedMessagePayloadBuilder withCustomLineItem(
-            Function<com.commercetools.api.models.cart.CustomLineItemBuilder, com.commercetools.api.models.cart.CustomLineItem> builder) {
+    
+    public OrderCustomLineItemAddedMessagePayloadBuilder withCustomLineItem(Function<com.commercetools.api.models.cart.CustomLineItemBuilder, com.commercetools.api.models.cart.CustomLineItem> builder) {
         this.customLineItem = builder.apply(com.commercetools.api.models.cart.CustomLineItemBuilder.of());
         return this;
     }
-
+                    
     /**
      *  <p>Custom Line Item that was added to the Order.</p>
      * @param customLineItem value to be set
      * @return Builder
      */
-
-    public OrderCustomLineItemAddedMessagePayloadBuilder customLineItem(
-            final com.commercetools.api.models.cart.CustomLineItem customLineItem) {
+    
+    public OrderCustomLineItemAddedMessagePayloadBuilder customLineItem( final com.commercetools.api.models.cart.CustomLineItem customLineItem) {
         this.customLineItem = customLineItem;
         return this;
     }
+    
+    
 
     /**
      *  <p>Custom Line Item that was added to the Order.</p>
      * @return customLineItem
      */
-
-    public com.commercetools.api.models.cart.CustomLineItem getCustomLineItem() {
+    
+    
+    public com.commercetools.api.models.cart.CustomLineItem getCustomLineItem(){
         return this.customLineItem;
     }
 
@@ -74,11 +83,10 @@ public class OrderCustomLineItemAddedMessagePayloadBuilder implements Builder<Or
      * @return OrderCustomLineItemAddedMessagePayload
      */
     public OrderCustomLineItemAddedMessagePayload build() {
-        Objects.requireNonNull(customLineItem,
-            OrderCustomLineItemAddedMessagePayload.class + ": customLineItem is missing");
+        Objects.requireNonNull(customLineItem, OrderCustomLineItemAddedMessagePayload.class + ": customLineItem is missing");
         return new OrderCustomLineItemAddedMessagePayloadImpl(customLineItem);
     }
-
+    
     /**
      * builds OrderCustomLineItemAddedMessagePayload without checking for non-null required values
      * @return OrderCustomLineItemAddedMessagePayload
@@ -89,7 +97,7 @@ public class OrderCustomLineItemAddedMessagePayloadBuilder implements Builder<Or
 
     /**
      * factory method for an instance of OrderCustomLineItemAddedMessagePayloadBuilder
-     * @return builder
+     * @return builder 
      */
     public static OrderCustomLineItemAddedMessagePayloadBuilder of() {
         return new OrderCustomLineItemAddedMessagePayloadBuilder();
@@ -100,8 +108,7 @@ public class OrderCustomLineItemAddedMessagePayloadBuilder implements Builder<Or
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static OrderCustomLineItemAddedMessagePayloadBuilder of(
-            final OrderCustomLineItemAddedMessagePayload template) {
+    public static OrderCustomLineItemAddedMessagePayloadBuilder of(final OrderCustomLineItemAddedMessagePayload template) {
         OrderCustomLineItemAddedMessagePayloadBuilder builder = new OrderCustomLineItemAddedMessagePayloadBuilder();
         builder.customLineItem = template.getCustomLineItem();
         return builder;

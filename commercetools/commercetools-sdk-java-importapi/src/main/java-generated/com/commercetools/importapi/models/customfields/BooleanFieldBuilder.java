@@ -1,8 +1,11 @@
-
 package com.commercetools.importapi.models.customfields;
 
+import com.commercetools.importapi.models.customfields.CustomField;
+import com.commercetools.importapi.models.customfields.BooleanField;
+import javax.annotation.Nullable;
 import java.util.*;
-
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -16,30 +19,39 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .value(true)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class BooleanFieldBuilder implements Builder<BooleanField> {
 
+    
+    
     private Boolean value;
 
+    
     /**
      * set the value to the value
      * @param value value to be set
      * @return Builder
      */
-
-    public BooleanFieldBuilder value(final Boolean value) {
+    
+    public BooleanFieldBuilder value( final Boolean value) {
         this.value = value;
         return this;
     }
+    
+    
 
     /**
      * value of value}
      * @return value
      */
-
-    public Boolean getValue() {
+    
+    
+    public Boolean getValue(){
         return this.value;
     }
 
@@ -51,7 +63,7 @@ public class BooleanFieldBuilder implements Builder<BooleanField> {
         Objects.requireNonNull(value, BooleanField.class + ": value is missing");
         return new BooleanFieldImpl(value);
     }
-
+    
     /**
      * builds BooleanField without checking for non-null required values
      * @return BooleanField
@@ -62,7 +74,7 @@ public class BooleanFieldBuilder implements Builder<BooleanField> {
 
     /**
      * factory method for an instance of BooleanFieldBuilder
-     * @return builder
+     * @return builder 
      */
     public static BooleanFieldBuilder of() {
         return new BooleanFieldBuilder();

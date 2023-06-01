@@ -1,16 +1,21 @@
-
 package com.commercetools.importapi.models.common;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
+import com.commercetools.importapi.models.common.KeyReference;
+import com.commercetools.importapi.models.common.ReferenceType;
+import com.commercetools.importapi.models.common.DiscountCodeKeyReferenceImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>References a discount code by key.</p>
@@ -23,9 +28,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .key("{key}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = DiscountCodeKeyReferenceImpl.class)
 public interface DiscountCodeKeyReference extends KeyReference {
 
@@ -34,13 +42,16 @@ public interface DiscountCodeKeyReference extends KeyReference {
      */
     String DISCOUNT_CODE = "discount-code";
 
+
+
     /**
      * factory method
      * @return instance of DiscountCodeKeyReference
      */
-    public static DiscountCodeKeyReference of() {
+    public static DiscountCodeKeyReference of(){
         return new DiscountCodeKeyReferenceImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy DiscountCodeKeyReference
@@ -75,7 +86,7 @@ public interface DiscountCodeKeyReference extends KeyReference {
     public static DiscountCodeKeyReferenceBuilder builder() {
         return DiscountCodeKeyReferenceBuilder.of();
     }
-
+    
     /**
      * create builder for DiscountCodeKeyReference instance
      * @param template instance with prefilled values for the builder
@@ -84,6 +95,7 @@ public interface DiscountCodeKeyReference extends KeyReference {
     public static DiscountCodeKeyReferenceBuilder builder(final DiscountCodeKeyReference template) {
         return DiscountCodeKeyReferenceBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -94,7 +106,7 @@ public interface DiscountCodeKeyReference extends KeyReference {
     default <T> T withDiscountCodeKeyReference(Function<DiscountCodeKeyReference, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

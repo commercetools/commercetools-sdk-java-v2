@@ -1,8 +1,11 @@
-
 package com.commercetools.api.models.customer_group;
 
+import com.commercetools.api.models.customer_group.CustomerGroupUpdateAction;
+import com.commercetools.api.models.customer_group.CustomerGroupChangeNameAction;
+import javax.annotation.Nullable;
 import java.util.*;
-
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -16,30 +19,39 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .name("{name}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class CustomerGroupChangeNameActionBuilder implements Builder<CustomerGroupChangeNameAction> {
 
+    
+    
     private String name;
 
+    
     /**
      *  <p>New name of the CustomerGroup.</p>
      * @param name value to be set
      * @return Builder
      */
-
-    public CustomerGroupChangeNameActionBuilder name(final String name) {
+    
+    public CustomerGroupChangeNameActionBuilder name( final String name) {
         this.name = name;
         return this;
     }
+    
+    
 
     /**
      *  <p>New name of the CustomerGroup.</p>
      * @return name
      */
-
-    public String getName() {
+    
+    
+    public String getName(){
         return this.name;
     }
 
@@ -51,7 +63,7 @@ public class CustomerGroupChangeNameActionBuilder implements Builder<CustomerGro
         Objects.requireNonNull(name, CustomerGroupChangeNameAction.class + ": name is missing");
         return new CustomerGroupChangeNameActionImpl(name);
     }
-
+    
     /**
      * builds CustomerGroupChangeNameAction without checking for non-null required values
      * @return CustomerGroupChangeNameAction
@@ -62,7 +74,7 @@ public class CustomerGroupChangeNameActionBuilder implements Builder<CustomerGro
 
     /**
      * factory method for an instance of CustomerGroupChangeNameActionBuilder
-     * @return builder
+     * @return builder 
      */
     public static CustomerGroupChangeNameActionBuilder of() {
         return new CustomerGroupChangeNameActionBuilder();

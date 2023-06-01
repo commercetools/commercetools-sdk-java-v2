@@ -1,11 +1,12 @@
-
 package com.commercetools.api.models.message;
 
+import com.commercetools.api.models.common.LocalizedString;
+import com.commercetools.api.models.message.MessagePayload;
+import com.commercetools.api.models.message.ProductSlugChangedMessagePayload;
+import javax.annotation.Nullable;
 import java.util.*;
 import java.util.function.Function;
-
-import javax.annotation.Nullable;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -19,104 +20,111 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .slug(slugBuilder -> slugBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class ProductSlugChangedMessagePayloadBuilder implements Builder<ProductSlugChangedMessagePayload> {
 
+    
+    
     private com.commercetools.api.models.common.LocalizedString slug;
-
+    
+    
     @Nullable
     private com.commercetools.api.models.common.LocalizedString oldSlug;
 
+    
     /**
      *  <p>The slug of the Product after the Change Slug update action.</p>
      * @param builder function to build the slug value
      * @return Builder
      */
-
-    public ProductSlugChangedMessagePayloadBuilder slug(
-            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
+    
+    public ProductSlugChangedMessagePayloadBuilder slug(Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
         this.slug = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of()).build();
         return this;
     }
-
+    
     /**
      *  <p>The slug of the Product after the Change Slug update action.</p>
      * @param builder function to build the slug value
      * @return Builder
      */
-
-    public ProductSlugChangedMessagePayloadBuilder withSlug(
-            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedString> builder) {
+    
+    public ProductSlugChangedMessagePayloadBuilder withSlug(Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedString> builder) {
         this.slug = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of());
         return this;
     }
-
+                    
     /**
      *  <p>The slug of the Product after the Change Slug update action.</p>
      * @param slug value to be set
      * @return Builder
      */
-
-    public ProductSlugChangedMessagePayloadBuilder slug(
-            final com.commercetools.api.models.common.LocalizedString slug) {
+    
+    public ProductSlugChangedMessagePayloadBuilder slug( final com.commercetools.api.models.common.LocalizedString slug) {
         this.slug = slug;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>The slug of the Product before the Change Slug update action.</p>
      * @param builder function to build the oldSlug value
      * @return Builder
      */
-
-    public ProductSlugChangedMessagePayloadBuilder oldSlug(
-            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
+    
+    public ProductSlugChangedMessagePayloadBuilder oldSlug(Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
         this.oldSlug = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of()).build();
         return this;
     }
-
+    
     /**
      *  <p>The slug of the Product before the Change Slug update action.</p>
      * @param builder function to build the oldSlug value
      * @return Builder
      */
-
-    public ProductSlugChangedMessagePayloadBuilder withOldSlug(
-            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedString> builder) {
+    
+    public ProductSlugChangedMessagePayloadBuilder withOldSlug(Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedString> builder) {
         this.oldSlug = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of());
         return this;
     }
-
+                    
     /**
      *  <p>The slug of the Product before the Change Slug update action.</p>
      * @param oldSlug value to be set
      * @return Builder
      */
-
-    public ProductSlugChangedMessagePayloadBuilder oldSlug(
-            @Nullable final com.commercetools.api.models.common.LocalizedString oldSlug) {
+    
+    public ProductSlugChangedMessagePayloadBuilder oldSlug(@Nullable final com.commercetools.api.models.common.LocalizedString oldSlug) {
         this.oldSlug = oldSlug;
         return this;
     }
+    
+    
 
     /**
      *  <p>The slug of the Product after the Change Slug update action.</p>
      * @return slug
      */
-
-    public com.commercetools.api.models.common.LocalizedString getSlug() {
+    
+    
+    public com.commercetools.api.models.common.LocalizedString getSlug(){
         return this.slug;
     }
-
+    
     /**
      *  <p>The slug of the Product before the Change Slug update action.</p>
      * @return oldSlug
      */
-
+    
     @Nullable
-    public com.commercetools.api.models.common.LocalizedString getOldSlug() {
+    public com.commercetools.api.models.common.LocalizedString getOldSlug(){
         return this.oldSlug;
     }
 
@@ -128,7 +136,7 @@ public class ProductSlugChangedMessagePayloadBuilder implements Builder<ProductS
         Objects.requireNonNull(slug, ProductSlugChangedMessagePayload.class + ": slug is missing");
         return new ProductSlugChangedMessagePayloadImpl(slug, oldSlug);
     }
-
+    
     /**
      * builds ProductSlugChangedMessagePayload without checking for non-null required values
      * @return ProductSlugChangedMessagePayload
@@ -139,7 +147,7 @@ public class ProductSlugChangedMessagePayloadBuilder implements Builder<ProductS
 
     /**
      * factory method for an instance of ProductSlugChangedMessagePayloadBuilder
-     * @return builder
+     * @return builder 
      */
     public static ProductSlugChangedMessagePayloadBuilder of() {
         return new ProductSlugChangedMessagePayloadBuilder();

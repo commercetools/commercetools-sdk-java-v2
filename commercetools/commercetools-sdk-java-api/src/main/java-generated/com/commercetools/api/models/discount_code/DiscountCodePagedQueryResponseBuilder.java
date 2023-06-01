@@ -1,11 +1,11 @@
-
 package com.commercetools.api.models.discount_code;
 
+import com.commercetools.api.models.discount_code.DiscountCode;
+import com.commercetools.api.models.discount_code.DiscountCodePagedQueryResponse;
+import javax.annotation.Nullable;
 import java.util.*;
 import java.util.function.Function;
-
-import javax.annotation.Nullable;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -22,198 +22,222 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .plusResults(resultsBuilder -> resultsBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class DiscountCodePagedQueryResponseBuilder implements Builder<DiscountCodePagedQueryResponse> {
 
+    
+    
     private Long limit;
-
+    
+    
+    
     private Long offset;
-
+    
+    
+    
     private Long count;
-
+    
+    
     @Nullable
     private Long total;
-
+    
+    
+    
     private java.util.List<com.commercetools.api.models.discount_code.DiscountCode> results;
 
+    
     /**
      *  <p>Number of results requested.</p>
      * @param limit value to be set
      * @return Builder
      */
-
-    public DiscountCodePagedQueryResponseBuilder limit(final Long limit) {
+    
+    public DiscountCodePagedQueryResponseBuilder limit( final Long limit) {
         this.limit = limit;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Number of elements skipped.</p>
      * @param offset value to be set
      * @return Builder
      */
-
-    public DiscountCodePagedQueryResponseBuilder offset(final Long offset) {
+    
+    public DiscountCodePagedQueryResponseBuilder offset( final Long offset) {
         this.offset = offset;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Actual number of results returned.</p>
      * @param count value to be set
      * @return Builder
      */
-
-    public DiscountCodePagedQueryResponseBuilder count(final Long count) {
+    
+    public DiscountCodePagedQueryResponseBuilder count( final Long count) {
         this.count = count;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Total number of results matching the query. This number is an estimation that is not strongly consistent. This field is returned by default. For improved performance, calculating this field can be deactivated by using the query parameter <code>withTotal=false</code>. When the results are filtered with a Query Predicate, <code>total</code> is subject to a limit.</p>
      * @param total value to be set
      * @return Builder
      */
-
+    
     public DiscountCodePagedQueryResponseBuilder total(@Nullable final Long total) {
         this.total = total;
         return this;
     }
-
+    
+    
+    
     /**
      *  <p>DiscountCodes matching the query.</p>
      * @param results value to be set
      * @return Builder
      */
-
-    public DiscountCodePagedQueryResponseBuilder results(
-            final com.commercetools.api.models.discount_code.DiscountCode... results) {
+    
+    public DiscountCodePagedQueryResponseBuilder results( final com.commercetools.api.models.discount_code.DiscountCode ...results) {
         this.results = new ArrayList<>(Arrays.asList(results));
         return this;
     }
-
+    
     /**
      *  <p>DiscountCodes matching the query.</p>
      * @param results value to be set
      * @return Builder
      */
-
-    public DiscountCodePagedQueryResponseBuilder results(
-            final java.util.List<com.commercetools.api.models.discount_code.DiscountCode> results) {
+    
+    public DiscountCodePagedQueryResponseBuilder results( final java.util.List<com.commercetools.api.models.discount_code.DiscountCode> results) {
         this.results = results;
         return this;
     }
-
+    
     /**
      *  <p>DiscountCodes matching the query.</p>
      * @param results value to be set
      * @return Builder
      */
-
-    public DiscountCodePagedQueryResponseBuilder plusResults(
-            final com.commercetools.api.models.discount_code.DiscountCode... results) {
+    
+    public DiscountCodePagedQueryResponseBuilder plusResults( final com.commercetools.api.models.discount_code.DiscountCode ...results) {
         if (this.results == null) {
             this.results = new ArrayList<>();
         }
         this.results.addAll(Arrays.asList(results));
         return this;
     }
-
+    
+    
+    
     /**
      *  <p>DiscountCodes matching the query.</p>
      * @param builder function to build the results value
      * @return Builder
      */
-
-    public DiscountCodePagedQueryResponseBuilder plusResults(
-            Function<com.commercetools.api.models.discount_code.DiscountCodeBuilder, com.commercetools.api.models.discount_code.DiscountCodeBuilder> builder) {
+    
+    public DiscountCodePagedQueryResponseBuilder plusResults(Function<com.commercetools.api.models.discount_code.DiscountCodeBuilder, com.commercetools.api.models.discount_code.DiscountCodeBuilder> builder) {
         if (this.results == null) {
             this.results = new ArrayList<>();
         }
         this.results.add(builder.apply(com.commercetools.api.models.discount_code.DiscountCodeBuilder.of()).build());
         return this;
     }
-
+    
     /**
      *  <p>DiscountCodes matching the query.</p>
      * @param builder function to build the results value
      * @return Builder
      */
-
-    public DiscountCodePagedQueryResponseBuilder withResults(
-            Function<com.commercetools.api.models.discount_code.DiscountCodeBuilder, com.commercetools.api.models.discount_code.DiscountCodeBuilder> builder) {
+    
+    public DiscountCodePagedQueryResponseBuilder withResults(Function<com.commercetools.api.models.discount_code.DiscountCodeBuilder, com.commercetools.api.models.discount_code.DiscountCodeBuilder> builder) {
         this.results = new ArrayList<>();
         this.results.add(builder.apply(com.commercetools.api.models.discount_code.DiscountCodeBuilder.of()).build());
         return this;
     }
-
+    
     /**
      *  <p>DiscountCodes matching the query.</p>
      * @param builder function to build the results value
      * @return Builder
      */
-
-    public DiscountCodePagedQueryResponseBuilder addResults(
-            Function<com.commercetools.api.models.discount_code.DiscountCodeBuilder, com.commercetools.api.models.discount_code.DiscountCode> builder) {
+    
+    public DiscountCodePagedQueryResponseBuilder addResults(Function<com.commercetools.api.models.discount_code.DiscountCodeBuilder, com.commercetools.api.models.discount_code.DiscountCode> builder) {
         return plusResults(builder.apply(com.commercetools.api.models.discount_code.DiscountCodeBuilder.of()));
     }
-
+    
     /**
      *  <p>DiscountCodes matching the query.</p>
      * @param builder function to build the results value
      * @return Builder
      */
-
-    public DiscountCodePagedQueryResponseBuilder setResults(
-            Function<com.commercetools.api.models.discount_code.DiscountCodeBuilder, com.commercetools.api.models.discount_code.DiscountCode> builder) {
+    
+    public DiscountCodePagedQueryResponseBuilder setResults(Function<com.commercetools.api.models.discount_code.DiscountCodeBuilder, com.commercetools.api.models.discount_code.DiscountCode> builder) {
         return results(builder.apply(com.commercetools.api.models.discount_code.DiscountCodeBuilder.of()));
     }
+                    
 
     /**
      *  <p>Number of results requested.</p>
      * @return limit
      */
-
-    public Long getLimit() {
+    
+    
+    public Long getLimit(){
         return this.limit;
     }
-
+    
     /**
      *  <p>Number of elements skipped.</p>
      * @return offset
      */
-
-    public Long getOffset() {
+    
+    
+    public Long getOffset(){
         return this.offset;
     }
-
+    
     /**
      *  <p>Actual number of results returned.</p>
      * @return count
      */
-
-    public Long getCount() {
+    
+    
+    public Long getCount(){
         return this.count;
     }
-
+    
     /**
      *  <p>Total number of results matching the query. This number is an estimation that is not strongly consistent. This field is returned by default. For improved performance, calculating this field can be deactivated by using the query parameter <code>withTotal=false</code>. When the results are filtered with a Query Predicate, <code>total</code> is subject to a limit.</p>
      * @return total
      */
-
+    
     @Nullable
-    public Long getTotal() {
+    public Long getTotal(){
         return this.total;
     }
-
+    
     /**
      *  <p>DiscountCodes matching the query.</p>
      * @return results
      */
-
-    public java.util.List<com.commercetools.api.models.discount_code.DiscountCode> getResults() {
+    
+    
+    public java.util.List<com.commercetools.api.models.discount_code.DiscountCode> getResults(){
         return this.results;
     }
 
@@ -228,7 +252,7 @@ public class DiscountCodePagedQueryResponseBuilder implements Builder<DiscountCo
         Objects.requireNonNull(results, DiscountCodePagedQueryResponse.class + ": results is missing");
         return new DiscountCodePagedQueryResponseImpl(limit, offset, count, total, results);
     }
-
+    
     /**
      * builds DiscountCodePagedQueryResponse without checking for non-null required values
      * @return DiscountCodePagedQueryResponse
@@ -239,7 +263,7 @@ public class DiscountCodePagedQueryResponseBuilder implements Builder<DiscountCo
 
     /**
      * factory method for an instance of DiscountCodePagedQueryResponseBuilder
-     * @return builder
+     * @return builder 
      */
     public static DiscountCodePagedQueryResponseBuilder of() {
         return new DiscountCodePagedQueryResponseBuilder();

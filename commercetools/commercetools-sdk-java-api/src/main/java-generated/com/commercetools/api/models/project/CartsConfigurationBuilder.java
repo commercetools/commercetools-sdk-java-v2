@@ -1,10 +1,11 @@
-
 package com.commercetools.api.models.project;
 
-import java.util.*;
 
+import com.commercetools.api.models.project.CartsConfiguration;
 import javax.annotation.Nullable;
-
+import java.util.*;
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -17,60 +18,69 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     CartsConfiguration cartsConfiguration = CartsConfiguration.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class CartsConfigurationBuilder implements Builder<CartsConfiguration> {
 
+    
     @Nullable
     private Long deleteDaysAfterLastModification;
-
+    
+    
     @Nullable
     private Boolean countryTaxRateFallbackEnabled;
 
+    
     /**
      *  <p>Default value for the <code>deleteDaysAfterLastModification</code> parameter of the CartDraft and MyCartDraft. If a ChangeSubscription for Carts exists, a ResourceDeletedDeliveryPayload is sent upon deletion of a Cart.</p>
      *  <p>This field may not be present on Projects created before January 2020.</p>
      * @param deleteDaysAfterLastModification value to be set
      * @return Builder
      */
-
-    public CartsConfigurationBuilder deleteDaysAfterLastModification(
-            @Nullable final Long deleteDaysAfterLastModification) {
+    
+    public CartsConfigurationBuilder deleteDaysAfterLastModification(@Nullable final Long deleteDaysAfterLastModification) {
         this.deleteDaysAfterLastModification = deleteDaysAfterLastModification;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Indicates if country <em>- no state</em> Tax Rate fallback should be used when a shipping address state is not explicitly covered in the rates lists of all Tax Categories of a Cart Line Items. This field may not be present on Projects created before June 2020.</p>
      * @param countryTaxRateFallbackEnabled value to be set
      * @return Builder
      */
-
-    public CartsConfigurationBuilder countryTaxRateFallbackEnabled(
-            @Nullable final Boolean countryTaxRateFallbackEnabled) {
+    
+    public CartsConfigurationBuilder countryTaxRateFallbackEnabled(@Nullable final Boolean countryTaxRateFallbackEnabled) {
         this.countryTaxRateFallbackEnabled = countryTaxRateFallbackEnabled;
         return this;
     }
+    
+    
 
     /**
      *  <p>Default value for the <code>deleteDaysAfterLastModification</code> parameter of the CartDraft and MyCartDraft. If a ChangeSubscription for Carts exists, a ResourceDeletedDeliveryPayload is sent upon deletion of a Cart.</p>
      *  <p>This field may not be present on Projects created before January 2020.</p>
      * @return deleteDaysAfterLastModification
      */
-
+    
     @Nullable
-    public Long getDeleteDaysAfterLastModification() {
+    public Long getDeleteDaysAfterLastModification(){
         return this.deleteDaysAfterLastModification;
     }
-
+    
     /**
      *  <p>Indicates if country <em>- no state</em> Tax Rate fallback should be used when a shipping address state is not explicitly covered in the rates lists of all Tax Categories of a Cart Line Items. This field may not be present on Projects created before June 2020.</p>
      * @return countryTaxRateFallbackEnabled
      */
-
+    
     @Nullable
-    public Boolean getCountryTaxRateFallbackEnabled() {
+    public Boolean getCountryTaxRateFallbackEnabled(){
         return this.countryTaxRateFallbackEnabled;
     }
 
@@ -81,7 +91,7 @@ public class CartsConfigurationBuilder implements Builder<CartsConfiguration> {
     public CartsConfiguration build() {
         return new CartsConfigurationImpl(deleteDaysAfterLastModification, countryTaxRateFallbackEnabled);
     }
-
+    
     /**
      * builds CartsConfiguration without checking for non-null required values
      * @return CartsConfiguration
@@ -92,7 +102,7 @@ public class CartsConfigurationBuilder implements Builder<CartsConfiguration> {
 
     /**
      * factory method for an instance of CartsConfigurationBuilder
-     * @return builder
+     * @return builder 
      */
     public static CartsConfigurationBuilder of() {
         return new CartsConfigurationBuilder();

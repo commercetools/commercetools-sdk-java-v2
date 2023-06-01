@@ -1,9 +1,12 @@
-
 package com.commercetools.api.models.product_type;
 
+import com.commercetools.api.models.product_type.AttributePlainEnumValue;
+import com.commercetools.api.models.product_type.ProductTypeUpdateAction;
+import com.commercetools.api.models.product_type.ProductTypeChangePlainEnumValueLabelAction;
+import javax.annotation.Nullable;
 import java.util.*;
 import java.util.function.Function;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -18,79 +21,89 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .newValue(newValueBuilder -> newValueBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
-public class ProductTypeChangePlainEnumValueLabelActionBuilder
-        implements Builder<ProductTypeChangePlainEnumValueLabelAction> {
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
+public class ProductTypeChangePlainEnumValueLabelActionBuilder implements Builder<ProductTypeChangePlainEnumValueLabelAction> {
 
+    
+    
     private String attributeName;
-
+    
+    
+    
     private com.commercetools.api.models.product_type.AttributePlainEnumValue newValue;
 
+    
     /**
      *  <p>Name of the AttributeDefinition to update.</p>
      * @param attributeName value to be set
      * @return Builder
      */
-
-    public ProductTypeChangePlainEnumValueLabelActionBuilder attributeName(final String attributeName) {
+    
+    public ProductTypeChangePlainEnumValueLabelActionBuilder attributeName( final String attributeName) {
         this.attributeName = attributeName;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>New value to set. Must be different from the existing value.</p>
      * @param builder function to build the newValue value
      * @return Builder
      */
-
-    public ProductTypeChangePlainEnumValueLabelActionBuilder newValue(
-            Function<com.commercetools.api.models.product_type.AttributePlainEnumValueBuilder, com.commercetools.api.models.product_type.AttributePlainEnumValueBuilder> builder) {
-        this.newValue = builder.apply(com.commercetools.api.models.product_type.AttributePlainEnumValueBuilder.of())
-                .build();
+    
+    public ProductTypeChangePlainEnumValueLabelActionBuilder newValue(Function<com.commercetools.api.models.product_type.AttributePlainEnumValueBuilder, com.commercetools.api.models.product_type.AttributePlainEnumValueBuilder> builder) {
+        this.newValue = builder.apply(com.commercetools.api.models.product_type.AttributePlainEnumValueBuilder.of()).build();
         return this;
     }
-
+    
     /**
      *  <p>New value to set. Must be different from the existing value.</p>
      * @param builder function to build the newValue value
      * @return Builder
      */
-
-    public ProductTypeChangePlainEnumValueLabelActionBuilder withNewValue(
-            Function<com.commercetools.api.models.product_type.AttributePlainEnumValueBuilder, com.commercetools.api.models.product_type.AttributePlainEnumValue> builder) {
+    
+    public ProductTypeChangePlainEnumValueLabelActionBuilder withNewValue(Function<com.commercetools.api.models.product_type.AttributePlainEnumValueBuilder, com.commercetools.api.models.product_type.AttributePlainEnumValue> builder) {
         this.newValue = builder.apply(com.commercetools.api.models.product_type.AttributePlainEnumValueBuilder.of());
         return this;
     }
-
+                    
     /**
      *  <p>New value to set. Must be different from the existing value.</p>
      * @param newValue value to be set
      * @return Builder
      */
-
-    public ProductTypeChangePlainEnumValueLabelActionBuilder newValue(
-            final com.commercetools.api.models.product_type.AttributePlainEnumValue newValue) {
+    
+    public ProductTypeChangePlainEnumValueLabelActionBuilder newValue( final com.commercetools.api.models.product_type.AttributePlainEnumValue newValue) {
         this.newValue = newValue;
         return this;
     }
+    
+    
 
     /**
      *  <p>Name of the AttributeDefinition to update.</p>
      * @return attributeName
      */
-
-    public String getAttributeName() {
+    
+    
+    public String getAttributeName(){
         return this.attributeName;
     }
-
+    
     /**
      *  <p>New value to set. Must be different from the existing value.</p>
      * @return newValue
      */
-
-    public com.commercetools.api.models.product_type.AttributePlainEnumValue getNewValue() {
+    
+    
+    public com.commercetools.api.models.product_type.AttributePlainEnumValue getNewValue(){
         return this.newValue;
     }
 
@@ -99,12 +112,11 @@ public class ProductTypeChangePlainEnumValueLabelActionBuilder
      * @return ProductTypeChangePlainEnumValueLabelAction
      */
     public ProductTypeChangePlainEnumValueLabelAction build() {
-        Objects.requireNonNull(attributeName,
-            ProductTypeChangePlainEnumValueLabelAction.class + ": attributeName is missing");
+        Objects.requireNonNull(attributeName, ProductTypeChangePlainEnumValueLabelAction.class + ": attributeName is missing");
         Objects.requireNonNull(newValue, ProductTypeChangePlainEnumValueLabelAction.class + ": newValue is missing");
         return new ProductTypeChangePlainEnumValueLabelActionImpl(attributeName, newValue);
     }
-
+    
     /**
      * builds ProductTypeChangePlainEnumValueLabelAction without checking for non-null required values
      * @return ProductTypeChangePlainEnumValueLabelAction
@@ -115,7 +127,7 @@ public class ProductTypeChangePlainEnumValueLabelActionBuilder
 
     /**
      * factory method for an instance of ProductTypeChangePlainEnumValueLabelActionBuilder
-     * @return builder
+     * @return builder 
      */
     public static ProductTypeChangePlainEnumValueLabelActionBuilder of() {
         return new ProductTypeChangePlainEnumValueLabelActionBuilder();
@@ -126,8 +138,7 @@ public class ProductTypeChangePlainEnumValueLabelActionBuilder
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static ProductTypeChangePlainEnumValueLabelActionBuilder of(
-            final ProductTypeChangePlainEnumValueLabelAction template) {
+    public static ProductTypeChangePlainEnumValueLabelActionBuilder of(final ProductTypeChangePlainEnumValueLabelAction template) {
         ProductTypeChangePlainEnumValueLabelActionBuilder builder = new ProductTypeChangePlainEnumValueLabelActionBuilder();
         builder.attributeName = template.getAttributeName();
         builder.newValue = template.getNewValue();

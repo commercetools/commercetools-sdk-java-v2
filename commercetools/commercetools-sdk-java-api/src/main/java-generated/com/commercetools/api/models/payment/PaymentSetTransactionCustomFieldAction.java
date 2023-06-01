@@ -1,17 +1,21 @@
-
 package com.commercetools.api.models.payment;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
+import com.commercetools.api.models.payment.PaymentUpdateAction;
+import java.lang.Object;
+import com.commercetools.api.models.payment.PaymentSetTransactionCustomFieldActionImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * PaymentSetTransactionCustomFieldAction
@@ -25,9 +29,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .name("{name}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = PaymentSetTransactionCustomFieldActionImpl.class)
 public interface PaymentSetTransactionCustomFieldAction extends PaymentUpdateAction {
 
@@ -43,7 +50,6 @@ public interface PaymentSetTransactionCustomFieldAction extends PaymentUpdateAct
     @NotNull
     @JsonProperty("transactionId")
     public String getTransactionId();
-
     /**
      *  <p>Name of the Custom Field.</p>
      * @return name
@@ -51,12 +57,11 @@ public interface PaymentSetTransactionCustomFieldAction extends PaymentUpdateAct
     @NotNull
     @JsonProperty("name")
     public String getName();
-
     /**
      *  <p>If <code>value</code> is absent or <code>null</code>, this field will be removed if it exists. Removing a field that does not exist returns an InvalidOperation error. If <code>value</code> is provided, it is set for the field defined by <code>name</code>.</p>
      * @return value
      */
-
+    
     @JsonProperty("value")
     public Object getValue();
 
@@ -64,30 +69,34 @@ public interface PaymentSetTransactionCustomFieldAction extends PaymentUpdateAct
      *  <p>Unique identifier of the Transaction.</p>
      * @param transactionId value to be set
      */
-
+    
     public void setTransactionId(final String transactionId);
-
+    
+    
     /**
      *  <p>Name of the Custom Field.</p>
      * @param name value to be set
      */
-
+    
     public void setName(final String name);
-
+    
+    
     /**
      *  <p>If <code>value</code> is absent or <code>null</code>, this field will be removed if it exists. Removing a field that does not exist returns an InvalidOperation error. If <code>value</code> is provided, it is set for the field defined by <code>name</code>.</p>
      * @param value value to be set
      */
-
+    
     public void setValue(final Object value);
+    
 
     /**
      * factory method
      * @return instance of PaymentSetTransactionCustomFieldAction
      */
-    public static PaymentSetTransactionCustomFieldAction of() {
+    public static PaymentSetTransactionCustomFieldAction of(){
         return new PaymentSetTransactionCustomFieldActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy PaymentSetTransactionCustomFieldAction
@@ -108,8 +117,7 @@ public interface PaymentSetTransactionCustomFieldAction extends PaymentUpdateAct
      * @return copy instance
      */
     @Nullable
-    public static PaymentSetTransactionCustomFieldAction deepCopy(
-            @Nullable final PaymentSetTransactionCustomFieldAction template) {
+    public static PaymentSetTransactionCustomFieldAction deepCopy(@Nullable final PaymentSetTransactionCustomFieldAction template) {
         if (template == null) {
             return null;
         }
@@ -127,16 +135,16 @@ public interface PaymentSetTransactionCustomFieldAction extends PaymentUpdateAct
     public static PaymentSetTransactionCustomFieldActionBuilder builder() {
         return PaymentSetTransactionCustomFieldActionBuilder.of();
     }
-
+    
     /**
      * create builder for PaymentSetTransactionCustomFieldAction instance
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static PaymentSetTransactionCustomFieldActionBuilder builder(
-            final PaymentSetTransactionCustomFieldAction template) {
+    public static PaymentSetTransactionCustomFieldActionBuilder builder(final PaymentSetTransactionCustomFieldAction template) {
         return PaymentSetTransactionCustomFieldActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -144,15 +152,14 @@ public interface PaymentSetTransactionCustomFieldAction extends PaymentUpdateAct
      * @param helper function to map the object
      * @return mapped value
      */
-    default <T> T withPaymentSetTransactionCustomFieldAction(
-            Function<PaymentSetTransactionCustomFieldAction, T> helper) {
+    default <T> T withPaymentSetTransactionCustomFieldAction(Function<PaymentSetTransactionCustomFieldAction, T> helper) {
         return helper.apply(this);
     }
-
     public static PaymentSetTransactionCustomFieldAction ofUnset(final String name, final String transactionId) {
         return PaymentSetTransactionCustomFieldActionBuilder.of().name(name).transactionId(transactionId).build();
     }
-
+    
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

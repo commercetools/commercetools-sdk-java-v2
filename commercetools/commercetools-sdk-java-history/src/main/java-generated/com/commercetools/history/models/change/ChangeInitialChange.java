@@ -1,17 +1,20 @@
-
 package com.commercetools.history.models.change;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
+import com.commercetools.history.models.change.Change;
+import com.commercetools.history.models.change.ChangeInitialChangeImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * ChangeInitialChange
@@ -26,9 +29,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .nextValue(true)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = ChangeInitialChangeImpl.class)
 public interface ChangeInitialChange extends Change {
 
@@ -44,7 +50,6 @@ public interface ChangeInitialChange extends Change {
     @NotNull
     @JsonProperty("type")
     public String getType();
-
     /**
      *  <p>Shape of the action for <code>changeInitial</code></p>
      * @return change
@@ -52,7 +57,6 @@ public interface ChangeInitialChange extends Change {
     @NotNull
     @JsonProperty("change")
     public String getChange();
-
     /**
      *
      * @return previousValue
@@ -60,7 +64,6 @@ public interface ChangeInitialChange extends Change {
     @NotNull
     @JsonProperty("previousValue")
     public Boolean getPreviousValue();
-
     /**
      *
      * @return nextValue
@@ -73,30 +76,34 @@ public interface ChangeInitialChange extends Change {
      *  <p>Shape of the action for <code>changeInitial</code></p>
      * @param change value to be set
      */
-
+    
     public void setChange(final String change);
-
+    
+    
     /**
      * set previousValue
      * @param previousValue value to be set
      */
-
+    
     public void setPreviousValue(final Boolean previousValue);
-
+    
+    
     /**
      * set nextValue
      * @param nextValue value to be set
      */
-
+    
     public void setNextValue(final Boolean nextValue);
+    
 
     /**
      * factory method
      * @return instance of ChangeInitialChange
      */
-    public static ChangeInitialChange of() {
+    public static ChangeInitialChange of(){
         return new ChangeInitialChangeImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy ChangeInitialChange
@@ -135,7 +142,7 @@ public interface ChangeInitialChange extends Change {
     public static ChangeInitialChangeBuilder builder() {
         return ChangeInitialChangeBuilder.of();
     }
-
+    
     /**
      * create builder for ChangeInitialChange instance
      * @param template instance with prefilled values for the builder
@@ -144,6 +151,7 @@ public interface ChangeInitialChange extends Change {
     public static ChangeInitialChangeBuilder builder(final ChangeInitialChange template) {
         return ChangeInitialChangeBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -154,7 +162,7 @@ public interface ChangeInitialChange extends Change {
     default <T> T withChangeInitialChange(Function<ChangeInitialChange, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

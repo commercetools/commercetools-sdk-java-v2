@@ -1,20 +1,22 @@
-
 package com.commercetools.history.models.change;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
+import com.commercetools.history.models.change.Change;
 import com.commercetools.history.models.change_value.ShoppingListLineItemValue;
 import com.commercetools.history.models.common.CustomFields;
+import com.commercetools.history.models.change.SetShoppingListLineItemCustomTypeChangeImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * SetShoppingListLineItemCustomTypeChange
@@ -30,9 +32,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .previousValue(previousValueBuilder -> previousValueBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = SetShoppingListLineItemCustomTypeChangeImpl.class)
 public interface SetShoppingListLineItemCustomTypeChange extends Change {
 
@@ -48,7 +53,6 @@ public interface SetShoppingListLineItemCustomTypeChange extends Change {
     @NotNull
     @JsonProperty("type")
     public String getType();
-
     /**
      *  <p>Update action for <code>setLineItemCustomType</code></p>
      * @return change
@@ -56,7 +60,6 @@ public interface SetShoppingListLineItemCustomTypeChange extends Change {
     @NotNull
     @JsonProperty("change")
     public String getChange();
-
     /**
      *
      * @return lineItem
@@ -65,7 +68,6 @@ public interface SetShoppingListLineItemCustomTypeChange extends Change {
     @Valid
     @JsonProperty("lineItem")
     public ShoppingListLineItemValue getLineItem();
-
     /**
      *
      * @return nextValue
@@ -74,7 +76,6 @@ public interface SetShoppingListLineItemCustomTypeChange extends Change {
     @Valid
     @JsonProperty("nextValue")
     public CustomFields getNextValue();
-
     /**
      *
      * @return previousValue
@@ -88,37 +89,42 @@ public interface SetShoppingListLineItemCustomTypeChange extends Change {
      *  <p>Update action for <code>setLineItemCustomType</code></p>
      * @param change value to be set
      */
-
+    
     public void setChange(final String change);
-
+    
+    
     /**
      * set lineItem
      * @param lineItem value to be set
      */
-
+    
     public void setLineItem(final ShoppingListLineItemValue lineItem);
-
+    
+    
     /**
      * set nextValue
      * @param nextValue value to be set
      */
-
+    
     public void setNextValue(final CustomFields nextValue);
-
+    
+    
     /**
      * set previousValue
      * @param previousValue value to be set
      */
-
+    
     public void setPreviousValue(final CustomFields previousValue);
+    
 
     /**
      * factory method
      * @return instance of SetShoppingListLineItemCustomTypeChange
      */
-    public static SetShoppingListLineItemCustomTypeChange of() {
+    public static SetShoppingListLineItemCustomTypeChange of(){
         return new SetShoppingListLineItemCustomTypeChangeImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy SetShoppingListLineItemCustomTypeChange
@@ -140,18 +146,15 @@ public interface SetShoppingListLineItemCustomTypeChange extends Change {
      * @return copy instance
      */
     @Nullable
-    public static SetShoppingListLineItemCustomTypeChange deepCopy(
-            @Nullable final SetShoppingListLineItemCustomTypeChange template) {
+    public static SetShoppingListLineItemCustomTypeChange deepCopy(@Nullable final SetShoppingListLineItemCustomTypeChange template) {
         if (template == null) {
             return null;
         }
         SetShoppingListLineItemCustomTypeChangeImpl instance = new SetShoppingListLineItemCustomTypeChangeImpl();
         instance.setChange(template.getChange());
-        instance.setLineItem(
-            com.commercetools.history.models.change_value.ShoppingListLineItemValue.deepCopy(template.getLineItem()));
+        instance.setLineItem(com.commercetools.history.models.change_value.ShoppingListLineItemValue.deepCopy(template.getLineItem()));
         instance.setNextValue(com.commercetools.history.models.common.CustomFields.deepCopy(template.getNextValue()));
-        instance.setPreviousValue(
-            com.commercetools.history.models.common.CustomFields.deepCopy(template.getPreviousValue()));
+        instance.setPreviousValue(com.commercetools.history.models.common.CustomFields.deepCopy(template.getPreviousValue()));
         return instance;
     }
 
@@ -162,16 +165,16 @@ public interface SetShoppingListLineItemCustomTypeChange extends Change {
     public static SetShoppingListLineItemCustomTypeChangeBuilder builder() {
         return SetShoppingListLineItemCustomTypeChangeBuilder.of();
     }
-
+    
     /**
      * create builder for SetShoppingListLineItemCustomTypeChange instance
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static SetShoppingListLineItemCustomTypeChangeBuilder builder(
-            final SetShoppingListLineItemCustomTypeChange template) {
+    public static SetShoppingListLineItemCustomTypeChangeBuilder builder(final SetShoppingListLineItemCustomTypeChange template) {
         return SetShoppingListLineItemCustomTypeChangeBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -179,11 +182,10 @@ public interface SetShoppingListLineItemCustomTypeChange extends Change {
      * @param helper function to map the object
      * @return mapped value
      */
-    default <T> T withSetShoppingListLineItemCustomTypeChange(
-            Function<SetShoppingListLineItemCustomTypeChange, T> helper) {
+    default <T> T withSetShoppingListLineItemCustomTypeChange(Function<SetShoppingListLineItemCustomTypeChange, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

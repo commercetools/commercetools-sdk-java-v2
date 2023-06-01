@@ -1,10 +1,11 @@
-
 package com.commercetools.api.models.shopping_list;
 
-import java.util.*;
-
+import com.commercetools.api.models.shopping_list.ShoppingListUpdateAction;
+import com.commercetools.api.models.shopping_list.ShoppingListSetAnonymousIdAction;
 import javax.annotation.Nullable;
-
+import java.util.*;
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -17,32 +18,39 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     ShoppingListSetAnonymousIdAction shoppingListSetAnonymousIdAction = ShoppingListSetAnonymousIdAction.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class ShoppingListSetAnonymousIdActionBuilder implements Builder<ShoppingListSetAnonymousIdAction> {
 
+    
     @Nullable
     private String anonymousId;
 
+    
     /**
      *  <p>Value to set. If empty, any existing value will be removed.</p>
      * @param anonymousId value to be set
      * @return Builder
      */
-
+    
     public ShoppingListSetAnonymousIdActionBuilder anonymousId(@Nullable final String anonymousId) {
         this.anonymousId = anonymousId;
         return this;
     }
+    
+    
 
     /**
      *  <p>Value to set. If empty, any existing value will be removed.</p>
      * @return anonymousId
      */
-
+    
     @Nullable
-    public String getAnonymousId() {
+    public String getAnonymousId(){
         return this.anonymousId;
     }
 
@@ -53,7 +61,7 @@ public class ShoppingListSetAnonymousIdActionBuilder implements Builder<Shopping
     public ShoppingListSetAnonymousIdAction build() {
         return new ShoppingListSetAnonymousIdActionImpl(anonymousId);
     }
-
+    
     /**
      * builds ShoppingListSetAnonymousIdAction without checking for non-null required values
      * @return ShoppingListSetAnonymousIdAction
@@ -64,7 +72,7 @@ public class ShoppingListSetAnonymousIdActionBuilder implements Builder<Shopping
 
     /**
      * factory method for an instance of ShoppingListSetAnonymousIdActionBuilder
-     * @return builder
+     * @return builder 
      */
     public static ShoppingListSetAnonymousIdActionBuilder of() {
         return new ShoppingListSetAnonymousIdActionBuilder();

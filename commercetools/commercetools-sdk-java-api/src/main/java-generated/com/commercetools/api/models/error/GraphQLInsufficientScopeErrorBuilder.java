@@ -1,8 +1,11 @@
-
 package com.commercetools.api.models.error;
 
+import com.commercetools.api.models.error.GraphQLErrorObject;
+import com.commercetools.api.models.error.GraphQLInsufficientScopeError;
+import javax.annotation.Nullable;
 import java.util.*;
-
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -15,11 +18,16 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     GraphQLInsufficientScopeError graphQLInsufficientScopeError = GraphQLInsufficientScopeError.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class GraphQLInsufficientScopeErrorBuilder implements Builder<GraphQLInsufficientScopeError> {
 
+    
+    
     private Map<String, java.lang.Object> values = new HashMap<>();
 
     /**
@@ -27,19 +35,19 @@ public class GraphQLInsufficientScopeErrorBuilder implements Builder<GraphQLInsu
      * @param values properties to be set
      * @return Builder
      */
-
-    public GraphQLInsufficientScopeErrorBuilder values(final Map<String, java.lang.Object> values) {
+    
+    public GraphQLInsufficientScopeErrorBuilder values( final Map<String, java.lang.Object> values){
         this.values = values;
         return this;
     }
-
+    
     /**
      *  <p>Error-specific additional fields.</p>
      * @param key property name
      * @param value property value
      * @return Builder
      */
-
+    
     public GraphQLInsufficientScopeErrorBuilder addValue(final String key, final java.lang.Object value) {
         if (this.values == null) {
             values = new HashMap<>();
@@ -47,13 +55,15 @@ public class GraphQLInsufficientScopeErrorBuilder implements Builder<GraphQLInsu
         values.put(key, value);
         return this;
     }
+    
 
     /**
      *  <p>Error-specific additional fields.</p>
      * @return pattern properties
      */
-
-    public Map<String, java.lang.Object> getValues() {
+    
+    
+    public Map<String, java.lang.Object> getValues(){
         return this.values;
     }
 
@@ -64,7 +74,7 @@ public class GraphQLInsufficientScopeErrorBuilder implements Builder<GraphQLInsu
     public GraphQLInsufficientScopeError build() {
         return new GraphQLInsufficientScopeErrorImpl(values);
     }
-
+    
     /**
      * builds GraphQLInsufficientScopeError without checking for non-null required values
      * @return GraphQLInsufficientScopeError
@@ -75,7 +85,7 @@ public class GraphQLInsufficientScopeErrorBuilder implements Builder<GraphQLInsu
 
     /**
      * factory method for an instance of GraphQLInsufficientScopeErrorBuilder
-     * @return builder
+     * @return builder 
      */
     public static GraphQLInsufficientScopeErrorBuilder of() {
         return new GraphQLInsufficientScopeErrorBuilder();

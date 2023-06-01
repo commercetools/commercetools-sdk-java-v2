@@ -1,19 +1,21 @@
-
 package com.commercetools.api.models.payment;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
+import com.commercetools.api.models.payment.PaymentUpdateAction;
 import com.commercetools.api.models.state.StateResourceIdentifier;
+import com.commercetools.api.models.payment.PaymentTransitionStateActionImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>If the Payment has no current State, <code>initial</code> must be <code>true</code> for the new State. If the existing State has transitions set, the new State must be a valid transition. If the existing State has no transitions set, no validations are performed when transitioning to the new State.</p>
@@ -27,9 +29,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .state(stateBuilder -> stateBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = PaymentTransitionStateActionImpl.class)
 public interface PaymentTransitionStateAction extends PaymentUpdateAction {
 
@@ -46,12 +51,11 @@ public interface PaymentTransitionStateAction extends PaymentUpdateAction {
     @Valid
     @JsonProperty("state")
     public StateResourceIdentifier getState();
-
     /**
      *  <p>Set to <code>true</code> to skip validations when transitioning to the new State.</p>
      * @return force
      */
-
+    
     @JsonProperty("force")
     public Boolean getForce();
 
@@ -59,23 +63,26 @@ public interface PaymentTransitionStateAction extends PaymentUpdateAction {
      *  <p>ResourceIdentifier to a State.</p>
      * @param state value to be set
      */
-
+    
     public void setState(final StateResourceIdentifier state);
-
+    
+    
     /**
      *  <p>Set to <code>true</code> to skip validations when transitioning to the new State.</p>
      * @param force value to be set
      */
-
+    
     public void setForce(final Boolean force);
+    
 
     /**
      * factory method
      * @return instance of PaymentTransitionStateAction
      */
-    public static PaymentTransitionStateAction of() {
+    public static PaymentTransitionStateAction of(){
         return new PaymentTransitionStateActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy PaymentTransitionStateAction
@@ -112,7 +119,7 @@ public interface PaymentTransitionStateAction extends PaymentUpdateAction {
     public static PaymentTransitionStateActionBuilder builder() {
         return PaymentTransitionStateActionBuilder.of();
     }
-
+    
     /**
      * create builder for PaymentTransitionStateAction instance
      * @param template instance with prefilled values for the builder
@@ -121,6 +128,7 @@ public interface PaymentTransitionStateAction extends PaymentUpdateAction {
     public static PaymentTransitionStateActionBuilder builder(final PaymentTransitionStateAction template) {
         return PaymentTransitionStateActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -131,7 +139,7 @@ public interface PaymentTransitionStateAction extends PaymentUpdateAction {
     default <T> T withPaymentTransitionStateAction(Function<PaymentTransitionStateAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

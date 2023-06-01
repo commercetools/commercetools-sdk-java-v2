@@ -1,11 +1,12 @@
-
 package com.commercetools.api.models.discount_code;
 
+import com.commercetools.api.models.common.LocalizedString;
+import com.commercetools.api.models.discount_code.DiscountCodeUpdateAction;
+import com.commercetools.api.models.discount_code.DiscountCodeSetDescriptionAction;
+import javax.annotation.Nullable;
 import java.util.*;
 import java.util.function.Function;
-
-import javax.annotation.Nullable;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -18,57 +19,61 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     DiscountCodeSetDescriptionAction discountCodeSetDescriptionAction = DiscountCodeSetDescriptionAction.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class DiscountCodeSetDescriptionActionBuilder implements Builder<DiscountCodeSetDescriptionAction> {
 
+    
     @Nullable
     private com.commercetools.api.models.common.LocalizedString description;
 
+    
     /**
      *  <p>Value to set. If empty, any existing value will be removed.</p>
      * @param builder function to build the description value
      * @return Builder
      */
-
-    public DiscountCodeSetDescriptionActionBuilder description(
-            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
+    
+    public DiscountCodeSetDescriptionActionBuilder description(Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
         this.description = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of()).build();
         return this;
     }
-
+    
     /**
      *  <p>Value to set. If empty, any existing value will be removed.</p>
      * @param builder function to build the description value
      * @return Builder
      */
-
-    public DiscountCodeSetDescriptionActionBuilder withDescription(
-            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedString> builder) {
+    
+    public DiscountCodeSetDescriptionActionBuilder withDescription(Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedString> builder) {
         this.description = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of());
         return this;
     }
-
+                    
     /**
      *  <p>Value to set. If empty, any existing value will be removed.</p>
      * @param description value to be set
      * @return Builder
      */
-
-    public DiscountCodeSetDescriptionActionBuilder description(
-            @Nullable final com.commercetools.api.models.common.LocalizedString description) {
+    
+    public DiscountCodeSetDescriptionActionBuilder description(@Nullable final com.commercetools.api.models.common.LocalizedString description) {
         this.description = description;
         return this;
     }
+    
+    
 
     /**
      *  <p>Value to set. If empty, any existing value will be removed.</p>
      * @return description
      */
-
+    
     @Nullable
-    public com.commercetools.api.models.common.LocalizedString getDescription() {
+    public com.commercetools.api.models.common.LocalizedString getDescription(){
         return this.description;
     }
 
@@ -79,7 +84,7 @@ public class DiscountCodeSetDescriptionActionBuilder implements Builder<Discount
     public DiscountCodeSetDescriptionAction build() {
         return new DiscountCodeSetDescriptionActionImpl(description);
     }
-
+    
     /**
      * builds DiscountCodeSetDescriptionAction without checking for non-null required values
      * @return DiscountCodeSetDescriptionAction
@@ -90,7 +95,7 @@ public class DiscountCodeSetDescriptionActionBuilder implements Builder<Discount
 
     /**
      * factory method for an instance of DiscountCodeSetDescriptionActionBuilder
-     * @return builder
+     * @return builder 
      */
     public static DiscountCodeSetDescriptionActionBuilder of() {
         return new DiscountCodeSetDescriptionActionBuilder();

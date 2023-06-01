@@ -1,8 +1,11 @@
-
 package com.commercetools.api.models.project;
 
+import com.commercetools.api.models.project.ProjectUpdateAction;
+import com.commercetools.api.models.project.ProjectChangeLanguagesAction;
+import javax.annotation.Nullable;
 import java.util.*;
-
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -16,11 +19,16 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .plusLanguages(languagesBuilder -> languagesBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class ProjectChangeLanguagesActionBuilder implements Builder<ProjectChangeLanguagesAction> {
 
+    
+    
     private java.util.List<String> languages;
 
     /**
@@ -28,43 +36,47 @@ public class ProjectChangeLanguagesActionBuilder implements Builder<ProjectChang
      * @param languages value to be set
      * @return Builder
      */
-
-    public ProjectChangeLanguagesActionBuilder languages(final String... languages) {
+    
+    public ProjectChangeLanguagesActionBuilder languages( final String ...languages) {
         this.languages = new ArrayList<>(Arrays.asList(languages));
         return this;
     }
-
+    
     /**
      *  <p>New value to set. Must not be empty.</p>
      * @param languages value to be set
      * @return Builder
      */
-
-    public ProjectChangeLanguagesActionBuilder languages(final java.util.List<String> languages) {
+    
+    public ProjectChangeLanguagesActionBuilder languages( final java.util.List<String> languages) {
         this.languages = languages;
         return this;
     }
-
+    
     /**
      *  <p>New value to set. Must not be empty.</p>
      * @param languages value to be set
      * @return Builder
      */
-
-    public ProjectChangeLanguagesActionBuilder plusLanguages(final String... languages) {
+    
+    public ProjectChangeLanguagesActionBuilder plusLanguages( final String ...languages) {
         if (this.languages == null) {
             this.languages = new ArrayList<>();
         }
         this.languages.addAll(Arrays.asList(languages));
         return this;
     }
+    
+    
+    
 
     /**
      *  <p>New value to set. Must not be empty.</p>
      * @return languages
      */
-
-    public java.util.List<String> getLanguages() {
+    
+    
+    public java.util.List<String> getLanguages(){
         return this.languages;
     }
 
@@ -76,7 +88,7 @@ public class ProjectChangeLanguagesActionBuilder implements Builder<ProjectChang
         Objects.requireNonNull(languages, ProjectChangeLanguagesAction.class + ": languages is missing");
         return new ProjectChangeLanguagesActionImpl(languages);
     }
-
+    
     /**
      * builds ProjectChangeLanguagesAction without checking for non-null required values
      * @return ProjectChangeLanguagesAction
@@ -87,7 +99,7 @@ public class ProjectChangeLanguagesActionBuilder implements Builder<ProjectChang
 
     /**
      * factory method for an instance of ProjectChangeLanguagesActionBuilder
-     * @return builder
+     * @return builder 
      */
     public static ProjectChangeLanguagesActionBuilder of() {
         return new ProjectChangeLanguagesActionBuilder();

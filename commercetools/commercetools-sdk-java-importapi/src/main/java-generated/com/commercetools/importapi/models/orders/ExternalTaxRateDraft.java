@@ -1,20 +1,20 @@
-
 package com.commercetools.importapi.models.orders;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-import java.util.stream.Collectors;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
 import com.commercetools.importapi.models.prices.SubRate;
+import com.commercetools.importapi.models.orders.ExternalTaxRateDraftImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * ExternalTaxRateDraft
@@ -28,11 +28,15 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .country("{country}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = ExternalTaxRateDraftImpl.class)
 public interface ExternalTaxRateDraft extends io.vrap.rmf.base.client.Draft<ExternalTaxRateDraft> {
+
 
     /**
      *
@@ -41,15 +45,13 @@ public interface ExternalTaxRateDraft extends io.vrap.rmf.base.client.Draft<Exte
     @NotNull
     @JsonProperty("name")
     public String getName();
-
     /**
      *
      * @return amount
      */
-
+    
     @JsonProperty("amount")
     public Double getAmount();
-
     /**
      *
      * @return country
@@ -57,15 +59,13 @@ public interface ExternalTaxRateDraft extends io.vrap.rmf.base.client.Draft<Exte
     @NotNull
     @JsonProperty("country")
     public String getCountry();
-
     /**
      *
      * @return state
      */
-
+    
     @JsonProperty("state")
     public String getState();
-
     /**
      *
      * @return subRates
@@ -73,12 +73,11 @@ public interface ExternalTaxRateDraft extends io.vrap.rmf.base.client.Draft<Exte
     @Valid
     @JsonProperty("subRates")
     public List<SubRate> getSubRates();
-
     /**
      *
      * @return includedInPrice
      */
-
+    
     @JsonProperty("includedInPrice")
     public Boolean getIncludedInPrice();
 
@@ -86,59 +85,64 @@ public interface ExternalTaxRateDraft extends io.vrap.rmf.base.client.Draft<Exte
      * set name
      * @param name value to be set
      */
-
+    
     public void setName(final String name);
-
+    
+    
     /**
      * set amount
      * @param amount value to be set
      */
-
+    
     public void setAmount(final Double amount);
-
+    
+    
     /**
      * set country
      * @param country value to be set
      */
-
+    
     public void setCountry(final String country);
-
+    
+    
     /**
      * set state
      * @param state value to be set
      */
-
+    
     public void setState(final String state);
-
+    
+    
     /**
      * set subRates
      * @param subRates values to be set
      */
-
+    
     @JsonIgnore
-    public void setSubRates(final SubRate... subRates);
-
+    public void setSubRates(final SubRate ...subRates);
     /**
      * set subRates
      * @param subRates values to be set
      */
-
+    
     public void setSubRates(final List<SubRate> subRates);
-
+    
     /**
      * set includedInPrice
      * @param includedInPrice value to be set
      */
-
+    
     public void setIncludedInPrice(final Boolean includedInPrice);
+    
 
     /**
      * factory method
      * @return instance of ExternalTaxRateDraft
      */
-    public static ExternalTaxRateDraft of() {
+    public static ExternalTaxRateDraft of(){
         return new ExternalTaxRateDraftImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy ExternalTaxRateDraft
@@ -172,9 +176,7 @@ public interface ExternalTaxRateDraft extends io.vrap.rmf.base.client.Draft<Exte
         instance.setCountry(template.getCountry());
         instance.setState(template.getState());
         instance.setSubRates(Optional.ofNullable(template.getSubRates())
-                .map(t -> t.stream()
-                        .map(com.commercetools.importapi.models.prices.SubRate::deepCopy)
-                        .collect(Collectors.toList()))
+                .map(t -> t.stream().map(com.commercetools.importapi.models.prices.SubRate::deepCopy).collect(Collectors.toList()))
                 .orElse(null));
         instance.setIncludedInPrice(template.getIncludedInPrice());
         return instance;
@@ -187,7 +189,7 @@ public interface ExternalTaxRateDraft extends io.vrap.rmf.base.client.Draft<Exte
     public static ExternalTaxRateDraftBuilder builder() {
         return ExternalTaxRateDraftBuilder.of();
     }
-
+    
     /**
      * create builder for ExternalTaxRateDraft instance
      * @param template instance with prefilled values for the builder
@@ -196,6 +198,7 @@ public interface ExternalTaxRateDraft extends io.vrap.rmf.base.client.Draft<Exte
     public static ExternalTaxRateDraftBuilder builder(final ExternalTaxRateDraft template) {
         return ExternalTaxRateDraftBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -206,7 +209,7 @@ public interface ExternalTaxRateDraft extends io.vrap.rmf.base.client.Draft<Exte
     default <T> T withExternalTaxRateDraft(Function<ExternalTaxRateDraft, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

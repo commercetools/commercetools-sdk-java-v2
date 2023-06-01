@@ -1,19 +1,22 @@
-
 package com.commercetools.api.models.order_edit;
 
-import java.time.*;
+import com.commercetools.api.models.order_edit.OrderEditResult;
+import com.commercetools.api.models.order_edit.OrderExcerpt;
 import java.time.ZonedDateTime;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
+import com.commercetools.api.models.order_edit.OrderEditAppliedImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * OrderEditApplied
@@ -28,9 +31,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .excerptAfterEdit(excerptAfterEditBuilder -> excerptAfterEditBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = OrderEditAppliedImpl.class)
 public interface OrderEditApplied extends OrderEditResult {
 
@@ -46,7 +52,6 @@ public interface OrderEditApplied extends OrderEditResult {
     @NotNull
     @JsonProperty("appliedAt")
     public ZonedDateTime getAppliedAt();
-
     /**
      *
      * @return excerptBeforeEdit
@@ -55,7 +60,6 @@ public interface OrderEditApplied extends OrderEditResult {
     @Valid
     @JsonProperty("excerptBeforeEdit")
     public OrderExcerpt getExcerptBeforeEdit();
-
     /**
      *
      * @return excerptAfterEdit
@@ -69,30 +73,34 @@ public interface OrderEditApplied extends OrderEditResult {
      * set appliedAt
      * @param appliedAt value to be set
      */
-
+    
     public void setAppliedAt(final ZonedDateTime appliedAt);
-
+    
+    
     /**
      * set excerptBeforeEdit
      * @param excerptBeforeEdit value to be set
      */
-
+    
     public void setExcerptBeforeEdit(final OrderExcerpt excerptBeforeEdit);
-
+    
+    
     /**
      * set excerptAfterEdit
      * @param excerptAfterEdit value to be set
      */
-
+    
     public void setExcerptAfterEdit(final OrderExcerpt excerptAfterEdit);
+    
 
     /**
      * factory method
      * @return instance of OrderEditApplied
      */
-    public static OrderEditApplied of() {
+    public static OrderEditApplied of(){
         return new OrderEditAppliedImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy OrderEditApplied
@@ -119,10 +127,8 @@ public interface OrderEditApplied extends OrderEditResult {
         }
         OrderEditAppliedImpl instance = new OrderEditAppliedImpl();
         instance.setAppliedAt(template.getAppliedAt());
-        instance.setExcerptBeforeEdit(
-            com.commercetools.api.models.order_edit.OrderExcerpt.deepCopy(template.getExcerptBeforeEdit()));
-        instance.setExcerptAfterEdit(
-            com.commercetools.api.models.order_edit.OrderExcerpt.deepCopy(template.getExcerptAfterEdit()));
+        instance.setExcerptBeforeEdit(com.commercetools.api.models.order_edit.OrderExcerpt.deepCopy(template.getExcerptBeforeEdit()));
+        instance.setExcerptAfterEdit(com.commercetools.api.models.order_edit.OrderExcerpt.deepCopy(template.getExcerptAfterEdit()));
         return instance;
     }
 
@@ -133,7 +139,7 @@ public interface OrderEditApplied extends OrderEditResult {
     public static OrderEditAppliedBuilder builder() {
         return OrderEditAppliedBuilder.of();
     }
-
+    
     /**
      * create builder for OrderEditApplied instance
      * @param template instance with prefilled values for the builder
@@ -142,6 +148,7 @@ public interface OrderEditApplied extends OrderEditResult {
     public static OrderEditAppliedBuilder builder(final OrderEditApplied template) {
         return OrderEditAppliedBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -152,7 +159,7 @@ public interface OrderEditApplied extends OrderEditResult {
     default <T> T withOrderEditApplied(Function<OrderEditApplied, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

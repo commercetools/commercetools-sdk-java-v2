@@ -1,21 +1,23 @@
-
 package com.commercetools.api.models.me;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
 import com.commercetools.api.models.common.Money;
+import com.commercetools.api.models.me.MyTransactionDraft;
 import com.commercetools.api.models.payment.PaymentMethodInfo;
 import com.commercetools.api.models.type.CustomFieldsDraft;
+import com.commercetools.api.models.me.MyPaymentDraftImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * MyPaymentDraft
@@ -28,12 +30,15 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .amountPlanned(amountPlannedBuilder -> amountPlannedBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = MyPaymentDraftImpl.class)
-public interface MyPaymentDraft extends com.commercetools.api.models.CustomizableDraft<MyPaymentDraft>,
-        io.vrap.rmf.base.client.Draft<MyPaymentDraft> {
+public interface MyPaymentDraft extends com.commercetools.api.models.CustomizableDraft<MyPaymentDraft>, io.vrap.rmf.base.client.Draft<MyPaymentDraft> {
+
 
     /**
      *  <p>Money value the Payment intends to receive from the customer. The value usually matches the Cart or Order gross total.</p>
@@ -43,7 +48,6 @@ public interface MyPaymentDraft extends com.commercetools.api.models.Customizabl
     @Valid
     @JsonProperty("amountPlanned")
     public Money getAmountPlanned();
-
     /**
      *  <p>Information regarding the payment interface (for example, a PSP), and the specific payment method used.</p>
      * @return paymentMethodInfo
@@ -51,7 +55,6 @@ public interface MyPaymentDraft extends com.commercetools.api.models.Customizabl
     @Valid
     @JsonProperty("paymentMethodInfo")
     public PaymentMethodInfo getPaymentMethodInfo();
-
     /**
      *  <p>Custom Fields for the Payment.</p>
      * @return custom
@@ -59,7 +62,6 @@ public interface MyPaymentDraft extends com.commercetools.api.models.Customizabl
     @Valid
     @JsonProperty("custom")
     public CustomFieldsDraft getCustom();
-
     /**
      *  <p>Financial transactions of the TransactionTypes <code>Authorization</code> or <code>Charge</code>.</p>
      * @return transaction
@@ -72,37 +74,42 @@ public interface MyPaymentDraft extends com.commercetools.api.models.Customizabl
      *  <p>Money value the Payment intends to receive from the customer. The value usually matches the Cart or Order gross total.</p>
      * @param amountPlanned value to be set
      */
-
+    
     public void setAmountPlanned(final Money amountPlanned);
-
+    
+    
     /**
      *  <p>Information regarding the payment interface (for example, a PSP), and the specific payment method used.</p>
      * @param paymentMethodInfo value to be set
      */
-
+    
     public void setPaymentMethodInfo(final PaymentMethodInfo paymentMethodInfo);
-
+    
+    
     /**
      *  <p>Custom Fields for the Payment.</p>
      * @param custom value to be set
      */
-
+    
     public void setCustom(final CustomFieldsDraft custom);
-
+    
+    
     /**
      *  <p>Financial transactions of the TransactionTypes <code>Authorization</code> or <code>Charge</code>.</p>
      * @param transaction value to be set
      */
-
+    
     public void setTransaction(final MyTransactionDraft transaction);
+    
 
     /**
      * factory method
      * @return instance of MyPaymentDraft
      */
-    public static MyPaymentDraft of() {
+    public static MyPaymentDraft of(){
         return new MyPaymentDraftImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy MyPaymentDraft
@@ -130,8 +137,7 @@ public interface MyPaymentDraft extends com.commercetools.api.models.Customizabl
         }
         MyPaymentDraftImpl instance = new MyPaymentDraftImpl();
         instance.setAmountPlanned(com.commercetools.api.models.common.Money.deepCopy(template.getAmountPlanned()));
-        instance.setPaymentMethodInfo(
-            com.commercetools.api.models.payment.PaymentMethodInfo.deepCopy(template.getPaymentMethodInfo()));
+        instance.setPaymentMethodInfo(com.commercetools.api.models.payment.PaymentMethodInfo.deepCopy(template.getPaymentMethodInfo()));
         instance.setCustom(com.commercetools.api.models.type.CustomFieldsDraft.deepCopy(template.getCustom()));
         instance.setTransaction(com.commercetools.api.models.me.MyTransactionDraft.deepCopy(template.getTransaction()));
         return instance;
@@ -144,7 +150,7 @@ public interface MyPaymentDraft extends com.commercetools.api.models.Customizabl
     public static MyPaymentDraftBuilder builder() {
         return MyPaymentDraftBuilder.of();
     }
-
+    
     /**
      * create builder for MyPaymentDraft instance
      * @param template instance with prefilled values for the builder
@@ -153,6 +159,7 @@ public interface MyPaymentDraft extends com.commercetools.api.models.Customizabl
     public static MyPaymentDraftBuilder builder(final MyPaymentDraft template) {
         return MyPaymentDraftBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -163,7 +170,7 @@ public interface MyPaymentDraft extends com.commercetools.api.models.Customizabl
     default <T> T withMyPaymentDraft(Function<MyPaymentDraft, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

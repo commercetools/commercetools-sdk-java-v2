@@ -1,97 +1,116 @@
-
 package com.commercetools.api.models.product;
 
-import java.time.*;
-import java.util.*;
-
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
-
-import io.vrap.rmf.base.client.ModelBase;
+import com.commercetools.api.models.category.CategoryReference;
+import com.commercetools.api.models.common.BaseResource;
+import com.commercetools.api.models.common.LocalizedString;
+import com.commercetools.api.models.product.CategoryOrderHints;
+import com.commercetools.api.models.product.ProductPriceModeEnum;
+import com.commercetools.api.models.product.ProductVariant;
+import com.commercetools.api.models.product.SearchKeywords;
+import com.commercetools.api.models.product_type.ProductTypeReference;
+import com.commercetools.api.models.review.ReviewRatingStatistics;
+import com.commercetools.api.models.state.StateReference;
+import com.commercetools.api.models.tax_category.TaxCategoryReference;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.ModelBase;
+import javax.validation.Valid;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.annotation.*;
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
  * ProductProjection
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class ProductProjectionImpl implements ProductProjection, ModelBase {
 
+    
     private String id;
-
+    
+    
     private Long version;
-
+    
+    
     private java.time.ZonedDateTime createdAt;
-
+    
+    
     private java.time.ZonedDateTime lastModifiedAt;
-
+    
+    
     private String key;
-
+    
+    
     private com.commercetools.api.models.product_type.ProductTypeReference productType;
-
+    
+    
     private com.commercetools.api.models.common.LocalizedString name;
-
+    
+    
     private com.commercetools.api.models.common.LocalizedString description;
-
+    
+    
     private com.commercetools.api.models.common.LocalizedString slug;
-
+    
+    
     private java.util.List<com.commercetools.api.models.category.CategoryReference> categories;
-
+    
+    
     private com.commercetools.api.models.product.CategoryOrderHints categoryOrderHints;
-
+    
+    
     private com.commercetools.api.models.common.LocalizedString metaTitle;
-
+    
+    
     private com.commercetools.api.models.common.LocalizedString metaDescription;
-
+    
+    
     private com.commercetools.api.models.common.LocalizedString metaKeywords;
-
+    
+    
     private com.commercetools.api.models.product.SearchKeywords searchKeywords;
-
+    
+    
     private Boolean hasStagedChanges;
-
+    
+    
     private Boolean published;
-
+    
+    
     private com.commercetools.api.models.product.ProductVariant masterVariant;
-
+    
+    
     private java.util.List<com.commercetools.api.models.product.ProductVariant> variants;
-
+    
+    
     private com.commercetools.api.models.tax_category.TaxCategoryReference taxCategory;
-
+    
+    
     private com.commercetools.api.models.state.StateReference state;
-
+    
+    
     private com.commercetools.api.models.review.ReviewRatingStatistics reviewRatingStatistics;
-
+    
+    
     private com.commercetools.api.models.product.ProductPriceModeEnum priceMode;
 
     /**
      * create instance with all properties
      */
     @JsonCreator
-    ProductProjectionImpl(@JsonProperty("id") final String id, @JsonProperty("version") final Long version,
-            @JsonProperty("createdAt") final java.time.ZonedDateTime createdAt,
-            @JsonProperty("lastModifiedAt") final java.time.ZonedDateTime lastModifiedAt,
-            @JsonProperty("key") final String key,
-            @JsonProperty("productType") final com.commercetools.api.models.product_type.ProductTypeReference productType,
-            @JsonProperty("name") final com.commercetools.api.models.common.LocalizedString name,
-            @JsonProperty("description") final com.commercetools.api.models.common.LocalizedString description,
-            @JsonProperty("slug") final com.commercetools.api.models.common.LocalizedString slug,
-            @JsonProperty("categories") final java.util.List<com.commercetools.api.models.category.CategoryReference> categories,
-            @JsonProperty("categoryOrderHints") final com.commercetools.api.models.product.CategoryOrderHints categoryOrderHints,
-            @JsonProperty("metaTitle") final com.commercetools.api.models.common.LocalizedString metaTitle,
-            @JsonProperty("metaDescription") final com.commercetools.api.models.common.LocalizedString metaDescription,
-            @JsonProperty("metaKeywords") final com.commercetools.api.models.common.LocalizedString metaKeywords,
-            @JsonProperty("searchKeywords") final com.commercetools.api.models.product.SearchKeywords searchKeywords,
-            @JsonProperty("hasStagedChanges") final Boolean hasStagedChanges,
-            @JsonProperty("published") final Boolean published,
-            @JsonProperty("masterVariant") final com.commercetools.api.models.product.ProductVariant masterVariant,
-            @JsonProperty("variants") final java.util.List<com.commercetools.api.models.product.ProductVariant> variants,
-            @JsonProperty("taxCategory") final com.commercetools.api.models.tax_category.TaxCategoryReference taxCategory,
-            @JsonProperty("state") final com.commercetools.api.models.state.StateReference state,
-            @JsonProperty("reviewRatingStatistics") final com.commercetools.api.models.review.ReviewRatingStatistics reviewRatingStatistics,
-            @JsonProperty("priceMode") final com.commercetools.api.models.product.ProductPriceModeEnum priceMode) {
+    ProductProjectionImpl(@JsonProperty("id") final String id, @JsonProperty("version") final Long version, @JsonProperty("createdAt") final java.time.ZonedDateTime createdAt, @JsonProperty("lastModifiedAt") final java.time.ZonedDateTime lastModifiedAt, @JsonProperty("key") final String key, @JsonProperty("productType") final com.commercetools.api.models.product_type.ProductTypeReference productType, @JsonProperty("name") final com.commercetools.api.models.common.LocalizedString name, @JsonProperty("description") final com.commercetools.api.models.common.LocalizedString description, @JsonProperty("slug") final com.commercetools.api.models.common.LocalizedString slug, @JsonProperty("categories") final java.util.List<com.commercetools.api.models.category.CategoryReference> categories, @JsonProperty("categoryOrderHints") final com.commercetools.api.models.product.CategoryOrderHints categoryOrderHints, @JsonProperty("metaTitle") final com.commercetools.api.models.common.LocalizedString metaTitle, @JsonProperty("metaDescription") final com.commercetools.api.models.common.LocalizedString metaDescription, @JsonProperty("metaKeywords") final com.commercetools.api.models.common.LocalizedString metaKeywords, @JsonProperty("searchKeywords") final com.commercetools.api.models.product.SearchKeywords searchKeywords, @JsonProperty("hasStagedChanges") final Boolean hasStagedChanges, @JsonProperty("published") final Boolean published, @JsonProperty("masterVariant") final com.commercetools.api.models.product.ProductVariant masterVariant, @JsonProperty("variants") final java.util.List<com.commercetools.api.models.product.ProductVariant> variants, @JsonProperty("taxCategory") final com.commercetools.api.models.tax_category.TaxCategoryReference taxCategory, @JsonProperty("state") final com.commercetools.api.models.state.StateReference state, @JsonProperty("reviewRatingStatistics") final com.commercetools.api.models.review.ReviewRatingStatistics reviewRatingStatistics, @JsonProperty("priceMode") final com.commercetools.api.models.product.ProductPriceModeEnum priceMode) {
         this.id = id;
         this.version = version;
         this.createdAt = createdAt;
@@ -116,7 +135,6 @@ public class ProductProjectionImpl implements ProductProjection, ModelBase {
         this.reviewRatingStatistics = reviewRatingStatistics;
         this.priceMode = priceMode;
     }
-
     /**
      * create empty instance
      */
@@ -126,301 +144,322 @@ public class ProductProjectionImpl implements ProductProjection, ModelBase {
     /**
      *  <p>Unique identifier of the Product.</p>
      */
-
-    public String getId() {
+    
+    public String getId(){
         return this.id;
     }
-
+    
     /**
      *  <p>Current version of the Product.</p>
      */
-
-    public Long getVersion() {
+    
+    public Long getVersion(){
         return this.version;
     }
-
+    
     /**
      *  <p>Date and time (UTC) the ProductProjection was initially created.</p>
      */
-
-    public java.time.ZonedDateTime getCreatedAt() {
+    
+    public java.time.ZonedDateTime getCreatedAt(){
         return this.createdAt;
     }
-
+    
     /**
      *  <p>Date and time (UTC) the ProductProjection was last updated.</p>
      */
-
-    public java.time.ZonedDateTime getLastModifiedAt() {
+    
+    public java.time.ZonedDateTime getLastModifiedAt(){
         return this.lastModifiedAt;
     }
-
+    
     /**
      *  <p>User-defined unique identifier of the Product.</p>
      */
-
-    public String getKey() {
+    
+    public String getKey(){
         return this.key;
     }
-
+    
     /**
      *  <p>The ProductType defining the Attributes of the Product.</p>
      */
-
-    public com.commercetools.api.models.product_type.ProductTypeReference getProductType() {
+    
+    public com.commercetools.api.models.product_type.ProductTypeReference getProductType(){
         return this.productType;
     }
-
+    
     /**
      *  <p>Name of the Product.</p>
      */
-
-    public com.commercetools.api.models.common.LocalizedString getName() {
+    
+    public com.commercetools.api.models.common.LocalizedString getName(){
         return this.name;
     }
-
+    
     /**
      *  <p>Description of the Product.</p>
      */
-
-    public com.commercetools.api.models.common.LocalizedString getDescription() {
+    
+    public com.commercetools.api.models.common.LocalizedString getDescription(){
         return this.description;
     }
-
+    
     /**
      *  <p>User-defined identifier used in a deep-link URL for the Product. Must be unique across a Project, but can be the same for Products in different locales. Matches the pattern <code>[a-zA-Z0-9_\-]{2,256}</code>. For good performance, indexes are provided for the first 15 <code>languages</code> set in the Project.</p>
      */
-
-    public com.commercetools.api.models.common.LocalizedString getSlug() {
+    
+    public com.commercetools.api.models.common.LocalizedString getSlug(){
         return this.slug;
     }
-
+    
     /**
      *  <p>Categories assigned to the Product.</p>
      */
-
-    public java.util.List<com.commercetools.api.models.category.CategoryReference> getCategories() {
+    
+    public java.util.List<com.commercetools.api.models.category.CategoryReference> getCategories(){
         return this.categories;
     }
-
+    
     /**
      *  <p>Order of Product in Categories.</p>
      */
-
-    public com.commercetools.api.models.product.CategoryOrderHints getCategoryOrderHints() {
+    
+    public com.commercetools.api.models.product.CategoryOrderHints getCategoryOrderHints(){
         return this.categoryOrderHints;
     }
-
+    
     /**
      *  <p>Title of the Product displayed in search results.</p>
      */
-
-    public com.commercetools.api.models.common.LocalizedString getMetaTitle() {
+    
+    public com.commercetools.api.models.common.LocalizedString getMetaTitle(){
         return this.metaTitle;
     }
-
+    
     /**
      *  <p>Description of the Product displayed in search results below the meta title.</p>
      */
-
-    public com.commercetools.api.models.common.LocalizedString getMetaDescription() {
+    
+    public com.commercetools.api.models.common.LocalizedString getMetaDescription(){
         return this.metaDescription;
     }
-
+    
     /**
      *  <p>Keywords that give additional information about the Product to search engines.</p>
      */
-
-    public com.commercetools.api.models.common.LocalizedString getMetaKeywords() {
+    
+    public com.commercetools.api.models.common.LocalizedString getMetaKeywords(){
         return this.metaKeywords;
     }
-
+    
     /**
      *  <p>Used by Product Suggestions, but is also considered for a full text search.</p>
      */
-
-    public com.commercetools.api.models.product.SearchKeywords getSearchKeywords() {
+    
+    public com.commercetools.api.models.product.SearchKeywords getSearchKeywords(){
         return this.searchKeywords;
     }
-
+    
     /**
      *  <p><code>true</code> if the staged data is different from the current data.</p>
      */
-
-    public Boolean getHasStagedChanges() {
+    
+    public Boolean getHasStagedChanges(){
         return this.hasStagedChanges;
     }
-
+    
     /**
      *  <p><code>true</code> if the Product is published.</p>
      */
-
-    public Boolean getPublished() {
+    
+    public Boolean getPublished(){
         return this.published;
     }
-
+    
     /**
      *  <p>The Master Variant of the Product.</p>
      */
-
-    public com.commercetools.api.models.product.ProductVariant getMasterVariant() {
+    
+    public com.commercetools.api.models.product.ProductVariant getMasterVariant(){
         return this.masterVariant;
     }
-
+    
     /**
      *  <p>Additional Product Variants.</p>
      */
-
-    public java.util.List<com.commercetools.api.models.product.ProductVariant> getVariants() {
+    
+    public java.util.List<com.commercetools.api.models.product.ProductVariant> getVariants(){
         return this.variants;
     }
-
+    
     /**
      *  <p>The TaxCategory of the Product.</p>
      */
-
-    public com.commercetools.api.models.tax_category.TaxCategoryReference getTaxCategory() {
+    
+    public com.commercetools.api.models.tax_category.TaxCategoryReference getTaxCategory(){
         return this.taxCategory;
     }
-
+    
     /**
      *  <p>State of the Product.</p>
      */
-
-    public com.commercetools.api.models.state.StateReference getState() {
+    
+    public com.commercetools.api.models.state.StateReference getState(){
         return this.state;
     }
-
+    
     /**
      *  <p>Review statistics of the Product.</p>
      */
-
-    public com.commercetools.api.models.review.ReviewRatingStatistics getReviewRatingStatistics() {
+    
+    public com.commercetools.api.models.review.ReviewRatingStatistics getReviewRatingStatistics(){
         return this.reviewRatingStatistics;
     }
-
+    
     /**
      *  <p>Indicates whether the Prices of the Product Projection are embedded or standalone. Projecting Prices only works with <code>Embedded</code>, there is currently no support for <code>Standalone</code>.</p>
      */
-
-    public com.commercetools.api.models.product.ProductPriceModeEnum getPriceMode() {
+    
+    public com.commercetools.api.models.product.ProductPriceModeEnum getPriceMode(){
         return this.priceMode;
     }
 
-    public void setId(final String id) {
+    
+    public void setId(final String id){
         this.id = id;
     }
-
-    public void setVersion(final Long version) {
+    
+    
+    public void setVersion(final Long version){
         this.version = version;
     }
-
-    public void setCreatedAt(final java.time.ZonedDateTime createdAt) {
+    
+    
+    public void setCreatedAt(final java.time.ZonedDateTime createdAt){
         this.createdAt = createdAt;
     }
-
-    public void setLastModifiedAt(final java.time.ZonedDateTime lastModifiedAt) {
+    
+    
+    public void setLastModifiedAt(final java.time.ZonedDateTime lastModifiedAt){
         this.lastModifiedAt = lastModifiedAt;
     }
-
-    public void setKey(final String key) {
+    
+    
+    public void setKey(final String key){
         this.key = key;
     }
-
-    public void setProductType(final com.commercetools.api.models.product_type.ProductTypeReference productType) {
+    
+    
+    public void setProductType(final com.commercetools.api.models.product_type.ProductTypeReference productType){
         this.productType = productType;
     }
-
-    public void setName(final com.commercetools.api.models.common.LocalizedString name) {
+    
+    
+    public void setName(final com.commercetools.api.models.common.LocalizedString name){
         this.name = name;
     }
-
-    public void setDescription(final com.commercetools.api.models.common.LocalizedString description) {
+    
+    
+    public void setDescription(final com.commercetools.api.models.common.LocalizedString description){
         this.description = description;
     }
-
-    public void setSlug(final com.commercetools.api.models.common.LocalizedString slug) {
+    
+    
+    public void setSlug(final com.commercetools.api.models.common.LocalizedString slug){
         this.slug = slug;
     }
-
-    public void setCategories(final com.commercetools.api.models.category.CategoryReference... categories) {
-        this.categories = new ArrayList<>(Arrays.asList(categories));
+    
+    
+    public void setCategories(final com.commercetools.api.models.category.CategoryReference ...categories){
+       this.categories = new ArrayList<>(Arrays.asList(categories));
     }
-
-    public void setCategories(
-            final java.util.List<com.commercetools.api.models.category.CategoryReference> categories) {
-        this.categories = categories;
+    
+    
+    public void setCategories(final java.util.List<com.commercetools.api.models.category.CategoryReference> categories){
+       this.categories = categories;
     }
-
-    public void setCategoryOrderHints(
-            final com.commercetools.api.models.product.CategoryOrderHints categoryOrderHints) {
+    
+    
+    public void setCategoryOrderHints(final com.commercetools.api.models.product.CategoryOrderHints categoryOrderHints){
         this.categoryOrderHints = categoryOrderHints;
     }
-
-    public void setMetaTitle(final com.commercetools.api.models.common.LocalizedString metaTitle) {
+    
+    
+    public void setMetaTitle(final com.commercetools.api.models.common.LocalizedString metaTitle){
         this.metaTitle = metaTitle;
     }
-
-    public void setMetaDescription(final com.commercetools.api.models.common.LocalizedString metaDescription) {
+    
+    
+    public void setMetaDescription(final com.commercetools.api.models.common.LocalizedString metaDescription){
         this.metaDescription = metaDescription;
     }
-
-    public void setMetaKeywords(final com.commercetools.api.models.common.LocalizedString metaKeywords) {
+    
+    
+    public void setMetaKeywords(final com.commercetools.api.models.common.LocalizedString metaKeywords){
         this.metaKeywords = metaKeywords;
     }
-
-    public void setSearchKeywords(final com.commercetools.api.models.product.SearchKeywords searchKeywords) {
+    
+    
+    public void setSearchKeywords(final com.commercetools.api.models.product.SearchKeywords searchKeywords){
         this.searchKeywords = searchKeywords;
     }
-
-    public void setHasStagedChanges(final Boolean hasStagedChanges) {
+    
+    
+    public void setHasStagedChanges(final Boolean hasStagedChanges){
         this.hasStagedChanges = hasStagedChanges;
     }
-
-    public void setPublished(final Boolean published) {
+    
+    
+    public void setPublished(final Boolean published){
         this.published = published;
     }
-
-    public void setMasterVariant(final com.commercetools.api.models.product.ProductVariant masterVariant) {
+    
+    
+    public void setMasterVariant(final com.commercetools.api.models.product.ProductVariant masterVariant){
         this.masterVariant = masterVariant;
     }
-
-    public void setVariants(final com.commercetools.api.models.product.ProductVariant... variants) {
-        this.variants = new ArrayList<>(Arrays.asList(variants));
+    
+    
+    public void setVariants(final com.commercetools.api.models.product.ProductVariant ...variants){
+       this.variants = new ArrayList<>(Arrays.asList(variants));
     }
-
-    public void setVariants(final java.util.List<com.commercetools.api.models.product.ProductVariant> variants) {
-        this.variants = variants;
+    
+    
+    public void setVariants(final java.util.List<com.commercetools.api.models.product.ProductVariant> variants){
+       this.variants = variants;
     }
-
-    public void setTaxCategory(final com.commercetools.api.models.tax_category.TaxCategoryReference taxCategory) {
+    
+    
+    public void setTaxCategory(final com.commercetools.api.models.tax_category.TaxCategoryReference taxCategory){
         this.taxCategory = taxCategory;
     }
-
-    public void setState(final com.commercetools.api.models.state.StateReference state) {
+    
+    
+    public void setState(final com.commercetools.api.models.state.StateReference state){
         this.state = state;
     }
-
-    public void setReviewRatingStatistics(
-            final com.commercetools.api.models.review.ReviewRatingStatistics reviewRatingStatistics) {
+    
+    
+    public void setReviewRatingStatistics(final com.commercetools.api.models.review.ReviewRatingStatistics reviewRatingStatistics){
         this.reviewRatingStatistics = reviewRatingStatistics;
     }
-
-    public void setPriceMode(final com.commercetools.api.models.product.ProductPriceModeEnum priceMode) {
+    
+    
+    public void setPriceMode(final com.commercetools.api.models.product.ProductPriceModeEnum priceMode){
         this.priceMode = priceMode;
     }
 
     @Override
     public boolean equals(Object o) {
-        if (this == o)
-            return true;
-
-        if (o == null || getClass() != o.getClass())
-            return false;
-
+        if (this == o) return true;
+    
+        if (o == null || getClass() != o.getClass()) return false;
+    
         ProductProjectionImpl that = (ProductProjectionImpl) o;
-
-        return new EqualsBuilder().append(id, that.id)
+    
+        return new EqualsBuilder()
+                .append(id, that.id)
                 .append(version, that.version)
                 .append(createdAt, that.createdAt)
                 .append(lastModifiedAt, that.lastModifiedAt)
@@ -445,33 +484,34 @@ public class ProductProjectionImpl implements ProductProjection, ModelBase {
                 .append(priceMode, that.priceMode)
                 .isEquals();
     }
-
+    
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(id)
-                .append(version)
-                .append(createdAt)
-                .append(lastModifiedAt)
-                .append(key)
-                .append(productType)
-                .append(name)
-                .append(description)
-                .append(slug)
-                .append(categories)
-                .append(categoryOrderHints)
-                .append(metaTitle)
-                .append(metaDescription)
-                .append(metaKeywords)
-                .append(searchKeywords)
-                .append(hasStagedChanges)
-                .append(published)
-                .append(masterVariant)
-                .append(variants)
-                .append(taxCategory)
-                .append(state)
-                .append(reviewRatingStatistics)
-                .append(priceMode)
-                .toHashCode();
+        return new HashCodeBuilder(17, 37)
+            .append(id)
+            .append(version)
+            .append(createdAt)
+            .append(lastModifiedAt)
+            .append(key)
+            .append(productType)
+            .append(name)
+            .append(description)
+            .append(slug)
+            .append(categories)
+            .append(categoryOrderHints)
+            .append(metaTitle)
+            .append(metaDescription)
+            .append(metaKeywords)
+            .append(searchKeywords)
+            .append(hasStagedChanges)
+            .append(published)
+            .append(masterVariant)
+            .append(variants)
+            .append(taxCategory)
+            .append(state)
+            .append(reviewRatingStatistics)
+            .append(priceMode)
+            .toHashCode();
     }
 
 }

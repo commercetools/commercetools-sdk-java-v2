@@ -1,11 +1,12 @@
-
 package com.commercetools.api.models.store;
 
+import com.commercetools.api.models.common.LocalizedString;
+import com.commercetools.api.models.store.StoreUpdateAction;
+import com.commercetools.api.models.store.StoreSetNameAction;
+import javax.annotation.Nullable;
 import java.util.*;
 import java.util.function.Function;
-
-import javax.annotation.Nullable;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -18,56 +19,61 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     StoreSetNameAction storeSetNameAction = StoreSetNameAction.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class StoreSetNameActionBuilder implements Builder<StoreSetNameAction> {
 
+    
     @Nullable
     private com.commercetools.api.models.common.LocalizedString name;
 
+    
     /**
      *  <p>Value to set.</p>
      * @param builder function to build the name value
      * @return Builder
      */
-
-    public StoreSetNameActionBuilder name(
-            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
+    
+    public StoreSetNameActionBuilder name(Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
         this.name = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of()).build();
         return this;
     }
-
+    
     /**
      *  <p>Value to set.</p>
      * @param builder function to build the name value
      * @return Builder
      */
-
-    public StoreSetNameActionBuilder withName(
-            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedString> builder) {
+    
+    public StoreSetNameActionBuilder withName(Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedString> builder) {
         this.name = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of());
         return this;
     }
-
+                    
     /**
      *  <p>Value to set.</p>
      * @param name value to be set
      * @return Builder
      */
-
+    
     public StoreSetNameActionBuilder name(@Nullable final com.commercetools.api.models.common.LocalizedString name) {
         this.name = name;
         return this;
     }
+    
+    
 
     /**
      *  <p>Value to set.</p>
      * @return name
      */
-
+    
     @Nullable
-    public com.commercetools.api.models.common.LocalizedString getName() {
+    public com.commercetools.api.models.common.LocalizedString getName(){
         return this.name;
     }
 
@@ -78,7 +84,7 @@ public class StoreSetNameActionBuilder implements Builder<StoreSetNameAction> {
     public StoreSetNameAction build() {
         return new StoreSetNameActionImpl(name);
     }
-
+    
     /**
      * builds StoreSetNameAction without checking for non-null required values
      * @return StoreSetNameAction
@@ -89,7 +95,7 @@ public class StoreSetNameActionBuilder implements Builder<StoreSetNameAction> {
 
     /**
      * factory method for an instance of StoreSetNameActionBuilder
-     * @return builder
+     * @return builder 
      */
     public static StoreSetNameActionBuilder of() {
         return new StoreSetNameActionBuilder();

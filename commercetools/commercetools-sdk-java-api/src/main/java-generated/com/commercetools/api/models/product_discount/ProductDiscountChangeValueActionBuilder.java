@@ -1,9 +1,12 @@
-
 package com.commercetools.api.models.product_discount;
 
+import com.commercetools.api.models.product_discount.ProductDiscountUpdateAction;
+import com.commercetools.api.models.product_discount.ProductDiscountValueDraft;
+import com.commercetools.api.models.product_discount.ProductDiscountChangeValueAction;
+import javax.annotation.Nullable;
 import java.util.*;
 import java.util.function.Function;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -17,44 +20,50 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .value(valueBuilder -> valueBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class ProductDiscountChangeValueActionBuilder implements Builder<ProductDiscountChangeValueAction> {
 
+    
+    
     private com.commercetools.api.models.product_discount.ProductDiscountValueDraft value;
 
+    
     /**
      *  <p>New value to set. Must not be empty.</p>
      * @param value value to be set
      * @return Builder
      */
-
-    public ProductDiscountChangeValueActionBuilder value(
-            final com.commercetools.api.models.product_discount.ProductDiscountValueDraft value) {
+    
+    public ProductDiscountChangeValueActionBuilder value( final com.commercetools.api.models.product_discount.ProductDiscountValueDraft value) {
         this.value = value;
         return this;
     }
-
+    
+    
     /**
      *  <p>New value to set. Must not be empty.</p>
      * @param builder function to build the value value
      * @return Builder
      */
-
-    public ProductDiscountChangeValueActionBuilder value(
-            Function<com.commercetools.api.models.product_discount.ProductDiscountValueDraftBuilder, Builder<? extends com.commercetools.api.models.product_discount.ProductDiscountValueDraft>> builder) {
-        this.value = builder.apply(com.commercetools.api.models.product_discount.ProductDiscountValueDraftBuilder.of())
-                .build();
+    
+    public ProductDiscountChangeValueActionBuilder value(Function<com.commercetools.api.models.product_discount.ProductDiscountValueDraftBuilder, Builder<? extends com.commercetools.api.models.product_discount.ProductDiscountValueDraft>> builder) {
+        this.value = builder.apply(com.commercetools.api.models.product_discount.ProductDiscountValueDraftBuilder.of()).build();
         return this;
     }
+                    
 
     /**
      *  <p>New value to set. Must not be empty.</p>
      * @return value
      */
-
-    public com.commercetools.api.models.product_discount.ProductDiscountValueDraft getValue() {
+    
+    
+    public com.commercetools.api.models.product_discount.ProductDiscountValueDraft getValue(){
         return this.value;
     }
 
@@ -66,7 +75,7 @@ public class ProductDiscountChangeValueActionBuilder implements Builder<ProductD
         Objects.requireNonNull(value, ProductDiscountChangeValueAction.class + ": value is missing");
         return new ProductDiscountChangeValueActionImpl(value);
     }
-
+    
     /**
      * builds ProductDiscountChangeValueAction without checking for non-null required values
      * @return ProductDiscountChangeValueAction
@@ -77,7 +86,7 @@ public class ProductDiscountChangeValueActionBuilder implements Builder<ProductD
 
     /**
      * factory method for an instance of ProductDiscountChangeValueActionBuilder
-     * @return builder
+     * @return builder 
      */
     public static ProductDiscountChangeValueActionBuilder of() {
         return new ProductDiscountChangeValueActionBuilder();

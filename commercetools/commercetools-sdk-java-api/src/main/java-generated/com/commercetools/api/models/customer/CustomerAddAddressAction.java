@@ -1,19 +1,21 @@
-
 package com.commercetools.api.models.customer;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
 import com.commercetools.api.models.common.BaseAddress;
+import com.commercetools.api.models.customer.CustomerUpdateAction;
+import com.commercetools.api.models.customer.CustomerAddAddressActionImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Adding an address to the Customer produces the CustomerAddressAdded Message.</p>
@@ -26,9 +28,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .address(addressBuilder -> addressBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = CustomerAddAddressActionImpl.class)
 public interface CustomerAddAddressAction extends CustomerUpdateAction {
 
@@ -50,16 +55,18 @@ public interface CustomerAddAddressAction extends CustomerUpdateAction {
      *  <p>Value to append to the <code>addresses</code> array.</p>
      * @param address value to be set
      */
-
+    
     public void setAddress(final BaseAddress address);
+    
 
     /**
      * factory method
      * @return instance of CustomerAddAddressAction
      */
-    public static CustomerAddAddressAction of() {
+    public static CustomerAddAddressAction of(){
         return new CustomerAddAddressActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy CustomerAddAddressAction
@@ -94,7 +101,7 @@ public interface CustomerAddAddressAction extends CustomerUpdateAction {
     public static CustomerAddAddressActionBuilder builder() {
         return CustomerAddAddressActionBuilder.of();
     }
-
+    
     /**
      * create builder for CustomerAddAddressAction instance
      * @param template instance with prefilled values for the builder
@@ -103,6 +110,7 @@ public interface CustomerAddAddressAction extends CustomerUpdateAction {
     public static CustomerAddAddressActionBuilder builder(final CustomerAddAddressAction template) {
         return CustomerAddAddressActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -113,7 +121,7 @@ public interface CustomerAddAddressAction extends CustomerUpdateAction {
     default <T> T withCustomerAddAddressAction(Function<CustomerAddAddressAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

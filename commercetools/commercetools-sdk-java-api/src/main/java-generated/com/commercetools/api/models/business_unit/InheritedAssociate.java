@@ -1,20 +1,21 @@
-
 package com.commercetools.api.models.business_unit;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-import java.util.stream.Collectors;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
+import com.commercetools.api.models.business_unit.InheritedAssociateRoleAssignment;
 import com.commercetools.api.models.customer.CustomerReference;
+import com.commercetools.api.models.business_unit.InheritedAssociateImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * InheritedAssociate
@@ -28,11 +29,15 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .customer(customerBuilder -> customerBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = InheritedAssociateImpl.class)
-public interface InheritedAssociate {
+public interface InheritedAssociate  {
+
 
     /**
      *  <p>Inherited roles of the Associate within a Business Unit.</p>
@@ -42,7 +47,6 @@ public interface InheritedAssociate {
     @Valid
     @JsonProperty("associateRoleAssignments")
     public List<InheritedAssociateRoleAssignment> getAssociateRoleAssignments();
-
     /**
      *  <p>The Customer that acts as an Associate in the Business Unit.</p>
      * @return customer
@@ -56,31 +60,32 @@ public interface InheritedAssociate {
      *  <p>Inherited roles of the Associate within a Business Unit.</p>
      * @param associateRoleAssignments values to be set
      */
-
+    
     @JsonIgnore
-    public void setAssociateRoleAssignments(final InheritedAssociateRoleAssignment... associateRoleAssignments);
-
+    public void setAssociateRoleAssignments(final InheritedAssociateRoleAssignment ...associateRoleAssignments);
     /**
      *  <p>Inherited roles of the Associate within a Business Unit.</p>
      * @param associateRoleAssignments values to be set
      */
-
+    
     public void setAssociateRoleAssignments(final List<InheritedAssociateRoleAssignment> associateRoleAssignments);
-
+    
     /**
      *  <p>The Customer that acts as an Associate in the Business Unit.</p>
      * @param customer value to be set
      */
-
+    
     public void setCustomer(final CustomerReference customer);
+    
 
     /**
      * factory method
      * @return instance of InheritedAssociate
      */
-    public static InheritedAssociate of() {
+    public static InheritedAssociate of(){
         return new InheritedAssociateImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy InheritedAssociate
@@ -106,9 +111,7 @@ public interface InheritedAssociate {
         }
         InheritedAssociateImpl instance = new InheritedAssociateImpl();
         instance.setAssociateRoleAssignments(Optional.ofNullable(template.getAssociateRoleAssignments())
-                .map(t -> t.stream()
-                        .map(com.commercetools.api.models.business_unit.InheritedAssociateRoleAssignment::deepCopy)
-                        .collect(Collectors.toList()))
+                .map(t -> t.stream().map(com.commercetools.api.models.business_unit.InheritedAssociateRoleAssignment::deepCopy).collect(Collectors.toList()))
                 .orElse(null));
         instance.setCustomer(com.commercetools.api.models.customer.CustomerReference.deepCopy(template.getCustomer()));
         return instance;
@@ -121,7 +124,7 @@ public interface InheritedAssociate {
     public static InheritedAssociateBuilder builder() {
         return InheritedAssociateBuilder.of();
     }
-
+    
     /**
      * create builder for InheritedAssociate instance
      * @param template instance with prefilled values for the builder
@@ -130,6 +133,7 @@ public interface InheritedAssociate {
     public static InheritedAssociateBuilder builder(final InheritedAssociate template) {
         return InheritedAssociateBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -140,7 +144,7 @@ public interface InheritedAssociate {
     default <T> T withInheritedAssociate(Function<InheritedAssociate, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

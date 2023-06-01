@@ -1,10 +1,11 @@
-
 package com.commercetools.api.models.order_edit;
 
-import java.util.*;
-
+import com.commercetools.api.models.order.StagedOrderUpdateAction;
+import com.commercetools.api.models.order_edit.StagedOrderSetOrderNumberAction;
 import javax.annotation.Nullable;
-
+import java.util.*;
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -17,32 +18,39 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     StagedOrderSetOrderNumberAction stagedOrderSetOrderNumberAction = StagedOrderSetOrderNumberAction.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class StagedOrderSetOrderNumberActionBuilder implements Builder<StagedOrderSetOrderNumberAction> {
 
+    
     @Nullable
     private String orderNumber;
 
+    
     /**
      * set the value to the orderNumber
      * @param orderNumber value to be set
      * @return Builder
      */
-
+    
     public StagedOrderSetOrderNumberActionBuilder orderNumber(@Nullable final String orderNumber) {
         this.orderNumber = orderNumber;
         return this;
     }
+    
+    
 
     /**
      * value of orderNumber}
      * @return orderNumber
      */
-
+    
     @Nullable
-    public String getOrderNumber() {
+    public String getOrderNumber(){
         return this.orderNumber;
     }
 
@@ -53,7 +61,7 @@ public class StagedOrderSetOrderNumberActionBuilder implements Builder<StagedOrd
     public StagedOrderSetOrderNumberAction build() {
         return new StagedOrderSetOrderNumberActionImpl(orderNumber);
     }
-
+    
     /**
      * builds StagedOrderSetOrderNumberAction without checking for non-null required values
      * @return StagedOrderSetOrderNumberAction
@@ -64,7 +72,7 @@ public class StagedOrderSetOrderNumberActionBuilder implements Builder<StagedOrd
 
     /**
      * factory method for an instance of StagedOrderSetOrderNumberActionBuilder
-     * @return builder
+     * @return builder 
      */
     public static StagedOrderSetOrderNumberActionBuilder of() {
         return new StagedOrderSetOrderNumberActionBuilder();

@@ -1,8 +1,11 @@
-
 package com.commercetools.api.models.error;
 
+import com.commercetools.api.models.error.GraphQLErrorObject;
+import com.commercetools.api.models.error.GraphQLShippingMethodDoesNotMatchCartError;
+import javax.annotation.Nullable;
 import java.util.*;
-
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -15,12 +18,16 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     GraphQLShippingMethodDoesNotMatchCartError graphQLShippingMethodDoesNotMatchCartError = GraphQLShippingMethodDoesNotMatchCartError.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
-public class GraphQLShippingMethodDoesNotMatchCartErrorBuilder
-        implements Builder<GraphQLShippingMethodDoesNotMatchCartError> {
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
+public class GraphQLShippingMethodDoesNotMatchCartErrorBuilder implements Builder<GraphQLShippingMethodDoesNotMatchCartError> {
 
+    
+    
     private Map<String, java.lang.Object> values = new HashMap<>();
 
     /**
@@ -28,19 +35,19 @@ public class GraphQLShippingMethodDoesNotMatchCartErrorBuilder
      * @param values properties to be set
      * @return Builder
      */
-
-    public GraphQLShippingMethodDoesNotMatchCartErrorBuilder values(final Map<String, java.lang.Object> values) {
+    
+    public GraphQLShippingMethodDoesNotMatchCartErrorBuilder values( final Map<String, java.lang.Object> values){
         this.values = values;
         return this;
     }
-
+    
     /**
      *  <p>Error-specific additional fields.</p>
      * @param key property name
      * @param value property value
      * @return Builder
      */
-
+    
     public GraphQLShippingMethodDoesNotMatchCartErrorBuilder addValue(final String key, final java.lang.Object value) {
         if (this.values == null) {
             values = new HashMap<>();
@@ -48,13 +55,15 @@ public class GraphQLShippingMethodDoesNotMatchCartErrorBuilder
         values.put(key, value);
         return this;
     }
+    
 
     /**
      *  <p>Error-specific additional fields.</p>
      * @return pattern properties
      */
-
-    public Map<String, java.lang.Object> getValues() {
+    
+    
+    public Map<String, java.lang.Object> getValues(){
         return this.values;
     }
 
@@ -65,7 +74,7 @@ public class GraphQLShippingMethodDoesNotMatchCartErrorBuilder
     public GraphQLShippingMethodDoesNotMatchCartError build() {
         return new GraphQLShippingMethodDoesNotMatchCartErrorImpl(values);
     }
-
+    
     /**
      * builds GraphQLShippingMethodDoesNotMatchCartError without checking for non-null required values
      * @return GraphQLShippingMethodDoesNotMatchCartError
@@ -76,7 +85,7 @@ public class GraphQLShippingMethodDoesNotMatchCartErrorBuilder
 
     /**
      * factory method for an instance of GraphQLShippingMethodDoesNotMatchCartErrorBuilder
-     * @return builder
+     * @return builder 
      */
     public static GraphQLShippingMethodDoesNotMatchCartErrorBuilder of() {
         return new GraphQLShippingMethodDoesNotMatchCartErrorBuilder();
@@ -87,8 +96,7 @@ public class GraphQLShippingMethodDoesNotMatchCartErrorBuilder
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static GraphQLShippingMethodDoesNotMatchCartErrorBuilder of(
-            final GraphQLShippingMethodDoesNotMatchCartError template) {
+    public static GraphQLShippingMethodDoesNotMatchCartErrorBuilder of(final GraphQLShippingMethodDoesNotMatchCartError template) {
         GraphQLShippingMethodDoesNotMatchCartErrorBuilder builder = new GraphQLShippingMethodDoesNotMatchCartErrorBuilder();
         builder.values = template.values();
         return builder;

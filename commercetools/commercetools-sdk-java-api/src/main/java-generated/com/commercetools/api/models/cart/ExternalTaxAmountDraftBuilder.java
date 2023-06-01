@@ -1,9 +1,12 @@
-
 package com.commercetools.api.models.cart;
 
+import com.commercetools.api.models.cart.ExternalTaxRateDraft;
+import com.commercetools.api.models.common.Money;
+import com.commercetools.api.models.cart.ExternalTaxAmountDraft;
+import javax.annotation.Nullable;
 import java.util.*;
 import java.util.function.Function;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -18,100 +21,111 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .taxRate(taxRateBuilder -> taxRateBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class ExternalTaxAmountDraftBuilder implements Builder<ExternalTaxAmountDraft> {
 
+    
+    
     private com.commercetools.api.models.common.Money totalGross;
-
+    
+    
+    
     private com.commercetools.api.models.cart.ExternalTaxRateDraft taxRate;
 
+    
     /**
      *  <p>Total gross amount (<code>totalNet</code> + <code>taxPortions</code>) of the Line Item or Custom Line Item.</p>
      * @param builder function to build the totalGross value
      * @return Builder
      */
-
-    public ExternalTaxAmountDraftBuilder totalGross(
-            Function<com.commercetools.api.models.common.MoneyBuilder, com.commercetools.api.models.common.MoneyBuilder> builder) {
+    
+    public ExternalTaxAmountDraftBuilder totalGross(Function<com.commercetools.api.models.common.MoneyBuilder, com.commercetools.api.models.common.MoneyBuilder> builder) {
         this.totalGross = builder.apply(com.commercetools.api.models.common.MoneyBuilder.of()).build();
         return this;
     }
-
+    
     /**
      *  <p>Total gross amount (<code>totalNet</code> + <code>taxPortions</code>) of the Line Item or Custom Line Item.</p>
      * @param builder function to build the totalGross value
      * @return Builder
      */
-
-    public ExternalTaxAmountDraftBuilder withTotalGross(
-            Function<com.commercetools.api.models.common.MoneyBuilder, com.commercetools.api.models.common.Money> builder) {
+    
+    public ExternalTaxAmountDraftBuilder withTotalGross(Function<com.commercetools.api.models.common.MoneyBuilder, com.commercetools.api.models.common.Money> builder) {
         this.totalGross = builder.apply(com.commercetools.api.models.common.MoneyBuilder.of());
         return this;
     }
-
+                    
     /**
      *  <p>Total gross amount (<code>totalNet</code> + <code>taxPortions</code>) of the Line Item or Custom Line Item.</p>
      * @param totalGross value to be set
      * @return Builder
      */
-
-    public ExternalTaxAmountDraftBuilder totalGross(final com.commercetools.api.models.common.Money totalGross) {
+    
+    public ExternalTaxAmountDraftBuilder totalGross( final com.commercetools.api.models.common.Money totalGross) {
         this.totalGross = totalGross;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Tax Rates and subrates of states and countries.</p>
      * @param builder function to build the taxRate value
      * @return Builder
      */
-
-    public ExternalTaxAmountDraftBuilder taxRate(
-            Function<com.commercetools.api.models.cart.ExternalTaxRateDraftBuilder, com.commercetools.api.models.cart.ExternalTaxRateDraftBuilder> builder) {
+    
+    public ExternalTaxAmountDraftBuilder taxRate(Function<com.commercetools.api.models.cart.ExternalTaxRateDraftBuilder, com.commercetools.api.models.cart.ExternalTaxRateDraftBuilder> builder) {
         this.taxRate = builder.apply(com.commercetools.api.models.cart.ExternalTaxRateDraftBuilder.of()).build();
         return this;
     }
-
+    
     /**
      *  <p>Tax Rates and subrates of states and countries.</p>
      * @param builder function to build the taxRate value
      * @return Builder
      */
-
-    public ExternalTaxAmountDraftBuilder withTaxRate(
-            Function<com.commercetools.api.models.cart.ExternalTaxRateDraftBuilder, com.commercetools.api.models.cart.ExternalTaxRateDraft> builder) {
+    
+    public ExternalTaxAmountDraftBuilder withTaxRate(Function<com.commercetools.api.models.cart.ExternalTaxRateDraftBuilder, com.commercetools.api.models.cart.ExternalTaxRateDraft> builder) {
         this.taxRate = builder.apply(com.commercetools.api.models.cart.ExternalTaxRateDraftBuilder.of());
         return this;
     }
-
+                    
     /**
      *  <p>Tax Rates and subrates of states and countries.</p>
      * @param taxRate value to be set
      * @return Builder
      */
-
-    public ExternalTaxAmountDraftBuilder taxRate(final com.commercetools.api.models.cart.ExternalTaxRateDraft taxRate) {
+    
+    public ExternalTaxAmountDraftBuilder taxRate( final com.commercetools.api.models.cart.ExternalTaxRateDraft taxRate) {
         this.taxRate = taxRate;
         return this;
     }
+    
+    
 
     /**
      *  <p>Total gross amount (<code>totalNet</code> + <code>taxPortions</code>) of the Line Item or Custom Line Item.</p>
      * @return totalGross
      */
-
-    public com.commercetools.api.models.common.Money getTotalGross() {
+    
+    
+    public com.commercetools.api.models.common.Money getTotalGross(){
         return this.totalGross;
     }
-
+    
     /**
      *  <p>Tax Rates and subrates of states and countries.</p>
      * @return taxRate
      */
-
-    public com.commercetools.api.models.cart.ExternalTaxRateDraft getTaxRate() {
+    
+    
+    public com.commercetools.api.models.cart.ExternalTaxRateDraft getTaxRate(){
         return this.taxRate;
     }
 
@@ -124,7 +138,7 @@ public class ExternalTaxAmountDraftBuilder implements Builder<ExternalTaxAmountD
         Objects.requireNonNull(taxRate, ExternalTaxAmountDraft.class + ": taxRate is missing");
         return new ExternalTaxAmountDraftImpl(totalGross, taxRate);
     }
-
+    
     /**
      * builds ExternalTaxAmountDraft without checking for non-null required values
      * @return ExternalTaxAmountDraft
@@ -135,7 +149,7 @@ public class ExternalTaxAmountDraftBuilder implements Builder<ExternalTaxAmountD
 
     /**
      * factory method for an instance of ExternalTaxAmountDraftBuilder
-     * @return builder
+     * @return builder 
      */
     public static ExternalTaxAmountDraftBuilder of() {
         return new ExternalTaxAmountDraftBuilder();

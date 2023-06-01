@@ -1,8 +1,11 @@
-
 package com.commercetools.api.models.type;
 
+import com.commercetools.api.models.type.FieldType;
+import com.commercetools.api.models.type.CustomFieldBooleanType;
+import javax.annotation.Nullable;
 import java.util.*;
-
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -15,10 +18,16 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     CustomFieldBooleanType customFieldBooleanType = CustomFieldBooleanType.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class CustomFieldBooleanTypeBuilder implements Builder<CustomFieldBooleanType> {
+
+
+
 
     /**
      * builds CustomFieldBooleanType with checking for non-null required values
@@ -27,7 +36,7 @@ public class CustomFieldBooleanTypeBuilder implements Builder<CustomFieldBoolean
     public CustomFieldBooleanType build() {
         return new CustomFieldBooleanTypeImpl();
     }
-
+    
     /**
      * builds CustomFieldBooleanType without checking for non-null required values
      * @return CustomFieldBooleanType
@@ -38,7 +47,7 @@ public class CustomFieldBooleanTypeBuilder implements Builder<CustomFieldBoolean
 
     /**
      * factory method for an instance of CustomFieldBooleanTypeBuilder
-     * @return builder
+     * @return builder 
      */
     public static CustomFieldBooleanTypeBuilder of() {
         return new CustomFieldBooleanTypeBuilder();

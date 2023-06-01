@@ -1,17 +1,21 @@
-
 package com.commercetools.api.models.staged_quote;
 
-import java.time.*;
+import com.commercetools.api.models.staged_quote.StagedQuoteUpdateAction;
 import java.time.ZonedDateTime;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
+import com.commercetools.api.models.staged_quote.StagedQuoteSetValidToActionImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * StagedQuoteSetValidToAction
@@ -23,9 +27,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     StagedQuoteSetValidToAction stagedQuoteSetValidToAction = StagedQuoteSetValidToAction.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = StagedQuoteSetValidToActionImpl.class)
 public interface StagedQuoteSetValidToAction extends StagedQuoteUpdateAction {
 
@@ -38,7 +45,7 @@ public interface StagedQuoteSetValidToAction extends StagedQuoteUpdateAction {
      *  <p>If <code>validTo</code> is absent or <code>null</code>, this field will be removed if it exists.</p>
      * @return validTo
      */
-
+    
     @JsonProperty("validTo")
     public ZonedDateTime getValidTo();
 
@@ -46,16 +53,18 @@ public interface StagedQuoteSetValidToAction extends StagedQuoteUpdateAction {
      *  <p>If <code>validTo</code> is absent or <code>null</code>, this field will be removed if it exists.</p>
      * @param validTo value to be set
      */
-
+    
     public void setValidTo(final ZonedDateTime validTo);
+    
 
     /**
      * factory method
      * @return instance of StagedQuoteSetValidToAction
      */
-    public static StagedQuoteSetValidToAction of() {
+    public static StagedQuoteSetValidToAction of(){
         return new StagedQuoteSetValidToActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy StagedQuoteSetValidToAction
@@ -90,7 +99,7 @@ public interface StagedQuoteSetValidToAction extends StagedQuoteUpdateAction {
     public static StagedQuoteSetValidToActionBuilder builder() {
         return StagedQuoteSetValidToActionBuilder.of();
     }
-
+    
     /**
      * create builder for StagedQuoteSetValidToAction instance
      * @param template instance with prefilled values for the builder
@@ -99,6 +108,7 @@ public interface StagedQuoteSetValidToAction extends StagedQuoteUpdateAction {
     public static StagedQuoteSetValidToActionBuilder builder(final StagedQuoteSetValidToAction template) {
         return StagedQuoteSetValidToActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -109,7 +119,7 @@ public interface StagedQuoteSetValidToAction extends StagedQuoteUpdateAction {
     default <T> T withStagedQuoteSetValidToAction(Function<StagedQuoteSetValidToAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

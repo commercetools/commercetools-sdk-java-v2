@@ -1,17 +1,20 @@
-
 package com.commercetools.api.models.state;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
+import com.commercetools.api.models.state.StateUpdateAction;
+import com.commercetools.api.models.state.StateChangeInitialActionImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * StateChangeInitialAction
@@ -24,9 +27,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .initial(true)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = StateChangeInitialActionImpl.class)
 public interface StateChangeInitialAction extends StateUpdateAction {
 
@@ -47,16 +53,18 @@ public interface StateChangeInitialAction extends StateUpdateAction {
      *  <p>Set to <code>true</code> for defining the State as initial State in a state machine and making it the first step in a workflow.</p>
      * @param initial value to be set
      */
-
+    
     public void setInitial(final Boolean initial);
+    
 
     /**
      * factory method
      * @return instance of StateChangeInitialAction
      */
-    public static StateChangeInitialAction of() {
+    public static StateChangeInitialAction of(){
         return new StateChangeInitialActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy StateChangeInitialAction
@@ -91,7 +99,7 @@ public interface StateChangeInitialAction extends StateUpdateAction {
     public static StateChangeInitialActionBuilder builder() {
         return StateChangeInitialActionBuilder.of();
     }
-
+    
     /**
      * create builder for StateChangeInitialAction instance
      * @param template instance with prefilled values for the builder
@@ -100,6 +108,7 @@ public interface StateChangeInitialAction extends StateUpdateAction {
     public static StateChangeInitialActionBuilder builder(final StateChangeInitialAction template) {
         return StateChangeInitialActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -110,7 +119,7 @@ public interface StateChangeInitialAction extends StateUpdateAction {
     default <T> T withStateChangeInitialAction(Function<StateChangeInitialAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

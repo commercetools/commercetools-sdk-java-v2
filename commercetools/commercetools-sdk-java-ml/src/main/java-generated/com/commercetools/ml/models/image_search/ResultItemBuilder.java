@@ -1,9 +1,11 @@
-
 package com.commercetools.ml.models.image_search;
 
+import com.commercetools.ml.models.common.ProductVariant;
+import com.commercetools.ml.models.image_search.ResultItem;
+import javax.annotation.Nullable;
 import java.util.*;
 import java.util.function.Function;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -18,130 +20,138 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .plusProductVariants(productVariantsBuilder -> productVariantsBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class ResultItemBuilder implements Builder<ResultItem> {
 
+    
+    
     private String imageUrl;
-
+    
+    
+    
     private java.util.List<com.commercetools.ml.models.common.ProductVariant> productVariants;
 
+    
     /**
      *  <p>The URL of the image.</p>
      * @param imageUrl value to be set
      * @return Builder
      */
-
-    public ResultItemBuilder imageUrl(final String imageUrl) {
+    
+    public ResultItemBuilder imageUrl( final String imageUrl) {
         this.imageUrl = imageUrl;
         return this;
     }
-
+    
+    
+    
     /**
      *  <p>An array of product variants containing the image URL.</p>
      * @param productVariants value to be set
      * @return Builder
      */
-
-    public ResultItemBuilder productVariants(
-            final com.commercetools.ml.models.common.ProductVariant... productVariants) {
+    
+    public ResultItemBuilder productVariants( final com.commercetools.ml.models.common.ProductVariant ...productVariants) {
         this.productVariants = new ArrayList<>(Arrays.asList(productVariants));
         return this;
     }
-
+    
     /**
      *  <p>An array of product variants containing the image URL.</p>
      * @param productVariants value to be set
      * @return Builder
      */
-
-    public ResultItemBuilder productVariants(
-            final java.util.List<com.commercetools.ml.models.common.ProductVariant> productVariants) {
+    
+    public ResultItemBuilder productVariants( final java.util.List<com.commercetools.ml.models.common.ProductVariant> productVariants) {
         this.productVariants = productVariants;
         return this;
     }
-
+    
     /**
      *  <p>An array of product variants containing the image URL.</p>
      * @param productVariants value to be set
      * @return Builder
      */
-
-    public ResultItemBuilder plusProductVariants(
-            final com.commercetools.ml.models.common.ProductVariant... productVariants) {
+    
+    public ResultItemBuilder plusProductVariants( final com.commercetools.ml.models.common.ProductVariant ...productVariants) {
         if (this.productVariants == null) {
             this.productVariants = new ArrayList<>();
         }
         this.productVariants.addAll(Arrays.asList(productVariants));
         return this;
     }
-
+    
+    
+    
     /**
      *  <p>An array of product variants containing the image URL.</p>
      * @param builder function to build the productVariants value
      * @return Builder
      */
-
-    public ResultItemBuilder plusProductVariants(
-            Function<com.commercetools.ml.models.common.ProductVariantBuilder, com.commercetools.ml.models.common.ProductVariantBuilder> builder) {
+    
+    public ResultItemBuilder plusProductVariants(Function<com.commercetools.ml.models.common.ProductVariantBuilder, com.commercetools.ml.models.common.ProductVariantBuilder> builder) {
         if (this.productVariants == null) {
             this.productVariants = new ArrayList<>();
         }
         this.productVariants.add(builder.apply(com.commercetools.ml.models.common.ProductVariantBuilder.of()).build());
         return this;
     }
-
+    
     /**
      *  <p>An array of product variants containing the image URL.</p>
      * @param builder function to build the productVariants value
      * @return Builder
      */
-
-    public ResultItemBuilder withProductVariants(
-            Function<com.commercetools.ml.models.common.ProductVariantBuilder, com.commercetools.ml.models.common.ProductVariantBuilder> builder) {
+    
+    public ResultItemBuilder withProductVariants(Function<com.commercetools.ml.models.common.ProductVariantBuilder, com.commercetools.ml.models.common.ProductVariantBuilder> builder) {
         this.productVariants = new ArrayList<>();
         this.productVariants.add(builder.apply(com.commercetools.ml.models.common.ProductVariantBuilder.of()).build());
         return this;
     }
-
+    
     /**
      *  <p>An array of product variants containing the image URL.</p>
      * @param builder function to build the productVariants value
      * @return Builder
      */
-
-    public ResultItemBuilder addProductVariants(
-            Function<com.commercetools.ml.models.common.ProductVariantBuilder, com.commercetools.ml.models.common.ProductVariant> builder) {
+    
+    public ResultItemBuilder addProductVariants(Function<com.commercetools.ml.models.common.ProductVariantBuilder, com.commercetools.ml.models.common.ProductVariant> builder) {
         return plusProductVariants(builder.apply(com.commercetools.ml.models.common.ProductVariantBuilder.of()));
     }
-
+    
     /**
      *  <p>An array of product variants containing the image URL.</p>
      * @param builder function to build the productVariants value
      * @return Builder
      */
-
-    public ResultItemBuilder setProductVariants(
-            Function<com.commercetools.ml.models.common.ProductVariantBuilder, com.commercetools.ml.models.common.ProductVariant> builder) {
+    
+    public ResultItemBuilder setProductVariants(Function<com.commercetools.ml.models.common.ProductVariantBuilder, com.commercetools.ml.models.common.ProductVariant> builder) {
         return productVariants(builder.apply(com.commercetools.ml.models.common.ProductVariantBuilder.of()));
     }
+                    
 
     /**
      *  <p>The URL of the image.</p>
      * @return imageUrl
      */
-
-    public String getImageUrl() {
+    
+    
+    public String getImageUrl(){
         return this.imageUrl;
     }
-
+    
     /**
      *  <p>An array of product variants containing the image URL.</p>
      * @return productVariants
      */
-
-    public java.util.List<com.commercetools.ml.models.common.ProductVariant> getProductVariants() {
+    
+    
+    public java.util.List<com.commercetools.ml.models.common.ProductVariant> getProductVariants(){
         return this.productVariants;
     }
 
@@ -154,7 +164,7 @@ public class ResultItemBuilder implements Builder<ResultItem> {
         Objects.requireNonNull(productVariants, ResultItem.class + ": productVariants is missing");
         return new ResultItemImpl(imageUrl, productVariants);
     }
-
+    
     /**
      * builds ResultItem without checking for non-null required values
      * @return ResultItem
@@ -165,7 +175,7 @@ public class ResultItemBuilder implements Builder<ResultItem> {
 
     /**
      * factory method for an instance of ResultItemBuilder
-     * @return builder
+     * @return builder 
      */
     public static ResultItemBuilder of() {
         return new ResultItemBuilder();

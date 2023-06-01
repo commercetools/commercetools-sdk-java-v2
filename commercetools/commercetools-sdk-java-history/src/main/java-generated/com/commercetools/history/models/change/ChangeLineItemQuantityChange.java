@@ -1,19 +1,21 @@
-
 package com.commercetools.history.models.change;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
+import com.commercetools.history.models.change.Change;
 import com.commercetools.history.models.common.LocalizedString;
+import com.commercetools.history.models.change.ChangeLineItemQuantityChangeImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * ChangeLineItemQuantityChange
@@ -30,9 +32,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .previousValue(1)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = ChangeLineItemQuantityChangeImpl.class)
 public interface ChangeLineItemQuantityChange extends Change {
 
@@ -48,7 +53,6 @@ public interface ChangeLineItemQuantityChange extends Change {
     @NotNull
     @JsonProperty("type")
     public String getType();
-
     /**
      *  <p>Update action for <code>changeLineItemQuantity</code></p>
      * @return change
@@ -56,7 +60,6 @@ public interface ChangeLineItemQuantityChange extends Change {
     @NotNull
     @JsonProperty("change")
     public String getChange();
-
     /**
      *
      * @return lineItem
@@ -65,7 +68,6 @@ public interface ChangeLineItemQuantityChange extends Change {
     @Valid
     @JsonProperty("lineItem")
     public LocalizedString getLineItem();
-
     /**
      *
      * @return lineItemId
@@ -73,7 +75,6 @@ public interface ChangeLineItemQuantityChange extends Change {
     @NotNull
     @JsonProperty("lineItemId")
     public String getLineItemId();
-
     /**
      *  <p>The amount of a LineItem in the cart. Must be a positive integer.</p>
      * @return nextValue
@@ -81,7 +82,6 @@ public interface ChangeLineItemQuantityChange extends Change {
     @NotNull
     @JsonProperty("nextValue")
     public Integer getNextValue();
-
     /**
      *  <p>The amount of a LineItem in the cart. Must be a positive integer.</p>
      * @return previousValue
@@ -94,44 +94,50 @@ public interface ChangeLineItemQuantityChange extends Change {
      *  <p>Update action for <code>changeLineItemQuantity</code></p>
      * @param change value to be set
      */
-
+    
     public void setChange(final String change);
-
+    
+    
     /**
      * set lineItem
      * @param lineItem value to be set
      */
-
+    
     public void setLineItem(final LocalizedString lineItem);
-
+    
+    
     /**
      * set lineItemId
      * @param lineItemId value to be set
      */
-
+    
     public void setLineItemId(final String lineItemId);
-
+    
+    
     /**
      *  <p>The amount of a LineItem in the cart. Must be a positive integer.</p>
      * @param nextValue value to be set
      */
-
+    
     public void setNextValue(final Integer nextValue);
-
+    
+    
     /**
      *  <p>The amount of a LineItem in the cart. Must be a positive integer.</p>
      * @param previousValue value to be set
      */
-
+    
     public void setPreviousValue(final Integer previousValue);
+    
 
     /**
      * factory method
      * @return instance of ChangeLineItemQuantityChange
      */
-    public static ChangeLineItemQuantityChange of() {
+    public static ChangeLineItemQuantityChange of(){
         return new ChangeLineItemQuantityChangeImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy ChangeLineItemQuantityChange
@@ -174,7 +180,7 @@ public interface ChangeLineItemQuantityChange extends Change {
     public static ChangeLineItemQuantityChangeBuilder builder() {
         return ChangeLineItemQuantityChangeBuilder.of();
     }
-
+    
     /**
      * create builder for ChangeLineItemQuantityChange instance
      * @param template instance with prefilled values for the builder
@@ -183,6 +189,7 @@ public interface ChangeLineItemQuantityChange extends Change {
     public static ChangeLineItemQuantityChangeBuilder builder(final ChangeLineItemQuantityChange template) {
         return ChangeLineItemQuantityChangeBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -193,7 +200,7 @@ public interface ChangeLineItemQuantityChange extends Change {
     default <T> T withChangeLineItemQuantityChange(Function<ChangeLineItemQuantityChange, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

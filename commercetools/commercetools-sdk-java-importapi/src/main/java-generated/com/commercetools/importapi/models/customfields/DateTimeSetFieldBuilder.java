@@ -1,8 +1,12 @@
-
 package com.commercetools.importapi.models.customfields;
 
+import com.commercetools.importapi.models.customfields.CustomField;
+import java.time.ZonedDateTime;
+import com.commercetools.importapi.models.customfields.DateTimeSetField;
+import javax.annotation.Nullable;
 import java.util.*;
-
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -16,11 +20,16 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .plusValue(valueBuilder -> valueBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class DateTimeSetFieldBuilder implements Builder<DateTimeSetField> {
 
+    
+    
     private java.util.List<java.time.ZonedDateTime> value;
 
     /**
@@ -28,43 +37,47 @@ public class DateTimeSetFieldBuilder implements Builder<DateTimeSetField> {
      * @param value value to be set
      * @return Builder
      */
-
-    public DateTimeSetFieldBuilder value(final java.time.ZonedDateTime... value) {
+    
+    public DateTimeSetFieldBuilder value( final java.time.ZonedDateTime ...value) {
         this.value = new ArrayList<>(Arrays.asList(value));
         return this;
     }
-
+    
     /**
      * set value to the value
      * @param value value to be set
      * @return Builder
      */
-
-    public DateTimeSetFieldBuilder value(final java.util.List<java.time.ZonedDateTime> value) {
+    
+    public DateTimeSetFieldBuilder value( final java.util.List<java.time.ZonedDateTime> value) {
         this.value = value;
         return this;
     }
-
+    
     /**
      * add values to the value
      * @param value value to be set
      * @return Builder
      */
-
-    public DateTimeSetFieldBuilder plusValue(final java.time.ZonedDateTime... value) {
+    
+    public DateTimeSetFieldBuilder plusValue( final java.time.ZonedDateTime ...value) {
         if (this.value == null) {
             this.value = new ArrayList<>();
         }
         this.value.addAll(Arrays.asList(value));
         return this;
     }
+    
+    
+    
 
     /**
      * value of value}
      * @return value
      */
-
-    public java.util.List<java.time.ZonedDateTime> getValue() {
+    
+    
+    public java.util.List<java.time.ZonedDateTime> getValue(){
         return this.value;
     }
 
@@ -76,7 +89,7 @@ public class DateTimeSetFieldBuilder implements Builder<DateTimeSetField> {
         Objects.requireNonNull(value, DateTimeSetField.class + ": value is missing");
         return new DateTimeSetFieldImpl(value);
     }
-
+    
     /**
      * builds DateTimeSetField without checking for non-null required values
      * @return DateTimeSetField
@@ -87,7 +100,7 @@ public class DateTimeSetFieldBuilder implements Builder<DateTimeSetField> {
 
     /**
      * factory method for an instance of DateTimeSetFieldBuilder
-     * @return builder
+     * @return builder 
      */
     public static DateTimeSetFieldBuilder of() {
         return new DateTimeSetFieldBuilder();

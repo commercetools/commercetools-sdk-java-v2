@@ -1,11 +1,12 @@
-
 package com.commercetools.api.models.message;
 
+import com.commercetools.api.models.message.OrderMessagePayload;
+import com.commercetools.api.models.state.StateReference;
+import com.commercetools.api.models.message.OrderStateTransitionMessagePayload;
+import javax.annotation.Nullable;
 import java.util.*;
 import java.util.function.Function;
-
-import javax.annotation.Nullable;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -20,126 +21,139 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .force(true)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class OrderStateTransitionMessagePayloadBuilder implements Builder<OrderStateTransitionMessagePayload> {
 
+    
+    
     private com.commercetools.api.models.state.StateReference state;
-
+    
+    
     @Nullable
     private com.commercetools.api.models.state.StateReference oldState;
-
+    
+    
+    
     private Boolean force;
 
+    
     /**
      *  <p>OrderState after the Transition State update action.</p>
      * @param builder function to build the state value
      * @return Builder
      */
-
-    public OrderStateTransitionMessagePayloadBuilder state(
-            Function<com.commercetools.api.models.state.StateReferenceBuilder, com.commercetools.api.models.state.StateReferenceBuilder> builder) {
+    
+    public OrderStateTransitionMessagePayloadBuilder state(Function<com.commercetools.api.models.state.StateReferenceBuilder, com.commercetools.api.models.state.StateReferenceBuilder> builder) {
         this.state = builder.apply(com.commercetools.api.models.state.StateReferenceBuilder.of()).build();
         return this;
     }
-
+    
     /**
      *  <p>OrderState after the Transition State update action.</p>
      * @param builder function to build the state value
      * @return Builder
      */
-
-    public OrderStateTransitionMessagePayloadBuilder withState(
-            Function<com.commercetools.api.models.state.StateReferenceBuilder, com.commercetools.api.models.state.StateReference> builder) {
+    
+    public OrderStateTransitionMessagePayloadBuilder withState(Function<com.commercetools.api.models.state.StateReferenceBuilder, com.commercetools.api.models.state.StateReference> builder) {
         this.state = builder.apply(com.commercetools.api.models.state.StateReferenceBuilder.of());
         return this;
     }
-
+                    
     /**
      *  <p>OrderState after the Transition State update action.</p>
      * @param state value to be set
      * @return Builder
      */
-
-    public OrderStateTransitionMessagePayloadBuilder state(
-            final com.commercetools.api.models.state.StateReference state) {
+    
+    public OrderStateTransitionMessagePayloadBuilder state( final com.commercetools.api.models.state.StateReference state) {
         this.state = state;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>OrderState before the Transition State update action.</p>
      * @param builder function to build the oldState value
      * @return Builder
      */
-
-    public OrderStateTransitionMessagePayloadBuilder oldState(
-            Function<com.commercetools.api.models.state.StateReferenceBuilder, com.commercetools.api.models.state.StateReferenceBuilder> builder) {
+    
+    public OrderStateTransitionMessagePayloadBuilder oldState(Function<com.commercetools.api.models.state.StateReferenceBuilder, com.commercetools.api.models.state.StateReferenceBuilder> builder) {
         this.oldState = builder.apply(com.commercetools.api.models.state.StateReferenceBuilder.of()).build();
         return this;
     }
-
+    
     /**
      *  <p>OrderState before the Transition State update action.</p>
      * @param builder function to build the oldState value
      * @return Builder
      */
-
-    public OrderStateTransitionMessagePayloadBuilder withOldState(
-            Function<com.commercetools.api.models.state.StateReferenceBuilder, com.commercetools.api.models.state.StateReference> builder) {
+    
+    public OrderStateTransitionMessagePayloadBuilder withOldState(Function<com.commercetools.api.models.state.StateReferenceBuilder, com.commercetools.api.models.state.StateReference> builder) {
         this.oldState = builder.apply(com.commercetools.api.models.state.StateReferenceBuilder.of());
         return this;
     }
-
+                    
     /**
      *  <p>OrderState before the Transition State update action.</p>
      * @param oldState value to be set
      * @return Builder
      */
-
-    public OrderStateTransitionMessagePayloadBuilder oldState(
-            @Nullable final com.commercetools.api.models.state.StateReference oldState) {
+    
+    public OrderStateTransitionMessagePayloadBuilder oldState(@Nullable final com.commercetools.api.models.state.StateReference oldState) {
         this.oldState = oldState;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Whether State transition validations were turned off during the Transition State update action.</p>
      * @param force value to be set
      * @return Builder
      */
-
-    public OrderStateTransitionMessagePayloadBuilder force(final Boolean force) {
+    
+    public OrderStateTransitionMessagePayloadBuilder force( final Boolean force) {
         this.force = force;
         return this;
     }
+    
+    
 
     /**
      *  <p>OrderState after the Transition State update action.</p>
      * @return state
      */
-
-    public com.commercetools.api.models.state.StateReference getState() {
+    
+    
+    public com.commercetools.api.models.state.StateReference getState(){
         return this.state;
     }
-
+    
     /**
      *  <p>OrderState before the Transition State update action.</p>
      * @return oldState
      */
-
+    
     @Nullable
-    public com.commercetools.api.models.state.StateReference getOldState() {
+    public com.commercetools.api.models.state.StateReference getOldState(){
         return this.oldState;
     }
-
+    
     /**
      *  <p>Whether State transition validations were turned off during the Transition State update action.</p>
      * @return force
      */
-
-    public Boolean getForce() {
+    
+    
+    public Boolean getForce(){
         return this.force;
     }
 
@@ -152,7 +166,7 @@ public class OrderStateTransitionMessagePayloadBuilder implements Builder<OrderS
         Objects.requireNonNull(force, OrderStateTransitionMessagePayload.class + ": force is missing");
         return new OrderStateTransitionMessagePayloadImpl(state, oldState, force);
     }
-
+    
     /**
      * builds OrderStateTransitionMessagePayload without checking for non-null required values
      * @return OrderStateTransitionMessagePayload
@@ -163,7 +177,7 @@ public class OrderStateTransitionMessagePayloadBuilder implements Builder<OrderS
 
     /**
      * factory method for an instance of OrderStateTransitionMessagePayloadBuilder
-     * @return builder
+     * @return builder 
      */
     public static OrderStateTransitionMessagePayloadBuilder of() {
         return new OrderStateTransitionMessagePayloadBuilder();

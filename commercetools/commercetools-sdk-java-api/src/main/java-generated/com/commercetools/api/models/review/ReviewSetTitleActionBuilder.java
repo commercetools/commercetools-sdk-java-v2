@@ -1,10 +1,11 @@
-
 package com.commercetools.api.models.review;
 
-import java.util.*;
-
+import com.commercetools.api.models.review.ReviewUpdateAction;
+import com.commercetools.api.models.review.ReviewSetTitleAction;
 import javax.annotation.Nullable;
-
+import java.util.*;
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -17,32 +18,39 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     ReviewSetTitleAction reviewSetTitleAction = ReviewSetTitleAction.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class ReviewSetTitleActionBuilder implements Builder<ReviewSetTitleAction> {
 
+    
     @Nullable
     private String title;
 
+    
     /**
      *  <p>Value to set. If empty, any existing value will be removed.</p>
      * @param title value to be set
      * @return Builder
      */
-
+    
     public ReviewSetTitleActionBuilder title(@Nullable final String title) {
         this.title = title;
         return this;
     }
+    
+    
 
     /**
      *  <p>Value to set. If empty, any existing value will be removed.</p>
      * @return title
      */
-
+    
     @Nullable
-    public String getTitle() {
+    public String getTitle(){
         return this.title;
     }
 
@@ -53,7 +61,7 @@ public class ReviewSetTitleActionBuilder implements Builder<ReviewSetTitleAction
     public ReviewSetTitleAction build() {
         return new ReviewSetTitleActionImpl(title);
     }
-
+    
     /**
      * builds ReviewSetTitleAction without checking for non-null required values
      * @return ReviewSetTitleAction
@@ -64,7 +72,7 @@ public class ReviewSetTitleActionBuilder implements Builder<ReviewSetTitleAction
 
     /**
      * factory method for an instance of ReviewSetTitleActionBuilder
-     * @return builder
+     * @return builder 
      */
     public static ReviewSetTitleActionBuilder of() {
         return new ReviewSetTitleActionBuilder();

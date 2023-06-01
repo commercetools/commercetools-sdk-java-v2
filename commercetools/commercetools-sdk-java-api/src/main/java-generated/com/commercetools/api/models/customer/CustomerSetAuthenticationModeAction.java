@@ -1,17 +1,21 @@
-
 package com.commercetools.api.models.customer;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
+import com.commercetools.api.models.customer.AuthenticationMode;
+import com.commercetools.api.models.customer.CustomerUpdateAction;
+import com.commercetools.api.models.customer.CustomerSetAuthenticationModeActionImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * CustomerSetAuthenticationModeAction
@@ -24,9 +28,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .authMode(AuthenticationMode.PASSWORD)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = CustomerSetAuthenticationModeActionImpl.class)
 public interface CustomerSetAuthenticationModeAction extends CustomerUpdateAction {
 
@@ -42,12 +49,11 @@ public interface CustomerSetAuthenticationModeAction extends CustomerUpdateActio
     @NotNull
     @JsonProperty("authMode")
     public AuthenticationMode getAuthMode();
-
     /**
      *  <p>Required when <code>authMode</code> is <code>Password</code>.</p>
      * @return password
      */
-
+    
     @JsonProperty("password")
     public String getPassword();
 
@@ -55,23 +61,26 @@ public interface CustomerSetAuthenticationModeAction extends CustomerUpdateActio
      *  <p>Value to set. Changing a Customer's <code>authMode</code> from <code>Password</code> to <code>ExternalAuth</code> deletes the Customer's password.</p>
      * @param authMode value to be set
      */
-
+    
     public void setAuthMode(final AuthenticationMode authMode);
-
+    
+    
     /**
      *  <p>Required when <code>authMode</code> is <code>Password</code>.</p>
      * @param password value to be set
      */
-
+    
     public void setPassword(final String password);
+    
 
     /**
      * factory method
      * @return instance of CustomerSetAuthenticationModeAction
      */
-    public static CustomerSetAuthenticationModeAction of() {
+    public static CustomerSetAuthenticationModeAction of(){
         return new CustomerSetAuthenticationModeActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy CustomerSetAuthenticationModeAction
@@ -91,8 +100,7 @@ public interface CustomerSetAuthenticationModeAction extends CustomerUpdateActio
      * @return copy instance
      */
     @Nullable
-    public static CustomerSetAuthenticationModeAction deepCopy(
-            @Nullable final CustomerSetAuthenticationModeAction template) {
+    public static CustomerSetAuthenticationModeAction deepCopy(@Nullable final CustomerSetAuthenticationModeAction template) {
         if (template == null) {
             return null;
         }
@@ -109,16 +117,16 @@ public interface CustomerSetAuthenticationModeAction extends CustomerUpdateActio
     public static CustomerSetAuthenticationModeActionBuilder builder() {
         return CustomerSetAuthenticationModeActionBuilder.of();
     }
-
+    
     /**
      * create builder for CustomerSetAuthenticationModeAction instance
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static CustomerSetAuthenticationModeActionBuilder builder(
-            final CustomerSetAuthenticationModeAction template) {
+    public static CustomerSetAuthenticationModeActionBuilder builder(final CustomerSetAuthenticationModeAction template) {
         return CustomerSetAuthenticationModeActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -129,7 +137,7 @@ public interface CustomerSetAuthenticationModeAction extends CustomerUpdateActio
     default <T> T withCustomerSetAuthenticationModeAction(Function<CustomerSetAuthenticationModeAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

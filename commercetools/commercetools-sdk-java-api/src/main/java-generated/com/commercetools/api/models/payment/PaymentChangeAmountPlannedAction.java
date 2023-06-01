@@ -1,19 +1,21 @@
-
 package com.commercetools.api.models.payment;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
 import com.commercetools.api.models.common.Money;
+import com.commercetools.api.models.payment.PaymentUpdateAction;
+import com.commercetools.api.models.payment.PaymentChangeAmountPlannedActionImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Can be used to update the Payment if a customer changes the Cart, or adds or removes a CartDiscount during checkout.</p>
@@ -26,9 +28,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .amount(amountBuilder -> amountBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = PaymentChangeAmountPlannedActionImpl.class)
 public interface PaymentChangeAmountPlannedAction extends PaymentUpdateAction {
 
@@ -50,16 +55,18 @@ public interface PaymentChangeAmountPlannedAction extends PaymentUpdateAction {
      *  <p>New value to set.</p>
      * @param amount value to be set
      */
-
+    
     public void setAmount(final Money amount);
+    
 
     /**
      * factory method
      * @return instance of PaymentChangeAmountPlannedAction
      */
-    public static PaymentChangeAmountPlannedAction of() {
+    public static PaymentChangeAmountPlannedAction of(){
         return new PaymentChangeAmountPlannedActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy PaymentChangeAmountPlannedAction
@@ -94,7 +101,7 @@ public interface PaymentChangeAmountPlannedAction extends PaymentUpdateAction {
     public static PaymentChangeAmountPlannedActionBuilder builder() {
         return PaymentChangeAmountPlannedActionBuilder.of();
     }
-
+    
     /**
      * create builder for PaymentChangeAmountPlannedAction instance
      * @param template instance with prefilled values for the builder
@@ -103,6 +110,7 @@ public interface PaymentChangeAmountPlannedAction extends PaymentUpdateAction {
     public static PaymentChangeAmountPlannedActionBuilder builder(final PaymentChangeAmountPlannedAction template) {
         return PaymentChangeAmountPlannedActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -113,7 +121,7 @@ public interface PaymentChangeAmountPlannedAction extends PaymentUpdateAction {
     default <T> T withPaymentChangeAmountPlannedAction(Function<PaymentChangeAmountPlannedAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

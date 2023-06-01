@@ -1,9 +1,12 @@
-
 package com.commercetools.history.models.change;
 
+import com.commercetools.history.models.change.Change;
+import com.commercetools.history.models.common.Price;
+import com.commercetools.history.models.change.RemovePriceChange;
+import javax.annotation.Nullable;
 import java.util.*;
 import java.util.function.Function;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -21,166 +24,195 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .nextValue(nextValueBuilder -> nextValueBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class RemovePriceChangeBuilder implements Builder<RemovePriceChange> {
 
+    
+    
     private String change;
-
+    
+    
+    
     private String catalogData;
-
+    
+    
+    
     private String priceId;
-
+    
+    
+    
     private com.commercetools.history.models.common.Price previousValue;
-
+    
+    
+    
     private com.commercetools.history.models.common.Price nextValue;
 
+    
     /**
      *  <p>Update action for removing prices</p>
      * @param change value to be set
      * @return Builder
      */
-
-    public RemovePriceChangeBuilder change(final String change) {
+    
+    public RemovePriceChangeBuilder change( final String change) {
         this.change = change;
         return this;
     }
-
+    
+    
+    
+    
     /**
      * set the value to the catalogData
      * @param catalogData value to be set
      * @return Builder
      */
-
-    public RemovePriceChangeBuilder catalogData(final String catalogData) {
+    
+    public RemovePriceChangeBuilder catalogData( final String catalogData) {
         this.catalogData = catalogData;
         return this;
     }
-
+    
+    
+    
+    
     /**
      * set the value to the priceId
      * @param priceId value to be set
      * @return Builder
      */
-
-    public RemovePriceChangeBuilder priceId(final String priceId) {
+    
+    public RemovePriceChangeBuilder priceId( final String priceId) {
         this.priceId = priceId;
         return this;
     }
-
+    
+    
+    
+    
     /**
      * set the value to the previousValue using the builder function
      * @param builder function to build the previousValue value
      * @return Builder
      */
-
-    public RemovePriceChangeBuilder previousValue(
-            Function<com.commercetools.history.models.common.PriceBuilder, com.commercetools.history.models.common.PriceBuilder> builder) {
+    
+    public RemovePriceChangeBuilder previousValue(Function<com.commercetools.history.models.common.PriceBuilder, com.commercetools.history.models.common.PriceBuilder> builder) {
         this.previousValue = builder.apply(com.commercetools.history.models.common.PriceBuilder.of()).build();
         return this;
     }
-
+    
     /**
      * set the value to the previousValue using the builder function
      * @param builder function to build the previousValue value
      * @return Builder
      */
-
-    public RemovePriceChangeBuilder withPreviousValue(
-            Function<com.commercetools.history.models.common.PriceBuilder, com.commercetools.history.models.common.Price> builder) {
+    
+    public RemovePriceChangeBuilder withPreviousValue(Function<com.commercetools.history.models.common.PriceBuilder, com.commercetools.history.models.common.Price> builder) {
         this.previousValue = builder.apply(com.commercetools.history.models.common.PriceBuilder.of());
         return this;
     }
-
+                    
     /**
      * set the value to the previousValue
      * @param previousValue value to be set
      * @return Builder
      */
-
-    public RemovePriceChangeBuilder previousValue(final com.commercetools.history.models.common.Price previousValue) {
+    
+    public RemovePriceChangeBuilder previousValue( final com.commercetools.history.models.common.Price previousValue) {
         this.previousValue = previousValue;
         return this;
     }
-
+    
+    
+    
+    
     /**
      * set the value to the nextValue using the builder function
      * @param builder function to build the nextValue value
      * @return Builder
      */
-
-    public RemovePriceChangeBuilder nextValue(
-            Function<com.commercetools.history.models.common.PriceBuilder, com.commercetools.history.models.common.PriceBuilder> builder) {
+    
+    public RemovePriceChangeBuilder nextValue(Function<com.commercetools.history.models.common.PriceBuilder, com.commercetools.history.models.common.PriceBuilder> builder) {
         this.nextValue = builder.apply(com.commercetools.history.models.common.PriceBuilder.of()).build();
         return this;
     }
-
+    
     /**
      * set the value to the nextValue using the builder function
      * @param builder function to build the nextValue value
      * @return Builder
      */
-
-    public RemovePriceChangeBuilder withNextValue(
-            Function<com.commercetools.history.models.common.PriceBuilder, com.commercetools.history.models.common.Price> builder) {
+    
+    public RemovePriceChangeBuilder withNextValue(Function<com.commercetools.history.models.common.PriceBuilder, com.commercetools.history.models.common.Price> builder) {
         this.nextValue = builder.apply(com.commercetools.history.models.common.PriceBuilder.of());
         return this;
     }
-
+                    
     /**
      * set the value to the nextValue
      * @param nextValue value to be set
      * @return Builder
      */
-
-    public RemovePriceChangeBuilder nextValue(final com.commercetools.history.models.common.Price nextValue) {
+    
+    public RemovePriceChangeBuilder nextValue( final com.commercetools.history.models.common.Price nextValue) {
         this.nextValue = nextValue;
         return this;
     }
+    
+    
 
     /**
      *  <p>Update action for removing prices</p>
      * @return change
      */
-
-    public String getChange() {
+    
+    
+    public String getChange(){
         return this.change;
     }
-
+    
     /**
      * value of catalogData}
      * @return catalogData
      */
-
-    public String getCatalogData() {
+    
+    
+    public String getCatalogData(){
         return this.catalogData;
     }
-
+    
     /**
      * value of priceId}
      * @return priceId
      */
-
-    public String getPriceId() {
+    
+    
+    public String getPriceId(){
         return this.priceId;
     }
-
+    
     /**
      * value of previousValue}
      * @return previousValue
      */
-
-    public com.commercetools.history.models.common.Price getPreviousValue() {
+    
+    
+    public com.commercetools.history.models.common.Price getPreviousValue(){
         return this.previousValue;
     }
-
+    
     /**
      * value of nextValue}
      * @return nextValue
      */
-
-    public com.commercetools.history.models.common.Price getNextValue() {
+    
+    
+    public com.commercetools.history.models.common.Price getNextValue(){
         return this.nextValue;
     }
 
@@ -196,7 +228,7 @@ public class RemovePriceChangeBuilder implements Builder<RemovePriceChange> {
         Objects.requireNonNull(nextValue, RemovePriceChange.class + ": nextValue is missing");
         return new RemovePriceChangeImpl(change, catalogData, priceId, previousValue, nextValue);
     }
-
+    
     /**
      * builds RemovePriceChange without checking for non-null required values
      * @return RemovePriceChange
@@ -207,7 +239,7 @@ public class RemovePriceChangeBuilder implements Builder<RemovePriceChange> {
 
     /**
      * factory method for an instance of RemovePriceChangeBuilder
-     * @return builder
+     * @return builder 
      */
     public static RemovePriceChangeBuilder of() {
         return new RemovePriceChangeBuilder();

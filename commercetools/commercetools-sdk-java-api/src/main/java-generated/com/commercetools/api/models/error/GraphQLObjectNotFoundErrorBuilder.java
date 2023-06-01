@@ -1,8 +1,11 @@
-
 package com.commercetools.api.models.error;
 
+import com.commercetools.api.models.error.GraphQLErrorObject;
+import com.commercetools.api.models.error.GraphQLObjectNotFoundError;
+import javax.annotation.Nullable;
 import java.util.*;
-
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -15,11 +18,16 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     GraphQLObjectNotFoundError graphQLObjectNotFoundError = GraphQLObjectNotFoundError.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class GraphQLObjectNotFoundErrorBuilder implements Builder<GraphQLObjectNotFoundError> {
 
+    
+    
     private Map<String, java.lang.Object> values = new HashMap<>();
 
     /**
@@ -27,19 +35,19 @@ public class GraphQLObjectNotFoundErrorBuilder implements Builder<GraphQLObjectN
      * @param values properties to be set
      * @return Builder
      */
-
-    public GraphQLObjectNotFoundErrorBuilder values(final Map<String, java.lang.Object> values) {
+    
+    public GraphQLObjectNotFoundErrorBuilder values( final Map<String, java.lang.Object> values){
         this.values = values;
         return this;
     }
-
+    
     /**
      *  <p>Error-specific additional fields.</p>
      * @param key property name
      * @param value property value
      * @return Builder
      */
-
+    
     public GraphQLObjectNotFoundErrorBuilder addValue(final String key, final java.lang.Object value) {
         if (this.values == null) {
             values = new HashMap<>();
@@ -47,13 +55,15 @@ public class GraphQLObjectNotFoundErrorBuilder implements Builder<GraphQLObjectN
         values.put(key, value);
         return this;
     }
+    
 
     /**
      *  <p>Error-specific additional fields.</p>
      * @return pattern properties
      */
-
-    public Map<String, java.lang.Object> getValues() {
+    
+    
+    public Map<String, java.lang.Object> getValues(){
         return this.values;
     }
 
@@ -64,7 +74,7 @@ public class GraphQLObjectNotFoundErrorBuilder implements Builder<GraphQLObjectN
     public GraphQLObjectNotFoundError build() {
         return new GraphQLObjectNotFoundErrorImpl(values);
     }
-
+    
     /**
      * builds GraphQLObjectNotFoundError without checking for non-null required values
      * @return GraphQLObjectNotFoundError
@@ -75,7 +85,7 @@ public class GraphQLObjectNotFoundErrorBuilder implements Builder<GraphQLObjectN
 
     /**
      * factory method for an instance of GraphQLObjectNotFoundErrorBuilder
-     * @return builder
+     * @return builder 
      */
     public static GraphQLObjectNotFoundErrorBuilder of() {
         return new GraphQLObjectNotFoundErrorBuilder();

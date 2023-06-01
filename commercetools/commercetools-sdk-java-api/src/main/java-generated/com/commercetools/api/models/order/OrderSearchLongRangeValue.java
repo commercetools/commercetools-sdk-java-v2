@@ -1,16 +1,20 @@
-
 package com.commercetools.api.models.order;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
+import com.commercetools.api.models.order.OrderSearchQueryExpressionValue;
+import com.commercetools.api.models.order.OrderSearchLongRangeValueImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * OrderSearchLongRangeValue
@@ -23,25 +27,28 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .field("{field}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = OrderSearchLongRangeValueImpl.class)
 public interface OrderSearchLongRangeValue extends OrderSearchQueryExpressionValue {
+
 
     /**
      *
      * @return gte
      */
-
+    
     @JsonProperty("gte")
     public Long getGte();
-
     /**
      *
      * @return lte
      */
-
+    
     @JsonProperty("lte")
     public Long getLte();
 
@@ -49,23 +56,26 @@ public interface OrderSearchLongRangeValue extends OrderSearchQueryExpressionVal
      * set gte
      * @param gte value to be set
      */
-
+    
     public void setGte(final Long gte);
-
+    
+    
     /**
      * set lte
      * @param lte value to be set
      */
-
+    
     public void setLte(final Long lte);
+    
 
     /**
      * factory method
      * @return instance of OrderSearchLongRangeValue
      */
-    public static OrderSearchLongRangeValue of() {
+    public static OrderSearchLongRangeValue of(){
         return new OrderSearchLongRangeValueImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy OrderSearchLongRangeValue
@@ -108,7 +118,7 @@ public interface OrderSearchLongRangeValue extends OrderSearchQueryExpressionVal
     public static OrderSearchLongRangeValueBuilder builder() {
         return OrderSearchLongRangeValueBuilder.of();
     }
-
+    
     /**
      * create builder for OrderSearchLongRangeValue instance
      * @param template instance with prefilled values for the builder
@@ -117,6 +127,7 @@ public interface OrderSearchLongRangeValue extends OrderSearchQueryExpressionVal
     public static OrderSearchLongRangeValueBuilder builder(final OrderSearchLongRangeValue template) {
         return OrderSearchLongRangeValueBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -127,7 +138,7 @@ public interface OrderSearchLongRangeValue extends OrderSearchQueryExpressionVal
     default <T> T withOrderSearchLongRangeValue(Function<OrderSearchLongRangeValue, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

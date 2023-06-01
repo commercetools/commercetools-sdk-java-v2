@@ -1,19 +1,21 @@
-
 package com.commercetools.api.models.order;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
 import com.commercetools.api.models.common.BaseAddress;
+import com.commercetools.api.models.order.OrderUpdateAction;
+import com.commercetools.api.models.order.OrderUpdateItemShippingAddressActionImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * OrderUpdateItemShippingAddressAction
@@ -26,9 +28,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .address(addressBuilder -> addressBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = OrderUpdateItemShippingAddressActionImpl.class)
 public interface OrderUpdateItemShippingAddressAction extends OrderUpdateAction {
 
@@ -50,16 +55,18 @@ public interface OrderUpdateItemShippingAddressAction extends OrderUpdateAction 
      *  <p>Polymorphic base type that represents a postal address and contact details. Depending on the read or write action, it can be either Address or AddressDraft that only differ in the data type for the optional <code>custom</code> field.</p>
      * @param address value to be set
      */
-
+    
     public void setAddress(final BaseAddress address);
+    
 
     /**
      * factory method
      * @return instance of OrderUpdateItemShippingAddressAction
      */
-    public static OrderUpdateItemShippingAddressAction of() {
+    public static OrderUpdateItemShippingAddressAction of(){
         return new OrderUpdateItemShippingAddressActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy OrderUpdateItemShippingAddressAction
@@ -78,8 +85,7 @@ public interface OrderUpdateItemShippingAddressAction extends OrderUpdateAction 
      * @return copy instance
      */
     @Nullable
-    public static OrderUpdateItemShippingAddressAction deepCopy(
-            @Nullable final OrderUpdateItemShippingAddressAction template) {
+    public static OrderUpdateItemShippingAddressAction deepCopy(@Nullable final OrderUpdateItemShippingAddressAction template) {
         if (template == null) {
             return null;
         }
@@ -95,16 +101,16 @@ public interface OrderUpdateItemShippingAddressAction extends OrderUpdateAction 
     public static OrderUpdateItemShippingAddressActionBuilder builder() {
         return OrderUpdateItemShippingAddressActionBuilder.of();
     }
-
+    
     /**
      * create builder for OrderUpdateItemShippingAddressAction instance
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static OrderUpdateItemShippingAddressActionBuilder builder(
-            final OrderUpdateItemShippingAddressAction template) {
+    public static OrderUpdateItemShippingAddressActionBuilder builder(final OrderUpdateItemShippingAddressAction template) {
         return OrderUpdateItemShippingAddressActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -115,7 +121,7 @@ public interface OrderUpdateItemShippingAddressAction extends OrderUpdateAction 
     default <T> T withOrderUpdateItemShippingAddressAction(Function<OrderUpdateItemShippingAddressAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

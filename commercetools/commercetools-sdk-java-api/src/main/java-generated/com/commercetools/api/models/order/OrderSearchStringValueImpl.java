@@ -1,45 +1,54 @@
-
 package com.commercetools.api.models.order;
 
-import java.time.*;
-import java.util.*;
-
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
-
-import io.vrap.rmf.base.client.ModelBase;
+import com.commercetools.api.models.order.OrderSearchQueryExpressionValue;
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.ModelBase;
+import javax.validation.Valid;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.annotation.*;
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
  * OrderSearchStringValue
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class OrderSearchStringValueImpl implements OrderSearchStringValue, ModelBase {
 
+    
     private String field;
-
+    
+    
     private Integer boost;
-
+    
+    
     private String customType;
-
+    
+    
     private String value;
-
+    
+    
     private String language;
-
+    
+    
     private Boolean caseInsensitive;
 
     /**
      * create instance with all properties
      */
     @JsonCreator
-    OrderSearchStringValueImpl(@JsonProperty("field") final String field, @JsonProperty("boost") final Integer boost,
-            @JsonProperty("customType") final String customType, @JsonProperty("value") final String value,
-            @JsonProperty("language") final String language,
-            @JsonProperty("caseInsensitive") final Boolean caseInsensitive) {
+    OrderSearchStringValueImpl(@JsonProperty("field") final String field, @JsonProperty("boost") final Integer boost, @JsonProperty("customType") final String customType, @JsonProperty("value") final String value, @JsonProperty("language") final String language, @JsonProperty("caseInsensitive") final Boolean caseInsensitive) {
         this.field = field;
         this.boost = boost;
         this.customType = customType;
@@ -47,7 +56,6 @@ public class OrderSearchStringValueImpl implements OrderSearchStringValue, Model
         this.language = language;
         this.caseInsensitive = caseInsensitive;
     }
-
     /**
      * create empty instance
      */
@@ -57,86 +65,91 @@ public class OrderSearchStringValueImpl implements OrderSearchStringValue, Model
     /**
      *
      */
-
-    public String getField() {
+    
+    public String getField(){
         return this.field;
     }
-
+    
     /**
      *
      */
-
-    public Integer getBoost() {
+    
+    public Integer getBoost(){
         return this.boost;
     }
-
+    
     /**
      *
      */
-
-    public String getCustomType() {
+    
+    public String getCustomType(){
         return this.customType;
     }
-
+    
     /**
      *
      */
-
-    public String getValue() {
+    
+    public String getValue(){
         return this.value;
     }
-
+    
     /**
      *
      */
-
-    public String getLanguage() {
+    
+    public String getLanguage(){
         return this.language;
     }
-
+    
     /**
      *
      */
-
-    public Boolean getCaseInsensitive() {
+    
+    public Boolean getCaseInsensitive(){
         return this.caseInsensitive;
     }
 
-    public void setField(final String field) {
+    
+    public void setField(final String field){
         this.field = field;
     }
-
-    public void setBoost(final Integer boost) {
+    
+    
+    public void setBoost(final Integer boost){
         this.boost = boost;
     }
-
-    public void setCustomType(final String customType) {
+    
+    
+    public void setCustomType(final String customType){
         this.customType = customType;
     }
-
-    public void setValue(final String value) {
+    
+    
+    public void setValue(final String value){
         this.value = value;
     }
-
-    public void setLanguage(final String language) {
+    
+    
+    public void setLanguage(final String language){
         this.language = language;
     }
-
-    public void setCaseInsensitive(final Boolean caseInsensitive) {
+    
+    
+    public void setCaseInsensitive(final Boolean caseInsensitive){
         this.caseInsensitive = caseInsensitive;
     }
 
     @Override
     public boolean equals(Object o) {
-        if (this == o)
-            return true;
-
-        if (o == null || getClass() != o.getClass())
-            return false;
-
+        if (this == o) return true;
+    
+        if (o == null || getClass() != o.getClass()) return false;
+    
         OrderSearchStringValueImpl that = (OrderSearchStringValueImpl) o;
-
-        return new EqualsBuilder().append(field, that.field)
+    
+        return new EqualsBuilder()
+                .append(field, that.field)
                 .append(boost, that.boost)
                 .append(customType, that.customType)
                 .append(value, that.value)
@@ -144,16 +157,17 @@ public class OrderSearchStringValueImpl implements OrderSearchStringValue, Model
                 .append(caseInsensitive, that.caseInsensitive)
                 .isEquals();
     }
-
+    
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(field)
-                .append(boost)
-                .append(customType)
-                .append(value)
-                .append(language)
-                .append(caseInsensitive)
-                .toHashCode();
+        return new HashCodeBuilder(17, 37)
+            .append(field)
+            .append(boost)
+            .append(customType)
+            .append(value)
+            .append(language)
+            .append(caseInsensitive)
+            .toHashCode();
     }
 
 }

@@ -1,19 +1,20 @@
-
 package com.commercetools.api.models.attribute_group;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-import java.util.stream.Collectors;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
+import com.commercetools.api.models.attribute_group.AttributeGroupUpdateAction;
+import com.commercetools.api.models.attribute_group.AttributeGroupUpdateImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * AttributeGroupUpdate
@@ -27,12 +28,15 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .plusActions(actionsBuilder -> actionsBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = AttributeGroupUpdateImpl.class)
-public interface AttributeGroupUpdate extends
-        com.commercetools.api.models.ResourceUpdate<AttributeGroupUpdate, AttributeGroupUpdateAction, AttributeGroupUpdateBuilder> {
+public interface AttributeGroupUpdate extends com.commercetools.api.models.ResourceUpdate<AttributeGroupUpdate, AttributeGroupUpdateAction, AttributeGroupUpdateBuilder> {
+
 
     /**
      *  <p>Expected version of the AttributeGroup on which the changes should be applied. If the expected version does not match the actual version, a 409 Conflict will be returned.</p>
@@ -41,7 +45,6 @@ public interface AttributeGroupUpdate extends
     @NotNull
     @JsonProperty("version")
     public Long getVersion();
-
     /**
      *  <p>Update actions to be performed on the AttributeGroup.</p>
      * @return actions
@@ -55,31 +58,32 @@ public interface AttributeGroupUpdate extends
      *  <p>Expected version of the AttributeGroup on which the changes should be applied. If the expected version does not match the actual version, a 409 Conflict will be returned.</p>
      * @param version value to be set
      */
-
+    
     public void setVersion(final Long version);
-
+    
+    
     /**
      *  <p>Update actions to be performed on the AttributeGroup.</p>
      * @param actions values to be set
      */
-
+    
     @JsonIgnore
-    public void setActions(final AttributeGroupUpdateAction... actions);
-
+    public void setActions(final AttributeGroupUpdateAction ...actions);
     /**
      *  <p>Update actions to be performed on the AttributeGroup.</p>
      * @param actions values to be set
      */
-
+    
     public void setActions(final List<AttributeGroupUpdateAction> actions);
 
     /**
      * factory method
      * @return instance of AttributeGroupUpdate
      */
-    public static AttributeGroupUpdate of() {
+    public static AttributeGroupUpdate of(){
         return new AttributeGroupUpdateImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy AttributeGroupUpdate
@@ -106,9 +110,7 @@ public interface AttributeGroupUpdate extends
         AttributeGroupUpdateImpl instance = new AttributeGroupUpdateImpl();
         instance.setVersion(template.getVersion());
         instance.setActions(Optional.ofNullable(template.getActions())
-                .map(t -> t.stream()
-                        .map(com.commercetools.api.models.attribute_group.AttributeGroupUpdateAction::deepCopy)
-                        .collect(Collectors.toList()))
+                .map(t -> t.stream().map(com.commercetools.api.models.attribute_group.AttributeGroupUpdateAction::deepCopy).collect(Collectors.toList()))
                 .orElse(null));
         return instance;
     }
@@ -120,7 +122,7 @@ public interface AttributeGroupUpdate extends
     public static AttributeGroupUpdateBuilder builder() {
         return AttributeGroupUpdateBuilder.of();
     }
-
+    
     /**
      * create builder for AttributeGroupUpdate instance
      * @param template instance with prefilled values for the builder
@@ -129,6 +131,7 @@ public interface AttributeGroupUpdate extends
     public static AttributeGroupUpdateBuilder builder(final AttributeGroupUpdate template) {
         return AttributeGroupUpdateBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -139,7 +142,7 @@ public interface AttributeGroupUpdate extends
     default <T> T withAttributeGroupUpdate(Function<AttributeGroupUpdate, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

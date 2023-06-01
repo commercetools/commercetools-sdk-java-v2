@@ -1,37 +1,38 @@
-
 package com.commercetools.api.models.staged_quote;
-
-import java.util.Arrays;
-import java.util.Optional;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-
+import java.lang.String;
+import java.util.Arrays;
+import java.util.Optional;
 import io.vrap.rmf.base.client.JsonEnum;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
  *  <p>Predefined states tracking the status of the Staged Quote.</p>
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public interface StagedQuoteState extends JsonEnum {
 
     /**
     	<p>Initial state after creating the StagedQuote indicating that the <a href="/../api/quotes-overview#seller">Seller</a> is preparing the Quote.</p>
-
+    	
     */
     StagedQuoteState IN_PROGRESS = StagedQuoteStateEnum.IN_PROGRESS;
     /**
     	<p>A state indicating that the StagedQuote has been sent to the <a href="/../api/quotes-overview#buyer">Buyer</a>.</p>
-
+    	
     */
     StagedQuoteState SENT = StagedQuoteStateEnum.SENT;
     /**
     	<p>A state indicating that the StagedQuote flow was finished.</p>
-
+    	
     */
     StagedQuoteState CLOSED = StagedQuoteStateEnum.CLOSED;
-
+    
     /**
      * possible values of StagedQuoteState
      */
@@ -40,12 +41,12 @@ public interface StagedQuoteState extends JsonEnum {
          * InProgress
          */
         IN_PROGRESS("InProgress"),
-
+        
         /**
          * Sent
          */
         SENT("Sent"),
-
+        
         /**
          * Closed
          */
@@ -102,7 +103,7 @@ public interface StagedQuoteState extends JsonEnum {
             public String name() {
                 return value.toUpperCase();
             }
-
+            
             public String toString() {
                 return value;
             }
@@ -117,7 +118,7 @@ public interface StagedQuoteState extends JsonEnum {
     public static Optional<StagedQuoteState> findEnumViaJsonName(String jsonName) {
         return Arrays.stream(values()).filter(t -> t.getJsonName().equals(jsonName)).findFirst();
     }
-
+    
     /**
      * possible enum values
      * @return array of possible enum values
@@ -125,5 +126,5 @@ public interface StagedQuoteState extends JsonEnum {
     public static StagedQuoteState[] values() {
         return StagedQuoteStateEnum.values();
     }
-
+    
 }

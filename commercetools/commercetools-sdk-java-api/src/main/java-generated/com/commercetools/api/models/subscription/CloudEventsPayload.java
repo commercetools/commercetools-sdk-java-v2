@@ -1,19 +1,21 @@
-
 package com.commercetools.api.models.subscription;
 
-import java.time.*;
+import com.commercetools.api.models.subscription.DeliveryPayload;
 import java.time.ZonedDateTime;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
+import com.commercetools.api.models.subscription.CloudEventsPayloadImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>The CloudEventsFormat represents event data in a way that conforms to a common specification. The message payload can be found inside the <code>data</code> field.</p>
@@ -32,11 +34,14 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .data(dataBuilder -> dataBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = CloudEventsPayloadImpl.class)
-public interface CloudEventsPayload {
+public interface CloudEventsPayload  {
 
     /**
      * discriminator value for CloudEventsPayload
@@ -50,7 +55,6 @@ public interface CloudEventsPayload {
     @NotNull
     @JsonProperty("specversion")
     public String getSpecversion();
-
     /**
      *  <p>Unique identifier of the event.</p>
      * @return id
@@ -58,7 +62,6 @@ public interface CloudEventsPayload {
     @NotNull
     @JsonProperty("id")
     public String getId();
-
     /**
      *  <p>The <code>type</code> is namespaced with <code>com.commercetools</code>, followed by the ReferenceTypeId, the type of Subscription (either <code>message</code> or <code>change</code>), and the message or change type. For example, <code>com.commercetools.product.message.ProductPublished</code> or <code>com.commercetools.order.change.ResourceCreated</code>.</p>
      * @return type
@@ -66,7 +69,6 @@ public interface CloudEventsPayload {
     @NotNull
     @JsonProperty("type")
     public String getType();
-
     /**
      *  <p>The default REST URI of the ReferenceTypeId that triggered this event, including the project key.</p>
      * @return source
@@ -74,7 +76,6 @@ public interface CloudEventsPayload {
     @NotNull
     @JsonProperty("source")
     public String getSource();
-
     /**
      *  <p>Unique identifier of the resource that triggered the event.</p>
      * @return subject
@@ -82,7 +83,6 @@ public interface CloudEventsPayload {
     @NotNull
     @JsonProperty("subject")
     public String getSubject();
-
     /**
      *  <p>Corresponds to the <code>lastModifiedAt</code> of the resource at the time the event was triggered.</p>
      * @return time
@@ -90,31 +90,27 @@ public interface CloudEventsPayload {
     @NotNull
     @JsonProperty("time")
     public ZonedDateTime getTime();
-
     /**
      *  <p>Corresponds to the <code>sequenceNumber</code> of a MessageSubscription. Can be used to process messages in the correct order.</p>
      * @return sequence
      */
-
+    
     @JsonProperty("sequence")
     public String getSequence();
-
     /**
      *  <p><code>"Integer"</code></p>
      * @return sequencetype
      */
-
+    
     @JsonProperty("sequencetype")
     public String getSequencetype();
-
     /**
      *  <p>The URI from which the message can be retrieved if messages are enabled. Only set for MessageSubscriptions.</p>
      * @return dataref
      */
-
+    
     @JsonProperty("dataref")
     public String getDataref();
-
     /**
      *  <p>MessageDeliveryPayload, ResourceCreatedDeliveryPayload, ResourceUpdatedDeliveryPayload, or ResourceDeletedDeliveryPayload.</p>
      * @return data
@@ -128,79 +124,90 @@ public interface CloudEventsPayload {
      *  <p>The version of the CloudEvents specification which the event uses.</p>
      * @param specversion value to be set
      */
-
+    
     public void setSpecversion(final String specversion);
-
+    
+    
     /**
      *  <p>Unique identifier of the event.</p>
      * @param id value to be set
      */
-
+    
     public void setId(final String id);
-
+    
+    
     /**
      *  <p>The <code>type</code> is namespaced with <code>com.commercetools</code>, followed by the ReferenceTypeId, the type of Subscription (either <code>message</code> or <code>change</code>), and the message or change type. For example, <code>com.commercetools.product.message.ProductPublished</code> or <code>com.commercetools.order.change.ResourceCreated</code>.</p>
      * @param type value to be set
      */
-
+    
     public void setType(final String type);
-
+    
+    
     /**
      *  <p>The default REST URI of the ReferenceTypeId that triggered this event, including the project key.</p>
      * @param source value to be set
      */
-
+    
     public void setSource(final String source);
-
+    
+    
     /**
      *  <p>Unique identifier of the resource that triggered the event.</p>
      * @param subject value to be set
      */
-
+    
     public void setSubject(final String subject);
-
+    
+    
     /**
      *  <p>Corresponds to the <code>lastModifiedAt</code> of the resource at the time the event was triggered.</p>
      * @param time value to be set
      */
-
+    
     public void setTime(final ZonedDateTime time);
-
+    
+    
     /**
      *  <p>Corresponds to the <code>sequenceNumber</code> of a MessageSubscription. Can be used to process messages in the correct order.</p>
      * @param sequence value to be set
      */
-
+    
     public void setSequence(final String sequence);
-
+    
+    
     /**
      *  <p><code>"Integer"</code></p>
      * @param sequencetype value to be set
      */
-
+    
     public void setSequencetype(final String sequencetype);
-
+    
+    
     /**
      *  <p>The URI from which the message can be retrieved if messages are enabled. Only set for MessageSubscriptions.</p>
      * @param dataref value to be set
      */
-
+    
     public void setDataref(final String dataref);
-
+    
+    
     /**
      *  <p>MessageDeliveryPayload, ResourceCreatedDeliveryPayload, ResourceUpdatedDeliveryPayload, or ResourceDeletedDeliveryPayload.</p>
      * @param data value to be set
      */
-
+    
     public void setData(final DeliveryPayload data);
+    
 
     /**
      * factory method
      * @return instance of CloudEventsPayload
      */
-    public static CloudEventsPayload of() {
+    public static CloudEventsPayload of(){
         return new CloudEventsPayloadImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy CloudEventsPayload
@@ -253,7 +260,7 @@ public interface CloudEventsPayload {
     public static CloudEventsPayloadBuilder builder() {
         return CloudEventsPayloadBuilder.of();
     }
-
+    
     /**
      * create builder for CloudEventsPayload instance
      * @param template instance with prefilled values for the builder
@@ -262,6 +269,7 @@ public interface CloudEventsPayload {
     public static CloudEventsPayloadBuilder builder(final CloudEventsPayload template) {
         return CloudEventsPayloadBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -272,7 +280,7 @@ public interface CloudEventsPayload {
     default <T> T withCloudEventsPayload(Function<CloudEventsPayload, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

@@ -1,17 +1,20 @@
-
 package com.commercetools.api.models.cart_discount;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
+import com.commercetools.api.models.cart_discount.CartDiscountValue;
+import com.commercetools.api.models.cart_discount.CartDiscountValueRelativeImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Discounts the CartDiscountTarget relative to its price.</p>
@@ -24,9 +27,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .permyriad(0.3)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = CartDiscountValueRelativeImpl.class)
 public interface CartDiscountValueRelative extends CartDiscountValue {
 
@@ -47,16 +53,18 @@ public interface CartDiscountValueRelative extends CartDiscountValue {
      *  <p>Fraction (per ten thousand) the price is reduced by. For example, <code>1000</code> will result in a 10% price reduction.</p>
      * @param permyriad value to be set
      */
-
+    
     public void setPermyriad(final Long permyriad);
+    
 
     /**
      * factory method
      * @return instance of CartDiscountValueRelative
      */
-    public static CartDiscountValueRelative of() {
+    public static CartDiscountValueRelative of(){
         return new CartDiscountValueRelativeImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy CartDiscountValueRelative
@@ -91,7 +99,7 @@ public interface CartDiscountValueRelative extends CartDiscountValue {
     public static CartDiscountValueRelativeBuilder builder() {
         return CartDiscountValueRelativeBuilder.of();
     }
-
+    
     /**
      * create builder for CartDiscountValueRelative instance
      * @param template instance with prefilled values for the builder
@@ -100,6 +108,7 @@ public interface CartDiscountValueRelative extends CartDiscountValue {
     public static CartDiscountValueRelativeBuilder builder(final CartDiscountValueRelative template) {
         return CartDiscountValueRelativeBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -110,7 +119,7 @@ public interface CartDiscountValueRelative extends CartDiscountValue {
     default <T> T withCartDiscountValueRelative(Function<CartDiscountValueRelative, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

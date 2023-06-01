@@ -1,16 +1,17 @@
-
 package com.commercetools.api.client;
 
-import java.util.List;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import java.util.List;
 
 /**
  * ExpandableTrait
  * @param <T> type of extending interface
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
-public interface ExpandableTrait<T extends ExpandableTrait<T>> {
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
+public interface ExpandableTrait<T extends ExpandableTrait<T>>  {
     List<String> getExpand();
 
     /**
@@ -20,7 +21,7 @@ public interface ExpandableTrait<T extends ExpandableTrait<T>> {
      * @return ExpandableTrait
      */
     <TValue> ExpandableTrait<T> withExpand(final TValue expand);
-
+    
     /**
      * add additional expand query parameter
      * @param expand value to be added
@@ -29,13 +30,14 @@ public interface ExpandableTrait<T extends ExpandableTrait<T>> {
      */
     <TValue> ExpandableTrait<T> addExpand(final TValue expand);
 
+    
     default ExpandableTrait<T> asExpandableTrait() {
         return this;
     }
-
+    
     @SuppressWarnings("unchecked")
     default T asExpandableTraitToBaseType() {
-        return (T) this;
+        return (T)this;
     }
-
+    
 }

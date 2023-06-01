@@ -1,11 +1,11 @@
-
 package com.commercetools.api.predicates.query.order;
-
-import java.util.function.Function;
 
 import com.commercetools.api.predicates.query.*;
 
-public class PaymentInfoQueryBuilderDsl {
+import java.util.function.Function;
+
+
+public class PaymentInfoQueryBuilderDsl  {
     public PaymentInfoQueryBuilderDsl() {
     }
 
@@ -14,16 +14,15 @@ public class PaymentInfoQueryBuilderDsl {
     }
 
     public CombinationQueryPredicate<PaymentInfoQueryBuilderDsl> payments(
-            Function<com.commercetools.api.predicates.query.payment.PaymentReferenceQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.payment.PaymentReferenceQueryBuilderDsl>> fn) {
+        Function<com.commercetools.api.predicates.query.payment.PaymentReferenceQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.payment.PaymentReferenceQueryBuilderDsl>> fn) {
         return new CombinationQueryPredicate<>(ContainerQueryPredicate.of()
-                .parent(ConstantQueryPredicate.of().constant("payments"))
-                .inner(fn.apply(com.commercetools.api.predicates.query.payment.PaymentReferenceQueryBuilderDsl.of())),
+            .parent(ConstantQueryPredicate.of().constant("payments"))
+            .inner(fn.apply(com.commercetools.api.predicates.query.payment.PaymentReferenceQueryBuilderDsl.of())),
             PaymentInfoQueryBuilderDsl::of);
     }
-
     public CollectionPredicateBuilder<PaymentInfoQueryBuilderDsl> payments() {
         return new CollectionPredicateBuilder<>(BinaryQueryPredicate.of().left(new ConstantQueryPredicate("payments")),
-            p -> new CombinationQueryPredicate<>(p, PaymentInfoQueryBuilderDsl::of));
+                p -> new CombinationQueryPredicate<>(p, PaymentInfoQueryBuilderDsl::of));
     }
-
+    
 }

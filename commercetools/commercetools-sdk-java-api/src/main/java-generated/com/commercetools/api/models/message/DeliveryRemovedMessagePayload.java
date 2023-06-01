@@ -1,19 +1,21 @@
-
 package com.commercetools.api.models.message;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
+import com.commercetools.api.models.message.OrderMessagePayload;
 import com.commercetools.api.models.order.Delivery;
+import com.commercetools.api.models.message.DeliveryRemovedMessagePayloadImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Generated after a successful Remove Delivery update action.</p>
@@ -26,9 +28,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .delivery(deliveryBuilder -> deliveryBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = DeliveryRemovedMessagePayloadImpl.class)
 public interface DeliveryRemovedMessagePayload extends OrderMessagePayload {
 
@@ -45,12 +50,11 @@ public interface DeliveryRemovedMessagePayload extends OrderMessagePayload {
     @Valid
     @JsonProperty("delivery")
     public Delivery getDelivery();
-
     /**
      *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multi</code> ShippingMode.</p>
      * @return shippingKey
      */
-
+    
     @JsonProperty("shippingKey")
     public String getShippingKey();
 
@@ -58,23 +62,26 @@ public interface DeliveryRemovedMessagePayload extends OrderMessagePayload {
      *  <p>The Delivery that was removed from the Order.</p>
      * @param delivery value to be set
      */
-
+    
     public void setDelivery(final Delivery delivery);
-
+    
+    
     /**
      *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multi</code> ShippingMode.</p>
      * @param shippingKey value to be set
      */
-
+    
     public void setShippingKey(final String shippingKey);
+    
 
     /**
      * factory method
      * @return instance of DeliveryRemovedMessagePayload
      */
-    public static DeliveryRemovedMessagePayload of() {
+    public static DeliveryRemovedMessagePayload of(){
         return new DeliveryRemovedMessagePayloadImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy DeliveryRemovedMessagePayload
@@ -111,7 +118,7 @@ public interface DeliveryRemovedMessagePayload extends OrderMessagePayload {
     public static DeliveryRemovedMessagePayloadBuilder builder() {
         return DeliveryRemovedMessagePayloadBuilder.of();
     }
-
+    
     /**
      * create builder for DeliveryRemovedMessagePayload instance
      * @param template instance with prefilled values for the builder
@@ -120,6 +127,7 @@ public interface DeliveryRemovedMessagePayload extends OrderMessagePayload {
     public static DeliveryRemovedMessagePayloadBuilder builder(final DeliveryRemovedMessagePayload template) {
         return DeliveryRemovedMessagePayloadBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -130,7 +138,7 @@ public interface DeliveryRemovedMessagePayload extends OrderMessagePayload {
     default <T> T withDeliveryRemovedMessagePayload(Function<DeliveryRemovedMessagePayload, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

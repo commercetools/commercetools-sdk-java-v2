@@ -1,17 +1,20 @@
-
 package com.commercetools.api.models.error;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
+import com.commercetools.api.models.error.ErrorObject;
+import com.commercetools.api.models.error.ShippingMethodDoesNotMatchCartErrorImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Returned when the Cart contains a ShippingMethod that is not allowed for the Cart. In this case, the ShippingMethodState value is <code>DoesNotMatchCart</code>.</p>
@@ -25,9 +28,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .message("{message}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = ShippingMethodDoesNotMatchCartErrorImpl.class)
 public interface ShippingMethodDoesNotMatchCartError extends ErrorObject {
 
@@ -43,7 +49,6 @@ public interface ShippingMethodDoesNotMatchCartError extends ErrorObject {
     @NotNull
     @JsonProperty("code")
     public String getCode();
-
     /**
      *  <p><code>"The predicate does not match the cart."</code></p>
      * @return message
@@ -56,16 +61,18 @@ public interface ShippingMethodDoesNotMatchCartError extends ErrorObject {
      *  <p><code>"The predicate does not match the cart."</code></p>
      * @param message value to be set
      */
-
+    
     public void setMessage(final String message);
+    
 
     /**
      * factory method
      * @return instance of ShippingMethodDoesNotMatchCartError
      */
-    public static ShippingMethodDoesNotMatchCartError of() {
+    public static ShippingMethodDoesNotMatchCartError of(){
         return new ShippingMethodDoesNotMatchCartErrorImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy ShippingMethodDoesNotMatchCartError
@@ -85,8 +92,7 @@ public interface ShippingMethodDoesNotMatchCartError extends ErrorObject {
      * @return copy instance
      */
     @Nullable
-    public static ShippingMethodDoesNotMatchCartError deepCopy(
-            @Nullable final ShippingMethodDoesNotMatchCartError template) {
+    public static ShippingMethodDoesNotMatchCartError deepCopy(@Nullable final ShippingMethodDoesNotMatchCartError template) {
         if (template == null) {
             return null;
         }
@@ -103,16 +109,16 @@ public interface ShippingMethodDoesNotMatchCartError extends ErrorObject {
     public static ShippingMethodDoesNotMatchCartErrorBuilder builder() {
         return ShippingMethodDoesNotMatchCartErrorBuilder.of();
     }
-
+    
     /**
      * create builder for ShippingMethodDoesNotMatchCartError instance
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static ShippingMethodDoesNotMatchCartErrorBuilder builder(
-            final ShippingMethodDoesNotMatchCartError template) {
+    public static ShippingMethodDoesNotMatchCartErrorBuilder builder(final ShippingMethodDoesNotMatchCartError template) {
         return ShippingMethodDoesNotMatchCartErrorBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -123,7 +129,7 @@ public interface ShippingMethodDoesNotMatchCartError extends ErrorObject {
     default <T> T withShippingMethodDoesNotMatchCartError(Function<ShippingMethodDoesNotMatchCartError, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

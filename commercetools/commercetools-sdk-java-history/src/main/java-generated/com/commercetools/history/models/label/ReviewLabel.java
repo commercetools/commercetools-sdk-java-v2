@@ -1,17 +1,20 @@
-
 package com.commercetools.history.models.label;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
+import com.commercetools.history.models.label.Label;
+import com.commercetools.history.models.label.ReviewLabelImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * ReviewLabel
@@ -25,9 +28,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .title("{title}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = ReviewLabelImpl.class)
 public interface ReviewLabel extends Label {
 
@@ -43,7 +49,6 @@ public interface ReviewLabel extends Label {
     @NotNull
     @JsonProperty("type")
     public String getType();
-
     /**
      *
      * @return key
@@ -51,7 +56,6 @@ public interface ReviewLabel extends Label {
     @NotNull
     @JsonProperty("key")
     public String getKey();
-
     /**
      *
      * @return title
@@ -64,23 +68,26 @@ public interface ReviewLabel extends Label {
      * set key
      * @param key value to be set
      */
-
+    
     public void setKey(final String key);
-
+    
+    
     /**
      * set title
      * @param title value to be set
      */
-
+    
     public void setTitle(final String title);
+    
 
     /**
      * factory method
      * @return instance of ReviewLabel
      */
-    public static ReviewLabel of() {
+    public static ReviewLabel of(){
         return new ReviewLabelImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy ReviewLabel
@@ -117,7 +124,7 @@ public interface ReviewLabel extends Label {
     public static ReviewLabelBuilder builder() {
         return ReviewLabelBuilder.of();
     }
-
+    
     /**
      * create builder for ReviewLabel instance
      * @param template instance with prefilled values for the builder
@@ -126,6 +133,7 @@ public interface ReviewLabel extends Label {
     public static ReviewLabelBuilder builder(final ReviewLabel template) {
         return ReviewLabelBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -136,7 +144,7 @@ public interface ReviewLabel extends Label {
     default <T> T withReviewLabel(Function<ReviewLabel, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

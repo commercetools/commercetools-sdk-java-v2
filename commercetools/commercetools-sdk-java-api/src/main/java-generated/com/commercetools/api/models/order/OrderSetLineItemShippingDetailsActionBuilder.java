@@ -1,11 +1,12 @@
-
 package com.commercetools.api.models.order;
 
+import com.commercetools.api.models.cart.ItemShippingDetailsDraft;
+import com.commercetools.api.models.order.OrderUpdateAction;
+import com.commercetools.api.models.order.OrderSetLineItemShippingDetailsAction;
+import javax.annotation.Nullable;
 import java.util.*;
 import java.util.function.Function;
-
-import javax.annotation.Nullable;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -19,80 +20,89 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .lineItemId("{lineItemId}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class OrderSetLineItemShippingDetailsActionBuilder implements Builder<OrderSetLineItemShippingDetailsAction> {
 
+    
+    
     private String lineItemId;
-
+    
+    
     @Nullable
     private com.commercetools.api.models.cart.ItemShippingDetailsDraft shippingDetails;
 
+    
     /**
      * set the value to the lineItemId
      * @param lineItemId value to be set
      * @return Builder
      */
-
-    public OrderSetLineItemShippingDetailsActionBuilder lineItemId(final String lineItemId) {
+    
+    public OrderSetLineItemShippingDetailsActionBuilder lineItemId( final String lineItemId) {
         this.lineItemId = lineItemId;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>For order creation and updates, the sum of the <code>targets</code> must match the quantity of the Line Items or Custom Line Items.</p>
      * @param builder function to build the shippingDetails value
      * @return Builder
      */
-
-    public OrderSetLineItemShippingDetailsActionBuilder shippingDetails(
-            Function<com.commercetools.api.models.cart.ItemShippingDetailsDraftBuilder, com.commercetools.api.models.cart.ItemShippingDetailsDraftBuilder> builder) {
-        this.shippingDetails = builder.apply(com.commercetools.api.models.cart.ItemShippingDetailsDraftBuilder.of())
-                .build();
+    
+    public OrderSetLineItemShippingDetailsActionBuilder shippingDetails(Function<com.commercetools.api.models.cart.ItemShippingDetailsDraftBuilder, com.commercetools.api.models.cart.ItemShippingDetailsDraftBuilder> builder) {
+        this.shippingDetails = builder.apply(com.commercetools.api.models.cart.ItemShippingDetailsDraftBuilder.of()).build();
         return this;
     }
-
+    
     /**
      *  <p>For order creation and updates, the sum of the <code>targets</code> must match the quantity of the Line Items or Custom Line Items.</p>
      * @param builder function to build the shippingDetails value
      * @return Builder
      */
-
-    public OrderSetLineItemShippingDetailsActionBuilder withShippingDetails(
-            Function<com.commercetools.api.models.cart.ItemShippingDetailsDraftBuilder, com.commercetools.api.models.cart.ItemShippingDetailsDraft> builder) {
+    
+    public OrderSetLineItemShippingDetailsActionBuilder withShippingDetails(Function<com.commercetools.api.models.cart.ItemShippingDetailsDraftBuilder, com.commercetools.api.models.cart.ItemShippingDetailsDraft> builder) {
         this.shippingDetails = builder.apply(com.commercetools.api.models.cart.ItemShippingDetailsDraftBuilder.of());
         return this;
     }
-
+                    
     /**
      *  <p>For order creation and updates, the sum of the <code>targets</code> must match the quantity of the Line Items or Custom Line Items.</p>
      * @param shippingDetails value to be set
      * @return Builder
      */
-
-    public OrderSetLineItemShippingDetailsActionBuilder shippingDetails(
-            @Nullable final com.commercetools.api.models.cart.ItemShippingDetailsDraft shippingDetails) {
+    
+    public OrderSetLineItemShippingDetailsActionBuilder shippingDetails(@Nullable final com.commercetools.api.models.cart.ItemShippingDetailsDraft shippingDetails) {
         this.shippingDetails = shippingDetails;
         return this;
     }
+    
+    
 
     /**
      * value of lineItemId}
      * @return lineItemId
      */
-
-    public String getLineItemId() {
+    
+    
+    public String getLineItemId(){
         return this.lineItemId;
     }
-
+    
     /**
      *  <p>For order creation and updates, the sum of the <code>targets</code> must match the quantity of the Line Items or Custom Line Items.</p>
      * @return shippingDetails
      */
-
+    
     @Nullable
-    public com.commercetools.api.models.cart.ItemShippingDetailsDraft getShippingDetails() {
+    public com.commercetools.api.models.cart.ItemShippingDetailsDraft getShippingDetails(){
         return this.shippingDetails;
     }
 
@@ -104,7 +114,7 @@ public class OrderSetLineItemShippingDetailsActionBuilder implements Builder<Ord
         Objects.requireNonNull(lineItemId, OrderSetLineItemShippingDetailsAction.class + ": lineItemId is missing");
         return new OrderSetLineItemShippingDetailsActionImpl(lineItemId, shippingDetails);
     }
-
+    
     /**
      * builds OrderSetLineItemShippingDetailsAction without checking for non-null required values
      * @return OrderSetLineItemShippingDetailsAction
@@ -115,7 +125,7 @@ public class OrderSetLineItemShippingDetailsActionBuilder implements Builder<Ord
 
     /**
      * factory method for an instance of OrderSetLineItemShippingDetailsActionBuilder
-     * @return builder
+     * @return builder 
      */
     public static OrderSetLineItemShippingDetailsActionBuilder of() {
         return new OrderSetLineItemShippingDetailsActionBuilder();
@@ -126,8 +136,7 @@ public class OrderSetLineItemShippingDetailsActionBuilder implements Builder<Ord
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static OrderSetLineItemShippingDetailsActionBuilder of(
-            final OrderSetLineItemShippingDetailsAction template) {
+    public static OrderSetLineItemShippingDetailsActionBuilder of(final OrderSetLineItemShippingDetailsAction template) {
         OrderSetLineItemShippingDetailsActionBuilder builder = new OrderSetLineItemShippingDetailsActionBuilder();
         builder.lineItemId = template.getLineItemId();
         builder.shippingDetails = template.getShippingDetails();

@@ -1,17 +1,20 @@
-
 package com.commercetools.api.models.type;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
+import com.commercetools.api.models.type.TypeUpdateAction;
+import com.commercetools.api.models.type.TypeChangeEnumValueOrderActionImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Changes the order of EnumValues in an EnumType FieldDefinition. This update action can be used to update an EnumType FieldDefinition and a SetType FieldDefinition of EnumType.</p>
@@ -25,9 +28,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .plusKeys(keysBuilder -> keysBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = TypeChangeEnumValueOrderActionImpl.class)
 public interface TypeChangeEnumValueOrderAction extends TypeUpdateAction {
 
@@ -43,7 +49,6 @@ public interface TypeChangeEnumValueOrderAction extends TypeUpdateAction {
     @NotNull
     @JsonProperty("fieldName")
     public String getFieldName();
-
     /**
      *  <p>Must match the set of <code>key</code>s of the EnumValues in the FieldDefinition (apart from their order).</p>
      * @return keys
@@ -56,31 +61,32 @@ public interface TypeChangeEnumValueOrderAction extends TypeUpdateAction {
      *  <p><code>name</code> of the FieldDefinition to update.</p>
      * @param fieldName value to be set
      */
-
+    
     public void setFieldName(final String fieldName);
-
+    
+    
     /**
      *  <p>Must match the set of <code>key</code>s of the EnumValues in the FieldDefinition (apart from their order).</p>
      * @param keys values to be set
      */
-
+    
     @JsonIgnore
-    public void setKeys(final String... keys);
-
+    public void setKeys(final String ...keys);
     /**
      *  <p>Must match the set of <code>key</code>s of the EnumValues in the FieldDefinition (apart from their order).</p>
      * @param keys values to be set
      */
-
+    
     public void setKeys(final List<String> keys);
 
     /**
      * factory method
      * @return instance of TypeChangeEnumValueOrderAction
      */
-    public static TypeChangeEnumValueOrderAction of() {
+    public static TypeChangeEnumValueOrderAction of(){
         return new TypeChangeEnumValueOrderActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy TypeChangeEnumValueOrderAction
@@ -106,7 +112,9 @@ public interface TypeChangeEnumValueOrderAction extends TypeUpdateAction {
         }
         TypeChangeEnumValueOrderActionImpl instance = new TypeChangeEnumValueOrderActionImpl();
         instance.setFieldName(template.getFieldName());
-        instance.setKeys(Optional.ofNullable(template.getKeys()).map(ArrayList::new).orElse(null));
+        instance.setKeys(Optional.ofNullable(template.getKeys())
+                .map(ArrayList::new)
+                .orElse(null));
         return instance;
     }
 
@@ -117,7 +125,7 @@ public interface TypeChangeEnumValueOrderAction extends TypeUpdateAction {
     public static TypeChangeEnumValueOrderActionBuilder builder() {
         return TypeChangeEnumValueOrderActionBuilder.of();
     }
-
+    
     /**
      * create builder for TypeChangeEnumValueOrderAction instance
      * @param template instance with prefilled values for the builder
@@ -126,6 +134,7 @@ public interface TypeChangeEnumValueOrderAction extends TypeUpdateAction {
     public static TypeChangeEnumValueOrderActionBuilder builder(final TypeChangeEnumValueOrderAction template) {
         return TypeChangeEnumValueOrderActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -136,7 +145,7 @@ public interface TypeChangeEnumValueOrderAction extends TypeUpdateAction {
     default <T> T withTypeChangeEnumValueOrderAction(Function<TypeChangeEnumValueOrderAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

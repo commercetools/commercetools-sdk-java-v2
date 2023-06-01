@@ -1,18 +1,21 @@
-
 package com.commercetools.api.models.error;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
+import com.commercetools.api.models.error.ErrorByExtension;
+import com.commercetools.api.models.error.ErrorObject;
+import com.commercetools.api.models.error.ExtensionPredicateEvaluationFailedErrorImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Returned when the predicate defined in the ExtensionTrigger could not be evaluated due to a missing field.</p>
@@ -26,9 +29,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .errorByExtension(errorByExtensionBuilder -> errorByExtensionBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = ExtensionPredicateEvaluationFailedErrorImpl.class)
 public interface ExtensionPredicateEvaluationFailedError extends ErrorObject {
 
@@ -44,7 +50,6 @@ public interface ExtensionPredicateEvaluationFailedError extends ErrorObject {
     @NotNull
     @JsonProperty("code")
     public String getCode();
-
     /**
      *  <p><code>"The compared field $fieldName is not present."</code></p>
      * @return message
@@ -52,7 +57,6 @@ public interface ExtensionPredicateEvaluationFailedError extends ErrorObject {
     @NotNull
     @JsonProperty("message")
     public String getMessage();
-
     /**
      *  <p>Details about the API Extension that was involved in the error.</p>
      * @return errorByExtension
@@ -66,23 +70,26 @@ public interface ExtensionPredicateEvaluationFailedError extends ErrorObject {
      *  <p><code>"The compared field $fieldName is not present."</code></p>
      * @param message value to be set
      */
-
+    
     public void setMessage(final String message);
-
+    
+    
     /**
      *  <p>Details about the API Extension that was involved in the error.</p>
      * @param errorByExtension value to be set
      */
-
+    
     public void setErrorByExtension(final ErrorByExtension errorByExtension);
+    
 
     /**
      * factory method
      * @return instance of ExtensionPredicateEvaluationFailedError
      */
-    public static ExtensionPredicateEvaluationFailedError of() {
+    public static ExtensionPredicateEvaluationFailedError of(){
         return new ExtensionPredicateEvaluationFailedErrorImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy ExtensionPredicateEvaluationFailedError
@@ -103,16 +110,14 @@ public interface ExtensionPredicateEvaluationFailedError extends ErrorObject {
      * @return copy instance
      */
     @Nullable
-    public static ExtensionPredicateEvaluationFailedError deepCopy(
-            @Nullable final ExtensionPredicateEvaluationFailedError template) {
+    public static ExtensionPredicateEvaluationFailedError deepCopy(@Nullable final ExtensionPredicateEvaluationFailedError template) {
         if (template == null) {
             return null;
         }
         ExtensionPredicateEvaluationFailedErrorImpl instance = new ExtensionPredicateEvaluationFailedErrorImpl();
         instance.setMessage(template.getMessage());
         Optional.ofNullable(template.values()).ifPresent(t -> t.forEach(instance::setValue));
-        instance.setErrorByExtension(
-            com.commercetools.api.models.error.ErrorByExtension.deepCopy(template.getErrorByExtension()));
+        instance.setErrorByExtension(com.commercetools.api.models.error.ErrorByExtension.deepCopy(template.getErrorByExtension()));
         return instance;
     }
 
@@ -123,16 +128,16 @@ public interface ExtensionPredicateEvaluationFailedError extends ErrorObject {
     public static ExtensionPredicateEvaluationFailedErrorBuilder builder() {
         return ExtensionPredicateEvaluationFailedErrorBuilder.of();
     }
-
+    
     /**
      * create builder for ExtensionPredicateEvaluationFailedError instance
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static ExtensionPredicateEvaluationFailedErrorBuilder builder(
-            final ExtensionPredicateEvaluationFailedError template) {
+    public static ExtensionPredicateEvaluationFailedErrorBuilder builder(final ExtensionPredicateEvaluationFailedError template) {
         return ExtensionPredicateEvaluationFailedErrorBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -140,11 +145,10 @@ public interface ExtensionPredicateEvaluationFailedError extends ErrorObject {
      * @param helper function to map the object
      * @return mapped value
      */
-    default <T> T withExtensionPredicateEvaluationFailedError(
-            Function<ExtensionPredicateEvaluationFailedError, T> helper) {
+    default <T> T withExtensionPredicateEvaluationFailedError(Function<ExtensionPredicateEvaluationFailedError, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

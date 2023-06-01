@@ -1,17 +1,22 @@
-
 package com.commercetools.importapi.models.orders;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
+import com.commercetools.importapi.models.orders.ClassificationShippingRateInput;
+import com.commercetools.importapi.models.orders.ScoreShippingRateInput;
+import com.commercetools.importapi.models.orders.ShippingRateInputType;
 
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * ShippingRateInput
@@ -25,15 +30,26 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             label(labelBuilder -> labelBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
 @JsonSubTypes({
-        @JsonSubTypes.Type(value = com.commercetools.importapi.models.orders.ClassificationShippingRateInputImpl.class, name = ClassificationShippingRateInput.CLASSIFICATION),
-        @JsonSubTypes.Type(value = com.commercetools.importapi.models.orders.ScoreShippingRateInputImpl.class, name = ScoreShippingRateInput.SCORE) })
-@JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.EXISTING_PROPERTY, property = "type", defaultImpl = ShippingRateInputImpl.class, visible = true)
+   @JsonSubTypes.Type(value = com.commercetools.importapi.models.orders.ClassificationShippingRateInputImpl.class, name = ClassificationShippingRateInput.CLASSIFICATION),
+   @JsonSubTypes.Type(value = com.commercetools.importapi.models.orders.ScoreShippingRateInputImpl.class, name = ScoreShippingRateInput.SCORE)
+})
+@JsonTypeInfo(
+    use = JsonTypeInfo.Id.NAME,
+    include = JsonTypeInfo.As.EXISTING_PROPERTY,
+    property = "type",
+    defaultImpl = ShippingRateInputImpl.class,
+    visible = true
+)
 @JsonDeserialize(as = ShippingRateInputImpl.class)
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
-public interface ShippingRateInput {
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
+public interface ShippingRateInput  {
+
 
     /**
      *
@@ -42,6 +58,9 @@ public interface ShippingRateInput {
     @NotNull
     @JsonProperty("type")
     public ShippingRateInputType getType();
+
+
+
 
     /**
      * factory method to create a deep copy of ShippingRateInput
@@ -54,31 +73,29 @@ public interface ShippingRateInput {
             return null;
         }
         if (template instanceof com.commercetools.importapi.models.orders.ClassificationShippingRateInput) {
-            return com.commercetools.importapi.models.orders.ClassificationShippingRateInput
-                    .deepCopy((com.commercetools.importapi.models.orders.ClassificationShippingRateInput) template);
+            return com.commercetools.importapi.models.orders.ClassificationShippingRateInput.deepCopy((com.commercetools.importapi.models.orders.ClassificationShippingRateInput)template);
         }
         if (template instanceof com.commercetools.importapi.models.orders.ScoreShippingRateInput) {
-            return com.commercetools.importapi.models.orders.ScoreShippingRateInput
-                    .deepCopy((com.commercetools.importapi.models.orders.ScoreShippingRateInput) template);
+            return com.commercetools.importapi.models.orders.ScoreShippingRateInput.deepCopy((com.commercetools.importapi.models.orders.ScoreShippingRateInput)template);
         }
         ShippingRateInputImpl instance = new ShippingRateInputImpl();
         return instance;
     }
+
 
     /**
      * builder for classification subtype
      * @return builder
      */
     public static com.commercetools.importapi.models.orders.ClassificationShippingRateInputBuilder classificationBuilder() {
-        return com.commercetools.importapi.models.orders.ClassificationShippingRateInputBuilder.of();
+       return com.commercetools.importapi.models.orders.ClassificationShippingRateInputBuilder.of();
     }
-
     /**
      * builder for score subtype
      * @return builder
      */
     public static com.commercetools.importapi.models.orders.ScoreShippingRateInputBuilder scoreBuilder() {
-        return com.commercetools.importapi.models.orders.ScoreShippingRateInputBuilder.of();
+       return com.commercetools.importapi.models.orders.ScoreShippingRateInputBuilder.of();
     }
 
     /**
@@ -90,7 +107,7 @@ public interface ShippingRateInput {
     default <T> T withShippingRateInput(Function<ShippingRateInput, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

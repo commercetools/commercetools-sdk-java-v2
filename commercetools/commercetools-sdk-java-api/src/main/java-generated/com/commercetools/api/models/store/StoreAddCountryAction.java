@@ -1,19 +1,21 @@
-
 package com.commercetools.api.models.store;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
+import com.commercetools.api.models.store.StoreUpdateAction;
 import com.commercetools.api.models.store_country.StoreCountry;
+import com.commercetools.api.models.store.StoreAddCountryActionImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>This update action produces the StoreCountriesChanged Message. It has no effect if the given country is already present in a Store.</p>
@@ -26,9 +28,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .country(countryBuilder -> countryBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = StoreAddCountryActionImpl.class)
 public interface StoreAddCountryAction extends StoreUpdateAction {
 
@@ -50,16 +55,18 @@ public interface StoreAddCountryAction extends StoreUpdateAction {
      *  <p>Value to append to <code>countries</code>.</p>
      * @param country value to be set
      */
-
+    
     public void setCountry(final StoreCountry country);
+    
 
     /**
      * factory method
      * @return instance of StoreAddCountryAction
      */
-    public static StoreAddCountryAction of() {
+    public static StoreAddCountryAction of(){
         return new StoreAddCountryActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy StoreAddCountryAction
@@ -94,7 +101,7 @@ public interface StoreAddCountryAction extends StoreUpdateAction {
     public static StoreAddCountryActionBuilder builder() {
         return StoreAddCountryActionBuilder.of();
     }
-
+    
     /**
      * create builder for StoreAddCountryAction instance
      * @param template instance with prefilled values for the builder
@@ -103,6 +110,7 @@ public interface StoreAddCountryAction extends StoreUpdateAction {
     public static StoreAddCountryActionBuilder builder(final StoreAddCountryAction template) {
         return StoreAddCountryActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -113,7 +121,7 @@ public interface StoreAddCountryAction extends StoreUpdateAction {
     default <T> T withStoreAddCountryAction(Function<StoreAddCountryAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

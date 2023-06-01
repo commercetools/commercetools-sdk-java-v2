@@ -1,10 +1,16 @@
-
 package com.commercetools.api.models.order;
 
-import java.util.*;
-
+import com.commercetools.api.models.order.OrderSearchAnyValue;
+import com.commercetools.api.models.order.OrderSearchDateRangeValue;
+import com.commercetools.api.models.order.OrderSearchFullTextValue;
+import com.commercetools.api.models.order.OrderSearchLongRangeValue;
+import com.commercetools.api.models.order.OrderSearchNumberRangeValue;
+import com.commercetools.api.models.order.OrderSearchStringValue;
+import com.commercetools.api.models.order.OrderSearchQueryExpressionValue;
 import javax.annotation.Nullable;
-
+import java.util.*;
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -18,78 +24,95 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .field("{field}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class OrderSearchQueryExpressionValueBuilder implements Builder<OrderSearchQueryExpressionValue> {
 
+    
+    
     private String field;
-
+    
+    
     @Nullable
     private Integer boost;
-
+    
+    
     @Nullable
     private String customType;
 
+    
     /**
      * set the value to the field
      * @param field value to be set
      * @return Builder
      */
-
-    public OrderSearchQueryExpressionValueBuilder field(final String field) {
+    
+    public OrderSearchQueryExpressionValueBuilder field( final String field) {
         this.field = field;
         return this;
     }
-
+    
+    
+    
+    
     /**
      * set the value to the boost
      * @param boost value to be set
      * @return Builder
      */
-
+    
     public OrderSearchQueryExpressionValueBuilder boost(@Nullable final Integer boost) {
         this.boost = boost;
         return this;
     }
-
+    
+    
+    
+    
     /**
      * set the value to the customType
      * @param customType value to be set
      * @return Builder
      */
-
+    
     public OrderSearchQueryExpressionValueBuilder customType(@Nullable final String customType) {
         this.customType = customType;
         return this;
     }
+    
+    
 
     /**
      * value of field}
      * @return field
      */
-
-    public String getField() {
+    
+    
+    public String getField(){
         return this.field;
     }
-
+    
     /**
      * value of boost}
      * @return boost
      */
-
+    
     @Nullable
-    public Integer getBoost() {
+    public Integer getBoost(){
         return this.boost;
     }
-
+    
     /**
      * value of customType}
      * @return customType
      */
-
+    
     @Nullable
-    public String getCustomType() {
+    public String getCustomType(){
         return this.customType;
     }
 
@@ -101,7 +124,7 @@ public class OrderSearchQueryExpressionValueBuilder implements Builder<OrderSear
         Objects.requireNonNull(field, OrderSearchQueryExpressionValue.class + ": field is missing");
         return new OrderSearchQueryExpressionValueImpl(field, boost, customType);
     }
-
+    
     /**
      * builds OrderSearchQueryExpressionValue without checking for non-null required values
      * @return OrderSearchQueryExpressionValue
@@ -112,7 +135,7 @@ public class OrderSearchQueryExpressionValueBuilder implements Builder<OrderSear
 
     /**
      * factory method for an instance of OrderSearchQueryExpressionValueBuilder
-     * @return builder
+     * @return builder 
      */
     public static OrderSearchQueryExpressionValueBuilder of() {
         return new OrderSearchQueryExpressionValueBuilder();

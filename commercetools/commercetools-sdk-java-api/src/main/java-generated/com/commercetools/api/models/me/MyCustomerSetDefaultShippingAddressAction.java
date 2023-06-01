@@ -1,16 +1,20 @@
-
 package com.commercetools.api.models.me;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
+import com.commercetools.api.models.me.MyCustomerUpdateAction;
+import com.commercetools.api.models.me.MyCustomerSetDefaultShippingAddressActionImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Sets the default shipping address from <code>addresses</code>. If the address is not currently a shipping address, it is added to <code>shippingAddressIds</code>. Either <code>addressId</code> or <code>addressKey</code> is required.</p>
@@ -22,9 +26,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     MyCustomerSetDefaultShippingAddressAction myCustomerSetDefaultShippingAddressAction = MyCustomerSetDefaultShippingAddressAction.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = MyCustomerSetDefaultShippingAddressActionImpl.class)
 public interface MyCustomerSetDefaultShippingAddressAction extends MyCustomerUpdateAction {
 
@@ -37,15 +44,14 @@ public interface MyCustomerSetDefaultShippingAddressAction extends MyCustomerUpd
      *  <p><code>id</code> of the Address to become the default shipping address.</p>
      * @return addressId
      */
-
+    
     @JsonProperty("addressId")
     public String getAddressId();
-
     /**
      *  <p><code>key</code> of the Address to become the default shipping address.</p>
      * @return addressKey
      */
-
+    
     @JsonProperty("addressKey")
     public String getAddressKey();
 
@@ -53,31 +59,33 @@ public interface MyCustomerSetDefaultShippingAddressAction extends MyCustomerUpd
      *  <p><code>id</code> of the Address to become the default shipping address.</p>
      * @param addressId value to be set
      */
-
+    
     public void setAddressId(final String addressId);
-
+    
+    
     /**
      *  <p><code>key</code> of the Address to become the default shipping address.</p>
      * @param addressKey value to be set
      */
-
+    
     public void setAddressKey(final String addressKey);
+    
 
     /**
      * factory method
      * @return instance of MyCustomerSetDefaultShippingAddressAction
      */
-    public static MyCustomerSetDefaultShippingAddressAction of() {
+    public static MyCustomerSetDefaultShippingAddressAction of(){
         return new MyCustomerSetDefaultShippingAddressActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy MyCustomerSetDefaultShippingAddressAction
      * @param template instance to be copied
      * @return copy instance
      */
-    public static MyCustomerSetDefaultShippingAddressAction of(
-            final MyCustomerSetDefaultShippingAddressAction template) {
+    public static MyCustomerSetDefaultShippingAddressAction of(final MyCustomerSetDefaultShippingAddressAction template) {
         MyCustomerSetDefaultShippingAddressActionImpl instance = new MyCustomerSetDefaultShippingAddressActionImpl();
         instance.setAddressId(template.getAddressId());
         instance.setAddressKey(template.getAddressKey());
@@ -90,8 +98,7 @@ public interface MyCustomerSetDefaultShippingAddressAction extends MyCustomerUpd
      * @return copy instance
      */
     @Nullable
-    public static MyCustomerSetDefaultShippingAddressAction deepCopy(
-            @Nullable final MyCustomerSetDefaultShippingAddressAction template) {
+    public static MyCustomerSetDefaultShippingAddressAction deepCopy(@Nullable final MyCustomerSetDefaultShippingAddressAction template) {
         if (template == null) {
             return null;
         }
@@ -108,16 +115,16 @@ public interface MyCustomerSetDefaultShippingAddressAction extends MyCustomerUpd
     public static MyCustomerSetDefaultShippingAddressActionBuilder builder() {
         return MyCustomerSetDefaultShippingAddressActionBuilder.of();
     }
-
+    
     /**
      * create builder for MyCustomerSetDefaultShippingAddressAction instance
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static MyCustomerSetDefaultShippingAddressActionBuilder builder(
-            final MyCustomerSetDefaultShippingAddressAction template) {
+    public static MyCustomerSetDefaultShippingAddressActionBuilder builder(final MyCustomerSetDefaultShippingAddressAction template) {
         return MyCustomerSetDefaultShippingAddressActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -125,11 +132,10 @@ public interface MyCustomerSetDefaultShippingAddressAction extends MyCustomerUpd
      * @param helper function to map the object
      * @return mapped value
      */
-    default <T> T withMyCustomerSetDefaultShippingAddressAction(
-            Function<MyCustomerSetDefaultShippingAddressAction, T> helper) {
+    default <T> T withMyCustomerSetDefaultShippingAddressAction(Function<MyCustomerSetDefaultShippingAddressAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

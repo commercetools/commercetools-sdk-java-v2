@@ -1,27 +1,38 @@
-
 package com.commercetools.api.models.order;
 
+import com.commercetools.api.models.order.CustomLineItemReturnItem;
+import com.commercetools.api.models.order.LineItemReturnItem;
+import com.commercetools.api.models.order.ReturnPaymentState;
+import com.commercetools.api.models.order.ReturnShipmentState;
+import com.commercetools.api.models.type.CustomFields;
+import java.time.ZonedDateTime;
+import com.commercetools.api.models.order.ReturnItem;
+import javax.annotation.Nullable;
 import java.util.*;
-
+import java.util.function.Function;
+import java.time.ZonedDateTime;
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
  * ReturnItemBuilder
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class ReturnItemBuilder {
 
     public com.commercetools.api.models.order.CustomLineItemReturnItemBuilder customLineItemReturnItemBuilder() {
-        return com.commercetools.api.models.order.CustomLineItemReturnItemBuilder.of();
+       return com.commercetools.api.models.order.CustomLineItemReturnItemBuilder.of();
     }
-
     public com.commercetools.api.models.order.LineItemReturnItemBuilder lineItemReturnItemBuilder() {
-        return com.commercetools.api.models.order.LineItemReturnItemBuilder.of();
+       return com.commercetools.api.models.order.LineItemReturnItemBuilder.of();
     }
 
     /**
      * factory method for an instance of ReturnItemBuilder
-     * @return builder
+     * @return builder 
      */
     public static ReturnItemBuilder of() {
         return new ReturnItemBuilder();

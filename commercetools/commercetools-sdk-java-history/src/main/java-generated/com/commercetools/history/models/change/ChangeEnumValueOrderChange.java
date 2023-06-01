@@ -1,20 +1,21 @@
-
 package com.commercetools.history.models.change;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-import java.util.stream.Collectors;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
+import com.commercetools.history.models.change.Change;
 import com.commercetools.history.models.change_value.EnumValue;
+import com.commercetools.history.models.change.ChangeEnumValueOrderChangeImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * ChangeEnumValueOrderChange
@@ -30,9 +31,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .plusPreviousValue(previousValueBuilder -> previousValueBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = ChangeEnumValueOrderChangeImpl.class)
 public interface ChangeEnumValueOrderChange extends Change {
 
@@ -48,7 +52,6 @@ public interface ChangeEnumValueOrderChange extends Change {
     @NotNull
     @JsonProperty("type")
     public String getType();
-
     /**
      *  <p>Update action for <code>changeEnumValueOrder</code> on types</p>
      * @return change
@@ -56,7 +59,6 @@ public interface ChangeEnumValueOrderChange extends Change {
     @NotNull
     @JsonProperty("change")
     public String getChange();
-
     /**
      *  <p>The name of the field/attribute definition updated.</p>
      * @return fieldName
@@ -64,7 +66,6 @@ public interface ChangeEnumValueOrderChange extends Change {
     @NotNull
     @JsonProperty("fieldName")
     public String getFieldName();
-
     /**
      *
      * @return nextValue
@@ -73,7 +74,6 @@ public interface ChangeEnumValueOrderChange extends Change {
     @Valid
     @JsonProperty("nextValue")
     public List<EnumValue> getNextValue();
-
     /**
      *
      * @return previousValue
@@ -87,53 +87,54 @@ public interface ChangeEnumValueOrderChange extends Change {
      *  <p>Update action for <code>changeEnumValueOrder</code> on types</p>
      * @param change value to be set
      */
-
+    
     public void setChange(final String change);
-
+    
+    
     /**
      *  <p>The name of the field/attribute definition updated.</p>
      * @param fieldName value to be set
      */
-
+    
     public void setFieldName(final String fieldName);
-
+    
+    
     /**
      * set nextValue
      * @param nextValue values to be set
      */
-
+    
     @JsonIgnore
-    public void setNextValue(final EnumValue... nextValue);
-
+    public void setNextValue(final EnumValue ...nextValue);
     /**
      * set nextValue
      * @param nextValue values to be set
      */
-
+    
     public void setNextValue(final List<EnumValue> nextValue);
-
+    
     /**
      * set previousValue
      * @param previousValue values to be set
      */
-
+    
     @JsonIgnore
-    public void setPreviousValue(final EnumValue... previousValue);
-
+    public void setPreviousValue(final EnumValue ...previousValue);
     /**
      * set previousValue
      * @param previousValue values to be set
      */
-
+    
     public void setPreviousValue(final List<EnumValue> previousValue);
 
     /**
      * factory method
      * @return instance of ChangeEnumValueOrderChange
      */
-    public static ChangeEnumValueOrderChange of() {
+    public static ChangeEnumValueOrderChange of(){
         return new ChangeEnumValueOrderChangeImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy ChangeEnumValueOrderChange
@@ -163,14 +164,10 @@ public interface ChangeEnumValueOrderChange extends Change {
         instance.setChange(template.getChange());
         instance.setFieldName(template.getFieldName());
         instance.setNextValue(Optional.ofNullable(template.getNextValue())
-                .map(t -> t.stream()
-                        .map(com.commercetools.history.models.change_value.EnumValue::deepCopy)
-                        .collect(Collectors.toList()))
+                .map(t -> t.stream().map(com.commercetools.history.models.change_value.EnumValue::deepCopy).collect(Collectors.toList()))
                 .orElse(null));
         instance.setPreviousValue(Optional.ofNullable(template.getPreviousValue())
-                .map(t -> t.stream()
-                        .map(com.commercetools.history.models.change_value.EnumValue::deepCopy)
-                        .collect(Collectors.toList()))
+                .map(t -> t.stream().map(com.commercetools.history.models.change_value.EnumValue::deepCopy).collect(Collectors.toList()))
                 .orElse(null));
         return instance;
     }
@@ -182,7 +179,7 @@ public interface ChangeEnumValueOrderChange extends Change {
     public static ChangeEnumValueOrderChangeBuilder builder() {
         return ChangeEnumValueOrderChangeBuilder.of();
     }
-
+    
     /**
      * create builder for ChangeEnumValueOrderChange instance
      * @param template instance with prefilled values for the builder
@@ -191,6 +188,7 @@ public interface ChangeEnumValueOrderChange extends Change {
     public static ChangeEnumValueOrderChangeBuilder builder(final ChangeEnumValueOrderChange template) {
         return ChangeEnumValueOrderChangeBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -201,7 +199,7 @@ public interface ChangeEnumValueOrderChange extends Change {
     default <T> T withChangeEnumValueOrderChange(Function<ChangeEnumValueOrderChange, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

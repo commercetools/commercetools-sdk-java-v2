@@ -1,8 +1,11 @@
-
 package com.commercetools.api.models.message;
 
+import com.commercetools.api.models.message.MessagePayload;
+import com.commercetools.api.models.message.StagedQuoteSellerCommentSetMessagePayload;
+import javax.annotation.Nullable;
 import java.util.*;
-
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -16,31 +19,39 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .sellerComment("{sellerComment}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
-public class StagedQuoteSellerCommentSetMessagePayloadBuilder
-        implements Builder<StagedQuoteSellerCommentSetMessagePayload> {
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
+public class StagedQuoteSellerCommentSetMessagePayloadBuilder implements Builder<StagedQuoteSellerCommentSetMessagePayload> {
 
+    
+    
     private String sellerComment;
 
+    
     /**
      *  <p><code>sellerComment</code> on the StagedQuote after a successful Set Seller Comment update action.</p>
      * @param sellerComment value to be set
      * @return Builder
      */
-
-    public StagedQuoteSellerCommentSetMessagePayloadBuilder sellerComment(final String sellerComment) {
+    
+    public StagedQuoteSellerCommentSetMessagePayloadBuilder sellerComment( final String sellerComment) {
         this.sellerComment = sellerComment;
         return this;
     }
+    
+    
 
     /**
      *  <p><code>sellerComment</code> on the StagedQuote after a successful Set Seller Comment update action.</p>
      * @return sellerComment
      */
-
-    public String getSellerComment() {
+    
+    
+    public String getSellerComment(){
         return this.sellerComment;
     }
 
@@ -49,11 +60,10 @@ public class StagedQuoteSellerCommentSetMessagePayloadBuilder
      * @return StagedQuoteSellerCommentSetMessagePayload
      */
     public StagedQuoteSellerCommentSetMessagePayload build() {
-        Objects.requireNonNull(sellerComment,
-            StagedQuoteSellerCommentSetMessagePayload.class + ": sellerComment is missing");
+        Objects.requireNonNull(sellerComment, StagedQuoteSellerCommentSetMessagePayload.class + ": sellerComment is missing");
         return new StagedQuoteSellerCommentSetMessagePayloadImpl(sellerComment);
     }
-
+    
     /**
      * builds StagedQuoteSellerCommentSetMessagePayload without checking for non-null required values
      * @return StagedQuoteSellerCommentSetMessagePayload
@@ -64,7 +74,7 @@ public class StagedQuoteSellerCommentSetMessagePayloadBuilder
 
     /**
      * factory method for an instance of StagedQuoteSellerCommentSetMessagePayloadBuilder
-     * @return builder
+     * @return builder 
      */
     public static StagedQuoteSellerCommentSetMessagePayloadBuilder of() {
         return new StagedQuoteSellerCommentSetMessagePayloadBuilder();
@@ -75,8 +85,7 @@ public class StagedQuoteSellerCommentSetMessagePayloadBuilder
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static StagedQuoteSellerCommentSetMessagePayloadBuilder of(
-            final StagedQuoteSellerCommentSetMessagePayload template) {
+    public static StagedQuoteSellerCommentSetMessagePayloadBuilder of(final StagedQuoteSellerCommentSetMessagePayload template) {
         StagedQuoteSellerCommentSetMessagePayloadBuilder builder = new StagedQuoteSellerCommentSetMessagePayloadBuilder();
         builder.sellerComment = template.getSellerComment();
         return builder;

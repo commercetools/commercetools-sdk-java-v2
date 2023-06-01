@@ -1,9 +1,12 @@
-
 package com.commercetools.history.models.change;
 
+import com.commercetools.history.models.change.Change;
+import com.commercetools.history.models.common.TaxRate;
+import com.commercetools.history.models.change.AddTaxRateChange;
+import javax.annotation.Nullable;
 import java.util.*;
 import java.util.function.Function;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -18,76 +21,89 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .nextValue(nextValueBuilder -> nextValueBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class AddTaxRateChangeBuilder implements Builder<AddTaxRateChange> {
 
+    
+    
     private String change;
-
+    
+    
+    
     private com.commercetools.history.models.common.TaxRate nextValue;
 
+    
     /**
      *  <p>Update action for <code>addTaxRate</code> on tax categories</p>
      * @param change value to be set
      * @return Builder
      */
-
-    public AddTaxRateChangeBuilder change(final String change) {
+    
+    public AddTaxRateChangeBuilder change( final String change) {
         this.change = change;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Shape of the value for <code>addTaxRate</code> and <code>removeTaxRate</code> actions</p>
      * @param builder function to build the nextValue value
      * @return Builder
      */
-
-    public AddTaxRateChangeBuilder nextValue(
-            Function<com.commercetools.history.models.common.TaxRateBuilder, com.commercetools.history.models.common.TaxRateBuilder> builder) {
+    
+    public AddTaxRateChangeBuilder nextValue(Function<com.commercetools.history.models.common.TaxRateBuilder, com.commercetools.history.models.common.TaxRateBuilder> builder) {
         this.nextValue = builder.apply(com.commercetools.history.models.common.TaxRateBuilder.of()).build();
         return this;
     }
-
+    
     /**
      *  <p>Shape of the value for <code>addTaxRate</code> and <code>removeTaxRate</code> actions</p>
      * @param builder function to build the nextValue value
      * @return Builder
      */
-
-    public AddTaxRateChangeBuilder withNextValue(
-            Function<com.commercetools.history.models.common.TaxRateBuilder, com.commercetools.history.models.common.TaxRate> builder) {
+    
+    public AddTaxRateChangeBuilder withNextValue(Function<com.commercetools.history.models.common.TaxRateBuilder, com.commercetools.history.models.common.TaxRate> builder) {
         this.nextValue = builder.apply(com.commercetools.history.models.common.TaxRateBuilder.of());
         return this;
     }
-
+                    
     /**
      *  <p>Shape of the value for <code>addTaxRate</code> and <code>removeTaxRate</code> actions</p>
      * @param nextValue value to be set
      * @return Builder
      */
-
-    public AddTaxRateChangeBuilder nextValue(final com.commercetools.history.models.common.TaxRate nextValue) {
+    
+    public AddTaxRateChangeBuilder nextValue( final com.commercetools.history.models.common.TaxRate nextValue) {
         this.nextValue = nextValue;
         return this;
     }
+    
+    
 
     /**
      *  <p>Update action for <code>addTaxRate</code> on tax categories</p>
      * @return change
      */
-
-    public String getChange() {
+    
+    
+    public String getChange(){
         return this.change;
     }
-
+    
     /**
      *  <p>Shape of the value for <code>addTaxRate</code> and <code>removeTaxRate</code> actions</p>
      * @return nextValue
      */
-
-    public com.commercetools.history.models.common.TaxRate getNextValue() {
+    
+    
+    public com.commercetools.history.models.common.TaxRate getNextValue(){
         return this.nextValue;
     }
 
@@ -100,7 +116,7 @@ public class AddTaxRateChangeBuilder implements Builder<AddTaxRateChange> {
         Objects.requireNonNull(nextValue, AddTaxRateChange.class + ": nextValue is missing");
         return new AddTaxRateChangeImpl(change, nextValue);
     }
-
+    
     /**
      * builds AddTaxRateChange without checking for non-null required values
      * @return AddTaxRateChange
@@ -111,7 +127,7 @@ public class AddTaxRateChangeBuilder implements Builder<AddTaxRateChange> {
 
     /**
      * factory method for an instance of AddTaxRateChangeBuilder
-     * @return builder
+     * @return builder 
      */
     public static AddTaxRateChangeBuilder of() {
         return new AddTaxRateChangeBuilder();

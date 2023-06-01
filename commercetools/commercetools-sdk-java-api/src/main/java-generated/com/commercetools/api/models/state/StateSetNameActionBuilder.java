@@ -1,9 +1,12 @@
-
 package com.commercetools.api.models.state;
 
+import com.commercetools.api.models.common.LocalizedString;
+import com.commercetools.api.models.state.StateUpdateAction;
+import com.commercetools.api.models.state.StateSetNameAction;
+import javax.annotation.Nullable;
 import java.util.*;
 import java.util.function.Function;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -17,54 +20,61 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .name(nameBuilder -> nameBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class StateSetNameActionBuilder implements Builder<StateSetNameAction> {
 
+    
+    
     private com.commercetools.api.models.common.LocalizedString name;
 
+    
     /**
      *  <p>Value to set. If empty, any existing value will be removed.</p>
      * @param builder function to build the name value
      * @return Builder
      */
-
-    public StateSetNameActionBuilder name(
-            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
+    
+    public StateSetNameActionBuilder name(Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
         this.name = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of()).build();
         return this;
     }
-
+    
     /**
      *  <p>Value to set. If empty, any existing value will be removed.</p>
      * @param builder function to build the name value
      * @return Builder
      */
-
-    public StateSetNameActionBuilder withName(
-            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedString> builder) {
+    
+    public StateSetNameActionBuilder withName(Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedString> builder) {
         this.name = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of());
         return this;
     }
-
+                    
     /**
      *  <p>Value to set. If empty, any existing value will be removed.</p>
      * @param name value to be set
      * @return Builder
      */
-
-    public StateSetNameActionBuilder name(final com.commercetools.api.models.common.LocalizedString name) {
+    
+    public StateSetNameActionBuilder name( final com.commercetools.api.models.common.LocalizedString name) {
         this.name = name;
         return this;
     }
+    
+    
 
     /**
      *  <p>Value to set. If empty, any existing value will be removed.</p>
      * @return name
      */
-
-    public com.commercetools.api.models.common.LocalizedString getName() {
+    
+    
+    public com.commercetools.api.models.common.LocalizedString getName(){
         return this.name;
     }
 
@@ -76,7 +86,7 @@ public class StateSetNameActionBuilder implements Builder<StateSetNameAction> {
         Objects.requireNonNull(name, StateSetNameAction.class + ": name is missing");
         return new StateSetNameActionImpl(name);
     }
-
+    
     /**
      * builds StateSetNameAction without checking for non-null required values
      * @return StateSetNameAction
@@ -87,7 +97,7 @@ public class StateSetNameActionBuilder implements Builder<StateSetNameAction> {
 
     /**
      * factory method for an instance of StateSetNameActionBuilder
-     * @return builder
+     * @return builder 
      */
     public static StateSetNameActionBuilder of() {
         return new StateSetNameActionBuilder();

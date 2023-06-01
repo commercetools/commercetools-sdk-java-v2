@@ -1,22 +1,23 @@
-
 package com.commercetools.api.models.order_edit;
-
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.cart.ExternalTaxRateDraft;
 import com.commercetools.api.models.order.StagedOrderUpdateAction;
 import com.commercetools.api.models.shipping_method.ShippingRateDraft;
 import com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifier;
+import com.commercetools.api.models.order_edit.StagedOrderSetCustomShippingMethodActionImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * StagedOrderSetCustomShippingMethodAction
@@ -30,9 +31,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .shippingRate(shippingRateBuilder -> shippingRateBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = StagedOrderSetCustomShippingMethodActionImpl.class)
 public interface StagedOrderSetCustomShippingMethodAction extends StagedOrderUpdateAction {
 
@@ -48,7 +52,6 @@ public interface StagedOrderSetCustomShippingMethodAction extends StagedOrderUpd
     @NotNull
     @JsonProperty("shippingMethodName")
     public String getShippingMethodName();
-
     /**
      *
      * @return shippingRate
@@ -57,7 +60,6 @@ public interface StagedOrderSetCustomShippingMethodAction extends StagedOrderUpd
     @Valid
     @JsonProperty("shippingRate")
     public ShippingRateDraft getShippingRate();
-
     /**
      *  <p>ResourceIdentifier to a TaxCategory.</p>
      * @return taxCategory
@@ -65,7 +67,6 @@ public interface StagedOrderSetCustomShippingMethodAction extends StagedOrderUpd
     @Valid
     @JsonProperty("taxCategory")
     public TaxCategoryResourceIdentifier getTaxCategory();
-
     /**
      *  <p>Controls calculation of taxed prices for Line Items, Custom Line Items, and Shipping Methods as explained in Cart tax calculation.</p>
      * @return externalTaxRate
@@ -78,37 +79,42 @@ public interface StagedOrderSetCustomShippingMethodAction extends StagedOrderUpd
      * set shippingMethodName
      * @param shippingMethodName value to be set
      */
-
+    
     public void setShippingMethodName(final String shippingMethodName);
-
+    
+    
     /**
      * set shippingRate
      * @param shippingRate value to be set
      */
-
+    
     public void setShippingRate(final ShippingRateDraft shippingRate);
-
+    
+    
     /**
      *  <p>ResourceIdentifier to a TaxCategory.</p>
      * @param taxCategory value to be set
      */
-
+    
     public void setTaxCategory(final TaxCategoryResourceIdentifier taxCategory);
-
+    
+    
     /**
      *  <p>Controls calculation of taxed prices for Line Items, Custom Line Items, and Shipping Methods as explained in Cart tax calculation.</p>
      * @param externalTaxRate value to be set
      */
-
+    
     public void setExternalTaxRate(final ExternalTaxRateDraft externalTaxRate);
+    
 
     /**
      * factory method
      * @return instance of StagedOrderSetCustomShippingMethodAction
      */
-    public static StagedOrderSetCustomShippingMethodAction of() {
+    public static StagedOrderSetCustomShippingMethodAction of(){
         return new StagedOrderSetCustomShippingMethodActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy StagedOrderSetCustomShippingMethodAction
@@ -130,19 +136,15 @@ public interface StagedOrderSetCustomShippingMethodAction extends StagedOrderUpd
      * @return copy instance
      */
     @Nullable
-    public static StagedOrderSetCustomShippingMethodAction deepCopy(
-            @Nullable final StagedOrderSetCustomShippingMethodAction template) {
+    public static StagedOrderSetCustomShippingMethodAction deepCopy(@Nullable final StagedOrderSetCustomShippingMethodAction template) {
         if (template == null) {
             return null;
         }
         StagedOrderSetCustomShippingMethodActionImpl instance = new StagedOrderSetCustomShippingMethodActionImpl();
         instance.setShippingMethodName(template.getShippingMethodName());
-        instance.setShippingRate(
-            com.commercetools.api.models.shipping_method.ShippingRateDraft.deepCopy(template.getShippingRate()));
-        instance.setTaxCategory(com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifier
-                .deepCopy(template.getTaxCategory()));
-        instance.setExternalTaxRate(
-            com.commercetools.api.models.cart.ExternalTaxRateDraft.deepCopy(template.getExternalTaxRate()));
+        instance.setShippingRate(com.commercetools.api.models.shipping_method.ShippingRateDraft.deepCopy(template.getShippingRate()));
+        instance.setTaxCategory(com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifier.deepCopy(template.getTaxCategory()));
+        instance.setExternalTaxRate(com.commercetools.api.models.cart.ExternalTaxRateDraft.deepCopy(template.getExternalTaxRate()));
         return instance;
     }
 
@@ -153,16 +155,16 @@ public interface StagedOrderSetCustomShippingMethodAction extends StagedOrderUpd
     public static StagedOrderSetCustomShippingMethodActionBuilder builder() {
         return StagedOrderSetCustomShippingMethodActionBuilder.of();
     }
-
+    
     /**
      * create builder for StagedOrderSetCustomShippingMethodAction instance
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static StagedOrderSetCustomShippingMethodActionBuilder builder(
-            final StagedOrderSetCustomShippingMethodAction template) {
+    public static StagedOrderSetCustomShippingMethodActionBuilder builder(final StagedOrderSetCustomShippingMethodAction template) {
         return StagedOrderSetCustomShippingMethodActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -170,11 +172,10 @@ public interface StagedOrderSetCustomShippingMethodAction extends StagedOrderUpd
      * @param helper function to map the object
      * @return mapped value
      */
-    default <T> T withStagedOrderSetCustomShippingMethodAction(
-            Function<StagedOrderSetCustomShippingMethodAction, T> helper) {
+    default <T> T withStagedOrderSetCustomShippingMethodAction(Function<StagedOrderSetCustomShippingMethodAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

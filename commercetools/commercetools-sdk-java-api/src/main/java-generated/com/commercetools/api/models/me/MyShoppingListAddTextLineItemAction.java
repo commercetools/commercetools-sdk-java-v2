@@ -1,21 +1,23 @@
-
 package com.commercetools.api.models.me;
 
-import java.time.*;
-import java.time.ZonedDateTime;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
 import com.commercetools.api.models.common.LocalizedString;
+import com.commercetools.api.models.me.MyShoppingListUpdateAction;
 import com.commercetools.api.models.type.CustomFieldsDraft;
+import java.time.ZonedDateTime;
+import com.commercetools.api.models.me.MyShoppingListAddTextLineItemActionImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * MyShoppingListAddTextLineItemAction
@@ -28,12 +30,14 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .name(nameBuilder -> nameBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = MyShoppingListAddTextLineItemActionImpl.class)
-public interface MyShoppingListAddTextLineItemAction extends MyShoppingListUpdateAction,
-        com.commercetools.api.models.CustomizableDraft<MyShoppingListAddTextLineItemAction> {
+public interface MyShoppingListAddTextLineItemAction extends MyShoppingListUpdateAction, com.commercetools.api.models.CustomizableDraft<MyShoppingListAddTextLineItemAction> {
 
     /**
      * discriminator value for MyShoppingListAddTextLineItemAction
@@ -48,7 +52,6 @@ public interface MyShoppingListAddTextLineItemAction extends MyShoppingListUpdat
     @Valid
     @JsonProperty("name")
     public LocalizedString getName();
-
     /**
      *  <p>Description of the TextLineItem.</p>
      * @return description
@@ -56,23 +59,20 @@ public interface MyShoppingListAddTextLineItemAction extends MyShoppingListUpdat
     @Valid
     @JsonProperty("description")
     public LocalizedString getDescription();
-
     /**
      *  <p>Number of entries in the TextLineItem.</p>
      * @return quantity
      */
-
+    
     @JsonProperty("quantity")
     public Long getQuantity();
-
     /**
      *  <p>Date and time the TextLineItem is added to the ShoppingList. If not set, the current date and time (UTC) is used.</p>
      * @return addedAt
      */
-
+    
     @JsonProperty("addedAt")
     public ZonedDateTime getAddedAt();
-
     /**
      *  <p>Custom Fields defined for the TextLineItem.</p>
      * @return custom
@@ -85,44 +85,50 @@ public interface MyShoppingListAddTextLineItemAction extends MyShoppingListUpdat
      *  <p>Name of the TextLineItem.</p>
      * @param name value to be set
      */
-
+    
     public void setName(final LocalizedString name);
-
+    
+    
     /**
      *  <p>Description of the TextLineItem.</p>
      * @param description value to be set
      */
-
+    
     public void setDescription(final LocalizedString description);
-
+    
+    
     /**
      *  <p>Number of entries in the TextLineItem.</p>
      * @param quantity value to be set
      */
-
+    
     public void setQuantity(final Long quantity);
-
+    
+    
     /**
      *  <p>Date and time the TextLineItem is added to the ShoppingList. If not set, the current date and time (UTC) is used.</p>
      * @param addedAt value to be set
      */
-
+    
     public void setAddedAt(final ZonedDateTime addedAt);
-
+    
+    
     /**
      *  <p>Custom Fields defined for the TextLineItem.</p>
      * @param custom value to be set
      */
-
+    
     public void setCustom(final CustomFieldsDraft custom);
+    
 
     /**
      * factory method
      * @return instance of MyShoppingListAddTextLineItemAction
      */
-    public static MyShoppingListAddTextLineItemAction of() {
+    public static MyShoppingListAddTextLineItemAction of(){
         return new MyShoppingListAddTextLineItemActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy MyShoppingListAddTextLineItemAction
@@ -145,15 +151,13 @@ public interface MyShoppingListAddTextLineItemAction extends MyShoppingListUpdat
      * @return copy instance
      */
     @Nullable
-    public static MyShoppingListAddTextLineItemAction deepCopy(
-            @Nullable final MyShoppingListAddTextLineItemAction template) {
+    public static MyShoppingListAddTextLineItemAction deepCopy(@Nullable final MyShoppingListAddTextLineItemAction template) {
         if (template == null) {
             return null;
         }
         MyShoppingListAddTextLineItemActionImpl instance = new MyShoppingListAddTextLineItemActionImpl();
         instance.setName(com.commercetools.api.models.common.LocalizedString.deepCopy(template.getName()));
-        instance.setDescription(
-            com.commercetools.api.models.common.LocalizedString.deepCopy(template.getDescription()));
+        instance.setDescription(com.commercetools.api.models.common.LocalizedString.deepCopy(template.getDescription()));
         instance.setQuantity(template.getQuantity());
         instance.setAddedAt(template.getAddedAt());
         instance.setCustom(com.commercetools.api.models.type.CustomFieldsDraft.deepCopy(template.getCustom()));
@@ -167,16 +171,16 @@ public interface MyShoppingListAddTextLineItemAction extends MyShoppingListUpdat
     public static MyShoppingListAddTextLineItemActionBuilder builder() {
         return MyShoppingListAddTextLineItemActionBuilder.of();
     }
-
+    
     /**
      * create builder for MyShoppingListAddTextLineItemAction instance
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static MyShoppingListAddTextLineItemActionBuilder builder(
-            final MyShoppingListAddTextLineItemAction template) {
+    public static MyShoppingListAddTextLineItemActionBuilder builder(final MyShoppingListAddTextLineItemAction template) {
         return MyShoppingListAddTextLineItemActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -187,7 +191,7 @@ public interface MyShoppingListAddTextLineItemAction extends MyShoppingListUpdat
     default <T> T withMyShoppingListAddTextLineItemAction(Function<MyShoppingListAddTextLineItemAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

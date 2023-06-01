@@ -1,20 +1,22 @@
-
 package com.commercetools.importapi.models.importrequests;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-import java.util.stream.Collectors;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
+import com.commercetools.importapi.models.common.ImportResourceType;
+import com.commercetools.importapi.models.importrequests.ImportRequest;
 import com.commercetools.importapi.models.order_patches.OrderPatchImport;
+import com.commercetools.importapi.models.importrequests.OrderPatchImportRequestImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>The request body to import OrderPatches. The data to be imported are represented by OrderPatchImport.</p>
@@ -27,9 +29,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .plusPatches(patchesBuilder -> patchesBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = OrderPatchImportRequestImpl.class)
 public interface OrderPatchImportRequest extends ImportRequest {
 
@@ -51,24 +56,24 @@ public interface OrderPatchImportRequest extends ImportRequest {
      *  <p>The order patches of this request</p>
      * @param patches values to be set
      */
-
+    
     @JsonIgnore
-    public void setPatches(final OrderPatchImport... patches);
-
+    public void setPatches(final OrderPatchImport ...patches);
     /**
      *  <p>The order patches of this request</p>
      * @param patches values to be set
      */
-
+    
     public void setPatches(final List<OrderPatchImport> patches);
 
     /**
      * factory method
      * @return instance of OrderPatchImportRequest
      */
-    public static OrderPatchImportRequest of() {
+    public static OrderPatchImportRequest of(){
         return new OrderPatchImportRequestImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy OrderPatchImportRequest
@@ -93,9 +98,7 @@ public interface OrderPatchImportRequest extends ImportRequest {
         }
         OrderPatchImportRequestImpl instance = new OrderPatchImportRequestImpl();
         instance.setPatches(Optional.ofNullable(template.getPatches())
-                .map(t -> t.stream()
-                        .map(com.commercetools.importapi.models.order_patches.OrderPatchImport::deepCopy)
-                        .collect(Collectors.toList()))
+                .map(t -> t.stream().map(com.commercetools.importapi.models.order_patches.OrderPatchImport::deepCopy).collect(Collectors.toList()))
                 .orElse(null));
         return instance;
     }
@@ -107,7 +110,7 @@ public interface OrderPatchImportRequest extends ImportRequest {
     public static OrderPatchImportRequestBuilder builder() {
         return OrderPatchImportRequestBuilder.of();
     }
-
+    
     /**
      * create builder for OrderPatchImportRequest instance
      * @param template instance with prefilled values for the builder
@@ -116,6 +119,7 @@ public interface OrderPatchImportRequest extends ImportRequest {
     public static OrderPatchImportRequestBuilder builder(final OrderPatchImportRequest template) {
         return OrderPatchImportRequestBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -126,7 +130,7 @@ public interface OrderPatchImportRequest extends ImportRequest {
     default <T> T withOrderPatchImportRequest(Function<OrderPatchImportRequest, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

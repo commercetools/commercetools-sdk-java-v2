@@ -1,9 +1,11 @@
-
 package com.commercetools.api.predicates.query.payment;
 
 import com.commercetools.api.predicates.query.*;
 
-public class PaymentSetStatusInterfaceCodeActionQueryBuilderDsl {
+import java.util.function.Function;
+
+
+public class PaymentSetStatusInterfaceCodeActionQueryBuilderDsl  {
     public PaymentSetStatusInterfaceCodeActionQueryBuilderDsl() {
     }
 
@@ -12,15 +14,12 @@ public class PaymentSetStatusInterfaceCodeActionQueryBuilderDsl {
     }
 
     public StringComparisonPredicateBuilder<PaymentSetStatusInterfaceCodeActionQueryBuilderDsl> action() {
-        return new StringComparisonPredicateBuilder<>(
-            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("action")),
-            p -> new CombinationQueryPredicate<>(p, PaymentSetStatusInterfaceCodeActionQueryBuilderDsl::of));
+        return new StringComparisonPredicateBuilder<>(BinaryQueryPredicate.of().left(new ConstantQueryPredicate("action")),
+        p -> new CombinationQueryPredicate<>(p, PaymentSetStatusInterfaceCodeActionQueryBuilderDsl::of));
     }
-
     public StringComparisonPredicateBuilder<PaymentSetStatusInterfaceCodeActionQueryBuilderDsl> interfaceCode() {
-        return new StringComparisonPredicateBuilder<>(
-            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("interfaceCode")),
-            p -> new CombinationQueryPredicate<>(p, PaymentSetStatusInterfaceCodeActionQueryBuilderDsl::of));
+        return new StringComparisonPredicateBuilder<>(BinaryQueryPredicate.of().left(new ConstantQueryPredicate("interfaceCode")),
+        p -> new CombinationQueryPredicate<>(p, PaymentSetStatusInterfaceCodeActionQueryBuilderDsl::of));
     }
-
+    
 }

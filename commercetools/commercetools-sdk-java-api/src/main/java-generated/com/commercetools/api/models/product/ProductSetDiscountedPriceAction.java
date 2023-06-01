@@ -1,19 +1,21 @@
-
 package com.commercetools.api.models.product;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
 import com.commercetools.api.models.common.DiscountedPriceDraft;
+import com.commercetools.api.models.product.ProductUpdateAction;
+import com.commercetools.api.models.product.ProductSetDiscountedPriceActionImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Produces the ProductPriceExternalDiscountSet Message.</p>
@@ -26,9 +28,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .priceId("{priceId}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = ProductSetDiscountedPriceActionImpl.class)
 public interface ProductSetDiscountedPriceAction extends ProductUpdateAction {
 
@@ -44,15 +49,13 @@ public interface ProductSetDiscountedPriceAction extends ProductUpdateAction {
     @NotNull
     @JsonProperty("priceId")
     public String getPriceId();
-
     /**
      *  <p>If <code>true</code>, only the staged Embedded Price is updated. If <code>false</code>, both the current and staged Embedded Price are updated.</p>
      * @return staged
      */
-
+    
     @JsonProperty("staged")
     public Boolean getStaged();
-
     /**
      *  <p>Value to set. If empty, any existing value will be removed. The referenced ProductDiscount must have the Type <code>external</code>, be active, and its predicate must match the referenced Price.</p>
      * @return discounted
@@ -65,30 +68,34 @@ public interface ProductSetDiscountedPriceAction extends ProductUpdateAction {
      *  <p>The <code>id</code> of the Price to set the Discount.</p>
      * @param priceId value to be set
      */
-
+    
     public void setPriceId(final String priceId);
-
+    
+    
     /**
      *  <p>If <code>true</code>, only the staged Embedded Price is updated. If <code>false</code>, both the current and staged Embedded Price are updated.</p>
      * @param staged value to be set
      */
-
+    
     public void setStaged(final Boolean staged);
-
+    
+    
     /**
      *  <p>Value to set. If empty, any existing value will be removed. The referenced ProductDiscount must have the Type <code>external</code>, be active, and its predicate must match the referenced Price.</p>
      * @param discounted value to be set
      */
-
+    
     public void setDiscounted(final DiscountedPriceDraft discounted);
+    
 
     /**
      * factory method
      * @return instance of ProductSetDiscountedPriceAction
      */
-    public static ProductSetDiscountedPriceAction of() {
+    public static ProductSetDiscountedPriceAction of(){
         return new ProductSetDiscountedPriceActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy ProductSetDiscountedPriceAction
@@ -116,8 +123,7 @@ public interface ProductSetDiscountedPriceAction extends ProductUpdateAction {
         ProductSetDiscountedPriceActionImpl instance = new ProductSetDiscountedPriceActionImpl();
         instance.setPriceId(template.getPriceId());
         instance.setStaged(template.getStaged());
-        instance.setDiscounted(
-            com.commercetools.api.models.common.DiscountedPriceDraft.deepCopy(template.getDiscounted()));
+        instance.setDiscounted(com.commercetools.api.models.common.DiscountedPriceDraft.deepCopy(template.getDiscounted()));
         return instance;
     }
 
@@ -128,7 +134,7 @@ public interface ProductSetDiscountedPriceAction extends ProductUpdateAction {
     public static ProductSetDiscountedPriceActionBuilder builder() {
         return ProductSetDiscountedPriceActionBuilder.of();
     }
-
+    
     /**
      * create builder for ProductSetDiscountedPriceAction instance
      * @param template instance with prefilled values for the builder
@@ -137,6 +143,7 @@ public interface ProductSetDiscountedPriceAction extends ProductUpdateAction {
     public static ProductSetDiscountedPriceActionBuilder builder(final ProductSetDiscountedPriceAction template) {
         return ProductSetDiscountedPriceActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -147,7 +154,7 @@ public interface ProductSetDiscountedPriceAction extends ProductUpdateAction {
     default <T> T withProductSetDiscountedPriceAction(Function<ProductSetDiscountedPriceAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

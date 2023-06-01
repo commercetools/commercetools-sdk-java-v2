@@ -1,16 +1,21 @@
-
 package com.commercetools.importapi.models.common;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
+import com.commercetools.importapi.models.common.KeyReference;
+import com.commercetools.importapi.models.common.ReferenceType;
+import com.commercetools.importapi.models.common.PriceKeyReferenceImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>References a price by key.</p>
@@ -23,9 +28,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .key("{key}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = PriceKeyReferenceImpl.class)
 public interface PriceKeyReference extends KeyReference {
 
@@ -34,13 +42,16 @@ public interface PriceKeyReference extends KeyReference {
      */
     String PRICE = "price";
 
+
+
     /**
      * factory method
      * @return instance of PriceKeyReference
      */
-    public static PriceKeyReference of() {
+    public static PriceKeyReference of(){
         return new PriceKeyReferenceImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy PriceKeyReference
@@ -75,7 +86,7 @@ public interface PriceKeyReference extends KeyReference {
     public static PriceKeyReferenceBuilder builder() {
         return PriceKeyReferenceBuilder.of();
     }
-
+    
     /**
      * create builder for PriceKeyReference instance
      * @param template instance with prefilled values for the builder
@@ -84,6 +95,7 @@ public interface PriceKeyReference extends KeyReference {
     public static PriceKeyReferenceBuilder builder(final PriceKeyReference template) {
         return PriceKeyReferenceBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -94,7 +106,7 @@ public interface PriceKeyReference extends KeyReference {
     default <T> T withPriceKeyReference(Function<PriceKeyReference, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

@@ -1,21 +1,23 @@
-
 package com.commercetools.api.models.error;
-
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.associate_role.Permission;
 import com.commercetools.api.models.business_unit.BusinessUnitResourceIdentifier;
 import com.commercetools.api.models.customer.CustomerResourceIdentifier;
+import com.commercetools.api.models.error.GraphQLErrorObject;
+import com.commercetools.api.models.error.GraphQLAssociateMissingPermissionErrorImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Returned when an Associate is missing a Permission on a B2B resource.</p>
@@ -30,9 +32,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .plusPermissions(permissionsBuilder -> permissionsBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = GraphQLAssociateMissingPermissionErrorImpl.class)
 public interface GraphQLAssociateMissingPermissionError extends GraphQLErrorObject {
 
@@ -48,7 +53,6 @@ public interface GraphQLAssociateMissingPermissionError extends GraphQLErrorObje
     @NotNull
     @JsonProperty("code")
     public String getCode();
-
     /**
      *  <p>ResourceIdentifier to the Associate that tried to perform the action.</p>
      * @return associate
@@ -57,7 +61,6 @@ public interface GraphQLAssociateMissingPermissionError extends GraphQLErrorObje
     @Valid
     @JsonProperty("associate")
     public CustomerResourceIdentifier getAssociate();
-
     /**
      *  <p>ResourceIdentifier to the BusinessUnit.</p>
      * @return businessUnit
@@ -66,7 +69,6 @@ public interface GraphQLAssociateMissingPermissionError extends GraphQLErrorObje
     @Valid
     @JsonProperty("businessUnit")
     public BusinessUnitResourceIdentifier getBusinessUnit();
-
     /**
      *  <p>ResourceIdentifier of the Associate on whose behalf the action is performed.</p>
      * @return associateOnBehalf
@@ -74,7 +76,6 @@ public interface GraphQLAssociateMissingPermissionError extends GraphQLErrorObje
     @Valid
     @JsonProperty("associateOnBehalf")
     public CustomerResourceIdentifier getAssociateOnBehalf();
-
     /**
      *  <p>The Permissions that the Associate performing the action lacks. At least one of these Permissions is needed.</p>
      * @return permissions
@@ -87,45 +88,48 @@ public interface GraphQLAssociateMissingPermissionError extends GraphQLErrorObje
      *  <p>ResourceIdentifier to the Associate that tried to perform the action.</p>
      * @param associate value to be set
      */
-
+    
     public void setAssociate(final CustomerResourceIdentifier associate);
-
+    
+    
     /**
      *  <p>ResourceIdentifier to the BusinessUnit.</p>
      * @param businessUnit value to be set
      */
-
+    
     public void setBusinessUnit(final BusinessUnitResourceIdentifier businessUnit);
-
+    
+    
     /**
      *  <p>ResourceIdentifier of the Associate on whose behalf the action is performed.</p>
      * @param associateOnBehalf value to be set
      */
-
+    
     public void setAssociateOnBehalf(final CustomerResourceIdentifier associateOnBehalf);
-
+    
+    
     /**
      *  <p>The Permissions that the Associate performing the action lacks. At least one of these Permissions is needed.</p>
      * @param permissions values to be set
      */
-
+    
     @JsonIgnore
-    public void setPermissions(final Permission... permissions);
-
+    public void setPermissions(final Permission ...permissions);
     /**
      *  <p>The Permissions that the Associate performing the action lacks. At least one of these Permissions is needed.</p>
      * @param permissions values to be set
      */
-
+    
     public void setPermissions(final List<Permission> permissions);
 
     /**
      * factory method
      * @return instance of GraphQLAssociateMissingPermissionError
      */
-    public static GraphQLAssociateMissingPermissionError of() {
+    public static GraphQLAssociateMissingPermissionError of(){
         return new GraphQLAssociateMissingPermissionErrorImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy GraphQLAssociateMissingPermissionError
@@ -148,20 +152,18 @@ public interface GraphQLAssociateMissingPermissionError extends GraphQLErrorObje
      * @return copy instance
      */
     @Nullable
-    public static GraphQLAssociateMissingPermissionError deepCopy(
-            @Nullable final GraphQLAssociateMissingPermissionError template) {
+    public static GraphQLAssociateMissingPermissionError deepCopy(@Nullable final GraphQLAssociateMissingPermissionError template) {
         if (template == null) {
             return null;
         }
         GraphQLAssociateMissingPermissionErrorImpl instance = new GraphQLAssociateMissingPermissionErrorImpl();
         Optional.ofNullable(template.values()).ifPresent(t -> t.forEach(instance::setValue));
-        instance.setAssociate(
-            com.commercetools.api.models.customer.CustomerResourceIdentifier.deepCopy(template.getAssociate()));
-        instance.setBusinessUnit(com.commercetools.api.models.business_unit.BusinessUnitResourceIdentifier
-                .deepCopy(template.getBusinessUnit()));
-        instance.setAssociateOnBehalf(
-            com.commercetools.api.models.customer.CustomerResourceIdentifier.deepCopy(template.getAssociateOnBehalf()));
-        instance.setPermissions(Optional.ofNullable(template.getPermissions()).map(ArrayList::new).orElse(null));
+        instance.setAssociate(com.commercetools.api.models.customer.CustomerResourceIdentifier.deepCopy(template.getAssociate()));
+        instance.setBusinessUnit(com.commercetools.api.models.business_unit.BusinessUnitResourceIdentifier.deepCopy(template.getBusinessUnit()));
+        instance.setAssociateOnBehalf(com.commercetools.api.models.customer.CustomerResourceIdentifier.deepCopy(template.getAssociateOnBehalf()));
+        instance.setPermissions(Optional.ofNullable(template.getPermissions())
+                .map(ArrayList::new)
+                .orElse(null));
         return instance;
     }
 
@@ -172,16 +174,16 @@ public interface GraphQLAssociateMissingPermissionError extends GraphQLErrorObje
     public static GraphQLAssociateMissingPermissionErrorBuilder builder() {
         return GraphQLAssociateMissingPermissionErrorBuilder.of();
     }
-
+    
     /**
      * create builder for GraphQLAssociateMissingPermissionError instance
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static GraphQLAssociateMissingPermissionErrorBuilder builder(
-            final GraphQLAssociateMissingPermissionError template) {
+    public static GraphQLAssociateMissingPermissionErrorBuilder builder(final GraphQLAssociateMissingPermissionError template) {
         return GraphQLAssociateMissingPermissionErrorBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -189,11 +191,10 @@ public interface GraphQLAssociateMissingPermissionError extends GraphQLErrorObje
      * @param helper function to map the object
      * @return mapped value
      */
-    default <T> T withGraphQLAssociateMissingPermissionError(
-            Function<GraphQLAssociateMissingPermissionError, T> helper) {
+    default <T> T withGraphQLAssociateMissingPermissionError(Function<GraphQLAssociateMissingPermissionError, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

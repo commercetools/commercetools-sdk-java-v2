@@ -1,9 +1,11 @@
-
 package com.commercetools.api.predicates.query.category;
 
 import com.commercetools.api.predicates.query.*;
 
-public class CategoryChangeAssetOrderActionQueryBuilderDsl {
+import java.util.function.Function;
+
+
+public class CategoryChangeAssetOrderActionQueryBuilderDsl  {
     public CategoryChangeAssetOrderActionQueryBuilderDsl() {
     }
 
@@ -12,15 +14,12 @@ public class CategoryChangeAssetOrderActionQueryBuilderDsl {
     }
 
     public StringComparisonPredicateBuilder<CategoryChangeAssetOrderActionQueryBuilderDsl> action() {
-        return new StringComparisonPredicateBuilder<>(
-            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("action")),
-            p -> new CombinationQueryPredicate<>(p, CategoryChangeAssetOrderActionQueryBuilderDsl::of));
+        return new StringComparisonPredicateBuilder<>(BinaryQueryPredicate.of().left(new ConstantQueryPredicate("action")),
+        p -> new CombinationQueryPredicate<>(p, CategoryChangeAssetOrderActionQueryBuilderDsl::of));
     }
-
     public StringCollectionPredicateBuilder<CategoryChangeAssetOrderActionQueryBuilderDsl> assetOrder() {
-        return new StringCollectionPredicateBuilder<>(
-            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("assetOrder")),
-            p -> new CombinationQueryPredicate<>(p, CategoryChangeAssetOrderActionQueryBuilderDsl::of));
+        return new StringCollectionPredicateBuilder<>(BinaryQueryPredicate.of().left(new ConstantQueryPredicate("assetOrder")),
+        p -> new CombinationQueryPredicate<>(p, CategoryChangeAssetOrderActionQueryBuilderDsl::of));
     }
-
+    
 }

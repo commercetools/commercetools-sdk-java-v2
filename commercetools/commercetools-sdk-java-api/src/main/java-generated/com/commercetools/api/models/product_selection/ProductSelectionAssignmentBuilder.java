@@ -1,11 +1,14 @@
-
 package com.commercetools.api.models.product_selection;
 
+import com.commercetools.api.models.product.ProductReference;
+import com.commercetools.api.models.product_selection.ProductSelectionReference;
+import com.commercetools.api.models.product_selection.ProductVariantExclusion;
+import com.commercetools.api.models.product_selection.ProductVariantSelection;
+import com.commercetools.api.models.product_selection.ProductSelectionAssignment;
+import javax.annotation.Nullable;
 import java.util.*;
 import java.util.function.Function;
-
-import javax.annotation.Nullable;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -20,203 +23,207 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .productSelection(productSelectionBuilder -> productSelectionBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class ProductSelectionAssignmentBuilder implements Builder<ProductSelectionAssignment> {
 
+    
+    
     private com.commercetools.api.models.product.ProductReference product;
-
+    
+    
+    
     private com.commercetools.api.models.product_selection.ProductSelectionReference productSelection;
-
+    
+    
     @Nullable
     private com.commercetools.api.models.product_selection.ProductVariantSelection variantSelection;
-
+    
+    
     @Nullable
     private com.commercetools.api.models.product_selection.ProductVariantExclusion variantExclusion;
 
+    
     /**
      *  <p>Reference to a Product that is assigned to the ProductSelection.</p>
      * @param builder function to build the product value
      * @return Builder
      */
-
-    public ProductSelectionAssignmentBuilder product(
-            Function<com.commercetools.api.models.product.ProductReferenceBuilder, com.commercetools.api.models.product.ProductReferenceBuilder> builder) {
+    
+    public ProductSelectionAssignmentBuilder product(Function<com.commercetools.api.models.product.ProductReferenceBuilder, com.commercetools.api.models.product.ProductReferenceBuilder> builder) {
         this.product = builder.apply(com.commercetools.api.models.product.ProductReferenceBuilder.of()).build();
         return this;
     }
-
+    
     /**
      *  <p>Reference to a Product that is assigned to the ProductSelection.</p>
      * @param builder function to build the product value
      * @return Builder
      */
-
-    public ProductSelectionAssignmentBuilder withProduct(
-            Function<com.commercetools.api.models.product.ProductReferenceBuilder, com.commercetools.api.models.product.ProductReference> builder) {
+    
+    public ProductSelectionAssignmentBuilder withProduct(Function<com.commercetools.api.models.product.ProductReferenceBuilder, com.commercetools.api.models.product.ProductReference> builder) {
         this.product = builder.apply(com.commercetools.api.models.product.ProductReferenceBuilder.of());
         return this;
     }
-
+                    
     /**
      *  <p>Reference to a Product that is assigned to the ProductSelection.</p>
      * @param product value to be set
      * @return Builder
      */
-
-    public ProductSelectionAssignmentBuilder product(
-            final com.commercetools.api.models.product.ProductReference product) {
+    
+    public ProductSelectionAssignmentBuilder product( final com.commercetools.api.models.product.ProductReference product) {
         this.product = product;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Reference to the Product Selection that this assignment is part of.</p>
      * @param builder function to build the productSelection value
      * @return Builder
      */
-
-    public ProductSelectionAssignmentBuilder productSelection(
-            Function<com.commercetools.api.models.product_selection.ProductSelectionReferenceBuilder, com.commercetools.api.models.product_selection.ProductSelectionReferenceBuilder> builder) {
-        this.productSelection = builder
-                .apply(com.commercetools.api.models.product_selection.ProductSelectionReferenceBuilder.of())
-                .build();
+    
+    public ProductSelectionAssignmentBuilder productSelection(Function<com.commercetools.api.models.product_selection.ProductSelectionReferenceBuilder, com.commercetools.api.models.product_selection.ProductSelectionReferenceBuilder> builder) {
+        this.productSelection = builder.apply(com.commercetools.api.models.product_selection.ProductSelectionReferenceBuilder.of()).build();
         return this;
     }
-
+    
     /**
      *  <p>Reference to the Product Selection that this assignment is part of.</p>
      * @param builder function to build the productSelection value
      * @return Builder
      */
-
-    public ProductSelectionAssignmentBuilder withProductSelection(
-            Function<com.commercetools.api.models.product_selection.ProductSelectionReferenceBuilder, com.commercetools.api.models.product_selection.ProductSelectionReference> builder) {
-        this.productSelection = builder
-                .apply(com.commercetools.api.models.product_selection.ProductSelectionReferenceBuilder.of());
+    
+    public ProductSelectionAssignmentBuilder withProductSelection(Function<com.commercetools.api.models.product_selection.ProductSelectionReferenceBuilder, com.commercetools.api.models.product_selection.ProductSelectionReference> builder) {
+        this.productSelection = builder.apply(com.commercetools.api.models.product_selection.ProductSelectionReferenceBuilder.of());
         return this;
     }
-
+                    
     /**
      *  <p>Reference to the Product Selection that this assignment is part of.</p>
      * @param productSelection value to be set
      * @return Builder
      */
-
-    public ProductSelectionAssignmentBuilder productSelection(
-            final com.commercetools.api.models.product_selection.ProductSelectionReference productSelection) {
+    
+    public ProductSelectionAssignmentBuilder productSelection( final com.commercetools.api.models.product_selection.ProductSelectionReference productSelection) {
         this.productSelection = productSelection;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Define which Variants of the added Product will be included in the Product Selection.</p>
      *  <p>This field is only available for assignments to a Product Selection with <code>Individual</code> ProductSelectionMode. The list of SKUs will be updated automatically on any change of those performed on the respective Product itself.</p>
      * @param variantSelection value to be set
      * @return Builder
      */
-
-    public ProductSelectionAssignmentBuilder variantSelection(
-            @Nullable final com.commercetools.api.models.product_selection.ProductVariantSelection variantSelection) {
+    
+    public ProductSelectionAssignmentBuilder variantSelection(@Nullable final com.commercetools.api.models.product_selection.ProductVariantSelection variantSelection) {
         this.variantSelection = variantSelection;
         return this;
     }
-
+    
+    
     /**
      *  <p>Define which Variants of the added Product will be included in the Product Selection.</p>
      *  <p>This field is only available for assignments to a Product Selection with <code>Individual</code> ProductSelectionMode. The list of SKUs will be updated automatically on any change of those performed on the respective Product itself.</p>
      * @param builder function to build the variantSelection value
      * @return Builder
      */
-
-    public ProductSelectionAssignmentBuilder variantSelection(
-            Function<com.commercetools.api.models.product_selection.ProductVariantSelectionBuilder, Builder<? extends com.commercetools.api.models.product_selection.ProductVariantSelection>> builder) {
-        this.variantSelection = builder
-                .apply(com.commercetools.api.models.product_selection.ProductVariantSelectionBuilder.of())
-                .build();
+    
+    public ProductSelectionAssignmentBuilder variantSelection(Function<com.commercetools.api.models.product_selection.ProductVariantSelectionBuilder, Builder<? extends com.commercetools.api.models.product_selection.ProductVariantSelection>> builder) {
+        this.variantSelection = builder.apply(com.commercetools.api.models.product_selection.ProductVariantSelectionBuilder.of()).build();
         return this;
     }
-
+                    
+    
+    
     /**
      *  <p>Defines which Variants of the Product will be excluded from the Product Selection.</p>
      *  <p>This field is only available for assignments to a Product Selection with <code>IndividualExclusion</code> ProductSelectionMode. The list of SKUs will be updated automatically on any change of those performed on the respective Product itself.</p>
      * @param builder function to build the variantExclusion value
      * @return Builder
      */
-
-    public ProductSelectionAssignmentBuilder variantExclusion(
-            Function<com.commercetools.api.models.product_selection.ProductVariantExclusionBuilder, com.commercetools.api.models.product_selection.ProductVariantExclusionBuilder> builder) {
-        this.variantExclusion = builder
-                .apply(com.commercetools.api.models.product_selection.ProductVariantExclusionBuilder.of())
-                .build();
+    
+    public ProductSelectionAssignmentBuilder variantExclusion(Function<com.commercetools.api.models.product_selection.ProductVariantExclusionBuilder, com.commercetools.api.models.product_selection.ProductVariantExclusionBuilder> builder) {
+        this.variantExclusion = builder.apply(com.commercetools.api.models.product_selection.ProductVariantExclusionBuilder.of()).build();
         return this;
     }
-
+    
     /**
      *  <p>Defines which Variants of the Product will be excluded from the Product Selection.</p>
      *  <p>This field is only available for assignments to a Product Selection with <code>IndividualExclusion</code> ProductSelectionMode. The list of SKUs will be updated automatically on any change of those performed on the respective Product itself.</p>
      * @param builder function to build the variantExclusion value
      * @return Builder
      */
-
-    public ProductSelectionAssignmentBuilder withVariantExclusion(
-            Function<com.commercetools.api.models.product_selection.ProductVariantExclusionBuilder, com.commercetools.api.models.product_selection.ProductVariantExclusion> builder) {
-        this.variantExclusion = builder
-                .apply(com.commercetools.api.models.product_selection.ProductVariantExclusionBuilder.of());
+    
+    public ProductSelectionAssignmentBuilder withVariantExclusion(Function<com.commercetools.api.models.product_selection.ProductVariantExclusionBuilder, com.commercetools.api.models.product_selection.ProductVariantExclusion> builder) {
+        this.variantExclusion = builder.apply(com.commercetools.api.models.product_selection.ProductVariantExclusionBuilder.of());
         return this;
     }
-
+                    
     /**
      *  <p>Defines which Variants of the Product will be excluded from the Product Selection.</p>
      *  <p>This field is only available for assignments to a Product Selection with <code>IndividualExclusion</code> ProductSelectionMode. The list of SKUs will be updated automatically on any change of those performed on the respective Product itself.</p>
      * @param variantExclusion value to be set
      * @return Builder
      */
-
-    public ProductSelectionAssignmentBuilder variantExclusion(
-            @Nullable final com.commercetools.api.models.product_selection.ProductVariantExclusion variantExclusion) {
+    
+    public ProductSelectionAssignmentBuilder variantExclusion(@Nullable final com.commercetools.api.models.product_selection.ProductVariantExclusion variantExclusion) {
         this.variantExclusion = variantExclusion;
         return this;
     }
+    
+    
 
     /**
      *  <p>Reference to a Product that is assigned to the ProductSelection.</p>
      * @return product
      */
-
-    public com.commercetools.api.models.product.ProductReference getProduct() {
+    
+    
+    public com.commercetools.api.models.product.ProductReference getProduct(){
         return this.product;
     }
-
+    
     /**
      *  <p>Reference to the Product Selection that this assignment is part of.</p>
      * @return productSelection
      */
-
-    public com.commercetools.api.models.product_selection.ProductSelectionReference getProductSelection() {
+    
+    
+    public com.commercetools.api.models.product_selection.ProductSelectionReference getProductSelection(){
         return this.productSelection;
     }
-
+    
     /**
      *  <p>Define which Variants of the added Product will be included in the Product Selection.</p>
      *  <p>This field is only available for assignments to a Product Selection with <code>Individual</code> ProductSelectionMode. The list of SKUs will be updated automatically on any change of those performed on the respective Product itself.</p>
      * @return variantSelection
      */
-
+    
     @Nullable
-    public com.commercetools.api.models.product_selection.ProductVariantSelection getVariantSelection() {
+    public com.commercetools.api.models.product_selection.ProductVariantSelection getVariantSelection(){
         return this.variantSelection;
     }
-
+    
     /**
      *  <p>Defines which Variants of the Product will be excluded from the Product Selection.</p>
      *  <p>This field is only available for assignments to a Product Selection with <code>IndividualExclusion</code> ProductSelectionMode. The list of SKUs will be updated automatically on any change of those performed on the respective Product itself.</p>
      * @return variantExclusion
      */
-
+    
     @Nullable
-    public com.commercetools.api.models.product_selection.ProductVariantExclusion getVariantExclusion() {
+    public com.commercetools.api.models.product_selection.ProductVariantExclusion getVariantExclusion(){
         return this.variantExclusion;
     }
 
@@ -229,7 +236,7 @@ public class ProductSelectionAssignmentBuilder implements Builder<ProductSelecti
         Objects.requireNonNull(productSelection, ProductSelectionAssignment.class + ": productSelection is missing");
         return new ProductSelectionAssignmentImpl(product, productSelection, variantSelection, variantExclusion);
     }
-
+    
     /**
      * builds ProductSelectionAssignment without checking for non-null required values
      * @return ProductSelectionAssignment
@@ -240,7 +247,7 @@ public class ProductSelectionAssignmentBuilder implements Builder<ProductSelecti
 
     /**
      * factory method for an instance of ProductSelectionAssignmentBuilder
-     * @return builder
+     * @return builder 
      */
     public static ProductSelectionAssignmentBuilder of() {
         return new ProductSelectionAssignmentBuilder();

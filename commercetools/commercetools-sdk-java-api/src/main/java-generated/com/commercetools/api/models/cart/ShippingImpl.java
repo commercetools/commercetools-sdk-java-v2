@@ -1,51 +1,60 @@
-
 package com.commercetools.api.models.cart;
 
-import java.time.*;
-import java.util.*;
-
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
-
-import io.vrap.rmf.base.client.ModelBase;
+import com.commercetools.api.models.cart.ShippingInfo;
+import com.commercetools.api.models.cart.ShippingRateInput;
+import com.commercetools.api.models.common.Address;
+import com.commercetools.api.models.type.CustomFields;
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.ModelBase;
+import javax.validation.Valid;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.annotation.*;
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
  * Shipping
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class ShippingImpl implements Shipping, ModelBase {
 
+    
     private String shippingKey;
-
+    
+    
     private com.commercetools.api.models.cart.ShippingInfo shippingInfo;
-
+    
+    
     private com.commercetools.api.models.common.Address shippingAddress;
-
+    
+    
     private com.commercetools.api.models.cart.ShippingRateInput shippingRateInput;
-
+    
+    
     private com.commercetools.api.models.type.CustomFields shippingCustomFields;
 
     /**
      * create instance with all properties
      */
     @JsonCreator
-    ShippingImpl(@JsonProperty("shippingKey") final String shippingKey,
-            @JsonProperty("shippingInfo") final com.commercetools.api.models.cart.ShippingInfo shippingInfo,
-            @JsonProperty("shippingAddress") final com.commercetools.api.models.common.Address shippingAddress,
-            @JsonProperty("shippingRateInput") final com.commercetools.api.models.cart.ShippingRateInput shippingRateInput,
-            @JsonProperty("shippingCustomFields") final com.commercetools.api.models.type.CustomFields shippingCustomFields) {
+    ShippingImpl(@JsonProperty("shippingKey") final String shippingKey, @JsonProperty("shippingInfo") final com.commercetools.api.models.cart.ShippingInfo shippingInfo, @JsonProperty("shippingAddress") final com.commercetools.api.models.common.Address shippingAddress, @JsonProperty("shippingRateInput") final com.commercetools.api.models.cart.ShippingRateInput shippingRateInput, @JsonProperty("shippingCustomFields") final com.commercetools.api.models.type.CustomFields shippingCustomFields) {
         this.shippingKey = shippingKey;
         this.shippingInfo = shippingInfo;
         this.shippingAddress = shippingAddress;
         this.shippingRateInput = shippingRateInput;
         this.shippingCustomFields = shippingCustomFields;
     }
-
     /**
      * create empty instance
      */
@@ -55,27 +64,27 @@ public class ShippingImpl implements Shipping, ModelBase {
     /**
      *  <p>User-defined unique identifier of the Shipping in a Cart with <code>Multiple</code> ShippingMode.</p>
      */
-
-    public String getShippingKey() {
+    
+    public String getShippingKey(){
         return this.shippingKey;
     }
-
+    
     /**
      *  <p>Automatically set when the Shipping Method is added.</p>
      */
-
-    public com.commercetools.api.models.cart.ShippingInfo getShippingInfo() {
+    
+    public com.commercetools.api.models.cart.ShippingInfo getShippingInfo(){
         return this.shippingInfo;
     }
-
+    
     /**
      *  <p>Determines the shipping rates and Tax Rates of associated Line Items.</p>
      */
-
-    public com.commercetools.api.models.common.Address getShippingAddress() {
+    
+    public com.commercetools.api.models.common.Address getShippingAddress(){
         return this.shippingAddress;
     }
-
+    
     /**
      *  <p>Used as an input to select a ShippingRatePriceTier. The data type of this field depends on the <code>shippingRateInputType.type</code> configured in the Project:</p>
      *  <ul>
@@ -84,65 +93,70 @@ public class ShippingImpl implements Shipping, ModelBase {
      *   <li>If <code>CartValue</code>, it cannot be used.</li>
      *  </ul>
      */
-
-    public com.commercetools.api.models.cart.ShippingRateInput getShippingRateInput() {
+    
+    public com.commercetools.api.models.cart.ShippingRateInput getShippingRateInput(){
         return this.shippingRateInput;
     }
-
+    
     /**
      *  <p>Custom Fields of Shipping with <code>Multiple</code> ShippingMode.</p>
      */
-
-    public com.commercetools.api.models.type.CustomFields getShippingCustomFields() {
+    
+    public com.commercetools.api.models.type.CustomFields getShippingCustomFields(){
         return this.shippingCustomFields;
     }
 
-    public void setShippingKey(final String shippingKey) {
+    
+    public void setShippingKey(final String shippingKey){
         this.shippingKey = shippingKey;
     }
-
-    public void setShippingInfo(final com.commercetools.api.models.cart.ShippingInfo shippingInfo) {
+    
+    
+    public void setShippingInfo(final com.commercetools.api.models.cart.ShippingInfo shippingInfo){
         this.shippingInfo = shippingInfo;
     }
-
-    public void setShippingAddress(final com.commercetools.api.models.common.Address shippingAddress) {
+    
+    
+    public void setShippingAddress(final com.commercetools.api.models.common.Address shippingAddress){
         this.shippingAddress = shippingAddress;
     }
-
-    public void setShippingRateInput(final com.commercetools.api.models.cart.ShippingRateInput shippingRateInput) {
+    
+    
+    public void setShippingRateInput(final com.commercetools.api.models.cart.ShippingRateInput shippingRateInput){
         this.shippingRateInput = shippingRateInput;
     }
-
-    public void setShippingCustomFields(final com.commercetools.api.models.type.CustomFields shippingCustomFields) {
+    
+    
+    public void setShippingCustomFields(final com.commercetools.api.models.type.CustomFields shippingCustomFields){
         this.shippingCustomFields = shippingCustomFields;
     }
 
     @Override
     public boolean equals(Object o) {
-        if (this == o)
-            return true;
-
-        if (o == null || getClass() != o.getClass())
-            return false;
-
+        if (this == o) return true;
+    
+        if (o == null || getClass() != o.getClass()) return false;
+    
         ShippingImpl that = (ShippingImpl) o;
-
-        return new EqualsBuilder().append(shippingKey, that.shippingKey)
+    
+        return new EqualsBuilder()
+                .append(shippingKey, that.shippingKey)
                 .append(shippingInfo, that.shippingInfo)
                 .append(shippingAddress, that.shippingAddress)
                 .append(shippingRateInput, that.shippingRateInput)
                 .append(shippingCustomFields, that.shippingCustomFields)
                 .isEquals();
     }
-
+    
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(shippingKey)
-                .append(shippingInfo)
-                .append(shippingAddress)
-                .append(shippingRateInput)
-                .append(shippingCustomFields)
-                .toHashCode();
+        return new HashCodeBuilder(17, 37)
+            .append(shippingKey)
+            .append(shippingInfo)
+            .append(shippingAddress)
+            .append(shippingRateInput)
+            .append(shippingCustomFields)
+            .toHashCode();
     }
 
 }

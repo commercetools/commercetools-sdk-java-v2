@@ -1,11 +1,12 @@
-
 package com.commercetools.importapi.models.productvariants;
 
+import com.commercetools.importapi.models.common.KeyReference;
+import com.commercetools.importapi.models.productvariants.Attribute;
+import com.commercetools.importapi.models.productvariants.ReferenceAttribute;
+import javax.annotation.Nullable;
 import java.util.*;
 import java.util.function.Function;
-
-import javax.annotation.Nullable;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -19,66 +20,78 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .value(valueBuilder -> valueBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class ReferenceAttributeBuilder implements Builder<ReferenceAttribute> {
 
+    
     @Nullable
     private String name;
-
+    
+    
+    
     private com.commercetools.importapi.models.common.KeyReference value;
 
+    
     /**
      *  <p>The name of this attribute must match a name of the product types attribute definitions. The name is required if this type is used in a product variant and must not be set when used in a product variant patch.</p>
      * @param name value to be set
      * @return Builder
      */
-
+    
     public ReferenceAttributeBuilder name(@Nullable final String name) {
         this.name = name;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>References a resource by key.</p>
      * @param value value to be set
      * @return Builder
      */
-
-    public ReferenceAttributeBuilder value(final com.commercetools.importapi.models.common.KeyReference value) {
+    
+    public ReferenceAttributeBuilder value( final com.commercetools.importapi.models.common.KeyReference value) {
         this.value = value;
         return this;
     }
-
+    
+    
     /**
      *  <p>References a resource by key.</p>
      * @param builder function to build the value value
      * @return Builder
      */
-
-    public ReferenceAttributeBuilder value(
-            Function<com.commercetools.importapi.models.common.KeyReferenceBuilder, Builder<? extends com.commercetools.importapi.models.common.KeyReference>> builder) {
+    
+    public ReferenceAttributeBuilder value(Function<com.commercetools.importapi.models.common.KeyReferenceBuilder, Builder<? extends com.commercetools.importapi.models.common.KeyReference>> builder) {
         this.value = builder.apply(com.commercetools.importapi.models.common.KeyReferenceBuilder.of()).build();
         return this;
     }
+                    
 
     /**
      *  <p>The name of this attribute must match a name of the product types attribute definitions. The name is required if this type is used in a product variant and must not be set when used in a product variant patch.</p>
      * @return name
      */
-
+    
     @Nullable
-    public String getName() {
+    public String getName(){
         return this.name;
     }
-
+    
     /**
      *  <p>References a resource by key.</p>
      * @return value
      */
-
-    public com.commercetools.importapi.models.common.KeyReference getValue() {
+    
+    
+    public com.commercetools.importapi.models.common.KeyReference getValue(){
         return this.value;
     }
 
@@ -90,7 +103,7 @@ public class ReferenceAttributeBuilder implements Builder<ReferenceAttribute> {
         Objects.requireNonNull(value, ReferenceAttribute.class + ": value is missing");
         return new ReferenceAttributeImpl(name, value);
     }
-
+    
     /**
      * builds ReferenceAttribute without checking for non-null required values
      * @return ReferenceAttribute
@@ -101,7 +114,7 @@ public class ReferenceAttributeBuilder implements Builder<ReferenceAttribute> {
 
     /**
      * factory method for an instance of ReferenceAttributeBuilder
-     * @return builder
+     * @return builder 
      */
     public static ReferenceAttributeBuilder of() {
         return new ReferenceAttributeBuilder();

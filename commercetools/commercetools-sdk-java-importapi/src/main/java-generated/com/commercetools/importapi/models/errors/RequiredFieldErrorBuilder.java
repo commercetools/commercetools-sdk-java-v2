@@ -1,8 +1,11 @@
-
 package com.commercetools.importapi.models.errors;
 
+import com.commercetools.importapi.models.errors.ErrorObject;
+import com.commercetools.importapi.models.errors.RequiredFieldError;
+import javax.annotation.Nullable;
 import java.util.*;
-
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -17,52 +20,67 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .field("{field}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class RequiredFieldErrorBuilder implements Builder<RequiredFieldError> {
 
+    
+    
     private String message;
-
+    
+    
+    
     private String field;
 
+    
     /**
      * set the value to the message
      * @param message value to be set
      * @return Builder
      */
-
-    public RequiredFieldErrorBuilder message(final String message) {
+    
+    public RequiredFieldErrorBuilder message( final String message) {
         this.message = message;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>The name of the field.</p>
      * @param field value to be set
      * @return Builder
      */
-
-    public RequiredFieldErrorBuilder field(final String field) {
+    
+    public RequiredFieldErrorBuilder field( final String field) {
         this.field = field;
         return this;
     }
+    
+    
 
     /**
      * value of message}
      * @return message
      */
-
-    public String getMessage() {
+    
+    
+    public String getMessage(){
         return this.message;
     }
-
+    
     /**
      *  <p>The name of the field.</p>
      * @return field
      */
-
-    public String getField() {
+    
+    
+    public String getField(){
         return this.field;
     }
 
@@ -75,7 +93,7 @@ public class RequiredFieldErrorBuilder implements Builder<RequiredFieldError> {
         Objects.requireNonNull(field, RequiredFieldError.class + ": field is missing");
         return new RequiredFieldErrorImpl(message, field);
     }
-
+    
     /**
      * builds RequiredFieldError without checking for non-null required values
      * @return RequiredFieldError
@@ -86,7 +104,7 @@ public class RequiredFieldErrorBuilder implements Builder<RequiredFieldError> {
 
     /**
      * factory method for an instance of RequiredFieldErrorBuilder
-     * @return builder
+     * @return builder 
      */
     public static RequiredFieldErrorBuilder of() {
         return new RequiredFieldErrorBuilder();

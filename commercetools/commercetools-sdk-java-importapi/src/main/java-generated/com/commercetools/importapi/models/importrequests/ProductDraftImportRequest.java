@@ -1,20 +1,22 @@
-
 package com.commercetools.importapi.models.importrequests;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-import java.util.stream.Collectors;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
+import com.commercetools.importapi.models.common.ImportResourceType;
+import com.commercetools.importapi.models.importrequests.ImportRequest;
 import com.commercetools.importapi.models.productdrafts.ProductDraftImport;
+import com.commercetools.importapi.models.importrequests.ProductDraftImportRequestImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>The request body to import ProductDrafts. Contains data for Products to be created or updated in a Project.</p>
@@ -27,9 +29,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .plusResources(resourcesBuilder -> resourcesBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = ProductDraftImportRequestImpl.class)
 public interface ProductDraftImportRequest extends ImportRequest {
 
@@ -51,24 +56,24 @@ public interface ProductDraftImportRequest extends ImportRequest {
      *  <p>The product draft import resources of this request.</p>
      * @param resources values to be set
      */
-
+    
     @JsonIgnore
-    public void setResources(final ProductDraftImport... resources);
-
+    public void setResources(final ProductDraftImport ...resources);
     /**
      *  <p>The product draft import resources of this request.</p>
      * @param resources values to be set
      */
-
+    
     public void setResources(final List<ProductDraftImport> resources);
 
     /**
      * factory method
      * @return instance of ProductDraftImportRequest
      */
-    public static ProductDraftImportRequest of() {
+    public static ProductDraftImportRequest of(){
         return new ProductDraftImportRequestImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy ProductDraftImportRequest
@@ -93,9 +98,7 @@ public interface ProductDraftImportRequest extends ImportRequest {
         }
         ProductDraftImportRequestImpl instance = new ProductDraftImportRequestImpl();
         instance.setResources(Optional.ofNullable(template.getResources())
-                .map(t -> t.stream()
-                        .map(com.commercetools.importapi.models.productdrafts.ProductDraftImport::deepCopy)
-                        .collect(Collectors.toList()))
+                .map(t -> t.stream().map(com.commercetools.importapi.models.productdrafts.ProductDraftImport::deepCopy).collect(Collectors.toList()))
                 .orElse(null));
         return instance;
     }
@@ -107,7 +110,7 @@ public interface ProductDraftImportRequest extends ImportRequest {
     public static ProductDraftImportRequestBuilder builder() {
         return ProductDraftImportRequestBuilder.of();
     }
-
+    
     /**
      * create builder for ProductDraftImportRequest instance
      * @param template instance with prefilled values for the builder
@@ -116,6 +119,7 @@ public interface ProductDraftImportRequest extends ImportRequest {
     public static ProductDraftImportRequestBuilder builder(final ProductDraftImportRequest template) {
         return ProductDraftImportRequestBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -126,7 +130,7 @@ public interface ProductDraftImportRequest extends ImportRequest {
     default <T> T withProductDraftImportRequest(Function<ProductDraftImportRequest, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

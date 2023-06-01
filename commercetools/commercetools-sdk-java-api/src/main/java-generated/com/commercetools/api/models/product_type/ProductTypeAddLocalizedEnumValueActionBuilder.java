@@ -1,9 +1,12 @@
-
 package com.commercetools.api.models.product_type;
 
+import com.commercetools.api.models.product_type.AttributeLocalizedEnumValue;
+import com.commercetools.api.models.product_type.ProductTypeUpdateAction;
+import com.commercetools.api.models.product_type.ProductTypeAddLocalizedEnumValueAction;
+import javax.annotation.Nullable;
 import java.util.*;
 import java.util.function.Function;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -18,78 +21,89 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .value(valueBuilder -> valueBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class ProductTypeAddLocalizedEnumValueActionBuilder implements Builder<ProductTypeAddLocalizedEnumValueAction> {
 
+    
+    
     private String attributeName;
-
+    
+    
+    
     private com.commercetools.api.models.product_type.AttributeLocalizedEnumValue value;
 
+    
     /**
      *  <p>Name of the AttributeDefinition to update.</p>
      * @param attributeName value to be set
      * @return Builder
      */
-
-    public ProductTypeAddLocalizedEnumValueActionBuilder attributeName(final String attributeName) {
+    
+    public ProductTypeAddLocalizedEnumValueActionBuilder attributeName( final String attributeName) {
         this.attributeName = attributeName;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Value to append to the array.</p>
      * @param builder function to build the value value
      * @return Builder
      */
-
-    public ProductTypeAddLocalizedEnumValueActionBuilder value(
-            Function<com.commercetools.api.models.product_type.AttributeLocalizedEnumValueBuilder, com.commercetools.api.models.product_type.AttributeLocalizedEnumValueBuilder> builder) {
-        this.value = builder.apply(com.commercetools.api.models.product_type.AttributeLocalizedEnumValueBuilder.of())
-                .build();
+    
+    public ProductTypeAddLocalizedEnumValueActionBuilder value(Function<com.commercetools.api.models.product_type.AttributeLocalizedEnumValueBuilder, com.commercetools.api.models.product_type.AttributeLocalizedEnumValueBuilder> builder) {
+        this.value = builder.apply(com.commercetools.api.models.product_type.AttributeLocalizedEnumValueBuilder.of()).build();
         return this;
     }
-
+    
     /**
      *  <p>Value to append to the array.</p>
      * @param builder function to build the value value
      * @return Builder
      */
-
-    public ProductTypeAddLocalizedEnumValueActionBuilder withValue(
-            Function<com.commercetools.api.models.product_type.AttributeLocalizedEnumValueBuilder, com.commercetools.api.models.product_type.AttributeLocalizedEnumValue> builder) {
+    
+    public ProductTypeAddLocalizedEnumValueActionBuilder withValue(Function<com.commercetools.api.models.product_type.AttributeLocalizedEnumValueBuilder, com.commercetools.api.models.product_type.AttributeLocalizedEnumValue> builder) {
         this.value = builder.apply(com.commercetools.api.models.product_type.AttributeLocalizedEnumValueBuilder.of());
         return this;
     }
-
+                    
     /**
      *  <p>Value to append to the array.</p>
      * @param value value to be set
      * @return Builder
      */
-
-    public ProductTypeAddLocalizedEnumValueActionBuilder value(
-            final com.commercetools.api.models.product_type.AttributeLocalizedEnumValue value) {
+    
+    public ProductTypeAddLocalizedEnumValueActionBuilder value( final com.commercetools.api.models.product_type.AttributeLocalizedEnumValue value) {
         this.value = value;
         return this;
     }
+    
+    
 
     /**
      *  <p>Name of the AttributeDefinition to update.</p>
      * @return attributeName
      */
-
-    public String getAttributeName() {
+    
+    
+    public String getAttributeName(){
         return this.attributeName;
     }
-
+    
     /**
      *  <p>Value to append to the array.</p>
      * @return value
      */
-
-    public com.commercetools.api.models.product_type.AttributeLocalizedEnumValue getValue() {
+    
+    
+    public com.commercetools.api.models.product_type.AttributeLocalizedEnumValue getValue(){
         return this.value;
     }
 
@@ -98,12 +112,11 @@ public class ProductTypeAddLocalizedEnumValueActionBuilder implements Builder<Pr
      * @return ProductTypeAddLocalizedEnumValueAction
      */
     public ProductTypeAddLocalizedEnumValueAction build() {
-        Objects.requireNonNull(attributeName,
-            ProductTypeAddLocalizedEnumValueAction.class + ": attributeName is missing");
+        Objects.requireNonNull(attributeName, ProductTypeAddLocalizedEnumValueAction.class + ": attributeName is missing");
         Objects.requireNonNull(value, ProductTypeAddLocalizedEnumValueAction.class + ": value is missing");
         return new ProductTypeAddLocalizedEnumValueActionImpl(attributeName, value);
     }
-
+    
     /**
      * builds ProductTypeAddLocalizedEnumValueAction without checking for non-null required values
      * @return ProductTypeAddLocalizedEnumValueAction
@@ -114,7 +127,7 @@ public class ProductTypeAddLocalizedEnumValueActionBuilder implements Builder<Pr
 
     /**
      * factory method for an instance of ProductTypeAddLocalizedEnumValueActionBuilder
-     * @return builder
+     * @return builder 
      */
     public static ProductTypeAddLocalizedEnumValueActionBuilder of() {
         return new ProductTypeAddLocalizedEnumValueActionBuilder();
@@ -125,8 +138,7 @@ public class ProductTypeAddLocalizedEnumValueActionBuilder implements Builder<Pr
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static ProductTypeAddLocalizedEnumValueActionBuilder of(
-            final ProductTypeAddLocalizedEnumValueAction template) {
+    public static ProductTypeAddLocalizedEnumValueActionBuilder of(final ProductTypeAddLocalizedEnumValueAction template) {
         ProductTypeAddLocalizedEnumValueActionBuilder builder = new ProductTypeAddLocalizedEnumValueActionBuilder();
         builder.attributeName = template.getAttributeName();
         builder.value = template.getValue();

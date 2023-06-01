@@ -1,19 +1,20 @@
-
 package com.commercetools.api.models.cart;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
 import com.commercetools.api.models.tax_category.TaxRate;
+import com.commercetools.api.models.cart.MethodTaxRateImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * MethodTaxRate
@@ -26,11 +27,15 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .shippingMethodKey("{shippingMethodKey}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = MethodTaxRateImpl.class)
-public interface MethodTaxRate {
+public interface MethodTaxRate  {
+
 
     /**
      *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multiple</code> ShippingMode.</p>
@@ -39,7 +44,6 @@ public interface MethodTaxRate {
     @NotNull
     @JsonProperty("shippingMethodKey")
     public String getShippingMethodKey();
-
     /**
      *  <p>Tax Rate for the Shipping Method.</p>
      * @return taxRate
@@ -52,23 +56,26 @@ public interface MethodTaxRate {
      *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multiple</code> ShippingMode.</p>
      * @param shippingMethodKey value to be set
      */
-
+    
     public void setShippingMethodKey(final String shippingMethodKey);
-
+    
+    
     /**
      *  <p>Tax Rate for the Shipping Method.</p>
      * @param taxRate value to be set
      */
-
+    
     public void setTaxRate(final TaxRate taxRate);
+    
 
     /**
      * factory method
      * @return instance of MethodTaxRate
      */
-    public static MethodTaxRate of() {
+    public static MethodTaxRate of(){
         return new MethodTaxRateImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy MethodTaxRate
@@ -105,7 +112,7 @@ public interface MethodTaxRate {
     public static MethodTaxRateBuilder builder() {
         return MethodTaxRateBuilder.of();
     }
-
+    
     /**
      * create builder for MethodTaxRate instance
      * @param template instance with prefilled values for the builder
@@ -114,6 +121,7 @@ public interface MethodTaxRate {
     public static MethodTaxRateBuilder builder(final MethodTaxRate template) {
         return MethodTaxRateBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -124,7 +132,7 @@ public interface MethodTaxRate {
     default <T> T withMethodTaxRate(Function<MethodTaxRate, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

@@ -1,20 +1,21 @@
-
 package com.commercetools.api.models.order_edit;
-
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.common.Money;
 import com.commercetools.api.models.order.StagedOrderUpdateAction;
+import com.commercetools.api.models.order_edit.StagedOrderSetLineItemPriceActionImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * StagedOrderSetLineItemPriceAction
@@ -27,9 +28,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .lineItemId("{lineItemId}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = StagedOrderSetLineItemPriceActionImpl.class)
 public interface StagedOrderSetLineItemPriceAction extends StagedOrderUpdateAction {
 
@@ -45,7 +49,6 @@ public interface StagedOrderSetLineItemPriceAction extends StagedOrderUpdateActi
     @NotNull
     @JsonProperty("lineItemId")
     public String getLineItemId();
-
     /**
      *  <p>Draft type that stores amounts only in cent precision for the specified currency.</p>
      * @return externalPrice
@@ -58,23 +61,26 @@ public interface StagedOrderSetLineItemPriceAction extends StagedOrderUpdateActi
      * set lineItemId
      * @param lineItemId value to be set
      */
-
+    
     public void setLineItemId(final String lineItemId);
-
+    
+    
     /**
      *  <p>Draft type that stores amounts only in cent precision for the specified currency.</p>
      * @param externalPrice value to be set
      */
-
+    
     public void setExternalPrice(final Money externalPrice);
+    
 
     /**
      * factory method
      * @return instance of StagedOrderSetLineItemPriceAction
      */
-    public static StagedOrderSetLineItemPriceAction of() {
+    public static StagedOrderSetLineItemPriceAction of(){
         return new StagedOrderSetLineItemPriceActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy StagedOrderSetLineItemPriceAction
@@ -94,8 +100,7 @@ public interface StagedOrderSetLineItemPriceAction extends StagedOrderUpdateActi
      * @return copy instance
      */
     @Nullable
-    public static StagedOrderSetLineItemPriceAction deepCopy(
-            @Nullable final StagedOrderSetLineItemPriceAction template) {
+    public static StagedOrderSetLineItemPriceAction deepCopy(@Nullable final StagedOrderSetLineItemPriceAction template) {
         if (template == null) {
             return null;
         }
@@ -112,7 +117,7 @@ public interface StagedOrderSetLineItemPriceAction extends StagedOrderUpdateActi
     public static StagedOrderSetLineItemPriceActionBuilder builder() {
         return StagedOrderSetLineItemPriceActionBuilder.of();
     }
-
+    
     /**
      * create builder for StagedOrderSetLineItemPriceAction instance
      * @param template instance with prefilled values for the builder
@@ -121,6 +126,7 @@ public interface StagedOrderSetLineItemPriceAction extends StagedOrderUpdateActi
     public static StagedOrderSetLineItemPriceActionBuilder builder(final StagedOrderSetLineItemPriceAction template) {
         return StagedOrderSetLineItemPriceActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -131,7 +137,7 @@ public interface StagedOrderSetLineItemPriceAction extends StagedOrderUpdateActi
     default <T> T withStagedOrderSetLineItemPriceAction(Function<StagedOrderSetLineItemPriceAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

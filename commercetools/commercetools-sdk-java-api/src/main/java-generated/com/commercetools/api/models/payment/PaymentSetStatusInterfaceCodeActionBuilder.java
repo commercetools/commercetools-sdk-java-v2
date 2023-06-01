@@ -1,10 +1,11 @@
-
 package com.commercetools.api.models.payment;
 
-import java.util.*;
-
+import com.commercetools.api.models.payment.PaymentUpdateAction;
+import com.commercetools.api.models.payment.PaymentSetStatusInterfaceCodeAction;
 import javax.annotation.Nullable;
-
+import java.util.*;
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -17,32 +18,39 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     PaymentSetStatusInterfaceCodeAction paymentSetStatusInterfaceCodeAction = PaymentSetStatusInterfaceCodeAction.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class PaymentSetStatusInterfaceCodeActionBuilder implements Builder<PaymentSetStatusInterfaceCodeAction> {
 
+    
     @Nullable
     private String interfaceCode;
 
+    
     /**
      *  <p>Value to set. If empty, any existing value will be removed.</p>
      * @param interfaceCode value to be set
      * @return Builder
      */
-
+    
     public PaymentSetStatusInterfaceCodeActionBuilder interfaceCode(@Nullable final String interfaceCode) {
         this.interfaceCode = interfaceCode;
         return this;
     }
+    
+    
 
     /**
      *  <p>Value to set. If empty, any existing value will be removed.</p>
      * @return interfaceCode
      */
-
+    
     @Nullable
-    public String getInterfaceCode() {
+    public String getInterfaceCode(){
         return this.interfaceCode;
     }
 
@@ -53,7 +61,7 @@ public class PaymentSetStatusInterfaceCodeActionBuilder implements Builder<Payme
     public PaymentSetStatusInterfaceCodeAction build() {
         return new PaymentSetStatusInterfaceCodeActionImpl(interfaceCode);
     }
-
+    
     /**
      * builds PaymentSetStatusInterfaceCodeAction without checking for non-null required values
      * @return PaymentSetStatusInterfaceCodeAction
@@ -64,7 +72,7 @@ public class PaymentSetStatusInterfaceCodeActionBuilder implements Builder<Payme
 
     /**
      * factory method for an instance of PaymentSetStatusInterfaceCodeActionBuilder
-     * @return builder
+     * @return builder 
      */
     public static PaymentSetStatusInterfaceCodeActionBuilder of() {
         return new PaymentSetStatusInterfaceCodeActionBuilder();

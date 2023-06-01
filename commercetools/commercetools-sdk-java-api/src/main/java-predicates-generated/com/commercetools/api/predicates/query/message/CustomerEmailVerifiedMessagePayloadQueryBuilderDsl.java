@@ -1,9 +1,11 @@
-
 package com.commercetools.api.predicates.query.message;
 
 import com.commercetools.api.predicates.query.*;
 
-public class CustomerEmailVerifiedMessagePayloadQueryBuilderDsl {
+import java.util.function.Function;
+
+
+public class CustomerEmailVerifiedMessagePayloadQueryBuilderDsl  {
     public CustomerEmailVerifiedMessagePayloadQueryBuilderDsl() {
     }
 
@@ -12,9 +14,8 @@ public class CustomerEmailVerifiedMessagePayloadQueryBuilderDsl {
     }
 
     public StringComparisonPredicateBuilder<CustomerEmailVerifiedMessagePayloadQueryBuilderDsl> type() {
-        return new StringComparisonPredicateBuilder<>(
-            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("type")),
-            p -> new CombinationQueryPredicate<>(p, CustomerEmailVerifiedMessagePayloadQueryBuilderDsl::of));
+        return new StringComparisonPredicateBuilder<>(BinaryQueryPredicate.of().left(new ConstantQueryPredicate("type")),
+        p -> new CombinationQueryPredicate<>(p, CustomerEmailVerifiedMessagePayloadQueryBuilderDsl::of));
     }
-
+    
 }

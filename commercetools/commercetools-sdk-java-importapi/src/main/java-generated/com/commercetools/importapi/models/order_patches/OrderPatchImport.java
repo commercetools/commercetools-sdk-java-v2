@@ -1,18 +1,20 @@
-
 package com.commercetools.importapi.models.order_patches;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
+import com.commercetools.importapi.models.order_patches.OrderField;
+import com.commercetools.importapi.models.order_patches.OrderPatchImportImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Representation for an update of an Order. Use this type to import updates for existing Orders in a Project.</p>
@@ -26,11 +28,15 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .fields(fieldsBuilder -> fieldsBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = OrderPatchImportImpl.class)
-public interface OrderPatchImport {
+public interface OrderPatchImport  {
+
 
     /**
      *  <p>Maps to <code>Order.orderNumber</code>, String that uniquely identifies an order, unique across a project.</p>
@@ -39,7 +45,6 @@ public interface OrderPatchImport {
     @NotNull
     @JsonProperty("orderNumber")
     public String getOrderNumber();
-
     /**
      *  <p>Each field referenced must be defined in an already existing order in the project or the import operation state is set to <code>validationFailed</code>.</p>
      * @return fields
@@ -53,23 +58,26 @@ public interface OrderPatchImport {
      *  <p>Maps to <code>Order.orderNumber</code>, String that uniquely identifies an order, unique across a project.</p>
      * @param orderNumber value to be set
      */
-
+    
     public void setOrderNumber(final String orderNumber);
-
+    
+    
     /**
      *  <p>Each field referenced must be defined in an already existing order in the project or the import operation state is set to <code>validationFailed</code>.</p>
      * @param fields value to be set
      */
-
+    
     public void setFields(final OrderField fields);
+    
 
     /**
      * factory method
      * @return instance of OrderPatchImport
      */
-    public static OrderPatchImport of() {
+    public static OrderPatchImport of(){
         return new OrderPatchImportImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy OrderPatchImport
@@ -106,7 +114,7 @@ public interface OrderPatchImport {
     public static OrderPatchImportBuilder builder() {
         return OrderPatchImportBuilder.of();
     }
-
+    
     /**
      * create builder for OrderPatchImport instance
      * @param template instance with prefilled values for the builder
@@ -115,6 +123,7 @@ public interface OrderPatchImport {
     public static OrderPatchImportBuilder builder(final OrderPatchImport template) {
         return OrderPatchImportBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -125,7 +134,7 @@ public interface OrderPatchImport {
     default <T> T withOrderPatchImport(Function<OrderPatchImport, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

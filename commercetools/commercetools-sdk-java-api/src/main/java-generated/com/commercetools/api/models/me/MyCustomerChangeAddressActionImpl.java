@@ -1,16 +1,20 @@
-
 package com.commercetools.api.models.me;
 
-import java.time.*;
-import java.util.*;
-
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
-
-import io.vrap.rmf.base.client.ModelBase;
+import com.commercetools.api.models.common.BaseAddress;
+import com.commercetools.api.models.me.MyCustomerUpdateAction;
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.ModelBase;
+import javax.validation.Valid;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.annotation.*;
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
@@ -18,105 +22,112 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
  *  <p>Changing an address of the Customer produces the CustomerAddressChanged Message.</p>
  *  <p>Either <code>addressId</code> or <code>addressKey</code> is required.</p>
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class MyCustomerChangeAddressActionImpl implements MyCustomerChangeAddressAction, ModelBase {
 
+    
     private String action;
-
+    
+    
     private String addressId;
-
+    
+    
     private String addressKey;
-
+    
+    
     private com.commercetools.api.models.common.BaseAddress address;
 
     /**
      * create instance with all properties
      */
     @JsonCreator
-    MyCustomerChangeAddressActionImpl(@JsonProperty("addressId") final String addressId,
-            @JsonProperty("addressKey") final String addressKey,
-            @JsonProperty("address") final com.commercetools.api.models.common.BaseAddress address) {
+    MyCustomerChangeAddressActionImpl(@JsonProperty("addressId") final String addressId, @JsonProperty("addressKey") final String addressKey, @JsonProperty("address") final com.commercetools.api.models.common.BaseAddress address) {
         this.addressId = addressId;
         this.addressKey = addressKey;
         this.address = address;
-        this.action = CHANGE_ADDRESS;
+        this.action =  CHANGE_ADDRESS;
     }
-
     /**
      * create empty instance
      */
     public MyCustomerChangeAddressActionImpl() {
-        this.action = CHANGE_ADDRESS;
+        this.action =  CHANGE_ADDRESS;
     }
 
     /**
      *
      */
-
-    public String getAction() {
+    
+    public String getAction(){
         return this.action;
     }
-
+    
     /**
      *  <p><code>id</code> of the Address to change.</p>
      */
-
-    public String getAddressId() {
+    
+    public String getAddressId(){
         return this.addressId;
     }
-
+    
     /**
      *  <p><code>key</code> of the Address to change.</p>
      */
-
-    public String getAddressKey() {
+    
+    public String getAddressKey(){
         return this.addressKey;
     }
-
+    
     /**
      *  <p>Value to set.</p>
      */
-
-    public com.commercetools.api.models.common.BaseAddress getAddress() {
+    
+    public com.commercetools.api.models.common.BaseAddress getAddress(){
         return this.address;
     }
 
-    public void setAddressId(final String addressId) {
+    
+    public void setAddressId(final String addressId){
         this.addressId = addressId;
     }
-
-    public void setAddressKey(final String addressKey) {
+    
+    
+    public void setAddressKey(final String addressKey){
         this.addressKey = addressKey;
     }
-
-    public void setAddress(final com.commercetools.api.models.common.BaseAddress address) {
+    
+    
+    public void setAddress(final com.commercetools.api.models.common.BaseAddress address){
         this.address = address;
     }
 
     @Override
     public boolean equals(Object o) {
-        if (this == o)
-            return true;
-
-        if (o == null || getClass() != o.getClass())
-            return false;
-
+        if (this == o) return true;
+    
+        if (o == null || getClass() != o.getClass()) return false;
+    
         MyCustomerChangeAddressActionImpl that = (MyCustomerChangeAddressActionImpl) o;
-
-        return new EqualsBuilder().append(action, that.action)
+    
+        return new EqualsBuilder()
+                .append(action, that.action)
                 .append(addressId, that.addressId)
                 .append(addressKey, that.addressKey)
                 .append(address, that.address)
                 .isEquals();
     }
-
+    
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(action)
-                .append(addressId)
-                .append(addressKey)
-                .append(address)
-                .toHashCode();
+        return new HashCodeBuilder(17, 37)
+            .append(action)
+            .append(addressId)
+            .append(addressKey)
+            .append(address)
+            .toHashCode();
     }
 
 }

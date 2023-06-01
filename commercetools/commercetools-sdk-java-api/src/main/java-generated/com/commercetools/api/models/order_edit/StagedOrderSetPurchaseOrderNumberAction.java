@@ -1,17 +1,20 @@
-
 package com.commercetools.api.models.order_edit;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-
 import com.commercetools.api.models.order.StagedOrderUpdateAction;
+import com.commercetools.api.models.order_edit.StagedOrderSetPurchaseOrderNumberActionImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * StagedOrderSetPurchaseOrderNumberAction
@@ -23,9 +26,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     StagedOrderSetPurchaseOrderNumberAction stagedOrderSetPurchaseOrderNumberAction = StagedOrderSetPurchaseOrderNumberAction.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = StagedOrderSetPurchaseOrderNumberActionImpl.class)
 public interface StagedOrderSetPurchaseOrderNumberAction extends StagedOrderUpdateAction {
 
@@ -38,7 +44,7 @@ public interface StagedOrderSetPurchaseOrderNumberAction extends StagedOrderUpda
      *  <p>Identifier for a purchase order, usually in a B2B context. The Purchase Order Number is typically entered by the Buyer and can also be used with Quotes.</p>
      * @return purchaseOrderNumber
      */
-
+    
     @JsonProperty("purchaseOrderNumber")
     public String getPurchaseOrderNumber();
 
@@ -46,16 +52,18 @@ public interface StagedOrderSetPurchaseOrderNumberAction extends StagedOrderUpda
      *  <p>Identifier for a purchase order, usually in a B2B context. The Purchase Order Number is typically entered by the Buyer and can also be used with Quotes.</p>
      * @param purchaseOrderNumber value to be set
      */
-
+    
     public void setPurchaseOrderNumber(final String purchaseOrderNumber);
+    
 
     /**
      * factory method
      * @return instance of StagedOrderSetPurchaseOrderNumberAction
      */
-    public static StagedOrderSetPurchaseOrderNumberAction of() {
+    public static StagedOrderSetPurchaseOrderNumberAction of(){
         return new StagedOrderSetPurchaseOrderNumberActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy StagedOrderSetPurchaseOrderNumberAction
@@ -74,8 +82,7 @@ public interface StagedOrderSetPurchaseOrderNumberAction extends StagedOrderUpda
      * @return copy instance
      */
     @Nullable
-    public static StagedOrderSetPurchaseOrderNumberAction deepCopy(
-            @Nullable final StagedOrderSetPurchaseOrderNumberAction template) {
+    public static StagedOrderSetPurchaseOrderNumberAction deepCopy(@Nullable final StagedOrderSetPurchaseOrderNumberAction template) {
         if (template == null) {
             return null;
         }
@@ -91,16 +98,16 @@ public interface StagedOrderSetPurchaseOrderNumberAction extends StagedOrderUpda
     public static StagedOrderSetPurchaseOrderNumberActionBuilder builder() {
         return StagedOrderSetPurchaseOrderNumberActionBuilder.of();
     }
-
+    
     /**
      * create builder for StagedOrderSetPurchaseOrderNumberAction instance
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static StagedOrderSetPurchaseOrderNumberActionBuilder builder(
-            final StagedOrderSetPurchaseOrderNumberAction template) {
+    public static StagedOrderSetPurchaseOrderNumberActionBuilder builder(final StagedOrderSetPurchaseOrderNumberAction template) {
         return StagedOrderSetPurchaseOrderNumberActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -108,11 +115,10 @@ public interface StagedOrderSetPurchaseOrderNumberAction extends StagedOrderUpda
      * @param helper function to map the object
      * @return mapped value
      */
-    default <T> T withStagedOrderSetPurchaseOrderNumberAction(
-            Function<StagedOrderSetPurchaseOrderNumberAction, T> helper) {
+    default <T> T withStagedOrderSetPurchaseOrderNumberAction(Function<StagedOrderSetPurchaseOrderNumberAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

@@ -1,17 +1,20 @@
-
 package com.commercetools.api.models.product_discount;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
+import com.commercetools.api.models.product_discount.ProductDiscountValueDraft;
+import com.commercetools.api.models.product_discount.ProductDiscountValueRelativeDraftImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Discounts the Product Price by a percentage, defined by the <code>permyriad</code> field.</p>
@@ -24,12 +27,14 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .permyriad(0.3)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = ProductDiscountValueRelativeDraftImpl.class)
-public interface ProductDiscountValueRelativeDraft
-        extends ProductDiscountValueDraft, io.vrap.rmf.base.client.Draft<ProductDiscountValueRelativeDraft> {
+public interface ProductDiscountValueRelativeDraft extends ProductDiscountValueDraft, io.vrap.rmf.base.client.Draft<ProductDiscountValueRelativeDraft> {
 
     /**
      * discriminator value for ProductDiscountValueRelativeDraft
@@ -48,16 +53,18 @@ public interface ProductDiscountValueRelativeDraft
      *  <p>Fraction (per ten thousand) the price is reduced by. For example, <code>1000</code> will result in a 10% price reduction.</p>
      * @param permyriad value to be set
      */
-
+    
     public void setPermyriad(final Long permyriad);
+    
 
     /**
      * factory method
      * @return instance of ProductDiscountValueRelativeDraft
      */
-    public static ProductDiscountValueRelativeDraft of() {
+    public static ProductDiscountValueRelativeDraft of(){
         return new ProductDiscountValueRelativeDraftImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy ProductDiscountValueRelativeDraft
@@ -76,8 +83,7 @@ public interface ProductDiscountValueRelativeDraft
      * @return copy instance
      */
     @Nullable
-    public static ProductDiscountValueRelativeDraft deepCopy(
-            @Nullable final ProductDiscountValueRelativeDraft template) {
+    public static ProductDiscountValueRelativeDraft deepCopy(@Nullable final ProductDiscountValueRelativeDraft template) {
         if (template == null) {
             return null;
         }
@@ -93,7 +99,7 @@ public interface ProductDiscountValueRelativeDraft
     public static ProductDiscountValueRelativeDraftBuilder builder() {
         return ProductDiscountValueRelativeDraftBuilder.of();
     }
-
+    
     /**
      * create builder for ProductDiscountValueRelativeDraft instance
      * @param template instance with prefilled values for the builder
@@ -102,6 +108,7 @@ public interface ProductDiscountValueRelativeDraft
     public static ProductDiscountValueRelativeDraftBuilder builder(final ProductDiscountValueRelativeDraft template) {
         return ProductDiscountValueRelativeDraftBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -112,7 +119,7 @@ public interface ProductDiscountValueRelativeDraft
     default <T> T withProductDiscountValueRelativeDraft(Function<ProductDiscountValueRelativeDraft, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

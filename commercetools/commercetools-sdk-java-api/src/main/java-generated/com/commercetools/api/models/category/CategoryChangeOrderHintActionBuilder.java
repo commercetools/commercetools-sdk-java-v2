@@ -1,8 +1,11 @@
-
 package com.commercetools.api.models.category;
 
+import com.commercetools.api.models.category.CategoryUpdateAction;
+import com.commercetools.api.models.category.CategoryChangeOrderHintAction;
+import javax.annotation.Nullable;
 import java.util.*;
-
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -16,30 +19,39 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .orderHint("{orderHint}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class CategoryChangeOrderHintActionBuilder implements Builder<CategoryChangeOrderHintAction> {
 
+    
+    
     private String orderHint;
 
+    
     /**
      *  <p>New value to set. Must be a decimal value between 0 and 1.</p>
      * @param orderHint value to be set
      * @return Builder
      */
-
-    public CategoryChangeOrderHintActionBuilder orderHint(final String orderHint) {
+    
+    public CategoryChangeOrderHintActionBuilder orderHint( final String orderHint) {
         this.orderHint = orderHint;
         return this;
     }
+    
+    
 
     /**
      *  <p>New value to set. Must be a decimal value between 0 and 1.</p>
      * @return orderHint
      */
-
-    public String getOrderHint() {
+    
+    
+    public String getOrderHint(){
         return this.orderHint;
     }
 
@@ -51,7 +63,7 @@ public class CategoryChangeOrderHintActionBuilder implements Builder<CategoryCha
         Objects.requireNonNull(orderHint, CategoryChangeOrderHintAction.class + ": orderHint is missing");
         return new CategoryChangeOrderHintActionImpl(orderHint);
     }
-
+    
     /**
      * builds CategoryChangeOrderHintAction without checking for non-null required values
      * @return CategoryChangeOrderHintAction
@@ -62,7 +74,7 @@ public class CategoryChangeOrderHintActionBuilder implements Builder<CategoryCha
 
     /**
      * factory method for an instance of CategoryChangeOrderHintActionBuilder
-     * @return builder
+     * @return builder 
      */
     public static CategoryChangeOrderHintActionBuilder of() {
         return new CategoryChangeOrderHintActionBuilder();

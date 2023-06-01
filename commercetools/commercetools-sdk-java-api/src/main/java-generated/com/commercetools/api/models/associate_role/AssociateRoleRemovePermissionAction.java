@@ -1,17 +1,21 @@
-
 package com.commercetools.api.models.associate_role;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
+import com.commercetools.api.models.associate_role.AssociateRoleUpdateAction;
+import com.commercetools.api.models.associate_role.Permission;
+import com.commercetools.api.models.associate_role.AssociateRoleRemovePermissionActionImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Removing a Permission from an AssociateRole generates an AssociateRolePermissionRemoved Message.</p>
@@ -24,9 +28,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .permission(Permission.ADD_CHILD_UNITS)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = AssociateRoleRemovePermissionActionImpl.class)
 public interface AssociateRoleRemovePermissionAction extends AssociateRoleUpdateAction {
 
@@ -47,16 +54,18 @@ public interface AssociateRoleRemovePermissionAction extends AssociateRoleUpdate
      *  <p>Permission to be removed from the AssociateRole.</p>
      * @param permission value to be set
      */
-
+    
     public void setPermission(final Permission permission);
+    
 
     /**
      * factory method
      * @return instance of AssociateRoleRemovePermissionAction
      */
-    public static AssociateRoleRemovePermissionAction of() {
+    public static AssociateRoleRemovePermissionAction of(){
         return new AssociateRoleRemovePermissionActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy AssociateRoleRemovePermissionAction
@@ -75,8 +84,7 @@ public interface AssociateRoleRemovePermissionAction extends AssociateRoleUpdate
      * @return copy instance
      */
     @Nullable
-    public static AssociateRoleRemovePermissionAction deepCopy(
-            @Nullable final AssociateRoleRemovePermissionAction template) {
+    public static AssociateRoleRemovePermissionAction deepCopy(@Nullable final AssociateRoleRemovePermissionAction template) {
         if (template == null) {
             return null;
         }
@@ -92,16 +100,16 @@ public interface AssociateRoleRemovePermissionAction extends AssociateRoleUpdate
     public static AssociateRoleRemovePermissionActionBuilder builder() {
         return AssociateRoleRemovePermissionActionBuilder.of();
     }
-
+    
     /**
      * create builder for AssociateRoleRemovePermissionAction instance
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static AssociateRoleRemovePermissionActionBuilder builder(
-            final AssociateRoleRemovePermissionAction template) {
+    public static AssociateRoleRemovePermissionActionBuilder builder(final AssociateRoleRemovePermissionAction template) {
         return AssociateRoleRemovePermissionActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -112,7 +120,7 @@ public interface AssociateRoleRemovePermissionAction extends AssociateRoleUpdate
     default <T> T withAssociateRoleRemovePermissionAction(Function<AssociateRoleRemovePermissionAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

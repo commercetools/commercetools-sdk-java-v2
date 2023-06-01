@@ -1,19 +1,23 @@
-
 package com.commercetools.history.models.change;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
-
+import com.commercetools.history.models.change.Change;
 import com.commercetools.history.models.change_value.SetCartClassificationShippingRateInputValue;
 import com.commercetools.history.models.change_value.SetCartScoreShippingRateInputValue;
+import java.lang.Object;
+import com.commercetools.history.models.change.SetShippingRateInputChangeImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * SetShippingRateInputChange
@@ -26,9 +30,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .change("{change}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = SetShippingRateInputChangeImpl.class)
 public interface SetShippingRateInputChange extends Change {
 
@@ -44,7 +51,6 @@ public interface SetShippingRateInputChange extends Change {
     @NotNull
     @JsonProperty("type")
     public String getType();
-
     /**
      *  <p>Update action for <code>setShippingRateInput</code></p>
      * @return change
@@ -52,7 +58,6 @@ public interface SetShippingRateInputChange extends Change {
     @NotNull
     @JsonProperty("change")
     public String getChange();
-
     /**
      *
      * @return nextValue
@@ -60,7 +65,6 @@ public interface SetShippingRateInputChange extends Change {
     @NotNull
     @JsonProperty("nextValue")
     public Object getNextValue();
-
     /**
      *
      * @return previousValue
@@ -73,58 +77,56 @@ public interface SetShippingRateInputChange extends Change {
      *  <p>Update action for <code>setShippingRateInput</code></p>
      * @param change value to be set
      */
-
+    
     public void setChange(final String change);
-
+    
+    
     /**
      * set nextValue
      * @param nextValue value to be set
      */
-
+    
     public void setNextValue(final SetCartClassificationShippingRateInputValue nextValue);
-
     /**
      * set nextValue
      * @param nextValue value to be set
      */
-
+    
     public void setNextValue(final SetCartScoreShippingRateInputValue nextValue);
-
     /**
      * set nextValue
      * @param nextValue value to be set
      */
-
+    
     public void setNextValue(final Object nextValue);
-
+    
     /**
      * set previousValue
      * @param previousValue value to be set
      */
-
+    
     public void setPreviousValue(final SetCartClassificationShippingRateInputValue previousValue);
-
     /**
      * set previousValue
      * @param previousValue value to be set
      */
-
+    
     public void setPreviousValue(final SetCartScoreShippingRateInputValue previousValue);
-
     /**
      * set previousValue
      * @param previousValue value to be set
      */
-
+    
     public void setPreviousValue(final Object previousValue);
 
     /**
      * factory method
      * @return instance of SetShippingRateInputChange
      */
-    public static SetShippingRateInputChange of() {
+    public static SetShippingRateInputChange of(){
         return new SetShippingRateInputChangeImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy SetShippingRateInputChange
@@ -163,7 +165,7 @@ public interface SetShippingRateInputChange extends Change {
     public static SetShippingRateInputChangeBuilder builder() {
         return SetShippingRateInputChangeBuilder.of();
     }
-
+    
     /**
      * create builder for SetShippingRateInputChange instance
      * @param template instance with prefilled values for the builder
@@ -172,6 +174,7 @@ public interface SetShippingRateInputChange extends Change {
     public static SetShippingRateInputChangeBuilder builder(final SetShippingRateInputChange template) {
         return SetShippingRateInputChangeBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -182,7 +185,7 @@ public interface SetShippingRateInputChange extends Change {
     default <T> T withSetShippingRateInputChange(Function<SetShippingRateInputChange, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

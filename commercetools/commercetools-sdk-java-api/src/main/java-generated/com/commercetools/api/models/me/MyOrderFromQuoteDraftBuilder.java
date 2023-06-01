@@ -1,10 +1,11 @@
-
 package com.commercetools.api.models.me;
 
-import java.util.*;
 
+import com.commercetools.api.models.me.MyOrderFromQuoteDraft;
 import javax.annotation.Nullable;
-
+import java.util.*;
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -19,76 +20,95 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .version(0.3)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class MyOrderFromQuoteDraftBuilder implements Builder<MyOrderFromQuoteDraft> {
 
+    
+    
     private String id;
-
+    
+    
+    
     private Long version;
-
+    
+    
     @Nullable
     private Boolean quoteStateToAccepted;
 
+    
     /**
      *  <p>Unique identifier of the Quote from which the Order is created.</p>
      * @param id value to be set
      * @return Builder
      */
-
-    public MyOrderFromQuoteDraftBuilder id(final String id) {
+    
+    public MyOrderFromQuoteDraftBuilder id( final String id) {
         this.id = id;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p><code>version</code> of the Quote from which the Order is created.</p>
      * @param version value to be set
      * @return Builder
      */
-
-    public MyOrderFromQuoteDraftBuilder version(final Long version) {
+    
+    public MyOrderFromQuoteDraftBuilder version( final Long version) {
         this.version = version;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Set to <code>true</code>, if the <code>quoteState</code> of the referenced Quote should be set to <code>Accepted</code>.</p>
      * @param quoteStateToAccepted value to be set
      * @return Builder
      */
-
+    
     public MyOrderFromQuoteDraftBuilder quoteStateToAccepted(@Nullable final Boolean quoteStateToAccepted) {
         this.quoteStateToAccepted = quoteStateToAccepted;
         return this;
     }
+    
+    
 
     /**
      *  <p>Unique identifier of the Quote from which the Order is created.</p>
      * @return id
      */
-
-    public String getId() {
+    
+    
+    public String getId(){
         return this.id;
     }
-
+    
     /**
      *  <p><code>version</code> of the Quote from which the Order is created.</p>
      * @return version
      */
-
-    public Long getVersion() {
+    
+    
+    public Long getVersion(){
         return this.version;
     }
-
+    
     /**
      *  <p>Set to <code>true</code>, if the <code>quoteState</code> of the referenced Quote should be set to <code>Accepted</code>.</p>
      * @return quoteStateToAccepted
      */
-
+    
     @Nullable
-    public Boolean getQuoteStateToAccepted() {
+    public Boolean getQuoteStateToAccepted(){
         return this.quoteStateToAccepted;
     }
 
@@ -101,7 +121,7 @@ public class MyOrderFromQuoteDraftBuilder implements Builder<MyOrderFromQuoteDra
         Objects.requireNonNull(version, MyOrderFromQuoteDraft.class + ": version is missing");
         return new MyOrderFromQuoteDraftImpl(id, version, quoteStateToAccepted);
     }
-
+    
     /**
      * builds MyOrderFromQuoteDraft without checking for non-null required values
      * @return MyOrderFromQuoteDraft
@@ -112,7 +132,7 @@ public class MyOrderFromQuoteDraftBuilder implements Builder<MyOrderFromQuoteDra
 
     /**
      * factory method for an instance of MyOrderFromQuoteDraftBuilder
-     * @return builder
+     * @return builder 
      */
     public static MyOrderFromQuoteDraftBuilder of() {
         return new MyOrderFromQuoteDraftBuilder();

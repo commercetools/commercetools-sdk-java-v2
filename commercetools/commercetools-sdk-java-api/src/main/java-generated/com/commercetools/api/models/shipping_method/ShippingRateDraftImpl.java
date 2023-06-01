@@ -1,43 +1,50 @@
-
 package com.commercetools.api.models.shipping_method;
 
-import java.time.*;
-import java.util.*;
-
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
-
-import io.vrap.rmf.base.client.ModelBase;
+import com.commercetools.api.models.common.Money;
+import com.commercetools.api.models.shipping_method.ShippingRatePriceTier;
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.ModelBase;
+import javax.validation.Valid;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.annotation.*;
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
  * ShippingRateDraft
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class ShippingRateDraftImpl implements ShippingRateDraft, ModelBase {
 
+    
     private com.commercetools.api.models.common.Money price;
-
+    
+    
     private com.commercetools.api.models.common.Money freeAbove;
-
+    
+    
     private java.util.List<com.commercetools.api.models.shipping_method.ShippingRatePriceTier> tiers;
 
     /**
      * create instance with all properties
      */
     @JsonCreator
-    ShippingRateDraftImpl(@JsonProperty("price") final com.commercetools.api.models.common.Money price,
-            @JsonProperty("freeAbove") final com.commercetools.api.models.common.Money freeAbove,
-            @JsonProperty("tiers") final java.util.List<com.commercetools.api.models.shipping_method.ShippingRatePriceTier> tiers) {
+    ShippingRateDraftImpl(@JsonProperty("price") final com.commercetools.api.models.common.Money price, @JsonProperty("freeAbove") final com.commercetools.api.models.common.Money freeAbove, @JsonProperty("tiers") final java.util.List<com.commercetools.api.models.shipping_method.ShippingRatePriceTier> tiers) {
         this.price = price;
         this.freeAbove = freeAbove;
         this.tiers = tiers;
     }
-
     /**
      * create empty instance
      */
@@ -47,63 +54,69 @@ public class ShippingRateDraftImpl implements ShippingRateDraft, ModelBase {
     /**
      *  <p>Money value of the ShippingRate.</p>
      */
-
-    public com.commercetools.api.models.common.Money getPrice() {
+    
+    public com.commercetools.api.models.common.Money getPrice(){
         return this.price;
     }
-
+    
     /**
      *  <p>Shipping is free if the sum of the (Custom) Line Item Prices reaches the specified value.</p>
      */
-
-    public com.commercetools.api.models.common.Money getFreeAbove() {
+    
+    public com.commercetools.api.models.common.Money getFreeAbove(){
         return this.freeAbove;
     }
-
+    
     /**
      *  <p>Price tiers for the ShippingRate.</p>
      */
-
-    public java.util.List<com.commercetools.api.models.shipping_method.ShippingRatePriceTier> getTiers() {
+    
+    public java.util.List<com.commercetools.api.models.shipping_method.ShippingRatePriceTier> getTiers(){
         return this.tiers;
     }
 
-    public void setPrice(final com.commercetools.api.models.common.Money price) {
+    
+    public void setPrice(final com.commercetools.api.models.common.Money price){
         this.price = price;
     }
-
-    public void setFreeAbove(final com.commercetools.api.models.common.Money freeAbove) {
+    
+    
+    public void setFreeAbove(final com.commercetools.api.models.common.Money freeAbove){
         this.freeAbove = freeAbove;
     }
-
-    public void setTiers(final com.commercetools.api.models.shipping_method.ShippingRatePriceTier... tiers) {
-        this.tiers = new ArrayList<>(Arrays.asList(tiers));
+    
+    
+    public void setTiers(final com.commercetools.api.models.shipping_method.ShippingRatePriceTier ...tiers){
+       this.tiers = new ArrayList<>(Arrays.asList(tiers));
     }
-
-    public void setTiers(
-            final java.util.List<com.commercetools.api.models.shipping_method.ShippingRatePriceTier> tiers) {
-        this.tiers = tiers;
+    
+    
+    public void setTiers(final java.util.List<com.commercetools.api.models.shipping_method.ShippingRatePriceTier> tiers){
+       this.tiers = tiers;
     }
 
     @Override
     public boolean equals(Object o) {
-        if (this == o)
-            return true;
-
-        if (o == null || getClass() != o.getClass())
-            return false;
-
+        if (this == o) return true;
+    
+        if (o == null || getClass() != o.getClass()) return false;
+    
         ShippingRateDraftImpl that = (ShippingRateDraftImpl) o;
-
-        return new EqualsBuilder().append(price, that.price)
+    
+        return new EqualsBuilder()
+                .append(price, that.price)
                 .append(freeAbove, that.freeAbove)
                 .append(tiers, that.tiers)
                 .isEquals();
     }
-
+    
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(price).append(freeAbove).append(tiers).toHashCode();
+        return new HashCodeBuilder(17, 37)
+            .append(price)
+            .append(freeAbove)
+            .append(tiers)
+            .toHashCode();
     }
 
 }

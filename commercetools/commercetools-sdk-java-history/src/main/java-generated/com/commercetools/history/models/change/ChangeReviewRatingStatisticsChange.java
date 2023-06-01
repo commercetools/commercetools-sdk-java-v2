@@ -1,19 +1,21 @@
-
 package com.commercetools.history.models.change;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
+import com.commercetools.history.models.change.Change;
 import com.commercetools.history.models.common.ReviewRatingStatistics;
+import com.commercetools.history.models.change.ChangeReviewRatingStatisticsChangeImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * ChangeReviewRatingStatisticsChange
@@ -28,9 +30,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .previousValue(previousValueBuilder -> previousValueBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = ChangeReviewRatingStatisticsChangeImpl.class)
 public interface ChangeReviewRatingStatisticsChange extends Change {
 
@@ -46,7 +51,6 @@ public interface ChangeReviewRatingStatisticsChange extends Change {
     @NotNull
     @JsonProperty("change")
     public String getChange();
-
     /**
      *
      * @return type
@@ -54,7 +58,6 @@ public interface ChangeReviewRatingStatisticsChange extends Change {
     @NotNull
     @JsonProperty("type")
     public String getType();
-
     /**
      *
      * @return nextValue
@@ -63,7 +66,6 @@ public interface ChangeReviewRatingStatisticsChange extends Change {
     @Valid
     @JsonProperty("nextValue")
     public ReviewRatingStatistics getNextValue();
-
     /**
      *
      * @return previousValue
@@ -77,30 +79,34 @@ public interface ChangeReviewRatingStatisticsChange extends Change {
      *  <p>Update action for <code>changeReviewRatingStatistics</code></p>
      * @param change value to be set
      */
-
+    
     public void setChange(final String change);
-
+    
+    
     /**
      * set nextValue
      * @param nextValue value to be set
      */
-
+    
     public void setNextValue(final ReviewRatingStatistics nextValue);
-
+    
+    
     /**
      * set previousValue
      * @param previousValue value to be set
      */
-
+    
     public void setPreviousValue(final ReviewRatingStatistics previousValue);
+    
 
     /**
      * factory method
      * @return instance of ChangeReviewRatingStatisticsChange
      */
-    public static ChangeReviewRatingStatisticsChange of() {
+    public static ChangeReviewRatingStatisticsChange of(){
         return new ChangeReviewRatingStatisticsChangeImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy ChangeReviewRatingStatisticsChange
@@ -121,17 +127,14 @@ public interface ChangeReviewRatingStatisticsChange extends Change {
      * @return copy instance
      */
     @Nullable
-    public static ChangeReviewRatingStatisticsChange deepCopy(
-            @Nullable final ChangeReviewRatingStatisticsChange template) {
+    public static ChangeReviewRatingStatisticsChange deepCopy(@Nullable final ChangeReviewRatingStatisticsChange template) {
         if (template == null) {
             return null;
         }
         ChangeReviewRatingStatisticsChangeImpl instance = new ChangeReviewRatingStatisticsChangeImpl();
         instance.setChange(template.getChange());
-        instance.setNextValue(
-            com.commercetools.history.models.common.ReviewRatingStatistics.deepCopy(template.getNextValue()));
-        instance.setPreviousValue(
-            com.commercetools.history.models.common.ReviewRatingStatistics.deepCopy(template.getPreviousValue()));
+        instance.setNextValue(com.commercetools.history.models.common.ReviewRatingStatistics.deepCopy(template.getNextValue()));
+        instance.setPreviousValue(com.commercetools.history.models.common.ReviewRatingStatistics.deepCopy(template.getPreviousValue()));
         return instance;
     }
 
@@ -142,7 +145,7 @@ public interface ChangeReviewRatingStatisticsChange extends Change {
     public static ChangeReviewRatingStatisticsChangeBuilder builder() {
         return ChangeReviewRatingStatisticsChangeBuilder.of();
     }
-
+    
     /**
      * create builder for ChangeReviewRatingStatisticsChange instance
      * @param template instance with prefilled values for the builder
@@ -151,6 +154,7 @@ public interface ChangeReviewRatingStatisticsChange extends Change {
     public static ChangeReviewRatingStatisticsChangeBuilder builder(final ChangeReviewRatingStatisticsChange template) {
         return ChangeReviewRatingStatisticsChangeBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -161,7 +165,7 @@ public interface ChangeReviewRatingStatisticsChange extends Change {
     default <T> T withChangeReviewRatingStatisticsChange(Function<ChangeReviewRatingStatisticsChange, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

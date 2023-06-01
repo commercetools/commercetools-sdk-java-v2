@@ -1,16 +1,20 @@
-
 package com.commercetools.api.models.me;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
+import com.commercetools.api.models.me.MyBusinessUnitUpdateAction;
+import com.commercetools.api.models.me.MyBusinessUnitSetDefaultBillingAddressActionImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Setting the default billing address on a Business Unit generates the BusinessUnitDefaultBillingAddressSet Message.</p>
@@ -22,9 +26,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     MyBusinessUnitSetDefaultBillingAddressAction myBusinessUnitSetDefaultBillingAddressAction = MyBusinessUnitSetDefaultBillingAddressAction.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = MyBusinessUnitSetDefaultBillingAddressActionImpl.class)
 public interface MyBusinessUnitSetDefaultBillingAddressAction extends MyBusinessUnitUpdateAction {
 
@@ -37,15 +44,14 @@ public interface MyBusinessUnitSetDefaultBillingAddressAction extends MyBusiness
      *  <p>ID of the address to add as a billing address. Either <code>addressId</code> or <code>addressKey</code> is required.</p>
      * @return addressId
      */
-
+    
     @JsonProperty("addressId")
     public String getAddressId();
-
     /**
      *  <p>Key of the address to add as a billing address. Either <code>addressId</code> or <code>addressKey</code> is required.</p>
      * @return addressKey
      */
-
+    
     @JsonProperty("addressKey")
     public String getAddressKey();
 
@@ -53,31 +59,33 @@ public interface MyBusinessUnitSetDefaultBillingAddressAction extends MyBusiness
      *  <p>ID of the address to add as a billing address. Either <code>addressId</code> or <code>addressKey</code> is required.</p>
      * @param addressId value to be set
      */
-
+    
     public void setAddressId(final String addressId);
-
+    
+    
     /**
      *  <p>Key of the address to add as a billing address. Either <code>addressId</code> or <code>addressKey</code> is required.</p>
      * @param addressKey value to be set
      */
-
+    
     public void setAddressKey(final String addressKey);
+    
 
     /**
      * factory method
      * @return instance of MyBusinessUnitSetDefaultBillingAddressAction
      */
-    public static MyBusinessUnitSetDefaultBillingAddressAction of() {
+    public static MyBusinessUnitSetDefaultBillingAddressAction of(){
         return new MyBusinessUnitSetDefaultBillingAddressActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy MyBusinessUnitSetDefaultBillingAddressAction
      * @param template instance to be copied
      * @return copy instance
      */
-    public static MyBusinessUnitSetDefaultBillingAddressAction of(
-            final MyBusinessUnitSetDefaultBillingAddressAction template) {
+    public static MyBusinessUnitSetDefaultBillingAddressAction of(final MyBusinessUnitSetDefaultBillingAddressAction template) {
         MyBusinessUnitSetDefaultBillingAddressActionImpl instance = new MyBusinessUnitSetDefaultBillingAddressActionImpl();
         instance.setAddressId(template.getAddressId());
         instance.setAddressKey(template.getAddressKey());
@@ -90,8 +98,7 @@ public interface MyBusinessUnitSetDefaultBillingAddressAction extends MyBusiness
      * @return copy instance
      */
     @Nullable
-    public static MyBusinessUnitSetDefaultBillingAddressAction deepCopy(
-            @Nullable final MyBusinessUnitSetDefaultBillingAddressAction template) {
+    public static MyBusinessUnitSetDefaultBillingAddressAction deepCopy(@Nullable final MyBusinessUnitSetDefaultBillingAddressAction template) {
         if (template == null) {
             return null;
         }
@@ -108,16 +115,16 @@ public interface MyBusinessUnitSetDefaultBillingAddressAction extends MyBusiness
     public static MyBusinessUnitSetDefaultBillingAddressActionBuilder builder() {
         return MyBusinessUnitSetDefaultBillingAddressActionBuilder.of();
     }
-
+    
     /**
      * create builder for MyBusinessUnitSetDefaultBillingAddressAction instance
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static MyBusinessUnitSetDefaultBillingAddressActionBuilder builder(
-            final MyBusinessUnitSetDefaultBillingAddressAction template) {
+    public static MyBusinessUnitSetDefaultBillingAddressActionBuilder builder(final MyBusinessUnitSetDefaultBillingAddressAction template) {
         return MyBusinessUnitSetDefaultBillingAddressActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -125,11 +132,10 @@ public interface MyBusinessUnitSetDefaultBillingAddressAction extends MyBusiness
      * @param helper function to map the object
      * @return mapped value
      */
-    default <T> T withMyBusinessUnitSetDefaultBillingAddressAction(
-            Function<MyBusinessUnitSetDefaultBillingAddressAction, T> helper) {
+    default <T> T withMyBusinessUnitSetDefaultBillingAddressAction(Function<MyBusinessUnitSetDefaultBillingAddressAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

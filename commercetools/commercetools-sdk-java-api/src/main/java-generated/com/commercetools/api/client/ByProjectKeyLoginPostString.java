@@ -1,18 +1,38 @@
-
 package com.commercetools.api.client;
 
+import io.vrap.rmf.base.client.utils.Utils;
+
+import java.io.InputStream;
+import java.io.IOException;
+
 import java.net.URI;
+import java.net.URLConnection;
 import java.nio.charset.StandardCharsets;
+import java.nio.file.Files;
+
 import java.time.Duration;
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.List;
+import java.util.Map;
+import java.util.HashMap;
+import java.util.Optional;
+import java.util.function.Function;
+import java.util.function.Supplier;
+import java.util.stream.Collectors;
 import java.util.concurrent.CompletableFuture;
-
-import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.utils.Generated;
+
+import javax.annotation.Nullable;
+
+import java.io.UnsupportedEncodingException;
+import java.net.URLEncoder;
+import io.vrap.rmf.base.client.*;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+
+import static io.vrap.rmf.base.client.utils.ClientUtils.blockingWait;
 
 /**
  *  <p>Authenticates a global Customer not associated with a Store. For more information, see Global versus Store-specific Customers. If the Customer is registered in a Store, use the Authenticate (sign in) Customer in Store method.</p>
@@ -29,13 +49,15 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
  * }</code></pre>
  * </div>
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
-public class ByProjectKeyLoginPostString extends
-        StringBodyApiMethod<ByProjectKeyLoginPostString, com.commercetools.api.models.customer.CustomerSignInResult>
-        implements com.commercetools.api.client.ErrorableTrait<ByProjectKeyLoginPostString> {
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
+public class ByProjectKeyLoginPostString extends StringBodyApiMethod<ByProjectKeyLoginPostString, com.commercetools.api.models.customer.CustomerSignInResult> implements com.commercetools.api.client.ErrorableTrait<ByProjectKeyLoginPostString> {
 
+    
     private String projectKey;
-
+    
     private String customerSignin;
 
     public ByProjectKeyLoginPostString(final ApiHttpClient apiHttpClient, String projectKey, String customerSignin) {
@@ -57,35 +79,31 @@ public class ByProjectKeyLoginPostString extends
         if (!params.isEmpty()) {
             httpRequestPath += "?" + String.join("&", params);
         }
-        return new ApiHttpRequest(ApiHttpMethod.POST, URI.create(httpRequestPath), getHeaders(),
-            customerSignin.getBytes(StandardCharsets.UTF_8));
-
+        return new ApiHttpRequest(ApiHttpMethod.POST, URI.create(httpRequestPath), getHeaders(), customerSignin.getBytes(StandardCharsets.UTF_8));
+    
     }
 
     @Override
-    public ApiHttpResponse<com.commercetools.api.models.customer.CustomerSignInResult> executeBlocking(
-            final ApiHttpClient client, final Duration timeout) {
+    public ApiHttpResponse<com.commercetools.api.models.customer.CustomerSignInResult> executeBlocking(final ApiHttpClient client, final Duration timeout) {
         return executeBlocking(client, timeout, com.commercetools.api.models.customer.CustomerSignInResult.class);
     }
 
     @Override
-    public CompletableFuture<ApiHttpResponse<com.commercetools.api.models.customer.CustomerSignInResult>> execute(
-            final ApiHttpClient client) {
+    public CompletableFuture<ApiHttpResponse<com.commercetools.api.models.customer.CustomerSignInResult>> execute(final ApiHttpClient client) {
         return execute(client, com.commercetools.api.models.customer.CustomerSignInResult.class);
     }
 
-    public String getProjectKey() {
-        return this.projectKey;
-    }
+    public String getProjectKey() {return this.projectKey;}
 
-    public void setProjectKey(final String projectKey) {
-        this.projectKey = projectKey;
-    }
 
+    public void setProjectKey(final String projectKey) { this.projectKey = projectKey; }
+
+
+    
     public String getBody() {
         return customerSignin;
     }
-
+    
     public ByProjectKeyLoginPostString withBody(String customerSignin) {
         ByProjectKeyLoginPostString t = copy();
         t.customerSignin = customerSignin;
@@ -94,22 +112,24 @@ public class ByProjectKeyLoginPostString extends
 
     @Override
     public boolean equals(Object o) {
-        if (this == o)
-            return true;
-
-        if (o == null || getClass() != o.getClass())
-            return false;
-
+        if (this == o) return true;
+    
+        if (o == null || getClass() != o.getClass()) return false;
+    
         ByProjectKeyLoginPostString that = (ByProjectKeyLoginPostString) o;
-
-        return new EqualsBuilder().append(projectKey, that.projectKey)
+    
+        return new EqualsBuilder()
+                .append(projectKey, that.projectKey)
                 .append(customerSignin, that.customerSignin)
                 .isEquals();
     }
-
+    
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(projectKey).append(customerSignin).toHashCode();
+        return new HashCodeBuilder(17, 37)
+            .append(projectKey)
+            .append(customerSignin)
+            .toHashCode();
     }
 
     @Override

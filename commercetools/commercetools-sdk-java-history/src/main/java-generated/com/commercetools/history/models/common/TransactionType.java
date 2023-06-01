@@ -1,31 +1,33 @@
-
 package com.commercetools.history.models.common;
-
-import java.util.Arrays;
-import java.util.Optional;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-
+import java.lang.String;
+import java.util.Arrays;
+import java.util.Optional;
 import io.vrap.rmf.base.client.JsonEnum;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
  * TransactionType
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public interface TransactionType extends JsonEnum {
 
+    
     TransactionType AUTHORIZATION = TransactionTypeEnum.AUTHORIZATION;
-
+    
     TransactionType CANCEL_AUTHORIZATION = TransactionTypeEnum.CANCEL_AUTHORIZATION;
-
+    
     TransactionType CHARGE = TransactionTypeEnum.CHARGE;
-
+    
     TransactionType REFUND = TransactionTypeEnum.REFUND;
-
+    
     TransactionType CHARGEBACK = TransactionTypeEnum.CHARGEBACK;
-
+    
     /**
      * possible values of TransactionType
      */
@@ -34,22 +36,22 @@ public interface TransactionType extends JsonEnum {
          * Authorization
          */
         AUTHORIZATION("Authorization"),
-
+        
         /**
          * CancelAuthorization
          */
         CANCEL_AUTHORIZATION("CancelAuthorization"),
-
+        
         /**
          * Charge
          */
         CHARGE("Charge"),
-
+        
         /**
          * Refund
          */
         REFUND("Refund"),
-
+        
         /**
          * Chargeback
          */
@@ -106,7 +108,7 @@ public interface TransactionType extends JsonEnum {
             public String name() {
                 return value.toUpperCase();
             }
-
+            
             public String toString() {
                 return value;
             }
@@ -121,7 +123,7 @@ public interface TransactionType extends JsonEnum {
     public static Optional<TransactionType> findEnumViaJsonName(String jsonName) {
         return Arrays.stream(values()).filter(t -> t.getJsonName().equals(jsonName)).findFirst();
     }
-
+    
     /**
      * possible enum values
      * @return array of possible enum values
@@ -129,5 +131,5 @@ public interface TransactionType extends JsonEnum {
     public static TransactionType[] values() {
         return TransactionTypeEnum.values();
     }
-
+    
 }

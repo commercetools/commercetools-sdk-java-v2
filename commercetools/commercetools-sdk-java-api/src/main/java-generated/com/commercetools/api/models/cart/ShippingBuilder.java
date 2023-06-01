@@ -1,11 +1,14 @@
-
 package com.commercetools.api.models.cart;
 
+import com.commercetools.api.models.cart.ShippingInfo;
+import com.commercetools.api.models.cart.ShippingRateInput;
+import com.commercetools.api.models.common.Address;
+import com.commercetools.api.models.type.CustomFields;
+import com.commercetools.api.models.cart.Shipping;
+import javax.annotation.Nullable;
 import java.util.*;
 import java.util.function.Function;
-
-import javax.annotation.Nullable;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -21,104 +24,121 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .shippingAddress(shippingAddressBuilder -> shippingAddressBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class ShippingBuilder implements Builder<Shipping> {
 
+    
+    
     private String shippingKey;
-
+    
+    
+    
     private com.commercetools.api.models.cart.ShippingInfo shippingInfo;
-
+    
+    
+    
     private com.commercetools.api.models.common.Address shippingAddress;
-
+    
+    
     @Nullable
     private com.commercetools.api.models.cart.ShippingRateInput shippingRateInput;
-
+    
+    
     @Nullable
     private com.commercetools.api.models.type.CustomFields shippingCustomFields;
 
+    
     /**
      *  <p>User-defined unique identifier of the Shipping in a Cart with <code>Multiple</code> ShippingMode.</p>
      * @param shippingKey value to be set
      * @return Builder
      */
-
-    public ShippingBuilder shippingKey(final String shippingKey) {
+    
+    public ShippingBuilder shippingKey( final String shippingKey) {
         this.shippingKey = shippingKey;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Automatically set when the Shipping Method is added.</p>
      * @param builder function to build the shippingInfo value
      * @return Builder
      */
-
-    public ShippingBuilder shippingInfo(
-            Function<com.commercetools.api.models.cart.ShippingInfoBuilder, com.commercetools.api.models.cart.ShippingInfoBuilder> builder) {
+    
+    public ShippingBuilder shippingInfo(Function<com.commercetools.api.models.cart.ShippingInfoBuilder, com.commercetools.api.models.cart.ShippingInfoBuilder> builder) {
         this.shippingInfo = builder.apply(com.commercetools.api.models.cart.ShippingInfoBuilder.of()).build();
         return this;
     }
-
+    
     /**
      *  <p>Automatically set when the Shipping Method is added.</p>
      * @param builder function to build the shippingInfo value
      * @return Builder
      */
-
-    public ShippingBuilder withShippingInfo(
-            Function<com.commercetools.api.models.cart.ShippingInfoBuilder, com.commercetools.api.models.cart.ShippingInfo> builder) {
+    
+    public ShippingBuilder withShippingInfo(Function<com.commercetools.api.models.cart.ShippingInfoBuilder, com.commercetools.api.models.cart.ShippingInfo> builder) {
         this.shippingInfo = builder.apply(com.commercetools.api.models.cart.ShippingInfoBuilder.of());
         return this;
     }
-
+                    
     /**
      *  <p>Automatically set when the Shipping Method is added.</p>
      * @param shippingInfo value to be set
      * @return Builder
      */
-
-    public ShippingBuilder shippingInfo(final com.commercetools.api.models.cart.ShippingInfo shippingInfo) {
+    
+    public ShippingBuilder shippingInfo( final com.commercetools.api.models.cart.ShippingInfo shippingInfo) {
         this.shippingInfo = shippingInfo;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Determines the shipping rates and Tax Rates of associated Line Items.</p>
      * @param builder function to build the shippingAddress value
      * @return Builder
      */
-
-    public ShippingBuilder shippingAddress(
-            Function<com.commercetools.api.models.common.AddressBuilder, com.commercetools.api.models.common.AddressBuilder> builder) {
+    
+    public ShippingBuilder shippingAddress(Function<com.commercetools.api.models.common.AddressBuilder, com.commercetools.api.models.common.AddressBuilder> builder) {
         this.shippingAddress = builder.apply(com.commercetools.api.models.common.AddressBuilder.of()).build();
         return this;
     }
-
+    
     /**
      *  <p>Determines the shipping rates and Tax Rates of associated Line Items.</p>
      * @param builder function to build the shippingAddress value
      * @return Builder
      */
-
-    public ShippingBuilder withShippingAddress(
-            Function<com.commercetools.api.models.common.AddressBuilder, com.commercetools.api.models.common.Address> builder) {
+    
+    public ShippingBuilder withShippingAddress(Function<com.commercetools.api.models.common.AddressBuilder, com.commercetools.api.models.common.Address> builder) {
         this.shippingAddress = builder.apply(com.commercetools.api.models.common.AddressBuilder.of());
         return this;
     }
-
+                    
     /**
      *  <p>Determines the shipping rates and Tax Rates of associated Line Items.</p>
      * @param shippingAddress value to be set
      * @return Builder
      */
-
-    public ShippingBuilder shippingAddress(final com.commercetools.api.models.common.Address shippingAddress) {
+    
+    public ShippingBuilder shippingAddress( final com.commercetools.api.models.common.Address shippingAddress) {
         this.shippingAddress = shippingAddress;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Used as an input to select a ShippingRatePriceTier. The data type of this field depends on the <code>shippingRateInputType.type</code> configured in the Project:</p>
      *  <ul>
@@ -129,13 +149,13 @@ public class ShippingBuilder implements Builder<Shipping> {
      * @param shippingRateInput value to be set
      * @return Builder
      */
-
-    public ShippingBuilder shippingRateInput(
-            @Nullable final com.commercetools.api.models.cart.ShippingRateInput shippingRateInput) {
+    
+    public ShippingBuilder shippingRateInput(@Nullable final com.commercetools.api.models.cart.ShippingRateInput shippingRateInput) {
         this.shippingRateInput = shippingRateInput;
         return this;
     }
-
+    
+    
     /**
      *  <p>Used as an input to select a ShippingRatePriceTier. The data type of this field depends on the <code>shippingRateInputType.type</code> configured in the Project:</p>
      *  <ul>
@@ -146,76 +166,79 @@ public class ShippingBuilder implements Builder<Shipping> {
      * @param builder function to build the shippingRateInput value
      * @return Builder
      */
-
-    public ShippingBuilder shippingRateInput(
-            Function<com.commercetools.api.models.cart.ShippingRateInputBuilder, Builder<? extends com.commercetools.api.models.cart.ShippingRateInput>> builder) {
+    
+    public ShippingBuilder shippingRateInput(Function<com.commercetools.api.models.cart.ShippingRateInputBuilder, Builder<? extends com.commercetools.api.models.cart.ShippingRateInput>> builder) {
         this.shippingRateInput = builder.apply(com.commercetools.api.models.cart.ShippingRateInputBuilder.of()).build();
         return this;
     }
-
+                    
+    
+    
     /**
      *  <p>Custom Fields of Shipping with <code>Multiple</code> ShippingMode.</p>
      * @param builder function to build the shippingCustomFields value
      * @return Builder
      */
-
-    public ShippingBuilder shippingCustomFields(
-            Function<com.commercetools.api.models.type.CustomFieldsBuilder, com.commercetools.api.models.type.CustomFieldsBuilder> builder) {
+    
+    public ShippingBuilder shippingCustomFields(Function<com.commercetools.api.models.type.CustomFieldsBuilder, com.commercetools.api.models.type.CustomFieldsBuilder> builder) {
         this.shippingCustomFields = builder.apply(com.commercetools.api.models.type.CustomFieldsBuilder.of()).build();
         return this;
     }
-
+    
     /**
      *  <p>Custom Fields of Shipping with <code>Multiple</code> ShippingMode.</p>
      * @param builder function to build the shippingCustomFields value
      * @return Builder
      */
-
-    public ShippingBuilder withShippingCustomFields(
-            Function<com.commercetools.api.models.type.CustomFieldsBuilder, com.commercetools.api.models.type.CustomFields> builder) {
+    
+    public ShippingBuilder withShippingCustomFields(Function<com.commercetools.api.models.type.CustomFieldsBuilder, com.commercetools.api.models.type.CustomFields> builder) {
         this.shippingCustomFields = builder.apply(com.commercetools.api.models.type.CustomFieldsBuilder.of());
         return this;
     }
-
+                    
     /**
      *  <p>Custom Fields of Shipping with <code>Multiple</code> ShippingMode.</p>
      * @param shippingCustomFields value to be set
      * @return Builder
      */
-
-    public ShippingBuilder shippingCustomFields(
-            @Nullable final com.commercetools.api.models.type.CustomFields shippingCustomFields) {
+    
+    public ShippingBuilder shippingCustomFields(@Nullable final com.commercetools.api.models.type.CustomFields shippingCustomFields) {
         this.shippingCustomFields = shippingCustomFields;
         return this;
     }
+    
+    
 
     /**
      *  <p>User-defined unique identifier of the Shipping in a Cart with <code>Multiple</code> ShippingMode.</p>
      * @return shippingKey
      */
-
-    public String getShippingKey() {
+    
+    
+    public String getShippingKey(){
         return this.shippingKey;
     }
-
+    
     /**
      *  <p>Automatically set when the Shipping Method is added.</p>
      * @return shippingInfo
      */
-
-    public com.commercetools.api.models.cart.ShippingInfo getShippingInfo() {
+    
+    
+    public com.commercetools.api.models.cart.ShippingInfo getShippingInfo(){
         return this.shippingInfo;
     }
-
+    
     /**
      *  <p>Determines the shipping rates and Tax Rates of associated Line Items.</p>
      * @return shippingAddress
      */
-
-    public com.commercetools.api.models.common.Address getShippingAddress() {
+    
+    
+    public com.commercetools.api.models.common.Address getShippingAddress(){
         return this.shippingAddress;
     }
-
+    
     /**
      *  <p>Used as an input to select a ShippingRatePriceTier. The data type of this field depends on the <code>shippingRateInputType.type</code> configured in the Project:</p>
      *  <ul>
@@ -225,19 +248,19 @@ public class ShippingBuilder implements Builder<Shipping> {
      *  </ul>
      * @return shippingRateInput
      */
-
+    
     @Nullable
-    public com.commercetools.api.models.cart.ShippingRateInput getShippingRateInput() {
+    public com.commercetools.api.models.cart.ShippingRateInput getShippingRateInput(){
         return this.shippingRateInput;
     }
-
+    
     /**
      *  <p>Custom Fields of Shipping with <code>Multiple</code> ShippingMode.</p>
      * @return shippingCustomFields
      */
-
+    
     @Nullable
-    public com.commercetools.api.models.type.CustomFields getShippingCustomFields() {
+    public com.commercetools.api.models.type.CustomFields getShippingCustomFields(){
         return this.shippingCustomFields;
     }
 
@@ -251,7 +274,7 @@ public class ShippingBuilder implements Builder<Shipping> {
         Objects.requireNonNull(shippingAddress, Shipping.class + ": shippingAddress is missing");
         return new ShippingImpl(shippingKey, shippingInfo, shippingAddress, shippingRateInput, shippingCustomFields);
     }
-
+    
     /**
      * builds Shipping without checking for non-null required values
      * @return Shipping
@@ -262,7 +285,7 @@ public class ShippingBuilder implements Builder<Shipping> {
 
     /**
      * factory method for an instance of ShippingBuilder
-     * @return builder
+     * @return builder 
      */
     public static ShippingBuilder of() {
         return new ShippingBuilder();

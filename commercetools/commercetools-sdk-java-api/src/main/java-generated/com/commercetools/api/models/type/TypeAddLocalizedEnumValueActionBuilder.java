@@ -1,9 +1,12 @@
-
 package com.commercetools.api.models.type;
 
+import com.commercetools.api.models.type.CustomFieldLocalizedEnumValue;
+import com.commercetools.api.models.type.TypeUpdateAction;
+import com.commercetools.api.models.type.TypeAddLocalizedEnumValueAction;
+import javax.annotation.Nullable;
 import java.util.*;
 import java.util.function.Function;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -18,77 +21,89 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .value(valueBuilder -> valueBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class TypeAddLocalizedEnumValueActionBuilder implements Builder<TypeAddLocalizedEnumValueAction> {
 
+    
+    
     private String fieldName;
-
+    
+    
+    
     private com.commercetools.api.models.type.CustomFieldLocalizedEnumValue value;
 
+    
     /**
      *  <p><code>name</code> of the FieldDefinition to update.</p>
      * @param fieldName value to be set
      * @return Builder
      */
-
-    public TypeAddLocalizedEnumValueActionBuilder fieldName(final String fieldName) {
+    
+    public TypeAddLocalizedEnumValueActionBuilder fieldName( final String fieldName) {
         this.fieldName = fieldName;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Value to append to the array.</p>
      * @param builder function to build the value value
      * @return Builder
      */
-
-    public TypeAddLocalizedEnumValueActionBuilder value(
-            Function<com.commercetools.api.models.type.CustomFieldLocalizedEnumValueBuilder, com.commercetools.api.models.type.CustomFieldLocalizedEnumValueBuilder> builder) {
+    
+    public TypeAddLocalizedEnumValueActionBuilder value(Function<com.commercetools.api.models.type.CustomFieldLocalizedEnumValueBuilder, com.commercetools.api.models.type.CustomFieldLocalizedEnumValueBuilder> builder) {
         this.value = builder.apply(com.commercetools.api.models.type.CustomFieldLocalizedEnumValueBuilder.of()).build();
         return this;
     }
-
+    
     /**
      *  <p>Value to append to the array.</p>
      * @param builder function to build the value value
      * @return Builder
      */
-
-    public TypeAddLocalizedEnumValueActionBuilder withValue(
-            Function<com.commercetools.api.models.type.CustomFieldLocalizedEnumValueBuilder, com.commercetools.api.models.type.CustomFieldLocalizedEnumValue> builder) {
+    
+    public TypeAddLocalizedEnumValueActionBuilder withValue(Function<com.commercetools.api.models.type.CustomFieldLocalizedEnumValueBuilder, com.commercetools.api.models.type.CustomFieldLocalizedEnumValue> builder) {
         this.value = builder.apply(com.commercetools.api.models.type.CustomFieldLocalizedEnumValueBuilder.of());
         return this;
     }
-
+                    
     /**
      *  <p>Value to append to the array.</p>
      * @param value value to be set
      * @return Builder
      */
-
-    public TypeAddLocalizedEnumValueActionBuilder value(
-            final com.commercetools.api.models.type.CustomFieldLocalizedEnumValue value) {
+    
+    public TypeAddLocalizedEnumValueActionBuilder value( final com.commercetools.api.models.type.CustomFieldLocalizedEnumValue value) {
         this.value = value;
         return this;
     }
+    
+    
 
     /**
      *  <p><code>name</code> of the FieldDefinition to update.</p>
      * @return fieldName
      */
-
-    public String getFieldName() {
+    
+    
+    public String getFieldName(){
         return this.fieldName;
     }
-
+    
     /**
      *  <p>Value to append to the array.</p>
      * @return value
      */
-
-    public com.commercetools.api.models.type.CustomFieldLocalizedEnumValue getValue() {
+    
+    
+    public com.commercetools.api.models.type.CustomFieldLocalizedEnumValue getValue(){
         return this.value;
     }
 
@@ -101,7 +116,7 @@ public class TypeAddLocalizedEnumValueActionBuilder implements Builder<TypeAddLo
         Objects.requireNonNull(value, TypeAddLocalizedEnumValueAction.class + ": value is missing");
         return new TypeAddLocalizedEnumValueActionImpl(fieldName, value);
     }
-
+    
     /**
      * builds TypeAddLocalizedEnumValueAction without checking for non-null required values
      * @return TypeAddLocalizedEnumValueAction
@@ -112,7 +127,7 @@ public class TypeAddLocalizedEnumValueActionBuilder implements Builder<TypeAddLo
 
     /**
      * factory method for an instance of TypeAddLocalizedEnumValueActionBuilder
-     * @return builder
+     * @return builder 
      */
     public static TypeAddLocalizedEnumValueActionBuilder of() {
         return new TypeAddLocalizedEnumValueActionBuilder();

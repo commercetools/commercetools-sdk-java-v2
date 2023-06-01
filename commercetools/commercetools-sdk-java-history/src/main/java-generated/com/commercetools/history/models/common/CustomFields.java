@@ -1,18 +1,21 @@
-
 package com.commercetools.history.models.common;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
+import com.commercetools.history.models.common.Reference;
+import java.lang.Object;
+import com.commercetools.history.models.common.CustomFieldsImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * CustomFields
@@ -26,11 +29,15 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .fields(fieldsBuilder -> fieldsBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = CustomFieldsImpl.class)
-public interface CustomFields {
+public interface CustomFields  {
+
 
     /**
      *
@@ -40,7 +47,6 @@ public interface CustomFields {
     @Valid
     @JsonProperty("type")
     public Reference getType();
-
     /**
      *  <p>A valid JSON object, based on FieldDefinition.</p>
      * @return fields
@@ -54,23 +60,26 @@ public interface CustomFields {
      * set type
      * @param type value to be set
      */
-
+    
     public void setType(final Reference type);
-
+    
+    
     /**
      *  <p>A valid JSON object, based on FieldDefinition.</p>
      * @param fields value to be set
      */
-
+    
     public void setFields(final Object fields);
+    
 
     /**
      * factory method
      * @return instance of CustomFields
      */
-    public static CustomFields of() {
+    public static CustomFields of(){
         return new CustomFieldsImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy CustomFields
@@ -107,7 +116,7 @@ public interface CustomFields {
     public static CustomFieldsBuilder builder() {
         return CustomFieldsBuilder.of();
     }
-
+    
     /**
      * create builder for CustomFields instance
      * @param template instance with prefilled values for the builder
@@ -116,6 +125,7 @@ public interface CustomFields {
     public static CustomFieldsBuilder builder(final CustomFields template) {
         return CustomFieldsBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -126,7 +136,7 @@ public interface CustomFields {
     default <T> T withCustomFields(Function<CustomFields, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

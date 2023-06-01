@@ -1,8 +1,12 @@
-
 package com.commercetools.api.models.channel;
 
+import com.commercetools.api.models.channel.ChannelRoleEnum;
+import com.commercetools.api.models.channel.ChannelUpdateAction;
+import com.commercetools.api.models.channel.ChannelRemoveRolesAction;
+import javax.annotation.Nullable;
 import java.util.*;
-
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -16,11 +20,16 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .plusRoles(rolesBuilder -> rolesBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class ChannelRemoveRolesActionBuilder implements Builder<ChannelRemoveRolesAction> {
 
+    
+    
     private java.util.List<com.commercetools.api.models.channel.ChannelRoleEnum> roles;
 
     /**
@@ -28,45 +37,47 @@ public class ChannelRemoveRolesActionBuilder implements Builder<ChannelRemoveRol
      * @param roles value to be set
      * @return Builder
      */
-
-    public ChannelRemoveRolesActionBuilder roles(final com.commercetools.api.models.channel.ChannelRoleEnum... roles) {
+    
+    public ChannelRemoveRolesActionBuilder roles( final com.commercetools.api.models.channel.ChannelRoleEnum ...roles) {
         this.roles = new ArrayList<>(Arrays.asList(roles));
         return this;
     }
-
+    
     /**
      *  <p>Value to remove from the array.</p>
      * @param roles value to be set
      * @return Builder
      */
-
-    public ChannelRemoveRolesActionBuilder roles(
-            final java.util.List<com.commercetools.api.models.channel.ChannelRoleEnum> roles) {
+    
+    public ChannelRemoveRolesActionBuilder roles( final java.util.List<com.commercetools.api.models.channel.ChannelRoleEnum> roles) {
         this.roles = roles;
         return this;
     }
-
+    
     /**
      *  <p>Value to remove from the array.</p>
      * @param roles value to be set
      * @return Builder
      */
-
-    public ChannelRemoveRolesActionBuilder plusRoles(
-            final com.commercetools.api.models.channel.ChannelRoleEnum... roles) {
+    
+    public ChannelRemoveRolesActionBuilder plusRoles( final com.commercetools.api.models.channel.ChannelRoleEnum ...roles) {
         if (this.roles == null) {
             this.roles = new ArrayList<>();
         }
         this.roles.addAll(Arrays.asList(roles));
         return this;
     }
+    
+    
+    
 
     /**
      *  <p>Value to remove from the array.</p>
      * @return roles
      */
-
-    public java.util.List<com.commercetools.api.models.channel.ChannelRoleEnum> getRoles() {
+    
+    
+    public java.util.List<com.commercetools.api.models.channel.ChannelRoleEnum> getRoles(){
         return this.roles;
     }
 
@@ -78,7 +89,7 @@ public class ChannelRemoveRolesActionBuilder implements Builder<ChannelRemoveRol
         Objects.requireNonNull(roles, ChannelRemoveRolesAction.class + ": roles is missing");
         return new ChannelRemoveRolesActionImpl(roles);
     }
-
+    
     /**
      * builds ChannelRemoveRolesAction without checking for non-null required values
      * @return ChannelRemoveRolesAction
@@ -89,7 +100,7 @@ public class ChannelRemoveRolesActionBuilder implements Builder<ChannelRemoveRol
 
     /**
      * factory method for an instance of ChannelRemoveRolesActionBuilder
-     * @return builder
+     * @return builder 
      */
     public static ChannelRemoveRolesActionBuilder of() {
         return new ChannelRemoveRolesActionBuilder();

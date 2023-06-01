@@ -1,17 +1,20 @@
-
 package com.commercetools.api.models.order_edit;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-
 import com.commercetools.api.models.order.StagedOrderUpdateAction;
+import com.commercetools.api.models.order_edit.StagedOrderSetLocaleActionImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * StagedOrderSetLocaleAction
@@ -23,9 +26,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     StagedOrderSetLocaleAction stagedOrderSetLocaleAction = StagedOrderSetLocaleAction.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = StagedOrderSetLocaleActionImpl.class)
 public interface StagedOrderSetLocaleAction extends StagedOrderUpdateAction {
 
@@ -38,7 +44,7 @@ public interface StagedOrderSetLocaleAction extends StagedOrderUpdateAction {
      *
      * @return locale
      */
-
+    
     @JsonProperty("locale")
     public String getLocale();
 
@@ -46,16 +52,18 @@ public interface StagedOrderSetLocaleAction extends StagedOrderUpdateAction {
      * set locale
      * @param locale value to be set
      */
-
+    
     public void setLocale(final String locale);
+    
 
     /**
      * factory method
      * @return instance of StagedOrderSetLocaleAction
      */
-    public static StagedOrderSetLocaleAction of() {
+    public static StagedOrderSetLocaleAction of(){
         return new StagedOrderSetLocaleActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy StagedOrderSetLocaleAction
@@ -90,7 +98,7 @@ public interface StagedOrderSetLocaleAction extends StagedOrderUpdateAction {
     public static StagedOrderSetLocaleActionBuilder builder() {
         return StagedOrderSetLocaleActionBuilder.of();
     }
-
+    
     /**
      * create builder for StagedOrderSetLocaleAction instance
      * @param template instance with prefilled values for the builder
@@ -99,6 +107,7 @@ public interface StagedOrderSetLocaleAction extends StagedOrderUpdateAction {
     public static StagedOrderSetLocaleActionBuilder builder(final StagedOrderSetLocaleAction template) {
         return StagedOrderSetLocaleActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -109,7 +118,7 @@ public interface StagedOrderSetLocaleAction extends StagedOrderUpdateAction {
     default <T> T withStagedOrderSetLocaleAction(Function<StagedOrderSetLocaleAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

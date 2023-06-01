@@ -1,19 +1,21 @@
-
 package com.commercetools.api.models.message;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
 import com.commercetools.api.models.common.Price;
+import com.commercetools.api.models.message.MessagePayload;
+import com.commercetools.api.models.message.ProductPriceAddedMessagePayloadImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Generated after a successful Add Embedded Price update action.</p>
@@ -28,9 +30,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .staged(true)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = ProductPriceAddedMessagePayloadImpl.class)
 public interface ProductPriceAddedMessagePayload extends MessagePayload {
 
@@ -46,7 +51,6 @@ public interface ProductPriceAddedMessagePayload extends MessagePayload {
     @NotNull
     @JsonProperty("variantId")
     public Long getVariantId();
-
     /**
      *  <p>The Embedded Price that was added to the ProductVariant.</p>
      * @return price
@@ -55,7 +59,6 @@ public interface ProductPriceAddedMessagePayload extends MessagePayload {
     @Valid
     @JsonProperty("price")
     public Price getPrice();
-
     /**
      *  <p>Whether the update was only applied to the staged Product Projection.</p>
      * @return staged
@@ -68,30 +71,34 @@ public interface ProductPriceAddedMessagePayload extends MessagePayload {
      *  <p>Unique identifier of the ProductVariant for which the Price was added.</p>
      * @param variantId value to be set
      */
-
+    
     public void setVariantId(final Long variantId);
-
+    
+    
     /**
      *  <p>The Embedded Price that was added to the ProductVariant.</p>
      * @param price value to be set
      */
-
+    
     public void setPrice(final Price price);
-
+    
+    
     /**
      *  <p>Whether the update was only applied to the staged Product Projection.</p>
      * @param staged value to be set
      */
-
+    
     public void setStaged(final Boolean staged);
+    
 
     /**
      * factory method
      * @return instance of ProductPriceAddedMessagePayload
      */
-    public static ProductPriceAddedMessagePayload of() {
+    public static ProductPriceAddedMessagePayload of(){
         return new ProductPriceAddedMessagePayloadImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy ProductPriceAddedMessagePayload
@@ -130,7 +137,7 @@ public interface ProductPriceAddedMessagePayload extends MessagePayload {
     public static ProductPriceAddedMessagePayloadBuilder builder() {
         return ProductPriceAddedMessagePayloadBuilder.of();
     }
-
+    
     /**
      * create builder for ProductPriceAddedMessagePayload instance
      * @param template instance with prefilled values for the builder
@@ -139,6 +146,7 @@ public interface ProductPriceAddedMessagePayload extends MessagePayload {
     public static ProductPriceAddedMessagePayloadBuilder builder(final ProductPriceAddedMessagePayload template) {
         return ProductPriceAddedMessagePayloadBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -149,7 +157,7 @@ public interface ProductPriceAddedMessagePayload extends MessagePayload {
     default <T> T withProductPriceAddedMessagePayload(Function<ProductPriceAddedMessagePayload, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

@@ -1,18 +1,20 @@
-
 package com.commercetools.api.models.graph_ql;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
+import com.commercetools.api.models.graph_ql.GraphQLVariablesMap;
+import com.commercetools.api.models.graph_ql.GraphQLRequestImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * GraphQLRequest
@@ -25,11 +27,15 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .query("{query}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = GraphQLRequestImpl.class)
-public interface GraphQLRequest {
+public interface GraphQLRequest  {
+
 
     /**
      *
@@ -38,15 +44,13 @@ public interface GraphQLRequest {
     @NotNull
     @JsonProperty("query")
     public String getQuery();
-
     /**
      *
      * @return operationName
      */
-
+    
     @JsonProperty("operationName")
     public String getOperationName();
-
     /**
      *
      * @return variables
@@ -59,30 +63,34 @@ public interface GraphQLRequest {
      * set query
      * @param query value to be set
      */
-
+    
     public void setQuery(final String query);
-
+    
+    
     /**
      * set operationName
      * @param operationName value to be set
      */
-
+    
     public void setOperationName(final String operationName);
-
+    
+    
     /**
      * set variables
      * @param variables value to be set
      */
-
+    
     public void setVariables(final GraphQLVariablesMap variables);
+    
 
     /**
      * factory method
      * @return instance of GraphQLRequest
      */
-    public static GraphQLRequest of() {
+    public static GraphQLRequest of(){
         return new GraphQLRequestImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy GraphQLRequest
@@ -110,8 +118,7 @@ public interface GraphQLRequest {
         GraphQLRequestImpl instance = new GraphQLRequestImpl();
         instance.setQuery(template.getQuery());
         instance.setOperationName(template.getOperationName());
-        instance.setVariables(
-            com.commercetools.api.models.graph_ql.GraphQLVariablesMap.deepCopy(template.getVariables()));
+        instance.setVariables(com.commercetools.api.models.graph_ql.GraphQLVariablesMap.deepCopy(template.getVariables()));
         return instance;
     }
 
@@ -122,7 +129,7 @@ public interface GraphQLRequest {
     public static GraphQLRequestBuilder builder() {
         return GraphQLRequestBuilder.of();
     }
-
+    
     /**
      * create builder for GraphQLRequest instance
      * @param template instance with prefilled values for the builder
@@ -131,6 +138,7 @@ public interface GraphQLRequest {
     public static GraphQLRequestBuilder builder(final GraphQLRequest template) {
         return GraphQLRequestBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -141,7 +149,7 @@ public interface GraphQLRequest {
     default <T> T withGraphQLRequest(Function<GraphQLRequest, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

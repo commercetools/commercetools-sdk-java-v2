@@ -1,8 +1,11 @@
-
 package com.commercetools.history.models.change;
 
+import com.commercetools.history.models.change.Change;
+import com.commercetools.history.models.change.SetInterfaceIdChange;
+import javax.annotation.Nullable;
 import java.util.*;
-
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -18,74 +21,95 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .nextValue("{nextValue}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class SetInterfaceIdChangeBuilder implements Builder<SetInterfaceIdChange> {
 
+    
+    
     private String change;
-
+    
+    
+    
     private String previousValue;
-
+    
+    
+    
     private String nextValue;
 
+    
     /**
      *  <p>Shape of the action for <code>setInterfaceId</code></p>
      * @param change value to be set
      * @return Builder
      */
-
-    public SetInterfaceIdChangeBuilder change(final String change) {
+    
+    public SetInterfaceIdChangeBuilder change( final String change) {
         this.change = change;
         return this;
     }
-
+    
+    
+    
+    
     /**
      * set the value to the previousValue
      * @param previousValue value to be set
      * @return Builder
      */
-
-    public SetInterfaceIdChangeBuilder previousValue(final String previousValue) {
+    
+    public SetInterfaceIdChangeBuilder previousValue( final String previousValue) {
         this.previousValue = previousValue;
         return this;
     }
-
+    
+    
+    
+    
     /**
      * set the value to the nextValue
      * @param nextValue value to be set
      * @return Builder
      */
-
-    public SetInterfaceIdChangeBuilder nextValue(final String nextValue) {
+    
+    public SetInterfaceIdChangeBuilder nextValue( final String nextValue) {
         this.nextValue = nextValue;
         return this;
     }
+    
+    
 
     /**
      *  <p>Shape of the action for <code>setInterfaceId</code></p>
      * @return change
      */
-
-    public String getChange() {
+    
+    
+    public String getChange(){
         return this.change;
     }
-
+    
     /**
      * value of previousValue}
      * @return previousValue
      */
-
-    public String getPreviousValue() {
+    
+    
+    public String getPreviousValue(){
         return this.previousValue;
     }
-
+    
     /**
      * value of nextValue}
      * @return nextValue
      */
-
-    public String getNextValue() {
+    
+    
+    public String getNextValue(){
         return this.nextValue;
     }
 
@@ -99,7 +123,7 @@ public class SetInterfaceIdChangeBuilder implements Builder<SetInterfaceIdChange
         Objects.requireNonNull(nextValue, SetInterfaceIdChange.class + ": nextValue is missing");
         return new SetInterfaceIdChangeImpl(change, previousValue, nextValue);
     }
-
+    
     /**
      * builds SetInterfaceIdChange without checking for non-null required values
      * @return SetInterfaceIdChange
@@ -110,7 +134,7 @@ public class SetInterfaceIdChangeBuilder implements Builder<SetInterfaceIdChange
 
     /**
      * factory method for an instance of SetInterfaceIdChangeBuilder
-     * @return builder
+     * @return builder 
      */
     public static SetInterfaceIdChangeBuilder of() {
         return new SetInterfaceIdChangeBuilder();

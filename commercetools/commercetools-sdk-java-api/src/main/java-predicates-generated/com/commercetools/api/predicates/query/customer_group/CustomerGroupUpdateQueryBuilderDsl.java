@@ -1,11 +1,11 @@
-
 package com.commercetools.api.predicates.query.customer_group;
-
-import java.util.function.Function;
 
 import com.commercetools.api.predicates.query.*;
 
-public class CustomerGroupUpdateQueryBuilderDsl {
+import java.util.function.Function;
+
+
+public class CustomerGroupUpdateQueryBuilderDsl  {
     public CustomerGroupUpdateQueryBuilderDsl() {
     }
 
@@ -14,24 +14,19 @@ public class CustomerGroupUpdateQueryBuilderDsl {
     }
 
     public LongComparisonPredicateBuilder<CustomerGroupUpdateQueryBuilderDsl> version() {
-        return new LongComparisonPredicateBuilder<>(
-            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("version")),
-            p -> new CombinationQueryPredicate<>(p, CustomerGroupUpdateQueryBuilderDsl::of));
+        return new LongComparisonPredicateBuilder<>(BinaryQueryPredicate.of().left(new ConstantQueryPredicate("version")),
+        p -> new CombinationQueryPredicate<>(p, CustomerGroupUpdateQueryBuilderDsl::of));
     }
-
     public CombinationQueryPredicate<CustomerGroupUpdateQueryBuilderDsl> actions(
-            Function<com.commercetools.api.predicates.query.customer_group.CustomerGroupUpdateActionQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.customer_group.CustomerGroupUpdateActionQueryBuilderDsl>> fn) {
+        Function<com.commercetools.api.predicates.query.customer_group.CustomerGroupUpdateActionQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.customer_group.CustomerGroupUpdateActionQueryBuilderDsl>> fn) {
         return new CombinationQueryPredicate<>(ContainerQueryPredicate.of()
-                .parent(ConstantQueryPredicate.of().constant("actions"))
-                .inner(fn.apply(
-                    com.commercetools.api.predicates.query.customer_group.CustomerGroupUpdateActionQueryBuilderDsl
-                            .of())),
+            .parent(ConstantQueryPredicate.of().constant("actions"))
+            .inner(fn.apply(com.commercetools.api.predicates.query.customer_group.CustomerGroupUpdateActionQueryBuilderDsl.of())),
             CustomerGroupUpdateQueryBuilderDsl::of);
     }
-
     public CollectionPredicateBuilder<CustomerGroupUpdateQueryBuilderDsl> actions() {
         return new CollectionPredicateBuilder<>(BinaryQueryPredicate.of().left(new ConstantQueryPredicate("actions")),
-            p -> new CombinationQueryPredicate<>(p, CustomerGroupUpdateQueryBuilderDsl::of));
+                p -> new CombinationQueryPredicate<>(p, CustomerGroupUpdateQueryBuilderDsl::of));
     }
-
+    
 }

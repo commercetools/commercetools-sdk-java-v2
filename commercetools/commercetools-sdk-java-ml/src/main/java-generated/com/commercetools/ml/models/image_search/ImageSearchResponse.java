@@ -1,19 +1,20 @@
-
 package com.commercetools.ml.models.image_search;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-import java.util.stream.Collectors;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
+import com.commercetools.ml.models.image_search.ResultItem;
+import com.commercetools.ml.models.image_search.ImageSearchResponseImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Response format from image search endpoint.</p>
@@ -29,11 +30,15 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .plusResults(resultsBuilder -> resultsBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = ImageSearchResponseImpl.class)
-public interface ImageSearchResponse {
+public interface ImageSearchResponse  {
+
 
     /**
      *  <p>The maximum number of results to return from a query.</p>
@@ -42,7 +47,6 @@ public interface ImageSearchResponse {
     @NotNull
     @JsonProperty("count")
     public Integer getCount();
-
     /**
      *  <p>Number of elements skipped.</p>
      * @return offset
@@ -50,7 +54,6 @@ public interface ImageSearchResponse {
     @NotNull
     @JsonProperty("offset")
     public Double getOffset();
-
     /**
      *  <p>The total number of product images that were have been analyzed.</p>
      * @return total
@@ -58,7 +61,6 @@ public interface ImageSearchResponse {
     @NotNull
     @JsonProperty("total")
     public Integer getTotal();
-
     /**
      *  <p>An array of image URLs of images that are similar to the query image. If no matching images are found, results is empty.</p>
      * @return results
@@ -72,45 +74,48 @@ public interface ImageSearchResponse {
      *  <p>The maximum number of results to return from a query.</p>
      * @param count value to be set
      */
-
+    
     public void setCount(final Integer count);
-
+    
+    
     /**
      *  <p>Number of elements skipped.</p>
      * @param offset value to be set
      */
-
+    
     public void setOffset(final Double offset);
-
+    
+    
     /**
      *  <p>The total number of product images that were have been analyzed.</p>
      * @param total value to be set
      */
-
+    
     public void setTotal(final Integer total);
-
+    
+    
     /**
      *  <p>An array of image URLs of images that are similar to the query image. If no matching images are found, results is empty.</p>
      * @param results values to be set
      */
-
+    
     @JsonIgnore
-    public void setResults(final ResultItem... results);
-
+    public void setResults(final ResultItem ...results);
     /**
      *  <p>An array of image URLs of images that are similar to the query image. If no matching images are found, results is empty.</p>
      * @param results values to be set
      */
-
+    
     public void setResults(final List<ResultItem> results);
 
     /**
      * factory method
      * @return instance of ImageSearchResponse
      */
-    public static ImageSearchResponse of() {
+    public static ImageSearchResponse of(){
         return new ImageSearchResponseImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy ImageSearchResponse
@@ -141,9 +146,7 @@ public interface ImageSearchResponse {
         instance.setOffset(template.getOffset());
         instance.setTotal(template.getTotal());
         instance.setResults(Optional.ofNullable(template.getResults())
-                .map(t -> t.stream()
-                        .map(com.commercetools.ml.models.image_search.ResultItem::deepCopy)
-                        .collect(Collectors.toList()))
+                .map(t -> t.stream().map(com.commercetools.ml.models.image_search.ResultItem::deepCopy).collect(Collectors.toList()))
                 .orElse(null));
         return instance;
     }
@@ -155,7 +158,7 @@ public interface ImageSearchResponse {
     public static ImageSearchResponseBuilder builder() {
         return ImageSearchResponseBuilder.of();
     }
-
+    
     /**
      * create builder for ImageSearchResponse instance
      * @param template instance with prefilled values for the builder
@@ -164,6 +167,7 @@ public interface ImageSearchResponse {
     public static ImageSearchResponseBuilder builder(final ImageSearchResponse template) {
         return ImageSearchResponseBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -174,7 +178,7 @@ public interface ImageSearchResponse {
     default <T> T withImageSearchResponse(Function<ImageSearchResponse, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

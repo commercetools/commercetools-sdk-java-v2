@@ -1,9 +1,12 @@
-
 package com.commercetools.api.models.shipping_method;
 
+import com.commercetools.api.models.shipping_method.ShippingMethodUpdateAction;
+import com.commercetools.api.models.zone.ZoneResourceIdentifier;
+import com.commercetools.api.models.shipping_method.ShippingMethodAddZoneAction;
+import javax.annotation.Nullable;
 import java.util.*;
 import java.util.function.Function;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -17,55 +20,61 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .zone(zoneBuilder -> zoneBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class ShippingMethodAddZoneActionBuilder implements Builder<ShippingMethodAddZoneAction> {
 
+    
+    
     private com.commercetools.api.models.zone.ZoneResourceIdentifier zone;
 
+    
     /**
      *  <p>Value to add to <code>zoneRates</code>.</p>
      * @param builder function to build the zone value
      * @return Builder
      */
-
-    public ShippingMethodAddZoneActionBuilder zone(
-            Function<com.commercetools.api.models.zone.ZoneResourceIdentifierBuilder, com.commercetools.api.models.zone.ZoneResourceIdentifierBuilder> builder) {
+    
+    public ShippingMethodAddZoneActionBuilder zone(Function<com.commercetools.api.models.zone.ZoneResourceIdentifierBuilder, com.commercetools.api.models.zone.ZoneResourceIdentifierBuilder> builder) {
         this.zone = builder.apply(com.commercetools.api.models.zone.ZoneResourceIdentifierBuilder.of()).build();
         return this;
     }
-
+    
     /**
      *  <p>Value to add to <code>zoneRates</code>.</p>
      * @param builder function to build the zone value
      * @return Builder
      */
-
-    public ShippingMethodAddZoneActionBuilder withZone(
-            Function<com.commercetools.api.models.zone.ZoneResourceIdentifierBuilder, com.commercetools.api.models.zone.ZoneResourceIdentifier> builder) {
+    
+    public ShippingMethodAddZoneActionBuilder withZone(Function<com.commercetools.api.models.zone.ZoneResourceIdentifierBuilder, com.commercetools.api.models.zone.ZoneResourceIdentifier> builder) {
         this.zone = builder.apply(com.commercetools.api.models.zone.ZoneResourceIdentifierBuilder.of());
         return this;
     }
-
+                    
     /**
      *  <p>Value to add to <code>zoneRates</code>.</p>
      * @param zone value to be set
      * @return Builder
      */
-
-    public ShippingMethodAddZoneActionBuilder zone(
-            final com.commercetools.api.models.zone.ZoneResourceIdentifier zone) {
+    
+    public ShippingMethodAddZoneActionBuilder zone( final com.commercetools.api.models.zone.ZoneResourceIdentifier zone) {
         this.zone = zone;
         return this;
     }
+    
+    
 
     /**
      *  <p>Value to add to <code>zoneRates</code>.</p>
      * @return zone
      */
-
-    public com.commercetools.api.models.zone.ZoneResourceIdentifier getZone() {
+    
+    
+    public com.commercetools.api.models.zone.ZoneResourceIdentifier getZone(){
         return this.zone;
     }
 
@@ -77,7 +86,7 @@ public class ShippingMethodAddZoneActionBuilder implements Builder<ShippingMetho
         Objects.requireNonNull(zone, ShippingMethodAddZoneAction.class + ": zone is missing");
         return new ShippingMethodAddZoneActionImpl(zone);
     }
-
+    
     /**
      * builds ShippingMethodAddZoneAction without checking for non-null required values
      * @return ShippingMethodAddZoneAction
@@ -88,7 +97,7 @@ public class ShippingMethodAddZoneActionBuilder implements Builder<ShippingMetho
 
     /**
      * factory method for an instance of ShippingMethodAddZoneActionBuilder
-     * @return builder
+     * @return builder 
      */
     public static ShippingMethodAddZoneActionBuilder of() {
         return new ShippingMethodAddZoneActionBuilder();

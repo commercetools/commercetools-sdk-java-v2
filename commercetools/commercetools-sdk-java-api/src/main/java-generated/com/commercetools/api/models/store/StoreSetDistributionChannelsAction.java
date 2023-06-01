@@ -1,19 +1,21 @@
-
 package com.commercetools.api.models.store;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-import java.util.stream.Collectors;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-
 import com.commercetools.api.models.channel.ChannelResourceIdentifier;
+import com.commercetools.api.models.store.StoreUpdateAction;
+import com.commercetools.api.models.store.StoreSetDistributionChannelsActionImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>This update action produces the StoreDistributionChannelsChanged Message.</p>
@@ -26,9 +28,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     StoreSetDistributionChannelsAction storeSetDistributionChannelsAction = StoreSetDistributionChannelsAction.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = StoreSetDistributionChannelsActionImpl.class)
 public interface StoreSetDistributionChannelsAction extends StoreUpdateAction {
 
@@ -49,24 +54,24 @@ public interface StoreSetDistributionChannelsAction extends StoreUpdateAction {
      *  <p>Value to set. If not defined, the Store's <code>distributionChannels</code> are unset.</p>
      * @param distributionChannels values to be set
      */
-
+    
     @JsonIgnore
-    public void setDistributionChannels(final ChannelResourceIdentifier... distributionChannels);
-
+    public void setDistributionChannels(final ChannelResourceIdentifier ...distributionChannels);
     /**
      *  <p>Value to set. If not defined, the Store's <code>distributionChannels</code> are unset.</p>
      * @param distributionChannels values to be set
      */
-
+    
     public void setDistributionChannels(final List<ChannelResourceIdentifier> distributionChannels);
 
     /**
      * factory method
      * @return instance of StoreSetDistributionChannelsAction
      */
-    public static StoreSetDistributionChannelsAction of() {
+    public static StoreSetDistributionChannelsAction of(){
         return new StoreSetDistributionChannelsActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy StoreSetDistributionChannelsAction
@@ -85,16 +90,13 @@ public interface StoreSetDistributionChannelsAction extends StoreUpdateAction {
      * @return copy instance
      */
     @Nullable
-    public static StoreSetDistributionChannelsAction deepCopy(
-            @Nullable final StoreSetDistributionChannelsAction template) {
+    public static StoreSetDistributionChannelsAction deepCopy(@Nullable final StoreSetDistributionChannelsAction template) {
         if (template == null) {
             return null;
         }
         StoreSetDistributionChannelsActionImpl instance = new StoreSetDistributionChannelsActionImpl();
         instance.setDistributionChannels(Optional.ofNullable(template.getDistributionChannels())
-                .map(t -> t.stream()
-                        .map(com.commercetools.api.models.channel.ChannelResourceIdentifier::deepCopy)
-                        .collect(Collectors.toList()))
+                .map(t -> t.stream().map(com.commercetools.api.models.channel.ChannelResourceIdentifier::deepCopy).collect(Collectors.toList()))
                 .orElse(null));
         return instance;
     }
@@ -106,7 +108,7 @@ public interface StoreSetDistributionChannelsAction extends StoreUpdateAction {
     public static StoreSetDistributionChannelsActionBuilder builder() {
         return StoreSetDistributionChannelsActionBuilder.of();
     }
-
+    
     /**
      * create builder for StoreSetDistributionChannelsAction instance
      * @param template instance with prefilled values for the builder
@@ -115,6 +117,7 @@ public interface StoreSetDistributionChannelsAction extends StoreUpdateAction {
     public static StoreSetDistributionChannelsActionBuilder builder(final StoreSetDistributionChannelsAction template) {
         return StoreSetDistributionChannelsActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -125,7 +128,7 @@ public interface StoreSetDistributionChannelsAction extends StoreUpdateAction {
     default <T> T withStoreSetDistributionChannelsAction(Function<StoreSetDistributionChannelsAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

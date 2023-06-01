@@ -1,17 +1,22 @@
-
 package com.commercetools.api.models.product_discount;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
+import com.commercetools.api.models.product_discount.ProductDiscountValueAbsolute;
+import com.commercetools.api.models.product_discount.ProductDiscountValueExternal;
+import com.commercetools.api.models.product_discount.ProductDiscountValueRelative;
 
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * ProductDiscountValue
@@ -24,16 +29,27 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             plusMoney(moneyBuilder -> moneyBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
 @JsonSubTypes({
-        @JsonSubTypes.Type(value = com.commercetools.api.models.product_discount.ProductDiscountValueAbsoluteImpl.class, name = ProductDiscountValueAbsolute.ABSOLUTE),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.product_discount.ProductDiscountValueExternalImpl.class, name = ProductDiscountValueExternal.EXTERNAL),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.product_discount.ProductDiscountValueRelativeImpl.class, name = ProductDiscountValueRelative.RELATIVE) })
-@JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.EXISTING_PROPERTY, property = "type", defaultImpl = ProductDiscountValueImpl.class, visible = true)
+   @JsonSubTypes.Type(value = com.commercetools.api.models.product_discount.ProductDiscountValueAbsoluteImpl.class, name = ProductDiscountValueAbsolute.ABSOLUTE),
+   @JsonSubTypes.Type(value = com.commercetools.api.models.product_discount.ProductDiscountValueExternalImpl.class, name = ProductDiscountValueExternal.EXTERNAL),
+   @JsonSubTypes.Type(value = com.commercetools.api.models.product_discount.ProductDiscountValueRelativeImpl.class, name = ProductDiscountValueRelative.RELATIVE)
+})
+@JsonTypeInfo(
+    use = JsonTypeInfo.Id.NAME,
+    include = JsonTypeInfo.As.EXISTING_PROPERTY,
+    property = "type",
+    defaultImpl = ProductDiscountValueImpl.class,
+    visible = true
+)
 @JsonDeserialize(as = ProductDiscountValueImpl.class)
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
-public interface ProductDiscountValue {
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
+public interface ProductDiscountValue  {
+
 
     /**
      *
@@ -42,6 +58,9 @@ public interface ProductDiscountValue {
     @NotNull
     @JsonProperty("type")
     public String getType();
+
+
+
 
     /**
      * factory method to create a deep copy of ProductDiscountValue
@@ -54,43 +73,39 @@ public interface ProductDiscountValue {
             return null;
         }
         if (template instanceof com.commercetools.api.models.product_discount.ProductDiscountValueAbsolute) {
-            return com.commercetools.api.models.product_discount.ProductDiscountValueAbsolute
-                    .deepCopy((com.commercetools.api.models.product_discount.ProductDiscountValueAbsolute) template);
+            return com.commercetools.api.models.product_discount.ProductDiscountValueAbsolute.deepCopy((com.commercetools.api.models.product_discount.ProductDiscountValueAbsolute)template);
         }
         if (template instanceof com.commercetools.api.models.product_discount.ProductDiscountValueExternal) {
-            return com.commercetools.api.models.product_discount.ProductDiscountValueExternal
-                    .deepCopy((com.commercetools.api.models.product_discount.ProductDiscountValueExternal) template);
+            return com.commercetools.api.models.product_discount.ProductDiscountValueExternal.deepCopy((com.commercetools.api.models.product_discount.ProductDiscountValueExternal)template);
         }
         if (template instanceof com.commercetools.api.models.product_discount.ProductDiscountValueRelative) {
-            return com.commercetools.api.models.product_discount.ProductDiscountValueRelative
-                    .deepCopy((com.commercetools.api.models.product_discount.ProductDiscountValueRelative) template);
+            return com.commercetools.api.models.product_discount.ProductDiscountValueRelative.deepCopy((com.commercetools.api.models.product_discount.ProductDiscountValueRelative)template);
         }
         ProductDiscountValueImpl instance = new ProductDiscountValueImpl();
         return instance;
     }
+
 
     /**
      * builder for absolute subtype
      * @return builder
      */
     public static com.commercetools.api.models.product_discount.ProductDiscountValueAbsoluteBuilder absoluteBuilder() {
-        return com.commercetools.api.models.product_discount.ProductDiscountValueAbsoluteBuilder.of();
+       return com.commercetools.api.models.product_discount.ProductDiscountValueAbsoluteBuilder.of();
     }
-
     /**
      * builder for external subtype
      * @return builder
      */
     public static com.commercetools.api.models.product_discount.ProductDiscountValueExternalBuilder externalBuilder() {
-        return com.commercetools.api.models.product_discount.ProductDiscountValueExternalBuilder.of();
+       return com.commercetools.api.models.product_discount.ProductDiscountValueExternalBuilder.of();
     }
-
     /**
      * builder for relative subtype
      * @return builder
      */
     public static com.commercetools.api.models.product_discount.ProductDiscountValueRelativeBuilder relativeBuilder() {
-        return com.commercetools.api.models.product_discount.ProductDiscountValueRelativeBuilder.of();
+       return com.commercetools.api.models.product_discount.ProductDiscountValueRelativeBuilder.of();
     }
 
     /**
@@ -102,7 +117,7 @@ public interface ProductDiscountValue {
     default <T> T withProductDiscountValue(Function<ProductDiscountValue, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

@@ -1,9 +1,12 @@
-
 package com.commercetools.api.models.product_type;
 
+import com.commercetools.api.models.product_type.AttributePlainEnumValue;
+import com.commercetools.api.models.product_type.ProductTypeUpdateAction;
+import com.commercetools.api.models.product_type.ProductTypeAddPlainEnumValueAction;
+import javax.annotation.Nullable;
 import java.util.*;
 import java.util.function.Function;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -18,78 +21,89 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .value(valueBuilder -> valueBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class ProductTypeAddPlainEnumValueActionBuilder implements Builder<ProductTypeAddPlainEnumValueAction> {
 
+    
+    
     private String attributeName;
-
+    
+    
+    
     private com.commercetools.api.models.product_type.AttributePlainEnumValue value;
 
+    
     /**
      *  <p>Name of the AttributeDefinition to update.</p>
      * @param attributeName value to be set
      * @return Builder
      */
-
-    public ProductTypeAddPlainEnumValueActionBuilder attributeName(final String attributeName) {
+    
+    public ProductTypeAddPlainEnumValueActionBuilder attributeName( final String attributeName) {
         this.attributeName = attributeName;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Value to append to the array.</p>
      * @param builder function to build the value value
      * @return Builder
      */
-
-    public ProductTypeAddPlainEnumValueActionBuilder value(
-            Function<com.commercetools.api.models.product_type.AttributePlainEnumValueBuilder, com.commercetools.api.models.product_type.AttributePlainEnumValueBuilder> builder) {
-        this.value = builder.apply(com.commercetools.api.models.product_type.AttributePlainEnumValueBuilder.of())
-                .build();
+    
+    public ProductTypeAddPlainEnumValueActionBuilder value(Function<com.commercetools.api.models.product_type.AttributePlainEnumValueBuilder, com.commercetools.api.models.product_type.AttributePlainEnumValueBuilder> builder) {
+        this.value = builder.apply(com.commercetools.api.models.product_type.AttributePlainEnumValueBuilder.of()).build();
         return this;
     }
-
+    
     /**
      *  <p>Value to append to the array.</p>
      * @param builder function to build the value value
      * @return Builder
      */
-
-    public ProductTypeAddPlainEnumValueActionBuilder withValue(
-            Function<com.commercetools.api.models.product_type.AttributePlainEnumValueBuilder, com.commercetools.api.models.product_type.AttributePlainEnumValue> builder) {
+    
+    public ProductTypeAddPlainEnumValueActionBuilder withValue(Function<com.commercetools.api.models.product_type.AttributePlainEnumValueBuilder, com.commercetools.api.models.product_type.AttributePlainEnumValue> builder) {
         this.value = builder.apply(com.commercetools.api.models.product_type.AttributePlainEnumValueBuilder.of());
         return this;
     }
-
+                    
     /**
      *  <p>Value to append to the array.</p>
      * @param value value to be set
      * @return Builder
      */
-
-    public ProductTypeAddPlainEnumValueActionBuilder value(
-            final com.commercetools.api.models.product_type.AttributePlainEnumValue value) {
+    
+    public ProductTypeAddPlainEnumValueActionBuilder value( final com.commercetools.api.models.product_type.AttributePlainEnumValue value) {
         this.value = value;
         return this;
     }
+    
+    
 
     /**
      *  <p>Name of the AttributeDefinition to update.</p>
      * @return attributeName
      */
-
-    public String getAttributeName() {
+    
+    
+    public String getAttributeName(){
         return this.attributeName;
     }
-
+    
     /**
      *  <p>Value to append to the array.</p>
      * @return value
      */
-
-    public com.commercetools.api.models.product_type.AttributePlainEnumValue getValue() {
+    
+    
+    public com.commercetools.api.models.product_type.AttributePlainEnumValue getValue(){
         return this.value;
     }
 
@@ -102,7 +116,7 @@ public class ProductTypeAddPlainEnumValueActionBuilder implements Builder<Produc
         Objects.requireNonNull(value, ProductTypeAddPlainEnumValueAction.class + ": value is missing");
         return new ProductTypeAddPlainEnumValueActionImpl(attributeName, value);
     }
-
+    
     /**
      * builds ProductTypeAddPlainEnumValueAction without checking for non-null required values
      * @return ProductTypeAddPlainEnumValueAction
@@ -113,7 +127,7 @@ public class ProductTypeAddPlainEnumValueActionBuilder implements Builder<Produc
 
     /**
      * factory method for an instance of ProductTypeAddPlainEnumValueActionBuilder
-     * @return builder
+     * @return builder 
      */
     public static ProductTypeAddPlainEnumValueActionBuilder of() {
         return new ProductTypeAddPlainEnumValueActionBuilder();

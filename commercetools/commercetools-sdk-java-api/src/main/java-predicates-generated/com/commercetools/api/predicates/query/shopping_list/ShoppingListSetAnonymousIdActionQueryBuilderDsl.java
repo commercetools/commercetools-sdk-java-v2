@@ -1,9 +1,11 @@
-
 package com.commercetools.api.predicates.query.shopping_list;
 
 import com.commercetools.api.predicates.query.*;
 
-public class ShoppingListSetAnonymousIdActionQueryBuilderDsl {
+import java.util.function.Function;
+
+
+public class ShoppingListSetAnonymousIdActionQueryBuilderDsl  {
     public ShoppingListSetAnonymousIdActionQueryBuilderDsl() {
     }
 
@@ -12,15 +14,12 @@ public class ShoppingListSetAnonymousIdActionQueryBuilderDsl {
     }
 
     public StringComparisonPredicateBuilder<ShoppingListSetAnonymousIdActionQueryBuilderDsl> action() {
-        return new StringComparisonPredicateBuilder<>(
-            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("action")),
-            p -> new CombinationQueryPredicate<>(p, ShoppingListSetAnonymousIdActionQueryBuilderDsl::of));
+        return new StringComparisonPredicateBuilder<>(BinaryQueryPredicate.of().left(new ConstantQueryPredicate("action")),
+        p -> new CombinationQueryPredicate<>(p, ShoppingListSetAnonymousIdActionQueryBuilderDsl::of));
     }
-
     public StringComparisonPredicateBuilder<ShoppingListSetAnonymousIdActionQueryBuilderDsl> anonymousId() {
-        return new StringComparisonPredicateBuilder<>(
-            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("anonymousId")),
-            p -> new CombinationQueryPredicate<>(p, ShoppingListSetAnonymousIdActionQueryBuilderDsl::of));
+        return new StringComparisonPredicateBuilder<>(BinaryQueryPredicate.of().left(new ConstantQueryPredicate("anonymousId")),
+        p -> new CombinationQueryPredicate<>(p, ShoppingListSetAnonymousIdActionQueryBuilderDsl::of));
     }
-
+    
 }

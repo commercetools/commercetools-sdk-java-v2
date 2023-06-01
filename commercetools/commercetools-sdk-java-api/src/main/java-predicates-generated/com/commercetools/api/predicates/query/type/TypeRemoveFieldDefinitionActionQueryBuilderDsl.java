@@ -1,9 +1,11 @@
-
 package com.commercetools.api.predicates.query.type;
 
 import com.commercetools.api.predicates.query.*;
 
-public class TypeRemoveFieldDefinitionActionQueryBuilderDsl {
+import java.util.function.Function;
+
+
+public class TypeRemoveFieldDefinitionActionQueryBuilderDsl  {
     public TypeRemoveFieldDefinitionActionQueryBuilderDsl() {
     }
 
@@ -12,15 +14,12 @@ public class TypeRemoveFieldDefinitionActionQueryBuilderDsl {
     }
 
     public StringComparisonPredicateBuilder<TypeRemoveFieldDefinitionActionQueryBuilderDsl> action() {
-        return new StringComparisonPredicateBuilder<>(
-            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("action")),
-            p -> new CombinationQueryPredicate<>(p, TypeRemoveFieldDefinitionActionQueryBuilderDsl::of));
+        return new StringComparisonPredicateBuilder<>(BinaryQueryPredicate.of().left(new ConstantQueryPredicate("action")),
+        p -> new CombinationQueryPredicate<>(p, TypeRemoveFieldDefinitionActionQueryBuilderDsl::of));
     }
-
     public StringComparisonPredicateBuilder<TypeRemoveFieldDefinitionActionQueryBuilderDsl> fieldName() {
-        return new StringComparisonPredicateBuilder<>(
-            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("fieldName")),
-            p -> new CombinationQueryPredicate<>(p, TypeRemoveFieldDefinitionActionQueryBuilderDsl::of));
+        return new StringComparisonPredicateBuilder<>(BinaryQueryPredicate.of().left(new ConstantQueryPredicate("fieldName")),
+        p -> new CombinationQueryPredicate<>(p, TypeRemoveFieldDefinitionActionQueryBuilderDsl::of));
     }
-
+    
 }

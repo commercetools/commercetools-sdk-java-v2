@@ -1,10 +1,11 @@
-
 package com.commercetools.importapi.models.importcontainers;
 
-import java.util.*;
-
+import com.commercetools.importapi.models.common.ImportResourceType;
+import com.commercetools.importapi.models.importcontainers.ImportContainerUpdateDraft;
 import javax.annotation.Nullable;
-
+import java.util.*;
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -18,55 +19,67 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .version(0.3)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class ImportContainerUpdateDraftBuilder implements Builder<ImportContainerUpdateDraft> {
 
+    
+    
     private Long version;
-
+    
+    
     @Nullable
     private com.commercetools.importapi.models.common.ImportResourceType resourceType;
 
+    
     /**
      *  <p>Current version of the ImportContainer.</p>
      * @param version value to be set
      * @return Builder
      */
-
-    public ImportContainerUpdateDraftBuilder version(final Long version) {
+    
+    public ImportContainerUpdateDraftBuilder version( final Long version) {
         this.version = version;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>The resource type to be imported. If not given, the ImportContainer is able to import all of the supported ImportResourceTypes.</p>
      * @param resourceType value to be set
      * @return Builder
      */
-
-    public ImportContainerUpdateDraftBuilder resourceType(
-            @Nullable final com.commercetools.importapi.models.common.ImportResourceType resourceType) {
+    
+    public ImportContainerUpdateDraftBuilder resourceType(@Nullable final com.commercetools.importapi.models.common.ImportResourceType resourceType) {
         this.resourceType = resourceType;
         return this;
     }
+    
+    
 
     /**
      *  <p>Current version of the ImportContainer.</p>
      * @return version
      */
-
-    public Long getVersion() {
+    
+    
+    public Long getVersion(){
         return this.version;
     }
-
+    
     /**
      *  <p>The resource type to be imported. If not given, the ImportContainer is able to import all of the supported ImportResourceTypes.</p>
      * @return resourceType
      */
-
+    
     @Nullable
-    public com.commercetools.importapi.models.common.ImportResourceType getResourceType() {
+    public com.commercetools.importapi.models.common.ImportResourceType getResourceType(){
         return this.resourceType;
     }
 
@@ -78,7 +91,7 @@ public class ImportContainerUpdateDraftBuilder implements Builder<ImportContaine
         Objects.requireNonNull(version, ImportContainerUpdateDraft.class + ": version is missing");
         return new ImportContainerUpdateDraftImpl(version, resourceType);
     }
-
+    
     /**
      * builds ImportContainerUpdateDraft without checking for non-null required values
      * @return ImportContainerUpdateDraft
@@ -89,7 +102,7 @@ public class ImportContainerUpdateDraftBuilder implements Builder<ImportContaine
 
     /**
      * factory method for an instance of ImportContainerUpdateDraftBuilder
-     * @return builder
+     * @return builder 
      */
     public static ImportContainerUpdateDraftBuilder of() {
         return new ImportContainerUpdateDraftBuilder();

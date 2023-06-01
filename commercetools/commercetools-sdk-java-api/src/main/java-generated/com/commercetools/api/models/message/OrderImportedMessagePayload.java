@@ -1,19 +1,21 @@
-
 package com.commercetools.api.models.message;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
+import com.commercetools.api.models.message.OrderMessagePayload;
 import com.commercetools.api.models.order.Order;
+import com.commercetools.api.models.message.OrderImportedMessagePayloadImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Generated after a successful Order Import.</p>
@@ -26,9 +28,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .order(orderBuilder -> orderBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = OrderImportedMessagePayloadImpl.class)
 public interface OrderImportedMessagePayload extends OrderMessagePayload {
 
@@ -50,16 +55,18 @@ public interface OrderImportedMessagePayload extends OrderMessagePayload {
      *  <p>Order that was imported.</p>
      * @param order value to be set
      */
-
+    
     public void setOrder(final Order order);
+    
 
     /**
      * factory method
      * @return instance of OrderImportedMessagePayload
      */
-    public static OrderImportedMessagePayload of() {
+    public static OrderImportedMessagePayload of(){
         return new OrderImportedMessagePayloadImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy OrderImportedMessagePayload
@@ -94,7 +101,7 @@ public interface OrderImportedMessagePayload extends OrderMessagePayload {
     public static OrderImportedMessagePayloadBuilder builder() {
         return OrderImportedMessagePayloadBuilder.of();
     }
-
+    
     /**
      * create builder for OrderImportedMessagePayload instance
      * @param template instance with prefilled values for the builder
@@ -103,6 +110,7 @@ public interface OrderImportedMessagePayload extends OrderMessagePayload {
     public static OrderImportedMessagePayloadBuilder builder(final OrderImportedMessagePayload template) {
         return OrderImportedMessagePayloadBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -113,7 +121,7 @@ public interface OrderImportedMessagePayload extends OrderMessagePayload {
     default <T> T withOrderImportedMessagePayload(Function<OrderImportedMessagePayload, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

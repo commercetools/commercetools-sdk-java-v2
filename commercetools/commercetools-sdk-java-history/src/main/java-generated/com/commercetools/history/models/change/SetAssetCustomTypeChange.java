@@ -1,20 +1,22 @@
-
 package com.commercetools.history.models.change;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
+import com.commercetools.history.models.change.Change;
 import com.commercetools.history.models.change_value.AssetChangeValue;
 import com.commercetools.history.models.common.CustomFields;
+import com.commercetools.history.models.change.SetAssetCustomTypeChangeImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * SetAssetCustomTypeChange
@@ -30,9 +32,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .previousValue(previousValueBuilder -> previousValueBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = SetAssetCustomTypeChangeImpl.class)
 public interface SetAssetCustomTypeChange extends Change {
 
@@ -48,7 +53,6 @@ public interface SetAssetCustomTypeChange extends Change {
     @NotNull
     @JsonProperty("change")
     public String getChange();
-
     /**
      *
      * @return type
@@ -56,7 +60,6 @@ public interface SetAssetCustomTypeChange extends Change {
     @NotNull
     @JsonProperty("type")
     public String getType();
-
     /**
      *
      * @return asset
@@ -65,7 +68,6 @@ public interface SetAssetCustomTypeChange extends Change {
     @Valid
     @JsonProperty("asset")
     public AssetChangeValue getAsset();
-
     /**
      *
      * @return nextValue
@@ -74,7 +76,6 @@ public interface SetAssetCustomTypeChange extends Change {
     @Valid
     @JsonProperty("nextValue")
     public CustomFields getNextValue();
-
     /**
      *
      * @return previousValue
@@ -88,37 +89,42 @@ public interface SetAssetCustomTypeChange extends Change {
      *  <p>Update action for <code>setAssetCustomType</code></p>
      * @param change value to be set
      */
-
+    
     public void setChange(final String change);
-
+    
+    
     /**
      * set asset
      * @param asset value to be set
      */
-
+    
     public void setAsset(final AssetChangeValue asset);
-
+    
+    
     /**
      * set nextValue
      * @param nextValue value to be set
      */
-
+    
     public void setNextValue(final CustomFields nextValue);
-
+    
+    
     /**
      * set previousValue
      * @param previousValue value to be set
      */
-
+    
     public void setPreviousValue(final CustomFields previousValue);
+    
 
     /**
      * factory method
      * @return instance of SetAssetCustomTypeChange
      */
-    public static SetAssetCustomTypeChange of() {
+    public static SetAssetCustomTypeChange of(){
         return new SetAssetCustomTypeChangeImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy SetAssetCustomTypeChange
@@ -148,8 +154,7 @@ public interface SetAssetCustomTypeChange extends Change {
         instance.setChange(template.getChange());
         instance.setAsset(com.commercetools.history.models.change_value.AssetChangeValue.deepCopy(template.getAsset()));
         instance.setNextValue(com.commercetools.history.models.common.CustomFields.deepCopy(template.getNextValue()));
-        instance.setPreviousValue(
-            com.commercetools.history.models.common.CustomFields.deepCopy(template.getPreviousValue()));
+        instance.setPreviousValue(com.commercetools.history.models.common.CustomFields.deepCopy(template.getPreviousValue()));
         return instance;
     }
 
@@ -160,7 +165,7 @@ public interface SetAssetCustomTypeChange extends Change {
     public static SetAssetCustomTypeChangeBuilder builder() {
         return SetAssetCustomTypeChangeBuilder.of();
     }
-
+    
     /**
      * create builder for SetAssetCustomTypeChange instance
      * @param template instance with prefilled values for the builder
@@ -169,6 +174,7 @@ public interface SetAssetCustomTypeChange extends Change {
     public static SetAssetCustomTypeChangeBuilder builder(final SetAssetCustomTypeChange template) {
         return SetAssetCustomTypeChangeBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -179,7 +185,7 @@ public interface SetAssetCustomTypeChange extends Change {
     default <T> T withSetAssetCustomTypeChange(Function<SetAssetCustomTypeChange, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

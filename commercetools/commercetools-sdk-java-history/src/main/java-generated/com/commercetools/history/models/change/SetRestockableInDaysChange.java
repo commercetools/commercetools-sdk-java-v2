@@ -1,17 +1,20 @@
-
 package com.commercetools.history.models.change;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
+import com.commercetools.history.models.change.Change;
+import com.commercetools.history.models.change.SetRestockableInDaysChangeImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * SetRestockableInDaysChange
@@ -26,9 +29,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .nextValue(1)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = SetRestockableInDaysChangeImpl.class)
 public interface SetRestockableInDaysChange extends Change {
 
@@ -44,7 +50,6 @@ public interface SetRestockableInDaysChange extends Change {
     @NotNull
     @JsonProperty("type")
     public String getType();
-
     /**
      *  <p>Shape of the action for <code>setRestockableInDays</code></p>
      * @return change
@@ -52,7 +57,6 @@ public interface SetRestockableInDaysChange extends Change {
     @NotNull
     @JsonProperty("change")
     public String getChange();
-
     /**
      *
      * @return previousValue
@@ -60,7 +64,6 @@ public interface SetRestockableInDaysChange extends Change {
     @NotNull
     @JsonProperty("previousValue")
     public Integer getPreviousValue();
-
     /**
      *
      * @return nextValue
@@ -73,30 +76,34 @@ public interface SetRestockableInDaysChange extends Change {
      *  <p>Shape of the action for <code>setRestockableInDays</code></p>
      * @param change value to be set
      */
-
+    
     public void setChange(final String change);
-
+    
+    
     /**
      * set previousValue
      * @param previousValue value to be set
      */
-
+    
     public void setPreviousValue(final Integer previousValue);
-
+    
+    
     /**
      * set nextValue
      * @param nextValue value to be set
      */
-
+    
     public void setNextValue(final Integer nextValue);
+    
 
     /**
      * factory method
      * @return instance of SetRestockableInDaysChange
      */
-    public static SetRestockableInDaysChange of() {
+    public static SetRestockableInDaysChange of(){
         return new SetRestockableInDaysChangeImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy SetRestockableInDaysChange
@@ -135,7 +142,7 @@ public interface SetRestockableInDaysChange extends Change {
     public static SetRestockableInDaysChangeBuilder builder() {
         return SetRestockableInDaysChangeBuilder.of();
     }
-
+    
     /**
      * create builder for SetRestockableInDaysChange instance
      * @param template instance with prefilled values for the builder
@@ -144,6 +151,7 @@ public interface SetRestockableInDaysChange extends Change {
     public static SetRestockableInDaysChangeBuilder builder(final SetRestockableInDaysChange template) {
         return SetRestockableInDaysChangeBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -154,7 +162,7 @@ public interface SetRestockableInDaysChange extends Change {
     default <T> T withSetRestockableInDaysChange(Function<SetRestockableInDaysChange, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

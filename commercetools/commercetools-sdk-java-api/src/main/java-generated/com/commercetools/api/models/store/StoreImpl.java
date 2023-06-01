@@ -1,70 +1,86 @@
-
 package com.commercetools.api.models.store;
 
-import java.time.*;
-import java.util.*;
-
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
-
-import io.vrap.rmf.base.client.ModelBase;
+import com.commercetools.api.models.channel.ChannelReference;
+import com.commercetools.api.models.common.BaseResource;
+import com.commercetools.api.models.common.CreatedBy;
+import com.commercetools.api.models.common.LastModifiedBy;
+import com.commercetools.api.models.common.LocalizedString;
+import com.commercetools.api.models.store.ProductSelectionSetting;
+import com.commercetools.api.models.store_country.StoreCountry;
+import com.commercetools.api.models.type.CustomFields;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.ModelBase;
+import javax.validation.Valid;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.annotation.*;
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
  * Store
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class StoreImpl implements Store, ModelBase {
 
+    
     private String id;
-
+    
+    
     private Long version;
-
+    
+    
     private java.time.ZonedDateTime createdAt;
-
+    
+    
     private java.time.ZonedDateTime lastModifiedAt;
-
+    
+    
     private com.commercetools.api.models.common.LastModifiedBy lastModifiedBy;
-
+    
+    
     private com.commercetools.api.models.common.CreatedBy createdBy;
-
+    
+    
     private String key;
-
+    
+    
     private com.commercetools.api.models.common.LocalizedString name;
-
+    
+    
     private java.util.List<String> languages;
-
+    
+    
     private java.util.List<com.commercetools.api.models.store_country.StoreCountry> countries;
-
+    
+    
     private java.util.List<com.commercetools.api.models.channel.ChannelReference> distributionChannels;
-
+    
+    
     private java.util.List<com.commercetools.api.models.channel.ChannelReference> supplyChannels;
-
+    
+    
     private java.util.List<com.commercetools.api.models.store.ProductSelectionSetting> productSelections;
-
+    
+    
     private com.commercetools.api.models.type.CustomFields custom;
 
     /**
      * create instance with all properties
      */
     @JsonCreator
-    StoreImpl(@JsonProperty("id") final String id, @JsonProperty("version") final Long version,
-            @JsonProperty("createdAt") final java.time.ZonedDateTime createdAt,
-            @JsonProperty("lastModifiedAt") final java.time.ZonedDateTime lastModifiedAt,
-            @JsonProperty("lastModifiedBy") final com.commercetools.api.models.common.LastModifiedBy lastModifiedBy,
-            @JsonProperty("createdBy") final com.commercetools.api.models.common.CreatedBy createdBy,
-            @JsonProperty("key") final String key,
-            @JsonProperty("name") final com.commercetools.api.models.common.LocalizedString name,
-            @JsonProperty("languages") final java.util.List<String> languages,
-            @JsonProperty("countries") final java.util.List<com.commercetools.api.models.store_country.StoreCountry> countries,
-            @JsonProperty("distributionChannels") final java.util.List<com.commercetools.api.models.channel.ChannelReference> distributionChannels,
-            @JsonProperty("supplyChannels") final java.util.List<com.commercetools.api.models.channel.ChannelReference> supplyChannels,
-            @JsonProperty("productSelections") final java.util.List<com.commercetools.api.models.store.ProductSelectionSetting> productSelections,
-            @JsonProperty("custom") final com.commercetools.api.models.type.CustomFields custom) {
+    StoreImpl(@JsonProperty("id") final String id, @JsonProperty("version") final Long version, @JsonProperty("createdAt") final java.time.ZonedDateTime createdAt, @JsonProperty("lastModifiedAt") final java.time.ZonedDateTime lastModifiedAt, @JsonProperty("lastModifiedBy") final com.commercetools.api.models.common.LastModifiedBy lastModifiedBy, @JsonProperty("createdBy") final com.commercetools.api.models.common.CreatedBy createdBy, @JsonProperty("key") final String key, @JsonProperty("name") final com.commercetools.api.models.common.LocalizedString name, @JsonProperty("languages") final java.util.List<String> languages, @JsonProperty("countries") final java.util.List<com.commercetools.api.models.store_country.StoreCountry> countries, @JsonProperty("distributionChannels") final java.util.List<com.commercetools.api.models.channel.ChannelReference> distributionChannels, @JsonProperty("supplyChannels") final java.util.List<com.commercetools.api.models.channel.ChannelReference> supplyChannels, @JsonProperty("productSelections") final java.util.List<com.commercetools.api.models.store.ProductSelectionSetting> productSelections, @JsonProperty("custom") final com.commercetools.api.models.type.CustomFields custom) {
         this.id = id;
         this.version = version;
         this.createdAt = createdAt;
@@ -80,7 +96,6 @@ public class StoreImpl implements Store, ModelBase {
         this.productSelections = productSelections;
         this.custom = custom;
     }
-
     /**
      * create empty instance
      */
@@ -90,99 +105,99 @@ public class StoreImpl implements Store, ModelBase {
     /**
      *  <p>Unique ID of the Store.</p>
      */
-
-    public String getId() {
+    
+    public String getId(){
         return this.id;
     }
-
+    
     /**
      *  <p>Current version of the Store.</p>
      */
-
-    public Long getVersion() {
+    
+    public Long getVersion(){
         return this.version;
     }
-
+    
     /**
      *  <p>Date and time (UTC) the Store was initially created.</p>
      */
-
-    public java.time.ZonedDateTime getCreatedAt() {
+    
+    public java.time.ZonedDateTime getCreatedAt(){
         return this.createdAt;
     }
-
+    
     /**
      *  <p>Date and time (UTC) the Store was last updated.</p>
      */
-
-    public java.time.ZonedDateTime getLastModifiedAt() {
+    
+    public java.time.ZonedDateTime getLastModifiedAt(){
         return this.lastModifiedAt;
     }
-
+    
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      */
-
-    public com.commercetools.api.models.common.LastModifiedBy getLastModifiedBy() {
+    
+    public com.commercetools.api.models.common.LastModifiedBy getLastModifiedBy(){
         return this.lastModifiedBy;
     }
-
+    
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      */
-
-    public com.commercetools.api.models.common.CreatedBy getCreatedBy() {
+    
+    public com.commercetools.api.models.common.CreatedBy getCreatedBy(){
         return this.createdBy;
     }
-
+    
     /**
      *  <p>User-defined unique and immutable identifier for the Store.</p>
      */
-
-    public String getKey() {
+    
+    public String getKey(){
         return this.key;
     }
-
+    
     /**
      *  <p>Name of the Store.</p>
      */
-
-    public com.commercetools.api.models.common.LocalizedString getName() {
+    
+    public com.commercetools.api.models.common.LocalizedString getName(){
         return this.name;
     }
-
+    
     /**
      *  <p>Languages configured for the Store.</p>
      */
-
-    public java.util.List<String> getLanguages() {
+    
+    public java.util.List<String> getLanguages(){
         return this.languages;
     }
-
+    
     /**
      *  <p>Countries defined for the Store.</p>
      */
-
-    public java.util.List<com.commercetools.api.models.store_country.StoreCountry> getCountries() {
+    
+    public java.util.List<com.commercetools.api.models.store_country.StoreCountry> getCountries(){
         return this.countries;
     }
-
+    
     /**
      *  <p>Product Distribution Channels allowed for the Store.</p>
      */
-
-    public java.util.List<com.commercetools.api.models.channel.ChannelReference> getDistributionChannels() {
+    
+    public java.util.List<com.commercetools.api.models.channel.ChannelReference> getDistributionChannels(){
         return this.distributionChannels;
     }
-
+    
     /**
      *  <p>Inventory Supply Channels allowed for the Store.</p>
      */
-
-    public java.util.List<com.commercetools.api.models.channel.ChannelReference> getSupplyChannels() {
+    
+    public java.util.List<com.commercetools.api.models.channel.ChannelReference> getSupplyChannels(){
         return this.supplyChannels;
     }
-
+    
     /**
      *  <p>Controls availability of Products for this Store via Product Selections:</p>
      *  <ul>
@@ -192,111 +207,124 @@ public class StoreImpl implements Store, ModelBase {
      *   <li>If at least an <code>active</code> Product Selection is provided, only <code>active</code> Product Selections are considered to compute the availlability in this Store.</li>
      *  </ul>
      */
-
-    public java.util.List<com.commercetools.api.models.store.ProductSelectionSetting> getProductSelections() {
+    
+    public java.util.List<com.commercetools.api.models.store.ProductSelectionSetting> getProductSelections(){
         return this.productSelections;
     }
-
+    
     /**
      *  <p>Custom fields for the Store.</p>
      */
-
-    public com.commercetools.api.models.type.CustomFields getCustom() {
+    
+    public com.commercetools.api.models.type.CustomFields getCustom(){
         return this.custom;
     }
 
-    public void setId(final String id) {
+    
+    public void setId(final String id){
         this.id = id;
     }
-
-    public void setVersion(final Long version) {
+    
+    
+    public void setVersion(final Long version){
         this.version = version;
     }
-
-    public void setCreatedAt(final java.time.ZonedDateTime createdAt) {
+    
+    
+    public void setCreatedAt(final java.time.ZonedDateTime createdAt){
         this.createdAt = createdAt;
     }
-
-    public void setLastModifiedAt(final java.time.ZonedDateTime lastModifiedAt) {
+    
+    
+    public void setLastModifiedAt(final java.time.ZonedDateTime lastModifiedAt){
         this.lastModifiedAt = lastModifiedAt;
     }
-
-    public void setLastModifiedBy(final com.commercetools.api.models.common.LastModifiedBy lastModifiedBy) {
+    
+    
+    public void setLastModifiedBy(final com.commercetools.api.models.common.LastModifiedBy lastModifiedBy){
         this.lastModifiedBy = lastModifiedBy;
     }
-
-    public void setCreatedBy(final com.commercetools.api.models.common.CreatedBy createdBy) {
+    
+    
+    public void setCreatedBy(final com.commercetools.api.models.common.CreatedBy createdBy){
         this.createdBy = createdBy;
     }
-
-    public void setKey(final String key) {
+    
+    
+    public void setKey(final String key){
         this.key = key;
     }
-
-    public void setName(final com.commercetools.api.models.common.LocalizedString name) {
+    
+    
+    public void setName(final com.commercetools.api.models.common.LocalizedString name){
         this.name = name;
     }
-
-    public void setLanguages(final String... languages) {
-        this.languages = new ArrayList<>(Arrays.asList(languages));
+    
+    
+    public void setLanguages(final String ...languages){
+       this.languages = new ArrayList<>(Arrays.asList(languages));
     }
-
-    public void setLanguages(final java.util.List<String> languages) {
-        this.languages = languages;
+    
+    
+    public void setLanguages(final java.util.List<String> languages){
+       this.languages = languages;
     }
-
-    public void setCountries(final com.commercetools.api.models.store_country.StoreCountry... countries) {
-        this.countries = new ArrayList<>(Arrays.asList(countries));
+    
+    
+    public void setCountries(final com.commercetools.api.models.store_country.StoreCountry ...countries){
+       this.countries = new ArrayList<>(Arrays.asList(countries));
     }
-
-    public void setCountries(final java.util.List<com.commercetools.api.models.store_country.StoreCountry> countries) {
-        this.countries = countries;
+    
+    
+    public void setCountries(final java.util.List<com.commercetools.api.models.store_country.StoreCountry> countries){
+       this.countries = countries;
     }
-
-    public void setDistributionChannels(
-            final com.commercetools.api.models.channel.ChannelReference... distributionChannels) {
-        this.distributionChannels = new ArrayList<>(Arrays.asList(distributionChannels));
+    
+    
+    public void setDistributionChannels(final com.commercetools.api.models.channel.ChannelReference ...distributionChannels){
+       this.distributionChannels = new ArrayList<>(Arrays.asList(distributionChannels));
     }
-
-    public void setDistributionChannels(
-            final java.util.List<com.commercetools.api.models.channel.ChannelReference> distributionChannels) {
-        this.distributionChannels = distributionChannels;
+    
+    
+    public void setDistributionChannels(final java.util.List<com.commercetools.api.models.channel.ChannelReference> distributionChannels){
+       this.distributionChannels = distributionChannels;
     }
-
-    public void setSupplyChannels(final com.commercetools.api.models.channel.ChannelReference... supplyChannels) {
-        this.supplyChannels = new ArrayList<>(Arrays.asList(supplyChannels));
+    
+    
+    public void setSupplyChannels(final com.commercetools.api.models.channel.ChannelReference ...supplyChannels){
+       this.supplyChannels = new ArrayList<>(Arrays.asList(supplyChannels));
     }
-
-    public void setSupplyChannels(
-            final java.util.List<com.commercetools.api.models.channel.ChannelReference> supplyChannels) {
-        this.supplyChannels = supplyChannels;
+    
+    
+    public void setSupplyChannels(final java.util.List<com.commercetools.api.models.channel.ChannelReference> supplyChannels){
+       this.supplyChannels = supplyChannels;
     }
-
-    public void setProductSelections(
-            final com.commercetools.api.models.store.ProductSelectionSetting... productSelections) {
-        this.productSelections = new ArrayList<>(Arrays.asList(productSelections));
+    
+    
+    public void setProductSelections(final com.commercetools.api.models.store.ProductSelectionSetting ...productSelections){
+       this.productSelections = new ArrayList<>(Arrays.asList(productSelections));
     }
-
-    public void setProductSelections(
-            final java.util.List<com.commercetools.api.models.store.ProductSelectionSetting> productSelections) {
-        this.productSelections = productSelections;
+    
+    
+    public void setProductSelections(final java.util.List<com.commercetools.api.models.store.ProductSelectionSetting> productSelections){
+       this.productSelections = productSelections;
     }
-
-    public void setCustom(final com.commercetools.api.models.type.CustomFields custom) {
+    
+    
+    public void setCustom(final com.commercetools.api.models.type.CustomFields custom){
         this.custom = custom;
     }
 
     @Override
     public boolean equals(Object o) {
-        if (this == o)
-            return true;
-
-        if (o == null || getClass() != o.getClass())
-            return false;
-
+        if (this == o) return true;
+    
+        if (o == null || getClass() != o.getClass()) return false;
+    
         StoreImpl that = (StoreImpl) o;
-
-        return new EqualsBuilder().append(id, that.id)
+    
+        return new EqualsBuilder()
+                .append(id, that.id)
                 .append(version, that.version)
                 .append(createdAt, that.createdAt)
                 .append(lastModifiedAt, that.lastModifiedAt)
@@ -312,24 +340,25 @@ public class StoreImpl implements Store, ModelBase {
                 .append(custom, that.custom)
                 .isEquals();
     }
-
+    
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(id)
-                .append(version)
-                .append(createdAt)
-                .append(lastModifiedAt)
-                .append(lastModifiedBy)
-                .append(createdBy)
-                .append(key)
-                .append(name)
-                .append(languages)
-                .append(countries)
-                .append(distributionChannels)
-                .append(supplyChannels)
-                .append(productSelections)
-                .append(custom)
-                .toHashCode();
+        return new HashCodeBuilder(17, 37)
+            .append(id)
+            .append(version)
+            .append(createdAt)
+            .append(lastModifiedAt)
+            .append(lastModifiedBy)
+            .append(createdBy)
+            .append(key)
+            .append(name)
+            .append(languages)
+            .append(countries)
+            .append(distributionChannels)
+            .append(supplyChannels)
+            .append(productSelections)
+            .append(custom)
+            .toHashCode();
     }
 
 }

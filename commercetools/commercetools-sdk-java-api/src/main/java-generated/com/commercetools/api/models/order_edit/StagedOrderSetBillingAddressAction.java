@@ -1,19 +1,21 @@
-
 package com.commercetools.api.models.order_edit;
-
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
 
 import com.commercetools.api.models.common.BaseAddress;
 import com.commercetools.api.models.order.StagedOrderUpdateAction;
+import com.commercetools.api.models.order_edit.StagedOrderSetBillingAddressActionImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * StagedOrderSetBillingAddressAction
@@ -25,9 +27,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     StagedOrderSetBillingAddressAction stagedOrderSetBillingAddressAction = StagedOrderSetBillingAddressAction.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = StagedOrderSetBillingAddressActionImpl.class)
 public interface StagedOrderSetBillingAddressAction extends StagedOrderUpdateAction {
 
@@ -48,16 +53,18 @@ public interface StagedOrderSetBillingAddressAction extends StagedOrderUpdateAct
      *  <p>Polymorphic base type that represents a postal address and contact details. Depending on the read or write action, it can be either Address or AddressDraft that only differ in the data type for the optional <code>custom</code> field.</p>
      * @param address value to be set
      */
-
+    
     public void setAddress(final BaseAddress address);
+    
 
     /**
      * factory method
      * @return instance of StagedOrderSetBillingAddressAction
      */
-    public static StagedOrderSetBillingAddressAction of() {
+    public static StagedOrderSetBillingAddressAction of(){
         return new StagedOrderSetBillingAddressActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy StagedOrderSetBillingAddressAction
@@ -76,8 +83,7 @@ public interface StagedOrderSetBillingAddressAction extends StagedOrderUpdateAct
      * @return copy instance
      */
     @Nullable
-    public static StagedOrderSetBillingAddressAction deepCopy(
-            @Nullable final StagedOrderSetBillingAddressAction template) {
+    public static StagedOrderSetBillingAddressAction deepCopy(@Nullable final StagedOrderSetBillingAddressAction template) {
         if (template == null) {
             return null;
         }
@@ -93,7 +99,7 @@ public interface StagedOrderSetBillingAddressAction extends StagedOrderUpdateAct
     public static StagedOrderSetBillingAddressActionBuilder builder() {
         return StagedOrderSetBillingAddressActionBuilder.of();
     }
-
+    
     /**
      * create builder for StagedOrderSetBillingAddressAction instance
      * @param template instance with prefilled values for the builder
@@ -102,6 +108,7 @@ public interface StagedOrderSetBillingAddressAction extends StagedOrderUpdateAct
     public static StagedOrderSetBillingAddressActionBuilder builder(final StagedOrderSetBillingAddressAction template) {
         return StagedOrderSetBillingAddressActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -112,7 +119,7 @@ public interface StagedOrderSetBillingAddressAction extends StagedOrderUpdateAct
     default <T> T withStagedOrderSetBillingAddressAction(Function<StagedOrderSetBillingAddressAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

@@ -1,9 +1,13 @@
-
 package com.commercetools.importapi.models.importrequests;
 
+import com.commercetools.importapi.models.common.ImportResourceType;
+import com.commercetools.importapi.models.importrequests.ImportRequest;
+import com.commercetools.importapi.models.standalone_prices.StandalonePriceImport;
+import com.commercetools.importapi.models.importrequests.StandalonePriceImportRequest;
+import javax.annotation.Nullable;
 import java.util.*;
 import java.util.function.Function;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -17,11 +21,16 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .plusResources(resourcesBuilder -> resourcesBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class StandalonePriceImportRequestBuilder implements Builder<StandalonePriceImportRequest> {
 
+    
+    
     private java.util.List<com.commercetools.importapi.models.standalone_prices.StandalonePriceImport> resources;
 
     /**
@@ -29,102 +38,93 @@ public class StandalonePriceImportRequestBuilder implements Builder<StandalonePr
      * @param resources value to be set
      * @return Builder
      */
-
-    public StandalonePriceImportRequestBuilder resources(
-            final com.commercetools.importapi.models.standalone_prices.StandalonePriceImport... resources) {
+    
+    public StandalonePriceImportRequestBuilder resources( final com.commercetools.importapi.models.standalone_prices.StandalonePriceImport ...resources) {
         this.resources = new ArrayList<>(Arrays.asList(resources));
         return this;
     }
-
+    
     /**
      *  <p>The Standalone Price import resources of this request.</p>
      * @param resources value to be set
      * @return Builder
      */
-
-    public StandalonePriceImportRequestBuilder resources(
-            final java.util.List<com.commercetools.importapi.models.standalone_prices.StandalonePriceImport> resources) {
+    
+    public StandalonePriceImportRequestBuilder resources( final java.util.List<com.commercetools.importapi.models.standalone_prices.StandalonePriceImport> resources) {
         this.resources = resources;
         return this;
     }
-
+    
     /**
      *  <p>The Standalone Price import resources of this request.</p>
      * @param resources value to be set
      * @return Builder
      */
-
-    public StandalonePriceImportRequestBuilder plusResources(
-            final com.commercetools.importapi.models.standalone_prices.StandalonePriceImport... resources) {
+    
+    public StandalonePriceImportRequestBuilder plusResources( final com.commercetools.importapi.models.standalone_prices.StandalonePriceImport ...resources) {
         if (this.resources == null) {
             this.resources = new ArrayList<>();
         }
         this.resources.addAll(Arrays.asList(resources));
         return this;
     }
-
+    
+    
+    
     /**
      *  <p>The Standalone Price import resources of this request.</p>
      * @param builder function to build the resources value
      * @return Builder
      */
-
-    public StandalonePriceImportRequestBuilder plusResources(
-            Function<com.commercetools.importapi.models.standalone_prices.StandalonePriceImportBuilder, com.commercetools.importapi.models.standalone_prices.StandalonePriceImportBuilder> builder) {
+    
+    public StandalonePriceImportRequestBuilder plusResources(Function<com.commercetools.importapi.models.standalone_prices.StandalonePriceImportBuilder, com.commercetools.importapi.models.standalone_prices.StandalonePriceImportBuilder> builder) {
         if (this.resources == null) {
             this.resources = new ArrayList<>();
         }
-        this.resources.add(
-            builder.apply(com.commercetools.importapi.models.standalone_prices.StandalonePriceImportBuilder.of())
-                    .build());
+        this.resources.add(builder.apply(com.commercetools.importapi.models.standalone_prices.StandalonePriceImportBuilder.of()).build());
         return this;
     }
-
+    
     /**
      *  <p>The Standalone Price import resources of this request.</p>
      * @param builder function to build the resources value
      * @return Builder
      */
-
-    public StandalonePriceImportRequestBuilder withResources(
-            Function<com.commercetools.importapi.models.standalone_prices.StandalonePriceImportBuilder, com.commercetools.importapi.models.standalone_prices.StandalonePriceImportBuilder> builder) {
+    
+    public StandalonePriceImportRequestBuilder withResources(Function<com.commercetools.importapi.models.standalone_prices.StandalonePriceImportBuilder, com.commercetools.importapi.models.standalone_prices.StandalonePriceImportBuilder> builder) {
         this.resources = new ArrayList<>();
-        this.resources.add(
-            builder.apply(com.commercetools.importapi.models.standalone_prices.StandalonePriceImportBuilder.of())
-                    .build());
+        this.resources.add(builder.apply(com.commercetools.importapi.models.standalone_prices.StandalonePriceImportBuilder.of()).build());
         return this;
     }
-
+    
     /**
      *  <p>The Standalone Price import resources of this request.</p>
      * @param builder function to build the resources value
      * @return Builder
      */
-
-    public StandalonePriceImportRequestBuilder addResources(
-            Function<com.commercetools.importapi.models.standalone_prices.StandalonePriceImportBuilder, com.commercetools.importapi.models.standalone_prices.StandalonePriceImport> builder) {
-        return plusResources(
-            builder.apply(com.commercetools.importapi.models.standalone_prices.StandalonePriceImportBuilder.of()));
+    
+    public StandalonePriceImportRequestBuilder addResources(Function<com.commercetools.importapi.models.standalone_prices.StandalonePriceImportBuilder, com.commercetools.importapi.models.standalone_prices.StandalonePriceImport> builder) {
+        return plusResources(builder.apply(com.commercetools.importapi.models.standalone_prices.StandalonePriceImportBuilder.of()));
     }
-
+    
     /**
      *  <p>The Standalone Price import resources of this request.</p>
      * @param builder function to build the resources value
      * @return Builder
      */
-
-    public StandalonePriceImportRequestBuilder setResources(
-            Function<com.commercetools.importapi.models.standalone_prices.StandalonePriceImportBuilder, com.commercetools.importapi.models.standalone_prices.StandalonePriceImport> builder) {
-        return resources(
-            builder.apply(com.commercetools.importapi.models.standalone_prices.StandalonePriceImportBuilder.of()));
+    
+    public StandalonePriceImportRequestBuilder setResources(Function<com.commercetools.importapi.models.standalone_prices.StandalonePriceImportBuilder, com.commercetools.importapi.models.standalone_prices.StandalonePriceImport> builder) {
+        return resources(builder.apply(com.commercetools.importapi.models.standalone_prices.StandalonePriceImportBuilder.of()));
     }
+                    
 
     /**
      *  <p>The Standalone Price import resources of this request.</p>
      * @return resources
      */
-
-    public java.util.List<com.commercetools.importapi.models.standalone_prices.StandalonePriceImport> getResources() {
+    
+    
+    public java.util.List<com.commercetools.importapi.models.standalone_prices.StandalonePriceImport> getResources(){
         return this.resources;
     }
 
@@ -136,7 +136,7 @@ public class StandalonePriceImportRequestBuilder implements Builder<StandalonePr
         Objects.requireNonNull(resources, StandalonePriceImportRequest.class + ": resources is missing");
         return new StandalonePriceImportRequestImpl(resources);
     }
-
+    
     /**
      * builds StandalonePriceImportRequest without checking for non-null required values
      * @return StandalonePriceImportRequest
@@ -147,7 +147,7 @@ public class StandalonePriceImportRequestBuilder implements Builder<StandalonePr
 
     /**
      * factory method for an instance of StandalonePriceImportRequestBuilder
-     * @return builder
+     * @return builder 
      */
     public static StandalonePriceImportRequestBuilder of() {
         return new StandalonePriceImportRequestBuilder();

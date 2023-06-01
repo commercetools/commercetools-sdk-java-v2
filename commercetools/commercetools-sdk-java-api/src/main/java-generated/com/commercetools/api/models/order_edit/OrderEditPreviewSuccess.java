@@ -1,20 +1,22 @@
-
 package com.commercetools.api.models.order_edit;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-import java.util.stream.Collectors;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
 import com.commercetools.api.models.message.MessagePayload;
+import com.commercetools.api.models.order_edit.OrderEditResult;
+import com.commercetools.api.models.order_edit.StagedOrder;
+import com.commercetools.api.models.order_edit.OrderEditPreviewSuccessImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * OrderEditPreviewSuccess
@@ -28,9 +30,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .plusMessagePayloads(messagePayloadsBuilder -> messagePayloadsBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = OrderEditPreviewSuccessImpl.class)
 public interface OrderEditPreviewSuccess extends OrderEditResult {
 
@@ -47,7 +52,6 @@ public interface OrderEditPreviewSuccess extends OrderEditResult {
     @Valid
     @JsonProperty("preview")
     public StagedOrder getPreview();
-
     /**
      *
      * @return messagePayloads
@@ -61,31 +65,32 @@ public interface OrderEditPreviewSuccess extends OrderEditResult {
      * set preview
      * @param preview value to be set
      */
-
+    
     public void setPreview(final StagedOrder preview);
-
+    
+    
     /**
      * set messagePayloads
      * @param messagePayloads values to be set
      */
-
+    
     @JsonIgnore
-    public void setMessagePayloads(final MessagePayload... messagePayloads);
-
+    public void setMessagePayloads(final MessagePayload ...messagePayloads);
     /**
      * set messagePayloads
      * @param messagePayloads values to be set
      */
-
+    
     public void setMessagePayloads(final List<MessagePayload> messagePayloads);
 
     /**
      * factory method
      * @return instance of OrderEditPreviewSuccess
      */
-    public static OrderEditPreviewSuccess of() {
+    public static OrderEditPreviewSuccess of(){
         return new OrderEditPreviewSuccessImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy OrderEditPreviewSuccess
@@ -112,9 +117,7 @@ public interface OrderEditPreviewSuccess extends OrderEditResult {
         OrderEditPreviewSuccessImpl instance = new OrderEditPreviewSuccessImpl();
         instance.setPreview(com.commercetools.api.models.order_edit.StagedOrder.deepCopy(template.getPreview()));
         instance.setMessagePayloads(Optional.ofNullable(template.getMessagePayloads())
-                .map(t -> t.stream()
-                        .map(com.commercetools.api.models.message.MessagePayload::deepCopy)
-                        .collect(Collectors.toList()))
+                .map(t -> t.stream().map(com.commercetools.api.models.message.MessagePayload::deepCopy).collect(Collectors.toList()))
                 .orElse(null));
         return instance;
     }
@@ -126,7 +129,7 @@ public interface OrderEditPreviewSuccess extends OrderEditResult {
     public static OrderEditPreviewSuccessBuilder builder() {
         return OrderEditPreviewSuccessBuilder.of();
     }
-
+    
     /**
      * create builder for OrderEditPreviewSuccess instance
      * @param template instance with prefilled values for the builder
@@ -135,6 +138,7 @@ public interface OrderEditPreviewSuccess extends OrderEditResult {
     public static OrderEditPreviewSuccessBuilder builder(final OrderEditPreviewSuccess template) {
         return OrderEditPreviewSuccessBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -145,7 +149,7 @@ public interface OrderEditPreviewSuccess extends OrderEditResult {
     default <T> T withOrderEditPreviewSuccess(Function<OrderEditPreviewSuccess, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

@@ -1,10 +1,11 @@
-
 package com.commercetools.api.models.category;
 
-import java.util.*;
-
+import com.commercetools.api.models.category.CategoryUpdateAction;
+import com.commercetools.api.models.category.CategorySetKeyAction;
 import javax.annotation.Nullable;
-
+import java.util.*;
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -17,32 +18,39 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     CategorySetKeyAction categorySetKeyAction = CategorySetKeyAction.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class CategorySetKeyActionBuilder implements Builder<CategorySetKeyAction> {
 
+    
     @Nullable
     private String key;
 
+    
     /**
      *  <p>Value to set. If empty, any existing value will be removed.</p>
      * @param key value to be set
      * @return Builder
      */
-
+    
     public CategorySetKeyActionBuilder key(@Nullable final String key) {
         this.key = key;
         return this;
     }
+    
+    
 
     /**
      *  <p>Value to set. If empty, any existing value will be removed.</p>
      * @return key
      */
-
+    
     @Nullable
-    public String getKey() {
+    public String getKey(){
         return this.key;
     }
 
@@ -53,7 +61,7 @@ public class CategorySetKeyActionBuilder implements Builder<CategorySetKeyAction
     public CategorySetKeyAction build() {
         return new CategorySetKeyActionImpl(key);
     }
-
+    
     /**
      * builds CategorySetKeyAction without checking for non-null required values
      * @return CategorySetKeyAction
@@ -64,7 +72,7 @@ public class CategorySetKeyActionBuilder implements Builder<CategorySetKeyAction
 
     /**
      * factory method for an instance of CategorySetKeyActionBuilder
-     * @return builder
+     * @return builder 
      */
     public static CategorySetKeyActionBuilder of() {
         return new CategorySetKeyActionBuilder();

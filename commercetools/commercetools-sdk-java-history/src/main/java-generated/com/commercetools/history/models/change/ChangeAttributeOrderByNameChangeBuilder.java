@@ -1,8 +1,11 @@
-
 package com.commercetools.history.models.change;
 
+import com.commercetools.history.models.change.Change;
+import com.commercetools.history.models.change.ChangeAttributeOrderByNameChange;
+import javax.annotation.Nullable;
 import java.util.*;
-
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -18,124 +21,145 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .plusNextValue(nextValueBuilder -> nextValueBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class ChangeAttributeOrderByNameChangeBuilder implements Builder<ChangeAttributeOrderByNameChange> {
 
+    
+    
     private String change;
-
+    
+    
+    
     private java.util.List<String> previousValue;
-
+    
+    
+    
     private java.util.List<String> nextValue;
 
+    
     /**
      *  <p>Update action for <code>changeAttributeOrderByName</code> on product types</p>
      * @param change value to be set
      * @return Builder
      */
-
-    public ChangeAttributeOrderByNameChangeBuilder change(final String change) {
+    
+    public ChangeAttributeOrderByNameChangeBuilder change( final String change) {
         this.change = change;
         return this;
     }
-
+    
+    
+    
     /**
      * set values to the previousValue
      * @param previousValue value to be set
      * @return Builder
      */
-
-    public ChangeAttributeOrderByNameChangeBuilder previousValue(final String... previousValue) {
+    
+    public ChangeAttributeOrderByNameChangeBuilder previousValue( final String ...previousValue) {
         this.previousValue = new ArrayList<>(Arrays.asList(previousValue));
         return this;
     }
-
+    
     /**
      * set value to the previousValue
      * @param previousValue value to be set
      * @return Builder
      */
-
-    public ChangeAttributeOrderByNameChangeBuilder previousValue(final java.util.List<String> previousValue) {
+    
+    public ChangeAttributeOrderByNameChangeBuilder previousValue( final java.util.List<String> previousValue) {
         this.previousValue = previousValue;
         return this;
     }
-
+    
     /**
      * add values to the previousValue
      * @param previousValue value to be set
      * @return Builder
      */
-
-    public ChangeAttributeOrderByNameChangeBuilder plusPreviousValue(final String... previousValue) {
+    
+    public ChangeAttributeOrderByNameChangeBuilder plusPreviousValue( final String ...previousValue) {
         if (this.previousValue == null) {
             this.previousValue = new ArrayList<>();
         }
         this.previousValue.addAll(Arrays.asList(previousValue));
         return this;
     }
-
+    
+    
+    
+    
     /**
      * set values to the nextValue
      * @param nextValue value to be set
      * @return Builder
      */
-
-    public ChangeAttributeOrderByNameChangeBuilder nextValue(final String... nextValue) {
+    
+    public ChangeAttributeOrderByNameChangeBuilder nextValue( final String ...nextValue) {
         this.nextValue = new ArrayList<>(Arrays.asList(nextValue));
         return this;
     }
-
+    
     /**
      * set value to the nextValue
      * @param nextValue value to be set
      * @return Builder
      */
-
-    public ChangeAttributeOrderByNameChangeBuilder nextValue(final java.util.List<String> nextValue) {
+    
+    public ChangeAttributeOrderByNameChangeBuilder nextValue( final java.util.List<String> nextValue) {
         this.nextValue = nextValue;
         return this;
     }
-
+    
     /**
      * add values to the nextValue
      * @param nextValue value to be set
      * @return Builder
      */
-
-    public ChangeAttributeOrderByNameChangeBuilder plusNextValue(final String... nextValue) {
+    
+    public ChangeAttributeOrderByNameChangeBuilder plusNextValue( final String ...nextValue) {
         if (this.nextValue == null) {
             this.nextValue = new ArrayList<>();
         }
         this.nextValue.addAll(Arrays.asList(nextValue));
         return this;
     }
+    
+    
+    
 
     /**
      *  <p>Update action for <code>changeAttributeOrderByName</code> on product types</p>
      * @return change
      */
-
-    public String getChange() {
+    
+    
+    public String getChange(){
         return this.change;
     }
-
+    
     /**
      * value of previousValue}
      * @return previousValue
      */
-
-    public java.util.List<String> getPreviousValue() {
+    
+    
+    public java.util.List<String> getPreviousValue(){
         return this.previousValue;
     }
-
+    
     /**
      * value of nextValue}
      * @return nextValue
      */
-
-    public java.util.List<String> getNextValue() {
+    
+    
+    public java.util.List<String> getNextValue(){
         return this.nextValue;
     }
 
@@ -149,7 +173,7 @@ public class ChangeAttributeOrderByNameChangeBuilder implements Builder<ChangeAt
         Objects.requireNonNull(nextValue, ChangeAttributeOrderByNameChange.class + ": nextValue is missing");
         return new ChangeAttributeOrderByNameChangeImpl(change, previousValue, nextValue);
     }
-
+    
     /**
      * builds ChangeAttributeOrderByNameChange without checking for non-null required values
      * @return ChangeAttributeOrderByNameChange
@@ -160,7 +184,7 @@ public class ChangeAttributeOrderByNameChangeBuilder implements Builder<ChangeAt
 
     /**
      * factory method for an instance of ChangeAttributeOrderByNameChangeBuilder
-     * @return builder
+     * @return builder 
      */
     public static ChangeAttributeOrderByNameChangeBuilder of() {
         return new ChangeAttributeOrderByNameChangeBuilder();

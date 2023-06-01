@@ -1,11 +1,12 @@
-
 package com.commercetools.api.models.me;
 
+import com.commercetools.api.models.channel.ChannelResourceIdentifier;
+import com.commercetools.api.models.me.MyCartUpdateAction;
+import com.commercetools.api.models.me.MyCartSetLineItemSupplyChannelAction;
+import javax.annotation.Nullable;
 import java.util.*;
 import java.util.function.Function;
-
-import javax.annotation.Nullable;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -19,27 +20,37 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .lineItemId("{lineItemId}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class MyCartSetLineItemSupplyChannelActionBuilder implements Builder<MyCartSetLineItemSupplyChannelAction> {
 
+    
+    
     private String lineItemId;
-
+    
+    
     @Nullable
     private com.commercetools.api.models.channel.ChannelResourceIdentifier supplyChannel;
 
+    
     /**
      *  <p><code>id</code> of the LineItem to update.</p>
      * @param lineItemId value to be set
      * @return Builder
      */
-
-    public MyCartSetLineItemSupplyChannelActionBuilder lineItemId(final String lineItemId) {
+    
+    public MyCartSetLineItemSupplyChannelActionBuilder lineItemId( final String lineItemId) {
         this.lineItemId = lineItemId;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <ul>
      *   <li>If present, a Reference to the Channel is set for the LineItem specified by <code>lineItemId</code>.</li>
@@ -48,14 +59,12 @@ public class MyCartSetLineItemSupplyChannelActionBuilder implements Builder<MyCa
      * @param builder function to build the supplyChannel value
      * @return Builder
      */
-
-    public MyCartSetLineItemSupplyChannelActionBuilder supplyChannel(
-            Function<com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder, com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder> builder) {
-        this.supplyChannel = builder.apply(com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder.of())
-                .build();
+    
+    public MyCartSetLineItemSupplyChannelActionBuilder supplyChannel(Function<com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder, com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder> builder) {
+        this.supplyChannel = builder.apply(com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder.of()).build();
         return this;
     }
-
+    
     /**
      *  <ul>
      *   <li>If present, a Reference to the Channel is set for the LineItem specified by <code>lineItemId</code>.</li>
@@ -64,13 +73,12 @@ public class MyCartSetLineItemSupplyChannelActionBuilder implements Builder<MyCa
      * @param builder function to build the supplyChannel value
      * @return Builder
      */
-
-    public MyCartSetLineItemSupplyChannelActionBuilder withSupplyChannel(
-            Function<com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder, com.commercetools.api.models.channel.ChannelResourceIdentifier> builder) {
+    
+    public MyCartSetLineItemSupplyChannelActionBuilder withSupplyChannel(Function<com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder, com.commercetools.api.models.channel.ChannelResourceIdentifier> builder) {
         this.supplyChannel = builder.apply(com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder.of());
         return this;
     }
-
+                    
     /**
      *  <ul>
      *   <li>If present, a Reference to the Channel is set for the LineItem specified by <code>lineItemId</code>.</li>
@@ -79,22 +87,24 @@ public class MyCartSetLineItemSupplyChannelActionBuilder implements Builder<MyCa
      * @param supplyChannel value to be set
      * @return Builder
      */
-
-    public MyCartSetLineItemSupplyChannelActionBuilder supplyChannel(
-            @Nullable final com.commercetools.api.models.channel.ChannelResourceIdentifier supplyChannel) {
+    
+    public MyCartSetLineItemSupplyChannelActionBuilder supplyChannel(@Nullable final com.commercetools.api.models.channel.ChannelResourceIdentifier supplyChannel) {
         this.supplyChannel = supplyChannel;
         return this;
     }
+    
+    
 
     /**
      *  <p><code>id</code> of the LineItem to update.</p>
      * @return lineItemId
      */
-
-    public String getLineItemId() {
+    
+    
+    public String getLineItemId(){
         return this.lineItemId;
     }
-
+    
     /**
      *  <ul>
      *   <li>If present, a Reference to the Channel is set for the LineItem specified by <code>lineItemId</code>.</li>
@@ -102,9 +112,9 @@ public class MyCartSetLineItemSupplyChannelActionBuilder implements Builder<MyCa
      *  </ul>
      * @return supplyChannel
      */
-
+    
     @Nullable
-    public com.commercetools.api.models.channel.ChannelResourceIdentifier getSupplyChannel() {
+    public com.commercetools.api.models.channel.ChannelResourceIdentifier getSupplyChannel(){
         return this.supplyChannel;
     }
 
@@ -116,7 +126,7 @@ public class MyCartSetLineItemSupplyChannelActionBuilder implements Builder<MyCa
         Objects.requireNonNull(lineItemId, MyCartSetLineItemSupplyChannelAction.class + ": lineItemId is missing");
         return new MyCartSetLineItemSupplyChannelActionImpl(lineItemId, supplyChannel);
     }
-
+    
     /**
      * builds MyCartSetLineItemSupplyChannelAction without checking for non-null required values
      * @return MyCartSetLineItemSupplyChannelAction
@@ -127,7 +137,7 @@ public class MyCartSetLineItemSupplyChannelActionBuilder implements Builder<MyCa
 
     /**
      * factory method for an instance of MyCartSetLineItemSupplyChannelActionBuilder
-     * @return builder
+     * @return builder 
      */
     public static MyCartSetLineItemSupplyChannelActionBuilder of() {
         return new MyCartSetLineItemSupplyChannelActionBuilder();

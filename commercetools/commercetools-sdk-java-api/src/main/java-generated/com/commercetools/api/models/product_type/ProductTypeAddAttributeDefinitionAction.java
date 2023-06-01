@@ -1,18 +1,21 @@
-
 package com.commercetools.api.models.product_type;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
+import com.commercetools.api.models.product_type.AttributeDefinitionDraft;
+import com.commercetools.api.models.product_type.ProductTypeUpdateAction;
+import com.commercetools.api.models.product_type.ProductTypeAddAttributeDefinitionActionImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * ProductTypeAddAttributeDefinitionAction
@@ -25,9 +28,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .attribute(attributeBuilder -> attributeBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = ProductTypeAddAttributeDefinitionActionImpl.class)
 public interface ProductTypeAddAttributeDefinitionAction extends ProductTypeUpdateAction {
 
@@ -49,16 +55,18 @@ public interface ProductTypeAddAttributeDefinitionAction extends ProductTypeUpda
      *  <p>Value to append to <code>attributes</code>.</p>
      * @param attribute value to be set
      */
-
+    
     public void setAttribute(final AttributeDefinitionDraft attribute);
+    
 
     /**
      * factory method
      * @return instance of ProductTypeAddAttributeDefinitionAction
      */
-    public static ProductTypeAddAttributeDefinitionAction of() {
+    public static ProductTypeAddAttributeDefinitionAction of(){
         return new ProductTypeAddAttributeDefinitionActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy ProductTypeAddAttributeDefinitionAction
@@ -77,14 +85,12 @@ public interface ProductTypeAddAttributeDefinitionAction extends ProductTypeUpda
      * @return copy instance
      */
     @Nullable
-    public static ProductTypeAddAttributeDefinitionAction deepCopy(
-            @Nullable final ProductTypeAddAttributeDefinitionAction template) {
+    public static ProductTypeAddAttributeDefinitionAction deepCopy(@Nullable final ProductTypeAddAttributeDefinitionAction template) {
         if (template == null) {
             return null;
         }
         ProductTypeAddAttributeDefinitionActionImpl instance = new ProductTypeAddAttributeDefinitionActionImpl();
-        instance.setAttribute(
-            com.commercetools.api.models.product_type.AttributeDefinitionDraft.deepCopy(template.getAttribute()));
+        instance.setAttribute(com.commercetools.api.models.product_type.AttributeDefinitionDraft.deepCopy(template.getAttribute()));
         return instance;
     }
 
@@ -95,16 +101,16 @@ public interface ProductTypeAddAttributeDefinitionAction extends ProductTypeUpda
     public static ProductTypeAddAttributeDefinitionActionBuilder builder() {
         return ProductTypeAddAttributeDefinitionActionBuilder.of();
     }
-
+    
     /**
      * create builder for ProductTypeAddAttributeDefinitionAction instance
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static ProductTypeAddAttributeDefinitionActionBuilder builder(
-            final ProductTypeAddAttributeDefinitionAction template) {
+    public static ProductTypeAddAttributeDefinitionActionBuilder builder(final ProductTypeAddAttributeDefinitionAction template) {
         return ProductTypeAddAttributeDefinitionActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -112,11 +118,10 @@ public interface ProductTypeAddAttributeDefinitionAction extends ProductTypeUpda
      * @param helper function to map the object
      * @return mapped value
      */
-    default <T> T withProductTypeAddAttributeDefinitionAction(
-            Function<ProductTypeAddAttributeDefinitionAction, T> helper) {
+    default <T> T withProductTypeAddAttributeDefinitionAction(Function<ProductTypeAddAttributeDefinitionAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

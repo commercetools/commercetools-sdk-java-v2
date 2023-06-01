@@ -1,18 +1,21 @@
-
 package com.commercetools.api.models.common;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-
+import com.commercetools.api.models.common.BaseAddress;
 import com.commercetools.api.models.type.CustomFields;
+import com.commercetools.api.models.common.AddressImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Address type returned by read methods. Optionally, the <code>custom</code> field can be present in addition to the fields of a BaseAddress.</p>
@@ -25,11 +28,15 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .country("{country}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = AddressImpl.class)
 public interface Address extends BaseAddress, com.commercetools.api.models.Customizable<Address> {
+
 
     /**
      *  <p>Custom Fields defined for the Address.</p>
@@ -38,12 +45,11 @@ public interface Address extends BaseAddress, com.commercetools.api.models.Custo
     @Valid
     @JsonProperty("custom")
     public CustomFields getCustom();
-
     /**
      *
      * @return id
      */
-
+    
     @JsonProperty("id")
     public String getId();
 
@@ -51,23 +57,26 @@ public interface Address extends BaseAddress, com.commercetools.api.models.Custo
      *  <p>Custom Fields defined for the Address.</p>
      * @param custom value to be set
      */
-
+    
     public void setCustom(final CustomFields custom);
-
+    
+    
     /**
      * set id
      * @param id value to be set
      */
-
+    
     public void setId(final String id);
+    
 
     /**
      * factory method
      * @return instance of Address
      */
-    public static Address of() {
+    public static Address of(){
         return new AddressImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy Address
@@ -152,7 +161,7 @@ public interface Address extends BaseAddress, com.commercetools.api.models.Custo
     public static AddressBuilder builder() {
         return AddressBuilder.of();
     }
-
+    
     /**
      * create builder for Address instance
      * @param template instance with prefilled values for the builder
@@ -161,6 +170,7 @@ public interface Address extends BaseAddress, com.commercetools.api.models.Custo
     public static AddressBuilder builder(final Address template) {
         return AddressBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -171,7 +181,7 @@ public interface Address extends BaseAddress, com.commercetools.api.models.Custo
     default <T> T withAddress(Function<Address, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

@@ -1,11 +1,12 @@
-
 package com.commercetools.api.models.category;
 
+import com.commercetools.api.models.category.CategoryUpdateAction;
+import com.commercetools.api.models.common.LocalizedString;
+import com.commercetools.api.models.category.CategorySetMetaKeywordsAction;
+import javax.annotation.Nullable;
 import java.util.*;
 import java.util.function.Function;
-
-import javax.annotation.Nullable;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -18,57 +19,61 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     CategorySetMetaKeywordsAction categorySetMetaKeywordsAction = CategorySetMetaKeywordsAction.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class CategorySetMetaKeywordsActionBuilder implements Builder<CategorySetMetaKeywordsAction> {
 
+    
     @Nullable
     private com.commercetools.api.models.common.LocalizedString metaKeywords;
 
+    
     /**
      *  <p>Value to set.</p>
      * @param builder function to build the metaKeywords value
      * @return Builder
      */
-
-    public CategorySetMetaKeywordsActionBuilder metaKeywords(
-            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
+    
+    public CategorySetMetaKeywordsActionBuilder metaKeywords(Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
         this.metaKeywords = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of()).build();
         return this;
     }
-
+    
     /**
      *  <p>Value to set.</p>
      * @param builder function to build the metaKeywords value
      * @return Builder
      */
-
-    public CategorySetMetaKeywordsActionBuilder withMetaKeywords(
-            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedString> builder) {
+    
+    public CategorySetMetaKeywordsActionBuilder withMetaKeywords(Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedString> builder) {
         this.metaKeywords = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of());
         return this;
     }
-
+                    
     /**
      *  <p>Value to set.</p>
      * @param metaKeywords value to be set
      * @return Builder
      */
-
-    public CategorySetMetaKeywordsActionBuilder metaKeywords(
-            @Nullable final com.commercetools.api.models.common.LocalizedString metaKeywords) {
+    
+    public CategorySetMetaKeywordsActionBuilder metaKeywords(@Nullable final com.commercetools.api.models.common.LocalizedString metaKeywords) {
         this.metaKeywords = metaKeywords;
         return this;
     }
+    
+    
 
     /**
      *  <p>Value to set.</p>
      * @return metaKeywords
      */
-
+    
     @Nullable
-    public com.commercetools.api.models.common.LocalizedString getMetaKeywords() {
+    public com.commercetools.api.models.common.LocalizedString getMetaKeywords(){
         return this.metaKeywords;
     }
 
@@ -79,7 +84,7 @@ public class CategorySetMetaKeywordsActionBuilder implements Builder<CategorySet
     public CategorySetMetaKeywordsAction build() {
         return new CategorySetMetaKeywordsActionImpl(metaKeywords);
     }
-
+    
     /**
      * builds CategorySetMetaKeywordsAction without checking for non-null required values
      * @return CategorySetMetaKeywordsAction
@@ -90,7 +95,7 @@ public class CategorySetMetaKeywordsActionBuilder implements Builder<CategorySet
 
     /**
      * factory method for an instance of CategorySetMetaKeywordsActionBuilder
-     * @return builder
+     * @return builder 
      */
     public static CategorySetMetaKeywordsActionBuilder of() {
         return new CategorySetMetaKeywordsActionBuilder();

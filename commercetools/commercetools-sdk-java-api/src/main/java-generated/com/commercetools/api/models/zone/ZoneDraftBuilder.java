@@ -1,11 +1,11 @@
-
 package com.commercetools.api.models.zone;
 
+import com.commercetools.api.models.zone.Location;
+import com.commercetools.api.models.zone.ZoneDraft;
+import javax.annotation.Nullable;
 import java.util.*;
 import java.util.function.Function;
-
-import javax.annotation.Nullable;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -19,178 +19,194 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .name("{name}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class ZoneDraftBuilder implements Builder<ZoneDraft> {
 
+    
     @Nullable
     private String key;
-
+    
+    
+    
     private String name;
-
+    
+    
     @Nullable
     private String description;
-
+    
+    
     @Nullable
     private java.util.List<com.commercetools.api.models.zone.Location> locations;
 
+    
     /**
      *  <p>User-defined unique identifier for the Zone.</p>
      * @param key value to be set
      * @return Builder
      */
-
+    
     public ZoneDraftBuilder key(@Nullable final String key) {
         this.key = key;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Name of the Zone.</p>
      * @param name value to be set
      * @return Builder
      */
-
-    public ZoneDraftBuilder name(final String name) {
+    
+    public ZoneDraftBuilder name( final String name) {
         this.name = name;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Description of the Zone.</p>
      * @param description value to be set
      * @return Builder
      */
-
+    
     public ZoneDraftBuilder description(@Nullable final String description) {
         this.description = description;
         return this;
     }
-
+    
+    
+    
     /**
      *  <p>List of locations that belong to the Zone.</p>
      * @param locations value to be set
      * @return Builder
      */
-
-    public ZoneDraftBuilder locations(@Nullable final com.commercetools.api.models.zone.Location... locations) {
+    
+    public ZoneDraftBuilder locations(@Nullable final com.commercetools.api.models.zone.Location ...locations) {
         this.locations = new ArrayList<>(Arrays.asList(locations));
         return this;
     }
-
+    
     /**
      *  <p>List of locations that belong to the Zone.</p>
      * @param locations value to be set
      * @return Builder
      */
-
-    public ZoneDraftBuilder locations(
-            @Nullable final java.util.List<com.commercetools.api.models.zone.Location> locations) {
+    
+    public ZoneDraftBuilder locations(@Nullable final java.util.List<com.commercetools.api.models.zone.Location> locations) {
         this.locations = locations;
         return this;
     }
-
+    
     /**
      *  <p>List of locations that belong to the Zone.</p>
      * @param locations value to be set
      * @return Builder
      */
-
-    public ZoneDraftBuilder plusLocations(@Nullable final com.commercetools.api.models.zone.Location... locations) {
+    
+    public ZoneDraftBuilder plusLocations(@Nullable final com.commercetools.api.models.zone.Location ...locations) {
         if (this.locations == null) {
             this.locations = new ArrayList<>();
         }
         this.locations.addAll(Arrays.asList(locations));
         return this;
     }
-
+    
+    
+    
     /**
      *  <p>List of locations that belong to the Zone.</p>
      * @param builder function to build the locations value
      * @return Builder
      */
-
-    public ZoneDraftBuilder plusLocations(
-            Function<com.commercetools.api.models.zone.LocationBuilder, com.commercetools.api.models.zone.LocationBuilder> builder) {
+    
+    public ZoneDraftBuilder plusLocations(Function<com.commercetools.api.models.zone.LocationBuilder, com.commercetools.api.models.zone.LocationBuilder> builder) {
         if (this.locations == null) {
             this.locations = new ArrayList<>();
         }
         this.locations.add(builder.apply(com.commercetools.api.models.zone.LocationBuilder.of()).build());
         return this;
     }
-
+    
     /**
      *  <p>List of locations that belong to the Zone.</p>
      * @param builder function to build the locations value
      * @return Builder
      */
-
-    public ZoneDraftBuilder withLocations(
-            Function<com.commercetools.api.models.zone.LocationBuilder, com.commercetools.api.models.zone.LocationBuilder> builder) {
+    
+    public ZoneDraftBuilder withLocations(Function<com.commercetools.api.models.zone.LocationBuilder, com.commercetools.api.models.zone.LocationBuilder> builder) {
         this.locations = new ArrayList<>();
         this.locations.add(builder.apply(com.commercetools.api.models.zone.LocationBuilder.of()).build());
         return this;
     }
-
+    
     /**
      *  <p>List of locations that belong to the Zone.</p>
      * @param builder function to build the locations value
      * @return Builder
      */
-
-    public ZoneDraftBuilder addLocations(
-            Function<com.commercetools.api.models.zone.LocationBuilder, com.commercetools.api.models.zone.Location> builder) {
+    
+    public ZoneDraftBuilder addLocations(Function<com.commercetools.api.models.zone.LocationBuilder, com.commercetools.api.models.zone.Location> builder) {
         return plusLocations(builder.apply(com.commercetools.api.models.zone.LocationBuilder.of()));
     }
-
+    
     /**
      *  <p>List of locations that belong to the Zone.</p>
      * @param builder function to build the locations value
      * @return Builder
      */
-
-    public ZoneDraftBuilder setLocations(
-            Function<com.commercetools.api.models.zone.LocationBuilder, com.commercetools.api.models.zone.Location> builder) {
+    
+    public ZoneDraftBuilder setLocations(Function<com.commercetools.api.models.zone.LocationBuilder, com.commercetools.api.models.zone.Location> builder) {
         return locations(builder.apply(com.commercetools.api.models.zone.LocationBuilder.of()));
     }
+                    
 
     /**
      *  <p>User-defined unique identifier for the Zone.</p>
      * @return key
      */
-
+    
     @Nullable
-    public String getKey() {
+    public String getKey(){
         return this.key;
     }
-
+    
     /**
      *  <p>Name of the Zone.</p>
      * @return name
      */
-
-    public String getName() {
+    
+    
+    public String getName(){
         return this.name;
     }
-
+    
     /**
      *  <p>Description of the Zone.</p>
      * @return description
      */
-
+    
     @Nullable
-    public String getDescription() {
+    public String getDescription(){
         return this.description;
     }
-
+    
     /**
      *  <p>List of locations that belong to the Zone.</p>
      * @return locations
      */
-
+    
     @Nullable
-    public java.util.List<com.commercetools.api.models.zone.Location> getLocations() {
+    public java.util.List<com.commercetools.api.models.zone.Location> getLocations(){
         return this.locations;
     }
 
@@ -202,7 +218,7 @@ public class ZoneDraftBuilder implements Builder<ZoneDraft> {
         Objects.requireNonNull(name, ZoneDraft.class + ": name is missing");
         return new ZoneDraftImpl(key, name, description, locations);
     }
-
+    
     /**
      * builds ZoneDraft without checking for non-null required values
      * @return ZoneDraft
@@ -213,7 +229,7 @@ public class ZoneDraftBuilder implements Builder<ZoneDraft> {
 
     /**
      * factory method for an instance of ZoneDraftBuilder
-     * @return builder
+     * @return builder 
      */
     public static ZoneDraftBuilder of() {
         return new ZoneDraftBuilder();

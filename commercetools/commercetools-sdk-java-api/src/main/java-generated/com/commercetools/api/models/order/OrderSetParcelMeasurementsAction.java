@@ -1,18 +1,21 @@
-
 package com.commercetools.api.models.order;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
+import com.commercetools.api.models.order.OrderUpdateAction;
+import com.commercetools.api.models.order.ParcelMeasurements;
+import com.commercetools.api.models.order.OrderSetParcelMeasurementsActionImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * OrderSetParcelMeasurementsAction
@@ -25,9 +28,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .parcelId("{parcelId}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = OrderSetParcelMeasurementsActionImpl.class)
 public interface OrderSetParcelMeasurementsAction extends OrderUpdateAction {
 
@@ -43,7 +49,6 @@ public interface OrderSetParcelMeasurementsAction extends OrderUpdateAction {
     @NotNull
     @JsonProperty("parcelId")
     public String getParcelId();
-
     /**
      *
      * @return measurements
@@ -56,23 +61,26 @@ public interface OrderSetParcelMeasurementsAction extends OrderUpdateAction {
      * set parcelId
      * @param parcelId value to be set
      */
-
+    
     public void setParcelId(final String parcelId);
-
+    
+    
     /**
      * set measurements
      * @param measurements value to be set
      */
-
+    
     public void setMeasurements(final ParcelMeasurements measurements);
+    
 
     /**
      * factory method
      * @return instance of OrderSetParcelMeasurementsAction
      */
-    public static OrderSetParcelMeasurementsAction of() {
+    public static OrderSetParcelMeasurementsAction of(){
         return new OrderSetParcelMeasurementsActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy OrderSetParcelMeasurementsAction
@@ -98,8 +106,7 @@ public interface OrderSetParcelMeasurementsAction extends OrderUpdateAction {
         }
         OrderSetParcelMeasurementsActionImpl instance = new OrderSetParcelMeasurementsActionImpl();
         instance.setParcelId(template.getParcelId());
-        instance.setMeasurements(
-            com.commercetools.api.models.order.ParcelMeasurements.deepCopy(template.getMeasurements()));
+        instance.setMeasurements(com.commercetools.api.models.order.ParcelMeasurements.deepCopy(template.getMeasurements()));
         return instance;
     }
 
@@ -110,7 +117,7 @@ public interface OrderSetParcelMeasurementsAction extends OrderUpdateAction {
     public static OrderSetParcelMeasurementsActionBuilder builder() {
         return OrderSetParcelMeasurementsActionBuilder.of();
     }
-
+    
     /**
      * create builder for OrderSetParcelMeasurementsAction instance
      * @param template instance with prefilled values for the builder
@@ -119,6 +126,7 @@ public interface OrderSetParcelMeasurementsAction extends OrderUpdateAction {
     public static OrderSetParcelMeasurementsActionBuilder builder(final OrderSetParcelMeasurementsAction template) {
         return OrderSetParcelMeasurementsActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -129,7 +137,7 @@ public interface OrderSetParcelMeasurementsAction extends OrderUpdateAction {
     default <T> T withOrderSetParcelMeasurementsAction(Function<OrderSetParcelMeasurementsAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

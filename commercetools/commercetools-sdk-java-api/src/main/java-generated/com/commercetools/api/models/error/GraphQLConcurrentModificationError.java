@@ -1,17 +1,20 @@
-
 package com.commercetools.api.models.error;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
+import com.commercetools.api.models.error.GraphQLErrorObject;
+import com.commercetools.api.models.error.GraphQLConcurrentModificationErrorImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Returned when the request conflicts with the current state of the involved resources. Typically, the request attempts to modify a resource that is out of date (that is modified by another client since it was last retrieved). The client application should resolve the conflict (with or without involving the end-user) before retrying the request.</p>
@@ -23,9 +26,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     GraphQLConcurrentModificationError graphQLConcurrentModificationError = GraphQLConcurrentModificationError.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = GraphQLConcurrentModificationErrorImpl.class)
 public interface GraphQLConcurrentModificationError extends GraphQLErrorObject {
 
@@ -41,12 +47,11 @@ public interface GraphQLConcurrentModificationError extends GraphQLErrorObject {
     @NotNull
     @JsonProperty("code")
     public String getCode();
-
     /**
      *  <p>Current version of the resource.</p>
      * @return currentVersion
      */
-
+    
     @JsonProperty("currentVersion")
     public Long getCurrentVersion();
 
@@ -54,16 +59,18 @@ public interface GraphQLConcurrentModificationError extends GraphQLErrorObject {
      *  <p>Current version of the resource.</p>
      * @param currentVersion value to be set
      */
-
+    
     public void setCurrentVersion(final Long currentVersion);
+    
 
     /**
      * factory method
      * @return instance of GraphQLConcurrentModificationError
      */
-    public static GraphQLConcurrentModificationError of() {
+    public static GraphQLConcurrentModificationError of(){
         return new GraphQLConcurrentModificationErrorImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy GraphQLConcurrentModificationError
@@ -83,8 +90,7 @@ public interface GraphQLConcurrentModificationError extends GraphQLErrorObject {
      * @return copy instance
      */
     @Nullable
-    public static GraphQLConcurrentModificationError deepCopy(
-            @Nullable final GraphQLConcurrentModificationError template) {
+    public static GraphQLConcurrentModificationError deepCopy(@Nullable final GraphQLConcurrentModificationError template) {
         if (template == null) {
             return null;
         }
@@ -101,7 +107,7 @@ public interface GraphQLConcurrentModificationError extends GraphQLErrorObject {
     public static GraphQLConcurrentModificationErrorBuilder builder() {
         return GraphQLConcurrentModificationErrorBuilder.of();
     }
-
+    
     /**
      * create builder for GraphQLConcurrentModificationError instance
      * @param template instance with prefilled values for the builder
@@ -110,6 +116,7 @@ public interface GraphQLConcurrentModificationError extends GraphQLErrorObject {
     public static GraphQLConcurrentModificationErrorBuilder builder(final GraphQLConcurrentModificationError template) {
         return GraphQLConcurrentModificationErrorBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -120,7 +127,7 @@ public interface GraphQLConcurrentModificationError extends GraphQLErrorObject {
     default <T> T withGraphQLConcurrentModificationError(Function<GraphQLConcurrentModificationError, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

@@ -1,10 +1,11 @@
-
 package com.commercetools.api.models.me;
 
-import java.util.*;
-
+import com.commercetools.api.models.me.MyShoppingListUpdateAction;
+import com.commercetools.api.models.me.MyShoppingListRemoveLineItemAction;
 import javax.annotation.Nullable;
-
+import java.util.*;
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -18,54 +19,67 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .lineItemId("{lineItemId}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class MyShoppingListRemoveLineItemActionBuilder implements Builder<MyShoppingListRemoveLineItemAction> {
 
+    
+    
     private String lineItemId;
-
+    
+    
     @Nullable
     private Long quantity;
 
+    
     /**
      *  <p>The <code>id</code> of the ShoppingListLineItem to update.</p>
      * @param lineItemId value to be set
      * @return Builder
      */
-
-    public MyShoppingListRemoveLineItemActionBuilder lineItemId(final String lineItemId) {
+    
+    public MyShoppingListRemoveLineItemActionBuilder lineItemId( final String lineItemId) {
         this.lineItemId = lineItemId;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Amount to remove from the <code>quantity</code> of the ShoppingListLineItem. If not set, the ShoppingListLineItem is removed from the ShoppingList. If this value matches or exceeds the current <code>quantity</code> of the ShoppingListLineItem, the ShoppingListLineItem is removed from the ShoppingList.</p>
      * @param quantity value to be set
      * @return Builder
      */
-
+    
     public MyShoppingListRemoveLineItemActionBuilder quantity(@Nullable final Long quantity) {
         this.quantity = quantity;
         return this;
     }
+    
+    
 
     /**
      *  <p>The <code>id</code> of the ShoppingListLineItem to update.</p>
      * @return lineItemId
      */
-
-    public String getLineItemId() {
+    
+    
+    public String getLineItemId(){
         return this.lineItemId;
     }
-
+    
     /**
      *  <p>Amount to remove from the <code>quantity</code> of the ShoppingListLineItem. If not set, the ShoppingListLineItem is removed from the ShoppingList. If this value matches or exceeds the current <code>quantity</code> of the ShoppingListLineItem, the ShoppingListLineItem is removed from the ShoppingList.</p>
      * @return quantity
      */
-
+    
     @Nullable
-    public Long getQuantity() {
+    public Long getQuantity(){
         return this.quantity;
     }
 
@@ -77,7 +91,7 @@ public class MyShoppingListRemoveLineItemActionBuilder implements Builder<MyShop
         Objects.requireNonNull(lineItemId, MyShoppingListRemoveLineItemAction.class + ": lineItemId is missing");
         return new MyShoppingListRemoveLineItemActionImpl(lineItemId, quantity);
     }
-
+    
     /**
      * builds MyShoppingListRemoveLineItemAction without checking for non-null required values
      * @return MyShoppingListRemoveLineItemAction
@@ -88,7 +102,7 @@ public class MyShoppingListRemoveLineItemActionBuilder implements Builder<MyShop
 
     /**
      * factory method for an instance of MyShoppingListRemoveLineItemActionBuilder
-     * @return builder
+     * @return builder 
      */
     public static MyShoppingListRemoveLineItemActionBuilder of() {
         return new MyShoppingListRemoveLineItemActionBuilder();

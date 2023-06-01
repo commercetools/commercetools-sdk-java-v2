@@ -1,17 +1,20 @@
-
 package com.commercetools.api.models.project;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
+import com.commercetools.api.models.project.ProjectUpdateAction;
+import com.commercetools.api.models.project.ProjectChangeCurrenciesActionImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * ProjectChangeCurrenciesAction
@@ -24,9 +27,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .plusCurrencies(currenciesBuilder -> currenciesBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = ProjectChangeCurrenciesActionImpl.class)
 public interface ProjectChangeCurrenciesAction extends ProjectUpdateAction {
 
@@ -47,24 +53,24 @@ public interface ProjectChangeCurrenciesAction extends ProjectUpdateAction {
      *  <p>New value to set. Must not be empty.</p>
      * @param currencies values to be set
      */
-
+    
     @JsonIgnore
-    public void setCurrencies(final String... currencies);
-
+    public void setCurrencies(final String ...currencies);
     /**
      *  <p>New value to set. Must not be empty.</p>
      * @param currencies values to be set
      */
-
+    
     public void setCurrencies(final List<String> currencies);
 
     /**
      * factory method
      * @return instance of ProjectChangeCurrenciesAction
      */
-    public static ProjectChangeCurrenciesAction of() {
+    public static ProjectChangeCurrenciesAction of(){
         return new ProjectChangeCurrenciesActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy ProjectChangeCurrenciesAction
@@ -88,7 +94,9 @@ public interface ProjectChangeCurrenciesAction extends ProjectUpdateAction {
             return null;
         }
         ProjectChangeCurrenciesActionImpl instance = new ProjectChangeCurrenciesActionImpl();
-        instance.setCurrencies(Optional.ofNullable(template.getCurrencies()).map(ArrayList::new).orElse(null));
+        instance.setCurrencies(Optional.ofNullable(template.getCurrencies())
+                .map(ArrayList::new)
+                .orElse(null));
         return instance;
     }
 
@@ -99,7 +107,7 @@ public interface ProjectChangeCurrenciesAction extends ProjectUpdateAction {
     public static ProjectChangeCurrenciesActionBuilder builder() {
         return ProjectChangeCurrenciesActionBuilder.of();
     }
-
+    
     /**
      * create builder for ProjectChangeCurrenciesAction instance
      * @param template instance with prefilled values for the builder
@@ -108,6 +116,7 @@ public interface ProjectChangeCurrenciesAction extends ProjectUpdateAction {
     public static ProjectChangeCurrenciesActionBuilder builder(final ProjectChangeCurrenciesAction template) {
         return ProjectChangeCurrenciesActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -118,7 +127,7 @@ public interface ProjectChangeCurrenciesAction extends ProjectUpdateAction {
     default <T> T withProjectChangeCurrenciesAction(Function<ProjectChangeCurrenciesAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

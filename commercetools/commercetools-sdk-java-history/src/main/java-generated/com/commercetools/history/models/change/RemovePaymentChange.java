@@ -1,19 +1,21 @@
-
 package com.commercetools.history.models.change;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
+import com.commercetools.history.models.change.Change;
 import com.commercetools.history.models.common.PaymentInfo;
+import com.commercetools.history.models.change.RemovePaymentChangeImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * RemovePaymentChange
@@ -28,9 +30,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .previousValue(previousValueBuilder -> previousValueBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = RemovePaymentChangeImpl.class)
 public interface RemovePaymentChange extends Change {
 
@@ -46,7 +51,6 @@ public interface RemovePaymentChange extends Change {
     @NotNull
     @JsonProperty("type")
     public String getType();
-
     /**
      *  <p>Update action for <code>addPayment</code> &amp; <code>removePayment</code></p>
      * @return change
@@ -54,7 +58,6 @@ public interface RemovePaymentChange extends Change {
     @NotNull
     @JsonProperty("change")
     public String getChange();
-
     /**
      *
      * @return nextValue
@@ -63,7 +66,6 @@ public interface RemovePaymentChange extends Change {
     @Valid
     @JsonProperty("nextValue")
     public PaymentInfo getNextValue();
-
     /**
      *
      * @return previousValue
@@ -77,30 +79,34 @@ public interface RemovePaymentChange extends Change {
      *  <p>Update action for <code>addPayment</code> &amp; <code>removePayment</code></p>
      * @param change value to be set
      */
-
+    
     public void setChange(final String change);
-
+    
+    
     /**
      * set nextValue
      * @param nextValue value to be set
      */
-
+    
     public void setNextValue(final PaymentInfo nextValue);
-
+    
+    
     /**
      * set previousValue
      * @param previousValue value to be set
      */
-
+    
     public void setPreviousValue(final PaymentInfo previousValue);
+    
 
     /**
      * factory method
      * @return instance of RemovePaymentChange
      */
-    public static RemovePaymentChange of() {
+    public static RemovePaymentChange of(){
         return new RemovePaymentChangeImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy RemovePaymentChange
@@ -128,8 +134,7 @@ public interface RemovePaymentChange extends Change {
         RemovePaymentChangeImpl instance = new RemovePaymentChangeImpl();
         instance.setChange(template.getChange());
         instance.setNextValue(com.commercetools.history.models.common.PaymentInfo.deepCopy(template.getNextValue()));
-        instance.setPreviousValue(
-            com.commercetools.history.models.common.PaymentInfo.deepCopy(template.getPreviousValue()));
+        instance.setPreviousValue(com.commercetools.history.models.common.PaymentInfo.deepCopy(template.getPreviousValue()));
         return instance;
     }
 
@@ -140,7 +145,7 @@ public interface RemovePaymentChange extends Change {
     public static RemovePaymentChangeBuilder builder() {
         return RemovePaymentChangeBuilder.of();
     }
-
+    
     /**
      * create builder for RemovePaymentChange instance
      * @param template instance with prefilled values for the builder
@@ -149,6 +154,7 @@ public interface RemovePaymentChange extends Change {
     public static RemovePaymentChangeBuilder builder(final RemovePaymentChange template) {
         return RemovePaymentChangeBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -159,7 +165,7 @@ public interface RemovePaymentChange extends Change {
     default <T> T withRemovePaymentChange(Function<RemovePaymentChange, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

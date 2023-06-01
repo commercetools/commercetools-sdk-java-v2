@@ -1,11 +1,13 @@
-
 package com.commercetools.api.models.quote_request;
 
+import com.commercetools.api.models.common.Reference;
+import com.commercetools.api.models.common.ReferenceTypeId;
+import com.commercetools.api.models.quote_request.QuoteRequest;
+import com.commercetools.api.models.quote_request.QuoteRequestReference;
+import javax.annotation.Nullable;
 import java.util.*;
 import java.util.function.Function;
-
-import javax.annotation.Nullable;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -19,79 +21,89 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .id("{id}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class QuoteRequestReferenceBuilder implements Builder<QuoteRequestReference> {
 
+    
+    
     private String id;
-
+    
+    
     @Nullable
     private com.commercetools.api.models.quote_request.QuoteRequest obj;
 
+    
     /**
      *  <p>Unique ID of the referenced resource.</p>
      * @param id value to be set
      * @return Builder
      */
-
-    public QuoteRequestReferenceBuilder id(final String id) {
+    
+    public QuoteRequestReferenceBuilder id( final String id) {
         this.id = id;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Contains the representation of the expanded QuoteRequest. Only present in responses to requests with Reference Expansion for QuoteRequest.</p>
      * @param builder function to build the obj value
      * @return Builder
      */
-
-    public QuoteRequestReferenceBuilder obj(
-            Function<com.commercetools.api.models.quote_request.QuoteRequestBuilder, com.commercetools.api.models.quote_request.QuoteRequestBuilder> builder) {
+    
+    public QuoteRequestReferenceBuilder obj(Function<com.commercetools.api.models.quote_request.QuoteRequestBuilder, com.commercetools.api.models.quote_request.QuoteRequestBuilder> builder) {
         this.obj = builder.apply(com.commercetools.api.models.quote_request.QuoteRequestBuilder.of()).build();
         return this;
     }
-
+    
     /**
      *  <p>Contains the representation of the expanded QuoteRequest. Only present in responses to requests with Reference Expansion for QuoteRequest.</p>
      * @param builder function to build the obj value
      * @return Builder
      */
-
-    public QuoteRequestReferenceBuilder withObj(
-            Function<com.commercetools.api.models.quote_request.QuoteRequestBuilder, com.commercetools.api.models.quote_request.QuoteRequest> builder) {
+    
+    public QuoteRequestReferenceBuilder withObj(Function<com.commercetools.api.models.quote_request.QuoteRequestBuilder, com.commercetools.api.models.quote_request.QuoteRequest> builder) {
         this.obj = builder.apply(com.commercetools.api.models.quote_request.QuoteRequestBuilder.of());
         return this;
     }
-
+                    
     /**
      *  <p>Contains the representation of the expanded QuoteRequest. Only present in responses to requests with Reference Expansion for QuoteRequest.</p>
      * @param obj value to be set
      * @return Builder
      */
-
-    public QuoteRequestReferenceBuilder obj(
-            @Nullable final com.commercetools.api.models.quote_request.QuoteRequest obj) {
+    
+    public QuoteRequestReferenceBuilder obj(@Nullable final com.commercetools.api.models.quote_request.QuoteRequest obj) {
         this.obj = obj;
         return this;
     }
+    
+    
 
     /**
      *  <p>Unique ID of the referenced resource.</p>
      * @return id
      */
-
-    public String getId() {
+    
+    
+    public String getId(){
         return this.id;
     }
-
+    
     /**
      *  <p>Contains the representation of the expanded QuoteRequest. Only present in responses to requests with Reference Expansion for QuoteRequest.</p>
      * @return obj
      */
-
+    
     @Nullable
-    public com.commercetools.api.models.quote_request.QuoteRequest getObj() {
+    public com.commercetools.api.models.quote_request.QuoteRequest getObj(){
         return this.obj;
     }
 
@@ -103,7 +115,7 @@ public class QuoteRequestReferenceBuilder implements Builder<QuoteRequestReferen
         Objects.requireNonNull(id, QuoteRequestReference.class + ": id is missing");
         return new QuoteRequestReferenceImpl(id, obj);
     }
-
+    
     /**
      * builds QuoteRequestReference without checking for non-null required values
      * @return QuoteRequestReference
@@ -114,7 +126,7 @@ public class QuoteRequestReferenceBuilder implements Builder<QuoteRequestReferen
 
     /**
      * factory method for an instance of QuoteRequestReferenceBuilder
-     * @return builder
+     * @return builder 
      */
     public static QuoteRequestReferenceBuilder of() {
         return new QuoteRequestReferenceBuilder();

@@ -1,19 +1,21 @@
-
 package com.commercetools.api.models.cart;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
+import com.commercetools.api.models.cart.CartUpdateAction;
 import com.commercetools.api.models.channel.ChannelResourceIdentifier;
+import com.commercetools.api.models.cart.CartSetLineItemDistributionChannelActionImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Setting a distribution channel for a LineItem can lead to an updated <code>price</code> as described in LineItem Price selection.</p>
@@ -26,9 +28,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .lineItemId("{lineItemId}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = CartSetLineItemDistributionChannelActionImpl.class)
 public interface CartSetLineItemDistributionChannelAction extends CartUpdateAction {
 
@@ -44,7 +49,6 @@ public interface CartSetLineItemDistributionChannelAction extends CartUpdateActi
     @NotNull
     @JsonProperty("lineItemId")
     public String getLineItemId();
-
     /**
      *  <ul>
      *   <li>If present, a Reference to the Channel is set for the LineItem specified by <code>lineItemId</code>.</li>
@@ -60,9 +64,10 @@ public interface CartSetLineItemDistributionChannelAction extends CartUpdateActi
      *  <p><code>id</code> of the LineItem to update.</p>
      * @param lineItemId value to be set
      */
-
+    
     public void setLineItemId(final String lineItemId);
-
+    
+    
     /**
      *  <ul>
      *   <li>If present, a Reference to the Channel is set for the LineItem specified by <code>lineItemId</code>.</li>
@@ -70,16 +75,18 @@ public interface CartSetLineItemDistributionChannelAction extends CartUpdateActi
      *  </ul>
      * @param distributionChannel value to be set
      */
-
+    
     public void setDistributionChannel(final ChannelResourceIdentifier distributionChannel);
+    
 
     /**
      * factory method
      * @return instance of CartSetLineItemDistributionChannelAction
      */
-    public static CartSetLineItemDistributionChannelAction of() {
+    public static CartSetLineItemDistributionChannelAction of(){
         return new CartSetLineItemDistributionChannelActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy CartSetLineItemDistributionChannelAction
@@ -99,15 +106,13 @@ public interface CartSetLineItemDistributionChannelAction extends CartUpdateActi
      * @return copy instance
      */
     @Nullable
-    public static CartSetLineItemDistributionChannelAction deepCopy(
-            @Nullable final CartSetLineItemDistributionChannelAction template) {
+    public static CartSetLineItemDistributionChannelAction deepCopy(@Nullable final CartSetLineItemDistributionChannelAction template) {
         if (template == null) {
             return null;
         }
         CartSetLineItemDistributionChannelActionImpl instance = new CartSetLineItemDistributionChannelActionImpl();
         instance.setLineItemId(template.getLineItemId());
-        instance.setDistributionChannel(
-            com.commercetools.api.models.channel.ChannelResourceIdentifier.deepCopy(template.getDistributionChannel()));
+        instance.setDistributionChannel(com.commercetools.api.models.channel.ChannelResourceIdentifier.deepCopy(template.getDistributionChannel()));
         return instance;
     }
 
@@ -118,16 +123,16 @@ public interface CartSetLineItemDistributionChannelAction extends CartUpdateActi
     public static CartSetLineItemDistributionChannelActionBuilder builder() {
         return CartSetLineItemDistributionChannelActionBuilder.of();
     }
-
+    
     /**
      * create builder for CartSetLineItemDistributionChannelAction instance
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static CartSetLineItemDistributionChannelActionBuilder builder(
-            final CartSetLineItemDistributionChannelAction template) {
+    public static CartSetLineItemDistributionChannelActionBuilder builder(final CartSetLineItemDistributionChannelAction template) {
         return CartSetLineItemDistributionChannelActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -135,11 +140,10 @@ public interface CartSetLineItemDistributionChannelAction extends CartUpdateActi
      * @param helper function to map the object
      * @return mapped value
      */
-    default <T> T withCartSetLineItemDistributionChannelAction(
-            Function<CartSetLineItemDistributionChannelAction, T> helper) {
+    default <T> T withCartSetLineItemDistributionChannelAction(Function<CartSetLineItemDistributionChannelAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

@@ -1,17 +1,20 @@
-
 package com.commercetools.api.models.message;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
+import com.commercetools.api.models.message.MessagePayload;
+import com.commercetools.api.models.message.StandalonePriceActiveChangedMessagePayloadImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Generated after a successful Change Active update action.</p>
@@ -25,9 +28,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .oldActive(true)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = StandalonePriceActiveChangedMessagePayloadImpl.class)
 public interface StandalonePriceActiveChangedMessagePayload extends MessagePayload {
 
@@ -43,7 +49,6 @@ public interface StandalonePriceActiveChangedMessagePayload extends MessagePaylo
     @NotNull
     @JsonProperty("active")
     public Boolean getActive();
-
     /**
      *  <p>Value of the <code>active</code> field of the StandalonePrice before the Change Active update action.</p>
      * @return oldActive
@@ -56,31 +61,33 @@ public interface StandalonePriceActiveChangedMessagePayload extends MessagePaylo
      *  <p>Value of the <code>active</code> field of the StandalonePrice after the Change Active update action.</p>
      * @param active value to be set
      */
-
+    
     public void setActive(final Boolean active);
-
+    
+    
     /**
      *  <p>Value of the <code>active</code> field of the StandalonePrice before the Change Active update action.</p>
      * @param oldActive value to be set
      */
-
+    
     public void setOldActive(final Boolean oldActive);
+    
 
     /**
      * factory method
      * @return instance of StandalonePriceActiveChangedMessagePayload
      */
-    public static StandalonePriceActiveChangedMessagePayload of() {
+    public static StandalonePriceActiveChangedMessagePayload of(){
         return new StandalonePriceActiveChangedMessagePayloadImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy StandalonePriceActiveChangedMessagePayload
      * @param template instance to be copied
      * @return copy instance
      */
-    public static StandalonePriceActiveChangedMessagePayload of(
-            final StandalonePriceActiveChangedMessagePayload template) {
+    public static StandalonePriceActiveChangedMessagePayload of(final StandalonePriceActiveChangedMessagePayload template) {
         StandalonePriceActiveChangedMessagePayloadImpl instance = new StandalonePriceActiveChangedMessagePayloadImpl();
         instance.setActive(template.getActive());
         instance.setOldActive(template.getOldActive());
@@ -93,8 +100,7 @@ public interface StandalonePriceActiveChangedMessagePayload extends MessagePaylo
      * @return copy instance
      */
     @Nullable
-    public static StandalonePriceActiveChangedMessagePayload deepCopy(
-            @Nullable final StandalonePriceActiveChangedMessagePayload template) {
+    public static StandalonePriceActiveChangedMessagePayload deepCopy(@Nullable final StandalonePriceActiveChangedMessagePayload template) {
         if (template == null) {
             return null;
         }
@@ -111,16 +117,16 @@ public interface StandalonePriceActiveChangedMessagePayload extends MessagePaylo
     public static StandalonePriceActiveChangedMessagePayloadBuilder builder() {
         return StandalonePriceActiveChangedMessagePayloadBuilder.of();
     }
-
+    
     /**
      * create builder for StandalonePriceActiveChangedMessagePayload instance
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static StandalonePriceActiveChangedMessagePayloadBuilder builder(
-            final StandalonePriceActiveChangedMessagePayload template) {
+    public static StandalonePriceActiveChangedMessagePayloadBuilder builder(final StandalonePriceActiveChangedMessagePayload template) {
         return StandalonePriceActiveChangedMessagePayloadBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -128,11 +134,10 @@ public interface StandalonePriceActiveChangedMessagePayload extends MessagePaylo
      * @param helper function to map the object
      * @return mapped value
      */
-    default <T> T withStandalonePriceActiveChangedMessagePayload(
-            Function<StandalonePriceActiveChangedMessagePayload, T> helper) {
+    default <T> T withStandalonePriceActiveChangedMessagePayload(Function<StandalonePriceActiveChangedMessagePayload, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

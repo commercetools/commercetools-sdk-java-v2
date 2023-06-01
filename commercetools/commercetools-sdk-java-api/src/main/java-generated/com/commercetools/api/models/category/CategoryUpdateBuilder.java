@@ -1,9 +1,11 @@
-
 package com.commercetools.api.models.category;
 
+import com.commercetools.api.models.category.CategoryUpdateAction;
+import com.commercetools.api.models.category.CategoryUpdate;
+import javax.annotation.Nullable;
 import java.util.*;
 import java.util.function.Function;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -18,107 +20,118 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .plusActions(actionsBuilder -> actionsBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class CategoryUpdateBuilder implements Builder<CategoryUpdate> {
 
+    
+    
     private Long version;
-
+    
+    
+    
     private java.util.List<com.commercetools.api.models.category.CategoryUpdateAction> actions;
 
+    
     /**
      *  <p>Expected version of the Category on which the changes should be applied. If the expected version does not match the actual version, a ConcurrentModification error is returned.</p>
      * @param version value to be set
      * @return Builder
      */
-
-    public CategoryUpdateBuilder version(final Long version) {
+    
+    public CategoryUpdateBuilder version( final Long version) {
         this.version = version;
         return this;
     }
-
+    
+    
+    
     /**
      *  <p>Update actions to be performed on the Category.</p>
      * @param actions value to be set
      * @return Builder
      */
-
-    public CategoryUpdateBuilder actions(final com.commercetools.api.models.category.CategoryUpdateAction... actions) {
+    
+    public CategoryUpdateBuilder actions( final com.commercetools.api.models.category.CategoryUpdateAction ...actions) {
         this.actions = new ArrayList<>(Arrays.asList(actions));
         return this;
     }
-
+    
     /**
      *  <p>Update actions to be performed on the Category.</p>
      * @param actions value to be set
      * @return Builder
      */
-
-    public CategoryUpdateBuilder actions(
-            final java.util.List<com.commercetools.api.models.category.CategoryUpdateAction> actions) {
+    
+    public CategoryUpdateBuilder actions( final java.util.List<com.commercetools.api.models.category.CategoryUpdateAction> actions) {
         this.actions = actions;
         return this;
     }
-
+    
     /**
      *  <p>Update actions to be performed on the Category.</p>
      * @param actions value to be set
      * @return Builder
      */
-
-    public CategoryUpdateBuilder plusActions(
-            final com.commercetools.api.models.category.CategoryUpdateAction... actions) {
+    
+    public CategoryUpdateBuilder plusActions( final com.commercetools.api.models.category.CategoryUpdateAction ...actions) {
         if (this.actions == null) {
             this.actions = new ArrayList<>();
         }
         this.actions.addAll(Arrays.asList(actions));
         return this;
     }
-
+    
+    
     /**
      *  <p>Update actions to be performed on the Category.</p>
      * @param builder function to build the actions value
      * @return Builder
      */
-
-    public CategoryUpdateBuilder plusActions(
-            Function<com.commercetools.api.models.category.CategoryUpdateActionBuilder, Builder<? extends com.commercetools.api.models.category.CategoryUpdateAction>> builder) {
+    
+    public CategoryUpdateBuilder plusActions(Function<com.commercetools.api.models.category.CategoryUpdateActionBuilder, Builder<? extends com.commercetools.api.models.category.CategoryUpdateAction>> builder) {
         if (this.actions == null) {
             this.actions = new ArrayList<>();
         }
         this.actions.add(builder.apply(com.commercetools.api.models.category.CategoryUpdateActionBuilder.of()).build());
         return this;
     }
-
+    
     /**
      *  <p>Update actions to be performed on the Category.</p>
      * @param builder function to build the actions value
      * @return Builder
      */
-
-    public CategoryUpdateBuilder withActions(
-            Function<com.commercetools.api.models.category.CategoryUpdateActionBuilder, Builder<? extends com.commercetools.api.models.category.CategoryUpdateAction>> builder) {
+    
+    public CategoryUpdateBuilder withActions(Function<com.commercetools.api.models.category.CategoryUpdateActionBuilder, Builder<? extends com.commercetools.api.models.category.CategoryUpdateAction>> builder) {
         this.actions = new ArrayList<>();
         this.actions.add(builder.apply(com.commercetools.api.models.category.CategoryUpdateActionBuilder.of()).build());
         return this;
     }
+                    
+    
 
     /**
      *  <p>Expected version of the Category on which the changes should be applied. If the expected version does not match the actual version, a ConcurrentModification error is returned.</p>
      * @return version
      */
-
-    public Long getVersion() {
+    
+    
+    public Long getVersion(){
         return this.version;
     }
-
+    
     /**
      *  <p>Update actions to be performed on the Category.</p>
      * @return actions
      */
-
-    public java.util.List<com.commercetools.api.models.category.CategoryUpdateAction> getActions() {
+    
+    
+    public java.util.List<com.commercetools.api.models.category.CategoryUpdateAction> getActions(){
         return this.actions;
     }
 
@@ -131,7 +144,7 @@ public class CategoryUpdateBuilder implements Builder<CategoryUpdate> {
         Objects.requireNonNull(actions, CategoryUpdate.class + ": actions is missing");
         return new CategoryUpdateImpl(version, actions);
     }
-
+    
     /**
      * builds CategoryUpdate without checking for non-null required values
      * @return CategoryUpdate
@@ -142,7 +155,7 @@ public class CategoryUpdateBuilder implements Builder<CategoryUpdate> {
 
     /**
      * factory method for an instance of CategoryUpdateBuilder
-     * @return builder
+     * @return builder 
      */
     public static CategoryUpdateBuilder of() {
         return new CategoryUpdateBuilder();

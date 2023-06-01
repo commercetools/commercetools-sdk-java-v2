@@ -1,19 +1,21 @@
-
 package com.commercetools.api.models.error;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
 import com.commercetools.api.models.common.Price;
+import com.commercetools.api.models.error.ErrorObject;
+import com.commercetools.api.models.error.DuplicatePriceScopeErrorImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Returned when a Price scope conflicts with an existing one during an Update Product request.</p>
@@ -28,9 +30,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .conflictingPrice(conflictingPriceBuilder -> conflictingPriceBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = DuplicatePriceScopeErrorImpl.class)
 public interface DuplicatePriceScopeError extends ErrorObject {
 
@@ -46,7 +51,6 @@ public interface DuplicatePriceScopeError extends ErrorObject {
     @NotNull
     @JsonProperty("code")
     public String getCode();
-
     /**
      *  <p><code>"Duplicate price scope: $priceScope. The combination of currency, country, customerGroup and channel must be unique for each price of a product variant."</code></p>
      * @return message
@@ -54,7 +58,6 @@ public interface DuplicatePriceScopeError extends ErrorObject {
     @NotNull
     @JsonProperty("message")
     public String getMessage();
-
     /**
      *  <p>Conflicting Embedded Price.</p>
      * @return conflictingPrice
@@ -68,23 +71,26 @@ public interface DuplicatePriceScopeError extends ErrorObject {
      *  <p><code>"Duplicate price scope: $priceScope. The combination of currency, country, customerGroup and channel must be unique for each price of a product variant."</code></p>
      * @param message value to be set
      */
-
+    
     public void setMessage(final String message);
-
+    
+    
     /**
      *  <p>Conflicting Embedded Price.</p>
      * @param conflictingPrice value to be set
      */
-
+    
     public void setConflictingPrice(final Price conflictingPrice);
+    
 
     /**
      * factory method
      * @return instance of DuplicatePriceScopeError
      */
-    public static DuplicatePriceScopeError of() {
+    public static DuplicatePriceScopeError of(){
         return new DuplicatePriceScopeErrorImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy DuplicatePriceScopeError
@@ -112,8 +118,7 @@ public interface DuplicatePriceScopeError extends ErrorObject {
         DuplicatePriceScopeErrorImpl instance = new DuplicatePriceScopeErrorImpl();
         instance.setMessage(template.getMessage());
         Optional.ofNullable(template.values()).ifPresent(t -> t.forEach(instance::setValue));
-        instance.setConflictingPrice(
-            com.commercetools.api.models.common.Price.deepCopy(template.getConflictingPrice()));
+        instance.setConflictingPrice(com.commercetools.api.models.common.Price.deepCopy(template.getConflictingPrice()));
         return instance;
     }
 
@@ -124,7 +129,7 @@ public interface DuplicatePriceScopeError extends ErrorObject {
     public static DuplicatePriceScopeErrorBuilder builder() {
         return DuplicatePriceScopeErrorBuilder.of();
     }
-
+    
     /**
      * create builder for DuplicatePriceScopeError instance
      * @param template instance with prefilled values for the builder
@@ -133,6 +138,7 @@ public interface DuplicatePriceScopeError extends ErrorObject {
     public static DuplicatePriceScopeErrorBuilder builder(final DuplicatePriceScopeError template) {
         return DuplicatePriceScopeErrorBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -143,7 +149,7 @@ public interface DuplicatePriceScopeError extends ErrorObject {
     default <T> T withDuplicatePriceScopeError(Function<DuplicatePriceScopeError, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

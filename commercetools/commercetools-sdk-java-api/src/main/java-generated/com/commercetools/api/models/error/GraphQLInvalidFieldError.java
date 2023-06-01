@@ -1,17 +1,21 @@
-
 package com.commercetools.api.models.error;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
+import com.commercetools.api.models.error.GraphQLErrorObject;
+import java.lang.Object;
+import com.commercetools.api.models.error.GraphQLInvalidFieldErrorImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Returned when a field has an invalid value.</p>
@@ -24,9 +28,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .field("{field}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = GraphQLInvalidFieldErrorImpl.class)
 public interface GraphQLInvalidFieldError extends GraphQLErrorObject {
 
@@ -42,7 +49,6 @@ public interface GraphQLInvalidFieldError extends GraphQLErrorObject {
     @NotNull
     @JsonProperty("code")
     public String getCode();
-
     /**
      *  <p>Name of the field with the invalid value.</p>
      * @return field
@@ -50,7 +56,6 @@ public interface GraphQLInvalidFieldError extends GraphQLErrorObject {
     @NotNull
     @JsonProperty("field")
     public String getField();
-
     /**
      *  <p>Value invalid for the field.</p>
      * @return invalidValue
@@ -58,12 +63,11 @@ public interface GraphQLInvalidFieldError extends GraphQLErrorObject {
     @NotNull
     @JsonProperty("invalidValue")
     public Object getInvalidValue();
-
     /**
      *  <p>Fixed set of allowed values for the field, if any.</p>
      * @return allowedValues
      */
-
+    
     @JsonProperty("allowedValues")
     public List<Object> getAllowedValues();
 
@@ -71,38 +75,40 @@ public interface GraphQLInvalidFieldError extends GraphQLErrorObject {
      *  <p>Name of the field with the invalid value.</p>
      * @param field value to be set
      */
-
+    
     public void setField(final String field);
-
+    
+    
     /**
      *  <p>Value invalid for the field.</p>
      * @param invalidValue value to be set
      */
-
+    
     public void setInvalidValue(final Object invalidValue);
-
+    
+    
     /**
      *  <p>Fixed set of allowed values for the field, if any.</p>
      * @param allowedValues values to be set
      */
-
+    
     @JsonIgnore
-    public void setAllowedValues(final Object... allowedValues);
-
+    public void setAllowedValues(final Object ...allowedValues);
     /**
      *  <p>Fixed set of allowed values for the field, if any.</p>
      * @param allowedValues values to be set
      */
-
+    
     public void setAllowedValues(final List<Object> allowedValues);
 
     /**
      * factory method
      * @return instance of GraphQLInvalidFieldError
      */
-    public static GraphQLInvalidFieldError of() {
+    public static GraphQLInvalidFieldError of(){
         return new GraphQLInvalidFieldErrorImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy GraphQLInvalidFieldError
@@ -132,7 +138,9 @@ public interface GraphQLInvalidFieldError extends GraphQLErrorObject {
         Optional.ofNullable(template.values()).ifPresent(t -> t.forEach(instance::setValue));
         instance.setField(template.getField());
         instance.setInvalidValue(template.getInvalidValue());
-        instance.setAllowedValues(Optional.ofNullable(template.getAllowedValues()).map(ArrayList::new).orElse(null));
+        instance.setAllowedValues(Optional.ofNullable(template.getAllowedValues())
+                .map(ArrayList::new)
+                .orElse(null));
         return instance;
     }
 
@@ -143,7 +151,7 @@ public interface GraphQLInvalidFieldError extends GraphQLErrorObject {
     public static GraphQLInvalidFieldErrorBuilder builder() {
         return GraphQLInvalidFieldErrorBuilder.of();
     }
-
+    
     /**
      * create builder for GraphQLInvalidFieldError instance
      * @param template instance with prefilled values for the builder
@@ -152,6 +160,7 @@ public interface GraphQLInvalidFieldError extends GraphQLErrorObject {
     public static GraphQLInvalidFieldErrorBuilder builder(final GraphQLInvalidFieldError template) {
         return GraphQLInvalidFieldErrorBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -162,7 +171,7 @@ public interface GraphQLInvalidFieldError extends GraphQLErrorObject {
     default <T> T withGraphQLInvalidFieldError(Function<GraphQLInvalidFieldError, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

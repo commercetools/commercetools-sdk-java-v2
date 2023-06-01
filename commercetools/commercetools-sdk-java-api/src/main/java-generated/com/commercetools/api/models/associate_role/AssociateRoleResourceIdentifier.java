@@ -1,17 +1,21 @@
-
 package com.commercetools.api.models.associate_role;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-
+import com.commercetools.api.models.common.ReferenceTypeId;
 import com.commercetools.api.models.common.ResourceIdentifier;
+import com.commercetools.api.models.associate_role.AssociateRoleResourceIdentifierImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>ResourceIdentifier of an AssociateRole.</p>
@@ -23,12 +27,14 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     AssociateRoleResourceIdentifier associateRoleResourceIdentifier = AssociateRoleResourceIdentifier.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = AssociateRoleResourceIdentifierImpl.class)
-public interface AssociateRoleResourceIdentifier
-        extends ResourceIdentifier, com.commercetools.api.models.Identifiable<AssociateRole> {
+public interface AssociateRoleResourceIdentifier extends ResourceIdentifier, com.commercetools.api.models.Identifiable<AssociateRole> {
 
     /**
      * discriminator value for AssociateRoleResourceIdentifier
@@ -39,15 +45,14 @@ public interface AssociateRoleResourceIdentifier
      *  <p>Unique identifier of the referenced AssociateRole. Either <code>id</code> or <code>key</code> is required.</p>
      * @return id
      */
-
+    
     @JsonProperty("id")
     public String getId();
-
     /**
      *  <p>Unique key of the referenced AssociateRole. Either <code>id</code> or <code>key</code> is required.</p>
      * @return key
      */
-
+    
     @JsonProperty("key")
     public String getKey();
 
@@ -55,23 +60,26 @@ public interface AssociateRoleResourceIdentifier
      *  <p>Unique identifier of the referenced AssociateRole. Either <code>id</code> or <code>key</code> is required.</p>
      * @param id value to be set
      */
-
+    
     public void setId(final String id);
-
+    
+    
     /**
      *  <p>Unique key of the referenced AssociateRole. Either <code>id</code> or <code>key</code> is required.</p>
      * @param key value to be set
      */
-
+    
     public void setKey(final String key);
+    
 
     /**
      * factory method
      * @return instance of AssociateRoleResourceIdentifier
      */
-    public static AssociateRoleResourceIdentifier of() {
+    public static AssociateRoleResourceIdentifier of(){
         return new AssociateRoleResourceIdentifierImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy AssociateRoleResourceIdentifier
@@ -108,7 +116,7 @@ public interface AssociateRoleResourceIdentifier
     public static AssociateRoleResourceIdentifierBuilder builder() {
         return AssociateRoleResourceIdentifierBuilder.of();
     }
-
+    
     /**
      * create builder for AssociateRoleResourceIdentifier instance
      * @param template instance with prefilled values for the builder
@@ -117,6 +125,7 @@ public interface AssociateRoleResourceIdentifier
     public static AssociateRoleResourceIdentifierBuilder builder(final AssociateRoleResourceIdentifier template) {
         return AssociateRoleResourceIdentifierBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -127,7 +136,7 @@ public interface AssociateRoleResourceIdentifier
     default <T> T withAssociateRoleResourceIdentifier(Function<AssociateRoleResourceIdentifier, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

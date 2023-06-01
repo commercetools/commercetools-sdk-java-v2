@@ -1,10 +1,11 @@
-
 package com.commercetools.api.models.order;
 
-import java.util.*;
-
+import com.commercetools.api.models.order.OrderSearchQueryExpressionValue;
+import com.commercetools.api.models.order.OrderSearchNumberRangeValue;
 import javax.annotation.Nullable;
-
+import java.util.*;
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -18,126 +19,151 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .field("{field}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class OrderSearchNumberRangeValueBuilder implements Builder<OrderSearchNumberRangeValue> {
 
+    
+    
     private String field;
-
+    
+    
     @Nullable
     private Integer boost;
-
+    
+    
     @Nullable
     private String customType;
-
+    
+    
     @Nullable
     private Double gte;
-
+    
+    
     @Nullable
     private Double lte;
 
+    
     /**
      * set the value to the field
      * @param field value to be set
      * @return Builder
      */
-
-    public OrderSearchNumberRangeValueBuilder field(final String field) {
+    
+    public OrderSearchNumberRangeValueBuilder field( final String field) {
         this.field = field;
         return this;
     }
-
+    
+    
+    
+    
     /**
      * set the value to the boost
      * @param boost value to be set
      * @return Builder
      */
-
+    
     public OrderSearchNumberRangeValueBuilder boost(@Nullable final Integer boost) {
         this.boost = boost;
         return this;
     }
-
+    
+    
+    
+    
     /**
      * set the value to the customType
      * @param customType value to be set
      * @return Builder
      */
-
+    
     public OrderSearchNumberRangeValueBuilder customType(@Nullable final String customType) {
         this.customType = customType;
         return this;
     }
-
+    
+    
+    
+    
     /**
      * set the value to the gte
      * @param gte value to be set
      * @return Builder
      */
-
+    
     public OrderSearchNumberRangeValueBuilder gte(@Nullable final Double gte) {
         this.gte = gte;
         return this;
     }
-
+    
+    
+    
+    
     /**
      * set the value to the lte
      * @param lte value to be set
      * @return Builder
      */
-
+    
     public OrderSearchNumberRangeValueBuilder lte(@Nullable final Double lte) {
         this.lte = lte;
         return this;
     }
+    
+    
 
     /**
      * value of field}
      * @return field
      */
-
-    public String getField() {
+    
+    
+    public String getField(){
         return this.field;
     }
-
+    
     /**
      * value of boost}
      * @return boost
      */
-
+    
     @Nullable
-    public Integer getBoost() {
+    public Integer getBoost(){
         return this.boost;
     }
-
+    
     /**
      * value of customType}
      * @return customType
      */
-
+    
     @Nullable
-    public String getCustomType() {
+    public String getCustomType(){
         return this.customType;
     }
-
+    
     /**
      * value of gte}
      * @return gte
      */
-
+    
     @Nullable
-    public Double getGte() {
+    public Double getGte(){
         return this.gte;
     }
-
+    
     /**
      * value of lte}
      * @return lte
      */
-
+    
     @Nullable
-    public Double getLte() {
+    public Double getLte(){
         return this.lte;
     }
 
@@ -149,7 +175,7 @@ public class OrderSearchNumberRangeValueBuilder implements Builder<OrderSearchNu
         Objects.requireNonNull(field, OrderSearchNumberRangeValue.class + ": field is missing");
         return new OrderSearchNumberRangeValueImpl(field, boost, customType, gte, lte);
     }
-
+    
     /**
      * builds OrderSearchNumberRangeValue without checking for non-null required values
      * @return OrderSearchNumberRangeValue
@@ -160,7 +186,7 @@ public class OrderSearchNumberRangeValueBuilder implements Builder<OrderSearchNu
 
     /**
      * factory method for an instance of OrderSearchNumberRangeValueBuilder
-     * @return builder
+     * @return builder 
      */
     public static OrderSearchNumberRangeValueBuilder of() {
         return new OrderSearchNumberRangeValueBuilder();

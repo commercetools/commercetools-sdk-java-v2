@@ -1,32 +1,33 @@
-
 package com.commercetools.api.models.me;
-
-import java.util.Arrays;
-import java.util.Optional;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-
+import java.lang.String;
+import java.util.Arrays;
+import java.util.Optional;
 import io.vrap.rmf.base.client.JsonEnum;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
  *  <p>QuoteStates that can be set using the Change My Quote State update action.</p>
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public interface MyQuoteState extends JsonEnum {
 
     /**
     	<p>A state indicating that the <a href="/../api/quotes-overview#buyer">Buyer</a> has declined the <a href="ctp:api:type:Quote">Quote</a>.</p>
-
+    	
     */
     MyQuoteState DECLINED = MyQuoteStateEnum.DECLINED;
     /**
     	<p>A state indicating that the <a href="/../api/quotes-overview#buyer">Buyer</a> has accepted the <a href="ctp:api:type:Quote">Quote</a>.</p>
-
+    	
     */
     MyQuoteState ACCEPTED = MyQuoteStateEnum.ACCEPTED;
-
+    
     /**
      * possible values of MyQuoteState
      */
@@ -35,7 +36,7 @@ public interface MyQuoteState extends JsonEnum {
          * Declined
          */
         DECLINED("Declined"),
-
+        
         /**
          * Accepted
          */
@@ -92,7 +93,7 @@ public interface MyQuoteState extends JsonEnum {
             public String name() {
                 return value.toUpperCase();
             }
-
+            
             public String toString() {
                 return value;
             }
@@ -107,7 +108,7 @@ public interface MyQuoteState extends JsonEnum {
     public static Optional<MyQuoteState> findEnumViaJsonName(String jsonName) {
         return Arrays.stream(values()).filter(t -> t.getJsonName().equals(jsonName)).findFirst();
     }
-
+    
     /**
      * possible enum values
      * @return array of possible enum values
@@ -115,5 +116,5 @@ public interface MyQuoteState extends JsonEnum {
     public static MyQuoteState[] values() {
         return MyQuoteStateEnum.values();
     }
-
+    
 }

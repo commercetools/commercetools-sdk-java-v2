@@ -1,9 +1,12 @@
-
 package com.commercetools.api.models.payment;
 
+import com.commercetools.api.models.common.Money;
+import com.commercetools.api.models.payment.PaymentUpdateAction;
+import com.commercetools.api.models.payment.PaymentChangeAmountPlannedAction;
+import javax.annotation.Nullable;
 import java.util.*;
 import java.util.function.Function;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -17,54 +20,61 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .amount(amountBuilder -> amountBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class PaymentChangeAmountPlannedActionBuilder implements Builder<PaymentChangeAmountPlannedAction> {
 
+    
+    
     private com.commercetools.api.models.common.Money amount;
 
+    
     /**
      *  <p>New value to set.</p>
      * @param builder function to build the amount value
      * @return Builder
      */
-
-    public PaymentChangeAmountPlannedActionBuilder amount(
-            Function<com.commercetools.api.models.common.MoneyBuilder, com.commercetools.api.models.common.MoneyBuilder> builder) {
+    
+    public PaymentChangeAmountPlannedActionBuilder amount(Function<com.commercetools.api.models.common.MoneyBuilder, com.commercetools.api.models.common.MoneyBuilder> builder) {
         this.amount = builder.apply(com.commercetools.api.models.common.MoneyBuilder.of()).build();
         return this;
     }
-
+    
     /**
      *  <p>New value to set.</p>
      * @param builder function to build the amount value
      * @return Builder
      */
-
-    public PaymentChangeAmountPlannedActionBuilder withAmount(
-            Function<com.commercetools.api.models.common.MoneyBuilder, com.commercetools.api.models.common.Money> builder) {
+    
+    public PaymentChangeAmountPlannedActionBuilder withAmount(Function<com.commercetools.api.models.common.MoneyBuilder, com.commercetools.api.models.common.Money> builder) {
         this.amount = builder.apply(com.commercetools.api.models.common.MoneyBuilder.of());
         return this;
     }
-
+                    
     /**
      *  <p>New value to set.</p>
      * @param amount value to be set
      * @return Builder
      */
-
-    public PaymentChangeAmountPlannedActionBuilder amount(final com.commercetools.api.models.common.Money amount) {
+    
+    public PaymentChangeAmountPlannedActionBuilder amount( final com.commercetools.api.models.common.Money amount) {
         this.amount = amount;
         return this;
     }
+    
+    
 
     /**
      *  <p>New value to set.</p>
      * @return amount
      */
-
-    public com.commercetools.api.models.common.Money getAmount() {
+    
+    
+    public com.commercetools.api.models.common.Money getAmount(){
         return this.amount;
     }
 
@@ -76,7 +86,7 @@ public class PaymentChangeAmountPlannedActionBuilder implements Builder<PaymentC
         Objects.requireNonNull(amount, PaymentChangeAmountPlannedAction.class + ": amount is missing");
         return new PaymentChangeAmountPlannedActionImpl(amount);
     }
-
+    
     /**
      * builds PaymentChangeAmountPlannedAction without checking for non-null required values
      * @return PaymentChangeAmountPlannedAction
@@ -87,7 +97,7 @@ public class PaymentChangeAmountPlannedActionBuilder implements Builder<PaymentC
 
     /**
      * factory method for an instance of PaymentChangeAmountPlannedActionBuilder
-     * @return builder
+     * @return builder 
      */
     public static PaymentChangeAmountPlannedActionBuilder of() {
         return new PaymentChangeAmountPlannedActionBuilder();

@@ -1,17 +1,21 @@
-
 package com.commercetools.api.models.quote_request;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
+import com.commercetools.api.models.quote_request.QuoteRequestState;
+import com.commercetools.api.models.quote_request.QuoteRequestUpdateAction;
+import com.commercetools.api.models.quote_request.QuoteRequestChangeQuoteRequestStateActionImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Transitions the Quote Request to a different state. A Buyer is only allowed to cancel a Quote Request when it is in <code>Submitted</code> state.</p>
@@ -24,9 +28,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .quoteRequestState(QuoteRequestState.SUBMITTED)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = QuoteRequestChangeQuoteRequestStateActionImpl.class)
 public interface QuoteRequestChangeQuoteRequestStateAction extends QuoteRequestUpdateAction {
 
@@ -47,24 +54,25 @@ public interface QuoteRequestChangeQuoteRequestStateAction extends QuoteRequestU
      *  <p>New state to be set for the Quote Request.</p>
      * @param quoteRequestState value to be set
      */
-
+    
     public void setQuoteRequestState(final QuoteRequestState quoteRequestState);
+    
 
     /**
      * factory method
      * @return instance of QuoteRequestChangeQuoteRequestStateAction
      */
-    public static QuoteRequestChangeQuoteRequestStateAction of() {
+    public static QuoteRequestChangeQuoteRequestStateAction of(){
         return new QuoteRequestChangeQuoteRequestStateActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy QuoteRequestChangeQuoteRequestStateAction
      * @param template instance to be copied
      * @return copy instance
      */
-    public static QuoteRequestChangeQuoteRequestStateAction of(
-            final QuoteRequestChangeQuoteRequestStateAction template) {
+    public static QuoteRequestChangeQuoteRequestStateAction of(final QuoteRequestChangeQuoteRequestStateAction template) {
         QuoteRequestChangeQuoteRequestStateActionImpl instance = new QuoteRequestChangeQuoteRequestStateActionImpl();
         instance.setQuoteRequestState(template.getQuoteRequestState());
         return instance;
@@ -76,8 +84,7 @@ public interface QuoteRequestChangeQuoteRequestStateAction extends QuoteRequestU
      * @return copy instance
      */
     @Nullable
-    public static QuoteRequestChangeQuoteRequestStateAction deepCopy(
-            @Nullable final QuoteRequestChangeQuoteRequestStateAction template) {
+    public static QuoteRequestChangeQuoteRequestStateAction deepCopy(@Nullable final QuoteRequestChangeQuoteRequestStateAction template) {
         if (template == null) {
             return null;
         }
@@ -93,16 +100,16 @@ public interface QuoteRequestChangeQuoteRequestStateAction extends QuoteRequestU
     public static QuoteRequestChangeQuoteRequestStateActionBuilder builder() {
         return QuoteRequestChangeQuoteRequestStateActionBuilder.of();
     }
-
+    
     /**
      * create builder for QuoteRequestChangeQuoteRequestStateAction instance
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static QuoteRequestChangeQuoteRequestStateActionBuilder builder(
-            final QuoteRequestChangeQuoteRequestStateAction template) {
+    public static QuoteRequestChangeQuoteRequestStateActionBuilder builder(final QuoteRequestChangeQuoteRequestStateAction template) {
         return QuoteRequestChangeQuoteRequestStateActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -110,11 +117,10 @@ public interface QuoteRequestChangeQuoteRequestStateAction extends QuoteRequestU
      * @param helper function to map the object
      * @return mapped value
      */
-    default <T> T withQuoteRequestChangeQuoteRequestStateAction(
-            Function<QuoteRequestChangeQuoteRequestStateAction, T> helper) {
+    default <T> T withQuoteRequestChangeQuoteRequestStateAction(Function<QuoteRequestChangeQuoteRequestStateAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

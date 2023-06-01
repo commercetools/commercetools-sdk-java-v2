@@ -1,18 +1,20 @@
-
 package com.commercetools.api.models.product;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
+import com.commercetools.api.models.product.ProductVariantChannelAvailability;
+import com.commercetools.api.models.product.ProductVariantChannelAvailabilityMapImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>JSON object where the key is a supply Channel <code>id</code> and the value is the ProductVariantChannelAvailability of the InventoryEntry.</p>
@@ -25,11 +27,15 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .//(//Builder -> //Builder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = ProductVariantChannelAvailabilityMapImpl.class)
-public interface ProductVariantChannelAvailabilityMap {
+public interface ProductVariantChannelAvailabilityMap  {
+
 
     /**
      *
@@ -45,7 +51,7 @@ public interface ProductVariantChannelAvailabilityMap {
      * @param key property name
      * @param value property value
      */
-
+    
     @JsonAnySetter
     public void setValue(String key, ProductVariantChannelAvailability value);
 
@@ -53,9 +59,10 @@ public interface ProductVariantChannelAvailabilityMap {
      * factory method
      * @return instance of ProductVariantChannelAvailabilityMap
      */
-    public static ProductVariantChannelAvailabilityMap of() {
+    public static ProductVariantChannelAvailabilityMap of(){
         return new ProductVariantChannelAvailabilityMapImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy ProductVariantChannelAvailabilityMap
@@ -74,8 +81,7 @@ public interface ProductVariantChannelAvailabilityMap {
      * @return copy instance
      */
     @Nullable
-    public static ProductVariantChannelAvailabilityMap deepCopy(
-            @Nullable final ProductVariantChannelAvailabilityMap template) {
+    public static ProductVariantChannelAvailabilityMap deepCopy(@Nullable final ProductVariantChannelAvailabilityMap template) {
         if (template == null) {
             return null;
         }
@@ -91,16 +97,16 @@ public interface ProductVariantChannelAvailabilityMap {
     public static ProductVariantChannelAvailabilityMapBuilder builder() {
         return ProductVariantChannelAvailabilityMapBuilder.of();
     }
-
+    
     /**
      * create builder for ProductVariantChannelAvailabilityMap instance
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static ProductVariantChannelAvailabilityMapBuilder builder(
-            final ProductVariantChannelAvailabilityMap template) {
+    public static ProductVariantChannelAvailabilityMapBuilder builder(final ProductVariantChannelAvailabilityMap template) {
         return ProductVariantChannelAvailabilityMapBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -111,7 +117,7 @@ public interface ProductVariantChannelAvailabilityMap {
     default <T> T withProductVariantChannelAvailabilityMap(Function<ProductVariantChannelAvailabilityMap, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

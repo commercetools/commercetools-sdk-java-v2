@@ -1,19 +1,21 @@
-
 package com.commercetools.api.models.message;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
 import com.commercetools.api.models.discount_code.DiscountCodeReference;
+import com.commercetools.api.models.message.OrderMessagePayload;
+import com.commercetools.api.models.message.OrderDiscountCodeRemovedMessagePayloadImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Generated after a successful Remove Discount Code update action.</p>
@@ -26,9 +28,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .discountCode(discountCodeBuilder -> discountCodeBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = OrderDiscountCodeRemovedMessagePayloadImpl.class)
 public interface OrderDiscountCodeRemovedMessagePayload extends OrderMessagePayload {
 
@@ -50,16 +55,18 @@ public interface OrderDiscountCodeRemovedMessagePayload extends OrderMessagePayl
      *  <p>DiscountCode that was removed.</p>
      * @param discountCode value to be set
      */
-
+    
     public void setDiscountCode(final DiscountCodeReference discountCode);
+    
 
     /**
      * factory method
      * @return instance of OrderDiscountCodeRemovedMessagePayload
      */
-    public static OrderDiscountCodeRemovedMessagePayload of() {
+    public static OrderDiscountCodeRemovedMessagePayload of(){
         return new OrderDiscountCodeRemovedMessagePayloadImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy OrderDiscountCodeRemovedMessagePayload
@@ -78,14 +85,12 @@ public interface OrderDiscountCodeRemovedMessagePayload extends OrderMessagePayl
      * @return copy instance
      */
     @Nullable
-    public static OrderDiscountCodeRemovedMessagePayload deepCopy(
-            @Nullable final OrderDiscountCodeRemovedMessagePayload template) {
+    public static OrderDiscountCodeRemovedMessagePayload deepCopy(@Nullable final OrderDiscountCodeRemovedMessagePayload template) {
         if (template == null) {
             return null;
         }
         OrderDiscountCodeRemovedMessagePayloadImpl instance = new OrderDiscountCodeRemovedMessagePayloadImpl();
-        instance.setDiscountCode(
-            com.commercetools.api.models.discount_code.DiscountCodeReference.deepCopy(template.getDiscountCode()));
+        instance.setDiscountCode(com.commercetools.api.models.discount_code.DiscountCodeReference.deepCopy(template.getDiscountCode()));
         return instance;
     }
 
@@ -96,16 +101,16 @@ public interface OrderDiscountCodeRemovedMessagePayload extends OrderMessagePayl
     public static OrderDiscountCodeRemovedMessagePayloadBuilder builder() {
         return OrderDiscountCodeRemovedMessagePayloadBuilder.of();
     }
-
+    
     /**
      * create builder for OrderDiscountCodeRemovedMessagePayload instance
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static OrderDiscountCodeRemovedMessagePayloadBuilder builder(
-            final OrderDiscountCodeRemovedMessagePayload template) {
+    public static OrderDiscountCodeRemovedMessagePayloadBuilder builder(final OrderDiscountCodeRemovedMessagePayload template) {
         return OrderDiscountCodeRemovedMessagePayloadBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -113,11 +118,10 @@ public interface OrderDiscountCodeRemovedMessagePayload extends OrderMessagePayl
      * @param helper function to map the object
      * @return mapped value
      */
-    default <T> T withOrderDiscountCodeRemovedMessagePayload(
-            Function<OrderDiscountCodeRemovedMessagePayload, T> helper) {
+    default <T> T withOrderDiscountCodeRemovedMessagePayload(Function<OrderDiscountCodeRemovedMessagePayload, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

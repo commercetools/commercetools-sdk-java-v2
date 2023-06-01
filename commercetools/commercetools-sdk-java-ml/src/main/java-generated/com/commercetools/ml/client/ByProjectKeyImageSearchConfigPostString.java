@@ -1,18 +1,38 @@
-
 package com.commercetools.ml.client;
 
+import io.vrap.rmf.base.client.utils.Utils;
+
+import java.io.InputStream;
+import java.io.IOException;
+
 import java.net.URI;
+import java.net.URLConnection;
 import java.nio.charset.StandardCharsets;
+import java.nio.file.Files;
+
 import java.time.Duration;
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.List;
+import java.util.Map;
+import java.util.HashMap;
+import java.util.Optional;
+import java.util.function.Function;
+import java.util.function.Supplier;
+import java.util.stream.Collectors;
 import java.util.concurrent.CompletableFuture;
-
-import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.utils.Generated;
+
+import javax.annotation.Nullable;
+
+import java.io.UnsupportedEncodingException;
+import java.net.URLEncoder;
+import io.vrap.rmf.base.client.*;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+
+import static io.vrap.rmf.base.client.utils.ClientUtils.blockingWait;
 
 /**
  *  <p>Endpoint to update the image search config.</p>
@@ -29,16 +49,18 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
  * }</code></pre>
  * </div>
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
-public class ByProjectKeyImageSearchConfigPostString extends
-        StringBodyApiMethod<ByProjectKeyImageSearchConfigPostString, com.commercetools.ml.models.image_search_config.ImageSearchConfigResponse> {
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
+public class ByProjectKeyImageSearchConfigPostString extends StringBodyApiMethod<ByProjectKeyImageSearchConfigPostString, com.commercetools.ml.models.image_search_config.ImageSearchConfigResponse> {
 
+    
     private String projectKey;
-
+    
     private String imageSearchConfigRequest;
 
-    public ByProjectKeyImageSearchConfigPostString(final ApiHttpClient apiHttpClient, String projectKey,
-            String imageSearchConfigRequest) {
+    public ByProjectKeyImageSearchConfigPostString(final ApiHttpClient apiHttpClient, String projectKey, String imageSearchConfigRequest) {
         super(apiHttpClient);
         this.projectKey = projectKey;
         this.imageSearchConfigRequest = imageSearchConfigRequest;
@@ -57,36 +79,31 @@ public class ByProjectKeyImageSearchConfigPostString extends
         if (!params.isEmpty()) {
             httpRequestPath += "?" + String.join("&", params);
         }
-        return new ApiHttpRequest(ApiHttpMethod.POST, URI.create(httpRequestPath), getHeaders(),
-            imageSearchConfigRequest.getBytes(StandardCharsets.UTF_8));
-
+        return new ApiHttpRequest(ApiHttpMethod.POST, URI.create(httpRequestPath), getHeaders(), imageSearchConfigRequest.getBytes(StandardCharsets.UTF_8));
+    
     }
 
     @Override
-    public ApiHttpResponse<com.commercetools.ml.models.image_search_config.ImageSearchConfigResponse> executeBlocking(
-            final ApiHttpClient client, final Duration timeout) {
-        return executeBlocking(client, timeout,
-            com.commercetools.ml.models.image_search_config.ImageSearchConfigResponse.class);
+    public ApiHttpResponse<com.commercetools.ml.models.image_search_config.ImageSearchConfigResponse> executeBlocking(final ApiHttpClient client, final Duration timeout) {
+        return executeBlocking(client, timeout, com.commercetools.ml.models.image_search_config.ImageSearchConfigResponse.class);
     }
 
     @Override
-    public CompletableFuture<ApiHttpResponse<com.commercetools.ml.models.image_search_config.ImageSearchConfigResponse>> execute(
-            final ApiHttpClient client) {
+    public CompletableFuture<ApiHttpResponse<com.commercetools.ml.models.image_search_config.ImageSearchConfigResponse>> execute(final ApiHttpClient client) {
         return execute(client, com.commercetools.ml.models.image_search_config.ImageSearchConfigResponse.class);
     }
 
-    public String getProjectKey() {
-        return this.projectKey;
-    }
+    public String getProjectKey() {return this.projectKey;}
 
-    public void setProjectKey(final String projectKey) {
-        this.projectKey = projectKey;
-    }
 
+    public void setProjectKey(final String projectKey) { this.projectKey = projectKey; }
+
+
+    
     public String getBody() {
         return imageSearchConfigRequest;
     }
-
+    
     public ByProjectKeyImageSearchConfigPostString withBody(String imageSearchConfigRequest) {
         ByProjectKeyImageSearchConfigPostString t = copy();
         t.imageSearchConfigRequest = imageSearchConfigRequest;
@@ -95,22 +112,24 @@ public class ByProjectKeyImageSearchConfigPostString extends
 
     @Override
     public boolean equals(Object o) {
-        if (this == o)
-            return true;
-
-        if (o == null || getClass() != o.getClass())
-            return false;
-
+        if (this == o) return true;
+    
+        if (o == null || getClass() != o.getClass()) return false;
+    
         ByProjectKeyImageSearchConfigPostString that = (ByProjectKeyImageSearchConfigPostString) o;
-
-        return new EqualsBuilder().append(projectKey, that.projectKey)
+    
+        return new EqualsBuilder()
+                .append(projectKey, that.projectKey)
                 .append(imageSearchConfigRequest, that.imageSearchConfigRequest)
                 .isEquals();
     }
-
+    
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(projectKey).append(imageSearchConfigRequest).toHashCode();
+        return new HashCodeBuilder(17, 37)
+            .append(projectKey)
+            .append(imageSearchConfigRequest)
+            .toHashCode();
     }
 
     @Override

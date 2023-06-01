@@ -1,19 +1,21 @@
-
 package com.commercetools.api.models.business_unit;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
+import com.commercetools.api.models.business_unit.BusinessUnitUpdateAction;
 import com.commercetools.api.models.store.StoreResourceIdentifier;
+import com.commercetools.api.models.business_unit.BusinessUnitRemoveStoreActionImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Removes a Store from the Business Unit. Newly created Carts and Orders can no longer reference the removed Store for the Business Unit. We recommend cleaning up unordered Carts that still have the Store assigned after calling this update action since those cannot be converted to Orders. Orders created before the Store was removed remain unchanged. Generates a BusinessUnitStoreRemoved Message. Only applicable when <code>storeMode</code> is <code>Explicit</code>.</p>
@@ -26,9 +28,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .store(storeBuilder -> storeBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = BusinessUnitRemoveStoreActionImpl.class)
 public interface BusinessUnitRemoveStoreAction extends BusinessUnitUpdateAction {
 
@@ -50,16 +55,18 @@ public interface BusinessUnitRemoveStoreAction extends BusinessUnitUpdateAction 
      *  <p>Store to remove.</p>
      * @param store value to be set
      */
-
+    
     public void setStore(final StoreResourceIdentifier store);
+    
 
     /**
      * factory method
      * @return instance of BusinessUnitRemoveStoreAction
      */
-    public static BusinessUnitRemoveStoreAction of() {
+    public static BusinessUnitRemoveStoreAction of(){
         return new BusinessUnitRemoveStoreActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy BusinessUnitRemoveStoreAction
@@ -94,7 +101,7 @@ public interface BusinessUnitRemoveStoreAction extends BusinessUnitUpdateAction 
     public static BusinessUnitRemoveStoreActionBuilder builder() {
         return BusinessUnitRemoveStoreActionBuilder.of();
     }
-
+    
     /**
      * create builder for BusinessUnitRemoveStoreAction instance
      * @param template instance with prefilled values for the builder
@@ -103,6 +110,7 @@ public interface BusinessUnitRemoveStoreAction extends BusinessUnitUpdateAction 
     public static BusinessUnitRemoveStoreActionBuilder builder(final BusinessUnitRemoveStoreAction template) {
         return BusinessUnitRemoveStoreActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -113,7 +121,7 @@ public interface BusinessUnitRemoveStoreAction extends BusinessUnitUpdateAction 
     default <T> T withBusinessUnitRemoveStoreAction(Function<BusinessUnitRemoveStoreAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

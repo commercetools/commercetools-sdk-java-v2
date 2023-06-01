@@ -1,19 +1,22 @@
-
 package com.commercetools.api.models.me;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-
 import com.commercetools.api.models.cart.ExternalTaxRateDraft;
+import com.commercetools.api.models.me.MyCartUpdateAction;
 import com.commercetools.api.models.shipping_method.ShippingMethodResourceIdentifier;
+import com.commercetools.api.models.me.MyCartSetShippingMethodActionImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>To set the Cart's Shipping Method the Cart must have the <code>Single</code> ShippingMode and a <code>shippingAddress</code>.</p>
@@ -25,9 +28,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     MyCartSetShippingMethodAction myCartSetShippingMethodAction = MyCartSetShippingMethodAction.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = MyCartSetShippingMethodActionImpl.class)
 public interface MyCartSetShippingMethodAction extends MyCartUpdateAction {
 
@@ -44,7 +50,6 @@ public interface MyCartSetShippingMethodAction extends MyCartUpdateAction {
     @Valid
     @JsonProperty("shippingMethod")
     public ShippingMethodResourceIdentifier getShippingMethod();
-
     /**
      *  <p>An external Tax Rate can be set if the Cart has the <code>External</code> TaxMode.</p>
      * @return externalTaxRate
@@ -58,23 +63,26 @@ public interface MyCartSetShippingMethodAction extends MyCartUpdateAction {
      *  <p>If the referenced Shipping Method has a predicate that does not match the Cart, an InvalidOperation error is returned.</p>
      * @param shippingMethod value to be set
      */
-
+    
     public void setShippingMethod(final ShippingMethodResourceIdentifier shippingMethod);
-
+    
+    
     /**
      *  <p>An external Tax Rate can be set if the Cart has the <code>External</code> TaxMode.</p>
      * @param externalTaxRate value to be set
      */
-
+    
     public void setExternalTaxRate(final ExternalTaxRateDraft externalTaxRate);
+    
 
     /**
      * factory method
      * @return instance of MyCartSetShippingMethodAction
      */
-    public static MyCartSetShippingMethodAction of() {
+    public static MyCartSetShippingMethodAction of(){
         return new MyCartSetShippingMethodActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy MyCartSetShippingMethodAction
@@ -99,10 +107,8 @@ public interface MyCartSetShippingMethodAction extends MyCartUpdateAction {
             return null;
         }
         MyCartSetShippingMethodActionImpl instance = new MyCartSetShippingMethodActionImpl();
-        instance.setShippingMethod(com.commercetools.api.models.shipping_method.ShippingMethodResourceIdentifier
-                .deepCopy(template.getShippingMethod()));
-        instance.setExternalTaxRate(
-            com.commercetools.api.models.cart.ExternalTaxRateDraft.deepCopy(template.getExternalTaxRate()));
+        instance.setShippingMethod(com.commercetools.api.models.shipping_method.ShippingMethodResourceIdentifier.deepCopy(template.getShippingMethod()));
+        instance.setExternalTaxRate(com.commercetools.api.models.cart.ExternalTaxRateDraft.deepCopy(template.getExternalTaxRate()));
         return instance;
     }
 
@@ -113,7 +119,7 @@ public interface MyCartSetShippingMethodAction extends MyCartUpdateAction {
     public static MyCartSetShippingMethodActionBuilder builder() {
         return MyCartSetShippingMethodActionBuilder.of();
     }
-
+    
     /**
      * create builder for MyCartSetShippingMethodAction instance
      * @param template instance with prefilled values for the builder
@@ -122,6 +128,7 @@ public interface MyCartSetShippingMethodAction extends MyCartUpdateAction {
     public static MyCartSetShippingMethodActionBuilder builder(final MyCartSetShippingMethodAction template) {
         return MyCartSetShippingMethodActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -132,7 +139,7 @@ public interface MyCartSetShippingMethodAction extends MyCartUpdateAction {
     default <T> T withMyCartSetShippingMethodAction(Function<MyCartSetShippingMethodAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

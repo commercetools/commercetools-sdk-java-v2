@@ -1,18 +1,21 @@
-
 package com.commercetools.api.models.order;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-import java.util.stream.Collectors;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
+import com.commercetools.api.models.order.OrderUpdateAction;
+import com.commercetools.api.models.order.ReturnInfoDraft;
+import com.commercetools.api.models.order.OrderSetReturnInfoActionImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * OrderSetReturnInfoAction
@@ -24,9 +27,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     OrderSetReturnInfoAction orderSetReturnInfoAction = OrderSetReturnInfoAction.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = OrderSetReturnInfoActionImpl.class)
 public interface OrderSetReturnInfoAction extends OrderUpdateAction {
 
@@ -47,24 +53,24 @@ public interface OrderSetReturnInfoAction extends OrderUpdateAction {
      * set items
      * @param items values to be set
      */
-
+    
     @JsonIgnore
-    public void setItems(final ReturnInfoDraft... items);
-
+    public void setItems(final ReturnInfoDraft ...items);
     /**
      * set items
      * @param items values to be set
      */
-
+    
     public void setItems(final List<ReturnInfoDraft> items);
 
     /**
      * factory method
      * @return instance of OrderSetReturnInfoAction
      */
-    public static OrderSetReturnInfoAction of() {
+    public static OrderSetReturnInfoAction of(){
         return new OrderSetReturnInfoActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy OrderSetReturnInfoAction
@@ -89,9 +95,7 @@ public interface OrderSetReturnInfoAction extends OrderUpdateAction {
         }
         OrderSetReturnInfoActionImpl instance = new OrderSetReturnInfoActionImpl();
         instance.setItems(Optional.ofNullable(template.getItems())
-                .map(t -> t.stream()
-                        .map(com.commercetools.api.models.order.ReturnInfoDraft::deepCopy)
-                        .collect(Collectors.toList()))
+                .map(t -> t.stream().map(com.commercetools.api.models.order.ReturnInfoDraft::deepCopy).collect(Collectors.toList()))
                 .orElse(null));
         return instance;
     }
@@ -103,7 +107,7 @@ public interface OrderSetReturnInfoAction extends OrderUpdateAction {
     public static OrderSetReturnInfoActionBuilder builder() {
         return OrderSetReturnInfoActionBuilder.of();
     }
-
+    
     /**
      * create builder for OrderSetReturnInfoAction instance
      * @param template instance with prefilled values for the builder
@@ -112,6 +116,7 @@ public interface OrderSetReturnInfoAction extends OrderUpdateAction {
     public static OrderSetReturnInfoActionBuilder builder(final OrderSetReturnInfoAction template) {
         return OrderSetReturnInfoActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -122,7 +127,7 @@ public interface OrderSetReturnInfoAction extends OrderUpdateAction {
     default <T> T withOrderSetReturnInfoAction(Function<OrderSetReturnInfoAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

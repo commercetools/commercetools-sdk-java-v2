@@ -1,20 +1,22 @@
-
 package com.commercetools.importapi.models.importrequests;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-import java.util.stream.Collectors;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
 import com.commercetools.importapi.models.categories.CategoryImport;
+import com.commercetools.importapi.models.common.ImportResourceType;
+import com.commercetools.importapi.models.importrequests.ImportRequest;
+import com.commercetools.importapi.models.importrequests.CategoryImportRequestImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>The request body to import Categories. Contains data for Categories to be created or updated in a Project.</p>
@@ -27,9 +29,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .plusResources(resourcesBuilder -> resourcesBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = CategoryImportRequestImpl.class)
 public interface CategoryImportRequest extends ImportRequest {
 
@@ -51,24 +56,24 @@ public interface CategoryImportRequest extends ImportRequest {
      *  <p>The category import resources of this request.</p>
      * @param resources values to be set
      */
-
+    
     @JsonIgnore
-    public void setResources(final CategoryImport... resources);
-
+    public void setResources(final CategoryImport ...resources);
     /**
      *  <p>The category import resources of this request.</p>
      * @param resources values to be set
      */
-
+    
     public void setResources(final List<CategoryImport> resources);
 
     /**
      * factory method
      * @return instance of CategoryImportRequest
      */
-    public static CategoryImportRequest of() {
+    public static CategoryImportRequest of(){
         return new CategoryImportRequestImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy CategoryImportRequest
@@ -93,9 +98,7 @@ public interface CategoryImportRequest extends ImportRequest {
         }
         CategoryImportRequestImpl instance = new CategoryImportRequestImpl();
         instance.setResources(Optional.ofNullable(template.getResources())
-                .map(t -> t.stream()
-                        .map(com.commercetools.importapi.models.categories.CategoryImport::deepCopy)
-                        .collect(Collectors.toList()))
+                .map(t -> t.stream().map(com.commercetools.importapi.models.categories.CategoryImport::deepCopy).collect(Collectors.toList()))
                 .orElse(null));
         return instance;
     }
@@ -107,7 +110,7 @@ public interface CategoryImportRequest extends ImportRequest {
     public static CategoryImportRequestBuilder builder() {
         return CategoryImportRequestBuilder.of();
     }
-
+    
     /**
      * create builder for CategoryImportRequest instance
      * @param template instance with prefilled values for the builder
@@ -116,6 +119,7 @@ public interface CategoryImportRequest extends ImportRequest {
     public static CategoryImportRequestBuilder builder(final CategoryImportRequest template) {
         return CategoryImportRequestBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -126,7 +130,7 @@ public interface CategoryImportRequest extends ImportRequest {
     default <T> T withCategoryImportRequest(Function<CategoryImportRequest, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

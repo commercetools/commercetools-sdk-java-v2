@@ -1,32 +1,33 @@
-
 package com.commercetools.api.models.business_unit;
-
-import java.util.Arrays;
-import java.util.Optional;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-
+import java.lang.String;
+import java.util.Arrays;
+import java.util.Optional;
 import io.vrap.rmf.base.client.JsonEnum;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
  *  <p>Indicates whether the Business Unit can be edited and used in Carts, Orders, Quote Requests, or Quotes.</p>
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public interface BusinessUnitStatus extends JsonEnum {
 
     /**
     	<p>The Business Unit can be used in Carts, Orders, Quote Requests, and Quotes and can be edited.</p>
-
+    	
     */
     BusinessUnitStatus ACTIVE = BusinessUnitStatusEnum.ACTIVE;
     /**
     	<p>The Business Unit cannot be used in Carts, Orders, Quote Requests, and Quotes and can only be edited using the <a href="ctp:api:endpoint:/{projectKey}/me/business-units:POST">general endpoint</a>.</p>
-
+    	
     */
     BusinessUnitStatus INACTIVE = BusinessUnitStatusEnum.INACTIVE;
-
+    
     /**
      * possible values of BusinessUnitStatus
      */
@@ -35,7 +36,7 @@ public interface BusinessUnitStatus extends JsonEnum {
          * Active
          */
         ACTIVE("Active"),
-
+        
         /**
          * Inactive
          */
@@ -92,7 +93,7 @@ public interface BusinessUnitStatus extends JsonEnum {
             public String name() {
                 return value.toUpperCase();
             }
-
+            
             public String toString() {
                 return value;
             }
@@ -107,7 +108,7 @@ public interface BusinessUnitStatus extends JsonEnum {
     public static Optional<BusinessUnitStatus> findEnumViaJsonName(String jsonName) {
         return Arrays.stream(values()).filter(t -> t.getJsonName().equals(jsonName)).findFirst();
     }
-
+    
     /**
      * possible enum values
      * @return array of possible enum values
@@ -115,5 +116,5 @@ public interface BusinessUnitStatus extends JsonEnum {
     public static BusinessUnitStatus[] values() {
         return BusinessUnitStatusEnum.values();
     }
-
+    
 }

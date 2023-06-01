@@ -1,31 +1,33 @@
-
 package com.commercetools.history.models.common;
-
-import java.util.Arrays;
-import java.util.Optional;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-
+import java.lang.String;
+import java.util.Arrays;
+import java.util.Optional;
 import io.vrap.rmf.base.client.JsonEnum;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
  * QuoteState
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public interface QuoteState extends JsonEnum {
 
+    
     QuoteState PENDING = QuoteStateEnum.PENDING;
-
+    
     QuoteState DECLINED = QuoteStateEnum.DECLINED;
-
+    
     QuoteState ACCEPTED = QuoteStateEnum.ACCEPTED;
-
+    
     QuoteState FAILED = QuoteStateEnum.FAILED;
-
+    
     QuoteState WITHDRAWN = QuoteStateEnum.WITHDRAWN;
-
+    
     /**
      * possible values of QuoteState
      */
@@ -34,22 +36,22 @@ public interface QuoteState extends JsonEnum {
          * Pending
          */
         PENDING("Pending"),
-
+        
         /**
          * Declined
          */
         DECLINED("Declined"),
-
+        
         /**
          * Accepted
          */
         ACCEPTED("Accepted"),
-
+        
         /**
          * Failed
          */
         FAILED("Failed"),
-
+        
         /**
          * Withdrawn
          */
@@ -106,7 +108,7 @@ public interface QuoteState extends JsonEnum {
             public String name() {
                 return value.toUpperCase();
             }
-
+            
             public String toString() {
                 return value;
             }
@@ -121,7 +123,7 @@ public interface QuoteState extends JsonEnum {
     public static Optional<QuoteState> findEnumViaJsonName(String jsonName) {
         return Arrays.stream(values()).filter(t -> t.getJsonName().equals(jsonName)).findFirst();
     }
-
+    
     /**
      * possible enum values
      * @return array of possible enum values
@@ -129,5 +131,5 @@ public interface QuoteState extends JsonEnum {
     public static QuoteState[] values() {
         return QuoteStateEnum.values();
     }
-
+    
 }

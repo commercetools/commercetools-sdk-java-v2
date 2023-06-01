@@ -1,21 +1,22 @@
-
 package com.commercetools.api.models.order_edit;
-
-import java.time.*;
-import java.time.ZonedDateTime;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.order.StagedOrderUpdateAction;
 import com.commercetools.api.models.state.StateResourceIdentifier;
+import java.time.ZonedDateTime;
+import com.commercetools.api.models.order_edit.StagedOrderTransitionLineItemStateActionImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * StagedOrderTransitionLineItemStateAction
@@ -31,9 +32,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .toState(toStateBuilder -> toStateBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = StagedOrderTransitionLineItemStateActionImpl.class)
 public interface StagedOrderTransitionLineItemStateAction extends StagedOrderUpdateAction {
 
@@ -49,7 +53,6 @@ public interface StagedOrderTransitionLineItemStateAction extends StagedOrderUpd
     @NotNull
     @JsonProperty("lineItemId")
     public String getLineItemId();
-
     /**
      *
      * @return quantity
@@ -57,7 +60,6 @@ public interface StagedOrderTransitionLineItemStateAction extends StagedOrderUpd
     @NotNull
     @JsonProperty("quantity")
     public Long getQuantity();
-
     /**
      *  <p>ResourceIdentifier to a State.</p>
      * @return fromState
@@ -66,7 +68,6 @@ public interface StagedOrderTransitionLineItemStateAction extends StagedOrderUpd
     @Valid
     @JsonProperty("fromState")
     public StateResourceIdentifier getFromState();
-
     /**
      *  <p>ResourceIdentifier to a State.</p>
      * @return toState
@@ -75,12 +76,11 @@ public interface StagedOrderTransitionLineItemStateAction extends StagedOrderUpd
     @Valid
     @JsonProperty("toState")
     public StateResourceIdentifier getToState();
-
     /**
      *
      * @return actualTransitionDate
      */
-
+    
     @JsonProperty("actualTransitionDate")
     public ZonedDateTime getActualTransitionDate();
 
@@ -88,44 +88,50 @@ public interface StagedOrderTransitionLineItemStateAction extends StagedOrderUpd
      * set lineItemId
      * @param lineItemId value to be set
      */
-
+    
     public void setLineItemId(final String lineItemId);
-
+    
+    
     /**
      * set quantity
      * @param quantity value to be set
      */
-
+    
     public void setQuantity(final Long quantity);
-
+    
+    
     /**
      *  <p>ResourceIdentifier to a State.</p>
      * @param fromState value to be set
      */
-
+    
     public void setFromState(final StateResourceIdentifier fromState);
-
+    
+    
     /**
      *  <p>ResourceIdentifier to a State.</p>
      * @param toState value to be set
      */
-
+    
     public void setToState(final StateResourceIdentifier toState);
-
+    
+    
     /**
      * set actualTransitionDate
      * @param actualTransitionDate value to be set
      */
-
+    
     public void setActualTransitionDate(final ZonedDateTime actualTransitionDate);
+    
 
     /**
      * factory method
      * @return instance of StagedOrderTransitionLineItemStateAction
      */
-    public static StagedOrderTransitionLineItemStateAction of() {
+    public static StagedOrderTransitionLineItemStateAction of(){
         return new StagedOrderTransitionLineItemStateActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy StagedOrderTransitionLineItemStateAction
@@ -148,16 +154,14 @@ public interface StagedOrderTransitionLineItemStateAction extends StagedOrderUpd
      * @return copy instance
      */
     @Nullable
-    public static StagedOrderTransitionLineItemStateAction deepCopy(
-            @Nullable final StagedOrderTransitionLineItemStateAction template) {
+    public static StagedOrderTransitionLineItemStateAction deepCopy(@Nullable final StagedOrderTransitionLineItemStateAction template) {
         if (template == null) {
             return null;
         }
         StagedOrderTransitionLineItemStateActionImpl instance = new StagedOrderTransitionLineItemStateActionImpl();
         instance.setLineItemId(template.getLineItemId());
         instance.setQuantity(template.getQuantity());
-        instance.setFromState(
-            com.commercetools.api.models.state.StateResourceIdentifier.deepCopy(template.getFromState()));
+        instance.setFromState(com.commercetools.api.models.state.StateResourceIdentifier.deepCopy(template.getFromState()));
         instance.setToState(com.commercetools.api.models.state.StateResourceIdentifier.deepCopy(template.getToState()));
         instance.setActualTransitionDate(template.getActualTransitionDate());
         return instance;
@@ -170,16 +174,16 @@ public interface StagedOrderTransitionLineItemStateAction extends StagedOrderUpd
     public static StagedOrderTransitionLineItemStateActionBuilder builder() {
         return StagedOrderTransitionLineItemStateActionBuilder.of();
     }
-
+    
     /**
      * create builder for StagedOrderTransitionLineItemStateAction instance
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static StagedOrderTransitionLineItemStateActionBuilder builder(
-            final StagedOrderTransitionLineItemStateAction template) {
+    public static StagedOrderTransitionLineItemStateActionBuilder builder(final StagedOrderTransitionLineItemStateAction template) {
         return StagedOrderTransitionLineItemStateActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -187,11 +191,10 @@ public interface StagedOrderTransitionLineItemStateAction extends StagedOrderUpd
      * @param helper function to map the object
      * @return mapped value
      */
-    default <T> T withStagedOrderTransitionLineItemStateAction(
-            Function<StagedOrderTransitionLineItemStateAction, T> helper) {
+    default <T> T withStagedOrderTransitionLineItemStateAction(Function<StagedOrderTransitionLineItemStateAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

@@ -1,16 +1,20 @@
-
 package com.commercetools.api.models.order;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
+import com.commercetools.api.models.order.OrderUpdateAction;
+import com.commercetools.api.models.order.OrderSetCustomerIdActionImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * OrderSetCustomerIdAction
@@ -22,9 +26,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     OrderSetCustomerIdAction orderSetCustomerIdAction = OrderSetCustomerIdAction.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = OrderSetCustomerIdActionImpl.class)
 public interface OrderSetCustomerIdAction extends OrderUpdateAction {
 
@@ -37,7 +44,7 @@ public interface OrderSetCustomerIdAction extends OrderUpdateAction {
      *
      * @return customerId
      */
-
+    
     @JsonProperty("customerId")
     public String getCustomerId();
 
@@ -45,16 +52,18 @@ public interface OrderSetCustomerIdAction extends OrderUpdateAction {
      * set customerId
      * @param customerId value to be set
      */
-
+    
     public void setCustomerId(final String customerId);
+    
 
     /**
      * factory method
      * @return instance of OrderSetCustomerIdAction
      */
-    public static OrderSetCustomerIdAction of() {
+    public static OrderSetCustomerIdAction of(){
         return new OrderSetCustomerIdActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy OrderSetCustomerIdAction
@@ -89,7 +98,7 @@ public interface OrderSetCustomerIdAction extends OrderUpdateAction {
     public static OrderSetCustomerIdActionBuilder builder() {
         return OrderSetCustomerIdActionBuilder.of();
     }
-
+    
     /**
      * create builder for OrderSetCustomerIdAction instance
      * @param template instance with prefilled values for the builder
@@ -98,6 +107,7 @@ public interface OrderSetCustomerIdAction extends OrderUpdateAction {
     public static OrderSetCustomerIdActionBuilder builder(final OrderSetCustomerIdAction template) {
         return OrderSetCustomerIdActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -108,7 +118,7 @@ public interface OrderSetCustomerIdAction extends OrderUpdateAction {
     default <T> T withOrderSetCustomerIdAction(Function<OrderSetCustomerIdAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

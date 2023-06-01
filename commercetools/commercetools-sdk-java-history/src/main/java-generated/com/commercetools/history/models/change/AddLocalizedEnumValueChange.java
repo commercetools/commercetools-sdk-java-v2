@@ -1,19 +1,21 @@
-
 package com.commercetools.history.models.change;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
+import com.commercetools.history.models.change.Change;
 import com.commercetools.history.models.change_value.LocalizedEnumValue;
+import com.commercetools.history.models.change.AddLocalizedEnumValueChangeImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * AddLocalizedEnumValueChange
@@ -29,9 +31,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .nextValue(nextValueBuilder -> nextValueBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = AddLocalizedEnumValueChangeImpl.class)
 public interface AddLocalizedEnumValueChange extends Change {
 
@@ -47,7 +52,6 @@ public interface AddLocalizedEnumValueChange extends Change {
     @NotNull
     @JsonProperty("type")
     public String getType();
-
     /**
      *  <p>Update action for <code>addLocalizedEnumValue</code> on types</p>
      * @return change
@@ -55,7 +59,6 @@ public interface AddLocalizedEnumValueChange extends Change {
     @NotNull
     @JsonProperty("change")
     public String getChange();
-
     /**
      *  <p>The name of the field definition updated.</p>
      * @return fieldName
@@ -63,7 +66,6 @@ public interface AddLocalizedEnumValueChange extends Change {
     @NotNull
     @JsonProperty("fieldName")
     public String getFieldName();
-
     /**
      *  <p>The name of the attribute updated.</p>
      * @return attributeName
@@ -71,7 +73,6 @@ public interface AddLocalizedEnumValueChange extends Change {
     @NotNull
     @JsonProperty("attributeName")
     public String getAttributeName();
-
     /**
      *
      * @return nextValue
@@ -85,37 +86,42 @@ public interface AddLocalizedEnumValueChange extends Change {
      *  <p>Update action for <code>addLocalizedEnumValue</code> on types</p>
      * @param change value to be set
      */
-
+    
     public void setChange(final String change);
-
+    
+    
     /**
      *  <p>The name of the field definition updated.</p>
      * @param fieldName value to be set
      */
-
+    
     public void setFieldName(final String fieldName);
-
+    
+    
     /**
      *  <p>The name of the attribute updated.</p>
      * @param attributeName value to be set
      */
-
+    
     public void setAttributeName(final String attributeName);
-
+    
+    
     /**
      * set nextValue
      * @param nextValue value to be set
      */
-
+    
     public void setNextValue(final LocalizedEnumValue nextValue);
+    
 
     /**
      * factory method
      * @return instance of AddLocalizedEnumValueChange
      */
-    public static AddLocalizedEnumValueChange of() {
+    public static AddLocalizedEnumValueChange of(){
         return new AddLocalizedEnumValueChangeImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy AddLocalizedEnumValueChange
@@ -145,8 +151,7 @@ public interface AddLocalizedEnumValueChange extends Change {
         instance.setChange(template.getChange());
         instance.setFieldName(template.getFieldName());
         instance.setAttributeName(template.getAttributeName());
-        instance.setNextValue(
-            com.commercetools.history.models.change_value.LocalizedEnumValue.deepCopy(template.getNextValue()));
+        instance.setNextValue(com.commercetools.history.models.change_value.LocalizedEnumValue.deepCopy(template.getNextValue()));
         return instance;
     }
 
@@ -157,7 +162,7 @@ public interface AddLocalizedEnumValueChange extends Change {
     public static AddLocalizedEnumValueChangeBuilder builder() {
         return AddLocalizedEnumValueChangeBuilder.of();
     }
-
+    
     /**
      * create builder for AddLocalizedEnumValueChange instance
      * @param template instance with prefilled values for the builder
@@ -166,6 +171,7 @@ public interface AddLocalizedEnumValueChange extends Change {
     public static AddLocalizedEnumValueChangeBuilder builder(final AddLocalizedEnumValueChange template) {
         return AddLocalizedEnumValueChangeBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -176,7 +182,7 @@ public interface AddLocalizedEnumValueChange extends Change {
     default <T> T withAddLocalizedEnumValueChange(Function<AddLocalizedEnumValueChange, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

@@ -1,17 +1,20 @@
-
 package com.commercetools.api.models.error;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
+import com.commercetools.api.models.error.ErrorObject;
+import com.commercetools.api.models.error.ObjectNotFoundErrorImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Returned when the requested resource was not found.</p>
@@ -24,9 +27,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .message("{message}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = ObjectNotFoundErrorImpl.class)
 public interface ObjectNotFoundError extends ErrorObject {
 
@@ -42,7 +48,6 @@ public interface ObjectNotFoundError extends ErrorObject {
     @NotNull
     @JsonProperty("code")
     public String getCode();
-
     /**
      *  <p><code>"A $resourceType with identifier $id was unexpectedly not found."</code></p>
      * @return message
@@ -55,16 +60,18 @@ public interface ObjectNotFoundError extends ErrorObject {
      *  <p><code>"A $resourceType with identifier $id was unexpectedly not found."</code></p>
      * @param message value to be set
      */
-
+    
     public void setMessage(final String message);
+    
 
     /**
      * factory method
      * @return instance of ObjectNotFoundError
      */
-    public static ObjectNotFoundError of() {
+    public static ObjectNotFoundError of(){
         return new ObjectNotFoundErrorImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy ObjectNotFoundError
@@ -101,7 +108,7 @@ public interface ObjectNotFoundError extends ErrorObject {
     public static ObjectNotFoundErrorBuilder builder() {
         return ObjectNotFoundErrorBuilder.of();
     }
-
+    
     /**
      * create builder for ObjectNotFoundError instance
      * @param template instance with prefilled values for the builder
@@ -110,6 +117,7 @@ public interface ObjectNotFoundError extends ErrorObject {
     public static ObjectNotFoundErrorBuilder builder(final ObjectNotFoundError template) {
         return ObjectNotFoundErrorBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -120,7 +128,7 @@ public interface ObjectNotFoundError extends ErrorObject {
     default <T> T withObjectNotFoundError(Function<ObjectNotFoundError, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

@@ -1,9 +1,12 @@
-
 package com.commercetools.api.models.me;
 
+import com.commercetools.api.models.business_unit.BusinessUnitResourceIdentifier;
+import com.commercetools.api.models.me.MyCartUpdateAction;
+import com.commercetools.api.models.me.MyCartSetBusinessUnitAction;
+import javax.annotation.Nullable;
 import java.util.*;
 import java.util.function.Function;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -17,58 +20,61 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .businessUnit(businessUnitBuilder -> businessUnitBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class MyCartSetBusinessUnitActionBuilder implements Builder<MyCartSetBusinessUnitAction> {
 
+    
+    
     private com.commercetools.api.models.business_unit.BusinessUnitResourceIdentifier businessUnit;
 
+    
     /**
      *  <p>New Business Unit to assign to the Cart, which must have access to the Store that is set on the Cart. Additionally, the authenticated user must be an Associate in the Business Unit.</p>
      * @param builder function to build the businessUnit value
      * @return Builder
      */
-
-    public MyCartSetBusinessUnitActionBuilder businessUnit(
-            Function<com.commercetools.api.models.business_unit.BusinessUnitResourceIdentifierBuilder, com.commercetools.api.models.business_unit.BusinessUnitResourceIdentifierBuilder> builder) {
-        this.businessUnit = builder
-                .apply(com.commercetools.api.models.business_unit.BusinessUnitResourceIdentifierBuilder.of())
-                .build();
+    
+    public MyCartSetBusinessUnitActionBuilder businessUnit(Function<com.commercetools.api.models.business_unit.BusinessUnitResourceIdentifierBuilder, com.commercetools.api.models.business_unit.BusinessUnitResourceIdentifierBuilder> builder) {
+        this.businessUnit = builder.apply(com.commercetools.api.models.business_unit.BusinessUnitResourceIdentifierBuilder.of()).build();
         return this;
     }
-
+    
     /**
      *  <p>New Business Unit to assign to the Cart, which must have access to the Store that is set on the Cart. Additionally, the authenticated user must be an Associate in the Business Unit.</p>
      * @param builder function to build the businessUnit value
      * @return Builder
      */
-
-    public MyCartSetBusinessUnitActionBuilder withBusinessUnit(
-            Function<com.commercetools.api.models.business_unit.BusinessUnitResourceIdentifierBuilder, com.commercetools.api.models.business_unit.BusinessUnitResourceIdentifier> builder) {
-        this.businessUnit = builder
-                .apply(com.commercetools.api.models.business_unit.BusinessUnitResourceIdentifierBuilder.of());
+    
+    public MyCartSetBusinessUnitActionBuilder withBusinessUnit(Function<com.commercetools.api.models.business_unit.BusinessUnitResourceIdentifierBuilder, com.commercetools.api.models.business_unit.BusinessUnitResourceIdentifier> builder) {
+        this.businessUnit = builder.apply(com.commercetools.api.models.business_unit.BusinessUnitResourceIdentifierBuilder.of());
         return this;
     }
-
+                    
     /**
      *  <p>New Business Unit to assign to the Cart, which must have access to the Store that is set on the Cart. Additionally, the authenticated user must be an Associate in the Business Unit.</p>
      * @param businessUnit value to be set
      * @return Builder
      */
-
-    public MyCartSetBusinessUnitActionBuilder businessUnit(
-            final com.commercetools.api.models.business_unit.BusinessUnitResourceIdentifier businessUnit) {
+    
+    public MyCartSetBusinessUnitActionBuilder businessUnit( final com.commercetools.api.models.business_unit.BusinessUnitResourceIdentifier businessUnit) {
         this.businessUnit = businessUnit;
         return this;
     }
+    
+    
 
     /**
      *  <p>New Business Unit to assign to the Cart, which must have access to the Store that is set on the Cart. Additionally, the authenticated user must be an Associate in the Business Unit.</p>
      * @return businessUnit
      */
-
-    public com.commercetools.api.models.business_unit.BusinessUnitResourceIdentifier getBusinessUnit() {
+    
+    
+    public com.commercetools.api.models.business_unit.BusinessUnitResourceIdentifier getBusinessUnit(){
         return this.businessUnit;
     }
 
@@ -80,7 +86,7 @@ public class MyCartSetBusinessUnitActionBuilder implements Builder<MyCartSetBusi
         Objects.requireNonNull(businessUnit, MyCartSetBusinessUnitAction.class + ": businessUnit is missing");
         return new MyCartSetBusinessUnitActionImpl(businessUnit);
     }
-
+    
     /**
      * builds MyCartSetBusinessUnitAction without checking for non-null required values
      * @return MyCartSetBusinessUnitAction
@@ -91,7 +97,7 @@ public class MyCartSetBusinessUnitActionBuilder implements Builder<MyCartSetBusi
 
     /**
      * factory method for an instance of MyCartSetBusinessUnitActionBuilder
-     * @return builder
+     * @return builder 
      */
     public static MyCartSetBusinessUnitActionBuilder of() {
         return new MyCartSetBusinessUnitActionBuilder();

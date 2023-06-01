@@ -1,16 +1,20 @@
-
 package com.commercetools.api.models.review;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
+import com.commercetools.api.models.review.ReviewUpdateAction;
+import com.commercetools.api.models.review.ReviewSetAuthorNameActionImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * ReviewSetAuthorNameAction
@@ -22,9 +26,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     ReviewSetAuthorNameAction reviewSetAuthorNameAction = ReviewSetAuthorNameAction.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = ReviewSetAuthorNameActionImpl.class)
 public interface ReviewSetAuthorNameAction extends ReviewUpdateAction {
 
@@ -37,7 +44,7 @@ public interface ReviewSetAuthorNameAction extends ReviewUpdateAction {
      *  <p>Value to set. If empty, any existing value will be removed.</p>
      * @return authorName
      */
-
+    
     @JsonProperty("authorName")
     public String getAuthorName();
 
@@ -45,16 +52,18 @@ public interface ReviewSetAuthorNameAction extends ReviewUpdateAction {
      *  <p>Value to set. If empty, any existing value will be removed.</p>
      * @param authorName value to be set
      */
-
+    
     public void setAuthorName(final String authorName);
+    
 
     /**
      * factory method
      * @return instance of ReviewSetAuthorNameAction
      */
-    public static ReviewSetAuthorNameAction of() {
+    public static ReviewSetAuthorNameAction of(){
         return new ReviewSetAuthorNameActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy ReviewSetAuthorNameAction
@@ -89,7 +98,7 @@ public interface ReviewSetAuthorNameAction extends ReviewUpdateAction {
     public static ReviewSetAuthorNameActionBuilder builder() {
         return ReviewSetAuthorNameActionBuilder.of();
     }
-
+    
     /**
      * create builder for ReviewSetAuthorNameAction instance
      * @param template instance with prefilled values for the builder
@@ -98,6 +107,7 @@ public interface ReviewSetAuthorNameAction extends ReviewUpdateAction {
     public static ReviewSetAuthorNameActionBuilder builder(final ReviewSetAuthorNameAction template) {
         return ReviewSetAuthorNameActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -108,7 +118,7 @@ public interface ReviewSetAuthorNameAction extends ReviewUpdateAction {
     default <T> T withReviewSetAuthorNameAction(Function<ReviewSetAuthorNameAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

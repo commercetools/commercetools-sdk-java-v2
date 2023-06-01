@@ -1,20 +1,21 @@
-
 package com.commercetools.history.models.change;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-import java.util.stream.Collectors;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
+import com.commercetools.history.models.change.Change;
 import com.commercetools.history.models.common.ItemState;
+import com.commercetools.history.models.change.TransitionLineItemStateChangeImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * TransitionLineItemStateChange
@@ -31,9 +32,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .plusPreviousValue(previousValueBuilder -> previousValueBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = TransitionLineItemStateChangeImpl.class)
 public interface TransitionLineItemStateChange extends Change {
 
@@ -49,7 +53,6 @@ public interface TransitionLineItemStateChange extends Change {
     @NotNull
     @JsonProperty("type")
     public String getType();
-
     /**
      *  <p>Update action for <code>transitionLineItemState</code></p>
      * @return change
@@ -57,7 +60,6 @@ public interface TransitionLineItemStateChange extends Change {
     @NotNull
     @JsonProperty("change")
     public String getChange();
-
     /**
      *
      * @return lineItemId
@@ -65,7 +67,6 @@ public interface TransitionLineItemStateChange extends Change {
     @NotNull
     @JsonProperty("lineItemId")
     public String getLineItemId();
-
     /**
      *
      * @return stateId
@@ -73,7 +74,6 @@ public interface TransitionLineItemStateChange extends Change {
     @NotNull
     @JsonProperty("stateId")
     public String getStateId();
-
     /**
      *
      * @return nextValue
@@ -82,7 +82,6 @@ public interface TransitionLineItemStateChange extends Change {
     @Valid
     @JsonProperty("nextValue")
     public List<ItemState> getNextValue();
-
     /**
      *
      * @return previousValue
@@ -96,60 +95,62 @@ public interface TransitionLineItemStateChange extends Change {
      *  <p>Update action for <code>transitionLineItemState</code></p>
      * @param change value to be set
      */
-
+    
     public void setChange(final String change);
-
+    
+    
     /**
      * set lineItemId
      * @param lineItemId value to be set
      */
-
+    
     public void setLineItemId(final String lineItemId);
-
+    
+    
     /**
      * set stateId
      * @param stateId value to be set
      */
-
+    
     public void setStateId(final String stateId);
-
+    
+    
     /**
      * set nextValue
      * @param nextValue values to be set
      */
-
+    
     @JsonIgnore
-    public void setNextValue(final ItemState... nextValue);
-
+    public void setNextValue(final ItemState ...nextValue);
     /**
      * set nextValue
      * @param nextValue values to be set
      */
-
+    
     public void setNextValue(final List<ItemState> nextValue);
-
+    
     /**
      * set previousValue
      * @param previousValue values to be set
      */
-
+    
     @JsonIgnore
-    public void setPreviousValue(final ItemState... previousValue);
-
+    public void setPreviousValue(final ItemState ...previousValue);
     /**
      * set previousValue
      * @param previousValue values to be set
      */
-
+    
     public void setPreviousValue(final List<ItemState> previousValue);
 
     /**
      * factory method
      * @return instance of TransitionLineItemStateChange
      */
-    public static TransitionLineItemStateChange of() {
+    public static TransitionLineItemStateChange of(){
         return new TransitionLineItemStateChangeImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy TransitionLineItemStateChange
@@ -181,14 +182,10 @@ public interface TransitionLineItemStateChange extends Change {
         instance.setLineItemId(template.getLineItemId());
         instance.setStateId(template.getStateId());
         instance.setNextValue(Optional.ofNullable(template.getNextValue())
-                .map(t -> t.stream()
-                        .map(com.commercetools.history.models.common.ItemState::deepCopy)
-                        .collect(Collectors.toList()))
+                .map(t -> t.stream().map(com.commercetools.history.models.common.ItemState::deepCopy).collect(Collectors.toList()))
                 .orElse(null));
         instance.setPreviousValue(Optional.ofNullable(template.getPreviousValue())
-                .map(t -> t.stream()
-                        .map(com.commercetools.history.models.common.ItemState::deepCopy)
-                        .collect(Collectors.toList()))
+                .map(t -> t.stream().map(com.commercetools.history.models.common.ItemState::deepCopy).collect(Collectors.toList()))
                 .orElse(null));
         return instance;
     }
@@ -200,7 +197,7 @@ public interface TransitionLineItemStateChange extends Change {
     public static TransitionLineItemStateChangeBuilder builder() {
         return TransitionLineItemStateChangeBuilder.of();
     }
-
+    
     /**
      * create builder for TransitionLineItemStateChange instance
      * @param template instance with prefilled values for the builder
@@ -209,6 +206,7 @@ public interface TransitionLineItemStateChange extends Change {
     public static TransitionLineItemStateChangeBuilder builder(final TransitionLineItemStateChange template) {
         return TransitionLineItemStateChangeBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -219,7 +217,7 @@ public interface TransitionLineItemStateChange extends Change {
     default <T> T withTransitionLineItemStateChange(Function<TransitionLineItemStateChange, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

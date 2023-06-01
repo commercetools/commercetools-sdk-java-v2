@@ -1,9 +1,12 @@
-
 package com.commercetools.api.models.message;
 
+import com.commercetools.api.models.inventory.InventoryEntry;
+import com.commercetools.api.models.message.MessagePayload;
+import com.commercetools.api.models.message.InventoryEntryCreatedMessagePayload;
+import javax.annotation.Nullable;
 import java.util.*;
 import java.util.function.Function;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -17,55 +20,61 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .inventoryEntry(inventoryEntryBuilder -> inventoryEntryBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class InventoryEntryCreatedMessagePayloadBuilder implements Builder<InventoryEntryCreatedMessagePayload> {
 
+    
+    
     private com.commercetools.api.models.inventory.InventoryEntry inventoryEntry;
 
+    
     /**
      *  <p>InventoryEntry that was created.</p>
      * @param builder function to build the inventoryEntry value
      * @return Builder
      */
-
-    public InventoryEntryCreatedMessagePayloadBuilder inventoryEntry(
-            Function<com.commercetools.api.models.inventory.InventoryEntryBuilder, com.commercetools.api.models.inventory.InventoryEntryBuilder> builder) {
+    
+    public InventoryEntryCreatedMessagePayloadBuilder inventoryEntry(Function<com.commercetools.api.models.inventory.InventoryEntryBuilder, com.commercetools.api.models.inventory.InventoryEntryBuilder> builder) {
         this.inventoryEntry = builder.apply(com.commercetools.api.models.inventory.InventoryEntryBuilder.of()).build();
         return this;
     }
-
+    
     /**
      *  <p>InventoryEntry that was created.</p>
      * @param builder function to build the inventoryEntry value
      * @return Builder
      */
-
-    public InventoryEntryCreatedMessagePayloadBuilder withInventoryEntry(
-            Function<com.commercetools.api.models.inventory.InventoryEntryBuilder, com.commercetools.api.models.inventory.InventoryEntry> builder) {
+    
+    public InventoryEntryCreatedMessagePayloadBuilder withInventoryEntry(Function<com.commercetools.api.models.inventory.InventoryEntryBuilder, com.commercetools.api.models.inventory.InventoryEntry> builder) {
         this.inventoryEntry = builder.apply(com.commercetools.api.models.inventory.InventoryEntryBuilder.of());
         return this;
     }
-
+                    
     /**
      *  <p>InventoryEntry that was created.</p>
      * @param inventoryEntry value to be set
      * @return Builder
      */
-
-    public InventoryEntryCreatedMessagePayloadBuilder inventoryEntry(
-            final com.commercetools.api.models.inventory.InventoryEntry inventoryEntry) {
+    
+    public InventoryEntryCreatedMessagePayloadBuilder inventoryEntry( final com.commercetools.api.models.inventory.InventoryEntry inventoryEntry) {
         this.inventoryEntry = inventoryEntry;
         return this;
     }
+    
+    
 
     /**
      *  <p>InventoryEntry that was created.</p>
      * @return inventoryEntry
      */
-
-    public com.commercetools.api.models.inventory.InventoryEntry getInventoryEntry() {
+    
+    
+    public com.commercetools.api.models.inventory.InventoryEntry getInventoryEntry(){
         return this.inventoryEntry;
     }
 
@@ -74,11 +83,10 @@ public class InventoryEntryCreatedMessagePayloadBuilder implements Builder<Inven
      * @return InventoryEntryCreatedMessagePayload
      */
     public InventoryEntryCreatedMessagePayload build() {
-        Objects.requireNonNull(inventoryEntry,
-            InventoryEntryCreatedMessagePayload.class + ": inventoryEntry is missing");
+        Objects.requireNonNull(inventoryEntry, InventoryEntryCreatedMessagePayload.class + ": inventoryEntry is missing");
         return new InventoryEntryCreatedMessagePayloadImpl(inventoryEntry);
     }
-
+    
     /**
      * builds InventoryEntryCreatedMessagePayload without checking for non-null required values
      * @return InventoryEntryCreatedMessagePayload
@@ -89,7 +97,7 @@ public class InventoryEntryCreatedMessagePayloadBuilder implements Builder<Inven
 
     /**
      * factory method for an instance of InventoryEntryCreatedMessagePayloadBuilder
-     * @return builder
+     * @return builder 
      */
     public static InventoryEntryCreatedMessagePayloadBuilder of() {
         return new InventoryEntryCreatedMessagePayloadBuilder();

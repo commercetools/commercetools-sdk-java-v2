@@ -1,16 +1,20 @@
-
 package com.commercetools.api.models.order;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
+import com.commercetools.api.models.order.OrderUpdateAction;
+import com.commercetools.api.models.order.OrderRemoveDeliveryActionImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * OrderRemoveDeliveryAction
@@ -22,9 +26,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     OrderRemoveDeliveryAction orderRemoveDeliveryAction = OrderRemoveDeliveryAction.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = OrderRemoveDeliveryActionImpl.class)
 public interface OrderRemoveDeliveryAction extends OrderUpdateAction {
 
@@ -37,15 +44,14 @@ public interface OrderRemoveDeliveryAction extends OrderUpdateAction {
      *  <p>Either <code>deliveryId</code> or <code>deliveryKey</code> is required for this update action.</p>
      * @return deliveryId
      */
-
+    
     @JsonProperty("deliveryId")
     public String getDeliveryId();
-
     /**
      *  <p>Either <code>deliveryId</code> or <code>deliveryKey</code> is required for this update action.</p>
      * @return deliveryKey
      */
-
+    
     @JsonProperty("deliveryKey")
     public String getDeliveryKey();
 
@@ -53,23 +59,26 @@ public interface OrderRemoveDeliveryAction extends OrderUpdateAction {
      *  <p>Either <code>deliveryId</code> or <code>deliveryKey</code> is required for this update action.</p>
      * @param deliveryId value to be set
      */
-
+    
     public void setDeliveryId(final String deliveryId);
-
+    
+    
     /**
      *  <p>Either <code>deliveryId</code> or <code>deliveryKey</code> is required for this update action.</p>
      * @param deliveryKey value to be set
      */
-
+    
     public void setDeliveryKey(final String deliveryKey);
+    
 
     /**
      * factory method
      * @return instance of OrderRemoveDeliveryAction
      */
-    public static OrderRemoveDeliveryAction of() {
+    public static OrderRemoveDeliveryAction of(){
         return new OrderRemoveDeliveryActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy OrderRemoveDeliveryAction
@@ -106,7 +115,7 @@ public interface OrderRemoveDeliveryAction extends OrderUpdateAction {
     public static OrderRemoveDeliveryActionBuilder builder() {
         return OrderRemoveDeliveryActionBuilder.of();
     }
-
+    
     /**
      * create builder for OrderRemoveDeliveryAction instance
      * @param template instance with prefilled values for the builder
@@ -115,6 +124,7 @@ public interface OrderRemoveDeliveryAction extends OrderUpdateAction {
     public static OrderRemoveDeliveryActionBuilder builder(final OrderRemoveDeliveryAction template) {
         return OrderRemoveDeliveryActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -125,7 +135,7 @@ public interface OrderRemoveDeliveryAction extends OrderUpdateAction {
     default <T> T withOrderRemoveDeliveryAction(Function<OrderRemoveDeliveryAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

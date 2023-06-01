@@ -1,8 +1,11 @@
-
 package com.commercetools.api.models.cart_discount;
 
+import com.commercetools.api.models.cart_discount.CartDiscountUpdateAction;
+import com.commercetools.api.models.cart_discount.CartDiscountChangeRequiresDiscountCodeAction;
+import javax.annotation.Nullable;
 import java.util.*;
-
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -16,32 +19,39 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .requiresDiscountCode(true)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
-public class CartDiscountChangeRequiresDiscountCodeActionBuilder
-        implements Builder<CartDiscountChangeRequiresDiscountCodeAction> {
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
+public class CartDiscountChangeRequiresDiscountCodeActionBuilder implements Builder<CartDiscountChangeRequiresDiscountCodeAction> {
 
+    
+    
     private Boolean requiresDiscountCode;
 
+    
     /**
      *  <p>New value to set. If set to <code>true</code>, the Discount can only be used in connection with a DiscountCode.</p>
      * @param requiresDiscountCode value to be set
      * @return Builder
      */
-
-    public CartDiscountChangeRequiresDiscountCodeActionBuilder requiresDiscountCode(
-            final Boolean requiresDiscountCode) {
+    
+    public CartDiscountChangeRequiresDiscountCodeActionBuilder requiresDiscountCode( final Boolean requiresDiscountCode) {
         this.requiresDiscountCode = requiresDiscountCode;
         return this;
     }
+    
+    
 
     /**
      *  <p>New value to set. If set to <code>true</code>, the Discount can only be used in connection with a DiscountCode.</p>
      * @return requiresDiscountCode
      */
-
-    public Boolean getRequiresDiscountCode() {
+    
+    
+    public Boolean getRequiresDiscountCode(){
         return this.requiresDiscountCode;
     }
 
@@ -50,11 +60,10 @@ public class CartDiscountChangeRequiresDiscountCodeActionBuilder
      * @return CartDiscountChangeRequiresDiscountCodeAction
      */
     public CartDiscountChangeRequiresDiscountCodeAction build() {
-        Objects.requireNonNull(requiresDiscountCode,
-            CartDiscountChangeRequiresDiscountCodeAction.class + ": requiresDiscountCode is missing");
+        Objects.requireNonNull(requiresDiscountCode, CartDiscountChangeRequiresDiscountCodeAction.class + ": requiresDiscountCode is missing");
         return new CartDiscountChangeRequiresDiscountCodeActionImpl(requiresDiscountCode);
     }
-
+    
     /**
      * builds CartDiscountChangeRequiresDiscountCodeAction without checking for non-null required values
      * @return CartDiscountChangeRequiresDiscountCodeAction
@@ -65,7 +74,7 @@ public class CartDiscountChangeRequiresDiscountCodeActionBuilder
 
     /**
      * factory method for an instance of CartDiscountChangeRequiresDiscountCodeActionBuilder
-     * @return builder
+     * @return builder 
      */
     public static CartDiscountChangeRequiresDiscountCodeActionBuilder of() {
         return new CartDiscountChangeRequiresDiscountCodeActionBuilder();
@@ -76,8 +85,7 @@ public class CartDiscountChangeRequiresDiscountCodeActionBuilder
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static CartDiscountChangeRequiresDiscountCodeActionBuilder of(
-            final CartDiscountChangeRequiresDiscountCodeAction template) {
+    public static CartDiscountChangeRequiresDiscountCodeActionBuilder of(final CartDiscountChangeRequiresDiscountCodeAction template) {
         CartDiscountChangeRequiresDiscountCodeActionBuilder builder = new CartDiscountChangeRequiresDiscountCodeActionBuilder();
         builder.requiresDiscountCode = template.getRequiresDiscountCode();
         return builder;

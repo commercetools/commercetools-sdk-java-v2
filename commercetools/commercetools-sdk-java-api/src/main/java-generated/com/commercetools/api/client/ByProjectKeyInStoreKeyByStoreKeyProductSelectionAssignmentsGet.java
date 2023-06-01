@@ -1,21 +1,38 @@
-
 package com.commercetools.api.client;
 
+import io.vrap.rmf.base.client.utils.Utils;
+
+import java.io.InputStream;
+import java.io.IOException;
+
 import java.net.URI;
+import java.net.URLConnection;
+import java.nio.charset.StandardCharsets;
+import java.nio.file.Files;
+
 import java.time.Duration;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
-import java.util.concurrent.CompletableFuture;
+import java.util.Map;
+import java.util.HashMap;
+import java.util.Optional;
 import java.util.function.Function;
 import java.util.function.Supplier;
 import java.util.stream.Collectors;
-
-import io.vrap.rmf.base.client.*;
+import java.util.concurrent.CompletableFuture;
 import io.vrap.rmf.base.client.utils.Generated;
+
+import javax.annotation.Nullable;
+
+import java.io.UnsupportedEncodingException;
+import java.net.URLEncoder;
+import io.vrap.rmf.base.client.*;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+
+import static io.vrap.rmf.base.client.utils.ClientUtils.blockingWait;
 
 /**
  *  <p>Queries Product Selection assignments over all Product Selections that are active in a specific Store.</p>
@@ -33,26 +50,24 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
  * }</code></pre>
  * </div>
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
-public class ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsGet extends
-        ApiMethod<ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsGet, com.commercetools.api.models.product_selection.ProductsInStorePagedQueryResponse>
-        implements
-        com.commercetools.api.client.ExpandableTrait<ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsGet>,
-        com.commercetools.api.client.ErrorableTrait<ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsGet>,
-        com.commercetools.api.client.Deprecatable200Trait<ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsGet> {
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
+public class ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsGet extends ApiMethod<ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsGet, com.commercetools.api.models.product_selection.ProductsInStorePagedQueryResponse> implements com.commercetools.api.client.ExpandableTrait<ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsGet>, com.commercetools.api.client.ErrorableTrait<ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsGet>, com.commercetools.api.client.Deprecatable200Trait<ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsGet> {
 
+    
     private String projectKey;
     private String storeKey;
+    
 
-    public ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsGet(final ApiHttpClient apiHttpClient,
-            String projectKey, String storeKey) {
+    public ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsGet(final ApiHttpClient apiHttpClient, String projectKey, String storeKey) {
         super(apiHttpClient);
         this.projectKey = projectKey;
         this.storeKey = storeKey;
     }
 
-    public ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsGet(
-            ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsGet t) {
+    public ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsGet(ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsGet t) {
         super(t);
         this.projectKey = t.projectKey;
         this.storeKey = t.storeKey;
@@ -61,8 +76,7 @@ public class ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsGet exte
     @Override
     protected ApiHttpRequest buildHttpRequest() {
         List<String> params = new ArrayList<>(getQueryParamUriStrings());
-        String httpRequestPath = String.format("%s/in-store/key=%s/product-selection-assignments", this.projectKey,
-            this.storeKey);
+        String httpRequestPath = String.format("%s/in-store/key=%s/product-selection-assignments", this.projectKey, this.storeKey);
         if (!params.isEmpty()) {
             httpRequestPath += "?" + String.join("&", params);
         }
@@ -70,49 +84,37 @@ public class ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsGet exte
     }
 
     @Override
-    public ApiHttpResponse<com.commercetools.api.models.product_selection.ProductsInStorePagedQueryResponse> executeBlocking(
-            final ApiHttpClient client, final Duration timeout) {
-        return executeBlocking(client, timeout,
-            com.commercetools.api.models.product_selection.ProductsInStorePagedQueryResponse.class);
+    public ApiHttpResponse<com.commercetools.api.models.product_selection.ProductsInStorePagedQueryResponse> executeBlocking(final ApiHttpClient client, final Duration timeout) {
+        return executeBlocking(client, timeout, com.commercetools.api.models.product_selection.ProductsInStorePagedQueryResponse.class);
     }
 
     @Override
-    public CompletableFuture<ApiHttpResponse<com.commercetools.api.models.product_selection.ProductsInStorePagedQueryResponse>> execute(
-            final ApiHttpClient client) {
+    public CompletableFuture<ApiHttpResponse<com.commercetools.api.models.product_selection.ProductsInStorePagedQueryResponse>> execute(final ApiHttpClient client) {
         return execute(client, com.commercetools.api.models.product_selection.ProductsInStorePagedQueryResponse.class);
     }
 
-    public String getProjectKey() {
-        return this.projectKey;
-    }
-
-    public String getStoreKey() {
-        return this.storeKey;
-    }
+    public String getProjectKey() {return this.projectKey;}
+    public String getStoreKey() {return this.storeKey;}
 
     public List<String> getLimit() {
         return this.getQueryParam("limit");
     }
-
+    
     public List<String> getOffset() {
         return this.getQueryParam("offset");
     }
-
+    
     public List<String> getWithTotal() {
         return this.getQueryParam("withTotal");
     }
-
+    
     public List<String> getExpand() {
         return this.getQueryParam("expand");
     }
 
-    public void setProjectKey(final String projectKey) {
-        this.projectKey = projectKey;
-    }
-
-    public void setStoreKey(final String storeKey) {
-        this.storeKey = storeKey;
-    }
+    public void setProjectKey(final String projectKey) { this.projectKey = projectKey; }
+    
+    public void setStoreKey(final String storeKey) { this.storeKey = storeKey; }
 
     /**
      * set limit with the specified value
@@ -123,7 +125,7 @@ public class ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsGet exte
     public <TValue> ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsGet withLimit(final TValue limit) {
         return copy().withQueryParam("limit", limit);
     }
-
+    
     /**
      * add additional limit query parameter
      * @param limit value to be added
@@ -133,7 +135,7 @@ public class ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsGet exte
     public <TValue> ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsGet addLimit(final TValue limit) {
         return copy().addQueryParam("limit", limit);
     }
-
+    
     /**
      * set limit with the specified value
      * @param supplier supplier for the value to be set
@@ -142,7 +144,7 @@ public class ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsGet exte
     public ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsGet withLimit(final Supplier<Integer> supplier) {
         return copy().withQueryParam("limit", supplier.get());
     }
-
+    
     /**
      * add additional limit query parameter
      * @param supplier supplier for the value to be added
@@ -151,52 +153,45 @@ public class ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsGet exte
     public ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsGet addLimit(final Supplier<Integer> supplier) {
         return copy().addQueryParam("limit", supplier.get());
     }
-
+    
     /**
      * set limit with the specified value
      * @param op builder for the value to be set
      * @return ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsGet
      */
-    public ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsGet withLimit(
-            final Function<StringBuilder, StringBuilder> op) {
+    public ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsGet withLimit(final Function<StringBuilder, StringBuilder> op) {
         return copy().withQueryParam("limit", op.apply(new StringBuilder()));
     }
-
+    
     /**
      * add additional limit query parameter
      * @param op builder for the value to be added
      * @return ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsGet
      */
-    public ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsGet addLimit(
-            final Function<StringBuilder, StringBuilder> op) {
+    public ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsGet addLimit(final Function<StringBuilder, StringBuilder> op) {
         return copy().addQueryParam("limit", op.apply(new StringBuilder()));
     }
-
+    
     /**
      * set limit with the specified values
      * @param limit values to be set
      * @param <TValue> value type
      * @return ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsGet
      */
-    public <TValue> ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsGet withLimit(
-            final Collection<TValue> limit) {
-        return copy().withoutQueryParam("limit")
-                .addQueryParams(
-                    limit.stream().map(s -> new ParamEntry<>("limit", s.toString())).collect(Collectors.toList()));
+    public <TValue> ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsGet withLimit(final Collection<TValue> limit) {
+        return copy().withoutQueryParam("limit").addQueryParams(limit.stream().map(s -> new ParamEntry<>("limit", s.toString())).collect(Collectors.toList())); 
     }
-
+    
     /**
      * add additional limit query parameters
      * @param limit values to be added
      * @param <TValue> value type
      * @return ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsGet
      */
-    public <TValue> ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsGet addLimit(
-            final Collection<TValue> limit) {
-        return copy().addQueryParams(
-            limit.stream().map(s -> new ParamEntry<>("limit", s.toString())).collect(Collectors.toList()));
+    public <TValue> ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsGet addLimit(final Collection<TValue> limit) {
+        return copy().addQueryParams(limit.stream().map(s -> new ParamEntry<>("limit", s.toString())).collect(Collectors.toList())); 
     }
-
+    
     /**
      * set offset with the specified value
      * @param offset value to be set
@@ -206,7 +201,7 @@ public class ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsGet exte
     public <TValue> ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsGet withOffset(final TValue offset) {
         return copy().withQueryParam("offset", offset);
     }
-
+    
     /**
      * add additional offset query parameter
      * @param offset value to be added
@@ -216,7 +211,7 @@ public class ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsGet exte
     public <TValue> ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsGet addOffset(final TValue offset) {
         return copy().addQueryParam("offset", offset);
     }
-
+    
     /**
      * set offset with the specified value
      * @param supplier supplier for the value to be set
@@ -225,7 +220,7 @@ public class ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsGet exte
     public ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsGet withOffset(final Supplier<Integer> supplier) {
         return copy().withQueryParam("offset", supplier.get());
     }
-
+    
     /**
      * add additional offset query parameter
      * @param supplier supplier for the value to be added
@@ -234,140 +229,121 @@ public class ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsGet exte
     public ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsGet addOffset(final Supplier<Integer> supplier) {
         return copy().addQueryParam("offset", supplier.get());
     }
-
+    
     /**
      * set offset with the specified value
      * @param op builder for the value to be set
      * @return ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsGet
      */
-    public ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsGet withOffset(
-            final Function<StringBuilder, StringBuilder> op) {
+    public ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsGet withOffset(final Function<StringBuilder, StringBuilder> op) {
         return copy().withQueryParam("offset", op.apply(new StringBuilder()));
     }
-
+    
     /**
      * add additional offset query parameter
      * @param op builder for the value to be added
      * @return ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsGet
      */
-    public ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsGet addOffset(
-            final Function<StringBuilder, StringBuilder> op) {
+    public ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsGet addOffset(final Function<StringBuilder, StringBuilder> op) {
         return copy().addQueryParam("offset", op.apply(new StringBuilder()));
     }
-
+    
     /**
      * set offset with the specified values
      * @param offset values to be set
      * @param <TValue> value type
      * @return ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsGet
      */
-    public <TValue> ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsGet withOffset(
-            final Collection<TValue> offset) {
-        return copy().withoutQueryParam("offset")
-                .addQueryParams(
-                    offset.stream().map(s -> new ParamEntry<>("offset", s.toString())).collect(Collectors.toList()));
+    public <TValue> ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsGet withOffset(final Collection<TValue> offset) {
+        return copy().withoutQueryParam("offset").addQueryParams(offset.stream().map(s -> new ParamEntry<>("offset", s.toString())).collect(Collectors.toList())); 
     }
-
+    
     /**
      * add additional offset query parameters
      * @param offset values to be added
      * @param <TValue> value type
      * @return ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsGet
      */
-    public <TValue> ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsGet addOffset(
-            final Collection<TValue> offset) {
-        return copy().addQueryParams(
-            offset.stream().map(s -> new ParamEntry<>("offset", s.toString())).collect(Collectors.toList()));
+    public <TValue> ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsGet addOffset(final Collection<TValue> offset) {
+        return copy().addQueryParams(offset.stream().map(s -> new ParamEntry<>("offset", s.toString())).collect(Collectors.toList())); 
     }
-
+    
     /**
      * set withTotal with the specified value
      * @param withTotal value to be set
      * @param <TValue> value type
      * @return ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsGet
      */
-    public <TValue> ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsGet withWithTotal(
-            final TValue withTotal) {
+    public <TValue> ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsGet withWithTotal(final TValue withTotal) {
         return copy().withQueryParam("withTotal", withTotal);
     }
-
+    
     /**
      * add additional withTotal query parameter
      * @param withTotal value to be added
      * @param <TValue> value type
      * @return ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsGet
      */
-    public <TValue> ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsGet addWithTotal(
-            final TValue withTotal) {
+    public <TValue> ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsGet addWithTotal(final TValue withTotal) {
         return copy().addQueryParam("withTotal", withTotal);
     }
-
+    
     /**
      * set withTotal with the specified value
      * @param supplier supplier for the value to be set
      * @return ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsGet
      */
-    public ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsGet withWithTotal(
-            final Supplier<Boolean> supplier) {
+    public ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsGet withWithTotal(final Supplier<Boolean> supplier) {
         return copy().withQueryParam("withTotal", supplier.get());
     }
-
+    
     /**
      * add additional withTotal query parameter
      * @param supplier supplier for the value to be added
      * @return ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsGet
      */
-    public ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsGet addWithTotal(
-            final Supplier<Boolean> supplier) {
+    public ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsGet addWithTotal(final Supplier<Boolean> supplier) {
         return copy().addQueryParam("withTotal", supplier.get());
     }
-
+    
     /**
      * set withTotal with the specified value
      * @param op builder for the value to be set
      * @return ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsGet
      */
-    public ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsGet withWithTotal(
-            final Function<StringBuilder, StringBuilder> op) {
+    public ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsGet withWithTotal(final Function<StringBuilder, StringBuilder> op) {
         return copy().withQueryParam("withTotal", op.apply(new StringBuilder()));
     }
-
+    
     /**
      * add additional withTotal query parameter
      * @param op builder for the value to be added
      * @return ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsGet
      */
-    public ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsGet addWithTotal(
-            final Function<StringBuilder, StringBuilder> op) {
+    public ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsGet addWithTotal(final Function<StringBuilder, StringBuilder> op) {
         return copy().addQueryParam("withTotal", op.apply(new StringBuilder()));
     }
-
+    
     /**
      * set withTotal with the specified values
      * @param withTotal values to be set
      * @param <TValue> value type
      * @return ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsGet
      */
-    public <TValue> ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsGet withWithTotal(
-            final Collection<TValue> withTotal) {
-        return copy().withoutQueryParam("withTotal")
-                .addQueryParams(withTotal.stream()
-                        .map(s -> new ParamEntry<>("withTotal", s.toString()))
-                        .collect(Collectors.toList()));
+    public <TValue> ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsGet withWithTotal(final Collection<TValue> withTotal) {
+        return copy().withoutQueryParam("withTotal").addQueryParams(withTotal.stream().map(s -> new ParamEntry<>("withTotal", s.toString())).collect(Collectors.toList())); 
     }
-
+    
     /**
      * add additional withTotal query parameters
      * @param withTotal values to be added
      * @param <TValue> value type
      * @return ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsGet
      */
-    public <TValue> ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsGet addWithTotal(
-            final Collection<TValue> withTotal) {
-        return copy().addQueryParams(
-            withTotal.stream().map(s -> new ParamEntry<>("withTotal", s.toString())).collect(Collectors.toList()));
+    public <TValue> ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsGet addWithTotal(final Collection<TValue> withTotal) {
+        return copy().addQueryParams(withTotal.stream().map(s -> new ParamEntry<>("withTotal", s.toString())).collect(Collectors.toList())); 
     }
-
+    
     /**
      * set expand with the specified value
      * @param expand value to be set
@@ -377,7 +353,7 @@ public class ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsGet exte
     public <TValue> ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsGet withExpand(final TValue expand) {
         return copy().withQueryParam("expand", expand);
     }
-
+    
     /**
      * add additional expand query parameter
      * @param expand value to be added
@@ -387,7 +363,7 @@ public class ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsGet exte
     public <TValue> ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsGet addExpand(final TValue expand) {
         return copy().addQueryParam("expand", expand);
     }
-
+    
     /**
      * set expand with the specified value
      * @param supplier supplier for the value to be set
@@ -396,7 +372,7 @@ public class ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsGet exte
     public ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsGet withExpand(final Supplier<String> supplier) {
         return copy().withQueryParam("expand", supplier.get());
     }
-
+    
     /**
      * add additional expand query parameter
      * @param supplier supplier for the value to be added
@@ -405,68 +381,68 @@ public class ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsGet exte
     public ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsGet addExpand(final Supplier<String> supplier) {
         return copy().addQueryParam("expand", supplier.get());
     }
-
+    
     /**
      * set expand with the specified value
      * @param op builder for the value to be set
      * @return ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsGet
      */
-    public ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsGet withExpand(
-            final Function<StringBuilder, StringBuilder> op) {
+    public ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsGet withExpand(final Function<StringBuilder, StringBuilder> op) {
         return copy().withQueryParam("expand", op.apply(new StringBuilder()));
     }
-
+    
     /**
      * add additional expand query parameter
      * @param op builder for the value to be added
      * @return ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsGet
      */
-    public ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsGet addExpand(
-            final Function<StringBuilder, StringBuilder> op) {
+    public ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsGet addExpand(final Function<StringBuilder, StringBuilder> op) {
         return copy().addQueryParam("expand", op.apply(new StringBuilder()));
     }
-
+    
     /**
      * set expand with the specified values
      * @param expand values to be set
      * @param <TValue> value type
      * @return ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsGet
      */
-    public <TValue> ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsGet withExpand(
-            final Collection<TValue> expand) {
-        return copy().withoutQueryParam("expand")
-                .addQueryParams(
-                    expand.stream().map(s -> new ParamEntry<>("expand", s.toString())).collect(Collectors.toList()));
+    public <TValue> ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsGet withExpand(final Collection<TValue> expand) {
+        return copy().withoutQueryParam("expand").addQueryParams(expand.stream().map(s -> new ParamEntry<>("expand", s.toString())).collect(Collectors.toList())); 
     }
-
+    
     /**
      * add additional expand query parameters
      * @param expand values to be added
      * @param <TValue> value type
      * @return ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsGet
      */
-    public <TValue> ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsGet addExpand(
-            final Collection<TValue> expand) {
-        return copy().addQueryParams(
-            expand.stream().map(s -> new ParamEntry<>("expand", s.toString())).collect(Collectors.toList()));
+    public <TValue> ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsGet addExpand(final Collection<TValue> expand) {
+        return copy().addQueryParams(expand.stream().map(s -> new ParamEntry<>("expand", s.toString())).collect(Collectors.toList())); 
     }
 
+    
+
+    
     @Override
     public boolean equals(Object o) {
-        if (this == o)
-            return true;
-
-        if (o == null || getClass() != o.getClass())
-            return false;
-
+        if (this == o) return true;
+    
+        if (o == null || getClass() != o.getClass()) return false;
+    
         ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsGet that = (ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsGet) o;
-
-        return new EqualsBuilder().append(projectKey, that.projectKey).append(storeKey, that.storeKey).isEquals();
+    
+        return new EqualsBuilder()
+                .append(projectKey, that.projectKey)
+                .append(storeKey, that.storeKey)
+                .isEquals();
     }
-
+    
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(projectKey).append(storeKey).toHashCode();
+        return new HashCodeBuilder(17, 37)
+            .append(projectKey)
+            .append(storeKey)
+            .toHashCode();
     }
 
     @Override

@@ -1,20 +1,21 @@
-
 package com.commercetools.api.models.error;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-import java.util.stream.Collectors;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
+import com.commercetools.api.models.error.GraphQLErrorObject;
 import com.commercetools.api.models.product.Attribute;
+import com.commercetools.api.models.error.GraphQLDuplicateAttributeValuesErrorImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Returned when the <code>CombinationUnique</code> AttributeConstraint criteria are not met during an Update Product request.</p>
@@ -27,9 +28,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .plusAttributes(attributesBuilder -> attributesBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = GraphQLDuplicateAttributeValuesErrorImpl.class)
 public interface GraphQLDuplicateAttributeValuesError extends GraphQLErrorObject {
 
@@ -45,7 +49,6 @@ public interface GraphQLDuplicateAttributeValuesError extends GraphQLErrorObject
     @NotNull
     @JsonProperty("code")
     public String getCode();
-
     /**
      *  <p>Conflicting Attributes.</p>
      * @return attributes
@@ -59,24 +62,24 @@ public interface GraphQLDuplicateAttributeValuesError extends GraphQLErrorObject
      *  <p>Conflicting Attributes.</p>
      * @param attributes values to be set
      */
-
+    
     @JsonIgnore
-    public void setAttributes(final Attribute... attributes);
-
+    public void setAttributes(final Attribute ...attributes);
     /**
      *  <p>Conflicting Attributes.</p>
      * @param attributes values to be set
      */
-
+    
     public void setAttributes(final List<Attribute> attributes);
 
     /**
      * factory method
      * @return instance of GraphQLDuplicateAttributeValuesError
      */
-    public static GraphQLDuplicateAttributeValuesError of() {
+    public static GraphQLDuplicateAttributeValuesError of(){
         return new GraphQLDuplicateAttributeValuesErrorImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy GraphQLDuplicateAttributeValuesError
@@ -96,17 +99,14 @@ public interface GraphQLDuplicateAttributeValuesError extends GraphQLErrorObject
      * @return copy instance
      */
     @Nullable
-    public static GraphQLDuplicateAttributeValuesError deepCopy(
-            @Nullable final GraphQLDuplicateAttributeValuesError template) {
+    public static GraphQLDuplicateAttributeValuesError deepCopy(@Nullable final GraphQLDuplicateAttributeValuesError template) {
         if (template == null) {
             return null;
         }
         GraphQLDuplicateAttributeValuesErrorImpl instance = new GraphQLDuplicateAttributeValuesErrorImpl();
         Optional.ofNullable(template.values()).ifPresent(t -> t.forEach(instance::setValue));
         instance.setAttributes(Optional.ofNullable(template.getAttributes())
-                .map(t -> t.stream()
-                        .map(com.commercetools.api.models.product.Attribute::deepCopy)
-                        .collect(Collectors.toList()))
+                .map(t -> t.stream().map(com.commercetools.api.models.product.Attribute::deepCopy).collect(Collectors.toList()))
                 .orElse(null));
         return instance;
     }
@@ -118,16 +118,16 @@ public interface GraphQLDuplicateAttributeValuesError extends GraphQLErrorObject
     public static GraphQLDuplicateAttributeValuesErrorBuilder builder() {
         return GraphQLDuplicateAttributeValuesErrorBuilder.of();
     }
-
+    
     /**
      * create builder for GraphQLDuplicateAttributeValuesError instance
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static GraphQLDuplicateAttributeValuesErrorBuilder builder(
-            final GraphQLDuplicateAttributeValuesError template) {
+    public static GraphQLDuplicateAttributeValuesErrorBuilder builder(final GraphQLDuplicateAttributeValuesError template) {
         return GraphQLDuplicateAttributeValuesErrorBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -138,7 +138,7 @@ public interface GraphQLDuplicateAttributeValuesError extends GraphQLErrorObject
     default <T> T withGraphQLDuplicateAttributeValuesError(Function<GraphQLDuplicateAttributeValuesError, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

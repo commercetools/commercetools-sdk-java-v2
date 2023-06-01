@@ -1,8 +1,11 @@
-
 package com.commercetools.api.models.subscription;
 
-import java.util.*;
 
+import com.commercetools.api.models.subscription.PayloadNotIncluded;
+import javax.annotation.Nullable;
+import java.util.*;
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -17,52 +20,67 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .payloadType("{payloadType}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class PayloadNotIncludedBuilder implements Builder<PayloadNotIncluded> {
 
+    
+    
     private String reason;
-
+    
+    
+    
     private String payloadType;
 
+    
     /**
      *  <p>Reason the payload is not included. For example, the payload is too large, or its content is not supported by the Subscription destination.</p>
      * @param reason value to be set
      * @return Builder
      */
-
-    public PayloadNotIncludedBuilder reason(final String reason) {
+    
+    public PayloadNotIncludedBuilder reason( final String reason) {
         this.reason = reason;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Value of the <code>type</code> field in the original payload.</p>
      * @param payloadType value to be set
      * @return Builder
      */
-
-    public PayloadNotIncludedBuilder payloadType(final String payloadType) {
+    
+    public PayloadNotIncludedBuilder payloadType( final String payloadType) {
         this.payloadType = payloadType;
         return this;
     }
+    
+    
 
     /**
      *  <p>Reason the payload is not included. For example, the payload is too large, or its content is not supported by the Subscription destination.</p>
      * @return reason
      */
-
-    public String getReason() {
+    
+    
+    public String getReason(){
         return this.reason;
     }
-
+    
     /**
      *  <p>Value of the <code>type</code> field in the original payload.</p>
      * @return payloadType
      */
-
-    public String getPayloadType() {
+    
+    
+    public String getPayloadType(){
         return this.payloadType;
     }
 
@@ -75,7 +93,7 @@ public class PayloadNotIncludedBuilder implements Builder<PayloadNotIncluded> {
         Objects.requireNonNull(payloadType, PayloadNotIncluded.class + ": payloadType is missing");
         return new PayloadNotIncludedImpl(reason, payloadType);
     }
-
+    
     /**
      * builds PayloadNotIncluded without checking for non-null required values
      * @return PayloadNotIncluded
@@ -86,7 +104,7 @@ public class PayloadNotIncludedBuilder implements Builder<PayloadNotIncluded> {
 
     /**
      * factory method for an instance of PayloadNotIncludedBuilder
-     * @return builder
+     * @return builder 
      */
     public static PayloadNotIncludedBuilder of() {
         return new PayloadNotIncludedBuilder();

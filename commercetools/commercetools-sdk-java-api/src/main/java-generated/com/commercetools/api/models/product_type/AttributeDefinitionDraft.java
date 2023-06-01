@@ -1,19 +1,23 @@
-
 package com.commercetools.api.models.product_type;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
 import com.commercetools.api.models.common.LocalizedString;
+import com.commercetools.api.models.product_type.AttributeConstraintEnum;
+import com.commercetools.api.models.product_type.AttributeType;
+import com.commercetools.api.models.product_type.TextInputHint;
+import com.commercetools.api.models.product_type.AttributeDefinitionDraftImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Specify the Attribute to be created with the ProductTypeDraft.</p>
@@ -29,11 +33,15 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .isRequired(true)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = AttributeDefinitionDraftImpl.class)
 public interface AttributeDefinitionDraft extends io.vrap.rmf.base.client.Draft<AttributeDefinitionDraft> {
+
 
     /**
      *  <p>Describes the Type of the Attribute.</p>
@@ -44,7 +52,6 @@ public interface AttributeDefinitionDraft extends io.vrap.rmf.base.client.Draft<
     @Valid
     @JsonProperty("type")
     public AttributeType getType();
-
     /**
      *  <p>User-defined name of the Attribute that is unique with the Project.</p>
      *  <p>When using the same <code>name</code> for an Attribute in multiple ProductTypes, all fields of the AttributeDefinition of this Attribute must be the same across the ProductTypes, else an AttributeDefinitionAlreadyExists error is returned. An exception to this are the values of an <code>enum</code> or <code>lenum</code> Type and sets thereof.</p>
@@ -53,7 +60,6 @@ public interface AttributeDefinitionDraft extends io.vrap.rmf.base.client.Draft<
     @NotNull
     @JsonProperty("name")
     public String getName();
-
     /**
      *  <p>Human-readable label for the Attribute.</p>
      * @return label
@@ -62,7 +68,6 @@ public interface AttributeDefinitionDraft extends io.vrap.rmf.base.client.Draft<
     @Valid
     @JsonProperty("label")
     public LocalizedString getLabel();
-
     /**
      *  <p>Set to <code>true</code> if the Attribute is required to have a value on a ProductVariant.</p>
      * @return isRequired
@@ -70,15 +75,13 @@ public interface AttributeDefinitionDraft extends io.vrap.rmf.base.client.Draft<
     @NotNull
     @JsonProperty("isRequired")
     public Boolean getIsRequired();
-
     /**
      *  <p>Specifies how an Attribute or a combination of Attributes should be validated across all variants of a Product.</p>
      * @return attributeConstraint
      */
-
+    
     @JsonProperty("attributeConstraint")
     public AttributeConstraintEnum getAttributeConstraint();
-
     /**
      *  <p>Provides additional information about the Attribute that aids content managers when setting Product details.</p>
      * @return inputTip
@@ -86,20 +89,18 @@ public interface AttributeDefinitionDraft extends io.vrap.rmf.base.client.Draft<
     @Valid
     @JsonProperty("inputTip")
     public LocalizedString getInputTip();
-
     /**
      *  <p>Provides a visual representation directive for values of this Attribute (only relevant for AttributeTextType and AttributeLocalizableTextType).</p>
      * @return inputHint
      */
-
+    
     @JsonProperty("inputHint")
     public TextInputHint getInputHint();
-
     /**
      *  <p>Set to <code>true</code> if the Attribute's values should be available in the Product Projections Search API and can be used in full-text search queries, filters, and facets. Which exact features are available with this flag depends on the specific AttributeType. The maximum size of a searchable field is <strong>restricted</strong> by the Field content size limit. This constraint is enforced at both Product creation and Product update. If the length of the input exceeds the maximum size, an InvalidField error is returned.</p>
      * @return isSearchable
      */
-
+    
     @JsonProperty("isSearchable")
     public Boolean getIsSearchable();
 
@@ -108,66 +109,75 @@ public interface AttributeDefinitionDraft extends io.vrap.rmf.base.client.Draft<
      *  <p>When the <code>type</code> is different for an AttributeDefinition using the same name in multiple ProductTypes, an AttributeDefinitionTypeConflict error is returned.</p>
      * @param type value to be set
      */
-
+    
     public void setType(final AttributeType type);
-
+    
+    
     /**
      *  <p>User-defined name of the Attribute that is unique with the Project.</p>
      *  <p>When using the same <code>name</code> for an Attribute in multiple ProductTypes, all fields of the AttributeDefinition of this Attribute must be the same across the ProductTypes, else an AttributeDefinitionAlreadyExists error is returned. An exception to this are the values of an <code>enum</code> or <code>lenum</code> Type and sets thereof.</p>
      * @param name value to be set
      */
-
+    
     public void setName(final String name);
-
+    
+    
     /**
      *  <p>Human-readable label for the Attribute.</p>
      * @param label value to be set
      */
-
+    
     public void setLabel(final LocalizedString label);
-
+    
+    
     /**
      *  <p>Set to <code>true</code> if the Attribute is required to have a value on a ProductVariant.</p>
      * @param isRequired value to be set
      */
-
+    
     public void setIsRequired(final Boolean isRequired);
-
+    
+    
     /**
      *  <p>Specifies how an Attribute or a combination of Attributes should be validated across all variants of a Product.</p>
      * @param attributeConstraint value to be set
      */
-
+    
     public void setAttributeConstraint(final AttributeConstraintEnum attributeConstraint);
-
+    
+    
     /**
      *  <p>Provides additional information about the Attribute that aids content managers when setting Product details.</p>
      * @param inputTip value to be set
      */
-
+    
     public void setInputTip(final LocalizedString inputTip);
-
+    
+    
     /**
      *  <p>Provides a visual representation directive for values of this Attribute (only relevant for AttributeTextType and AttributeLocalizableTextType).</p>
      * @param inputHint value to be set
      */
-
+    
     public void setInputHint(final TextInputHint inputHint);
-
+    
+    
     /**
      *  <p>Set to <code>true</code> if the Attribute's values should be available in the Product Projections Search API and can be used in full-text search queries, filters, and facets. Which exact features are available with this flag depends on the specific AttributeType. The maximum size of a searchable field is <strong>restricted</strong> by the Field content size limit. This constraint is enforced at both Product creation and Product update. If the length of the input exceeds the maximum size, an InvalidField error is returned.</p>
      * @param isSearchable value to be set
      */
-
+    
     public void setIsSearchable(final Boolean isSearchable);
+    
 
     /**
      * factory method
      * @return instance of AttributeDefinitionDraft
      */
-    public static AttributeDefinitionDraft of() {
+    public static AttributeDefinitionDraft of(){
         return new AttributeDefinitionDraftImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy AttributeDefinitionDraft
@@ -216,7 +226,7 @@ public interface AttributeDefinitionDraft extends io.vrap.rmf.base.client.Draft<
     public static AttributeDefinitionDraftBuilder builder() {
         return AttributeDefinitionDraftBuilder.of();
     }
-
+    
     /**
      * create builder for AttributeDefinitionDraft instance
      * @param template instance with prefilled values for the builder
@@ -225,6 +235,7 @@ public interface AttributeDefinitionDraft extends io.vrap.rmf.base.client.Draft<
     public static AttributeDefinitionDraftBuilder builder(final AttributeDefinitionDraft template) {
         return AttributeDefinitionDraftBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -235,7 +246,7 @@ public interface AttributeDefinitionDraft extends io.vrap.rmf.base.client.Draft<
     default <T> T withAttributeDefinitionDraft(Function<AttributeDefinitionDraft, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

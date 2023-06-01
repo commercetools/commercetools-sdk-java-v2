@@ -1,16 +1,20 @@
-
 package com.commercetools.api.models.cart;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
+import com.commercetools.api.models.cart.CartUpdateAction;
+import com.commercetools.api.models.cart.CartFreezeCartActionImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Changes the CartState from <code>Active</code> to <code>Frozen</code>. Results in a Frozen Cart. Fails with InvalidOperation error when the Cart is empty.</p>
@@ -22,9 +26,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     CartFreezeCartAction cartFreezeCartAction = CartFreezeCartAction.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = CartFreezeCartActionImpl.class)
 public interface CartFreezeCartAction extends CartUpdateAction {
 
@@ -33,13 +40,16 @@ public interface CartFreezeCartAction extends CartUpdateAction {
      */
     String FREEZE_CART = "freezeCart";
 
+
+
     /**
      * factory method
      * @return instance of CartFreezeCartAction
      */
-    public static CartFreezeCartAction of() {
+    public static CartFreezeCartAction of(){
         return new CartFreezeCartActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy CartFreezeCartAction
@@ -72,7 +82,7 @@ public interface CartFreezeCartAction extends CartUpdateAction {
     public static CartFreezeCartActionBuilder builder() {
         return CartFreezeCartActionBuilder.of();
     }
-
+    
     /**
      * create builder for CartFreezeCartAction instance
      * @param template instance with prefilled values for the builder
@@ -81,6 +91,7 @@ public interface CartFreezeCartAction extends CartUpdateAction {
     public static CartFreezeCartActionBuilder builder(final CartFreezeCartAction template) {
         return CartFreezeCartActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -91,7 +102,7 @@ public interface CartFreezeCartAction extends CartUpdateAction {
     default <T> T withCartFreezeCartAction(Function<CartFreezeCartAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

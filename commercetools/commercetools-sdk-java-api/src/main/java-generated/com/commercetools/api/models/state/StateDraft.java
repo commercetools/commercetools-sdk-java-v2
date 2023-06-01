@@ -1,20 +1,23 @@
-
 package com.commercetools.api.models.state;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-import java.util.stream.Collectors;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
 import com.commercetools.api.models.common.LocalizedString;
+import com.commercetools.api.models.state.StateResourceIdentifier;
+import com.commercetools.api.models.state.StateRoleEnum;
+import com.commercetools.api.models.state.StateTypeEnum;
+import com.commercetools.api.models.state.StateDraftImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * StateDraft
@@ -28,11 +31,15 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .type(StateTypeEnum.ORDER_STATE)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = StateDraftImpl.class)
 public interface StateDraft extends com.commercetools.api.models.WithKey, io.vrap.rmf.base.client.Draft<StateDraft> {
+
 
     /**
      *  <p>User-defined unique identifier for the State.</p>
@@ -41,7 +48,6 @@ public interface StateDraft extends com.commercetools.api.models.WithKey, io.vra
     @NotNull
     @JsonProperty("key")
     public String getKey();
-
     /**
      *  <p>Specify to which resource or object type the State is assigned to.</p>
      * @return type
@@ -49,7 +55,6 @@ public interface StateDraft extends com.commercetools.api.models.WithKey, io.vra
     @NotNull
     @JsonProperty("type")
     public StateTypeEnum getType();
-
     /**
      *  <p>Name of the State.</p>
      * @return name
@@ -57,7 +62,6 @@ public interface StateDraft extends com.commercetools.api.models.WithKey, io.vra
     @Valid
     @JsonProperty("name")
     public LocalizedString getName();
-
     /**
      *  <p>Description of the State.</p>
      * @return description
@@ -65,23 +69,20 @@ public interface StateDraft extends com.commercetools.api.models.WithKey, io.vra
     @Valid
     @JsonProperty("description")
     public LocalizedString getDescription();
-
     /**
      *  <p>Set to <code>false</code> if the State is not the first step in a workflow.</p>
      * @return initial
      */
-
+    
     @JsonProperty("initial")
     public Boolean getInitial();
-
     /**
      *  <p>If suitable, assign predifined roles the State can fulfill in case the State's <code>type</code> is <code>LineItemState</code> or <code>ReviewState</code>.</p>
      * @return roles
      */
-
+    
     @JsonProperty("roles")
     public List<StateRoleEnum> getRoles();
-
     /**
      *  <p>Define the list of States of the same <code>type</code> to which the current State can be transitioned to.</p>
      *  <ul>
@@ -99,52 +100,56 @@ public interface StateDraft extends com.commercetools.api.models.WithKey, io.vra
      *  <p>User-defined unique identifier for the State.</p>
      * @param key value to be set
      */
-
+    
     public void setKey(final String key);
-
+    
+    
     /**
      *  <p>Specify to which resource or object type the State is assigned to.</p>
      * @param type value to be set
      */
-
+    
     public void setType(final StateTypeEnum type);
-
+    
+    
     /**
      *  <p>Name of the State.</p>
      * @param name value to be set
      */
-
+    
     public void setName(final LocalizedString name);
-
+    
+    
     /**
      *  <p>Description of the State.</p>
      * @param description value to be set
      */
-
+    
     public void setDescription(final LocalizedString description);
-
+    
+    
     /**
      *  <p>Set to <code>false</code> if the State is not the first step in a workflow.</p>
      * @param initial value to be set
      */
-
+    
     public void setInitial(final Boolean initial);
-
+    
+    
     /**
      *  <p>If suitable, assign predifined roles the State can fulfill in case the State's <code>type</code> is <code>LineItemState</code> or <code>ReviewState</code>.</p>
      * @param roles values to be set
      */
-
+    
     @JsonIgnore
-    public void setRoles(final StateRoleEnum... roles);
-
+    public void setRoles(final StateRoleEnum ...roles);
     /**
      *  <p>If suitable, assign predifined roles the State can fulfill in case the State's <code>type</code> is <code>LineItemState</code> or <code>ReviewState</code>.</p>
      * @param roles values to be set
      */
-
+    
     public void setRoles(final List<StateRoleEnum> roles);
-
+    
     /**
      *  <p>Define the list of States of the same <code>type</code> to which the current State can be transitioned to.</p>
      *  <ul>
@@ -154,10 +159,9 @@ public interface StateDraft extends com.commercetools.api.models.WithKey, io.vra
      *  </ul>
      * @param transitions values to be set
      */
-
+    
     @JsonIgnore
-    public void setTransitions(final StateResourceIdentifier... transitions);
-
+    public void setTransitions(final StateResourceIdentifier ...transitions);
     /**
      *  <p>Define the list of States of the same <code>type</code> to which the current State can be transitioned to.</p>
      *  <ul>
@@ -167,16 +171,17 @@ public interface StateDraft extends com.commercetools.api.models.WithKey, io.vra
      *  </ul>
      * @param transitions values to be set
      */
-
+    
     public void setTransitions(final List<StateResourceIdentifier> transitions);
 
     /**
      * factory method
      * @return instance of StateDraft
      */
-    public static StateDraft of() {
+    public static StateDraft of(){
         return new StateDraftImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy StateDraft
@@ -209,14 +214,13 @@ public interface StateDraft extends com.commercetools.api.models.WithKey, io.vra
         instance.setKey(template.getKey());
         instance.setType(template.getType());
         instance.setName(com.commercetools.api.models.common.LocalizedString.deepCopy(template.getName()));
-        instance.setDescription(
-            com.commercetools.api.models.common.LocalizedString.deepCopy(template.getDescription()));
+        instance.setDescription(com.commercetools.api.models.common.LocalizedString.deepCopy(template.getDescription()));
         instance.setInitial(template.getInitial());
-        instance.setRoles(Optional.ofNullable(template.getRoles()).map(ArrayList::new).orElse(null));
+        instance.setRoles(Optional.ofNullable(template.getRoles())
+                .map(ArrayList::new)
+                .orElse(null));
         instance.setTransitions(Optional.ofNullable(template.getTransitions())
-                .map(t -> t.stream()
-                        .map(com.commercetools.api.models.state.StateResourceIdentifier::deepCopy)
-                        .collect(Collectors.toList()))
+                .map(t -> t.stream().map(com.commercetools.api.models.state.StateResourceIdentifier::deepCopy).collect(Collectors.toList()))
                 .orElse(null));
         return instance;
     }
@@ -228,7 +232,7 @@ public interface StateDraft extends com.commercetools.api.models.WithKey, io.vra
     public static StateDraftBuilder builder() {
         return StateDraftBuilder.of();
     }
-
+    
     /**
      * create builder for StateDraft instance
      * @param template instance with prefilled values for the builder
@@ -237,6 +241,7 @@ public interface StateDraft extends com.commercetools.api.models.WithKey, io.vra
     public static StateDraftBuilder builder(final StateDraft template) {
         return StateDraftBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -247,7 +252,7 @@ public interface StateDraft extends com.commercetools.api.models.WithKey, io.vra
     default <T> T withStateDraft(Function<StateDraft, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

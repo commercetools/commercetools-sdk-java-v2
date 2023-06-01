@@ -1,17 +1,20 @@
-
 package com.commercetools.history.models.common;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
+import com.commercetools.history.models.common.ReferenceTypeId;
+import com.commercetools.history.models.common.ReferenceImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * Reference
@@ -25,11 +28,15 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .typeId(ReferenceTypeId.CART)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = ReferenceImpl.class)
-public interface Reference {
+public interface Reference  {
+
 
     /**
      *
@@ -38,7 +45,6 @@ public interface Reference {
     @NotNull
     @JsonProperty("id")
     public String getId();
-
     /**
      *
      * @return typeId
@@ -51,23 +57,26 @@ public interface Reference {
      * set id
      * @param id value to be set
      */
-
+    
     public void setId(final String id);
-
+    
+    
     /**
      * set typeId
      * @param typeId value to be set
      */
-
+    
     public void setTypeId(final ReferenceTypeId typeId);
+    
 
     /**
      * factory method
      * @return instance of Reference
      */
-    public static Reference of() {
+    public static Reference of(){
         return new ReferenceImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy Reference
@@ -104,7 +113,7 @@ public interface Reference {
     public static ReferenceBuilder builder() {
         return ReferenceBuilder.of();
     }
-
+    
     /**
      * create builder for Reference instance
      * @param template instance with prefilled values for the builder
@@ -113,6 +122,7 @@ public interface Reference {
     public static ReferenceBuilder builder(final Reference template) {
         return ReferenceBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -123,7 +133,7 @@ public interface Reference {
     default <T> T withReference(Function<Reference, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

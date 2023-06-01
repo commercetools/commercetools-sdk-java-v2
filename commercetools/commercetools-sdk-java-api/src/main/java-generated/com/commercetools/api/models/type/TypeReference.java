@@ -1,19 +1,22 @@
-
 package com.commercetools.api.models.type;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
 import com.commercetools.api.models.common.Reference;
+import com.commercetools.api.models.common.ReferenceTypeId;
+import com.commercetools.api.models.type.Type;
+import com.commercetools.api.models.type.TypeReferenceImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Reference to a Type.</p>
@@ -26,9 +29,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .id("{id}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = TypeReferenceImpl.class)
 public interface TypeReference extends Reference, com.commercetools.api.models.Identifiable<Type> {
 
@@ -44,7 +50,6 @@ public interface TypeReference extends Reference, com.commercetools.api.models.I
     @NotNull
     @JsonProperty("id")
     public String getId();
-
     /**
      *  <p>Contains the representation of the expanded Type. Only present in responses to requests with Reference Expansion for Types.</p>
      * @return obj
@@ -57,23 +62,26 @@ public interface TypeReference extends Reference, com.commercetools.api.models.I
      *  <p>Unique identifier of the referenced Type.</p>
      * @param id value to be set
      */
-
+    
     public void setId(final String id);
-
+    
+    
     /**
      *  <p>Contains the representation of the expanded Type. Only present in responses to requests with Reference Expansion for Types.</p>
      * @param obj value to be set
      */
-
+    
     public void setObj(final Type obj);
+    
 
     /**
      * factory method
      * @return instance of TypeReference
      */
-    public static TypeReference of() {
+    public static TypeReference of(){
         return new TypeReferenceImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy TypeReference
@@ -110,7 +118,7 @@ public interface TypeReference extends Reference, com.commercetools.api.models.I
     public static TypeReferenceBuilder builder() {
         return TypeReferenceBuilder.of();
     }
-
+    
     /**
      * create builder for TypeReference instance
      * @param template instance with prefilled values for the builder
@@ -119,6 +127,7 @@ public interface TypeReference extends Reference, com.commercetools.api.models.I
     public static TypeReferenceBuilder builder(final TypeReference template) {
         return TypeReferenceBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -129,12 +138,12 @@ public interface TypeReference extends Reference, com.commercetools.api.models.I
     default <T> T withTypeReference(Function<TypeReference, T> helper) {
         return helper.apply(this);
     }
-
     @Override
     public default TypeResourceIdentifier toResourceIdentifier() {
         return TypeResourceIdentifier.builder().id(this.getId()).build();
     }
-
+    
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

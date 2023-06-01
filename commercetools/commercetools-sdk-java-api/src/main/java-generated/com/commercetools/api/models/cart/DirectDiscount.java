@@ -1,20 +1,21 @@
-
 package com.commercetools.api.models.cart;
-
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.cart_discount.CartDiscountTarget;
 import com.commercetools.api.models.cart_discount.CartDiscountValue;
+import com.commercetools.api.models.cart.DirectDiscountImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Represents a CartDiscount that is only associated with a single Cart or Order.</p>
@@ -28,11 +29,15 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .value(valueBuilder -> valueBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = DirectDiscountImpl.class)
-public interface DirectDiscount {
+public interface DirectDiscount  {
+
 
     /**
      *  <p>Unique identifier of the Direct Discount.</p>
@@ -41,7 +46,6 @@ public interface DirectDiscount {
     @NotNull
     @JsonProperty("id")
     public String getId();
-
     /**
      *  <p>Effect of the Discount on the Cart.</p>
      * @return value
@@ -50,7 +54,6 @@ public interface DirectDiscount {
     @Valid
     @JsonProperty("value")
     public CartDiscountValue getValue();
-
     /**
      *  <p>Part of the Cart that is discounted.</p>
      *  <p>Empty when the <code>value</code> is set to <code>giftLineItem</code>.</p>
@@ -64,31 +67,35 @@ public interface DirectDiscount {
      *  <p>Unique identifier of the Direct Discount.</p>
      * @param id value to be set
      */
-
+    
     public void setId(final String id);
-
+    
+    
     /**
      *  <p>Effect of the Discount on the Cart.</p>
      * @param value value to be set
      */
-
+    
     public void setValue(final CartDiscountValue value);
-
+    
+    
     /**
      *  <p>Part of the Cart that is discounted.</p>
      *  <p>Empty when the <code>value</code> is set to <code>giftLineItem</code>.</p>
      * @param target value to be set
      */
-
+    
     public void setTarget(final CartDiscountTarget target);
+    
 
     /**
      * factory method
      * @return instance of DirectDiscount
      */
-    public static DirectDiscount of() {
+    public static DirectDiscount of(){
         return new DirectDiscountImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy DirectDiscount
@@ -116,8 +123,7 @@ public interface DirectDiscount {
         DirectDiscountImpl instance = new DirectDiscountImpl();
         instance.setId(template.getId());
         instance.setValue(com.commercetools.api.models.cart_discount.CartDiscountValue.deepCopy(template.getValue()));
-        instance.setTarget(
-            com.commercetools.api.models.cart_discount.CartDiscountTarget.deepCopy(template.getTarget()));
+        instance.setTarget(com.commercetools.api.models.cart_discount.CartDiscountTarget.deepCopy(template.getTarget()));
         return instance;
     }
 
@@ -128,7 +134,7 @@ public interface DirectDiscount {
     public static DirectDiscountBuilder builder() {
         return DirectDiscountBuilder.of();
     }
-
+    
     /**
      * create builder for DirectDiscount instance
      * @param template instance with prefilled values for the builder
@@ -137,6 +143,7 @@ public interface DirectDiscount {
     public static DirectDiscountBuilder builder(final DirectDiscount template) {
         return DirectDiscountBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -147,7 +154,7 @@ public interface DirectDiscount {
     default <T> T withDirectDiscount(Function<DirectDiscount, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

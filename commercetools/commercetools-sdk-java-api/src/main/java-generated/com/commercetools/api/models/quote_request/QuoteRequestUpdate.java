@@ -1,19 +1,20 @@
-
 package com.commercetools.api.models.quote_request;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-import java.util.stream.Collectors;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
+import com.commercetools.api.models.quote_request.QuoteRequestUpdateAction;
+import com.commercetools.api.models.quote_request.QuoteRequestUpdateImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * QuoteRequestUpdate
@@ -27,12 +28,15 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .plusActions(actionsBuilder -> actionsBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = QuoteRequestUpdateImpl.class)
-public interface QuoteRequestUpdate extends
-        com.commercetools.api.models.ResourceUpdate<QuoteRequestUpdate, QuoteRequestUpdateAction, QuoteRequestUpdateBuilder> {
+public interface QuoteRequestUpdate extends com.commercetools.api.models.ResourceUpdate<QuoteRequestUpdate, QuoteRequestUpdateAction, QuoteRequestUpdateBuilder> {
+
 
     /**
      *  <p>Expected version of the QuoteRequest to which the changes should be applied. If the expected version does not match the actual version, a 409 Conflict error will be returned.</p>
@@ -41,7 +45,6 @@ public interface QuoteRequestUpdate extends
     @NotNull
     @JsonProperty("version")
     public Long getVersion();
-
     /**
      *  <p>Update actions to be performed on the QuoteRequest.</p>
      * @return actions
@@ -55,31 +58,32 @@ public interface QuoteRequestUpdate extends
      *  <p>Expected version of the QuoteRequest to which the changes should be applied. If the expected version does not match the actual version, a 409 Conflict error will be returned.</p>
      * @param version value to be set
      */
-
+    
     public void setVersion(final Long version);
-
+    
+    
     /**
      *  <p>Update actions to be performed on the QuoteRequest.</p>
      * @param actions values to be set
      */
-
+    
     @JsonIgnore
-    public void setActions(final QuoteRequestUpdateAction... actions);
-
+    public void setActions(final QuoteRequestUpdateAction ...actions);
     /**
      *  <p>Update actions to be performed on the QuoteRequest.</p>
      * @param actions values to be set
      */
-
+    
     public void setActions(final List<QuoteRequestUpdateAction> actions);
 
     /**
      * factory method
      * @return instance of QuoteRequestUpdate
      */
-    public static QuoteRequestUpdate of() {
+    public static QuoteRequestUpdate of(){
         return new QuoteRequestUpdateImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy QuoteRequestUpdate
@@ -106,9 +110,7 @@ public interface QuoteRequestUpdate extends
         QuoteRequestUpdateImpl instance = new QuoteRequestUpdateImpl();
         instance.setVersion(template.getVersion());
         instance.setActions(Optional.ofNullable(template.getActions())
-                .map(t -> t.stream()
-                        .map(com.commercetools.api.models.quote_request.QuoteRequestUpdateAction::deepCopy)
-                        .collect(Collectors.toList()))
+                .map(t -> t.stream().map(com.commercetools.api.models.quote_request.QuoteRequestUpdateAction::deepCopy).collect(Collectors.toList()))
                 .orElse(null));
         return instance;
     }
@@ -120,7 +122,7 @@ public interface QuoteRequestUpdate extends
     public static QuoteRequestUpdateBuilder builder() {
         return QuoteRequestUpdateBuilder.of();
     }
-
+    
     /**
      * create builder for QuoteRequestUpdate instance
      * @param template instance with prefilled values for the builder
@@ -129,6 +131,7 @@ public interface QuoteRequestUpdate extends
     public static QuoteRequestUpdateBuilder builder(final QuoteRequestUpdate template) {
         return QuoteRequestUpdateBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -139,7 +142,7 @@ public interface QuoteRequestUpdate extends
     default <T> T withQuoteRequestUpdate(Function<QuoteRequestUpdate, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

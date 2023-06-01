@@ -1,23 +1,26 @@
-
 package com.commercetools.api.models.common;
 
-import java.time.*;
-import java.time.ZonedDateTime;
-import java.util.*;
-import java.util.function.Function;
-import java.util.stream.Collectors;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
 import com.commercetools.api.models.channel.ChannelResourceIdentifier;
+import com.commercetools.api.models.common.DiscountedPriceDraft;
+import com.commercetools.api.models.common.Money;
+import com.commercetools.api.models.common.PriceTierDraft;
 import com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifier;
 import com.commercetools.api.models.type.CustomFieldsDraft;
+import java.time.ZonedDateTime;
+import com.commercetools.api.models.common.PriceDraftImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>The draft representation for prices to be embedded into ProductVariantDrafts when the ProductPriceMode is <code>Embedded</code>. For the <code>Standalone</code> ProductPriceMode use StandalonePriceDraft.</p>
@@ -30,21 +33,23 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .value(valueBuilder -> valueBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = PriceDraftImpl.class)
-public interface PriceDraft extends com.commercetools.api.models.CustomizableDraft<PriceDraft>,
-        com.commercetools.api.models.WithKey, io.vrap.rmf.base.client.Draft<PriceDraft> {
+public interface PriceDraft extends com.commercetools.api.models.CustomizableDraft<PriceDraft>, com.commercetools.api.models.WithKey, io.vrap.rmf.base.client.Draft<PriceDraft> {
+
 
     /**
      *  <p>User-defined identifier for the Price. It must be unique per ProductVariant.</p>
      * @return key
      */
-
+    
     @JsonProperty("key")
     public String getKey();
-
     /**
      *  <p>Money value of this Price.</p>
      * @return value
@@ -53,15 +58,13 @@ public interface PriceDraft extends com.commercetools.api.models.CustomizableDra
     @Valid
     @JsonProperty("value")
     public Money getValue();
-
     /**
      *  <p>Set this field if this Price is only valid for the specified country.</p>
      * @return country
      */
-
+    
     @JsonProperty("country")
     public String getCountry();
-
     /**
      *  <p>Set this field if this Price is only valid for the referenced CustomerGroup.</p>
      * @return customerGroup
@@ -69,7 +72,6 @@ public interface PriceDraft extends com.commercetools.api.models.CustomizableDra
     @Valid
     @JsonProperty("customerGroup")
     public CustomerGroupResourceIdentifier getCustomerGroup();
-
     /**
      *  <p>Set this field if this Price is only valid for the referenced <code>ProductDistribution</code> Channel.</p>
      * @return channel
@@ -77,23 +79,20 @@ public interface PriceDraft extends com.commercetools.api.models.CustomizableDra
     @Valid
     @JsonProperty("channel")
     public ChannelResourceIdentifier getChannel();
-
     /**
      *  <p>Set this field if this Price is only valid from the specified date and time. Must be at least 1 ms earlier than <code>validUntil</code>.</p>
      * @return validFrom
      */
-
+    
     @JsonProperty("validFrom")
     public ZonedDateTime getValidFrom();
-
     /**
      *  <p>Set this field if this Price is only valid until the specified date and time. Must be at least 1 ms later than <code>validFrom</code>. Prices that are no longer valid are not automatically removed, but they can be removed if necessary.</p>
      * @return validUntil
      */
-
+    
     @JsonProperty("validUntil")
     public ZonedDateTime getValidUntil();
-
     /**
      *  <p>Set this field to add a DiscountedPrice from an <strong>external service</strong>.</p>
      *  <p>Otherwise, Composable Commerce sets this field automatically if at least one ProductDiscount applies. The DiscountedPrice must reference a ProductDiscount with:</p>
@@ -107,7 +106,6 @@ public interface PriceDraft extends com.commercetools.api.models.CustomizableDra
     @Valid
     @JsonProperty("discounted")
     public DiscountedPriceDraft getDiscounted();
-
     /**
      *  <p>Set this field to specify different Prices for certain LineItem quantities.</p>
      * @return tiers
@@ -115,7 +113,6 @@ public interface PriceDraft extends com.commercetools.api.models.CustomizableDra
     @Valid
     @JsonProperty("tiers")
     public List<PriceTierDraft> getTiers();
-
     /**
      *  <p>Custom Fields for the Price.</p>
      * @return custom
@@ -128,51 +125,58 @@ public interface PriceDraft extends com.commercetools.api.models.CustomizableDra
      *  <p>User-defined identifier for the Price. It must be unique per ProductVariant.</p>
      * @param key value to be set
      */
-
+    
     public void setKey(final String key);
-
+    
+    
     /**
      *  <p>Money value of this Price.</p>
      * @param value value to be set
      */
-
+    
     public void setValue(final Money value);
-
+    
+    
     /**
      *  <p>Set this field if this Price is only valid for the specified country.</p>
      * @param country value to be set
      */
-
+    
     public void setCountry(final String country);
-
+    
+    
     /**
      *  <p>Set this field if this Price is only valid for the referenced CustomerGroup.</p>
      * @param customerGroup value to be set
      */
-
+    
     public void setCustomerGroup(final CustomerGroupResourceIdentifier customerGroup);
-
+    
+    
     /**
      *  <p>Set this field if this Price is only valid for the referenced <code>ProductDistribution</code> Channel.</p>
      * @param channel value to be set
      */
-
+    
     public void setChannel(final ChannelResourceIdentifier channel);
-
+    
+    
     /**
      *  <p>Set this field if this Price is only valid from the specified date and time. Must be at least 1 ms earlier than <code>validUntil</code>.</p>
      * @param validFrom value to be set
      */
-
+    
     public void setValidFrom(final ZonedDateTime validFrom);
-
+    
+    
     /**
      *  <p>Set this field if this Price is only valid until the specified date and time. Must be at least 1 ms later than <code>validFrom</code>. Prices that are no longer valid are not automatically removed, but they can be removed if necessary.</p>
      * @param validUntil value to be set
      */
-
+    
     public void setValidUntil(final ZonedDateTime validUntil);
-
+    
+    
     /**
      *  <p>Set this field to add a DiscountedPrice from an <strong>external service</strong>.</p>
      *  <p>Otherwise, Composable Commerce sets this field automatically if at least one ProductDiscount applies. The DiscountedPrice must reference a ProductDiscount with:</p>
@@ -183,38 +187,40 @@ public interface PriceDraft extends com.commercetools.api.models.CustomizableDra
      *  </ul>
      * @param discounted value to be set
      */
-
+    
     public void setDiscounted(final DiscountedPriceDraft discounted);
-
+    
+    
     /**
      *  <p>Set this field to specify different Prices for certain LineItem quantities.</p>
      * @param tiers values to be set
      */
-
+    
     @JsonIgnore
-    public void setTiers(final PriceTierDraft... tiers);
-
+    public void setTiers(final PriceTierDraft ...tiers);
     /**
      *  <p>Set this field to specify different Prices for certain LineItem quantities.</p>
      * @param tiers values to be set
      */
-
+    
     public void setTiers(final List<PriceTierDraft> tiers);
-
+    
     /**
      *  <p>Custom Fields for the Price.</p>
      * @param custom value to be set
      */
-
+    
     public void setCustom(final CustomFieldsDraft custom);
+    
 
     /**
      * factory method
      * @return instance of PriceDraft
      */
-    public static PriceDraft of() {
+    public static PriceDraft of(){
         return new PriceDraftImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy PriceDraft
@@ -250,18 +256,13 @@ public interface PriceDraft extends com.commercetools.api.models.CustomizableDra
         instance.setKey(template.getKey());
         instance.setValue(com.commercetools.api.models.common.Money.deepCopy(template.getValue()));
         instance.setCountry(template.getCountry());
-        instance.setCustomerGroup(com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifier
-                .deepCopy(template.getCustomerGroup()));
-        instance.setChannel(
-            com.commercetools.api.models.channel.ChannelResourceIdentifier.deepCopy(template.getChannel()));
+        instance.setCustomerGroup(com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifier.deepCopy(template.getCustomerGroup()));
+        instance.setChannel(com.commercetools.api.models.channel.ChannelResourceIdentifier.deepCopy(template.getChannel()));
         instance.setValidFrom(template.getValidFrom());
         instance.setValidUntil(template.getValidUntil());
-        instance.setDiscounted(
-            com.commercetools.api.models.common.DiscountedPriceDraft.deepCopy(template.getDiscounted()));
+        instance.setDiscounted(com.commercetools.api.models.common.DiscountedPriceDraft.deepCopy(template.getDiscounted()));
         instance.setTiers(Optional.ofNullable(template.getTiers())
-                .map(t -> t.stream()
-                        .map(com.commercetools.api.models.common.PriceTierDraft::deepCopy)
-                        .collect(Collectors.toList()))
+                .map(t -> t.stream().map(com.commercetools.api.models.common.PriceTierDraft::deepCopy).collect(Collectors.toList()))
                 .orElse(null));
         instance.setCustom(com.commercetools.api.models.type.CustomFieldsDraft.deepCopy(template.getCustom()));
         return instance;
@@ -274,7 +275,7 @@ public interface PriceDraft extends com.commercetools.api.models.CustomizableDra
     public static PriceDraftBuilder builder() {
         return PriceDraftBuilder.of();
     }
-
+    
     /**
      * create builder for PriceDraft instance
      * @param template instance with prefilled values for the builder
@@ -283,6 +284,7 @@ public interface PriceDraft extends com.commercetools.api.models.CustomizableDra
     public static PriceDraftBuilder builder(final PriceDraft template) {
         return PriceDraftBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -293,7 +295,7 @@ public interface PriceDraft extends com.commercetools.api.models.CustomizableDra
     default <T> T withPriceDraft(Function<PriceDraft, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

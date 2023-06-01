@@ -1,9 +1,11 @@
-
 package com.commercetools.api.predicates.query.attribute_group;
 
 import com.commercetools.api.predicates.query.*;
 
-public class AttributeGroupSetKeyActionQueryBuilderDsl {
+import java.util.function.Function;
+
+
+public class AttributeGroupSetKeyActionQueryBuilderDsl  {
     public AttributeGroupSetKeyActionQueryBuilderDsl() {
     }
 
@@ -12,14 +14,12 @@ public class AttributeGroupSetKeyActionQueryBuilderDsl {
     }
 
     public StringComparisonPredicateBuilder<AttributeGroupSetKeyActionQueryBuilderDsl> action() {
-        return new StringComparisonPredicateBuilder<>(
-            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("action")),
-            p -> new CombinationQueryPredicate<>(p, AttributeGroupSetKeyActionQueryBuilderDsl::of));
+        return new StringComparisonPredicateBuilder<>(BinaryQueryPredicate.of().left(new ConstantQueryPredicate("action")),
+        p -> new CombinationQueryPredicate<>(p, AttributeGroupSetKeyActionQueryBuilderDsl::of));
     }
-
     public StringComparisonPredicateBuilder<AttributeGroupSetKeyActionQueryBuilderDsl> key() {
         return new StringComparisonPredicateBuilder<>(BinaryQueryPredicate.of().left(new ConstantQueryPredicate("key")),
-            p -> new CombinationQueryPredicate<>(p, AttributeGroupSetKeyActionQueryBuilderDsl::of));
+        p -> new CombinationQueryPredicate<>(p, AttributeGroupSetKeyActionQueryBuilderDsl::of));
     }
-
+    
 }

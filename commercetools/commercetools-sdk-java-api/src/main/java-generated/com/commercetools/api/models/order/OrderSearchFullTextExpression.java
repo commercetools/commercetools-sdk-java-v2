@@ -1,18 +1,21 @@
-
 package com.commercetools.api.models.order;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
+import com.commercetools.api.models.order.OrderSearchFullTextValue;
+import com.commercetools.api.models.order.OrderSearchQueryExpression;
+import com.commercetools.api.models.order.OrderSearchFullTextExpressionImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * OrderSearchFullTextExpression
@@ -25,11 +28,15 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .fullText(fullTextBuilder -> fullTextBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = OrderSearchFullTextExpressionImpl.class)
 public interface OrderSearchFullTextExpression extends OrderSearchQueryExpression {
+
 
     /**
      *
@@ -44,16 +51,18 @@ public interface OrderSearchFullTextExpression extends OrderSearchQueryExpressio
      * set fullText
      * @param fullText value to be set
      */
-
+    
     public void setFullText(final OrderSearchFullTextValue fullText);
+    
 
     /**
      * factory method
      * @return instance of OrderSearchFullTextExpression
      */
-    public static OrderSearchFullTextExpression of() {
+    public static OrderSearchFullTextExpression of(){
         return new OrderSearchFullTextExpressionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy OrderSearchFullTextExpression
@@ -77,8 +86,7 @@ public interface OrderSearchFullTextExpression extends OrderSearchQueryExpressio
             return null;
         }
         OrderSearchFullTextExpressionImpl instance = new OrderSearchFullTextExpressionImpl();
-        instance.setFullText(
-            com.commercetools.api.models.order.OrderSearchFullTextValue.deepCopy(template.getFullText()));
+        instance.setFullText(com.commercetools.api.models.order.OrderSearchFullTextValue.deepCopy(template.getFullText()));
         return instance;
     }
 
@@ -89,7 +97,7 @@ public interface OrderSearchFullTextExpression extends OrderSearchQueryExpressio
     public static OrderSearchFullTextExpressionBuilder builder() {
         return OrderSearchFullTextExpressionBuilder.of();
     }
-
+    
     /**
      * create builder for OrderSearchFullTextExpression instance
      * @param template instance with prefilled values for the builder
@@ -98,6 +106,7 @@ public interface OrderSearchFullTextExpression extends OrderSearchQueryExpressio
     public static OrderSearchFullTextExpressionBuilder builder(final OrderSearchFullTextExpression template) {
         return OrderSearchFullTextExpressionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -108,7 +117,7 @@ public interface OrderSearchFullTextExpression extends OrderSearchQueryExpressio
     default <T> T withOrderSearchFullTextExpression(Function<OrderSearchFullTextExpression, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

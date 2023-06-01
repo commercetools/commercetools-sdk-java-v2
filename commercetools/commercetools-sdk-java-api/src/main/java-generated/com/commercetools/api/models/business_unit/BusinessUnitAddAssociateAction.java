@@ -1,18 +1,21 @@
-
 package com.commercetools.api.models.business_unit;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
+import com.commercetools.api.models.business_unit.AssociateDraft;
+import com.commercetools.api.models.business_unit.BusinessUnitUpdateAction;
+import com.commercetools.api.models.business_unit.BusinessUnitAddAssociateActionImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Adding an Associate to a Business Unit generates a BusinessUnitAssociateAdded Message.</p>
@@ -25,9 +28,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .associate(associateBuilder -> associateBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = BusinessUnitAddAssociateActionImpl.class)
 public interface BusinessUnitAddAssociateAction extends BusinessUnitUpdateAction {
 
@@ -49,16 +55,18 @@ public interface BusinessUnitAddAssociateAction extends BusinessUnitUpdateAction
      *  <p>The Associate to add.</p>
      * @param associate value to be set
      */
-
+    
     public void setAssociate(final AssociateDraft associate);
+    
 
     /**
      * factory method
      * @return instance of BusinessUnitAddAssociateAction
      */
-    public static BusinessUnitAddAssociateAction of() {
+    public static BusinessUnitAddAssociateAction of(){
         return new BusinessUnitAddAssociateActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy BusinessUnitAddAssociateAction
@@ -82,8 +90,7 @@ public interface BusinessUnitAddAssociateAction extends BusinessUnitUpdateAction
             return null;
         }
         BusinessUnitAddAssociateActionImpl instance = new BusinessUnitAddAssociateActionImpl();
-        instance.setAssociate(
-            com.commercetools.api.models.business_unit.AssociateDraft.deepCopy(template.getAssociate()));
+        instance.setAssociate(com.commercetools.api.models.business_unit.AssociateDraft.deepCopy(template.getAssociate()));
         return instance;
     }
 
@@ -94,7 +101,7 @@ public interface BusinessUnitAddAssociateAction extends BusinessUnitUpdateAction
     public static BusinessUnitAddAssociateActionBuilder builder() {
         return BusinessUnitAddAssociateActionBuilder.of();
     }
-
+    
     /**
      * create builder for BusinessUnitAddAssociateAction instance
      * @param template instance with prefilled values for the builder
@@ -103,6 +110,7 @@ public interface BusinessUnitAddAssociateAction extends BusinessUnitUpdateAction
     public static BusinessUnitAddAssociateActionBuilder builder(final BusinessUnitAddAssociateAction template) {
         return BusinessUnitAddAssociateActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -113,7 +121,7 @@ public interface BusinessUnitAddAssociateAction extends BusinessUnitUpdateAction
     default <T> T withBusinessUnitAddAssociateAction(Function<BusinessUnitAddAssociateAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

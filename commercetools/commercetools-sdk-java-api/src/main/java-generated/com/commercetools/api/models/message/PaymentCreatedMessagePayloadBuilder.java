@@ -1,9 +1,12 @@
-
 package com.commercetools.api.models.message;
 
+import com.commercetools.api.models.message.MessagePayload;
+import com.commercetools.api.models.payment.Payment;
+import com.commercetools.api.models.message.PaymentCreatedMessagePayload;
+import javax.annotation.Nullable;
 import java.util.*;
 import java.util.function.Function;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -17,54 +20,61 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .payment(paymentBuilder -> paymentBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class PaymentCreatedMessagePayloadBuilder implements Builder<PaymentCreatedMessagePayload> {
 
+    
+    
     private com.commercetools.api.models.payment.Payment payment;
 
+    
     /**
      *  <p>Payment that was created.</p>
      * @param builder function to build the payment value
      * @return Builder
      */
-
-    public PaymentCreatedMessagePayloadBuilder payment(
-            Function<com.commercetools.api.models.payment.PaymentBuilder, com.commercetools.api.models.payment.PaymentBuilder> builder) {
+    
+    public PaymentCreatedMessagePayloadBuilder payment(Function<com.commercetools.api.models.payment.PaymentBuilder, com.commercetools.api.models.payment.PaymentBuilder> builder) {
         this.payment = builder.apply(com.commercetools.api.models.payment.PaymentBuilder.of()).build();
         return this;
     }
-
+    
     /**
      *  <p>Payment that was created.</p>
      * @param builder function to build the payment value
      * @return Builder
      */
-
-    public PaymentCreatedMessagePayloadBuilder withPayment(
-            Function<com.commercetools.api.models.payment.PaymentBuilder, com.commercetools.api.models.payment.Payment> builder) {
+    
+    public PaymentCreatedMessagePayloadBuilder withPayment(Function<com.commercetools.api.models.payment.PaymentBuilder, com.commercetools.api.models.payment.Payment> builder) {
         this.payment = builder.apply(com.commercetools.api.models.payment.PaymentBuilder.of());
         return this;
     }
-
+                    
     /**
      *  <p>Payment that was created.</p>
      * @param payment value to be set
      * @return Builder
      */
-
-    public PaymentCreatedMessagePayloadBuilder payment(final com.commercetools.api.models.payment.Payment payment) {
+    
+    public PaymentCreatedMessagePayloadBuilder payment( final com.commercetools.api.models.payment.Payment payment) {
         this.payment = payment;
         return this;
     }
+    
+    
 
     /**
      *  <p>Payment that was created.</p>
      * @return payment
      */
-
-    public com.commercetools.api.models.payment.Payment getPayment() {
+    
+    
+    public com.commercetools.api.models.payment.Payment getPayment(){
         return this.payment;
     }
 
@@ -76,7 +86,7 @@ public class PaymentCreatedMessagePayloadBuilder implements Builder<PaymentCreat
         Objects.requireNonNull(payment, PaymentCreatedMessagePayload.class + ": payment is missing");
         return new PaymentCreatedMessagePayloadImpl(payment);
     }
-
+    
     /**
      * builds PaymentCreatedMessagePayload without checking for non-null required values
      * @return PaymentCreatedMessagePayload
@@ -87,7 +97,7 @@ public class PaymentCreatedMessagePayloadBuilder implements Builder<PaymentCreat
 
     /**
      * factory method for an instance of PaymentCreatedMessagePayloadBuilder
-     * @return builder
+     * @return builder 
      */
     public static PaymentCreatedMessagePayloadBuilder of() {
         return new PaymentCreatedMessagePayloadBuilder();

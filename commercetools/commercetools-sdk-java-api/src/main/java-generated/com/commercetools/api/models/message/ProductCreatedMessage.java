@@ -1,19 +1,21 @@
-
 package com.commercetools.api.models.message;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
+import com.commercetools.api.models.message.Message;
 import com.commercetools.api.models.product.ProductProjection;
+import com.commercetools.api.models.message.ProductCreatedMessageImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Generated after a successful Create Product request.</p>
@@ -33,9 +35,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .productProjection(productProjectionBuilder -> productProjectionBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = ProductCreatedMessageImpl.class)
 public interface ProductCreatedMessage extends Message {
 
@@ -57,16 +62,18 @@ public interface ProductCreatedMessage extends Message {
      *  <p>The staged Product Projection of the Product at the time of creation.</p>
      * @param productProjection value to be set
      */
-
+    
     public void setProductProjection(final ProductProjection productProjection);
+    
 
     /**
      * factory method
      * @return instance of ProductCreatedMessage
      */
-    public static ProductCreatedMessage of() {
+    public static ProductCreatedMessage of(){
         return new ProductCreatedMessageImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy ProductCreatedMessage
@@ -104,16 +111,13 @@ public interface ProductCreatedMessage extends Message {
         instance.setVersion(template.getVersion());
         instance.setCreatedAt(template.getCreatedAt());
         instance.setLastModifiedAt(template.getLastModifiedAt());
-        instance.setLastModifiedBy(
-            com.commercetools.api.models.common.LastModifiedBy.deepCopy(template.getLastModifiedBy()));
+        instance.setLastModifiedBy(com.commercetools.api.models.common.LastModifiedBy.deepCopy(template.getLastModifiedBy()));
         instance.setCreatedBy(com.commercetools.api.models.common.CreatedBy.deepCopy(template.getCreatedBy()));
         instance.setSequenceNumber(template.getSequenceNumber());
         instance.setResource(com.commercetools.api.models.common.Reference.deepCopy(template.getResource()));
         instance.setResourceVersion(template.getResourceVersion());
-        instance.setResourceUserProvidedIdentifiers(com.commercetools.api.models.message.UserProvidedIdentifiers
-                .deepCopy(template.getResourceUserProvidedIdentifiers()));
-        instance.setProductProjection(
-            com.commercetools.api.models.product.ProductProjection.deepCopy(template.getProductProjection()));
+        instance.setResourceUserProvidedIdentifiers(com.commercetools.api.models.message.UserProvidedIdentifiers.deepCopy(template.getResourceUserProvidedIdentifiers()));
+        instance.setProductProjection(com.commercetools.api.models.product.ProductProjection.deepCopy(template.getProductProjection()));
         return instance;
     }
 
@@ -124,7 +128,7 @@ public interface ProductCreatedMessage extends Message {
     public static ProductCreatedMessageBuilder builder() {
         return ProductCreatedMessageBuilder.of();
     }
-
+    
     /**
      * create builder for ProductCreatedMessage instance
      * @param template instance with prefilled values for the builder
@@ -133,6 +137,7 @@ public interface ProductCreatedMessage extends Message {
     public static ProductCreatedMessageBuilder builder(final ProductCreatedMessage template) {
         return ProductCreatedMessageBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -143,7 +148,7 @@ public interface ProductCreatedMessage extends Message {
     default <T> T withProductCreatedMessage(Function<ProductCreatedMessage, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

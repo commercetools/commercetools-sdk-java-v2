@@ -1,8 +1,12 @@
-
 package com.commercetools.api.models.payment;
 
+import com.commercetools.api.models.payment.PaymentUpdateAction;
+import com.commercetools.api.models.payment.TransactionState;
+import com.commercetools.api.models.payment.PaymentChangeTransactionStateAction;
+import javax.annotation.Nullable;
 import java.util.*;
-
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -17,53 +21,67 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .state(TransactionState.INITIAL)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class PaymentChangeTransactionStateActionBuilder implements Builder<PaymentChangeTransactionStateAction> {
 
+    
+    
     private String transactionId;
-
+    
+    
+    
     private com.commercetools.api.models.payment.TransactionState state;
 
+    
     /**
      *  <p>Unique identifier of the Transaction.</p>
      * @param transactionId value to be set
      * @return Builder
      */
-
-    public PaymentChangeTransactionStateActionBuilder transactionId(final String transactionId) {
+    
+    public PaymentChangeTransactionStateActionBuilder transactionId( final String transactionId) {
         this.transactionId = transactionId;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>New TransactionState.</p>
      * @param state value to be set
      * @return Builder
      */
-
-    public PaymentChangeTransactionStateActionBuilder state(
-            final com.commercetools.api.models.payment.TransactionState state) {
+    
+    public PaymentChangeTransactionStateActionBuilder state( final com.commercetools.api.models.payment.TransactionState state) {
         this.state = state;
         return this;
     }
+    
+    
 
     /**
      *  <p>Unique identifier of the Transaction.</p>
      * @return transactionId
      */
-
-    public String getTransactionId() {
+    
+    
+    public String getTransactionId(){
         return this.transactionId;
     }
-
+    
     /**
      *  <p>New TransactionState.</p>
      * @return state
      */
-
-    public com.commercetools.api.models.payment.TransactionState getState() {
+    
+    
+    public com.commercetools.api.models.payment.TransactionState getState(){
         return this.state;
     }
 
@@ -76,7 +94,7 @@ public class PaymentChangeTransactionStateActionBuilder implements Builder<Payme
         Objects.requireNonNull(state, PaymentChangeTransactionStateAction.class + ": state is missing");
         return new PaymentChangeTransactionStateActionImpl(transactionId, state);
     }
-
+    
     /**
      * builds PaymentChangeTransactionStateAction without checking for non-null required values
      * @return PaymentChangeTransactionStateAction
@@ -87,7 +105,7 @@ public class PaymentChangeTransactionStateActionBuilder implements Builder<Payme
 
     /**
      * factory method for an instance of PaymentChangeTransactionStateActionBuilder
-     * @return builder
+     * @return builder 
      */
     public static PaymentChangeTransactionStateActionBuilder of() {
         return new PaymentChangeTransactionStateActionBuilder();

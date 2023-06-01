@@ -1,9 +1,11 @@
-
 package com.commercetools.api.predicates.query.me;
 
 import com.commercetools.api.predicates.query.*;
 
-public class MyCustomerSetVatIdActionQueryBuilderDsl {
+import java.util.function.Function;
+
+
+public class MyCustomerSetVatIdActionQueryBuilderDsl  {
     public MyCustomerSetVatIdActionQueryBuilderDsl() {
     }
 
@@ -12,15 +14,12 @@ public class MyCustomerSetVatIdActionQueryBuilderDsl {
     }
 
     public StringComparisonPredicateBuilder<MyCustomerSetVatIdActionQueryBuilderDsl> action() {
-        return new StringComparisonPredicateBuilder<>(
-            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("action")),
-            p -> new CombinationQueryPredicate<>(p, MyCustomerSetVatIdActionQueryBuilderDsl::of));
+        return new StringComparisonPredicateBuilder<>(BinaryQueryPredicate.of().left(new ConstantQueryPredicate("action")),
+        p -> new CombinationQueryPredicate<>(p, MyCustomerSetVatIdActionQueryBuilderDsl::of));
     }
-
     public StringComparisonPredicateBuilder<MyCustomerSetVatIdActionQueryBuilderDsl> vatId() {
-        return new StringComparisonPredicateBuilder<>(
-            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("vatId")),
-            p -> new CombinationQueryPredicate<>(p, MyCustomerSetVatIdActionQueryBuilderDsl::of));
+        return new StringComparisonPredicateBuilder<>(BinaryQueryPredicate.of().left(new ConstantQueryPredicate("vatId")),
+        p -> new CombinationQueryPredicate<>(p, MyCustomerSetVatIdActionQueryBuilderDsl::of));
     }
-
+    
 }

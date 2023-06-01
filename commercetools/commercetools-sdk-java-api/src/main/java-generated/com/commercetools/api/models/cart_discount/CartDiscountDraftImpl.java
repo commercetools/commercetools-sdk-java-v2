@@ -1,67 +1,80 @@
-
 package com.commercetools.api.models.cart_discount;
 
-import java.time.*;
-import java.util.*;
-
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
-
-import io.vrap.rmf.base.client.ModelBase;
+import com.commercetools.api.models.cart_discount.CartDiscountTarget;
+import com.commercetools.api.models.cart_discount.CartDiscountValueDraft;
+import com.commercetools.api.models.cart_discount.StackingMode;
+import com.commercetools.api.models.common.LocalizedString;
+import com.commercetools.api.models.type.CustomFieldsDraft;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.ModelBase;
+import javax.validation.Valid;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.annotation.*;
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
  * CartDiscountDraft
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class CartDiscountDraftImpl implements CartDiscountDraft, ModelBase {
 
+    
     private com.commercetools.api.models.common.LocalizedString name;
-
+    
+    
     private String key;
-
+    
+    
     private com.commercetools.api.models.common.LocalizedString description;
-
+    
+    
     private com.commercetools.api.models.cart_discount.CartDiscountValueDraft value;
-
+    
+    
     private String cartPredicate;
-
+    
+    
     private com.commercetools.api.models.cart_discount.CartDiscountTarget target;
-
+    
+    
     private String sortOrder;
-
+    
+    
     private Boolean isActive;
-
+    
+    
     private java.time.ZonedDateTime validFrom;
-
+    
+    
     private java.time.ZonedDateTime validUntil;
-
+    
+    
     private Boolean requiresDiscountCode;
-
+    
+    
     private com.commercetools.api.models.cart_discount.StackingMode stackingMode;
-
+    
+    
     private com.commercetools.api.models.type.CustomFieldsDraft custom;
 
     /**
      * create instance with all properties
      */
     @JsonCreator
-    CartDiscountDraftImpl(@JsonProperty("name") final com.commercetools.api.models.common.LocalizedString name,
-            @JsonProperty("key") final String key,
-            @JsonProperty("description") final com.commercetools.api.models.common.LocalizedString description,
-            @JsonProperty("value") final com.commercetools.api.models.cart_discount.CartDiscountValueDraft value,
-            @JsonProperty("cartPredicate") final String cartPredicate,
-            @JsonProperty("target") final com.commercetools.api.models.cart_discount.CartDiscountTarget target,
-            @JsonProperty("sortOrder") final String sortOrder, @JsonProperty("isActive") final Boolean isActive,
-            @JsonProperty("validFrom") final java.time.ZonedDateTime validFrom,
-            @JsonProperty("validUntil") final java.time.ZonedDateTime validUntil,
-            @JsonProperty("requiresDiscountCode") final Boolean requiresDiscountCode,
-            @JsonProperty("stackingMode") final com.commercetools.api.models.cart_discount.StackingMode stackingMode,
-            @JsonProperty("custom") final com.commercetools.api.models.type.CustomFieldsDraft custom) {
+    CartDiscountDraftImpl(@JsonProperty("name") final com.commercetools.api.models.common.LocalizedString name, @JsonProperty("key") final String key, @JsonProperty("description") final com.commercetools.api.models.common.LocalizedString description, @JsonProperty("value") final com.commercetools.api.models.cart_discount.CartDiscountValueDraft value, @JsonProperty("cartPredicate") final String cartPredicate, @JsonProperty("target") final com.commercetools.api.models.cart_discount.CartDiscountTarget target, @JsonProperty("sortOrder") final String sortOrder, @JsonProperty("isActive") final Boolean isActive, @JsonProperty("validFrom") final java.time.ZonedDateTime validFrom, @JsonProperty("validUntil") final java.time.ZonedDateTime validUntil, @JsonProperty("requiresDiscountCode") final Boolean requiresDiscountCode, @JsonProperty("stackingMode") final com.commercetools.api.models.cart_discount.StackingMode stackingMode, @JsonProperty("custom") final com.commercetools.api.models.type.CustomFieldsDraft custom) {
         this.name = name;
         this.key = key;
         this.description = description;
@@ -76,7 +89,6 @@ public class CartDiscountDraftImpl implements CartDiscountDraft, ModelBase {
         this.stackingMode = stackingMode;
         this.custom = custom;
     }
-
     /**
      * create empty instance
      */
@@ -86,170 +98,182 @@ public class CartDiscountDraftImpl implements CartDiscountDraft, ModelBase {
     /**
      *  <p>Name of the CartDiscount.</p>
      */
-
-    public com.commercetools.api.models.common.LocalizedString getName() {
+    
+    public com.commercetools.api.models.common.LocalizedString getName(){
         return this.name;
     }
-
+    
     /**
      *  <p>User-defined unique identifier for the CartDiscount.</p>
      */
-
-    public String getKey() {
+    
+    public String getKey(){
         return this.key;
     }
-
+    
     /**
      *  <p>Description of the CartDiscount.</p>
      */
-
-    public com.commercetools.api.models.common.LocalizedString getDescription() {
+    
+    public com.commercetools.api.models.common.LocalizedString getDescription(){
         return this.description;
     }
-
+    
     /**
      *  <p>Effect of the CartDiscount. For a target, relative or absolute Discount values or a fixed item Price value can be specified. If no target is specified, a Gift Line Item can be added to the Cart.</p>
      */
-
-    public com.commercetools.api.models.cart_discount.CartDiscountValueDraft getValue() {
+    
+    public com.commercetools.api.models.cart_discount.CartDiscountValueDraft getValue(){
         return this.value;
     }
-
+    
     /**
      *  <p>Valid Cart Predicate.</p>
      */
-
-    public String getCartPredicate() {
+    
+    public String getCartPredicate(){
         return this.cartPredicate;
     }
-
+    
     /**
      *  <p>Must not be set when the <code>value</code> has type <code>giftLineItem</code>, otherwise a CartDiscountTarget must be set.</p>
      */
-
-    public com.commercetools.api.models.cart_discount.CartDiscountTarget getTarget() {
+    
+    public com.commercetools.api.models.cart_discount.CartDiscountTarget getTarget(){
         return this.target;
     }
-
+    
     /**
      *  <p>Value between <code>0</code> and <code>1</code>. A Discount with a higher sortOrder is prioritized. The sort order must be unambiguous among all CartDiscounts.</p>
      */
-
-    public String getSortOrder() {
+    
+    public String getSortOrder(){
         return this.sortOrder;
     }
-
+    
     /**
      *  <p>Only active Discounts can be applied to the Cart.</p>
      */
-
-    public Boolean getIsActive() {
+    
+    public Boolean getIsActive(){
         return this.isActive;
     }
-
+    
     /**
      *  <p>Date and time (UTC) from which the Discount is effective.</p>
      */
-
-    public java.time.ZonedDateTime getValidFrom() {
+    
+    public java.time.ZonedDateTime getValidFrom(){
         return this.validFrom;
     }
-
+    
     /**
      *  <p>Date and time (UTC) until which the Discount is effective.</p>
      */
-
-    public java.time.ZonedDateTime getValidUntil() {
+    
+    public java.time.ZonedDateTime getValidUntil(){
         return this.validUntil;
     }
-
+    
     /**
      *  <p>States whether the Discount can only be used in a connection with a DiscountCode.</p>
      */
-
-    public Boolean getRequiresDiscountCode() {
+    
+    public Boolean getRequiresDiscountCode(){
         return this.requiresDiscountCode;
     }
-
+    
     /**
      *  <p>Specifies whether the application of this discount causes the following discounts to be ignored.</p>
      */
-
-    public com.commercetools.api.models.cart_discount.StackingMode getStackingMode() {
+    
+    public com.commercetools.api.models.cart_discount.StackingMode getStackingMode(){
         return this.stackingMode;
     }
-
+    
     /**
      *  <p>Custom Fields of the CartDiscount.</p>
      */
-
-    public com.commercetools.api.models.type.CustomFieldsDraft getCustom() {
+    
+    public com.commercetools.api.models.type.CustomFieldsDraft getCustom(){
         return this.custom;
     }
 
-    public void setName(final com.commercetools.api.models.common.LocalizedString name) {
+    
+    public void setName(final com.commercetools.api.models.common.LocalizedString name){
         this.name = name;
     }
-
-    public void setKey(final String key) {
+    
+    
+    public void setKey(final String key){
         this.key = key;
     }
-
-    public void setDescription(final com.commercetools.api.models.common.LocalizedString description) {
+    
+    
+    public void setDescription(final com.commercetools.api.models.common.LocalizedString description){
         this.description = description;
     }
-
-    public void setValue(final com.commercetools.api.models.cart_discount.CartDiscountValueDraft value) {
+    
+    
+    public void setValue(final com.commercetools.api.models.cart_discount.CartDiscountValueDraft value){
         this.value = value;
     }
-
-    public void setCartPredicate(final String cartPredicate) {
+    
+    
+    public void setCartPredicate(final String cartPredicate){
         this.cartPredicate = cartPredicate;
     }
-
-    public void setTarget(final com.commercetools.api.models.cart_discount.CartDiscountTarget target) {
+    
+    
+    public void setTarget(final com.commercetools.api.models.cart_discount.CartDiscountTarget target){
         this.target = target;
     }
-
-    public void setSortOrder(final String sortOrder) {
+    
+    
+    public void setSortOrder(final String sortOrder){
         this.sortOrder = sortOrder;
     }
-
-    public void setIsActive(final Boolean isActive) {
+    
+    
+    public void setIsActive(final Boolean isActive){
         this.isActive = isActive;
     }
-
-    public void setValidFrom(final java.time.ZonedDateTime validFrom) {
+    
+    
+    public void setValidFrom(final java.time.ZonedDateTime validFrom){
         this.validFrom = validFrom;
     }
-
-    public void setValidUntil(final java.time.ZonedDateTime validUntil) {
+    
+    
+    public void setValidUntil(final java.time.ZonedDateTime validUntil){
         this.validUntil = validUntil;
     }
-
-    public void setRequiresDiscountCode(final Boolean requiresDiscountCode) {
+    
+    
+    public void setRequiresDiscountCode(final Boolean requiresDiscountCode){
         this.requiresDiscountCode = requiresDiscountCode;
     }
-
-    public void setStackingMode(final com.commercetools.api.models.cart_discount.StackingMode stackingMode) {
+    
+    
+    public void setStackingMode(final com.commercetools.api.models.cart_discount.StackingMode stackingMode){
         this.stackingMode = stackingMode;
     }
-
-    public void setCustom(final com.commercetools.api.models.type.CustomFieldsDraft custom) {
+    
+    
+    public void setCustom(final com.commercetools.api.models.type.CustomFieldsDraft custom){
         this.custom = custom;
     }
 
     @Override
     public boolean equals(Object o) {
-        if (this == o)
-            return true;
-
-        if (o == null || getClass() != o.getClass())
-            return false;
-
+        if (this == o) return true;
+    
+        if (o == null || getClass() != o.getClass()) return false;
+    
         CartDiscountDraftImpl that = (CartDiscountDraftImpl) o;
-
-        return new EqualsBuilder().append(name, that.name)
+    
+        return new EqualsBuilder()
+                .append(name, that.name)
                 .append(key, that.key)
                 .append(description, that.description)
                 .append(value, that.value)
@@ -264,23 +288,24 @@ public class CartDiscountDraftImpl implements CartDiscountDraft, ModelBase {
                 .append(custom, that.custom)
                 .isEquals();
     }
-
+    
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(name)
-                .append(key)
-                .append(description)
-                .append(value)
-                .append(cartPredicate)
-                .append(target)
-                .append(sortOrder)
-                .append(isActive)
-                .append(validFrom)
-                .append(validUntil)
-                .append(requiresDiscountCode)
-                .append(stackingMode)
-                .append(custom)
-                .toHashCode();
+        return new HashCodeBuilder(17, 37)
+            .append(name)
+            .append(key)
+            .append(description)
+            .append(value)
+            .append(cartPredicate)
+            .append(target)
+            .append(sortOrder)
+            .append(isActive)
+            .append(validFrom)
+            .append(validUntil)
+            .append(requiresDiscountCode)
+            .append(stackingMode)
+            .append(custom)
+            .toHashCode();
     }
 
 }

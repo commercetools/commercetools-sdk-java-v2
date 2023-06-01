@@ -1,19 +1,21 @@
-
 package com.commercetools.api.models.store;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-import java.util.stream.Collectors;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-
+import com.commercetools.api.models.store.StoreUpdateAction;
 import com.commercetools.api.models.store_country.StoreCountry;
+import com.commercetools.api.models.store.StoreSetCountriesActionImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>This update action produces the StoreCountriesChanged Message.</p>
@@ -25,9 +27,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     StoreSetCountriesAction storeSetCountriesAction = StoreSetCountriesAction.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = StoreSetCountriesActionImpl.class)
 public interface StoreSetCountriesAction extends StoreUpdateAction {
 
@@ -48,24 +53,24 @@ public interface StoreSetCountriesAction extends StoreUpdateAction {
      *  <p>New value to set.</p>
      * @param countries values to be set
      */
-
+    
     @JsonIgnore
-    public void setCountries(final StoreCountry... countries);
-
+    public void setCountries(final StoreCountry ...countries);
     /**
      *  <p>New value to set.</p>
      * @param countries values to be set
      */
-
+    
     public void setCountries(final List<StoreCountry> countries);
 
     /**
      * factory method
      * @return instance of StoreSetCountriesAction
      */
-    public static StoreSetCountriesAction of() {
+    public static StoreSetCountriesAction of(){
         return new StoreSetCountriesActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy StoreSetCountriesAction
@@ -90,9 +95,7 @@ public interface StoreSetCountriesAction extends StoreUpdateAction {
         }
         StoreSetCountriesActionImpl instance = new StoreSetCountriesActionImpl();
         instance.setCountries(Optional.ofNullable(template.getCountries())
-                .map(t -> t.stream()
-                        .map(com.commercetools.api.models.store_country.StoreCountry::deepCopy)
-                        .collect(Collectors.toList()))
+                .map(t -> t.stream().map(com.commercetools.api.models.store_country.StoreCountry::deepCopy).collect(Collectors.toList()))
                 .orElse(null));
         return instance;
     }
@@ -104,7 +107,7 @@ public interface StoreSetCountriesAction extends StoreUpdateAction {
     public static StoreSetCountriesActionBuilder builder() {
         return StoreSetCountriesActionBuilder.of();
     }
-
+    
     /**
      * create builder for StoreSetCountriesAction instance
      * @param template instance with prefilled values for the builder
@@ -113,6 +116,7 @@ public interface StoreSetCountriesAction extends StoreUpdateAction {
     public static StoreSetCountriesActionBuilder builder(final StoreSetCountriesAction template) {
         return StoreSetCountriesActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -123,7 +127,7 @@ public interface StoreSetCountriesAction extends StoreUpdateAction {
     default <T> T withStoreSetCountriesAction(Function<StoreSetCountriesAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

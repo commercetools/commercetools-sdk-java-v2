@@ -1,22 +1,23 @@
-
 package com.commercetools.api.models.order_edit;
-
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.cart.ExternalLineItemTotalPrice;
 import com.commercetools.api.models.cart.ItemShippingDetailsDraft;
 import com.commercetools.api.models.common.Money;
 import com.commercetools.api.models.order.StagedOrderUpdateAction;
+import com.commercetools.api.models.order_edit.StagedOrderRemoveLineItemActionImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * StagedOrderRemoveLineItemAction
@@ -29,9 +30,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .lineItemId("{lineItemId}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = StagedOrderRemoveLineItemActionImpl.class)
 public interface StagedOrderRemoveLineItemAction extends StagedOrderUpdateAction {
 
@@ -47,15 +51,13 @@ public interface StagedOrderRemoveLineItemAction extends StagedOrderUpdateAction
     @NotNull
     @JsonProperty("lineItemId")
     public String getLineItemId();
-
     /**
      *
      * @return quantity
      */
-
+    
     @JsonProperty("quantity")
     public Long getQuantity();
-
     /**
      *  <p>Draft type that stores amounts only in cent precision for the specified currency.</p>
      * @return externalPrice
@@ -63,7 +65,6 @@ public interface StagedOrderRemoveLineItemAction extends StagedOrderUpdateAction
     @Valid
     @JsonProperty("externalPrice")
     public Money getExternalPrice();
-
     /**
      *
      * @return externalTotalPrice
@@ -71,7 +72,6 @@ public interface StagedOrderRemoveLineItemAction extends StagedOrderUpdateAction
     @Valid
     @JsonProperty("externalTotalPrice")
     public ExternalLineItemTotalPrice getExternalTotalPrice();
-
     /**
      *  <p>For order creation and updates, the sum of the <code>targets</code> must match the quantity of the Line Items or Custom Line Items.</p>
      * @return shippingDetailsToRemove
@@ -84,44 +84,50 @@ public interface StagedOrderRemoveLineItemAction extends StagedOrderUpdateAction
      * set lineItemId
      * @param lineItemId value to be set
      */
-
+    
     public void setLineItemId(final String lineItemId);
-
+    
+    
     /**
      * set quantity
      * @param quantity value to be set
      */
-
+    
     public void setQuantity(final Long quantity);
-
+    
+    
     /**
      *  <p>Draft type that stores amounts only in cent precision for the specified currency.</p>
      * @param externalPrice value to be set
      */
-
+    
     public void setExternalPrice(final Money externalPrice);
-
+    
+    
     /**
      * set externalTotalPrice
      * @param externalTotalPrice value to be set
      */
-
+    
     public void setExternalTotalPrice(final ExternalLineItemTotalPrice externalTotalPrice);
-
+    
+    
     /**
      *  <p>For order creation and updates, the sum of the <code>targets</code> must match the quantity of the Line Items or Custom Line Items.</p>
      * @param shippingDetailsToRemove value to be set
      */
-
+    
     public void setShippingDetailsToRemove(final ItemShippingDetailsDraft shippingDetailsToRemove);
+    
 
     /**
      * factory method
      * @return instance of StagedOrderRemoveLineItemAction
      */
-    public static StagedOrderRemoveLineItemAction of() {
+    public static StagedOrderRemoveLineItemAction of(){
         return new StagedOrderRemoveLineItemActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy StagedOrderRemoveLineItemAction
@@ -152,10 +158,8 @@ public interface StagedOrderRemoveLineItemAction extends StagedOrderUpdateAction
         instance.setLineItemId(template.getLineItemId());
         instance.setQuantity(template.getQuantity());
         instance.setExternalPrice(com.commercetools.api.models.common.Money.deepCopy(template.getExternalPrice()));
-        instance.setExternalTotalPrice(
-            com.commercetools.api.models.cart.ExternalLineItemTotalPrice.deepCopy(template.getExternalTotalPrice()));
-        instance.setShippingDetailsToRemove(
-            com.commercetools.api.models.cart.ItemShippingDetailsDraft.deepCopy(template.getShippingDetailsToRemove()));
+        instance.setExternalTotalPrice(com.commercetools.api.models.cart.ExternalLineItemTotalPrice.deepCopy(template.getExternalTotalPrice()));
+        instance.setShippingDetailsToRemove(com.commercetools.api.models.cart.ItemShippingDetailsDraft.deepCopy(template.getShippingDetailsToRemove()));
         return instance;
     }
 
@@ -166,7 +170,7 @@ public interface StagedOrderRemoveLineItemAction extends StagedOrderUpdateAction
     public static StagedOrderRemoveLineItemActionBuilder builder() {
         return StagedOrderRemoveLineItemActionBuilder.of();
     }
-
+    
     /**
      * create builder for StagedOrderRemoveLineItemAction instance
      * @param template instance with prefilled values for the builder
@@ -175,6 +179,7 @@ public interface StagedOrderRemoveLineItemAction extends StagedOrderUpdateAction
     public static StagedOrderRemoveLineItemActionBuilder builder(final StagedOrderRemoveLineItemAction template) {
         return StagedOrderRemoveLineItemActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -185,7 +190,7 @@ public interface StagedOrderRemoveLineItemAction extends StagedOrderUpdateAction
     default <T> T withStagedOrderRemoveLineItemAction(Function<StagedOrderRemoveLineItemAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

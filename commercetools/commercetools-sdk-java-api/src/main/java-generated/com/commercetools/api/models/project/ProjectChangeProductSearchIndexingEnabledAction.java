@@ -1,17 +1,20 @@
-
 package com.commercetools.api.models.project;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
+import com.commercetools.api.models.project.ProjectUpdateAction;
+import com.commercetools.api.models.project.ProjectChangeProductSearchIndexingEnabledActionImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * ProjectChangeProductSearchIndexingEnabledAction
@@ -24,9 +27,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .enabled(true)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = ProjectChangeProductSearchIndexingEnabledActionImpl.class)
 public interface ProjectChangeProductSearchIndexingEnabledAction extends ProjectUpdateAction {
 
@@ -53,24 +59,25 @@ public interface ProjectChangeProductSearchIndexingEnabledAction extends Project
      *  </ul>
      * @param enabled value to be set
      */
-
+    
     public void setEnabled(final Boolean enabled);
+    
 
     /**
      * factory method
      * @return instance of ProjectChangeProductSearchIndexingEnabledAction
      */
-    public static ProjectChangeProductSearchIndexingEnabledAction of() {
+    public static ProjectChangeProductSearchIndexingEnabledAction of(){
         return new ProjectChangeProductSearchIndexingEnabledActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy ProjectChangeProductSearchIndexingEnabledAction
      * @param template instance to be copied
      * @return copy instance
      */
-    public static ProjectChangeProductSearchIndexingEnabledAction of(
-            final ProjectChangeProductSearchIndexingEnabledAction template) {
+    public static ProjectChangeProductSearchIndexingEnabledAction of(final ProjectChangeProductSearchIndexingEnabledAction template) {
         ProjectChangeProductSearchIndexingEnabledActionImpl instance = new ProjectChangeProductSearchIndexingEnabledActionImpl();
         instance.setEnabled(template.getEnabled());
         return instance;
@@ -82,8 +89,7 @@ public interface ProjectChangeProductSearchIndexingEnabledAction extends Project
      * @return copy instance
      */
     @Nullable
-    public static ProjectChangeProductSearchIndexingEnabledAction deepCopy(
-            @Nullable final ProjectChangeProductSearchIndexingEnabledAction template) {
+    public static ProjectChangeProductSearchIndexingEnabledAction deepCopy(@Nullable final ProjectChangeProductSearchIndexingEnabledAction template) {
         if (template == null) {
             return null;
         }
@@ -99,16 +105,16 @@ public interface ProjectChangeProductSearchIndexingEnabledAction extends Project
     public static ProjectChangeProductSearchIndexingEnabledActionBuilder builder() {
         return ProjectChangeProductSearchIndexingEnabledActionBuilder.of();
     }
-
+    
     /**
      * create builder for ProjectChangeProductSearchIndexingEnabledAction instance
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static ProjectChangeProductSearchIndexingEnabledActionBuilder builder(
-            final ProjectChangeProductSearchIndexingEnabledAction template) {
+    public static ProjectChangeProductSearchIndexingEnabledActionBuilder builder(final ProjectChangeProductSearchIndexingEnabledAction template) {
         return ProjectChangeProductSearchIndexingEnabledActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -116,11 +122,10 @@ public interface ProjectChangeProductSearchIndexingEnabledAction extends Project
      * @param helper function to map the object
      * @return mapped value
      */
-    default <T> T withProjectChangeProductSearchIndexingEnabledAction(
-            Function<ProjectChangeProductSearchIndexingEnabledAction, T> helper) {
+    default <T> T withProjectChangeProductSearchIndexingEnabledAction(Function<ProjectChangeProductSearchIndexingEnabledAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

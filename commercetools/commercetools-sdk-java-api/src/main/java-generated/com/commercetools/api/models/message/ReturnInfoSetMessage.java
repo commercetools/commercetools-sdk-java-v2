@@ -1,19 +1,21 @@
-
 package com.commercetools.api.models.message;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-import java.util.stream.Collectors;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-
+import com.commercetools.api.models.message.OrderMessage;
 import com.commercetools.api.models.order.ReturnInfo;
+import com.commercetools.api.models.message.ReturnInfoSetMessageImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Generated after a successful Set Return Info update action on Orders and Order Edits.</p>
@@ -32,9 +34,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .resourceVersion(0.3)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = ReturnInfoSetMessageImpl.class)
 public interface ReturnInfoSetMessage extends OrderMessage {
 
@@ -55,24 +60,24 @@ public interface ReturnInfoSetMessage extends OrderMessage {
      *  <p>The ReturnInfo that was set on the Order or Order Edit.</p>
      * @param returnInfo values to be set
      */
-
+    
     @JsonIgnore
-    public void setReturnInfo(final ReturnInfo... returnInfo);
-
+    public void setReturnInfo(final ReturnInfo ...returnInfo);
     /**
      *  <p>The ReturnInfo that was set on the Order or Order Edit.</p>
      * @param returnInfo values to be set
      */
-
+    
     public void setReturnInfo(final List<ReturnInfo> returnInfo);
 
     /**
      * factory method
      * @return instance of ReturnInfoSetMessage
      */
-    public static ReturnInfoSetMessage of() {
+    public static ReturnInfoSetMessage of(){
         return new ReturnInfoSetMessageImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy ReturnInfoSetMessage
@@ -110,18 +115,14 @@ public interface ReturnInfoSetMessage extends OrderMessage {
         instance.setVersion(template.getVersion());
         instance.setCreatedAt(template.getCreatedAt());
         instance.setLastModifiedAt(template.getLastModifiedAt());
-        instance.setLastModifiedBy(
-            com.commercetools.api.models.common.LastModifiedBy.deepCopy(template.getLastModifiedBy()));
+        instance.setLastModifiedBy(com.commercetools.api.models.common.LastModifiedBy.deepCopy(template.getLastModifiedBy()));
         instance.setCreatedBy(com.commercetools.api.models.common.CreatedBy.deepCopy(template.getCreatedBy()));
         instance.setSequenceNumber(template.getSequenceNumber());
         instance.setResource(com.commercetools.api.models.common.Reference.deepCopy(template.getResource()));
         instance.setResourceVersion(template.getResourceVersion());
-        instance.setResourceUserProvidedIdentifiers(com.commercetools.api.models.message.UserProvidedIdentifiers
-                .deepCopy(template.getResourceUserProvidedIdentifiers()));
+        instance.setResourceUserProvidedIdentifiers(com.commercetools.api.models.message.UserProvidedIdentifiers.deepCopy(template.getResourceUserProvidedIdentifiers()));
         instance.setReturnInfo(Optional.ofNullable(template.getReturnInfo())
-                .map(t -> t.stream()
-                        .map(com.commercetools.api.models.order.ReturnInfo::deepCopy)
-                        .collect(Collectors.toList()))
+                .map(t -> t.stream().map(com.commercetools.api.models.order.ReturnInfo::deepCopy).collect(Collectors.toList()))
                 .orElse(null));
         return instance;
     }
@@ -133,7 +134,7 @@ public interface ReturnInfoSetMessage extends OrderMessage {
     public static ReturnInfoSetMessageBuilder builder() {
         return ReturnInfoSetMessageBuilder.of();
     }
-
+    
     /**
      * create builder for ReturnInfoSetMessage instance
      * @param template instance with prefilled values for the builder
@@ -142,6 +143,7 @@ public interface ReturnInfoSetMessage extends OrderMessage {
     public static ReturnInfoSetMessageBuilder builder(final ReturnInfoSetMessage template) {
         return ReturnInfoSetMessageBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -152,7 +154,7 @@ public interface ReturnInfoSetMessage extends OrderMessage {
     default <T> T withReturnInfoSetMessage(Function<ReturnInfoSetMessage, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

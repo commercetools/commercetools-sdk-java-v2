@@ -1,8 +1,11 @@
-
 package com.commercetools.history.models.change;
 
+import com.commercetools.history.models.change.Change;
+import com.commercetools.history.models.change.VerifyEmailChange;
+import javax.annotation.Nullable;
 import java.util.*;
-
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -16,30 +19,39 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .change("{change}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class VerifyEmailChangeBuilder implements Builder<VerifyEmailChange> {
 
+    
+    
     private String change;
 
+    
     /**
      * set the value to the change
      * @param change value to be set
      * @return Builder
      */
-
-    public VerifyEmailChangeBuilder change(final String change) {
+    
+    public VerifyEmailChangeBuilder change( final String change) {
         this.change = change;
         return this;
     }
+    
+    
 
     /**
      * value of change}
      * @return change
      */
-
-    public String getChange() {
+    
+    
+    public String getChange(){
         return this.change;
     }
 
@@ -51,7 +63,7 @@ public class VerifyEmailChangeBuilder implements Builder<VerifyEmailChange> {
         Objects.requireNonNull(change, VerifyEmailChange.class + ": change is missing");
         return new VerifyEmailChangeImpl(change);
     }
-
+    
     /**
      * builds VerifyEmailChange without checking for non-null required values
      * @return VerifyEmailChange
@@ -62,7 +74,7 @@ public class VerifyEmailChangeBuilder implements Builder<VerifyEmailChange> {
 
     /**
      * factory method for an instance of VerifyEmailChangeBuilder
-     * @return builder
+     * @return builder 
      */
     public static VerifyEmailChangeBuilder of() {
         return new VerifyEmailChangeBuilder();

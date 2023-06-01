@@ -1,19 +1,20 @@
-
 package com.commercetools.api.models.product_discount;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
 import com.commercetools.api.models.common.QueryPrice;
+import com.commercetools.api.models.product_discount.ProductDiscountMatchQueryImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * ProductDiscountMatchQuery
@@ -29,11 +30,15 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .price(priceBuilder -> priceBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = ProductDiscountMatchQueryImpl.class)
-public interface ProductDiscountMatchQuery {
+public interface ProductDiscountMatchQuery  {
+
 
     /**
      *  <p>ID of the specified Product.</p>
@@ -42,7 +47,6 @@ public interface ProductDiscountMatchQuery {
     @NotNull
     @JsonProperty("productId")
     public String getProductId();
-
     /**
      *  <p>ID of the specified Product Variant.</p>
      * @return variantId
@@ -50,7 +54,6 @@ public interface ProductDiscountMatchQuery {
     @NotNull
     @JsonProperty("variantId")
     public Integer getVariantId();
-
     /**
      *  <p>Controls which projected representation is applied for the query. Set to <code>true</code> for the <code>staged</code> Product Projection of the specified Product Variant, set to <code>false</code> for the <code>current</code> one.</p>
      * @return staged
@@ -58,7 +61,6 @@ public interface ProductDiscountMatchQuery {
     @NotNull
     @JsonProperty("staged")
     public Boolean getStaged();
-
     /**
      *  <p>Specified Price of the specified Product Variant.</p>
      * @return price
@@ -72,37 +74,42 @@ public interface ProductDiscountMatchQuery {
      *  <p>ID of the specified Product.</p>
      * @param productId value to be set
      */
-
+    
     public void setProductId(final String productId);
-
+    
+    
     /**
      *  <p>ID of the specified Product Variant.</p>
      * @param variantId value to be set
      */
-
+    
     public void setVariantId(final Integer variantId);
-
+    
+    
     /**
      *  <p>Controls which projected representation is applied for the query. Set to <code>true</code> for the <code>staged</code> Product Projection of the specified Product Variant, set to <code>false</code> for the <code>current</code> one.</p>
      * @param staged value to be set
      */
-
+    
     public void setStaged(final Boolean staged);
-
+    
+    
     /**
      *  <p>Specified Price of the specified Product Variant.</p>
      * @param price value to be set
      */
-
+    
     public void setPrice(final QueryPrice price);
+    
 
     /**
      * factory method
      * @return instance of ProductDiscountMatchQuery
      */
-    public static ProductDiscountMatchQuery of() {
+    public static ProductDiscountMatchQuery of(){
         return new ProductDiscountMatchQueryImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy ProductDiscountMatchQuery
@@ -143,7 +150,7 @@ public interface ProductDiscountMatchQuery {
     public static ProductDiscountMatchQueryBuilder builder() {
         return ProductDiscountMatchQueryBuilder.of();
     }
-
+    
     /**
      * create builder for ProductDiscountMatchQuery instance
      * @param template instance with prefilled values for the builder
@@ -152,6 +159,7 @@ public interface ProductDiscountMatchQuery {
     public static ProductDiscountMatchQueryBuilder builder(final ProductDiscountMatchQuery template) {
         return ProductDiscountMatchQueryBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -162,7 +170,7 @@ public interface ProductDiscountMatchQuery {
     default <T> T withProductDiscountMatchQuery(Function<ProductDiscountMatchQuery, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

@@ -1,19 +1,21 @@
-
 package com.commercetools.api.models.message;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
 import com.commercetools.api.models.common.Address;
+import com.commercetools.api.models.message.MessagePayload;
+import com.commercetools.api.models.message.BusinessUnitBillingAddressRemovedMessagePayloadImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Generated after a successful Remove Billing Address Identifier update action.</p>
@@ -26,9 +28,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .address(addressBuilder -> addressBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = BusinessUnitBillingAddressRemovedMessagePayloadImpl.class)
 public interface BusinessUnitBillingAddressRemovedMessagePayload extends MessagePayload {
 
@@ -50,24 +55,25 @@ public interface BusinessUnitBillingAddressRemovedMessagePayload extends Message
      *  <p>The address that was removed from the billing addresses of the Business Unit.</p>
      * @param address value to be set
      */
-
+    
     public void setAddress(final Address address);
+    
 
     /**
      * factory method
      * @return instance of BusinessUnitBillingAddressRemovedMessagePayload
      */
-    public static BusinessUnitBillingAddressRemovedMessagePayload of() {
+    public static BusinessUnitBillingAddressRemovedMessagePayload of(){
         return new BusinessUnitBillingAddressRemovedMessagePayloadImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy BusinessUnitBillingAddressRemovedMessagePayload
      * @param template instance to be copied
      * @return copy instance
      */
-    public static BusinessUnitBillingAddressRemovedMessagePayload of(
-            final BusinessUnitBillingAddressRemovedMessagePayload template) {
+    public static BusinessUnitBillingAddressRemovedMessagePayload of(final BusinessUnitBillingAddressRemovedMessagePayload template) {
         BusinessUnitBillingAddressRemovedMessagePayloadImpl instance = new BusinessUnitBillingAddressRemovedMessagePayloadImpl();
         instance.setAddress(template.getAddress());
         return instance;
@@ -79,8 +85,7 @@ public interface BusinessUnitBillingAddressRemovedMessagePayload extends Message
      * @return copy instance
      */
     @Nullable
-    public static BusinessUnitBillingAddressRemovedMessagePayload deepCopy(
-            @Nullable final BusinessUnitBillingAddressRemovedMessagePayload template) {
+    public static BusinessUnitBillingAddressRemovedMessagePayload deepCopy(@Nullable final BusinessUnitBillingAddressRemovedMessagePayload template) {
         if (template == null) {
             return null;
         }
@@ -96,16 +101,16 @@ public interface BusinessUnitBillingAddressRemovedMessagePayload extends Message
     public static BusinessUnitBillingAddressRemovedMessagePayloadBuilder builder() {
         return BusinessUnitBillingAddressRemovedMessagePayloadBuilder.of();
     }
-
+    
     /**
      * create builder for BusinessUnitBillingAddressRemovedMessagePayload instance
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static BusinessUnitBillingAddressRemovedMessagePayloadBuilder builder(
-            final BusinessUnitBillingAddressRemovedMessagePayload template) {
+    public static BusinessUnitBillingAddressRemovedMessagePayloadBuilder builder(final BusinessUnitBillingAddressRemovedMessagePayload template) {
         return BusinessUnitBillingAddressRemovedMessagePayloadBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -113,11 +118,10 @@ public interface BusinessUnitBillingAddressRemovedMessagePayload extends Message
      * @param helper function to map the object
      * @return mapped value
      */
-    default <T> T withBusinessUnitBillingAddressRemovedMessagePayload(
-            Function<BusinessUnitBillingAddressRemovedMessagePayload, T> helper) {
+    default <T> T withBusinessUnitBillingAddressRemovedMessagePayload(Function<BusinessUnitBillingAddressRemovedMessagePayload, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

@@ -1,17 +1,20 @@
-
 package com.commercetools.history.models.common;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
 
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
+import com.commercetools.history.models.common.AssetDimensionsImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * AssetDimensions
@@ -25,11 +28,15 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .h(1)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = AssetDimensionsImpl.class)
-public interface AssetDimensions {
+public interface AssetDimensions  {
+
 
     /**
      *
@@ -38,7 +45,6 @@ public interface AssetDimensions {
     @NotNull
     @JsonProperty("w")
     public Integer getW();
-
     /**
      *
      * @return h
@@ -51,23 +57,26 @@ public interface AssetDimensions {
      * set w
      * @param w value to be set
      */
-
+    
     public void setW(final Integer w);
-
+    
+    
     /**
      * set h
      * @param h value to be set
      */
-
+    
     public void setH(final Integer h);
+    
 
     /**
      * factory method
      * @return instance of AssetDimensions
      */
-    public static AssetDimensions of() {
+    public static AssetDimensions of(){
         return new AssetDimensionsImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy AssetDimensions
@@ -104,7 +113,7 @@ public interface AssetDimensions {
     public static AssetDimensionsBuilder builder() {
         return AssetDimensionsBuilder.of();
     }
-
+    
     /**
      * create builder for AssetDimensions instance
      * @param template instance with prefilled values for the builder
@@ -113,6 +122,7 @@ public interface AssetDimensions {
     public static AssetDimensionsBuilder builder(final AssetDimensions template) {
         return AssetDimensionsBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -123,7 +133,7 @@ public interface AssetDimensions {
     default <T> T withAssetDimensions(Function<AssetDimensions, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

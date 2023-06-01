@@ -1,17 +1,21 @@
-
 package com.commercetools.api.models.cart;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
+import com.commercetools.api.models.cart.CartUpdateAction;
+import java.lang.Object;
+import com.commercetools.api.models.cart.CartSetCustomLineItemCustomFieldActionImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * CartSetCustomLineItemCustomFieldAction
@@ -25,9 +29,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .name("{name}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = CartSetCustomLineItemCustomFieldActionImpl.class)
 public interface CartSetCustomLineItemCustomFieldAction extends CartUpdateAction {
 
@@ -43,7 +50,6 @@ public interface CartSetCustomLineItemCustomFieldAction extends CartUpdateAction
     @NotNull
     @JsonProperty("customLineItemId")
     public String getCustomLineItemId();
-
     /**
      *  <p>Name of the Custom Field.</p>
      * @return name
@@ -51,12 +57,11 @@ public interface CartSetCustomLineItemCustomFieldAction extends CartUpdateAction
     @NotNull
     @JsonProperty("name")
     public String getName();
-
     /**
      *  <p>If <code>value</code> is absent or <code>null</code>, this field will be removed if it exists. Removing a field that does not exist returns an InvalidOperation error. If <code>value</code> is provided, it is set for the field defined by <code>name</code>.</p>
      * @return value
      */
-
+    
     @JsonProperty("value")
     public Object getValue();
 
@@ -64,30 +69,34 @@ public interface CartSetCustomLineItemCustomFieldAction extends CartUpdateAction
      *  <p><code>id</code> of the CustomLineItem to update.</p>
      * @param customLineItemId value to be set
      */
-
+    
     public void setCustomLineItemId(final String customLineItemId);
-
+    
+    
     /**
      *  <p>Name of the Custom Field.</p>
      * @param name value to be set
      */
-
+    
     public void setName(final String name);
-
+    
+    
     /**
      *  <p>If <code>value</code> is absent or <code>null</code>, this field will be removed if it exists. Removing a field that does not exist returns an InvalidOperation error. If <code>value</code> is provided, it is set for the field defined by <code>name</code>.</p>
      * @param value value to be set
      */
-
+    
     public void setValue(final Object value);
+    
 
     /**
      * factory method
      * @return instance of CartSetCustomLineItemCustomFieldAction
      */
-    public static CartSetCustomLineItemCustomFieldAction of() {
+    public static CartSetCustomLineItemCustomFieldAction of(){
         return new CartSetCustomLineItemCustomFieldActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy CartSetCustomLineItemCustomFieldAction
@@ -108,8 +117,7 @@ public interface CartSetCustomLineItemCustomFieldAction extends CartUpdateAction
      * @return copy instance
      */
     @Nullable
-    public static CartSetCustomLineItemCustomFieldAction deepCopy(
-            @Nullable final CartSetCustomLineItemCustomFieldAction template) {
+    public static CartSetCustomLineItemCustomFieldAction deepCopy(@Nullable final CartSetCustomLineItemCustomFieldAction template) {
         if (template == null) {
             return null;
         }
@@ -127,16 +135,16 @@ public interface CartSetCustomLineItemCustomFieldAction extends CartUpdateAction
     public static CartSetCustomLineItemCustomFieldActionBuilder builder() {
         return CartSetCustomLineItemCustomFieldActionBuilder.of();
     }
-
+    
     /**
      * create builder for CartSetCustomLineItemCustomFieldAction instance
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static CartSetCustomLineItemCustomFieldActionBuilder builder(
-            final CartSetCustomLineItemCustomFieldAction template) {
+    public static CartSetCustomLineItemCustomFieldActionBuilder builder(final CartSetCustomLineItemCustomFieldAction template) {
         return CartSetCustomLineItemCustomFieldActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -144,15 +152,14 @@ public interface CartSetCustomLineItemCustomFieldAction extends CartUpdateAction
      * @param helper function to map the object
      * @return mapped value
      */
-    default <T> T withCartSetCustomLineItemCustomFieldAction(
-            Function<CartSetCustomLineItemCustomFieldAction, T> helper) {
+    default <T> T withCartSetCustomLineItemCustomFieldAction(Function<CartSetCustomLineItemCustomFieldAction, T> helper) {
         return helper.apply(this);
     }
-
     public static CartSetCustomLineItemCustomFieldAction ofUnset(final String name, final String customLineItemId) {
         return CartSetCustomLineItemCustomFieldActionBuilder.of().name(name).customLineItemId(customLineItemId).build();
     }
-
+    
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

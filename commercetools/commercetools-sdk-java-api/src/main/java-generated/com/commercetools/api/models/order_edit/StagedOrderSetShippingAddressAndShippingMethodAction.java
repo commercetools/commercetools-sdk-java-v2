@@ -1,22 +1,23 @@
-
 package com.commercetools.api.models.order_edit;
-
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.cart.ExternalTaxRateDraft;
 import com.commercetools.api.models.common.BaseAddress;
 import com.commercetools.api.models.order.StagedOrderUpdateAction;
 import com.commercetools.api.models.shipping_method.ShippingMethodResourceIdentifier;
+import com.commercetools.api.models.order_edit.StagedOrderSetShippingAddressAndShippingMethodActionImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * StagedOrderSetShippingAddressAndShippingMethodAction
@@ -29,9 +30,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .address(addressBuilder -> addressBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = StagedOrderSetShippingAddressAndShippingMethodActionImpl.class)
 public interface StagedOrderSetShippingAddressAndShippingMethodAction extends StagedOrderUpdateAction {
 
@@ -48,7 +52,6 @@ public interface StagedOrderSetShippingAddressAndShippingMethodAction extends St
     @Valid
     @JsonProperty("address")
     public BaseAddress getAddress();
-
     /**
      *  <p>ResourceIdentifier to a ShippingMethod.</p>
      * @return shippingMethod
@@ -56,7 +59,6 @@ public interface StagedOrderSetShippingAddressAndShippingMethodAction extends St
     @Valid
     @JsonProperty("shippingMethod")
     public ShippingMethodResourceIdentifier getShippingMethod();
-
     /**
      *  <p>Controls calculation of taxed prices for Line Items, Custom Line Items, and Shipping Methods as explained in Cart tax calculation.</p>
      * @return externalTaxRate
@@ -69,38 +71,41 @@ public interface StagedOrderSetShippingAddressAndShippingMethodAction extends St
      *  <p>Polymorphic base type that represents a postal address and contact details. Depending on the read or write action, it can be either Address or AddressDraft that only differ in the data type for the optional <code>custom</code> field.</p>
      * @param address value to be set
      */
-
+    
     public void setAddress(final BaseAddress address);
-
+    
+    
     /**
      *  <p>ResourceIdentifier to a ShippingMethod.</p>
      * @param shippingMethod value to be set
      */
-
+    
     public void setShippingMethod(final ShippingMethodResourceIdentifier shippingMethod);
-
+    
+    
     /**
      *  <p>Controls calculation of taxed prices for Line Items, Custom Line Items, and Shipping Methods as explained in Cart tax calculation.</p>
      * @param externalTaxRate value to be set
      */
-
+    
     public void setExternalTaxRate(final ExternalTaxRateDraft externalTaxRate);
+    
 
     /**
      * factory method
      * @return instance of StagedOrderSetShippingAddressAndShippingMethodAction
      */
-    public static StagedOrderSetShippingAddressAndShippingMethodAction of() {
+    public static StagedOrderSetShippingAddressAndShippingMethodAction of(){
         return new StagedOrderSetShippingAddressAndShippingMethodActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy StagedOrderSetShippingAddressAndShippingMethodAction
      * @param template instance to be copied
      * @return copy instance
      */
-    public static StagedOrderSetShippingAddressAndShippingMethodAction of(
-            final StagedOrderSetShippingAddressAndShippingMethodAction template) {
+    public static StagedOrderSetShippingAddressAndShippingMethodAction of(final StagedOrderSetShippingAddressAndShippingMethodAction template) {
         StagedOrderSetShippingAddressAndShippingMethodActionImpl instance = new StagedOrderSetShippingAddressAndShippingMethodActionImpl();
         instance.setAddress(template.getAddress());
         instance.setShippingMethod(template.getShippingMethod());
@@ -114,17 +119,14 @@ public interface StagedOrderSetShippingAddressAndShippingMethodAction extends St
      * @return copy instance
      */
     @Nullable
-    public static StagedOrderSetShippingAddressAndShippingMethodAction deepCopy(
-            @Nullable final StagedOrderSetShippingAddressAndShippingMethodAction template) {
+    public static StagedOrderSetShippingAddressAndShippingMethodAction deepCopy(@Nullable final StagedOrderSetShippingAddressAndShippingMethodAction template) {
         if (template == null) {
             return null;
         }
         StagedOrderSetShippingAddressAndShippingMethodActionImpl instance = new StagedOrderSetShippingAddressAndShippingMethodActionImpl();
         instance.setAddress(com.commercetools.api.models.common.BaseAddress.deepCopy(template.getAddress()));
-        instance.setShippingMethod(com.commercetools.api.models.shipping_method.ShippingMethodResourceIdentifier
-                .deepCopy(template.getShippingMethod()));
-        instance.setExternalTaxRate(
-            com.commercetools.api.models.cart.ExternalTaxRateDraft.deepCopy(template.getExternalTaxRate()));
+        instance.setShippingMethod(com.commercetools.api.models.shipping_method.ShippingMethodResourceIdentifier.deepCopy(template.getShippingMethod()));
+        instance.setExternalTaxRate(com.commercetools.api.models.cart.ExternalTaxRateDraft.deepCopy(template.getExternalTaxRate()));
         return instance;
     }
 
@@ -135,16 +137,16 @@ public interface StagedOrderSetShippingAddressAndShippingMethodAction extends St
     public static StagedOrderSetShippingAddressAndShippingMethodActionBuilder builder() {
         return StagedOrderSetShippingAddressAndShippingMethodActionBuilder.of();
     }
-
+    
     /**
      * create builder for StagedOrderSetShippingAddressAndShippingMethodAction instance
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static StagedOrderSetShippingAddressAndShippingMethodActionBuilder builder(
-            final StagedOrderSetShippingAddressAndShippingMethodAction template) {
+    public static StagedOrderSetShippingAddressAndShippingMethodActionBuilder builder(final StagedOrderSetShippingAddressAndShippingMethodAction template) {
         return StagedOrderSetShippingAddressAndShippingMethodActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -152,11 +154,10 @@ public interface StagedOrderSetShippingAddressAndShippingMethodAction extends St
      * @param helper function to map the object
      * @return mapped value
      */
-    default <T> T withStagedOrderSetShippingAddressAndShippingMethodAction(
-            Function<StagedOrderSetShippingAddressAndShippingMethodAction, T> helper) {
+    default <T> T withStagedOrderSetShippingAddressAndShippingMethodAction(Function<StagedOrderSetShippingAddressAndShippingMethodAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

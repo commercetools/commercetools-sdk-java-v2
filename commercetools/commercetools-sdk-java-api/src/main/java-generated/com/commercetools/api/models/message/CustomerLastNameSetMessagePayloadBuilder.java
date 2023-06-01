@@ -1,10 +1,11 @@
-
 package com.commercetools.api.models.message;
 
-import java.util.*;
-
+import com.commercetools.api.models.message.MessagePayload;
+import com.commercetools.api.models.message.CustomerLastNameSetMessagePayload;
 import javax.annotation.Nullable;
-
+import java.util.*;
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -17,32 +18,39 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     CustomerLastNameSetMessagePayload customerLastNameSetMessagePayload = CustomerLastNameSetMessagePayload.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class CustomerLastNameSetMessagePayloadBuilder implements Builder<CustomerLastNameSetMessagePayload> {
 
+    
     @Nullable
     private String lastName;
 
+    
     /**
      *  <p>The <code>lastName</code> that was set during the Set Last Name update action.</p>
      * @param lastName value to be set
      * @return Builder
      */
-
+    
     public CustomerLastNameSetMessagePayloadBuilder lastName(@Nullable final String lastName) {
         this.lastName = lastName;
         return this;
     }
+    
+    
 
     /**
      *  <p>The <code>lastName</code> that was set during the Set Last Name update action.</p>
      * @return lastName
      */
-
+    
     @Nullable
-    public String getLastName() {
+    public String getLastName(){
         return this.lastName;
     }
 
@@ -53,7 +61,7 @@ public class CustomerLastNameSetMessagePayloadBuilder implements Builder<Custome
     public CustomerLastNameSetMessagePayload build() {
         return new CustomerLastNameSetMessagePayloadImpl(lastName);
     }
-
+    
     /**
      * builds CustomerLastNameSetMessagePayload without checking for non-null required values
      * @return CustomerLastNameSetMessagePayload
@@ -64,7 +72,7 @@ public class CustomerLastNameSetMessagePayloadBuilder implements Builder<Custome
 
     /**
      * factory method for an instance of CustomerLastNameSetMessagePayloadBuilder
-     * @return builder
+     * @return builder 
      */
     public static CustomerLastNameSetMessagePayloadBuilder of() {
         return new CustomerLastNameSetMessagePayloadBuilder();

@@ -1,8 +1,11 @@
-
 package com.commercetools.api.models.message;
 
+import com.commercetools.api.models.message.OrderMessagePayload;
+import com.commercetools.api.models.message.OrderCustomLineItemQuantityChangedMessagePayload;
+import javax.annotation.Nullable;
 import java.util.*;
-
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -18,75 +21,95 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .oldQuantity(0.3)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
-public class OrderCustomLineItemQuantityChangedMessagePayloadBuilder
-        implements Builder<OrderCustomLineItemQuantityChangedMessagePayload> {
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
+public class OrderCustomLineItemQuantityChangedMessagePayloadBuilder implements Builder<OrderCustomLineItemQuantityChangedMessagePayload> {
 
+    
+    
     private String customLineItemId;
-
+    
+    
+    
     private Long quantity;
-
+    
+    
+    
     private Long oldQuantity;
 
+    
     /**
      *  <p>Unique identifier of the Custom Line Item.</p>
      * @param customLineItemId value to be set
      * @return Builder
      */
-
-    public OrderCustomLineItemQuantityChangedMessagePayloadBuilder customLineItemId(final String customLineItemId) {
+    
+    public OrderCustomLineItemQuantityChangedMessagePayloadBuilder customLineItemId( final String customLineItemId) {
         this.customLineItemId = customLineItemId;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Custom Line Item quantity after the Change Custom Line Item Quantity update action.</p>
      * @param quantity value to be set
      * @return Builder
      */
-
-    public OrderCustomLineItemQuantityChangedMessagePayloadBuilder quantity(final Long quantity) {
+    
+    public OrderCustomLineItemQuantityChangedMessagePayloadBuilder quantity( final Long quantity) {
         this.quantity = quantity;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Custom Line Item quantity before the Change Custom Line Item Quantity update action.</p>
      * @param oldQuantity value to be set
      * @return Builder
      */
-
-    public OrderCustomLineItemQuantityChangedMessagePayloadBuilder oldQuantity(final Long oldQuantity) {
+    
+    public OrderCustomLineItemQuantityChangedMessagePayloadBuilder oldQuantity( final Long oldQuantity) {
         this.oldQuantity = oldQuantity;
         return this;
     }
+    
+    
 
     /**
      *  <p>Unique identifier of the Custom Line Item.</p>
      * @return customLineItemId
      */
-
-    public String getCustomLineItemId() {
+    
+    
+    public String getCustomLineItemId(){
         return this.customLineItemId;
     }
-
+    
     /**
      *  <p>Custom Line Item quantity after the Change Custom Line Item Quantity update action.</p>
      * @return quantity
      */
-
-    public Long getQuantity() {
+    
+    
+    public Long getQuantity(){
         return this.quantity;
     }
-
+    
     /**
      *  <p>Custom Line Item quantity before the Change Custom Line Item Quantity update action.</p>
      * @return oldQuantity
      */
-
-    public Long getOldQuantity() {
+    
+    
+    public Long getOldQuantity(){
         return this.oldQuantity;
     }
 
@@ -95,15 +118,12 @@ public class OrderCustomLineItemQuantityChangedMessagePayloadBuilder
      * @return OrderCustomLineItemQuantityChangedMessagePayload
      */
     public OrderCustomLineItemQuantityChangedMessagePayload build() {
-        Objects.requireNonNull(customLineItemId,
-            OrderCustomLineItemQuantityChangedMessagePayload.class + ": customLineItemId is missing");
-        Objects.requireNonNull(quantity,
-            OrderCustomLineItemQuantityChangedMessagePayload.class + ": quantity is missing");
-        Objects.requireNonNull(oldQuantity,
-            OrderCustomLineItemQuantityChangedMessagePayload.class + ": oldQuantity is missing");
+        Objects.requireNonNull(customLineItemId, OrderCustomLineItemQuantityChangedMessagePayload.class + ": customLineItemId is missing");
+        Objects.requireNonNull(quantity, OrderCustomLineItemQuantityChangedMessagePayload.class + ": quantity is missing");
+        Objects.requireNonNull(oldQuantity, OrderCustomLineItemQuantityChangedMessagePayload.class + ": oldQuantity is missing");
         return new OrderCustomLineItemQuantityChangedMessagePayloadImpl(customLineItemId, quantity, oldQuantity);
     }
-
+    
     /**
      * builds OrderCustomLineItemQuantityChangedMessagePayload without checking for non-null required values
      * @return OrderCustomLineItemQuantityChangedMessagePayload
@@ -114,7 +134,7 @@ public class OrderCustomLineItemQuantityChangedMessagePayloadBuilder
 
     /**
      * factory method for an instance of OrderCustomLineItemQuantityChangedMessagePayloadBuilder
-     * @return builder
+     * @return builder 
      */
     public static OrderCustomLineItemQuantityChangedMessagePayloadBuilder of() {
         return new OrderCustomLineItemQuantityChangedMessagePayloadBuilder();
@@ -125,8 +145,7 @@ public class OrderCustomLineItemQuantityChangedMessagePayloadBuilder
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static OrderCustomLineItemQuantityChangedMessagePayloadBuilder of(
-            final OrderCustomLineItemQuantityChangedMessagePayload template) {
+    public static OrderCustomLineItemQuantityChangedMessagePayloadBuilder of(final OrderCustomLineItemQuantityChangedMessagePayload template) {
         OrderCustomLineItemQuantityChangedMessagePayloadBuilder builder = new OrderCustomLineItemQuantityChangedMessagePayloadBuilder();
         builder.customLineItemId = template.getCustomLineItemId();
         builder.quantity = template.getQuantity();

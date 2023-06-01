@@ -1,8 +1,11 @@
-
 package com.commercetools.api.models.discount_code;
 
+import com.commercetools.api.models.discount_code.DiscountCodeUpdateAction;
+import com.commercetools.api.models.discount_code.DiscountCodeChangeIsActiveAction;
+import javax.annotation.Nullable;
 import java.util.*;
-
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -16,30 +19,39 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .isActive(true)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class DiscountCodeChangeIsActiveActionBuilder implements Builder<DiscountCodeChangeIsActiveAction> {
 
+    
+    
     private Boolean isActive;
 
+    
     /**
      *  <p>New value to set. Set to <code>true</code> to activate the DiscountCode for all matching Discounts.</p>
      * @param isActive value to be set
      * @return Builder
      */
-
-    public DiscountCodeChangeIsActiveActionBuilder isActive(final Boolean isActive) {
+    
+    public DiscountCodeChangeIsActiveActionBuilder isActive( final Boolean isActive) {
         this.isActive = isActive;
         return this;
     }
+    
+    
 
     /**
      *  <p>New value to set. Set to <code>true</code> to activate the DiscountCode for all matching Discounts.</p>
      * @return isActive
      */
-
-    public Boolean getIsActive() {
+    
+    
+    public Boolean getIsActive(){
         return this.isActive;
     }
 
@@ -51,7 +63,7 @@ public class DiscountCodeChangeIsActiveActionBuilder implements Builder<Discount
         Objects.requireNonNull(isActive, DiscountCodeChangeIsActiveAction.class + ": isActive is missing");
         return new DiscountCodeChangeIsActiveActionImpl(isActive);
     }
-
+    
     /**
      * builds DiscountCodeChangeIsActiveAction without checking for non-null required values
      * @return DiscountCodeChangeIsActiveAction
@@ -62,7 +74,7 @@ public class DiscountCodeChangeIsActiveActionBuilder implements Builder<Discount
 
     /**
      * factory method for an instance of DiscountCodeChangeIsActiveActionBuilder
-     * @return builder
+     * @return builder 
      */
     public static DiscountCodeChangeIsActiveActionBuilder of() {
         return new DiscountCodeChangeIsActiveActionBuilder();

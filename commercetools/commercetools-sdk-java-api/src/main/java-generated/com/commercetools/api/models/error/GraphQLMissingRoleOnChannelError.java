@@ -1,20 +1,22 @@
-
 package com.commercetools.api.models.error;
-
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.channel.ChannelResourceIdentifier;
 import com.commercetools.api.models.channel.ChannelRoleEnum;
+import com.commercetools.api.models.error.GraphQLErrorObject;
+import com.commercetools.api.models.error.GraphQLMissingRoleOnChannelErrorImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Returned when one of the following states occur:</p>
@@ -36,9 +38,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .missingRole(ChannelRoleEnum.INVENTORY_SUPPLY)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = GraphQLMissingRoleOnChannelErrorImpl.class)
 public interface GraphQLMissingRoleOnChannelError extends GraphQLErrorObject {
 
@@ -54,7 +59,6 @@ public interface GraphQLMissingRoleOnChannelError extends GraphQLErrorObject {
     @NotNull
     @JsonProperty("code")
     public String getCode();
-
     /**
      *  <p>ResourceIdentifier to a given Channel.</p>
      * @return channel
@@ -62,7 +66,6 @@ public interface GraphQLMissingRoleOnChannelError extends GraphQLErrorObject {
     @Valid
     @JsonProperty("channel")
     public ChannelResourceIdentifier getChannel();
-
     /**
      *  <ul>
      *   <li><code>ProductDistribution</code> for Product Distribution Channels allowed for the Store. Also required for Standalone Prices.</li>
@@ -78,9 +81,10 @@ public interface GraphQLMissingRoleOnChannelError extends GraphQLErrorObject {
      *  <p>ResourceIdentifier to a given Channel.</p>
      * @param channel value to be set
      */
-
+    
     public void setChannel(final ChannelResourceIdentifier channel);
-
+    
+    
     /**
      *  <ul>
      *   <li><code>ProductDistribution</code> for Product Distribution Channels allowed for the Store. Also required for Standalone Prices.</li>
@@ -88,16 +92,18 @@ public interface GraphQLMissingRoleOnChannelError extends GraphQLErrorObject {
      *  </ul>
      * @param missingRole value to be set
      */
-
+    
     public void setMissingRole(final ChannelRoleEnum missingRole);
+    
 
     /**
      * factory method
      * @return instance of GraphQLMissingRoleOnChannelError
      */
-    public static GraphQLMissingRoleOnChannelError of() {
+    public static GraphQLMissingRoleOnChannelError of(){
         return new GraphQLMissingRoleOnChannelErrorImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy GraphQLMissingRoleOnChannelError
@@ -124,8 +130,7 @@ public interface GraphQLMissingRoleOnChannelError extends GraphQLErrorObject {
         }
         GraphQLMissingRoleOnChannelErrorImpl instance = new GraphQLMissingRoleOnChannelErrorImpl();
         Optional.ofNullable(template.values()).ifPresent(t -> t.forEach(instance::setValue));
-        instance.setChannel(
-            com.commercetools.api.models.channel.ChannelResourceIdentifier.deepCopy(template.getChannel()));
+        instance.setChannel(com.commercetools.api.models.channel.ChannelResourceIdentifier.deepCopy(template.getChannel()));
         instance.setMissingRole(template.getMissingRole());
         return instance;
     }
@@ -137,7 +142,7 @@ public interface GraphQLMissingRoleOnChannelError extends GraphQLErrorObject {
     public static GraphQLMissingRoleOnChannelErrorBuilder builder() {
         return GraphQLMissingRoleOnChannelErrorBuilder.of();
     }
-
+    
     /**
      * create builder for GraphQLMissingRoleOnChannelError instance
      * @param template instance with prefilled values for the builder
@@ -146,6 +151,7 @@ public interface GraphQLMissingRoleOnChannelError extends GraphQLErrorObject {
     public static GraphQLMissingRoleOnChannelErrorBuilder builder(final GraphQLMissingRoleOnChannelError template) {
         return GraphQLMissingRoleOnChannelErrorBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -156,7 +162,7 @@ public interface GraphQLMissingRoleOnChannelError extends GraphQLErrorObject {
     default <T> T withGraphQLMissingRoleOnChannelError(Function<GraphQLMissingRoleOnChannelError, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

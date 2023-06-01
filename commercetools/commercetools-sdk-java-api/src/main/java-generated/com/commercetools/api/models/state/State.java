@@ -1,24 +1,27 @@
-
 package com.commercetools.api.models.state;
-
-import java.time.*;
-import java.time.ZonedDateTime;
-import java.util.*;
-import java.util.function.Function;
-import java.util.stream.Collectors;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.common.BaseResource;
 import com.commercetools.api.models.common.CreatedBy;
 import com.commercetools.api.models.common.LastModifiedBy;
 import com.commercetools.api.models.common.LocalizedString;
+import com.commercetools.api.models.state.StateReference;
+import com.commercetools.api.models.state.StateRoleEnum;
+import com.commercetools.api.models.state.StateTypeEnum;
+import java.time.ZonedDateTime;
+import com.commercetools.api.models.state.StateImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * State
@@ -38,13 +41,15 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .builtIn(true)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = StateImpl.class)
-public interface State extends BaseResource, StateMixin, com.commercetools.api.models.DomainResource<State>,
-        com.commercetools.api.models.Referencable<State>, com.commercetools.api.models.ResourceIdentifiable<State>,
-        com.commercetools.api.models.WithKey {
+public interface State extends BaseResource, StateMixin, com.commercetools.api.models.DomainResource<State>, com.commercetools.api.models.Referencable<State>, com.commercetools.api.models.ResourceIdentifiable<State>, com.commercetools.api.models.WithKey {
+
 
     /**
      *  <p>Unique identifier of the State.</p>
@@ -53,7 +58,6 @@ public interface State extends BaseResource, StateMixin, com.commercetools.api.m
     @NotNull
     @JsonProperty("id")
     public String getId();
-
     /**
      *  <p>Current version of the State.</p>
      * @return version
@@ -61,7 +65,6 @@ public interface State extends BaseResource, StateMixin, com.commercetools.api.m
     @NotNull
     @JsonProperty("version")
     public Long getVersion();
-
     /**
      *  <p>Date and time (UTC) the State was initially created.</p>
      * @return createdAt
@@ -69,7 +72,6 @@ public interface State extends BaseResource, StateMixin, com.commercetools.api.m
     @NotNull
     @JsonProperty("createdAt")
     public ZonedDateTime getCreatedAt();
-
     /**
      *  <p>Date and time (UTC) the State was last updated.</p>
      * @return lastModifiedAt
@@ -77,7 +79,6 @@ public interface State extends BaseResource, StateMixin, com.commercetools.api.m
     @NotNull
     @JsonProperty("lastModifiedAt")
     public ZonedDateTime getLastModifiedAt();
-
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      * @return lastModifiedBy
@@ -85,7 +86,6 @@ public interface State extends BaseResource, StateMixin, com.commercetools.api.m
     @Valid
     @JsonProperty("lastModifiedBy")
     public LastModifiedBy getLastModifiedBy();
-
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      * @return createdBy
@@ -93,7 +93,6 @@ public interface State extends BaseResource, StateMixin, com.commercetools.api.m
     @Valid
     @JsonProperty("createdBy")
     public CreatedBy getCreatedBy();
-
     /**
      *  <p>User-defined unique identifier of the State.</p>
      * @return key
@@ -101,7 +100,6 @@ public interface State extends BaseResource, StateMixin, com.commercetools.api.m
     @NotNull
     @JsonProperty("key")
     public String getKey();
-
     /**
      *  <p>Indicates to which resource or object types the State is assigned to.</p>
      * @return type
@@ -109,7 +107,6 @@ public interface State extends BaseResource, StateMixin, com.commercetools.api.m
     @NotNull
     @JsonProperty("type")
     public StateTypeEnum getType();
-
     /**
      *  <p>Name of the State.</p>
      * @return name
@@ -117,7 +114,6 @@ public interface State extends BaseResource, StateMixin, com.commercetools.api.m
     @Valid
     @JsonProperty("name")
     public LocalizedString getName();
-
     /**
      *  <p>Description of the State.</p>
      * @return description
@@ -125,7 +121,6 @@ public interface State extends BaseResource, StateMixin, com.commercetools.api.m
     @Valid
     @JsonProperty("description")
     public LocalizedString getDescription();
-
     /**
      *  <p><code>true</code> for an initial State, the first State in a workflow.</p>
      * @return initial
@@ -133,7 +128,6 @@ public interface State extends BaseResource, StateMixin, com.commercetools.api.m
     @NotNull
     @JsonProperty("initial")
     public Boolean getInitial();
-
     /**
      *  <p><code>true</code> for States that are an integral part of the Project. Those States cannot be deleted and their <code>key</code> cannot be changed.</p>
      * @return builtIn
@@ -141,15 +135,13 @@ public interface State extends BaseResource, StateMixin, com.commercetools.api.m
     @NotNull
     @JsonProperty("builtIn")
     public Boolean getBuiltIn();
-
     /**
      *  <p>Roles the State can fulfill for Reviews and Line Items.</p>
      * @return roles
      */
-
+    
     @JsonProperty("roles")
     public List<StateRoleEnum> getRoles();
-
     /**
      *  <ul>
      *   <li>list of States of the same <code>type</code> that the current State can be transitioned to. For example, when the current State is the <em>Initial</em> State of StateType <code>OrderState</code> and this list contains the reference to the <em>Shipped</em> <code>OrderState</code>, the transition <em>Initial</em> -&gt; <em>Shipped</em> is allowed.</li>
@@ -166,101 +158,112 @@ public interface State extends BaseResource, StateMixin, com.commercetools.api.m
      *  <p>Unique identifier of the State.</p>
      * @param id value to be set
      */
-
+    
     public void setId(final String id);
-
+    
+    
     /**
      *  <p>Current version of the State.</p>
      * @param version value to be set
      */
-
+    
     public void setVersion(final Long version);
-
+    
+    
     /**
      *  <p>Date and time (UTC) the State was initially created.</p>
      * @param createdAt value to be set
      */
-
+    
     public void setCreatedAt(final ZonedDateTime createdAt);
-
+    
+    
     /**
      *  <p>Date and time (UTC) the State was last updated.</p>
      * @param lastModifiedAt value to be set
      */
-
+    
     public void setLastModifiedAt(final ZonedDateTime lastModifiedAt);
-
+    
+    
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      * @param lastModifiedBy value to be set
      */
-
+    
     public void setLastModifiedBy(final LastModifiedBy lastModifiedBy);
-
+    
+    
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      * @param createdBy value to be set
      */
-
+    
     public void setCreatedBy(final CreatedBy createdBy);
-
+    
+    
     /**
      *  <p>User-defined unique identifier of the State.</p>
      * @param key value to be set
      */
-
+    
     public void setKey(final String key);
-
+    
+    
     /**
      *  <p>Indicates to which resource or object types the State is assigned to.</p>
      * @param type value to be set
      */
-
+    
     public void setType(final StateTypeEnum type);
-
+    
+    
     /**
      *  <p>Name of the State.</p>
      * @param name value to be set
      */
-
+    
     public void setName(final LocalizedString name);
-
+    
+    
     /**
      *  <p>Description of the State.</p>
      * @param description value to be set
      */
-
+    
     public void setDescription(final LocalizedString description);
-
+    
+    
     /**
      *  <p><code>true</code> for an initial State, the first State in a workflow.</p>
      * @param initial value to be set
      */
-
+    
     public void setInitial(final Boolean initial);
-
+    
+    
     /**
      *  <p><code>true</code> for States that are an integral part of the Project. Those States cannot be deleted and their <code>key</code> cannot be changed.</p>
      * @param builtIn value to be set
      */
-
+    
     public void setBuiltIn(final Boolean builtIn);
-
+    
+    
     /**
      *  <p>Roles the State can fulfill for Reviews and Line Items.</p>
      * @param roles values to be set
      */
-
+    
     @JsonIgnore
-    public void setRoles(final StateRoleEnum... roles);
-
+    public void setRoles(final StateRoleEnum ...roles);
     /**
      *  <p>Roles the State can fulfill for Reviews and Line Items.</p>
      * @param roles values to be set
      */
-
+    
     public void setRoles(final List<StateRoleEnum> roles);
-
+    
     /**
      *  <ul>
      *   <li>list of States of the same <code>type</code> that the current State can be transitioned to. For example, when the current State is the <em>Initial</em> State of StateType <code>OrderState</code> and this list contains the reference to the <em>Shipped</em> <code>OrderState</code>, the transition <em>Initial</em> -&gt; <em>Shipped</em> is allowed.</li>
@@ -269,10 +272,9 @@ public interface State extends BaseResource, StateMixin, com.commercetools.api.m
      *  </ul>
      * @param transitions values to be set
      */
-
+    
     @JsonIgnore
-    public void setTransitions(final StateReference... transitions);
-
+    public void setTransitions(final StateReference ...transitions);
     /**
      *  <ul>
      *   <li>list of States of the same <code>type</code> that the current State can be transitioned to. For example, when the current State is the <em>Initial</em> State of StateType <code>OrderState</code> and this list contains the reference to the <em>Shipped</em> <code>OrderState</code>, the transition <em>Initial</em> -&gt; <em>Shipped</em> is allowed.</li>
@@ -281,16 +283,17 @@ public interface State extends BaseResource, StateMixin, com.commercetools.api.m
      *  </ul>
      * @param transitions values to be set
      */
-
+    
     public void setTransitions(final List<StateReference> transitions);
 
     /**
      * factory method
      * @return instance of State
      */
-    public static State of() {
+    public static State of(){
         return new StateImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy State
@@ -331,21 +334,19 @@ public interface State extends BaseResource, StateMixin, com.commercetools.api.m
         instance.setVersion(template.getVersion());
         instance.setCreatedAt(template.getCreatedAt());
         instance.setLastModifiedAt(template.getLastModifiedAt());
-        instance.setLastModifiedBy(
-            com.commercetools.api.models.common.LastModifiedBy.deepCopy(template.getLastModifiedBy()));
+        instance.setLastModifiedBy(com.commercetools.api.models.common.LastModifiedBy.deepCopy(template.getLastModifiedBy()));
         instance.setCreatedBy(com.commercetools.api.models.common.CreatedBy.deepCopy(template.getCreatedBy()));
         instance.setKey(template.getKey());
         instance.setType(template.getType());
         instance.setName(com.commercetools.api.models.common.LocalizedString.deepCopy(template.getName()));
-        instance.setDescription(
-            com.commercetools.api.models.common.LocalizedString.deepCopy(template.getDescription()));
+        instance.setDescription(com.commercetools.api.models.common.LocalizedString.deepCopy(template.getDescription()));
         instance.setInitial(template.getInitial());
         instance.setBuiltIn(template.getBuiltIn());
-        instance.setRoles(Optional.ofNullable(template.getRoles()).map(ArrayList::new).orElse(null));
+        instance.setRoles(Optional.ofNullable(template.getRoles())
+                .map(ArrayList::new)
+                .orElse(null));
         instance.setTransitions(Optional.ofNullable(template.getTransitions())
-                .map(t -> t.stream()
-                        .map(com.commercetools.api.models.state.StateReference::deepCopy)
-                        .collect(Collectors.toList()))
+                .map(t -> t.stream().map(com.commercetools.api.models.state.StateReference::deepCopy).collect(Collectors.toList()))
                 .orElse(null));
         return instance;
     }
@@ -357,7 +358,7 @@ public interface State extends BaseResource, StateMixin, com.commercetools.api.m
     public static StateBuilder builder() {
         return StateBuilder.of();
     }
-
+    
     /**
      * create builder for State instance
      * @param template instance with prefilled values for the builder
@@ -366,6 +367,7 @@ public interface State extends BaseResource, StateMixin, com.commercetools.api.m
     public static StateBuilder builder(final State template) {
         return StateBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -376,11 +378,11 @@ public interface State extends BaseResource, StateMixin, com.commercetools.api.m
     default <T> T withState(Function<State, T> helper) {
         return helper.apply(this);
     }
-
     public static com.commercetools.api.models.common.ReferenceTypeId referenceTypeId() {
         return com.commercetools.api.models.common.ReferenceTypeId.STATE;
     }
-
+    
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

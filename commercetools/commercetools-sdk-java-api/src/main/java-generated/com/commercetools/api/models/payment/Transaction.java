@@ -1,21 +1,24 @@
-
 package com.commercetools.api.models.payment;
 
-import java.time.*;
-import java.time.ZonedDateTime;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
 import com.commercetools.api.models.common.CentPrecisionMoney;
+import com.commercetools.api.models.payment.TransactionState;
+import com.commercetools.api.models.payment.TransactionType;
 import com.commercetools.api.models.type.CustomFields;
+import java.time.ZonedDateTime;
+import com.commercetools.api.models.payment.TransactionImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Represents a financial transaction typically created as a result of a notification from the payment service.</p>
@@ -31,11 +34,15 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .state(TransactionState.INITIAL)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = TransactionImpl.class)
 public interface Transaction extends com.commercetools.api.models.Customizable<Transaction> {
+
 
     /**
      *  <p>Unique identifier of the Transaction.</p>
@@ -44,15 +51,13 @@ public interface Transaction extends com.commercetools.api.models.Customizable<T
     @NotNull
     @JsonProperty("id")
     public String getId();
-
     /**
      *  <p>Date and time (UTC) the Transaction took place.</p>
      * @return timestamp
      */
-
+    
     @JsonProperty("timestamp")
     public ZonedDateTime getTimestamp();
-
     /**
      *  <p>Type of the Transaction. For example, <code>Authorization</code>.</p>
      * @return type
@@ -60,7 +65,6 @@ public interface Transaction extends com.commercetools.api.models.Customizable<T
     @NotNull
     @JsonProperty("type")
     public TransactionType getType();
-
     /**
      *  <p>Money value of the Transaction.</p>
      * @return amount
@@ -69,15 +73,13 @@ public interface Transaction extends com.commercetools.api.models.Customizable<T
     @Valid
     @JsonProperty("amount")
     public CentPrecisionMoney getAmount();
-
     /**
      *  <p>Identifier used by the interface that manages the Transaction (usually the PSP). If a matching interaction was logged in the <code>interfaceInteractions</code> array, the corresponding interaction can be found with this ID.</p>
      * @return interactionId
      */
-
+    
     @JsonProperty("interactionId")
     public String getInteractionId();
-
     /**
      *  <p>State of the Transaction.</p>
      * @return state
@@ -85,7 +87,6 @@ public interface Transaction extends com.commercetools.api.models.Customizable<T
     @NotNull
     @JsonProperty("state")
     public TransactionState getState();
-
     /**
      *  <p>Custom Fields defined for the Transaction.</p>
      * @return custom
@@ -98,58 +99,66 @@ public interface Transaction extends com.commercetools.api.models.Customizable<T
      *  <p>Unique identifier of the Transaction.</p>
      * @param id value to be set
      */
-
+    
     public void setId(final String id);
-
+    
+    
     /**
      *  <p>Date and time (UTC) the Transaction took place.</p>
      * @param timestamp value to be set
      */
-
+    
     public void setTimestamp(final ZonedDateTime timestamp);
-
+    
+    
     /**
      *  <p>Type of the Transaction. For example, <code>Authorization</code>.</p>
      * @param type value to be set
      */
-
+    
     public void setType(final TransactionType type);
-
+    
+    
     /**
      *  <p>Money value of the Transaction.</p>
      * @param amount value to be set
      */
-
+    
     public void setAmount(final CentPrecisionMoney amount);
-
+    
+    
     /**
      *  <p>Identifier used by the interface that manages the Transaction (usually the PSP). If a matching interaction was logged in the <code>interfaceInteractions</code> array, the corresponding interaction can be found with this ID.</p>
      * @param interactionId value to be set
      */
-
+    
     public void setInteractionId(final String interactionId);
-
+    
+    
     /**
      *  <p>State of the Transaction.</p>
      * @param state value to be set
      */
-
+    
     public void setState(final TransactionState state);
-
+    
+    
     /**
      *  <p>Custom Fields defined for the Transaction.</p>
      * @param custom value to be set
      */
-
+    
     public void setCustom(final CustomFields custom);
+    
 
     /**
      * factory method
      * @return instance of Transaction
      */
-    public static Transaction of() {
+    public static Transaction of(){
         return new TransactionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy Transaction
@@ -196,7 +205,7 @@ public interface Transaction extends com.commercetools.api.models.Customizable<T
     public static TransactionBuilder builder() {
         return TransactionBuilder.of();
     }
-
+    
     /**
      * create builder for Transaction instance
      * @param template instance with prefilled values for the builder
@@ -205,6 +214,7 @@ public interface Transaction extends com.commercetools.api.models.Customizable<T
     public static TransactionBuilder builder(final Transaction template) {
         return TransactionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -215,7 +225,7 @@ public interface Transaction extends com.commercetools.api.models.Customizable<T
     default <T> T withTransaction(Function<Transaction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

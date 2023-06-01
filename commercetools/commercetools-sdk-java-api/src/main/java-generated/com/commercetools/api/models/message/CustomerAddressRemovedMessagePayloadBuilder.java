@@ -1,9 +1,12 @@
-
 package com.commercetools.api.models.message;
 
+import com.commercetools.api.models.common.Address;
+import com.commercetools.api.models.message.MessagePayload;
+import com.commercetools.api.models.message.CustomerAddressRemovedMessagePayload;
+import javax.annotation.Nullable;
 import java.util.*;
 import java.util.function.Function;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -17,55 +20,61 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .address(addressBuilder -> addressBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class CustomerAddressRemovedMessagePayloadBuilder implements Builder<CustomerAddressRemovedMessagePayload> {
 
+    
+    
     private com.commercetools.api.models.common.Address address;
 
+    
     /**
      *  <p>Address that was removed during the Remove Address update action.</p>
      * @param builder function to build the address value
      * @return Builder
      */
-
-    public CustomerAddressRemovedMessagePayloadBuilder address(
-            Function<com.commercetools.api.models.common.AddressBuilder, com.commercetools.api.models.common.AddressBuilder> builder) {
+    
+    public CustomerAddressRemovedMessagePayloadBuilder address(Function<com.commercetools.api.models.common.AddressBuilder, com.commercetools.api.models.common.AddressBuilder> builder) {
         this.address = builder.apply(com.commercetools.api.models.common.AddressBuilder.of()).build();
         return this;
     }
-
+    
     /**
      *  <p>Address that was removed during the Remove Address update action.</p>
      * @param builder function to build the address value
      * @return Builder
      */
-
-    public CustomerAddressRemovedMessagePayloadBuilder withAddress(
-            Function<com.commercetools.api.models.common.AddressBuilder, com.commercetools.api.models.common.Address> builder) {
+    
+    public CustomerAddressRemovedMessagePayloadBuilder withAddress(Function<com.commercetools.api.models.common.AddressBuilder, com.commercetools.api.models.common.Address> builder) {
         this.address = builder.apply(com.commercetools.api.models.common.AddressBuilder.of());
         return this;
     }
-
+                    
     /**
      *  <p>Address that was removed during the Remove Address update action.</p>
      * @param address value to be set
      * @return Builder
      */
-
-    public CustomerAddressRemovedMessagePayloadBuilder address(
-            final com.commercetools.api.models.common.Address address) {
+    
+    public CustomerAddressRemovedMessagePayloadBuilder address( final com.commercetools.api.models.common.Address address) {
         this.address = address;
         return this;
     }
+    
+    
 
     /**
      *  <p>Address that was removed during the Remove Address update action.</p>
      * @return address
      */
-
-    public com.commercetools.api.models.common.Address getAddress() {
+    
+    
+    public com.commercetools.api.models.common.Address getAddress(){
         return this.address;
     }
 
@@ -77,7 +86,7 @@ public class CustomerAddressRemovedMessagePayloadBuilder implements Builder<Cust
         Objects.requireNonNull(address, CustomerAddressRemovedMessagePayload.class + ": address is missing");
         return new CustomerAddressRemovedMessagePayloadImpl(address);
     }
-
+    
     /**
      * builds CustomerAddressRemovedMessagePayload without checking for non-null required values
      * @return CustomerAddressRemovedMessagePayload
@@ -88,7 +97,7 @@ public class CustomerAddressRemovedMessagePayloadBuilder implements Builder<Cust
 
     /**
      * factory method for an instance of CustomerAddressRemovedMessagePayloadBuilder
-     * @return builder
+     * @return builder 
      */
     public static CustomerAddressRemovedMessagePayloadBuilder of() {
         return new CustomerAddressRemovedMessagePayloadBuilder();

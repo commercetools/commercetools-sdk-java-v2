@@ -1,17 +1,21 @@
-
 package com.commercetools.api.models.customer;
 
-import java.time.*;
+import com.commercetools.api.models.customer.CustomerUpdateAction;
 import java.time.LocalDate;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
+import com.commercetools.api.models.customer.CustomerSetDateOfBirthActionImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Setting the date of birth of the Customer produces the CustomerDateOfBirthSet Message.</p>
@@ -23,9 +27,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     CustomerSetDateOfBirthAction customerSetDateOfBirthAction = CustomerSetDateOfBirthAction.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = CustomerSetDateOfBirthActionImpl.class)
 public interface CustomerSetDateOfBirthAction extends CustomerUpdateAction {
 
@@ -38,7 +45,7 @@ public interface CustomerSetDateOfBirthAction extends CustomerUpdateAction {
      *  <p>Value to set. If empty, any existing value is removed.</p>
      * @return dateOfBirth
      */
-
+    
     @JsonProperty("dateOfBirth")
     public LocalDate getDateOfBirth();
 
@@ -46,16 +53,18 @@ public interface CustomerSetDateOfBirthAction extends CustomerUpdateAction {
      *  <p>Value to set. If empty, any existing value is removed.</p>
      * @param dateOfBirth value to be set
      */
-
+    
     public void setDateOfBirth(final LocalDate dateOfBirth);
+    
 
     /**
      * factory method
      * @return instance of CustomerSetDateOfBirthAction
      */
-    public static CustomerSetDateOfBirthAction of() {
+    public static CustomerSetDateOfBirthAction of(){
         return new CustomerSetDateOfBirthActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy CustomerSetDateOfBirthAction
@@ -90,7 +99,7 @@ public interface CustomerSetDateOfBirthAction extends CustomerUpdateAction {
     public static CustomerSetDateOfBirthActionBuilder builder() {
         return CustomerSetDateOfBirthActionBuilder.of();
     }
-
+    
     /**
      * create builder for CustomerSetDateOfBirthAction instance
      * @param template instance with prefilled values for the builder
@@ -99,6 +108,7 @@ public interface CustomerSetDateOfBirthAction extends CustomerUpdateAction {
     public static CustomerSetDateOfBirthActionBuilder builder(final CustomerSetDateOfBirthAction template) {
         return CustomerSetDateOfBirthActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -109,7 +119,7 @@ public interface CustomerSetDateOfBirthAction extends CustomerUpdateAction {
     default <T> T withCustomerSetDateOfBirthAction(Function<CustomerSetDateOfBirthAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

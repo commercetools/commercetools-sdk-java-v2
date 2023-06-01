@@ -1,19 +1,21 @@
-
 package com.commercetools.history.models.change;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
+import com.commercetools.history.models.change.Change;
 import com.commercetools.history.models.common.LocalizedString;
+import com.commercetools.history.models.change.ChangeLocalizedEnumValueLabelChangeImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * ChangeLocalizedEnumValueLabelChange
@@ -31,9 +33,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .nextValue(nextValueBuilder -> nextValueBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = ChangeLocalizedEnumValueLabelChangeImpl.class)
 public interface ChangeLocalizedEnumValueLabelChange extends Change {
 
@@ -49,7 +54,6 @@ public interface ChangeLocalizedEnumValueLabelChange extends Change {
     @NotNull
     @JsonProperty("type")
     public String getType();
-
     /**
      *  <p>Update action for <code>changeLocalizedEnumValueLabel</code> on types</p>
      * @return change
@@ -57,7 +61,6 @@ public interface ChangeLocalizedEnumValueLabelChange extends Change {
     @NotNull
     @JsonProperty("change")
     public String getChange();
-
     /**
      *  <p>The name of the field definition updated.</p>
      * @return fieldName
@@ -65,7 +68,6 @@ public interface ChangeLocalizedEnumValueLabelChange extends Change {
     @NotNull
     @JsonProperty("fieldName")
     public String getFieldName();
-
     /**
      *  <p>The name of the attribute updated.</p>
      * @return attributeName
@@ -73,7 +75,6 @@ public interface ChangeLocalizedEnumValueLabelChange extends Change {
     @NotNull
     @JsonProperty("attributeName")
     public String getAttributeName();
-
     /**
      *  <p>Key of the values that was updated</p>
      * @return valueKey
@@ -81,7 +82,6 @@ public interface ChangeLocalizedEnumValueLabelChange extends Change {
     @NotNull
     @JsonProperty("valueKey")
     public String getValueKey();
-
     /**
      *
      * @return previousValue
@@ -90,7 +90,6 @@ public interface ChangeLocalizedEnumValueLabelChange extends Change {
     @Valid
     @JsonProperty("previousValue")
     public LocalizedString getPreviousValue();
-
     /**
      *
      * @return nextValue
@@ -104,51 +103,58 @@ public interface ChangeLocalizedEnumValueLabelChange extends Change {
      *  <p>Update action for <code>changeLocalizedEnumValueLabel</code> on types</p>
      * @param change value to be set
      */
-
+    
     public void setChange(final String change);
-
+    
+    
     /**
      *  <p>The name of the field definition updated.</p>
      * @param fieldName value to be set
      */
-
+    
     public void setFieldName(final String fieldName);
-
+    
+    
     /**
      *  <p>The name of the attribute updated.</p>
      * @param attributeName value to be set
      */
-
+    
     public void setAttributeName(final String attributeName);
-
+    
+    
     /**
      *  <p>Key of the values that was updated</p>
      * @param valueKey value to be set
      */
-
+    
     public void setValueKey(final String valueKey);
-
+    
+    
     /**
      * set previousValue
      * @param previousValue value to be set
      */
-
+    
     public void setPreviousValue(final LocalizedString previousValue);
-
+    
+    
     /**
      * set nextValue
      * @param nextValue value to be set
      */
-
+    
     public void setNextValue(final LocalizedString nextValue);
+    
 
     /**
      * factory method
      * @return instance of ChangeLocalizedEnumValueLabelChange
      */
-    public static ChangeLocalizedEnumValueLabelChange of() {
+    public static ChangeLocalizedEnumValueLabelChange of(){
         return new ChangeLocalizedEnumValueLabelChangeImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy ChangeLocalizedEnumValueLabelChange
@@ -172,8 +178,7 @@ public interface ChangeLocalizedEnumValueLabelChange extends Change {
      * @return copy instance
      */
     @Nullable
-    public static ChangeLocalizedEnumValueLabelChange deepCopy(
-            @Nullable final ChangeLocalizedEnumValueLabelChange template) {
+    public static ChangeLocalizedEnumValueLabelChange deepCopy(@Nullable final ChangeLocalizedEnumValueLabelChange template) {
         if (template == null) {
             return null;
         }
@@ -182,10 +187,8 @@ public interface ChangeLocalizedEnumValueLabelChange extends Change {
         instance.setFieldName(template.getFieldName());
         instance.setAttributeName(template.getAttributeName());
         instance.setValueKey(template.getValueKey());
-        instance.setPreviousValue(
-            com.commercetools.history.models.common.LocalizedString.deepCopy(template.getPreviousValue()));
-        instance.setNextValue(
-            com.commercetools.history.models.common.LocalizedString.deepCopy(template.getNextValue()));
+        instance.setPreviousValue(com.commercetools.history.models.common.LocalizedString.deepCopy(template.getPreviousValue()));
+        instance.setNextValue(com.commercetools.history.models.common.LocalizedString.deepCopy(template.getNextValue()));
         return instance;
     }
 
@@ -196,16 +199,16 @@ public interface ChangeLocalizedEnumValueLabelChange extends Change {
     public static ChangeLocalizedEnumValueLabelChangeBuilder builder() {
         return ChangeLocalizedEnumValueLabelChangeBuilder.of();
     }
-
+    
     /**
      * create builder for ChangeLocalizedEnumValueLabelChange instance
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static ChangeLocalizedEnumValueLabelChangeBuilder builder(
-            final ChangeLocalizedEnumValueLabelChange template) {
+    public static ChangeLocalizedEnumValueLabelChangeBuilder builder(final ChangeLocalizedEnumValueLabelChange template) {
         return ChangeLocalizedEnumValueLabelChangeBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -216,7 +219,7 @@ public interface ChangeLocalizedEnumValueLabelChange extends Change {
     default <T> T withChangeLocalizedEnumValueLabelChange(Function<ChangeLocalizedEnumValueLabelChange, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

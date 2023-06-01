@@ -1,38 +1,39 @@
-
 package com.commercetools.api.models.cart;
-
-import java.util.Arrays;
-import java.util.Optional;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-
+import java.lang.String;
+import java.util.Arrays;
+import java.util.Optional;
 import io.vrap.rmf.base.client.JsonEnum;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
  *  <p>Determines how monetary values are rounded.</p>
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public interface RoundingMode extends JsonEnum {
 
     /**
     	<p><a href="https://en.wikipedia.org/wiki/Rounding#Round_half_to_even">Round half to even</a></p>
     	<p>Default mode for a new Cart.</p>
-
+    	
     */
     RoundingMode HALF_EVEN = RoundingModeEnum.HALF_EVEN;
     /**
     	<p><a href="https://en.wikipedia.org/wiki/Rounding#Round_half_up">Round half up</a></p>
-
+    	
     */
     RoundingMode HALF_UP = RoundingModeEnum.HALF_UP;
     /**
     	<p><a href="https://en.wikipedia.org/wiki/Rounding#Round_half_down">Round half down</a></p>
-
+    	
     */
     RoundingMode HALF_DOWN = RoundingModeEnum.HALF_DOWN;
-
+    
     /**
      * possible values of RoundingMode
      */
@@ -41,12 +42,12 @@ public interface RoundingMode extends JsonEnum {
          * HalfEven
          */
         HALF_EVEN("HalfEven"),
-
+        
         /**
          * HalfUp
          */
         HALF_UP("HalfUp"),
-
+        
         /**
          * HalfDown
          */
@@ -103,7 +104,7 @@ public interface RoundingMode extends JsonEnum {
             public String name() {
                 return value.toUpperCase();
             }
-
+            
             public String toString() {
                 return value;
             }
@@ -118,7 +119,7 @@ public interface RoundingMode extends JsonEnum {
     public static Optional<RoundingMode> findEnumViaJsonName(String jsonName) {
         return Arrays.stream(values()).filter(t -> t.getJsonName().equals(jsonName)).findFirst();
     }
-
+    
     /**
      * possible enum values
      * @return array of possible enum values
@@ -126,5 +127,5 @@ public interface RoundingMode extends JsonEnum {
     public static RoundingMode[] values() {
         return RoundingModeEnum.values();
     }
-
+    
 }

@@ -1,23 +1,24 @@
-
 package com.commercetools.history.models.change_history;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-import java.util.stream.Collectors;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
 import com.commercetools.history.models.change.Change;
+import com.commercetools.history.models.change_history.ModifiedBy;
 import com.commercetools.history.models.common.KeyReference;
 import com.commercetools.history.models.common.Reference;
 import com.commercetools.history.models.label.Label;
+import com.commercetools.history.models.change_history.RecordImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>A Record captures the differences in a resource between one version and the next. (Recall that the version number is not always incremented by one; see Optimistic Concurrency Control.)</p>
@@ -40,11 +41,15 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .withoutChanges(true)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = RecordImpl.class)
-public interface Record {
+public interface Record  {
+
 
     /**
      *  <p>Version of the resource after the change.</p>
@@ -53,7 +58,6 @@ public interface Record {
     @NotNull
     @JsonProperty("version")
     public Integer getVersion();
-
     /**
      *  <p>Version of the resource before the change.</p>
      * @return previousVersion
@@ -61,7 +65,6 @@ public interface Record {
     @NotNull
     @JsonProperty("previousVersion")
     public Integer getPreviousVersion();
-
     /**
      *  <p>Type of the change (creation, update or deletion).</p>
      * @return type
@@ -69,7 +72,6 @@ public interface Record {
     @NotNull
     @JsonProperty("type")
     public String getType();
-
     /**
      *  <p>Information about the user or the API client who performed the change.</p>
      * @return modifiedBy
@@ -78,7 +80,6 @@ public interface Record {
     @Valid
     @JsonProperty("modifiedBy")
     public ModifiedBy getModifiedBy();
-
     /**
      *  <p>Date and time when the change was made.</p>
      * @return modifiedAt
@@ -86,7 +87,6 @@ public interface Record {
     @NotNull
     @JsonProperty("modifiedAt")
     public String getModifiedAt();
-
     /**
      *  <p>Information that describes the resource after the change.</p>
      * @return label
@@ -95,7 +95,6 @@ public interface Record {
     @Valid
     @JsonProperty("label")
     public Label getLabel();
-
     /**
      *  <p>Information that describes the resource before the change.</p>
      * @return previousLabel
@@ -104,7 +103,6 @@ public interface Record {
     @Valid
     @JsonProperty("previousLabel")
     public Label getPreviousLabel();
-
     /**
      *  <p>Shows the differences in the resource between <code>previousVersion</code> and <code>version</code>. The value is not identical to the actual array of update actions sent and is not limited to update actions (see, for example, Optimistic Concurrency Control).</p>
      * @return changes
@@ -113,7 +111,6 @@ public interface Record {
     @Valid
     @JsonProperty("changes")
     public List<Change> getChanges();
-
     /**
      *  <p>Reference to the changed resource.</p>
      * @return resource
@@ -122,7 +119,6 @@ public interface Record {
     @Valid
     @JsonProperty("resource")
     public Reference getResource();
-
     /**
      *  <p>References to the Stores attached to the Change.</p>
      * @return stores
@@ -131,7 +127,6 @@ public interface Record {
     @Valid
     @JsonProperty("stores")
     public List<KeyReference> getStores();
-
     /**
      *  <p><code>true</code> if no change was detected. The version number of the resource can be increased even without any change in the resource.</p>
      * @return withoutChanges
@@ -144,102 +139,110 @@ public interface Record {
      *  <p>Version of the resource after the change.</p>
      * @param version value to be set
      */
-
+    
     public void setVersion(final Integer version);
-
+    
+    
     /**
      *  <p>Version of the resource before the change.</p>
      * @param previousVersion value to be set
      */
-
+    
     public void setPreviousVersion(final Integer previousVersion);
-
+    
+    
     /**
      *  <p>Type of the change (creation, update or deletion).</p>
      * @param type value to be set
      */
-
+    
     public void setType(final String type);
-
+    
+    
     /**
      *  <p>Information about the user or the API client who performed the change.</p>
      * @param modifiedBy value to be set
      */
-
+    
     public void setModifiedBy(final ModifiedBy modifiedBy);
-
+    
+    
     /**
      *  <p>Date and time when the change was made.</p>
      * @param modifiedAt value to be set
      */
-
+    
     public void setModifiedAt(final String modifiedAt);
-
+    
+    
     /**
      *  <p>Information that describes the resource after the change.</p>
      * @param label value to be set
      */
-
+    
     public void setLabel(final Label label);
-
+    
+    
     /**
      *  <p>Information that describes the resource before the change.</p>
      * @param previousLabel value to be set
      */
-
+    
     public void setPreviousLabel(final Label previousLabel);
-
+    
+    
     /**
      *  <p>Shows the differences in the resource between <code>previousVersion</code> and <code>version</code>. The value is not identical to the actual array of update actions sent and is not limited to update actions (see, for example, Optimistic Concurrency Control).</p>
      * @param changes values to be set
      */
-
+    
     @JsonIgnore
-    public void setChanges(final Change... changes);
-
+    public void setChanges(final Change ...changes);
     /**
      *  <p>Shows the differences in the resource between <code>previousVersion</code> and <code>version</code>. The value is not identical to the actual array of update actions sent and is not limited to update actions (see, for example, Optimistic Concurrency Control).</p>
      * @param changes values to be set
      */
-
+    
     public void setChanges(final List<Change> changes);
-
+    
     /**
      *  <p>Reference to the changed resource.</p>
      * @param resource value to be set
      */
-
+    
     public void setResource(final Reference resource);
-
+    
+    
     /**
      *  <p>References to the Stores attached to the Change.</p>
      * @param stores values to be set
      */
-
+    
     @JsonIgnore
-    public void setStores(final KeyReference... stores);
-
+    public void setStores(final KeyReference ...stores);
     /**
      *  <p>References to the Stores attached to the Change.</p>
      * @param stores values to be set
      */
-
+    
     public void setStores(final List<KeyReference> stores);
-
+    
     /**
      *  <p><code>true</code> if no change was detected. The version number of the resource can be increased even without any change in the resource.</p>
      * @param withoutChanges value to be set
      */
-
+    
     public void setWithoutChanges(final Boolean withoutChanges);
+    
 
     /**
      * factory method
      * @return instance of Record
      */
-    public static Record of() {
+    public static Record of(){
         return new RecordImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy Record
@@ -276,21 +279,16 @@ public interface Record {
         instance.setVersion(template.getVersion());
         instance.setPreviousVersion(template.getPreviousVersion());
         instance.setType(template.getType());
-        instance.setModifiedBy(
-            com.commercetools.history.models.change_history.ModifiedBy.deepCopy(template.getModifiedBy()));
+        instance.setModifiedBy(com.commercetools.history.models.change_history.ModifiedBy.deepCopy(template.getModifiedBy()));
         instance.setModifiedAt(template.getModifiedAt());
         instance.setLabel(com.commercetools.history.models.label.Label.deepCopy(template.getLabel()));
         instance.setPreviousLabel(com.commercetools.history.models.label.Label.deepCopy(template.getPreviousLabel()));
         instance.setChanges(Optional.ofNullable(template.getChanges())
-                .map(t -> t.stream()
-                        .map(com.commercetools.history.models.change.Change::deepCopy)
-                        .collect(Collectors.toList()))
+                .map(t -> t.stream().map(com.commercetools.history.models.change.Change::deepCopy).collect(Collectors.toList()))
                 .orElse(null));
         instance.setResource(com.commercetools.history.models.common.Reference.deepCopy(template.getResource()));
         instance.setStores(Optional.ofNullable(template.getStores())
-                .map(t -> t.stream()
-                        .map(com.commercetools.history.models.common.KeyReference::deepCopy)
-                        .collect(Collectors.toList()))
+                .map(t -> t.stream().map(com.commercetools.history.models.common.KeyReference::deepCopy).collect(Collectors.toList()))
                 .orElse(null));
         instance.setWithoutChanges(template.getWithoutChanges());
         return instance;
@@ -303,7 +301,7 @@ public interface Record {
     public static RecordBuilder builder() {
         return RecordBuilder.of();
     }
-
+    
     /**
      * create builder for Record instance
      * @param template instance with prefilled values for the builder
@@ -312,6 +310,7 @@ public interface Record {
     public static RecordBuilder builder(final Record template) {
         return RecordBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -322,7 +321,7 @@ public interface Record {
     default <T> T withRecord(Function<Record, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

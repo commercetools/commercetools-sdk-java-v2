@@ -1,11 +1,17 @@
-
 package com.commercetools.api.models.common;
 
+import com.commercetools.api.models.channel.ChannelResourceIdentifier;
+import com.commercetools.api.models.common.DiscountedPriceDraft;
+import com.commercetools.api.models.common.Money;
+import com.commercetools.api.models.common.PriceTierDraft;
+import com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifier;
+import com.commercetools.api.models.type.CustomFieldsDraft;
+import java.time.ZonedDateTime;
+import com.commercetools.api.models.common.PriceDraft;
+import javax.annotation.Nullable;
 import java.util.*;
 import java.util.function.Function;
-
-import javax.annotation.Nullable;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -19,195 +25,219 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .value(valueBuilder -> valueBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class PriceDraftBuilder implements Builder<PriceDraft> {
 
+    
     @Nullable
     private String key;
-
+    
+    
+    
     private com.commercetools.api.models.common.Money value;
-
+    
+    
     @Nullable
     private String country;
-
+    
+    
     @Nullable
     private com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifier customerGroup;
-
+    
+    
     @Nullable
     private com.commercetools.api.models.channel.ChannelResourceIdentifier channel;
-
+    
+    
     @Nullable
     private java.time.ZonedDateTime validFrom;
-
+    
+    
     @Nullable
     private java.time.ZonedDateTime validUntil;
-
+    
+    
     @Nullable
     private com.commercetools.api.models.common.DiscountedPriceDraft discounted;
-
+    
+    
     @Nullable
     private java.util.List<com.commercetools.api.models.common.PriceTierDraft> tiers;
-
+    
+    
     @Nullable
     private com.commercetools.api.models.type.CustomFieldsDraft custom;
 
+    
     /**
      *  <p>User-defined identifier for the Price. It must be unique per ProductVariant.</p>
      * @param key value to be set
      * @return Builder
      */
-
+    
     public PriceDraftBuilder key(@Nullable final String key) {
         this.key = key;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Money value of this Price.</p>
      * @param builder function to build the value value
      * @return Builder
      */
-
-    public PriceDraftBuilder value(
-            Function<com.commercetools.api.models.common.MoneyBuilder, com.commercetools.api.models.common.MoneyBuilder> builder) {
+    
+    public PriceDraftBuilder value(Function<com.commercetools.api.models.common.MoneyBuilder, com.commercetools.api.models.common.MoneyBuilder> builder) {
         this.value = builder.apply(com.commercetools.api.models.common.MoneyBuilder.of()).build();
         return this;
     }
-
+    
     /**
      *  <p>Money value of this Price.</p>
      * @param builder function to build the value value
      * @return Builder
      */
-
-    public PriceDraftBuilder withValue(
-            Function<com.commercetools.api.models.common.MoneyBuilder, com.commercetools.api.models.common.Money> builder) {
+    
+    public PriceDraftBuilder withValue(Function<com.commercetools.api.models.common.MoneyBuilder, com.commercetools.api.models.common.Money> builder) {
         this.value = builder.apply(com.commercetools.api.models.common.MoneyBuilder.of());
         return this;
     }
-
+                    
     /**
      *  <p>Money value of this Price.</p>
      * @param value value to be set
      * @return Builder
      */
-
-    public PriceDraftBuilder value(final com.commercetools.api.models.common.Money value) {
+    
+    public PriceDraftBuilder value( final com.commercetools.api.models.common.Money value) {
         this.value = value;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Set this field if this Price is only valid for the specified country.</p>
      * @param country value to be set
      * @return Builder
      */
-
+    
     public PriceDraftBuilder country(@Nullable final String country) {
         this.country = country;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Set this field if this Price is only valid for the referenced CustomerGroup.</p>
      * @param builder function to build the customerGroup value
      * @return Builder
      */
-
-    public PriceDraftBuilder customerGroup(
-            Function<com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifierBuilder, com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifierBuilder> builder) {
-        this.customerGroup = builder
-                .apply(com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifierBuilder.of())
-                .build();
+    
+    public PriceDraftBuilder customerGroup(Function<com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifierBuilder, com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifierBuilder> builder) {
+        this.customerGroup = builder.apply(com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifierBuilder.of()).build();
         return this;
     }
-
+    
     /**
      *  <p>Set this field if this Price is only valid for the referenced CustomerGroup.</p>
      * @param builder function to build the customerGroup value
      * @return Builder
      */
-
-    public PriceDraftBuilder withCustomerGroup(
-            Function<com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifierBuilder, com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifier> builder) {
-        this.customerGroup = builder
-                .apply(com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifierBuilder.of());
+    
+    public PriceDraftBuilder withCustomerGroup(Function<com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifierBuilder, com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifier> builder) {
+        this.customerGroup = builder.apply(com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifierBuilder.of());
         return this;
     }
-
+                    
     /**
      *  <p>Set this field if this Price is only valid for the referenced CustomerGroup.</p>
      * @param customerGroup value to be set
      * @return Builder
      */
-
-    public PriceDraftBuilder customerGroup(
-            @Nullable final com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifier customerGroup) {
+    
+    public PriceDraftBuilder customerGroup(@Nullable final com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifier customerGroup) {
         this.customerGroup = customerGroup;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Set this field if this Price is only valid for the referenced <code>ProductDistribution</code> Channel.</p>
      * @param builder function to build the channel value
      * @return Builder
      */
-
-    public PriceDraftBuilder channel(
-            Function<com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder, com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder> builder) {
-        this.channel = builder.apply(com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder.of())
-                .build();
+    
+    public PriceDraftBuilder channel(Function<com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder, com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder> builder) {
+        this.channel = builder.apply(com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder.of()).build();
         return this;
     }
-
+    
     /**
      *  <p>Set this field if this Price is only valid for the referenced <code>ProductDistribution</code> Channel.</p>
      * @param builder function to build the channel value
      * @return Builder
      */
-
-    public PriceDraftBuilder withChannel(
-            Function<com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder, com.commercetools.api.models.channel.ChannelResourceIdentifier> builder) {
+    
+    public PriceDraftBuilder withChannel(Function<com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder, com.commercetools.api.models.channel.ChannelResourceIdentifier> builder) {
         this.channel = builder.apply(com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder.of());
         return this;
     }
-
+                    
     /**
      *  <p>Set this field if this Price is only valid for the referenced <code>ProductDistribution</code> Channel.</p>
      * @param channel value to be set
      * @return Builder
      */
-
-    public PriceDraftBuilder channel(
-            @Nullable final com.commercetools.api.models.channel.ChannelResourceIdentifier channel) {
+    
+    public PriceDraftBuilder channel(@Nullable final com.commercetools.api.models.channel.ChannelResourceIdentifier channel) {
         this.channel = channel;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Set this field if this Price is only valid from the specified date and time. Must be at least 1 ms earlier than <code>validUntil</code>.</p>
      * @param validFrom value to be set
      * @return Builder
      */
-
+    
     public PriceDraftBuilder validFrom(@Nullable final java.time.ZonedDateTime validFrom) {
         this.validFrom = validFrom;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Set this field if this Price is only valid until the specified date and time. Must be at least 1 ms later than <code>validFrom</code>. Prices that are no longer valid are not automatically removed, but they can be removed if necessary.</p>
      * @param validUntil value to be set
      * @return Builder
      */
-
+    
     public PriceDraftBuilder validUntil(@Nullable final java.time.ZonedDateTime validUntil) {
         this.validUntil = validUntil;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Set this field to add a DiscountedPrice from an <strong>external service</strong>.</p>
      *  <p>Otherwise, Composable Commerce sets this field automatically if at least one ProductDiscount applies. The DiscountedPrice must reference a ProductDiscount with:</p>
@@ -219,13 +249,12 @@ public class PriceDraftBuilder implements Builder<PriceDraft> {
      * @param builder function to build the discounted value
      * @return Builder
      */
-
-    public PriceDraftBuilder discounted(
-            Function<com.commercetools.api.models.common.DiscountedPriceDraftBuilder, com.commercetools.api.models.common.DiscountedPriceDraftBuilder> builder) {
+    
+    public PriceDraftBuilder discounted(Function<com.commercetools.api.models.common.DiscountedPriceDraftBuilder, com.commercetools.api.models.common.DiscountedPriceDraftBuilder> builder) {
         this.discounted = builder.apply(com.commercetools.api.models.common.DiscountedPriceDraftBuilder.of()).build();
         return this;
     }
-
+    
     /**
      *  <p>Set this field to add a DiscountedPrice from an <strong>external service</strong>.</p>
      *  <p>Otherwise, Composable Commerce sets this field automatically if at least one ProductDiscount applies. The DiscountedPrice must reference a ProductDiscount with:</p>
@@ -237,13 +266,12 @@ public class PriceDraftBuilder implements Builder<PriceDraft> {
      * @param builder function to build the discounted value
      * @return Builder
      */
-
-    public PriceDraftBuilder withDiscounted(
-            Function<com.commercetools.api.models.common.DiscountedPriceDraftBuilder, com.commercetools.api.models.common.DiscountedPriceDraft> builder) {
+    
+    public PriceDraftBuilder withDiscounted(Function<com.commercetools.api.models.common.DiscountedPriceDraftBuilder, com.commercetools.api.models.common.DiscountedPriceDraft> builder) {
         this.discounted = builder.apply(com.commercetools.api.models.common.DiscountedPriceDraftBuilder.of());
         return this;
     }
-
+                    
     /**
      *  <p>Set this field to add a DiscountedPrice from an <strong>external service</strong>.</p>
      *  <p>Otherwise, Composable Commerce sets this field automatically if at least one ProductDiscount applies. The DiscountedPrice must reference a ProductDiscount with:</p>
@@ -255,204 +283,205 @@ public class PriceDraftBuilder implements Builder<PriceDraft> {
      * @param discounted value to be set
      * @return Builder
      */
-
-    public PriceDraftBuilder discounted(
-            @Nullable final com.commercetools.api.models.common.DiscountedPriceDraft discounted) {
+    
+    public PriceDraftBuilder discounted(@Nullable final com.commercetools.api.models.common.DiscountedPriceDraft discounted) {
         this.discounted = discounted;
         return this;
     }
-
+    
+    
+    
     /**
      *  <p>Set this field to specify different Prices for certain LineItem quantities.</p>
      * @param tiers value to be set
      * @return Builder
      */
-
-    public PriceDraftBuilder tiers(@Nullable final com.commercetools.api.models.common.PriceTierDraft... tiers) {
+    
+    public PriceDraftBuilder tiers(@Nullable final com.commercetools.api.models.common.PriceTierDraft ...tiers) {
         this.tiers = new ArrayList<>(Arrays.asList(tiers));
         return this;
     }
-
+    
     /**
      *  <p>Set this field to specify different Prices for certain LineItem quantities.</p>
      * @param tiers value to be set
      * @return Builder
      */
-
-    public PriceDraftBuilder tiers(
-            @Nullable final java.util.List<com.commercetools.api.models.common.PriceTierDraft> tiers) {
+    
+    public PriceDraftBuilder tiers(@Nullable final java.util.List<com.commercetools.api.models.common.PriceTierDraft> tiers) {
         this.tiers = tiers;
         return this;
     }
-
+    
     /**
      *  <p>Set this field to specify different Prices for certain LineItem quantities.</p>
      * @param tiers value to be set
      * @return Builder
      */
-
-    public PriceDraftBuilder plusTiers(@Nullable final com.commercetools.api.models.common.PriceTierDraft... tiers) {
+    
+    public PriceDraftBuilder plusTiers(@Nullable final com.commercetools.api.models.common.PriceTierDraft ...tiers) {
         if (this.tiers == null) {
             this.tiers = new ArrayList<>();
         }
         this.tiers.addAll(Arrays.asList(tiers));
         return this;
     }
-
+    
+    
+    
     /**
      *  <p>Set this field to specify different Prices for certain LineItem quantities.</p>
      * @param builder function to build the tiers value
      * @return Builder
      */
-
-    public PriceDraftBuilder plusTiers(
-            Function<com.commercetools.api.models.common.PriceTierDraftBuilder, com.commercetools.api.models.common.PriceTierDraftBuilder> builder) {
+    
+    public PriceDraftBuilder plusTiers(Function<com.commercetools.api.models.common.PriceTierDraftBuilder, com.commercetools.api.models.common.PriceTierDraftBuilder> builder) {
         if (this.tiers == null) {
             this.tiers = new ArrayList<>();
         }
         this.tiers.add(builder.apply(com.commercetools.api.models.common.PriceTierDraftBuilder.of()).build());
         return this;
     }
-
+    
     /**
      *  <p>Set this field to specify different Prices for certain LineItem quantities.</p>
      * @param builder function to build the tiers value
      * @return Builder
      */
-
-    public PriceDraftBuilder withTiers(
-            Function<com.commercetools.api.models.common.PriceTierDraftBuilder, com.commercetools.api.models.common.PriceTierDraftBuilder> builder) {
+    
+    public PriceDraftBuilder withTiers(Function<com.commercetools.api.models.common.PriceTierDraftBuilder, com.commercetools.api.models.common.PriceTierDraftBuilder> builder) {
         this.tiers = new ArrayList<>();
         this.tiers.add(builder.apply(com.commercetools.api.models.common.PriceTierDraftBuilder.of()).build());
         return this;
     }
-
+    
     /**
      *  <p>Set this field to specify different Prices for certain LineItem quantities.</p>
      * @param builder function to build the tiers value
      * @return Builder
      */
-
-    public PriceDraftBuilder addTiers(
-            Function<com.commercetools.api.models.common.PriceTierDraftBuilder, com.commercetools.api.models.common.PriceTierDraft> builder) {
+    
+    public PriceDraftBuilder addTiers(Function<com.commercetools.api.models.common.PriceTierDraftBuilder, com.commercetools.api.models.common.PriceTierDraft> builder) {
         return plusTiers(builder.apply(com.commercetools.api.models.common.PriceTierDraftBuilder.of()));
     }
-
+    
     /**
      *  <p>Set this field to specify different Prices for certain LineItem quantities.</p>
      * @param builder function to build the tiers value
      * @return Builder
      */
-
-    public PriceDraftBuilder setTiers(
-            Function<com.commercetools.api.models.common.PriceTierDraftBuilder, com.commercetools.api.models.common.PriceTierDraft> builder) {
+    
+    public PriceDraftBuilder setTiers(Function<com.commercetools.api.models.common.PriceTierDraftBuilder, com.commercetools.api.models.common.PriceTierDraft> builder) {
         return tiers(builder.apply(com.commercetools.api.models.common.PriceTierDraftBuilder.of()));
     }
-
+                    
+    
+    
     /**
      *  <p>Custom Fields for the Price.</p>
      * @param builder function to build the custom value
      * @return Builder
      */
-
-    public PriceDraftBuilder custom(
-            Function<com.commercetools.api.models.type.CustomFieldsDraftBuilder, com.commercetools.api.models.type.CustomFieldsDraftBuilder> builder) {
+    
+    public PriceDraftBuilder custom(Function<com.commercetools.api.models.type.CustomFieldsDraftBuilder, com.commercetools.api.models.type.CustomFieldsDraftBuilder> builder) {
         this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsDraftBuilder.of()).build();
         return this;
     }
-
+    
     /**
      *  <p>Custom Fields for the Price.</p>
      * @param builder function to build the custom value
      * @return Builder
      */
-
-    public PriceDraftBuilder withCustom(
-            Function<com.commercetools.api.models.type.CustomFieldsDraftBuilder, com.commercetools.api.models.type.CustomFieldsDraft> builder) {
+    
+    public PriceDraftBuilder withCustom(Function<com.commercetools.api.models.type.CustomFieldsDraftBuilder, com.commercetools.api.models.type.CustomFieldsDraft> builder) {
         this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsDraftBuilder.of());
         return this;
     }
-
+                    
     /**
      *  <p>Custom Fields for the Price.</p>
      * @param custom value to be set
      * @return Builder
      */
-
+    
     public PriceDraftBuilder custom(@Nullable final com.commercetools.api.models.type.CustomFieldsDraft custom) {
         this.custom = custom;
         return this;
     }
+    
+    
 
     /**
      *  <p>User-defined identifier for the Price. It must be unique per ProductVariant.</p>
      * @return key
      */
-
+    
     @Nullable
-    public String getKey() {
+    public String getKey(){
         return this.key;
     }
-
+    
     /**
      *  <p>Money value of this Price.</p>
      * @return value
      */
-
-    public com.commercetools.api.models.common.Money getValue() {
+    
+    
+    public com.commercetools.api.models.common.Money getValue(){
         return this.value;
     }
-
+    
     /**
      *  <p>Set this field if this Price is only valid for the specified country.</p>
      * @return country
      */
-
+    
     @Nullable
-    public String getCountry() {
+    public String getCountry(){
         return this.country;
     }
-
+    
     /**
      *  <p>Set this field if this Price is only valid for the referenced CustomerGroup.</p>
      * @return customerGroup
      */
-
+    
     @Nullable
-    public com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifier getCustomerGroup() {
+    public com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifier getCustomerGroup(){
         return this.customerGroup;
     }
-
+    
     /**
      *  <p>Set this field if this Price is only valid for the referenced <code>ProductDistribution</code> Channel.</p>
      * @return channel
      */
-
+    
     @Nullable
-    public com.commercetools.api.models.channel.ChannelResourceIdentifier getChannel() {
+    public com.commercetools.api.models.channel.ChannelResourceIdentifier getChannel(){
         return this.channel;
     }
-
+    
     /**
      *  <p>Set this field if this Price is only valid from the specified date and time. Must be at least 1 ms earlier than <code>validUntil</code>.</p>
      * @return validFrom
      */
-
+    
     @Nullable
-    public java.time.ZonedDateTime getValidFrom() {
+    public java.time.ZonedDateTime getValidFrom(){
         return this.validFrom;
     }
-
+    
     /**
      *  <p>Set this field if this Price is only valid until the specified date and time. Must be at least 1 ms later than <code>validFrom</code>. Prices that are no longer valid are not automatically removed, but they can be removed if necessary.</p>
      * @return validUntil
      */
-
+    
     @Nullable
-    public java.time.ZonedDateTime getValidUntil() {
+    public java.time.ZonedDateTime getValidUntil(){
         return this.validUntil;
     }
-
+    
     /**
      *  <p>Set this field to add a DiscountedPrice from an <strong>external service</strong>.</p>
      *  <p>Otherwise, Composable Commerce sets this field automatically if at least one ProductDiscount applies. The DiscountedPrice must reference a ProductDiscount with:</p>
@@ -463,29 +492,29 @@ public class PriceDraftBuilder implements Builder<PriceDraft> {
      *  </ul>
      * @return discounted
      */
-
+    
     @Nullable
-    public com.commercetools.api.models.common.DiscountedPriceDraft getDiscounted() {
+    public com.commercetools.api.models.common.DiscountedPriceDraft getDiscounted(){
         return this.discounted;
     }
-
+    
     /**
      *  <p>Set this field to specify different Prices for certain LineItem quantities.</p>
      * @return tiers
      */
-
+    
     @Nullable
-    public java.util.List<com.commercetools.api.models.common.PriceTierDraft> getTiers() {
+    public java.util.List<com.commercetools.api.models.common.PriceTierDraft> getTiers(){
         return this.tiers;
     }
-
+    
     /**
      *  <p>Custom Fields for the Price.</p>
      * @return custom
      */
-
+    
     @Nullable
-    public com.commercetools.api.models.type.CustomFieldsDraft getCustom() {
+    public com.commercetools.api.models.type.CustomFieldsDraft getCustom(){
         return this.custom;
     }
 
@@ -495,22 +524,20 @@ public class PriceDraftBuilder implements Builder<PriceDraft> {
      */
     public PriceDraft build() {
         Objects.requireNonNull(value, PriceDraft.class + ": value is missing");
-        return new PriceDraftImpl(key, value, country, customerGroup, channel, validFrom, validUntil, discounted, tiers,
-            custom);
+        return new PriceDraftImpl(key, value, country, customerGroup, channel, validFrom, validUntil, discounted, tiers, custom);
     }
-
+    
     /**
      * builds PriceDraft without checking for non-null required values
      * @return PriceDraft
      */
     public PriceDraft buildUnchecked() {
-        return new PriceDraftImpl(key, value, country, customerGroup, channel, validFrom, validUntil, discounted, tiers,
-            custom);
+        return new PriceDraftImpl(key, value, country, customerGroup, channel, validFrom, validUntil, discounted, tiers, custom);
     }
 
     /**
      * factory method for an instance of PriceDraftBuilder
-     * @return builder
+     * @return builder 
      */
     public static PriceDraftBuilder of() {
         return new PriceDraftBuilder();

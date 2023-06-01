@@ -1,8 +1,11 @@
-
 package com.commercetools.api.models.error;
 
+import com.commercetools.api.models.error.GraphQLErrorObject;
+import com.commercetools.api.models.error.GraphQLPriceChangedError;
+import javax.annotation.Nullable;
 import java.util.*;
-
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -17,15 +20,24 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .shipping(true)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class GraphQLPriceChangedErrorBuilder implements Builder<GraphQLPriceChangedError> {
 
+    
+    
     private Map<String, java.lang.Object> values = new HashMap<>();
-
+    
+    
+    
     private java.util.List<String> lineItems;
-
+    
+    
+    
     private Boolean shipping;
 
     /**
@@ -33,19 +45,19 @@ public class GraphQLPriceChangedErrorBuilder implements Builder<GraphQLPriceChan
      * @param values properties to be set
      * @return Builder
      */
-
-    public GraphQLPriceChangedErrorBuilder values(final Map<String, java.lang.Object> values) {
+    
+    public GraphQLPriceChangedErrorBuilder values( final Map<String, java.lang.Object> values){
         this.values = values;
         return this;
     }
-
+    
     /**
      *  <p>Error-specific additional fields.</p>
      * @param key property name
      * @param value property value
      * @return Builder
      */
-
+    
     public GraphQLPriceChangedErrorBuilder addValue(final String key, final java.lang.Object value) {
         if (this.values == null) {
             values = new HashMap<>();
@@ -53,78 +65,88 @@ public class GraphQLPriceChangedErrorBuilder implements Builder<GraphQLPriceChan
         values.put(key, value);
         return this;
     }
-
+    
+    
     /**
      *  <p>Unique identifiers of the Line Items for which the Price or TaxRate has changed.</p>
      * @param lineItems value to be set
      * @return Builder
      */
-
-    public GraphQLPriceChangedErrorBuilder lineItems(final String... lineItems) {
+    
+    public GraphQLPriceChangedErrorBuilder lineItems( final String ...lineItems) {
         this.lineItems = new ArrayList<>(Arrays.asList(lineItems));
         return this;
     }
-
+    
     /**
      *  <p>Unique identifiers of the Line Items for which the Price or TaxRate has changed.</p>
      * @param lineItems value to be set
      * @return Builder
      */
-
-    public GraphQLPriceChangedErrorBuilder lineItems(final java.util.List<String> lineItems) {
+    
+    public GraphQLPriceChangedErrorBuilder lineItems( final java.util.List<String> lineItems) {
         this.lineItems = lineItems;
         return this;
     }
-
+    
     /**
      *  <p>Unique identifiers of the Line Items for which the Price or TaxRate has changed.</p>
      * @param lineItems value to be set
      * @return Builder
      */
-
-    public GraphQLPriceChangedErrorBuilder plusLineItems(final String... lineItems) {
+    
+    public GraphQLPriceChangedErrorBuilder plusLineItems( final String ...lineItems) {
         if (this.lineItems == null) {
             this.lineItems = new ArrayList<>();
         }
         this.lineItems.addAll(Arrays.asList(lineItems));
         return this;
     }
-
+    
+    
+    
+    
+    
     /**
      *  <p><code>true</code> if the ShippingRate has changed.</p>
      * @param shipping value to be set
      * @return Builder
      */
-
-    public GraphQLPriceChangedErrorBuilder shipping(final Boolean shipping) {
+    
+    public GraphQLPriceChangedErrorBuilder shipping( final Boolean shipping) {
         this.shipping = shipping;
         return this;
     }
+    
+    
 
     /**
      *  <p>Error-specific additional fields.</p>
      * @return pattern properties
      */
-
-    public Map<String, java.lang.Object> getValues() {
+    
+    
+    public Map<String, java.lang.Object> getValues(){
         return this.values;
     }
-
+    
     /**
      *  <p>Unique identifiers of the Line Items for which the Price or TaxRate has changed.</p>
      * @return lineItems
      */
-
-    public java.util.List<String> getLineItems() {
+    
+    
+    public java.util.List<String> getLineItems(){
         return this.lineItems;
     }
-
+    
     /**
      *  <p><code>true</code> if the ShippingRate has changed.</p>
      * @return shipping
      */
-
-    public Boolean getShipping() {
+    
+    
+    public Boolean getShipping(){
         return this.shipping;
     }
 
@@ -137,7 +159,7 @@ public class GraphQLPriceChangedErrorBuilder implements Builder<GraphQLPriceChan
         Objects.requireNonNull(shipping, GraphQLPriceChangedError.class + ": shipping is missing");
         return new GraphQLPriceChangedErrorImpl(values, lineItems, shipping);
     }
-
+    
     /**
      * builds GraphQLPriceChangedError without checking for non-null required values
      * @return GraphQLPriceChangedError
@@ -148,7 +170,7 @@ public class GraphQLPriceChangedErrorBuilder implements Builder<GraphQLPriceChan
 
     /**
      * factory method for an instance of GraphQLPriceChangedErrorBuilder
-     * @return builder
+     * @return builder 
      */
     public static GraphQLPriceChangedErrorBuilder of() {
         return new GraphQLPriceChangedErrorBuilder();

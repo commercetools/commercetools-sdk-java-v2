@@ -1,17 +1,21 @@
-
 package com.commercetools.api.models.order;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
+import com.commercetools.api.models.order.OrderUpdateAction;
+import java.lang.Object;
+import com.commercetools.api.models.order.OrderSetItemShippingAddressCustomFieldActionImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * OrderSetItemShippingAddressCustomFieldAction
@@ -25,9 +29,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .name("{name}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = OrderSetItemShippingAddressCustomFieldActionImpl.class)
 public interface OrderSetItemShippingAddressCustomFieldAction extends OrderUpdateAction {
 
@@ -43,7 +50,6 @@ public interface OrderSetItemShippingAddressCustomFieldAction extends OrderUpdat
     @NotNull
     @JsonProperty("addressKey")
     public String getAddressKey();
-
     /**
      *  <p>Name of the Custom Field.</p>
      * @return name
@@ -51,12 +57,11 @@ public interface OrderSetItemShippingAddressCustomFieldAction extends OrderUpdat
     @NotNull
     @JsonProperty("name")
     public String getName();
-
     /**
      *  <p>If <code>value</code> is absent or <code>null</code>, this field will be removed if it exists. Removing a field that does not exist returns an InvalidOperation error. If <code>value</code> is provided, it is set for the field defined by <code>name</code>.</p>
      * @return value
      */
-
+    
     @JsonProperty("value")
     public Object getValue();
 
@@ -64,38 +69,41 @@ public interface OrderSetItemShippingAddressCustomFieldAction extends OrderUpdat
      * set addressKey
      * @param addressKey value to be set
      */
-
+    
     public void setAddressKey(final String addressKey);
-
+    
+    
     /**
      *  <p>Name of the Custom Field.</p>
      * @param name value to be set
      */
-
+    
     public void setName(final String name);
-
+    
+    
     /**
      *  <p>If <code>value</code> is absent or <code>null</code>, this field will be removed if it exists. Removing a field that does not exist returns an InvalidOperation error. If <code>value</code> is provided, it is set for the field defined by <code>name</code>.</p>
      * @param value value to be set
      */
-
+    
     public void setValue(final Object value);
+    
 
     /**
      * factory method
      * @return instance of OrderSetItemShippingAddressCustomFieldAction
      */
-    public static OrderSetItemShippingAddressCustomFieldAction of() {
+    public static OrderSetItemShippingAddressCustomFieldAction of(){
         return new OrderSetItemShippingAddressCustomFieldActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy OrderSetItemShippingAddressCustomFieldAction
      * @param template instance to be copied
      * @return copy instance
      */
-    public static OrderSetItemShippingAddressCustomFieldAction of(
-            final OrderSetItemShippingAddressCustomFieldAction template) {
+    public static OrderSetItemShippingAddressCustomFieldAction of(final OrderSetItemShippingAddressCustomFieldAction template) {
         OrderSetItemShippingAddressCustomFieldActionImpl instance = new OrderSetItemShippingAddressCustomFieldActionImpl();
         instance.setAddressKey(template.getAddressKey());
         instance.setName(template.getName());
@@ -109,8 +117,7 @@ public interface OrderSetItemShippingAddressCustomFieldAction extends OrderUpdat
      * @return copy instance
      */
     @Nullable
-    public static OrderSetItemShippingAddressCustomFieldAction deepCopy(
-            @Nullable final OrderSetItemShippingAddressCustomFieldAction template) {
+    public static OrderSetItemShippingAddressCustomFieldAction deepCopy(@Nullable final OrderSetItemShippingAddressCustomFieldAction template) {
         if (template == null) {
             return null;
         }
@@ -128,16 +135,16 @@ public interface OrderSetItemShippingAddressCustomFieldAction extends OrderUpdat
     public static OrderSetItemShippingAddressCustomFieldActionBuilder builder() {
         return OrderSetItemShippingAddressCustomFieldActionBuilder.of();
     }
-
+    
     /**
      * create builder for OrderSetItemShippingAddressCustomFieldAction instance
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static OrderSetItemShippingAddressCustomFieldActionBuilder builder(
-            final OrderSetItemShippingAddressCustomFieldAction template) {
+    public static OrderSetItemShippingAddressCustomFieldActionBuilder builder(final OrderSetItemShippingAddressCustomFieldAction template) {
         return OrderSetItemShippingAddressCustomFieldActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -145,15 +152,14 @@ public interface OrderSetItemShippingAddressCustomFieldAction extends OrderUpdat
      * @param helper function to map the object
      * @return mapped value
      */
-    default <T> T withOrderSetItemShippingAddressCustomFieldAction(
-            Function<OrderSetItemShippingAddressCustomFieldAction, T> helper) {
+    default <T> T withOrderSetItemShippingAddressCustomFieldAction(Function<OrderSetItemShippingAddressCustomFieldAction, T> helper) {
         return helper.apply(this);
     }
-
     public static OrderSetItemShippingAddressCustomFieldAction ofUnset(final String name, final String addressKey) {
         return OrderSetItemShippingAddressCustomFieldActionBuilder.of().name(name).addressKey(addressKey).build();
     }
-
+    
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

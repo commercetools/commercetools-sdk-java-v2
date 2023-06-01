@@ -1,16 +1,20 @@
-
 package com.commercetools.api.models.message;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
+import com.commercetools.api.models.message.MessagePayload;
+import com.commercetools.api.models.message.CustomerLastNameSetMessagePayloadImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Generated after a successful Set Last Name update action.</p>
@@ -22,9 +26,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     CustomerLastNameSetMessagePayload customerLastNameSetMessagePayload = CustomerLastNameSetMessagePayload.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = CustomerLastNameSetMessagePayloadImpl.class)
 public interface CustomerLastNameSetMessagePayload extends MessagePayload {
 
@@ -37,7 +44,7 @@ public interface CustomerLastNameSetMessagePayload extends MessagePayload {
      *  <p>The <code>lastName</code> that was set during the Set Last Name update action.</p>
      * @return lastName
      */
-
+    
     @JsonProperty("lastName")
     public String getLastName();
 
@@ -45,16 +52,18 @@ public interface CustomerLastNameSetMessagePayload extends MessagePayload {
      *  <p>The <code>lastName</code> that was set during the Set Last Name update action.</p>
      * @param lastName value to be set
      */
-
+    
     public void setLastName(final String lastName);
+    
 
     /**
      * factory method
      * @return instance of CustomerLastNameSetMessagePayload
      */
-    public static CustomerLastNameSetMessagePayload of() {
+    public static CustomerLastNameSetMessagePayload of(){
         return new CustomerLastNameSetMessagePayloadImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy CustomerLastNameSetMessagePayload
@@ -73,8 +82,7 @@ public interface CustomerLastNameSetMessagePayload extends MessagePayload {
      * @return copy instance
      */
     @Nullable
-    public static CustomerLastNameSetMessagePayload deepCopy(
-            @Nullable final CustomerLastNameSetMessagePayload template) {
+    public static CustomerLastNameSetMessagePayload deepCopy(@Nullable final CustomerLastNameSetMessagePayload template) {
         if (template == null) {
             return null;
         }
@@ -90,7 +98,7 @@ public interface CustomerLastNameSetMessagePayload extends MessagePayload {
     public static CustomerLastNameSetMessagePayloadBuilder builder() {
         return CustomerLastNameSetMessagePayloadBuilder.of();
     }
-
+    
     /**
      * create builder for CustomerLastNameSetMessagePayload instance
      * @param template instance with prefilled values for the builder
@@ -99,6 +107,7 @@ public interface CustomerLastNameSetMessagePayload extends MessagePayload {
     public static CustomerLastNameSetMessagePayloadBuilder builder(final CustomerLastNameSetMessagePayload template) {
         return CustomerLastNameSetMessagePayloadBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -109,7 +118,7 @@ public interface CustomerLastNameSetMessagePayload extends MessagePayload {
     default <T> T withCustomerLastNameSetMessagePayload(Function<CustomerLastNameSetMessagePayload, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

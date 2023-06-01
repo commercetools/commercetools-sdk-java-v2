@@ -1,10 +1,11 @@
-
 package com.commercetools.api.models.custom_object;
 
-import java.util.*;
-
+import java.lang.Object;
+import com.commercetools.api.models.custom_object.CustomObjectDraft;
 import javax.annotation.Nullable;
-
+import java.util.*;
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -19,98 +20,123 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .key("{key}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class CustomObjectDraftBuilder implements Builder<CustomObjectDraft> {
 
+    
+    
     private String container;
-
+    
+    
+    
     private String key;
-
+    
+    
+    
     private java.lang.Object value;
-
+    
+    
     @Nullable
     private Long version;
 
+    
     /**
      *  <p>Namespace to group CustomObjects.</p>
      * @param container value to be set
      * @return Builder
      */
-
-    public CustomObjectDraftBuilder container(final String container) {
+    
+    public CustomObjectDraftBuilder container( final String container) {
         this.container = container;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>User-defined unique identifier of the CustomObject within the defined <code>container</code>.</p>
      * @param key value to be set
      * @return Builder
      */
-
-    public CustomObjectDraftBuilder key(final String key) {
+    
+    public CustomObjectDraftBuilder key( final String key) {
         this.key = key;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>JSON standard types Number, String, Boolean, Array, Object, and common API data types. For values of type Reference the integrity of the data is not guaranteed. If the referenced object is deleted, the API does not delete the corresponding reference to it and the <code>value</code> points to a non-existing object in such case.</p>
      * @param value value to be set
      * @return Builder
      */
-
-    public CustomObjectDraftBuilder value(final java.lang.Object value) {
+    
+    public CustomObjectDraftBuilder value( final java.lang.Object value) {
         this.value = value;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Current version of the CustomObject.</p>
      * @param version value to be set
      * @return Builder
      */
-
+    
     public CustomObjectDraftBuilder version(@Nullable final Long version) {
         this.version = version;
         return this;
     }
+    
+    
 
     /**
      *  <p>Namespace to group CustomObjects.</p>
      * @return container
      */
-
-    public String getContainer() {
+    
+    
+    public String getContainer(){
         return this.container;
     }
-
+    
     /**
      *  <p>User-defined unique identifier of the CustomObject within the defined <code>container</code>.</p>
      * @return key
      */
-
-    public String getKey() {
+    
+    
+    public String getKey(){
         return this.key;
     }
-
+    
     /**
      *  <p>JSON standard types Number, String, Boolean, Array, Object, and common API data types. For values of type Reference the integrity of the data is not guaranteed. If the referenced object is deleted, the API does not delete the corresponding reference to it and the <code>value</code> points to a non-existing object in such case.</p>
      * @return value
      */
-
-    public java.lang.Object getValue() {
+    
+    
+    public java.lang.Object getValue(){
         return this.value;
     }
-
+    
     /**
      *  <p>Current version of the CustomObject.</p>
      * @return version
      */
-
+    
     @Nullable
-    public Long getVersion() {
+    public Long getVersion(){
         return this.version;
     }
 
@@ -124,7 +150,7 @@ public class CustomObjectDraftBuilder implements Builder<CustomObjectDraft> {
         Objects.requireNonNull(value, CustomObjectDraft.class + ": value is missing");
         return new CustomObjectDraftImpl(container, key, value, version);
     }
-
+    
     /**
      * builds CustomObjectDraft without checking for non-null required values
      * @return CustomObjectDraft
@@ -135,7 +161,7 @@ public class CustomObjectDraftBuilder implements Builder<CustomObjectDraft> {
 
     /**
      * factory method for an instance of CustomObjectDraftBuilder
-     * @return builder
+     * @return builder 
      */
     public static CustomObjectDraftBuilder of() {
         return new CustomObjectDraftBuilder();

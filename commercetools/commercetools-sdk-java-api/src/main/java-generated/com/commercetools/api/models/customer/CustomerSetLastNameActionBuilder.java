@@ -1,10 +1,11 @@
-
 package com.commercetools.api.models.customer;
 
-import java.util.*;
-
+import com.commercetools.api.models.customer.CustomerUpdateAction;
+import com.commercetools.api.models.customer.CustomerSetLastNameAction;
 import javax.annotation.Nullable;
-
+import java.util.*;
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -17,32 +18,39 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     CustomerSetLastNameAction customerSetLastNameAction = CustomerSetLastNameAction.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class CustomerSetLastNameActionBuilder implements Builder<CustomerSetLastNameAction> {
 
+    
     @Nullable
     private String lastName;
 
+    
     /**
      *  <p>Value to set. If empty, any existing value is removed.</p>
      * @param lastName value to be set
      * @return Builder
      */
-
+    
     public CustomerSetLastNameActionBuilder lastName(@Nullable final String lastName) {
         this.lastName = lastName;
         return this;
     }
+    
+    
 
     /**
      *  <p>Value to set. If empty, any existing value is removed.</p>
      * @return lastName
      */
-
+    
     @Nullable
-    public String getLastName() {
+    public String getLastName(){
         return this.lastName;
     }
 
@@ -53,7 +61,7 @@ public class CustomerSetLastNameActionBuilder implements Builder<CustomerSetLast
     public CustomerSetLastNameAction build() {
         return new CustomerSetLastNameActionImpl(lastName);
     }
-
+    
     /**
      * builds CustomerSetLastNameAction without checking for non-null required values
      * @return CustomerSetLastNameAction
@@ -64,7 +72,7 @@ public class CustomerSetLastNameActionBuilder implements Builder<CustomerSetLast
 
     /**
      * factory method for an instance of CustomerSetLastNameActionBuilder
-     * @return builder
+     * @return builder 
      */
     public static CustomerSetLastNameActionBuilder of() {
         return new CustomerSetLastNameActionBuilder();

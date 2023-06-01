@@ -1,18 +1,21 @@
-
 package com.commercetools.api.models.type;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
+import com.commercetools.api.models.type.CustomFieldLocalizedEnumValue;
+import com.commercetools.api.models.type.TypeUpdateAction;
+import com.commercetools.api.models.type.TypeChangeLocalizedEnumValueLabelActionImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Changes the <code>label</code> of a LocalizedEnumValue of a LocalizedEnumType FieldDefinition.</p>
@@ -26,9 +29,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .value(valueBuilder -> valueBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = TypeChangeLocalizedEnumValueLabelActionImpl.class)
 public interface TypeChangeLocalizedEnumValueLabelAction extends TypeUpdateAction {
 
@@ -44,7 +50,6 @@ public interface TypeChangeLocalizedEnumValueLabelAction extends TypeUpdateActio
     @NotNull
     @JsonProperty("fieldName")
     public String getFieldName();
-
     /**
      *  <p>New value to set. Must not be empty.</p>
      * @return value
@@ -58,23 +63,26 @@ public interface TypeChangeLocalizedEnumValueLabelAction extends TypeUpdateActio
      *  <p><code>name</code> of the FieldDefinition to update.</p>
      * @param fieldName value to be set
      */
-
+    
     public void setFieldName(final String fieldName);
-
+    
+    
     /**
      *  <p>New value to set. Must not be empty.</p>
      * @param value value to be set
      */
-
+    
     public void setValue(final CustomFieldLocalizedEnumValue value);
+    
 
     /**
      * factory method
      * @return instance of TypeChangeLocalizedEnumValueLabelAction
      */
-    public static TypeChangeLocalizedEnumValueLabelAction of() {
+    public static TypeChangeLocalizedEnumValueLabelAction of(){
         return new TypeChangeLocalizedEnumValueLabelActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy TypeChangeLocalizedEnumValueLabelAction
@@ -94,15 +102,13 @@ public interface TypeChangeLocalizedEnumValueLabelAction extends TypeUpdateActio
      * @return copy instance
      */
     @Nullable
-    public static TypeChangeLocalizedEnumValueLabelAction deepCopy(
-            @Nullable final TypeChangeLocalizedEnumValueLabelAction template) {
+    public static TypeChangeLocalizedEnumValueLabelAction deepCopy(@Nullable final TypeChangeLocalizedEnumValueLabelAction template) {
         if (template == null) {
             return null;
         }
         TypeChangeLocalizedEnumValueLabelActionImpl instance = new TypeChangeLocalizedEnumValueLabelActionImpl();
         instance.setFieldName(template.getFieldName());
-        instance.setValue(
-            com.commercetools.api.models.type.CustomFieldLocalizedEnumValue.deepCopy(template.getValue()));
+        instance.setValue(com.commercetools.api.models.type.CustomFieldLocalizedEnumValue.deepCopy(template.getValue()));
         return instance;
     }
 
@@ -113,16 +119,16 @@ public interface TypeChangeLocalizedEnumValueLabelAction extends TypeUpdateActio
     public static TypeChangeLocalizedEnumValueLabelActionBuilder builder() {
         return TypeChangeLocalizedEnumValueLabelActionBuilder.of();
     }
-
+    
     /**
      * create builder for TypeChangeLocalizedEnumValueLabelAction instance
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static TypeChangeLocalizedEnumValueLabelActionBuilder builder(
-            final TypeChangeLocalizedEnumValueLabelAction template) {
+    public static TypeChangeLocalizedEnumValueLabelActionBuilder builder(final TypeChangeLocalizedEnumValueLabelAction template) {
         return TypeChangeLocalizedEnumValueLabelActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -130,11 +136,10 @@ public interface TypeChangeLocalizedEnumValueLabelAction extends TypeUpdateActio
      * @param helper function to map the object
      * @return mapped value
      */
-    default <T> T withTypeChangeLocalizedEnumValueLabelAction(
-            Function<TypeChangeLocalizedEnumValueLabelAction, T> helper) {
+    default <T> T withTypeChangeLocalizedEnumValueLabelAction(Function<TypeChangeLocalizedEnumValueLabelAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

@@ -1,51 +1,58 @@
-
 package com.commercetools.history.models.common;
 
-import java.time.*;
-import java.util.*;
-
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
-
-import io.vrap.rmf.base.client.ModelBase;
+import com.commercetools.history.models.common.CustomFields;
+import com.commercetools.history.models.common.LocalizedString;
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.ModelBase;
+import javax.validation.Valid;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.annotation.*;
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
  * Asset
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class AssetImpl implements Asset, ModelBase {
 
+    
     private String id;
-
+    
+    
     private com.commercetools.history.models.common.LocalizedString name;
-
+    
+    
     private com.commercetools.history.models.common.LocalizedString description;
-
+    
+    
     private com.commercetools.history.models.common.CustomFields custom;
-
+    
+    
     private String key;
 
     /**
      * create instance with all properties
      */
     @JsonCreator
-    AssetImpl(@JsonProperty("id") final String id,
-            @JsonProperty("name") final com.commercetools.history.models.common.LocalizedString name,
-            @JsonProperty("description") final com.commercetools.history.models.common.LocalizedString description,
-            @JsonProperty("custom") final com.commercetools.history.models.common.CustomFields custom,
-            @JsonProperty("key") final String key) {
+    AssetImpl(@JsonProperty("id") final String id, @JsonProperty("name") final com.commercetools.history.models.common.LocalizedString name, @JsonProperty("description") final com.commercetools.history.models.common.LocalizedString description, @JsonProperty("custom") final com.commercetools.history.models.common.CustomFields custom, @JsonProperty("key") final String key) {
         this.id = id;
         this.name = name;
         this.description = description;
         this.custom = custom;
         this.key = key;
     }
-
     /**
      * create empty instance
      */
@@ -55,89 +62,94 @@ public class AssetImpl implements Asset, ModelBase {
     /**
      *
      */
-
-    public String getId() {
+    
+    public String getId(){
         return this.id;
     }
-
+    
     /**
      *
      */
-
-    public com.commercetools.history.models.common.LocalizedString getName() {
+    
+    public com.commercetools.history.models.common.LocalizedString getName(){
         return this.name;
     }
-
+    
     /**
      *
      */
-
-    public com.commercetools.history.models.common.LocalizedString getDescription() {
+    
+    public com.commercetools.history.models.common.LocalizedString getDescription(){
         return this.description;
     }
-
+    
     /**
      *
      */
-
-    public com.commercetools.history.models.common.CustomFields getCustom() {
+    
+    public com.commercetools.history.models.common.CustomFields getCustom(){
         return this.custom;
     }
-
+    
     /**
      *
      */
-
-    public String getKey() {
+    
+    public String getKey(){
         return this.key;
     }
 
-    public void setId(final String id) {
+    
+    public void setId(final String id){
         this.id = id;
     }
-
-    public void setName(final com.commercetools.history.models.common.LocalizedString name) {
+    
+    
+    public void setName(final com.commercetools.history.models.common.LocalizedString name){
         this.name = name;
     }
-
-    public void setDescription(final com.commercetools.history.models.common.LocalizedString description) {
+    
+    
+    public void setDescription(final com.commercetools.history.models.common.LocalizedString description){
         this.description = description;
     }
-
-    public void setCustom(final com.commercetools.history.models.common.CustomFields custom) {
+    
+    
+    public void setCustom(final com.commercetools.history.models.common.CustomFields custom){
         this.custom = custom;
     }
-
-    public void setKey(final String key) {
+    
+    
+    public void setKey(final String key){
         this.key = key;
     }
 
     @Override
     public boolean equals(Object o) {
-        if (this == o)
-            return true;
-
-        if (o == null || getClass() != o.getClass())
-            return false;
-
+        if (this == o) return true;
+    
+        if (o == null || getClass() != o.getClass()) return false;
+    
         AssetImpl that = (AssetImpl) o;
-
-        return new EqualsBuilder().append(id, that.id)
+    
+        return new EqualsBuilder()
+                .append(id, that.id)
                 .append(name, that.name)
                 .append(description, that.description)
                 .append(custom, that.custom)
                 .append(key, that.key)
                 .isEquals();
     }
-
+    
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(id)
-                .append(name)
-                .append(description)
-                .append(custom)
-                .append(key)
-                .toHashCode();
+        return new HashCodeBuilder(17, 37)
+            .append(id)
+            .append(name)
+            .append(description)
+            .append(custom)
+            .append(key)
+            .toHashCode();
     }
 
 }

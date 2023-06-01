@@ -1,19 +1,21 @@
-
 package com.commercetools.importapi.models.productvariants;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
 import com.commercetools.importapi.models.common.LocalizedString;
+import com.commercetools.importapi.models.productvariants.Attribute;
+import com.commercetools.importapi.models.productvariants.LocalizableTextAttributeImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>This type represents an attribute whose value is a localized text.</p>
@@ -26,9 +28,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .value(valueBuilder -> valueBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = LocalizableTextAttributeImpl.class)
 public interface LocalizableTextAttribute extends Attribute {
 
@@ -60,16 +65,18 @@ public interface LocalizableTextAttribute extends Attribute {
      *  </code></pre>
      * @param value value to be set
      */
-
+    
     public void setValue(final LocalizedString value);
+    
 
     /**
      * factory method
      * @return instance of LocalizableTextAttribute
      */
-    public static LocalizableTextAttribute of() {
+    public static LocalizableTextAttribute of(){
         return new LocalizableTextAttributeImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy LocalizableTextAttribute
@@ -106,7 +113,7 @@ public interface LocalizableTextAttribute extends Attribute {
     public static LocalizableTextAttributeBuilder builder() {
         return LocalizableTextAttributeBuilder.of();
     }
-
+    
     /**
      * create builder for LocalizableTextAttribute instance
      * @param template instance with prefilled values for the builder
@@ -115,6 +122,7 @@ public interface LocalizableTextAttribute extends Attribute {
     public static LocalizableTextAttributeBuilder builder(final LocalizableTextAttribute template) {
         return LocalizableTextAttributeBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -125,7 +133,7 @@ public interface LocalizableTextAttribute extends Attribute {
     default <T> T withLocalizableTextAttribute(Function<LocalizableTextAttribute, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

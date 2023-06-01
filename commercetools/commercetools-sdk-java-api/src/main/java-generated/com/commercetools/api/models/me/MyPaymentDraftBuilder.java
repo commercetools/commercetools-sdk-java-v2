@@ -1,11 +1,14 @@
-
 package com.commercetools.api.models.me;
 
+import com.commercetools.api.models.common.Money;
+import com.commercetools.api.models.me.MyTransactionDraft;
+import com.commercetools.api.models.payment.PaymentMethodInfo;
+import com.commercetools.api.models.type.CustomFieldsDraft;
+import com.commercetools.api.models.me.MyPaymentDraft;
+import javax.annotation.Nullable;
 import java.util.*;
 import java.util.function.Function;
-
-import javax.annotation.Nullable;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -19,201 +22,211 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .amountPlanned(amountPlannedBuilder -> amountPlannedBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class MyPaymentDraftBuilder implements Builder<MyPaymentDraft> {
 
+    
+    
     private com.commercetools.api.models.common.Money amountPlanned;
-
+    
+    
     @Nullable
     private com.commercetools.api.models.payment.PaymentMethodInfo paymentMethodInfo;
-
+    
+    
     @Nullable
     private com.commercetools.api.models.type.CustomFieldsDraft custom;
-
+    
+    
     @Nullable
     private com.commercetools.api.models.me.MyTransactionDraft transaction;
 
+    
     /**
      *  <p>Money value the Payment intends to receive from the customer. The value usually matches the Cart or Order gross total.</p>
      * @param builder function to build the amountPlanned value
      * @return Builder
      */
-
-    public MyPaymentDraftBuilder amountPlanned(
-            Function<com.commercetools.api.models.common.MoneyBuilder, com.commercetools.api.models.common.MoneyBuilder> builder) {
+    
+    public MyPaymentDraftBuilder amountPlanned(Function<com.commercetools.api.models.common.MoneyBuilder, com.commercetools.api.models.common.MoneyBuilder> builder) {
         this.amountPlanned = builder.apply(com.commercetools.api.models.common.MoneyBuilder.of()).build();
         return this;
     }
-
+    
     /**
      *  <p>Money value the Payment intends to receive from the customer. The value usually matches the Cart or Order gross total.</p>
      * @param builder function to build the amountPlanned value
      * @return Builder
      */
-
-    public MyPaymentDraftBuilder withAmountPlanned(
-            Function<com.commercetools.api.models.common.MoneyBuilder, com.commercetools.api.models.common.Money> builder) {
+    
+    public MyPaymentDraftBuilder withAmountPlanned(Function<com.commercetools.api.models.common.MoneyBuilder, com.commercetools.api.models.common.Money> builder) {
         this.amountPlanned = builder.apply(com.commercetools.api.models.common.MoneyBuilder.of());
         return this;
     }
-
+                    
     /**
      *  <p>Money value the Payment intends to receive from the customer. The value usually matches the Cart or Order gross total.</p>
      * @param amountPlanned value to be set
      * @return Builder
      */
-
-    public MyPaymentDraftBuilder amountPlanned(final com.commercetools.api.models.common.Money amountPlanned) {
+    
+    public MyPaymentDraftBuilder amountPlanned( final com.commercetools.api.models.common.Money amountPlanned) {
         this.amountPlanned = amountPlanned;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Information regarding the payment interface (for example, a PSP), and the specific payment method used.</p>
      * @param builder function to build the paymentMethodInfo value
      * @return Builder
      */
-
-    public MyPaymentDraftBuilder paymentMethodInfo(
-            Function<com.commercetools.api.models.payment.PaymentMethodInfoBuilder, com.commercetools.api.models.payment.PaymentMethodInfoBuilder> builder) {
-        this.paymentMethodInfo = builder.apply(com.commercetools.api.models.payment.PaymentMethodInfoBuilder.of())
-                .build();
+    
+    public MyPaymentDraftBuilder paymentMethodInfo(Function<com.commercetools.api.models.payment.PaymentMethodInfoBuilder, com.commercetools.api.models.payment.PaymentMethodInfoBuilder> builder) {
+        this.paymentMethodInfo = builder.apply(com.commercetools.api.models.payment.PaymentMethodInfoBuilder.of()).build();
         return this;
     }
-
+    
     /**
      *  <p>Information regarding the payment interface (for example, a PSP), and the specific payment method used.</p>
      * @param builder function to build the paymentMethodInfo value
      * @return Builder
      */
-
-    public MyPaymentDraftBuilder withPaymentMethodInfo(
-            Function<com.commercetools.api.models.payment.PaymentMethodInfoBuilder, com.commercetools.api.models.payment.PaymentMethodInfo> builder) {
+    
+    public MyPaymentDraftBuilder withPaymentMethodInfo(Function<com.commercetools.api.models.payment.PaymentMethodInfoBuilder, com.commercetools.api.models.payment.PaymentMethodInfo> builder) {
         this.paymentMethodInfo = builder.apply(com.commercetools.api.models.payment.PaymentMethodInfoBuilder.of());
         return this;
     }
-
+                    
     /**
      *  <p>Information regarding the payment interface (for example, a PSP), and the specific payment method used.</p>
      * @param paymentMethodInfo value to be set
      * @return Builder
      */
-
-    public MyPaymentDraftBuilder paymentMethodInfo(
-            @Nullable final com.commercetools.api.models.payment.PaymentMethodInfo paymentMethodInfo) {
+    
+    public MyPaymentDraftBuilder paymentMethodInfo(@Nullable final com.commercetools.api.models.payment.PaymentMethodInfo paymentMethodInfo) {
         this.paymentMethodInfo = paymentMethodInfo;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Custom Fields for the Payment.</p>
      * @param builder function to build the custom value
      * @return Builder
      */
-
-    public MyPaymentDraftBuilder custom(
-            Function<com.commercetools.api.models.type.CustomFieldsDraftBuilder, com.commercetools.api.models.type.CustomFieldsDraftBuilder> builder) {
+    
+    public MyPaymentDraftBuilder custom(Function<com.commercetools.api.models.type.CustomFieldsDraftBuilder, com.commercetools.api.models.type.CustomFieldsDraftBuilder> builder) {
         this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsDraftBuilder.of()).build();
         return this;
     }
-
+    
     /**
      *  <p>Custom Fields for the Payment.</p>
      * @param builder function to build the custom value
      * @return Builder
      */
-
-    public MyPaymentDraftBuilder withCustom(
-            Function<com.commercetools.api.models.type.CustomFieldsDraftBuilder, com.commercetools.api.models.type.CustomFieldsDraft> builder) {
+    
+    public MyPaymentDraftBuilder withCustom(Function<com.commercetools.api.models.type.CustomFieldsDraftBuilder, com.commercetools.api.models.type.CustomFieldsDraft> builder) {
         this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsDraftBuilder.of());
         return this;
     }
-
+                    
     /**
      *  <p>Custom Fields for the Payment.</p>
      * @param custom value to be set
      * @return Builder
      */
-
+    
     public MyPaymentDraftBuilder custom(@Nullable final com.commercetools.api.models.type.CustomFieldsDraft custom) {
         this.custom = custom;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Financial transactions of the TransactionTypes <code>Authorization</code> or <code>Charge</code>.</p>
      * @param builder function to build the transaction value
      * @return Builder
      */
-
-    public MyPaymentDraftBuilder transaction(
-            Function<com.commercetools.api.models.me.MyTransactionDraftBuilder, com.commercetools.api.models.me.MyTransactionDraftBuilder> builder) {
+    
+    public MyPaymentDraftBuilder transaction(Function<com.commercetools.api.models.me.MyTransactionDraftBuilder, com.commercetools.api.models.me.MyTransactionDraftBuilder> builder) {
         this.transaction = builder.apply(com.commercetools.api.models.me.MyTransactionDraftBuilder.of()).build();
         return this;
     }
-
+    
     /**
      *  <p>Financial transactions of the TransactionTypes <code>Authorization</code> or <code>Charge</code>.</p>
      * @param builder function to build the transaction value
      * @return Builder
      */
-
-    public MyPaymentDraftBuilder withTransaction(
-            Function<com.commercetools.api.models.me.MyTransactionDraftBuilder, com.commercetools.api.models.me.MyTransactionDraft> builder) {
+    
+    public MyPaymentDraftBuilder withTransaction(Function<com.commercetools.api.models.me.MyTransactionDraftBuilder, com.commercetools.api.models.me.MyTransactionDraft> builder) {
         this.transaction = builder.apply(com.commercetools.api.models.me.MyTransactionDraftBuilder.of());
         return this;
     }
-
+                    
     /**
      *  <p>Financial transactions of the TransactionTypes <code>Authorization</code> or <code>Charge</code>.</p>
      * @param transaction value to be set
      * @return Builder
      */
-
-    public MyPaymentDraftBuilder transaction(
-            @Nullable final com.commercetools.api.models.me.MyTransactionDraft transaction) {
+    
+    public MyPaymentDraftBuilder transaction(@Nullable final com.commercetools.api.models.me.MyTransactionDraft transaction) {
         this.transaction = transaction;
         return this;
     }
+    
+    
 
     /**
      *  <p>Money value the Payment intends to receive from the customer. The value usually matches the Cart or Order gross total.</p>
      * @return amountPlanned
      */
-
-    public com.commercetools.api.models.common.Money getAmountPlanned() {
+    
+    
+    public com.commercetools.api.models.common.Money getAmountPlanned(){
         return this.amountPlanned;
     }
-
+    
     /**
      *  <p>Information regarding the payment interface (for example, a PSP), and the specific payment method used.</p>
      * @return paymentMethodInfo
      */
-
+    
     @Nullable
-    public com.commercetools.api.models.payment.PaymentMethodInfo getPaymentMethodInfo() {
+    public com.commercetools.api.models.payment.PaymentMethodInfo getPaymentMethodInfo(){
         return this.paymentMethodInfo;
     }
-
+    
     /**
      *  <p>Custom Fields for the Payment.</p>
      * @return custom
      */
-
+    
     @Nullable
-    public com.commercetools.api.models.type.CustomFieldsDraft getCustom() {
+    public com.commercetools.api.models.type.CustomFieldsDraft getCustom(){
         return this.custom;
     }
-
+    
     /**
      *  <p>Financial transactions of the TransactionTypes <code>Authorization</code> or <code>Charge</code>.</p>
      * @return transaction
      */
-
+    
     @Nullable
-    public com.commercetools.api.models.me.MyTransactionDraft getTransaction() {
+    public com.commercetools.api.models.me.MyTransactionDraft getTransaction(){
         return this.transaction;
     }
 
@@ -225,7 +238,7 @@ public class MyPaymentDraftBuilder implements Builder<MyPaymentDraft> {
         Objects.requireNonNull(amountPlanned, MyPaymentDraft.class + ": amountPlanned is missing");
         return new MyPaymentDraftImpl(amountPlanned, paymentMethodInfo, custom, transaction);
     }
-
+    
     /**
      * builds MyPaymentDraft without checking for non-null required values
      * @return MyPaymentDraft
@@ -236,7 +249,7 @@ public class MyPaymentDraftBuilder implements Builder<MyPaymentDraft> {
 
     /**
      * factory method for an instance of MyPaymentDraftBuilder
-     * @return builder
+     * @return builder 
      */
     public static MyPaymentDraftBuilder of() {
         return new MyPaymentDraftBuilder();

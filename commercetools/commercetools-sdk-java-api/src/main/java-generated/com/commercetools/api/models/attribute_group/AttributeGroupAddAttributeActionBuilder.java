@@ -1,9 +1,12 @@
-
 package com.commercetools.api.models.attribute_group;
 
+import com.commercetools.api.models.attribute_group.AttributeGroupUpdateAction;
+import com.commercetools.api.models.attribute_group.AttributeReference;
+import com.commercetools.api.models.attribute_group.AttributeGroupAddAttributeAction;
+import javax.annotation.Nullable;
 import java.util.*;
 import java.util.function.Function;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -17,56 +20,61 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .attribute(attributeBuilder -> attributeBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class AttributeGroupAddAttributeActionBuilder implements Builder<AttributeGroupAddAttributeAction> {
 
+    
+    
     private com.commercetools.api.models.attribute_group.AttributeReference attribute;
 
+    
     /**
      *  <p>Value to add.</p>
      * @param builder function to build the attribute value
      * @return Builder
      */
-
-    public AttributeGroupAddAttributeActionBuilder attribute(
-            Function<com.commercetools.api.models.attribute_group.AttributeReferenceBuilder, com.commercetools.api.models.attribute_group.AttributeReferenceBuilder> builder) {
-        this.attribute = builder.apply(com.commercetools.api.models.attribute_group.AttributeReferenceBuilder.of())
-                .build();
+    
+    public AttributeGroupAddAttributeActionBuilder attribute(Function<com.commercetools.api.models.attribute_group.AttributeReferenceBuilder, com.commercetools.api.models.attribute_group.AttributeReferenceBuilder> builder) {
+        this.attribute = builder.apply(com.commercetools.api.models.attribute_group.AttributeReferenceBuilder.of()).build();
         return this;
     }
-
+    
     /**
      *  <p>Value to add.</p>
      * @param builder function to build the attribute value
      * @return Builder
      */
-
-    public AttributeGroupAddAttributeActionBuilder withAttribute(
-            Function<com.commercetools.api.models.attribute_group.AttributeReferenceBuilder, com.commercetools.api.models.attribute_group.AttributeReference> builder) {
+    
+    public AttributeGroupAddAttributeActionBuilder withAttribute(Function<com.commercetools.api.models.attribute_group.AttributeReferenceBuilder, com.commercetools.api.models.attribute_group.AttributeReference> builder) {
         this.attribute = builder.apply(com.commercetools.api.models.attribute_group.AttributeReferenceBuilder.of());
         return this;
     }
-
+                    
     /**
      *  <p>Value to add.</p>
      * @param attribute value to be set
      * @return Builder
      */
-
-    public AttributeGroupAddAttributeActionBuilder attribute(
-            final com.commercetools.api.models.attribute_group.AttributeReference attribute) {
+    
+    public AttributeGroupAddAttributeActionBuilder attribute( final com.commercetools.api.models.attribute_group.AttributeReference attribute) {
         this.attribute = attribute;
         return this;
     }
+    
+    
 
     /**
      *  <p>Value to add.</p>
      * @return attribute
      */
-
-    public com.commercetools.api.models.attribute_group.AttributeReference getAttribute() {
+    
+    
+    public com.commercetools.api.models.attribute_group.AttributeReference getAttribute(){
         return this.attribute;
     }
 
@@ -78,7 +86,7 @@ public class AttributeGroupAddAttributeActionBuilder implements Builder<Attribut
         Objects.requireNonNull(attribute, AttributeGroupAddAttributeAction.class + ": attribute is missing");
         return new AttributeGroupAddAttributeActionImpl(attribute);
     }
-
+    
     /**
      * builds AttributeGroupAddAttributeAction without checking for non-null required values
      * @return AttributeGroupAddAttributeAction
@@ -89,7 +97,7 @@ public class AttributeGroupAddAttributeActionBuilder implements Builder<Attribut
 
     /**
      * factory method for an instance of AttributeGroupAddAttributeActionBuilder
-     * @return builder
+     * @return builder 
      */
     public static AttributeGroupAddAttributeActionBuilder of() {
         return new AttributeGroupAddAttributeActionBuilder();

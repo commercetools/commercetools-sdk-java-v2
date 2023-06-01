@@ -1,18 +1,21 @@
-
 package com.commercetools.api.models.shipping_method;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-
 import com.commercetools.api.models.common.LocalizedString;
+import com.commercetools.api.models.shipping_method.ShippingMethodUpdateAction;
+import com.commercetools.api.models.shipping_method.ShippingMethodSetLocalizedNameActionImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * ShippingMethodSetLocalizedNameAction
@@ -24,9 +27,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     ShippingMethodSetLocalizedNameAction shippingMethodSetLocalizedNameAction = ShippingMethodSetLocalizedNameAction.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = ShippingMethodSetLocalizedNameActionImpl.class)
 public interface ShippingMethodSetLocalizedNameAction extends ShippingMethodUpdateAction {
 
@@ -47,16 +53,18 @@ public interface ShippingMethodSetLocalizedNameAction extends ShippingMethodUpda
      *  <p>Value to set. If empty, any existing value will be removed.</p>
      * @param localizedName value to be set
      */
-
+    
     public void setLocalizedName(final LocalizedString localizedName);
+    
 
     /**
      * factory method
      * @return instance of ShippingMethodSetLocalizedNameAction
      */
-    public static ShippingMethodSetLocalizedNameAction of() {
+    public static ShippingMethodSetLocalizedNameAction of(){
         return new ShippingMethodSetLocalizedNameActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy ShippingMethodSetLocalizedNameAction
@@ -75,14 +83,12 @@ public interface ShippingMethodSetLocalizedNameAction extends ShippingMethodUpda
      * @return copy instance
      */
     @Nullable
-    public static ShippingMethodSetLocalizedNameAction deepCopy(
-            @Nullable final ShippingMethodSetLocalizedNameAction template) {
+    public static ShippingMethodSetLocalizedNameAction deepCopy(@Nullable final ShippingMethodSetLocalizedNameAction template) {
         if (template == null) {
             return null;
         }
         ShippingMethodSetLocalizedNameActionImpl instance = new ShippingMethodSetLocalizedNameActionImpl();
-        instance.setLocalizedName(
-            com.commercetools.api.models.common.LocalizedString.deepCopy(template.getLocalizedName()));
+        instance.setLocalizedName(com.commercetools.api.models.common.LocalizedString.deepCopy(template.getLocalizedName()));
         return instance;
     }
 
@@ -93,16 +99,16 @@ public interface ShippingMethodSetLocalizedNameAction extends ShippingMethodUpda
     public static ShippingMethodSetLocalizedNameActionBuilder builder() {
         return ShippingMethodSetLocalizedNameActionBuilder.of();
     }
-
+    
     /**
      * create builder for ShippingMethodSetLocalizedNameAction instance
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static ShippingMethodSetLocalizedNameActionBuilder builder(
-            final ShippingMethodSetLocalizedNameAction template) {
+    public static ShippingMethodSetLocalizedNameActionBuilder builder(final ShippingMethodSetLocalizedNameAction template) {
         return ShippingMethodSetLocalizedNameActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -113,7 +119,7 @@ public interface ShippingMethodSetLocalizedNameAction extends ShippingMethodUpda
     default <T> T withShippingMethodSetLocalizedNameAction(Function<ShippingMethodSetLocalizedNameAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

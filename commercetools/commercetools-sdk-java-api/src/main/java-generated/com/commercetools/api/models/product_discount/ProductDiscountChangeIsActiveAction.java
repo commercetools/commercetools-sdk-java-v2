@@ -1,17 +1,20 @@
-
 package com.commercetools.api.models.product_discount;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
+import com.commercetools.api.models.product_discount.ProductDiscountUpdateAction;
+import com.commercetools.api.models.product_discount.ProductDiscountChangeIsActiveActionImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * ProductDiscountChangeIsActiveAction
@@ -24,9 +27,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .isActive(true)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = ProductDiscountChangeIsActiveActionImpl.class)
 public interface ProductDiscountChangeIsActiveAction extends ProductDiscountUpdateAction {
 
@@ -47,16 +53,18 @@ public interface ProductDiscountChangeIsActiveAction extends ProductDiscountUpda
      *  <p>New value to set. If set to <code>true</code>, the Discount will be applied to Product Prices.</p>
      * @param isActive value to be set
      */
-
+    
     public void setIsActive(final Boolean isActive);
+    
 
     /**
      * factory method
      * @return instance of ProductDiscountChangeIsActiveAction
      */
-    public static ProductDiscountChangeIsActiveAction of() {
+    public static ProductDiscountChangeIsActiveAction of(){
         return new ProductDiscountChangeIsActiveActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy ProductDiscountChangeIsActiveAction
@@ -75,8 +83,7 @@ public interface ProductDiscountChangeIsActiveAction extends ProductDiscountUpda
      * @return copy instance
      */
     @Nullable
-    public static ProductDiscountChangeIsActiveAction deepCopy(
-            @Nullable final ProductDiscountChangeIsActiveAction template) {
+    public static ProductDiscountChangeIsActiveAction deepCopy(@Nullable final ProductDiscountChangeIsActiveAction template) {
         if (template == null) {
             return null;
         }
@@ -92,16 +99,16 @@ public interface ProductDiscountChangeIsActiveAction extends ProductDiscountUpda
     public static ProductDiscountChangeIsActiveActionBuilder builder() {
         return ProductDiscountChangeIsActiveActionBuilder.of();
     }
-
+    
     /**
      * create builder for ProductDiscountChangeIsActiveAction instance
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static ProductDiscountChangeIsActiveActionBuilder builder(
-            final ProductDiscountChangeIsActiveAction template) {
+    public static ProductDiscountChangeIsActiveActionBuilder builder(final ProductDiscountChangeIsActiveAction template) {
         return ProductDiscountChangeIsActiveActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -112,7 +119,7 @@ public interface ProductDiscountChangeIsActiveAction extends ProductDiscountUpda
     default <T> T withProductDiscountChangeIsActiveAction(Function<ProductDiscountChangeIsActiveAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

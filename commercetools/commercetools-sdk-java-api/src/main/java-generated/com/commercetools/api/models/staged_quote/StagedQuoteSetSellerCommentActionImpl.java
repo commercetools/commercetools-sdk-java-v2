@@ -1,27 +1,35 @@
-
 package com.commercetools.api.models.staged_quote;
 
-import java.time.*;
-import java.util.*;
-
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
-
-import io.vrap.rmf.base.client.ModelBase;
+import com.commercetools.api.models.staged_quote.StagedQuoteUpdateAction;
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.ModelBase;
+import javax.validation.Valid;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.annotation.*;
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
  * StagedQuoteSetSellerCommentAction
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class StagedQuoteSetSellerCommentActionImpl implements StagedQuoteSetSellerCommentAction, ModelBase {
 
+    
     private String action;
-
+    
+    
     private String sellerComment;
 
     /**
@@ -30,52 +38,56 @@ public class StagedQuoteSetSellerCommentActionImpl implements StagedQuoteSetSell
     @JsonCreator
     StagedQuoteSetSellerCommentActionImpl(@JsonProperty("sellerComment") final String sellerComment) {
         this.sellerComment = sellerComment;
-        this.action = SET_SELLER_COMMENT;
+        this.action =  SET_SELLER_COMMENT;
     }
-
     /**
      * create empty instance
      */
     public StagedQuoteSetSellerCommentActionImpl() {
-        this.action = SET_SELLER_COMMENT;
+        this.action =  SET_SELLER_COMMENT;
     }
 
     /**
      *
      */
-
-    public String getAction() {
+    
+    public String getAction(){
         return this.action;
     }
-
+    
     /**
      *  <p>If <code>sellerComment</code> is absent or <code>null</code>, this field will be removed if it exists.</p>
      */
-
-    public String getSellerComment() {
+    
+    public String getSellerComment(){
         return this.sellerComment;
     }
 
-    public void setSellerComment(final String sellerComment) {
+    
+    public void setSellerComment(final String sellerComment){
         this.sellerComment = sellerComment;
     }
 
     @Override
     public boolean equals(Object o) {
-        if (this == o)
-            return true;
-
-        if (o == null || getClass() != o.getClass())
-            return false;
-
+        if (this == o) return true;
+    
+        if (o == null || getClass() != o.getClass()) return false;
+    
         StagedQuoteSetSellerCommentActionImpl that = (StagedQuoteSetSellerCommentActionImpl) o;
-
-        return new EqualsBuilder().append(action, that.action).append(sellerComment, that.sellerComment).isEquals();
+    
+        return new EqualsBuilder()
+                .append(action, that.action)
+                .append(sellerComment, that.sellerComment)
+                .isEquals();
     }
-
+    
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(action).append(sellerComment).toHashCode();
+        return new HashCodeBuilder(17, 37)
+            .append(action)
+            .append(sellerComment)
+            .toHashCode();
     }
 
 }

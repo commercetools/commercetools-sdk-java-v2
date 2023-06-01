@@ -1,11 +1,14 @@
-
 package com.commercetools.importapi.models.inventories;
 
+import com.commercetools.importapi.models.common.ChannelKeyReference;
+import com.commercetools.importapi.models.common.ImportResource;
+import com.commercetools.importapi.models.customfields.Custom;
+import java.time.ZonedDateTime;
+import com.commercetools.importapi.models.inventories.InventoryImport;
+import javax.annotation.Nullable;
 import java.util.*;
 import java.util.function.Function;
-
-import javax.annotation.Nullable;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -21,221 +24,251 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .quantityOnStock(0.3)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class InventoryImportBuilder implements Builder<InventoryImport> {
 
+    
+    
     private String key;
-
+    
+    
+    
     private String sku;
-
+    
+    
+    
     private Long quantityOnStock;
-
+    
+    
     @Nullable
     private Long restockableInDays;
-
+    
+    
     @Nullable
     private java.time.ZonedDateTime expectedDelivery;
-
+    
+    
     @Nullable
     private com.commercetools.importapi.models.common.ChannelKeyReference supplyChannel;
-
+    
+    
     @Nullable
     private com.commercetools.importapi.models.customfields.Custom custom;
 
+    
     /**
      *  <p>User-defined unique identifier.</p>
      * @param key value to be set
      * @return Builder
      */
-
-    public InventoryImportBuilder key(final String key) {
+    
+    public InventoryImportBuilder key( final String key) {
         this.key = key;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Maps to <code>Inventory.sku</code></p>
      * @param sku value to be set
      * @return Builder
      */
-
-    public InventoryImportBuilder sku(final String sku) {
+    
+    public InventoryImportBuilder sku( final String sku) {
         this.sku = sku;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Maps to <code>Inventory.quantityOnStock</code></p>
      * @param quantityOnStock value to be set
      * @return Builder
      */
-
-    public InventoryImportBuilder quantityOnStock(final Long quantityOnStock) {
+    
+    public InventoryImportBuilder quantityOnStock( final Long quantityOnStock) {
         this.quantityOnStock = quantityOnStock;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Maps to <code>Inventory.restockableInDays</code></p>
      * @param restockableInDays value to be set
      * @return Builder
      */
-
+    
     public InventoryImportBuilder restockableInDays(@Nullable final Long restockableInDays) {
         this.restockableInDays = restockableInDays;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Maps to <code>Inventory.expectedDelivery</code></p>
      * @param expectedDelivery value to be set
      * @return Builder
      */
-
+    
     public InventoryImportBuilder expectedDelivery(@Nullable final java.time.ZonedDateTime expectedDelivery) {
         this.expectedDelivery = expectedDelivery;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Maps to <code>Inventory.supplyChannel</code></p>
      * @param builder function to build the supplyChannel value
      * @return Builder
      */
-
-    public InventoryImportBuilder supplyChannel(
-            Function<com.commercetools.importapi.models.common.ChannelKeyReferenceBuilder, com.commercetools.importapi.models.common.ChannelKeyReferenceBuilder> builder) {
-        this.supplyChannel = builder.apply(com.commercetools.importapi.models.common.ChannelKeyReferenceBuilder.of())
-                .build();
+    
+    public InventoryImportBuilder supplyChannel(Function<com.commercetools.importapi.models.common.ChannelKeyReferenceBuilder, com.commercetools.importapi.models.common.ChannelKeyReferenceBuilder> builder) {
+        this.supplyChannel = builder.apply(com.commercetools.importapi.models.common.ChannelKeyReferenceBuilder.of()).build();
         return this;
     }
-
+    
     /**
      *  <p>Maps to <code>Inventory.supplyChannel</code></p>
      * @param builder function to build the supplyChannel value
      * @return Builder
      */
-
-    public InventoryImportBuilder withSupplyChannel(
-            Function<com.commercetools.importapi.models.common.ChannelKeyReferenceBuilder, com.commercetools.importapi.models.common.ChannelKeyReference> builder) {
+    
+    public InventoryImportBuilder withSupplyChannel(Function<com.commercetools.importapi.models.common.ChannelKeyReferenceBuilder, com.commercetools.importapi.models.common.ChannelKeyReference> builder) {
         this.supplyChannel = builder.apply(com.commercetools.importapi.models.common.ChannelKeyReferenceBuilder.of());
         return this;
     }
-
+                    
     /**
      *  <p>Maps to <code>Inventory.supplyChannel</code></p>
      * @param supplyChannel value to be set
      * @return Builder
      */
-
-    public InventoryImportBuilder supplyChannel(
-            @Nullable final com.commercetools.importapi.models.common.ChannelKeyReference supplyChannel) {
+    
+    public InventoryImportBuilder supplyChannel(@Nullable final com.commercetools.importapi.models.common.ChannelKeyReference supplyChannel) {
         this.supplyChannel = supplyChannel;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Maps to <code>Inventory.custom</code>.</p>
      * @param builder function to build the custom value
      * @return Builder
      */
-
-    public InventoryImportBuilder custom(
-            Function<com.commercetools.importapi.models.customfields.CustomBuilder, com.commercetools.importapi.models.customfields.CustomBuilder> builder) {
+    
+    public InventoryImportBuilder custom(Function<com.commercetools.importapi.models.customfields.CustomBuilder, com.commercetools.importapi.models.customfields.CustomBuilder> builder) {
         this.custom = builder.apply(com.commercetools.importapi.models.customfields.CustomBuilder.of()).build();
         return this;
     }
-
+    
     /**
      *  <p>Maps to <code>Inventory.custom</code>.</p>
      * @param builder function to build the custom value
      * @return Builder
      */
-
-    public InventoryImportBuilder withCustom(
-            Function<com.commercetools.importapi.models.customfields.CustomBuilder, com.commercetools.importapi.models.customfields.Custom> builder) {
+    
+    public InventoryImportBuilder withCustom(Function<com.commercetools.importapi.models.customfields.CustomBuilder, com.commercetools.importapi.models.customfields.Custom> builder) {
         this.custom = builder.apply(com.commercetools.importapi.models.customfields.CustomBuilder.of());
         return this;
     }
-
+                    
     /**
      *  <p>Maps to <code>Inventory.custom</code>.</p>
      * @param custom value to be set
      * @return Builder
      */
-
-    public InventoryImportBuilder custom(
-            @Nullable final com.commercetools.importapi.models.customfields.Custom custom) {
+    
+    public InventoryImportBuilder custom(@Nullable final com.commercetools.importapi.models.customfields.Custom custom) {
         this.custom = custom;
         return this;
     }
+    
+    
 
     /**
      *  <p>User-defined unique identifier.</p>
      * @return key
      */
-
-    public String getKey() {
+    
+    
+    public String getKey(){
         return this.key;
     }
-
+    
     /**
      *  <p>Maps to <code>Inventory.sku</code></p>
      * @return sku
      */
-
-    public String getSku() {
+    
+    
+    public String getSku(){
         return this.sku;
     }
-
+    
     /**
      *  <p>Maps to <code>Inventory.quantityOnStock</code></p>
      * @return quantityOnStock
      */
-
-    public Long getQuantityOnStock() {
+    
+    
+    public Long getQuantityOnStock(){
         return this.quantityOnStock;
     }
-
+    
     /**
      *  <p>Maps to <code>Inventory.restockableInDays</code></p>
      * @return restockableInDays
      */
-
+    
     @Nullable
-    public Long getRestockableInDays() {
+    public Long getRestockableInDays(){
         return this.restockableInDays;
     }
-
+    
     /**
      *  <p>Maps to <code>Inventory.expectedDelivery</code></p>
      * @return expectedDelivery
      */
-
+    
     @Nullable
-    public java.time.ZonedDateTime getExpectedDelivery() {
+    public java.time.ZonedDateTime getExpectedDelivery(){
         return this.expectedDelivery;
     }
-
+    
     /**
      *  <p>Maps to <code>Inventory.supplyChannel</code></p>
      * @return supplyChannel
      */
-
+    
     @Nullable
-    public com.commercetools.importapi.models.common.ChannelKeyReference getSupplyChannel() {
+    public com.commercetools.importapi.models.common.ChannelKeyReference getSupplyChannel(){
         return this.supplyChannel;
     }
-
+    
     /**
      *  <p>Maps to <code>Inventory.custom</code>.</p>
      * @return custom
      */
-
+    
     @Nullable
-    public com.commercetools.importapi.models.customfields.Custom getCustom() {
+    public com.commercetools.importapi.models.customfields.Custom getCustom(){
         return this.custom;
     }
 
@@ -247,22 +280,20 @@ public class InventoryImportBuilder implements Builder<InventoryImport> {
         Objects.requireNonNull(key, InventoryImport.class + ": key is missing");
         Objects.requireNonNull(sku, InventoryImport.class + ": sku is missing");
         Objects.requireNonNull(quantityOnStock, InventoryImport.class + ": quantityOnStock is missing");
-        return new InventoryImportImpl(key, sku, quantityOnStock, restockableInDays, expectedDelivery, supplyChannel,
-            custom);
+        return new InventoryImportImpl(key, sku, quantityOnStock, restockableInDays, expectedDelivery, supplyChannel, custom);
     }
-
+    
     /**
      * builds InventoryImport without checking for non-null required values
      * @return InventoryImport
      */
     public InventoryImport buildUnchecked() {
-        return new InventoryImportImpl(key, sku, quantityOnStock, restockableInDays, expectedDelivery, supplyChannel,
-            custom);
+        return new InventoryImportImpl(key, sku, quantityOnStock, restockableInDays, expectedDelivery, supplyChannel, custom);
     }
 
     /**
      * factory method for an instance of InventoryImportBuilder
-     * @return builder
+     * @return builder 
      */
     public static InventoryImportBuilder of() {
         return new InventoryImportBuilder();

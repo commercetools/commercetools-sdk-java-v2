@@ -1,18 +1,21 @@
-
 package com.commercetools.api.models.error;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
-
 import com.commercetools.api.models.common.ReferenceTypeId;
+import com.commercetools.api.models.error.ErrorObject;
+import com.commercetools.api.models.error.ReferenceExistsErrorImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Returned when a resource cannot be deleted because it is being referenced by another resource.</p>
@@ -25,9 +28,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .message("{message}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = ReferenceExistsErrorImpl.class)
 public interface ReferenceExistsError extends ErrorObject {
 
@@ -43,7 +49,6 @@ public interface ReferenceExistsError extends ErrorObject {
     @NotNull
     @JsonProperty("code")
     public String getCode();
-
     /**
      *  <p><code>"Can not delete a $resource while it is referenced by at least one $referencedBy."</code></p>
      * @return message
@@ -51,12 +56,11 @@ public interface ReferenceExistsError extends ErrorObject {
     @NotNull
     @JsonProperty("message")
     public String getMessage();
-
     /**
      *  <p>Type of referenced resource.</p>
      * @return referencedBy
      */
-
+    
     @JsonProperty("referencedBy")
     public ReferenceTypeId getReferencedBy();
 
@@ -64,23 +68,26 @@ public interface ReferenceExistsError extends ErrorObject {
      *  <p><code>"Can not delete a $resource while it is referenced by at least one $referencedBy."</code></p>
      * @param message value to be set
      */
-
+    
     public void setMessage(final String message);
-
+    
+    
     /**
      *  <p>Type of referenced resource.</p>
      * @param referencedBy value to be set
      */
-
+    
     public void setReferencedBy(final ReferenceTypeId referencedBy);
+    
 
     /**
      * factory method
      * @return instance of ReferenceExistsError
      */
-    public static ReferenceExistsError of() {
+    public static ReferenceExistsError of(){
         return new ReferenceExistsErrorImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy ReferenceExistsError
@@ -119,7 +126,7 @@ public interface ReferenceExistsError extends ErrorObject {
     public static ReferenceExistsErrorBuilder builder() {
         return ReferenceExistsErrorBuilder.of();
     }
-
+    
     /**
      * create builder for ReferenceExistsError instance
      * @param template instance with prefilled values for the builder
@@ -128,6 +135,7 @@ public interface ReferenceExistsError extends ErrorObject {
     public static ReferenceExistsErrorBuilder builder(final ReferenceExistsError template) {
         return ReferenceExistsErrorBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -138,7 +146,7 @@ public interface ReferenceExistsError extends ErrorObject {
     default <T> T withReferenceExistsError(Function<ReferenceExistsError, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

@@ -1,17 +1,20 @@
-
 package com.commercetools.api.models.product;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
 
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
+import com.commercetools.api.models.product.FacetRangeImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * FacetRange
@@ -32,11 +35,15 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .mean(0.3)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = FacetRangeImpl.class)
-public interface FacetRange {
+public interface FacetRange  {
+
 
     /**
      *
@@ -45,7 +52,6 @@ public interface FacetRange {
     @NotNull
     @JsonProperty("from")
     public Double getFrom();
-
     /**
      *
      * @return fromStr
@@ -53,7 +59,6 @@ public interface FacetRange {
     @NotNull
     @JsonProperty("fromStr")
     public String getFromStr();
-
     /**
      *
      * @return to
@@ -61,7 +66,6 @@ public interface FacetRange {
     @NotNull
     @JsonProperty("to")
     public Double getTo();
-
     /**
      *
      * @return toStr
@@ -69,7 +73,6 @@ public interface FacetRange {
     @NotNull
     @JsonProperty("toStr")
     public String getToStr();
-
     /**
      *
      * @return count
@@ -77,15 +80,13 @@ public interface FacetRange {
     @NotNull
     @JsonProperty("count")
     public Long getCount();
-
     /**
      *
      * @return productCount
      */
-
+    
     @JsonProperty("productCount")
     public Long getProductCount();
-
     /**
      *
      * @return total
@@ -93,7 +94,6 @@ public interface FacetRange {
     @NotNull
     @JsonProperty("total")
     public Double getTotal();
-
     /**
      *
      * @return min
@@ -101,7 +101,6 @@ public interface FacetRange {
     @NotNull
     @JsonProperty("min")
     public Double getMin();
-
     /**
      *
      * @return max
@@ -109,7 +108,6 @@ public interface FacetRange {
     @NotNull
     @JsonProperty("max")
     public Double getMax();
-
     /**
      *
      * @return mean
@@ -122,79 +120,90 @@ public interface FacetRange {
      * set from
      * @param from value to be set
      */
-
+    
     public void setFrom(final Double from);
-
+    
+    
     /**
      * set fromStr
      * @param fromStr value to be set
      */
-
+    
     public void setFromStr(final String fromStr);
-
+    
+    
     /**
      * set to
      * @param to value to be set
      */
-
+    
     public void setTo(final Double to);
-
+    
+    
     /**
      * set toStr
      * @param toStr value to be set
      */
-
+    
     public void setToStr(final String toStr);
-
+    
+    
     /**
      * set count
      * @param count value to be set
      */
-
+    
     public void setCount(final Long count);
-
+    
+    
     /**
      * set productCount
      * @param productCount value to be set
      */
-
+    
     public void setProductCount(final Long productCount);
-
+    
+    
     /**
      * set total
      * @param total value to be set
      */
-
+    
     public void setTotal(final Double total);
-
+    
+    
     /**
      * set min
      * @param min value to be set
      */
-
+    
     public void setMin(final Double min);
-
+    
+    
     /**
      * set max
      * @param max value to be set
      */
-
+    
     public void setMax(final Double max);
-
+    
+    
     /**
      * set mean
      * @param mean value to be set
      */
-
+    
     public void setMean(final Double mean);
+    
 
     /**
      * factory method
      * @return instance of FacetRange
      */
-    public static FacetRange of() {
+    public static FacetRange of(){
         return new FacetRangeImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy FacetRange
@@ -247,7 +256,7 @@ public interface FacetRange {
     public static FacetRangeBuilder builder() {
         return FacetRangeBuilder.of();
     }
-
+    
     /**
      * create builder for FacetRange instance
      * @param template instance with prefilled values for the builder
@@ -256,6 +265,7 @@ public interface FacetRange {
     public static FacetRangeBuilder builder(final FacetRange template) {
         return FacetRangeBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -266,7 +276,7 @@ public interface FacetRange {
     default <T> T withFacetRange(Function<FacetRange, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

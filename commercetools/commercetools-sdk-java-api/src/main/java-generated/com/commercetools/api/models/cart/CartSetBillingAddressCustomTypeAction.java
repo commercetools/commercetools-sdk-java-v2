@@ -1,19 +1,22 @@
-
 package com.commercetools.api.models.cart;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-
+import com.commercetools.api.models.cart.CartUpdateAction;
 import com.commercetools.api.models.type.FieldContainer;
 import com.commercetools.api.models.type.TypeResourceIdentifier;
+import com.commercetools.api.models.cart.CartSetBillingAddressCustomTypeActionImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * CartSetBillingAddressCustomTypeAction
@@ -25,9 +28,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     CartSetBillingAddressCustomTypeAction cartSetBillingAddressCustomTypeAction = CartSetBillingAddressCustomTypeAction.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = CartSetBillingAddressCustomTypeActionImpl.class)
 public interface CartSetBillingAddressCustomTypeAction extends CartUpdateAction {
 
@@ -43,7 +49,6 @@ public interface CartSetBillingAddressCustomTypeAction extends CartUpdateAction 
     @Valid
     @JsonProperty("type")
     public TypeResourceIdentifier getType();
-
     /**
      *  <p>Sets the Custom Fields fields for the <code>billingAddress</code>.</p>
      * @return fields
@@ -56,23 +61,26 @@ public interface CartSetBillingAddressCustomTypeAction extends CartUpdateAction 
      *  <p>Defines the Type that extends the <code>billingAddress</code> with Custom Fields. If absent, any existing Type and Custom Fields are removed from the <code>billingAddress</code>.</p>
      * @param type value to be set
      */
-
+    
     public void setType(final TypeResourceIdentifier type);
-
+    
+    
     /**
      *  <p>Sets the Custom Fields fields for the <code>billingAddress</code>.</p>
      * @param fields value to be set
      */
-
+    
     public void setFields(final FieldContainer fields);
+    
 
     /**
      * factory method
      * @return instance of CartSetBillingAddressCustomTypeAction
      */
-    public static CartSetBillingAddressCustomTypeAction of() {
+    public static CartSetBillingAddressCustomTypeAction of(){
         return new CartSetBillingAddressCustomTypeActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy CartSetBillingAddressCustomTypeAction
@@ -92,8 +100,7 @@ public interface CartSetBillingAddressCustomTypeAction extends CartUpdateAction 
      * @return copy instance
      */
     @Nullable
-    public static CartSetBillingAddressCustomTypeAction deepCopy(
-            @Nullable final CartSetBillingAddressCustomTypeAction template) {
+    public static CartSetBillingAddressCustomTypeAction deepCopy(@Nullable final CartSetBillingAddressCustomTypeAction template) {
         if (template == null) {
             return null;
         }
@@ -110,16 +117,16 @@ public interface CartSetBillingAddressCustomTypeAction extends CartUpdateAction 
     public static CartSetBillingAddressCustomTypeActionBuilder builder() {
         return CartSetBillingAddressCustomTypeActionBuilder.of();
     }
-
+    
     /**
      * create builder for CartSetBillingAddressCustomTypeAction instance
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static CartSetBillingAddressCustomTypeActionBuilder builder(
-            final CartSetBillingAddressCustomTypeAction template) {
+    public static CartSetBillingAddressCustomTypeActionBuilder builder(final CartSetBillingAddressCustomTypeAction template) {
         return CartSetBillingAddressCustomTypeActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -130,7 +137,7 @@ public interface CartSetBillingAddressCustomTypeAction extends CartUpdateAction 
     default <T> T withCartSetBillingAddressCustomTypeAction(Function<CartSetBillingAddressCustomTypeAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

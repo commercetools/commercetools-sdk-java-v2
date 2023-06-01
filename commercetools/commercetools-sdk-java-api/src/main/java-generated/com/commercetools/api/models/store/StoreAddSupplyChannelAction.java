@@ -1,19 +1,21 @@
-
 package com.commercetools.api.models.store;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
 import com.commercetools.api.models.channel.ChannelResourceIdentifier;
+import com.commercetools.api.models.store.StoreUpdateAction;
+import com.commercetools.api.models.store.StoreAddSupplyChannelActionImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>This action has no effect if a given supply channel is already present in a Store.</p>
@@ -28,9 +30,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .supplyChannel(supplyChannelBuilder -> supplyChannelBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = StoreAddSupplyChannelActionImpl.class)
 public interface StoreAddSupplyChannelAction extends StoreUpdateAction {
 
@@ -52,16 +57,18 @@ public interface StoreAddSupplyChannelAction extends StoreUpdateAction {
      *  <p>Value to append.</p>
      * @param supplyChannel value to be set
      */
-
+    
     public void setSupplyChannel(final ChannelResourceIdentifier supplyChannel);
+    
 
     /**
      * factory method
      * @return instance of StoreAddSupplyChannelAction
      */
-    public static StoreAddSupplyChannelAction of() {
+    public static StoreAddSupplyChannelAction of(){
         return new StoreAddSupplyChannelActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy StoreAddSupplyChannelAction
@@ -85,8 +92,7 @@ public interface StoreAddSupplyChannelAction extends StoreUpdateAction {
             return null;
         }
         StoreAddSupplyChannelActionImpl instance = new StoreAddSupplyChannelActionImpl();
-        instance.setSupplyChannel(
-            com.commercetools.api.models.channel.ChannelResourceIdentifier.deepCopy(template.getSupplyChannel()));
+        instance.setSupplyChannel(com.commercetools.api.models.channel.ChannelResourceIdentifier.deepCopy(template.getSupplyChannel()));
         return instance;
     }
 
@@ -97,7 +103,7 @@ public interface StoreAddSupplyChannelAction extends StoreUpdateAction {
     public static StoreAddSupplyChannelActionBuilder builder() {
         return StoreAddSupplyChannelActionBuilder.of();
     }
-
+    
     /**
      * create builder for StoreAddSupplyChannelAction instance
      * @param template instance with prefilled values for the builder
@@ -106,6 +112,7 @@ public interface StoreAddSupplyChannelAction extends StoreUpdateAction {
     public static StoreAddSupplyChannelActionBuilder builder(final StoreAddSupplyChannelAction template) {
         return StoreAddSupplyChannelActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -116,7 +123,7 @@ public interface StoreAddSupplyChannelAction extends StoreUpdateAction {
     default <T> T withStoreAddSupplyChannelAction(Function<StoreAddSupplyChannelAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

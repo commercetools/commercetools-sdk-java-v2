@@ -1,11 +1,12 @@
-
 package com.commercetools.api.models.channel;
 
+import com.commercetools.api.models.channel.ChannelUpdateAction;
+import com.commercetools.api.models.common.GeoJson;
+import com.commercetools.api.models.channel.ChannelSetGeoLocationAction;
+import javax.annotation.Nullable;
 import java.util.*;
 import java.util.function.Function;
-
-import javax.annotation.Nullable;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -18,45 +19,50 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     ChannelSetGeoLocationAction channelSetGeoLocationAction = ChannelSetGeoLocationAction.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class ChannelSetGeoLocationActionBuilder implements Builder<ChannelSetGeoLocationAction> {
 
+    
     @Nullable
     private com.commercetools.api.models.common.GeoJson geoLocation;
 
+    
     /**
      *  <p>Value to set.</p>
      * @param geoLocation value to be set
      * @return Builder
      */
-
-    public ChannelSetGeoLocationActionBuilder geoLocation(
-            @Nullable final com.commercetools.api.models.common.GeoJson geoLocation) {
+    
+    public ChannelSetGeoLocationActionBuilder geoLocation(@Nullable final com.commercetools.api.models.common.GeoJson geoLocation) {
         this.geoLocation = geoLocation;
         return this;
     }
-
+    
+    
     /**
      *  <p>Value to set.</p>
      * @param builder function to build the geoLocation value
      * @return Builder
      */
-
-    public ChannelSetGeoLocationActionBuilder geoLocation(
-            Function<com.commercetools.api.models.common.GeoJsonBuilder, Builder<? extends com.commercetools.api.models.common.GeoJson>> builder) {
+    
+    public ChannelSetGeoLocationActionBuilder geoLocation(Function<com.commercetools.api.models.common.GeoJsonBuilder, Builder<? extends com.commercetools.api.models.common.GeoJson>> builder) {
         this.geoLocation = builder.apply(com.commercetools.api.models.common.GeoJsonBuilder.of()).build();
         return this;
     }
+                    
 
     /**
      *  <p>Value to set.</p>
      * @return geoLocation
      */
-
+    
     @Nullable
-    public com.commercetools.api.models.common.GeoJson getGeoLocation() {
+    public com.commercetools.api.models.common.GeoJson getGeoLocation(){
         return this.geoLocation;
     }
 
@@ -67,7 +73,7 @@ public class ChannelSetGeoLocationActionBuilder implements Builder<ChannelSetGeo
     public ChannelSetGeoLocationAction build() {
         return new ChannelSetGeoLocationActionImpl(geoLocation);
     }
-
+    
     /**
      * builds ChannelSetGeoLocationAction without checking for non-null required values
      * @return ChannelSetGeoLocationAction
@@ -78,7 +84,7 @@ public class ChannelSetGeoLocationActionBuilder implements Builder<ChannelSetGeo
 
     /**
      * factory method for an instance of ChannelSetGeoLocationActionBuilder
-     * @return builder
+     * @return builder 
      */
     public static ChannelSetGeoLocationActionBuilder of() {
         return new ChannelSetGeoLocationActionBuilder();

@@ -1,16 +1,20 @@
-
 package com.commercetools.api.models.customer;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
+import com.commercetools.api.models.customer.CustomerUpdateAction;
+import com.commercetools.api.models.customer.CustomerSetKeyActionImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * CustomerSetKeyAction
@@ -22,9 +26,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     CustomerSetKeyAction customerSetKeyAction = CustomerSetKeyAction.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = CustomerSetKeyActionImpl.class)
 public interface CustomerSetKeyAction extends CustomerUpdateAction {
 
@@ -37,7 +44,7 @@ public interface CustomerSetKeyAction extends CustomerUpdateAction {
      *  <p>If <code>key</code> is absent or <code>null</code>, the existing key, if any, will be removed.</p>
      * @return key
      */
-
+    
     @JsonProperty("key")
     public String getKey();
 
@@ -45,16 +52,18 @@ public interface CustomerSetKeyAction extends CustomerUpdateAction {
      *  <p>If <code>key</code> is absent or <code>null</code>, the existing key, if any, will be removed.</p>
      * @param key value to be set
      */
-
+    
     public void setKey(final String key);
+    
 
     /**
      * factory method
      * @return instance of CustomerSetKeyAction
      */
-    public static CustomerSetKeyAction of() {
+    public static CustomerSetKeyAction of(){
         return new CustomerSetKeyActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy CustomerSetKeyAction
@@ -89,7 +98,7 @@ public interface CustomerSetKeyAction extends CustomerUpdateAction {
     public static CustomerSetKeyActionBuilder builder() {
         return CustomerSetKeyActionBuilder.of();
     }
-
+    
     /**
      * create builder for CustomerSetKeyAction instance
      * @param template instance with prefilled values for the builder
@@ -98,6 +107,7 @@ public interface CustomerSetKeyAction extends CustomerUpdateAction {
     public static CustomerSetKeyActionBuilder builder(final CustomerSetKeyAction template) {
         return CustomerSetKeyActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -108,11 +118,11 @@ public interface CustomerSetKeyAction extends CustomerUpdateAction {
     default <T> T withCustomerSetKeyAction(Function<CustomerSetKeyAction, T> helper) {
         return helper.apply(this);
     }
-
     public static CustomerSetKeyAction ofUnset() {
         return CustomerSetKeyAction.of();
     }
-
+    
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

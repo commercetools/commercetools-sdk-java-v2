@@ -1,9 +1,11 @@
-
 package com.commercetools.api.models.store;
 
+import com.commercetools.api.models.product_selection.ProductSelectionReference;
+import com.commercetools.api.models.store.ProductSelectionSetting;
+import javax.annotation.Nullable;
 import java.util.*;
 import java.util.function.Function;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -18,80 +20,89 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .active(true)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class ProductSelectionSettingBuilder implements Builder<ProductSelectionSetting> {
 
+    
+    
     private com.commercetools.api.models.product_selection.ProductSelectionReference productSelection;
-
+    
+    
+    
     private Boolean active;
 
+    
     /**
      *  <p>Reference to a ProductSelection.</p>
      * @param builder function to build the productSelection value
      * @return Builder
      */
-
-    public ProductSelectionSettingBuilder productSelection(
-            Function<com.commercetools.api.models.product_selection.ProductSelectionReferenceBuilder, com.commercetools.api.models.product_selection.ProductSelectionReferenceBuilder> builder) {
-        this.productSelection = builder
-                .apply(com.commercetools.api.models.product_selection.ProductSelectionReferenceBuilder.of())
-                .build();
+    
+    public ProductSelectionSettingBuilder productSelection(Function<com.commercetools.api.models.product_selection.ProductSelectionReferenceBuilder, com.commercetools.api.models.product_selection.ProductSelectionReferenceBuilder> builder) {
+        this.productSelection = builder.apply(com.commercetools.api.models.product_selection.ProductSelectionReferenceBuilder.of()).build();
         return this;
     }
-
+    
     /**
      *  <p>Reference to a ProductSelection.</p>
      * @param builder function to build the productSelection value
      * @return Builder
      */
-
-    public ProductSelectionSettingBuilder withProductSelection(
-            Function<com.commercetools.api.models.product_selection.ProductSelectionReferenceBuilder, com.commercetools.api.models.product_selection.ProductSelectionReference> builder) {
-        this.productSelection = builder
-                .apply(com.commercetools.api.models.product_selection.ProductSelectionReferenceBuilder.of());
+    
+    public ProductSelectionSettingBuilder withProductSelection(Function<com.commercetools.api.models.product_selection.ProductSelectionReferenceBuilder, com.commercetools.api.models.product_selection.ProductSelectionReference> builder) {
+        this.productSelection = builder.apply(com.commercetools.api.models.product_selection.ProductSelectionReferenceBuilder.of());
         return this;
     }
-
+                    
     /**
      *  <p>Reference to a ProductSelection.</p>
      * @param productSelection value to be set
      * @return Builder
      */
-
-    public ProductSelectionSettingBuilder productSelection(
-            final com.commercetools.api.models.product_selection.ProductSelectionReference productSelection) {
+    
+    public ProductSelectionSettingBuilder productSelection( final com.commercetools.api.models.product_selection.ProductSelectionReference productSelection) {
         this.productSelection = productSelection;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>If <code>true</code>, all Products assigned to this Product Selection are part of the Store's assortment.</p>
      * @param active value to be set
      * @return Builder
      */
-
-    public ProductSelectionSettingBuilder active(final Boolean active) {
+    
+    public ProductSelectionSettingBuilder active( final Boolean active) {
         this.active = active;
         return this;
     }
+    
+    
 
     /**
      *  <p>Reference to a ProductSelection.</p>
      * @return productSelection
      */
-
-    public com.commercetools.api.models.product_selection.ProductSelectionReference getProductSelection() {
+    
+    
+    public com.commercetools.api.models.product_selection.ProductSelectionReference getProductSelection(){
         return this.productSelection;
     }
-
+    
     /**
      *  <p>If <code>true</code>, all Products assigned to this Product Selection are part of the Store's assortment.</p>
      * @return active
      */
-
-    public Boolean getActive() {
+    
+    
+    public Boolean getActive(){
         return this.active;
     }
 
@@ -104,7 +115,7 @@ public class ProductSelectionSettingBuilder implements Builder<ProductSelectionS
         Objects.requireNonNull(active, ProductSelectionSetting.class + ": active is missing");
         return new ProductSelectionSettingImpl(productSelection, active);
     }
-
+    
     /**
      * builds ProductSelectionSetting without checking for non-null required values
      * @return ProductSelectionSetting
@@ -115,7 +126,7 @@ public class ProductSelectionSettingBuilder implements Builder<ProductSelectionS
 
     /**
      * factory method for an instance of ProductSelectionSettingBuilder
-     * @return builder
+     * @return builder 
      */
     public static ProductSelectionSettingBuilder of() {
         return new ProductSelectionSettingBuilder();

@@ -1,9 +1,11 @@
-
 package com.commercetools.api.predicates.query.common;
 
 import com.commercetools.api.predicates.query.*;
 
-public class AssetDimensionsQueryBuilderDsl {
+import java.util.function.Function;
+
+
+public class AssetDimensionsQueryBuilderDsl  {
     public AssetDimensionsQueryBuilderDsl() {
     }
 
@@ -13,12 +15,11 @@ public class AssetDimensionsQueryBuilderDsl {
 
     public LongComparisonPredicateBuilder<AssetDimensionsQueryBuilderDsl> w() {
         return new LongComparisonPredicateBuilder<>(BinaryQueryPredicate.of().left(new ConstantQueryPredicate("w")),
-            p -> new CombinationQueryPredicate<>(p, AssetDimensionsQueryBuilderDsl::of));
+        p -> new CombinationQueryPredicate<>(p, AssetDimensionsQueryBuilderDsl::of));
     }
-
     public LongComparisonPredicateBuilder<AssetDimensionsQueryBuilderDsl> h() {
         return new LongComparisonPredicateBuilder<>(BinaryQueryPredicate.of().left(new ConstantQueryPredicate("h")),
-            p -> new CombinationQueryPredicate<>(p, AssetDimensionsQueryBuilderDsl::of));
+        p -> new CombinationQueryPredicate<>(p, AssetDimensionsQueryBuilderDsl::of));
     }
-
+    
 }

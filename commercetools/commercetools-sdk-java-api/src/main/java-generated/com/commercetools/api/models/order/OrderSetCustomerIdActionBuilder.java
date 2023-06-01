@@ -1,10 +1,11 @@
-
 package com.commercetools.api.models.order;
 
-import java.util.*;
-
+import com.commercetools.api.models.order.OrderUpdateAction;
+import com.commercetools.api.models.order.OrderSetCustomerIdAction;
 import javax.annotation.Nullable;
-
+import java.util.*;
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -17,32 +18,39 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     OrderSetCustomerIdAction orderSetCustomerIdAction = OrderSetCustomerIdAction.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class OrderSetCustomerIdActionBuilder implements Builder<OrderSetCustomerIdAction> {
 
+    
     @Nullable
     private String customerId;
 
+    
     /**
      * set the value to the customerId
      * @param customerId value to be set
      * @return Builder
      */
-
+    
     public OrderSetCustomerIdActionBuilder customerId(@Nullable final String customerId) {
         this.customerId = customerId;
         return this;
     }
+    
+    
 
     /**
      * value of customerId}
      * @return customerId
      */
-
+    
     @Nullable
-    public String getCustomerId() {
+    public String getCustomerId(){
         return this.customerId;
     }
 
@@ -53,7 +61,7 @@ public class OrderSetCustomerIdActionBuilder implements Builder<OrderSetCustomer
     public OrderSetCustomerIdAction build() {
         return new OrderSetCustomerIdActionImpl(customerId);
     }
-
+    
     /**
      * builds OrderSetCustomerIdAction without checking for non-null required values
      * @return OrderSetCustomerIdAction
@@ -64,7 +72,7 @@ public class OrderSetCustomerIdActionBuilder implements Builder<OrderSetCustomer
 
     /**
      * factory method for an instance of OrderSetCustomerIdActionBuilder
-     * @return builder
+     * @return builder 
      */
     public static OrderSetCustomerIdActionBuilder of() {
         return new OrderSetCustomerIdActionBuilder();

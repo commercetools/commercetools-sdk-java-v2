@@ -1,10 +1,11 @@
-
 package com.commercetools.api.models.product;
 
-import java.util.*;
-
+import com.commercetools.api.models.product.ProductUpdateAction;
+import com.commercetools.api.models.product.ProductSetCategoryOrderHintAction;
 import javax.annotation.Nullable;
-
+import java.util.*;
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -18,78 +19,95 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .categoryId("{categoryId}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class ProductSetCategoryOrderHintActionBuilder implements Builder<ProductSetCategoryOrderHintAction> {
 
+    
+    
     private String categoryId;
-
+    
+    
     @Nullable
     private String orderHint;
-
+    
+    
     @Nullable
     private Boolean staged;
 
+    
     /**
      *  <p>The <code>id</code> of the Category to add the <code>orderHint</code>.</p>
      * @param categoryId value to be set
      * @return Builder
      */
-
-    public ProductSetCategoryOrderHintActionBuilder categoryId(final String categoryId) {
+    
+    public ProductSetCategoryOrderHintActionBuilder categoryId( final String categoryId) {
         this.categoryId = categoryId;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>A string representing a number between 0 and 1. Must start with <code>0.</code> and cannot end with <code>0</code>. If empty, any existing value will be removed.</p>
      * @param orderHint value to be set
      * @return Builder
      */
-
+    
     public ProductSetCategoryOrderHintActionBuilder orderHint(@Nullable final String orderHint) {
         this.orderHint = orderHint;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>If <code>true</code>, only the staged <code>categoryOrderHints</code> is updated. If <code>false</code>, both the current and staged <code>categoryOrderHints</code> are updated.</p>
      * @param staged value to be set
      * @return Builder
      */
-
+    
     public ProductSetCategoryOrderHintActionBuilder staged(@Nullable final Boolean staged) {
         this.staged = staged;
         return this;
     }
+    
+    
 
     /**
      *  <p>The <code>id</code> of the Category to add the <code>orderHint</code>.</p>
      * @return categoryId
      */
-
-    public String getCategoryId() {
+    
+    
+    public String getCategoryId(){
         return this.categoryId;
     }
-
+    
     /**
      *  <p>A string representing a number between 0 and 1. Must start with <code>0.</code> and cannot end with <code>0</code>. If empty, any existing value will be removed.</p>
      * @return orderHint
      */
-
+    
     @Nullable
-    public String getOrderHint() {
+    public String getOrderHint(){
         return this.orderHint;
     }
-
+    
     /**
      *  <p>If <code>true</code>, only the staged <code>categoryOrderHints</code> is updated. If <code>false</code>, both the current and staged <code>categoryOrderHints</code> are updated.</p>
      * @return staged
      */
-
+    
     @Nullable
-    public Boolean getStaged() {
+    public Boolean getStaged(){
         return this.staged;
     }
 
@@ -101,7 +119,7 @@ public class ProductSetCategoryOrderHintActionBuilder implements Builder<Product
         Objects.requireNonNull(categoryId, ProductSetCategoryOrderHintAction.class + ": categoryId is missing");
         return new ProductSetCategoryOrderHintActionImpl(categoryId, orderHint, staged);
     }
-
+    
     /**
      * builds ProductSetCategoryOrderHintAction without checking for non-null required values
      * @return ProductSetCategoryOrderHintAction
@@ -112,7 +130,7 @@ public class ProductSetCategoryOrderHintActionBuilder implements Builder<Product
 
     /**
      * factory method for an instance of ProductSetCategoryOrderHintActionBuilder
-     * @return builder
+     * @return builder 
      */
     public static ProductSetCategoryOrderHintActionBuilder of() {
         return new ProductSetCategoryOrderHintActionBuilder();

@@ -1,59 +1,73 @@
-
 package com.commercetools.api.models.cart;
 
-import java.time.*;
-import java.util.*;
-
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
-
-import io.vrap.rmf.base.client.ModelBase;
+import com.commercetools.api.models.cart.CustomLineItemPriceMode;
+import com.commercetools.api.models.cart.ItemShippingDetailsDraft;
+import com.commercetools.api.models.common.LocalizedString;
+import com.commercetools.api.models.common.Money;
+import com.commercetools.api.models.order.ItemState;
+import com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifier;
+import com.commercetools.api.models.tax_category.TaxRate;
+import com.commercetools.api.models.type.CustomFieldsDraft;
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.ModelBase;
+import javax.validation.Valid;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.annotation.*;
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
  * CustomLineItemImportDraft
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class CustomLineItemImportDraftImpl implements CustomLineItemImportDraft, ModelBase {
 
+    
     private com.commercetools.api.models.common.LocalizedString name;
-
+    
+    
     private Long quantity;
-
+    
+    
     private com.commercetools.api.models.common.Money money;
-
+    
+    
     private String slug;
-
+    
+    
     private java.util.List<com.commercetools.api.models.order.ItemState> state;
-
+    
+    
     private com.commercetools.api.models.tax_category.TaxRate taxRate;
-
+    
+    
     private com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifier taxCategory;
-
+    
+    
     private com.commercetools.api.models.type.CustomFieldsDraft custom;
-
+    
+    
     private com.commercetools.api.models.cart.ItemShippingDetailsDraft shippingDetails;
-
+    
+    
     private com.commercetools.api.models.cart.CustomLineItemPriceMode priceMode;
 
     /**
      * create instance with all properties
      */
     @JsonCreator
-    CustomLineItemImportDraftImpl(@JsonProperty("name") final com.commercetools.api.models.common.LocalizedString name,
-            @JsonProperty("quantity") final Long quantity,
-            @JsonProperty("money") final com.commercetools.api.models.common.Money money,
-            @JsonProperty("slug") final String slug,
-            @JsonProperty("state") final java.util.List<com.commercetools.api.models.order.ItemState> state,
-            @JsonProperty("taxRate") final com.commercetools.api.models.tax_category.TaxRate taxRate,
-            @JsonProperty("taxCategory") final com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifier taxCategory,
-            @JsonProperty("custom") final com.commercetools.api.models.type.CustomFieldsDraft custom,
-            @JsonProperty("shippingDetails") final com.commercetools.api.models.cart.ItemShippingDetailsDraft shippingDetails,
-            @JsonProperty("priceMode") final com.commercetools.api.models.cart.CustomLineItemPriceMode priceMode) {
+    CustomLineItemImportDraftImpl(@JsonProperty("name") final com.commercetools.api.models.common.LocalizedString name, @JsonProperty("quantity") final Long quantity, @JsonProperty("money") final com.commercetools.api.models.common.Money money, @JsonProperty("slug") final String slug, @JsonProperty("state") final java.util.List<com.commercetools.api.models.order.ItemState> state, @JsonProperty("taxRate") final com.commercetools.api.models.tax_category.TaxRate taxRate, @JsonProperty("taxCategory") final com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifier taxCategory, @JsonProperty("custom") final com.commercetools.api.models.type.CustomFieldsDraft custom, @JsonProperty("shippingDetails") final com.commercetools.api.models.cart.ItemShippingDetailsDraft shippingDetails, @JsonProperty("priceMode") final com.commercetools.api.models.cart.CustomLineItemPriceMode priceMode) {
         this.name = name;
         this.quantity = quantity;
         this.money = money;
@@ -65,7 +79,6 @@ public class CustomLineItemImportDraftImpl implements CustomLineItemImportDraft,
         this.shippingDetails = shippingDetails;
         this.priceMode = priceMode;
     }
-
     /**
      * create empty instance
      */
@@ -75,142 +88,151 @@ public class CustomLineItemImportDraftImpl implements CustomLineItemImportDraft,
     /**
      *
      */
-
-    public com.commercetools.api.models.common.LocalizedString getName() {
+    
+    public com.commercetools.api.models.common.LocalizedString getName(){
         return this.name;
     }
-
+    
     /**
      *  <p>The amount of a CustomLineItem in the cart. Must be a positive integer.</p>
      */
-
-    public Long getQuantity() {
+    
+    public Long getQuantity(){
         return this.quantity;
     }
-
+    
     /**
      *  <p>The cost to add to the cart. The amount can be negative.</p>
      */
-
-    public com.commercetools.api.models.common.Money getMoney() {
+    
+    public com.commercetools.api.models.common.Money getMoney(){
         return this.money;
     }
-
+    
     /**
      *
      */
-
-    public String getSlug() {
+    
+    public String getSlug(){
         return this.slug;
     }
-
+    
     /**
      *
      */
-
-    public java.util.List<com.commercetools.api.models.order.ItemState> getState() {
+    
+    public java.util.List<com.commercetools.api.models.order.ItemState> getState(){
         return this.state;
     }
-
+    
     /**
      *
      */
-
-    public com.commercetools.api.models.tax_category.TaxRate getTaxRate() {
+    
+    public com.commercetools.api.models.tax_category.TaxRate getTaxRate(){
         return this.taxRate;
     }
-
+    
     /**
      *
      */
-
-    public com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifier getTaxCategory() {
+    
+    public com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifier getTaxCategory(){
         return this.taxCategory;
     }
-
+    
     /**
      *  <p>The custom fields.</p>
      */
-
-    public com.commercetools.api.models.type.CustomFieldsDraft getCustom() {
+    
+    public com.commercetools.api.models.type.CustomFieldsDraft getCustom(){
         return this.custom;
     }
-
+    
     /**
      *
      */
-
-    public com.commercetools.api.models.cart.ItemShippingDetailsDraft getShippingDetails() {
+    
+    public com.commercetools.api.models.cart.ItemShippingDetailsDraft getShippingDetails(){
         return this.shippingDetails;
     }
-
+    
     /**
      *  <ul>
      *   <li>If <code>Standard</code>, Cart Discounts with a matching CartDiscountCustomLineItemsTarget are applied to the Custom Line Item.</li>
      *   <li>If <code>External</code>, Cart Discounts are not considered on the Custom Line Item.</li>
      *  </ul>
      */
-
-    public com.commercetools.api.models.cart.CustomLineItemPriceMode getPriceMode() {
+    
+    public com.commercetools.api.models.cart.CustomLineItemPriceMode getPriceMode(){
         return this.priceMode;
     }
 
-    public void setName(final com.commercetools.api.models.common.LocalizedString name) {
+    
+    public void setName(final com.commercetools.api.models.common.LocalizedString name){
         this.name = name;
     }
-
-    public void setQuantity(final Long quantity) {
+    
+    
+    public void setQuantity(final Long quantity){
         this.quantity = quantity;
     }
-
-    public void setMoney(final com.commercetools.api.models.common.Money money) {
+    
+    
+    public void setMoney(final com.commercetools.api.models.common.Money money){
         this.money = money;
     }
-
-    public void setSlug(final String slug) {
+    
+    
+    public void setSlug(final String slug){
         this.slug = slug;
     }
-
-    public void setState(final com.commercetools.api.models.order.ItemState... state) {
-        this.state = new ArrayList<>(Arrays.asList(state));
+    
+    
+    public void setState(final com.commercetools.api.models.order.ItemState ...state){
+       this.state = new ArrayList<>(Arrays.asList(state));
     }
-
-    public void setState(final java.util.List<com.commercetools.api.models.order.ItemState> state) {
-        this.state = state;
+    
+    
+    public void setState(final java.util.List<com.commercetools.api.models.order.ItemState> state){
+       this.state = state;
     }
-
-    public void setTaxRate(final com.commercetools.api.models.tax_category.TaxRate taxRate) {
+    
+    
+    public void setTaxRate(final com.commercetools.api.models.tax_category.TaxRate taxRate){
         this.taxRate = taxRate;
     }
-
-    public void setTaxCategory(
-            final com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifier taxCategory) {
+    
+    
+    public void setTaxCategory(final com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifier taxCategory){
         this.taxCategory = taxCategory;
     }
-
-    public void setCustom(final com.commercetools.api.models.type.CustomFieldsDraft custom) {
+    
+    
+    public void setCustom(final com.commercetools.api.models.type.CustomFieldsDraft custom){
         this.custom = custom;
     }
-
-    public void setShippingDetails(final com.commercetools.api.models.cart.ItemShippingDetailsDraft shippingDetails) {
+    
+    
+    public void setShippingDetails(final com.commercetools.api.models.cart.ItemShippingDetailsDraft shippingDetails){
         this.shippingDetails = shippingDetails;
     }
-
-    public void setPriceMode(final com.commercetools.api.models.cart.CustomLineItemPriceMode priceMode) {
+    
+    
+    public void setPriceMode(final com.commercetools.api.models.cart.CustomLineItemPriceMode priceMode){
         this.priceMode = priceMode;
     }
 
     @Override
     public boolean equals(Object o) {
-        if (this == o)
-            return true;
-
-        if (o == null || getClass() != o.getClass())
-            return false;
-
+        if (this == o) return true;
+    
+        if (o == null || getClass() != o.getClass()) return false;
+    
         CustomLineItemImportDraftImpl that = (CustomLineItemImportDraftImpl) o;
-
-        return new EqualsBuilder().append(name, that.name)
+    
+        return new EqualsBuilder()
+                .append(name, that.name)
                 .append(quantity, that.quantity)
                 .append(money, that.money)
                 .append(slug, that.slug)
@@ -222,20 +244,21 @@ public class CustomLineItemImportDraftImpl implements CustomLineItemImportDraft,
                 .append(priceMode, that.priceMode)
                 .isEquals();
     }
-
+    
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(name)
-                .append(quantity)
-                .append(money)
-                .append(slug)
-                .append(state)
-                .append(taxRate)
-                .append(taxCategory)
-                .append(custom)
-                .append(shippingDetails)
-                .append(priceMode)
-                .toHashCode();
+        return new HashCodeBuilder(17, 37)
+            .append(name)
+            .append(quantity)
+            .append(money)
+            .append(slug)
+            .append(state)
+            .append(taxRate)
+            .append(taxCategory)
+            .append(custom)
+            .append(shippingDetails)
+            .append(priceMode)
+            .toHashCode();
     }
 
 }

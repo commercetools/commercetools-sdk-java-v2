@@ -1,19 +1,22 @@
-
 package com.commercetools.api.models.zone;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
 import com.commercetools.api.models.common.Reference;
+import com.commercetools.api.models.common.ReferenceTypeId;
+import com.commercetools.api.models.zone.Zone;
+import com.commercetools.api.models.zone.ZoneReferenceImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Reference to a Zone.</p>
@@ -26,9 +29,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .id("{id}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = ZoneReferenceImpl.class)
 public interface ZoneReference extends Reference, com.commercetools.api.models.Identifiable<Zone> {
 
@@ -44,7 +50,6 @@ public interface ZoneReference extends Reference, com.commercetools.api.models.I
     @Valid
     @JsonProperty("obj")
     public Zone getObj();
-
     /**
      *  <p>Unique identifier of the referenced Zone.</p>
      * @return id
@@ -57,23 +62,26 @@ public interface ZoneReference extends Reference, com.commercetools.api.models.I
      *  <p>Contains the representation of the expanded Zone. Only present in responses to requests with Reference Expansion for Zones.</p>
      * @param obj value to be set
      */
-
+    
     public void setObj(final Zone obj);
-
+    
+    
     /**
      *  <p>Unique identifier of the referenced Zone.</p>
      * @param id value to be set
      */
-
+    
     public void setId(final String id);
+    
 
     /**
      * factory method
      * @return instance of ZoneReference
      */
-    public static ZoneReference of() {
+    public static ZoneReference of(){
         return new ZoneReferenceImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy ZoneReference
@@ -110,7 +118,7 @@ public interface ZoneReference extends Reference, com.commercetools.api.models.I
     public static ZoneReferenceBuilder builder() {
         return ZoneReferenceBuilder.of();
     }
-
+    
     /**
      * create builder for ZoneReference instance
      * @param template instance with prefilled values for the builder
@@ -119,6 +127,7 @@ public interface ZoneReference extends Reference, com.commercetools.api.models.I
     public static ZoneReferenceBuilder builder(final ZoneReference template) {
         return ZoneReferenceBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -129,7 +138,7 @@ public interface ZoneReference extends Reference, com.commercetools.api.models.I
     default <T> T withZoneReference(Function<ZoneReference, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

@@ -1,17 +1,21 @@
-
 package com.commercetools.api.models.product_selection;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
+import com.commercetools.api.models.product_selection.ProductVariantSelection;
+import com.commercetools.api.models.product_selection.ProductVariantSelectionTypeEnum;
+import com.commercetools.api.models.product_selection.ProductVariantSelectionIncludeOnlyImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Only Product Variants with explicitly stated SKUs are part of the Product Selection.</p>
@@ -24,9 +28,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .plusSkus(skusBuilder -> skusBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = ProductVariantSelectionIncludeOnlyImpl.class)
 public interface ProductVariantSelectionIncludeOnly extends ProductVariantSelection {
 
@@ -42,7 +49,6 @@ public interface ProductVariantSelectionIncludeOnly extends ProductVariantSelect
     @NotNull
     @JsonProperty("type")
     public ProductVariantSelectionTypeEnum getType();
-
     /**
      *  <p>Non-empty array of SKUs representing Product Variants to be included into the Product Selection.</p>
      * @return skus
@@ -55,24 +61,24 @@ public interface ProductVariantSelectionIncludeOnly extends ProductVariantSelect
      *  <p>Non-empty array of SKUs representing Product Variants to be included into the Product Selection.</p>
      * @param skus values to be set
      */
-
+    
     @JsonIgnore
-    public void setSkus(final String... skus);
-
+    public void setSkus(final String ...skus);
     /**
      *  <p>Non-empty array of SKUs representing Product Variants to be included into the Product Selection.</p>
      * @param skus values to be set
      */
-
+    
     public void setSkus(final List<String> skus);
 
     /**
      * factory method
      * @return instance of ProductVariantSelectionIncludeOnly
      */
-    public static ProductVariantSelectionIncludeOnly of() {
+    public static ProductVariantSelectionIncludeOnly of(){
         return new ProductVariantSelectionIncludeOnlyImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy ProductVariantSelectionIncludeOnly
@@ -91,13 +97,14 @@ public interface ProductVariantSelectionIncludeOnly extends ProductVariantSelect
      * @return copy instance
      */
     @Nullable
-    public static ProductVariantSelectionIncludeOnly deepCopy(
-            @Nullable final ProductVariantSelectionIncludeOnly template) {
+    public static ProductVariantSelectionIncludeOnly deepCopy(@Nullable final ProductVariantSelectionIncludeOnly template) {
         if (template == null) {
             return null;
         }
         ProductVariantSelectionIncludeOnlyImpl instance = new ProductVariantSelectionIncludeOnlyImpl();
-        instance.setSkus(Optional.ofNullable(template.getSkus()).map(ArrayList::new).orElse(null));
+        instance.setSkus(Optional.ofNullable(template.getSkus())
+                .map(ArrayList::new)
+                .orElse(null));
         return instance;
     }
 
@@ -108,7 +115,7 @@ public interface ProductVariantSelectionIncludeOnly extends ProductVariantSelect
     public static ProductVariantSelectionIncludeOnlyBuilder builder() {
         return ProductVariantSelectionIncludeOnlyBuilder.of();
     }
-
+    
     /**
      * create builder for ProductVariantSelectionIncludeOnly instance
      * @param template instance with prefilled values for the builder
@@ -117,6 +124,7 @@ public interface ProductVariantSelectionIncludeOnly extends ProductVariantSelect
     public static ProductVariantSelectionIncludeOnlyBuilder builder(final ProductVariantSelectionIncludeOnly template) {
         return ProductVariantSelectionIncludeOnlyBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -127,7 +135,7 @@ public interface ProductVariantSelectionIncludeOnly extends ProductVariantSelect
     default <T> T withProductVariantSelectionIncludeOnly(Function<ProductVariantSelectionIncludeOnly, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

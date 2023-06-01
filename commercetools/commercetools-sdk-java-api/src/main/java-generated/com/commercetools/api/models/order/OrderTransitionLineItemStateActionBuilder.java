@@ -1,11 +1,13 @@
-
 package com.commercetools.api.models.order;
 
+import com.commercetools.api.models.order.OrderUpdateAction;
+import com.commercetools.api.models.state.StateResourceIdentifier;
+import java.time.ZonedDateTime;
+import com.commercetools.api.models.order.OrderTransitionLineItemStateAction;
+import javax.annotation.Nullable;
 import java.util.*;
 import java.util.function.Function;
-
-import javax.annotation.Nullable;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -22,171 +24,195 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .toState(toStateBuilder -> toStateBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class OrderTransitionLineItemStateActionBuilder implements Builder<OrderTransitionLineItemStateAction> {
 
+    
+    
     private String lineItemId;
-
+    
+    
+    
     private Long quantity;
-
+    
+    
+    
     private com.commercetools.api.models.state.StateResourceIdentifier fromState;
-
+    
+    
+    
     private com.commercetools.api.models.state.StateResourceIdentifier toState;
-
+    
+    
     @Nullable
     private java.time.ZonedDateTime actualTransitionDate;
 
+    
     /**
      * set the value to the lineItemId
      * @param lineItemId value to be set
      * @return Builder
      */
-
-    public OrderTransitionLineItemStateActionBuilder lineItemId(final String lineItemId) {
+    
+    public OrderTransitionLineItemStateActionBuilder lineItemId( final String lineItemId) {
         this.lineItemId = lineItemId;
         return this;
     }
-
+    
+    
+    
+    
     /**
      * set the value to the quantity
      * @param quantity value to be set
      * @return Builder
      */
-
-    public OrderTransitionLineItemStateActionBuilder quantity(final Long quantity) {
+    
+    public OrderTransitionLineItemStateActionBuilder quantity( final Long quantity) {
         this.quantity = quantity;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>ResourceIdentifier to a State.</p>
      * @param builder function to build the fromState value
      * @return Builder
      */
-
-    public OrderTransitionLineItemStateActionBuilder fromState(
-            Function<com.commercetools.api.models.state.StateResourceIdentifierBuilder, com.commercetools.api.models.state.StateResourceIdentifierBuilder> builder) {
+    
+    public OrderTransitionLineItemStateActionBuilder fromState(Function<com.commercetools.api.models.state.StateResourceIdentifierBuilder, com.commercetools.api.models.state.StateResourceIdentifierBuilder> builder) {
         this.fromState = builder.apply(com.commercetools.api.models.state.StateResourceIdentifierBuilder.of()).build();
         return this;
     }
-
+    
     /**
      *  <p>ResourceIdentifier to a State.</p>
      * @param builder function to build the fromState value
      * @return Builder
      */
-
-    public OrderTransitionLineItemStateActionBuilder withFromState(
-            Function<com.commercetools.api.models.state.StateResourceIdentifierBuilder, com.commercetools.api.models.state.StateResourceIdentifier> builder) {
+    
+    public OrderTransitionLineItemStateActionBuilder withFromState(Function<com.commercetools.api.models.state.StateResourceIdentifierBuilder, com.commercetools.api.models.state.StateResourceIdentifier> builder) {
         this.fromState = builder.apply(com.commercetools.api.models.state.StateResourceIdentifierBuilder.of());
         return this;
     }
-
+                    
     /**
      *  <p>ResourceIdentifier to a State.</p>
      * @param fromState value to be set
      * @return Builder
      */
-
-    public OrderTransitionLineItemStateActionBuilder fromState(
-            final com.commercetools.api.models.state.StateResourceIdentifier fromState) {
+    
+    public OrderTransitionLineItemStateActionBuilder fromState( final com.commercetools.api.models.state.StateResourceIdentifier fromState) {
         this.fromState = fromState;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>ResourceIdentifier to a State.</p>
      * @param builder function to build the toState value
      * @return Builder
      */
-
-    public OrderTransitionLineItemStateActionBuilder toState(
-            Function<com.commercetools.api.models.state.StateResourceIdentifierBuilder, com.commercetools.api.models.state.StateResourceIdentifierBuilder> builder) {
+    
+    public OrderTransitionLineItemStateActionBuilder toState(Function<com.commercetools.api.models.state.StateResourceIdentifierBuilder, com.commercetools.api.models.state.StateResourceIdentifierBuilder> builder) {
         this.toState = builder.apply(com.commercetools.api.models.state.StateResourceIdentifierBuilder.of()).build();
         return this;
     }
-
+    
     /**
      *  <p>ResourceIdentifier to a State.</p>
      * @param builder function to build the toState value
      * @return Builder
      */
-
-    public OrderTransitionLineItemStateActionBuilder withToState(
-            Function<com.commercetools.api.models.state.StateResourceIdentifierBuilder, com.commercetools.api.models.state.StateResourceIdentifier> builder) {
+    
+    public OrderTransitionLineItemStateActionBuilder withToState(Function<com.commercetools.api.models.state.StateResourceIdentifierBuilder, com.commercetools.api.models.state.StateResourceIdentifier> builder) {
         this.toState = builder.apply(com.commercetools.api.models.state.StateResourceIdentifierBuilder.of());
         return this;
     }
-
+                    
     /**
      *  <p>ResourceIdentifier to a State.</p>
      * @param toState value to be set
      * @return Builder
      */
-
-    public OrderTransitionLineItemStateActionBuilder toState(
-            final com.commercetools.api.models.state.StateResourceIdentifier toState) {
+    
+    public OrderTransitionLineItemStateActionBuilder toState( final com.commercetools.api.models.state.StateResourceIdentifier toState) {
         this.toState = toState;
         return this;
     }
-
+    
+    
+    
+    
     /**
      * set the value to the actualTransitionDate
      * @param actualTransitionDate value to be set
      * @return Builder
      */
-
-    public OrderTransitionLineItemStateActionBuilder actualTransitionDate(
-            @Nullable final java.time.ZonedDateTime actualTransitionDate) {
+    
+    public OrderTransitionLineItemStateActionBuilder actualTransitionDate(@Nullable final java.time.ZonedDateTime actualTransitionDate) {
         this.actualTransitionDate = actualTransitionDate;
         return this;
     }
+    
+    
 
     /**
      * value of lineItemId}
      * @return lineItemId
      */
-
-    public String getLineItemId() {
+    
+    
+    public String getLineItemId(){
         return this.lineItemId;
     }
-
+    
     /**
      * value of quantity}
      * @return quantity
      */
-
-    public Long getQuantity() {
+    
+    
+    public Long getQuantity(){
         return this.quantity;
     }
-
+    
     /**
      *  <p>ResourceIdentifier to a State.</p>
      * @return fromState
      */
-
-    public com.commercetools.api.models.state.StateResourceIdentifier getFromState() {
+    
+    
+    public com.commercetools.api.models.state.StateResourceIdentifier getFromState(){
         return this.fromState;
     }
-
+    
     /**
      *  <p>ResourceIdentifier to a State.</p>
      * @return toState
      */
-
-    public com.commercetools.api.models.state.StateResourceIdentifier getToState() {
+    
+    
+    public com.commercetools.api.models.state.StateResourceIdentifier getToState(){
         return this.toState;
     }
-
+    
     /**
      * value of actualTransitionDate}
      * @return actualTransitionDate
      */
-
+    
     @Nullable
-    public java.time.ZonedDateTime getActualTransitionDate() {
+    public java.time.ZonedDateTime getActualTransitionDate(){
         return this.actualTransitionDate;
     }
 
@@ -199,22 +225,20 @@ public class OrderTransitionLineItemStateActionBuilder implements Builder<OrderT
         Objects.requireNonNull(quantity, OrderTransitionLineItemStateAction.class + ": quantity is missing");
         Objects.requireNonNull(fromState, OrderTransitionLineItemStateAction.class + ": fromState is missing");
         Objects.requireNonNull(toState, OrderTransitionLineItemStateAction.class + ": toState is missing");
-        return new OrderTransitionLineItemStateActionImpl(lineItemId, quantity, fromState, toState,
-            actualTransitionDate);
+        return new OrderTransitionLineItemStateActionImpl(lineItemId, quantity, fromState, toState, actualTransitionDate);
     }
-
+    
     /**
      * builds OrderTransitionLineItemStateAction without checking for non-null required values
      * @return OrderTransitionLineItemStateAction
      */
     public OrderTransitionLineItemStateAction buildUnchecked() {
-        return new OrderTransitionLineItemStateActionImpl(lineItemId, quantity, fromState, toState,
-            actualTransitionDate);
+        return new OrderTransitionLineItemStateActionImpl(lineItemId, quantity, fromState, toState, actualTransitionDate);
     }
 
     /**
      * factory method for an instance of OrderTransitionLineItemStateActionBuilder
-     * @return builder
+     * @return builder 
      */
     public static OrderTransitionLineItemStateActionBuilder of() {
         return new OrderTransitionLineItemStateActionBuilder();

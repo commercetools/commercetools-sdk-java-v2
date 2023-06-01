@@ -1,39 +1,45 @@
-
 package com.commercetools.api.models.cart;
 
-import java.time.*;
-import java.util.*;
-
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
-
-import io.vrap.rmf.base.client.ModelBase;
+import com.commercetools.api.models.common.Money;
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.ModelBase;
+import javax.validation.Valid;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.annotation.*;
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
  * ExternalLineItemTotalPrice
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class ExternalLineItemTotalPriceImpl implements ExternalLineItemTotalPrice, ModelBase {
 
+    
     private com.commercetools.api.models.common.Money price;
-
+    
+    
     private com.commercetools.api.models.common.Money totalPrice;
 
     /**
      * create instance with all properties
      */
     @JsonCreator
-    ExternalLineItemTotalPriceImpl(@JsonProperty("price") final com.commercetools.api.models.common.Money price,
-            @JsonProperty("totalPrice") final com.commercetools.api.models.common.Money totalPrice) {
+    ExternalLineItemTotalPriceImpl(@JsonProperty("price") final com.commercetools.api.models.common.Money price, @JsonProperty("totalPrice") final com.commercetools.api.models.common.Money totalPrice) {
         this.price = price;
         this.totalPrice = totalPrice;
     }
-
     /**
      * create empty instance
      */
@@ -44,43 +50,49 @@ public class ExternalLineItemTotalPriceImpl implements ExternalLineItemTotalPric
      *  <p>Price of the Line Item.</p>
      *  <p>The value is selected from the Product Variant according to the Product <code>priceMode</code>.</p>
      */
-
-    public com.commercetools.api.models.common.Money getPrice() {
+    
+    public com.commercetools.api.models.common.Money getPrice(){
         return this.price;
     }
-
+    
     /**
      *  <p>Total price of the Line Item.</p>
      */
-
-    public com.commercetools.api.models.common.Money getTotalPrice() {
+    
+    public com.commercetools.api.models.common.Money getTotalPrice(){
         return this.totalPrice;
     }
 
-    public void setPrice(final com.commercetools.api.models.common.Money price) {
+    
+    public void setPrice(final com.commercetools.api.models.common.Money price){
         this.price = price;
     }
-
-    public void setTotalPrice(final com.commercetools.api.models.common.Money totalPrice) {
+    
+    
+    public void setTotalPrice(final com.commercetools.api.models.common.Money totalPrice){
         this.totalPrice = totalPrice;
     }
 
     @Override
     public boolean equals(Object o) {
-        if (this == o)
-            return true;
-
-        if (o == null || getClass() != o.getClass())
-            return false;
-
+        if (this == o) return true;
+    
+        if (o == null || getClass() != o.getClass()) return false;
+    
         ExternalLineItemTotalPriceImpl that = (ExternalLineItemTotalPriceImpl) o;
-
-        return new EqualsBuilder().append(price, that.price).append(totalPrice, that.totalPrice).isEquals();
+    
+        return new EqualsBuilder()
+                .append(price, that.price)
+                .append(totalPrice, that.totalPrice)
+                .isEquals();
     }
-
+    
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(price).append(totalPrice).toHashCode();
+        return new HashCodeBuilder(17, 37)
+            .append(price)
+            .append(totalPrice)
+            .toHashCode();
     }
 
 }

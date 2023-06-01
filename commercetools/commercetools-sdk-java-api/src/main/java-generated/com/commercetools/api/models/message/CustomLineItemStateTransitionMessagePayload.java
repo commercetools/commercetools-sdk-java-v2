@@ -1,20 +1,22 @@
-
 package com.commercetools.api.models.message;
 
-import java.time.*;
-import java.time.ZonedDateTime;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
+import com.commercetools.api.models.message.OrderMessagePayload;
 import com.commercetools.api.models.state.StateReference;
+import java.time.ZonedDateTime;
+import com.commercetools.api.models.message.CustomLineItemStateTransitionMessagePayloadImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Generated after a successful Transition Custom Line Item State update action.</p>
@@ -31,9 +33,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .toState(toStateBuilder -> toStateBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = CustomLineItemStateTransitionMessagePayloadImpl.class)
 public interface CustomLineItemStateTransitionMessagePayload extends OrderMessagePayload {
 
@@ -49,7 +54,6 @@ public interface CustomLineItemStateTransitionMessagePayload extends OrderMessag
     @NotNull
     @JsonProperty("customLineItemId")
     public String getCustomLineItemId();
-
     /**
      *  <p>Date and time (UTC) when the transition of the Custom Line Item State was performed.</p>
      * @return transitionDate
@@ -57,7 +61,6 @@ public interface CustomLineItemStateTransitionMessagePayload extends OrderMessag
     @NotNull
     @JsonProperty("transitionDate")
     public ZonedDateTime getTransitionDate();
-
     /**
      *  <p>Number of Custom Line Items for which the State was transitioned.</p>
      * @return quantity
@@ -65,7 +68,6 @@ public interface CustomLineItemStateTransitionMessagePayload extends OrderMessag
     @NotNull
     @JsonProperty("quantity")
     public Long getQuantity();
-
     /**
      *  <p>State the Custom Line Item was transitioned from.</p>
      * @return fromState
@@ -74,7 +76,6 @@ public interface CustomLineItemStateTransitionMessagePayload extends OrderMessag
     @Valid
     @JsonProperty("fromState")
     public StateReference getFromState();
-
     /**
      *  <p>State the Custom Line Item was transitioned to.</p>
      * @return toState
@@ -88,52 +89,57 @@ public interface CustomLineItemStateTransitionMessagePayload extends OrderMessag
      *  <p>Unique identifier of the Custom Line Item.</p>
      * @param customLineItemId value to be set
      */
-
+    
     public void setCustomLineItemId(final String customLineItemId);
-
+    
+    
     /**
      *  <p>Date and time (UTC) when the transition of the Custom Line Item State was performed.</p>
      * @param transitionDate value to be set
      */
-
+    
     public void setTransitionDate(final ZonedDateTime transitionDate);
-
+    
+    
     /**
      *  <p>Number of Custom Line Items for which the State was transitioned.</p>
      * @param quantity value to be set
      */
-
+    
     public void setQuantity(final Long quantity);
-
+    
+    
     /**
      *  <p>State the Custom Line Item was transitioned from.</p>
      * @param fromState value to be set
      */
-
+    
     public void setFromState(final StateReference fromState);
-
+    
+    
     /**
      *  <p>State the Custom Line Item was transitioned to.</p>
      * @param toState value to be set
      */
-
+    
     public void setToState(final StateReference toState);
+    
 
     /**
      * factory method
      * @return instance of CustomLineItemStateTransitionMessagePayload
      */
-    public static CustomLineItemStateTransitionMessagePayload of() {
+    public static CustomLineItemStateTransitionMessagePayload of(){
         return new CustomLineItemStateTransitionMessagePayloadImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy CustomLineItemStateTransitionMessagePayload
      * @param template instance to be copied
      * @return copy instance
      */
-    public static CustomLineItemStateTransitionMessagePayload of(
-            final CustomLineItemStateTransitionMessagePayload template) {
+    public static CustomLineItemStateTransitionMessagePayload of(final CustomLineItemStateTransitionMessagePayload template) {
         CustomLineItemStateTransitionMessagePayloadImpl instance = new CustomLineItemStateTransitionMessagePayloadImpl();
         instance.setCustomLineItemId(template.getCustomLineItemId());
         instance.setTransitionDate(template.getTransitionDate());
@@ -149,8 +155,7 @@ public interface CustomLineItemStateTransitionMessagePayload extends OrderMessag
      * @return copy instance
      */
     @Nullable
-    public static CustomLineItemStateTransitionMessagePayload deepCopy(
-            @Nullable final CustomLineItemStateTransitionMessagePayload template) {
+    public static CustomLineItemStateTransitionMessagePayload deepCopy(@Nullable final CustomLineItemStateTransitionMessagePayload template) {
         if (template == null) {
             return null;
         }
@@ -170,16 +175,16 @@ public interface CustomLineItemStateTransitionMessagePayload extends OrderMessag
     public static CustomLineItemStateTransitionMessagePayloadBuilder builder() {
         return CustomLineItemStateTransitionMessagePayloadBuilder.of();
     }
-
+    
     /**
      * create builder for CustomLineItemStateTransitionMessagePayload instance
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static CustomLineItemStateTransitionMessagePayloadBuilder builder(
-            final CustomLineItemStateTransitionMessagePayload template) {
+    public static CustomLineItemStateTransitionMessagePayloadBuilder builder(final CustomLineItemStateTransitionMessagePayload template) {
         return CustomLineItemStateTransitionMessagePayloadBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -187,11 +192,10 @@ public interface CustomLineItemStateTransitionMessagePayload extends OrderMessag
      * @param helper function to map the object
      * @return mapped value
      */
-    default <T> T withCustomLineItemStateTransitionMessagePayload(
-            Function<CustomLineItemStateTransitionMessagePayload, T> helper) {
+    default <T> T withCustomLineItemStateTransitionMessagePayload(Function<CustomLineItemStateTransitionMessagePayload, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

@@ -1,46 +1,54 @@
-
 package com.commercetools.importapi.models.importsummaries;
 
-import java.time.*;
-import java.util.*;
 
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
-
-import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.ModelBase;
+import javax.validation.Valid;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.annotation.*;
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
  * OperationStates
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class OperationStatesImpl implements OperationStates, ModelBase {
 
+    
     private Long processing;
-
+    
+    
     private Long validationFailed;
-
+    
+    
     private Long unresolved;
-
+    
+    
     private Long waitForMasterVariant;
-
+    
+    
     private Long imported;
-
+    
+    
     private Long rejected;
 
     /**
      * create instance with all properties
      */
     @JsonCreator
-    OperationStatesImpl(@JsonProperty("processing") final Long processing,
-            @JsonProperty("validationFailed") final Long validationFailed,
-            @JsonProperty("unresolved") final Long unresolved,
-            @JsonProperty("waitForMasterVariant") final Long waitForMasterVariant,
-            @JsonProperty("imported") final Long imported, @JsonProperty("rejected") final Long rejected) {
+    OperationStatesImpl(@JsonProperty("processing") final Long processing, @JsonProperty("validationFailed") final Long validationFailed, @JsonProperty("unresolved") final Long unresolved, @JsonProperty("waitForMasterVariant") final Long waitForMasterVariant, @JsonProperty("imported") final Long imported, @JsonProperty("rejected") final Long rejected) {
         this.processing = processing;
         this.validationFailed = validationFailed;
         this.unresolved = unresolved;
@@ -48,7 +56,6 @@ public class OperationStatesImpl implements OperationStates, ModelBase {
         this.imported = imported;
         this.rejected = rejected;
     }
-
     /**
      * create empty instance
      */
@@ -58,86 +65,91 @@ public class OperationStatesImpl implements OperationStates, ModelBase {
     /**
      *  <p>The number of resources in the <code>processing</code> state.</p>
      */
-
-    public Long getProcessing() {
+    
+    public Long getProcessing(){
         return this.processing;
     }
-
+    
     /**
      *  <p>The number of resources in the <code>validationFailed</code> state.</p>
      */
-
-    public Long getValidationFailed() {
+    
+    public Long getValidationFailed(){
         return this.validationFailed;
     }
-
+    
     /**
      *  <p>The number of resources in the <code>unresolved</code> state.</p>
      */
-
-    public Long getUnresolved() {
+    
+    public Long getUnresolved(){
         return this.unresolved;
     }
-
+    
     /**
      *  <p>The number of resources in the <code>waitForMasterVariant</code> state.</p>
      */
-
-    public Long getWaitForMasterVariant() {
+    
+    public Long getWaitForMasterVariant(){
         return this.waitForMasterVariant;
     }
-
+    
     /**
      *  <p>The number of resources in the <code>imported</code> state.</p>
      */
-
-    public Long getImported() {
+    
+    public Long getImported(){
         return this.imported;
     }
-
+    
     /**
      *  <p>The number of resources in the <code>rejected</code> state.</p>
      */
-
-    public Long getRejected() {
+    
+    public Long getRejected(){
         return this.rejected;
     }
 
-    public void setProcessing(final Long processing) {
+    
+    public void setProcessing(final Long processing){
         this.processing = processing;
     }
-
-    public void setValidationFailed(final Long validationFailed) {
+    
+    
+    public void setValidationFailed(final Long validationFailed){
         this.validationFailed = validationFailed;
     }
-
-    public void setUnresolved(final Long unresolved) {
+    
+    
+    public void setUnresolved(final Long unresolved){
         this.unresolved = unresolved;
     }
-
-    public void setWaitForMasterVariant(final Long waitForMasterVariant) {
+    
+    
+    public void setWaitForMasterVariant(final Long waitForMasterVariant){
         this.waitForMasterVariant = waitForMasterVariant;
     }
-
-    public void setImported(final Long imported) {
+    
+    
+    public void setImported(final Long imported){
         this.imported = imported;
     }
-
-    public void setRejected(final Long rejected) {
+    
+    
+    public void setRejected(final Long rejected){
         this.rejected = rejected;
     }
 
     @Override
     public boolean equals(Object o) {
-        if (this == o)
-            return true;
-
-        if (o == null || getClass() != o.getClass())
-            return false;
-
+        if (this == o) return true;
+    
+        if (o == null || getClass() != o.getClass()) return false;
+    
         OperationStatesImpl that = (OperationStatesImpl) o;
-
-        return new EqualsBuilder().append(processing, that.processing)
+    
+        return new EqualsBuilder()
+                .append(processing, that.processing)
                 .append(validationFailed, that.validationFailed)
                 .append(unresolved, that.unresolved)
                 .append(waitForMasterVariant, that.waitForMasterVariant)
@@ -145,16 +157,17 @@ public class OperationStatesImpl implements OperationStates, ModelBase {
                 .append(rejected, that.rejected)
                 .isEquals();
     }
-
+    
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(processing)
-                .append(validationFailed)
-                .append(unresolved)
-                .append(waitForMasterVariant)
-                .append(imported)
-                .append(rejected)
-                .toHashCode();
+        return new HashCodeBuilder(17, 37)
+            .append(processing)
+            .append(validationFailed)
+            .append(unresolved)
+            .append(waitForMasterVariant)
+            .append(imported)
+            .append(rejected)
+            .toHashCode();
     }
 
 }

@@ -1,9 +1,11 @@
-
 package com.commercetools.api.predicates.query.me;
 
 import com.commercetools.api.predicates.query.*;
 
-public class MyCartSetCountryActionQueryBuilderDsl {
+import java.util.function.Function;
+
+
+public class MyCartSetCountryActionQueryBuilderDsl  {
     public MyCartSetCountryActionQueryBuilderDsl() {
     }
 
@@ -12,15 +14,12 @@ public class MyCartSetCountryActionQueryBuilderDsl {
     }
 
     public StringComparisonPredicateBuilder<MyCartSetCountryActionQueryBuilderDsl> action() {
-        return new StringComparisonPredicateBuilder<>(
-            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("action")),
-            p -> new CombinationQueryPredicate<>(p, MyCartSetCountryActionQueryBuilderDsl::of));
+        return new StringComparisonPredicateBuilder<>(BinaryQueryPredicate.of().left(new ConstantQueryPredicate("action")),
+        p -> new CombinationQueryPredicate<>(p, MyCartSetCountryActionQueryBuilderDsl::of));
     }
-
     public StringComparisonPredicateBuilder<MyCartSetCountryActionQueryBuilderDsl> country() {
-        return new StringComparisonPredicateBuilder<>(
-            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("country")),
-            p -> new CombinationQueryPredicate<>(p, MyCartSetCountryActionQueryBuilderDsl::of));
+        return new StringComparisonPredicateBuilder<>(BinaryQueryPredicate.of().left(new ConstantQueryPredicate("country")),
+        p -> new CombinationQueryPredicate<>(p, MyCartSetCountryActionQueryBuilderDsl::of));
     }
-
+    
 }

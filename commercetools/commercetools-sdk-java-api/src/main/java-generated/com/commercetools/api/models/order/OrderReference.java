@@ -1,18 +1,22 @@
-
 package com.commercetools.api.models.order;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-
 import com.commercetools.api.models.common.Reference;
+import com.commercetools.api.models.common.ReferenceTypeId;
+import com.commercetools.api.models.order.Order;
+import com.commercetools.api.models.order.OrderReferenceImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * OrderReference
@@ -25,9 +29,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .id("{id}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = OrderReferenceImpl.class)
 public interface OrderReference extends Reference, com.commercetools.api.models.Identifiable<Order> {
 
@@ -48,16 +55,18 @@ public interface OrderReference extends Reference, com.commercetools.api.models.
      * set obj
      * @param obj value to be set
      */
-
+    
     public void setObj(final Order obj);
+    
 
     /**
      * factory method
      * @return instance of OrderReference
      */
-    public static OrderReference of() {
+    public static OrderReference of(){
         return new OrderReferenceImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy OrderReference
@@ -94,7 +103,7 @@ public interface OrderReference extends Reference, com.commercetools.api.models.
     public static OrderReferenceBuilder builder() {
         return OrderReferenceBuilder.of();
     }
-
+    
     /**
      * create builder for OrderReference instance
      * @param template instance with prefilled values for the builder
@@ -103,6 +112,7 @@ public interface OrderReference extends Reference, com.commercetools.api.models.
     public static OrderReferenceBuilder builder(final OrderReference template) {
         return OrderReferenceBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -113,7 +123,7 @@ public interface OrderReference extends Reference, com.commercetools.api.models.
     default <T> T withOrderReference(Function<OrderReference, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

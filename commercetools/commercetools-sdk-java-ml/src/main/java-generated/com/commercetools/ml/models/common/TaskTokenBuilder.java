@@ -1,8 +1,11 @@
-
 package com.commercetools.ml.models.common;
 
-import java.util.*;
 
+import com.commercetools.ml.models.common.TaskToken;
+import javax.annotation.Nullable;
+import java.util.*;
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -17,52 +20,67 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .uriPath("{uriPath}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class TaskTokenBuilder implements Builder<TaskToken> {
 
+    
+    
     private String taskId;
-
+    
+    
+    
     private String uriPath;
 
+    
     /**
      *  <p>The ID for the task. Used to find the status of the task.</p>
      * @param taskId value to be set
      * @return Builder
      */
-
-    public TaskTokenBuilder taskId(final String taskId) {
+    
+    public TaskTokenBuilder taskId( final String taskId) {
         this.taskId = taskId;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>The URI path to poll for the status of the task.</p>
      * @param uriPath value to be set
      * @return Builder
      */
-
-    public TaskTokenBuilder uriPath(final String uriPath) {
+    
+    public TaskTokenBuilder uriPath( final String uriPath) {
         this.uriPath = uriPath;
         return this;
     }
+    
+    
 
     /**
      *  <p>The ID for the task. Used to find the status of the task.</p>
      * @return taskId
      */
-
-    public String getTaskId() {
+    
+    
+    public String getTaskId(){
         return this.taskId;
     }
-
+    
     /**
      *  <p>The URI path to poll for the status of the task.</p>
      * @return uriPath
      */
-
-    public String getUriPath() {
+    
+    
+    public String getUriPath(){
         return this.uriPath;
     }
 
@@ -75,7 +93,7 @@ public class TaskTokenBuilder implements Builder<TaskToken> {
         Objects.requireNonNull(uriPath, TaskToken.class + ": uriPath is missing");
         return new TaskTokenImpl(taskId, uriPath);
     }
-
+    
     /**
      * builds TaskToken without checking for non-null required values
      * @return TaskToken
@@ -86,7 +104,7 @@ public class TaskTokenBuilder implements Builder<TaskToken> {
 
     /**
      * factory method for an instance of TaskTokenBuilder
-     * @return builder
+     * @return builder 
      */
     public static TaskTokenBuilder of() {
         return new TaskTokenBuilder();

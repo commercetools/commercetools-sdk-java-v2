@@ -1,19 +1,21 @@
-
 package com.commercetools.api.models.message;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
+import com.commercetools.api.models.message.MessagePayload;
 import com.commercetools.api.models.quote_request.QuoteRequest;
+import com.commercetools.api.models.message.QuoteRequestCreatedMessagePayloadImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Generated after a successful Create Quote Request request.</p>
@@ -26,9 +28,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .quoteRequest(quoteRequestBuilder -> quoteRequestBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = QuoteRequestCreatedMessagePayloadImpl.class)
 public interface QuoteRequestCreatedMessagePayload extends MessagePayload {
 
@@ -50,16 +55,18 @@ public interface QuoteRequestCreatedMessagePayload extends MessagePayload {
      *  <p>Quote Request that was created.</p>
      * @param quoteRequest value to be set
      */
-
+    
     public void setQuoteRequest(final QuoteRequest quoteRequest);
+    
 
     /**
      * factory method
      * @return instance of QuoteRequestCreatedMessagePayload
      */
-    public static QuoteRequestCreatedMessagePayload of() {
+    public static QuoteRequestCreatedMessagePayload of(){
         return new QuoteRequestCreatedMessagePayloadImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy QuoteRequestCreatedMessagePayload
@@ -78,14 +85,12 @@ public interface QuoteRequestCreatedMessagePayload extends MessagePayload {
      * @return copy instance
      */
     @Nullable
-    public static QuoteRequestCreatedMessagePayload deepCopy(
-            @Nullable final QuoteRequestCreatedMessagePayload template) {
+    public static QuoteRequestCreatedMessagePayload deepCopy(@Nullable final QuoteRequestCreatedMessagePayload template) {
         if (template == null) {
             return null;
         }
         QuoteRequestCreatedMessagePayloadImpl instance = new QuoteRequestCreatedMessagePayloadImpl();
-        instance.setQuoteRequest(
-            com.commercetools.api.models.quote_request.QuoteRequest.deepCopy(template.getQuoteRequest()));
+        instance.setQuoteRequest(com.commercetools.api.models.quote_request.QuoteRequest.deepCopy(template.getQuoteRequest()));
         return instance;
     }
 
@@ -96,7 +101,7 @@ public interface QuoteRequestCreatedMessagePayload extends MessagePayload {
     public static QuoteRequestCreatedMessagePayloadBuilder builder() {
         return QuoteRequestCreatedMessagePayloadBuilder.of();
     }
-
+    
     /**
      * create builder for QuoteRequestCreatedMessagePayload instance
      * @param template instance with prefilled values for the builder
@@ -105,6 +110,7 @@ public interface QuoteRequestCreatedMessagePayload extends MessagePayload {
     public static QuoteRequestCreatedMessagePayloadBuilder builder(final QuoteRequestCreatedMessagePayload template) {
         return QuoteRequestCreatedMessagePayloadBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -115,7 +121,7 @@ public interface QuoteRequestCreatedMessagePayload extends MessagePayload {
     default <T> T withQuoteRequestCreatedMessagePayload(Function<QuoteRequestCreatedMessagePayload, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

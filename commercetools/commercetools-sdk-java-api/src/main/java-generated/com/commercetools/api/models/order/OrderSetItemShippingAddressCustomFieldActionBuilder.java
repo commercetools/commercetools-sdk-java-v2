@@ -1,10 +1,12 @@
-
 package com.commercetools.api.models.order;
 
-import java.util.*;
-
+import com.commercetools.api.models.order.OrderUpdateAction;
+import java.lang.Object;
+import com.commercetools.api.models.order.OrderSetItemShippingAddressCustomFieldAction;
 import javax.annotation.Nullable;
-
+import java.util.*;
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -19,77 +21,95 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .name("{name}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
-public class OrderSetItemShippingAddressCustomFieldActionBuilder
-        implements Builder<OrderSetItemShippingAddressCustomFieldAction> {
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
+public class OrderSetItemShippingAddressCustomFieldActionBuilder implements Builder<OrderSetItemShippingAddressCustomFieldAction> {
 
+    
+    
     private String addressKey;
-
+    
+    
+    
     private String name;
-
+    
+    
     @Nullable
     private java.lang.Object value;
 
+    
     /**
      * set the value to the addressKey
      * @param addressKey value to be set
      * @return Builder
      */
-
-    public OrderSetItemShippingAddressCustomFieldActionBuilder addressKey(final String addressKey) {
+    
+    public OrderSetItemShippingAddressCustomFieldActionBuilder addressKey( final String addressKey) {
         this.addressKey = addressKey;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Name of the Custom Field.</p>
      * @param name value to be set
      * @return Builder
      */
-
-    public OrderSetItemShippingAddressCustomFieldActionBuilder name(final String name) {
+    
+    public OrderSetItemShippingAddressCustomFieldActionBuilder name( final String name) {
         this.name = name;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>If <code>value</code> is absent or <code>null</code>, this field will be removed if it exists. Removing a field that does not exist returns an InvalidOperation error. If <code>value</code> is provided, it is set for the field defined by <code>name</code>.</p>
      * @param value value to be set
      * @return Builder
      */
-
+    
     public OrderSetItemShippingAddressCustomFieldActionBuilder value(@Nullable final java.lang.Object value) {
         this.value = value;
         return this;
     }
+    
+    
 
     /**
      * value of addressKey}
      * @return addressKey
      */
-
-    public String getAddressKey() {
+    
+    
+    public String getAddressKey(){
         return this.addressKey;
     }
-
+    
     /**
      *  <p>Name of the Custom Field.</p>
      * @return name
      */
-
-    public String getName() {
+    
+    
+    public String getName(){
         return this.name;
     }
-
+    
     /**
      *  <p>If <code>value</code> is absent or <code>null</code>, this field will be removed if it exists. Removing a field that does not exist returns an InvalidOperation error. If <code>value</code> is provided, it is set for the field defined by <code>name</code>.</p>
      * @return value
      */
-
+    
     @Nullable
-    public java.lang.Object getValue() {
+    public java.lang.Object getValue(){
         return this.value;
     }
 
@@ -98,12 +118,11 @@ public class OrderSetItemShippingAddressCustomFieldActionBuilder
      * @return OrderSetItemShippingAddressCustomFieldAction
      */
     public OrderSetItemShippingAddressCustomFieldAction build() {
-        Objects.requireNonNull(addressKey,
-            OrderSetItemShippingAddressCustomFieldAction.class + ": addressKey is missing");
+        Objects.requireNonNull(addressKey, OrderSetItemShippingAddressCustomFieldAction.class + ": addressKey is missing");
         Objects.requireNonNull(name, OrderSetItemShippingAddressCustomFieldAction.class + ": name is missing");
         return new OrderSetItemShippingAddressCustomFieldActionImpl(addressKey, name, value);
     }
-
+    
     /**
      * builds OrderSetItemShippingAddressCustomFieldAction without checking for non-null required values
      * @return OrderSetItemShippingAddressCustomFieldAction
@@ -114,7 +133,7 @@ public class OrderSetItemShippingAddressCustomFieldActionBuilder
 
     /**
      * factory method for an instance of OrderSetItemShippingAddressCustomFieldActionBuilder
-     * @return builder
+     * @return builder 
      */
     public static OrderSetItemShippingAddressCustomFieldActionBuilder of() {
         return new OrderSetItemShippingAddressCustomFieldActionBuilder();
@@ -125,8 +144,7 @@ public class OrderSetItemShippingAddressCustomFieldActionBuilder
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static OrderSetItemShippingAddressCustomFieldActionBuilder of(
-            final OrderSetItemShippingAddressCustomFieldAction template) {
+    public static OrderSetItemShippingAddressCustomFieldActionBuilder of(final OrderSetItemShippingAddressCustomFieldAction template) {
         OrderSetItemShippingAddressCustomFieldActionBuilder builder = new OrderSetItemShippingAddressCustomFieldActionBuilder();
         builder.addressKey = template.getAddressKey();
         builder.name = template.getName();

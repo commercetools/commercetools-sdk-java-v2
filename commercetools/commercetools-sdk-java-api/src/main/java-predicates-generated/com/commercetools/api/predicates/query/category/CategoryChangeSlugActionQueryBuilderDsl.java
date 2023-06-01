@@ -1,11 +1,11 @@
-
 package com.commercetools.api.predicates.query.category;
-
-import java.util.function.Function;
 
 import com.commercetools.api.predicates.query.*;
 
-public class CategoryChangeSlugActionQueryBuilderDsl {
+import java.util.function.Function;
+
+
+public class CategoryChangeSlugActionQueryBuilderDsl  {
     public CategoryChangeSlugActionQueryBuilderDsl() {
     }
 
@@ -14,18 +14,16 @@ public class CategoryChangeSlugActionQueryBuilderDsl {
     }
 
     public StringComparisonPredicateBuilder<CategoryChangeSlugActionQueryBuilderDsl> action() {
-        return new StringComparisonPredicateBuilder<>(
-            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("action")),
-            p -> new CombinationQueryPredicate<>(p, CategoryChangeSlugActionQueryBuilderDsl::of));
+        return new StringComparisonPredicateBuilder<>(BinaryQueryPredicate.of().left(new ConstantQueryPredicate("action")),
+        p -> new CombinationQueryPredicate<>(p, CategoryChangeSlugActionQueryBuilderDsl::of));
     }
-
     public CombinationQueryPredicate<CategoryChangeSlugActionQueryBuilderDsl> slug(
-            Function<com.commercetools.api.predicates.query.common.LocalizedStringQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.common.LocalizedStringQueryBuilderDsl>> fn) {
-        return new CombinationQueryPredicate<>(
-            ContainerQueryPredicate.of()
-                    .parent(ConstantQueryPredicate.of().constant("slug"))
-                    .inner(fn.apply(com.commercetools.api.predicates.query.common.LocalizedStringQueryBuilderDsl.of())),
+        Function<com.commercetools.api.predicates.query.common.LocalizedStringQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.common.LocalizedStringQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(ContainerQueryPredicate.of()
+            .parent(ConstantQueryPredicate.of().constant("slug"))
+            .inner(fn.apply(com.commercetools.api.predicates.query.common.LocalizedStringQueryBuilderDsl.of())),
             CategoryChangeSlugActionQueryBuilderDsl::of);
     }
-
+    
+    
 }

@@ -1,20 +1,22 @@
-
 package com.commercetools.api.models.message;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
 import com.commercetools.api.models.cart.ProductPublishScope;
+import com.commercetools.api.models.message.Message;
 import com.commercetools.api.models.product.ProductProjection;
+import com.commercetools.api.models.message.ProductPublishedMessageImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Generated after a successful Publish update action.</p>
@@ -36,9 +38,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .scope(ProductPublishScope.ALL)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = ProductPublishedMessageImpl.class)
 public interface ProductPublishedMessage extends Message {
 
@@ -54,7 +59,6 @@ public interface ProductPublishedMessage extends Message {
     @NotNull
     @JsonProperty("removedImageUrls")
     public List<String> getRemovedImageUrls();
-
     /**
      *  <p>Current Product Projection of the Product at the time of creation.</p>
      * @return productProjection
@@ -63,7 +67,6 @@ public interface ProductPublishedMessage extends Message {
     @Valid
     @JsonProperty("productProjection")
     public ProductProjection getProductProjection();
-
     /**
      *  <p>Publishing Scope that was used during the Publish update action.</p>
      * @return scope
@@ -76,38 +79,40 @@ public interface ProductPublishedMessage extends Message {
      *  <p>List of image URLs which were removed during the Publish update action.</p>
      * @param removedImageUrls values to be set
      */
-
+    
     @JsonIgnore
-    public void setRemovedImageUrls(final String... removedImageUrls);
-
+    public void setRemovedImageUrls(final String ...removedImageUrls);
     /**
      *  <p>List of image URLs which were removed during the Publish update action.</p>
      * @param removedImageUrls values to be set
      */
-
+    
     public void setRemovedImageUrls(final List<String> removedImageUrls);
-
+    
     /**
      *  <p>Current Product Projection of the Product at the time of creation.</p>
      * @param productProjection value to be set
      */
-
+    
     public void setProductProjection(final ProductProjection productProjection);
-
+    
+    
     /**
      *  <p>Publishing Scope that was used during the Publish update action.</p>
      * @param scope value to be set
      */
-
+    
     public void setScope(final ProductPublishScope scope);
+    
 
     /**
      * factory method
      * @return instance of ProductPublishedMessage
      */
-    public static ProductPublishedMessage of() {
+    public static ProductPublishedMessage of(){
         return new ProductPublishedMessageImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy ProductPublishedMessage
@@ -147,18 +152,16 @@ public interface ProductPublishedMessage extends Message {
         instance.setVersion(template.getVersion());
         instance.setCreatedAt(template.getCreatedAt());
         instance.setLastModifiedAt(template.getLastModifiedAt());
-        instance.setLastModifiedBy(
-            com.commercetools.api.models.common.LastModifiedBy.deepCopy(template.getLastModifiedBy()));
+        instance.setLastModifiedBy(com.commercetools.api.models.common.LastModifiedBy.deepCopy(template.getLastModifiedBy()));
         instance.setCreatedBy(com.commercetools.api.models.common.CreatedBy.deepCopy(template.getCreatedBy()));
         instance.setSequenceNumber(template.getSequenceNumber());
         instance.setResource(com.commercetools.api.models.common.Reference.deepCopy(template.getResource()));
         instance.setResourceVersion(template.getResourceVersion());
-        instance.setResourceUserProvidedIdentifiers(com.commercetools.api.models.message.UserProvidedIdentifiers
-                .deepCopy(template.getResourceUserProvidedIdentifiers()));
-        instance.setRemovedImageUrls(
-            Optional.ofNullable(template.getRemovedImageUrls()).map(ArrayList::new).orElse(null));
-        instance.setProductProjection(
-            com.commercetools.api.models.product.ProductProjection.deepCopy(template.getProductProjection()));
+        instance.setResourceUserProvidedIdentifiers(com.commercetools.api.models.message.UserProvidedIdentifiers.deepCopy(template.getResourceUserProvidedIdentifiers()));
+        instance.setRemovedImageUrls(Optional.ofNullable(template.getRemovedImageUrls())
+                .map(ArrayList::new)
+                .orElse(null));
+        instance.setProductProjection(com.commercetools.api.models.product.ProductProjection.deepCopy(template.getProductProjection()));
         instance.setScope(template.getScope());
         return instance;
     }
@@ -170,7 +173,7 @@ public interface ProductPublishedMessage extends Message {
     public static ProductPublishedMessageBuilder builder() {
         return ProductPublishedMessageBuilder.of();
     }
-
+    
     /**
      * create builder for ProductPublishedMessage instance
      * @param template instance with prefilled values for the builder
@@ -179,6 +182,7 @@ public interface ProductPublishedMessage extends Message {
     public static ProductPublishedMessageBuilder builder(final ProductPublishedMessage template) {
         return ProductPublishedMessageBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -189,7 +193,7 @@ public interface ProductPublishedMessage extends Message {
     default <T> T withProductPublishedMessage(Function<ProductPublishedMessage, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

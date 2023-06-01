@@ -1,19 +1,21 @@
-
 package com.commercetools.api.models.order;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
+import com.commercetools.api.models.order.OrderUpdateAction;
 import com.commercetools.api.models.payment.PaymentResourceIdentifier;
+import com.commercetools.api.models.order.OrderRemovePaymentActionImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * OrderRemovePaymentAction
@@ -26,9 +28,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .payment(paymentBuilder -> paymentBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = OrderRemovePaymentActionImpl.class)
 public interface OrderRemovePaymentAction extends OrderUpdateAction {
 
@@ -50,16 +55,18 @@ public interface OrderRemovePaymentAction extends OrderUpdateAction {
      *  <p>ResourceIdentifier of a Payment.</p>
      * @param payment value to be set
      */
-
+    
     public void setPayment(final PaymentResourceIdentifier payment);
+    
 
     /**
      * factory method
      * @return instance of OrderRemovePaymentAction
      */
-    public static OrderRemovePaymentAction of() {
+    public static OrderRemovePaymentAction of(){
         return new OrderRemovePaymentActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy OrderRemovePaymentAction
@@ -83,8 +90,7 @@ public interface OrderRemovePaymentAction extends OrderUpdateAction {
             return null;
         }
         OrderRemovePaymentActionImpl instance = new OrderRemovePaymentActionImpl();
-        instance.setPayment(
-            com.commercetools.api.models.payment.PaymentResourceIdentifier.deepCopy(template.getPayment()));
+        instance.setPayment(com.commercetools.api.models.payment.PaymentResourceIdentifier.deepCopy(template.getPayment()));
         return instance;
     }
 
@@ -95,7 +101,7 @@ public interface OrderRemovePaymentAction extends OrderUpdateAction {
     public static OrderRemovePaymentActionBuilder builder() {
         return OrderRemovePaymentActionBuilder.of();
     }
-
+    
     /**
      * create builder for OrderRemovePaymentAction instance
      * @param template instance with prefilled values for the builder
@@ -104,6 +110,7 @@ public interface OrderRemovePaymentAction extends OrderUpdateAction {
     public static OrderRemovePaymentActionBuilder builder(final OrderRemovePaymentAction template) {
         return OrderRemovePaymentActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -114,7 +121,7 @@ public interface OrderRemovePaymentAction extends OrderUpdateAction {
     default <T> T withOrderRemovePaymentAction(Function<OrderRemovePaymentAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

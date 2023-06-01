@@ -1,10 +1,11 @@
-
 package com.commercetools.api.models.me;
 
-import java.util.*;
-
+import com.commercetools.api.models.me.MyCartUpdateAction;
+import com.commercetools.api.models.me.MyCartSetCountryAction;
 import javax.annotation.Nullable;
-
+import java.util.*;
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -17,34 +18,41 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     MyCartSetCountryAction myCartSetCountryAction = MyCartSetCountryAction.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class MyCartSetCountryActionBuilder implements Builder<MyCartSetCountryAction> {
 
+    
     @Nullable
     private String country;
 
+    
     /**
      *  <p>Value to set. If empty, any existing value is removed.</p>
      *  <p>If the Cart is bound to a <code>store</code>, the provided value must be included in the Store's <code>countries</code>. Otherwise a CountryNotConfiguredInStore error is returned.</p>
      * @param country value to be set
      * @return Builder
      */
-
+    
     public MyCartSetCountryActionBuilder country(@Nullable final String country) {
         this.country = country;
         return this;
     }
+    
+    
 
     /**
      *  <p>Value to set. If empty, any existing value is removed.</p>
      *  <p>If the Cart is bound to a <code>store</code>, the provided value must be included in the Store's <code>countries</code>. Otherwise a CountryNotConfiguredInStore error is returned.</p>
      * @return country
      */
-
+    
     @Nullable
-    public String getCountry() {
+    public String getCountry(){
         return this.country;
     }
 
@@ -55,7 +63,7 @@ public class MyCartSetCountryActionBuilder implements Builder<MyCartSetCountryAc
     public MyCartSetCountryAction build() {
         return new MyCartSetCountryActionImpl(country);
     }
-
+    
     /**
      * builds MyCartSetCountryAction without checking for non-null required values
      * @return MyCartSetCountryAction
@@ -66,7 +74,7 @@ public class MyCartSetCountryActionBuilder implements Builder<MyCartSetCountryAc
 
     /**
      * factory method for an instance of MyCartSetCountryActionBuilder
-     * @return builder
+     * @return builder 
      */
     public static MyCartSetCountryActionBuilder of() {
         return new MyCartSetCountryActionBuilder();

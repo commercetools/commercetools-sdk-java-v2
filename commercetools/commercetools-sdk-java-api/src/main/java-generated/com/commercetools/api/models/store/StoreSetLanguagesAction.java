@@ -1,16 +1,20 @@
-
 package com.commercetools.api.models.store;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
+import com.commercetools.api.models.store.StoreUpdateAction;
+import com.commercetools.api.models.store.StoreSetLanguagesActionImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>This update action produces the StoreLanguagesChanged Message. Adding a language other than the ones defined in the Project returns a ProjectNotConfiguredForLanguages error.</p>
@@ -22,9 +26,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     StoreSetLanguagesAction storeSetLanguagesAction = StoreSetLanguagesAction.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = StoreSetLanguagesActionImpl.class)
 public interface StoreSetLanguagesAction extends StoreUpdateAction {
 
@@ -37,7 +44,7 @@ public interface StoreSetLanguagesAction extends StoreUpdateAction {
      *  <p>Value to set.</p>
      * @return languages
      */
-
+    
     @JsonProperty("languages")
     public List<String> getLanguages();
 
@@ -45,24 +52,24 @@ public interface StoreSetLanguagesAction extends StoreUpdateAction {
      *  <p>Value to set.</p>
      * @param languages values to be set
      */
-
+    
     @JsonIgnore
-    public void setLanguages(final String... languages);
-
+    public void setLanguages(final String ...languages);
     /**
      *  <p>Value to set.</p>
      * @param languages values to be set
      */
-
+    
     public void setLanguages(final List<String> languages);
 
     /**
      * factory method
      * @return instance of StoreSetLanguagesAction
      */
-    public static StoreSetLanguagesAction of() {
+    public static StoreSetLanguagesAction of(){
         return new StoreSetLanguagesActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy StoreSetLanguagesAction
@@ -86,7 +93,9 @@ public interface StoreSetLanguagesAction extends StoreUpdateAction {
             return null;
         }
         StoreSetLanguagesActionImpl instance = new StoreSetLanguagesActionImpl();
-        instance.setLanguages(Optional.ofNullable(template.getLanguages()).map(ArrayList::new).orElse(null));
+        instance.setLanguages(Optional.ofNullable(template.getLanguages())
+                .map(ArrayList::new)
+                .orElse(null));
         return instance;
     }
 
@@ -97,7 +106,7 @@ public interface StoreSetLanguagesAction extends StoreUpdateAction {
     public static StoreSetLanguagesActionBuilder builder() {
         return StoreSetLanguagesActionBuilder.of();
     }
-
+    
     /**
      * create builder for StoreSetLanguagesAction instance
      * @param template instance with prefilled values for the builder
@@ -106,6 +115,7 @@ public interface StoreSetLanguagesAction extends StoreUpdateAction {
     public static StoreSetLanguagesActionBuilder builder(final StoreSetLanguagesAction template) {
         return StoreSetLanguagesActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -116,7 +126,7 @@ public interface StoreSetLanguagesAction extends StoreUpdateAction {
     default <T> T withStoreSetLanguagesAction(Function<StoreSetLanguagesAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

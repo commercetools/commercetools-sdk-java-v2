@@ -1,24 +1,24 @@
-
 package com.commercetools.importapi.models.categories;
-
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-import java.util.stream.Collectors;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.importapi.models.common.Asset;
 import com.commercetools.importapi.models.common.CategoryKeyReference;
 import com.commercetools.importapi.models.common.ImportResource;
 import com.commercetools.importapi.models.common.LocalizedString;
 import com.commercetools.importapi.models.customfields.Custom;
+import com.commercetools.importapi.models.categories.CategoryImportImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>The data representation for a Category to be imported that is persisted as a Category in the Project.</p>
@@ -33,11 +33,15 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .slug(slugBuilder -> slugBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = CategoryImportImpl.class)
 public interface CategoryImport extends ImportResource {
+
 
     /**
      *  <p>Maps to <code>Category.name</code>.</p>
@@ -47,7 +51,6 @@ public interface CategoryImport extends ImportResource {
     @Valid
     @JsonProperty("name")
     public LocalizedString getName();
-
     /**
      *  <p>Maps to <code>Category.slug</code>. Must match the pattern <code>[-a-zA-Z0-9_]{2,256}</code>.</p>
      * @return slug
@@ -56,7 +59,6 @@ public interface CategoryImport extends ImportResource {
     @Valid
     @JsonProperty("slug")
     public LocalizedString getSlug();
-
     /**
      *  <p>Maps to <code>Category.description</code>.</p>
      * @return description
@@ -64,7 +66,6 @@ public interface CategoryImport extends ImportResource {
     @Valid
     @JsonProperty("description")
     public LocalizedString getDescription();
-
     /**
      *  <p>Maps to <code>Category.parent</code>. The Reference to the parent Category with which the Category is associated. If referenced Category does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary Category is created.</p>
      * @return parent
@@ -72,23 +73,20 @@ public interface CategoryImport extends ImportResource {
     @Valid
     @JsonProperty("parent")
     public CategoryKeyReference getParent();
-
     /**
      *  <p>Maps to <code>Category.orderHint</code>.</p>
      * @return orderHint
      */
-
+    
     @JsonProperty("orderHint")
     public String getOrderHint();
-
     /**
      *  <p>Maps to <code>Category.externalId</code>.</p>
      * @return externalId
      */
-
+    
     @JsonProperty("externalId")
     public String getExternalId();
-
     /**
      *  <p>Maps to <code>Category.metaTitle</code>.</p>
      * @return metaTitle
@@ -96,7 +94,6 @@ public interface CategoryImport extends ImportResource {
     @Valid
     @JsonProperty("metaTitle")
     public LocalizedString getMetaTitle();
-
     /**
      *  <p>Maps to <code>Category.metaDescription</code>.</p>
      * @return metaDescription
@@ -104,7 +101,6 @@ public interface CategoryImport extends ImportResource {
     @Valid
     @JsonProperty("metaDescription")
     public LocalizedString getMetaDescription();
-
     /**
      *  <p>Maps to <code>Category.metaKeywords</code>.</p>
      * @return metaKeywords
@@ -112,7 +108,6 @@ public interface CategoryImport extends ImportResource {
     @Valid
     @JsonProperty("metaKeywords")
     public LocalizedString getMetaKeywords();
-
     /**
      *
      * @return assets
@@ -120,7 +115,6 @@ public interface CategoryImport extends ImportResource {
     @Valid
     @JsonProperty("assets")
     public List<Asset> getAssets();
-
     /**
      *  <p>The custom fields for this Category.</p>
      * @return custom
@@ -133,94 +127,104 @@ public interface CategoryImport extends ImportResource {
      *  <p>Maps to <code>Category.name</code>.</p>
      * @param name value to be set
      */
-
+    
     public void setName(final LocalizedString name);
-
+    
+    
     /**
      *  <p>Maps to <code>Category.slug</code>. Must match the pattern <code>[-a-zA-Z0-9_]{2,256}</code>.</p>
      * @param slug value to be set
      */
-
+    
     public void setSlug(final LocalizedString slug);
-
+    
+    
     /**
      *  <p>Maps to <code>Category.description</code>.</p>
      * @param description value to be set
      */
-
+    
     public void setDescription(final LocalizedString description);
-
+    
+    
     /**
      *  <p>Maps to <code>Category.parent</code>. The Reference to the parent Category with which the Category is associated. If referenced Category does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary Category is created.</p>
      * @param parent value to be set
      */
-
+    
     public void setParent(final CategoryKeyReference parent);
-
+    
+    
     /**
      *  <p>Maps to <code>Category.orderHint</code>.</p>
      * @param orderHint value to be set
      */
-
+    
     public void setOrderHint(final String orderHint);
-
+    
+    
     /**
      *  <p>Maps to <code>Category.externalId</code>.</p>
      * @param externalId value to be set
      */
-
+    
     public void setExternalId(final String externalId);
-
+    
+    
     /**
      *  <p>Maps to <code>Category.metaTitle</code>.</p>
      * @param metaTitle value to be set
      */
-
+    
     public void setMetaTitle(final LocalizedString metaTitle);
-
+    
+    
     /**
      *  <p>Maps to <code>Category.metaDescription</code>.</p>
      * @param metaDescription value to be set
      */
-
+    
     public void setMetaDescription(final LocalizedString metaDescription);
-
+    
+    
     /**
      *  <p>Maps to <code>Category.metaKeywords</code>.</p>
      * @param metaKeywords value to be set
      */
-
+    
     public void setMetaKeywords(final LocalizedString metaKeywords);
-
+    
+    
     /**
      * set assets
      * @param assets values to be set
      */
-
+    
     @JsonIgnore
-    public void setAssets(final Asset... assets);
-
+    public void setAssets(final Asset ...assets);
     /**
      * set assets
      * @param assets values to be set
      */
-
+    
     public void setAssets(final List<Asset> assets);
-
+    
     /**
      *  <p>The custom fields for this Category.</p>
      * @param custom value to be set
      */
-
+    
     public void setCustom(final Custom custom);
+    
 
     /**
      * factory method
      * @return instance of CategoryImport
      */
-    public static CategoryImport of() {
+    public static CategoryImport of(){
         return new CategoryImportImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy CategoryImport
@@ -258,22 +262,15 @@ public interface CategoryImport extends ImportResource {
         instance.setKey(template.getKey());
         instance.setName(com.commercetools.importapi.models.common.LocalizedString.deepCopy(template.getName()));
         instance.setSlug(com.commercetools.importapi.models.common.LocalizedString.deepCopy(template.getSlug()));
-        instance.setDescription(
-            com.commercetools.importapi.models.common.LocalizedString.deepCopy(template.getDescription()));
-        instance.setParent(
-            com.commercetools.importapi.models.common.CategoryKeyReference.deepCopy(template.getParent()));
+        instance.setDescription(com.commercetools.importapi.models.common.LocalizedString.deepCopy(template.getDescription()));
+        instance.setParent(com.commercetools.importapi.models.common.CategoryKeyReference.deepCopy(template.getParent()));
         instance.setOrderHint(template.getOrderHint());
         instance.setExternalId(template.getExternalId());
-        instance.setMetaTitle(
-            com.commercetools.importapi.models.common.LocalizedString.deepCopy(template.getMetaTitle()));
-        instance.setMetaDescription(
-            com.commercetools.importapi.models.common.LocalizedString.deepCopy(template.getMetaDescription()));
-        instance.setMetaKeywords(
-            com.commercetools.importapi.models.common.LocalizedString.deepCopy(template.getMetaKeywords()));
+        instance.setMetaTitle(com.commercetools.importapi.models.common.LocalizedString.deepCopy(template.getMetaTitle()));
+        instance.setMetaDescription(com.commercetools.importapi.models.common.LocalizedString.deepCopy(template.getMetaDescription()));
+        instance.setMetaKeywords(com.commercetools.importapi.models.common.LocalizedString.deepCopy(template.getMetaKeywords()));
         instance.setAssets(Optional.ofNullable(template.getAssets())
-                .map(t -> t.stream()
-                        .map(com.commercetools.importapi.models.common.Asset::deepCopy)
-                        .collect(Collectors.toList()))
+                .map(t -> t.stream().map(com.commercetools.importapi.models.common.Asset::deepCopy).collect(Collectors.toList()))
                 .orElse(null));
         instance.setCustom(com.commercetools.importapi.models.customfields.Custom.deepCopy(template.getCustom()));
         return instance;
@@ -286,7 +283,7 @@ public interface CategoryImport extends ImportResource {
     public static CategoryImportBuilder builder() {
         return CategoryImportBuilder.of();
     }
-
+    
     /**
      * create builder for CategoryImport instance
      * @param template instance with prefilled values for the builder
@@ -295,6 +292,7 @@ public interface CategoryImport extends ImportResource {
     public static CategoryImportBuilder builder(final CategoryImport template) {
         return CategoryImportBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -305,7 +303,7 @@ public interface CategoryImport extends ImportResource {
     default <T> T withCategoryImport(Function<CategoryImport, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

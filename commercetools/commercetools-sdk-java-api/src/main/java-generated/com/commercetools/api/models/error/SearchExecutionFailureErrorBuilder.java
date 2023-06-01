@@ -1,8 +1,11 @@
-
 package com.commercetools.api.models.error;
 
+import com.commercetools.api.models.error.ErrorObject;
+import com.commercetools.api.models.error.SearchExecutionFailureError;
+import javax.annotation.Nullable;
 import java.util.*;
-
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -16,44 +19,54 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .message("{message}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class SearchExecutionFailureErrorBuilder implements Builder<SearchExecutionFailureError> {
 
+    
+    
     private String message;
-
+    
+    
+    
     private Map<String, java.lang.Object> values = new HashMap<>();
 
+    
     /**
      *  <p><code>"Something went wrong during the search query execution. In most case this happens due to usage of non-existing fields and custom product attributes. Please verify all filters and facets in your search query and make sure that all paths are correct."</code></p>
      * @param message value to be set
      * @return Builder
      */
-
-    public SearchExecutionFailureErrorBuilder message(final String message) {
+    
+    public SearchExecutionFailureErrorBuilder message( final String message) {
         this.message = message;
         return this;
     }
-
+    
+    
+    
     /**
      *  <p>Error-specific additional fields.</p>
      * @param values properties to be set
      * @return Builder
      */
-
-    public SearchExecutionFailureErrorBuilder values(final Map<String, java.lang.Object> values) {
+    
+    public SearchExecutionFailureErrorBuilder values( final Map<String, java.lang.Object> values){
         this.values = values;
         return this;
     }
-
+    
     /**
      *  <p>Error-specific additional fields.</p>
      * @param key property name
      * @param value property value
      * @return Builder
      */
-
+    
     public SearchExecutionFailureErrorBuilder addValue(final String key, final java.lang.Object value) {
         if (this.values == null) {
             values = new HashMap<>();
@@ -61,22 +74,25 @@ public class SearchExecutionFailureErrorBuilder implements Builder<SearchExecuti
         values.put(key, value);
         return this;
     }
+    
 
     /**
      *  <p><code>"Something went wrong during the search query execution. In most case this happens due to usage of non-existing fields and custom product attributes. Please verify all filters and facets in your search query and make sure that all paths are correct."</code></p>
      * @return message
      */
-
-    public String getMessage() {
+    
+    
+    public String getMessage(){
         return this.message;
     }
-
+    
     /**
      *  <p>Error-specific additional fields.</p>
      * @return pattern properties
      */
-
-    public Map<String, java.lang.Object> getValues() {
+    
+    
+    public Map<String, java.lang.Object> getValues(){
         return this.values;
     }
 
@@ -88,7 +104,7 @@ public class SearchExecutionFailureErrorBuilder implements Builder<SearchExecuti
         Objects.requireNonNull(message, SearchExecutionFailureError.class + ": message is missing");
         return new SearchExecutionFailureErrorImpl(message, values);
     }
-
+    
     /**
      * builds SearchExecutionFailureError without checking for non-null required values
      * @return SearchExecutionFailureError
@@ -99,7 +115,7 @@ public class SearchExecutionFailureErrorBuilder implements Builder<SearchExecuti
 
     /**
      * factory method for an instance of SearchExecutionFailureErrorBuilder
-     * @return builder
+     * @return builder 
      */
     public static SearchExecutionFailureErrorBuilder of() {
         return new SearchExecutionFailureErrorBuilder();

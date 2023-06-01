@@ -1,9 +1,11 @@
-
 package com.commercetools.api.predicates.query.order;
 
 import com.commercetools.api.predicates.query.*;
 
-public class OrderSetOrderNumberActionQueryBuilderDsl {
+import java.util.function.Function;
+
+
+public class OrderSetOrderNumberActionQueryBuilderDsl  {
     public OrderSetOrderNumberActionQueryBuilderDsl() {
     }
 
@@ -12,15 +14,12 @@ public class OrderSetOrderNumberActionQueryBuilderDsl {
     }
 
     public StringComparisonPredicateBuilder<OrderSetOrderNumberActionQueryBuilderDsl> action() {
-        return new StringComparisonPredicateBuilder<>(
-            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("action")),
-            p -> new CombinationQueryPredicate<>(p, OrderSetOrderNumberActionQueryBuilderDsl::of));
+        return new StringComparisonPredicateBuilder<>(BinaryQueryPredicate.of().left(new ConstantQueryPredicate("action")),
+        p -> new CombinationQueryPredicate<>(p, OrderSetOrderNumberActionQueryBuilderDsl::of));
     }
-
     public StringComparisonPredicateBuilder<OrderSetOrderNumberActionQueryBuilderDsl> orderNumber() {
-        return new StringComparisonPredicateBuilder<>(
-            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("orderNumber")),
-            p -> new CombinationQueryPredicate<>(p, OrderSetOrderNumberActionQueryBuilderDsl::of));
+        return new StringComparisonPredicateBuilder<>(BinaryQueryPredicate.of().left(new ConstantQueryPredicate("orderNumber")),
+        p -> new CombinationQueryPredicate<>(p, OrderSetOrderNumberActionQueryBuilderDsl::of));
     }
-
+    
 }

@@ -1,8 +1,11 @@
-
 package com.commercetools.api.models.product_type;
 
+import com.commercetools.api.models.product_type.AttributeType;
+import com.commercetools.api.models.product_type.AttributeDateType;
+import javax.annotation.Nullable;
 import java.util.*;
-
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -15,10 +18,16 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     AttributeDateType attributeDateType = AttributeDateType.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class AttributeDateTypeBuilder implements Builder<AttributeDateType> {
+
+
+
 
     /**
      * builds AttributeDateType with checking for non-null required values
@@ -27,7 +36,7 @@ public class AttributeDateTypeBuilder implements Builder<AttributeDateType> {
     public AttributeDateType build() {
         return new AttributeDateTypeImpl();
     }
-
+    
     /**
      * builds AttributeDateType without checking for non-null required values
      * @return AttributeDateType
@@ -38,7 +47,7 @@ public class AttributeDateTypeBuilder implements Builder<AttributeDateType> {
 
     /**
      * factory method for an instance of AttributeDateTypeBuilder
-     * @return builder
+     * @return builder 
      */
     public static AttributeDateTypeBuilder of() {
         return new AttributeDateTypeBuilder();

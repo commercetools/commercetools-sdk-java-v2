@@ -1,16 +1,20 @@
-
 package com.commercetools.api.models.product_type;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
+import com.commercetools.api.models.product_type.ProductTypeUpdateAction;
+import com.commercetools.api.models.product_type.ProductTypeSetKeyActionImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * ProductTypeSetKeyAction
@@ -22,9 +26,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     ProductTypeSetKeyAction productTypeSetKeyAction = ProductTypeSetKeyAction.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = ProductTypeSetKeyActionImpl.class)
 public interface ProductTypeSetKeyAction extends ProductTypeUpdateAction {
 
@@ -37,7 +44,7 @@ public interface ProductTypeSetKeyAction extends ProductTypeUpdateAction {
      *  <p>Value to set. If empty, any existing value will be removed.</p>
      * @return key
      */
-
+    
     @JsonProperty("key")
     public String getKey();
 
@@ -45,16 +52,18 @@ public interface ProductTypeSetKeyAction extends ProductTypeUpdateAction {
      *  <p>Value to set. If empty, any existing value will be removed.</p>
      * @param key value to be set
      */
-
+    
     public void setKey(final String key);
+    
 
     /**
      * factory method
      * @return instance of ProductTypeSetKeyAction
      */
-    public static ProductTypeSetKeyAction of() {
+    public static ProductTypeSetKeyAction of(){
         return new ProductTypeSetKeyActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy ProductTypeSetKeyAction
@@ -89,7 +98,7 @@ public interface ProductTypeSetKeyAction extends ProductTypeUpdateAction {
     public static ProductTypeSetKeyActionBuilder builder() {
         return ProductTypeSetKeyActionBuilder.of();
     }
-
+    
     /**
      * create builder for ProductTypeSetKeyAction instance
      * @param template instance with prefilled values for the builder
@@ -98,6 +107,7 @@ public interface ProductTypeSetKeyAction extends ProductTypeUpdateAction {
     public static ProductTypeSetKeyActionBuilder builder(final ProductTypeSetKeyAction template) {
         return ProductTypeSetKeyActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -108,11 +118,11 @@ public interface ProductTypeSetKeyAction extends ProductTypeUpdateAction {
     default <T> T withProductTypeSetKeyAction(Function<ProductTypeSetKeyAction, T> helper) {
         return helper.apply(this);
     }
-
     public static ProductTypeSetKeyAction ofUnset() {
         return ProductTypeSetKeyAction.of();
     }
-
+    
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

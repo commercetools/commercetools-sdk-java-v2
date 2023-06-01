@@ -1,10 +1,11 @@
-
 package com.commercetools.api.models.staged_quote;
 
-import java.util.*;
-
+import com.commercetools.api.models.staged_quote.StagedQuoteUpdateAction;
+import com.commercetools.api.models.staged_quote.StagedQuoteSetSellerCommentAction;
 import javax.annotation.Nullable;
-
+import java.util.*;
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -17,32 +18,39 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     StagedQuoteSetSellerCommentAction stagedQuoteSetSellerCommentAction = StagedQuoteSetSellerCommentAction.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class StagedQuoteSetSellerCommentActionBuilder implements Builder<StagedQuoteSetSellerCommentAction> {
 
+    
     @Nullable
     private String sellerComment;
 
+    
     /**
      *  <p>If <code>sellerComment</code> is absent or <code>null</code>, this field will be removed if it exists.</p>
      * @param sellerComment value to be set
      * @return Builder
      */
-
+    
     public StagedQuoteSetSellerCommentActionBuilder sellerComment(@Nullable final String sellerComment) {
         this.sellerComment = sellerComment;
         return this;
     }
+    
+    
 
     /**
      *  <p>If <code>sellerComment</code> is absent or <code>null</code>, this field will be removed if it exists.</p>
      * @return sellerComment
      */
-
+    
     @Nullable
-    public String getSellerComment() {
+    public String getSellerComment(){
         return this.sellerComment;
     }
 
@@ -53,7 +61,7 @@ public class StagedQuoteSetSellerCommentActionBuilder implements Builder<StagedQ
     public StagedQuoteSetSellerCommentAction build() {
         return new StagedQuoteSetSellerCommentActionImpl(sellerComment);
     }
-
+    
     /**
      * builds StagedQuoteSetSellerCommentAction without checking for non-null required values
      * @return StagedQuoteSetSellerCommentAction
@@ -64,7 +72,7 @@ public class StagedQuoteSetSellerCommentActionBuilder implements Builder<StagedQ
 
     /**
      * factory method for an instance of StagedQuoteSetSellerCommentActionBuilder
-     * @return builder
+     * @return builder 
      */
     public static StagedQuoteSetSellerCommentActionBuilder of() {
         return new StagedQuoteSetSellerCommentActionBuilder();

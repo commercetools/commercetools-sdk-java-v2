@@ -1,121 +1,137 @@
-
 package com.commercetools.api.models.category;
 
-import java.time.*;
-import java.util.*;
-
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
-
-import io.vrap.rmf.base.client.ModelBase;
+import com.commercetools.api.models.category.CategoryUpdateAction;
+import com.commercetools.api.models.common.AssetSource;
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.ModelBase;
+import javax.validation.Valid;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.annotation.*;
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
  * CategorySetAssetSourcesAction
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class CategorySetAssetSourcesActionImpl implements CategorySetAssetSourcesAction, ModelBase {
 
+    
     private String action;
-
+    
+    
     private String assetId;
-
+    
+    
     private String assetKey;
-
+    
+    
     private java.util.List<com.commercetools.api.models.common.AssetSource> sources;
 
     /**
      * create instance with all properties
      */
     @JsonCreator
-    CategorySetAssetSourcesActionImpl(@JsonProperty("assetId") final String assetId,
-            @JsonProperty("assetKey") final String assetKey,
-            @JsonProperty("sources") final java.util.List<com.commercetools.api.models.common.AssetSource> sources) {
+    CategorySetAssetSourcesActionImpl(@JsonProperty("assetId") final String assetId, @JsonProperty("assetKey") final String assetKey, @JsonProperty("sources") final java.util.List<com.commercetools.api.models.common.AssetSource> sources) {
         this.assetId = assetId;
         this.assetKey = assetKey;
         this.sources = sources;
-        this.action = SET_ASSET_SOURCES;
+        this.action =  SET_ASSET_SOURCES;
     }
-
     /**
      * create empty instance
      */
     public CategorySetAssetSourcesActionImpl() {
-        this.action = SET_ASSET_SOURCES;
+        this.action =  SET_ASSET_SOURCES;
     }
 
     /**
      *
      */
-
-    public String getAction() {
+    
+    public String getAction(){
         return this.action;
     }
-
+    
     /**
      *  <p>New value to set. Either <code>assetId</code> or <code>assetKey</code> is required.</p>
      */
-
-    public String getAssetId() {
+    
+    public String getAssetId(){
         return this.assetId;
     }
-
+    
     /**
      *  <p>New value to set. Either <code>assetId</code> or <code>assetKey</code> is required.</p>
      */
-
-    public String getAssetKey() {
+    
+    public String getAssetKey(){
         return this.assetKey;
     }
-
+    
     /**
      *  <p>Must not be empty. At least one entry is required.</p>
      */
-
-    public java.util.List<com.commercetools.api.models.common.AssetSource> getSources() {
+    
+    public java.util.List<com.commercetools.api.models.common.AssetSource> getSources(){
         return this.sources;
     }
 
-    public void setAssetId(final String assetId) {
+    
+    public void setAssetId(final String assetId){
         this.assetId = assetId;
     }
-
-    public void setAssetKey(final String assetKey) {
+    
+    
+    public void setAssetKey(final String assetKey){
         this.assetKey = assetKey;
     }
-
-    public void setSources(final com.commercetools.api.models.common.AssetSource... sources) {
-        this.sources = new ArrayList<>(Arrays.asList(sources));
+    
+    
+    public void setSources(final com.commercetools.api.models.common.AssetSource ...sources){
+       this.sources = new ArrayList<>(Arrays.asList(sources));
     }
-
-    public void setSources(final java.util.List<com.commercetools.api.models.common.AssetSource> sources) {
-        this.sources = sources;
+    
+    
+    public void setSources(final java.util.List<com.commercetools.api.models.common.AssetSource> sources){
+       this.sources = sources;
     }
 
     @Override
     public boolean equals(Object o) {
-        if (this == o)
-            return true;
-
-        if (o == null || getClass() != o.getClass())
-            return false;
-
+        if (this == o) return true;
+    
+        if (o == null || getClass() != o.getClass()) return false;
+    
         CategorySetAssetSourcesActionImpl that = (CategorySetAssetSourcesActionImpl) o;
-
-        return new EqualsBuilder().append(action, that.action)
+    
+        return new EqualsBuilder()
+                .append(action, that.action)
                 .append(assetId, that.assetId)
                 .append(assetKey, that.assetKey)
                 .append(sources, that.sources)
                 .isEquals();
     }
-
+    
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(action).append(assetId).append(assetKey).append(sources).toHashCode();
+        return new HashCodeBuilder(17, 37)
+            .append(action)
+            .append(assetId)
+            .append(assetKey)
+            .append(sources)
+            .toHashCode();
     }
 
 }

@@ -1,17 +1,20 @@
-
 package com.commercetools.api.models.standalone_price;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
+import com.commercetools.api.models.standalone_price.StandalonePriceUpdateAction;
+import com.commercetools.api.models.standalone_price.StandalonePriceChangeActiveActionImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Updating the value of a StandalonePrice produces the StandalonePriceActiveChangedMessage.</p>
@@ -24,9 +27,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .active(true)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = StandalonePriceChangeActiveActionImpl.class)
 public interface StandalonePriceChangeActiveAction extends StandalonePriceUpdateAction {
 
@@ -47,16 +53,18 @@ public interface StandalonePriceChangeActiveAction extends StandalonePriceUpdate
      *  <p>New value to set for the <code>active</code> field of the StandalonePrice.</p>
      * @param active value to be set
      */
-
+    
     public void setActive(final Boolean active);
+    
 
     /**
      * factory method
      * @return instance of StandalonePriceChangeActiveAction
      */
-    public static StandalonePriceChangeActiveAction of() {
+    public static StandalonePriceChangeActiveAction of(){
         return new StandalonePriceChangeActiveActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy StandalonePriceChangeActiveAction
@@ -75,8 +83,7 @@ public interface StandalonePriceChangeActiveAction extends StandalonePriceUpdate
      * @return copy instance
      */
     @Nullable
-    public static StandalonePriceChangeActiveAction deepCopy(
-            @Nullable final StandalonePriceChangeActiveAction template) {
+    public static StandalonePriceChangeActiveAction deepCopy(@Nullable final StandalonePriceChangeActiveAction template) {
         if (template == null) {
             return null;
         }
@@ -92,7 +99,7 @@ public interface StandalonePriceChangeActiveAction extends StandalonePriceUpdate
     public static StandalonePriceChangeActiveActionBuilder builder() {
         return StandalonePriceChangeActiveActionBuilder.of();
     }
-
+    
     /**
      * create builder for StandalonePriceChangeActiveAction instance
      * @param template instance with prefilled values for the builder
@@ -101,6 +108,7 @@ public interface StandalonePriceChangeActiveAction extends StandalonePriceUpdate
     public static StandalonePriceChangeActiveActionBuilder builder(final StandalonePriceChangeActiveAction template) {
         return StandalonePriceChangeActiveActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -111,7 +119,7 @@ public interface StandalonePriceChangeActiveAction extends StandalonePriceUpdate
     default <T> T withStandalonePriceChangeActiveAction(Function<StandalonePriceChangeActiveAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

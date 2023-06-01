@@ -1,16 +1,20 @@
-
 package com.commercetools.api.models.payment;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
+import com.commercetools.api.models.payment.PaymentUpdateAction;
+import com.commercetools.api.models.payment.PaymentSetStatusInterfaceCodeActionImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Produces the PaymentStatusInterfaceCodeSet Message.</p>
@@ -22,9 +26,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     PaymentSetStatusInterfaceCodeAction paymentSetStatusInterfaceCodeAction = PaymentSetStatusInterfaceCodeAction.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = PaymentSetStatusInterfaceCodeActionImpl.class)
 public interface PaymentSetStatusInterfaceCodeAction extends PaymentUpdateAction {
 
@@ -37,7 +44,7 @@ public interface PaymentSetStatusInterfaceCodeAction extends PaymentUpdateAction
      *  <p>Value to set. If empty, any existing value will be removed.</p>
      * @return interfaceCode
      */
-
+    
     @JsonProperty("interfaceCode")
     public String getInterfaceCode();
 
@@ -45,16 +52,18 @@ public interface PaymentSetStatusInterfaceCodeAction extends PaymentUpdateAction
      *  <p>Value to set. If empty, any existing value will be removed.</p>
      * @param interfaceCode value to be set
      */
-
+    
     public void setInterfaceCode(final String interfaceCode);
+    
 
     /**
      * factory method
      * @return instance of PaymentSetStatusInterfaceCodeAction
      */
-    public static PaymentSetStatusInterfaceCodeAction of() {
+    public static PaymentSetStatusInterfaceCodeAction of(){
         return new PaymentSetStatusInterfaceCodeActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy PaymentSetStatusInterfaceCodeAction
@@ -73,8 +82,7 @@ public interface PaymentSetStatusInterfaceCodeAction extends PaymentUpdateAction
      * @return copy instance
      */
     @Nullable
-    public static PaymentSetStatusInterfaceCodeAction deepCopy(
-            @Nullable final PaymentSetStatusInterfaceCodeAction template) {
+    public static PaymentSetStatusInterfaceCodeAction deepCopy(@Nullable final PaymentSetStatusInterfaceCodeAction template) {
         if (template == null) {
             return null;
         }
@@ -90,16 +98,16 @@ public interface PaymentSetStatusInterfaceCodeAction extends PaymentUpdateAction
     public static PaymentSetStatusInterfaceCodeActionBuilder builder() {
         return PaymentSetStatusInterfaceCodeActionBuilder.of();
     }
-
+    
     /**
      * create builder for PaymentSetStatusInterfaceCodeAction instance
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static PaymentSetStatusInterfaceCodeActionBuilder builder(
-            final PaymentSetStatusInterfaceCodeAction template) {
+    public static PaymentSetStatusInterfaceCodeActionBuilder builder(final PaymentSetStatusInterfaceCodeAction template) {
         return PaymentSetStatusInterfaceCodeActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -110,7 +118,7 @@ public interface PaymentSetStatusInterfaceCodeAction extends PaymentUpdateAction
     default <T> T withPaymentSetStatusInterfaceCodeAction(Function<PaymentSetStatusInterfaceCodeAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

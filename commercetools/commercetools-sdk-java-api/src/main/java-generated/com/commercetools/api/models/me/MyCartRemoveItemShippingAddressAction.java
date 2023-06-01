@@ -1,17 +1,20 @@
-
 package com.commercetools.api.models.me;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
+import com.commercetools.api.models.me.MyCartUpdateAction;
+import com.commercetools.api.models.me.MyCartRemoveItemShippingAddressActionImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>An address can only be removed if it is not referenced in any ItemShippingTarget of the Cart.</p>
@@ -24,9 +27,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .addressKey("{addressKey}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = MyCartRemoveItemShippingAddressActionImpl.class)
 public interface MyCartRemoveItemShippingAddressAction extends MyCartUpdateAction {
 
@@ -47,16 +53,18 @@ public interface MyCartRemoveItemShippingAddressAction extends MyCartUpdateActio
      *  <p><code>key</code> of the Address to remove from <code>itemShippingAddresses</code>.</p>
      * @param addressKey value to be set
      */
-
+    
     public void setAddressKey(final String addressKey);
+    
 
     /**
      * factory method
      * @return instance of MyCartRemoveItemShippingAddressAction
      */
-    public static MyCartRemoveItemShippingAddressAction of() {
+    public static MyCartRemoveItemShippingAddressAction of(){
         return new MyCartRemoveItemShippingAddressActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy MyCartRemoveItemShippingAddressAction
@@ -75,8 +83,7 @@ public interface MyCartRemoveItemShippingAddressAction extends MyCartUpdateActio
      * @return copy instance
      */
     @Nullable
-    public static MyCartRemoveItemShippingAddressAction deepCopy(
-            @Nullable final MyCartRemoveItemShippingAddressAction template) {
+    public static MyCartRemoveItemShippingAddressAction deepCopy(@Nullable final MyCartRemoveItemShippingAddressAction template) {
         if (template == null) {
             return null;
         }
@@ -92,16 +99,16 @@ public interface MyCartRemoveItemShippingAddressAction extends MyCartUpdateActio
     public static MyCartRemoveItemShippingAddressActionBuilder builder() {
         return MyCartRemoveItemShippingAddressActionBuilder.of();
     }
-
+    
     /**
      * create builder for MyCartRemoveItemShippingAddressAction instance
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static MyCartRemoveItemShippingAddressActionBuilder builder(
-            final MyCartRemoveItemShippingAddressAction template) {
+    public static MyCartRemoveItemShippingAddressActionBuilder builder(final MyCartRemoveItemShippingAddressAction template) {
         return MyCartRemoveItemShippingAddressActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -112,7 +119,7 @@ public interface MyCartRemoveItemShippingAddressAction extends MyCartUpdateActio
     default <T> T withMyCartRemoveItemShippingAddressAction(Function<MyCartRemoveItemShippingAddressAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

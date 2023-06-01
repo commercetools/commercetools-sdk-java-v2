@@ -1,19 +1,21 @@
-
 package com.commercetools.history.models.change;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
+import com.commercetools.history.models.change.Change;
 import com.commercetools.history.models.change_value.EnumValue;
+import com.commercetools.history.models.change.AddEnumValueChangeImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * AddEnumValueChange
@@ -28,9 +30,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .nextValue(nextValueBuilder -> nextValueBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = AddEnumValueChangeImpl.class)
 public interface AddEnumValueChange extends Change {
 
@@ -46,7 +51,6 @@ public interface AddEnumValueChange extends Change {
     @NotNull
     @JsonProperty("type")
     public String getType();
-
     /**
      *  <p>Update action for <code>addEnumValue</code> on types</p>
      * @return change
@@ -54,7 +58,6 @@ public interface AddEnumValueChange extends Change {
     @NotNull
     @JsonProperty("change")
     public String getChange();
-
     /**
      *  <p>The name of the field/attribute definition updated.</p>
      * @return fieldName
@@ -62,7 +65,6 @@ public interface AddEnumValueChange extends Change {
     @NotNull
     @JsonProperty("fieldName")
     public String getFieldName();
-
     /**
      *
      * @return nextValue
@@ -76,30 +78,34 @@ public interface AddEnumValueChange extends Change {
      *  <p>Update action for <code>addEnumValue</code> on types</p>
      * @param change value to be set
      */
-
+    
     public void setChange(final String change);
-
+    
+    
     /**
      *  <p>The name of the field/attribute definition updated.</p>
      * @param fieldName value to be set
      */
-
+    
     public void setFieldName(final String fieldName);
-
+    
+    
     /**
      * set nextValue
      * @param nextValue value to be set
      */
-
+    
     public void setNextValue(final EnumValue nextValue);
+    
 
     /**
      * factory method
      * @return instance of AddEnumValueChange
      */
-    public static AddEnumValueChange of() {
+    public static AddEnumValueChange of(){
         return new AddEnumValueChangeImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy AddEnumValueChange
@@ -127,8 +133,7 @@ public interface AddEnumValueChange extends Change {
         AddEnumValueChangeImpl instance = new AddEnumValueChangeImpl();
         instance.setChange(template.getChange());
         instance.setFieldName(template.getFieldName());
-        instance.setNextValue(
-            com.commercetools.history.models.change_value.EnumValue.deepCopy(template.getNextValue()));
+        instance.setNextValue(com.commercetools.history.models.change_value.EnumValue.deepCopy(template.getNextValue()));
         return instance;
     }
 
@@ -139,7 +144,7 @@ public interface AddEnumValueChange extends Change {
     public static AddEnumValueChangeBuilder builder() {
         return AddEnumValueChangeBuilder.of();
     }
-
+    
     /**
      * create builder for AddEnumValueChange instance
      * @param template instance with prefilled values for the builder
@@ -148,6 +153,7 @@ public interface AddEnumValueChange extends Change {
     public static AddEnumValueChangeBuilder builder(final AddEnumValueChange template) {
         return AddEnumValueChangeBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -158,7 +164,7 @@ public interface AddEnumValueChange extends Change {
     default <T> T withAddEnumValueChange(Function<AddEnumValueChange, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

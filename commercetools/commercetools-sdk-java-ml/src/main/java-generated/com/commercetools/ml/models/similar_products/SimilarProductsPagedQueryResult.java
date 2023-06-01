@@ -1,19 +1,21 @@
-
 package com.commercetools.ml.models.similar_products;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-import java.util.stream.Collectors;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
+import com.commercetools.ml.models.similar_products.SimilarProductPair;
+import com.commercetools.ml.models.similar_products.SimilarProductSearchRequestMeta;
+import com.commercetools.ml.models.similar_products.SimilarProductsPagedQueryResultImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * SimilarProductsPagedQueryResult
@@ -30,11 +32,15 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .meta(metaBuilder -> metaBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = SimilarProductsPagedQueryResultImpl.class)
-public interface SimilarProductsPagedQueryResult {
+public interface SimilarProductsPagedQueryResult  {
+
 
     /**
      *
@@ -43,7 +49,6 @@ public interface SimilarProductsPagedQueryResult {
     @NotNull
     @JsonProperty("count")
     public Long getCount();
-
     /**
      *
      * @return total
@@ -51,7 +56,6 @@ public interface SimilarProductsPagedQueryResult {
     @NotNull
     @JsonProperty("total")
     public Long getTotal();
-
     /**
      *  <p>Number of elements skipped.</p>
      * @return offset
@@ -59,7 +63,6 @@ public interface SimilarProductsPagedQueryResult {
     @NotNull
     @JsonProperty("offset")
     public Long getOffset();
-
     /**
      *
      * @return results
@@ -68,7 +71,6 @@ public interface SimilarProductsPagedQueryResult {
     @Valid
     @JsonProperty("results")
     public List<SimilarProductPair> getResults();
-
     /**
      *
      * @return meta
@@ -82,52 +84,56 @@ public interface SimilarProductsPagedQueryResult {
      * set count
      * @param count value to be set
      */
-
+    
     public void setCount(final Long count);
-
+    
+    
     /**
      * set total
      * @param total value to be set
      */
-
+    
     public void setTotal(final Long total);
-
+    
+    
     /**
      *  <p>Number of elements skipped.</p>
      * @param offset value to be set
      */
-
+    
     public void setOffset(final Long offset);
-
+    
+    
     /**
      * set results
      * @param results values to be set
      */
-
+    
     @JsonIgnore
-    public void setResults(final SimilarProductPair... results);
-
+    public void setResults(final SimilarProductPair ...results);
     /**
      * set results
      * @param results values to be set
      */
-
+    
     public void setResults(final List<SimilarProductPair> results);
-
+    
     /**
      * set meta
      * @param meta value to be set
      */
-
+    
     public void setMeta(final SimilarProductSearchRequestMeta meta);
+    
 
     /**
      * factory method
      * @return instance of SimilarProductsPagedQueryResult
      */
-    public static SimilarProductsPagedQueryResult of() {
+    public static SimilarProductsPagedQueryResult of(){
         return new SimilarProductsPagedQueryResultImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy SimilarProductsPagedQueryResult
@@ -159,12 +165,9 @@ public interface SimilarProductsPagedQueryResult {
         instance.setTotal(template.getTotal());
         instance.setOffset(template.getOffset());
         instance.setResults(Optional.ofNullable(template.getResults())
-                .map(t -> t.stream()
-                        .map(com.commercetools.ml.models.similar_products.SimilarProductPair::deepCopy)
-                        .collect(Collectors.toList()))
+                .map(t -> t.stream().map(com.commercetools.ml.models.similar_products.SimilarProductPair::deepCopy).collect(Collectors.toList()))
                 .orElse(null));
-        instance.setMeta(
-            com.commercetools.ml.models.similar_products.SimilarProductSearchRequestMeta.deepCopy(template.getMeta()));
+        instance.setMeta(com.commercetools.ml.models.similar_products.SimilarProductSearchRequestMeta.deepCopy(template.getMeta()));
         return instance;
     }
 
@@ -175,7 +178,7 @@ public interface SimilarProductsPagedQueryResult {
     public static SimilarProductsPagedQueryResultBuilder builder() {
         return SimilarProductsPagedQueryResultBuilder.of();
     }
-
+    
     /**
      * create builder for SimilarProductsPagedQueryResult instance
      * @param template instance with prefilled values for the builder
@@ -184,6 +187,7 @@ public interface SimilarProductsPagedQueryResult {
     public static SimilarProductsPagedQueryResultBuilder builder(final SimilarProductsPagedQueryResult template) {
         return SimilarProductsPagedQueryResultBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -194,7 +198,7 @@ public interface SimilarProductsPagedQueryResult {
     default <T> T withSimilarProductsPagedQueryResult(Function<SimilarProductsPagedQueryResult, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

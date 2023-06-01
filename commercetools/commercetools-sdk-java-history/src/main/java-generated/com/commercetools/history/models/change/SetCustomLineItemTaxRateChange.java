@@ -1,21 +1,23 @@
-
 package com.commercetools.history.models.change;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
+import com.commercetools.history.models.change.Change;
 import com.commercetools.history.models.common.LocalizedString;
 import com.commercetools.history.models.common.TaxMode;
 import com.commercetools.history.models.common.TaxRate;
+import com.commercetools.history.models.change.SetCustomLineItemTaxRateChangeImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * SetCustomLineItemTaxRateChange
@@ -33,9 +35,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .previousValue(previousValueBuilder -> previousValueBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = SetCustomLineItemTaxRateChangeImpl.class)
 public interface SetCustomLineItemTaxRateChange extends Change {
 
@@ -51,7 +56,6 @@ public interface SetCustomLineItemTaxRateChange extends Change {
     @NotNull
     @JsonProperty("type")
     public String getType();
-
     /**
      *  <p>Update action for <code>setCustomLineItemTaxRate</code></p>
      * @return change
@@ -59,7 +63,6 @@ public interface SetCustomLineItemTaxRateChange extends Change {
     @NotNull
     @JsonProperty("change")
     public String getChange();
-
     /**
      *
      * @return customLineItem
@@ -68,7 +71,6 @@ public interface SetCustomLineItemTaxRateChange extends Change {
     @Valid
     @JsonProperty("customLineItem")
     public LocalizedString getCustomLineItem();
-
     /**
      *
      * @return customLineItemId
@@ -76,7 +78,6 @@ public interface SetCustomLineItemTaxRateChange extends Change {
     @NotNull
     @JsonProperty("customLineItemId")
     public String getCustomLineItemId();
-
     /**
      *
      * @return taxMode
@@ -84,7 +85,6 @@ public interface SetCustomLineItemTaxRateChange extends Change {
     @NotNull
     @JsonProperty("taxMode")
     public TaxMode getTaxMode();
-
     /**
      *  <p>Shape of the value for <code>addTaxRate</code> and <code>removeTaxRate</code> actions</p>
      * @return nextValue
@@ -93,7 +93,6 @@ public interface SetCustomLineItemTaxRateChange extends Change {
     @Valid
     @JsonProperty("nextValue")
     public TaxRate getNextValue();
-
     /**
      *  <p>Shape of the value for <code>addTaxRate</code> and <code>removeTaxRate</code> actions</p>
      * @return previousValue
@@ -107,51 +106,58 @@ public interface SetCustomLineItemTaxRateChange extends Change {
      *  <p>Update action for <code>setCustomLineItemTaxRate</code></p>
      * @param change value to be set
      */
-
+    
     public void setChange(final String change);
-
+    
+    
     /**
      * set customLineItem
      * @param customLineItem value to be set
      */
-
+    
     public void setCustomLineItem(final LocalizedString customLineItem);
-
+    
+    
     /**
      * set customLineItemId
      * @param customLineItemId value to be set
      */
-
+    
     public void setCustomLineItemId(final String customLineItemId);
-
+    
+    
     /**
      * set taxMode
      * @param taxMode value to be set
      */
-
+    
     public void setTaxMode(final TaxMode taxMode);
-
+    
+    
     /**
      *  <p>Shape of the value for <code>addTaxRate</code> and <code>removeTaxRate</code> actions</p>
      * @param nextValue value to be set
      */
-
+    
     public void setNextValue(final TaxRate nextValue);
-
+    
+    
     /**
      *  <p>Shape of the value for <code>addTaxRate</code> and <code>removeTaxRate</code> actions</p>
      * @param previousValue value to be set
      */
-
+    
     public void setPreviousValue(final TaxRate previousValue);
+    
 
     /**
      * factory method
      * @return instance of SetCustomLineItemTaxRateChange
      */
-    public static SetCustomLineItemTaxRateChange of() {
+    public static SetCustomLineItemTaxRateChange of(){
         return new SetCustomLineItemTaxRateChangeImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy SetCustomLineItemTaxRateChange
@@ -181,13 +187,11 @@ public interface SetCustomLineItemTaxRateChange extends Change {
         }
         SetCustomLineItemTaxRateChangeImpl instance = new SetCustomLineItemTaxRateChangeImpl();
         instance.setChange(template.getChange());
-        instance.setCustomLineItem(
-            com.commercetools.history.models.common.LocalizedString.deepCopy(template.getCustomLineItem()));
+        instance.setCustomLineItem(com.commercetools.history.models.common.LocalizedString.deepCopy(template.getCustomLineItem()));
         instance.setCustomLineItemId(template.getCustomLineItemId());
         instance.setTaxMode(template.getTaxMode());
         instance.setNextValue(com.commercetools.history.models.common.TaxRate.deepCopy(template.getNextValue()));
-        instance.setPreviousValue(
-            com.commercetools.history.models.common.TaxRate.deepCopy(template.getPreviousValue()));
+        instance.setPreviousValue(com.commercetools.history.models.common.TaxRate.deepCopy(template.getPreviousValue()));
         return instance;
     }
 
@@ -198,7 +202,7 @@ public interface SetCustomLineItemTaxRateChange extends Change {
     public static SetCustomLineItemTaxRateChangeBuilder builder() {
         return SetCustomLineItemTaxRateChangeBuilder.of();
     }
-
+    
     /**
      * create builder for SetCustomLineItemTaxRateChange instance
      * @param template instance with prefilled values for the builder
@@ -207,6 +211,7 @@ public interface SetCustomLineItemTaxRateChange extends Change {
     public static SetCustomLineItemTaxRateChangeBuilder builder(final SetCustomLineItemTaxRateChange template) {
         return SetCustomLineItemTaxRateChangeBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -217,7 +222,7 @@ public interface SetCustomLineItemTaxRateChange extends Change {
     default <T> T withSetCustomLineItemTaxRateChange(Function<SetCustomLineItemTaxRateChange, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

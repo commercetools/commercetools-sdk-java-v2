@@ -1,8 +1,11 @@
-
 package com.commercetools.api.models.store_country;
 
-import java.util.*;
 
+import com.commercetools.api.models.store_country.StoreCountry;
+import javax.annotation.Nullable;
+import java.util.*;
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -16,30 +19,39 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .code("{code}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class StoreCountryBuilder implements Builder<StoreCountry> {
 
+    
+    
     private String code;
 
+    
     /**
      *  <p>Two-digit country code as per ISO 3166-1 alpha-2.</p>
      * @param code value to be set
      * @return Builder
      */
-
-    public StoreCountryBuilder code(final String code) {
+    
+    public StoreCountryBuilder code( final String code) {
         this.code = code;
         return this;
     }
+    
+    
 
     /**
      *  <p>Two-digit country code as per ISO 3166-1 alpha-2.</p>
      * @return code
      */
-
-    public String getCode() {
+    
+    
+    public String getCode(){
         return this.code;
     }
 
@@ -51,7 +63,7 @@ public class StoreCountryBuilder implements Builder<StoreCountry> {
         Objects.requireNonNull(code, StoreCountry.class + ": code is missing");
         return new StoreCountryImpl(code);
     }
-
+    
     /**
      * builds StoreCountry without checking for non-null required values
      * @return StoreCountry
@@ -62,7 +74,7 @@ public class StoreCountryBuilder implements Builder<StoreCountry> {
 
     /**
      * factory method for an instance of StoreCountryBuilder
-     * @return builder
+     * @return builder 
      */
     public static StoreCountryBuilder of() {
         return new StoreCountryBuilder();

@@ -1,20 +1,22 @@
-
 package com.commercetools.api.models.error;
-
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.channel.ChannelReference;
 import com.commercetools.api.models.customer_group.CustomerGroupReference;
+import com.commercetools.api.models.error.GraphQLErrorObject;
+import com.commercetools.api.models.error.GraphQLMatchingPriceNotFoundErrorImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Returned when the Product Variant does not have a Price according to the Product <code>priceMode</code> value for a selected currency, country, Customer Group, or Channel.</p>
@@ -35,9 +37,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .variantId(1)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = GraphQLMatchingPriceNotFoundErrorImpl.class)
 public interface GraphQLMatchingPriceNotFoundError extends GraphQLErrorObject {
 
@@ -53,7 +58,6 @@ public interface GraphQLMatchingPriceNotFoundError extends GraphQLErrorObject {
     @NotNull
     @JsonProperty("code")
     public String getCode();
-
     /**
      *  <p>Unique identifier of a Product.</p>
      * @return productId
@@ -61,7 +65,6 @@ public interface GraphQLMatchingPriceNotFoundError extends GraphQLErrorObject {
     @NotNull
     @JsonProperty("productId")
     public String getProductId();
-
     /**
      *  <p>Unique identifier of a ProductVariant in the Product.</p>
      * @return variantId
@@ -69,23 +72,20 @@ public interface GraphQLMatchingPriceNotFoundError extends GraphQLErrorObject {
     @NotNull
     @JsonProperty("variantId")
     public Integer getVariantId();
-
     /**
      *  <p>Currency code of the country.</p>
      * @return currency
      */
-
+    
     @JsonProperty("currency")
     public String getCurrency();
-
     /**
      *  <p>Country code of the geographic location.</p>
      * @return country
      */
-
+    
     @JsonProperty("country")
     public String getCountry();
-
     /**
      *  <p>Customer Group associated with the Price.</p>
      * @return customerGroup
@@ -93,7 +93,6 @@ public interface GraphQLMatchingPriceNotFoundError extends GraphQLErrorObject {
     @Valid
     @JsonProperty("customerGroup")
     public CustomerGroupReference getCustomerGroup();
-
     /**
      *  <p>Channel associated with the Price.</p>
      * @return channel
@@ -106,51 +105,58 @@ public interface GraphQLMatchingPriceNotFoundError extends GraphQLErrorObject {
      *  <p>Unique identifier of a Product.</p>
      * @param productId value to be set
      */
-
+    
     public void setProductId(final String productId);
-
+    
+    
     /**
      *  <p>Unique identifier of a ProductVariant in the Product.</p>
      * @param variantId value to be set
      */
-
+    
     public void setVariantId(final Integer variantId);
-
+    
+    
     /**
      *  <p>Currency code of the country.</p>
      * @param currency value to be set
      */
-
+    
     public void setCurrency(final String currency);
-
+    
+    
     /**
      *  <p>Country code of the geographic location.</p>
      * @param country value to be set
      */
-
+    
     public void setCountry(final String country);
-
+    
+    
     /**
      *  <p>Customer Group associated with the Price.</p>
      * @param customerGroup value to be set
      */
-
+    
     public void setCustomerGroup(final CustomerGroupReference customerGroup);
-
+    
+    
     /**
      *  <p>Channel associated with the Price.</p>
      * @param channel value to be set
      */
-
+    
     public void setChannel(final ChannelReference channel);
+    
 
     /**
      * factory method
      * @return instance of GraphQLMatchingPriceNotFoundError
      */
-    public static GraphQLMatchingPriceNotFoundError of() {
+    public static GraphQLMatchingPriceNotFoundError of(){
         return new GraphQLMatchingPriceNotFoundErrorImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy GraphQLMatchingPriceNotFoundError
@@ -175,8 +181,7 @@ public interface GraphQLMatchingPriceNotFoundError extends GraphQLErrorObject {
      * @return copy instance
      */
     @Nullable
-    public static GraphQLMatchingPriceNotFoundError deepCopy(
-            @Nullable final GraphQLMatchingPriceNotFoundError template) {
+    public static GraphQLMatchingPriceNotFoundError deepCopy(@Nullable final GraphQLMatchingPriceNotFoundError template) {
         if (template == null) {
             return null;
         }
@@ -186,8 +191,7 @@ public interface GraphQLMatchingPriceNotFoundError extends GraphQLErrorObject {
         instance.setVariantId(template.getVariantId());
         instance.setCurrency(template.getCurrency());
         instance.setCountry(template.getCountry());
-        instance.setCustomerGroup(
-            com.commercetools.api.models.customer_group.CustomerGroupReference.deepCopy(template.getCustomerGroup()));
+        instance.setCustomerGroup(com.commercetools.api.models.customer_group.CustomerGroupReference.deepCopy(template.getCustomerGroup()));
         instance.setChannel(com.commercetools.api.models.channel.ChannelReference.deepCopy(template.getChannel()));
         return instance;
     }
@@ -199,7 +203,7 @@ public interface GraphQLMatchingPriceNotFoundError extends GraphQLErrorObject {
     public static GraphQLMatchingPriceNotFoundErrorBuilder builder() {
         return GraphQLMatchingPriceNotFoundErrorBuilder.of();
     }
-
+    
     /**
      * create builder for GraphQLMatchingPriceNotFoundError instance
      * @param template instance with prefilled values for the builder
@@ -208,6 +212,7 @@ public interface GraphQLMatchingPriceNotFoundError extends GraphQLErrorObject {
     public static GraphQLMatchingPriceNotFoundErrorBuilder builder(final GraphQLMatchingPriceNotFoundError template) {
         return GraphQLMatchingPriceNotFoundErrorBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -218,7 +223,7 @@ public interface GraphQLMatchingPriceNotFoundError extends GraphQLErrorObject {
     default <T> T withGraphQLMatchingPriceNotFoundError(Function<GraphQLMatchingPriceNotFoundError, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

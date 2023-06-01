@@ -1,19 +1,21 @@
-
 package com.commercetools.api.models.product;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
 import com.commercetools.api.models.category.CategoryResourceIdentifier;
+import com.commercetools.api.models.product.ProductUpdateAction;
+import com.commercetools.api.models.product.ProductRemoveFromCategoryActionImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Produces the ProductRemovedFromCategory Message.</p>
@@ -26,9 +28,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .category(categoryBuilder -> categoryBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = ProductRemoveFromCategoryActionImpl.class)
 public interface ProductRemoveFromCategoryAction extends ProductUpdateAction {
 
@@ -45,12 +50,11 @@ public interface ProductRemoveFromCategoryAction extends ProductUpdateAction {
     @Valid
     @JsonProperty("category")
     public CategoryResourceIdentifier getCategory();
-
     /**
      *  <p>If <code>true</code>, only the staged <code>categories</code> and <code>categoryOrderHints</code> are removed. If <code>false</code>, both the current and staged <code>categories</code> and <code>categoryOrderHints</code> are removed.</p>
      * @return staged
      */
-
+    
     @JsonProperty("staged")
     public Boolean getStaged();
 
@@ -58,23 +62,26 @@ public interface ProductRemoveFromCategoryAction extends ProductUpdateAction {
      *  <p>The Category to remove.</p>
      * @param category value to be set
      */
-
+    
     public void setCategory(final CategoryResourceIdentifier category);
-
+    
+    
     /**
      *  <p>If <code>true</code>, only the staged <code>categories</code> and <code>categoryOrderHints</code> are removed. If <code>false</code>, both the current and staged <code>categories</code> and <code>categoryOrderHints</code> are removed.</p>
      * @param staged value to be set
      */
-
+    
     public void setStaged(final Boolean staged);
+    
 
     /**
      * factory method
      * @return instance of ProductRemoveFromCategoryAction
      */
-    public static ProductRemoveFromCategoryAction of() {
+    public static ProductRemoveFromCategoryAction of(){
         return new ProductRemoveFromCategoryActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy ProductRemoveFromCategoryAction
@@ -99,8 +106,7 @@ public interface ProductRemoveFromCategoryAction extends ProductUpdateAction {
             return null;
         }
         ProductRemoveFromCategoryActionImpl instance = new ProductRemoveFromCategoryActionImpl();
-        instance.setCategory(
-            com.commercetools.api.models.category.CategoryResourceIdentifier.deepCopy(template.getCategory()));
+        instance.setCategory(com.commercetools.api.models.category.CategoryResourceIdentifier.deepCopy(template.getCategory()));
         instance.setStaged(template.getStaged());
         return instance;
     }
@@ -112,7 +118,7 @@ public interface ProductRemoveFromCategoryAction extends ProductUpdateAction {
     public static ProductRemoveFromCategoryActionBuilder builder() {
         return ProductRemoveFromCategoryActionBuilder.of();
     }
-
+    
     /**
      * create builder for ProductRemoveFromCategoryAction instance
      * @param template instance with prefilled values for the builder
@@ -121,6 +127,7 @@ public interface ProductRemoveFromCategoryAction extends ProductUpdateAction {
     public static ProductRemoveFromCategoryActionBuilder builder(final ProductRemoveFromCategoryAction template) {
         return ProductRemoveFromCategoryActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -131,7 +138,7 @@ public interface ProductRemoveFromCategoryAction extends ProductUpdateAction {
     default <T> T withProductRemoveFromCategoryAction(Function<ProductRemoveFromCategoryAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

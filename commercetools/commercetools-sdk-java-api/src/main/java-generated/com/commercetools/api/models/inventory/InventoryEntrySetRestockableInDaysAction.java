@@ -1,16 +1,20 @@
-
 package com.commercetools.api.models.inventory;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
+import com.commercetools.api.models.inventory.InventoryEntryUpdateAction;
+import com.commercetools.api.models.inventory.InventoryEntrySetRestockableInDaysActionImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * InventoryEntrySetRestockableInDaysAction
@@ -22,9 +26,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     InventoryEntrySetRestockableInDaysAction inventoryEntrySetRestockableInDaysAction = InventoryEntrySetRestockableInDaysAction.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = InventoryEntrySetRestockableInDaysActionImpl.class)
 public interface InventoryEntrySetRestockableInDaysAction extends InventoryEntryUpdateAction {
 
@@ -37,7 +44,7 @@ public interface InventoryEntrySetRestockableInDaysAction extends InventoryEntry
      *  <p>Value to set. If empty, any existing value will be removed.</p>
      * @return restockableInDays
      */
-
+    
     @JsonProperty("restockableInDays")
     public Long getRestockableInDays();
 
@@ -45,16 +52,18 @@ public interface InventoryEntrySetRestockableInDaysAction extends InventoryEntry
      *  <p>Value to set. If empty, any existing value will be removed.</p>
      * @param restockableInDays value to be set
      */
-
+    
     public void setRestockableInDays(final Long restockableInDays);
+    
 
     /**
      * factory method
      * @return instance of InventoryEntrySetRestockableInDaysAction
      */
-    public static InventoryEntrySetRestockableInDaysAction of() {
+    public static InventoryEntrySetRestockableInDaysAction of(){
         return new InventoryEntrySetRestockableInDaysActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy InventoryEntrySetRestockableInDaysAction
@@ -73,8 +82,7 @@ public interface InventoryEntrySetRestockableInDaysAction extends InventoryEntry
      * @return copy instance
      */
     @Nullable
-    public static InventoryEntrySetRestockableInDaysAction deepCopy(
-            @Nullable final InventoryEntrySetRestockableInDaysAction template) {
+    public static InventoryEntrySetRestockableInDaysAction deepCopy(@Nullable final InventoryEntrySetRestockableInDaysAction template) {
         if (template == null) {
             return null;
         }
@@ -90,16 +98,16 @@ public interface InventoryEntrySetRestockableInDaysAction extends InventoryEntry
     public static InventoryEntrySetRestockableInDaysActionBuilder builder() {
         return InventoryEntrySetRestockableInDaysActionBuilder.of();
     }
-
+    
     /**
      * create builder for InventoryEntrySetRestockableInDaysAction instance
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static InventoryEntrySetRestockableInDaysActionBuilder builder(
-            final InventoryEntrySetRestockableInDaysAction template) {
+    public static InventoryEntrySetRestockableInDaysActionBuilder builder(final InventoryEntrySetRestockableInDaysAction template) {
         return InventoryEntrySetRestockableInDaysActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -107,11 +115,10 @@ public interface InventoryEntrySetRestockableInDaysAction extends InventoryEntry
      * @param helper function to map the object
      * @return mapped value
      */
-    default <T> T withInventoryEntrySetRestockableInDaysAction(
-            Function<InventoryEntrySetRestockableInDaysAction, T> helper) {
+    default <T> T withInventoryEntrySetRestockableInDaysAction(Function<InventoryEntrySetRestockableInDaysAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

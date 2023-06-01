@@ -1,22 +1,38 @@
-
 package com.commercetools.api.client;
 
+import io.vrap.rmf.base.client.utils.Utils;
+
+import java.io.InputStream;
+import java.io.IOException;
+
 import java.net.URI;
+import java.net.URLConnection;
 import java.nio.charset.StandardCharsets;
+import java.nio.file.Files;
+
 import java.time.Duration;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
-import java.util.concurrent.CompletableFuture;
+import java.util.Map;
+import java.util.HashMap;
+import java.util.Optional;
 import java.util.function.Function;
 import java.util.function.Supplier;
 import java.util.stream.Collectors;
-
-import io.vrap.rmf.base.client.*;
+import java.util.concurrent.CompletableFuture;
 import io.vrap.rmf.base.client.utils.Generated;
+
+import javax.annotation.Nullable;
+
+import java.io.UnsupportedEncodingException;
+import java.net.URLEncoder;
+import io.vrap.rmf.base.client.*;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+
+import static io.vrap.rmf.base.client.utils.ClientUtils.blockingWait;
 
 /**
  *
@@ -33,29 +49,26 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
  * }</code></pre>
  * </div>
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
-public class ByProjectKeyOrdersOrderNumberByOrderNumberPostString extends
-        StringBodyApiMethod<ByProjectKeyOrdersOrderNumberByOrderNumberPostString, com.commercetools.api.models.order.Order>
-        implements com.commercetools.api.client.ConflictingTrait<ByProjectKeyOrdersOrderNumberByOrderNumberPostString>,
-        com.commercetools.api.client.ExpandableTrait<ByProjectKeyOrdersOrderNumberByOrderNumberPostString>,
-        com.commercetools.api.client.Deprecatable200Trait<ByProjectKeyOrdersOrderNumberByOrderNumberPostString>,
-        com.commercetools.api.client.ErrorableTrait<ByProjectKeyOrdersOrderNumberByOrderNumberPostString> {
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
+public class ByProjectKeyOrdersOrderNumberByOrderNumberPostString extends StringBodyApiMethod<ByProjectKeyOrdersOrderNumberByOrderNumberPostString, com.commercetools.api.models.order.Order> implements com.commercetools.api.client.ConflictingTrait<ByProjectKeyOrdersOrderNumberByOrderNumberPostString>, com.commercetools.api.client.ExpandableTrait<ByProjectKeyOrdersOrderNumberByOrderNumberPostString>, com.commercetools.api.client.Deprecatable200Trait<ByProjectKeyOrdersOrderNumberByOrderNumberPostString>, com.commercetools.api.client.ErrorableTrait<ByProjectKeyOrdersOrderNumberByOrderNumberPostString> {
 
+    
     private String projectKey;
     private String orderNumber;
-
+    
     private String orderUpdate;
 
-    public ByProjectKeyOrdersOrderNumberByOrderNumberPostString(final ApiHttpClient apiHttpClient, String projectKey,
-            String orderNumber, String orderUpdate) {
+    public ByProjectKeyOrdersOrderNumberByOrderNumberPostString(final ApiHttpClient apiHttpClient, String projectKey, String orderNumber, String orderUpdate) {
         super(apiHttpClient);
         this.projectKey = projectKey;
         this.orderNumber = orderNumber;
         this.orderUpdate = orderUpdate;
     }
 
-    public ByProjectKeyOrdersOrderNumberByOrderNumberPostString(
-            ByProjectKeyOrdersOrderNumberByOrderNumberPostString t) {
+    public ByProjectKeyOrdersOrderNumberByOrderNumberPostString(ByProjectKeyOrdersOrderNumberByOrderNumberPostString t) {
         super(t);
         this.projectKey = t.projectKey;
         this.orderNumber = t.orderNumber;
@@ -69,42 +82,30 @@ public class ByProjectKeyOrdersOrderNumberByOrderNumberPostString extends
         if (!params.isEmpty()) {
             httpRequestPath += "?" + String.join("&", params);
         }
-        return new ApiHttpRequest(ApiHttpMethod.POST, URI.create(httpRequestPath), getHeaders(),
-            orderUpdate.getBytes(StandardCharsets.UTF_8));
-
+        return new ApiHttpRequest(ApiHttpMethod.POST, URI.create(httpRequestPath), getHeaders(), orderUpdate.getBytes(StandardCharsets.UTF_8));
+    
     }
 
     @Override
-    public ApiHttpResponse<com.commercetools.api.models.order.Order> executeBlocking(final ApiHttpClient client,
-            final Duration timeout) {
+    public ApiHttpResponse<com.commercetools.api.models.order.Order> executeBlocking(final ApiHttpClient client, final Duration timeout) {
         return executeBlocking(client, timeout, com.commercetools.api.models.order.Order.class);
     }
 
     @Override
-    public CompletableFuture<ApiHttpResponse<com.commercetools.api.models.order.Order>> execute(
-            final ApiHttpClient client) {
+    public CompletableFuture<ApiHttpResponse<com.commercetools.api.models.order.Order>> execute(final ApiHttpClient client) {
         return execute(client, com.commercetools.api.models.order.Order.class);
     }
 
-    public String getProjectKey() {
-        return this.projectKey;
-    }
-
-    public String getOrderNumber() {
-        return this.orderNumber;
-    }
+    public String getProjectKey() {return this.projectKey;}
+    public String getOrderNumber() {return this.orderNumber;}
 
     public List<String> getExpand() {
         return this.getQueryParam("expand");
     }
 
-    public void setProjectKey(final String projectKey) {
-        this.projectKey = projectKey;
-    }
-
-    public void setOrderNumber(final String orderNumber) {
-        this.orderNumber = orderNumber;
-    }
+    public void setProjectKey(final String projectKey) { this.projectKey = projectKey; }
+    
+    public void setOrderNumber(final String orderNumber) { this.orderNumber = orderNumber; }
 
     /**
      * set expand with the specified value
@@ -115,7 +116,7 @@ public class ByProjectKeyOrdersOrderNumberByOrderNumberPostString extends
     public <TValue> ByProjectKeyOrdersOrderNumberByOrderNumberPostString withExpand(final TValue expand) {
         return copy().withQueryParam("expand", expand);
     }
-
+    
     /**
      * add additional expand query parameter
      * @param <TValue> value type
@@ -125,7 +126,7 @@ public class ByProjectKeyOrdersOrderNumberByOrderNumberPostString extends
     public <TValue> ByProjectKeyOrdersOrderNumberByOrderNumberPostString addExpand(final TValue expand) {
         return copy().addQueryParam("expand", expand);
     }
-
+    
     /**
      * set expand with the specified value
      * @param supplier supplier for the value to be set
@@ -134,7 +135,7 @@ public class ByProjectKeyOrdersOrderNumberByOrderNumberPostString extends
     public ByProjectKeyOrdersOrderNumberByOrderNumberPostString withExpand(final Supplier<String> supplier) {
         return copy().withQueryParam("expand", supplier.get());
     }
-
+    
     /**
      * add additional expand query parameter
      * @param supplier supplier for the value to be added
@@ -143,27 +144,25 @@ public class ByProjectKeyOrdersOrderNumberByOrderNumberPostString extends
     public ByProjectKeyOrdersOrderNumberByOrderNumberPostString addExpand(final Supplier<String> supplier) {
         return copy().addQueryParam("expand", supplier.get());
     }
-
+    
     /**
      * set expand with the specified value
      * @param op builder for the value to be set
      * @return ByProjectKeyOrdersOrderNumberByOrderNumberPostString
      */
-    public ByProjectKeyOrdersOrderNumberByOrderNumberPostString withExpand(
-            final Function<StringBuilder, StringBuilder> op) {
+    public ByProjectKeyOrdersOrderNumberByOrderNumberPostString withExpand(final Function<StringBuilder, StringBuilder> op) {
         return copy().withQueryParam("expand", op.apply(new StringBuilder()));
     }
-
+    
     /**
      * add additional expand query parameter
      * @param op builder for the value to be added
      * @return ByProjectKeyOrdersOrderNumberByOrderNumberPostString
      */
-    public ByProjectKeyOrdersOrderNumberByOrderNumberPostString addExpand(
-            final Function<StringBuilder, StringBuilder> op) {
+    public ByProjectKeyOrdersOrderNumberByOrderNumberPostString addExpand(final Function<StringBuilder, StringBuilder> op) {
         return copy().addQueryParam("expand", op.apply(new StringBuilder()));
     }
-
+    
     /**
      * set expand with the specified values
      * @param <TValue> value type
@@ -171,11 +170,9 @@ public class ByProjectKeyOrdersOrderNumberByOrderNumberPostString extends
      * @return ByProjectKeyOrdersOrderNumberByOrderNumberPostString
      */
     public <TValue> ByProjectKeyOrdersOrderNumberByOrderNumberPostString withExpand(final Collection<TValue> expand) {
-        return copy().withoutQueryParam("expand")
-                .addQueryParams(
-                    expand.stream().map(s -> new ParamEntry<>("expand", s.toString())).collect(Collectors.toList()));
+        return copy().withoutQueryParam("expand").addQueryParams(expand.stream().map(s -> new ParamEntry<>("expand", s.toString())).collect(Collectors.toList())); 
     }
-
+    
     /**
      * add additional expand query parameters
      * @param <TValue> value type
@@ -183,14 +180,14 @@ public class ByProjectKeyOrdersOrderNumberByOrderNumberPostString extends
      * @return ByProjectKeyOrdersOrderNumberByOrderNumberPostString
      */
     public <TValue> ByProjectKeyOrdersOrderNumberByOrderNumberPostString addExpand(final Collection<TValue> expand) {
-        return copy().addQueryParams(
-            expand.stream().map(s -> new ParamEntry<>("expand", s.toString())).collect(Collectors.toList()));
+        return copy().addQueryParams(expand.stream().map(s -> new ParamEntry<>("expand", s.toString())).collect(Collectors.toList())); 
     }
 
+    
     public String getBody() {
         return orderUpdate;
     }
-
+    
     public ByProjectKeyOrdersOrderNumberByOrderNumberPostString withBody(String orderUpdate) {
         ByProjectKeyOrdersOrderNumberByOrderNumberPostString t = copy();
         t.orderUpdate = orderUpdate;
@@ -199,23 +196,26 @@ public class ByProjectKeyOrdersOrderNumberByOrderNumberPostString extends
 
     @Override
     public boolean equals(Object o) {
-        if (this == o)
-            return true;
-
-        if (o == null || getClass() != o.getClass())
-            return false;
-
+        if (this == o) return true;
+    
+        if (o == null || getClass() != o.getClass()) return false;
+    
         ByProjectKeyOrdersOrderNumberByOrderNumberPostString that = (ByProjectKeyOrdersOrderNumberByOrderNumberPostString) o;
-
-        return new EqualsBuilder().append(projectKey, that.projectKey)
+    
+        return new EqualsBuilder()
+                .append(projectKey, that.projectKey)
                 .append(orderNumber, that.orderNumber)
                 .append(orderUpdate, that.orderUpdate)
                 .isEquals();
     }
-
+    
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(projectKey).append(orderNumber).append(orderUpdate).toHashCode();
+        return new HashCodeBuilder(17, 37)
+            .append(projectKey)
+            .append(orderNumber)
+            .append(orderUpdate)
+            .toHashCode();
     }
 
     @Override

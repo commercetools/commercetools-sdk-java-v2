@@ -1,8 +1,12 @@
-
 package com.commercetools.api.models.message;
 
+import com.commercetools.api.models.associate_role.Permission;
+import com.commercetools.api.models.message.MessagePayload;
+import com.commercetools.api.models.message.AssociateRolePermissionsSetMessagePayload;
+import javax.annotation.Nullable;
 import java.util.*;
-
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -16,12 +20,16 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .plusPermissions(permissionsBuilder -> permissionsBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
-public class AssociateRolePermissionsSetMessagePayloadBuilder
-        implements Builder<AssociateRolePermissionsSetMessagePayload> {
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
+public class AssociateRolePermissionsSetMessagePayloadBuilder implements Builder<AssociateRolePermissionsSetMessagePayload> {
 
+    
+    
     private java.util.List<com.commercetools.api.models.associate_role.Permission> permissions;
 
     /**
@@ -29,46 +37,47 @@ public class AssociateRolePermissionsSetMessagePayloadBuilder
      * @param permissions value to be set
      * @return Builder
      */
-
-    public AssociateRolePermissionsSetMessagePayloadBuilder permissions(
-            final com.commercetools.api.models.associate_role.Permission... permissions) {
+    
+    public AssociateRolePermissionsSetMessagePayloadBuilder permissions( final com.commercetools.api.models.associate_role.Permission ...permissions) {
         this.permissions = new ArrayList<>(Arrays.asList(permissions));
         return this;
     }
-
+    
     /**
      *  <p>Permission assigned to the AssociateRole.</p>
      * @param permissions value to be set
      * @return Builder
      */
-
-    public AssociateRolePermissionsSetMessagePayloadBuilder permissions(
-            final java.util.List<com.commercetools.api.models.associate_role.Permission> permissions) {
+    
+    public AssociateRolePermissionsSetMessagePayloadBuilder permissions( final java.util.List<com.commercetools.api.models.associate_role.Permission> permissions) {
         this.permissions = permissions;
         return this;
     }
-
+    
     /**
      *  <p>Permission assigned to the AssociateRole.</p>
      * @param permissions value to be set
      * @return Builder
      */
-
-    public AssociateRolePermissionsSetMessagePayloadBuilder plusPermissions(
-            final com.commercetools.api.models.associate_role.Permission... permissions) {
+    
+    public AssociateRolePermissionsSetMessagePayloadBuilder plusPermissions( final com.commercetools.api.models.associate_role.Permission ...permissions) {
         if (this.permissions == null) {
             this.permissions = new ArrayList<>();
         }
         this.permissions.addAll(Arrays.asList(permissions));
         return this;
     }
+    
+    
+    
 
     /**
      *  <p>Permission assigned to the AssociateRole.</p>
      * @return permissions
      */
-
-    public java.util.List<com.commercetools.api.models.associate_role.Permission> getPermissions() {
+    
+    
+    public java.util.List<com.commercetools.api.models.associate_role.Permission> getPermissions(){
         return this.permissions;
     }
 
@@ -77,11 +86,10 @@ public class AssociateRolePermissionsSetMessagePayloadBuilder
      * @return AssociateRolePermissionsSetMessagePayload
      */
     public AssociateRolePermissionsSetMessagePayload build() {
-        Objects.requireNonNull(permissions,
-            AssociateRolePermissionsSetMessagePayload.class + ": permissions is missing");
+        Objects.requireNonNull(permissions, AssociateRolePermissionsSetMessagePayload.class + ": permissions is missing");
         return new AssociateRolePermissionsSetMessagePayloadImpl(permissions);
     }
-
+    
     /**
      * builds AssociateRolePermissionsSetMessagePayload without checking for non-null required values
      * @return AssociateRolePermissionsSetMessagePayload
@@ -92,7 +100,7 @@ public class AssociateRolePermissionsSetMessagePayloadBuilder
 
     /**
      * factory method for an instance of AssociateRolePermissionsSetMessagePayloadBuilder
-     * @return builder
+     * @return builder 
      */
     public static AssociateRolePermissionsSetMessagePayloadBuilder of() {
         return new AssociateRolePermissionsSetMessagePayloadBuilder();
@@ -103,8 +111,7 @@ public class AssociateRolePermissionsSetMessagePayloadBuilder
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static AssociateRolePermissionsSetMessagePayloadBuilder of(
-            final AssociateRolePermissionsSetMessagePayload template) {
+    public static AssociateRolePermissionsSetMessagePayloadBuilder of(final AssociateRolePermissionsSetMessagePayload template) {
         AssociateRolePermissionsSetMessagePayloadBuilder builder = new AssociateRolePermissionsSetMessagePayloadBuilder();
         builder.permissions = template.getPermissions();
         return builder;

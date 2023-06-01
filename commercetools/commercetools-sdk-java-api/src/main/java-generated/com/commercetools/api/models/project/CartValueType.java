@@ -1,16 +1,21 @@
-
 package com.commercetools.api.models.project;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
+import com.commercetools.api.models.project.ShippingRateInputType;
+import com.commercetools.api.models.shipping_method.ShippingRateTierType;
+import com.commercetools.api.models.project.CartValueTypeImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Used when the ShippingRate maps to the sum of LineItem Prices. The value of the Cart is used to select a tier. If chosen, it is not possible to set a value for the <code>shippingRateInput</code> on the Cart.</p>
@@ -22,9 +27,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     CartValueType cartValueType = CartValueType.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = CartValueTypeImpl.class)
 public interface CartValueType extends ShippingRateInputType {
 
@@ -33,13 +41,16 @@ public interface CartValueType extends ShippingRateInputType {
      */
     String CART_VALUE = "CartValue";
 
+
+
     /**
      * factory method
      * @return instance of CartValueType
      */
-    public static CartValueType of() {
+    public static CartValueType of(){
         return new CartValueTypeImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy CartValueType
@@ -72,7 +83,7 @@ public interface CartValueType extends ShippingRateInputType {
     public static CartValueTypeBuilder builder() {
         return CartValueTypeBuilder.of();
     }
-
+    
     /**
      * create builder for CartValueType instance
      * @param template instance with prefilled values for the builder
@@ -81,6 +92,7 @@ public interface CartValueType extends ShippingRateInputType {
     public static CartValueTypeBuilder builder(final CartValueType template) {
         return CartValueTypeBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -91,7 +103,7 @@ public interface CartValueType extends ShippingRateInputType {
     default <T> T withCartValueType(Function<CartValueType, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

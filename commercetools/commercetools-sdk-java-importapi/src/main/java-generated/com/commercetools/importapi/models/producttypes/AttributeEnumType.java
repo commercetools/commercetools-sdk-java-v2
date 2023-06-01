@@ -1,19 +1,21 @@
-
 package com.commercetools.importapi.models.producttypes;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-import java.util.stream.Collectors;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
+import com.commercetools.importapi.models.producttypes.AttributePlainEnumValue;
+import com.commercetools.importapi.models.producttypes.AttributeType;
+import com.commercetools.importapi.models.producttypes.AttributeEnumTypeImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * AttributeEnumType
@@ -26,9 +28,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .plusValues(valuesBuilder -> valuesBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = AttributeEnumTypeImpl.class)
 public interface AttributeEnumType extends AttributeType {
 
@@ -50,24 +55,24 @@ public interface AttributeEnumType extends AttributeType {
      * set values
      * @param values values to be set
      */
-
+    
     @JsonIgnore
-    public void setValues(final AttributePlainEnumValue... values);
-
+    public void setValues(final AttributePlainEnumValue ...values);
     /**
      * set values
      * @param values values to be set
      */
-
+    
     public void setValues(final List<AttributePlainEnumValue> values);
 
     /**
      * factory method
      * @return instance of AttributeEnumType
      */
-    public static AttributeEnumType of() {
+    public static AttributeEnumType of(){
         return new AttributeEnumTypeImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy AttributeEnumType
@@ -92,9 +97,7 @@ public interface AttributeEnumType extends AttributeType {
         }
         AttributeEnumTypeImpl instance = new AttributeEnumTypeImpl();
         instance.setValues(Optional.ofNullable(template.getValues())
-                .map(t -> t.stream()
-                        .map(com.commercetools.importapi.models.producttypes.AttributePlainEnumValue::deepCopy)
-                        .collect(Collectors.toList()))
+                .map(t -> t.stream().map(com.commercetools.importapi.models.producttypes.AttributePlainEnumValue::deepCopy).collect(Collectors.toList()))
                 .orElse(null));
         return instance;
     }
@@ -106,7 +109,7 @@ public interface AttributeEnumType extends AttributeType {
     public static AttributeEnumTypeBuilder builder() {
         return AttributeEnumTypeBuilder.of();
     }
-
+    
     /**
      * create builder for AttributeEnumType instance
      * @param template instance with prefilled values for the builder
@@ -115,6 +118,7 @@ public interface AttributeEnumType extends AttributeType {
     public static AttributeEnumTypeBuilder builder(final AttributeEnumType template) {
         return AttributeEnumTypeBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -125,7 +129,7 @@ public interface AttributeEnumType extends AttributeType {
     default <T> T withAttributeEnumType(Function<AttributeEnumType, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

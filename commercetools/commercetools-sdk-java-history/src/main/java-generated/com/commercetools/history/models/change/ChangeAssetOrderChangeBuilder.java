@@ -1,9 +1,12 @@
-
 package com.commercetools.history.models.change;
 
+import com.commercetools.history.models.change.Change;
+import com.commercetools.history.models.common.LocalizedString;
+import com.commercetools.history.models.change.ChangeAssetOrderChange;
+import javax.annotation.Nullable;
 import java.util.*;
 import java.util.function.Function;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -19,232 +22,237 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .plusNextValue(nextValueBuilder -> nextValueBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class ChangeAssetOrderChangeBuilder implements Builder<ChangeAssetOrderChange> {
 
+    
+    
     private String change;
-
+    
+    
+    
     private java.util.List<com.commercetools.history.models.common.LocalizedString> previousValue;
-
+    
+    
+    
     private java.util.List<com.commercetools.history.models.common.LocalizedString> nextValue;
 
+    
     /**
      * set the value to the change
      * @param change value to be set
      * @return Builder
      */
-
-    public ChangeAssetOrderChangeBuilder change(final String change) {
+    
+    public ChangeAssetOrderChangeBuilder change( final String change) {
         this.change = change;
         return this;
     }
-
+    
+    
+    
     /**
      * set values to the previousValue
      * @param previousValue value to be set
      * @return Builder
      */
-
-    public ChangeAssetOrderChangeBuilder previousValue(
-            final com.commercetools.history.models.common.LocalizedString... previousValue) {
+    
+    public ChangeAssetOrderChangeBuilder previousValue( final com.commercetools.history.models.common.LocalizedString ...previousValue) {
         this.previousValue = new ArrayList<>(Arrays.asList(previousValue));
         return this;
     }
-
+    
     /**
      * set value to the previousValue
      * @param previousValue value to be set
      * @return Builder
      */
-
-    public ChangeAssetOrderChangeBuilder previousValue(
-            final java.util.List<com.commercetools.history.models.common.LocalizedString> previousValue) {
+    
+    public ChangeAssetOrderChangeBuilder previousValue( final java.util.List<com.commercetools.history.models.common.LocalizedString> previousValue) {
         this.previousValue = previousValue;
         return this;
     }
-
+    
     /**
      * add values to the previousValue
      * @param previousValue value to be set
      * @return Builder
      */
-
-    public ChangeAssetOrderChangeBuilder plusPreviousValue(
-            final com.commercetools.history.models.common.LocalizedString... previousValue) {
+    
+    public ChangeAssetOrderChangeBuilder plusPreviousValue( final com.commercetools.history.models.common.LocalizedString ...previousValue) {
         if (this.previousValue == null) {
             this.previousValue = new ArrayList<>();
         }
         this.previousValue.addAll(Arrays.asList(previousValue));
         return this;
     }
-
+    
+    
+    
     /**
      * add the value to the previousValue using the builder function
      * @param builder function to build the previousValue value
      * @return Builder
      */
-
-    public ChangeAssetOrderChangeBuilder plusPreviousValue(
-            Function<com.commercetools.history.models.common.LocalizedStringBuilder, com.commercetools.history.models.common.LocalizedStringBuilder> builder) {
+    
+    public ChangeAssetOrderChangeBuilder plusPreviousValue(Function<com.commercetools.history.models.common.LocalizedStringBuilder, com.commercetools.history.models.common.LocalizedStringBuilder> builder) {
         if (this.previousValue == null) {
             this.previousValue = new ArrayList<>();
         }
-        this.previousValue
-                .add(builder.apply(com.commercetools.history.models.common.LocalizedStringBuilder.of()).build());
+        this.previousValue.add(builder.apply(com.commercetools.history.models.common.LocalizedStringBuilder.of()).build());
         return this;
     }
-
+    
     /**
      * set the value to the previousValue using the builder function
      * @param builder function to build the previousValue value
      * @return Builder
      */
-
-    public ChangeAssetOrderChangeBuilder withPreviousValue(
-            Function<com.commercetools.history.models.common.LocalizedStringBuilder, com.commercetools.history.models.common.LocalizedStringBuilder> builder) {
+    
+    public ChangeAssetOrderChangeBuilder withPreviousValue(Function<com.commercetools.history.models.common.LocalizedStringBuilder, com.commercetools.history.models.common.LocalizedStringBuilder> builder) {
         this.previousValue = new ArrayList<>();
-        this.previousValue
-                .add(builder.apply(com.commercetools.history.models.common.LocalizedStringBuilder.of()).build());
+        this.previousValue.add(builder.apply(com.commercetools.history.models.common.LocalizedStringBuilder.of()).build());
         return this;
     }
-
+    
     /**
      * add the value to the previousValue using the builder function
      * @param builder function to build the previousValue value
      * @return Builder
      */
-
-    public ChangeAssetOrderChangeBuilder addPreviousValue(
-            Function<com.commercetools.history.models.common.LocalizedStringBuilder, com.commercetools.history.models.common.LocalizedString> builder) {
+    
+    public ChangeAssetOrderChangeBuilder addPreviousValue(Function<com.commercetools.history.models.common.LocalizedStringBuilder, com.commercetools.history.models.common.LocalizedString> builder) {
         return plusPreviousValue(builder.apply(com.commercetools.history.models.common.LocalizedStringBuilder.of()));
     }
-
+    
     /**
      * set the value to the previousValue using the builder function
      * @param builder function to build the previousValue value
      * @return Builder
      */
-
-    public ChangeAssetOrderChangeBuilder setPreviousValue(
-            Function<com.commercetools.history.models.common.LocalizedStringBuilder, com.commercetools.history.models.common.LocalizedString> builder) {
+    
+    public ChangeAssetOrderChangeBuilder setPreviousValue(Function<com.commercetools.history.models.common.LocalizedStringBuilder, com.commercetools.history.models.common.LocalizedString> builder) {
         return previousValue(builder.apply(com.commercetools.history.models.common.LocalizedStringBuilder.of()));
     }
-
+                    
+    
     /**
      * set values to the nextValue
      * @param nextValue value to be set
      * @return Builder
      */
-
-    public ChangeAssetOrderChangeBuilder nextValue(
-            final com.commercetools.history.models.common.LocalizedString... nextValue) {
+    
+    public ChangeAssetOrderChangeBuilder nextValue( final com.commercetools.history.models.common.LocalizedString ...nextValue) {
         this.nextValue = new ArrayList<>(Arrays.asList(nextValue));
         return this;
     }
-
+    
     /**
      * set value to the nextValue
      * @param nextValue value to be set
      * @return Builder
      */
-
-    public ChangeAssetOrderChangeBuilder nextValue(
-            final java.util.List<com.commercetools.history.models.common.LocalizedString> nextValue) {
+    
+    public ChangeAssetOrderChangeBuilder nextValue( final java.util.List<com.commercetools.history.models.common.LocalizedString> nextValue) {
         this.nextValue = nextValue;
         return this;
     }
-
+    
     /**
      * add values to the nextValue
      * @param nextValue value to be set
      * @return Builder
      */
-
-    public ChangeAssetOrderChangeBuilder plusNextValue(
-            final com.commercetools.history.models.common.LocalizedString... nextValue) {
+    
+    public ChangeAssetOrderChangeBuilder plusNextValue( final com.commercetools.history.models.common.LocalizedString ...nextValue) {
         if (this.nextValue == null) {
             this.nextValue = new ArrayList<>();
         }
         this.nextValue.addAll(Arrays.asList(nextValue));
         return this;
     }
-
+    
+    
+    
     /**
      * add the value to the nextValue using the builder function
      * @param builder function to build the nextValue value
      * @return Builder
      */
-
-    public ChangeAssetOrderChangeBuilder plusNextValue(
-            Function<com.commercetools.history.models.common.LocalizedStringBuilder, com.commercetools.history.models.common.LocalizedStringBuilder> builder) {
+    
+    public ChangeAssetOrderChangeBuilder plusNextValue(Function<com.commercetools.history.models.common.LocalizedStringBuilder, com.commercetools.history.models.common.LocalizedStringBuilder> builder) {
         if (this.nextValue == null) {
             this.nextValue = new ArrayList<>();
         }
         this.nextValue.add(builder.apply(com.commercetools.history.models.common.LocalizedStringBuilder.of()).build());
         return this;
     }
-
+    
     /**
      * set the value to the nextValue using the builder function
      * @param builder function to build the nextValue value
      * @return Builder
      */
-
-    public ChangeAssetOrderChangeBuilder withNextValue(
-            Function<com.commercetools.history.models.common.LocalizedStringBuilder, com.commercetools.history.models.common.LocalizedStringBuilder> builder) {
+    
+    public ChangeAssetOrderChangeBuilder withNextValue(Function<com.commercetools.history.models.common.LocalizedStringBuilder, com.commercetools.history.models.common.LocalizedStringBuilder> builder) {
         this.nextValue = new ArrayList<>();
         this.nextValue.add(builder.apply(com.commercetools.history.models.common.LocalizedStringBuilder.of()).build());
         return this;
     }
-
+    
     /**
      * add the value to the nextValue using the builder function
      * @param builder function to build the nextValue value
      * @return Builder
      */
-
-    public ChangeAssetOrderChangeBuilder addNextValue(
-            Function<com.commercetools.history.models.common.LocalizedStringBuilder, com.commercetools.history.models.common.LocalizedString> builder) {
+    
+    public ChangeAssetOrderChangeBuilder addNextValue(Function<com.commercetools.history.models.common.LocalizedStringBuilder, com.commercetools.history.models.common.LocalizedString> builder) {
         return plusNextValue(builder.apply(com.commercetools.history.models.common.LocalizedStringBuilder.of()));
     }
-
+    
     /**
      * set the value to the nextValue using the builder function
      * @param builder function to build the nextValue value
      * @return Builder
      */
-
-    public ChangeAssetOrderChangeBuilder setNextValue(
-            Function<com.commercetools.history.models.common.LocalizedStringBuilder, com.commercetools.history.models.common.LocalizedString> builder) {
+    
+    public ChangeAssetOrderChangeBuilder setNextValue(Function<com.commercetools.history.models.common.LocalizedStringBuilder, com.commercetools.history.models.common.LocalizedString> builder) {
         return nextValue(builder.apply(com.commercetools.history.models.common.LocalizedStringBuilder.of()));
     }
+                    
 
     /**
      * value of change}
      * @return change
      */
-
-    public String getChange() {
+    
+    
+    public String getChange(){
         return this.change;
     }
-
+    
     /**
      * value of previousValue}
      * @return previousValue
      */
-
-    public java.util.List<com.commercetools.history.models.common.LocalizedString> getPreviousValue() {
+    
+    
+    public java.util.List<com.commercetools.history.models.common.LocalizedString> getPreviousValue(){
         return this.previousValue;
     }
-
+    
     /**
      * value of nextValue}
      * @return nextValue
      */
-
-    public java.util.List<com.commercetools.history.models.common.LocalizedString> getNextValue() {
+    
+    
+    public java.util.List<com.commercetools.history.models.common.LocalizedString> getNextValue(){
         return this.nextValue;
     }
 
@@ -258,7 +266,7 @@ public class ChangeAssetOrderChangeBuilder implements Builder<ChangeAssetOrderCh
         Objects.requireNonNull(nextValue, ChangeAssetOrderChange.class + ": nextValue is missing");
         return new ChangeAssetOrderChangeImpl(change, previousValue, nextValue);
     }
-
+    
     /**
      * builds ChangeAssetOrderChange without checking for non-null required values
      * @return ChangeAssetOrderChange
@@ -269,7 +277,7 @@ public class ChangeAssetOrderChangeBuilder implements Builder<ChangeAssetOrderCh
 
     /**
      * factory method for an instance of ChangeAssetOrderChangeBuilder
-     * @return builder
+     * @return builder 
      */
     public static ChangeAssetOrderChangeBuilder of() {
         return new ChangeAssetOrderChangeBuilder();

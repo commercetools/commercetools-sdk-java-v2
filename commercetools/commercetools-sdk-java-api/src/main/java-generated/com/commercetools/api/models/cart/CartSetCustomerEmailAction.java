@@ -1,16 +1,20 @@
-
 package com.commercetools.api.models.cart;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
+import com.commercetools.api.models.cart.CartUpdateAction;
+import com.commercetools.api.models.cart.CartSetCustomerEmailActionImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * CartSetCustomerEmailAction
@@ -22,9 +26,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     CartSetCustomerEmailAction cartSetCustomerEmailAction = CartSetCustomerEmailAction.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = CartSetCustomerEmailActionImpl.class)
 public interface CartSetCustomerEmailAction extends CartUpdateAction {
 
@@ -37,7 +44,7 @@ public interface CartSetCustomerEmailAction extends CartUpdateAction {
      *  <p>Value to set. If empty, any existing value is removed.</p>
      * @return email
      */
-
+    
     @JsonProperty("email")
     public String getEmail();
 
@@ -45,16 +52,18 @@ public interface CartSetCustomerEmailAction extends CartUpdateAction {
      *  <p>Value to set. If empty, any existing value is removed.</p>
      * @param email value to be set
      */
-
+    
     public void setEmail(final String email);
+    
 
     /**
      * factory method
      * @return instance of CartSetCustomerEmailAction
      */
-    public static CartSetCustomerEmailAction of() {
+    public static CartSetCustomerEmailAction of(){
         return new CartSetCustomerEmailActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy CartSetCustomerEmailAction
@@ -89,7 +98,7 @@ public interface CartSetCustomerEmailAction extends CartUpdateAction {
     public static CartSetCustomerEmailActionBuilder builder() {
         return CartSetCustomerEmailActionBuilder.of();
     }
-
+    
     /**
      * create builder for CartSetCustomerEmailAction instance
      * @param template instance with prefilled values for the builder
@@ -98,6 +107,7 @@ public interface CartSetCustomerEmailAction extends CartUpdateAction {
     public static CartSetCustomerEmailActionBuilder builder(final CartSetCustomerEmailAction template) {
         return CartSetCustomerEmailActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -108,7 +118,7 @@ public interface CartSetCustomerEmailAction extends CartUpdateAction {
     default <T> T withCartSetCustomerEmailAction(Function<CartSetCustomerEmailAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

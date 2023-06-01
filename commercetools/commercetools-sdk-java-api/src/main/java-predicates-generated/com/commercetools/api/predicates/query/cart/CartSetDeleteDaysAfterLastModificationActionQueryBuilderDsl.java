@@ -1,9 +1,11 @@
-
 package com.commercetools.api.predicates.query.cart;
 
 import com.commercetools.api.predicates.query.*;
 
-public class CartSetDeleteDaysAfterLastModificationActionQueryBuilderDsl {
+import java.util.function.Function;
+
+
+public class CartSetDeleteDaysAfterLastModificationActionQueryBuilderDsl  {
     public CartSetDeleteDaysAfterLastModificationActionQueryBuilderDsl() {
     }
 
@@ -12,15 +14,12 @@ public class CartSetDeleteDaysAfterLastModificationActionQueryBuilderDsl {
     }
 
     public StringComparisonPredicateBuilder<CartSetDeleteDaysAfterLastModificationActionQueryBuilderDsl> action() {
-        return new StringComparisonPredicateBuilder<>(
-            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("action")),
-            p -> new CombinationQueryPredicate<>(p, CartSetDeleteDaysAfterLastModificationActionQueryBuilderDsl::of));
+        return new StringComparisonPredicateBuilder<>(BinaryQueryPredicate.of().left(new ConstantQueryPredicate("action")),
+        p -> new CombinationQueryPredicate<>(p, CartSetDeleteDaysAfterLastModificationActionQueryBuilderDsl::of));
     }
-
     public LongComparisonPredicateBuilder<CartSetDeleteDaysAfterLastModificationActionQueryBuilderDsl> deleteDaysAfterLastModification() {
-        return new LongComparisonPredicateBuilder<>(
-            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("deleteDaysAfterLastModification")),
-            p -> new CombinationQueryPredicate<>(p, CartSetDeleteDaysAfterLastModificationActionQueryBuilderDsl::of));
+        return new LongComparisonPredicateBuilder<>(BinaryQueryPredicate.of().left(new ConstantQueryPredicate("deleteDaysAfterLastModification")),
+        p -> new CombinationQueryPredicate<>(p, CartSetDeleteDaysAfterLastModificationActionQueryBuilderDsl::of));
     }
-
+    
 }

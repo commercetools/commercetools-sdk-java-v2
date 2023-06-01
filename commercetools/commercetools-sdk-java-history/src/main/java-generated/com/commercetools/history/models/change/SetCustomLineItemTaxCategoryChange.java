@@ -1,20 +1,22 @@
-
 package com.commercetools.history.models.change;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
+import com.commercetools.history.models.change.Change;
 import com.commercetools.history.models.common.LocalizedString;
 import com.commercetools.history.models.common.Reference;
+import com.commercetools.history.models.change.SetCustomLineItemTaxCategoryChangeImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * SetCustomLineItemTaxCategoryChange
@@ -31,9 +33,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .previousValue(previousValueBuilder -> previousValueBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = SetCustomLineItemTaxCategoryChangeImpl.class)
 public interface SetCustomLineItemTaxCategoryChange extends Change {
 
@@ -49,7 +54,6 @@ public interface SetCustomLineItemTaxCategoryChange extends Change {
     @NotNull
     @JsonProperty("type")
     public String getType();
-
     /**
      *  <p>Update action for <code>setCustomLineItemTaxCategory</code></p>
      * @return change
@@ -57,7 +61,6 @@ public interface SetCustomLineItemTaxCategoryChange extends Change {
     @NotNull
     @JsonProperty("change")
     public String getChange();
-
     /**
      *
      * @return customLineItem
@@ -66,7 +69,6 @@ public interface SetCustomLineItemTaxCategoryChange extends Change {
     @Valid
     @JsonProperty("customLineItem")
     public LocalizedString getCustomLineItem();
-
     /**
      *
      * @return customLineItemId
@@ -74,7 +76,6 @@ public interface SetCustomLineItemTaxCategoryChange extends Change {
     @NotNull
     @JsonProperty("customLineItemId")
     public String getCustomLineItemId();
-
     /**
      *
      * @return nextValue
@@ -83,7 +84,6 @@ public interface SetCustomLineItemTaxCategoryChange extends Change {
     @Valid
     @JsonProperty("nextValue")
     public Reference getNextValue();
-
     /**
      *
      * @return previousValue
@@ -97,44 +97,50 @@ public interface SetCustomLineItemTaxCategoryChange extends Change {
      *  <p>Update action for <code>setCustomLineItemTaxCategory</code></p>
      * @param change value to be set
      */
-
+    
     public void setChange(final String change);
-
+    
+    
     /**
      * set customLineItem
      * @param customLineItem value to be set
      */
-
+    
     public void setCustomLineItem(final LocalizedString customLineItem);
-
+    
+    
     /**
      * set customLineItemId
      * @param customLineItemId value to be set
      */
-
+    
     public void setCustomLineItemId(final String customLineItemId);
-
+    
+    
     /**
      * set nextValue
      * @param nextValue value to be set
      */
-
+    
     public void setNextValue(final Reference nextValue);
-
+    
+    
     /**
      * set previousValue
      * @param previousValue value to be set
      */
-
+    
     public void setPreviousValue(final Reference previousValue);
+    
 
     /**
      * factory method
      * @return instance of SetCustomLineItemTaxCategoryChange
      */
-    public static SetCustomLineItemTaxCategoryChange of() {
+    public static SetCustomLineItemTaxCategoryChange of(){
         return new SetCustomLineItemTaxCategoryChangeImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy SetCustomLineItemTaxCategoryChange
@@ -157,19 +163,16 @@ public interface SetCustomLineItemTaxCategoryChange extends Change {
      * @return copy instance
      */
     @Nullable
-    public static SetCustomLineItemTaxCategoryChange deepCopy(
-            @Nullable final SetCustomLineItemTaxCategoryChange template) {
+    public static SetCustomLineItemTaxCategoryChange deepCopy(@Nullable final SetCustomLineItemTaxCategoryChange template) {
         if (template == null) {
             return null;
         }
         SetCustomLineItemTaxCategoryChangeImpl instance = new SetCustomLineItemTaxCategoryChangeImpl();
         instance.setChange(template.getChange());
-        instance.setCustomLineItem(
-            com.commercetools.history.models.common.LocalizedString.deepCopy(template.getCustomLineItem()));
+        instance.setCustomLineItem(com.commercetools.history.models.common.LocalizedString.deepCopy(template.getCustomLineItem()));
         instance.setCustomLineItemId(template.getCustomLineItemId());
         instance.setNextValue(com.commercetools.history.models.common.Reference.deepCopy(template.getNextValue()));
-        instance.setPreviousValue(
-            com.commercetools.history.models.common.Reference.deepCopy(template.getPreviousValue()));
+        instance.setPreviousValue(com.commercetools.history.models.common.Reference.deepCopy(template.getPreviousValue()));
         return instance;
     }
 
@@ -180,7 +183,7 @@ public interface SetCustomLineItemTaxCategoryChange extends Change {
     public static SetCustomLineItemTaxCategoryChangeBuilder builder() {
         return SetCustomLineItemTaxCategoryChangeBuilder.of();
     }
-
+    
     /**
      * create builder for SetCustomLineItemTaxCategoryChange instance
      * @param template instance with prefilled values for the builder
@@ -189,6 +192,7 @@ public interface SetCustomLineItemTaxCategoryChange extends Change {
     public static SetCustomLineItemTaxCategoryChangeBuilder builder(final SetCustomLineItemTaxCategoryChange template) {
         return SetCustomLineItemTaxCategoryChangeBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -199,7 +203,7 @@ public interface SetCustomLineItemTaxCategoryChange extends Change {
     default <T> T withSetCustomLineItemTaxCategoryChange(Function<SetCustomLineItemTaxCategoryChange, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

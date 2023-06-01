@@ -1,17 +1,20 @@
-
 package com.commercetools.api.models.error;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
+import com.commercetools.api.models.error.GraphQLErrorObject;
+import com.commercetools.api.models.error.GraphQLExtensionNoResponseErrorImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Returned when the API Extension does not respond within the time limit, or could not be reached.</p>
@@ -24,9 +27,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .extensionId("{extensionId}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = GraphQLExtensionNoResponseErrorImpl.class)
 public interface GraphQLExtensionNoResponseError extends GraphQLErrorObject {
 
@@ -42,7 +48,6 @@ public interface GraphQLExtensionNoResponseError extends GraphQLErrorObject {
     @NotNull
     @JsonProperty("code")
     public String getCode();
-
     /**
      *  <p>Unique identifier of the API Extension.</p>
      * @return extensionId
@@ -50,12 +55,11 @@ public interface GraphQLExtensionNoResponseError extends GraphQLErrorObject {
     @NotNull
     @JsonProperty("extensionId")
     public String getExtensionId();
-
     /**
      *  <p>User-defined unique identifier of the API Extension, if available.</p>
      * @return extensionKey
      */
-
+    
     @JsonProperty("extensionKey")
     public String getExtensionKey();
 
@@ -63,23 +67,26 @@ public interface GraphQLExtensionNoResponseError extends GraphQLErrorObject {
      *  <p>Unique identifier of the API Extension.</p>
      * @param extensionId value to be set
      */
-
+    
     public void setExtensionId(final String extensionId);
-
+    
+    
     /**
      *  <p>User-defined unique identifier of the API Extension, if available.</p>
      * @param extensionKey value to be set
      */
-
+    
     public void setExtensionKey(final String extensionKey);
+    
 
     /**
      * factory method
      * @return instance of GraphQLExtensionNoResponseError
      */
-    public static GraphQLExtensionNoResponseError of() {
+    public static GraphQLExtensionNoResponseError of(){
         return new GraphQLExtensionNoResponseErrorImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy GraphQLExtensionNoResponseError
@@ -118,7 +125,7 @@ public interface GraphQLExtensionNoResponseError extends GraphQLErrorObject {
     public static GraphQLExtensionNoResponseErrorBuilder builder() {
         return GraphQLExtensionNoResponseErrorBuilder.of();
     }
-
+    
     /**
      * create builder for GraphQLExtensionNoResponseError instance
      * @param template instance with prefilled values for the builder
@@ -127,6 +134,7 @@ public interface GraphQLExtensionNoResponseError extends GraphQLErrorObject {
     public static GraphQLExtensionNoResponseErrorBuilder builder(final GraphQLExtensionNoResponseError template) {
         return GraphQLExtensionNoResponseErrorBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -137,7 +145,7 @@ public interface GraphQLExtensionNoResponseError extends GraphQLErrorObject {
     default <T> T withGraphQLExtensionNoResponseError(Function<GraphQLExtensionNoResponseError, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

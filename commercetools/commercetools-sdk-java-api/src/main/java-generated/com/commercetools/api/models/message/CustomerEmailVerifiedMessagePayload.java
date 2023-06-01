@@ -1,16 +1,20 @@
-
 package com.commercetools.api.models.message;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
+import com.commercetools.api.models.message.MessagePayload;
+import com.commercetools.api.models.message.CustomerEmailVerifiedMessagePayloadImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Generated after a successful Verify Customer's Email request.</p>
@@ -22,9 +26,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     CustomerEmailVerifiedMessagePayload customerEmailVerifiedMessagePayload = CustomerEmailVerifiedMessagePayload.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = CustomerEmailVerifiedMessagePayloadImpl.class)
 public interface CustomerEmailVerifiedMessagePayload extends MessagePayload {
 
@@ -33,13 +40,16 @@ public interface CustomerEmailVerifiedMessagePayload extends MessagePayload {
      */
     String CUSTOMER_EMAIL_VERIFIED = "CustomerEmailVerified";
 
+
+
     /**
      * factory method
      * @return instance of CustomerEmailVerifiedMessagePayload
      */
-    public static CustomerEmailVerifiedMessagePayload of() {
+    public static CustomerEmailVerifiedMessagePayload of(){
         return new CustomerEmailVerifiedMessagePayloadImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy CustomerEmailVerifiedMessagePayload
@@ -57,8 +67,7 @@ public interface CustomerEmailVerifiedMessagePayload extends MessagePayload {
      * @return copy instance
      */
     @Nullable
-    public static CustomerEmailVerifiedMessagePayload deepCopy(
-            @Nullable final CustomerEmailVerifiedMessagePayload template) {
+    public static CustomerEmailVerifiedMessagePayload deepCopy(@Nullable final CustomerEmailVerifiedMessagePayload template) {
         if (template == null) {
             return null;
         }
@@ -73,16 +82,16 @@ public interface CustomerEmailVerifiedMessagePayload extends MessagePayload {
     public static CustomerEmailVerifiedMessagePayloadBuilder builder() {
         return CustomerEmailVerifiedMessagePayloadBuilder.of();
     }
-
+    
     /**
      * create builder for CustomerEmailVerifiedMessagePayload instance
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static CustomerEmailVerifiedMessagePayloadBuilder builder(
-            final CustomerEmailVerifiedMessagePayload template) {
+    public static CustomerEmailVerifiedMessagePayloadBuilder builder(final CustomerEmailVerifiedMessagePayload template) {
         return CustomerEmailVerifiedMessagePayloadBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -93,7 +102,7 @@ public interface CustomerEmailVerifiedMessagePayload extends MessagePayload {
     default <T> T withCustomerEmailVerifiedMessagePayload(Function<CustomerEmailVerifiedMessagePayload, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

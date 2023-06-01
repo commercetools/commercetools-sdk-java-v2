@@ -1,10 +1,12 @@
-
 package com.commercetools.api.models.payment;
 
-import java.util.*;
-
+import com.commercetools.api.models.payment.PaymentUpdateAction;
+import java.lang.Object;
+import com.commercetools.api.models.payment.PaymentSetTransactionCustomFieldAction;
 import javax.annotation.Nullable;
-
+import java.util.*;
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -19,76 +21,95 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .name("{name}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class PaymentSetTransactionCustomFieldActionBuilder implements Builder<PaymentSetTransactionCustomFieldAction> {
 
+    
+    
     private String transactionId;
-
+    
+    
+    
     private String name;
-
+    
+    
     @Nullable
     private java.lang.Object value;
 
+    
     /**
      *  <p>Unique identifier of the Transaction.</p>
      * @param transactionId value to be set
      * @return Builder
      */
-
-    public PaymentSetTransactionCustomFieldActionBuilder transactionId(final String transactionId) {
+    
+    public PaymentSetTransactionCustomFieldActionBuilder transactionId( final String transactionId) {
         this.transactionId = transactionId;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Name of the Custom Field.</p>
      * @param name value to be set
      * @return Builder
      */
-
-    public PaymentSetTransactionCustomFieldActionBuilder name(final String name) {
+    
+    public PaymentSetTransactionCustomFieldActionBuilder name( final String name) {
         this.name = name;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>If <code>value</code> is absent or <code>null</code>, this field will be removed if it exists. Removing a field that does not exist returns an InvalidOperation error. If <code>value</code> is provided, it is set for the field defined by <code>name</code>.</p>
      * @param value value to be set
      * @return Builder
      */
-
+    
     public PaymentSetTransactionCustomFieldActionBuilder value(@Nullable final java.lang.Object value) {
         this.value = value;
         return this;
     }
+    
+    
 
     /**
      *  <p>Unique identifier of the Transaction.</p>
      * @return transactionId
      */
-
-    public String getTransactionId() {
+    
+    
+    public String getTransactionId(){
         return this.transactionId;
     }
-
+    
     /**
      *  <p>Name of the Custom Field.</p>
      * @return name
      */
-
-    public String getName() {
+    
+    
+    public String getName(){
         return this.name;
     }
-
+    
     /**
      *  <p>If <code>value</code> is absent or <code>null</code>, this field will be removed if it exists. Removing a field that does not exist returns an InvalidOperation error. If <code>value</code> is provided, it is set for the field defined by <code>name</code>.</p>
      * @return value
      */
-
+    
     @Nullable
-    public java.lang.Object getValue() {
+    public java.lang.Object getValue(){
         return this.value;
     }
 
@@ -97,12 +118,11 @@ public class PaymentSetTransactionCustomFieldActionBuilder implements Builder<Pa
      * @return PaymentSetTransactionCustomFieldAction
      */
     public PaymentSetTransactionCustomFieldAction build() {
-        Objects.requireNonNull(transactionId,
-            PaymentSetTransactionCustomFieldAction.class + ": transactionId is missing");
+        Objects.requireNonNull(transactionId, PaymentSetTransactionCustomFieldAction.class + ": transactionId is missing");
         Objects.requireNonNull(name, PaymentSetTransactionCustomFieldAction.class + ": name is missing");
         return new PaymentSetTransactionCustomFieldActionImpl(transactionId, name, value);
     }
-
+    
     /**
      * builds PaymentSetTransactionCustomFieldAction without checking for non-null required values
      * @return PaymentSetTransactionCustomFieldAction
@@ -113,7 +133,7 @@ public class PaymentSetTransactionCustomFieldActionBuilder implements Builder<Pa
 
     /**
      * factory method for an instance of PaymentSetTransactionCustomFieldActionBuilder
-     * @return builder
+     * @return builder 
      */
     public static PaymentSetTransactionCustomFieldActionBuilder of() {
         return new PaymentSetTransactionCustomFieldActionBuilder();
@@ -124,8 +144,7 @@ public class PaymentSetTransactionCustomFieldActionBuilder implements Builder<Pa
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static PaymentSetTransactionCustomFieldActionBuilder of(
-            final PaymentSetTransactionCustomFieldAction template) {
+    public static PaymentSetTransactionCustomFieldActionBuilder of(final PaymentSetTransactionCustomFieldAction template) {
         PaymentSetTransactionCustomFieldActionBuilder builder = new PaymentSetTransactionCustomFieldActionBuilder();
         builder.transactionId = template.getTransactionId();
         builder.name = template.getName();

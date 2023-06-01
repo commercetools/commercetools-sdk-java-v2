@@ -1,9 +1,12 @@
-
 package com.commercetools.api.models.project;
 
+import com.commercetools.api.models.message.MessagesConfigurationDraft;
+import com.commercetools.api.models.project.ProjectUpdateAction;
+import com.commercetools.api.models.project.ProjectChangeMessagesConfigurationAction;
+import javax.annotation.Nullable;
 import java.util.*;
 import java.util.function.Function;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -17,59 +20,61 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .messagesConfiguration(messagesConfigurationBuilder -> messagesConfigurationBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
-public class ProjectChangeMessagesConfigurationActionBuilder
-        implements Builder<ProjectChangeMessagesConfigurationAction> {
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
+public class ProjectChangeMessagesConfigurationActionBuilder implements Builder<ProjectChangeMessagesConfigurationAction> {
 
+    
+    
     private com.commercetools.api.models.message.MessagesConfigurationDraft messagesConfiguration;
 
+    
     /**
      *  <p>Configuration for the Messages Query feature.</p>
      * @param builder function to build the messagesConfiguration value
      * @return Builder
      */
-
-    public ProjectChangeMessagesConfigurationActionBuilder messagesConfiguration(
-            Function<com.commercetools.api.models.message.MessagesConfigurationDraftBuilder, com.commercetools.api.models.message.MessagesConfigurationDraftBuilder> builder) {
-        this.messagesConfiguration = builder
-                .apply(com.commercetools.api.models.message.MessagesConfigurationDraftBuilder.of())
-                .build();
+    
+    public ProjectChangeMessagesConfigurationActionBuilder messagesConfiguration(Function<com.commercetools.api.models.message.MessagesConfigurationDraftBuilder, com.commercetools.api.models.message.MessagesConfigurationDraftBuilder> builder) {
+        this.messagesConfiguration = builder.apply(com.commercetools.api.models.message.MessagesConfigurationDraftBuilder.of()).build();
         return this;
     }
-
+    
     /**
      *  <p>Configuration for the Messages Query feature.</p>
      * @param builder function to build the messagesConfiguration value
      * @return Builder
      */
-
-    public ProjectChangeMessagesConfigurationActionBuilder withMessagesConfiguration(
-            Function<com.commercetools.api.models.message.MessagesConfigurationDraftBuilder, com.commercetools.api.models.message.MessagesConfigurationDraft> builder) {
-        this.messagesConfiguration = builder
-                .apply(com.commercetools.api.models.message.MessagesConfigurationDraftBuilder.of());
+    
+    public ProjectChangeMessagesConfigurationActionBuilder withMessagesConfiguration(Function<com.commercetools.api.models.message.MessagesConfigurationDraftBuilder, com.commercetools.api.models.message.MessagesConfigurationDraft> builder) {
+        this.messagesConfiguration = builder.apply(com.commercetools.api.models.message.MessagesConfigurationDraftBuilder.of());
         return this;
     }
-
+                    
     /**
      *  <p>Configuration for the Messages Query feature.</p>
      * @param messagesConfiguration value to be set
      * @return Builder
      */
-
-    public ProjectChangeMessagesConfigurationActionBuilder messagesConfiguration(
-            final com.commercetools.api.models.message.MessagesConfigurationDraft messagesConfiguration) {
+    
+    public ProjectChangeMessagesConfigurationActionBuilder messagesConfiguration( final com.commercetools.api.models.message.MessagesConfigurationDraft messagesConfiguration) {
         this.messagesConfiguration = messagesConfiguration;
         return this;
     }
+    
+    
 
     /**
      *  <p>Configuration for the Messages Query feature.</p>
      * @return messagesConfiguration
      */
-
-    public com.commercetools.api.models.message.MessagesConfigurationDraft getMessagesConfiguration() {
+    
+    
+    public com.commercetools.api.models.message.MessagesConfigurationDraft getMessagesConfiguration(){
         return this.messagesConfiguration;
     }
 
@@ -78,11 +83,10 @@ public class ProjectChangeMessagesConfigurationActionBuilder
      * @return ProjectChangeMessagesConfigurationAction
      */
     public ProjectChangeMessagesConfigurationAction build() {
-        Objects.requireNonNull(messagesConfiguration,
-            ProjectChangeMessagesConfigurationAction.class + ": messagesConfiguration is missing");
+        Objects.requireNonNull(messagesConfiguration, ProjectChangeMessagesConfigurationAction.class + ": messagesConfiguration is missing");
         return new ProjectChangeMessagesConfigurationActionImpl(messagesConfiguration);
     }
-
+    
     /**
      * builds ProjectChangeMessagesConfigurationAction without checking for non-null required values
      * @return ProjectChangeMessagesConfigurationAction
@@ -93,7 +97,7 @@ public class ProjectChangeMessagesConfigurationActionBuilder
 
     /**
      * factory method for an instance of ProjectChangeMessagesConfigurationActionBuilder
-     * @return builder
+     * @return builder 
      */
     public static ProjectChangeMessagesConfigurationActionBuilder of() {
         return new ProjectChangeMessagesConfigurationActionBuilder();
@@ -104,8 +108,7 @@ public class ProjectChangeMessagesConfigurationActionBuilder
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static ProjectChangeMessagesConfigurationActionBuilder of(
-            final ProjectChangeMessagesConfigurationAction template) {
+    public static ProjectChangeMessagesConfigurationActionBuilder of(final ProjectChangeMessagesConfigurationAction template) {
         ProjectChangeMessagesConfigurationActionBuilder builder = new ProjectChangeMessagesConfigurationActionBuilder();
         builder.messagesConfiguration = template.getMessagesConfiguration();
         return builder;

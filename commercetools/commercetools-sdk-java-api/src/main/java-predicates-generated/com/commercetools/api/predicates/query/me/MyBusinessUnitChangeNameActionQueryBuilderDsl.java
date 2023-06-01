@@ -1,9 +1,11 @@
-
 package com.commercetools.api.predicates.query.me;
 
 import com.commercetools.api.predicates.query.*;
 
-public class MyBusinessUnitChangeNameActionQueryBuilderDsl {
+import java.util.function.Function;
+
+
+public class MyBusinessUnitChangeNameActionQueryBuilderDsl  {
     public MyBusinessUnitChangeNameActionQueryBuilderDsl() {
     }
 
@@ -12,15 +14,12 @@ public class MyBusinessUnitChangeNameActionQueryBuilderDsl {
     }
 
     public StringComparisonPredicateBuilder<MyBusinessUnitChangeNameActionQueryBuilderDsl> action() {
-        return new StringComparisonPredicateBuilder<>(
-            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("action")),
-            p -> new CombinationQueryPredicate<>(p, MyBusinessUnitChangeNameActionQueryBuilderDsl::of));
+        return new StringComparisonPredicateBuilder<>(BinaryQueryPredicate.of().left(new ConstantQueryPredicate("action")),
+        p -> new CombinationQueryPredicate<>(p, MyBusinessUnitChangeNameActionQueryBuilderDsl::of));
     }
-
     public StringComparisonPredicateBuilder<MyBusinessUnitChangeNameActionQueryBuilderDsl> name() {
-        return new StringComparisonPredicateBuilder<>(
-            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("name")),
-            p -> new CombinationQueryPredicate<>(p, MyBusinessUnitChangeNameActionQueryBuilderDsl::of));
+        return new StringComparisonPredicateBuilder<>(BinaryQueryPredicate.of().left(new ConstantQueryPredicate("name")),
+        p -> new CombinationQueryPredicate<>(p, MyBusinessUnitChangeNameActionQueryBuilderDsl::of));
     }
-
+    
 }

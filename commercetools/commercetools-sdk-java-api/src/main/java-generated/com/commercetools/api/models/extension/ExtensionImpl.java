@@ -1,58 +1,71 @@
-
 package com.commercetools.api.models.extension;
 
-import java.time.*;
-import java.util.*;
-
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
-
-import io.vrap.rmf.base.client.ModelBase;
+import com.commercetools.api.models.common.BaseResource;
+import com.commercetools.api.models.common.CreatedBy;
+import com.commercetools.api.models.common.LastModifiedBy;
+import com.commercetools.api.models.extension.ExtensionDestination;
+import com.commercetools.api.models.extension.ExtensionTrigger;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.ModelBase;
+import javax.validation.Valid;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.annotation.*;
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
  * Extension
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class ExtensionImpl implements Extension, ModelBase {
 
+    
     private String id;
-
+    
+    
     private Long version;
-
+    
+    
     private java.time.ZonedDateTime createdAt;
-
+    
+    
     private java.time.ZonedDateTime lastModifiedAt;
-
+    
+    
     private com.commercetools.api.models.common.LastModifiedBy lastModifiedBy;
-
+    
+    
     private com.commercetools.api.models.common.CreatedBy createdBy;
-
+    
+    
     private String key;
-
+    
+    
     private com.commercetools.api.models.extension.ExtensionDestination destination;
-
+    
+    
     private java.util.List<com.commercetools.api.models.extension.ExtensionTrigger> triggers;
-
+    
+    
     private Integer timeoutInMs;
 
     /**
      * create instance with all properties
      */
     @JsonCreator
-    ExtensionImpl(@JsonProperty("id") final String id, @JsonProperty("version") final Long version,
-            @JsonProperty("createdAt") final java.time.ZonedDateTime createdAt,
-            @JsonProperty("lastModifiedAt") final java.time.ZonedDateTime lastModifiedAt,
-            @JsonProperty("lastModifiedBy") final com.commercetools.api.models.common.LastModifiedBy lastModifiedBy,
-            @JsonProperty("createdBy") final com.commercetools.api.models.common.CreatedBy createdBy,
-            @JsonProperty("key") final String key,
-            @JsonProperty("destination") final com.commercetools.api.models.extension.ExtensionDestination destination,
-            @JsonProperty("triggers") final java.util.List<com.commercetools.api.models.extension.ExtensionTrigger> triggers,
-            @JsonProperty("timeoutInMs") final Integer timeoutInMs) {
+    ExtensionImpl(@JsonProperty("id") final String id, @JsonProperty("version") final Long version, @JsonProperty("createdAt") final java.time.ZonedDateTime createdAt, @JsonProperty("lastModifiedAt") final java.time.ZonedDateTime lastModifiedAt, @JsonProperty("lastModifiedBy") final com.commercetools.api.models.common.LastModifiedBy lastModifiedBy, @JsonProperty("createdBy") final com.commercetools.api.models.common.CreatedBy createdBy, @JsonProperty("key") final String key, @JsonProperty("destination") final com.commercetools.api.models.extension.ExtensionDestination destination, @JsonProperty("triggers") final java.util.List<com.commercetools.api.models.extension.ExtensionTrigger> triggers, @JsonProperty("timeoutInMs") final Integer timeoutInMs) {
         this.id = id;
         this.version = version;
         this.createdAt = createdAt;
@@ -64,7 +77,6 @@ public class ExtensionImpl implements Extension, ModelBase {
         this.triggers = triggers;
         this.timeoutInMs = timeoutInMs;
     }
-
     /**
      * create empty instance
      */
@@ -74,138 +86,148 @@ public class ExtensionImpl implements Extension, ModelBase {
     /**
      *  <p>Unique identifier of the Extension.</p>
      */
-
-    public String getId() {
+    
+    public String getId(){
         return this.id;
     }
-
+    
     /**
      *  <p>Current version of the Extension.</p>
      */
-
-    public Long getVersion() {
+    
+    public Long getVersion(){
         return this.version;
     }
-
+    
     /**
      *  <p>Date and time (UTC) the Extension was initially created.</p>
      */
-
-    public java.time.ZonedDateTime getCreatedAt() {
+    
+    public java.time.ZonedDateTime getCreatedAt(){
         return this.createdAt;
     }
-
+    
     /**
      *  <p>Date and time (UTC) the Extension was last updated.</p>
      */
-
-    public java.time.ZonedDateTime getLastModifiedAt() {
+    
+    public java.time.ZonedDateTime getLastModifiedAt(){
         return this.lastModifiedAt;
     }
-
+    
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      */
-
-    public com.commercetools.api.models.common.LastModifiedBy getLastModifiedBy() {
+    
+    public com.commercetools.api.models.common.LastModifiedBy getLastModifiedBy(){
         return this.lastModifiedBy;
     }
-
+    
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      */
-
-    public com.commercetools.api.models.common.CreatedBy getCreatedBy() {
+    
+    public com.commercetools.api.models.common.CreatedBy getCreatedBy(){
         return this.createdBy;
     }
-
+    
     /**
      *  <p>User-defined unique identifier of the Extension.</p>
      */
-
-    public String getKey() {
+    
+    public String getKey(){
         return this.key;
     }
-
+    
     /**
      *  <p>The configuration for the Extension, including its type, location and authentication details.</p>
      */
-
-    public com.commercetools.api.models.extension.ExtensionDestination getDestination() {
+    
+    public com.commercetools.api.models.extension.ExtensionDestination getDestination(){
         return this.destination;
     }
-
+    
     /**
      *  <p>Describes what triggers the Extension.</p>
      */
-
-    public java.util.List<com.commercetools.api.models.extension.ExtensionTrigger> getTriggers() {
+    
+    public java.util.List<com.commercetools.api.models.extension.ExtensionTrigger> getTriggers(){
         return this.triggers;
     }
-
+    
     /**
      *  <p>Maximum time (in milliseconds) that the Extension can respond within. If no timeout is provided, the default value is used for all types of Extensions. The maximum value is 10000 ms (10 seconds) for <code>payment</code> Extensions and 2000 ms (2 seconds) for all other Extensions.</p>
      */
-
-    public Integer getTimeoutInMs() {
+    
+    public Integer getTimeoutInMs(){
         return this.timeoutInMs;
     }
 
-    public void setId(final String id) {
+    
+    public void setId(final String id){
         this.id = id;
     }
-
-    public void setVersion(final Long version) {
+    
+    
+    public void setVersion(final Long version){
         this.version = version;
     }
-
-    public void setCreatedAt(final java.time.ZonedDateTime createdAt) {
+    
+    
+    public void setCreatedAt(final java.time.ZonedDateTime createdAt){
         this.createdAt = createdAt;
     }
-
-    public void setLastModifiedAt(final java.time.ZonedDateTime lastModifiedAt) {
+    
+    
+    public void setLastModifiedAt(final java.time.ZonedDateTime lastModifiedAt){
         this.lastModifiedAt = lastModifiedAt;
     }
-
-    public void setLastModifiedBy(final com.commercetools.api.models.common.LastModifiedBy lastModifiedBy) {
+    
+    
+    public void setLastModifiedBy(final com.commercetools.api.models.common.LastModifiedBy lastModifiedBy){
         this.lastModifiedBy = lastModifiedBy;
     }
-
-    public void setCreatedBy(final com.commercetools.api.models.common.CreatedBy createdBy) {
+    
+    
+    public void setCreatedBy(final com.commercetools.api.models.common.CreatedBy createdBy){
         this.createdBy = createdBy;
     }
-
-    public void setKey(final String key) {
+    
+    
+    public void setKey(final String key){
         this.key = key;
     }
-
-    public void setDestination(final com.commercetools.api.models.extension.ExtensionDestination destination) {
+    
+    
+    public void setDestination(final com.commercetools.api.models.extension.ExtensionDestination destination){
         this.destination = destination;
     }
-
-    public void setTriggers(final com.commercetools.api.models.extension.ExtensionTrigger... triggers) {
-        this.triggers = new ArrayList<>(Arrays.asList(triggers));
+    
+    
+    public void setTriggers(final com.commercetools.api.models.extension.ExtensionTrigger ...triggers){
+       this.triggers = new ArrayList<>(Arrays.asList(triggers));
     }
-
-    public void setTriggers(final java.util.List<com.commercetools.api.models.extension.ExtensionTrigger> triggers) {
-        this.triggers = triggers;
+    
+    
+    public void setTriggers(final java.util.List<com.commercetools.api.models.extension.ExtensionTrigger> triggers){
+       this.triggers = triggers;
     }
-
-    public void setTimeoutInMs(final Integer timeoutInMs) {
+    
+    
+    public void setTimeoutInMs(final Integer timeoutInMs){
         this.timeoutInMs = timeoutInMs;
     }
 
     @Override
     public boolean equals(Object o) {
-        if (this == o)
-            return true;
-
-        if (o == null || getClass() != o.getClass())
-            return false;
-
+        if (this == o) return true;
+    
+        if (o == null || getClass() != o.getClass()) return false;
+    
         ExtensionImpl that = (ExtensionImpl) o;
-
-        return new EqualsBuilder().append(id, that.id)
+    
+        return new EqualsBuilder()
+                .append(id, that.id)
                 .append(version, that.version)
                 .append(createdAt, that.createdAt)
                 .append(lastModifiedAt, that.lastModifiedAt)
@@ -217,20 +239,21 @@ public class ExtensionImpl implements Extension, ModelBase {
                 .append(timeoutInMs, that.timeoutInMs)
                 .isEquals();
     }
-
+    
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(id)
-                .append(version)
-                .append(createdAt)
-                .append(lastModifiedAt)
-                .append(lastModifiedBy)
-                .append(createdBy)
-                .append(key)
-                .append(destination)
-                .append(triggers)
-                .append(timeoutInMs)
-                .toHashCode();
+        return new HashCodeBuilder(17, 37)
+            .append(id)
+            .append(version)
+            .append(createdAt)
+            .append(lastModifiedAt)
+            .append(lastModifiedBy)
+            .append(createdBy)
+            .append(key)
+            .append(destination)
+            .append(triggers)
+            .append(timeoutInMs)
+            .toHashCode();
     }
 
 }

@@ -1,11 +1,11 @@
-
 package com.commercetools.api.predicates.query.business_unit;
-
-import java.util.function.Function;
 
 import com.commercetools.api.predicates.query.*;
 
-public class InheritedAssociateRoleAssignmentQueryBuilderDsl {
+import java.util.function.Function;
+
+
+public class InheritedAssociateRoleAssignmentQueryBuilderDsl  {
     public InheritedAssociateRoleAssignmentQueryBuilderDsl() {
     }
 
@@ -14,22 +14,20 @@ public class InheritedAssociateRoleAssignmentQueryBuilderDsl {
     }
 
     public CombinationQueryPredicate<InheritedAssociateRoleAssignmentQueryBuilderDsl> associateRole(
-            Function<com.commercetools.api.predicates.query.associate_role.AssociateRoleKeyReferenceQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.associate_role.AssociateRoleKeyReferenceQueryBuilderDsl>> fn) {
+        Function<com.commercetools.api.predicates.query.associate_role.AssociateRoleKeyReferenceQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.associate_role.AssociateRoleKeyReferenceQueryBuilderDsl>> fn) {
         return new CombinationQueryPredicate<>(ContainerQueryPredicate.of()
-                .parent(ConstantQueryPredicate.of().constant("associateRole"))
-                .inner(fn.apply(
-                    com.commercetools.api.predicates.query.associate_role.AssociateRoleKeyReferenceQueryBuilderDsl
-                            .of())),
+            .parent(ConstantQueryPredicate.of().constant("associateRole"))
+            .inner(fn.apply(com.commercetools.api.predicates.query.associate_role.AssociateRoleKeyReferenceQueryBuilderDsl.of())),
             InheritedAssociateRoleAssignmentQueryBuilderDsl::of);
     }
-
+    
     public CombinationQueryPredicate<InheritedAssociateRoleAssignmentQueryBuilderDsl> source(
-            Function<com.commercetools.api.predicates.query.business_unit.BusinessUnitKeyReferenceQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.business_unit.BusinessUnitKeyReferenceQueryBuilderDsl>> fn) {
+        Function<com.commercetools.api.predicates.query.business_unit.BusinessUnitKeyReferenceQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.business_unit.BusinessUnitKeyReferenceQueryBuilderDsl>> fn) {
         return new CombinationQueryPredicate<>(ContainerQueryPredicate.of()
-                .parent(ConstantQueryPredicate.of().constant("source"))
-                .inner(fn.apply(
-                    com.commercetools.api.predicates.query.business_unit.BusinessUnitKeyReferenceQueryBuilderDsl.of())),
+            .parent(ConstantQueryPredicate.of().constant("source"))
+            .inner(fn.apply(com.commercetools.api.predicates.query.business_unit.BusinessUnitKeyReferenceQueryBuilderDsl.of())),
             InheritedAssociateRoleAssignmentQueryBuilderDsl::of);
     }
-
+    
+    
 }

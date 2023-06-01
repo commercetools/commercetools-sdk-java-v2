@@ -1,10 +1,11 @@
-
 package com.commercetools.api.models.cart;
 
-import java.util.*;
-
+import com.commercetools.api.models.cart.CartUpdateAction;
+import com.commercetools.api.models.cart.CartSetAnonymousIdAction;
 import javax.annotation.Nullable;
-
+import java.util.*;
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -17,32 +18,39 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     CartSetAnonymousIdAction cartSetAnonymousIdAction = CartSetAnonymousIdAction.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class CartSetAnonymousIdActionBuilder implements Builder<CartSetAnonymousIdAction> {
 
+    
     @Nullable
     private String anonymousId;
 
+    
     /**
      *  <p>Value to set. If empty, any existing value is removed.</p>
      * @param anonymousId value to be set
      * @return Builder
      */
-
+    
     public CartSetAnonymousIdActionBuilder anonymousId(@Nullable final String anonymousId) {
         this.anonymousId = anonymousId;
         return this;
     }
+    
+    
 
     /**
      *  <p>Value to set. If empty, any existing value is removed.</p>
      * @return anonymousId
      */
-
+    
     @Nullable
-    public String getAnonymousId() {
+    public String getAnonymousId(){
         return this.anonymousId;
     }
 
@@ -53,7 +61,7 @@ public class CartSetAnonymousIdActionBuilder implements Builder<CartSetAnonymous
     public CartSetAnonymousIdAction build() {
         return new CartSetAnonymousIdActionImpl(anonymousId);
     }
-
+    
     /**
      * builds CartSetAnonymousIdAction without checking for non-null required values
      * @return CartSetAnonymousIdAction
@@ -64,7 +72,7 @@ public class CartSetAnonymousIdActionBuilder implements Builder<CartSetAnonymous
 
     /**
      * factory method for an instance of CartSetAnonymousIdActionBuilder
-     * @return builder
+     * @return builder 
      */
     public static CartSetAnonymousIdActionBuilder of() {
         return new CartSetAnonymousIdActionBuilder();

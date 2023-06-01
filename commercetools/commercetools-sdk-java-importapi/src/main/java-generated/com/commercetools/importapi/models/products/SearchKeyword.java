@@ -1,18 +1,20 @@
-
 package com.commercetools.importapi.models.products;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
+import com.commercetools.importapi.models.products.SuggestTokenizer;
+import com.commercetools.importapi.models.products.SearchKeywordImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * SearchKeyword
@@ -25,11 +27,15 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .text("{text}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = SearchKeywordImpl.class)
-public interface SearchKeyword {
+public interface SearchKeyword  {
+
 
     /**
      *
@@ -38,7 +44,6 @@ public interface SearchKeyword {
     @NotNull
     @JsonProperty("text")
     public String getText();
-
     /**
      *  <p>The tokenizer defines the tokens that are used to match against the Suggest Query input.</p>
      * @return suggestTokenizer
@@ -51,23 +56,26 @@ public interface SearchKeyword {
      * set text
      * @param text value to be set
      */
-
+    
     public void setText(final String text);
-
+    
+    
     /**
      *  <p>The tokenizer defines the tokens that are used to match against the Suggest Query input.</p>
      * @param suggestTokenizer value to be set
      */
-
+    
     public void setSuggestTokenizer(final SuggestTokenizer suggestTokenizer);
+    
 
     /**
      * factory method
      * @return instance of SearchKeyword
      */
-    public static SearchKeyword of() {
+    public static SearchKeyword of(){
         return new SearchKeywordImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy SearchKeyword
@@ -93,8 +101,7 @@ public interface SearchKeyword {
         }
         SearchKeywordImpl instance = new SearchKeywordImpl();
         instance.setText(template.getText());
-        instance.setSuggestTokenizer(
-            com.commercetools.importapi.models.products.SuggestTokenizer.deepCopy(template.getSuggestTokenizer()));
+        instance.setSuggestTokenizer(com.commercetools.importapi.models.products.SuggestTokenizer.deepCopy(template.getSuggestTokenizer()));
         return instance;
     }
 
@@ -105,7 +112,7 @@ public interface SearchKeyword {
     public static SearchKeywordBuilder builder() {
         return SearchKeywordBuilder.of();
     }
-
+    
     /**
      * create builder for SearchKeyword instance
      * @param template instance with prefilled values for the builder
@@ -114,6 +121,7 @@ public interface SearchKeyword {
     public static SearchKeywordBuilder builder(final SearchKeyword template) {
         return SearchKeywordBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -124,7 +132,7 @@ public interface SearchKeyword {
     default <T> T withSearchKeyword(Function<SearchKeyword, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

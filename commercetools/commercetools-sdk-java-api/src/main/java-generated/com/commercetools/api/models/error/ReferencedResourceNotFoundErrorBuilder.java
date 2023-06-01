@@ -1,10 +1,12 @@
-
 package com.commercetools.api.models.error;
 
-import java.util.*;
-
+import com.commercetools.api.models.common.ReferenceTypeId;
+import com.commercetools.api.models.error.ErrorObject;
+import com.commercetools.api.models.error.ReferencedResourceNotFoundError;
 import javax.annotation.Nullable;
-
+import java.util.*;
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -19,52 +21,66 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .typeId(ReferenceTypeId.ASSOCIATE_ROLE)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class ReferencedResourceNotFoundErrorBuilder implements Builder<ReferencedResourceNotFoundError> {
 
+    
+    
     private String message;
-
+    
+    
+    
     private Map<String, java.lang.Object> values = new HashMap<>();
-
+    
+    
+    
     private com.commercetools.api.models.common.ReferenceTypeId typeId;
-
+    
+    
     @Nullable
     private String id;
-
+    
+    
     @Nullable
     private String key;
 
+    
     /**
      *  <p><code>"The referenced object of type $typeId $predicate was not found. It either doesn't exist, or it can't be accessed from this endpoint (e.g., if the endpoint filters by store or customer account)."</code></p>
      * @param message value to be set
      * @return Builder
      */
-
-    public ReferencedResourceNotFoundErrorBuilder message(final String message) {
+    
+    public ReferencedResourceNotFoundErrorBuilder message( final String message) {
         this.message = message;
         return this;
     }
-
+    
+    
+    
     /**
      *  <p>Error-specific additional fields.</p>
      * @param values properties to be set
      * @return Builder
      */
-
-    public ReferencedResourceNotFoundErrorBuilder values(final Map<String, java.lang.Object> values) {
+    
+    public ReferencedResourceNotFoundErrorBuilder values( final Map<String, java.lang.Object> values){
         this.values = values;
         return this;
     }
-
+    
     /**
      *  <p>Error-specific additional fields.</p>
      * @param key property name
      * @param value property value
      * @return Builder
      */
-
+    
     public ReferencedResourceNotFoundErrorBuilder addValue(final String key, final java.lang.Object value) {
         if (this.values == null) {
             values = new HashMap<>();
@@ -72,85 +88,97 @@ public class ReferencedResourceNotFoundErrorBuilder implements Builder<Reference
         values.put(key, value);
         return this;
     }
-
+    
+    
+    
     /**
      *  <p>Type of referenced resource.</p>
      * @param typeId value to be set
      * @return Builder
      */
-
-    public ReferencedResourceNotFoundErrorBuilder typeId(
-            final com.commercetools.api.models.common.ReferenceTypeId typeId) {
+    
+    public ReferencedResourceNotFoundErrorBuilder typeId( final com.commercetools.api.models.common.ReferenceTypeId typeId) {
         this.typeId = typeId;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Unique identifier of the referenced resource, if known.</p>
      * @param id value to be set
      * @return Builder
      */
-
+    
     public ReferencedResourceNotFoundErrorBuilder id(@Nullable final String id) {
         this.id = id;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>User-defined unique identifier of the referenced resource, if known.</p>
      * @param key value to be set
      * @return Builder
      */
-
+    
     public ReferencedResourceNotFoundErrorBuilder key(@Nullable final String key) {
         this.key = key;
         return this;
     }
+    
+    
 
     /**
      *  <p><code>"The referenced object of type $typeId $predicate was not found. It either doesn't exist, or it can't be accessed from this endpoint (e.g., if the endpoint filters by store or customer account)."</code></p>
      * @return message
      */
-
-    public String getMessage() {
+    
+    
+    public String getMessage(){
         return this.message;
     }
-
+    
     /**
      *  <p>Error-specific additional fields.</p>
      * @return pattern properties
      */
-
-    public Map<String, java.lang.Object> getValues() {
+    
+    
+    public Map<String, java.lang.Object> getValues(){
         return this.values;
     }
-
+    
     /**
      *  <p>Type of referenced resource.</p>
      * @return typeId
      */
-
-    public com.commercetools.api.models.common.ReferenceTypeId getTypeId() {
+    
+    
+    public com.commercetools.api.models.common.ReferenceTypeId getTypeId(){
         return this.typeId;
     }
-
+    
     /**
      *  <p>Unique identifier of the referenced resource, if known.</p>
      * @return id
      */
-
+    
     @Nullable
-    public String getId() {
+    public String getId(){
         return this.id;
     }
-
+    
     /**
      *  <p>User-defined unique identifier of the referenced resource, if known.</p>
      * @return key
      */
-
+    
     @Nullable
-    public String getKey() {
+    public String getKey(){
         return this.key;
     }
 
@@ -163,7 +191,7 @@ public class ReferencedResourceNotFoundErrorBuilder implements Builder<Reference
         Objects.requireNonNull(typeId, ReferencedResourceNotFoundError.class + ": typeId is missing");
         return new ReferencedResourceNotFoundErrorImpl(message, values, typeId, id, key);
     }
-
+    
     /**
      * builds ReferencedResourceNotFoundError without checking for non-null required values
      * @return ReferencedResourceNotFoundError
@@ -174,7 +202,7 @@ public class ReferencedResourceNotFoundErrorBuilder implements Builder<Reference
 
     /**
      * factory method for an instance of ReferencedResourceNotFoundErrorBuilder
-     * @return builder
+     * @return builder 
      */
     public static ReferencedResourceNotFoundErrorBuilder of() {
         return new ReferencedResourceNotFoundErrorBuilder();

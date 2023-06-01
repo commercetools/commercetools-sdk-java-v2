@@ -1,18 +1,23 @@
-
 package com.commercetools.history.models.common;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
+import com.commercetools.history.models.common.AttributeConstraintEnum;
+import com.commercetools.history.models.common.AttributeType;
+import com.commercetools.history.models.common.LocalizedString;
+import com.commercetools.history.models.common.TextInputHint;
+import com.commercetools.history.models.common.AttributeDefinitionImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * AttributeDefinition
@@ -32,11 +37,15 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .isSearchable(true)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = AttributeDefinitionImpl.class)
-public interface AttributeDefinition {
+public interface AttributeDefinition  {
+
 
     /**
      *
@@ -46,7 +55,6 @@ public interface AttributeDefinition {
     @Valid
     @JsonProperty("type")
     public AttributeType getType();
-
     /**
      *  <p>The unique name of the attribute used in the API. The name must be between two and 256 characters long and can contain the ASCII letters A to Z in lowercase or uppercase, digits, underscores (<code>_</code>) and the hyphen-minus (<code>-</code>). When using the same <code>name</code> for an attribute in two or more product types all fields of the AttributeDefinition of this attribute need to be the same across the product types, otherwise an AttributeDefinitionAlreadyExists error code will be returned. An exception to this are the values of an <code>enum</code> or <code>lenum</code> type and sets thereof.</p>
      * @return name
@@ -54,7 +62,6 @@ public interface AttributeDefinition {
     @NotNull
     @JsonProperty("name")
     public String getName();
-
     /**
      *
      * @return label
@@ -63,7 +70,6 @@ public interface AttributeDefinition {
     @Valid
     @JsonProperty("label")
     public LocalizedString getLabel();
-
     /**
      *  <p>Whether the attribute is required to have a value.</p>
      * @return isRequired
@@ -71,7 +77,6 @@ public interface AttributeDefinition {
     @NotNull
     @JsonProperty("isRequired")
     public Boolean getIsRequired();
-
     /**
      *
      * @return attributeConstraint
@@ -79,7 +84,6 @@ public interface AttributeDefinition {
     @NotNull
     @JsonProperty("attributeConstraint")
     public AttributeConstraintEnum getAttributeConstraint();
-
     /**
      *
      * @return inputTip
@@ -88,7 +92,6 @@ public interface AttributeDefinition {
     @Valid
     @JsonProperty("inputTip")
     public LocalizedString getInputTip();
-
     /**
      *
      * @return inputHint
@@ -96,7 +99,6 @@ public interface AttributeDefinition {
     @NotNull
     @JsonProperty("inputHint")
     public TextInputHint getInputHint();
-
     /**
      *  <p>Whether the attribute's values should generally be enabled in product search. This determines whether the value is stored in products for matching terms in the context of full-text search queries and can be used in facets &amp; filters as part of product search queries. The exact features that are enabled/disabled with this flag depend on the concrete attribute type and are described there. The max size of a searchable field is <strong>restricted to 10922 characters</strong>. This constraint is enforced at both product creation and product update. If the length of the input exceeds the maximum size an InvalidField error is returned.</p>
      * @return isSearchable
@@ -109,65 +111,74 @@ public interface AttributeDefinition {
      * set type
      * @param type value to be set
      */
-
+    
     public void setType(final AttributeType type);
-
+    
+    
     /**
      *  <p>The unique name of the attribute used in the API. The name must be between two and 256 characters long and can contain the ASCII letters A to Z in lowercase or uppercase, digits, underscores (<code>_</code>) and the hyphen-minus (<code>-</code>). When using the same <code>name</code> for an attribute in two or more product types all fields of the AttributeDefinition of this attribute need to be the same across the product types, otherwise an AttributeDefinitionAlreadyExists error code will be returned. An exception to this are the values of an <code>enum</code> or <code>lenum</code> type and sets thereof.</p>
      * @param name value to be set
      */
-
+    
     public void setName(final String name);
-
+    
+    
     /**
      * set label
      * @param label value to be set
      */
-
+    
     public void setLabel(final LocalizedString label);
-
+    
+    
     /**
      *  <p>Whether the attribute is required to have a value.</p>
      * @param isRequired value to be set
      */
-
+    
     public void setIsRequired(final Boolean isRequired);
-
+    
+    
     /**
      * set attributeConstraint
      * @param attributeConstraint value to be set
      */
-
+    
     public void setAttributeConstraint(final AttributeConstraintEnum attributeConstraint);
-
+    
+    
     /**
      * set inputTip
      * @param inputTip value to be set
      */
-
+    
     public void setInputTip(final LocalizedString inputTip);
-
+    
+    
     /**
      * set inputHint
      * @param inputHint value to be set
      */
-
+    
     public void setInputHint(final TextInputHint inputHint);
-
+    
+    
     /**
      *  <p>Whether the attribute's values should generally be enabled in product search. This determines whether the value is stored in products for matching terms in the context of full-text search queries and can be used in facets &amp; filters as part of product search queries. The exact features that are enabled/disabled with this flag depend on the concrete attribute type and are described there. The max size of a searchable field is <strong>restricted to 10922 characters</strong>. This constraint is enforced at both product creation and product update. If the length of the input exceeds the maximum size an InvalidField error is returned.</p>
      * @param isSearchable value to be set
      */
-
+    
     public void setIsSearchable(final Boolean isSearchable);
+    
 
     /**
      * factory method
      * @return instance of AttributeDefinition
      */
-    public static AttributeDefinition of() {
+    public static AttributeDefinition of(){
         return new AttributeDefinitionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy AttributeDefinition
@@ -216,7 +227,7 @@ public interface AttributeDefinition {
     public static AttributeDefinitionBuilder builder() {
         return AttributeDefinitionBuilder.of();
     }
-
+    
     /**
      * create builder for AttributeDefinition instance
      * @param template instance with prefilled values for the builder
@@ -225,6 +236,7 @@ public interface AttributeDefinition {
     public static AttributeDefinitionBuilder builder(final AttributeDefinition template) {
         return AttributeDefinitionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -235,7 +247,7 @@ public interface AttributeDefinition {
     default <T> T withAttributeDefinition(Function<AttributeDefinition, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

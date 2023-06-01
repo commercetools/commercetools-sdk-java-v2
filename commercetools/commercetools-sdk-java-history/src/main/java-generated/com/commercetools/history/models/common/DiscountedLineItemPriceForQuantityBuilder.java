@@ -1,9 +1,11 @@
-
 package com.commercetools.history.models.common;
 
+import com.commercetools.history.models.common.DiscountedLineItemPrice;
+import com.commercetools.history.models.common.DiscountedLineItemPriceForQuantity;
+import javax.annotation.Nullable;
 import java.util.*;
 import java.util.function.Function;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -18,80 +20,89 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .discountedPrice(discountedPriceBuilder -> discountedPriceBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class DiscountedLineItemPriceForQuantityBuilder implements Builder<DiscountedLineItemPriceForQuantity> {
 
+    
+    
     private Integer quantity;
-
+    
+    
+    
     private com.commercetools.history.models.common.DiscountedLineItemPrice discountedPrice;
 
+    
     /**
      * set the value to the quantity
      * @param quantity value to be set
      * @return Builder
      */
-
-    public DiscountedLineItemPriceForQuantityBuilder quantity(final Integer quantity) {
+    
+    public DiscountedLineItemPriceForQuantityBuilder quantity( final Integer quantity) {
         this.quantity = quantity;
         return this;
     }
-
+    
+    
+    
+    
     /**
      * set the value to the discountedPrice using the builder function
      * @param builder function to build the discountedPrice value
      * @return Builder
      */
-
-    public DiscountedLineItemPriceForQuantityBuilder discountedPrice(
-            Function<com.commercetools.history.models.common.DiscountedLineItemPriceBuilder, com.commercetools.history.models.common.DiscountedLineItemPriceBuilder> builder) {
-        this.discountedPrice = builder
-                .apply(com.commercetools.history.models.common.DiscountedLineItemPriceBuilder.of())
-                .build();
+    
+    public DiscountedLineItemPriceForQuantityBuilder discountedPrice(Function<com.commercetools.history.models.common.DiscountedLineItemPriceBuilder, com.commercetools.history.models.common.DiscountedLineItemPriceBuilder> builder) {
+        this.discountedPrice = builder.apply(com.commercetools.history.models.common.DiscountedLineItemPriceBuilder.of()).build();
         return this;
     }
-
+    
     /**
      * set the value to the discountedPrice using the builder function
      * @param builder function to build the discountedPrice value
      * @return Builder
      */
-
-    public DiscountedLineItemPriceForQuantityBuilder withDiscountedPrice(
-            Function<com.commercetools.history.models.common.DiscountedLineItemPriceBuilder, com.commercetools.history.models.common.DiscountedLineItemPrice> builder) {
-        this.discountedPrice = builder
-                .apply(com.commercetools.history.models.common.DiscountedLineItemPriceBuilder.of());
+    
+    public DiscountedLineItemPriceForQuantityBuilder withDiscountedPrice(Function<com.commercetools.history.models.common.DiscountedLineItemPriceBuilder, com.commercetools.history.models.common.DiscountedLineItemPrice> builder) {
+        this.discountedPrice = builder.apply(com.commercetools.history.models.common.DiscountedLineItemPriceBuilder.of());
         return this;
     }
-
+                    
     /**
      * set the value to the discountedPrice
      * @param discountedPrice value to be set
      * @return Builder
      */
-
-    public DiscountedLineItemPriceForQuantityBuilder discountedPrice(
-            final com.commercetools.history.models.common.DiscountedLineItemPrice discountedPrice) {
+    
+    public DiscountedLineItemPriceForQuantityBuilder discountedPrice( final com.commercetools.history.models.common.DiscountedLineItemPrice discountedPrice) {
         this.discountedPrice = discountedPrice;
         return this;
     }
+    
+    
 
     /**
      * value of quantity}
      * @return quantity
      */
-
-    public Integer getQuantity() {
+    
+    
+    public Integer getQuantity(){
         return this.quantity;
     }
-
+    
     /**
      * value of discountedPrice}
      * @return discountedPrice
      */
-
-    public com.commercetools.history.models.common.DiscountedLineItemPrice getDiscountedPrice() {
+    
+    
+    public com.commercetools.history.models.common.DiscountedLineItemPrice getDiscountedPrice(){
         return this.discountedPrice;
     }
 
@@ -101,11 +112,10 @@ public class DiscountedLineItemPriceForQuantityBuilder implements Builder<Discou
      */
     public DiscountedLineItemPriceForQuantity build() {
         Objects.requireNonNull(quantity, DiscountedLineItemPriceForQuantity.class + ": quantity is missing");
-        Objects.requireNonNull(discountedPrice,
-            DiscountedLineItemPriceForQuantity.class + ": discountedPrice is missing");
+        Objects.requireNonNull(discountedPrice, DiscountedLineItemPriceForQuantity.class + ": discountedPrice is missing");
         return new DiscountedLineItemPriceForQuantityImpl(quantity, discountedPrice);
     }
-
+    
     /**
      * builds DiscountedLineItemPriceForQuantity without checking for non-null required values
      * @return DiscountedLineItemPriceForQuantity
@@ -116,7 +126,7 @@ public class DiscountedLineItemPriceForQuantityBuilder implements Builder<Discou
 
     /**
      * factory method for an instance of DiscountedLineItemPriceForQuantityBuilder
-     * @return builder
+     * @return builder 
      */
     public static DiscountedLineItemPriceForQuantityBuilder of() {
         return new DiscountedLineItemPriceForQuantityBuilder();

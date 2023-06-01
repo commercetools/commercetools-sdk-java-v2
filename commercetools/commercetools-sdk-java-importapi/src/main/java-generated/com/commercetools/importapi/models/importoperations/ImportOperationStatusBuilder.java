@@ -1,11 +1,12 @@
-
 package com.commercetools.importapi.models.importoperations;
 
+import com.commercetools.importapi.models.errors.ErrorObject;
+import com.commercetools.importapi.models.importoperations.ImportOperationState;
+import com.commercetools.importapi.models.importoperations.ImportOperationStatus;
+import javax.annotation.Nullable;
 import java.util.*;
 import java.util.function.Function;
-
-import javax.annotation.Nullable;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -19,135 +20,146 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .state(ImportOperationState.PROCESSING)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class ImportOperationStatusBuilder implements Builder<ImportOperationStatus> {
 
+    
     @Nullable
     private String operationId;
-
+    
+    
+    
     private com.commercetools.importapi.models.importoperations.ImportOperationState state;
-
+    
+    
     @Nullable
     private java.util.List<com.commercetools.importapi.models.errors.ErrorObject> errors;
 
+    
     /**
      *  <p>The ID of the ImportOperation.</p>
      * @param operationId value to be set
      * @return Builder
      */
-
+    
     public ImportOperationStatusBuilder operationId(@Nullable final String operationId) {
         this.operationId = operationId;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>The validation state of the ImportOperation.</p>
      * @param state value to be set
      * @return Builder
      */
-
-    public ImportOperationStatusBuilder state(
-            final com.commercetools.importapi.models.importoperations.ImportOperationState state) {
+    
+    public ImportOperationStatusBuilder state( final com.commercetools.importapi.models.importoperations.ImportOperationState state) {
         this.state = state;
         return this;
     }
-
+    
+    
+    
     /**
      *  <p>The validation errors for the ImportOperation. See Errors.</p>
      * @param errors value to be set
      * @return Builder
      */
-
-    public ImportOperationStatusBuilder errors(
-            @Nullable final com.commercetools.importapi.models.errors.ErrorObject... errors) {
+    
+    public ImportOperationStatusBuilder errors(@Nullable final com.commercetools.importapi.models.errors.ErrorObject ...errors) {
         this.errors = new ArrayList<>(Arrays.asList(errors));
         return this;
     }
-
+    
     /**
      *  <p>The validation errors for the ImportOperation. See Errors.</p>
      * @param errors value to be set
      * @return Builder
      */
-
-    public ImportOperationStatusBuilder errors(
-            @Nullable final java.util.List<com.commercetools.importapi.models.errors.ErrorObject> errors) {
+    
+    public ImportOperationStatusBuilder errors(@Nullable final java.util.List<com.commercetools.importapi.models.errors.ErrorObject> errors) {
         this.errors = errors;
         return this;
     }
-
+    
     /**
      *  <p>The validation errors for the ImportOperation. See Errors.</p>
      * @param errors value to be set
      * @return Builder
      */
-
-    public ImportOperationStatusBuilder plusErrors(
-            @Nullable final com.commercetools.importapi.models.errors.ErrorObject... errors) {
+    
+    public ImportOperationStatusBuilder plusErrors(@Nullable final com.commercetools.importapi.models.errors.ErrorObject ...errors) {
         if (this.errors == null) {
             this.errors = new ArrayList<>();
         }
         this.errors.addAll(Arrays.asList(errors));
         return this;
     }
-
+    
+    
     /**
      *  <p>The validation errors for the ImportOperation. See Errors.</p>
      * @param builder function to build the errors value
      * @return Builder
      */
-
-    public ImportOperationStatusBuilder plusErrors(
-            Function<com.commercetools.importapi.models.errors.ErrorObjectBuilder, Builder<? extends com.commercetools.importapi.models.errors.ErrorObject>> builder) {
+    
+    public ImportOperationStatusBuilder plusErrors(Function<com.commercetools.importapi.models.errors.ErrorObjectBuilder, Builder<? extends com.commercetools.importapi.models.errors.ErrorObject>> builder) {
         if (this.errors == null) {
             this.errors = new ArrayList<>();
         }
         this.errors.add(builder.apply(com.commercetools.importapi.models.errors.ErrorObjectBuilder.of()).build());
         return this;
     }
-
+    
     /**
      *  <p>The validation errors for the ImportOperation. See Errors.</p>
      * @param builder function to build the errors value
      * @return Builder
      */
-
-    public ImportOperationStatusBuilder withErrors(
-            Function<com.commercetools.importapi.models.errors.ErrorObjectBuilder, Builder<? extends com.commercetools.importapi.models.errors.ErrorObject>> builder) {
+    
+    public ImportOperationStatusBuilder withErrors(Function<com.commercetools.importapi.models.errors.ErrorObjectBuilder, Builder<? extends com.commercetools.importapi.models.errors.ErrorObject>> builder) {
         this.errors = new ArrayList<>();
         this.errors.add(builder.apply(com.commercetools.importapi.models.errors.ErrorObjectBuilder.of()).build());
         return this;
     }
+                    
+    
 
     /**
      *  <p>The ID of the ImportOperation.</p>
      * @return operationId
      */
-
+    
     @Nullable
-    public String getOperationId() {
+    public String getOperationId(){
         return this.operationId;
     }
-
+    
     /**
      *  <p>The validation state of the ImportOperation.</p>
      * @return state
      */
-
-    public com.commercetools.importapi.models.importoperations.ImportOperationState getState() {
+    
+    
+    public com.commercetools.importapi.models.importoperations.ImportOperationState getState(){
         return this.state;
     }
-
+    
     /**
      *  <p>The validation errors for the ImportOperation. See Errors.</p>
      * @return errors
      */
-
+    
     @Nullable
-    public java.util.List<com.commercetools.importapi.models.errors.ErrorObject> getErrors() {
+    public java.util.List<com.commercetools.importapi.models.errors.ErrorObject> getErrors(){
         return this.errors;
     }
 
@@ -159,7 +171,7 @@ public class ImportOperationStatusBuilder implements Builder<ImportOperationStat
         Objects.requireNonNull(state, ImportOperationStatus.class + ": state is missing");
         return new ImportOperationStatusImpl(operationId, state, errors);
     }
-
+    
     /**
      * builds ImportOperationStatus without checking for non-null required values
      * @return ImportOperationStatus
@@ -170,7 +182,7 @@ public class ImportOperationStatusBuilder implements Builder<ImportOperationStat
 
     /**
      * factory method for an instance of ImportOperationStatusBuilder
-     * @return builder
+     * @return builder 
      */
     public static ImportOperationStatusBuilder of() {
         return new ImportOperationStatusBuilder();

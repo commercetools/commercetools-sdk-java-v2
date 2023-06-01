@@ -1,10 +1,11 @@
-
 package com.commercetools.api.models.customer;
 
-import java.util.*;
 
+import com.commercetools.api.models.customer.CustomerResetPassword;
 import javax.annotation.Nullable;
-
+import java.util.*;
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -19,76 +20,95 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .newPassword("{newPassword}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class CustomerResetPasswordBuilder implements Builder<CustomerResetPassword> {
 
+    
+    
     private String tokenValue;
-
+    
+    
+    
     private String newPassword;
-
+    
+    
     @Nullable
     private Long version;
 
+    
     /**
      *  <p>Value of the token to reset the Customer password.</p>
      * @param tokenValue value to be set
      * @return Builder
      */
-
-    public CustomerResetPasswordBuilder tokenValue(final String tokenValue) {
+    
+    public CustomerResetPasswordBuilder tokenValue( final String tokenValue) {
         this.tokenValue = tokenValue;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>New password to be set.</p>
      * @param newPassword value to be set
      * @return Builder
      */
-
-    public CustomerResetPasswordBuilder newPassword(final String newPassword) {
+    
+    public CustomerResetPasswordBuilder newPassword( final String newPassword) {
         this.newPassword = newPassword;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Expected version of the Customer.</p>
      * @param version value to be set
      * @return Builder
      */
-
+    
     public CustomerResetPasswordBuilder version(@Nullable final Long version) {
         this.version = version;
         return this;
     }
+    
+    
 
     /**
      *  <p>Value of the token to reset the Customer password.</p>
      * @return tokenValue
      */
-
-    public String getTokenValue() {
+    
+    
+    public String getTokenValue(){
         return this.tokenValue;
     }
-
+    
     /**
      *  <p>New password to be set.</p>
      * @return newPassword
      */
-
-    public String getNewPassword() {
+    
+    
+    public String getNewPassword(){
         return this.newPassword;
     }
-
+    
     /**
      *  <p>Expected version of the Customer.</p>
      * @return version
      */
-
+    
     @Nullable
-    public Long getVersion() {
+    public Long getVersion(){
         return this.version;
     }
 
@@ -101,7 +121,7 @@ public class CustomerResetPasswordBuilder implements Builder<CustomerResetPasswo
         Objects.requireNonNull(newPassword, CustomerResetPassword.class + ": newPassword is missing");
         return new CustomerResetPasswordImpl(tokenValue, newPassword, version);
     }
-
+    
     /**
      * builds CustomerResetPassword without checking for non-null required values
      * @return CustomerResetPassword
@@ -112,7 +132,7 @@ public class CustomerResetPasswordBuilder implements Builder<CustomerResetPasswo
 
     /**
      * factory method for an instance of CustomerResetPasswordBuilder
-     * @return builder
+     * @return builder 
      */
     public static CustomerResetPasswordBuilder of() {
         return new CustomerResetPasswordBuilder();

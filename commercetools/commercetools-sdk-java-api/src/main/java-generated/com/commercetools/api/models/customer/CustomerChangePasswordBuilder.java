@@ -1,8 +1,11 @@
-
 package com.commercetools.api.models.customer;
 
-import java.util.*;
 
+import com.commercetools.api.models.customer.CustomerChangePassword;
+import javax.annotation.Nullable;
+import java.util.*;
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -19,98 +22,125 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .newPassword("{newPassword}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class CustomerChangePasswordBuilder implements Builder<CustomerChangePassword> {
 
+    
+    
     private String id;
-
+    
+    
+    
     private Long version;
-
+    
+    
+    
     private String currentPassword;
-
+    
+    
+    
     private String newPassword;
 
+    
     /**
      *  <p>Unique identifier of the Customer.</p>
      * @param id value to be set
      * @return Builder
      */
-
-    public CustomerChangePasswordBuilder id(final String id) {
+    
+    public CustomerChangePasswordBuilder id( final String id) {
         this.id = id;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Expected version of the Customer on which the changes should be applied.</p>
      * @param version value to be set
      * @return Builder
      */
-
-    public CustomerChangePasswordBuilder version(final Long version) {
+    
+    public CustomerChangePasswordBuilder version( final Long version) {
         this.version = version;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Current password of the Customer.</p>
      *  <p>If the current password does not match, an InvalidCurrentPassword error is returned.</p>
      * @param currentPassword value to be set
      * @return Builder
      */
-
-    public CustomerChangePasswordBuilder currentPassword(final String currentPassword) {
+    
+    public CustomerChangePasswordBuilder currentPassword( final String currentPassword) {
         this.currentPassword = currentPassword;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>New password to be set.</p>
      * @param newPassword value to be set
      * @return Builder
      */
-
-    public CustomerChangePasswordBuilder newPassword(final String newPassword) {
+    
+    public CustomerChangePasswordBuilder newPassword( final String newPassword) {
         this.newPassword = newPassword;
         return this;
     }
+    
+    
 
     /**
      *  <p>Unique identifier of the Customer.</p>
      * @return id
      */
-
-    public String getId() {
+    
+    
+    public String getId(){
         return this.id;
     }
-
+    
     /**
      *  <p>Expected version of the Customer on which the changes should be applied.</p>
      * @return version
      */
-
-    public Long getVersion() {
+    
+    
+    public Long getVersion(){
         return this.version;
     }
-
+    
     /**
      *  <p>Current password of the Customer.</p>
      *  <p>If the current password does not match, an InvalidCurrentPassword error is returned.</p>
      * @return currentPassword
      */
-
-    public String getCurrentPassword() {
+    
+    
+    public String getCurrentPassword(){
         return this.currentPassword;
     }
-
+    
     /**
      *  <p>New password to be set.</p>
      * @return newPassword
      */
-
-    public String getNewPassword() {
+    
+    
+    public String getNewPassword(){
         return this.newPassword;
     }
 
@@ -125,7 +155,7 @@ public class CustomerChangePasswordBuilder implements Builder<CustomerChangePass
         Objects.requireNonNull(newPassword, CustomerChangePassword.class + ": newPassword is missing");
         return new CustomerChangePasswordImpl(id, version, currentPassword, newPassword);
     }
-
+    
     /**
      * builds CustomerChangePassword without checking for non-null required values
      * @return CustomerChangePassword
@@ -136,7 +166,7 @@ public class CustomerChangePasswordBuilder implements Builder<CustomerChangePass
 
     /**
      * factory method for an instance of CustomerChangePasswordBuilder
-     * @return builder
+     * @return builder 
      */
     public static CustomerChangePasswordBuilder of() {
         return new CustomerChangePasswordBuilder();

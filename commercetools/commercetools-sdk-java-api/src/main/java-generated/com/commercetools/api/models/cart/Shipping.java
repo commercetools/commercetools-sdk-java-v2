@@ -1,20 +1,23 @@
-
 package com.commercetools.api.models.cart;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
+import com.commercetools.api.models.cart.ShippingInfo;
+import com.commercetools.api.models.cart.ShippingRateInput;
 import com.commercetools.api.models.common.Address;
 import com.commercetools.api.models.type.CustomFields;
+import com.commercetools.api.models.cart.ShippingImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * Shipping
@@ -29,11 +32,15 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .shippingAddress(shippingAddressBuilder -> shippingAddressBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = ShippingImpl.class)
-public interface Shipping {
+public interface Shipping  {
+
 
     /**
      *  <p>User-defined unique identifier of the Shipping in a Cart with <code>Multiple</code> ShippingMode.</p>
@@ -42,7 +49,6 @@ public interface Shipping {
     @NotNull
     @JsonProperty("shippingKey")
     public String getShippingKey();
-
     /**
      *  <p>Automatically set when the Shipping Method is added.</p>
      * @return shippingInfo
@@ -51,7 +57,6 @@ public interface Shipping {
     @Valid
     @JsonProperty("shippingInfo")
     public ShippingInfo getShippingInfo();
-
     /**
      *  <p>Determines the shipping rates and Tax Rates of associated Line Items.</p>
      * @return shippingAddress
@@ -60,7 +65,6 @@ public interface Shipping {
     @Valid
     @JsonProperty("shippingAddress")
     public Address getShippingAddress();
-
     /**
      *  <p>Used as an input to select a ShippingRatePriceTier. The data type of this field depends on the <code>shippingRateInputType.type</code> configured in the Project:</p>
      *  <ul>
@@ -73,7 +77,6 @@ public interface Shipping {
     @Valid
     @JsonProperty("shippingRateInput")
     public ShippingRateInput getShippingRateInput();
-
     /**
      *  <p>Custom Fields of Shipping with <code>Multiple</code> ShippingMode.</p>
      * @return shippingCustomFields
@@ -86,23 +89,26 @@ public interface Shipping {
      *  <p>User-defined unique identifier of the Shipping in a Cart with <code>Multiple</code> ShippingMode.</p>
      * @param shippingKey value to be set
      */
-
+    
     public void setShippingKey(final String shippingKey);
-
+    
+    
     /**
      *  <p>Automatically set when the Shipping Method is added.</p>
      * @param shippingInfo value to be set
      */
-
+    
     public void setShippingInfo(final ShippingInfo shippingInfo);
-
+    
+    
     /**
      *  <p>Determines the shipping rates and Tax Rates of associated Line Items.</p>
      * @param shippingAddress value to be set
      */
-
+    
     public void setShippingAddress(final Address shippingAddress);
-
+    
+    
     /**
      *  <p>Used as an input to select a ShippingRatePriceTier. The data type of this field depends on the <code>shippingRateInputType.type</code> configured in the Project:</p>
      *  <ul>
@@ -112,23 +118,26 @@ public interface Shipping {
      *  </ul>
      * @param shippingRateInput value to be set
      */
-
+    
     public void setShippingRateInput(final ShippingRateInput shippingRateInput);
-
+    
+    
     /**
      *  <p>Custom Fields of Shipping with <code>Multiple</code> ShippingMode.</p>
      * @param shippingCustomFields value to be set
      */
-
+    
     public void setShippingCustomFields(final CustomFields shippingCustomFields);
+    
 
     /**
      * factory method
      * @return instance of Shipping
      */
-    public static Shipping of() {
+    public static Shipping of(){
         return new ShippingImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy Shipping
@@ -158,12 +167,9 @@ public interface Shipping {
         ShippingImpl instance = new ShippingImpl();
         instance.setShippingKey(template.getShippingKey());
         instance.setShippingInfo(com.commercetools.api.models.cart.ShippingInfo.deepCopy(template.getShippingInfo()));
-        instance.setShippingAddress(
-            com.commercetools.api.models.common.Address.deepCopy(template.getShippingAddress()));
-        instance.setShippingRateInput(
-            com.commercetools.api.models.cart.ShippingRateInput.deepCopy(template.getShippingRateInput()));
-        instance.setShippingCustomFields(
-            com.commercetools.api.models.type.CustomFields.deepCopy(template.getShippingCustomFields()));
+        instance.setShippingAddress(com.commercetools.api.models.common.Address.deepCopy(template.getShippingAddress()));
+        instance.setShippingRateInput(com.commercetools.api.models.cart.ShippingRateInput.deepCopy(template.getShippingRateInput()));
+        instance.setShippingCustomFields(com.commercetools.api.models.type.CustomFields.deepCopy(template.getShippingCustomFields()));
         return instance;
     }
 
@@ -174,7 +180,7 @@ public interface Shipping {
     public static ShippingBuilder builder() {
         return ShippingBuilder.of();
     }
-
+    
     /**
      * create builder for Shipping instance
      * @param template instance with prefilled values for the builder
@@ -183,6 +189,7 @@ public interface Shipping {
     public static ShippingBuilder builder(final Shipping template) {
         return ShippingBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -193,7 +200,7 @@ public interface Shipping {
     default <T> T withShipping(Function<Shipping, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

@@ -1,18 +1,21 @@
-
 package com.commercetools.importapi.models.common;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
+import com.commercetools.importapi.models.common.ProductDiscountKeyReference;
+import com.commercetools.importapi.models.common.TypedMoney;
+import com.commercetools.importapi.models.common.DiscountedPriceImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * DiscountedPrice
@@ -26,11 +29,15 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .discount(discountBuilder -> discountBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = DiscountedPriceImpl.class)
-public interface DiscountedPrice {
+public interface DiscountedPrice  {
+
 
     /**
      *
@@ -40,7 +47,6 @@ public interface DiscountedPrice {
     @Valid
     @JsonProperty("value")
     public TypedMoney getValue();
-
     /**
      *  <p>Reference to a ProductDiscount.</p>
      * @return discount
@@ -54,23 +60,26 @@ public interface DiscountedPrice {
      * set value
      * @param value value to be set
      */
-
+    
     public void setValue(final TypedMoney value);
-
+    
+    
     /**
      *  <p>Reference to a ProductDiscount.</p>
      * @param discount value to be set
      */
-
+    
     public void setDiscount(final ProductDiscountKeyReference discount);
+    
 
     /**
      * factory method
      * @return instance of DiscountedPrice
      */
-    public static DiscountedPrice of() {
+    public static DiscountedPrice of(){
         return new DiscountedPriceImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy DiscountedPrice
@@ -96,8 +105,7 @@ public interface DiscountedPrice {
         }
         DiscountedPriceImpl instance = new DiscountedPriceImpl();
         instance.setValue(com.commercetools.importapi.models.common.TypedMoney.deepCopy(template.getValue()));
-        instance.setDiscount(
-            com.commercetools.importapi.models.common.ProductDiscountKeyReference.deepCopy(template.getDiscount()));
+        instance.setDiscount(com.commercetools.importapi.models.common.ProductDiscountKeyReference.deepCopy(template.getDiscount()));
         return instance;
     }
 
@@ -108,7 +116,7 @@ public interface DiscountedPrice {
     public static DiscountedPriceBuilder builder() {
         return DiscountedPriceBuilder.of();
     }
-
+    
     /**
      * create builder for DiscountedPrice instance
      * @param template instance with prefilled values for the builder
@@ -117,6 +125,7 @@ public interface DiscountedPrice {
     public static DiscountedPriceBuilder builder(final DiscountedPrice template) {
         return DiscountedPriceBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -127,7 +136,7 @@ public interface DiscountedPrice {
     default <T> T withDiscountedPrice(Function<DiscountedPrice, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

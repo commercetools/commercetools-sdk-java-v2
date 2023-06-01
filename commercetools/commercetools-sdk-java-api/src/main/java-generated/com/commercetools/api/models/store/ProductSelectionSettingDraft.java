@@ -1,19 +1,20 @@
-
 package com.commercetools.api.models.store;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
 import com.commercetools.api.models.product_selection.ProductSelectionResourceIdentifier;
+import com.commercetools.api.models.store.ProductSelectionSettingDraftImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * ProductSelectionSettingDraft
@@ -26,11 +27,15 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .productSelection(productSelectionBuilder -> productSelectionBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = ProductSelectionSettingDraftImpl.class)
 public interface ProductSelectionSettingDraft extends io.vrap.rmf.base.client.Draft<ProductSelectionSettingDraft> {
+
 
     /**
      *  <p>Resource Identifier of a ProductSelection.</p>
@@ -40,12 +45,11 @@ public interface ProductSelectionSettingDraft extends io.vrap.rmf.base.client.Dr
     @Valid
     @JsonProperty("productSelection")
     public ProductSelectionResourceIdentifier getProductSelection();
-
     /**
      *  <p>Set to <code>true</code> if all Products assigned to the Product Selection should become part of the Store's assortment.</p>
      * @return active
      */
-
+    
     @JsonProperty("active")
     public Boolean getActive();
 
@@ -53,23 +57,26 @@ public interface ProductSelectionSettingDraft extends io.vrap.rmf.base.client.Dr
      *  <p>Resource Identifier of a ProductSelection.</p>
      * @param productSelection value to be set
      */
-
+    
     public void setProductSelection(final ProductSelectionResourceIdentifier productSelection);
-
+    
+    
     /**
      *  <p>Set to <code>true</code> if all Products assigned to the Product Selection should become part of the Store's assortment.</p>
      * @param active value to be set
      */
-
+    
     public void setActive(final Boolean active);
+    
 
     /**
      * factory method
      * @return instance of ProductSelectionSettingDraft
      */
-    public static ProductSelectionSettingDraft of() {
+    public static ProductSelectionSettingDraft of(){
         return new ProductSelectionSettingDraftImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy ProductSelectionSettingDraft
@@ -94,8 +101,7 @@ public interface ProductSelectionSettingDraft extends io.vrap.rmf.base.client.Dr
             return null;
         }
         ProductSelectionSettingDraftImpl instance = new ProductSelectionSettingDraftImpl();
-        instance.setProductSelection(com.commercetools.api.models.product_selection.ProductSelectionResourceIdentifier
-                .deepCopy(template.getProductSelection()));
+        instance.setProductSelection(com.commercetools.api.models.product_selection.ProductSelectionResourceIdentifier.deepCopy(template.getProductSelection()));
         instance.setActive(template.getActive());
         return instance;
     }
@@ -107,7 +113,7 @@ public interface ProductSelectionSettingDraft extends io.vrap.rmf.base.client.Dr
     public static ProductSelectionSettingDraftBuilder builder() {
         return ProductSelectionSettingDraftBuilder.of();
     }
-
+    
     /**
      * create builder for ProductSelectionSettingDraft instance
      * @param template instance with prefilled values for the builder
@@ -116,6 +122,7 @@ public interface ProductSelectionSettingDraft extends io.vrap.rmf.base.client.Dr
     public static ProductSelectionSettingDraftBuilder builder(final ProductSelectionSettingDraft template) {
         return ProductSelectionSettingDraftBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -126,7 +133,7 @@ public interface ProductSelectionSettingDraft extends io.vrap.rmf.base.client.Dr
     default <T> T withProductSelectionSettingDraft(Function<ProductSelectionSettingDraft, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

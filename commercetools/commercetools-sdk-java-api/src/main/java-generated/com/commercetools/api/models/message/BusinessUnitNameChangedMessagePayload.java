@@ -1,17 +1,20 @@
-
 package com.commercetools.api.models.message;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
+import com.commercetools.api.models.message.MessagePayload;
+import com.commercetools.api.models.message.BusinessUnitNameChangedMessagePayloadImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Generated after a successful Change Name update action.</p>
@@ -24,9 +27,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .name("{name}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = BusinessUnitNameChangedMessagePayloadImpl.class)
 public interface BusinessUnitNameChangedMessagePayload extends MessagePayload {
 
@@ -47,16 +53,18 @@ public interface BusinessUnitNameChangedMessagePayload extends MessagePayload {
      *  <p>Updated name of the Business Unit.</p>
      * @param name value to be set
      */
-
+    
     public void setName(final String name);
+    
 
     /**
      * factory method
      * @return instance of BusinessUnitNameChangedMessagePayload
      */
-    public static BusinessUnitNameChangedMessagePayload of() {
+    public static BusinessUnitNameChangedMessagePayload of(){
         return new BusinessUnitNameChangedMessagePayloadImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy BusinessUnitNameChangedMessagePayload
@@ -75,8 +83,7 @@ public interface BusinessUnitNameChangedMessagePayload extends MessagePayload {
      * @return copy instance
      */
     @Nullable
-    public static BusinessUnitNameChangedMessagePayload deepCopy(
-            @Nullable final BusinessUnitNameChangedMessagePayload template) {
+    public static BusinessUnitNameChangedMessagePayload deepCopy(@Nullable final BusinessUnitNameChangedMessagePayload template) {
         if (template == null) {
             return null;
         }
@@ -92,16 +99,16 @@ public interface BusinessUnitNameChangedMessagePayload extends MessagePayload {
     public static BusinessUnitNameChangedMessagePayloadBuilder builder() {
         return BusinessUnitNameChangedMessagePayloadBuilder.of();
     }
-
+    
     /**
      * create builder for BusinessUnitNameChangedMessagePayload instance
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static BusinessUnitNameChangedMessagePayloadBuilder builder(
-            final BusinessUnitNameChangedMessagePayload template) {
+    public static BusinessUnitNameChangedMessagePayloadBuilder builder(final BusinessUnitNameChangedMessagePayload template) {
         return BusinessUnitNameChangedMessagePayloadBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -112,7 +119,7 @@ public interface BusinessUnitNameChangedMessagePayload extends MessagePayload {
     default <T> T withBusinessUnitNameChangedMessagePayload(Function<BusinessUnitNameChangedMessagePayload, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

@@ -1,11 +1,12 @@
-
 package com.commercetools.api.models.message;
 
+import com.commercetools.api.models.common.LocalizedString;
+import com.commercetools.api.models.message.MessagePayload;
+import com.commercetools.api.models.message.StoreNameSetMessagePayload;
+import javax.annotation.Nullable;
 import java.util.*;
 import java.util.function.Function;
-
-import javax.annotation.Nullable;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -18,159 +19,160 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     StoreNameSetMessagePayload storeNameSetMessagePayload = StoreNameSetMessagePayload.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class StoreNameSetMessagePayloadBuilder implements Builder<StoreNameSetMessagePayload> {
 
+    
     @Nullable
     private com.commercetools.api.models.common.LocalizedString name;
-
+    
+    
     @Nullable
     private java.util.List<com.commercetools.api.models.common.LocalizedString> nameAllLocales;
 
+    
     /**
      *  <p>Name of the Store set during the Set Name update action.</p>
      * @param builder function to build the name value
      * @return Builder
      */
-
-    public StoreNameSetMessagePayloadBuilder name(
-            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
+    
+    public StoreNameSetMessagePayloadBuilder name(Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
         this.name = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of()).build();
         return this;
     }
-
+    
     /**
      *  <p>Name of the Store set during the Set Name update action.</p>
      * @param builder function to build the name value
      * @return Builder
      */
-
-    public StoreNameSetMessagePayloadBuilder withName(
-            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedString> builder) {
+    
+    public StoreNameSetMessagePayloadBuilder withName(Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedString> builder) {
         this.name = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of());
         return this;
     }
-
+                    
     /**
      *  <p>Name of the Store set during the Set Name update action.</p>
      * @param name value to be set
      * @return Builder
      */
-
-    public StoreNameSetMessagePayloadBuilder name(
-            @Nullable final com.commercetools.api.models.common.LocalizedString name) {
+    
+    public StoreNameSetMessagePayloadBuilder name(@Nullable final com.commercetools.api.models.common.LocalizedString name) {
         this.name = name;
         return this;
     }
-
+    
+    
+    
     /**
      *  <p>Names set for the Store in different locales.</p>
      * @param nameAllLocales value to be set
      * @return Builder
      */
-
-    public StoreNameSetMessagePayloadBuilder nameAllLocales(
-            @Nullable final com.commercetools.api.models.common.LocalizedString... nameAllLocales) {
+    
+    public StoreNameSetMessagePayloadBuilder nameAllLocales(@Nullable final com.commercetools.api.models.common.LocalizedString ...nameAllLocales) {
         this.nameAllLocales = new ArrayList<>(Arrays.asList(nameAllLocales));
         return this;
     }
-
+    
     /**
      *  <p>Names set for the Store in different locales.</p>
      * @param nameAllLocales value to be set
      * @return Builder
      */
-
-    public StoreNameSetMessagePayloadBuilder nameAllLocales(
-            @Nullable final java.util.List<com.commercetools.api.models.common.LocalizedString> nameAllLocales) {
+    
+    public StoreNameSetMessagePayloadBuilder nameAllLocales(@Nullable final java.util.List<com.commercetools.api.models.common.LocalizedString> nameAllLocales) {
         this.nameAllLocales = nameAllLocales;
         return this;
     }
-
+    
     /**
      *  <p>Names set for the Store in different locales.</p>
      * @param nameAllLocales value to be set
      * @return Builder
      */
-
-    public StoreNameSetMessagePayloadBuilder plusNameAllLocales(
-            @Nullable final com.commercetools.api.models.common.LocalizedString... nameAllLocales) {
+    
+    public StoreNameSetMessagePayloadBuilder plusNameAllLocales(@Nullable final com.commercetools.api.models.common.LocalizedString ...nameAllLocales) {
         if (this.nameAllLocales == null) {
             this.nameAllLocales = new ArrayList<>();
         }
         this.nameAllLocales.addAll(Arrays.asList(nameAllLocales));
         return this;
     }
-
+    
+    
+    
     /**
      *  <p>Names set for the Store in different locales.</p>
      * @param builder function to build the nameAllLocales value
      * @return Builder
      */
-
-    public StoreNameSetMessagePayloadBuilder plusNameAllLocales(
-            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
+    
+    public StoreNameSetMessagePayloadBuilder plusNameAllLocales(Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
         if (this.nameAllLocales == null) {
             this.nameAllLocales = new ArrayList<>();
         }
         this.nameAllLocales.add(builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of()).build());
         return this;
     }
-
+    
     /**
      *  <p>Names set for the Store in different locales.</p>
      * @param builder function to build the nameAllLocales value
      * @return Builder
      */
-
-    public StoreNameSetMessagePayloadBuilder withNameAllLocales(
-            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
+    
+    public StoreNameSetMessagePayloadBuilder withNameAllLocales(Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
         this.nameAllLocales = new ArrayList<>();
         this.nameAllLocales.add(builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of()).build());
         return this;
     }
-
+    
     /**
      *  <p>Names set for the Store in different locales.</p>
      * @param builder function to build the nameAllLocales value
      * @return Builder
      */
-
-    public StoreNameSetMessagePayloadBuilder addNameAllLocales(
-            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedString> builder) {
+    
+    public StoreNameSetMessagePayloadBuilder addNameAllLocales(Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedString> builder) {
         return plusNameAllLocales(builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of()));
     }
-
+    
     /**
      *  <p>Names set for the Store in different locales.</p>
      * @param builder function to build the nameAllLocales value
      * @return Builder
      */
-
-    public StoreNameSetMessagePayloadBuilder setNameAllLocales(
-            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedString> builder) {
+    
+    public StoreNameSetMessagePayloadBuilder setNameAllLocales(Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedString> builder) {
         return nameAllLocales(builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of()));
     }
+                    
 
     /**
      *  <p>Name of the Store set during the Set Name update action.</p>
      * @return name
      */
-
+    
     @Nullable
-    public com.commercetools.api.models.common.LocalizedString getName() {
+    public com.commercetools.api.models.common.LocalizedString getName(){
         return this.name;
     }
-
+    
     /**
      *  <p>Names set for the Store in different locales.</p>
      * @return nameAllLocales
      */
-
+    
     @Nullable
-    public java.util.List<com.commercetools.api.models.common.LocalizedString> getNameAllLocales() {
+    public java.util.List<com.commercetools.api.models.common.LocalizedString> getNameAllLocales(){
         return this.nameAllLocales;
     }
 
@@ -181,7 +183,7 @@ public class StoreNameSetMessagePayloadBuilder implements Builder<StoreNameSetMe
     public StoreNameSetMessagePayload build() {
         return new StoreNameSetMessagePayloadImpl(name, nameAllLocales);
     }
-
+    
     /**
      * builds StoreNameSetMessagePayload without checking for non-null required values
      * @return StoreNameSetMessagePayload
@@ -192,7 +194,7 @@ public class StoreNameSetMessagePayloadBuilder implements Builder<StoreNameSetMe
 
     /**
      * factory method for an instance of StoreNameSetMessagePayloadBuilder
-     * @return builder
+     * @return builder 
      */
     public static StoreNameSetMessagePayloadBuilder of() {
         return new StoreNameSetMessagePayloadBuilder();

@@ -1,18 +1,21 @@
-
 package com.commercetools.importapi.models.productvariants;
 
-import java.time.*;
+import com.commercetools.importapi.models.productvariants.Attribute;
 import java.time.LocalDate;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
+import com.commercetools.importapi.models.productvariants.DateSetAttributeImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>This type represents an attribute whose value is a set of dates.</p>
@@ -25,9 +28,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .plusValue(valueBuilder -> valueBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = DateSetAttributeImpl.class)
 public interface DateSetAttribute extends Attribute {
 
@@ -48,24 +54,24 @@ public interface DateSetAttribute extends Attribute {
      * set value
      * @param value values to be set
      */
-
+    
     @JsonIgnore
-    public void setValue(final LocalDate... value);
-
+    public void setValue(final LocalDate ...value);
     /**
      * set value
      * @param value values to be set
      */
-
+    
     public void setValue(final List<LocalDate> value);
 
     /**
      * factory method
      * @return instance of DateSetAttribute
      */
-    public static DateSetAttribute of() {
+    public static DateSetAttribute of(){
         return new DateSetAttributeImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy DateSetAttribute
@@ -91,7 +97,9 @@ public interface DateSetAttribute extends Attribute {
         }
         DateSetAttributeImpl instance = new DateSetAttributeImpl();
         instance.setName(template.getName());
-        instance.setValue(Optional.ofNullable(template.getValue()).map(ArrayList::new).orElse(null));
+        instance.setValue(Optional.ofNullable(template.getValue())
+                .map(ArrayList::new)
+                .orElse(null));
         return instance;
     }
 
@@ -102,7 +110,7 @@ public interface DateSetAttribute extends Attribute {
     public static DateSetAttributeBuilder builder() {
         return DateSetAttributeBuilder.of();
     }
-
+    
     /**
      * create builder for DateSetAttribute instance
      * @param template instance with prefilled values for the builder
@@ -111,6 +119,7 @@ public interface DateSetAttribute extends Attribute {
     public static DateSetAttributeBuilder builder(final DateSetAttribute template) {
         return DateSetAttributeBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -121,7 +130,7 @@ public interface DateSetAttribute extends Attribute {
     default <T> T withDateSetAttribute(Function<DateSetAttribute, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

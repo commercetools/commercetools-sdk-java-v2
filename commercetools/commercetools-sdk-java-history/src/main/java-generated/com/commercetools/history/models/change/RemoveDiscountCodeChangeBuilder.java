@@ -1,9 +1,12 @@
-
 package com.commercetools.history.models.change;
 
+import com.commercetools.history.models.change.Change;
+import com.commercetools.history.models.common.DiscountCodeInfo;
+import com.commercetools.history.models.change.RemoveDiscountCodeChange;
+import javax.annotation.Nullable;
 import java.util.*;
 import java.util.function.Function;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -18,78 +21,89 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .previousValue(previousValueBuilder -> previousValueBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class RemoveDiscountCodeChangeBuilder implements Builder<RemoveDiscountCodeChange> {
 
+    
+    
     private String change;
-
+    
+    
+    
     private com.commercetools.history.models.common.DiscountCodeInfo previousValue;
 
+    
     /**
      *  <p>Update action for <code>removeDiscountCode</code></p>
      * @param change value to be set
      * @return Builder
      */
-
-    public RemoveDiscountCodeChangeBuilder change(final String change) {
+    
+    public RemoveDiscountCodeChangeBuilder change( final String change) {
         this.change = change;
         return this;
     }
-
+    
+    
+    
+    
     /**
      * set the value to the previousValue using the builder function
      * @param builder function to build the previousValue value
      * @return Builder
      */
-
-    public RemoveDiscountCodeChangeBuilder previousValue(
-            Function<com.commercetools.history.models.common.DiscountCodeInfoBuilder, com.commercetools.history.models.common.DiscountCodeInfoBuilder> builder) {
-        this.previousValue = builder.apply(com.commercetools.history.models.common.DiscountCodeInfoBuilder.of())
-                .build();
+    
+    public RemoveDiscountCodeChangeBuilder previousValue(Function<com.commercetools.history.models.common.DiscountCodeInfoBuilder, com.commercetools.history.models.common.DiscountCodeInfoBuilder> builder) {
+        this.previousValue = builder.apply(com.commercetools.history.models.common.DiscountCodeInfoBuilder.of()).build();
         return this;
     }
-
+    
     /**
      * set the value to the previousValue using the builder function
      * @param builder function to build the previousValue value
      * @return Builder
      */
-
-    public RemoveDiscountCodeChangeBuilder withPreviousValue(
-            Function<com.commercetools.history.models.common.DiscountCodeInfoBuilder, com.commercetools.history.models.common.DiscountCodeInfo> builder) {
+    
+    public RemoveDiscountCodeChangeBuilder withPreviousValue(Function<com.commercetools.history.models.common.DiscountCodeInfoBuilder, com.commercetools.history.models.common.DiscountCodeInfo> builder) {
         this.previousValue = builder.apply(com.commercetools.history.models.common.DiscountCodeInfoBuilder.of());
         return this;
     }
-
+                    
     /**
      * set the value to the previousValue
      * @param previousValue value to be set
      * @return Builder
      */
-
-    public RemoveDiscountCodeChangeBuilder previousValue(
-            final com.commercetools.history.models.common.DiscountCodeInfo previousValue) {
+    
+    public RemoveDiscountCodeChangeBuilder previousValue( final com.commercetools.history.models.common.DiscountCodeInfo previousValue) {
         this.previousValue = previousValue;
         return this;
     }
+    
+    
 
     /**
      *  <p>Update action for <code>removeDiscountCode</code></p>
      * @return change
      */
-
-    public String getChange() {
+    
+    
+    public String getChange(){
         return this.change;
     }
-
+    
     /**
      * value of previousValue}
      * @return previousValue
      */
-
-    public com.commercetools.history.models.common.DiscountCodeInfo getPreviousValue() {
+    
+    
+    public com.commercetools.history.models.common.DiscountCodeInfo getPreviousValue(){
         return this.previousValue;
     }
 
@@ -102,7 +116,7 @@ public class RemoveDiscountCodeChangeBuilder implements Builder<RemoveDiscountCo
         Objects.requireNonNull(previousValue, RemoveDiscountCodeChange.class + ": previousValue is missing");
         return new RemoveDiscountCodeChangeImpl(change, previousValue);
     }
-
+    
     /**
      * builds RemoveDiscountCodeChange without checking for non-null required values
      * @return RemoveDiscountCodeChange
@@ -113,7 +127,7 @@ public class RemoveDiscountCodeChangeBuilder implements Builder<RemoveDiscountCo
 
     /**
      * factory method for an instance of RemoveDiscountCodeChangeBuilder
-     * @return builder
+     * @return builder 
      */
     public static RemoveDiscountCodeChangeBuilder of() {
         return new RemoveDiscountCodeChangeBuilder();

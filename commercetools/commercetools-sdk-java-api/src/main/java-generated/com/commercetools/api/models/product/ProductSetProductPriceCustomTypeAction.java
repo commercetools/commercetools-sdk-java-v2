@@ -1,20 +1,22 @@
-
 package com.commercetools.api.models.product;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
+import com.commercetools.api.models.product.ProductUpdateAction;
 import com.commercetools.api.models.type.FieldContainer;
 import com.commercetools.api.models.type.TypeResourceIdentifier;
+import com.commercetools.api.models.product.ProductSetProductPriceCustomTypeActionImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * ProductSetProductPriceCustomTypeAction
@@ -27,9 +29,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .priceId("{priceId}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = ProductSetProductPriceCustomTypeActionImpl.class)
 public interface ProductSetProductPriceCustomTypeAction extends ProductUpdateAction {
 
@@ -45,15 +50,13 @@ public interface ProductSetProductPriceCustomTypeAction extends ProductUpdateAct
     @NotNull
     @JsonProperty("priceId")
     public String getPriceId();
-
     /**
      *  <p>If <code>true</code>, only the staged Embedded Price is updated. If <code>false</code>, both the current and staged Embedded Price is updated.</p>
      * @return staged
      */
-
+    
     @JsonProperty("staged")
     public Boolean getStaged();
-
     /**
      *  <p>Defines the Type that extends the Price with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Embedded Price.</p>
      * @return type
@@ -61,7 +64,6 @@ public interface ProductSetProductPriceCustomTypeAction extends ProductUpdateAct
     @Valid
     @JsonProperty("type")
     public TypeResourceIdentifier getType();
-
     /**
      *  <p>Sets the Custom Fields fields for the Embedded Price.</p>
      * @return fields
@@ -74,37 +76,42 @@ public interface ProductSetProductPriceCustomTypeAction extends ProductUpdateAct
      *  <p>The <code>id</code> of the Embedded Price to update.</p>
      * @param priceId value to be set
      */
-
+    
     public void setPriceId(final String priceId);
-
+    
+    
     /**
      *  <p>If <code>true</code>, only the staged Embedded Price is updated. If <code>false</code>, both the current and staged Embedded Price is updated.</p>
      * @param staged value to be set
      */
-
+    
     public void setStaged(final Boolean staged);
-
+    
+    
     /**
      *  <p>Defines the Type that extends the Price with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Embedded Price.</p>
      * @param type value to be set
      */
-
+    
     public void setType(final TypeResourceIdentifier type);
-
+    
+    
     /**
      *  <p>Sets the Custom Fields fields for the Embedded Price.</p>
      * @param fields value to be set
      */
-
+    
     public void setFields(final FieldContainer fields);
+    
 
     /**
      * factory method
      * @return instance of ProductSetProductPriceCustomTypeAction
      */
-    public static ProductSetProductPriceCustomTypeAction of() {
+    public static ProductSetProductPriceCustomTypeAction of(){
         return new ProductSetProductPriceCustomTypeActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy ProductSetProductPriceCustomTypeAction
@@ -126,8 +133,7 @@ public interface ProductSetProductPriceCustomTypeAction extends ProductUpdateAct
      * @return copy instance
      */
     @Nullable
-    public static ProductSetProductPriceCustomTypeAction deepCopy(
-            @Nullable final ProductSetProductPriceCustomTypeAction template) {
+    public static ProductSetProductPriceCustomTypeAction deepCopy(@Nullable final ProductSetProductPriceCustomTypeAction template) {
         if (template == null) {
             return null;
         }
@@ -146,16 +152,16 @@ public interface ProductSetProductPriceCustomTypeAction extends ProductUpdateAct
     public static ProductSetProductPriceCustomTypeActionBuilder builder() {
         return ProductSetProductPriceCustomTypeActionBuilder.of();
     }
-
+    
     /**
      * create builder for ProductSetProductPriceCustomTypeAction instance
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static ProductSetProductPriceCustomTypeActionBuilder builder(
-            final ProductSetProductPriceCustomTypeAction template) {
+    public static ProductSetProductPriceCustomTypeActionBuilder builder(final ProductSetProductPriceCustomTypeAction template) {
         return ProductSetProductPriceCustomTypeActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -163,11 +169,10 @@ public interface ProductSetProductPriceCustomTypeAction extends ProductUpdateAct
      * @param helper function to map the object
      * @return mapped value
      */
-    default <T> T withProductSetProductPriceCustomTypeAction(
-            Function<ProductSetProductPriceCustomTypeAction, T> helper) {
+    default <T> T withProductSetProductPriceCustomTypeAction(Function<ProductSetProductPriceCustomTypeAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

@@ -1,19 +1,20 @@
-
 package com.commercetools.history.models.change_value;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
 import com.commercetools.history.models.common.LocalizedString;
+import com.commercetools.history.models.change_value.SetCartClassificationShippingRateInputValueImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Shape of the cart classification shipping input rate value.</p>
@@ -28,11 +29,15 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .label(labelBuilder -> labelBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = SetCartClassificationShippingRateInputValueImpl.class)
-public interface SetCartClassificationShippingRateInputValue {
+public interface SetCartClassificationShippingRateInputValue  {
+
 
     /**
      *
@@ -41,7 +46,6 @@ public interface SetCartClassificationShippingRateInputValue {
     @NotNull
     @JsonProperty("type")
     public String getType();
-
     /**
      *
      * @return key
@@ -49,7 +53,6 @@ public interface SetCartClassificationShippingRateInputValue {
     @NotNull
     @JsonProperty("key")
     public String getKey();
-
     /**
      *
      * @return label
@@ -63,38 +66,41 @@ public interface SetCartClassificationShippingRateInputValue {
      * set type
      * @param type value to be set
      */
-
+    
     public void setType(final String type);
-
+    
+    
     /**
      * set key
      * @param key value to be set
      */
-
+    
     public void setKey(final String key);
-
+    
+    
     /**
      * set label
      * @param label value to be set
      */
-
+    
     public void setLabel(final LocalizedString label);
+    
 
     /**
      * factory method
      * @return instance of SetCartClassificationShippingRateInputValue
      */
-    public static SetCartClassificationShippingRateInputValue of() {
+    public static SetCartClassificationShippingRateInputValue of(){
         return new SetCartClassificationShippingRateInputValueImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy SetCartClassificationShippingRateInputValue
      * @param template instance to be copied
      * @return copy instance
      */
-    public static SetCartClassificationShippingRateInputValue of(
-            final SetCartClassificationShippingRateInputValue template) {
+    public static SetCartClassificationShippingRateInputValue of(final SetCartClassificationShippingRateInputValue template) {
         SetCartClassificationShippingRateInputValueImpl instance = new SetCartClassificationShippingRateInputValueImpl();
         instance.setType(template.getType());
         instance.setKey(template.getKey());
@@ -108,8 +114,7 @@ public interface SetCartClassificationShippingRateInputValue {
      * @return copy instance
      */
     @Nullable
-    public static SetCartClassificationShippingRateInputValue deepCopy(
-            @Nullable final SetCartClassificationShippingRateInputValue template) {
+    public static SetCartClassificationShippingRateInputValue deepCopy(@Nullable final SetCartClassificationShippingRateInputValue template) {
         if (template == null) {
             return null;
         }
@@ -127,16 +132,16 @@ public interface SetCartClassificationShippingRateInputValue {
     public static SetCartClassificationShippingRateInputValueBuilder builder() {
         return SetCartClassificationShippingRateInputValueBuilder.of();
     }
-
+    
     /**
      * create builder for SetCartClassificationShippingRateInputValue instance
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static SetCartClassificationShippingRateInputValueBuilder builder(
-            final SetCartClassificationShippingRateInputValue template) {
+    public static SetCartClassificationShippingRateInputValueBuilder builder(final SetCartClassificationShippingRateInputValue template) {
         return SetCartClassificationShippingRateInputValueBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -144,11 +149,10 @@ public interface SetCartClassificationShippingRateInputValue {
      * @param helper function to map the object
      * @return mapped value
      */
-    default <T> T withSetCartClassificationShippingRateInputValue(
-            Function<SetCartClassificationShippingRateInputValue, T> helper) {
+    default <T> T withSetCartClassificationShippingRateInputValue(Function<SetCartClassificationShippingRateInputValue, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

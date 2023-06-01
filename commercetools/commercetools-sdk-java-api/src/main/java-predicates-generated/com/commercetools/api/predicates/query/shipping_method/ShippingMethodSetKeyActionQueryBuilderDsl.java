@@ -1,9 +1,11 @@
-
 package com.commercetools.api.predicates.query.shipping_method;
 
 import com.commercetools.api.predicates.query.*;
 
-public class ShippingMethodSetKeyActionQueryBuilderDsl {
+import java.util.function.Function;
+
+
+public class ShippingMethodSetKeyActionQueryBuilderDsl  {
     public ShippingMethodSetKeyActionQueryBuilderDsl() {
     }
 
@@ -12,14 +14,12 @@ public class ShippingMethodSetKeyActionQueryBuilderDsl {
     }
 
     public StringComparisonPredicateBuilder<ShippingMethodSetKeyActionQueryBuilderDsl> action() {
-        return new StringComparisonPredicateBuilder<>(
-            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("action")),
-            p -> new CombinationQueryPredicate<>(p, ShippingMethodSetKeyActionQueryBuilderDsl::of));
+        return new StringComparisonPredicateBuilder<>(BinaryQueryPredicate.of().left(new ConstantQueryPredicate("action")),
+        p -> new CombinationQueryPredicate<>(p, ShippingMethodSetKeyActionQueryBuilderDsl::of));
     }
-
     public StringComparisonPredicateBuilder<ShippingMethodSetKeyActionQueryBuilderDsl> key() {
         return new StringComparisonPredicateBuilder<>(BinaryQueryPredicate.of().left(new ConstantQueryPredicate("key")),
-            p -> new CombinationQueryPredicate<>(p, ShippingMethodSetKeyActionQueryBuilderDsl::of));
+        p -> new CombinationQueryPredicate<>(p, ShippingMethodSetKeyActionQueryBuilderDsl::of));
     }
-
+    
 }

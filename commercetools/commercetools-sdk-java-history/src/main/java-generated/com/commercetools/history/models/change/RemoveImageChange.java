@@ -1,20 +1,21 @@
-
 package com.commercetools.history.models.change;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-import java.util.stream.Collectors;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
+import com.commercetools.history.models.change.Change;
 import com.commercetools.history.models.common.Image;
+import com.commercetools.history.models.change.RemoveImageChangeImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * RemoveImageChange
@@ -30,9 +31,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .plusNextValue(nextValueBuilder -> nextValueBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = RemoveImageChangeImpl.class)
 public interface RemoveImageChange extends Change {
 
@@ -48,7 +52,6 @@ public interface RemoveImageChange extends Change {
     @NotNull
     @JsonProperty("type")
     public String getType();
-
     /**
      *  <p>Update actions for removing images</p>
      * @return change
@@ -56,7 +59,6 @@ public interface RemoveImageChange extends Change {
     @NotNull
     @JsonProperty("change")
     public String getChange();
-
     /**
      *
      * @return catalogData
@@ -64,7 +66,6 @@ public interface RemoveImageChange extends Change {
     @NotNull
     @JsonProperty("catalogData")
     public String getCatalogData();
-
     /**
      *
      * @return previousValue
@@ -73,7 +74,6 @@ public interface RemoveImageChange extends Change {
     @Valid
     @JsonProperty("previousValue")
     public List<Image> getPreviousValue();
-
     /**
      *
      * @return nextValue
@@ -87,53 +87,54 @@ public interface RemoveImageChange extends Change {
      *  <p>Update actions for removing images</p>
      * @param change value to be set
      */
-
+    
     public void setChange(final String change);
-
+    
+    
     /**
      * set catalogData
      * @param catalogData value to be set
      */
-
+    
     public void setCatalogData(final String catalogData);
-
+    
+    
     /**
      * set previousValue
      * @param previousValue values to be set
      */
-
+    
     @JsonIgnore
-    public void setPreviousValue(final Image... previousValue);
-
+    public void setPreviousValue(final Image ...previousValue);
     /**
      * set previousValue
      * @param previousValue values to be set
      */
-
+    
     public void setPreviousValue(final List<Image> previousValue);
-
+    
     /**
      * set nextValue
      * @param nextValue values to be set
      */
-
+    
     @JsonIgnore
-    public void setNextValue(final Image... nextValue);
-
+    public void setNextValue(final Image ...nextValue);
     /**
      * set nextValue
      * @param nextValue values to be set
      */
-
+    
     public void setNextValue(final List<Image> nextValue);
 
     /**
      * factory method
      * @return instance of RemoveImageChange
      */
-    public static RemoveImageChange of() {
+    public static RemoveImageChange of(){
         return new RemoveImageChangeImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy RemoveImageChange
@@ -163,14 +164,10 @@ public interface RemoveImageChange extends Change {
         instance.setChange(template.getChange());
         instance.setCatalogData(template.getCatalogData());
         instance.setPreviousValue(Optional.ofNullable(template.getPreviousValue())
-                .map(t -> t.stream()
-                        .map(com.commercetools.history.models.common.Image::deepCopy)
-                        .collect(Collectors.toList()))
+                .map(t -> t.stream().map(com.commercetools.history.models.common.Image::deepCopy).collect(Collectors.toList()))
                 .orElse(null));
         instance.setNextValue(Optional.ofNullable(template.getNextValue())
-                .map(t -> t.stream()
-                        .map(com.commercetools.history.models.common.Image::deepCopy)
-                        .collect(Collectors.toList()))
+                .map(t -> t.stream().map(com.commercetools.history.models.common.Image::deepCopy).collect(Collectors.toList()))
                 .orElse(null));
         return instance;
     }
@@ -182,7 +179,7 @@ public interface RemoveImageChange extends Change {
     public static RemoveImageChangeBuilder builder() {
         return RemoveImageChangeBuilder.of();
     }
-
+    
     /**
      * create builder for RemoveImageChange instance
      * @param template instance with prefilled values for the builder
@@ -191,6 +188,7 @@ public interface RemoveImageChange extends Change {
     public static RemoveImageChangeBuilder builder(final RemoveImageChange template) {
         return RemoveImageChangeBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -201,7 +199,7 @@ public interface RemoveImageChange extends Change {
     default <T> T withRemoveImageChange(Function<RemoveImageChange, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

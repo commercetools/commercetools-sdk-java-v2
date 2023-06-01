@@ -1,16 +1,20 @@
-
 package com.commercetools.api.models.error;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
+import com.commercetools.api.models.error.GraphQLErrorObject;
+import com.commercetools.api.models.error.GraphQLInvalidSubjectErrorImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * GraphQLInvalidSubjectError
@@ -22,9 +26,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     GraphQLInvalidSubjectError graphQLInvalidSubjectError = GraphQLInvalidSubjectError.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = GraphQLInvalidSubjectErrorImpl.class)
 public interface GraphQLInvalidSubjectError extends GraphQLErrorObject {
 
@@ -33,13 +40,16 @@ public interface GraphQLInvalidSubjectError extends GraphQLErrorObject {
      */
     String INVALID_SUBJECT = "InvalidSubject";
 
+
+
     /**
      * factory method
      * @return instance of GraphQLInvalidSubjectError
      */
-    public static GraphQLInvalidSubjectError of() {
+    public static GraphQLInvalidSubjectError of(){
         return new GraphQLInvalidSubjectErrorImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy GraphQLInvalidSubjectError
@@ -74,7 +84,7 @@ public interface GraphQLInvalidSubjectError extends GraphQLErrorObject {
     public static GraphQLInvalidSubjectErrorBuilder builder() {
         return GraphQLInvalidSubjectErrorBuilder.of();
     }
-
+    
     /**
      * create builder for GraphQLInvalidSubjectError instance
      * @param template instance with prefilled values for the builder
@@ -83,6 +93,7 @@ public interface GraphQLInvalidSubjectError extends GraphQLErrorObject {
     public static GraphQLInvalidSubjectErrorBuilder builder(final GraphQLInvalidSubjectError template) {
         return GraphQLInvalidSubjectErrorBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -93,7 +104,7 @@ public interface GraphQLInvalidSubjectError extends GraphQLErrorObject {
     default <T> T withGraphQLInvalidSubjectError(Function<GraphQLInvalidSubjectError, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

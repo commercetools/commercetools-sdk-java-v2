@@ -1,82 +1,83 @@
-
 package com.commercetools.api.models.type;
-
-import java.util.Arrays;
-import java.util.Optional;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-
+import java.lang.String;
+import java.util.Arrays;
+import java.util.Optional;
 import io.vrap.rmf.base.client.JsonEnum;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
  *  <p>Defines which resource type a CustomFieldReferenceType can reference.</p>
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public interface CustomFieldReferenceValue extends JsonEnum {
 
     /**
     	<p><a href="ctp:api:type:Cart">Cart</a></p>
-
+    	
     */
     CustomFieldReferenceValue CART = CustomFieldReferenceValueEnum.CART;
     /**
     	<p><a href="ctp:api:type:Category">Category</a></p>
-
+    	
     */
     CustomFieldReferenceValue CATEGORY = CustomFieldReferenceValueEnum.CATEGORY;
     /**
     	<p><a href="ctp:api:type:Channel">Channel</a></p>
-
+    	
     */
     CustomFieldReferenceValue CHANNEL = CustomFieldReferenceValueEnum.CHANNEL;
     /**
     	<p><a href="ctp:api:type:Customer">Customer</a></p>
-
+    	
     */
     CustomFieldReferenceValue CUSTOMER = CustomFieldReferenceValueEnum.CUSTOMER;
     /**
     	<p><a href="ctp:api:type:CustomObject">CustomObject</a></p>
-
+    	
     */
     CustomFieldReferenceValue KEY_VALUE_DOCUMENT = CustomFieldReferenceValueEnum.KEY_VALUE_DOCUMENT;
     /**
     	<p><a href="ctp:api:type:Order">Order</a></p>
-
+    	
     */
     CustomFieldReferenceValue ORDER = CustomFieldReferenceValueEnum.ORDER;
     /**
     	<p><a href="ctp:api:type:Product">Product</a></p>
-
+    	
     */
     CustomFieldReferenceValue PRODUCT = CustomFieldReferenceValueEnum.PRODUCT;
     /**
     	<p><a href="ctp:api:type:ProductType">ProductType</a></p>
-
+    	
     */
     CustomFieldReferenceValue PRODUCT_TYPE = CustomFieldReferenceValueEnum.PRODUCT_TYPE;
     /**
     	<p><a href="ctp:api:type:Review">Review</a></p>
-
+    	
     */
     CustomFieldReferenceValue REVIEW = CustomFieldReferenceValueEnum.REVIEW;
     /**
     	<p><a href="ctp:api:type:State">State</a></p>
-
+    	
     */
     CustomFieldReferenceValue STATE = CustomFieldReferenceValueEnum.STATE;
     /**
     	<p><a href="ctp:api:type:ShippingMethod">ShippingMethod</a></p>
-
+    	
     */
     CustomFieldReferenceValue SHIPPING_METHOD = CustomFieldReferenceValueEnum.SHIPPING_METHOD;
     /**
     	<p><a href="ctp:api:type:Zone">Zone</a></p>
-
+    	
     */
     CustomFieldReferenceValue ZONE = CustomFieldReferenceValueEnum.ZONE;
-
+    
     /**
      * possible values of CustomFieldReferenceValue
      */
@@ -85,57 +86,57 @@ public interface CustomFieldReferenceValue extends JsonEnum {
          * cart
          */
         CART("cart"),
-
+        
         /**
          * category
          */
         CATEGORY("category"),
-
+        
         /**
          * channel
          */
         CHANNEL("channel"),
-
+        
         /**
          * customer
          */
         CUSTOMER("customer"),
-
+        
         /**
          * key-value-document
          */
         KEY_VALUE_DOCUMENT("key-value-document"),
-
+        
         /**
          * order
          */
         ORDER("order"),
-
+        
         /**
          * product
          */
         PRODUCT("product"),
-
+        
         /**
          * product-type
          */
         PRODUCT_TYPE("product-type"),
-
+        
         /**
          * review
          */
         REVIEW("review"),
-
+        
         /**
          * state
          */
         STATE("state"),
-
+        
         /**
          * shipping-method
          */
         SHIPPING_METHOD("shipping-method"),
-
+        
         /**
          * zone
          */
@@ -192,7 +193,7 @@ public interface CustomFieldReferenceValue extends JsonEnum {
             public String name() {
                 return value.toUpperCase();
             }
-
+            
             public String toString() {
                 return value;
             }
@@ -207,7 +208,7 @@ public interface CustomFieldReferenceValue extends JsonEnum {
     public static Optional<CustomFieldReferenceValue> findEnumViaJsonName(String jsonName) {
         return Arrays.stream(values()).filter(t -> t.getJsonName().equals(jsonName)).findFirst();
     }
-
+    
     /**
      * possible enum values
      * @return array of possible enum values
@@ -215,5 +216,5 @@ public interface CustomFieldReferenceValue extends JsonEnum {
     public static CustomFieldReferenceValue[] values() {
         return CustomFieldReferenceValueEnum.values();
     }
-
+    
 }

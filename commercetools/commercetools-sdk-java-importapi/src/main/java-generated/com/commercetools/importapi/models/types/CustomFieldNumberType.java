@@ -1,16 +1,20 @@
-
 package com.commercetools.importapi.models.types;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
+import com.commercetools.importapi.models.types.FieldType;
+import com.commercetools.importapi.models.types.CustomFieldNumberTypeImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Field type for number values.</p>
@@ -22,9 +26,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     CustomFieldNumberType customFieldNumberType = CustomFieldNumberType.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = CustomFieldNumberTypeImpl.class)
 public interface CustomFieldNumberType extends FieldType {
 
@@ -33,13 +40,16 @@ public interface CustomFieldNumberType extends FieldType {
      */
     String NUMBER = "Number";
 
+
+
     /**
      * factory method
      * @return instance of CustomFieldNumberType
      */
-    public static CustomFieldNumberType of() {
+    public static CustomFieldNumberType of(){
         return new CustomFieldNumberTypeImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy CustomFieldNumberType
@@ -72,7 +82,7 @@ public interface CustomFieldNumberType extends FieldType {
     public static CustomFieldNumberTypeBuilder builder() {
         return CustomFieldNumberTypeBuilder.of();
     }
-
+    
     /**
      * create builder for CustomFieldNumberType instance
      * @param template instance with prefilled values for the builder
@@ -81,6 +91,7 @@ public interface CustomFieldNumberType extends FieldType {
     public static CustomFieldNumberTypeBuilder builder(final CustomFieldNumberType template) {
         return CustomFieldNumberTypeBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -91,7 +102,7 @@ public interface CustomFieldNumberType extends FieldType {
     default <T> T withCustomFieldNumberType(Function<CustomFieldNumberType, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

@@ -1,11 +1,13 @@
-
 package com.commercetools.api.models.order_edit;
 
+import com.commercetools.api.models.order.StagedOrderUpdateAction;
+import com.commercetools.api.models.type.FieldContainer;
+import com.commercetools.api.models.type.TypeResourceIdentifier;
+import com.commercetools.api.models.order_edit.StagedOrderSetItemShippingAddressCustomTypeAction;
+import javax.annotation.Nullable;
 import java.util.*;
 import java.util.function.Function;
-
-import javax.annotation.Nullable;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -19,129 +21,139 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .addressKey("{addressKey}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
-public class StagedOrderSetItemShippingAddressCustomTypeActionBuilder
-        implements Builder<StagedOrderSetItemShippingAddressCustomTypeAction> {
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
+public class StagedOrderSetItemShippingAddressCustomTypeActionBuilder implements Builder<StagedOrderSetItemShippingAddressCustomTypeAction> {
 
+    
+    
     private String addressKey;
-
+    
+    
     @Nullable
     private com.commercetools.api.models.type.TypeResourceIdentifier type;
-
+    
+    
     @Nullable
     private com.commercetools.api.models.type.FieldContainer fields;
 
+    
     /**
      * set the value to the addressKey
      * @param addressKey value to be set
      * @return Builder
      */
-
-    public StagedOrderSetItemShippingAddressCustomTypeActionBuilder addressKey(final String addressKey) {
+    
+    public StagedOrderSetItemShippingAddressCustomTypeActionBuilder addressKey( final String addressKey) {
         this.addressKey = addressKey;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Defines the Type that extends the <code>itemShippingAddress</code> with Custom Fields. If absent, any existing Type and Custom Fields are removed from the <code>itemShippingAddress</code>.</p>
      * @param builder function to build the type value
      * @return Builder
      */
-
-    public StagedOrderSetItemShippingAddressCustomTypeActionBuilder type(
-            Function<com.commercetools.api.models.type.TypeResourceIdentifierBuilder, com.commercetools.api.models.type.TypeResourceIdentifierBuilder> builder) {
+    
+    public StagedOrderSetItemShippingAddressCustomTypeActionBuilder type(Function<com.commercetools.api.models.type.TypeResourceIdentifierBuilder, com.commercetools.api.models.type.TypeResourceIdentifierBuilder> builder) {
         this.type = builder.apply(com.commercetools.api.models.type.TypeResourceIdentifierBuilder.of()).build();
         return this;
     }
-
+    
     /**
      *  <p>Defines the Type that extends the <code>itemShippingAddress</code> with Custom Fields. If absent, any existing Type and Custom Fields are removed from the <code>itemShippingAddress</code>.</p>
      * @param builder function to build the type value
      * @return Builder
      */
-
-    public StagedOrderSetItemShippingAddressCustomTypeActionBuilder withType(
-            Function<com.commercetools.api.models.type.TypeResourceIdentifierBuilder, com.commercetools.api.models.type.TypeResourceIdentifier> builder) {
+    
+    public StagedOrderSetItemShippingAddressCustomTypeActionBuilder withType(Function<com.commercetools.api.models.type.TypeResourceIdentifierBuilder, com.commercetools.api.models.type.TypeResourceIdentifier> builder) {
         this.type = builder.apply(com.commercetools.api.models.type.TypeResourceIdentifierBuilder.of());
         return this;
     }
-
+                    
     /**
      *  <p>Defines the Type that extends the <code>itemShippingAddress</code> with Custom Fields. If absent, any existing Type and Custom Fields are removed from the <code>itemShippingAddress</code>.</p>
      * @param type value to be set
      * @return Builder
      */
-
-    public StagedOrderSetItemShippingAddressCustomTypeActionBuilder type(
-            @Nullable final com.commercetools.api.models.type.TypeResourceIdentifier type) {
+    
+    public StagedOrderSetItemShippingAddressCustomTypeActionBuilder type(@Nullable final com.commercetools.api.models.type.TypeResourceIdentifier type) {
         this.type = type;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Sets the Custom Fields fields for the <code>itemShippingAddress</code>.</p>
      * @param builder function to build the fields value
      * @return Builder
      */
-
-    public StagedOrderSetItemShippingAddressCustomTypeActionBuilder fields(
-            Function<com.commercetools.api.models.type.FieldContainerBuilder, com.commercetools.api.models.type.FieldContainerBuilder> builder) {
+    
+    public StagedOrderSetItemShippingAddressCustomTypeActionBuilder fields(Function<com.commercetools.api.models.type.FieldContainerBuilder, com.commercetools.api.models.type.FieldContainerBuilder> builder) {
         this.fields = builder.apply(com.commercetools.api.models.type.FieldContainerBuilder.of()).build();
         return this;
     }
-
+    
     /**
      *  <p>Sets the Custom Fields fields for the <code>itemShippingAddress</code>.</p>
      * @param builder function to build the fields value
      * @return Builder
      */
-
-    public StagedOrderSetItemShippingAddressCustomTypeActionBuilder withFields(
-            Function<com.commercetools.api.models.type.FieldContainerBuilder, com.commercetools.api.models.type.FieldContainer> builder) {
+    
+    public StagedOrderSetItemShippingAddressCustomTypeActionBuilder withFields(Function<com.commercetools.api.models.type.FieldContainerBuilder, com.commercetools.api.models.type.FieldContainer> builder) {
         this.fields = builder.apply(com.commercetools.api.models.type.FieldContainerBuilder.of());
         return this;
     }
-
+                    
     /**
      *  <p>Sets the Custom Fields fields for the <code>itemShippingAddress</code>.</p>
      * @param fields value to be set
      * @return Builder
      */
-
-    public StagedOrderSetItemShippingAddressCustomTypeActionBuilder fields(
-            @Nullable final com.commercetools.api.models.type.FieldContainer fields) {
+    
+    public StagedOrderSetItemShippingAddressCustomTypeActionBuilder fields(@Nullable final com.commercetools.api.models.type.FieldContainer fields) {
         this.fields = fields;
         return this;
     }
+    
+    
 
     /**
      * value of addressKey}
      * @return addressKey
      */
-
-    public String getAddressKey() {
+    
+    
+    public String getAddressKey(){
         return this.addressKey;
     }
-
+    
     /**
      *  <p>Defines the Type that extends the <code>itemShippingAddress</code> with Custom Fields. If absent, any existing Type and Custom Fields are removed from the <code>itemShippingAddress</code>.</p>
      * @return type
      */
-
+    
     @Nullable
-    public com.commercetools.api.models.type.TypeResourceIdentifier getType() {
+    public com.commercetools.api.models.type.TypeResourceIdentifier getType(){
         return this.type;
     }
-
+    
     /**
      *  <p>Sets the Custom Fields fields for the <code>itemShippingAddress</code>.</p>
      * @return fields
      */
-
+    
     @Nullable
-    public com.commercetools.api.models.type.FieldContainer getFields() {
+    public com.commercetools.api.models.type.FieldContainer getFields(){
         return this.fields;
     }
 
@@ -150,11 +162,10 @@ public class StagedOrderSetItemShippingAddressCustomTypeActionBuilder
      * @return StagedOrderSetItemShippingAddressCustomTypeAction
      */
     public StagedOrderSetItemShippingAddressCustomTypeAction build() {
-        Objects.requireNonNull(addressKey,
-            StagedOrderSetItemShippingAddressCustomTypeAction.class + ": addressKey is missing");
+        Objects.requireNonNull(addressKey, StagedOrderSetItemShippingAddressCustomTypeAction.class + ": addressKey is missing");
         return new StagedOrderSetItemShippingAddressCustomTypeActionImpl(addressKey, type, fields);
     }
-
+    
     /**
      * builds StagedOrderSetItemShippingAddressCustomTypeAction without checking for non-null required values
      * @return StagedOrderSetItemShippingAddressCustomTypeAction
@@ -165,7 +176,7 @@ public class StagedOrderSetItemShippingAddressCustomTypeActionBuilder
 
     /**
      * factory method for an instance of StagedOrderSetItemShippingAddressCustomTypeActionBuilder
-     * @return builder
+     * @return builder 
      */
     public static StagedOrderSetItemShippingAddressCustomTypeActionBuilder of() {
         return new StagedOrderSetItemShippingAddressCustomTypeActionBuilder();
@@ -176,8 +187,7 @@ public class StagedOrderSetItemShippingAddressCustomTypeActionBuilder
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static StagedOrderSetItemShippingAddressCustomTypeActionBuilder of(
-            final StagedOrderSetItemShippingAddressCustomTypeAction template) {
+    public static StagedOrderSetItemShippingAddressCustomTypeActionBuilder of(final StagedOrderSetItemShippingAddressCustomTypeAction template) {
         StagedOrderSetItemShippingAddressCustomTypeActionBuilder builder = new StagedOrderSetItemShippingAddressCustomTypeActionBuilder();
         builder.addressKey = template.getAddressKey();
         builder.type = template.getType();

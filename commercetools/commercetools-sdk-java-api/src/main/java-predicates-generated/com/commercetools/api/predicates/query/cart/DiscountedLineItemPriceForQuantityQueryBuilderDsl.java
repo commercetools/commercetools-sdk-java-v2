@@ -1,11 +1,11 @@
-
 package com.commercetools.api.predicates.query.cart;
-
-import java.util.function.Function;
 
 import com.commercetools.api.predicates.query.*;
 
-public class DiscountedLineItemPriceForQuantityQueryBuilderDsl {
+import java.util.function.Function;
+
+
+public class DiscountedLineItemPriceForQuantityQueryBuilderDsl  {
     public DiscountedLineItemPriceForQuantityQueryBuilderDsl() {
     }
 
@@ -14,19 +14,16 @@ public class DiscountedLineItemPriceForQuantityQueryBuilderDsl {
     }
 
     public LongComparisonPredicateBuilder<DiscountedLineItemPriceForQuantityQueryBuilderDsl> quantity() {
-        return new LongComparisonPredicateBuilder<>(
-            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("quantity")),
-            p -> new CombinationQueryPredicate<>(p, DiscountedLineItemPriceForQuantityQueryBuilderDsl::of));
+        return new LongComparisonPredicateBuilder<>(BinaryQueryPredicate.of().left(new ConstantQueryPredicate("quantity")),
+        p -> new CombinationQueryPredicate<>(p, DiscountedLineItemPriceForQuantityQueryBuilderDsl::of));
     }
-
     public CombinationQueryPredicate<DiscountedLineItemPriceForQuantityQueryBuilderDsl> discountedPrice(
-            Function<com.commercetools.api.predicates.query.cart.DiscountedLineItemPriceQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.cart.DiscountedLineItemPriceQueryBuilderDsl>> fn) {
-        return new CombinationQueryPredicate<>(
-            ContainerQueryPredicate.of()
-                    .parent(ConstantQueryPredicate.of().constant("discountedPrice"))
-                    .inner(fn.apply(
-                        com.commercetools.api.predicates.query.cart.DiscountedLineItemPriceQueryBuilderDsl.of())),
+        Function<com.commercetools.api.predicates.query.cart.DiscountedLineItemPriceQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.cart.DiscountedLineItemPriceQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(ContainerQueryPredicate.of()
+            .parent(ConstantQueryPredicate.of().constant("discountedPrice"))
+            .inner(fn.apply(com.commercetools.api.predicates.query.cart.DiscountedLineItemPriceQueryBuilderDsl.of())),
             DiscountedLineItemPriceForQuantityQueryBuilderDsl::of);
     }
-
+    
+    
 }

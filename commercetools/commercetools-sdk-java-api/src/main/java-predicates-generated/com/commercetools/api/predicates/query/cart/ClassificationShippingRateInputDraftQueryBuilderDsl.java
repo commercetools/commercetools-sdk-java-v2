@@ -1,9 +1,11 @@
-
 package com.commercetools.api.predicates.query.cart;
 
 import com.commercetools.api.predicates.query.*;
 
-public class ClassificationShippingRateInputDraftQueryBuilderDsl {
+import java.util.function.Function;
+
+
+public class ClassificationShippingRateInputDraftQueryBuilderDsl  {
     public ClassificationShippingRateInputDraftQueryBuilderDsl() {
     }
 
@@ -12,14 +14,12 @@ public class ClassificationShippingRateInputDraftQueryBuilderDsl {
     }
 
     public StringComparisonPredicateBuilder<ClassificationShippingRateInputDraftQueryBuilderDsl> type() {
-        return new StringComparisonPredicateBuilder<>(
-            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("type")),
-            p -> new CombinationQueryPredicate<>(p, ClassificationShippingRateInputDraftQueryBuilderDsl::of));
+        return new StringComparisonPredicateBuilder<>(BinaryQueryPredicate.of().left(new ConstantQueryPredicate("type")),
+        p -> new CombinationQueryPredicate<>(p, ClassificationShippingRateInputDraftQueryBuilderDsl::of));
     }
-
     public StringComparisonPredicateBuilder<ClassificationShippingRateInputDraftQueryBuilderDsl> key() {
         return new StringComparisonPredicateBuilder<>(BinaryQueryPredicate.of().left(new ConstantQueryPredicate("key")),
-            p -> new CombinationQueryPredicate<>(p, ClassificationShippingRateInputDraftQueryBuilderDsl::of));
+        p -> new CombinationQueryPredicate<>(p, ClassificationShippingRateInputDraftQueryBuilderDsl::of));
     }
-
+    
 }

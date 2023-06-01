@@ -1,19 +1,21 @@
-
 package com.commercetools.history.models.change;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
+import com.commercetools.history.models.change.Change;
 import com.commercetools.history.models.common.Address;
+import com.commercetools.history.models.change.SetAddressChangeImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * SetAddressChange
@@ -28,9 +30,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .previousValue(previousValueBuilder -> previousValueBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = SetAddressChangeImpl.class)
 public interface SetAddressChange extends Change {
 
@@ -46,7 +51,6 @@ public interface SetAddressChange extends Change {
     @NotNull
     @JsonProperty("change")
     public String getChange();
-
     /**
      *
      * @return type
@@ -54,7 +58,6 @@ public interface SetAddressChange extends Change {
     @NotNull
     @JsonProperty("type")
     public String getType();
-
     /**
      *
      * @return nextValue
@@ -63,7 +66,6 @@ public interface SetAddressChange extends Change {
     @Valid
     @JsonProperty("nextValue")
     public Address getNextValue();
-
     /**
      *
      * @return previousValue
@@ -77,30 +79,34 @@ public interface SetAddressChange extends Change {
      *  <p>Update action for <code>setAddress</code> action.</p>
      * @param change value to be set
      */
-
+    
     public void setChange(final String change);
-
+    
+    
     /**
      * set nextValue
      * @param nextValue value to be set
      */
-
+    
     public void setNextValue(final Address nextValue);
-
+    
+    
     /**
      * set previousValue
      * @param previousValue value to be set
      */
-
+    
     public void setPreviousValue(final Address previousValue);
+    
 
     /**
      * factory method
      * @return instance of SetAddressChange
      */
-    public static SetAddressChange of() {
+    public static SetAddressChange of(){
         return new SetAddressChangeImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy SetAddressChange
@@ -128,8 +134,7 @@ public interface SetAddressChange extends Change {
         SetAddressChangeImpl instance = new SetAddressChangeImpl();
         instance.setChange(template.getChange());
         instance.setNextValue(com.commercetools.history.models.common.Address.deepCopy(template.getNextValue()));
-        instance.setPreviousValue(
-            com.commercetools.history.models.common.Address.deepCopy(template.getPreviousValue()));
+        instance.setPreviousValue(com.commercetools.history.models.common.Address.deepCopy(template.getPreviousValue()));
         return instance;
     }
 
@@ -140,7 +145,7 @@ public interface SetAddressChange extends Change {
     public static SetAddressChangeBuilder builder() {
         return SetAddressChangeBuilder.of();
     }
-
+    
     /**
      * create builder for SetAddressChange instance
      * @param template instance with prefilled values for the builder
@@ -149,6 +154,7 @@ public interface SetAddressChange extends Change {
     public static SetAddressChangeBuilder builder(final SetAddressChange template) {
         return SetAddressChangeBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -159,7 +165,7 @@ public interface SetAddressChange extends Change {
     default <T> T withSetAddressChange(Function<SetAddressChange, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

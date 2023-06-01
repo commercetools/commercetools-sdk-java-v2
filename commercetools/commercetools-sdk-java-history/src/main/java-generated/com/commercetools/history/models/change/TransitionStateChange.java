@@ -1,19 +1,21 @@
-
 package com.commercetools.history.models.change;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
+import com.commercetools.history.models.change.Change;
 import com.commercetools.history.models.common.Reference;
+import com.commercetools.history.models.change.TransitionStateChangeImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * TransitionStateChange
@@ -28,9 +30,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .nextValue(nextValueBuilder -> nextValueBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = TransitionStateChangeImpl.class)
 public interface TransitionStateChange extends Change {
 
@@ -46,7 +51,6 @@ public interface TransitionStateChange extends Change {
     @NotNull
     @JsonProperty("type")
     public String getType();
-
     /**
      *  <p>Shape of the action for <code>transitionState</code></p>
      * @return change
@@ -54,7 +58,6 @@ public interface TransitionStateChange extends Change {
     @NotNull
     @JsonProperty("change")
     public String getChange();
-
     /**
      *
      * @return previousValue
@@ -63,7 +66,6 @@ public interface TransitionStateChange extends Change {
     @Valid
     @JsonProperty("previousValue")
     public Reference getPreviousValue();
-
     /**
      *
      * @return nextValue
@@ -77,30 +79,34 @@ public interface TransitionStateChange extends Change {
      *  <p>Shape of the action for <code>transitionState</code></p>
      * @param change value to be set
      */
-
+    
     public void setChange(final String change);
-
+    
+    
     /**
      * set previousValue
      * @param previousValue value to be set
      */
-
+    
     public void setPreviousValue(final Reference previousValue);
-
+    
+    
     /**
      * set nextValue
      * @param nextValue value to be set
      */
-
+    
     public void setNextValue(final Reference nextValue);
+    
 
     /**
      * factory method
      * @return instance of TransitionStateChange
      */
-    public static TransitionStateChange of() {
+    public static TransitionStateChange of(){
         return new TransitionStateChangeImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy TransitionStateChange
@@ -127,8 +133,7 @@ public interface TransitionStateChange extends Change {
         }
         TransitionStateChangeImpl instance = new TransitionStateChangeImpl();
         instance.setChange(template.getChange());
-        instance.setPreviousValue(
-            com.commercetools.history.models.common.Reference.deepCopy(template.getPreviousValue()));
+        instance.setPreviousValue(com.commercetools.history.models.common.Reference.deepCopy(template.getPreviousValue()));
         instance.setNextValue(com.commercetools.history.models.common.Reference.deepCopy(template.getNextValue()));
         return instance;
     }
@@ -140,7 +145,7 @@ public interface TransitionStateChange extends Change {
     public static TransitionStateChangeBuilder builder() {
         return TransitionStateChangeBuilder.of();
     }
-
+    
     /**
      * create builder for TransitionStateChange instance
      * @param template instance with prefilled values for the builder
@@ -149,6 +154,7 @@ public interface TransitionStateChange extends Change {
     public static TransitionStateChangeBuilder builder(final TransitionStateChange template) {
         return TransitionStateChangeBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -159,7 +165,7 @@ public interface TransitionStateChange extends Change {
     default <T> T withTransitionStateChange(Function<TransitionStateChange, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

@@ -1,18 +1,21 @@
-
 package com.commercetools.api.models.extension;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
+import com.commercetools.api.models.extension.ExtensionDestination;
+import com.commercetools.api.models.extension.HttpDestinationAuthentication;
+import com.commercetools.api.models.extension.HttpDestinationImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>We recommend an encrypted <code>HTTPS</code> connection for production setups. However, we also accept unencrypted <code>HTTP</code> connections for development purposes. HTTP redirects will not be followed and cache headers will be ignored.</p>
@@ -25,9 +28,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .url("{url}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = HttpDestinationImpl.class)
 public interface HttpDestination extends ExtensionDestination {
 
@@ -43,7 +49,6 @@ public interface HttpDestination extends ExtensionDestination {
     @NotNull
     @JsonProperty("url")
     public String getUrl();
-
     /**
      *  <p>Authentication methods (such as <code>Basic</code> or <code>Bearer</code>).</p>
      * @return authentication
@@ -56,23 +61,26 @@ public interface HttpDestination extends ExtensionDestination {
      *  <p>URL to the target destination. If the Project is hosted in the China (AWS, Ningxia) Region, verify that the URL is not blocked due to firewall restrictions.</p>
      * @param url value to be set
      */
-
+    
     public void setUrl(final String url);
-
+    
+    
     /**
      *  <p>Authentication methods (such as <code>Basic</code> or <code>Bearer</code>).</p>
      * @param authentication value to be set
      */
-
+    
     public void setAuthentication(final HttpDestinationAuthentication authentication);
+    
 
     /**
      * factory method
      * @return instance of HttpDestination
      */
-    public static HttpDestination of() {
+    public static HttpDestination of(){
         return new HttpDestinationImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy HttpDestination
@@ -98,8 +106,7 @@ public interface HttpDestination extends ExtensionDestination {
         }
         HttpDestinationImpl instance = new HttpDestinationImpl();
         instance.setUrl(template.getUrl());
-        instance.setAuthentication(com.commercetools.api.models.extension.HttpDestinationAuthentication
-                .deepCopy(template.getAuthentication()));
+        instance.setAuthentication(com.commercetools.api.models.extension.HttpDestinationAuthentication.deepCopy(template.getAuthentication()));
         return instance;
     }
 
@@ -110,7 +117,7 @@ public interface HttpDestination extends ExtensionDestination {
     public static HttpDestinationBuilder builder() {
         return HttpDestinationBuilder.of();
     }
-
+    
     /**
      * create builder for HttpDestination instance
      * @param template instance with prefilled values for the builder
@@ -119,6 +126,7 @@ public interface HttpDestination extends ExtensionDestination {
     public static HttpDestinationBuilder builder(final HttpDestination template) {
         return HttpDestinationBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -129,7 +137,7 @@ public interface HttpDestination extends ExtensionDestination {
     default <T> T withHttpDestination(Function<HttpDestination, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

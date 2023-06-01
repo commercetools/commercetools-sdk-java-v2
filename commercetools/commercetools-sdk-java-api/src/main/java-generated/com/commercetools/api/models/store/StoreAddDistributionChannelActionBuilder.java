@@ -1,9 +1,12 @@
-
 package com.commercetools.api.models.store;
 
+import com.commercetools.api.models.channel.ChannelResourceIdentifier;
+import com.commercetools.api.models.store.StoreUpdateAction;
+import com.commercetools.api.models.store.StoreAddDistributionChannelAction;
+import javax.annotation.Nullable;
 import java.util.*;
 import java.util.function.Function;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -17,58 +20,61 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .distributionChannel(distributionChannelBuilder -> distributionChannelBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class StoreAddDistributionChannelActionBuilder implements Builder<StoreAddDistributionChannelAction> {
 
+    
+    
     private com.commercetools.api.models.channel.ChannelResourceIdentifier distributionChannel;
 
+    
     /**
      *  <p>Value to append.</p>
      * @param builder function to build the distributionChannel value
      * @return Builder
      */
-
-    public StoreAddDistributionChannelActionBuilder distributionChannel(
-            Function<com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder, com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder> builder) {
-        this.distributionChannel = builder
-                .apply(com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder.of())
-                .build();
+    
+    public StoreAddDistributionChannelActionBuilder distributionChannel(Function<com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder, com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder> builder) {
+        this.distributionChannel = builder.apply(com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder.of()).build();
         return this;
     }
-
+    
     /**
      *  <p>Value to append.</p>
      * @param builder function to build the distributionChannel value
      * @return Builder
      */
-
-    public StoreAddDistributionChannelActionBuilder withDistributionChannel(
-            Function<com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder, com.commercetools.api.models.channel.ChannelResourceIdentifier> builder) {
-        this.distributionChannel = builder
-                .apply(com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder.of());
+    
+    public StoreAddDistributionChannelActionBuilder withDistributionChannel(Function<com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder, com.commercetools.api.models.channel.ChannelResourceIdentifier> builder) {
+        this.distributionChannel = builder.apply(com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder.of());
         return this;
     }
-
+                    
     /**
      *  <p>Value to append.</p>
      * @param distributionChannel value to be set
      * @return Builder
      */
-
-    public StoreAddDistributionChannelActionBuilder distributionChannel(
-            final com.commercetools.api.models.channel.ChannelResourceIdentifier distributionChannel) {
+    
+    public StoreAddDistributionChannelActionBuilder distributionChannel( final com.commercetools.api.models.channel.ChannelResourceIdentifier distributionChannel) {
         this.distributionChannel = distributionChannel;
         return this;
     }
+    
+    
 
     /**
      *  <p>Value to append.</p>
      * @return distributionChannel
      */
-
-    public com.commercetools.api.models.channel.ChannelResourceIdentifier getDistributionChannel() {
+    
+    
+    public com.commercetools.api.models.channel.ChannelResourceIdentifier getDistributionChannel(){
         return this.distributionChannel;
     }
 
@@ -77,11 +83,10 @@ public class StoreAddDistributionChannelActionBuilder implements Builder<StoreAd
      * @return StoreAddDistributionChannelAction
      */
     public StoreAddDistributionChannelAction build() {
-        Objects.requireNonNull(distributionChannel,
-            StoreAddDistributionChannelAction.class + ": distributionChannel is missing");
+        Objects.requireNonNull(distributionChannel, StoreAddDistributionChannelAction.class + ": distributionChannel is missing");
         return new StoreAddDistributionChannelActionImpl(distributionChannel);
     }
-
+    
     /**
      * builds StoreAddDistributionChannelAction without checking for non-null required values
      * @return StoreAddDistributionChannelAction
@@ -92,7 +97,7 @@ public class StoreAddDistributionChannelActionBuilder implements Builder<StoreAd
 
     /**
      * factory method for an instance of StoreAddDistributionChannelActionBuilder
-     * @return builder
+     * @return builder 
      */
     public static StoreAddDistributionChannelActionBuilder of() {
         return new StoreAddDistributionChannelActionBuilder();

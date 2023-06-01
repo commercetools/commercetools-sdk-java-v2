@@ -1,20 +1,22 @@
-
 package com.commercetools.history.models.change;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
+import com.commercetools.history.models.change.Change;
 import com.commercetools.history.models.change_value.ShippingMethodTaxAmountChangeValue;
 import com.commercetools.history.models.common.TaxMode;
+import com.commercetools.history.models.change.SetShippingMethodTaxAmountChangeImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * SetShippingMethodTaxAmountChange
@@ -30,9 +32,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .previousValue(previousValueBuilder -> previousValueBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = SetShippingMethodTaxAmountChangeImpl.class)
 public interface SetShippingMethodTaxAmountChange extends Change {
 
@@ -48,7 +53,6 @@ public interface SetShippingMethodTaxAmountChange extends Change {
     @NotNull
     @JsonProperty("type")
     public String getType();
-
     /**
      *  <p>Update action for <code>setShippingMethodTaxAmount</code></p>
      * @return change
@@ -56,7 +60,6 @@ public interface SetShippingMethodTaxAmountChange extends Change {
     @NotNull
     @JsonProperty("change")
     public String getChange();
-
     /**
      *
      * @return taxMode
@@ -64,7 +67,6 @@ public interface SetShippingMethodTaxAmountChange extends Change {
     @NotNull
     @JsonProperty("taxMode")
     public TaxMode getTaxMode();
-
     /**
      *
      * @return nextValue
@@ -73,7 +75,6 @@ public interface SetShippingMethodTaxAmountChange extends Change {
     @Valid
     @JsonProperty("nextValue")
     public ShippingMethodTaxAmountChangeValue getNextValue();
-
     /**
      *
      * @return previousValue
@@ -87,37 +88,42 @@ public interface SetShippingMethodTaxAmountChange extends Change {
      *  <p>Update action for <code>setShippingMethodTaxAmount</code></p>
      * @param change value to be set
      */
-
+    
     public void setChange(final String change);
-
+    
+    
     /**
      * set taxMode
      * @param taxMode value to be set
      */
-
+    
     public void setTaxMode(final TaxMode taxMode);
-
+    
+    
     /**
      * set nextValue
      * @param nextValue value to be set
      */
-
+    
     public void setNextValue(final ShippingMethodTaxAmountChangeValue nextValue);
-
+    
+    
     /**
      * set previousValue
      * @param previousValue value to be set
      */
-
+    
     public void setPreviousValue(final ShippingMethodTaxAmountChangeValue previousValue);
+    
 
     /**
      * factory method
      * @return instance of SetShippingMethodTaxAmountChange
      */
-    public static SetShippingMethodTaxAmountChange of() {
+    public static SetShippingMethodTaxAmountChange of(){
         return new SetShippingMethodTaxAmountChangeImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy SetShippingMethodTaxAmountChange
@@ -146,10 +152,8 @@ public interface SetShippingMethodTaxAmountChange extends Change {
         SetShippingMethodTaxAmountChangeImpl instance = new SetShippingMethodTaxAmountChangeImpl();
         instance.setChange(template.getChange());
         instance.setTaxMode(template.getTaxMode());
-        instance.setNextValue(com.commercetools.history.models.change_value.ShippingMethodTaxAmountChangeValue
-                .deepCopy(template.getNextValue()));
-        instance.setPreviousValue(com.commercetools.history.models.change_value.ShippingMethodTaxAmountChangeValue
-                .deepCopy(template.getPreviousValue()));
+        instance.setNextValue(com.commercetools.history.models.change_value.ShippingMethodTaxAmountChangeValue.deepCopy(template.getNextValue()));
+        instance.setPreviousValue(com.commercetools.history.models.change_value.ShippingMethodTaxAmountChangeValue.deepCopy(template.getPreviousValue()));
         return instance;
     }
 
@@ -160,7 +164,7 @@ public interface SetShippingMethodTaxAmountChange extends Change {
     public static SetShippingMethodTaxAmountChangeBuilder builder() {
         return SetShippingMethodTaxAmountChangeBuilder.of();
     }
-
+    
     /**
      * create builder for SetShippingMethodTaxAmountChange instance
      * @param template instance with prefilled values for the builder
@@ -169,6 +173,7 @@ public interface SetShippingMethodTaxAmountChange extends Change {
     public static SetShippingMethodTaxAmountChangeBuilder builder(final SetShippingMethodTaxAmountChange template) {
         return SetShippingMethodTaxAmountChangeBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -179,7 +184,7 @@ public interface SetShippingMethodTaxAmountChange extends Change {
     default <T> T withSetShippingMethodTaxAmountChange(Function<SetShippingMethodTaxAmountChange, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

@@ -1,18 +1,20 @@
-
 package com.commercetools.importapi.models.importcontainers;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
-
 import com.commercetools.importapi.models.common.ImportResourceType;
+import com.commercetools.importapi.models.importcontainers.ImportContainerDraftImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>The representation sent to the server when creating an ImportContainer.</p>
@@ -25,11 +27,15 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .key("{key}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = ImportContainerDraftImpl.class)
 public interface ImportContainerDraft extends io.vrap.rmf.base.client.Draft<ImportContainerDraft> {
+
 
     /**
      *  <p>User-defined unique identifier of the ImportContainer. Keys can only contain alphanumeric characters (a-Z, 0-9), underscores and hyphens (_, -).</p>
@@ -38,12 +44,11 @@ public interface ImportContainerDraft extends io.vrap.rmf.base.client.Draft<Impo
     @NotNull
     @JsonProperty("key")
     public String getKey();
-
     /**
      *  <p>The resource type to be imported. If not given, the ImportContainer is able to import all of the supported ImportResourceTypes.</p>
      * @return resourceType
      */
-
+    
     @JsonProperty("resourceType")
     public ImportResourceType getResourceType();
 
@@ -51,23 +56,26 @@ public interface ImportContainerDraft extends io.vrap.rmf.base.client.Draft<Impo
      *  <p>User-defined unique identifier of the ImportContainer. Keys can only contain alphanumeric characters (a-Z, 0-9), underscores and hyphens (_, -).</p>
      * @param key value to be set
      */
-
+    
     public void setKey(final String key);
-
+    
+    
     /**
      *  <p>The resource type to be imported. If not given, the ImportContainer is able to import all of the supported ImportResourceTypes.</p>
      * @param resourceType value to be set
      */
-
+    
     public void setResourceType(final ImportResourceType resourceType);
+    
 
     /**
      * factory method
      * @return instance of ImportContainerDraft
      */
-    public static ImportContainerDraft of() {
+    public static ImportContainerDraft of(){
         return new ImportContainerDraftImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy ImportContainerDraft
@@ -104,7 +112,7 @@ public interface ImportContainerDraft extends io.vrap.rmf.base.client.Draft<Impo
     public static ImportContainerDraftBuilder builder() {
         return ImportContainerDraftBuilder.of();
     }
-
+    
     /**
      * create builder for ImportContainerDraft instance
      * @param template instance with prefilled values for the builder
@@ -113,6 +121,7 @@ public interface ImportContainerDraft extends io.vrap.rmf.base.client.Draft<Impo
     public static ImportContainerDraftBuilder builder(final ImportContainerDraft template) {
         return ImportContainerDraftBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -123,7 +132,7 @@ public interface ImportContainerDraft extends io.vrap.rmf.base.client.Draft<Impo
     default <T> T withImportContainerDraft(Function<ImportContainerDraft, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

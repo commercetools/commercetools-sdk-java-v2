@@ -1,9 +1,11 @@
-
 package com.commercetools.api.predicates.query.type;
 
 import com.commercetools.api.predicates.query.*;
 
-public class CustomFieldStringTypeQueryBuilderDsl {
+import java.util.function.Function;
+
+
+public class CustomFieldStringTypeQueryBuilderDsl  {
     public CustomFieldStringTypeQueryBuilderDsl() {
     }
 
@@ -12,9 +14,8 @@ public class CustomFieldStringTypeQueryBuilderDsl {
     }
 
     public StringComparisonPredicateBuilder<CustomFieldStringTypeQueryBuilderDsl> name() {
-        return new StringComparisonPredicateBuilder<>(
-            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("name")),
-            p -> new CombinationQueryPredicate<>(p, CustomFieldStringTypeQueryBuilderDsl::of));
+        return new StringComparisonPredicateBuilder<>(BinaryQueryPredicate.of().left(new ConstantQueryPredicate("name")),
+        p -> new CombinationQueryPredicate<>(p, CustomFieldStringTypeQueryBuilderDsl::of));
     }
-
+    
 }

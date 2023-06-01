@@ -1,11 +1,13 @@
-
 package com.commercetools.api.models.channel;
 
+import com.commercetools.api.models.channel.Channel;
+import com.commercetools.api.models.common.Reference;
+import com.commercetools.api.models.common.ReferenceTypeId;
+import com.commercetools.api.models.channel.ChannelReference;
+import javax.annotation.Nullable;
 import java.util.*;
 import java.util.function.Function;
-
-import javax.annotation.Nullable;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -19,78 +21,89 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .id("{id}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class ChannelReferenceBuilder implements Builder<ChannelReference> {
 
+    
+    
     private String id;
-
+    
+    
     @Nullable
     private com.commercetools.api.models.channel.Channel obj;
 
+    
     /**
      *  <p>Unique identifier of the referenced Channel.</p>
      * @param id value to be set
      * @return Builder
      */
-
-    public ChannelReferenceBuilder id(final String id) {
+    
+    public ChannelReferenceBuilder id( final String id) {
         this.id = id;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Contains the representation of the expanded Channel. Only present in responses to requests with Reference Expansion for Channels.</p>
      * @param builder function to build the obj value
      * @return Builder
      */
-
-    public ChannelReferenceBuilder obj(
-            Function<com.commercetools.api.models.channel.ChannelBuilder, com.commercetools.api.models.channel.ChannelBuilder> builder) {
+    
+    public ChannelReferenceBuilder obj(Function<com.commercetools.api.models.channel.ChannelBuilder, com.commercetools.api.models.channel.ChannelBuilder> builder) {
         this.obj = builder.apply(com.commercetools.api.models.channel.ChannelBuilder.of()).build();
         return this;
     }
-
+    
     /**
      *  <p>Contains the representation of the expanded Channel. Only present in responses to requests with Reference Expansion for Channels.</p>
      * @param builder function to build the obj value
      * @return Builder
      */
-
-    public ChannelReferenceBuilder withObj(
-            Function<com.commercetools.api.models.channel.ChannelBuilder, com.commercetools.api.models.channel.Channel> builder) {
+    
+    public ChannelReferenceBuilder withObj(Function<com.commercetools.api.models.channel.ChannelBuilder, com.commercetools.api.models.channel.Channel> builder) {
         this.obj = builder.apply(com.commercetools.api.models.channel.ChannelBuilder.of());
         return this;
     }
-
+                    
     /**
      *  <p>Contains the representation of the expanded Channel. Only present in responses to requests with Reference Expansion for Channels.</p>
      * @param obj value to be set
      * @return Builder
      */
-
+    
     public ChannelReferenceBuilder obj(@Nullable final com.commercetools.api.models.channel.Channel obj) {
         this.obj = obj;
         return this;
     }
+    
+    
 
     /**
      *  <p>Unique identifier of the referenced Channel.</p>
      * @return id
      */
-
-    public String getId() {
+    
+    
+    public String getId(){
         return this.id;
     }
-
+    
     /**
      *  <p>Contains the representation of the expanded Channel. Only present in responses to requests with Reference Expansion for Channels.</p>
      * @return obj
      */
-
+    
     @Nullable
-    public com.commercetools.api.models.channel.Channel getObj() {
+    public com.commercetools.api.models.channel.Channel getObj(){
         return this.obj;
     }
 
@@ -102,7 +115,7 @@ public class ChannelReferenceBuilder implements Builder<ChannelReference> {
         Objects.requireNonNull(id, ChannelReference.class + ": id is missing");
         return new ChannelReferenceImpl(id, obj);
     }
-
+    
     /**
      * builds ChannelReference without checking for non-null required values
      * @return ChannelReference
@@ -113,7 +126,7 @@ public class ChannelReferenceBuilder implements Builder<ChannelReference> {
 
     /**
      * factory method for an instance of ChannelReferenceBuilder
-     * @return builder
+     * @return builder 
      */
     public static ChannelReferenceBuilder of() {
         return new ChannelReferenceBuilder();

@@ -1,19 +1,21 @@
-
 package com.commercetools.api.models.product;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
 import com.commercetools.api.models.common.Image;
+import com.commercetools.api.models.product.ProductUpdateAction;
+import com.commercetools.api.models.product.ProductAddExternalImageActionImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Either <code>variantId</code> or <code>sku</code> is required. Produces the ProductImageAdded Message.</p>
@@ -26,9 +28,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .image(imageBuilder -> imageBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = ProductAddExternalImageActionImpl.class)
 public interface ProductAddExternalImageAction extends ProductUpdateAction {
 
@@ -41,18 +46,16 @@ public interface ProductAddExternalImageAction extends ProductUpdateAction {
      *  <p>The <code>id</code> of the ProductVariant to update.</p>
      * @return variantId
      */
-
+    
     @JsonProperty("variantId")
     public Long getVariantId();
-
     /**
      *  <p>The <code>sku</code> of the ProductVariant to update.</p>
      * @return sku
      */
-
+    
     @JsonProperty("sku")
     public String getSku();
-
     /**
      *  <p>Value to add to <code>images</code>.</p>
      * @return image
@@ -61,12 +64,11 @@ public interface ProductAddExternalImageAction extends ProductUpdateAction {
     @Valid
     @JsonProperty("image")
     public Image getImage();
-
     /**
      *  <p>If <code>true</code>, only the staged <code>images</code> is updated. If <code>false</code>, both the current and staged <code>images</code> is updated.</p>
      * @return staged
      */
-
+    
     @JsonProperty("staged")
     public Boolean getStaged();
 
@@ -74,37 +76,42 @@ public interface ProductAddExternalImageAction extends ProductUpdateAction {
      *  <p>The <code>id</code> of the ProductVariant to update.</p>
      * @param variantId value to be set
      */
-
+    
     public void setVariantId(final Long variantId);
-
+    
+    
     /**
      *  <p>The <code>sku</code> of the ProductVariant to update.</p>
      * @param sku value to be set
      */
-
+    
     public void setSku(final String sku);
-
+    
+    
     /**
      *  <p>Value to add to <code>images</code>.</p>
      * @param image value to be set
      */
-
+    
     public void setImage(final Image image);
-
+    
+    
     /**
      *  <p>If <code>true</code>, only the staged <code>images</code> is updated. If <code>false</code>, both the current and staged <code>images</code> is updated.</p>
      * @param staged value to be set
      */
-
+    
     public void setStaged(final Boolean staged);
+    
 
     /**
      * factory method
      * @return instance of ProductAddExternalImageAction
      */
-    public static ProductAddExternalImageAction of() {
+    public static ProductAddExternalImageAction of(){
         return new ProductAddExternalImageActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy ProductAddExternalImageAction
@@ -145,7 +152,7 @@ public interface ProductAddExternalImageAction extends ProductUpdateAction {
     public static ProductAddExternalImageActionBuilder builder() {
         return ProductAddExternalImageActionBuilder.of();
     }
-
+    
     /**
      * create builder for ProductAddExternalImageAction instance
      * @param template instance with prefilled values for the builder
@@ -154,6 +161,7 @@ public interface ProductAddExternalImageAction extends ProductUpdateAction {
     public static ProductAddExternalImageActionBuilder builder(final ProductAddExternalImageAction template) {
         return ProductAddExternalImageActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -164,7 +172,7 @@ public interface ProductAddExternalImageAction extends ProductUpdateAction {
     default <T> T withProductAddExternalImageAction(Function<ProductAddExternalImageAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

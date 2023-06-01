@@ -1,8 +1,11 @@
-
 package com.commercetools.api.models.common;
 
-import java.util.*;
 
+import com.commercetools.api.models.common.ImageDimensions;
+import javax.annotation.Nullable;
+import java.util.*;
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -17,52 +20,67 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .h(0.3)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class ImageDimensionsBuilder implements Builder<ImageDimensions> {
 
+    
+    
     private Integer w;
-
+    
+    
+    
     private Integer h;
 
+    
     /**
      *  <p>Width of the image.</p>
      * @param w value to be set
      * @return Builder
      */
-
-    public ImageDimensionsBuilder w(final Integer w) {
+    
+    public ImageDimensionsBuilder w( final Integer w) {
         this.w = w;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Height of the image.</p>
      * @param h value to be set
      * @return Builder
      */
-
-    public ImageDimensionsBuilder h(final Integer h) {
+    
+    public ImageDimensionsBuilder h( final Integer h) {
         this.h = h;
         return this;
     }
+    
+    
 
     /**
      *  <p>Width of the image.</p>
      * @return w
      */
-
-    public Integer getW() {
+    
+    
+    public Integer getW(){
         return this.w;
     }
-
+    
     /**
      *  <p>Height of the image.</p>
      * @return h
      */
-
-    public Integer getH() {
+    
+    
+    public Integer getH(){
         return this.h;
     }
 
@@ -75,7 +93,7 @@ public class ImageDimensionsBuilder implements Builder<ImageDimensions> {
         Objects.requireNonNull(h, ImageDimensions.class + ": h is missing");
         return new ImageDimensionsImpl(w, h);
     }
-
+    
     /**
      * builds ImageDimensions without checking for non-null required values
      * @return ImageDimensions
@@ -86,7 +104,7 @@ public class ImageDimensionsBuilder implements Builder<ImageDimensions> {
 
     /**
      * factory method for an instance of ImageDimensionsBuilder
-     * @return builder
+     * @return builder 
      */
     public static ImageDimensionsBuilder of() {
         return new ImageDimensionsBuilder();

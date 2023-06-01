@@ -1,19 +1,22 @@
-
 package com.commercetools.api.models.cart_discount;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
+import com.commercetools.api.models.cart_discount.CartDiscount;
 import com.commercetools.api.models.common.Reference;
+import com.commercetools.api.models.common.ReferenceTypeId;
+import com.commercetools.api.models.cart_discount.CartDiscountReferenceImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Reference to a CartDiscount.</p>
@@ -26,9 +29,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .id("{id}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = CartDiscountReferenceImpl.class)
 public interface CartDiscountReference extends Reference, com.commercetools.api.models.Identifiable<CartDiscount> {
 
@@ -44,7 +50,6 @@ public interface CartDiscountReference extends Reference, com.commercetools.api.
     @Valid
     @JsonProperty("obj")
     public CartDiscount getObj();
-
     /**
      *  <p>Unique identifier of the referenced CartDiscount.</p>
      * @return id
@@ -57,23 +62,26 @@ public interface CartDiscountReference extends Reference, com.commercetools.api.
      *  <p>Contains the representation of the expanded CartDiscount. Only present in responses to requests with Reference Expansion for CartDiscounts.</p>
      * @param obj value to be set
      */
-
+    
     public void setObj(final CartDiscount obj);
-
+    
+    
     /**
      *  <p>Unique identifier of the referenced CartDiscount.</p>
      * @param id value to be set
      */
-
+    
     public void setId(final String id);
+    
 
     /**
      * factory method
      * @return instance of CartDiscountReference
      */
-    public static CartDiscountReference of() {
+    public static CartDiscountReference of(){
         return new CartDiscountReferenceImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy CartDiscountReference
@@ -110,7 +118,7 @@ public interface CartDiscountReference extends Reference, com.commercetools.api.
     public static CartDiscountReferenceBuilder builder() {
         return CartDiscountReferenceBuilder.of();
     }
-
+    
     /**
      * create builder for CartDiscountReference instance
      * @param template instance with prefilled values for the builder
@@ -119,6 +127,7 @@ public interface CartDiscountReference extends Reference, com.commercetools.api.
     public static CartDiscountReferenceBuilder builder(final CartDiscountReference template) {
         return CartDiscountReferenceBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -129,7 +138,7 @@ public interface CartDiscountReference extends Reference, com.commercetools.api.
     default <T> T withCartDiscountReference(Function<CartDiscountReference, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

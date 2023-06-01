@@ -1,19 +1,21 @@
-
 package com.commercetools.history.models.change;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
+import com.commercetools.history.models.change.Change;
 import com.commercetools.history.models.common.DiscountCodeInfo;
+import com.commercetools.history.models.change.AddDiscountCodeChangeImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * AddDiscountCodeChange
@@ -27,9 +29,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .nextValue(nextValueBuilder -> nextValueBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = AddDiscountCodeChangeImpl.class)
 public interface AddDiscountCodeChange extends Change {
 
@@ -45,7 +50,6 @@ public interface AddDiscountCodeChange extends Change {
     @NotNull
     @JsonProperty("type")
     public String getType();
-
     /**
      *  <p>Update action for <code>addDiscountCode</code></p>
      * @return change
@@ -53,7 +57,6 @@ public interface AddDiscountCodeChange extends Change {
     @NotNull
     @JsonProperty("change")
     public String getChange();
-
     /**
      *
      * @return nextValue
@@ -67,23 +70,26 @@ public interface AddDiscountCodeChange extends Change {
      *  <p>Update action for <code>addDiscountCode</code></p>
      * @param change value to be set
      */
-
+    
     public void setChange(final String change);
-
+    
+    
     /**
      * set nextValue
      * @param nextValue value to be set
      */
-
+    
     public void setNextValue(final DiscountCodeInfo nextValue);
+    
 
     /**
      * factory method
      * @return instance of AddDiscountCodeChange
      */
-    public static AddDiscountCodeChange of() {
+    public static AddDiscountCodeChange of(){
         return new AddDiscountCodeChangeImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy AddDiscountCodeChange
@@ -109,8 +115,7 @@ public interface AddDiscountCodeChange extends Change {
         }
         AddDiscountCodeChangeImpl instance = new AddDiscountCodeChangeImpl();
         instance.setChange(template.getChange());
-        instance.setNextValue(
-            com.commercetools.history.models.common.DiscountCodeInfo.deepCopy(template.getNextValue()));
+        instance.setNextValue(com.commercetools.history.models.common.DiscountCodeInfo.deepCopy(template.getNextValue()));
         return instance;
     }
 
@@ -121,7 +126,7 @@ public interface AddDiscountCodeChange extends Change {
     public static AddDiscountCodeChangeBuilder builder() {
         return AddDiscountCodeChangeBuilder.of();
     }
-
+    
     /**
      * create builder for AddDiscountCodeChange instance
      * @param template instance with prefilled values for the builder
@@ -130,6 +135,7 @@ public interface AddDiscountCodeChange extends Change {
     public static AddDiscountCodeChangeBuilder builder(final AddDiscountCodeChange template) {
         return AddDiscountCodeChangeBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -140,7 +146,7 @@ public interface AddDiscountCodeChange extends Change {
     default <T> T withAddDiscountCodeChange(Function<AddDiscountCodeChange, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

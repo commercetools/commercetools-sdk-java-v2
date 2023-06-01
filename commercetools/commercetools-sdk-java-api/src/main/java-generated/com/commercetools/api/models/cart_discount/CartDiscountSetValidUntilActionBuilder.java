@@ -1,10 +1,12 @@
-
 package com.commercetools.api.models.cart_discount;
 
-import java.util.*;
-
+import com.commercetools.api.models.cart_discount.CartDiscountUpdateAction;
+import java.time.ZonedDateTime;
+import com.commercetools.api.models.cart_discount.CartDiscountSetValidUntilAction;
 import javax.annotation.Nullable;
-
+import java.util.*;
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -17,32 +19,39 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     CartDiscountSetValidUntilAction cartDiscountSetValidUntilAction = CartDiscountSetValidUntilAction.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class CartDiscountSetValidUntilActionBuilder implements Builder<CartDiscountSetValidUntilAction> {
 
+    
     @Nullable
     private java.time.ZonedDateTime validUntil;
 
+    
     /**
      *  <p>Value to set. If empty, any existing value will be removed.</p>
      * @param validUntil value to be set
      * @return Builder
      */
-
+    
     public CartDiscountSetValidUntilActionBuilder validUntil(@Nullable final java.time.ZonedDateTime validUntil) {
         this.validUntil = validUntil;
         return this;
     }
+    
+    
 
     /**
      *  <p>Value to set. If empty, any existing value will be removed.</p>
      * @return validUntil
      */
-
+    
     @Nullable
-    public java.time.ZonedDateTime getValidUntil() {
+    public java.time.ZonedDateTime getValidUntil(){
         return this.validUntil;
     }
 
@@ -53,7 +62,7 @@ public class CartDiscountSetValidUntilActionBuilder implements Builder<CartDisco
     public CartDiscountSetValidUntilAction build() {
         return new CartDiscountSetValidUntilActionImpl(validUntil);
     }
-
+    
     /**
      * builds CartDiscountSetValidUntilAction without checking for non-null required values
      * @return CartDiscountSetValidUntilAction
@@ -64,7 +73,7 @@ public class CartDiscountSetValidUntilActionBuilder implements Builder<CartDisco
 
     /**
      * factory method for an instance of CartDiscountSetValidUntilActionBuilder
-     * @return builder
+     * @return builder 
      */
     public static CartDiscountSetValidUntilActionBuilder of() {
         return new CartDiscountSetValidUntilActionBuilder();

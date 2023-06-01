@@ -1,17 +1,20 @@
-
 package com.commercetools.history.models.change;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
+import com.commercetools.history.models.change.Change;
+import com.commercetools.history.models.change.ChangeIsSearchableChangeImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * ChangeIsSearchableChange
@@ -27,9 +30,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .previousValue(true)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = ChangeIsSearchableChangeImpl.class)
 public interface ChangeIsSearchableChange extends Change {
 
@@ -45,7 +51,6 @@ public interface ChangeIsSearchableChange extends Change {
     @NotNull
     @JsonProperty("type")
     public String getType();
-
     /**
      *  <p>Update action for <code>changeIsSearchable</code> on product types</p>
      * @return change
@@ -53,7 +58,6 @@ public interface ChangeIsSearchableChange extends Change {
     @NotNull
     @JsonProperty("change")
     public String getChange();
-
     /**
      *  <p>The name of the updated attribute.</p>
      * @return attributeName
@@ -61,7 +65,6 @@ public interface ChangeIsSearchableChange extends Change {
     @NotNull
     @JsonProperty("attributeName")
     public String getAttributeName();
-
     /**
      *
      * @return nextValue
@@ -69,7 +72,6 @@ public interface ChangeIsSearchableChange extends Change {
     @NotNull
     @JsonProperty("nextValue")
     public Boolean getNextValue();
-
     /**
      *
      * @return previousValue
@@ -82,37 +84,42 @@ public interface ChangeIsSearchableChange extends Change {
      *  <p>Update action for <code>changeIsSearchable</code> on product types</p>
      * @param change value to be set
      */
-
+    
     public void setChange(final String change);
-
+    
+    
     /**
      *  <p>The name of the updated attribute.</p>
      * @param attributeName value to be set
      */
-
+    
     public void setAttributeName(final String attributeName);
-
+    
+    
     /**
      * set nextValue
      * @param nextValue value to be set
      */
-
+    
     public void setNextValue(final Boolean nextValue);
-
+    
+    
     /**
      * set previousValue
      * @param previousValue value to be set
      */
-
+    
     public void setPreviousValue(final Boolean previousValue);
+    
 
     /**
      * factory method
      * @return instance of ChangeIsSearchableChange
      */
-    public static ChangeIsSearchableChange of() {
+    public static ChangeIsSearchableChange of(){
         return new ChangeIsSearchableChangeImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy ChangeIsSearchableChange
@@ -153,7 +160,7 @@ public interface ChangeIsSearchableChange extends Change {
     public static ChangeIsSearchableChangeBuilder builder() {
         return ChangeIsSearchableChangeBuilder.of();
     }
-
+    
     /**
      * create builder for ChangeIsSearchableChange instance
      * @param template instance with prefilled values for the builder
@@ -162,6 +169,7 @@ public interface ChangeIsSearchableChange extends Change {
     public static ChangeIsSearchableChangeBuilder builder(final ChangeIsSearchableChange template) {
         return ChangeIsSearchableChangeBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -172,7 +180,7 @@ public interface ChangeIsSearchableChange extends Change {
     default <T> T withChangeIsSearchableChange(Function<ChangeIsSearchableChange, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

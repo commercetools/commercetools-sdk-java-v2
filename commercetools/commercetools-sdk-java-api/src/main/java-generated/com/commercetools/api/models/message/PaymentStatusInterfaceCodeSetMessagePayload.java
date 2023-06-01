@@ -1,17 +1,20 @@
-
 package com.commercetools.api.models.message;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
+import com.commercetools.api.models.message.MessagePayload;
+import com.commercetools.api.models.message.PaymentStatusInterfaceCodeSetMessagePayloadImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Generated after a successful Set StatusInterfaceCode update action.</p>
@@ -24,9 +27,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .paymentId("{paymentId}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = PaymentStatusInterfaceCodeSetMessagePayloadImpl.class)
 public interface PaymentStatusInterfaceCodeSetMessagePayload extends MessagePayload {
 
@@ -42,12 +48,11 @@ public interface PaymentStatusInterfaceCodeSetMessagePayload extends MessagePayl
     @NotNull
     @JsonProperty("paymentId")
     public String getPaymentId();
-
     /**
      *  <p>The <code>interfaceCode</code> that was set during the Set StatusInterfaceCode update action.</p>
      * @return interfaceCode
      */
-
+    
     @JsonProperty("interfaceCode")
     public String getInterfaceCode();
 
@@ -55,31 +60,33 @@ public interface PaymentStatusInterfaceCodeSetMessagePayload extends MessagePayl
      *  <p>Unique identifier for the Payment for which the Set StatusInterfaceCode update action was applied.</p>
      * @param paymentId value to be set
      */
-
+    
     public void setPaymentId(final String paymentId);
-
+    
+    
     /**
      *  <p>The <code>interfaceCode</code> that was set during the Set StatusInterfaceCode update action.</p>
      * @param interfaceCode value to be set
      */
-
+    
     public void setInterfaceCode(final String interfaceCode);
+    
 
     /**
      * factory method
      * @return instance of PaymentStatusInterfaceCodeSetMessagePayload
      */
-    public static PaymentStatusInterfaceCodeSetMessagePayload of() {
+    public static PaymentStatusInterfaceCodeSetMessagePayload of(){
         return new PaymentStatusInterfaceCodeSetMessagePayloadImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy PaymentStatusInterfaceCodeSetMessagePayload
      * @param template instance to be copied
      * @return copy instance
      */
-    public static PaymentStatusInterfaceCodeSetMessagePayload of(
-            final PaymentStatusInterfaceCodeSetMessagePayload template) {
+    public static PaymentStatusInterfaceCodeSetMessagePayload of(final PaymentStatusInterfaceCodeSetMessagePayload template) {
         PaymentStatusInterfaceCodeSetMessagePayloadImpl instance = new PaymentStatusInterfaceCodeSetMessagePayloadImpl();
         instance.setPaymentId(template.getPaymentId());
         instance.setInterfaceCode(template.getInterfaceCode());
@@ -92,8 +99,7 @@ public interface PaymentStatusInterfaceCodeSetMessagePayload extends MessagePayl
      * @return copy instance
      */
     @Nullable
-    public static PaymentStatusInterfaceCodeSetMessagePayload deepCopy(
-            @Nullable final PaymentStatusInterfaceCodeSetMessagePayload template) {
+    public static PaymentStatusInterfaceCodeSetMessagePayload deepCopy(@Nullable final PaymentStatusInterfaceCodeSetMessagePayload template) {
         if (template == null) {
             return null;
         }
@@ -110,16 +116,16 @@ public interface PaymentStatusInterfaceCodeSetMessagePayload extends MessagePayl
     public static PaymentStatusInterfaceCodeSetMessagePayloadBuilder builder() {
         return PaymentStatusInterfaceCodeSetMessagePayloadBuilder.of();
     }
-
+    
     /**
      * create builder for PaymentStatusInterfaceCodeSetMessagePayload instance
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static PaymentStatusInterfaceCodeSetMessagePayloadBuilder builder(
-            final PaymentStatusInterfaceCodeSetMessagePayload template) {
+    public static PaymentStatusInterfaceCodeSetMessagePayloadBuilder builder(final PaymentStatusInterfaceCodeSetMessagePayload template) {
         return PaymentStatusInterfaceCodeSetMessagePayloadBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -127,11 +133,10 @@ public interface PaymentStatusInterfaceCodeSetMessagePayload extends MessagePayl
      * @param helper function to map the object
      * @return mapped value
      */
-    default <T> T withPaymentStatusInterfaceCodeSetMessagePayload(
-            Function<PaymentStatusInterfaceCodeSetMessagePayload, T> helper) {
+    default <T> T withPaymentStatusInterfaceCodeSetMessagePayload(Function<PaymentStatusInterfaceCodeSetMessagePayload, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

@@ -1,11 +1,12 @@
-
 package com.commercetools.importapi.models.producttypes;
 
+import com.commercetools.importapi.models.common.ImportResource;
+import com.commercetools.importapi.models.producttypes.AttributeDefinition;
+import com.commercetools.importapi.models.producttypes.ProductTypeImport;
+import javax.annotation.Nullable;
 import java.util.*;
 import java.util.function.Function;
-
-import javax.annotation.Nullable;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -21,180 +22,194 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .description("{description}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class ProductTypeImportBuilder implements Builder<ProductTypeImport> {
 
+    
+    
     private String key;
-
+    
+    
+    
     private String name;
-
+    
+    
+    
     private String description;
-
+    
+    
     @Nullable
     private java.util.List<com.commercetools.importapi.models.producttypes.AttributeDefinition> attributes;
 
+    
     /**
      *  <p>User-defined unique identifier.</p>
      * @param key value to be set
      * @return Builder
      */
-
-    public ProductTypeImportBuilder key(final String key) {
+    
+    public ProductTypeImportBuilder key( final String key) {
         this.key = key;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Maps to <code>ProductType.name</code>.</p>
      * @param name value to be set
      * @return Builder
      */
-
-    public ProductTypeImportBuilder name(final String name) {
+    
+    public ProductTypeImportBuilder name( final String name) {
         this.name = name;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Maps to <code>ProductType.description</code>.</p>
      * @param description value to be set
      * @return Builder
      */
-
-    public ProductTypeImportBuilder description(final String description) {
+    
+    public ProductTypeImportBuilder description( final String description) {
         this.description = description;
         return this;
     }
-
+    
+    
+    
     /**
      *  <p>The <code>attributes</code> of ProductType.</p>
      * @param attributes value to be set
      * @return Builder
      */
-
-    public ProductTypeImportBuilder attributes(
-            @Nullable final com.commercetools.importapi.models.producttypes.AttributeDefinition... attributes) {
+    
+    public ProductTypeImportBuilder attributes(@Nullable final com.commercetools.importapi.models.producttypes.AttributeDefinition ...attributes) {
         this.attributes = new ArrayList<>(Arrays.asList(attributes));
         return this;
     }
-
+    
     /**
      *  <p>The <code>attributes</code> of ProductType.</p>
      * @param attributes value to be set
      * @return Builder
      */
-
-    public ProductTypeImportBuilder attributes(
-            @Nullable final java.util.List<com.commercetools.importapi.models.producttypes.AttributeDefinition> attributes) {
+    
+    public ProductTypeImportBuilder attributes(@Nullable final java.util.List<com.commercetools.importapi.models.producttypes.AttributeDefinition> attributes) {
         this.attributes = attributes;
         return this;
     }
-
+    
     /**
      *  <p>The <code>attributes</code> of ProductType.</p>
      * @param attributes value to be set
      * @return Builder
      */
-
-    public ProductTypeImportBuilder plusAttributes(
-            @Nullable final com.commercetools.importapi.models.producttypes.AttributeDefinition... attributes) {
+    
+    public ProductTypeImportBuilder plusAttributes(@Nullable final com.commercetools.importapi.models.producttypes.AttributeDefinition ...attributes) {
         if (this.attributes == null) {
             this.attributes = new ArrayList<>();
         }
         this.attributes.addAll(Arrays.asList(attributes));
         return this;
     }
-
+    
+    
+    
     /**
      *  <p>The <code>attributes</code> of ProductType.</p>
      * @param builder function to build the attributes value
      * @return Builder
      */
-
-    public ProductTypeImportBuilder plusAttributes(
-            Function<com.commercetools.importapi.models.producttypes.AttributeDefinitionBuilder, com.commercetools.importapi.models.producttypes.AttributeDefinitionBuilder> builder) {
+    
+    public ProductTypeImportBuilder plusAttributes(Function<com.commercetools.importapi.models.producttypes.AttributeDefinitionBuilder, com.commercetools.importapi.models.producttypes.AttributeDefinitionBuilder> builder) {
         if (this.attributes == null) {
             this.attributes = new ArrayList<>();
         }
-        this.attributes.add(
-            builder.apply(com.commercetools.importapi.models.producttypes.AttributeDefinitionBuilder.of()).build());
+        this.attributes.add(builder.apply(com.commercetools.importapi.models.producttypes.AttributeDefinitionBuilder.of()).build());
         return this;
     }
-
+    
     /**
      *  <p>The <code>attributes</code> of ProductType.</p>
      * @param builder function to build the attributes value
      * @return Builder
      */
-
-    public ProductTypeImportBuilder withAttributes(
-            Function<com.commercetools.importapi.models.producttypes.AttributeDefinitionBuilder, com.commercetools.importapi.models.producttypes.AttributeDefinitionBuilder> builder) {
+    
+    public ProductTypeImportBuilder withAttributes(Function<com.commercetools.importapi.models.producttypes.AttributeDefinitionBuilder, com.commercetools.importapi.models.producttypes.AttributeDefinitionBuilder> builder) {
         this.attributes = new ArrayList<>();
-        this.attributes.add(
-            builder.apply(com.commercetools.importapi.models.producttypes.AttributeDefinitionBuilder.of()).build());
+        this.attributes.add(builder.apply(com.commercetools.importapi.models.producttypes.AttributeDefinitionBuilder.of()).build());
         return this;
     }
-
+    
     /**
      *  <p>The <code>attributes</code> of ProductType.</p>
      * @param builder function to build the attributes value
      * @return Builder
      */
-
-    public ProductTypeImportBuilder addAttributes(
-            Function<com.commercetools.importapi.models.producttypes.AttributeDefinitionBuilder, com.commercetools.importapi.models.producttypes.AttributeDefinition> builder) {
-        return plusAttributes(
-            builder.apply(com.commercetools.importapi.models.producttypes.AttributeDefinitionBuilder.of()));
+    
+    public ProductTypeImportBuilder addAttributes(Function<com.commercetools.importapi.models.producttypes.AttributeDefinitionBuilder, com.commercetools.importapi.models.producttypes.AttributeDefinition> builder) {
+        return plusAttributes(builder.apply(com.commercetools.importapi.models.producttypes.AttributeDefinitionBuilder.of()));
     }
-
+    
     /**
      *  <p>The <code>attributes</code> of ProductType.</p>
      * @param builder function to build the attributes value
      * @return Builder
      */
-
-    public ProductTypeImportBuilder setAttributes(
-            Function<com.commercetools.importapi.models.producttypes.AttributeDefinitionBuilder, com.commercetools.importapi.models.producttypes.AttributeDefinition> builder) {
-        return attributes(
-            builder.apply(com.commercetools.importapi.models.producttypes.AttributeDefinitionBuilder.of()));
+    
+    public ProductTypeImportBuilder setAttributes(Function<com.commercetools.importapi.models.producttypes.AttributeDefinitionBuilder, com.commercetools.importapi.models.producttypes.AttributeDefinition> builder) {
+        return attributes(builder.apply(com.commercetools.importapi.models.producttypes.AttributeDefinitionBuilder.of()));
     }
+                    
 
     /**
      *  <p>User-defined unique identifier.</p>
      * @return key
      */
-
-    public String getKey() {
+    
+    
+    public String getKey(){
         return this.key;
     }
-
+    
     /**
      *  <p>Maps to <code>ProductType.name</code>.</p>
      * @return name
      */
-
-    public String getName() {
+    
+    
+    public String getName(){
         return this.name;
     }
-
+    
     /**
      *  <p>Maps to <code>ProductType.description</code>.</p>
      * @return description
      */
-
-    public String getDescription() {
+    
+    
+    public String getDescription(){
         return this.description;
     }
-
+    
     /**
      *  <p>The <code>attributes</code> of ProductType.</p>
      * @return attributes
      */
-
+    
     @Nullable
-    public java.util.List<com.commercetools.importapi.models.producttypes.AttributeDefinition> getAttributes() {
+    public java.util.List<com.commercetools.importapi.models.producttypes.AttributeDefinition> getAttributes(){
         return this.attributes;
     }
 
@@ -208,7 +223,7 @@ public class ProductTypeImportBuilder implements Builder<ProductTypeImport> {
         Objects.requireNonNull(description, ProductTypeImport.class + ": description is missing");
         return new ProductTypeImportImpl(key, name, description, attributes);
     }
-
+    
     /**
      * builds ProductTypeImport without checking for non-null required values
      * @return ProductTypeImport
@@ -219,7 +234,7 @@ public class ProductTypeImportBuilder implements Builder<ProductTypeImport> {
 
     /**
      * factory method for an instance of ProductTypeImportBuilder
-     * @return builder
+     * @return builder 
      */
     public static ProductTypeImportBuilder of() {
         return new ProductTypeImportBuilder();

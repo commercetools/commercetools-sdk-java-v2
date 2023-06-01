@@ -1,8 +1,12 @@
-
 package com.commercetools.api.models.project;
 
+import com.commercetools.api.models.project.ShippingRateInputType;
+import com.commercetools.api.models.shipping_method.ShippingRateTierType;
+import com.commercetools.api.models.project.CartScoreType;
+import javax.annotation.Nullable;
 import java.util.*;
-
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -15,10 +19,16 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     CartScoreType cartScoreType = CartScoreType.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class CartScoreTypeBuilder implements Builder<CartScoreType> {
+
+
+
 
     /**
      * builds CartScoreType with checking for non-null required values
@@ -27,7 +37,7 @@ public class CartScoreTypeBuilder implements Builder<CartScoreType> {
     public CartScoreType build() {
         return new CartScoreTypeImpl();
     }
-
+    
     /**
      * builds CartScoreType without checking for non-null required values
      * @return CartScoreType
@@ -38,7 +48,7 @@ public class CartScoreTypeBuilder implements Builder<CartScoreType> {
 
     /**
      * factory method for an instance of CartScoreTypeBuilder
-     * @return builder
+     * @return builder 
      */
     public static CartScoreTypeBuilder of() {
         return new CartScoreTypeBuilder();

@@ -1,8 +1,11 @@
-
 package com.commercetools.api.models.order;
 
+import com.commercetools.api.models.order.OrderUpdateAction;
+import com.commercetools.api.models.order.OrderRemoveItemShippingAddressAction;
+import javax.annotation.Nullable;
 import java.util.*;
-
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -16,30 +19,39 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .addressKey("{addressKey}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class OrderRemoveItemShippingAddressActionBuilder implements Builder<OrderRemoveItemShippingAddressAction> {
 
+    
+    
     private String addressKey;
 
+    
     /**
      * set the value to the addressKey
      * @param addressKey value to be set
      * @return Builder
      */
-
-    public OrderRemoveItemShippingAddressActionBuilder addressKey(final String addressKey) {
+    
+    public OrderRemoveItemShippingAddressActionBuilder addressKey( final String addressKey) {
         this.addressKey = addressKey;
         return this;
     }
+    
+    
 
     /**
      * value of addressKey}
      * @return addressKey
      */
-
-    public String getAddressKey() {
+    
+    
+    public String getAddressKey(){
         return this.addressKey;
     }
 
@@ -51,7 +63,7 @@ public class OrderRemoveItemShippingAddressActionBuilder implements Builder<Orde
         Objects.requireNonNull(addressKey, OrderRemoveItemShippingAddressAction.class + ": addressKey is missing");
         return new OrderRemoveItemShippingAddressActionImpl(addressKey);
     }
-
+    
     /**
      * builds OrderRemoveItemShippingAddressAction without checking for non-null required values
      * @return OrderRemoveItemShippingAddressAction
@@ -62,7 +74,7 @@ public class OrderRemoveItemShippingAddressActionBuilder implements Builder<Orde
 
     /**
      * factory method for an instance of OrderRemoveItemShippingAddressActionBuilder
-     * @return builder
+     * @return builder 
      */
     public static OrderRemoveItemShippingAddressActionBuilder of() {
         return new OrderRemoveItemShippingAddressActionBuilder();

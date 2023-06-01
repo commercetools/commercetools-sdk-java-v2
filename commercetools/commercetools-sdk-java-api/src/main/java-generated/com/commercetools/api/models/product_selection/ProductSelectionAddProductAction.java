@@ -1,19 +1,22 @@
-
 package com.commercetools.api.models.product_selection;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
 import com.commercetools.api.models.product.ProductResourceIdentifier;
+import com.commercetools.api.models.product_selection.ProductSelectionUpdateAction;
+import com.commercetools.api.models.product_selection.ProductVariantSelection;
+import com.commercetools.api.models.product_selection.ProductSelectionAddProductActionImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Adds a Product to the Product Selection.</p>
@@ -27,9 +30,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .product(productBuilder -> productBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = ProductSelectionAddProductActionImpl.class)
 public interface ProductSelectionAddProductAction extends ProductSelectionUpdateAction {
 
@@ -46,7 +52,6 @@ public interface ProductSelectionAddProductAction extends ProductSelectionUpdate
     @Valid
     @JsonProperty("product")
     public ProductResourceIdentifier getProduct();
-
     /**
      *  <p>Defines which Variants of the Product will be included in the Product Selection. If not supplied all Variants are deemed to be included.</p>
      * @return variantSelection
@@ -59,23 +64,26 @@ public interface ProductSelectionAddProductAction extends ProductSelectionUpdate
      *  <p>ResourceIdentifier of the Product</p>
      * @param product value to be set
      */
-
+    
     public void setProduct(final ProductResourceIdentifier product);
-
+    
+    
     /**
      *  <p>Defines which Variants of the Product will be included in the Product Selection. If not supplied all Variants are deemed to be included.</p>
      * @param variantSelection value to be set
      */
-
+    
     public void setVariantSelection(final ProductVariantSelection variantSelection);
+    
 
     /**
      * factory method
      * @return instance of ProductSelectionAddProductAction
      */
-    public static ProductSelectionAddProductAction of() {
+    public static ProductSelectionAddProductAction of(){
         return new ProductSelectionAddProductActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy ProductSelectionAddProductAction
@@ -100,10 +108,8 @@ public interface ProductSelectionAddProductAction extends ProductSelectionUpdate
             return null;
         }
         ProductSelectionAddProductActionImpl instance = new ProductSelectionAddProductActionImpl();
-        instance.setProduct(
-            com.commercetools.api.models.product.ProductResourceIdentifier.deepCopy(template.getProduct()));
-        instance.setVariantSelection(com.commercetools.api.models.product_selection.ProductVariantSelection
-                .deepCopy(template.getVariantSelection()));
+        instance.setProduct(com.commercetools.api.models.product.ProductResourceIdentifier.deepCopy(template.getProduct()));
+        instance.setVariantSelection(com.commercetools.api.models.product_selection.ProductVariantSelection.deepCopy(template.getVariantSelection()));
         return instance;
     }
 
@@ -114,7 +120,7 @@ public interface ProductSelectionAddProductAction extends ProductSelectionUpdate
     public static ProductSelectionAddProductActionBuilder builder() {
         return ProductSelectionAddProductActionBuilder.of();
     }
-
+    
     /**
      * create builder for ProductSelectionAddProductAction instance
      * @param template instance with prefilled values for the builder
@@ -123,6 +129,7 @@ public interface ProductSelectionAddProductAction extends ProductSelectionUpdate
     public static ProductSelectionAddProductActionBuilder builder(final ProductSelectionAddProductAction template) {
         return ProductSelectionAddProductActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -133,7 +140,7 @@ public interface ProductSelectionAddProductAction extends ProductSelectionUpdate
     default <T> T withProductSelectionAddProductAction(Function<ProductSelectionAddProductAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

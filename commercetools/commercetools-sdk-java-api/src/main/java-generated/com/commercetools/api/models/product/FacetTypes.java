@@ -1,27 +1,29 @@
-
 package com.commercetools.api.models.product;
-
-import java.util.Arrays;
-import java.util.Optional;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-
+import java.lang.String;
+import java.util.Arrays;
+import java.util.Optional;
 import io.vrap.rmf.base.client.JsonEnum;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
  * FacetTypes
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public interface FacetTypes extends JsonEnum {
 
+    
     FacetTypes TERMS = FacetTypesEnum.TERMS;
-
+    
     FacetTypes RANGE = FacetTypesEnum.RANGE;
-
+    
     FacetTypes FILTER = FacetTypesEnum.FILTER;
-
+    
     /**
      * possible values of FacetTypes
      */
@@ -30,12 +32,12 @@ public interface FacetTypes extends JsonEnum {
          * terms
          */
         TERMS("terms"),
-
+        
         /**
          * range
          */
         RANGE("range"),
-
+        
         /**
          * filter
          */
@@ -92,7 +94,7 @@ public interface FacetTypes extends JsonEnum {
             public String name() {
                 return value.toUpperCase();
             }
-
+            
             public String toString() {
                 return value;
             }
@@ -107,7 +109,7 @@ public interface FacetTypes extends JsonEnum {
     public static Optional<FacetTypes> findEnumViaJsonName(String jsonName) {
         return Arrays.stream(values()).filter(t -> t.getJsonName().equals(jsonName)).findFirst();
     }
-
+    
     /**
      * possible enum values
      * @return array of possible enum values
@@ -115,5 +117,5 @@ public interface FacetTypes extends JsonEnum {
     public static FacetTypes[] values() {
         return FacetTypesEnum.values();
     }
-
+    
 }

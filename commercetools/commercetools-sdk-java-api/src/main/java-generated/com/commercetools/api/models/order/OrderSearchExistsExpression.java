@@ -1,18 +1,21 @@
-
 package com.commercetools.api.models.order;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
+import com.commercetools.api.models.order.OrderSearchQueryExpression;
+import com.commercetools.api.models.order.OrderSearchQueryExpressionValue;
+import com.commercetools.api.models.order.OrderSearchExistsExpressionImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * OrderSearchExistsExpression
@@ -25,11 +28,15 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .exists(existsBuilder -> existsBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = OrderSearchExistsExpressionImpl.class)
 public interface OrderSearchExistsExpression extends OrderSearchQueryExpression {
+
 
     /**
      *
@@ -44,16 +51,18 @@ public interface OrderSearchExistsExpression extends OrderSearchQueryExpression 
      * set exists
      * @param exists value to be set
      */
-
+    
     public void setExists(final OrderSearchQueryExpressionValue exists);
+    
 
     /**
      * factory method
      * @return instance of OrderSearchExistsExpression
      */
-    public static OrderSearchExistsExpression of() {
+    public static OrderSearchExistsExpression of(){
         return new OrderSearchExistsExpressionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy OrderSearchExistsExpression
@@ -77,8 +86,7 @@ public interface OrderSearchExistsExpression extends OrderSearchQueryExpression 
             return null;
         }
         OrderSearchExistsExpressionImpl instance = new OrderSearchExistsExpressionImpl();
-        instance.setExists(
-            com.commercetools.api.models.order.OrderSearchQueryExpressionValue.deepCopy(template.getExists()));
+        instance.setExists(com.commercetools.api.models.order.OrderSearchQueryExpressionValue.deepCopy(template.getExists()));
         return instance;
     }
 
@@ -89,7 +97,7 @@ public interface OrderSearchExistsExpression extends OrderSearchQueryExpression 
     public static OrderSearchExistsExpressionBuilder builder() {
         return OrderSearchExistsExpressionBuilder.of();
     }
-
+    
     /**
      * create builder for OrderSearchExistsExpression instance
      * @param template instance with prefilled values for the builder
@@ -98,6 +106,7 @@ public interface OrderSearchExistsExpression extends OrderSearchQueryExpression 
     public static OrderSearchExistsExpressionBuilder builder(final OrderSearchExistsExpression template) {
         return OrderSearchExistsExpressionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -108,7 +117,7 @@ public interface OrderSearchExistsExpression extends OrderSearchQueryExpression 
     default <T> T withOrderSearchExistsExpression(Function<OrderSearchExistsExpression, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

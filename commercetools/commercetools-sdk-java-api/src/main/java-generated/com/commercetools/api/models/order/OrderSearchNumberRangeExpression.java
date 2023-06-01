@@ -1,18 +1,21 @@
-
 package com.commercetools.api.models.order;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
+import com.commercetools.api.models.order.OrderSearchNumberRangeValue;
+import com.commercetools.api.models.order.OrderSearchQueryExpression;
+import com.commercetools.api.models.order.OrderSearchNumberRangeExpressionImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * OrderSearchNumberRangeExpression
@@ -25,11 +28,15 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .range(rangeBuilder -> rangeBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = OrderSearchNumberRangeExpressionImpl.class)
 public interface OrderSearchNumberRangeExpression extends OrderSearchQueryExpression {
+
 
     /**
      *
@@ -44,16 +51,18 @@ public interface OrderSearchNumberRangeExpression extends OrderSearchQueryExpres
      * set range
      * @param range value to be set
      */
-
+    
     public void setRange(final OrderSearchNumberRangeValue range);
+    
 
     /**
      * factory method
      * @return instance of OrderSearchNumberRangeExpression
      */
-    public static OrderSearchNumberRangeExpression of() {
+    public static OrderSearchNumberRangeExpression of(){
         return new OrderSearchNumberRangeExpressionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy OrderSearchNumberRangeExpression
@@ -88,7 +97,7 @@ public interface OrderSearchNumberRangeExpression extends OrderSearchQueryExpres
     public static OrderSearchNumberRangeExpressionBuilder builder() {
         return OrderSearchNumberRangeExpressionBuilder.of();
     }
-
+    
     /**
      * create builder for OrderSearchNumberRangeExpression instance
      * @param template instance with prefilled values for the builder
@@ -97,6 +106,7 @@ public interface OrderSearchNumberRangeExpression extends OrderSearchQueryExpres
     public static OrderSearchNumberRangeExpressionBuilder builder(final OrderSearchNumberRangeExpression template) {
         return OrderSearchNumberRangeExpressionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -107,7 +117,7 @@ public interface OrderSearchNumberRangeExpression extends OrderSearchQueryExpres
     default <T> T withOrderSearchNumberRangeExpression(Function<OrderSearchNumberRangeExpression, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

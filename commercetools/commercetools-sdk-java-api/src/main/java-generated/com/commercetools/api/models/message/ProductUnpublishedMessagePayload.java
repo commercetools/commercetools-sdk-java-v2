@@ -1,16 +1,20 @@
-
 package com.commercetools.api.models.message;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
+import com.commercetools.api.models.message.MessagePayload;
+import com.commercetools.api.models.message.ProductUnpublishedMessagePayloadImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Generated after a successful Unpublish Product update action.</p>
@@ -22,9 +26,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     ProductUnpublishedMessagePayload productUnpublishedMessagePayload = ProductUnpublishedMessagePayload.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = ProductUnpublishedMessagePayloadImpl.class)
 public interface ProductUnpublishedMessagePayload extends MessagePayload {
 
@@ -33,13 +40,16 @@ public interface ProductUnpublishedMessagePayload extends MessagePayload {
      */
     String PRODUCT_UNPUBLISHED = "ProductUnpublished";
 
+
+
     /**
      * factory method
      * @return instance of ProductUnpublishedMessagePayload
      */
-    public static ProductUnpublishedMessagePayload of() {
+    public static ProductUnpublishedMessagePayload of(){
         return new ProductUnpublishedMessagePayloadImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy ProductUnpublishedMessagePayload
@@ -72,7 +82,7 @@ public interface ProductUnpublishedMessagePayload extends MessagePayload {
     public static ProductUnpublishedMessagePayloadBuilder builder() {
         return ProductUnpublishedMessagePayloadBuilder.of();
     }
-
+    
     /**
      * create builder for ProductUnpublishedMessagePayload instance
      * @param template instance with prefilled values for the builder
@@ -81,6 +91,7 @@ public interface ProductUnpublishedMessagePayload extends MessagePayload {
     public static ProductUnpublishedMessagePayloadBuilder builder(final ProductUnpublishedMessagePayload template) {
         return ProductUnpublishedMessagePayloadBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -91,7 +102,7 @@ public interface ProductUnpublishedMessagePayload extends MessagePayload {
     default <T> T withProductUnpublishedMessagePayload(Function<ProductUnpublishedMessagePayload, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

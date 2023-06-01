@@ -1,19 +1,21 @@
-
 package com.commercetools.history.models.change;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
+import com.commercetools.history.models.change.Change;
 import com.commercetools.history.models.change_value.AttributeValue;
+import com.commercetools.history.models.change.SetAttributeChangeImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * SetAttributeChange
@@ -29,9 +31,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .nextValue(nextValueBuilder -> nextValueBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = SetAttributeChangeImpl.class)
 public interface SetAttributeChange extends Change {
 
@@ -47,7 +52,6 @@ public interface SetAttributeChange extends Change {
     @NotNull
     @JsonProperty("type")
     public String getType();
-
     /**
      *  <p>Update action for <code>setAttribute</code></p>
      * @return change
@@ -55,7 +59,6 @@ public interface SetAttributeChange extends Change {
     @NotNull
     @JsonProperty("change")
     public String getChange();
-
     /**
      *
      * @return catalogData
@@ -63,7 +66,6 @@ public interface SetAttributeChange extends Change {
     @NotNull
     @JsonProperty("catalogData")
     public String getCatalogData();
-
     /**
      *
      * @return previousValue
@@ -72,7 +74,6 @@ public interface SetAttributeChange extends Change {
     @Valid
     @JsonProperty("previousValue")
     public AttributeValue getPreviousValue();
-
     /**
      *
      * @return nextValue
@@ -86,37 +87,42 @@ public interface SetAttributeChange extends Change {
      *  <p>Update action for <code>setAttribute</code></p>
      * @param change value to be set
      */
-
+    
     public void setChange(final String change);
-
+    
+    
     /**
      * set catalogData
      * @param catalogData value to be set
      */
-
+    
     public void setCatalogData(final String catalogData);
-
+    
+    
     /**
      * set previousValue
      * @param previousValue value to be set
      */
-
+    
     public void setPreviousValue(final AttributeValue previousValue);
-
+    
+    
     /**
      * set nextValue
      * @param nextValue value to be set
      */
-
+    
     public void setNextValue(final AttributeValue nextValue);
+    
 
     /**
      * factory method
      * @return instance of SetAttributeChange
      */
-    public static SetAttributeChange of() {
+    public static SetAttributeChange of(){
         return new SetAttributeChangeImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy SetAttributeChange
@@ -145,10 +151,8 @@ public interface SetAttributeChange extends Change {
         SetAttributeChangeImpl instance = new SetAttributeChangeImpl();
         instance.setChange(template.getChange());
         instance.setCatalogData(template.getCatalogData());
-        instance.setPreviousValue(
-            com.commercetools.history.models.change_value.AttributeValue.deepCopy(template.getPreviousValue()));
-        instance.setNextValue(
-            com.commercetools.history.models.change_value.AttributeValue.deepCopy(template.getNextValue()));
+        instance.setPreviousValue(com.commercetools.history.models.change_value.AttributeValue.deepCopy(template.getPreviousValue()));
+        instance.setNextValue(com.commercetools.history.models.change_value.AttributeValue.deepCopy(template.getNextValue()));
         return instance;
     }
 
@@ -159,7 +163,7 @@ public interface SetAttributeChange extends Change {
     public static SetAttributeChangeBuilder builder() {
         return SetAttributeChangeBuilder.of();
     }
-
+    
     /**
      * create builder for SetAttributeChange instance
      * @param template instance with prefilled values for the builder
@@ -168,6 +172,7 @@ public interface SetAttributeChange extends Change {
     public static SetAttributeChangeBuilder builder(final SetAttributeChange template) {
         return SetAttributeChangeBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -178,7 +183,7 @@ public interface SetAttributeChange extends Change {
     default <T> T withSetAttributeChange(Function<SetAttributeChange, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

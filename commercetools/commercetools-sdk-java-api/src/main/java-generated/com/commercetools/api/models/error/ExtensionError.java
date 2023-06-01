@@ -1,17 +1,20 @@
-
 package com.commercetools.api.models.error;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
+import java.lang.Object;
+import com.commercetools.api.models.error.ExtensionErrorImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * ExtensionError
@@ -26,11 +29,15 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .extensionId("{extensionId}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = ExtensionErrorImpl.class)
-public interface ExtensionError {
+public interface ExtensionError  {
+
 
     /**
      *  <p>Error code caused by the Extension. For example, <code>InvalidField</code>.</p>
@@ -39,7 +46,6 @@ public interface ExtensionError {
     @NotNull
     @JsonProperty("code")
     public String getCode();
-
     /**
      *  <p>Plain text description of the error.</p>
      * @return message
@@ -47,7 +53,6 @@ public interface ExtensionError {
     @NotNull
     @JsonProperty("message")
     public String getMessage();
-
     /**
      *  <p>Unique identifier of the Extension.</p>
      * @return extensionId
@@ -55,15 +60,13 @@ public interface ExtensionError {
     @NotNull
     @JsonProperty("extensionId")
     public String getExtensionId();
-
     /**
      *  <p>User-defined unique identifier of the Extension.</p>
      * @return extensionKey
      */
-
+    
     @JsonProperty("extensionKey")
     public String getExtensionKey();
-
     /**
      *  <p>Error-specific additional fields.</p>
      * @return map of the pattern property values
@@ -76,36 +79,40 @@ public interface ExtensionError {
      *  <p>Error code caused by the Extension. For example, <code>InvalidField</code>.</p>
      * @param code value to be set
      */
-
+    
     public void setCode(final String code);
-
+    
+    
     /**
      *  <p>Plain text description of the error.</p>
      * @param message value to be set
      */
-
+    
     public void setMessage(final String message);
-
+    
+    
     /**
      *  <p>Unique identifier of the Extension.</p>
      * @param extensionId value to be set
      */
-
+    
     public void setExtensionId(final String extensionId);
-
+    
+    
     /**
      *  <p>User-defined unique identifier of the Extension.</p>
      * @param extensionKey value to be set
      */
-
+    
     public void setExtensionKey(final String extensionKey);
-
+    
+    
     /**
      *  <p>Error-specific additional fields.</p>
      * @param key property name
      * @param value property value
      */
-
+    
     @JsonAnySetter
     public void setValue(String key, Object value);
 
@@ -113,9 +120,10 @@ public interface ExtensionError {
      * factory method
      * @return instance of ExtensionError
      */
-    public static ExtensionError of() {
+    public static ExtensionError of(){
         return new ExtensionErrorImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy ExtensionError
@@ -158,7 +166,7 @@ public interface ExtensionError {
     public static ExtensionErrorBuilder builder() {
         return ExtensionErrorBuilder.of();
     }
-
+    
     /**
      * create builder for ExtensionError instance
      * @param template instance with prefilled values for the builder
@@ -167,6 +175,7 @@ public interface ExtensionError {
     public static ExtensionErrorBuilder builder(final ExtensionError template) {
         return ExtensionErrorBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -177,7 +186,7 @@ public interface ExtensionError {
     default <T> T withExtensionError(Function<ExtensionError, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

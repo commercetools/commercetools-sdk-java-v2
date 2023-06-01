@@ -1,19 +1,21 @@
-
 package com.commercetools.api.models.message;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
 import com.commercetools.api.models.cart.LineItem;
+import com.commercetools.api.models.message.OrderMessagePayload;
+import com.commercetools.api.models.message.OrderLineItemAddedMessagePayloadImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Generated after a successful Add Line Item update action.</p>
@@ -27,9 +29,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .addedQuantity(0.3)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = OrderLineItemAddedMessagePayloadImpl.class)
 public interface OrderLineItemAddedMessagePayload extends OrderMessagePayload {
 
@@ -46,7 +51,6 @@ public interface OrderLineItemAddedMessagePayload extends OrderMessagePayload {
     @Valid
     @JsonProperty("lineItem")
     public LineItem getLineItem();
-
     /**
      *  <p>Quantity of Line Items that were added to the Order.</p>
      * @return addedQuantity
@@ -59,23 +63,26 @@ public interface OrderLineItemAddedMessagePayload extends OrderMessagePayload {
      *  <p>Line Item that was added to the Order.</p>
      * @param lineItem value to be set
      */
-
+    
     public void setLineItem(final LineItem lineItem);
-
+    
+    
     /**
      *  <p>Quantity of Line Items that were added to the Order.</p>
      * @param addedQuantity value to be set
      */
-
+    
     public void setAddedQuantity(final Long addedQuantity);
+    
 
     /**
      * factory method
      * @return instance of OrderLineItemAddedMessagePayload
      */
-    public static OrderLineItemAddedMessagePayload of() {
+    public static OrderLineItemAddedMessagePayload of(){
         return new OrderLineItemAddedMessagePayloadImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy OrderLineItemAddedMessagePayload
@@ -112,7 +119,7 @@ public interface OrderLineItemAddedMessagePayload extends OrderMessagePayload {
     public static OrderLineItemAddedMessagePayloadBuilder builder() {
         return OrderLineItemAddedMessagePayloadBuilder.of();
     }
-
+    
     /**
      * create builder for OrderLineItemAddedMessagePayload instance
      * @param template instance with prefilled values for the builder
@@ -121,6 +128,7 @@ public interface OrderLineItemAddedMessagePayload extends OrderMessagePayload {
     public static OrderLineItemAddedMessagePayloadBuilder builder(final OrderLineItemAddedMessagePayload template) {
         return OrderLineItemAddedMessagePayloadBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -131,7 +139,7 @@ public interface OrderLineItemAddedMessagePayload extends OrderMessagePayload {
     default <T> T withOrderLineItemAddedMessagePayload(Function<OrderLineItemAddedMessagePayload, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

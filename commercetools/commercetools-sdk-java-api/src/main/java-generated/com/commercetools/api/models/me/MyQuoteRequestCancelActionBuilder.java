@@ -1,8 +1,11 @@
-
 package com.commercetools.api.models.me;
 
+import com.commercetools.api.models.me.MyQuoteRequestUpdateAction;
+import com.commercetools.api.models.me.MyQuoteRequestCancelAction;
+import javax.annotation.Nullable;
 import java.util.*;
-
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -15,10 +18,16 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     MyQuoteRequestCancelAction myQuoteRequestCancelAction = MyQuoteRequestCancelAction.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class MyQuoteRequestCancelActionBuilder implements Builder<MyQuoteRequestCancelAction> {
+
+
+
 
     /**
      * builds MyQuoteRequestCancelAction with checking for non-null required values
@@ -27,7 +36,7 @@ public class MyQuoteRequestCancelActionBuilder implements Builder<MyQuoteRequest
     public MyQuoteRequestCancelAction build() {
         return new MyQuoteRequestCancelActionImpl();
     }
-
+    
     /**
      * builds MyQuoteRequestCancelAction without checking for non-null required values
      * @return MyQuoteRequestCancelAction
@@ -38,7 +47,7 @@ public class MyQuoteRequestCancelActionBuilder implements Builder<MyQuoteRequest
 
     /**
      * factory method for an instance of MyQuoteRequestCancelActionBuilder
-     * @return builder
+     * @return builder 
      */
     public static MyQuoteRequestCancelActionBuilder of() {
         return new MyQuoteRequestCancelActionBuilder();

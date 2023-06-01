@@ -1,19 +1,22 @@
-
 package com.commercetools.api.models.shipping_method;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-
+import com.commercetools.api.models.shipping_method.ShippingMethodUpdateAction;
 import com.commercetools.api.models.type.FieldContainer;
 import com.commercetools.api.models.type.TypeResourceIdentifier;
+import com.commercetools.api.models.shipping_method.ShippingMethodSetCustomTypeActionImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * ShippingMethodSetCustomTypeAction
@@ -25,9 +28,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     ShippingMethodSetCustomTypeAction shippingMethodSetCustomTypeAction = ShippingMethodSetCustomTypeAction.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = ShippingMethodSetCustomTypeActionImpl.class)
 public interface ShippingMethodSetCustomTypeAction extends ShippingMethodUpdateAction {
 
@@ -43,7 +49,6 @@ public interface ShippingMethodSetCustomTypeAction extends ShippingMethodUpdateA
     @Valid
     @JsonProperty("type")
     public TypeResourceIdentifier getType();
-
     /**
      *  <p>Sets the Custom Fields fields for the ShippingMethod.</p>
      * @return fields
@@ -56,23 +61,26 @@ public interface ShippingMethodSetCustomTypeAction extends ShippingMethodUpdateA
      *  <p>Defines the Type that extends the ShippingMethod with Custom Fields. If absent, any existing Type and Custom Fields are removed from the ShippingMethod.</p>
      * @param type value to be set
      */
-
+    
     public void setType(final TypeResourceIdentifier type);
-
+    
+    
     /**
      *  <p>Sets the Custom Fields fields for the ShippingMethod.</p>
      * @param fields value to be set
      */
-
+    
     public void setFields(final FieldContainer fields);
+    
 
     /**
      * factory method
      * @return instance of ShippingMethodSetCustomTypeAction
      */
-    public static ShippingMethodSetCustomTypeAction of() {
+    public static ShippingMethodSetCustomTypeAction of(){
         return new ShippingMethodSetCustomTypeActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy ShippingMethodSetCustomTypeAction
@@ -92,8 +100,7 @@ public interface ShippingMethodSetCustomTypeAction extends ShippingMethodUpdateA
      * @return copy instance
      */
     @Nullable
-    public static ShippingMethodSetCustomTypeAction deepCopy(
-            @Nullable final ShippingMethodSetCustomTypeAction template) {
+    public static ShippingMethodSetCustomTypeAction deepCopy(@Nullable final ShippingMethodSetCustomTypeAction template) {
         if (template == null) {
             return null;
         }
@@ -110,7 +117,7 @@ public interface ShippingMethodSetCustomTypeAction extends ShippingMethodUpdateA
     public static ShippingMethodSetCustomTypeActionBuilder builder() {
         return ShippingMethodSetCustomTypeActionBuilder.of();
     }
-
+    
     /**
      * create builder for ShippingMethodSetCustomTypeAction instance
      * @param template instance with prefilled values for the builder
@@ -119,6 +126,7 @@ public interface ShippingMethodSetCustomTypeAction extends ShippingMethodUpdateA
     public static ShippingMethodSetCustomTypeActionBuilder builder(final ShippingMethodSetCustomTypeAction template) {
         return ShippingMethodSetCustomTypeActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -129,7 +137,7 @@ public interface ShippingMethodSetCustomTypeAction extends ShippingMethodUpdateA
     default <T> T withShippingMethodSetCustomTypeAction(Function<ShippingMethodSetCustomTypeAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

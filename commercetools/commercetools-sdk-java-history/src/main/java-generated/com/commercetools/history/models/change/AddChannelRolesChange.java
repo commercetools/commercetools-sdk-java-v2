@@ -1,18 +1,21 @@
-
 package com.commercetools.history.models.change;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
-
+import com.commercetools.history.models.change.Change;
 import com.commercetools.history.models.common.ChannelRole;
+import com.commercetools.history.models.change.AddChannelRolesChangeImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * AddChannelRolesChange
@@ -27,9 +30,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .plusNextValue(nextValueBuilder -> nextValueBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = AddChannelRolesChangeImpl.class)
 public interface AddChannelRolesChange extends Change {
 
@@ -45,7 +51,6 @@ public interface AddChannelRolesChange extends Change {
     @NotNull
     @JsonProperty("type")
     public String getType();
-
     /**
      *
      * @return change
@@ -53,7 +58,6 @@ public interface AddChannelRolesChange extends Change {
     @NotNull
     @JsonProperty("change")
     public String getChange();
-
     /**
      *
      * @return previousValue
@@ -61,7 +65,6 @@ public interface AddChannelRolesChange extends Change {
     @NotNull
     @JsonProperty("previousValue")
     public List<ChannelRole> getPreviousValue();
-
     /**
      *
      * @return nextValue
@@ -74,46 +77,46 @@ public interface AddChannelRolesChange extends Change {
      * set change
      * @param change value to be set
      */
-
+    
     public void setChange(final String change);
-
+    
+    
     /**
      * set previousValue
      * @param previousValue values to be set
      */
-
+    
     @JsonIgnore
-    public void setPreviousValue(final ChannelRole... previousValue);
-
+    public void setPreviousValue(final ChannelRole ...previousValue);
     /**
      * set previousValue
      * @param previousValue values to be set
      */
-
+    
     public void setPreviousValue(final List<ChannelRole> previousValue);
-
+    
     /**
      * set nextValue
      * @param nextValue values to be set
      */
-
+    
     @JsonIgnore
-    public void setNextValue(final ChannelRole... nextValue);
-
+    public void setNextValue(final ChannelRole ...nextValue);
     /**
      * set nextValue
      * @param nextValue values to be set
      */
-
+    
     public void setNextValue(final List<ChannelRole> nextValue);
 
     /**
      * factory method
      * @return instance of AddChannelRolesChange
      */
-    public static AddChannelRolesChange of() {
+    public static AddChannelRolesChange of(){
         return new AddChannelRolesChangeImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy AddChannelRolesChange
@@ -140,8 +143,12 @@ public interface AddChannelRolesChange extends Change {
         }
         AddChannelRolesChangeImpl instance = new AddChannelRolesChangeImpl();
         instance.setChange(template.getChange());
-        instance.setPreviousValue(Optional.ofNullable(template.getPreviousValue()).map(ArrayList::new).orElse(null));
-        instance.setNextValue(Optional.ofNullable(template.getNextValue()).map(ArrayList::new).orElse(null));
+        instance.setPreviousValue(Optional.ofNullable(template.getPreviousValue())
+                .map(ArrayList::new)
+                .orElse(null));
+        instance.setNextValue(Optional.ofNullable(template.getNextValue())
+                .map(ArrayList::new)
+                .orElse(null));
         return instance;
     }
 
@@ -152,7 +159,7 @@ public interface AddChannelRolesChange extends Change {
     public static AddChannelRolesChangeBuilder builder() {
         return AddChannelRolesChangeBuilder.of();
     }
-
+    
     /**
      * create builder for AddChannelRolesChange instance
      * @param template instance with prefilled values for the builder
@@ -161,6 +168,7 @@ public interface AddChannelRolesChange extends Change {
     public static AddChannelRolesChangeBuilder builder(final AddChannelRolesChange template) {
         return AddChannelRolesChangeBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -171,7 +179,7 @@ public interface AddChannelRolesChange extends Change {
     default <T> T withAddChannelRolesChange(Function<AddChannelRolesChange, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

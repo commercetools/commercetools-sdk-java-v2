@@ -1,8 +1,11 @@
-
 package com.commercetools.importapi.models.products;
 
+import com.commercetools.importapi.models.products.SuggestTokenizer;
+import com.commercetools.importapi.models.products.CustomTokenizer;
+import javax.annotation.Nullable;
 import java.util.*;
-
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -16,11 +19,16 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .plusInputs(inputsBuilder -> inputsBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class CustomTokenizerBuilder implements Builder<CustomTokenizer> {
 
+    
+    
     private java.util.List<String> inputs;
 
     /**
@@ -28,43 +36,47 @@ public class CustomTokenizerBuilder implements Builder<CustomTokenizer> {
      * @param inputs value to be set
      * @return Builder
      */
-
-    public CustomTokenizerBuilder inputs(final String... inputs) {
+    
+    public CustomTokenizerBuilder inputs( final String ...inputs) {
         this.inputs = new ArrayList<>(Arrays.asList(inputs));
         return this;
     }
-
+    
     /**
      * set value to the inputs
      * @param inputs value to be set
      * @return Builder
      */
-
-    public CustomTokenizerBuilder inputs(final java.util.List<String> inputs) {
+    
+    public CustomTokenizerBuilder inputs( final java.util.List<String> inputs) {
         this.inputs = inputs;
         return this;
     }
-
+    
     /**
      * add values to the inputs
      * @param inputs value to be set
      * @return Builder
      */
-
-    public CustomTokenizerBuilder plusInputs(final String... inputs) {
+    
+    public CustomTokenizerBuilder plusInputs( final String ...inputs) {
         if (this.inputs == null) {
             this.inputs = new ArrayList<>();
         }
         this.inputs.addAll(Arrays.asList(inputs));
         return this;
     }
+    
+    
+    
 
     /**
      * value of inputs}
      * @return inputs
      */
-
-    public java.util.List<String> getInputs() {
+    
+    
+    public java.util.List<String> getInputs(){
         return this.inputs;
     }
 
@@ -76,7 +88,7 @@ public class CustomTokenizerBuilder implements Builder<CustomTokenizer> {
         Objects.requireNonNull(inputs, CustomTokenizer.class + ": inputs is missing");
         return new CustomTokenizerImpl(inputs);
     }
-
+    
     /**
      * builds CustomTokenizer without checking for non-null required values
      * @return CustomTokenizer
@@ -87,7 +99,7 @@ public class CustomTokenizerBuilder implements Builder<CustomTokenizer> {
 
     /**
      * factory method for an instance of CustomTokenizerBuilder
-     * @return builder
+     * @return builder 
      */
     public static CustomTokenizerBuilder of() {
         return new CustomTokenizerBuilder();

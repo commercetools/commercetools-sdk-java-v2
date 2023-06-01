@@ -1,19 +1,20 @@
-
 package com.commercetools.history.models.change_history;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-import java.util.stream.Collectors;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
+import com.commercetools.history.models.change_history.Record;
+import com.commercetools.history.models.change_history.RecordPagedQueryResponseImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Response to a query request for Record.</p>
@@ -30,11 +31,15 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .plusResults(resultsBuilder -> resultsBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = RecordPagedQueryResponseImpl.class)
-public interface RecordPagedQueryResponse {
+public interface RecordPagedQueryResponse  {
+
 
     /**
      *  <p>Number of results requested.</p>
@@ -43,7 +48,6 @@ public interface RecordPagedQueryResponse {
     @NotNull
     @JsonProperty("limit")
     public Integer getLimit();
-
     /**
      *  <p>Actual number of results returned.</p>
      * @return count
@@ -51,7 +55,6 @@ public interface RecordPagedQueryResponse {
     @NotNull
     @JsonProperty("count")
     public Integer getCount();
-
     /**
      *  <p>Total number of results matching the query. This number is an estimation and not strongly consistent.</p>
      * @return total
@@ -59,7 +62,6 @@ public interface RecordPagedQueryResponse {
     @NotNull
     @JsonProperty("total")
     public Integer getTotal();
-
     /**
      *  <p>Number of elements skipped.</p>
      * @return offset
@@ -67,7 +69,6 @@ public interface RecordPagedQueryResponse {
     @NotNull
     @JsonProperty("offset")
     public Integer getOffset();
-
     /**
      *
      * @return results
@@ -81,52 +82,56 @@ public interface RecordPagedQueryResponse {
      *  <p>Number of results requested.</p>
      * @param limit value to be set
      */
-
+    
     public void setLimit(final Integer limit);
-
+    
+    
     /**
      *  <p>Actual number of results returned.</p>
      * @param count value to be set
      */
-
+    
     public void setCount(final Integer count);
-
+    
+    
     /**
      *  <p>Total number of results matching the query. This number is an estimation and not strongly consistent.</p>
      * @param total value to be set
      */
-
+    
     public void setTotal(final Integer total);
-
+    
+    
     /**
      *  <p>Number of elements skipped.</p>
      * @param offset value to be set
      */
-
+    
     public void setOffset(final Integer offset);
-
+    
+    
     /**
      * set results
      * @param results values to be set
      */
-
+    
     @JsonIgnore
-    public void setResults(final Record... results);
-
+    public void setResults(final Record ...results);
     /**
      * set results
      * @param results values to be set
      */
-
+    
     public void setResults(final List<Record> results);
 
     /**
      * factory method
      * @return instance of RecordPagedQueryResponse
      */
-    public static RecordPagedQueryResponse of() {
+    public static RecordPagedQueryResponse of(){
         return new RecordPagedQueryResponseImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy RecordPagedQueryResponse
@@ -159,9 +164,7 @@ public interface RecordPagedQueryResponse {
         instance.setTotal(template.getTotal());
         instance.setOffset(template.getOffset());
         instance.setResults(Optional.ofNullable(template.getResults())
-                .map(t -> t.stream()
-                        .map(com.commercetools.history.models.change_history.Record::deepCopy)
-                        .collect(Collectors.toList()))
+                .map(t -> t.stream().map(com.commercetools.history.models.change_history.Record::deepCopy).collect(Collectors.toList()))
                 .orElse(null));
         return instance;
     }
@@ -173,7 +176,7 @@ public interface RecordPagedQueryResponse {
     public static RecordPagedQueryResponseBuilder builder() {
         return RecordPagedQueryResponseBuilder.of();
     }
-
+    
     /**
      * create builder for RecordPagedQueryResponse instance
      * @param template instance with prefilled values for the builder
@@ -182,6 +185,7 @@ public interface RecordPagedQueryResponse {
     public static RecordPagedQueryResponseBuilder builder(final RecordPagedQueryResponse template) {
         return RecordPagedQueryResponseBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -192,7 +196,7 @@ public interface RecordPagedQueryResponse {
     default <T> T withRecordPagedQueryResponse(Function<RecordPagedQueryResponse, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

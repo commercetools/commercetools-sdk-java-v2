@@ -1,21 +1,24 @@
-
 package com.commercetools.api.models.product;
-
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-import java.util.stream.Collectors;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.category.CategoryReference;
 import com.commercetools.api.models.common.LocalizedString;
+import com.commercetools.api.models.product.CategoryOrderHints;
+import com.commercetools.api.models.product.ProductVariant;
+import com.commercetools.api.models.product.SearchKeywords;
+import com.commercetools.api.models.product.ProductDataImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Contains all the data of a Product and its Product Variants.</p>
@@ -33,11 +36,15 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .searchKeywords(searchKeywordsBuilder -> searchKeywordsBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = ProductDataImpl.class)
 public interface ProductData extends ProductDataLike {
+
 
     /**
      *  <p>Name of the Product.</p>
@@ -47,7 +54,6 @@ public interface ProductData extends ProductDataLike {
     @Valid
     @JsonProperty("name")
     public LocalizedString getName();
-
     /**
      *  <p>Categories assigned to the Product.</p>
      * @return categories
@@ -56,7 +62,6 @@ public interface ProductData extends ProductDataLike {
     @Valid
     @JsonProperty("categories")
     public List<CategoryReference> getCategories();
-
     /**
      *  <p>Numerical values to allow ordering of Products within a specified Category.</p>
      * @return categoryOrderHints
@@ -64,7 +69,6 @@ public interface ProductData extends ProductDataLike {
     @Valid
     @JsonProperty("categoryOrderHints")
     public CategoryOrderHints getCategoryOrderHints();
-
     /**
      *  <p>Description of the Product.</p>
      * @return description
@@ -72,7 +76,6 @@ public interface ProductData extends ProductDataLike {
     @Valid
     @JsonProperty("description")
     public LocalizedString getDescription();
-
     /**
      *  <p>User-defined identifier used in a deep-link URL for the Product. Must be unique across a Project, but can be the same for Products in different Locales. Matches the pattern <code>[a-zA-Z0-9_\\-]{2,256}</code>.</p>
      * @return slug
@@ -81,7 +84,6 @@ public interface ProductData extends ProductDataLike {
     @Valid
     @JsonProperty("slug")
     public LocalizedString getSlug();
-
     /**
      *  <p>Title of the Product displayed in search results.</p>
      * @return metaTitle
@@ -89,7 +91,6 @@ public interface ProductData extends ProductDataLike {
     @Valid
     @JsonProperty("metaTitle")
     public LocalizedString getMetaTitle();
-
     /**
      *  <p>Description of the Product displayed in search results below the meta title.</p>
      * @return metaDescription
@@ -97,7 +98,6 @@ public interface ProductData extends ProductDataLike {
     @Valid
     @JsonProperty("metaDescription")
     public LocalizedString getMetaDescription();
-
     /**
      *  <p>Keywords that give additional information about the Product to search engines.</p>
      * @return metaKeywords
@@ -105,7 +105,6 @@ public interface ProductData extends ProductDataLike {
     @Valid
     @JsonProperty("metaKeywords")
     public LocalizedString getMetaKeywords();
-
     /**
      *  <p>The Master Variant of the Product.</p>
      * @return masterVariant
@@ -114,7 +113,6 @@ public interface ProductData extends ProductDataLike {
     @Valid
     @JsonProperty("masterVariant")
     public ProductVariant getMasterVariant();
-
     /**
      *  <p>Additional Product Variants.</p>
      * @return variants
@@ -123,7 +121,6 @@ public interface ProductData extends ProductDataLike {
     @Valid
     @JsonProperty("variants")
     public List<ProductVariant> getVariants();
-
     /**
      *  <p>Used by Product Suggestions, but is also considered for a full text search.</p>
      * @return searchKeywords
@@ -137,102 +134,110 @@ public interface ProductData extends ProductDataLike {
      *  <p>Name of the Product.</p>
      * @param name value to be set
      */
-
+    
     public void setName(final LocalizedString name);
-
+    
+    
     /**
      *  <p>Categories assigned to the Product.</p>
      * @param categories values to be set
      */
-
+    
     @JsonIgnore
-    public void setCategories(final CategoryReference... categories);
-
+    public void setCategories(final CategoryReference ...categories);
     /**
      *  <p>Categories assigned to the Product.</p>
      * @param categories values to be set
      */
-
+    
     public void setCategories(final List<CategoryReference> categories);
-
+    
     /**
      *  <p>Numerical values to allow ordering of Products within a specified Category.</p>
      * @param categoryOrderHints value to be set
      */
-
+    
     public void setCategoryOrderHints(final CategoryOrderHints categoryOrderHints);
-
+    
+    
     /**
      *  <p>Description of the Product.</p>
      * @param description value to be set
      */
-
+    
     public void setDescription(final LocalizedString description);
-
+    
+    
     /**
      *  <p>User-defined identifier used in a deep-link URL for the Product. Must be unique across a Project, but can be the same for Products in different Locales. Matches the pattern <code>[a-zA-Z0-9_\\-]{2,256}</code>.</p>
      * @param slug value to be set
      */
-
+    
     public void setSlug(final LocalizedString slug);
-
+    
+    
     /**
      *  <p>Title of the Product displayed in search results.</p>
      * @param metaTitle value to be set
      */
-
+    
     public void setMetaTitle(final LocalizedString metaTitle);
-
+    
+    
     /**
      *  <p>Description of the Product displayed in search results below the meta title.</p>
      * @param metaDescription value to be set
      */
-
+    
     public void setMetaDescription(final LocalizedString metaDescription);
-
+    
+    
     /**
      *  <p>Keywords that give additional information about the Product to search engines.</p>
      * @param metaKeywords value to be set
      */
-
+    
     public void setMetaKeywords(final LocalizedString metaKeywords);
-
+    
+    
     /**
      *  <p>The Master Variant of the Product.</p>
      * @param masterVariant value to be set
      */
-
+    
     public void setMasterVariant(final ProductVariant masterVariant);
-
+    
+    
     /**
      *  <p>Additional Product Variants.</p>
      * @param variants values to be set
      */
-
+    
     @JsonIgnore
-    public void setVariants(final ProductVariant... variants);
-
+    public void setVariants(final ProductVariant ...variants);
     /**
      *  <p>Additional Product Variants.</p>
      * @param variants values to be set
      */
-
+    
     public void setVariants(final List<ProductVariant> variants);
-
+    
     /**
      *  <p>Used by Product Suggestions, but is also considered for a full text search.</p>
      * @param searchKeywords value to be set
      */
-
+    
     public void setSearchKeywords(final SearchKeywords searchKeywords);
+    
 
     /**
      * factory method
      * @return instance of ProductData
      */
-    public static ProductData of() {
+    public static ProductData of(){
         return new ProductDataImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy ProductData
@@ -268,29 +273,19 @@ public interface ProductData extends ProductDataLike {
         ProductDataImpl instance = new ProductDataImpl();
         instance.setName(com.commercetools.api.models.common.LocalizedString.deepCopy(template.getName()));
         instance.setCategories(Optional.ofNullable(template.getCategories())
-                .map(t -> t.stream()
-                        .map(com.commercetools.api.models.category.CategoryReference::deepCopy)
-                        .collect(Collectors.toList()))
+                .map(t -> t.stream().map(com.commercetools.api.models.category.CategoryReference::deepCopy).collect(Collectors.toList()))
                 .orElse(null));
-        instance.setCategoryOrderHints(
-            com.commercetools.api.models.product.CategoryOrderHints.deepCopy(template.getCategoryOrderHints()));
-        instance.setDescription(
-            com.commercetools.api.models.common.LocalizedString.deepCopy(template.getDescription()));
+        instance.setCategoryOrderHints(com.commercetools.api.models.product.CategoryOrderHints.deepCopy(template.getCategoryOrderHints()));
+        instance.setDescription(com.commercetools.api.models.common.LocalizedString.deepCopy(template.getDescription()));
         instance.setSlug(com.commercetools.api.models.common.LocalizedString.deepCopy(template.getSlug()));
         instance.setMetaTitle(com.commercetools.api.models.common.LocalizedString.deepCopy(template.getMetaTitle()));
-        instance.setMetaDescription(
-            com.commercetools.api.models.common.LocalizedString.deepCopy(template.getMetaDescription()));
-        instance.setMetaKeywords(
-            com.commercetools.api.models.common.LocalizedString.deepCopy(template.getMetaKeywords()));
-        instance.setMasterVariant(
-            com.commercetools.api.models.product.ProductVariant.deepCopy(template.getMasterVariant()));
+        instance.setMetaDescription(com.commercetools.api.models.common.LocalizedString.deepCopy(template.getMetaDescription()));
+        instance.setMetaKeywords(com.commercetools.api.models.common.LocalizedString.deepCopy(template.getMetaKeywords()));
+        instance.setMasterVariant(com.commercetools.api.models.product.ProductVariant.deepCopy(template.getMasterVariant()));
         instance.setVariants(Optional.ofNullable(template.getVariants())
-                .map(t -> t.stream()
-                        .map(com.commercetools.api.models.product.ProductVariant::deepCopy)
-                        .collect(Collectors.toList()))
+                .map(t -> t.stream().map(com.commercetools.api.models.product.ProductVariant::deepCopy).collect(Collectors.toList()))
                 .orElse(null));
-        instance.setSearchKeywords(
-            com.commercetools.api.models.product.SearchKeywords.deepCopy(template.getSearchKeywords()));
+        instance.setSearchKeywords(com.commercetools.api.models.product.SearchKeywords.deepCopy(template.getSearchKeywords()));
         return instance;
     }
 
@@ -301,7 +296,7 @@ public interface ProductData extends ProductDataLike {
     public static ProductDataBuilder builder() {
         return ProductDataBuilder.of();
     }
-
+    
     /**
      * create builder for ProductData instance
      * @param template instance with prefilled values for the builder
@@ -310,6 +305,7 @@ public interface ProductData extends ProductDataLike {
     public static ProductDataBuilder builder(final ProductData template) {
         return ProductDataBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -320,7 +316,7 @@ public interface ProductData extends ProductDataLike {
     default <T> T withProductData(Function<ProductData, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

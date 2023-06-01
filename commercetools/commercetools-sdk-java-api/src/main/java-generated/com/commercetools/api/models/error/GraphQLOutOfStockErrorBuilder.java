@@ -1,8 +1,11 @@
-
 package com.commercetools.api.models.error;
 
+import com.commercetools.api.models.error.GraphQLErrorObject;
+import com.commercetools.api.models.error.GraphQLOutOfStockError;
+import javax.annotation.Nullable;
 import java.util.*;
-
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -17,15 +20,24 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .plusSkus(skusBuilder -> skusBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class GraphQLOutOfStockErrorBuilder implements Builder<GraphQLOutOfStockError> {
 
+    
+    
     private Map<String, java.lang.Object> values = new HashMap<>();
-
+    
+    
+    
     private java.util.List<String> lineItems;
-
+    
+    
+    
     private java.util.List<String> skus;
 
     /**
@@ -33,19 +45,19 @@ public class GraphQLOutOfStockErrorBuilder implements Builder<GraphQLOutOfStockE
      * @param values properties to be set
      * @return Builder
      */
-
-    public GraphQLOutOfStockErrorBuilder values(final Map<String, java.lang.Object> values) {
+    
+    public GraphQLOutOfStockErrorBuilder values( final Map<String, java.lang.Object> values){
         this.values = values;
         return this;
     }
-
+    
     /**
      *  <p>Error-specific additional fields.</p>
      * @param key property name
      * @param value property value
      * @return Builder
      */
-
+    
     public GraphQLOutOfStockErrorBuilder addValue(final String key, final java.lang.Object value) {
         if (this.values == null) {
             values = new HashMap<>();
@@ -53,103 +65,113 @@ public class GraphQLOutOfStockErrorBuilder implements Builder<GraphQLOutOfStockE
         values.put(key, value);
         return this;
     }
-
+    
+    
     /**
      *  <p>Unique identifiers of the Line Items that are out of stock.</p>
      * @param lineItems value to be set
      * @return Builder
      */
-
-    public GraphQLOutOfStockErrorBuilder lineItems(final String... lineItems) {
+    
+    public GraphQLOutOfStockErrorBuilder lineItems( final String ...lineItems) {
         this.lineItems = new ArrayList<>(Arrays.asList(lineItems));
         return this;
     }
-
+    
     /**
      *  <p>Unique identifiers of the Line Items that are out of stock.</p>
      * @param lineItems value to be set
      * @return Builder
      */
-
-    public GraphQLOutOfStockErrorBuilder lineItems(final java.util.List<String> lineItems) {
+    
+    public GraphQLOutOfStockErrorBuilder lineItems( final java.util.List<String> lineItems) {
         this.lineItems = lineItems;
         return this;
     }
-
+    
     /**
      *  <p>Unique identifiers of the Line Items that are out of stock.</p>
      * @param lineItems value to be set
      * @return Builder
      */
-
-    public GraphQLOutOfStockErrorBuilder plusLineItems(final String... lineItems) {
+    
+    public GraphQLOutOfStockErrorBuilder plusLineItems( final String ...lineItems) {
         if (this.lineItems == null) {
             this.lineItems = new ArrayList<>();
         }
         this.lineItems.addAll(Arrays.asList(lineItems));
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>SKUs of the Line Items that are out of stock.</p>
      * @param skus value to be set
      * @return Builder
      */
-
-    public GraphQLOutOfStockErrorBuilder skus(final String... skus) {
+    
+    public GraphQLOutOfStockErrorBuilder skus( final String ...skus) {
         this.skus = new ArrayList<>(Arrays.asList(skus));
         return this;
     }
-
+    
     /**
      *  <p>SKUs of the Line Items that are out of stock.</p>
      * @param skus value to be set
      * @return Builder
      */
-
-    public GraphQLOutOfStockErrorBuilder skus(final java.util.List<String> skus) {
+    
+    public GraphQLOutOfStockErrorBuilder skus( final java.util.List<String> skus) {
         this.skus = skus;
         return this;
     }
-
+    
     /**
      *  <p>SKUs of the Line Items that are out of stock.</p>
      * @param skus value to be set
      * @return Builder
      */
-
-    public GraphQLOutOfStockErrorBuilder plusSkus(final String... skus) {
+    
+    public GraphQLOutOfStockErrorBuilder plusSkus( final String ...skus) {
         if (this.skus == null) {
             this.skus = new ArrayList<>();
         }
         this.skus.addAll(Arrays.asList(skus));
         return this;
     }
+    
+    
+    
 
     /**
      *  <p>Error-specific additional fields.</p>
      * @return pattern properties
      */
-
-    public Map<String, java.lang.Object> getValues() {
+    
+    
+    public Map<String, java.lang.Object> getValues(){
         return this.values;
     }
-
+    
     /**
      *  <p>Unique identifiers of the Line Items that are out of stock.</p>
      * @return lineItems
      */
-
-    public java.util.List<String> getLineItems() {
+    
+    
+    public java.util.List<String> getLineItems(){
         return this.lineItems;
     }
-
+    
     /**
      *  <p>SKUs of the Line Items that are out of stock.</p>
      * @return skus
      */
-
-    public java.util.List<String> getSkus() {
+    
+    
+    public java.util.List<String> getSkus(){
         return this.skus;
     }
 
@@ -162,7 +184,7 @@ public class GraphQLOutOfStockErrorBuilder implements Builder<GraphQLOutOfStockE
         Objects.requireNonNull(skus, GraphQLOutOfStockError.class + ": skus is missing");
         return new GraphQLOutOfStockErrorImpl(values, lineItems, skus);
     }
-
+    
     /**
      * builds GraphQLOutOfStockError without checking for non-null required values
      * @return GraphQLOutOfStockError
@@ -173,7 +195,7 @@ public class GraphQLOutOfStockErrorBuilder implements Builder<GraphQLOutOfStockE
 
     /**
      * factory method for an instance of GraphQLOutOfStockErrorBuilder
-     * @return builder
+     * @return builder 
      */
     public static GraphQLOutOfStockErrorBuilder of() {
         return new GraphQLOutOfStockErrorBuilder();

@@ -1,19 +1,22 @@
-
 package com.commercetools.api.models.store;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-
+import com.commercetools.api.models.store.StoreUpdateAction;
 import com.commercetools.api.models.type.FieldContainer;
 import com.commercetools.api.models.type.TypeResourceIdentifier;
+import com.commercetools.api.models.store.StoreSetCustomTypeActionImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * StoreSetCustomTypeAction
@@ -25,9 +28,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     StoreSetCustomTypeAction storeSetCustomTypeAction = StoreSetCustomTypeAction.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = StoreSetCustomTypeActionImpl.class)
 public interface StoreSetCustomTypeAction extends StoreUpdateAction {
 
@@ -43,7 +49,6 @@ public interface StoreSetCustomTypeAction extends StoreUpdateAction {
     @Valid
     @JsonProperty("type")
     public TypeResourceIdentifier getType();
-
     /**
      *  <p>Sets the Custom Fields fields for the Store.</p>
      * @return fields
@@ -56,23 +61,26 @@ public interface StoreSetCustomTypeAction extends StoreUpdateAction {
      *  <p>Defines the Type that extends the Store with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Store.</p>
      * @param type value to be set
      */
-
+    
     public void setType(final TypeResourceIdentifier type);
-
+    
+    
     /**
      *  <p>Sets the Custom Fields fields for the Store.</p>
      * @param fields value to be set
      */
-
+    
     public void setFields(final FieldContainer fields);
+    
 
     /**
      * factory method
      * @return instance of StoreSetCustomTypeAction
      */
-    public static StoreSetCustomTypeAction of() {
+    public static StoreSetCustomTypeAction of(){
         return new StoreSetCustomTypeActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy StoreSetCustomTypeAction
@@ -109,7 +117,7 @@ public interface StoreSetCustomTypeAction extends StoreUpdateAction {
     public static StoreSetCustomTypeActionBuilder builder() {
         return StoreSetCustomTypeActionBuilder.of();
     }
-
+    
     /**
      * create builder for StoreSetCustomTypeAction instance
      * @param template instance with prefilled values for the builder
@@ -118,6 +126,7 @@ public interface StoreSetCustomTypeAction extends StoreUpdateAction {
     public static StoreSetCustomTypeActionBuilder builder(final StoreSetCustomTypeAction template) {
         return StoreSetCustomTypeActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -128,7 +137,7 @@ public interface StoreSetCustomTypeAction extends StoreUpdateAction {
     default <T> T withStoreSetCustomTypeAction(Function<StoreSetCustomTypeAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

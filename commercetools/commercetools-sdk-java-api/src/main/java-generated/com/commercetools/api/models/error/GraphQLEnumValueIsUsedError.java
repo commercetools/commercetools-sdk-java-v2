@@ -1,17 +1,20 @@
-
 package com.commercetools.api.models.error;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
+import com.commercetools.api.models.error.GraphQLErrorObject;
+import com.commercetools.api.models.error.GraphQLEnumValueIsUsedErrorImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Returned when an enum value cannot be removed from an Attribute as it is being used by a Product.</p>
@@ -24,9 +27,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     GraphQLEnumValueIsUsedError graphQLEnumValueIsUsedError = GraphQLEnumValueIsUsedError.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = GraphQLEnumValueIsUsedErrorImpl.class)
 public interface GraphQLEnumValueIsUsedError extends GraphQLErrorObject {
 
@@ -43,13 +49,15 @@ public interface GraphQLEnumValueIsUsedError extends GraphQLErrorObject {
     @JsonProperty("code")
     public String getCode();
 
+
     /**
      * factory method
      * @return instance of GraphQLEnumValueIsUsedError
      */
-    public static GraphQLEnumValueIsUsedError of() {
+    public static GraphQLEnumValueIsUsedError of(){
         return new GraphQLEnumValueIsUsedErrorImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy GraphQLEnumValueIsUsedError
@@ -84,7 +92,7 @@ public interface GraphQLEnumValueIsUsedError extends GraphQLErrorObject {
     public static GraphQLEnumValueIsUsedErrorBuilder builder() {
         return GraphQLEnumValueIsUsedErrorBuilder.of();
     }
-
+    
     /**
      * create builder for GraphQLEnumValueIsUsedError instance
      * @param template instance with prefilled values for the builder
@@ -93,6 +101,7 @@ public interface GraphQLEnumValueIsUsedError extends GraphQLErrorObject {
     public static GraphQLEnumValueIsUsedErrorBuilder builder(final GraphQLEnumValueIsUsedError template) {
         return GraphQLEnumValueIsUsedErrorBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -103,7 +112,7 @@ public interface GraphQLEnumValueIsUsedError extends GraphQLErrorObject {
     default <T> T withGraphQLEnumValueIsUsedError(Function<GraphQLEnumValueIsUsedError, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

@@ -1,21 +1,22 @@
-
 package com.commercetools.api.models.quote;
-
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.staged_quote.StagedQuoteResourceIdentifier;
 import com.commercetools.api.models.state.StateReference;
 import com.commercetools.api.models.type.CustomFieldsDraft;
+import com.commercetools.api.models.quote.QuoteDraftImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * QuoteDraft
@@ -29,21 +30,23 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .stagedQuoteVersion(0.3)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = QuoteDraftImpl.class)
-public interface QuoteDraft extends com.commercetools.api.models.CustomizableDraft<QuoteDraft>,
-        com.commercetools.api.models.WithKey, io.vrap.rmf.base.client.Draft<QuoteDraft> {
+public interface QuoteDraft extends com.commercetools.api.models.CustomizableDraft<QuoteDraft>, com.commercetools.api.models.WithKey, io.vrap.rmf.base.client.Draft<QuoteDraft> {
+
 
     /**
      *  <p>User-defined unique identifier for the Quote.</p>
      * @return key
      */
-
+    
     @JsonProperty("key")
     public String getKey();
-
     /**
      *  <p>StagedQuote from which the Quote is created.</p>
      * @return stagedQuote
@@ -52,7 +55,6 @@ public interface QuoteDraft extends com.commercetools.api.models.CustomizableDra
     @Valid
     @JsonProperty("stagedQuote")
     public StagedQuoteResourceIdentifier getStagedQuote();
-
     /**
      *  <p>Current version of the StagedQuote.</p>
      * @return stagedQuoteVersion
@@ -60,15 +62,13 @@ public interface QuoteDraft extends com.commercetools.api.models.CustomizableDra
     @NotNull
     @JsonProperty("stagedQuoteVersion")
     public Long getStagedQuoteVersion();
-
     /**
      *  <p>If <code>true</code>, the <code>stagedQuoteState</code> of the referenced StagedQuote will be set to <code>Sent</code>.</p>
      * @return stagedQuoteStateToSent
      */
-
+    
     @JsonProperty("stagedQuoteStateToSent")
     public Boolean getStagedQuoteStateToSent();
-
     /**
      *  <p>State of the Quote. This reference can point to a State in a custom workflow.</p>
      * @return state
@@ -76,7 +76,6 @@ public interface QuoteDraft extends com.commercetools.api.models.CustomizableDra
     @Valid
     @JsonProperty("state")
     public StateReference getState();
-
     /**
      *  <p>Custom Fields to be added to the Quote.</p>
      *  <ul>
@@ -93,37 +92,42 @@ public interface QuoteDraft extends com.commercetools.api.models.CustomizableDra
      *  <p>User-defined unique identifier for the Quote.</p>
      * @param key value to be set
      */
-
+    
     public void setKey(final String key);
-
+    
+    
     /**
      *  <p>StagedQuote from which the Quote is created.</p>
      * @param stagedQuote value to be set
      */
-
+    
     public void setStagedQuote(final StagedQuoteResourceIdentifier stagedQuote);
-
+    
+    
     /**
      *  <p>Current version of the StagedQuote.</p>
      * @param stagedQuoteVersion value to be set
      */
-
+    
     public void setStagedQuoteVersion(final Long stagedQuoteVersion);
-
+    
+    
     /**
      *  <p>If <code>true</code>, the <code>stagedQuoteState</code> of the referenced StagedQuote will be set to <code>Sent</code>.</p>
      * @param stagedQuoteStateToSent value to be set
      */
-
+    
     public void setStagedQuoteStateToSent(final Boolean stagedQuoteStateToSent);
-
+    
+    
     /**
      *  <p>State of the Quote. This reference can point to a State in a custom workflow.</p>
      * @param state value to be set
      */
-
+    
     public void setState(final StateReference state);
-
+    
+    
     /**
      *  <p>Custom Fields to be added to the Quote.</p>
      *  <ul>
@@ -132,16 +136,18 @@ public interface QuoteDraft extends com.commercetools.api.models.CustomizableDra
      *  </ul>
      * @param custom value to be set
      */
-
+    
     public void setCustom(final CustomFieldsDraft custom);
+    
 
     /**
      * factory method
      * @return instance of QuoteDraft
      */
-    public static QuoteDraft of() {
+    public static QuoteDraft of(){
         return new QuoteDraftImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy QuoteDraft
@@ -171,8 +177,7 @@ public interface QuoteDraft extends com.commercetools.api.models.CustomizableDra
         }
         QuoteDraftImpl instance = new QuoteDraftImpl();
         instance.setKey(template.getKey());
-        instance.setStagedQuote(com.commercetools.api.models.staged_quote.StagedQuoteResourceIdentifier
-                .deepCopy(template.getStagedQuote()));
+        instance.setStagedQuote(com.commercetools.api.models.staged_quote.StagedQuoteResourceIdentifier.deepCopy(template.getStagedQuote()));
         instance.setStagedQuoteVersion(template.getStagedQuoteVersion());
         instance.setStagedQuoteStateToSent(template.getStagedQuoteStateToSent());
         instance.setState(com.commercetools.api.models.state.StateReference.deepCopy(template.getState()));
@@ -187,7 +192,7 @@ public interface QuoteDraft extends com.commercetools.api.models.CustomizableDra
     public static QuoteDraftBuilder builder() {
         return QuoteDraftBuilder.of();
     }
-
+    
     /**
      * create builder for QuoteDraft instance
      * @param template instance with prefilled values for the builder
@@ -196,6 +201,7 @@ public interface QuoteDraft extends com.commercetools.api.models.CustomizableDra
     public static QuoteDraftBuilder builder(final QuoteDraft template) {
         return QuoteDraftBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -206,7 +212,7 @@ public interface QuoteDraft extends com.commercetools.api.models.CustomizableDra
     default <T> T withQuoteDraft(Function<QuoteDraft, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

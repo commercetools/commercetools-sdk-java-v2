@@ -1,17 +1,20 @@
-
 package com.commercetools.history.models.common;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
 
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
+import com.commercetools.history.models.common.SuggestTokenizerImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * SuggestTokenizer
@@ -24,11 +27,15 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .type("{type}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = SuggestTokenizerImpl.class)
-public interface SuggestTokenizer {
+public interface SuggestTokenizer  {
+
 
     /**
      *
@@ -42,16 +49,18 @@ public interface SuggestTokenizer {
      * set type
      * @param type value to be set
      */
-
+    
     public void setType(final String type);
+    
 
     /**
      * factory method
      * @return instance of SuggestTokenizer
      */
-    public static SuggestTokenizer of() {
+    public static SuggestTokenizer of(){
         return new SuggestTokenizerImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy SuggestTokenizer
@@ -86,7 +95,7 @@ public interface SuggestTokenizer {
     public static SuggestTokenizerBuilder builder() {
         return SuggestTokenizerBuilder.of();
     }
-
+    
     /**
      * create builder for SuggestTokenizer instance
      * @param template instance with prefilled values for the builder
@@ -95,6 +104,7 @@ public interface SuggestTokenizer {
     public static SuggestTokenizerBuilder builder(final SuggestTokenizer template) {
         return SuggestTokenizerBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -105,7 +115,7 @@ public interface SuggestTokenizer {
     default <T> T withSuggestTokenizer(Function<SuggestTokenizer, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

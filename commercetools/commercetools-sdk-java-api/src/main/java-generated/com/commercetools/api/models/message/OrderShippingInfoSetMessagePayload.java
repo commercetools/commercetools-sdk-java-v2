@@ -1,18 +1,21 @@
-
 package com.commercetools.api.models.message;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-
 import com.commercetools.api.models.cart.ShippingInfo;
+import com.commercetools.api.models.message.OrderMessagePayload;
+import com.commercetools.api.models.message.OrderShippingInfoSetMessagePayloadImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Generated after a successful Set Shipping Method and Set Custom Shipping Method update actions.</p>
@@ -24,9 +27,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     OrderShippingInfoSetMessagePayload orderShippingInfoSetMessagePayload = OrderShippingInfoSetMessagePayload.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = OrderShippingInfoSetMessagePayloadImpl.class)
 public interface OrderShippingInfoSetMessagePayload extends OrderMessagePayload {
 
@@ -42,7 +48,6 @@ public interface OrderShippingInfoSetMessagePayload extends OrderMessagePayload 
     @Valid
     @JsonProperty("shippingInfo")
     public ShippingInfo getShippingInfo();
-
     /**
      *  <p>ShippingInfo before the Set Shipping Method or Set Custom Shipping Method update action.</p>
      * @return oldShippingInfo
@@ -55,23 +60,26 @@ public interface OrderShippingInfoSetMessagePayload extends OrderMessagePayload 
      *  <p>ShippingInfo after the Set Shipping Method or Set Custom Shipping Method update action.</p>
      * @param shippingInfo value to be set
      */
-
+    
     public void setShippingInfo(final ShippingInfo shippingInfo);
-
+    
+    
     /**
      *  <p>ShippingInfo before the Set Shipping Method or Set Custom Shipping Method update action.</p>
      * @param oldShippingInfo value to be set
      */
-
+    
     public void setOldShippingInfo(final ShippingInfo oldShippingInfo);
+    
 
     /**
      * factory method
      * @return instance of OrderShippingInfoSetMessagePayload
      */
-    public static OrderShippingInfoSetMessagePayload of() {
+    public static OrderShippingInfoSetMessagePayload of(){
         return new OrderShippingInfoSetMessagePayloadImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy OrderShippingInfoSetMessagePayload
@@ -91,15 +99,13 @@ public interface OrderShippingInfoSetMessagePayload extends OrderMessagePayload 
      * @return copy instance
      */
     @Nullable
-    public static OrderShippingInfoSetMessagePayload deepCopy(
-            @Nullable final OrderShippingInfoSetMessagePayload template) {
+    public static OrderShippingInfoSetMessagePayload deepCopy(@Nullable final OrderShippingInfoSetMessagePayload template) {
         if (template == null) {
             return null;
         }
         OrderShippingInfoSetMessagePayloadImpl instance = new OrderShippingInfoSetMessagePayloadImpl();
         instance.setShippingInfo(com.commercetools.api.models.cart.ShippingInfo.deepCopy(template.getShippingInfo()));
-        instance.setOldShippingInfo(
-            com.commercetools.api.models.cart.ShippingInfo.deepCopy(template.getOldShippingInfo()));
+        instance.setOldShippingInfo(com.commercetools.api.models.cart.ShippingInfo.deepCopy(template.getOldShippingInfo()));
         return instance;
     }
 
@@ -110,7 +116,7 @@ public interface OrderShippingInfoSetMessagePayload extends OrderMessagePayload 
     public static OrderShippingInfoSetMessagePayloadBuilder builder() {
         return OrderShippingInfoSetMessagePayloadBuilder.of();
     }
-
+    
     /**
      * create builder for OrderShippingInfoSetMessagePayload instance
      * @param template instance with prefilled values for the builder
@@ -119,6 +125,7 @@ public interface OrderShippingInfoSetMessagePayload extends OrderMessagePayload 
     public static OrderShippingInfoSetMessagePayloadBuilder builder(final OrderShippingInfoSetMessagePayload template) {
         return OrderShippingInfoSetMessagePayloadBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -129,7 +136,7 @@ public interface OrderShippingInfoSetMessagePayload extends OrderMessagePayload 
     default <T> T withOrderShippingInfoSetMessagePayload(Function<OrderShippingInfoSetMessagePayload, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

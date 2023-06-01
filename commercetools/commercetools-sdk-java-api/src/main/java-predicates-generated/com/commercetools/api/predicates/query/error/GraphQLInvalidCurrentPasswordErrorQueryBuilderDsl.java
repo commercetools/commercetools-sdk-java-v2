@@ -1,9 +1,11 @@
-
 package com.commercetools.api.predicates.query.error;
 
 import com.commercetools.api.predicates.query.*;
 
-public class GraphQLInvalidCurrentPasswordErrorQueryBuilderDsl {
+import java.util.function.Function;
+
+
+public class GraphQLInvalidCurrentPasswordErrorQueryBuilderDsl  {
     public GraphQLInvalidCurrentPasswordErrorQueryBuilderDsl() {
     }
 
@@ -12,9 +14,8 @@ public class GraphQLInvalidCurrentPasswordErrorQueryBuilderDsl {
     }
 
     public StringComparisonPredicateBuilder<GraphQLInvalidCurrentPasswordErrorQueryBuilderDsl> code() {
-        return new StringComparisonPredicateBuilder<>(
-            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("code")),
-            p -> new CombinationQueryPredicate<>(p, GraphQLInvalidCurrentPasswordErrorQueryBuilderDsl::of));
+        return new StringComparisonPredicateBuilder<>(BinaryQueryPredicate.of().left(new ConstantQueryPredicate("code")),
+        p -> new CombinationQueryPredicate<>(p, GraphQLInvalidCurrentPasswordErrorQueryBuilderDsl::of));
     }
-
+    
 }

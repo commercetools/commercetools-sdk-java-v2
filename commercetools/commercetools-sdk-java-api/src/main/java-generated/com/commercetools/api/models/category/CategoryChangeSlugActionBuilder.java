@@ -1,9 +1,12 @@
-
 package com.commercetools.api.models.category;
 
+import com.commercetools.api.models.category.CategoryUpdateAction;
+import com.commercetools.api.models.common.LocalizedString;
+import com.commercetools.api.models.category.CategoryChangeSlugAction;
+import javax.annotation.Nullable;
 import java.util.*;
 import java.util.function.Function;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -17,54 +20,61 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .slug(slugBuilder -> slugBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class CategoryChangeSlugActionBuilder implements Builder<CategoryChangeSlugAction> {
 
+    
+    
     private com.commercetools.api.models.common.LocalizedString slug;
 
+    
     /**
      *  <p>New value to set. Must not be empty. A Category can have the same slug for different Locales, but it must be unique across the Project. Valid slugs must match the pattern <code>^[A-Za-z0-9_-]{2,256}+$</code>.</p>
      * @param builder function to build the slug value
      * @return Builder
      */
-
-    public CategoryChangeSlugActionBuilder slug(
-            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
+    
+    public CategoryChangeSlugActionBuilder slug(Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
         this.slug = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of()).build();
         return this;
     }
-
+    
     /**
      *  <p>New value to set. Must not be empty. A Category can have the same slug for different Locales, but it must be unique across the Project. Valid slugs must match the pattern <code>^[A-Za-z0-9_-]{2,256}+$</code>.</p>
      * @param builder function to build the slug value
      * @return Builder
      */
-
-    public CategoryChangeSlugActionBuilder withSlug(
-            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedString> builder) {
+    
+    public CategoryChangeSlugActionBuilder withSlug(Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedString> builder) {
         this.slug = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of());
         return this;
     }
-
+                    
     /**
      *  <p>New value to set. Must not be empty. A Category can have the same slug for different Locales, but it must be unique across the Project. Valid slugs must match the pattern <code>^[A-Za-z0-9_-]{2,256}+$</code>.</p>
      * @param slug value to be set
      * @return Builder
      */
-
-    public CategoryChangeSlugActionBuilder slug(final com.commercetools.api.models.common.LocalizedString slug) {
+    
+    public CategoryChangeSlugActionBuilder slug( final com.commercetools.api.models.common.LocalizedString slug) {
         this.slug = slug;
         return this;
     }
+    
+    
 
     /**
      *  <p>New value to set. Must not be empty. A Category can have the same slug for different Locales, but it must be unique across the Project. Valid slugs must match the pattern <code>^[A-Za-z0-9_-]{2,256}+$</code>.</p>
      * @return slug
      */
-
-    public com.commercetools.api.models.common.LocalizedString getSlug() {
+    
+    
+    public com.commercetools.api.models.common.LocalizedString getSlug(){
         return this.slug;
     }
 
@@ -76,7 +86,7 @@ public class CategoryChangeSlugActionBuilder implements Builder<CategoryChangeSl
         Objects.requireNonNull(slug, CategoryChangeSlugAction.class + ": slug is missing");
         return new CategoryChangeSlugActionImpl(slug);
     }
-
+    
     /**
      * builds CategoryChangeSlugAction without checking for non-null required values
      * @return CategoryChangeSlugAction
@@ -87,7 +97,7 @@ public class CategoryChangeSlugActionBuilder implements Builder<CategoryChangeSl
 
     /**
      * factory method for an instance of CategoryChangeSlugActionBuilder
-     * @return builder
+     * @return builder 
      */
     public static CategoryChangeSlugActionBuilder of() {
         return new CategoryChangeSlugActionBuilder();

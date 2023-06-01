@@ -1,9 +1,11 @@
-
 package com.commercetools.api.predicates.query.extension;
 
 import com.commercetools.api.predicates.query.*;
 
-public class AzureFunctionsAuthenticationQueryBuilderDsl {
+import java.util.function.Function;
+
+
+public class AzureFunctionsAuthenticationQueryBuilderDsl  {
     public AzureFunctionsAuthenticationQueryBuilderDsl() {
     }
 
@@ -12,14 +14,12 @@ public class AzureFunctionsAuthenticationQueryBuilderDsl {
     }
 
     public StringComparisonPredicateBuilder<AzureFunctionsAuthenticationQueryBuilderDsl> type() {
-        return new StringComparisonPredicateBuilder<>(
-            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("type")),
-            p -> new CombinationQueryPredicate<>(p, AzureFunctionsAuthenticationQueryBuilderDsl::of));
+        return new StringComparisonPredicateBuilder<>(BinaryQueryPredicate.of().left(new ConstantQueryPredicate("type")),
+        p -> new CombinationQueryPredicate<>(p, AzureFunctionsAuthenticationQueryBuilderDsl::of));
     }
-
     public StringComparisonPredicateBuilder<AzureFunctionsAuthenticationQueryBuilderDsl> key() {
         return new StringComparisonPredicateBuilder<>(BinaryQueryPredicate.of().left(new ConstantQueryPredicate("key")),
-            p -> new CombinationQueryPredicate<>(p, AzureFunctionsAuthenticationQueryBuilderDsl::of));
+        p -> new CombinationQueryPredicate<>(p, AzureFunctionsAuthenticationQueryBuilderDsl::of));
     }
-
+    
 }

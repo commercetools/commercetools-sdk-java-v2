@@ -1,8 +1,11 @@
-
 package com.commercetools.api.models.type;
 
+import com.commercetools.api.models.type.TypeUpdateAction;
+import com.commercetools.api.models.type.TypeRemoveFieldDefinitionAction;
+import javax.annotation.Nullable;
 import java.util.*;
-
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -16,30 +19,39 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .fieldName("{fieldName}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class TypeRemoveFieldDefinitionActionBuilder implements Builder<TypeRemoveFieldDefinitionAction> {
 
+    
+    
     private String fieldName;
 
+    
     /**
      *  <p><code>name</code> of the FieldDefinition to remove. The removal of a FieldDefinition deletes asynchronously all Custom Fields using the FieldDefinition as well.</p>
      * @param fieldName value to be set
      * @return Builder
      */
-
-    public TypeRemoveFieldDefinitionActionBuilder fieldName(final String fieldName) {
+    
+    public TypeRemoveFieldDefinitionActionBuilder fieldName( final String fieldName) {
         this.fieldName = fieldName;
         return this;
     }
+    
+    
 
     /**
      *  <p><code>name</code> of the FieldDefinition to remove. The removal of a FieldDefinition deletes asynchronously all Custom Fields using the FieldDefinition as well.</p>
      * @return fieldName
      */
-
-    public String getFieldName() {
+    
+    
+    public String getFieldName(){
         return this.fieldName;
     }
 
@@ -51,7 +63,7 @@ public class TypeRemoveFieldDefinitionActionBuilder implements Builder<TypeRemov
         Objects.requireNonNull(fieldName, TypeRemoveFieldDefinitionAction.class + ": fieldName is missing");
         return new TypeRemoveFieldDefinitionActionImpl(fieldName);
     }
-
+    
     /**
      * builds TypeRemoveFieldDefinitionAction without checking for non-null required values
      * @return TypeRemoveFieldDefinitionAction
@@ -62,7 +74,7 @@ public class TypeRemoveFieldDefinitionActionBuilder implements Builder<TypeRemov
 
     /**
      * factory method for an instance of TypeRemoveFieldDefinitionActionBuilder
-     * @return builder
+     * @return builder 
      */
     public static TypeRemoveFieldDefinitionActionBuilder of() {
         return new TypeRemoveFieldDefinitionActionBuilder();

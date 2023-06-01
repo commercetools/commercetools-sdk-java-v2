@@ -1,8 +1,15 @@
-
 package com.commercetools.api.models.order;
 
+import com.commercetools.api.models.order.OrderSearchAndExpression;
+import com.commercetools.api.models.order.OrderSearchFilterExpression;
+import com.commercetools.api.models.order.OrderSearchNotExpression;
+import com.commercetools.api.models.order.OrderSearchOrExpression;
+import com.commercetools.api.models.order.OrderSearchQuery;
+import com.commercetools.api.models.order.OrderSearchCompoundExpression;
+import javax.annotation.Nullable;
 import java.util.*;
-
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -15,10 +22,16 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     OrderSearchCompoundExpression orderSearchCompoundExpression = OrderSearchCompoundExpression.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class OrderSearchCompoundExpressionBuilder implements Builder<OrderSearchCompoundExpression> {
+
+
+
 
     /**
      * builds OrderSearchCompoundExpression with checking for non-null required values
@@ -27,7 +40,7 @@ public class OrderSearchCompoundExpressionBuilder implements Builder<OrderSearch
     public OrderSearchCompoundExpression build() {
         return new OrderSearchCompoundExpressionImpl();
     }
-
+    
     /**
      * builds OrderSearchCompoundExpression without checking for non-null required values
      * @return OrderSearchCompoundExpression
@@ -38,7 +51,7 @@ public class OrderSearchCompoundExpressionBuilder implements Builder<OrderSearch
 
     /**
      * factory method for an instance of OrderSearchCompoundExpressionBuilder
-     * @return builder
+     * @return builder 
      */
     public static OrderSearchCompoundExpressionBuilder of() {
         return new OrderSearchCompoundExpressionBuilder();

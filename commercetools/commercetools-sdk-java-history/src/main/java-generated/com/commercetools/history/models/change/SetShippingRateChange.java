@@ -1,19 +1,21 @@
-
 package com.commercetools.history.models.change;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
+import com.commercetools.history.models.change.Change;
 import com.commercetools.history.models.common.Money;
+import com.commercetools.history.models.change.SetShippingRateChangeImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * SetShippingRateChange
@@ -28,9 +30,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .previousValue(previousValueBuilder -> previousValueBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = SetShippingRateChangeImpl.class)
 public interface SetShippingRateChange extends Change {
 
@@ -46,7 +51,6 @@ public interface SetShippingRateChange extends Change {
     @NotNull
     @JsonProperty("type")
     public String getType();
-
     /**
      *  <p>Update action for <code>setShippingRate</code></p>
      * @return change
@@ -54,7 +58,6 @@ public interface SetShippingRateChange extends Change {
     @NotNull
     @JsonProperty("change")
     public String getChange();
-
     /**
      *
      * @return nextValue
@@ -63,7 +66,6 @@ public interface SetShippingRateChange extends Change {
     @Valid
     @JsonProperty("nextValue")
     public Money getNextValue();
-
     /**
      *
      * @return previousValue
@@ -77,30 +79,34 @@ public interface SetShippingRateChange extends Change {
      *  <p>Update action for <code>setShippingRate</code></p>
      * @param change value to be set
      */
-
+    
     public void setChange(final String change);
-
+    
+    
     /**
      * set nextValue
      * @param nextValue value to be set
      */
-
+    
     public void setNextValue(final Money nextValue);
-
+    
+    
     /**
      * set previousValue
      * @param previousValue value to be set
      */
-
+    
     public void setPreviousValue(final Money previousValue);
+    
 
     /**
      * factory method
      * @return instance of SetShippingRateChange
      */
-    public static SetShippingRateChange of() {
+    public static SetShippingRateChange of(){
         return new SetShippingRateChangeImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy SetShippingRateChange
@@ -139,7 +145,7 @@ public interface SetShippingRateChange extends Change {
     public static SetShippingRateChangeBuilder builder() {
         return SetShippingRateChangeBuilder.of();
     }
-
+    
     /**
      * create builder for SetShippingRateChange instance
      * @param template instance with prefilled values for the builder
@@ -148,6 +154,7 @@ public interface SetShippingRateChange extends Change {
     public static SetShippingRateChangeBuilder builder(final SetShippingRateChange template) {
         return SetShippingRateChangeBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -158,7 +165,7 @@ public interface SetShippingRateChange extends Change {
     default <T> T withSetShippingRateChange(Function<SetShippingRateChange, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

@@ -1,9 +1,12 @@
-
 package com.commercetools.api.models.order_edit;
 
+import com.commercetools.api.models.discount_code.DiscountCodeReference;
+import com.commercetools.api.models.order.StagedOrderUpdateAction;
+import com.commercetools.api.models.order_edit.StagedOrderRemoveDiscountCodeAction;
+import javax.annotation.Nullable;
 import java.util.*;
 import java.util.function.Function;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -17,56 +20,61 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .discountCode(discountCodeBuilder -> discountCodeBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class StagedOrderRemoveDiscountCodeActionBuilder implements Builder<StagedOrderRemoveDiscountCodeAction> {
 
+    
+    
     private com.commercetools.api.models.discount_code.DiscountCodeReference discountCode;
 
+    
     /**
      *  <p>Reference to a DiscountCode.</p>
      * @param builder function to build the discountCode value
      * @return Builder
      */
-
-    public StagedOrderRemoveDiscountCodeActionBuilder discountCode(
-            Function<com.commercetools.api.models.discount_code.DiscountCodeReferenceBuilder, com.commercetools.api.models.discount_code.DiscountCodeReferenceBuilder> builder) {
-        this.discountCode = builder.apply(com.commercetools.api.models.discount_code.DiscountCodeReferenceBuilder.of())
-                .build();
+    
+    public StagedOrderRemoveDiscountCodeActionBuilder discountCode(Function<com.commercetools.api.models.discount_code.DiscountCodeReferenceBuilder, com.commercetools.api.models.discount_code.DiscountCodeReferenceBuilder> builder) {
+        this.discountCode = builder.apply(com.commercetools.api.models.discount_code.DiscountCodeReferenceBuilder.of()).build();
         return this;
     }
-
+    
     /**
      *  <p>Reference to a DiscountCode.</p>
      * @param builder function to build the discountCode value
      * @return Builder
      */
-
-    public StagedOrderRemoveDiscountCodeActionBuilder withDiscountCode(
-            Function<com.commercetools.api.models.discount_code.DiscountCodeReferenceBuilder, com.commercetools.api.models.discount_code.DiscountCodeReference> builder) {
+    
+    public StagedOrderRemoveDiscountCodeActionBuilder withDiscountCode(Function<com.commercetools.api.models.discount_code.DiscountCodeReferenceBuilder, com.commercetools.api.models.discount_code.DiscountCodeReference> builder) {
         this.discountCode = builder.apply(com.commercetools.api.models.discount_code.DiscountCodeReferenceBuilder.of());
         return this;
     }
-
+                    
     /**
      *  <p>Reference to a DiscountCode.</p>
      * @param discountCode value to be set
      * @return Builder
      */
-
-    public StagedOrderRemoveDiscountCodeActionBuilder discountCode(
-            final com.commercetools.api.models.discount_code.DiscountCodeReference discountCode) {
+    
+    public StagedOrderRemoveDiscountCodeActionBuilder discountCode( final com.commercetools.api.models.discount_code.DiscountCodeReference discountCode) {
         this.discountCode = discountCode;
         return this;
     }
+    
+    
 
     /**
      *  <p>Reference to a DiscountCode.</p>
      * @return discountCode
      */
-
-    public com.commercetools.api.models.discount_code.DiscountCodeReference getDiscountCode() {
+    
+    
+    public com.commercetools.api.models.discount_code.DiscountCodeReference getDiscountCode(){
         return this.discountCode;
     }
 
@@ -78,7 +86,7 @@ public class StagedOrderRemoveDiscountCodeActionBuilder implements Builder<Stage
         Objects.requireNonNull(discountCode, StagedOrderRemoveDiscountCodeAction.class + ": discountCode is missing");
         return new StagedOrderRemoveDiscountCodeActionImpl(discountCode);
     }
-
+    
     /**
      * builds StagedOrderRemoveDiscountCodeAction without checking for non-null required values
      * @return StagedOrderRemoveDiscountCodeAction
@@ -89,7 +97,7 @@ public class StagedOrderRemoveDiscountCodeActionBuilder implements Builder<Stage
 
     /**
      * factory method for an instance of StagedOrderRemoveDiscountCodeActionBuilder
-     * @return builder
+     * @return builder 
      */
     public static StagedOrderRemoveDiscountCodeActionBuilder of() {
         return new StagedOrderRemoveDiscountCodeActionBuilder();

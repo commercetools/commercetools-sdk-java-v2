@@ -1,8 +1,12 @@
-
 package com.commercetools.api.models.channel;
 
+import com.commercetools.api.models.channel.ChannelRoleEnum;
+import com.commercetools.api.models.channel.ChannelUpdateAction;
+import com.commercetools.api.models.channel.ChannelSetRolesAction;
+import javax.annotation.Nullable;
 import java.util.*;
-
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -16,11 +20,16 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .plusRoles(rolesBuilder -> rolesBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class ChannelSetRolesActionBuilder implements Builder<ChannelSetRolesAction> {
 
+    
+    
     private java.util.List<com.commercetools.api.models.channel.ChannelRoleEnum> roles;
 
     /**
@@ -28,44 +37,47 @@ public class ChannelSetRolesActionBuilder implements Builder<ChannelSetRolesActi
      * @param roles value to be set
      * @return Builder
      */
-
-    public ChannelSetRolesActionBuilder roles(final com.commercetools.api.models.channel.ChannelRoleEnum... roles) {
+    
+    public ChannelSetRolesActionBuilder roles( final com.commercetools.api.models.channel.ChannelRoleEnum ...roles) {
         this.roles = new ArrayList<>(Arrays.asList(roles));
         return this;
     }
-
+    
     /**
      *  <p>Value to set. If not specified, then <code>InventorySupply</code> is assigned by default.</p>
      * @param roles value to be set
      * @return Builder
      */
-
-    public ChannelSetRolesActionBuilder roles(
-            final java.util.List<com.commercetools.api.models.channel.ChannelRoleEnum> roles) {
+    
+    public ChannelSetRolesActionBuilder roles( final java.util.List<com.commercetools.api.models.channel.ChannelRoleEnum> roles) {
         this.roles = roles;
         return this;
     }
-
+    
     /**
      *  <p>Value to set. If not specified, then <code>InventorySupply</code> is assigned by default.</p>
      * @param roles value to be set
      * @return Builder
      */
-
-    public ChannelSetRolesActionBuilder plusRoles(final com.commercetools.api.models.channel.ChannelRoleEnum... roles) {
+    
+    public ChannelSetRolesActionBuilder plusRoles( final com.commercetools.api.models.channel.ChannelRoleEnum ...roles) {
         if (this.roles == null) {
             this.roles = new ArrayList<>();
         }
         this.roles.addAll(Arrays.asList(roles));
         return this;
     }
+    
+    
+    
 
     /**
      *  <p>Value to set. If not specified, then <code>InventorySupply</code> is assigned by default.</p>
      * @return roles
      */
-
-    public java.util.List<com.commercetools.api.models.channel.ChannelRoleEnum> getRoles() {
+    
+    
+    public java.util.List<com.commercetools.api.models.channel.ChannelRoleEnum> getRoles(){
         return this.roles;
     }
 
@@ -77,7 +89,7 @@ public class ChannelSetRolesActionBuilder implements Builder<ChannelSetRolesActi
         Objects.requireNonNull(roles, ChannelSetRolesAction.class + ": roles is missing");
         return new ChannelSetRolesActionImpl(roles);
     }
-
+    
     /**
      * builds ChannelSetRolesAction without checking for non-null required values
      * @return ChannelSetRolesAction
@@ -88,7 +100,7 @@ public class ChannelSetRolesActionBuilder implements Builder<ChannelSetRolesActi
 
     /**
      * factory method for an instance of ChannelSetRolesActionBuilder
-     * @return builder
+     * @return builder 
      */
     public static ChannelSetRolesActionBuilder of() {
         return new ChannelSetRolesActionBuilder();

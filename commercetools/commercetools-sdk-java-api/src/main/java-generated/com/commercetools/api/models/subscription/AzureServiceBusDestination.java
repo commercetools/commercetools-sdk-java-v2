@@ -1,17 +1,20 @@
-
 package com.commercetools.api.models.subscription;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
+import com.commercetools.api.models.subscription.Destination;
+import com.commercetools.api.models.subscription.AzureServiceBusDestinationImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Azure Service Bus can be used as a pull-queue with Queues, or to fan-out messages with Topics and Subscriptions. To set up a Subscription with Azure Service Bus, first create a queue/topic in the Azure Portal with a Shared Access Policy including the <code>Send</code> permission.</p>
@@ -24,9 +27,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .connectionString("{connectionString}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = AzureServiceBusDestinationImpl.class)
 public interface AzureServiceBusDestination extends Destination {
 
@@ -47,16 +53,18 @@ public interface AzureServiceBusDestination extends Destination {
      *  <p>SharedAccessKey is partially hidden on retrieval for security reasons.</p>
      * @param connectionString value to be set
      */
-
+    
     public void setConnectionString(final String connectionString);
+    
 
     /**
      * factory method
      * @return instance of AzureServiceBusDestination
      */
-    public static AzureServiceBusDestination of() {
+    public static AzureServiceBusDestination of(){
         return new AzureServiceBusDestinationImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy AzureServiceBusDestination
@@ -91,7 +99,7 @@ public interface AzureServiceBusDestination extends Destination {
     public static AzureServiceBusDestinationBuilder builder() {
         return AzureServiceBusDestinationBuilder.of();
     }
-
+    
     /**
      * create builder for AzureServiceBusDestination instance
      * @param template instance with prefilled values for the builder
@@ -100,6 +108,7 @@ public interface AzureServiceBusDestination extends Destination {
     public static AzureServiceBusDestinationBuilder builder(final AzureServiceBusDestination template) {
         return AzureServiceBusDestinationBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -110,7 +119,7 @@ public interface AzureServiceBusDestination extends Destination {
     default <T> T withAzureServiceBusDestination(Function<AzureServiceBusDestination, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

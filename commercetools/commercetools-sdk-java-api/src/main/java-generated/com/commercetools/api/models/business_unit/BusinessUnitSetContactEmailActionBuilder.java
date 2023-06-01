@@ -1,10 +1,11 @@
-
 package com.commercetools.api.models.business_unit;
 
-import java.util.*;
-
+import com.commercetools.api.models.business_unit.BusinessUnitUpdateAction;
+import com.commercetools.api.models.business_unit.BusinessUnitSetContactEmailAction;
 import javax.annotation.Nullable;
-
+import java.util.*;
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -17,32 +18,39 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     BusinessUnitSetContactEmailAction businessUnitSetContactEmailAction = BusinessUnitSetContactEmailAction.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class BusinessUnitSetContactEmailActionBuilder implements Builder<BusinessUnitSetContactEmailAction> {
 
+    
     @Nullable
     private String contactEmail;
 
+    
     /**
      *  <p>Email to set. If <code>contactEmail</code> is absent or <code>null</code>, the existing contact email, if any, will be removed.</p>
      * @param contactEmail value to be set
      * @return Builder
      */
-
+    
     public BusinessUnitSetContactEmailActionBuilder contactEmail(@Nullable final String contactEmail) {
         this.contactEmail = contactEmail;
         return this;
     }
+    
+    
 
     /**
      *  <p>Email to set. If <code>contactEmail</code> is absent or <code>null</code>, the existing contact email, if any, will be removed.</p>
      * @return contactEmail
      */
-
+    
     @Nullable
-    public String getContactEmail() {
+    public String getContactEmail(){
         return this.contactEmail;
     }
 
@@ -53,7 +61,7 @@ public class BusinessUnitSetContactEmailActionBuilder implements Builder<Busines
     public BusinessUnitSetContactEmailAction build() {
         return new BusinessUnitSetContactEmailActionImpl(contactEmail);
     }
-
+    
     /**
      * builds BusinessUnitSetContactEmailAction without checking for non-null required values
      * @return BusinessUnitSetContactEmailAction
@@ -64,7 +72,7 @@ public class BusinessUnitSetContactEmailActionBuilder implements Builder<Busines
 
     /**
      * factory method for an instance of BusinessUnitSetContactEmailActionBuilder
-     * @return builder
+     * @return builder 
      */
     public static BusinessUnitSetContactEmailActionBuilder of() {
         return new BusinessUnitSetContactEmailActionBuilder();

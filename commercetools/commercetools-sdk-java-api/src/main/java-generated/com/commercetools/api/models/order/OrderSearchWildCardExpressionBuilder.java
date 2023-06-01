@@ -1,9 +1,12 @@
-
 package com.commercetools.api.models.order;
 
+import com.commercetools.api.models.order.OrderSearchQueryExpression;
+import com.commercetools.api.models.order.OrderSearchStringValue;
+import com.commercetools.api.models.order.OrderSearchWildCardExpression;
+import javax.annotation.Nullable;
 import java.util.*;
 import java.util.function.Function;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -17,55 +20,61 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .wildcard(wildcardBuilder -> wildcardBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class OrderSearchWildCardExpressionBuilder implements Builder<OrderSearchWildCardExpression> {
 
+    
+    
     private com.commercetools.api.models.order.OrderSearchStringValue wildcard;
 
+    
     /**
      * set the value to the wildcard using the builder function
      * @param builder function to build the wildcard value
      * @return Builder
      */
-
-    public OrderSearchWildCardExpressionBuilder wildcard(
-            Function<com.commercetools.api.models.order.OrderSearchStringValueBuilder, com.commercetools.api.models.order.OrderSearchStringValueBuilder> builder) {
+    
+    public OrderSearchWildCardExpressionBuilder wildcard(Function<com.commercetools.api.models.order.OrderSearchStringValueBuilder, com.commercetools.api.models.order.OrderSearchStringValueBuilder> builder) {
         this.wildcard = builder.apply(com.commercetools.api.models.order.OrderSearchStringValueBuilder.of()).build();
         return this;
     }
-
+    
     /**
      * set the value to the wildcard using the builder function
      * @param builder function to build the wildcard value
      * @return Builder
      */
-
-    public OrderSearchWildCardExpressionBuilder withWildcard(
-            Function<com.commercetools.api.models.order.OrderSearchStringValueBuilder, com.commercetools.api.models.order.OrderSearchStringValue> builder) {
+    
+    public OrderSearchWildCardExpressionBuilder withWildcard(Function<com.commercetools.api.models.order.OrderSearchStringValueBuilder, com.commercetools.api.models.order.OrderSearchStringValue> builder) {
         this.wildcard = builder.apply(com.commercetools.api.models.order.OrderSearchStringValueBuilder.of());
         return this;
     }
-
+                    
     /**
      * set the value to the wildcard
      * @param wildcard value to be set
      * @return Builder
      */
-
-    public OrderSearchWildCardExpressionBuilder wildcard(
-            final com.commercetools.api.models.order.OrderSearchStringValue wildcard) {
+    
+    public OrderSearchWildCardExpressionBuilder wildcard( final com.commercetools.api.models.order.OrderSearchStringValue wildcard) {
         this.wildcard = wildcard;
         return this;
     }
+    
+    
 
     /**
      * value of wildcard}
      * @return wildcard
      */
-
-    public com.commercetools.api.models.order.OrderSearchStringValue getWildcard() {
+    
+    
+    public com.commercetools.api.models.order.OrderSearchStringValue getWildcard(){
         return this.wildcard;
     }
 
@@ -77,7 +86,7 @@ public class OrderSearchWildCardExpressionBuilder implements Builder<OrderSearch
         Objects.requireNonNull(wildcard, OrderSearchWildCardExpression.class + ": wildcard is missing");
         return new OrderSearchWildCardExpressionImpl(wildcard);
     }
-
+    
     /**
      * builds OrderSearchWildCardExpression without checking for non-null required values
      * @return OrderSearchWildCardExpression
@@ -88,7 +97,7 @@ public class OrderSearchWildCardExpressionBuilder implements Builder<OrderSearch
 
     /**
      * factory method for an instance of OrderSearchWildCardExpressionBuilder
-     * @return builder
+     * @return builder 
      */
     public static OrderSearchWildCardExpressionBuilder of() {
         return new OrderSearchWildCardExpressionBuilder();

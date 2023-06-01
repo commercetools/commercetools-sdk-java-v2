@@ -1,17 +1,20 @@
-
 package com.commercetools.api.models.error;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
+import com.commercetools.api.models.error.GraphQLErrorObject;
+import com.commercetools.api.models.error.GraphQLCountryNotConfiguredInStoreErrorImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Returned when a Cart or an Order in a Store references a country that is not included in the countries configured for the Store.</p>
@@ -36,9 +39,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .country("{country}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = GraphQLCountryNotConfiguredInStoreErrorImpl.class)
 public interface GraphQLCountryNotConfiguredInStoreError extends GraphQLErrorObject {
 
@@ -54,7 +60,6 @@ public interface GraphQLCountryNotConfiguredInStoreError extends GraphQLErrorObj
     @NotNull
     @JsonProperty("code")
     public String getCode();
-
     /**
      *  <p>Countries configured for the Store.</p>
      * @return storeCountries
@@ -62,7 +67,6 @@ public interface GraphQLCountryNotConfiguredInStoreError extends GraphQLErrorObj
     @NotNull
     @JsonProperty("storeCountries")
     public List<String> getStoreCountries();
-
     /**
      *  <p>The country that is not configured for the Store but referenced on the Cart or Order.</p>
      * @return country
@@ -75,31 +79,32 @@ public interface GraphQLCountryNotConfiguredInStoreError extends GraphQLErrorObj
      *  <p>Countries configured for the Store.</p>
      * @param storeCountries values to be set
      */
-
+    
     @JsonIgnore
-    public void setStoreCountries(final String... storeCountries);
-
+    public void setStoreCountries(final String ...storeCountries);
     /**
      *  <p>Countries configured for the Store.</p>
      * @param storeCountries values to be set
      */
-
+    
     public void setStoreCountries(final List<String> storeCountries);
-
+    
     /**
      *  <p>The country that is not configured for the Store but referenced on the Cart or Order.</p>
      * @param country value to be set
      */
-
+    
     public void setCountry(final String country);
+    
 
     /**
      * factory method
      * @return instance of GraphQLCountryNotConfiguredInStoreError
      */
-    public static GraphQLCountryNotConfiguredInStoreError of() {
+    public static GraphQLCountryNotConfiguredInStoreError of(){
         return new GraphQLCountryNotConfiguredInStoreErrorImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy GraphQLCountryNotConfiguredInStoreError
@@ -120,14 +125,15 @@ public interface GraphQLCountryNotConfiguredInStoreError extends GraphQLErrorObj
      * @return copy instance
      */
     @Nullable
-    public static GraphQLCountryNotConfiguredInStoreError deepCopy(
-            @Nullable final GraphQLCountryNotConfiguredInStoreError template) {
+    public static GraphQLCountryNotConfiguredInStoreError deepCopy(@Nullable final GraphQLCountryNotConfiguredInStoreError template) {
         if (template == null) {
             return null;
         }
         GraphQLCountryNotConfiguredInStoreErrorImpl instance = new GraphQLCountryNotConfiguredInStoreErrorImpl();
         Optional.ofNullable(template.values()).ifPresent(t -> t.forEach(instance::setValue));
-        instance.setStoreCountries(Optional.ofNullable(template.getStoreCountries()).map(ArrayList::new).orElse(null));
+        instance.setStoreCountries(Optional.ofNullable(template.getStoreCountries())
+                .map(ArrayList::new)
+                .orElse(null));
         instance.setCountry(template.getCountry());
         return instance;
     }
@@ -139,16 +145,16 @@ public interface GraphQLCountryNotConfiguredInStoreError extends GraphQLErrorObj
     public static GraphQLCountryNotConfiguredInStoreErrorBuilder builder() {
         return GraphQLCountryNotConfiguredInStoreErrorBuilder.of();
     }
-
+    
     /**
      * create builder for GraphQLCountryNotConfiguredInStoreError instance
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static GraphQLCountryNotConfiguredInStoreErrorBuilder builder(
-            final GraphQLCountryNotConfiguredInStoreError template) {
+    public static GraphQLCountryNotConfiguredInStoreErrorBuilder builder(final GraphQLCountryNotConfiguredInStoreError template) {
         return GraphQLCountryNotConfiguredInStoreErrorBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -156,11 +162,10 @@ public interface GraphQLCountryNotConfiguredInStoreError extends GraphQLErrorObj
      * @param helper function to map the object
      * @return mapped value
      */
-    default <T> T withGraphQLCountryNotConfiguredInStoreError(
-            Function<GraphQLCountryNotConfiguredInStoreError, T> helper) {
+    default <T> T withGraphQLCountryNotConfiguredInStoreError(Function<GraphQLCountryNotConfiguredInStoreError, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

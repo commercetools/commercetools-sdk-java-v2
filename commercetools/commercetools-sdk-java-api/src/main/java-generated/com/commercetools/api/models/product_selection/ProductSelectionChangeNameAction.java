@@ -1,19 +1,21 @@
-
 package com.commercetools.api.models.product_selection;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
 import com.commercetools.api.models.common.LocalizedString;
+import com.commercetools.api.models.product_selection.ProductSelectionUpdateAction;
+import com.commercetools.api.models.product_selection.ProductSelectionChangeNameActionImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * ProductSelectionChangeNameAction
@@ -26,9 +28,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .name(nameBuilder -> nameBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = ProductSelectionChangeNameActionImpl.class)
 public interface ProductSelectionChangeNameAction extends ProductSelectionUpdateAction {
 
@@ -50,16 +55,18 @@ public interface ProductSelectionChangeNameAction extends ProductSelectionUpdate
      *  <p>The new name to be set for the ProductSelection.</p>
      * @param name value to be set
      */
-
+    
     public void setName(final LocalizedString name);
+    
 
     /**
      * factory method
      * @return instance of ProductSelectionChangeNameAction
      */
-    public static ProductSelectionChangeNameAction of() {
+    public static ProductSelectionChangeNameAction of(){
         return new ProductSelectionChangeNameActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy ProductSelectionChangeNameAction
@@ -94,7 +101,7 @@ public interface ProductSelectionChangeNameAction extends ProductSelectionUpdate
     public static ProductSelectionChangeNameActionBuilder builder() {
         return ProductSelectionChangeNameActionBuilder.of();
     }
-
+    
     /**
      * create builder for ProductSelectionChangeNameAction instance
      * @param template instance with prefilled values for the builder
@@ -103,6 +110,7 @@ public interface ProductSelectionChangeNameAction extends ProductSelectionUpdate
     public static ProductSelectionChangeNameActionBuilder builder(final ProductSelectionChangeNameAction template) {
         return ProductSelectionChangeNameActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -113,7 +121,7 @@ public interface ProductSelectionChangeNameAction extends ProductSelectionUpdate
     default <T> T withProductSelectionChangeNameAction(Function<ProductSelectionChangeNameAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

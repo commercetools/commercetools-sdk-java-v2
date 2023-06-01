@@ -1,19 +1,21 @@
-
 package com.commercetools.api.models.message;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
 import com.commercetools.api.models.category.CategoryReference;
+import com.commercetools.api.models.message.Message;
+import com.commercetools.api.models.message.ProductAddedToCategoryMessageImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Generated after a successful Add To Category update action.</p>
@@ -34,9 +36,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .staged(true)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = ProductAddedToCategoryMessageImpl.class)
 public interface ProductAddedToCategoryMessage extends Message {
 
@@ -53,7 +58,6 @@ public interface ProductAddedToCategoryMessage extends Message {
     @Valid
     @JsonProperty("category")
     public CategoryReference getCategory();
-
     /**
      *  <p>Whether the update was only applied to the staged Product Projection.</p>
      * @return staged
@@ -66,23 +70,26 @@ public interface ProductAddedToCategoryMessage extends Message {
      *  <p>Category the Product was added to.</p>
      * @param category value to be set
      */
-
+    
     public void setCategory(final CategoryReference category);
-
+    
+    
     /**
      *  <p>Whether the update was only applied to the staged Product Projection.</p>
      * @param staged value to be set
      */
-
+    
     public void setStaged(final Boolean staged);
+    
 
     /**
      * factory method
      * @return instance of ProductAddedToCategoryMessage
      */
-    public static ProductAddedToCategoryMessage of() {
+    public static ProductAddedToCategoryMessage of(){
         return new ProductAddedToCategoryMessageImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy ProductAddedToCategoryMessage
@@ -121,14 +128,12 @@ public interface ProductAddedToCategoryMessage extends Message {
         instance.setVersion(template.getVersion());
         instance.setCreatedAt(template.getCreatedAt());
         instance.setLastModifiedAt(template.getLastModifiedAt());
-        instance.setLastModifiedBy(
-            com.commercetools.api.models.common.LastModifiedBy.deepCopy(template.getLastModifiedBy()));
+        instance.setLastModifiedBy(com.commercetools.api.models.common.LastModifiedBy.deepCopy(template.getLastModifiedBy()));
         instance.setCreatedBy(com.commercetools.api.models.common.CreatedBy.deepCopy(template.getCreatedBy()));
         instance.setSequenceNumber(template.getSequenceNumber());
         instance.setResource(com.commercetools.api.models.common.Reference.deepCopy(template.getResource()));
         instance.setResourceVersion(template.getResourceVersion());
-        instance.setResourceUserProvidedIdentifiers(com.commercetools.api.models.message.UserProvidedIdentifiers
-                .deepCopy(template.getResourceUserProvidedIdentifiers()));
+        instance.setResourceUserProvidedIdentifiers(com.commercetools.api.models.message.UserProvidedIdentifiers.deepCopy(template.getResourceUserProvidedIdentifiers()));
         instance.setCategory(com.commercetools.api.models.category.CategoryReference.deepCopy(template.getCategory()));
         instance.setStaged(template.getStaged());
         return instance;
@@ -141,7 +146,7 @@ public interface ProductAddedToCategoryMessage extends Message {
     public static ProductAddedToCategoryMessageBuilder builder() {
         return ProductAddedToCategoryMessageBuilder.of();
     }
-
+    
     /**
      * create builder for ProductAddedToCategoryMessage instance
      * @param template instance with prefilled values for the builder
@@ -150,6 +155,7 @@ public interface ProductAddedToCategoryMessage extends Message {
     public static ProductAddedToCategoryMessageBuilder builder(final ProductAddedToCategoryMessage template) {
         return ProductAddedToCategoryMessageBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -160,7 +166,7 @@ public interface ProductAddedToCategoryMessage extends Message {
     default <T> T withProductAddedToCategoryMessage(Function<ProductAddedToCategoryMessage, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

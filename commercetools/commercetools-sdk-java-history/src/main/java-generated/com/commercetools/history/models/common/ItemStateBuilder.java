@@ -1,9 +1,11 @@
-
 package com.commercetools.history.models.common;
 
+import com.commercetools.history.models.common.Reference;
+import com.commercetools.history.models.common.ItemState;
+import javax.annotation.Nullable;
 import java.util.*;
 import java.util.function.Function;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -18,76 +20,89 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .state(stateBuilder -> stateBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class ItemStateBuilder implements Builder<ItemState> {
 
+    
+    
     private Integer quantity;
-
+    
+    
+    
     private com.commercetools.history.models.common.Reference state;
 
+    
     /**
      * set the value to the quantity
      * @param quantity value to be set
      * @return Builder
      */
-
-    public ItemStateBuilder quantity(final Integer quantity) {
+    
+    public ItemStateBuilder quantity( final Integer quantity) {
         this.quantity = quantity;
         return this;
     }
-
+    
+    
+    
+    
     /**
      * set the value to the state using the builder function
      * @param builder function to build the state value
      * @return Builder
      */
-
-    public ItemStateBuilder state(
-            Function<com.commercetools.history.models.common.ReferenceBuilder, com.commercetools.history.models.common.ReferenceBuilder> builder) {
+    
+    public ItemStateBuilder state(Function<com.commercetools.history.models.common.ReferenceBuilder, com.commercetools.history.models.common.ReferenceBuilder> builder) {
         this.state = builder.apply(com.commercetools.history.models.common.ReferenceBuilder.of()).build();
         return this;
     }
-
+    
     /**
      * set the value to the state using the builder function
      * @param builder function to build the state value
      * @return Builder
      */
-
-    public ItemStateBuilder withState(
-            Function<com.commercetools.history.models.common.ReferenceBuilder, com.commercetools.history.models.common.Reference> builder) {
+    
+    public ItemStateBuilder withState(Function<com.commercetools.history.models.common.ReferenceBuilder, com.commercetools.history.models.common.Reference> builder) {
         this.state = builder.apply(com.commercetools.history.models.common.ReferenceBuilder.of());
         return this;
     }
-
+                    
     /**
      * set the value to the state
      * @param state value to be set
      * @return Builder
      */
-
-    public ItemStateBuilder state(final com.commercetools.history.models.common.Reference state) {
+    
+    public ItemStateBuilder state( final com.commercetools.history.models.common.Reference state) {
         this.state = state;
         return this;
     }
+    
+    
 
     /**
      * value of quantity}
      * @return quantity
      */
-
-    public Integer getQuantity() {
+    
+    
+    public Integer getQuantity(){
         return this.quantity;
     }
-
+    
     /**
      * value of state}
      * @return state
      */
-
-    public com.commercetools.history.models.common.Reference getState() {
+    
+    
+    public com.commercetools.history.models.common.Reference getState(){
         return this.state;
     }
 
@@ -100,7 +115,7 @@ public class ItemStateBuilder implements Builder<ItemState> {
         Objects.requireNonNull(state, ItemState.class + ": state is missing");
         return new ItemStateImpl(quantity, state);
     }
-
+    
     /**
      * builds ItemState without checking for non-null required values
      * @return ItemState
@@ -111,7 +126,7 @@ public class ItemStateBuilder implements Builder<ItemState> {
 
     /**
      * factory method for an instance of ItemStateBuilder
-     * @return builder
+     * @return builder 
      */
     public static ItemStateBuilder of() {
         return new ItemStateBuilder();

@@ -1,9 +1,11 @@
-
 package com.commercetools.api.models.me;
 
+import com.commercetools.api.models.business_unit.BusinessUnitUpdateAction;
+import com.commercetools.api.models.me.MyBusinessUnitUpdate;
+import javax.annotation.Nullable;
 import java.util.*;
 import java.util.function.Function;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -18,110 +20,118 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .plusActions(actionsBuilder -> actionsBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class MyBusinessUnitUpdateBuilder implements Builder<MyBusinessUnitUpdate> {
 
+    
+    
     private Long version;
-
+    
+    
+    
     private java.util.List<com.commercetools.api.models.business_unit.BusinessUnitUpdateAction> actions;
 
+    
     /**
      *  <p>Expected version of the BusinessUnit on which the changes should be applied. If the expected version does not match the actual version, a 409 Conflict error will be returned.</p>
      * @param version value to be set
      * @return Builder
      */
-
-    public MyBusinessUnitUpdateBuilder version(final Long version) {
+    
+    public MyBusinessUnitUpdateBuilder version( final Long version) {
         this.version = version;
         return this;
     }
-
+    
+    
+    
     /**
      *  <p>Update actions to be performed on the BusinessUnit.</p>
      * @param actions value to be set
      * @return Builder
      */
-
-    public MyBusinessUnitUpdateBuilder actions(
-            final com.commercetools.api.models.business_unit.BusinessUnitUpdateAction... actions) {
+    
+    public MyBusinessUnitUpdateBuilder actions( final com.commercetools.api.models.business_unit.BusinessUnitUpdateAction ...actions) {
         this.actions = new ArrayList<>(Arrays.asList(actions));
         return this;
     }
-
+    
     /**
      *  <p>Update actions to be performed on the BusinessUnit.</p>
      * @param actions value to be set
      * @return Builder
      */
-
-    public MyBusinessUnitUpdateBuilder actions(
-            final java.util.List<com.commercetools.api.models.business_unit.BusinessUnitUpdateAction> actions) {
+    
+    public MyBusinessUnitUpdateBuilder actions( final java.util.List<com.commercetools.api.models.business_unit.BusinessUnitUpdateAction> actions) {
         this.actions = actions;
         return this;
     }
-
+    
     /**
      *  <p>Update actions to be performed on the BusinessUnit.</p>
      * @param actions value to be set
      * @return Builder
      */
-
-    public MyBusinessUnitUpdateBuilder plusActions(
-            final com.commercetools.api.models.business_unit.BusinessUnitUpdateAction... actions) {
+    
+    public MyBusinessUnitUpdateBuilder plusActions( final com.commercetools.api.models.business_unit.BusinessUnitUpdateAction ...actions) {
         if (this.actions == null) {
             this.actions = new ArrayList<>();
         }
         this.actions.addAll(Arrays.asList(actions));
         return this;
     }
-
+    
+    
     /**
      *  <p>Update actions to be performed on the BusinessUnit.</p>
      * @param builder function to build the actions value
      * @return Builder
      */
-
-    public MyBusinessUnitUpdateBuilder plusActions(
-            Function<com.commercetools.api.models.business_unit.BusinessUnitUpdateActionBuilder, Builder<? extends com.commercetools.api.models.business_unit.BusinessUnitUpdateAction>> builder) {
+    
+    public MyBusinessUnitUpdateBuilder plusActions(Function<com.commercetools.api.models.business_unit.BusinessUnitUpdateActionBuilder, Builder<? extends com.commercetools.api.models.business_unit.BusinessUnitUpdateAction>> builder) {
         if (this.actions == null) {
             this.actions = new ArrayList<>();
         }
-        this.actions.add(
-            builder.apply(com.commercetools.api.models.business_unit.BusinessUnitUpdateActionBuilder.of()).build());
+        this.actions.add(builder.apply(com.commercetools.api.models.business_unit.BusinessUnitUpdateActionBuilder.of()).build());
         return this;
     }
-
+    
     /**
      *  <p>Update actions to be performed on the BusinessUnit.</p>
      * @param builder function to build the actions value
      * @return Builder
      */
-
-    public MyBusinessUnitUpdateBuilder withActions(
-            Function<com.commercetools.api.models.business_unit.BusinessUnitUpdateActionBuilder, Builder<? extends com.commercetools.api.models.business_unit.BusinessUnitUpdateAction>> builder) {
+    
+    public MyBusinessUnitUpdateBuilder withActions(Function<com.commercetools.api.models.business_unit.BusinessUnitUpdateActionBuilder, Builder<? extends com.commercetools.api.models.business_unit.BusinessUnitUpdateAction>> builder) {
         this.actions = new ArrayList<>();
-        this.actions.add(
-            builder.apply(com.commercetools.api.models.business_unit.BusinessUnitUpdateActionBuilder.of()).build());
+        this.actions.add(builder.apply(com.commercetools.api.models.business_unit.BusinessUnitUpdateActionBuilder.of()).build());
         return this;
     }
+                    
+    
 
     /**
      *  <p>Expected version of the BusinessUnit on which the changes should be applied. If the expected version does not match the actual version, a 409 Conflict error will be returned.</p>
      * @return version
      */
-
-    public Long getVersion() {
+    
+    
+    public Long getVersion(){
         return this.version;
     }
-
+    
     /**
      *  <p>Update actions to be performed on the BusinessUnit.</p>
      * @return actions
      */
-
-    public java.util.List<com.commercetools.api.models.business_unit.BusinessUnitUpdateAction> getActions() {
+    
+    
+    public java.util.List<com.commercetools.api.models.business_unit.BusinessUnitUpdateAction> getActions(){
         return this.actions;
     }
 
@@ -134,7 +144,7 @@ public class MyBusinessUnitUpdateBuilder implements Builder<MyBusinessUnitUpdate
         Objects.requireNonNull(actions, MyBusinessUnitUpdate.class + ": actions is missing");
         return new MyBusinessUnitUpdateImpl(version, actions);
     }
-
+    
     /**
      * builds MyBusinessUnitUpdate without checking for non-null required values
      * @return MyBusinessUnitUpdate
@@ -145,7 +155,7 @@ public class MyBusinessUnitUpdateBuilder implements Builder<MyBusinessUnitUpdate
 
     /**
      * factory method for an instance of MyBusinessUnitUpdateBuilder
-     * @return builder
+     * @return builder 
      */
     public static MyBusinessUnitUpdateBuilder of() {
         return new MyBusinessUnitUpdateBuilder();

@@ -1,18 +1,21 @@
-
 package com.commercetools.api.models.cart;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
+import com.commercetools.api.models.cart.CartUpdateAction;
+import com.commercetools.api.models.cart.ExternalTaxAmountDraft;
+import com.commercetools.api.models.cart.CartSetLineItemTaxAmountActionImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Can be used if the Cart has the <code>ExternalAmount</code> TaxMode.</p>
@@ -25,9 +28,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .lineItemId("{lineItemId}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = CartSetLineItemTaxAmountActionImpl.class)
 public interface CartSetLineItemTaxAmountAction extends CartUpdateAction {
 
@@ -43,7 +49,6 @@ public interface CartSetLineItemTaxAmountAction extends CartUpdateAction {
     @NotNull
     @JsonProperty("lineItemId")
     public String getLineItemId();
-
     /**
      *  <p>Value to set. If empty, any existing value is removed.</p>
      * @return externalTaxAmount
@@ -51,12 +56,11 @@ public interface CartSetLineItemTaxAmountAction extends CartUpdateAction {
     @Valid
     @JsonProperty("externalTaxAmount")
     public ExternalTaxAmountDraft getExternalTaxAmount();
-
     /**
      *  <p><code>key</code> of the ShippingMethod used for this Line Item. This is required for Carts with <code>Multiple</code> ShippingMode.</p>
      * @return shippingKey
      */
-
+    
     @JsonProperty("shippingKey")
     public String getShippingKey();
 
@@ -64,30 +68,34 @@ public interface CartSetLineItemTaxAmountAction extends CartUpdateAction {
      *  <p><code>id</code> of the LineItem to update.</p>
      * @param lineItemId value to be set
      */
-
+    
     public void setLineItemId(final String lineItemId);
-
+    
+    
     /**
      *  <p>Value to set. If empty, any existing value is removed.</p>
      * @param externalTaxAmount value to be set
      */
-
+    
     public void setExternalTaxAmount(final ExternalTaxAmountDraft externalTaxAmount);
-
+    
+    
     /**
      *  <p><code>key</code> of the ShippingMethod used for this Line Item. This is required for Carts with <code>Multiple</code> ShippingMode.</p>
      * @param shippingKey value to be set
      */
-
+    
     public void setShippingKey(final String shippingKey);
+    
 
     /**
      * factory method
      * @return instance of CartSetLineItemTaxAmountAction
      */
-    public static CartSetLineItemTaxAmountAction of() {
+    public static CartSetLineItemTaxAmountAction of(){
         return new CartSetLineItemTaxAmountActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy CartSetLineItemTaxAmountAction
@@ -114,8 +122,7 @@ public interface CartSetLineItemTaxAmountAction extends CartUpdateAction {
         }
         CartSetLineItemTaxAmountActionImpl instance = new CartSetLineItemTaxAmountActionImpl();
         instance.setLineItemId(template.getLineItemId());
-        instance.setExternalTaxAmount(
-            com.commercetools.api.models.cart.ExternalTaxAmountDraft.deepCopy(template.getExternalTaxAmount()));
+        instance.setExternalTaxAmount(com.commercetools.api.models.cart.ExternalTaxAmountDraft.deepCopy(template.getExternalTaxAmount()));
         instance.setShippingKey(template.getShippingKey());
         return instance;
     }
@@ -127,7 +134,7 @@ public interface CartSetLineItemTaxAmountAction extends CartUpdateAction {
     public static CartSetLineItemTaxAmountActionBuilder builder() {
         return CartSetLineItemTaxAmountActionBuilder.of();
     }
-
+    
     /**
      * create builder for CartSetLineItemTaxAmountAction instance
      * @param template instance with prefilled values for the builder
@@ -136,6 +143,7 @@ public interface CartSetLineItemTaxAmountAction extends CartUpdateAction {
     public static CartSetLineItemTaxAmountActionBuilder builder(final CartSetLineItemTaxAmountAction template) {
         return CartSetLineItemTaxAmountActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -146,7 +154,7 @@ public interface CartSetLineItemTaxAmountAction extends CartUpdateAction {
     default <T> T withCartSetLineItemTaxAmountAction(Function<CartSetLineItemTaxAmountAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

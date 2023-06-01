@@ -1,11 +1,11 @@
-
 package com.commercetools.api.predicates.query.order_edit;
-
-import java.util.function.Function;
 
 import com.commercetools.api.predicates.query.*;
 
-public class StagedOrderSetLineItemDistributionChannelActionQueryBuilderDsl {
+import java.util.function.Function;
+
+
+public class StagedOrderSetLineItemDistributionChannelActionQueryBuilderDsl  {
     public StagedOrderSetLineItemDistributionChannelActionQueryBuilderDsl() {
     }
 
@@ -14,27 +14,20 @@ public class StagedOrderSetLineItemDistributionChannelActionQueryBuilderDsl {
     }
 
     public StringComparisonPredicateBuilder<StagedOrderSetLineItemDistributionChannelActionQueryBuilderDsl> action() {
-        return new StringComparisonPredicateBuilder<>(
-            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("action")),
-            p -> new CombinationQueryPredicate<>(p,
-                StagedOrderSetLineItemDistributionChannelActionQueryBuilderDsl::of));
+        return new StringComparisonPredicateBuilder<>(BinaryQueryPredicate.of().left(new ConstantQueryPredicate("action")),
+        p -> new CombinationQueryPredicate<>(p, StagedOrderSetLineItemDistributionChannelActionQueryBuilderDsl::of));
     }
-
     public StringComparisonPredicateBuilder<StagedOrderSetLineItemDistributionChannelActionQueryBuilderDsl> lineItemId() {
-        return new StringComparisonPredicateBuilder<>(
-            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("lineItemId")),
-            p -> new CombinationQueryPredicate<>(p,
-                StagedOrderSetLineItemDistributionChannelActionQueryBuilderDsl::of));
+        return new StringComparisonPredicateBuilder<>(BinaryQueryPredicate.of().left(new ConstantQueryPredicate("lineItemId")),
+        p -> new CombinationQueryPredicate<>(p, StagedOrderSetLineItemDistributionChannelActionQueryBuilderDsl::of));
     }
-
     public CombinationQueryPredicate<StagedOrderSetLineItemDistributionChannelActionQueryBuilderDsl> distributionChannel(
-            Function<com.commercetools.api.predicates.query.channel.ChannelResourceIdentifierQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.channel.ChannelResourceIdentifierQueryBuilderDsl>> fn) {
-        return new CombinationQueryPredicate<>(
-            ContainerQueryPredicate.of()
-                    .parent(ConstantQueryPredicate.of().constant("distributionChannel"))
-                    .inner(fn.apply(
-                        com.commercetools.api.predicates.query.channel.ChannelResourceIdentifierQueryBuilderDsl.of())),
+        Function<com.commercetools.api.predicates.query.channel.ChannelResourceIdentifierQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.channel.ChannelResourceIdentifierQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(ContainerQueryPredicate.of()
+            .parent(ConstantQueryPredicate.of().constant("distributionChannel"))
+            .inner(fn.apply(com.commercetools.api.predicates.query.channel.ChannelResourceIdentifierQueryBuilderDsl.of())),
             StagedOrderSetLineItemDistributionChannelActionQueryBuilderDsl::of);
     }
-
+    
+    
 }

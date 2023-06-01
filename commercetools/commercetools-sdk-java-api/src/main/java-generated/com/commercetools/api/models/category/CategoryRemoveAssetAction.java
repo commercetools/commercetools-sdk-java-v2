@@ -1,16 +1,20 @@
-
 package com.commercetools.api.models.category;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
+import com.commercetools.api.models.category.CategoryUpdateAction;
+import com.commercetools.api.models.category.CategoryRemoveAssetActionImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * CategoryRemoveAssetAction
@@ -22,9 +26,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     CategoryRemoveAssetAction categoryRemoveAssetAction = CategoryRemoveAssetAction.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = CategoryRemoveAssetActionImpl.class)
 public interface CategoryRemoveAssetAction extends CategoryUpdateAction {
 
@@ -37,15 +44,14 @@ public interface CategoryRemoveAssetAction extends CategoryUpdateAction {
      *  <p>Value to remove. Either <code>assetId</code> or <code>assetKey</code> is required.</p>
      * @return assetId
      */
-
+    
     @JsonProperty("assetId")
     public String getAssetId();
-
     /**
      *  <p>Value to remove. Either <code>assetId</code> or <code>assetKey</code> is required.</p>
      * @return assetKey
      */
-
+    
     @JsonProperty("assetKey")
     public String getAssetKey();
 
@@ -53,23 +59,26 @@ public interface CategoryRemoveAssetAction extends CategoryUpdateAction {
      *  <p>Value to remove. Either <code>assetId</code> or <code>assetKey</code> is required.</p>
      * @param assetId value to be set
      */
-
+    
     public void setAssetId(final String assetId);
-
+    
+    
     /**
      *  <p>Value to remove. Either <code>assetId</code> or <code>assetKey</code> is required.</p>
      * @param assetKey value to be set
      */
-
+    
     public void setAssetKey(final String assetKey);
+    
 
     /**
      * factory method
      * @return instance of CategoryRemoveAssetAction
      */
-    public static CategoryRemoveAssetAction of() {
+    public static CategoryRemoveAssetAction of(){
         return new CategoryRemoveAssetActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy CategoryRemoveAssetAction
@@ -106,7 +115,7 @@ public interface CategoryRemoveAssetAction extends CategoryUpdateAction {
     public static CategoryRemoveAssetActionBuilder builder() {
         return CategoryRemoveAssetActionBuilder.of();
     }
-
+    
     /**
      * create builder for CategoryRemoveAssetAction instance
      * @param template instance with prefilled values for the builder
@@ -115,6 +124,7 @@ public interface CategoryRemoveAssetAction extends CategoryUpdateAction {
     public static CategoryRemoveAssetActionBuilder builder(final CategoryRemoveAssetAction template) {
         return CategoryRemoveAssetActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -125,7 +135,7 @@ public interface CategoryRemoveAssetAction extends CategoryUpdateAction {
     default <T> T withCategoryRemoveAssetAction(Function<CategoryRemoveAssetAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

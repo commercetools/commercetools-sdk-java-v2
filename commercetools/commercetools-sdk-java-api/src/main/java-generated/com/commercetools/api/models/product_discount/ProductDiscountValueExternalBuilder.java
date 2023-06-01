@@ -1,8 +1,11 @@
-
 package com.commercetools.api.models.product_discount;
 
+import com.commercetools.api.models.product_discount.ProductDiscountValue;
+import com.commercetools.api.models.product_discount.ProductDiscountValueExternal;
+import javax.annotation.Nullable;
 import java.util.*;
-
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -15,10 +18,16 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     ProductDiscountValueExternal productDiscountValueExternal = ProductDiscountValueExternal.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class ProductDiscountValueExternalBuilder implements Builder<ProductDiscountValueExternal> {
+
+
+
 
     /**
      * builds ProductDiscountValueExternal with checking for non-null required values
@@ -27,7 +36,7 @@ public class ProductDiscountValueExternalBuilder implements Builder<ProductDisco
     public ProductDiscountValueExternal build() {
         return new ProductDiscountValueExternalImpl();
     }
-
+    
     /**
      * builds ProductDiscountValueExternal without checking for non-null required values
      * @return ProductDiscountValueExternal
@@ -38,7 +47,7 @@ public class ProductDiscountValueExternalBuilder implements Builder<ProductDisco
 
     /**
      * factory method for an instance of ProductDiscountValueExternalBuilder
-     * @return builder
+     * @return builder 
      */
     public static ProductDiscountValueExternalBuilder of() {
         return new ProductDiscountValueExternalBuilder();

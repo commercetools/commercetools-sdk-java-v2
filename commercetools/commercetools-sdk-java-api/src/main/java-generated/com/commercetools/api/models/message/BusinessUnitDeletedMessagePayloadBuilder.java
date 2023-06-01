@@ -1,8 +1,11 @@
-
 package com.commercetools.api.models.message;
 
+import com.commercetools.api.models.message.MessagePayload;
+import com.commercetools.api.models.message.BusinessUnitDeletedMessagePayload;
+import javax.annotation.Nullable;
 import java.util.*;
-
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -15,10 +18,16 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     BusinessUnitDeletedMessagePayload businessUnitDeletedMessagePayload = BusinessUnitDeletedMessagePayload.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class BusinessUnitDeletedMessagePayloadBuilder implements Builder<BusinessUnitDeletedMessagePayload> {
+
+
+
 
     /**
      * builds BusinessUnitDeletedMessagePayload with checking for non-null required values
@@ -27,7 +36,7 @@ public class BusinessUnitDeletedMessagePayloadBuilder implements Builder<Busines
     public BusinessUnitDeletedMessagePayload build() {
         return new BusinessUnitDeletedMessagePayloadImpl();
     }
-
+    
     /**
      * builds BusinessUnitDeletedMessagePayload without checking for non-null required values
      * @return BusinessUnitDeletedMessagePayload
@@ -38,7 +47,7 @@ public class BusinessUnitDeletedMessagePayloadBuilder implements Builder<Busines
 
     /**
      * factory method for an instance of BusinessUnitDeletedMessagePayloadBuilder
-     * @return builder
+     * @return builder 
      */
     public static BusinessUnitDeletedMessagePayloadBuilder of() {
         return new BusinessUnitDeletedMessagePayloadBuilder();

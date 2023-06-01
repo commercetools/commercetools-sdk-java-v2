@@ -1,20 +1,22 @@
-
 package com.commercetools.api.models.type;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-import java.util.stream.Collectors;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
 import com.commercetools.api.models.common.LocalizedString;
+import com.commercetools.api.models.type.FieldDefinition;
+import com.commercetools.api.models.type.ResourceTypeId;
+import com.commercetools.api.models.type.TypeDraftImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * TypeDraft
@@ -29,11 +31,15 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .plusResourceTypeIds(resourceTypeIdsBuilder -> resourceTypeIdsBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = TypeDraftImpl.class)
 public interface TypeDraft extends com.commercetools.api.models.WithKey, io.vrap.rmf.base.client.Draft<TypeDraft> {
+
 
     /**
      *  <p>User-defined unique identifier for the Type.</p>
@@ -42,7 +48,6 @@ public interface TypeDraft extends com.commercetools.api.models.WithKey, io.vrap
     @NotNull
     @JsonProperty("key")
     public String getKey();
-
     /**
      *  <p>Name of the Type.</p>
      * @return name
@@ -51,7 +56,6 @@ public interface TypeDraft extends com.commercetools.api.models.WithKey, io.vrap
     @Valid
     @JsonProperty("name")
     public LocalizedString getName();
-
     /**
      *  <p>Description of the Type.</p>
      * @return description
@@ -59,7 +63,6 @@ public interface TypeDraft extends com.commercetools.api.models.WithKey, io.vrap
     @Valid
     @JsonProperty("description")
     public LocalizedString getDescription();
-
     /**
      *  <p>Resources and/or data types for which the Type is defined.</p>
      * @return resourceTypeIds
@@ -67,7 +70,6 @@ public interface TypeDraft extends com.commercetools.api.models.WithKey, io.vrap
     @NotNull
     @JsonProperty("resourceTypeIds")
     public List<ResourceTypeId> getResourceTypeIds();
-
     /**
      *  <p>Defines Custom Fields.</p>
      * @return fieldDefinitions
@@ -80,60 +82,62 @@ public interface TypeDraft extends com.commercetools.api.models.WithKey, io.vrap
      *  <p>User-defined unique identifier for the Type.</p>
      * @param key value to be set
      */
-
+    
     public void setKey(final String key);
-
+    
+    
     /**
      *  <p>Name of the Type.</p>
      * @param name value to be set
      */
-
+    
     public void setName(final LocalizedString name);
-
+    
+    
     /**
      *  <p>Description of the Type.</p>
      * @param description value to be set
      */
-
+    
     public void setDescription(final LocalizedString description);
-
+    
+    
     /**
      *  <p>Resources and/or data types for which the Type is defined.</p>
      * @param resourceTypeIds values to be set
      */
-
+    
     @JsonIgnore
-    public void setResourceTypeIds(final ResourceTypeId... resourceTypeIds);
-
+    public void setResourceTypeIds(final ResourceTypeId ...resourceTypeIds);
     /**
      *  <p>Resources and/or data types for which the Type is defined.</p>
      * @param resourceTypeIds values to be set
      */
-
+    
     public void setResourceTypeIds(final List<ResourceTypeId> resourceTypeIds);
-
+    
     /**
      *  <p>Defines Custom Fields.</p>
      * @param fieldDefinitions values to be set
      */
-
+    
     @JsonIgnore
-    public void setFieldDefinitions(final FieldDefinition... fieldDefinitions);
-
+    public void setFieldDefinitions(final FieldDefinition ...fieldDefinitions);
     /**
      *  <p>Defines Custom Fields.</p>
      * @param fieldDefinitions values to be set
      */
-
+    
     public void setFieldDefinitions(final List<FieldDefinition> fieldDefinitions);
 
     /**
      * factory method
      * @return instance of TypeDraft
      */
-    public static TypeDraft of() {
+    public static TypeDraft of(){
         return new TypeDraftImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy TypeDraft
@@ -163,14 +167,12 @@ public interface TypeDraft extends com.commercetools.api.models.WithKey, io.vrap
         TypeDraftImpl instance = new TypeDraftImpl();
         instance.setKey(template.getKey());
         instance.setName(com.commercetools.api.models.common.LocalizedString.deepCopy(template.getName()));
-        instance.setDescription(
-            com.commercetools.api.models.common.LocalizedString.deepCopy(template.getDescription()));
-        instance.setResourceTypeIds(
-            Optional.ofNullable(template.getResourceTypeIds()).map(ArrayList::new).orElse(null));
+        instance.setDescription(com.commercetools.api.models.common.LocalizedString.deepCopy(template.getDescription()));
+        instance.setResourceTypeIds(Optional.ofNullable(template.getResourceTypeIds())
+                .map(ArrayList::new)
+                .orElse(null));
         instance.setFieldDefinitions(Optional.ofNullable(template.getFieldDefinitions())
-                .map(t -> t.stream()
-                        .map(com.commercetools.api.models.type.FieldDefinition::deepCopy)
-                        .collect(Collectors.toList()))
+                .map(t -> t.stream().map(com.commercetools.api.models.type.FieldDefinition::deepCopy).collect(Collectors.toList()))
                 .orElse(null));
         return instance;
     }
@@ -182,7 +184,7 @@ public interface TypeDraft extends com.commercetools.api.models.WithKey, io.vrap
     public static TypeDraftBuilder builder() {
         return TypeDraftBuilder.of();
     }
-
+    
     /**
      * create builder for TypeDraft instance
      * @param template instance with prefilled values for the builder
@@ -191,6 +193,7 @@ public interface TypeDraft extends com.commercetools.api.models.WithKey, io.vrap
     public static TypeDraftBuilder builder(final TypeDraft template) {
         return TypeDraftBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -201,7 +204,7 @@ public interface TypeDraft extends com.commercetools.api.models.WithKey, io.vrap
     default <T> T withTypeDraft(Function<TypeDraft, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

@@ -1,11 +1,12 @@
-
 package com.commercetools.api.models.cart;
 
+import com.commercetools.api.models.cart.CartUpdateAction;
+import com.commercetools.api.models.cart.ShippingRateInputDraft;
+import com.commercetools.api.models.cart.CartSetShippingRateInputAction;
+import javax.annotation.Nullable;
 import java.util.*;
 import java.util.function.Function;
-
-import javax.annotation.Nullable;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -18,14 +19,19 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     CartSetShippingRateInputAction cartSetShippingRateInputAction = CartSetShippingRateInputAction.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class CartSetShippingRateInputActionBuilder implements Builder<CartSetShippingRateInputAction> {
 
+    
     @Nullable
     private com.commercetools.api.models.cart.ShippingRateInputDraft shippingRateInput;
 
+    
     /**
      *  <p>The data type of this field depends on the <code>shippingRateInputType.type</code> configured in the Project:</p>
      *  <ul>
@@ -36,13 +42,13 @@ public class CartSetShippingRateInputActionBuilder implements Builder<CartSetShi
      * @param shippingRateInput value to be set
      * @return Builder
      */
-
-    public CartSetShippingRateInputActionBuilder shippingRateInput(
-            @Nullable final com.commercetools.api.models.cart.ShippingRateInputDraft shippingRateInput) {
+    
+    public CartSetShippingRateInputActionBuilder shippingRateInput(@Nullable final com.commercetools.api.models.cart.ShippingRateInputDraft shippingRateInput) {
         this.shippingRateInput = shippingRateInput;
         return this;
     }
-
+    
+    
     /**
      *  <p>The data type of this field depends on the <code>shippingRateInputType.type</code> configured in the Project:</p>
      *  <ul>
@@ -53,13 +59,12 @@ public class CartSetShippingRateInputActionBuilder implements Builder<CartSetShi
      * @param builder function to build the shippingRateInput value
      * @return Builder
      */
-
-    public CartSetShippingRateInputActionBuilder shippingRateInput(
-            Function<com.commercetools.api.models.cart.ShippingRateInputDraftBuilder, Builder<? extends com.commercetools.api.models.cart.ShippingRateInputDraft>> builder) {
-        this.shippingRateInput = builder.apply(com.commercetools.api.models.cart.ShippingRateInputDraftBuilder.of())
-                .build();
+    
+    public CartSetShippingRateInputActionBuilder shippingRateInput(Function<com.commercetools.api.models.cart.ShippingRateInputDraftBuilder, Builder<? extends com.commercetools.api.models.cart.ShippingRateInputDraft>> builder) {
+        this.shippingRateInput = builder.apply(com.commercetools.api.models.cart.ShippingRateInputDraftBuilder.of()).build();
         return this;
     }
+                    
 
     /**
      *  <p>The data type of this field depends on the <code>shippingRateInputType.type</code> configured in the Project:</p>
@@ -70,9 +75,9 @@ public class CartSetShippingRateInputActionBuilder implements Builder<CartSetShi
      *  </ul>
      * @return shippingRateInput
      */
-
+    
     @Nullable
-    public com.commercetools.api.models.cart.ShippingRateInputDraft getShippingRateInput() {
+    public com.commercetools.api.models.cart.ShippingRateInputDraft getShippingRateInput(){
         return this.shippingRateInput;
     }
 
@@ -83,7 +88,7 @@ public class CartSetShippingRateInputActionBuilder implements Builder<CartSetShi
     public CartSetShippingRateInputAction build() {
         return new CartSetShippingRateInputActionImpl(shippingRateInput);
     }
-
+    
     /**
      * builds CartSetShippingRateInputAction without checking for non-null required values
      * @return CartSetShippingRateInputAction
@@ -94,7 +99,7 @@ public class CartSetShippingRateInputActionBuilder implements Builder<CartSetShi
 
     /**
      * factory method for an instance of CartSetShippingRateInputActionBuilder
-     * @return builder
+     * @return builder 
      */
     public static CartSetShippingRateInputActionBuilder of() {
         return new CartSetShippingRateInputActionBuilder();

@@ -1,32 +1,33 @@
-
 package com.commercetools.api.models.product;
-
-import java.util.Arrays;
-import java.util.Optional;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-
+import java.lang.String;
+import java.util.Arrays;
+import java.util.Optional;
 import io.vrap.rmf.base.client.JsonEnum;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
  *  <p>This mode determines the type of Prices used for Product Price Selection and for LineItem Price selection.</p>
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public interface ProductPriceModeEnum extends JsonEnum {
 
     /**
     	<p>Composable Commerce uses the <a href="ctp:api:type:Price">Embedded Prices</a> located inside the <code>prices</code> field in <a href="ctp:api:type:ProductVariant">ProductVariant</a>.</p>
-
+    	
     */
     ProductPriceModeEnum EMBEDDED = ProductPriceModeEnumEnum.EMBEDDED;
     /**
     	<p>Composable Commerce uses <a href="ctp:api:type:StandalonePrice">StandalonePrices</a>, which are associated with the <a href="ctp:api:type:ProductVariant">ProductVariant</a> through the <code>sku</code> field.</p>
-
+    	
     */
     ProductPriceModeEnum STANDALONE = ProductPriceModeEnumEnum.STANDALONE;
-
+    
     /**
      * possible values of ProductPriceModeEnum
      */
@@ -35,7 +36,7 @@ public interface ProductPriceModeEnum extends JsonEnum {
          * Embedded
          */
         EMBEDDED("Embedded"),
-
+        
         /**
          * Standalone
          */
@@ -92,7 +93,7 @@ public interface ProductPriceModeEnum extends JsonEnum {
             public String name() {
                 return value.toUpperCase();
             }
-
+            
             public String toString() {
                 return value;
             }
@@ -107,7 +108,7 @@ public interface ProductPriceModeEnum extends JsonEnum {
     public static Optional<ProductPriceModeEnum> findEnumViaJsonName(String jsonName) {
         return Arrays.stream(values()).filter(t -> t.getJsonName().equals(jsonName)).findFirst();
     }
-
+    
     /**
      * possible enum values
      * @return array of possible enum values
@@ -115,5 +116,5 @@ public interface ProductPriceModeEnum extends JsonEnum {
     public static ProductPriceModeEnum[] values() {
         return ProductPriceModeEnumEnum.values();
     }
-
+    
 }

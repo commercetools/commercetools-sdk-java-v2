@@ -1,10 +1,11 @@
-
 package com.commercetools.api.models.category;
 
-import java.util.*;
-
+import com.commercetools.api.models.category.CategoryUpdateAction;
+import com.commercetools.api.models.category.CategorySetAssetKeyAction;
 import javax.annotation.Nullable;
-
+import java.util.*;
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -18,54 +19,67 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .assetId("{assetId}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class CategorySetAssetKeyActionBuilder implements Builder<CategorySetAssetKeyAction> {
 
+    
+    
     private String assetId;
-
+    
+    
     @Nullable
     private String assetKey;
 
+    
     /**
      *  <p>Value to set.</p>
      * @param assetId value to be set
      * @return Builder
      */
-
-    public CategorySetAssetKeyActionBuilder assetId(final String assetId) {
+    
+    public CategorySetAssetKeyActionBuilder assetId( final String assetId) {
         this.assetId = assetId;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Value to set. If empty, any existing value will be removed.</p>
      * @param assetKey value to be set
      * @return Builder
      */
-
+    
     public CategorySetAssetKeyActionBuilder assetKey(@Nullable final String assetKey) {
         this.assetKey = assetKey;
         return this;
     }
+    
+    
 
     /**
      *  <p>Value to set.</p>
      * @return assetId
      */
-
-    public String getAssetId() {
+    
+    
+    public String getAssetId(){
         return this.assetId;
     }
-
+    
     /**
      *  <p>Value to set. If empty, any existing value will be removed.</p>
      * @return assetKey
      */
-
+    
     @Nullable
-    public String getAssetKey() {
+    public String getAssetKey(){
         return this.assetKey;
     }
 
@@ -77,7 +91,7 @@ public class CategorySetAssetKeyActionBuilder implements Builder<CategorySetAsse
         Objects.requireNonNull(assetId, CategorySetAssetKeyAction.class + ": assetId is missing");
         return new CategorySetAssetKeyActionImpl(assetId, assetKey);
     }
-
+    
     /**
      * builds CategorySetAssetKeyAction without checking for non-null required values
      * @return CategorySetAssetKeyAction
@@ -88,7 +102,7 @@ public class CategorySetAssetKeyActionBuilder implements Builder<CategorySetAsse
 
     /**
      * factory method for an instance of CategorySetAssetKeyActionBuilder
-     * @return builder
+     * @return builder 
      */
     public static CategorySetAssetKeyActionBuilder of() {
         return new CategorySetAssetKeyActionBuilder();

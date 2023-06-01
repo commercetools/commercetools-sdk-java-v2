@@ -1,20 +1,22 @@
-
 package com.commercetools.api.models.customer;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
+import com.commercetools.api.models.customer.CustomerUpdateAction;
 import com.commercetools.api.models.type.FieldContainer;
 import com.commercetools.api.models.type.TypeResourceIdentifier;
+import com.commercetools.api.models.customer.CustomerSetAddressCustomTypeActionImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * CustomerSetAddressCustomTypeAction
@@ -27,9 +29,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .addressId("{addressId}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = CustomerSetAddressCustomTypeActionImpl.class)
 public interface CustomerSetAddressCustomTypeAction extends CustomerUpdateAction {
 
@@ -45,7 +50,6 @@ public interface CustomerSetAddressCustomTypeAction extends CustomerUpdateAction
     @NotNull
     @JsonProperty("addressId")
     public String getAddressId();
-
     /**
      *  <p>Defines the Type that extends the <code>address</code> with Custom Fields. If absent, any existing Type and Custom Fields are removed from the <code>address</code>.</p>
      * @return type
@@ -53,7 +57,6 @@ public interface CustomerSetAddressCustomTypeAction extends CustomerUpdateAction
     @Valid
     @JsonProperty("type")
     public TypeResourceIdentifier getType();
-
     /**
      *  <p>Sets the Custom Fields fields for the <code>address</code>.</p>
      * @return fields
@@ -66,30 +69,34 @@ public interface CustomerSetAddressCustomTypeAction extends CustomerUpdateAction
      *  <p>User-defined unique identifier of the Address to be updated.</p>
      * @param addressId value to be set
      */
-
+    
     public void setAddressId(final String addressId);
-
+    
+    
     /**
      *  <p>Defines the Type that extends the <code>address</code> with Custom Fields. If absent, any existing Type and Custom Fields are removed from the <code>address</code>.</p>
      * @param type value to be set
      */
-
+    
     public void setType(final TypeResourceIdentifier type);
-
+    
+    
     /**
      *  <p>Sets the Custom Fields fields for the <code>address</code>.</p>
      * @param fields value to be set
      */
-
+    
     public void setFields(final FieldContainer fields);
+    
 
     /**
      * factory method
      * @return instance of CustomerSetAddressCustomTypeAction
      */
-    public static CustomerSetAddressCustomTypeAction of() {
+    public static CustomerSetAddressCustomTypeAction of(){
         return new CustomerSetAddressCustomTypeActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy CustomerSetAddressCustomTypeAction
@@ -110,8 +117,7 @@ public interface CustomerSetAddressCustomTypeAction extends CustomerUpdateAction
      * @return copy instance
      */
     @Nullable
-    public static CustomerSetAddressCustomTypeAction deepCopy(
-            @Nullable final CustomerSetAddressCustomTypeAction template) {
+    public static CustomerSetAddressCustomTypeAction deepCopy(@Nullable final CustomerSetAddressCustomTypeAction template) {
         if (template == null) {
             return null;
         }
@@ -129,7 +135,7 @@ public interface CustomerSetAddressCustomTypeAction extends CustomerUpdateAction
     public static CustomerSetAddressCustomTypeActionBuilder builder() {
         return CustomerSetAddressCustomTypeActionBuilder.of();
     }
-
+    
     /**
      * create builder for CustomerSetAddressCustomTypeAction instance
      * @param template instance with prefilled values for the builder
@@ -138,6 +144,7 @@ public interface CustomerSetAddressCustomTypeAction extends CustomerUpdateAction
     public static CustomerSetAddressCustomTypeActionBuilder builder(final CustomerSetAddressCustomTypeAction template) {
         return CustomerSetAddressCustomTypeActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -148,7 +155,7 @@ public interface CustomerSetAddressCustomTypeAction extends CustomerUpdateAction
     default <T> T withCustomerSetAddressCustomTypeAction(Function<CustomerSetAddressCustomTypeAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

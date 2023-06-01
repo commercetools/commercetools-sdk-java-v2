@@ -1,19 +1,20 @@
-
 package com.commercetools.api.models.discount_code;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-import java.util.stream.Collectors;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
+import com.commercetools.api.models.discount_code.DiscountCodeUpdateAction;
+import com.commercetools.api.models.discount_code.DiscountCodeUpdateImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * DiscountCodeUpdate
@@ -27,12 +28,15 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .plusActions(actionsBuilder -> actionsBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = DiscountCodeUpdateImpl.class)
-public interface DiscountCodeUpdate extends
-        com.commercetools.api.models.ResourceUpdate<DiscountCodeUpdate, DiscountCodeUpdateAction, DiscountCodeUpdateBuilder> {
+public interface DiscountCodeUpdate extends com.commercetools.api.models.ResourceUpdate<DiscountCodeUpdate, DiscountCodeUpdateAction, DiscountCodeUpdateBuilder> {
+
 
     /**
      *  <p>Expected version of the DiscountCode on which the changes should be applied. If the expected version does not match the actual version, a ConcurrentModification error is returned.</p>
@@ -41,7 +45,6 @@ public interface DiscountCodeUpdate extends
     @NotNull
     @JsonProperty("version")
     public Long getVersion();
-
     /**
      *  <p>Update actions to be performed on the DiscountCode.</p>
      * @return actions
@@ -55,31 +58,32 @@ public interface DiscountCodeUpdate extends
      *  <p>Expected version of the DiscountCode on which the changes should be applied. If the expected version does not match the actual version, a ConcurrentModification error is returned.</p>
      * @param version value to be set
      */
-
+    
     public void setVersion(final Long version);
-
+    
+    
     /**
      *  <p>Update actions to be performed on the DiscountCode.</p>
      * @param actions values to be set
      */
-
+    
     @JsonIgnore
-    public void setActions(final DiscountCodeUpdateAction... actions);
-
+    public void setActions(final DiscountCodeUpdateAction ...actions);
     /**
      *  <p>Update actions to be performed on the DiscountCode.</p>
      * @param actions values to be set
      */
-
+    
     public void setActions(final List<DiscountCodeUpdateAction> actions);
 
     /**
      * factory method
      * @return instance of DiscountCodeUpdate
      */
-    public static DiscountCodeUpdate of() {
+    public static DiscountCodeUpdate of(){
         return new DiscountCodeUpdateImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy DiscountCodeUpdate
@@ -106,9 +110,7 @@ public interface DiscountCodeUpdate extends
         DiscountCodeUpdateImpl instance = new DiscountCodeUpdateImpl();
         instance.setVersion(template.getVersion());
         instance.setActions(Optional.ofNullable(template.getActions())
-                .map(t -> t.stream()
-                        .map(com.commercetools.api.models.discount_code.DiscountCodeUpdateAction::deepCopy)
-                        .collect(Collectors.toList()))
+                .map(t -> t.stream().map(com.commercetools.api.models.discount_code.DiscountCodeUpdateAction::deepCopy).collect(Collectors.toList()))
                 .orElse(null));
         return instance;
     }
@@ -120,7 +122,7 @@ public interface DiscountCodeUpdate extends
     public static DiscountCodeUpdateBuilder builder() {
         return DiscountCodeUpdateBuilder.of();
     }
-
+    
     /**
      * create builder for DiscountCodeUpdate instance
      * @param template instance with prefilled values for the builder
@@ -129,6 +131,7 @@ public interface DiscountCodeUpdate extends
     public static DiscountCodeUpdateBuilder builder(final DiscountCodeUpdate template) {
         return DiscountCodeUpdateBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -139,7 +142,7 @@ public interface DiscountCodeUpdate extends
     default <T> T withDiscountCodeUpdate(Function<DiscountCodeUpdate, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

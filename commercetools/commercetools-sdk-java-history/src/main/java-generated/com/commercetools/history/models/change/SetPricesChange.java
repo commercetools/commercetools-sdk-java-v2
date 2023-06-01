@@ -1,20 +1,21 @@
-
 package com.commercetools.history.models.change;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-import java.util.stream.Collectors;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
+import com.commercetools.history.models.change.Change;
 import com.commercetools.history.models.common.Price;
+import com.commercetools.history.models.change.SetPricesChangeImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * SetPricesChange
@@ -31,9 +32,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .plusNextValue(nextValueBuilder -> nextValueBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = SetPricesChangeImpl.class)
 public interface SetPricesChange extends Change {
 
@@ -49,7 +53,6 @@ public interface SetPricesChange extends Change {
     @NotNull
     @JsonProperty("type")
     public String getType();
-
     /**
      *  <p>Update action for <code>setPrices</code></p>
      * @return change
@@ -57,7 +60,6 @@ public interface SetPricesChange extends Change {
     @NotNull
     @JsonProperty("change")
     public String getChange();
-
     /**
      *
      * @return catalogData
@@ -65,7 +67,6 @@ public interface SetPricesChange extends Change {
     @NotNull
     @JsonProperty("catalogData")
     public String getCatalogData();
-
     /**
      *
      * @return variant
@@ -73,7 +74,6 @@ public interface SetPricesChange extends Change {
     @NotNull
     @JsonProperty("variant")
     public String getVariant();
-
     /**
      *
      * @return previousValue
@@ -82,7 +82,6 @@ public interface SetPricesChange extends Change {
     @Valid
     @JsonProperty("previousValue")
     public List<Price> getPreviousValue();
-
     /**
      *
      * @return nextValue
@@ -96,60 +95,62 @@ public interface SetPricesChange extends Change {
      *  <p>Update action for <code>setPrices</code></p>
      * @param change value to be set
      */
-
+    
     public void setChange(final String change);
-
+    
+    
     /**
      * set catalogData
      * @param catalogData value to be set
      */
-
+    
     public void setCatalogData(final String catalogData);
-
+    
+    
     /**
      * set variant
      * @param variant value to be set
      */
-
+    
     public void setVariant(final String variant);
-
+    
+    
     /**
      * set previousValue
      * @param previousValue values to be set
      */
-
+    
     @JsonIgnore
-    public void setPreviousValue(final Price... previousValue);
-
+    public void setPreviousValue(final Price ...previousValue);
     /**
      * set previousValue
      * @param previousValue values to be set
      */
-
+    
     public void setPreviousValue(final List<Price> previousValue);
-
+    
     /**
      * set nextValue
      * @param nextValue values to be set
      */
-
+    
     @JsonIgnore
-    public void setNextValue(final Price... nextValue);
-
+    public void setNextValue(final Price ...nextValue);
     /**
      * set nextValue
      * @param nextValue values to be set
      */
-
+    
     public void setNextValue(final List<Price> nextValue);
 
     /**
      * factory method
      * @return instance of SetPricesChange
      */
-    public static SetPricesChange of() {
+    public static SetPricesChange of(){
         return new SetPricesChangeImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy SetPricesChange
@@ -181,14 +182,10 @@ public interface SetPricesChange extends Change {
         instance.setCatalogData(template.getCatalogData());
         instance.setVariant(template.getVariant());
         instance.setPreviousValue(Optional.ofNullable(template.getPreviousValue())
-                .map(t -> t.stream()
-                        .map(com.commercetools.history.models.common.Price::deepCopy)
-                        .collect(Collectors.toList()))
+                .map(t -> t.stream().map(com.commercetools.history.models.common.Price::deepCopy).collect(Collectors.toList()))
                 .orElse(null));
         instance.setNextValue(Optional.ofNullable(template.getNextValue())
-                .map(t -> t.stream()
-                        .map(com.commercetools.history.models.common.Price::deepCopy)
-                        .collect(Collectors.toList()))
+                .map(t -> t.stream().map(com.commercetools.history.models.common.Price::deepCopy).collect(Collectors.toList()))
                 .orElse(null));
         return instance;
     }
@@ -200,7 +197,7 @@ public interface SetPricesChange extends Change {
     public static SetPricesChangeBuilder builder() {
         return SetPricesChangeBuilder.of();
     }
-
+    
     /**
      * create builder for SetPricesChange instance
      * @param template instance with prefilled values for the builder
@@ -209,6 +206,7 @@ public interface SetPricesChange extends Change {
     public static SetPricesChangeBuilder builder(final SetPricesChange template) {
         return SetPricesChangeBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -219,7 +217,7 @@ public interface SetPricesChange extends Change {
     default <T> T withSetPricesChange(Function<SetPricesChange, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

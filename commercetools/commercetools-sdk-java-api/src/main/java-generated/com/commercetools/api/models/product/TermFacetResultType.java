@@ -1,33 +1,35 @@
-
 package com.commercetools.api.models.product;
-
-import java.util.Arrays;
-import java.util.Optional;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-
+import java.lang.String;
+import java.util.Arrays;
+import java.util.Optional;
 import io.vrap.rmf.base.client.JsonEnum;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
  * TermFacetResultType
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public interface TermFacetResultType extends JsonEnum {
 
+    
     TermFacetResultType TEXT = TermFacetResultTypeEnum.TEXT;
-
+    
     TermFacetResultType DATE = TermFacetResultTypeEnum.DATE;
-
+    
     TermFacetResultType TIME = TermFacetResultTypeEnum.TIME;
-
+    
     TermFacetResultType DATETIME = TermFacetResultTypeEnum.DATETIME;
-
+    
     TermFacetResultType BOOLEAN = TermFacetResultTypeEnum.BOOLEAN;
-
+    
     TermFacetResultType NUMBER = TermFacetResultTypeEnum.NUMBER;
-
+    
     /**
      * possible values of TermFacetResultType
      */
@@ -36,27 +38,27 @@ public interface TermFacetResultType extends JsonEnum {
          * text
          */
         TEXT("text"),
-
+        
         /**
          * date
          */
         DATE("date"),
-
+        
         /**
          * time
          */
         TIME("time"),
-
+        
         /**
          * datetime
          */
         DATETIME("datetime"),
-
+        
         /**
          * boolean
          */
         BOOLEAN("boolean"),
-
+        
         /**
          * number
          */
@@ -113,7 +115,7 @@ public interface TermFacetResultType extends JsonEnum {
             public String name() {
                 return value.toUpperCase();
             }
-
+            
             public String toString() {
                 return value;
             }
@@ -128,7 +130,7 @@ public interface TermFacetResultType extends JsonEnum {
     public static Optional<TermFacetResultType> findEnumViaJsonName(String jsonName) {
         return Arrays.stream(values()).filter(t -> t.getJsonName().equals(jsonName)).findFirst();
     }
-
+    
     /**
      * possible enum values
      * @return array of possible enum values
@@ -136,5 +138,5 @@ public interface TermFacetResultType extends JsonEnum {
     public static TermFacetResultType[] values() {
         return TermFacetResultTypeEnum.values();
     }
-
+    
 }

@@ -1,8 +1,12 @@
-
 package com.commercetools.history.models.change;
 
+import com.commercetools.history.models.change.Change;
+import com.commercetools.history.models.common.QuoteState;
+import com.commercetools.history.models.change.ChangeQuoteStateChange;
+import javax.annotation.Nullable;
 import java.util.*;
-
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -18,75 +22,95 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .previousValue(QuoteState.PENDING)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class ChangeQuoteStateChangeBuilder implements Builder<ChangeQuoteStateChange> {
 
+    
+    
     private String change;
-
+    
+    
+    
     private com.commercetools.history.models.common.QuoteState nextValue;
-
+    
+    
+    
     private com.commercetools.history.models.common.QuoteState previousValue;
 
+    
     /**
      * set the value to the change
      * @param change value to be set
      * @return Builder
      */
-
-    public ChangeQuoteStateChangeBuilder change(final String change) {
+    
+    public ChangeQuoteStateChangeBuilder change( final String change) {
         this.change = change;
         return this;
     }
-
+    
+    
+    
+    
     /**
      * set the value to the nextValue
      * @param nextValue value to be set
      * @return Builder
      */
-
-    public ChangeQuoteStateChangeBuilder nextValue(final com.commercetools.history.models.common.QuoteState nextValue) {
+    
+    public ChangeQuoteStateChangeBuilder nextValue( final com.commercetools.history.models.common.QuoteState nextValue) {
         this.nextValue = nextValue;
         return this;
     }
-
+    
+    
+    
+    
     /**
      * set the value to the previousValue
      * @param previousValue value to be set
      * @return Builder
      */
-
-    public ChangeQuoteStateChangeBuilder previousValue(
-            final com.commercetools.history.models.common.QuoteState previousValue) {
+    
+    public ChangeQuoteStateChangeBuilder previousValue( final com.commercetools.history.models.common.QuoteState previousValue) {
         this.previousValue = previousValue;
         return this;
     }
+    
+    
 
     /**
      * value of change}
      * @return change
      */
-
-    public String getChange() {
+    
+    
+    public String getChange(){
         return this.change;
     }
-
+    
     /**
      * value of nextValue}
      * @return nextValue
      */
-
-    public com.commercetools.history.models.common.QuoteState getNextValue() {
+    
+    
+    public com.commercetools.history.models.common.QuoteState getNextValue(){
         return this.nextValue;
     }
-
+    
     /**
      * value of previousValue}
      * @return previousValue
      */
-
-    public com.commercetools.history.models.common.QuoteState getPreviousValue() {
+    
+    
+    public com.commercetools.history.models.common.QuoteState getPreviousValue(){
         return this.previousValue;
     }
 
@@ -100,7 +124,7 @@ public class ChangeQuoteStateChangeBuilder implements Builder<ChangeQuoteStateCh
         Objects.requireNonNull(previousValue, ChangeQuoteStateChange.class + ": previousValue is missing");
         return new ChangeQuoteStateChangeImpl(change, nextValue, previousValue);
     }
-
+    
     /**
      * builds ChangeQuoteStateChange without checking for non-null required values
      * @return ChangeQuoteStateChange
@@ -111,7 +135,7 @@ public class ChangeQuoteStateChangeBuilder implements Builder<ChangeQuoteStateCh
 
     /**
      * factory method for an instance of ChangeQuoteStateChangeBuilder
-     * @return builder
+     * @return builder 
      */
     public static ChangeQuoteStateChangeBuilder of() {
         return new ChangeQuoteStateChangeBuilder();

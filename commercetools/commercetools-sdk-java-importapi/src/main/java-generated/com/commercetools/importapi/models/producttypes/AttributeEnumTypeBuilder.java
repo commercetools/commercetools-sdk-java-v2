@@ -1,9 +1,12 @@
-
 package com.commercetools.importapi.models.producttypes;
 
+import com.commercetools.importapi.models.producttypes.AttributePlainEnumValue;
+import com.commercetools.importapi.models.producttypes.AttributeType;
+import com.commercetools.importapi.models.producttypes.AttributeEnumType;
+import javax.annotation.Nullable;
 import java.util.*;
 import java.util.function.Function;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -17,11 +20,16 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .plusValues(valuesBuilder -> valuesBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class AttributeEnumTypeBuilder implements Builder<AttributeEnumType> {
 
+    
+    
     private java.util.List<com.commercetools.importapi.models.producttypes.AttributePlainEnumValue> values;
 
     /**
@@ -29,100 +37,93 @@ public class AttributeEnumTypeBuilder implements Builder<AttributeEnumType> {
      * @param values value to be set
      * @return Builder
      */
-
-    public AttributeEnumTypeBuilder values(
-            final com.commercetools.importapi.models.producttypes.AttributePlainEnumValue... values) {
+    
+    public AttributeEnumTypeBuilder values( final com.commercetools.importapi.models.producttypes.AttributePlainEnumValue ...values) {
         this.values = new ArrayList<>(Arrays.asList(values));
         return this;
     }
-
+    
     /**
      * set value to the values
      * @param values value to be set
      * @return Builder
      */
-
-    public AttributeEnumTypeBuilder values(
-            final java.util.List<com.commercetools.importapi.models.producttypes.AttributePlainEnumValue> values) {
+    
+    public AttributeEnumTypeBuilder values( final java.util.List<com.commercetools.importapi.models.producttypes.AttributePlainEnumValue> values) {
         this.values = values;
         return this;
     }
-
+    
     /**
      * add values to the values
      * @param values value to be set
      * @return Builder
      */
-
-    public AttributeEnumTypeBuilder plusValues(
-            final com.commercetools.importapi.models.producttypes.AttributePlainEnumValue... values) {
+    
+    public AttributeEnumTypeBuilder plusValues( final com.commercetools.importapi.models.producttypes.AttributePlainEnumValue ...values) {
         if (this.values == null) {
             this.values = new ArrayList<>();
         }
         this.values.addAll(Arrays.asList(values));
         return this;
     }
-
+    
+    
+    
     /**
      * add the value to the values using the builder function
      * @param builder function to build the values value
      * @return Builder
      */
-
-    public AttributeEnumTypeBuilder plusValues(
-            Function<com.commercetools.importapi.models.producttypes.AttributePlainEnumValueBuilder, com.commercetools.importapi.models.producttypes.AttributePlainEnumValueBuilder> builder) {
+    
+    public AttributeEnumTypeBuilder plusValues(Function<com.commercetools.importapi.models.producttypes.AttributePlainEnumValueBuilder, com.commercetools.importapi.models.producttypes.AttributePlainEnumValueBuilder> builder) {
         if (this.values == null) {
             this.values = new ArrayList<>();
         }
-        this.values.add(
-            builder.apply(com.commercetools.importapi.models.producttypes.AttributePlainEnumValueBuilder.of()).build());
+        this.values.add(builder.apply(com.commercetools.importapi.models.producttypes.AttributePlainEnumValueBuilder.of()).build());
         return this;
     }
-
+    
     /**
      * set the value to the values using the builder function
      * @param builder function to build the values value
      * @return Builder
      */
-
-    public AttributeEnumTypeBuilder withValues(
-            Function<com.commercetools.importapi.models.producttypes.AttributePlainEnumValueBuilder, com.commercetools.importapi.models.producttypes.AttributePlainEnumValueBuilder> builder) {
+    
+    public AttributeEnumTypeBuilder withValues(Function<com.commercetools.importapi.models.producttypes.AttributePlainEnumValueBuilder, com.commercetools.importapi.models.producttypes.AttributePlainEnumValueBuilder> builder) {
         this.values = new ArrayList<>();
-        this.values.add(
-            builder.apply(com.commercetools.importapi.models.producttypes.AttributePlainEnumValueBuilder.of()).build());
+        this.values.add(builder.apply(com.commercetools.importapi.models.producttypes.AttributePlainEnumValueBuilder.of()).build());
         return this;
     }
-
+    
     /**
      * add the value to the values using the builder function
      * @param builder function to build the values value
      * @return Builder
      */
-
-    public AttributeEnumTypeBuilder addValues(
-            Function<com.commercetools.importapi.models.producttypes.AttributePlainEnumValueBuilder, com.commercetools.importapi.models.producttypes.AttributePlainEnumValue> builder) {
-        return plusValues(
-            builder.apply(com.commercetools.importapi.models.producttypes.AttributePlainEnumValueBuilder.of()));
+    
+    public AttributeEnumTypeBuilder addValues(Function<com.commercetools.importapi.models.producttypes.AttributePlainEnumValueBuilder, com.commercetools.importapi.models.producttypes.AttributePlainEnumValue> builder) {
+        return plusValues(builder.apply(com.commercetools.importapi.models.producttypes.AttributePlainEnumValueBuilder.of()));
     }
-
+    
     /**
      * set the value to the values using the builder function
      * @param builder function to build the values value
      * @return Builder
      */
-
-    public AttributeEnumTypeBuilder setValues(
-            Function<com.commercetools.importapi.models.producttypes.AttributePlainEnumValueBuilder, com.commercetools.importapi.models.producttypes.AttributePlainEnumValue> builder) {
-        return values(
-            builder.apply(com.commercetools.importapi.models.producttypes.AttributePlainEnumValueBuilder.of()));
+    
+    public AttributeEnumTypeBuilder setValues(Function<com.commercetools.importapi.models.producttypes.AttributePlainEnumValueBuilder, com.commercetools.importapi.models.producttypes.AttributePlainEnumValue> builder) {
+        return values(builder.apply(com.commercetools.importapi.models.producttypes.AttributePlainEnumValueBuilder.of()));
     }
+                    
 
     /**
      * value of values}
      * @return values
      */
-
-    public java.util.List<com.commercetools.importapi.models.producttypes.AttributePlainEnumValue> getValues() {
+    
+    
+    public java.util.List<com.commercetools.importapi.models.producttypes.AttributePlainEnumValue> getValues(){
         return this.values;
     }
 
@@ -134,7 +135,7 @@ public class AttributeEnumTypeBuilder implements Builder<AttributeEnumType> {
         Objects.requireNonNull(values, AttributeEnumType.class + ": values is missing");
         return new AttributeEnumTypeImpl(values);
     }
-
+    
     /**
      * builds AttributeEnumType without checking for non-null required values
      * @return AttributeEnumType
@@ -145,7 +146,7 @@ public class AttributeEnumTypeBuilder implements Builder<AttributeEnumType> {
 
     /**
      * factory method for an instance of AttributeEnumTypeBuilder
-     * @return builder
+     * @return builder 
      */
     public static AttributeEnumTypeBuilder of() {
         return new AttributeEnumTypeBuilder();

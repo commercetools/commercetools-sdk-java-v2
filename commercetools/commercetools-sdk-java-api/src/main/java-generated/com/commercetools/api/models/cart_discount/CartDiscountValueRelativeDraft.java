@@ -1,17 +1,20 @@
-
 package com.commercetools.api.models.cart_discount;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
+import com.commercetools.api.models.cart_discount.CartDiscountValueDraft;
+import com.commercetools.api.models.cart_discount.CartDiscountValueRelativeDraftImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * CartDiscountValueRelativeDraft
@@ -24,12 +27,14 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .permyriad(0.3)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = CartDiscountValueRelativeDraftImpl.class)
-public interface CartDiscountValueRelativeDraft
-        extends CartDiscountValueDraft, io.vrap.rmf.base.client.Draft<CartDiscountValueRelativeDraft> {
+public interface CartDiscountValueRelativeDraft extends CartDiscountValueDraft, io.vrap.rmf.base.client.Draft<CartDiscountValueRelativeDraft> {
 
     /**
      * discriminator value for CartDiscountValueRelativeDraft
@@ -48,16 +53,18 @@ public interface CartDiscountValueRelativeDraft
      *  <p>Fraction (per ten thousand) the price is reduced by. For example, <code>1000</code> will result in a 10% price reduction.</p>
      * @param permyriad value to be set
      */
-
+    
     public void setPermyriad(final Long permyriad);
+    
 
     /**
      * factory method
      * @return instance of CartDiscountValueRelativeDraft
      */
-    public static CartDiscountValueRelativeDraft of() {
+    public static CartDiscountValueRelativeDraft of(){
         return new CartDiscountValueRelativeDraftImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy CartDiscountValueRelativeDraft
@@ -92,7 +99,7 @@ public interface CartDiscountValueRelativeDraft
     public static CartDiscountValueRelativeDraftBuilder builder() {
         return CartDiscountValueRelativeDraftBuilder.of();
     }
-
+    
     /**
      * create builder for CartDiscountValueRelativeDraft instance
      * @param template instance with prefilled values for the builder
@@ -101,6 +108,7 @@ public interface CartDiscountValueRelativeDraft
     public static CartDiscountValueRelativeDraftBuilder builder(final CartDiscountValueRelativeDraft template) {
         return CartDiscountValueRelativeDraftBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -111,7 +119,7 @@ public interface CartDiscountValueRelativeDraft
     default <T> T withCartDiscountValueRelativeDraft(Function<CartDiscountValueRelativeDraft, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

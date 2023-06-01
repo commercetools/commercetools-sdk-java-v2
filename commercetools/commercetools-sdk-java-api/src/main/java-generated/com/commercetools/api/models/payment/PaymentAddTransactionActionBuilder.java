@@ -1,9 +1,12 @@
-
 package com.commercetools.api.models.payment;
 
+import com.commercetools.api.models.payment.PaymentUpdateAction;
+import com.commercetools.api.models.payment.TransactionDraft;
+import com.commercetools.api.models.payment.PaymentAddTransactionAction;
+import javax.annotation.Nullable;
 import java.util.*;
 import java.util.function.Function;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -17,55 +20,61 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .transaction(transactionBuilder -> transactionBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class PaymentAddTransactionActionBuilder implements Builder<PaymentAddTransactionAction> {
 
+    
+    
     private com.commercetools.api.models.payment.TransactionDraft transaction;
 
+    
     /**
      *  <p>Value to append to the <code>transactions</code> array.</p>
      * @param builder function to build the transaction value
      * @return Builder
      */
-
-    public PaymentAddTransactionActionBuilder transaction(
-            Function<com.commercetools.api.models.payment.TransactionDraftBuilder, com.commercetools.api.models.payment.TransactionDraftBuilder> builder) {
+    
+    public PaymentAddTransactionActionBuilder transaction(Function<com.commercetools.api.models.payment.TransactionDraftBuilder, com.commercetools.api.models.payment.TransactionDraftBuilder> builder) {
         this.transaction = builder.apply(com.commercetools.api.models.payment.TransactionDraftBuilder.of()).build();
         return this;
     }
-
+    
     /**
      *  <p>Value to append to the <code>transactions</code> array.</p>
      * @param builder function to build the transaction value
      * @return Builder
      */
-
-    public PaymentAddTransactionActionBuilder withTransaction(
-            Function<com.commercetools.api.models.payment.TransactionDraftBuilder, com.commercetools.api.models.payment.TransactionDraft> builder) {
+    
+    public PaymentAddTransactionActionBuilder withTransaction(Function<com.commercetools.api.models.payment.TransactionDraftBuilder, com.commercetools.api.models.payment.TransactionDraft> builder) {
         this.transaction = builder.apply(com.commercetools.api.models.payment.TransactionDraftBuilder.of());
         return this;
     }
-
+                    
     /**
      *  <p>Value to append to the <code>transactions</code> array.</p>
      * @param transaction value to be set
      * @return Builder
      */
-
-    public PaymentAddTransactionActionBuilder transaction(
-            final com.commercetools.api.models.payment.TransactionDraft transaction) {
+    
+    public PaymentAddTransactionActionBuilder transaction( final com.commercetools.api.models.payment.TransactionDraft transaction) {
         this.transaction = transaction;
         return this;
     }
+    
+    
 
     /**
      *  <p>Value to append to the <code>transactions</code> array.</p>
      * @return transaction
      */
-
-    public com.commercetools.api.models.payment.TransactionDraft getTransaction() {
+    
+    
+    public com.commercetools.api.models.payment.TransactionDraft getTransaction(){
         return this.transaction;
     }
 
@@ -77,7 +86,7 @@ public class PaymentAddTransactionActionBuilder implements Builder<PaymentAddTra
         Objects.requireNonNull(transaction, PaymentAddTransactionAction.class + ": transaction is missing");
         return new PaymentAddTransactionActionImpl(transaction);
     }
-
+    
     /**
      * builds PaymentAddTransactionAction without checking for non-null required values
      * @return PaymentAddTransactionAction
@@ -88,7 +97,7 @@ public class PaymentAddTransactionActionBuilder implements Builder<PaymentAddTra
 
     /**
      * factory method for an instance of PaymentAddTransactionActionBuilder
-     * @return builder
+     * @return builder 
      */
     public static PaymentAddTransactionActionBuilder of() {
         return new PaymentAddTransactionActionBuilder();

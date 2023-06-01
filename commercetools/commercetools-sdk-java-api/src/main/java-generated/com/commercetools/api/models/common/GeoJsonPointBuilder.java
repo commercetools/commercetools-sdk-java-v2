@@ -1,8 +1,11 @@
-
 package com.commercetools.api.models.common;
 
+import com.commercetools.api.models.common.GeoJson;
+import com.commercetools.api.models.common.GeoJsonPoint;
+import javax.annotation.Nullable;
 import java.util.*;
-
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -16,11 +19,16 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .plusCoordinates(coordinatesBuilder -> coordinatesBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class GeoJsonPointBuilder implements Builder<GeoJsonPoint> {
 
+    
+    
     private java.util.List<Double> coordinates;
 
     /**
@@ -28,43 +36,47 @@ public class GeoJsonPointBuilder implements Builder<GeoJsonPoint> {
      * @param coordinates value to be set
      * @return Builder
      */
-
-    public GeoJsonPointBuilder coordinates(final Double... coordinates) {
+    
+    public GeoJsonPointBuilder coordinates( final Double ...coordinates) {
         this.coordinates = new ArrayList<>(Arrays.asList(coordinates));
         return this;
     }
-
+    
     /**
      *  <p>Longitude (stored on index <code>[0]</code>) and latitude (stored on index <code>[1]</code>) of the Point.</p>
      * @param coordinates value to be set
      * @return Builder
      */
-
-    public GeoJsonPointBuilder coordinates(final java.util.List<Double> coordinates) {
+    
+    public GeoJsonPointBuilder coordinates( final java.util.List<Double> coordinates) {
         this.coordinates = coordinates;
         return this;
     }
-
+    
     /**
      *  <p>Longitude (stored on index <code>[0]</code>) and latitude (stored on index <code>[1]</code>) of the Point.</p>
      * @param coordinates value to be set
      * @return Builder
      */
-
-    public GeoJsonPointBuilder plusCoordinates(final Double... coordinates) {
+    
+    public GeoJsonPointBuilder plusCoordinates( final Double ...coordinates) {
         if (this.coordinates == null) {
             this.coordinates = new ArrayList<>();
         }
         this.coordinates.addAll(Arrays.asList(coordinates));
         return this;
     }
+    
+    
+    
 
     /**
      *  <p>Longitude (stored on index <code>[0]</code>) and latitude (stored on index <code>[1]</code>) of the Point.</p>
      * @return coordinates
      */
-
-    public java.util.List<Double> getCoordinates() {
+    
+    
+    public java.util.List<Double> getCoordinates(){
         return this.coordinates;
     }
 
@@ -76,7 +88,7 @@ public class GeoJsonPointBuilder implements Builder<GeoJsonPoint> {
         Objects.requireNonNull(coordinates, GeoJsonPoint.class + ": coordinates is missing");
         return new GeoJsonPointImpl(coordinates);
     }
-
+    
     /**
      * builds GeoJsonPoint without checking for non-null required values
      * @return GeoJsonPoint
@@ -87,7 +99,7 @@ public class GeoJsonPointBuilder implements Builder<GeoJsonPoint> {
 
     /**
      * factory method for an instance of GeoJsonPointBuilder
-     * @return builder
+     * @return builder 
      */
     public static GeoJsonPointBuilder of() {
         return new GeoJsonPointBuilder();

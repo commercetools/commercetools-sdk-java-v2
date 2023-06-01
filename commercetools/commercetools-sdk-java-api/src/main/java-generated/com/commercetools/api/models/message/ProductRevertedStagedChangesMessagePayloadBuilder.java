@@ -1,8 +1,11 @@
-
 package com.commercetools.api.models.message;
 
+import com.commercetools.api.models.message.MessagePayload;
+import com.commercetools.api.models.message.ProductRevertedStagedChangesMessagePayload;
+import javax.annotation.Nullable;
 import java.util.*;
-
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -16,12 +19,16 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .plusRemovedImageUrls(removedImageUrlsBuilder -> removedImageUrlsBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
-public class ProductRevertedStagedChangesMessagePayloadBuilder
-        implements Builder<ProductRevertedStagedChangesMessagePayload> {
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
+public class ProductRevertedStagedChangesMessagePayloadBuilder implements Builder<ProductRevertedStagedChangesMessagePayload> {
 
+    
+    
     private java.util.List<String> removedImageUrls;
 
     /**
@@ -29,44 +36,47 @@ public class ProductRevertedStagedChangesMessagePayloadBuilder
      * @param removedImageUrls value to be set
      * @return Builder
      */
-
-    public ProductRevertedStagedChangesMessagePayloadBuilder removedImageUrls(final String... removedImageUrls) {
+    
+    public ProductRevertedStagedChangesMessagePayloadBuilder removedImageUrls( final String ...removedImageUrls) {
         this.removedImageUrls = new ArrayList<>(Arrays.asList(removedImageUrls));
         return this;
     }
-
+    
     /**
      *  <p>List of image URLs that were removed during the Revert Staged Changes update action.</p>
      * @param removedImageUrls value to be set
      * @return Builder
      */
-
-    public ProductRevertedStagedChangesMessagePayloadBuilder removedImageUrls(
-            final java.util.List<String> removedImageUrls) {
+    
+    public ProductRevertedStagedChangesMessagePayloadBuilder removedImageUrls( final java.util.List<String> removedImageUrls) {
         this.removedImageUrls = removedImageUrls;
         return this;
     }
-
+    
     /**
      *  <p>List of image URLs that were removed during the Revert Staged Changes update action.</p>
      * @param removedImageUrls value to be set
      * @return Builder
      */
-
-    public ProductRevertedStagedChangesMessagePayloadBuilder plusRemovedImageUrls(final String... removedImageUrls) {
+    
+    public ProductRevertedStagedChangesMessagePayloadBuilder plusRemovedImageUrls( final String ...removedImageUrls) {
         if (this.removedImageUrls == null) {
             this.removedImageUrls = new ArrayList<>();
         }
         this.removedImageUrls.addAll(Arrays.asList(removedImageUrls));
         return this;
     }
+    
+    
+    
 
     /**
      *  <p>List of image URLs that were removed during the Revert Staged Changes update action.</p>
      * @return removedImageUrls
      */
-
-    public java.util.List<String> getRemovedImageUrls() {
+    
+    
+    public java.util.List<String> getRemovedImageUrls(){
         return this.removedImageUrls;
     }
 
@@ -75,11 +85,10 @@ public class ProductRevertedStagedChangesMessagePayloadBuilder
      * @return ProductRevertedStagedChangesMessagePayload
      */
     public ProductRevertedStagedChangesMessagePayload build() {
-        Objects.requireNonNull(removedImageUrls,
-            ProductRevertedStagedChangesMessagePayload.class + ": removedImageUrls is missing");
+        Objects.requireNonNull(removedImageUrls, ProductRevertedStagedChangesMessagePayload.class + ": removedImageUrls is missing");
         return new ProductRevertedStagedChangesMessagePayloadImpl(removedImageUrls);
     }
-
+    
     /**
      * builds ProductRevertedStagedChangesMessagePayload without checking for non-null required values
      * @return ProductRevertedStagedChangesMessagePayload
@@ -90,7 +99,7 @@ public class ProductRevertedStagedChangesMessagePayloadBuilder
 
     /**
      * factory method for an instance of ProductRevertedStagedChangesMessagePayloadBuilder
-     * @return builder
+     * @return builder 
      */
     public static ProductRevertedStagedChangesMessagePayloadBuilder of() {
         return new ProductRevertedStagedChangesMessagePayloadBuilder();
@@ -101,8 +110,7 @@ public class ProductRevertedStagedChangesMessagePayloadBuilder
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static ProductRevertedStagedChangesMessagePayloadBuilder of(
-            final ProductRevertedStagedChangesMessagePayload template) {
+    public static ProductRevertedStagedChangesMessagePayloadBuilder of(final ProductRevertedStagedChangesMessagePayload template) {
         ProductRevertedStagedChangesMessagePayloadBuilder builder = new ProductRevertedStagedChangesMessagePayloadBuilder();
         builder.removedImageUrls = template.getRemovedImageUrls();
         return builder;

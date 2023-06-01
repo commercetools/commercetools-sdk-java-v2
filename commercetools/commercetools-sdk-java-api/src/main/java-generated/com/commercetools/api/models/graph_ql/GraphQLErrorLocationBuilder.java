@@ -1,8 +1,11 @@
-
 package com.commercetools.api.models.graph_ql;
 
-import java.util.*;
 
+import com.commercetools.api.models.graph_ql.GraphQLErrorLocation;
+import javax.annotation.Nullable;
+import java.util.*;
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -17,52 +20,67 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .column(1)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class GraphQLErrorLocationBuilder implements Builder<GraphQLErrorLocation> {
 
+    
+    
     private Integer line;
-
+    
+    
+    
     private Integer column;
 
+    
     /**
      * set the value to the line
      * @param line value to be set
      * @return Builder
      */
-
-    public GraphQLErrorLocationBuilder line(final Integer line) {
+    
+    public GraphQLErrorLocationBuilder line( final Integer line) {
         this.line = line;
         return this;
     }
-
+    
+    
+    
+    
     /**
      * set the value to the column
      * @param column value to be set
      * @return Builder
      */
-
-    public GraphQLErrorLocationBuilder column(final Integer column) {
+    
+    public GraphQLErrorLocationBuilder column( final Integer column) {
         this.column = column;
         return this;
     }
+    
+    
 
     /**
      * value of line}
      * @return line
      */
-
-    public Integer getLine() {
+    
+    
+    public Integer getLine(){
         return this.line;
     }
-
+    
     /**
      * value of column}
      * @return column
      */
-
-    public Integer getColumn() {
+    
+    
+    public Integer getColumn(){
         return this.column;
     }
 
@@ -75,7 +93,7 @@ public class GraphQLErrorLocationBuilder implements Builder<GraphQLErrorLocation
         Objects.requireNonNull(column, GraphQLErrorLocation.class + ": column is missing");
         return new GraphQLErrorLocationImpl(line, column);
     }
-
+    
     /**
      * builds GraphQLErrorLocation without checking for non-null required values
      * @return GraphQLErrorLocation
@@ -86,7 +104,7 @@ public class GraphQLErrorLocationBuilder implements Builder<GraphQLErrorLocation
 
     /**
      * factory method for an instance of GraphQLErrorLocationBuilder
-     * @return builder
+     * @return builder 
      */
     public static GraphQLErrorLocationBuilder of() {
         return new GraphQLErrorLocationBuilder();

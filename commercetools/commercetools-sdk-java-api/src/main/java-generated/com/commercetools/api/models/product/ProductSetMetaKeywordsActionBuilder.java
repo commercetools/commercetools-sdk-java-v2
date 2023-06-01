@@ -1,11 +1,12 @@
-
 package com.commercetools.api.models.product;
 
+import com.commercetools.api.models.common.LocalizedString;
+import com.commercetools.api.models.product.ProductUpdateAction;
+import com.commercetools.api.models.product.ProductSetMetaKeywordsAction;
+import javax.annotation.Nullable;
 import java.util.*;
 import java.util.function.Function;
-
-import javax.annotation.Nullable;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -18,81 +19,89 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     ProductSetMetaKeywordsAction productSetMetaKeywordsAction = ProductSetMetaKeywordsAction.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class ProductSetMetaKeywordsActionBuilder implements Builder<ProductSetMetaKeywordsAction> {
 
+    
     @Nullable
     private com.commercetools.api.models.common.LocalizedString metaKeywords;
-
+    
+    
     @Nullable
     private Boolean staged;
 
+    
     /**
      *  <p>Value to set. If empty, any existing value will be removed.</p>
      * @param builder function to build the metaKeywords value
      * @return Builder
      */
-
-    public ProductSetMetaKeywordsActionBuilder metaKeywords(
-            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
+    
+    public ProductSetMetaKeywordsActionBuilder metaKeywords(Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
         this.metaKeywords = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of()).build();
         return this;
     }
-
+    
     /**
      *  <p>Value to set. If empty, any existing value will be removed.</p>
      * @param builder function to build the metaKeywords value
      * @return Builder
      */
-
-    public ProductSetMetaKeywordsActionBuilder withMetaKeywords(
-            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedString> builder) {
+    
+    public ProductSetMetaKeywordsActionBuilder withMetaKeywords(Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedString> builder) {
         this.metaKeywords = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of());
         return this;
     }
-
+                    
     /**
      *  <p>Value to set. If empty, any existing value will be removed.</p>
      * @param metaKeywords value to be set
      * @return Builder
      */
-
-    public ProductSetMetaKeywordsActionBuilder metaKeywords(
-            @Nullable final com.commercetools.api.models.common.LocalizedString metaKeywords) {
+    
+    public ProductSetMetaKeywordsActionBuilder metaKeywords(@Nullable final com.commercetools.api.models.common.LocalizedString metaKeywords) {
         this.metaKeywords = metaKeywords;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>If <code>true</code>, only the staged <code>metaKeywords</code> is updated. If <code>false</code>, both the current and staged <code>metaKeywords</code> are updated.</p>
      * @param staged value to be set
      * @return Builder
      */
-
+    
     public ProductSetMetaKeywordsActionBuilder staged(@Nullable final Boolean staged) {
         this.staged = staged;
         return this;
     }
+    
+    
 
     /**
      *  <p>Value to set. If empty, any existing value will be removed.</p>
      * @return metaKeywords
      */
-
+    
     @Nullable
-    public com.commercetools.api.models.common.LocalizedString getMetaKeywords() {
+    public com.commercetools.api.models.common.LocalizedString getMetaKeywords(){
         return this.metaKeywords;
     }
-
+    
     /**
      *  <p>If <code>true</code>, only the staged <code>metaKeywords</code> is updated. If <code>false</code>, both the current and staged <code>metaKeywords</code> are updated.</p>
      * @return staged
      */
-
+    
     @Nullable
-    public Boolean getStaged() {
+    public Boolean getStaged(){
         return this.staged;
     }
 
@@ -103,7 +112,7 @@ public class ProductSetMetaKeywordsActionBuilder implements Builder<ProductSetMe
     public ProductSetMetaKeywordsAction build() {
         return new ProductSetMetaKeywordsActionImpl(metaKeywords, staged);
     }
-
+    
     /**
      * builds ProductSetMetaKeywordsAction without checking for non-null required values
      * @return ProductSetMetaKeywordsAction
@@ -114,7 +123,7 @@ public class ProductSetMetaKeywordsActionBuilder implements Builder<ProductSetMe
 
     /**
      * factory method for an instance of ProductSetMetaKeywordsActionBuilder
-     * @return builder
+     * @return builder 
      */
     public static ProductSetMetaKeywordsActionBuilder of() {
         return new ProductSetMetaKeywordsActionBuilder();

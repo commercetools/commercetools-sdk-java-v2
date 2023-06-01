@@ -1,8 +1,12 @@
-
 package com.commercetools.history.models.change;
 
+import com.commercetools.history.models.change.Change;
+import java.lang.Object;
+import com.commercetools.history.models.change.AddPropertyChange;
+import javax.annotation.Nullable;
 import java.util.*;
-
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -17,74 +21,95 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .path("{path}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class AddPropertyChangeBuilder implements Builder<AddPropertyChange> {
 
+    
+    
     private String change;
-
+    
+    
+    
     private String path;
-
+    
+    
+    
     private java.lang.Object nextValue;
 
+    
     /**
      *  <p>Update action for <code>addProperty</code> on custom objects</p>
      * @param change value to be set
      * @return Builder
      */
-
-    public AddPropertyChangeBuilder change(final String change) {
+    
+    public AddPropertyChangeBuilder change( final String change) {
         this.change = change;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Value path to the property that was added</p>
      * @param path value to be set
      * @return Builder
      */
-
-    public AddPropertyChangeBuilder path(final String path) {
+    
+    public AddPropertyChangeBuilder path( final String path) {
         this.path = path;
         return this;
     }
-
+    
+    
+    
+    
     /**
      * set the value to the nextValue
      * @param nextValue value to be set
      * @return Builder
      */
-
-    public AddPropertyChangeBuilder nextValue(final java.lang.Object nextValue) {
+    
+    public AddPropertyChangeBuilder nextValue( final java.lang.Object nextValue) {
         this.nextValue = nextValue;
         return this;
     }
+    
+    
 
     /**
      *  <p>Update action for <code>addProperty</code> on custom objects</p>
      * @return change
      */
-
-    public String getChange() {
+    
+    
+    public String getChange(){
         return this.change;
     }
-
+    
     /**
      *  <p>Value path to the property that was added</p>
      * @return path
      */
-
-    public String getPath() {
+    
+    
+    public String getPath(){
         return this.path;
     }
-
+    
     /**
      * value of nextValue}
      * @return nextValue
      */
-
-    public java.lang.Object getNextValue() {
+    
+    
+    public java.lang.Object getNextValue(){
         return this.nextValue;
     }
 
@@ -98,7 +123,7 @@ public class AddPropertyChangeBuilder implements Builder<AddPropertyChange> {
         Objects.requireNonNull(nextValue, AddPropertyChange.class + ": nextValue is missing");
         return new AddPropertyChangeImpl(change, path, nextValue);
     }
-
+    
     /**
      * builds AddPropertyChange without checking for non-null required values
      * @return AddPropertyChange
@@ -109,7 +134,7 @@ public class AddPropertyChangeBuilder implements Builder<AddPropertyChange> {
 
     /**
      * factory method for an instance of AddPropertyChangeBuilder
-     * @return builder
+     * @return builder 
      */
     public static AddPropertyChangeBuilder of() {
         return new AddPropertyChangeBuilder();

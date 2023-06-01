@@ -1,101 +1,113 @@
-
 package com.commercetools.api.models.message;
 
-import java.time.*;
-import java.util.*;
-
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
-
-import io.vrap.rmf.base.client.ModelBase;
+import com.commercetools.api.models.message.OrderMessagePayload;
+import com.commercetools.api.models.order.OrderState;
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.ModelBase;
+import javax.validation.Valid;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.annotation.*;
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
  *  <p>Generated after a successful Change Order State update action.</p>
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class OrderStateChangedMessagePayloadImpl implements OrderStateChangedMessagePayload, ModelBase {
 
+    
     private String type;
-
+    
+    
     private com.commercetools.api.models.order.OrderState orderState;
-
+    
+    
     private com.commercetools.api.models.order.OrderState oldOrderState;
 
     /**
      * create instance with all properties
      */
     @JsonCreator
-    OrderStateChangedMessagePayloadImpl(
-            @JsonProperty("orderState") final com.commercetools.api.models.order.OrderState orderState,
-            @JsonProperty("oldOrderState") final com.commercetools.api.models.order.OrderState oldOrderState) {
+    OrderStateChangedMessagePayloadImpl(@JsonProperty("orderState") final com.commercetools.api.models.order.OrderState orderState, @JsonProperty("oldOrderState") final com.commercetools.api.models.order.OrderState oldOrderState) {
         this.orderState = orderState;
         this.oldOrderState = oldOrderState;
-        this.type = ORDER_STATE_CHANGED;
+        this.type =  ORDER_STATE_CHANGED;
     }
-
     /**
      * create empty instance
      */
     public OrderStateChangedMessagePayloadImpl() {
-        this.type = ORDER_STATE_CHANGED;
+        this.type =  ORDER_STATE_CHANGED;
     }
 
     /**
      *
      */
-
-    public String getType() {
+    
+    public String getType(){
         return this.type;
     }
-
+    
     /**
      *  <p>OrderState after the Change Order State update action.</p>
      */
-
-    public com.commercetools.api.models.order.OrderState getOrderState() {
+    
+    public com.commercetools.api.models.order.OrderState getOrderState(){
         return this.orderState;
     }
-
+    
     /**
      *  <p>OrderState before the Change Order State update action.</p>
      */
-
-    public com.commercetools.api.models.order.OrderState getOldOrderState() {
+    
+    public com.commercetools.api.models.order.OrderState getOldOrderState(){
         return this.oldOrderState;
     }
 
-    public void setOrderState(final com.commercetools.api.models.order.OrderState orderState) {
+    
+    public void setOrderState(final com.commercetools.api.models.order.OrderState orderState){
         this.orderState = orderState;
     }
-
-    public void setOldOrderState(final com.commercetools.api.models.order.OrderState oldOrderState) {
+    
+    
+    public void setOldOrderState(final com.commercetools.api.models.order.OrderState oldOrderState){
         this.oldOrderState = oldOrderState;
     }
 
     @Override
     public boolean equals(Object o) {
-        if (this == o)
-            return true;
-
-        if (o == null || getClass() != o.getClass())
-            return false;
-
+        if (this == o) return true;
+    
+        if (o == null || getClass() != o.getClass()) return false;
+    
         OrderStateChangedMessagePayloadImpl that = (OrderStateChangedMessagePayloadImpl) o;
-
-        return new EqualsBuilder().append(type, that.type)
+    
+        return new EqualsBuilder()
+                .append(type, that.type)
                 .append(orderState, that.orderState)
                 .append(oldOrderState, that.oldOrderState)
                 .isEquals();
     }
-
+    
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(type).append(orderState).append(oldOrderState).toHashCode();
+        return new HashCodeBuilder(17, 37)
+            .append(type)
+            .append(orderState)
+            .append(oldOrderState)
+            .toHashCode();
     }
 
 }

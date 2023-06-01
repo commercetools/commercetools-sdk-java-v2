@@ -1,18 +1,21 @@
-
 package com.commercetools.api.models.channel;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-
+import com.commercetools.api.models.channel.ChannelUpdateAction;
 import com.commercetools.api.models.common.BaseAddress;
+import com.commercetools.api.models.channel.ChannelSetAddressActionImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * ChannelSetAddressAction
@@ -24,9 +27,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     ChannelSetAddressAction channelSetAddressAction = ChannelSetAddressAction.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = ChannelSetAddressActionImpl.class)
 public interface ChannelSetAddressAction extends ChannelUpdateAction {
 
@@ -47,16 +53,18 @@ public interface ChannelSetAddressAction extends ChannelUpdateAction {
      *  <p>Value to set. If empty, any existing value will be removed.</p>
      * @param address value to be set
      */
-
+    
     public void setAddress(final BaseAddress address);
+    
 
     /**
      * factory method
      * @return instance of ChannelSetAddressAction
      */
-    public static ChannelSetAddressAction of() {
+    public static ChannelSetAddressAction of(){
         return new ChannelSetAddressActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy ChannelSetAddressAction
@@ -91,7 +99,7 @@ public interface ChannelSetAddressAction extends ChannelUpdateAction {
     public static ChannelSetAddressActionBuilder builder() {
         return ChannelSetAddressActionBuilder.of();
     }
-
+    
     /**
      * create builder for ChannelSetAddressAction instance
      * @param template instance with prefilled values for the builder
@@ -100,6 +108,7 @@ public interface ChannelSetAddressAction extends ChannelUpdateAction {
     public static ChannelSetAddressActionBuilder builder(final ChannelSetAddressAction template) {
         return ChannelSetAddressActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -110,7 +119,7 @@ public interface ChannelSetAddressAction extends ChannelUpdateAction {
     default <T> T withChannelSetAddressAction(Function<ChannelSetAddressAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

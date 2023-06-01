@@ -1,19 +1,20 @@
-
 package com.commercetools.api.models.product_selection;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-import java.util.stream.Collectors;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
+import com.commercetools.api.models.product_selection.ProductSelectionUpdateAction;
+import com.commercetools.api.models.product_selection.ProductSelectionUpdateImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * ProductSelectionUpdate
@@ -27,12 +28,15 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .plusActions(actionsBuilder -> actionsBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = ProductSelectionUpdateImpl.class)
-public interface ProductSelectionUpdate extends
-        com.commercetools.api.models.ResourceUpdate<ProductSelectionUpdate, ProductSelectionUpdateAction, ProductSelectionUpdateBuilder> {
+public interface ProductSelectionUpdate extends com.commercetools.api.models.ResourceUpdate<ProductSelectionUpdate, ProductSelectionUpdateAction, ProductSelectionUpdateBuilder> {
+
 
     /**
      *
@@ -41,7 +45,6 @@ public interface ProductSelectionUpdate extends
     @NotNull
     @JsonProperty("version")
     public Long getVersion();
-
     /**
      *
      * @return actions
@@ -55,31 +58,32 @@ public interface ProductSelectionUpdate extends
      * set version
      * @param version value to be set
      */
-
+    
     public void setVersion(final Long version);
-
+    
+    
     /**
      * set actions
      * @param actions values to be set
      */
-
+    
     @JsonIgnore
-    public void setActions(final ProductSelectionUpdateAction... actions);
-
+    public void setActions(final ProductSelectionUpdateAction ...actions);
     /**
      * set actions
      * @param actions values to be set
      */
-
+    
     public void setActions(final List<ProductSelectionUpdateAction> actions);
 
     /**
      * factory method
      * @return instance of ProductSelectionUpdate
      */
-    public static ProductSelectionUpdate of() {
+    public static ProductSelectionUpdate of(){
         return new ProductSelectionUpdateImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy ProductSelectionUpdate
@@ -106,9 +110,7 @@ public interface ProductSelectionUpdate extends
         ProductSelectionUpdateImpl instance = new ProductSelectionUpdateImpl();
         instance.setVersion(template.getVersion());
         instance.setActions(Optional.ofNullable(template.getActions())
-                .map(t -> t.stream()
-                        .map(com.commercetools.api.models.product_selection.ProductSelectionUpdateAction::deepCopy)
-                        .collect(Collectors.toList()))
+                .map(t -> t.stream().map(com.commercetools.api.models.product_selection.ProductSelectionUpdateAction::deepCopy).collect(Collectors.toList()))
                 .orElse(null));
         return instance;
     }
@@ -120,7 +122,7 @@ public interface ProductSelectionUpdate extends
     public static ProductSelectionUpdateBuilder builder() {
         return ProductSelectionUpdateBuilder.of();
     }
-
+    
     /**
      * create builder for ProductSelectionUpdate instance
      * @param template instance with prefilled values for the builder
@@ -129,6 +131,7 @@ public interface ProductSelectionUpdate extends
     public static ProductSelectionUpdateBuilder builder(final ProductSelectionUpdate template) {
         return ProductSelectionUpdateBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -139,7 +142,7 @@ public interface ProductSelectionUpdate extends
     default <T> T withProductSelectionUpdate(Function<ProductSelectionUpdate, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

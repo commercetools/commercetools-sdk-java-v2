@@ -1,8 +1,11 @@
-
 package com.commercetools.history.models.change_value;
 
-import java.util.*;
 
+import com.commercetools.history.models.change_value.TransactionChangeValue;
+import javax.annotation.Nullable;
+import java.util.*;
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -18,74 +21,95 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .timestamp("{timestamp}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class TransactionChangeValueBuilder implements Builder<TransactionChangeValue> {
 
+    
+    
     private String id;
-
+    
+    
+    
     private String interactionId;
-
+    
+    
+    
     private String timestamp;
 
+    
     /**
      * set the value to the id
      * @param id value to be set
      * @return Builder
      */
-
-    public TransactionChangeValueBuilder id(final String id) {
+    
+    public TransactionChangeValueBuilder id( final String id) {
         this.id = id;
         return this;
     }
-
+    
+    
+    
+    
     /**
      * set the value to the interactionId
      * @param interactionId value to be set
      * @return Builder
      */
-
-    public TransactionChangeValueBuilder interactionId(final String interactionId) {
+    
+    public TransactionChangeValueBuilder interactionId( final String interactionId) {
         this.interactionId = interactionId;
         return this;
     }
-
+    
+    
+    
+    
     /**
      * set the value to the timestamp
      * @param timestamp value to be set
      * @return Builder
      */
-
-    public TransactionChangeValueBuilder timestamp(final String timestamp) {
+    
+    public TransactionChangeValueBuilder timestamp( final String timestamp) {
         this.timestamp = timestamp;
         return this;
     }
+    
+    
 
     /**
      * value of id}
      * @return id
      */
-
-    public String getId() {
+    
+    
+    public String getId(){
         return this.id;
     }
-
+    
     /**
      * value of interactionId}
      * @return interactionId
      */
-
-    public String getInteractionId() {
+    
+    
+    public String getInteractionId(){
         return this.interactionId;
     }
-
+    
     /**
      * value of timestamp}
      * @return timestamp
      */
-
-    public String getTimestamp() {
+    
+    
+    public String getTimestamp(){
         return this.timestamp;
     }
 
@@ -99,7 +123,7 @@ public class TransactionChangeValueBuilder implements Builder<TransactionChangeV
         Objects.requireNonNull(timestamp, TransactionChangeValue.class + ": timestamp is missing");
         return new TransactionChangeValueImpl(id, interactionId, timestamp);
     }
-
+    
     /**
      * builds TransactionChangeValue without checking for non-null required values
      * @return TransactionChangeValue
@@ -110,7 +134,7 @@ public class TransactionChangeValueBuilder implements Builder<TransactionChangeV
 
     /**
      * factory method for an instance of TransactionChangeValueBuilder
-     * @return builder
+     * @return builder 
      */
     public static TransactionChangeValueBuilder of() {
         return new TransactionChangeValueBuilder();

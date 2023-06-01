@@ -1,19 +1,21 @@
-
 package com.commercetools.api.models.project;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
 import com.commercetools.api.models.associate_role.AssociateRoleKeyReference;
+import com.commercetools.api.models.project.BusinessUnitConfigurationStatus;
+import com.commercetools.api.models.project.BusinessUnitConfigurationImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * BusinessUnitConfiguration
@@ -26,11 +28,15 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .myBusinessUnitStatusOnCreation(BusinessUnitConfigurationStatus.ACTIVE)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = BusinessUnitConfigurationImpl.class)
-public interface BusinessUnitConfiguration {
+public interface BusinessUnitConfiguration  {
+
 
     /**
      *  <p>Status of Business Units created using the My Business Unit endpoint.</p>
@@ -39,7 +45,6 @@ public interface BusinessUnitConfiguration {
     @NotNull
     @JsonProperty("myBusinessUnitStatusOnCreation")
     public BusinessUnitConfigurationStatus getMyBusinessUnitStatusOnCreation();
-
     /**
      *  <p>Default Associate Role assigned to the Associate creating a Business Unit using the My Business Unit endpoint.</p>
      * @return myBusinessUnitAssociateRoleOnCreation
@@ -52,24 +57,26 @@ public interface BusinessUnitConfiguration {
      *  <p>Status of Business Units created using the My Business Unit endpoint.</p>
      * @param myBusinessUnitStatusOnCreation value to be set
      */
-
+    
     public void setMyBusinessUnitStatusOnCreation(final BusinessUnitConfigurationStatus myBusinessUnitStatusOnCreation);
-
+    
+    
     /**
      *  <p>Default Associate Role assigned to the Associate creating a Business Unit using the My Business Unit endpoint.</p>
      * @param myBusinessUnitAssociateRoleOnCreation value to be set
      */
-
-    public void setMyBusinessUnitAssociateRoleOnCreation(
-            final AssociateRoleKeyReference myBusinessUnitAssociateRoleOnCreation);
+    
+    public void setMyBusinessUnitAssociateRoleOnCreation(final AssociateRoleKeyReference myBusinessUnitAssociateRoleOnCreation);
+    
 
     /**
      * factory method
      * @return instance of BusinessUnitConfiguration
      */
-    public static BusinessUnitConfiguration of() {
+    public static BusinessUnitConfiguration of(){
         return new BusinessUnitConfigurationImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy BusinessUnitConfiguration
@@ -95,9 +102,7 @@ public interface BusinessUnitConfiguration {
         }
         BusinessUnitConfigurationImpl instance = new BusinessUnitConfigurationImpl();
         instance.setMyBusinessUnitStatusOnCreation(template.getMyBusinessUnitStatusOnCreation());
-        instance.setMyBusinessUnitAssociateRoleOnCreation(
-            com.commercetools.api.models.associate_role.AssociateRoleKeyReference
-                    .deepCopy(template.getMyBusinessUnitAssociateRoleOnCreation()));
+        instance.setMyBusinessUnitAssociateRoleOnCreation(com.commercetools.api.models.associate_role.AssociateRoleKeyReference.deepCopy(template.getMyBusinessUnitAssociateRoleOnCreation()));
         return instance;
     }
 
@@ -108,7 +113,7 @@ public interface BusinessUnitConfiguration {
     public static BusinessUnitConfigurationBuilder builder() {
         return BusinessUnitConfigurationBuilder.of();
     }
-
+    
     /**
      * create builder for BusinessUnitConfiguration instance
      * @param template instance with prefilled values for the builder
@@ -117,6 +122,7 @@ public interface BusinessUnitConfiguration {
     public static BusinessUnitConfigurationBuilder builder(final BusinessUnitConfiguration template) {
         return BusinessUnitConfigurationBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -127,7 +133,7 @@ public interface BusinessUnitConfiguration {
     default <T> T withBusinessUnitConfiguration(Function<BusinessUnitConfiguration, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

@@ -1,8 +1,11 @@
-
 package com.commercetools.api.models.product_type;
 
+import com.commercetools.api.models.product_type.AttributeType;
+import com.commercetools.api.models.product_type.AttributeTextType;
+import javax.annotation.Nullable;
 import java.util.*;
-
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -15,10 +18,16 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     AttributeTextType attributeTextType = AttributeTextType.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class AttributeTextTypeBuilder implements Builder<AttributeTextType> {
+
+
+
 
     /**
      * builds AttributeTextType with checking for non-null required values
@@ -27,7 +36,7 @@ public class AttributeTextTypeBuilder implements Builder<AttributeTextType> {
     public AttributeTextType build() {
         return new AttributeTextTypeImpl();
     }
-
+    
     /**
      * builds AttributeTextType without checking for non-null required values
      * @return AttributeTextType
@@ -38,7 +47,7 @@ public class AttributeTextTypeBuilder implements Builder<AttributeTextType> {
 
     /**
      * factory method for an instance of AttributeTextTypeBuilder
-     * @return builder
+     * @return builder 
      */
     public static AttributeTextTypeBuilder of() {
         return new AttributeTextTypeBuilder();

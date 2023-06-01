@@ -1,8 +1,12 @@
-
 package com.commercetools.api.models.order;
 
+import com.commercetools.api.models.order.OrderState;
+import com.commercetools.api.models.order.OrderUpdateAction;
+import com.commercetools.api.models.order.OrderChangeOrderStateAction;
+import javax.annotation.Nullable;
 import java.util.*;
-
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -16,31 +20,39 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .orderState(OrderState.OPEN)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class OrderChangeOrderStateActionBuilder implements Builder<OrderChangeOrderStateAction> {
 
+    
+    
     private com.commercetools.api.models.order.OrderState orderState;
 
+    
     /**
      * set the value to the orderState
      * @param orderState value to be set
      * @return Builder
      */
-
-    public OrderChangeOrderStateActionBuilder orderState(
-            final com.commercetools.api.models.order.OrderState orderState) {
+    
+    public OrderChangeOrderStateActionBuilder orderState( final com.commercetools.api.models.order.OrderState orderState) {
         this.orderState = orderState;
         return this;
     }
+    
+    
 
     /**
      * value of orderState}
      * @return orderState
      */
-
-    public com.commercetools.api.models.order.OrderState getOrderState() {
+    
+    
+    public com.commercetools.api.models.order.OrderState getOrderState(){
         return this.orderState;
     }
 
@@ -52,7 +64,7 @@ public class OrderChangeOrderStateActionBuilder implements Builder<OrderChangeOr
         Objects.requireNonNull(orderState, OrderChangeOrderStateAction.class + ": orderState is missing");
         return new OrderChangeOrderStateActionImpl(orderState);
     }
-
+    
     /**
      * builds OrderChangeOrderStateAction without checking for non-null required values
      * @return OrderChangeOrderStateAction
@@ -63,7 +75,7 @@ public class OrderChangeOrderStateActionBuilder implements Builder<OrderChangeOr
 
     /**
      * factory method for an instance of OrderChangeOrderStateActionBuilder
-     * @return builder
+     * @return builder 
      */
     public static OrderChangeOrderStateActionBuilder of() {
         return new OrderChangeOrderStateActionBuilder();

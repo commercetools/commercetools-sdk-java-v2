@@ -1,9 +1,12 @@
-
 package com.commercetools.api.models.message;
 
+import com.commercetools.api.models.message.MessagePayload;
+import com.commercetools.api.models.standalone_price.StandalonePrice;
+import com.commercetools.api.models.message.StandalonePriceCreatedMessagePayload;
+import javax.annotation.Nullable;
 import java.util.*;
 import java.util.function.Function;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -17,56 +20,61 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .standalonePrice(standalonePriceBuilder -> standalonePriceBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class StandalonePriceCreatedMessagePayloadBuilder implements Builder<StandalonePriceCreatedMessagePayload> {
 
+    
+    
     private com.commercetools.api.models.standalone_price.StandalonePrice standalonePrice;
 
+    
     /**
      *  <p>Standalone Price that was created.</p>
      * @param builder function to build the standalonePrice value
      * @return Builder
      */
-
-    public StandalonePriceCreatedMessagePayloadBuilder standalonePrice(
-            Function<com.commercetools.api.models.standalone_price.StandalonePriceBuilder, com.commercetools.api.models.standalone_price.StandalonePriceBuilder> builder) {
-        this.standalonePrice = builder.apply(com.commercetools.api.models.standalone_price.StandalonePriceBuilder.of())
-                .build();
+    
+    public StandalonePriceCreatedMessagePayloadBuilder standalonePrice(Function<com.commercetools.api.models.standalone_price.StandalonePriceBuilder, com.commercetools.api.models.standalone_price.StandalonePriceBuilder> builder) {
+        this.standalonePrice = builder.apply(com.commercetools.api.models.standalone_price.StandalonePriceBuilder.of()).build();
         return this;
     }
-
+    
     /**
      *  <p>Standalone Price that was created.</p>
      * @param builder function to build the standalonePrice value
      * @return Builder
      */
-
-    public StandalonePriceCreatedMessagePayloadBuilder withStandalonePrice(
-            Function<com.commercetools.api.models.standalone_price.StandalonePriceBuilder, com.commercetools.api.models.standalone_price.StandalonePrice> builder) {
+    
+    public StandalonePriceCreatedMessagePayloadBuilder withStandalonePrice(Function<com.commercetools.api.models.standalone_price.StandalonePriceBuilder, com.commercetools.api.models.standalone_price.StandalonePrice> builder) {
         this.standalonePrice = builder.apply(com.commercetools.api.models.standalone_price.StandalonePriceBuilder.of());
         return this;
     }
-
+                    
     /**
      *  <p>Standalone Price that was created.</p>
      * @param standalonePrice value to be set
      * @return Builder
      */
-
-    public StandalonePriceCreatedMessagePayloadBuilder standalonePrice(
-            final com.commercetools.api.models.standalone_price.StandalonePrice standalonePrice) {
+    
+    public StandalonePriceCreatedMessagePayloadBuilder standalonePrice( final com.commercetools.api.models.standalone_price.StandalonePrice standalonePrice) {
         this.standalonePrice = standalonePrice;
         return this;
     }
+    
+    
 
     /**
      *  <p>Standalone Price that was created.</p>
      * @return standalonePrice
      */
-
-    public com.commercetools.api.models.standalone_price.StandalonePrice getStandalonePrice() {
+    
+    
+    public com.commercetools.api.models.standalone_price.StandalonePrice getStandalonePrice(){
         return this.standalonePrice;
     }
 
@@ -75,11 +83,10 @@ public class StandalonePriceCreatedMessagePayloadBuilder implements Builder<Stan
      * @return StandalonePriceCreatedMessagePayload
      */
     public StandalonePriceCreatedMessagePayload build() {
-        Objects.requireNonNull(standalonePrice,
-            StandalonePriceCreatedMessagePayload.class + ": standalonePrice is missing");
+        Objects.requireNonNull(standalonePrice, StandalonePriceCreatedMessagePayload.class + ": standalonePrice is missing");
         return new StandalonePriceCreatedMessagePayloadImpl(standalonePrice);
     }
-
+    
     /**
      * builds StandalonePriceCreatedMessagePayload without checking for non-null required values
      * @return StandalonePriceCreatedMessagePayload
@@ -90,7 +97,7 @@ public class StandalonePriceCreatedMessagePayloadBuilder implements Builder<Stan
 
     /**
      * factory method for an instance of StandalonePriceCreatedMessagePayloadBuilder
-     * @return builder
+     * @return builder 
      */
     public static StandalonePriceCreatedMessagePayloadBuilder of() {
         return new StandalonePriceCreatedMessagePayloadBuilder();

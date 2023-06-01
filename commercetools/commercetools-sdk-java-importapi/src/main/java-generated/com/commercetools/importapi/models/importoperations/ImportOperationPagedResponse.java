@@ -1,19 +1,20 @@
-
 package com.commercetools.importapi.models.importoperations;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-import java.util.stream.Collectors;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
+import com.commercetools.importapi.models.importoperations.ImportOperation;
+import com.commercetools.importapi.models.importoperations.ImportOperationPagedResponseImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>PagedQueryResult for Import Operations.</p>
@@ -30,11 +31,15 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .plusResults(resultsBuilder -> resultsBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = ImportOperationPagedResponseImpl.class)
-public interface ImportOperationPagedResponse {
+public interface ImportOperationPagedResponse  {
+
 
     /**
      *  <p>Number of results requested.</p>
@@ -43,7 +48,6 @@ public interface ImportOperationPagedResponse {
     @NotNull
     @JsonProperty("limit")
     public Integer getLimit();
-
     /**
      *  <p>Number of elements skipped.</p>
      * @return offset
@@ -51,7 +55,6 @@ public interface ImportOperationPagedResponse {
     @NotNull
     @JsonProperty("offset")
     public Long getOffset();
-
     /**
      *  <p>The actual number of results returned.</p>
      * @return count
@@ -59,7 +62,6 @@ public interface ImportOperationPagedResponse {
     @NotNull
     @JsonProperty("count")
     public Long getCount();
-
     /**
      *  <p>The total number of import operations matching the query.</p>
      * @return total
@@ -67,7 +69,6 @@ public interface ImportOperationPagedResponse {
     @NotNull
     @JsonProperty("total")
     public Long getTotal();
-
     /**
      *  <p>The array of Import Operations matching the query.</p>
      * @return results
@@ -81,52 +82,56 @@ public interface ImportOperationPagedResponse {
      *  <p>Number of results requested.</p>
      * @param limit value to be set
      */
-
+    
     public void setLimit(final Integer limit);
-
+    
+    
     /**
      *  <p>Number of elements skipped.</p>
      * @param offset value to be set
      */
-
+    
     public void setOffset(final Long offset);
-
+    
+    
     /**
      *  <p>The actual number of results returned.</p>
      * @param count value to be set
      */
-
+    
     public void setCount(final Long count);
-
+    
+    
     /**
      *  <p>The total number of import operations matching the query.</p>
      * @param total value to be set
      */
-
+    
     public void setTotal(final Long total);
-
+    
+    
     /**
      *  <p>The array of Import Operations matching the query.</p>
      * @param results values to be set
      */
-
+    
     @JsonIgnore
-    public void setResults(final ImportOperation... results);
-
+    public void setResults(final ImportOperation ...results);
     /**
      *  <p>The array of Import Operations matching the query.</p>
      * @param results values to be set
      */
-
+    
     public void setResults(final List<ImportOperation> results);
 
     /**
      * factory method
      * @return instance of ImportOperationPagedResponse
      */
-    public static ImportOperationPagedResponse of() {
+    public static ImportOperationPagedResponse of(){
         return new ImportOperationPagedResponseImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy ImportOperationPagedResponse
@@ -159,9 +164,7 @@ public interface ImportOperationPagedResponse {
         instance.setCount(template.getCount());
         instance.setTotal(template.getTotal());
         instance.setResults(Optional.ofNullable(template.getResults())
-                .map(t -> t.stream()
-                        .map(com.commercetools.importapi.models.importoperations.ImportOperation::deepCopy)
-                        .collect(Collectors.toList()))
+                .map(t -> t.stream().map(com.commercetools.importapi.models.importoperations.ImportOperation::deepCopy).collect(Collectors.toList()))
                 .orElse(null));
         return instance;
     }
@@ -173,7 +176,7 @@ public interface ImportOperationPagedResponse {
     public static ImportOperationPagedResponseBuilder builder() {
         return ImportOperationPagedResponseBuilder.of();
     }
-
+    
     /**
      * create builder for ImportOperationPagedResponse instance
      * @param template instance with prefilled values for the builder
@@ -182,6 +185,7 @@ public interface ImportOperationPagedResponse {
     public static ImportOperationPagedResponseBuilder builder(final ImportOperationPagedResponse template) {
         return ImportOperationPagedResponseBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -192,7 +196,7 @@ public interface ImportOperationPagedResponse {
     default <T> T withImportOperationPagedResponse(Function<ImportOperationPagedResponse, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

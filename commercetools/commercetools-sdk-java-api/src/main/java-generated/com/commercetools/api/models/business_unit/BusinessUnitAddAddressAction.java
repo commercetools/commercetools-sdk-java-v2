@@ -1,19 +1,21 @@
-
 package com.commercetools.api.models.business_unit;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
+import com.commercetools.api.models.business_unit.BusinessUnitUpdateAction;
 import com.commercetools.api.models.common.BaseAddress;
+import com.commercetools.api.models.business_unit.BusinessUnitAddAddressActionImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Adding an address to a Business Unit generates a BusinessUnitAddressAdded Message.</p>
@@ -26,9 +28,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .address(addressBuilder -> addressBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = BusinessUnitAddAddressActionImpl.class)
 public interface BusinessUnitAddAddressAction extends BusinessUnitUpdateAction {
 
@@ -50,16 +55,18 @@ public interface BusinessUnitAddAddressAction extends BusinessUnitUpdateAction {
      *  <p>Address to add to the addresses of the Business Unit.</p>
      * @param address value to be set
      */
-
+    
     public void setAddress(final BaseAddress address);
+    
 
     /**
      * factory method
      * @return instance of BusinessUnitAddAddressAction
      */
-    public static BusinessUnitAddAddressAction of() {
+    public static BusinessUnitAddAddressAction of(){
         return new BusinessUnitAddAddressActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy BusinessUnitAddAddressAction
@@ -94,7 +101,7 @@ public interface BusinessUnitAddAddressAction extends BusinessUnitUpdateAction {
     public static BusinessUnitAddAddressActionBuilder builder() {
         return BusinessUnitAddAddressActionBuilder.of();
     }
-
+    
     /**
      * create builder for BusinessUnitAddAddressAction instance
      * @param template instance with prefilled values for the builder
@@ -103,6 +110,7 @@ public interface BusinessUnitAddAddressAction extends BusinessUnitUpdateAction {
     public static BusinessUnitAddAddressActionBuilder builder(final BusinessUnitAddAddressAction template) {
         return BusinessUnitAddAddressActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -113,7 +121,7 @@ public interface BusinessUnitAddAddressAction extends BusinessUnitUpdateAction {
     default <T> T withBusinessUnitAddAddressAction(Function<BusinessUnitAddAddressAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

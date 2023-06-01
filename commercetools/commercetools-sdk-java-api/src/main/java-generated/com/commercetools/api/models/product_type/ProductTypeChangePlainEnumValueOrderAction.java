@@ -1,19 +1,21 @@
-
 package com.commercetools.api.models.product_type;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-import java.util.stream.Collectors;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
+import com.commercetools.api.models.product_type.AttributePlainEnumValue;
+import com.commercetools.api.models.product_type.ProductTypeUpdateAction;
+import com.commercetools.api.models.product_type.ProductTypeChangePlainEnumValueOrderActionImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Updates the order of enum <code>values</code> in an AttributeEnumType AttributeDefinition. It can update an AttributeEnumType AttributeDefinition or an AttributeSetType of AttributeEnumType AttributeDefinition.</p>
@@ -27,9 +29,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .plusValues(valuesBuilder -> valuesBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = ProductTypeChangePlainEnumValueOrderActionImpl.class)
 public interface ProductTypeChangePlainEnumValueOrderAction extends ProductTypeUpdateAction {
 
@@ -45,7 +50,6 @@ public interface ProductTypeChangePlainEnumValueOrderAction extends ProductTypeU
     @NotNull
     @JsonProperty("attributeName")
     public String getAttributeName();
-
     /**
      *  <p>Values must be equal to the values of the Attribute enum values (except for the order). If not, an EnumValuesMustMatch error is returned.</p>
      * @return values
@@ -59,39 +63,39 @@ public interface ProductTypeChangePlainEnumValueOrderAction extends ProductTypeU
      *  <p>Name of the AttributeDefinition to update.</p>
      * @param attributeName value to be set
      */
-
+    
     public void setAttributeName(final String attributeName);
-
+    
+    
     /**
      *  <p>Values must be equal to the values of the Attribute enum values (except for the order). If not, an EnumValuesMustMatch error is returned.</p>
      * @param values values to be set
      */
-
+    
     @JsonIgnore
-    public void setValues(final AttributePlainEnumValue... values);
-
+    public void setValues(final AttributePlainEnumValue ...values);
     /**
      *  <p>Values must be equal to the values of the Attribute enum values (except for the order). If not, an EnumValuesMustMatch error is returned.</p>
      * @param values values to be set
      */
-
+    
     public void setValues(final List<AttributePlainEnumValue> values);
 
     /**
      * factory method
      * @return instance of ProductTypeChangePlainEnumValueOrderAction
      */
-    public static ProductTypeChangePlainEnumValueOrderAction of() {
+    public static ProductTypeChangePlainEnumValueOrderAction of(){
         return new ProductTypeChangePlainEnumValueOrderActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy ProductTypeChangePlainEnumValueOrderAction
      * @param template instance to be copied
      * @return copy instance
      */
-    public static ProductTypeChangePlainEnumValueOrderAction of(
-            final ProductTypeChangePlainEnumValueOrderAction template) {
+    public static ProductTypeChangePlainEnumValueOrderAction of(final ProductTypeChangePlainEnumValueOrderAction template) {
         ProductTypeChangePlainEnumValueOrderActionImpl instance = new ProductTypeChangePlainEnumValueOrderActionImpl();
         instance.setAttributeName(template.getAttributeName());
         instance.setValues(template.getValues());
@@ -104,17 +108,14 @@ public interface ProductTypeChangePlainEnumValueOrderAction extends ProductTypeU
      * @return copy instance
      */
     @Nullable
-    public static ProductTypeChangePlainEnumValueOrderAction deepCopy(
-            @Nullable final ProductTypeChangePlainEnumValueOrderAction template) {
+    public static ProductTypeChangePlainEnumValueOrderAction deepCopy(@Nullable final ProductTypeChangePlainEnumValueOrderAction template) {
         if (template == null) {
             return null;
         }
         ProductTypeChangePlainEnumValueOrderActionImpl instance = new ProductTypeChangePlainEnumValueOrderActionImpl();
         instance.setAttributeName(template.getAttributeName());
         instance.setValues(Optional.ofNullable(template.getValues())
-                .map(t -> t.stream()
-                        .map(com.commercetools.api.models.product_type.AttributePlainEnumValue::deepCopy)
-                        .collect(Collectors.toList()))
+                .map(t -> t.stream().map(com.commercetools.api.models.product_type.AttributePlainEnumValue::deepCopy).collect(Collectors.toList()))
                 .orElse(null));
         return instance;
     }
@@ -126,16 +127,16 @@ public interface ProductTypeChangePlainEnumValueOrderAction extends ProductTypeU
     public static ProductTypeChangePlainEnumValueOrderActionBuilder builder() {
         return ProductTypeChangePlainEnumValueOrderActionBuilder.of();
     }
-
+    
     /**
      * create builder for ProductTypeChangePlainEnumValueOrderAction instance
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static ProductTypeChangePlainEnumValueOrderActionBuilder builder(
-            final ProductTypeChangePlainEnumValueOrderAction template) {
+    public static ProductTypeChangePlainEnumValueOrderActionBuilder builder(final ProductTypeChangePlainEnumValueOrderAction template) {
         return ProductTypeChangePlainEnumValueOrderActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -143,11 +144,10 @@ public interface ProductTypeChangePlainEnumValueOrderAction extends ProductTypeU
      * @param helper function to map the object
      * @return mapped value
      */
-    default <T> T withProductTypeChangePlainEnumValueOrderAction(
-            Function<ProductTypeChangePlainEnumValueOrderAction, T> helper) {
+    default <T> T withProductTypeChangePlainEnumValueOrderAction(Function<ProductTypeChangePlainEnumValueOrderAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

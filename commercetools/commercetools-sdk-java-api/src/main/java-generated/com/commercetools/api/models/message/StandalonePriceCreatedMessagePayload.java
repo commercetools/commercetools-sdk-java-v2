@@ -1,19 +1,21 @@
-
 package com.commercetools.api.models.message;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
+import com.commercetools.api.models.message.MessagePayload;
 import com.commercetools.api.models.standalone_price.StandalonePrice;
+import com.commercetools.api.models.message.StandalonePriceCreatedMessagePayloadImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Generated after a successful Create StandalonePrice request.</p>
@@ -26,9 +28,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .standalonePrice(standalonePriceBuilder -> standalonePriceBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = StandalonePriceCreatedMessagePayloadImpl.class)
 public interface StandalonePriceCreatedMessagePayload extends MessagePayload {
 
@@ -50,16 +55,18 @@ public interface StandalonePriceCreatedMessagePayload extends MessagePayload {
      *  <p>Standalone Price that was created.</p>
      * @param standalonePrice value to be set
      */
-
+    
     public void setStandalonePrice(final StandalonePrice standalonePrice);
+    
 
     /**
      * factory method
      * @return instance of StandalonePriceCreatedMessagePayload
      */
-    public static StandalonePriceCreatedMessagePayload of() {
+    public static StandalonePriceCreatedMessagePayload of(){
         return new StandalonePriceCreatedMessagePayloadImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy StandalonePriceCreatedMessagePayload
@@ -78,14 +85,12 @@ public interface StandalonePriceCreatedMessagePayload extends MessagePayload {
      * @return copy instance
      */
     @Nullable
-    public static StandalonePriceCreatedMessagePayload deepCopy(
-            @Nullable final StandalonePriceCreatedMessagePayload template) {
+    public static StandalonePriceCreatedMessagePayload deepCopy(@Nullable final StandalonePriceCreatedMessagePayload template) {
         if (template == null) {
             return null;
         }
         StandalonePriceCreatedMessagePayloadImpl instance = new StandalonePriceCreatedMessagePayloadImpl();
-        instance.setStandalonePrice(
-            com.commercetools.api.models.standalone_price.StandalonePrice.deepCopy(template.getStandalonePrice()));
+        instance.setStandalonePrice(com.commercetools.api.models.standalone_price.StandalonePrice.deepCopy(template.getStandalonePrice()));
         return instance;
     }
 
@@ -96,16 +101,16 @@ public interface StandalonePriceCreatedMessagePayload extends MessagePayload {
     public static StandalonePriceCreatedMessagePayloadBuilder builder() {
         return StandalonePriceCreatedMessagePayloadBuilder.of();
     }
-
+    
     /**
      * create builder for StandalonePriceCreatedMessagePayload instance
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static StandalonePriceCreatedMessagePayloadBuilder builder(
-            final StandalonePriceCreatedMessagePayload template) {
+    public static StandalonePriceCreatedMessagePayloadBuilder builder(final StandalonePriceCreatedMessagePayload template) {
         return StandalonePriceCreatedMessagePayloadBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -116,7 +121,7 @@ public interface StandalonePriceCreatedMessagePayload extends MessagePayload {
     default <T> T withStandalonePriceCreatedMessagePayload(Function<StandalonePriceCreatedMessagePayload, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

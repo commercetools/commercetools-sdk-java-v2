@@ -1,17 +1,21 @@
-
 package com.commercetools.api.models.product;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
+import com.commercetools.api.models.product.FacetResult;
+import com.commercetools.api.models.product.FacetTypes;
+import com.commercetools.api.models.product.FilteredFacetResultImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * FilteredFacetResult
@@ -24,9 +28,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .count(0.3)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = FilteredFacetResultImpl.class)
 public interface FilteredFacetResult extends FacetResult {
 
@@ -42,12 +49,11 @@ public interface FilteredFacetResult extends FacetResult {
     @NotNull
     @JsonProperty("count")
     public Long getCount();
-
     /**
      *
      * @return productCount
      */
-
+    
     @JsonProperty("productCount")
     public Long getProductCount();
 
@@ -55,23 +61,26 @@ public interface FilteredFacetResult extends FacetResult {
      * set count
      * @param count value to be set
      */
-
+    
     public void setCount(final Long count);
-
+    
+    
     /**
      * set productCount
      * @param productCount value to be set
      */
-
+    
     public void setProductCount(final Long productCount);
+    
 
     /**
      * factory method
      * @return instance of FilteredFacetResult
      */
-    public static FilteredFacetResult of() {
+    public static FilteredFacetResult of(){
         return new FilteredFacetResultImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy FilteredFacetResult
@@ -108,7 +117,7 @@ public interface FilteredFacetResult extends FacetResult {
     public static FilteredFacetResultBuilder builder() {
         return FilteredFacetResultBuilder.of();
     }
-
+    
     /**
      * create builder for FilteredFacetResult instance
      * @param template instance with prefilled values for the builder
@@ -117,6 +126,7 @@ public interface FilteredFacetResult extends FacetResult {
     public static FilteredFacetResultBuilder builder(final FilteredFacetResult template) {
         return FilteredFacetResultBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -127,7 +137,7 @@ public interface FilteredFacetResult extends FacetResult {
     default <T> T withFilteredFacetResult(Function<FilteredFacetResult, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

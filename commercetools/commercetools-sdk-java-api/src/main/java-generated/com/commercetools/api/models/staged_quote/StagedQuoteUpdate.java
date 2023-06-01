@@ -1,19 +1,20 @@
-
 package com.commercetools.api.models.staged_quote;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-import java.util.stream.Collectors;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
+import com.commercetools.api.models.staged_quote.StagedQuoteUpdateAction;
+import com.commercetools.api.models.staged_quote.StagedQuoteUpdateImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * StagedQuoteUpdate
@@ -27,12 +28,15 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .plusActions(actionsBuilder -> actionsBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = StagedQuoteUpdateImpl.class)
-public interface StagedQuoteUpdate extends
-        com.commercetools.api.models.ResourceUpdate<StagedQuoteUpdate, StagedQuoteUpdateAction, StagedQuoteUpdateBuilder> {
+public interface StagedQuoteUpdate extends com.commercetools.api.models.ResourceUpdate<StagedQuoteUpdate, StagedQuoteUpdateAction, StagedQuoteUpdateBuilder> {
+
 
     /**
      *  <p>Expected version of the StagedQuote to which the changes should be applied. If the expected version does not match the actual version, a 409 Conflict error will be returned.</p>
@@ -41,7 +45,6 @@ public interface StagedQuoteUpdate extends
     @NotNull
     @JsonProperty("version")
     public Long getVersion();
-
     /**
      *  <p>Update actions to be performed on the StagedQuote.</p>
      * @return actions
@@ -55,31 +58,32 @@ public interface StagedQuoteUpdate extends
      *  <p>Expected version of the StagedQuote to which the changes should be applied. If the expected version does not match the actual version, a 409 Conflict error will be returned.</p>
      * @param version value to be set
      */
-
+    
     public void setVersion(final Long version);
-
+    
+    
     /**
      *  <p>Update actions to be performed on the StagedQuote.</p>
      * @param actions values to be set
      */
-
+    
     @JsonIgnore
-    public void setActions(final StagedQuoteUpdateAction... actions);
-
+    public void setActions(final StagedQuoteUpdateAction ...actions);
     /**
      *  <p>Update actions to be performed on the StagedQuote.</p>
      * @param actions values to be set
      */
-
+    
     public void setActions(final List<StagedQuoteUpdateAction> actions);
 
     /**
      * factory method
      * @return instance of StagedQuoteUpdate
      */
-    public static StagedQuoteUpdate of() {
+    public static StagedQuoteUpdate of(){
         return new StagedQuoteUpdateImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy StagedQuoteUpdate
@@ -106,9 +110,7 @@ public interface StagedQuoteUpdate extends
         StagedQuoteUpdateImpl instance = new StagedQuoteUpdateImpl();
         instance.setVersion(template.getVersion());
         instance.setActions(Optional.ofNullable(template.getActions())
-                .map(t -> t.stream()
-                        .map(com.commercetools.api.models.staged_quote.StagedQuoteUpdateAction::deepCopy)
-                        .collect(Collectors.toList()))
+                .map(t -> t.stream().map(com.commercetools.api.models.staged_quote.StagedQuoteUpdateAction::deepCopy).collect(Collectors.toList()))
                 .orElse(null));
         return instance;
     }
@@ -120,7 +122,7 @@ public interface StagedQuoteUpdate extends
     public static StagedQuoteUpdateBuilder builder() {
         return StagedQuoteUpdateBuilder.of();
     }
-
+    
     /**
      * create builder for StagedQuoteUpdate instance
      * @param template instance with prefilled values for the builder
@@ -129,6 +131,7 @@ public interface StagedQuoteUpdate extends
     public static StagedQuoteUpdateBuilder builder(final StagedQuoteUpdate template) {
         return StagedQuoteUpdateBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -139,7 +142,7 @@ public interface StagedQuoteUpdate extends
     default <T> T withStagedQuoteUpdate(Function<StagedQuoteUpdate, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

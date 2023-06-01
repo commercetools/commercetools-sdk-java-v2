@@ -1,9 +1,11 @@
-
 package com.commercetools.api.predicates.query.error;
 
 import com.commercetools.api.predicates.query.*;
 
-public class InvalidCredentialsErrorQueryBuilderDsl {
+import java.util.function.Function;
+
+
+public class InvalidCredentialsErrorQueryBuilderDsl  {
     public InvalidCredentialsErrorQueryBuilderDsl() {
     }
 
@@ -12,15 +14,12 @@ public class InvalidCredentialsErrorQueryBuilderDsl {
     }
 
     public StringComparisonPredicateBuilder<InvalidCredentialsErrorQueryBuilderDsl> code() {
-        return new StringComparisonPredicateBuilder<>(
-            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("code")),
-            p -> new CombinationQueryPredicate<>(p, InvalidCredentialsErrorQueryBuilderDsl::of));
+        return new StringComparisonPredicateBuilder<>(BinaryQueryPredicate.of().left(new ConstantQueryPredicate("code")),
+        p -> new CombinationQueryPredicate<>(p, InvalidCredentialsErrorQueryBuilderDsl::of));
     }
-
     public StringComparisonPredicateBuilder<InvalidCredentialsErrorQueryBuilderDsl> message() {
-        return new StringComparisonPredicateBuilder<>(
-            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("message")),
-            p -> new CombinationQueryPredicate<>(p, InvalidCredentialsErrorQueryBuilderDsl::of));
+        return new StringComparisonPredicateBuilder<>(BinaryQueryPredicate.of().left(new ConstantQueryPredicate("message")),
+        p -> new CombinationQueryPredicate<>(p, InvalidCredentialsErrorQueryBuilderDsl::of));
     }
-
+    
 }

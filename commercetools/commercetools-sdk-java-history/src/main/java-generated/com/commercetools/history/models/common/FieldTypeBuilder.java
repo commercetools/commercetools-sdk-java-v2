@@ -1,8 +1,11 @@
-
 package com.commercetools.history.models.common;
 
-import java.util.*;
 
+import com.commercetools.history.models.common.FieldType;
+import javax.annotation.Nullable;
+import java.util.*;
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -16,30 +19,39 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .name("{name}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class FieldTypeBuilder implements Builder<FieldType> {
 
+    
+    
     private String name;
 
+    
     /**
      * set the value to the name
      * @param name value to be set
      * @return Builder
      */
-
-    public FieldTypeBuilder name(final String name) {
+    
+    public FieldTypeBuilder name( final String name) {
         this.name = name;
         return this;
     }
+    
+    
 
     /**
      * value of name}
      * @return name
      */
-
-    public String getName() {
+    
+    
+    public String getName(){
         return this.name;
     }
 
@@ -51,7 +63,7 @@ public class FieldTypeBuilder implements Builder<FieldType> {
         Objects.requireNonNull(name, FieldType.class + ": name is missing");
         return new FieldTypeImpl(name);
     }
-
+    
     /**
      * builds FieldType without checking for non-null required values
      * @return FieldType
@@ -62,7 +74,7 @@ public class FieldTypeBuilder implements Builder<FieldType> {
 
     /**
      * factory method for an instance of FieldTypeBuilder
-     * @return builder
+     * @return builder 
      */
     public static FieldTypeBuilder of() {
         return new FieldTypeBuilder();

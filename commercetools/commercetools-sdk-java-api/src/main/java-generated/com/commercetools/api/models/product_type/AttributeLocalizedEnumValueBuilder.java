@@ -1,9 +1,11 @@
-
 package com.commercetools.api.models.product_type;
 
+import com.commercetools.api.models.common.LocalizedString;
+import com.commercetools.api.models.product_type.AttributeLocalizedEnumValue;
+import javax.annotation.Nullable;
 import java.util.*;
 import java.util.function.Function;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -18,76 +20,89 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .label(labelBuilder -> labelBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class AttributeLocalizedEnumValueBuilder implements Builder<AttributeLocalizedEnumValue> {
 
+    
+    
     private String key;
-
+    
+    
+    
     private com.commercetools.api.models.common.LocalizedString label;
 
+    
     /**
      *  <p>Key of the value used as a programmatic identifier, for example in facets &amp; filters.</p>
      * @param key value to be set
      * @return Builder
      */
-
-    public AttributeLocalizedEnumValueBuilder key(final String key) {
+    
+    public AttributeLocalizedEnumValueBuilder key( final String key) {
         this.key = key;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Descriptive, localized label of the value.</p>
      * @param builder function to build the label value
      * @return Builder
      */
-
-    public AttributeLocalizedEnumValueBuilder label(
-            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
+    
+    public AttributeLocalizedEnumValueBuilder label(Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
         this.label = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of()).build();
         return this;
     }
-
+    
     /**
      *  <p>Descriptive, localized label of the value.</p>
      * @param builder function to build the label value
      * @return Builder
      */
-
-    public AttributeLocalizedEnumValueBuilder withLabel(
-            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedString> builder) {
+    
+    public AttributeLocalizedEnumValueBuilder withLabel(Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedString> builder) {
         this.label = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of());
         return this;
     }
-
+                    
     /**
      *  <p>Descriptive, localized label of the value.</p>
      * @param label value to be set
      * @return Builder
      */
-
-    public AttributeLocalizedEnumValueBuilder label(final com.commercetools.api.models.common.LocalizedString label) {
+    
+    public AttributeLocalizedEnumValueBuilder label( final com.commercetools.api.models.common.LocalizedString label) {
         this.label = label;
         return this;
     }
+    
+    
 
     /**
      *  <p>Key of the value used as a programmatic identifier, for example in facets &amp; filters.</p>
      * @return key
      */
-
-    public String getKey() {
+    
+    
+    public String getKey(){
         return this.key;
     }
-
+    
     /**
      *  <p>Descriptive, localized label of the value.</p>
      * @return label
      */
-
-    public com.commercetools.api.models.common.LocalizedString getLabel() {
+    
+    
+    public com.commercetools.api.models.common.LocalizedString getLabel(){
         return this.label;
     }
 
@@ -100,7 +115,7 @@ public class AttributeLocalizedEnumValueBuilder implements Builder<AttributeLoca
         Objects.requireNonNull(label, AttributeLocalizedEnumValue.class + ": label is missing");
         return new AttributeLocalizedEnumValueImpl(key, label);
     }
-
+    
     /**
      * builds AttributeLocalizedEnumValue without checking for non-null required values
      * @return AttributeLocalizedEnumValue
@@ -111,7 +126,7 @@ public class AttributeLocalizedEnumValueBuilder implements Builder<AttributeLoca
 
     /**
      * factory method for an instance of AttributeLocalizedEnumValueBuilder
-     * @return builder
+     * @return builder 
      */
     public static AttributeLocalizedEnumValueBuilder of() {
         return new AttributeLocalizedEnumValueBuilder();

@@ -1,27 +1,29 @@
-
 package com.commercetools.api.models.shipping_method;
-
-import java.util.Arrays;
-import java.util.Optional;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-
+import java.lang.String;
+import java.util.Arrays;
+import java.util.Optional;
 import io.vrap.rmf.base.client.JsonEnum;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
  * ShippingRateTierType
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public interface ShippingRateTierType extends JsonEnum {
 
+    
     ShippingRateTierType CART_VALUE = ShippingRateTierTypeEnum.CART_VALUE;
-
+    
     ShippingRateTierType CART_CLASSIFICATION = ShippingRateTierTypeEnum.CART_CLASSIFICATION;
-
+    
     ShippingRateTierType CART_SCORE = ShippingRateTierTypeEnum.CART_SCORE;
-
+    
     /**
      * possible values of ShippingRateTierType
      */
@@ -30,12 +32,12 @@ public interface ShippingRateTierType extends JsonEnum {
          * CartValue
          */
         CART_VALUE("CartValue"),
-
+        
         /**
          * CartClassification
          */
         CART_CLASSIFICATION("CartClassification"),
-
+        
         /**
          * CartScore
          */
@@ -92,7 +94,7 @@ public interface ShippingRateTierType extends JsonEnum {
             public String name() {
                 return value.toUpperCase();
             }
-
+            
             public String toString() {
                 return value;
             }
@@ -107,7 +109,7 @@ public interface ShippingRateTierType extends JsonEnum {
     public static Optional<ShippingRateTierType> findEnumViaJsonName(String jsonName) {
         return Arrays.stream(values()).filter(t -> t.getJsonName().equals(jsonName)).findFirst();
     }
-
+    
     /**
      * possible enum values
      * @return array of possible enum values
@@ -115,5 +117,5 @@ public interface ShippingRateTierType extends JsonEnum {
     public static ShippingRateTierType[] values() {
         return ShippingRateTierTypeEnum.values();
     }
-
+    
 }

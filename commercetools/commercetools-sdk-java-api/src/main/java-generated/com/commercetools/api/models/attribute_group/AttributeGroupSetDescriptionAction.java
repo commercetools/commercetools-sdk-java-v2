@@ -1,18 +1,21 @@
-
 package com.commercetools.api.models.attribute_group;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-
+import com.commercetools.api.models.attribute_group.AttributeGroupUpdateAction;
 import com.commercetools.api.models.common.LocalizedString;
+import com.commercetools.api.models.attribute_group.AttributeGroupSetDescriptionActionImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * AttributeGroupSetDescriptionAction
@@ -24,9 +27,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     AttributeGroupSetDescriptionAction attributeGroupSetDescriptionAction = AttributeGroupSetDescriptionAction.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = AttributeGroupSetDescriptionActionImpl.class)
 public interface AttributeGroupSetDescriptionAction extends AttributeGroupUpdateAction {
 
@@ -47,16 +53,18 @@ public interface AttributeGroupSetDescriptionAction extends AttributeGroupUpdate
      *  <p>Value to set. If empty, any existing value will be removed.</p>
      * @param description value to be set
      */
-
+    
     public void setDescription(final LocalizedString description);
+    
 
     /**
      * factory method
      * @return instance of AttributeGroupSetDescriptionAction
      */
-    public static AttributeGroupSetDescriptionAction of() {
+    public static AttributeGroupSetDescriptionAction of(){
         return new AttributeGroupSetDescriptionActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy AttributeGroupSetDescriptionAction
@@ -75,14 +83,12 @@ public interface AttributeGroupSetDescriptionAction extends AttributeGroupUpdate
      * @return copy instance
      */
     @Nullable
-    public static AttributeGroupSetDescriptionAction deepCopy(
-            @Nullable final AttributeGroupSetDescriptionAction template) {
+    public static AttributeGroupSetDescriptionAction deepCopy(@Nullable final AttributeGroupSetDescriptionAction template) {
         if (template == null) {
             return null;
         }
         AttributeGroupSetDescriptionActionImpl instance = new AttributeGroupSetDescriptionActionImpl();
-        instance.setDescription(
-            com.commercetools.api.models.common.LocalizedString.deepCopy(template.getDescription()));
+        instance.setDescription(com.commercetools.api.models.common.LocalizedString.deepCopy(template.getDescription()));
         return instance;
     }
 
@@ -93,7 +99,7 @@ public interface AttributeGroupSetDescriptionAction extends AttributeGroupUpdate
     public static AttributeGroupSetDescriptionActionBuilder builder() {
         return AttributeGroupSetDescriptionActionBuilder.of();
     }
-
+    
     /**
      * create builder for AttributeGroupSetDescriptionAction instance
      * @param template instance with prefilled values for the builder
@@ -102,6 +108,7 @@ public interface AttributeGroupSetDescriptionAction extends AttributeGroupUpdate
     public static AttributeGroupSetDescriptionActionBuilder builder(final AttributeGroupSetDescriptionAction template) {
         return AttributeGroupSetDescriptionActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -112,7 +119,7 @@ public interface AttributeGroupSetDescriptionAction extends AttributeGroupUpdate
     default <T> T withAttributeGroupSetDescriptionAction(Function<AttributeGroupSetDescriptionAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

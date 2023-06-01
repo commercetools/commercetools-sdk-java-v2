@@ -1,10 +1,11 @@
-
 package com.commercetools.api.models.me;
 
-import java.util.*;
-
+import com.commercetools.api.models.me.MyPaymentUpdateAction;
+import com.commercetools.api.models.me.MyPaymentSetMethodInfoMethodAction;
 import javax.annotation.Nullable;
-
+import java.util.*;
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -17,32 +18,39 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     MyPaymentSetMethodInfoMethodAction myPaymentSetMethodInfoMethodAction = MyPaymentSetMethodInfoMethodAction.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class MyPaymentSetMethodInfoMethodActionBuilder implements Builder<MyPaymentSetMethodInfoMethodAction> {
 
+    
     @Nullable
     private String method;
 
+    
     /**
      *  <p>Value to set. If empty, any existing value will be removed.</p>
      * @param method value to be set
      * @return Builder
      */
-
+    
     public MyPaymentSetMethodInfoMethodActionBuilder method(@Nullable final String method) {
         this.method = method;
         return this;
     }
+    
+    
 
     /**
      *  <p>Value to set. If empty, any existing value will be removed.</p>
      * @return method
      */
-
+    
     @Nullable
-    public String getMethod() {
+    public String getMethod(){
         return this.method;
     }
 
@@ -53,7 +61,7 @@ public class MyPaymentSetMethodInfoMethodActionBuilder implements Builder<MyPaym
     public MyPaymentSetMethodInfoMethodAction build() {
         return new MyPaymentSetMethodInfoMethodActionImpl(method);
     }
-
+    
     /**
      * builds MyPaymentSetMethodInfoMethodAction without checking for non-null required values
      * @return MyPaymentSetMethodInfoMethodAction
@@ -64,7 +72,7 @@ public class MyPaymentSetMethodInfoMethodActionBuilder implements Builder<MyPaym
 
     /**
      * factory method for an instance of MyPaymentSetMethodInfoMethodActionBuilder
-     * @return builder
+     * @return builder 
      */
     public static MyPaymentSetMethodInfoMethodActionBuilder of() {
         return new MyPaymentSetMethodInfoMethodActionBuilder();

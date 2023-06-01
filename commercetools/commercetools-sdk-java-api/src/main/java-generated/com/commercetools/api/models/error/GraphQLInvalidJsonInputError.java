@@ -1,17 +1,20 @@
-
 package com.commercetools.api.models.error;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
+import com.commercetools.api.models.error.GraphQLErrorObject;
+import com.commercetools.api.models.error.GraphQLInvalidJsonInputErrorImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Returned when an invalid JSON input has been sent. Either the JSON is syntactically incorrect or does not conform to the expected shape (for example is missing a required field).</p>
@@ -25,9 +28,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .detailedErrorMessage("{detailedErrorMessage}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = GraphQLInvalidJsonInputErrorImpl.class)
 public interface GraphQLInvalidJsonInputError extends GraphQLErrorObject {
 
@@ -43,7 +49,6 @@ public interface GraphQLInvalidJsonInputError extends GraphQLErrorObject {
     @NotNull
     @JsonProperty("code")
     public String getCode();
-
     /**
      *  <p>Further explanation about why the JSON is invalid.</p>
      * @return detailedErrorMessage
@@ -56,16 +61,18 @@ public interface GraphQLInvalidJsonInputError extends GraphQLErrorObject {
      *  <p>Further explanation about why the JSON is invalid.</p>
      * @param detailedErrorMessage value to be set
      */
-
+    
     public void setDetailedErrorMessage(final String detailedErrorMessage);
+    
 
     /**
      * factory method
      * @return instance of GraphQLInvalidJsonInputError
      */
-    public static GraphQLInvalidJsonInputError of() {
+    public static GraphQLInvalidJsonInputError of(){
         return new GraphQLInvalidJsonInputErrorImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy GraphQLInvalidJsonInputError
@@ -102,7 +109,7 @@ public interface GraphQLInvalidJsonInputError extends GraphQLErrorObject {
     public static GraphQLInvalidJsonInputErrorBuilder builder() {
         return GraphQLInvalidJsonInputErrorBuilder.of();
     }
-
+    
     /**
      * create builder for GraphQLInvalidJsonInputError instance
      * @param template instance with prefilled values for the builder
@@ -111,6 +118,7 @@ public interface GraphQLInvalidJsonInputError extends GraphQLErrorObject {
     public static GraphQLInvalidJsonInputErrorBuilder builder(final GraphQLInvalidJsonInputError template) {
         return GraphQLInvalidJsonInputErrorBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -121,7 +129,7 @@ public interface GraphQLInvalidJsonInputError extends GraphQLErrorObject {
     default <T> T withGraphQLInvalidJsonInputError(Function<GraphQLInvalidJsonInputError, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

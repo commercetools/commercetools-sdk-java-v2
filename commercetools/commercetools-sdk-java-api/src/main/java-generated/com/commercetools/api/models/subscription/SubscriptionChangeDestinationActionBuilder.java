@@ -1,9 +1,12 @@
-
 package com.commercetools.api.models.subscription;
 
+import com.commercetools.api.models.subscription.Destination;
+import com.commercetools.api.models.subscription.SubscriptionUpdateAction;
+import com.commercetools.api.models.subscription.SubscriptionChangeDestinationAction;
+import javax.annotation.Nullable;
 import java.util.*;
 import java.util.function.Function;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -17,43 +20,50 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .destination(destinationBuilder -> destinationBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class SubscriptionChangeDestinationActionBuilder implements Builder<SubscriptionChangeDestinationAction> {
 
+    
+    
     private com.commercetools.api.models.subscription.Destination destination;
 
+    
     /**
      *  <p>New value to set. Must not be empty.</p>
      * @param destination value to be set
      * @return Builder
      */
-
-    public SubscriptionChangeDestinationActionBuilder destination(
-            final com.commercetools.api.models.subscription.Destination destination) {
+    
+    public SubscriptionChangeDestinationActionBuilder destination( final com.commercetools.api.models.subscription.Destination destination) {
         this.destination = destination;
         return this;
     }
-
+    
+    
     /**
      *  <p>New value to set. Must not be empty.</p>
      * @param builder function to build the destination value
      * @return Builder
      */
-
-    public SubscriptionChangeDestinationActionBuilder destination(
-            Function<com.commercetools.api.models.subscription.DestinationBuilder, Builder<? extends com.commercetools.api.models.subscription.Destination>> builder) {
+    
+    public SubscriptionChangeDestinationActionBuilder destination(Function<com.commercetools.api.models.subscription.DestinationBuilder, Builder<? extends com.commercetools.api.models.subscription.Destination>> builder) {
         this.destination = builder.apply(com.commercetools.api.models.subscription.DestinationBuilder.of()).build();
         return this;
     }
+                    
 
     /**
      *  <p>New value to set. Must not be empty.</p>
      * @return destination
      */
-
-    public com.commercetools.api.models.subscription.Destination getDestination() {
+    
+    
+    public com.commercetools.api.models.subscription.Destination getDestination(){
         return this.destination;
     }
 
@@ -65,7 +75,7 @@ public class SubscriptionChangeDestinationActionBuilder implements Builder<Subsc
         Objects.requireNonNull(destination, SubscriptionChangeDestinationAction.class + ": destination is missing");
         return new SubscriptionChangeDestinationActionImpl(destination);
     }
-
+    
     /**
      * builds SubscriptionChangeDestinationAction without checking for non-null required values
      * @return SubscriptionChangeDestinationAction
@@ -76,7 +86,7 @@ public class SubscriptionChangeDestinationActionBuilder implements Builder<Subsc
 
     /**
      * factory method for an instance of SubscriptionChangeDestinationActionBuilder
-     * @return builder
+     * @return builder 
      */
     public static SubscriptionChangeDestinationActionBuilder of() {
         return new SubscriptionChangeDestinationActionBuilder();

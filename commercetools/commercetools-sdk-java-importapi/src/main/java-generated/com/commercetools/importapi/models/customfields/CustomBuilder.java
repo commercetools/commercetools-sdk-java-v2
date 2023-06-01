@@ -1,11 +1,12 @@
-
 package com.commercetools.importapi.models.customfields;
 
+import com.commercetools.importapi.models.common.TypeKeyReference;
+import com.commercetools.importapi.models.customfields.FieldContainer;
+import com.commercetools.importapi.models.customfields.Custom;
+import javax.annotation.Nullable;
 import java.util.*;
 import java.util.function.Function;
-
-import javax.annotation.Nullable;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -19,102 +20,111 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .type(typeBuilder -> typeBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class CustomBuilder implements Builder<Custom> {
 
+    
+    
     private com.commercetools.importapi.models.common.TypeKeyReference type;
-
+    
+    
     @Nullable
     private com.commercetools.importapi.models.customfields.FieldContainer fields;
 
+    
     /**
      *  <p>The type that provides the field definitions for this object.</p>
      * @param builder function to build the type value
      * @return Builder
      */
-
-    public CustomBuilder type(
-            Function<com.commercetools.importapi.models.common.TypeKeyReferenceBuilder, com.commercetools.importapi.models.common.TypeKeyReferenceBuilder> builder) {
+    
+    public CustomBuilder type(Function<com.commercetools.importapi.models.common.TypeKeyReferenceBuilder, com.commercetools.importapi.models.common.TypeKeyReferenceBuilder> builder) {
         this.type = builder.apply(com.commercetools.importapi.models.common.TypeKeyReferenceBuilder.of()).build();
         return this;
     }
-
+    
     /**
      *  <p>The type that provides the field definitions for this object.</p>
      * @param builder function to build the type value
      * @return Builder
      */
-
-    public CustomBuilder withType(
-            Function<com.commercetools.importapi.models.common.TypeKeyReferenceBuilder, com.commercetools.importapi.models.common.TypeKeyReference> builder) {
+    
+    public CustomBuilder withType(Function<com.commercetools.importapi.models.common.TypeKeyReferenceBuilder, com.commercetools.importapi.models.common.TypeKeyReference> builder) {
         this.type = builder.apply(com.commercetools.importapi.models.common.TypeKeyReferenceBuilder.of());
         return this;
     }
-
+                    
     /**
      *  <p>The type that provides the field definitions for this object.</p>
      * @param type value to be set
      * @return Builder
      */
-
-    public CustomBuilder type(final com.commercetools.importapi.models.common.TypeKeyReference type) {
+    
+    public CustomBuilder type( final com.commercetools.importapi.models.common.TypeKeyReference type) {
         this.type = type;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>The custom fields of this object.</p>
      * @param builder function to build the fields value
      * @return Builder
      */
-
-    public CustomBuilder fields(
-            Function<com.commercetools.importapi.models.customfields.FieldContainerBuilder, com.commercetools.importapi.models.customfields.FieldContainerBuilder> builder) {
+    
+    public CustomBuilder fields(Function<com.commercetools.importapi.models.customfields.FieldContainerBuilder, com.commercetools.importapi.models.customfields.FieldContainerBuilder> builder) {
         this.fields = builder.apply(com.commercetools.importapi.models.customfields.FieldContainerBuilder.of()).build();
         return this;
     }
-
+    
     /**
      *  <p>The custom fields of this object.</p>
      * @param builder function to build the fields value
      * @return Builder
      */
-
-    public CustomBuilder withFields(
-            Function<com.commercetools.importapi.models.customfields.FieldContainerBuilder, com.commercetools.importapi.models.customfields.FieldContainer> builder) {
+    
+    public CustomBuilder withFields(Function<com.commercetools.importapi.models.customfields.FieldContainerBuilder, com.commercetools.importapi.models.customfields.FieldContainer> builder) {
         this.fields = builder.apply(com.commercetools.importapi.models.customfields.FieldContainerBuilder.of());
         return this;
     }
-
+                    
     /**
      *  <p>The custom fields of this object.</p>
      * @param fields value to be set
      * @return Builder
      */
-
+    
     public CustomBuilder fields(@Nullable final com.commercetools.importapi.models.customfields.FieldContainer fields) {
         this.fields = fields;
         return this;
     }
+    
+    
 
     /**
      *  <p>The type that provides the field definitions for this object.</p>
      * @return type
      */
-
-    public com.commercetools.importapi.models.common.TypeKeyReference getType() {
+    
+    
+    public com.commercetools.importapi.models.common.TypeKeyReference getType(){
         return this.type;
     }
-
+    
     /**
      *  <p>The custom fields of this object.</p>
      * @return fields
      */
-
+    
     @Nullable
-    public com.commercetools.importapi.models.customfields.FieldContainer getFields() {
+    public com.commercetools.importapi.models.customfields.FieldContainer getFields(){
         return this.fields;
     }
 
@@ -126,7 +136,7 @@ public class CustomBuilder implements Builder<Custom> {
         Objects.requireNonNull(type, Custom.class + ": type is missing");
         return new CustomImpl(type, fields);
     }
-
+    
     /**
      * builds Custom without checking for non-null required values
      * @return Custom
@@ -137,7 +147,7 @@ public class CustomBuilder implements Builder<Custom> {
 
     /**
      * factory method for an instance of CustomBuilder
-     * @return builder
+     * @return builder 
      */
     public static CustomBuilder of() {
         return new CustomBuilder();

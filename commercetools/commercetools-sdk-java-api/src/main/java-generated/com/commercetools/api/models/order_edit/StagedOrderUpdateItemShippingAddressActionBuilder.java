@@ -1,9 +1,12 @@
-
 package com.commercetools.api.models.order_edit;
 
+import com.commercetools.api.models.common.BaseAddress;
+import com.commercetools.api.models.order.StagedOrderUpdateAction;
+import com.commercetools.api.models.order_edit.StagedOrderUpdateItemShippingAddressAction;
+import javax.annotation.Nullable;
 import java.util.*;
 import java.util.function.Function;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -17,56 +20,61 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .address(addressBuilder -> addressBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
-public class StagedOrderUpdateItemShippingAddressActionBuilder
-        implements Builder<StagedOrderUpdateItemShippingAddressAction> {
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
+public class StagedOrderUpdateItemShippingAddressActionBuilder implements Builder<StagedOrderUpdateItemShippingAddressAction> {
 
+    
+    
     private com.commercetools.api.models.common.BaseAddress address;
 
+    
     /**
      *  <p>Polymorphic base type that represents a postal address and contact details. Depending on the read or write action, it can be either Address or AddressDraft that only differ in the data type for the optional <code>custom</code> field.</p>
      * @param builder function to build the address value
      * @return Builder
      */
-
-    public StagedOrderUpdateItemShippingAddressActionBuilder address(
-            Function<com.commercetools.api.models.common.BaseAddressBuilder, com.commercetools.api.models.common.BaseAddressBuilder> builder) {
+    
+    public StagedOrderUpdateItemShippingAddressActionBuilder address(Function<com.commercetools.api.models.common.BaseAddressBuilder, com.commercetools.api.models.common.BaseAddressBuilder> builder) {
         this.address = builder.apply(com.commercetools.api.models.common.BaseAddressBuilder.of()).build();
         return this;
     }
-
+    
     /**
      *  <p>Polymorphic base type that represents a postal address and contact details. Depending on the read or write action, it can be either Address or AddressDraft that only differ in the data type for the optional <code>custom</code> field.</p>
      * @param builder function to build the address value
      * @return Builder
      */
-
-    public StagedOrderUpdateItemShippingAddressActionBuilder withAddress(
-            Function<com.commercetools.api.models.common.BaseAddressBuilder, com.commercetools.api.models.common.BaseAddress> builder) {
+    
+    public StagedOrderUpdateItemShippingAddressActionBuilder withAddress(Function<com.commercetools.api.models.common.BaseAddressBuilder, com.commercetools.api.models.common.BaseAddress> builder) {
         this.address = builder.apply(com.commercetools.api.models.common.BaseAddressBuilder.of());
         return this;
     }
-
+                    
     /**
      *  <p>Polymorphic base type that represents a postal address and contact details. Depending on the read or write action, it can be either Address or AddressDraft that only differ in the data type for the optional <code>custom</code> field.</p>
      * @param address value to be set
      * @return Builder
      */
-
-    public StagedOrderUpdateItemShippingAddressActionBuilder address(
-            final com.commercetools.api.models.common.BaseAddress address) {
+    
+    public StagedOrderUpdateItemShippingAddressActionBuilder address( final com.commercetools.api.models.common.BaseAddress address) {
         this.address = address;
         return this;
     }
+    
+    
 
     /**
      *  <p>Polymorphic base type that represents a postal address and contact details. Depending on the read or write action, it can be either Address or AddressDraft that only differ in the data type for the optional <code>custom</code> field.</p>
      * @return address
      */
-
-    public com.commercetools.api.models.common.BaseAddress getAddress() {
+    
+    
+    public com.commercetools.api.models.common.BaseAddress getAddress(){
         return this.address;
     }
 
@@ -78,7 +86,7 @@ public class StagedOrderUpdateItemShippingAddressActionBuilder
         Objects.requireNonNull(address, StagedOrderUpdateItemShippingAddressAction.class + ": address is missing");
         return new StagedOrderUpdateItemShippingAddressActionImpl(address);
     }
-
+    
     /**
      * builds StagedOrderUpdateItemShippingAddressAction without checking for non-null required values
      * @return StagedOrderUpdateItemShippingAddressAction
@@ -89,7 +97,7 @@ public class StagedOrderUpdateItemShippingAddressActionBuilder
 
     /**
      * factory method for an instance of StagedOrderUpdateItemShippingAddressActionBuilder
-     * @return builder
+     * @return builder 
      */
     public static StagedOrderUpdateItemShippingAddressActionBuilder of() {
         return new StagedOrderUpdateItemShippingAddressActionBuilder();
@@ -100,8 +108,7 @@ public class StagedOrderUpdateItemShippingAddressActionBuilder
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static StagedOrderUpdateItemShippingAddressActionBuilder of(
-            final StagedOrderUpdateItemShippingAddressAction template) {
+    public static StagedOrderUpdateItemShippingAddressActionBuilder of(final StagedOrderUpdateItemShippingAddressAction template) {
         StagedOrderUpdateItemShippingAddressActionBuilder builder = new StagedOrderUpdateItemShippingAddressActionBuilder();
         builder.address = template.getAddress();
         return builder;

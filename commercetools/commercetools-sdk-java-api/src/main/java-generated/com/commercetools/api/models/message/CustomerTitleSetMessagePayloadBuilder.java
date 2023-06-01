@@ -1,10 +1,11 @@
-
 package com.commercetools.api.models.message;
 
-import java.util.*;
-
+import com.commercetools.api.models.message.MessagePayload;
+import com.commercetools.api.models.message.CustomerTitleSetMessagePayload;
 import javax.annotation.Nullable;
-
+import java.util.*;
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -17,32 +18,39 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     CustomerTitleSetMessagePayload customerTitleSetMessagePayload = CustomerTitleSetMessagePayload.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class CustomerTitleSetMessagePayloadBuilder implements Builder<CustomerTitleSetMessagePayload> {
 
+    
     @Nullable
     private String title;
 
+    
     /**
      *  <p>The <code>title</code> that was set during the Set Title update action.</p>
      * @param title value to be set
      * @return Builder
      */
-
+    
     public CustomerTitleSetMessagePayloadBuilder title(@Nullable final String title) {
         this.title = title;
         return this;
     }
+    
+    
 
     /**
      *  <p>The <code>title</code> that was set during the Set Title update action.</p>
      * @return title
      */
-
+    
     @Nullable
-    public String getTitle() {
+    public String getTitle(){
         return this.title;
     }
 
@@ -53,7 +61,7 @@ public class CustomerTitleSetMessagePayloadBuilder implements Builder<CustomerTi
     public CustomerTitleSetMessagePayload build() {
         return new CustomerTitleSetMessagePayloadImpl(title);
     }
-
+    
     /**
      * builds CustomerTitleSetMessagePayload without checking for non-null required values
      * @return CustomerTitleSetMessagePayload
@@ -64,7 +72,7 @@ public class CustomerTitleSetMessagePayloadBuilder implements Builder<CustomerTi
 
     /**
      * factory method for an instance of CustomerTitleSetMessagePayloadBuilder
-     * @return builder
+     * @return builder 
      */
     public static CustomerTitleSetMessagePayloadBuilder of() {
         return new CustomerTitleSetMessagePayloadBuilder();

@@ -1,19 +1,22 @@
-
 package com.commercetools.api.models.shipping_method;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
+import com.commercetools.api.models.shipping_method.ShippingMethodUpdateAction;
+import com.commercetools.api.models.shipping_method.ShippingRateDraft;
 import com.commercetools.api.models.zone.ZoneResourceIdentifier;
+import com.commercetools.api.models.shipping_method.ShippingMethodRemoveShippingRateActionImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * ShippingMethodRemoveShippingRateAction
@@ -27,9 +30,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .shippingRate(shippingRateBuilder -> shippingRateBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = ShippingMethodRemoveShippingRateActionImpl.class)
 public interface ShippingMethodRemoveShippingRateAction extends ShippingMethodUpdateAction {
 
@@ -46,7 +52,6 @@ public interface ShippingMethodRemoveShippingRateAction extends ShippingMethodUp
     @Valid
     @JsonProperty("zone")
     public ZoneResourceIdentifier getZone();
-
     /**
      *  <p>Value to remove from <code>shippingRates</code>.</p>
      * @return shippingRate
@@ -60,23 +65,26 @@ public interface ShippingMethodRemoveShippingRateAction extends ShippingMethodUp
      *  <p>Zone from which the ShippingRate should be removed.</p>
      * @param zone value to be set
      */
-
+    
     public void setZone(final ZoneResourceIdentifier zone);
-
+    
+    
     /**
      *  <p>Value to remove from <code>shippingRates</code>.</p>
      * @param shippingRate value to be set
      */
-
+    
     public void setShippingRate(final ShippingRateDraft shippingRate);
+    
 
     /**
      * factory method
      * @return instance of ShippingMethodRemoveShippingRateAction
      */
-    public static ShippingMethodRemoveShippingRateAction of() {
+    public static ShippingMethodRemoveShippingRateAction of(){
         return new ShippingMethodRemoveShippingRateActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy ShippingMethodRemoveShippingRateAction
@@ -96,15 +104,13 @@ public interface ShippingMethodRemoveShippingRateAction extends ShippingMethodUp
      * @return copy instance
      */
     @Nullable
-    public static ShippingMethodRemoveShippingRateAction deepCopy(
-            @Nullable final ShippingMethodRemoveShippingRateAction template) {
+    public static ShippingMethodRemoveShippingRateAction deepCopy(@Nullable final ShippingMethodRemoveShippingRateAction template) {
         if (template == null) {
             return null;
         }
         ShippingMethodRemoveShippingRateActionImpl instance = new ShippingMethodRemoveShippingRateActionImpl();
         instance.setZone(com.commercetools.api.models.zone.ZoneResourceIdentifier.deepCopy(template.getZone()));
-        instance.setShippingRate(
-            com.commercetools.api.models.shipping_method.ShippingRateDraft.deepCopy(template.getShippingRate()));
+        instance.setShippingRate(com.commercetools.api.models.shipping_method.ShippingRateDraft.deepCopy(template.getShippingRate()));
         return instance;
     }
 
@@ -115,16 +121,16 @@ public interface ShippingMethodRemoveShippingRateAction extends ShippingMethodUp
     public static ShippingMethodRemoveShippingRateActionBuilder builder() {
         return ShippingMethodRemoveShippingRateActionBuilder.of();
     }
-
+    
     /**
      * create builder for ShippingMethodRemoveShippingRateAction instance
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static ShippingMethodRemoveShippingRateActionBuilder builder(
-            final ShippingMethodRemoveShippingRateAction template) {
+    public static ShippingMethodRemoveShippingRateActionBuilder builder(final ShippingMethodRemoveShippingRateAction template) {
         return ShippingMethodRemoveShippingRateActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -132,11 +138,10 @@ public interface ShippingMethodRemoveShippingRateAction extends ShippingMethodUp
      * @param helper function to map the object
      * @return mapped value
      */
-    default <T> T withShippingMethodRemoveShippingRateAction(
-            Function<ShippingMethodRemoveShippingRateAction, T> helper) {
+    default <T> T withShippingMethodRemoveShippingRateAction(Function<ShippingMethodRemoveShippingRateAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

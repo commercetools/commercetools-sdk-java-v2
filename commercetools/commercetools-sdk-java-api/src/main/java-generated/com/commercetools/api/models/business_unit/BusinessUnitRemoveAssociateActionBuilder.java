@@ -1,9 +1,12 @@
-
 package com.commercetools.api.models.business_unit;
 
+import com.commercetools.api.models.business_unit.BusinessUnitUpdateAction;
+import com.commercetools.api.models.customer.CustomerResourceIdentifier;
+import com.commercetools.api.models.business_unit.BusinessUnitRemoveAssociateAction;
+import javax.annotation.Nullable;
 import java.util.*;
 import java.util.function.Function;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -17,56 +20,61 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .customer(customerBuilder -> customerBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class BusinessUnitRemoveAssociateActionBuilder implements Builder<BusinessUnitRemoveAssociateAction> {
 
+    
+    
     private com.commercetools.api.models.customer.CustomerResourceIdentifier customer;
 
+    
     /**
      *  <p>Associate to remove.</p>
      * @param builder function to build the customer value
      * @return Builder
      */
-
-    public BusinessUnitRemoveAssociateActionBuilder customer(
-            Function<com.commercetools.api.models.customer.CustomerResourceIdentifierBuilder, com.commercetools.api.models.customer.CustomerResourceIdentifierBuilder> builder) {
-        this.customer = builder.apply(com.commercetools.api.models.customer.CustomerResourceIdentifierBuilder.of())
-                .build();
+    
+    public BusinessUnitRemoveAssociateActionBuilder customer(Function<com.commercetools.api.models.customer.CustomerResourceIdentifierBuilder, com.commercetools.api.models.customer.CustomerResourceIdentifierBuilder> builder) {
+        this.customer = builder.apply(com.commercetools.api.models.customer.CustomerResourceIdentifierBuilder.of()).build();
         return this;
     }
-
+    
     /**
      *  <p>Associate to remove.</p>
      * @param builder function to build the customer value
      * @return Builder
      */
-
-    public BusinessUnitRemoveAssociateActionBuilder withCustomer(
-            Function<com.commercetools.api.models.customer.CustomerResourceIdentifierBuilder, com.commercetools.api.models.customer.CustomerResourceIdentifier> builder) {
+    
+    public BusinessUnitRemoveAssociateActionBuilder withCustomer(Function<com.commercetools.api.models.customer.CustomerResourceIdentifierBuilder, com.commercetools.api.models.customer.CustomerResourceIdentifier> builder) {
         this.customer = builder.apply(com.commercetools.api.models.customer.CustomerResourceIdentifierBuilder.of());
         return this;
     }
-
+                    
     /**
      *  <p>Associate to remove.</p>
      * @param customer value to be set
      * @return Builder
      */
-
-    public BusinessUnitRemoveAssociateActionBuilder customer(
-            final com.commercetools.api.models.customer.CustomerResourceIdentifier customer) {
+    
+    public BusinessUnitRemoveAssociateActionBuilder customer( final com.commercetools.api.models.customer.CustomerResourceIdentifier customer) {
         this.customer = customer;
         return this;
     }
+    
+    
 
     /**
      *  <p>Associate to remove.</p>
      * @return customer
      */
-
-    public com.commercetools.api.models.customer.CustomerResourceIdentifier getCustomer() {
+    
+    
+    public com.commercetools.api.models.customer.CustomerResourceIdentifier getCustomer(){
         return this.customer;
     }
 
@@ -78,7 +86,7 @@ public class BusinessUnitRemoveAssociateActionBuilder implements Builder<Busines
         Objects.requireNonNull(customer, BusinessUnitRemoveAssociateAction.class + ": customer is missing");
         return new BusinessUnitRemoveAssociateActionImpl(customer);
     }
-
+    
     /**
      * builds BusinessUnitRemoveAssociateAction without checking for non-null required values
      * @return BusinessUnitRemoveAssociateAction
@@ -89,7 +97,7 @@ public class BusinessUnitRemoveAssociateActionBuilder implements Builder<Busines
 
     /**
      * factory method for an instance of BusinessUnitRemoveAssociateActionBuilder
-     * @return builder
+     * @return builder 
      */
     public static BusinessUnitRemoveAssociateActionBuilder of() {
         return new BusinessUnitRemoveAssociateActionBuilder();

@@ -1,8 +1,11 @@
-
 package com.commercetools.importapi.models.order_patches;
 
-import java.util.*;
 
+import com.commercetools.importapi.models.order_patches.RemoveDeliveryDraft;
+import javax.annotation.Nullable;
+import java.util.*;
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -16,30 +19,39 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .id("{id}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class RemoveDeliveryDraftBuilder implements Builder<RemoveDeliveryDraft> {
 
+    
+    
     private String id;
 
+    
     /**
      * set the value to the id
      * @param id value to be set
      * @return Builder
      */
-
-    public RemoveDeliveryDraftBuilder id(final String id) {
+    
+    public RemoveDeliveryDraftBuilder id( final String id) {
         this.id = id;
         return this;
     }
+    
+    
 
     /**
      * value of id}
      * @return id
      */
-
-    public String getId() {
+    
+    
+    public String getId(){
         return this.id;
     }
 
@@ -51,7 +63,7 @@ public class RemoveDeliveryDraftBuilder implements Builder<RemoveDeliveryDraft> 
         Objects.requireNonNull(id, RemoveDeliveryDraft.class + ": id is missing");
         return new RemoveDeliveryDraftImpl(id);
     }
-
+    
     /**
      * builds RemoveDeliveryDraft without checking for non-null required values
      * @return RemoveDeliveryDraft
@@ -62,7 +74,7 @@ public class RemoveDeliveryDraftBuilder implements Builder<RemoveDeliveryDraft> 
 
     /**
      * factory method for an instance of RemoveDeliveryDraftBuilder
-     * @return builder
+     * @return builder 
      */
     public static RemoveDeliveryDraftBuilder of() {
         return new RemoveDeliveryDraftBuilder();

@@ -1,11 +1,13 @@
-
 package com.commercetools.api.models.me;
 
+import com.commercetools.api.models.me.MyBusinessUnitUpdateAction;
+import com.commercetools.api.models.type.FieldContainer;
+import com.commercetools.api.models.type.TypeResourceIdentifier;
+import com.commercetools.api.models.me.MyBusinessUnitSetAddressCustomTypeAction;
+import javax.annotation.Nullable;
 import java.util.*;
 import java.util.function.Function;
-
-import javax.annotation.Nullable;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -19,129 +21,139 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .addressId("{addressId}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
-public class MyBusinessUnitSetAddressCustomTypeActionBuilder
-        implements Builder<MyBusinessUnitSetAddressCustomTypeAction> {
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
+public class MyBusinessUnitSetAddressCustomTypeActionBuilder implements Builder<MyBusinessUnitSetAddressCustomTypeAction> {
 
+    
     @Nullable
     private com.commercetools.api.models.type.TypeResourceIdentifier type;
-
+    
+    
     @Nullable
     private com.commercetools.api.models.type.FieldContainer fields;
-
+    
+    
+    
     private String addressId;
 
+    
     /**
      *  <p>Defines the Type that extends the <code>address</code> with Custom Fields. If absent, any existing Type and Custom Fields are removed from the <code>address</code>.</p>
      * @param builder function to build the type value
      * @return Builder
      */
-
-    public MyBusinessUnitSetAddressCustomTypeActionBuilder type(
-            Function<com.commercetools.api.models.type.TypeResourceIdentifierBuilder, com.commercetools.api.models.type.TypeResourceIdentifierBuilder> builder) {
+    
+    public MyBusinessUnitSetAddressCustomTypeActionBuilder type(Function<com.commercetools.api.models.type.TypeResourceIdentifierBuilder, com.commercetools.api.models.type.TypeResourceIdentifierBuilder> builder) {
         this.type = builder.apply(com.commercetools.api.models.type.TypeResourceIdentifierBuilder.of()).build();
         return this;
     }
-
+    
     /**
      *  <p>Defines the Type that extends the <code>address</code> with Custom Fields. If absent, any existing Type and Custom Fields are removed from the <code>address</code>.</p>
      * @param builder function to build the type value
      * @return Builder
      */
-
-    public MyBusinessUnitSetAddressCustomTypeActionBuilder withType(
-            Function<com.commercetools.api.models.type.TypeResourceIdentifierBuilder, com.commercetools.api.models.type.TypeResourceIdentifier> builder) {
+    
+    public MyBusinessUnitSetAddressCustomTypeActionBuilder withType(Function<com.commercetools.api.models.type.TypeResourceIdentifierBuilder, com.commercetools.api.models.type.TypeResourceIdentifier> builder) {
         this.type = builder.apply(com.commercetools.api.models.type.TypeResourceIdentifierBuilder.of());
         return this;
     }
-
+                    
     /**
      *  <p>Defines the Type that extends the <code>address</code> with Custom Fields. If absent, any existing Type and Custom Fields are removed from the <code>address</code>.</p>
      * @param type value to be set
      * @return Builder
      */
-
-    public MyBusinessUnitSetAddressCustomTypeActionBuilder type(
-            @Nullable final com.commercetools.api.models.type.TypeResourceIdentifier type) {
+    
+    public MyBusinessUnitSetAddressCustomTypeActionBuilder type(@Nullable final com.commercetools.api.models.type.TypeResourceIdentifier type) {
         this.type = type;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Sets the Custom Fields fields for the <code>address</code>.</p>
      * @param builder function to build the fields value
      * @return Builder
      */
-
-    public MyBusinessUnitSetAddressCustomTypeActionBuilder fields(
-            Function<com.commercetools.api.models.type.FieldContainerBuilder, com.commercetools.api.models.type.FieldContainerBuilder> builder) {
+    
+    public MyBusinessUnitSetAddressCustomTypeActionBuilder fields(Function<com.commercetools.api.models.type.FieldContainerBuilder, com.commercetools.api.models.type.FieldContainerBuilder> builder) {
         this.fields = builder.apply(com.commercetools.api.models.type.FieldContainerBuilder.of()).build();
         return this;
     }
-
+    
     /**
      *  <p>Sets the Custom Fields fields for the <code>address</code>.</p>
      * @param builder function to build the fields value
      * @return Builder
      */
-
-    public MyBusinessUnitSetAddressCustomTypeActionBuilder withFields(
-            Function<com.commercetools.api.models.type.FieldContainerBuilder, com.commercetools.api.models.type.FieldContainer> builder) {
+    
+    public MyBusinessUnitSetAddressCustomTypeActionBuilder withFields(Function<com.commercetools.api.models.type.FieldContainerBuilder, com.commercetools.api.models.type.FieldContainer> builder) {
         this.fields = builder.apply(com.commercetools.api.models.type.FieldContainerBuilder.of());
         return this;
     }
-
+                    
     /**
      *  <p>Sets the Custom Fields fields for the <code>address</code>.</p>
      * @param fields value to be set
      * @return Builder
      */
-
-    public MyBusinessUnitSetAddressCustomTypeActionBuilder fields(
-            @Nullable final com.commercetools.api.models.type.FieldContainer fields) {
+    
+    public MyBusinessUnitSetAddressCustomTypeActionBuilder fields(@Nullable final com.commercetools.api.models.type.FieldContainer fields) {
         this.fields = fields;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>ID of the <code>address</code> to be extended.</p>
      * @param addressId value to be set
      * @return Builder
      */
-
-    public MyBusinessUnitSetAddressCustomTypeActionBuilder addressId(final String addressId) {
+    
+    public MyBusinessUnitSetAddressCustomTypeActionBuilder addressId( final String addressId) {
         this.addressId = addressId;
         return this;
     }
+    
+    
 
     /**
      *  <p>Defines the Type that extends the <code>address</code> with Custom Fields. If absent, any existing Type and Custom Fields are removed from the <code>address</code>.</p>
      * @return type
      */
-
+    
     @Nullable
-    public com.commercetools.api.models.type.TypeResourceIdentifier getType() {
+    public com.commercetools.api.models.type.TypeResourceIdentifier getType(){
         return this.type;
     }
-
+    
     /**
      *  <p>Sets the Custom Fields fields for the <code>address</code>.</p>
      * @return fields
      */
-
+    
     @Nullable
-    public com.commercetools.api.models.type.FieldContainer getFields() {
+    public com.commercetools.api.models.type.FieldContainer getFields(){
         return this.fields;
     }
-
+    
     /**
      *  <p>ID of the <code>address</code> to be extended.</p>
      * @return addressId
      */
-
-    public String getAddressId() {
+    
+    
+    public String getAddressId(){
         return this.addressId;
     }
 
@@ -153,7 +165,7 @@ public class MyBusinessUnitSetAddressCustomTypeActionBuilder
         Objects.requireNonNull(addressId, MyBusinessUnitSetAddressCustomTypeAction.class + ": addressId is missing");
         return new MyBusinessUnitSetAddressCustomTypeActionImpl(type, fields, addressId);
     }
-
+    
     /**
      * builds MyBusinessUnitSetAddressCustomTypeAction without checking for non-null required values
      * @return MyBusinessUnitSetAddressCustomTypeAction
@@ -164,7 +176,7 @@ public class MyBusinessUnitSetAddressCustomTypeActionBuilder
 
     /**
      * factory method for an instance of MyBusinessUnitSetAddressCustomTypeActionBuilder
-     * @return builder
+     * @return builder 
      */
     public static MyBusinessUnitSetAddressCustomTypeActionBuilder of() {
         return new MyBusinessUnitSetAddressCustomTypeActionBuilder();
@@ -175,8 +187,7 @@ public class MyBusinessUnitSetAddressCustomTypeActionBuilder
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static MyBusinessUnitSetAddressCustomTypeActionBuilder of(
-            final MyBusinessUnitSetAddressCustomTypeAction template) {
+    public static MyBusinessUnitSetAddressCustomTypeActionBuilder of(final MyBusinessUnitSetAddressCustomTypeAction template) {
         MyBusinessUnitSetAddressCustomTypeActionBuilder builder = new MyBusinessUnitSetAddressCustomTypeActionBuilder();
         builder.type = template.getType();
         builder.fields = template.getFields();

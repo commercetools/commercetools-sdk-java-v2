@@ -1,19 +1,21 @@
-
 package com.commercetools.api.models.message;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
 import com.commercetools.api.models.common.Address;
+import com.commercetools.api.models.message.MessagePayload;
+import com.commercetools.api.models.message.BusinessUnitShippingAddressAddedMessagePayloadImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Generated after a successful Add Shipping Address Identifier update action.</p>
@@ -26,9 +28,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .address(addressBuilder -> addressBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = BusinessUnitShippingAddressAddedMessagePayloadImpl.class)
 public interface BusinessUnitShippingAddressAddedMessagePayload extends MessagePayload {
 
@@ -50,24 +55,25 @@ public interface BusinessUnitShippingAddressAddedMessagePayload extends MessageP
      *  <p>The address that was added to the Business Unit as shipping address.</p>
      * @param address value to be set
      */
-
+    
     public void setAddress(final Address address);
+    
 
     /**
      * factory method
      * @return instance of BusinessUnitShippingAddressAddedMessagePayload
      */
-    public static BusinessUnitShippingAddressAddedMessagePayload of() {
+    public static BusinessUnitShippingAddressAddedMessagePayload of(){
         return new BusinessUnitShippingAddressAddedMessagePayloadImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy BusinessUnitShippingAddressAddedMessagePayload
      * @param template instance to be copied
      * @return copy instance
      */
-    public static BusinessUnitShippingAddressAddedMessagePayload of(
-            final BusinessUnitShippingAddressAddedMessagePayload template) {
+    public static BusinessUnitShippingAddressAddedMessagePayload of(final BusinessUnitShippingAddressAddedMessagePayload template) {
         BusinessUnitShippingAddressAddedMessagePayloadImpl instance = new BusinessUnitShippingAddressAddedMessagePayloadImpl();
         instance.setAddress(template.getAddress());
         return instance;
@@ -79,8 +85,7 @@ public interface BusinessUnitShippingAddressAddedMessagePayload extends MessageP
      * @return copy instance
      */
     @Nullable
-    public static BusinessUnitShippingAddressAddedMessagePayload deepCopy(
-            @Nullable final BusinessUnitShippingAddressAddedMessagePayload template) {
+    public static BusinessUnitShippingAddressAddedMessagePayload deepCopy(@Nullable final BusinessUnitShippingAddressAddedMessagePayload template) {
         if (template == null) {
             return null;
         }
@@ -96,16 +101,16 @@ public interface BusinessUnitShippingAddressAddedMessagePayload extends MessageP
     public static BusinessUnitShippingAddressAddedMessagePayloadBuilder builder() {
         return BusinessUnitShippingAddressAddedMessagePayloadBuilder.of();
     }
-
+    
     /**
      * create builder for BusinessUnitShippingAddressAddedMessagePayload instance
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static BusinessUnitShippingAddressAddedMessagePayloadBuilder builder(
-            final BusinessUnitShippingAddressAddedMessagePayload template) {
+    public static BusinessUnitShippingAddressAddedMessagePayloadBuilder builder(final BusinessUnitShippingAddressAddedMessagePayload template) {
         return BusinessUnitShippingAddressAddedMessagePayloadBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -113,11 +118,10 @@ public interface BusinessUnitShippingAddressAddedMessagePayload extends MessageP
      * @param helper function to map the object
      * @return mapped value
      */
-    default <T> T withBusinessUnitShippingAddressAddedMessagePayload(
-            Function<BusinessUnitShippingAddressAddedMessagePayload, T> helper) {
+    default <T> T withBusinessUnitShippingAddressAddedMessagePayload(Function<BusinessUnitShippingAddressAddedMessagePayload, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

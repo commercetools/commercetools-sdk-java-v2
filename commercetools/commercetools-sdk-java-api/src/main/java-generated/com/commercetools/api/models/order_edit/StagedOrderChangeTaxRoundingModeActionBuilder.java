@@ -1,8 +1,12 @@
-
 package com.commercetools.api.models.order_edit;
 
+import com.commercetools.api.models.cart.RoundingMode;
+import com.commercetools.api.models.order.StagedOrderUpdateAction;
+import com.commercetools.api.models.order_edit.StagedOrderChangeTaxRoundingModeAction;
+import javax.annotation.Nullable;
 import java.util.*;
-
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -16,31 +20,39 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .taxRoundingMode(RoundingMode.HALF_EVEN)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class StagedOrderChangeTaxRoundingModeActionBuilder implements Builder<StagedOrderChangeTaxRoundingModeAction> {
 
+    
+    
     private com.commercetools.api.models.cart.RoundingMode taxRoundingMode;
 
+    
     /**
      *  <p>Determines how monetary values are rounded.</p>
      * @param taxRoundingMode value to be set
      * @return Builder
      */
-
-    public StagedOrderChangeTaxRoundingModeActionBuilder taxRoundingMode(
-            final com.commercetools.api.models.cart.RoundingMode taxRoundingMode) {
+    
+    public StagedOrderChangeTaxRoundingModeActionBuilder taxRoundingMode( final com.commercetools.api.models.cart.RoundingMode taxRoundingMode) {
         this.taxRoundingMode = taxRoundingMode;
         return this;
     }
+    
+    
 
     /**
      *  <p>Determines how monetary values are rounded.</p>
      * @return taxRoundingMode
      */
-
-    public com.commercetools.api.models.cart.RoundingMode getTaxRoundingMode() {
+    
+    
+    public com.commercetools.api.models.cart.RoundingMode getTaxRoundingMode(){
         return this.taxRoundingMode;
     }
 
@@ -49,11 +61,10 @@ public class StagedOrderChangeTaxRoundingModeActionBuilder implements Builder<St
      * @return StagedOrderChangeTaxRoundingModeAction
      */
     public StagedOrderChangeTaxRoundingModeAction build() {
-        Objects.requireNonNull(taxRoundingMode,
-            StagedOrderChangeTaxRoundingModeAction.class + ": taxRoundingMode is missing");
+        Objects.requireNonNull(taxRoundingMode, StagedOrderChangeTaxRoundingModeAction.class + ": taxRoundingMode is missing");
         return new StagedOrderChangeTaxRoundingModeActionImpl(taxRoundingMode);
     }
-
+    
     /**
      * builds StagedOrderChangeTaxRoundingModeAction without checking for non-null required values
      * @return StagedOrderChangeTaxRoundingModeAction
@@ -64,7 +75,7 @@ public class StagedOrderChangeTaxRoundingModeActionBuilder implements Builder<St
 
     /**
      * factory method for an instance of StagedOrderChangeTaxRoundingModeActionBuilder
-     * @return builder
+     * @return builder 
      */
     public static StagedOrderChangeTaxRoundingModeActionBuilder of() {
         return new StagedOrderChangeTaxRoundingModeActionBuilder();
@@ -75,8 +86,7 @@ public class StagedOrderChangeTaxRoundingModeActionBuilder implements Builder<St
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static StagedOrderChangeTaxRoundingModeActionBuilder of(
-            final StagedOrderChangeTaxRoundingModeAction template) {
+    public static StagedOrderChangeTaxRoundingModeActionBuilder of(final StagedOrderChangeTaxRoundingModeAction template) {
         StagedOrderChangeTaxRoundingModeActionBuilder builder = new StagedOrderChangeTaxRoundingModeActionBuilder();
         builder.taxRoundingMode = template.getTaxRoundingMode();
         return builder;

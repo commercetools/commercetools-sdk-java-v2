@@ -1,39 +1,46 @@
-
 package com.commercetools.api.models.customer;
 
-import java.time.*;
-import java.util.*;
-
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
-
-import io.vrap.rmf.base.client.ModelBase;
+import com.commercetools.api.models.cart.Cart;
+import com.commercetools.api.models.customer.Customer;
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.ModelBase;
+import javax.validation.Valid;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.annotation.*;
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
  * CustomerSignInResult
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class CustomerSignInResultImpl implements CustomerSignInResult, ModelBase {
 
+    
     private com.commercetools.api.models.customer.Customer customer;
-
+    
+    
     private com.commercetools.api.models.cart.Cart cart;
 
     /**
      * create instance with all properties
      */
     @JsonCreator
-    CustomerSignInResultImpl(@JsonProperty("customer") final com.commercetools.api.models.customer.Customer customer,
-            @JsonProperty("cart") final com.commercetools.api.models.cart.Cart cart) {
+    CustomerSignInResultImpl(@JsonProperty("customer") final com.commercetools.api.models.customer.Customer customer, @JsonProperty("cart") final com.commercetools.api.models.cart.Cart cart) {
         this.customer = customer;
         this.cart = cart;
     }
-
     /**
      * create empty instance
      */
@@ -43,43 +50,49 @@ public class CustomerSignInResultImpl implements CustomerSignInResult, ModelBase
     /**
      *  <p>Customer signed up or signed in after authentication.</p>
      */
-
-    public com.commercetools.api.models.customer.Customer getCustomer() {
+    
+    public com.commercetools.api.models.customer.Customer getCustomer(){
         return this.customer;
     }
-
+    
     /**
      *  <p>Cart associated with the Customer. If empty, the Customer does not have a Cart assigned.</p>
      */
-
-    public com.commercetools.api.models.cart.Cart getCart() {
+    
+    public com.commercetools.api.models.cart.Cart getCart(){
         return this.cart;
     }
 
-    public void setCustomer(final com.commercetools.api.models.customer.Customer customer) {
+    
+    public void setCustomer(final com.commercetools.api.models.customer.Customer customer){
         this.customer = customer;
     }
-
-    public void setCart(final com.commercetools.api.models.cart.Cart cart) {
+    
+    
+    public void setCart(final com.commercetools.api.models.cart.Cart cart){
         this.cart = cart;
     }
 
     @Override
     public boolean equals(Object o) {
-        if (this == o)
-            return true;
-
-        if (o == null || getClass() != o.getClass())
-            return false;
-
+        if (this == o) return true;
+    
+        if (o == null || getClass() != o.getClass()) return false;
+    
         CustomerSignInResultImpl that = (CustomerSignInResultImpl) o;
-
-        return new EqualsBuilder().append(customer, that.customer).append(cart, that.cart).isEquals();
+    
+        return new EqualsBuilder()
+                .append(customer, that.customer)
+                .append(cart, that.cart)
+                .isEquals();
     }
-
+    
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(customer).append(cart).toHashCode();
+        return new HashCodeBuilder(17, 37)
+            .append(customer)
+            .append(cart)
+            .toHashCode();
     }
 
 }

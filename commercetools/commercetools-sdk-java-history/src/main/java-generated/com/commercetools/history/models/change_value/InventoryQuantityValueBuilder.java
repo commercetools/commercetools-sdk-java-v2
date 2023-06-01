@@ -1,8 +1,11 @@
-
 package com.commercetools.history.models.change_value;
 
-import java.util.*;
 
+import com.commercetools.history.models.change_value.InventoryQuantityValue;
+import javax.annotation.Nullable;
+import java.util.*;
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -17,52 +20,67 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .availableQuantity(1)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class InventoryQuantityValueBuilder implements Builder<InventoryQuantityValue> {
 
+    
+    
     private Integer quantityOnStock;
-
+    
+    
+    
     private Integer availableQuantity;
 
+    
     /**
      * set the value to the quantityOnStock
      * @param quantityOnStock value to be set
      * @return Builder
      */
-
-    public InventoryQuantityValueBuilder quantityOnStock(final Integer quantityOnStock) {
+    
+    public InventoryQuantityValueBuilder quantityOnStock( final Integer quantityOnStock) {
         this.quantityOnStock = quantityOnStock;
         return this;
     }
-
+    
+    
+    
+    
     /**
      * set the value to the availableQuantity
      * @param availableQuantity value to be set
      * @return Builder
      */
-
-    public InventoryQuantityValueBuilder availableQuantity(final Integer availableQuantity) {
+    
+    public InventoryQuantityValueBuilder availableQuantity( final Integer availableQuantity) {
         this.availableQuantity = availableQuantity;
         return this;
     }
+    
+    
 
     /**
      * value of quantityOnStock}
      * @return quantityOnStock
      */
-
-    public Integer getQuantityOnStock() {
+    
+    
+    public Integer getQuantityOnStock(){
         return this.quantityOnStock;
     }
-
+    
     /**
      * value of availableQuantity}
      * @return availableQuantity
      */
-
-    public Integer getAvailableQuantity() {
+    
+    
+    public Integer getAvailableQuantity(){
         return this.availableQuantity;
     }
 
@@ -75,7 +93,7 @@ public class InventoryQuantityValueBuilder implements Builder<InventoryQuantityV
         Objects.requireNonNull(availableQuantity, InventoryQuantityValue.class + ": availableQuantity is missing");
         return new InventoryQuantityValueImpl(quantityOnStock, availableQuantity);
     }
-
+    
     /**
      * builds InventoryQuantityValue without checking for non-null required values
      * @return InventoryQuantityValue
@@ -86,7 +104,7 @@ public class InventoryQuantityValueBuilder implements Builder<InventoryQuantityV
 
     /**
      * factory method for an instance of InventoryQuantityValueBuilder
-     * @return builder
+     * @return builder 
      */
     public static InventoryQuantityValueBuilder of() {
         return new InventoryQuantityValueBuilder();

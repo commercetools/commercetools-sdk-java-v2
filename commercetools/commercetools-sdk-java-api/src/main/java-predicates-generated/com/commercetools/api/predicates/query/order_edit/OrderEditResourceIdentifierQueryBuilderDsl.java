@@ -1,9 +1,11 @@
-
 package com.commercetools.api.predicates.query.order_edit;
 
 import com.commercetools.api.predicates.query.*;
 
-public class OrderEditResourceIdentifierQueryBuilderDsl {
+import java.util.function.Function;
+
+
+public class OrderEditResourceIdentifierQueryBuilderDsl  {
     public OrderEditResourceIdentifierQueryBuilderDsl() {
     }
 
@@ -12,19 +14,16 @@ public class OrderEditResourceIdentifierQueryBuilderDsl {
     }
 
     public StringComparisonPredicateBuilder<OrderEditResourceIdentifierQueryBuilderDsl> typeId() {
-        return new StringComparisonPredicateBuilder<>(
-            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("typeId")),
-            p -> new CombinationQueryPredicate<>(p, OrderEditResourceIdentifierQueryBuilderDsl::of));
+        return new StringComparisonPredicateBuilder<>(BinaryQueryPredicate.of().left(new ConstantQueryPredicate("typeId")),
+        p -> new CombinationQueryPredicate<>(p, OrderEditResourceIdentifierQueryBuilderDsl::of));
     }
-
     public StringComparisonPredicateBuilder<OrderEditResourceIdentifierQueryBuilderDsl> id() {
         return new StringComparisonPredicateBuilder<>(BinaryQueryPredicate.of().left(new ConstantQueryPredicate("id")),
-            p -> new CombinationQueryPredicate<>(p, OrderEditResourceIdentifierQueryBuilderDsl::of));
+        p -> new CombinationQueryPredicate<>(p, OrderEditResourceIdentifierQueryBuilderDsl::of));
     }
-
     public StringComparisonPredicateBuilder<OrderEditResourceIdentifierQueryBuilderDsl> key() {
         return new StringComparisonPredicateBuilder<>(BinaryQueryPredicate.of().left(new ConstantQueryPredicate("key")),
-            p -> new CombinationQueryPredicate<>(p, OrderEditResourceIdentifierQueryBuilderDsl::of));
+        p -> new CombinationQueryPredicate<>(p, OrderEditResourceIdentifierQueryBuilderDsl::of));
     }
-
+    
 }

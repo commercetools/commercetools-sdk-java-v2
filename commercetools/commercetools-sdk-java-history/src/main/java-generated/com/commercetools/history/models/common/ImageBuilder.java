@@ -1,9 +1,11 @@
-
 package com.commercetools.history.models.common;
 
+import com.commercetools.history.models.common.ImageDimensions;
+import com.commercetools.history.models.common.Image;
+import javax.annotation.Nullable;
 import java.util.*;
 import java.util.function.Function;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -19,98 +21,117 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .label("{label}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class ImageBuilder implements Builder<Image> {
 
+    
+    
     private String url;
-
+    
+    
+    
     private com.commercetools.history.models.common.ImageDimensions dimensions;
-
+    
+    
+    
     private String label;
 
+    
     /**
      * set the value to the url
      * @param url value to be set
      * @return Builder
      */
-
-    public ImageBuilder url(final String url) {
+    
+    public ImageBuilder url( final String url) {
         this.url = url;
         return this;
     }
-
+    
+    
+    
+    
     /**
      * set the value to the dimensions using the builder function
      * @param builder function to build the dimensions value
      * @return Builder
      */
-
-    public ImageBuilder dimensions(
-            Function<com.commercetools.history.models.common.ImageDimensionsBuilder, com.commercetools.history.models.common.ImageDimensionsBuilder> builder) {
+    
+    public ImageBuilder dimensions(Function<com.commercetools.history.models.common.ImageDimensionsBuilder, com.commercetools.history.models.common.ImageDimensionsBuilder> builder) {
         this.dimensions = builder.apply(com.commercetools.history.models.common.ImageDimensionsBuilder.of()).build();
         return this;
     }
-
+    
     /**
      * set the value to the dimensions using the builder function
      * @param builder function to build the dimensions value
      * @return Builder
      */
-
-    public ImageBuilder withDimensions(
-            Function<com.commercetools.history.models.common.ImageDimensionsBuilder, com.commercetools.history.models.common.ImageDimensions> builder) {
+    
+    public ImageBuilder withDimensions(Function<com.commercetools.history.models.common.ImageDimensionsBuilder, com.commercetools.history.models.common.ImageDimensions> builder) {
         this.dimensions = builder.apply(com.commercetools.history.models.common.ImageDimensionsBuilder.of());
         return this;
     }
-
+                    
     /**
      * set the value to the dimensions
      * @param dimensions value to be set
      * @return Builder
      */
-
-    public ImageBuilder dimensions(final com.commercetools.history.models.common.ImageDimensions dimensions) {
+    
+    public ImageBuilder dimensions( final com.commercetools.history.models.common.ImageDimensions dimensions) {
         this.dimensions = dimensions;
         return this;
     }
-
+    
+    
+    
+    
     /**
      * set the value to the label
      * @param label value to be set
      * @return Builder
      */
-
-    public ImageBuilder label(final String label) {
+    
+    public ImageBuilder label( final String label) {
         this.label = label;
         return this;
     }
+    
+    
 
     /**
      * value of url}
      * @return url
      */
-
-    public String getUrl() {
+    
+    
+    public String getUrl(){
         return this.url;
     }
-
+    
     /**
      * value of dimensions}
      * @return dimensions
      */
-
-    public com.commercetools.history.models.common.ImageDimensions getDimensions() {
+    
+    
+    public com.commercetools.history.models.common.ImageDimensions getDimensions(){
         return this.dimensions;
     }
-
+    
     /**
      * value of label}
      * @return label
      */
-
-    public String getLabel() {
+    
+    
+    public String getLabel(){
         return this.label;
     }
 
@@ -124,7 +145,7 @@ public class ImageBuilder implements Builder<Image> {
         Objects.requireNonNull(label, Image.class + ": label is missing");
         return new ImageImpl(url, dimensions, label);
     }
-
+    
     /**
      * builds Image without checking for non-null required values
      * @return Image
@@ -135,7 +156,7 @@ public class ImageBuilder implements Builder<Image> {
 
     /**
      * factory method for an instance of ImageBuilder
-     * @return builder
+     * @return builder 
      */
     public static ImageBuilder of() {
         return new ImageBuilder();

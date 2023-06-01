@@ -1,11 +1,11 @@
-
 package com.commercetools.api.predicates.query.message;
-
-import java.util.function.Function;
 
 import com.commercetools.api.predicates.query.*;
 
-public class OrderLineItemDiscountSetMessagePayloadQueryBuilderDsl {
+import java.util.function.Function;
+
+
+public class OrderLineItemDiscountSetMessagePayloadQueryBuilderDsl  {
     public OrderLineItemDiscountSetMessagePayloadQueryBuilderDsl() {
     }
 
@@ -14,64 +14,50 @@ public class OrderLineItemDiscountSetMessagePayloadQueryBuilderDsl {
     }
 
     public StringComparisonPredicateBuilder<OrderLineItemDiscountSetMessagePayloadQueryBuilderDsl> type() {
-        return new StringComparisonPredicateBuilder<>(
-            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("type")),
-            p -> new CombinationQueryPredicate<>(p, OrderLineItemDiscountSetMessagePayloadQueryBuilderDsl::of));
+        return new StringComparisonPredicateBuilder<>(BinaryQueryPredicate.of().left(new ConstantQueryPredicate("type")),
+        p -> new CombinationQueryPredicate<>(p, OrderLineItemDiscountSetMessagePayloadQueryBuilderDsl::of));
     }
-
     public StringComparisonPredicateBuilder<OrderLineItemDiscountSetMessagePayloadQueryBuilderDsl> lineItemId() {
-        return new StringComparisonPredicateBuilder<>(
-            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("lineItemId")),
-            p -> new CombinationQueryPredicate<>(p, OrderLineItemDiscountSetMessagePayloadQueryBuilderDsl::of));
+        return new StringComparisonPredicateBuilder<>(BinaryQueryPredicate.of().left(new ConstantQueryPredicate("lineItemId")),
+        p -> new CombinationQueryPredicate<>(p, OrderLineItemDiscountSetMessagePayloadQueryBuilderDsl::of));
     }
-
     public CombinationQueryPredicate<OrderLineItemDiscountSetMessagePayloadQueryBuilderDsl> discountedPricePerQuantity(
-            Function<com.commercetools.api.predicates.query.cart.DiscountedLineItemPriceForQuantityQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.cart.DiscountedLineItemPriceForQuantityQueryBuilderDsl>> fn) {
+        Function<com.commercetools.api.predicates.query.cart.DiscountedLineItemPriceForQuantityQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.cart.DiscountedLineItemPriceForQuantityQueryBuilderDsl>> fn) {
         return new CombinationQueryPredicate<>(ContainerQueryPredicate.of()
-                .parent(ConstantQueryPredicate.of().constant("discountedPricePerQuantity"))
-                .inner(fn.apply(
-                    com.commercetools.api.predicates.query.cart.DiscountedLineItemPriceForQuantityQueryBuilderDsl
-                            .of())),
+            .parent(ConstantQueryPredicate.of().constant("discountedPricePerQuantity"))
+            .inner(fn.apply(com.commercetools.api.predicates.query.cart.DiscountedLineItemPriceForQuantityQueryBuilderDsl.of())),
             OrderLineItemDiscountSetMessagePayloadQueryBuilderDsl::of);
     }
-
     public CollectionPredicateBuilder<OrderLineItemDiscountSetMessagePayloadQueryBuilderDsl> discountedPricePerQuantity() {
-        return new CollectionPredicateBuilder<>(
-            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("discountedPricePerQuantity")),
-            p -> new CombinationQueryPredicate<>(p, OrderLineItemDiscountSetMessagePayloadQueryBuilderDsl::of));
+        return new CollectionPredicateBuilder<>(BinaryQueryPredicate.of().left(new ConstantQueryPredicate("discountedPricePerQuantity")),
+                p -> new CombinationQueryPredicate<>(p, OrderLineItemDiscountSetMessagePayloadQueryBuilderDsl::of));
     }
-
     public CombinationQueryPredicate<OrderLineItemDiscountSetMessagePayloadQueryBuilderDsl> totalPrice(
-            Function<com.commercetools.api.predicates.query.common.MoneyQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.common.MoneyQueryBuilderDsl>> fn) {
-        return new CombinationQueryPredicate<>(
-            ContainerQueryPredicate.of()
-                    .parent(ConstantQueryPredicate.of().constant("totalPrice"))
-                    .inner(fn.apply(com.commercetools.api.predicates.query.common.MoneyQueryBuilderDsl.of())),
+        Function<com.commercetools.api.predicates.query.common.MoneyQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.common.MoneyQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(ContainerQueryPredicate.of()
+            .parent(ConstantQueryPredicate.of().constant("totalPrice"))
+            .inner(fn.apply(com.commercetools.api.predicates.query.common.MoneyQueryBuilderDsl.of())),
             OrderLineItemDiscountSetMessagePayloadQueryBuilderDsl::of);
     }
-
+    
     public CombinationQueryPredicate<OrderLineItemDiscountSetMessagePayloadQueryBuilderDsl> taxedPrice(
-            Function<com.commercetools.api.predicates.query.cart.TaxedItemPriceQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.cart.TaxedItemPriceQueryBuilderDsl>> fn) {
-        return new CombinationQueryPredicate<>(
-            ContainerQueryPredicate.of()
-                    .parent(ConstantQueryPredicate.of().constant("taxedPrice"))
-                    .inner(fn.apply(com.commercetools.api.predicates.query.cart.TaxedItemPriceQueryBuilderDsl.of())),
+        Function<com.commercetools.api.predicates.query.cart.TaxedItemPriceQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.cart.TaxedItemPriceQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(ContainerQueryPredicate.of()
+            .parent(ConstantQueryPredicate.of().constant("taxedPrice"))
+            .inner(fn.apply(com.commercetools.api.predicates.query.cart.TaxedItemPriceQueryBuilderDsl.of())),
             OrderLineItemDiscountSetMessagePayloadQueryBuilderDsl::of);
     }
-
+    
     public CombinationQueryPredicate<OrderLineItemDiscountSetMessagePayloadQueryBuilderDsl> taxedPricePortions(
-            Function<com.commercetools.api.predicates.query.cart.MethodTaxedPriceQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.cart.MethodTaxedPriceQueryBuilderDsl>> fn) {
-        return new CombinationQueryPredicate<>(
-            ContainerQueryPredicate.of()
-                    .parent(ConstantQueryPredicate.of().constant("taxedPricePortions"))
-                    .inner(fn.apply(com.commercetools.api.predicates.query.cart.MethodTaxedPriceQueryBuilderDsl.of())),
+        Function<com.commercetools.api.predicates.query.cart.MethodTaxedPriceQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.cart.MethodTaxedPriceQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(ContainerQueryPredicate.of()
+            .parent(ConstantQueryPredicate.of().constant("taxedPricePortions"))
+            .inner(fn.apply(com.commercetools.api.predicates.query.cart.MethodTaxedPriceQueryBuilderDsl.of())),
             OrderLineItemDiscountSetMessagePayloadQueryBuilderDsl::of);
     }
-
     public CollectionPredicateBuilder<OrderLineItemDiscountSetMessagePayloadQueryBuilderDsl> taxedPricePortions() {
-        return new CollectionPredicateBuilder<>(
-            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("taxedPricePortions")),
-            p -> new CombinationQueryPredicate<>(p, OrderLineItemDiscountSetMessagePayloadQueryBuilderDsl::of));
+        return new CollectionPredicateBuilder<>(BinaryQueryPredicate.of().left(new ConstantQueryPredicate("taxedPricePortions")),
+                p -> new CombinationQueryPredicate<>(p, OrderLineItemDiscountSetMessagePayloadQueryBuilderDsl::of));
     }
-
+    
 }

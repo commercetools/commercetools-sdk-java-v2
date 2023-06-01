@@ -1,19 +1,20 @@
-
 package com.commercetools.api.models.quote_request;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-import java.util.stream.Collectors;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
+import com.commercetools.api.models.quote_request.QuoteRequest;
+import com.commercetools.api.models.quote_request.QuoteRequestPagedQueryResponseImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>PagedQueryResult with results containing an array of QuoteRequest.</p>
@@ -29,12 +30,15 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .plusResults(resultsBuilder -> resultsBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = QuoteRequestPagedQueryResponseImpl.class)
-public interface QuoteRequestPagedQueryResponse
-        extends com.commercetools.api.models.ResourcePagedQueryResponse<QuoteRequest> {
+public interface QuoteRequestPagedQueryResponse extends com.commercetools.api.models.ResourcePagedQueryResponse<QuoteRequest> {
+
 
     /**
      *  <p>Number of results requested.</p>
@@ -43,7 +47,6 @@ public interface QuoteRequestPagedQueryResponse
     @NotNull
     @JsonProperty("limit")
     public Long getLimit();
-
     /**
      *  <p>Number of elements skipped.</p>
      * @return offset
@@ -51,7 +54,6 @@ public interface QuoteRequestPagedQueryResponse
     @NotNull
     @JsonProperty("offset")
     public Long getOffset();
-
     /**
      *  <p>Actual number of results returned.</p>
      * @return count
@@ -59,15 +61,13 @@ public interface QuoteRequestPagedQueryResponse
     @NotNull
     @JsonProperty("count")
     public Long getCount();
-
     /**
      *  <p>Total number of results matching the query. This number is an estimation that is not strongly consistent. This field is returned by default. For improved performance, calculating this field can be deactivated by using the query parameter <code>withTotal=false</code>. When the results are filtered with a Query Predicate, <code>total</code> is subject to a limit.</p>
      * @return total
      */
-
+    
     @JsonProperty("total")
     public Long getTotal();
-
     /**
      *  <p>Quote Requests matching the query.</p>
      * @return results
@@ -81,52 +81,56 @@ public interface QuoteRequestPagedQueryResponse
      *  <p>Number of results requested.</p>
      * @param limit value to be set
      */
-
+    
     public void setLimit(final Long limit);
-
+    
+    
     /**
      *  <p>Number of elements skipped.</p>
      * @param offset value to be set
      */
-
+    
     public void setOffset(final Long offset);
-
+    
+    
     /**
      *  <p>Actual number of results returned.</p>
      * @param count value to be set
      */
-
+    
     public void setCount(final Long count);
-
+    
+    
     /**
      *  <p>Total number of results matching the query. This number is an estimation that is not strongly consistent. This field is returned by default. For improved performance, calculating this field can be deactivated by using the query parameter <code>withTotal=false</code>. When the results are filtered with a Query Predicate, <code>total</code> is subject to a limit.</p>
      * @param total value to be set
      */
-
+    
     public void setTotal(final Long total);
-
+    
+    
     /**
      *  <p>Quote Requests matching the query.</p>
      * @param results values to be set
      */
-
+    
     @JsonIgnore
-    public void setResults(final QuoteRequest... results);
-
+    public void setResults(final QuoteRequest ...results);
     /**
      *  <p>Quote Requests matching the query.</p>
      * @param results values to be set
      */
-
+    
     public void setResults(final List<QuoteRequest> results);
 
     /**
      * factory method
      * @return instance of QuoteRequestPagedQueryResponse
      */
-    public static QuoteRequestPagedQueryResponse of() {
+    public static QuoteRequestPagedQueryResponse of(){
         return new QuoteRequestPagedQueryResponseImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy QuoteRequestPagedQueryResponse
@@ -159,9 +163,7 @@ public interface QuoteRequestPagedQueryResponse
         instance.setCount(template.getCount());
         instance.setTotal(template.getTotal());
         instance.setResults(Optional.ofNullable(template.getResults())
-                .map(t -> t.stream()
-                        .map(com.commercetools.api.models.quote_request.QuoteRequest::deepCopy)
-                        .collect(Collectors.toList()))
+                .map(t -> t.stream().map(com.commercetools.api.models.quote_request.QuoteRequest::deepCopy).collect(Collectors.toList()))
                 .orElse(null));
         return instance;
     }
@@ -173,7 +175,7 @@ public interface QuoteRequestPagedQueryResponse
     public static QuoteRequestPagedQueryResponseBuilder builder() {
         return QuoteRequestPagedQueryResponseBuilder.of();
     }
-
+    
     /**
      * create builder for QuoteRequestPagedQueryResponse instance
      * @param template instance with prefilled values for the builder
@@ -182,6 +184,7 @@ public interface QuoteRequestPagedQueryResponse
     public static QuoteRequestPagedQueryResponseBuilder builder(final QuoteRequestPagedQueryResponse template) {
         return QuoteRequestPagedQueryResponseBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -192,7 +195,7 @@ public interface QuoteRequestPagedQueryResponse
     default <T> T withQuoteRequestPagedQueryResponse(Function<QuoteRequestPagedQueryResponse, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

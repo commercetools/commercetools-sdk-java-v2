@@ -1,11 +1,12 @@
-
 package com.commercetools.api.models.shipping_method;
 
+import com.commercetools.api.models.common.LocalizedString;
+import com.commercetools.api.models.shipping_method.ShippingMethodUpdateAction;
+import com.commercetools.api.models.shipping_method.ShippingMethodSetLocalizedNameAction;
+import javax.annotation.Nullable;
 import java.util.*;
 import java.util.function.Function;
-
-import javax.annotation.Nullable;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -18,57 +19,61 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     ShippingMethodSetLocalizedNameAction shippingMethodSetLocalizedNameAction = ShippingMethodSetLocalizedNameAction.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class ShippingMethodSetLocalizedNameActionBuilder implements Builder<ShippingMethodSetLocalizedNameAction> {
 
+    
     @Nullable
     private com.commercetools.api.models.common.LocalizedString localizedName;
 
+    
     /**
      *  <p>Value to set. If empty, any existing value will be removed.</p>
      * @param builder function to build the localizedName value
      * @return Builder
      */
-
-    public ShippingMethodSetLocalizedNameActionBuilder localizedName(
-            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
+    
+    public ShippingMethodSetLocalizedNameActionBuilder localizedName(Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
         this.localizedName = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of()).build();
         return this;
     }
-
+    
     /**
      *  <p>Value to set. If empty, any existing value will be removed.</p>
      * @param builder function to build the localizedName value
      * @return Builder
      */
-
-    public ShippingMethodSetLocalizedNameActionBuilder withLocalizedName(
-            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedString> builder) {
+    
+    public ShippingMethodSetLocalizedNameActionBuilder withLocalizedName(Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedString> builder) {
         this.localizedName = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of());
         return this;
     }
-
+                    
     /**
      *  <p>Value to set. If empty, any existing value will be removed.</p>
      * @param localizedName value to be set
      * @return Builder
      */
-
-    public ShippingMethodSetLocalizedNameActionBuilder localizedName(
-            @Nullable final com.commercetools.api.models.common.LocalizedString localizedName) {
+    
+    public ShippingMethodSetLocalizedNameActionBuilder localizedName(@Nullable final com.commercetools.api.models.common.LocalizedString localizedName) {
         this.localizedName = localizedName;
         return this;
     }
+    
+    
 
     /**
      *  <p>Value to set. If empty, any existing value will be removed.</p>
      * @return localizedName
      */
-
+    
     @Nullable
-    public com.commercetools.api.models.common.LocalizedString getLocalizedName() {
+    public com.commercetools.api.models.common.LocalizedString getLocalizedName(){
         return this.localizedName;
     }
 
@@ -79,7 +84,7 @@ public class ShippingMethodSetLocalizedNameActionBuilder implements Builder<Ship
     public ShippingMethodSetLocalizedNameAction build() {
         return new ShippingMethodSetLocalizedNameActionImpl(localizedName);
     }
-
+    
     /**
      * builds ShippingMethodSetLocalizedNameAction without checking for non-null required values
      * @return ShippingMethodSetLocalizedNameAction
@@ -90,7 +95,7 @@ public class ShippingMethodSetLocalizedNameActionBuilder implements Builder<Ship
 
     /**
      * factory method for an instance of ShippingMethodSetLocalizedNameActionBuilder
-     * @return builder
+     * @return builder 
      */
     public static ShippingMethodSetLocalizedNameActionBuilder of() {
         return new ShippingMethodSetLocalizedNameActionBuilder();

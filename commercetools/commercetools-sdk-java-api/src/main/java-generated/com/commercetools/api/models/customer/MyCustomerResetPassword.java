@@ -1,17 +1,20 @@
-
 package com.commercetools.api.models.customer;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
 
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
+import com.commercetools.api.models.customer.MyCustomerResetPasswordImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * MyCustomerResetPassword
@@ -25,11 +28,15 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .newPassword("{newPassword}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = MyCustomerResetPasswordImpl.class)
-public interface MyCustomerResetPassword {
+public interface MyCustomerResetPassword  {
+
 
     /**
      *  <p>Value of the token to reset the Customer password.</p>
@@ -38,7 +45,6 @@ public interface MyCustomerResetPassword {
     @NotNull
     @JsonProperty("tokenValue")
     public String getTokenValue();
-
     /**
      *  <p>New password to be set.</p>
      * @return newPassword
@@ -51,23 +57,26 @@ public interface MyCustomerResetPassword {
      *  <p>Value of the token to reset the Customer password.</p>
      * @param tokenValue value to be set
      */
-
+    
     public void setTokenValue(final String tokenValue);
-
+    
+    
     /**
      *  <p>New password to be set.</p>
      * @param newPassword value to be set
      */
-
+    
     public void setNewPassword(final String newPassword);
+    
 
     /**
      * factory method
      * @return instance of MyCustomerResetPassword
      */
-    public static MyCustomerResetPassword of() {
+    public static MyCustomerResetPassword of(){
         return new MyCustomerResetPasswordImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy MyCustomerResetPassword
@@ -104,7 +113,7 @@ public interface MyCustomerResetPassword {
     public static MyCustomerResetPasswordBuilder builder() {
         return MyCustomerResetPasswordBuilder.of();
     }
-
+    
     /**
      * create builder for MyCustomerResetPassword instance
      * @param template instance with prefilled values for the builder
@@ -113,6 +122,7 @@ public interface MyCustomerResetPassword {
     public static MyCustomerResetPasswordBuilder builder(final MyCustomerResetPassword template) {
         return MyCustomerResetPasswordBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -123,7 +133,7 @@ public interface MyCustomerResetPassword {
     default <T> T withMyCustomerResetPassword(Function<MyCustomerResetPassword, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

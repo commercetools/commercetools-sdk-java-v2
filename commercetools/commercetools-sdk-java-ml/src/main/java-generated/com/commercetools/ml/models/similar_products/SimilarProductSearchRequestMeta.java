@@ -1,18 +1,20 @@
-
 package com.commercetools.ml.models.similar_products;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
+import com.commercetools.ml.models.similar_products.SimilarityMeasures;
+import com.commercetools.ml.models.similar_products.SimilarProductSearchRequestMetaImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * SimilarProductSearchRequestMeta
@@ -25,11 +27,15 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .similarityMeasures(similarityMeasuresBuilder -> similarityMeasuresBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = SimilarProductSearchRequestMetaImpl.class)
-public interface SimilarProductSearchRequestMeta {
+public interface SimilarProductSearchRequestMeta  {
+
 
     /**
      *  <p>The SimilarityMeasures used in this search.</p>
@@ -44,16 +50,18 @@ public interface SimilarProductSearchRequestMeta {
      *  <p>The SimilarityMeasures used in this search.</p>
      * @param similarityMeasures value to be set
      */
-
+    
     public void setSimilarityMeasures(final SimilarityMeasures similarityMeasures);
+    
 
     /**
      * factory method
      * @return instance of SimilarProductSearchRequestMeta
      */
-    public static SimilarProductSearchRequestMeta of() {
+    public static SimilarProductSearchRequestMeta of(){
         return new SimilarProductSearchRequestMetaImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy SimilarProductSearchRequestMeta
@@ -77,8 +85,7 @@ public interface SimilarProductSearchRequestMeta {
             return null;
         }
         SimilarProductSearchRequestMetaImpl instance = new SimilarProductSearchRequestMetaImpl();
-        instance.setSimilarityMeasures(
-            com.commercetools.ml.models.similar_products.SimilarityMeasures.deepCopy(template.getSimilarityMeasures()));
+        instance.setSimilarityMeasures(com.commercetools.ml.models.similar_products.SimilarityMeasures.deepCopy(template.getSimilarityMeasures()));
         return instance;
     }
 
@@ -89,7 +96,7 @@ public interface SimilarProductSearchRequestMeta {
     public static SimilarProductSearchRequestMetaBuilder builder() {
         return SimilarProductSearchRequestMetaBuilder.of();
     }
-
+    
     /**
      * create builder for SimilarProductSearchRequestMeta instance
      * @param template instance with prefilled values for the builder
@@ -98,6 +105,7 @@ public interface SimilarProductSearchRequestMeta {
     public static SimilarProductSearchRequestMetaBuilder builder(final SimilarProductSearchRequestMeta template) {
         return SimilarProductSearchRequestMetaBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -108,7 +116,7 @@ public interface SimilarProductSearchRequestMeta {
     default <T> T withSimilarProductSearchRequestMeta(Function<SimilarProductSearchRequestMeta, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

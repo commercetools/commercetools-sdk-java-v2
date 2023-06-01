@@ -1,18 +1,21 @@
-
 package com.commercetools.api.models.state;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-import java.util.stream.Collectors;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
+import com.commercetools.api.models.state.StateResourceIdentifier;
+import com.commercetools.api.models.state.StateUpdateAction;
+import com.commercetools.api.models.state.StateSetTransitionsActionImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * StateSetTransitionsAction
@@ -24,9 +27,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     StateSetTransitionsAction stateSetTransitionsAction = StateSetTransitionsAction.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = StateSetTransitionsActionImpl.class)
 public interface StateSetTransitionsAction extends StateUpdateAction {
 
@@ -53,10 +59,9 @@ public interface StateSetTransitionsAction extends StateUpdateAction {
      *  <p>When performing a <code>transitionState</code> update action, any other State of the same <code>type</code> can be transitioned to.</p>
      * @param transitions values to be set
      */
-
+    
     @JsonIgnore
-    public void setTransitions(final StateResourceIdentifier... transitions);
-
+    public void setTransitions(final StateResourceIdentifier ...transitions);
     /**
      *  <p>Value to set. If empty, any existing value will be removed.</p>
      *  <p>Possible transformations of the current State to other States of the same <code>type</code> (for example, <em>Initial</em> -&gt; <em>Shipped</em>). When performing a <code>transitionState</code> update action and <code>transitions</code> is set, the currently referenced State must have a transition to the new State.</p>
@@ -64,16 +69,17 @@ public interface StateSetTransitionsAction extends StateUpdateAction {
      *  <p>When performing a <code>transitionState</code> update action, any other State of the same <code>type</code> can be transitioned to.</p>
      * @param transitions values to be set
      */
-
+    
     public void setTransitions(final List<StateResourceIdentifier> transitions);
 
     /**
      * factory method
      * @return instance of StateSetTransitionsAction
      */
-    public static StateSetTransitionsAction of() {
+    public static StateSetTransitionsAction of(){
         return new StateSetTransitionsActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy StateSetTransitionsAction
@@ -98,9 +104,7 @@ public interface StateSetTransitionsAction extends StateUpdateAction {
         }
         StateSetTransitionsActionImpl instance = new StateSetTransitionsActionImpl();
         instance.setTransitions(Optional.ofNullable(template.getTransitions())
-                .map(t -> t.stream()
-                        .map(com.commercetools.api.models.state.StateResourceIdentifier::deepCopy)
-                        .collect(Collectors.toList()))
+                .map(t -> t.stream().map(com.commercetools.api.models.state.StateResourceIdentifier::deepCopy).collect(Collectors.toList()))
                 .orElse(null));
         return instance;
     }
@@ -112,7 +116,7 @@ public interface StateSetTransitionsAction extends StateUpdateAction {
     public static StateSetTransitionsActionBuilder builder() {
         return StateSetTransitionsActionBuilder.of();
     }
-
+    
     /**
      * create builder for StateSetTransitionsAction instance
      * @param template instance with prefilled values for the builder
@@ -121,6 +125,7 @@ public interface StateSetTransitionsAction extends StateUpdateAction {
     public static StateSetTransitionsActionBuilder builder(final StateSetTransitionsAction template) {
         return StateSetTransitionsActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -131,7 +136,7 @@ public interface StateSetTransitionsAction extends StateUpdateAction {
     default <T> T withStateSetTransitionsAction(Function<StateSetTransitionsAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

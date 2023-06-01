@@ -1,19 +1,21 @@
-
 package com.commercetools.history.models.label;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
 import com.commercetools.history.models.common.Reference;
+import com.commercetools.history.models.label.Label;
+import com.commercetools.history.models.label.QuoteRequestLabelImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * QuoteRequestLabel
@@ -27,9 +29,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .customer(customerBuilder -> customerBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = QuoteRequestLabelImpl.class)
 public interface QuoteRequestLabel extends Label {
 
@@ -45,7 +50,6 @@ public interface QuoteRequestLabel extends Label {
     @NotNull
     @JsonProperty("type")
     public String getType();
-
     /**
      *
      * @return key
@@ -53,7 +57,6 @@ public interface QuoteRequestLabel extends Label {
     @NotNull
     @JsonProperty("key")
     public String getKey();
-
     /**
      *
      * @return customer
@@ -67,23 +70,26 @@ public interface QuoteRequestLabel extends Label {
      * set key
      * @param key value to be set
      */
-
+    
     public void setKey(final String key);
-
+    
+    
     /**
      * set customer
      * @param customer value to be set
      */
-
+    
     public void setCustomer(final Reference customer);
+    
 
     /**
      * factory method
      * @return instance of QuoteRequestLabel
      */
-    public static QuoteRequestLabel of() {
+    public static QuoteRequestLabel of(){
         return new QuoteRequestLabelImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy QuoteRequestLabel
@@ -120,7 +126,7 @@ public interface QuoteRequestLabel extends Label {
     public static QuoteRequestLabelBuilder builder() {
         return QuoteRequestLabelBuilder.of();
     }
-
+    
     /**
      * create builder for QuoteRequestLabel instance
      * @param template instance with prefilled values for the builder
@@ -129,6 +135,7 @@ public interface QuoteRequestLabel extends Label {
     public static QuoteRequestLabelBuilder builder(final QuoteRequestLabel template) {
         return QuoteRequestLabelBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -139,7 +146,7 @@ public interface QuoteRequestLabel extends Label {
     default <T> T withQuoteRequestLabel(Function<QuoteRequestLabel, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

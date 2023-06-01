@@ -1,19 +1,21 @@
-
 package com.commercetools.api.models.associate_role;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
+import com.commercetools.api.models.associate_role.Permission;
 import com.commercetools.api.models.type.CustomFieldsDraft;
+import com.commercetools.api.models.associate_role.AssociateRoleDraftImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * AssociateRoleDraft
@@ -26,11 +28,15 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .key("{key}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = AssociateRoleDraftImpl.class)
 public interface AssociateRoleDraft extends io.vrap.rmf.base.client.Draft<AssociateRoleDraft> {
+
 
     /**
      *  <p>User-defined unique identifier for the AssociateRole.</p>
@@ -39,31 +45,27 @@ public interface AssociateRoleDraft extends io.vrap.rmf.base.client.Draft<Associ
     @NotNull
     @JsonProperty("key")
     public String getKey();
-
     /**
      *  <p>Name of the AssociateRole.</p>
      * @return name
      */
-
+    
     @JsonProperty("name")
     public String getName();
-
     /**
      *  <p>Whether the AssociateRole can be assigned to an Associate by a buyer.</p>
      * @return buyerAssignable
      */
-
+    
     @JsonProperty("buyerAssignable")
     public Boolean getBuyerAssignable();
-
     /**
      *  <p>List of Permissions for the AssociateRole.</p>
      * @return permissions
      */
-
+    
     @JsonProperty("permissions")
     public List<Permission> getPermissions();
-
     /**
      *  <p>Custom Fields for the AssociateRole.</p>
      * @return custom
@@ -76,52 +78,56 @@ public interface AssociateRoleDraft extends io.vrap.rmf.base.client.Draft<Associ
      *  <p>User-defined unique identifier for the AssociateRole.</p>
      * @param key value to be set
      */
-
+    
     public void setKey(final String key);
-
+    
+    
     /**
      *  <p>Name of the AssociateRole.</p>
      * @param name value to be set
      */
-
+    
     public void setName(final String name);
-
+    
+    
     /**
      *  <p>Whether the AssociateRole can be assigned to an Associate by a buyer.</p>
      * @param buyerAssignable value to be set
      */
-
+    
     public void setBuyerAssignable(final Boolean buyerAssignable);
-
+    
+    
     /**
      *  <p>List of Permissions for the AssociateRole.</p>
      * @param permissions values to be set
      */
-
+    
     @JsonIgnore
-    public void setPermissions(final Permission... permissions);
-
+    public void setPermissions(final Permission ...permissions);
     /**
      *  <p>List of Permissions for the AssociateRole.</p>
      * @param permissions values to be set
      */
-
+    
     public void setPermissions(final List<Permission> permissions);
-
+    
     /**
      *  <p>Custom Fields for the AssociateRole.</p>
      * @param custom value to be set
      */
-
+    
     public void setCustom(final CustomFieldsDraft custom);
+    
 
     /**
      * factory method
      * @return instance of AssociateRoleDraft
      */
-    public static AssociateRoleDraft of() {
+    public static AssociateRoleDraft of(){
         return new AssociateRoleDraftImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy AssociateRoleDraft
@@ -152,7 +158,9 @@ public interface AssociateRoleDraft extends io.vrap.rmf.base.client.Draft<Associ
         instance.setKey(template.getKey());
         instance.setName(template.getName());
         instance.setBuyerAssignable(template.getBuyerAssignable());
-        instance.setPermissions(Optional.ofNullable(template.getPermissions()).map(ArrayList::new).orElse(null));
+        instance.setPermissions(Optional.ofNullable(template.getPermissions())
+                .map(ArrayList::new)
+                .orElse(null));
         instance.setCustom(com.commercetools.api.models.type.CustomFieldsDraft.deepCopy(template.getCustom()));
         return instance;
     }
@@ -164,7 +172,7 @@ public interface AssociateRoleDraft extends io.vrap.rmf.base.client.Draft<Associ
     public static AssociateRoleDraftBuilder builder() {
         return AssociateRoleDraftBuilder.of();
     }
-
+    
     /**
      * create builder for AssociateRoleDraft instance
      * @param template instance with prefilled values for the builder
@@ -173,6 +181,7 @@ public interface AssociateRoleDraft extends io.vrap.rmf.base.client.Draft<Associ
     public static AssociateRoleDraftBuilder builder(final AssociateRoleDraft template) {
         return AssociateRoleDraftBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -183,7 +192,7 @@ public interface AssociateRoleDraft extends io.vrap.rmf.base.client.Draft<Associ
     default <T> T withAssociateRoleDraft(Function<AssociateRoleDraft, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

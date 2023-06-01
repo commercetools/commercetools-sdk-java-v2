@@ -1,11 +1,13 @@
-
 package com.commercetools.api.models.order_edit;
 
+import com.commercetools.api.models.cart.ExternalLineItemTotalPrice;
+import com.commercetools.api.models.common.Money;
+import com.commercetools.api.models.order.StagedOrderUpdateAction;
+import com.commercetools.api.models.order_edit.StagedOrderChangeLineItemQuantityAction;
+import javax.annotation.Nullable;
 import java.util.*;
 import java.util.function.Function;
-
-import javax.annotation.Nullable;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -20,154 +22,167 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .quantity(0.3)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
-public class StagedOrderChangeLineItemQuantityActionBuilder
-        implements Builder<StagedOrderChangeLineItemQuantityAction> {
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
+public class StagedOrderChangeLineItemQuantityActionBuilder implements Builder<StagedOrderChangeLineItemQuantityAction> {
 
+    
+    
     private String lineItemId;
-
+    
+    
+    
     private Long quantity;
-
+    
+    
     @Nullable
     private com.commercetools.api.models.common.Money externalPrice;
-
+    
+    
     @Nullable
     private com.commercetools.api.models.cart.ExternalLineItemTotalPrice externalTotalPrice;
 
+    
     /**
      * set the value to the lineItemId
      * @param lineItemId value to be set
      * @return Builder
      */
-
-    public StagedOrderChangeLineItemQuantityActionBuilder lineItemId(final String lineItemId) {
+    
+    public StagedOrderChangeLineItemQuantityActionBuilder lineItemId( final String lineItemId) {
         this.lineItemId = lineItemId;
         return this;
     }
-
+    
+    
+    
+    
     /**
      * set the value to the quantity
      * @param quantity value to be set
      * @return Builder
      */
-
-    public StagedOrderChangeLineItemQuantityActionBuilder quantity(final Long quantity) {
+    
+    public StagedOrderChangeLineItemQuantityActionBuilder quantity( final Long quantity) {
         this.quantity = quantity;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Draft type that stores amounts only in cent precision for the specified currency.</p>
      * @param builder function to build the externalPrice value
      * @return Builder
      */
-
-    public StagedOrderChangeLineItemQuantityActionBuilder externalPrice(
-            Function<com.commercetools.api.models.common.MoneyBuilder, com.commercetools.api.models.common.MoneyBuilder> builder) {
+    
+    public StagedOrderChangeLineItemQuantityActionBuilder externalPrice(Function<com.commercetools.api.models.common.MoneyBuilder, com.commercetools.api.models.common.MoneyBuilder> builder) {
         this.externalPrice = builder.apply(com.commercetools.api.models.common.MoneyBuilder.of()).build();
         return this;
     }
-
+    
     /**
      *  <p>Draft type that stores amounts only in cent precision for the specified currency.</p>
      * @param builder function to build the externalPrice value
      * @return Builder
      */
-
-    public StagedOrderChangeLineItemQuantityActionBuilder withExternalPrice(
-            Function<com.commercetools.api.models.common.MoneyBuilder, com.commercetools.api.models.common.Money> builder) {
+    
+    public StagedOrderChangeLineItemQuantityActionBuilder withExternalPrice(Function<com.commercetools.api.models.common.MoneyBuilder, com.commercetools.api.models.common.Money> builder) {
         this.externalPrice = builder.apply(com.commercetools.api.models.common.MoneyBuilder.of());
         return this;
     }
-
+                    
     /**
      *  <p>Draft type that stores amounts only in cent precision for the specified currency.</p>
      * @param externalPrice value to be set
      * @return Builder
      */
-
-    public StagedOrderChangeLineItemQuantityActionBuilder externalPrice(
-            @Nullable final com.commercetools.api.models.common.Money externalPrice) {
+    
+    public StagedOrderChangeLineItemQuantityActionBuilder externalPrice(@Nullable final com.commercetools.api.models.common.Money externalPrice) {
         this.externalPrice = externalPrice;
         return this;
     }
-
+    
+    
+    
+    
     /**
      * set the value to the externalTotalPrice using the builder function
      * @param builder function to build the externalTotalPrice value
      * @return Builder
      */
-
-    public StagedOrderChangeLineItemQuantityActionBuilder externalTotalPrice(
-            Function<com.commercetools.api.models.cart.ExternalLineItemTotalPriceBuilder, com.commercetools.api.models.cart.ExternalLineItemTotalPriceBuilder> builder) {
-        this.externalTotalPrice = builder
-                .apply(com.commercetools.api.models.cart.ExternalLineItemTotalPriceBuilder.of())
-                .build();
+    
+    public StagedOrderChangeLineItemQuantityActionBuilder externalTotalPrice(Function<com.commercetools.api.models.cart.ExternalLineItemTotalPriceBuilder, com.commercetools.api.models.cart.ExternalLineItemTotalPriceBuilder> builder) {
+        this.externalTotalPrice = builder.apply(com.commercetools.api.models.cart.ExternalLineItemTotalPriceBuilder.of()).build();
         return this;
     }
-
+    
     /**
      * set the value to the externalTotalPrice using the builder function
      * @param builder function to build the externalTotalPrice value
      * @return Builder
      */
-
-    public StagedOrderChangeLineItemQuantityActionBuilder withExternalTotalPrice(
-            Function<com.commercetools.api.models.cart.ExternalLineItemTotalPriceBuilder, com.commercetools.api.models.cart.ExternalLineItemTotalPrice> builder) {
-        this.externalTotalPrice = builder
-                .apply(com.commercetools.api.models.cart.ExternalLineItemTotalPriceBuilder.of());
+    
+    public StagedOrderChangeLineItemQuantityActionBuilder withExternalTotalPrice(Function<com.commercetools.api.models.cart.ExternalLineItemTotalPriceBuilder, com.commercetools.api.models.cart.ExternalLineItemTotalPrice> builder) {
+        this.externalTotalPrice = builder.apply(com.commercetools.api.models.cart.ExternalLineItemTotalPriceBuilder.of());
         return this;
     }
-
+                    
     /**
      * set the value to the externalTotalPrice
      * @param externalTotalPrice value to be set
      * @return Builder
      */
-
-    public StagedOrderChangeLineItemQuantityActionBuilder externalTotalPrice(
-            @Nullable final com.commercetools.api.models.cart.ExternalLineItemTotalPrice externalTotalPrice) {
+    
+    public StagedOrderChangeLineItemQuantityActionBuilder externalTotalPrice(@Nullable final com.commercetools.api.models.cart.ExternalLineItemTotalPrice externalTotalPrice) {
         this.externalTotalPrice = externalTotalPrice;
         return this;
     }
+    
+    
 
     /**
      * value of lineItemId}
      * @return lineItemId
      */
-
-    public String getLineItemId() {
+    
+    
+    public String getLineItemId(){
         return this.lineItemId;
     }
-
+    
     /**
      * value of quantity}
      * @return quantity
      */
-
-    public Long getQuantity() {
+    
+    
+    public Long getQuantity(){
         return this.quantity;
     }
-
+    
     /**
      *  <p>Draft type that stores amounts only in cent precision for the specified currency.</p>
      * @return externalPrice
      */
-
+    
     @Nullable
-    public com.commercetools.api.models.common.Money getExternalPrice() {
+    public com.commercetools.api.models.common.Money getExternalPrice(){
         return this.externalPrice;
     }
-
+    
     /**
      * value of externalTotalPrice}
      * @return externalTotalPrice
      */
-
+    
     @Nullable
-    public com.commercetools.api.models.cart.ExternalLineItemTotalPrice getExternalTotalPrice() {
+    public com.commercetools.api.models.cart.ExternalLineItemTotalPrice getExternalTotalPrice(){
         return this.externalTotalPrice;
     }
 
@@ -180,7 +195,7 @@ public class StagedOrderChangeLineItemQuantityActionBuilder
         Objects.requireNonNull(quantity, StagedOrderChangeLineItemQuantityAction.class + ": quantity is missing");
         return new StagedOrderChangeLineItemQuantityActionImpl(lineItemId, quantity, externalPrice, externalTotalPrice);
     }
-
+    
     /**
      * builds StagedOrderChangeLineItemQuantityAction without checking for non-null required values
      * @return StagedOrderChangeLineItemQuantityAction
@@ -191,7 +206,7 @@ public class StagedOrderChangeLineItemQuantityActionBuilder
 
     /**
      * factory method for an instance of StagedOrderChangeLineItemQuantityActionBuilder
-     * @return builder
+     * @return builder 
      */
     public static StagedOrderChangeLineItemQuantityActionBuilder of() {
         return new StagedOrderChangeLineItemQuantityActionBuilder();
@@ -202,8 +217,7 @@ public class StagedOrderChangeLineItemQuantityActionBuilder
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static StagedOrderChangeLineItemQuantityActionBuilder of(
-            final StagedOrderChangeLineItemQuantityAction template) {
+    public static StagedOrderChangeLineItemQuantityActionBuilder of(final StagedOrderChangeLineItemQuantityAction template) {
         StagedOrderChangeLineItemQuantityActionBuilder builder = new StagedOrderChangeLineItemQuantityActionBuilder();
         builder.lineItemId = template.getLineItemId();
         builder.quantity = template.getQuantity();

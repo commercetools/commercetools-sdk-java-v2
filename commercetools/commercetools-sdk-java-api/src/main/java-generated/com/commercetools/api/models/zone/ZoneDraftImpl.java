@@ -1,46 +1,53 @@
-
 package com.commercetools.api.models.zone;
 
-import java.time.*;
-import java.util.*;
-
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
-
-import io.vrap.rmf.base.client.ModelBase;
+import com.commercetools.api.models.zone.Location;
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.ModelBase;
+import javax.validation.Valid;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.annotation.*;
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
  * ZoneDraft
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class ZoneDraftImpl implements ZoneDraft, ModelBase {
 
+    
     private String key;
-
+    
+    
     private String name;
-
+    
+    
     private String description;
-
+    
+    
     private java.util.List<com.commercetools.api.models.zone.Location> locations;
 
     /**
      * create instance with all properties
      */
     @JsonCreator
-    ZoneDraftImpl(@JsonProperty("key") final String key, @JsonProperty("name") final String name,
-            @JsonProperty("description") final String description,
-            @JsonProperty("locations") final java.util.List<com.commercetools.api.models.zone.Location> locations) {
+    ZoneDraftImpl(@JsonProperty("key") final String key, @JsonProperty("name") final String name, @JsonProperty("description") final String description, @JsonProperty("locations") final java.util.List<com.commercetools.api.models.zone.Location> locations) {
         this.key = key;
         this.name = name;
         this.description = description;
         this.locations = locations;
     }
-
     /**
      * create empty instance
      */
@@ -50,75 +57,84 @@ public class ZoneDraftImpl implements ZoneDraft, ModelBase {
     /**
      *  <p>User-defined unique identifier for the Zone.</p>
      */
-
-    public String getKey() {
+    
+    public String getKey(){
         return this.key;
     }
-
+    
     /**
      *  <p>Name of the Zone.</p>
      */
-
-    public String getName() {
+    
+    public String getName(){
         return this.name;
     }
-
+    
     /**
      *  <p>Description of the Zone.</p>
      */
-
-    public String getDescription() {
+    
+    public String getDescription(){
         return this.description;
     }
-
+    
     /**
      *  <p>List of locations that belong to the Zone.</p>
      */
-
-    public java.util.List<com.commercetools.api.models.zone.Location> getLocations() {
+    
+    public java.util.List<com.commercetools.api.models.zone.Location> getLocations(){
         return this.locations;
     }
 
-    public void setKey(final String key) {
+    
+    public void setKey(final String key){
         this.key = key;
     }
-
-    public void setName(final String name) {
+    
+    
+    public void setName(final String name){
         this.name = name;
     }
-
-    public void setDescription(final String description) {
+    
+    
+    public void setDescription(final String description){
         this.description = description;
     }
-
-    public void setLocations(final com.commercetools.api.models.zone.Location... locations) {
-        this.locations = new ArrayList<>(Arrays.asList(locations));
+    
+    
+    public void setLocations(final com.commercetools.api.models.zone.Location ...locations){
+       this.locations = new ArrayList<>(Arrays.asList(locations));
     }
-
-    public void setLocations(final java.util.List<com.commercetools.api.models.zone.Location> locations) {
-        this.locations = locations;
+    
+    
+    public void setLocations(final java.util.List<com.commercetools.api.models.zone.Location> locations){
+       this.locations = locations;
     }
 
     @Override
     public boolean equals(Object o) {
-        if (this == o)
-            return true;
-
-        if (o == null || getClass() != o.getClass())
-            return false;
-
+        if (this == o) return true;
+    
+        if (o == null || getClass() != o.getClass()) return false;
+    
         ZoneDraftImpl that = (ZoneDraftImpl) o;
-
-        return new EqualsBuilder().append(key, that.key)
+    
+        return new EqualsBuilder()
+                .append(key, that.key)
                 .append(name, that.name)
                 .append(description, that.description)
                 .append(locations, that.locations)
                 .isEquals();
     }
-
+    
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(key).append(name).append(description).append(locations).toHashCode();
+        return new HashCodeBuilder(17, 37)
+            .append(key)
+            .append(name)
+            .append(description)
+            .append(locations)
+            .toHashCode();
     }
 
 }

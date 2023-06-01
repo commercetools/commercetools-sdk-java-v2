@@ -1,19 +1,21 @@
-
 package com.commercetools.api.models.message;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
 import com.commercetools.api.models.customer.Customer;
+import com.commercetools.api.models.message.MessagePayload;
+import com.commercetools.api.models.message.CustomerCreatedMessagePayloadImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Generated after a successful Create Customer request.</p>
@@ -26,9 +28,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .customer(customerBuilder -> customerBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = CustomerCreatedMessagePayloadImpl.class)
 public interface CustomerCreatedMessagePayload extends MessagePayload {
 
@@ -50,16 +55,18 @@ public interface CustomerCreatedMessagePayload extends MessagePayload {
      *  <p>Customer that was created.</p>
      * @param customer value to be set
      */
-
+    
     public void setCustomer(final Customer customer);
+    
 
     /**
      * factory method
      * @return instance of CustomerCreatedMessagePayload
      */
-    public static CustomerCreatedMessagePayload of() {
+    public static CustomerCreatedMessagePayload of(){
         return new CustomerCreatedMessagePayloadImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy CustomerCreatedMessagePayload
@@ -94,7 +101,7 @@ public interface CustomerCreatedMessagePayload extends MessagePayload {
     public static CustomerCreatedMessagePayloadBuilder builder() {
         return CustomerCreatedMessagePayloadBuilder.of();
     }
-
+    
     /**
      * create builder for CustomerCreatedMessagePayload instance
      * @param template instance with prefilled values for the builder
@@ -103,6 +110,7 @@ public interface CustomerCreatedMessagePayload extends MessagePayload {
     public static CustomerCreatedMessagePayloadBuilder builder(final CustomerCreatedMessagePayload template) {
         return CustomerCreatedMessagePayloadBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -113,7 +121,7 @@ public interface CustomerCreatedMessagePayload extends MessagePayload {
     default <T> T withCustomerCreatedMessagePayload(Function<CustomerCreatedMessagePayload, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

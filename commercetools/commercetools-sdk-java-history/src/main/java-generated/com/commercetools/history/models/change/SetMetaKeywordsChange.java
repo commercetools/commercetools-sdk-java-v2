@@ -1,19 +1,21 @@
-
 package com.commercetools.history.models.change;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
+import com.commercetools.history.models.change.Change;
 import com.commercetools.history.models.common.LocalizedString;
+import com.commercetools.history.models.change.SetMetaKeywordsChangeImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * SetMetaKeywordsChange
@@ -28,9 +30,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .nextValue(nextValueBuilder -> nextValueBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = SetMetaKeywordsChangeImpl.class)
 public interface SetMetaKeywordsChange extends Change {
 
@@ -46,7 +51,6 @@ public interface SetMetaKeywordsChange extends Change {
     @NotNull
     @JsonProperty("type")
     public String getType();
-
     /**
      *  <p>Shape of the action for <code>setMetaKeywords</code></p>
      * @return change
@@ -54,7 +58,6 @@ public interface SetMetaKeywordsChange extends Change {
     @NotNull
     @JsonProperty("change")
     public String getChange();
-
     /**
      *
      * @return previousValue
@@ -63,7 +66,6 @@ public interface SetMetaKeywordsChange extends Change {
     @Valid
     @JsonProperty("previousValue")
     public LocalizedString getPreviousValue();
-
     /**
      *
      * @return nextValue
@@ -77,30 +79,34 @@ public interface SetMetaKeywordsChange extends Change {
      *  <p>Shape of the action for <code>setMetaKeywords</code></p>
      * @param change value to be set
      */
-
+    
     public void setChange(final String change);
-
+    
+    
     /**
      * set previousValue
      * @param previousValue value to be set
      */
-
+    
     public void setPreviousValue(final LocalizedString previousValue);
-
+    
+    
     /**
      * set nextValue
      * @param nextValue value to be set
      */
-
+    
     public void setNextValue(final LocalizedString nextValue);
+    
 
     /**
      * factory method
      * @return instance of SetMetaKeywordsChange
      */
-    public static SetMetaKeywordsChange of() {
+    public static SetMetaKeywordsChange of(){
         return new SetMetaKeywordsChangeImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy SetMetaKeywordsChange
@@ -127,10 +133,8 @@ public interface SetMetaKeywordsChange extends Change {
         }
         SetMetaKeywordsChangeImpl instance = new SetMetaKeywordsChangeImpl();
         instance.setChange(template.getChange());
-        instance.setPreviousValue(
-            com.commercetools.history.models.common.LocalizedString.deepCopy(template.getPreviousValue()));
-        instance.setNextValue(
-            com.commercetools.history.models.common.LocalizedString.deepCopy(template.getNextValue()));
+        instance.setPreviousValue(com.commercetools.history.models.common.LocalizedString.deepCopy(template.getPreviousValue()));
+        instance.setNextValue(com.commercetools.history.models.common.LocalizedString.deepCopy(template.getNextValue()));
         return instance;
     }
 
@@ -141,7 +145,7 @@ public interface SetMetaKeywordsChange extends Change {
     public static SetMetaKeywordsChangeBuilder builder() {
         return SetMetaKeywordsChangeBuilder.of();
     }
-
+    
     /**
      * create builder for SetMetaKeywordsChange instance
      * @param template instance with prefilled values for the builder
@@ -150,6 +154,7 @@ public interface SetMetaKeywordsChange extends Change {
     public static SetMetaKeywordsChangeBuilder builder(final SetMetaKeywordsChange template) {
         return SetMetaKeywordsChangeBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -160,7 +165,7 @@ public interface SetMetaKeywordsChange extends Change {
     default <T> T withSetMetaKeywordsChange(Function<SetMetaKeywordsChange, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

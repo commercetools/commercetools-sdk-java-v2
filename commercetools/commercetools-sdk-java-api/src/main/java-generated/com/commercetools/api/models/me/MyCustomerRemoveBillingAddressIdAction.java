@@ -1,16 +1,20 @@
-
 package com.commercetools.api.models.me;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
+import com.commercetools.api.models.me.MyCustomerUpdateAction;
+import com.commercetools.api.models.me.MyCustomerRemoveBillingAddressIdActionImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Removes an existing billing address from <code>billingAddressesIds</code>. If the billing address is the default billing address, the <code>defaultBillingAddressId</code> is unset. Either <code>addressId</code> or <code>addressKey</code> is required.</p>
@@ -22,9 +26,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     MyCustomerRemoveBillingAddressIdAction myCustomerRemoveBillingAddressIdAction = MyCustomerRemoveBillingAddressIdAction.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = MyCustomerRemoveBillingAddressIdActionImpl.class)
 public interface MyCustomerRemoveBillingAddressIdAction extends MyCustomerUpdateAction {
 
@@ -37,15 +44,14 @@ public interface MyCustomerRemoveBillingAddressIdAction extends MyCustomerUpdate
      *  <p><code>id</code> of the Address to remove from <code>billingAddressesIds</code>.</p>
      * @return addressId
      */
-
+    
     @JsonProperty("addressId")
     public String getAddressId();
-
     /**
      *  <p><code>key</code> of the Address to remove from <code>billingAddressesIds</code>.</p>
      * @return addressKey
      */
-
+    
     @JsonProperty("addressKey")
     public String getAddressKey();
 
@@ -53,23 +59,26 @@ public interface MyCustomerRemoveBillingAddressIdAction extends MyCustomerUpdate
      *  <p><code>id</code> of the Address to remove from <code>billingAddressesIds</code>.</p>
      * @param addressId value to be set
      */
-
+    
     public void setAddressId(final String addressId);
-
+    
+    
     /**
      *  <p><code>key</code> of the Address to remove from <code>billingAddressesIds</code>.</p>
      * @param addressKey value to be set
      */
-
+    
     public void setAddressKey(final String addressKey);
+    
 
     /**
      * factory method
      * @return instance of MyCustomerRemoveBillingAddressIdAction
      */
-    public static MyCustomerRemoveBillingAddressIdAction of() {
+    public static MyCustomerRemoveBillingAddressIdAction of(){
         return new MyCustomerRemoveBillingAddressIdActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy MyCustomerRemoveBillingAddressIdAction
@@ -89,8 +98,7 @@ public interface MyCustomerRemoveBillingAddressIdAction extends MyCustomerUpdate
      * @return copy instance
      */
     @Nullable
-    public static MyCustomerRemoveBillingAddressIdAction deepCopy(
-            @Nullable final MyCustomerRemoveBillingAddressIdAction template) {
+    public static MyCustomerRemoveBillingAddressIdAction deepCopy(@Nullable final MyCustomerRemoveBillingAddressIdAction template) {
         if (template == null) {
             return null;
         }
@@ -107,16 +115,16 @@ public interface MyCustomerRemoveBillingAddressIdAction extends MyCustomerUpdate
     public static MyCustomerRemoveBillingAddressIdActionBuilder builder() {
         return MyCustomerRemoveBillingAddressIdActionBuilder.of();
     }
-
+    
     /**
      * create builder for MyCustomerRemoveBillingAddressIdAction instance
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static MyCustomerRemoveBillingAddressIdActionBuilder builder(
-            final MyCustomerRemoveBillingAddressIdAction template) {
+    public static MyCustomerRemoveBillingAddressIdActionBuilder builder(final MyCustomerRemoveBillingAddressIdAction template) {
         return MyCustomerRemoveBillingAddressIdActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -124,11 +132,10 @@ public interface MyCustomerRemoveBillingAddressIdAction extends MyCustomerUpdate
      * @param helper function to map the object
      * @return mapped value
      */
-    default <T> T withMyCustomerRemoveBillingAddressIdAction(
-            Function<MyCustomerRemoveBillingAddressIdAction, T> helper) {
+    default <T> T withMyCustomerRemoveBillingAddressIdAction(Function<MyCustomerRemoveBillingAddressIdAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

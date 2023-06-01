@@ -1,10 +1,12 @@
-
 package com.commercetools.api.predicates.query.product_selection;
 
 import com.commercetools.api.predicates.query.*;
 
+import java.util.function.Function;
+
+
 @Deprecated
-public class ProductVariantSelectionInclusionQueryBuilderDsl {
+public class ProductVariantSelectionInclusionQueryBuilderDsl  {
     public ProductVariantSelectionInclusionQueryBuilderDsl() {
     }
 
@@ -13,15 +15,12 @@ public class ProductVariantSelectionInclusionQueryBuilderDsl {
     }
 
     public StringComparisonPredicateBuilder<ProductVariantSelectionInclusionQueryBuilderDsl> type() {
-        return new StringComparisonPredicateBuilder<>(
-            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("type")),
-            p -> new CombinationQueryPredicate<>(p, ProductVariantSelectionInclusionQueryBuilderDsl::of));
+        return new StringComparisonPredicateBuilder<>(BinaryQueryPredicate.of().left(new ConstantQueryPredicate("type")),
+        p -> new CombinationQueryPredicate<>(p, ProductVariantSelectionInclusionQueryBuilderDsl::of));
     }
-
     public StringCollectionPredicateBuilder<ProductVariantSelectionInclusionQueryBuilderDsl> skus() {
-        return new StringCollectionPredicateBuilder<>(
-            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("skus")),
-            p -> new CombinationQueryPredicate<>(p, ProductVariantSelectionInclusionQueryBuilderDsl::of));
+        return new StringCollectionPredicateBuilder<>(BinaryQueryPredicate.of().left(new ConstantQueryPredicate("skus")),
+        p -> new CombinationQueryPredicate<>(p, ProductVariantSelectionInclusionQueryBuilderDsl::of));
     }
-
+    
 }

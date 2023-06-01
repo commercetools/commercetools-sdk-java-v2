@@ -1,8 +1,12 @@
-
 package com.commercetools.api.models.cart;
 
+import com.commercetools.api.models.common.Reference;
+import com.commercetools.api.models.common.ReferenceTypeId;
+import com.commercetools.api.models.cart.DirectDiscountReference;
+import javax.annotation.Nullable;
 import java.util.*;
-
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -16,30 +20,39 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .id("{id}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class DirectDiscountReferenceBuilder implements Builder<DirectDiscountReference> {
 
+    
+    
     private String id;
 
+    
     /**
      *  <p>Unique identifier of the referenced DirectDiscount.</p>
      * @param id value to be set
      * @return Builder
      */
-
-    public DirectDiscountReferenceBuilder id(final String id) {
+    
+    public DirectDiscountReferenceBuilder id( final String id) {
         this.id = id;
         return this;
     }
+    
+    
 
     /**
      *  <p>Unique identifier of the referenced DirectDiscount.</p>
      * @return id
      */
-
-    public String getId() {
+    
+    
+    public String getId(){
         return this.id;
     }
 
@@ -51,7 +64,7 @@ public class DirectDiscountReferenceBuilder implements Builder<DirectDiscountRef
         Objects.requireNonNull(id, DirectDiscountReference.class + ": id is missing");
         return new DirectDiscountReferenceImpl(id);
     }
-
+    
     /**
      * builds DirectDiscountReference without checking for non-null required values
      * @return DirectDiscountReference
@@ -62,7 +75,7 @@ public class DirectDiscountReferenceBuilder implements Builder<DirectDiscountRef
 
     /**
      * factory method for an instance of DirectDiscountReferenceBuilder
-     * @return builder
+     * @return builder 
      */
     public static DirectDiscountReferenceBuilder of() {
         return new DirectDiscountReferenceBuilder();

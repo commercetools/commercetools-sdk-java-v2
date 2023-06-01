@@ -1,8 +1,11 @@
-
 package com.commercetools.api.models.product_discount;
 
+import com.commercetools.api.models.product_discount.ProductDiscountUpdateAction;
+import com.commercetools.api.models.product_discount.ProductDiscountChangeIsActiveAction;
+import javax.annotation.Nullable;
 import java.util.*;
-
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -16,30 +19,39 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .isActive(true)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class ProductDiscountChangeIsActiveActionBuilder implements Builder<ProductDiscountChangeIsActiveAction> {
 
+    
+    
     private Boolean isActive;
 
+    
     /**
      *  <p>New value to set. If set to <code>true</code>, the Discount will be applied to Product Prices.</p>
      * @param isActive value to be set
      * @return Builder
      */
-
-    public ProductDiscountChangeIsActiveActionBuilder isActive(final Boolean isActive) {
+    
+    public ProductDiscountChangeIsActiveActionBuilder isActive( final Boolean isActive) {
         this.isActive = isActive;
         return this;
     }
+    
+    
 
     /**
      *  <p>New value to set. If set to <code>true</code>, the Discount will be applied to Product Prices.</p>
      * @return isActive
      */
-
-    public Boolean getIsActive() {
+    
+    
+    public Boolean getIsActive(){
         return this.isActive;
     }
 
@@ -51,7 +63,7 @@ public class ProductDiscountChangeIsActiveActionBuilder implements Builder<Produ
         Objects.requireNonNull(isActive, ProductDiscountChangeIsActiveAction.class + ": isActive is missing");
         return new ProductDiscountChangeIsActiveActionImpl(isActive);
     }
-
+    
     /**
      * builds ProductDiscountChangeIsActiveAction without checking for non-null required values
      * @return ProductDiscountChangeIsActiveAction
@@ -62,7 +74,7 @@ public class ProductDiscountChangeIsActiveActionBuilder implements Builder<Produ
 
     /**
      * factory method for an instance of ProductDiscountChangeIsActiveActionBuilder
-     * @return builder
+     * @return builder 
      */
     public static ProductDiscountChangeIsActiveActionBuilder of() {
         return new ProductDiscountChangeIsActiveActionBuilder();

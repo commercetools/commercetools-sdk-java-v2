@@ -1,11 +1,12 @@
-
 package com.commercetools.api.models.payment;
 
+import com.commercetools.api.models.payment.PaymentUpdateAction;
+import com.commercetools.api.models.state.StateResourceIdentifier;
+import com.commercetools.api.models.payment.PaymentTransitionStateAction;
+import javax.annotation.Nullable;
 import java.util.*;
 import java.util.function.Function;
-
-import javax.annotation.Nullable;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -19,79 +20,89 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .state(stateBuilder -> stateBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class PaymentTransitionStateActionBuilder implements Builder<PaymentTransitionStateAction> {
 
+    
+    
     private com.commercetools.api.models.state.StateResourceIdentifier state;
-
+    
+    
     @Nullable
     private Boolean force;
 
+    
     /**
      *  <p>ResourceIdentifier to a State.</p>
      * @param builder function to build the state value
      * @return Builder
      */
-
-    public PaymentTransitionStateActionBuilder state(
-            Function<com.commercetools.api.models.state.StateResourceIdentifierBuilder, com.commercetools.api.models.state.StateResourceIdentifierBuilder> builder) {
+    
+    public PaymentTransitionStateActionBuilder state(Function<com.commercetools.api.models.state.StateResourceIdentifierBuilder, com.commercetools.api.models.state.StateResourceIdentifierBuilder> builder) {
         this.state = builder.apply(com.commercetools.api.models.state.StateResourceIdentifierBuilder.of()).build();
         return this;
     }
-
+    
     /**
      *  <p>ResourceIdentifier to a State.</p>
      * @param builder function to build the state value
      * @return Builder
      */
-
-    public PaymentTransitionStateActionBuilder withState(
-            Function<com.commercetools.api.models.state.StateResourceIdentifierBuilder, com.commercetools.api.models.state.StateResourceIdentifier> builder) {
+    
+    public PaymentTransitionStateActionBuilder withState(Function<com.commercetools.api.models.state.StateResourceIdentifierBuilder, com.commercetools.api.models.state.StateResourceIdentifier> builder) {
         this.state = builder.apply(com.commercetools.api.models.state.StateResourceIdentifierBuilder.of());
         return this;
     }
-
+                    
     /**
      *  <p>ResourceIdentifier to a State.</p>
      * @param state value to be set
      * @return Builder
      */
-
-    public PaymentTransitionStateActionBuilder state(
-            final com.commercetools.api.models.state.StateResourceIdentifier state) {
+    
+    public PaymentTransitionStateActionBuilder state( final com.commercetools.api.models.state.StateResourceIdentifier state) {
         this.state = state;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Set to <code>true</code> to skip validations when transitioning to the new State.</p>
      * @param force value to be set
      * @return Builder
      */
-
+    
     public PaymentTransitionStateActionBuilder force(@Nullable final Boolean force) {
         this.force = force;
         return this;
     }
+    
+    
 
     /**
      *  <p>ResourceIdentifier to a State.</p>
      * @return state
      */
-
-    public com.commercetools.api.models.state.StateResourceIdentifier getState() {
+    
+    
+    public com.commercetools.api.models.state.StateResourceIdentifier getState(){
         return this.state;
     }
-
+    
     /**
      *  <p>Set to <code>true</code> to skip validations when transitioning to the new State.</p>
      * @return force
      */
-
+    
     @Nullable
-    public Boolean getForce() {
+    public Boolean getForce(){
         return this.force;
     }
 
@@ -103,7 +114,7 @@ public class PaymentTransitionStateActionBuilder implements Builder<PaymentTrans
         Objects.requireNonNull(state, PaymentTransitionStateAction.class + ": state is missing");
         return new PaymentTransitionStateActionImpl(state, force);
     }
-
+    
     /**
      * builds PaymentTransitionStateAction without checking for non-null required values
      * @return PaymentTransitionStateAction
@@ -114,7 +125,7 @@ public class PaymentTransitionStateActionBuilder implements Builder<PaymentTrans
 
     /**
      * factory method for an instance of PaymentTransitionStateActionBuilder
-     * @return builder
+     * @return builder 
      */
     public static PaymentTransitionStateActionBuilder of() {
         return new PaymentTransitionStateActionBuilder();

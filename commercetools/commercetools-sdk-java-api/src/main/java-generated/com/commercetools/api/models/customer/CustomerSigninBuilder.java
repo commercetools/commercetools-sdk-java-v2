@@ -1,11 +1,12 @@
-
 package com.commercetools.api.models.customer;
 
+import com.commercetools.api.models.cart.CartResourceIdentifier;
+import com.commercetools.api.models.customer.AnonymousCartSignInMode;
+import com.commercetools.api.models.customer.CustomerSignin;
+import javax.annotation.Nullable;
 import java.util.*;
 import java.util.function.Function;
-
-import javax.annotation.Nullable;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -20,53 +21,71 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .password("{password}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class CustomerSigninBuilder implements Builder<CustomerSignin> {
 
+    
+    
     private String email;
-
+    
+    
+    
     private String password;
-
+    
     @Deprecated
     @Nullable
     private String anonymousCartId;
-
+    
+    
     @Nullable
     private com.commercetools.api.models.cart.CartResourceIdentifier anonymousCart;
-
+    
+    
     @Nullable
     private com.commercetools.api.models.customer.AnonymousCartSignInMode anonymousCartSignInMode;
-
+    
+    
     @Nullable
     private String anonymousId;
-
+    
+    
     @Nullable
     private Boolean updateProductData;
 
+    
     /**
      *  <p>Email address of the Customer treated as case-insensitive.</p>
      * @param email value to be set
      * @return Builder
      */
-
-    public CustomerSigninBuilder email(final String email) {
+    
+    public CustomerSigninBuilder email( final String email) {
         this.email = email;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Password of the Customer.</p>
      * @param password value to be set
      * @return Builder
      */
-
-    public CustomerSigninBuilder password(final String password) {
+    
+    public CustomerSigninBuilder password( final String password) {
         this.password = password;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Deprecated since it is now possible to identify an anonymous cart by using its <code>id</code> or external <code>key</code>.</p>
      * @param anonymousCartId value to be set
@@ -77,44 +96,46 @@ public class CustomerSigninBuilder implements Builder<CustomerSignin> {
         this.anonymousCartId = anonymousCartId;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Identifies a Cart that will be assigned to the Customer.</p>
      * @param builder function to build the anonymousCart value
      * @return Builder
      */
-
-    public CustomerSigninBuilder anonymousCart(
-            Function<com.commercetools.api.models.cart.CartResourceIdentifierBuilder, com.commercetools.api.models.cart.CartResourceIdentifierBuilder> builder) {
-        this.anonymousCart = builder.apply(com.commercetools.api.models.cart.CartResourceIdentifierBuilder.of())
-                .build();
+    
+    public CustomerSigninBuilder anonymousCart(Function<com.commercetools.api.models.cart.CartResourceIdentifierBuilder, com.commercetools.api.models.cart.CartResourceIdentifierBuilder> builder) {
+        this.anonymousCart = builder.apply(com.commercetools.api.models.cart.CartResourceIdentifierBuilder.of()).build();
         return this;
     }
-
+    
     /**
      *  <p>Identifies a Cart that will be assigned to the Customer.</p>
      * @param builder function to build the anonymousCart value
      * @return Builder
      */
-
-    public CustomerSigninBuilder withAnonymousCart(
-            Function<com.commercetools.api.models.cart.CartResourceIdentifierBuilder, com.commercetools.api.models.cart.CartResourceIdentifier> builder) {
+    
+    public CustomerSigninBuilder withAnonymousCart(Function<com.commercetools.api.models.cart.CartResourceIdentifierBuilder, com.commercetools.api.models.cart.CartResourceIdentifier> builder) {
         this.anonymousCart = builder.apply(com.commercetools.api.models.cart.CartResourceIdentifierBuilder.of());
         return this;
     }
-
+                    
     /**
      *  <p>Identifies a Cart that will be assigned to the Customer.</p>
      * @param anonymousCart value to be set
      * @return Builder
      */
-
-    public CustomerSigninBuilder anonymousCart(
-            @Nullable final com.commercetools.api.models.cart.CartResourceIdentifier anonymousCart) {
+    
+    public CustomerSigninBuilder anonymousCart(@Nullable final com.commercetools.api.models.cart.CartResourceIdentifier anonymousCart) {
         this.anonymousCart = anonymousCart;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <ul>
      *   <li>Set to <code>MergeWithExistingCustomerCart</code> if LineItems of the anonymous Cart should be merged with the active Customer Cart that has been modified most recently.</li>
@@ -123,24 +144,29 @@ public class CustomerSigninBuilder implements Builder<CustomerSignin> {
      * @param anonymousCartSignInMode value to be set
      * @return Builder
      */
-
-    public CustomerSigninBuilder anonymousCartSignInMode(
-            @Nullable final com.commercetools.api.models.customer.AnonymousCartSignInMode anonymousCartSignInMode) {
+    
+    public CustomerSigninBuilder anonymousCartSignInMode(@Nullable final com.commercetools.api.models.customer.AnonymousCartSignInMode anonymousCartSignInMode) {
         this.anonymousCartSignInMode = anonymousCartSignInMode;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>If both <code>anonymousCart</code> and <code>anonymousId</code> are provided, the <code>anonymousId</code> on the CustomerSignin must match that of the anonymous Cart. Otherwise a 400 Bad Request <code>Invalid Operation</code> error is returned with the message: "Cart with the ID cart-id does not have the expected anonymousId.".</p>
      * @param anonymousId value to be set
      * @return Builder
      */
-
+    
     public CustomerSigninBuilder anonymousId(@Nullable final String anonymousId) {
         this.anonymousId = anonymousId;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <ul>
      *   <li>If <code>true</code>, the LineItem Product data (<code>name</code>, <code>variant</code>, and <code>productType</code>) of the returned Cart will be updated.</li>
@@ -149,50 +175,54 @@ public class CustomerSigninBuilder implements Builder<CustomerSignin> {
      * @param updateProductData value to be set
      * @return Builder
      */
-
+    
     public CustomerSigninBuilder updateProductData(@Nullable final Boolean updateProductData) {
         this.updateProductData = updateProductData;
         return this;
     }
+    
+    
 
     /**
      *  <p>Email address of the Customer treated as case-insensitive.</p>
      * @return email
      */
-
-    public String getEmail() {
+    
+    
+    public String getEmail(){
         return this.email;
     }
-
+    
     /**
      *  <p>Password of the Customer.</p>
      * @return password
      */
-
-    public String getPassword() {
+    
+    
+    public String getPassword(){
         return this.password;
     }
-
+    
     /**
      *  <p>Deprecated since it is now possible to identify an anonymous cart by using its <code>id</code> or external <code>key</code>.</p>
      * @return anonymousCartId
      */
     @Deprecated
     @Nullable
-    public String getAnonymousCartId() {
+    public String getAnonymousCartId(){
         return this.anonymousCartId;
     }
-
+    
     /**
      *  <p>Identifies a Cart that will be assigned to the Customer.</p>
      * @return anonymousCart
      */
-
+    
     @Nullable
-    public com.commercetools.api.models.cart.CartResourceIdentifier getAnonymousCart() {
+    public com.commercetools.api.models.cart.CartResourceIdentifier getAnonymousCart(){
         return this.anonymousCart;
     }
-
+    
     /**
      *  <ul>
      *   <li>Set to <code>MergeWithExistingCustomerCart</code> if LineItems of the anonymous Cart should be merged with the active Customer Cart that has been modified most recently.</li>
@@ -200,22 +230,22 @@ public class CustomerSigninBuilder implements Builder<CustomerSignin> {
      *  </ul>
      * @return anonymousCartSignInMode
      */
-
+    
     @Nullable
-    public com.commercetools.api.models.customer.AnonymousCartSignInMode getAnonymousCartSignInMode() {
+    public com.commercetools.api.models.customer.AnonymousCartSignInMode getAnonymousCartSignInMode(){
         return this.anonymousCartSignInMode;
     }
-
+    
     /**
      *  <p>If both <code>anonymousCart</code> and <code>anonymousId</code> are provided, the <code>anonymousId</code> on the CustomerSignin must match that of the anonymous Cart. Otherwise a 400 Bad Request <code>Invalid Operation</code> error is returned with the message: "Cart with the ID cart-id does not have the expected anonymousId.".</p>
      * @return anonymousId
      */
-
+    
     @Nullable
-    public String getAnonymousId() {
+    public String getAnonymousId(){
         return this.anonymousId;
     }
-
+    
     /**
      *  <ul>
      *   <li>If <code>true</code>, the LineItem Product data (<code>name</code>, <code>variant</code>, and <code>productType</code>) of the returned Cart will be updated.</li>
@@ -223,9 +253,9 @@ public class CustomerSigninBuilder implements Builder<CustomerSignin> {
      *  </ul>
      * @return updateProductData
      */
-
+    
     @Nullable
-    public Boolean getUpdateProductData() {
+    public Boolean getUpdateProductData(){
         return this.updateProductData;
     }
 
@@ -236,22 +266,20 @@ public class CustomerSigninBuilder implements Builder<CustomerSignin> {
     public CustomerSignin build() {
         Objects.requireNonNull(email, CustomerSignin.class + ": email is missing");
         Objects.requireNonNull(password, CustomerSignin.class + ": password is missing");
-        return new CustomerSigninImpl(email, password, anonymousCartId, anonymousCart, anonymousCartSignInMode,
-            anonymousId, updateProductData);
+        return new CustomerSigninImpl(email, password, anonymousCartId, anonymousCart, anonymousCartSignInMode, anonymousId, updateProductData);
     }
-
+    
     /**
      * builds CustomerSignin without checking for non-null required values
      * @return CustomerSignin
      */
     public CustomerSignin buildUnchecked() {
-        return new CustomerSigninImpl(email, password, anonymousCartId, anonymousCart, anonymousCartSignInMode,
-            anonymousId, updateProductData);
+        return new CustomerSigninImpl(email, password, anonymousCartId, anonymousCart, anonymousCartSignInMode, anonymousId, updateProductData);
     }
 
     /**
      * factory method for an instance of CustomerSigninBuilder
-     * @return builder
+     * @return builder 
      */
     public static CustomerSigninBuilder of() {
         return new CustomerSigninBuilder();

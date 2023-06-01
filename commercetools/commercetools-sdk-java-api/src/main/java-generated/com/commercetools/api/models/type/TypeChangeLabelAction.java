@@ -1,19 +1,21 @@
-
 package com.commercetools.api.models.type;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
 import com.commercetools.api.models.common.LocalizedString;
+import com.commercetools.api.models.type.TypeUpdateAction;
+import com.commercetools.api.models.type.TypeChangeLabelActionImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * TypeChangeLabelAction
@@ -27,9 +29,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .label(labelBuilder -> labelBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = TypeChangeLabelActionImpl.class)
 public interface TypeChangeLabelAction extends TypeUpdateAction {
 
@@ -45,7 +50,6 @@ public interface TypeChangeLabelAction extends TypeUpdateAction {
     @NotNull
     @JsonProperty("fieldName")
     public String getFieldName();
-
     /**
      *  <p>JSON object where the keys are of type Locale, and the values are the strings used for the corresponding language.</p>
      * @return label
@@ -59,23 +63,26 @@ public interface TypeChangeLabelAction extends TypeUpdateAction {
      *  <p>Name of the Field Definition to update.</p>
      * @param fieldName value to be set
      */
-
+    
     public void setFieldName(final String fieldName);
-
+    
+    
     /**
      *  <p>JSON object where the keys are of type Locale, and the values are the strings used for the corresponding language.</p>
      * @param label value to be set
      */
-
+    
     public void setLabel(final LocalizedString label);
+    
 
     /**
      * factory method
      * @return instance of TypeChangeLabelAction
      */
-    public static TypeChangeLabelAction of() {
+    public static TypeChangeLabelAction of(){
         return new TypeChangeLabelActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy TypeChangeLabelAction
@@ -112,7 +119,7 @@ public interface TypeChangeLabelAction extends TypeUpdateAction {
     public static TypeChangeLabelActionBuilder builder() {
         return TypeChangeLabelActionBuilder.of();
     }
-
+    
     /**
      * create builder for TypeChangeLabelAction instance
      * @param template instance with prefilled values for the builder
@@ -121,6 +128,7 @@ public interface TypeChangeLabelAction extends TypeUpdateAction {
     public static TypeChangeLabelActionBuilder builder(final TypeChangeLabelAction template) {
         return TypeChangeLabelActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -131,7 +139,7 @@ public interface TypeChangeLabelAction extends TypeUpdateAction {
     default <T> T withTypeChangeLabelAction(Function<TypeChangeLabelAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

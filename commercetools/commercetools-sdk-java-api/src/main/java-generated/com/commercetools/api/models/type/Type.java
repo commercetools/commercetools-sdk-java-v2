@@ -1,24 +1,26 @@
-
 package com.commercetools.api.models.type;
-
-import java.time.*;
-import java.time.ZonedDateTime;
-import java.util.*;
-import java.util.function.Function;
-import java.util.stream.Collectors;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.common.BaseResource;
 import com.commercetools.api.models.common.CreatedBy;
 import com.commercetools.api.models.common.LastModifiedBy;
 import com.commercetools.api.models.common.LocalizedString;
+import com.commercetools.api.models.type.FieldDefinition;
+import com.commercetools.api.models.type.ResourceTypeId;
+import java.time.ZonedDateTime;
+import com.commercetools.api.models.type.TypeImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * Type
@@ -38,13 +40,15 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .plusFieldDefinitions(fieldDefinitionsBuilder -> fieldDefinitionsBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = TypeImpl.class)
-public interface Type extends BaseResource, TypeMixin, com.commercetools.api.models.DomainResource<Type>,
-        com.commercetools.api.models.Referencable<Type>, com.commercetools.api.models.ResourceIdentifiable<Type>,
-        com.commercetools.api.models.WithKey {
+public interface Type extends BaseResource, TypeMixin, com.commercetools.api.models.DomainResource<Type>, com.commercetools.api.models.Referencable<Type>, com.commercetools.api.models.ResourceIdentifiable<Type>, com.commercetools.api.models.WithKey {
+
 
     /**
      *  <p>Unique identifier of the Type.</p>
@@ -53,7 +57,6 @@ public interface Type extends BaseResource, TypeMixin, com.commercetools.api.mod
     @NotNull
     @JsonProperty("id")
     public String getId();
-
     /**
      *  <p>Current version of the Type.</p>
      * @return version
@@ -61,7 +64,6 @@ public interface Type extends BaseResource, TypeMixin, com.commercetools.api.mod
     @NotNull
     @JsonProperty("version")
     public Long getVersion();
-
     /**
      *  <p>Date and time (UTC) the Type was initially created.</p>
      * @return createdAt
@@ -69,7 +71,6 @@ public interface Type extends BaseResource, TypeMixin, com.commercetools.api.mod
     @NotNull
     @JsonProperty("createdAt")
     public ZonedDateTime getCreatedAt();
-
     /**
      *  <p>Date and time (UTC) the Type was last updated.</p>
      * @return lastModifiedAt
@@ -77,7 +78,6 @@ public interface Type extends BaseResource, TypeMixin, com.commercetools.api.mod
     @NotNull
     @JsonProperty("lastModifiedAt")
     public ZonedDateTime getLastModifiedAt();
-
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      * @return lastModifiedBy
@@ -85,7 +85,6 @@ public interface Type extends BaseResource, TypeMixin, com.commercetools.api.mod
     @Valid
     @JsonProperty("lastModifiedBy")
     public LastModifiedBy getLastModifiedBy();
-
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      * @return createdBy
@@ -93,7 +92,6 @@ public interface Type extends BaseResource, TypeMixin, com.commercetools.api.mod
     @Valid
     @JsonProperty("createdBy")
     public CreatedBy getCreatedBy();
-
     /**
      *  <p>User-defined unique identifier of the Type.</p>
      * @return key
@@ -101,7 +99,6 @@ public interface Type extends BaseResource, TypeMixin, com.commercetools.api.mod
     @NotNull
     @JsonProperty("key")
     public String getKey();
-
     /**
      *  <p>Name of the Type.</p>
      * @return name
@@ -110,7 +107,6 @@ public interface Type extends BaseResource, TypeMixin, com.commercetools.api.mod
     @Valid
     @JsonProperty("name")
     public LocalizedString getName();
-
     /**
      *  <p>Description of the Type.</p>
      * @return description
@@ -118,7 +114,6 @@ public interface Type extends BaseResource, TypeMixin, com.commercetools.api.mod
     @Valid
     @JsonProperty("description")
     public LocalizedString getDescription();
-
     /**
      *  <p>Resources and/or data types for which the Type is defined.</p>
      * @return resourceTypeIds
@@ -126,7 +121,6 @@ public interface Type extends BaseResource, TypeMixin, com.commercetools.api.mod
     @NotNull
     @JsonProperty("resourceTypeIds")
     public List<ResourceTypeId> getResourceTypeIds();
-
     /**
      *  <p>Defines Custom Fields.</p>
      * @return fieldDefinitions
@@ -140,102 +134,110 @@ public interface Type extends BaseResource, TypeMixin, com.commercetools.api.mod
      *  <p>Unique identifier of the Type.</p>
      * @param id value to be set
      */
-
+    
     public void setId(final String id);
-
+    
+    
     /**
      *  <p>Current version of the Type.</p>
      * @param version value to be set
      */
-
+    
     public void setVersion(final Long version);
-
+    
+    
     /**
      *  <p>Date and time (UTC) the Type was initially created.</p>
      * @param createdAt value to be set
      */
-
+    
     public void setCreatedAt(final ZonedDateTime createdAt);
-
+    
+    
     /**
      *  <p>Date and time (UTC) the Type was last updated.</p>
      * @param lastModifiedAt value to be set
      */
-
+    
     public void setLastModifiedAt(final ZonedDateTime lastModifiedAt);
-
+    
+    
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      * @param lastModifiedBy value to be set
      */
-
+    
     public void setLastModifiedBy(final LastModifiedBy lastModifiedBy);
-
+    
+    
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      * @param createdBy value to be set
      */
-
+    
     public void setCreatedBy(final CreatedBy createdBy);
-
+    
+    
     /**
      *  <p>User-defined unique identifier of the Type.</p>
      * @param key value to be set
      */
-
+    
     public void setKey(final String key);
-
+    
+    
     /**
      *  <p>Name of the Type.</p>
      * @param name value to be set
      */
-
+    
     public void setName(final LocalizedString name);
-
+    
+    
     /**
      *  <p>Description of the Type.</p>
      * @param description value to be set
      */
-
+    
     public void setDescription(final LocalizedString description);
-
+    
+    
     /**
      *  <p>Resources and/or data types for which the Type is defined.</p>
      * @param resourceTypeIds values to be set
      */
-
+    
     @JsonIgnore
-    public void setResourceTypeIds(final ResourceTypeId... resourceTypeIds);
-
+    public void setResourceTypeIds(final ResourceTypeId ...resourceTypeIds);
     /**
      *  <p>Resources and/or data types for which the Type is defined.</p>
      * @param resourceTypeIds values to be set
      */
-
+    
     public void setResourceTypeIds(final List<ResourceTypeId> resourceTypeIds);
-
+    
     /**
      *  <p>Defines Custom Fields.</p>
      * @param fieldDefinitions values to be set
      */
-
+    
     @JsonIgnore
-    public void setFieldDefinitions(final FieldDefinition... fieldDefinitions);
-
+    public void setFieldDefinitions(final FieldDefinition ...fieldDefinitions);
     /**
      *  <p>Defines Custom Fields.</p>
      * @param fieldDefinitions values to be set
      */
-
+    
     public void setFieldDefinitions(final List<FieldDefinition> fieldDefinitions);
 
     /**
      * factory method
      * @return instance of Type
      */
-    public static Type of() {
+    public static Type of(){
         return new TypeImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy Type
@@ -273,19 +275,16 @@ public interface Type extends BaseResource, TypeMixin, com.commercetools.api.mod
         instance.setVersion(template.getVersion());
         instance.setCreatedAt(template.getCreatedAt());
         instance.setLastModifiedAt(template.getLastModifiedAt());
-        instance.setLastModifiedBy(
-            com.commercetools.api.models.common.LastModifiedBy.deepCopy(template.getLastModifiedBy()));
+        instance.setLastModifiedBy(com.commercetools.api.models.common.LastModifiedBy.deepCopy(template.getLastModifiedBy()));
         instance.setCreatedBy(com.commercetools.api.models.common.CreatedBy.deepCopy(template.getCreatedBy()));
         instance.setKey(template.getKey());
         instance.setName(com.commercetools.api.models.common.LocalizedString.deepCopy(template.getName()));
-        instance.setDescription(
-            com.commercetools.api.models.common.LocalizedString.deepCopy(template.getDescription()));
-        instance.setResourceTypeIds(
-            Optional.ofNullable(template.getResourceTypeIds()).map(ArrayList::new).orElse(null));
+        instance.setDescription(com.commercetools.api.models.common.LocalizedString.deepCopy(template.getDescription()));
+        instance.setResourceTypeIds(Optional.ofNullable(template.getResourceTypeIds())
+                .map(ArrayList::new)
+                .orElse(null));
         instance.setFieldDefinitions(Optional.ofNullable(template.getFieldDefinitions())
-                .map(t -> t.stream()
-                        .map(com.commercetools.api.models.type.FieldDefinition::deepCopy)
-                        .collect(Collectors.toList()))
+                .map(t -> t.stream().map(com.commercetools.api.models.type.FieldDefinition::deepCopy).collect(Collectors.toList()))
                 .orElse(null));
         return instance;
     }
@@ -297,7 +296,7 @@ public interface Type extends BaseResource, TypeMixin, com.commercetools.api.mod
     public static TypeBuilder builder() {
         return TypeBuilder.of();
     }
-
+    
     /**
      * create builder for Type instance
      * @param template instance with prefilled values for the builder
@@ -306,6 +305,7 @@ public interface Type extends BaseResource, TypeMixin, com.commercetools.api.mod
     public static TypeBuilder builder(final Type template) {
         return TypeBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -316,11 +316,11 @@ public interface Type extends BaseResource, TypeMixin, com.commercetools.api.mod
     default <T> T withType(Function<Type, T> helper) {
         return helper.apply(this);
     }
-
     public static com.commercetools.api.models.common.ReferenceTypeId referenceTypeId() {
         return com.commercetools.api.models.common.ReferenceTypeId.TYPE;
     }
-
+    
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

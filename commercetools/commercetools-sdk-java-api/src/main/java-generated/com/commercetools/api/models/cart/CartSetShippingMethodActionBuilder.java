@@ -1,11 +1,13 @@
-
 package com.commercetools.api.models.cart;
 
+import com.commercetools.api.models.cart.CartUpdateAction;
+import com.commercetools.api.models.cart.ExternalTaxRateDraft;
+import com.commercetools.api.models.shipping_method.ShippingMethodResourceIdentifier;
+import com.commercetools.api.models.cart.CartSetShippingMethodAction;
+import javax.annotation.Nullable;
 import java.util.*;
 import java.util.function.Function;
-
-import javax.annotation.Nullable;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -18,114 +20,115 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     CartSetShippingMethodAction cartSetShippingMethodAction = CartSetShippingMethodAction.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class CartSetShippingMethodActionBuilder implements Builder<CartSetShippingMethodAction> {
 
+    
     @Nullable
     private com.commercetools.api.models.shipping_method.ShippingMethodResourceIdentifier shippingMethod;
-
+    
+    
     @Nullable
     private com.commercetools.api.models.cart.ExternalTaxRateDraft externalTaxRate;
 
+    
     /**
      *  <p>Value to set. If empty, any existing value is removed.</p>
      *  <p>If the referenced Shipping Method has a predicate that does not match the Cart, an InvalidOperation error is returned.</p>
      * @param builder function to build the shippingMethod value
      * @return Builder
      */
-
-    public CartSetShippingMethodActionBuilder shippingMethod(
-            Function<com.commercetools.api.models.shipping_method.ShippingMethodResourceIdentifierBuilder, com.commercetools.api.models.shipping_method.ShippingMethodResourceIdentifierBuilder> builder) {
-        this.shippingMethod = builder
-                .apply(com.commercetools.api.models.shipping_method.ShippingMethodResourceIdentifierBuilder.of())
-                .build();
+    
+    public CartSetShippingMethodActionBuilder shippingMethod(Function<com.commercetools.api.models.shipping_method.ShippingMethodResourceIdentifierBuilder, com.commercetools.api.models.shipping_method.ShippingMethodResourceIdentifierBuilder> builder) {
+        this.shippingMethod = builder.apply(com.commercetools.api.models.shipping_method.ShippingMethodResourceIdentifierBuilder.of()).build();
         return this;
     }
-
+    
     /**
      *  <p>Value to set. If empty, any existing value is removed.</p>
      *  <p>If the referenced Shipping Method has a predicate that does not match the Cart, an InvalidOperation error is returned.</p>
      * @param builder function to build the shippingMethod value
      * @return Builder
      */
-
-    public CartSetShippingMethodActionBuilder withShippingMethod(
-            Function<com.commercetools.api.models.shipping_method.ShippingMethodResourceIdentifierBuilder, com.commercetools.api.models.shipping_method.ShippingMethodResourceIdentifier> builder) {
-        this.shippingMethod = builder
-                .apply(com.commercetools.api.models.shipping_method.ShippingMethodResourceIdentifierBuilder.of());
+    
+    public CartSetShippingMethodActionBuilder withShippingMethod(Function<com.commercetools.api.models.shipping_method.ShippingMethodResourceIdentifierBuilder, com.commercetools.api.models.shipping_method.ShippingMethodResourceIdentifier> builder) {
+        this.shippingMethod = builder.apply(com.commercetools.api.models.shipping_method.ShippingMethodResourceIdentifierBuilder.of());
         return this;
     }
-
+                    
     /**
      *  <p>Value to set. If empty, any existing value is removed.</p>
      *  <p>If the referenced Shipping Method has a predicate that does not match the Cart, an InvalidOperation error is returned.</p>
      * @param shippingMethod value to be set
      * @return Builder
      */
-
-    public CartSetShippingMethodActionBuilder shippingMethod(
-            @Nullable final com.commercetools.api.models.shipping_method.ShippingMethodResourceIdentifier shippingMethod) {
+    
+    public CartSetShippingMethodActionBuilder shippingMethod(@Nullable final com.commercetools.api.models.shipping_method.ShippingMethodResourceIdentifier shippingMethod) {
         this.shippingMethod = shippingMethod;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>An external Tax Rate can be set if the Cart has the <code>External</code> TaxMode.</p>
      * @param builder function to build the externalTaxRate value
      * @return Builder
      */
-
-    public CartSetShippingMethodActionBuilder externalTaxRate(
-            Function<com.commercetools.api.models.cart.ExternalTaxRateDraftBuilder, com.commercetools.api.models.cart.ExternalTaxRateDraftBuilder> builder) {
-        this.externalTaxRate = builder.apply(com.commercetools.api.models.cart.ExternalTaxRateDraftBuilder.of())
-                .build();
+    
+    public CartSetShippingMethodActionBuilder externalTaxRate(Function<com.commercetools.api.models.cart.ExternalTaxRateDraftBuilder, com.commercetools.api.models.cart.ExternalTaxRateDraftBuilder> builder) {
+        this.externalTaxRate = builder.apply(com.commercetools.api.models.cart.ExternalTaxRateDraftBuilder.of()).build();
         return this;
     }
-
+    
     /**
      *  <p>An external Tax Rate can be set if the Cart has the <code>External</code> TaxMode.</p>
      * @param builder function to build the externalTaxRate value
      * @return Builder
      */
-
-    public CartSetShippingMethodActionBuilder withExternalTaxRate(
-            Function<com.commercetools.api.models.cart.ExternalTaxRateDraftBuilder, com.commercetools.api.models.cart.ExternalTaxRateDraft> builder) {
+    
+    public CartSetShippingMethodActionBuilder withExternalTaxRate(Function<com.commercetools.api.models.cart.ExternalTaxRateDraftBuilder, com.commercetools.api.models.cart.ExternalTaxRateDraft> builder) {
         this.externalTaxRate = builder.apply(com.commercetools.api.models.cart.ExternalTaxRateDraftBuilder.of());
         return this;
     }
-
+                    
     /**
      *  <p>An external Tax Rate can be set if the Cart has the <code>External</code> TaxMode.</p>
      * @param externalTaxRate value to be set
      * @return Builder
      */
-
-    public CartSetShippingMethodActionBuilder externalTaxRate(
-            @Nullable final com.commercetools.api.models.cart.ExternalTaxRateDraft externalTaxRate) {
+    
+    public CartSetShippingMethodActionBuilder externalTaxRate(@Nullable final com.commercetools.api.models.cart.ExternalTaxRateDraft externalTaxRate) {
         this.externalTaxRate = externalTaxRate;
         return this;
     }
+    
+    
 
     /**
      *  <p>Value to set. If empty, any existing value is removed.</p>
      *  <p>If the referenced Shipping Method has a predicate that does not match the Cart, an InvalidOperation error is returned.</p>
      * @return shippingMethod
      */
-
+    
     @Nullable
-    public com.commercetools.api.models.shipping_method.ShippingMethodResourceIdentifier getShippingMethod() {
+    public com.commercetools.api.models.shipping_method.ShippingMethodResourceIdentifier getShippingMethod(){
         return this.shippingMethod;
     }
-
+    
     /**
      *  <p>An external Tax Rate can be set if the Cart has the <code>External</code> TaxMode.</p>
      * @return externalTaxRate
      */
-
+    
     @Nullable
-    public com.commercetools.api.models.cart.ExternalTaxRateDraft getExternalTaxRate() {
+    public com.commercetools.api.models.cart.ExternalTaxRateDraft getExternalTaxRate(){
         return this.externalTaxRate;
     }
 
@@ -136,7 +139,7 @@ public class CartSetShippingMethodActionBuilder implements Builder<CartSetShippi
     public CartSetShippingMethodAction build() {
         return new CartSetShippingMethodActionImpl(shippingMethod, externalTaxRate);
     }
-
+    
     /**
      * builds CartSetShippingMethodAction without checking for non-null required values
      * @return CartSetShippingMethodAction
@@ -147,7 +150,7 @@ public class CartSetShippingMethodActionBuilder implements Builder<CartSetShippi
 
     /**
      * factory method for an instance of CartSetShippingMethodActionBuilder
-     * @return builder
+     * @return builder 
      */
     public static CartSetShippingMethodActionBuilder of() {
         return new CartSetShippingMethodActionBuilder();

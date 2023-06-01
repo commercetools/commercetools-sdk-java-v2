@@ -1,20 +1,22 @@
-
 package com.commercetools.api.models.business_unit;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
+import com.commercetools.api.models.business_unit.BusinessUnitUpdateAction;
 import com.commercetools.api.models.type.FieldContainer;
 import com.commercetools.api.models.type.TypeResourceIdentifier;
+import com.commercetools.api.models.business_unit.BusinessUnitSetAddressCustomTypeActionImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * BusinessUnitSetAddressCustomTypeAction
@@ -27,9 +29,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .addressId("{addressId}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = BusinessUnitSetAddressCustomTypeActionImpl.class)
 public interface BusinessUnitSetAddressCustomTypeAction extends BusinessUnitUpdateAction {
 
@@ -45,7 +50,6 @@ public interface BusinessUnitSetAddressCustomTypeAction extends BusinessUnitUpda
     @Valid
     @JsonProperty("type")
     public TypeResourceIdentifier getType();
-
     /**
      *  <p>Sets the Custom Fields for the <code>address</code>.</p>
      * @return fields
@@ -53,7 +57,6 @@ public interface BusinessUnitSetAddressCustomTypeAction extends BusinessUnitUpda
     @Valid
     @JsonProperty("fields")
     public FieldContainer getFields();
-
     /**
      *  <p>ID of the address to be extended.</p>
      * @return addressId
@@ -66,30 +69,34 @@ public interface BusinessUnitSetAddressCustomTypeAction extends BusinessUnitUpda
      *  <p>Defines the Type that extends the <code>address</code> with Custom Fields. If absent, any existing Type and Custom Fields are removed from the <code>address</code>.</p>
      * @param type value to be set
      */
-
+    
     public void setType(final TypeResourceIdentifier type);
-
+    
+    
     /**
      *  <p>Sets the Custom Fields for the <code>address</code>.</p>
      * @param fields value to be set
      */
-
+    
     public void setFields(final FieldContainer fields);
-
+    
+    
     /**
      *  <p>ID of the address to be extended.</p>
      * @param addressId value to be set
      */
-
+    
     public void setAddressId(final String addressId);
+    
 
     /**
      * factory method
      * @return instance of BusinessUnitSetAddressCustomTypeAction
      */
-    public static BusinessUnitSetAddressCustomTypeAction of() {
+    public static BusinessUnitSetAddressCustomTypeAction of(){
         return new BusinessUnitSetAddressCustomTypeActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy BusinessUnitSetAddressCustomTypeAction
@@ -110,8 +117,7 @@ public interface BusinessUnitSetAddressCustomTypeAction extends BusinessUnitUpda
      * @return copy instance
      */
     @Nullable
-    public static BusinessUnitSetAddressCustomTypeAction deepCopy(
-            @Nullable final BusinessUnitSetAddressCustomTypeAction template) {
+    public static BusinessUnitSetAddressCustomTypeAction deepCopy(@Nullable final BusinessUnitSetAddressCustomTypeAction template) {
         if (template == null) {
             return null;
         }
@@ -129,16 +135,16 @@ public interface BusinessUnitSetAddressCustomTypeAction extends BusinessUnitUpda
     public static BusinessUnitSetAddressCustomTypeActionBuilder builder() {
         return BusinessUnitSetAddressCustomTypeActionBuilder.of();
     }
-
+    
     /**
      * create builder for BusinessUnitSetAddressCustomTypeAction instance
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static BusinessUnitSetAddressCustomTypeActionBuilder builder(
-            final BusinessUnitSetAddressCustomTypeAction template) {
+    public static BusinessUnitSetAddressCustomTypeActionBuilder builder(final BusinessUnitSetAddressCustomTypeAction template) {
         return BusinessUnitSetAddressCustomTypeActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -146,11 +152,10 @@ public interface BusinessUnitSetAddressCustomTypeAction extends BusinessUnitUpda
      * @param helper function to map the object
      * @return mapped value
      */
-    default <T> T withBusinessUnitSetAddressCustomTypeAction(
-            Function<BusinessUnitSetAddressCustomTypeAction, T> helper) {
+    default <T> T withBusinessUnitSetAddressCustomTypeAction(Function<BusinessUnitSetAddressCustomTypeAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

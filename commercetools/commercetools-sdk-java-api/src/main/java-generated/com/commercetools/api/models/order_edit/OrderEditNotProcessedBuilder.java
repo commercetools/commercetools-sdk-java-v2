@@ -1,8 +1,11 @@
-
 package com.commercetools.api.models.order_edit;
 
+import com.commercetools.api.models.order_edit.OrderEditResult;
+import com.commercetools.api.models.order_edit.OrderEditNotProcessed;
+import javax.annotation.Nullable;
 import java.util.*;
-
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -15,10 +18,16 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     OrderEditNotProcessed orderEditNotProcessed = OrderEditNotProcessed.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class OrderEditNotProcessedBuilder implements Builder<OrderEditNotProcessed> {
+
+
+
 
     /**
      * builds OrderEditNotProcessed with checking for non-null required values
@@ -27,7 +36,7 @@ public class OrderEditNotProcessedBuilder implements Builder<OrderEditNotProcess
     public OrderEditNotProcessed build() {
         return new OrderEditNotProcessedImpl();
     }
-
+    
     /**
      * builds OrderEditNotProcessed without checking for non-null required values
      * @return OrderEditNotProcessed
@@ -38,7 +47,7 @@ public class OrderEditNotProcessedBuilder implements Builder<OrderEditNotProcess
 
     /**
      * factory method for an instance of OrderEditNotProcessedBuilder
-     * @return builder
+     * @return builder 
      */
     public static OrderEditNotProcessedBuilder of() {
         return new OrderEditNotProcessedBuilder();

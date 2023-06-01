@@ -1,17 +1,21 @@
-
 package com.commercetools.api.models.quote_request;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-
+import com.commercetools.api.models.common.ReferenceTypeId;
 import com.commercetools.api.models.common.ResourceIdentifier;
+import com.commercetools.api.models.quote_request.QuoteRequestResourceIdentifierImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>ResourceIdentifier to a QuoteRequest.</p>
@@ -23,25 +27,30 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     QuoteRequestResourceIdentifier quoteRequestResourceIdentifier = QuoteRequestResourceIdentifier.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = QuoteRequestResourceIdentifierImpl.class)
-public interface QuoteRequestResourceIdentifier
-        extends ResourceIdentifier, com.commercetools.api.models.Identifiable<QuoteRequest> {
+public interface QuoteRequestResourceIdentifier extends ResourceIdentifier, com.commercetools.api.models.Identifiable<QuoteRequest> {
 
     /**
      * discriminator value for QuoteRequestResourceIdentifier
      */
     String QUOTE_REQUEST = "quote-request";
 
+
+
     /**
      * factory method
      * @return instance of QuoteRequestResourceIdentifier
      */
-    public static QuoteRequestResourceIdentifier of() {
+    public static QuoteRequestResourceIdentifier of(){
         return new QuoteRequestResourceIdentifierImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy QuoteRequestResourceIdentifier
@@ -78,7 +87,7 @@ public interface QuoteRequestResourceIdentifier
     public static QuoteRequestResourceIdentifierBuilder builder() {
         return QuoteRequestResourceIdentifierBuilder.of();
     }
-
+    
     /**
      * create builder for QuoteRequestResourceIdentifier instance
      * @param template instance with prefilled values for the builder
@@ -87,6 +96,7 @@ public interface QuoteRequestResourceIdentifier
     public static QuoteRequestResourceIdentifierBuilder builder(final QuoteRequestResourceIdentifier template) {
         return QuoteRequestResourceIdentifierBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -97,7 +107,7 @@ public interface QuoteRequestResourceIdentifier
     default <T> T withQuoteRequestResourceIdentifier(Function<QuoteRequestResourceIdentifier, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

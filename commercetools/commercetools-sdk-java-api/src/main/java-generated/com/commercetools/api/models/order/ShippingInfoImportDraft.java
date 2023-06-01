@@ -1,25 +1,27 @@
-
 package com.commercetools.api.models.order;
-
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-import java.util.stream.Collectors;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.cart.ShippingMethodState;
 import com.commercetools.api.models.common.Money;
+import com.commercetools.api.models.order.DeliveryDraft;
+import com.commercetools.api.models.order.DiscountedLineItemPriceDraft;
 import com.commercetools.api.models.shipping_method.ShippingMethodResourceIdentifier;
 import com.commercetools.api.models.shipping_method.ShippingRateDraft;
 import com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifier;
 import com.commercetools.api.models.tax_category.TaxRate;
+import com.commercetools.api.models.order.ShippingInfoImportDraftImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * ShippingInfoImportDraft
@@ -34,11 +36,15 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .shippingRate(shippingRateBuilder -> shippingRateBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = ShippingInfoImportDraftImpl.class)
 public interface ShippingInfoImportDraft extends io.vrap.rmf.base.client.Draft<ShippingInfoImportDraft> {
+
 
     /**
      *
@@ -47,7 +53,6 @@ public interface ShippingInfoImportDraft extends io.vrap.rmf.base.client.Draft<S
     @NotNull
     @JsonProperty("shippingMethodName")
     public String getShippingMethodName();
-
     /**
      *
      * @return price
@@ -56,7 +61,6 @@ public interface ShippingInfoImportDraft extends io.vrap.rmf.base.client.Draft<S
     @Valid
     @JsonProperty("price")
     public Money getPrice();
-
     /**
      *  <p>The shipping rate used to determine the price.</p>
      * @return shippingRate
@@ -65,7 +69,6 @@ public interface ShippingInfoImportDraft extends io.vrap.rmf.base.client.Draft<S
     @Valid
     @JsonProperty("shippingRate")
     public ShippingRateDraft getShippingRate();
-
     /**
      *
      * @return taxRate
@@ -73,7 +76,6 @@ public interface ShippingInfoImportDraft extends io.vrap.rmf.base.client.Draft<S
     @Valid
     @JsonProperty("taxRate")
     public TaxRate getTaxRate();
-
     /**
      *
      * @return taxCategory
@@ -81,7 +83,6 @@ public interface ShippingInfoImportDraft extends io.vrap.rmf.base.client.Draft<S
     @Valid
     @JsonProperty("taxCategory")
     public TaxCategoryResourceIdentifier getTaxCategory();
-
     /**
      *  <p>Not set if custom shipping method is used.</p>
      * @return shippingMethod
@@ -89,7 +90,6 @@ public interface ShippingInfoImportDraft extends io.vrap.rmf.base.client.Draft<S
     @Valid
     @JsonProperty("shippingMethod")
     public ShippingMethodResourceIdentifier getShippingMethod();
-
     /**
      *  <p>Deliveries are compilations of information on how the articles are being delivered to the customers.</p>
      * @return deliveries
@@ -97,7 +97,6 @@ public interface ShippingInfoImportDraft extends io.vrap.rmf.base.client.Draft<S
     @Valid
     @JsonProperty("deliveries")
     public List<DeliveryDraft> getDeliveries();
-
     /**
      *
      * @return discountedPrice
@@ -105,12 +104,11 @@ public interface ShippingInfoImportDraft extends io.vrap.rmf.base.client.Draft<S
     @Valid
     @JsonProperty("discountedPrice")
     public DiscountedLineItemPriceDraft getDiscountedPrice();
-
     /**
      *  <p>Indicates whether the ShippingMethod referenced is allowed for the cart or not.</p>
      * @return shippingMethodState
      */
-
+    
     @JsonProperty("shippingMethodState")
     public ShippingMethodState getShippingMethodState();
 
@@ -118,80 +116,88 @@ public interface ShippingInfoImportDraft extends io.vrap.rmf.base.client.Draft<S
      * set shippingMethodName
      * @param shippingMethodName value to be set
      */
-
+    
     public void setShippingMethodName(final String shippingMethodName);
-
+    
+    
     /**
      * set price
      * @param price value to be set
      */
-
+    
     public void setPrice(final Money price);
-
+    
+    
     /**
      *  <p>The shipping rate used to determine the price.</p>
      * @param shippingRate value to be set
      */
-
+    
     public void setShippingRate(final ShippingRateDraft shippingRate);
-
+    
+    
     /**
      * set taxRate
      * @param taxRate value to be set
      */
-
+    
     public void setTaxRate(final TaxRate taxRate);
-
+    
+    
     /**
      * set taxCategory
      * @param taxCategory value to be set
      */
-
+    
     public void setTaxCategory(final TaxCategoryResourceIdentifier taxCategory);
-
+    
+    
     /**
      *  <p>Not set if custom shipping method is used.</p>
      * @param shippingMethod value to be set
      */
-
+    
     public void setShippingMethod(final ShippingMethodResourceIdentifier shippingMethod);
-
+    
+    
     /**
      *  <p>Deliveries are compilations of information on how the articles are being delivered to the customers.</p>
      * @param deliveries values to be set
      */
-
+    
     @JsonIgnore
-    public void setDeliveries(final DeliveryDraft... deliveries);
-
+    public void setDeliveries(final DeliveryDraft ...deliveries);
     /**
      *  <p>Deliveries are compilations of information on how the articles are being delivered to the customers.</p>
      * @param deliveries values to be set
      */
-
+    
     public void setDeliveries(final List<DeliveryDraft> deliveries);
-
+    
     /**
      * set discountedPrice
      * @param discountedPrice value to be set
      */
-
+    
     public void setDiscountedPrice(final DiscountedLineItemPriceDraft discountedPrice);
-
+    
+    
     /**
      *  <p>Indicates whether the ShippingMethod referenced is allowed for the cart or not.</p>
      * @param shippingMethodState value to be set
      */
-
+    
     public void setShippingMethodState(final ShippingMethodState shippingMethodState);
+    
 
     /**
      * factory method
      * @return instance of ShippingInfoImportDraft
      */
-    public static ShippingInfoImportDraft of() {
+    public static ShippingInfoImportDraft of(){
         return new ShippingInfoImportDraftImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy ShippingInfoImportDraft
@@ -225,20 +231,14 @@ public interface ShippingInfoImportDraft extends io.vrap.rmf.base.client.Draft<S
         ShippingInfoImportDraftImpl instance = new ShippingInfoImportDraftImpl();
         instance.setShippingMethodName(template.getShippingMethodName());
         instance.setPrice(com.commercetools.api.models.common.Money.deepCopy(template.getPrice()));
-        instance.setShippingRate(
-            com.commercetools.api.models.shipping_method.ShippingRateDraft.deepCopy(template.getShippingRate()));
+        instance.setShippingRate(com.commercetools.api.models.shipping_method.ShippingRateDraft.deepCopy(template.getShippingRate()));
         instance.setTaxRate(com.commercetools.api.models.tax_category.TaxRate.deepCopy(template.getTaxRate()));
-        instance.setTaxCategory(com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifier
-                .deepCopy(template.getTaxCategory()));
-        instance.setShippingMethod(com.commercetools.api.models.shipping_method.ShippingMethodResourceIdentifier
-                .deepCopy(template.getShippingMethod()));
+        instance.setTaxCategory(com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifier.deepCopy(template.getTaxCategory()));
+        instance.setShippingMethod(com.commercetools.api.models.shipping_method.ShippingMethodResourceIdentifier.deepCopy(template.getShippingMethod()));
         instance.setDeliveries(Optional.ofNullable(template.getDeliveries())
-                .map(t -> t.stream()
-                        .map(com.commercetools.api.models.order.DeliveryDraft::deepCopy)
-                        .collect(Collectors.toList()))
+                .map(t -> t.stream().map(com.commercetools.api.models.order.DeliveryDraft::deepCopy).collect(Collectors.toList()))
                 .orElse(null));
-        instance.setDiscountedPrice(
-            com.commercetools.api.models.order.DiscountedLineItemPriceDraft.deepCopy(template.getDiscountedPrice()));
+        instance.setDiscountedPrice(com.commercetools.api.models.order.DiscountedLineItemPriceDraft.deepCopy(template.getDiscountedPrice()));
         instance.setShippingMethodState(template.getShippingMethodState());
         return instance;
     }
@@ -250,7 +250,7 @@ public interface ShippingInfoImportDraft extends io.vrap.rmf.base.client.Draft<S
     public static ShippingInfoImportDraftBuilder builder() {
         return ShippingInfoImportDraftBuilder.of();
     }
-
+    
     /**
      * create builder for ShippingInfoImportDraft instance
      * @param template instance with prefilled values for the builder
@@ -259,6 +259,7 @@ public interface ShippingInfoImportDraft extends io.vrap.rmf.base.client.Draft<S
     public static ShippingInfoImportDraftBuilder builder(final ShippingInfoImportDraft template) {
         return ShippingInfoImportDraftBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -269,7 +270,7 @@ public interface ShippingInfoImportDraft extends io.vrap.rmf.base.client.Draft<S
     default <T> T withShippingInfoImportDraft(Function<ShippingInfoImportDraft, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

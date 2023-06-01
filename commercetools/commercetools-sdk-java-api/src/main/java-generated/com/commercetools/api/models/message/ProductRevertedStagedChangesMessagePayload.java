@@ -1,17 +1,20 @@
-
 package com.commercetools.api.models.message;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
+import com.commercetools.api.models.message.MessagePayload;
+import com.commercetools.api.models.message.ProductRevertedStagedChangesMessagePayloadImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Generated after a successful Revert Staged Changes update action.</p>
@@ -24,9 +27,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .plusRemovedImageUrls(removedImageUrlsBuilder -> removedImageUrlsBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = ProductRevertedStagedChangesMessagePayloadImpl.class)
 public interface ProductRevertedStagedChangesMessagePayload extends MessagePayload {
 
@@ -47,32 +53,31 @@ public interface ProductRevertedStagedChangesMessagePayload extends MessagePaylo
      *  <p>List of image URLs that were removed during the Revert Staged Changes update action.</p>
      * @param removedImageUrls values to be set
      */
-
+    
     @JsonIgnore
-    public void setRemovedImageUrls(final String... removedImageUrls);
-
+    public void setRemovedImageUrls(final String ...removedImageUrls);
     /**
      *  <p>List of image URLs that were removed during the Revert Staged Changes update action.</p>
      * @param removedImageUrls values to be set
      */
-
+    
     public void setRemovedImageUrls(final List<String> removedImageUrls);
 
     /**
      * factory method
      * @return instance of ProductRevertedStagedChangesMessagePayload
      */
-    public static ProductRevertedStagedChangesMessagePayload of() {
+    public static ProductRevertedStagedChangesMessagePayload of(){
         return new ProductRevertedStagedChangesMessagePayloadImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy ProductRevertedStagedChangesMessagePayload
      * @param template instance to be copied
      * @return copy instance
      */
-    public static ProductRevertedStagedChangesMessagePayload of(
-            final ProductRevertedStagedChangesMessagePayload template) {
+    public static ProductRevertedStagedChangesMessagePayload of(final ProductRevertedStagedChangesMessagePayload template) {
         ProductRevertedStagedChangesMessagePayloadImpl instance = new ProductRevertedStagedChangesMessagePayloadImpl();
         instance.setRemovedImageUrls(template.getRemovedImageUrls());
         return instance;
@@ -84,14 +89,14 @@ public interface ProductRevertedStagedChangesMessagePayload extends MessagePaylo
      * @return copy instance
      */
     @Nullable
-    public static ProductRevertedStagedChangesMessagePayload deepCopy(
-            @Nullable final ProductRevertedStagedChangesMessagePayload template) {
+    public static ProductRevertedStagedChangesMessagePayload deepCopy(@Nullable final ProductRevertedStagedChangesMessagePayload template) {
         if (template == null) {
             return null;
         }
         ProductRevertedStagedChangesMessagePayloadImpl instance = new ProductRevertedStagedChangesMessagePayloadImpl();
-        instance.setRemovedImageUrls(
-            Optional.ofNullable(template.getRemovedImageUrls()).map(ArrayList::new).orElse(null));
+        instance.setRemovedImageUrls(Optional.ofNullable(template.getRemovedImageUrls())
+                .map(ArrayList::new)
+                .orElse(null));
         return instance;
     }
 
@@ -102,16 +107,16 @@ public interface ProductRevertedStagedChangesMessagePayload extends MessagePaylo
     public static ProductRevertedStagedChangesMessagePayloadBuilder builder() {
         return ProductRevertedStagedChangesMessagePayloadBuilder.of();
     }
-
+    
     /**
      * create builder for ProductRevertedStagedChangesMessagePayload instance
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static ProductRevertedStagedChangesMessagePayloadBuilder builder(
-            final ProductRevertedStagedChangesMessagePayload template) {
+    public static ProductRevertedStagedChangesMessagePayloadBuilder builder(final ProductRevertedStagedChangesMessagePayload template) {
         return ProductRevertedStagedChangesMessagePayloadBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -119,11 +124,10 @@ public interface ProductRevertedStagedChangesMessagePayload extends MessagePaylo
      * @param helper function to map the object
      * @return mapped value
      */
-    default <T> T withProductRevertedStagedChangesMessagePayload(
-            Function<ProductRevertedStagedChangesMessagePayload, T> helper) {
+    default <T> T withProductRevertedStagedChangesMessagePayload(Function<ProductRevertedStagedChangesMessagePayload, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

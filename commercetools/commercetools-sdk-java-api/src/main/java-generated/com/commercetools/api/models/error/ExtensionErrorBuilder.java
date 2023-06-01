@@ -1,10 +1,11 @@
-
 package com.commercetools.api.models.error;
 
-import java.util.*;
-
+import java.lang.Object;
+import com.commercetools.api.models.error.ExtensionError;
 import javax.annotation.Nullable;
-
+import java.util.*;
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -20,84 +21,108 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .extensionId("{extensionId}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class ExtensionErrorBuilder implements Builder<ExtensionError> {
 
+    
+    
     private String code;
-
+    
+    
+    
     private String message;
-
+    
+    
+    
     private String extensionId;
-
+    
+    
     @Nullable
     private String extensionKey;
-
+    
+    
+    
     private Map<String, java.lang.Object> values = new HashMap<>();
 
+    
     /**
      *  <p>Error code caused by the Extension. For example, <code>InvalidField</code>.</p>
      * @param code value to be set
      * @return Builder
      */
-
-    public ExtensionErrorBuilder code(final String code) {
+    
+    public ExtensionErrorBuilder code( final String code) {
         this.code = code;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Plain text description of the error.</p>
      * @param message value to be set
      * @return Builder
      */
-
-    public ExtensionErrorBuilder message(final String message) {
+    
+    public ExtensionErrorBuilder message( final String message) {
         this.message = message;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Unique identifier of the Extension.</p>
      * @param extensionId value to be set
      * @return Builder
      */
-
-    public ExtensionErrorBuilder extensionId(final String extensionId) {
+    
+    public ExtensionErrorBuilder extensionId( final String extensionId) {
         this.extensionId = extensionId;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>User-defined unique identifier of the Extension.</p>
      * @param extensionKey value to be set
      * @return Builder
      */
-
+    
     public ExtensionErrorBuilder extensionKey(@Nullable final String extensionKey) {
         this.extensionKey = extensionKey;
         return this;
     }
-
+    
+    
+    
     /**
      *  <p>Error-specific additional fields.</p>
      * @param values properties to be set
      * @return Builder
      */
-
-    public ExtensionErrorBuilder values(final Map<String, java.lang.Object> values) {
+    
+    public ExtensionErrorBuilder values( final Map<String, java.lang.Object> values){
         this.values = values;
         return this;
     }
-
+    
     /**
      *  <p>Error-specific additional fields.</p>
      * @param key property name
      * @param value property value
      * @return Builder
      */
-
+    
     public ExtensionErrorBuilder addValue(final String key, final java.lang.Object value) {
         if (this.values == null) {
             values = new HashMap<>();
@@ -105,50 +130,55 @@ public class ExtensionErrorBuilder implements Builder<ExtensionError> {
         values.put(key, value);
         return this;
     }
+    
 
     /**
      *  <p>Error code caused by the Extension. For example, <code>InvalidField</code>.</p>
      * @return code
      */
-
-    public String getCode() {
+    
+    
+    public String getCode(){
         return this.code;
     }
-
+    
     /**
      *  <p>Plain text description of the error.</p>
      * @return message
      */
-
-    public String getMessage() {
+    
+    
+    public String getMessage(){
         return this.message;
     }
-
+    
     /**
      *  <p>Unique identifier of the Extension.</p>
      * @return extensionId
      */
-
-    public String getExtensionId() {
+    
+    
+    public String getExtensionId(){
         return this.extensionId;
     }
-
+    
     /**
      *  <p>User-defined unique identifier of the Extension.</p>
      * @return extensionKey
      */
-
+    
     @Nullable
-    public String getExtensionKey() {
+    public String getExtensionKey(){
         return this.extensionKey;
     }
-
+    
     /**
      *  <p>Error-specific additional fields.</p>
      * @return pattern properties
      */
-
-    public Map<String, java.lang.Object> getValues() {
+    
+    
+    public Map<String, java.lang.Object> getValues(){
         return this.values;
     }
 
@@ -162,7 +192,7 @@ public class ExtensionErrorBuilder implements Builder<ExtensionError> {
         Objects.requireNonNull(extensionId, ExtensionError.class + ": extensionId is missing");
         return new ExtensionErrorImpl(code, message, extensionId, extensionKey, values);
     }
-
+    
     /**
      * builds ExtensionError without checking for non-null required values
      * @return ExtensionError
@@ -173,7 +203,7 @@ public class ExtensionErrorBuilder implements Builder<ExtensionError> {
 
     /**
      * factory method for an instance of ExtensionErrorBuilder
-     * @return builder
+     * @return builder 
      */
     public static ExtensionErrorBuilder of() {
         return new ExtensionErrorBuilder();

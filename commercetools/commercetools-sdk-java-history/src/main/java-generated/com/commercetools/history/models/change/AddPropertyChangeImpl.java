@@ -1,116 +1,132 @@
-
 package com.commercetools.history.models.change;
 
-import java.time.*;
-import java.util.*;
-
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
-
-import io.vrap.rmf.base.client.ModelBase;
+import com.commercetools.history.models.change.Change;
+import java.lang.Object;
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.ModelBase;
+import javax.validation.Valid;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.annotation.*;
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
  * AddPropertyChange
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class AddPropertyChangeImpl implements AddPropertyChange, ModelBase {
 
+    
     private String type;
-
+    
+    
     private String change;
-
+    
+    
     private String path;
-
+    
+    
     private java.lang.Object nextValue;
 
     /**
      * create instance with all properties
      */
     @JsonCreator
-    AddPropertyChangeImpl(@JsonProperty("change") final String change, @JsonProperty("path") final String path,
-            @JsonProperty("nextValue") final java.lang.Object nextValue) {
+    AddPropertyChangeImpl(@JsonProperty("change") final String change, @JsonProperty("path") final String path, @JsonProperty("nextValue") final java.lang.Object nextValue) {
         this.change = change;
         this.path = path;
         this.nextValue = nextValue;
-        this.type = ADD_PROPERTY_CHANGE;
+        this.type =  ADD_PROPERTY_CHANGE;
     }
-
     /**
      * create empty instance
      */
     public AddPropertyChangeImpl() {
-        this.type = ADD_PROPERTY_CHANGE;
+        this.type =  ADD_PROPERTY_CHANGE;
     }
 
     /**
      *
      */
-
-    public String getType() {
+    
+    public String getType(){
         return this.type;
     }
-
+    
     /**
      *  <p>Update action for <code>addProperty</code> on custom objects</p>
      */
-
-    public String getChange() {
+    
+    public String getChange(){
         return this.change;
     }
-
+    
     /**
      *  <p>Value path to the property that was added</p>
      */
-
-    public String getPath() {
+    
+    public String getPath(){
         return this.path;
     }
-
+    
     /**
      *
      */
-
-    public java.lang.Object getNextValue() {
+    
+    public java.lang.Object getNextValue(){
         return this.nextValue;
     }
 
-    public void setChange(final String change) {
+    
+    public void setChange(final String change){
         this.change = change;
     }
-
-    public void setPath(final String path) {
+    
+    
+    public void setPath(final String path){
         this.path = path;
     }
-
-    public void setNextValue(final java.lang.Object nextValue) {
+    
+    
+    public void setNextValue(final java.lang.Object nextValue){
         this.nextValue = nextValue;
     }
 
     @Override
     public boolean equals(Object o) {
-        if (this == o)
-            return true;
-
-        if (o == null || getClass() != o.getClass())
-            return false;
-
+        if (this == o) return true;
+    
+        if (o == null || getClass() != o.getClass()) return false;
+    
         AddPropertyChangeImpl that = (AddPropertyChangeImpl) o;
-
-        return new EqualsBuilder().append(type, that.type)
+    
+        return new EqualsBuilder()
+                .append(type, that.type)
                 .append(change, that.change)
                 .append(path, that.path)
                 .append(nextValue, that.nextValue)
                 .isEquals();
     }
-
+    
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(type).append(change).append(path).append(nextValue).toHashCode();
+        return new HashCodeBuilder(17, 37)
+            .append(type)
+            .append(change)
+            .append(path)
+            .append(nextValue)
+            .toHashCode();
     }
 
 }

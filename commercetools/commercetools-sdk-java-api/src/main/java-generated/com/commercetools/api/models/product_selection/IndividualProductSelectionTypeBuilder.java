@@ -1,9 +1,13 @@
-
 package com.commercetools.api.models.product_selection;
 
+import com.commercetools.api.models.common.LocalizedString;
+import com.commercetools.api.models.product_selection.ProductSelectionType;
+import com.commercetools.api.models.product_selection.ProductSelectionTypeEnum;
+import com.commercetools.api.models.product_selection.IndividualProductSelectionType;
+import javax.annotation.Nullable;
 import java.util.*;
 import java.util.function.Function;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -17,55 +21,62 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .name(nameBuilder -> nameBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @Deprecated
 public class IndividualProductSelectionTypeBuilder implements Builder<IndividualProductSelectionType> {
 
+    
+    
     private com.commercetools.api.models.common.LocalizedString name;
 
+    
     /**
      *  <p>The name of the ProductSelection which is recommended to be unique.</p>
      * @param builder function to build the name value
      * @return Builder
      */
-
-    public IndividualProductSelectionTypeBuilder name(
-            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
+    
+    public IndividualProductSelectionTypeBuilder name(Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
         this.name = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of()).build();
         return this;
     }
-
+    
     /**
      *  <p>The name of the ProductSelection which is recommended to be unique.</p>
      * @param builder function to build the name value
      * @return Builder
      */
-
-    public IndividualProductSelectionTypeBuilder withName(
-            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedString> builder) {
+    
+    public IndividualProductSelectionTypeBuilder withName(Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedString> builder) {
         this.name = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of());
         return this;
     }
-
+                    
     /**
      *  <p>The name of the ProductSelection which is recommended to be unique.</p>
      * @param name value to be set
      * @return Builder
      */
-
-    public IndividualProductSelectionTypeBuilder name(final com.commercetools.api.models.common.LocalizedString name) {
+    
+    public IndividualProductSelectionTypeBuilder name( final com.commercetools.api.models.common.LocalizedString name) {
         this.name = name;
         return this;
     }
+    
+    
 
     /**
      *  <p>The name of the ProductSelection which is recommended to be unique.</p>
      * @return name
      */
-
-    public com.commercetools.api.models.common.LocalizedString getName() {
+    
+    
+    public com.commercetools.api.models.common.LocalizedString getName(){
         return this.name;
     }
 
@@ -77,7 +88,7 @@ public class IndividualProductSelectionTypeBuilder implements Builder<Individual
         Objects.requireNonNull(name, IndividualProductSelectionType.class + ": name is missing");
         return new IndividualProductSelectionTypeImpl(name);
     }
-
+    
     /**
      * builds IndividualProductSelectionType without checking for non-null required values
      * @return IndividualProductSelectionType
@@ -88,7 +99,7 @@ public class IndividualProductSelectionTypeBuilder implements Builder<Individual
 
     /**
      * factory method for an instance of IndividualProductSelectionTypeBuilder
-     * @return builder
+     * @return builder 
      */
     public static IndividualProductSelectionTypeBuilder of() {
         return new IndividualProductSelectionTypeBuilder();

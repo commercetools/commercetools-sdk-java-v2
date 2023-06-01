@@ -1,11 +1,12 @@
-
 package com.commercetools.api.models.category;
 
+import com.commercetools.api.models.category.CategoryUpdateAction;
+import com.commercetools.api.models.common.LocalizedString;
+import com.commercetools.api.models.category.CategorySetMetaDescriptionAction;
+import javax.annotation.Nullable;
 import java.util.*;
 import java.util.function.Function;
-
-import javax.annotation.Nullable;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -18,57 +19,61 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     CategorySetMetaDescriptionAction categorySetMetaDescriptionAction = CategorySetMetaDescriptionAction.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class CategorySetMetaDescriptionActionBuilder implements Builder<CategorySetMetaDescriptionAction> {
 
+    
     @Nullable
     private com.commercetools.api.models.common.LocalizedString metaDescription;
 
+    
     /**
      *  <p>Value to set.</p>
      * @param builder function to build the metaDescription value
      * @return Builder
      */
-
-    public CategorySetMetaDescriptionActionBuilder metaDescription(
-            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
+    
+    public CategorySetMetaDescriptionActionBuilder metaDescription(Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
         this.metaDescription = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of()).build();
         return this;
     }
-
+    
     /**
      *  <p>Value to set.</p>
      * @param builder function to build the metaDescription value
      * @return Builder
      */
-
-    public CategorySetMetaDescriptionActionBuilder withMetaDescription(
-            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedString> builder) {
+    
+    public CategorySetMetaDescriptionActionBuilder withMetaDescription(Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedString> builder) {
         this.metaDescription = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of());
         return this;
     }
-
+                    
     /**
      *  <p>Value to set.</p>
      * @param metaDescription value to be set
      * @return Builder
      */
-
-    public CategorySetMetaDescriptionActionBuilder metaDescription(
-            @Nullable final com.commercetools.api.models.common.LocalizedString metaDescription) {
+    
+    public CategorySetMetaDescriptionActionBuilder metaDescription(@Nullable final com.commercetools.api.models.common.LocalizedString metaDescription) {
         this.metaDescription = metaDescription;
         return this;
     }
+    
+    
 
     /**
      *  <p>Value to set.</p>
      * @return metaDescription
      */
-
+    
     @Nullable
-    public com.commercetools.api.models.common.LocalizedString getMetaDescription() {
+    public com.commercetools.api.models.common.LocalizedString getMetaDescription(){
         return this.metaDescription;
     }
 
@@ -79,7 +84,7 @@ public class CategorySetMetaDescriptionActionBuilder implements Builder<Category
     public CategorySetMetaDescriptionAction build() {
         return new CategorySetMetaDescriptionActionImpl(metaDescription);
     }
-
+    
     /**
      * builds CategorySetMetaDescriptionAction without checking for non-null required values
      * @return CategorySetMetaDescriptionAction
@@ -90,7 +95,7 @@ public class CategorySetMetaDescriptionActionBuilder implements Builder<Category
 
     /**
      * factory method for an instance of CategorySetMetaDescriptionActionBuilder
-     * @return builder
+     * @return builder 
      */
     public static CategorySetMetaDescriptionActionBuilder of() {
         return new CategorySetMetaDescriptionActionBuilder();

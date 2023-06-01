@@ -1,18 +1,20 @@
-
 package com.commercetools.api.models.common;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
+import com.commercetools.api.models.common.TypedMoney;
+import com.commercetools.api.models.common.PriceTierImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>A Price tier is selected instead of the default Price when a certain quantity of the ProductVariant is added to a Cart and ordered. <em>For example: the Price can be lower if more than 10 items are ordered.</em> If no Price tier is found for the Order quantity, the base Price is used. A Price tier is applied for the entire quantity of a Product Variant put as LineItem in a Cart as soon as the minimum quantity for the Price tier is reached. The Price tier is applied per Line Item of the Product Variant. If, for example, the same Product Variant appears in the same Cart as several Line Items, (what can be achieved by different values of a Custom Field on the Line Items) for each Line Item the minimum quantity must be reached to get the Price tier.</p>
@@ -26,11 +28,15 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .value(valueBuilder -> valueBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = PriceTierImpl.class)
-public interface PriceTier {
+public interface PriceTier  {
+
 
     /**
      *  <p>Minimum quantity this Price tier is valid for.</p>
@@ -40,7 +46,6 @@ public interface PriceTier {
     @NotNull
     @JsonProperty("minimumQuantity")
     public Long getMinimumQuantity();
-
     /**
      *  <p>Money value that applies when the <code>minimumQuantity</code> is greater than or equal to the LineItem <code>quantity</code>.</p>
      *  <p>The <code>currencyCode</code> of a Price tier is always the same as the <code>currencyCode</code> in the <code>value</code> of the related Price.</p>
@@ -56,24 +61,27 @@ public interface PriceTier {
      *  <p>The minimum quantity is always greater than or equal to 2. The base Price is interpreted as valid for a minimum quantity equal to 1.</p>
      * @param minimumQuantity value to be set
      */
-
+    
     public void setMinimumQuantity(final Long minimumQuantity);
-
+    
+    
     /**
      *  <p>Money value that applies when the <code>minimumQuantity</code> is greater than or equal to the LineItem <code>quantity</code>.</p>
      *  <p>The <code>currencyCode</code> of a Price tier is always the same as the <code>currencyCode</code> in the <code>value</code> of the related Price.</p>
      * @param value value to be set
      */
-
+    
     public void setValue(final TypedMoney value);
+    
 
     /**
      * factory method
      * @return instance of PriceTier
      */
-    public static PriceTier of() {
+    public static PriceTier of(){
         return new PriceTierImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy PriceTier
@@ -110,7 +118,7 @@ public interface PriceTier {
     public static PriceTierBuilder builder() {
         return PriceTierBuilder.of();
     }
-
+    
     /**
      * create builder for PriceTier instance
      * @param template instance with prefilled values for the builder
@@ -119,6 +127,7 @@ public interface PriceTier {
     public static PriceTierBuilder builder(final PriceTier template) {
         return PriceTierBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -129,7 +138,7 @@ public interface PriceTier {
     default <T> T withPriceTier(Function<PriceTier, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

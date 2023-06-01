@@ -1,9 +1,12 @@
-
 package com.commercetools.api.models.order;
 
+import com.commercetools.api.models.order.OrderSearchDateRangeValue;
+import com.commercetools.api.models.order.OrderSearchQueryExpression;
+import com.commercetools.api.models.order.OrderSearchDateRangeExpression;
+import javax.annotation.Nullable;
 import java.util.*;
 import java.util.function.Function;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -17,55 +20,61 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .range(rangeBuilder -> rangeBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class OrderSearchDateRangeExpressionBuilder implements Builder<OrderSearchDateRangeExpression> {
 
+    
+    
     private com.commercetools.api.models.order.OrderSearchDateRangeValue range;
 
+    
     /**
      * set the value to the range using the builder function
      * @param builder function to build the range value
      * @return Builder
      */
-
-    public OrderSearchDateRangeExpressionBuilder range(
-            Function<com.commercetools.api.models.order.OrderSearchDateRangeValueBuilder, com.commercetools.api.models.order.OrderSearchDateRangeValueBuilder> builder) {
+    
+    public OrderSearchDateRangeExpressionBuilder range(Function<com.commercetools.api.models.order.OrderSearchDateRangeValueBuilder, com.commercetools.api.models.order.OrderSearchDateRangeValueBuilder> builder) {
         this.range = builder.apply(com.commercetools.api.models.order.OrderSearchDateRangeValueBuilder.of()).build();
         return this;
     }
-
+    
     /**
      * set the value to the range using the builder function
      * @param builder function to build the range value
      * @return Builder
      */
-
-    public OrderSearchDateRangeExpressionBuilder withRange(
-            Function<com.commercetools.api.models.order.OrderSearchDateRangeValueBuilder, com.commercetools.api.models.order.OrderSearchDateRangeValue> builder) {
+    
+    public OrderSearchDateRangeExpressionBuilder withRange(Function<com.commercetools.api.models.order.OrderSearchDateRangeValueBuilder, com.commercetools.api.models.order.OrderSearchDateRangeValue> builder) {
         this.range = builder.apply(com.commercetools.api.models.order.OrderSearchDateRangeValueBuilder.of());
         return this;
     }
-
+                    
     /**
      * set the value to the range
      * @param range value to be set
      * @return Builder
      */
-
-    public OrderSearchDateRangeExpressionBuilder range(
-            final com.commercetools.api.models.order.OrderSearchDateRangeValue range) {
+    
+    public OrderSearchDateRangeExpressionBuilder range( final com.commercetools.api.models.order.OrderSearchDateRangeValue range) {
         this.range = range;
         return this;
     }
+    
+    
 
     /**
      * value of range}
      * @return range
      */
-
-    public com.commercetools.api.models.order.OrderSearchDateRangeValue getRange() {
+    
+    
+    public com.commercetools.api.models.order.OrderSearchDateRangeValue getRange(){
         return this.range;
     }
 
@@ -77,7 +86,7 @@ public class OrderSearchDateRangeExpressionBuilder implements Builder<OrderSearc
         Objects.requireNonNull(range, OrderSearchDateRangeExpression.class + ": range is missing");
         return new OrderSearchDateRangeExpressionImpl(range);
     }
-
+    
     /**
      * builds OrderSearchDateRangeExpression without checking for non-null required values
      * @return OrderSearchDateRangeExpression
@@ -88,7 +97,7 @@ public class OrderSearchDateRangeExpressionBuilder implements Builder<OrderSearc
 
     /**
      * factory method for an instance of OrderSearchDateRangeExpressionBuilder
-     * @return builder
+     * @return builder 
      */
     public static OrderSearchDateRangeExpressionBuilder of() {
         return new OrderSearchDateRangeExpressionBuilder();

@@ -1,17 +1,20 @@
-
 package com.commercetools.api.models.error;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
+import com.commercetools.api.models.error.GraphQLErrorObject;
+import com.commercetools.api.models.error.GraphQLPendingOperationErrorImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Returned when a previous conflicting operation is still pending and needs to finish before the request can succeed.</p>
@@ -24,9 +27,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     GraphQLPendingOperationError graphQLPendingOperationError = GraphQLPendingOperationError.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = GraphQLPendingOperationErrorImpl.class)
 public interface GraphQLPendingOperationError extends GraphQLErrorObject {
 
@@ -43,13 +49,15 @@ public interface GraphQLPendingOperationError extends GraphQLErrorObject {
     @JsonProperty("code")
     public String getCode();
 
+
     /**
      * factory method
      * @return instance of GraphQLPendingOperationError
      */
-    public static GraphQLPendingOperationError of() {
+    public static GraphQLPendingOperationError of(){
         return new GraphQLPendingOperationErrorImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy GraphQLPendingOperationError
@@ -84,7 +92,7 @@ public interface GraphQLPendingOperationError extends GraphQLErrorObject {
     public static GraphQLPendingOperationErrorBuilder builder() {
         return GraphQLPendingOperationErrorBuilder.of();
     }
-
+    
     /**
      * create builder for GraphQLPendingOperationError instance
      * @param template instance with prefilled values for the builder
@@ -93,6 +101,7 @@ public interface GraphQLPendingOperationError extends GraphQLErrorObject {
     public static GraphQLPendingOperationErrorBuilder builder(final GraphQLPendingOperationError template) {
         return GraphQLPendingOperationErrorBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -103,7 +112,7 @@ public interface GraphQLPendingOperationError extends GraphQLErrorObject {
     default <T> T withGraphQLPendingOperationError(Function<GraphQLPendingOperationError, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

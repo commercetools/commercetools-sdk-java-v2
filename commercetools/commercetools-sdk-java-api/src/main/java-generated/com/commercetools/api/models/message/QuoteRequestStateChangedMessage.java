@@ -1,18 +1,21 @@
-
 package com.commercetools.api.models.message;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
-
+import com.commercetools.api.models.message.Message;
 import com.commercetools.api.models.quote_request.QuoteRequestState;
+import com.commercetools.api.models.message.QuoteRequestStateChangedMessageImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Generated after a successful Change Quote Request State update action.</p>
@@ -33,9 +36,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .oldQuoteRequestState(QuoteRequestState.SUBMITTED)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = QuoteRequestStateChangedMessageImpl.class)
 public interface QuoteRequestStateChangedMessage extends Message {
 
@@ -51,7 +57,6 @@ public interface QuoteRequestStateChangedMessage extends Message {
     @NotNull
     @JsonProperty("quoteRequestState")
     public QuoteRequestState getQuoteRequestState();
-
     /**
      *  <p>State of the Quote Request before the Change Quote Request State update action.</p>
      * @return oldQuoteRequestState
@@ -64,23 +69,26 @@ public interface QuoteRequestStateChangedMessage extends Message {
      *  <p>State of the Quote Request after the Change Quote Request State update action.</p>
      * @param quoteRequestState value to be set
      */
-
+    
     public void setQuoteRequestState(final QuoteRequestState quoteRequestState);
-
+    
+    
     /**
      *  <p>State of the Quote Request before the Change Quote Request State update action.</p>
      * @param oldQuoteRequestState value to be set
      */
-
+    
     public void setOldQuoteRequestState(final QuoteRequestState oldQuoteRequestState);
+    
 
     /**
      * factory method
      * @return instance of QuoteRequestStateChangedMessage
      */
-    public static QuoteRequestStateChangedMessage of() {
+    public static QuoteRequestStateChangedMessage of(){
         return new QuoteRequestStateChangedMessageImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy QuoteRequestStateChangedMessage
@@ -119,14 +127,12 @@ public interface QuoteRequestStateChangedMessage extends Message {
         instance.setVersion(template.getVersion());
         instance.setCreatedAt(template.getCreatedAt());
         instance.setLastModifiedAt(template.getLastModifiedAt());
-        instance.setLastModifiedBy(
-            com.commercetools.api.models.common.LastModifiedBy.deepCopy(template.getLastModifiedBy()));
+        instance.setLastModifiedBy(com.commercetools.api.models.common.LastModifiedBy.deepCopy(template.getLastModifiedBy()));
         instance.setCreatedBy(com.commercetools.api.models.common.CreatedBy.deepCopy(template.getCreatedBy()));
         instance.setSequenceNumber(template.getSequenceNumber());
         instance.setResource(com.commercetools.api.models.common.Reference.deepCopy(template.getResource()));
         instance.setResourceVersion(template.getResourceVersion());
-        instance.setResourceUserProvidedIdentifiers(com.commercetools.api.models.message.UserProvidedIdentifiers
-                .deepCopy(template.getResourceUserProvidedIdentifiers()));
+        instance.setResourceUserProvidedIdentifiers(com.commercetools.api.models.message.UserProvidedIdentifiers.deepCopy(template.getResourceUserProvidedIdentifiers()));
         instance.setQuoteRequestState(template.getQuoteRequestState());
         instance.setOldQuoteRequestState(template.getOldQuoteRequestState());
         return instance;
@@ -139,7 +145,7 @@ public interface QuoteRequestStateChangedMessage extends Message {
     public static QuoteRequestStateChangedMessageBuilder builder() {
         return QuoteRequestStateChangedMessageBuilder.of();
     }
-
+    
     /**
      * create builder for QuoteRequestStateChangedMessage instance
      * @param template instance with prefilled values for the builder
@@ -148,6 +154,7 @@ public interface QuoteRequestStateChangedMessage extends Message {
     public static QuoteRequestStateChangedMessageBuilder builder(final QuoteRequestStateChangedMessage template) {
         return QuoteRequestStateChangedMessageBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -158,7 +165,7 @@ public interface QuoteRequestStateChangedMessage extends Message {
     default <T> T withQuoteRequestStateChangedMessage(Function<QuoteRequestStateChangedMessage, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

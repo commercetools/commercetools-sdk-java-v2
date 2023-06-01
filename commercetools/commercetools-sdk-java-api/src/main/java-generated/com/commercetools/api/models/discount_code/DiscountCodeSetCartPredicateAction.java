@@ -1,16 +1,20 @@
-
 package com.commercetools.api.models.discount_code;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
+import com.commercetools.api.models.discount_code.DiscountCodeUpdateAction;
+import com.commercetools.api.models.discount_code.DiscountCodeSetCartPredicateActionImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * DiscountCodeSetCartPredicateAction
@@ -22,9 +26,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     DiscountCodeSetCartPredicateAction discountCodeSetCartPredicateAction = DiscountCodeSetCartPredicateAction.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = DiscountCodeSetCartPredicateActionImpl.class)
 public interface DiscountCodeSetCartPredicateAction extends DiscountCodeUpdateAction {
 
@@ -37,7 +44,7 @@ public interface DiscountCodeSetCartPredicateAction extends DiscountCodeUpdateAc
      *  <p>Value to set. If empty, any existing value will be removed.</p>
      * @return cartPredicate
      */
-
+    
     @JsonProperty("cartPredicate")
     public String getCartPredicate();
 
@@ -45,16 +52,18 @@ public interface DiscountCodeSetCartPredicateAction extends DiscountCodeUpdateAc
      *  <p>Value to set. If empty, any existing value will be removed.</p>
      * @param cartPredicate value to be set
      */
-
+    
     public void setCartPredicate(final String cartPredicate);
+    
 
     /**
      * factory method
      * @return instance of DiscountCodeSetCartPredicateAction
      */
-    public static DiscountCodeSetCartPredicateAction of() {
+    public static DiscountCodeSetCartPredicateAction of(){
         return new DiscountCodeSetCartPredicateActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy DiscountCodeSetCartPredicateAction
@@ -73,8 +82,7 @@ public interface DiscountCodeSetCartPredicateAction extends DiscountCodeUpdateAc
      * @return copy instance
      */
     @Nullable
-    public static DiscountCodeSetCartPredicateAction deepCopy(
-            @Nullable final DiscountCodeSetCartPredicateAction template) {
+    public static DiscountCodeSetCartPredicateAction deepCopy(@Nullable final DiscountCodeSetCartPredicateAction template) {
         if (template == null) {
             return null;
         }
@@ -90,7 +98,7 @@ public interface DiscountCodeSetCartPredicateAction extends DiscountCodeUpdateAc
     public static DiscountCodeSetCartPredicateActionBuilder builder() {
         return DiscountCodeSetCartPredicateActionBuilder.of();
     }
-
+    
     /**
      * create builder for DiscountCodeSetCartPredicateAction instance
      * @param template instance with prefilled values for the builder
@@ -99,6 +107,7 @@ public interface DiscountCodeSetCartPredicateAction extends DiscountCodeUpdateAc
     public static DiscountCodeSetCartPredicateActionBuilder builder(final DiscountCodeSetCartPredicateAction template) {
         return DiscountCodeSetCartPredicateActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -109,7 +118,7 @@ public interface DiscountCodeSetCartPredicateAction extends DiscountCodeUpdateAc
     default <T> T withDiscountCodeSetCartPredicateAction(Function<DiscountCodeSetCartPredicateAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

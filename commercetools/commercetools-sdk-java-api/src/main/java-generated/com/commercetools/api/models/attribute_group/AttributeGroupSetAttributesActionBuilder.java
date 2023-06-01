@@ -1,9 +1,12 @@
-
 package com.commercetools.api.models.attribute_group;
 
+import com.commercetools.api.models.attribute_group.AttributeGroupUpdateAction;
+import com.commercetools.api.models.attribute_group.AttributeReference;
+import com.commercetools.api.models.attribute_group.AttributeGroupSetAttributesAction;
+import javax.annotation.Nullable;
 import java.util.*;
 import java.util.function.Function;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -17,11 +20,16 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .plusAttributes(attributesBuilder -> attributesBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class AttributeGroupSetAttributesActionBuilder implements Builder<AttributeGroupSetAttributesAction> {
 
+    
+    
     private java.util.List<com.commercetools.api.models.attribute_group.AttributeReference> attributes;
 
     /**
@@ -29,99 +37,93 @@ public class AttributeGroupSetAttributesActionBuilder implements Builder<Attribu
      * @param attributes value to be set
      * @return Builder
      */
-
-    public AttributeGroupSetAttributesActionBuilder attributes(
-            final com.commercetools.api.models.attribute_group.AttributeReference... attributes) {
+    
+    public AttributeGroupSetAttributesActionBuilder attributes( final com.commercetools.api.models.attribute_group.AttributeReference ...attributes) {
         this.attributes = new ArrayList<>(Arrays.asList(attributes));
         return this;
     }
-
+    
     /**
      *  <p>New unique values to set.</p>
      * @param attributes value to be set
      * @return Builder
      */
-
-    public AttributeGroupSetAttributesActionBuilder attributes(
-            final java.util.List<com.commercetools.api.models.attribute_group.AttributeReference> attributes) {
+    
+    public AttributeGroupSetAttributesActionBuilder attributes( final java.util.List<com.commercetools.api.models.attribute_group.AttributeReference> attributes) {
         this.attributes = attributes;
         return this;
     }
-
+    
     /**
      *  <p>New unique values to set.</p>
      * @param attributes value to be set
      * @return Builder
      */
-
-    public AttributeGroupSetAttributesActionBuilder plusAttributes(
-            final com.commercetools.api.models.attribute_group.AttributeReference... attributes) {
+    
+    public AttributeGroupSetAttributesActionBuilder plusAttributes( final com.commercetools.api.models.attribute_group.AttributeReference ...attributes) {
         if (this.attributes == null) {
             this.attributes = new ArrayList<>();
         }
         this.attributes.addAll(Arrays.asList(attributes));
         return this;
     }
-
+    
+    
+    
     /**
      *  <p>New unique values to set.</p>
      * @param builder function to build the attributes value
      * @return Builder
      */
-
-    public AttributeGroupSetAttributesActionBuilder plusAttributes(
-            Function<com.commercetools.api.models.attribute_group.AttributeReferenceBuilder, com.commercetools.api.models.attribute_group.AttributeReferenceBuilder> builder) {
+    
+    public AttributeGroupSetAttributesActionBuilder plusAttributes(Function<com.commercetools.api.models.attribute_group.AttributeReferenceBuilder, com.commercetools.api.models.attribute_group.AttributeReferenceBuilder> builder) {
         if (this.attributes == null) {
             this.attributes = new ArrayList<>();
         }
-        this.attributes.add(
-            builder.apply(com.commercetools.api.models.attribute_group.AttributeReferenceBuilder.of()).build());
+        this.attributes.add(builder.apply(com.commercetools.api.models.attribute_group.AttributeReferenceBuilder.of()).build());
         return this;
     }
-
+    
     /**
      *  <p>New unique values to set.</p>
      * @param builder function to build the attributes value
      * @return Builder
      */
-
-    public AttributeGroupSetAttributesActionBuilder withAttributes(
-            Function<com.commercetools.api.models.attribute_group.AttributeReferenceBuilder, com.commercetools.api.models.attribute_group.AttributeReferenceBuilder> builder) {
+    
+    public AttributeGroupSetAttributesActionBuilder withAttributes(Function<com.commercetools.api.models.attribute_group.AttributeReferenceBuilder, com.commercetools.api.models.attribute_group.AttributeReferenceBuilder> builder) {
         this.attributes = new ArrayList<>();
-        this.attributes.add(
-            builder.apply(com.commercetools.api.models.attribute_group.AttributeReferenceBuilder.of()).build());
+        this.attributes.add(builder.apply(com.commercetools.api.models.attribute_group.AttributeReferenceBuilder.of()).build());
         return this;
     }
-
+    
     /**
      *  <p>New unique values to set.</p>
      * @param builder function to build the attributes value
      * @return Builder
      */
-
-    public AttributeGroupSetAttributesActionBuilder addAttributes(
-            Function<com.commercetools.api.models.attribute_group.AttributeReferenceBuilder, com.commercetools.api.models.attribute_group.AttributeReference> builder) {
-        return plusAttributes(
-            builder.apply(com.commercetools.api.models.attribute_group.AttributeReferenceBuilder.of()));
+    
+    public AttributeGroupSetAttributesActionBuilder addAttributes(Function<com.commercetools.api.models.attribute_group.AttributeReferenceBuilder, com.commercetools.api.models.attribute_group.AttributeReference> builder) {
+        return plusAttributes(builder.apply(com.commercetools.api.models.attribute_group.AttributeReferenceBuilder.of()));
     }
-
+    
     /**
      *  <p>New unique values to set.</p>
      * @param builder function to build the attributes value
      * @return Builder
      */
-
-    public AttributeGroupSetAttributesActionBuilder setAttributes(
-            Function<com.commercetools.api.models.attribute_group.AttributeReferenceBuilder, com.commercetools.api.models.attribute_group.AttributeReference> builder) {
+    
+    public AttributeGroupSetAttributesActionBuilder setAttributes(Function<com.commercetools.api.models.attribute_group.AttributeReferenceBuilder, com.commercetools.api.models.attribute_group.AttributeReference> builder) {
         return attributes(builder.apply(com.commercetools.api.models.attribute_group.AttributeReferenceBuilder.of()));
     }
+                    
 
     /**
      *  <p>New unique values to set.</p>
      * @return attributes
      */
-
-    public java.util.List<com.commercetools.api.models.attribute_group.AttributeReference> getAttributes() {
+    
+    
+    public java.util.List<com.commercetools.api.models.attribute_group.AttributeReference> getAttributes(){
         return this.attributes;
     }
 
@@ -133,7 +135,7 @@ public class AttributeGroupSetAttributesActionBuilder implements Builder<Attribu
         Objects.requireNonNull(attributes, AttributeGroupSetAttributesAction.class + ": attributes is missing");
         return new AttributeGroupSetAttributesActionImpl(attributes);
     }
-
+    
     /**
      * builds AttributeGroupSetAttributesAction without checking for non-null required values
      * @return AttributeGroupSetAttributesAction
@@ -144,7 +146,7 @@ public class AttributeGroupSetAttributesActionBuilder implements Builder<Attribu
 
     /**
      * factory method for an instance of AttributeGroupSetAttributesActionBuilder
-     * @return builder
+     * @return builder 
      */
     public static AttributeGroupSetAttributesActionBuilder of() {
         return new AttributeGroupSetAttributesActionBuilder();

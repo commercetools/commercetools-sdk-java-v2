@@ -1,18 +1,21 @@
-
 package com.commercetools.api.models.product;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-
 import com.commercetools.api.models.common.LocalizedString;
+import com.commercetools.api.models.product.ProductUpdateAction;
+import com.commercetools.api.models.product.ProductSetDescriptionActionImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * ProductSetDescriptionAction
@@ -24,9 +27,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     ProductSetDescriptionAction productSetDescriptionAction = ProductSetDescriptionAction.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = ProductSetDescriptionActionImpl.class)
 public interface ProductSetDescriptionAction extends ProductUpdateAction {
 
@@ -42,12 +48,11 @@ public interface ProductSetDescriptionAction extends ProductUpdateAction {
     @Valid
     @JsonProperty("description")
     public LocalizedString getDescription();
-
     /**
      *  <p>If <code>true</code>, only the staged <code>description</code> is updated. If <code>false</code>, both the current and staged <code>description</code> are updated.</p>
      * @return staged
      */
-
+    
     @JsonProperty("staged")
     public Boolean getStaged();
 
@@ -55,23 +60,26 @@ public interface ProductSetDescriptionAction extends ProductUpdateAction {
      *  <p>Value to set. If empty, any existing value will be removed.</p>
      * @param description value to be set
      */
-
+    
     public void setDescription(final LocalizedString description);
-
+    
+    
     /**
      *  <p>If <code>true</code>, only the staged <code>description</code> is updated. If <code>false</code>, both the current and staged <code>description</code> are updated.</p>
      * @param staged value to be set
      */
-
+    
     public void setStaged(final Boolean staged);
+    
 
     /**
      * factory method
      * @return instance of ProductSetDescriptionAction
      */
-    public static ProductSetDescriptionAction of() {
+    public static ProductSetDescriptionAction of(){
         return new ProductSetDescriptionActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy ProductSetDescriptionAction
@@ -96,8 +104,7 @@ public interface ProductSetDescriptionAction extends ProductUpdateAction {
             return null;
         }
         ProductSetDescriptionActionImpl instance = new ProductSetDescriptionActionImpl();
-        instance.setDescription(
-            com.commercetools.api.models.common.LocalizedString.deepCopy(template.getDescription()));
+        instance.setDescription(com.commercetools.api.models.common.LocalizedString.deepCopy(template.getDescription()));
         instance.setStaged(template.getStaged());
         return instance;
     }
@@ -109,7 +116,7 @@ public interface ProductSetDescriptionAction extends ProductUpdateAction {
     public static ProductSetDescriptionActionBuilder builder() {
         return ProductSetDescriptionActionBuilder.of();
     }
-
+    
     /**
      * create builder for ProductSetDescriptionAction instance
      * @param template instance with prefilled values for the builder
@@ -118,6 +125,7 @@ public interface ProductSetDescriptionAction extends ProductUpdateAction {
     public static ProductSetDescriptionActionBuilder builder(final ProductSetDescriptionAction template) {
         return ProductSetDescriptionActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -128,7 +136,7 @@ public interface ProductSetDescriptionAction extends ProductUpdateAction {
     default <T> T withProductSetDescriptionAction(Function<ProductSetDescriptionAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

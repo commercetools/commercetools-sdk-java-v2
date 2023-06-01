@@ -1,9 +1,12 @@
-
 package com.commercetools.api.models.order;
 
+import com.commercetools.api.models.order.OrderUpdateAction;
+import com.commercetools.api.models.payment.PaymentResourceIdentifier;
+import com.commercetools.api.models.order.OrderRemovePaymentAction;
+import javax.annotation.Nullable;
 import java.util.*;
 import java.util.function.Function;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -17,56 +20,61 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .payment(paymentBuilder -> paymentBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class OrderRemovePaymentActionBuilder implements Builder<OrderRemovePaymentAction> {
 
+    
+    
     private com.commercetools.api.models.payment.PaymentResourceIdentifier payment;
 
+    
     /**
      *  <p>ResourceIdentifier of a Payment.</p>
      * @param builder function to build the payment value
      * @return Builder
      */
-
-    public OrderRemovePaymentActionBuilder payment(
-            Function<com.commercetools.api.models.payment.PaymentResourceIdentifierBuilder, com.commercetools.api.models.payment.PaymentResourceIdentifierBuilder> builder) {
-        this.payment = builder.apply(com.commercetools.api.models.payment.PaymentResourceIdentifierBuilder.of())
-                .build();
+    
+    public OrderRemovePaymentActionBuilder payment(Function<com.commercetools.api.models.payment.PaymentResourceIdentifierBuilder, com.commercetools.api.models.payment.PaymentResourceIdentifierBuilder> builder) {
+        this.payment = builder.apply(com.commercetools.api.models.payment.PaymentResourceIdentifierBuilder.of()).build();
         return this;
     }
-
+    
     /**
      *  <p>ResourceIdentifier of a Payment.</p>
      * @param builder function to build the payment value
      * @return Builder
      */
-
-    public OrderRemovePaymentActionBuilder withPayment(
-            Function<com.commercetools.api.models.payment.PaymentResourceIdentifierBuilder, com.commercetools.api.models.payment.PaymentResourceIdentifier> builder) {
+    
+    public OrderRemovePaymentActionBuilder withPayment(Function<com.commercetools.api.models.payment.PaymentResourceIdentifierBuilder, com.commercetools.api.models.payment.PaymentResourceIdentifier> builder) {
         this.payment = builder.apply(com.commercetools.api.models.payment.PaymentResourceIdentifierBuilder.of());
         return this;
     }
-
+                    
     /**
      *  <p>ResourceIdentifier of a Payment.</p>
      * @param payment value to be set
      * @return Builder
      */
-
-    public OrderRemovePaymentActionBuilder payment(
-            final com.commercetools.api.models.payment.PaymentResourceIdentifier payment) {
+    
+    public OrderRemovePaymentActionBuilder payment( final com.commercetools.api.models.payment.PaymentResourceIdentifier payment) {
         this.payment = payment;
         return this;
     }
+    
+    
 
     /**
      *  <p>ResourceIdentifier of a Payment.</p>
      * @return payment
      */
-
-    public com.commercetools.api.models.payment.PaymentResourceIdentifier getPayment() {
+    
+    
+    public com.commercetools.api.models.payment.PaymentResourceIdentifier getPayment(){
         return this.payment;
     }
 
@@ -78,7 +86,7 @@ public class OrderRemovePaymentActionBuilder implements Builder<OrderRemovePayme
         Objects.requireNonNull(payment, OrderRemovePaymentAction.class + ": payment is missing");
         return new OrderRemovePaymentActionImpl(payment);
     }
-
+    
     /**
      * builds OrderRemovePaymentAction without checking for non-null required values
      * @return OrderRemovePaymentAction
@@ -89,7 +97,7 @@ public class OrderRemovePaymentActionBuilder implements Builder<OrderRemovePayme
 
     /**
      * factory method for an instance of OrderRemovePaymentActionBuilder
-     * @return builder
+     * @return builder 
      */
     public static OrderRemovePaymentActionBuilder of() {
         return new OrderRemovePaymentActionBuilder();

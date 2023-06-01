@@ -1,8 +1,11 @@
-
 package com.commercetools.history.models.change;
 
+import com.commercetools.history.models.change.Change;
+import com.commercetools.history.models.change.ChangeInitialChange;
+import javax.annotation.Nullable;
 import java.util.*;
-
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -18,74 +21,95 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .nextValue(true)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class ChangeInitialChangeBuilder implements Builder<ChangeInitialChange> {
 
+    
+    
     private String change;
-
+    
+    
+    
     private Boolean previousValue;
-
+    
+    
+    
     private Boolean nextValue;
 
+    
     /**
      *  <p>Shape of the action for <code>changeInitial</code></p>
      * @param change value to be set
      * @return Builder
      */
-
-    public ChangeInitialChangeBuilder change(final String change) {
+    
+    public ChangeInitialChangeBuilder change( final String change) {
         this.change = change;
         return this;
     }
-
+    
+    
+    
+    
     /**
      * set the value to the previousValue
      * @param previousValue value to be set
      * @return Builder
      */
-
-    public ChangeInitialChangeBuilder previousValue(final Boolean previousValue) {
+    
+    public ChangeInitialChangeBuilder previousValue( final Boolean previousValue) {
         this.previousValue = previousValue;
         return this;
     }
-
+    
+    
+    
+    
     /**
      * set the value to the nextValue
      * @param nextValue value to be set
      * @return Builder
      */
-
-    public ChangeInitialChangeBuilder nextValue(final Boolean nextValue) {
+    
+    public ChangeInitialChangeBuilder nextValue( final Boolean nextValue) {
         this.nextValue = nextValue;
         return this;
     }
+    
+    
 
     /**
      *  <p>Shape of the action for <code>changeInitial</code></p>
      * @return change
      */
-
-    public String getChange() {
+    
+    
+    public String getChange(){
         return this.change;
     }
-
+    
     /**
      * value of previousValue}
      * @return previousValue
      */
-
-    public Boolean getPreviousValue() {
+    
+    
+    public Boolean getPreviousValue(){
         return this.previousValue;
     }
-
+    
     /**
      * value of nextValue}
      * @return nextValue
      */
-
-    public Boolean getNextValue() {
+    
+    
+    public Boolean getNextValue(){
         return this.nextValue;
     }
 
@@ -99,7 +123,7 @@ public class ChangeInitialChangeBuilder implements Builder<ChangeInitialChange> 
         Objects.requireNonNull(nextValue, ChangeInitialChange.class + ": nextValue is missing");
         return new ChangeInitialChangeImpl(change, previousValue, nextValue);
     }
-
+    
     /**
      * builds ChangeInitialChange without checking for non-null required values
      * @return ChangeInitialChange
@@ -110,7 +134,7 @@ public class ChangeInitialChangeBuilder implements Builder<ChangeInitialChange> 
 
     /**
      * factory method for an instance of ChangeInitialChangeBuilder
-     * @return builder
+     * @return builder 
      */
     public static ChangeInitialChangeBuilder of() {
         return new ChangeInitialChangeBuilder();

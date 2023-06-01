@@ -1,27 +1,28 @@
-
 package com.commercetools.api.models.store;
-
-import java.time.*;
-import java.time.ZonedDateTime;
-import java.util.*;
-import java.util.function.Function;
-import java.util.stream.Collectors;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.channel.ChannelReference;
 import com.commercetools.api.models.common.BaseResource;
 import com.commercetools.api.models.common.CreatedBy;
 import com.commercetools.api.models.common.LastModifiedBy;
 import com.commercetools.api.models.common.LocalizedString;
+import com.commercetools.api.models.store.ProductSelectionSetting;
 import com.commercetools.api.models.store_country.StoreCountry;
 import com.commercetools.api.models.type.CustomFields;
+import java.time.ZonedDateTime;
+import com.commercetools.api.models.store.StoreImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * Store
@@ -43,13 +44,15 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .plusProductSelections(productSelectionsBuilder -> productSelectionsBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = StoreImpl.class)
-public interface Store extends BaseResource, StoreMixin, com.commercetools.api.models.DomainResource<Store>,
-        com.commercetools.api.models.Referencable<Store>, com.commercetools.api.models.ResourceIdentifiable<Store>,
-        com.commercetools.api.models.Customizable<Store>, com.commercetools.api.models.WithKey {
+public interface Store extends BaseResource, StoreMixin, com.commercetools.api.models.DomainResource<Store>, com.commercetools.api.models.Referencable<Store>, com.commercetools.api.models.ResourceIdentifiable<Store>, com.commercetools.api.models.Customizable<Store>, com.commercetools.api.models.WithKey {
+
 
     /**
      *  <p>Unique ID of the Store.</p>
@@ -58,7 +61,6 @@ public interface Store extends BaseResource, StoreMixin, com.commercetools.api.m
     @NotNull
     @JsonProperty("id")
     public String getId();
-
     /**
      *  <p>Current version of the Store.</p>
      * @return version
@@ -66,7 +68,6 @@ public interface Store extends BaseResource, StoreMixin, com.commercetools.api.m
     @NotNull
     @JsonProperty("version")
     public Long getVersion();
-
     /**
      *  <p>Date and time (UTC) the Store was initially created.</p>
      * @return createdAt
@@ -74,7 +75,6 @@ public interface Store extends BaseResource, StoreMixin, com.commercetools.api.m
     @NotNull
     @JsonProperty("createdAt")
     public ZonedDateTime getCreatedAt();
-
     /**
      *  <p>Date and time (UTC) the Store was last updated.</p>
      * @return lastModifiedAt
@@ -82,7 +82,6 @@ public interface Store extends BaseResource, StoreMixin, com.commercetools.api.m
     @NotNull
     @JsonProperty("lastModifiedAt")
     public ZonedDateTime getLastModifiedAt();
-
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      * @return lastModifiedBy
@@ -90,7 +89,6 @@ public interface Store extends BaseResource, StoreMixin, com.commercetools.api.m
     @Valid
     @JsonProperty("lastModifiedBy")
     public LastModifiedBy getLastModifiedBy();
-
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      * @return createdBy
@@ -98,7 +96,6 @@ public interface Store extends BaseResource, StoreMixin, com.commercetools.api.m
     @Valid
     @JsonProperty("createdBy")
     public CreatedBy getCreatedBy();
-
     /**
      *  <p>User-defined unique and immutable identifier for the Store.</p>
      * @return key
@@ -106,7 +103,6 @@ public interface Store extends BaseResource, StoreMixin, com.commercetools.api.m
     @NotNull
     @JsonProperty("key")
     public String getKey();
-
     /**
      *  <p>Name of the Store.</p>
      * @return name
@@ -114,7 +110,6 @@ public interface Store extends BaseResource, StoreMixin, com.commercetools.api.m
     @Valid
     @JsonProperty("name")
     public LocalizedString getName();
-
     /**
      *  <p>Languages configured for the Store.</p>
      * @return languages
@@ -122,7 +117,6 @@ public interface Store extends BaseResource, StoreMixin, com.commercetools.api.m
     @NotNull
     @JsonProperty("languages")
     public List<String> getLanguages();
-
     /**
      *  <p>Countries defined for the Store.</p>
      * @return countries
@@ -131,7 +125,6 @@ public interface Store extends BaseResource, StoreMixin, com.commercetools.api.m
     @Valid
     @JsonProperty("countries")
     public List<StoreCountry> getCountries();
-
     /**
      *  <p>Product Distribution Channels allowed for the Store.</p>
      * @return distributionChannels
@@ -140,7 +133,6 @@ public interface Store extends BaseResource, StoreMixin, com.commercetools.api.m
     @Valid
     @JsonProperty("distributionChannels")
     public List<ChannelReference> getDistributionChannels();
-
     /**
      *  <p>Inventory Supply Channels allowed for the Store.</p>
      * @return supplyChannels
@@ -149,7 +141,6 @@ public interface Store extends BaseResource, StoreMixin, com.commercetools.api.m
     @Valid
     @JsonProperty("supplyChannels")
     public List<ChannelReference> getSupplyChannels();
-
     /**
      *  <p>Controls availability of Products for this Store via Product Selections:</p>
      *  <ul>
@@ -164,7 +155,6 @@ public interface Store extends BaseResource, StoreMixin, com.commercetools.api.m
     @Valid
     @JsonProperty("productSelections")
     public List<ProductSelectionSetting> getProductSelections();
-
     /**
      *  <p>Custom fields for the Store.</p>
      * @return custom
@@ -177,118 +167,122 @@ public interface Store extends BaseResource, StoreMixin, com.commercetools.api.m
      *  <p>Unique ID of the Store.</p>
      * @param id value to be set
      */
-
+    
     public void setId(final String id);
-
+    
+    
     /**
      *  <p>Current version of the Store.</p>
      * @param version value to be set
      */
-
+    
     public void setVersion(final Long version);
-
+    
+    
     /**
      *  <p>Date and time (UTC) the Store was initially created.</p>
      * @param createdAt value to be set
      */
-
+    
     public void setCreatedAt(final ZonedDateTime createdAt);
-
+    
+    
     /**
      *  <p>Date and time (UTC) the Store was last updated.</p>
      * @param lastModifiedAt value to be set
      */
-
+    
     public void setLastModifiedAt(final ZonedDateTime lastModifiedAt);
-
+    
+    
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      * @param lastModifiedBy value to be set
      */
-
+    
     public void setLastModifiedBy(final LastModifiedBy lastModifiedBy);
-
+    
+    
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      * @param createdBy value to be set
      */
-
+    
     public void setCreatedBy(final CreatedBy createdBy);
-
+    
+    
     /**
      *  <p>User-defined unique and immutable identifier for the Store.</p>
      * @param key value to be set
      */
-
+    
     public void setKey(final String key);
-
+    
+    
     /**
      *  <p>Name of the Store.</p>
      * @param name value to be set
      */
-
+    
     public void setName(final LocalizedString name);
-
+    
+    
     /**
      *  <p>Languages configured for the Store.</p>
      * @param languages values to be set
      */
-
+    
     @JsonIgnore
-    public void setLanguages(final String... languages);
-
+    public void setLanguages(final String ...languages);
     /**
      *  <p>Languages configured for the Store.</p>
      * @param languages values to be set
      */
-
+    
     public void setLanguages(final List<String> languages);
-
+    
     /**
      *  <p>Countries defined for the Store.</p>
      * @param countries values to be set
      */
-
+    
     @JsonIgnore
-    public void setCountries(final StoreCountry... countries);
-
+    public void setCountries(final StoreCountry ...countries);
     /**
      *  <p>Countries defined for the Store.</p>
      * @param countries values to be set
      */
-
+    
     public void setCountries(final List<StoreCountry> countries);
-
+    
     /**
      *  <p>Product Distribution Channels allowed for the Store.</p>
      * @param distributionChannels values to be set
      */
-
+    
     @JsonIgnore
-    public void setDistributionChannels(final ChannelReference... distributionChannels);
-
+    public void setDistributionChannels(final ChannelReference ...distributionChannels);
     /**
      *  <p>Product Distribution Channels allowed for the Store.</p>
      * @param distributionChannels values to be set
      */
-
+    
     public void setDistributionChannels(final List<ChannelReference> distributionChannels);
-
+    
     /**
      *  <p>Inventory Supply Channels allowed for the Store.</p>
      * @param supplyChannels values to be set
      */
-
+    
     @JsonIgnore
-    public void setSupplyChannels(final ChannelReference... supplyChannels);
-
+    public void setSupplyChannels(final ChannelReference ...supplyChannels);
     /**
      *  <p>Inventory Supply Channels allowed for the Store.</p>
      * @param supplyChannels values to be set
      */
-
+    
     public void setSupplyChannels(final List<ChannelReference> supplyChannels);
-
+    
     /**
      *  <p>Controls availability of Products for this Store via Product Selections:</p>
      *  <ul>
@@ -299,10 +293,9 @@ public interface Store extends BaseResource, StoreMixin, com.commercetools.api.m
      *  </ul>
      * @param productSelections values to be set
      */
-
+    
     @JsonIgnore
-    public void setProductSelections(final ProductSelectionSetting... productSelections);
-
+    public void setProductSelections(final ProductSelectionSetting ...productSelections);
     /**
      *  <p>Controls availability of Products for this Store via Product Selections:</p>
      *  <ul>
@@ -313,23 +306,25 @@ public interface Store extends BaseResource, StoreMixin, com.commercetools.api.m
      *  </ul>
      * @param productSelections values to be set
      */
-
+    
     public void setProductSelections(final List<ProductSelectionSetting> productSelections);
-
+    
     /**
      *  <p>Custom fields for the Store.</p>
      * @param custom value to be set
      */
-
+    
     public void setCustom(final CustomFields custom);
+    
 
     /**
      * factory method
      * @return instance of Store
      */
-    public static Store of() {
+    public static Store of(){
         return new StoreImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy Store
@@ -370,31 +365,24 @@ public interface Store extends BaseResource, StoreMixin, com.commercetools.api.m
         instance.setVersion(template.getVersion());
         instance.setCreatedAt(template.getCreatedAt());
         instance.setLastModifiedAt(template.getLastModifiedAt());
-        instance.setLastModifiedBy(
-            com.commercetools.api.models.common.LastModifiedBy.deepCopy(template.getLastModifiedBy()));
+        instance.setLastModifiedBy(com.commercetools.api.models.common.LastModifiedBy.deepCopy(template.getLastModifiedBy()));
         instance.setCreatedBy(com.commercetools.api.models.common.CreatedBy.deepCopy(template.getCreatedBy()));
         instance.setKey(template.getKey());
         instance.setName(com.commercetools.api.models.common.LocalizedString.deepCopy(template.getName()));
-        instance.setLanguages(Optional.ofNullable(template.getLanguages()).map(ArrayList::new).orElse(null));
+        instance.setLanguages(Optional.ofNullable(template.getLanguages())
+                .map(ArrayList::new)
+                .orElse(null));
         instance.setCountries(Optional.ofNullable(template.getCountries())
-                .map(t -> t.stream()
-                        .map(com.commercetools.api.models.store_country.StoreCountry::deepCopy)
-                        .collect(Collectors.toList()))
+                .map(t -> t.stream().map(com.commercetools.api.models.store_country.StoreCountry::deepCopy).collect(Collectors.toList()))
                 .orElse(null));
         instance.setDistributionChannels(Optional.ofNullable(template.getDistributionChannels())
-                .map(t -> t.stream()
-                        .map(com.commercetools.api.models.channel.ChannelReference::deepCopy)
-                        .collect(Collectors.toList()))
+                .map(t -> t.stream().map(com.commercetools.api.models.channel.ChannelReference::deepCopy).collect(Collectors.toList()))
                 .orElse(null));
         instance.setSupplyChannels(Optional.ofNullable(template.getSupplyChannels())
-                .map(t -> t.stream()
-                        .map(com.commercetools.api.models.channel.ChannelReference::deepCopy)
-                        .collect(Collectors.toList()))
+                .map(t -> t.stream().map(com.commercetools.api.models.channel.ChannelReference::deepCopy).collect(Collectors.toList()))
                 .orElse(null));
         instance.setProductSelections(Optional.ofNullable(template.getProductSelections())
-                .map(t -> t.stream()
-                        .map(com.commercetools.api.models.store.ProductSelectionSetting::deepCopy)
-                        .collect(Collectors.toList()))
+                .map(t -> t.stream().map(com.commercetools.api.models.store.ProductSelectionSetting::deepCopy).collect(Collectors.toList()))
                 .orElse(null));
         instance.setCustom(com.commercetools.api.models.type.CustomFields.deepCopy(template.getCustom()));
         return instance;
@@ -407,7 +395,7 @@ public interface Store extends BaseResource, StoreMixin, com.commercetools.api.m
     public static StoreBuilder builder() {
         return StoreBuilder.of();
     }
-
+    
     /**
      * create builder for Store instance
      * @param template instance with prefilled values for the builder
@@ -416,6 +404,7 @@ public interface Store extends BaseResource, StoreMixin, com.commercetools.api.m
     public static StoreBuilder builder(final Store template) {
         return StoreBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -426,11 +415,11 @@ public interface Store extends BaseResource, StoreMixin, com.commercetools.api.m
     default <T> T withStore(Function<Store, T> helper) {
         return helper.apply(this);
     }
-
     public static com.commercetools.api.models.common.ReferenceTypeId referenceTypeId() {
         return com.commercetools.api.models.common.ReferenceTypeId.STORE;
     }
-
+    
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

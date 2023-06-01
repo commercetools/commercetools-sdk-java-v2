@@ -1,18 +1,21 @@
-
 package com.commercetools.api.models.order;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-
 import com.commercetools.api.models.common.BaseAddress;
+import com.commercetools.api.models.order.OrderUpdateAction;
+import com.commercetools.api.models.order.OrderSetBillingAddressActionImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * OrderSetBillingAddressAction
@@ -24,9 +27,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     OrderSetBillingAddressAction orderSetBillingAddressAction = OrderSetBillingAddressAction.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = OrderSetBillingAddressActionImpl.class)
 public interface OrderSetBillingAddressAction extends OrderUpdateAction {
 
@@ -47,16 +53,18 @@ public interface OrderSetBillingAddressAction extends OrderUpdateAction {
      *  <p>Polymorphic base type that represents a postal address and contact details. Depending on the read or write action, it can be either Address or AddressDraft that only differ in the data type for the optional <code>custom</code> field.</p>
      * @param address value to be set
      */
-
+    
     public void setAddress(final BaseAddress address);
+    
 
     /**
      * factory method
      * @return instance of OrderSetBillingAddressAction
      */
-    public static OrderSetBillingAddressAction of() {
+    public static OrderSetBillingAddressAction of(){
         return new OrderSetBillingAddressActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy OrderSetBillingAddressAction
@@ -91,7 +99,7 @@ public interface OrderSetBillingAddressAction extends OrderUpdateAction {
     public static OrderSetBillingAddressActionBuilder builder() {
         return OrderSetBillingAddressActionBuilder.of();
     }
-
+    
     /**
      * create builder for OrderSetBillingAddressAction instance
      * @param template instance with prefilled values for the builder
@@ -100,6 +108,7 @@ public interface OrderSetBillingAddressAction extends OrderUpdateAction {
     public static OrderSetBillingAddressActionBuilder builder(final OrderSetBillingAddressAction template) {
         return OrderSetBillingAddressActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -110,7 +119,7 @@ public interface OrderSetBillingAddressAction extends OrderUpdateAction {
     default <T> T withOrderSetBillingAddressAction(Function<OrderSetBillingAddressAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

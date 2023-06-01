@@ -1,8 +1,11 @@
-
 package com.commercetools.api.models.product;
 
+import com.commercetools.api.models.product.SearchKeyword;
+import com.commercetools.api.models.product.SearchKeywords;
+import javax.annotation.Nullable;
 import java.util.*;
-
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -16,11 +19,16 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .plus/^[a-z]{2}(-[A-Z]{2})?$/(/^[a-z]{2}(-[A-Z]{2})?$/Builder -> /^[a-z]{2}(-[A-Z]{2})?$/Builder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class SearchKeywordsBuilder implements Builder<SearchKeywords> {
 
+    
+    
     private Map<String, java.util.List<com.commercetools.api.models.product.SearchKeyword>> values = new HashMap<>();
 
     /**
@@ -28,35 +36,35 @@ public class SearchKeywordsBuilder implements Builder<SearchKeywords> {
      * @param values properties to be set
      * @return Builder
      */
-
-    public SearchKeywordsBuilder values(
-            final Map<String, java.util.List<com.commercetools.api.models.product.SearchKeyword>> values) {
+    
+    public SearchKeywordsBuilder values( final Map<String, java.util.List<com.commercetools.api.models.product.SearchKeyword>> values){
         this.values = values;
         return this;
     }
-
+    
     /**
      * assign a pattern property to the builder
      * @param key property name
      * @param value property value
      * @return Builder
      */
-
-    public SearchKeywordsBuilder addValue(final String key,
-            final java.util.List<com.commercetools.api.models.product.SearchKeyword> value) {
+    
+    public SearchKeywordsBuilder addValue(final String key, final java.util.List<com.commercetools.api.models.product.SearchKeyword> value) {
         if (this.values == null) {
             values = new HashMap<>();
         }
         values.put(key, value);
         return this;
     }
+    
 
     /**
      * values of pattern properties
      * @return pattern properties
      */
-
-    public Map<String, java.util.List<com.commercetools.api.models.product.SearchKeyword>> getValues() {
+    
+    
+    public Map<String, java.util.List<com.commercetools.api.models.product.SearchKeyword>> getValues(){
         return this.values;
     }
 
@@ -67,7 +75,7 @@ public class SearchKeywordsBuilder implements Builder<SearchKeywords> {
     public SearchKeywords build() {
         return new SearchKeywordsImpl(values);
     }
-
+    
     /**
      * builds SearchKeywords without checking for non-null required values
      * @return SearchKeywords
@@ -78,7 +86,7 @@ public class SearchKeywordsBuilder implements Builder<SearchKeywords> {
 
     /**
      * factory method for an instance of SearchKeywordsBuilder
-     * @return builder
+     * @return builder 
      */
     public static SearchKeywordsBuilder of() {
         return new SearchKeywordsBuilder();

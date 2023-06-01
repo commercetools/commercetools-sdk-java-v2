@@ -1,19 +1,21 @@
-
 package com.commercetools.api.models.message;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-import java.util.stream.Collectors;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-
+import com.commercetools.api.models.message.OrderMessagePayload;
 import com.commercetools.api.models.order.ReturnInfo;
+import com.commercetools.api.models.message.ReturnInfoSetMessagePayloadImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Generated after a successful Set Return Info update action on Orders and Order Edits.</p>
@@ -25,9 +27,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     ReturnInfoSetMessagePayload returnInfoSetMessagePayload = ReturnInfoSetMessagePayload.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = ReturnInfoSetMessagePayloadImpl.class)
 public interface ReturnInfoSetMessagePayload extends OrderMessagePayload {
 
@@ -48,24 +53,24 @@ public interface ReturnInfoSetMessagePayload extends OrderMessagePayload {
      *  <p>The ReturnInfo that was set on the Order or Order Edit.</p>
      * @param returnInfo values to be set
      */
-
+    
     @JsonIgnore
-    public void setReturnInfo(final ReturnInfo... returnInfo);
-
+    public void setReturnInfo(final ReturnInfo ...returnInfo);
     /**
      *  <p>The ReturnInfo that was set on the Order or Order Edit.</p>
      * @param returnInfo values to be set
      */
-
+    
     public void setReturnInfo(final List<ReturnInfo> returnInfo);
 
     /**
      * factory method
      * @return instance of ReturnInfoSetMessagePayload
      */
-    public static ReturnInfoSetMessagePayload of() {
+    public static ReturnInfoSetMessagePayload of(){
         return new ReturnInfoSetMessagePayloadImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy ReturnInfoSetMessagePayload
@@ -90,9 +95,7 @@ public interface ReturnInfoSetMessagePayload extends OrderMessagePayload {
         }
         ReturnInfoSetMessagePayloadImpl instance = new ReturnInfoSetMessagePayloadImpl();
         instance.setReturnInfo(Optional.ofNullable(template.getReturnInfo())
-                .map(t -> t.stream()
-                        .map(com.commercetools.api.models.order.ReturnInfo::deepCopy)
-                        .collect(Collectors.toList()))
+                .map(t -> t.stream().map(com.commercetools.api.models.order.ReturnInfo::deepCopy).collect(Collectors.toList()))
                 .orElse(null));
         return instance;
     }
@@ -104,7 +107,7 @@ public interface ReturnInfoSetMessagePayload extends OrderMessagePayload {
     public static ReturnInfoSetMessagePayloadBuilder builder() {
         return ReturnInfoSetMessagePayloadBuilder.of();
     }
-
+    
     /**
      * create builder for ReturnInfoSetMessagePayload instance
      * @param template instance with prefilled values for the builder
@@ -113,6 +116,7 @@ public interface ReturnInfoSetMessagePayload extends OrderMessagePayload {
     public static ReturnInfoSetMessagePayloadBuilder builder(final ReturnInfoSetMessagePayload template) {
         return ReturnInfoSetMessagePayloadBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -123,7 +127,7 @@ public interface ReturnInfoSetMessagePayload extends OrderMessagePayload {
     default <T> T withReturnInfoSetMessagePayload(Function<ReturnInfoSetMessagePayload, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

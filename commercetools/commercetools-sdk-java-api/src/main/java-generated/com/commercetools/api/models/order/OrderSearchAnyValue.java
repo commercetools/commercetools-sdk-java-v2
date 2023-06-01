@@ -1,17 +1,21 @@
-
 package com.commercetools.api.models.order;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
+import com.commercetools.api.models.order.OrderSearchQueryExpressionValue;
+import java.lang.Object;
+import com.commercetools.api.models.order.OrderSearchAnyValueImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * OrderSearchAnyValue
@@ -24,11 +28,15 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .field("{field}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = OrderSearchAnyValueImpl.class)
 public interface OrderSearchAnyValue extends OrderSearchQueryExpressionValue {
+
 
     /**
      *
@@ -37,20 +45,18 @@ public interface OrderSearchAnyValue extends OrderSearchQueryExpressionValue {
     @NotNull
     @JsonProperty("value")
     public Object getValue();
-
     /**
      *
      * @return language
      */
-
+    
     @JsonProperty("language")
     public String getLanguage();
-
     /**
      *
      * @return caseInsensitive
      */
-
+    
     @JsonProperty("caseInsensitive")
     public Boolean getCaseInsensitive();
 
@@ -58,30 +64,34 @@ public interface OrderSearchAnyValue extends OrderSearchQueryExpressionValue {
      * set value
      * @param value value to be set
      */
-
+    
     public void setValue(final Object value);
-
+    
+    
     /**
      * set language
      * @param language value to be set
      */
-
+    
     public void setLanguage(final String language);
-
+    
+    
     /**
      * set caseInsensitive
      * @param caseInsensitive value to be set
      */
-
+    
     public void setCaseInsensitive(final Boolean caseInsensitive);
+    
 
     /**
      * factory method
      * @return instance of OrderSearchAnyValue
      */
-    public static OrderSearchAnyValue of() {
+    public static OrderSearchAnyValue of(){
         return new OrderSearchAnyValueImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy OrderSearchAnyValue
@@ -126,7 +136,7 @@ public interface OrderSearchAnyValue extends OrderSearchQueryExpressionValue {
     public static OrderSearchAnyValueBuilder builder() {
         return OrderSearchAnyValueBuilder.of();
     }
-
+    
     /**
      * create builder for OrderSearchAnyValue instance
      * @param template instance with prefilled values for the builder
@@ -135,6 +145,7 @@ public interface OrderSearchAnyValue extends OrderSearchQueryExpressionValue {
     public static OrderSearchAnyValueBuilder builder(final OrderSearchAnyValue template) {
         return OrderSearchAnyValueBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -145,7 +156,7 @@ public interface OrderSearchAnyValue extends OrderSearchQueryExpressionValue {
     default <T> T withOrderSearchAnyValue(Function<OrderSearchAnyValue, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

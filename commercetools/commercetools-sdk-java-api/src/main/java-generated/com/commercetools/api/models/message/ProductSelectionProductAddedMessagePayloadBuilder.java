@@ -1,9 +1,13 @@
-
 package com.commercetools.api.models.message;
 
+import com.commercetools.api.models.message.MessagePayload;
+import com.commercetools.api.models.product.ProductReference;
+import com.commercetools.api.models.product_selection.ProductVariantSelection;
+import com.commercetools.api.models.message.ProductSelectionProductAddedMessagePayload;
+import javax.annotation.Nullable;
 import java.util.*;
 import java.util.function.Function;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -18,93 +22,100 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .variantSelection(variantSelectionBuilder -> variantSelectionBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
-public class ProductSelectionProductAddedMessagePayloadBuilder
-        implements Builder<ProductSelectionProductAddedMessagePayload> {
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
+public class ProductSelectionProductAddedMessagePayloadBuilder implements Builder<ProductSelectionProductAddedMessagePayload> {
 
+    
+    
     private com.commercetools.api.models.product.ProductReference product;
-
+    
+    
+    
     private com.commercetools.api.models.product_selection.ProductVariantSelection variantSelection;
 
+    
     /**
      *  <p>Product that was added to the Product Selection.</p>
      * @param builder function to build the product value
      * @return Builder
      */
-
-    public ProductSelectionProductAddedMessagePayloadBuilder product(
-            Function<com.commercetools.api.models.product.ProductReferenceBuilder, com.commercetools.api.models.product.ProductReferenceBuilder> builder) {
+    
+    public ProductSelectionProductAddedMessagePayloadBuilder product(Function<com.commercetools.api.models.product.ProductReferenceBuilder, com.commercetools.api.models.product.ProductReferenceBuilder> builder) {
         this.product = builder.apply(com.commercetools.api.models.product.ProductReferenceBuilder.of()).build();
         return this;
     }
-
+    
     /**
      *  <p>Product that was added to the Product Selection.</p>
      * @param builder function to build the product value
      * @return Builder
      */
-
-    public ProductSelectionProductAddedMessagePayloadBuilder withProduct(
-            Function<com.commercetools.api.models.product.ProductReferenceBuilder, com.commercetools.api.models.product.ProductReference> builder) {
+    
+    public ProductSelectionProductAddedMessagePayloadBuilder withProduct(Function<com.commercetools.api.models.product.ProductReferenceBuilder, com.commercetools.api.models.product.ProductReference> builder) {
         this.product = builder.apply(com.commercetools.api.models.product.ProductReferenceBuilder.of());
         return this;
     }
-
+                    
     /**
      *  <p>Product that was added to the Product Selection.</p>
      * @param product value to be set
      * @return Builder
      */
-
-    public ProductSelectionProductAddedMessagePayloadBuilder product(
-            final com.commercetools.api.models.product.ProductReference product) {
+    
+    public ProductSelectionProductAddedMessagePayloadBuilder product( final com.commercetools.api.models.product.ProductReference product) {
         this.product = product;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Product Variant Selection after the Add Product update action.</p>
      * @param variantSelection value to be set
      * @return Builder
      */
-
-    public ProductSelectionProductAddedMessagePayloadBuilder variantSelection(
-            final com.commercetools.api.models.product_selection.ProductVariantSelection variantSelection) {
+    
+    public ProductSelectionProductAddedMessagePayloadBuilder variantSelection( final com.commercetools.api.models.product_selection.ProductVariantSelection variantSelection) {
         this.variantSelection = variantSelection;
         return this;
     }
-
+    
+    
     /**
      *  <p>Product Variant Selection after the Add Product update action.</p>
      * @param builder function to build the variantSelection value
      * @return Builder
      */
-
-    public ProductSelectionProductAddedMessagePayloadBuilder variantSelection(
-            Function<com.commercetools.api.models.product_selection.ProductVariantSelectionBuilder, Builder<? extends com.commercetools.api.models.product_selection.ProductVariantSelection>> builder) {
-        this.variantSelection = builder
-                .apply(com.commercetools.api.models.product_selection.ProductVariantSelectionBuilder.of())
-                .build();
+    
+    public ProductSelectionProductAddedMessagePayloadBuilder variantSelection(Function<com.commercetools.api.models.product_selection.ProductVariantSelectionBuilder, Builder<? extends com.commercetools.api.models.product_selection.ProductVariantSelection>> builder) {
+        this.variantSelection = builder.apply(com.commercetools.api.models.product_selection.ProductVariantSelectionBuilder.of()).build();
         return this;
     }
+                    
 
     /**
      *  <p>Product that was added to the Product Selection.</p>
      * @return product
      */
-
-    public com.commercetools.api.models.product.ProductReference getProduct() {
+    
+    
+    public com.commercetools.api.models.product.ProductReference getProduct(){
         return this.product;
     }
-
+    
     /**
      *  <p>Product Variant Selection after the Add Product update action.</p>
      * @return variantSelection
      */
-
-    public com.commercetools.api.models.product_selection.ProductVariantSelection getVariantSelection() {
+    
+    
+    public com.commercetools.api.models.product_selection.ProductVariantSelection getVariantSelection(){
         return this.variantSelection;
     }
 
@@ -114,11 +125,10 @@ public class ProductSelectionProductAddedMessagePayloadBuilder
      */
     public ProductSelectionProductAddedMessagePayload build() {
         Objects.requireNonNull(product, ProductSelectionProductAddedMessagePayload.class + ": product is missing");
-        Objects.requireNonNull(variantSelection,
-            ProductSelectionProductAddedMessagePayload.class + ": variantSelection is missing");
+        Objects.requireNonNull(variantSelection, ProductSelectionProductAddedMessagePayload.class + ": variantSelection is missing");
         return new ProductSelectionProductAddedMessagePayloadImpl(product, variantSelection);
     }
-
+    
     /**
      * builds ProductSelectionProductAddedMessagePayload without checking for non-null required values
      * @return ProductSelectionProductAddedMessagePayload
@@ -129,7 +139,7 @@ public class ProductSelectionProductAddedMessagePayloadBuilder
 
     /**
      * factory method for an instance of ProductSelectionProductAddedMessagePayloadBuilder
-     * @return builder
+     * @return builder 
      */
     public static ProductSelectionProductAddedMessagePayloadBuilder of() {
         return new ProductSelectionProductAddedMessagePayloadBuilder();
@@ -140,8 +150,7 @@ public class ProductSelectionProductAddedMessagePayloadBuilder
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static ProductSelectionProductAddedMessagePayloadBuilder of(
-            final ProductSelectionProductAddedMessagePayload template) {
+    public static ProductSelectionProductAddedMessagePayloadBuilder of(final ProductSelectionProductAddedMessagePayload template) {
         ProductSelectionProductAddedMessagePayloadBuilder builder = new ProductSelectionProductAddedMessagePayloadBuilder();
         builder.product = template.getProduct();
         builder.variantSelection = template.getVariantSelection();

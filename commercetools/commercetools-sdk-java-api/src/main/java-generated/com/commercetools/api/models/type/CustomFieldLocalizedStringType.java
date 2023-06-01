@@ -1,16 +1,20 @@
-
 package com.commercetools.api.models.type;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
+import com.commercetools.api.models.type.FieldType;
+import com.commercetools.api.models.type.CustomFieldLocalizedStringTypeImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Field type for LocalizedString values.</p>
@@ -22,9 +26,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     CustomFieldLocalizedStringType customFieldLocalizedStringType = CustomFieldLocalizedStringType.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = CustomFieldLocalizedStringTypeImpl.class)
 public interface CustomFieldLocalizedStringType extends FieldType {
 
@@ -33,13 +40,16 @@ public interface CustomFieldLocalizedStringType extends FieldType {
      */
     String LOCALIZED_STRING = "LocalizedString";
 
+
+
     /**
      * factory method
      * @return instance of CustomFieldLocalizedStringType
      */
-    public static CustomFieldLocalizedStringType of() {
+    public static CustomFieldLocalizedStringType of(){
         return new CustomFieldLocalizedStringTypeImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy CustomFieldLocalizedStringType
@@ -72,7 +82,7 @@ public interface CustomFieldLocalizedStringType extends FieldType {
     public static CustomFieldLocalizedStringTypeBuilder builder() {
         return CustomFieldLocalizedStringTypeBuilder.of();
     }
-
+    
     /**
      * create builder for CustomFieldLocalizedStringType instance
      * @param template instance with prefilled values for the builder
@@ -81,6 +91,7 @@ public interface CustomFieldLocalizedStringType extends FieldType {
     public static CustomFieldLocalizedStringTypeBuilder builder(final CustomFieldLocalizedStringType template) {
         return CustomFieldLocalizedStringTypeBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -91,7 +102,7 @@ public interface CustomFieldLocalizedStringType extends FieldType {
     default <T> T withCustomFieldLocalizedStringType(Function<CustomFieldLocalizedStringType, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

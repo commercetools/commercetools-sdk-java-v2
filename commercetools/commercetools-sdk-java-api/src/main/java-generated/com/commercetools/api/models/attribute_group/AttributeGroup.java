@@ -1,24 +1,25 @@
-
 package com.commercetools.api.models.attribute_group;
 
-import java.time.*;
-import java.time.ZonedDateTime;
-import java.util.*;
-import java.util.function.Function;
-import java.util.stream.Collectors;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
+import com.commercetools.api.models.attribute_group.AttributeReference;
 import com.commercetools.api.models.common.BaseResource;
 import com.commercetools.api.models.common.CreatedBy;
 import com.commercetools.api.models.common.LastModifiedBy;
 import com.commercetools.api.models.common.LocalizedString;
+import java.time.ZonedDateTime;
+import com.commercetools.api.models.attribute_group.AttributeGroupImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * AttributeGroup
@@ -36,12 +37,15 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .plusAttributes(attributesBuilder -> attributesBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = AttributeGroupImpl.class)
-public interface AttributeGroup extends BaseResource, com.commercetools.api.models.DomainResource<AttributeGroup>,
-        com.commercetools.api.models.WithKey {
+public interface AttributeGroup extends BaseResource, com.commercetools.api.models.DomainResource<AttributeGroup>, com.commercetools.api.models.WithKey {
+
 
     /**
      *  <p>Platform-generated unique identifier of the AttributeGroup.</p>
@@ -50,7 +54,6 @@ public interface AttributeGroup extends BaseResource, com.commercetools.api.mode
     @NotNull
     @JsonProperty("id")
     public String getId();
-
     /**
      *  <p>Current version of the AttributeGroup.</p>
      * @return version
@@ -58,7 +61,6 @@ public interface AttributeGroup extends BaseResource, com.commercetools.api.mode
     @NotNull
     @JsonProperty("version")
     public Long getVersion();
-
     /**
      *  <p>Date and time (UTC) the AttributeGroup was initially created.</p>
      * @return createdAt
@@ -66,7 +68,6 @@ public interface AttributeGroup extends BaseResource, com.commercetools.api.mode
     @NotNull
     @JsonProperty("createdAt")
     public ZonedDateTime getCreatedAt();
-
     /**
      *  <p>Date and time (UTC) the AttributeGroup was last updated.</p>
      * @return lastModifiedAt
@@ -74,7 +75,6 @@ public interface AttributeGroup extends BaseResource, com.commercetools.api.mode
     @NotNull
     @JsonProperty("lastModifiedAt")
     public ZonedDateTime getLastModifiedAt();
-
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      * @return lastModifiedBy
@@ -82,7 +82,6 @@ public interface AttributeGroup extends BaseResource, com.commercetools.api.mode
     @Valid
     @JsonProperty("lastModifiedBy")
     public LastModifiedBy getLastModifiedBy();
-
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      * @return createdBy
@@ -90,7 +89,6 @@ public interface AttributeGroup extends BaseResource, com.commercetools.api.mode
     @Valid
     @JsonProperty("createdBy")
     public CreatedBy getCreatedBy();
-
     /**
      *  <p>Name of the AttributeGroup.</p>
      * @return name
@@ -99,7 +97,6 @@ public interface AttributeGroup extends BaseResource, com.commercetools.api.mode
     @Valid
     @JsonProperty("name")
     public LocalizedString getName();
-
     /**
      *  <p>Description of the AttributeGroup.</p>
      * @return description
@@ -107,7 +104,6 @@ public interface AttributeGroup extends BaseResource, com.commercetools.api.mode
     @Valid
     @JsonProperty("description")
     public LocalizedString getDescription();
-
     /**
      *  <p>Attributes with unique values.</p>
      * @return attributes
@@ -116,12 +112,11 @@ public interface AttributeGroup extends BaseResource, com.commercetools.api.mode
     @Valid
     @JsonProperty("attributes")
     public List<AttributeReference> getAttributes();
-
     /**
      *  <p>User-defined unique identifier of the AttributeGroup.</p>
      * @return key
      */
-
+    
     @JsonProperty("key")
     public String getKey();
 
@@ -129,87 +124,96 @@ public interface AttributeGroup extends BaseResource, com.commercetools.api.mode
      *  <p>Platform-generated unique identifier of the AttributeGroup.</p>
      * @param id value to be set
      */
-
+    
     public void setId(final String id);
-
+    
+    
     /**
      *  <p>Current version of the AttributeGroup.</p>
      * @param version value to be set
      */
-
+    
     public void setVersion(final Long version);
-
+    
+    
     /**
      *  <p>Date and time (UTC) the AttributeGroup was initially created.</p>
      * @param createdAt value to be set
      */
-
+    
     public void setCreatedAt(final ZonedDateTime createdAt);
-
+    
+    
     /**
      *  <p>Date and time (UTC) the AttributeGroup was last updated.</p>
      * @param lastModifiedAt value to be set
      */
-
+    
     public void setLastModifiedAt(final ZonedDateTime lastModifiedAt);
-
+    
+    
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      * @param lastModifiedBy value to be set
      */
-
+    
     public void setLastModifiedBy(final LastModifiedBy lastModifiedBy);
-
+    
+    
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      * @param createdBy value to be set
      */
-
+    
     public void setCreatedBy(final CreatedBy createdBy);
-
+    
+    
     /**
      *  <p>Name of the AttributeGroup.</p>
      * @param name value to be set
      */
-
+    
     public void setName(final LocalizedString name);
-
+    
+    
     /**
      *  <p>Description of the AttributeGroup.</p>
      * @param description value to be set
      */
-
+    
     public void setDescription(final LocalizedString description);
-
+    
+    
     /**
      *  <p>Attributes with unique values.</p>
      * @param attributes values to be set
      */
-
+    
     @JsonIgnore
-    public void setAttributes(final AttributeReference... attributes);
-
+    public void setAttributes(final AttributeReference ...attributes);
     /**
      *  <p>Attributes with unique values.</p>
      * @param attributes values to be set
      */
-
+    
     public void setAttributes(final List<AttributeReference> attributes);
-
+    
     /**
      *  <p>User-defined unique identifier of the AttributeGroup.</p>
      * @param key value to be set
      */
-
+    
     public void setKey(final String key);
+    
 
     /**
      * factory method
      * @return instance of AttributeGroup
      */
-    public static AttributeGroup of() {
+    public static AttributeGroup of(){
         return new AttributeGroupImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy AttributeGroup
@@ -246,16 +250,12 @@ public interface AttributeGroup extends BaseResource, com.commercetools.api.mode
         instance.setVersion(template.getVersion());
         instance.setCreatedAt(template.getCreatedAt());
         instance.setLastModifiedAt(template.getLastModifiedAt());
-        instance.setLastModifiedBy(
-            com.commercetools.api.models.common.LastModifiedBy.deepCopy(template.getLastModifiedBy()));
+        instance.setLastModifiedBy(com.commercetools.api.models.common.LastModifiedBy.deepCopy(template.getLastModifiedBy()));
         instance.setCreatedBy(com.commercetools.api.models.common.CreatedBy.deepCopy(template.getCreatedBy()));
         instance.setName(com.commercetools.api.models.common.LocalizedString.deepCopy(template.getName()));
-        instance.setDescription(
-            com.commercetools.api.models.common.LocalizedString.deepCopy(template.getDescription()));
+        instance.setDescription(com.commercetools.api.models.common.LocalizedString.deepCopy(template.getDescription()));
         instance.setAttributes(Optional.ofNullable(template.getAttributes())
-                .map(t -> t.stream()
-                        .map(com.commercetools.api.models.attribute_group.AttributeReference::deepCopy)
-                        .collect(Collectors.toList()))
+                .map(t -> t.stream().map(com.commercetools.api.models.attribute_group.AttributeReference::deepCopy).collect(Collectors.toList()))
                 .orElse(null));
         instance.setKey(template.getKey());
         return instance;
@@ -268,7 +268,7 @@ public interface AttributeGroup extends BaseResource, com.commercetools.api.mode
     public static AttributeGroupBuilder builder() {
         return AttributeGroupBuilder.of();
     }
-
+    
     /**
      * create builder for AttributeGroup instance
      * @param template instance with prefilled values for the builder
@@ -277,6 +277,7 @@ public interface AttributeGroup extends BaseResource, com.commercetools.api.mode
     public static AttributeGroupBuilder builder(final AttributeGroup template) {
         return AttributeGroupBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -287,7 +288,7 @@ public interface AttributeGroup extends BaseResource, com.commercetools.api.mode
     default <T> T withAttributeGroup(Function<AttributeGroup, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

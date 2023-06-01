@@ -1,19 +1,21 @@
-
 package com.commercetools.api.models.extension;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-import java.util.stream.Collectors;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
+import com.commercetools.api.models.extension.ExtensionDestination;
+import com.commercetools.api.models.extension.ExtensionTrigger;
+import com.commercetools.api.models.extension.ExtensionDraftImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * ExtensionDraft
@@ -27,21 +29,23 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .plusTriggers(triggersBuilder -> triggersBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = ExtensionDraftImpl.class)
-public interface ExtensionDraft
-        extends com.commercetools.api.models.WithKey, io.vrap.rmf.base.client.Draft<ExtensionDraft> {
+public interface ExtensionDraft extends com.commercetools.api.models.WithKey, io.vrap.rmf.base.client.Draft<ExtensionDraft> {
+
 
     /**
      *  <p>User-defined unique identifier for the Extension.</p>
      * @return key
      */
-
+    
     @JsonProperty("key")
     public String getKey();
-
     /**
      *  <p>Defines where the Extension can be reached.</p>
      * @return destination
@@ -50,7 +54,6 @@ public interface ExtensionDraft
     @Valid
     @JsonProperty("destination")
     public ExtensionDestination getDestination();
-
     /**
      *  <p>Describes what triggers the Extension.</p>
      * @return triggers
@@ -59,13 +62,12 @@ public interface ExtensionDraft
     @Valid
     @JsonProperty("triggers")
     public List<ExtensionTrigger> getTriggers();
-
     /**
      *  <p>Maximum time (in milliseconds) the Extension can respond within. If no timeout is provided, the default value is used for all types of Extensions. The maximum value is 10000 ms (10 seconds) for <code>payment</code> Extensions and 2000 ms (2 seconds) for all other Extensions.</p>
      *  <p>This limit can be increased per Project after we review the performance impact. Please contact our support via the Support Portal and provide the Region, Project key, and use case.</p>
      * @return timeoutInMs
      */
-
+    
     @JsonProperty("timeoutInMs")
     public Integer getTimeoutInMs();
 
@@ -73,46 +75,49 @@ public interface ExtensionDraft
      *  <p>User-defined unique identifier for the Extension.</p>
      * @param key value to be set
      */
-
+    
     public void setKey(final String key);
-
+    
+    
     /**
      *  <p>Defines where the Extension can be reached.</p>
      * @param destination value to be set
      */
-
+    
     public void setDestination(final ExtensionDestination destination);
-
+    
+    
     /**
      *  <p>Describes what triggers the Extension.</p>
      * @param triggers values to be set
      */
-
+    
     @JsonIgnore
-    public void setTriggers(final ExtensionTrigger... triggers);
-
+    public void setTriggers(final ExtensionTrigger ...triggers);
     /**
      *  <p>Describes what triggers the Extension.</p>
      * @param triggers values to be set
      */
-
+    
     public void setTriggers(final List<ExtensionTrigger> triggers);
-
+    
     /**
      *  <p>Maximum time (in milliseconds) the Extension can respond within. If no timeout is provided, the default value is used for all types of Extensions. The maximum value is 10000 ms (10 seconds) for <code>payment</code> Extensions and 2000 ms (2 seconds) for all other Extensions.</p>
      *  <p>This limit can be increased per Project after we review the performance impact. Please contact our support via the Support Portal and provide the Region, Project key, and use case.</p>
      * @param timeoutInMs value to be set
      */
-
+    
     public void setTimeoutInMs(final Integer timeoutInMs);
+    
 
     /**
      * factory method
      * @return instance of ExtensionDraft
      */
-    public static ExtensionDraft of() {
+    public static ExtensionDraft of(){
         return new ExtensionDraftImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy ExtensionDraft
@@ -140,12 +145,9 @@ public interface ExtensionDraft
         }
         ExtensionDraftImpl instance = new ExtensionDraftImpl();
         instance.setKey(template.getKey());
-        instance.setDestination(
-            com.commercetools.api.models.extension.ExtensionDestination.deepCopy(template.getDestination()));
+        instance.setDestination(com.commercetools.api.models.extension.ExtensionDestination.deepCopy(template.getDestination()));
         instance.setTriggers(Optional.ofNullable(template.getTriggers())
-                .map(t -> t.stream()
-                        .map(com.commercetools.api.models.extension.ExtensionTrigger::deepCopy)
-                        .collect(Collectors.toList()))
+                .map(t -> t.stream().map(com.commercetools.api.models.extension.ExtensionTrigger::deepCopy).collect(Collectors.toList()))
                 .orElse(null));
         instance.setTimeoutInMs(template.getTimeoutInMs());
         return instance;
@@ -158,7 +160,7 @@ public interface ExtensionDraft
     public static ExtensionDraftBuilder builder() {
         return ExtensionDraftBuilder.of();
     }
-
+    
     /**
      * create builder for ExtensionDraft instance
      * @param template instance with prefilled values for the builder
@@ -167,6 +169,7 @@ public interface ExtensionDraft
     public static ExtensionDraftBuilder builder(final ExtensionDraft template) {
         return ExtensionDraftBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -177,7 +180,7 @@ public interface ExtensionDraft
     default <T> T withExtensionDraft(Function<ExtensionDraft, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

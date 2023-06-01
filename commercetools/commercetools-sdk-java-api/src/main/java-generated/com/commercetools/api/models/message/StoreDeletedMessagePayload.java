@@ -1,16 +1,20 @@
-
 package com.commercetools.api.models.message;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
+import com.commercetools.api.models.message.MessagePayload;
+import com.commercetools.api.models.message.StoreDeletedMessagePayloadImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Generated after a successful Delete Store request.</p>
@@ -22,9 +26,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     StoreDeletedMessagePayload storeDeletedMessagePayload = StoreDeletedMessagePayload.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = StoreDeletedMessagePayloadImpl.class)
 public interface StoreDeletedMessagePayload extends MessagePayload {
 
@@ -33,13 +40,16 @@ public interface StoreDeletedMessagePayload extends MessagePayload {
      */
     String STORE_DELETED = "StoreDeleted";
 
+
+
     /**
      * factory method
      * @return instance of StoreDeletedMessagePayload
      */
-    public static StoreDeletedMessagePayload of() {
+    public static StoreDeletedMessagePayload of(){
         return new StoreDeletedMessagePayloadImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy StoreDeletedMessagePayload
@@ -72,7 +82,7 @@ public interface StoreDeletedMessagePayload extends MessagePayload {
     public static StoreDeletedMessagePayloadBuilder builder() {
         return StoreDeletedMessagePayloadBuilder.of();
     }
-
+    
     /**
      * create builder for StoreDeletedMessagePayload instance
      * @param template instance with prefilled values for the builder
@@ -81,6 +91,7 @@ public interface StoreDeletedMessagePayload extends MessagePayload {
     public static StoreDeletedMessagePayloadBuilder builder(final StoreDeletedMessagePayload template) {
         return StoreDeletedMessagePayloadBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -91,7 +102,7 @@ public interface StoreDeletedMessagePayload extends MessagePayload {
     default <T> T withStoreDeletedMessagePayload(Function<StoreDeletedMessagePayload, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

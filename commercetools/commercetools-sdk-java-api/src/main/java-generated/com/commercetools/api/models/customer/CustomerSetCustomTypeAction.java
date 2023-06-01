@@ -1,19 +1,22 @@
-
 package com.commercetools.api.models.customer;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-
+import com.commercetools.api.models.customer.CustomerUpdateAction;
 import com.commercetools.api.models.type.FieldContainer;
 import com.commercetools.api.models.type.TypeResourceIdentifier;
+import com.commercetools.api.models.customer.CustomerSetCustomTypeActionImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * CustomerSetCustomTypeAction
@@ -25,9 +28,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     CustomerSetCustomTypeAction customerSetCustomTypeAction = CustomerSetCustomTypeAction.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = CustomerSetCustomTypeActionImpl.class)
 public interface CustomerSetCustomTypeAction extends CustomerUpdateAction {
 
@@ -43,7 +49,6 @@ public interface CustomerSetCustomTypeAction extends CustomerUpdateAction {
     @Valid
     @JsonProperty("type")
     public TypeResourceIdentifier getType();
-
     /**
      *  <p>Sets the Custom Fields fields for the Customer.</p>
      * @return fields
@@ -56,23 +61,26 @@ public interface CustomerSetCustomTypeAction extends CustomerUpdateAction {
      *  <p>Defines the Type that extends the Customer with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Customer.</p>
      * @param type value to be set
      */
-
+    
     public void setType(final TypeResourceIdentifier type);
-
+    
+    
     /**
      *  <p>Sets the Custom Fields fields for the Customer.</p>
      * @param fields value to be set
      */
-
+    
     public void setFields(final FieldContainer fields);
+    
 
     /**
      * factory method
      * @return instance of CustomerSetCustomTypeAction
      */
-    public static CustomerSetCustomTypeAction of() {
+    public static CustomerSetCustomTypeAction of(){
         return new CustomerSetCustomTypeActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy CustomerSetCustomTypeAction
@@ -109,7 +117,7 @@ public interface CustomerSetCustomTypeAction extends CustomerUpdateAction {
     public static CustomerSetCustomTypeActionBuilder builder() {
         return CustomerSetCustomTypeActionBuilder.of();
     }
-
+    
     /**
      * create builder for CustomerSetCustomTypeAction instance
      * @param template instance with prefilled values for the builder
@@ -118,6 +126,7 @@ public interface CustomerSetCustomTypeAction extends CustomerUpdateAction {
     public static CustomerSetCustomTypeActionBuilder builder(final CustomerSetCustomTypeAction template) {
         return CustomerSetCustomTypeActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -128,7 +137,7 @@ public interface CustomerSetCustomTypeAction extends CustomerUpdateAction {
     default <T> T withCustomerSetCustomTypeAction(Function<CustomerSetCustomTypeAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

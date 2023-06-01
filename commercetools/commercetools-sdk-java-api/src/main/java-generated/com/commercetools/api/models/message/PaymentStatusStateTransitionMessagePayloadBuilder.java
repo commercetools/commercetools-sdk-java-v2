@@ -1,9 +1,12 @@
-
 package com.commercetools.api.models.message;
 
+import com.commercetools.api.models.message.MessagePayload;
+import com.commercetools.api.models.state.StateReference;
+import com.commercetools.api.models.message.PaymentStatusStateTransitionMessagePayload;
+import javax.annotation.Nullable;
 import java.util.*;
 import java.util.function.Function;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -18,78 +21,89 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .force(true)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
-public class PaymentStatusStateTransitionMessagePayloadBuilder
-        implements Builder<PaymentStatusStateTransitionMessagePayload> {
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
+public class PaymentStatusStateTransitionMessagePayloadBuilder implements Builder<PaymentStatusStateTransitionMessagePayload> {
 
+    
+    
     private com.commercetools.api.models.state.StateReference state;
-
+    
+    
+    
     private Boolean force;
 
+    
     /**
      *  <p>State of the Payment after the Transition State update action.</p>
      * @param builder function to build the state value
      * @return Builder
      */
-
-    public PaymentStatusStateTransitionMessagePayloadBuilder state(
-            Function<com.commercetools.api.models.state.StateReferenceBuilder, com.commercetools.api.models.state.StateReferenceBuilder> builder) {
+    
+    public PaymentStatusStateTransitionMessagePayloadBuilder state(Function<com.commercetools.api.models.state.StateReferenceBuilder, com.commercetools.api.models.state.StateReferenceBuilder> builder) {
         this.state = builder.apply(com.commercetools.api.models.state.StateReferenceBuilder.of()).build();
         return this;
     }
-
+    
     /**
      *  <p>State of the Payment after the Transition State update action.</p>
      * @param builder function to build the state value
      * @return Builder
      */
-
-    public PaymentStatusStateTransitionMessagePayloadBuilder withState(
-            Function<com.commercetools.api.models.state.StateReferenceBuilder, com.commercetools.api.models.state.StateReference> builder) {
+    
+    public PaymentStatusStateTransitionMessagePayloadBuilder withState(Function<com.commercetools.api.models.state.StateReferenceBuilder, com.commercetools.api.models.state.StateReference> builder) {
         this.state = builder.apply(com.commercetools.api.models.state.StateReferenceBuilder.of());
         return this;
     }
-
+                    
     /**
      *  <p>State of the Payment after the Transition State update action.</p>
      * @param state value to be set
      * @return Builder
      */
-
-    public PaymentStatusStateTransitionMessagePayloadBuilder state(
-            final com.commercetools.api.models.state.StateReference state) {
+    
+    public PaymentStatusStateTransitionMessagePayloadBuilder state( final com.commercetools.api.models.state.StateReference state) {
         this.state = state;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Whether State transition validations were turned off during the Change Transaction State update action.</p>
      * @param force value to be set
      * @return Builder
      */
-
-    public PaymentStatusStateTransitionMessagePayloadBuilder force(final Boolean force) {
+    
+    public PaymentStatusStateTransitionMessagePayloadBuilder force( final Boolean force) {
         this.force = force;
         return this;
     }
+    
+    
 
     /**
      *  <p>State of the Payment after the Transition State update action.</p>
      * @return state
      */
-
-    public com.commercetools.api.models.state.StateReference getState() {
+    
+    
+    public com.commercetools.api.models.state.StateReference getState(){
         return this.state;
     }
-
+    
     /**
      *  <p>Whether State transition validations were turned off during the Change Transaction State update action.</p>
      * @return force
      */
-
-    public Boolean getForce() {
+    
+    
+    public Boolean getForce(){
         return this.force;
     }
 
@@ -102,7 +116,7 @@ public class PaymentStatusStateTransitionMessagePayloadBuilder
         Objects.requireNonNull(force, PaymentStatusStateTransitionMessagePayload.class + ": force is missing");
         return new PaymentStatusStateTransitionMessagePayloadImpl(state, force);
     }
-
+    
     /**
      * builds PaymentStatusStateTransitionMessagePayload without checking for non-null required values
      * @return PaymentStatusStateTransitionMessagePayload
@@ -113,7 +127,7 @@ public class PaymentStatusStateTransitionMessagePayloadBuilder
 
     /**
      * factory method for an instance of PaymentStatusStateTransitionMessagePayloadBuilder
-     * @return builder
+     * @return builder 
      */
     public static PaymentStatusStateTransitionMessagePayloadBuilder of() {
         return new PaymentStatusStateTransitionMessagePayloadBuilder();
@@ -124,8 +138,7 @@ public class PaymentStatusStateTransitionMessagePayloadBuilder
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static PaymentStatusStateTransitionMessagePayloadBuilder of(
-            final PaymentStatusStateTransitionMessagePayload template) {
+    public static PaymentStatusStateTransitionMessagePayloadBuilder of(final PaymentStatusStateTransitionMessagePayload template) {
         PaymentStatusStateTransitionMessagePayloadBuilder builder = new PaymentStatusStateTransitionMessagePayloadBuilder();
         builder.state = template.getState();
         builder.force = template.getForce();

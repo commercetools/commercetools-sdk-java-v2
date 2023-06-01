@@ -1,8 +1,12 @@
-
 package com.commercetools.api.models.order_edit;
 
+import com.commercetools.api.models.cart.TaxMode;
+import com.commercetools.api.models.order.StagedOrderUpdateAction;
+import com.commercetools.api.models.order_edit.StagedOrderChangeTaxModeAction;
+import javax.annotation.Nullable;
 import java.util.*;
-
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -16,30 +20,39 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .taxMode(TaxMode.PLATFORM)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class StagedOrderChangeTaxModeActionBuilder implements Builder<StagedOrderChangeTaxModeAction> {
 
+    
+    
     private com.commercetools.api.models.cart.TaxMode taxMode;
 
+    
     /**
      *  <p>Indicates how taxes are set on the Cart.</p>
      * @param taxMode value to be set
      * @return Builder
      */
-
-    public StagedOrderChangeTaxModeActionBuilder taxMode(final com.commercetools.api.models.cart.TaxMode taxMode) {
+    
+    public StagedOrderChangeTaxModeActionBuilder taxMode( final com.commercetools.api.models.cart.TaxMode taxMode) {
         this.taxMode = taxMode;
         return this;
     }
+    
+    
 
     /**
      *  <p>Indicates how taxes are set on the Cart.</p>
      * @return taxMode
      */
-
-    public com.commercetools.api.models.cart.TaxMode getTaxMode() {
+    
+    
+    public com.commercetools.api.models.cart.TaxMode getTaxMode(){
         return this.taxMode;
     }
 
@@ -51,7 +64,7 @@ public class StagedOrderChangeTaxModeActionBuilder implements Builder<StagedOrde
         Objects.requireNonNull(taxMode, StagedOrderChangeTaxModeAction.class + ": taxMode is missing");
         return new StagedOrderChangeTaxModeActionImpl(taxMode);
     }
-
+    
     /**
      * builds StagedOrderChangeTaxModeAction without checking for non-null required values
      * @return StagedOrderChangeTaxModeAction
@@ -62,7 +75,7 @@ public class StagedOrderChangeTaxModeActionBuilder implements Builder<StagedOrde
 
     /**
      * factory method for an instance of StagedOrderChangeTaxModeActionBuilder
-     * @return builder
+     * @return builder 
      */
     public static StagedOrderChangeTaxModeActionBuilder of() {
         return new StagedOrderChangeTaxModeActionBuilder();

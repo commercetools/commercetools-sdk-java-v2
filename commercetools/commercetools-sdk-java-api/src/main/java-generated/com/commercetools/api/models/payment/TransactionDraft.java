@@ -1,21 +1,24 @@
-
 package com.commercetools.api.models.payment;
 
-import java.time.*;
-import java.time.ZonedDateTime;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
 import com.commercetools.api.models.common.Money;
+import com.commercetools.api.models.payment.TransactionState;
+import com.commercetools.api.models.payment.TransactionType;
 import com.commercetools.api.models.type.CustomFieldsDraft;
+import java.time.ZonedDateTime;
+import com.commercetools.api.models.payment.TransactionDraftImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * TransactionDraft
@@ -29,21 +32,23 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .amount(amountBuilder -> amountBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = TransactionDraftImpl.class)
-public interface TransactionDraft extends com.commercetools.api.models.CustomizableDraft<TransactionDraft>,
-        io.vrap.rmf.base.client.Draft<TransactionDraft> {
+public interface TransactionDraft extends com.commercetools.api.models.CustomizableDraft<TransactionDraft>, io.vrap.rmf.base.client.Draft<TransactionDraft> {
+
 
     /**
      *  <p>Date and time (UTC) the Transaction took place.</p>
      * @return timestamp
      */
-
+    
     @JsonProperty("timestamp")
     public ZonedDateTime getTimestamp();
-
     /**
      *  <p>Type of the Transaction.</p>
      * @return type
@@ -51,7 +56,6 @@ public interface TransactionDraft extends com.commercetools.api.models.Customiza
     @NotNull
     @JsonProperty("type")
     public TransactionType getType();
-
     /**
      *  <p>Money value for the Transaction.</p>
      * @return amount
@@ -60,23 +64,20 @@ public interface TransactionDraft extends com.commercetools.api.models.Customiza
     @Valid
     @JsonProperty("amount")
     public Money getAmount();
-
     /**
      *  <p>Identifier used by the payment service that manages the Transaction. Can be used to correlate the Transaction to an interface interaction.</p>
      * @return interactionId
      */
-
+    
     @JsonProperty("interactionId")
     public String getInteractionId();
-
     /**
      *  <p>State of the Transaction.</p>
      * @return state
      */
-
+    
     @JsonProperty("state")
     public TransactionState getState();
-
     /**
      *  <p>Custom Fields of the Transaction.</p>
      * @return custom
@@ -89,51 +90,58 @@ public interface TransactionDraft extends com.commercetools.api.models.Customiza
      *  <p>Date and time (UTC) the Transaction took place.</p>
      * @param timestamp value to be set
      */
-
+    
     public void setTimestamp(final ZonedDateTime timestamp);
-
+    
+    
     /**
      *  <p>Type of the Transaction.</p>
      * @param type value to be set
      */
-
+    
     public void setType(final TransactionType type);
-
+    
+    
     /**
      *  <p>Money value for the Transaction.</p>
      * @param amount value to be set
      */
-
+    
     public void setAmount(final Money amount);
-
+    
+    
     /**
      *  <p>Identifier used by the payment service that manages the Transaction. Can be used to correlate the Transaction to an interface interaction.</p>
      * @param interactionId value to be set
      */
-
+    
     public void setInteractionId(final String interactionId);
-
+    
+    
     /**
      *  <p>State of the Transaction.</p>
      * @param state value to be set
      */
-
+    
     public void setState(final TransactionState state);
-
+    
+    
     /**
      *  <p>Custom Fields of the Transaction.</p>
      * @param custom value to be set
      */
-
+    
     public void setCustom(final CustomFieldsDraft custom);
+    
 
     /**
      * factory method
      * @return instance of TransactionDraft
      */
-    public static TransactionDraft of() {
+    public static TransactionDraft of(){
         return new TransactionDraftImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy TransactionDraft
@@ -178,7 +186,7 @@ public interface TransactionDraft extends com.commercetools.api.models.Customiza
     public static TransactionDraftBuilder builder() {
         return TransactionDraftBuilder.of();
     }
-
+    
     /**
      * create builder for TransactionDraft instance
      * @param template instance with prefilled values for the builder
@@ -187,6 +195,7 @@ public interface TransactionDraft extends com.commercetools.api.models.Customiza
     public static TransactionDraftBuilder builder(final TransactionDraft template) {
         return TransactionDraftBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -197,7 +206,7 @@ public interface TransactionDraft extends com.commercetools.api.models.Customiza
     default <T> T withTransactionDraft(Function<TransactionDraft, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

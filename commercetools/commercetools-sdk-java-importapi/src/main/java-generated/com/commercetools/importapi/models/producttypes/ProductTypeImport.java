@@ -1,20 +1,21 @@
-
 package com.commercetools.importapi.models.producttypes;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-import java.util.stream.Collectors;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
 import com.commercetools.importapi.models.common.ImportResource;
+import com.commercetools.importapi.models.producttypes.AttributeDefinition;
+import com.commercetools.importapi.models.producttypes.ProductTypeImportImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>The data representation for a ProductType to be imported that is persisted as a ProductType in the Project.</p>
@@ -29,11 +30,15 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .description("{description}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = ProductTypeImportImpl.class)
 public interface ProductTypeImport extends ImportResource {
+
 
     /**
      *  <p>Maps to <code>ProductType.name</code>.</p>
@@ -42,7 +47,6 @@ public interface ProductTypeImport extends ImportResource {
     @NotNull
     @JsonProperty("name")
     public String getName();
-
     /**
      *  <p>Maps to <code>ProductType.description</code>.</p>
      * @return description
@@ -50,7 +54,6 @@ public interface ProductTypeImport extends ImportResource {
     @NotNull
     @JsonProperty("description")
     public String getDescription();
-
     /**
      *  <p>The <code>attributes</code> of ProductType.</p>
      * @return attributes
@@ -63,38 +66,40 @@ public interface ProductTypeImport extends ImportResource {
      *  <p>Maps to <code>ProductType.name</code>.</p>
      * @param name value to be set
      */
-
+    
     public void setName(final String name);
-
+    
+    
     /**
      *  <p>Maps to <code>ProductType.description</code>.</p>
      * @param description value to be set
      */
-
+    
     public void setDescription(final String description);
-
+    
+    
     /**
      *  <p>The <code>attributes</code> of ProductType.</p>
      * @param attributes values to be set
      */
-
+    
     @JsonIgnore
-    public void setAttributes(final AttributeDefinition... attributes);
-
+    public void setAttributes(final AttributeDefinition ...attributes);
     /**
      *  <p>The <code>attributes</code> of ProductType.</p>
      * @param attributes values to be set
      */
-
+    
     public void setAttributes(final List<AttributeDefinition> attributes);
 
     /**
      * factory method
      * @return instance of ProductTypeImport
      */
-    public static ProductTypeImport of() {
+    public static ProductTypeImport of(){
         return new ProductTypeImportImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy ProductTypeImport
@@ -125,9 +130,7 @@ public interface ProductTypeImport extends ImportResource {
         instance.setName(template.getName());
         instance.setDescription(template.getDescription());
         instance.setAttributes(Optional.ofNullable(template.getAttributes())
-                .map(t -> t.stream()
-                        .map(com.commercetools.importapi.models.producttypes.AttributeDefinition::deepCopy)
-                        .collect(Collectors.toList()))
+                .map(t -> t.stream().map(com.commercetools.importapi.models.producttypes.AttributeDefinition::deepCopy).collect(Collectors.toList()))
                 .orElse(null));
         return instance;
     }
@@ -139,7 +142,7 @@ public interface ProductTypeImport extends ImportResource {
     public static ProductTypeImportBuilder builder() {
         return ProductTypeImportBuilder.of();
     }
-
+    
     /**
      * create builder for ProductTypeImport instance
      * @param template instance with prefilled values for the builder
@@ -148,6 +151,7 @@ public interface ProductTypeImport extends ImportResource {
     public static ProductTypeImportBuilder builder(final ProductTypeImport template) {
         return ProductTypeImportBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -158,7 +162,7 @@ public interface ProductTypeImport extends ImportResource {
     default <T> T withProductTypeImport(Function<ProductTypeImport, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

@@ -1,8 +1,11 @@
-
 package com.commercetools.history.models.change;
 
+import com.commercetools.history.models.change.Change;
+import com.commercetools.history.models.change.SetCountryChange;
+import javax.annotation.Nullable;
 import java.util.*;
-
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -18,74 +21,95 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .nextValue("{nextValue}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class SetCountryChangeBuilder implements Builder<SetCountryChange> {
 
+    
+    
     private String change;
-
+    
+    
+    
     private String previousValue;
-
+    
+    
+    
     private String nextValue;
 
+    
     /**
      *  <p>Update action for <code>setCountry</code></p>
      * @param change value to be set
      * @return Builder
      */
-
-    public SetCountryChangeBuilder change(final String change) {
+    
+    public SetCountryChangeBuilder change( final String change) {
         this.change = change;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Two-digit country code as per ISO 3166-1 alpha-2.</p>
      * @param previousValue value to be set
      * @return Builder
      */
-
-    public SetCountryChangeBuilder previousValue(final String previousValue) {
+    
+    public SetCountryChangeBuilder previousValue( final String previousValue) {
         this.previousValue = previousValue;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Two-digit country code as per ISO 3166-1 alpha-2.</p>
      * @param nextValue value to be set
      * @return Builder
      */
-
-    public SetCountryChangeBuilder nextValue(final String nextValue) {
+    
+    public SetCountryChangeBuilder nextValue( final String nextValue) {
         this.nextValue = nextValue;
         return this;
     }
+    
+    
 
     /**
      *  <p>Update action for <code>setCountry</code></p>
      * @return change
      */
-
-    public String getChange() {
+    
+    
+    public String getChange(){
         return this.change;
     }
-
+    
     /**
      *  <p>Two-digit country code as per ISO 3166-1 alpha-2.</p>
      * @return previousValue
      */
-
-    public String getPreviousValue() {
+    
+    
+    public String getPreviousValue(){
         return this.previousValue;
     }
-
+    
     /**
      *  <p>Two-digit country code as per ISO 3166-1 alpha-2.</p>
      * @return nextValue
      */
-
-    public String getNextValue() {
+    
+    
+    public String getNextValue(){
         return this.nextValue;
     }
 
@@ -99,7 +123,7 @@ public class SetCountryChangeBuilder implements Builder<SetCountryChange> {
         Objects.requireNonNull(nextValue, SetCountryChange.class + ": nextValue is missing");
         return new SetCountryChangeImpl(change, previousValue, nextValue);
     }
-
+    
     /**
      * builds SetCountryChange without checking for non-null required values
      * @return SetCountryChange
@@ -110,7 +134,7 @@ public class SetCountryChangeBuilder implements Builder<SetCountryChange> {
 
     /**
      * factory method for an instance of SetCountryChangeBuilder
-     * @return builder
+     * @return builder 
      */
     public static SetCountryChangeBuilder of() {
         return new SetCountryChangeBuilder();

@@ -1,19 +1,22 @@
-
 package com.commercetools.api.models.category;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-
+import com.commercetools.api.models.category.CategoryUpdateAction;
 import com.commercetools.api.models.type.FieldContainer;
 import com.commercetools.api.models.type.TypeResourceIdentifier;
+import com.commercetools.api.models.category.CategorySetCustomTypeActionImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * CategorySetCustomTypeAction
@@ -25,9 +28,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     CategorySetCustomTypeAction categorySetCustomTypeAction = CategorySetCustomTypeAction.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = CategorySetCustomTypeActionImpl.class)
 public interface CategorySetCustomTypeAction extends CategoryUpdateAction {
 
@@ -43,7 +49,6 @@ public interface CategorySetCustomTypeAction extends CategoryUpdateAction {
     @Valid
     @JsonProperty("type")
     public TypeResourceIdentifier getType();
-
     /**
      *  <p>Sets the Custom Fields fields for the Category.</p>
      * @return fields
@@ -56,23 +61,26 @@ public interface CategorySetCustomTypeAction extends CategoryUpdateAction {
      *  <p>Defines the Type that extends the Category with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Category.</p>
      * @param type value to be set
      */
-
+    
     public void setType(final TypeResourceIdentifier type);
-
+    
+    
     /**
      *  <p>Sets the Custom Fields fields for the Category.</p>
      * @param fields value to be set
      */
-
+    
     public void setFields(final FieldContainer fields);
+    
 
     /**
      * factory method
      * @return instance of CategorySetCustomTypeAction
      */
-    public static CategorySetCustomTypeAction of() {
+    public static CategorySetCustomTypeAction of(){
         return new CategorySetCustomTypeActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy CategorySetCustomTypeAction
@@ -109,7 +117,7 @@ public interface CategorySetCustomTypeAction extends CategoryUpdateAction {
     public static CategorySetCustomTypeActionBuilder builder() {
         return CategorySetCustomTypeActionBuilder.of();
     }
-
+    
     /**
      * create builder for CategorySetCustomTypeAction instance
      * @param template instance with prefilled values for the builder
@@ -118,6 +126,7 @@ public interface CategorySetCustomTypeAction extends CategoryUpdateAction {
     public static CategorySetCustomTypeActionBuilder builder(final CategorySetCustomTypeAction template) {
         return CategorySetCustomTypeActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -128,7 +137,7 @@ public interface CategorySetCustomTypeAction extends CategoryUpdateAction {
     default <T> T withCategorySetCustomTypeAction(Function<CategorySetCustomTypeAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

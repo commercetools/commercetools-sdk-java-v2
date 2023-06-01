@@ -1,19 +1,21 @@
-
 package com.commercetools.history.models.change;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
+import com.commercetools.history.models.change.Change;
 import com.commercetools.history.models.common.CustomLineItem;
+import com.commercetools.history.models.change.RemoveCustomLineItemChangeImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * RemoveCustomLineItemChange
@@ -28,9 +30,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .previousValue(previousValueBuilder -> previousValueBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = RemoveCustomLineItemChangeImpl.class)
 public interface RemoveCustomLineItemChange extends Change {
 
@@ -46,7 +51,6 @@ public interface RemoveCustomLineItemChange extends Change {
     @NotNull
     @JsonProperty("type")
     public String getType();
-
     /**
      *  <p>Update action for adding and removing custom line items</p>
      * @return change
@@ -54,7 +58,6 @@ public interface RemoveCustomLineItemChange extends Change {
     @NotNull
     @JsonProperty("change")
     public String getChange();
-
     /**
      *
      * @return nextValue
@@ -63,7 +66,6 @@ public interface RemoveCustomLineItemChange extends Change {
     @Valid
     @JsonProperty("nextValue")
     public CustomLineItem getNextValue();
-
     /**
      *
      * @return previousValue
@@ -77,30 +79,34 @@ public interface RemoveCustomLineItemChange extends Change {
      *  <p>Update action for adding and removing custom line items</p>
      * @param change value to be set
      */
-
+    
     public void setChange(final String change);
-
+    
+    
     /**
      * set nextValue
      * @param nextValue value to be set
      */
-
+    
     public void setNextValue(final CustomLineItem nextValue);
-
+    
+    
     /**
      * set previousValue
      * @param previousValue value to be set
      */
-
+    
     public void setPreviousValue(final CustomLineItem previousValue);
+    
 
     /**
      * factory method
      * @return instance of RemoveCustomLineItemChange
      */
-    public static RemoveCustomLineItemChange of() {
+    public static RemoveCustomLineItemChange of(){
         return new RemoveCustomLineItemChangeImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy RemoveCustomLineItemChange
@@ -128,8 +134,7 @@ public interface RemoveCustomLineItemChange extends Change {
         RemoveCustomLineItemChangeImpl instance = new RemoveCustomLineItemChangeImpl();
         instance.setChange(template.getChange());
         instance.setNextValue(com.commercetools.history.models.common.CustomLineItem.deepCopy(template.getNextValue()));
-        instance.setPreviousValue(
-            com.commercetools.history.models.common.CustomLineItem.deepCopy(template.getPreviousValue()));
+        instance.setPreviousValue(com.commercetools.history.models.common.CustomLineItem.deepCopy(template.getPreviousValue()));
         return instance;
     }
 
@@ -140,7 +145,7 @@ public interface RemoveCustomLineItemChange extends Change {
     public static RemoveCustomLineItemChangeBuilder builder() {
         return RemoveCustomLineItemChangeBuilder.of();
     }
-
+    
     /**
      * create builder for RemoveCustomLineItemChange instance
      * @param template instance with prefilled values for the builder
@@ -149,6 +154,7 @@ public interface RemoveCustomLineItemChange extends Change {
     public static RemoveCustomLineItemChangeBuilder builder(final RemoveCustomLineItemChange template) {
         return RemoveCustomLineItemChangeBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -159,7 +165,7 @@ public interface RemoveCustomLineItemChange extends Change {
     default <T> T withRemoveCustomLineItemChange(Function<RemoveCustomLineItemChange, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

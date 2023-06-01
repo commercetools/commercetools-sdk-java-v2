@@ -1,19 +1,20 @@
-
 package com.commercetools.api.models.customer_group;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-import java.util.stream.Collectors;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
+import com.commercetools.api.models.customer_group.CustomerGroupUpdateAction;
+import com.commercetools.api.models.customer_group.CustomerGroupUpdateImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * CustomerGroupUpdate
@@ -27,12 +28,15 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .plusActions(actionsBuilder -> actionsBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = CustomerGroupUpdateImpl.class)
-public interface CustomerGroupUpdate extends
-        com.commercetools.api.models.ResourceUpdate<CustomerGroupUpdate, CustomerGroupUpdateAction, CustomerGroupUpdateBuilder> {
+public interface CustomerGroupUpdate extends com.commercetools.api.models.ResourceUpdate<CustomerGroupUpdate, CustomerGroupUpdateAction, CustomerGroupUpdateBuilder> {
+
 
     /**
      *  <p>Expected version of the CustomerGroup on which the changes should be applied. If the expected version does not match the actual version, a ConcurrentModification error is returned.</p>
@@ -41,7 +45,6 @@ public interface CustomerGroupUpdate extends
     @NotNull
     @JsonProperty("version")
     public Long getVersion();
-
     /**
      *  <p>Update actions to be performed on the CustomerGroup.</p>
      * @return actions
@@ -55,31 +58,32 @@ public interface CustomerGroupUpdate extends
      *  <p>Expected version of the CustomerGroup on which the changes should be applied. If the expected version does not match the actual version, a ConcurrentModification error is returned.</p>
      * @param version value to be set
      */
-
+    
     public void setVersion(final Long version);
-
+    
+    
     /**
      *  <p>Update actions to be performed on the CustomerGroup.</p>
      * @param actions values to be set
      */
-
+    
     @JsonIgnore
-    public void setActions(final CustomerGroupUpdateAction... actions);
-
+    public void setActions(final CustomerGroupUpdateAction ...actions);
     /**
      *  <p>Update actions to be performed on the CustomerGroup.</p>
      * @param actions values to be set
      */
-
+    
     public void setActions(final List<CustomerGroupUpdateAction> actions);
 
     /**
      * factory method
      * @return instance of CustomerGroupUpdate
      */
-    public static CustomerGroupUpdate of() {
+    public static CustomerGroupUpdate of(){
         return new CustomerGroupUpdateImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy CustomerGroupUpdate
@@ -106,9 +110,7 @@ public interface CustomerGroupUpdate extends
         CustomerGroupUpdateImpl instance = new CustomerGroupUpdateImpl();
         instance.setVersion(template.getVersion());
         instance.setActions(Optional.ofNullable(template.getActions())
-                .map(t -> t.stream()
-                        .map(com.commercetools.api.models.customer_group.CustomerGroupUpdateAction::deepCopy)
-                        .collect(Collectors.toList()))
+                .map(t -> t.stream().map(com.commercetools.api.models.customer_group.CustomerGroupUpdateAction::deepCopy).collect(Collectors.toList()))
                 .orElse(null));
         return instance;
     }
@@ -120,7 +122,7 @@ public interface CustomerGroupUpdate extends
     public static CustomerGroupUpdateBuilder builder() {
         return CustomerGroupUpdateBuilder.of();
     }
-
+    
     /**
      * create builder for CustomerGroupUpdate instance
      * @param template instance with prefilled values for the builder
@@ -129,6 +131,7 @@ public interface CustomerGroupUpdate extends
     public static CustomerGroupUpdateBuilder builder(final CustomerGroupUpdate template) {
         return CustomerGroupUpdateBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -139,7 +142,7 @@ public interface CustomerGroupUpdate extends
     default <T> T withCustomerGroupUpdate(Function<CustomerGroupUpdate, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

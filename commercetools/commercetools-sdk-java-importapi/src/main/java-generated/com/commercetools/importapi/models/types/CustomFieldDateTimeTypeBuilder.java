@@ -1,8 +1,11 @@
-
 package com.commercetools.importapi.models.types;
 
+import com.commercetools.importapi.models.types.FieldType;
+import com.commercetools.importapi.models.types.CustomFieldDateTimeType;
+import javax.annotation.Nullable;
 import java.util.*;
-
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -15,10 +18,16 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     CustomFieldDateTimeType customFieldDateTimeType = CustomFieldDateTimeType.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class CustomFieldDateTimeTypeBuilder implements Builder<CustomFieldDateTimeType> {
+
+
+
 
     /**
      * builds CustomFieldDateTimeType with checking for non-null required values
@@ -27,7 +36,7 @@ public class CustomFieldDateTimeTypeBuilder implements Builder<CustomFieldDateTi
     public CustomFieldDateTimeType build() {
         return new CustomFieldDateTimeTypeImpl();
     }
-
+    
     /**
      * builds CustomFieldDateTimeType without checking for non-null required values
      * @return CustomFieldDateTimeType
@@ -38,7 +47,7 @@ public class CustomFieldDateTimeTypeBuilder implements Builder<CustomFieldDateTi
 
     /**
      * factory method for an instance of CustomFieldDateTimeTypeBuilder
-     * @return builder
+     * @return builder 
      */
     public static CustomFieldDateTimeTypeBuilder of() {
         return new CustomFieldDateTimeTypeBuilder();

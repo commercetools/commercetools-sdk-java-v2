@@ -1,9 +1,12 @@
-
 package com.commercetools.api.models.business_unit;
 
+import com.commercetools.api.models.associate_role.AssociateRoleKeyReference;
+import com.commercetools.api.models.business_unit.BusinessUnitKeyReference;
+import com.commercetools.api.models.business_unit.InheritedAssociateRoleAssignment;
+import javax.annotation.Nullable;
 import java.util.*;
 import java.util.function.Function;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -18,106 +21,111 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .source(sourceBuilder -> sourceBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class InheritedAssociateRoleAssignmentBuilder implements Builder<InheritedAssociateRoleAssignment> {
 
+    
+    
     private com.commercetools.api.models.associate_role.AssociateRoleKeyReference associateRole;
-
+    
+    
+    
     private com.commercetools.api.models.business_unit.BusinessUnitKeyReference source;
 
+    
     /**
      *  <p>Inherited role the Associate holds within a Business Unit.</p>
      * @param builder function to build the associateRole value
      * @return Builder
      */
-
-    public InheritedAssociateRoleAssignmentBuilder associateRole(
-            Function<com.commercetools.api.models.associate_role.AssociateRoleKeyReferenceBuilder, com.commercetools.api.models.associate_role.AssociateRoleKeyReferenceBuilder> builder) {
-        this.associateRole = builder
-                .apply(com.commercetools.api.models.associate_role.AssociateRoleKeyReferenceBuilder.of())
-                .build();
+    
+    public InheritedAssociateRoleAssignmentBuilder associateRole(Function<com.commercetools.api.models.associate_role.AssociateRoleKeyReferenceBuilder, com.commercetools.api.models.associate_role.AssociateRoleKeyReferenceBuilder> builder) {
+        this.associateRole = builder.apply(com.commercetools.api.models.associate_role.AssociateRoleKeyReferenceBuilder.of()).build();
         return this;
     }
-
+    
     /**
      *  <p>Inherited role the Associate holds within a Business Unit.</p>
      * @param builder function to build the associateRole value
      * @return Builder
      */
-
-    public InheritedAssociateRoleAssignmentBuilder withAssociateRole(
-            Function<com.commercetools.api.models.associate_role.AssociateRoleKeyReferenceBuilder, com.commercetools.api.models.associate_role.AssociateRoleKeyReference> builder) {
-        this.associateRole = builder
-                .apply(com.commercetools.api.models.associate_role.AssociateRoleKeyReferenceBuilder.of());
+    
+    public InheritedAssociateRoleAssignmentBuilder withAssociateRole(Function<com.commercetools.api.models.associate_role.AssociateRoleKeyReferenceBuilder, com.commercetools.api.models.associate_role.AssociateRoleKeyReference> builder) {
+        this.associateRole = builder.apply(com.commercetools.api.models.associate_role.AssociateRoleKeyReferenceBuilder.of());
         return this;
     }
-
+                    
     /**
      *  <p>Inherited role the Associate holds within a Business Unit.</p>
      * @param associateRole value to be set
      * @return Builder
      */
-
-    public InheritedAssociateRoleAssignmentBuilder associateRole(
-            final com.commercetools.api.models.associate_role.AssociateRoleKeyReference associateRole) {
+    
+    public InheritedAssociateRoleAssignmentBuilder associateRole( final com.commercetools.api.models.associate_role.AssociateRoleKeyReference associateRole) {
         this.associateRole = associateRole;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Reference to the parent Business Unit where the assignment is defined explicitly.</p>
      * @param builder function to build the source value
      * @return Builder
      */
-
-    public InheritedAssociateRoleAssignmentBuilder source(
-            Function<com.commercetools.api.models.business_unit.BusinessUnitKeyReferenceBuilder, com.commercetools.api.models.business_unit.BusinessUnitKeyReferenceBuilder> builder) {
-        this.source = builder.apply(com.commercetools.api.models.business_unit.BusinessUnitKeyReferenceBuilder.of())
-                .build();
+    
+    public InheritedAssociateRoleAssignmentBuilder source(Function<com.commercetools.api.models.business_unit.BusinessUnitKeyReferenceBuilder, com.commercetools.api.models.business_unit.BusinessUnitKeyReferenceBuilder> builder) {
+        this.source = builder.apply(com.commercetools.api.models.business_unit.BusinessUnitKeyReferenceBuilder.of()).build();
         return this;
     }
-
+    
     /**
      *  <p>Reference to the parent Business Unit where the assignment is defined explicitly.</p>
      * @param builder function to build the source value
      * @return Builder
      */
-
-    public InheritedAssociateRoleAssignmentBuilder withSource(
-            Function<com.commercetools.api.models.business_unit.BusinessUnitKeyReferenceBuilder, com.commercetools.api.models.business_unit.BusinessUnitKeyReference> builder) {
+    
+    public InheritedAssociateRoleAssignmentBuilder withSource(Function<com.commercetools.api.models.business_unit.BusinessUnitKeyReferenceBuilder, com.commercetools.api.models.business_unit.BusinessUnitKeyReference> builder) {
         this.source = builder.apply(com.commercetools.api.models.business_unit.BusinessUnitKeyReferenceBuilder.of());
         return this;
     }
-
+                    
     /**
      *  <p>Reference to the parent Business Unit where the assignment is defined explicitly.</p>
      * @param source value to be set
      * @return Builder
      */
-
-    public InheritedAssociateRoleAssignmentBuilder source(
-            final com.commercetools.api.models.business_unit.BusinessUnitKeyReference source) {
+    
+    public InheritedAssociateRoleAssignmentBuilder source( final com.commercetools.api.models.business_unit.BusinessUnitKeyReference source) {
         this.source = source;
         return this;
     }
+    
+    
 
     /**
      *  <p>Inherited role the Associate holds within a Business Unit.</p>
      * @return associateRole
      */
-
-    public com.commercetools.api.models.associate_role.AssociateRoleKeyReference getAssociateRole() {
+    
+    
+    public com.commercetools.api.models.associate_role.AssociateRoleKeyReference getAssociateRole(){
         return this.associateRole;
     }
-
+    
     /**
      *  <p>Reference to the parent Business Unit where the assignment is defined explicitly.</p>
      * @return source
      */
-
-    public com.commercetools.api.models.business_unit.BusinessUnitKeyReference getSource() {
+    
+    
+    public com.commercetools.api.models.business_unit.BusinessUnitKeyReference getSource(){
         return this.source;
     }
 
@@ -130,7 +138,7 @@ public class InheritedAssociateRoleAssignmentBuilder implements Builder<Inherite
         Objects.requireNonNull(source, InheritedAssociateRoleAssignment.class + ": source is missing");
         return new InheritedAssociateRoleAssignmentImpl(associateRole, source);
     }
-
+    
     /**
      * builds InheritedAssociateRoleAssignment without checking for non-null required values
      * @return InheritedAssociateRoleAssignment
@@ -141,7 +149,7 @@ public class InheritedAssociateRoleAssignmentBuilder implements Builder<Inherite
 
     /**
      * factory method for an instance of InheritedAssociateRoleAssignmentBuilder
-     * @return builder
+     * @return builder 
      */
     public static InheritedAssociateRoleAssignmentBuilder of() {
         return new InheritedAssociateRoleAssignmentBuilder();

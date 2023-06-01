@@ -1,16 +1,20 @@
-
 package com.commercetools.api.models.me;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
+import com.commercetools.api.models.me.MyCartUpdateAction;
+import com.commercetools.api.models.me.MyCartSetDeleteDaysAfterLastModificationActionImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Number of days after which a Cart with <code>Active</code> CartState is deleted since its last modification.</p>
@@ -23,9 +27,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     MyCartSetDeleteDaysAfterLastModificationAction myCartSetDeleteDaysAfterLastModificationAction = MyCartSetDeleteDaysAfterLastModificationAction.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = MyCartSetDeleteDaysAfterLastModificationActionImpl.class)
 public interface MyCartSetDeleteDaysAfterLastModificationAction extends MyCartUpdateAction {
 
@@ -38,7 +45,7 @@ public interface MyCartSetDeleteDaysAfterLastModificationAction extends MyCartUp
      *  <p>Value to set. If not provided, the default value for this field configured in Project settings is assigned.</p>
      * @return deleteDaysAfterLastModification
      */
-
+    
     @JsonProperty("deleteDaysAfterLastModification")
     public Integer getDeleteDaysAfterLastModification();
 
@@ -46,24 +53,25 @@ public interface MyCartSetDeleteDaysAfterLastModificationAction extends MyCartUp
      *  <p>Value to set. If not provided, the default value for this field configured in Project settings is assigned.</p>
      * @param deleteDaysAfterLastModification value to be set
      */
-
+    
     public void setDeleteDaysAfterLastModification(final Integer deleteDaysAfterLastModification);
+    
 
     /**
      * factory method
      * @return instance of MyCartSetDeleteDaysAfterLastModificationAction
      */
-    public static MyCartSetDeleteDaysAfterLastModificationAction of() {
+    public static MyCartSetDeleteDaysAfterLastModificationAction of(){
         return new MyCartSetDeleteDaysAfterLastModificationActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy MyCartSetDeleteDaysAfterLastModificationAction
      * @param template instance to be copied
      * @return copy instance
      */
-    public static MyCartSetDeleteDaysAfterLastModificationAction of(
-            final MyCartSetDeleteDaysAfterLastModificationAction template) {
+    public static MyCartSetDeleteDaysAfterLastModificationAction of(final MyCartSetDeleteDaysAfterLastModificationAction template) {
         MyCartSetDeleteDaysAfterLastModificationActionImpl instance = new MyCartSetDeleteDaysAfterLastModificationActionImpl();
         instance.setDeleteDaysAfterLastModification(template.getDeleteDaysAfterLastModification());
         return instance;
@@ -75,8 +83,7 @@ public interface MyCartSetDeleteDaysAfterLastModificationAction extends MyCartUp
      * @return copy instance
      */
     @Nullable
-    public static MyCartSetDeleteDaysAfterLastModificationAction deepCopy(
-            @Nullable final MyCartSetDeleteDaysAfterLastModificationAction template) {
+    public static MyCartSetDeleteDaysAfterLastModificationAction deepCopy(@Nullable final MyCartSetDeleteDaysAfterLastModificationAction template) {
         if (template == null) {
             return null;
         }
@@ -92,16 +99,16 @@ public interface MyCartSetDeleteDaysAfterLastModificationAction extends MyCartUp
     public static MyCartSetDeleteDaysAfterLastModificationActionBuilder builder() {
         return MyCartSetDeleteDaysAfterLastModificationActionBuilder.of();
     }
-
+    
     /**
      * create builder for MyCartSetDeleteDaysAfterLastModificationAction instance
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static MyCartSetDeleteDaysAfterLastModificationActionBuilder builder(
-            final MyCartSetDeleteDaysAfterLastModificationAction template) {
+    public static MyCartSetDeleteDaysAfterLastModificationActionBuilder builder(final MyCartSetDeleteDaysAfterLastModificationAction template) {
         return MyCartSetDeleteDaysAfterLastModificationActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -109,11 +116,10 @@ public interface MyCartSetDeleteDaysAfterLastModificationAction extends MyCartUp
      * @param helper function to map the object
      * @return mapped value
      */
-    default <T> T withMyCartSetDeleteDaysAfterLastModificationAction(
-            Function<MyCartSetDeleteDaysAfterLastModificationAction, T> helper) {
+    default <T> T withMyCartSetDeleteDaysAfterLastModificationAction(Function<MyCartSetDeleteDaysAfterLastModificationAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

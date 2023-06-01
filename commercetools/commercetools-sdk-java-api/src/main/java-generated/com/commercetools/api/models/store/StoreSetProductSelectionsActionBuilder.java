@@ -1,11 +1,12 @@
-
 package com.commercetools.api.models.store;
 
+import com.commercetools.api.models.store.ProductSelectionSettingDraft;
+import com.commercetools.api.models.store.StoreUpdateAction;
+import com.commercetools.api.models.store.StoreSetProductSelectionsAction;
+import javax.annotation.Nullable;
 import java.util.*;
 import java.util.function.Function;
-
-import javax.annotation.Nullable;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -18,11 +19,15 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     StoreSetProductSelectionsAction storeSetProductSelectionsAction = StoreSetProductSelectionsAction.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class StoreSetProductSelectionsActionBuilder implements Builder<StoreSetProductSelectionsAction> {
 
+    
     @Nullable
     private java.util.List<com.commercetools.api.models.store.ProductSelectionSettingDraft> productSelections;
 
@@ -35,13 +40,12 @@ public class StoreSetProductSelectionsActionBuilder implements Builder<StoreSetP
      * @param productSelections value to be set
      * @return Builder
      */
-
-    public StoreSetProductSelectionsActionBuilder productSelections(
-            @Nullable final com.commercetools.api.models.store.ProductSelectionSettingDraft... productSelections) {
+    
+    public StoreSetProductSelectionsActionBuilder productSelections(@Nullable final com.commercetools.api.models.store.ProductSelectionSettingDraft ...productSelections) {
         this.productSelections = new ArrayList<>(Arrays.asList(productSelections));
         return this;
     }
-
+    
     /**
      *  <p>Value to set.</p>
      *  <ul>
@@ -51,13 +55,12 @@ public class StoreSetProductSelectionsActionBuilder implements Builder<StoreSetP
      * @param productSelections value to be set
      * @return Builder
      */
-
-    public StoreSetProductSelectionsActionBuilder productSelections(
-            @Nullable final java.util.List<com.commercetools.api.models.store.ProductSelectionSettingDraft> productSelections) {
+    
+    public StoreSetProductSelectionsActionBuilder productSelections(@Nullable final java.util.List<com.commercetools.api.models.store.ProductSelectionSettingDraft> productSelections) {
         this.productSelections = productSelections;
         return this;
     }
-
+    
     /**
      *  <p>Value to set.</p>
      *  <ul>
@@ -67,16 +70,17 @@ public class StoreSetProductSelectionsActionBuilder implements Builder<StoreSetP
      * @param productSelections value to be set
      * @return Builder
      */
-
-    public StoreSetProductSelectionsActionBuilder plusProductSelections(
-            @Nullable final com.commercetools.api.models.store.ProductSelectionSettingDraft... productSelections) {
+    
+    public StoreSetProductSelectionsActionBuilder plusProductSelections(@Nullable final com.commercetools.api.models.store.ProductSelectionSettingDraft ...productSelections) {
         if (this.productSelections == null) {
             this.productSelections = new ArrayList<>();
         }
         this.productSelections.addAll(Arrays.asList(productSelections));
         return this;
     }
-
+    
+    
+    
     /**
      *  <p>Value to set.</p>
      *  <ul>
@@ -86,17 +90,15 @@ public class StoreSetProductSelectionsActionBuilder implements Builder<StoreSetP
      * @param builder function to build the productSelections value
      * @return Builder
      */
-
-    public StoreSetProductSelectionsActionBuilder plusProductSelections(
-            Function<com.commercetools.api.models.store.ProductSelectionSettingDraftBuilder, com.commercetools.api.models.store.ProductSelectionSettingDraftBuilder> builder) {
+    
+    public StoreSetProductSelectionsActionBuilder plusProductSelections(Function<com.commercetools.api.models.store.ProductSelectionSettingDraftBuilder, com.commercetools.api.models.store.ProductSelectionSettingDraftBuilder> builder) {
         if (this.productSelections == null) {
             this.productSelections = new ArrayList<>();
         }
-        this.productSelections.add(
-            builder.apply(com.commercetools.api.models.store.ProductSelectionSettingDraftBuilder.of()).build());
+        this.productSelections.add(builder.apply(com.commercetools.api.models.store.ProductSelectionSettingDraftBuilder.of()).build());
         return this;
     }
-
+    
     /**
      *  <p>Value to set.</p>
      *  <ul>
@@ -106,15 +108,13 @@ public class StoreSetProductSelectionsActionBuilder implements Builder<StoreSetP
      * @param builder function to build the productSelections value
      * @return Builder
      */
-
-    public StoreSetProductSelectionsActionBuilder withProductSelections(
-            Function<com.commercetools.api.models.store.ProductSelectionSettingDraftBuilder, com.commercetools.api.models.store.ProductSelectionSettingDraftBuilder> builder) {
+    
+    public StoreSetProductSelectionsActionBuilder withProductSelections(Function<com.commercetools.api.models.store.ProductSelectionSettingDraftBuilder, com.commercetools.api.models.store.ProductSelectionSettingDraftBuilder> builder) {
         this.productSelections = new ArrayList<>();
-        this.productSelections.add(
-            builder.apply(com.commercetools.api.models.store.ProductSelectionSettingDraftBuilder.of()).build());
+        this.productSelections.add(builder.apply(com.commercetools.api.models.store.ProductSelectionSettingDraftBuilder.of()).build());
         return this;
     }
-
+    
     /**
      *  <p>Value to set.</p>
      *  <ul>
@@ -124,13 +124,11 @@ public class StoreSetProductSelectionsActionBuilder implements Builder<StoreSetP
      * @param builder function to build the productSelections value
      * @return Builder
      */
-
-    public StoreSetProductSelectionsActionBuilder addProductSelections(
-            Function<com.commercetools.api.models.store.ProductSelectionSettingDraftBuilder, com.commercetools.api.models.store.ProductSelectionSettingDraft> builder) {
-        return plusProductSelections(
-            builder.apply(com.commercetools.api.models.store.ProductSelectionSettingDraftBuilder.of()));
+    
+    public StoreSetProductSelectionsActionBuilder addProductSelections(Function<com.commercetools.api.models.store.ProductSelectionSettingDraftBuilder, com.commercetools.api.models.store.ProductSelectionSettingDraft> builder) {
+        return plusProductSelections(builder.apply(com.commercetools.api.models.store.ProductSelectionSettingDraftBuilder.of()));
     }
-
+    
     /**
      *  <p>Value to set.</p>
      *  <ul>
@@ -140,12 +138,11 @@ public class StoreSetProductSelectionsActionBuilder implements Builder<StoreSetP
      * @param builder function to build the productSelections value
      * @return Builder
      */
-
-    public StoreSetProductSelectionsActionBuilder setProductSelections(
-            Function<com.commercetools.api.models.store.ProductSelectionSettingDraftBuilder, com.commercetools.api.models.store.ProductSelectionSettingDraft> builder) {
-        return productSelections(
-            builder.apply(com.commercetools.api.models.store.ProductSelectionSettingDraftBuilder.of()));
+    
+    public StoreSetProductSelectionsActionBuilder setProductSelections(Function<com.commercetools.api.models.store.ProductSelectionSettingDraftBuilder, com.commercetools.api.models.store.ProductSelectionSettingDraft> builder) {
+        return productSelections(builder.apply(com.commercetools.api.models.store.ProductSelectionSettingDraftBuilder.of()));
     }
+                    
 
     /**
      *  <p>Value to set.</p>
@@ -155,9 +152,9 @@ public class StoreSetProductSelectionsActionBuilder implements Builder<StoreSetP
      *  </ul>
      * @return productSelections
      */
-
+    
     @Nullable
-    public java.util.List<com.commercetools.api.models.store.ProductSelectionSettingDraft> getProductSelections() {
+    public java.util.List<com.commercetools.api.models.store.ProductSelectionSettingDraft> getProductSelections(){
         return this.productSelections;
     }
 
@@ -168,7 +165,7 @@ public class StoreSetProductSelectionsActionBuilder implements Builder<StoreSetP
     public StoreSetProductSelectionsAction build() {
         return new StoreSetProductSelectionsActionImpl(productSelections);
     }
-
+    
     /**
      * builds StoreSetProductSelectionsAction without checking for non-null required values
      * @return StoreSetProductSelectionsAction
@@ -179,7 +176,7 @@ public class StoreSetProductSelectionsActionBuilder implements Builder<StoreSetP
 
     /**
      * factory method for an instance of StoreSetProductSelectionsActionBuilder
-     * @return builder
+     * @return builder 
      */
     public static StoreSetProductSelectionsActionBuilder of() {
         return new StoreSetProductSelectionsActionBuilder();

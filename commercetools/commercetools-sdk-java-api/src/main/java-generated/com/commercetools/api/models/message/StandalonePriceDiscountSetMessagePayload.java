@@ -1,18 +1,21 @@
-
 package com.commercetools.api.models.message;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-
 import com.commercetools.api.models.common.DiscountedPrice;
+import com.commercetools.api.models.message.MessagePayload;
+import com.commercetools.api.models.message.StandalonePriceDiscountSetMessagePayloadImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Generated after a Product Discount is successfully applied to a StandalonePrice.</p>
@@ -24,9 +27,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     StandalonePriceDiscountSetMessagePayload standalonePriceDiscountSetMessagePayload = StandalonePriceDiscountSetMessagePayload.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = StandalonePriceDiscountSetMessagePayloadImpl.class)
 public interface StandalonePriceDiscountSetMessagePayload extends MessagePayload {
 
@@ -47,16 +53,18 @@ public interface StandalonePriceDiscountSetMessagePayload extends MessagePayload
      *  <p>The new <code>discounted</code> value of the updated StandalonePrice.</p>
      * @param discounted value to be set
      */
-
+    
     public void setDiscounted(final DiscountedPrice discounted);
+    
 
     /**
      * factory method
      * @return instance of StandalonePriceDiscountSetMessagePayload
      */
-    public static StandalonePriceDiscountSetMessagePayload of() {
+    public static StandalonePriceDiscountSetMessagePayload of(){
         return new StandalonePriceDiscountSetMessagePayloadImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy StandalonePriceDiscountSetMessagePayload
@@ -75,8 +83,7 @@ public interface StandalonePriceDiscountSetMessagePayload extends MessagePayload
      * @return copy instance
      */
     @Nullable
-    public static StandalonePriceDiscountSetMessagePayload deepCopy(
-            @Nullable final StandalonePriceDiscountSetMessagePayload template) {
+    public static StandalonePriceDiscountSetMessagePayload deepCopy(@Nullable final StandalonePriceDiscountSetMessagePayload template) {
         if (template == null) {
             return null;
         }
@@ -92,16 +99,16 @@ public interface StandalonePriceDiscountSetMessagePayload extends MessagePayload
     public static StandalonePriceDiscountSetMessagePayloadBuilder builder() {
         return StandalonePriceDiscountSetMessagePayloadBuilder.of();
     }
-
+    
     /**
      * create builder for StandalonePriceDiscountSetMessagePayload instance
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static StandalonePriceDiscountSetMessagePayloadBuilder builder(
-            final StandalonePriceDiscountSetMessagePayload template) {
+    public static StandalonePriceDiscountSetMessagePayloadBuilder builder(final StandalonePriceDiscountSetMessagePayload template) {
         return StandalonePriceDiscountSetMessagePayloadBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -109,11 +116,10 @@ public interface StandalonePriceDiscountSetMessagePayload extends MessagePayload
      * @param helper function to map the object
      * @return mapped value
      */
-    default <T> T withStandalonePriceDiscountSetMessagePayload(
-            Function<StandalonePriceDiscountSetMessagePayload, T> helper) {
+    default <T> T withStandalonePriceDiscountSetMessagePayload(Function<StandalonePriceDiscountSetMessagePayload, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

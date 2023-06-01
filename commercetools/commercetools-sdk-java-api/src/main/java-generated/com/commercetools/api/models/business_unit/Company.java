@@ -1,18 +1,23 @@
-
 package com.commercetools.api.models.business_unit;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-import java.util.stream.Collectors;
-
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
+import com.commercetools.api.models.business_unit.BusinessUnit;
+import com.commercetools.api.models.business_unit.BusinessUnitAssociateMode;
+import com.commercetools.api.models.business_unit.BusinessUnitStoreMode;
+import com.commercetools.api.models.business_unit.BusinessUnitType;
+import com.commercetools.api.models.business_unit.CompanyImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Business Unit type to represent the top level of a business. Contains specific fields and values that differentiate a Company from the generic BusinessUnit.</p>
@@ -36,9 +41,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .topLevelUnit(topLevelUnitBuilder -> topLevelUnitBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = CompanyImpl.class)
 public interface Company extends BusinessUnit {
 
@@ -54,7 +62,6 @@ public interface Company extends BusinessUnit {
     @NotNull
     @JsonProperty("storeMode")
     public BusinessUnitStoreMode getStoreMode();
-
     /**
      *  <p>Is always <code>Explicit</code> since a Company cannot have a parent Business Unit that Associates can be inherited from.</p>
      * @return associateMode
@@ -67,23 +74,26 @@ public interface Company extends BusinessUnit {
      *  <p>Is always <code>Explicit</code> since a Company cannot have a parent Business Unit that Stores can be inherited from.</p>
      * @param storeMode value to be set
      */
-
+    
     public void setStoreMode(final BusinessUnitStoreMode storeMode);
-
+    
+    
     /**
      *  <p>Is always <code>Explicit</code> since a Company cannot have a parent Business Unit that Associates can be inherited from.</p>
      * @param associateMode value to be set
      */
-
+    
     public void setAssociateMode(final BusinessUnitAssociateMode associateMode);
+    
 
     /**
      * factory method
      * @return instance of Company
      */
-    public static Company of() {
+    public static Company of(){
         return new CompanyImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy Company
@@ -133,46 +143,37 @@ public interface Company extends BusinessUnit {
         instance.setVersion(template.getVersion());
         instance.setCreatedAt(template.getCreatedAt());
         instance.setLastModifiedAt(template.getLastModifiedAt());
-        instance.setLastModifiedBy(
-            com.commercetools.api.models.common.LastModifiedBy.deepCopy(template.getLastModifiedBy()));
+        instance.setLastModifiedBy(com.commercetools.api.models.common.LastModifiedBy.deepCopy(template.getLastModifiedBy()));
         instance.setCreatedBy(com.commercetools.api.models.common.CreatedBy.deepCopy(template.getCreatedBy()));
         instance.setKey(template.getKey());
         instance.setStatus(template.getStatus());
         instance.setStores(Optional.ofNullable(template.getStores())
-                .map(t -> t.stream()
-                        .map(com.commercetools.api.models.store.StoreKeyReference::deepCopy)
-                        .collect(Collectors.toList()))
+                .map(t -> t.stream().map(com.commercetools.api.models.store.StoreKeyReference::deepCopy).collect(Collectors.toList()))
                 .orElse(null));
         instance.setStoreMode(template.getStoreMode());
         instance.setName(template.getName());
         instance.setContactEmail(template.getContactEmail());
         instance.setCustom(com.commercetools.api.models.type.CustomFields.deepCopy(template.getCustom()));
         instance.setAddresses(Optional.ofNullable(template.getAddresses())
-                .map(t -> t.stream()
-                        .map(com.commercetools.api.models.common.Address::deepCopy)
-                        .collect(Collectors.toList()))
+                .map(t -> t.stream().map(com.commercetools.api.models.common.Address::deepCopy).collect(Collectors.toList()))
                 .orElse(null));
-        instance.setShippingAddressIds(
-            Optional.ofNullable(template.getShippingAddressIds()).map(ArrayList::new).orElse(null));
+        instance.setShippingAddressIds(Optional.ofNullable(template.getShippingAddressIds())
+                .map(ArrayList::new)
+                .orElse(null));
         instance.setDefaultShippingAddressId(template.getDefaultShippingAddressId());
-        instance.setBillingAddressIds(
-            Optional.ofNullable(template.getBillingAddressIds()).map(ArrayList::new).orElse(null));
+        instance.setBillingAddressIds(Optional.ofNullable(template.getBillingAddressIds())
+                .map(ArrayList::new)
+                .orElse(null));
         instance.setDefaultBillingAddressId(template.getDefaultBillingAddressId());
         instance.setAssociateMode(template.getAssociateMode());
         instance.setAssociates(Optional.ofNullable(template.getAssociates())
-                .map(t -> t.stream()
-                        .map(com.commercetools.api.models.business_unit.Associate::deepCopy)
-                        .collect(Collectors.toList()))
+                .map(t -> t.stream().map(com.commercetools.api.models.business_unit.Associate::deepCopy).collect(Collectors.toList()))
                 .orElse(null));
         instance.setInheritedAssociates(Optional.ofNullable(template.getInheritedAssociates())
-                .map(t -> t.stream()
-                        .map(com.commercetools.api.models.business_unit.InheritedAssociate::deepCopy)
-                        .collect(Collectors.toList()))
+                .map(t -> t.stream().map(com.commercetools.api.models.business_unit.InheritedAssociate::deepCopy).collect(Collectors.toList()))
                 .orElse(null));
-        instance.setParentUnit(
-            com.commercetools.api.models.business_unit.BusinessUnitKeyReference.deepCopy(template.getParentUnit()));
-        instance.setTopLevelUnit(
-            com.commercetools.api.models.business_unit.BusinessUnitKeyReference.deepCopy(template.getTopLevelUnit()));
+        instance.setParentUnit(com.commercetools.api.models.business_unit.BusinessUnitKeyReference.deepCopy(template.getParentUnit()));
+        instance.setTopLevelUnit(com.commercetools.api.models.business_unit.BusinessUnitKeyReference.deepCopy(template.getTopLevelUnit()));
         return instance;
     }
 
@@ -183,7 +184,7 @@ public interface Company extends BusinessUnit {
     public static CompanyBuilder builder() {
         return CompanyBuilder.of();
     }
-
+    
     /**
      * create builder for Company instance
      * @param template instance with prefilled values for the builder
@@ -192,6 +193,7 @@ public interface Company extends BusinessUnit {
     public static CompanyBuilder builder(final Company template) {
         return CompanyBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -202,7 +204,7 @@ public interface Company extends BusinessUnit {
     default <T> T withCompany(Function<Company, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

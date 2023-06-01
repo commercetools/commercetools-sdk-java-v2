@@ -1,18 +1,21 @@
-
 package com.commercetools.importapi.models.errors;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
-
 import com.commercetools.importapi.models.common.ProcessingState;
+import com.commercetools.importapi.models.errors.ErrorObject;
+import com.commercetools.importapi.models.errors.InvalidStateTransitionErrorImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * InvalidStateTransitionError
@@ -27,9 +30,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .newState(ProcessingState.PROCESSING)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = InvalidStateTransitionErrorImpl.class)
 public interface InvalidStateTransitionError extends ErrorObject {
 
@@ -45,7 +51,6 @@ public interface InvalidStateTransitionError extends ErrorObject {
     @NotNull
     @JsonProperty("currentState")
     public ProcessingState getCurrentState();
-
     /**
      *  <p>Every Import Operation is assigned with one of the following states.</p>
      * @return newState
@@ -58,23 +63,26 @@ public interface InvalidStateTransitionError extends ErrorObject {
      *  <p>Every Import Operation is assigned with one of the following states.</p>
      * @param currentState value to be set
      */
-
+    
     public void setCurrentState(final ProcessingState currentState);
-
+    
+    
     /**
      *  <p>Every Import Operation is assigned with one of the following states.</p>
      * @param newState value to be set
      */
-
+    
     public void setNewState(final ProcessingState newState);
+    
 
     /**
      * factory method
      * @return instance of InvalidStateTransitionError
      */
-    public static InvalidStateTransitionError of() {
+    public static InvalidStateTransitionError of(){
         return new InvalidStateTransitionErrorImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy InvalidStateTransitionError
@@ -113,7 +121,7 @@ public interface InvalidStateTransitionError extends ErrorObject {
     public static InvalidStateTransitionErrorBuilder builder() {
         return InvalidStateTransitionErrorBuilder.of();
     }
-
+    
     /**
      * create builder for InvalidStateTransitionError instance
      * @param template instance with prefilled values for the builder
@@ -122,6 +130,7 @@ public interface InvalidStateTransitionError extends ErrorObject {
     public static InvalidStateTransitionErrorBuilder builder(final InvalidStateTransitionError template) {
         return InvalidStateTransitionErrorBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -132,7 +141,7 @@ public interface InvalidStateTransitionError extends ErrorObject {
     default <T> T withInvalidStateTransitionError(Function<InvalidStateTransitionError, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

@@ -1,8 +1,11 @@
-
 package com.commercetools.api.models.subscription;
 
+import com.commercetools.api.models.subscription.Destination;
+import com.commercetools.api.models.subscription.AzureEventGridDestination;
+import javax.annotation.Nullable;
 import java.util.*;
-
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -17,52 +20,67 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .accessKey("{accessKey}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class AzureEventGridDestinationBuilder implements Builder<AzureEventGridDestination> {
 
+    
+    
     private String uri;
-
+    
+    
+    
     private String accessKey;
 
+    
     /**
      *  <p>URI of the topic.</p>
      * @param uri value to be set
      * @return Builder
      */
-
-    public AzureEventGridDestinationBuilder uri(final String uri) {
+    
+    public AzureEventGridDestinationBuilder uri( final String uri) {
         this.uri = uri;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Partially hidden on retrieval for security reasons.</p>
      * @param accessKey value to be set
      * @return Builder
      */
-
-    public AzureEventGridDestinationBuilder accessKey(final String accessKey) {
+    
+    public AzureEventGridDestinationBuilder accessKey( final String accessKey) {
         this.accessKey = accessKey;
         return this;
     }
+    
+    
 
     /**
      *  <p>URI of the topic.</p>
      * @return uri
      */
-
-    public String getUri() {
+    
+    
+    public String getUri(){
         return this.uri;
     }
-
+    
     /**
      *  <p>Partially hidden on retrieval for security reasons.</p>
      * @return accessKey
      */
-
-    public String getAccessKey() {
+    
+    
+    public String getAccessKey(){
         return this.accessKey;
     }
 
@@ -75,7 +93,7 @@ public class AzureEventGridDestinationBuilder implements Builder<AzureEventGridD
         Objects.requireNonNull(accessKey, AzureEventGridDestination.class + ": accessKey is missing");
         return new AzureEventGridDestinationImpl(uri, accessKey);
     }
-
+    
     /**
      * builds AzureEventGridDestination without checking for non-null required values
      * @return AzureEventGridDestination
@@ -86,7 +104,7 @@ public class AzureEventGridDestinationBuilder implements Builder<AzureEventGridD
 
     /**
      * factory method for an instance of AzureEventGridDestinationBuilder
-     * @return builder
+     * @return builder 
      */
     public static AzureEventGridDestinationBuilder of() {
         return new AzureEventGridDestinationBuilder();

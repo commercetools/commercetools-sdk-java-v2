@@ -1,43 +1,50 @@
-
 package com.commercetools.importapi.models.orders;
 
-import java.time.*;
-import java.util.*;
-
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
-
-import io.vrap.rmf.base.client.ModelBase;
+import com.commercetools.importapi.models.common.Money;
+import com.commercetools.importapi.models.orders.TaxPortion;
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.ModelBase;
+import javax.validation.Valid;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.annotation.*;
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
  * TaxedPrice
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class TaxedPriceImpl implements TaxedPrice, ModelBase {
 
+    
     private com.commercetools.importapi.models.common.Money totalNet;
-
+    
+    
     private com.commercetools.importapi.models.common.Money totalGross;
-
+    
+    
     private java.util.List<com.commercetools.importapi.models.orders.TaxPortion> taxPortions;
 
     /**
      * create instance with all properties
      */
     @JsonCreator
-    TaxedPriceImpl(@JsonProperty("totalNet") final com.commercetools.importapi.models.common.Money totalNet,
-            @JsonProperty("totalGross") final com.commercetools.importapi.models.common.Money totalGross,
-            @JsonProperty("taxPortions") final java.util.List<com.commercetools.importapi.models.orders.TaxPortion> taxPortions) {
+    TaxedPriceImpl(@JsonProperty("totalNet") final com.commercetools.importapi.models.common.Money totalNet, @JsonProperty("totalGross") final com.commercetools.importapi.models.common.Money totalGross, @JsonProperty("taxPortions") final java.util.List<com.commercetools.importapi.models.orders.TaxPortion> taxPortions) {
         this.totalNet = totalNet;
         this.totalGross = totalGross;
         this.taxPortions = taxPortions;
     }
-
     /**
      * create empty instance
      */
@@ -47,62 +54,69 @@ public class TaxedPriceImpl implements TaxedPrice, ModelBase {
     /**
      *  <p>Maps to <code>TaxedPrice.totalNet</code>.</p>
      */
-
-    public com.commercetools.importapi.models.common.Money getTotalNet() {
+    
+    public com.commercetools.importapi.models.common.Money getTotalNet(){
         return this.totalNet;
     }
-
+    
     /**
      *  <p>Maps to <code>TaxedPrice.totalGross</code>.</p>
      */
-
-    public com.commercetools.importapi.models.common.Money getTotalGross() {
+    
+    public com.commercetools.importapi.models.common.Money getTotalGross(){
         return this.totalGross;
     }
-
+    
     /**
      *  <p>Maps to <code>TaxedPrice.taxPortions</code>.</p>
      */
-
-    public java.util.List<com.commercetools.importapi.models.orders.TaxPortion> getTaxPortions() {
+    
+    public java.util.List<com.commercetools.importapi.models.orders.TaxPortion> getTaxPortions(){
         return this.taxPortions;
     }
 
-    public void setTotalNet(final com.commercetools.importapi.models.common.Money totalNet) {
+    
+    public void setTotalNet(final com.commercetools.importapi.models.common.Money totalNet){
         this.totalNet = totalNet;
     }
-
-    public void setTotalGross(final com.commercetools.importapi.models.common.Money totalGross) {
+    
+    
+    public void setTotalGross(final com.commercetools.importapi.models.common.Money totalGross){
         this.totalGross = totalGross;
     }
-
-    public void setTaxPortions(final com.commercetools.importapi.models.orders.TaxPortion... taxPortions) {
-        this.taxPortions = new ArrayList<>(Arrays.asList(taxPortions));
+    
+    
+    public void setTaxPortions(final com.commercetools.importapi.models.orders.TaxPortion ...taxPortions){
+       this.taxPortions = new ArrayList<>(Arrays.asList(taxPortions));
     }
-
-    public void setTaxPortions(final java.util.List<com.commercetools.importapi.models.orders.TaxPortion> taxPortions) {
-        this.taxPortions = taxPortions;
+    
+    
+    public void setTaxPortions(final java.util.List<com.commercetools.importapi.models.orders.TaxPortion> taxPortions){
+       this.taxPortions = taxPortions;
     }
 
     @Override
     public boolean equals(Object o) {
-        if (this == o)
-            return true;
-
-        if (o == null || getClass() != o.getClass())
-            return false;
-
+        if (this == o) return true;
+    
+        if (o == null || getClass() != o.getClass()) return false;
+    
         TaxedPriceImpl that = (TaxedPriceImpl) o;
-
-        return new EqualsBuilder().append(totalNet, that.totalNet)
+    
+        return new EqualsBuilder()
+                .append(totalNet, that.totalNet)
                 .append(totalGross, that.totalGross)
                 .append(taxPortions, that.taxPortions)
                 .isEquals();
     }
-
+    
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(totalNet).append(totalGross).append(taxPortions).toHashCode();
+        return new HashCodeBuilder(17, 37)
+            .append(totalNet)
+            .append(totalGross)
+            .append(taxPortions)
+            .toHashCode();
     }
 
 }

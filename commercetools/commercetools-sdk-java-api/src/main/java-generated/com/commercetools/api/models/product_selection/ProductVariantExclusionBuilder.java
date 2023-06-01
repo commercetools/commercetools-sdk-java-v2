@@ -1,8 +1,11 @@
-
 package com.commercetools.api.models.product_selection;
 
-import java.util.*;
 
+import com.commercetools.api.models.product_selection.ProductVariantExclusion;
+import javax.annotation.Nullable;
+import java.util.*;
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -16,11 +19,16 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .plusSkus(skusBuilder -> skusBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class ProductVariantExclusionBuilder implements Builder<ProductVariantExclusion> {
 
+    
+    
     private java.util.List<String> skus;
 
     /**
@@ -28,43 +36,47 @@ public class ProductVariantExclusionBuilder implements Builder<ProductVariantExc
      * @param skus value to be set
      * @return Builder
      */
-
-    public ProductVariantExclusionBuilder skus(final String... skus) {
+    
+    public ProductVariantExclusionBuilder skus( final String ...skus) {
         this.skus = new ArrayList<>(Arrays.asList(skus));
         return this;
     }
-
+    
     /**
      *  <p>Non-empty array of SKUs representing Product Variants to be included in the Product Selection with <code>IndividualExclusion</code> ProductSelectionMode.</p>
      * @param skus value to be set
      * @return Builder
      */
-
-    public ProductVariantExclusionBuilder skus(final java.util.List<String> skus) {
+    
+    public ProductVariantExclusionBuilder skus( final java.util.List<String> skus) {
         this.skus = skus;
         return this;
     }
-
+    
     /**
      *  <p>Non-empty array of SKUs representing Product Variants to be included in the Product Selection with <code>IndividualExclusion</code> ProductSelectionMode.</p>
      * @param skus value to be set
      * @return Builder
      */
-
-    public ProductVariantExclusionBuilder plusSkus(final String... skus) {
+    
+    public ProductVariantExclusionBuilder plusSkus( final String ...skus) {
         if (this.skus == null) {
             this.skus = new ArrayList<>();
         }
         this.skus.addAll(Arrays.asList(skus));
         return this;
     }
+    
+    
+    
 
     /**
      *  <p>Non-empty array of SKUs representing Product Variants to be included in the Product Selection with <code>IndividualExclusion</code> ProductSelectionMode.</p>
      * @return skus
      */
-
-    public java.util.List<String> getSkus() {
+    
+    
+    public java.util.List<String> getSkus(){
         return this.skus;
     }
 
@@ -76,7 +88,7 @@ public class ProductVariantExclusionBuilder implements Builder<ProductVariantExc
         Objects.requireNonNull(skus, ProductVariantExclusion.class + ": skus is missing");
         return new ProductVariantExclusionImpl(skus);
     }
-
+    
     /**
      * builds ProductVariantExclusion without checking for non-null required values
      * @return ProductVariantExclusion
@@ -87,7 +99,7 @@ public class ProductVariantExclusionBuilder implements Builder<ProductVariantExc
 
     /**
      * factory method for an instance of ProductVariantExclusionBuilder
-     * @return builder
+     * @return builder 
      */
     public static ProductVariantExclusionBuilder of() {
         return new ProductVariantExclusionBuilder();

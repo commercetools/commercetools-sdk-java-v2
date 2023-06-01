@@ -1,11 +1,12 @@
-
 package com.commercetools.api.models.cart;
 
+import com.commercetools.api.models.cart.CartUpdateAction;
+import com.commercetools.api.models.common.Money;
+import com.commercetools.api.models.cart.CartSetLineItemPriceAction;
+import javax.annotation.Nullable;
 import java.util.*;
 import java.util.function.Function;
-
-import javax.annotation.Nullable;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -19,79 +20,89 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .lineItemId("{lineItemId}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class CartSetLineItemPriceActionBuilder implements Builder<CartSetLineItemPriceAction> {
 
+    
+    
     private String lineItemId;
-
+    
+    
     @Nullable
     private com.commercetools.api.models.common.Money externalPrice;
 
+    
     /**
      *  <p><code>id</code> of the LineItem to update.</p>
      * @param lineItemId value to be set
      * @return Builder
      */
-
-    public CartSetLineItemPriceActionBuilder lineItemId(final String lineItemId) {
+    
+    public CartSetLineItemPriceActionBuilder lineItemId( final String lineItemId) {
         this.lineItemId = lineItemId;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Value to set. If <code>externalPrice</code> is not given and the <code>priceMode</code> is <code>ExternalPrice</code>, the external price is unset and the <code>priceMode</code> is set to <code>Platform</code>.</p>
      * @param builder function to build the externalPrice value
      * @return Builder
      */
-
-    public CartSetLineItemPriceActionBuilder externalPrice(
-            Function<com.commercetools.api.models.common.MoneyBuilder, com.commercetools.api.models.common.MoneyBuilder> builder) {
+    
+    public CartSetLineItemPriceActionBuilder externalPrice(Function<com.commercetools.api.models.common.MoneyBuilder, com.commercetools.api.models.common.MoneyBuilder> builder) {
         this.externalPrice = builder.apply(com.commercetools.api.models.common.MoneyBuilder.of()).build();
         return this;
     }
-
+    
     /**
      *  <p>Value to set. If <code>externalPrice</code> is not given and the <code>priceMode</code> is <code>ExternalPrice</code>, the external price is unset and the <code>priceMode</code> is set to <code>Platform</code>.</p>
      * @param builder function to build the externalPrice value
      * @return Builder
      */
-
-    public CartSetLineItemPriceActionBuilder withExternalPrice(
-            Function<com.commercetools.api.models.common.MoneyBuilder, com.commercetools.api.models.common.Money> builder) {
+    
+    public CartSetLineItemPriceActionBuilder withExternalPrice(Function<com.commercetools.api.models.common.MoneyBuilder, com.commercetools.api.models.common.Money> builder) {
         this.externalPrice = builder.apply(com.commercetools.api.models.common.MoneyBuilder.of());
         return this;
     }
-
+                    
     /**
      *  <p>Value to set. If <code>externalPrice</code> is not given and the <code>priceMode</code> is <code>ExternalPrice</code>, the external price is unset and the <code>priceMode</code> is set to <code>Platform</code>.</p>
      * @param externalPrice value to be set
      * @return Builder
      */
-
-    public CartSetLineItemPriceActionBuilder externalPrice(
-            @Nullable final com.commercetools.api.models.common.Money externalPrice) {
+    
+    public CartSetLineItemPriceActionBuilder externalPrice(@Nullable final com.commercetools.api.models.common.Money externalPrice) {
         this.externalPrice = externalPrice;
         return this;
     }
+    
+    
 
     /**
      *  <p><code>id</code> of the LineItem to update.</p>
      * @return lineItemId
      */
-
-    public String getLineItemId() {
+    
+    
+    public String getLineItemId(){
         return this.lineItemId;
     }
-
+    
     /**
      *  <p>Value to set. If <code>externalPrice</code> is not given and the <code>priceMode</code> is <code>ExternalPrice</code>, the external price is unset and the <code>priceMode</code> is set to <code>Platform</code>.</p>
      * @return externalPrice
      */
-
+    
     @Nullable
-    public com.commercetools.api.models.common.Money getExternalPrice() {
+    public com.commercetools.api.models.common.Money getExternalPrice(){
         return this.externalPrice;
     }
 
@@ -103,7 +114,7 @@ public class CartSetLineItemPriceActionBuilder implements Builder<CartSetLineIte
         Objects.requireNonNull(lineItemId, CartSetLineItemPriceAction.class + ": lineItemId is missing");
         return new CartSetLineItemPriceActionImpl(lineItemId, externalPrice);
     }
-
+    
     /**
      * builds CartSetLineItemPriceAction without checking for non-null required values
      * @return CartSetLineItemPriceAction
@@ -114,7 +125,7 @@ public class CartSetLineItemPriceActionBuilder implements Builder<CartSetLineIte
 
     /**
      * factory method for an instance of CartSetLineItemPriceActionBuilder
-     * @return builder
+     * @return builder 
      */
     public static CartSetLineItemPriceActionBuilder of() {
         return new CartSetLineItemPriceActionBuilder();

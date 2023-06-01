@@ -1,17 +1,21 @@
-
 package com.commercetools.importapi.models.errors;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
+import com.commercetools.importapi.models.errors.ErrorObject;
+import java.lang.Object;
+import com.commercetools.importapi.models.errors.ConcurrentModificationErrorImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>The request conflicts with the current state of the involved resources. This error typically occurs when the request attempts to modify a resource that is out of date, that is, it has been modified by another client since the last time it was retrieved by the system attempting to update it. The client application should resolve the conflict (with or without involving the end-user) before retrying the request.</p>
@@ -25,9 +29,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .currentVersion(1)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = ConcurrentModificationErrorImpl.class)
 public interface ConcurrentModificationError extends ErrorObject {
 
@@ -40,10 +47,9 @@ public interface ConcurrentModificationError extends ErrorObject {
      *  <p>The version specified in the failed request.</p>
      * @return specifiedVersion
      */
-
+    
     @JsonProperty("specifiedVersion")
     public Long getSpecifiedVersion();
-
     /**
      *  <p>The current version of the resource.</p>
      * @return currentVersion
@@ -51,12 +57,11 @@ public interface ConcurrentModificationError extends ErrorObject {
     @NotNull
     @JsonProperty("currentVersion")
     public Long getCurrentVersion();
-
     /**
      *  <p>The resource in conflict.</p>
      * @return conflictedResource
      */
-
+    
     @JsonProperty("conflictedResource")
     public Object getConflictedResource();
 
@@ -64,30 +69,34 @@ public interface ConcurrentModificationError extends ErrorObject {
      *  <p>The version specified in the failed request.</p>
      * @param specifiedVersion value to be set
      */
-
+    
     public void setSpecifiedVersion(final Long specifiedVersion);
-
+    
+    
     /**
      *  <p>The current version of the resource.</p>
      * @param currentVersion value to be set
      */
-
+    
     public void setCurrentVersion(final Long currentVersion);
-
+    
+    
     /**
      *  <p>The resource in conflict.</p>
      * @param conflictedResource value to be set
      */
-
+    
     public void setConflictedResource(final Object conflictedResource);
+    
 
     /**
      * factory method
      * @return instance of ConcurrentModificationError
      */
-    public static ConcurrentModificationError of() {
+    public static ConcurrentModificationError of(){
         return new ConcurrentModificationErrorImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy ConcurrentModificationError
@@ -128,7 +137,7 @@ public interface ConcurrentModificationError extends ErrorObject {
     public static ConcurrentModificationErrorBuilder builder() {
         return ConcurrentModificationErrorBuilder.of();
     }
-
+    
     /**
      * create builder for ConcurrentModificationError instance
      * @param template instance with prefilled values for the builder
@@ -137,6 +146,7 @@ public interface ConcurrentModificationError extends ErrorObject {
     public static ConcurrentModificationErrorBuilder builder(final ConcurrentModificationError template) {
         return ConcurrentModificationErrorBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -147,7 +157,7 @@ public interface ConcurrentModificationError extends ErrorObject {
     default <T> T withConcurrentModificationError(Function<ConcurrentModificationError, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

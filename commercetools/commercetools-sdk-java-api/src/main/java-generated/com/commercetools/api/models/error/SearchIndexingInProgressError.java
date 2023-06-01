@@ -1,17 +1,20 @@
-
 package com.commercetools.api.models.error;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
+import com.commercetools.api.models.error.ErrorObject;
+import com.commercetools.api.models.error.SearchIndexingInProgressErrorImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Returned when the indexing of Product information is still in progress for Projects that have indexing activated.</p>
@@ -24,9 +27,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .message("{message}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = SearchIndexingInProgressErrorImpl.class)
 public interface SearchIndexingInProgressError extends ErrorObject {
 
@@ -42,7 +48,6 @@ public interface SearchIndexingInProgressError extends ErrorObject {
     @NotNull
     @JsonProperty("code")
     public String getCode();
-
     /**
      *  <p><code>"The indexing is currently in progress. Please wait until the status is "Activated" to execute search requests."</code></p>
      * @return message
@@ -55,16 +60,18 @@ public interface SearchIndexingInProgressError extends ErrorObject {
      *  <p><code>"The indexing is currently in progress. Please wait until the status is "Activated" to execute search requests."</code></p>
      * @param message value to be set
      */
-
+    
     public void setMessage(final String message);
+    
 
     /**
      * factory method
      * @return instance of SearchIndexingInProgressError
      */
-    public static SearchIndexingInProgressError of() {
+    public static SearchIndexingInProgressError of(){
         return new SearchIndexingInProgressErrorImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy SearchIndexingInProgressError
@@ -101,7 +108,7 @@ public interface SearchIndexingInProgressError extends ErrorObject {
     public static SearchIndexingInProgressErrorBuilder builder() {
         return SearchIndexingInProgressErrorBuilder.of();
     }
-
+    
     /**
      * create builder for SearchIndexingInProgressError instance
      * @param template instance with prefilled values for the builder
@@ -110,6 +117,7 @@ public interface SearchIndexingInProgressError extends ErrorObject {
     public static SearchIndexingInProgressErrorBuilder builder(final SearchIndexingInProgressError template) {
         return SearchIndexingInProgressErrorBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -120,7 +128,7 @@ public interface SearchIndexingInProgressError extends ErrorObject {
     default <T> T withSearchIndexingInProgressError(Function<SearchIndexingInProgressError, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

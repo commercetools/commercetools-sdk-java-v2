@@ -1,8 +1,11 @@
-
 package com.commercetools.ml.models.general_category_recommendations;
 
-import java.util.*;
 
+import com.commercetools.ml.models.general_category_recommendations.GeneralCategoryRecommendation;
+import javax.annotation.Nullable;
+import java.util.*;
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -17,52 +20,67 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .confidence(0.3)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class GeneralCategoryRecommendationBuilder implements Builder<GeneralCategoryRecommendation> {
 
+    
+    
     private String categoryName;
-
+    
+    
+    
     private Double confidence;
 
+    
     /**
      *  <p>An English category name that is recommended for a product.</p>
      * @param categoryName value to be set
      * @return Builder
      */
-
-    public GeneralCategoryRecommendationBuilder categoryName(final String categoryName) {
+    
+    public GeneralCategoryRecommendationBuilder categoryName( final String categoryName) {
         this.categoryName = categoryName;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Probability score for the category recommendation.</p>
      * @param confidence value to be set
      * @return Builder
      */
-
-    public GeneralCategoryRecommendationBuilder confidence(final Double confidence) {
+    
+    public GeneralCategoryRecommendationBuilder confidence( final Double confidence) {
         this.confidence = confidence;
         return this;
     }
+    
+    
 
     /**
      *  <p>An English category name that is recommended for a product.</p>
      * @return categoryName
      */
-
-    public String getCategoryName() {
+    
+    
+    public String getCategoryName(){
         return this.categoryName;
     }
-
+    
     /**
      *  <p>Probability score for the category recommendation.</p>
      * @return confidence
      */
-
-    public Double getConfidence() {
+    
+    
+    public Double getConfidence(){
         return this.confidence;
     }
 
@@ -75,7 +93,7 @@ public class GeneralCategoryRecommendationBuilder implements Builder<GeneralCate
         Objects.requireNonNull(confidence, GeneralCategoryRecommendation.class + ": confidence is missing");
         return new GeneralCategoryRecommendationImpl(categoryName, confidence);
     }
-
+    
     /**
      * builds GeneralCategoryRecommendation without checking for non-null required values
      * @return GeneralCategoryRecommendation
@@ -86,7 +104,7 @@ public class GeneralCategoryRecommendationBuilder implements Builder<GeneralCate
 
     /**
      * factory method for an instance of GeneralCategoryRecommendationBuilder
-     * @return builder
+     * @return builder 
      */
     public static GeneralCategoryRecommendationBuilder of() {
         return new GeneralCategoryRecommendationBuilder();

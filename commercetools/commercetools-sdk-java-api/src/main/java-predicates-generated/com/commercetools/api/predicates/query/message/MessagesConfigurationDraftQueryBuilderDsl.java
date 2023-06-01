@@ -1,9 +1,11 @@
-
 package com.commercetools.api.predicates.query.message;
 
 import com.commercetools.api.predicates.query.*;
 
-public class MessagesConfigurationDraftQueryBuilderDsl {
+import java.util.function.Function;
+
+
+public class MessagesConfigurationDraftQueryBuilderDsl  {
     public MessagesConfigurationDraftQueryBuilderDsl() {
     }
 
@@ -12,15 +14,12 @@ public class MessagesConfigurationDraftQueryBuilderDsl {
     }
 
     public BooleanComparisonPredicateBuilder<MessagesConfigurationDraftQueryBuilderDsl> enabled() {
-        return new BooleanComparisonPredicateBuilder<>(
-            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("enabled")),
-            p -> new CombinationQueryPredicate<>(p, MessagesConfigurationDraftQueryBuilderDsl::of));
+        return new BooleanComparisonPredicateBuilder<>(BinaryQueryPredicate.of().left(new ConstantQueryPredicate("enabled")),
+        p -> new CombinationQueryPredicate<>(p, MessagesConfigurationDraftQueryBuilderDsl::of));
     }
-
     public LongComparisonPredicateBuilder<MessagesConfigurationDraftQueryBuilderDsl> deleteDaysAfterCreation() {
-        return new LongComparisonPredicateBuilder<>(
-            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("deleteDaysAfterCreation")),
-            p -> new CombinationQueryPredicate<>(p, MessagesConfigurationDraftQueryBuilderDsl::of));
+        return new LongComparisonPredicateBuilder<>(BinaryQueryPredicate.of().left(new ConstantQueryPredicate("deleteDaysAfterCreation")),
+        p -> new CombinationQueryPredicate<>(p, MessagesConfigurationDraftQueryBuilderDsl::of));
     }
-
+    
 }

@@ -1,23 +1,25 @@
-
 package com.commercetools.api.models.product;
-
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-import java.util.stream.Collectors;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.common.Asset;
 import com.commercetools.api.models.common.Image;
 import com.commercetools.api.models.common.Price;
 import com.commercetools.api.models.common.ScopedPrice;
+import com.commercetools.api.models.product.Attribute;
+import com.commercetools.api.models.product.ProductVariantAvailability;
+import com.commercetools.api.models.product.ProductVariantImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>A concrete sellable good for which inventory can be tracked. Product Variants are generally mapped to specific SKUs.</p>
@@ -30,11 +32,15 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .id(0.3)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = ProductVariantImpl.class)
 public interface ProductVariant extends AttributeContainer, com.commercetools.api.models.WithKey {
+
 
     /**
      *  <p>A unique, sequential identifier of the Product Variant within the Product.</p>
@@ -43,24 +49,21 @@ public interface ProductVariant extends AttributeContainer, com.commercetools.ap
     @NotNull
     @JsonProperty("id")
     public Long getId();
-
     /**
      *  <p>User-defined unique SKU of the Product Variant.</p>
      * @return sku
      */
-
+    
     @JsonProperty("sku")
     public String getSku();
-
     /**
      *  <p>User-defined unique identifier of the ProductVariant.</p>
      *  <p>This is different from Product <code>key</code>.</p>
      * @return key
      */
-
+    
     @JsonProperty("key")
     public String getKey();
-
     /**
      *  <p>The Embedded Prices of the Product Variant. Cannot contain two Prices of the same Price scope (with same currency, country, Customer Group, Channel, <code>validFrom</code> and <code>validUntil</code>).</p>
      * @return prices
@@ -68,7 +71,6 @@ public interface ProductVariant extends AttributeContainer, com.commercetools.ap
     @Valid
     @JsonProperty("prices")
     public List<Price> getPrices();
-
     /**
      *  <p>Attributes of the Product Variant.</p>
      * @return attributes
@@ -76,7 +78,6 @@ public interface ProductVariant extends AttributeContainer, com.commercetools.ap
     @Valid
     @JsonProperty("attributes")
     public List<Attribute> getAttributes();
-
     /**
      *  <p>Only available when Price selection is used. Cannot be used in a Query Predicate.</p>
      * @return price
@@ -84,7 +85,6 @@ public interface ProductVariant extends AttributeContainer, com.commercetools.ap
     @Valid
     @JsonProperty("price")
     public Price getPrice();
-
     /**
      *  <p>Images of the Product Variant.</p>
      * @return images
@@ -92,7 +92,6 @@ public interface ProductVariant extends AttributeContainer, com.commercetools.ap
     @Valid
     @JsonProperty("images")
     public List<Image> getImages();
-
     /**
      *  <p>Media assets of the Product Variant.</p>
      * @return assets
@@ -100,7 +99,6 @@ public interface ProductVariant extends AttributeContainer, com.commercetools.ap
     @Valid
     @JsonProperty("assets")
     public List<Asset> getAssets();
-
     /**
      *  <p>Set if the Product Variant is tracked by Inventory. Can be used as an optimization to reduce calls to the Inventory service. May not contain the latest Inventory State (it is eventually consistent).</p>
      * @return availability
@@ -108,15 +106,13 @@ public interface ProductVariant extends AttributeContainer, com.commercetools.ap
     @Valid
     @JsonProperty("availability")
     public ProductVariantAvailability getAvailability();
-
     /**
      *  <p><code>true</code> if the Product Variant matches the search query. Only available in response to a Product Projection Search request.</p>
      * @return isMatchingVariant
      */
-
+    
     @JsonProperty("isMatchingVariant")
     public Boolean getIsMatchingVariant();
-
     /**
      *  <p>Only available in response to a Product Projection Search request with price selection. Can be used to sort, filter, and facet.</p>
      * @return scopedPrice
@@ -124,12 +120,11 @@ public interface ProductVariant extends AttributeContainer, com.commercetools.ap
     @Valid
     @JsonProperty("scopedPrice")
     public ScopedPrice getScopedPrice();
-
     /**
      *  <p>Only available in response to a Product Projection Search request with price selection.</p>
      * @return scopedPriceDiscounted
      */
-
+    
     @JsonProperty("scopedPriceDiscounted")
     public Boolean getScopedPriceDiscounted();
 
@@ -137,126 +132,131 @@ public interface ProductVariant extends AttributeContainer, com.commercetools.ap
      *  <p>A unique, sequential identifier of the Product Variant within the Product.</p>
      * @param id value to be set
      */
-
+    
     public void setId(final Long id);
-
+    
+    
     /**
      *  <p>User-defined unique SKU of the Product Variant.</p>
      * @param sku value to be set
      */
-
+    
     public void setSku(final String sku);
-
+    
+    
     /**
      *  <p>User-defined unique identifier of the ProductVariant.</p>
      *  <p>This is different from Product <code>key</code>.</p>
      * @param key value to be set
      */
-
+    
     public void setKey(final String key);
-
+    
+    
     /**
      *  <p>The Embedded Prices of the Product Variant. Cannot contain two Prices of the same Price scope (with same currency, country, Customer Group, Channel, <code>validFrom</code> and <code>validUntil</code>).</p>
      * @param prices values to be set
      */
-
+    
     @JsonIgnore
-    public void setPrices(final Price... prices);
-
+    public void setPrices(final Price ...prices);
     /**
      *  <p>The Embedded Prices of the Product Variant. Cannot contain two Prices of the same Price scope (with same currency, country, Customer Group, Channel, <code>validFrom</code> and <code>validUntil</code>).</p>
      * @param prices values to be set
      */
-
+    
     public void setPrices(final List<Price> prices);
-
+    
     /**
      *  <p>Attributes of the Product Variant.</p>
      * @param attributes values to be set
      */
-
+    
     @JsonIgnore
-    public void setAttributes(final Attribute... attributes);
-
+    public void setAttributes(final Attribute ...attributes);
     /**
      *  <p>Attributes of the Product Variant.</p>
      * @param attributes values to be set
      */
-
+    
     public void setAttributes(final List<Attribute> attributes);
-
+    
     /**
      *  <p>Only available when Price selection is used. Cannot be used in a Query Predicate.</p>
      * @param price value to be set
      */
-
+    
     public void setPrice(final Price price);
-
+    
+    
     /**
      *  <p>Images of the Product Variant.</p>
      * @param images values to be set
      */
-
+    
     @JsonIgnore
-    public void setImages(final Image... images);
-
+    public void setImages(final Image ...images);
     /**
      *  <p>Images of the Product Variant.</p>
      * @param images values to be set
      */
-
+    
     public void setImages(final List<Image> images);
-
+    
     /**
      *  <p>Media assets of the Product Variant.</p>
      * @param assets values to be set
      */
-
+    
     @JsonIgnore
-    public void setAssets(final Asset... assets);
-
+    public void setAssets(final Asset ...assets);
     /**
      *  <p>Media assets of the Product Variant.</p>
      * @param assets values to be set
      */
-
+    
     public void setAssets(final List<Asset> assets);
-
+    
     /**
      *  <p>Set if the Product Variant is tracked by Inventory. Can be used as an optimization to reduce calls to the Inventory service. May not contain the latest Inventory State (it is eventually consistent).</p>
      * @param availability value to be set
      */
-
+    
     public void setAvailability(final ProductVariantAvailability availability);
-
+    
+    
     /**
      *  <p><code>true</code> if the Product Variant matches the search query. Only available in response to a Product Projection Search request.</p>
      * @param isMatchingVariant value to be set
      */
-
+    
     public void setIsMatchingVariant(final Boolean isMatchingVariant);
-
+    
+    
     /**
      *  <p>Only available in response to a Product Projection Search request with price selection. Can be used to sort, filter, and facet.</p>
      * @param scopedPrice value to be set
      */
-
+    
     public void setScopedPrice(final ScopedPrice scopedPrice);
-
+    
+    
     /**
      *  <p>Only available in response to a Product Projection Search request with price selection.</p>
      * @param scopedPriceDiscounted value to be set
      */
-
+    
     public void setScopedPriceDiscounted(final Boolean scopedPriceDiscounted);
+    
 
     /**
      * factory method
      * @return instance of ProductVariant
      */
-    public static ProductVariant of() {
+    public static ProductVariant of(){
         return new ProductVariantImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy ProductVariant
@@ -295,28 +295,19 @@ public interface ProductVariant extends AttributeContainer, com.commercetools.ap
         instance.setSku(template.getSku());
         instance.setKey(template.getKey());
         instance.setPrices(Optional.ofNullable(template.getPrices())
-                .map(t -> t.stream()
-                        .map(com.commercetools.api.models.common.Price::deepCopy)
-                        .collect(Collectors.toList()))
+                .map(t -> t.stream().map(com.commercetools.api.models.common.Price::deepCopy).collect(Collectors.toList()))
                 .orElse(null));
         instance.setAttributes(Optional.ofNullable(template.getAttributes())
-                .map(t -> t.stream()
-                        .map(com.commercetools.api.models.product.Attribute::deepCopy)
-                        .collect(Collectors.toList()))
+                .map(t -> t.stream().map(com.commercetools.api.models.product.Attribute::deepCopy).collect(Collectors.toList()))
                 .orElse(null));
         instance.setPrice(com.commercetools.api.models.common.Price.deepCopy(template.getPrice()));
         instance.setImages(Optional.ofNullable(template.getImages())
-                .map(t -> t.stream()
-                        .map(com.commercetools.api.models.common.Image::deepCopy)
-                        .collect(Collectors.toList()))
+                .map(t -> t.stream().map(com.commercetools.api.models.common.Image::deepCopy).collect(Collectors.toList()))
                 .orElse(null));
         instance.setAssets(Optional.ofNullable(template.getAssets())
-                .map(t -> t.stream()
-                        .map(com.commercetools.api.models.common.Asset::deepCopy)
-                        .collect(Collectors.toList()))
+                .map(t -> t.stream().map(com.commercetools.api.models.common.Asset::deepCopy).collect(Collectors.toList()))
                 .orElse(null));
-        instance.setAvailability(
-            com.commercetools.api.models.product.ProductVariantAvailability.deepCopy(template.getAvailability()));
+        instance.setAvailability(com.commercetools.api.models.product.ProductVariantAvailability.deepCopy(template.getAvailability()));
         instance.setIsMatchingVariant(template.getIsMatchingVariant());
         instance.setScopedPrice(com.commercetools.api.models.common.ScopedPrice.deepCopy(template.getScopedPrice()));
         instance.setScopedPriceDiscounted(template.getScopedPriceDiscounted());
@@ -330,7 +321,7 @@ public interface ProductVariant extends AttributeContainer, com.commercetools.ap
     public static ProductVariantBuilder builder() {
         return ProductVariantBuilder.of();
     }
-
+    
     /**
      * create builder for ProductVariant instance
      * @param template instance with prefilled values for the builder
@@ -339,6 +330,7 @@ public interface ProductVariant extends AttributeContainer, com.commercetools.ap
     public static ProductVariantBuilder builder(final ProductVariant template) {
         return ProductVariantBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -349,7 +341,7 @@ public interface ProductVariant extends AttributeContainer, com.commercetools.ap
     default <T> T withProductVariant(Function<ProductVariant, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

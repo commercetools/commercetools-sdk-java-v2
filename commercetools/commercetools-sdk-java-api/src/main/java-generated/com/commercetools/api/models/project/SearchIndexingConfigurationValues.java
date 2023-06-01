@@ -1,19 +1,22 @@
-
 package com.commercetools.api.models.project;
 
-import java.time.*;
-import java.time.ZonedDateTime;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-
 import com.commercetools.api.models.common.LastModifiedBy;
+import com.commercetools.api.models.project.SearchIndexingConfigurationStatus;
+import java.time.ZonedDateTime;
+import com.commercetools.api.models.project.SearchIndexingConfigurationValuesImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * SearchIndexingConfigurationValues
@@ -25,28 +28,30 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     SearchIndexingConfigurationValues searchIndexingConfigurationValues = SearchIndexingConfigurationValues.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = SearchIndexingConfigurationValuesImpl.class)
-public interface SearchIndexingConfigurationValues {
+public interface SearchIndexingConfigurationValues  {
+
 
     /**
      *  <p>Current status of resource indexing. Present on Projects from 1 February 2019.</p>
      * @return status
      */
-
+    
     @JsonProperty("status")
     public SearchIndexingConfigurationStatus getStatus();
-
     /**
      *  <p>Date and time (UTC) the Project was last updated. Only present on Projects last modified after 1 February 2019.</p>
      * @return lastModifiedAt
      */
-
+    
     @JsonProperty("lastModifiedAt")
     public ZonedDateTime getLastModifiedAt();
-
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      * @return lastModifiedBy
@@ -59,30 +64,34 @@ public interface SearchIndexingConfigurationValues {
      *  <p>Current status of resource indexing. Present on Projects from 1 February 2019.</p>
      * @param status value to be set
      */
-
+    
     public void setStatus(final SearchIndexingConfigurationStatus status);
-
+    
+    
     /**
      *  <p>Date and time (UTC) the Project was last updated. Only present on Projects last modified after 1 February 2019.</p>
      * @param lastModifiedAt value to be set
      */
-
+    
     public void setLastModifiedAt(final ZonedDateTime lastModifiedAt);
-
+    
+    
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      * @param lastModifiedBy value to be set
      */
-
+    
     public void setLastModifiedBy(final LastModifiedBy lastModifiedBy);
+    
 
     /**
      * factory method
      * @return instance of SearchIndexingConfigurationValues
      */
-    public static SearchIndexingConfigurationValues of() {
+    public static SearchIndexingConfigurationValues of(){
         return new SearchIndexingConfigurationValuesImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy SearchIndexingConfigurationValues
@@ -103,16 +112,14 @@ public interface SearchIndexingConfigurationValues {
      * @return copy instance
      */
     @Nullable
-    public static SearchIndexingConfigurationValues deepCopy(
-            @Nullable final SearchIndexingConfigurationValues template) {
+    public static SearchIndexingConfigurationValues deepCopy(@Nullable final SearchIndexingConfigurationValues template) {
         if (template == null) {
             return null;
         }
         SearchIndexingConfigurationValuesImpl instance = new SearchIndexingConfigurationValuesImpl();
         instance.setStatus(template.getStatus());
         instance.setLastModifiedAt(template.getLastModifiedAt());
-        instance.setLastModifiedBy(
-            com.commercetools.api.models.common.LastModifiedBy.deepCopy(template.getLastModifiedBy()));
+        instance.setLastModifiedBy(com.commercetools.api.models.common.LastModifiedBy.deepCopy(template.getLastModifiedBy()));
         return instance;
     }
 
@@ -123,7 +130,7 @@ public interface SearchIndexingConfigurationValues {
     public static SearchIndexingConfigurationValuesBuilder builder() {
         return SearchIndexingConfigurationValuesBuilder.of();
     }
-
+    
     /**
      * create builder for SearchIndexingConfigurationValues instance
      * @param template instance with prefilled values for the builder
@@ -132,6 +139,7 @@ public interface SearchIndexingConfigurationValues {
     public static SearchIndexingConfigurationValuesBuilder builder(final SearchIndexingConfigurationValues template) {
         return SearchIndexingConfigurationValuesBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -142,7 +150,7 @@ public interface SearchIndexingConfigurationValues {
     default <T> T withSearchIndexingConfigurationValues(Function<SearchIndexingConfigurationValues, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

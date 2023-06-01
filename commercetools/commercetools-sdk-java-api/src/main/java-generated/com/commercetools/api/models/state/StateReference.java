@@ -1,19 +1,22 @@
-
 package com.commercetools.api.models.state;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
 import com.commercetools.api.models.common.Reference;
+import com.commercetools.api.models.common.ReferenceTypeId;
+import com.commercetools.api.models.state.State;
+import com.commercetools.api.models.state.StateReferenceImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Reference to a State.</p>
@@ -26,9 +29,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .id("{id}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = StateReferenceImpl.class)
 public interface StateReference extends Reference, com.commercetools.api.models.Identifiable<State> {
 
@@ -44,7 +50,6 @@ public interface StateReference extends Reference, com.commercetools.api.models.
     @Valid
     @JsonProperty("obj")
     public State getObj();
-
     /**
      *  <p>Unique identifier of the referenced State.</p>
      * @return id
@@ -57,23 +62,26 @@ public interface StateReference extends Reference, com.commercetools.api.models.
      *  <p>Contains the representation of the expanded State. Only present in responses to requests with Reference Expansion for States.</p>
      * @param obj value to be set
      */
-
+    
     public void setObj(final State obj);
-
+    
+    
     /**
      *  <p>Unique identifier of the referenced State.</p>
      * @param id value to be set
      */
-
+    
     public void setId(final String id);
+    
 
     /**
      * factory method
      * @return instance of StateReference
      */
-    public static StateReference of() {
+    public static StateReference of(){
         return new StateReferenceImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy StateReference
@@ -110,7 +118,7 @@ public interface StateReference extends Reference, com.commercetools.api.models.
     public static StateReferenceBuilder builder() {
         return StateReferenceBuilder.of();
     }
-
+    
     /**
      * create builder for StateReference instance
      * @param template instance with prefilled values for the builder
@@ -119,6 +127,7 @@ public interface StateReference extends Reference, com.commercetools.api.models.
     public static StateReferenceBuilder builder(final StateReference template) {
         return StateReferenceBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -129,7 +138,7 @@ public interface StateReference extends Reference, com.commercetools.api.models.
     default <T> T withStateReference(Function<StateReference, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

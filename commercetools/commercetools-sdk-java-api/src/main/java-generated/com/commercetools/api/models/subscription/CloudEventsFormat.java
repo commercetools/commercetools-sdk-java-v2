@@ -1,17 +1,20 @@
-
 package com.commercetools.api.models.subscription;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
+import com.commercetools.api.models.subscription.DeliveryFormat;
+import com.commercetools.api.models.subscription.CloudEventsFormatImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>The CloudEventsFormat can be used with any Destination, and the payload is delivered in the <code>JSON Event Format</code>. AzureEventGridDestination offers native support to filter and route CloudEvents.</p>
@@ -24,9 +27,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .cloudEventsVersion("{cloudEventsVersion}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = CloudEventsFormatImpl.class)
 public interface CloudEventsFormat extends DeliveryFormat {
 
@@ -47,16 +53,18 @@ public interface CloudEventsFormat extends DeliveryFormat {
      * set cloudEventsVersion
      * @param cloudEventsVersion value to be set
      */
-
+    
     public void setCloudEventsVersion(final String cloudEventsVersion);
+    
 
     /**
      * factory method
      * @return instance of CloudEventsFormat
      */
-    public static CloudEventsFormat of() {
+    public static CloudEventsFormat of(){
         return new CloudEventsFormatImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy CloudEventsFormat
@@ -91,7 +99,7 @@ public interface CloudEventsFormat extends DeliveryFormat {
     public static CloudEventsFormatBuilder builder() {
         return CloudEventsFormatBuilder.of();
     }
-
+    
     /**
      * create builder for CloudEventsFormat instance
      * @param template instance with prefilled values for the builder
@@ -100,6 +108,7 @@ public interface CloudEventsFormat extends DeliveryFormat {
     public static CloudEventsFormatBuilder builder(final CloudEventsFormat template) {
         return CloudEventsFormatBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -110,7 +119,7 @@ public interface CloudEventsFormat extends DeliveryFormat {
     default <T> T withCloudEventsFormat(Function<CloudEventsFormat, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

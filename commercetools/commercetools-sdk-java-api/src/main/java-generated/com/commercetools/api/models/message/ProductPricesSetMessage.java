@@ -1,20 +1,21 @@
-
 package com.commercetools.api.models.message;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-import java.util.stream.Collectors;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
 import com.commercetools.api.models.common.Price;
+import com.commercetools.api.models.message.Message;
+import com.commercetools.api.models.message.ProductPricesSetMessageImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Generated after a successful Set Embedded Prices update action.</p>
@@ -36,9 +37,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .staged(true)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = ProductPricesSetMessageImpl.class)
 public interface ProductPricesSetMessage extends Message {
 
@@ -54,7 +58,6 @@ public interface ProductPricesSetMessage extends Message {
     @NotNull
     @JsonProperty("variantId")
     public Long getVariantId();
-
     /**
      *  <p>The Embedded Prices that were set on the ProductVariant.</p>
      * @return prices
@@ -63,7 +66,6 @@ public interface ProductPricesSetMessage extends Message {
     @Valid
     @JsonProperty("prices")
     public List<Price> getPrices();
-
     /**
      *  <p>Whether the update was only applied to the staged Product Projection.</p>
      * @return staged
@@ -76,38 +78,40 @@ public interface ProductPricesSetMessage extends Message {
      *  <p>Unique identifier of the ProductVariant for which the Price was set.</p>
      * @param variantId value to be set
      */
-
+    
     public void setVariantId(final Long variantId);
-
+    
+    
     /**
      *  <p>The Embedded Prices that were set on the ProductVariant.</p>
      * @param prices values to be set
      */
-
+    
     @JsonIgnore
-    public void setPrices(final Price... prices);
-
+    public void setPrices(final Price ...prices);
     /**
      *  <p>The Embedded Prices that were set on the ProductVariant.</p>
      * @param prices values to be set
      */
-
+    
     public void setPrices(final List<Price> prices);
-
+    
     /**
      *  <p>Whether the update was only applied to the staged Product Projection.</p>
      * @param staged value to be set
      */
-
+    
     public void setStaged(final Boolean staged);
+    
 
     /**
      * factory method
      * @return instance of ProductPricesSetMessage
      */
-    public static ProductPricesSetMessage of() {
+    public static ProductPricesSetMessage of(){
         return new ProductPricesSetMessageImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy ProductPricesSetMessage
@@ -147,19 +151,15 @@ public interface ProductPricesSetMessage extends Message {
         instance.setVersion(template.getVersion());
         instance.setCreatedAt(template.getCreatedAt());
         instance.setLastModifiedAt(template.getLastModifiedAt());
-        instance.setLastModifiedBy(
-            com.commercetools.api.models.common.LastModifiedBy.deepCopy(template.getLastModifiedBy()));
+        instance.setLastModifiedBy(com.commercetools.api.models.common.LastModifiedBy.deepCopy(template.getLastModifiedBy()));
         instance.setCreatedBy(com.commercetools.api.models.common.CreatedBy.deepCopy(template.getCreatedBy()));
         instance.setSequenceNumber(template.getSequenceNumber());
         instance.setResource(com.commercetools.api.models.common.Reference.deepCopy(template.getResource()));
         instance.setResourceVersion(template.getResourceVersion());
-        instance.setResourceUserProvidedIdentifiers(com.commercetools.api.models.message.UserProvidedIdentifiers
-                .deepCopy(template.getResourceUserProvidedIdentifiers()));
+        instance.setResourceUserProvidedIdentifiers(com.commercetools.api.models.message.UserProvidedIdentifiers.deepCopy(template.getResourceUserProvidedIdentifiers()));
         instance.setVariantId(template.getVariantId());
         instance.setPrices(Optional.ofNullable(template.getPrices())
-                .map(t -> t.stream()
-                        .map(com.commercetools.api.models.common.Price::deepCopy)
-                        .collect(Collectors.toList()))
+                .map(t -> t.stream().map(com.commercetools.api.models.common.Price::deepCopy).collect(Collectors.toList()))
                 .orElse(null));
         instance.setStaged(template.getStaged());
         return instance;
@@ -172,7 +172,7 @@ public interface ProductPricesSetMessage extends Message {
     public static ProductPricesSetMessageBuilder builder() {
         return ProductPricesSetMessageBuilder.of();
     }
-
+    
     /**
      * create builder for ProductPricesSetMessage instance
      * @param template instance with prefilled values for the builder
@@ -181,6 +181,7 @@ public interface ProductPricesSetMessage extends Message {
     public static ProductPricesSetMessageBuilder builder(final ProductPricesSetMessage template) {
         return ProductPricesSetMessageBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -191,7 +192,7 @@ public interface ProductPricesSetMessage extends Message {
     default <T> T withProductPricesSetMessage(Function<ProductPricesSetMessage, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

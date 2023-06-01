@@ -1,19 +1,21 @@
-
 package com.commercetools.importapi.models.orders;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
 import com.commercetools.importapi.models.common.DiscountCodeKeyReference;
+import com.commercetools.importapi.models.orders.DiscountCodeState;
+import com.commercetools.importapi.models.orders.DiscountCodeInfoImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * DiscountCodeInfo
@@ -26,11 +28,15 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .discountCode(discountCodeBuilder -> discountCodeBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = DiscountCodeInfoImpl.class)
-public interface DiscountCodeInfo {
+public interface DiscountCodeInfo  {
+
 
     /**
      *  <p>References a discount code by key.</p>
@@ -40,12 +46,11 @@ public interface DiscountCodeInfo {
     @Valid
     @JsonProperty("discountCode")
     public DiscountCodeKeyReference getDiscountCode();
-
     /**
      *  <p>Maps to <code>DiscountCodeInfo.state</code></p>
      * @return state
      */
-
+    
     @JsonProperty("state")
     public DiscountCodeState getState();
 
@@ -53,23 +58,26 @@ public interface DiscountCodeInfo {
      *  <p>References a discount code by key.</p>
      * @param discountCode value to be set
      */
-
+    
     public void setDiscountCode(final DiscountCodeKeyReference discountCode);
-
+    
+    
     /**
      *  <p>Maps to <code>DiscountCodeInfo.state</code></p>
      * @param state value to be set
      */
-
+    
     public void setState(final DiscountCodeState state);
+    
 
     /**
      * factory method
      * @return instance of DiscountCodeInfo
      */
-    public static DiscountCodeInfo of() {
+    public static DiscountCodeInfo of(){
         return new DiscountCodeInfoImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy DiscountCodeInfo
@@ -94,8 +102,7 @@ public interface DiscountCodeInfo {
             return null;
         }
         DiscountCodeInfoImpl instance = new DiscountCodeInfoImpl();
-        instance.setDiscountCode(
-            com.commercetools.importapi.models.common.DiscountCodeKeyReference.deepCopy(template.getDiscountCode()));
+        instance.setDiscountCode(com.commercetools.importapi.models.common.DiscountCodeKeyReference.deepCopy(template.getDiscountCode()));
         instance.setState(template.getState());
         return instance;
     }
@@ -107,7 +114,7 @@ public interface DiscountCodeInfo {
     public static DiscountCodeInfoBuilder builder() {
         return DiscountCodeInfoBuilder.of();
     }
-
+    
     /**
      * create builder for DiscountCodeInfo instance
      * @param template instance with prefilled values for the builder
@@ -116,6 +123,7 @@ public interface DiscountCodeInfo {
     public static DiscountCodeInfoBuilder builder(final DiscountCodeInfo template) {
         return DiscountCodeInfoBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -126,7 +134,7 @@ public interface DiscountCodeInfo {
     default <T> T withDiscountCodeInfo(Function<DiscountCodeInfo, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

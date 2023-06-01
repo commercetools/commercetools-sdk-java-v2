@@ -1,18 +1,21 @@
-
 package com.commercetools.importapi.models.errors;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
+import com.commercetools.importapi.models.errors.ErrorObject;
+import com.commercetools.importapi.models.errors.VariantValues;
+import com.commercetools.importapi.models.errors.DuplicateVariantValuesErrorImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>The given combination of values of a Product Variant conflicts with an existing one. Every Product Variant must have a distinct combination of SKU, prices, and custom attribute values.</p>
@@ -26,9 +29,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .variantValues(variantValuesBuilder -> variantValuesBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = DuplicateVariantValuesErrorImpl.class)
 public interface DuplicateVariantValuesError extends ErrorObject {
 
@@ -50,16 +56,18 @@ public interface DuplicateVariantValuesError extends ErrorObject {
      *  <p>The offending variant values.</p>
      * @param variantValues value to be set
      */
-
+    
     public void setVariantValues(final VariantValues variantValues);
+    
 
     /**
      * factory method
      * @return instance of DuplicateVariantValuesError
      */
-    public static DuplicateVariantValuesError of() {
+    public static DuplicateVariantValuesError of(){
         return new DuplicateVariantValuesErrorImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy DuplicateVariantValuesError
@@ -85,8 +93,7 @@ public interface DuplicateVariantValuesError extends ErrorObject {
         }
         DuplicateVariantValuesErrorImpl instance = new DuplicateVariantValuesErrorImpl();
         instance.setMessage(template.getMessage());
-        instance.setVariantValues(
-            com.commercetools.importapi.models.errors.VariantValues.deepCopy(template.getVariantValues()));
+        instance.setVariantValues(com.commercetools.importapi.models.errors.VariantValues.deepCopy(template.getVariantValues()));
         return instance;
     }
 
@@ -97,7 +104,7 @@ public interface DuplicateVariantValuesError extends ErrorObject {
     public static DuplicateVariantValuesErrorBuilder builder() {
         return DuplicateVariantValuesErrorBuilder.of();
     }
-
+    
     /**
      * create builder for DuplicateVariantValuesError instance
      * @param template instance with prefilled values for the builder
@@ -106,6 +113,7 @@ public interface DuplicateVariantValuesError extends ErrorObject {
     public static DuplicateVariantValuesErrorBuilder builder(final DuplicateVariantValuesError template) {
         return DuplicateVariantValuesErrorBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -116,7 +124,7 @@ public interface DuplicateVariantValuesError extends ErrorObject {
     default <T> T withDuplicateVariantValuesError(Function<DuplicateVariantValuesError, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

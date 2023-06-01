@@ -1,9 +1,12 @@
-
 package com.commercetools.api.models.message;
 
+import com.commercetools.api.models.common.Address;
+import com.commercetools.api.models.message.MessagePayload;
+import com.commercetools.api.models.message.BusinessUnitShippingAddressRemovedMessagePayload;
+import javax.annotation.Nullable;
 import java.util.*;
 import java.util.function.Function;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -17,56 +20,61 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .address(addressBuilder -> addressBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
-public class BusinessUnitShippingAddressRemovedMessagePayloadBuilder
-        implements Builder<BusinessUnitShippingAddressRemovedMessagePayload> {
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
+public class BusinessUnitShippingAddressRemovedMessagePayloadBuilder implements Builder<BusinessUnitShippingAddressRemovedMessagePayload> {
 
+    
+    
     private com.commercetools.api.models.common.Address address;
 
+    
     /**
      *  <p>The address that was removed from shipping addresses of the Business Unit.</p>
      * @param builder function to build the address value
      * @return Builder
      */
-
-    public BusinessUnitShippingAddressRemovedMessagePayloadBuilder address(
-            Function<com.commercetools.api.models.common.AddressBuilder, com.commercetools.api.models.common.AddressBuilder> builder) {
+    
+    public BusinessUnitShippingAddressRemovedMessagePayloadBuilder address(Function<com.commercetools.api.models.common.AddressBuilder, com.commercetools.api.models.common.AddressBuilder> builder) {
         this.address = builder.apply(com.commercetools.api.models.common.AddressBuilder.of()).build();
         return this;
     }
-
+    
     /**
      *  <p>The address that was removed from shipping addresses of the Business Unit.</p>
      * @param builder function to build the address value
      * @return Builder
      */
-
-    public BusinessUnitShippingAddressRemovedMessagePayloadBuilder withAddress(
-            Function<com.commercetools.api.models.common.AddressBuilder, com.commercetools.api.models.common.Address> builder) {
+    
+    public BusinessUnitShippingAddressRemovedMessagePayloadBuilder withAddress(Function<com.commercetools.api.models.common.AddressBuilder, com.commercetools.api.models.common.Address> builder) {
         this.address = builder.apply(com.commercetools.api.models.common.AddressBuilder.of());
         return this;
     }
-
+                    
     /**
      *  <p>The address that was removed from shipping addresses of the Business Unit.</p>
      * @param address value to be set
      * @return Builder
      */
-
-    public BusinessUnitShippingAddressRemovedMessagePayloadBuilder address(
-            final com.commercetools.api.models.common.Address address) {
+    
+    public BusinessUnitShippingAddressRemovedMessagePayloadBuilder address( final com.commercetools.api.models.common.Address address) {
         this.address = address;
         return this;
     }
+    
+    
 
     /**
      *  <p>The address that was removed from shipping addresses of the Business Unit.</p>
      * @return address
      */
-
-    public com.commercetools.api.models.common.Address getAddress() {
+    
+    
+    public com.commercetools.api.models.common.Address getAddress(){
         return this.address;
     }
 
@@ -75,11 +83,10 @@ public class BusinessUnitShippingAddressRemovedMessagePayloadBuilder
      * @return BusinessUnitShippingAddressRemovedMessagePayload
      */
     public BusinessUnitShippingAddressRemovedMessagePayload build() {
-        Objects.requireNonNull(address,
-            BusinessUnitShippingAddressRemovedMessagePayload.class + ": address is missing");
+        Objects.requireNonNull(address, BusinessUnitShippingAddressRemovedMessagePayload.class + ": address is missing");
         return new BusinessUnitShippingAddressRemovedMessagePayloadImpl(address);
     }
-
+    
     /**
      * builds BusinessUnitShippingAddressRemovedMessagePayload without checking for non-null required values
      * @return BusinessUnitShippingAddressRemovedMessagePayload
@@ -90,7 +97,7 @@ public class BusinessUnitShippingAddressRemovedMessagePayloadBuilder
 
     /**
      * factory method for an instance of BusinessUnitShippingAddressRemovedMessagePayloadBuilder
-     * @return builder
+     * @return builder 
      */
     public static BusinessUnitShippingAddressRemovedMessagePayloadBuilder of() {
         return new BusinessUnitShippingAddressRemovedMessagePayloadBuilder();
@@ -101,8 +108,7 @@ public class BusinessUnitShippingAddressRemovedMessagePayloadBuilder
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static BusinessUnitShippingAddressRemovedMessagePayloadBuilder of(
-            final BusinessUnitShippingAddressRemovedMessagePayload template) {
+    public static BusinessUnitShippingAddressRemovedMessagePayloadBuilder of(final BusinessUnitShippingAddressRemovedMessagePayload template) {
         BusinessUnitShippingAddressRemovedMessagePayloadBuilder builder = new BusinessUnitShippingAddressRemovedMessagePayloadBuilder();
         builder.address = template.getAddress();
         return builder;

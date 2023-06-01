@@ -1,11 +1,15 @@
-
 package com.commercetools.api.models.customer_group;
 
+import com.commercetools.api.models.common.BaseResource;
+import com.commercetools.api.models.common.CreatedBy;
+import com.commercetools.api.models.common.LastModifiedBy;
+import com.commercetools.api.models.type.CustomFields;
+import java.time.ZonedDateTime;
+import com.commercetools.api.models.customer_group.CustomerGroup;
+import javax.annotation.Nullable;
 import java.util.*;
 import java.util.function.Function;
-
-import javax.annotation.Nullable;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -23,287 +27,329 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .name("{name}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class CustomerGroupBuilder implements Builder<CustomerGroup> {
 
+    
+    
     private String id;
-
+    
+    
+    
     private Long version;
-
+    
+    
+    
     private java.time.ZonedDateTime createdAt;
-
+    
+    
+    
     private java.time.ZonedDateTime lastModifiedAt;
-
+    
+    
     @Nullable
     private com.commercetools.api.models.common.LastModifiedBy lastModifiedBy;
-
+    
+    
     @Nullable
     private com.commercetools.api.models.common.CreatedBy createdBy;
-
+    
+    
     @Nullable
     private String key;
-
+    
+    
+    
     private String name;
-
+    
+    
     @Nullable
     private com.commercetools.api.models.type.CustomFields custom;
 
+    
     /**
      *  <p>Unique identifier of the CustomerGroup.</p>
      * @param id value to be set
      * @return Builder
      */
-
-    public CustomerGroupBuilder id(final String id) {
+    
+    public CustomerGroupBuilder id( final String id) {
         this.id = id;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Current version of the CustomerGroup.</p>
      * @param version value to be set
      * @return Builder
      */
-
-    public CustomerGroupBuilder version(final Long version) {
+    
+    public CustomerGroupBuilder version( final Long version) {
         this.version = version;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Date and time (UTC) the CustomerGroup was initially created.</p>
      * @param createdAt value to be set
      * @return Builder
      */
-
-    public CustomerGroupBuilder createdAt(final java.time.ZonedDateTime createdAt) {
+    
+    public CustomerGroupBuilder createdAt( final java.time.ZonedDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Date and time (UTC) the CustomerGroup was last updated.</p>
      * @param lastModifiedAt value to be set
      * @return Builder
      */
-
-    public CustomerGroupBuilder lastModifiedAt(final java.time.ZonedDateTime lastModifiedAt) {
+    
+    public CustomerGroupBuilder lastModifiedAt( final java.time.ZonedDateTime lastModifiedAt) {
         this.lastModifiedAt = lastModifiedAt;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Present on resources updated after 1 February 2019 except for events not tracked.</p>
      * @param builder function to build the lastModifiedBy value
      * @return Builder
      */
-
-    public CustomerGroupBuilder lastModifiedBy(
-            Function<com.commercetools.api.models.common.LastModifiedByBuilder, com.commercetools.api.models.common.LastModifiedByBuilder> builder) {
+    
+    public CustomerGroupBuilder lastModifiedBy(Function<com.commercetools.api.models.common.LastModifiedByBuilder, com.commercetools.api.models.common.LastModifiedByBuilder> builder) {
         this.lastModifiedBy = builder.apply(com.commercetools.api.models.common.LastModifiedByBuilder.of()).build();
         return this;
     }
-
+    
     /**
      *  <p>Present on resources updated after 1 February 2019 except for events not tracked.</p>
      * @param builder function to build the lastModifiedBy value
      * @return Builder
      */
-
-    public CustomerGroupBuilder withLastModifiedBy(
-            Function<com.commercetools.api.models.common.LastModifiedByBuilder, com.commercetools.api.models.common.LastModifiedBy> builder) {
+    
+    public CustomerGroupBuilder withLastModifiedBy(Function<com.commercetools.api.models.common.LastModifiedByBuilder, com.commercetools.api.models.common.LastModifiedBy> builder) {
         this.lastModifiedBy = builder.apply(com.commercetools.api.models.common.LastModifiedByBuilder.of());
         return this;
     }
-
+                    
     /**
      *  <p>Present on resources updated after 1 February 2019 except for events not tracked.</p>
      * @param lastModifiedBy value to be set
      * @return Builder
      */
-
-    public CustomerGroupBuilder lastModifiedBy(
-            @Nullable final com.commercetools.api.models.common.LastModifiedBy lastModifiedBy) {
+    
+    public CustomerGroupBuilder lastModifiedBy(@Nullable final com.commercetools.api.models.common.LastModifiedBy lastModifiedBy) {
         this.lastModifiedBy = lastModifiedBy;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      * @param builder function to build the createdBy value
      * @return Builder
      */
-
-    public CustomerGroupBuilder createdBy(
-            Function<com.commercetools.api.models.common.CreatedByBuilder, com.commercetools.api.models.common.CreatedByBuilder> builder) {
+    
+    public CustomerGroupBuilder createdBy(Function<com.commercetools.api.models.common.CreatedByBuilder, com.commercetools.api.models.common.CreatedByBuilder> builder) {
         this.createdBy = builder.apply(com.commercetools.api.models.common.CreatedByBuilder.of()).build();
         return this;
     }
-
+    
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      * @param builder function to build the createdBy value
      * @return Builder
      */
-
-    public CustomerGroupBuilder withCreatedBy(
-            Function<com.commercetools.api.models.common.CreatedByBuilder, com.commercetools.api.models.common.CreatedBy> builder) {
+    
+    public CustomerGroupBuilder withCreatedBy(Function<com.commercetools.api.models.common.CreatedByBuilder, com.commercetools.api.models.common.CreatedBy> builder) {
         this.createdBy = builder.apply(com.commercetools.api.models.common.CreatedByBuilder.of());
         return this;
     }
-
+                    
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      * @param createdBy value to be set
      * @return Builder
      */
-
+    
     public CustomerGroupBuilder createdBy(@Nullable final com.commercetools.api.models.common.CreatedBy createdBy) {
         this.createdBy = createdBy;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>User-defined unique identifier for the CustomerGroup.</p>
      * @param key value to be set
      * @return Builder
      */
-
+    
     public CustomerGroupBuilder key(@Nullable final String key) {
         this.key = key;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Unique name of the CustomerGroup.</p>
      * @param name value to be set
      * @return Builder
      */
-
-    public CustomerGroupBuilder name(final String name) {
+    
+    public CustomerGroupBuilder name( final String name) {
         this.name = name;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Custom Fields for the CustomerGroup.</p>
      * @param builder function to build the custom value
      * @return Builder
      */
-
-    public CustomerGroupBuilder custom(
-            Function<com.commercetools.api.models.type.CustomFieldsBuilder, com.commercetools.api.models.type.CustomFieldsBuilder> builder) {
+    
+    public CustomerGroupBuilder custom(Function<com.commercetools.api.models.type.CustomFieldsBuilder, com.commercetools.api.models.type.CustomFieldsBuilder> builder) {
         this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsBuilder.of()).build();
         return this;
     }
-
+    
     /**
      *  <p>Custom Fields for the CustomerGroup.</p>
      * @param builder function to build the custom value
      * @return Builder
      */
-
-    public CustomerGroupBuilder withCustom(
-            Function<com.commercetools.api.models.type.CustomFieldsBuilder, com.commercetools.api.models.type.CustomFields> builder) {
+    
+    public CustomerGroupBuilder withCustom(Function<com.commercetools.api.models.type.CustomFieldsBuilder, com.commercetools.api.models.type.CustomFields> builder) {
         this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsBuilder.of());
         return this;
     }
-
+                    
     /**
      *  <p>Custom Fields for the CustomerGroup.</p>
      * @param custom value to be set
      * @return Builder
      */
-
+    
     public CustomerGroupBuilder custom(@Nullable final com.commercetools.api.models.type.CustomFields custom) {
         this.custom = custom;
         return this;
     }
+    
+    
 
     /**
      *  <p>Unique identifier of the CustomerGroup.</p>
      * @return id
      */
-
-    public String getId() {
+    
+    
+    public String getId(){
         return this.id;
     }
-
+    
     /**
      *  <p>Current version of the CustomerGroup.</p>
      * @return version
      */
-
-    public Long getVersion() {
+    
+    
+    public Long getVersion(){
         return this.version;
     }
-
+    
     /**
      *  <p>Date and time (UTC) the CustomerGroup was initially created.</p>
      * @return createdAt
      */
-
-    public java.time.ZonedDateTime getCreatedAt() {
+    
+    
+    public java.time.ZonedDateTime getCreatedAt(){
         return this.createdAt;
     }
-
+    
     /**
      *  <p>Date and time (UTC) the CustomerGroup was last updated.</p>
      * @return lastModifiedAt
      */
-
-    public java.time.ZonedDateTime getLastModifiedAt() {
+    
+    
+    public java.time.ZonedDateTime getLastModifiedAt(){
         return this.lastModifiedAt;
     }
-
+    
     /**
      *  <p>Present on resources updated after 1 February 2019 except for events not tracked.</p>
      * @return lastModifiedBy
      */
-
+    
     @Nullable
-    public com.commercetools.api.models.common.LastModifiedBy getLastModifiedBy() {
+    public com.commercetools.api.models.common.LastModifiedBy getLastModifiedBy(){
         return this.lastModifiedBy;
     }
-
+    
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      * @return createdBy
      */
-
+    
     @Nullable
-    public com.commercetools.api.models.common.CreatedBy getCreatedBy() {
+    public com.commercetools.api.models.common.CreatedBy getCreatedBy(){
         return this.createdBy;
     }
-
+    
     /**
      *  <p>User-defined unique identifier for the CustomerGroup.</p>
      * @return key
      */
-
+    
     @Nullable
-    public String getKey() {
+    public String getKey(){
         return this.key;
     }
-
+    
     /**
      *  <p>Unique name of the CustomerGroup.</p>
      * @return name
      */
-
-    public String getName() {
+    
+    
+    public String getName(){
         return this.name;
     }
-
+    
     /**
      *  <p>Custom Fields for the CustomerGroup.</p>
      * @return custom
      */
-
+    
     @Nullable
-    public com.commercetools.api.models.type.CustomFields getCustom() {
+    public com.commercetools.api.models.type.CustomFields getCustom(){
         return this.custom;
     }
 
@@ -317,22 +363,20 @@ public class CustomerGroupBuilder implements Builder<CustomerGroup> {
         Objects.requireNonNull(createdAt, CustomerGroup.class + ": createdAt is missing");
         Objects.requireNonNull(lastModifiedAt, CustomerGroup.class + ": lastModifiedAt is missing");
         Objects.requireNonNull(name, CustomerGroup.class + ": name is missing");
-        return new CustomerGroupImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, key, name,
-            custom);
+        return new CustomerGroupImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, key, name, custom);
     }
-
+    
     /**
      * builds CustomerGroup without checking for non-null required values
      * @return CustomerGroup
      */
     public CustomerGroup buildUnchecked() {
-        return new CustomerGroupImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, key, name,
-            custom);
+        return new CustomerGroupImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, key, name, custom);
     }
 
     /**
      * factory method for an instance of CustomerGroupBuilder
-     * @return builder
+     * @return builder 
      */
     public static CustomerGroupBuilder of() {
         return new CustomerGroupBuilder();

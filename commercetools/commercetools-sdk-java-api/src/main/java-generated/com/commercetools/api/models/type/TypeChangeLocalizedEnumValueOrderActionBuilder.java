@@ -1,8 +1,11 @@
-
 package com.commercetools.api.models.type;
 
+import com.commercetools.api.models.type.TypeUpdateAction;
+import com.commercetools.api.models.type.TypeChangeLocalizedEnumValueOrderAction;
+import javax.annotation.Nullable;
 import java.util.*;
-
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -17,78 +20,92 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .plusKeys(keysBuilder -> keysBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
-public class TypeChangeLocalizedEnumValueOrderActionBuilder
-        implements Builder<TypeChangeLocalizedEnumValueOrderAction> {
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
+public class TypeChangeLocalizedEnumValueOrderActionBuilder implements Builder<TypeChangeLocalizedEnumValueOrderAction> {
 
+    
+    
     private String fieldName;
-
+    
+    
+    
     private java.util.List<String> keys;
 
+    
     /**
      *  <p><code>name</code> of the Field Definition to update.</p>
      * @param fieldName value to be set
      * @return Builder
      */
-
-    public TypeChangeLocalizedEnumValueOrderActionBuilder fieldName(final String fieldName) {
+    
+    public TypeChangeLocalizedEnumValueOrderActionBuilder fieldName( final String fieldName) {
         this.fieldName = fieldName;
         return this;
     }
-
+    
+    
+    
     /**
      *  <p>Must match the set of <code>key</code>s of the LocalizedEnumValues in the FieldDefinition (up to order).</p>
      * @param keys value to be set
      * @return Builder
      */
-
-    public TypeChangeLocalizedEnumValueOrderActionBuilder keys(final String... keys) {
+    
+    public TypeChangeLocalizedEnumValueOrderActionBuilder keys( final String ...keys) {
         this.keys = new ArrayList<>(Arrays.asList(keys));
         return this;
     }
-
+    
     /**
      *  <p>Must match the set of <code>key</code>s of the LocalizedEnumValues in the FieldDefinition (up to order).</p>
      * @param keys value to be set
      * @return Builder
      */
-
-    public TypeChangeLocalizedEnumValueOrderActionBuilder keys(final java.util.List<String> keys) {
+    
+    public TypeChangeLocalizedEnumValueOrderActionBuilder keys( final java.util.List<String> keys) {
         this.keys = keys;
         return this;
     }
-
+    
     /**
      *  <p>Must match the set of <code>key</code>s of the LocalizedEnumValues in the FieldDefinition (up to order).</p>
      * @param keys value to be set
      * @return Builder
      */
-
-    public TypeChangeLocalizedEnumValueOrderActionBuilder plusKeys(final String... keys) {
+    
+    public TypeChangeLocalizedEnumValueOrderActionBuilder plusKeys( final String ...keys) {
         if (this.keys == null) {
             this.keys = new ArrayList<>();
         }
         this.keys.addAll(Arrays.asList(keys));
         return this;
     }
+    
+    
+    
 
     /**
      *  <p><code>name</code> of the Field Definition to update.</p>
      * @return fieldName
      */
-
-    public String getFieldName() {
+    
+    
+    public String getFieldName(){
         return this.fieldName;
     }
-
+    
     /**
      *  <p>Must match the set of <code>key</code>s of the LocalizedEnumValues in the FieldDefinition (up to order).</p>
      * @return keys
      */
-
-    public java.util.List<String> getKeys() {
+    
+    
+    public java.util.List<String> getKeys(){
         return this.keys;
     }
 
@@ -101,7 +118,7 @@ public class TypeChangeLocalizedEnumValueOrderActionBuilder
         Objects.requireNonNull(keys, TypeChangeLocalizedEnumValueOrderAction.class + ": keys is missing");
         return new TypeChangeLocalizedEnumValueOrderActionImpl(fieldName, keys);
     }
-
+    
     /**
      * builds TypeChangeLocalizedEnumValueOrderAction without checking for non-null required values
      * @return TypeChangeLocalizedEnumValueOrderAction
@@ -112,7 +129,7 @@ public class TypeChangeLocalizedEnumValueOrderActionBuilder
 
     /**
      * factory method for an instance of TypeChangeLocalizedEnumValueOrderActionBuilder
-     * @return builder
+     * @return builder 
      */
     public static TypeChangeLocalizedEnumValueOrderActionBuilder of() {
         return new TypeChangeLocalizedEnumValueOrderActionBuilder();
@@ -123,8 +140,7 @@ public class TypeChangeLocalizedEnumValueOrderActionBuilder
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static TypeChangeLocalizedEnumValueOrderActionBuilder of(
-            final TypeChangeLocalizedEnumValueOrderAction template) {
+    public static TypeChangeLocalizedEnumValueOrderActionBuilder of(final TypeChangeLocalizedEnumValueOrderAction template) {
         TypeChangeLocalizedEnumValueOrderActionBuilder builder = new TypeChangeLocalizedEnumValueOrderActionBuilder();
         builder.fieldName = template.getFieldName();
         builder.keys = template.getKeys();

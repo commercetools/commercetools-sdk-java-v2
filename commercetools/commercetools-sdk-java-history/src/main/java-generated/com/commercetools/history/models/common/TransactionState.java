@@ -1,29 +1,31 @@
-
 package com.commercetools.history.models.common;
-
-import java.util.Arrays;
-import java.util.Optional;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-
+import java.lang.String;
+import java.util.Arrays;
+import java.util.Optional;
 import io.vrap.rmf.base.client.JsonEnum;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
  * TransactionState
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public interface TransactionState extends JsonEnum {
 
+    
     TransactionState INITIAL = TransactionStateEnum.INITIAL;
-
+    
     TransactionState PENDING = TransactionStateEnum.PENDING;
-
+    
     TransactionState SUCCESS = TransactionStateEnum.SUCCESS;
-
+    
     TransactionState FAILURE = TransactionStateEnum.FAILURE;
-
+    
     /**
      * possible values of TransactionState
      */
@@ -32,17 +34,17 @@ public interface TransactionState extends JsonEnum {
          * Initial
          */
         INITIAL("Initial"),
-
+        
         /**
          * Pending
          */
         PENDING("Pending"),
-
+        
         /**
          * Success
          */
         SUCCESS("Success"),
-
+        
         /**
          * Failure
          */
@@ -99,7 +101,7 @@ public interface TransactionState extends JsonEnum {
             public String name() {
                 return value.toUpperCase();
             }
-
+            
             public String toString() {
                 return value;
             }
@@ -114,7 +116,7 @@ public interface TransactionState extends JsonEnum {
     public static Optional<TransactionState> findEnumViaJsonName(String jsonName) {
         return Arrays.stream(values()).filter(t -> t.getJsonName().equals(jsonName)).findFirst();
     }
-
+    
     /**
      * possible enum values
      * @return array of possible enum values
@@ -122,5 +124,5 @@ public interface TransactionState extends JsonEnum {
     public static TransactionState[] values() {
         return TransactionStateEnum.values();
     }
-
+    
 }

@@ -1,19 +1,21 @@
-
 package com.commercetools.api.models.cart;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
+import com.commercetools.api.models.cart.ShippingRateInput;
 import com.commercetools.api.models.common.LocalizedString;
+import com.commercetools.api.models.cart.ClassificationShippingRateInputImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * ClassificationShippingRateInput
@@ -27,9 +29,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .label(labelBuilder -> labelBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = ClassificationShippingRateInputImpl.class)
 public interface ClassificationShippingRateInput extends ShippingRateInput {
 
@@ -45,7 +50,6 @@ public interface ClassificationShippingRateInput extends ShippingRateInput {
     @NotNull
     @JsonProperty("key")
     public String getKey();
-
     /**
      *  <p>Descriptive localized label of the value.</p>
      * @return label
@@ -59,23 +63,26 @@ public interface ClassificationShippingRateInput extends ShippingRateInput {
      *  <p>Key of the value used as a programmatic identifier.</p>
      * @param key value to be set
      */
-
+    
     public void setKey(final String key);
-
+    
+    
     /**
      *  <p>Descriptive localized label of the value.</p>
      * @param label value to be set
      */
-
+    
     public void setLabel(final LocalizedString label);
+    
 
     /**
      * factory method
      * @return instance of ClassificationShippingRateInput
      */
-    public static ClassificationShippingRateInput of() {
+    public static ClassificationShippingRateInput of(){
         return new ClassificationShippingRateInputImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy ClassificationShippingRateInput
@@ -112,7 +119,7 @@ public interface ClassificationShippingRateInput extends ShippingRateInput {
     public static ClassificationShippingRateInputBuilder builder() {
         return ClassificationShippingRateInputBuilder.of();
     }
-
+    
     /**
      * create builder for ClassificationShippingRateInput instance
      * @param template instance with prefilled values for the builder
@@ -121,6 +128,7 @@ public interface ClassificationShippingRateInput extends ShippingRateInput {
     public static ClassificationShippingRateInputBuilder builder(final ClassificationShippingRateInput template) {
         return ClassificationShippingRateInputBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -131,7 +139,7 @@ public interface ClassificationShippingRateInput extends ShippingRateInput {
     default <T> T withClassificationShippingRateInput(Function<ClassificationShippingRateInput, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

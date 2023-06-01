@@ -1,8 +1,11 @@
-
 package com.commercetools.api.models.error;
 
+import com.commercetools.api.models.error.GraphQLErrorObject;
+import com.commercetools.api.models.error.GraphQLEnumKeyAlreadyExistsError;
+import javax.annotation.Nullable;
 import java.util.*;
-
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -17,15 +20,24 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .conflictingAttributeName("{conflictingAttributeName}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class GraphQLEnumKeyAlreadyExistsErrorBuilder implements Builder<GraphQLEnumKeyAlreadyExistsError> {
 
+    
+    
     private Map<String, java.lang.Object> values = new HashMap<>();
-
+    
+    
+    
     private String conflictingEnumKey;
-
+    
+    
+    
     private String conflictingAttributeName;
 
     /**
@@ -33,19 +45,19 @@ public class GraphQLEnumKeyAlreadyExistsErrorBuilder implements Builder<GraphQLE
      * @param values properties to be set
      * @return Builder
      */
-
-    public GraphQLEnumKeyAlreadyExistsErrorBuilder values(final Map<String, java.lang.Object> values) {
+    
+    public GraphQLEnumKeyAlreadyExistsErrorBuilder values( final Map<String, java.lang.Object> values){
         this.values = values;
         return this;
     }
-
+    
     /**
      *  <p>Error-specific additional fields.</p>
      * @param key property name
      * @param value property value
      * @return Builder
      */
-
+    
     public GraphQLEnumKeyAlreadyExistsErrorBuilder addValue(final String key, final java.lang.Object value) {
         if (this.values == null) {
             values = new HashMap<>();
@@ -53,53 +65,63 @@ public class GraphQLEnumKeyAlreadyExistsErrorBuilder implements Builder<GraphQLE
         values.put(key, value);
         return this;
     }
-
+    
+    
+    
     /**
      *  <p>Conflicting enum key.</p>
      * @param conflictingEnumKey value to be set
      * @return Builder
      */
-
-    public GraphQLEnumKeyAlreadyExistsErrorBuilder conflictingEnumKey(final String conflictingEnumKey) {
+    
+    public GraphQLEnumKeyAlreadyExistsErrorBuilder conflictingEnumKey( final String conflictingEnumKey) {
         this.conflictingEnumKey = conflictingEnumKey;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Name of the conflicting Attribute.</p>
      * @param conflictingAttributeName value to be set
      * @return Builder
      */
-
-    public GraphQLEnumKeyAlreadyExistsErrorBuilder conflictingAttributeName(final String conflictingAttributeName) {
+    
+    public GraphQLEnumKeyAlreadyExistsErrorBuilder conflictingAttributeName( final String conflictingAttributeName) {
         this.conflictingAttributeName = conflictingAttributeName;
         return this;
     }
+    
+    
 
     /**
      *  <p>Error-specific additional fields.</p>
      * @return pattern properties
      */
-
-    public Map<String, java.lang.Object> getValues() {
+    
+    
+    public Map<String, java.lang.Object> getValues(){
         return this.values;
     }
-
+    
     /**
      *  <p>Conflicting enum key.</p>
      * @return conflictingEnumKey
      */
-
-    public String getConflictingEnumKey() {
+    
+    
+    public String getConflictingEnumKey(){
         return this.conflictingEnumKey;
     }
-
+    
     /**
      *  <p>Name of the conflicting Attribute.</p>
      * @return conflictingAttributeName
      */
-
-    public String getConflictingAttributeName() {
+    
+    
+    public String getConflictingAttributeName(){
         return this.conflictingAttributeName;
     }
 
@@ -108,13 +130,11 @@ public class GraphQLEnumKeyAlreadyExistsErrorBuilder implements Builder<GraphQLE
      * @return GraphQLEnumKeyAlreadyExistsError
      */
     public GraphQLEnumKeyAlreadyExistsError build() {
-        Objects.requireNonNull(conflictingEnumKey,
-            GraphQLEnumKeyAlreadyExistsError.class + ": conflictingEnumKey is missing");
-        Objects.requireNonNull(conflictingAttributeName,
-            GraphQLEnumKeyAlreadyExistsError.class + ": conflictingAttributeName is missing");
+        Objects.requireNonNull(conflictingEnumKey, GraphQLEnumKeyAlreadyExistsError.class + ": conflictingEnumKey is missing");
+        Objects.requireNonNull(conflictingAttributeName, GraphQLEnumKeyAlreadyExistsError.class + ": conflictingAttributeName is missing");
         return new GraphQLEnumKeyAlreadyExistsErrorImpl(values, conflictingEnumKey, conflictingAttributeName);
     }
-
+    
     /**
      * builds GraphQLEnumKeyAlreadyExistsError without checking for non-null required values
      * @return GraphQLEnumKeyAlreadyExistsError
@@ -125,7 +145,7 @@ public class GraphQLEnumKeyAlreadyExistsErrorBuilder implements Builder<GraphQLE
 
     /**
      * factory method for an instance of GraphQLEnumKeyAlreadyExistsErrorBuilder
-     * @return builder
+     * @return builder 
      */
     public static GraphQLEnumKeyAlreadyExistsErrorBuilder of() {
         return new GraphQLEnumKeyAlreadyExistsErrorBuilder();

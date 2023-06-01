@@ -1,16 +1,20 @@
-
 package com.commercetools.api.models.order_edit;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
+import com.commercetools.api.models.order_edit.OrderEditResult;
+import com.commercetools.api.models.order_edit.OrderEditNotProcessedImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * OrderEditNotProcessed
@@ -22,9 +26,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     OrderEditNotProcessed orderEditNotProcessed = OrderEditNotProcessed.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = OrderEditNotProcessedImpl.class)
 public interface OrderEditNotProcessed extends OrderEditResult {
 
@@ -33,13 +40,16 @@ public interface OrderEditNotProcessed extends OrderEditResult {
      */
     String NOT_PROCESSED = "NotProcessed";
 
+
+
     /**
      * factory method
      * @return instance of OrderEditNotProcessed
      */
-    public static OrderEditNotProcessed of() {
+    public static OrderEditNotProcessed of(){
         return new OrderEditNotProcessedImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy OrderEditNotProcessed
@@ -72,7 +82,7 @@ public interface OrderEditNotProcessed extends OrderEditResult {
     public static OrderEditNotProcessedBuilder builder() {
         return OrderEditNotProcessedBuilder.of();
     }
-
+    
     /**
      * create builder for OrderEditNotProcessed instance
      * @param template instance with prefilled values for the builder
@@ -81,6 +91,7 @@ public interface OrderEditNotProcessed extends OrderEditResult {
     public static OrderEditNotProcessedBuilder builder(final OrderEditNotProcessed template) {
         return OrderEditNotProcessedBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -91,7 +102,7 @@ public interface OrderEditNotProcessed extends OrderEditResult {
     default <T> T withOrderEditNotProcessed(Function<OrderEditNotProcessed, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

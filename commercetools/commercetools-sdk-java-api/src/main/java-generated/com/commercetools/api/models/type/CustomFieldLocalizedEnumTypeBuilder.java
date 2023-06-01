@@ -1,9 +1,12 @@
-
 package com.commercetools.api.models.type;
 
+import com.commercetools.api.models.type.CustomFieldLocalizedEnumValue;
+import com.commercetools.api.models.type.FieldType;
+import com.commercetools.api.models.type.CustomFieldLocalizedEnumType;
+import javax.annotation.Nullable;
 import java.util.*;
 import java.util.function.Function;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -17,11 +20,16 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .plusValues(valuesBuilder -> valuesBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class CustomFieldLocalizedEnumTypeBuilder implements Builder<CustomFieldLocalizedEnumType> {
 
+    
+    
     private java.util.List<com.commercetools.api.models.type.CustomFieldLocalizedEnumValue> values;
 
     /**
@@ -29,98 +37,93 @@ public class CustomFieldLocalizedEnumTypeBuilder implements Builder<CustomFieldL
      * @param values value to be set
      * @return Builder
      */
-
-    public CustomFieldLocalizedEnumTypeBuilder values(
-            final com.commercetools.api.models.type.CustomFieldLocalizedEnumValue... values) {
+    
+    public CustomFieldLocalizedEnumTypeBuilder values( final com.commercetools.api.models.type.CustomFieldLocalizedEnumValue ...values) {
         this.values = new ArrayList<>(Arrays.asList(values));
         return this;
     }
-
+    
     /**
      *  <p>Allowed values.</p>
      * @param values value to be set
      * @return Builder
      */
-
-    public CustomFieldLocalizedEnumTypeBuilder values(
-            final java.util.List<com.commercetools.api.models.type.CustomFieldLocalizedEnumValue> values) {
+    
+    public CustomFieldLocalizedEnumTypeBuilder values( final java.util.List<com.commercetools.api.models.type.CustomFieldLocalizedEnumValue> values) {
         this.values = values;
         return this;
     }
-
+    
     /**
      *  <p>Allowed values.</p>
      * @param values value to be set
      * @return Builder
      */
-
-    public CustomFieldLocalizedEnumTypeBuilder plusValues(
-            final com.commercetools.api.models.type.CustomFieldLocalizedEnumValue... values) {
+    
+    public CustomFieldLocalizedEnumTypeBuilder plusValues( final com.commercetools.api.models.type.CustomFieldLocalizedEnumValue ...values) {
         if (this.values == null) {
             this.values = new ArrayList<>();
         }
         this.values.addAll(Arrays.asList(values));
         return this;
     }
-
+    
+    
+    
     /**
      *  <p>Allowed values.</p>
      * @param builder function to build the values value
      * @return Builder
      */
-
-    public CustomFieldLocalizedEnumTypeBuilder plusValues(
-            Function<com.commercetools.api.models.type.CustomFieldLocalizedEnumValueBuilder, com.commercetools.api.models.type.CustomFieldLocalizedEnumValueBuilder> builder) {
+    
+    public CustomFieldLocalizedEnumTypeBuilder plusValues(Function<com.commercetools.api.models.type.CustomFieldLocalizedEnumValueBuilder, com.commercetools.api.models.type.CustomFieldLocalizedEnumValueBuilder> builder) {
         if (this.values == null) {
             this.values = new ArrayList<>();
         }
-        this.values.add(
-            builder.apply(com.commercetools.api.models.type.CustomFieldLocalizedEnumValueBuilder.of()).build());
+        this.values.add(builder.apply(com.commercetools.api.models.type.CustomFieldLocalizedEnumValueBuilder.of()).build());
         return this;
     }
-
+    
     /**
      *  <p>Allowed values.</p>
      * @param builder function to build the values value
      * @return Builder
      */
-
-    public CustomFieldLocalizedEnumTypeBuilder withValues(
-            Function<com.commercetools.api.models.type.CustomFieldLocalizedEnumValueBuilder, com.commercetools.api.models.type.CustomFieldLocalizedEnumValueBuilder> builder) {
+    
+    public CustomFieldLocalizedEnumTypeBuilder withValues(Function<com.commercetools.api.models.type.CustomFieldLocalizedEnumValueBuilder, com.commercetools.api.models.type.CustomFieldLocalizedEnumValueBuilder> builder) {
         this.values = new ArrayList<>();
-        this.values.add(
-            builder.apply(com.commercetools.api.models.type.CustomFieldLocalizedEnumValueBuilder.of()).build());
+        this.values.add(builder.apply(com.commercetools.api.models.type.CustomFieldLocalizedEnumValueBuilder.of()).build());
         return this;
     }
-
+    
     /**
      *  <p>Allowed values.</p>
      * @param builder function to build the values value
      * @return Builder
      */
-
-    public CustomFieldLocalizedEnumTypeBuilder addValues(
-            Function<com.commercetools.api.models.type.CustomFieldLocalizedEnumValueBuilder, com.commercetools.api.models.type.CustomFieldLocalizedEnumValue> builder) {
+    
+    public CustomFieldLocalizedEnumTypeBuilder addValues(Function<com.commercetools.api.models.type.CustomFieldLocalizedEnumValueBuilder, com.commercetools.api.models.type.CustomFieldLocalizedEnumValue> builder) {
         return plusValues(builder.apply(com.commercetools.api.models.type.CustomFieldLocalizedEnumValueBuilder.of()));
     }
-
+    
     /**
      *  <p>Allowed values.</p>
      * @param builder function to build the values value
      * @return Builder
      */
-
-    public CustomFieldLocalizedEnumTypeBuilder setValues(
-            Function<com.commercetools.api.models.type.CustomFieldLocalizedEnumValueBuilder, com.commercetools.api.models.type.CustomFieldLocalizedEnumValue> builder) {
+    
+    public CustomFieldLocalizedEnumTypeBuilder setValues(Function<com.commercetools.api.models.type.CustomFieldLocalizedEnumValueBuilder, com.commercetools.api.models.type.CustomFieldLocalizedEnumValue> builder) {
         return values(builder.apply(com.commercetools.api.models.type.CustomFieldLocalizedEnumValueBuilder.of()));
     }
+                    
 
     /**
      *  <p>Allowed values.</p>
      * @return values
      */
-
-    public java.util.List<com.commercetools.api.models.type.CustomFieldLocalizedEnumValue> getValues() {
+    
+    
+    public java.util.List<com.commercetools.api.models.type.CustomFieldLocalizedEnumValue> getValues(){
         return this.values;
     }
 
@@ -132,7 +135,7 @@ public class CustomFieldLocalizedEnumTypeBuilder implements Builder<CustomFieldL
         Objects.requireNonNull(values, CustomFieldLocalizedEnumType.class + ": values is missing");
         return new CustomFieldLocalizedEnumTypeImpl(values);
     }
-
+    
     /**
      * builds CustomFieldLocalizedEnumType without checking for non-null required values
      * @return CustomFieldLocalizedEnumType
@@ -143,7 +146,7 @@ public class CustomFieldLocalizedEnumTypeBuilder implements Builder<CustomFieldL
 
     /**
      * factory method for an instance of CustomFieldLocalizedEnumTypeBuilder
-     * @return builder
+     * @return builder 
      */
     public static CustomFieldLocalizedEnumTypeBuilder of() {
         return new CustomFieldLocalizedEnumTypeBuilder();

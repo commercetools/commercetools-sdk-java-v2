@@ -1,17 +1,20 @@
-
 package com.commercetools.api.models.error;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
+import com.commercetools.api.models.error.ErrorObject;
+import com.commercetools.api.models.error.QueryTimedOutErrorImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Returned when the query times out.</p>
@@ -25,9 +28,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .message("{message}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = QueryTimedOutErrorImpl.class)
 public interface QueryTimedOutError extends ErrorObject {
 
@@ -43,7 +49,6 @@ public interface QueryTimedOutError extends ErrorObject {
     @NotNull
     @JsonProperty("code")
     public String getCode();
-
     /**
      *  <p><code>"The query timed out. If your query constantly times out, please check that it follows the performance best practices (see https://docs.commercetools.com/api/predicates/query#performance-considerations)."</code></p>
      * @return message
@@ -56,16 +61,18 @@ public interface QueryTimedOutError extends ErrorObject {
      *  <p><code>"The query timed out. If your query constantly times out, please check that it follows the performance best practices (see https://docs.commercetools.com/api/predicates/query#performance-considerations)."</code></p>
      * @param message value to be set
      */
-
+    
     public void setMessage(final String message);
+    
 
     /**
      * factory method
      * @return instance of QueryTimedOutError
      */
-    public static QueryTimedOutError of() {
+    public static QueryTimedOutError of(){
         return new QueryTimedOutErrorImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy QueryTimedOutError
@@ -102,7 +109,7 @@ public interface QueryTimedOutError extends ErrorObject {
     public static QueryTimedOutErrorBuilder builder() {
         return QueryTimedOutErrorBuilder.of();
     }
-
+    
     /**
      * create builder for QueryTimedOutError instance
      * @param template instance with prefilled values for the builder
@@ -111,6 +118,7 @@ public interface QueryTimedOutError extends ErrorObject {
     public static QueryTimedOutErrorBuilder builder(final QueryTimedOutError template) {
         return QueryTimedOutErrorBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -121,7 +129,7 @@ public interface QueryTimedOutError extends ErrorObject {
     default <T> T withQueryTimedOutError(Function<QueryTimedOutError, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

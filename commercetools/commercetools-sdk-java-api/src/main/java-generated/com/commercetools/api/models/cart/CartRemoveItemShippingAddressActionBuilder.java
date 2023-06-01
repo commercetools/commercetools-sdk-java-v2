@@ -1,8 +1,11 @@
-
 package com.commercetools.api.models.cart;
 
+import com.commercetools.api.models.cart.CartUpdateAction;
+import com.commercetools.api.models.cart.CartRemoveItemShippingAddressAction;
+import javax.annotation.Nullable;
 import java.util.*;
-
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -16,30 +19,39 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .addressKey("{addressKey}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class CartRemoveItemShippingAddressActionBuilder implements Builder<CartRemoveItemShippingAddressAction> {
 
+    
+    
     private String addressKey;
 
+    
     /**
      *  <p><code>key</code> of the Address to remove from <code>itemShippingAddresses</code>.</p>
      * @param addressKey value to be set
      * @return Builder
      */
-
-    public CartRemoveItemShippingAddressActionBuilder addressKey(final String addressKey) {
+    
+    public CartRemoveItemShippingAddressActionBuilder addressKey( final String addressKey) {
         this.addressKey = addressKey;
         return this;
     }
+    
+    
 
     /**
      *  <p><code>key</code> of the Address to remove from <code>itemShippingAddresses</code>.</p>
      * @return addressKey
      */
-
-    public String getAddressKey() {
+    
+    
+    public String getAddressKey(){
         return this.addressKey;
     }
 
@@ -51,7 +63,7 @@ public class CartRemoveItemShippingAddressActionBuilder implements Builder<CartR
         Objects.requireNonNull(addressKey, CartRemoveItemShippingAddressAction.class + ": addressKey is missing");
         return new CartRemoveItemShippingAddressActionImpl(addressKey);
     }
-
+    
     /**
      * builds CartRemoveItemShippingAddressAction without checking for non-null required values
      * @return CartRemoveItemShippingAddressAction
@@ -62,7 +74,7 @@ public class CartRemoveItemShippingAddressActionBuilder implements Builder<CartR
 
     /**
      * factory method for an instance of CartRemoveItemShippingAddressActionBuilder
-     * @return builder
+     * @return builder 
      */
     public static CartRemoveItemShippingAddressActionBuilder of() {
         return new CartRemoveItemShippingAddressActionBuilder();

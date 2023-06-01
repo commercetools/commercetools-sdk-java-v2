@@ -1,17 +1,20 @@
-
 package com.commercetools.api.models.product_type;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
+import com.commercetools.api.models.product_type.ProductTypeUpdateAction;
+import com.commercetools.api.models.product_type.ProductTypeRemoveAttributeDefinitionActionImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Removes an AttributeDefinition and also deletes all corresponding Attributes on all Products with this ProductType. The removal of the Attributes is eventually consistent.</p>
@@ -25,9 +28,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .name("{name}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = ProductTypeRemoveAttributeDefinitionActionImpl.class)
 public interface ProductTypeRemoveAttributeDefinitionAction extends ProductTypeUpdateAction {
 
@@ -48,24 +54,25 @@ public interface ProductTypeRemoveAttributeDefinitionAction extends ProductTypeU
      *  <p>Name of the Attribute to remove.</p>
      * @param name value to be set
      */
-
+    
     public void setName(final String name);
+    
 
     /**
      * factory method
      * @return instance of ProductTypeRemoveAttributeDefinitionAction
      */
-    public static ProductTypeRemoveAttributeDefinitionAction of() {
+    public static ProductTypeRemoveAttributeDefinitionAction of(){
         return new ProductTypeRemoveAttributeDefinitionActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy ProductTypeRemoveAttributeDefinitionAction
      * @param template instance to be copied
      * @return copy instance
      */
-    public static ProductTypeRemoveAttributeDefinitionAction of(
-            final ProductTypeRemoveAttributeDefinitionAction template) {
+    public static ProductTypeRemoveAttributeDefinitionAction of(final ProductTypeRemoveAttributeDefinitionAction template) {
         ProductTypeRemoveAttributeDefinitionActionImpl instance = new ProductTypeRemoveAttributeDefinitionActionImpl();
         instance.setName(template.getName());
         return instance;
@@ -77,8 +84,7 @@ public interface ProductTypeRemoveAttributeDefinitionAction extends ProductTypeU
      * @return copy instance
      */
     @Nullable
-    public static ProductTypeRemoveAttributeDefinitionAction deepCopy(
-            @Nullable final ProductTypeRemoveAttributeDefinitionAction template) {
+    public static ProductTypeRemoveAttributeDefinitionAction deepCopy(@Nullable final ProductTypeRemoveAttributeDefinitionAction template) {
         if (template == null) {
             return null;
         }
@@ -94,16 +100,16 @@ public interface ProductTypeRemoveAttributeDefinitionAction extends ProductTypeU
     public static ProductTypeRemoveAttributeDefinitionActionBuilder builder() {
         return ProductTypeRemoveAttributeDefinitionActionBuilder.of();
     }
-
+    
     /**
      * create builder for ProductTypeRemoveAttributeDefinitionAction instance
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static ProductTypeRemoveAttributeDefinitionActionBuilder builder(
-            final ProductTypeRemoveAttributeDefinitionAction template) {
+    public static ProductTypeRemoveAttributeDefinitionActionBuilder builder(final ProductTypeRemoveAttributeDefinitionAction template) {
         return ProductTypeRemoveAttributeDefinitionActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -111,11 +117,10 @@ public interface ProductTypeRemoveAttributeDefinitionAction extends ProductTypeU
      * @param helper function to map the object
      * @return mapped value
      */
-    default <T> T withProductTypeRemoveAttributeDefinitionAction(
-            Function<ProductTypeRemoveAttributeDefinitionAction, T> helper) {
+    default <T> T withProductTypeRemoveAttributeDefinitionAction(Function<ProductTypeRemoveAttributeDefinitionAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

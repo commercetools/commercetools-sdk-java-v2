@@ -1,18 +1,20 @@
-
 package com.commercetools.history.models.common;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
+import com.commercetools.history.models.common.Reference;
+import com.commercetools.history.models.common.SyncInfoImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * SyncInfo
@@ -27,11 +29,15 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .syncedAt("{syncedAt}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = SyncInfoImpl.class)
-public interface SyncInfo {
+public interface SyncInfo  {
+
 
     /**
      *
@@ -41,7 +47,6 @@ public interface SyncInfo {
     @Valid
     @JsonProperty("channel")
     public Reference getChannel();
-
     /**
      *  <p>Can be used to reference an external order instance, file etc.</p>
      * @return externalId
@@ -49,7 +54,6 @@ public interface SyncInfo {
     @NotNull
     @JsonProperty("externalId")
     public String getExternalId();
-
     /**
      *
      * @return syncedAt
@@ -62,30 +66,34 @@ public interface SyncInfo {
      * set channel
      * @param channel value to be set
      */
-
+    
     public void setChannel(final Reference channel);
-
+    
+    
     /**
      *  <p>Can be used to reference an external order instance, file etc.</p>
      * @param externalId value to be set
      */
-
+    
     public void setExternalId(final String externalId);
-
+    
+    
     /**
      * set syncedAt
      * @param syncedAt value to be set
      */
-
+    
     public void setSyncedAt(final String syncedAt);
+    
 
     /**
      * factory method
      * @return instance of SyncInfo
      */
-    public static SyncInfo of() {
+    public static SyncInfo of(){
         return new SyncInfoImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy SyncInfo
@@ -124,7 +132,7 @@ public interface SyncInfo {
     public static SyncInfoBuilder builder() {
         return SyncInfoBuilder.of();
     }
-
+    
     /**
      * create builder for SyncInfo instance
      * @param template instance with prefilled values for the builder
@@ -133,6 +141,7 @@ public interface SyncInfo {
     public static SyncInfoBuilder builder(final SyncInfo template) {
         return SyncInfoBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -143,7 +152,7 @@ public interface SyncInfo {
     default <T> T withSyncInfo(Function<SyncInfo, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

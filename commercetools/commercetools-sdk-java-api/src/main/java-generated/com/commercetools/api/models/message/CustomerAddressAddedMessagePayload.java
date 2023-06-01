@@ -1,19 +1,21 @@
-
 package com.commercetools.api.models.message;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
 import com.commercetools.api.models.common.Address;
+import com.commercetools.api.models.message.MessagePayload;
+import com.commercetools.api.models.message.CustomerAddressAddedMessagePayloadImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Generated after a successful Add Address update action.</p>
@@ -26,9 +28,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .address(addressBuilder -> addressBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = CustomerAddressAddedMessagePayloadImpl.class)
 public interface CustomerAddressAddedMessagePayload extends MessagePayload {
 
@@ -50,16 +55,18 @@ public interface CustomerAddressAddedMessagePayload extends MessagePayload {
      *  <p>Address that was added during the Add Address update action.</p>
      * @param address value to be set
      */
-
+    
     public void setAddress(final Address address);
+    
 
     /**
      * factory method
      * @return instance of CustomerAddressAddedMessagePayload
      */
-    public static CustomerAddressAddedMessagePayload of() {
+    public static CustomerAddressAddedMessagePayload of(){
         return new CustomerAddressAddedMessagePayloadImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy CustomerAddressAddedMessagePayload
@@ -78,8 +85,7 @@ public interface CustomerAddressAddedMessagePayload extends MessagePayload {
      * @return copy instance
      */
     @Nullable
-    public static CustomerAddressAddedMessagePayload deepCopy(
-            @Nullable final CustomerAddressAddedMessagePayload template) {
+    public static CustomerAddressAddedMessagePayload deepCopy(@Nullable final CustomerAddressAddedMessagePayload template) {
         if (template == null) {
             return null;
         }
@@ -95,7 +101,7 @@ public interface CustomerAddressAddedMessagePayload extends MessagePayload {
     public static CustomerAddressAddedMessagePayloadBuilder builder() {
         return CustomerAddressAddedMessagePayloadBuilder.of();
     }
-
+    
     /**
      * create builder for CustomerAddressAddedMessagePayload instance
      * @param template instance with prefilled values for the builder
@@ -104,6 +110,7 @@ public interface CustomerAddressAddedMessagePayload extends MessagePayload {
     public static CustomerAddressAddedMessagePayloadBuilder builder(final CustomerAddressAddedMessagePayload template) {
         return CustomerAddressAddedMessagePayloadBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -114,7 +121,7 @@ public interface CustomerAddressAddedMessagePayload extends MessagePayload {
     default <T> T withCustomerAddressAddedMessagePayload(Function<CustomerAddressAddedMessagePayload, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

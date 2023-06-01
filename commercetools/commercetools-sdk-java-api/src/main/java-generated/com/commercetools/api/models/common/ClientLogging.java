@@ -1,18 +1,22 @@
-
 package com.commercetools.api.models.common;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-
+import com.commercetools.api.models.common.CreatedBy;
+import com.commercetools.api.models.common.LastModifiedBy;
 import com.commercetools.api.models.customer.CustomerReference;
+import com.commercetools.api.models.common.ClientLoggingImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>These objects represent information about which API Client created or modified a resource. For more information, see Client Logging.</p>
@@ -24,28 +28,30 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     ClientLogging clientLogging = ClientLogging.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = ClientLoggingImpl.class)
-public interface ClientLogging {
+public interface ClientLogging  {
+
 
     /**
      *  <p><code>id</code> of the APIClient which created the resource.</p>
      * @return clientId
      */
-
+    
     @JsonProperty("clientId")
     public String getClientId();
-
     /**
      *  <p>External user ID provided by <code>X-External-User-ID</code> HTTP Header.</p>
      * @return externalUserId
      */
-
+    
     @JsonProperty("externalUserId")
     public String getExternalUserId();
-
     /**
      *  <p>Indicates the Customer who modified the resource using a token from the password flow.</p>
      * @return customer
@@ -53,12 +59,11 @@ public interface ClientLogging {
     @Valid
     @JsonProperty("customer")
     public CustomerReference getCustomer();
-
     /**
      *  <p>Indicates that the resource was modified during an anonymous session with the logged ID.</p>
      * @return anonymousId
      */
-
+    
     @JsonProperty("anonymousId")
     public String getAnonymousId();
 
@@ -66,37 +71,42 @@ public interface ClientLogging {
      *  <p><code>id</code> of the APIClient which created the resource.</p>
      * @param clientId value to be set
      */
-
+    
     public void setClientId(final String clientId);
-
+    
+    
     /**
      *  <p>External user ID provided by <code>X-External-User-ID</code> HTTP Header.</p>
      * @param externalUserId value to be set
      */
-
+    
     public void setExternalUserId(final String externalUserId);
-
+    
+    
     /**
      *  <p>Indicates the Customer who modified the resource using a token from the password flow.</p>
      * @param customer value to be set
      */
-
+    
     public void setCustomer(final CustomerReference customer);
-
+    
+    
     /**
      *  <p>Indicates that the resource was modified during an anonymous session with the logged ID.</p>
      * @param anonymousId value to be set
      */
-
+    
     public void setAnonymousId(final String anonymousId);
+    
 
     /**
      * factory method
      * @return instance of ClientLogging
      */
-    public static ClientLogging of() {
+    public static ClientLogging of(){
         return new ClientLoggingImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy ClientLogging
@@ -123,12 +133,10 @@ public interface ClientLogging {
             return null;
         }
         if (template instanceof com.commercetools.api.models.common.CreatedBy) {
-            return com.commercetools.api.models.common.CreatedBy
-                    .deepCopy((com.commercetools.api.models.common.CreatedBy) template);
+            return com.commercetools.api.models.common.CreatedBy.deepCopy((com.commercetools.api.models.common.CreatedBy)template);
         }
         if (template instanceof com.commercetools.api.models.common.LastModifiedBy) {
-            return com.commercetools.api.models.common.LastModifiedBy
-                    .deepCopy((com.commercetools.api.models.common.LastModifiedBy) template);
+            return com.commercetools.api.models.common.LastModifiedBy.deepCopy((com.commercetools.api.models.common.LastModifiedBy)template);
         }
         ClientLoggingImpl instance = new ClientLoggingImpl();
         instance.setClientId(template.getClientId());
@@ -145,7 +153,7 @@ public interface ClientLogging {
     public static ClientLoggingBuilder builder() {
         return ClientLoggingBuilder.of();
     }
-
+    
     /**
      * create builder for ClientLogging instance
      * @param template instance with prefilled values for the builder
@@ -154,6 +162,7 @@ public interface ClientLogging {
     public static ClientLoggingBuilder builder(final ClientLogging template) {
         return ClientLoggingBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -164,7 +173,7 @@ public interface ClientLogging {
     default <T> T withClientLogging(Function<ClientLogging, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

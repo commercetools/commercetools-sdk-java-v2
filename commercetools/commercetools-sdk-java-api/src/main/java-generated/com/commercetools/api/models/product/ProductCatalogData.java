@@ -1,18 +1,20 @@
-
 package com.commercetools.api.models.product;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
+import com.commercetools.api.models.product.ProductData;
+import com.commercetools.api.models.product.ProductCatalogDataImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Contains the <code>current</code> and <code>staged</code> ProductData.</p>
@@ -28,11 +30,15 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .hasStagedChanges(true)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = ProductCatalogDataImpl.class)
 public interface ProductCatalogData extends ProductCatalogDataMixin {
+
 
     /**
      *  <p><code>true</code> if the Product is published.</p>
@@ -41,7 +47,6 @@ public interface ProductCatalogData extends ProductCatalogDataMixin {
     @NotNull
     @JsonProperty("published")
     public Boolean getPublished();
-
     /**
      *  <p>Current (published) data of the Product.</p>
      * @return current
@@ -50,7 +55,6 @@ public interface ProductCatalogData extends ProductCatalogDataMixin {
     @Valid
     @JsonProperty("current")
     public ProductData getCurrent();
-
     /**
      *  <p>Staged (unpublished) data of the Product.</p>
      * @return staged
@@ -59,7 +63,6 @@ public interface ProductCatalogData extends ProductCatalogDataMixin {
     @Valid
     @JsonProperty("staged")
     public ProductData getStaged();
-
     /**
      *  <p><code>true</code> if the <code>staged</code> data is different from the <code>current</code> data.</p>
      * @return hasStagedChanges
@@ -72,37 +75,42 @@ public interface ProductCatalogData extends ProductCatalogDataMixin {
      *  <p><code>true</code> if the Product is published.</p>
      * @param published value to be set
      */
-
+    
     public void setPublished(final Boolean published);
-
+    
+    
     /**
      *  <p>Current (published) data of the Product.</p>
      * @param current value to be set
      */
-
+    
     public void setCurrent(final ProductData current);
-
+    
+    
     /**
      *  <p>Staged (unpublished) data of the Product.</p>
      * @param staged value to be set
      */
-
+    
     public void setStaged(final ProductData staged);
-
+    
+    
     /**
      *  <p><code>true</code> if the <code>staged</code> data is different from the <code>current</code> data.</p>
      * @param hasStagedChanges value to be set
      */
-
+    
     public void setHasStagedChanges(final Boolean hasStagedChanges);
+    
 
     /**
      * factory method
      * @return instance of ProductCatalogData
      */
-    public static ProductCatalogData of() {
+    public static ProductCatalogData of(){
         return new ProductCatalogDataImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy ProductCatalogData
@@ -143,7 +151,7 @@ public interface ProductCatalogData extends ProductCatalogDataMixin {
     public static ProductCatalogDataBuilder builder() {
         return ProductCatalogDataBuilder.of();
     }
-
+    
     /**
      * create builder for ProductCatalogData instance
      * @param template instance with prefilled values for the builder
@@ -152,6 +160,7 @@ public interface ProductCatalogData extends ProductCatalogDataMixin {
     public static ProductCatalogDataBuilder builder(final ProductCatalogData template) {
         return ProductCatalogDataBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -162,7 +171,7 @@ public interface ProductCatalogData extends ProductCatalogDataMixin {
     default <T> T withProductCatalogData(Function<ProductCatalogData, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

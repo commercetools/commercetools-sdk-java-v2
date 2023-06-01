@@ -1,37 +1,38 @@
-
 package com.commercetools.api.models.project;
-
-import java.util.Arrays;
-import java.util.Optional;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-
+import java.lang.String;
+import java.util.Arrays;
+import java.util.Optional;
 import io.vrap.rmf.base.client.JsonEnum;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
  *  <p>Status of resource indexing.</p>
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public interface SearchIndexingConfigurationStatus extends JsonEnum {
 
     /**
     	<p>Indicates that search and suggest endpoints for the specified resource type are active.</p>
-
+    	
     */
     SearchIndexingConfigurationStatus ACTIVATED = SearchIndexingConfigurationStatusEnum.ACTIVATED;
     /**
     	<p>Indicates that search and suggest endpoints for the specified resource type cannot be used.</p>
-
+    	
     */
     SearchIndexingConfigurationStatus DEACTIVATED = SearchIndexingConfigurationStatusEnum.DEACTIVATED;
     /**
     	<p>Indicates that search and suggest endpoints can <em>temporarily</em> not be used because the search index is being re-built.</p>
-
+    	
     */
     SearchIndexingConfigurationStatus INDEXING = SearchIndexingConfigurationStatusEnum.INDEXING;
-
+    
     /**
      * possible values of SearchIndexingConfigurationStatus
      */
@@ -40,12 +41,12 @@ public interface SearchIndexingConfigurationStatus extends JsonEnum {
          * Activated
          */
         ACTIVATED("Activated"),
-
+        
         /**
          * Deactivated
          */
         DEACTIVATED("Deactivated"),
-
+        
         /**
          * Indexing
          */
@@ -102,7 +103,7 @@ public interface SearchIndexingConfigurationStatus extends JsonEnum {
             public String name() {
                 return value.toUpperCase();
             }
-
+            
             public String toString() {
                 return value;
             }
@@ -117,7 +118,7 @@ public interface SearchIndexingConfigurationStatus extends JsonEnum {
     public static Optional<SearchIndexingConfigurationStatus> findEnumViaJsonName(String jsonName) {
         return Arrays.stream(values()).filter(t -> t.getJsonName().equals(jsonName)).findFirst();
     }
-
+    
     /**
      * possible enum values
      * @return array of possible enum values
@@ -125,5 +126,5 @@ public interface SearchIndexingConfigurationStatus extends JsonEnum {
     public static SearchIndexingConfigurationStatus[] values() {
         return SearchIndexingConfigurationStatusEnum.values();
     }
-
+    
 }

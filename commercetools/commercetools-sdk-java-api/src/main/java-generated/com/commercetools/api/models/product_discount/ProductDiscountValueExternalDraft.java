@@ -1,16 +1,20 @@
-
 package com.commercetools.api.models.product_discount;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
+import com.commercetools.api.models.product_discount.ProductDiscountValueDraft;
+import com.commercetools.api.models.product_discount.ProductDiscountValueExternalDraftImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Discounts the Product Price by allowing the client to explicitly set a discounted value. Use this when setting discounts using an external service.</p>
@@ -22,25 +26,30 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     ProductDiscountValueExternalDraft productDiscountValueExternalDraft = ProductDiscountValueExternalDraft.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = ProductDiscountValueExternalDraftImpl.class)
-public interface ProductDiscountValueExternalDraft
-        extends ProductDiscountValueDraft, io.vrap.rmf.base.client.Draft<ProductDiscountValueExternalDraft> {
+public interface ProductDiscountValueExternalDraft extends ProductDiscountValueDraft, io.vrap.rmf.base.client.Draft<ProductDiscountValueExternalDraft> {
 
     /**
      * discriminator value for ProductDiscountValueExternalDraft
      */
     String EXTERNAL = "external";
 
+
+
     /**
      * factory method
      * @return instance of ProductDiscountValueExternalDraft
      */
-    public static ProductDiscountValueExternalDraft of() {
+    public static ProductDiscountValueExternalDraft of(){
         return new ProductDiscountValueExternalDraftImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy ProductDiscountValueExternalDraft
@@ -58,8 +67,7 @@ public interface ProductDiscountValueExternalDraft
      * @return copy instance
      */
     @Nullable
-    public static ProductDiscountValueExternalDraft deepCopy(
-            @Nullable final ProductDiscountValueExternalDraft template) {
+    public static ProductDiscountValueExternalDraft deepCopy(@Nullable final ProductDiscountValueExternalDraft template) {
         if (template == null) {
             return null;
         }
@@ -74,7 +82,7 @@ public interface ProductDiscountValueExternalDraft
     public static ProductDiscountValueExternalDraftBuilder builder() {
         return ProductDiscountValueExternalDraftBuilder.of();
     }
-
+    
     /**
      * create builder for ProductDiscountValueExternalDraft instance
      * @param template instance with prefilled values for the builder
@@ -83,6 +91,7 @@ public interface ProductDiscountValueExternalDraft
     public static ProductDiscountValueExternalDraftBuilder builder(final ProductDiscountValueExternalDraft template) {
         return ProductDiscountValueExternalDraftBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -93,7 +102,7 @@ public interface ProductDiscountValueExternalDraft
     default <T> T withProductDiscountValueExternalDraft(Function<ProductDiscountValueExternalDraft, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

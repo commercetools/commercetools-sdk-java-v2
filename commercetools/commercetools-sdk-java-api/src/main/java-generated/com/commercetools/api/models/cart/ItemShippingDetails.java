@@ -1,19 +1,20 @@
-
 package com.commercetools.api.models.cart;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-import java.util.stream.Collectors;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
+import com.commercetools.api.models.cart.ItemShippingTarget;
+import com.commercetools.api.models.cart.ItemShippingDetailsImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * ItemShippingDetails
@@ -27,11 +28,15 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .valid(true)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = ItemShippingDetailsImpl.class)
-public interface ItemShippingDetails {
+public interface ItemShippingDetails  {
+
 
     /**
      *  <p>Holds information on the quantity of Line Items or Custom Line Items and the address it is shipped.</p>
@@ -41,7 +46,6 @@ public interface ItemShippingDetails {
     @Valid
     @JsonProperty("targets")
     public List<ItemShippingTarget> getTargets();
-
     /**
      *  <ul>
      *   <li><code>true</code> if the quantity of Line Items or Custom Line Items is equal to the sum of sub-quantities defined in <code>targets</code>.</li>
@@ -57,17 +61,16 @@ public interface ItemShippingDetails {
      *  <p>Holds information on the quantity of Line Items or Custom Line Items and the address it is shipped.</p>
      * @param targets values to be set
      */
-
+    
     @JsonIgnore
-    public void setTargets(final ItemShippingTarget... targets);
-
+    public void setTargets(final ItemShippingTarget ...targets);
     /**
      *  <p>Holds information on the quantity of Line Items or Custom Line Items and the address it is shipped.</p>
      * @param targets values to be set
      */
-
+    
     public void setTargets(final List<ItemShippingTarget> targets);
-
+    
     /**
      *  <ul>
      *   <li><code>true</code> if the quantity of Line Items or Custom Line Items is equal to the sum of sub-quantities defined in <code>targets</code>.</li>
@@ -75,16 +78,18 @@ public interface ItemShippingDetails {
      *  </ul>
      * @param valid value to be set
      */
-
+    
     public void setValid(final Boolean valid);
+    
 
     /**
      * factory method
      * @return instance of ItemShippingDetails
      */
-    public static ItemShippingDetails of() {
+    public static ItemShippingDetails of(){
         return new ItemShippingDetailsImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy ItemShippingDetails
@@ -110,9 +115,7 @@ public interface ItemShippingDetails {
         }
         ItemShippingDetailsImpl instance = new ItemShippingDetailsImpl();
         instance.setTargets(Optional.ofNullable(template.getTargets())
-                .map(t -> t.stream()
-                        .map(com.commercetools.api.models.cart.ItemShippingTarget::deepCopy)
-                        .collect(Collectors.toList()))
+                .map(t -> t.stream().map(com.commercetools.api.models.cart.ItemShippingTarget::deepCopy).collect(Collectors.toList()))
                 .orElse(null));
         instance.setValid(template.getValid());
         return instance;
@@ -125,7 +128,7 @@ public interface ItemShippingDetails {
     public static ItemShippingDetailsBuilder builder() {
         return ItemShippingDetailsBuilder.of();
     }
-
+    
     /**
      * create builder for ItemShippingDetails instance
      * @param template instance with prefilled values for the builder
@@ -134,6 +137,7 @@ public interface ItemShippingDetails {
     public static ItemShippingDetailsBuilder builder(final ItemShippingDetails template) {
         return ItemShippingDetailsBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -144,7 +148,7 @@ public interface ItemShippingDetails {
     default <T> T withItemShippingDetails(Function<ItemShippingDetails, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

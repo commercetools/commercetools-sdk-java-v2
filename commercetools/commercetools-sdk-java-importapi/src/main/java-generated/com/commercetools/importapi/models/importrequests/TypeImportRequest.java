@@ -1,20 +1,22 @@
-
 package com.commercetools.importapi.models.importrequests;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-import java.util.stream.Collectors;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
+import com.commercetools.importapi.models.common.ImportResourceType;
+import com.commercetools.importapi.models.importrequests.ImportRequest;
 import com.commercetools.importapi.models.types.TypeImport;
+import com.commercetools.importapi.models.importrequests.TypeImportRequestImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>The request body to import Types. Contains data for Types to be created or updated in a Project.</p>
@@ -27,9 +29,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .plusResources(resourcesBuilder -> resourcesBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = TypeImportRequestImpl.class)
 public interface TypeImportRequest extends ImportRequest {
 
@@ -51,24 +56,24 @@ public interface TypeImportRequest extends ImportRequest {
      *  <p>The type import resources of this request.</p>
      * @param resources values to be set
      */
-
+    
     @JsonIgnore
-    public void setResources(final TypeImport... resources);
-
+    public void setResources(final TypeImport ...resources);
     /**
      *  <p>The type import resources of this request.</p>
      * @param resources values to be set
      */
-
+    
     public void setResources(final List<TypeImport> resources);
 
     /**
      * factory method
      * @return instance of TypeImportRequest
      */
-    public static TypeImportRequest of() {
+    public static TypeImportRequest of(){
         return new TypeImportRequestImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy TypeImportRequest
@@ -93,9 +98,7 @@ public interface TypeImportRequest extends ImportRequest {
         }
         TypeImportRequestImpl instance = new TypeImportRequestImpl();
         instance.setResources(Optional.ofNullable(template.getResources())
-                .map(t -> t.stream()
-                        .map(com.commercetools.importapi.models.types.TypeImport::deepCopy)
-                        .collect(Collectors.toList()))
+                .map(t -> t.stream().map(com.commercetools.importapi.models.types.TypeImport::deepCopy).collect(Collectors.toList()))
                 .orElse(null));
         return instance;
     }
@@ -107,7 +110,7 @@ public interface TypeImportRequest extends ImportRequest {
     public static TypeImportRequestBuilder builder() {
         return TypeImportRequestBuilder.of();
     }
-
+    
     /**
      * create builder for TypeImportRequest instance
      * @param template instance with prefilled values for the builder
@@ -116,6 +119,7 @@ public interface TypeImportRequest extends ImportRequest {
     public static TypeImportRequestBuilder builder(final TypeImportRequest template) {
         return TypeImportRequestBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -126,7 +130,7 @@ public interface TypeImportRequest extends ImportRequest {
     default <T> T withTypeImportRequest(Function<TypeImportRequest, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

@@ -1,47 +1,56 @@
-
 package com.commercetools.api.models.quote;
 
-import java.time.*;
-import java.util.*;
-
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
-
-import io.vrap.rmf.base.client.ModelBase;
+import com.commercetools.api.models.staged_quote.StagedQuoteResourceIdentifier;
+import com.commercetools.api.models.state.StateReference;
+import com.commercetools.api.models.type.CustomFieldsDraft;
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.ModelBase;
+import javax.validation.Valid;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.annotation.*;
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
  * QuoteDraft
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class QuoteDraftImpl implements QuoteDraft, ModelBase {
 
+    
     private String key;
-
+    
+    
     private com.commercetools.api.models.staged_quote.StagedQuoteResourceIdentifier stagedQuote;
-
+    
+    
     private Long stagedQuoteVersion;
-
+    
+    
     private Boolean stagedQuoteStateToSent;
-
+    
+    
     private com.commercetools.api.models.state.StateReference state;
-
+    
+    
     private com.commercetools.api.models.type.CustomFieldsDraft custom;
 
     /**
      * create instance with all properties
      */
     @JsonCreator
-    QuoteDraftImpl(@JsonProperty("key") final String key,
-            @JsonProperty("stagedQuote") final com.commercetools.api.models.staged_quote.StagedQuoteResourceIdentifier stagedQuote,
-            @JsonProperty("stagedQuoteVersion") final Long stagedQuoteVersion,
-            @JsonProperty("stagedQuoteStateToSent") final Boolean stagedQuoteStateToSent,
-            @JsonProperty("state") final com.commercetools.api.models.state.StateReference state,
-            @JsonProperty("custom") final com.commercetools.api.models.type.CustomFieldsDraft custom) {
+    QuoteDraftImpl(@JsonProperty("key") final String key, @JsonProperty("stagedQuote") final com.commercetools.api.models.staged_quote.StagedQuoteResourceIdentifier stagedQuote, @JsonProperty("stagedQuoteVersion") final Long stagedQuoteVersion, @JsonProperty("stagedQuoteStateToSent") final Boolean stagedQuoteStateToSent, @JsonProperty("state") final com.commercetools.api.models.state.StateReference state, @JsonProperty("custom") final com.commercetools.api.models.type.CustomFieldsDraft custom) {
         this.key = key;
         this.stagedQuote = stagedQuote;
         this.stagedQuoteVersion = stagedQuoteVersion;
@@ -49,7 +58,6 @@ public class QuoteDraftImpl implements QuoteDraft, ModelBase {
         this.state = state;
         this.custom = custom;
     }
-
     /**
      * create empty instance
      */
@@ -59,43 +67,43 @@ public class QuoteDraftImpl implements QuoteDraft, ModelBase {
     /**
      *  <p>User-defined unique identifier for the Quote.</p>
      */
-
-    public String getKey() {
+    
+    public String getKey(){
         return this.key;
     }
-
+    
     /**
      *  <p>StagedQuote from which the Quote is created.</p>
      */
-
-    public com.commercetools.api.models.staged_quote.StagedQuoteResourceIdentifier getStagedQuote() {
+    
+    public com.commercetools.api.models.staged_quote.StagedQuoteResourceIdentifier getStagedQuote(){
         return this.stagedQuote;
     }
-
+    
     /**
      *  <p>Current version of the StagedQuote.</p>
      */
-
-    public Long getStagedQuoteVersion() {
+    
+    public Long getStagedQuoteVersion(){
         return this.stagedQuoteVersion;
     }
-
+    
     /**
      *  <p>If <code>true</code>, the <code>stagedQuoteState</code> of the referenced StagedQuote will be set to <code>Sent</code>.</p>
      */
-
-    public Boolean getStagedQuoteStateToSent() {
+    
+    public Boolean getStagedQuoteStateToSent(){
         return this.stagedQuoteStateToSent;
     }
-
+    
     /**
      *  <p>State of the Quote. This reference can point to a State in a custom workflow.</p>
      */
-
-    public com.commercetools.api.models.state.StateReference getState() {
+    
+    public com.commercetools.api.models.state.StateReference getState(){
         return this.state;
     }
-
+    
     /**
      *  <p>Custom Fields to be added to the Quote.</p>
      *  <ul>
@@ -103,47 +111,51 @@ public class QuoteDraftImpl implements QuoteDraft, ModelBase {
      *   <li>If empty, the Custom Fields on the referenced StagedQuote are added to the Quote automatically.</li>
      *  </ul>
      */
-
-    public com.commercetools.api.models.type.CustomFieldsDraft getCustom() {
+    
+    public com.commercetools.api.models.type.CustomFieldsDraft getCustom(){
         return this.custom;
     }
 
-    public void setKey(final String key) {
+    
+    public void setKey(final String key){
         this.key = key;
     }
-
-    public void setStagedQuote(
-            final com.commercetools.api.models.staged_quote.StagedQuoteResourceIdentifier stagedQuote) {
+    
+    
+    public void setStagedQuote(final com.commercetools.api.models.staged_quote.StagedQuoteResourceIdentifier stagedQuote){
         this.stagedQuote = stagedQuote;
     }
-
-    public void setStagedQuoteVersion(final Long stagedQuoteVersion) {
+    
+    
+    public void setStagedQuoteVersion(final Long stagedQuoteVersion){
         this.stagedQuoteVersion = stagedQuoteVersion;
     }
-
-    public void setStagedQuoteStateToSent(final Boolean stagedQuoteStateToSent) {
+    
+    
+    public void setStagedQuoteStateToSent(final Boolean stagedQuoteStateToSent){
         this.stagedQuoteStateToSent = stagedQuoteStateToSent;
     }
-
-    public void setState(final com.commercetools.api.models.state.StateReference state) {
+    
+    
+    public void setState(final com.commercetools.api.models.state.StateReference state){
         this.state = state;
     }
-
-    public void setCustom(final com.commercetools.api.models.type.CustomFieldsDraft custom) {
+    
+    
+    public void setCustom(final com.commercetools.api.models.type.CustomFieldsDraft custom){
         this.custom = custom;
     }
 
     @Override
     public boolean equals(Object o) {
-        if (this == o)
-            return true;
-
-        if (o == null || getClass() != o.getClass())
-            return false;
-
+        if (this == o) return true;
+    
+        if (o == null || getClass() != o.getClass()) return false;
+    
         QuoteDraftImpl that = (QuoteDraftImpl) o;
-
-        return new EqualsBuilder().append(key, that.key)
+    
+        return new EqualsBuilder()
+                .append(key, that.key)
                 .append(stagedQuote, that.stagedQuote)
                 .append(stagedQuoteVersion, that.stagedQuoteVersion)
                 .append(stagedQuoteStateToSent, that.stagedQuoteStateToSent)
@@ -151,16 +163,17 @@ public class QuoteDraftImpl implements QuoteDraft, ModelBase {
                 .append(custom, that.custom)
                 .isEquals();
     }
-
+    
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(key)
-                .append(stagedQuote)
-                .append(stagedQuoteVersion)
-                .append(stagedQuoteStateToSent)
-                .append(state)
-                .append(custom)
-                .toHashCode();
+        return new HashCodeBuilder(17, 37)
+            .append(key)
+            .append(stagedQuote)
+            .append(stagedQuoteVersion)
+            .append(stagedQuoteStateToSent)
+            .append(state)
+            .append(custom)
+            .toHashCode();
     }
 
 }

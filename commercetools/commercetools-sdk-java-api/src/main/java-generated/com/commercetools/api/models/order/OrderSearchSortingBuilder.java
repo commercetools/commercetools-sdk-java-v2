@@ -1,11 +1,13 @@
-
 package com.commercetools.api.models.order;
 
+import com.commercetools.api.models.order.OrderSearchQueryExpression;
+import com.commercetools.api.models.order.OrderSearchSortMode;
+import com.commercetools.api.models.order.OrderSearchSortOrder;
+import com.commercetools.api.models.order.OrderSearchSorting;
+import javax.annotation.Nullable;
 import java.util.*;
 import java.util.function.Function;
-
-import javax.annotation.Nullable;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -19,152 +21,173 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .field("{field}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class OrderSearchSortingBuilder implements Builder<OrderSearchSorting> {
 
+    
+    
     private String field;
-
+    
+    
     @Nullable
     private String language;
-
+    
+    
     @Nullable
     private com.commercetools.api.models.order.OrderSearchSortOrder order;
-
+    
+    
     @Nullable
     private com.commercetools.api.models.order.OrderSearchSortMode mode;
-
+    
+    
     @Nullable
     private com.commercetools.api.models.order.OrderSearchQueryExpression filter;
 
+    
     /**
      * set the value to the field
      * @param field value to be set
      * @return Builder
      */
-
-    public OrderSearchSortingBuilder field(final String field) {
+    
+    public OrderSearchSortingBuilder field( final String field) {
         this.field = field;
         return this;
     }
-
+    
+    
+    
+    
     /**
      * set the value to the language
      * @param language value to be set
      * @return Builder
      */
-
+    
     public OrderSearchSortingBuilder language(@Nullable final String language) {
         this.language = language;
         return this;
     }
-
+    
+    
+    
+    
     /**
      * set the value to the order
      * @param order value to be set
      * @return Builder
      */
-
-    public OrderSearchSortingBuilder order(
-            @Nullable final com.commercetools.api.models.order.OrderSearchSortOrder order) {
+    
+    public OrderSearchSortingBuilder order(@Nullable final com.commercetools.api.models.order.OrderSearchSortOrder order) {
         this.order = order;
         return this;
     }
-
+    
+    
+    
+    
     /**
      * set the value to the mode
      * @param mode value to be set
      * @return Builder
      */
-
+    
     public OrderSearchSortingBuilder mode(@Nullable final com.commercetools.api.models.order.OrderSearchSortMode mode) {
         this.mode = mode;
         return this;
     }
-
+    
+    
+    
+    
     /**
      * set the value to the filter using the builder function
      * @param builder function to build the filter value
      * @return Builder
      */
-
-    public OrderSearchSortingBuilder filter(
-            Function<com.commercetools.api.models.order.OrderSearchQueryExpressionBuilder, com.commercetools.api.models.order.OrderSearchQueryExpressionBuilder> builder) {
+    
+    public OrderSearchSortingBuilder filter(Function<com.commercetools.api.models.order.OrderSearchQueryExpressionBuilder, com.commercetools.api.models.order.OrderSearchQueryExpressionBuilder> builder) {
         this.filter = builder.apply(com.commercetools.api.models.order.OrderSearchQueryExpressionBuilder.of()).build();
         return this;
     }
-
+    
     /**
      * set the value to the filter using the builder function
      * @param builder function to build the filter value
      * @return Builder
      */
-
-    public OrderSearchSortingBuilder withFilter(
-            Function<com.commercetools.api.models.order.OrderSearchQueryExpressionBuilder, com.commercetools.api.models.order.OrderSearchQueryExpression> builder) {
+    
+    public OrderSearchSortingBuilder withFilter(Function<com.commercetools.api.models.order.OrderSearchQueryExpressionBuilder, com.commercetools.api.models.order.OrderSearchQueryExpression> builder) {
         this.filter = builder.apply(com.commercetools.api.models.order.OrderSearchQueryExpressionBuilder.of());
         return this;
     }
-
+                    
     /**
      * set the value to the filter
      * @param filter value to be set
      * @return Builder
      */
-
-    public OrderSearchSortingBuilder filter(
-            @Nullable final com.commercetools.api.models.order.OrderSearchQueryExpression filter) {
+    
+    public OrderSearchSortingBuilder filter(@Nullable final com.commercetools.api.models.order.OrderSearchQueryExpression filter) {
         this.filter = filter;
         return this;
     }
+    
+    
 
     /**
      * value of field}
      * @return field
      */
-
-    public String getField() {
+    
+    
+    public String getField(){
         return this.field;
     }
-
+    
     /**
      * value of language}
      * @return language
      */
-
+    
     @Nullable
-    public String getLanguage() {
+    public String getLanguage(){
         return this.language;
     }
-
+    
     /**
      * value of order}
      * @return order
      */
-
+    
     @Nullable
-    public com.commercetools.api.models.order.OrderSearchSortOrder getOrder() {
+    public com.commercetools.api.models.order.OrderSearchSortOrder getOrder(){
         return this.order;
     }
-
+    
     /**
      * value of mode}
      * @return mode
      */
-
+    
     @Nullable
-    public com.commercetools.api.models.order.OrderSearchSortMode getMode() {
+    public com.commercetools.api.models.order.OrderSearchSortMode getMode(){
         return this.mode;
     }
-
+    
     /**
      * value of filter}
      * @return filter
      */
-
+    
     @Nullable
-    public com.commercetools.api.models.order.OrderSearchQueryExpression getFilter() {
+    public com.commercetools.api.models.order.OrderSearchQueryExpression getFilter(){
         return this.filter;
     }
 
@@ -176,7 +199,7 @@ public class OrderSearchSortingBuilder implements Builder<OrderSearchSorting> {
         Objects.requireNonNull(field, OrderSearchSorting.class + ": field is missing");
         return new OrderSearchSortingImpl(field, language, order, mode, filter);
     }
-
+    
     /**
      * builds OrderSearchSorting without checking for non-null required values
      * @return OrderSearchSorting
@@ -187,7 +210,7 @@ public class OrderSearchSortingBuilder implements Builder<OrderSearchSorting> {
 
     /**
      * factory method for an instance of OrderSearchSortingBuilder
-     * @return builder
+     * @return builder 
      */
     public static OrderSearchSortingBuilder of() {
         return new OrderSearchSortingBuilder();

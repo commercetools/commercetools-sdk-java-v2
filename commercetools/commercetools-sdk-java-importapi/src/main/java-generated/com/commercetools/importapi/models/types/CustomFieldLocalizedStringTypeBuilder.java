@@ -1,8 +1,11 @@
-
 package com.commercetools.importapi.models.types;
 
+import com.commercetools.importapi.models.types.FieldType;
+import com.commercetools.importapi.models.types.CustomFieldLocalizedStringType;
+import javax.annotation.Nullable;
 import java.util.*;
-
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -15,10 +18,16 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     CustomFieldLocalizedStringType customFieldLocalizedStringType = CustomFieldLocalizedStringType.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class CustomFieldLocalizedStringTypeBuilder implements Builder<CustomFieldLocalizedStringType> {
+
+
+
 
     /**
      * builds CustomFieldLocalizedStringType with checking for non-null required values
@@ -27,7 +36,7 @@ public class CustomFieldLocalizedStringTypeBuilder implements Builder<CustomFiel
     public CustomFieldLocalizedStringType build() {
         return new CustomFieldLocalizedStringTypeImpl();
     }
-
+    
     /**
      * builds CustomFieldLocalizedStringType without checking for non-null required values
      * @return CustomFieldLocalizedStringType
@@ -38,7 +47,7 @@ public class CustomFieldLocalizedStringTypeBuilder implements Builder<CustomFiel
 
     /**
      * factory method for an instance of CustomFieldLocalizedStringTypeBuilder
-     * @return builder
+     * @return builder 
      */
     public static CustomFieldLocalizedStringTypeBuilder of() {
         return new CustomFieldLocalizedStringTypeBuilder();

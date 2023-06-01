@@ -1,8 +1,11 @@
-
 package com.commercetools.api.models.order_edit;
 
-import java.util.*;
 
+import com.commercetools.api.models.order_edit.OrderEditApply;
+import javax.annotation.Nullable;
+import java.util.*;
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -17,52 +20,67 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .resourceVersion(0.3)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class OrderEditApplyBuilder implements Builder<OrderEditApply> {
 
+    
+    
     private Long editVersion;
-
+    
+    
+    
     private Long resourceVersion;
 
+    
     /**
      * set the value to the editVersion
      * @param editVersion value to be set
      * @return Builder
      */
-
-    public OrderEditApplyBuilder editVersion(final Long editVersion) {
+    
+    public OrderEditApplyBuilder editVersion( final Long editVersion) {
         this.editVersion = editVersion;
         return this;
     }
-
+    
+    
+    
+    
     /**
      * set the value to the resourceVersion
      * @param resourceVersion value to be set
      * @return Builder
      */
-
-    public OrderEditApplyBuilder resourceVersion(final Long resourceVersion) {
+    
+    public OrderEditApplyBuilder resourceVersion( final Long resourceVersion) {
         this.resourceVersion = resourceVersion;
         return this;
     }
+    
+    
 
     /**
      * value of editVersion}
      * @return editVersion
      */
-
-    public Long getEditVersion() {
+    
+    
+    public Long getEditVersion(){
         return this.editVersion;
     }
-
+    
     /**
      * value of resourceVersion}
      * @return resourceVersion
      */
-
-    public Long getResourceVersion() {
+    
+    
+    public Long getResourceVersion(){
         return this.resourceVersion;
     }
 
@@ -75,7 +93,7 @@ public class OrderEditApplyBuilder implements Builder<OrderEditApply> {
         Objects.requireNonNull(resourceVersion, OrderEditApply.class + ": resourceVersion is missing");
         return new OrderEditApplyImpl(editVersion, resourceVersion);
     }
-
+    
     /**
      * builds OrderEditApply without checking for non-null required values
      * @return OrderEditApply
@@ -86,7 +104,7 @@ public class OrderEditApplyBuilder implements Builder<OrderEditApply> {
 
     /**
      * factory method for an instance of OrderEditApplyBuilder
-     * @return builder
+     * @return builder 
      */
     public static OrderEditApplyBuilder of() {
         return new OrderEditApplyBuilder();

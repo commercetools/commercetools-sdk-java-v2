@@ -1,17 +1,20 @@
-
 package com.commercetools.api.models.subscription;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
 
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
+import com.commercetools.api.models.subscription.PayloadNotIncludedImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * PayloadNotIncluded
@@ -25,11 +28,15 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .payloadType("{payloadType}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = PayloadNotIncludedImpl.class)
-public interface PayloadNotIncluded {
+public interface PayloadNotIncluded  {
+
 
     /**
      *  <p>Reason the payload is not included. For example, the payload is too large, or its content is not supported by the Subscription destination.</p>
@@ -38,7 +45,6 @@ public interface PayloadNotIncluded {
     @NotNull
     @JsonProperty("reason")
     public String getReason();
-
     /**
      *  <p>Value of the <code>type</code> field in the original payload.</p>
      * @return payloadType
@@ -51,23 +57,26 @@ public interface PayloadNotIncluded {
      *  <p>Reason the payload is not included. For example, the payload is too large, or its content is not supported by the Subscription destination.</p>
      * @param reason value to be set
      */
-
+    
     public void setReason(final String reason);
-
+    
+    
     /**
      *  <p>Value of the <code>type</code> field in the original payload.</p>
      * @param payloadType value to be set
      */
-
+    
     public void setPayloadType(final String payloadType);
+    
 
     /**
      * factory method
      * @return instance of PayloadNotIncluded
      */
-    public static PayloadNotIncluded of() {
+    public static PayloadNotIncluded of(){
         return new PayloadNotIncludedImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy PayloadNotIncluded
@@ -104,7 +113,7 @@ public interface PayloadNotIncluded {
     public static PayloadNotIncludedBuilder builder() {
         return PayloadNotIncludedBuilder.of();
     }
-
+    
     /**
      * create builder for PayloadNotIncluded instance
      * @param template instance with prefilled values for the builder
@@ -113,6 +122,7 @@ public interface PayloadNotIncluded {
     public static PayloadNotIncludedBuilder builder(final PayloadNotIncluded template) {
         return PayloadNotIncludedBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -123,7 +133,7 @@ public interface PayloadNotIncluded {
     default <T> T withPayloadNotIncluded(Function<PayloadNotIncluded, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

@@ -1,19 +1,21 @@
-
 package com.commercetools.api.models.customer;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
+import com.commercetools.api.models.customer.CustomerUpdateAction;
 import com.commercetools.api.models.store.StoreResourceIdentifier;
+import com.commercetools.api.models.customer.CustomerRemoveStoreActionImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Removes the association to a Store from the Customer. If no more Stores are assigned, the Customer becomes a global Customer.</p>
@@ -26,9 +28,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .store(storeBuilder -> storeBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = CustomerRemoveStoreActionImpl.class)
 public interface CustomerRemoveStoreAction extends CustomerUpdateAction {
 
@@ -50,16 +55,18 @@ public interface CustomerRemoveStoreAction extends CustomerUpdateAction {
      *  <p>ResourceIdentifier of the Store to remove.</p>
      * @param store value to be set
      */
-
+    
     public void setStore(final StoreResourceIdentifier store);
+    
 
     /**
      * factory method
      * @return instance of CustomerRemoveStoreAction
      */
-    public static CustomerRemoveStoreAction of() {
+    public static CustomerRemoveStoreAction of(){
         return new CustomerRemoveStoreActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy CustomerRemoveStoreAction
@@ -94,7 +101,7 @@ public interface CustomerRemoveStoreAction extends CustomerUpdateAction {
     public static CustomerRemoveStoreActionBuilder builder() {
         return CustomerRemoveStoreActionBuilder.of();
     }
-
+    
     /**
      * create builder for CustomerRemoveStoreAction instance
      * @param template instance with prefilled values for the builder
@@ -103,6 +110,7 @@ public interface CustomerRemoveStoreAction extends CustomerUpdateAction {
     public static CustomerRemoveStoreActionBuilder builder(final CustomerRemoveStoreAction template) {
         return CustomerRemoveStoreActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -113,7 +121,7 @@ public interface CustomerRemoveStoreAction extends CustomerUpdateAction {
     default <T> T withCustomerRemoveStoreAction(Function<CustomerRemoveStoreAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

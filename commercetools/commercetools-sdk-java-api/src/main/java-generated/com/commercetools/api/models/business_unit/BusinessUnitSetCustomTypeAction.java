@@ -1,19 +1,22 @@
-
 package com.commercetools.api.models.business_unit;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-
+import com.commercetools.api.models.business_unit.BusinessUnitUpdateAction;
 import com.commercetools.api.models.type.FieldContainer;
 import com.commercetools.api.models.type.TypeResourceIdentifier;
+import com.commercetools.api.models.business_unit.BusinessUnitSetCustomTypeActionImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * BusinessUnitSetCustomTypeAction
@@ -25,9 +28,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     BusinessUnitSetCustomTypeAction businessUnitSetCustomTypeAction = BusinessUnitSetCustomTypeAction.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = BusinessUnitSetCustomTypeActionImpl.class)
 public interface BusinessUnitSetCustomTypeAction extends BusinessUnitUpdateAction {
 
@@ -43,7 +49,6 @@ public interface BusinessUnitSetCustomTypeAction extends BusinessUnitUpdateActio
     @Valid
     @JsonProperty("type")
     public TypeResourceIdentifier getType();
-
     /**
      *  <p>Sets the Custom Fields for the BusinessUnit.</p>
      * @return fields
@@ -56,23 +61,26 @@ public interface BusinessUnitSetCustomTypeAction extends BusinessUnitUpdateActio
      *  <p>Defines the Type that extends the BusinessUnit with Custom Fields. If absent, any existing Type and Custom Fields are removed from the BusinessUnit.</p>
      * @param type value to be set
      */
-
+    
     public void setType(final TypeResourceIdentifier type);
-
+    
+    
     /**
      *  <p>Sets the Custom Fields for the BusinessUnit.</p>
      * @param fields value to be set
      */
-
+    
     public void setFields(final FieldContainer fields);
+    
 
     /**
      * factory method
      * @return instance of BusinessUnitSetCustomTypeAction
      */
-    public static BusinessUnitSetCustomTypeAction of() {
+    public static BusinessUnitSetCustomTypeAction of(){
         return new BusinessUnitSetCustomTypeActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy BusinessUnitSetCustomTypeAction
@@ -109,7 +117,7 @@ public interface BusinessUnitSetCustomTypeAction extends BusinessUnitUpdateActio
     public static BusinessUnitSetCustomTypeActionBuilder builder() {
         return BusinessUnitSetCustomTypeActionBuilder.of();
     }
-
+    
     /**
      * create builder for BusinessUnitSetCustomTypeAction instance
      * @param template instance with prefilled values for the builder
@@ -118,6 +126,7 @@ public interface BusinessUnitSetCustomTypeAction extends BusinessUnitUpdateActio
     public static BusinessUnitSetCustomTypeActionBuilder builder(final BusinessUnitSetCustomTypeAction template) {
         return BusinessUnitSetCustomTypeActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -128,7 +137,7 @@ public interface BusinessUnitSetCustomTypeAction extends BusinessUnitUpdateActio
     default <T> T withBusinessUnitSetCustomTypeAction(Function<BusinessUnitSetCustomTypeAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

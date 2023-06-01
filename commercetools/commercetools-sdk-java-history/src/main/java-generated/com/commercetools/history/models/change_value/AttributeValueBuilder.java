@@ -1,8 +1,11 @@
-
 package com.commercetools.history.models.change_value;
 
+import java.lang.Object;
+import com.commercetools.history.models.change_value.AttributeValue;
+import javax.annotation.Nullable;
 import java.util.*;
-
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -16,52 +19,67 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .name("{name}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class AttributeValueBuilder implements Builder<AttributeValue> {
 
+    
+    
     private String name;
-
+    
+    
+    
     private java.lang.Object value;
 
+    
     /**
      * set the value to the name
      * @param name value to be set
      * @return Builder
      */
-
-    public AttributeValueBuilder name(final String name) {
+    
+    public AttributeValueBuilder name( final String name) {
         this.name = name;
         return this;
     }
-
+    
+    
+    
+    
     /**
      * set the value to the value
      * @param value value to be set
      * @return Builder
      */
-
-    public AttributeValueBuilder value(final java.lang.Object value) {
+    
+    public AttributeValueBuilder value( final java.lang.Object value) {
         this.value = value;
         return this;
     }
+    
+    
 
     /**
      * value of name}
      * @return name
      */
-
-    public String getName() {
+    
+    
+    public String getName(){
         return this.name;
     }
-
+    
     /**
      * value of value}
      * @return value
      */
-
-    public java.lang.Object getValue() {
+    
+    
+    public java.lang.Object getValue(){
         return this.value;
     }
 
@@ -74,7 +92,7 @@ public class AttributeValueBuilder implements Builder<AttributeValue> {
         Objects.requireNonNull(value, AttributeValue.class + ": value is missing");
         return new AttributeValueImpl(name, value);
     }
-
+    
     /**
      * builds AttributeValue without checking for non-null required values
      * @return AttributeValue
@@ -85,7 +103,7 @@ public class AttributeValueBuilder implements Builder<AttributeValue> {
 
     /**
      * factory method for an instance of AttributeValueBuilder
-     * @return builder
+     * @return builder 
      */
     public static AttributeValueBuilder of() {
         return new AttributeValueBuilder();

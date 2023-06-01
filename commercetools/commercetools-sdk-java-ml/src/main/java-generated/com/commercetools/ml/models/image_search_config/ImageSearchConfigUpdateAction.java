@@ -1,17 +1,20 @@
-
 package com.commercetools.ml.models.image_search_config;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
+import com.commercetools.ml.models.image_search_config.ChangeStatusUpdateAction;
 
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * ImageSearchConfigUpdateAction
@@ -24,14 +27,25 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             status(ImageSearchConfigStatus.ON)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
 @JsonSubTypes({
-        @JsonSubTypes.Type(value = com.commercetools.ml.models.image_search_config.ChangeStatusUpdateActionImpl.class, name = ChangeStatusUpdateAction.CHANGE_STATUS) })
-@JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.EXISTING_PROPERTY, property = "action", defaultImpl = ImageSearchConfigUpdateActionImpl.class, visible = true)
+   @JsonSubTypes.Type(value = com.commercetools.ml.models.image_search_config.ChangeStatusUpdateActionImpl.class, name = ChangeStatusUpdateAction.CHANGE_STATUS)
+})
+@JsonTypeInfo(
+    use = JsonTypeInfo.Id.NAME,
+    include = JsonTypeInfo.As.EXISTING_PROPERTY,
+    property = "action",
+    defaultImpl = ImageSearchConfigUpdateActionImpl.class,
+    visible = true
+)
 @JsonDeserialize(as = ImageSearchConfigUpdateActionImpl.class)
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
-public interface ImageSearchConfigUpdateAction {
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
+public interface ImageSearchConfigUpdateAction  {
+
 
     /**
      *
@@ -40,6 +54,9 @@ public interface ImageSearchConfigUpdateAction {
     @NotNull
     @JsonProperty("action")
     public String getAction();
+
+
+
 
     /**
      * factory method to create a deep copy of ImageSearchConfigUpdateAction
@@ -52,19 +69,19 @@ public interface ImageSearchConfigUpdateAction {
             return null;
         }
         if (template instanceof com.commercetools.ml.models.image_search_config.ChangeStatusUpdateAction) {
-            return com.commercetools.ml.models.image_search_config.ChangeStatusUpdateAction
-                    .deepCopy((com.commercetools.ml.models.image_search_config.ChangeStatusUpdateAction) template);
+            return com.commercetools.ml.models.image_search_config.ChangeStatusUpdateAction.deepCopy((com.commercetools.ml.models.image_search_config.ChangeStatusUpdateAction)template);
         }
         ImageSearchConfigUpdateActionImpl instance = new ImageSearchConfigUpdateActionImpl();
         return instance;
     }
+
 
     /**
      * builder for changeStatus subtype
      * @return builder
      */
     public static com.commercetools.ml.models.image_search_config.ChangeStatusUpdateActionBuilder changeStatusBuilder() {
-        return com.commercetools.ml.models.image_search_config.ChangeStatusUpdateActionBuilder.of();
+       return com.commercetools.ml.models.image_search_config.ChangeStatusUpdateActionBuilder.of();
     }
 
     /**
@@ -76,7 +93,7 @@ public interface ImageSearchConfigUpdateAction {
     default <T> T withImageSearchConfigUpdateAction(Function<ImageSearchConfigUpdateAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

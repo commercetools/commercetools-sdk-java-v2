@@ -1,17 +1,21 @@
-
 package com.commercetools.api.models.error;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
+import com.commercetools.api.models.error.GraphQLErrorObject;
+import java.lang.Object;
+import com.commercetools.api.models.error.GraphQLDuplicateFieldErrorImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Returned when a field value conflicts with an existing value causing a duplicate.</p>
@@ -24,9 +28,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .field("{field}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = GraphQLDuplicateFieldErrorImpl.class)
 public interface GraphQLDuplicateFieldError extends GraphQLErrorObject {
 
@@ -42,7 +49,6 @@ public interface GraphQLDuplicateFieldError extends GraphQLErrorObject {
     @NotNull
     @JsonProperty("code")
     public String getCode();
-
     /**
      *  <p>Name of the conflicting field.</p>
      * @return field
@@ -50,7 +56,6 @@ public interface GraphQLDuplicateFieldError extends GraphQLErrorObject {
     @NotNull
     @JsonProperty("field")
     public String getField();
-
     /**
      *  <p>Conflicting duplicate value.</p>
      * @return duplicateValue
@@ -63,23 +68,26 @@ public interface GraphQLDuplicateFieldError extends GraphQLErrorObject {
      *  <p>Name of the conflicting field.</p>
      * @param field value to be set
      */
-
+    
     public void setField(final String field);
-
+    
+    
     /**
      *  <p>Conflicting duplicate value.</p>
      * @param duplicateValue value to be set
      */
-
+    
     public void setDuplicateValue(final Object duplicateValue);
+    
 
     /**
      * factory method
      * @return instance of GraphQLDuplicateFieldError
      */
-    public static GraphQLDuplicateFieldError of() {
+    public static GraphQLDuplicateFieldError of(){
         return new GraphQLDuplicateFieldErrorImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy GraphQLDuplicateFieldError
@@ -118,7 +126,7 @@ public interface GraphQLDuplicateFieldError extends GraphQLErrorObject {
     public static GraphQLDuplicateFieldErrorBuilder builder() {
         return GraphQLDuplicateFieldErrorBuilder.of();
     }
-
+    
     /**
      * create builder for GraphQLDuplicateFieldError instance
      * @param template instance with prefilled values for the builder
@@ -127,6 +135,7 @@ public interface GraphQLDuplicateFieldError extends GraphQLErrorObject {
     public static GraphQLDuplicateFieldErrorBuilder builder(final GraphQLDuplicateFieldError template) {
         return GraphQLDuplicateFieldErrorBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -137,7 +146,7 @@ public interface GraphQLDuplicateFieldError extends GraphQLErrorObject {
     default <T> T withGraphQLDuplicateFieldError(Function<GraphQLDuplicateFieldError, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

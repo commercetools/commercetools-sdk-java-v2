@@ -1,19 +1,21 @@
-
 package com.commercetools.history.models.change;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
+import com.commercetools.history.models.change.Change;
 import com.commercetools.history.models.common.Price;
+import com.commercetools.history.models.change.SetDiscountedPriceChangeImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * SetDiscountedPriceChange
@@ -31,9 +33,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .nextValue(nextValueBuilder -> nextValueBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = SetDiscountedPriceChangeImpl.class)
 public interface SetDiscountedPriceChange extends Change {
 
@@ -49,7 +54,6 @@ public interface SetDiscountedPriceChange extends Change {
     @NotNull
     @JsonProperty("type")
     public String getType();
-
     /**
      *  <p>Update action for <code>setDiscountedPrice</code></p>
      * @return change
@@ -57,7 +61,6 @@ public interface SetDiscountedPriceChange extends Change {
     @NotNull
     @JsonProperty("change")
     public String getChange();
-
     /**
      *
      * @return catalogData
@@ -65,7 +68,6 @@ public interface SetDiscountedPriceChange extends Change {
     @NotNull
     @JsonProperty("catalogData")
     public String getCatalogData();
-
     /**
      *
      * @return variant
@@ -73,7 +75,6 @@ public interface SetDiscountedPriceChange extends Change {
     @NotNull
     @JsonProperty("variant")
     public String getVariant();
-
     /**
      *
      * @return priceId
@@ -81,7 +82,6 @@ public interface SetDiscountedPriceChange extends Change {
     @NotNull
     @JsonProperty("priceId")
     public String getPriceId();
-
     /**
      *
      * @return previousValue
@@ -90,7 +90,6 @@ public interface SetDiscountedPriceChange extends Change {
     @Valid
     @JsonProperty("previousValue")
     public Price getPreviousValue();
-
     /**
      *
      * @return nextValue
@@ -104,51 +103,58 @@ public interface SetDiscountedPriceChange extends Change {
      *  <p>Update action for <code>setDiscountedPrice</code></p>
      * @param change value to be set
      */
-
+    
     public void setChange(final String change);
-
+    
+    
     /**
      * set catalogData
      * @param catalogData value to be set
      */
-
+    
     public void setCatalogData(final String catalogData);
-
+    
+    
     /**
      * set variant
      * @param variant value to be set
      */
-
+    
     public void setVariant(final String variant);
-
+    
+    
     /**
      * set priceId
      * @param priceId value to be set
      */
-
+    
     public void setPriceId(final String priceId);
-
+    
+    
     /**
      * set previousValue
      * @param previousValue value to be set
      */
-
+    
     public void setPreviousValue(final Price previousValue);
-
+    
+    
     /**
      * set nextValue
      * @param nextValue value to be set
      */
-
+    
     public void setNextValue(final Price nextValue);
+    
 
     /**
      * factory method
      * @return instance of SetDiscountedPriceChange
      */
-    public static SetDiscountedPriceChange of() {
+    public static SetDiscountedPriceChange of(){
         return new SetDiscountedPriceChangeImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy SetDiscountedPriceChange
@@ -193,7 +199,7 @@ public interface SetDiscountedPriceChange extends Change {
     public static SetDiscountedPriceChangeBuilder builder() {
         return SetDiscountedPriceChangeBuilder.of();
     }
-
+    
     /**
      * create builder for SetDiscountedPriceChange instance
      * @param template instance with prefilled values for the builder
@@ -202,6 +208,7 @@ public interface SetDiscountedPriceChange extends Change {
     public static SetDiscountedPriceChangeBuilder builder(final SetDiscountedPriceChange template) {
         return SetDiscountedPriceChangeBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -212,7 +219,7 @@ public interface SetDiscountedPriceChange extends Change {
     default <T> T withSetDiscountedPriceChange(Function<SetDiscountedPriceChange, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

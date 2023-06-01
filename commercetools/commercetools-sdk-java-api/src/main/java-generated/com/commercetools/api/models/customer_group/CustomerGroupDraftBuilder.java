@@ -1,11 +1,11 @@
-
 package com.commercetools.api.models.customer_group;
 
+import com.commercetools.api.models.type.CustomFieldsDraft;
+import com.commercetools.api.models.customer_group.CustomerGroupDraft;
+import javax.annotation.Nullable;
 import java.util.*;
 import java.util.function.Function;
-
-import javax.annotation.Nullable;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -19,103 +19,117 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .groupName("{groupName}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class CustomerGroupDraftBuilder implements Builder<CustomerGroupDraft> {
 
+    
     @Nullable
     private String key;
-
+    
+    
+    
     private String groupName;
-
+    
+    
     @Nullable
     private com.commercetools.api.models.type.CustomFieldsDraft custom;
 
+    
     /**
      *  <p>User-defined unique identifier for the CustomerGroup.</p>
      * @param key value to be set
      * @return Builder
      */
-
+    
     public CustomerGroupDraftBuilder key(@Nullable final String key) {
         this.key = key;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Unique value which must be different from any value used for <code>name</code> in CustomerGroup in the Project. If not, a DuplicateField error is returned.</p>
      * @param groupName value to be set
      * @return Builder
      */
-
-    public CustomerGroupDraftBuilder groupName(final String groupName) {
+    
+    public CustomerGroupDraftBuilder groupName( final String groupName) {
         this.groupName = groupName;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Custom Fields for the CustomerGroup.</p>
      * @param builder function to build the custom value
      * @return Builder
      */
-
-    public CustomerGroupDraftBuilder custom(
-            Function<com.commercetools.api.models.type.CustomFieldsDraftBuilder, com.commercetools.api.models.type.CustomFieldsDraftBuilder> builder) {
+    
+    public CustomerGroupDraftBuilder custom(Function<com.commercetools.api.models.type.CustomFieldsDraftBuilder, com.commercetools.api.models.type.CustomFieldsDraftBuilder> builder) {
         this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsDraftBuilder.of()).build();
         return this;
     }
-
+    
     /**
      *  <p>Custom Fields for the CustomerGroup.</p>
      * @param builder function to build the custom value
      * @return Builder
      */
-
-    public CustomerGroupDraftBuilder withCustom(
-            Function<com.commercetools.api.models.type.CustomFieldsDraftBuilder, com.commercetools.api.models.type.CustomFieldsDraft> builder) {
+    
+    public CustomerGroupDraftBuilder withCustom(Function<com.commercetools.api.models.type.CustomFieldsDraftBuilder, com.commercetools.api.models.type.CustomFieldsDraft> builder) {
         this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsDraftBuilder.of());
         return this;
     }
-
+                    
     /**
      *  <p>Custom Fields for the CustomerGroup.</p>
      * @param custom value to be set
      * @return Builder
      */
-
-    public CustomerGroupDraftBuilder custom(
-            @Nullable final com.commercetools.api.models.type.CustomFieldsDraft custom) {
+    
+    public CustomerGroupDraftBuilder custom(@Nullable final com.commercetools.api.models.type.CustomFieldsDraft custom) {
         this.custom = custom;
         return this;
     }
+    
+    
 
     /**
      *  <p>User-defined unique identifier for the CustomerGroup.</p>
      * @return key
      */
-
+    
     @Nullable
-    public String getKey() {
+    public String getKey(){
         return this.key;
     }
-
+    
     /**
      *  <p>Unique value which must be different from any value used for <code>name</code> in CustomerGroup in the Project. If not, a DuplicateField error is returned.</p>
      * @return groupName
      */
-
-    public String getGroupName() {
+    
+    
+    public String getGroupName(){
         return this.groupName;
     }
-
+    
     /**
      *  <p>Custom Fields for the CustomerGroup.</p>
      * @return custom
      */
-
+    
     @Nullable
-    public com.commercetools.api.models.type.CustomFieldsDraft getCustom() {
+    public com.commercetools.api.models.type.CustomFieldsDraft getCustom(){
         return this.custom;
     }
 
@@ -127,7 +141,7 @@ public class CustomerGroupDraftBuilder implements Builder<CustomerGroupDraft> {
         Objects.requireNonNull(groupName, CustomerGroupDraft.class + ": groupName is missing");
         return new CustomerGroupDraftImpl(key, groupName, custom);
     }
-
+    
     /**
      * builds CustomerGroupDraft without checking for non-null required values
      * @return CustomerGroupDraft
@@ -138,7 +152,7 @@ public class CustomerGroupDraftBuilder implements Builder<CustomerGroupDraft> {
 
     /**
      * factory method for an instance of CustomerGroupDraftBuilder
-     * @return builder
+     * @return builder 
      */
     public static CustomerGroupDraftBuilder of() {
         return new CustomerGroupDraftBuilder();

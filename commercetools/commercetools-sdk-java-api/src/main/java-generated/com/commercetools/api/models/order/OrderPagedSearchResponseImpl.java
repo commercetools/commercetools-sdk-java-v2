@@ -1,46 +1,53 @@
-
 package com.commercetools.api.models.order;
 
-import java.time.*;
-import java.util.*;
-
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
-
-import io.vrap.rmf.base.client.ModelBase;
+import com.commercetools.api.models.order.Hit;
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.ModelBase;
+import javax.validation.Valid;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.annotation.*;
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
  * OrderPagedSearchResponse
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class OrderPagedSearchResponseImpl implements OrderPagedSearchResponse, ModelBase {
 
+    
     private Long total;
-
+    
+    
     private Long offset;
-
+    
+    
     private Long limit;
-
+    
+    
     private java.util.List<com.commercetools.api.models.order.Hit> hits;
 
     /**
      * create instance with all properties
      */
     @JsonCreator
-    OrderPagedSearchResponseImpl(@JsonProperty("total") final Long total, @JsonProperty("offset") final Long offset,
-            @JsonProperty("limit") final Long limit,
-            @JsonProperty("hits") final java.util.List<com.commercetools.api.models.order.Hit> hits) {
+    OrderPagedSearchResponseImpl(@JsonProperty("total") final Long total, @JsonProperty("offset") final Long offset, @JsonProperty("limit") final Long limit, @JsonProperty("hits") final java.util.List<com.commercetools.api.models.order.Hit> hits) {
         this.total = total;
         this.offset = offset;
         this.limit = limit;
         this.hits = hits;
     }
-
     /**
      * create empty instance
      */
@@ -50,75 +57,84 @@ public class OrderPagedSearchResponseImpl implements OrderPagedSearchResponse, M
     /**
      *  <p>Total number of results matching the query.</p>
      */
-
-    public Long getTotal() {
+    
+    public Long getTotal(){
         return this.total;
     }
-
+    
     /**
      *  <p>Number of elements skipped.</p>
      */
-
-    public Long getOffset() {
+    
+    public Long getOffset(){
         return this.offset;
     }
-
+    
     /**
      *  <p>Number of results requested.</p>
      */
-
-    public Long getLimit() {
+    
+    public Long getLimit(){
         return this.limit;
     }
-
+    
     /**
      *  <p>Actual results.</p>
      */
-
-    public java.util.List<com.commercetools.api.models.order.Hit> getHits() {
+    
+    public java.util.List<com.commercetools.api.models.order.Hit> getHits(){
         return this.hits;
     }
 
-    public void setTotal(final Long total) {
+    
+    public void setTotal(final Long total){
         this.total = total;
     }
-
-    public void setOffset(final Long offset) {
+    
+    
+    public void setOffset(final Long offset){
         this.offset = offset;
     }
-
-    public void setLimit(final Long limit) {
+    
+    
+    public void setLimit(final Long limit){
         this.limit = limit;
     }
-
-    public void setHits(final com.commercetools.api.models.order.Hit... hits) {
-        this.hits = new ArrayList<>(Arrays.asList(hits));
+    
+    
+    public void setHits(final com.commercetools.api.models.order.Hit ...hits){
+       this.hits = new ArrayList<>(Arrays.asList(hits));
     }
-
-    public void setHits(final java.util.List<com.commercetools.api.models.order.Hit> hits) {
-        this.hits = hits;
+    
+    
+    public void setHits(final java.util.List<com.commercetools.api.models.order.Hit> hits){
+       this.hits = hits;
     }
 
     @Override
     public boolean equals(Object o) {
-        if (this == o)
-            return true;
-
-        if (o == null || getClass() != o.getClass())
-            return false;
-
+        if (this == o) return true;
+    
+        if (o == null || getClass() != o.getClass()) return false;
+    
         OrderPagedSearchResponseImpl that = (OrderPagedSearchResponseImpl) o;
-
-        return new EqualsBuilder().append(total, that.total)
+    
+        return new EqualsBuilder()
+                .append(total, that.total)
                 .append(offset, that.offset)
                 .append(limit, that.limit)
                 .append(hits, that.hits)
                 .isEquals();
     }
-
+    
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(total).append(offset).append(limit).append(hits).toHashCode();
+        return new HashCodeBuilder(17, 37)
+            .append(total)
+            .append(offset)
+            .append(limit)
+            .append(hits)
+            .toHashCode();
     }
 
 }

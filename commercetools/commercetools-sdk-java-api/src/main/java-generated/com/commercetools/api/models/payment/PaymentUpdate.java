@@ -1,19 +1,20 @@
-
 package com.commercetools.api.models.payment;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-import java.util.stream.Collectors;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
+import com.commercetools.api.models.payment.PaymentUpdateAction;
+import com.commercetools.api.models.payment.PaymentUpdateImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * PaymentUpdate
@@ -27,12 +28,15 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .plusActions(actionsBuilder -> actionsBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = PaymentUpdateImpl.class)
-public interface PaymentUpdate
-        extends com.commercetools.api.models.ResourceUpdate<PaymentUpdate, PaymentUpdateAction, PaymentUpdateBuilder> {
+public interface PaymentUpdate extends com.commercetools.api.models.ResourceUpdate<PaymentUpdate, PaymentUpdateAction, PaymentUpdateBuilder> {
+
 
     /**
      *  <p>Expected version of the Payment on which the changes should be applied. If the expected version does not match the actual version, a 409 Conflict error will be returned.</p>
@@ -41,7 +45,6 @@ public interface PaymentUpdate
     @NotNull
     @JsonProperty("version")
     public Long getVersion();
-
     /**
      *  <p>Update actions to be performed on the Payment.</p>
      * @return actions
@@ -55,31 +58,32 @@ public interface PaymentUpdate
      *  <p>Expected version of the Payment on which the changes should be applied. If the expected version does not match the actual version, a 409 Conflict error will be returned.</p>
      * @param version value to be set
      */
-
+    
     public void setVersion(final Long version);
-
+    
+    
     /**
      *  <p>Update actions to be performed on the Payment.</p>
      * @param actions values to be set
      */
-
+    
     @JsonIgnore
-    public void setActions(final PaymentUpdateAction... actions);
-
+    public void setActions(final PaymentUpdateAction ...actions);
     /**
      *  <p>Update actions to be performed on the Payment.</p>
      * @param actions values to be set
      */
-
+    
     public void setActions(final List<PaymentUpdateAction> actions);
 
     /**
      * factory method
      * @return instance of PaymentUpdate
      */
-    public static PaymentUpdate of() {
+    public static PaymentUpdate of(){
         return new PaymentUpdateImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy PaymentUpdate
@@ -106,9 +110,7 @@ public interface PaymentUpdate
         PaymentUpdateImpl instance = new PaymentUpdateImpl();
         instance.setVersion(template.getVersion());
         instance.setActions(Optional.ofNullable(template.getActions())
-                .map(t -> t.stream()
-                        .map(com.commercetools.api.models.payment.PaymentUpdateAction::deepCopy)
-                        .collect(Collectors.toList()))
+                .map(t -> t.stream().map(com.commercetools.api.models.payment.PaymentUpdateAction::deepCopy).collect(Collectors.toList()))
                 .orElse(null));
         return instance;
     }
@@ -120,7 +122,7 @@ public interface PaymentUpdate
     public static PaymentUpdateBuilder builder() {
         return PaymentUpdateBuilder.of();
     }
-
+    
     /**
      * create builder for PaymentUpdate instance
      * @param template instance with prefilled values for the builder
@@ -129,6 +131,7 @@ public interface PaymentUpdate
     public static PaymentUpdateBuilder builder(final PaymentUpdate template) {
         return PaymentUpdateBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -139,7 +142,7 @@ public interface PaymentUpdate
     default <T> T withPaymentUpdate(Function<PaymentUpdate, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

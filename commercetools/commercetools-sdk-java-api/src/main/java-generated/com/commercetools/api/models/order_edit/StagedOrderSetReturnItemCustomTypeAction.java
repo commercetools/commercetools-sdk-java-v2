@@ -1,21 +1,22 @@
-
 package com.commercetools.api.models.order_edit;
-
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.order.StagedOrderUpdateAction;
 import com.commercetools.api.models.type.FieldContainer;
 import com.commercetools.api.models.type.TypeResourceIdentifier;
+import com.commercetools.api.models.order_edit.StagedOrderSetReturnItemCustomTypeActionImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * StagedOrderSetReturnItemCustomTypeAction
@@ -28,9 +29,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .returnItemId("{returnItemId}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = StagedOrderSetReturnItemCustomTypeActionImpl.class)
 public interface StagedOrderSetReturnItemCustomTypeAction extends StagedOrderUpdateAction {
 
@@ -46,7 +50,6 @@ public interface StagedOrderSetReturnItemCustomTypeAction extends StagedOrderUpd
     @NotNull
     @JsonProperty("returnItemId")
     public String getReturnItemId();
-
     /**
      *  <p>Defines the Type that extends the ReturnItem with Custom Fields. If absent, any existing Type and Custom Fields are removed from the ReturnItem.</p>
      * @return type
@@ -54,7 +57,6 @@ public interface StagedOrderSetReturnItemCustomTypeAction extends StagedOrderUpd
     @Valid
     @JsonProperty("type")
     public TypeResourceIdentifier getType();
-
     /**
      *  <p>Sets the Custom Fields fields for the ReturnItem.</p>
      * @return fields
@@ -67,30 +69,34 @@ public interface StagedOrderSetReturnItemCustomTypeAction extends StagedOrderUpd
      * set returnItemId
      * @param returnItemId value to be set
      */
-
+    
     public void setReturnItemId(final String returnItemId);
-
+    
+    
     /**
      *  <p>Defines the Type that extends the ReturnItem with Custom Fields. If absent, any existing Type and Custom Fields are removed from the ReturnItem.</p>
      * @param type value to be set
      */
-
+    
     public void setType(final TypeResourceIdentifier type);
-
+    
+    
     /**
      *  <p>Sets the Custom Fields fields for the ReturnItem.</p>
      * @param fields value to be set
      */
-
+    
     public void setFields(final FieldContainer fields);
+    
 
     /**
      * factory method
      * @return instance of StagedOrderSetReturnItemCustomTypeAction
      */
-    public static StagedOrderSetReturnItemCustomTypeAction of() {
+    public static StagedOrderSetReturnItemCustomTypeAction of(){
         return new StagedOrderSetReturnItemCustomTypeActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy StagedOrderSetReturnItemCustomTypeAction
@@ -111,8 +117,7 @@ public interface StagedOrderSetReturnItemCustomTypeAction extends StagedOrderUpd
      * @return copy instance
      */
     @Nullable
-    public static StagedOrderSetReturnItemCustomTypeAction deepCopy(
-            @Nullable final StagedOrderSetReturnItemCustomTypeAction template) {
+    public static StagedOrderSetReturnItemCustomTypeAction deepCopy(@Nullable final StagedOrderSetReturnItemCustomTypeAction template) {
         if (template == null) {
             return null;
         }
@@ -130,16 +135,16 @@ public interface StagedOrderSetReturnItemCustomTypeAction extends StagedOrderUpd
     public static StagedOrderSetReturnItemCustomTypeActionBuilder builder() {
         return StagedOrderSetReturnItemCustomTypeActionBuilder.of();
     }
-
+    
     /**
      * create builder for StagedOrderSetReturnItemCustomTypeAction instance
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static StagedOrderSetReturnItemCustomTypeActionBuilder builder(
-            final StagedOrderSetReturnItemCustomTypeAction template) {
+    public static StagedOrderSetReturnItemCustomTypeActionBuilder builder(final StagedOrderSetReturnItemCustomTypeAction template) {
         return StagedOrderSetReturnItemCustomTypeActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -147,11 +152,10 @@ public interface StagedOrderSetReturnItemCustomTypeAction extends StagedOrderUpd
      * @param helper function to map the object
      * @return mapped value
      */
-    default <T> T withStagedOrderSetReturnItemCustomTypeAction(
-            Function<StagedOrderSetReturnItemCustomTypeAction, T> helper) {
+    default <T> T withStagedOrderSetReturnItemCustomTypeAction(Function<StagedOrderSetReturnItemCustomTypeAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

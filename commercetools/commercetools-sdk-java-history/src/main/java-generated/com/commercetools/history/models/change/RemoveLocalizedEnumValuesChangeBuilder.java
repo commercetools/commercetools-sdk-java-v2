@@ -1,9 +1,12 @@
-
 package com.commercetools.history.models.change;
 
+import com.commercetools.history.models.change.Change;
+import com.commercetools.history.models.change_value.LocalizedEnumValue;
+import com.commercetools.history.models.change.RemoveLocalizedEnumValuesChange;
+import javax.annotation.Nullable;
 import java.util.*;
 import java.util.function.Function;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -19,101 +22,117 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .previousValue(previousValueBuilder -> previousValueBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class RemoveLocalizedEnumValuesChangeBuilder implements Builder<RemoveLocalizedEnumValuesChange> {
 
+    
+    
     private String change;
-
+    
+    
+    
     private String attributeName;
-
+    
+    
+    
     private com.commercetools.history.models.change_value.LocalizedEnumValue previousValue;
 
+    
     /**
      *  <p>Update action for <code>removeEnumValues</code> on product types</p>
      * @param change value to be set
      * @return Builder
      */
-
-    public RemoveLocalizedEnumValuesChangeBuilder change(final String change) {
+    
+    public RemoveLocalizedEnumValuesChangeBuilder change( final String change) {
         this.change = change;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>The name of the attribute updated.</p>
      * @param attributeName value to be set
      * @return Builder
      */
-
-    public RemoveLocalizedEnumValuesChangeBuilder attributeName(final String attributeName) {
+    
+    public RemoveLocalizedEnumValuesChangeBuilder attributeName( final String attributeName) {
         this.attributeName = attributeName;
         return this;
     }
-
+    
+    
+    
+    
     /**
      * set the value to the previousValue using the builder function
      * @param builder function to build the previousValue value
      * @return Builder
      */
-
-    public RemoveLocalizedEnumValuesChangeBuilder previousValue(
-            Function<com.commercetools.history.models.change_value.LocalizedEnumValueBuilder, com.commercetools.history.models.change_value.LocalizedEnumValueBuilder> builder) {
-        this.previousValue = builder.apply(com.commercetools.history.models.change_value.LocalizedEnumValueBuilder.of())
-                .build();
+    
+    public RemoveLocalizedEnumValuesChangeBuilder previousValue(Function<com.commercetools.history.models.change_value.LocalizedEnumValueBuilder, com.commercetools.history.models.change_value.LocalizedEnumValueBuilder> builder) {
+        this.previousValue = builder.apply(com.commercetools.history.models.change_value.LocalizedEnumValueBuilder.of()).build();
         return this;
     }
-
+    
     /**
      * set the value to the previousValue using the builder function
      * @param builder function to build the previousValue value
      * @return Builder
      */
-
-    public RemoveLocalizedEnumValuesChangeBuilder withPreviousValue(
-            Function<com.commercetools.history.models.change_value.LocalizedEnumValueBuilder, com.commercetools.history.models.change_value.LocalizedEnumValue> builder) {
-        this.previousValue = builder
-                .apply(com.commercetools.history.models.change_value.LocalizedEnumValueBuilder.of());
+    
+    public RemoveLocalizedEnumValuesChangeBuilder withPreviousValue(Function<com.commercetools.history.models.change_value.LocalizedEnumValueBuilder, com.commercetools.history.models.change_value.LocalizedEnumValue> builder) {
+        this.previousValue = builder.apply(com.commercetools.history.models.change_value.LocalizedEnumValueBuilder.of());
         return this;
     }
-
+                    
     /**
      * set the value to the previousValue
      * @param previousValue value to be set
      * @return Builder
      */
-
-    public RemoveLocalizedEnumValuesChangeBuilder previousValue(
-            final com.commercetools.history.models.change_value.LocalizedEnumValue previousValue) {
+    
+    public RemoveLocalizedEnumValuesChangeBuilder previousValue( final com.commercetools.history.models.change_value.LocalizedEnumValue previousValue) {
         this.previousValue = previousValue;
         return this;
     }
+    
+    
 
     /**
      *  <p>Update action for <code>removeEnumValues</code> on product types</p>
      * @return change
      */
-
-    public String getChange() {
+    
+    
+    public String getChange(){
         return this.change;
     }
-
+    
     /**
      *  <p>The name of the attribute updated.</p>
      * @return attributeName
      */
-
-    public String getAttributeName() {
+    
+    
+    public String getAttributeName(){
         return this.attributeName;
     }
-
+    
     /**
      * value of previousValue}
      * @return previousValue
      */
-
-    public com.commercetools.history.models.change_value.LocalizedEnumValue getPreviousValue() {
+    
+    
+    public com.commercetools.history.models.change_value.LocalizedEnumValue getPreviousValue(){
         return this.previousValue;
     }
 
@@ -127,7 +146,7 @@ public class RemoveLocalizedEnumValuesChangeBuilder implements Builder<RemoveLoc
         Objects.requireNonNull(previousValue, RemoveLocalizedEnumValuesChange.class + ": previousValue is missing");
         return new RemoveLocalizedEnumValuesChangeImpl(change, attributeName, previousValue);
     }
-
+    
     /**
      * builds RemoveLocalizedEnumValuesChange without checking for non-null required values
      * @return RemoveLocalizedEnumValuesChange
@@ -138,7 +157,7 @@ public class RemoveLocalizedEnumValuesChangeBuilder implements Builder<RemoveLoc
 
     /**
      * factory method for an instance of RemoveLocalizedEnumValuesChangeBuilder
-     * @return builder
+     * @return builder 
      */
     public static RemoveLocalizedEnumValuesChangeBuilder of() {
         return new RemoveLocalizedEnumValuesChangeBuilder();

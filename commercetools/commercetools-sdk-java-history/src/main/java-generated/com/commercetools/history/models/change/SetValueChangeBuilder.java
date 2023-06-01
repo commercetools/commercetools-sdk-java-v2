@@ -1,8 +1,12 @@
-
 package com.commercetools.history.models.change;
 
+import com.commercetools.history.models.change.Change;
+import java.lang.Object;
+import com.commercetools.history.models.change.SetValueChange;
+import javax.annotation.Nullable;
 import java.util.*;
-
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -16,74 +20,95 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .change("{change}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class SetValueChangeBuilder implements Builder<SetValueChange> {
 
+    
+    
     private String change;
-
+    
+    
+    
     private java.lang.Object nextValue;
-
+    
+    
+    
     private java.lang.Object previousValue;
 
+    
     /**
      *  <p>Update action for <code>setValue</code> on custom objects</p>
      * @param change value to be set
      * @return Builder
      */
-
-    public SetValueChangeBuilder change(final String change) {
+    
+    public SetValueChangeBuilder change( final String change) {
         this.change = change;
         return this;
     }
-
+    
+    
+    
+    
     /**
      * set the value to the nextValue
      * @param nextValue value to be set
      * @return Builder
      */
-
-    public SetValueChangeBuilder nextValue(final java.lang.Object nextValue) {
+    
+    public SetValueChangeBuilder nextValue( final java.lang.Object nextValue) {
         this.nextValue = nextValue;
         return this;
     }
-
+    
+    
+    
+    
     /**
      * set the value to the previousValue
      * @param previousValue value to be set
      * @return Builder
      */
-
-    public SetValueChangeBuilder previousValue(final java.lang.Object previousValue) {
+    
+    public SetValueChangeBuilder previousValue( final java.lang.Object previousValue) {
         this.previousValue = previousValue;
         return this;
     }
+    
+    
 
     /**
      *  <p>Update action for <code>setValue</code> on custom objects</p>
      * @return change
      */
-
-    public String getChange() {
+    
+    
+    public String getChange(){
         return this.change;
     }
-
+    
     /**
      * value of nextValue}
      * @return nextValue
      */
-
-    public java.lang.Object getNextValue() {
+    
+    
+    public java.lang.Object getNextValue(){
         return this.nextValue;
     }
-
+    
     /**
      * value of previousValue}
      * @return previousValue
      */
-
-    public java.lang.Object getPreviousValue() {
+    
+    
+    public java.lang.Object getPreviousValue(){
         return this.previousValue;
     }
 
@@ -97,7 +122,7 @@ public class SetValueChangeBuilder implements Builder<SetValueChange> {
         Objects.requireNonNull(previousValue, SetValueChange.class + ": previousValue is missing");
         return new SetValueChangeImpl(change, nextValue, previousValue);
     }
-
+    
     /**
      * builds SetValueChange without checking for non-null required values
      * @return SetValueChange
@@ -108,7 +133,7 @@ public class SetValueChangeBuilder implements Builder<SetValueChange> {
 
     /**
      * factory method for an instance of SetValueChangeBuilder
-     * @return builder
+     * @return builder 
      */
     public static SetValueChangeBuilder of() {
         return new SetValueChangeBuilder();

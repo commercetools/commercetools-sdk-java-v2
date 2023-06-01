@@ -1,18 +1,20 @@
-
 package com.commercetools.api.models.payment;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-
 import com.commercetools.api.models.state.StateResourceIdentifier;
+import com.commercetools.api.models.payment.PaymentStatusDraftImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * PaymentStatusDraft
@@ -24,28 +26,30 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     PaymentStatusDraft paymentStatusDraft = PaymentStatusDraft.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = PaymentStatusDraftImpl.class)
 public interface PaymentStatusDraft extends io.vrap.rmf.base.client.Draft<PaymentStatusDraft> {
+
 
     /**
      *  <p>External reference that identifies the current status of the Payment.</p>
      * @return interfaceCode
      */
-
+    
     @JsonProperty("interfaceCode")
     public String getInterfaceCode();
-
     /**
      *  <p>Text describing the current status of the Payment.</p>
      * @return interfaceText
      */
-
+    
     @JsonProperty("interfaceText")
     public String getInterfaceText();
-
     /**
      *  <p>ResourceIdentifier to a State.</p>
      * @return state
@@ -58,30 +62,34 @@ public interface PaymentStatusDraft extends io.vrap.rmf.base.client.Draft<Paymen
      *  <p>External reference that identifies the current status of the Payment.</p>
      * @param interfaceCode value to be set
      */
-
+    
     public void setInterfaceCode(final String interfaceCode);
-
+    
+    
     /**
      *  <p>Text describing the current status of the Payment.</p>
      * @param interfaceText value to be set
      */
-
+    
     public void setInterfaceText(final String interfaceText);
-
+    
+    
     /**
      *  <p>ResourceIdentifier to a State.</p>
      * @param state value to be set
      */
-
+    
     public void setState(final StateResourceIdentifier state);
+    
 
     /**
      * factory method
      * @return instance of PaymentStatusDraft
      */
-    public static PaymentStatusDraft of() {
+    public static PaymentStatusDraft of(){
         return new PaymentStatusDraftImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy PaymentStatusDraft
@@ -120,7 +128,7 @@ public interface PaymentStatusDraft extends io.vrap.rmf.base.client.Draft<Paymen
     public static PaymentStatusDraftBuilder builder() {
         return PaymentStatusDraftBuilder.of();
     }
-
+    
     /**
      * create builder for PaymentStatusDraft instance
      * @param template instance with prefilled values for the builder
@@ -129,6 +137,7 @@ public interface PaymentStatusDraft extends io.vrap.rmf.base.client.Draft<Paymen
     public static PaymentStatusDraftBuilder builder(final PaymentStatusDraft template) {
         return PaymentStatusDraftBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -139,7 +148,7 @@ public interface PaymentStatusDraft extends io.vrap.rmf.base.client.Draft<Paymen
     default <T> T withPaymentStatusDraft(Function<PaymentStatusDraft, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

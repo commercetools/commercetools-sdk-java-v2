@@ -1,8 +1,11 @@
-
 package com.commercetools.history.models.change_value;
 
+import com.commercetools.history.models.change_value.ChangeValueChangeValue;
+import com.commercetools.history.models.change_value.ChangeValueExternalChangeValue;
+import javax.annotation.Nullable;
 import java.util.*;
-
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -15,10 +18,16 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     ChangeValueExternalChangeValue changeValueExternalChangeValue = ChangeValueExternalChangeValue.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class ChangeValueExternalChangeValueBuilder implements Builder<ChangeValueExternalChangeValue> {
+
+
+
 
     /**
      * builds ChangeValueExternalChangeValue with checking for non-null required values
@@ -27,7 +36,7 @@ public class ChangeValueExternalChangeValueBuilder implements Builder<ChangeValu
     public ChangeValueExternalChangeValue build() {
         return new ChangeValueExternalChangeValueImpl();
     }
-
+    
     /**
      * builds ChangeValueExternalChangeValue without checking for non-null required values
      * @return ChangeValueExternalChangeValue
@@ -38,7 +47,7 @@ public class ChangeValueExternalChangeValueBuilder implements Builder<ChangeValu
 
     /**
      * factory method for an instance of ChangeValueExternalChangeValueBuilder
-     * @return builder
+     * @return builder 
      */
     public static ChangeValueExternalChangeValueBuilder of() {
         return new ChangeValueExternalChangeValueBuilder();

@@ -1,17 +1,20 @@
-
 package com.commercetools.api.models.customer;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
+import com.commercetools.api.models.customer.AnonymousCartSignInMode;
+import com.commercetools.api.models.customer.MyCustomerSigninImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * MyCustomerSignin
@@ -25,11 +28,15 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .password("{password}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = MyCustomerSigninImpl.class)
-public interface MyCustomerSignin {
+public interface MyCustomerSignin  {
+
 
     /**
      *  <p>Email address of the Customer treated as case-insensitive.</p>
@@ -38,7 +45,6 @@ public interface MyCustomerSignin {
     @NotNull
     @JsonProperty("email")
     public String getEmail();
-
     /**
      *  <p>Password of the Customer.</p>
      * @return password
@@ -46,7 +52,6 @@ public interface MyCustomerSignin {
     @NotNull
     @JsonProperty("password")
     public String getPassword();
-
     /**
      *  <ul>
      *   <li>If <code>MergeWithExistingCustomerCart</code>, LineItems of the anonymous Cart are merged with the recently modified active Customer Cart.</li>
@@ -54,10 +59,9 @@ public interface MyCustomerSignin {
      *  </ul>
      * @return activeCartSignInMode
      */
-
+    
     @JsonProperty("activeCartSignInMode")
     public AnonymousCartSignInMode getActiveCartSignInMode();
-
     /**
      *  <ul>
      *   <li>If <code>true</code>, the LineItem Product data (<code>name</code>, <code>variant</code>, and <code>productType</code>) of the returned Cart is updated.</li>
@@ -65,7 +69,7 @@ public interface MyCustomerSignin {
      *  </ul>
      * @return updateProductData
      */
-
+    
     @JsonProperty("updateProductData")
     public Boolean getUpdateProductData();
 
@@ -73,16 +77,18 @@ public interface MyCustomerSignin {
      *  <p>Email address of the Customer treated as case-insensitive.</p>
      * @param email value to be set
      */
-
+    
     public void setEmail(final String email);
-
+    
+    
     /**
      *  <p>Password of the Customer.</p>
      * @param password value to be set
      */
-
+    
     public void setPassword(final String password);
-
+    
+    
     /**
      *  <ul>
      *   <li>If <code>MergeWithExistingCustomerCart</code>, LineItems of the anonymous Cart are merged with the recently modified active Customer Cart.</li>
@@ -90,9 +96,10 @@ public interface MyCustomerSignin {
      *  </ul>
      * @param activeCartSignInMode value to be set
      */
-
+    
     public void setActiveCartSignInMode(final AnonymousCartSignInMode activeCartSignInMode);
-
+    
+    
     /**
      *  <ul>
      *   <li>If <code>true</code>, the LineItem Product data (<code>name</code>, <code>variant</code>, and <code>productType</code>) of the returned Cart is updated.</li>
@@ -100,16 +107,18 @@ public interface MyCustomerSignin {
      *  </ul>
      * @param updateProductData value to be set
      */
-
+    
     public void setUpdateProductData(final Boolean updateProductData);
+    
 
     /**
      * factory method
      * @return instance of MyCustomerSignin
      */
-    public static MyCustomerSignin of() {
+    public static MyCustomerSignin of(){
         return new MyCustomerSigninImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy MyCustomerSignin
@@ -150,7 +159,7 @@ public interface MyCustomerSignin {
     public static MyCustomerSigninBuilder builder() {
         return MyCustomerSigninBuilder.of();
     }
-
+    
     /**
      * create builder for MyCustomerSignin instance
      * @param template instance with prefilled values for the builder
@@ -159,6 +168,7 @@ public interface MyCustomerSignin {
     public static MyCustomerSigninBuilder builder(final MyCustomerSignin template) {
         return MyCustomerSigninBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -169,7 +179,7 @@ public interface MyCustomerSignin {
     default <T> T withMyCustomerSignin(Function<MyCustomerSignin, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

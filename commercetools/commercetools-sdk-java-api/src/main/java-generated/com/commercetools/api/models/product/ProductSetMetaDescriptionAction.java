@@ -1,18 +1,21 @@
-
 package com.commercetools.api.models.product;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-
 import com.commercetools.api.models.common.LocalizedString;
+import com.commercetools.api.models.product.ProductUpdateAction;
+import com.commercetools.api.models.product.ProductSetMetaDescriptionActionImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * ProductSetMetaDescriptionAction
@@ -24,9 +27,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     ProductSetMetaDescriptionAction productSetMetaDescriptionAction = ProductSetMetaDescriptionAction.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = ProductSetMetaDescriptionActionImpl.class)
 public interface ProductSetMetaDescriptionAction extends ProductUpdateAction {
 
@@ -42,12 +48,11 @@ public interface ProductSetMetaDescriptionAction extends ProductUpdateAction {
     @Valid
     @JsonProperty("metaDescription")
     public LocalizedString getMetaDescription();
-
     /**
      *  <p>If <code>true</code>, only the staged <code>metaDescription</code> is updated. If <code>false</code>, both the current and staged <code>metaDescription</code> are updated.</p>
      * @return staged
      */
-
+    
     @JsonProperty("staged")
     public Boolean getStaged();
 
@@ -55,23 +60,26 @@ public interface ProductSetMetaDescriptionAction extends ProductUpdateAction {
      *  <p>Value to set. If empty, any existing value will be removed.</p>
      * @param metaDescription value to be set
      */
-
+    
     public void setMetaDescription(final LocalizedString metaDescription);
-
+    
+    
     /**
      *  <p>If <code>true</code>, only the staged <code>metaDescription</code> is updated. If <code>false</code>, both the current and staged <code>metaDescription</code> are updated.</p>
      * @param staged value to be set
      */
-
+    
     public void setStaged(final Boolean staged);
+    
 
     /**
      * factory method
      * @return instance of ProductSetMetaDescriptionAction
      */
-    public static ProductSetMetaDescriptionAction of() {
+    public static ProductSetMetaDescriptionAction of(){
         return new ProductSetMetaDescriptionActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy ProductSetMetaDescriptionAction
@@ -96,8 +104,7 @@ public interface ProductSetMetaDescriptionAction extends ProductUpdateAction {
             return null;
         }
         ProductSetMetaDescriptionActionImpl instance = new ProductSetMetaDescriptionActionImpl();
-        instance.setMetaDescription(
-            com.commercetools.api.models.common.LocalizedString.deepCopy(template.getMetaDescription()));
+        instance.setMetaDescription(com.commercetools.api.models.common.LocalizedString.deepCopy(template.getMetaDescription()));
         instance.setStaged(template.getStaged());
         return instance;
     }
@@ -109,7 +116,7 @@ public interface ProductSetMetaDescriptionAction extends ProductUpdateAction {
     public static ProductSetMetaDescriptionActionBuilder builder() {
         return ProductSetMetaDescriptionActionBuilder.of();
     }
-
+    
     /**
      * create builder for ProductSetMetaDescriptionAction instance
      * @param template instance with prefilled values for the builder
@@ -118,6 +125,7 @@ public interface ProductSetMetaDescriptionAction extends ProductUpdateAction {
     public static ProductSetMetaDescriptionActionBuilder builder(final ProductSetMetaDescriptionAction template) {
         return ProductSetMetaDescriptionActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -128,7 +136,7 @@ public interface ProductSetMetaDescriptionAction extends ProductUpdateAction {
     default <T> T withProductSetMetaDescriptionAction(Function<ProductSetMetaDescriptionAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

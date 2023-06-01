@@ -1,20 +1,22 @@
-
 package com.commercetools.api.models.cart;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
+import com.commercetools.api.models.cart.CartUpdateAction;
 import com.commercetools.api.models.type.FieldContainer;
 import com.commercetools.api.models.type.TypeResourceIdentifier;
+import com.commercetools.api.models.cart.CartSetLineItemCustomTypeActionImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * CartSetLineItemCustomTypeAction
@@ -27,9 +29,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .lineItemId("{lineItemId}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = CartSetLineItemCustomTypeActionImpl.class)
 public interface CartSetLineItemCustomTypeAction extends CartUpdateAction {
 
@@ -45,7 +50,6 @@ public interface CartSetLineItemCustomTypeAction extends CartUpdateAction {
     @NotNull
     @JsonProperty("lineItemId")
     public String getLineItemId();
-
     /**
      *  <p>Defines the Type that extends the Line Item with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Line Item.</p>
      * @return type
@@ -53,7 +57,6 @@ public interface CartSetLineItemCustomTypeAction extends CartUpdateAction {
     @Valid
     @JsonProperty("type")
     public TypeResourceIdentifier getType();
-
     /**
      *  <p>Sets the Custom Fields fields for the Line Item.</p>
      * @return fields
@@ -66,30 +69,34 @@ public interface CartSetLineItemCustomTypeAction extends CartUpdateAction {
      *  <p><code>id</code> of the LineItem to update.</p>
      * @param lineItemId value to be set
      */
-
+    
     public void setLineItemId(final String lineItemId);
-
+    
+    
     /**
      *  <p>Defines the Type that extends the Line Item with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Line Item.</p>
      * @param type value to be set
      */
-
+    
     public void setType(final TypeResourceIdentifier type);
-
+    
+    
     /**
      *  <p>Sets the Custom Fields fields for the Line Item.</p>
      * @param fields value to be set
      */
-
+    
     public void setFields(final FieldContainer fields);
+    
 
     /**
      * factory method
      * @return instance of CartSetLineItemCustomTypeAction
      */
-    public static CartSetLineItemCustomTypeAction of() {
+    public static CartSetLineItemCustomTypeAction of(){
         return new CartSetLineItemCustomTypeActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy CartSetLineItemCustomTypeAction
@@ -128,7 +135,7 @@ public interface CartSetLineItemCustomTypeAction extends CartUpdateAction {
     public static CartSetLineItemCustomTypeActionBuilder builder() {
         return CartSetLineItemCustomTypeActionBuilder.of();
     }
-
+    
     /**
      * create builder for CartSetLineItemCustomTypeAction instance
      * @param template instance with prefilled values for the builder
@@ -137,6 +144,7 @@ public interface CartSetLineItemCustomTypeAction extends CartUpdateAction {
     public static CartSetLineItemCustomTypeActionBuilder builder(final CartSetLineItemCustomTypeAction template) {
         return CartSetLineItemCustomTypeActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -147,7 +155,7 @@ public interface CartSetLineItemCustomTypeAction extends CartUpdateAction {
     default <T> T withCartSetLineItemCustomTypeAction(Function<CartSetLineItemCustomTypeAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

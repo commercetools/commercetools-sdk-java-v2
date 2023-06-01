@@ -1,18 +1,21 @@
-
 package com.commercetools.api.models.product;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
+import com.commercetools.api.models.product.ProductUpdateAction;
+import com.commercetools.api.models.product.SearchKeywords;
+import com.commercetools.api.models.product.ProductSetSearchKeywordsActionImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * ProductSetSearchKeywordsAction
@@ -25,9 +28,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .searchKeywords(searchKeywordsBuilder -> searchKeywordsBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = ProductSetSearchKeywordsActionImpl.class)
 public interface ProductSetSearchKeywordsAction extends ProductUpdateAction {
 
@@ -44,12 +50,11 @@ public interface ProductSetSearchKeywordsAction extends ProductUpdateAction {
     @Valid
     @JsonProperty("searchKeywords")
     public SearchKeywords getSearchKeywords();
-
     /**
      *  <p>If <code>true</code>, only the staged <code>searchKeywords</code> is updated. If <code>false</code>, both the current and staged <code>searchKeywords</code> are updated.</p>
      * @return staged
      */
-
+    
     @JsonProperty("staged")
     public Boolean getStaged();
 
@@ -57,23 +62,26 @@ public interface ProductSetSearchKeywordsAction extends ProductUpdateAction {
      *  <p>Value to set.</p>
      * @param searchKeywords value to be set
      */
-
+    
     public void setSearchKeywords(final SearchKeywords searchKeywords);
-
+    
+    
     /**
      *  <p>If <code>true</code>, only the staged <code>searchKeywords</code> is updated. If <code>false</code>, both the current and staged <code>searchKeywords</code> are updated.</p>
      * @param staged value to be set
      */
-
+    
     public void setStaged(final Boolean staged);
+    
 
     /**
      * factory method
      * @return instance of ProductSetSearchKeywordsAction
      */
-    public static ProductSetSearchKeywordsAction of() {
+    public static ProductSetSearchKeywordsAction of(){
         return new ProductSetSearchKeywordsActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy ProductSetSearchKeywordsAction
@@ -98,8 +106,7 @@ public interface ProductSetSearchKeywordsAction extends ProductUpdateAction {
             return null;
         }
         ProductSetSearchKeywordsActionImpl instance = new ProductSetSearchKeywordsActionImpl();
-        instance.setSearchKeywords(
-            com.commercetools.api.models.product.SearchKeywords.deepCopy(template.getSearchKeywords()));
+        instance.setSearchKeywords(com.commercetools.api.models.product.SearchKeywords.deepCopy(template.getSearchKeywords()));
         instance.setStaged(template.getStaged());
         return instance;
     }
@@ -111,7 +118,7 @@ public interface ProductSetSearchKeywordsAction extends ProductUpdateAction {
     public static ProductSetSearchKeywordsActionBuilder builder() {
         return ProductSetSearchKeywordsActionBuilder.of();
     }
-
+    
     /**
      * create builder for ProductSetSearchKeywordsAction instance
      * @param template instance with prefilled values for the builder
@@ -120,6 +127,7 @@ public interface ProductSetSearchKeywordsAction extends ProductUpdateAction {
     public static ProductSetSearchKeywordsActionBuilder builder(final ProductSetSearchKeywordsAction template) {
         return ProductSetSearchKeywordsActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -130,7 +138,7 @@ public interface ProductSetSearchKeywordsAction extends ProductUpdateAction {
     default <T> T withProductSetSearchKeywordsAction(Function<ProductSetSearchKeywordsAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

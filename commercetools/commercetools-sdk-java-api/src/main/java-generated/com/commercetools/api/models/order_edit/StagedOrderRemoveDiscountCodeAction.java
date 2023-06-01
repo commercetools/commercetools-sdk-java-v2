@@ -1,20 +1,21 @@
-
 package com.commercetools.api.models.order_edit;
-
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.discount_code.DiscountCodeReference;
 import com.commercetools.api.models.order.StagedOrderUpdateAction;
+import com.commercetools.api.models.order_edit.StagedOrderRemoveDiscountCodeActionImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * StagedOrderRemoveDiscountCodeAction
@@ -27,9 +28,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .discountCode(discountCodeBuilder -> discountCodeBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = StagedOrderRemoveDiscountCodeActionImpl.class)
 public interface StagedOrderRemoveDiscountCodeAction extends StagedOrderUpdateAction {
 
@@ -51,16 +55,18 @@ public interface StagedOrderRemoveDiscountCodeAction extends StagedOrderUpdateAc
      *  <p>Reference to a DiscountCode.</p>
      * @param discountCode value to be set
      */
-
+    
     public void setDiscountCode(final DiscountCodeReference discountCode);
+    
 
     /**
      * factory method
      * @return instance of StagedOrderRemoveDiscountCodeAction
      */
-    public static StagedOrderRemoveDiscountCodeAction of() {
+    public static StagedOrderRemoveDiscountCodeAction of(){
         return new StagedOrderRemoveDiscountCodeActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy StagedOrderRemoveDiscountCodeAction
@@ -79,14 +85,12 @@ public interface StagedOrderRemoveDiscountCodeAction extends StagedOrderUpdateAc
      * @return copy instance
      */
     @Nullable
-    public static StagedOrderRemoveDiscountCodeAction deepCopy(
-            @Nullable final StagedOrderRemoveDiscountCodeAction template) {
+    public static StagedOrderRemoveDiscountCodeAction deepCopy(@Nullable final StagedOrderRemoveDiscountCodeAction template) {
         if (template == null) {
             return null;
         }
         StagedOrderRemoveDiscountCodeActionImpl instance = new StagedOrderRemoveDiscountCodeActionImpl();
-        instance.setDiscountCode(
-            com.commercetools.api.models.discount_code.DiscountCodeReference.deepCopy(template.getDiscountCode()));
+        instance.setDiscountCode(com.commercetools.api.models.discount_code.DiscountCodeReference.deepCopy(template.getDiscountCode()));
         return instance;
     }
 
@@ -97,16 +101,16 @@ public interface StagedOrderRemoveDiscountCodeAction extends StagedOrderUpdateAc
     public static StagedOrderRemoveDiscountCodeActionBuilder builder() {
         return StagedOrderRemoveDiscountCodeActionBuilder.of();
     }
-
+    
     /**
      * create builder for StagedOrderRemoveDiscountCodeAction instance
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static StagedOrderRemoveDiscountCodeActionBuilder builder(
-            final StagedOrderRemoveDiscountCodeAction template) {
+    public static StagedOrderRemoveDiscountCodeActionBuilder builder(final StagedOrderRemoveDiscountCodeAction template) {
         return StagedOrderRemoveDiscountCodeActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -117,7 +121,7 @@ public interface StagedOrderRemoveDiscountCodeAction extends StagedOrderUpdateAc
     default <T> T withStagedOrderRemoveDiscountCodeAction(Function<StagedOrderRemoveDiscountCodeAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

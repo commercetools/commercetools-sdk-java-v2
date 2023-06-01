@@ -1,9 +1,11 @@
-
 package com.commercetools.api.predicates.query.subscription;
 
 import com.commercetools.api.predicates.query.*;
 
-public class PlatformFormatQueryBuilderDsl {
+import java.util.function.Function;
+
+
+public class PlatformFormatQueryBuilderDsl  {
     public PlatformFormatQueryBuilderDsl() {
     }
 
@@ -12,9 +14,8 @@ public class PlatformFormatQueryBuilderDsl {
     }
 
     public StringComparisonPredicateBuilder<PlatformFormatQueryBuilderDsl> type() {
-        return new StringComparisonPredicateBuilder<>(
-            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("type")),
-            p -> new CombinationQueryPredicate<>(p, PlatformFormatQueryBuilderDsl::of));
+        return new StringComparisonPredicateBuilder<>(BinaryQueryPredicate.of().left(new ConstantQueryPredicate("type")),
+        p -> new CombinationQueryPredicate<>(p, PlatformFormatQueryBuilderDsl::of));
     }
-
+    
 }

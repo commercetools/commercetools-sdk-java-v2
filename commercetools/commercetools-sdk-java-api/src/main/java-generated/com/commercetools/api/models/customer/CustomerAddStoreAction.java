@@ -1,19 +1,21 @@
-
 package com.commercetools.api.models.customer;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
+import com.commercetools.api.models.customer.CustomerUpdateAction;
 import com.commercetools.api.models.store.StoreResourceIdentifier;
+import com.commercetools.api.models.customer.CustomerAddStoreActionImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Associates the Customer with a Store.</p>
@@ -26,9 +28,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .store(storeBuilder -> storeBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = CustomerAddStoreActionImpl.class)
 public interface CustomerAddStoreAction extends CustomerUpdateAction {
 
@@ -50,16 +55,18 @@ public interface CustomerAddStoreAction extends CustomerUpdateAction {
      *  <p>ResourceIdentifier of the Store to add.</p>
      * @param store value to be set
      */
-
+    
     public void setStore(final StoreResourceIdentifier store);
+    
 
     /**
      * factory method
      * @return instance of CustomerAddStoreAction
      */
-    public static CustomerAddStoreAction of() {
+    public static CustomerAddStoreAction of(){
         return new CustomerAddStoreActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy CustomerAddStoreAction
@@ -94,7 +101,7 @@ public interface CustomerAddStoreAction extends CustomerUpdateAction {
     public static CustomerAddStoreActionBuilder builder() {
         return CustomerAddStoreActionBuilder.of();
     }
-
+    
     /**
      * create builder for CustomerAddStoreAction instance
      * @param template instance with prefilled values for the builder
@@ -103,6 +110,7 @@ public interface CustomerAddStoreAction extends CustomerUpdateAction {
     public static CustomerAddStoreActionBuilder builder(final CustomerAddStoreAction template) {
         return CustomerAddStoreActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -113,7 +121,7 @@ public interface CustomerAddStoreAction extends CustomerUpdateAction {
     default <T> T withCustomerAddStoreAction(Function<CustomerAddStoreAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

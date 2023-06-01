@@ -1,67 +1,74 @@
-
 package com.commercetools.api.models.channel;
 
+import com.commercetools.api.models.channel.ChannelAddRolesAction;
+import com.commercetools.api.models.channel.ChannelChangeDescriptionAction;
+import com.commercetools.api.models.channel.ChannelChangeKeyAction;
+import com.commercetools.api.models.channel.ChannelChangeNameAction;
+import com.commercetools.api.models.channel.ChannelRemoveRolesAction;
+import com.commercetools.api.models.channel.ChannelSetAddressAction;
+import com.commercetools.api.models.channel.ChannelSetAddressCustomFieldAction;
+import com.commercetools.api.models.channel.ChannelSetAddressCustomTypeAction;
+import com.commercetools.api.models.channel.ChannelSetCustomFieldAction;
+import com.commercetools.api.models.channel.ChannelSetCustomTypeAction;
+import com.commercetools.api.models.channel.ChannelSetGeoLocationAction;
+import com.commercetools.api.models.channel.ChannelSetRolesAction;
+import com.commercetools.api.models.channel.ChannelUpdateAction;
+import javax.annotation.Nullable;
 import java.util.*;
-
+import java.util.function.Function;
+import java.time.ZonedDateTime;
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
  * ChannelUpdateActionBuilder
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class ChannelUpdateActionBuilder {
 
     public com.commercetools.api.models.channel.ChannelAddRolesActionBuilder addRolesBuilder() {
-        return com.commercetools.api.models.channel.ChannelAddRolesActionBuilder.of();
+       return com.commercetools.api.models.channel.ChannelAddRolesActionBuilder.of();
     }
-
     public com.commercetools.api.models.channel.ChannelChangeDescriptionActionBuilder changeDescriptionBuilder() {
-        return com.commercetools.api.models.channel.ChannelChangeDescriptionActionBuilder.of();
+       return com.commercetools.api.models.channel.ChannelChangeDescriptionActionBuilder.of();
     }
-
     public com.commercetools.api.models.channel.ChannelChangeKeyActionBuilder changeKeyBuilder() {
-        return com.commercetools.api.models.channel.ChannelChangeKeyActionBuilder.of();
+       return com.commercetools.api.models.channel.ChannelChangeKeyActionBuilder.of();
     }
-
     public com.commercetools.api.models.channel.ChannelChangeNameActionBuilder changeNameBuilder() {
-        return com.commercetools.api.models.channel.ChannelChangeNameActionBuilder.of();
+       return com.commercetools.api.models.channel.ChannelChangeNameActionBuilder.of();
     }
-
     public com.commercetools.api.models.channel.ChannelRemoveRolesActionBuilder removeRolesBuilder() {
-        return com.commercetools.api.models.channel.ChannelRemoveRolesActionBuilder.of();
+       return com.commercetools.api.models.channel.ChannelRemoveRolesActionBuilder.of();
     }
-
     public com.commercetools.api.models.channel.ChannelSetAddressActionBuilder setAddressBuilder() {
-        return com.commercetools.api.models.channel.ChannelSetAddressActionBuilder.of();
+       return com.commercetools.api.models.channel.ChannelSetAddressActionBuilder.of();
     }
-
     public com.commercetools.api.models.channel.ChannelSetAddressCustomFieldActionBuilder setAddressCustomFieldBuilder() {
-        return com.commercetools.api.models.channel.ChannelSetAddressCustomFieldActionBuilder.of();
+       return com.commercetools.api.models.channel.ChannelSetAddressCustomFieldActionBuilder.of();
     }
-
     public com.commercetools.api.models.channel.ChannelSetAddressCustomTypeActionBuilder setAddressCustomTypeBuilder() {
-        return com.commercetools.api.models.channel.ChannelSetAddressCustomTypeActionBuilder.of();
+       return com.commercetools.api.models.channel.ChannelSetAddressCustomTypeActionBuilder.of();
     }
-
     public com.commercetools.api.models.channel.ChannelSetCustomFieldActionBuilder setCustomFieldBuilder() {
-        return com.commercetools.api.models.channel.ChannelSetCustomFieldActionBuilder.of();
+       return com.commercetools.api.models.channel.ChannelSetCustomFieldActionBuilder.of();
     }
-
     public com.commercetools.api.models.channel.ChannelSetCustomTypeActionBuilder setCustomTypeBuilder() {
-        return com.commercetools.api.models.channel.ChannelSetCustomTypeActionBuilder.of();
+       return com.commercetools.api.models.channel.ChannelSetCustomTypeActionBuilder.of();
     }
-
     public com.commercetools.api.models.channel.ChannelSetGeoLocationActionBuilder setGeoLocationBuilder() {
-        return com.commercetools.api.models.channel.ChannelSetGeoLocationActionBuilder.of();
+       return com.commercetools.api.models.channel.ChannelSetGeoLocationActionBuilder.of();
     }
-
     public com.commercetools.api.models.channel.ChannelSetRolesActionBuilder setRolesBuilder() {
-        return com.commercetools.api.models.channel.ChannelSetRolesActionBuilder.of();
+       return com.commercetools.api.models.channel.ChannelSetRolesActionBuilder.of();
     }
 
     /**
      * factory method for an instance of ChannelUpdateActionBuilder
-     * @return builder
+     * @return builder 
      */
     public static ChannelUpdateActionBuilder of() {
         return new ChannelUpdateActionBuilder();

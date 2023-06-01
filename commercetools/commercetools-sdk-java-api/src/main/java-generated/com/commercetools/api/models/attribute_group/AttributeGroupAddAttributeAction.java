@@ -1,18 +1,21 @@
-
 package com.commercetools.api.models.attribute_group;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
+import com.commercetools.api.models.attribute_group.AttributeGroupUpdateAction;
+import com.commercetools.api.models.attribute_group.AttributeReference;
+import com.commercetools.api.models.attribute_group.AttributeGroupAddAttributeActionImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * AttributeGroupAddAttributeAction
@@ -25,9 +28,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .attribute(attributeBuilder -> attributeBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = AttributeGroupAddAttributeActionImpl.class)
 public interface AttributeGroupAddAttributeAction extends AttributeGroupUpdateAction {
 
@@ -49,16 +55,18 @@ public interface AttributeGroupAddAttributeAction extends AttributeGroupUpdateAc
      *  <p>Value to add.</p>
      * @param attribute value to be set
      */
-
+    
     public void setAttribute(final AttributeReference attribute);
+    
 
     /**
      * factory method
      * @return instance of AttributeGroupAddAttributeAction
      */
-    public static AttributeGroupAddAttributeAction of() {
+    public static AttributeGroupAddAttributeAction of(){
         return new AttributeGroupAddAttributeActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy AttributeGroupAddAttributeAction
@@ -82,8 +90,7 @@ public interface AttributeGroupAddAttributeAction extends AttributeGroupUpdateAc
             return null;
         }
         AttributeGroupAddAttributeActionImpl instance = new AttributeGroupAddAttributeActionImpl();
-        instance.setAttribute(
-            com.commercetools.api.models.attribute_group.AttributeReference.deepCopy(template.getAttribute()));
+        instance.setAttribute(com.commercetools.api.models.attribute_group.AttributeReference.deepCopy(template.getAttribute()));
         return instance;
     }
 
@@ -94,7 +101,7 @@ public interface AttributeGroupAddAttributeAction extends AttributeGroupUpdateAc
     public static AttributeGroupAddAttributeActionBuilder builder() {
         return AttributeGroupAddAttributeActionBuilder.of();
     }
-
+    
     /**
      * create builder for AttributeGroupAddAttributeAction instance
      * @param template instance with prefilled values for the builder
@@ -103,6 +110,7 @@ public interface AttributeGroupAddAttributeAction extends AttributeGroupUpdateAc
     public static AttributeGroupAddAttributeActionBuilder builder(final AttributeGroupAddAttributeAction template) {
         return AttributeGroupAddAttributeActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -113,7 +121,7 @@ public interface AttributeGroupAddAttributeAction extends AttributeGroupUpdateAc
     default <T> T withAttributeGroupAddAttributeAction(Function<AttributeGroupAddAttributeAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

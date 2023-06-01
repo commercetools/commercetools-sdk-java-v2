@@ -1,20 +1,21 @@
-
 package com.commercetools.history.models.change;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-import java.util.stream.Collectors;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
+import com.commercetools.history.models.change.Change;
 import com.commercetools.history.models.common.StoreCountry;
+import com.commercetools.history.models.change.SetCountriesChangeImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * SetCountriesChange
@@ -29,9 +30,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .plusNextValue(nextValueBuilder -> nextValueBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = SetCountriesChangeImpl.class)
 public interface SetCountriesChange extends Change {
 
@@ -47,7 +51,6 @@ public interface SetCountriesChange extends Change {
     @NotNull
     @JsonProperty("type")
     public String getType();
-
     /**
      *  <p>Update action for <code>setCountries</code>.</p>
      * @return change
@@ -55,7 +58,6 @@ public interface SetCountriesChange extends Change {
     @NotNull
     @JsonProperty("change")
     public String getChange();
-
     /**
      *  <p>Countries defined for the Store prior to the update action.</p>
      * @return previousValue
@@ -64,7 +66,6 @@ public interface SetCountriesChange extends Change {
     @Valid
     @JsonProperty("previousValue")
     public List<StoreCountry> getPreviousValue();
-
     /**
      *  <p>Countries defined for the Store after the update action.</p>
      * @return nextValue
@@ -78,46 +79,46 @@ public interface SetCountriesChange extends Change {
      *  <p>Update action for <code>setCountries</code>.</p>
      * @param change value to be set
      */
-
+    
     public void setChange(final String change);
-
+    
+    
     /**
      *  <p>Countries defined for the Store prior to the update action.</p>
      * @param previousValue values to be set
      */
-
+    
     @JsonIgnore
-    public void setPreviousValue(final StoreCountry... previousValue);
-
+    public void setPreviousValue(final StoreCountry ...previousValue);
     /**
      *  <p>Countries defined for the Store prior to the update action.</p>
      * @param previousValue values to be set
      */
-
+    
     public void setPreviousValue(final List<StoreCountry> previousValue);
-
+    
     /**
      *  <p>Countries defined for the Store after the update action.</p>
      * @param nextValue values to be set
      */
-
+    
     @JsonIgnore
-    public void setNextValue(final StoreCountry... nextValue);
-
+    public void setNextValue(final StoreCountry ...nextValue);
     /**
      *  <p>Countries defined for the Store after the update action.</p>
      * @param nextValue values to be set
      */
-
+    
     public void setNextValue(final List<StoreCountry> nextValue);
 
     /**
      * factory method
      * @return instance of SetCountriesChange
      */
-    public static SetCountriesChange of() {
+    public static SetCountriesChange of(){
         return new SetCountriesChangeImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy SetCountriesChange
@@ -145,14 +146,10 @@ public interface SetCountriesChange extends Change {
         SetCountriesChangeImpl instance = new SetCountriesChangeImpl();
         instance.setChange(template.getChange());
         instance.setPreviousValue(Optional.ofNullable(template.getPreviousValue())
-                .map(t -> t.stream()
-                        .map(com.commercetools.history.models.common.StoreCountry::deepCopy)
-                        .collect(Collectors.toList()))
+                .map(t -> t.stream().map(com.commercetools.history.models.common.StoreCountry::deepCopy).collect(Collectors.toList()))
                 .orElse(null));
         instance.setNextValue(Optional.ofNullable(template.getNextValue())
-                .map(t -> t.stream()
-                        .map(com.commercetools.history.models.common.StoreCountry::deepCopy)
-                        .collect(Collectors.toList()))
+                .map(t -> t.stream().map(com.commercetools.history.models.common.StoreCountry::deepCopy).collect(Collectors.toList()))
                 .orElse(null));
         return instance;
     }
@@ -164,7 +161,7 @@ public interface SetCountriesChange extends Change {
     public static SetCountriesChangeBuilder builder() {
         return SetCountriesChangeBuilder.of();
     }
-
+    
     /**
      * create builder for SetCountriesChange instance
      * @param template instance with prefilled values for the builder
@@ -173,6 +170,7 @@ public interface SetCountriesChange extends Change {
     public static SetCountriesChangeBuilder builder(final SetCountriesChange template) {
         return SetCountriesChangeBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -183,7 +181,7 @@ public interface SetCountriesChange extends Change {
     default <T> T withSetCountriesChange(Function<SetCountriesChange, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

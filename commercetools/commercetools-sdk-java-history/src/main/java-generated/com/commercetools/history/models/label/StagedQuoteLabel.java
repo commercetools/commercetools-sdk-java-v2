@@ -1,19 +1,21 @@
-
 package com.commercetools.history.models.label;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
 import com.commercetools.history.models.common.Reference;
+import com.commercetools.history.models.label.Label;
+import com.commercetools.history.models.label.StagedQuoteLabelImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * StagedQuoteLabel
@@ -28,9 +30,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .quoteRequest(quoteRequestBuilder -> quoteRequestBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = StagedQuoteLabelImpl.class)
 public interface StagedQuoteLabel extends Label {
 
@@ -46,7 +51,6 @@ public interface StagedQuoteLabel extends Label {
     @NotNull
     @JsonProperty("type")
     public String getType();
-
     /**
      *
      * @return key
@@ -54,7 +58,6 @@ public interface StagedQuoteLabel extends Label {
     @NotNull
     @JsonProperty("key")
     public String getKey();
-
     /**
      *
      * @return customer
@@ -63,7 +66,6 @@ public interface StagedQuoteLabel extends Label {
     @Valid
     @JsonProperty("customer")
     public Reference getCustomer();
-
     /**
      *
      * @return quoteRequest
@@ -77,30 +79,34 @@ public interface StagedQuoteLabel extends Label {
      * set key
      * @param key value to be set
      */
-
+    
     public void setKey(final String key);
-
+    
+    
     /**
      * set customer
      * @param customer value to be set
      */
-
+    
     public void setCustomer(final Reference customer);
-
+    
+    
     /**
      * set quoteRequest
      * @param quoteRequest value to be set
      */
-
+    
     public void setQuoteRequest(final Reference quoteRequest);
+    
 
     /**
      * factory method
      * @return instance of StagedQuoteLabel
      */
-    public static StagedQuoteLabel of() {
+    public static StagedQuoteLabel of(){
         return new StagedQuoteLabelImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy StagedQuoteLabel
@@ -128,8 +134,7 @@ public interface StagedQuoteLabel extends Label {
         StagedQuoteLabelImpl instance = new StagedQuoteLabelImpl();
         instance.setKey(template.getKey());
         instance.setCustomer(com.commercetools.history.models.common.Reference.deepCopy(template.getCustomer()));
-        instance.setQuoteRequest(
-            com.commercetools.history.models.common.Reference.deepCopy(template.getQuoteRequest()));
+        instance.setQuoteRequest(com.commercetools.history.models.common.Reference.deepCopy(template.getQuoteRequest()));
         return instance;
     }
 
@@ -140,7 +145,7 @@ public interface StagedQuoteLabel extends Label {
     public static StagedQuoteLabelBuilder builder() {
         return StagedQuoteLabelBuilder.of();
     }
-
+    
     /**
      * create builder for StagedQuoteLabel instance
      * @param template instance with prefilled values for the builder
@@ -149,6 +154,7 @@ public interface StagedQuoteLabel extends Label {
     public static StagedQuoteLabelBuilder builder(final StagedQuoteLabel template) {
         return StagedQuoteLabelBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -159,7 +165,7 @@ public interface StagedQuoteLabel extends Label {
     default <T> T withStagedQuoteLabel(Function<StagedQuoteLabel, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

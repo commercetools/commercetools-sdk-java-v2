@@ -1,8 +1,12 @@
-
 package com.commercetools.api.models.message;
 
+import com.commercetools.api.models.message.OrderMessagePayload;
+import com.commercetools.api.models.order.OrderState;
+import com.commercetools.api.models.message.OrderStateChangedMessagePayload;
+import javax.annotation.Nullable;
 import java.util.*;
-
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -17,54 +21,67 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .oldOrderState(OrderState.OPEN)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class OrderStateChangedMessagePayloadBuilder implements Builder<OrderStateChangedMessagePayload> {
 
+    
+    
     private com.commercetools.api.models.order.OrderState orderState;
-
+    
+    
+    
     private com.commercetools.api.models.order.OrderState oldOrderState;
 
+    
     /**
      *  <p>OrderState after the Change Order State update action.</p>
      * @param orderState value to be set
      * @return Builder
      */
-
-    public OrderStateChangedMessagePayloadBuilder orderState(
-            final com.commercetools.api.models.order.OrderState orderState) {
+    
+    public OrderStateChangedMessagePayloadBuilder orderState( final com.commercetools.api.models.order.OrderState orderState) {
         this.orderState = orderState;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>OrderState before the Change Order State update action.</p>
      * @param oldOrderState value to be set
      * @return Builder
      */
-
-    public OrderStateChangedMessagePayloadBuilder oldOrderState(
-            final com.commercetools.api.models.order.OrderState oldOrderState) {
+    
+    public OrderStateChangedMessagePayloadBuilder oldOrderState( final com.commercetools.api.models.order.OrderState oldOrderState) {
         this.oldOrderState = oldOrderState;
         return this;
     }
+    
+    
 
     /**
      *  <p>OrderState after the Change Order State update action.</p>
      * @return orderState
      */
-
-    public com.commercetools.api.models.order.OrderState getOrderState() {
+    
+    
+    public com.commercetools.api.models.order.OrderState getOrderState(){
         return this.orderState;
     }
-
+    
     /**
      *  <p>OrderState before the Change Order State update action.</p>
      * @return oldOrderState
      */
-
-    public com.commercetools.api.models.order.OrderState getOldOrderState() {
+    
+    
+    public com.commercetools.api.models.order.OrderState getOldOrderState(){
         return this.oldOrderState;
     }
 
@@ -77,7 +94,7 @@ public class OrderStateChangedMessagePayloadBuilder implements Builder<OrderStat
         Objects.requireNonNull(oldOrderState, OrderStateChangedMessagePayload.class + ": oldOrderState is missing");
         return new OrderStateChangedMessagePayloadImpl(orderState, oldOrderState);
     }
-
+    
     /**
      * builds OrderStateChangedMessagePayload without checking for non-null required values
      * @return OrderStateChangedMessagePayload
@@ -88,7 +105,7 @@ public class OrderStateChangedMessagePayloadBuilder implements Builder<OrderStat
 
     /**
      * factory method for an instance of OrderStateChangedMessagePayloadBuilder
-     * @return builder
+     * @return builder 
      */
     public static OrderStateChangedMessagePayloadBuilder of() {
         return new OrderStateChangedMessagePayloadBuilder();

@@ -1,8 +1,12 @@
-
 package com.commercetools.api.models.message;
 
+import com.commercetools.api.models.message.MessagePayload;
+import java.time.ZonedDateTime;
+import com.commercetools.api.models.message.StagedQuoteValidToSetMessagePayload;
+import javax.annotation.Nullable;
 import java.util.*;
-
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -16,30 +20,39 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .validTo(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class StagedQuoteValidToSetMessagePayloadBuilder implements Builder<StagedQuoteValidToSetMessagePayload> {
 
+    
+    
     private java.time.ZonedDateTime validTo;
 
+    
     /**
      *  <p>Expiration date for the Staged Quote after the Set Valid To update action.</p>
      * @param validTo value to be set
      * @return Builder
      */
-
-    public StagedQuoteValidToSetMessagePayloadBuilder validTo(final java.time.ZonedDateTime validTo) {
+    
+    public StagedQuoteValidToSetMessagePayloadBuilder validTo( final java.time.ZonedDateTime validTo) {
         this.validTo = validTo;
         return this;
     }
+    
+    
 
     /**
      *  <p>Expiration date for the Staged Quote after the Set Valid To update action.</p>
      * @return validTo
      */
-
-    public java.time.ZonedDateTime getValidTo() {
+    
+    
+    public java.time.ZonedDateTime getValidTo(){
         return this.validTo;
     }
 
@@ -51,7 +64,7 @@ public class StagedQuoteValidToSetMessagePayloadBuilder implements Builder<Stage
         Objects.requireNonNull(validTo, StagedQuoteValidToSetMessagePayload.class + ": validTo is missing");
         return new StagedQuoteValidToSetMessagePayloadImpl(validTo);
     }
-
+    
     /**
      * builds StagedQuoteValidToSetMessagePayload without checking for non-null required values
      * @return StagedQuoteValidToSetMessagePayload
@@ -62,7 +75,7 @@ public class StagedQuoteValidToSetMessagePayloadBuilder implements Builder<Stage
 
     /**
      * factory method for an instance of StagedQuoteValidToSetMessagePayloadBuilder
-     * @return builder
+     * @return builder 
      */
     public static StagedQuoteValidToSetMessagePayloadBuilder of() {
         return new StagedQuoteValidToSetMessagePayloadBuilder();

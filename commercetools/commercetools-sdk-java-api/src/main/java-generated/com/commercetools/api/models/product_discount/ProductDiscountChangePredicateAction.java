@@ -1,17 +1,20 @@
-
 package com.commercetools.api.models.product_discount;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
+import com.commercetools.api.models.product_discount.ProductDiscountUpdateAction;
+import com.commercetools.api.models.product_discount.ProductDiscountChangePredicateActionImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * ProductDiscountChangePredicateAction
@@ -24,9 +27,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .predicate("{predicate}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = ProductDiscountChangePredicateActionImpl.class)
 public interface ProductDiscountChangePredicateAction extends ProductDiscountUpdateAction {
 
@@ -47,16 +53,18 @@ public interface ProductDiscountChangePredicateAction extends ProductDiscountUpd
      *  <p>New value to set. Must be a valid ProductDiscount predicate.</p>
      * @param predicate value to be set
      */
-
+    
     public void setPredicate(final String predicate);
+    
 
     /**
      * factory method
      * @return instance of ProductDiscountChangePredicateAction
      */
-    public static ProductDiscountChangePredicateAction of() {
+    public static ProductDiscountChangePredicateAction of(){
         return new ProductDiscountChangePredicateActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy ProductDiscountChangePredicateAction
@@ -75,8 +83,7 @@ public interface ProductDiscountChangePredicateAction extends ProductDiscountUpd
      * @return copy instance
      */
     @Nullable
-    public static ProductDiscountChangePredicateAction deepCopy(
-            @Nullable final ProductDiscountChangePredicateAction template) {
+    public static ProductDiscountChangePredicateAction deepCopy(@Nullable final ProductDiscountChangePredicateAction template) {
         if (template == null) {
             return null;
         }
@@ -92,16 +99,16 @@ public interface ProductDiscountChangePredicateAction extends ProductDiscountUpd
     public static ProductDiscountChangePredicateActionBuilder builder() {
         return ProductDiscountChangePredicateActionBuilder.of();
     }
-
+    
     /**
      * create builder for ProductDiscountChangePredicateAction instance
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static ProductDiscountChangePredicateActionBuilder builder(
-            final ProductDiscountChangePredicateAction template) {
+    public static ProductDiscountChangePredicateActionBuilder builder(final ProductDiscountChangePredicateAction template) {
         return ProductDiscountChangePredicateActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -112,7 +119,7 @@ public interface ProductDiscountChangePredicateAction extends ProductDiscountUpd
     default <T> T withProductDiscountChangePredicateAction(Function<ProductDiscountChangePredicateAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

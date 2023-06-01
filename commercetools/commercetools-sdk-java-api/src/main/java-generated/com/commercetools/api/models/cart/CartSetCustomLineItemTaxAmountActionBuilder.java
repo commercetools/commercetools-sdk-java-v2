@@ -1,11 +1,12 @@
-
 package com.commercetools.api.models.cart;
 
+import com.commercetools.api.models.cart.CartUpdateAction;
+import com.commercetools.api.models.cart.ExternalTaxAmountDraft;
+import com.commercetools.api.models.cart.CartSetCustomLineItemTaxAmountAction;
+import javax.annotation.Nullable;
 import java.util.*;
 import java.util.function.Function;
-
-import javax.annotation.Nullable;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -19,80 +20,89 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .customLineItemId("{customLineItemId}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class CartSetCustomLineItemTaxAmountActionBuilder implements Builder<CartSetCustomLineItemTaxAmountAction> {
 
+    
+    
     private String customLineItemId;
-
+    
+    
     @Nullable
     private com.commercetools.api.models.cart.ExternalTaxAmountDraft externalTaxAmount;
 
+    
     /**
      *  <p><code>id</code> of the CustomLineItem to update.</p>
      * @param customLineItemId value to be set
      * @return Builder
      */
-
-    public CartSetCustomLineItemTaxAmountActionBuilder customLineItemId(final String customLineItemId) {
+    
+    public CartSetCustomLineItemTaxAmountActionBuilder customLineItemId( final String customLineItemId) {
         this.customLineItemId = customLineItemId;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Value to set. If empty, any existing value is removed.</p>
      * @param builder function to build the externalTaxAmount value
      * @return Builder
      */
-
-    public CartSetCustomLineItemTaxAmountActionBuilder externalTaxAmount(
-            Function<com.commercetools.api.models.cart.ExternalTaxAmountDraftBuilder, com.commercetools.api.models.cart.ExternalTaxAmountDraftBuilder> builder) {
-        this.externalTaxAmount = builder.apply(com.commercetools.api.models.cart.ExternalTaxAmountDraftBuilder.of())
-                .build();
+    
+    public CartSetCustomLineItemTaxAmountActionBuilder externalTaxAmount(Function<com.commercetools.api.models.cart.ExternalTaxAmountDraftBuilder, com.commercetools.api.models.cart.ExternalTaxAmountDraftBuilder> builder) {
+        this.externalTaxAmount = builder.apply(com.commercetools.api.models.cart.ExternalTaxAmountDraftBuilder.of()).build();
         return this;
     }
-
+    
     /**
      *  <p>Value to set. If empty, any existing value is removed.</p>
      * @param builder function to build the externalTaxAmount value
      * @return Builder
      */
-
-    public CartSetCustomLineItemTaxAmountActionBuilder withExternalTaxAmount(
-            Function<com.commercetools.api.models.cart.ExternalTaxAmountDraftBuilder, com.commercetools.api.models.cart.ExternalTaxAmountDraft> builder) {
+    
+    public CartSetCustomLineItemTaxAmountActionBuilder withExternalTaxAmount(Function<com.commercetools.api.models.cart.ExternalTaxAmountDraftBuilder, com.commercetools.api.models.cart.ExternalTaxAmountDraft> builder) {
         this.externalTaxAmount = builder.apply(com.commercetools.api.models.cart.ExternalTaxAmountDraftBuilder.of());
         return this;
     }
-
+                    
     /**
      *  <p>Value to set. If empty, any existing value is removed.</p>
      * @param externalTaxAmount value to be set
      * @return Builder
      */
-
-    public CartSetCustomLineItemTaxAmountActionBuilder externalTaxAmount(
-            @Nullable final com.commercetools.api.models.cart.ExternalTaxAmountDraft externalTaxAmount) {
+    
+    public CartSetCustomLineItemTaxAmountActionBuilder externalTaxAmount(@Nullable final com.commercetools.api.models.cart.ExternalTaxAmountDraft externalTaxAmount) {
         this.externalTaxAmount = externalTaxAmount;
         return this;
     }
+    
+    
 
     /**
      *  <p><code>id</code> of the CustomLineItem to update.</p>
      * @return customLineItemId
      */
-
-    public String getCustomLineItemId() {
+    
+    
+    public String getCustomLineItemId(){
         return this.customLineItemId;
     }
-
+    
     /**
      *  <p>Value to set. If empty, any existing value is removed.</p>
      * @return externalTaxAmount
      */
-
+    
     @Nullable
-    public com.commercetools.api.models.cart.ExternalTaxAmountDraft getExternalTaxAmount() {
+    public com.commercetools.api.models.cart.ExternalTaxAmountDraft getExternalTaxAmount(){
         return this.externalTaxAmount;
     }
 
@@ -101,11 +111,10 @@ public class CartSetCustomLineItemTaxAmountActionBuilder implements Builder<Cart
      * @return CartSetCustomLineItemTaxAmountAction
      */
     public CartSetCustomLineItemTaxAmountAction build() {
-        Objects.requireNonNull(customLineItemId,
-            CartSetCustomLineItemTaxAmountAction.class + ": customLineItemId is missing");
+        Objects.requireNonNull(customLineItemId, CartSetCustomLineItemTaxAmountAction.class + ": customLineItemId is missing");
         return new CartSetCustomLineItemTaxAmountActionImpl(customLineItemId, externalTaxAmount);
     }
-
+    
     /**
      * builds CartSetCustomLineItemTaxAmountAction without checking for non-null required values
      * @return CartSetCustomLineItemTaxAmountAction
@@ -116,7 +125,7 @@ public class CartSetCustomLineItemTaxAmountActionBuilder implements Builder<Cart
 
     /**
      * factory method for an instance of CartSetCustomLineItemTaxAmountActionBuilder
-     * @return builder
+     * @return builder 
      */
     public static CartSetCustomLineItemTaxAmountActionBuilder of() {
         return new CartSetCustomLineItemTaxAmountActionBuilder();

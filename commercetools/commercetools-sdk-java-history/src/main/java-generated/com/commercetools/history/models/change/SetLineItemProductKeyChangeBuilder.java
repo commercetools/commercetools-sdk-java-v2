@@ -1,9 +1,12 @@
-
 package com.commercetools.history.models.change;
 
+import com.commercetools.history.models.change.Change;
+import com.commercetools.history.models.common.LocalizedString;
+import com.commercetools.history.models.change.SetLineItemProductKeyChange;
+import javax.annotation.Nullable;
 import java.util.*;
 import java.util.function.Function;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -22,165 +25,201 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .nextValue("{nextValue}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class SetLineItemProductKeyChangeBuilder implements Builder<SetLineItemProductKeyChange> {
 
+    
+    
     private String change;
-
+    
+    
+    
     private com.commercetools.history.models.common.LocalizedString lineItem;
-
+    
+    
+    
     private String lineItemId;
-
+    
+    
+    
     private String variant;
-
+    
+    
+    
     private String previousValue;
-
+    
+    
+    
     private String nextValue;
 
+    
     /**
      *  <p>Update action for <code>setLineItemProductKey</code></p>
      * @param change value to be set
      * @return Builder
      */
-
-    public SetLineItemProductKeyChangeBuilder change(final String change) {
+    
+    public SetLineItemProductKeyChangeBuilder change( final String change) {
         this.change = change;
         return this;
     }
-
+    
+    
+    
+    
     /**
      * set the value to the lineItem using the builder function
      * @param builder function to build the lineItem value
      * @return Builder
      */
-
-    public SetLineItemProductKeyChangeBuilder lineItem(
-            Function<com.commercetools.history.models.common.LocalizedStringBuilder, com.commercetools.history.models.common.LocalizedStringBuilder> builder) {
+    
+    public SetLineItemProductKeyChangeBuilder lineItem(Function<com.commercetools.history.models.common.LocalizedStringBuilder, com.commercetools.history.models.common.LocalizedStringBuilder> builder) {
         this.lineItem = builder.apply(com.commercetools.history.models.common.LocalizedStringBuilder.of()).build();
         return this;
     }
-
+    
     /**
      * set the value to the lineItem using the builder function
      * @param builder function to build the lineItem value
      * @return Builder
      */
-
-    public SetLineItemProductKeyChangeBuilder withLineItem(
-            Function<com.commercetools.history.models.common.LocalizedStringBuilder, com.commercetools.history.models.common.LocalizedString> builder) {
+    
+    public SetLineItemProductKeyChangeBuilder withLineItem(Function<com.commercetools.history.models.common.LocalizedStringBuilder, com.commercetools.history.models.common.LocalizedString> builder) {
         this.lineItem = builder.apply(com.commercetools.history.models.common.LocalizedStringBuilder.of());
         return this;
     }
-
+                    
     /**
      * set the value to the lineItem
      * @param lineItem value to be set
      * @return Builder
      */
-
-    public SetLineItemProductKeyChangeBuilder lineItem(
-            final com.commercetools.history.models.common.LocalizedString lineItem) {
+    
+    public SetLineItemProductKeyChangeBuilder lineItem( final com.commercetools.history.models.common.LocalizedString lineItem) {
         this.lineItem = lineItem;
         return this;
     }
-
+    
+    
+    
+    
     /**
      * set the value to the lineItemId
      * @param lineItemId value to be set
      * @return Builder
      */
-
-    public SetLineItemProductKeyChangeBuilder lineItemId(final String lineItemId) {
+    
+    public SetLineItemProductKeyChangeBuilder lineItemId( final String lineItemId) {
         this.lineItemId = lineItemId;
         return this;
     }
-
+    
+    
+    
+    
     /**
      * set the value to the variant
      * @param variant value to be set
      * @return Builder
      */
-
-    public SetLineItemProductKeyChangeBuilder variant(final String variant) {
+    
+    public SetLineItemProductKeyChangeBuilder variant( final String variant) {
         this.variant = variant;
         return this;
     }
-
+    
+    
+    
+    
     /**
      * set the value to the previousValue
      * @param previousValue value to be set
      * @return Builder
      */
-
-    public SetLineItemProductKeyChangeBuilder previousValue(final String previousValue) {
+    
+    public SetLineItemProductKeyChangeBuilder previousValue( final String previousValue) {
         this.previousValue = previousValue;
         return this;
     }
-
+    
+    
+    
+    
     /**
      * set the value to the nextValue
      * @param nextValue value to be set
      * @return Builder
      */
-
-    public SetLineItemProductKeyChangeBuilder nextValue(final String nextValue) {
+    
+    public SetLineItemProductKeyChangeBuilder nextValue( final String nextValue) {
         this.nextValue = nextValue;
         return this;
     }
+    
+    
 
     /**
      *  <p>Update action for <code>setLineItemProductKey</code></p>
      * @return change
      */
-
-    public String getChange() {
+    
+    
+    public String getChange(){
         return this.change;
     }
-
+    
     /**
      * value of lineItem}
      * @return lineItem
      */
-
-    public com.commercetools.history.models.common.LocalizedString getLineItem() {
+    
+    
+    public com.commercetools.history.models.common.LocalizedString getLineItem(){
         return this.lineItem;
     }
-
+    
     /**
      * value of lineItemId}
      * @return lineItemId
      */
-
-    public String getLineItemId() {
+    
+    
+    public String getLineItemId(){
         return this.lineItemId;
     }
-
+    
     /**
      * value of variant}
      * @return variant
      */
-
-    public String getVariant() {
+    
+    
+    public String getVariant(){
         return this.variant;
     }
-
+    
     /**
      * value of previousValue}
      * @return previousValue
      */
-
-    public String getPreviousValue() {
+    
+    
+    public String getPreviousValue(){
         return this.previousValue;
     }
-
+    
     /**
      * value of nextValue}
      * @return nextValue
      */
-
-    public String getNextValue() {
+    
+    
+    public String getNextValue(){
         return this.nextValue;
     }
 
@@ -197,7 +236,7 @@ public class SetLineItemProductKeyChangeBuilder implements Builder<SetLineItemPr
         Objects.requireNonNull(nextValue, SetLineItemProductKeyChange.class + ": nextValue is missing");
         return new SetLineItemProductKeyChangeImpl(change, lineItem, lineItemId, variant, previousValue, nextValue);
     }
-
+    
     /**
      * builds SetLineItemProductKeyChange without checking for non-null required values
      * @return SetLineItemProductKeyChange
@@ -208,7 +247,7 @@ public class SetLineItemProductKeyChangeBuilder implements Builder<SetLineItemPr
 
     /**
      * factory method for an instance of SetLineItemProductKeyChangeBuilder
-     * @return builder
+     * @return builder 
      */
     public static SetLineItemProductKeyChangeBuilder of() {
         return new SetLineItemProductKeyChangeBuilder();

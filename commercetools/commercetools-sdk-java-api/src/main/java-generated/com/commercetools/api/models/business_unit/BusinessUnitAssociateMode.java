@@ -1,32 +1,33 @@
-
 package com.commercetools.api.models.business_unit;
-
-import java.util.Arrays;
-import java.util.Optional;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-
+import java.lang.String;
+import java.util.Arrays;
+import java.util.Optional;
 import io.vrap.rmf.base.client.JsonEnum;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
  *  <p>Determines whether a Business Unit can inherit Associates from a parent.</p>
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public interface BusinessUnitAssociateMode extends JsonEnum {
 
     /**
     	<p>All Associates of a Business Unit must be explicitly assigned. The Business Unit cannot inherit Associates from a parent.</p>
-
+    	
     */
     BusinessUnitAssociateMode EXPLICIT = BusinessUnitAssociateModeEnum.EXPLICIT;
     /**
     	<p>Associates of a Business Unit can be assigned explicitly and inherited from a parent.</p>
-
+    	
     */
     BusinessUnitAssociateMode EXPLICIT_AND_FROM_PARENT = BusinessUnitAssociateModeEnum.EXPLICIT_AND_FROM_PARENT;
-
+    
     /**
      * possible values of BusinessUnitAssociateMode
      */
@@ -35,7 +36,7 @@ public interface BusinessUnitAssociateMode extends JsonEnum {
          * Explicit
          */
         EXPLICIT("Explicit"),
-
+        
         /**
          * ExplicitAndFromParent
          */
@@ -92,7 +93,7 @@ public interface BusinessUnitAssociateMode extends JsonEnum {
             public String name() {
                 return value.toUpperCase();
             }
-
+            
             public String toString() {
                 return value;
             }
@@ -107,7 +108,7 @@ public interface BusinessUnitAssociateMode extends JsonEnum {
     public static Optional<BusinessUnitAssociateMode> findEnumViaJsonName(String jsonName) {
         return Arrays.stream(values()).filter(t -> t.getJsonName().equals(jsonName)).findFirst();
     }
-
+    
     /**
      * possible enum values
      * @return array of possible enum values
@@ -115,5 +116,5 @@ public interface BusinessUnitAssociateMode extends JsonEnum {
     public static BusinessUnitAssociateMode[] values() {
         return BusinessUnitAssociateModeEnum.values();
     }
-
+    
 }

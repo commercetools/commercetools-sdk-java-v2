@@ -1,20 +1,22 @@
-
 package com.commercetools.history.models.change;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
+import com.commercetools.history.models.change.Change;
 import com.commercetools.history.models.common.LocalizedString;
 import com.commercetools.history.models.common.Money;
+import com.commercetools.history.models.change.SetCustomLineItemTotalPriceChangeImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * SetCustomLineItemTotalPriceChange
@@ -31,9 +33,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .previousValue(previousValueBuilder -> previousValueBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = SetCustomLineItemTotalPriceChangeImpl.class)
 public interface SetCustomLineItemTotalPriceChange extends Change {
 
@@ -49,7 +54,6 @@ public interface SetCustomLineItemTotalPriceChange extends Change {
     @NotNull
     @JsonProperty("type")
     public String getType();
-
     /**
      *  <p>Update action for <code>setCustomLineItemTotalPrice</code></p>
      * @return change
@@ -57,7 +61,6 @@ public interface SetCustomLineItemTotalPriceChange extends Change {
     @NotNull
     @JsonProperty("change")
     public String getChange();
-
     /**
      *
      * @return customLineItem
@@ -66,7 +69,6 @@ public interface SetCustomLineItemTotalPriceChange extends Change {
     @Valid
     @JsonProperty("customLineItem")
     public LocalizedString getCustomLineItem();
-
     /**
      *
      * @return customLineItemId
@@ -74,7 +76,6 @@ public interface SetCustomLineItemTotalPriceChange extends Change {
     @NotNull
     @JsonProperty("customLineItemId")
     public String getCustomLineItemId();
-
     /**
      *
      * @return nextValue
@@ -83,7 +84,6 @@ public interface SetCustomLineItemTotalPriceChange extends Change {
     @Valid
     @JsonProperty("nextValue")
     public Money getNextValue();
-
     /**
      *
      * @return previousValue
@@ -97,44 +97,50 @@ public interface SetCustomLineItemTotalPriceChange extends Change {
      *  <p>Update action for <code>setCustomLineItemTotalPrice</code></p>
      * @param change value to be set
      */
-
+    
     public void setChange(final String change);
-
+    
+    
     /**
      * set customLineItem
      * @param customLineItem value to be set
      */
-
+    
     public void setCustomLineItem(final LocalizedString customLineItem);
-
+    
+    
     /**
      * set customLineItemId
      * @param customLineItemId value to be set
      */
-
+    
     public void setCustomLineItemId(final String customLineItemId);
-
+    
+    
     /**
      * set nextValue
      * @param nextValue value to be set
      */
-
+    
     public void setNextValue(final Money nextValue);
-
+    
+    
     /**
      * set previousValue
      * @param previousValue value to be set
      */
-
+    
     public void setPreviousValue(final Money previousValue);
+    
 
     /**
      * factory method
      * @return instance of SetCustomLineItemTotalPriceChange
      */
-    public static SetCustomLineItemTotalPriceChange of() {
+    public static SetCustomLineItemTotalPriceChange of(){
         return new SetCustomLineItemTotalPriceChangeImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy SetCustomLineItemTotalPriceChange
@@ -157,15 +163,13 @@ public interface SetCustomLineItemTotalPriceChange extends Change {
      * @return copy instance
      */
     @Nullable
-    public static SetCustomLineItemTotalPriceChange deepCopy(
-            @Nullable final SetCustomLineItemTotalPriceChange template) {
+    public static SetCustomLineItemTotalPriceChange deepCopy(@Nullable final SetCustomLineItemTotalPriceChange template) {
         if (template == null) {
             return null;
         }
         SetCustomLineItemTotalPriceChangeImpl instance = new SetCustomLineItemTotalPriceChangeImpl();
         instance.setChange(template.getChange());
-        instance.setCustomLineItem(
-            com.commercetools.history.models.common.LocalizedString.deepCopy(template.getCustomLineItem()));
+        instance.setCustomLineItem(com.commercetools.history.models.common.LocalizedString.deepCopy(template.getCustomLineItem()));
         instance.setCustomLineItemId(template.getCustomLineItemId());
         instance.setNextValue(com.commercetools.history.models.common.Money.deepCopy(template.getNextValue()));
         instance.setPreviousValue(com.commercetools.history.models.common.Money.deepCopy(template.getPreviousValue()));
@@ -179,7 +183,7 @@ public interface SetCustomLineItemTotalPriceChange extends Change {
     public static SetCustomLineItemTotalPriceChangeBuilder builder() {
         return SetCustomLineItemTotalPriceChangeBuilder.of();
     }
-
+    
     /**
      * create builder for SetCustomLineItemTotalPriceChange instance
      * @param template instance with prefilled values for the builder
@@ -188,6 +192,7 @@ public interface SetCustomLineItemTotalPriceChange extends Change {
     public static SetCustomLineItemTotalPriceChangeBuilder builder(final SetCustomLineItemTotalPriceChange template) {
         return SetCustomLineItemTotalPriceChangeBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -198,7 +203,7 @@ public interface SetCustomLineItemTotalPriceChange extends Change {
     default <T> T withSetCustomLineItemTotalPriceChange(Function<SetCustomLineItemTotalPriceChange, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

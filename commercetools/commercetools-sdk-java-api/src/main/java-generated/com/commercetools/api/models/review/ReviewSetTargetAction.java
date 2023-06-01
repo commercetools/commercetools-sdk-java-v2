@@ -1,19 +1,23 @@
-
 package com.commercetools.api.models.review;
-
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.channel.ChannelResourceIdentifier;
 import com.commercetools.api.models.product.ProductResourceIdentifier;
+import com.commercetools.api.models.review.ReviewUpdateAction;
+import java.lang.Object;
+import com.commercetools.api.models.review.ReviewSetTargetActionImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * ReviewSetTargetAction
@@ -25,9 +29,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     ReviewSetTargetAction reviewSetTargetAction = ReviewSetTargetAction.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = ReviewSetTargetActionImpl.class)
 public interface ReviewSetTargetAction extends ReviewUpdateAction {
 
@@ -48,30 +55,29 @@ public interface ReviewSetTargetAction extends ReviewUpdateAction {
      *  <p>Value to set, specified as ProductResourceIdentifier or ChannelResourceIdentifier, respectively. If empty, any existing value will be removed.</p>
      * @param target value to be set
      */
-
+    
     public void setTarget(final ProductResourceIdentifier target);
-
     /**
      *  <p>Value to set, specified as ProductResourceIdentifier or ChannelResourceIdentifier, respectively. If empty, any existing value will be removed.</p>
      * @param target value to be set
      */
-
+    
     public void setTarget(final ChannelResourceIdentifier target);
-
     /**
      *  <p>Value to set, specified as ProductResourceIdentifier or ChannelResourceIdentifier, respectively. If empty, any existing value will be removed.</p>
      * @param target value to be set
      */
-
+    
     public void setTarget(final Object target);
 
     /**
      * factory method
      * @return instance of ReviewSetTargetAction
      */
-    public static ReviewSetTargetAction of() {
+    public static ReviewSetTargetAction of(){
         return new ReviewSetTargetActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy ReviewSetTargetAction
@@ -106,7 +112,7 @@ public interface ReviewSetTargetAction extends ReviewUpdateAction {
     public static ReviewSetTargetActionBuilder builder() {
         return ReviewSetTargetActionBuilder.of();
     }
-
+    
     /**
      * create builder for ReviewSetTargetAction instance
      * @param template instance with prefilled values for the builder
@@ -115,6 +121,7 @@ public interface ReviewSetTargetAction extends ReviewUpdateAction {
     public static ReviewSetTargetActionBuilder builder(final ReviewSetTargetAction template) {
         return ReviewSetTargetActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -125,7 +132,7 @@ public interface ReviewSetTargetAction extends ReviewUpdateAction {
     default <T> T withReviewSetTargetAction(Function<ReviewSetTargetAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

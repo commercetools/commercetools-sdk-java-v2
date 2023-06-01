@@ -1,17 +1,20 @@
-
 package com.commercetools.ml.models.category_recommendations;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
 
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
+import com.commercetools.ml.models.category_recommendations.ProjectCategoryRecommendationMetaImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * ProjectCategoryRecommendationMeta
@@ -24,28 +27,30 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .plusGeneralCategoryNames(generalCategoryNamesBuilder -> generalCategoryNamesBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = ProjectCategoryRecommendationMetaImpl.class)
-public interface ProjectCategoryRecommendationMeta {
+public interface ProjectCategoryRecommendationMeta  {
+
 
     /**
      *  <p>The product name that was used to generate recommendations.</p>
      * @return productName
      */
-
+    
     @JsonProperty("productName")
     public String getProductName();
-
     /**
      *  <p>The product image that was used to generate recommendations.</p>
      * @return productImageUrl
      */
-
+    
     @JsonProperty("productImageUrl")
     public String getProductImageUrl();
-
     /**
      *  <p>Top 5 general categories that were used internally to generate the project-specific categories. These category names are not related to the categories defined in the project, but they provide additional information to understand the project-specific categories in the results section.</p>
      * @return generalCategoryNames
@@ -58,38 +63,40 @@ public interface ProjectCategoryRecommendationMeta {
      *  <p>The product name that was used to generate recommendations.</p>
      * @param productName value to be set
      */
-
+    
     public void setProductName(final String productName);
-
+    
+    
     /**
      *  <p>The product image that was used to generate recommendations.</p>
      * @param productImageUrl value to be set
      */
-
+    
     public void setProductImageUrl(final String productImageUrl);
-
+    
+    
     /**
      *  <p>Top 5 general categories that were used internally to generate the project-specific categories. These category names are not related to the categories defined in the project, but they provide additional information to understand the project-specific categories in the results section.</p>
      * @param generalCategoryNames values to be set
      */
-
+    
     @JsonIgnore
-    public void setGeneralCategoryNames(final String... generalCategoryNames);
-
+    public void setGeneralCategoryNames(final String ...generalCategoryNames);
     /**
      *  <p>Top 5 general categories that were used internally to generate the project-specific categories. These category names are not related to the categories defined in the project, but they provide additional information to understand the project-specific categories in the results section.</p>
      * @param generalCategoryNames values to be set
      */
-
+    
     public void setGeneralCategoryNames(final List<String> generalCategoryNames);
 
     /**
      * factory method
      * @return instance of ProjectCategoryRecommendationMeta
      */
-    public static ProjectCategoryRecommendationMeta of() {
+    public static ProjectCategoryRecommendationMeta of(){
         return new ProjectCategoryRecommendationMetaImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy ProjectCategoryRecommendationMeta
@@ -110,16 +117,16 @@ public interface ProjectCategoryRecommendationMeta {
      * @return copy instance
      */
     @Nullable
-    public static ProjectCategoryRecommendationMeta deepCopy(
-            @Nullable final ProjectCategoryRecommendationMeta template) {
+    public static ProjectCategoryRecommendationMeta deepCopy(@Nullable final ProjectCategoryRecommendationMeta template) {
         if (template == null) {
             return null;
         }
         ProjectCategoryRecommendationMetaImpl instance = new ProjectCategoryRecommendationMetaImpl();
         instance.setProductName(template.getProductName());
         instance.setProductImageUrl(template.getProductImageUrl());
-        instance.setGeneralCategoryNames(
-            Optional.ofNullable(template.getGeneralCategoryNames()).map(ArrayList::new).orElse(null));
+        instance.setGeneralCategoryNames(Optional.ofNullable(template.getGeneralCategoryNames())
+                .map(ArrayList::new)
+                .orElse(null));
         return instance;
     }
 
@@ -130,7 +137,7 @@ public interface ProjectCategoryRecommendationMeta {
     public static ProjectCategoryRecommendationMetaBuilder builder() {
         return ProjectCategoryRecommendationMetaBuilder.of();
     }
-
+    
     /**
      * create builder for ProjectCategoryRecommendationMeta instance
      * @param template instance with prefilled values for the builder
@@ -139,6 +146,7 @@ public interface ProjectCategoryRecommendationMeta {
     public static ProjectCategoryRecommendationMetaBuilder builder(final ProjectCategoryRecommendationMeta template) {
         return ProjectCategoryRecommendationMetaBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -149,7 +157,7 @@ public interface ProjectCategoryRecommendationMeta {
     default <T> T withProjectCategoryRecommendationMeta(Function<ProjectCategoryRecommendationMeta, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

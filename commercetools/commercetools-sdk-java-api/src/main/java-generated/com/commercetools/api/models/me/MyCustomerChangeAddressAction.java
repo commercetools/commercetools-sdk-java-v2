@@ -1,19 +1,21 @@
-
 package com.commercetools.api.models.me;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
 import com.commercetools.api.models.common.BaseAddress;
+import com.commercetools.api.models.me.MyCustomerUpdateAction;
+import com.commercetools.api.models.me.MyCustomerChangeAddressActionImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Changing an address of the Customer produces the CustomerAddressChanged Message.</p>
@@ -27,9 +29,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .address(addressBuilder -> addressBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = MyCustomerChangeAddressActionImpl.class)
 public interface MyCustomerChangeAddressAction extends MyCustomerUpdateAction {
 
@@ -42,18 +47,16 @@ public interface MyCustomerChangeAddressAction extends MyCustomerUpdateAction {
      *  <p><code>id</code> of the Address to change.</p>
      * @return addressId
      */
-
+    
     @JsonProperty("addressId")
     public String getAddressId();
-
     /**
      *  <p><code>key</code> of the Address to change.</p>
      * @return addressKey
      */
-
+    
     @JsonProperty("addressKey")
     public String getAddressKey();
-
     /**
      *  <p>Value to set.</p>
      * @return address
@@ -67,30 +70,34 @@ public interface MyCustomerChangeAddressAction extends MyCustomerUpdateAction {
      *  <p><code>id</code> of the Address to change.</p>
      * @param addressId value to be set
      */
-
+    
     public void setAddressId(final String addressId);
-
+    
+    
     /**
      *  <p><code>key</code> of the Address to change.</p>
      * @param addressKey value to be set
      */
-
+    
     public void setAddressKey(final String addressKey);
-
+    
+    
     /**
      *  <p>Value to set.</p>
      * @param address value to be set
      */
-
+    
     public void setAddress(final BaseAddress address);
+    
 
     /**
      * factory method
      * @return instance of MyCustomerChangeAddressAction
      */
-    public static MyCustomerChangeAddressAction of() {
+    public static MyCustomerChangeAddressAction of(){
         return new MyCustomerChangeAddressActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy MyCustomerChangeAddressAction
@@ -129,7 +136,7 @@ public interface MyCustomerChangeAddressAction extends MyCustomerUpdateAction {
     public static MyCustomerChangeAddressActionBuilder builder() {
         return MyCustomerChangeAddressActionBuilder.of();
     }
-
+    
     /**
      * create builder for MyCustomerChangeAddressAction instance
      * @param template instance with prefilled values for the builder
@@ -138,6 +145,7 @@ public interface MyCustomerChangeAddressAction extends MyCustomerUpdateAction {
     public static MyCustomerChangeAddressActionBuilder builder(final MyCustomerChangeAddressAction template) {
         return MyCustomerChangeAddressActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -148,7 +156,7 @@ public interface MyCustomerChangeAddressAction extends MyCustomerUpdateAction {
     default <T> T withMyCustomerChangeAddressAction(Function<MyCustomerChangeAddressAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

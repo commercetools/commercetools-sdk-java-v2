@@ -1,20 +1,21 @@
-
 package com.commercetools.importapi.models.orders;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-import java.util.stream.Collectors;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
 import com.commercetools.importapi.models.common.Money;
+import com.commercetools.importapi.models.orders.ShippingRatePriceTier;
+import com.commercetools.importapi.models.orders.ShippingRateDraftImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * ShippingRateDraft
@@ -27,11 +28,15 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .price(priceBuilder -> priceBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = ShippingRateDraftImpl.class)
 public interface ShippingRateDraft extends io.vrap.rmf.base.client.Draft<ShippingRateDraft> {
+
 
     /**
      *
@@ -41,7 +46,6 @@ public interface ShippingRateDraft extends io.vrap.rmf.base.client.Draft<Shippin
     @Valid
     @JsonProperty("price")
     public Money getPrice();
-
     /**
      *
      * @return freeAbove
@@ -49,7 +53,6 @@ public interface ShippingRateDraft extends io.vrap.rmf.base.client.Draft<Shippin
     @Valid
     @JsonProperty("freeAbove")
     public Money getFreeAbove();
-
     /**
      *
      * @return tiers
@@ -62,38 +65,40 @@ public interface ShippingRateDraft extends io.vrap.rmf.base.client.Draft<Shippin
      * set price
      * @param price value to be set
      */
-
+    
     public void setPrice(final Money price);
-
+    
+    
     /**
      * set freeAbove
      * @param freeAbove value to be set
      */
-
+    
     public void setFreeAbove(final Money freeAbove);
-
+    
+    
     /**
      * set tiers
      * @param tiers values to be set
      */
-
+    
     @JsonIgnore
-    public void setTiers(final ShippingRatePriceTier... tiers);
-
+    public void setTiers(final ShippingRatePriceTier ...tiers);
     /**
      * set tiers
      * @param tiers values to be set
      */
-
+    
     public void setTiers(final List<ShippingRatePriceTier> tiers);
 
     /**
      * factory method
      * @return instance of ShippingRateDraft
      */
-    public static ShippingRateDraft of() {
+    public static ShippingRateDraft of(){
         return new ShippingRateDraftImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy ShippingRateDraft
@@ -122,9 +127,7 @@ public interface ShippingRateDraft extends io.vrap.rmf.base.client.Draft<Shippin
         instance.setPrice(com.commercetools.importapi.models.common.Money.deepCopy(template.getPrice()));
         instance.setFreeAbove(com.commercetools.importapi.models.common.Money.deepCopy(template.getFreeAbove()));
         instance.setTiers(Optional.ofNullable(template.getTiers())
-                .map(t -> t.stream()
-                        .map(com.commercetools.importapi.models.orders.ShippingRatePriceTier::deepCopy)
-                        .collect(Collectors.toList()))
+                .map(t -> t.stream().map(com.commercetools.importapi.models.orders.ShippingRatePriceTier::deepCopy).collect(Collectors.toList()))
                 .orElse(null));
         return instance;
     }
@@ -136,7 +139,7 @@ public interface ShippingRateDraft extends io.vrap.rmf.base.client.Draft<Shippin
     public static ShippingRateDraftBuilder builder() {
         return ShippingRateDraftBuilder.of();
     }
-
+    
     /**
      * create builder for ShippingRateDraft instance
      * @param template instance with prefilled values for the builder
@@ -145,6 +148,7 @@ public interface ShippingRateDraft extends io.vrap.rmf.base.client.Draft<Shippin
     public static ShippingRateDraftBuilder builder(final ShippingRateDraft template) {
         return ShippingRateDraftBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -155,7 +159,7 @@ public interface ShippingRateDraft extends io.vrap.rmf.base.client.Draft<Shippin
     default <T> T withShippingRateDraft(Function<ShippingRateDraft, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

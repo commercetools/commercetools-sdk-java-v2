@@ -1,20 +1,22 @@
-
 package com.commercetools.api.models.order;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
+import com.commercetools.api.models.order.OrderUpdateAction;
 import com.commercetools.api.models.type.FieldContainer;
 import com.commercetools.api.models.type.TypeResourceIdentifier;
+import com.commercetools.api.models.order.OrderSetLineItemCustomTypeActionImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * OrderSetLineItemCustomTypeAction
@@ -27,9 +29,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .lineItemId("{lineItemId}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = OrderSetLineItemCustomTypeActionImpl.class)
 public interface OrderSetLineItemCustomTypeAction extends OrderUpdateAction {
 
@@ -45,7 +50,6 @@ public interface OrderSetLineItemCustomTypeAction extends OrderUpdateAction {
     @NotNull
     @JsonProperty("lineItemId")
     public String getLineItemId();
-
     /**
      *  <p>Defines the Type that extends the LineItem with Custom Fields. If absent, any existing Type and Custom Fields are removed from the LineItem.</p>
      * @return type
@@ -53,7 +57,6 @@ public interface OrderSetLineItemCustomTypeAction extends OrderUpdateAction {
     @Valid
     @JsonProperty("type")
     public TypeResourceIdentifier getType();
-
     /**
      *  <p>Sets the Custom Fields fields for the LineItem.</p>
      * @return fields
@@ -66,30 +69,34 @@ public interface OrderSetLineItemCustomTypeAction extends OrderUpdateAction {
      * set lineItemId
      * @param lineItemId value to be set
      */
-
+    
     public void setLineItemId(final String lineItemId);
-
+    
+    
     /**
      *  <p>Defines the Type that extends the LineItem with Custom Fields. If absent, any existing Type and Custom Fields are removed from the LineItem.</p>
      * @param type value to be set
      */
-
+    
     public void setType(final TypeResourceIdentifier type);
-
+    
+    
     /**
      *  <p>Sets the Custom Fields fields for the LineItem.</p>
      * @param fields value to be set
      */
-
+    
     public void setFields(final FieldContainer fields);
+    
 
     /**
      * factory method
      * @return instance of OrderSetLineItemCustomTypeAction
      */
-    public static OrderSetLineItemCustomTypeAction of() {
+    public static OrderSetLineItemCustomTypeAction of(){
         return new OrderSetLineItemCustomTypeActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy OrderSetLineItemCustomTypeAction
@@ -128,7 +135,7 @@ public interface OrderSetLineItemCustomTypeAction extends OrderUpdateAction {
     public static OrderSetLineItemCustomTypeActionBuilder builder() {
         return OrderSetLineItemCustomTypeActionBuilder.of();
     }
-
+    
     /**
      * create builder for OrderSetLineItemCustomTypeAction instance
      * @param template instance with prefilled values for the builder
@@ -137,6 +144,7 @@ public interface OrderSetLineItemCustomTypeAction extends OrderUpdateAction {
     public static OrderSetLineItemCustomTypeActionBuilder builder(final OrderSetLineItemCustomTypeAction template) {
         return OrderSetLineItemCustomTypeActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -147,7 +155,7 @@ public interface OrderSetLineItemCustomTypeAction extends OrderUpdateAction {
     default <T> T withOrderSetLineItemCustomTypeAction(Function<OrderSetLineItemCustomTypeAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

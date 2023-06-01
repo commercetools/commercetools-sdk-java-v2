@@ -1,16 +1,25 @@
-
 package com.commercetools.api.models.standalone_price;
 
-import java.time.*;
-import java.util.*;
-
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
-
-import io.vrap.rmf.base.client.ModelBase;
+import com.commercetools.api.models.channel.ChannelResourceIdentifier;
+import com.commercetools.api.models.common.DiscountedPriceDraft;
+import com.commercetools.api.models.common.Money;
+import com.commercetools.api.models.common.PriceTierDraft;
+import com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifier;
+import com.commercetools.api.models.type.CustomFieldsDraft;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.ModelBase;
+import javax.validation.Valid;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.annotation.*;
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
@@ -18,48 +27,53 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
  *  <p>Standalone Prices are defined with a scope consisting of <code>currency</code> and optionally <code>country</code>, <code>customerGroup</code>, and <code>channel</code> and/or a validity period (<code>validFrom</code> and/or <code>validTo</code>). For more information see price selection.</p>
  *  <p>Creating a Standalone Price for an SKU which has a Standalone Price with exactly the same price scope, or with overlapping validity periods within the same price scope returns the DuplicateStandalonePriceScope and OverlappingStandalonePriceValidity errors, respectively. A Price without validity period does not conflict with a Price defined for a time period.</p>
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class StandalonePriceDraftImpl implements StandalonePriceDraft, ModelBase {
 
+    
     private String key;
-
+    
+    
     private String sku;
-
+    
+    
     private com.commercetools.api.models.common.Money value;
-
+    
+    
     private String country;
-
+    
+    
     private com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifier customerGroup;
-
+    
+    
     private com.commercetools.api.models.channel.ChannelResourceIdentifier channel;
-
+    
+    
     private java.time.ZonedDateTime validFrom;
-
+    
+    
     private java.time.ZonedDateTime validUntil;
-
+    
+    
     private java.util.List<com.commercetools.api.models.common.PriceTierDraft> tiers;
-
+    
+    
     private com.commercetools.api.models.common.DiscountedPriceDraft discounted;
-
+    
+    
     private com.commercetools.api.models.type.CustomFieldsDraft custom;
-
+    
+    
     private Boolean active;
 
     /**
      * create instance with all properties
      */
     @JsonCreator
-    StandalonePriceDraftImpl(@JsonProperty("key") final String key, @JsonProperty("sku") final String sku,
-            @JsonProperty("value") final com.commercetools.api.models.common.Money value,
-            @JsonProperty("country") final String country,
-            @JsonProperty("customerGroup") final com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifier customerGroup,
-            @JsonProperty("channel") final com.commercetools.api.models.channel.ChannelResourceIdentifier channel,
-            @JsonProperty("validFrom") final java.time.ZonedDateTime validFrom,
-            @JsonProperty("validUntil") final java.time.ZonedDateTime validUntil,
-            @JsonProperty("tiers") final java.util.List<com.commercetools.api.models.common.PriceTierDraft> tiers,
-            @JsonProperty("discounted") final com.commercetools.api.models.common.DiscountedPriceDraft discounted,
-            @JsonProperty("custom") final com.commercetools.api.models.type.CustomFieldsDraft custom,
-            @JsonProperty("active") final Boolean active) {
+    StandalonePriceDraftImpl(@JsonProperty("key") final String key, @JsonProperty("sku") final String sku, @JsonProperty("value") final com.commercetools.api.models.common.Money value, @JsonProperty("country") final String country, @JsonProperty("customerGroup") final com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifier customerGroup, @JsonProperty("channel") final com.commercetools.api.models.channel.ChannelResourceIdentifier channel, @JsonProperty("validFrom") final java.time.ZonedDateTime validFrom, @JsonProperty("validUntil") final java.time.ZonedDateTime validUntil, @JsonProperty("tiers") final java.util.List<com.commercetools.api.models.common.PriceTierDraft> tiers, @JsonProperty("discounted") final com.commercetools.api.models.common.DiscountedPriceDraft discounted, @JsonProperty("custom") final com.commercetools.api.models.type.CustomFieldsDraft custom, @JsonProperty("active") final Boolean active) {
         this.key = key;
         this.sku = sku;
         this.value = value;
@@ -73,7 +87,6 @@ public class StandalonePriceDraftImpl implements StandalonePriceDraft, ModelBase
         this.custom = custom;
         this.active = active;
     }
-
     /**
      * create empty instance
      */
@@ -83,163 +96,174 @@ public class StandalonePriceDraftImpl implements StandalonePriceDraft, ModelBase
     /**
      *  <p>User-defined unique identifier for the StandalonePrice.</p>
      */
-
-    public String getKey() {
+    
+    public String getKey(){
         return this.key;
     }
-
+    
     /**
      *  <p>Specifies to which ProductVariant the API associates this Price. It is not validated to exist in product variants.</p>
      */
-
-    public String getSku() {
+    
+    public String getSku(){
         return this.sku;
     }
-
+    
     /**
      *  <p>Sets the money value of this Price.</p>
      */
-
-    public com.commercetools.api.models.common.Money getValue() {
+    
+    public com.commercetools.api.models.common.Money getValue(){
         return this.value;
     }
-
+    
     /**
      *  <p>Sets the country for which this Price is valid.</p>
      */
-
-    public String getCountry() {
+    
+    public String getCountry(){
         return this.country;
     }
-
+    
     /**
      *  <p>Sets the CustomerGroup for which this Price is valid.</p>
      */
-
-    public com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifier getCustomerGroup() {
+    
+    public com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifier getCustomerGroup(){
         return this.customerGroup;
     }
-
+    
     /**
      *  <p>Sets the product distribution Channel for which this Price is valid.</p>
      */
-
-    public com.commercetools.api.models.channel.ChannelResourceIdentifier getChannel() {
+    
+    public com.commercetools.api.models.channel.ChannelResourceIdentifier getChannel(){
         return this.channel;
     }
-
+    
     /**
      *  <p>Sets the date from which the Price is valid. Must be at least 1 ms earlier than <code>validUntil</code>.</p>
      */
-
-    public java.time.ZonedDateTime getValidFrom() {
+    
+    public java.time.ZonedDateTime getValidFrom(){
         return this.validFrom;
     }
-
+    
     /**
      *  <p>Sets the date until the Price is valid. Must be at least 1 ms later than <code>validFrom</code>. Standalone Prices that are no longer valid are not automatically deleted, but they can be deleted if necessary.</p>
      */
-
-    public java.time.ZonedDateTime getValidUntil() {
+    
+    public java.time.ZonedDateTime getValidUntil(){
         return this.validUntil;
     }
-
+    
     /**
      *  <p>Sets price tiers.</p>
      */
-
-    public java.util.List<com.commercetools.api.models.common.PriceTierDraft> getTiers() {
+    
+    public java.util.List<com.commercetools.api.models.common.PriceTierDraft> getTiers(){
         return this.tiers;
     }
-
+    
     /**
      *  <p>Sets a discounted price for this Price that is different from the base price with <code>value</code>.</p>
      */
-
-    public com.commercetools.api.models.common.DiscountedPriceDraft getDiscounted() {
+    
+    public com.commercetools.api.models.common.DiscountedPriceDraft getDiscounted(){
         return this.discounted;
     }
-
+    
     /**
      *  <p>Custom Fields for the StandalonePrice.</p>
      */
-
-    public com.commercetools.api.models.type.CustomFieldsDraft getCustom() {
+    
+    public com.commercetools.api.models.type.CustomFieldsDraft getCustom(){
         return this.custom;
     }
-
+    
     /**
      *  <p>If set to <code>true</code>, the StandalonePrice is considered during price selection. If set to <code>false</code>, the StandalonePrice is not considered during price selection.</p>
      */
-
-    public Boolean getActive() {
+    
+    public Boolean getActive(){
         return this.active;
     }
 
-    public void setKey(final String key) {
+    
+    public void setKey(final String key){
         this.key = key;
     }
-
-    public void setSku(final String sku) {
+    
+    
+    public void setSku(final String sku){
         this.sku = sku;
     }
-
-    public void setValue(final com.commercetools.api.models.common.Money value) {
+    
+    
+    public void setValue(final com.commercetools.api.models.common.Money value){
         this.value = value;
     }
-
-    public void setCountry(final String country) {
+    
+    
+    public void setCountry(final String country){
         this.country = country;
     }
-
-    public void setCustomerGroup(
-            final com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifier customerGroup) {
+    
+    
+    public void setCustomerGroup(final com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifier customerGroup){
         this.customerGroup = customerGroup;
     }
-
-    public void setChannel(final com.commercetools.api.models.channel.ChannelResourceIdentifier channel) {
+    
+    
+    public void setChannel(final com.commercetools.api.models.channel.ChannelResourceIdentifier channel){
         this.channel = channel;
     }
-
-    public void setValidFrom(final java.time.ZonedDateTime validFrom) {
+    
+    
+    public void setValidFrom(final java.time.ZonedDateTime validFrom){
         this.validFrom = validFrom;
     }
-
-    public void setValidUntil(final java.time.ZonedDateTime validUntil) {
+    
+    
+    public void setValidUntil(final java.time.ZonedDateTime validUntil){
         this.validUntil = validUntil;
     }
-
-    public void setTiers(final com.commercetools.api.models.common.PriceTierDraft... tiers) {
-        this.tiers = new ArrayList<>(Arrays.asList(tiers));
+    
+    
+    public void setTiers(final com.commercetools.api.models.common.PriceTierDraft ...tiers){
+       this.tiers = new ArrayList<>(Arrays.asList(tiers));
     }
-
-    public void setTiers(final java.util.List<com.commercetools.api.models.common.PriceTierDraft> tiers) {
-        this.tiers = tiers;
+    
+    
+    public void setTiers(final java.util.List<com.commercetools.api.models.common.PriceTierDraft> tiers){
+       this.tiers = tiers;
     }
-
-    public void setDiscounted(final com.commercetools.api.models.common.DiscountedPriceDraft discounted) {
+    
+    
+    public void setDiscounted(final com.commercetools.api.models.common.DiscountedPriceDraft discounted){
         this.discounted = discounted;
     }
-
-    public void setCustom(final com.commercetools.api.models.type.CustomFieldsDraft custom) {
+    
+    
+    public void setCustom(final com.commercetools.api.models.type.CustomFieldsDraft custom){
         this.custom = custom;
     }
-
-    public void setActive(final Boolean active) {
+    
+    
+    public void setActive(final Boolean active){
         this.active = active;
     }
 
     @Override
     public boolean equals(Object o) {
-        if (this == o)
-            return true;
-
-        if (o == null || getClass() != o.getClass())
-            return false;
-
+        if (this == o) return true;
+    
+        if (o == null || getClass() != o.getClass()) return false;
+    
         StandalonePriceDraftImpl that = (StandalonePriceDraftImpl) o;
-
-        return new EqualsBuilder().append(key, that.key)
+    
+        return new EqualsBuilder()
+                .append(key, that.key)
                 .append(sku, that.sku)
                 .append(value, that.value)
                 .append(country, that.country)
@@ -253,22 +277,23 @@ public class StandalonePriceDraftImpl implements StandalonePriceDraft, ModelBase
                 .append(active, that.active)
                 .isEquals();
     }
-
+    
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(key)
-                .append(sku)
-                .append(value)
-                .append(country)
-                .append(customerGroup)
-                .append(channel)
-                .append(validFrom)
-                .append(validUntil)
-                .append(tiers)
-                .append(discounted)
-                .append(custom)
-                .append(active)
-                .toHashCode();
+        return new HashCodeBuilder(17, 37)
+            .append(key)
+            .append(sku)
+            .append(value)
+            .append(country)
+            .append(customerGroup)
+            .append(channel)
+            .append(validFrom)
+            .append(validUntil)
+            .append(tiers)
+            .append(discounted)
+            .append(custom)
+            .append(active)
+            .toHashCode();
     }
 
 }

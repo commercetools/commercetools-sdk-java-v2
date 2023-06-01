@@ -1,11 +1,12 @@
-
 package com.commercetools.api.models.standalone_price;
 
+import com.commercetools.api.models.common.DiscountedPriceDraft;
+import com.commercetools.api.models.standalone_price.StandalonePriceUpdateAction;
+import com.commercetools.api.models.standalone_price.StandalonePriceSetDiscountedPriceAction;
+import javax.annotation.Nullable;
 import java.util.*;
 import java.util.function.Function;
-
-import javax.annotation.Nullable;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -18,58 +19,61 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     StandalonePriceSetDiscountedPriceAction standalonePriceSetDiscountedPriceAction = StandalonePriceSetDiscountedPriceAction.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
-public class StandalonePriceSetDiscountedPriceActionBuilder
-        implements Builder<StandalonePriceSetDiscountedPriceAction> {
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
+public class StandalonePriceSetDiscountedPriceActionBuilder implements Builder<StandalonePriceSetDiscountedPriceAction> {
 
+    
     @Nullable
     private com.commercetools.api.models.common.DiscountedPriceDraft discounted;
 
+    
     /**
      *  <p>Value to set. If empty, any existing value will be removed.</p>
      * @param builder function to build the discounted value
      * @return Builder
      */
-
-    public StandalonePriceSetDiscountedPriceActionBuilder discounted(
-            Function<com.commercetools.api.models.common.DiscountedPriceDraftBuilder, com.commercetools.api.models.common.DiscountedPriceDraftBuilder> builder) {
+    
+    public StandalonePriceSetDiscountedPriceActionBuilder discounted(Function<com.commercetools.api.models.common.DiscountedPriceDraftBuilder, com.commercetools.api.models.common.DiscountedPriceDraftBuilder> builder) {
         this.discounted = builder.apply(com.commercetools.api.models.common.DiscountedPriceDraftBuilder.of()).build();
         return this;
     }
-
+    
     /**
      *  <p>Value to set. If empty, any existing value will be removed.</p>
      * @param builder function to build the discounted value
      * @return Builder
      */
-
-    public StandalonePriceSetDiscountedPriceActionBuilder withDiscounted(
-            Function<com.commercetools.api.models.common.DiscountedPriceDraftBuilder, com.commercetools.api.models.common.DiscountedPriceDraft> builder) {
+    
+    public StandalonePriceSetDiscountedPriceActionBuilder withDiscounted(Function<com.commercetools.api.models.common.DiscountedPriceDraftBuilder, com.commercetools.api.models.common.DiscountedPriceDraft> builder) {
         this.discounted = builder.apply(com.commercetools.api.models.common.DiscountedPriceDraftBuilder.of());
         return this;
     }
-
+                    
     /**
      *  <p>Value to set. If empty, any existing value will be removed.</p>
      * @param discounted value to be set
      * @return Builder
      */
-
-    public StandalonePriceSetDiscountedPriceActionBuilder discounted(
-            @Nullable final com.commercetools.api.models.common.DiscountedPriceDraft discounted) {
+    
+    public StandalonePriceSetDiscountedPriceActionBuilder discounted(@Nullable final com.commercetools.api.models.common.DiscountedPriceDraft discounted) {
         this.discounted = discounted;
         return this;
     }
+    
+    
 
     /**
      *  <p>Value to set. If empty, any existing value will be removed.</p>
      * @return discounted
      */
-
+    
     @Nullable
-    public com.commercetools.api.models.common.DiscountedPriceDraft getDiscounted() {
+    public com.commercetools.api.models.common.DiscountedPriceDraft getDiscounted(){
         return this.discounted;
     }
 
@@ -80,7 +84,7 @@ public class StandalonePriceSetDiscountedPriceActionBuilder
     public StandalonePriceSetDiscountedPriceAction build() {
         return new StandalonePriceSetDiscountedPriceActionImpl(discounted);
     }
-
+    
     /**
      * builds StandalonePriceSetDiscountedPriceAction without checking for non-null required values
      * @return StandalonePriceSetDiscountedPriceAction
@@ -91,7 +95,7 @@ public class StandalonePriceSetDiscountedPriceActionBuilder
 
     /**
      * factory method for an instance of StandalonePriceSetDiscountedPriceActionBuilder
-     * @return builder
+     * @return builder 
      */
     public static StandalonePriceSetDiscountedPriceActionBuilder of() {
         return new StandalonePriceSetDiscountedPriceActionBuilder();
@@ -102,8 +106,7 @@ public class StandalonePriceSetDiscountedPriceActionBuilder
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static StandalonePriceSetDiscountedPriceActionBuilder of(
-            final StandalonePriceSetDiscountedPriceAction template) {
+    public static StandalonePriceSetDiscountedPriceActionBuilder of(final StandalonePriceSetDiscountedPriceAction template) {
         StandalonePriceSetDiscountedPriceActionBuilder builder = new StandalonePriceSetDiscountedPriceActionBuilder();
         builder.discounted = template.getDiscounted();
         return builder;

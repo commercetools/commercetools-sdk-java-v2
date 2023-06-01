@@ -1,51 +1,61 @@
-
 package com.commercetools.history.models.common;
 
-import java.time.*;
-import java.util.*;
-
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
-
-import io.vrap.rmf.base.client.ModelBase;
+import com.commercetools.history.models.common.ReturnPaymentState;
+import com.commercetools.history.models.common.ReturnShipmentState;
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.ModelBase;
+import javax.validation.Valid;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.annotation.*;
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
  * ReturnItem
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class ReturnItemImpl implements ReturnItem, ModelBase {
 
+    
     private String id;
-
+    
+    
     private Integer quantity;
-
+    
+    
     private String type;
-
+    
+    
     private String comment;
-
+    
+    
     private com.commercetools.history.models.common.ReturnShipmentState shipmentState;
-
+    
+    
     private com.commercetools.history.models.common.ReturnPaymentState paymentState;
-
+    
+    
     private String lastModifiedAt;
-
+    
+    
     private String createdAt;
 
     /**
      * create instance with all properties
      */
     @JsonCreator
-    ReturnItemImpl(@JsonProperty("id") final String id, @JsonProperty("quantity") final Integer quantity,
-            @JsonProperty("type") final String type, @JsonProperty("comment") final String comment,
-            @JsonProperty("shipmentState") final com.commercetools.history.models.common.ReturnShipmentState shipmentState,
-            @JsonProperty("paymentState") final com.commercetools.history.models.common.ReturnPaymentState paymentState,
-            @JsonProperty("lastModifiedAt") final String lastModifiedAt,
-            @JsonProperty("createdAt") final String createdAt) {
+    ReturnItemImpl(@JsonProperty("id") final String id, @JsonProperty("quantity") final Integer quantity, @JsonProperty("type") final String type, @JsonProperty("comment") final String comment, @JsonProperty("shipmentState") final com.commercetools.history.models.common.ReturnShipmentState shipmentState, @JsonProperty("paymentState") final com.commercetools.history.models.common.ReturnPaymentState paymentState, @JsonProperty("lastModifiedAt") final String lastModifiedAt, @JsonProperty("createdAt") final String createdAt) {
         this.id = id;
         this.quantity = quantity;
         this.type = type;
@@ -55,7 +65,6 @@ public class ReturnItemImpl implements ReturnItem, ModelBase {
         this.lastModifiedAt = lastModifiedAt;
         this.createdAt = createdAt;
     }
-
     /**
      * create empty instance
      */
@@ -65,110 +74,117 @@ public class ReturnItemImpl implements ReturnItem, ModelBase {
     /**
      *
      */
-
-    public String getId() {
+    
+    public String getId(){
         return this.id;
     }
-
+    
     /**
      *
      */
-
-    public Integer getQuantity() {
+    
+    public Integer getQuantity(){
         return this.quantity;
     }
-
+    
     /**
      *
      */
-
-    public String getType() {
+    
+    public String getType(){
         return this.type;
     }
-
+    
     /**
      *
      */
-
-    public String getComment() {
+    
+    public String getComment(){
         return this.comment;
     }
-
+    
     /**
      *
      */
-
-    public com.commercetools.history.models.common.ReturnShipmentState getShipmentState() {
+    
+    public com.commercetools.history.models.common.ReturnShipmentState getShipmentState(){
         return this.shipmentState;
     }
-
+    
     /**
      *
      */
-
-    public com.commercetools.history.models.common.ReturnPaymentState getPaymentState() {
+    
+    public com.commercetools.history.models.common.ReturnPaymentState getPaymentState(){
         return this.paymentState;
     }
-
+    
     /**
      *
      */
-
-    public String getLastModifiedAt() {
+    
+    public String getLastModifiedAt(){
         return this.lastModifiedAt;
     }
-
+    
     /**
      *
      */
-
-    public String getCreatedAt() {
+    
+    public String getCreatedAt(){
         return this.createdAt;
     }
 
-    public void setId(final String id) {
+    
+    public void setId(final String id){
         this.id = id;
     }
-
-    public void setQuantity(final Integer quantity) {
+    
+    
+    public void setQuantity(final Integer quantity){
         this.quantity = quantity;
     }
-
-    public void setType(final String type) {
+    
+    
+    public void setType(final String type){
         this.type = type;
     }
-
-    public void setComment(final String comment) {
+    
+    
+    public void setComment(final String comment){
         this.comment = comment;
     }
-
-    public void setShipmentState(final com.commercetools.history.models.common.ReturnShipmentState shipmentState) {
+    
+    
+    public void setShipmentState(final com.commercetools.history.models.common.ReturnShipmentState shipmentState){
         this.shipmentState = shipmentState;
     }
-
-    public void setPaymentState(final com.commercetools.history.models.common.ReturnPaymentState paymentState) {
+    
+    
+    public void setPaymentState(final com.commercetools.history.models.common.ReturnPaymentState paymentState){
         this.paymentState = paymentState;
     }
-
-    public void setLastModifiedAt(final String lastModifiedAt) {
+    
+    
+    public void setLastModifiedAt(final String lastModifiedAt){
         this.lastModifiedAt = lastModifiedAt;
     }
-
-    public void setCreatedAt(final String createdAt) {
+    
+    
+    public void setCreatedAt(final String createdAt){
         this.createdAt = createdAt;
     }
 
     @Override
     public boolean equals(Object o) {
-        if (this == o)
-            return true;
-
-        if (o == null || getClass() != o.getClass())
-            return false;
-
+        if (this == o) return true;
+    
+        if (o == null || getClass() != o.getClass()) return false;
+    
         ReturnItemImpl that = (ReturnItemImpl) o;
-
-        return new EqualsBuilder().append(id, that.id)
+    
+        return new EqualsBuilder()
+                .append(id, that.id)
                 .append(quantity, that.quantity)
                 .append(type, that.type)
                 .append(comment, that.comment)
@@ -178,18 +194,19 @@ public class ReturnItemImpl implements ReturnItem, ModelBase {
                 .append(createdAt, that.createdAt)
                 .isEquals();
     }
-
+    
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(id)
-                .append(quantity)
-                .append(type)
-                .append(comment)
-                .append(shipmentState)
-                .append(paymentState)
-                .append(lastModifiedAt)
-                .append(createdAt)
-                .toHashCode();
+        return new HashCodeBuilder(17, 37)
+            .append(id)
+            .append(quantity)
+            .append(type)
+            .append(comment)
+            .append(shipmentState)
+            .append(paymentState)
+            .append(lastModifiedAt)
+            .append(createdAt)
+            .toHashCode();
     }
 
 }

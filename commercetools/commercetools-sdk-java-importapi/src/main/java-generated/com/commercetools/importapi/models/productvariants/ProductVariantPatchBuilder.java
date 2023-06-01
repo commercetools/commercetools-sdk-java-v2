@@ -1,11 +1,12 @@
-
 package com.commercetools.importapi.models.productvariants;
 
+import com.commercetools.importapi.models.common.ProductVariantKeyReference;
+import com.commercetools.importapi.models.productvariants.Attributes;
+import com.commercetools.importapi.models.productvariants.ProductVariantPatch;
+import javax.annotation.Nullable;
 import java.util.*;
 import java.util.function.Function;
-
-import javax.annotation.Nullable;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -19,58 +20,63 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .productVariant(productVariantBuilder -> productVariantBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class ProductVariantPatchBuilder implements Builder<ProductVariantPatch> {
 
+    
+    
     private com.commercetools.importapi.models.common.ProductVariantKeyReference productVariant;
-
+    
+    
     @Nullable
     private com.commercetools.importapi.models.productvariants.Attributes attributes;
-
+    
+    
     @Nullable
     private Boolean staged;
 
+    
     /**
      *  <p>The ProductVariant to which this patch is applied. The Reference to the ProductVariant with which the ProductVariantPatch is associated. If referenced ProductVariant does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary ProductVariant is created.</p>
      * @param builder function to build the productVariant value
      * @return Builder
      */
-
-    public ProductVariantPatchBuilder productVariant(
-            Function<com.commercetools.importapi.models.common.ProductVariantKeyReferenceBuilder, com.commercetools.importapi.models.common.ProductVariantKeyReferenceBuilder> builder) {
-        this.productVariant = builder
-                .apply(com.commercetools.importapi.models.common.ProductVariantKeyReferenceBuilder.of())
-                .build();
+    
+    public ProductVariantPatchBuilder productVariant(Function<com.commercetools.importapi.models.common.ProductVariantKeyReferenceBuilder, com.commercetools.importapi.models.common.ProductVariantKeyReferenceBuilder> builder) {
+        this.productVariant = builder.apply(com.commercetools.importapi.models.common.ProductVariantKeyReferenceBuilder.of()).build();
         return this;
     }
-
+    
     /**
      *  <p>The ProductVariant to which this patch is applied. The Reference to the ProductVariant with which the ProductVariantPatch is associated. If referenced ProductVariant does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary ProductVariant is created.</p>
      * @param builder function to build the productVariant value
      * @return Builder
      */
-
-    public ProductVariantPatchBuilder withProductVariant(
-            Function<com.commercetools.importapi.models.common.ProductVariantKeyReferenceBuilder, com.commercetools.importapi.models.common.ProductVariantKeyReference> builder) {
-        this.productVariant = builder
-                .apply(com.commercetools.importapi.models.common.ProductVariantKeyReferenceBuilder.of());
+    
+    public ProductVariantPatchBuilder withProductVariant(Function<com.commercetools.importapi.models.common.ProductVariantKeyReferenceBuilder, com.commercetools.importapi.models.common.ProductVariantKeyReference> builder) {
+        this.productVariant = builder.apply(com.commercetools.importapi.models.common.ProductVariantKeyReferenceBuilder.of());
         return this;
     }
-
+                    
     /**
      *  <p>The ProductVariant to which this patch is applied. The Reference to the ProductVariant with which the ProductVariantPatch is associated. If referenced ProductVariant does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary ProductVariant is created.</p>
      * @param productVariant value to be set
      * @return Builder
      */
-
-    public ProductVariantPatchBuilder productVariant(
-            final com.commercetools.importapi.models.common.ProductVariantKeyReference productVariant) {
+    
+    public ProductVariantPatchBuilder productVariant( final com.commercetools.importapi.models.common.ProductVariantKeyReference productVariant) {
         this.productVariant = productVariant;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Maps to <code>ProductVariant.attributes</code>.</p>
      *  <ul>
@@ -82,14 +88,12 @@ public class ProductVariantPatchBuilder implements Builder<ProductVariantPatch> 
      * @param builder function to build the attributes value
      * @return Builder
      */
-
-    public ProductVariantPatchBuilder attributes(
-            Function<com.commercetools.importapi.models.productvariants.AttributesBuilder, com.commercetools.importapi.models.productvariants.AttributesBuilder> builder) {
-        this.attributes = builder.apply(com.commercetools.importapi.models.productvariants.AttributesBuilder.of())
-                .build();
+    
+    public ProductVariantPatchBuilder attributes(Function<com.commercetools.importapi.models.productvariants.AttributesBuilder, com.commercetools.importapi.models.productvariants.AttributesBuilder> builder) {
+        this.attributes = builder.apply(com.commercetools.importapi.models.productvariants.AttributesBuilder.of()).build();
         return this;
     }
-
+    
     /**
      *  <p>Maps to <code>ProductVariant.attributes</code>.</p>
      *  <ul>
@@ -101,13 +105,12 @@ public class ProductVariantPatchBuilder implements Builder<ProductVariantPatch> 
      * @param builder function to build the attributes value
      * @return Builder
      */
-
-    public ProductVariantPatchBuilder withAttributes(
-            Function<com.commercetools.importapi.models.productvariants.AttributesBuilder, com.commercetools.importapi.models.productvariants.Attributes> builder) {
+    
+    public ProductVariantPatchBuilder withAttributes(Function<com.commercetools.importapi.models.productvariants.AttributesBuilder, com.commercetools.importapi.models.productvariants.Attributes> builder) {
         this.attributes = builder.apply(com.commercetools.importapi.models.productvariants.AttributesBuilder.of());
         return this;
     }
-
+                    
     /**
      *  <p>Maps to <code>ProductVariant.attributes</code>.</p>
      *  <ul>
@@ -119,33 +122,38 @@ public class ProductVariantPatchBuilder implements Builder<ProductVariantPatch> 
      * @param attributes value to be set
      * @return Builder
      */
-
-    public ProductVariantPatchBuilder attributes(
-            @Nullable final com.commercetools.importapi.models.productvariants.Attributes attributes) {
+    
+    public ProductVariantPatchBuilder attributes(@Nullable final com.commercetools.importapi.models.productvariants.Attributes attributes) {
         this.attributes = attributes;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>If <code>false</code>, the attribute changes are applied to both current and staged projected representations of the Product.</p>
      * @param staged value to be set
      * @return Builder
      */
-
+    
     public ProductVariantPatchBuilder staged(@Nullable final Boolean staged) {
         this.staged = staged;
         return this;
     }
+    
+    
 
     /**
      *  <p>The ProductVariant to which this patch is applied. The Reference to the ProductVariant with which the ProductVariantPatch is associated. If referenced ProductVariant does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary ProductVariant is created.</p>
      * @return productVariant
      */
-
-    public com.commercetools.importapi.models.common.ProductVariantKeyReference getProductVariant() {
+    
+    
+    public com.commercetools.importapi.models.common.ProductVariantKeyReference getProductVariant(){
         return this.productVariant;
     }
-
+    
     /**
      *  <p>Maps to <code>ProductVariant.attributes</code>.</p>
      *  <ul>
@@ -156,19 +164,19 @@ public class ProductVariantPatchBuilder implements Builder<ProductVariantPatch> 
      *  </ul>
      * @return attributes
      */
-
+    
     @Nullable
-    public com.commercetools.importapi.models.productvariants.Attributes getAttributes() {
+    public com.commercetools.importapi.models.productvariants.Attributes getAttributes(){
         return this.attributes;
     }
-
+    
     /**
      *  <p>If <code>false</code>, the attribute changes are applied to both current and staged projected representations of the Product.</p>
      * @return staged
      */
-
+    
     @Nullable
-    public Boolean getStaged() {
+    public Boolean getStaged(){
         return this.staged;
     }
 
@@ -180,7 +188,7 @@ public class ProductVariantPatchBuilder implements Builder<ProductVariantPatch> 
         Objects.requireNonNull(productVariant, ProductVariantPatch.class + ": productVariant is missing");
         return new ProductVariantPatchImpl(productVariant, attributes, staged);
     }
-
+    
     /**
      * builds ProductVariantPatch without checking for non-null required values
      * @return ProductVariantPatch
@@ -191,7 +199,7 @@ public class ProductVariantPatchBuilder implements Builder<ProductVariantPatch> 
 
     /**
      * factory method for an instance of ProductVariantPatchBuilder
-     * @return builder
+     * @return builder 
      */
     public static ProductVariantPatchBuilder of() {
         return new ProductVariantPatchBuilder();

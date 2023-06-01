@@ -1,19 +1,21 @@
-
 package com.commercetools.api.models.message;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
 import com.commercetools.api.models.associate_role.AssociateRole;
+import com.commercetools.api.models.message.MessagePayload;
+import com.commercetools.api.models.message.AssociateRoleCreatedMessagePayloadImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Generated after a successful Create AssociateRole request.</p>
@@ -26,9 +28,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .associateRole(associateRoleBuilder -> associateRoleBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = AssociateRoleCreatedMessagePayloadImpl.class)
 public interface AssociateRoleCreatedMessagePayload extends MessagePayload {
 
@@ -50,16 +55,18 @@ public interface AssociateRoleCreatedMessagePayload extends MessagePayload {
      *  <p>The AssociateRole that was created.</p>
      * @param associateRole value to be set
      */
-
+    
     public void setAssociateRole(final AssociateRole associateRole);
+    
 
     /**
      * factory method
      * @return instance of AssociateRoleCreatedMessagePayload
      */
-    public static AssociateRoleCreatedMessagePayload of() {
+    public static AssociateRoleCreatedMessagePayload of(){
         return new AssociateRoleCreatedMessagePayloadImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy AssociateRoleCreatedMessagePayload
@@ -78,14 +85,12 @@ public interface AssociateRoleCreatedMessagePayload extends MessagePayload {
      * @return copy instance
      */
     @Nullable
-    public static AssociateRoleCreatedMessagePayload deepCopy(
-            @Nullable final AssociateRoleCreatedMessagePayload template) {
+    public static AssociateRoleCreatedMessagePayload deepCopy(@Nullable final AssociateRoleCreatedMessagePayload template) {
         if (template == null) {
             return null;
         }
         AssociateRoleCreatedMessagePayloadImpl instance = new AssociateRoleCreatedMessagePayloadImpl();
-        instance.setAssociateRole(
-            com.commercetools.api.models.associate_role.AssociateRole.deepCopy(template.getAssociateRole()));
+        instance.setAssociateRole(com.commercetools.api.models.associate_role.AssociateRole.deepCopy(template.getAssociateRole()));
         return instance;
     }
 
@@ -96,7 +101,7 @@ public interface AssociateRoleCreatedMessagePayload extends MessagePayload {
     public static AssociateRoleCreatedMessagePayloadBuilder builder() {
         return AssociateRoleCreatedMessagePayloadBuilder.of();
     }
-
+    
     /**
      * create builder for AssociateRoleCreatedMessagePayload instance
      * @param template instance with prefilled values for the builder
@@ -105,6 +110,7 @@ public interface AssociateRoleCreatedMessagePayload extends MessagePayload {
     public static AssociateRoleCreatedMessagePayloadBuilder builder(final AssociateRoleCreatedMessagePayload template) {
         return AssociateRoleCreatedMessagePayloadBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -115,7 +121,7 @@ public interface AssociateRoleCreatedMessagePayload extends MessagePayload {
     default <T> T withAssociateRoleCreatedMessagePayload(Function<AssociateRoleCreatedMessagePayload, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

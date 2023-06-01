@@ -1,32 +1,33 @@
-
 package com.commercetools.api.models.project;
-
-import java.util.Arrays;
-import java.util.Optional;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-
+import java.lang.String;
+import java.util.Arrays;
+import java.util.Optional;
 import io.vrap.rmf.base.client.JsonEnum;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
  *  <p>Default value for Business Unit Status configured though Project settings.</p>
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public interface BusinessUnitConfigurationStatus extends JsonEnum {
 
     /**
     	<p>The <a href="ctp:api:type:BusinessUnit">Business Unit</a> can be used in <a href="ctp:api:type:Order">Orders</a>, <a href="ctp:api:type:Cart">Carts</a>, and <a href="/../api/quotes-overview">Quotes</a> and can be updated using the <a href="ctp:api:endpoint:/{projectKey}/me/business-units:POST">My Business Unit endpoint</a>.</p>
-
+    	
     */
     BusinessUnitConfigurationStatus ACTIVE = BusinessUnitConfigurationStatusEnum.ACTIVE;
     /**
     	<p>The <a href="ctp:api:type:BusinessUnit">Business Unit</a> cannot be used in <a href="ctp:api:type:Order">Orders</a>, <a href="ctp:api:type:Cart">Carts</a>, and <a href="/../api/quotes-overview">Quotes</a> and cannot be updated using the <a href="ctp:api:endpoint:/{projectKey}/me/business-units:POST">My Business Unit endpoint</a>.</p>
-
+    	
     */
     BusinessUnitConfigurationStatus INACTIVE = BusinessUnitConfigurationStatusEnum.INACTIVE;
-
+    
     /**
      * possible values of BusinessUnitConfigurationStatus
      */
@@ -35,7 +36,7 @@ public interface BusinessUnitConfigurationStatus extends JsonEnum {
          * Active
          */
         ACTIVE("Active"),
-
+        
         /**
          * Inactive
          */
@@ -92,7 +93,7 @@ public interface BusinessUnitConfigurationStatus extends JsonEnum {
             public String name() {
                 return value.toUpperCase();
             }
-
+            
             public String toString() {
                 return value;
             }
@@ -107,7 +108,7 @@ public interface BusinessUnitConfigurationStatus extends JsonEnum {
     public static Optional<BusinessUnitConfigurationStatus> findEnumViaJsonName(String jsonName) {
         return Arrays.stream(values()).filter(t -> t.getJsonName().equals(jsonName)).findFirst();
     }
-
+    
     /**
      * possible enum values
      * @return array of possible enum values
@@ -115,5 +116,5 @@ public interface BusinessUnitConfigurationStatus extends JsonEnum {
     public static BusinessUnitConfigurationStatus[] values() {
         return BusinessUnitConfigurationStatusEnum.values();
     }
-
+    
 }

@@ -1,11 +1,12 @@
-
 package com.commercetools.api.models.store;
 
+import com.commercetools.api.models.channel.ChannelResourceIdentifier;
+import com.commercetools.api.models.store.StoreUpdateAction;
+import com.commercetools.api.models.store.StoreSetSupplyChannelsAction;
+import javax.annotation.Nullable;
 import java.util.*;
 import java.util.function.Function;
-
-import javax.annotation.Nullable;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -18,11 +19,15 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     StoreSetSupplyChannelsAction storeSetSupplyChannelsAction = StoreSetSupplyChannelsAction.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class StoreSetSupplyChannelsActionBuilder implements Builder<StoreSetSupplyChannelsAction> {
 
+    
     @Nullable
     private java.util.List<com.commercetools.api.models.channel.ChannelResourceIdentifier> supplyChannels;
 
@@ -31,101 +36,93 @@ public class StoreSetSupplyChannelsActionBuilder implements Builder<StoreSetSupp
      * @param supplyChannels value to be set
      * @return Builder
      */
-
-    public StoreSetSupplyChannelsActionBuilder supplyChannels(
-            @Nullable final com.commercetools.api.models.channel.ChannelResourceIdentifier... supplyChannels) {
+    
+    public StoreSetSupplyChannelsActionBuilder supplyChannels(@Nullable final com.commercetools.api.models.channel.ChannelResourceIdentifier ...supplyChannels) {
         this.supplyChannels = new ArrayList<>(Arrays.asList(supplyChannels));
         return this;
     }
-
+    
     /**
      *  <p>Value to set. If not defined, the Store's <code>supplyChannels</code> are unset.</p>
      * @param supplyChannels value to be set
      * @return Builder
      */
-
-    public StoreSetSupplyChannelsActionBuilder supplyChannels(
-            @Nullable final java.util.List<com.commercetools.api.models.channel.ChannelResourceIdentifier> supplyChannels) {
+    
+    public StoreSetSupplyChannelsActionBuilder supplyChannels(@Nullable final java.util.List<com.commercetools.api.models.channel.ChannelResourceIdentifier> supplyChannels) {
         this.supplyChannels = supplyChannels;
         return this;
     }
-
+    
     /**
      *  <p>Value to set. If not defined, the Store's <code>supplyChannels</code> are unset.</p>
      * @param supplyChannels value to be set
      * @return Builder
      */
-
-    public StoreSetSupplyChannelsActionBuilder plusSupplyChannels(
-            @Nullable final com.commercetools.api.models.channel.ChannelResourceIdentifier... supplyChannels) {
+    
+    public StoreSetSupplyChannelsActionBuilder plusSupplyChannels(@Nullable final com.commercetools.api.models.channel.ChannelResourceIdentifier ...supplyChannels) {
         if (this.supplyChannels == null) {
             this.supplyChannels = new ArrayList<>();
         }
         this.supplyChannels.addAll(Arrays.asList(supplyChannels));
         return this;
     }
-
+    
+    
+    
     /**
      *  <p>Value to set. If not defined, the Store's <code>supplyChannels</code> are unset.</p>
      * @param builder function to build the supplyChannels value
      * @return Builder
      */
-
-    public StoreSetSupplyChannelsActionBuilder plusSupplyChannels(
-            Function<com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder, com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder> builder) {
+    
+    public StoreSetSupplyChannelsActionBuilder plusSupplyChannels(Function<com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder, com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder> builder) {
         if (this.supplyChannels == null) {
             this.supplyChannels = new ArrayList<>();
         }
-        this.supplyChannels
-                .add(builder.apply(com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder.of()).build());
+        this.supplyChannels.add(builder.apply(com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder.of()).build());
         return this;
     }
-
+    
     /**
      *  <p>Value to set. If not defined, the Store's <code>supplyChannels</code> are unset.</p>
      * @param builder function to build the supplyChannels value
      * @return Builder
      */
-
-    public StoreSetSupplyChannelsActionBuilder withSupplyChannels(
-            Function<com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder, com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder> builder) {
+    
+    public StoreSetSupplyChannelsActionBuilder withSupplyChannels(Function<com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder, com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder> builder) {
         this.supplyChannels = new ArrayList<>();
-        this.supplyChannels
-                .add(builder.apply(com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder.of()).build());
+        this.supplyChannels.add(builder.apply(com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder.of()).build());
         return this;
     }
-
+    
     /**
      *  <p>Value to set. If not defined, the Store's <code>supplyChannels</code> are unset.</p>
      * @param builder function to build the supplyChannels value
      * @return Builder
      */
-
-    public StoreSetSupplyChannelsActionBuilder addSupplyChannels(
-            Function<com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder, com.commercetools.api.models.channel.ChannelResourceIdentifier> builder) {
-        return plusSupplyChannels(
-            builder.apply(com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder.of()));
+    
+    public StoreSetSupplyChannelsActionBuilder addSupplyChannels(Function<com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder, com.commercetools.api.models.channel.ChannelResourceIdentifier> builder) {
+        return plusSupplyChannels(builder.apply(com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder.of()));
     }
-
+    
     /**
      *  <p>Value to set. If not defined, the Store's <code>supplyChannels</code> are unset.</p>
      * @param builder function to build the supplyChannels value
      * @return Builder
      */
-
-    public StoreSetSupplyChannelsActionBuilder setSupplyChannels(
-            Function<com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder, com.commercetools.api.models.channel.ChannelResourceIdentifier> builder) {
-        return supplyChannels(
-            builder.apply(com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder.of()));
+    
+    public StoreSetSupplyChannelsActionBuilder setSupplyChannels(Function<com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder, com.commercetools.api.models.channel.ChannelResourceIdentifier> builder) {
+        return supplyChannels(builder.apply(com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder.of()));
     }
+                    
 
     /**
      *  <p>Value to set. If not defined, the Store's <code>supplyChannels</code> are unset.</p>
      * @return supplyChannels
      */
-
+    
     @Nullable
-    public java.util.List<com.commercetools.api.models.channel.ChannelResourceIdentifier> getSupplyChannels() {
+    public java.util.List<com.commercetools.api.models.channel.ChannelResourceIdentifier> getSupplyChannels(){
         return this.supplyChannels;
     }
 
@@ -136,7 +133,7 @@ public class StoreSetSupplyChannelsActionBuilder implements Builder<StoreSetSupp
     public StoreSetSupplyChannelsAction build() {
         return new StoreSetSupplyChannelsActionImpl(supplyChannels);
     }
-
+    
     /**
      * builds StoreSetSupplyChannelsAction without checking for non-null required values
      * @return StoreSetSupplyChannelsAction
@@ -147,7 +144,7 @@ public class StoreSetSupplyChannelsActionBuilder implements Builder<StoreSetSupp
 
     /**
      * factory method for an instance of StoreSetSupplyChannelsActionBuilder
-     * @return builder
+     * @return builder 
      */
     public static StoreSetSupplyChannelsActionBuilder of() {
         return new StoreSetSupplyChannelsActionBuilder();

@@ -1,20 +1,21 @@
-
 package com.commercetools.api.models.order_edit;
-
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.cart.TaxedPrice;
 import com.commercetools.api.models.common.TypedMoney;
+import com.commercetools.api.models.order_edit.OrderExcerptImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * OrderExcerpt
@@ -28,11 +29,15 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .version(0.3)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = OrderExcerptImpl.class)
-public interface OrderExcerpt {
+public interface OrderExcerpt  {
+
 
     /**
      *
@@ -42,7 +47,6 @@ public interface OrderExcerpt {
     @Valid
     @JsonProperty("totalPrice")
     public TypedMoney getTotalPrice();
-
     /**
      *
      * @return taxedPrice
@@ -50,7 +54,6 @@ public interface OrderExcerpt {
     @Valid
     @JsonProperty("taxedPrice")
     public TaxedPrice getTaxedPrice();
-
     /**
      *
      * @return version
@@ -63,30 +66,34 @@ public interface OrderExcerpt {
      * set totalPrice
      * @param totalPrice value to be set
      */
-
+    
     public void setTotalPrice(final TypedMoney totalPrice);
-
+    
+    
     /**
      * set taxedPrice
      * @param taxedPrice value to be set
      */
-
+    
     public void setTaxedPrice(final TaxedPrice taxedPrice);
-
+    
+    
     /**
      * set version
      * @param version value to be set
      */
-
+    
     public void setVersion(final Long version);
+    
 
     /**
      * factory method
      * @return instance of OrderExcerpt
      */
-    public static OrderExcerpt of() {
+    public static OrderExcerpt of(){
         return new OrderExcerptImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy OrderExcerpt
@@ -125,7 +132,7 @@ public interface OrderExcerpt {
     public static OrderExcerptBuilder builder() {
         return OrderExcerptBuilder.of();
     }
-
+    
     /**
      * create builder for OrderExcerpt instance
      * @param template instance with prefilled values for the builder
@@ -134,6 +141,7 @@ public interface OrderExcerpt {
     public static OrderExcerptBuilder builder(final OrderExcerpt template) {
         return OrderExcerptBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -144,7 +152,7 @@ public interface OrderExcerpt {
     default <T> T withOrderExcerpt(Function<OrderExcerpt, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

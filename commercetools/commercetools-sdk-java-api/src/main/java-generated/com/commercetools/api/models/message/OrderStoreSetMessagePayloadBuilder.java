@@ -1,11 +1,12 @@
-
 package com.commercetools.api.models.message;
 
+import com.commercetools.api.models.message.OrderMessagePayload;
+import com.commercetools.api.models.store.StoreKeyReference;
+import com.commercetools.api.models.message.OrderStoreSetMessagePayload;
+import javax.annotation.Nullable;
 import java.util.*;
 import java.util.function.Function;
-
-import javax.annotation.Nullable;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -18,57 +19,61 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     OrderStoreSetMessagePayload orderStoreSetMessagePayload = OrderStoreSetMessagePayload.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class OrderStoreSetMessagePayloadBuilder implements Builder<OrderStoreSetMessagePayload> {
 
+    
     @Nullable
     private com.commercetools.api.models.store.StoreKeyReference store;
 
+    
     /**
      *  <p>Store that was set.</p>
      * @param builder function to build the store value
      * @return Builder
      */
-
-    public OrderStoreSetMessagePayloadBuilder store(
-            Function<com.commercetools.api.models.store.StoreKeyReferenceBuilder, com.commercetools.api.models.store.StoreKeyReferenceBuilder> builder) {
+    
+    public OrderStoreSetMessagePayloadBuilder store(Function<com.commercetools.api.models.store.StoreKeyReferenceBuilder, com.commercetools.api.models.store.StoreKeyReferenceBuilder> builder) {
         this.store = builder.apply(com.commercetools.api.models.store.StoreKeyReferenceBuilder.of()).build();
         return this;
     }
-
+    
     /**
      *  <p>Store that was set.</p>
      * @param builder function to build the store value
      * @return Builder
      */
-
-    public OrderStoreSetMessagePayloadBuilder withStore(
-            Function<com.commercetools.api.models.store.StoreKeyReferenceBuilder, com.commercetools.api.models.store.StoreKeyReference> builder) {
+    
+    public OrderStoreSetMessagePayloadBuilder withStore(Function<com.commercetools.api.models.store.StoreKeyReferenceBuilder, com.commercetools.api.models.store.StoreKeyReference> builder) {
         this.store = builder.apply(com.commercetools.api.models.store.StoreKeyReferenceBuilder.of());
         return this;
     }
-
+                    
     /**
      *  <p>Store that was set.</p>
      * @param store value to be set
      * @return Builder
      */
-
-    public OrderStoreSetMessagePayloadBuilder store(
-            @Nullable final com.commercetools.api.models.store.StoreKeyReference store) {
+    
+    public OrderStoreSetMessagePayloadBuilder store(@Nullable final com.commercetools.api.models.store.StoreKeyReference store) {
         this.store = store;
         return this;
     }
+    
+    
 
     /**
      *  <p>Store that was set.</p>
      * @return store
      */
-
+    
     @Nullable
-    public com.commercetools.api.models.store.StoreKeyReference getStore() {
+    public com.commercetools.api.models.store.StoreKeyReference getStore(){
         return this.store;
     }
 
@@ -79,7 +84,7 @@ public class OrderStoreSetMessagePayloadBuilder implements Builder<OrderStoreSet
     public OrderStoreSetMessagePayload build() {
         return new OrderStoreSetMessagePayloadImpl(store);
     }
-
+    
     /**
      * builds OrderStoreSetMessagePayload without checking for non-null required values
      * @return OrderStoreSetMessagePayload
@@ -90,7 +95,7 @@ public class OrderStoreSetMessagePayloadBuilder implements Builder<OrderStoreSet
 
     /**
      * factory method for an instance of OrderStoreSetMessagePayloadBuilder
-     * @return builder
+     * @return builder 
      */
     public static OrderStoreSetMessagePayloadBuilder of() {
         return new OrderStoreSetMessagePayloadBuilder();

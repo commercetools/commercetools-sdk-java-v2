@@ -1,20 +1,22 @@
-
 package com.commercetools.importapi.models.importrequests;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-import java.util.stream.Collectors;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
+import com.commercetools.importapi.models.common.ImportResourceType;
 import com.commercetools.importapi.models.customers.CustomerImport;
+import com.commercetools.importapi.models.importrequests.ImportRequest;
+import com.commercetools.importapi.models.importrequests.CustomerImportRequestImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>The request body to import Customers. Contains data for Customers to be created or updated in a Project.</p>
@@ -27,9 +29,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .plusResources(resourcesBuilder -> resourcesBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = CustomerImportRequestImpl.class)
 public interface CustomerImportRequest extends ImportRequest {
 
@@ -51,24 +56,24 @@ public interface CustomerImportRequest extends ImportRequest {
      *  <p>The customer import resources of this request.</p>
      * @param resources values to be set
      */
-
+    
     @JsonIgnore
-    public void setResources(final CustomerImport... resources);
-
+    public void setResources(final CustomerImport ...resources);
     /**
      *  <p>The customer import resources of this request.</p>
      * @param resources values to be set
      */
-
+    
     public void setResources(final List<CustomerImport> resources);
 
     /**
      * factory method
      * @return instance of CustomerImportRequest
      */
-    public static CustomerImportRequest of() {
+    public static CustomerImportRequest of(){
         return new CustomerImportRequestImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy CustomerImportRequest
@@ -93,9 +98,7 @@ public interface CustomerImportRequest extends ImportRequest {
         }
         CustomerImportRequestImpl instance = new CustomerImportRequestImpl();
         instance.setResources(Optional.ofNullable(template.getResources())
-                .map(t -> t.stream()
-                        .map(com.commercetools.importapi.models.customers.CustomerImport::deepCopy)
-                        .collect(Collectors.toList()))
+                .map(t -> t.stream().map(com.commercetools.importapi.models.customers.CustomerImport::deepCopy).collect(Collectors.toList()))
                 .orElse(null));
         return instance;
     }
@@ -107,7 +110,7 @@ public interface CustomerImportRequest extends ImportRequest {
     public static CustomerImportRequestBuilder builder() {
         return CustomerImportRequestBuilder.of();
     }
-
+    
     /**
      * create builder for CustomerImportRequest instance
      * @param template instance with prefilled values for the builder
@@ -116,6 +119,7 @@ public interface CustomerImportRequest extends ImportRequest {
     public static CustomerImportRequestBuilder builder(final CustomerImportRequest template) {
         return CustomerImportRequestBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -126,7 +130,7 @@ public interface CustomerImportRequest extends ImportRequest {
     default <T> T withCustomerImportRequest(Function<CustomerImportRequest, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

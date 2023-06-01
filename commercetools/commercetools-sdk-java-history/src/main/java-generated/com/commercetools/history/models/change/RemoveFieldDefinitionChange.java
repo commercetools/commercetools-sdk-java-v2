@@ -1,19 +1,21 @@
-
 package com.commercetools.history.models.change;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
+import com.commercetools.history.models.change.Change;
 import com.commercetools.history.models.common.FieldDefinition;
+import com.commercetools.history.models.change.RemoveFieldDefinitionChangeImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * RemoveFieldDefinitionChange
@@ -27,9 +29,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .previousValue(previousValueBuilder -> previousValueBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = RemoveFieldDefinitionChangeImpl.class)
 public interface RemoveFieldDefinitionChange extends Change {
 
@@ -45,7 +50,6 @@ public interface RemoveFieldDefinitionChange extends Change {
     @NotNull
     @JsonProperty("type")
     public String getType();
-
     /**
      *  <p>Update action for <code>removeFieldDefinition</code> on payments</p>
      * @return change
@@ -53,7 +57,6 @@ public interface RemoveFieldDefinitionChange extends Change {
     @NotNull
     @JsonProperty("change")
     public String getChange();
-
     /**
      *
      * @return previousValue
@@ -67,23 +70,26 @@ public interface RemoveFieldDefinitionChange extends Change {
      *  <p>Update action for <code>removeFieldDefinition</code> on payments</p>
      * @param change value to be set
      */
-
+    
     public void setChange(final String change);
-
+    
+    
     /**
      * set previousValue
      * @param previousValue value to be set
      */
-
+    
     public void setPreviousValue(final FieldDefinition previousValue);
+    
 
     /**
      * factory method
      * @return instance of RemoveFieldDefinitionChange
      */
-    public static RemoveFieldDefinitionChange of() {
+    public static RemoveFieldDefinitionChange of(){
         return new RemoveFieldDefinitionChangeImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy RemoveFieldDefinitionChange
@@ -109,8 +115,7 @@ public interface RemoveFieldDefinitionChange extends Change {
         }
         RemoveFieldDefinitionChangeImpl instance = new RemoveFieldDefinitionChangeImpl();
         instance.setChange(template.getChange());
-        instance.setPreviousValue(
-            com.commercetools.history.models.common.FieldDefinition.deepCopy(template.getPreviousValue()));
+        instance.setPreviousValue(com.commercetools.history.models.common.FieldDefinition.deepCopy(template.getPreviousValue()));
         return instance;
     }
 
@@ -121,7 +126,7 @@ public interface RemoveFieldDefinitionChange extends Change {
     public static RemoveFieldDefinitionChangeBuilder builder() {
         return RemoveFieldDefinitionChangeBuilder.of();
     }
-
+    
     /**
      * create builder for RemoveFieldDefinitionChange instance
      * @param template instance with prefilled values for the builder
@@ -130,6 +135,7 @@ public interface RemoveFieldDefinitionChange extends Change {
     public static RemoveFieldDefinitionChangeBuilder builder(final RemoveFieldDefinitionChange template) {
         return RemoveFieldDefinitionChangeBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -140,7 +146,7 @@ public interface RemoveFieldDefinitionChange extends Change {
     default <T> T withRemoveFieldDefinitionChange(Function<RemoveFieldDefinitionChange, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

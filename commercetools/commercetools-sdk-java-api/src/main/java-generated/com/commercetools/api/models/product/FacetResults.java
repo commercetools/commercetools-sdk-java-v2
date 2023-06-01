@@ -1,18 +1,20 @@
-
 package com.commercetools.api.models.product;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
+import com.commercetools.api.models.product.FacetResult;
+import com.commercetools.api.models.product.FacetResultsImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * FacetResults
@@ -25,11 +27,15 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             ./^[a-z].*$/(/^[a-z].*$/Builder -> /^[a-z].*$/Builder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = FacetResultsImpl.class)
-public interface FacetResults {
+public interface FacetResults  {
+
 
     /**
      *
@@ -45,7 +51,7 @@ public interface FacetResults {
      * @param key property name
      * @param value property value
      */
-
+    
     @JsonAnySetter
     public void setValue(String key, FacetResult value);
 
@@ -53,9 +59,10 @@ public interface FacetResults {
      * factory method
      * @return instance of FacetResults
      */
-    public static FacetResults of() {
+    public static FacetResults of(){
         return new FacetResultsImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy FacetResults
@@ -90,7 +97,7 @@ public interface FacetResults {
     public static FacetResultsBuilder builder() {
         return FacetResultsBuilder.of();
     }
-
+    
     /**
      * create builder for FacetResults instance
      * @param template instance with prefilled values for the builder
@@ -99,6 +106,7 @@ public interface FacetResults {
     public static FacetResultsBuilder builder(final FacetResults template) {
         return FacetResultsBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -109,7 +117,7 @@ public interface FacetResults {
     default <T> T withFacetResults(Function<FacetResults, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

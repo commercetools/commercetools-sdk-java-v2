@@ -1,17 +1,20 @@
-
 package com.commercetools.history.models.change;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
+import com.commercetools.history.models.change.Change;
+import com.commercetools.history.models.change.SetDeleteDaysAfterLastModificationChangeImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * SetDeleteDaysAfterLastModificationChange
@@ -26,9 +29,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .nextValue(1)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = SetDeleteDaysAfterLastModificationChangeImpl.class)
 public interface SetDeleteDaysAfterLastModificationChange extends Change {
 
@@ -44,7 +50,6 @@ public interface SetDeleteDaysAfterLastModificationChange extends Change {
     @NotNull
     @JsonProperty("type")
     public String getType();
-
     /**
      *  <p>Shape of the action for <code>setDeleteDaysAfterLastModification</code></p>
      * @return change
@@ -52,7 +57,6 @@ public interface SetDeleteDaysAfterLastModificationChange extends Change {
     @NotNull
     @JsonProperty("change")
     public String getChange();
-
     /**
      *
      * @return previousValue
@@ -60,7 +64,6 @@ public interface SetDeleteDaysAfterLastModificationChange extends Change {
     @NotNull
     @JsonProperty("previousValue")
     public Integer getPreviousValue();
-
     /**
      *
      * @return nextValue
@@ -73,30 +76,34 @@ public interface SetDeleteDaysAfterLastModificationChange extends Change {
      *  <p>Shape of the action for <code>setDeleteDaysAfterLastModification</code></p>
      * @param change value to be set
      */
-
+    
     public void setChange(final String change);
-
+    
+    
     /**
      * set previousValue
      * @param previousValue value to be set
      */
-
+    
     public void setPreviousValue(final Integer previousValue);
-
+    
+    
     /**
      * set nextValue
      * @param nextValue value to be set
      */
-
+    
     public void setNextValue(final Integer nextValue);
+    
 
     /**
      * factory method
      * @return instance of SetDeleteDaysAfterLastModificationChange
      */
-    public static SetDeleteDaysAfterLastModificationChange of() {
+    public static SetDeleteDaysAfterLastModificationChange of(){
         return new SetDeleteDaysAfterLastModificationChangeImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy SetDeleteDaysAfterLastModificationChange
@@ -117,8 +124,7 @@ public interface SetDeleteDaysAfterLastModificationChange extends Change {
      * @return copy instance
      */
     @Nullable
-    public static SetDeleteDaysAfterLastModificationChange deepCopy(
-            @Nullable final SetDeleteDaysAfterLastModificationChange template) {
+    public static SetDeleteDaysAfterLastModificationChange deepCopy(@Nullable final SetDeleteDaysAfterLastModificationChange template) {
         if (template == null) {
             return null;
         }
@@ -136,16 +142,16 @@ public interface SetDeleteDaysAfterLastModificationChange extends Change {
     public static SetDeleteDaysAfterLastModificationChangeBuilder builder() {
         return SetDeleteDaysAfterLastModificationChangeBuilder.of();
     }
-
+    
     /**
      * create builder for SetDeleteDaysAfterLastModificationChange instance
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static SetDeleteDaysAfterLastModificationChangeBuilder builder(
-            final SetDeleteDaysAfterLastModificationChange template) {
+    public static SetDeleteDaysAfterLastModificationChangeBuilder builder(final SetDeleteDaysAfterLastModificationChange template) {
         return SetDeleteDaysAfterLastModificationChangeBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -153,11 +159,10 @@ public interface SetDeleteDaysAfterLastModificationChange extends Change {
      * @param helper function to map the object
      * @return mapped value
      */
-    default <T> T withSetDeleteDaysAfterLastModificationChange(
-            Function<SetDeleteDaysAfterLastModificationChange, T> helper) {
+    default <T> T withSetDeleteDaysAfterLastModificationChange(Function<SetDeleteDaysAfterLastModificationChange, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

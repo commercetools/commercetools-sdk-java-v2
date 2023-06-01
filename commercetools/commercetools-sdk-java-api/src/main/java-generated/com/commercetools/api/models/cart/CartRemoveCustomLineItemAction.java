@@ -1,17 +1,20 @@
-
 package com.commercetools.api.models.cart;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
+import com.commercetools.api.models.cart.CartUpdateAction;
+import com.commercetools.api.models.cart.CartRemoveCustomLineItemActionImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>This update action does not support specifying quantities, unlike the Remove LineItem update action.</p>
@@ -25,9 +28,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .customLineItemId("{customLineItemId}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = CartRemoveCustomLineItemActionImpl.class)
 public interface CartRemoveCustomLineItemAction extends CartUpdateAction {
 
@@ -48,16 +54,18 @@ public interface CartRemoveCustomLineItemAction extends CartUpdateAction {
      *  <p><code>id</code> of the Custom Line Item to remove.</p>
      * @param customLineItemId value to be set
      */
-
+    
     public void setCustomLineItemId(final String customLineItemId);
+    
 
     /**
      * factory method
      * @return instance of CartRemoveCustomLineItemAction
      */
-    public static CartRemoveCustomLineItemAction of() {
+    public static CartRemoveCustomLineItemAction of(){
         return new CartRemoveCustomLineItemActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy CartRemoveCustomLineItemAction
@@ -92,7 +100,7 @@ public interface CartRemoveCustomLineItemAction extends CartUpdateAction {
     public static CartRemoveCustomLineItemActionBuilder builder() {
         return CartRemoveCustomLineItemActionBuilder.of();
     }
-
+    
     /**
      * create builder for CartRemoveCustomLineItemAction instance
      * @param template instance with prefilled values for the builder
@@ -101,6 +109,7 @@ public interface CartRemoveCustomLineItemAction extends CartUpdateAction {
     public static CartRemoveCustomLineItemActionBuilder builder(final CartRemoveCustomLineItemAction template) {
         return CartRemoveCustomLineItemActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -111,7 +120,7 @@ public interface CartRemoveCustomLineItemAction extends CartUpdateAction {
     default <T> T withCartRemoveCustomLineItemAction(Function<CartRemoveCustomLineItemAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

@@ -1,9 +1,11 @@
-
 package com.commercetools.api.predicates.query.cart;
 
 import com.commercetools.api.predicates.query.*;
 
-public class CartSetCustomLineItemCustomFieldActionQueryBuilderDsl {
+import java.util.function.Function;
+
+
+public class CartSetCustomLineItemCustomFieldActionQueryBuilderDsl  {
     public CartSetCustomLineItemCustomFieldActionQueryBuilderDsl() {
     }
 
@@ -12,27 +14,20 @@ public class CartSetCustomLineItemCustomFieldActionQueryBuilderDsl {
     }
 
     public StringComparisonPredicateBuilder<CartSetCustomLineItemCustomFieldActionQueryBuilderDsl> action() {
-        return new StringComparisonPredicateBuilder<>(
-            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("action")),
-            p -> new CombinationQueryPredicate<>(p, CartSetCustomLineItemCustomFieldActionQueryBuilderDsl::of));
+        return new StringComparisonPredicateBuilder<>(BinaryQueryPredicate.of().left(new ConstantQueryPredicate("action")),
+        p -> new CombinationQueryPredicate<>(p, CartSetCustomLineItemCustomFieldActionQueryBuilderDsl::of));
     }
-
     public StringComparisonPredicateBuilder<CartSetCustomLineItemCustomFieldActionQueryBuilderDsl> customLineItemId() {
-        return new StringComparisonPredicateBuilder<>(
-            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("customLineItemId")),
-            p -> new CombinationQueryPredicate<>(p, CartSetCustomLineItemCustomFieldActionQueryBuilderDsl::of));
+        return new StringComparisonPredicateBuilder<>(BinaryQueryPredicate.of().left(new ConstantQueryPredicate("customLineItemId")),
+        p -> new CombinationQueryPredicate<>(p, CartSetCustomLineItemCustomFieldActionQueryBuilderDsl::of));
     }
-
     public StringComparisonPredicateBuilder<CartSetCustomLineItemCustomFieldActionQueryBuilderDsl> name() {
-        return new StringComparisonPredicateBuilder<>(
-            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("name")),
-            p -> new CombinationQueryPredicate<>(p, CartSetCustomLineItemCustomFieldActionQueryBuilderDsl::of));
+        return new StringComparisonPredicateBuilder<>(BinaryQueryPredicate.of().left(new ConstantQueryPredicate("name")),
+        p -> new CombinationQueryPredicate<>(p, CartSetCustomLineItemCustomFieldActionQueryBuilderDsl::of));
     }
-
     public StringComparisonPredicateBuilder<CartSetCustomLineItemCustomFieldActionQueryBuilderDsl> value() {
-        return new StringComparisonPredicateBuilder<>(
-            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("value")),
-            p -> new CombinationQueryPredicate<>(p, CartSetCustomLineItemCustomFieldActionQueryBuilderDsl::of));
+        return new StringComparisonPredicateBuilder<>(BinaryQueryPredicate.of().left(new ConstantQueryPredicate("value")),
+        p -> new CombinationQueryPredicate<>(p, CartSetCustomLineItemCustomFieldActionQueryBuilderDsl::of));
     }
-
+    
 }

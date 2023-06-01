@@ -1,17 +1,20 @@
-
 package com.commercetools.api.models.product;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
 
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
+import com.commercetools.api.models.product.CategoryOrderHintsImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>JSON object where the key is a Category <code>id</code> and the value is an order hint. Allows controlling the order of Products and how they appear in Categories. Products with no order hint have an order score below <code>0</code>. Order hints are non-unique. If a subset of Products have the same value for order hint in a specific category, the behavior is undetermined.</p>
@@ -24,11 +27,15 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             ./[0-9].[0-9]*[1-9]/("{/[0-9].[0-9]*[1-9]/}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = CategoryOrderHintsImpl.class)
-public interface CategoryOrderHints {
+public interface CategoryOrderHints  {
+
 
     /**
      *  <p>A string representing a number between 0 and 1 that must start with <code>0.</code> and cannot end with <code>0</code>.</p>
@@ -43,7 +50,7 @@ public interface CategoryOrderHints {
      * @param key property name
      * @param value property value
      */
-
+    
     @JsonAnySetter
     public void setValue(String key, String value);
 
@@ -51,9 +58,10 @@ public interface CategoryOrderHints {
      * factory method
      * @return instance of CategoryOrderHints
      */
-    public static CategoryOrderHints of() {
+    public static CategoryOrderHints of(){
         return new CategoryOrderHintsImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy CategoryOrderHints
@@ -88,7 +96,7 @@ public interface CategoryOrderHints {
     public static CategoryOrderHintsBuilder builder() {
         return CategoryOrderHintsBuilder.of();
     }
-
+    
     /**
      * create builder for CategoryOrderHints instance
      * @param template instance with prefilled values for the builder
@@ -97,6 +105,7 @@ public interface CategoryOrderHints {
     public static CategoryOrderHintsBuilder builder(final CategoryOrderHints template) {
         return CategoryOrderHintsBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -107,7 +116,7 @@ public interface CategoryOrderHints {
     default <T> T withCategoryOrderHints(Function<CategoryOrderHints, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

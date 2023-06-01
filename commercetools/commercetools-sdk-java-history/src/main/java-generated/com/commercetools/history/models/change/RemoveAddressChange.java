@@ -1,19 +1,21 @@
-
 package com.commercetools.history.models.change;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
+import com.commercetools.history.models.change.Change;
 import com.commercetools.history.models.common.Address;
+import com.commercetools.history.models.change.RemoveAddressChangeImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * RemoveAddressChange
@@ -27,9 +29,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .previousValue(previousValueBuilder -> previousValueBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = RemoveAddressChangeImpl.class)
 public interface RemoveAddressChange extends Change {
 
@@ -45,7 +50,6 @@ public interface RemoveAddressChange extends Change {
     @NotNull
     @JsonProperty("change")
     public String getChange();
-
     /**
      *
      * @return type
@@ -53,7 +57,6 @@ public interface RemoveAddressChange extends Change {
     @NotNull
     @JsonProperty("type")
     public String getType();
-
     /**
      *
      * @return previousValue
@@ -67,23 +70,26 @@ public interface RemoveAddressChange extends Change {
      *  <p>Update action for <code>removeAddress</code> action.</p>
      * @param change value to be set
      */
-
+    
     public void setChange(final String change);
-
+    
+    
     /**
      * set previousValue
      * @param previousValue value to be set
      */
-
+    
     public void setPreviousValue(final Address previousValue);
+    
 
     /**
      * factory method
      * @return instance of RemoveAddressChange
      */
-    public static RemoveAddressChange of() {
+    public static RemoveAddressChange of(){
         return new RemoveAddressChangeImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy RemoveAddressChange
@@ -109,8 +115,7 @@ public interface RemoveAddressChange extends Change {
         }
         RemoveAddressChangeImpl instance = new RemoveAddressChangeImpl();
         instance.setChange(template.getChange());
-        instance.setPreviousValue(
-            com.commercetools.history.models.common.Address.deepCopy(template.getPreviousValue()));
+        instance.setPreviousValue(com.commercetools.history.models.common.Address.deepCopy(template.getPreviousValue()));
         return instance;
     }
 
@@ -121,7 +126,7 @@ public interface RemoveAddressChange extends Change {
     public static RemoveAddressChangeBuilder builder() {
         return RemoveAddressChangeBuilder.of();
     }
-
+    
     /**
      * create builder for RemoveAddressChange instance
      * @param template instance with prefilled values for the builder
@@ -130,6 +135,7 @@ public interface RemoveAddressChange extends Change {
     public static RemoveAddressChangeBuilder builder(final RemoveAddressChange template) {
         return RemoveAddressChangeBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -140,7 +146,7 @@ public interface RemoveAddressChange extends Change {
     default <T> T withRemoveAddressChange(Function<RemoveAddressChange, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

@@ -1,11 +1,11 @@
-
 package com.commercetools.api.predicates.query.store;
-
-import java.util.function.Function;
 
 import com.commercetools.api.predicates.query.*;
 
-public class StoreRemoveProductSelectionActionQueryBuilderDsl {
+import java.util.function.Function;
+
+
+public class StoreRemoveProductSelectionActionQueryBuilderDsl  {
     public StoreRemoveProductSelectionActionQueryBuilderDsl() {
     }
 
@@ -14,19 +14,16 @@ public class StoreRemoveProductSelectionActionQueryBuilderDsl {
     }
 
     public StringComparisonPredicateBuilder<StoreRemoveProductSelectionActionQueryBuilderDsl> action() {
-        return new StringComparisonPredicateBuilder<>(
-            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("action")),
-            p -> new CombinationQueryPredicate<>(p, StoreRemoveProductSelectionActionQueryBuilderDsl::of));
+        return new StringComparisonPredicateBuilder<>(BinaryQueryPredicate.of().left(new ConstantQueryPredicate("action")),
+        p -> new CombinationQueryPredicate<>(p, StoreRemoveProductSelectionActionQueryBuilderDsl::of));
     }
-
     public CombinationQueryPredicate<StoreRemoveProductSelectionActionQueryBuilderDsl> productSelection(
-            Function<com.commercetools.api.predicates.query.product_selection.ProductSelectionResourceIdentifierQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.product_selection.ProductSelectionResourceIdentifierQueryBuilderDsl>> fn) {
+        Function<com.commercetools.api.predicates.query.product_selection.ProductSelectionResourceIdentifierQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.product_selection.ProductSelectionResourceIdentifierQueryBuilderDsl>> fn) {
         return new CombinationQueryPredicate<>(ContainerQueryPredicate.of()
-                .parent(ConstantQueryPredicate.of().constant("productSelection"))
-                .inner(fn.apply(
-                    com.commercetools.api.predicates.query.product_selection.ProductSelectionResourceIdentifierQueryBuilderDsl
-                            .of())),
+            .parent(ConstantQueryPredicate.of().constant("productSelection"))
+            .inner(fn.apply(com.commercetools.api.predicates.query.product_selection.ProductSelectionResourceIdentifierQueryBuilderDsl.of())),
             StoreRemoveProductSelectionActionQueryBuilderDsl::of);
     }
-
+    
+    
 }

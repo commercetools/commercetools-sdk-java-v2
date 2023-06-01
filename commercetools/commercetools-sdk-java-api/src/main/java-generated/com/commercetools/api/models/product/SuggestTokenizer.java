@@ -1,17 +1,21 @@
-
 package com.commercetools.api.models.product;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
+import com.commercetools.api.models.product.CustomTokenizer;
+import com.commercetools.api.models.product.WhitespaceTokenizer;
 
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * SuggestTokenizer
@@ -24,15 +28,26 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             plusInputs(inputsBuilder -> inputsBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
 @JsonSubTypes({
-        @JsonSubTypes.Type(value = com.commercetools.api.models.product.CustomTokenizerImpl.class, name = CustomTokenizer.CUSTOM),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.product.WhitespaceTokenizerImpl.class, name = WhitespaceTokenizer.WHITESPACE) })
-@JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.EXISTING_PROPERTY, property = "type", defaultImpl = SuggestTokenizerImpl.class, visible = true)
+   @JsonSubTypes.Type(value = com.commercetools.api.models.product.CustomTokenizerImpl.class, name = CustomTokenizer.CUSTOM),
+   @JsonSubTypes.Type(value = com.commercetools.api.models.product.WhitespaceTokenizerImpl.class, name = WhitespaceTokenizer.WHITESPACE)
+})
+@JsonTypeInfo(
+    use = JsonTypeInfo.Id.NAME,
+    include = JsonTypeInfo.As.EXISTING_PROPERTY,
+    property = "type",
+    defaultImpl = SuggestTokenizerImpl.class,
+    visible = true
+)
 @JsonDeserialize(as = SuggestTokenizerImpl.class)
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
-public interface SuggestTokenizer {
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
+public interface SuggestTokenizer  {
+
 
     /**
      *
@@ -41,6 +56,9 @@ public interface SuggestTokenizer {
     @NotNull
     @JsonProperty("type")
     public String getType();
+
+
+
 
     /**
      * factory method to create a deep copy of SuggestTokenizer
@@ -53,31 +71,29 @@ public interface SuggestTokenizer {
             return null;
         }
         if (template instanceof com.commercetools.api.models.product.CustomTokenizer) {
-            return com.commercetools.api.models.product.CustomTokenizer
-                    .deepCopy((com.commercetools.api.models.product.CustomTokenizer) template);
+            return com.commercetools.api.models.product.CustomTokenizer.deepCopy((com.commercetools.api.models.product.CustomTokenizer)template);
         }
         if (template instanceof com.commercetools.api.models.product.WhitespaceTokenizer) {
-            return com.commercetools.api.models.product.WhitespaceTokenizer
-                    .deepCopy((com.commercetools.api.models.product.WhitespaceTokenizer) template);
+            return com.commercetools.api.models.product.WhitespaceTokenizer.deepCopy((com.commercetools.api.models.product.WhitespaceTokenizer)template);
         }
         SuggestTokenizerImpl instance = new SuggestTokenizerImpl();
         return instance;
     }
+
 
     /**
      * builder for custom subtype
      * @return builder
      */
     public static com.commercetools.api.models.product.CustomTokenizerBuilder customBuilder() {
-        return com.commercetools.api.models.product.CustomTokenizerBuilder.of();
+       return com.commercetools.api.models.product.CustomTokenizerBuilder.of();
     }
-
     /**
      * builder for whitespace subtype
      * @return builder
      */
     public static com.commercetools.api.models.product.WhitespaceTokenizerBuilder whitespaceBuilder() {
-        return com.commercetools.api.models.product.WhitespaceTokenizerBuilder.of();
+       return com.commercetools.api.models.product.WhitespaceTokenizerBuilder.of();
     }
 
     /**
@@ -89,7 +105,7 @@ public interface SuggestTokenizer {
     default <T> T withSuggestTokenizer(Function<SuggestTokenizer, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

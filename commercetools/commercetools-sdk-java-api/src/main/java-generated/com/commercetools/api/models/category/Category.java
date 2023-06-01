@@ -1,26 +1,27 @@
-
 package com.commercetools.api.models.category;
 
-import java.time.*;
-import java.time.ZonedDateTime;
-import java.util.*;
-import java.util.function.Function;
-import java.util.stream.Collectors;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
+import com.commercetools.api.models.category.CategoryReference;
 import com.commercetools.api.models.common.Asset;
 import com.commercetools.api.models.common.BaseResource;
 import com.commercetools.api.models.common.CreatedBy;
 import com.commercetools.api.models.common.LastModifiedBy;
 import com.commercetools.api.models.common.LocalizedString;
 import com.commercetools.api.models.type.CustomFields;
+import java.time.ZonedDateTime;
+import com.commercetools.api.models.category.CategoryImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * Category
@@ -40,14 +41,15 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .orderHint("{orderHint}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = CategoryImpl.class)
-public interface Category extends BaseResource, CategoryMixin, com.commercetools.api.models.DomainResource<Category>,
-        com.commercetools.api.models.Referencable<Category>,
-        com.commercetools.api.models.ResourceIdentifiable<Category>,
-        com.commercetools.api.models.Customizable<Category>, com.commercetools.api.models.WithKey {
+public interface Category extends BaseResource, CategoryMixin, com.commercetools.api.models.DomainResource<Category>, com.commercetools.api.models.Referencable<Category>, com.commercetools.api.models.ResourceIdentifiable<Category>, com.commercetools.api.models.Customizable<Category>, com.commercetools.api.models.WithKey {
+
 
     /**
      *  <p>Unique identifier of the Category.</p>
@@ -56,7 +58,6 @@ public interface Category extends BaseResource, CategoryMixin, com.commercetools
     @NotNull
     @JsonProperty("id")
     public String getId();
-
     /**
      *  <p>Current version of the Category.</p>
      * @return version
@@ -64,7 +65,6 @@ public interface Category extends BaseResource, CategoryMixin, com.commercetools
     @NotNull
     @JsonProperty("version")
     public Long getVersion();
-
     /**
      *  <p>Date and time (UTC) the Category was initially created.</p>
      * @return createdAt
@@ -72,7 +72,6 @@ public interface Category extends BaseResource, CategoryMixin, com.commercetools
     @NotNull
     @JsonProperty("createdAt")
     public ZonedDateTime getCreatedAt();
-
     /**
      *  <p>Date and time (UTC) the Category was last updated.</p>
      * @return lastModifiedAt
@@ -80,7 +79,6 @@ public interface Category extends BaseResource, CategoryMixin, com.commercetools
     @NotNull
     @JsonProperty("lastModifiedAt")
     public ZonedDateTime getLastModifiedAt();
-
     /**
      *  <p>Present on resources updated after 1 February 2019 except for events not tracked.</p>
      * @return lastModifiedBy
@@ -88,7 +86,6 @@ public interface Category extends BaseResource, CategoryMixin, com.commercetools
     @Valid
     @JsonProperty("lastModifiedBy")
     public LastModifiedBy getLastModifiedBy();
-
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      * @return createdBy
@@ -96,7 +93,6 @@ public interface Category extends BaseResource, CategoryMixin, com.commercetools
     @Valid
     @JsonProperty("createdBy")
     public CreatedBy getCreatedBy();
-
     /**
      *  <p>Name of the Category.</p>
      * @return name
@@ -105,7 +101,6 @@ public interface Category extends BaseResource, CategoryMixin, com.commercetools
     @Valid
     @JsonProperty("name")
     public LocalizedString getName();
-
     /**
      *  <p>User-defined identifier used as a deep-link URL to the related Category per Locale. A Category can have the same slug for different Locales, but they are unique across the Project. Valid slugs match the pattern <code>^[A-Za-z0-9_-]{2,256}+$</code>. For good performance, indexes are provided for the first 15 <code>languages</code> set in a Project.</p>
      * @return slug
@@ -114,7 +109,6 @@ public interface Category extends BaseResource, CategoryMixin, com.commercetools
     @Valid
     @JsonProperty("slug")
     public LocalizedString getSlug();
-
     /**
      *  <p>Description of the Category.</p>
      * @return description
@@ -122,7 +116,6 @@ public interface Category extends BaseResource, CategoryMixin, com.commercetools
     @Valid
     @JsonProperty("description")
     public LocalizedString getDescription();
-
     /**
      *  <p>Contains the parent path towards the root Category.</p>
      * @return ancestors
@@ -131,7 +124,6 @@ public interface Category extends BaseResource, CategoryMixin, com.commercetools
     @Valid
     @JsonProperty("ancestors")
     public List<CategoryReference> getAncestors();
-
     /**
      *  <p>Parent Category of this Category.</p>
      * @return parent
@@ -139,7 +131,6 @@ public interface Category extends BaseResource, CategoryMixin, com.commercetools
     @Valid
     @JsonProperty("parent")
     public CategoryReference getParent();
-
     /**
      *  <p>Decimal value between 0 and 1 used to order Categories that are on the same level in the Category tree.</p>
      * @return orderHint
@@ -147,15 +138,13 @@ public interface Category extends BaseResource, CategoryMixin, com.commercetools
     @NotNull
     @JsonProperty("orderHint")
     public String getOrderHint();
-
     /**
      *  <p>Additional identifier for external systems like Customer Relationship Management (CRM) or Enterprise Resource Planning (ERP).</p>
      * @return externalId
      */
-
+    
     @JsonProperty("externalId")
     public String getExternalId();
-
     /**
      *  <p>Name of the Category used by external search engines for improved search engine performance.</p>
      * @return metaTitle
@@ -163,7 +152,6 @@ public interface Category extends BaseResource, CategoryMixin, com.commercetools
     @Valid
     @JsonProperty("metaTitle")
     public LocalizedString getMetaTitle();
-
     /**
      *  <p>Description of the Category used by external search engines for improved search engine performance.</p>
      * @return metaDescription
@@ -171,7 +159,6 @@ public interface Category extends BaseResource, CategoryMixin, com.commercetools
     @Valid
     @JsonProperty("metaDescription")
     public LocalizedString getMetaDescription();
-
     /**
      *  <p>Keywords related to the Category for improved search engine performance.</p>
      * @return metaKeywords
@@ -179,7 +166,6 @@ public interface Category extends BaseResource, CategoryMixin, com.commercetools
     @Valid
     @JsonProperty("metaKeywords")
     public LocalizedString getMetaKeywords();
-
     /**
      *  <p>Custom Fields for the Category.</p>
      * @return custom
@@ -187,7 +173,6 @@ public interface Category extends BaseResource, CategoryMixin, com.commercetools
     @Valid
     @JsonProperty("custom")
     public CustomFields getCustom();
-
     /**
      *  <p>Media related to the Category.</p>
      * @return assets
@@ -195,12 +180,11 @@ public interface Category extends BaseResource, CategoryMixin, com.commercetools
     @Valid
     @JsonProperty("assets")
     public List<Asset> getAssets();
-
     /**
      *  <p>User-defined unique identifier of the Category.</p>
      * @return key
      */
-
+    
     @JsonProperty("key")
     public String getKey();
 
@@ -208,158 +192,174 @@ public interface Category extends BaseResource, CategoryMixin, com.commercetools
      *  <p>Unique identifier of the Category.</p>
      * @param id value to be set
      */
-
+    
     public void setId(final String id);
-
+    
+    
     /**
      *  <p>Current version of the Category.</p>
      * @param version value to be set
      */
-
+    
     public void setVersion(final Long version);
-
+    
+    
     /**
      *  <p>Date and time (UTC) the Category was initially created.</p>
      * @param createdAt value to be set
      */
-
+    
     public void setCreatedAt(final ZonedDateTime createdAt);
-
+    
+    
     /**
      *  <p>Date and time (UTC) the Category was last updated.</p>
      * @param lastModifiedAt value to be set
      */
-
+    
     public void setLastModifiedAt(final ZonedDateTime lastModifiedAt);
-
+    
+    
     /**
      *  <p>Present on resources updated after 1 February 2019 except for events not tracked.</p>
      * @param lastModifiedBy value to be set
      */
-
+    
     public void setLastModifiedBy(final LastModifiedBy lastModifiedBy);
-
+    
+    
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      * @param createdBy value to be set
      */
-
+    
     public void setCreatedBy(final CreatedBy createdBy);
-
+    
+    
     /**
      *  <p>Name of the Category.</p>
      * @param name value to be set
      */
-
+    
     public void setName(final LocalizedString name);
-
+    
+    
     /**
      *  <p>User-defined identifier used as a deep-link URL to the related Category per Locale. A Category can have the same slug for different Locales, but they are unique across the Project. Valid slugs match the pattern <code>^[A-Za-z0-9_-]{2,256}+$</code>. For good performance, indexes are provided for the first 15 <code>languages</code> set in a Project.</p>
      * @param slug value to be set
      */
-
+    
     public void setSlug(final LocalizedString slug);
-
+    
+    
     /**
      *  <p>Description of the Category.</p>
      * @param description value to be set
      */
-
+    
     public void setDescription(final LocalizedString description);
-
+    
+    
     /**
      *  <p>Contains the parent path towards the root Category.</p>
      * @param ancestors values to be set
      */
-
+    
     @JsonIgnore
-    public void setAncestors(final CategoryReference... ancestors);
-
+    public void setAncestors(final CategoryReference ...ancestors);
     /**
      *  <p>Contains the parent path towards the root Category.</p>
      * @param ancestors values to be set
      */
-
+    
     public void setAncestors(final List<CategoryReference> ancestors);
-
+    
     /**
      *  <p>Parent Category of this Category.</p>
      * @param parent value to be set
      */
-
+    
     public void setParent(final CategoryReference parent);
-
+    
+    
     /**
      *  <p>Decimal value between 0 and 1 used to order Categories that are on the same level in the Category tree.</p>
      * @param orderHint value to be set
      */
-
+    
     public void setOrderHint(final String orderHint);
-
+    
+    
     /**
      *  <p>Additional identifier for external systems like Customer Relationship Management (CRM) or Enterprise Resource Planning (ERP).</p>
      * @param externalId value to be set
      */
-
+    
     public void setExternalId(final String externalId);
-
+    
+    
     /**
      *  <p>Name of the Category used by external search engines for improved search engine performance.</p>
      * @param metaTitle value to be set
      */
-
+    
     public void setMetaTitle(final LocalizedString metaTitle);
-
+    
+    
     /**
      *  <p>Description of the Category used by external search engines for improved search engine performance.</p>
      * @param metaDescription value to be set
      */
-
+    
     public void setMetaDescription(final LocalizedString metaDescription);
-
+    
+    
     /**
      *  <p>Keywords related to the Category for improved search engine performance.</p>
      * @param metaKeywords value to be set
      */
-
+    
     public void setMetaKeywords(final LocalizedString metaKeywords);
-
+    
+    
     /**
      *  <p>Custom Fields for the Category.</p>
      * @param custom value to be set
      */
-
+    
     public void setCustom(final CustomFields custom);
-
+    
+    
     /**
      *  <p>Media related to the Category.</p>
      * @param assets values to be set
      */
-
+    
     @JsonIgnore
-    public void setAssets(final Asset... assets);
-
+    public void setAssets(final Asset ...assets);
     /**
      *  <p>Media related to the Category.</p>
      * @param assets values to be set
      */
-
+    
     public void setAssets(final List<Asset> assets);
-
+    
     /**
      *  <p>User-defined unique identifier of the Category.</p>
      * @param key value to be set
      */
-
+    
     public void setKey(final String key);
+    
 
     /**
      * factory method
      * @return instance of Category
      */
-    public static Category of() {
+    public static Category of(){
         return new CategoryImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy Category
@@ -405,31 +405,23 @@ public interface Category extends BaseResource, CategoryMixin, com.commercetools
         instance.setVersion(template.getVersion());
         instance.setCreatedAt(template.getCreatedAt());
         instance.setLastModifiedAt(template.getLastModifiedAt());
-        instance.setLastModifiedBy(
-            com.commercetools.api.models.common.LastModifiedBy.deepCopy(template.getLastModifiedBy()));
+        instance.setLastModifiedBy(com.commercetools.api.models.common.LastModifiedBy.deepCopy(template.getLastModifiedBy()));
         instance.setCreatedBy(com.commercetools.api.models.common.CreatedBy.deepCopy(template.getCreatedBy()));
         instance.setName(com.commercetools.api.models.common.LocalizedString.deepCopy(template.getName()));
         instance.setSlug(com.commercetools.api.models.common.LocalizedString.deepCopy(template.getSlug()));
-        instance.setDescription(
-            com.commercetools.api.models.common.LocalizedString.deepCopy(template.getDescription()));
+        instance.setDescription(com.commercetools.api.models.common.LocalizedString.deepCopy(template.getDescription()));
         instance.setAncestors(Optional.ofNullable(template.getAncestors())
-                .map(t -> t.stream()
-                        .map(com.commercetools.api.models.category.CategoryReference::deepCopy)
-                        .collect(Collectors.toList()))
+                .map(t -> t.stream().map(com.commercetools.api.models.category.CategoryReference::deepCopy).collect(Collectors.toList()))
                 .orElse(null));
         instance.setParent(com.commercetools.api.models.category.CategoryReference.deepCopy(template.getParent()));
         instance.setOrderHint(template.getOrderHint());
         instance.setExternalId(template.getExternalId());
         instance.setMetaTitle(com.commercetools.api.models.common.LocalizedString.deepCopy(template.getMetaTitle()));
-        instance.setMetaDescription(
-            com.commercetools.api.models.common.LocalizedString.deepCopy(template.getMetaDescription()));
-        instance.setMetaKeywords(
-            com.commercetools.api.models.common.LocalizedString.deepCopy(template.getMetaKeywords()));
+        instance.setMetaDescription(com.commercetools.api.models.common.LocalizedString.deepCopy(template.getMetaDescription()));
+        instance.setMetaKeywords(com.commercetools.api.models.common.LocalizedString.deepCopy(template.getMetaKeywords()));
         instance.setCustom(com.commercetools.api.models.type.CustomFields.deepCopy(template.getCustom()));
         instance.setAssets(Optional.ofNullable(template.getAssets())
-                .map(t -> t.stream()
-                        .map(com.commercetools.api.models.common.Asset::deepCopy)
-                        .collect(Collectors.toList()))
+                .map(t -> t.stream().map(com.commercetools.api.models.common.Asset::deepCopy).collect(Collectors.toList()))
                 .orElse(null));
         instance.setKey(template.getKey());
         return instance;
@@ -442,7 +434,7 @@ public interface Category extends BaseResource, CategoryMixin, com.commercetools
     public static CategoryBuilder builder() {
         return CategoryBuilder.of();
     }
-
+    
     /**
      * create builder for Category instance
      * @param template instance with prefilled values for the builder
@@ -451,6 +443,7 @@ public interface Category extends BaseResource, CategoryMixin, com.commercetools
     public static CategoryBuilder builder(final Category template) {
         return CategoryBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -461,11 +454,11 @@ public interface Category extends BaseResource, CategoryMixin, com.commercetools
     default <T> T withCategory(Function<Category, T> helper) {
         return helper.apply(this);
     }
-
     public static com.commercetools.api.models.common.ReferenceTypeId referenceTypeId() {
         return com.commercetools.api.models.common.ReferenceTypeId.CATEGORY;
     }
-
+    
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

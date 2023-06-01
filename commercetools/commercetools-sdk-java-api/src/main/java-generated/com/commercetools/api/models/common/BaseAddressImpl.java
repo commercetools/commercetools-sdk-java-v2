@@ -1,94 +1,112 @@
-
 package com.commercetools.api.models.common;
 
-import java.time.*;
-import java.util.*;
-
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
-
-import io.vrap.rmf.base.client.ModelBase;
+import com.commercetools.api.models.common.Address;
+import com.commercetools.api.models.common.AddressDraft;
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.ModelBase;
+import javax.validation.Valid;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.annotation.*;
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
  *  <p>Polymorphic base type that represents a postal address and contact details. Depending on the read or write action, it can be either Address or AddressDraft that only differ in the data type for the optional <code>custom</code> field.</p>
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class BaseAddressImpl implements BaseAddress, ModelBase {
 
+    
     private String id;
-
+    
+    
     private String key;
-
+    
+    
     private String country;
-
+    
+    
     private String title;
-
+    
+    
     private String salutation;
-
+    
+    
     private String firstName;
-
+    
+    
     private String lastName;
-
+    
+    
     private String streetName;
-
+    
+    
     private String streetNumber;
-
+    
+    
     private String additionalStreetInfo;
-
+    
+    
     private String postalCode;
-
+    
+    
     private String city;
-
+    
+    
     private String region;
-
+    
+    
     private String state;
-
+    
+    
     private String company;
-
+    
+    
     private String department;
-
+    
+    
     private String building;
-
+    
+    
     private String apartment;
-
+    
+    
     private String pOBox;
-
+    
+    
     private String phone;
-
+    
+    
     private String mobile;
-
+    
+    
     private String email;
-
+    
+    
     private String fax;
-
+    
+    
     private String additionalAddressInfo;
-
+    
+    
     private String externalId;
 
     /**
      * create instance with all properties
      */
     @JsonCreator
-    BaseAddressImpl(@JsonProperty("id") final String id, @JsonProperty("key") final String key,
-            @JsonProperty("country") final String country, @JsonProperty("title") final String title,
-            @JsonProperty("salutation") final String salutation, @JsonProperty("firstName") final String firstName,
-            @JsonProperty("lastName") final String lastName, @JsonProperty("streetName") final String streetName,
-            @JsonProperty("streetNumber") final String streetNumber,
-            @JsonProperty("additionalStreetInfo") final String additionalStreetInfo,
-            @JsonProperty("postalCode") final String postalCode, @JsonProperty("city") final String city,
-            @JsonProperty("region") final String region, @JsonProperty("state") final String state,
-            @JsonProperty("company") final String company, @JsonProperty("department") final String department,
-            @JsonProperty("building") final String building, @JsonProperty("apartment") final String apartment,
-            @JsonProperty("pOBox") final String pOBox, @JsonProperty("phone") final String phone,
-            @JsonProperty("mobile") final String mobile, @JsonProperty("email") final String email,
-            @JsonProperty("fax") final String fax,
-            @JsonProperty("additionalAddressInfo") final String additionalAddressInfo,
-            @JsonProperty("externalId") final String externalId) {
+    BaseAddressImpl(@JsonProperty("id") final String id, @JsonProperty("key") final String key, @JsonProperty("country") final String country, @JsonProperty("title") final String title, @JsonProperty("salutation") final String salutation, @JsonProperty("firstName") final String firstName, @JsonProperty("lastName") final String lastName, @JsonProperty("streetName") final String streetName, @JsonProperty("streetNumber") final String streetNumber, @JsonProperty("additionalStreetInfo") final String additionalStreetInfo, @JsonProperty("postalCode") final String postalCode, @JsonProperty("city") final String city, @JsonProperty("region") final String region, @JsonProperty("state") final String state, @JsonProperty("company") final String company, @JsonProperty("department") final String department, @JsonProperty("building") final String building, @JsonProperty("apartment") final String apartment, @JsonProperty("pOBox") final String pOBox, @JsonProperty("phone") final String phone, @JsonProperty("mobile") final String mobile, @JsonProperty("email") final String email, @JsonProperty("fax") final String fax, @JsonProperty("additionalAddressInfo") final String additionalAddressInfo, @JsonProperty("externalId") final String externalId) {
         this.id = id;
         this.key = key;
         this.country = country;
@@ -115,7 +133,6 @@ public class BaseAddressImpl implements BaseAddress, ModelBase {
         this.additionalAddressInfo = additionalAddressInfo;
         this.externalId = externalId;
     }
-
     /**
      * create empty instance
      */
@@ -126,314 +143,338 @@ public class BaseAddressImpl implements BaseAddress, ModelBase {
      *  <p>Unique identifier of the Address.</p>
      *  <p>It is not recommended to set it manually since the API overwrites this ID when creating an Address for a Customer. Use <code>key</code> instead and omit this field from the request to let the API generate the ID for the Address.</p>
      */
-
-    public String getId() {
+    
+    public String getId(){
         return this.id;
     }
-
+    
     /**
      *  <p>User-defined identifier of the Address that must be unique when multiple addresses are referenced in BusinessUnits, Customers, and <code>itemShippingAddresses</code> (LineItem-specific addresses) of a Cart, Order, QuoteRequest, or Quote.</p>
      */
-
-    public String getKey() {
+    
+    public String getKey(){
         return this.key;
     }
-
+    
     /**
      *  <p>Name of the country.</p>
      */
-
-    public String getCountry() {
+    
+    public String getCountry(){
         return this.country;
     }
-
+    
     /**
      *  <p>Title of the contact, for example 'Dr.'</p>
      */
-
-    public String getTitle() {
+    
+    public String getTitle(){
         return this.title;
     }
-
+    
     /**
      *  <p>Salutation of the contact, for example 'Mr.' or 'Ms.'</p>
      */
-
-    public String getSalutation() {
+    
+    public String getSalutation(){
         return this.salutation;
     }
-
+    
     /**
      *  <p>Given name (first name) of the contact.</p>
      */
-
-    public String getFirstName() {
+    
+    public String getFirstName(){
         return this.firstName;
     }
-
+    
     /**
      *  <p>Family name (last name) of the contact.</p>
      */
-
-    public String getLastName() {
+    
+    public String getLastName(){
         return this.lastName;
     }
-
+    
     /**
      *  <p>Name of the street.</p>
      */
-
-    public String getStreetName() {
+    
+    public String getStreetName(){
         return this.streetName;
     }
-
+    
     /**
      *  <p>Street number.</p>
      */
-
-    public String getStreetNumber() {
+    
+    public String getStreetNumber(){
         return this.streetNumber;
     }
-
+    
     /**
      *  <p>Further information on the street address.</p>
      */
-
-    public String getAdditionalStreetInfo() {
+    
+    public String getAdditionalStreetInfo(){
         return this.additionalStreetInfo;
     }
-
+    
     /**
      *  <p>Postal code.</p>
      */
-
-    public String getPostalCode() {
+    
+    public String getPostalCode(){
         return this.postalCode;
     }
-
+    
     /**
      *  <p>Name of the city.</p>
      */
-
-    public String getCity() {
+    
+    public String getCity(){
         return this.city;
     }
-
+    
     /**
      *  <p>Name of the region.</p>
      */
-
-    public String getRegion() {
+    
+    public String getRegion(){
         return this.region;
     }
-
+    
     /**
      *  <p>Name of the state, for example, Colorado.</p>
      */
-
-    public String getState() {
+    
+    public String getState(){
         return this.state;
     }
-
+    
     /**
      *  <p>Name of the company.</p>
      */
-
-    public String getCompany() {
+    
+    public String getCompany(){
         return this.company;
     }
-
+    
     /**
      *  <p>Name of the department.</p>
      */
-
-    public String getDepartment() {
+    
+    public String getDepartment(){
         return this.department;
     }
-
+    
     /**
      *  <p>Number or name of the building.</p>
      */
-
-    public String getBuilding() {
+    
+    public String getBuilding(){
         return this.building;
     }
-
+    
     /**
      *  <p>Number or name of the apartment.</p>
      */
-
-    public String getApartment() {
+    
+    public String getApartment(){
         return this.apartment;
     }
-
+    
     /**
      *  <p>Post office box number.</p>
      */
-
-    public String getPOBox() {
+    
+    public String getPOBox(){
         return this.pOBox;
     }
-
+    
     /**
      *  <p>Phone number of the contact.</p>
      */
-
-    public String getPhone() {
+    
+    public String getPhone(){
         return this.phone;
     }
-
+    
     /**
      *  <p>Mobile phone number of the contact.</p>
      */
-
-    public String getMobile() {
+    
+    public String getMobile(){
         return this.mobile;
     }
-
+    
     /**
      *  <p>Email address of the contact.</p>
      */
-
-    public String getEmail() {
+    
+    public String getEmail(){
         return this.email;
     }
-
+    
     /**
      *  <p>Fax number of the contact.</p>
      */
-
-    public String getFax() {
+    
+    public String getFax(){
         return this.fax;
     }
-
+    
     /**
      *  <p>Further information on the Address.</p>
      */
-
-    public String getAdditionalAddressInfo() {
+    
+    public String getAdditionalAddressInfo(){
         return this.additionalAddressInfo;
     }
-
+    
     /**
      *  <p>ID for the contact used in an external system.</p>
      */
-
-    public String getExternalId() {
+    
+    public String getExternalId(){
         return this.externalId;
     }
 
-    public void setId(final String id) {
+    
+    public void setId(final String id){
         this.id = id;
     }
-
-    public void setKey(final String key) {
+    
+    
+    public void setKey(final String key){
         this.key = key;
     }
-
-    public void setCountry(final String country) {
+    
+    
+    public void setCountry(final String country){
         this.country = country;
     }
-
-    public void setTitle(final String title) {
+    
+    
+    public void setTitle(final String title){
         this.title = title;
     }
-
-    public void setSalutation(final String salutation) {
+    
+    
+    public void setSalutation(final String salutation){
         this.salutation = salutation;
     }
-
-    public void setFirstName(final String firstName) {
+    
+    
+    public void setFirstName(final String firstName){
         this.firstName = firstName;
     }
-
-    public void setLastName(final String lastName) {
+    
+    
+    public void setLastName(final String lastName){
         this.lastName = lastName;
     }
-
-    public void setStreetName(final String streetName) {
+    
+    
+    public void setStreetName(final String streetName){
         this.streetName = streetName;
     }
-
-    public void setStreetNumber(final String streetNumber) {
+    
+    
+    public void setStreetNumber(final String streetNumber){
         this.streetNumber = streetNumber;
     }
-
-    public void setAdditionalStreetInfo(final String additionalStreetInfo) {
+    
+    
+    public void setAdditionalStreetInfo(final String additionalStreetInfo){
         this.additionalStreetInfo = additionalStreetInfo;
     }
-
-    public void setPostalCode(final String postalCode) {
+    
+    
+    public void setPostalCode(final String postalCode){
         this.postalCode = postalCode;
     }
-
-    public void setCity(final String city) {
+    
+    
+    public void setCity(final String city){
         this.city = city;
     }
-
-    public void setRegion(final String region) {
+    
+    
+    public void setRegion(final String region){
         this.region = region;
     }
-
-    public void setState(final String state) {
+    
+    
+    public void setState(final String state){
         this.state = state;
     }
-
-    public void setCompany(final String company) {
+    
+    
+    public void setCompany(final String company){
         this.company = company;
     }
-
-    public void setDepartment(final String department) {
+    
+    
+    public void setDepartment(final String department){
         this.department = department;
     }
-
-    public void setBuilding(final String building) {
+    
+    
+    public void setBuilding(final String building){
         this.building = building;
     }
-
-    public void setApartment(final String apartment) {
+    
+    
+    public void setApartment(final String apartment){
         this.apartment = apartment;
     }
-
-    public void setPOBox(final String pOBox) {
+    
+    
+    public void setPOBox(final String pOBox){
         this.pOBox = pOBox;
     }
-
-    public void setPhone(final String phone) {
+    
+    
+    public void setPhone(final String phone){
         this.phone = phone;
     }
-
-    public void setMobile(final String mobile) {
+    
+    
+    public void setMobile(final String mobile){
         this.mobile = mobile;
     }
-
-    public void setEmail(final String email) {
+    
+    
+    public void setEmail(final String email){
         this.email = email;
     }
-
-    public void setFax(final String fax) {
+    
+    
+    public void setFax(final String fax){
         this.fax = fax;
     }
-
-    public void setAdditionalAddressInfo(final String additionalAddressInfo) {
+    
+    
+    public void setAdditionalAddressInfo(final String additionalAddressInfo){
         this.additionalAddressInfo = additionalAddressInfo;
     }
-
-    public void setExternalId(final String externalId) {
+    
+    
+    public void setExternalId(final String externalId){
         this.externalId = externalId;
     }
 
     @Override
     public boolean equals(Object o) {
-        if (this == o)
-            return true;
-
-        if (o == null || getClass() != o.getClass())
-            return false;
-
+        if (this == o) return true;
+    
+        if (o == null || getClass() != o.getClass()) return false;
+    
         BaseAddressImpl that = (BaseAddressImpl) o;
-
-        return new EqualsBuilder().append(id, that.id)
+    
+        return new EqualsBuilder()
+                .append(id, that.id)
                 .append(key, that.key)
                 .append(country, that.country)
                 .append(title, that.title)
@@ -460,35 +501,36 @@ public class BaseAddressImpl implements BaseAddress, ModelBase {
                 .append(externalId, that.externalId)
                 .isEquals();
     }
-
+    
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(id)
-                .append(key)
-                .append(country)
-                .append(title)
-                .append(salutation)
-                .append(firstName)
-                .append(lastName)
-                .append(streetName)
-                .append(streetNumber)
-                .append(additionalStreetInfo)
-                .append(postalCode)
-                .append(city)
-                .append(region)
-                .append(state)
-                .append(company)
-                .append(department)
-                .append(building)
-                .append(apartment)
-                .append(pOBox)
-                .append(phone)
-                .append(mobile)
-                .append(email)
-                .append(fax)
-                .append(additionalAddressInfo)
-                .append(externalId)
-                .toHashCode();
+        return new HashCodeBuilder(17, 37)
+            .append(id)
+            .append(key)
+            .append(country)
+            .append(title)
+            .append(salutation)
+            .append(firstName)
+            .append(lastName)
+            .append(streetName)
+            .append(streetNumber)
+            .append(additionalStreetInfo)
+            .append(postalCode)
+            .append(city)
+            .append(region)
+            .append(state)
+            .append(company)
+            .append(department)
+            .append(building)
+            .append(apartment)
+            .append(pOBox)
+            .append(phone)
+            .append(mobile)
+            .append(email)
+            .append(fax)
+            .append(additionalAddressInfo)
+            .append(externalId)
+            .toHashCode();
     }
 
 }

@@ -1,9 +1,11 @@
-
 package com.commercetools.api.predicates.query.error;
 
 import com.commercetools.api.predicates.query.*;
 
-public class GraphQLObjectNotFoundErrorQueryBuilderDsl {
+import java.util.function.Function;
+
+
+public class GraphQLObjectNotFoundErrorQueryBuilderDsl  {
     public GraphQLObjectNotFoundErrorQueryBuilderDsl() {
     }
 
@@ -12,9 +14,8 @@ public class GraphQLObjectNotFoundErrorQueryBuilderDsl {
     }
 
     public StringComparisonPredicateBuilder<GraphQLObjectNotFoundErrorQueryBuilderDsl> code() {
-        return new StringComparisonPredicateBuilder<>(
-            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("code")),
-            p -> new CombinationQueryPredicate<>(p, GraphQLObjectNotFoundErrorQueryBuilderDsl::of));
+        return new StringComparisonPredicateBuilder<>(BinaryQueryPredicate.of().left(new ConstantQueryPredicate("code")),
+        p -> new CombinationQueryPredicate<>(p, GraphQLObjectNotFoundErrorQueryBuilderDsl::of));
     }
-
+    
 }

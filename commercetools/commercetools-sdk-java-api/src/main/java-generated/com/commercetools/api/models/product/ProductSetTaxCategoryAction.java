@@ -1,18 +1,21 @@
-
 package com.commercetools.api.models.product;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-
+import com.commercetools.api.models.product.ProductUpdateAction;
 import com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifier;
+import com.commercetools.api.models.product.ProductSetTaxCategoryActionImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Cannot be staged. Published Products are immediately updated.</p>
@@ -24,9 +27,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     ProductSetTaxCategoryAction productSetTaxCategoryAction = ProductSetTaxCategoryAction.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = ProductSetTaxCategoryActionImpl.class)
 public interface ProductSetTaxCategoryAction extends ProductUpdateAction {
 
@@ -47,16 +53,18 @@ public interface ProductSetTaxCategoryAction extends ProductUpdateAction {
      *  <p>The Tax Category to set. If empty, any existing value will be removed.</p>
      * @param taxCategory value to be set
      */
-
+    
     public void setTaxCategory(final TaxCategoryResourceIdentifier taxCategory);
+    
 
     /**
      * factory method
      * @return instance of ProductSetTaxCategoryAction
      */
-    public static ProductSetTaxCategoryAction of() {
+    public static ProductSetTaxCategoryAction of(){
         return new ProductSetTaxCategoryActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy ProductSetTaxCategoryAction
@@ -80,8 +88,7 @@ public interface ProductSetTaxCategoryAction extends ProductUpdateAction {
             return null;
         }
         ProductSetTaxCategoryActionImpl instance = new ProductSetTaxCategoryActionImpl();
-        instance.setTaxCategory(com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifier
-                .deepCopy(template.getTaxCategory()));
+        instance.setTaxCategory(com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifier.deepCopy(template.getTaxCategory()));
         return instance;
     }
 
@@ -92,7 +99,7 @@ public interface ProductSetTaxCategoryAction extends ProductUpdateAction {
     public static ProductSetTaxCategoryActionBuilder builder() {
         return ProductSetTaxCategoryActionBuilder.of();
     }
-
+    
     /**
      * create builder for ProductSetTaxCategoryAction instance
      * @param template instance with prefilled values for the builder
@@ -101,6 +108,7 @@ public interface ProductSetTaxCategoryAction extends ProductUpdateAction {
     public static ProductSetTaxCategoryActionBuilder builder(final ProductSetTaxCategoryAction template) {
         return ProductSetTaxCategoryActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -111,11 +119,11 @@ public interface ProductSetTaxCategoryAction extends ProductUpdateAction {
     default <T> T withProductSetTaxCategoryAction(Function<ProductSetTaxCategoryAction, T> helper) {
         return helper.apply(this);
     }
-
     public static ProductSetTaxCategoryAction ofUnset() {
         return ProductSetTaxCategoryAction.of();
     }
-
+    
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

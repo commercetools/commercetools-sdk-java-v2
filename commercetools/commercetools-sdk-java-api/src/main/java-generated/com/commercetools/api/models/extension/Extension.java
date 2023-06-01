@@ -1,23 +1,25 @@
-
 package com.commercetools.api.models.extension;
-
-import java.time.*;
-import java.time.ZonedDateTime;
-import java.util.*;
-import java.util.function.Function;
-import java.util.stream.Collectors;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.common.BaseResource;
 import com.commercetools.api.models.common.CreatedBy;
 import com.commercetools.api.models.common.LastModifiedBy;
+import com.commercetools.api.models.extension.ExtensionDestination;
+import com.commercetools.api.models.extension.ExtensionTrigger;
+import java.time.ZonedDateTime;
+import com.commercetools.api.models.extension.ExtensionImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * Extension
@@ -35,12 +37,15 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .plusTriggers(triggersBuilder -> triggersBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = ExtensionImpl.class)
-public interface Extension extends BaseResource, com.commercetools.api.models.DomainResource<Extension>,
-        com.commercetools.api.models.WithKey {
+public interface Extension extends BaseResource, com.commercetools.api.models.DomainResource<Extension>, com.commercetools.api.models.WithKey {
+
 
     /**
      *  <p>Unique identifier of the Extension.</p>
@@ -49,7 +54,6 @@ public interface Extension extends BaseResource, com.commercetools.api.models.Do
     @NotNull
     @JsonProperty("id")
     public String getId();
-
     /**
      *  <p>Current version of the Extension.</p>
      * @return version
@@ -57,7 +61,6 @@ public interface Extension extends BaseResource, com.commercetools.api.models.Do
     @NotNull
     @JsonProperty("version")
     public Long getVersion();
-
     /**
      *  <p>Date and time (UTC) the Extension was initially created.</p>
      * @return createdAt
@@ -65,7 +68,6 @@ public interface Extension extends BaseResource, com.commercetools.api.models.Do
     @NotNull
     @JsonProperty("createdAt")
     public ZonedDateTime getCreatedAt();
-
     /**
      *  <p>Date and time (UTC) the Extension was last updated.</p>
      * @return lastModifiedAt
@@ -73,7 +75,6 @@ public interface Extension extends BaseResource, com.commercetools.api.models.Do
     @NotNull
     @JsonProperty("lastModifiedAt")
     public ZonedDateTime getLastModifiedAt();
-
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      * @return lastModifiedBy
@@ -81,7 +82,6 @@ public interface Extension extends BaseResource, com.commercetools.api.models.Do
     @Valid
     @JsonProperty("lastModifiedBy")
     public LastModifiedBy getLastModifiedBy();
-
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      * @return createdBy
@@ -89,15 +89,13 @@ public interface Extension extends BaseResource, com.commercetools.api.models.Do
     @Valid
     @JsonProperty("createdBy")
     public CreatedBy getCreatedBy();
-
     /**
      *  <p>User-defined unique identifier of the Extension.</p>
      * @return key
      */
-
+    
     @JsonProperty("key")
     public String getKey();
-
     /**
      *  <p>The configuration for the Extension, including its type, location and authentication details.</p>
      * @return destination
@@ -106,7 +104,6 @@ public interface Extension extends BaseResource, com.commercetools.api.models.Do
     @Valid
     @JsonProperty("destination")
     public ExtensionDestination getDestination();
-
     /**
      *  <p>Describes what triggers the Extension.</p>
      * @return triggers
@@ -115,12 +112,11 @@ public interface Extension extends BaseResource, com.commercetools.api.models.Do
     @Valid
     @JsonProperty("triggers")
     public List<ExtensionTrigger> getTriggers();
-
     /**
      *  <p>Maximum time (in milliseconds) that the Extension can respond within. If no timeout is provided, the default value is used for all types of Extensions. The maximum value is 10000 ms (10 seconds) for <code>payment</code> Extensions and 2000 ms (2 seconds) for all other Extensions.</p>
      * @return timeoutInMs
      */
-
+    
     @JsonProperty("timeoutInMs")
     public Integer getTimeoutInMs();
 
@@ -128,87 +124,96 @@ public interface Extension extends BaseResource, com.commercetools.api.models.Do
      *  <p>Unique identifier of the Extension.</p>
      * @param id value to be set
      */
-
+    
     public void setId(final String id);
-
+    
+    
     /**
      *  <p>Current version of the Extension.</p>
      * @param version value to be set
      */
-
+    
     public void setVersion(final Long version);
-
+    
+    
     /**
      *  <p>Date and time (UTC) the Extension was initially created.</p>
      * @param createdAt value to be set
      */
-
+    
     public void setCreatedAt(final ZonedDateTime createdAt);
-
+    
+    
     /**
      *  <p>Date and time (UTC) the Extension was last updated.</p>
      * @param lastModifiedAt value to be set
      */
-
+    
     public void setLastModifiedAt(final ZonedDateTime lastModifiedAt);
-
+    
+    
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      * @param lastModifiedBy value to be set
      */
-
+    
     public void setLastModifiedBy(final LastModifiedBy lastModifiedBy);
-
+    
+    
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      * @param createdBy value to be set
      */
-
+    
     public void setCreatedBy(final CreatedBy createdBy);
-
+    
+    
     /**
      *  <p>User-defined unique identifier of the Extension.</p>
      * @param key value to be set
      */
-
+    
     public void setKey(final String key);
-
+    
+    
     /**
      *  <p>The configuration for the Extension, including its type, location and authentication details.</p>
      * @param destination value to be set
      */
-
+    
     public void setDestination(final ExtensionDestination destination);
-
+    
+    
     /**
      *  <p>Describes what triggers the Extension.</p>
      * @param triggers values to be set
      */
-
+    
     @JsonIgnore
-    public void setTriggers(final ExtensionTrigger... triggers);
-
+    public void setTriggers(final ExtensionTrigger ...triggers);
     /**
      *  <p>Describes what triggers the Extension.</p>
      * @param triggers values to be set
      */
-
+    
     public void setTriggers(final List<ExtensionTrigger> triggers);
-
+    
     /**
      *  <p>Maximum time (in milliseconds) that the Extension can respond within. If no timeout is provided, the default value is used for all types of Extensions. The maximum value is 10000 ms (10 seconds) for <code>payment</code> Extensions and 2000 ms (2 seconds) for all other Extensions.</p>
      * @param timeoutInMs value to be set
      */
-
+    
     public void setTimeoutInMs(final Integer timeoutInMs);
+    
 
     /**
      * factory method
      * @return instance of Extension
      */
-    public static Extension of() {
+    public static Extension of(){
         return new ExtensionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy Extension
@@ -245,16 +250,12 @@ public interface Extension extends BaseResource, com.commercetools.api.models.Do
         instance.setVersion(template.getVersion());
         instance.setCreatedAt(template.getCreatedAt());
         instance.setLastModifiedAt(template.getLastModifiedAt());
-        instance.setLastModifiedBy(
-            com.commercetools.api.models.common.LastModifiedBy.deepCopy(template.getLastModifiedBy()));
+        instance.setLastModifiedBy(com.commercetools.api.models.common.LastModifiedBy.deepCopy(template.getLastModifiedBy()));
         instance.setCreatedBy(com.commercetools.api.models.common.CreatedBy.deepCopy(template.getCreatedBy()));
         instance.setKey(template.getKey());
-        instance.setDestination(
-            com.commercetools.api.models.extension.ExtensionDestination.deepCopy(template.getDestination()));
+        instance.setDestination(com.commercetools.api.models.extension.ExtensionDestination.deepCopy(template.getDestination()));
         instance.setTriggers(Optional.ofNullable(template.getTriggers())
-                .map(t -> t.stream()
-                        .map(com.commercetools.api.models.extension.ExtensionTrigger::deepCopy)
-                        .collect(Collectors.toList()))
+                .map(t -> t.stream().map(com.commercetools.api.models.extension.ExtensionTrigger::deepCopy).collect(Collectors.toList()))
                 .orElse(null));
         instance.setTimeoutInMs(template.getTimeoutInMs());
         return instance;
@@ -267,7 +268,7 @@ public interface Extension extends BaseResource, com.commercetools.api.models.Do
     public static ExtensionBuilder builder() {
         return ExtensionBuilder.of();
     }
-
+    
     /**
      * create builder for Extension instance
      * @param template instance with prefilled values for the builder
@@ -276,6 +277,7 @@ public interface Extension extends BaseResource, com.commercetools.api.models.Do
     public static ExtensionBuilder builder(final Extension template) {
         return ExtensionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -286,7 +288,7 @@ public interface Extension extends BaseResource, com.commercetools.api.models.Do
     default <T> T withExtension(Function<Extension, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

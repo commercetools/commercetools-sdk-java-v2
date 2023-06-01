@@ -1,20 +1,21 @@
-
 package com.commercetools.api.models.order;
 
-import java.time.*;
+import com.commercetools.api.models.order.ReturnItemDraft;
 import java.time.ZonedDateTime;
-import java.util.*;
-import java.util.function.Function;
-import java.util.stream.Collectors;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
+import com.commercetools.api.models.order.ReturnInfoDraftImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * ReturnInfoDraft
@@ -27,11 +28,15 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .plusItems(itemsBuilder -> itemsBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = ReturnInfoDraftImpl.class)
 public interface ReturnInfoDraft extends io.vrap.rmf.base.client.Draft<ReturnInfoDraft> {
+
 
     /**
      *
@@ -41,20 +46,18 @@ public interface ReturnInfoDraft extends io.vrap.rmf.base.client.Draft<ReturnInf
     @Valid
     @JsonProperty("items")
     public List<ReturnItemDraft> getItems();
-
     /**
      *  <p>Identifies, which return tracking ID is connected to this particular return.</p>
      * @return returnTrackingId
      */
-
+    
     @JsonProperty("returnTrackingId")
     public String getReturnTrackingId();
-
     /**
      *
      * @return returnDate
      */
-
+    
     @JsonProperty("returnDate")
     public ZonedDateTime getReturnDate();
 
@@ -62,38 +65,40 @@ public interface ReturnInfoDraft extends io.vrap.rmf.base.client.Draft<ReturnInf
      * set items
      * @param items values to be set
      */
-
+    
     @JsonIgnore
-    public void setItems(final ReturnItemDraft... items);
-
+    public void setItems(final ReturnItemDraft ...items);
     /**
      * set items
      * @param items values to be set
      */
-
+    
     public void setItems(final List<ReturnItemDraft> items);
-
+    
     /**
      *  <p>Identifies, which return tracking ID is connected to this particular return.</p>
      * @param returnTrackingId value to be set
      */
-
+    
     public void setReturnTrackingId(final String returnTrackingId);
-
+    
+    
     /**
      * set returnDate
      * @param returnDate value to be set
      */
-
+    
     public void setReturnDate(final ZonedDateTime returnDate);
+    
 
     /**
      * factory method
      * @return instance of ReturnInfoDraft
      */
-    public static ReturnInfoDraft of() {
+    public static ReturnInfoDraft of(){
         return new ReturnInfoDraftImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy ReturnInfoDraft
@@ -120,9 +125,7 @@ public interface ReturnInfoDraft extends io.vrap.rmf.base.client.Draft<ReturnInf
         }
         ReturnInfoDraftImpl instance = new ReturnInfoDraftImpl();
         instance.setItems(Optional.ofNullable(template.getItems())
-                .map(t -> t.stream()
-                        .map(com.commercetools.api.models.order.ReturnItemDraft::deepCopy)
-                        .collect(Collectors.toList()))
+                .map(t -> t.stream().map(com.commercetools.api.models.order.ReturnItemDraft::deepCopy).collect(Collectors.toList()))
                 .orElse(null));
         instance.setReturnTrackingId(template.getReturnTrackingId());
         instance.setReturnDate(template.getReturnDate());
@@ -136,7 +139,7 @@ public interface ReturnInfoDraft extends io.vrap.rmf.base.client.Draft<ReturnInf
     public static ReturnInfoDraftBuilder builder() {
         return ReturnInfoDraftBuilder.of();
     }
-
+    
     /**
      * create builder for ReturnInfoDraft instance
      * @param template instance with prefilled values for the builder
@@ -145,6 +148,7 @@ public interface ReturnInfoDraft extends io.vrap.rmf.base.client.Draft<ReturnInf
     public static ReturnInfoDraftBuilder builder(final ReturnInfoDraft template) {
         return ReturnInfoDraftBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -155,7 +159,7 @@ public interface ReturnInfoDraft extends io.vrap.rmf.base.client.Draft<ReturnInf
     default <T> T withReturnInfoDraft(Function<ReturnInfoDraft, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

@@ -1,17 +1,20 @@
-
 package com.commercetools.api.models.error;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
+import com.commercetools.api.models.error.GraphQLErrorObject;
+import com.commercetools.api.models.error.GraphQLAttributeNameDoesNotExistErrorImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Returned when an AttributeDefinition does not exist for an Attribute <code>name</code>.</p>
@@ -25,9 +28,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .invalidAttributeName("{invalidAttributeName}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = GraphQLAttributeNameDoesNotExistErrorImpl.class)
 public interface GraphQLAttributeNameDoesNotExistError extends GraphQLErrorObject {
 
@@ -43,7 +49,6 @@ public interface GraphQLAttributeNameDoesNotExistError extends GraphQLErrorObjec
     @NotNull
     @JsonProperty("code")
     public String getCode();
-
     /**
      *  <p>Non-existent Attribute name.</p>
      * @return invalidAttributeName
@@ -56,16 +61,18 @@ public interface GraphQLAttributeNameDoesNotExistError extends GraphQLErrorObjec
      *  <p>Non-existent Attribute name.</p>
      * @param invalidAttributeName value to be set
      */
-
+    
     public void setInvalidAttributeName(final String invalidAttributeName);
+    
 
     /**
      * factory method
      * @return instance of GraphQLAttributeNameDoesNotExistError
      */
-    public static GraphQLAttributeNameDoesNotExistError of() {
+    public static GraphQLAttributeNameDoesNotExistError of(){
         return new GraphQLAttributeNameDoesNotExistErrorImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy GraphQLAttributeNameDoesNotExistError
@@ -85,8 +92,7 @@ public interface GraphQLAttributeNameDoesNotExistError extends GraphQLErrorObjec
      * @return copy instance
      */
     @Nullable
-    public static GraphQLAttributeNameDoesNotExistError deepCopy(
-            @Nullable final GraphQLAttributeNameDoesNotExistError template) {
+    public static GraphQLAttributeNameDoesNotExistError deepCopy(@Nullable final GraphQLAttributeNameDoesNotExistError template) {
         if (template == null) {
             return null;
         }
@@ -103,16 +109,16 @@ public interface GraphQLAttributeNameDoesNotExistError extends GraphQLErrorObjec
     public static GraphQLAttributeNameDoesNotExistErrorBuilder builder() {
         return GraphQLAttributeNameDoesNotExistErrorBuilder.of();
     }
-
+    
     /**
      * create builder for GraphQLAttributeNameDoesNotExistError instance
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static GraphQLAttributeNameDoesNotExistErrorBuilder builder(
-            final GraphQLAttributeNameDoesNotExistError template) {
+    public static GraphQLAttributeNameDoesNotExistErrorBuilder builder(final GraphQLAttributeNameDoesNotExistError template) {
         return GraphQLAttributeNameDoesNotExistErrorBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -123,7 +129,7 @@ public interface GraphQLAttributeNameDoesNotExistError extends GraphQLErrorObjec
     default <T> T withGraphQLAttributeNameDoesNotExistError(Function<GraphQLAttributeNameDoesNotExistError, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

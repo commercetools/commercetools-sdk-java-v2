@@ -1,19 +1,21 @@
-
 package com.commercetools.api.models.message;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
+import com.commercetools.api.models.message.Message;
 import com.commercetools.api.models.state.StateReference;
+import com.commercetools.api.models.message.QuoteRequestStateTransitionMessageImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Generated after a successful Transition State update action.</p>
@@ -34,9 +36,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .force(true)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = QuoteRequestStateTransitionMessageImpl.class)
 public interface QuoteRequestStateTransitionMessage extends Message {
 
@@ -53,7 +58,6 @@ public interface QuoteRequestStateTransitionMessage extends Message {
     @Valid
     @JsonProperty("state")
     public StateReference getState();
-
     /**
      *  <p>State of the Quote before the Transition State update action.</p>
      * @return oldState
@@ -61,7 +65,6 @@ public interface QuoteRequestStateTransitionMessage extends Message {
     @Valid
     @JsonProperty("oldState")
     public StateReference getOldState();
-
     /**
      *  <p>Whether State transition validations were turned off during the Transition State update action.</p>
      * @return force
@@ -74,30 +77,34 @@ public interface QuoteRequestStateTransitionMessage extends Message {
      *  <p>State of the Quote after the Transition State update action.</p>
      * @param state value to be set
      */
-
+    
     public void setState(final StateReference state);
-
+    
+    
     /**
      *  <p>State of the Quote before the Transition State update action.</p>
      * @param oldState value to be set
      */
-
+    
     public void setOldState(final StateReference oldState);
-
+    
+    
     /**
      *  <p>Whether State transition validations were turned off during the Transition State update action.</p>
      * @param force value to be set
      */
-
+    
     public void setForce(final Boolean force);
+    
 
     /**
      * factory method
      * @return instance of QuoteRequestStateTransitionMessage
      */
-    public static QuoteRequestStateTransitionMessage of() {
+    public static QuoteRequestStateTransitionMessage of(){
         return new QuoteRequestStateTransitionMessageImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy QuoteRequestStateTransitionMessage
@@ -128,8 +135,7 @@ public interface QuoteRequestStateTransitionMessage extends Message {
      * @return copy instance
      */
     @Nullable
-    public static QuoteRequestStateTransitionMessage deepCopy(
-            @Nullable final QuoteRequestStateTransitionMessage template) {
+    public static QuoteRequestStateTransitionMessage deepCopy(@Nullable final QuoteRequestStateTransitionMessage template) {
         if (template == null) {
             return null;
         }
@@ -138,14 +144,12 @@ public interface QuoteRequestStateTransitionMessage extends Message {
         instance.setVersion(template.getVersion());
         instance.setCreatedAt(template.getCreatedAt());
         instance.setLastModifiedAt(template.getLastModifiedAt());
-        instance.setLastModifiedBy(
-            com.commercetools.api.models.common.LastModifiedBy.deepCopy(template.getLastModifiedBy()));
+        instance.setLastModifiedBy(com.commercetools.api.models.common.LastModifiedBy.deepCopy(template.getLastModifiedBy()));
         instance.setCreatedBy(com.commercetools.api.models.common.CreatedBy.deepCopy(template.getCreatedBy()));
         instance.setSequenceNumber(template.getSequenceNumber());
         instance.setResource(com.commercetools.api.models.common.Reference.deepCopy(template.getResource()));
         instance.setResourceVersion(template.getResourceVersion());
-        instance.setResourceUserProvidedIdentifiers(com.commercetools.api.models.message.UserProvidedIdentifiers
-                .deepCopy(template.getResourceUserProvidedIdentifiers()));
+        instance.setResourceUserProvidedIdentifiers(com.commercetools.api.models.message.UserProvidedIdentifiers.deepCopy(template.getResourceUserProvidedIdentifiers()));
         instance.setState(com.commercetools.api.models.state.StateReference.deepCopy(template.getState()));
         instance.setOldState(com.commercetools.api.models.state.StateReference.deepCopy(template.getOldState()));
         instance.setForce(template.getForce());
@@ -159,7 +163,7 @@ public interface QuoteRequestStateTransitionMessage extends Message {
     public static QuoteRequestStateTransitionMessageBuilder builder() {
         return QuoteRequestStateTransitionMessageBuilder.of();
     }
-
+    
     /**
      * create builder for QuoteRequestStateTransitionMessage instance
      * @param template instance with prefilled values for the builder
@@ -168,6 +172,7 @@ public interface QuoteRequestStateTransitionMessage extends Message {
     public static QuoteRequestStateTransitionMessageBuilder builder(final QuoteRequestStateTransitionMessage template) {
         return QuoteRequestStateTransitionMessageBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -178,7 +183,7 @@ public interface QuoteRequestStateTransitionMessage extends Message {
     default <T> T withQuoteRequestStateTransitionMessage(Function<QuoteRequestStateTransitionMessage, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

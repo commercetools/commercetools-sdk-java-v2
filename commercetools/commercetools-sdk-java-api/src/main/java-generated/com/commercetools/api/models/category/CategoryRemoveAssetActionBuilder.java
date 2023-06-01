@@ -1,10 +1,11 @@
-
 package com.commercetools.api.models.category;
 
-import java.util.*;
-
+import com.commercetools.api.models.category.CategoryUpdateAction;
+import com.commercetools.api.models.category.CategoryRemoveAssetAction;
 import javax.annotation.Nullable;
-
+import java.util.*;
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -17,56 +18,67 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     CategoryRemoveAssetAction categoryRemoveAssetAction = CategoryRemoveAssetAction.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class CategoryRemoveAssetActionBuilder implements Builder<CategoryRemoveAssetAction> {
 
+    
     @Nullable
     private String assetId;
-
+    
+    
     @Nullable
     private String assetKey;
 
+    
     /**
      *  <p>Value to remove. Either <code>assetId</code> or <code>assetKey</code> is required.</p>
      * @param assetId value to be set
      * @return Builder
      */
-
+    
     public CategoryRemoveAssetActionBuilder assetId(@Nullable final String assetId) {
         this.assetId = assetId;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Value to remove. Either <code>assetId</code> or <code>assetKey</code> is required.</p>
      * @param assetKey value to be set
      * @return Builder
      */
-
+    
     public CategoryRemoveAssetActionBuilder assetKey(@Nullable final String assetKey) {
         this.assetKey = assetKey;
         return this;
     }
+    
+    
 
     /**
      *  <p>Value to remove. Either <code>assetId</code> or <code>assetKey</code> is required.</p>
      * @return assetId
      */
-
+    
     @Nullable
-    public String getAssetId() {
+    public String getAssetId(){
         return this.assetId;
     }
-
+    
     /**
      *  <p>Value to remove. Either <code>assetId</code> or <code>assetKey</code> is required.</p>
      * @return assetKey
      */
-
+    
     @Nullable
-    public String getAssetKey() {
+    public String getAssetKey(){
         return this.assetKey;
     }
 
@@ -77,7 +89,7 @@ public class CategoryRemoveAssetActionBuilder implements Builder<CategoryRemoveA
     public CategoryRemoveAssetAction build() {
         return new CategoryRemoveAssetActionImpl(assetId, assetKey);
     }
-
+    
     /**
      * builds CategoryRemoveAssetAction without checking for non-null required values
      * @return CategoryRemoveAssetAction
@@ -88,7 +100,7 @@ public class CategoryRemoveAssetActionBuilder implements Builder<CategoryRemoveA
 
     /**
      * factory method for an instance of CategoryRemoveAssetActionBuilder
-     * @return builder
+     * @return builder 
      */
     public static CategoryRemoveAssetActionBuilder of() {
         return new CategoryRemoveAssetActionBuilder();

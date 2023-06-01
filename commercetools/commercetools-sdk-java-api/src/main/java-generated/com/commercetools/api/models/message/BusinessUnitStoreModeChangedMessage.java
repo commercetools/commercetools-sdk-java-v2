@@ -1,21 +1,22 @@
-
 package com.commercetools.api.models.message;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-import java.util.stream.Collectors;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
 import com.commercetools.api.models.business_unit.BusinessUnitStoreMode;
+import com.commercetools.api.models.message.Message;
 import com.commercetools.api.models.store.StoreKeyReference;
+import com.commercetools.api.models.message.BusinessUnitStoreModeChangedMessageImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Generated after a successful Set Store Mode update action.</p>
@@ -38,9 +39,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .oldStoreMode(BusinessUnitStoreMode.EXPLICIT)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = BusinessUnitStoreModeChangedMessageImpl.class)
 public interface BusinessUnitStoreModeChangedMessage extends Message {
 
@@ -57,7 +61,6 @@ public interface BusinessUnitStoreModeChangedMessage extends Message {
     @Valid
     @JsonProperty("stores")
     public List<StoreKeyReference> getStores();
-
     /**
      *  <p>BusinessUnitStoreMode of the Business Unit after the Set Store Mode update action.</p>
      * @return storeMode
@@ -65,7 +68,6 @@ public interface BusinessUnitStoreModeChangedMessage extends Message {
     @NotNull
     @JsonProperty("storeMode")
     public BusinessUnitStoreMode getStoreMode();
-
     /**
      *  <p>Stores of the Business Unit before the Set Store Mode update action.</p>
      * @return oldStores
@@ -74,7 +76,6 @@ public interface BusinessUnitStoreModeChangedMessage extends Message {
     @Valid
     @JsonProperty("oldStores")
     public List<StoreKeyReference> getOldStores();
-
     /**
      *  <p>BusinessUnitStoreMode of the Business Unit before the Set Store Mode update action.</p>
      * @return oldStoreMode
@@ -87,53 +88,54 @@ public interface BusinessUnitStoreModeChangedMessage extends Message {
      *  <p>Stores of the Business Unit after the Set Store Mode update action.</p>
      * @param stores values to be set
      */
-
+    
     @JsonIgnore
-    public void setStores(final StoreKeyReference... stores);
-
+    public void setStores(final StoreKeyReference ...stores);
     /**
      *  <p>Stores of the Business Unit after the Set Store Mode update action.</p>
      * @param stores values to be set
      */
-
+    
     public void setStores(final List<StoreKeyReference> stores);
-
+    
     /**
      *  <p>BusinessUnitStoreMode of the Business Unit after the Set Store Mode update action.</p>
      * @param storeMode value to be set
      */
-
+    
     public void setStoreMode(final BusinessUnitStoreMode storeMode);
-
+    
+    
     /**
      *  <p>Stores of the Business Unit before the Set Store Mode update action.</p>
      * @param oldStores values to be set
      */
-
+    
     @JsonIgnore
-    public void setOldStores(final StoreKeyReference... oldStores);
-
+    public void setOldStores(final StoreKeyReference ...oldStores);
     /**
      *  <p>Stores of the Business Unit before the Set Store Mode update action.</p>
      * @param oldStores values to be set
      */
-
+    
     public void setOldStores(final List<StoreKeyReference> oldStores);
-
+    
     /**
      *  <p>BusinessUnitStoreMode of the Business Unit before the Set Store Mode update action.</p>
      * @param oldStoreMode value to be set
      */
-
+    
     public void setOldStoreMode(final BusinessUnitStoreMode oldStoreMode);
+    
 
     /**
      * factory method
      * @return instance of BusinessUnitStoreModeChangedMessage
      */
-    public static BusinessUnitStoreModeChangedMessage of() {
+    public static BusinessUnitStoreModeChangedMessage of(){
         return new BusinessUnitStoreModeChangedMessageImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy BusinessUnitStoreModeChangedMessage
@@ -165,8 +167,7 @@ public interface BusinessUnitStoreModeChangedMessage extends Message {
      * @return copy instance
      */
     @Nullable
-    public static BusinessUnitStoreModeChangedMessage deepCopy(
-            @Nullable final BusinessUnitStoreModeChangedMessage template) {
+    public static BusinessUnitStoreModeChangedMessage deepCopy(@Nullable final BusinessUnitStoreModeChangedMessage template) {
         if (template == null) {
             return null;
         }
@@ -175,24 +176,18 @@ public interface BusinessUnitStoreModeChangedMessage extends Message {
         instance.setVersion(template.getVersion());
         instance.setCreatedAt(template.getCreatedAt());
         instance.setLastModifiedAt(template.getLastModifiedAt());
-        instance.setLastModifiedBy(
-            com.commercetools.api.models.common.LastModifiedBy.deepCopy(template.getLastModifiedBy()));
+        instance.setLastModifiedBy(com.commercetools.api.models.common.LastModifiedBy.deepCopy(template.getLastModifiedBy()));
         instance.setCreatedBy(com.commercetools.api.models.common.CreatedBy.deepCopy(template.getCreatedBy()));
         instance.setSequenceNumber(template.getSequenceNumber());
         instance.setResource(com.commercetools.api.models.common.Reference.deepCopy(template.getResource()));
         instance.setResourceVersion(template.getResourceVersion());
-        instance.setResourceUserProvidedIdentifiers(com.commercetools.api.models.message.UserProvidedIdentifiers
-                .deepCopy(template.getResourceUserProvidedIdentifiers()));
+        instance.setResourceUserProvidedIdentifiers(com.commercetools.api.models.message.UserProvidedIdentifiers.deepCopy(template.getResourceUserProvidedIdentifiers()));
         instance.setStores(Optional.ofNullable(template.getStores())
-                .map(t -> t.stream()
-                        .map(com.commercetools.api.models.store.StoreKeyReference::deepCopy)
-                        .collect(Collectors.toList()))
+                .map(t -> t.stream().map(com.commercetools.api.models.store.StoreKeyReference::deepCopy).collect(Collectors.toList()))
                 .orElse(null));
         instance.setStoreMode(template.getStoreMode());
         instance.setOldStores(Optional.ofNullable(template.getOldStores())
-                .map(t -> t.stream()
-                        .map(com.commercetools.api.models.store.StoreKeyReference::deepCopy)
-                        .collect(Collectors.toList()))
+                .map(t -> t.stream().map(com.commercetools.api.models.store.StoreKeyReference::deepCopy).collect(Collectors.toList()))
                 .orElse(null));
         instance.setOldStoreMode(template.getOldStoreMode());
         return instance;
@@ -205,16 +200,16 @@ public interface BusinessUnitStoreModeChangedMessage extends Message {
     public static BusinessUnitStoreModeChangedMessageBuilder builder() {
         return BusinessUnitStoreModeChangedMessageBuilder.of();
     }
-
+    
     /**
      * create builder for BusinessUnitStoreModeChangedMessage instance
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static BusinessUnitStoreModeChangedMessageBuilder builder(
-            final BusinessUnitStoreModeChangedMessage template) {
+    public static BusinessUnitStoreModeChangedMessageBuilder builder(final BusinessUnitStoreModeChangedMessage template) {
         return BusinessUnitStoreModeChangedMessageBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -225,7 +220,7 @@ public interface BusinessUnitStoreModeChangedMessage extends Message {
     default <T> T withBusinessUnitStoreModeChangedMessage(Function<BusinessUnitStoreModeChangedMessage, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

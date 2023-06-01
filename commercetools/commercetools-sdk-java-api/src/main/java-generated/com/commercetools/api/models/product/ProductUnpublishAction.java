@@ -1,16 +1,20 @@
-
 package com.commercetools.api.models.product;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
+import com.commercetools.api.models.product.ProductUpdateAction;
+import com.commercetools.api.models.product.ProductUnpublishActionImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Removes the current projection of the Product. The staged projection is unaffected. To retrieve unpublished Products, the <code>staged</code> parameter must be set to <code>false</code> when querying/searching Product Projections. Produces the ProductUnpublished Message.</p>
@@ -23,9 +27,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     ProductUnpublishAction productUnpublishAction = ProductUnpublishAction.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = ProductUnpublishActionImpl.class)
 public interface ProductUnpublishAction extends ProductUpdateAction {
 
@@ -34,13 +41,16 @@ public interface ProductUnpublishAction extends ProductUpdateAction {
      */
     String UNPUBLISH = "unpublish";
 
+
+
     /**
      * factory method
      * @return instance of ProductUnpublishAction
      */
-    public static ProductUnpublishAction of() {
+    public static ProductUnpublishAction of(){
         return new ProductUnpublishActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy ProductUnpublishAction
@@ -73,7 +83,7 @@ public interface ProductUnpublishAction extends ProductUpdateAction {
     public static ProductUnpublishActionBuilder builder() {
         return ProductUnpublishActionBuilder.of();
     }
-
+    
     /**
      * create builder for ProductUnpublishAction instance
      * @param template instance with prefilled values for the builder
@@ -82,6 +92,7 @@ public interface ProductUnpublishAction extends ProductUpdateAction {
     public static ProductUnpublishActionBuilder builder(final ProductUnpublishAction template) {
         return ProductUnpublishActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -92,7 +103,7 @@ public interface ProductUnpublishAction extends ProductUpdateAction {
     default <T> T withProductUnpublishAction(Function<ProductUnpublishAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

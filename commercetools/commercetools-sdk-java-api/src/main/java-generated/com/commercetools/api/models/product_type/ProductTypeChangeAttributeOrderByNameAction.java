@@ -1,17 +1,20 @@
-
 package com.commercetools.api.models.product_type;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
+import com.commercetools.api.models.product_type.ProductTypeUpdateAction;
+import com.commercetools.api.models.product_type.ProductTypeChangeAttributeOrderByNameActionImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * ProductTypeChangeAttributeOrderByNameAction
@@ -24,9 +27,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .plusAttributeNames(attributeNamesBuilder -> attributeNamesBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = ProductTypeChangeAttributeOrderByNameActionImpl.class)
 public interface ProductTypeChangeAttributeOrderByNameAction extends ProductTypeUpdateAction {
 
@@ -47,32 +53,31 @@ public interface ProductTypeChangeAttributeOrderByNameAction extends ProductType
      *  <p>Names of Attributes to reorder. This array must include all Attributes currently present on a ProductType in a different order.</p>
      * @param attributeNames values to be set
      */
-
+    
     @JsonIgnore
-    public void setAttributeNames(final String... attributeNames);
-
+    public void setAttributeNames(final String ...attributeNames);
     /**
      *  <p>Names of Attributes to reorder. This array must include all Attributes currently present on a ProductType in a different order.</p>
      * @param attributeNames values to be set
      */
-
+    
     public void setAttributeNames(final List<String> attributeNames);
 
     /**
      * factory method
      * @return instance of ProductTypeChangeAttributeOrderByNameAction
      */
-    public static ProductTypeChangeAttributeOrderByNameAction of() {
+    public static ProductTypeChangeAttributeOrderByNameAction of(){
         return new ProductTypeChangeAttributeOrderByNameActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy ProductTypeChangeAttributeOrderByNameAction
      * @param template instance to be copied
      * @return copy instance
      */
-    public static ProductTypeChangeAttributeOrderByNameAction of(
-            final ProductTypeChangeAttributeOrderByNameAction template) {
+    public static ProductTypeChangeAttributeOrderByNameAction of(final ProductTypeChangeAttributeOrderByNameAction template) {
         ProductTypeChangeAttributeOrderByNameActionImpl instance = new ProductTypeChangeAttributeOrderByNameActionImpl();
         instance.setAttributeNames(template.getAttributeNames());
         return instance;
@@ -84,13 +89,14 @@ public interface ProductTypeChangeAttributeOrderByNameAction extends ProductType
      * @return copy instance
      */
     @Nullable
-    public static ProductTypeChangeAttributeOrderByNameAction deepCopy(
-            @Nullable final ProductTypeChangeAttributeOrderByNameAction template) {
+    public static ProductTypeChangeAttributeOrderByNameAction deepCopy(@Nullable final ProductTypeChangeAttributeOrderByNameAction template) {
         if (template == null) {
             return null;
         }
         ProductTypeChangeAttributeOrderByNameActionImpl instance = new ProductTypeChangeAttributeOrderByNameActionImpl();
-        instance.setAttributeNames(Optional.ofNullable(template.getAttributeNames()).map(ArrayList::new).orElse(null));
+        instance.setAttributeNames(Optional.ofNullable(template.getAttributeNames())
+                .map(ArrayList::new)
+                .orElse(null));
         return instance;
     }
 
@@ -101,16 +107,16 @@ public interface ProductTypeChangeAttributeOrderByNameAction extends ProductType
     public static ProductTypeChangeAttributeOrderByNameActionBuilder builder() {
         return ProductTypeChangeAttributeOrderByNameActionBuilder.of();
     }
-
+    
     /**
      * create builder for ProductTypeChangeAttributeOrderByNameAction instance
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static ProductTypeChangeAttributeOrderByNameActionBuilder builder(
-            final ProductTypeChangeAttributeOrderByNameAction template) {
+    public static ProductTypeChangeAttributeOrderByNameActionBuilder builder(final ProductTypeChangeAttributeOrderByNameAction template) {
         return ProductTypeChangeAttributeOrderByNameActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -118,11 +124,10 @@ public interface ProductTypeChangeAttributeOrderByNameAction extends ProductType
      * @param helper function to map the object
      * @return mapped value
      */
-    default <T> T withProductTypeChangeAttributeOrderByNameAction(
-            Function<ProductTypeChangeAttributeOrderByNameAction, T> helper) {
+    default <T> T withProductTypeChangeAttributeOrderByNameAction(Function<ProductTypeChangeAttributeOrderByNameAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

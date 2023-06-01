@@ -1,19 +1,21 @@
-
 package com.commercetools.history.models.change;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
+import com.commercetools.history.models.change.Change;
 import com.commercetools.history.models.common.Variant;
+import com.commercetools.history.models.change.ChangeMasterVariantChangeImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * ChangeMasterVariantChange
@@ -29,9 +31,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .nextValue(nextValueBuilder -> nextValueBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = ChangeMasterVariantChangeImpl.class)
 public interface ChangeMasterVariantChange extends Change {
 
@@ -47,7 +52,6 @@ public interface ChangeMasterVariantChange extends Change {
     @NotNull
     @JsonProperty("type")
     public String getType();
-
     /**
      *  <p>Update action for <code>changeMasterVariant</code></p>
      * @return change
@@ -55,7 +59,6 @@ public interface ChangeMasterVariantChange extends Change {
     @NotNull
     @JsonProperty("change")
     public String getChange();
-
     /**
      *
      * @return catalogData
@@ -63,7 +66,6 @@ public interface ChangeMasterVariantChange extends Change {
     @NotNull
     @JsonProperty("catalogData")
     public String getCatalogData();
-
     /**
      *
      * @return previousValue
@@ -72,7 +74,6 @@ public interface ChangeMasterVariantChange extends Change {
     @Valid
     @JsonProperty("previousValue")
     public Variant getPreviousValue();
-
     /**
      *
      * @return nextValue
@@ -86,37 +87,42 @@ public interface ChangeMasterVariantChange extends Change {
      *  <p>Update action for <code>changeMasterVariant</code></p>
      * @param change value to be set
      */
-
+    
     public void setChange(final String change);
-
+    
+    
     /**
      * set catalogData
      * @param catalogData value to be set
      */
-
+    
     public void setCatalogData(final String catalogData);
-
+    
+    
     /**
      * set previousValue
      * @param previousValue value to be set
      */
-
+    
     public void setPreviousValue(final Variant previousValue);
-
+    
+    
     /**
      * set nextValue
      * @param nextValue value to be set
      */
-
+    
     public void setNextValue(final Variant nextValue);
+    
 
     /**
      * factory method
      * @return instance of ChangeMasterVariantChange
      */
-    public static ChangeMasterVariantChange of() {
+    public static ChangeMasterVariantChange of(){
         return new ChangeMasterVariantChangeImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy ChangeMasterVariantChange
@@ -145,8 +151,7 @@ public interface ChangeMasterVariantChange extends Change {
         ChangeMasterVariantChangeImpl instance = new ChangeMasterVariantChangeImpl();
         instance.setChange(template.getChange());
         instance.setCatalogData(template.getCatalogData());
-        instance.setPreviousValue(
-            com.commercetools.history.models.common.Variant.deepCopy(template.getPreviousValue()));
+        instance.setPreviousValue(com.commercetools.history.models.common.Variant.deepCopy(template.getPreviousValue()));
         instance.setNextValue(com.commercetools.history.models.common.Variant.deepCopy(template.getNextValue()));
         return instance;
     }
@@ -158,7 +163,7 @@ public interface ChangeMasterVariantChange extends Change {
     public static ChangeMasterVariantChangeBuilder builder() {
         return ChangeMasterVariantChangeBuilder.of();
     }
-
+    
     /**
      * create builder for ChangeMasterVariantChange instance
      * @param template instance with prefilled values for the builder
@@ -167,6 +172,7 @@ public interface ChangeMasterVariantChange extends Change {
     public static ChangeMasterVariantChangeBuilder builder(final ChangeMasterVariantChange template) {
         return ChangeMasterVariantChangeBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -177,7 +183,7 @@ public interface ChangeMasterVariantChange extends Change {
     default <T> T withChangeMasterVariantChange(Function<ChangeMasterVariantChange, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

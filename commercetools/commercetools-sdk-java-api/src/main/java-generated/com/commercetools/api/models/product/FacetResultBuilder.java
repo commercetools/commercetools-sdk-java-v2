@@ -1,31 +1,39 @@
-
 package com.commercetools.api.models.product;
 
+import com.commercetools.api.models.product.FacetTypes;
+import com.commercetools.api.models.product.FilteredFacetResult;
+import com.commercetools.api.models.product.RangeFacetResult;
+import com.commercetools.api.models.product.TermFacetResult;
+import com.commercetools.api.models.product.FacetResult;
+import javax.annotation.Nullable;
 import java.util.*;
-
+import java.util.function.Function;
+import java.time.ZonedDateTime;
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
  * FacetResultBuilder
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class FacetResultBuilder {
 
     public com.commercetools.api.models.product.FilteredFacetResultBuilder filterBuilder() {
-        return com.commercetools.api.models.product.FilteredFacetResultBuilder.of();
+       return com.commercetools.api.models.product.FilteredFacetResultBuilder.of();
     }
-
     public com.commercetools.api.models.product.RangeFacetResultBuilder rangeBuilder() {
-        return com.commercetools.api.models.product.RangeFacetResultBuilder.of();
+       return com.commercetools.api.models.product.RangeFacetResultBuilder.of();
     }
-
     public com.commercetools.api.models.product.TermFacetResultBuilder termsBuilder() {
-        return com.commercetools.api.models.product.TermFacetResultBuilder.of();
+       return com.commercetools.api.models.product.TermFacetResultBuilder.of();
     }
 
     /**
      * factory method for an instance of FacetResultBuilder
-     * @return builder
+     * @return builder 
      */
     public static FacetResultBuilder of() {
         return new FacetResultBuilder();

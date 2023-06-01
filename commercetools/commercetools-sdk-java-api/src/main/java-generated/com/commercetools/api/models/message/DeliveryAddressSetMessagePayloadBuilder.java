@@ -1,11 +1,12 @@
-
 package com.commercetools.api.models.message;
 
+import com.commercetools.api.models.common.Address;
+import com.commercetools.api.models.message.OrderMessagePayload;
+import com.commercetools.api.models.message.DeliveryAddressSetMessagePayload;
+import javax.annotation.Nullable;
 import java.util.*;
 import java.util.function.Function;
-
-import javax.annotation.Nullable;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -19,152 +20,167 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .deliveryId("{deliveryId}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class DeliveryAddressSetMessagePayloadBuilder implements Builder<DeliveryAddressSetMessagePayload> {
 
+    
+    
     private String deliveryId;
-
+    
+    
     @Nullable
     private com.commercetools.api.models.common.Address address;
-
+    
+    
     @Nullable
     private com.commercetools.api.models.common.Address oldAddress;
-
+    
+    
     @Nullable
     private String shippingKey;
 
+    
     /**
      *  <p>Unique identifier of the Parcel.</p>
      * @param deliveryId value to be set
      * @return Builder
      */
-
-    public DeliveryAddressSetMessagePayloadBuilder deliveryId(final String deliveryId) {
+    
+    public DeliveryAddressSetMessagePayloadBuilder deliveryId( final String deliveryId) {
         this.deliveryId = deliveryId;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Address after the Set Delivery Address update action.</p>
      * @param builder function to build the address value
      * @return Builder
      */
-
-    public DeliveryAddressSetMessagePayloadBuilder address(
-            Function<com.commercetools.api.models.common.AddressBuilder, com.commercetools.api.models.common.AddressBuilder> builder) {
+    
+    public DeliveryAddressSetMessagePayloadBuilder address(Function<com.commercetools.api.models.common.AddressBuilder, com.commercetools.api.models.common.AddressBuilder> builder) {
         this.address = builder.apply(com.commercetools.api.models.common.AddressBuilder.of()).build();
         return this;
     }
-
+    
     /**
      *  <p>Address after the Set Delivery Address update action.</p>
      * @param builder function to build the address value
      * @return Builder
      */
-
-    public DeliveryAddressSetMessagePayloadBuilder withAddress(
-            Function<com.commercetools.api.models.common.AddressBuilder, com.commercetools.api.models.common.Address> builder) {
+    
+    public DeliveryAddressSetMessagePayloadBuilder withAddress(Function<com.commercetools.api.models.common.AddressBuilder, com.commercetools.api.models.common.Address> builder) {
         this.address = builder.apply(com.commercetools.api.models.common.AddressBuilder.of());
         return this;
     }
-
+                    
     /**
      *  <p>Address after the Set Delivery Address update action.</p>
      * @param address value to be set
      * @return Builder
      */
-
-    public DeliveryAddressSetMessagePayloadBuilder address(
-            @Nullable final com.commercetools.api.models.common.Address address) {
+    
+    public DeliveryAddressSetMessagePayloadBuilder address(@Nullable final com.commercetools.api.models.common.Address address) {
         this.address = address;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Address before the Set Delivery Address update action.</p>
      * @param builder function to build the oldAddress value
      * @return Builder
      */
-
-    public DeliveryAddressSetMessagePayloadBuilder oldAddress(
-            Function<com.commercetools.api.models.common.AddressBuilder, com.commercetools.api.models.common.AddressBuilder> builder) {
+    
+    public DeliveryAddressSetMessagePayloadBuilder oldAddress(Function<com.commercetools.api.models.common.AddressBuilder, com.commercetools.api.models.common.AddressBuilder> builder) {
         this.oldAddress = builder.apply(com.commercetools.api.models.common.AddressBuilder.of()).build();
         return this;
     }
-
+    
     /**
      *  <p>Address before the Set Delivery Address update action.</p>
      * @param builder function to build the oldAddress value
      * @return Builder
      */
-
-    public DeliveryAddressSetMessagePayloadBuilder withOldAddress(
-            Function<com.commercetools.api.models.common.AddressBuilder, com.commercetools.api.models.common.Address> builder) {
+    
+    public DeliveryAddressSetMessagePayloadBuilder withOldAddress(Function<com.commercetools.api.models.common.AddressBuilder, com.commercetools.api.models.common.Address> builder) {
         this.oldAddress = builder.apply(com.commercetools.api.models.common.AddressBuilder.of());
         return this;
     }
-
+                    
     /**
      *  <p>Address before the Set Delivery Address update action.</p>
      * @param oldAddress value to be set
      * @return Builder
      */
-
-    public DeliveryAddressSetMessagePayloadBuilder oldAddress(
-            @Nullable final com.commercetools.api.models.common.Address oldAddress) {
+    
+    public DeliveryAddressSetMessagePayloadBuilder oldAddress(@Nullable final com.commercetools.api.models.common.Address oldAddress) {
         this.oldAddress = oldAddress;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multi</code> ShippingMode.</p>
      * @param shippingKey value to be set
      * @return Builder
      */
-
+    
     public DeliveryAddressSetMessagePayloadBuilder shippingKey(@Nullable final String shippingKey) {
         this.shippingKey = shippingKey;
         return this;
     }
+    
+    
 
     /**
      *  <p>Unique identifier of the Parcel.</p>
      * @return deliveryId
      */
-
-    public String getDeliveryId() {
+    
+    
+    public String getDeliveryId(){
         return this.deliveryId;
     }
-
+    
     /**
      *  <p>Address after the Set Delivery Address update action.</p>
      * @return address
      */
-
+    
     @Nullable
-    public com.commercetools.api.models.common.Address getAddress() {
+    public com.commercetools.api.models.common.Address getAddress(){
         return this.address;
     }
-
+    
     /**
      *  <p>Address before the Set Delivery Address update action.</p>
      * @return oldAddress
      */
-
+    
     @Nullable
-    public com.commercetools.api.models.common.Address getOldAddress() {
+    public com.commercetools.api.models.common.Address getOldAddress(){
         return this.oldAddress;
     }
-
+    
     /**
      *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multi</code> ShippingMode.</p>
      * @return shippingKey
      */
-
+    
     @Nullable
-    public String getShippingKey() {
+    public String getShippingKey(){
         return this.shippingKey;
     }
 
@@ -176,7 +192,7 @@ public class DeliveryAddressSetMessagePayloadBuilder implements Builder<Delivery
         Objects.requireNonNull(deliveryId, DeliveryAddressSetMessagePayload.class + ": deliveryId is missing");
         return new DeliveryAddressSetMessagePayloadImpl(deliveryId, address, oldAddress, shippingKey);
     }
-
+    
     /**
      * builds DeliveryAddressSetMessagePayload without checking for non-null required values
      * @return DeliveryAddressSetMessagePayload
@@ -187,7 +203,7 @@ public class DeliveryAddressSetMessagePayloadBuilder implements Builder<Delivery
 
     /**
      * factory method for an instance of DeliveryAddressSetMessagePayloadBuilder
-     * @return builder
+     * @return builder 
      */
     public static DeliveryAddressSetMessagePayloadBuilder of() {
         return new DeliveryAddressSetMessagePayloadBuilder();

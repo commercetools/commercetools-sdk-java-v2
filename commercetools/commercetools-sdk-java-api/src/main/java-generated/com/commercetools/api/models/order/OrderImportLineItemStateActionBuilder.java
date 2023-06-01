@@ -1,9 +1,12 @@
-
 package com.commercetools.api.models.order;
 
+import com.commercetools.api.models.order.ItemState;
+import com.commercetools.api.models.order.OrderUpdateAction;
+import com.commercetools.api.models.order.OrderImportLineItemStateAction;
+import javax.annotation.Nullable;
 import java.util.*;
 import java.util.function.Function;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -18,129 +21,138 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .plusState(stateBuilder -> stateBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class OrderImportLineItemStateActionBuilder implements Builder<OrderImportLineItemStateAction> {
 
+    
+    
     private String lineItemId;
-
+    
+    
+    
     private java.util.List<com.commercetools.api.models.order.ItemState> state;
 
+    
     /**
      * set the value to the lineItemId
      * @param lineItemId value to be set
      * @return Builder
      */
-
-    public OrderImportLineItemStateActionBuilder lineItemId(final String lineItemId) {
+    
+    public OrderImportLineItemStateActionBuilder lineItemId( final String lineItemId) {
         this.lineItemId = lineItemId;
         return this;
     }
-
+    
+    
+    
     /**
      * set values to the state
      * @param state value to be set
      * @return Builder
      */
-
-    public OrderImportLineItemStateActionBuilder state(final com.commercetools.api.models.order.ItemState... state) {
+    
+    public OrderImportLineItemStateActionBuilder state( final com.commercetools.api.models.order.ItemState ...state) {
         this.state = new ArrayList<>(Arrays.asList(state));
         return this;
     }
-
+    
     /**
      * set value to the state
      * @param state value to be set
      * @return Builder
      */
-
-    public OrderImportLineItemStateActionBuilder state(
-            final java.util.List<com.commercetools.api.models.order.ItemState> state) {
+    
+    public OrderImportLineItemStateActionBuilder state( final java.util.List<com.commercetools.api.models.order.ItemState> state) {
         this.state = state;
         return this;
     }
-
+    
     /**
      * add values to the state
      * @param state value to be set
      * @return Builder
      */
-
-    public OrderImportLineItemStateActionBuilder plusState(
-            final com.commercetools.api.models.order.ItemState... state) {
+    
+    public OrderImportLineItemStateActionBuilder plusState( final com.commercetools.api.models.order.ItemState ...state) {
         if (this.state == null) {
             this.state = new ArrayList<>();
         }
         this.state.addAll(Arrays.asList(state));
         return this;
     }
-
+    
+    
+    
     /**
      * add the value to the state using the builder function
      * @param builder function to build the state value
      * @return Builder
      */
-
-    public OrderImportLineItemStateActionBuilder plusState(
-            Function<com.commercetools.api.models.order.ItemStateBuilder, com.commercetools.api.models.order.ItemStateBuilder> builder) {
+    
+    public OrderImportLineItemStateActionBuilder plusState(Function<com.commercetools.api.models.order.ItemStateBuilder, com.commercetools.api.models.order.ItemStateBuilder> builder) {
         if (this.state == null) {
             this.state = new ArrayList<>();
         }
         this.state.add(builder.apply(com.commercetools.api.models.order.ItemStateBuilder.of()).build());
         return this;
     }
-
+    
     /**
      * set the value to the state using the builder function
      * @param builder function to build the state value
      * @return Builder
      */
-
-    public OrderImportLineItemStateActionBuilder withState(
-            Function<com.commercetools.api.models.order.ItemStateBuilder, com.commercetools.api.models.order.ItemStateBuilder> builder) {
+    
+    public OrderImportLineItemStateActionBuilder withState(Function<com.commercetools.api.models.order.ItemStateBuilder, com.commercetools.api.models.order.ItemStateBuilder> builder) {
         this.state = new ArrayList<>();
         this.state.add(builder.apply(com.commercetools.api.models.order.ItemStateBuilder.of()).build());
         return this;
     }
-
+    
     /**
      * add the value to the state using the builder function
      * @param builder function to build the state value
      * @return Builder
      */
-
-    public OrderImportLineItemStateActionBuilder addState(
-            Function<com.commercetools.api.models.order.ItemStateBuilder, com.commercetools.api.models.order.ItemState> builder) {
+    
+    public OrderImportLineItemStateActionBuilder addState(Function<com.commercetools.api.models.order.ItemStateBuilder, com.commercetools.api.models.order.ItemState> builder) {
         return plusState(builder.apply(com.commercetools.api.models.order.ItemStateBuilder.of()));
     }
-
+    
     /**
      * set the value to the state using the builder function
      * @param builder function to build the state value
      * @return Builder
      */
-
-    public OrderImportLineItemStateActionBuilder setState(
-            Function<com.commercetools.api.models.order.ItemStateBuilder, com.commercetools.api.models.order.ItemState> builder) {
+    
+    public OrderImportLineItemStateActionBuilder setState(Function<com.commercetools.api.models.order.ItemStateBuilder, com.commercetools.api.models.order.ItemState> builder) {
         return state(builder.apply(com.commercetools.api.models.order.ItemStateBuilder.of()));
     }
+                    
 
     /**
      * value of lineItemId}
      * @return lineItemId
      */
-
-    public String getLineItemId() {
+    
+    
+    public String getLineItemId(){
         return this.lineItemId;
     }
-
+    
     /**
      * value of state}
      * @return state
      */
-
-    public java.util.List<com.commercetools.api.models.order.ItemState> getState() {
+    
+    
+    public java.util.List<com.commercetools.api.models.order.ItemState> getState(){
         return this.state;
     }
 
@@ -153,7 +165,7 @@ public class OrderImportLineItemStateActionBuilder implements Builder<OrderImpor
         Objects.requireNonNull(state, OrderImportLineItemStateAction.class + ": state is missing");
         return new OrderImportLineItemStateActionImpl(lineItemId, state);
     }
-
+    
     /**
      * builds OrderImportLineItemStateAction without checking for non-null required values
      * @return OrderImportLineItemStateAction
@@ -164,7 +176,7 @@ public class OrderImportLineItemStateActionBuilder implements Builder<OrderImpor
 
     /**
      * factory method for an instance of OrderImportLineItemStateActionBuilder
-     * @return builder
+     * @return builder 
      */
     public static OrderImportLineItemStateActionBuilder of() {
         return new OrderImportLineItemStateActionBuilder();

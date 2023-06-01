@@ -1,9 +1,12 @@
-
 package com.commercetools.api.models.cart_discount;
 
+import com.commercetools.api.models.cart_discount.CartDiscountTarget;
+import com.commercetools.api.models.cart_discount.CartDiscountUpdateAction;
+import com.commercetools.api.models.cart_discount.CartDiscountChangeTargetAction;
+import javax.annotation.Nullable;
 import java.util.*;
 import java.util.function.Function;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -17,43 +20,50 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .target(targetBuilder -> targetBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class CartDiscountChangeTargetActionBuilder implements Builder<CartDiscountChangeTargetAction> {
 
+    
+    
     private com.commercetools.api.models.cart_discount.CartDiscountTarget target;
 
+    
     /**
      *  <p>New value to set.</p>
      * @param target value to be set
      * @return Builder
      */
-
-    public CartDiscountChangeTargetActionBuilder target(
-            final com.commercetools.api.models.cart_discount.CartDiscountTarget target) {
+    
+    public CartDiscountChangeTargetActionBuilder target( final com.commercetools.api.models.cart_discount.CartDiscountTarget target) {
         this.target = target;
         return this;
     }
-
+    
+    
     /**
      *  <p>New value to set.</p>
      * @param builder function to build the target value
      * @return Builder
      */
-
-    public CartDiscountChangeTargetActionBuilder target(
-            Function<com.commercetools.api.models.cart_discount.CartDiscountTargetBuilder, Builder<? extends com.commercetools.api.models.cart_discount.CartDiscountTarget>> builder) {
+    
+    public CartDiscountChangeTargetActionBuilder target(Function<com.commercetools.api.models.cart_discount.CartDiscountTargetBuilder, Builder<? extends com.commercetools.api.models.cart_discount.CartDiscountTarget>> builder) {
         this.target = builder.apply(com.commercetools.api.models.cart_discount.CartDiscountTargetBuilder.of()).build();
         return this;
     }
+                    
 
     /**
      *  <p>New value to set.</p>
      * @return target
      */
-
-    public com.commercetools.api.models.cart_discount.CartDiscountTarget getTarget() {
+    
+    
+    public com.commercetools.api.models.cart_discount.CartDiscountTarget getTarget(){
         return this.target;
     }
 
@@ -65,7 +75,7 @@ public class CartDiscountChangeTargetActionBuilder implements Builder<CartDiscou
         Objects.requireNonNull(target, CartDiscountChangeTargetAction.class + ": target is missing");
         return new CartDiscountChangeTargetActionImpl(target);
     }
-
+    
     /**
      * builds CartDiscountChangeTargetAction without checking for non-null required values
      * @return CartDiscountChangeTargetAction
@@ -76,7 +86,7 @@ public class CartDiscountChangeTargetActionBuilder implements Builder<CartDiscou
 
     /**
      * factory method for an instance of CartDiscountChangeTargetActionBuilder
-     * @return builder
+     * @return builder 
      */
     public static CartDiscountChangeTargetActionBuilder of() {
         return new CartDiscountChangeTargetActionBuilder();

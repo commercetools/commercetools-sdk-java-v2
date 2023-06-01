@@ -1,20 +1,22 @@
-
 package com.commercetools.history.models.change;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
+import com.commercetools.history.models.change.Change;
 import com.commercetools.history.models.change_value.TransactionChangeValue;
 import com.commercetools.history.models.common.TransactionState;
+import com.commercetools.history.models.change.ChangeTransactionStateChangeImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * ChangeTransactionStateChange
@@ -30,9 +32,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .previousValue(TransactionState.INITIAL)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = ChangeTransactionStateChangeImpl.class)
 public interface ChangeTransactionStateChange extends Change {
 
@@ -48,7 +53,6 @@ public interface ChangeTransactionStateChange extends Change {
     @NotNull
     @JsonProperty("change")
     public String getChange();
-
     /**
      *
      * @return type
@@ -56,7 +60,6 @@ public interface ChangeTransactionStateChange extends Change {
     @NotNull
     @JsonProperty("type")
     public String getType();
-
     /**
      *
      * @return transaction
@@ -65,7 +68,6 @@ public interface ChangeTransactionStateChange extends Change {
     @Valid
     @JsonProperty("transaction")
     public TransactionChangeValue getTransaction();
-
     /**
      *
      * @return nextValue
@@ -73,7 +75,6 @@ public interface ChangeTransactionStateChange extends Change {
     @NotNull
     @JsonProperty("nextValue")
     public TransactionState getNextValue();
-
     /**
      *
      * @return previousValue
@@ -86,37 +87,42 @@ public interface ChangeTransactionStateChange extends Change {
      *  <p>Update action for <code>changeTransactionState</code> on payments</p>
      * @param change value to be set
      */
-
+    
     public void setChange(final String change);
-
+    
+    
     /**
      * set transaction
      * @param transaction value to be set
      */
-
+    
     public void setTransaction(final TransactionChangeValue transaction);
-
+    
+    
     /**
      * set nextValue
      * @param nextValue value to be set
      */
-
+    
     public void setNextValue(final TransactionState nextValue);
-
+    
+    
     /**
      * set previousValue
      * @param previousValue value to be set
      */
-
+    
     public void setPreviousValue(final TransactionState previousValue);
+    
 
     /**
      * factory method
      * @return instance of ChangeTransactionStateChange
      */
-    public static ChangeTransactionStateChange of() {
+    public static ChangeTransactionStateChange of(){
         return new ChangeTransactionStateChangeImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy ChangeTransactionStateChange
@@ -144,8 +150,7 @@ public interface ChangeTransactionStateChange extends Change {
         }
         ChangeTransactionStateChangeImpl instance = new ChangeTransactionStateChangeImpl();
         instance.setChange(template.getChange());
-        instance.setTransaction(
-            com.commercetools.history.models.change_value.TransactionChangeValue.deepCopy(template.getTransaction()));
+        instance.setTransaction(com.commercetools.history.models.change_value.TransactionChangeValue.deepCopy(template.getTransaction()));
         instance.setNextValue(template.getNextValue());
         instance.setPreviousValue(template.getPreviousValue());
         return instance;
@@ -158,7 +163,7 @@ public interface ChangeTransactionStateChange extends Change {
     public static ChangeTransactionStateChangeBuilder builder() {
         return ChangeTransactionStateChangeBuilder.of();
     }
-
+    
     /**
      * create builder for ChangeTransactionStateChange instance
      * @param template instance with prefilled values for the builder
@@ -167,6 +172,7 @@ public interface ChangeTransactionStateChange extends Change {
     public static ChangeTransactionStateChangeBuilder builder(final ChangeTransactionStateChange template) {
         return ChangeTransactionStateChangeBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -177,7 +183,7 @@ public interface ChangeTransactionStateChange extends Change {
     default <T> T withChangeTransactionStateChange(Function<ChangeTransactionStateChange, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

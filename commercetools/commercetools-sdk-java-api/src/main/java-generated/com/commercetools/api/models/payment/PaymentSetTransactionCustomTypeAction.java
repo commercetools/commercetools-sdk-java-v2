@@ -1,20 +1,22 @@
-
 package com.commercetools.api.models.payment;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
+import com.commercetools.api.models.payment.PaymentUpdateAction;
 import com.commercetools.api.models.type.FieldContainer;
 import com.commercetools.api.models.type.TypeResourceIdentifier;
+import com.commercetools.api.models.payment.PaymentSetTransactionCustomTypeActionImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * PaymentSetTransactionCustomTypeAction
@@ -27,9 +29,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .transactionId("{transactionId}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = PaymentSetTransactionCustomTypeActionImpl.class)
 public interface PaymentSetTransactionCustomTypeAction extends PaymentUpdateAction {
 
@@ -45,7 +50,6 @@ public interface PaymentSetTransactionCustomTypeAction extends PaymentUpdateActi
     @NotNull
     @JsonProperty("transactionId")
     public String getTransactionId();
-
     /**
      *  <p>Defines the Type that extends the Transaction with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Transaction.</p>
      * @return type
@@ -53,7 +57,6 @@ public interface PaymentSetTransactionCustomTypeAction extends PaymentUpdateActi
     @Valid
     @JsonProperty("type")
     public TypeResourceIdentifier getType();
-
     /**
      *  <p>Sets the Custom Fields fields for the Transaction.</p>
      * @return fields
@@ -66,30 +69,34 @@ public interface PaymentSetTransactionCustomTypeAction extends PaymentUpdateActi
      *  <p>Unique identifier of the Transaction. If the specified <code>transactionId</code> does not exist, the request will fail with an InvalidOperation error.</p>
      * @param transactionId value to be set
      */
-
+    
     public void setTransactionId(final String transactionId);
-
+    
+    
     /**
      *  <p>Defines the Type that extends the Transaction with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Transaction.</p>
      * @param type value to be set
      */
-
+    
     public void setType(final TypeResourceIdentifier type);
-
+    
+    
     /**
      *  <p>Sets the Custom Fields fields for the Transaction.</p>
      * @param fields value to be set
      */
-
+    
     public void setFields(final FieldContainer fields);
+    
 
     /**
      * factory method
      * @return instance of PaymentSetTransactionCustomTypeAction
      */
-    public static PaymentSetTransactionCustomTypeAction of() {
+    public static PaymentSetTransactionCustomTypeAction of(){
         return new PaymentSetTransactionCustomTypeActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy PaymentSetTransactionCustomTypeAction
@@ -110,8 +117,7 @@ public interface PaymentSetTransactionCustomTypeAction extends PaymentUpdateActi
      * @return copy instance
      */
     @Nullable
-    public static PaymentSetTransactionCustomTypeAction deepCopy(
-            @Nullable final PaymentSetTransactionCustomTypeAction template) {
+    public static PaymentSetTransactionCustomTypeAction deepCopy(@Nullable final PaymentSetTransactionCustomTypeAction template) {
         if (template == null) {
             return null;
         }
@@ -129,16 +135,16 @@ public interface PaymentSetTransactionCustomTypeAction extends PaymentUpdateActi
     public static PaymentSetTransactionCustomTypeActionBuilder builder() {
         return PaymentSetTransactionCustomTypeActionBuilder.of();
     }
-
+    
     /**
      * create builder for PaymentSetTransactionCustomTypeAction instance
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static PaymentSetTransactionCustomTypeActionBuilder builder(
-            final PaymentSetTransactionCustomTypeAction template) {
+    public static PaymentSetTransactionCustomTypeActionBuilder builder(final PaymentSetTransactionCustomTypeAction template) {
         return PaymentSetTransactionCustomTypeActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -149,7 +155,7 @@ public interface PaymentSetTransactionCustomTypeAction extends PaymentUpdateActi
     default <T> T withPaymentSetTransactionCustomTypeAction(Function<PaymentSetTransactionCustomTypeAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

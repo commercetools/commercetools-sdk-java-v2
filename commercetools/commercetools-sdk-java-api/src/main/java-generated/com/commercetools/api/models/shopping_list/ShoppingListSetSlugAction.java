@@ -1,18 +1,21 @@
-
 package com.commercetools.api.models.shopping_list;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-
 import com.commercetools.api.models.common.LocalizedString;
+import com.commercetools.api.models.shopping_list.ShoppingListUpdateAction;
+import com.commercetools.api.models.shopping_list.ShoppingListSetSlugActionImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * ShoppingListSetSlugAction
@@ -24,9 +27,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     ShoppingListSetSlugAction shoppingListSetSlugAction = ShoppingListSetSlugAction.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = ShoppingListSetSlugActionImpl.class)
 public interface ShoppingListSetSlugAction extends ShoppingListUpdateAction {
 
@@ -47,16 +53,18 @@ public interface ShoppingListSetSlugAction extends ShoppingListUpdateAction {
      *  <p>Value to set. If empty, any existing value will be removed. Each slug is unique across a Project, but a ShoppingList can have the same slug for different languages. Must match the pattern <code>^[A-Za-z0-9_-]{2,256}+$</code></p>
      * @param slug value to be set
      */
-
+    
     public void setSlug(final LocalizedString slug);
+    
 
     /**
      * factory method
      * @return instance of ShoppingListSetSlugAction
      */
-    public static ShoppingListSetSlugAction of() {
+    public static ShoppingListSetSlugAction of(){
         return new ShoppingListSetSlugActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy ShoppingListSetSlugAction
@@ -91,7 +99,7 @@ public interface ShoppingListSetSlugAction extends ShoppingListUpdateAction {
     public static ShoppingListSetSlugActionBuilder builder() {
         return ShoppingListSetSlugActionBuilder.of();
     }
-
+    
     /**
      * create builder for ShoppingListSetSlugAction instance
      * @param template instance with prefilled values for the builder
@@ -100,6 +108,7 @@ public interface ShoppingListSetSlugAction extends ShoppingListUpdateAction {
     public static ShoppingListSetSlugActionBuilder builder(final ShoppingListSetSlugAction template) {
         return ShoppingListSetSlugActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -110,11 +119,11 @@ public interface ShoppingListSetSlugAction extends ShoppingListUpdateAction {
     default <T> T withShoppingListSetSlugAction(Function<ShoppingListSetSlugAction, T> helper) {
         return helper.apply(this);
     }
-
     public static ShoppingListSetSlugAction ofUnset() {
         return ShoppingListSetSlugAction.of();
     }
-
+    
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

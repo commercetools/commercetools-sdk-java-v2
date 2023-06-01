@@ -1,9 +1,12 @@
-
 package com.commercetools.api.models.project;
 
+import com.commercetools.api.models.associate_role.AssociateRoleResourceIdentifier;
+import com.commercetools.api.models.project.ProjectUpdateAction;
+import com.commercetools.api.models.project.ProjectSetBusinessUnitAssociateRoleOnCreationAction;
+import javax.annotation.Nullable;
 import java.util.*;
 import java.util.function.Function;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -17,59 +20,61 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .associateRole(associateRoleBuilder -> associateRoleBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
-public class ProjectSetBusinessUnitAssociateRoleOnCreationActionBuilder
-        implements Builder<ProjectSetBusinessUnitAssociateRoleOnCreationAction> {
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
+public class ProjectSetBusinessUnitAssociateRoleOnCreationActionBuilder implements Builder<ProjectSetBusinessUnitAssociateRoleOnCreationAction> {
 
+    
+    
     private com.commercetools.api.models.associate_role.AssociateRoleResourceIdentifier associateRole;
 
+    
     /**
      *  <p>Default Associate Role assigned to the Associate creating a Business Unit using the My Business Unit endpoint.</p>
      * @param builder function to build the associateRole value
      * @return Builder
      */
-
-    public ProjectSetBusinessUnitAssociateRoleOnCreationActionBuilder associateRole(
-            Function<com.commercetools.api.models.associate_role.AssociateRoleResourceIdentifierBuilder, com.commercetools.api.models.associate_role.AssociateRoleResourceIdentifierBuilder> builder) {
-        this.associateRole = builder
-                .apply(com.commercetools.api.models.associate_role.AssociateRoleResourceIdentifierBuilder.of())
-                .build();
+    
+    public ProjectSetBusinessUnitAssociateRoleOnCreationActionBuilder associateRole(Function<com.commercetools.api.models.associate_role.AssociateRoleResourceIdentifierBuilder, com.commercetools.api.models.associate_role.AssociateRoleResourceIdentifierBuilder> builder) {
+        this.associateRole = builder.apply(com.commercetools.api.models.associate_role.AssociateRoleResourceIdentifierBuilder.of()).build();
         return this;
     }
-
+    
     /**
      *  <p>Default Associate Role assigned to the Associate creating a Business Unit using the My Business Unit endpoint.</p>
      * @param builder function to build the associateRole value
      * @return Builder
      */
-
-    public ProjectSetBusinessUnitAssociateRoleOnCreationActionBuilder withAssociateRole(
-            Function<com.commercetools.api.models.associate_role.AssociateRoleResourceIdentifierBuilder, com.commercetools.api.models.associate_role.AssociateRoleResourceIdentifier> builder) {
-        this.associateRole = builder
-                .apply(com.commercetools.api.models.associate_role.AssociateRoleResourceIdentifierBuilder.of());
+    
+    public ProjectSetBusinessUnitAssociateRoleOnCreationActionBuilder withAssociateRole(Function<com.commercetools.api.models.associate_role.AssociateRoleResourceIdentifierBuilder, com.commercetools.api.models.associate_role.AssociateRoleResourceIdentifier> builder) {
+        this.associateRole = builder.apply(com.commercetools.api.models.associate_role.AssociateRoleResourceIdentifierBuilder.of());
         return this;
     }
-
+                    
     /**
      *  <p>Default Associate Role assigned to the Associate creating a Business Unit using the My Business Unit endpoint.</p>
      * @param associateRole value to be set
      * @return Builder
      */
-
-    public ProjectSetBusinessUnitAssociateRoleOnCreationActionBuilder associateRole(
-            final com.commercetools.api.models.associate_role.AssociateRoleResourceIdentifier associateRole) {
+    
+    public ProjectSetBusinessUnitAssociateRoleOnCreationActionBuilder associateRole( final com.commercetools.api.models.associate_role.AssociateRoleResourceIdentifier associateRole) {
         this.associateRole = associateRole;
         return this;
     }
+    
+    
 
     /**
      *  <p>Default Associate Role assigned to the Associate creating a Business Unit using the My Business Unit endpoint.</p>
      * @return associateRole
      */
-
-    public com.commercetools.api.models.associate_role.AssociateRoleResourceIdentifier getAssociateRole() {
+    
+    
+    public com.commercetools.api.models.associate_role.AssociateRoleResourceIdentifier getAssociateRole(){
         return this.associateRole;
     }
 
@@ -78,11 +83,10 @@ public class ProjectSetBusinessUnitAssociateRoleOnCreationActionBuilder
      * @return ProjectSetBusinessUnitAssociateRoleOnCreationAction
      */
     public ProjectSetBusinessUnitAssociateRoleOnCreationAction build() {
-        Objects.requireNonNull(associateRole,
-            ProjectSetBusinessUnitAssociateRoleOnCreationAction.class + ": associateRole is missing");
+        Objects.requireNonNull(associateRole, ProjectSetBusinessUnitAssociateRoleOnCreationAction.class + ": associateRole is missing");
         return new ProjectSetBusinessUnitAssociateRoleOnCreationActionImpl(associateRole);
     }
-
+    
     /**
      * builds ProjectSetBusinessUnitAssociateRoleOnCreationAction without checking for non-null required values
      * @return ProjectSetBusinessUnitAssociateRoleOnCreationAction
@@ -93,7 +97,7 @@ public class ProjectSetBusinessUnitAssociateRoleOnCreationActionBuilder
 
     /**
      * factory method for an instance of ProjectSetBusinessUnitAssociateRoleOnCreationActionBuilder
-     * @return builder
+     * @return builder 
      */
     public static ProjectSetBusinessUnitAssociateRoleOnCreationActionBuilder of() {
         return new ProjectSetBusinessUnitAssociateRoleOnCreationActionBuilder();
@@ -104,8 +108,7 @@ public class ProjectSetBusinessUnitAssociateRoleOnCreationActionBuilder
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static ProjectSetBusinessUnitAssociateRoleOnCreationActionBuilder of(
-            final ProjectSetBusinessUnitAssociateRoleOnCreationAction template) {
+    public static ProjectSetBusinessUnitAssociateRoleOnCreationActionBuilder of(final ProjectSetBusinessUnitAssociateRoleOnCreationAction template) {
         ProjectSetBusinessUnitAssociateRoleOnCreationActionBuilder builder = new ProjectSetBusinessUnitAssociateRoleOnCreationActionBuilder();
         builder.associateRole = template.getAssociateRole();
         return builder;

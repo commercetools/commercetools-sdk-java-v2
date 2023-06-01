@@ -1,17 +1,20 @@
-
 package com.commercetools.history.models.common;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
 
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
+import com.commercetools.history.models.common.LocationImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Shape of the value for <code>addLocation</code> and <code>removeLocation</code> actions</p>
@@ -25,11 +28,15 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .state("{state}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = LocationImpl.class)
-public interface Location {
+public interface Location  {
+
 
     /**
      *  <p>Two-digit country code as per ISO 3166-1 alpha-2.</p>
@@ -38,7 +45,6 @@ public interface Location {
     @NotNull
     @JsonProperty("country")
     public String getCountry();
-
     /**
      *
      * @return state
@@ -51,23 +57,26 @@ public interface Location {
      *  <p>Two-digit country code as per ISO 3166-1 alpha-2.</p>
      * @param country value to be set
      */
-
+    
     public void setCountry(final String country);
-
+    
+    
     /**
      * set state
      * @param state value to be set
      */
-
+    
     public void setState(final String state);
+    
 
     /**
      * factory method
      * @return instance of Location
      */
-    public static Location of() {
+    public static Location of(){
         return new LocationImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy Location
@@ -104,7 +113,7 @@ public interface Location {
     public static LocationBuilder builder() {
         return LocationBuilder.of();
     }
-
+    
     /**
      * create builder for Location instance
      * @param template instance with prefilled values for the builder
@@ -113,6 +122,7 @@ public interface Location {
     public static LocationBuilder builder(final Location template) {
         return LocationBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -123,7 +133,7 @@ public interface Location {
     default <T> T withLocation(Function<Location, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

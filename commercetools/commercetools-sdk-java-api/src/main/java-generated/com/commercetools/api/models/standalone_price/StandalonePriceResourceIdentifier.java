@@ -1,17 +1,21 @@
-
 package com.commercetools.api.models.standalone_price;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-
+import com.commercetools.api.models.common.ReferenceTypeId;
 import com.commercetools.api.models.common.ResourceIdentifier;
+import com.commercetools.api.models.standalone_price.StandalonePriceResourceIdentifierImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>ResourceIdentifier to a StandalonePrice.</p>
@@ -23,9 +27,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     StandalonePriceResourceIdentifier standalonePriceResourceIdentifier = StandalonePriceResourceIdentifier.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = StandalonePriceResourceIdentifierImpl.class)
 public interface StandalonePriceResourceIdentifier extends ResourceIdentifier {
 
@@ -34,13 +41,16 @@ public interface StandalonePriceResourceIdentifier extends ResourceIdentifier {
      */
     String STANDALONE_PRICE = "standalone-price";
 
+
+
     /**
      * factory method
      * @return instance of StandalonePriceResourceIdentifier
      */
-    public static StandalonePriceResourceIdentifier of() {
+    public static StandalonePriceResourceIdentifier of(){
         return new StandalonePriceResourceIdentifierImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy StandalonePriceResourceIdentifier
@@ -60,8 +70,7 @@ public interface StandalonePriceResourceIdentifier extends ResourceIdentifier {
      * @return copy instance
      */
     @Nullable
-    public static StandalonePriceResourceIdentifier deepCopy(
-            @Nullable final StandalonePriceResourceIdentifier template) {
+    public static StandalonePriceResourceIdentifier deepCopy(@Nullable final StandalonePriceResourceIdentifier template) {
         if (template == null) {
             return null;
         }
@@ -78,7 +87,7 @@ public interface StandalonePriceResourceIdentifier extends ResourceIdentifier {
     public static StandalonePriceResourceIdentifierBuilder builder() {
         return StandalonePriceResourceIdentifierBuilder.of();
     }
-
+    
     /**
      * create builder for StandalonePriceResourceIdentifier instance
      * @param template instance with prefilled values for the builder
@@ -87,6 +96,7 @@ public interface StandalonePriceResourceIdentifier extends ResourceIdentifier {
     public static StandalonePriceResourceIdentifierBuilder builder(final StandalonePriceResourceIdentifier template) {
         return StandalonePriceResourceIdentifierBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -97,7 +107,7 @@ public interface StandalonePriceResourceIdentifier extends ResourceIdentifier {
     default <T> T withStandalonePriceResourceIdentifier(Function<StandalonePriceResourceIdentifier, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

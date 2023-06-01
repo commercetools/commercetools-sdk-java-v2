@@ -1,9 +1,12 @@
-
 package com.commercetools.history.models.change;
 
+import com.commercetools.history.models.change.Change;
+import com.commercetools.history.models.common.Address;
+import com.commercetools.history.models.change.RemoveAddressChange;
+import javax.annotation.Nullable;
 import java.util.*;
 import java.util.function.Function;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -18,77 +21,89 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .previousValue(previousValueBuilder -> previousValueBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class RemoveAddressChangeBuilder implements Builder<RemoveAddressChange> {
 
+    
+    
     private String change;
-
+    
+    
+    
     private com.commercetools.history.models.common.Address previousValue;
 
+    
     /**
      *  <p>Update action for <code>removeAddress</code> action.</p>
      * @param change value to be set
      * @return Builder
      */
-
-    public RemoveAddressChangeBuilder change(final String change) {
+    
+    public RemoveAddressChangeBuilder change( final String change) {
         this.change = change;
         return this;
     }
-
+    
+    
+    
+    
     /**
      * set the value to the previousValue using the builder function
      * @param builder function to build the previousValue value
      * @return Builder
      */
-
-    public RemoveAddressChangeBuilder previousValue(
-            Function<com.commercetools.history.models.common.AddressBuilder, com.commercetools.history.models.common.AddressBuilder> builder) {
+    
+    public RemoveAddressChangeBuilder previousValue(Function<com.commercetools.history.models.common.AddressBuilder, com.commercetools.history.models.common.AddressBuilder> builder) {
         this.previousValue = builder.apply(com.commercetools.history.models.common.AddressBuilder.of()).build();
         return this;
     }
-
+    
     /**
      * set the value to the previousValue using the builder function
      * @param builder function to build the previousValue value
      * @return Builder
      */
-
-    public RemoveAddressChangeBuilder withPreviousValue(
-            Function<com.commercetools.history.models.common.AddressBuilder, com.commercetools.history.models.common.Address> builder) {
+    
+    public RemoveAddressChangeBuilder withPreviousValue(Function<com.commercetools.history.models.common.AddressBuilder, com.commercetools.history.models.common.Address> builder) {
         this.previousValue = builder.apply(com.commercetools.history.models.common.AddressBuilder.of());
         return this;
     }
-
+                    
     /**
      * set the value to the previousValue
      * @param previousValue value to be set
      * @return Builder
      */
-
-    public RemoveAddressChangeBuilder previousValue(
-            final com.commercetools.history.models.common.Address previousValue) {
+    
+    public RemoveAddressChangeBuilder previousValue( final com.commercetools.history.models.common.Address previousValue) {
         this.previousValue = previousValue;
         return this;
     }
+    
+    
 
     /**
      *  <p>Update action for <code>removeAddress</code> action.</p>
      * @return change
      */
-
-    public String getChange() {
+    
+    
+    public String getChange(){
         return this.change;
     }
-
+    
     /**
      * value of previousValue}
      * @return previousValue
      */
-
-    public com.commercetools.history.models.common.Address getPreviousValue() {
+    
+    
+    public com.commercetools.history.models.common.Address getPreviousValue(){
         return this.previousValue;
     }
 
@@ -101,7 +116,7 @@ public class RemoveAddressChangeBuilder implements Builder<RemoveAddressChange> 
         Objects.requireNonNull(previousValue, RemoveAddressChange.class + ": previousValue is missing");
         return new RemoveAddressChangeImpl(change, previousValue);
     }
-
+    
     /**
      * builds RemoveAddressChange without checking for non-null required values
      * @return RemoveAddressChange
@@ -112,7 +127,7 @@ public class RemoveAddressChangeBuilder implements Builder<RemoveAddressChange> 
 
     /**
      * factory method for an instance of RemoveAddressChangeBuilder
-     * @return builder
+     * @return builder 
      */
     public static RemoveAddressChangeBuilder of() {
         return new RemoveAddressChangeBuilder();

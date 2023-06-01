@@ -1,9 +1,12 @@
-
 package com.commercetools.history.models.change;
 
+import com.commercetools.history.models.change.Change;
+import com.commercetools.history.models.change_value.ShippingMethodChangeValue;
+import com.commercetools.history.models.change.SetShippingMethodChange;
+import javax.annotation.Nullable;
 import java.util.*;
 import java.util.function.Function;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -19,130 +22,139 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .previousValue(previousValueBuilder -> previousValueBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class SetShippingMethodChangeBuilder implements Builder<SetShippingMethodChange> {
 
+    
+    
     private String change;
-
+    
+    
+    
     private com.commercetools.history.models.change_value.ShippingMethodChangeValue nextValue;
-
+    
+    
+    
     private com.commercetools.history.models.change_value.ShippingMethodChangeValue previousValue;
 
+    
     /**
      *  <p>Update action for <code>setShippingMethod</code></p>
      * @param change value to be set
      * @return Builder
      */
-
-    public SetShippingMethodChangeBuilder change(final String change) {
+    
+    public SetShippingMethodChangeBuilder change( final String change) {
         this.change = change;
         return this;
     }
-
+    
+    
+    
+    
     /**
      * set the value to the nextValue using the builder function
      * @param builder function to build the nextValue value
      * @return Builder
      */
-
-    public SetShippingMethodChangeBuilder nextValue(
-            Function<com.commercetools.history.models.change_value.ShippingMethodChangeValueBuilder, com.commercetools.history.models.change_value.ShippingMethodChangeValueBuilder> builder) {
-        this.nextValue = builder
-                .apply(com.commercetools.history.models.change_value.ShippingMethodChangeValueBuilder.of())
-                .build();
+    
+    public SetShippingMethodChangeBuilder nextValue(Function<com.commercetools.history.models.change_value.ShippingMethodChangeValueBuilder, com.commercetools.history.models.change_value.ShippingMethodChangeValueBuilder> builder) {
+        this.nextValue = builder.apply(com.commercetools.history.models.change_value.ShippingMethodChangeValueBuilder.of()).build();
         return this;
     }
-
+    
     /**
      * set the value to the nextValue using the builder function
      * @param builder function to build the nextValue value
      * @return Builder
      */
-
-    public SetShippingMethodChangeBuilder withNextValue(
-            Function<com.commercetools.history.models.change_value.ShippingMethodChangeValueBuilder, com.commercetools.history.models.change_value.ShippingMethodChangeValue> builder) {
-        this.nextValue = builder
-                .apply(com.commercetools.history.models.change_value.ShippingMethodChangeValueBuilder.of());
+    
+    public SetShippingMethodChangeBuilder withNextValue(Function<com.commercetools.history.models.change_value.ShippingMethodChangeValueBuilder, com.commercetools.history.models.change_value.ShippingMethodChangeValue> builder) {
+        this.nextValue = builder.apply(com.commercetools.history.models.change_value.ShippingMethodChangeValueBuilder.of());
         return this;
     }
-
+                    
     /**
      * set the value to the nextValue
      * @param nextValue value to be set
      * @return Builder
      */
-
-    public SetShippingMethodChangeBuilder nextValue(
-            final com.commercetools.history.models.change_value.ShippingMethodChangeValue nextValue) {
+    
+    public SetShippingMethodChangeBuilder nextValue( final com.commercetools.history.models.change_value.ShippingMethodChangeValue nextValue) {
         this.nextValue = nextValue;
         return this;
     }
-
+    
+    
+    
+    
     /**
      * set the value to the previousValue using the builder function
      * @param builder function to build the previousValue value
      * @return Builder
      */
-
-    public SetShippingMethodChangeBuilder previousValue(
-            Function<com.commercetools.history.models.change_value.ShippingMethodChangeValueBuilder, com.commercetools.history.models.change_value.ShippingMethodChangeValueBuilder> builder) {
-        this.previousValue = builder
-                .apply(com.commercetools.history.models.change_value.ShippingMethodChangeValueBuilder.of())
-                .build();
+    
+    public SetShippingMethodChangeBuilder previousValue(Function<com.commercetools.history.models.change_value.ShippingMethodChangeValueBuilder, com.commercetools.history.models.change_value.ShippingMethodChangeValueBuilder> builder) {
+        this.previousValue = builder.apply(com.commercetools.history.models.change_value.ShippingMethodChangeValueBuilder.of()).build();
         return this;
     }
-
+    
     /**
      * set the value to the previousValue using the builder function
      * @param builder function to build the previousValue value
      * @return Builder
      */
-
-    public SetShippingMethodChangeBuilder withPreviousValue(
-            Function<com.commercetools.history.models.change_value.ShippingMethodChangeValueBuilder, com.commercetools.history.models.change_value.ShippingMethodChangeValue> builder) {
-        this.previousValue = builder
-                .apply(com.commercetools.history.models.change_value.ShippingMethodChangeValueBuilder.of());
+    
+    public SetShippingMethodChangeBuilder withPreviousValue(Function<com.commercetools.history.models.change_value.ShippingMethodChangeValueBuilder, com.commercetools.history.models.change_value.ShippingMethodChangeValue> builder) {
+        this.previousValue = builder.apply(com.commercetools.history.models.change_value.ShippingMethodChangeValueBuilder.of());
         return this;
     }
-
+                    
     /**
      * set the value to the previousValue
      * @param previousValue value to be set
      * @return Builder
      */
-
-    public SetShippingMethodChangeBuilder previousValue(
-            final com.commercetools.history.models.change_value.ShippingMethodChangeValue previousValue) {
+    
+    public SetShippingMethodChangeBuilder previousValue( final com.commercetools.history.models.change_value.ShippingMethodChangeValue previousValue) {
         this.previousValue = previousValue;
         return this;
     }
+    
+    
 
     /**
      *  <p>Update action for <code>setShippingMethod</code></p>
      * @return change
      */
-
-    public String getChange() {
+    
+    
+    public String getChange(){
         return this.change;
     }
-
+    
     /**
      * value of nextValue}
      * @return nextValue
      */
-
-    public com.commercetools.history.models.change_value.ShippingMethodChangeValue getNextValue() {
+    
+    
+    public com.commercetools.history.models.change_value.ShippingMethodChangeValue getNextValue(){
         return this.nextValue;
     }
-
+    
     /**
      * value of previousValue}
      * @return previousValue
      */
-
-    public com.commercetools.history.models.change_value.ShippingMethodChangeValue getPreviousValue() {
+    
+    
+    public com.commercetools.history.models.change_value.ShippingMethodChangeValue getPreviousValue(){
         return this.previousValue;
     }
 
@@ -156,7 +168,7 @@ public class SetShippingMethodChangeBuilder implements Builder<SetShippingMethod
         Objects.requireNonNull(previousValue, SetShippingMethodChange.class + ": previousValue is missing");
         return new SetShippingMethodChangeImpl(change, nextValue, previousValue);
     }
-
+    
     /**
      * builds SetShippingMethodChange without checking for non-null required values
      * @return SetShippingMethodChange
@@ -167,7 +179,7 @@ public class SetShippingMethodChangeBuilder implements Builder<SetShippingMethod
 
     /**
      * factory method for an instance of SetShippingMethodChangeBuilder
-     * @return builder
+     * @return builder 
      */
     public static SetShippingMethodChangeBuilder of() {
         return new SetShippingMethodChangeBuilder();

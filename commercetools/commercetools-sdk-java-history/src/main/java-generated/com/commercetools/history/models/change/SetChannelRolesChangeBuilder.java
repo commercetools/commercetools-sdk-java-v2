@@ -1,8 +1,12 @@
-
 package com.commercetools.history.models.change;
 
+import com.commercetools.history.models.change.Change;
+import com.commercetools.history.models.common.ChannelRole;
+import com.commercetools.history.models.change.SetChannelRolesChange;
+import javax.annotation.Nullable;
 import java.util.*;
-
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -18,130 +22,145 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .plusNextValue(nextValueBuilder -> nextValueBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class SetChannelRolesChangeBuilder implements Builder<SetChannelRolesChange> {
 
+    
+    
     private String change;
-
+    
+    
+    
     private java.util.List<com.commercetools.history.models.common.ChannelRole> previousValue;
-
+    
+    
+    
     private java.util.List<com.commercetools.history.models.common.ChannelRole> nextValue;
 
+    
     /**
      * set the value to the change
      * @param change value to be set
      * @return Builder
      */
-
-    public SetChannelRolesChangeBuilder change(final String change) {
+    
+    public SetChannelRolesChangeBuilder change( final String change) {
         this.change = change;
         return this;
     }
-
+    
+    
+    
     /**
      * set values to the previousValue
      * @param previousValue value to be set
      * @return Builder
      */
-
-    public SetChannelRolesChangeBuilder previousValue(
-            final com.commercetools.history.models.common.ChannelRole... previousValue) {
+    
+    public SetChannelRolesChangeBuilder previousValue( final com.commercetools.history.models.common.ChannelRole ...previousValue) {
         this.previousValue = new ArrayList<>(Arrays.asList(previousValue));
         return this;
     }
-
+    
     /**
      * set value to the previousValue
      * @param previousValue value to be set
      * @return Builder
      */
-
-    public SetChannelRolesChangeBuilder previousValue(
-            final java.util.List<com.commercetools.history.models.common.ChannelRole> previousValue) {
+    
+    public SetChannelRolesChangeBuilder previousValue( final java.util.List<com.commercetools.history.models.common.ChannelRole> previousValue) {
         this.previousValue = previousValue;
         return this;
     }
-
+    
     /**
      * add values to the previousValue
      * @param previousValue value to be set
      * @return Builder
      */
-
-    public SetChannelRolesChangeBuilder plusPreviousValue(
-            final com.commercetools.history.models.common.ChannelRole... previousValue) {
+    
+    public SetChannelRolesChangeBuilder plusPreviousValue( final com.commercetools.history.models.common.ChannelRole ...previousValue) {
         if (this.previousValue == null) {
             this.previousValue = new ArrayList<>();
         }
         this.previousValue.addAll(Arrays.asList(previousValue));
         return this;
     }
-
+    
+    
+    
+    
     /**
      * set values to the nextValue
      * @param nextValue value to be set
      * @return Builder
      */
-
-    public SetChannelRolesChangeBuilder nextValue(
-            final com.commercetools.history.models.common.ChannelRole... nextValue) {
+    
+    public SetChannelRolesChangeBuilder nextValue( final com.commercetools.history.models.common.ChannelRole ...nextValue) {
         this.nextValue = new ArrayList<>(Arrays.asList(nextValue));
         return this;
     }
-
+    
     /**
      * set value to the nextValue
      * @param nextValue value to be set
      * @return Builder
      */
-
-    public SetChannelRolesChangeBuilder nextValue(
-            final java.util.List<com.commercetools.history.models.common.ChannelRole> nextValue) {
+    
+    public SetChannelRolesChangeBuilder nextValue( final java.util.List<com.commercetools.history.models.common.ChannelRole> nextValue) {
         this.nextValue = nextValue;
         return this;
     }
-
+    
     /**
      * add values to the nextValue
      * @param nextValue value to be set
      * @return Builder
      */
-
-    public SetChannelRolesChangeBuilder plusNextValue(
-            final com.commercetools.history.models.common.ChannelRole... nextValue) {
+    
+    public SetChannelRolesChangeBuilder plusNextValue( final com.commercetools.history.models.common.ChannelRole ...nextValue) {
         if (this.nextValue == null) {
             this.nextValue = new ArrayList<>();
         }
         this.nextValue.addAll(Arrays.asList(nextValue));
         return this;
     }
+    
+    
+    
 
     /**
      * value of change}
      * @return change
      */
-
-    public String getChange() {
+    
+    
+    public String getChange(){
         return this.change;
     }
-
+    
     /**
      * value of previousValue}
      * @return previousValue
      */
-
-    public java.util.List<com.commercetools.history.models.common.ChannelRole> getPreviousValue() {
+    
+    
+    public java.util.List<com.commercetools.history.models.common.ChannelRole> getPreviousValue(){
         return this.previousValue;
     }
-
+    
     /**
      * value of nextValue}
      * @return nextValue
      */
-
-    public java.util.List<com.commercetools.history.models.common.ChannelRole> getNextValue() {
+    
+    
+    public java.util.List<com.commercetools.history.models.common.ChannelRole> getNextValue(){
         return this.nextValue;
     }
 
@@ -155,7 +174,7 @@ public class SetChannelRolesChangeBuilder implements Builder<SetChannelRolesChan
         Objects.requireNonNull(nextValue, SetChannelRolesChange.class + ": nextValue is missing");
         return new SetChannelRolesChangeImpl(change, previousValue, nextValue);
     }
-
+    
     /**
      * builds SetChannelRolesChange without checking for non-null required values
      * @return SetChannelRolesChange
@@ -166,7 +185,7 @@ public class SetChannelRolesChangeBuilder implements Builder<SetChannelRolesChan
 
     /**
      * factory method for an instance of SetChannelRolesChangeBuilder
-     * @return builder
+     * @return builder 
      */
     public static SetChannelRolesChangeBuilder of() {
         return new SetChannelRolesChangeBuilder();

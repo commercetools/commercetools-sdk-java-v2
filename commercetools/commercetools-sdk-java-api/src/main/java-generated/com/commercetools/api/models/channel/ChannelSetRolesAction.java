@@ -1,17 +1,21 @@
-
 package com.commercetools.api.models.channel;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
+import com.commercetools.api.models.channel.ChannelRoleEnum;
+import com.commercetools.api.models.channel.ChannelUpdateAction;
+import com.commercetools.api.models.channel.ChannelSetRolesActionImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * ChannelSetRolesAction
@@ -24,9 +28,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .plusRoles(rolesBuilder -> rolesBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = ChannelSetRolesActionImpl.class)
 public interface ChannelSetRolesAction extends ChannelUpdateAction {
 
@@ -47,24 +54,24 @@ public interface ChannelSetRolesAction extends ChannelUpdateAction {
      *  <p>Value to set. If not specified, then <code>InventorySupply</code> is assigned by default.</p>
      * @param roles values to be set
      */
-
+    
     @JsonIgnore
-    public void setRoles(final ChannelRoleEnum... roles);
-
+    public void setRoles(final ChannelRoleEnum ...roles);
     /**
      *  <p>Value to set. If not specified, then <code>InventorySupply</code> is assigned by default.</p>
      * @param roles values to be set
      */
-
+    
     public void setRoles(final List<ChannelRoleEnum> roles);
 
     /**
      * factory method
      * @return instance of ChannelSetRolesAction
      */
-    public static ChannelSetRolesAction of() {
+    public static ChannelSetRolesAction of(){
         return new ChannelSetRolesActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy ChannelSetRolesAction
@@ -88,7 +95,9 @@ public interface ChannelSetRolesAction extends ChannelUpdateAction {
             return null;
         }
         ChannelSetRolesActionImpl instance = new ChannelSetRolesActionImpl();
-        instance.setRoles(Optional.ofNullable(template.getRoles()).map(ArrayList::new).orElse(null));
+        instance.setRoles(Optional.ofNullable(template.getRoles())
+                .map(ArrayList::new)
+                .orElse(null));
         return instance;
     }
 
@@ -99,7 +108,7 @@ public interface ChannelSetRolesAction extends ChannelUpdateAction {
     public static ChannelSetRolesActionBuilder builder() {
         return ChannelSetRolesActionBuilder.of();
     }
-
+    
     /**
      * create builder for ChannelSetRolesAction instance
      * @param template instance with prefilled values for the builder
@@ -108,6 +117,7 @@ public interface ChannelSetRolesAction extends ChannelUpdateAction {
     public static ChannelSetRolesActionBuilder builder(final ChannelSetRolesAction template) {
         return ChannelSetRolesActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -118,7 +128,7 @@ public interface ChannelSetRolesAction extends ChannelUpdateAction {
     default <T> T withChannelSetRolesAction(Function<ChannelSetRolesAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

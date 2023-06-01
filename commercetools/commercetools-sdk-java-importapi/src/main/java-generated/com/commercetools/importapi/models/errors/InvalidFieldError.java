@@ -1,17 +1,21 @@
-
 package com.commercetools.importapi.models.errors;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
+import com.commercetools.importapi.models.errors.ErrorObject;
+import java.lang.Object;
+import com.commercetools.importapi.models.errors.InvalidFieldErrorImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>A given field is not supported. This error occurs, for example, if the field <code>variants</code>, which is not supported by Product Import, is sent to the Product Import endpoint.</p>
@@ -25,9 +29,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .field("{field}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = InvalidFieldErrorImpl.class)
 public interface InvalidFieldError extends ErrorObject {
 
@@ -43,7 +50,6 @@ public interface InvalidFieldError extends ErrorObject {
     @NotNull
     @JsonProperty("field")
     public String getField();
-
     /**
      *  <p>The invalid value.</p>
      * @return invalidValue
@@ -51,20 +57,18 @@ public interface InvalidFieldError extends ErrorObject {
     @NotNull
     @JsonProperty("invalidValue")
     public Object getInvalidValue();
-
     /**
      *  <p>The set of allowed values for the field, if any.</p>
      * @return allowedValues
      */
-
+    
     @JsonProperty("allowedValues")
     public List<Object> getAllowedValues();
-
     /**
      *
      * @return resourceIndex
      */
-
+    
     @JsonProperty("resourceIndex")
     public Long getResourceIndex();
 
@@ -72,45 +76,48 @@ public interface InvalidFieldError extends ErrorObject {
      *  <p>The name of the field.</p>
      * @param field value to be set
      */
-
+    
     public void setField(final String field);
-
+    
+    
     /**
      *  <p>The invalid value.</p>
      * @param invalidValue value to be set
      */
-
+    
     public void setInvalidValue(final Object invalidValue);
-
+    
+    
     /**
      *  <p>The set of allowed values for the field, if any.</p>
      * @param allowedValues values to be set
      */
-
+    
     @JsonIgnore
-    public void setAllowedValues(final Object... allowedValues);
-
+    public void setAllowedValues(final Object ...allowedValues);
     /**
      *  <p>The set of allowed values for the field, if any.</p>
      * @param allowedValues values to be set
      */
-
+    
     public void setAllowedValues(final List<Object> allowedValues);
-
+    
     /**
      * set resourceIndex
      * @param resourceIndex value to be set
      */
-
+    
     public void setResourceIndex(final Long resourceIndex);
+    
 
     /**
      * factory method
      * @return instance of InvalidFieldError
      */
-    public static InvalidFieldError of() {
+    public static InvalidFieldError of(){
         return new InvalidFieldErrorImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy InvalidFieldError
@@ -141,7 +148,9 @@ public interface InvalidFieldError extends ErrorObject {
         instance.setMessage(template.getMessage());
         instance.setField(template.getField());
         instance.setInvalidValue(template.getInvalidValue());
-        instance.setAllowedValues(Optional.ofNullable(template.getAllowedValues()).map(ArrayList::new).orElse(null));
+        instance.setAllowedValues(Optional.ofNullable(template.getAllowedValues())
+                .map(ArrayList::new)
+                .orElse(null));
         instance.setResourceIndex(template.getResourceIndex());
         return instance;
     }
@@ -153,7 +162,7 @@ public interface InvalidFieldError extends ErrorObject {
     public static InvalidFieldErrorBuilder builder() {
         return InvalidFieldErrorBuilder.of();
     }
-
+    
     /**
      * create builder for InvalidFieldError instance
      * @param template instance with prefilled values for the builder
@@ -162,6 +171,7 @@ public interface InvalidFieldError extends ErrorObject {
     public static InvalidFieldErrorBuilder builder(final InvalidFieldError template) {
         return InvalidFieldErrorBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -172,7 +182,7 @@ public interface InvalidFieldError extends ErrorObject {
     default <T> T withInvalidFieldError(Function<InvalidFieldError, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

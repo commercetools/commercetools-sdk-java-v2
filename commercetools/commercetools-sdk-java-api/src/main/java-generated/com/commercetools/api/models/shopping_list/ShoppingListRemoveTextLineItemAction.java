@@ -1,17 +1,20 @@
-
 package com.commercetools.api.models.shopping_list;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
+import com.commercetools.api.models.shopping_list.ShoppingListUpdateAction;
+import com.commercetools.api.models.shopping_list.ShoppingListRemoveTextLineItemActionImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * ShoppingListRemoveTextLineItemAction
@@ -24,9 +27,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .textLineItemId("{textLineItemId}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = ShoppingListRemoveTextLineItemActionImpl.class)
 public interface ShoppingListRemoveTextLineItemAction extends ShoppingListUpdateAction {
 
@@ -42,12 +48,11 @@ public interface ShoppingListRemoveTextLineItemAction extends ShoppingListUpdate
     @NotNull
     @JsonProperty("textLineItemId")
     public String getTextLineItemId();
-
     /**
      *  <p>Amount to remove from the <code>quantity</code> of the TextLineItem. If not set, the TextLineItem is removed from the ShoppingList. If this value matches or exceeds the current <code>quantity</code> of the TextLineItem, the TextLineItem is removed from the ShoppingList.</p>
      * @return quantity
      */
-
+    
     @JsonProperty("quantity")
     public Long getQuantity();
 
@@ -55,23 +60,26 @@ public interface ShoppingListRemoveTextLineItemAction extends ShoppingListUpdate
      *  <p>The <code>id</code> of the TextLineItem to update.</p>
      * @param textLineItemId value to be set
      */
-
+    
     public void setTextLineItemId(final String textLineItemId);
-
+    
+    
     /**
      *  <p>Amount to remove from the <code>quantity</code> of the TextLineItem. If not set, the TextLineItem is removed from the ShoppingList. If this value matches or exceeds the current <code>quantity</code> of the TextLineItem, the TextLineItem is removed from the ShoppingList.</p>
      * @param quantity value to be set
      */
-
+    
     public void setQuantity(final Long quantity);
+    
 
     /**
      * factory method
      * @return instance of ShoppingListRemoveTextLineItemAction
      */
-    public static ShoppingListRemoveTextLineItemAction of() {
+    public static ShoppingListRemoveTextLineItemAction of(){
         return new ShoppingListRemoveTextLineItemActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy ShoppingListRemoveTextLineItemAction
@@ -91,8 +99,7 @@ public interface ShoppingListRemoveTextLineItemAction extends ShoppingListUpdate
      * @return copy instance
      */
     @Nullable
-    public static ShoppingListRemoveTextLineItemAction deepCopy(
-            @Nullable final ShoppingListRemoveTextLineItemAction template) {
+    public static ShoppingListRemoveTextLineItemAction deepCopy(@Nullable final ShoppingListRemoveTextLineItemAction template) {
         if (template == null) {
             return null;
         }
@@ -109,16 +116,16 @@ public interface ShoppingListRemoveTextLineItemAction extends ShoppingListUpdate
     public static ShoppingListRemoveTextLineItemActionBuilder builder() {
         return ShoppingListRemoveTextLineItemActionBuilder.of();
     }
-
+    
     /**
      * create builder for ShoppingListRemoveTextLineItemAction instance
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static ShoppingListRemoveTextLineItemActionBuilder builder(
-            final ShoppingListRemoveTextLineItemAction template) {
+    public static ShoppingListRemoveTextLineItemActionBuilder builder(final ShoppingListRemoveTextLineItemAction template) {
         return ShoppingListRemoveTextLineItemActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -129,7 +136,7 @@ public interface ShoppingListRemoveTextLineItemAction extends ShoppingListUpdate
     default <T> T withShoppingListRemoveTextLineItemAction(Function<ShoppingListRemoveTextLineItemAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

@@ -1,19 +1,20 @@
-
 package com.commercetools.api.models.cart;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
 import com.commercetools.api.models.common.CentPrecisionMoney;
+import com.commercetools.api.models.cart.TaxPortionImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>The tax portions are calculated from the TaxRates. If a Tax Rate has SubRates, they are used and can be identified by name. Tax portions from Line Items with the same <code>rate</code> and <code>name</code> are accumulated to the same tax portion.</p>
@@ -27,20 +28,23 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .amount(amountBuilder -> amountBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = TaxPortionImpl.class)
-public interface TaxPortion {
+public interface TaxPortion  {
+
 
     /**
      *  <p>Name of the tax portion.</p>
      * @return name
      */
-
+    
     @JsonProperty("name")
     public String getName();
-
     /**
      *  <p>A number in the range 0-1.</p>
      * @return rate
@@ -48,7 +52,6 @@ public interface TaxPortion {
     @NotNull
     @JsonProperty("rate")
     public Double getRate();
-
     /**
      *  <p>Money value of the tax portion.</p>
      * @return amount
@@ -62,30 +65,34 @@ public interface TaxPortion {
      *  <p>Name of the tax portion.</p>
      * @param name value to be set
      */
-
+    
     public void setName(final String name);
-
+    
+    
     /**
      *  <p>A number in the range 0-1.</p>
      * @param rate value to be set
      */
-
+    
     public void setRate(final Double rate);
-
+    
+    
     /**
      *  <p>Money value of the tax portion.</p>
      * @param amount value to be set
      */
-
+    
     public void setAmount(final CentPrecisionMoney amount);
+    
 
     /**
      * factory method
      * @return instance of TaxPortion
      */
-    public static TaxPortion of() {
+    public static TaxPortion of(){
         return new TaxPortionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy TaxPortion
@@ -124,7 +131,7 @@ public interface TaxPortion {
     public static TaxPortionBuilder builder() {
         return TaxPortionBuilder.of();
     }
-
+    
     /**
      * create builder for TaxPortion instance
      * @param template instance with prefilled values for the builder
@@ -133,6 +140,7 @@ public interface TaxPortion {
     public static TaxPortionBuilder builder(final TaxPortion template) {
         return TaxPortionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -143,7 +151,7 @@ public interface TaxPortion {
     default <T> T withTaxPortion(Function<TaxPortion, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

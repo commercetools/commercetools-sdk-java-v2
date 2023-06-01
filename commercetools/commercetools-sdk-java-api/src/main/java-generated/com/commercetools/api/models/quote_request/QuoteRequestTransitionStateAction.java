@@ -1,19 +1,21 @@
-
 package com.commercetools.api.models.quote_request;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
+import com.commercetools.api.models.quote_request.QuoteRequestUpdateAction;
 import com.commercetools.api.models.state.StateResourceIdentifier;
+import com.commercetools.api.models.quote_request.QuoteRequestTransitionStateActionImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>If the existing State has set <code>transitions</code>, there must be a direct transition to the new State. If <code>transitions</code> is not set, no validation is performed. This update action produces the Quote Request State Transition Message.</p>
@@ -26,9 +28,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .state(stateBuilder -> stateBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = QuoteRequestTransitionStateActionImpl.class)
 public interface QuoteRequestTransitionStateAction extends QuoteRequestUpdateAction {
 
@@ -45,12 +50,11 @@ public interface QuoteRequestTransitionStateAction extends QuoteRequestUpdateAct
     @Valid
     @JsonProperty("state")
     public StateResourceIdentifier getState();
-
     /**
      *  <p>Switch validations on or off.</p>
      * @return force
      */
-
+    
     @JsonProperty("force")
     public Boolean getForce();
 
@@ -58,23 +62,26 @@ public interface QuoteRequestTransitionStateAction extends QuoteRequestUpdateAct
      *  <p>Value to set. If there is no State yet, this must be an initial State.</p>
      * @param state value to be set
      */
-
+    
     public void setState(final StateResourceIdentifier state);
-
+    
+    
     /**
      *  <p>Switch validations on or off.</p>
      * @param force value to be set
      */
-
+    
     public void setForce(final Boolean force);
+    
 
     /**
      * factory method
      * @return instance of QuoteRequestTransitionStateAction
      */
-    public static QuoteRequestTransitionStateAction of() {
+    public static QuoteRequestTransitionStateAction of(){
         return new QuoteRequestTransitionStateActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy QuoteRequestTransitionStateAction
@@ -94,8 +101,7 @@ public interface QuoteRequestTransitionStateAction extends QuoteRequestUpdateAct
      * @return copy instance
      */
     @Nullable
-    public static QuoteRequestTransitionStateAction deepCopy(
-            @Nullable final QuoteRequestTransitionStateAction template) {
+    public static QuoteRequestTransitionStateAction deepCopy(@Nullable final QuoteRequestTransitionStateAction template) {
         if (template == null) {
             return null;
         }
@@ -112,7 +118,7 @@ public interface QuoteRequestTransitionStateAction extends QuoteRequestUpdateAct
     public static QuoteRequestTransitionStateActionBuilder builder() {
         return QuoteRequestTransitionStateActionBuilder.of();
     }
-
+    
     /**
      * create builder for QuoteRequestTransitionStateAction instance
      * @param template instance with prefilled values for the builder
@@ -121,6 +127,7 @@ public interface QuoteRequestTransitionStateAction extends QuoteRequestUpdateAct
     public static QuoteRequestTransitionStateActionBuilder builder(final QuoteRequestTransitionStateAction template) {
         return QuoteRequestTransitionStateActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -131,7 +138,7 @@ public interface QuoteRequestTransitionStateAction extends QuoteRequestUpdateAct
     default <T> T withQuoteRequestTransitionStateAction(Function<QuoteRequestTransitionStateAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

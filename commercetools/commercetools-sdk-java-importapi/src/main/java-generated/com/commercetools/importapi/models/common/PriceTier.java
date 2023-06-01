@@ -1,18 +1,20 @@
-
 package com.commercetools.importapi.models.common;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
+import com.commercetools.importapi.models.common.TypedMoney;
+import com.commercetools.importapi.models.common.PriceTierImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>A price tier is selected instead of the default price when a certain quantity of the ProductVariant is added to a cart and ordered.</p>
@@ -26,11 +28,15 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .value(valueBuilder -> valueBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = PriceTierImpl.class)
-public interface PriceTier {
+public interface PriceTier  {
+
 
     /**
      *  <p>The minimum quantity this price tier is valid for.</p>
@@ -39,7 +45,6 @@ public interface PriceTier {
     @NotNull
     @JsonProperty("minimumQuantity")
     public Long getMinimumQuantity();
-
     /**
      *  <p>The currency of a price tier is always the same as the currency of the base Price.</p>
      * @return value
@@ -53,23 +58,26 @@ public interface PriceTier {
      *  <p>The minimum quantity this price tier is valid for.</p>
      * @param minimumQuantity value to be set
      */
-
+    
     public void setMinimumQuantity(final Long minimumQuantity);
-
+    
+    
     /**
      *  <p>The currency of a price tier is always the same as the currency of the base Price.</p>
      * @param value value to be set
      */
-
+    
     public void setValue(final TypedMoney value);
+    
 
     /**
      * factory method
      * @return instance of PriceTier
      */
-    public static PriceTier of() {
+    public static PriceTier of(){
         return new PriceTierImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy PriceTier
@@ -106,7 +114,7 @@ public interface PriceTier {
     public static PriceTierBuilder builder() {
         return PriceTierBuilder.of();
     }
-
+    
     /**
      * create builder for PriceTier instance
      * @param template instance with prefilled values for the builder
@@ -115,6 +123,7 @@ public interface PriceTier {
     public static PriceTierBuilder builder(final PriceTier template) {
         return PriceTierBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -125,7 +134,7 @@ public interface PriceTier {
     default <T> T withPriceTier(Function<PriceTier, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

@@ -1,8 +1,11 @@
-
 package com.commercetools.api.models.error;
 
+import com.commercetools.api.models.error.GraphQLErrorObject;
+import com.commercetools.api.models.error.GraphQLInvalidSubjectError;
+import javax.annotation.Nullable;
 import java.util.*;
-
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -15,11 +18,16 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     GraphQLInvalidSubjectError graphQLInvalidSubjectError = GraphQLInvalidSubjectError.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class GraphQLInvalidSubjectErrorBuilder implements Builder<GraphQLInvalidSubjectError> {
 
+    
+    
     private Map<String, java.lang.Object> values = new HashMap<>();
 
     /**
@@ -27,19 +35,19 @@ public class GraphQLInvalidSubjectErrorBuilder implements Builder<GraphQLInvalid
      * @param values properties to be set
      * @return Builder
      */
-
-    public GraphQLInvalidSubjectErrorBuilder values(final Map<String, java.lang.Object> values) {
+    
+    public GraphQLInvalidSubjectErrorBuilder values( final Map<String, java.lang.Object> values){
         this.values = values;
         return this;
     }
-
+    
     /**
      *  <p>Error-specific additional fields.</p>
      * @param key property name
      * @param value property value
      * @return Builder
      */
-
+    
     public GraphQLInvalidSubjectErrorBuilder addValue(final String key, final java.lang.Object value) {
         if (this.values == null) {
             values = new HashMap<>();
@@ -47,13 +55,15 @@ public class GraphQLInvalidSubjectErrorBuilder implements Builder<GraphQLInvalid
         values.put(key, value);
         return this;
     }
+    
 
     /**
      *  <p>Error-specific additional fields.</p>
      * @return pattern properties
      */
-
-    public Map<String, java.lang.Object> getValues() {
+    
+    
+    public Map<String, java.lang.Object> getValues(){
         return this.values;
     }
 
@@ -64,7 +74,7 @@ public class GraphQLInvalidSubjectErrorBuilder implements Builder<GraphQLInvalid
     public GraphQLInvalidSubjectError build() {
         return new GraphQLInvalidSubjectErrorImpl(values);
     }
-
+    
     /**
      * builds GraphQLInvalidSubjectError without checking for non-null required values
      * @return GraphQLInvalidSubjectError
@@ -75,7 +85,7 @@ public class GraphQLInvalidSubjectErrorBuilder implements Builder<GraphQLInvalid
 
     /**
      * factory method for an instance of GraphQLInvalidSubjectErrorBuilder
-     * @return builder
+     * @return builder 
      */
     public static GraphQLInvalidSubjectErrorBuilder of() {
         return new GraphQLInvalidSubjectErrorBuilder();

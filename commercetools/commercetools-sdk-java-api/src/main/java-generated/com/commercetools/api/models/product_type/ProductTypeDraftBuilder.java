@@ -1,11 +1,11 @@
-
 package com.commercetools.api.models.product_type;
 
+import com.commercetools.api.models.product_type.AttributeDefinitionDraft;
+import com.commercetools.api.models.product_type.ProductTypeDraft;
+import javax.annotation.Nullable;
 import java.util.*;
 import java.util.function.Function;
-
-import javax.annotation.Nullable;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -20,182 +20,194 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .description("{description}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class ProductTypeDraftBuilder implements Builder<ProductTypeDraft> {
 
+    
     @Nullable
     private String key;
-
+    
+    
+    
     private String name;
-
+    
+    
+    
     private String description;
-
+    
+    
     @Nullable
     private java.util.List<com.commercetools.api.models.product_type.AttributeDefinitionDraft> attributes;
 
+    
     /**
      *  <p>User-defined unique identifier for the ProductType.</p>
      * @param key value to be set
      * @return Builder
      */
-
+    
     public ProductTypeDraftBuilder key(@Nullable final String key) {
         this.key = key;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Name of the ProductType.</p>
      * @param name value to be set
      * @return Builder
      */
-
-    public ProductTypeDraftBuilder name(final String name) {
+    
+    public ProductTypeDraftBuilder name( final String name) {
         this.name = name;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Description of the ProductType.</p>
      * @param description value to be set
      * @return Builder
      */
-
-    public ProductTypeDraftBuilder description(final String description) {
+    
+    public ProductTypeDraftBuilder description( final String description) {
         this.description = description;
         return this;
     }
-
+    
+    
+    
     /**
      *  <p>Attributes to specify for the ProductType. Products of this ProductType have these Attributes available on their ProductVariants.</p>
      * @param attributes value to be set
      * @return Builder
      */
-
-    public ProductTypeDraftBuilder attributes(
-            @Nullable final com.commercetools.api.models.product_type.AttributeDefinitionDraft... attributes) {
+    
+    public ProductTypeDraftBuilder attributes(@Nullable final com.commercetools.api.models.product_type.AttributeDefinitionDraft ...attributes) {
         this.attributes = new ArrayList<>(Arrays.asList(attributes));
         return this;
     }
-
+    
     /**
      *  <p>Attributes to specify for the ProductType. Products of this ProductType have these Attributes available on their ProductVariants.</p>
      * @param attributes value to be set
      * @return Builder
      */
-
-    public ProductTypeDraftBuilder attributes(
-            @Nullable final java.util.List<com.commercetools.api.models.product_type.AttributeDefinitionDraft> attributes) {
+    
+    public ProductTypeDraftBuilder attributes(@Nullable final java.util.List<com.commercetools.api.models.product_type.AttributeDefinitionDraft> attributes) {
         this.attributes = attributes;
         return this;
     }
-
+    
     /**
      *  <p>Attributes to specify for the ProductType. Products of this ProductType have these Attributes available on their ProductVariants.</p>
      * @param attributes value to be set
      * @return Builder
      */
-
-    public ProductTypeDraftBuilder plusAttributes(
-            @Nullable final com.commercetools.api.models.product_type.AttributeDefinitionDraft... attributes) {
+    
+    public ProductTypeDraftBuilder plusAttributes(@Nullable final com.commercetools.api.models.product_type.AttributeDefinitionDraft ...attributes) {
         if (this.attributes == null) {
             this.attributes = new ArrayList<>();
         }
         this.attributes.addAll(Arrays.asList(attributes));
         return this;
     }
-
+    
+    
+    
     /**
      *  <p>Attributes to specify for the ProductType. Products of this ProductType have these Attributes available on their ProductVariants.</p>
      * @param builder function to build the attributes value
      * @return Builder
      */
-
-    public ProductTypeDraftBuilder plusAttributes(
-            Function<com.commercetools.api.models.product_type.AttributeDefinitionDraftBuilder, com.commercetools.api.models.product_type.AttributeDefinitionDraftBuilder> builder) {
+    
+    public ProductTypeDraftBuilder plusAttributes(Function<com.commercetools.api.models.product_type.AttributeDefinitionDraftBuilder, com.commercetools.api.models.product_type.AttributeDefinitionDraftBuilder> builder) {
         if (this.attributes == null) {
             this.attributes = new ArrayList<>();
         }
-        this.attributes.add(
-            builder.apply(com.commercetools.api.models.product_type.AttributeDefinitionDraftBuilder.of()).build());
+        this.attributes.add(builder.apply(com.commercetools.api.models.product_type.AttributeDefinitionDraftBuilder.of()).build());
         return this;
     }
-
+    
     /**
      *  <p>Attributes to specify for the ProductType. Products of this ProductType have these Attributes available on their ProductVariants.</p>
      * @param builder function to build the attributes value
      * @return Builder
      */
-
-    public ProductTypeDraftBuilder withAttributes(
-            Function<com.commercetools.api.models.product_type.AttributeDefinitionDraftBuilder, com.commercetools.api.models.product_type.AttributeDefinitionDraftBuilder> builder) {
+    
+    public ProductTypeDraftBuilder withAttributes(Function<com.commercetools.api.models.product_type.AttributeDefinitionDraftBuilder, com.commercetools.api.models.product_type.AttributeDefinitionDraftBuilder> builder) {
         this.attributes = new ArrayList<>();
-        this.attributes.add(
-            builder.apply(com.commercetools.api.models.product_type.AttributeDefinitionDraftBuilder.of()).build());
+        this.attributes.add(builder.apply(com.commercetools.api.models.product_type.AttributeDefinitionDraftBuilder.of()).build());
         return this;
     }
-
+    
     /**
      *  <p>Attributes to specify for the ProductType. Products of this ProductType have these Attributes available on their ProductVariants.</p>
      * @param builder function to build the attributes value
      * @return Builder
      */
-
-    public ProductTypeDraftBuilder addAttributes(
-            Function<com.commercetools.api.models.product_type.AttributeDefinitionDraftBuilder, com.commercetools.api.models.product_type.AttributeDefinitionDraft> builder) {
-        return plusAttributes(
-            builder.apply(com.commercetools.api.models.product_type.AttributeDefinitionDraftBuilder.of()));
+    
+    public ProductTypeDraftBuilder addAttributes(Function<com.commercetools.api.models.product_type.AttributeDefinitionDraftBuilder, com.commercetools.api.models.product_type.AttributeDefinitionDraft> builder) {
+        return plusAttributes(builder.apply(com.commercetools.api.models.product_type.AttributeDefinitionDraftBuilder.of()));
     }
-
+    
     /**
      *  <p>Attributes to specify for the ProductType. Products of this ProductType have these Attributes available on their ProductVariants.</p>
      * @param builder function to build the attributes value
      * @return Builder
      */
-
-    public ProductTypeDraftBuilder setAttributes(
-            Function<com.commercetools.api.models.product_type.AttributeDefinitionDraftBuilder, com.commercetools.api.models.product_type.AttributeDefinitionDraft> builder) {
-        return attributes(
-            builder.apply(com.commercetools.api.models.product_type.AttributeDefinitionDraftBuilder.of()));
+    
+    public ProductTypeDraftBuilder setAttributes(Function<com.commercetools.api.models.product_type.AttributeDefinitionDraftBuilder, com.commercetools.api.models.product_type.AttributeDefinitionDraft> builder) {
+        return attributes(builder.apply(com.commercetools.api.models.product_type.AttributeDefinitionDraftBuilder.of()));
     }
+                    
 
     /**
      *  <p>User-defined unique identifier for the ProductType.</p>
      * @return key
      */
-
+    
     @Nullable
-    public String getKey() {
+    public String getKey(){
         return this.key;
     }
-
+    
     /**
      *  <p>Name of the ProductType.</p>
      * @return name
      */
-
-    public String getName() {
+    
+    
+    public String getName(){
         return this.name;
     }
-
+    
     /**
      *  <p>Description of the ProductType.</p>
      * @return description
      */
-
-    public String getDescription() {
+    
+    
+    public String getDescription(){
         return this.description;
     }
-
+    
     /**
      *  <p>Attributes to specify for the ProductType. Products of this ProductType have these Attributes available on their ProductVariants.</p>
      * @return attributes
      */
-
+    
     @Nullable
-    public java.util.List<com.commercetools.api.models.product_type.AttributeDefinitionDraft> getAttributes() {
+    public java.util.List<com.commercetools.api.models.product_type.AttributeDefinitionDraft> getAttributes(){
         return this.attributes;
     }
 
@@ -208,7 +220,7 @@ public class ProductTypeDraftBuilder implements Builder<ProductTypeDraft> {
         Objects.requireNonNull(description, ProductTypeDraft.class + ": description is missing");
         return new ProductTypeDraftImpl(key, name, description, attributes);
     }
-
+    
     /**
      * builds ProductTypeDraft without checking for non-null required values
      * @return ProductTypeDraft
@@ -219,7 +231,7 @@ public class ProductTypeDraftBuilder implements Builder<ProductTypeDraft> {
 
     /**
      * factory method for an instance of ProductTypeDraftBuilder
-     * @return builder
+     * @return builder 
      */
     public static ProductTypeDraftBuilder of() {
         return new ProductTypeDraftBuilder();

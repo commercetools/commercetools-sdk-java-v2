@@ -1,16 +1,20 @@
-
 package com.commercetools.api.models.message;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
+import com.commercetools.api.models.message.Message;
+import com.commercetools.api.models.message.StandalonePriceKeySetMessageImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Generated after a successful Set Key update action.</p>
@@ -29,9 +33,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .resourceVersion(0.3)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = StandalonePriceKeySetMessageImpl.class)
 public interface StandalonePriceKeySetMessage extends Message {
 
@@ -44,15 +51,14 @@ public interface StandalonePriceKeySetMessage extends Message {
      *  <p><code>key</code> value of the StandalonePrice after the Set Key update action.</p>
      * @return key
      */
-
+    
     @JsonProperty("key")
     public String getKey();
-
     /**
      *  <p><code>key</code> value of the StandalonePrice before the Set Key update action.</p>
      * @return oldKey
      */
-
+    
     @JsonProperty("oldKey")
     public String getOldKey();
 
@@ -60,23 +66,26 @@ public interface StandalonePriceKeySetMessage extends Message {
      *  <p><code>key</code> value of the StandalonePrice after the Set Key update action.</p>
      * @param key value to be set
      */
-
+    
     public void setKey(final String key);
-
+    
+    
     /**
      *  <p><code>key</code> value of the StandalonePrice before the Set Key update action.</p>
      * @param oldKey value to be set
      */
-
+    
     public void setOldKey(final String oldKey);
+    
 
     /**
      * factory method
      * @return instance of StandalonePriceKeySetMessage
      */
-    public static StandalonePriceKeySetMessage of() {
+    public static StandalonePriceKeySetMessage of(){
         return new StandalonePriceKeySetMessageImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy StandalonePriceKeySetMessage
@@ -115,14 +124,12 @@ public interface StandalonePriceKeySetMessage extends Message {
         instance.setVersion(template.getVersion());
         instance.setCreatedAt(template.getCreatedAt());
         instance.setLastModifiedAt(template.getLastModifiedAt());
-        instance.setLastModifiedBy(
-            com.commercetools.api.models.common.LastModifiedBy.deepCopy(template.getLastModifiedBy()));
+        instance.setLastModifiedBy(com.commercetools.api.models.common.LastModifiedBy.deepCopy(template.getLastModifiedBy()));
         instance.setCreatedBy(com.commercetools.api.models.common.CreatedBy.deepCopy(template.getCreatedBy()));
         instance.setSequenceNumber(template.getSequenceNumber());
         instance.setResource(com.commercetools.api.models.common.Reference.deepCopy(template.getResource()));
         instance.setResourceVersion(template.getResourceVersion());
-        instance.setResourceUserProvidedIdentifiers(com.commercetools.api.models.message.UserProvidedIdentifiers
-                .deepCopy(template.getResourceUserProvidedIdentifiers()));
+        instance.setResourceUserProvidedIdentifiers(com.commercetools.api.models.message.UserProvidedIdentifiers.deepCopy(template.getResourceUserProvidedIdentifiers()));
         instance.setKey(template.getKey());
         instance.setOldKey(template.getOldKey());
         return instance;
@@ -135,7 +142,7 @@ public interface StandalonePriceKeySetMessage extends Message {
     public static StandalonePriceKeySetMessageBuilder builder() {
         return StandalonePriceKeySetMessageBuilder.of();
     }
-
+    
     /**
      * create builder for StandalonePriceKeySetMessage instance
      * @param template instance with prefilled values for the builder
@@ -144,6 +151,7 @@ public interface StandalonePriceKeySetMessage extends Message {
     public static StandalonePriceKeySetMessageBuilder builder(final StandalonePriceKeySetMessage template) {
         return StandalonePriceKeySetMessageBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -154,7 +162,7 @@ public interface StandalonePriceKeySetMessage extends Message {
     default <T> T withStandalonePriceKeySetMessage(Function<StandalonePriceKeySetMessage, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

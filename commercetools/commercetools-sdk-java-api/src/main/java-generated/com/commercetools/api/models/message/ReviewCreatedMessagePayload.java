@@ -1,19 +1,21 @@
-
 package com.commercetools.api.models.message;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
+import com.commercetools.api.models.message.MessagePayload;
 import com.commercetools.api.models.review.Review;
+import com.commercetools.api.models.message.ReviewCreatedMessagePayloadImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Generated after a successful Create Review request.</p>
@@ -26,9 +28,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .review(reviewBuilder -> reviewBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = ReviewCreatedMessagePayloadImpl.class)
 public interface ReviewCreatedMessagePayload extends MessagePayload {
 
@@ -50,16 +55,18 @@ public interface ReviewCreatedMessagePayload extends MessagePayload {
      *  <p>Review that was created.</p>
      * @param review value to be set
      */
-
+    
     public void setReview(final Review review);
+    
 
     /**
      * factory method
      * @return instance of ReviewCreatedMessagePayload
      */
-    public static ReviewCreatedMessagePayload of() {
+    public static ReviewCreatedMessagePayload of(){
         return new ReviewCreatedMessagePayloadImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy ReviewCreatedMessagePayload
@@ -94,7 +101,7 @@ public interface ReviewCreatedMessagePayload extends MessagePayload {
     public static ReviewCreatedMessagePayloadBuilder builder() {
         return ReviewCreatedMessagePayloadBuilder.of();
     }
-
+    
     /**
      * create builder for ReviewCreatedMessagePayload instance
      * @param template instance with prefilled values for the builder
@@ -103,6 +110,7 @@ public interface ReviewCreatedMessagePayload extends MessagePayload {
     public static ReviewCreatedMessagePayloadBuilder builder(final ReviewCreatedMessagePayload template) {
         return ReviewCreatedMessagePayloadBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -113,7 +121,7 @@ public interface ReviewCreatedMessagePayload extends MessagePayload {
     default <T> T withReviewCreatedMessagePayload(Function<ReviewCreatedMessagePayload, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

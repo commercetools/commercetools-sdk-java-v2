@@ -1,20 +1,21 @@
-
 package com.commercetools.importapi.models.orders;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-import java.util.stream.Collectors;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
 import com.commercetools.importapi.models.common.Money;
+import com.commercetools.importapi.models.orders.TaxPortion;
+import com.commercetools.importapi.models.orders.TaxedPriceImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * TaxedPrice
@@ -29,11 +30,15 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .plusTaxPortions(taxPortionsBuilder -> taxPortionsBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = TaxedPriceImpl.class)
-public interface TaxedPrice {
+public interface TaxedPrice  {
+
 
     /**
      *  <p>Maps to <code>TaxedPrice.totalNet</code>.</p>
@@ -43,7 +48,6 @@ public interface TaxedPrice {
     @Valid
     @JsonProperty("totalNet")
     public Money getTotalNet();
-
     /**
      *  <p>Maps to <code>TaxedPrice.totalGross</code>.</p>
      * @return totalGross
@@ -52,7 +56,6 @@ public interface TaxedPrice {
     @Valid
     @JsonProperty("totalGross")
     public Money getTotalGross();
-
     /**
      *  <p>Maps to <code>TaxedPrice.taxPortions</code>.</p>
      * @return taxPortions
@@ -66,38 +69,40 @@ public interface TaxedPrice {
      *  <p>Maps to <code>TaxedPrice.totalNet</code>.</p>
      * @param totalNet value to be set
      */
-
+    
     public void setTotalNet(final Money totalNet);
-
+    
+    
     /**
      *  <p>Maps to <code>TaxedPrice.totalGross</code>.</p>
      * @param totalGross value to be set
      */
-
+    
     public void setTotalGross(final Money totalGross);
-
+    
+    
     /**
      *  <p>Maps to <code>TaxedPrice.taxPortions</code>.</p>
      * @param taxPortions values to be set
      */
-
+    
     @JsonIgnore
-    public void setTaxPortions(final TaxPortion... taxPortions);
-
+    public void setTaxPortions(final TaxPortion ...taxPortions);
     /**
      *  <p>Maps to <code>TaxedPrice.taxPortions</code>.</p>
      * @param taxPortions values to be set
      */
-
+    
     public void setTaxPortions(final List<TaxPortion> taxPortions);
 
     /**
      * factory method
      * @return instance of TaxedPrice
      */
-    public static TaxedPrice of() {
+    public static TaxedPrice of(){
         return new TaxedPriceImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy TaxedPrice
@@ -126,9 +131,7 @@ public interface TaxedPrice {
         instance.setTotalNet(com.commercetools.importapi.models.common.Money.deepCopy(template.getTotalNet()));
         instance.setTotalGross(com.commercetools.importapi.models.common.Money.deepCopy(template.getTotalGross()));
         instance.setTaxPortions(Optional.ofNullable(template.getTaxPortions())
-                .map(t -> t.stream()
-                        .map(com.commercetools.importapi.models.orders.TaxPortion::deepCopy)
-                        .collect(Collectors.toList()))
+                .map(t -> t.stream().map(com.commercetools.importapi.models.orders.TaxPortion::deepCopy).collect(Collectors.toList()))
                 .orElse(null));
         return instance;
     }
@@ -140,7 +143,7 @@ public interface TaxedPrice {
     public static TaxedPriceBuilder builder() {
         return TaxedPriceBuilder.of();
     }
-
+    
     /**
      * create builder for TaxedPrice instance
      * @param template instance with prefilled values for the builder
@@ -149,6 +152,7 @@ public interface TaxedPrice {
     public static TaxedPriceBuilder builder(final TaxedPrice template) {
         return TaxedPriceBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -159,7 +163,7 @@ public interface TaxedPrice {
     default <T> T withTaxedPrice(Function<TaxedPrice, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

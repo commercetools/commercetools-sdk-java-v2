@@ -1,18 +1,20 @@
-
 package com.commercetools.ml.models.common;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
+import com.commercetools.ml.models.common.ProductReference;
+import com.commercetools.ml.models.common.ProductVariantImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>The product variant that contains the image.</p>
@@ -27,11 +29,15 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .variantId(0.3)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = ProductVariantImpl.class)
-public interface ProductVariant {
+public interface ProductVariant  {
+
 
     /**
      *  <p>The product that contains this variant.</p>
@@ -41,7 +47,6 @@ public interface ProductVariant {
     @Valid
     @JsonProperty("product")
     public ProductReference getProduct();
-
     /**
      *  <p>The state of the product variant.</p>
      * @return staged
@@ -49,7 +54,6 @@ public interface ProductVariant {
     @NotNull
     @JsonProperty("staged")
     public Boolean getStaged();
-
     /**
      *  <p>The id of the product variant.</p>
      * @return variantId
@@ -62,30 +66,34 @@ public interface ProductVariant {
      *  <p>The product that contains this variant.</p>
      * @param product value to be set
      */
-
+    
     public void setProduct(final ProductReference product);
-
+    
+    
     /**
      *  <p>The state of the product variant.</p>
      * @param staged value to be set
      */
-
+    
     public void setStaged(final Boolean staged);
-
+    
+    
     /**
      *  <p>The id of the product variant.</p>
      * @param variantId value to be set
      */
-
+    
     public void setVariantId(final Integer variantId);
+    
 
     /**
      * factory method
      * @return instance of ProductVariant
      */
-    public static ProductVariant of() {
+    public static ProductVariant of(){
         return new ProductVariantImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy ProductVariant
@@ -124,7 +132,7 @@ public interface ProductVariant {
     public static ProductVariantBuilder builder() {
         return ProductVariantBuilder.of();
     }
-
+    
     /**
      * create builder for ProductVariant instance
      * @param template instance with prefilled values for the builder
@@ -133,6 +141,7 @@ public interface ProductVariant {
     public static ProductVariantBuilder builder(final ProductVariant template) {
         return ProductVariantBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -143,7 +152,7 @@ public interface ProductVariant {
     default <T> T withProductVariant(Function<ProductVariant, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

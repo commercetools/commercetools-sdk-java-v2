@@ -1,19 +1,23 @@
-
 package com.commercetools.api.models.product;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-import java.util.stream.Collectors;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
+import com.commercetools.api.models.product.FacetResult;
+import com.commercetools.api.models.product.FacetTerm;
+import com.commercetools.api.models.product.FacetTypes;
+import com.commercetools.api.models.product.TermFacetResultType;
+import com.commercetools.api.models.product.TermFacetResultImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * TermFacetResult
@@ -30,9 +34,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .plusTerms(termsBuilder -> termsBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = TermFacetResultImpl.class)
 public interface TermFacetResult extends FacetResult {
 
@@ -48,7 +55,6 @@ public interface TermFacetResult extends FacetResult {
     @NotNull
     @JsonProperty("dataType")
     public TermFacetResultType getDataType();
-
     /**
      *
      * @return missing
@@ -56,7 +62,6 @@ public interface TermFacetResult extends FacetResult {
     @NotNull
     @JsonProperty("missing")
     public Long getMissing();
-
     /**
      *
      * @return total
@@ -64,7 +69,6 @@ public interface TermFacetResult extends FacetResult {
     @NotNull
     @JsonProperty("total")
     public Long getTotal();
-
     /**
      *
      * @return other
@@ -72,7 +76,6 @@ public interface TermFacetResult extends FacetResult {
     @NotNull
     @JsonProperty("other")
     public Long getOther();
-
     /**
      *
      * @return terms
@@ -86,52 +89,56 @@ public interface TermFacetResult extends FacetResult {
      * set dataType
      * @param dataType value to be set
      */
-
+    
     public void setDataType(final TermFacetResultType dataType);
-
+    
+    
     /**
      * set missing
      * @param missing value to be set
      */
-
+    
     public void setMissing(final Long missing);
-
+    
+    
     /**
      * set total
      * @param total value to be set
      */
-
+    
     public void setTotal(final Long total);
-
+    
+    
     /**
      * set other
      * @param other value to be set
      */
-
+    
     public void setOther(final Long other);
-
+    
+    
     /**
      * set terms
      * @param terms values to be set
      */
-
+    
     @JsonIgnore
-    public void setTerms(final FacetTerm... terms);
-
+    public void setTerms(final FacetTerm ...terms);
     /**
      * set terms
      * @param terms values to be set
      */
-
+    
     public void setTerms(final List<FacetTerm> terms);
 
     /**
      * factory method
      * @return instance of TermFacetResult
      */
-    public static TermFacetResult of() {
+    public static TermFacetResult of(){
         return new TermFacetResultImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy TermFacetResult
@@ -164,9 +171,7 @@ public interface TermFacetResult extends FacetResult {
         instance.setTotal(template.getTotal());
         instance.setOther(template.getOther());
         instance.setTerms(Optional.ofNullable(template.getTerms())
-                .map(t -> t.stream()
-                        .map(com.commercetools.api.models.product.FacetTerm::deepCopy)
-                        .collect(Collectors.toList()))
+                .map(t -> t.stream().map(com.commercetools.api.models.product.FacetTerm::deepCopy).collect(Collectors.toList()))
                 .orElse(null));
         return instance;
     }
@@ -178,7 +183,7 @@ public interface TermFacetResult extends FacetResult {
     public static TermFacetResultBuilder builder() {
         return TermFacetResultBuilder.of();
     }
-
+    
     /**
      * create builder for TermFacetResult instance
      * @param template instance with prefilled values for the builder
@@ -187,6 +192,7 @@ public interface TermFacetResult extends FacetResult {
     public static TermFacetResultBuilder builder(final TermFacetResult template) {
         return TermFacetResultBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -197,7 +203,7 @@ public interface TermFacetResult extends FacetResult {
     default <T> T withTermFacetResult(Function<TermFacetResult, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

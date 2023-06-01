@@ -1,9 +1,12 @@
-
 package com.commercetools.history.models.change;
 
+import com.commercetools.history.models.change.Change;
+import com.commercetools.history.models.change_value.AssetChangeValue;
+import com.commercetools.history.models.change.SetAssetKeyChange;
+import javax.annotation.Nullable;
 import java.util.*;
 import java.util.function.Function;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -20,120 +23,145 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .previousValue("{previousValue}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class SetAssetKeyChangeBuilder implements Builder<SetAssetKeyChange> {
 
+    
+    
     private String change;
-
+    
+    
+    
     private com.commercetools.history.models.change_value.AssetChangeValue asset;
-
+    
+    
+    
     private String nextValue;
-
+    
+    
+    
     private String previousValue;
 
+    
     /**
      *  <p>Update action for <code>setAssetKey</code></p>
      * @param change value to be set
      * @return Builder
      */
-
-    public SetAssetKeyChangeBuilder change(final String change) {
+    
+    public SetAssetKeyChangeBuilder change( final String change) {
         this.change = change;
         return this;
     }
-
+    
+    
+    
+    
     /**
      * set the value to the asset using the builder function
      * @param builder function to build the asset value
      * @return Builder
      */
-
-    public SetAssetKeyChangeBuilder asset(
-            Function<com.commercetools.history.models.change_value.AssetChangeValueBuilder, com.commercetools.history.models.change_value.AssetChangeValueBuilder> builder) {
+    
+    public SetAssetKeyChangeBuilder asset(Function<com.commercetools.history.models.change_value.AssetChangeValueBuilder, com.commercetools.history.models.change_value.AssetChangeValueBuilder> builder) {
         this.asset = builder.apply(com.commercetools.history.models.change_value.AssetChangeValueBuilder.of()).build();
         return this;
     }
-
+    
     /**
      * set the value to the asset using the builder function
      * @param builder function to build the asset value
      * @return Builder
      */
-
-    public SetAssetKeyChangeBuilder withAsset(
-            Function<com.commercetools.history.models.change_value.AssetChangeValueBuilder, com.commercetools.history.models.change_value.AssetChangeValue> builder) {
+    
+    public SetAssetKeyChangeBuilder withAsset(Function<com.commercetools.history.models.change_value.AssetChangeValueBuilder, com.commercetools.history.models.change_value.AssetChangeValue> builder) {
         this.asset = builder.apply(com.commercetools.history.models.change_value.AssetChangeValueBuilder.of());
         return this;
     }
-
+                    
     /**
      * set the value to the asset
      * @param asset value to be set
      * @return Builder
      */
-
-    public SetAssetKeyChangeBuilder asset(final com.commercetools.history.models.change_value.AssetChangeValue asset) {
+    
+    public SetAssetKeyChangeBuilder asset( final com.commercetools.history.models.change_value.AssetChangeValue asset) {
         this.asset = asset;
         return this;
     }
-
+    
+    
+    
+    
     /**
      * set the value to the nextValue
      * @param nextValue value to be set
      * @return Builder
      */
-
-    public SetAssetKeyChangeBuilder nextValue(final String nextValue) {
+    
+    public SetAssetKeyChangeBuilder nextValue( final String nextValue) {
         this.nextValue = nextValue;
         return this;
     }
-
+    
+    
+    
+    
     /**
      * set the value to the previousValue
      * @param previousValue value to be set
      * @return Builder
      */
-
-    public SetAssetKeyChangeBuilder previousValue(final String previousValue) {
+    
+    public SetAssetKeyChangeBuilder previousValue( final String previousValue) {
         this.previousValue = previousValue;
         return this;
     }
+    
+    
 
     /**
      *  <p>Update action for <code>setAssetKey</code></p>
      * @return change
      */
-
-    public String getChange() {
+    
+    
+    public String getChange(){
         return this.change;
     }
-
+    
     /**
      * value of asset}
      * @return asset
      */
-
-    public com.commercetools.history.models.change_value.AssetChangeValue getAsset() {
+    
+    
+    public com.commercetools.history.models.change_value.AssetChangeValue getAsset(){
         return this.asset;
     }
-
+    
     /**
      * value of nextValue}
      * @return nextValue
      */
-
-    public String getNextValue() {
+    
+    
+    public String getNextValue(){
         return this.nextValue;
     }
-
+    
     /**
      * value of previousValue}
      * @return previousValue
      */
-
-    public String getPreviousValue() {
+    
+    
+    public String getPreviousValue(){
         return this.previousValue;
     }
 
@@ -148,7 +176,7 @@ public class SetAssetKeyChangeBuilder implements Builder<SetAssetKeyChange> {
         Objects.requireNonNull(previousValue, SetAssetKeyChange.class + ": previousValue is missing");
         return new SetAssetKeyChangeImpl(change, asset, nextValue, previousValue);
     }
-
+    
     /**
      * builds SetAssetKeyChange without checking for non-null required values
      * @return SetAssetKeyChange
@@ -159,7 +187,7 @@ public class SetAssetKeyChangeBuilder implements Builder<SetAssetKeyChange> {
 
     /**
      * factory method for an instance of SetAssetKeyChangeBuilder
-     * @return builder
+     * @return builder 
      */
     public static SetAssetKeyChangeBuilder of() {
         return new SetAssetKeyChangeBuilder();

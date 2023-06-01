@@ -1,17 +1,20 @@
-
 package com.commercetools.api.models.error;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
+import com.commercetools.api.models.error.GraphQLErrorObject;
+import com.commercetools.api.models.error.GraphQLResourceNotFoundErrorImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Returned when the resource addressed by the request URL does not exist.</p>
@@ -23,9 +26,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     GraphQLResourceNotFoundError graphQLResourceNotFoundError = GraphQLResourceNotFoundError.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = GraphQLResourceNotFoundErrorImpl.class)
 public interface GraphQLResourceNotFoundError extends GraphQLErrorObject {
 
@@ -42,13 +48,15 @@ public interface GraphQLResourceNotFoundError extends GraphQLErrorObject {
     @JsonProperty("code")
     public String getCode();
 
+
     /**
      * factory method
      * @return instance of GraphQLResourceNotFoundError
      */
-    public static GraphQLResourceNotFoundError of() {
+    public static GraphQLResourceNotFoundError of(){
         return new GraphQLResourceNotFoundErrorImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy GraphQLResourceNotFoundError
@@ -83,7 +91,7 @@ public interface GraphQLResourceNotFoundError extends GraphQLErrorObject {
     public static GraphQLResourceNotFoundErrorBuilder builder() {
         return GraphQLResourceNotFoundErrorBuilder.of();
     }
-
+    
     /**
      * create builder for GraphQLResourceNotFoundError instance
      * @param template instance with prefilled values for the builder
@@ -92,6 +100,7 @@ public interface GraphQLResourceNotFoundError extends GraphQLErrorObject {
     public static GraphQLResourceNotFoundErrorBuilder builder(final GraphQLResourceNotFoundError template) {
         return GraphQLResourceNotFoundErrorBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -102,7 +111,7 @@ public interface GraphQLResourceNotFoundError extends GraphQLErrorObject {
     default <T> T withGraphQLResourceNotFoundError(Function<GraphQLResourceNotFoundError, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

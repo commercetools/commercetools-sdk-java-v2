@@ -1,17 +1,20 @@
-
 package com.commercetools.api.models.me;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
+import com.commercetools.api.models.me.MyCartUpdateAction;
+import com.commercetools.api.models.me.MyCartAddDiscountCodeActionImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Adds a DiscountCode to the Cart to activate the related CartDiscounts. Adding a Discount Code is only possible if no DirectDiscount has been applied to the Cart. Discount Codes can be added to frozen Carts, but their DiscountCodeState is then <code>DoesNotMatchCart</code>.</p>
@@ -26,9 +29,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .code("{code}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = MyCartAddDiscountCodeActionImpl.class)
 public interface MyCartAddDiscountCodeAction extends MyCartUpdateAction {
 
@@ -49,16 +55,18 @@ public interface MyCartAddDiscountCodeAction extends MyCartUpdateAction {
      *  <p><code>code</code> of a DiscountCode.</p>
      * @param code value to be set
      */
-
+    
     public void setCode(final String code);
+    
 
     /**
      * factory method
      * @return instance of MyCartAddDiscountCodeAction
      */
-    public static MyCartAddDiscountCodeAction of() {
+    public static MyCartAddDiscountCodeAction of(){
         return new MyCartAddDiscountCodeActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy MyCartAddDiscountCodeAction
@@ -93,7 +101,7 @@ public interface MyCartAddDiscountCodeAction extends MyCartUpdateAction {
     public static MyCartAddDiscountCodeActionBuilder builder() {
         return MyCartAddDiscountCodeActionBuilder.of();
     }
-
+    
     /**
      * create builder for MyCartAddDiscountCodeAction instance
      * @param template instance with prefilled values for the builder
@@ -102,6 +110,7 @@ public interface MyCartAddDiscountCodeAction extends MyCartUpdateAction {
     public static MyCartAddDiscountCodeActionBuilder builder(final MyCartAddDiscountCodeAction template) {
         return MyCartAddDiscountCodeActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -112,7 +121,7 @@ public interface MyCartAddDiscountCodeAction extends MyCartUpdateAction {
     default <T> T withMyCartAddDiscountCodeAction(Function<MyCartAddDiscountCodeAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

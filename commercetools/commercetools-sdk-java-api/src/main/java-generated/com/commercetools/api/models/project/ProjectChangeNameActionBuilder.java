@@ -1,8 +1,11 @@
-
 package com.commercetools.api.models.project;
 
+import com.commercetools.api.models.project.ProjectUpdateAction;
+import com.commercetools.api.models.project.ProjectChangeNameAction;
+import javax.annotation.Nullable;
 import java.util.*;
-
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -16,30 +19,39 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .name("{name}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class ProjectChangeNameActionBuilder implements Builder<ProjectChangeNameAction> {
 
+    
+    
     private String name;
 
+    
     /**
      *  <p>New value to set. Must not be empty.</p>
      * @param name value to be set
      * @return Builder
      */
-
-    public ProjectChangeNameActionBuilder name(final String name) {
+    
+    public ProjectChangeNameActionBuilder name( final String name) {
         this.name = name;
         return this;
     }
+    
+    
 
     /**
      *  <p>New value to set. Must not be empty.</p>
      * @return name
      */
-
-    public String getName() {
+    
+    
+    public String getName(){
         return this.name;
     }
 
@@ -51,7 +63,7 @@ public class ProjectChangeNameActionBuilder implements Builder<ProjectChangeName
         Objects.requireNonNull(name, ProjectChangeNameAction.class + ": name is missing");
         return new ProjectChangeNameActionImpl(name);
     }
-
+    
     /**
      * builds ProjectChangeNameAction without checking for non-null required values
      * @return ProjectChangeNameAction
@@ -62,7 +74,7 @@ public class ProjectChangeNameActionBuilder implements Builder<ProjectChangeName
 
     /**
      * factory method for an instance of ProjectChangeNameActionBuilder
-     * @return builder
+     * @return builder 
      */
     public static ProjectChangeNameActionBuilder of() {
         return new ProjectChangeNameActionBuilder();

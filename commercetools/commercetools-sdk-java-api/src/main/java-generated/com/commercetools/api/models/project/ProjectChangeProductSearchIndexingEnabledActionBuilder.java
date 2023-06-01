@@ -1,8 +1,11 @@
-
 package com.commercetools.api.models.project;
 
+import com.commercetools.api.models.project.ProjectUpdateAction;
+import com.commercetools.api.models.project.ProjectChangeProductSearchIndexingEnabledAction;
+import javax.annotation.Nullable;
 import java.util.*;
-
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -16,14 +19,19 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .enabled(true)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
-public class ProjectChangeProductSearchIndexingEnabledActionBuilder
-        implements Builder<ProjectChangeProductSearchIndexingEnabledAction> {
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
+public class ProjectChangeProductSearchIndexingEnabledActionBuilder implements Builder<ProjectChangeProductSearchIndexingEnabledAction> {
 
+    
+    
     private Boolean enabled;
 
+    
     /**
      *  <ul>
      *   <li>If <code>false</code>, the indexing of Product information will stop and the Product Projection Search as well as the Product Suggestions endpoint will not be available anymore for this Project. The Project's SearchIndexingConfiguration <code>status</code> for <code>products</code> will be changed to <code>"Deactivated"</code>.</li>
@@ -32,11 +40,13 @@ public class ProjectChangeProductSearchIndexingEnabledActionBuilder
      * @param enabled value to be set
      * @return Builder
      */
-
-    public ProjectChangeProductSearchIndexingEnabledActionBuilder enabled(final Boolean enabled) {
+    
+    public ProjectChangeProductSearchIndexingEnabledActionBuilder enabled( final Boolean enabled) {
         this.enabled = enabled;
         return this;
     }
+    
+    
 
     /**
      *  <ul>
@@ -45,8 +55,9 @@ public class ProjectChangeProductSearchIndexingEnabledActionBuilder
      *  </ul>
      * @return enabled
      */
-
-    public Boolean getEnabled() {
+    
+    
+    public Boolean getEnabled(){
         return this.enabled;
     }
 
@@ -58,7 +69,7 @@ public class ProjectChangeProductSearchIndexingEnabledActionBuilder
         Objects.requireNonNull(enabled, ProjectChangeProductSearchIndexingEnabledAction.class + ": enabled is missing");
         return new ProjectChangeProductSearchIndexingEnabledActionImpl(enabled);
     }
-
+    
     /**
      * builds ProjectChangeProductSearchIndexingEnabledAction without checking for non-null required values
      * @return ProjectChangeProductSearchIndexingEnabledAction
@@ -69,7 +80,7 @@ public class ProjectChangeProductSearchIndexingEnabledActionBuilder
 
     /**
      * factory method for an instance of ProjectChangeProductSearchIndexingEnabledActionBuilder
-     * @return builder
+     * @return builder 
      */
     public static ProjectChangeProductSearchIndexingEnabledActionBuilder of() {
         return new ProjectChangeProductSearchIndexingEnabledActionBuilder();
@@ -80,8 +91,7 @@ public class ProjectChangeProductSearchIndexingEnabledActionBuilder
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static ProjectChangeProductSearchIndexingEnabledActionBuilder of(
-            final ProjectChangeProductSearchIndexingEnabledAction template) {
+    public static ProjectChangeProductSearchIndexingEnabledActionBuilder of(final ProjectChangeProductSearchIndexingEnabledAction template) {
         ProjectChangeProductSearchIndexingEnabledActionBuilder builder = new ProjectChangeProductSearchIndexingEnabledActionBuilder();
         builder.enabled = template.getEnabled();
         return builder;

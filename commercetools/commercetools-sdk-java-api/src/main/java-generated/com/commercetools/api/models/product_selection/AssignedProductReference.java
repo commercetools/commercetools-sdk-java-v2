@@ -1,19 +1,22 @@
-
 package com.commercetools.api.models.product_selection;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
 import com.commercetools.api.models.product.ProductReference;
+import com.commercetools.api.models.product_selection.ProductVariantExclusion;
+import com.commercetools.api.models.product_selection.ProductVariantSelection;
+import com.commercetools.api.models.product_selection.AssignedProductReferenceImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * AssignedProductReference
@@ -26,11 +29,15 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .product(productBuilder -> productBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = AssignedProductReferenceImpl.class)
-public interface AssignedProductReference {
+public interface AssignedProductReference  {
+
 
     /**
      *  <p>Reference to a Product that is assigned to the Product Selection.</p>
@@ -40,7 +47,6 @@ public interface AssignedProductReference {
     @Valid
     @JsonProperty("product")
     public ProductReference getProduct();
-
     /**
      *  <p>The Variants of the Product that are included from the Product Selection.</p>
      *  <p>This field may exist only in Product Selections with <code>Individual</code> ProductSelectionMode. In absence of this field, all Variants are deemed to be included.</p>
@@ -49,7 +55,6 @@ public interface AssignedProductReference {
     @Valid
     @JsonProperty("variantSelection")
     public ProductVariantSelection getVariantSelection();
-
     /**
      *  <p>The Variants of the Product that are excluded from the Product Selection.</p>
      *  <p>This field may exist only in Product Selections with <code>IndividualExclusion</code> ProductSelectionMode. In absence of this field, all Variants are deemed to be excluded.</p>
@@ -63,32 +68,36 @@ public interface AssignedProductReference {
      *  <p>Reference to a Product that is assigned to the Product Selection.</p>
      * @param product value to be set
      */
-
+    
     public void setProduct(final ProductReference product);
-
+    
+    
     /**
      *  <p>The Variants of the Product that are included from the Product Selection.</p>
      *  <p>This field may exist only in Product Selections with <code>Individual</code> ProductSelectionMode. In absence of this field, all Variants are deemed to be included.</p>
      * @param variantSelection value to be set
      */
-
+    
     public void setVariantSelection(final ProductVariantSelection variantSelection);
-
+    
+    
     /**
      *  <p>The Variants of the Product that are excluded from the Product Selection.</p>
      *  <p>This field may exist only in Product Selections with <code>IndividualExclusion</code> ProductSelectionMode. In absence of this field, all Variants are deemed to be excluded.</p>
      * @param variantExclusion value to be set
      */
-
+    
     public void setVariantExclusion(final ProductVariantExclusion variantExclusion);
+    
 
     /**
      * factory method
      * @return instance of AssignedProductReference
      */
-    public static AssignedProductReference of() {
+    public static AssignedProductReference of(){
         return new AssignedProductReferenceImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy AssignedProductReference
@@ -115,10 +124,8 @@ public interface AssignedProductReference {
         }
         AssignedProductReferenceImpl instance = new AssignedProductReferenceImpl();
         instance.setProduct(com.commercetools.api.models.product.ProductReference.deepCopy(template.getProduct()));
-        instance.setVariantSelection(com.commercetools.api.models.product_selection.ProductVariantSelection
-                .deepCopy(template.getVariantSelection()));
-        instance.setVariantExclusion(com.commercetools.api.models.product_selection.ProductVariantExclusion
-                .deepCopy(template.getVariantExclusion()));
+        instance.setVariantSelection(com.commercetools.api.models.product_selection.ProductVariantSelection.deepCopy(template.getVariantSelection()));
+        instance.setVariantExclusion(com.commercetools.api.models.product_selection.ProductVariantExclusion.deepCopy(template.getVariantExclusion()));
         return instance;
     }
 
@@ -129,7 +136,7 @@ public interface AssignedProductReference {
     public static AssignedProductReferenceBuilder builder() {
         return AssignedProductReferenceBuilder.of();
     }
-
+    
     /**
      * create builder for AssignedProductReference instance
      * @param template instance with prefilled values for the builder
@@ -138,6 +145,7 @@ public interface AssignedProductReference {
     public static AssignedProductReferenceBuilder builder(final AssignedProductReference template) {
         return AssignedProductReferenceBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -148,7 +156,7 @@ public interface AssignedProductReference {
     default <T> T withAssignedProductReference(Function<AssignedProductReference, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

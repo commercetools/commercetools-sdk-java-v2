@@ -1,18 +1,21 @@
-
 package com.commercetools.api.models.payment;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-
 import com.commercetools.api.models.customer.CustomerResourceIdentifier;
+import com.commercetools.api.models.payment.PaymentUpdateAction;
+import com.commercetools.api.models.payment.PaymentSetCustomerActionImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * PaymentSetCustomerAction
@@ -24,9 +27,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     PaymentSetCustomerAction paymentSetCustomerAction = PaymentSetCustomerAction.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = PaymentSetCustomerActionImpl.class)
 public interface PaymentSetCustomerAction extends PaymentUpdateAction {
 
@@ -47,16 +53,18 @@ public interface PaymentSetCustomerAction extends PaymentUpdateAction {
      *  <p>Value to set. If empty, any existing reference is removed.</p>
      * @param customer value to be set
      */
-
+    
     public void setCustomer(final CustomerResourceIdentifier customer);
+    
 
     /**
      * factory method
      * @return instance of PaymentSetCustomerAction
      */
-    public static PaymentSetCustomerAction of() {
+    public static PaymentSetCustomerAction of(){
         return new PaymentSetCustomerActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy PaymentSetCustomerAction
@@ -80,8 +88,7 @@ public interface PaymentSetCustomerAction extends PaymentUpdateAction {
             return null;
         }
         PaymentSetCustomerActionImpl instance = new PaymentSetCustomerActionImpl();
-        instance.setCustomer(
-            com.commercetools.api.models.customer.CustomerResourceIdentifier.deepCopy(template.getCustomer()));
+        instance.setCustomer(com.commercetools.api.models.customer.CustomerResourceIdentifier.deepCopy(template.getCustomer()));
         return instance;
     }
 
@@ -92,7 +99,7 @@ public interface PaymentSetCustomerAction extends PaymentUpdateAction {
     public static PaymentSetCustomerActionBuilder builder() {
         return PaymentSetCustomerActionBuilder.of();
     }
-
+    
     /**
      * create builder for PaymentSetCustomerAction instance
      * @param template instance with prefilled values for the builder
@@ -101,6 +108,7 @@ public interface PaymentSetCustomerAction extends PaymentUpdateAction {
     public static PaymentSetCustomerActionBuilder builder(final PaymentSetCustomerAction template) {
         return PaymentSetCustomerActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -111,7 +119,7 @@ public interface PaymentSetCustomerAction extends PaymentUpdateAction {
     default <T> T withPaymentSetCustomerAction(Function<PaymentSetCustomerAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

@@ -1,9 +1,11 @@
-
 package com.commercetools.api.predicates.query.error;
 
 import com.commercetools.api.predicates.query.*;
 
-public class PendingOperationErrorQueryBuilderDsl {
+import java.util.function.Function;
+
+
+public class PendingOperationErrorQueryBuilderDsl  {
     public PendingOperationErrorQueryBuilderDsl() {
     }
 
@@ -12,15 +14,12 @@ public class PendingOperationErrorQueryBuilderDsl {
     }
 
     public StringComparisonPredicateBuilder<PendingOperationErrorQueryBuilderDsl> code() {
-        return new StringComparisonPredicateBuilder<>(
-            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("code")),
-            p -> new CombinationQueryPredicate<>(p, PendingOperationErrorQueryBuilderDsl::of));
+        return new StringComparisonPredicateBuilder<>(BinaryQueryPredicate.of().left(new ConstantQueryPredicate("code")),
+        p -> new CombinationQueryPredicate<>(p, PendingOperationErrorQueryBuilderDsl::of));
     }
-
     public StringComparisonPredicateBuilder<PendingOperationErrorQueryBuilderDsl> message() {
-        return new StringComparisonPredicateBuilder<>(
-            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("message")),
-            p -> new CombinationQueryPredicate<>(p, PendingOperationErrorQueryBuilderDsl::of));
+        return new StringComparisonPredicateBuilder<>(BinaryQueryPredicate.of().left(new ConstantQueryPredicate("message")),
+        p -> new CombinationQueryPredicate<>(p, PendingOperationErrorQueryBuilderDsl::of));
     }
-
+    
 }

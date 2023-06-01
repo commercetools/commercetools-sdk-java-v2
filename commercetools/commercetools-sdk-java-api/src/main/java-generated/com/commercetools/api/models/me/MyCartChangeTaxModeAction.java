@@ -1,18 +1,21 @@
-
 package com.commercetools.api.models.me;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
-
 import com.commercetools.api.models.cart.TaxMode;
+import com.commercetools.api.models.me.MyCartUpdateAction;
+import com.commercetools.api.models.me.MyCartChangeTaxModeActionImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <ul>
@@ -28,9 +31,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .taxMode(TaxMode.PLATFORM)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = MyCartChangeTaxModeActionImpl.class)
 public interface MyCartChangeTaxModeAction extends MyCartUpdateAction {
 
@@ -51,16 +57,18 @@ public interface MyCartChangeTaxModeAction extends MyCartUpdateAction {
      *  <p>The new TaxMode.</p>
      * @param taxMode value to be set
      */
-
+    
     public void setTaxMode(final TaxMode taxMode);
+    
 
     /**
      * factory method
      * @return instance of MyCartChangeTaxModeAction
      */
-    public static MyCartChangeTaxModeAction of() {
+    public static MyCartChangeTaxModeAction of(){
         return new MyCartChangeTaxModeActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy MyCartChangeTaxModeAction
@@ -95,7 +103,7 @@ public interface MyCartChangeTaxModeAction extends MyCartUpdateAction {
     public static MyCartChangeTaxModeActionBuilder builder() {
         return MyCartChangeTaxModeActionBuilder.of();
     }
-
+    
     /**
      * create builder for MyCartChangeTaxModeAction instance
      * @param template instance with prefilled values for the builder
@@ -104,6 +112,7 @@ public interface MyCartChangeTaxModeAction extends MyCartUpdateAction {
     public static MyCartChangeTaxModeActionBuilder builder(final MyCartChangeTaxModeAction template) {
         return MyCartChangeTaxModeActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -114,7 +123,7 @@ public interface MyCartChangeTaxModeAction extends MyCartUpdateAction {
     default <T> T withMyCartChangeTaxModeAction(Function<MyCartChangeTaxModeAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

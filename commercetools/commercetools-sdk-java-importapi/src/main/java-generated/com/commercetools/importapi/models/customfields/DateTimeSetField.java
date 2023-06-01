@@ -1,18 +1,21 @@
-
 package com.commercetools.importapi.models.customfields;
 
-import java.time.*;
+import com.commercetools.importapi.models.customfields.CustomField;
 import java.time.ZonedDateTime;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
+import com.commercetools.importapi.models.customfields.DateTimeSetFieldImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>A field with a date time set value.</p>
@@ -25,9 +28,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .plusValue(valueBuilder -> valueBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = DateTimeSetFieldImpl.class)
 public interface DateTimeSetField extends CustomField {
 
@@ -48,24 +54,24 @@ public interface DateTimeSetField extends CustomField {
      * set value
      * @param value values to be set
      */
-
+    
     @JsonIgnore
-    public void setValue(final ZonedDateTime... value);
-
+    public void setValue(final ZonedDateTime ...value);
     /**
      * set value
      * @param value values to be set
      */
-
+    
     public void setValue(final List<ZonedDateTime> value);
 
     /**
      * factory method
      * @return instance of DateTimeSetField
      */
-    public static DateTimeSetField of() {
+    public static DateTimeSetField of(){
         return new DateTimeSetFieldImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy DateTimeSetField
@@ -89,7 +95,9 @@ public interface DateTimeSetField extends CustomField {
             return null;
         }
         DateTimeSetFieldImpl instance = new DateTimeSetFieldImpl();
-        instance.setValue(Optional.ofNullable(template.getValue()).map(ArrayList::new).orElse(null));
+        instance.setValue(Optional.ofNullable(template.getValue())
+                .map(ArrayList::new)
+                .orElse(null));
         return instance;
     }
 
@@ -100,7 +108,7 @@ public interface DateTimeSetField extends CustomField {
     public static DateTimeSetFieldBuilder builder() {
         return DateTimeSetFieldBuilder.of();
     }
-
+    
     /**
      * create builder for DateTimeSetField instance
      * @param template instance with prefilled values for the builder
@@ -109,6 +117,7 @@ public interface DateTimeSetField extends CustomField {
     public static DateTimeSetFieldBuilder builder(final DateTimeSetField template) {
         return DateTimeSetFieldBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -119,7 +128,7 @@ public interface DateTimeSetField extends CustomField {
     default <T> T withDateTimeSetField(Function<DateTimeSetField, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

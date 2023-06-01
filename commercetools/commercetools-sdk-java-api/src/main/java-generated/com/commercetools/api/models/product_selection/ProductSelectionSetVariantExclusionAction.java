@@ -1,19 +1,22 @@
-
 package com.commercetools.api.models.product_selection;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
 import com.commercetools.api.models.product.ProductResourceIdentifier;
+import com.commercetools.api.models.product_selection.ProductSelectionUpdateAction;
+import com.commercetools.api.models.product_selection.ProductVariantExclusion;
+import com.commercetools.api.models.product_selection.ProductSelectionSetVariantExclusionActionImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Updates the Product Variant Exclusion of an existing Product Selection Assignment. A ProductVariantExclusion can only be set if the Product has already been excluded from the Product Selection with <code>IndividualExclusion</code> ProductSelectionMode.</p>
@@ -27,9 +30,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .product(productBuilder -> productBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = ProductSelectionSetVariantExclusionActionImpl.class)
 public interface ProductSelectionSetVariantExclusionAction extends ProductSelectionUpdateAction {
 
@@ -46,7 +52,6 @@ public interface ProductSelectionSetVariantExclusionAction extends ProductSelect
     @Valid
     @JsonProperty("product")
     public ProductResourceIdentifier getProduct();
-
     /**
      *  <p>Determines which Variants of the previously excluded Product are to be included in the Product Selection with <code>IndividualExclusion</code> ProductSelectionMode. Leave it empty to unset an existing Variant Exclusion.</p>
      * @return variantExclusion
@@ -59,31 +64,33 @@ public interface ProductSelectionSetVariantExclusionAction extends ProductSelect
      *  <p>ResourceIdentifier of the Product</p>
      * @param product value to be set
      */
-
+    
     public void setProduct(final ProductResourceIdentifier product);
-
+    
+    
     /**
      *  <p>Determines which Variants of the previously excluded Product are to be included in the Product Selection with <code>IndividualExclusion</code> ProductSelectionMode. Leave it empty to unset an existing Variant Exclusion.</p>
      * @param variantExclusion value to be set
      */
-
+    
     public void setVariantExclusion(final ProductVariantExclusion variantExclusion);
+    
 
     /**
      * factory method
      * @return instance of ProductSelectionSetVariantExclusionAction
      */
-    public static ProductSelectionSetVariantExclusionAction of() {
+    public static ProductSelectionSetVariantExclusionAction of(){
         return new ProductSelectionSetVariantExclusionActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy ProductSelectionSetVariantExclusionAction
      * @param template instance to be copied
      * @return copy instance
      */
-    public static ProductSelectionSetVariantExclusionAction of(
-            final ProductSelectionSetVariantExclusionAction template) {
+    public static ProductSelectionSetVariantExclusionAction of(final ProductSelectionSetVariantExclusionAction template) {
         ProductSelectionSetVariantExclusionActionImpl instance = new ProductSelectionSetVariantExclusionActionImpl();
         instance.setProduct(template.getProduct());
         instance.setVariantExclusion(template.getVariantExclusion());
@@ -96,16 +103,13 @@ public interface ProductSelectionSetVariantExclusionAction extends ProductSelect
      * @return copy instance
      */
     @Nullable
-    public static ProductSelectionSetVariantExclusionAction deepCopy(
-            @Nullable final ProductSelectionSetVariantExclusionAction template) {
+    public static ProductSelectionSetVariantExclusionAction deepCopy(@Nullable final ProductSelectionSetVariantExclusionAction template) {
         if (template == null) {
             return null;
         }
         ProductSelectionSetVariantExclusionActionImpl instance = new ProductSelectionSetVariantExclusionActionImpl();
-        instance.setProduct(
-            com.commercetools.api.models.product.ProductResourceIdentifier.deepCopy(template.getProduct()));
-        instance.setVariantExclusion(com.commercetools.api.models.product_selection.ProductVariantExclusion
-                .deepCopy(template.getVariantExclusion()));
+        instance.setProduct(com.commercetools.api.models.product.ProductResourceIdentifier.deepCopy(template.getProduct()));
+        instance.setVariantExclusion(com.commercetools.api.models.product_selection.ProductVariantExclusion.deepCopy(template.getVariantExclusion()));
         return instance;
     }
 
@@ -116,16 +120,16 @@ public interface ProductSelectionSetVariantExclusionAction extends ProductSelect
     public static ProductSelectionSetVariantExclusionActionBuilder builder() {
         return ProductSelectionSetVariantExclusionActionBuilder.of();
     }
-
+    
     /**
      * create builder for ProductSelectionSetVariantExclusionAction instance
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static ProductSelectionSetVariantExclusionActionBuilder builder(
-            final ProductSelectionSetVariantExclusionAction template) {
+    public static ProductSelectionSetVariantExclusionActionBuilder builder(final ProductSelectionSetVariantExclusionAction template) {
         return ProductSelectionSetVariantExclusionActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -133,11 +137,10 @@ public interface ProductSelectionSetVariantExclusionAction extends ProductSelect
      * @param helper function to map the object
      * @return mapped value
      */
-    default <T> T withProductSelectionSetVariantExclusionAction(
-            Function<ProductSelectionSetVariantExclusionAction, T> helper) {
+    default <T> T withProductSelectionSetVariantExclusionAction(Function<ProductSelectionSetVariantExclusionAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

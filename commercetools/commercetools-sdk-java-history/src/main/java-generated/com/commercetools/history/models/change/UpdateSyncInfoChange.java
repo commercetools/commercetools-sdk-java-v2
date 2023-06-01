@@ -1,19 +1,21 @@
-
 package com.commercetools.history.models.change;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
+import com.commercetools.history.models.change.Change;
 import com.commercetools.history.models.common.SyncInfo;
+import com.commercetools.history.models.change.UpdateSyncInfoChangeImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * UpdateSyncInfoChange
@@ -28,9 +30,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .nextValue(nextValueBuilder -> nextValueBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = UpdateSyncInfoChangeImpl.class)
 public interface UpdateSyncInfoChange extends Change {
 
@@ -46,7 +51,6 @@ public interface UpdateSyncInfoChange extends Change {
     @NotNull
     @JsonProperty("type")
     public String getType();
-
     /**
      *  <p>Update action for <code>updateSyncInfo</code></p>
      * @return change
@@ -54,7 +58,6 @@ public interface UpdateSyncInfoChange extends Change {
     @NotNull
     @JsonProperty("change")
     public String getChange();
-
     /**
      *
      * @return channelId
@@ -62,7 +65,6 @@ public interface UpdateSyncInfoChange extends Change {
     @NotNull
     @JsonProperty("channelId")
     public String getChannelId();
-
     /**
      *
      * @return nextValue
@@ -76,30 +78,34 @@ public interface UpdateSyncInfoChange extends Change {
      *  <p>Update action for <code>updateSyncInfo</code></p>
      * @param change value to be set
      */
-
+    
     public void setChange(final String change);
-
+    
+    
     /**
      * set channelId
      * @param channelId value to be set
      */
-
+    
     public void setChannelId(final String channelId);
-
+    
+    
     /**
      * set nextValue
      * @param nextValue value to be set
      */
-
+    
     public void setNextValue(final SyncInfo nextValue);
+    
 
     /**
      * factory method
      * @return instance of UpdateSyncInfoChange
      */
-    public static UpdateSyncInfoChange of() {
+    public static UpdateSyncInfoChange of(){
         return new UpdateSyncInfoChangeImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy UpdateSyncInfoChange
@@ -138,7 +144,7 @@ public interface UpdateSyncInfoChange extends Change {
     public static UpdateSyncInfoChangeBuilder builder() {
         return UpdateSyncInfoChangeBuilder.of();
     }
-
+    
     /**
      * create builder for UpdateSyncInfoChange instance
      * @param template instance with prefilled values for the builder
@@ -147,6 +153,7 @@ public interface UpdateSyncInfoChange extends Change {
     public static UpdateSyncInfoChangeBuilder builder(final UpdateSyncInfoChange template) {
         return UpdateSyncInfoChangeBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -157,7 +164,7 @@ public interface UpdateSyncInfoChange extends Change {
     default <T> T withUpdateSyncInfoChange(Function<UpdateSyncInfoChange, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

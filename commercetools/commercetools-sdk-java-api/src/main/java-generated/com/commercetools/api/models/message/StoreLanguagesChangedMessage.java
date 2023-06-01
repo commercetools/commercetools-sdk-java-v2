@@ -1,16 +1,20 @@
-
 package com.commercetools.api.models.message;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
+import com.commercetools.api.models.message.Message;
+import com.commercetools.api.models.message.StoreLanguagesChangedMessageImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Generated after a successful Set Languages update action.</p>
@@ -29,9 +33,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .resourceVersion(0.3)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = StoreLanguagesChangedMessageImpl.class)
 public interface StoreLanguagesChangedMessage extends Message {
 
@@ -44,15 +51,14 @@ public interface StoreLanguagesChangedMessage extends Message {
      *  <p>Locales added to the Store after the Set Languages update action.</p>
      * @return addedLanguages
      */
-
+    
     @JsonProperty("addedLanguages")
     public List<String> getAddedLanguages();
-
     /**
      *  <p>Locales removed from the Store during the Set Languages update action.</p>
      * @return removedLanguages
      */
-
+    
     @JsonProperty("removedLanguages")
     public List<String> getRemovedLanguages();
 
@@ -60,39 +66,38 @@ public interface StoreLanguagesChangedMessage extends Message {
      *  <p>Locales added to the Store after the Set Languages update action.</p>
      * @param addedLanguages values to be set
      */
-
+    
     @JsonIgnore
-    public void setAddedLanguages(final String... addedLanguages);
-
+    public void setAddedLanguages(final String ...addedLanguages);
     /**
      *  <p>Locales added to the Store after the Set Languages update action.</p>
      * @param addedLanguages values to be set
      */
-
+    
     public void setAddedLanguages(final List<String> addedLanguages);
-
+    
     /**
      *  <p>Locales removed from the Store during the Set Languages update action.</p>
      * @param removedLanguages values to be set
      */
-
+    
     @JsonIgnore
-    public void setRemovedLanguages(final String... removedLanguages);
-
+    public void setRemovedLanguages(final String ...removedLanguages);
     /**
      *  <p>Locales removed from the Store during the Set Languages update action.</p>
      * @param removedLanguages values to be set
      */
-
+    
     public void setRemovedLanguages(final List<String> removedLanguages);
 
     /**
      * factory method
      * @return instance of StoreLanguagesChangedMessage
      */
-    public static StoreLanguagesChangedMessage of() {
+    public static StoreLanguagesChangedMessage of(){
         return new StoreLanguagesChangedMessageImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy StoreLanguagesChangedMessage
@@ -131,17 +136,18 @@ public interface StoreLanguagesChangedMessage extends Message {
         instance.setVersion(template.getVersion());
         instance.setCreatedAt(template.getCreatedAt());
         instance.setLastModifiedAt(template.getLastModifiedAt());
-        instance.setLastModifiedBy(
-            com.commercetools.api.models.common.LastModifiedBy.deepCopy(template.getLastModifiedBy()));
+        instance.setLastModifiedBy(com.commercetools.api.models.common.LastModifiedBy.deepCopy(template.getLastModifiedBy()));
         instance.setCreatedBy(com.commercetools.api.models.common.CreatedBy.deepCopy(template.getCreatedBy()));
         instance.setSequenceNumber(template.getSequenceNumber());
         instance.setResource(com.commercetools.api.models.common.Reference.deepCopy(template.getResource()));
         instance.setResourceVersion(template.getResourceVersion());
-        instance.setResourceUserProvidedIdentifiers(com.commercetools.api.models.message.UserProvidedIdentifiers
-                .deepCopy(template.getResourceUserProvidedIdentifiers()));
-        instance.setAddedLanguages(Optional.ofNullable(template.getAddedLanguages()).map(ArrayList::new).orElse(null));
-        instance.setRemovedLanguages(
-            Optional.ofNullable(template.getRemovedLanguages()).map(ArrayList::new).orElse(null));
+        instance.setResourceUserProvidedIdentifiers(com.commercetools.api.models.message.UserProvidedIdentifiers.deepCopy(template.getResourceUserProvidedIdentifiers()));
+        instance.setAddedLanguages(Optional.ofNullable(template.getAddedLanguages())
+                .map(ArrayList::new)
+                .orElse(null));
+        instance.setRemovedLanguages(Optional.ofNullable(template.getRemovedLanguages())
+                .map(ArrayList::new)
+                .orElse(null));
         return instance;
     }
 
@@ -152,7 +158,7 @@ public interface StoreLanguagesChangedMessage extends Message {
     public static StoreLanguagesChangedMessageBuilder builder() {
         return StoreLanguagesChangedMessageBuilder.of();
     }
-
+    
     /**
      * create builder for StoreLanguagesChangedMessage instance
      * @param template instance with prefilled values for the builder
@@ -161,6 +167,7 @@ public interface StoreLanguagesChangedMessage extends Message {
     public static StoreLanguagesChangedMessageBuilder builder(final StoreLanguagesChangedMessage template) {
         return StoreLanguagesChangedMessageBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -171,7 +178,7 @@ public interface StoreLanguagesChangedMessage extends Message {
     default <T> T withStoreLanguagesChangedMessage(Function<StoreLanguagesChangedMessage, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

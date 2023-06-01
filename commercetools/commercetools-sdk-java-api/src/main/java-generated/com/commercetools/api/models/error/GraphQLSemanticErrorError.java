@@ -1,17 +1,20 @@
-
 package com.commercetools.api.models.error;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
+import com.commercetools.api.models.error.GraphQLErrorObject;
+import com.commercetools.api.models.error.GraphQLSemanticErrorErrorImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Returned when a Discount predicate or API Extension predicate is not semantically correct.</p>
@@ -23,9 +26,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     GraphQLSemanticErrorError graphQLSemanticErrorError = GraphQLSemanticErrorError.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = GraphQLSemanticErrorErrorImpl.class)
 public interface GraphQLSemanticErrorError extends GraphQLErrorObject {
 
@@ -42,13 +48,15 @@ public interface GraphQLSemanticErrorError extends GraphQLErrorObject {
     @JsonProperty("code")
     public String getCode();
 
+
     /**
      * factory method
      * @return instance of GraphQLSemanticErrorError
      */
-    public static GraphQLSemanticErrorError of() {
+    public static GraphQLSemanticErrorError of(){
         return new GraphQLSemanticErrorErrorImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy GraphQLSemanticErrorError
@@ -83,7 +91,7 @@ public interface GraphQLSemanticErrorError extends GraphQLErrorObject {
     public static GraphQLSemanticErrorErrorBuilder builder() {
         return GraphQLSemanticErrorErrorBuilder.of();
     }
-
+    
     /**
      * create builder for GraphQLSemanticErrorError instance
      * @param template instance with prefilled values for the builder
@@ -92,6 +100,7 @@ public interface GraphQLSemanticErrorError extends GraphQLErrorObject {
     public static GraphQLSemanticErrorErrorBuilder builder(final GraphQLSemanticErrorError template) {
         return GraphQLSemanticErrorErrorBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -102,7 +111,7 @@ public interface GraphQLSemanticErrorError extends GraphQLErrorObject {
     default <T> T withGraphQLSemanticErrorError(Function<GraphQLSemanticErrorError, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

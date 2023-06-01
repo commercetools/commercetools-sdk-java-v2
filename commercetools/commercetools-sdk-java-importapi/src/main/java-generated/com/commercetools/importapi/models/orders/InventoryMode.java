@@ -1,25 +1,27 @@
-
 package com.commercetools.importapi.models.orders;
-
-import java.util.Arrays;
-import java.util.Optional;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-
+import java.lang.String;
+import java.util.Arrays;
+import java.util.Optional;
 import io.vrap.rmf.base.client.JsonEnum;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
  *  <p>Maps to <code>Order.inventoryMode</code>.</p>
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public interface InventoryMode extends JsonEnum {
 
+    
     InventoryMode TRACK_ONLY = InventoryModeEnum.TRACK_ONLY;
-
+    
     InventoryMode RESERVE_ON_ORDER = InventoryModeEnum.RESERVE_ON_ORDER;
-
+    
     /**
      * possible values of InventoryMode
      */
@@ -28,7 +30,7 @@ public interface InventoryMode extends JsonEnum {
          * TrackOnly
          */
         TRACK_ONLY("TrackOnly"),
-
+        
         /**
          * ReserveOnOrder
          */
@@ -85,7 +87,7 @@ public interface InventoryMode extends JsonEnum {
             public String name() {
                 return value.toUpperCase();
             }
-
+            
             public String toString() {
                 return value;
             }
@@ -100,7 +102,7 @@ public interface InventoryMode extends JsonEnum {
     public static Optional<InventoryMode> findEnumViaJsonName(String jsonName) {
         return Arrays.stream(values()).filter(t -> t.getJsonName().equals(jsonName)).findFirst();
     }
-
+    
     /**
      * possible enum values
      * @return array of possible enum values
@@ -108,5 +110,5 @@ public interface InventoryMode extends JsonEnum {
     public static InventoryMode[] values() {
         return InventoryModeEnum.values();
     }
-
+    
 }

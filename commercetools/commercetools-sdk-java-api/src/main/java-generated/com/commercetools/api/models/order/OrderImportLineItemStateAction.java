@@ -1,19 +1,21 @@
-
 package com.commercetools.api.models.order;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-import java.util.stream.Collectors;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
+import com.commercetools.api.models.order.ItemState;
+import com.commercetools.api.models.order.OrderUpdateAction;
+import com.commercetools.api.models.order.OrderImportLineItemStateActionImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * OrderImportLineItemStateAction
@@ -27,9 +29,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .plusState(stateBuilder -> stateBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = OrderImportLineItemStateActionImpl.class)
 public interface OrderImportLineItemStateAction extends OrderUpdateAction {
 
@@ -45,7 +50,6 @@ public interface OrderImportLineItemStateAction extends OrderUpdateAction {
     @NotNull
     @JsonProperty("lineItemId")
     public String getLineItemId();
-
     /**
      *
      * @return state
@@ -59,31 +63,32 @@ public interface OrderImportLineItemStateAction extends OrderUpdateAction {
      * set lineItemId
      * @param lineItemId value to be set
      */
-
+    
     public void setLineItemId(final String lineItemId);
-
+    
+    
     /**
      * set state
      * @param state values to be set
      */
-
+    
     @JsonIgnore
-    public void setState(final ItemState... state);
-
+    public void setState(final ItemState ...state);
     /**
      * set state
      * @param state values to be set
      */
-
+    
     public void setState(final List<ItemState> state);
 
     /**
      * factory method
      * @return instance of OrderImportLineItemStateAction
      */
-    public static OrderImportLineItemStateAction of() {
+    public static OrderImportLineItemStateAction of(){
         return new OrderImportLineItemStateActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy OrderImportLineItemStateAction
@@ -110,9 +115,7 @@ public interface OrderImportLineItemStateAction extends OrderUpdateAction {
         OrderImportLineItemStateActionImpl instance = new OrderImportLineItemStateActionImpl();
         instance.setLineItemId(template.getLineItemId());
         instance.setState(Optional.ofNullable(template.getState())
-                .map(t -> t.stream()
-                        .map(com.commercetools.api.models.order.ItemState::deepCopy)
-                        .collect(Collectors.toList()))
+                .map(t -> t.stream().map(com.commercetools.api.models.order.ItemState::deepCopy).collect(Collectors.toList()))
                 .orElse(null));
         return instance;
     }
@@ -124,7 +127,7 @@ public interface OrderImportLineItemStateAction extends OrderUpdateAction {
     public static OrderImportLineItemStateActionBuilder builder() {
         return OrderImportLineItemStateActionBuilder.of();
     }
-
+    
     /**
      * create builder for OrderImportLineItemStateAction instance
      * @param template instance with prefilled values for the builder
@@ -133,6 +136,7 @@ public interface OrderImportLineItemStateAction extends OrderUpdateAction {
     public static OrderImportLineItemStateActionBuilder builder(final OrderImportLineItemStateAction template) {
         return OrderImportLineItemStateActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -143,7 +147,7 @@ public interface OrderImportLineItemStateAction extends OrderUpdateAction {
     default <T> T withOrderImportLineItemStateAction(Function<OrderImportLineItemStateAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

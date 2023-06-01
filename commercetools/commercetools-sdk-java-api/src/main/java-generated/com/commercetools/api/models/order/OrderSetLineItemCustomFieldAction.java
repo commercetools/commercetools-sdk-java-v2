@@ -1,17 +1,21 @@
-
 package com.commercetools.api.models.order;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
+import com.commercetools.api.models.order.OrderUpdateAction;
+import java.lang.Object;
+import com.commercetools.api.models.order.OrderSetLineItemCustomFieldActionImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * OrderSetLineItemCustomFieldAction
@@ -25,9 +29,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .name("{name}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = OrderSetLineItemCustomFieldActionImpl.class)
 public interface OrderSetLineItemCustomFieldAction extends OrderUpdateAction {
 
@@ -43,7 +50,6 @@ public interface OrderSetLineItemCustomFieldAction extends OrderUpdateAction {
     @NotNull
     @JsonProperty("lineItemId")
     public String getLineItemId();
-
     /**
      *  <p>Name of the Custom Field.</p>
      * @return name
@@ -51,12 +57,11 @@ public interface OrderSetLineItemCustomFieldAction extends OrderUpdateAction {
     @NotNull
     @JsonProperty("name")
     public String getName();
-
     /**
      *  <p>If <code>value</code> is absent or <code>null</code>, this field will be removed if it exists. Removing a field that does not exist returns an InvalidOperation error. If <code>value</code> is provided, it is set for the field defined by <code>name</code>.</p>
      * @return value
      */
-
+    
     @JsonProperty("value")
     public Object getValue();
 
@@ -64,30 +69,34 @@ public interface OrderSetLineItemCustomFieldAction extends OrderUpdateAction {
      * set lineItemId
      * @param lineItemId value to be set
      */
-
+    
     public void setLineItemId(final String lineItemId);
-
+    
+    
     /**
      *  <p>Name of the Custom Field.</p>
      * @param name value to be set
      */
-
+    
     public void setName(final String name);
-
+    
+    
     /**
      *  <p>If <code>value</code> is absent or <code>null</code>, this field will be removed if it exists. Removing a field that does not exist returns an InvalidOperation error. If <code>value</code> is provided, it is set for the field defined by <code>name</code>.</p>
      * @param value value to be set
      */
-
+    
     public void setValue(final Object value);
+    
 
     /**
      * factory method
      * @return instance of OrderSetLineItemCustomFieldAction
      */
-    public static OrderSetLineItemCustomFieldAction of() {
+    public static OrderSetLineItemCustomFieldAction of(){
         return new OrderSetLineItemCustomFieldActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy OrderSetLineItemCustomFieldAction
@@ -108,8 +117,7 @@ public interface OrderSetLineItemCustomFieldAction extends OrderUpdateAction {
      * @return copy instance
      */
     @Nullable
-    public static OrderSetLineItemCustomFieldAction deepCopy(
-            @Nullable final OrderSetLineItemCustomFieldAction template) {
+    public static OrderSetLineItemCustomFieldAction deepCopy(@Nullable final OrderSetLineItemCustomFieldAction template) {
         if (template == null) {
             return null;
         }
@@ -127,7 +135,7 @@ public interface OrderSetLineItemCustomFieldAction extends OrderUpdateAction {
     public static OrderSetLineItemCustomFieldActionBuilder builder() {
         return OrderSetLineItemCustomFieldActionBuilder.of();
     }
-
+    
     /**
      * create builder for OrderSetLineItemCustomFieldAction instance
      * @param template instance with prefilled values for the builder
@@ -136,6 +144,7 @@ public interface OrderSetLineItemCustomFieldAction extends OrderUpdateAction {
     public static OrderSetLineItemCustomFieldActionBuilder builder(final OrderSetLineItemCustomFieldAction template) {
         return OrderSetLineItemCustomFieldActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -146,11 +155,11 @@ public interface OrderSetLineItemCustomFieldAction extends OrderUpdateAction {
     default <T> T withOrderSetLineItemCustomFieldAction(Function<OrderSetLineItemCustomFieldAction, T> helper) {
         return helper.apply(this);
     }
-
     public static OrderSetLineItemCustomFieldAction ofUnset(final String name, final String lineItemId) {
         return OrderSetLineItemCustomFieldActionBuilder.of().name(name).lineItemId(lineItemId).build();
     }
-
+    
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

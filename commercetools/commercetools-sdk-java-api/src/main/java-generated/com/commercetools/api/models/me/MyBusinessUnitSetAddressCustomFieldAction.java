@@ -1,17 +1,21 @@
-
 package com.commercetools.api.models.me;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
+import com.commercetools.api.models.me.MyBusinessUnitUpdateAction;
+import java.lang.Object;
+import com.commercetools.api.models.me.MyBusinessUnitSetAddressCustomFieldActionImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * MyBusinessUnitSetAddressCustomFieldAction
@@ -25,9 +29,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .name("{name}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = MyBusinessUnitSetAddressCustomFieldActionImpl.class)
 public interface MyBusinessUnitSetAddressCustomFieldAction extends MyBusinessUnitUpdateAction {
 
@@ -43,7 +50,6 @@ public interface MyBusinessUnitSetAddressCustomFieldAction extends MyBusinessUni
     @NotNull
     @JsonProperty("addressId")
     public String getAddressId();
-
     /**
      *  <p>Name of the Custom Field.</p>
      * @return name
@@ -51,12 +57,11 @@ public interface MyBusinessUnitSetAddressCustomFieldAction extends MyBusinessUni
     @NotNull
     @JsonProperty("name")
     public String getName();
-
     /**
      *  <p>If <code>value</code> is absent or <code>null</code>, this field will be removed if it exists. Trying to remove a field that does not exist will fail with an InvalidOperation error. If <code>value</code> is provided, it is set for the field defined by <code>name</code>.</p>
      * @return value
      */
-
+    
     @JsonProperty("value")
     public Object getValue();
 
@@ -64,38 +69,41 @@ public interface MyBusinessUnitSetAddressCustomFieldAction extends MyBusinessUni
      *  <p>ID of the <code>address</code> to be extended.</p>
      * @param addressId value to be set
      */
-
+    
     public void setAddressId(final String addressId);
-
+    
+    
     /**
      *  <p>Name of the Custom Field.</p>
      * @param name value to be set
      */
-
+    
     public void setName(final String name);
-
+    
+    
     /**
      *  <p>If <code>value</code> is absent or <code>null</code>, this field will be removed if it exists. Trying to remove a field that does not exist will fail with an InvalidOperation error. If <code>value</code> is provided, it is set for the field defined by <code>name</code>.</p>
      * @param value value to be set
      */
-
+    
     public void setValue(final Object value);
+    
 
     /**
      * factory method
      * @return instance of MyBusinessUnitSetAddressCustomFieldAction
      */
-    public static MyBusinessUnitSetAddressCustomFieldAction of() {
+    public static MyBusinessUnitSetAddressCustomFieldAction of(){
         return new MyBusinessUnitSetAddressCustomFieldActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy MyBusinessUnitSetAddressCustomFieldAction
      * @param template instance to be copied
      * @return copy instance
      */
-    public static MyBusinessUnitSetAddressCustomFieldAction of(
-            final MyBusinessUnitSetAddressCustomFieldAction template) {
+    public static MyBusinessUnitSetAddressCustomFieldAction of(final MyBusinessUnitSetAddressCustomFieldAction template) {
         MyBusinessUnitSetAddressCustomFieldActionImpl instance = new MyBusinessUnitSetAddressCustomFieldActionImpl();
         instance.setAddressId(template.getAddressId());
         instance.setName(template.getName());
@@ -109,8 +117,7 @@ public interface MyBusinessUnitSetAddressCustomFieldAction extends MyBusinessUni
      * @return copy instance
      */
     @Nullable
-    public static MyBusinessUnitSetAddressCustomFieldAction deepCopy(
-            @Nullable final MyBusinessUnitSetAddressCustomFieldAction template) {
+    public static MyBusinessUnitSetAddressCustomFieldAction deepCopy(@Nullable final MyBusinessUnitSetAddressCustomFieldAction template) {
         if (template == null) {
             return null;
         }
@@ -128,16 +135,16 @@ public interface MyBusinessUnitSetAddressCustomFieldAction extends MyBusinessUni
     public static MyBusinessUnitSetAddressCustomFieldActionBuilder builder() {
         return MyBusinessUnitSetAddressCustomFieldActionBuilder.of();
     }
-
+    
     /**
      * create builder for MyBusinessUnitSetAddressCustomFieldAction instance
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static MyBusinessUnitSetAddressCustomFieldActionBuilder builder(
-            final MyBusinessUnitSetAddressCustomFieldAction template) {
+    public static MyBusinessUnitSetAddressCustomFieldActionBuilder builder(final MyBusinessUnitSetAddressCustomFieldAction template) {
         return MyBusinessUnitSetAddressCustomFieldActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -145,11 +152,10 @@ public interface MyBusinessUnitSetAddressCustomFieldAction extends MyBusinessUni
      * @param helper function to map the object
      * @return mapped value
      */
-    default <T> T withMyBusinessUnitSetAddressCustomFieldAction(
-            Function<MyBusinessUnitSetAddressCustomFieldAction, T> helper) {
+    default <T> T withMyBusinessUnitSetAddressCustomFieldAction(Function<MyBusinessUnitSetAddressCustomFieldAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

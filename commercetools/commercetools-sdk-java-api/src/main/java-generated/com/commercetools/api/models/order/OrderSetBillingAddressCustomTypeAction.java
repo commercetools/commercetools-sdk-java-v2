@@ -1,19 +1,22 @@
-
 package com.commercetools.api.models.order;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-
+import com.commercetools.api.models.order.OrderUpdateAction;
 import com.commercetools.api.models.type.FieldContainer;
 import com.commercetools.api.models.type.TypeResourceIdentifier;
+import com.commercetools.api.models.order.OrderSetBillingAddressCustomTypeActionImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * OrderSetBillingAddressCustomTypeAction
@@ -25,9 +28,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     OrderSetBillingAddressCustomTypeAction orderSetBillingAddressCustomTypeAction = OrderSetBillingAddressCustomTypeAction.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = OrderSetBillingAddressCustomTypeActionImpl.class)
 public interface OrderSetBillingAddressCustomTypeAction extends OrderUpdateAction {
 
@@ -43,7 +49,6 @@ public interface OrderSetBillingAddressCustomTypeAction extends OrderUpdateActio
     @Valid
     @JsonProperty("type")
     public TypeResourceIdentifier getType();
-
     /**
      *  <p>Sets the Custom Fields fields for the <code>billingAddress</code>.</p>
      * @return fields
@@ -56,23 +61,26 @@ public interface OrderSetBillingAddressCustomTypeAction extends OrderUpdateActio
      *  <p>Defines the Type that extends the <code>billingAddress</code> with Custom Fields. If absent, any existing Type and Custom Fields are removed from the <code>billingAddress</code>.</p>
      * @param type value to be set
      */
-
+    
     public void setType(final TypeResourceIdentifier type);
-
+    
+    
     /**
      *  <p>Sets the Custom Fields fields for the <code>billingAddress</code>.</p>
      * @param fields value to be set
      */
-
+    
     public void setFields(final FieldContainer fields);
+    
 
     /**
      * factory method
      * @return instance of OrderSetBillingAddressCustomTypeAction
      */
-    public static OrderSetBillingAddressCustomTypeAction of() {
+    public static OrderSetBillingAddressCustomTypeAction of(){
         return new OrderSetBillingAddressCustomTypeActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy OrderSetBillingAddressCustomTypeAction
@@ -92,8 +100,7 @@ public interface OrderSetBillingAddressCustomTypeAction extends OrderUpdateActio
      * @return copy instance
      */
     @Nullable
-    public static OrderSetBillingAddressCustomTypeAction deepCopy(
-            @Nullable final OrderSetBillingAddressCustomTypeAction template) {
+    public static OrderSetBillingAddressCustomTypeAction deepCopy(@Nullable final OrderSetBillingAddressCustomTypeAction template) {
         if (template == null) {
             return null;
         }
@@ -110,16 +117,16 @@ public interface OrderSetBillingAddressCustomTypeAction extends OrderUpdateActio
     public static OrderSetBillingAddressCustomTypeActionBuilder builder() {
         return OrderSetBillingAddressCustomTypeActionBuilder.of();
     }
-
+    
     /**
      * create builder for OrderSetBillingAddressCustomTypeAction instance
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static OrderSetBillingAddressCustomTypeActionBuilder builder(
-            final OrderSetBillingAddressCustomTypeAction template) {
+    public static OrderSetBillingAddressCustomTypeActionBuilder builder(final OrderSetBillingAddressCustomTypeAction template) {
         return OrderSetBillingAddressCustomTypeActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -127,11 +134,10 @@ public interface OrderSetBillingAddressCustomTypeAction extends OrderUpdateActio
      * @param helper function to map the object
      * @return mapped value
      */
-    default <T> T withOrderSetBillingAddressCustomTypeAction(
-            Function<OrderSetBillingAddressCustomTypeAction, T> helper) {
+    default <T> T withOrderSetBillingAddressCustomTypeAction(Function<OrderSetBillingAddressCustomTypeAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

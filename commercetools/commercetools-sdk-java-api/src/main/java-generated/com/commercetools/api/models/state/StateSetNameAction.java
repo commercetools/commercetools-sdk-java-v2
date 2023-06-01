@@ -1,19 +1,21 @@
-
 package com.commercetools.api.models.state;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
 import com.commercetools.api.models.common.LocalizedString;
+import com.commercetools.api.models.state.StateUpdateAction;
+import com.commercetools.api.models.state.StateSetNameActionImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * StateSetNameAction
@@ -26,9 +28,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .name(nameBuilder -> nameBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = StateSetNameActionImpl.class)
 public interface StateSetNameAction extends StateUpdateAction {
 
@@ -50,16 +55,18 @@ public interface StateSetNameAction extends StateUpdateAction {
      *  <p>Value to set. If empty, any existing value will be removed.</p>
      * @param name value to be set
      */
-
+    
     public void setName(final LocalizedString name);
+    
 
     /**
      * factory method
      * @return instance of StateSetNameAction
      */
-    public static StateSetNameAction of() {
+    public static StateSetNameAction of(){
         return new StateSetNameActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy StateSetNameAction
@@ -94,7 +101,7 @@ public interface StateSetNameAction extends StateUpdateAction {
     public static StateSetNameActionBuilder builder() {
         return StateSetNameActionBuilder.of();
     }
-
+    
     /**
      * create builder for StateSetNameAction instance
      * @param template instance with prefilled values for the builder
@@ -103,6 +110,7 @@ public interface StateSetNameAction extends StateUpdateAction {
     public static StateSetNameActionBuilder builder(final StateSetNameAction template) {
         return StateSetNameActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -113,7 +121,7 @@ public interface StateSetNameAction extends StateUpdateAction {
     default <T> T withStateSetNameAction(Function<StateSetNameAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

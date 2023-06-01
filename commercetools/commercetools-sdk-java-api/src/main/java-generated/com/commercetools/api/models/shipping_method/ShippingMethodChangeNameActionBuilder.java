@@ -1,8 +1,11 @@
-
 package com.commercetools.api.models.shipping_method;
 
+import com.commercetools.api.models.shipping_method.ShippingMethodUpdateAction;
+import com.commercetools.api.models.shipping_method.ShippingMethodChangeNameAction;
+import javax.annotation.Nullable;
 import java.util.*;
-
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -16,30 +19,39 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .name("{name}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class ShippingMethodChangeNameActionBuilder implements Builder<ShippingMethodChangeNameAction> {
 
+    
+    
     private String name;
 
+    
     /**
      *  <p>Value to set. Must not be empty.</p>
      * @param name value to be set
      * @return Builder
      */
-
-    public ShippingMethodChangeNameActionBuilder name(final String name) {
+    
+    public ShippingMethodChangeNameActionBuilder name( final String name) {
         this.name = name;
         return this;
     }
+    
+    
 
     /**
      *  <p>Value to set. Must not be empty.</p>
      * @return name
      */
-
-    public String getName() {
+    
+    
+    public String getName(){
         return this.name;
     }
 
@@ -51,7 +63,7 @@ public class ShippingMethodChangeNameActionBuilder implements Builder<ShippingMe
         Objects.requireNonNull(name, ShippingMethodChangeNameAction.class + ": name is missing");
         return new ShippingMethodChangeNameActionImpl(name);
     }
-
+    
     /**
      * builds ShippingMethodChangeNameAction without checking for non-null required values
      * @return ShippingMethodChangeNameAction
@@ -62,7 +74,7 @@ public class ShippingMethodChangeNameActionBuilder implements Builder<ShippingMe
 
     /**
      * factory method for an instance of ShippingMethodChangeNameActionBuilder
-     * @return builder
+     * @return builder 
      */
     public static ShippingMethodChangeNameActionBuilder of() {
         return new ShippingMethodChangeNameActionBuilder();

@@ -1,23 +1,24 @@
-
 package com.commercetools.api.models.message;
-
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-import java.util.stream.Collectors;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.cart.DiscountedLineItemPriceForQuantity;
 import com.commercetools.api.models.cart.MethodTaxedPrice;
 import com.commercetools.api.models.cart.TaxedItemPrice;
 import com.commercetools.api.models.common.Money;
+import com.commercetools.api.models.message.OrderMessage;
+import com.commercetools.api.models.message.OrderLineItemDiscountSetMessageImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Generated after a successful recalculation of a Discount on a Line Item.</p>
@@ -40,9 +41,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .plusTaxedPricePortions(taxedPricePortionsBuilder -> taxedPricePortionsBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = OrderLineItemDiscountSetMessageImpl.class)
 public interface OrderLineItemDiscountSetMessage extends OrderMessage {
 
@@ -58,7 +62,6 @@ public interface OrderLineItemDiscountSetMessage extends OrderMessage {
     @NotNull
     @JsonProperty("lineItemId")
     public String getLineItemId();
-
     /**
      *  <p>Array of DiscountedLineItemPriceForQuantity after the Discount recalculation.</p>
      * @return discountedPricePerQuantity
@@ -67,7 +70,6 @@ public interface OrderLineItemDiscountSetMessage extends OrderMessage {
     @Valid
     @JsonProperty("discountedPricePerQuantity")
     public List<DiscountedLineItemPriceForQuantity> getDiscountedPricePerQuantity();
-
     /**
      *  <p>Total Price of the Line Item after the Discount recalculation.</p>
      * @return totalPrice
@@ -76,7 +78,6 @@ public interface OrderLineItemDiscountSetMessage extends OrderMessage {
     @Valid
     @JsonProperty("totalPrice")
     public Money getTotalPrice();
-
     /**
      *  <p>TaxedItemPrice of the Line Item after the Discount recalculation.</p>
      * @return taxedPrice
@@ -84,7 +85,6 @@ public interface OrderLineItemDiscountSetMessage extends OrderMessage {
     @Valid
     @JsonProperty("taxedPrice")
     public TaxedItemPrice getTaxedPrice();
-
     /**
      *  <p>Taxed price of the Shipping Methods in a Cart with <code>Multi</code> ShippingMode.</p>
      * @return taxedPricePortions
@@ -98,61 +98,62 @@ public interface OrderLineItemDiscountSetMessage extends OrderMessage {
      *  <p>Unique identifier for the Line Item.</p>
      * @param lineItemId value to be set
      */
-
+    
     public void setLineItemId(final String lineItemId);
-
+    
+    
     /**
      *  <p>Array of DiscountedLineItemPriceForQuantity after the Discount recalculation.</p>
      * @param discountedPricePerQuantity values to be set
      */
-
+    
     @JsonIgnore
-    public void setDiscountedPricePerQuantity(final DiscountedLineItemPriceForQuantity... discountedPricePerQuantity);
-
+    public void setDiscountedPricePerQuantity(final DiscountedLineItemPriceForQuantity ...discountedPricePerQuantity);
     /**
      *  <p>Array of DiscountedLineItemPriceForQuantity after the Discount recalculation.</p>
      * @param discountedPricePerQuantity values to be set
      */
-
-    public void setDiscountedPricePerQuantity(
-            final List<DiscountedLineItemPriceForQuantity> discountedPricePerQuantity);
-
+    
+    public void setDiscountedPricePerQuantity(final List<DiscountedLineItemPriceForQuantity> discountedPricePerQuantity);
+    
     /**
      *  <p>Total Price of the Line Item after the Discount recalculation.</p>
      * @param totalPrice value to be set
      */
-
+    
     public void setTotalPrice(final Money totalPrice);
-
+    
+    
     /**
      *  <p>TaxedItemPrice of the Line Item after the Discount recalculation.</p>
      * @param taxedPrice value to be set
      */
-
+    
     public void setTaxedPrice(final TaxedItemPrice taxedPrice);
-
+    
+    
     /**
      *  <p>Taxed price of the Shipping Methods in a Cart with <code>Multi</code> ShippingMode.</p>
      * @param taxedPricePortions values to be set
      */
-
+    
     @JsonIgnore
-    public void setTaxedPricePortions(final MethodTaxedPrice... taxedPricePortions);
-
+    public void setTaxedPricePortions(final MethodTaxedPrice ...taxedPricePortions);
     /**
      *  <p>Taxed price of the Shipping Methods in a Cart with <code>Multi</code> ShippingMode.</p>
      * @param taxedPricePortions values to be set
      */
-
+    
     public void setTaxedPricePortions(final List<MethodTaxedPrice> taxedPricePortions);
 
     /**
      * factory method
      * @return instance of OrderLineItemDiscountSetMessage
      */
-    public static OrderLineItemDiscountSetMessage of() {
+    public static OrderLineItemDiscountSetMessage of(){
         return new OrderLineItemDiscountSetMessageImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy OrderLineItemDiscountSetMessage
@@ -194,26 +195,20 @@ public interface OrderLineItemDiscountSetMessage extends OrderMessage {
         instance.setVersion(template.getVersion());
         instance.setCreatedAt(template.getCreatedAt());
         instance.setLastModifiedAt(template.getLastModifiedAt());
-        instance.setLastModifiedBy(
-            com.commercetools.api.models.common.LastModifiedBy.deepCopy(template.getLastModifiedBy()));
+        instance.setLastModifiedBy(com.commercetools.api.models.common.LastModifiedBy.deepCopy(template.getLastModifiedBy()));
         instance.setCreatedBy(com.commercetools.api.models.common.CreatedBy.deepCopy(template.getCreatedBy()));
         instance.setSequenceNumber(template.getSequenceNumber());
         instance.setResource(com.commercetools.api.models.common.Reference.deepCopy(template.getResource()));
         instance.setResourceVersion(template.getResourceVersion());
-        instance.setResourceUserProvidedIdentifiers(com.commercetools.api.models.message.UserProvidedIdentifiers
-                .deepCopy(template.getResourceUserProvidedIdentifiers()));
+        instance.setResourceUserProvidedIdentifiers(com.commercetools.api.models.message.UserProvidedIdentifiers.deepCopy(template.getResourceUserProvidedIdentifiers()));
         instance.setLineItemId(template.getLineItemId());
         instance.setDiscountedPricePerQuantity(Optional.ofNullable(template.getDiscountedPricePerQuantity())
-                .map(t -> t.stream()
-                        .map(com.commercetools.api.models.cart.DiscountedLineItemPriceForQuantity::deepCopy)
-                        .collect(Collectors.toList()))
+                .map(t -> t.stream().map(com.commercetools.api.models.cart.DiscountedLineItemPriceForQuantity::deepCopy).collect(Collectors.toList()))
                 .orElse(null));
         instance.setTotalPrice(com.commercetools.api.models.common.Money.deepCopy(template.getTotalPrice()));
         instance.setTaxedPrice(com.commercetools.api.models.cart.TaxedItemPrice.deepCopy(template.getTaxedPrice()));
         instance.setTaxedPricePortions(Optional.ofNullable(template.getTaxedPricePortions())
-                .map(t -> t.stream()
-                        .map(com.commercetools.api.models.cart.MethodTaxedPrice::deepCopy)
-                        .collect(Collectors.toList()))
+                .map(t -> t.stream().map(com.commercetools.api.models.cart.MethodTaxedPrice::deepCopy).collect(Collectors.toList()))
                 .orElse(null));
         return instance;
     }
@@ -225,7 +220,7 @@ public interface OrderLineItemDiscountSetMessage extends OrderMessage {
     public static OrderLineItemDiscountSetMessageBuilder builder() {
         return OrderLineItemDiscountSetMessageBuilder.of();
     }
-
+    
     /**
      * create builder for OrderLineItemDiscountSetMessage instance
      * @param template instance with prefilled values for the builder
@@ -234,6 +229,7 @@ public interface OrderLineItemDiscountSetMessage extends OrderMessage {
     public static OrderLineItemDiscountSetMessageBuilder builder(final OrderLineItemDiscountSetMessage template) {
         return OrderLineItemDiscountSetMessageBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -244,7 +240,7 @@ public interface OrderLineItemDiscountSetMessage extends OrderMessage {
     default <T> T withOrderLineItemDiscountSetMessage(Function<OrderLineItemDiscountSetMessage, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

@@ -1,11 +1,11 @@
-
 package com.commercetools.api.predicates.query.common;
-
-import java.util.function.Function;
 
 import com.commercetools.api.predicates.query.*;
 
-public class PriceTierDraftQueryBuilderDsl {
+import java.util.function.Function;
+
+
+public class PriceTierDraftQueryBuilderDsl  {
     public PriceTierDraftQueryBuilderDsl() {
     }
 
@@ -14,18 +14,16 @@ public class PriceTierDraftQueryBuilderDsl {
     }
 
     public LongComparisonPredicateBuilder<PriceTierDraftQueryBuilderDsl> minimumQuantity() {
-        return new LongComparisonPredicateBuilder<>(
-            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("minimumQuantity")),
-            p -> new CombinationQueryPredicate<>(p, PriceTierDraftQueryBuilderDsl::of));
+        return new LongComparisonPredicateBuilder<>(BinaryQueryPredicate.of().left(new ConstantQueryPredicate("minimumQuantity")),
+        p -> new CombinationQueryPredicate<>(p, PriceTierDraftQueryBuilderDsl::of));
     }
-
     public CombinationQueryPredicate<PriceTierDraftQueryBuilderDsl> value(
-            Function<com.commercetools.api.predicates.query.common.MoneyQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.common.MoneyQueryBuilderDsl>> fn) {
-        return new CombinationQueryPredicate<>(
-            ContainerQueryPredicate.of()
-                    .parent(ConstantQueryPredicate.of().constant("value"))
-                    .inner(fn.apply(com.commercetools.api.predicates.query.common.MoneyQueryBuilderDsl.of())),
+        Function<com.commercetools.api.predicates.query.common.MoneyQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.common.MoneyQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(ContainerQueryPredicate.of()
+            .parent(ConstantQueryPredicate.of().constant("value"))
+            .inner(fn.apply(com.commercetools.api.predicates.query.common.MoneyQueryBuilderDsl.of())),
             PriceTierDraftQueryBuilderDsl::of);
     }
-
+    
+    
 }

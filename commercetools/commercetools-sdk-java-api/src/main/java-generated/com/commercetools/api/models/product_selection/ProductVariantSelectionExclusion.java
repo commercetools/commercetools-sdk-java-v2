@@ -1,17 +1,21 @@
-
 package com.commercetools.api.models.product_selection;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
+import com.commercetools.api.models.product_selection.ProductVariantSelection;
+import com.commercetools.api.models.product_selection.ProductVariantSelectionTypeEnum;
+import com.commercetools.api.models.product_selection.ProductVariantSelectionExclusionImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>All Product Variants except the explicitly stated SKUs are part of the Product Selection.</p>
@@ -24,9 +28,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .plusSkus(skusBuilder -> skusBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = ProductVariantSelectionExclusionImpl.class)
 @Deprecated
 public interface ProductVariantSelectionExclusion extends ProductVariantSelection {
@@ -43,7 +50,6 @@ public interface ProductVariantSelectionExclusion extends ProductVariantSelectio
     @NotNull
     @JsonProperty("type")
     public ProductVariantSelectionTypeEnum getType();
-
     /**
      *  <p>Non-empty array of SKUs representing Product Variants to be excluded from the Product Selection.</p>
      * @return skus
@@ -56,24 +62,24 @@ public interface ProductVariantSelectionExclusion extends ProductVariantSelectio
      *  <p>Non-empty array of SKUs representing Product Variants to be excluded from the Product Selection.</p>
      * @param skus values to be set
      */
-
+    
     @JsonIgnore
-    public void setSkus(final String... skus);
-
+    public void setSkus(final String ...skus);
     /**
      *  <p>Non-empty array of SKUs representing Product Variants to be excluded from the Product Selection.</p>
      * @param skus values to be set
      */
-
+    
     public void setSkus(final List<String> skus);
 
     /**
      * factory method
      * @return instance of ProductVariantSelectionExclusion
      */
-    public static ProductVariantSelectionExclusion of() {
+    public static ProductVariantSelectionExclusion of(){
         return new ProductVariantSelectionExclusionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy ProductVariantSelectionExclusion
@@ -97,7 +103,9 @@ public interface ProductVariantSelectionExclusion extends ProductVariantSelectio
             return null;
         }
         ProductVariantSelectionExclusionImpl instance = new ProductVariantSelectionExclusionImpl();
-        instance.setSkus(Optional.ofNullable(template.getSkus()).map(ArrayList::new).orElse(null));
+        instance.setSkus(Optional.ofNullable(template.getSkus())
+                .map(ArrayList::new)
+                .orElse(null));
         return instance;
     }
 
@@ -108,7 +116,7 @@ public interface ProductVariantSelectionExclusion extends ProductVariantSelectio
     public static ProductVariantSelectionExclusionBuilder builder() {
         return ProductVariantSelectionExclusionBuilder.of();
     }
-
+    
     /**
      * create builder for ProductVariantSelectionExclusion instance
      * @param template instance with prefilled values for the builder
@@ -117,6 +125,7 @@ public interface ProductVariantSelectionExclusion extends ProductVariantSelectio
     public static ProductVariantSelectionExclusionBuilder builder(final ProductVariantSelectionExclusion template) {
         return ProductVariantSelectionExclusionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -127,7 +136,7 @@ public interface ProductVariantSelectionExclusion extends ProductVariantSelectio
     default <T> T withProductVariantSelectionExclusion(Function<ProductVariantSelectionExclusion, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

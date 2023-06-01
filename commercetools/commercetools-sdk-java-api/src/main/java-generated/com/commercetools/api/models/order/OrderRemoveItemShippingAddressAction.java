@@ -1,17 +1,20 @@
-
 package com.commercetools.api.models.order;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
+import com.commercetools.api.models.order.OrderUpdateAction;
+import com.commercetools.api.models.order.OrderRemoveItemShippingAddressActionImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * OrderRemoveItemShippingAddressAction
@@ -24,9 +27,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .addressKey("{addressKey}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = OrderRemoveItemShippingAddressActionImpl.class)
 public interface OrderRemoveItemShippingAddressAction extends OrderUpdateAction {
 
@@ -47,16 +53,18 @@ public interface OrderRemoveItemShippingAddressAction extends OrderUpdateAction 
      * set addressKey
      * @param addressKey value to be set
      */
-
+    
     public void setAddressKey(final String addressKey);
+    
 
     /**
      * factory method
      * @return instance of OrderRemoveItemShippingAddressAction
      */
-    public static OrderRemoveItemShippingAddressAction of() {
+    public static OrderRemoveItemShippingAddressAction of(){
         return new OrderRemoveItemShippingAddressActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy OrderRemoveItemShippingAddressAction
@@ -75,8 +83,7 @@ public interface OrderRemoveItemShippingAddressAction extends OrderUpdateAction 
      * @return copy instance
      */
     @Nullable
-    public static OrderRemoveItemShippingAddressAction deepCopy(
-            @Nullable final OrderRemoveItemShippingAddressAction template) {
+    public static OrderRemoveItemShippingAddressAction deepCopy(@Nullable final OrderRemoveItemShippingAddressAction template) {
         if (template == null) {
             return null;
         }
@@ -92,16 +99,16 @@ public interface OrderRemoveItemShippingAddressAction extends OrderUpdateAction 
     public static OrderRemoveItemShippingAddressActionBuilder builder() {
         return OrderRemoveItemShippingAddressActionBuilder.of();
     }
-
+    
     /**
      * create builder for OrderRemoveItemShippingAddressAction instance
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static OrderRemoveItemShippingAddressActionBuilder builder(
-            final OrderRemoveItemShippingAddressAction template) {
+    public static OrderRemoveItemShippingAddressActionBuilder builder(final OrderRemoveItemShippingAddressAction template) {
         return OrderRemoveItemShippingAddressActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -112,7 +119,7 @@ public interface OrderRemoveItemShippingAddressAction extends OrderUpdateAction 
     default <T> T withOrderRemoveItemShippingAddressAction(Function<OrderRemoveItemShippingAddressAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

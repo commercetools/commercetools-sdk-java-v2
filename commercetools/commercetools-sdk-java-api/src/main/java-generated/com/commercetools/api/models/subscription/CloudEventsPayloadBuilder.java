@@ -1,11 +1,12 @@
-
 package com.commercetools.api.models.subscription;
 
+import com.commercetools.api.models.subscription.DeliveryPayload;
+import java.time.ZonedDateTime;
+import com.commercetools.api.models.subscription.CloudEventsPayload;
+import javax.annotation.Nullable;
 import java.util.*;
 import java.util.function.Function;
-
-import javax.annotation.Nullable;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -25,246 +26,302 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .data(dataBuilder -> dataBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class CloudEventsPayloadBuilder implements Builder<CloudEventsPayload> {
 
+    
+    
     private String specversion;
-
+    
+    
+    
     private String id;
-
+    
+    
+    
     private String type;
-
+    
+    
+    
     private String source;
-
+    
+    
+    
     private String subject;
-
+    
+    
+    
     private java.time.ZonedDateTime time;
-
+    
+    
     @Nullable
     private String sequence;
-
+    
+    
     @Nullable
     private String sequencetype;
-
+    
+    
     @Nullable
     private String dataref;
-
+    
+    
+    
     private com.commercetools.api.models.subscription.DeliveryPayload data;
 
+    
     /**
      *  <p>The version of the CloudEvents specification which the event uses.</p>
      * @param specversion value to be set
      * @return Builder
      */
-
-    public CloudEventsPayloadBuilder specversion(final String specversion) {
+    
+    public CloudEventsPayloadBuilder specversion( final String specversion) {
         this.specversion = specversion;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Unique identifier of the event.</p>
      * @param id value to be set
      * @return Builder
      */
-
-    public CloudEventsPayloadBuilder id(final String id) {
+    
+    public CloudEventsPayloadBuilder id( final String id) {
         this.id = id;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>The <code>type</code> is namespaced with <code>com.commercetools</code>, followed by the ReferenceTypeId, the type of Subscription (either <code>message</code> or <code>change</code>), and the message or change type. For example, <code>com.commercetools.product.message.ProductPublished</code> or <code>com.commercetools.order.change.ResourceCreated</code>.</p>
      * @param type value to be set
      * @return Builder
      */
-
-    public CloudEventsPayloadBuilder type(final String type) {
+    
+    public CloudEventsPayloadBuilder type( final String type) {
         this.type = type;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>The default REST URI of the ReferenceTypeId that triggered this event, including the project key.</p>
      * @param source value to be set
      * @return Builder
      */
-
-    public CloudEventsPayloadBuilder source(final String source) {
+    
+    public CloudEventsPayloadBuilder source( final String source) {
         this.source = source;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Unique identifier of the resource that triggered the event.</p>
      * @param subject value to be set
      * @return Builder
      */
-
-    public CloudEventsPayloadBuilder subject(final String subject) {
+    
+    public CloudEventsPayloadBuilder subject( final String subject) {
         this.subject = subject;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Corresponds to the <code>lastModifiedAt</code> of the resource at the time the event was triggered.</p>
      * @param time value to be set
      * @return Builder
      */
-
-    public CloudEventsPayloadBuilder time(final java.time.ZonedDateTime time) {
+    
+    public CloudEventsPayloadBuilder time( final java.time.ZonedDateTime time) {
         this.time = time;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Corresponds to the <code>sequenceNumber</code> of a MessageSubscription. Can be used to process messages in the correct order.</p>
      * @param sequence value to be set
      * @return Builder
      */
-
+    
     public CloudEventsPayloadBuilder sequence(@Nullable final String sequence) {
         this.sequence = sequence;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p><code>"Integer"</code></p>
      * @param sequencetype value to be set
      * @return Builder
      */
-
+    
     public CloudEventsPayloadBuilder sequencetype(@Nullable final String sequencetype) {
         this.sequencetype = sequencetype;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>The URI from which the message can be retrieved if messages are enabled. Only set for MessageSubscriptions.</p>
      * @param dataref value to be set
      * @return Builder
      */
-
+    
     public CloudEventsPayloadBuilder dataref(@Nullable final String dataref) {
         this.dataref = dataref;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>MessageDeliveryPayload, ResourceCreatedDeliveryPayload, ResourceUpdatedDeliveryPayload, or ResourceDeletedDeliveryPayload.</p>
      * @param data value to be set
      * @return Builder
      */
-
-    public CloudEventsPayloadBuilder data(final com.commercetools.api.models.subscription.DeliveryPayload data) {
+    
+    public CloudEventsPayloadBuilder data( final com.commercetools.api.models.subscription.DeliveryPayload data) {
         this.data = data;
         return this;
     }
-
+    
+    
     /**
      *  <p>MessageDeliveryPayload, ResourceCreatedDeliveryPayload, ResourceUpdatedDeliveryPayload, or ResourceDeletedDeliveryPayload.</p>
      * @param builder function to build the data value
      * @return Builder
      */
-
-    public CloudEventsPayloadBuilder data(
-            Function<com.commercetools.api.models.subscription.DeliveryPayloadBuilder, Builder<? extends com.commercetools.api.models.subscription.DeliveryPayload>> builder) {
+    
+    public CloudEventsPayloadBuilder data(Function<com.commercetools.api.models.subscription.DeliveryPayloadBuilder, Builder<? extends com.commercetools.api.models.subscription.DeliveryPayload>> builder) {
         this.data = builder.apply(com.commercetools.api.models.subscription.DeliveryPayloadBuilder.of()).build();
         return this;
     }
+                    
 
     /**
      *  <p>The version of the CloudEvents specification which the event uses.</p>
      * @return specversion
      */
-
-    public String getSpecversion() {
+    
+    
+    public String getSpecversion(){
         return this.specversion;
     }
-
+    
     /**
      *  <p>Unique identifier of the event.</p>
      * @return id
      */
-
-    public String getId() {
+    
+    
+    public String getId(){
         return this.id;
     }
-
+    
     /**
      *  <p>The <code>type</code> is namespaced with <code>com.commercetools</code>, followed by the ReferenceTypeId, the type of Subscription (either <code>message</code> or <code>change</code>), and the message or change type. For example, <code>com.commercetools.product.message.ProductPublished</code> or <code>com.commercetools.order.change.ResourceCreated</code>.</p>
      * @return type
      */
-
-    public String getType() {
+    
+    
+    public String getType(){
         return this.type;
     }
-
+    
     /**
      *  <p>The default REST URI of the ReferenceTypeId that triggered this event, including the project key.</p>
      * @return source
      */
-
-    public String getSource() {
+    
+    
+    public String getSource(){
         return this.source;
     }
-
+    
     /**
      *  <p>Unique identifier of the resource that triggered the event.</p>
      * @return subject
      */
-
-    public String getSubject() {
+    
+    
+    public String getSubject(){
         return this.subject;
     }
-
+    
     /**
      *  <p>Corresponds to the <code>lastModifiedAt</code> of the resource at the time the event was triggered.</p>
      * @return time
      */
-
-    public java.time.ZonedDateTime getTime() {
+    
+    
+    public java.time.ZonedDateTime getTime(){
         return this.time;
     }
-
+    
     /**
      *  <p>Corresponds to the <code>sequenceNumber</code> of a MessageSubscription. Can be used to process messages in the correct order.</p>
      * @return sequence
      */
-
+    
     @Nullable
-    public String getSequence() {
+    public String getSequence(){
         return this.sequence;
     }
-
+    
     /**
      *  <p><code>"Integer"</code></p>
      * @return sequencetype
      */
-
+    
     @Nullable
-    public String getSequencetype() {
+    public String getSequencetype(){
         return this.sequencetype;
     }
-
+    
     /**
      *  <p>The URI from which the message can be retrieved if messages are enabled. Only set for MessageSubscriptions.</p>
      * @return dataref
      */
-
+    
     @Nullable
-    public String getDataref() {
+    public String getDataref(){
         return this.dataref;
     }
-
+    
     /**
      *  <p>MessageDeliveryPayload, ResourceCreatedDeliveryPayload, ResourceUpdatedDeliveryPayload, or ResourceDeletedDeliveryPayload.</p>
      * @return data
      */
-
-    public com.commercetools.api.models.subscription.DeliveryPayload getData() {
+    
+    
+    public com.commercetools.api.models.subscription.DeliveryPayload getData(){
         return this.data;
     }
 
@@ -280,22 +337,20 @@ public class CloudEventsPayloadBuilder implements Builder<CloudEventsPayload> {
         Objects.requireNonNull(subject, CloudEventsPayload.class + ": subject is missing");
         Objects.requireNonNull(time, CloudEventsPayload.class + ": time is missing");
         Objects.requireNonNull(data, CloudEventsPayload.class + ": data is missing");
-        return new CloudEventsPayloadImpl(specversion, id, type, source, subject, time, sequence, sequencetype, dataref,
-            data);
+        return new CloudEventsPayloadImpl(specversion, id, type, source, subject, time, sequence, sequencetype, dataref, data);
     }
-
+    
     /**
      * builds CloudEventsPayload without checking for non-null required values
      * @return CloudEventsPayload
      */
     public CloudEventsPayload buildUnchecked() {
-        return new CloudEventsPayloadImpl(specversion, id, type, source, subject, time, sequence, sequencetype, dataref,
-            data);
+        return new CloudEventsPayloadImpl(specversion, id, type, source, subject, time, sequence, sequencetype, dataref, data);
     }
 
     /**
      * factory method for an instance of CloudEventsPayloadBuilder
-     * @return builder
+     * @return builder 
      */
     public static CloudEventsPayloadBuilder of() {
         return new CloudEventsPayloadBuilder();

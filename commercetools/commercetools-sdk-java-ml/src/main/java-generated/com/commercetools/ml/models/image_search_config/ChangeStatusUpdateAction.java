@@ -1,17 +1,21 @@
-
 package com.commercetools.ml.models.image_search_config;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
+import com.commercetools.ml.models.image_search_config.ImageSearchConfigStatus;
+import com.commercetools.ml.models.image_search_config.ImageSearchConfigUpdateAction;
+import com.commercetools.ml.models.image_search_config.ChangeStatusUpdateActionImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * ChangeStatusUpdateAction
@@ -24,9 +28,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .status(ImageSearchConfigStatus.ON)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = ChangeStatusUpdateActionImpl.class)
 public interface ChangeStatusUpdateAction extends ImageSearchConfigUpdateAction {
 
@@ -47,16 +54,18 @@ public interface ChangeStatusUpdateAction extends ImageSearchConfigUpdateAction 
      * set status
      * @param status value to be set
      */
-
+    
     public void setStatus(final ImageSearchConfigStatus status);
+    
 
     /**
      * factory method
      * @return instance of ChangeStatusUpdateAction
      */
-    public static ChangeStatusUpdateAction of() {
+    public static ChangeStatusUpdateAction of(){
         return new ChangeStatusUpdateActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy ChangeStatusUpdateAction
@@ -91,7 +100,7 @@ public interface ChangeStatusUpdateAction extends ImageSearchConfigUpdateAction 
     public static ChangeStatusUpdateActionBuilder builder() {
         return ChangeStatusUpdateActionBuilder.of();
     }
-
+    
     /**
      * create builder for ChangeStatusUpdateAction instance
      * @param template instance with prefilled values for the builder
@@ -100,6 +109,7 @@ public interface ChangeStatusUpdateAction extends ImageSearchConfigUpdateAction 
     public static ChangeStatusUpdateActionBuilder builder(final ChangeStatusUpdateAction template) {
         return ChangeStatusUpdateActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -110,7 +120,7 @@ public interface ChangeStatusUpdateAction extends ImageSearchConfigUpdateAction 
     default <T> T withChangeStatusUpdateAction(Function<ChangeStatusUpdateAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

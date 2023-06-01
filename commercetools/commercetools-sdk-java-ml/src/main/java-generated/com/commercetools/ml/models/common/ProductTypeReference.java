@@ -1,16 +1,21 @@
-
 package com.commercetools.ml.models.common;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
+import com.commercetools.ml.models.common.Reference;
+import com.commercetools.ml.models.common.ReferenceTypeId;
+import com.commercetools.ml.models.common.ProductTypeReferenceImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * ProductTypeReference
@@ -23,9 +28,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .id("{id}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = ProductTypeReferenceImpl.class)
 public interface ProductTypeReference extends Reference {
 
@@ -34,13 +42,16 @@ public interface ProductTypeReference extends Reference {
      */
     String PRODUCT_TYPE = "product-type";
 
+
+
     /**
      * factory method
      * @return instance of ProductTypeReference
      */
-    public static ProductTypeReference of() {
+    public static ProductTypeReference of(){
         return new ProductTypeReferenceImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy ProductTypeReference
@@ -75,7 +86,7 @@ public interface ProductTypeReference extends Reference {
     public static ProductTypeReferenceBuilder builder() {
         return ProductTypeReferenceBuilder.of();
     }
-
+    
     /**
      * create builder for ProductTypeReference instance
      * @param template instance with prefilled values for the builder
@@ -84,6 +95,7 @@ public interface ProductTypeReference extends Reference {
     public static ProductTypeReferenceBuilder builder(final ProductTypeReference template) {
         return ProductTypeReferenceBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -94,7 +106,7 @@ public interface ProductTypeReference extends Reference {
     default <T> T withProductTypeReference(Function<ProductTypeReference, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

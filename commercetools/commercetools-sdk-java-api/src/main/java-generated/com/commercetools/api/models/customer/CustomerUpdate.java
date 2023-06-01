@@ -1,19 +1,20 @@
-
 package com.commercetools.api.models.customer;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-import java.util.stream.Collectors;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
+import com.commercetools.api.models.customer.CustomerUpdateAction;
+import com.commercetools.api.models.customer.CustomerUpdateImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * CustomerUpdate
@@ -27,12 +28,15 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .plusActions(actionsBuilder -> actionsBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = CustomerUpdateImpl.class)
-public interface CustomerUpdate extends
-        com.commercetools.api.models.ResourceUpdate<CustomerUpdate, CustomerUpdateAction, CustomerUpdateBuilder> {
+public interface CustomerUpdate extends com.commercetools.api.models.ResourceUpdate<CustomerUpdate, CustomerUpdateAction, CustomerUpdateBuilder> {
+
 
     /**
      *  <p>Expected version of the Customer on which the changes should be applied. If the expected version does not match the actual version, a 409 Conflict error will be returned.</p>
@@ -41,7 +45,6 @@ public interface CustomerUpdate extends
     @NotNull
     @JsonProperty("version")
     public Long getVersion();
-
     /**
      *  <p>Update actions to be performed on the Customer.</p>
      * @return actions
@@ -55,31 +58,32 @@ public interface CustomerUpdate extends
      *  <p>Expected version of the Customer on which the changes should be applied. If the expected version does not match the actual version, a 409 Conflict error will be returned.</p>
      * @param version value to be set
      */
-
+    
     public void setVersion(final Long version);
-
+    
+    
     /**
      *  <p>Update actions to be performed on the Customer.</p>
      * @param actions values to be set
      */
-
+    
     @JsonIgnore
-    public void setActions(final CustomerUpdateAction... actions);
-
+    public void setActions(final CustomerUpdateAction ...actions);
     /**
      *  <p>Update actions to be performed on the Customer.</p>
      * @param actions values to be set
      */
-
+    
     public void setActions(final List<CustomerUpdateAction> actions);
 
     /**
      * factory method
      * @return instance of CustomerUpdate
      */
-    public static CustomerUpdate of() {
+    public static CustomerUpdate of(){
         return new CustomerUpdateImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy CustomerUpdate
@@ -106,9 +110,7 @@ public interface CustomerUpdate extends
         CustomerUpdateImpl instance = new CustomerUpdateImpl();
         instance.setVersion(template.getVersion());
         instance.setActions(Optional.ofNullable(template.getActions())
-                .map(t -> t.stream()
-                        .map(com.commercetools.api.models.customer.CustomerUpdateAction::deepCopy)
-                        .collect(Collectors.toList()))
+                .map(t -> t.stream().map(com.commercetools.api.models.customer.CustomerUpdateAction::deepCopy).collect(Collectors.toList()))
                 .orElse(null));
         return instance;
     }
@@ -120,7 +122,7 @@ public interface CustomerUpdate extends
     public static CustomerUpdateBuilder builder() {
         return CustomerUpdateBuilder.of();
     }
-
+    
     /**
      * create builder for CustomerUpdate instance
      * @param template instance with prefilled values for the builder
@@ -129,6 +131,7 @@ public interface CustomerUpdate extends
     public static CustomerUpdateBuilder builder(final CustomerUpdate template) {
         return CustomerUpdateBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -139,7 +142,7 @@ public interface CustomerUpdate extends
     default <T> T withCustomerUpdate(Function<CustomerUpdate, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

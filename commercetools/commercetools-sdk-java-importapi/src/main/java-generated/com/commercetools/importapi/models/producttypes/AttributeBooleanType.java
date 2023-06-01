@@ -1,16 +1,20 @@
-
 package com.commercetools.importapi.models.producttypes;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
+import com.commercetools.importapi.models.producttypes.AttributeType;
+import com.commercetools.importapi.models.producttypes.AttributeBooleanTypeImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * AttributeBooleanType
@@ -22,9 +26,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     AttributeBooleanType attributeBooleanType = AttributeBooleanType.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = AttributeBooleanTypeImpl.class)
 public interface AttributeBooleanType extends AttributeType {
 
@@ -33,13 +40,16 @@ public interface AttributeBooleanType extends AttributeType {
      */
     String BOOLEAN = "boolean";
 
+
+
     /**
      * factory method
      * @return instance of AttributeBooleanType
      */
-    public static AttributeBooleanType of() {
+    public static AttributeBooleanType of(){
         return new AttributeBooleanTypeImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy AttributeBooleanType
@@ -72,7 +82,7 @@ public interface AttributeBooleanType extends AttributeType {
     public static AttributeBooleanTypeBuilder builder() {
         return AttributeBooleanTypeBuilder.of();
     }
-
+    
     /**
      * create builder for AttributeBooleanType instance
      * @param template instance with prefilled values for the builder
@@ -81,6 +91,7 @@ public interface AttributeBooleanType extends AttributeType {
     public static AttributeBooleanTypeBuilder builder(final AttributeBooleanType template) {
         return AttributeBooleanTypeBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -91,7 +102,7 @@ public interface AttributeBooleanType extends AttributeType {
     default <T> T withAttributeBooleanType(Function<AttributeBooleanType, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

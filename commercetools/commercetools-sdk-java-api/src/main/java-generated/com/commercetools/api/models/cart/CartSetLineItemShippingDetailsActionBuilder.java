@@ -1,11 +1,12 @@
-
 package com.commercetools.api.models.cart;
 
+import com.commercetools.api.models.cart.CartUpdateAction;
+import com.commercetools.api.models.cart.ItemShippingDetailsDraft;
+import com.commercetools.api.models.cart.CartSetLineItemShippingDetailsAction;
+import javax.annotation.Nullable;
 import java.util.*;
 import java.util.function.Function;
-
-import javax.annotation.Nullable;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -19,80 +20,89 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .lineItemId("{lineItemId}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class CartSetLineItemShippingDetailsActionBuilder implements Builder<CartSetLineItemShippingDetailsAction> {
 
+    
+    
     private String lineItemId;
-
+    
+    
     @Nullable
     private com.commercetools.api.models.cart.ItemShippingDetailsDraft shippingDetails;
 
+    
     /**
      *  <p><code>id</code> of the LineItem to update.</p>
      * @param lineItemId value to be set
      * @return Builder
      */
-
-    public CartSetLineItemShippingDetailsActionBuilder lineItemId(final String lineItemId) {
+    
+    public CartSetLineItemShippingDetailsActionBuilder lineItemId( final String lineItemId) {
         this.lineItemId = lineItemId;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Value to set. If empty, the existing value is removed.</p>
      * @param builder function to build the shippingDetails value
      * @return Builder
      */
-
-    public CartSetLineItemShippingDetailsActionBuilder shippingDetails(
-            Function<com.commercetools.api.models.cart.ItemShippingDetailsDraftBuilder, com.commercetools.api.models.cart.ItemShippingDetailsDraftBuilder> builder) {
-        this.shippingDetails = builder.apply(com.commercetools.api.models.cart.ItemShippingDetailsDraftBuilder.of())
-                .build();
+    
+    public CartSetLineItemShippingDetailsActionBuilder shippingDetails(Function<com.commercetools.api.models.cart.ItemShippingDetailsDraftBuilder, com.commercetools.api.models.cart.ItemShippingDetailsDraftBuilder> builder) {
+        this.shippingDetails = builder.apply(com.commercetools.api.models.cart.ItemShippingDetailsDraftBuilder.of()).build();
         return this;
     }
-
+    
     /**
      *  <p>Value to set. If empty, the existing value is removed.</p>
      * @param builder function to build the shippingDetails value
      * @return Builder
      */
-
-    public CartSetLineItemShippingDetailsActionBuilder withShippingDetails(
-            Function<com.commercetools.api.models.cart.ItemShippingDetailsDraftBuilder, com.commercetools.api.models.cart.ItemShippingDetailsDraft> builder) {
+    
+    public CartSetLineItemShippingDetailsActionBuilder withShippingDetails(Function<com.commercetools.api.models.cart.ItemShippingDetailsDraftBuilder, com.commercetools.api.models.cart.ItemShippingDetailsDraft> builder) {
         this.shippingDetails = builder.apply(com.commercetools.api.models.cart.ItemShippingDetailsDraftBuilder.of());
         return this;
     }
-
+                    
     /**
      *  <p>Value to set. If empty, the existing value is removed.</p>
      * @param shippingDetails value to be set
      * @return Builder
      */
-
-    public CartSetLineItemShippingDetailsActionBuilder shippingDetails(
-            @Nullable final com.commercetools.api.models.cart.ItemShippingDetailsDraft shippingDetails) {
+    
+    public CartSetLineItemShippingDetailsActionBuilder shippingDetails(@Nullable final com.commercetools.api.models.cart.ItemShippingDetailsDraft shippingDetails) {
         this.shippingDetails = shippingDetails;
         return this;
     }
+    
+    
 
     /**
      *  <p><code>id</code> of the LineItem to update.</p>
      * @return lineItemId
      */
-
-    public String getLineItemId() {
+    
+    
+    public String getLineItemId(){
         return this.lineItemId;
     }
-
+    
     /**
      *  <p>Value to set. If empty, the existing value is removed.</p>
      * @return shippingDetails
      */
-
+    
     @Nullable
-    public com.commercetools.api.models.cart.ItemShippingDetailsDraft getShippingDetails() {
+    public com.commercetools.api.models.cart.ItemShippingDetailsDraft getShippingDetails(){
         return this.shippingDetails;
     }
 
@@ -104,7 +114,7 @@ public class CartSetLineItemShippingDetailsActionBuilder implements Builder<Cart
         Objects.requireNonNull(lineItemId, CartSetLineItemShippingDetailsAction.class + ": lineItemId is missing");
         return new CartSetLineItemShippingDetailsActionImpl(lineItemId, shippingDetails);
     }
-
+    
     /**
      * builds CartSetLineItemShippingDetailsAction without checking for non-null required values
      * @return CartSetLineItemShippingDetailsAction
@@ -115,7 +125,7 @@ public class CartSetLineItemShippingDetailsActionBuilder implements Builder<Cart
 
     /**
      * factory method for an instance of CartSetLineItemShippingDetailsActionBuilder
-     * @return builder
+     * @return builder 
      */
     public static CartSetLineItemShippingDetailsActionBuilder of() {
         return new CartSetLineItemShippingDetailsActionBuilder();

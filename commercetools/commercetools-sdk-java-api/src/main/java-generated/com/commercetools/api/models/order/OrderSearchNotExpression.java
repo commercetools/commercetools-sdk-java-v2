@@ -1,19 +1,21 @@
-
 package com.commercetools.api.models.order;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-import java.util.stream.Collectors;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
+import com.commercetools.api.models.order.OrderSearchCompoundExpression;
+import com.commercetools.api.models.order.OrderSearchQuery;
+import com.commercetools.api.models.order.OrderSearchNotExpressionImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * OrderSearchNotExpression
@@ -26,11 +28,15 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .plusNot(notBuilder -> notBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = OrderSearchNotExpressionImpl.class)
 public interface OrderSearchNotExpression extends OrderSearchCompoundExpression {
+
 
     /**
      *
@@ -45,24 +51,24 @@ public interface OrderSearchNotExpression extends OrderSearchCompoundExpression 
      * set not
      * @param not values to be set
      */
-
+    
     @JsonIgnore
-    public void setNot(final OrderSearchQuery... not);
-
+    public void setNot(final OrderSearchQuery ...not);
     /**
      * set not
      * @param not values to be set
      */
-
+    
     public void setNot(final List<OrderSearchQuery> not);
 
     /**
      * factory method
      * @return instance of OrderSearchNotExpression
      */
-    public static OrderSearchNotExpression of() {
+    public static OrderSearchNotExpression of(){
         return new OrderSearchNotExpressionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy OrderSearchNotExpression
@@ -87,9 +93,7 @@ public interface OrderSearchNotExpression extends OrderSearchCompoundExpression 
         }
         OrderSearchNotExpressionImpl instance = new OrderSearchNotExpressionImpl();
         instance.setNot(Optional.ofNullable(template.getNot())
-                .map(t -> t.stream()
-                        .map(com.commercetools.api.models.order.OrderSearchQuery::deepCopy)
-                        .collect(Collectors.toList()))
+                .map(t -> t.stream().map(com.commercetools.api.models.order.OrderSearchQuery::deepCopy).collect(Collectors.toList()))
                 .orElse(null));
         return instance;
     }
@@ -101,7 +105,7 @@ public interface OrderSearchNotExpression extends OrderSearchCompoundExpression 
     public static OrderSearchNotExpressionBuilder builder() {
         return OrderSearchNotExpressionBuilder.of();
     }
-
+    
     /**
      * create builder for OrderSearchNotExpression instance
      * @param template instance with prefilled values for the builder
@@ -110,6 +114,7 @@ public interface OrderSearchNotExpression extends OrderSearchCompoundExpression 
     public static OrderSearchNotExpressionBuilder builder(final OrderSearchNotExpression template) {
         return OrderSearchNotExpressionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -120,7 +125,7 @@ public interface OrderSearchNotExpression extends OrderSearchCompoundExpression 
     default <T> T withOrderSearchNotExpression(Function<OrderSearchNotExpression, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

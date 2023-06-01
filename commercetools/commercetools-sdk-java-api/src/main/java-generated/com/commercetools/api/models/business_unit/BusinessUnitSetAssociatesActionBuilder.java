@@ -1,9 +1,12 @@
-
 package com.commercetools.api.models.business_unit;
 
+import com.commercetools.api.models.business_unit.AssociateDraft;
+import com.commercetools.api.models.business_unit.BusinessUnitUpdateAction;
+import com.commercetools.api.models.business_unit.BusinessUnitSetAssociatesAction;
+import javax.annotation.Nullable;
 import java.util.*;
 import java.util.function.Function;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -17,11 +20,16 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .plusAssociates(associatesBuilder -> associatesBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class BusinessUnitSetAssociatesActionBuilder implements Builder<BusinessUnitSetAssociatesAction> {
 
+    
+    
     private java.util.List<com.commercetools.api.models.business_unit.AssociateDraft> associates;
 
     /**
@@ -29,98 +37,93 @@ public class BusinessUnitSetAssociatesActionBuilder implements Builder<BusinessU
      * @param associates value to be set
      * @return Builder
      */
-
-    public BusinessUnitSetAssociatesActionBuilder associates(
-            final com.commercetools.api.models.business_unit.AssociateDraft... associates) {
+    
+    public BusinessUnitSetAssociatesActionBuilder associates( final com.commercetools.api.models.business_unit.AssociateDraft ...associates) {
         this.associates = new ArrayList<>(Arrays.asList(associates));
         return this;
     }
-
+    
     /**
      *  <p>The new list of Associates. If not provided, any existing list is removed.</p>
      * @param associates value to be set
      * @return Builder
      */
-
-    public BusinessUnitSetAssociatesActionBuilder associates(
-            final java.util.List<com.commercetools.api.models.business_unit.AssociateDraft> associates) {
+    
+    public BusinessUnitSetAssociatesActionBuilder associates( final java.util.List<com.commercetools.api.models.business_unit.AssociateDraft> associates) {
         this.associates = associates;
         return this;
     }
-
+    
     /**
      *  <p>The new list of Associates. If not provided, any existing list is removed.</p>
      * @param associates value to be set
      * @return Builder
      */
-
-    public BusinessUnitSetAssociatesActionBuilder plusAssociates(
-            final com.commercetools.api.models.business_unit.AssociateDraft... associates) {
+    
+    public BusinessUnitSetAssociatesActionBuilder plusAssociates( final com.commercetools.api.models.business_unit.AssociateDraft ...associates) {
         if (this.associates == null) {
             this.associates = new ArrayList<>();
         }
         this.associates.addAll(Arrays.asList(associates));
         return this;
     }
-
+    
+    
+    
     /**
      *  <p>The new list of Associates. If not provided, any existing list is removed.</p>
      * @param builder function to build the associates value
      * @return Builder
      */
-
-    public BusinessUnitSetAssociatesActionBuilder plusAssociates(
-            Function<com.commercetools.api.models.business_unit.AssociateDraftBuilder, com.commercetools.api.models.business_unit.AssociateDraftBuilder> builder) {
+    
+    public BusinessUnitSetAssociatesActionBuilder plusAssociates(Function<com.commercetools.api.models.business_unit.AssociateDraftBuilder, com.commercetools.api.models.business_unit.AssociateDraftBuilder> builder) {
         if (this.associates == null) {
             this.associates = new ArrayList<>();
         }
-        this.associates
-                .add(builder.apply(com.commercetools.api.models.business_unit.AssociateDraftBuilder.of()).build());
+        this.associates.add(builder.apply(com.commercetools.api.models.business_unit.AssociateDraftBuilder.of()).build());
         return this;
     }
-
+    
     /**
      *  <p>The new list of Associates. If not provided, any existing list is removed.</p>
      * @param builder function to build the associates value
      * @return Builder
      */
-
-    public BusinessUnitSetAssociatesActionBuilder withAssociates(
-            Function<com.commercetools.api.models.business_unit.AssociateDraftBuilder, com.commercetools.api.models.business_unit.AssociateDraftBuilder> builder) {
+    
+    public BusinessUnitSetAssociatesActionBuilder withAssociates(Function<com.commercetools.api.models.business_unit.AssociateDraftBuilder, com.commercetools.api.models.business_unit.AssociateDraftBuilder> builder) {
         this.associates = new ArrayList<>();
-        this.associates
-                .add(builder.apply(com.commercetools.api.models.business_unit.AssociateDraftBuilder.of()).build());
+        this.associates.add(builder.apply(com.commercetools.api.models.business_unit.AssociateDraftBuilder.of()).build());
         return this;
     }
-
+    
     /**
      *  <p>The new list of Associates. If not provided, any existing list is removed.</p>
      * @param builder function to build the associates value
      * @return Builder
      */
-
-    public BusinessUnitSetAssociatesActionBuilder addAssociates(
-            Function<com.commercetools.api.models.business_unit.AssociateDraftBuilder, com.commercetools.api.models.business_unit.AssociateDraft> builder) {
+    
+    public BusinessUnitSetAssociatesActionBuilder addAssociates(Function<com.commercetools.api.models.business_unit.AssociateDraftBuilder, com.commercetools.api.models.business_unit.AssociateDraft> builder) {
         return plusAssociates(builder.apply(com.commercetools.api.models.business_unit.AssociateDraftBuilder.of()));
     }
-
+    
     /**
      *  <p>The new list of Associates. If not provided, any existing list is removed.</p>
      * @param builder function to build the associates value
      * @return Builder
      */
-
-    public BusinessUnitSetAssociatesActionBuilder setAssociates(
-            Function<com.commercetools.api.models.business_unit.AssociateDraftBuilder, com.commercetools.api.models.business_unit.AssociateDraft> builder) {
+    
+    public BusinessUnitSetAssociatesActionBuilder setAssociates(Function<com.commercetools.api.models.business_unit.AssociateDraftBuilder, com.commercetools.api.models.business_unit.AssociateDraft> builder) {
         return associates(builder.apply(com.commercetools.api.models.business_unit.AssociateDraftBuilder.of()));
     }
+                    
 
     /**
      *  <p>The new list of Associates. If not provided, any existing list is removed.</p>
      * @return associates
      */
-
-    public java.util.List<com.commercetools.api.models.business_unit.AssociateDraft> getAssociates() {
+    
+    
+    public java.util.List<com.commercetools.api.models.business_unit.AssociateDraft> getAssociates(){
         return this.associates;
     }
 
@@ -132,7 +135,7 @@ public class BusinessUnitSetAssociatesActionBuilder implements Builder<BusinessU
         Objects.requireNonNull(associates, BusinessUnitSetAssociatesAction.class + ": associates is missing");
         return new BusinessUnitSetAssociatesActionImpl(associates);
     }
-
+    
     /**
      * builds BusinessUnitSetAssociatesAction without checking for non-null required values
      * @return BusinessUnitSetAssociatesAction
@@ -143,7 +146,7 @@ public class BusinessUnitSetAssociatesActionBuilder implements Builder<BusinessU
 
     /**
      * factory method for an instance of BusinessUnitSetAssociatesActionBuilder
-     * @return builder
+     * @return builder 
      */
     public static BusinessUnitSetAssociatesActionBuilder of() {
         return new BusinessUnitSetAssociatesActionBuilder();

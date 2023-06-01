@@ -1,8 +1,11 @@
-
 package com.commercetools.api.models.product_type;
 
+import com.commercetools.api.models.product_type.ProductTypeUpdateAction;
+import com.commercetools.api.models.product_type.ProductTypeRemoveEnumValuesAction;
+import javax.annotation.Nullable;
 import java.util.*;
-
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -17,77 +20,92 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .plusKeys(keysBuilder -> keysBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class ProductTypeRemoveEnumValuesActionBuilder implements Builder<ProductTypeRemoveEnumValuesAction> {
 
+    
+    
     private String attributeName;
-
+    
+    
+    
     private java.util.List<String> keys;
 
+    
     /**
      *  <p>Name of the AttributeDefinition to update.</p>
      * @param attributeName value to be set
      * @return Builder
      */
-
-    public ProductTypeRemoveEnumValuesActionBuilder attributeName(final String attributeName) {
+    
+    public ProductTypeRemoveEnumValuesActionBuilder attributeName( final String attributeName) {
         this.attributeName = attributeName;
         return this;
     }
-
+    
+    
+    
     /**
      *  <p>Keys of AttributeEnumType or AttributeLocalizedEnumType to remove.</p>
      * @param keys value to be set
      * @return Builder
      */
-
-    public ProductTypeRemoveEnumValuesActionBuilder keys(final String... keys) {
+    
+    public ProductTypeRemoveEnumValuesActionBuilder keys( final String ...keys) {
         this.keys = new ArrayList<>(Arrays.asList(keys));
         return this;
     }
-
+    
     /**
      *  <p>Keys of AttributeEnumType or AttributeLocalizedEnumType to remove.</p>
      * @param keys value to be set
      * @return Builder
      */
-
-    public ProductTypeRemoveEnumValuesActionBuilder keys(final java.util.List<String> keys) {
+    
+    public ProductTypeRemoveEnumValuesActionBuilder keys( final java.util.List<String> keys) {
         this.keys = keys;
         return this;
     }
-
+    
     /**
      *  <p>Keys of AttributeEnumType or AttributeLocalizedEnumType to remove.</p>
      * @param keys value to be set
      * @return Builder
      */
-
-    public ProductTypeRemoveEnumValuesActionBuilder plusKeys(final String... keys) {
+    
+    public ProductTypeRemoveEnumValuesActionBuilder plusKeys( final String ...keys) {
         if (this.keys == null) {
             this.keys = new ArrayList<>();
         }
         this.keys.addAll(Arrays.asList(keys));
         return this;
     }
+    
+    
+    
 
     /**
      *  <p>Name of the AttributeDefinition to update.</p>
      * @return attributeName
      */
-
-    public String getAttributeName() {
+    
+    
+    public String getAttributeName(){
         return this.attributeName;
     }
-
+    
     /**
      *  <p>Keys of AttributeEnumType or AttributeLocalizedEnumType to remove.</p>
      * @return keys
      */
-
-    public java.util.List<String> getKeys() {
+    
+    
+    public java.util.List<String> getKeys(){
         return this.keys;
     }
 
@@ -100,7 +118,7 @@ public class ProductTypeRemoveEnumValuesActionBuilder implements Builder<Product
         Objects.requireNonNull(keys, ProductTypeRemoveEnumValuesAction.class + ": keys is missing");
         return new ProductTypeRemoveEnumValuesActionImpl(attributeName, keys);
     }
-
+    
     /**
      * builds ProductTypeRemoveEnumValuesAction without checking for non-null required values
      * @return ProductTypeRemoveEnumValuesAction
@@ -111,7 +129,7 @@ public class ProductTypeRemoveEnumValuesActionBuilder implements Builder<Product
 
     /**
      * factory method for an instance of ProductTypeRemoveEnumValuesActionBuilder
-     * @return builder
+     * @return builder 
      */
     public static ProductTypeRemoveEnumValuesActionBuilder of() {
         return new ProductTypeRemoveEnumValuesActionBuilder();

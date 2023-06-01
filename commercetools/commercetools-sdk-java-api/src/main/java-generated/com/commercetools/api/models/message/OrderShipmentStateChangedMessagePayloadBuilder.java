@@ -1,8 +1,12 @@
-
 package com.commercetools.api.models.message;
 
+import com.commercetools.api.models.message.OrderMessagePayload;
+import com.commercetools.api.models.order.ShipmentState;
+import com.commercetools.api.models.message.OrderShipmentStateChangedMessagePayload;
+import javax.annotation.Nullable;
 import java.util.*;
-
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -17,55 +21,67 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .oldShipmentState(ShipmentState.SHIPPED)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
-public class OrderShipmentStateChangedMessagePayloadBuilder
-        implements Builder<OrderShipmentStateChangedMessagePayload> {
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
+public class OrderShipmentStateChangedMessagePayloadBuilder implements Builder<OrderShipmentStateChangedMessagePayload> {
 
+    
+    
     private com.commercetools.api.models.order.ShipmentState shipmentState;
-
+    
+    
+    
     private com.commercetools.api.models.order.ShipmentState oldShipmentState;
 
+    
     /**
      *  <p>ShipmentState after the Change Shipment State update action.</p>
      * @param shipmentState value to be set
      * @return Builder
      */
-
-    public OrderShipmentStateChangedMessagePayloadBuilder shipmentState(
-            final com.commercetools.api.models.order.ShipmentState shipmentState) {
+    
+    public OrderShipmentStateChangedMessagePayloadBuilder shipmentState( final com.commercetools.api.models.order.ShipmentState shipmentState) {
         this.shipmentState = shipmentState;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>ShipmentState before the Change Shipment State update action.</p>
      * @param oldShipmentState value to be set
      * @return Builder
      */
-
-    public OrderShipmentStateChangedMessagePayloadBuilder oldShipmentState(
-            final com.commercetools.api.models.order.ShipmentState oldShipmentState) {
+    
+    public OrderShipmentStateChangedMessagePayloadBuilder oldShipmentState( final com.commercetools.api.models.order.ShipmentState oldShipmentState) {
         this.oldShipmentState = oldShipmentState;
         return this;
     }
+    
+    
 
     /**
      *  <p>ShipmentState after the Change Shipment State update action.</p>
      * @return shipmentState
      */
-
-    public com.commercetools.api.models.order.ShipmentState getShipmentState() {
+    
+    
+    public com.commercetools.api.models.order.ShipmentState getShipmentState(){
         return this.shipmentState;
     }
-
+    
     /**
      *  <p>ShipmentState before the Change Shipment State update action.</p>
      * @return oldShipmentState
      */
-
-    public com.commercetools.api.models.order.ShipmentState getOldShipmentState() {
+    
+    
+    public com.commercetools.api.models.order.ShipmentState getOldShipmentState(){
         return this.oldShipmentState;
     }
 
@@ -74,13 +90,11 @@ public class OrderShipmentStateChangedMessagePayloadBuilder
      * @return OrderShipmentStateChangedMessagePayload
      */
     public OrderShipmentStateChangedMessagePayload build() {
-        Objects.requireNonNull(shipmentState,
-            OrderShipmentStateChangedMessagePayload.class + ": shipmentState is missing");
-        Objects.requireNonNull(oldShipmentState,
-            OrderShipmentStateChangedMessagePayload.class + ": oldShipmentState is missing");
+        Objects.requireNonNull(shipmentState, OrderShipmentStateChangedMessagePayload.class + ": shipmentState is missing");
+        Objects.requireNonNull(oldShipmentState, OrderShipmentStateChangedMessagePayload.class + ": oldShipmentState is missing");
         return new OrderShipmentStateChangedMessagePayloadImpl(shipmentState, oldShipmentState);
     }
-
+    
     /**
      * builds OrderShipmentStateChangedMessagePayload without checking for non-null required values
      * @return OrderShipmentStateChangedMessagePayload
@@ -91,7 +105,7 @@ public class OrderShipmentStateChangedMessagePayloadBuilder
 
     /**
      * factory method for an instance of OrderShipmentStateChangedMessagePayloadBuilder
-     * @return builder
+     * @return builder 
      */
     public static OrderShipmentStateChangedMessagePayloadBuilder of() {
         return new OrderShipmentStateChangedMessagePayloadBuilder();
@@ -102,8 +116,7 @@ public class OrderShipmentStateChangedMessagePayloadBuilder
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static OrderShipmentStateChangedMessagePayloadBuilder of(
-            final OrderShipmentStateChangedMessagePayload template) {
+    public static OrderShipmentStateChangedMessagePayloadBuilder of(final OrderShipmentStateChangedMessagePayload template) {
         OrderShipmentStateChangedMessagePayloadBuilder builder = new OrderShipmentStateChangedMessagePayloadBuilder();
         builder.shipmentState = template.getShipmentState();
         builder.oldShipmentState = template.getOldShipmentState();

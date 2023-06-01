@@ -1,19 +1,21 @@
-
 package com.commercetools.importapi.models.importcontainers;
 
-import java.time.*;
-import java.time.ZonedDateTime;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
-
 import com.commercetools.importapi.models.common.ImportResourceType;
+import java.time.ZonedDateTime;
+import com.commercetools.importapi.models.importcontainers.ImportContainerImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Serves as the entry point of resources. An Import Container is not resource type-specific.</p>
@@ -29,11 +31,15 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .lastModifiedAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = ImportContainerImpl.class)
-public interface ImportContainer {
+public interface ImportContainer  {
+
 
     /**
      *  <p>User-defined unique identifier for the ImportContainer. Keys can only contain alphanumeric characters (a-Z, 0-9), underscores and hyphens (_, -).</p>
@@ -42,15 +48,13 @@ public interface ImportContainer {
     @NotNull
     @JsonProperty("key")
     public String getKey();
-
     /**
      *  <p>The resource type the ImportContainer is able to handle. If not present, the ImportContainer is able to import all of the supported ImportResourceTypes.</p>
      * @return resourceType
      */
-
+    
     @JsonProperty("resourceType")
     public ImportResourceType getResourceType();
-
     /**
      *  <p>The version of the ImportContainer.</p>
      * @return version
@@ -58,7 +62,6 @@ public interface ImportContainer {
     @NotNull
     @JsonProperty("version")
     public Long getVersion();
-
     /**
      *  <p>The time when the ImportContainer was created.</p>
      * @return createdAt
@@ -66,7 +69,6 @@ public interface ImportContainer {
     @NotNull
     @JsonProperty("createdAt")
     public ZonedDateTime getCreatedAt();
-
     /**
      *  <p>The last time when the ImportContainer was modified.</p>
      * @return lastModifiedAt
@@ -79,44 +81,50 @@ public interface ImportContainer {
      *  <p>User-defined unique identifier for the ImportContainer. Keys can only contain alphanumeric characters (a-Z, 0-9), underscores and hyphens (_, -).</p>
      * @param key value to be set
      */
-
+    
     public void setKey(final String key);
-
+    
+    
     /**
      *  <p>The resource type the ImportContainer is able to handle. If not present, the ImportContainer is able to import all of the supported ImportResourceTypes.</p>
      * @param resourceType value to be set
      */
-
+    
     public void setResourceType(final ImportResourceType resourceType);
-
+    
+    
     /**
      *  <p>The version of the ImportContainer.</p>
      * @param version value to be set
      */
-
+    
     public void setVersion(final Long version);
-
+    
+    
     /**
      *  <p>The time when the ImportContainer was created.</p>
      * @param createdAt value to be set
      */
-
+    
     public void setCreatedAt(final ZonedDateTime createdAt);
-
+    
+    
     /**
      *  <p>The last time when the ImportContainer was modified.</p>
      * @param lastModifiedAt value to be set
      */
-
+    
     public void setLastModifiedAt(final ZonedDateTime lastModifiedAt);
+    
 
     /**
      * factory method
      * @return instance of ImportContainer
      */
-    public static ImportContainer of() {
+    public static ImportContainer of(){
         return new ImportContainerImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy ImportContainer
@@ -159,7 +167,7 @@ public interface ImportContainer {
     public static ImportContainerBuilder builder() {
         return ImportContainerBuilder.of();
     }
-
+    
     /**
      * create builder for ImportContainer instance
      * @param template instance with prefilled values for the builder
@@ -168,6 +176,7 @@ public interface ImportContainer {
     public static ImportContainerBuilder builder(final ImportContainer template) {
         return ImportContainerBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -178,7 +187,7 @@ public interface ImportContainer {
     default <T> T withImportContainer(Function<ImportContainer, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

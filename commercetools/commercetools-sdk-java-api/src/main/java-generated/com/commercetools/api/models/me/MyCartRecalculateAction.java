@@ -1,16 +1,20 @@
-
 package com.commercetools.api.models.me;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
+import com.commercetools.api.models.me.MyCartUpdateAction;
+import com.commercetools.api.models.me.MyCartRecalculateActionImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>This update action does not set any Cart field in particular, but it triggers several Cart updates to bring prices and discounts to the latest state. Those can become stale over time when no Cart updates have been performed for a while and prices on related Products have changed in the meanwhile.</p>
@@ -23,9 +27,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     MyCartRecalculateAction myCartRecalculateAction = MyCartRecalculateAction.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = MyCartRecalculateActionImpl.class)
 public interface MyCartRecalculateAction extends MyCartUpdateAction {
 
@@ -41,7 +48,7 @@ public interface MyCartRecalculateAction extends MyCartUpdateAction {
      *  </ul>
      * @return updateProductData
      */
-
+    
     @JsonProperty("updateProductData")
     public Boolean getUpdateProductData();
 
@@ -52,16 +59,18 @@ public interface MyCartRecalculateAction extends MyCartUpdateAction {
      *  </ul>
      * @param updateProductData value to be set
      */
-
+    
     public void setUpdateProductData(final Boolean updateProductData);
+    
 
     /**
      * factory method
      * @return instance of MyCartRecalculateAction
      */
-    public static MyCartRecalculateAction of() {
+    public static MyCartRecalculateAction of(){
         return new MyCartRecalculateActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy MyCartRecalculateAction
@@ -96,7 +105,7 @@ public interface MyCartRecalculateAction extends MyCartUpdateAction {
     public static MyCartRecalculateActionBuilder builder() {
         return MyCartRecalculateActionBuilder.of();
     }
-
+    
     /**
      * create builder for MyCartRecalculateAction instance
      * @param template instance with prefilled values for the builder
@@ -105,6 +114,7 @@ public interface MyCartRecalculateAction extends MyCartUpdateAction {
     public static MyCartRecalculateActionBuilder builder(final MyCartRecalculateAction template) {
         return MyCartRecalculateActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -115,7 +125,7 @@ public interface MyCartRecalculateAction extends MyCartUpdateAction {
     default <T> T withMyCartRecalculateAction(Function<MyCartRecalculateAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

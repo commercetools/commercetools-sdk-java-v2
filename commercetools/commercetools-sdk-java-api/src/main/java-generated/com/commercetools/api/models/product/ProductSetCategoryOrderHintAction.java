@@ -1,17 +1,20 @@
-
 package com.commercetools.api.models.product;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
+import com.commercetools.api.models.product.ProductUpdateAction;
+import com.commercetools.api.models.product.ProductSetCategoryOrderHintActionImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * ProductSetCategoryOrderHintAction
@@ -24,9 +27,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .categoryId("{categoryId}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = ProductSetCategoryOrderHintActionImpl.class)
 public interface ProductSetCategoryOrderHintAction extends ProductUpdateAction {
 
@@ -42,20 +48,18 @@ public interface ProductSetCategoryOrderHintAction extends ProductUpdateAction {
     @NotNull
     @JsonProperty("categoryId")
     public String getCategoryId();
-
     /**
      *  <p>A string representing a number between 0 and 1. Must start with <code>0.</code> and cannot end with <code>0</code>. If empty, any existing value will be removed.</p>
      * @return orderHint
      */
-
+    
     @JsonProperty("orderHint")
     public String getOrderHint();
-
     /**
      *  <p>If <code>true</code>, only the staged <code>categoryOrderHints</code> is updated. If <code>false</code>, both the current and staged <code>categoryOrderHints</code> are updated.</p>
      * @return staged
      */
-
+    
     @JsonProperty("staged")
     public Boolean getStaged();
 
@@ -63,30 +67,34 @@ public interface ProductSetCategoryOrderHintAction extends ProductUpdateAction {
      *  <p>The <code>id</code> of the Category to add the <code>orderHint</code>.</p>
      * @param categoryId value to be set
      */
-
+    
     public void setCategoryId(final String categoryId);
-
+    
+    
     /**
      *  <p>A string representing a number between 0 and 1. Must start with <code>0.</code> and cannot end with <code>0</code>. If empty, any existing value will be removed.</p>
      * @param orderHint value to be set
      */
-
+    
     public void setOrderHint(final String orderHint);
-
+    
+    
     /**
      *  <p>If <code>true</code>, only the staged <code>categoryOrderHints</code> is updated. If <code>false</code>, both the current and staged <code>categoryOrderHints</code> are updated.</p>
      * @param staged value to be set
      */
-
+    
     public void setStaged(final Boolean staged);
+    
 
     /**
      * factory method
      * @return instance of ProductSetCategoryOrderHintAction
      */
-    public static ProductSetCategoryOrderHintAction of() {
+    public static ProductSetCategoryOrderHintAction of(){
         return new ProductSetCategoryOrderHintActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy ProductSetCategoryOrderHintAction
@@ -107,8 +115,7 @@ public interface ProductSetCategoryOrderHintAction extends ProductUpdateAction {
      * @return copy instance
      */
     @Nullable
-    public static ProductSetCategoryOrderHintAction deepCopy(
-            @Nullable final ProductSetCategoryOrderHintAction template) {
+    public static ProductSetCategoryOrderHintAction deepCopy(@Nullable final ProductSetCategoryOrderHintAction template) {
         if (template == null) {
             return null;
         }
@@ -126,7 +133,7 @@ public interface ProductSetCategoryOrderHintAction extends ProductUpdateAction {
     public static ProductSetCategoryOrderHintActionBuilder builder() {
         return ProductSetCategoryOrderHintActionBuilder.of();
     }
-
+    
     /**
      * create builder for ProductSetCategoryOrderHintAction instance
      * @param template instance with prefilled values for the builder
@@ -135,6 +142,7 @@ public interface ProductSetCategoryOrderHintAction extends ProductUpdateAction {
     public static ProductSetCategoryOrderHintActionBuilder builder(final ProductSetCategoryOrderHintAction template) {
         return ProductSetCategoryOrderHintActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -145,7 +153,7 @@ public interface ProductSetCategoryOrderHintAction extends ProductUpdateAction {
     default <T> T withProductSetCategoryOrderHintAction(Function<ProductSetCategoryOrderHintAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

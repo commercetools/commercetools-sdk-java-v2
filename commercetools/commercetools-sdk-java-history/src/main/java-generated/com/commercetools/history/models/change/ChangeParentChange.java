@@ -1,19 +1,21 @@
-
 package com.commercetools.history.models.change;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
+import com.commercetools.history.models.change.Change;
 import com.commercetools.history.models.common.Reference;
+import com.commercetools.history.models.change.ChangeParentChangeImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * ChangeParentChange
@@ -28,9 +30,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .nextValue(nextValueBuilder -> nextValueBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = ChangeParentChangeImpl.class)
 public interface ChangeParentChange extends Change {
 
@@ -46,7 +51,6 @@ public interface ChangeParentChange extends Change {
     @NotNull
     @JsonProperty("type")
     public String getType();
-
     /**
      *  <p>Shape of the action for <code>changeParent</code></p>
      * @return change
@@ -54,7 +58,6 @@ public interface ChangeParentChange extends Change {
     @NotNull
     @JsonProperty("change")
     public String getChange();
-
     /**
      *
      * @return previousValue
@@ -63,7 +66,6 @@ public interface ChangeParentChange extends Change {
     @Valid
     @JsonProperty("previousValue")
     public Reference getPreviousValue();
-
     /**
      *
      * @return nextValue
@@ -77,30 +79,34 @@ public interface ChangeParentChange extends Change {
      *  <p>Shape of the action for <code>changeParent</code></p>
      * @param change value to be set
      */
-
+    
     public void setChange(final String change);
-
+    
+    
     /**
      * set previousValue
      * @param previousValue value to be set
      */
-
+    
     public void setPreviousValue(final Reference previousValue);
-
+    
+    
     /**
      * set nextValue
      * @param nextValue value to be set
      */
-
+    
     public void setNextValue(final Reference nextValue);
+    
 
     /**
      * factory method
      * @return instance of ChangeParentChange
      */
-    public static ChangeParentChange of() {
+    public static ChangeParentChange of(){
         return new ChangeParentChangeImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy ChangeParentChange
@@ -127,8 +133,7 @@ public interface ChangeParentChange extends Change {
         }
         ChangeParentChangeImpl instance = new ChangeParentChangeImpl();
         instance.setChange(template.getChange());
-        instance.setPreviousValue(
-            com.commercetools.history.models.common.Reference.deepCopy(template.getPreviousValue()));
+        instance.setPreviousValue(com.commercetools.history.models.common.Reference.deepCopy(template.getPreviousValue()));
         instance.setNextValue(com.commercetools.history.models.common.Reference.deepCopy(template.getNextValue()));
         return instance;
     }
@@ -140,7 +145,7 @@ public interface ChangeParentChange extends Change {
     public static ChangeParentChangeBuilder builder() {
         return ChangeParentChangeBuilder.of();
     }
-
+    
     /**
      * create builder for ChangeParentChange instance
      * @param template instance with prefilled values for the builder
@@ -149,6 +154,7 @@ public interface ChangeParentChange extends Change {
     public static ChangeParentChangeBuilder builder(final ChangeParentChange template) {
         return ChangeParentChangeBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -159,7 +165,7 @@ public interface ChangeParentChange extends Change {
     default <T> T withChangeParentChange(Function<ChangeParentChange, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

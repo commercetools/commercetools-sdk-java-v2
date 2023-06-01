@@ -1,11 +1,12 @@
-
 package com.commercetools.api.models.order_edit;
 
+import com.commercetools.api.models.order.StagedOrderUpdateAction;
+import com.commercetools.api.models.state.StateResourceIdentifier;
+import com.commercetools.api.models.order_edit.StagedOrderTransitionStateAction;
+import javax.annotation.Nullable;
 import java.util.*;
 import java.util.function.Function;
-
-import javax.annotation.Nullable;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -19,79 +20,89 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .state(stateBuilder -> stateBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class StagedOrderTransitionStateActionBuilder implements Builder<StagedOrderTransitionStateAction> {
 
+    
+    
     private com.commercetools.api.models.state.StateResourceIdentifier state;
-
+    
+    
     @Nullable
     private Boolean force;
 
+    
     /**
      *  <p>ResourceIdentifier to a State.</p>
      * @param builder function to build the state value
      * @return Builder
      */
-
-    public StagedOrderTransitionStateActionBuilder state(
-            Function<com.commercetools.api.models.state.StateResourceIdentifierBuilder, com.commercetools.api.models.state.StateResourceIdentifierBuilder> builder) {
+    
+    public StagedOrderTransitionStateActionBuilder state(Function<com.commercetools.api.models.state.StateResourceIdentifierBuilder, com.commercetools.api.models.state.StateResourceIdentifierBuilder> builder) {
         this.state = builder.apply(com.commercetools.api.models.state.StateResourceIdentifierBuilder.of()).build();
         return this;
     }
-
+    
     /**
      *  <p>ResourceIdentifier to a State.</p>
      * @param builder function to build the state value
      * @return Builder
      */
-
-    public StagedOrderTransitionStateActionBuilder withState(
-            Function<com.commercetools.api.models.state.StateResourceIdentifierBuilder, com.commercetools.api.models.state.StateResourceIdentifier> builder) {
+    
+    public StagedOrderTransitionStateActionBuilder withState(Function<com.commercetools.api.models.state.StateResourceIdentifierBuilder, com.commercetools.api.models.state.StateResourceIdentifier> builder) {
         this.state = builder.apply(com.commercetools.api.models.state.StateResourceIdentifierBuilder.of());
         return this;
     }
-
+                    
     /**
      *  <p>ResourceIdentifier to a State.</p>
      * @param state value to be set
      * @return Builder
      */
-
-    public StagedOrderTransitionStateActionBuilder state(
-            final com.commercetools.api.models.state.StateResourceIdentifier state) {
+    
+    public StagedOrderTransitionStateActionBuilder state( final com.commercetools.api.models.state.StateResourceIdentifier state) {
         this.state = state;
         return this;
     }
-
+    
+    
+    
+    
     /**
      * set the value to the force
      * @param force value to be set
      * @return Builder
      */
-
+    
     public StagedOrderTransitionStateActionBuilder force(@Nullable final Boolean force) {
         this.force = force;
         return this;
     }
+    
+    
 
     /**
      *  <p>ResourceIdentifier to a State.</p>
      * @return state
      */
-
-    public com.commercetools.api.models.state.StateResourceIdentifier getState() {
+    
+    
+    public com.commercetools.api.models.state.StateResourceIdentifier getState(){
         return this.state;
     }
-
+    
     /**
      * value of force}
      * @return force
      */
-
+    
     @Nullable
-    public Boolean getForce() {
+    public Boolean getForce(){
         return this.force;
     }
 
@@ -103,7 +114,7 @@ public class StagedOrderTransitionStateActionBuilder implements Builder<StagedOr
         Objects.requireNonNull(state, StagedOrderTransitionStateAction.class + ": state is missing");
         return new StagedOrderTransitionStateActionImpl(state, force);
     }
-
+    
     /**
      * builds StagedOrderTransitionStateAction without checking for non-null required values
      * @return StagedOrderTransitionStateAction
@@ -114,7 +125,7 @@ public class StagedOrderTransitionStateActionBuilder implements Builder<StagedOr
 
     /**
      * factory method for an instance of StagedOrderTransitionStateActionBuilder
-     * @return builder
+     * @return builder 
      */
     public static StagedOrderTransitionStateActionBuilder of() {
         return new StagedOrderTransitionStateActionBuilder();

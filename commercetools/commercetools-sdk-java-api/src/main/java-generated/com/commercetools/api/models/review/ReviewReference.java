@@ -1,19 +1,22 @@
-
 package com.commercetools.api.models.review;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
 import com.commercetools.api.models.common.Reference;
+import com.commercetools.api.models.common.ReferenceTypeId;
+import com.commercetools.api.models.review.Review;
+import com.commercetools.api.models.review.ReviewReferenceImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Reference to a Review.</p>
@@ -26,9 +29,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .id("{id}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = ReviewReferenceImpl.class)
 public interface ReviewReference extends Reference, com.commercetools.api.models.Identifiable<Review> {
 
@@ -44,7 +50,6 @@ public interface ReviewReference extends Reference, com.commercetools.api.models
     @Valid
     @JsonProperty("obj")
     public Review getObj();
-
     /**
      *  <p>Unique identifier of the referenced Review.</p>
      * @return id
@@ -57,23 +62,26 @@ public interface ReviewReference extends Reference, com.commercetools.api.models
      *  <p>Contains the representation of the expanded Review. Only present in responses to requests with Reference Expansion for Reviews.</p>
      * @param obj value to be set
      */
-
+    
     public void setObj(final Review obj);
-
+    
+    
     /**
      *  <p>Unique identifier of the referenced Review.</p>
      * @param id value to be set
      */
-
+    
     public void setId(final String id);
+    
 
     /**
      * factory method
      * @return instance of ReviewReference
      */
-    public static ReviewReference of() {
+    public static ReviewReference of(){
         return new ReviewReferenceImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy ReviewReference
@@ -110,7 +118,7 @@ public interface ReviewReference extends Reference, com.commercetools.api.models
     public static ReviewReferenceBuilder builder() {
         return ReviewReferenceBuilder.of();
     }
-
+    
     /**
      * create builder for ReviewReference instance
      * @param template instance with prefilled values for the builder
@@ -119,6 +127,7 @@ public interface ReviewReference extends Reference, com.commercetools.api.models
     public static ReviewReferenceBuilder builder(final ReviewReference template) {
         return ReviewReferenceBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -129,7 +138,7 @@ public interface ReviewReference extends Reference, com.commercetools.api.models
     default <T> T withReviewReference(Function<ReviewReference, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

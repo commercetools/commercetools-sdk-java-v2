@@ -1,9 +1,12 @@
-
 package com.commercetools.api.models.cart;
 
+import com.commercetools.api.models.cart.CartUpdateAction;
+import com.commercetools.api.models.discount_code.DiscountCodeReference;
+import com.commercetools.api.models.cart.CartRemoveDiscountCodeAction;
+import javax.annotation.Nullable;
 import java.util.*;
 import java.util.function.Function;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -17,56 +20,61 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .discountCode(discountCodeBuilder -> discountCodeBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class CartRemoveDiscountCodeActionBuilder implements Builder<CartRemoveDiscountCodeAction> {
 
+    
+    
     private com.commercetools.api.models.discount_code.DiscountCodeReference discountCode;
 
+    
     /**
      *  <p>Discount Code to remove from the Cart.</p>
      * @param builder function to build the discountCode value
      * @return Builder
      */
-
-    public CartRemoveDiscountCodeActionBuilder discountCode(
-            Function<com.commercetools.api.models.discount_code.DiscountCodeReferenceBuilder, com.commercetools.api.models.discount_code.DiscountCodeReferenceBuilder> builder) {
-        this.discountCode = builder.apply(com.commercetools.api.models.discount_code.DiscountCodeReferenceBuilder.of())
-                .build();
+    
+    public CartRemoveDiscountCodeActionBuilder discountCode(Function<com.commercetools.api.models.discount_code.DiscountCodeReferenceBuilder, com.commercetools.api.models.discount_code.DiscountCodeReferenceBuilder> builder) {
+        this.discountCode = builder.apply(com.commercetools.api.models.discount_code.DiscountCodeReferenceBuilder.of()).build();
         return this;
     }
-
+    
     /**
      *  <p>Discount Code to remove from the Cart.</p>
      * @param builder function to build the discountCode value
      * @return Builder
      */
-
-    public CartRemoveDiscountCodeActionBuilder withDiscountCode(
-            Function<com.commercetools.api.models.discount_code.DiscountCodeReferenceBuilder, com.commercetools.api.models.discount_code.DiscountCodeReference> builder) {
+    
+    public CartRemoveDiscountCodeActionBuilder withDiscountCode(Function<com.commercetools.api.models.discount_code.DiscountCodeReferenceBuilder, com.commercetools.api.models.discount_code.DiscountCodeReference> builder) {
         this.discountCode = builder.apply(com.commercetools.api.models.discount_code.DiscountCodeReferenceBuilder.of());
         return this;
     }
-
+                    
     /**
      *  <p>Discount Code to remove from the Cart.</p>
      * @param discountCode value to be set
      * @return Builder
      */
-
-    public CartRemoveDiscountCodeActionBuilder discountCode(
-            final com.commercetools.api.models.discount_code.DiscountCodeReference discountCode) {
+    
+    public CartRemoveDiscountCodeActionBuilder discountCode( final com.commercetools.api.models.discount_code.DiscountCodeReference discountCode) {
         this.discountCode = discountCode;
         return this;
     }
+    
+    
 
     /**
      *  <p>Discount Code to remove from the Cart.</p>
      * @return discountCode
      */
-
-    public com.commercetools.api.models.discount_code.DiscountCodeReference getDiscountCode() {
+    
+    
+    public com.commercetools.api.models.discount_code.DiscountCodeReference getDiscountCode(){
         return this.discountCode;
     }
 
@@ -78,7 +86,7 @@ public class CartRemoveDiscountCodeActionBuilder implements Builder<CartRemoveDi
         Objects.requireNonNull(discountCode, CartRemoveDiscountCodeAction.class + ": discountCode is missing");
         return new CartRemoveDiscountCodeActionImpl(discountCode);
     }
-
+    
     /**
      * builds CartRemoveDiscountCodeAction without checking for non-null required values
      * @return CartRemoveDiscountCodeAction
@@ -89,7 +97,7 @@ public class CartRemoveDiscountCodeActionBuilder implements Builder<CartRemoveDi
 
     /**
      * factory method for an instance of CartRemoveDiscountCodeActionBuilder
-     * @return builder
+     * @return builder 
      */
     public static CartRemoveDiscountCodeActionBuilder of() {
         return new CartRemoveDiscountCodeActionBuilder();

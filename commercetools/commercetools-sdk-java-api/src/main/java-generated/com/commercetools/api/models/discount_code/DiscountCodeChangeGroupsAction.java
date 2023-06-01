@@ -1,17 +1,20 @@
-
 package com.commercetools.api.models.discount_code;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
+import com.commercetools.api.models.discount_code.DiscountCodeUpdateAction;
+import com.commercetools.api.models.discount_code.DiscountCodeChangeGroupsActionImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * DiscountCodeChangeGroupsAction
@@ -24,9 +27,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .plusGroups(groupsBuilder -> groupsBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = DiscountCodeChangeGroupsActionImpl.class)
 public interface DiscountCodeChangeGroupsAction extends DiscountCodeUpdateAction {
 
@@ -47,24 +53,24 @@ public interface DiscountCodeChangeGroupsAction extends DiscountCodeUpdateAction
      *  <p>New value to set. An empty array removes the DiscountCode from all groups.</p>
      * @param groups values to be set
      */
-
+    
     @JsonIgnore
-    public void setGroups(final String... groups);
-
+    public void setGroups(final String ...groups);
     /**
      *  <p>New value to set. An empty array removes the DiscountCode from all groups.</p>
      * @param groups values to be set
      */
-
+    
     public void setGroups(final List<String> groups);
 
     /**
      * factory method
      * @return instance of DiscountCodeChangeGroupsAction
      */
-    public static DiscountCodeChangeGroupsAction of() {
+    public static DiscountCodeChangeGroupsAction of(){
         return new DiscountCodeChangeGroupsActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy DiscountCodeChangeGroupsAction
@@ -88,7 +94,9 @@ public interface DiscountCodeChangeGroupsAction extends DiscountCodeUpdateAction
             return null;
         }
         DiscountCodeChangeGroupsActionImpl instance = new DiscountCodeChangeGroupsActionImpl();
-        instance.setGroups(Optional.ofNullable(template.getGroups()).map(ArrayList::new).orElse(null));
+        instance.setGroups(Optional.ofNullable(template.getGroups())
+                .map(ArrayList::new)
+                .orElse(null));
         return instance;
     }
 
@@ -99,7 +107,7 @@ public interface DiscountCodeChangeGroupsAction extends DiscountCodeUpdateAction
     public static DiscountCodeChangeGroupsActionBuilder builder() {
         return DiscountCodeChangeGroupsActionBuilder.of();
     }
-
+    
     /**
      * create builder for DiscountCodeChangeGroupsAction instance
      * @param template instance with prefilled values for the builder
@@ -108,6 +116,7 @@ public interface DiscountCodeChangeGroupsAction extends DiscountCodeUpdateAction
     public static DiscountCodeChangeGroupsActionBuilder builder(final DiscountCodeChangeGroupsAction template) {
         return DiscountCodeChangeGroupsActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -118,7 +127,7 @@ public interface DiscountCodeChangeGroupsAction extends DiscountCodeUpdateAction
     default <T> T withDiscountCodeChangeGroupsAction(Function<DiscountCodeChangeGroupsAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

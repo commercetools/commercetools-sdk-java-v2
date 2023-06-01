@@ -1,32 +1,33 @@
-
 package com.commercetools.api.models.state;
-
-import java.util.Arrays;
-import java.util.Optional;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-
+import java.lang.String;
+import java.util.Arrays;
+import java.util.Optional;
 import io.vrap.rmf.base.client.JsonEnum;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
  *  <p>For some resource types, a State can fulfill the following predefined roles:</p>
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public interface StateRoleEnum extends JsonEnum {
 
     /**
     	<p>If a <a href="ctp:api:type:Review">Review's</a> <code>state</code> has this role its <code>rating</code> is taken into account for <a href="ctp:api:type:ReviewRatingStatistics">ReviewRatingStatistics</a>. This role only applies for the <code>ReviewState</code> <a href="ctp:api:type:StateTypeEnum">StateTypeEnum</a>.</p>
-
+    	
     */
     StateRoleEnum REVIEW_INCLUDED_IN_STATISTICS = StateRoleEnumEnum.REVIEW_INCLUDED_IN_STATISTICS;
     /**
     	<p>Used by <a href="ctp:api:type:Order">Orders</a> in the update action <a href="ctp:api:type:OrderTransitionLineItemStateAction">transitionLineItemState</a>. This role only applies for the <code>LineItemState</code> <a href="ctp:api:type:StateTypeEnum">StateTypeEnum</a>.</p>
-
+    	
     */
     StateRoleEnum RETURN = StateRoleEnumEnum.RETURN;
-
+    
     /**
      * possible values of StateRoleEnum
      */
@@ -35,7 +36,7 @@ public interface StateRoleEnum extends JsonEnum {
          * ReviewIncludedInStatistics
          */
         REVIEW_INCLUDED_IN_STATISTICS("ReviewIncludedInStatistics"),
-
+        
         /**
          * Return
          */
@@ -92,7 +93,7 @@ public interface StateRoleEnum extends JsonEnum {
             public String name() {
                 return value.toUpperCase();
             }
-
+            
             public String toString() {
                 return value;
             }
@@ -107,7 +108,7 @@ public interface StateRoleEnum extends JsonEnum {
     public static Optional<StateRoleEnum> findEnumViaJsonName(String jsonName) {
         return Arrays.stream(values()).filter(t -> t.getJsonName().equals(jsonName)).findFirst();
     }
-
+    
     /**
      * possible enum values
      * @return array of possible enum values
@@ -115,5 +116,5 @@ public interface StateRoleEnum extends JsonEnum {
     public static StateRoleEnum[] values() {
         return StateRoleEnumEnum.values();
     }
-
+    
 }

@@ -1,9 +1,12 @@
-
 package com.commercetools.importapi.models.types;
 
+import com.commercetools.importapi.models.types.CustomFieldEnumValue;
+import com.commercetools.importapi.models.types.FieldType;
+import com.commercetools.importapi.models.types.CustomFieldEnumType;
+import javax.annotation.Nullable;
 import java.util.*;
 import java.util.function.Function;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -17,11 +20,16 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .plusValues(valuesBuilder -> valuesBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class CustomFieldEnumTypeBuilder implements Builder<CustomFieldEnumType> {
 
+    
+    
     private java.util.List<com.commercetools.importapi.models.types.CustomFieldEnumValue> values;
 
     /**
@@ -29,98 +37,93 @@ public class CustomFieldEnumTypeBuilder implements Builder<CustomFieldEnumType> 
      * @param values value to be set
      * @return Builder
      */
-
-    public CustomFieldEnumTypeBuilder values(
-            final com.commercetools.importapi.models.types.CustomFieldEnumValue... values) {
+    
+    public CustomFieldEnumTypeBuilder values( final com.commercetools.importapi.models.types.CustomFieldEnumValue ...values) {
         this.values = new ArrayList<>(Arrays.asList(values));
         return this;
     }
-
+    
     /**
      *  <p>Allowed values.</p>
      * @param values value to be set
      * @return Builder
      */
-
-    public CustomFieldEnumTypeBuilder values(
-            final java.util.List<com.commercetools.importapi.models.types.CustomFieldEnumValue> values) {
+    
+    public CustomFieldEnumTypeBuilder values( final java.util.List<com.commercetools.importapi.models.types.CustomFieldEnumValue> values) {
         this.values = values;
         return this;
     }
-
+    
     /**
      *  <p>Allowed values.</p>
      * @param values value to be set
      * @return Builder
      */
-
-    public CustomFieldEnumTypeBuilder plusValues(
-            final com.commercetools.importapi.models.types.CustomFieldEnumValue... values) {
+    
+    public CustomFieldEnumTypeBuilder plusValues( final com.commercetools.importapi.models.types.CustomFieldEnumValue ...values) {
         if (this.values == null) {
             this.values = new ArrayList<>();
         }
         this.values.addAll(Arrays.asList(values));
         return this;
     }
-
+    
+    
+    
     /**
      *  <p>Allowed values.</p>
      * @param builder function to build the values value
      * @return Builder
      */
-
-    public CustomFieldEnumTypeBuilder plusValues(
-            Function<com.commercetools.importapi.models.types.CustomFieldEnumValueBuilder, com.commercetools.importapi.models.types.CustomFieldEnumValueBuilder> builder) {
+    
+    public CustomFieldEnumTypeBuilder plusValues(Function<com.commercetools.importapi.models.types.CustomFieldEnumValueBuilder, com.commercetools.importapi.models.types.CustomFieldEnumValueBuilder> builder) {
         if (this.values == null) {
             this.values = new ArrayList<>();
         }
-        this.values
-                .add(builder.apply(com.commercetools.importapi.models.types.CustomFieldEnumValueBuilder.of()).build());
+        this.values.add(builder.apply(com.commercetools.importapi.models.types.CustomFieldEnumValueBuilder.of()).build());
         return this;
     }
-
+    
     /**
      *  <p>Allowed values.</p>
      * @param builder function to build the values value
      * @return Builder
      */
-
-    public CustomFieldEnumTypeBuilder withValues(
-            Function<com.commercetools.importapi.models.types.CustomFieldEnumValueBuilder, com.commercetools.importapi.models.types.CustomFieldEnumValueBuilder> builder) {
+    
+    public CustomFieldEnumTypeBuilder withValues(Function<com.commercetools.importapi.models.types.CustomFieldEnumValueBuilder, com.commercetools.importapi.models.types.CustomFieldEnumValueBuilder> builder) {
         this.values = new ArrayList<>();
-        this.values
-                .add(builder.apply(com.commercetools.importapi.models.types.CustomFieldEnumValueBuilder.of()).build());
+        this.values.add(builder.apply(com.commercetools.importapi.models.types.CustomFieldEnumValueBuilder.of()).build());
         return this;
     }
-
+    
     /**
      *  <p>Allowed values.</p>
      * @param builder function to build the values value
      * @return Builder
      */
-
-    public CustomFieldEnumTypeBuilder addValues(
-            Function<com.commercetools.importapi.models.types.CustomFieldEnumValueBuilder, com.commercetools.importapi.models.types.CustomFieldEnumValue> builder) {
+    
+    public CustomFieldEnumTypeBuilder addValues(Function<com.commercetools.importapi.models.types.CustomFieldEnumValueBuilder, com.commercetools.importapi.models.types.CustomFieldEnumValue> builder) {
         return plusValues(builder.apply(com.commercetools.importapi.models.types.CustomFieldEnumValueBuilder.of()));
     }
-
+    
     /**
      *  <p>Allowed values.</p>
      * @param builder function to build the values value
      * @return Builder
      */
-
-    public CustomFieldEnumTypeBuilder setValues(
-            Function<com.commercetools.importapi.models.types.CustomFieldEnumValueBuilder, com.commercetools.importapi.models.types.CustomFieldEnumValue> builder) {
+    
+    public CustomFieldEnumTypeBuilder setValues(Function<com.commercetools.importapi.models.types.CustomFieldEnumValueBuilder, com.commercetools.importapi.models.types.CustomFieldEnumValue> builder) {
         return values(builder.apply(com.commercetools.importapi.models.types.CustomFieldEnumValueBuilder.of()));
     }
+                    
 
     /**
      *  <p>Allowed values.</p>
      * @return values
      */
-
-    public java.util.List<com.commercetools.importapi.models.types.CustomFieldEnumValue> getValues() {
+    
+    
+    public java.util.List<com.commercetools.importapi.models.types.CustomFieldEnumValue> getValues(){
         return this.values;
     }
 
@@ -132,7 +135,7 @@ public class CustomFieldEnumTypeBuilder implements Builder<CustomFieldEnumType> 
         Objects.requireNonNull(values, CustomFieldEnumType.class + ": values is missing");
         return new CustomFieldEnumTypeImpl(values);
     }
-
+    
     /**
      * builds CustomFieldEnumType without checking for non-null required values
      * @return CustomFieldEnumType
@@ -143,7 +146,7 @@ public class CustomFieldEnumTypeBuilder implements Builder<CustomFieldEnumType> 
 
     /**
      * factory method for an instance of CustomFieldEnumTypeBuilder
-     * @return builder
+     * @return builder 
      */
     public static CustomFieldEnumTypeBuilder of() {
         return new CustomFieldEnumTypeBuilder();

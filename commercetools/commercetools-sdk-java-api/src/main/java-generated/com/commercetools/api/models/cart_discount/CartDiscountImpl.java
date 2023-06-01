@@ -1,87 +1,105 @@
-
 package com.commercetools.api.models.cart_discount;
 
-import java.time.*;
-import java.util.*;
-
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
-
-import io.vrap.rmf.base.client.ModelBase;
+import com.commercetools.api.models.cart_discount.CartDiscountTarget;
+import com.commercetools.api.models.cart_discount.CartDiscountValue;
+import com.commercetools.api.models.cart_discount.StackingMode;
+import com.commercetools.api.models.common.BaseResource;
+import com.commercetools.api.models.common.CreatedBy;
+import com.commercetools.api.models.common.LastModifiedBy;
+import com.commercetools.api.models.common.LocalizedString;
+import com.commercetools.api.models.common.Reference;
+import com.commercetools.api.models.type.CustomFields;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.ModelBase;
+import javax.validation.Valid;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.annotation.*;
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
  * CartDiscount
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class CartDiscountImpl implements CartDiscount, ModelBase {
 
+    
     private String id;
-
+    
+    
     private Long version;
-
+    
+    
     private java.time.ZonedDateTime createdAt;
-
+    
+    
     private java.time.ZonedDateTime lastModifiedAt;
-
+    
+    
     private com.commercetools.api.models.common.LastModifiedBy lastModifiedBy;
-
+    
+    
     private com.commercetools.api.models.common.CreatedBy createdBy;
-
+    
+    
     private com.commercetools.api.models.common.LocalizedString name;
-
+    
+    
     private String key;
-
+    
+    
     private com.commercetools.api.models.common.LocalizedString description;
-
+    
+    
     private com.commercetools.api.models.cart_discount.CartDiscountValue value;
-
+    
+    
     private String cartPredicate;
-
+    
+    
     private com.commercetools.api.models.cart_discount.CartDiscountTarget target;
-
+    
+    
     private String sortOrder;
-
+    
+    
     private Boolean isActive;
-
+    
+    
     private java.time.ZonedDateTime validFrom;
-
+    
+    
     private java.time.ZonedDateTime validUntil;
-
+    
+    
     private Boolean requiresDiscountCode;
-
+    
+    
     private java.util.List<com.commercetools.api.models.common.Reference> references;
-
+    
+    
     private com.commercetools.api.models.cart_discount.StackingMode stackingMode;
-
+    
+    
     private com.commercetools.api.models.type.CustomFields custom;
 
     /**
      * create instance with all properties
      */
     @JsonCreator
-    CartDiscountImpl(@JsonProperty("id") final String id, @JsonProperty("version") final Long version,
-            @JsonProperty("createdAt") final java.time.ZonedDateTime createdAt,
-            @JsonProperty("lastModifiedAt") final java.time.ZonedDateTime lastModifiedAt,
-            @JsonProperty("lastModifiedBy") final com.commercetools.api.models.common.LastModifiedBy lastModifiedBy,
-            @JsonProperty("createdBy") final com.commercetools.api.models.common.CreatedBy createdBy,
-            @JsonProperty("name") final com.commercetools.api.models.common.LocalizedString name,
-            @JsonProperty("key") final String key,
-            @JsonProperty("description") final com.commercetools.api.models.common.LocalizedString description,
-            @JsonProperty("value") final com.commercetools.api.models.cart_discount.CartDiscountValue value,
-            @JsonProperty("cartPredicate") final String cartPredicate,
-            @JsonProperty("target") final com.commercetools.api.models.cart_discount.CartDiscountTarget target,
-            @JsonProperty("sortOrder") final String sortOrder, @JsonProperty("isActive") final Boolean isActive,
-            @JsonProperty("validFrom") final java.time.ZonedDateTime validFrom,
-            @JsonProperty("validUntil") final java.time.ZonedDateTime validUntil,
-            @JsonProperty("requiresDiscountCode") final Boolean requiresDiscountCode,
-            @JsonProperty("references") final java.util.List<com.commercetools.api.models.common.Reference> references,
-            @JsonProperty("stackingMode") final com.commercetools.api.models.cart_discount.StackingMode stackingMode,
-            @JsonProperty("custom") final com.commercetools.api.models.type.CustomFields custom) {
+    CartDiscountImpl(@JsonProperty("id") final String id, @JsonProperty("version") final Long version, @JsonProperty("createdAt") final java.time.ZonedDateTime createdAt, @JsonProperty("lastModifiedAt") final java.time.ZonedDateTime lastModifiedAt, @JsonProperty("lastModifiedBy") final com.commercetools.api.models.common.LastModifiedBy lastModifiedBy, @JsonProperty("createdBy") final com.commercetools.api.models.common.CreatedBy createdBy, @JsonProperty("name") final com.commercetools.api.models.common.LocalizedString name, @JsonProperty("key") final String key, @JsonProperty("description") final com.commercetools.api.models.common.LocalizedString description, @JsonProperty("value") final com.commercetools.api.models.cart_discount.CartDiscountValue value, @JsonProperty("cartPredicate") final String cartPredicate, @JsonProperty("target") final com.commercetools.api.models.cart_discount.CartDiscountTarget target, @JsonProperty("sortOrder") final String sortOrder, @JsonProperty("isActive") final Boolean isActive, @JsonProperty("validFrom") final java.time.ZonedDateTime validFrom, @JsonProperty("validUntil") final java.time.ZonedDateTime validUntil, @JsonProperty("requiresDiscountCode") final Boolean requiresDiscountCode, @JsonProperty("references") final java.util.List<com.commercetools.api.models.common.Reference> references, @JsonProperty("stackingMode") final com.commercetools.api.models.cart_discount.StackingMode stackingMode, @JsonProperty("custom") final com.commercetools.api.models.type.CustomFields custom) {
         this.id = id;
         this.version = version;
         this.createdAt = createdAt;
@@ -103,7 +121,6 @@ public class CartDiscountImpl implements CartDiscount, ModelBase {
         this.stackingMode = stackingMode;
         this.custom = custom;
     }
-
     /**
      * create empty instance
      */
@@ -113,258 +130,278 @@ public class CartDiscountImpl implements CartDiscount, ModelBase {
     /**
      *  <p>Unique identifier of the CartDiscount.</p>
      */
-
-    public String getId() {
+    
+    public String getId(){
         return this.id;
     }
-
+    
     /**
      *  <p>Current version of the CartDiscount.</p>
      */
-
-    public Long getVersion() {
+    
+    public Long getVersion(){
         return this.version;
     }
-
+    
     /**
      *  <p>Date and time (UTC) for the CartDiscount was initially created.</p>
      */
-
-    public java.time.ZonedDateTime getCreatedAt() {
+    
+    public java.time.ZonedDateTime getCreatedAt(){
         return this.createdAt;
     }
-
+    
     /**
      *  <p>Date and time (UTC) for the CartDiscount was last updated.</p>
      */
-
-    public java.time.ZonedDateTime getLastModifiedAt() {
+    
+    public java.time.ZonedDateTime getLastModifiedAt(){
         return this.lastModifiedAt;
     }
-
+    
     /**
      *  <p>Present on resources updated after 1 February 2019 except for events not tracked.</p>
      */
-
-    public com.commercetools.api.models.common.LastModifiedBy getLastModifiedBy() {
+    
+    public com.commercetools.api.models.common.LastModifiedBy getLastModifiedBy(){
         return this.lastModifiedBy;
     }
-
+    
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      */
-
-    public com.commercetools.api.models.common.CreatedBy getCreatedBy() {
+    
+    public com.commercetools.api.models.common.CreatedBy getCreatedBy(){
         return this.createdBy;
     }
-
+    
     /**
      *  <p>Name of the CartDiscount.</p>
      */
-
-    public com.commercetools.api.models.common.LocalizedString getName() {
+    
+    public com.commercetools.api.models.common.LocalizedString getName(){
         return this.name;
     }
-
+    
     /**
      *  <p>User-defined unique identifier of the CartDiscount.</p>
      */
-
-    public String getKey() {
+    
+    public String getKey(){
         return this.key;
     }
-
+    
     /**
      *  <p>Description of the CartDiscount.</p>
      */
-
-    public com.commercetools.api.models.common.LocalizedString getDescription() {
+    
+    public com.commercetools.api.models.common.LocalizedString getDescription(){
         return this.description;
     }
-
+    
     /**
      *  <p>Effect of the CartDiscount.</p>
      */
-
-    public com.commercetools.api.models.cart_discount.CartDiscountValue getValue() {
+    
+    public com.commercetools.api.models.cart_discount.CartDiscountValue getValue(){
         return this.value;
     }
-
+    
     /**
      *  <p>Valid Cart Predicate.</p>
      */
-
-    public String getCartPredicate() {
+    
+    public String getCartPredicate(){
         return this.cartPredicate;
     }
-
+    
     /**
      *  <p>Sets a CartDiscountTarget. Empty if <code>value</code> has type <code>giftLineItem</code>.</p>
      */
-
-    public com.commercetools.api.models.cart_discount.CartDiscountTarget getTarget() {
+    
+    public com.commercetools.api.models.cart_discount.CartDiscountTarget getTarget(){
         return this.target;
     }
-
+    
     /**
      *  <p>Value between <code>0</code> and <code>1</code>. All matching CartDiscounts are applied to a Cart in the order defined by this field. A Discount with a higher sortOrder is prioritized. The sort order is unambiguous among all CartDiscounts.</p>
      */
-
-    public String getSortOrder() {
+    
+    public String getSortOrder(){
         return this.sortOrder;
     }
-
+    
     /**
      *  <p>Indicates if the CartDiscount is active and can be applied to the Cart.</p>
      */
-
-    public Boolean getIsActive() {
+    
+    public Boolean getIsActive(){
         return this.isActive;
     }
-
+    
     /**
      *  <p>Date and time (UTC) from which the Discount is effective.</p>
      */
-
-    public java.time.ZonedDateTime getValidFrom() {
+    
+    public java.time.ZonedDateTime getValidFrom(){
         return this.validFrom;
     }
-
+    
     /**
      *  <p>Date and time (UTC) until which the Discount is effective.</p>
      */
-
-    public java.time.ZonedDateTime getValidUntil() {
+    
+    public java.time.ZonedDateTime getValidUntil(){
         return this.validUntil;
     }
-
+    
     /**
      *  <p>Indicates if the Discount can be used in connection with a DiscountCode.</p>
      */
-
-    public Boolean getRequiresDiscountCode() {
+    
+    public Boolean getRequiresDiscountCode(){
         return this.requiresDiscountCode;
     }
-
+    
     /**
      *  <p>References of all resources that are addressed in the predicate. The API generates this array from the predicate.</p>
      */
-
-    public java.util.List<com.commercetools.api.models.common.Reference> getReferences() {
+    
+    public java.util.List<com.commercetools.api.models.common.Reference> getReferences(){
         return this.references;
     }
-
+    
     /**
      *  <p>Indicates whether the application of the CartDiscount causes other discounts to be ignored.</p>
      */
-
-    public com.commercetools.api.models.cart_discount.StackingMode getStackingMode() {
+    
+    public com.commercetools.api.models.cart_discount.StackingMode getStackingMode(){
         return this.stackingMode;
     }
-
+    
     /**
      *  <p>Custom Fields of the CartDiscount.</p>
      */
-
-    public com.commercetools.api.models.type.CustomFields getCustom() {
+    
+    public com.commercetools.api.models.type.CustomFields getCustom(){
         return this.custom;
     }
 
-    public void setId(final String id) {
+    
+    public void setId(final String id){
         this.id = id;
     }
-
-    public void setVersion(final Long version) {
+    
+    
+    public void setVersion(final Long version){
         this.version = version;
     }
-
-    public void setCreatedAt(final java.time.ZonedDateTime createdAt) {
+    
+    
+    public void setCreatedAt(final java.time.ZonedDateTime createdAt){
         this.createdAt = createdAt;
     }
-
-    public void setLastModifiedAt(final java.time.ZonedDateTime lastModifiedAt) {
+    
+    
+    public void setLastModifiedAt(final java.time.ZonedDateTime lastModifiedAt){
         this.lastModifiedAt = lastModifiedAt;
     }
-
-    public void setLastModifiedBy(final com.commercetools.api.models.common.LastModifiedBy lastModifiedBy) {
+    
+    
+    public void setLastModifiedBy(final com.commercetools.api.models.common.LastModifiedBy lastModifiedBy){
         this.lastModifiedBy = lastModifiedBy;
     }
-
-    public void setCreatedBy(final com.commercetools.api.models.common.CreatedBy createdBy) {
+    
+    
+    public void setCreatedBy(final com.commercetools.api.models.common.CreatedBy createdBy){
         this.createdBy = createdBy;
     }
-
-    public void setName(final com.commercetools.api.models.common.LocalizedString name) {
+    
+    
+    public void setName(final com.commercetools.api.models.common.LocalizedString name){
         this.name = name;
     }
-
-    public void setKey(final String key) {
+    
+    
+    public void setKey(final String key){
         this.key = key;
     }
-
-    public void setDescription(final com.commercetools.api.models.common.LocalizedString description) {
+    
+    
+    public void setDescription(final com.commercetools.api.models.common.LocalizedString description){
         this.description = description;
     }
-
-    public void setValue(final com.commercetools.api.models.cart_discount.CartDiscountValue value) {
+    
+    
+    public void setValue(final com.commercetools.api.models.cart_discount.CartDiscountValue value){
         this.value = value;
     }
-
-    public void setCartPredicate(final String cartPredicate) {
+    
+    
+    public void setCartPredicate(final String cartPredicate){
         this.cartPredicate = cartPredicate;
     }
-
-    public void setTarget(final com.commercetools.api.models.cart_discount.CartDiscountTarget target) {
+    
+    
+    public void setTarget(final com.commercetools.api.models.cart_discount.CartDiscountTarget target){
         this.target = target;
     }
-
-    public void setSortOrder(final String sortOrder) {
+    
+    
+    public void setSortOrder(final String sortOrder){
         this.sortOrder = sortOrder;
     }
-
-    public void setIsActive(final Boolean isActive) {
+    
+    
+    public void setIsActive(final Boolean isActive){
         this.isActive = isActive;
     }
-
-    public void setValidFrom(final java.time.ZonedDateTime validFrom) {
+    
+    
+    public void setValidFrom(final java.time.ZonedDateTime validFrom){
         this.validFrom = validFrom;
     }
-
-    public void setValidUntil(final java.time.ZonedDateTime validUntil) {
+    
+    
+    public void setValidUntil(final java.time.ZonedDateTime validUntil){
         this.validUntil = validUntil;
     }
-
-    public void setRequiresDiscountCode(final Boolean requiresDiscountCode) {
+    
+    
+    public void setRequiresDiscountCode(final Boolean requiresDiscountCode){
         this.requiresDiscountCode = requiresDiscountCode;
     }
-
-    public void setReferences(final com.commercetools.api.models.common.Reference... references) {
-        this.references = new ArrayList<>(Arrays.asList(references));
+    
+    
+    public void setReferences(final com.commercetools.api.models.common.Reference ...references){
+       this.references = new ArrayList<>(Arrays.asList(references));
     }
-
-    public void setReferences(final java.util.List<com.commercetools.api.models.common.Reference> references) {
-        this.references = references;
+    
+    
+    public void setReferences(final java.util.List<com.commercetools.api.models.common.Reference> references){
+       this.references = references;
     }
-
-    public void setStackingMode(final com.commercetools.api.models.cart_discount.StackingMode stackingMode) {
+    
+    
+    public void setStackingMode(final com.commercetools.api.models.cart_discount.StackingMode stackingMode){
         this.stackingMode = stackingMode;
     }
-
-    public void setCustom(final com.commercetools.api.models.type.CustomFields custom) {
+    
+    
+    public void setCustom(final com.commercetools.api.models.type.CustomFields custom){
         this.custom = custom;
     }
 
     @Override
     public boolean equals(Object o) {
-        if (this == o)
-            return true;
-
-        if (o == null || getClass() != o.getClass())
-            return false;
-
+        if (this == o) return true;
+    
+        if (o == null || getClass() != o.getClass()) return false;
+    
         CartDiscountImpl that = (CartDiscountImpl) o;
-
-        return new EqualsBuilder().append(id, that.id)
+    
+        return new EqualsBuilder()
+                .append(id, that.id)
                 .append(version, that.version)
                 .append(createdAt, that.createdAt)
                 .append(lastModifiedAt, that.lastModifiedAt)
@@ -386,30 +423,31 @@ public class CartDiscountImpl implements CartDiscount, ModelBase {
                 .append(custom, that.custom)
                 .isEquals();
     }
-
+    
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(id)
-                .append(version)
-                .append(createdAt)
-                .append(lastModifiedAt)
-                .append(lastModifiedBy)
-                .append(createdBy)
-                .append(name)
-                .append(key)
-                .append(description)
-                .append(value)
-                .append(cartPredicate)
-                .append(target)
-                .append(sortOrder)
-                .append(isActive)
-                .append(validFrom)
-                .append(validUntil)
-                .append(requiresDiscountCode)
-                .append(references)
-                .append(stackingMode)
-                .append(custom)
-                .toHashCode();
+        return new HashCodeBuilder(17, 37)
+            .append(id)
+            .append(version)
+            .append(createdAt)
+            .append(lastModifiedAt)
+            .append(lastModifiedBy)
+            .append(createdBy)
+            .append(name)
+            .append(key)
+            .append(description)
+            .append(value)
+            .append(cartPredicate)
+            .append(target)
+            .append(sortOrder)
+            .append(isActive)
+            .append(validFrom)
+            .append(validUntil)
+            .append(requiresDiscountCode)
+            .append(references)
+            .append(stackingMode)
+            .append(custom)
+            .toHashCode();
     }
 
 }

@@ -1,9 +1,11 @@
-
 package com.commercetools.api.models.common;
 
+import com.commercetools.api.models.common.Money;
+import com.commercetools.api.models.common.PriceTierDraft;
+import javax.annotation.Nullable;
 import java.util.*;
 import java.util.function.Function;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -18,82 +20,95 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .value(valueBuilder -> valueBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class PriceTierDraftBuilder implements Builder<PriceTierDraft> {
 
+    
+    
     private Long minimumQuantity;
-
+    
+    
+    
     private com.commercetools.api.models.common.Money value;
 
+    
     /**
      *  <p>Minimum quantity this Price tier is valid for.</p>
      *  <p>The minimum quantity is always greater than or equal to 2. The base Price is interpreted as valid for a minimum quantity equal to 1.</p>
      * @param minimumQuantity value to be set
      * @return Builder
      */
-
-    public PriceTierDraftBuilder minimumQuantity(final Long minimumQuantity) {
+    
+    public PriceTierDraftBuilder minimumQuantity( final Long minimumQuantity) {
         this.minimumQuantity = minimumQuantity;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Money value that applies when the <code>minimumQuantity</code> is greater than or equal to the LineItem <code>quantity</code>.</p>
      *  <p>The <code>currencyCode</code> of a Price tier must be the same as the <code>currencyCode</code> in the <code>value</code> of the related Price.</p>
      * @param builder function to build the value value
      * @return Builder
      */
-
-    public PriceTierDraftBuilder value(
-            Function<com.commercetools.api.models.common.MoneyBuilder, com.commercetools.api.models.common.MoneyBuilder> builder) {
+    
+    public PriceTierDraftBuilder value(Function<com.commercetools.api.models.common.MoneyBuilder, com.commercetools.api.models.common.MoneyBuilder> builder) {
         this.value = builder.apply(com.commercetools.api.models.common.MoneyBuilder.of()).build();
         return this;
     }
-
+    
     /**
      *  <p>Money value that applies when the <code>minimumQuantity</code> is greater than or equal to the LineItem <code>quantity</code>.</p>
      *  <p>The <code>currencyCode</code> of a Price tier must be the same as the <code>currencyCode</code> in the <code>value</code> of the related Price.</p>
      * @param builder function to build the value value
      * @return Builder
      */
-
-    public PriceTierDraftBuilder withValue(
-            Function<com.commercetools.api.models.common.MoneyBuilder, com.commercetools.api.models.common.Money> builder) {
+    
+    public PriceTierDraftBuilder withValue(Function<com.commercetools.api.models.common.MoneyBuilder, com.commercetools.api.models.common.Money> builder) {
         this.value = builder.apply(com.commercetools.api.models.common.MoneyBuilder.of());
         return this;
     }
-
+                    
     /**
      *  <p>Money value that applies when the <code>minimumQuantity</code> is greater than or equal to the LineItem <code>quantity</code>.</p>
      *  <p>The <code>currencyCode</code> of a Price tier must be the same as the <code>currencyCode</code> in the <code>value</code> of the related Price.</p>
      * @param value value to be set
      * @return Builder
      */
-
-    public PriceTierDraftBuilder value(final com.commercetools.api.models.common.Money value) {
+    
+    public PriceTierDraftBuilder value( final com.commercetools.api.models.common.Money value) {
         this.value = value;
         return this;
     }
+    
+    
 
     /**
      *  <p>Minimum quantity this Price tier is valid for.</p>
      *  <p>The minimum quantity is always greater than or equal to 2. The base Price is interpreted as valid for a minimum quantity equal to 1.</p>
      * @return minimumQuantity
      */
-
-    public Long getMinimumQuantity() {
+    
+    
+    public Long getMinimumQuantity(){
         return this.minimumQuantity;
     }
-
+    
     /**
      *  <p>Money value that applies when the <code>minimumQuantity</code> is greater than or equal to the LineItem <code>quantity</code>.</p>
      *  <p>The <code>currencyCode</code> of a Price tier must be the same as the <code>currencyCode</code> in the <code>value</code> of the related Price.</p>
      * @return value
      */
-
-    public com.commercetools.api.models.common.Money getValue() {
+    
+    
+    public com.commercetools.api.models.common.Money getValue(){
         return this.value;
     }
 
@@ -106,7 +121,7 @@ public class PriceTierDraftBuilder implements Builder<PriceTierDraft> {
         Objects.requireNonNull(value, PriceTierDraft.class + ": value is missing");
         return new PriceTierDraftImpl(minimumQuantity, value);
     }
-
+    
     /**
      * builds PriceTierDraft without checking for non-null required values
      * @return PriceTierDraft
@@ -117,7 +132,7 @@ public class PriceTierDraftBuilder implements Builder<PriceTierDraft> {
 
     /**
      * factory method for an instance of PriceTierDraftBuilder
-     * @return builder
+     * @return builder 
      */
     public static PriceTierDraftBuilder of() {
         return new PriceTierDraftBuilder();

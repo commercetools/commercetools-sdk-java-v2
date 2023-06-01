@@ -1,17 +1,21 @@
-
 package com.commercetools.history.models.change;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
+import com.commercetools.history.models.change.Change;
+import java.lang.Object;
+import com.commercetools.history.models.change.SetPropertyChangeImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * SetPropertyChange
@@ -25,9 +29,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .path("{path}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = SetPropertyChangeImpl.class)
 public interface SetPropertyChange extends Change {
 
@@ -43,7 +50,6 @@ public interface SetPropertyChange extends Change {
     @NotNull
     @JsonProperty("type")
     public String getType();
-
     /**
      *  <p>Update action for <code>setProperty</code> on custom objects</p>
      * @return change
@@ -51,7 +57,6 @@ public interface SetPropertyChange extends Change {
     @NotNull
     @JsonProperty("change")
     public String getChange();
-
     /**
      *  <p>Value path to the property that was changed</p>
      * @return path
@@ -59,7 +64,6 @@ public interface SetPropertyChange extends Change {
     @NotNull
     @JsonProperty("path")
     public String getPath();
-
     /**
      *
      * @return nextValue
@@ -67,7 +71,6 @@ public interface SetPropertyChange extends Change {
     @NotNull
     @JsonProperty("nextValue")
     public Object getNextValue();
-
     /**
      *
      * @return previousValue
@@ -80,37 +83,42 @@ public interface SetPropertyChange extends Change {
      *  <p>Update action for <code>setProperty</code> on custom objects</p>
      * @param change value to be set
      */
-
+    
     public void setChange(final String change);
-
+    
+    
     /**
      *  <p>Value path to the property that was changed</p>
      * @param path value to be set
      */
-
+    
     public void setPath(final String path);
-
+    
+    
     /**
      * set nextValue
      * @param nextValue value to be set
      */
-
+    
     public void setNextValue(final Object nextValue);
-
+    
+    
     /**
      * set previousValue
      * @param previousValue value to be set
      */
-
+    
     public void setPreviousValue(final Object previousValue);
+    
 
     /**
      * factory method
      * @return instance of SetPropertyChange
      */
-    public static SetPropertyChange of() {
+    public static SetPropertyChange of(){
         return new SetPropertyChangeImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy SetPropertyChange
@@ -151,7 +159,7 @@ public interface SetPropertyChange extends Change {
     public static SetPropertyChangeBuilder builder() {
         return SetPropertyChangeBuilder.of();
     }
-
+    
     /**
      * create builder for SetPropertyChange instance
      * @param template instance with prefilled values for the builder
@@ -160,6 +168,7 @@ public interface SetPropertyChange extends Change {
     public static SetPropertyChangeBuilder builder(final SetPropertyChange template) {
         return SetPropertyChangeBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -170,7 +179,7 @@ public interface SetPropertyChange extends Change {
     default <T> T withSetPropertyChange(Function<SetPropertyChange, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

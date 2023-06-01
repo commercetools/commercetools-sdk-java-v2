@@ -1,19 +1,21 @@
-
 package com.commercetools.history.models.change_value;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
 import com.commercetools.history.models.common.LocalizedString;
+import java.lang.Object;
+import com.commercetools.history.models.change_value.CustomFieldExpandedValueImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Only available if <code>expand</code> is set to true</p>
@@ -27,11 +29,15 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .label(labelBuilder -> labelBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = CustomFieldExpandedValueImpl.class)
-public interface CustomFieldExpandedValue {
+public interface CustomFieldExpandedValue  {
+
 
     /**
      *  <p>Name of a custom field.</p>
@@ -40,7 +46,6 @@ public interface CustomFieldExpandedValue {
     @NotNull
     @JsonProperty("name")
     public String getName();
-
     /**
      *
      * @return value
@@ -48,7 +53,6 @@ public interface CustomFieldExpandedValue {
     @NotNull
     @JsonProperty("value")
     public Object getValue();
-
     /**
      *
      * @return label
@@ -62,30 +66,34 @@ public interface CustomFieldExpandedValue {
      *  <p>Name of a custom field.</p>
      * @param name value to be set
      */
-
+    
     public void setName(final String name);
-
+    
+    
     /**
      * set value
      * @param value value to be set
      */
-
+    
     public void setValue(final Object value);
-
+    
+    
     /**
      * set label
      * @param label value to be set
      */
-
+    
     public void setLabel(final LocalizedString label);
+    
 
     /**
      * factory method
      * @return instance of CustomFieldExpandedValue
      */
-    public static CustomFieldExpandedValue of() {
+    public static CustomFieldExpandedValue of(){
         return new CustomFieldExpandedValueImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy CustomFieldExpandedValue
@@ -124,7 +132,7 @@ public interface CustomFieldExpandedValue {
     public static CustomFieldExpandedValueBuilder builder() {
         return CustomFieldExpandedValueBuilder.of();
     }
-
+    
     /**
      * create builder for CustomFieldExpandedValue instance
      * @param template instance with prefilled values for the builder
@@ -133,6 +141,7 @@ public interface CustomFieldExpandedValue {
     public static CustomFieldExpandedValueBuilder builder(final CustomFieldExpandedValue template) {
         return CustomFieldExpandedValueBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -143,7 +152,7 @@ public interface CustomFieldExpandedValue {
     default <T> T withCustomFieldExpandedValue(Function<CustomFieldExpandedValue, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

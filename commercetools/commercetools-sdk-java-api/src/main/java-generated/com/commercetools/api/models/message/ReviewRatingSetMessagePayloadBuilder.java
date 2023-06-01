@@ -1,11 +1,12 @@
-
 package com.commercetools.api.models.message;
 
+import com.commercetools.api.models.common.Reference;
+import com.commercetools.api.models.message.MessagePayload;
+import com.commercetools.api.models.message.ReviewRatingSetMessagePayload;
+import javax.annotation.Nullable;
 import java.util.*;
 import java.util.function.Function;
-
-import javax.annotation.Nullable;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -19,115 +20,134 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .includedInStatistics(true)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class ReviewRatingSetMessagePayloadBuilder implements Builder<ReviewRatingSetMessagePayload> {
 
+    
     @Nullable
     private Double oldRating;
-
+    
+    
     @Nullable
     private Double newRating;
-
+    
+    
+    
     private Boolean includedInStatistics;
-
+    
+    
     @Nullable
     private com.commercetools.api.models.common.Reference target;
 
+    
     /**
      *  <p>The <code>rating</code> of the Review before the Set Rating update action.</p>
      * @param oldRating value to be set
      * @return Builder
      */
-
+    
     public ReviewRatingSetMessagePayloadBuilder oldRating(@Nullable final Double oldRating) {
         this.oldRating = oldRating;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>The <code>rating</code> of the Review after the Set Rating update action.</p>
      * @param newRating value to be set
      * @return Builder
      */
-
+    
     public ReviewRatingSetMessagePayloadBuilder newRating(@Nullable final Double newRating) {
         this.newRating = newRating;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Whether the Review was taken into account in the ratings statistics of the target.</p>
      * @param includedInStatistics value to be set
      * @return Builder
      */
-
-    public ReviewRatingSetMessagePayloadBuilder includedInStatistics(final Boolean includedInStatistics) {
+    
+    public ReviewRatingSetMessagePayloadBuilder includedInStatistics( final Boolean includedInStatistics) {
         this.includedInStatistics = includedInStatistics;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Reference to the resource that the Review belongs to.</p>
      * @param target value to be set
      * @return Builder
      */
-
-    public ReviewRatingSetMessagePayloadBuilder target(
-            @Nullable final com.commercetools.api.models.common.Reference target) {
+    
+    public ReviewRatingSetMessagePayloadBuilder target(@Nullable final com.commercetools.api.models.common.Reference target) {
         this.target = target;
         return this;
     }
-
+    
+    
     /**
      *  <p>Reference to the resource that the Review belongs to.</p>
      * @param builder function to build the target value
      * @return Builder
      */
-
-    public ReviewRatingSetMessagePayloadBuilder target(
-            Function<com.commercetools.api.models.common.ReferenceBuilder, Builder<? extends com.commercetools.api.models.common.Reference>> builder) {
+    
+    public ReviewRatingSetMessagePayloadBuilder target(Function<com.commercetools.api.models.common.ReferenceBuilder, Builder<? extends com.commercetools.api.models.common.Reference>> builder) {
         this.target = builder.apply(com.commercetools.api.models.common.ReferenceBuilder.of()).build();
         return this;
     }
+                    
 
     /**
      *  <p>The <code>rating</code> of the Review before the Set Rating update action.</p>
      * @return oldRating
      */
-
+    
     @Nullable
-    public Double getOldRating() {
+    public Double getOldRating(){
         return this.oldRating;
     }
-
+    
     /**
      *  <p>The <code>rating</code> of the Review after the Set Rating update action.</p>
      * @return newRating
      */
-
+    
     @Nullable
-    public Double getNewRating() {
+    public Double getNewRating(){
         return this.newRating;
     }
-
+    
     /**
      *  <p>Whether the Review was taken into account in the ratings statistics of the target.</p>
      * @return includedInStatistics
      */
-
-    public Boolean getIncludedInStatistics() {
+    
+    
+    public Boolean getIncludedInStatistics(){
         return this.includedInStatistics;
     }
-
+    
     /**
      *  <p>Reference to the resource that the Review belongs to.</p>
      * @return target
      */
-
+    
     @Nullable
-    public com.commercetools.api.models.common.Reference getTarget() {
+    public com.commercetools.api.models.common.Reference getTarget(){
         return this.target;
     }
 
@@ -136,11 +156,10 @@ public class ReviewRatingSetMessagePayloadBuilder implements Builder<ReviewRatin
      * @return ReviewRatingSetMessagePayload
      */
     public ReviewRatingSetMessagePayload build() {
-        Objects.requireNonNull(includedInStatistics,
-            ReviewRatingSetMessagePayload.class + ": includedInStatistics is missing");
+        Objects.requireNonNull(includedInStatistics, ReviewRatingSetMessagePayload.class + ": includedInStatistics is missing");
         return new ReviewRatingSetMessagePayloadImpl(oldRating, newRating, includedInStatistics, target);
     }
-
+    
     /**
      * builds ReviewRatingSetMessagePayload without checking for non-null required values
      * @return ReviewRatingSetMessagePayload
@@ -151,7 +170,7 @@ public class ReviewRatingSetMessagePayloadBuilder implements Builder<ReviewRatin
 
     /**
      * factory method for an instance of ReviewRatingSetMessagePayloadBuilder
-     * @return builder
+     * @return builder 
      */
     public static ReviewRatingSetMessagePayloadBuilder of() {
         return new ReviewRatingSetMessagePayloadBuilder();

@@ -1,17 +1,20 @@
-
 package com.commercetools.importapi.models.order_patches;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
 
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
+import com.commercetools.importapi.models.order_patches.RemoveParcelFromDeliveryDraftImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * RemoveParcelFromDeliveryDraft
@@ -24,11 +27,15 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .parcelId("{parcelId}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = RemoveParcelFromDeliveryDraftImpl.class)
 public interface RemoveParcelFromDeliveryDraft extends io.vrap.rmf.base.client.Draft<RemoveParcelFromDeliveryDraft> {
+
 
     /**
      *
@@ -42,16 +49,18 @@ public interface RemoveParcelFromDeliveryDraft extends io.vrap.rmf.base.client.D
      * set parcelId
      * @param parcelId value to be set
      */
-
+    
     public void setParcelId(final String parcelId);
+    
 
     /**
      * factory method
      * @return instance of RemoveParcelFromDeliveryDraft
      */
-    public static RemoveParcelFromDeliveryDraft of() {
+    public static RemoveParcelFromDeliveryDraft of(){
         return new RemoveParcelFromDeliveryDraftImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy RemoveParcelFromDeliveryDraft
@@ -86,7 +95,7 @@ public interface RemoveParcelFromDeliveryDraft extends io.vrap.rmf.base.client.D
     public static RemoveParcelFromDeliveryDraftBuilder builder() {
         return RemoveParcelFromDeliveryDraftBuilder.of();
     }
-
+    
     /**
      * create builder for RemoveParcelFromDeliveryDraft instance
      * @param template instance with prefilled values for the builder
@@ -95,6 +104,7 @@ public interface RemoveParcelFromDeliveryDraft extends io.vrap.rmf.base.client.D
     public static RemoveParcelFromDeliveryDraftBuilder builder(final RemoveParcelFromDeliveryDraft template) {
         return RemoveParcelFromDeliveryDraftBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -105,7 +115,7 @@ public interface RemoveParcelFromDeliveryDraft extends io.vrap.rmf.base.client.D
     default <T> T withRemoveParcelFromDeliveryDraft(Function<RemoveParcelFromDeliveryDraft, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

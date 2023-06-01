@@ -1,10 +1,12 @@
-
 package com.commercetools.api.models.customer_group;
 
-import java.util.*;
-
+import com.commercetools.api.models.customer_group.CustomerGroupUpdateAction;
+import java.lang.Object;
+import com.commercetools.api.models.customer_group.CustomerGroupSetCustomFieldAction;
 import javax.annotation.Nullable;
-
+import java.util.*;
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -18,54 +20,67 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .name("{name}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class CustomerGroupSetCustomFieldActionBuilder implements Builder<CustomerGroupSetCustomFieldAction> {
 
+    
+    
     private String name;
-
+    
+    
     @Nullable
     private java.lang.Object value;
 
+    
     /**
      *  <p>Name of the Custom Field.</p>
      * @param name value to be set
      * @return Builder
      */
-
-    public CustomerGroupSetCustomFieldActionBuilder name(final String name) {
+    
+    public CustomerGroupSetCustomFieldActionBuilder name( final String name) {
         this.name = name;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>If <code>value</code> is absent or <code>null</code>, this field will be removed if it exists. Removing a field that does not exist returns an InvalidOperation error. If <code>value</code> is provided, it is set for the field defined by <code>name</code>.</p>
      * @param value value to be set
      * @return Builder
      */
-
+    
     public CustomerGroupSetCustomFieldActionBuilder value(@Nullable final java.lang.Object value) {
         this.value = value;
         return this;
     }
+    
+    
 
     /**
      *  <p>Name of the Custom Field.</p>
      * @return name
      */
-
-    public String getName() {
+    
+    
+    public String getName(){
         return this.name;
     }
-
+    
     /**
      *  <p>If <code>value</code> is absent or <code>null</code>, this field will be removed if it exists. Removing a field that does not exist returns an InvalidOperation error. If <code>value</code> is provided, it is set for the field defined by <code>name</code>.</p>
      * @return value
      */
-
+    
     @Nullable
-    public java.lang.Object getValue() {
+    public java.lang.Object getValue(){
         return this.value;
     }
 
@@ -77,7 +92,7 @@ public class CustomerGroupSetCustomFieldActionBuilder implements Builder<Custome
         Objects.requireNonNull(name, CustomerGroupSetCustomFieldAction.class + ": name is missing");
         return new CustomerGroupSetCustomFieldActionImpl(name, value);
     }
-
+    
     /**
      * builds CustomerGroupSetCustomFieldAction without checking for non-null required values
      * @return CustomerGroupSetCustomFieldAction
@@ -88,7 +103,7 @@ public class CustomerGroupSetCustomFieldActionBuilder implements Builder<Custome
 
     /**
      * factory method for an instance of CustomerGroupSetCustomFieldActionBuilder
-     * @return builder
+     * @return builder 
      */
     public static CustomerGroupSetCustomFieldActionBuilder of() {
         return new CustomerGroupSetCustomFieldActionBuilder();

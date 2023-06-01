@@ -1,11 +1,13 @@
-
 package com.commercetools.api.models.review;
 
+import com.commercetools.api.models.common.Reference;
+import com.commercetools.api.models.common.ReferenceTypeId;
+import com.commercetools.api.models.review.Review;
+import com.commercetools.api.models.review.ReviewReference;
+import javax.annotation.Nullable;
 import java.util.*;
 import java.util.function.Function;
-
-import javax.annotation.Nullable;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -19,78 +21,89 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .id("{id}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class ReviewReferenceBuilder implements Builder<ReviewReference> {
 
+    
+    
     private String id;
-
+    
+    
     @Nullable
     private com.commercetools.api.models.review.Review obj;
 
+    
     /**
      *  <p>Unique identifier of the referenced Review.</p>
      * @param id value to be set
      * @return Builder
      */
-
-    public ReviewReferenceBuilder id(final String id) {
+    
+    public ReviewReferenceBuilder id( final String id) {
         this.id = id;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Contains the representation of the expanded Review. Only present in responses to requests with Reference Expansion for Reviews.</p>
      * @param builder function to build the obj value
      * @return Builder
      */
-
-    public ReviewReferenceBuilder obj(
-            Function<com.commercetools.api.models.review.ReviewBuilder, com.commercetools.api.models.review.ReviewBuilder> builder) {
+    
+    public ReviewReferenceBuilder obj(Function<com.commercetools.api.models.review.ReviewBuilder, com.commercetools.api.models.review.ReviewBuilder> builder) {
         this.obj = builder.apply(com.commercetools.api.models.review.ReviewBuilder.of()).build();
         return this;
     }
-
+    
     /**
      *  <p>Contains the representation of the expanded Review. Only present in responses to requests with Reference Expansion for Reviews.</p>
      * @param builder function to build the obj value
      * @return Builder
      */
-
-    public ReviewReferenceBuilder withObj(
-            Function<com.commercetools.api.models.review.ReviewBuilder, com.commercetools.api.models.review.Review> builder) {
+    
+    public ReviewReferenceBuilder withObj(Function<com.commercetools.api.models.review.ReviewBuilder, com.commercetools.api.models.review.Review> builder) {
         this.obj = builder.apply(com.commercetools.api.models.review.ReviewBuilder.of());
         return this;
     }
-
+                    
     /**
      *  <p>Contains the representation of the expanded Review. Only present in responses to requests with Reference Expansion for Reviews.</p>
      * @param obj value to be set
      * @return Builder
      */
-
+    
     public ReviewReferenceBuilder obj(@Nullable final com.commercetools.api.models.review.Review obj) {
         this.obj = obj;
         return this;
     }
+    
+    
 
     /**
      *  <p>Unique identifier of the referenced Review.</p>
      * @return id
      */
-
-    public String getId() {
+    
+    
+    public String getId(){
         return this.id;
     }
-
+    
     /**
      *  <p>Contains the representation of the expanded Review. Only present in responses to requests with Reference Expansion for Reviews.</p>
      * @return obj
      */
-
+    
     @Nullable
-    public com.commercetools.api.models.review.Review getObj() {
+    public com.commercetools.api.models.review.Review getObj(){
         return this.obj;
     }
 
@@ -102,7 +115,7 @@ public class ReviewReferenceBuilder implements Builder<ReviewReference> {
         Objects.requireNonNull(id, ReviewReference.class + ": id is missing");
         return new ReviewReferenceImpl(id, obj);
     }
-
+    
     /**
      * builds ReviewReference without checking for non-null required values
      * @return ReviewReference
@@ -113,7 +126,7 @@ public class ReviewReferenceBuilder implements Builder<ReviewReference> {
 
     /**
      * factory method for an instance of ReviewReferenceBuilder
-     * @return builder
+     * @return builder 
      */
     public static ReviewReferenceBuilder of() {
         return new ReviewReferenceBuilder();

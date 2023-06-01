@@ -1,47 +1,56 @@
-
 package com.commercetools.api.models.shopping_list;
 
-import java.time.*;
-import java.util.*;
-
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
-
-import io.vrap.rmf.base.client.ModelBase;
+import com.commercetools.api.models.common.LocalizedString;
+import com.commercetools.api.models.type.CustomFields;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.ModelBase;
+import javax.validation.Valid;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.annotation.*;
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
  *  <p>TextLineItems are Line Items that use text values instead of references to Products.</p>
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class TextLineItemImpl implements TextLineItem, ModelBase {
 
+    
     private java.time.ZonedDateTime addedAt;
-
+    
+    
     private com.commercetools.api.models.type.CustomFields custom;
-
+    
+    
     private com.commercetools.api.models.common.LocalizedString description;
-
+    
+    
     private String id;
-
+    
+    
     private com.commercetools.api.models.common.LocalizedString name;
-
+    
+    
     private Long quantity;
 
     /**
      * create instance with all properties
      */
     @JsonCreator
-    TextLineItemImpl(@JsonProperty("addedAt") final java.time.ZonedDateTime addedAt,
-            @JsonProperty("custom") final com.commercetools.api.models.type.CustomFields custom,
-            @JsonProperty("description") final com.commercetools.api.models.common.LocalizedString description,
-            @JsonProperty("id") final String id,
-            @JsonProperty("name") final com.commercetools.api.models.common.LocalizedString name,
-            @JsonProperty("quantity") final Long quantity) {
+    TextLineItemImpl(@JsonProperty("addedAt") final java.time.ZonedDateTime addedAt, @JsonProperty("custom") final com.commercetools.api.models.type.CustomFields custom, @JsonProperty("description") final com.commercetools.api.models.common.LocalizedString description, @JsonProperty("id") final String id, @JsonProperty("name") final com.commercetools.api.models.common.LocalizedString name, @JsonProperty("quantity") final Long quantity) {
         this.addedAt = addedAt;
         this.custom = custom;
         this.description = description;
@@ -49,7 +58,6 @@ public class TextLineItemImpl implements TextLineItem, ModelBase {
         this.name = name;
         this.quantity = quantity;
     }
-
     /**
      * create empty instance
      */
@@ -59,86 +67,91 @@ public class TextLineItemImpl implements TextLineItem, ModelBase {
     /**
      *  <p>Date and time (UTC) the TextLineItem was added to the ShoppingList.</p>
      */
-
-    public java.time.ZonedDateTime getAddedAt() {
+    
+    public java.time.ZonedDateTime getAddedAt(){
         return this.addedAt;
     }
-
+    
     /**
      *  <p>Custom Fields of the TextLineItem.</p>
      */
-
-    public com.commercetools.api.models.type.CustomFields getCustom() {
+    
+    public com.commercetools.api.models.type.CustomFields getCustom(){
         return this.custom;
     }
-
+    
     /**
      *  <p>Description of the TextLineItem.</p>
      */
-
-    public com.commercetools.api.models.common.LocalizedString getDescription() {
+    
+    public com.commercetools.api.models.common.LocalizedString getDescription(){
         return this.description;
     }
-
+    
     /**
      *  <p>Unique identifier of the TextLineItem.</p>
      */
-
-    public String getId() {
+    
+    public String getId(){
         return this.id;
     }
-
+    
     /**
      *  <p>Name of the TextLineItem.</p>
      */
-
-    public com.commercetools.api.models.common.LocalizedString getName() {
+    
+    public com.commercetools.api.models.common.LocalizedString getName(){
         return this.name;
     }
-
+    
     /**
      *  <p>Number of entries in the TextLineItem.</p>
      */
-
-    public Long getQuantity() {
+    
+    public Long getQuantity(){
         return this.quantity;
     }
 
-    public void setAddedAt(final java.time.ZonedDateTime addedAt) {
+    
+    public void setAddedAt(final java.time.ZonedDateTime addedAt){
         this.addedAt = addedAt;
     }
-
-    public void setCustom(final com.commercetools.api.models.type.CustomFields custom) {
+    
+    
+    public void setCustom(final com.commercetools.api.models.type.CustomFields custom){
         this.custom = custom;
     }
-
-    public void setDescription(final com.commercetools.api.models.common.LocalizedString description) {
+    
+    
+    public void setDescription(final com.commercetools.api.models.common.LocalizedString description){
         this.description = description;
     }
-
-    public void setId(final String id) {
+    
+    
+    public void setId(final String id){
         this.id = id;
     }
-
-    public void setName(final com.commercetools.api.models.common.LocalizedString name) {
+    
+    
+    public void setName(final com.commercetools.api.models.common.LocalizedString name){
         this.name = name;
     }
-
-    public void setQuantity(final Long quantity) {
+    
+    
+    public void setQuantity(final Long quantity){
         this.quantity = quantity;
     }
 
     @Override
     public boolean equals(Object o) {
-        if (this == o)
-            return true;
-
-        if (o == null || getClass() != o.getClass())
-            return false;
-
+        if (this == o) return true;
+    
+        if (o == null || getClass() != o.getClass()) return false;
+    
         TextLineItemImpl that = (TextLineItemImpl) o;
-
-        return new EqualsBuilder().append(addedAt, that.addedAt)
+    
+        return new EqualsBuilder()
+                .append(addedAt, that.addedAt)
                 .append(custom, that.custom)
                 .append(description, that.description)
                 .append(id, that.id)
@@ -146,16 +159,17 @@ public class TextLineItemImpl implements TextLineItem, ModelBase {
                 .append(quantity, that.quantity)
                 .isEquals();
     }
-
+    
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(addedAt)
-                .append(custom)
-                .append(description)
-                .append(id)
-                .append(name)
-                .append(quantity)
-                .toHashCode();
+        return new HashCodeBuilder(17, 37)
+            .append(addedAt)
+            .append(custom)
+            .append(description)
+            .append(id)
+            .append(name)
+            .append(quantity)
+            .toHashCode();
     }
 
 }

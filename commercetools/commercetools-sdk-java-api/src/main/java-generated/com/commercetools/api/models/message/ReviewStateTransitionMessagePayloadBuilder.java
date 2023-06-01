@@ -1,11 +1,13 @@
-
 package com.commercetools.api.models.message;
 
+import com.commercetools.api.models.common.Reference;
+import com.commercetools.api.models.message.MessagePayload;
+import com.commercetools.api.models.state.StateReference;
+import com.commercetools.api.models.message.ReviewStateTransitionMessagePayload;
+import javax.annotation.Nullable;
 import java.util.*;
 import java.util.function.Function;
-
-import javax.annotation.Nullable;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -22,207 +24,234 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .force(true)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class ReviewStateTransitionMessagePayloadBuilder implements Builder<ReviewStateTransitionMessagePayload> {
 
+    
     @Nullable
     private com.commercetools.api.models.state.StateReference oldState;
-
+    
+    
+    
     private com.commercetools.api.models.state.StateReference newState;
-
+    
+    
+    
     private Boolean oldIncludedInStatistics;
-
+    
+    
+    
     private Boolean newIncludedInStatistics;
-
+    
+    
     @Nullable
     private com.commercetools.api.models.common.Reference target;
-
+    
+    
+    
     private Boolean force;
 
+    
     /**
      *  <p>State of the Review before the Transition State update action.</p>
      * @param builder function to build the oldState value
      * @return Builder
      */
-
-    public ReviewStateTransitionMessagePayloadBuilder oldState(
-            Function<com.commercetools.api.models.state.StateReferenceBuilder, com.commercetools.api.models.state.StateReferenceBuilder> builder) {
+    
+    public ReviewStateTransitionMessagePayloadBuilder oldState(Function<com.commercetools.api.models.state.StateReferenceBuilder, com.commercetools.api.models.state.StateReferenceBuilder> builder) {
         this.oldState = builder.apply(com.commercetools.api.models.state.StateReferenceBuilder.of()).build();
         return this;
     }
-
+    
     /**
      *  <p>State of the Review before the Transition State update action.</p>
      * @param builder function to build the oldState value
      * @return Builder
      */
-
-    public ReviewStateTransitionMessagePayloadBuilder withOldState(
-            Function<com.commercetools.api.models.state.StateReferenceBuilder, com.commercetools.api.models.state.StateReference> builder) {
+    
+    public ReviewStateTransitionMessagePayloadBuilder withOldState(Function<com.commercetools.api.models.state.StateReferenceBuilder, com.commercetools.api.models.state.StateReference> builder) {
         this.oldState = builder.apply(com.commercetools.api.models.state.StateReferenceBuilder.of());
         return this;
     }
-
+                    
     /**
      *  <p>State of the Review before the Transition State update action.</p>
      * @param oldState value to be set
      * @return Builder
      */
-
-    public ReviewStateTransitionMessagePayloadBuilder oldState(
-            @Nullable final com.commercetools.api.models.state.StateReference oldState) {
+    
+    public ReviewStateTransitionMessagePayloadBuilder oldState(@Nullable final com.commercetools.api.models.state.StateReference oldState) {
         this.oldState = oldState;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>State of the Review after the Transition State update action.</p>
      * @param builder function to build the newState value
      * @return Builder
      */
-
-    public ReviewStateTransitionMessagePayloadBuilder newState(
-            Function<com.commercetools.api.models.state.StateReferenceBuilder, com.commercetools.api.models.state.StateReferenceBuilder> builder) {
+    
+    public ReviewStateTransitionMessagePayloadBuilder newState(Function<com.commercetools.api.models.state.StateReferenceBuilder, com.commercetools.api.models.state.StateReferenceBuilder> builder) {
         this.newState = builder.apply(com.commercetools.api.models.state.StateReferenceBuilder.of()).build();
         return this;
     }
-
+    
     /**
      *  <p>State of the Review after the Transition State update action.</p>
      * @param builder function to build the newState value
      * @return Builder
      */
-
-    public ReviewStateTransitionMessagePayloadBuilder withNewState(
-            Function<com.commercetools.api.models.state.StateReferenceBuilder, com.commercetools.api.models.state.StateReference> builder) {
+    
+    public ReviewStateTransitionMessagePayloadBuilder withNewState(Function<com.commercetools.api.models.state.StateReferenceBuilder, com.commercetools.api.models.state.StateReference> builder) {
         this.newState = builder.apply(com.commercetools.api.models.state.StateReferenceBuilder.of());
         return this;
     }
-
+                    
     /**
      *  <p>State of the Review after the Transition State update action.</p>
      * @param newState value to be set
      * @return Builder
      */
-
-    public ReviewStateTransitionMessagePayloadBuilder newState(
-            final com.commercetools.api.models.state.StateReference newState) {
+    
+    public ReviewStateTransitionMessagePayloadBuilder newState( final com.commercetools.api.models.state.StateReference newState) {
         this.newState = newState;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Whether the old Review was taken into account in the rating statistics of the target before the state transition.</p>
      * @param oldIncludedInStatistics value to be set
      * @return Builder
      */
-
-    public ReviewStateTransitionMessagePayloadBuilder oldIncludedInStatistics(final Boolean oldIncludedInStatistics) {
+    
+    public ReviewStateTransitionMessagePayloadBuilder oldIncludedInStatistics( final Boolean oldIncludedInStatistics) {
         this.oldIncludedInStatistics = oldIncludedInStatistics;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Whether the new Review was taken into account in the rating statistics of the target after the state transition.</p>
      * @param newIncludedInStatistics value to be set
      * @return Builder
      */
-
-    public ReviewStateTransitionMessagePayloadBuilder newIncludedInStatistics(final Boolean newIncludedInStatistics) {
+    
+    public ReviewStateTransitionMessagePayloadBuilder newIncludedInStatistics( final Boolean newIncludedInStatistics) {
         this.newIncludedInStatistics = newIncludedInStatistics;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Reference to the resource that the Review belongs to.</p>
      * @param target value to be set
      * @return Builder
      */
-
-    public ReviewStateTransitionMessagePayloadBuilder target(
-            @Nullable final com.commercetools.api.models.common.Reference target) {
+    
+    public ReviewStateTransitionMessagePayloadBuilder target(@Nullable final com.commercetools.api.models.common.Reference target) {
         this.target = target;
         return this;
     }
-
+    
+    
     /**
      *  <p>Reference to the resource that the Review belongs to.</p>
      * @param builder function to build the target value
      * @return Builder
      */
-
-    public ReviewStateTransitionMessagePayloadBuilder target(
-            Function<com.commercetools.api.models.common.ReferenceBuilder, Builder<? extends com.commercetools.api.models.common.Reference>> builder) {
+    
+    public ReviewStateTransitionMessagePayloadBuilder target(Function<com.commercetools.api.models.common.ReferenceBuilder, Builder<? extends com.commercetools.api.models.common.Reference>> builder) {
         this.target = builder.apply(com.commercetools.api.models.common.ReferenceBuilder.of()).build();
         return this;
     }
-
+                    
+    
+    
     /**
      *  <p>Whether State transition validations were turned off during the Transition State update action.</p>
      * @param force value to be set
      * @return Builder
      */
-
-    public ReviewStateTransitionMessagePayloadBuilder force(final Boolean force) {
+    
+    public ReviewStateTransitionMessagePayloadBuilder force( final Boolean force) {
         this.force = force;
         return this;
     }
+    
+    
 
     /**
      *  <p>State of the Review before the Transition State update action.</p>
      * @return oldState
      */
-
+    
     @Nullable
-    public com.commercetools.api.models.state.StateReference getOldState() {
+    public com.commercetools.api.models.state.StateReference getOldState(){
         return this.oldState;
     }
-
+    
     /**
      *  <p>State of the Review after the Transition State update action.</p>
      * @return newState
      */
-
-    public com.commercetools.api.models.state.StateReference getNewState() {
+    
+    
+    public com.commercetools.api.models.state.StateReference getNewState(){
         return this.newState;
     }
-
+    
     /**
      *  <p>Whether the old Review was taken into account in the rating statistics of the target before the state transition.</p>
      * @return oldIncludedInStatistics
      */
-
-    public Boolean getOldIncludedInStatistics() {
+    
+    
+    public Boolean getOldIncludedInStatistics(){
         return this.oldIncludedInStatistics;
     }
-
+    
     /**
      *  <p>Whether the new Review was taken into account in the rating statistics of the target after the state transition.</p>
      * @return newIncludedInStatistics
      */
-
-    public Boolean getNewIncludedInStatistics() {
+    
+    
+    public Boolean getNewIncludedInStatistics(){
         return this.newIncludedInStatistics;
     }
-
+    
     /**
      *  <p>Reference to the resource that the Review belongs to.</p>
      * @return target
      */
-
+    
     @Nullable
-    public com.commercetools.api.models.common.Reference getTarget() {
+    public com.commercetools.api.models.common.Reference getTarget(){
         return this.target;
     }
-
+    
     /**
      *  <p>Whether State transition validations were turned off during the Transition State update action.</p>
      * @return force
      */
-
-    public Boolean getForce() {
+    
+    
+    public Boolean getForce(){
         return this.force;
     }
 
@@ -232,27 +261,23 @@ public class ReviewStateTransitionMessagePayloadBuilder implements Builder<Revie
      */
     public ReviewStateTransitionMessagePayload build() {
         Objects.requireNonNull(newState, ReviewStateTransitionMessagePayload.class + ": newState is missing");
-        Objects.requireNonNull(oldIncludedInStatistics,
-            ReviewStateTransitionMessagePayload.class + ": oldIncludedInStatistics is missing");
-        Objects.requireNonNull(newIncludedInStatistics,
-            ReviewStateTransitionMessagePayload.class + ": newIncludedInStatistics is missing");
+        Objects.requireNonNull(oldIncludedInStatistics, ReviewStateTransitionMessagePayload.class + ": oldIncludedInStatistics is missing");
+        Objects.requireNonNull(newIncludedInStatistics, ReviewStateTransitionMessagePayload.class + ": newIncludedInStatistics is missing");
         Objects.requireNonNull(force, ReviewStateTransitionMessagePayload.class + ": force is missing");
-        return new ReviewStateTransitionMessagePayloadImpl(oldState, newState, oldIncludedInStatistics,
-            newIncludedInStatistics, target, force);
+        return new ReviewStateTransitionMessagePayloadImpl(oldState, newState, oldIncludedInStatistics, newIncludedInStatistics, target, force);
     }
-
+    
     /**
      * builds ReviewStateTransitionMessagePayload without checking for non-null required values
      * @return ReviewStateTransitionMessagePayload
      */
     public ReviewStateTransitionMessagePayload buildUnchecked() {
-        return new ReviewStateTransitionMessagePayloadImpl(oldState, newState, oldIncludedInStatistics,
-            newIncludedInStatistics, target, force);
+        return new ReviewStateTransitionMessagePayloadImpl(oldState, newState, oldIncludedInStatistics, newIncludedInStatistics, target, force);
     }
 
     /**
      * factory method for an instance of ReviewStateTransitionMessagePayloadBuilder
-     * @return builder
+     * @return builder 
      */
     public static ReviewStateTransitionMessagePayloadBuilder of() {
         return new ReviewStateTransitionMessagePayloadBuilder();

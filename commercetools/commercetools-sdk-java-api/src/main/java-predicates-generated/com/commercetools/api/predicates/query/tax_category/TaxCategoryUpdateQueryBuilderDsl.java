@@ -1,11 +1,11 @@
-
 package com.commercetools.api.predicates.query.tax_category;
-
-import java.util.function.Function;
 
 import com.commercetools.api.predicates.query.*;
 
-public class TaxCategoryUpdateQueryBuilderDsl {
+import java.util.function.Function;
+
+
+public class TaxCategoryUpdateQueryBuilderDsl  {
     public TaxCategoryUpdateQueryBuilderDsl() {
     }
 
@@ -14,23 +14,19 @@ public class TaxCategoryUpdateQueryBuilderDsl {
     }
 
     public LongComparisonPredicateBuilder<TaxCategoryUpdateQueryBuilderDsl> version() {
-        return new LongComparisonPredicateBuilder<>(
-            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("version")),
-            p -> new CombinationQueryPredicate<>(p, TaxCategoryUpdateQueryBuilderDsl::of));
+        return new LongComparisonPredicateBuilder<>(BinaryQueryPredicate.of().left(new ConstantQueryPredicate("version")),
+        p -> new CombinationQueryPredicate<>(p, TaxCategoryUpdateQueryBuilderDsl::of));
     }
-
     public CombinationQueryPredicate<TaxCategoryUpdateQueryBuilderDsl> actions(
-            Function<com.commercetools.api.predicates.query.tax_category.TaxCategoryUpdateActionQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.tax_category.TaxCategoryUpdateActionQueryBuilderDsl>> fn) {
+        Function<com.commercetools.api.predicates.query.tax_category.TaxCategoryUpdateActionQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.tax_category.TaxCategoryUpdateActionQueryBuilderDsl>> fn) {
         return new CombinationQueryPredicate<>(ContainerQueryPredicate.of()
-                .parent(ConstantQueryPredicate.of().constant("actions"))
-                .inner(fn.apply(
-                    com.commercetools.api.predicates.query.tax_category.TaxCategoryUpdateActionQueryBuilderDsl.of())),
+            .parent(ConstantQueryPredicate.of().constant("actions"))
+            .inner(fn.apply(com.commercetools.api.predicates.query.tax_category.TaxCategoryUpdateActionQueryBuilderDsl.of())),
             TaxCategoryUpdateQueryBuilderDsl::of);
     }
-
     public CollectionPredicateBuilder<TaxCategoryUpdateQueryBuilderDsl> actions() {
         return new CollectionPredicateBuilder<>(BinaryQueryPredicate.of().left(new ConstantQueryPredicate("actions")),
-            p -> new CombinationQueryPredicate<>(p, TaxCategoryUpdateQueryBuilderDsl::of));
+                p -> new CombinationQueryPredicate<>(p, TaxCategoryUpdateQueryBuilderDsl::of));
     }
-
+    
 }

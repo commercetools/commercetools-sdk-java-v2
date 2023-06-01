@@ -1,19 +1,20 @@
-
 package com.commercetools.api.models.type;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-import java.util.stream.Collectors;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
+import com.commercetools.api.models.type.TypeUpdateAction;
+import com.commercetools.api.models.type.TypeUpdateImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * TypeUpdate
@@ -27,12 +28,15 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .plusActions(actionsBuilder -> actionsBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = TypeUpdateImpl.class)
-public interface TypeUpdate
-        extends com.commercetools.api.models.ResourceUpdate<TypeUpdate, TypeUpdateAction, TypeUpdateBuilder> {
+public interface TypeUpdate extends com.commercetools.api.models.ResourceUpdate<TypeUpdate, TypeUpdateAction, TypeUpdateBuilder> {
+
 
     /**
      *  <p>Expected version of the type on which the changes should be applied. If the expected version does not match the actual version, a ConcurrentModification error is returned.</p>
@@ -41,7 +45,6 @@ public interface TypeUpdate
     @NotNull
     @JsonProperty("version")
     public Long getVersion();
-
     /**
      *  <p>Update actions to be performed on the Type.</p>
      * @return actions
@@ -55,31 +58,32 @@ public interface TypeUpdate
      *  <p>Expected version of the type on which the changes should be applied. If the expected version does not match the actual version, a ConcurrentModification error is returned.</p>
      * @param version value to be set
      */
-
+    
     public void setVersion(final Long version);
-
+    
+    
     /**
      *  <p>Update actions to be performed on the Type.</p>
      * @param actions values to be set
      */
-
+    
     @JsonIgnore
-    public void setActions(final TypeUpdateAction... actions);
-
+    public void setActions(final TypeUpdateAction ...actions);
     /**
      *  <p>Update actions to be performed on the Type.</p>
      * @param actions values to be set
      */
-
+    
     public void setActions(final List<TypeUpdateAction> actions);
 
     /**
      * factory method
      * @return instance of TypeUpdate
      */
-    public static TypeUpdate of() {
+    public static TypeUpdate of(){
         return new TypeUpdateImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy TypeUpdate
@@ -106,9 +110,7 @@ public interface TypeUpdate
         TypeUpdateImpl instance = new TypeUpdateImpl();
         instance.setVersion(template.getVersion());
         instance.setActions(Optional.ofNullable(template.getActions())
-                .map(t -> t.stream()
-                        .map(com.commercetools.api.models.type.TypeUpdateAction::deepCopy)
-                        .collect(Collectors.toList()))
+                .map(t -> t.stream().map(com.commercetools.api.models.type.TypeUpdateAction::deepCopy).collect(Collectors.toList()))
                 .orElse(null));
         return instance;
     }
@@ -120,7 +122,7 @@ public interface TypeUpdate
     public static TypeUpdateBuilder builder() {
         return TypeUpdateBuilder.of();
     }
-
+    
     /**
      * create builder for TypeUpdate instance
      * @param template instance with prefilled values for the builder
@@ -129,6 +131,7 @@ public interface TypeUpdate
     public static TypeUpdateBuilder builder(final TypeUpdate template) {
         return TypeUpdateBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -139,7 +142,7 @@ public interface TypeUpdate
     default <T> T withTypeUpdate(Function<TypeUpdate, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

@@ -1,8 +1,11 @@
-
 package com.commercetools.api.models.error;
 
+import com.commercetools.api.models.error.ErrorObject;
+import com.commercetools.api.models.error.InvalidItemShippingDetailsError;
+import javax.annotation.Nullable;
 import java.util.*;
-
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -18,48 +21,62 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .itemId("{itemId}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class InvalidItemShippingDetailsErrorBuilder implements Builder<InvalidItemShippingDetailsError> {
 
+    
+    
     private String message;
-
+    
+    
+    
     private Map<String, java.lang.Object> values = new HashMap<>();
-
+    
+    
+    
     private String subject;
-
+    
+    
+    
     private String itemId;
 
+    
     /**
      *  <p><code>"Inconsistent shipping details for $subject with ID $itemId. $subject quantity is $itemQuantity and shippingTargets quantity sum is $quantitySum."</code></p>
      * @param message value to be set
      * @return Builder
      */
-
-    public InvalidItemShippingDetailsErrorBuilder message(final String message) {
+    
+    public InvalidItemShippingDetailsErrorBuilder message( final String message) {
         this.message = message;
         return this;
     }
-
+    
+    
+    
     /**
      *  <p>Error-specific additional fields.</p>
      * @param values properties to be set
      * @return Builder
      */
-
-    public InvalidItemShippingDetailsErrorBuilder values(final Map<String, java.lang.Object> values) {
+    
+    public InvalidItemShippingDetailsErrorBuilder values( final Map<String, java.lang.Object> values){
         this.values = values;
         return this;
     }
-
+    
     /**
      *  <p>Error-specific additional fields.</p>
      * @param key property name
      * @param value property value
      * @return Builder
      */
-
+    
     public InvalidItemShippingDetailsErrorBuilder addValue(final String key, final java.lang.Object value) {
         if (this.values == null) {
             values = new HashMap<>();
@@ -67,62 +84,73 @@ public class InvalidItemShippingDetailsErrorBuilder implements Builder<InvalidIt
         values.put(key, value);
         return this;
     }
-
+    
+    
+    
     /**
      *  <p><code>"LineItem"</code> or <code>"CustomLineItem"</code></p>
      * @param subject value to be set
      * @return Builder
      */
-
-    public InvalidItemShippingDetailsErrorBuilder subject(final String subject) {
+    
+    public InvalidItemShippingDetailsErrorBuilder subject( final String subject) {
         this.subject = subject;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Unique identifier of the Line Item or Custom Line Item.</p>
      * @param itemId value to be set
      * @return Builder
      */
-
-    public InvalidItemShippingDetailsErrorBuilder itemId(final String itemId) {
+    
+    public InvalidItemShippingDetailsErrorBuilder itemId( final String itemId) {
         this.itemId = itemId;
         return this;
     }
+    
+    
 
     /**
      *  <p><code>"Inconsistent shipping details for $subject with ID $itemId. $subject quantity is $itemQuantity and shippingTargets quantity sum is $quantitySum."</code></p>
      * @return message
      */
-
-    public String getMessage() {
+    
+    
+    public String getMessage(){
         return this.message;
     }
-
+    
     /**
      *  <p>Error-specific additional fields.</p>
      * @return pattern properties
      */
-
-    public Map<String, java.lang.Object> getValues() {
+    
+    
+    public Map<String, java.lang.Object> getValues(){
         return this.values;
     }
-
+    
     /**
      *  <p><code>"LineItem"</code> or <code>"CustomLineItem"</code></p>
      * @return subject
      */
-
-    public String getSubject() {
+    
+    
+    public String getSubject(){
         return this.subject;
     }
-
+    
     /**
      *  <p>Unique identifier of the Line Item or Custom Line Item.</p>
      * @return itemId
      */
-
-    public String getItemId() {
+    
+    
+    public String getItemId(){
         return this.itemId;
     }
 
@@ -136,7 +164,7 @@ public class InvalidItemShippingDetailsErrorBuilder implements Builder<InvalidIt
         Objects.requireNonNull(itemId, InvalidItemShippingDetailsError.class + ": itemId is missing");
         return new InvalidItemShippingDetailsErrorImpl(message, values, subject, itemId);
     }
-
+    
     /**
      * builds InvalidItemShippingDetailsError without checking for non-null required values
      * @return InvalidItemShippingDetailsError
@@ -147,7 +175,7 @@ public class InvalidItemShippingDetailsErrorBuilder implements Builder<InvalidIt
 
     /**
      * factory method for an instance of InvalidItemShippingDetailsErrorBuilder
-     * @return builder
+     * @return builder 
      */
     public static InvalidItemShippingDetailsErrorBuilder of() {
         return new InvalidItemShippingDetailsErrorBuilder();

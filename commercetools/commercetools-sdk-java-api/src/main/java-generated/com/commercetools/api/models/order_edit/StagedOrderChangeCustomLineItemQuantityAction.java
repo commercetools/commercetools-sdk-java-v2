@@ -1,18 +1,20 @@
-
 package com.commercetools.api.models.order_edit;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
-
 import com.commercetools.api.models.order.StagedOrderUpdateAction;
+import com.commercetools.api.models.order_edit.StagedOrderChangeCustomLineItemQuantityActionImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * StagedOrderChangeCustomLineItemQuantityAction
@@ -26,9 +28,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .quantity(0.3)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = StagedOrderChangeCustomLineItemQuantityActionImpl.class)
 public interface StagedOrderChangeCustomLineItemQuantityAction extends StagedOrderUpdateAction {
 
@@ -44,7 +49,6 @@ public interface StagedOrderChangeCustomLineItemQuantityAction extends StagedOrd
     @NotNull
     @JsonProperty("customLineItemId")
     public String getCustomLineItemId();
-
     /**
      *
      * @return quantity
@@ -57,31 +61,33 @@ public interface StagedOrderChangeCustomLineItemQuantityAction extends StagedOrd
      * set customLineItemId
      * @param customLineItemId value to be set
      */
-
+    
     public void setCustomLineItemId(final String customLineItemId);
-
+    
+    
     /**
      * set quantity
      * @param quantity value to be set
      */
-
+    
     public void setQuantity(final Long quantity);
+    
 
     /**
      * factory method
      * @return instance of StagedOrderChangeCustomLineItemQuantityAction
      */
-    public static StagedOrderChangeCustomLineItemQuantityAction of() {
+    public static StagedOrderChangeCustomLineItemQuantityAction of(){
         return new StagedOrderChangeCustomLineItemQuantityActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy StagedOrderChangeCustomLineItemQuantityAction
      * @param template instance to be copied
      * @return copy instance
      */
-    public static StagedOrderChangeCustomLineItemQuantityAction of(
-            final StagedOrderChangeCustomLineItemQuantityAction template) {
+    public static StagedOrderChangeCustomLineItemQuantityAction of(final StagedOrderChangeCustomLineItemQuantityAction template) {
         StagedOrderChangeCustomLineItemQuantityActionImpl instance = new StagedOrderChangeCustomLineItemQuantityActionImpl();
         instance.setCustomLineItemId(template.getCustomLineItemId());
         instance.setQuantity(template.getQuantity());
@@ -94,8 +100,7 @@ public interface StagedOrderChangeCustomLineItemQuantityAction extends StagedOrd
      * @return copy instance
      */
     @Nullable
-    public static StagedOrderChangeCustomLineItemQuantityAction deepCopy(
-            @Nullable final StagedOrderChangeCustomLineItemQuantityAction template) {
+    public static StagedOrderChangeCustomLineItemQuantityAction deepCopy(@Nullable final StagedOrderChangeCustomLineItemQuantityAction template) {
         if (template == null) {
             return null;
         }
@@ -112,16 +117,16 @@ public interface StagedOrderChangeCustomLineItemQuantityAction extends StagedOrd
     public static StagedOrderChangeCustomLineItemQuantityActionBuilder builder() {
         return StagedOrderChangeCustomLineItemQuantityActionBuilder.of();
     }
-
+    
     /**
      * create builder for StagedOrderChangeCustomLineItemQuantityAction instance
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static StagedOrderChangeCustomLineItemQuantityActionBuilder builder(
-            final StagedOrderChangeCustomLineItemQuantityAction template) {
+    public static StagedOrderChangeCustomLineItemQuantityActionBuilder builder(final StagedOrderChangeCustomLineItemQuantityAction template) {
         return StagedOrderChangeCustomLineItemQuantityActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -129,11 +134,10 @@ public interface StagedOrderChangeCustomLineItemQuantityAction extends StagedOrd
      * @param helper function to map the object
      * @return mapped value
      */
-    default <T> T withStagedOrderChangeCustomLineItemQuantityAction(
-            Function<StagedOrderChangeCustomLineItemQuantityAction, T> helper) {
+    default <T> T withStagedOrderChangeCustomLineItemQuantityAction(Function<StagedOrderChangeCustomLineItemQuantityAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

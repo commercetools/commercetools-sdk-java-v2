@@ -1,8 +1,11 @@
-
 package com.commercetools.history.models.change;
 
+import com.commercetools.history.models.change.Change;
+import com.commercetools.history.models.change.SetCustomerNumberChange;
+import javax.annotation.Nullable;
 import java.util.*;
-
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -18,74 +21,95 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .nextValue("{nextValue}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class SetCustomerNumberChangeBuilder implements Builder<SetCustomerNumberChange> {
 
+    
+    
     private String change;
-
+    
+    
+    
     private String previousValue;
-
+    
+    
+    
     private String nextValue;
 
+    
     /**
      *  <p>Shape of the action for <code>setCustomerNumber</code></p>
      * @param change value to be set
      * @return Builder
      */
-
-    public SetCustomerNumberChangeBuilder change(final String change) {
+    
+    public SetCustomerNumberChangeBuilder change( final String change) {
         this.change = change;
         return this;
     }
-
+    
+    
+    
+    
     /**
      * set the value to the previousValue
      * @param previousValue value to be set
      * @return Builder
      */
-
-    public SetCustomerNumberChangeBuilder previousValue(final String previousValue) {
+    
+    public SetCustomerNumberChangeBuilder previousValue( final String previousValue) {
         this.previousValue = previousValue;
         return this;
     }
-
+    
+    
+    
+    
     /**
      * set the value to the nextValue
      * @param nextValue value to be set
      * @return Builder
      */
-
-    public SetCustomerNumberChangeBuilder nextValue(final String nextValue) {
+    
+    public SetCustomerNumberChangeBuilder nextValue( final String nextValue) {
         this.nextValue = nextValue;
         return this;
     }
+    
+    
 
     /**
      *  <p>Shape of the action for <code>setCustomerNumber</code></p>
      * @return change
      */
-
-    public String getChange() {
+    
+    
+    public String getChange(){
         return this.change;
     }
-
+    
     /**
      * value of previousValue}
      * @return previousValue
      */
-
-    public String getPreviousValue() {
+    
+    
+    public String getPreviousValue(){
         return this.previousValue;
     }
-
+    
     /**
      * value of nextValue}
      * @return nextValue
      */
-
-    public String getNextValue() {
+    
+    
+    public String getNextValue(){
         return this.nextValue;
     }
 
@@ -99,7 +123,7 @@ public class SetCustomerNumberChangeBuilder implements Builder<SetCustomerNumber
         Objects.requireNonNull(nextValue, SetCustomerNumberChange.class + ": nextValue is missing");
         return new SetCustomerNumberChangeImpl(change, previousValue, nextValue);
     }
-
+    
     /**
      * builds SetCustomerNumberChange without checking for non-null required values
      * @return SetCustomerNumberChange
@@ -110,7 +134,7 @@ public class SetCustomerNumberChangeBuilder implements Builder<SetCustomerNumber
 
     /**
      * factory method for an instance of SetCustomerNumberChangeBuilder
-     * @return builder
+     * @return builder 
      */
     public static SetCustomerNumberChangeBuilder of() {
         return new SetCustomerNumberChangeBuilder();

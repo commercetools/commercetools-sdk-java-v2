@@ -1,47 +1,54 @@
-
 package com.commercetools.api.models.attribute_group;
 
-import java.time.*;
-import java.util.*;
-
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
-
-import io.vrap.rmf.base.client.ModelBase;
+import com.commercetools.api.models.attribute_group.AttributeReference;
+import com.commercetools.api.models.common.LocalizedString;
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.ModelBase;
+import javax.validation.Valid;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.annotation.*;
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
  * AttributeGroupDraft
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class AttributeGroupDraftImpl implements AttributeGroupDraft, ModelBase {
 
+    
     private com.commercetools.api.models.common.LocalizedString name;
-
+    
+    
     private com.commercetools.api.models.common.LocalizedString description;
-
+    
+    
     private java.util.List<com.commercetools.api.models.attribute_group.AttributeReference> attributes;
-
+    
+    
     private String key;
 
     /**
      * create instance with all properties
      */
     @JsonCreator
-    AttributeGroupDraftImpl(@JsonProperty("name") final com.commercetools.api.models.common.LocalizedString name,
-            @JsonProperty("description") final com.commercetools.api.models.common.LocalizedString description,
-            @JsonProperty("attributes") final java.util.List<com.commercetools.api.models.attribute_group.AttributeReference> attributes,
-            @JsonProperty("key") final String key) {
+    AttributeGroupDraftImpl(@JsonProperty("name") final com.commercetools.api.models.common.LocalizedString name, @JsonProperty("description") final com.commercetools.api.models.common.LocalizedString description, @JsonProperty("attributes") final java.util.List<com.commercetools.api.models.attribute_group.AttributeReference> attributes, @JsonProperty("key") final String key) {
         this.name = name;
         this.description = description;
         this.attributes = attributes;
         this.key = key;
     }
-
     /**
      * create empty instance
      */
@@ -51,76 +58,84 @@ public class AttributeGroupDraftImpl implements AttributeGroupDraft, ModelBase {
     /**
      *  <p>Name of the AttributeGroup.</p>
      */
-
-    public com.commercetools.api.models.common.LocalizedString getName() {
+    
+    public com.commercetools.api.models.common.LocalizedString getName(){
         return this.name;
     }
-
+    
     /**
      *  <p>Description of the AttributeGroup.</p>
      */
-
-    public com.commercetools.api.models.common.LocalizedString getDescription() {
+    
+    public com.commercetools.api.models.common.LocalizedString getDescription(){
         return this.description;
     }
-
+    
     /**
      *  <p>Attributes with unique values.</p>
      */
-
-    public java.util.List<com.commercetools.api.models.attribute_group.AttributeReference> getAttributes() {
+    
+    public java.util.List<com.commercetools.api.models.attribute_group.AttributeReference> getAttributes(){
         return this.attributes;
     }
-
+    
     /**
      *  <p>User-defined unique identifier for the AttributeGroup.</p>
      */
-
-    public String getKey() {
+    
+    public String getKey(){
         return this.key;
     }
 
-    public void setName(final com.commercetools.api.models.common.LocalizedString name) {
+    
+    public void setName(final com.commercetools.api.models.common.LocalizedString name){
         this.name = name;
     }
-
-    public void setDescription(final com.commercetools.api.models.common.LocalizedString description) {
+    
+    
+    public void setDescription(final com.commercetools.api.models.common.LocalizedString description){
         this.description = description;
     }
-
-    public void setAttributes(final com.commercetools.api.models.attribute_group.AttributeReference... attributes) {
-        this.attributes = new ArrayList<>(Arrays.asList(attributes));
+    
+    
+    public void setAttributes(final com.commercetools.api.models.attribute_group.AttributeReference ...attributes){
+       this.attributes = new ArrayList<>(Arrays.asList(attributes));
     }
-
-    public void setAttributes(
-            final java.util.List<com.commercetools.api.models.attribute_group.AttributeReference> attributes) {
-        this.attributes = attributes;
+    
+    
+    public void setAttributes(final java.util.List<com.commercetools.api.models.attribute_group.AttributeReference> attributes){
+       this.attributes = attributes;
     }
-
-    public void setKey(final String key) {
+    
+    
+    public void setKey(final String key){
         this.key = key;
     }
 
     @Override
     public boolean equals(Object o) {
-        if (this == o)
-            return true;
-
-        if (o == null || getClass() != o.getClass())
-            return false;
-
+        if (this == o) return true;
+    
+        if (o == null || getClass() != o.getClass()) return false;
+    
         AttributeGroupDraftImpl that = (AttributeGroupDraftImpl) o;
-
-        return new EqualsBuilder().append(name, that.name)
+    
+        return new EqualsBuilder()
+                .append(name, that.name)
                 .append(description, that.description)
                 .append(attributes, that.attributes)
                 .append(key, that.key)
                 .isEquals();
     }
-
+    
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(name).append(description).append(attributes).append(key).toHashCode();
+        return new HashCodeBuilder(17, 37)
+            .append(name)
+            .append(description)
+            .append(attributes)
+            .append(key)
+            .toHashCode();
     }
 
 }

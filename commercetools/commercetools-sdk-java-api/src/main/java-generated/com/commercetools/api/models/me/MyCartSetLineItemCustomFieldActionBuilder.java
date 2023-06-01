@@ -1,10 +1,12 @@
-
 package com.commercetools.api.models.me;
 
-import java.util.*;
-
+import com.commercetools.api.models.me.MyCartUpdateAction;
+import java.lang.Object;
+import com.commercetools.api.models.me.MyCartSetLineItemCustomFieldAction;
 import javax.annotation.Nullable;
-
+import java.util.*;
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -19,76 +21,95 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .name("{name}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class MyCartSetLineItemCustomFieldActionBuilder implements Builder<MyCartSetLineItemCustomFieldAction> {
 
+    
+    
     private String lineItemId;
-
+    
+    
+    
     private String name;
-
+    
+    
     @Nullable
     private java.lang.Object value;
 
+    
     /**
      *  <p><code>id</code> of the LineItem to update.</p>
      * @param lineItemId value to be set
      * @return Builder
      */
-
-    public MyCartSetLineItemCustomFieldActionBuilder lineItemId(final String lineItemId) {
+    
+    public MyCartSetLineItemCustomFieldActionBuilder lineItemId( final String lineItemId) {
         this.lineItemId = lineItemId;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Name of the Custom Field.</p>
      * @param name value to be set
      * @return Builder
      */
-
-    public MyCartSetLineItemCustomFieldActionBuilder name(final String name) {
+    
+    public MyCartSetLineItemCustomFieldActionBuilder name( final String name) {
         this.name = name;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>If <code>value</code> is absent or <code>null</code>, this field will be removed if it exists. Removing a field that does not exist returns an InvalidOperation error. If <code>value</code> is provided, it is set for the field defined by <code>name</code>.</p>
      * @param value value to be set
      * @return Builder
      */
-
+    
     public MyCartSetLineItemCustomFieldActionBuilder value(@Nullable final java.lang.Object value) {
         this.value = value;
         return this;
     }
+    
+    
 
     /**
      *  <p><code>id</code> of the LineItem to update.</p>
      * @return lineItemId
      */
-
-    public String getLineItemId() {
+    
+    
+    public String getLineItemId(){
         return this.lineItemId;
     }
-
+    
     /**
      *  <p>Name of the Custom Field.</p>
      * @return name
      */
-
-    public String getName() {
+    
+    
+    public String getName(){
         return this.name;
     }
-
+    
     /**
      *  <p>If <code>value</code> is absent or <code>null</code>, this field will be removed if it exists. Removing a field that does not exist returns an InvalidOperation error. If <code>value</code> is provided, it is set for the field defined by <code>name</code>.</p>
      * @return value
      */
-
+    
     @Nullable
-    public java.lang.Object getValue() {
+    public java.lang.Object getValue(){
         return this.value;
     }
 
@@ -101,7 +122,7 @@ public class MyCartSetLineItemCustomFieldActionBuilder implements Builder<MyCart
         Objects.requireNonNull(name, MyCartSetLineItemCustomFieldAction.class + ": name is missing");
         return new MyCartSetLineItemCustomFieldActionImpl(lineItemId, name, value);
     }
-
+    
     /**
      * builds MyCartSetLineItemCustomFieldAction without checking for non-null required values
      * @return MyCartSetLineItemCustomFieldAction
@@ -112,7 +133,7 @@ public class MyCartSetLineItemCustomFieldActionBuilder implements Builder<MyCart
 
     /**
      * factory method for an instance of MyCartSetLineItemCustomFieldActionBuilder
-     * @return builder
+     * @return builder 
      */
     public static MyCartSetLineItemCustomFieldActionBuilder of() {
         return new MyCartSetLineItemCustomFieldActionBuilder();

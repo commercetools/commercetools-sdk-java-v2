@@ -1,11 +1,11 @@
-
 package com.commercetools.api.models.payment;
 
+import com.commercetools.api.models.state.StateResourceIdentifier;
+import com.commercetools.api.models.payment.PaymentStatusDraft;
+import javax.annotation.Nullable;
 import java.util.*;
 import java.util.function.Function;
-
-import javax.annotation.Nullable;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -18,105 +18,117 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     PaymentStatusDraft paymentStatusDraft = PaymentStatusDraft.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class PaymentStatusDraftBuilder implements Builder<PaymentStatusDraft> {
 
+    
     @Nullable
     private String interfaceCode;
-
+    
+    
     @Nullable
     private String interfaceText;
-
+    
+    
     @Nullable
     private com.commercetools.api.models.state.StateResourceIdentifier state;
 
+    
     /**
      *  <p>External reference that identifies the current status of the Payment.</p>
      * @param interfaceCode value to be set
      * @return Builder
      */
-
+    
     public PaymentStatusDraftBuilder interfaceCode(@Nullable final String interfaceCode) {
         this.interfaceCode = interfaceCode;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Text describing the current status of the Payment.</p>
      * @param interfaceText value to be set
      * @return Builder
      */
-
+    
     public PaymentStatusDraftBuilder interfaceText(@Nullable final String interfaceText) {
         this.interfaceText = interfaceText;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>ResourceIdentifier to a State.</p>
      * @param builder function to build the state value
      * @return Builder
      */
-
-    public PaymentStatusDraftBuilder state(
-            Function<com.commercetools.api.models.state.StateResourceIdentifierBuilder, com.commercetools.api.models.state.StateResourceIdentifierBuilder> builder) {
+    
+    public PaymentStatusDraftBuilder state(Function<com.commercetools.api.models.state.StateResourceIdentifierBuilder, com.commercetools.api.models.state.StateResourceIdentifierBuilder> builder) {
         this.state = builder.apply(com.commercetools.api.models.state.StateResourceIdentifierBuilder.of()).build();
         return this;
     }
-
+    
     /**
      *  <p>ResourceIdentifier to a State.</p>
      * @param builder function to build the state value
      * @return Builder
      */
-
-    public PaymentStatusDraftBuilder withState(
-            Function<com.commercetools.api.models.state.StateResourceIdentifierBuilder, com.commercetools.api.models.state.StateResourceIdentifier> builder) {
+    
+    public PaymentStatusDraftBuilder withState(Function<com.commercetools.api.models.state.StateResourceIdentifierBuilder, com.commercetools.api.models.state.StateResourceIdentifier> builder) {
         this.state = builder.apply(com.commercetools.api.models.state.StateResourceIdentifierBuilder.of());
         return this;
     }
-
+                    
     /**
      *  <p>ResourceIdentifier to a State.</p>
      * @param state value to be set
      * @return Builder
      */
-
-    public PaymentStatusDraftBuilder state(
-            @Nullable final com.commercetools.api.models.state.StateResourceIdentifier state) {
+    
+    public PaymentStatusDraftBuilder state(@Nullable final com.commercetools.api.models.state.StateResourceIdentifier state) {
         this.state = state;
         return this;
     }
+    
+    
 
     /**
      *  <p>External reference that identifies the current status of the Payment.</p>
      * @return interfaceCode
      */
-
+    
     @Nullable
-    public String getInterfaceCode() {
+    public String getInterfaceCode(){
         return this.interfaceCode;
     }
-
+    
     /**
      *  <p>Text describing the current status of the Payment.</p>
      * @return interfaceText
      */
-
+    
     @Nullable
-    public String getInterfaceText() {
+    public String getInterfaceText(){
         return this.interfaceText;
     }
-
+    
     /**
      *  <p>ResourceIdentifier to a State.</p>
      * @return state
      */
-
+    
     @Nullable
-    public com.commercetools.api.models.state.StateResourceIdentifier getState() {
+    public com.commercetools.api.models.state.StateResourceIdentifier getState(){
         return this.state;
     }
 
@@ -127,7 +139,7 @@ public class PaymentStatusDraftBuilder implements Builder<PaymentStatusDraft> {
     public PaymentStatusDraft build() {
         return new PaymentStatusDraftImpl(interfaceCode, interfaceText, state);
     }
-
+    
     /**
      * builds PaymentStatusDraft without checking for non-null required values
      * @return PaymentStatusDraft
@@ -138,7 +150,7 @@ public class PaymentStatusDraftBuilder implements Builder<PaymentStatusDraft> {
 
     /**
      * factory method for an instance of PaymentStatusDraftBuilder
-     * @return builder
+     * @return builder 
      */
     public static PaymentStatusDraftBuilder of() {
         return new PaymentStatusDraftBuilder();

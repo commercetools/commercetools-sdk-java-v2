@@ -1,17 +1,20 @@
-
 package com.commercetools.ml.models.general_category_recommendations;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
 
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
+import com.commercetools.ml.models.general_category_recommendations.GeneralCategoryRecommendationImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * GeneralCategoryRecommendation
@@ -25,11 +28,15 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .confidence(0.3)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = GeneralCategoryRecommendationImpl.class)
-public interface GeneralCategoryRecommendation {
+public interface GeneralCategoryRecommendation  {
+
 
     /**
      *  <p>An English category name that is recommended for a product.</p>
@@ -38,7 +45,6 @@ public interface GeneralCategoryRecommendation {
     @NotNull
     @JsonProperty("categoryName")
     public String getCategoryName();
-
     /**
      *  <p>Probability score for the category recommendation.</p>
      * @return confidence
@@ -51,23 +57,26 @@ public interface GeneralCategoryRecommendation {
      *  <p>An English category name that is recommended for a product.</p>
      * @param categoryName value to be set
      */
-
+    
     public void setCategoryName(final String categoryName);
-
+    
+    
     /**
      *  <p>Probability score for the category recommendation.</p>
      * @param confidence value to be set
      */
-
+    
     public void setConfidence(final Double confidence);
+    
 
     /**
      * factory method
      * @return instance of GeneralCategoryRecommendation
      */
-    public static GeneralCategoryRecommendation of() {
+    public static GeneralCategoryRecommendation of(){
         return new GeneralCategoryRecommendationImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy GeneralCategoryRecommendation
@@ -104,7 +113,7 @@ public interface GeneralCategoryRecommendation {
     public static GeneralCategoryRecommendationBuilder builder() {
         return GeneralCategoryRecommendationBuilder.of();
     }
-
+    
     /**
      * create builder for GeneralCategoryRecommendation instance
      * @param template instance with prefilled values for the builder
@@ -113,6 +122,7 @@ public interface GeneralCategoryRecommendation {
     public static GeneralCategoryRecommendationBuilder builder(final GeneralCategoryRecommendation template) {
         return GeneralCategoryRecommendationBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -123,7 +133,7 @@ public interface GeneralCategoryRecommendation {
     default <T> T withGeneralCategoryRecommendation(Function<GeneralCategoryRecommendation, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

@@ -1,9 +1,11 @@
-
 package com.commercetools.api.predicates.query.error;
 
 import com.commercetools.api.predicates.query.*;
 
-public class OverCapacityErrorQueryBuilderDsl {
+import java.util.function.Function;
+
+
+public class OverCapacityErrorQueryBuilderDsl  {
     public OverCapacityErrorQueryBuilderDsl() {
     }
 
@@ -12,15 +14,12 @@ public class OverCapacityErrorQueryBuilderDsl {
     }
 
     public StringComparisonPredicateBuilder<OverCapacityErrorQueryBuilderDsl> code() {
-        return new StringComparisonPredicateBuilder<>(
-            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("code")),
-            p -> new CombinationQueryPredicate<>(p, OverCapacityErrorQueryBuilderDsl::of));
+        return new StringComparisonPredicateBuilder<>(BinaryQueryPredicate.of().left(new ConstantQueryPredicate("code")),
+        p -> new CombinationQueryPredicate<>(p, OverCapacityErrorQueryBuilderDsl::of));
     }
-
     public StringComparisonPredicateBuilder<OverCapacityErrorQueryBuilderDsl> message() {
-        return new StringComparisonPredicateBuilder<>(
-            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("message")),
-            p -> new CombinationQueryPredicate<>(p, OverCapacityErrorQueryBuilderDsl::of));
+        return new StringComparisonPredicateBuilder<>(BinaryQueryPredicate.of().left(new ConstantQueryPredicate("message")),
+        p -> new CombinationQueryPredicate<>(p, OverCapacityErrorQueryBuilderDsl::of));
     }
-
+    
 }

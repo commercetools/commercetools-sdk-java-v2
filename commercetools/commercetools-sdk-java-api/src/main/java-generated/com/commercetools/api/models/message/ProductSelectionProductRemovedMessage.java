@@ -1,19 +1,21 @@
-
 package com.commercetools.api.models.message;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
+import com.commercetools.api.models.message.Message;
 import com.commercetools.api.models.product.ProductReference;
+import com.commercetools.api.models.message.ProductSelectionProductRemovedMessageImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Generated after a successful Remove Product update action.</p>
@@ -33,9 +35,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .product(productBuilder -> productBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = ProductSelectionProductRemovedMessageImpl.class)
 public interface ProductSelectionProductRemovedMessage extends Message {
 
@@ -57,16 +62,18 @@ public interface ProductSelectionProductRemovedMessage extends Message {
      *  <p>Product that was removed from the Product Selection.</p>
      * @param product value to be set
      */
-
+    
     public void setProduct(final ProductReference product);
+    
 
     /**
      * factory method
      * @return instance of ProductSelectionProductRemovedMessage
      */
-    public static ProductSelectionProductRemovedMessage of() {
+    public static ProductSelectionProductRemovedMessage of(){
         return new ProductSelectionProductRemovedMessageImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy ProductSelectionProductRemovedMessage
@@ -95,8 +102,7 @@ public interface ProductSelectionProductRemovedMessage extends Message {
      * @return copy instance
      */
     @Nullable
-    public static ProductSelectionProductRemovedMessage deepCopy(
-            @Nullable final ProductSelectionProductRemovedMessage template) {
+    public static ProductSelectionProductRemovedMessage deepCopy(@Nullable final ProductSelectionProductRemovedMessage template) {
         if (template == null) {
             return null;
         }
@@ -105,14 +111,12 @@ public interface ProductSelectionProductRemovedMessage extends Message {
         instance.setVersion(template.getVersion());
         instance.setCreatedAt(template.getCreatedAt());
         instance.setLastModifiedAt(template.getLastModifiedAt());
-        instance.setLastModifiedBy(
-            com.commercetools.api.models.common.LastModifiedBy.deepCopy(template.getLastModifiedBy()));
+        instance.setLastModifiedBy(com.commercetools.api.models.common.LastModifiedBy.deepCopy(template.getLastModifiedBy()));
         instance.setCreatedBy(com.commercetools.api.models.common.CreatedBy.deepCopy(template.getCreatedBy()));
         instance.setSequenceNumber(template.getSequenceNumber());
         instance.setResource(com.commercetools.api.models.common.Reference.deepCopy(template.getResource()));
         instance.setResourceVersion(template.getResourceVersion());
-        instance.setResourceUserProvidedIdentifiers(com.commercetools.api.models.message.UserProvidedIdentifiers
-                .deepCopy(template.getResourceUserProvidedIdentifiers()));
+        instance.setResourceUserProvidedIdentifiers(com.commercetools.api.models.message.UserProvidedIdentifiers.deepCopy(template.getResourceUserProvidedIdentifiers()));
         instance.setProduct(com.commercetools.api.models.product.ProductReference.deepCopy(template.getProduct()));
         return instance;
     }
@@ -124,16 +128,16 @@ public interface ProductSelectionProductRemovedMessage extends Message {
     public static ProductSelectionProductRemovedMessageBuilder builder() {
         return ProductSelectionProductRemovedMessageBuilder.of();
     }
-
+    
     /**
      * create builder for ProductSelectionProductRemovedMessage instance
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static ProductSelectionProductRemovedMessageBuilder builder(
-            final ProductSelectionProductRemovedMessage template) {
+    public static ProductSelectionProductRemovedMessageBuilder builder(final ProductSelectionProductRemovedMessage template) {
         return ProductSelectionProductRemovedMessageBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -144,7 +148,7 @@ public interface ProductSelectionProductRemovedMessage extends Message {
     default <T> T withProductSelectionProductRemovedMessage(Function<ProductSelectionProductRemovedMessage, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

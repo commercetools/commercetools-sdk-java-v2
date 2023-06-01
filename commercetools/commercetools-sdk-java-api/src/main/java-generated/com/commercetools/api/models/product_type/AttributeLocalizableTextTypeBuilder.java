@@ -1,8 +1,11 @@
-
 package com.commercetools.api.models.product_type;
 
+import com.commercetools.api.models.product_type.AttributeType;
+import com.commercetools.api.models.product_type.AttributeLocalizableTextType;
+import javax.annotation.Nullable;
 import java.util.*;
-
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -15,10 +18,16 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     AttributeLocalizableTextType attributeLocalizableTextType = AttributeLocalizableTextType.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class AttributeLocalizableTextTypeBuilder implements Builder<AttributeLocalizableTextType> {
+
+
+
 
     /**
      * builds AttributeLocalizableTextType with checking for non-null required values
@@ -27,7 +36,7 @@ public class AttributeLocalizableTextTypeBuilder implements Builder<AttributeLoc
     public AttributeLocalizableTextType build() {
         return new AttributeLocalizableTextTypeImpl();
     }
-
+    
     /**
      * builds AttributeLocalizableTextType without checking for non-null required values
      * @return AttributeLocalizableTextType
@@ -38,7 +47,7 @@ public class AttributeLocalizableTextTypeBuilder implements Builder<AttributeLoc
 
     /**
      * factory method for an instance of AttributeLocalizableTextTypeBuilder
-     * @return builder
+     * @return builder 
      */
     public static AttributeLocalizableTextTypeBuilder of() {
         return new AttributeLocalizableTextTypeBuilder();

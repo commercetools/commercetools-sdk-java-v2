@@ -1,17 +1,20 @@
-
 package com.commercetools.api.models.error;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
+import com.commercetools.api.models.error.GraphQLErrorObject;
+import com.commercetools.api.models.error.GraphQLMissingTaxRateForCountryErrorImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Returned when the Tax Category of at least one of the <code>lineItems</code>, <code>customLineItems</code>, or <code>shippingInfo</code> in the Cart is missing the TaxRate matching <code>country</code> and <code>state</code> given in the <code>shippingAddress</code> of that Cart.</p>
@@ -29,9 +32,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .taxCategoryId("{taxCategoryId}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = GraphQLMissingTaxRateForCountryErrorImpl.class)
 public interface GraphQLMissingTaxRateForCountryError extends GraphQLErrorObject {
 
@@ -47,7 +53,6 @@ public interface GraphQLMissingTaxRateForCountryError extends GraphQLErrorObject
     @NotNull
     @JsonProperty("code")
     public String getCode();
-
     /**
      *  <p>Unique identifier of the TaxCategory.</p>
      * @return taxCategoryId
@@ -55,20 +60,18 @@ public interface GraphQLMissingTaxRateForCountryError extends GraphQLErrorObject
     @NotNull
     @JsonProperty("taxCategoryId")
     public String getTaxCategoryId();
-
     /**
      *  <p>Country code of the geographic location.</p>
      * @return country
      */
-
+    
     @JsonProperty("country")
     public String getCountry();
-
     /**
      *  <p>State within the country, such as Texas in the United States.</p>
      * @return state
      */
-
+    
     @JsonProperty("state")
     public String getState();
 
@@ -76,30 +79,34 @@ public interface GraphQLMissingTaxRateForCountryError extends GraphQLErrorObject
      *  <p>Unique identifier of the TaxCategory.</p>
      * @param taxCategoryId value to be set
      */
-
+    
     public void setTaxCategoryId(final String taxCategoryId);
-
+    
+    
     /**
      *  <p>Country code of the geographic location.</p>
      * @param country value to be set
      */
-
+    
     public void setCountry(final String country);
-
+    
+    
     /**
      *  <p>State within the country, such as Texas in the United States.</p>
      * @param state value to be set
      */
-
+    
     public void setState(final String state);
+    
 
     /**
      * factory method
      * @return instance of GraphQLMissingTaxRateForCountryError
      */
-    public static GraphQLMissingTaxRateForCountryError of() {
+    public static GraphQLMissingTaxRateForCountryError of(){
         return new GraphQLMissingTaxRateForCountryErrorImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy GraphQLMissingTaxRateForCountryError
@@ -121,8 +128,7 @@ public interface GraphQLMissingTaxRateForCountryError extends GraphQLErrorObject
      * @return copy instance
      */
     @Nullable
-    public static GraphQLMissingTaxRateForCountryError deepCopy(
-            @Nullable final GraphQLMissingTaxRateForCountryError template) {
+    public static GraphQLMissingTaxRateForCountryError deepCopy(@Nullable final GraphQLMissingTaxRateForCountryError template) {
         if (template == null) {
             return null;
         }
@@ -141,16 +147,16 @@ public interface GraphQLMissingTaxRateForCountryError extends GraphQLErrorObject
     public static GraphQLMissingTaxRateForCountryErrorBuilder builder() {
         return GraphQLMissingTaxRateForCountryErrorBuilder.of();
     }
-
+    
     /**
      * create builder for GraphQLMissingTaxRateForCountryError instance
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static GraphQLMissingTaxRateForCountryErrorBuilder builder(
-            final GraphQLMissingTaxRateForCountryError template) {
+    public static GraphQLMissingTaxRateForCountryErrorBuilder builder(final GraphQLMissingTaxRateForCountryError template) {
         return GraphQLMissingTaxRateForCountryErrorBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -161,7 +167,7 @@ public interface GraphQLMissingTaxRateForCountryError extends GraphQLErrorObject
     default <T> T withGraphQLMissingTaxRateForCountryError(Function<GraphQLMissingTaxRateForCountryError, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

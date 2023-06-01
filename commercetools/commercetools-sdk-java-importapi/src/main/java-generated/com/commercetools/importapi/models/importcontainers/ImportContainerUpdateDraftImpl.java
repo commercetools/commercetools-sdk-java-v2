@@ -1,39 +1,45 @@
-
 package com.commercetools.importapi.models.importcontainers;
 
-import java.time.*;
-import java.util.*;
-
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
-
-import io.vrap.rmf.base.client.ModelBase;
+import com.commercetools.importapi.models.common.ImportResourceType;
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.ModelBase;
+import javax.validation.Valid;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.annotation.*;
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
  *  <p>The representation sent to the server when updating an import container.</p>
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class ImportContainerUpdateDraftImpl implements ImportContainerUpdateDraft, ModelBase {
 
+    
     private Long version;
-
+    
+    
     private com.commercetools.importapi.models.common.ImportResourceType resourceType;
 
     /**
      * create instance with all properties
      */
     @JsonCreator
-    ImportContainerUpdateDraftImpl(@JsonProperty("version") final Long version,
-            @JsonProperty("resourceType") final com.commercetools.importapi.models.common.ImportResourceType resourceType) {
+    ImportContainerUpdateDraftImpl(@JsonProperty("version") final Long version, @JsonProperty("resourceType") final com.commercetools.importapi.models.common.ImportResourceType resourceType) {
         this.version = version;
         this.resourceType = resourceType;
     }
-
     /**
      * create empty instance
      */
@@ -43,43 +49,49 @@ public class ImportContainerUpdateDraftImpl implements ImportContainerUpdateDraf
     /**
      *  <p>Current version of the ImportContainer.</p>
      */
-
-    public Long getVersion() {
+    
+    public Long getVersion(){
         return this.version;
     }
-
+    
     /**
      *  <p>The resource type to be imported. If not given, the ImportContainer is able to import all of the supported ImportResourceTypes.</p>
      */
-
-    public com.commercetools.importapi.models.common.ImportResourceType getResourceType() {
+    
+    public com.commercetools.importapi.models.common.ImportResourceType getResourceType(){
         return this.resourceType;
     }
 
-    public void setVersion(final Long version) {
+    
+    public void setVersion(final Long version){
         this.version = version;
     }
-
-    public void setResourceType(final com.commercetools.importapi.models.common.ImportResourceType resourceType) {
+    
+    
+    public void setResourceType(final com.commercetools.importapi.models.common.ImportResourceType resourceType){
         this.resourceType = resourceType;
     }
 
     @Override
     public boolean equals(Object o) {
-        if (this == o)
-            return true;
-
-        if (o == null || getClass() != o.getClass())
-            return false;
-
+        if (this == o) return true;
+    
+        if (o == null || getClass() != o.getClass()) return false;
+    
         ImportContainerUpdateDraftImpl that = (ImportContainerUpdateDraftImpl) o;
-
-        return new EqualsBuilder().append(version, that.version).append(resourceType, that.resourceType).isEquals();
+    
+        return new EqualsBuilder()
+                .append(version, that.version)
+                .append(resourceType, that.resourceType)
+                .isEquals();
     }
-
+    
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(version).append(resourceType).toHashCode();
+        return new HashCodeBuilder(17, 37)
+            .append(version)
+            .append(resourceType)
+            .toHashCode();
     }
 
 }

@@ -1,9 +1,11 @@
-
 package com.commercetools.history.models.common;
 
+import com.commercetools.history.models.common.Reference;
+import com.commercetools.history.models.common.Reservation;
+import javax.annotation.Nullable;
 import java.util.*;
 import java.util.function.Function;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -20,120 +22,145 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .checkoutStartedAt("{checkoutStartedAt}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class ReservationBuilder implements Builder<Reservation> {
 
+    
+    
     private Integer quantity;
-
+    
+    
+    
     private com.commercetools.history.models.common.Reference owner;
-
+    
+    
+    
     private String createdAt;
-
+    
+    
+    
     private String checkoutStartedAt;
 
+    
     /**
      * set the value to the quantity
      * @param quantity value to be set
      * @return Builder
      */
-
-    public ReservationBuilder quantity(final Integer quantity) {
+    
+    public ReservationBuilder quantity( final Integer quantity) {
         this.quantity = quantity;
         return this;
     }
-
+    
+    
+    
+    
     /**
      * set the value to the owner using the builder function
      * @param builder function to build the owner value
      * @return Builder
      */
-
-    public ReservationBuilder owner(
-            Function<com.commercetools.history.models.common.ReferenceBuilder, com.commercetools.history.models.common.ReferenceBuilder> builder) {
+    
+    public ReservationBuilder owner(Function<com.commercetools.history.models.common.ReferenceBuilder, com.commercetools.history.models.common.ReferenceBuilder> builder) {
         this.owner = builder.apply(com.commercetools.history.models.common.ReferenceBuilder.of()).build();
         return this;
     }
-
+    
     /**
      * set the value to the owner using the builder function
      * @param builder function to build the owner value
      * @return Builder
      */
-
-    public ReservationBuilder withOwner(
-            Function<com.commercetools.history.models.common.ReferenceBuilder, com.commercetools.history.models.common.Reference> builder) {
+    
+    public ReservationBuilder withOwner(Function<com.commercetools.history.models.common.ReferenceBuilder, com.commercetools.history.models.common.Reference> builder) {
         this.owner = builder.apply(com.commercetools.history.models.common.ReferenceBuilder.of());
         return this;
     }
-
+                    
     /**
      * set the value to the owner
      * @param owner value to be set
      * @return Builder
      */
-
-    public ReservationBuilder owner(final com.commercetools.history.models.common.Reference owner) {
+    
+    public ReservationBuilder owner( final com.commercetools.history.models.common.Reference owner) {
         this.owner = owner;
         return this;
     }
-
+    
+    
+    
+    
     /**
      * set the value to the createdAt
      * @param createdAt value to be set
      * @return Builder
      */
-
-    public ReservationBuilder createdAt(final String createdAt) {
+    
+    public ReservationBuilder createdAt( final String createdAt) {
         this.createdAt = createdAt;
         return this;
     }
-
+    
+    
+    
+    
     /**
      * set the value to the checkoutStartedAt
      * @param checkoutStartedAt value to be set
      * @return Builder
      */
-
-    public ReservationBuilder checkoutStartedAt(final String checkoutStartedAt) {
+    
+    public ReservationBuilder checkoutStartedAt( final String checkoutStartedAt) {
         this.checkoutStartedAt = checkoutStartedAt;
         return this;
     }
+    
+    
 
     /**
      * value of quantity}
      * @return quantity
      */
-
-    public Integer getQuantity() {
+    
+    
+    public Integer getQuantity(){
         return this.quantity;
     }
-
+    
     /**
      * value of owner}
      * @return owner
      */
-
-    public com.commercetools.history.models.common.Reference getOwner() {
+    
+    
+    public com.commercetools.history.models.common.Reference getOwner(){
         return this.owner;
     }
-
+    
     /**
      * value of createdAt}
      * @return createdAt
      */
-
-    public String getCreatedAt() {
+    
+    
+    public String getCreatedAt(){
         return this.createdAt;
     }
-
+    
     /**
      * value of checkoutStartedAt}
      * @return checkoutStartedAt
      */
-
-    public String getCheckoutStartedAt() {
+    
+    
+    public String getCheckoutStartedAt(){
         return this.checkoutStartedAt;
     }
 
@@ -148,7 +175,7 @@ public class ReservationBuilder implements Builder<Reservation> {
         Objects.requireNonNull(checkoutStartedAt, Reservation.class + ": checkoutStartedAt is missing");
         return new ReservationImpl(quantity, owner, createdAt, checkoutStartedAt);
     }
-
+    
     /**
      * builds Reservation without checking for non-null required values
      * @return Reservation
@@ -159,7 +186,7 @@ public class ReservationBuilder implements Builder<Reservation> {
 
     /**
      * factory method for an instance of ReservationBuilder
-     * @return builder
+     * @return builder 
      */
     public static ReservationBuilder of() {
         return new ReservationBuilder();

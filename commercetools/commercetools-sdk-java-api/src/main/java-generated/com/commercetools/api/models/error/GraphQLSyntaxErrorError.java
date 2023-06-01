@@ -1,17 +1,20 @@
-
 package com.commercetools.api.models.error;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
+import com.commercetools.api.models.error.GraphQLErrorObject;
+import com.commercetools.api.models.error.GraphQLSyntaxErrorErrorImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Returned when a Discount predicate, API Extension predicate, or search query does not have the correct syntax.</p>
@@ -23,9 +26,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     GraphQLSyntaxErrorError graphQLSyntaxErrorError = GraphQLSyntaxErrorError.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = GraphQLSyntaxErrorErrorImpl.class)
 public interface GraphQLSyntaxErrorError extends GraphQLErrorObject {
 
@@ -42,13 +48,15 @@ public interface GraphQLSyntaxErrorError extends GraphQLErrorObject {
     @JsonProperty("code")
     public String getCode();
 
+
     /**
      * factory method
      * @return instance of GraphQLSyntaxErrorError
      */
-    public static GraphQLSyntaxErrorError of() {
+    public static GraphQLSyntaxErrorError of(){
         return new GraphQLSyntaxErrorErrorImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy GraphQLSyntaxErrorError
@@ -83,7 +91,7 @@ public interface GraphQLSyntaxErrorError extends GraphQLErrorObject {
     public static GraphQLSyntaxErrorErrorBuilder builder() {
         return GraphQLSyntaxErrorErrorBuilder.of();
     }
-
+    
     /**
      * create builder for GraphQLSyntaxErrorError instance
      * @param template instance with prefilled values for the builder
@@ -92,6 +100,7 @@ public interface GraphQLSyntaxErrorError extends GraphQLErrorObject {
     public static GraphQLSyntaxErrorErrorBuilder builder(final GraphQLSyntaxErrorError template) {
         return GraphQLSyntaxErrorErrorBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -102,7 +111,7 @@ public interface GraphQLSyntaxErrorError extends GraphQLErrorObject {
     default <T> T withGraphQLSyntaxErrorError(Function<GraphQLSyntaxErrorError, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

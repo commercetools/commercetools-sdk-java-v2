@@ -1,21 +1,22 @@
-
 package com.commercetools.api.models.message;
-
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-import java.util.stream.Collectors;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.cart.DiscountedLineItemPriceForQuantity;
 import com.commercetools.api.models.cart.TaxedItemPrice;
+import com.commercetools.api.models.message.OrderMessage;
+import com.commercetools.api.models.message.OrderCustomLineItemDiscountSetMessageImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Generated after a successful recalculation of a Discount on a Custom Line Item.</p>
@@ -36,9 +37,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .plusDiscountedPricePerQuantity(discountedPricePerQuantityBuilder -> discountedPricePerQuantityBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = OrderCustomLineItemDiscountSetMessageImpl.class)
 public interface OrderCustomLineItemDiscountSetMessage extends OrderMessage {
 
@@ -54,7 +58,6 @@ public interface OrderCustomLineItemDiscountSetMessage extends OrderMessage {
     @NotNull
     @JsonProperty("customLineItemId")
     public String getCustomLineItemId();
-
     /**
      *  <p>Array of DiscountedLineItemPriceForQuantity after the Discount recalculation.</p>
      * @return discountedPricePerQuantity
@@ -63,7 +66,6 @@ public interface OrderCustomLineItemDiscountSetMessage extends OrderMessage {
     @Valid
     @JsonProperty("discountedPricePerQuantity")
     public List<DiscountedLineItemPriceForQuantity> getDiscountedPricePerQuantity();
-
     /**
      *  <p>TaxedItemPrice of the Custom Line Item after the Discount recalculation.</p>
      * @return taxedPrice
@@ -76,39 +78,40 @@ public interface OrderCustomLineItemDiscountSetMessage extends OrderMessage {
      *  <p>Unique identifier for the Custom Line Item.</p>
      * @param customLineItemId value to be set
      */
-
+    
     public void setCustomLineItemId(final String customLineItemId);
-
+    
+    
     /**
      *  <p>Array of DiscountedLineItemPriceForQuantity after the Discount recalculation.</p>
      * @param discountedPricePerQuantity values to be set
      */
-
+    
     @JsonIgnore
-    public void setDiscountedPricePerQuantity(final DiscountedLineItemPriceForQuantity... discountedPricePerQuantity);
-
+    public void setDiscountedPricePerQuantity(final DiscountedLineItemPriceForQuantity ...discountedPricePerQuantity);
     /**
      *  <p>Array of DiscountedLineItemPriceForQuantity after the Discount recalculation.</p>
      * @param discountedPricePerQuantity values to be set
      */
-
-    public void setDiscountedPricePerQuantity(
-            final List<DiscountedLineItemPriceForQuantity> discountedPricePerQuantity);
-
+    
+    public void setDiscountedPricePerQuantity(final List<DiscountedLineItemPriceForQuantity> discountedPricePerQuantity);
+    
     /**
      *  <p>TaxedItemPrice of the Custom Line Item after the Discount recalculation.</p>
      * @param taxedPrice value to be set
      */
-
+    
     public void setTaxedPrice(final TaxedItemPrice taxedPrice);
+    
 
     /**
      * factory method
      * @return instance of OrderCustomLineItemDiscountSetMessage
      */
-    public static OrderCustomLineItemDiscountSetMessage of() {
+    public static OrderCustomLineItemDiscountSetMessage of(){
         return new OrderCustomLineItemDiscountSetMessageImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy OrderCustomLineItemDiscountSetMessage
@@ -139,8 +142,7 @@ public interface OrderCustomLineItemDiscountSetMessage extends OrderMessage {
      * @return copy instance
      */
     @Nullable
-    public static OrderCustomLineItemDiscountSetMessage deepCopy(
-            @Nullable final OrderCustomLineItemDiscountSetMessage template) {
+    public static OrderCustomLineItemDiscountSetMessage deepCopy(@Nullable final OrderCustomLineItemDiscountSetMessage template) {
         if (template == null) {
             return null;
         }
@@ -149,19 +151,15 @@ public interface OrderCustomLineItemDiscountSetMessage extends OrderMessage {
         instance.setVersion(template.getVersion());
         instance.setCreatedAt(template.getCreatedAt());
         instance.setLastModifiedAt(template.getLastModifiedAt());
-        instance.setLastModifiedBy(
-            com.commercetools.api.models.common.LastModifiedBy.deepCopy(template.getLastModifiedBy()));
+        instance.setLastModifiedBy(com.commercetools.api.models.common.LastModifiedBy.deepCopy(template.getLastModifiedBy()));
         instance.setCreatedBy(com.commercetools.api.models.common.CreatedBy.deepCopy(template.getCreatedBy()));
         instance.setSequenceNumber(template.getSequenceNumber());
         instance.setResource(com.commercetools.api.models.common.Reference.deepCopy(template.getResource()));
         instance.setResourceVersion(template.getResourceVersion());
-        instance.setResourceUserProvidedIdentifiers(com.commercetools.api.models.message.UserProvidedIdentifiers
-                .deepCopy(template.getResourceUserProvidedIdentifiers()));
+        instance.setResourceUserProvidedIdentifiers(com.commercetools.api.models.message.UserProvidedIdentifiers.deepCopy(template.getResourceUserProvidedIdentifiers()));
         instance.setCustomLineItemId(template.getCustomLineItemId());
         instance.setDiscountedPricePerQuantity(Optional.ofNullable(template.getDiscountedPricePerQuantity())
-                .map(t -> t.stream()
-                        .map(com.commercetools.api.models.cart.DiscountedLineItemPriceForQuantity::deepCopy)
-                        .collect(Collectors.toList()))
+                .map(t -> t.stream().map(com.commercetools.api.models.cart.DiscountedLineItemPriceForQuantity::deepCopy).collect(Collectors.toList()))
                 .orElse(null));
         instance.setTaxedPrice(com.commercetools.api.models.cart.TaxedItemPrice.deepCopy(template.getTaxedPrice()));
         return instance;
@@ -174,16 +172,16 @@ public interface OrderCustomLineItemDiscountSetMessage extends OrderMessage {
     public static OrderCustomLineItemDiscountSetMessageBuilder builder() {
         return OrderCustomLineItemDiscountSetMessageBuilder.of();
     }
-
+    
     /**
      * create builder for OrderCustomLineItemDiscountSetMessage instance
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static OrderCustomLineItemDiscountSetMessageBuilder builder(
-            final OrderCustomLineItemDiscountSetMessage template) {
+    public static OrderCustomLineItemDiscountSetMessageBuilder builder(final OrderCustomLineItemDiscountSetMessage template) {
         return OrderCustomLineItemDiscountSetMessageBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -194,7 +192,7 @@ public interface OrderCustomLineItemDiscountSetMessage extends OrderMessage {
     default <T> T withOrderCustomLineItemDiscountSetMessage(Function<OrderCustomLineItemDiscountSetMessage, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

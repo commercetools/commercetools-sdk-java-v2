@@ -1,8 +1,11 @@
-
 package com.commercetools.api.models.shipping_method;
 
-import java.util.*;
 
+import com.commercetools.api.models.shipping_method.PriceFunction;
+import javax.annotation.Nullable;
+import java.util.*;
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -17,54 +20,69 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .function("{function}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class PriceFunctionBuilder implements Builder<PriceFunction> {
 
+    
+    
     private String currencyCode;
-
+    
+    
+    
     private String function;
 
+    
     /**
      *  <p>Currency code compliant to ISO 4217.</p>
      * @param currencyCode value to be set
      * @return Builder
      */
-
-    public PriceFunctionBuilder currencyCode(final String currencyCode) {
+    
+    public PriceFunctionBuilder currencyCode( final String currencyCode) {
         this.currencyCode = currencyCode;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>To calculate a Price based on the score, use <code>+</code>, <code>-</code>, <code>*</code> and parentheses. The score is inserted with <code>x</code>. The function returns the cent amount.</p>
      *  <p>For example, to charge $1.99 for a score of <code>1</code>, $3.99 for a score of <code>2</code>, $5.99 for a score of <code>3</code> and onwards, the function is: <code>(200 * x) - 1)</code>. To charge $4.50, $6.00, and $7.50 for express shipping, the function is: <code>(150 * x) + 300</code>.</p>
      * @param function value to be set
      * @return Builder
      */
-
-    public PriceFunctionBuilder function(final String function) {
+    
+    public PriceFunctionBuilder function( final String function) {
         this.function = function;
         return this;
     }
+    
+    
 
     /**
      *  <p>Currency code compliant to ISO 4217.</p>
      * @return currencyCode
      */
-
-    public String getCurrencyCode() {
+    
+    
+    public String getCurrencyCode(){
         return this.currencyCode;
     }
-
+    
     /**
      *  <p>To calculate a Price based on the score, use <code>+</code>, <code>-</code>, <code>*</code> and parentheses. The score is inserted with <code>x</code>. The function returns the cent amount.</p>
      *  <p>For example, to charge $1.99 for a score of <code>1</code>, $3.99 for a score of <code>2</code>, $5.99 for a score of <code>3</code> and onwards, the function is: <code>(200 * x) - 1)</code>. To charge $4.50, $6.00, and $7.50 for express shipping, the function is: <code>(150 * x) + 300</code>.</p>
      * @return function
      */
-
-    public String getFunction() {
+    
+    
+    public String getFunction(){
         return this.function;
     }
 
@@ -77,7 +95,7 @@ public class PriceFunctionBuilder implements Builder<PriceFunction> {
         Objects.requireNonNull(function, PriceFunction.class + ": function is missing");
         return new PriceFunctionImpl(currencyCode, function);
     }
-
+    
     /**
      * builds PriceFunction without checking for non-null required values
      * @return PriceFunction
@@ -88,7 +106,7 @@ public class PriceFunctionBuilder implements Builder<PriceFunction> {
 
     /**
      * factory method for an instance of PriceFunctionBuilder
-     * @return builder
+     * @return builder 
      */
     public static PriceFunctionBuilder of() {
         return new PriceFunctionBuilder();

@@ -1,25 +1,33 @@
-
 package com.commercetools.importapi.models.products;
 
-import java.time.*;
-import java.util.*;
-
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
-
-import io.vrap.rmf.base.client.ModelBase;
+import com.commercetools.importapi.models.products.CustomTokenizer;
+import com.commercetools.importapi.models.products.WhitespaceTokenizer;
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.ModelBase;
+import javax.validation.Valid;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.annotation.*;
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
  *  <p>The tokenizer defines the tokens that are used to match against the Suggest Query input.</p>
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class SuggestTokenizerImpl implements SuggestTokenizer, ModelBase {
 
+    
     private String type;
 
     /**
@@ -29,7 +37,6 @@ public class SuggestTokenizerImpl implements SuggestTokenizer, ModelBase {
     SuggestTokenizerImpl(@JsonProperty("type") final String type) {
         this.type = type;
     }
-
     /**
      * create empty instance
      */
@@ -39,27 +46,30 @@ public class SuggestTokenizerImpl implements SuggestTokenizer, ModelBase {
     /**
      *
      */
-
-    public String getType() {
+    
+    public String getType(){
         return this.type;
     }
 
+
     @Override
     public boolean equals(Object o) {
-        if (this == o)
-            return true;
-
-        if (o == null || getClass() != o.getClass())
-            return false;
-
+        if (this == o) return true;
+    
+        if (o == null || getClass() != o.getClass()) return false;
+    
         SuggestTokenizerImpl that = (SuggestTokenizerImpl) o;
-
-        return new EqualsBuilder().append(type, that.type).isEquals();
+    
+        return new EqualsBuilder()
+                .append(type, that.type)
+                .isEquals();
     }
-
+    
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(type).toHashCode();
+        return new HashCodeBuilder(17, 37)
+            .append(type)
+            .toHashCode();
     }
 
 }

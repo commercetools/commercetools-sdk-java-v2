@@ -1,20 +1,21 @@
-
 package com.commercetools.importapi.models.order_patches;
 
-import java.time.*;
+import com.commercetools.importapi.models.order_patches.ReturnItemDraft;
 import java.time.ZonedDateTime;
-import java.util.*;
-import java.util.function.Function;
-import java.util.stream.Collectors;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
+import com.commercetools.importapi.models.order_patches.ReturnInfoImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * ReturnInfo
@@ -27,11 +28,15 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .plusItems(itemsBuilder -> itemsBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = ReturnInfoImpl.class)
-public interface ReturnInfo {
+public interface ReturnInfo  {
+
 
     /**
      *
@@ -41,20 +46,18 @@ public interface ReturnInfo {
     @Valid
     @JsonProperty("items")
     public List<ReturnItemDraft> getItems();
-
     /**
      *  <p>Maps to <code>ReturnInfo.returnTrackingId</code></p>
      * @return returnTrackingId
      */
-
+    
     @JsonProperty("returnTrackingId")
     public String getReturnTrackingId();
-
     /**
      *  <p>Maps to <code>ReturnInfo.returnDate</code></p>
      * @return returnDate
      */
-
+    
     @JsonProperty("returnDate")
     public ZonedDateTime getReturnDate();
 
@@ -62,38 +65,40 @@ public interface ReturnInfo {
      * set items
      * @param items values to be set
      */
-
+    
     @JsonIgnore
-    public void setItems(final ReturnItemDraft... items);
-
+    public void setItems(final ReturnItemDraft ...items);
     /**
      * set items
      * @param items values to be set
      */
-
+    
     public void setItems(final List<ReturnItemDraft> items);
-
+    
     /**
      *  <p>Maps to <code>ReturnInfo.returnTrackingId</code></p>
      * @param returnTrackingId value to be set
      */
-
+    
     public void setReturnTrackingId(final String returnTrackingId);
-
+    
+    
     /**
      *  <p>Maps to <code>ReturnInfo.returnDate</code></p>
      * @param returnDate value to be set
      */
-
+    
     public void setReturnDate(final ZonedDateTime returnDate);
+    
 
     /**
      * factory method
      * @return instance of ReturnInfo
      */
-    public static ReturnInfo of() {
+    public static ReturnInfo of(){
         return new ReturnInfoImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy ReturnInfo
@@ -120,9 +125,7 @@ public interface ReturnInfo {
         }
         ReturnInfoImpl instance = new ReturnInfoImpl();
         instance.setItems(Optional.ofNullable(template.getItems())
-                .map(t -> t.stream()
-                        .map(com.commercetools.importapi.models.order_patches.ReturnItemDraft::deepCopy)
-                        .collect(Collectors.toList()))
+                .map(t -> t.stream().map(com.commercetools.importapi.models.order_patches.ReturnItemDraft::deepCopy).collect(Collectors.toList()))
                 .orElse(null));
         instance.setReturnTrackingId(template.getReturnTrackingId());
         instance.setReturnDate(template.getReturnDate());
@@ -136,7 +139,7 @@ public interface ReturnInfo {
     public static ReturnInfoBuilder builder() {
         return ReturnInfoBuilder.of();
     }
-
+    
     /**
      * create builder for ReturnInfo instance
      * @param template instance with prefilled values for the builder
@@ -145,6 +148,7 @@ public interface ReturnInfo {
     public static ReturnInfoBuilder builder(final ReturnInfo template) {
         return ReturnInfoBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -155,7 +159,7 @@ public interface ReturnInfo {
     default <T> T withReturnInfo(Function<ReturnInfo, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

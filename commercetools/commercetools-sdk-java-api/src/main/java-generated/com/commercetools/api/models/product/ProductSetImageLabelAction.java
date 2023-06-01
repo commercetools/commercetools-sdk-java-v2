@@ -1,17 +1,20 @@
-
 package com.commercetools.api.models.product;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
+import com.commercetools.api.models.product.ProductUpdateAction;
+import com.commercetools.api.models.product.ProductSetImageLabelActionImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Either <code>variantId</code> or <code>sku</code> is required.</p>
@@ -24,9 +27,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .imageUrl("{imageUrl}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = ProductSetImageLabelActionImpl.class)
 public interface ProductSetImageLabelAction extends ProductUpdateAction {
 
@@ -39,18 +45,16 @@ public interface ProductSetImageLabelAction extends ProductUpdateAction {
      *  <p>The <code>sku</code> of the ProductVariant to update.</p>
      * @return sku
      */
-
+    
     @JsonProperty("sku")
     public String getSku();
-
     /**
      *  <p>The <code>id</code> of the ProductVariant to update.</p>
      * @return variantId
      */
-
+    
     @JsonProperty("variantId")
     public Long getVariantId();
-
     /**
      *  <p>The URL of the image to set the label.</p>
      * @return imageUrl
@@ -58,20 +62,18 @@ public interface ProductSetImageLabelAction extends ProductUpdateAction {
     @NotNull
     @JsonProperty("imageUrl")
     public String getImageUrl();
-
     /**
      *  <p>Value to set. If empty, any existing value will be removed.</p>
      * @return label
      */
-
+    
     @JsonProperty("label")
     public String getLabel();
-
     /**
      *  <p>If <code>true</code>, only the staged image is updated. If <code>false</code>, both the current and staged image is updated.</p>
      * @return staged
      */
-
+    
     @JsonProperty("staged")
     public Boolean getStaged();
 
@@ -79,44 +81,50 @@ public interface ProductSetImageLabelAction extends ProductUpdateAction {
      *  <p>The <code>sku</code> of the ProductVariant to update.</p>
      * @param sku value to be set
      */
-
+    
     public void setSku(final String sku);
-
+    
+    
     /**
      *  <p>The <code>id</code> of the ProductVariant to update.</p>
      * @param variantId value to be set
      */
-
+    
     public void setVariantId(final Long variantId);
-
+    
+    
     /**
      *  <p>The URL of the image to set the label.</p>
      * @param imageUrl value to be set
      */
-
+    
     public void setImageUrl(final String imageUrl);
-
+    
+    
     /**
      *  <p>Value to set. If empty, any existing value will be removed.</p>
      * @param label value to be set
      */
-
+    
     public void setLabel(final String label);
-
+    
+    
     /**
      *  <p>If <code>true</code>, only the staged image is updated. If <code>false</code>, both the current and staged image is updated.</p>
      * @param staged value to be set
      */
-
+    
     public void setStaged(final Boolean staged);
+    
 
     /**
      * factory method
      * @return instance of ProductSetImageLabelAction
      */
-    public static ProductSetImageLabelAction of() {
+    public static ProductSetImageLabelAction of(){
         return new ProductSetImageLabelActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy ProductSetImageLabelAction
@@ -159,7 +167,7 @@ public interface ProductSetImageLabelAction extends ProductUpdateAction {
     public static ProductSetImageLabelActionBuilder builder() {
         return ProductSetImageLabelActionBuilder.of();
     }
-
+    
     /**
      * create builder for ProductSetImageLabelAction instance
      * @param template instance with prefilled values for the builder
@@ -168,6 +176,7 @@ public interface ProductSetImageLabelAction extends ProductUpdateAction {
     public static ProductSetImageLabelActionBuilder builder(final ProductSetImageLabelAction template) {
         return ProductSetImageLabelActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -178,16 +187,15 @@ public interface ProductSetImageLabelAction extends ProductUpdateAction {
     default <T> T withProductSetImageLabelAction(Function<ProductSetImageLabelAction, T> helper) {
         return helper.apply(this);
     }
-
-    public static ProductSetImageLabelAction ofUnset(final Long variantId, final String imageUrl,
-            final Boolean staged) {
+    public static ProductSetImageLabelAction ofUnset(final Long variantId, final String imageUrl, final Boolean staged) {
         return ProductSetImageLabelActionBuilder.of().variantId(variantId).imageUrl(imageUrl).staged(staged).build();
     }
-
+    
     public static ProductSetImageLabelAction ofUnsetStaged(final Long variantId, final String imageUrl) {
         return ProductSetImageLabelActionBuilder.of().variantId(variantId).imageUrl(imageUrl).build();
     }
-
+    
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

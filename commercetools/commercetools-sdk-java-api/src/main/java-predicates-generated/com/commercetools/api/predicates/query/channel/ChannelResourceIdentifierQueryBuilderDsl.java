@@ -1,9 +1,11 @@
-
 package com.commercetools.api.predicates.query.channel;
 
 import com.commercetools.api.predicates.query.*;
 
-public class ChannelResourceIdentifierQueryBuilderDsl {
+import java.util.function.Function;
+
+
+public class ChannelResourceIdentifierQueryBuilderDsl  {
     public ChannelResourceIdentifierQueryBuilderDsl() {
     }
 
@@ -12,19 +14,16 @@ public class ChannelResourceIdentifierQueryBuilderDsl {
     }
 
     public StringComparisonPredicateBuilder<ChannelResourceIdentifierQueryBuilderDsl> typeId() {
-        return new StringComparisonPredicateBuilder<>(
-            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("typeId")),
-            p -> new CombinationQueryPredicate<>(p, ChannelResourceIdentifierQueryBuilderDsl::of));
+        return new StringComparisonPredicateBuilder<>(BinaryQueryPredicate.of().left(new ConstantQueryPredicate("typeId")),
+        p -> new CombinationQueryPredicate<>(p, ChannelResourceIdentifierQueryBuilderDsl::of));
     }
-
     public StringComparisonPredicateBuilder<ChannelResourceIdentifierQueryBuilderDsl> id() {
         return new StringComparisonPredicateBuilder<>(BinaryQueryPredicate.of().left(new ConstantQueryPredicate("id")),
-            p -> new CombinationQueryPredicate<>(p, ChannelResourceIdentifierQueryBuilderDsl::of));
+        p -> new CombinationQueryPredicate<>(p, ChannelResourceIdentifierQueryBuilderDsl::of));
     }
-
     public StringComparisonPredicateBuilder<ChannelResourceIdentifierQueryBuilderDsl> key() {
         return new StringComparisonPredicateBuilder<>(BinaryQueryPredicate.of().left(new ConstantQueryPredicate("key")),
-            p -> new CombinationQueryPredicate<>(p, ChannelResourceIdentifierQueryBuilderDsl::of));
+        p -> new CombinationQueryPredicate<>(p, ChannelResourceIdentifierQueryBuilderDsl::of));
     }
-
+    
 }

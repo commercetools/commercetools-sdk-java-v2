@@ -1,17 +1,20 @@
-
 package com.commercetools.api.models.customer;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
 
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
+import com.commercetools.api.models.customer.CustomerCreateEmailTokenImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * CustomerCreateEmailToken
@@ -25,11 +28,15 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .ttlMinutes(0.3)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = CustomerCreateEmailTokenImpl.class)
-public interface CustomerCreateEmailToken {
+public interface CustomerCreateEmailToken  {
+
 
     /**
      *  <p>Unique identifier of the Customer.</p>
@@ -38,15 +45,13 @@ public interface CustomerCreateEmailToken {
     @NotNull
     @JsonProperty("id")
     public String getId();
-
     /**
      *  <p>Expected version of the Customer.</p>
      * @return version
      */
-
+    
     @JsonProperty("version")
     public Long getVersion();
-
     /**
      *  <p>Validity period of the generated token in minutes.</p>
      * @return ttlMinutes
@@ -59,30 +64,34 @@ public interface CustomerCreateEmailToken {
      *  <p>Unique identifier of the Customer.</p>
      * @param id value to be set
      */
-
+    
     public void setId(final String id);
-
+    
+    
     /**
      *  <p>Expected version of the Customer.</p>
      * @param version value to be set
      */
-
+    
     public void setVersion(final Long version);
-
+    
+    
     /**
      *  <p>Validity period of the generated token in minutes.</p>
      * @param ttlMinutes value to be set
      */
-
+    
     public void setTtlMinutes(final Long ttlMinutes);
+    
 
     /**
      * factory method
      * @return instance of CustomerCreateEmailToken
      */
-    public static CustomerCreateEmailToken of() {
+    public static CustomerCreateEmailToken of(){
         return new CustomerCreateEmailTokenImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy CustomerCreateEmailToken
@@ -121,7 +130,7 @@ public interface CustomerCreateEmailToken {
     public static CustomerCreateEmailTokenBuilder builder() {
         return CustomerCreateEmailTokenBuilder.of();
     }
-
+    
     /**
      * create builder for CustomerCreateEmailToken instance
      * @param template instance with prefilled values for the builder
@@ -130,6 +139,7 @@ public interface CustomerCreateEmailToken {
     public static CustomerCreateEmailTokenBuilder builder(final CustomerCreateEmailToken template) {
         return CustomerCreateEmailTokenBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -140,7 +150,7 @@ public interface CustomerCreateEmailToken {
     default <T> T withCustomerCreateEmailToken(Function<CustomerCreateEmailToken, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

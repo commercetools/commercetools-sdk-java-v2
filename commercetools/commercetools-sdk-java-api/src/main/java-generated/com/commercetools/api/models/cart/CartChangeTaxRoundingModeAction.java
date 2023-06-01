@@ -1,17 +1,21 @@
-
 package com.commercetools.api.models.cart;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
+import com.commercetools.api.models.cart.CartUpdateAction;
+import com.commercetools.api.models.cart.RoundingMode;
+import com.commercetools.api.models.cart.CartChangeTaxRoundingModeActionImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Changing the tax rounding mode leads to recalculation of taxes.</p>
@@ -24,9 +28,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .taxRoundingMode(RoundingMode.HALF_EVEN)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = CartChangeTaxRoundingModeActionImpl.class)
 public interface CartChangeTaxRoundingModeAction extends CartUpdateAction {
 
@@ -47,16 +54,18 @@ public interface CartChangeTaxRoundingModeAction extends CartUpdateAction {
      *  <p>New value to set.</p>
      * @param taxRoundingMode value to be set
      */
-
+    
     public void setTaxRoundingMode(final RoundingMode taxRoundingMode);
+    
 
     /**
      * factory method
      * @return instance of CartChangeTaxRoundingModeAction
      */
-    public static CartChangeTaxRoundingModeAction of() {
+    public static CartChangeTaxRoundingModeAction of(){
         return new CartChangeTaxRoundingModeActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy CartChangeTaxRoundingModeAction
@@ -91,7 +100,7 @@ public interface CartChangeTaxRoundingModeAction extends CartUpdateAction {
     public static CartChangeTaxRoundingModeActionBuilder builder() {
         return CartChangeTaxRoundingModeActionBuilder.of();
     }
-
+    
     /**
      * create builder for CartChangeTaxRoundingModeAction instance
      * @param template instance with prefilled values for the builder
@@ -100,6 +109,7 @@ public interface CartChangeTaxRoundingModeAction extends CartUpdateAction {
     public static CartChangeTaxRoundingModeActionBuilder builder(final CartChangeTaxRoundingModeAction template) {
         return CartChangeTaxRoundingModeActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -110,7 +120,7 @@ public interface CartChangeTaxRoundingModeAction extends CartUpdateAction {
     default <T> T withCartChangeTaxRoundingModeAction(Function<CartChangeTaxRoundingModeAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

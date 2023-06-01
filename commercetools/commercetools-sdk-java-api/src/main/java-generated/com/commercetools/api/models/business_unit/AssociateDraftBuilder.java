@@ -1,11 +1,13 @@
-
 package com.commercetools.api.models.business_unit;
 
+import com.commercetools.api.models.business_unit.AssociateRoleAssignmentDraft;
+import com.commercetools.api.models.business_unit.AssociateRoleDeprecated;
+import com.commercetools.api.models.customer.CustomerResourceIdentifier;
+import com.commercetools.api.models.business_unit.AssociateDraft;
+import javax.annotation.Nullable;
 import java.util.*;
 import java.util.function.Function;
-
-import javax.annotation.Nullable;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -19,18 +21,24 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .customer(customerBuilder -> customerBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class AssociateDraftBuilder implements Builder<AssociateDraft> {
 
+    
     @Nullable
     private java.util.List<com.commercetools.api.models.business_unit.AssociateRoleAssignmentDraft> associateRoleAssignments;
-
+    
     @Deprecated
     @Nullable
     private java.util.List<com.commercetools.api.models.business_unit.AssociateRoleDeprecated> roles;
-
+    
+    
+    
     private com.commercetools.api.models.customer.CustomerResourceIdentifier customer;
 
     /**
@@ -38,196 +46,188 @@ public class AssociateDraftBuilder implements Builder<AssociateDraft> {
      * @param associateRoleAssignments value to be set
      * @return Builder
      */
-
-    public AssociateDraftBuilder associateRoleAssignments(
-            @Nullable final com.commercetools.api.models.business_unit.AssociateRoleAssignmentDraft... associateRoleAssignments) {
+    
+    public AssociateDraftBuilder associateRoleAssignments(@Nullable final com.commercetools.api.models.business_unit.AssociateRoleAssignmentDraft ...associateRoleAssignments) {
         this.associateRoleAssignments = new ArrayList<>(Arrays.asList(associateRoleAssignments));
         return this;
     }
-
+    
     /**
      *  <p>Roles assigned to the Associate within a Business Unit.</p>
      * @param associateRoleAssignments value to be set
      * @return Builder
      */
-
-    public AssociateDraftBuilder associateRoleAssignments(
-            @Nullable final java.util.List<com.commercetools.api.models.business_unit.AssociateRoleAssignmentDraft> associateRoleAssignments) {
+    
+    public AssociateDraftBuilder associateRoleAssignments(@Nullable final java.util.List<com.commercetools.api.models.business_unit.AssociateRoleAssignmentDraft> associateRoleAssignments) {
         this.associateRoleAssignments = associateRoleAssignments;
         return this;
     }
-
+    
     /**
      *  <p>Roles assigned to the Associate within a Business Unit.</p>
      * @param associateRoleAssignments value to be set
      * @return Builder
      */
-
-    public AssociateDraftBuilder plusAssociateRoleAssignments(
-            @Nullable final com.commercetools.api.models.business_unit.AssociateRoleAssignmentDraft... associateRoleAssignments) {
+    
+    public AssociateDraftBuilder plusAssociateRoleAssignments(@Nullable final com.commercetools.api.models.business_unit.AssociateRoleAssignmentDraft ...associateRoleAssignments) {
         if (this.associateRoleAssignments == null) {
             this.associateRoleAssignments = new ArrayList<>();
         }
         this.associateRoleAssignments.addAll(Arrays.asList(associateRoleAssignments));
         return this;
     }
-
+    
+    
+    
     /**
      *  <p>Roles assigned to the Associate within a Business Unit.</p>
      * @param builder function to build the associateRoleAssignments value
      * @return Builder
      */
-
-    public AssociateDraftBuilder plusAssociateRoleAssignments(
-            Function<com.commercetools.api.models.business_unit.AssociateRoleAssignmentDraftBuilder, com.commercetools.api.models.business_unit.AssociateRoleAssignmentDraftBuilder> builder) {
+    
+    public AssociateDraftBuilder plusAssociateRoleAssignments(Function<com.commercetools.api.models.business_unit.AssociateRoleAssignmentDraftBuilder, com.commercetools.api.models.business_unit.AssociateRoleAssignmentDraftBuilder> builder) {
         if (this.associateRoleAssignments == null) {
             this.associateRoleAssignments = new ArrayList<>();
         }
-        this.associateRoleAssignments.add(
-            builder.apply(com.commercetools.api.models.business_unit.AssociateRoleAssignmentDraftBuilder.of()).build());
+        this.associateRoleAssignments.add(builder.apply(com.commercetools.api.models.business_unit.AssociateRoleAssignmentDraftBuilder.of()).build());
         return this;
     }
-
+    
     /**
      *  <p>Roles assigned to the Associate within a Business Unit.</p>
      * @param builder function to build the associateRoleAssignments value
      * @return Builder
      */
-
-    public AssociateDraftBuilder withAssociateRoleAssignments(
-            Function<com.commercetools.api.models.business_unit.AssociateRoleAssignmentDraftBuilder, com.commercetools.api.models.business_unit.AssociateRoleAssignmentDraftBuilder> builder) {
+    
+    public AssociateDraftBuilder withAssociateRoleAssignments(Function<com.commercetools.api.models.business_unit.AssociateRoleAssignmentDraftBuilder, com.commercetools.api.models.business_unit.AssociateRoleAssignmentDraftBuilder> builder) {
         this.associateRoleAssignments = new ArrayList<>();
-        this.associateRoleAssignments.add(
-            builder.apply(com.commercetools.api.models.business_unit.AssociateRoleAssignmentDraftBuilder.of()).build());
+        this.associateRoleAssignments.add(builder.apply(com.commercetools.api.models.business_unit.AssociateRoleAssignmentDraftBuilder.of()).build());
         return this;
     }
-
+    
     /**
      *  <p>Roles assigned to the Associate within a Business Unit.</p>
      * @param builder function to build the associateRoleAssignments value
      * @return Builder
      */
-
-    public AssociateDraftBuilder addAssociateRoleAssignments(
-            Function<com.commercetools.api.models.business_unit.AssociateRoleAssignmentDraftBuilder, com.commercetools.api.models.business_unit.AssociateRoleAssignmentDraft> builder) {
-        return plusAssociateRoleAssignments(
-            builder.apply(com.commercetools.api.models.business_unit.AssociateRoleAssignmentDraftBuilder.of()));
+    
+    public AssociateDraftBuilder addAssociateRoleAssignments(Function<com.commercetools.api.models.business_unit.AssociateRoleAssignmentDraftBuilder, com.commercetools.api.models.business_unit.AssociateRoleAssignmentDraft> builder) {
+        return plusAssociateRoleAssignments(builder.apply(com.commercetools.api.models.business_unit.AssociateRoleAssignmentDraftBuilder.of()));
     }
-
+    
     /**
      *  <p>Roles assigned to the Associate within a Business Unit.</p>
      * @param builder function to build the associateRoleAssignments value
      * @return Builder
      */
-
-    public AssociateDraftBuilder setAssociateRoleAssignments(
-            Function<com.commercetools.api.models.business_unit.AssociateRoleAssignmentDraftBuilder, com.commercetools.api.models.business_unit.AssociateRoleAssignmentDraft> builder) {
-        return associateRoleAssignments(
-            builder.apply(com.commercetools.api.models.business_unit.AssociateRoleAssignmentDraftBuilder.of()));
+    
+    public AssociateDraftBuilder setAssociateRoleAssignments(Function<com.commercetools.api.models.business_unit.AssociateRoleAssignmentDraftBuilder, com.commercetools.api.models.business_unit.AssociateRoleAssignmentDraft> builder) {
+        return associateRoleAssignments(builder.apply(com.commercetools.api.models.business_unit.AssociateRoleAssignmentDraftBuilder.of()));
     }
-
+                    
+    
     /**
      *  <p>Deprecated type. Use <code>associateRoleAssignment</code> instead.</p>
      * @param roles value to be set
      * @return Builder
      */
     @Deprecated
-    public AssociateDraftBuilder roles(
-            @Nullable final com.commercetools.api.models.business_unit.AssociateRoleDeprecated... roles) {
+    public AssociateDraftBuilder roles(@Nullable final com.commercetools.api.models.business_unit.AssociateRoleDeprecated ...roles) {
         this.roles = new ArrayList<>(Arrays.asList(roles));
         return this;
     }
-
+    
     /**
      *  <p>Deprecated type. Use <code>associateRoleAssignment</code> instead.</p>
      * @param roles value to be set
      * @return Builder
      */
     @Deprecated
-    public AssociateDraftBuilder roles(
-            @Nullable final java.util.List<com.commercetools.api.models.business_unit.AssociateRoleDeprecated> roles) {
+    public AssociateDraftBuilder roles(@Nullable final java.util.List<com.commercetools.api.models.business_unit.AssociateRoleDeprecated> roles) {
         this.roles = roles;
         return this;
     }
-
+    
     /**
      *  <p>Deprecated type. Use <code>associateRoleAssignment</code> instead.</p>
      * @param roles value to be set
      * @return Builder
      */
     @Deprecated
-    public AssociateDraftBuilder plusRoles(
-            @Nullable final com.commercetools.api.models.business_unit.AssociateRoleDeprecated... roles) {
+    public AssociateDraftBuilder plusRoles(@Nullable final com.commercetools.api.models.business_unit.AssociateRoleDeprecated ...roles) {
         if (this.roles == null) {
             this.roles = new ArrayList<>();
         }
         this.roles.addAll(Arrays.asList(roles));
         return this;
     }
-
+    
+    
+    
+    
+    
     /**
      *  <p>The Customer to be part of the Business Unit.</p>
      * @param builder function to build the customer value
      * @return Builder
      */
-
-    public AssociateDraftBuilder customer(
-            Function<com.commercetools.api.models.customer.CustomerResourceIdentifierBuilder, com.commercetools.api.models.customer.CustomerResourceIdentifierBuilder> builder) {
-        this.customer = builder.apply(com.commercetools.api.models.customer.CustomerResourceIdentifierBuilder.of())
-                .build();
+    
+    public AssociateDraftBuilder customer(Function<com.commercetools.api.models.customer.CustomerResourceIdentifierBuilder, com.commercetools.api.models.customer.CustomerResourceIdentifierBuilder> builder) {
+        this.customer = builder.apply(com.commercetools.api.models.customer.CustomerResourceIdentifierBuilder.of()).build();
         return this;
     }
-
+    
     /**
      *  <p>The Customer to be part of the Business Unit.</p>
      * @param builder function to build the customer value
      * @return Builder
      */
-
-    public AssociateDraftBuilder withCustomer(
-            Function<com.commercetools.api.models.customer.CustomerResourceIdentifierBuilder, com.commercetools.api.models.customer.CustomerResourceIdentifier> builder) {
+    
+    public AssociateDraftBuilder withCustomer(Function<com.commercetools.api.models.customer.CustomerResourceIdentifierBuilder, com.commercetools.api.models.customer.CustomerResourceIdentifier> builder) {
         this.customer = builder.apply(com.commercetools.api.models.customer.CustomerResourceIdentifierBuilder.of());
         return this;
     }
-
+                    
     /**
      *  <p>The Customer to be part of the Business Unit.</p>
      * @param customer value to be set
      * @return Builder
      */
-
-    public AssociateDraftBuilder customer(
-            final com.commercetools.api.models.customer.CustomerResourceIdentifier customer) {
+    
+    public AssociateDraftBuilder customer( final com.commercetools.api.models.customer.CustomerResourceIdentifier customer) {
         this.customer = customer;
         return this;
     }
+    
+    
 
     /**
      *  <p>Roles assigned to the Associate within a Business Unit.</p>
      * @return associateRoleAssignments
      */
-
+    
     @Nullable
-    public java.util.List<com.commercetools.api.models.business_unit.AssociateRoleAssignmentDraft> getAssociateRoleAssignments() {
+    public java.util.List<com.commercetools.api.models.business_unit.AssociateRoleAssignmentDraft> getAssociateRoleAssignments(){
         return this.associateRoleAssignments;
     }
-
+    
     /**
      *  <p>Deprecated type. Use <code>associateRoleAssignment</code> instead.</p>
      * @return roles
      */
     @Deprecated
     @Nullable
-    public java.util.List<com.commercetools.api.models.business_unit.AssociateRoleDeprecated> getRoles() {
+    public java.util.List<com.commercetools.api.models.business_unit.AssociateRoleDeprecated> getRoles(){
         return this.roles;
     }
-
+    
     /**
      *  <p>The Customer to be part of the Business Unit.</p>
      * @return customer
      */
-
-    public com.commercetools.api.models.customer.CustomerResourceIdentifier getCustomer() {
+    
+    
+    public com.commercetools.api.models.customer.CustomerResourceIdentifier getCustomer(){
         return this.customer;
     }
 
@@ -239,7 +239,7 @@ public class AssociateDraftBuilder implements Builder<AssociateDraft> {
         Objects.requireNonNull(customer, AssociateDraft.class + ": customer is missing");
         return new AssociateDraftImpl(associateRoleAssignments, roles, customer);
     }
-
+    
     /**
      * builds AssociateDraft without checking for non-null required values
      * @return AssociateDraft
@@ -250,7 +250,7 @@ public class AssociateDraftBuilder implements Builder<AssociateDraft> {
 
     /**
      * factory method for an instance of AssociateDraftBuilder
-     * @return builder
+     * @return builder 
      */
     public static AssociateDraftBuilder of() {
         return new AssociateDraftBuilder();

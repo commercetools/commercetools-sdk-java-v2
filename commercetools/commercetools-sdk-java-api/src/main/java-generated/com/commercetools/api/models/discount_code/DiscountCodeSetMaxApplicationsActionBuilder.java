@@ -1,10 +1,11 @@
-
 package com.commercetools.api.models.discount_code;
 
-import java.util.*;
-
+import com.commercetools.api.models.discount_code.DiscountCodeUpdateAction;
+import com.commercetools.api.models.discount_code.DiscountCodeSetMaxApplicationsAction;
 import javax.annotation.Nullable;
-
+import java.util.*;
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -17,32 +18,39 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     DiscountCodeSetMaxApplicationsAction discountCodeSetMaxApplicationsAction = DiscountCodeSetMaxApplicationsAction.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class DiscountCodeSetMaxApplicationsActionBuilder implements Builder<DiscountCodeSetMaxApplicationsAction> {
 
+    
     @Nullable
     private Long maxApplications;
 
+    
     /**
      *  <p>Value to set. If empty, any existing value will be removed.</p>
      * @param maxApplications value to be set
      * @return Builder
      */
-
+    
     public DiscountCodeSetMaxApplicationsActionBuilder maxApplications(@Nullable final Long maxApplications) {
         this.maxApplications = maxApplications;
         return this;
     }
+    
+    
 
     /**
      *  <p>Value to set. If empty, any existing value will be removed.</p>
      * @return maxApplications
      */
-
+    
     @Nullable
-    public Long getMaxApplications() {
+    public Long getMaxApplications(){
         return this.maxApplications;
     }
 
@@ -53,7 +61,7 @@ public class DiscountCodeSetMaxApplicationsActionBuilder implements Builder<Disc
     public DiscountCodeSetMaxApplicationsAction build() {
         return new DiscountCodeSetMaxApplicationsActionImpl(maxApplications);
     }
-
+    
     /**
      * builds DiscountCodeSetMaxApplicationsAction without checking for non-null required values
      * @return DiscountCodeSetMaxApplicationsAction
@@ -64,7 +72,7 @@ public class DiscountCodeSetMaxApplicationsActionBuilder implements Builder<Disc
 
     /**
      * factory method for an instance of DiscountCodeSetMaxApplicationsActionBuilder
-     * @return builder
+     * @return builder 
      */
     public static DiscountCodeSetMaxApplicationsActionBuilder of() {
         return new DiscountCodeSetMaxApplicationsActionBuilder();

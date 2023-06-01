@@ -1,9 +1,11 @@
-
 package com.commercetools.api.predicates.query.order_edit;
 
 import com.commercetools.api.predicates.query.*;
 
-public class StagedOrderRemoveDeliveryActionQueryBuilderDsl {
+import java.util.function.Function;
+
+
+public class StagedOrderRemoveDeliveryActionQueryBuilderDsl  {
     public StagedOrderRemoveDeliveryActionQueryBuilderDsl() {
     }
 
@@ -12,21 +14,16 @@ public class StagedOrderRemoveDeliveryActionQueryBuilderDsl {
     }
 
     public StringComparisonPredicateBuilder<StagedOrderRemoveDeliveryActionQueryBuilderDsl> action() {
-        return new StringComparisonPredicateBuilder<>(
-            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("action")),
-            p -> new CombinationQueryPredicate<>(p, StagedOrderRemoveDeliveryActionQueryBuilderDsl::of));
+        return new StringComparisonPredicateBuilder<>(BinaryQueryPredicate.of().left(new ConstantQueryPredicate("action")),
+        p -> new CombinationQueryPredicate<>(p, StagedOrderRemoveDeliveryActionQueryBuilderDsl::of));
     }
-
     public StringComparisonPredicateBuilder<StagedOrderRemoveDeliveryActionQueryBuilderDsl> deliveryId() {
-        return new StringComparisonPredicateBuilder<>(
-            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("deliveryId")),
-            p -> new CombinationQueryPredicate<>(p, StagedOrderRemoveDeliveryActionQueryBuilderDsl::of));
+        return new StringComparisonPredicateBuilder<>(BinaryQueryPredicate.of().left(new ConstantQueryPredicate("deliveryId")),
+        p -> new CombinationQueryPredicate<>(p, StagedOrderRemoveDeliveryActionQueryBuilderDsl::of));
     }
-
     public StringComparisonPredicateBuilder<StagedOrderRemoveDeliveryActionQueryBuilderDsl> deliveryKey() {
-        return new StringComparisonPredicateBuilder<>(
-            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("deliveryKey")),
-            p -> new CombinationQueryPredicate<>(p, StagedOrderRemoveDeliveryActionQueryBuilderDsl::of));
+        return new StringComparisonPredicateBuilder<>(BinaryQueryPredicate.of().left(new ConstantQueryPredicate("deliveryKey")),
+        p -> new CombinationQueryPredicate<>(p, StagedOrderRemoveDeliveryActionQueryBuilderDsl::of));
     }
-
+    
 }

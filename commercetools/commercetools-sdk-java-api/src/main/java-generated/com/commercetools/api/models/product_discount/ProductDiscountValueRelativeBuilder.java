@@ -1,8 +1,11 @@
-
 package com.commercetools.api.models.product_discount;
 
+import com.commercetools.api.models.product_discount.ProductDiscountValue;
+import com.commercetools.api.models.product_discount.ProductDiscountValueRelative;
+import javax.annotation.Nullable;
 import java.util.*;
-
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -16,30 +19,39 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .permyriad(0.3)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class ProductDiscountValueRelativeBuilder implements Builder<ProductDiscountValueRelative> {
 
+    
+    
     private Long permyriad;
 
+    
     /**
      *  <p>Fraction (per ten thousand) the price is reduced by. For example, <code>1000</code> will result in a 10% price reduction.</p>
      * @param permyriad value to be set
      * @return Builder
      */
-
-    public ProductDiscountValueRelativeBuilder permyriad(final Long permyriad) {
+    
+    public ProductDiscountValueRelativeBuilder permyriad( final Long permyriad) {
         this.permyriad = permyriad;
         return this;
     }
+    
+    
 
     /**
      *  <p>Fraction (per ten thousand) the price is reduced by. For example, <code>1000</code> will result in a 10% price reduction.</p>
      * @return permyriad
      */
-
-    public Long getPermyriad() {
+    
+    
+    public Long getPermyriad(){
         return this.permyriad;
     }
 
@@ -51,7 +63,7 @@ public class ProductDiscountValueRelativeBuilder implements Builder<ProductDisco
         Objects.requireNonNull(permyriad, ProductDiscountValueRelative.class + ": permyriad is missing");
         return new ProductDiscountValueRelativeImpl(permyriad);
     }
-
+    
     /**
      * builds ProductDiscountValueRelative without checking for non-null required values
      * @return ProductDiscountValueRelative
@@ -62,7 +74,7 @@ public class ProductDiscountValueRelativeBuilder implements Builder<ProductDisco
 
     /**
      * factory method for an instance of ProductDiscountValueRelativeBuilder
-     * @return builder
+     * @return builder 
      */
     public static ProductDiscountValueRelativeBuilder of() {
         return new ProductDiscountValueRelativeBuilder();

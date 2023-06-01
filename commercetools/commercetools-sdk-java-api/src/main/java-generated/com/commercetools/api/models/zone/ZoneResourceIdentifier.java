@@ -1,17 +1,21 @@
-
 package com.commercetools.api.models.zone;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-
+import com.commercetools.api.models.common.ReferenceTypeId;
 import com.commercetools.api.models.common.ResourceIdentifier;
+import com.commercetools.api.models.zone.ZoneResourceIdentifierImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>ResourceIdentifier to a Zone.</p>
@@ -23,9 +27,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     ZoneResourceIdentifier zoneResourceIdentifier = ZoneResourceIdentifier.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = ZoneResourceIdentifierImpl.class)
 public interface ZoneResourceIdentifier extends ResourceIdentifier, com.commercetools.api.models.Identifiable<Zone> {
 
@@ -38,15 +45,14 @@ public interface ZoneResourceIdentifier extends ResourceIdentifier, com.commerce
      *  <p>Unique identifier of the referenced Zone. Either <code>id</code> or <code>key</code> is required.</p>
      * @return id
      */
-
+    
     @JsonProperty("id")
     public String getId();
-
     /**
      *  <p>User-defined unique identifier of the referenced Zone. Either <code>id</code> or <code>key</code> is required.</p>
      * @return key
      */
-
+    
     @JsonProperty("key")
     public String getKey();
 
@@ -54,23 +60,26 @@ public interface ZoneResourceIdentifier extends ResourceIdentifier, com.commerce
      *  <p>Unique identifier of the referenced Zone. Either <code>id</code> or <code>key</code> is required.</p>
      * @param id value to be set
      */
-
+    
     public void setId(final String id);
-
+    
+    
     /**
      *  <p>User-defined unique identifier of the referenced Zone. Either <code>id</code> or <code>key</code> is required.</p>
      * @param key value to be set
      */
-
+    
     public void setKey(final String key);
+    
 
     /**
      * factory method
      * @return instance of ZoneResourceIdentifier
      */
-    public static ZoneResourceIdentifier of() {
+    public static ZoneResourceIdentifier of(){
         return new ZoneResourceIdentifierImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy ZoneResourceIdentifier
@@ -107,7 +116,7 @@ public interface ZoneResourceIdentifier extends ResourceIdentifier, com.commerce
     public static ZoneResourceIdentifierBuilder builder() {
         return ZoneResourceIdentifierBuilder.of();
     }
-
+    
     /**
      * create builder for ZoneResourceIdentifier instance
      * @param template instance with prefilled values for the builder
@@ -116,6 +125,7 @@ public interface ZoneResourceIdentifier extends ResourceIdentifier, com.commerce
     public static ZoneResourceIdentifierBuilder builder(final ZoneResourceIdentifier template) {
         return ZoneResourceIdentifierBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -126,7 +136,7 @@ public interface ZoneResourceIdentifier extends ResourceIdentifier, com.commerce
     default <T> T withZoneResourceIdentifier(Function<ZoneResourceIdentifier, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

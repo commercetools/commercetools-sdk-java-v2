@@ -1,17 +1,20 @@
-
 package com.commercetools.importapi.models.productvariants;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
+import com.commercetools.importapi.models.productvariants.Attribute;
+import com.commercetools.importapi.models.productvariants.AttributesImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * Attributes
@@ -23,11 +26,15 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     Attributes attributes = Attributes.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = AttributesImpl.class)
-public interface Attributes {
+public interface Attributes  {
+
 
     /**
      *  <p>The name of the attribute is given by the key and shouldn't be set on the attribute itself. And since this property will be represented as a map, we can set individual attributes to null to delete them (which follows JSON Merge Patch semantics).</p>
@@ -42,7 +49,7 @@ public interface Attributes {
      * @param key property name
      * @param value property value
      */
-
+    
     @JsonAnySetter
     public void setValue(String key, Attribute value);
 
@@ -50,9 +57,10 @@ public interface Attributes {
      * factory method
      * @return instance of Attributes
      */
-    public static Attributes of() {
+    public static Attributes of(){
         return new AttributesImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy Attributes
@@ -87,7 +95,7 @@ public interface Attributes {
     public static AttributesBuilder builder() {
         return AttributesBuilder.of();
     }
-
+    
     /**
      * create builder for Attributes instance
      * @param template instance with prefilled values for the builder
@@ -96,6 +104,7 @@ public interface Attributes {
     public static AttributesBuilder builder(final Attributes template) {
         return AttributesBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -106,7 +115,7 @@ public interface Attributes {
     default <T> T withAttributes(Function<Attributes, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

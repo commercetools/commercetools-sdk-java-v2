@@ -1,17 +1,20 @@
-
 package com.commercetools.api.models.type;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
+import com.commercetools.api.models.type.TypeUpdateAction;
+import com.commercetools.api.models.type.TypeRemoveFieldDefinitionActionImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * TypeRemoveFieldDefinitionAction
@@ -24,9 +27,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .fieldName("{fieldName}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = TypeRemoveFieldDefinitionActionImpl.class)
 public interface TypeRemoveFieldDefinitionAction extends TypeUpdateAction {
 
@@ -47,16 +53,18 @@ public interface TypeRemoveFieldDefinitionAction extends TypeUpdateAction {
      *  <p><code>name</code> of the FieldDefinition to remove. The removal of a FieldDefinition deletes asynchronously all Custom Fields using the FieldDefinition as well.</p>
      * @param fieldName value to be set
      */
-
+    
     public void setFieldName(final String fieldName);
+    
 
     /**
      * factory method
      * @return instance of TypeRemoveFieldDefinitionAction
      */
-    public static TypeRemoveFieldDefinitionAction of() {
+    public static TypeRemoveFieldDefinitionAction of(){
         return new TypeRemoveFieldDefinitionActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy TypeRemoveFieldDefinitionAction
@@ -91,7 +99,7 @@ public interface TypeRemoveFieldDefinitionAction extends TypeUpdateAction {
     public static TypeRemoveFieldDefinitionActionBuilder builder() {
         return TypeRemoveFieldDefinitionActionBuilder.of();
     }
-
+    
     /**
      * create builder for TypeRemoveFieldDefinitionAction instance
      * @param template instance with prefilled values for the builder
@@ -100,6 +108,7 @@ public interface TypeRemoveFieldDefinitionAction extends TypeUpdateAction {
     public static TypeRemoveFieldDefinitionActionBuilder builder(final TypeRemoveFieldDefinitionAction template) {
         return TypeRemoveFieldDefinitionActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -110,7 +119,7 @@ public interface TypeRemoveFieldDefinitionAction extends TypeUpdateAction {
     default <T> T withTypeRemoveFieldDefinitionAction(Function<TypeRemoveFieldDefinitionAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

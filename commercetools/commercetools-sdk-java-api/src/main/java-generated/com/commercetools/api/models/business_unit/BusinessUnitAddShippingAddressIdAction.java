@@ -1,16 +1,20 @@
-
 package com.commercetools.api.models.business_unit;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
+import com.commercetools.api.models.business_unit.BusinessUnitUpdateAction;
+import com.commercetools.api.models.business_unit.BusinessUnitAddShippingAddressIdActionImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Adding a shipping address to a Business Unit generates a BusinessUnitShippingAddressAdded Message.</p>
@@ -22,9 +26,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     BusinessUnitAddShippingAddressIdAction businessUnitAddShippingAddressIdAction = BusinessUnitAddShippingAddressIdAction.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = BusinessUnitAddShippingAddressIdActionImpl.class)
 public interface BusinessUnitAddShippingAddressIdAction extends BusinessUnitUpdateAction {
 
@@ -37,15 +44,14 @@ public interface BusinessUnitAddShippingAddressIdAction extends BusinessUnitUpda
      *  <p>ID of the address to add as a shipping address. Either <code>addressId</code> or <code>addressKey</code> is required.</p>
      * @return addressId
      */
-
+    
     @JsonProperty("addressId")
     public String getAddressId();
-
     /**
      *  <p>Key of the address to add as a shipping address. Either <code>addressId</code> or <code>addressKey</code> is required.</p>
      * @return addressKey
      */
-
+    
     @JsonProperty("addressKey")
     public String getAddressKey();
 
@@ -53,23 +59,26 @@ public interface BusinessUnitAddShippingAddressIdAction extends BusinessUnitUpda
      *  <p>ID of the address to add as a shipping address. Either <code>addressId</code> or <code>addressKey</code> is required.</p>
      * @param addressId value to be set
      */
-
+    
     public void setAddressId(final String addressId);
-
+    
+    
     /**
      *  <p>Key of the address to add as a shipping address. Either <code>addressId</code> or <code>addressKey</code> is required.</p>
      * @param addressKey value to be set
      */
-
+    
     public void setAddressKey(final String addressKey);
+    
 
     /**
      * factory method
      * @return instance of BusinessUnitAddShippingAddressIdAction
      */
-    public static BusinessUnitAddShippingAddressIdAction of() {
+    public static BusinessUnitAddShippingAddressIdAction of(){
         return new BusinessUnitAddShippingAddressIdActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy BusinessUnitAddShippingAddressIdAction
@@ -89,8 +98,7 @@ public interface BusinessUnitAddShippingAddressIdAction extends BusinessUnitUpda
      * @return copy instance
      */
     @Nullable
-    public static BusinessUnitAddShippingAddressIdAction deepCopy(
-            @Nullable final BusinessUnitAddShippingAddressIdAction template) {
+    public static BusinessUnitAddShippingAddressIdAction deepCopy(@Nullable final BusinessUnitAddShippingAddressIdAction template) {
         if (template == null) {
             return null;
         }
@@ -107,16 +115,16 @@ public interface BusinessUnitAddShippingAddressIdAction extends BusinessUnitUpda
     public static BusinessUnitAddShippingAddressIdActionBuilder builder() {
         return BusinessUnitAddShippingAddressIdActionBuilder.of();
     }
-
+    
     /**
      * create builder for BusinessUnitAddShippingAddressIdAction instance
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static BusinessUnitAddShippingAddressIdActionBuilder builder(
-            final BusinessUnitAddShippingAddressIdAction template) {
+    public static BusinessUnitAddShippingAddressIdActionBuilder builder(final BusinessUnitAddShippingAddressIdAction template) {
         return BusinessUnitAddShippingAddressIdActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -124,11 +132,10 @@ public interface BusinessUnitAddShippingAddressIdAction extends BusinessUnitUpda
      * @param helper function to map the object
      * @return mapped value
      */
-    default <T> T withBusinessUnitAddShippingAddressIdAction(
-            Function<BusinessUnitAddShippingAddressIdAction, T> helper) {
+    default <T> T withBusinessUnitAddShippingAddressIdAction(Function<BusinessUnitAddShippingAddressIdAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

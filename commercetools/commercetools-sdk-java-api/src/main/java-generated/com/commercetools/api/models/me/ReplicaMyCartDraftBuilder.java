@@ -1,8 +1,13 @@
-
 package com.commercetools.api.models.me;
 
+import com.commercetools.api.models.cart.CartReference;
+import com.commercetools.api.models.order.OrderReference;
+import java.lang.Object;
+import com.commercetools.api.models.me.ReplicaMyCartDraft;
+import javax.annotation.Nullable;
 import java.util.*;
-
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -15,30 +20,39 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     ReplicaMyCartDraft replicaMyCartDraft = ReplicaMyCartDraft.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class ReplicaMyCartDraftBuilder implements Builder<ReplicaMyCartDraft> {
 
+    
+    
     private java.lang.Object reference;
 
+    
     /**
      *  <p>Reference to a Cart or Order that is replicated.</p>
      * @param reference value to be set
      * @return Builder
      */
-
-    public ReplicaMyCartDraftBuilder reference(final java.lang.Object reference) {
+    
+    public ReplicaMyCartDraftBuilder reference( final java.lang.Object reference) {
         this.reference = reference;
         return this;
     }
+    
+    
 
     /**
      *  <p>Reference to a Cart or Order that is replicated.</p>
      * @return reference
      */
-
-    public java.lang.Object getReference() {
+    
+    
+    public java.lang.Object getReference(){
         return this.reference;
     }
 
@@ -50,7 +64,7 @@ public class ReplicaMyCartDraftBuilder implements Builder<ReplicaMyCartDraft> {
         Objects.requireNonNull(reference, ReplicaMyCartDraft.class + ": reference is missing");
         return new ReplicaMyCartDraftImpl(reference);
     }
-
+    
     /**
      * builds ReplicaMyCartDraft without checking for non-null required values
      * @return ReplicaMyCartDraft
@@ -61,7 +75,7 @@ public class ReplicaMyCartDraftBuilder implements Builder<ReplicaMyCartDraft> {
 
     /**
      * factory method for an instance of ReplicaMyCartDraftBuilder
-     * @return builder
+     * @return builder 
      */
     public static ReplicaMyCartDraftBuilder of() {
         return new ReplicaMyCartDraftBuilder();

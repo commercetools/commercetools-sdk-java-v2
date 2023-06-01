@@ -1,19 +1,21 @@
-
 package com.commercetools.api.models.message;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-import java.util.stream.Collectors;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-
 import com.commercetools.api.models.channel.ChannelReference;
+import com.commercetools.api.models.message.Message;
+import com.commercetools.api.models.message.StoreDistributionChannelsChangedMessageImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Generated after a successful Add Distribution Channel, Remove Distribution Channel, or Set Distribution Channels update action.</p>
@@ -32,9 +34,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .resourceVersion(0.3)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = StoreDistributionChannelsChangedMessageImpl.class)
 public interface StoreDistributionChannelsChangedMessage extends Message {
 
@@ -50,7 +55,6 @@ public interface StoreDistributionChannelsChangedMessage extends Message {
     @Valid
     @JsonProperty("addedDistributionChannels")
     public List<ChannelReference> getAddedDistributionChannels();
-
     /**
      *  <p>Product distribution Channels that have been removed from the Store.</p>
      * @return removedDistributionChannels
@@ -63,39 +67,38 @@ public interface StoreDistributionChannelsChangedMessage extends Message {
      *  <p>Product distribution Channels that have been added to the Store.</p>
      * @param addedDistributionChannels values to be set
      */
-
+    
     @JsonIgnore
-    public void setAddedDistributionChannels(final ChannelReference... addedDistributionChannels);
-
+    public void setAddedDistributionChannels(final ChannelReference ...addedDistributionChannels);
     /**
      *  <p>Product distribution Channels that have been added to the Store.</p>
      * @param addedDistributionChannels values to be set
      */
-
+    
     public void setAddedDistributionChannels(final List<ChannelReference> addedDistributionChannels);
-
+    
     /**
      *  <p>Product distribution Channels that have been removed from the Store.</p>
      * @param removedDistributionChannels values to be set
      */
-
+    
     @JsonIgnore
-    public void setRemovedDistributionChannels(final ChannelReference... removedDistributionChannels);
-
+    public void setRemovedDistributionChannels(final ChannelReference ...removedDistributionChannels);
     /**
      *  <p>Product distribution Channels that have been removed from the Store.</p>
      * @param removedDistributionChannels values to be set
      */
-
+    
     public void setRemovedDistributionChannels(final List<ChannelReference> removedDistributionChannels);
 
     /**
      * factory method
      * @return instance of StoreDistributionChannelsChangedMessage
      */
-    public static StoreDistributionChannelsChangedMessage of() {
+    public static StoreDistributionChannelsChangedMessage of(){
         return new StoreDistributionChannelsChangedMessageImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy StoreDistributionChannelsChangedMessage
@@ -125,8 +128,7 @@ public interface StoreDistributionChannelsChangedMessage extends Message {
      * @return copy instance
      */
     @Nullable
-    public static StoreDistributionChannelsChangedMessage deepCopy(
-            @Nullable final StoreDistributionChannelsChangedMessage template) {
+    public static StoreDistributionChannelsChangedMessage deepCopy(@Nullable final StoreDistributionChannelsChangedMessage template) {
         if (template == null) {
             return null;
         }
@@ -135,23 +137,17 @@ public interface StoreDistributionChannelsChangedMessage extends Message {
         instance.setVersion(template.getVersion());
         instance.setCreatedAt(template.getCreatedAt());
         instance.setLastModifiedAt(template.getLastModifiedAt());
-        instance.setLastModifiedBy(
-            com.commercetools.api.models.common.LastModifiedBy.deepCopy(template.getLastModifiedBy()));
+        instance.setLastModifiedBy(com.commercetools.api.models.common.LastModifiedBy.deepCopy(template.getLastModifiedBy()));
         instance.setCreatedBy(com.commercetools.api.models.common.CreatedBy.deepCopy(template.getCreatedBy()));
         instance.setSequenceNumber(template.getSequenceNumber());
         instance.setResource(com.commercetools.api.models.common.Reference.deepCopy(template.getResource()));
         instance.setResourceVersion(template.getResourceVersion());
-        instance.setResourceUserProvidedIdentifiers(com.commercetools.api.models.message.UserProvidedIdentifiers
-                .deepCopy(template.getResourceUserProvidedIdentifiers()));
+        instance.setResourceUserProvidedIdentifiers(com.commercetools.api.models.message.UserProvidedIdentifiers.deepCopy(template.getResourceUserProvidedIdentifiers()));
         instance.setAddedDistributionChannels(Optional.ofNullable(template.getAddedDistributionChannels())
-                .map(t -> t.stream()
-                        .map(com.commercetools.api.models.channel.ChannelReference::deepCopy)
-                        .collect(Collectors.toList()))
+                .map(t -> t.stream().map(com.commercetools.api.models.channel.ChannelReference::deepCopy).collect(Collectors.toList()))
                 .orElse(null));
         instance.setRemovedDistributionChannels(Optional.ofNullable(template.getRemovedDistributionChannels())
-                .map(t -> t.stream()
-                        .map(com.commercetools.api.models.channel.ChannelReference::deepCopy)
-                        .collect(Collectors.toList()))
+                .map(t -> t.stream().map(com.commercetools.api.models.channel.ChannelReference::deepCopy).collect(Collectors.toList()))
                 .orElse(null));
         return instance;
     }
@@ -163,16 +159,16 @@ public interface StoreDistributionChannelsChangedMessage extends Message {
     public static StoreDistributionChannelsChangedMessageBuilder builder() {
         return StoreDistributionChannelsChangedMessageBuilder.of();
     }
-
+    
     /**
      * create builder for StoreDistributionChannelsChangedMessage instance
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static StoreDistributionChannelsChangedMessageBuilder builder(
-            final StoreDistributionChannelsChangedMessage template) {
+    public static StoreDistributionChannelsChangedMessageBuilder builder(final StoreDistributionChannelsChangedMessage template) {
         return StoreDistributionChannelsChangedMessageBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -180,11 +176,10 @@ public interface StoreDistributionChannelsChangedMessage extends Message {
      * @param helper function to map the object
      * @return mapped value
      */
-    default <T> T withStoreDistributionChannelsChangedMessage(
-            Function<StoreDistributionChannelsChangedMessage, T> helper) {
+    default <T> T withStoreDistributionChannelsChangedMessage(Function<StoreDistributionChannelsChangedMessage, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

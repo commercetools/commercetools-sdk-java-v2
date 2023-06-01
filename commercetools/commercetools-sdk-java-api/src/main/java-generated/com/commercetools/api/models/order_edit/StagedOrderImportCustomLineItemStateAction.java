@@ -1,21 +1,21 @@
-
 package com.commercetools.api.models.order_edit;
-
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-import java.util.stream.Collectors;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.order.ItemState;
 import com.commercetools.api.models.order.StagedOrderUpdateAction;
+import com.commercetools.api.models.order_edit.StagedOrderImportCustomLineItemStateActionImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * StagedOrderImportCustomLineItemStateAction
@@ -29,9 +29,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .plusState(stateBuilder -> stateBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = StagedOrderImportCustomLineItemStateActionImpl.class)
 public interface StagedOrderImportCustomLineItemStateAction extends StagedOrderUpdateAction {
 
@@ -47,7 +50,6 @@ public interface StagedOrderImportCustomLineItemStateAction extends StagedOrderU
     @NotNull
     @JsonProperty("customLineItemId")
     public String getCustomLineItemId();
-
     /**
      *
      * @return state
@@ -61,39 +63,39 @@ public interface StagedOrderImportCustomLineItemStateAction extends StagedOrderU
      * set customLineItemId
      * @param customLineItemId value to be set
      */
-
+    
     public void setCustomLineItemId(final String customLineItemId);
-
+    
+    
     /**
      * set state
      * @param state values to be set
      */
-
+    
     @JsonIgnore
-    public void setState(final ItemState... state);
-
+    public void setState(final ItemState ...state);
     /**
      * set state
      * @param state values to be set
      */
-
+    
     public void setState(final List<ItemState> state);
 
     /**
      * factory method
      * @return instance of StagedOrderImportCustomLineItemStateAction
      */
-    public static StagedOrderImportCustomLineItemStateAction of() {
+    public static StagedOrderImportCustomLineItemStateAction of(){
         return new StagedOrderImportCustomLineItemStateActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy StagedOrderImportCustomLineItemStateAction
      * @param template instance to be copied
      * @return copy instance
      */
-    public static StagedOrderImportCustomLineItemStateAction of(
-            final StagedOrderImportCustomLineItemStateAction template) {
+    public static StagedOrderImportCustomLineItemStateAction of(final StagedOrderImportCustomLineItemStateAction template) {
         StagedOrderImportCustomLineItemStateActionImpl instance = new StagedOrderImportCustomLineItemStateActionImpl();
         instance.setCustomLineItemId(template.getCustomLineItemId());
         instance.setState(template.getState());
@@ -106,17 +108,14 @@ public interface StagedOrderImportCustomLineItemStateAction extends StagedOrderU
      * @return copy instance
      */
     @Nullable
-    public static StagedOrderImportCustomLineItemStateAction deepCopy(
-            @Nullable final StagedOrderImportCustomLineItemStateAction template) {
+    public static StagedOrderImportCustomLineItemStateAction deepCopy(@Nullable final StagedOrderImportCustomLineItemStateAction template) {
         if (template == null) {
             return null;
         }
         StagedOrderImportCustomLineItemStateActionImpl instance = new StagedOrderImportCustomLineItemStateActionImpl();
         instance.setCustomLineItemId(template.getCustomLineItemId());
         instance.setState(Optional.ofNullable(template.getState())
-                .map(t -> t.stream()
-                        .map(com.commercetools.api.models.order.ItemState::deepCopy)
-                        .collect(Collectors.toList()))
+                .map(t -> t.stream().map(com.commercetools.api.models.order.ItemState::deepCopy).collect(Collectors.toList()))
                 .orElse(null));
         return instance;
     }
@@ -128,16 +127,16 @@ public interface StagedOrderImportCustomLineItemStateAction extends StagedOrderU
     public static StagedOrderImportCustomLineItemStateActionBuilder builder() {
         return StagedOrderImportCustomLineItemStateActionBuilder.of();
     }
-
+    
     /**
      * create builder for StagedOrderImportCustomLineItemStateAction instance
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static StagedOrderImportCustomLineItemStateActionBuilder builder(
-            final StagedOrderImportCustomLineItemStateAction template) {
+    public static StagedOrderImportCustomLineItemStateActionBuilder builder(final StagedOrderImportCustomLineItemStateAction template) {
         return StagedOrderImportCustomLineItemStateActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -145,11 +144,10 @@ public interface StagedOrderImportCustomLineItemStateAction extends StagedOrderU
      * @param helper function to map the object
      * @return mapped value
      */
-    default <T> T withStagedOrderImportCustomLineItemStateAction(
-            Function<StagedOrderImportCustomLineItemStateAction, T> helper) {
+    default <T> T withStagedOrderImportCustomLineItemStateAction(Function<StagedOrderImportCustomLineItemStateAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

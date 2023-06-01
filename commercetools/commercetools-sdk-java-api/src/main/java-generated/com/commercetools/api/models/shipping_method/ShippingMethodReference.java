@@ -1,19 +1,22 @@
-
 package com.commercetools.api.models.shipping_method;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
 import com.commercetools.api.models.common.Reference;
+import com.commercetools.api.models.common.ReferenceTypeId;
+import com.commercetools.api.models.shipping_method.ShippingMethod;
+import com.commercetools.api.models.shipping_method.ShippingMethodReferenceImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Reference to a ShippingMethod.</p>
@@ -26,9 +29,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .id("{id}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = ShippingMethodReferenceImpl.class)
 public interface ShippingMethodReference extends Reference, com.commercetools.api.models.Identifiable<ShippingMethod> {
 
@@ -44,7 +50,6 @@ public interface ShippingMethodReference extends Reference, com.commercetools.ap
     @Valid
     @JsonProperty("obj")
     public ShippingMethod getObj();
-
     /**
      *  <p>Unique identifier of the referenced ShippingMethod.</p>
      * @return id
@@ -57,23 +62,26 @@ public interface ShippingMethodReference extends Reference, com.commercetools.ap
      *  <p>Contains the representation of the expanded ShippingMethod. Only present in responses to requests with Reference Expansion for ShippingMethods.</p>
      * @param obj value to be set
      */
-
+    
     public void setObj(final ShippingMethod obj);
-
+    
+    
     /**
      *  <p>Unique identifier of the referenced ShippingMethod.</p>
      * @param id value to be set
      */
-
+    
     public void setId(final String id);
+    
 
     /**
      * factory method
      * @return instance of ShippingMethodReference
      */
-    public static ShippingMethodReference of() {
+    public static ShippingMethodReference of(){
         return new ShippingMethodReferenceImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy ShippingMethodReference
@@ -110,7 +118,7 @@ public interface ShippingMethodReference extends Reference, com.commercetools.ap
     public static ShippingMethodReferenceBuilder builder() {
         return ShippingMethodReferenceBuilder.of();
     }
-
+    
     /**
      * create builder for ShippingMethodReference instance
      * @param template instance with prefilled values for the builder
@@ -119,6 +127,7 @@ public interface ShippingMethodReference extends Reference, com.commercetools.ap
     public static ShippingMethodReferenceBuilder builder(final ShippingMethodReference template) {
         return ShippingMethodReferenceBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -129,7 +138,7 @@ public interface ShippingMethodReference extends Reference, com.commercetools.ap
     default <T> T withShippingMethodReference(Function<ShippingMethodReference, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

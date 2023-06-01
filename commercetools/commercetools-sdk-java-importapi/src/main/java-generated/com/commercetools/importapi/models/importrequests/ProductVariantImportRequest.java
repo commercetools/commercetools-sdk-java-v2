@@ -1,20 +1,22 @@
-
 package com.commercetools.importapi.models.importrequests;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-import java.util.stream.Collectors;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
+import com.commercetools.importapi.models.common.ImportResourceType;
+import com.commercetools.importapi.models.importrequests.ImportRequest;
 import com.commercetools.importapi.models.productvariants.ProductVariantImport;
+import com.commercetools.importapi.models.importrequests.ProductVariantImportRequestImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>The request body to import ProductVariants. Contains data for ProductVariants to be created or updated in a Project.</p>
@@ -27,9 +29,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .plusResources(resourcesBuilder -> resourcesBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = ProductVariantImportRequestImpl.class)
 public interface ProductVariantImportRequest extends ImportRequest {
 
@@ -51,24 +56,24 @@ public interface ProductVariantImportRequest extends ImportRequest {
      *  <p>The product variant import resources of this request.</p>
      * @param resources values to be set
      */
-
+    
     @JsonIgnore
-    public void setResources(final ProductVariantImport... resources);
-
+    public void setResources(final ProductVariantImport ...resources);
     /**
      *  <p>The product variant import resources of this request.</p>
      * @param resources values to be set
      */
-
+    
     public void setResources(final List<ProductVariantImport> resources);
 
     /**
      * factory method
      * @return instance of ProductVariantImportRequest
      */
-    public static ProductVariantImportRequest of() {
+    public static ProductVariantImportRequest of(){
         return new ProductVariantImportRequestImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy ProductVariantImportRequest
@@ -93,9 +98,7 @@ public interface ProductVariantImportRequest extends ImportRequest {
         }
         ProductVariantImportRequestImpl instance = new ProductVariantImportRequestImpl();
         instance.setResources(Optional.ofNullable(template.getResources())
-                .map(t -> t.stream()
-                        .map(com.commercetools.importapi.models.productvariants.ProductVariantImport::deepCopy)
-                        .collect(Collectors.toList()))
+                .map(t -> t.stream().map(com.commercetools.importapi.models.productvariants.ProductVariantImport::deepCopy).collect(Collectors.toList()))
                 .orElse(null));
         return instance;
     }
@@ -107,7 +110,7 @@ public interface ProductVariantImportRequest extends ImportRequest {
     public static ProductVariantImportRequestBuilder builder() {
         return ProductVariantImportRequestBuilder.of();
     }
-
+    
     /**
      * create builder for ProductVariantImportRequest instance
      * @param template instance with prefilled values for the builder
@@ -116,6 +119,7 @@ public interface ProductVariantImportRequest extends ImportRequest {
     public static ProductVariantImportRequestBuilder builder(final ProductVariantImportRequest template) {
         return ProductVariantImportRequestBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -126,7 +130,7 @@ public interface ProductVariantImportRequest extends ImportRequest {
     default <T> T withProductVariantImportRequest(Function<ProductVariantImportRequest, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

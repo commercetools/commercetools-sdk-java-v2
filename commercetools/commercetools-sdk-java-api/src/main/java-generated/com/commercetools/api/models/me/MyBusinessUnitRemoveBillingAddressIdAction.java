@@ -1,16 +1,20 @@
-
 package com.commercetools.api.models.me;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
+import com.commercetools.api.models.me.MyBusinessUnitUpdateAction;
+import com.commercetools.api.models.me.MyBusinessUnitRemoveBillingAddressIdActionImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Removing a billing address from a Business Unit generates a BusinessUnitBillingAddressRemoved Message.</p>
@@ -22,9 +26,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     MyBusinessUnitRemoveBillingAddressIdAction myBusinessUnitRemoveBillingAddressIdAction = MyBusinessUnitRemoveBillingAddressIdAction.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = MyBusinessUnitRemoveBillingAddressIdActionImpl.class)
 public interface MyBusinessUnitRemoveBillingAddressIdAction extends MyBusinessUnitUpdateAction {
 
@@ -37,15 +44,14 @@ public interface MyBusinessUnitRemoveBillingAddressIdAction extends MyBusinessUn
      *  <p>ID of the billing address to be removed. Either <code>addressId</code> or <code>addressKey</code> is required.</p>
      * @return addressId
      */
-
+    
     @JsonProperty("addressId")
     public String getAddressId();
-
     /**
      *  <p>Key of the billing address to be removed. Either <code>addressId</code> or <code>addressKey</code> is required.</p>
      * @return addressKey
      */
-
+    
     @JsonProperty("addressKey")
     public String getAddressKey();
 
@@ -53,31 +59,33 @@ public interface MyBusinessUnitRemoveBillingAddressIdAction extends MyBusinessUn
      *  <p>ID of the billing address to be removed. Either <code>addressId</code> or <code>addressKey</code> is required.</p>
      * @param addressId value to be set
      */
-
+    
     public void setAddressId(final String addressId);
-
+    
+    
     /**
      *  <p>Key of the billing address to be removed. Either <code>addressId</code> or <code>addressKey</code> is required.</p>
      * @param addressKey value to be set
      */
-
+    
     public void setAddressKey(final String addressKey);
+    
 
     /**
      * factory method
      * @return instance of MyBusinessUnitRemoveBillingAddressIdAction
      */
-    public static MyBusinessUnitRemoveBillingAddressIdAction of() {
+    public static MyBusinessUnitRemoveBillingAddressIdAction of(){
         return new MyBusinessUnitRemoveBillingAddressIdActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy MyBusinessUnitRemoveBillingAddressIdAction
      * @param template instance to be copied
      * @return copy instance
      */
-    public static MyBusinessUnitRemoveBillingAddressIdAction of(
-            final MyBusinessUnitRemoveBillingAddressIdAction template) {
+    public static MyBusinessUnitRemoveBillingAddressIdAction of(final MyBusinessUnitRemoveBillingAddressIdAction template) {
         MyBusinessUnitRemoveBillingAddressIdActionImpl instance = new MyBusinessUnitRemoveBillingAddressIdActionImpl();
         instance.setAddressId(template.getAddressId());
         instance.setAddressKey(template.getAddressKey());
@@ -90,8 +98,7 @@ public interface MyBusinessUnitRemoveBillingAddressIdAction extends MyBusinessUn
      * @return copy instance
      */
     @Nullable
-    public static MyBusinessUnitRemoveBillingAddressIdAction deepCopy(
-            @Nullable final MyBusinessUnitRemoveBillingAddressIdAction template) {
+    public static MyBusinessUnitRemoveBillingAddressIdAction deepCopy(@Nullable final MyBusinessUnitRemoveBillingAddressIdAction template) {
         if (template == null) {
             return null;
         }
@@ -108,16 +115,16 @@ public interface MyBusinessUnitRemoveBillingAddressIdAction extends MyBusinessUn
     public static MyBusinessUnitRemoveBillingAddressIdActionBuilder builder() {
         return MyBusinessUnitRemoveBillingAddressIdActionBuilder.of();
     }
-
+    
     /**
      * create builder for MyBusinessUnitRemoveBillingAddressIdAction instance
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static MyBusinessUnitRemoveBillingAddressIdActionBuilder builder(
-            final MyBusinessUnitRemoveBillingAddressIdAction template) {
+    public static MyBusinessUnitRemoveBillingAddressIdActionBuilder builder(final MyBusinessUnitRemoveBillingAddressIdAction template) {
         return MyBusinessUnitRemoveBillingAddressIdActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -125,11 +132,10 @@ public interface MyBusinessUnitRemoveBillingAddressIdAction extends MyBusinessUn
      * @param helper function to map the object
      * @return mapped value
      */
-    default <T> T withMyBusinessUnitRemoveBillingAddressIdAction(
-            Function<MyBusinessUnitRemoveBillingAddressIdAction, T> helper) {
+    default <T> T withMyBusinessUnitRemoveBillingAddressIdAction(Function<MyBusinessUnitRemoveBillingAddressIdAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

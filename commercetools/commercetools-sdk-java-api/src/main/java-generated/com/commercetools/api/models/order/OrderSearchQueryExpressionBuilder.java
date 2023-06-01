@@ -1,8 +1,19 @@
-
 package com.commercetools.api.models.order;
 
+import com.commercetools.api.models.order.OrderSearchDateRangeExpression;
+import com.commercetools.api.models.order.OrderSearchExactExpression;
+import com.commercetools.api.models.order.OrderSearchExistsExpression;
+import com.commercetools.api.models.order.OrderSearchFullTextExpression;
+import com.commercetools.api.models.order.OrderSearchLongRangeExpression;
+import com.commercetools.api.models.order.OrderSearchNumberRangeExpression;
+import com.commercetools.api.models.order.OrderSearchPrefixExpression;
+import com.commercetools.api.models.order.OrderSearchQuery;
+import com.commercetools.api.models.order.OrderSearchWildCardExpression;
+import com.commercetools.api.models.order.OrderSearchQueryExpression;
+import javax.annotation.Nullable;
 import java.util.*;
-
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -15,10 +26,16 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     OrderSearchQueryExpression orderSearchQueryExpression = OrderSearchQueryExpression.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class OrderSearchQueryExpressionBuilder implements Builder<OrderSearchQueryExpression> {
+
+
+
 
     /**
      * builds OrderSearchQueryExpression with checking for non-null required values
@@ -27,7 +44,7 @@ public class OrderSearchQueryExpressionBuilder implements Builder<OrderSearchQue
     public OrderSearchQueryExpression build() {
         return new OrderSearchQueryExpressionImpl();
     }
-
+    
     /**
      * builds OrderSearchQueryExpression without checking for non-null required values
      * @return OrderSearchQueryExpression
@@ -38,7 +55,7 @@ public class OrderSearchQueryExpressionBuilder implements Builder<OrderSearchQue
 
     /**
      * factory method for an instance of OrderSearchQueryExpressionBuilder
-     * @return builder
+     * @return builder 
      */
     public static OrderSearchQueryExpressionBuilder of() {
         return new OrderSearchQueryExpressionBuilder();

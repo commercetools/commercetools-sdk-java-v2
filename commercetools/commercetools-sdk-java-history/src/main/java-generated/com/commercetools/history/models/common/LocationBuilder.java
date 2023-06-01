@@ -1,8 +1,11 @@
-
 package com.commercetools.history.models.common;
 
-import java.util.*;
 
+import com.commercetools.history.models.common.Location;
+import javax.annotation.Nullable;
+import java.util.*;
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -17,52 +20,67 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .state("{state}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class LocationBuilder implements Builder<Location> {
 
+    
+    
     private String country;
-
+    
+    
+    
     private String state;
 
+    
     /**
      *  <p>Two-digit country code as per ISO 3166-1 alpha-2.</p>
      * @param country value to be set
      * @return Builder
      */
-
-    public LocationBuilder country(final String country) {
+    
+    public LocationBuilder country( final String country) {
         this.country = country;
         return this;
     }
-
+    
+    
+    
+    
     /**
      * set the value to the state
      * @param state value to be set
      * @return Builder
      */
-
-    public LocationBuilder state(final String state) {
+    
+    public LocationBuilder state( final String state) {
         this.state = state;
         return this;
     }
+    
+    
 
     /**
      *  <p>Two-digit country code as per ISO 3166-1 alpha-2.</p>
      * @return country
      */
-
-    public String getCountry() {
+    
+    
+    public String getCountry(){
         return this.country;
     }
-
+    
     /**
      * value of state}
      * @return state
      */
-
-    public String getState() {
+    
+    
+    public String getState(){
         return this.state;
     }
 
@@ -75,7 +93,7 @@ public class LocationBuilder implements Builder<Location> {
         Objects.requireNonNull(state, Location.class + ": state is missing");
         return new LocationImpl(country, state);
     }
-
+    
     /**
      * builds Location without checking for non-null required values
      * @return Location
@@ -86,7 +104,7 @@ public class LocationBuilder implements Builder<Location> {
 
     /**
      * factory method for an instance of LocationBuilder
-     * @return builder
+     * @return builder 
      */
     public static LocationBuilder of() {
         return new LocationBuilder();

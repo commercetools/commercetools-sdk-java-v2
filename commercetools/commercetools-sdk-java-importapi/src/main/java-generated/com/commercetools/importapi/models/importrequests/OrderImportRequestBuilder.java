@@ -1,9 +1,13 @@
-
 package com.commercetools.importapi.models.importrequests;
 
+import com.commercetools.importapi.models.common.ImportResourceType;
+import com.commercetools.importapi.models.importrequests.ImportRequest;
+import com.commercetools.importapi.models.orders.OrderImport;
+import com.commercetools.importapi.models.importrequests.OrderImportRequest;
+import javax.annotation.Nullable;
 import java.util.*;
 import java.util.function.Function;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -17,11 +21,16 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .plusResources(resourcesBuilder -> resourcesBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class OrderImportRequestBuilder implements Builder<OrderImportRequest> {
 
+    
+    
     private java.util.List<com.commercetools.importapi.models.orders.OrderImport> resources;
 
     /**
@@ -29,96 +38,93 @@ public class OrderImportRequestBuilder implements Builder<OrderImportRequest> {
      * @param resources value to be set
      * @return Builder
      */
-
-    public OrderImportRequestBuilder resources(
-            final com.commercetools.importapi.models.orders.OrderImport... resources) {
+    
+    public OrderImportRequestBuilder resources( final com.commercetools.importapi.models.orders.OrderImport ...resources) {
         this.resources = new ArrayList<>(Arrays.asList(resources));
         return this;
     }
-
+    
     /**
      *  <p>The order import resources of this request.</p>
      * @param resources value to be set
      * @return Builder
      */
-
-    public OrderImportRequestBuilder resources(
-            final java.util.List<com.commercetools.importapi.models.orders.OrderImport> resources) {
+    
+    public OrderImportRequestBuilder resources( final java.util.List<com.commercetools.importapi.models.orders.OrderImport> resources) {
         this.resources = resources;
         return this;
     }
-
+    
     /**
      *  <p>The order import resources of this request.</p>
      * @param resources value to be set
      * @return Builder
      */
-
-    public OrderImportRequestBuilder plusResources(
-            final com.commercetools.importapi.models.orders.OrderImport... resources) {
+    
+    public OrderImportRequestBuilder plusResources( final com.commercetools.importapi.models.orders.OrderImport ...resources) {
         if (this.resources == null) {
             this.resources = new ArrayList<>();
         }
         this.resources.addAll(Arrays.asList(resources));
         return this;
     }
-
+    
+    
+    
     /**
      *  <p>The order import resources of this request.</p>
      * @param builder function to build the resources value
      * @return Builder
      */
-
-    public OrderImportRequestBuilder plusResources(
-            Function<com.commercetools.importapi.models.orders.OrderImportBuilder, com.commercetools.importapi.models.orders.OrderImportBuilder> builder) {
+    
+    public OrderImportRequestBuilder plusResources(Function<com.commercetools.importapi.models.orders.OrderImportBuilder, com.commercetools.importapi.models.orders.OrderImportBuilder> builder) {
         if (this.resources == null) {
             this.resources = new ArrayList<>();
         }
         this.resources.add(builder.apply(com.commercetools.importapi.models.orders.OrderImportBuilder.of()).build());
         return this;
     }
-
+    
     /**
      *  <p>The order import resources of this request.</p>
      * @param builder function to build the resources value
      * @return Builder
      */
-
-    public OrderImportRequestBuilder withResources(
-            Function<com.commercetools.importapi.models.orders.OrderImportBuilder, com.commercetools.importapi.models.orders.OrderImportBuilder> builder) {
+    
+    public OrderImportRequestBuilder withResources(Function<com.commercetools.importapi.models.orders.OrderImportBuilder, com.commercetools.importapi.models.orders.OrderImportBuilder> builder) {
         this.resources = new ArrayList<>();
         this.resources.add(builder.apply(com.commercetools.importapi.models.orders.OrderImportBuilder.of()).build());
         return this;
     }
-
+    
     /**
      *  <p>The order import resources of this request.</p>
      * @param builder function to build the resources value
      * @return Builder
      */
-
-    public OrderImportRequestBuilder addResources(
-            Function<com.commercetools.importapi.models.orders.OrderImportBuilder, com.commercetools.importapi.models.orders.OrderImport> builder) {
+    
+    public OrderImportRequestBuilder addResources(Function<com.commercetools.importapi.models.orders.OrderImportBuilder, com.commercetools.importapi.models.orders.OrderImport> builder) {
         return plusResources(builder.apply(com.commercetools.importapi.models.orders.OrderImportBuilder.of()));
     }
-
+    
     /**
      *  <p>The order import resources of this request.</p>
      * @param builder function to build the resources value
      * @return Builder
      */
-
-    public OrderImportRequestBuilder setResources(
-            Function<com.commercetools.importapi.models.orders.OrderImportBuilder, com.commercetools.importapi.models.orders.OrderImport> builder) {
+    
+    public OrderImportRequestBuilder setResources(Function<com.commercetools.importapi.models.orders.OrderImportBuilder, com.commercetools.importapi.models.orders.OrderImport> builder) {
         return resources(builder.apply(com.commercetools.importapi.models.orders.OrderImportBuilder.of()));
     }
+                    
 
     /**
      *  <p>The order import resources of this request.</p>
      * @return resources
      */
-
-    public java.util.List<com.commercetools.importapi.models.orders.OrderImport> getResources() {
+    
+    
+    public java.util.List<com.commercetools.importapi.models.orders.OrderImport> getResources(){
         return this.resources;
     }
 
@@ -130,7 +136,7 @@ public class OrderImportRequestBuilder implements Builder<OrderImportRequest> {
         Objects.requireNonNull(resources, OrderImportRequest.class + ": resources is missing");
         return new OrderImportRequestImpl(resources);
     }
-
+    
     /**
      * builds OrderImportRequest without checking for non-null required values
      * @return OrderImportRequest
@@ -141,7 +147,7 @@ public class OrderImportRequestBuilder implements Builder<OrderImportRequest> {
 
     /**
      * factory method for an instance of OrderImportRequestBuilder
-     * @return builder
+     * @return builder 
      */
     public static OrderImportRequestBuilder of() {
         return new OrderImportRequestBuilder();

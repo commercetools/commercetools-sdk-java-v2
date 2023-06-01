@@ -1,9 +1,11 @@
-
 package com.commercetools.ml.models.general_category_recommendations;
 
+import com.commercetools.ml.models.general_category_recommendations.GeneralCategoryRecommendation;
+import com.commercetools.ml.models.general_category_recommendations.GeneralCategoryRecommendationPagedQueryResponse;
+import javax.annotation.Nullable;
 import java.util.*;
 import java.util.function.Function;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -20,183 +22,194 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .plusResults(resultsBuilder -> resultsBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
-public class GeneralCategoryRecommendationPagedQueryResponseBuilder
-        implements Builder<GeneralCategoryRecommendationPagedQueryResponse> {
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
+public class GeneralCategoryRecommendationPagedQueryResponseBuilder implements Builder<GeneralCategoryRecommendationPagedQueryResponse> {
 
+    
+    
     private Long count;
-
+    
+    
+    
     private Long total;
-
+    
+    
+    
     private Long offset;
-
+    
+    
+    
     private java.util.List<com.commercetools.ml.models.general_category_recommendations.GeneralCategoryRecommendation> results;
 
+    
     /**
      * set the value to the count
      * @param count value to be set
      * @return Builder
      */
-
-    public GeneralCategoryRecommendationPagedQueryResponseBuilder count(final Long count) {
+    
+    public GeneralCategoryRecommendationPagedQueryResponseBuilder count( final Long count) {
         this.count = count;
         return this;
     }
-
+    
+    
+    
+    
     /**
      * set the value to the total
      * @param total value to be set
      * @return Builder
      */
-
-    public GeneralCategoryRecommendationPagedQueryResponseBuilder total(final Long total) {
+    
+    public GeneralCategoryRecommendationPagedQueryResponseBuilder total( final Long total) {
         this.total = total;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Number of elements skipped.</p>
      * @param offset value to be set
      * @return Builder
      */
-
-    public GeneralCategoryRecommendationPagedQueryResponseBuilder offset(final Long offset) {
+    
+    public GeneralCategoryRecommendationPagedQueryResponseBuilder offset( final Long offset) {
         this.offset = offset;
         return this;
     }
-
+    
+    
+    
     /**
      * set values to the results
      * @param results value to be set
      * @return Builder
      */
-
-    public GeneralCategoryRecommendationPagedQueryResponseBuilder results(
-            final com.commercetools.ml.models.general_category_recommendations.GeneralCategoryRecommendation... results) {
+    
+    public GeneralCategoryRecommendationPagedQueryResponseBuilder results( final com.commercetools.ml.models.general_category_recommendations.GeneralCategoryRecommendation ...results) {
         this.results = new ArrayList<>(Arrays.asList(results));
         return this;
     }
-
+    
     /**
      * set value to the results
      * @param results value to be set
      * @return Builder
      */
-
-    public GeneralCategoryRecommendationPagedQueryResponseBuilder results(
-            final java.util.List<com.commercetools.ml.models.general_category_recommendations.GeneralCategoryRecommendation> results) {
+    
+    public GeneralCategoryRecommendationPagedQueryResponseBuilder results( final java.util.List<com.commercetools.ml.models.general_category_recommendations.GeneralCategoryRecommendation> results) {
         this.results = results;
         return this;
     }
-
+    
     /**
      * add values to the results
      * @param results value to be set
      * @return Builder
      */
-
-    public GeneralCategoryRecommendationPagedQueryResponseBuilder plusResults(
-            final com.commercetools.ml.models.general_category_recommendations.GeneralCategoryRecommendation... results) {
+    
+    public GeneralCategoryRecommendationPagedQueryResponseBuilder plusResults( final com.commercetools.ml.models.general_category_recommendations.GeneralCategoryRecommendation ...results) {
         if (this.results == null) {
             this.results = new ArrayList<>();
         }
         this.results.addAll(Arrays.asList(results));
         return this;
     }
-
+    
+    
+    
     /**
      * add the value to the results using the builder function
      * @param builder function to build the results value
      * @return Builder
      */
-
-    public GeneralCategoryRecommendationPagedQueryResponseBuilder plusResults(
-            Function<com.commercetools.ml.models.general_category_recommendations.GeneralCategoryRecommendationBuilder, com.commercetools.ml.models.general_category_recommendations.GeneralCategoryRecommendationBuilder> builder) {
+    
+    public GeneralCategoryRecommendationPagedQueryResponseBuilder plusResults(Function<com.commercetools.ml.models.general_category_recommendations.GeneralCategoryRecommendationBuilder, com.commercetools.ml.models.general_category_recommendations.GeneralCategoryRecommendationBuilder> builder) {
         if (this.results == null) {
             this.results = new ArrayList<>();
         }
-        this.results.add(builder
-                .apply(com.commercetools.ml.models.general_category_recommendations.GeneralCategoryRecommendationBuilder
-                        .of())
-                .build());
+        this.results.add(builder.apply(com.commercetools.ml.models.general_category_recommendations.GeneralCategoryRecommendationBuilder.of()).build());
         return this;
     }
-
+    
     /**
      * set the value to the results using the builder function
      * @param builder function to build the results value
      * @return Builder
      */
-
-    public GeneralCategoryRecommendationPagedQueryResponseBuilder withResults(
-            Function<com.commercetools.ml.models.general_category_recommendations.GeneralCategoryRecommendationBuilder, com.commercetools.ml.models.general_category_recommendations.GeneralCategoryRecommendationBuilder> builder) {
+    
+    public GeneralCategoryRecommendationPagedQueryResponseBuilder withResults(Function<com.commercetools.ml.models.general_category_recommendations.GeneralCategoryRecommendationBuilder, com.commercetools.ml.models.general_category_recommendations.GeneralCategoryRecommendationBuilder> builder) {
         this.results = new ArrayList<>();
-        this.results.add(builder
-                .apply(com.commercetools.ml.models.general_category_recommendations.GeneralCategoryRecommendationBuilder
-                        .of())
-                .build());
+        this.results.add(builder.apply(com.commercetools.ml.models.general_category_recommendations.GeneralCategoryRecommendationBuilder.of()).build());
         return this;
     }
-
+    
     /**
      * add the value to the results using the builder function
      * @param builder function to build the results value
      * @return Builder
      */
-
-    public GeneralCategoryRecommendationPagedQueryResponseBuilder addResults(
-            Function<com.commercetools.ml.models.general_category_recommendations.GeneralCategoryRecommendationBuilder, com.commercetools.ml.models.general_category_recommendations.GeneralCategoryRecommendation> builder) {
-        return plusResults(builder.apply(
-            com.commercetools.ml.models.general_category_recommendations.GeneralCategoryRecommendationBuilder.of()));
+    
+    public GeneralCategoryRecommendationPagedQueryResponseBuilder addResults(Function<com.commercetools.ml.models.general_category_recommendations.GeneralCategoryRecommendationBuilder, com.commercetools.ml.models.general_category_recommendations.GeneralCategoryRecommendation> builder) {
+        return plusResults(builder.apply(com.commercetools.ml.models.general_category_recommendations.GeneralCategoryRecommendationBuilder.of()));
     }
-
+    
     /**
      * set the value to the results using the builder function
      * @param builder function to build the results value
      * @return Builder
      */
-
-    public GeneralCategoryRecommendationPagedQueryResponseBuilder setResults(
-            Function<com.commercetools.ml.models.general_category_recommendations.GeneralCategoryRecommendationBuilder, com.commercetools.ml.models.general_category_recommendations.GeneralCategoryRecommendation> builder) {
-        return results(builder.apply(
-            com.commercetools.ml.models.general_category_recommendations.GeneralCategoryRecommendationBuilder.of()));
+    
+    public GeneralCategoryRecommendationPagedQueryResponseBuilder setResults(Function<com.commercetools.ml.models.general_category_recommendations.GeneralCategoryRecommendationBuilder, com.commercetools.ml.models.general_category_recommendations.GeneralCategoryRecommendation> builder) {
+        return results(builder.apply(com.commercetools.ml.models.general_category_recommendations.GeneralCategoryRecommendationBuilder.of()));
     }
+                    
 
     /**
      * value of count}
      * @return count
      */
-
-    public Long getCount() {
+    
+    
+    public Long getCount(){
         return this.count;
     }
-
+    
     /**
      * value of total}
      * @return total
      */
-
-    public Long getTotal() {
+    
+    
+    public Long getTotal(){
         return this.total;
     }
-
+    
     /**
      *  <p>Number of elements skipped.</p>
      * @return offset
      */
-
-    public Long getOffset() {
+    
+    
+    public Long getOffset(){
         return this.offset;
     }
-
+    
     /**
      * value of results}
      * @return results
      */
-
-    public java.util.List<com.commercetools.ml.models.general_category_recommendations.GeneralCategoryRecommendation> getResults() {
+    
+    
+    public java.util.List<com.commercetools.ml.models.general_category_recommendations.GeneralCategoryRecommendation> getResults(){
         return this.results;
     }
 
@@ -211,7 +224,7 @@ public class GeneralCategoryRecommendationPagedQueryResponseBuilder
         Objects.requireNonNull(results, GeneralCategoryRecommendationPagedQueryResponse.class + ": results is missing");
         return new GeneralCategoryRecommendationPagedQueryResponseImpl(count, total, offset, results);
     }
-
+    
     /**
      * builds GeneralCategoryRecommendationPagedQueryResponse without checking for non-null required values
      * @return GeneralCategoryRecommendationPagedQueryResponse
@@ -222,7 +235,7 @@ public class GeneralCategoryRecommendationPagedQueryResponseBuilder
 
     /**
      * factory method for an instance of GeneralCategoryRecommendationPagedQueryResponseBuilder
-     * @return builder
+     * @return builder 
      */
     public static GeneralCategoryRecommendationPagedQueryResponseBuilder of() {
         return new GeneralCategoryRecommendationPagedQueryResponseBuilder();
@@ -233,8 +246,7 @@ public class GeneralCategoryRecommendationPagedQueryResponseBuilder
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static GeneralCategoryRecommendationPagedQueryResponseBuilder of(
-            final GeneralCategoryRecommendationPagedQueryResponse template) {
+    public static GeneralCategoryRecommendationPagedQueryResponseBuilder of(final GeneralCategoryRecommendationPagedQueryResponse template) {
         GeneralCategoryRecommendationPagedQueryResponseBuilder builder = new GeneralCategoryRecommendationPagedQueryResponseBuilder();
         builder.count = template.getCount();
         builder.total = template.getTotal();

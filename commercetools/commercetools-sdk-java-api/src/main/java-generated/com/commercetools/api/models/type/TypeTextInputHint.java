@@ -1,32 +1,33 @@
-
 package com.commercetools.api.models.type;
-
-import java.util.Arrays;
-import java.util.Optional;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-
+import java.lang.String;
+import java.util.Arrays;
+import java.util.Optional;
 import io.vrap.rmf.base.client.JsonEnum;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
  *  <p>Provides a visual representation type for this field. It is only relevant for string-based field types like CustomFieldStringType and CustomFieldLocalizedStringType. Following values are supported:</p>
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public interface TypeTextInputHint extends JsonEnum {
 
     /**
     	<p>Hint for GUIs to display the field's content in a single line of text.</p>
-
+    	
     */
     TypeTextInputHint SINGLE_LINE = TypeTextInputHintEnum.SINGLE_LINE;
     /**
     	<p>Hint for GUIs to display the field's content over multiple lines of text.</p>
-
+    	
     */
     TypeTextInputHint MULTI_LINE = TypeTextInputHintEnum.MULTI_LINE;
-
+    
     /**
      * possible values of TypeTextInputHint
      */
@@ -35,7 +36,7 @@ public interface TypeTextInputHint extends JsonEnum {
          * SingleLine
          */
         SINGLE_LINE("SingleLine"),
-
+        
         /**
          * MultiLine
          */
@@ -92,7 +93,7 @@ public interface TypeTextInputHint extends JsonEnum {
             public String name() {
                 return value.toUpperCase();
             }
-
+            
             public String toString() {
                 return value;
             }
@@ -107,7 +108,7 @@ public interface TypeTextInputHint extends JsonEnum {
     public static Optional<TypeTextInputHint> findEnumViaJsonName(String jsonName) {
         return Arrays.stream(values()).filter(t -> t.getJsonName().equals(jsonName)).findFirst();
     }
-
+    
     /**
      * possible enum values
      * @return array of possible enum values
@@ -115,5 +116,5 @@ public interface TypeTextInputHint extends JsonEnum {
     public static TypeTextInputHint[] values() {
         return TypeTextInputHintEnum.values();
     }
-
+    
 }

@@ -1,19 +1,21 @@
-
 package com.commercetools.history.models.change;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
+import com.commercetools.history.models.change.Change;
 import com.commercetools.history.models.change_value.DeliveryChangeValue;
+import com.commercetools.history.models.change.AddDeliveryChangeImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * AddDeliveryChange
@@ -28,9 +30,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .previousValue(previousValueBuilder -> previousValueBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = AddDeliveryChangeImpl.class)
 public interface AddDeliveryChange extends Change {
 
@@ -46,7 +51,6 @@ public interface AddDeliveryChange extends Change {
     @NotNull
     @JsonProperty("type")
     public String getType();
-
     /**
      *  <p>Update action for <code>addDelivery</code></p>
      * @return change
@@ -54,7 +58,6 @@ public interface AddDeliveryChange extends Change {
     @NotNull
     @JsonProperty("change")
     public String getChange();
-
     /**
      *
      * @return nextValue
@@ -63,7 +66,6 @@ public interface AddDeliveryChange extends Change {
     @Valid
     @JsonProperty("nextValue")
     public DeliveryChangeValue getNextValue();
-
     /**
      *
      * @return previousValue
@@ -77,30 +79,34 @@ public interface AddDeliveryChange extends Change {
      *  <p>Update action for <code>addDelivery</code></p>
      * @param change value to be set
      */
-
+    
     public void setChange(final String change);
-
+    
+    
     /**
      * set nextValue
      * @param nextValue value to be set
      */
-
+    
     public void setNextValue(final DeliveryChangeValue nextValue);
-
+    
+    
     /**
      * set previousValue
      * @param previousValue value to be set
      */
-
+    
     public void setPreviousValue(final DeliveryChangeValue previousValue);
+    
 
     /**
      * factory method
      * @return instance of AddDeliveryChange
      */
-    public static AddDeliveryChange of() {
+    public static AddDeliveryChange of(){
         return new AddDeliveryChangeImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy AddDeliveryChange
@@ -127,10 +133,8 @@ public interface AddDeliveryChange extends Change {
         }
         AddDeliveryChangeImpl instance = new AddDeliveryChangeImpl();
         instance.setChange(template.getChange());
-        instance.setNextValue(
-            com.commercetools.history.models.change_value.DeliveryChangeValue.deepCopy(template.getNextValue()));
-        instance.setPreviousValue(
-            com.commercetools.history.models.change_value.DeliveryChangeValue.deepCopy(template.getPreviousValue()));
+        instance.setNextValue(com.commercetools.history.models.change_value.DeliveryChangeValue.deepCopy(template.getNextValue()));
+        instance.setPreviousValue(com.commercetools.history.models.change_value.DeliveryChangeValue.deepCopy(template.getPreviousValue()));
         return instance;
     }
 
@@ -141,7 +145,7 @@ public interface AddDeliveryChange extends Change {
     public static AddDeliveryChangeBuilder builder() {
         return AddDeliveryChangeBuilder.of();
     }
-
+    
     /**
      * create builder for AddDeliveryChange instance
      * @param template instance with prefilled values for the builder
@@ -150,6 +154,7 @@ public interface AddDeliveryChange extends Change {
     public static AddDeliveryChangeBuilder builder(final AddDeliveryChange template) {
         return AddDeliveryChangeBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -160,7 +165,7 @@ public interface AddDeliveryChange extends Change {
     default <T> T withAddDeliveryChange(Function<AddDeliveryChange, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

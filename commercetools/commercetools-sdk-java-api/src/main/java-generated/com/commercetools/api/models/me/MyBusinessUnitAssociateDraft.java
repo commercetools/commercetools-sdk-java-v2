@@ -1,20 +1,21 @@
-
 package com.commercetools.api.models.me;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-import java.util.stream.Collectors;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
 import com.commercetools.api.models.business_unit.AssociateRoleAssignmentDraft;
+import com.commercetools.api.models.me.MyCustomerDraft;
+import com.commercetools.api.models.me.MyBusinessUnitAssociateDraftImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * MyBusinessUnitAssociateDraft
@@ -29,11 +30,15 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .plusAssociateRoleAssignments(associateRoleAssignmentsBuilder -> associateRoleAssignmentsBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = MyBusinessUnitAssociateDraftImpl.class)
 public interface MyBusinessUnitAssociateDraft extends io.vrap.rmf.base.client.Draft<MyBusinessUnitAssociateDraft> {
+
 
     /**
      *  <p>Expected version of the BusinessUnit on which the changes should be applied. If the expected version does not match the actual version, a 409 Conflict error will be returned.</p>
@@ -42,7 +47,6 @@ public interface MyBusinessUnitAssociateDraft extends io.vrap.rmf.base.client.Dr
     @NotNull
     @JsonProperty("version")
     public Long getVersion();
-
     /**
      *  <p>Customer to create and assign to the Business Unit.</p>
      * @return customer
@@ -51,7 +55,6 @@ public interface MyBusinessUnitAssociateDraft extends io.vrap.rmf.base.client.Dr
     @Valid
     @JsonProperty("customer")
     public MyCustomerDraft getCustomer();
-
     /**
      *  <p>Roles assigned to the new Associate within a Business Unit.</p>
      * @return associateRoleAssignments
@@ -65,38 +68,40 @@ public interface MyBusinessUnitAssociateDraft extends io.vrap.rmf.base.client.Dr
      *  <p>Expected version of the BusinessUnit on which the changes should be applied. If the expected version does not match the actual version, a 409 Conflict error will be returned.</p>
      * @param version value to be set
      */
-
+    
     public void setVersion(final Long version);
-
+    
+    
     /**
      *  <p>Customer to create and assign to the Business Unit.</p>
      * @param customer value to be set
      */
-
+    
     public void setCustomer(final MyCustomerDraft customer);
-
+    
+    
     /**
      *  <p>Roles assigned to the new Associate within a Business Unit.</p>
      * @param associateRoleAssignments values to be set
      */
-
+    
     @JsonIgnore
-    public void setAssociateRoleAssignments(final AssociateRoleAssignmentDraft... associateRoleAssignments);
-
+    public void setAssociateRoleAssignments(final AssociateRoleAssignmentDraft ...associateRoleAssignments);
     /**
      *  <p>Roles assigned to the new Associate within a Business Unit.</p>
      * @param associateRoleAssignments values to be set
      */
-
+    
     public void setAssociateRoleAssignments(final List<AssociateRoleAssignmentDraft> associateRoleAssignments);
 
     /**
      * factory method
      * @return instance of MyBusinessUnitAssociateDraft
      */
-    public static MyBusinessUnitAssociateDraft of() {
+    public static MyBusinessUnitAssociateDraft of(){
         return new MyBusinessUnitAssociateDraftImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy MyBusinessUnitAssociateDraft
@@ -125,9 +130,7 @@ public interface MyBusinessUnitAssociateDraft extends io.vrap.rmf.base.client.Dr
         instance.setVersion(template.getVersion());
         instance.setCustomer(com.commercetools.api.models.me.MyCustomerDraft.deepCopy(template.getCustomer()));
         instance.setAssociateRoleAssignments(Optional.ofNullable(template.getAssociateRoleAssignments())
-                .map(t -> t.stream()
-                        .map(com.commercetools.api.models.business_unit.AssociateRoleAssignmentDraft::deepCopy)
-                        .collect(Collectors.toList()))
+                .map(t -> t.stream().map(com.commercetools.api.models.business_unit.AssociateRoleAssignmentDraft::deepCopy).collect(Collectors.toList()))
                 .orElse(null));
         return instance;
     }
@@ -139,7 +142,7 @@ public interface MyBusinessUnitAssociateDraft extends io.vrap.rmf.base.client.Dr
     public static MyBusinessUnitAssociateDraftBuilder builder() {
         return MyBusinessUnitAssociateDraftBuilder.of();
     }
-
+    
     /**
      * create builder for MyBusinessUnitAssociateDraft instance
      * @param template instance with prefilled values for the builder
@@ -148,6 +151,7 @@ public interface MyBusinessUnitAssociateDraft extends io.vrap.rmf.base.client.Dr
     public static MyBusinessUnitAssociateDraftBuilder builder(final MyBusinessUnitAssociateDraft template) {
         return MyBusinessUnitAssociateDraftBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -158,7 +162,7 @@ public interface MyBusinessUnitAssociateDraft extends io.vrap.rmf.base.client.Dr
     default <T> T withMyBusinessUnitAssociateDraft(Function<MyBusinessUnitAssociateDraft, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

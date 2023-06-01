@@ -1,20 +1,22 @@
-
 package com.commercetools.api.models.message;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
+import com.commercetools.api.models.message.OrderMessage;
 import com.commercetools.api.models.order.Delivery;
 import com.commercetools.api.models.order.Parcel;
+import com.commercetools.api.models.message.ParcelAddedToDeliveryMessageImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Generated after a successful Add Parcel To Delivery update action.</p>
@@ -35,9 +37,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .parcel(parcelBuilder -> parcelBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = ParcelAddedToDeliveryMessageImpl.class)
 public interface ParcelAddedToDeliveryMessage extends OrderMessage {
 
@@ -54,7 +59,6 @@ public interface ParcelAddedToDeliveryMessage extends OrderMessage {
     @Valid
     @JsonProperty("delivery")
     public Delivery getDelivery();
-
     /**
      *  <p>Parcel that was added to the Delivery.</p>
      * @return parcel
@@ -63,12 +67,11 @@ public interface ParcelAddedToDeliveryMessage extends OrderMessage {
     @Valid
     @JsonProperty("parcel")
     public Parcel getParcel();
-
     /**
      *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multi</code> ShippingMode.</p>
      * @return shippingKey
      */
-
+    
     @JsonProperty("shippingKey")
     public String getShippingKey();
 
@@ -76,30 +79,34 @@ public interface ParcelAddedToDeliveryMessage extends OrderMessage {
      *  <p>Unique identifier of the Delivery.</p>
      * @param delivery value to be set
      */
-
+    
     public void setDelivery(final Delivery delivery);
-
+    
+    
     /**
      *  <p>Parcel that was added to the Delivery.</p>
      * @param parcel value to be set
      */
-
+    
     public void setParcel(final Parcel parcel);
-
+    
+    
     /**
      *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multi</code> ShippingMode.</p>
      * @param shippingKey value to be set
      */
-
+    
     public void setShippingKey(final String shippingKey);
+    
 
     /**
      * factory method
      * @return instance of ParcelAddedToDeliveryMessage
      */
-    public static ParcelAddedToDeliveryMessage of() {
+    public static ParcelAddedToDeliveryMessage of(){
         return new ParcelAddedToDeliveryMessageImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy ParcelAddedToDeliveryMessage
@@ -139,14 +146,12 @@ public interface ParcelAddedToDeliveryMessage extends OrderMessage {
         instance.setVersion(template.getVersion());
         instance.setCreatedAt(template.getCreatedAt());
         instance.setLastModifiedAt(template.getLastModifiedAt());
-        instance.setLastModifiedBy(
-            com.commercetools.api.models.common.LastModifiedBy.deepCopy(template.getLastModifiedBy()));
+        instance.setLastModifiedBy(com.commercetools.api.models.common.LastModifiedBy.deepCopy(template.getLastModifiedBy()));
         instance.setCreatedBy(com.commercetools.api.models.common.CreatedBy.deepCopy(template.getCreatedBy()));
         instance.setSequenceNumber(template.getSequenceNumber());
         instance.setResource(com.commercetools.api.models.common.Reference.deepCopy(template.getResource()));
         instance.setResourceVersion(template.getResourceVersion());
-        instance.setResourceUserProvidedIdentifiers(com.commercetools.api.models.message.UserProvidedIdentifiers
-                .deepCopy(template.getResourceUserProvidedIdentifiers()));
+        instance.setResourceUserProvidedIdentifiers(com.commercetools.api.models.message.UserProvidedIdentifiers.deepCopy(template.getResourceUserProvidedIdentifiers()));
         instance.setDelivery(com.commercetools.api.models.order.Delivery.deepCopy(template.getDelivery()));
         instance.setParcel(com.commercetools.api.models.order.Parcel.deepCopy(template.getParcel()));
         instance.setShippingKey(template.getShippingKey());
@@ -160,7 +165,7 @@ public interface ParcelAddedToDeliveryMessage extends OrderMessage {
     public static ParcelAddedToDeliveryMessageBuilder builder() {
         return ParcelAddedToDeliveryMessageBuilder.of();
     }
-
+    
     /**
      * create builder for ParcelAddedToDeliveryMessage instance
      * @param template instance with prefilled values for the builder
@@ -169,6 +174,7 @@ public interface ParcelAddedToDeliveryMessage extends OrderMessage {
     public static ParcelAddedToDeliveryMessageBuilder builder(final ParcelAddedToDeliveryMessage template) {
         return ParcelAddedToDeliveryMessageBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -179,7 +185,7 @@ public interface ParcelAddedToDeliveryMessage extends OrderMessage {
     default <T> T withParcelAddedToDeliveryMessage(Function<ParcelAddedToDeliveryMessage, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

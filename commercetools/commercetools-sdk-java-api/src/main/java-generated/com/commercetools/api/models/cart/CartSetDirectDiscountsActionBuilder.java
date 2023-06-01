@@ -1,9 +1,12 @@
-
 package com.commercetools.api.models.cart;
 
+import com.commercetools.api.models.cart.CartUpdateAction;
+import com.commercetools.api.models.cart.DirectDiscountDraft;
+import com.commercetools.api.models.cart.CartSetDirectDiscountsAction;
+import javax.annotation.Nullable;
 import java.util.*;
 import java.util.function.Function;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -17,11 +20,16 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .plusDiscounts(discountsBuilder -> discountsBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class CartSetDirectDiscountsActionBuilder implements Builder<CartSetDirectDiscountsAction> {
 
+    
+    
     private java.util.List<com.commercetools.api.models.cart.DirectDiscountDraft> discounts;
 
     /**
@@ -32,13 +40,12 @@ public class CartSetDirectDiscountsActionBuilder implements Builder<CartSetDirec
      * @param discounts value to be set
      * @return Builder
      */
-
-    public CartSetDirectDiscountsActionBuilder discounts(
-            final com.commercetools.api.models.cart.DirectDiscountDraft... discounts) {
+    
+    public CartSetDirectDiscountsActionBuilder discounts( final com.commercetools.api.models.cart.DirectDiscountDraft ...discounts) {
         this.discounts = new ArrayList<>(Arrays.asList(discounts));
         return this;
     }
-
+    
     /**
      *  <ul>
      *   <li>If set, all existing Direct Discounts are replaced. The discounts apply in the order they are added to the list.</li>
@@ -47,13 +54,12 @@ public class CartSetDirectDiscountsActionBuilder implements Builder<CartSetDirec
      * @param discounts value to be set
      * @return Builder
      */
-
-    public CartSetDirectDiscountsActionBuilder discounts(
-            final java.util.List<com.commercetools.api.models.cart.DirectDiscountDraft> discounts) {
+    
+    public CartSetDirectDiscountsActionBuilder discounts( final java.util.List<com.commercetools.api.models.cart.DirectDiscountDraft> discounts) {
         this.discounts = discounts;
         return this;
     }
-
+    
     /**
      *  <ul>
      *   <li>If set, all existing Direct Discounts are replaced. The discounts apply in the order they are added to the list.</li>
@@ -62,16 +68,17 @@ public class CartSetDirectDiscountsActionBuilder implements Builder<CartSetDirec
      * @param discounts value to be set
      * @return Builder
      */
-
-    public CartSetDirectDiscountsActionBuilder plusDiscounts(
-            final com.commercetools.api.models.cart.DirectDiscountDraft... discounts) {
+    
+    public CartSetDirectDiscountsActionBuilder plusDiscounts( final com.commercetools.api.models.cart.DirectDiscountDraft ...discounts) {
         if (this.discounts == null) {
             this.discounts = new ArrayList<>();
         }
         this.discounts.addAll(Arrays.asList(discounts));
         return this;
     }
-
+    
+    
+    
     /**
      *  <ul>
      *   <li>If set, all existing Direct Discounts are replaced. The discounts apply in the order they are added to the list.</li>
@@ -80,16 +87,15 @@ public class CartSetDirectDiscountsActionBuilder implements Builder<CartSetDirec
      * @param builder function to build the discounts value
      * @return Builder
      */
-
-    public CartSetDirectDiscountsActionBuilder plusDiscounts(
-            Function<com.commercetools.api.models.cart.DirectDiscountDraftBuilder, com.commercetools.api.models.cart.DirectDiscountDraftBuilder> builder) {
+    
+    public CartSetDirectDiscountsActionBuilder plusDiscounts(Function<com.commercetools.api.models.cart.DirectDiscountDraftBuilder, com.commercetools.api.models.cart.DirectDiscountDraftBuilder> builder) {
         if (this.discounts == null) {
             this.discounts = new ArrayList<>();
         }
         this.discounts.add(builder.apply(com.commercetools.api.models.cart.DirectDiscountDraftBuilder.of()).build());
         return this;
     }
-
+    
     /**
      *  <ul>
      *   <li>If set, all existing Direct Discounts are replaced. The discounts apply in the order they are added to the list.</li>
@@ -98,14 +104,13 @@ public class CartSetDirectDiscountsActionBuilder implements Builder<CartSetDirec
      * @param builder function to build the discounts value
      * @return Builder
      */
-
-    public CartSetDirectDiscountsActionBuilder withDiscounts(
-            Function<com.commercetools.api.models.cart.DirectDiscountDraftBuilder, com.commercetools.api.models.cart.DirectDiscountDraftBuilder> builder) {
+    
+    public CartSetDirectDiscountsActionBuilder withDiscounts(Function<com.commercetools.api.models.cart.DirectDiscountDraftBuilder, com.commercetools.api.models.cart.DirectDiscountDraftBuilder> builder) {
         this.discounts = new ArrayList<>();
         this.discounts.add(builder.apply(com.commercetools.api.models.cart.DirectDiscountDraftBuilder.of()).build());
         return this;
     }
-
+    
     /**
      *  <ul>
      *   <li>If set, all existing Direct Discounts are replaced. The discounts apply in the order they are added to the list.</li>
@@ -114,12 +119,11 @@ public class CartSetDirectDiscountsActionBuilder implements Builder<CartSetDirec
      * @param builder function to build the discounts value
      * @return Builder
      */
-
-    public CartSetDirectDiscountsActionBuilder addDiscounts(
-            Function<com.commercetools.api.models.cart.DirectDiscountDraftBuilder, com.commercetools.api.models.cart.DirectDiscountDraft> builder) {
+    
+    public CartSetDirectDiscountsActionBuilder addDiscounts(Function<com.commercetools.api.models.cart.DirectDiscountDraftBuilder, com.commercetools.api.models.cart.DirectDiscountDraft> builder) {
         return plusDiscounts(builder.apply(com.commercetools.api.models.cart.DirectDiscountDraftBuilder.of()));
     }
-
+    
     /**
      *  <ul>
      *   <li>If set, all existing Direct Discounts are replaced. The discounts apply in the order they are added to the list.</li>
@@ -128,11 +132,11 @@ public class CartSetDirectDiscountsActionBuilder implements Builder<CartSetDirec
      * @param builder function to build the discounts value
      * @return Builder
      */
-
-    public CartSetDirectDiscountsActionBuilder setDiscounts(
-            Function<com.commercetools.api.models.cart.DirectDiscountDraftBuilder, com.commercetools.api.models.cart.DirectDiscountDraft> builder) {
+    
+    public CartSetDirectDiscountsActionBuilder setDiscounts(Function<com.commercetools.api.models.cart.DirectDiscountDraftBuilder, com.commercetools.api.models.cart.DirectDiscountDraft> builder) {
         return discounts(builder.apply(com.commercetools.api.models.cart.DirectDiscountDraftBuilder.of()));
     }
+                    
 
     /**
      *  <ul>
@@ -141,8 +145,9 @@ public class CartSetDirectDiscountsActionBuilder implements Builder<CartSetDirec
      *  </ul>
      * @return discounts
      */
-
-    public java.util.List<com.commercetools.api.models.cart.DirectDiscountDraft> getDiscounts() {
+    
+    
+    public java.util.List<com.commercetools.api.models.cart.DirectDiscountDraft> getDiscounts(){
         return this.discounts;
     }
 
@@ -154,7 +159,7 @@ public class CartSetDirectDiscountsActionBuilder implements Builder<CartSetDirec
         Objects.requireNonNull(discounts, CartSetDirectDiscountsAction.class + ": discounts is missing");
         return new CartSetDirectDiscountsActionImpl(discounts);
     }
-
+    
     /**
      * builds CartSetDirectDiscountsAction without checking for non-null required values
      * @return CartSetDirectDiscountsAction
@@ -165,7 +170,7 @@ public class CartSetDirectDiscountsActionBuilder implements Builder<CartSetDirec
 
     /**
      * factory method for an instance of CartSetDirectDiscountsActionBuilder
-     * @return builder
+     * @return builder 
      */
     public static CartSetDirectDiscountsActionBuilder of() {
         return new CartSetDirectDiscountsActionBuilder();

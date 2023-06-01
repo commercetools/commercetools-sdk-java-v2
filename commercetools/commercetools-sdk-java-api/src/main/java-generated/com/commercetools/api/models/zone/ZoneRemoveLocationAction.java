@@ -1,18 +1,21 @@
-
 package com.commercetools.api.models.zone;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
+import com.commercetools.api.models.zone.Location;
+import com.commercetools.api.models.zone.ZoneUpdateAction;
+import com.commercetools.api.models.zone.ZoneRemoveLocationActionImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * ZoneRemoveLocationAction
@@ -25,9 +28,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .location(locationBuilder -> locationBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = ZoneRemoveLocationActionImpl.class)
 public interface ZoneRemoveLocationAction extends ZoneUpdateAction {
 
@@ -49,16 +55,18 @@ public interface ZoneRemoveLocationAction extends ZoneUpdateAction {
      *  <p>Location to be removed from the Zone.</p>
      * @param location value to be set
      */
-
+    
     public void setLocation(final Location location);
+    
 
     /**
      * factory method
      * @return instance of ZoneRemoveLocationAction
      */
-    public static ZoneRemoveLocationAction of() {
+    public static ZoneRemoveLocationAction of(){
         return new ZoneRemoveLocationActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy ZoneRemoveLocationAction
@@ -93,7 +101,7 @@ public interface ZoneRemoveLocationAction extends ZoneUpdateAction {
     public static ZoneRemoveLocationActionBuilder builder() {
         return ZoneRemoveLocationActionBuilder.of();
     }
-
+    
     /**
      * create builder for ZoneRemoveLocationAction instance
      * @param template instance with prefilled values for the builder
@@ -102,6 +110,7 @@ public interface ZoneRemoveLocationAction extends ZoneUpdateAction {
     public static ZoneRemoveLocationActionBuilder builder(final ZoneRemoveLocationAction template) {
         return ZoneRemoveLocationActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -112,7 +121,7 @@ public interface ZoneRemoveLocationAction extends ZoneUpdateAction {
     default <T> T withZoneRemoveLocationAction(Function<ZoneRemoveLocationAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

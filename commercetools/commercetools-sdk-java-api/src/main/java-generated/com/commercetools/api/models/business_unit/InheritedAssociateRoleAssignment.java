@@ -1,19 +1,21 @@
-
 package com.commercetools.api.models.business_unit;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
 import com.commercetools.api.models.associate_role.AssociateRoleKeyReference;
+import com.commercetools.api.models.business_unit.BusinessUnitKeyReference;
+import com.commercetools.api.models.business_unit.InheritedAssociateRoleAssignmentImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * InheritedAssociateRoleAssignment
@@ -27,11 +29,15 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .source(sourceBuilder -> sourceBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = InheritedAssociateRoleAssignmentImpl.class)
-public interface InheritedAssociateRoleAssignment {
+public interface InheritedAssociateRoleAssignment  {
+
 
     /**
      *  <p>Inherited role the Associate holds within a Business Unit.</p>
@@ -41,7 +47,6 @@ public interface InheritedAssociateRoleAssignment {
     @Valid
     @JsonProperty("associateRole")
     public AssociateRoleKeyReference getAssociateRole();
-
     /**
      *  <p>Reference to the parent Business Unit where the assignment is defined explicitly.</p>
      * @return source
@@ -55,23 +60,26 @@ public interface InheritedAssociateRoleAssignment {
      *  <p>Inherited role the Associate holds within a Business Unit.</p>
      * @param associateRole value to be set
      */
-
+    
     public void setAssociateRole(final AssociateRoleKeyReference associateRole);
-
+    
+    
     /**
      *  <p>Reference to the parent Business Unit where the assignment is defined explicitly.</p>
      * @param source value to be set
      */
-
+    
     public void setSource(final BusinessUnitKeyReference source);
+    
 
     /**
      * factory method
      * @return instance of InheritedAssociateRoleAssignment
      */
-    public static InheritedAssociateRoleAssignment of() {
+    public static InheritedAssociateRoleAssignment of(){
         return new InheritedAssociateRoleAssignmentImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy InheritedAssociateRoleAssignment
@@ -96,10 +104,8 @@ public interface InheritedAssociateRoleAssignment {
             return null;
         }
         InheritedAssociateRoleAssignmentImpl instance = new InheritedAssociateRoleAssignmentImpl();
-        instance.setAssociateRole(com.commercetools.api.models.associate_role.AssociateRoleKeyReference
-                .deepCopy(template.getAssociateRole()));
-        instance.setSource(
-            com.commercetools.api.models.business_unit.BusinessUnitKeyReference.deepCopy(template.getSource()));
+        instance.setAssociateRole(com.commercetools.api.models.associate_role.AssociateRoleKeyReference.deepCopy(template.getAssociateRole()));
+        instance.setSource(com.commercetools.api.models.business_unit.BusinessUnitKeyReference.deepCopy(template.getSource()));
         return instance;
     }
 
@@ -110,7 +116,7 @@ public interface InheritedAssociateRoleAssignment {
     public static InheritedAssociateRoleAssignmentBuilder builder() {
         return InheritedAssociateRoleAssignmentBuilder.of();
     }
-
+    
     /**
      * create builder for InheritedAssociateRoleAssignment instance
      * @param template instance with prefilled values for the builder
@@ -119,6 +125,7 @@ public interface InheritedAssociateRoleAssignment {
     public static InheritedAssociateRoleAssignmentBuilder builder(final InheritedAssociateRoleAssignment template) {
         return InheritedAssociateRoleAssignmentBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -129,7 +136,7 @@ public interface InheritedAssociateRoleAssignment {
     default <T> T withInheritedAssociateRoleAssignment(Function<InheritedAssociateRoleAssignment, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

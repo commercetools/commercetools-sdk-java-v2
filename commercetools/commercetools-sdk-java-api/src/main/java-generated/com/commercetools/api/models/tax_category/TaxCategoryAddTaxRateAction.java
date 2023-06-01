@@ -1,18 +1,21 @@
-
 package com.commercetools.api.models.tax_category;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
+import com.commercetools.api.models.tax_category.TaxCategoryUpdateAction;
+import com.commercetools.api.models.tax_category.TaxRateDraft;
+import com.commercetools.api.models.tax_category.TaxCategoryAddTaxRateActionImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * TaxCategoryAddTaxRateAction
@@ -25,9 +28,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .taxRate(taxRateBuilder -> taxRateBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = TaxCategoryAddTaxRateActionImpl.class)
 public interface TaxCategoryAddTaxRateAction extends TaxCategoryUpdateAction {
 
@@ -49,16 +55,18 @@ public interface TaxCategoryAddTaxRateAction extends TaxCategoryUpdateAction {
      *  <p>Value to append to the <code>rates</code> array.</p>
      * @param taxRate value to be set
      */
-
+    
     public void setTaxRate(final TaxRateDraft taxRate);
+    
 
     /**
      * factory method
      * @return instance of TaxCategoryAddTaxRateAction
      */
-    public static TaxCategoryAddTaxRateAction of() {
+    public static TaxCategoryAddTaxRateAction of(){
         return new TaxCategoryAddTaxRateActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy TaxCategoryAddTaxRateAction
@@ -93,7 +101,7 @@ public interface TaxCategoryAddTaxRateAction extends TaxCategoryUpdateAction {
     public static TaxCategoryAddTaxRateActionBuilder builder() {
         return TaxCategoryAddTaxRateActionBuilder.of();
     }
-
+    
     /**
      * create builder for TaxCategoryAddTaxRateAction instance
      * @param template instance with prefilled values for the builder
@@ -102,6 +110,7 @@ public interface TaxCategoryAddTaxRateAction extends TaxCategoryUpdateAction {
     public static TaxCategoryAddTaxRateActionBuilder builder(final TaxCategoryAddTaxRateAction template) {
         return TaxCategoryAddTaxRateActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -112,7 +121,7 @@ public interface TaxCategoryAddTaxRateAction extends TaxCategoryUpdateAction {
     default <T> T withTaxCategoryAddTaxRateAction(Function<TaxCategoryAddTaxRateAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

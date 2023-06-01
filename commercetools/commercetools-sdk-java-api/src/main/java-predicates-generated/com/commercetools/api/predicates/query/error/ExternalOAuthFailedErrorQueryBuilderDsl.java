@@ -1,9 +1,11 @@
-
 package com.commercetools.api.predicates.query.error;
 
 import com.commercetools.api.predicates.query.*;
 
-public class ExternalOAuthFailedErrorQueryBuilderDsl {
+import java.util.function.Function;
+
+
+public class ExternalOAuthFailedErrorQueryBuilderDsl  {
     public ExternalOAuthFailedErrorQueryBuilderDsl() {
     }
 
@@ -12,15 +14,12 @@ public class ExternalOAuthFailedErrorQueryBuilderDsl {
     }
 
     public StringComparisonPredicateBuilder<ExternalOAuthFailedErrorQueryBuilderDsl> code() {
-        return new StringComparisonPredicateBuilder<>(
-            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("code")),
-            p -> new CombinationQueryPredicate<>(p, ExternalOAuthFailedErrorQueryBuilderDsl::of));
+        return new StringComparisonPredicateBuilder<>(BinaryQueryPredicate.of().left(new ConstantQueryPredicate("code")),
+        p -> new CombinationQueryPredicate<>(p, ExternalOAuthFailedErrorQueryBuilderDsl::of));
     }
-
     public StringComparisonPredicateBuilder<ExternalOAuthFailedErrorQueryBuilderDsl> message() {
-        return new StringComparisonPredicateBuilder<>(
-            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("message")),
-            p -> new CombinationQueryPredicate<>(p, ExternalOAuthFailedErrorQueryBuilderDsl::of));
+        return new StringComparisonPredicateBuilder<>(BinaryQueryPredicate.of().left(new ConstantQueryPredicate("message")),
+        p -> new CombinationQueryPredicate<>(p, ExternalOAuthFailedErrorQueryBuilderDsl::of));
     }
-
+    
 }

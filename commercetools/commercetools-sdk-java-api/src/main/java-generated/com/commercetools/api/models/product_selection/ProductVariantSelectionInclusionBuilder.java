@@ -1,8 +1,12 @@
-
 package com.commercetools.api.models.product_selection;
 
+import com.commercetools.api.models.product_selection.ProductVariantSelection;
+import com.commercetools.api.models.product_selection.ProductVariantSelectionTypeEnum;
+import com.commercetools.api.models.product_selection.ProductVariantSelectionInclusion;
+import javax.annotation.Nullable;
 import java.util.*;
-
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -16,12 +20,17 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .plusSkus(skusBuilder -> skusBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @Deprecated
 public class ProductVariantSelectionInclusionBuilder implements Builder<ProductVariantSelectionInclusion> {
 
+    
+    
     private java.util.List<String> skus;
 
     /**
@@ -29,43 +38,47 @@ public class ProductVariantSelectionInclusionBuilder implements Builder<ProductV
      * @param skus value to be set
      * @return Builder
      */
-
-    public ProductVariantSelectionInclusionBuilder skus(final String... skus) {
+    
+    public ProductVariantSelectionInclusionBuilder skus( final String ...skus) {
         this.skus = new ArrayList<>(Arrays.asList(skus));
         return this;
     }
-
+    
     /**
      *  <p>Non-empty array of SKUs representing Product Variants to be included into the Product Selection.</p>
      * @param skus value to be set
      * @return Builder
      */
-
-    public ProductVariantSelectionInclusionBuilder skus(final java.util.List<String> skus) {
+    
+    public ProductVariantSelectionInclusionBuilder skus( final java.util.List<String> skus) {
         this.skus = skus;
         return this;
     }
-
+    
     /**
      *  <p>Non-empty array of SKUs representing Product Variants to be included into the Product Selection.</p>
      * @param skus value to be set
      * @return Builder
      */
-
-    public ProductVariantSelectionInclusionBuilder plusSkus(final String... skus) {
+    
+    public ProductVariantSelectionInclusionBuilder plusSkus( final String ...skus) {
         if (this.skus == null) {
             this.skus = new ArrayList<>();
         }
         this.skus.addAll(Arrays.asList(skus));
         return this;
     }
+    
+    
+    
 
     /**
      *  <p>Non-empty array of SKUs representing Product Variants to be included into the Product Selection.</p>
      * @return skus
      */
-
-    public java.util.List<String> getSkus() {
+    
+    
+    public java.util.List<String> getSkus(){
         return this.skus;
     }
 
@@ -77,7 +90,7 @@ public class ProductVariantSelectionInclusionBuilder implements Builder<ProductV
         Objects.requireNonNull(skus, ProductVariantSelectionInclusion.class + ": skus is missing");
         return new ProductVariantSelectionInclusionImpl(skus);
     }
-
+    
     /**
      * builds ProductVariantSelectionInclusion without checking for non-null required values
      * @return ProductVariantSelectionInclusion
@@ -88,7 +101,7 @@ public class ProductVariantSelectionInclusionBuilder implements Builder<ProductV
 
     /**
      * factory method for an instance of ProductVariantSelectionInclusionBuilder
-     * @return builder
+     * @return builder 
      */
     public static ProductVariantSelectionInclusionBuilder of() {
         return new ProductVariantSelectionInclusionBuilder();

@@ -1,17 +1,21 @@
-
 package com.commercetools.api.models.product;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
+import com.commercetools.api.models.product.ProductUpdateAction;
+import java.lang.Object;
+import com.commercetools.api.models.product.ProductSetAttributeInAllVariantsActionImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Adds, removes, or changes a Product Attribute in all Product Variants at the same time. This action is useful for setting values for Attributes with the Constraint <code>SameForAll</code>.</p>
@@ -24,9 +28,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .name("{name}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = ProductSetAttributeInAllVariantsActionImpl.class)
 public interface ProductSetAttributeInAllVariantsAction extends ProductUpdateAction {
 
@@ -42,7 +49,6 @@ public interface ProductSetAttributeInAllVariantsAction extends ProductUpdateAct
     @NotNull
     @JsonProperty("name")
     public String getName();
-
     /**
      *  <p>Value to set for the Attributes. If empty, any existing value will be removed.</p>
      *  <p>The AttributeType determines the format of the Attribute <code>value</code> to be provided:</p>
@@ -56,15 +62,14 @@ public interface ProductSetAttributeInAllVariantsAction extends ProductUpdateAct
      *  </ul>
      * @return value
      */
-
+    
     @JsonProperty("value")
     public Object getValue();
-
     /**
      *  <p>If <code>true</code>, only the staged Attributes are set. If <code>false</code>, both the current and staged Attributes are set.</p>
      * @return staged
      */
-
+    
     @JsonProperty("staged")
     public Boolean getStaged();
 
@@ -72,9 +77,10 @@ public interface ProductSetAttributeInAllVariantsAction extends ProductUpdateAct
      *  <p>The name of the Attribute to set.</p>
      * @param name value to be set
      */
-
+    
     public void setName(final String name);
-
+    
+    
     /**
      *  <p>Value to set for the Attributes. If empty, any existing value will be removed.</p>
      *  <p>The AttributeType determines the format of the Attribute <code>value</code> to be provided:</p>
@@ -88,23 +94,26 @@ public interface ProductSetAttributeInAllVariantsAction extends ProductUpdateAct
      *  </ul>
      * @param value value to be set
      */
-
+    
     public void setValue(final Object value);
-
+    
+    
     /**
      *  <p>If <code>true</code>, only the staged Attributes are set. If <code>false</code>, both the current and staged Attributes are set.</p>
      * @param staged value to be set
      */
-
+    
     public void setStaged(final Boolean staged);
+    
 
     /**
      * factory method
      * @return instance of ProductSetAttributeInAllVariantsAction
      */
-    public static ProductSetAttributeInAllVariantsAction of() {
+    public static ProductSetAttributeInAllVariantsAction of(){
         return new ProductSetAttributeInAllVariantsActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy ProductSetAttributeInAllVariantsAction
@@ -125,8 +134,7 @@ public interface ProductSetAttributeInAllVariantsAction extends ProductUpdateAct
      * @return copy instance
      */
     @Nullable
-    public static ProductSetAttributeInAllVariantsAction deepCopy(
-            @Nullable final ProductSetAttributeInAllVariantsAction template) {
+    public static ProductSetAttributeInAllVariantsAction deepCopy(@Nullable final ProductSetAttributeInAllVariantsAction template) {
         if (template == null) {
             return null;
         }
@@ -144,16 +152,16 @@ public interface ProductSetAttributeInAllVariantsAction extends ProductUpdateAct
     public static ProductSetAttributeInAllVariantsActionBuilder builder() {
         return ProductSetAttributeInAllVariantsActionBuilder.of();
     }
-
+    
     /**
      * create builder for ProductSetAttributeInAllVariantsAction instance
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static ProductSetAttributeInAllVariantsActionBuilder builder(
-            final ProductSetAttributeInAllVariantsAction template) {
+    public static ProductSetAttributeInAllVariantsActionBuilder builder(final ProductSetAttributeInAllVariantsAction template) {
         return ProductSetAttributeInAllVariantsActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -161,19 +169,18 @@ public interface ProductSetAttributeInAllVariantsAction extends ProductUpdateAct
      * @param helper function to map the object
      * @return mapped value
      */
-    default <T> T withProductSetAttributeInAllVariantsAction(
-            Function<ProductSetAttributeInAllVariantsAction, T> helper) {
+    default <T> T withProductSetAttributeInAllVariantsAction(Function<ProductSetAttributeInAllVariantsAction, T> helper) {
         return helper.apply(this);
     }
-
     public static ProductSetAttributeInAllVariantsAction ofUnsetAttribute(final String name) {
         return ProductSetAttributeInAllVariantsActionBuilder.of().name(name).build();
     }
-
+    
     public static ProductSetAttributeInAllVariantsAction ofUnsetAttribute(final String name, final Boolean staged) {
         return ProductSetAttributeInAllVariantsActionBuilder.of().name(name).staged(staged).build();
     }
-
+    
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

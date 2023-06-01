@@ -1,19 +1,20 @@
-
 package com.commercetools.api.models.cart;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
 import com.commercetools.api.models.common.CentPrecisionMoney;
+import com.commercetools.api.models.cart.TaxedItemPriceImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * TaxedItemPrice
@@ -27,11 +28,15 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .totalGross(totalGrossBuilder -> totalGrossBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = TaxedItemPriceImpl.class)
-public interface TaxedItemPrice {
+public interface TaxedItemPrice  {
+
 
     /**
      *  <p>Total net amount of the Line Item or Custom Line Item.</p>
@@ -41,7 +46,6 @@ public interface TaxedItemPrice {
     @Valid
     @JsonProperty("totalNet")
     public CentPrecisionMoney getTotalNet();
-
     /**
      *  <p>Total gross amount of the Line Item or Custom Line Item.</p>
      * @return totalGross
@@ -50,7 +54,6 @@ public interface TaxedItemPrice {
     @Valid
     @JsonProperty("totalGross")
     public CentPrecisionMoney getTotalGross();
-
     /**
      *  <p>Total tax applicable for the Line Item or Custom Line Item. Automatically calculated as the difference between the <code>totalGross</code> and <code>totalNet</code> values.</p>
      * @return totalTax
@@ -63,30 +66,34 @@ public interface TaxedItemPrice {
      *  <p>Total net amount of the Line Item or Custom Line Item.</p>
      * @param totalNet value to be set
      */
-
+    
     public void setTotalNet(final CentPrecisionMoney totalNet);
-
+    
+    
     /**
      *  <p>Total gross amount of the Line Item or Custom Line Item.</p>
      * @param totalGross value to be set
      */
-
+    
     public void setTotalGross(final CentPrecisionMoney totalGross);
-
+    
+    
     /**
      *  <p>Total tax applicable for the Line Item or Custom Line Item. Automatically calculated as the difference between the <code>totalGross</code> and <code>totalNet</code> values.</p>
      * @param totalTax value to be set
      */
-
+    
     public void setTotalTax(final CentPrecisionMoney totalTax);
+    
 
     /**
      * factory method
      * @return instance of TaxedItemPrice
      */
-    public static TaxedItemPrice of() {
+    public static TaxedItemPrice of(){
         return new TaxedItemPriceImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy TaxedItemPrice
@@ -113,8 +120,7 @@ public interface TaxedItemPrice {
         }
         TaxedItemPriceImpl instance = new TaxedItemPriceImpl();
         instance.setTotalNet(com.commercetools.api.models.common.CentPrecisionMoney.deepCopy(template.getTotalNet()));
-        instance.setTotalGross(
-            com.commercetools.api.models.common.CentPrecisionMoney.deepCopy(template.getTotalGross()));
+        instance.setTotalGross(com.commercetools.api.models.common.CentPrecisionMoney.deepCopy(template.getTotalGross()));
         instance.setTotalTax(com.commercetools.api.models.common.CentPrecisionMoney.deepCopy(template.getTotalTax()));
         return instance;
     }
@@ -126,7 +132,7 @@ public interface TaxedItemPrice {
     public static TaxedItemPriceBuilder builder() {
         return TaxedItemPriceBuilder.of();
     }
-
+    
     /**
      * create builder for TaxedItemPrice instance
      * @param template instance with prefilled values for the builder
@@ -135,6 +141,7 @@ public interface TaxedItemPrice {
     public static TaxedItemPriceBuilder builder(final TaxedItemPrice template) {
         return TaxedItemPriceBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -145,7 +152,7 @@ public interface TaxedItemPrice {
     default <T> T withTaxedItemPrice(Function<TaxedItemPrice, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

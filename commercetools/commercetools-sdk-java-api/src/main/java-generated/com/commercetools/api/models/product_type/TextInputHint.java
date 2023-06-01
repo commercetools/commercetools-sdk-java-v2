@@ -1,32 +1,33 @@
-
 package com.commercetools.api.models.product_type;
-
-import java.util.Arrays;
-import java.util.Optional;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-
+import java.lang.String;
+import java.util.Arrays;
+import java.util.Optional;
 import io.vrap.rmf.base.client.JsonEnum;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
  *  <p>A text input hint is a string with one of the following values:</p>
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public interface TextInputHint extends JsonEnum {
 
     /**
     	<p>Hint for GUIs to display the field's content in a single line of text.</p>
-
+    	
     */
     TextInputHint SINGLE_LINE = TextInputHintEnum.SINGLE_LINE;
     /**
     	<p>Hint for GUIs to display the field's content over multiple lines of text.</p>
-
+    	
     */
     TextInputHint MULTI_LINE = TextInputHintEnum.MULTI_LINE;
-
+    
     /**
      * possible values of TextInputHint
      */
@@ -35,7 +36,7 @@ public interface TextInputHint extends JsonEnum {
          * SingleLine
          */
         SINGLE_LINE("SingleLine"),
-
+        
         /**
          * MultiLine
          */
@@ -92,7 +93,7 @@ public interface TextInputHint extends JsonEnum {
             public String name() {
                 return value.toUpperCase();
             }
-
+            
             public String toString() {
                 return value;
             }
@@ -107,7 +108,7 @@ public interface TextInputHint extends JsonEnum {
     public static Optional<TextInputHint> findEnumViaJsonName(String jsonName) {
         return Arrays.stream(values()).filter(t -> t.getJsonName().equals(jsonName)).findFirst();
     }
-
+    
     /**
      * possible enum values
      * @return array of possible enum values
@@ -115,5 +116,5 @@ public interface TextInputHint extends JsonEnum {
     public static TextInputHint[] values() {
         return TextInputHintEnum.values();
     }
-
+    
 }

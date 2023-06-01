@@ -1,20 +1,22 @@
-
 package com.commercetools.api.models.business_unit;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-import java.util.stream.Collectors;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
+import com.commercetools.api.models.business_unit.AssociateRoleAssignment;
+import com.commercetools.api.models.business_unit.AssociateRoleDeprecated;
 import com.commercetools.api.models.customer.CustomerReference;
+import com.commercetools.api.models.business_unit.AssociateImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * Associate
@@ -29,11 +31,15 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .customer(customerBuilder -> customerBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = AssociateImpl.class)
-public interface Associate {
+public interface Associate  {
+
 
     /**
      *  <p>Roles assigned to the Associate within a Business Unit.</p>
@@ -43,7 +49,6 @@ public interface Associate {
     @Valid
     @JsonProperty("associateRoleAssignments")
     public List<AssociateRoleAssignment> getAssociateRoleAssignments();
-
     /**
      *  <p>Deprecated type. Use <code>associateRoleAssignment</code> instead.</p>
      * @return roles
@@ -52,7 +57,6 @@ public interface Associate {
     @Deprecated
     @JsonProperty("roles")
     public List<AssociateRoleDeprecated> getRoles();
-
     /**
      *  <p>The Customer that acts as an Associate in the Business Unit.</p>
      * @return customer
@@ -66,46 +70,46 @@ public interface Associate {
      *  <p>Roles assigned to the Associate within a Business Unit.</p>
      * @param associateRoleAssignments values to be set
      */
-
+    
     @JsonIgnore
-    public void setAssociateRoleAssignments(final AssociateRoleAssignment... associateRoleAssignments);
-
+    public void setAssociateRoleAssignments(final AssociateRoleAssignment ...associateRoleAssignments);
     /**
      *  <p>Roles assigned to the Associate within a Business Unit.</p>
      * @param associateRoleAssignments values to be set
      */
-
+    
     public void setAssociateRoleAssignments(final List<AssociateRoleAssignment> associateRoleAssignments);
-
+    
     /**
      *  <p>Deprecated type. Use <code>associateRoleAssignment</code> instead.</p>
      * @param roles values to be set
      */
     @Deprecated
     @JsonIgnore
-    public void setRoles(final AssociateRoleDeprecated... roles);
-
+    public void setRoles(final AssociateRoleDeprecated ...roles);
     /**
      *  <p>Deprecated type. Use <code>associateRoleAssignment</code> instead.</p>
      * @param roles values to be set
      */
     @Deprecated
     public void setRoles(final List<AssociateRoleDeprecated> roles);
-
+    
     /**
      *  <p>The Customer that acts as an Associate in the Business Unit.</p>
      * @param customer value to be set
      */
-
+    
     public void setCustomer(final CustomerReference customer);
+    
 
     /**
      * factory method
      * @return instance of Associate
      */
-    public static Associate of() {
+    public static Associate of(){
         return new AssociateImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy Associate
@@ -132,11 +136,11 @@ public interface Associate {
         }
         AssociateImpl instance = new AssociateImpl();
         instance.setAssociateRoleAssignments(Optional.ofNullable(template.getAssociateRoleAssignments())
-                .map(t -> t.stream()
-                        .map(com.commercetools.api.models.business_unit.AssociateRoleAssignment::deepCopy)
-                        .collect(Collectors.toList()))
+                .map(t -> t.stream().map(com.commercetools.api.models.business_unit.AssociateRoleAssignment::deepCopy).collect(Collectors.toList()))
                 .orElse(null));
-        instance.setRoles(Optional.ofNullable(template.getRoles()).map(ArrayList::new).orElse(null));
+        instance.setRoles(Optional.ofNullable(template.getRoles())
+                .map(ArrayList::new)
+                .orElse(null));
         instance.setCustomer(com.commercetools.api.models.customer.CustomerReference.deepCopy(template.getCustomer()));
         return instance;
     }
@@ -148,7 +152,7 @@ public interface Associate {
     public static AssociateBuilder builder() {
         return AssociateBuilder.of();
     }
-
+    
     /**
      * create builder for Associate instance
      * @param template instance with prefilled values for the builder
@@ -157,6 +161,7 @@ public interface Associate {
     public static AssociateBuilder builder(final Associate template) {
         return AssociateBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -167,7 +172,7 @@ public interface Associate {
     default <T> T withAssociate(Function<Associate, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

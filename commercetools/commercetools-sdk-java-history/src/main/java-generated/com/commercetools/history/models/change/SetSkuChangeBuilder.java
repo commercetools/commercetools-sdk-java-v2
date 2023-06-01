@@ -1,8 +1,11 @@
-
 package com.commercetools.history.models.change;
 
+import com.commercetools.history.models.change.Change;
+import com.commercetools.history.models.change.SetSkuChange;
+import javax.annotation.Nullable;
 import java.util.*;
-
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -19,96 +22,123 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .nextValue("{nextValue}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class SetSkuChangeBuilder implements Builder<SetSkuChange> {
 
+    
+    
     private String change;
-
+    
+    
+    
     private String catalogData;
-
+    
+    
+    
     private String previousValue;
-
+    
+    
+    
     private String nextValue;
 
+    
     /**
      *  <p>Update action for <code>setSku</code></p>
      * @param change value to be set
      * @return Builder
      */
-
-    public SetSkuChangeBuilder change(final String change) {
+    
+    public SetSkuChangeBuilder change( final String change) {
         this.change = change;
         return this;
     }
-
+    
+    
+    
+    
     /**
      * set the value to the catalogData
      * @param catalogData value to be set
      * @return Builder
      */
-
-    public SetSkuChangeBuilder catalogData(final String catalogData) {
+    
+    public SetSkuChangeBuilder catalogData( final String catalogData) {
         this.catalogData = catalogData;
         return this;
     }
-
+    
+    
+    
+    
     /**
      * set the value to the previousValue
      * @param previousValue value to be set
      * @return Builder
      */
-
-    public SetSkuChangeBuilder previousValue(final String previousValue) {
+    
+    public SetSkuChangeBuilder previousValue( final String previousValue) {
         this.previousValue = previousValue;
         return this;
     }
-
+    
+    
+    
+    
     /**
      * set the value to the nextValue
      * @param nextValue value to be set
      * @return Builder
      */
-
-    public SetSkuChangeBuilder nextValue(final String nextValue) {
+    
+    public SetSkuChangeBuilder nextValue( final String nextValue) {
         this.nextValue = nextValue;
         return this;
     }
+    
+    
 
     /**
      *  <p>Update action for <code>setSku</code></p>
      * @return change
      */
-
-    public String getChange() {
+    
+    
+    public String getChange(){
         return this.change;
     }
-
+    
     /**
      * value of catalogData}
      * @return catalogData
      */
-
-    public String getCatalogData() {
+    
+    
+    public String getCatalogData(){
         return this.catalogData;
     }
-
+    
     /**
      * value of previousValue}
      * @return previousValue
      */
-
-    public String getPreviousValue() {
+    
+    
+    public String getPreviousValue(){
         return this.previousValue;
     }
-
+    
     /**
      * value of nextValue}
      * @return nextValue
      */
-
-    public String getNextValue() {
+    
+    
+    public String getNextValue(){
         return this.nextValue;
     }
 
@@ -123,7 +153,7 @@ public class SetSkuChangeBuilder implements Builder<SetSkuChange> {
         Objects.requireNonNull(nextValue, SetSkuChange.class + ": nextValue is missing");
         return new SetSkuChangeImpl(change, catalogData, previousValue, nextValue);
     }
-
+    
     /**
      * builds SetSkuChange without checking for non-null required values
      * @return SetSkuChange
@@ -134,7 +164,7 @@ public class SetSkuChangeBuilder implements Builder<SetSkuChange> {
 
     /**
      * factory method for an instance of SetSkuChangeBuilder
-     * @return builder
+     * @return builder 
      */
     public static SetSkuChangeBuilder of() {
         return new SetSkuChangeBuilder();

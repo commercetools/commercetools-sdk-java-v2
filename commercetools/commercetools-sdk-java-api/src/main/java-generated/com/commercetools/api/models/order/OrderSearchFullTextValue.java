@@ -1,17 +1,21 @@
-
 package com.commercetools.api.models.order;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
+import com.commercetools.api.models.order.OrderSearchMatchType;
+import com.commercetools.api.models.order.OrderSearchQueryExpressionValue;
+import com.commercetools.api.models.order.OrderSearchFullTextValueImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * OrderSearchFullTextValue
@@ -25,11 +29,15 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .value("{value}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = OrderSearchFullTextValueImpl.class)
 public interface OrderSearchFullTextValue extends OrderSearchQueryExpressionValue {
+
 
     /**
      *
@@ -38,20 +46,18 @@ public interface OrderSearchFullTextValue extends OrderSearchQueryExpressionValu
     @NotNull
     @JsonProperty("value")
     public String getValue();
-
     /**
      *
      * @return language
      */
-
+    
     @JsonProperty("language")
     public String getLanguage();
-
     /**
      *
      * @return mustMatch
      */
-
+    
     @JsonProperty("mustMatch")
     public OrderSearchMatchType getMustMatch();
 
@@ -59,30 +65,34 @@ public interface OrderSearchFullTextValue extends OrderSearchQueryExpressionValu
      * set value
      * @param value value to be set
      */
-
+    
     public void setValue(final String value);
-
+    
+    
     /**
      * set language
      * @param language value to be set
      */
-
+    
     public void setLanguage(final String language);
-
+    
+    
     /**
      * set mustMatch
      * @param mustMatch value to be set
      */
-
+    
     public void setMustMatch(final OrderSearchMatchType mustMatch);
+    
 
     /**
      * factory method
      * @return instance of OrderSearchFullTextValue
      */
-    public static OrderSearchFullTextValue of() {
+    public static OrderSearchFullTextValue of(){
         return new OrderSearchFullTextValueImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy OrderSearchFullTextValue
@@ -127,7 +137,7 @@ public interface OrderSearchFullTextValue extends OrderSearchQueryExpressionValu
     public static OrderSearchFullTextValueBuilder builder() {
         return OrderSearchFullTextValueBuilder.of();
     }
-
+    
     /**
      * create builder for OrderSearchFullTextValue instance
      * @param template instance with prefilled values for the builder
@@ -136,6 +146,7 @@ public interface OrderSearchFullTextValue extends OrderSearchQueryExpressionValu
     public static OrderSearchFullTextValueBuilder builder(final OrderSearchFullTextValue template) {
         return OrderSearchFullTextValueBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -146,7 +157,7 @@ public interface OrderSearchFullTextValue extends OrderSearchQueryExpressionValu
     default <T> T withOrderSearchFullTextValue(Function<OrderSearchFullTextValue, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

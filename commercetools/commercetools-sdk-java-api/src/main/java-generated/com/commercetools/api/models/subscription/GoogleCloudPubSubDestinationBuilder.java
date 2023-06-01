@@ -1,8 +1,11 @@
-
 package com.commercetools.api.models.subscription;
 
+import com.commercetools.api.models.subscription.Destination;
+import com.commercetools.api.models.subscription.GoogleCloudPubSubDestination;
+import javax.annotation.Nullable;
 import java.util.*;
-
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -17,52 +20,67 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .topic("{topic}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class GoogleCloudPubSubDestinationBuilder implements Builder<GoogleCloudPubSubDestination> {
 
+    
+    
     private String projectId;
-
+    
+    
+    
     private String topic;
 
+    
     /**
      *  <p>ID of the Google Cloud project that contains the Pub/Sub topic.</p>
      * @param projectId value to be set
      * @return Builder
      */
-
-    public GoogleCloudPubSubDestinationBuilder projectId(final String projectId) {
+    
+    public GoogleCloudPubSubDestinationBuilder projectId( final String projectId) {
         this.projectId = projectId;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Name of the topic.</p>
      * @param topic value to be set
      * @return Builder
      */
-
-    public GoogleCloudPubSubDestinationBuilder topic(final String topic) {
+    
+    public GoogleCloudPubSubDestinationBuilder topic( final String topic) {
         this.topic = topic;
         return this;
     }
+    
+    
 
     /**
      *  <p>ID of the Google Cloud project that contains the Pub/Sub topic.</p>
      * @return projectId
      */
-
-    public String getProjectId() {
+    
+    
+    public String getProjectId(){
         return this.projectId;
     }
-
+    
     /**
      *  <p>Name of the topic.</p>
      * @return topic
      */
-
-    public String getTopic() {
+    
+    
+    public String getTopic(){
         return this.topic;
     }
 
@@ -75,7 +93,7 @@ public class GoogleCloudPubSubDestinationBuilder implements Builder<GoogleCloudP
         Objects.requireNonNull(topic, GoogleCloudPubSubDestination.class + ": topic is missing");
         return new GoogleCloudPubSubDestinationImpl(projectId, topic);
     }
-
+    
     /**
      * builds GoogleCloudPubSubDestination without checking for non-null required values
      * @return GoogleCloudPubSubDestination
@@ -86,7 +104,7 @@ public class GoogleCloudPubSubDestinationBuilder implements Builder<GoogleCloudP
 
     /**
      * factory method for an instance of GoogleCloudPubSubDestinationBuilder
-     * @return builder
+     * @return builder 
      */
     public static GoogleCloudPubSubDestinationBuilder of() {
         return new GoogleCloudPubSubDestinationBuilder();

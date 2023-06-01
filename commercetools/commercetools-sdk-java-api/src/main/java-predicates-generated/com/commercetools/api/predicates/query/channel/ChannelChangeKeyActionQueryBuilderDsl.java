@@ -1,9 +1,11 @@
-
 package com.commercetools.api.predicates.query.channel;
 
 import com.commercetools.api.predicates.query.*;
 
-public class ChannelChangeKeyActionQueryBuilderDsl {
+import java.util.function.Function;
+
+
+public class ChannelChangeKeyActionQueryBuilderDsl  {
     public ChannelChangeKeyActionQueryBuilderDsl() {
     }
 
@@ -12,14 +14,12 @@ public class ChannelChangeKeyActionQueryBuilderDsl {
     }
 
     public StringComparisonPredicateBuilder<ChannelChangeKeyActionQueryBuilderDsl> action() {
-        return new StringComparisonPredicateBuilder<>(
-            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("action")),
-            p -> new CombinationQueryPredicate<>(p, ChannelChangeKeyActionQueryBuilderDsl::of));
+        return new StringComparisonPredicateBuilder<>(BinaryQueryPredicate.of().left(new ConstantQueryPredicate("action")),
+        p -> new CombinationQueryPredicate<>(p, ChannelChangeKeyActionQueryBuilderDsl::of));
     }
-
     public StringComparisonPredicateBuilder<ChannelChangeKeyActionQueryBuilderDsl> key() {
         return new StringComparisonPredicateBuilder<>(BinaryQueryPredicate.of().left(new ConstantQueryPredicate("key")),
-            p -> new CombinationQueryPredicate<>(p, ChannelChangeKeyActionQueryBuilderDsl::of));
+        p -> new CombinationQueryPredicate<>(p, ChannelChangeKeyActionQueryBuilderDsl::of));
     }
-
+    
 }

@@ -1,61 +1,72 @@
-
 package com.commercetools.importapi.models.importoperations;
 
-import java.time.*;
-import java.util.*;
-
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
-
-import io.vrap.rmf.base.client.ModelBase;
+import com.commercetools.importapi.models.common.ProcessingState;
+import com.commercetools.importapi.models.common.UnresolvedReferences;
+import com.commercetools.importapi.models.errors.ErrorObject;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.ModelBase;
+import javax.validation.Valid;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.annotation.*;
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
  *  <p>Import Operation describes the import status of a specific resource.</p>
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class ImportOperationImpl implements ImportOperation, ModelBase {
 
+    
     private Long version;
-
+    
+    
     private String importContainerKey;
-
+    
+    
     private String resourceKey;
-
+    
+    
     private String id;
-
+    
+    
     private com.commercetools.importapi.models.common.ProcessingState state;
-
+    
+    
     private Long resourceVersion;
-
+    
+    
     private java.util.List<com.commercetools.importapi.models.errors.ErrorObject> errors;
-
+    
+    
     private java.util.List<com.commercetools.importapi.models.common.UnresolvedReferences> unresolvedReferences;
-
+    
+    
     private java.time.ZonedDateTime createdAt;
-
+    
+    
     private java.time.ZonedDateTime lastModifiedAt;
-
+    
+    
     private java.time.ZonedDateTime expiresAt;
 
     /**
      * create instance with all properties
      */
     @JsonCreator
-    ImportOperationImpl(@JsonProperty("version") final Long version,
-            @JsonProperty("importContainerKey") final String importContainerKey,
-            @JsonProperty("resourceKey") final String resourceKey, @JsonProperty("id") final String id,
-            @JsonProperty("state") final com.commercetools.importapi.models.common.ProcessingState state,
-            @JsonProperty("resourceVersion") final Long resourceVersion,
-            @JsonProperty("errors") final java.util.List<com.commercetools.importapi.models.errors.ErrorObject> errors,
-            @JsonProperty("unresolvedReferences") final java.util.List<com.commercetools.importapi.models.common.UnresolvedReferences> unresolvedReferences,
-            @JsonProperty("createdAt") final java.time.ZonedDateTime createdAt,
-            @JsonProperty("lastModifiedAt") final java.time.ZonedDateTime lastModifiedAt,
-            @JsonProperty("expiresAt") final java.time.ZonedDateTime expiresAt) {
+    ImportOperationImpl(@JsonProperty("version") final Long version, @JsonProperty("importContainerKey") final String importContainerKey, @JsonProperty("resourceKey") final String resourceKey, @JsonProperty("id") final String id, @JsonProperty("state") final com.commercetools.importapi.models.common.ProcessingState state, @JsonProperty("resourceVersion") final Long resourceVersion, @JsonProperty("errors") final java.util.List<com.commercetools.importapi.models.errors.ErrorObject> errors, @JsonProperty("unresolvedReferences") final java.util.List<com.commercetools.importapi.models.common.UnresolvedReferences> unresolvedReferences, @JsonProperty("createdAt") final java.time.ZonedDateTime createdAt, @JsonProperty("lastModifiedAt") final java.time.ZonedDateTime lastModifiedAt, @JsonProperty("expiresAt") final java.time.ZonedDateTime expiresAt) {
         this.version = version;
         this.importContainerKey = importContainerKey;
         this.resourceKey = resourceKey;
@@ -68,7 +79,6 @@ public class ImportOperationImpl implements ImportOperation, ModelBase {
         this.lastModifiedAt = lastModifiedAt;
         this.expiresAt = expiresAt;
     }
-
     /**
      * create empty instance
      */
@@ -78,156 +88,166 @@ public class ImportOperationImpl implements ImportOperation, ModelBase {
     /**
      *  <p>The version of the ImportOperation.</p>
      */
-
-    public Long getVersion() {
+    
+    public Long getVersion(){
         return this.version;
     }
-
+    
     /**
      *  <p>The key of the importContainer.</p>
      */
-
-    public String getImportContainerKey() {
+    
+    public String getImportContainerKey(){
         return this.importContainerKey;
     }
-
+    
     /**
      *  <p>The key of the resource.</p>
      */
-
-    public String getResourceKey() {
+    
+    public String getResourceKey(){
         return this.resourceKey;
     }
-
+    
     /**
      *  <p>The ID of the ImportOperation.</p>
      */
-
-    public String getId() {
+    
+    public String getId(){
         return this.id;
     }
-
+    
     /**
      *  <p>The import status of the resource. Set to <code>rejected</code> or <code>validationFailed</code> if the import of the resource was not successful.</p>
      */
-
-    public com.commercetools.importapi.models.common.ProcessingState getState() {
+    
+    public com.commercetools.importapi.models.common.ProcessingState getState(){
         return this.state;
     }
-
+    
     /**
      *  <p>The version of the imported resource when the import was successful.</p>
      */
-
-    public Long getResourceVersion() {
+    
+    public Long getResourceVersion(){
         return this.resourceVersion;
     }
-
+    
     /**
      *  <p>Contains an error if the import of the resource was not successful. See Errors.</p>
      */
-
-    public java.util.List<com.commercetools.importapi.models.errors.ErrorObject> getErrors() {
+    
+    public java.util.List<com.commercetools.importapi.models.errors.ErrorObject> getErrors(){
         return this.errors;
     }
-
+    
     /**
      *  <p>In case of unresolved status this array will show the unresolved references</p>
      */
-
-    public java.util.List<com.commercetools.importapi.models.common.UnresolvedReferences> getUnresolvedReferences() {
+    
+    public java.util.List<com.commercetools.importapi.models.common.UnresolvedReferences> getUnresolvedReferences(){
         return this.unresolvedReferences;
     }
-
+    
     /**
      *  <p>The time when the ImportOperation was created.</p>
      */
-
-    public java.time.ZonedDateTime getCreatedAt() {
+    
+    public java.time.ZonedDateTime getCreatedAt(){
         return this.createdAt;
     }
-
+    
     /**
      *  <p>The last time When the ImportOperation was modified.</p>
      */
-
-    public java.time.ZonedDateTime getLastModifiedAt() {
+    
+    public java.time.ZonedDateTime getLastModifiedAt(){
         return this.lastModifiedAt;
     }
-
+    
     /**
      *  <p>The expiration time of the ImportOperation.</p>
      */
-
-    public java.time.ZonedDateTime getExpiresAt() {
+    
+    public java.time.ZonedDateTime getExpiresAt(){
         return this.expiresAt;
     }
 
-    public void setVersion(final Long version) {
+    
+    public void setVersion(final Long version){
         this.version = version;
     }
-
-    public void setImportContainerKey(final String importContainerKey) {
+    
+    
+    public void setImportContainerKey(final String importContainerKey){
         this.importContainerKey = importContainerKey;
     }
-
-    public void setResourceKey(final String resourceKey) {
+    
+    
+    public void setResourceKey(final String resourceKey){
         this.resourceKey = resourceKey;
     }
-
-    public void setId(final String id) {
+    
+    
+    public void setId(final String id){
         this.id = id;
     }
-
-    public void setState(final com.commercetools.importapi.models.common.ProcessingState state) {
+    
+    
+    public void setState(final com.commercetools.importapi.models.common.ProcessingState state){
         this.state = state;
     }
-
-    public void setResourceVersion(final Long resourceVersion) {
+    
+    
+    public void setResourceVersion(final Long resourceVersion){
         this.resourceVersion = resourceVersion;
     }
-
-    public void setErrors(final com.commercetools.importapi.models.errors.ErrorObject... errors) {
-        this.errors = new ArrayList<>(Arrays.asList(errors));
+    
+    
+    public void setErrors(final com.commercetools.importapi.models.errors.ErrorObject ...errors){
+       this.errors = new ArrayList<>(Arrays.asList(errors));
     }
-
-    public void setErrors(final java.util.List<com.commercetools.importapi.models.errors.ErrorObject> errors) {
-        this.errors = errors;
+    
+    
+    public void setErrors(final java.util.List<com.commercetools.importapi.models.errors.ErrorObject> errors){
+       this.errors = errors;
     }
-
-    public void setUnresolvedReferences(
-            final com.commercetools.importapi.models.common.UnresolvedReferences... unresolvedReferences) {
-        this.unresolvedReferences = new ArrayList<>(Arrays.asList(unresolvedReferences));
+    
+    
+    public void setUnresolvedReferences(final com.commercetools.importapi.models.common.UnresolvedReferences ...unresolvedReferences){
+       this.unresolvedReferences = new ArrayList<>(Arrays.asList(unresolvedReferences));
     }
-
-    public void setUnresolvedReferences(
-            final java.util.List<com.commercetools.importapi.models.common.UnresolvedReferences> unresolvedReferences) {
-        this.unresolvedReferences = unresolvedReferences;
+    
+    
+    public void setUnresolvedReferences(final java.util.List<com.commercetools.importapi.models.common.UnresolvedReferences> unresolvedReferences){
+       this.unresolvedReferences = unresolvedReferences;
     }
-
-    public void setCreatedAt(final java.time.ZonedDateTime createdAt) {
+    
+    
+    public void setCreatedAt(final java.time.ZonedDateTime createdAt){
         this.createdAt = createdAt;
     }
-
-    public void setLastModifiedAt(final java.time.ZonedDateTime lastModifiedAt) {
+    
+    
+    public void setLastModifiedAt(final java.time.ZonedDateTime lastModifiedAt){
         this.lastModifiedAt = lastModifiedAt;
     }
-
-    public void setExpiresAt(final java.time.ZonedDateTime expiresAt) {
+    
+    
+    public void setExpiresAt(final java.time.ZonedDateTime expiresAt){
         this.expiresAt = expiresAt;
     }
 
     @Override
     public boolean equals(Object o) {
-        if (this == o)
-            return true;
-
-        if (o == null || getClass() != o.getClass())
-            return false;
-
+        if (this == o) return true;
+    
+        if (o == null || getClass() != o.getClass()) return false;
+    
         ImportOperationImpl that = (ImportOperationImpl) o;
-
-        return new EqualsBuilder().append(version, that.version)
+    
+        return new EqualsBuilder()
+                .append(version, that.version)
                 .append(importContainerKey, that.importContainerKey)
                 .append(resourceKey, that.resourceKey)
                 .append(id, that.id)
@@ -240,21 +260,22 @@ public class ImportOperationImpl implements ImportOperation, ModelBase {
                 .append(expiresAt, that.expiresAt)
                 .isEquals();
     }
-
+    
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(version)
-                .append(importContainerKey)
-                .append(resourceKey)
-                .append(id)
-                .append(state)
-                .append(resourceVersion)
-                .append(errors)
-                .append(unresolvedReferences)
-                .append(createdAt)
-                .append(lastModifiedAt)
-                .append(expiresAt)
-                .toHashCode();
+        return new HashCodeBuilder(17, 37)
+            .append(version)
+            .append(importContainerKey)
+            .append(resourceKey)
+            .append(id)
+            .append(state)
+            .append(resourceVersion)
+            .append(errors)
+            .append(unresolvedReferences)
+            .append(createdAt)
+            .append(lastModifiedAt)
+            .append(expiresAt)
+            .toHashCode();
     }
 
 }

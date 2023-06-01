@@ -1,19 +1,21 @@
-
 package com.commercetools.api.models.error;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-import java.util.stream.Collectors;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
+import com.commercetools.api.models.error.AuthErrorResponse;
+import com.commercetools.api.models.error.ErrorObject;
+import com.commercetools.api.models.error.ErrorResponseImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Base representation of an error response containing common fields to all errors.</p>
@@ -27,11 +29,15 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .message("{message}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = ErrorResponseImpl.class)
-public interface ErrorResponse {
+public interface ErrorResponse  {
+
 
     /**
      *  <p>HTTP status code corresponding to the error.</p>
@@ -40,7 +46,6 @@ public interface ErrorResponse {
     @NotNull
     @JsonProperty("statusCode")
     public Integer getStatusCode();
-
     /**
      *  <p>First error message in the <code>errors</code> array.</p>
      * @return message
@@ -48,7 +53,6 @@ public interface ErrorResponse {
     @NotNull
     @JsonProperty("message")
     public String getMessage();
-
     /**
      *  <p>Errors returned for a request.</p>
      *  <p>A single error response can contain multiple errors if the errors are related to the same HTTP status code such as <code>400</code>.</p>
@@ -62,40 +66,42 @@ public interface ErrorResponse {
      *  <p>HTTP status code corresponding to the error.</p>
      * @param statusCode value to be set
      */
-
+    
     public void setStatusCode(final Integer statusCode);
-
+    
+    
     /**
      *  <p>First error message in the <code>errors</code> array.</p>
      * @param message value to be set
      */
-
+    
     public void setMessage(final String message);
-
+    
+    
     /**
      *  <p>Errors returned for a request.</p>
      *  <p>A single error response can contain multiple errors if the errors are related to the same HTTP status code such as <code>400</code>.</p>
      * @param errors values to be set
      */
-
+    
     @JsonIgnore
-    public void setErrors(final ErrorObject... errors);
-
+    public void setErrors(final ErrorObject ...errors);
     /**
      *  <p>Errors returned for a request.</p>
      *  <p>A single error response can contain multiple errors if the errors are related to the same HTTP status code such as <code>400</code>.</p>
      * @param errors values to be set
      */
-
+    
     public void setErrors(final List<ErrorObject> errors);
 
     /**
      * factory method
      * @return instance of ErrorResponse
      */
-    public static ErrorResponse of() {
+    public static ErrorResponse of(){
         return new ErrorResponseImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy ErrorResponse
@@ -121,16 +127,13 @@ public interface ErrorResponse {
             return null;
         }
         if (template instanceof com.commercetools.api.models.error.AuthErrorResponse) {
-            return com.commercetools.api.models.error.AuthErrorResponse
-                    .deepCopy((com.commercetools.api.models.error.AuthErrorResponse) template);
+            return com.commercetools.api.models.error.AuthErrorResponse.deepCopy((com.commercetools.api.models.error.AuthErrorResponse)template);
         }
         ErrorResponseImpl instance = new ErrorResponseImpl();
         instance.setStatusCode(template.getStatusCode());
         instance.setMessage(template.getMessage());
         instance.setErrors(Optional.ofNullable(template.getErrors())
-                .map(t -> t.stream()
-                        .map(com.commercetools.api.models.error.ErrorObject::deepCopy)
-                        .collect(Collectors.toList()))
+                .map(t -> t.stream().map(com.commercetools.api.models.error.ErrorObject::deepCopy).collect(Collectors.toList()))
                 .orElse(null));
         return instance;
     }
@@ -142,7 +145,7 @@ public interface ErrorResponse {
     public static ErrorResponseBuilder builder() {
         return ErrorResponseBuilder.of();
     }
-
+    
     /**
      * create builder for ErrorResponse instance
      * @param template instance with prefilled values for the builder
@@ -151,6 +154,7 @@ public interface ErrorResponse {
     public static ErrorResponseBuilder builder(final ErrorResponse template) {
         return ErrorResponseBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -161,7 +165,7 @@ public interface ErrorResponse {
     default <T> T withErrorResponse(Function<ErrorResponse, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

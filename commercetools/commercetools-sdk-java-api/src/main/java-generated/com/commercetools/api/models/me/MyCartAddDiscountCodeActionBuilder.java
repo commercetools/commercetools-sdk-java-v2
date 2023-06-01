@@ -1,8 +1,11 @@
-
 package com.commercetools.api.models.me;
 
+import com.commercetools.api.models.me.MyCartUpdateAction;
+import com.commercetools.api.models.me.MyCartAddDiscountCodeAction;
+import javax.annotation.Nullable;
 import java.util.*;
-
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -16,30 +19,39 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .code("{code}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class MyCartAddDiscountCodeActionBuilder implements Builder<MyCartAddDiscountCodeAction> {
 
+    
+    
     private String code;
 
+    
     /**
      *  <p><code>code</code> of a DiscountCode.</p>
      * @param code value to be set
      * @return Builder
      */
-
-    public MyCartAddDiscountCodeActionBuilder code(final String code) {
+    
+    public MyCartAddDiscountCodeActionBuilder code( final String code) {
         this.code = code;
         return this;
     }
+    
+    
 
     /**
      *  <p><code>code</code> of a DiscountCode.</p>
      * @return code
      */
-
-    public String getCode() {
+    
+    
+    public String getCode(){
         return this.code;
     }
 
@@ -51,7 +63,7 @@ public class MyCartAddDiscountCodeActionBuilder implements Builder<MyCartAddDisc
         Objects.requireNonNull(code, MyCartAddDiscountCodeAction.class + ": code is missing");
         return new MyCartAddDiscountCodeActionImpl(code);
     }
-
+    
     /**
      * builds MyCartAddDiscountCodeAction without checking for non-null required values
      * @return MyCartAddDiscountCodeAction
@@ -62,7 +74,7 @@ public class MyCartAddDiscountCodeActionBuilder implements Builder<MyCartAddDisc
 
     /**
      * factory method for an instance of MyCartAddDiscountCodeActionBuilder
-     * @return builder
+     * @return builder 
      */
     public static MyCartAddDiscountCodeActionBuilder of() {
         return new MyCartAddDiscountCodeActionBuilder();

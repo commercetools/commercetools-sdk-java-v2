@@ -1,139 +1,151 @@
-
 package com.commercetools.api.models.message;
 
-import java.time.*;
-import java.util.*;
-
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
-
-import io.vrap.rmf.base.client.ModelBase;
+import com.commercetools.api.models.common.Reference;
+import com.commercetools.api.models.message.MessagePayload;
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.ModelBase;
+import javax.validation.Valid;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.annotation.*;
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
  *  <p>Generated after a successful Set Rating update action.</p>
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class ReviewRatingSetMessagePayloadImpl implements ReviewRatingSetMessagePayload, ModelBase {
 
+    
     private String type;
-
+    
+    
     private Double oldRating;
-
+    
+    
     private Double newRating;
-
+    
+    
     private Boolean includedInStatistics;
-
+    
+    
     private com.commercetools.api.models.common.Reference target;
 
     /**
      * create instance with all properties
      */
     @JsonCreator
-    ReviewRatingSetMessagePayloadImpl(@JsonProperty("oldRating") final Double oldRating,
-            @JsonProperty("newRating") final Double newRating,
-            @JsonProperty("includedInStatistics") final Boolean includedInStatistics,
-            @JsonProperty("target") final com.commercetools.api.models.common.Reference target) {
+    ReviewRatingSetMessagePayloadImpl(@JsonProperty("oldRating") final Double oldRating, @JsonProperty("newRating") final Double newRating, @JsonProperty("includedInStatistics") final Boolean includedInStatistics, @JsonProperty("target") final com.commercetools.api.models.common.Reference target) {
         this.oldRating = oldRating;
         this.newRating = newRating;
         this.includedInStatistics = includedInStatistics;
         this.target = target;
-        this.type = REVIEW_RATING_SET;
+        this.type =  REVIEW_RATING_SET;
     }
-
     /**
      * create empty instance
      */
     public ReviewRatingSetMessagePayloadImpl() {
-        this.type = REVIEW_RATING_SET;
+        this.type =  REVIEW_RATING_SET;
     }
 
     /**
      *
      */
-
-    public String getType() {
+    
+    public String getType(){
         return this.type;
     }
-
+    
     /**
      *  <p>The <code>rating</code> of the Review before the Set Rating update action.</p>
      */
-
-    public Double getOldRating() {
+    
+    public Double getOldRating(){
         return this.oldRating;
     }
-
+    
     /**
      *  <p>The <code>rating</code> of the Review after the Set Rating update action.</p>
      */
-
-    public Double getNewRating() {
+    
+    public Double getNewRating(){
         return this.newRating;
     }
-
+    
     /**
      *  <p>Whether the Review was taken into account in the ratings statistics of the target.</p>
      */
-
-    public Boolean getIncludedInStatistics() {
+    
+    public Boolean getIncludedInStatistics(){
         return this.includedInStatistics;
     }
-
+    
     /**
      *  <p>Reference to the resource that the Review belongs to.</p>
      */
-
-    public com.commercetools.api.models.common.Reference getTarget() {
+    
+    public com.commercetools.api.models.common.Reference getTarget(){
         return this.target;
     }
 
-    public void setOldRating(final Double oldRating) {
+    
+    public void setOldRating(final Double oldRating){
         this.oldRating = oldRating;
     }
-
-    public void setNewRating(final Double newRating) {
+    
+    
+    public void setNewRating(final Double newRating){
         this.newRating = newRating;
     }
-
-    public void setIncludedInStatistics(final Boolean includedInStatistics) {
+    
+    
+    public void setIncludedInStatistics(final Boolean includedInStatistics){
         this.includedInStatistics = includedInStatistics;
     }
-
-    public void setTarget(final com.commercetools.api.models.common.Reference target) {
+    
+    
+    public void setTarget(final com.commercetools.api.models.common.Reference target){
         this.target = target;
     }
 
     @Override
     public boolean equals(Object o) {
-        if (this == o)
-            return true;
-
-        if (o == null || getClass() != o.getClass())
-            return false;
-
+        if (this == o) return true;
+    
+        if (o == null || getClass() != o.getClass()) return false;
+    
         ReviewRatingSetMessagePayloadImpl that = (ReviewRatingSetMessagePayloadImpl) o;
-
-        return new EqualsBuilder().append(type, that.type)
+    
+        return new EqualsBuilder()
+                .append(type, that.type)
                 .append(oldRating, that.oldRating)
                 .append(newRating, that.newRating)
                 .append(includedInStatistics, that.includedInStatistics)
                 .append(target, that.target)
                 .isEquals();
     }
-
+    
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(type)
-                .append(oldRating)
-                .append(newRating)
-                .append(includedInStatistics)
-                .append(target)
-                .toHashCode();
+        return new HashCodeBuilder(17, 37)
+            .append(type)
+            .append(oldRating)
+            .append(newRating)
+            .append(includedInStatistics)
+            .append(target)
+            .toHashCode();
     }
 
 }

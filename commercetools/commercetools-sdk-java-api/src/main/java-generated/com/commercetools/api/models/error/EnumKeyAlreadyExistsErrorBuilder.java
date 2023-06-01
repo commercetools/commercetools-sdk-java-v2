@@ -1,8 +1,11 @@
-
 package com.commercetools.api.models.error;
 
+import com.commercetools.api.models.error.ErrorObject;
+import com.commercetools.api.models.error.EnumKeyAlreadyExistsError;
+import javax.annotation.Nullable;
 import java.util.*;
-
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -18,48 +21,62 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .conflictingAttributeName("{conflictingAttributeName}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class EnumKeyAlreadyExistsErrorBuilder implements Builder<EnumKeyAlreadyExistsError> {
 
+    
+    
     private String message;
-
+    
+    
+    
     private Map<String, java.lang.Object> values = new HashMap<>();
-
+    
+    
+    
     private String conflictingEnumKey;
-
+    
+    
+    
     private String conflictingAttributeName;
 
+    
     /**
      *  <p><code>"The $attributeName attribute definition already contains an enum value with the key $enumKey."</code></p>
      * @param message value to be set
      * @return Builder
      */
-
-    public EnumKeyAlreadyExistsErrorBuilder message(final String message) {
+    
+    public EnumKeyAlreadyExistsErrorBuilder message( final String message) {
         this.message = message;
         return this;
     }
-
+    
+    
+    
     /**
      *  <p>Error-specific additional fields.</p>
      * @param values properties to be set
      * @return Builder
      */
-
-    public EnumKeyAlreadyExistsErrorBuilder values(final Map<String, java.lang.Object> values) {
+    
+    public EnumKeyAlreadyExistsErrorBuilder values( final Map<String, java.lang.Object> values){
         this.values = values;
         return this;
     }
-
+    
     /**
      *  <p>Error-specific additional fields.</p>
      * @param key property name
      * @param value property value
      * @return Builder
      */
-
+    
     public EnumKeyAlreadyExistsErrorBuilder addValue(final String key, final java.lang.Object value) {
         if (this.values == null) {
             values = new HashMap<>();
@@ -67,62 +84,73 @@ public class EnumKeyAlreadyExistsErrorBuilder implements Builder<EnumKeyAlreadyE
         values.put(key, value);
         return this;
     }
-
+    
+    
+    
     /**
      *  <p>Conflicting enum key.</p>
      * @param conflictingEnumKey value to be set
      * @return Builder
      */
-
-    public EnumKeyAlreadyExistsErrorBuilder conflictingEnumKey(final String conflictingEnumKey) {
+    
+    public EnumKeyAlreadyExistsErrorBuilder conflictingEnumKey( final String conflictingEnumKey) {
         this.conflictingEnumKey = conflictingEnumKey;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Name of the conflicting Attribute.</p>
      * @param conflictingAttributeName value to be set
      * @return Builder
      */
-
-    public EnumKeyAlreadyExistsErrorBuilder conflictingAttributeName(final String conflictingAttributeName) {
+    
+    public EnumKeyAlreadyExistsErrorBuilder conflictingAttributeName( final String conflictingAttributeName) {
         this.conflictingAttributeName = conflictingAttributeName;
         return this;
     }
+    
+    
 
     /**
      *  <p><code>"The $attributeName attribute definition already contains an enum value with the key $enumKey."</code></p>
      * @return message
      */
-
-    public String getMessage() {
+    
+    
+    public String getMessage(){
         return this.message;
     }
-
+    
     /**
      *  <p>Error-specific additional fields.</p>
      * @return pattern properties
      */
-
-    public Map<String, java.lang.Object> getValues() {
+    
+    
+    public Map<String, java.lang.Object> getValues(){
         return this.values;
     }
-
+    
     /**
      *  <p>Conflicting enum key.</p>
      * @return conflictingEnumKey
      */
-
-    public String getConflictingEnumKey() {
+    
+    
+    public String getConflictingEnumKey(){
         return this.conflictingEnumKey;
     }
-
+    
     /**
      *  <p>Name of the conflicting Attribute.</p>
      * @return conflictingAttributeName
      */
-
-    public String getConflictingAttributeName() {
+    
+    
+    public String getConflictingAttributeName(){
         return this.conflictingAttributeName;
     }
 
@@ -133,11 +161,10 @@ public class EnumKeyAlreadyExistsErrorBuilder implements Builder<EnumKeyAlreadyE
     public EnumKeyAlreadyExistsError build() {
         Objects.requireNonNull(message, EnumKeyAlreadyExistsError.class + ": message is missing");
         Objects.requireNonNull(conflictingEnumKey, EnumKeyAlreadyExistsError.class + ": conflictingEnumKey is missing");
-        Objects.requireNonNull(conflictingAttributeName,
-            EnumKeyAlreadyExistsError.class + ": conflictingAttributeName is missing");
+        Objects.requireNonNull(conflictingAttributeName, EnumKeyAlreadyExistsError.class + ": conflictingAttributeName is missing");
         return new EnumKeyAlreadyExistsErrorImpl(message, values, conflictingEnumKey, conflictingAttributeName);
     }
-
+    
     /**
      * builds EnumKeyAlreadyExistsError without checking for non-null required values
      * @return EnumKeyAlreadyExistsError
@@ -148,7 +175,7 @@ public class EnumKeyAlreadyExistsErrorBuilder implements Builder<EnumKeyAlreadyE
 
     /**
      * factory method for an instance of EnumKeyAlreadyExistsErrorBuilder
-     * @return builder
+     * @return builder 
      */
     public static EnumKeyAlreadyExistsErrorBuilder of() {
         return new EnumKeyAlreadyExistsErrorBuilder();

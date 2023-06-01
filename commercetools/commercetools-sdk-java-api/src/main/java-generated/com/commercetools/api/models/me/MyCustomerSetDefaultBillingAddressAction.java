@@ -1,16 +1,20 @@
-
 package com.commercetools.api.models.me;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
+import com.commercetools.api.models.me.MyCustomerUpdateAction;
+import com.commercetools.api.models.me.MyCustomerSetDefaultBillingAddressActionImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Sets the default billing address from <code>addresses</code>. If the address is not currently a billing address, it is added to <code>billingAddressIds</code>. Either <code>addressId</code> or <code>addressKey</code> is required.</p>
@@ -22,9 +26,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     MyCustomerSetDefaultBillingAddressAction myCustomerSetDefaultBillingAddressAction = MyCustomerSetDefaultBillingAddressAction.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = MyCustomerSetDefaultBillingAddressActionImpl.class)
 public interface MyCustomerSetDefaultBillingAddressAction extends MyCustomerUpdateAction {
 
@@ -37,15 +44,14 @@ public interface MyCustomerSetDefaultBillingAddressAction extends MyCustomerUpda
      *  <p><code>id</code> of the Address to become the default billing address.</p>
      * @return addressId
      */
-
+    
     @JsonProperty("addressId")
     public String getAddressId();
-
     /**
      *  <p><code>key</code> of the Address to become the default billing address.</p>
      * @return addressKey
      */
-
+    
     @JsonProperty("addressKey")
     public String getAddressKey();
 
@@ -53,23 +59,26 @@ public interface MyCustomerSetDefaultBillingAddressAction extends MyCustomerUpda
      *  <p><code>id</code> of the Address to become the default billing address.</p>
      * @param addressId value to be set
      */
-
+    
     public void setAddressId(final String addressId);
-
+    
+    
     /**
      *  <p><code>key</code> of the Address to become the default billing address.</p>
      * @param addressKey value to be set
      */
-
+    
     public void setAddressKey(final String addressKey);
+    
 
     /**
      * factory method
      * @return instance of MyCustomerSetDefaultBillingAddressAction
      */
-    public static MyCustomerSetDefaultBillingAddressAction of() {
+    public static MyCustomerSetDefaultBillingAddressAction of(){
         return new MyCustomerSetDefaultBillingAddressActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy MyCustomerSetDefaultBillingAddressAction
@@ -89,8 +98,7 @@ public interface MyCustomerSetDefaultBillingAddressAction extends MyCustomerUpda
      * @return copy instance
      */
     @Nullable
-    public static MyCustomerSetDefaultBillingAddressAction deepCopy(
-            @Nullable final MyCustomerSetDefaultBillingAddressAction template) {
+    public static MyCustomerSetDefaultBillingAddressAction deepCopy(@Nullable final MyCustomerSetDefaultBillingAddressAction template) {
         if (template == null) {
             return null;
         }
@@ -107,16 +115,16 @@ public interface MyCustomerSetDefaultBillingAddressAction extends MyCustomerUpda
     public static MyCustomerSetDefaultBillingAddressActionBuilder builder() {
         return MyCustomerSetDefaultBillingAddressActionBuilder.of();
     }
-
+    
     /**
      * create builder for MyCustomerSetDefaultBillingAddressAction instance
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static MyCustomerSetDefaultBillingAddressActionBuilder builder(
-            final MyCustomerSetDefaultBillingAddressAction template) {
+    public static MyCustomerSetDefaultBillingAddressActionBuilder builder(final MyCustomerSetDefaultBillingAddressAction template) {
         return MyCustomerSetDefaultBillingAddressActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -124,11 +132,10 @@ public interface MyCustomerSetDefaultBillingAddressAction extends MyCustomerUpda
      * @param helper function to map the object
      * @return mapped value
      */
-    default <T> T withMyCustomerSetDefaultBillingAddressAction(
-            Function<MyCustomerSetDefaultBillingAddressAction, T> helper) {
+    default <T> T withMyCustomerSetDefaultBillingAddressAction(Function<MyCustomerSetDefaultBillingAddressAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

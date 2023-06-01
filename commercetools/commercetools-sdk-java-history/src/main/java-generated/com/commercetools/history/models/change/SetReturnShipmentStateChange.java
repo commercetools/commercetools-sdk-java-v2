@@ -1,18 +1,21 @@
-
 package com.commercetools.history.models.change;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
-
+import com.commercetools.history.models.change.Change;
 import com.commercetools.history.models.common.ReturnShipmentState;
+import com.commercetools.history.models.change.SetReturnShipmentStateChangeImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * SetReturnShipmentStateChange
@@ -27,9 +30,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .previousValue(ReturnShipmentState.ADVISED)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = SetReturnShipmentStateChangeImpl.class)
 public interface SetReturnShipmentStateChange extends Change {
 
@@ -45,7 +51,6 @@ public interface SetReturnShipmentStateChange extends Change {
     @NotNull
     @JsonProperty("type")
     public String getType();
-
     /**
      *  <p>Update action for <code>setReturnShipmentState</code></p>
      * @return change
@@ -53,7 +58,6 @@ public interface SetReturnShipmentStateChange extends Change {
     @NotNull
     @JsonProperty("change")
     public String getChange();
-
     /**
      *
      * @return nextValue
@@ -61,7 +65,6 @@ public interface SetReturnShipmentStateChange extends Change {
     @NotNull
     @JsonProperty("nextValue")
     public ReturnShipmentState getNextValue();
-
     /**
      *
      * @return previousValue
@@ -74,30 +77,34 @@ public interface SetReturnShipmentStateChange extends Change {
      *  <p>Update action for <code>setReturnShipmentState</code></p>
      * @param change value to be set
      */
-
+    
     public void setChange(final String change);
-
+    
+    
     /**
      * set nextValue
      * @param nextValue value to be set
      */
-
+    
     public void setNextValue(final ReturnShipmentState nextValue);
-
+    
+    
     /**
      * set previousValue
      * @param previousValue value to be set
      */
-
+    
     public void setPreviousValue(final ReturnShipmentState previousValue);
+    
 
     /**
      * factory method
      * @return instance of SetReturnShipmentStateChange
      */
-    public static SetReturnShipmentStateChange of() {
+    public static SetReturnShipmentStateChange of(){
         return new SetReturnShipmentStateChangeImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy SetReturnShipmentStateChange
@@ -136,7 +143,7 @@ public interface SetReturnShipmentStateChange extends Change {
     public static SetReturnShipmentStateChangeBuilder builder() {
         return SetReturnShipmentStateChangeBuilder.of();
     }
-
+    
     /**
      * create builder for SetReturnShipmentStateChange instance
      * @param template instance with prefilled values for the builder
@@ -145,6 +152,7 @@ public interface SetReturnShipmentStateChange extends Change {
     public static SetReturnShipmentStateChangeBuilder builder(final SetReturnShipmentStateChange template) {
         return SetReturnShipmentStateChangeBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -155,7 +163,7 @@ public interface SetReturnShipmentStateChange extends Change {
     default <T> T withSetReturnShipmentStateChange(Function<SetReturnShipmentStateChange, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

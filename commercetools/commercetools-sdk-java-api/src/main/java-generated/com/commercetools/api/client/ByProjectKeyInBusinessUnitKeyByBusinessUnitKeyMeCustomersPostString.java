@@ -1,18 +1,38 @@
-
 package com.commercetools.api.client;
 
+import io.vrap.rmf.base.client.utils.Utils;
+
+import java.io.InputStream;
+import java.io.IOException;
+
 import java.net.URI;
+import java.net.URLConnection;
 import java.nio.charset.StandardCharsets;
+import java.nio.file.Files;
+
 import java.time.Duration;
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.List;
+import java.util.Map;
+import java.util.HashMap;
+import java.util.Optional;
+import java.util.function.Function;
+import java.util.function.Supplier;
+import java.util.stream.Collectors;
 import java.util.concurrent.CompletableFuture;
-
-import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.utils.Generated;
+
+import javax.annotation.Nullable;
+
+import java.io.UnsupportedEncodingException;
+import java.net.URLEncoder;
+import io.vrap.rmf.base.client.*;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+
+import static io.vrap.rmf.base.client.utils.ClientUtils.blockingWait;
 
 /**
  *  <p>The My Business Unit endpoint does not support assigning existing Customers to a Business Unit. Associates with the <code>UpdateAssociates</code> Permission can use this endpoint to create a new Customer and associate it with the Business Unit. If the required Permission is missing, an AssociateMissingPermission error is returned. The new Associate is created with an empty set of roles.</p>
@@ -30,25 +50,26 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
  * }</code></pre>
  * </div>
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
-public class ByProjectKeyInBusinessUnitKeyByBusinessUnitKeyMeCustomersPostString extends
-        StringBodyApiMethod<ByProjectKeyInBusinessUnitKeyByBusinessUnitKeyMeCustomersPostString, com.commercetools.api.models.customer.CustomerSignInResult> {
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
+public class ByProjectKeyInBusinessUnitKeyByBusinessUnitKeyMeCustomersPostString extends StringBodyApiMethod<ByProjectKeyInBusinessUnitKeyByBusinessUnitKeyMeCustomersPostString, com.commercetools.api.models.customer.CustomerSignInResult> {
 
+    
     private String projectKey;
     private String businessUnitKey;
-
+    
     private String myBusinessUnitAssociateDraft;
 
-    public ByProjectKeyInBusinessUnitKeyByBusinessUnitKeyMeCustomersPostString(final ApiHttpClient apiHttpClient,
-            String projectKey, String businessUnitKey, String myBusinessUnitAssociateDraft) {
+    public ByProjectKeyInBusinessUnitKeyByBusinessUnitKeyMeCustomersPostString(final ApiHttpClient apiHttpClient, String projectKey, String businessUnitKey, String myBusinessUnitAssociateDraft) {
         super(apiHttpClient);
         this.projectKey = projectKey;
         this.businessUnitKey = businessUnitKey;
         this.myBusinessUnitAssociateDraft = myBusinessUnitAssociateDraft;
     }
 
-    public ByProjectKeyInBusinessUnitKeyByBusinessUnitKeyMeCustomersPostString(
-            ByProjectKeyInBusinessUnitKeyByBusinessUnitKeyMeCustomersPostString t) {
+    public ByProjectKeyInBusinessUnitKeyByBusinessUnitKeyMeCustomersPostString(ByProjectKeyInBusinessUnitKeyByBusinessUnitKeyMeCustomersPostString t) {
         super(t);
         this.projectKey = t.projectKey;
         this.businessUnitKey = t.businessUnitKey;
@@ -58,50 +79,39 @@ public class ByProjectKeyInBusinessUnitKeyByBusinessUnitKeyMeCustomersPostString
     @Override
     protected ApiHttpRequest buildHttpRequest() {
         List<String> params = new ArrayList<>(getQueryParamUriStrings());
-        String httpRequestPath = String.format("%s/in-business-unit/key=%s/me/customers", this.projectKey,
-            this.businessUnitKey);
+        String httpRequestPath = String.format("%s/in-business-unit/key=%s/me/customers", this.projectKey, this.businessUnitKey);
         if (!params.isEmpty()) {
             httpRequestPath += "?" + String.join("&", params);
         }
-        return new ApiHttpRequest(ApiHttpMethod.POST, URI.create(httpRequestPath), getHeaders(),
-            myBusinessUnitAssociateDraft.getBytes(StandardCharsets.UTF_8));
-
+        return new ApiHttpRequest(ApiHttpMethod.POST, URI.create(httpRequestPath), getHeaders(), myBusinessUnitAssociateDraft.getBytes(StandardCharsets.UTF_8));
+    
     }
 
     @Override
-    public ApiHttpResponse<com.commercetools.api.models.customer.CustomerSignInResult> executeBlocking(
-            final ApiHttpClient client, final Duration timeout) {
+    public ApiHttpResponse<com.commercetools.api.models.customer.CustomerSignInResult> executeBlocking(final ApiHttpClient client, final Duration timeout) {
         return executeBlocking(client, timeout, com.commercetools.api.models.customer.CustomerSignInResult.class);
     }
 
     @Override
-    public CompletableFuture<ApiHttpResponse<com.commercetools.api.models.customer.CustomerSignInResult>> execute(
-            final ApiHttpClient client) {
+    public CompletableFuture<ApiHttpResponse<com.commercetools.api.models.customer.CustomerSignInResult>> execute(final ApiHttpClient client) {
         return execute(client, com.commercetools.api.models.customer.CustomerSignInResult.class);
     }
 
-    public String getProjectKey() {
-        return this.projectKey;
-    }
+    public String getProjectKey() {return this.projectKey;}
+    public String getBusinessUnitKey() {return this.businessUnitKey;}
 
-    public String getBusinessUnitKey() {
-        return this.businessUnitKey;
-    }
 
-    public void setProjectKey(final String projectKey) {
-        this.projectKey = projectKey;
-    }
+    public void setProjectKey(final String projectKey) { this.projectKey = projectKey; }
+    
+    public void setBusinessUnitKey(final String businessUnitKey) { this.businessUnitKey = businessUnitKey; }
 
-    public void setBusinessUnitKey(final String businessUnitKey) {
-        this.businessUnitKey = businessUnitKey;
-    }
 
+    
     public String getBody() {
         return myBusinessUnitAssociateDraft;
     }
-
-    public ByProjectKeyInBusinessUnitKeyByBusinessUnitKeyMeCustomersPostString withBody(
-            String myBusinessUnitAssociateDraft) {
+    
+    public ByProjectKeyInBusinessUnitKeyByBusinessUnitKeyMeCustomersPostString withBody(String myBusinessUnitAssociateDraft) {
         ByProjectKeyInBusinessUnitKeyByBusinessUnitKeyMeCustomersPostString t = copy();
         t.myBusinessUnitAssociateDraft = myBusinessUnitAssociateDraft;
         return t;
@@ -109,26 +119,26 @@ public class ByProjectKeyInBusinessUnitKeyByBusinessUnitKeyMeCustomersPostString
 
     @Override
     public boolean equals(Object o) {
-        if (this == o)
-            return true;
-
-        if (o == null || getClass() != o.getClass())
-            return false;
-
+        if (this == o) return true;
+    
+        if (o == null || getClass() != o.getClass()) return false;
+    
         ByProjectKeyInBusinessUnitKeyByBusinessUnitKeyMeCustomersPostString that = (ByProjectKeyInBusinessUnitKeyByBusinessUnitKeyMeCustomersPostString) o;
-
-        return new EqualsBuilder().append(projectKey, that.projectKey)
+    
+        return new EqualsBuilder()
+                .append(projectKey, that.projectKey)
                 .append(businessUnitKey, that.businessUnitKey)
                 .append(myBusinessUnitAssociateDraft, that.myBusinessUnitAssociateDraft)
                 .isEquals();
     }
-
+    
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(projectKey)
-                .append(businessUnitKey)
-                .append(myBusinessUnitAssociateDraft)
-                .toHashCode();
+        return new HashCodeBuilder(17, 37)
+            .append(projectKey)
+            .append(businessUnitKey)
+            .append(myBusinessUnitAssociateDraft)
+            .toHashCode();
     }
 
     @Override

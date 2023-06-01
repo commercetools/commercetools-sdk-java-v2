@@ -1,23 +1,25 @@
-
 package com.commercetools.api.models.shopping_list;
-
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-import java.util.stream.Collectors;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.common.LocalizedString;
 import com.commercetools.api.models.customer.CustomerResourceIdentifier;
+import com.commercetools.api.models.shopping_list.ShoppingListLineItemDraft;
+import com.commercetools.api.models.shopping_list.TextLineItemDraft;
 import com.commercetools.api.models.store.StoreResourceIdentifier;
 import com.commercetools.api.models.type.CustomFieldsDraft;
+import com.commercetools.api.models.shopping_list.ShoppingListDraftImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * ShoppingListDraft
@@ -30,12 +32,15 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .name(nameBuilder -> nameBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = ShoppingListDraftImpl.class)
-public interface ShoppingListDraft extends com.commercetools.api.models.CustomizableDraft<ShoppingListDraft>,
-        com.commercetools.api.models.WithKey, io.vrap.rmf.base.client.Draft<ShoppingListDraft> {
+public interface ShoppingListDraft extends com.commercetools.api.models.CustomizableDraft<ShoppingListDraft>, com.commercetools.api.models.WithKey, io.vrap.rmf.base.client.Draft<ShoppingListDraft> {
+
 
     /**
      *  <p>Name of the ShoppingList.</p>
@@ -45,7 +50,6 @@ public interface ShoppingListDraft extends com.commercetools.api.models.Customiz
     @Valid
     @JsonProperty("name")
     public LocalizedString getName();
-
     /**
      *  <p>Human-readable identifiers usually used as deep-link URL to the related ShoppingList. Each slug is unique across a Project, but a ShoppingList can have the same slug for different languages. The slug must match the pattern <code>[a-zA-Z0-9_-]{2,256}</code>.</p>
      * @return slug
@@ -53,7 +57,6 @@ public interface ShoppingListDraft extends com.commercetools.api.models.Customiz
     @Valid
     @JsonProperty("slug")
     public LocalizedString getSlug();
-
     /**
      *  <p>The Customer the ShoppingList should be associated to.</p>
      * @return customer
@@ -61,15 +64,13 @@ public interface ShoppingListDraft extends com.commercetools.api.models.Customiz
     @Valid
     @JsonProperty("customer")
     public CustomerResourceIdentifier getCustomer();
-
     /**
      *  <p>User-defined unique identifier for the ShoppingList.</p>
      * @return key
      */
-
+    
     @JsonProperty("key")
     public String getKey();
-
     /**
      *  <p>Description of the ShoppingList.</p>
      * @return description
@@ -77,23 +78,20 @@ public interface ShoppingListDraft extends com.commercetools.api.models.Customiz
     @Valid
     @JsonProperty("description")
     public LocalizedString getDescription();
-
     /**
      *  <p>Identifies ShoppingLists belonging to an anonymous session.</p>
      * @return anonymousId
      */
-
+    
     @JsonProperty("anonymousId")
     public String getAnonymousId();
-
     /**
      *  <p>Number of days after which the ShoppingList will be automatically deleted if it has not been modified. If not set, the default value configured in the Project is used.</p>
      * @return deleteDaysAfterLastModification
      */
-
+    
     @JsonProperty("deleteDaysAfterLastModification")
     public Long getDeleteDaysAfterLastModification();
-
     /**
      *  <p>Line Items (containing Products) to add to the ShoppingList.</p>
      * @return lineItems
@@ -101,7 +99,6 @@ public interface ShoppingListDraft extends com.commercetools.api.models.Customiz
     @Valid
     @JsonProperty("lineItems")
     public List<ShoppingListLineItemDraft> getLineItems();
-
     /**
      *  <p>Line Items (containing text values) to add to the ShoppingList.</p>
      * @return textLineItems
@@ -109,7 +106,6 @@ public interface ShoppingListDraft extends com.commercetools.api.models.Customiz
     @Valid
     @JsonProperty("textLineItems")
     public List<TextLineItemDraft> getTextLineItems();
-
     /**
      *  <p>Assigns the new ShoppingList to the Store.</p>
      * @return store
@@ -117,7 +113,6 @@ public interface ShoppingListDraft extends com.commercetools.api.models.Customiz
     @Valid
     @JsonProperty("store")
     public StoreResourceIdentifier getStore();
-
     /**
      *  <p>Custom Fields defined for the ShoppingList.</p>
      * @return custom
@@ -130,102 +125,110 @@ public interface ShoppingListDraft extends com.commercetools.api.models.Customiz
      *  <p>Name of the ShoppingList.</p>
      * @param name value to be set
      */
-
+    
     public void setName(final LocalizedString name);
-
+    
+    
     /**
      *  <p>Human-readable identifiers usually used as deep-link URL to the related ShoppingList. Each slug is unique across a Project, but a ShoppingList can have the same slug for different languages. The slug must match the pattern <code>[a-zA-Z0-9_-]{2,256}</code>.</p>
      * @param slug value to be set
      */
-
+    
     public void setSlug(final LocalizedString slug);
-
+    
+    
     /**
      *  <p>The Customer the ShoppingList should be associated to.</p>
      * @param customer value to be set
      */
-
+    
     public void setCustomer(final CustomerResourceIdentifier customer);
-
+    
+    
     /**
      *  <p>User-defined unique identifier for the ShoppingList.</p>
      * @param key value to be set
      */
-
+    
     public void setKey(final String key);
-
+    
+    
     /**
      *  <p>Description of the ShoppingList.</p>
      * @param description value to be set
      */
-
+    
     public void setDescription(final LocalizedString description);
-
+    
+    
     /**
      *  <p>Identifies ShoppingLists belonging to an anonymous session.</p>
      * @param anonymousId value to be set
      */
-
+    
     public void setAnonymousId(final String anonymousId);
-
+    
+    
     /**
      *  <p>Number of days after which the ShoppingList will be automatically deleted if it has not been modified. If not set, the default value configured in the Project is used.</p>
      * @param deleteDaysAfterLastModification value to be set
      */
-
+    
     public void setDeleteDaysAfterLastModification(final Long deleteDaysAfterLastModification);
-
+    
+    
     /**
      *  <p>Line Items (containing Products) to add to the ShoppingList.</p>
      * @param lineItems values to be set
      */
-
+    
     @JsonIgnore
-    public void setLineItems(final ShoppingListLineItemDraft... lineItems);
-
+    public void setLineItems(final ShoppingListLineItemDraft ...lineItems);
     /**
      *  <p>Line Items (containing Products) to add to the ShoppingList.</p>
      * @param lineItems values to be set
      */
-
+    
     public void setLineItems(final List<ShoppingListLineItemDraft> lineItems);
-
+    
     /**
      *  <p>Line Items (containing text values) to add to the ShoppingList.</p>
      * @param textLineItems values to be set
      */
-
+    
     @JsonIgnore
-    public void setTextLineItems(final TextLineItemDraft... textLineItems);
-
+    public void setTextLineItems(final TextLineItemDraft ...textLineItems);
     /**
      *  <p>Line Items (containing text values) to add to the ShoppingList.</p>
      * @param textLineItems values to be set
      */
-
+    
     public void setTextLineItems(final List<TextLineItemDraft> textLineItems);
-
+    
     /**
      *  <p>Assigns the new ShoppingList to the Store.</p>
      * @param store value to be set
      */
-
+    
     public void setStore(final StoreResourceIdentifier store);
-
+    
+    
     /**
      *  <p>Custom Fields defined for the ShoppingList.</p>
      * @param custom value to be set
      */
-
+    
     public void setCustom(final CustomFieldsDraft custom);
+    
 
     /**
      * factory method
      * @return instance of ShoppingListDraft
      */
-    public static ShoppingListDraft of() {
+    public static ShoppingListDraft of(){
         return new ShoppingListDraftImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy ShoppingListDraft
@@ -261,22 +264,16 @@ public interface ShoppingListDraft extends com.commercetools.api.models.Customiz
         ShoppingListDraftImpl instance = new ShoppingListDraftImpl();
         instance.setName(com.commercetools.api.models.common.LocalizedString.deepCopy(template.getName()));
         instance.setSlug(com.commercetools.api.models.common.LocalizedString.deepCopy(template.getSlug()));
-        instance.setCustomer(
-            com.commercetools.api.models.customer.CustomerResourceIdentifier.deepCopy(template.getCustomer()));
+        instance.setCustomer(com.commercetools.api.models.customer.CustomerResourceIdentifier.deepCopy(template.getCustomer()));
         instance.setKey(template.getKey());
-        instance.setDescription(
-            com.commercetools.api.models.common.LocalizedString.deepCopy(template.getDescription()));
+        instance.setDescription(com.commercetools.api.models.common.LocalizedString.deepCopy(template.getDescription()));
         instance.setAnonymousId(template.getAnonymousId());
         instance.setDeleteDaysAfterLastModification(template.getDeleteDaysAfterLastModification());
         instance.setLineItems(Optional.ofNullable(template.getLineItems())
-                .map(t -> t.stream()
-                        .map(com.commercetools.api.models.shopping_list.ShoppingListLineItemDraft::deepCopy)
-                        .collect(Collectors.toList()))
+                .map(t -> t.stream().map(com.commercetools.api.models.shopping_list.ShoppingListLineItemDraft::deepCopy).collect(Collectors.toList()))
                 .orElse(null));
         instance.setTextLineItems(Optional.ofNullable(template.getTextLineItems())
-                .map(t -> t.stream()
-                        .map(com.commercetools.api.models.shopping_list.TextLineItemDraft::deepCopy)
-                        .collect(Collectors.toList()))
+                .map(t -> t.stream().map(com.commercetools.api.models.shopping_list.TextLineItemDraft::deepCopy).collect(Collectors.toList()))
                 .orElse(null));
         instance.setStore(com.commercetools.api.models.store.StoreResourceIdentifier.deepCopy(template.getStore()));
         instance.setCustom(com.commercetools.api.models.type.CustomFieldsDraft.deepCopy(template.getCustom()));
@@ -290,7 +287,7 @@ public interface ShoppingListDraft extends com.commercetools.api.models.Customiz
     public static ShoppingListDraftBuilder builder() {
         return ShoppingListDraftBuilder.of();
     }
-
+    
     /**
      * create builder for ShoppingListDraft instance
      * @param template instance with prefilled values for the builder
@@ -299,6 +296,7 @@ public interface ShoppingListDraft extends com.commercetools.api.models.Customiz
     public static ShoppingListDraftBuilder builder(final ShoppingListDraft template) {
         return ShoppingListDraftBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -309,7 +307,7 @@ public interface ShoppingListDraft extends com.commercetools.api.models.Customiz
     default <T> T withShoppingListDraft(Function<ShoppingListDraft, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

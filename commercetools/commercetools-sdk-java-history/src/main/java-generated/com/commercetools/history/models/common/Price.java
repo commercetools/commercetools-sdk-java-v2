@@ -1,18 +1,20 @@
-
 package com.commercetools.history.models.common;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
+import com.commercetools.history.models.common.Money;
+import com.commercetools.history.models.common.PriceImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * Price
@@ -26,11 +28,15 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .value(valueBuilder -> valueBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = PriceImpl.class)
-public interface Price {
+public interface Price  {
+
 
     /**
      *
@@ -39,7 +45,6 @@ public interface Price {
     @NotNull
     @JsonProperty("id")
     public String getId();
-
     /**
      *
      * @return value
@@ -53,23 +58,26 @@ public interface Price {
      * set id
      * @param id value to be set
      */
-
+    
     public void setId(final String id);
-
+    
+    
     /**
      * set value
      * @param value value to be set
      */
-
+    
     public void setValue(final Money value);
+    
 
     /**
      * factory method
      * @return instance of Price
      */
-    public static Price of() {
+    public static Price of(){
         return new PriceImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy Price
@@ -106,7 +114,7 @@ public interface Price {
     public static PriceBuilder builder() {
         return PriceBuilder.of();
     }
-
+    
     /**
      * create builder for Price instance
      * @param template instance with prefilled values for the builder
@@ -115,6 +123,7 @@ public interface Price {
     public static PriceBuilder builder(final Price template) {
         return PriceBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -125,7 +134,7 @@ public interface Price {
     default <T> T withPrice(Function<Price, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

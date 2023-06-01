@@ -1,9 +1,12 @@
-
 package com.commercetools.history.models.change;
 
+import com.commercetools.history.models.change.Change;
+import com.commercetools.history.models.common.Asset;
+import com.commercetools.history.models.change.AddAssetChange;
+import javax.annotation.Nullable;
 import java.util.*;
 import java.util.function.Function;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -19,122 +22,139 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .previousValue(previousValueBuilder -> previousValueBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class AddAssetChangeBuilder implements Builder<AddAssetChange> {
 
+    
+    
     private String change;
-
+    
+    
+    
     private com.commercetools.history.models.common.Asset nextValue;
-
+    
+    
+    
     private com.commercetools.history.models.common.Asset previousValue;
 
+    
     /**
      *  <p>Update action for <code>addAsset</code></p>
      * @param change value to be set
      * @return Builder
      */
-
-    public AddAssetChangeBuilder change(final String change) {
+    
+    public AddAssetChangeBuilder change( final String change) {
         this.change = change;
         return this;
     }
-
+    
+    
+    
+    
     /**
      * set the value to the nextValue using the builder function
      * @param builder function to build the nextValue value
      * @return Builder
      */
-
-    public AddAssetChangeBuilder nextValue(
-            Function<com.commercetools.history.models.common.AssetBuilder, com.commercetools.history.models.common.AssetBuilder> builder) {
+    
+    public AddAssetChangeBuilder nextValue(Function<com.commercetools.history.models.common.AssetBuilder, com.commercetools.history.models.common.AssetBuilder> builder) {
         this.nextValue = builder.apply(com.commercetools.history.models.common.AssetBuilder.of()).build();
         return this;
     }
-
+    
     /**
      * set the value to the nextValue using the builder function
      * @param builder function to build the nextValue value
      * @return Builder
      */
-
-    public AddAssetChangeBuilder withNextValue(
-            Function<com.commercetools.history.models.common.AssetBuilder, com.commercetools.history.models.common.Asset> builder) {
+    
+    public AddAssetChangeBuilder withNextValue(Function<com.commercetools.history.models.common.AssetBuilder, com.commercetools.history.models.common.Asset> builder) {
         this.nextValue = builder.apply(com.commercetools.history.models.common.AssetBuilder.of());
         return this;
     }
-
+                    
     /**
      * set the value to the nextValue
      * @param nextValue value to be set
      * @return Builder
      */
-
-    public AddAssetChangeBuilder nextValue(final com.commercetools.history.models.common.Asset nextValue) {
+    
+    public AddAssetChangeBuilder nextValue( final com.commercetools.history.models.common.Asset nextValue) {
         this.nextValue = nextValue;
         return this;
     }
-
+    
+    
+    
+    
     /**
      * set the value to the previousValue using the builder function
      * @param builder function to build the previousValue value
      * @return Builder
      */
-
-    public AddAssetChangeBuilder previousValue(
-            Function<com.commercetools.history.models.common.AssetBuilder, com.commercetools.history.models.common.AssetBuilder> builder) {
+    
+    public AddAssetChangeBuilder previousValue(Function<com.commercetools.history.models.common.AssetBuilder, com.commercetools.history.models.common.AssetBuilder> builder) {
         this.previousValue = builder.apply(com.commercetools.history.models.common.AssetBuilder.of()).build();
         return this;
     }
-
+    
     /**
      * set the value to the previousValue using the builder function
      * @param builder function to build the previousValue value
      * @return Builder
      */
-
-    public AddAssetChangeBuilder withPreviousValue(
-            Function<com.commercetools.history.models.common.AssetBuilder, com.commercetools.history.models.common.Asset> builder) {
+    
+    public AddAssetChangeBuilder withPreviousValue(Function<com.commercetools.history.models.common.AssetBuilder, com.commercetools.history.models.common.Asset> builder) {
         this.previousValue = builder.apply(com.commercetools.history.models.common.AssetBuilder.of());
         return this;
     }
-
+                    
     /**
      * set the value to the previousValue
      * @param previousValue value to be set
      * @return Builder
      */
-
-    public AddAssetChangeBuilder previousValue(final com.commercetools.history.models.common.Asset previousValue) {
+    
+    public AddAssetChangeBuilder previousValue( final com.commercetools.history.models.common.Asset previousValue) {
         this.previousValue = previousValue;
         return this;
     }
+    
+    
 
     /**
      *  <p>Update action for <code>addAsset</code></p>
      * @return change
      */
-
-    public String getChange() {
+    
+    
+    public String getChange(){
         return this.change;
     }
-
+    
     /**
      * value of nextValue}
      * @return nextValue
      */
-
-    public com.commercetools.history.models.common.Asset getNextValue() {
+    
+    
+    public com.commercetools.history.models.common.Asset getNextValue(){
         return this.nextValue;
     }
-
+    
     /**
      * value of previousValue}
      * @return previousValue
      */
-
-    public com.commercetools.history.models.common.Asset getPreviousValue() {
+    
+    
+    public com.commercetools.history.models.common.Asset getPreviousValue(){
         return this.previousValue;
     }
 
@@ -148,7 +168,7 @@ public class AddAssetChangeBuilder implements Builder<AddAssetChange> {
         Objects.requireNonNull(previousValue, AddAssetChange.class + ": previousValue is missing");
         return new AddAssetChangeImpl(change, nextValue, previousValue);
     }
-
+    
     /**
      * builds AddAssetChange without checking for non-null required values
      * @return AddAssetChange
@@ -159,7 +179,7 @@ public class AddAssetChangeBuilder implements Builder<AddAssetChange> {
 
     /**
      * factory method for an instance of AddAssetChangeBuilder
-     * @return builder
+     * @return builder 
      */
     public static AddAssetChangeBuilder of() {
         return new AddAssetChangeBuilder();

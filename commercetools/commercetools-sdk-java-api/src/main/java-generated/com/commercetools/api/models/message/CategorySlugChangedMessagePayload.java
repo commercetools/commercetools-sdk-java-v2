@@ -1,19 +1,21 @@
-
 package com.commercetools.api.models.message;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
 import com.commercetools.api.models.common.LocalizedString;
+import com.commercetools.api.models.message.MessagePayload;
+import com.commercetools.api.models.message.CategorySlugChangedMessagePayloadImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Generated after a successful Change Slug update action.</p>
@@ -26,9 +28,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .slug(slugBuilder -> slugBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = CategorySlugChangedMessagePayloadImpl.class)
 public interface CategorySlugChangedMessagePayload extends MessagePayload {
 
@@ -45,7 +50,6 @@ public interface CategorySlugChangedMessagePayload extends MessagePayload {
     @Valid
     @JsonProperty("slug")
     public LocalizedString getSlug();
-
     /**
      *  <p>The slug of the Category before the Change Slug update action.</p>
      * @return oldSlug
@@ -58,23 +62,26 @@ public interface CategorySlugChangedMessagePayload extends MessagePayload {
      *  <p>The slug of the Category after the Change Slug update action.</p>
      * @param slug value to be set
      */
-
+    
     public void setSlug(final LocalizedString slug);
-
+    
+    
     /**
      *  <p>The slug of the Category before the Change Slug update action.</p>
      * @param oldSlug value to be set
      */
-
+    
     public void setOldSlug(final LocalizedString oldSlug);
+    
 
     /**
      * factory method
      * @return instance of CategorySlugChangedMessagePayload
      */
-    public static CategorySlugChangedMessagePayload of() {
+    public static CategorySlugChangedMessagePayload of(){
         return new CategorySlugChangedMessagePayloadImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy CategorySlugChangedMessagePayload
@@ -94,8 +101,7 @@ public interface CategorySlugChangedMessagePayload extends MessagePayload {
      * @return copy instance
      */
     @Nullable
-    public static CategorySlugChangedMessagePayload deepCopy(
-            @Nullable final CategorySlugChangedMessagePayload template) {
+    public static CategorySlugChangedMessagePayload deepCopy(@Nullable final CategorySlugChangedMessagePayload template) {
         if (template == null) {
             return null;
         }
@@ -112,7 +118,7 @@ public interface CategorySlugChangedMessagePayload extends MessagePayload {
     public static CategorySlugChangedMessagePayloadBuilder builder() {
         return CategorySlugChangedMessagePayloadBuilder.of();
     }
-
+    
     /**
      * create builder for CategorySlugChangedMessagePayload instance
      * @param template instance with prefilled values for the builder
@@ -121,6 +127,7 @@ public interface CategorySlugChangedMessagePayload extends MessagePayload {
     public static CategorySlugChangedMessagePayloadBuilder builder(final CategorySlugChangedMessagePayload template) {
         return CategorySlugChangedMessagePayloadBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -131,7 +138,7 @@ public interface CategorySlugChangedMessagePayload extends MessagePayload {
     default <T> T withCategorySlugChangedMessagePayload(Function<CategorySlugChangedMessagePayload, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

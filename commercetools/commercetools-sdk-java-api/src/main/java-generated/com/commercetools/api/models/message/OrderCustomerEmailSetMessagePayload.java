@@ -1,16 +1,20 @@
-
 package com.commercetools.api.models.message;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
+import com.commercetools.api.models.message.OrderMessagePayload;
+import com.commercetools.api.models.message.OrderCustomerEmailSetMessagePayloadImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Generated after a successful Set Customer Email update action.</p>
@@ -22,9 +26,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     OrderCustomerEmailSetMessagePayload orderCustomerEmailSetMessagePayload = OrderCustomerEmailSetMessagePayload.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = OrderCustomerEmailSetMessagePayloadImpl.class)
 public interface OrderCustomerEmailSetMessagePayload extends OrderMessagePayload {
 
@@ -37,15 +44,14 @@ public interface OrderCustomerEmailSetMessagePayload extends OrderMessagePayload
      *  <p>Email address on the Order after the Set Customer Email update action.</p>
      * @return email
      */
-
+    
     @JsonProperty("email")
     public String getEmail();
-
     /**
      *  <p>Email address on the Order before the Set Customer Email update action.</p>
      * @return oldEmail
      */
-
+    
     @JsonProperty("oldEmail")
     public String getOldEmail();
 
@@ -53,23 +59,26 @@ public interface OrderCustomerEmailSetMessagePayload extends OrderMessagePayload
      *  <p>Email address on the Order after the Set Customer Email update action.</p>
      * @param email value to be set
      */
-
+    
     public void setEmail(final String email);
-
+    
+    
     /**
      *  <p>Email address on the Order before the Set Customer Email update action.</p>
      * @param oldEmail value to be set
      */
-
+    
     public void setOldEmail(final String oldEmail);
+    
 
     /**
      * factory method
      * @return instance of OrderCustomerEmailSetMessagePayload
      */
-    public static OrderCustomerEmailSetMessagePayload of() {
+    public static OrderCustomerEmailSetMessagePayload of(){
         return new OrderCustomerEmailSetMessagePayloadImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy OrderCustomerEmailSetMessagePayload
@@ -89,8 +98,7 @@ public interface OrderCustomerEmailSetMessagePayload extends OrderMessagePayload
      * @return copy instance
      */
     @Nullable
-    public static OrderCustomerEmailSetMessagePayload deepCopy(
-            @Nullable final OrderCustomerEmailSetMessagePayload template) {
+    public static OrderCustomerEmailSetMessagePayload deepCopy(@Nullable final OrderCustomerEmailSetMessagePayload template) {
         if (template == null) {
             return null;
         }
@@ -107,16 +115,16 @@ public interface OrderCustomerEmailSetMessagePayload extends OrderMessagePayload
     public static OrderCustomerEmailSetMessagePayloadBuilder builder() {
         return OrderCustomerEmailSetMessagePayloadBuilder.of();
     }
-
+    
     /**
      * create builder for OrderCustomerEmailSetMessagePayload instance
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static OrderCustomerEmailSetMessagePayloadBuilder builder(
-            final OrderCustomerEmailSetMessagePayload template) {
+    public static OrderCustomerEmailSetMessagePayloadBuilder builder(final OrderCustomerEmailSetMessagePayload template) {
         return OrderCustomerEmailSetMessagePayloadBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -127,7 +135,7 @@ public interface OrderCustomerEmailSetMessagePayload extends OrderMessagePayload
     default <T> T withOrderCustomerEmailSetMessagePayload(Function<OrderCustomerEmailSetMessagePayload, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

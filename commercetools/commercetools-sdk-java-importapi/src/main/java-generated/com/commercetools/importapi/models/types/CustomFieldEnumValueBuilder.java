@@ -1,8 +1,11 @@
-
 package com.commercetools.importapi.models.types;
 
-import java.util.*;
 
+import com.commercetools.importapi.models.types.CustomFieldEnumValue;
+import javax.annotation.Nullable;
+import java.util.*;
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -17,52 +20,67 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .label("{label}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class CustomFieldEnumValueBuilder implements Builder<CustomFieldEnumValue> {
 
+    
+    
     private String key;
-
+    
+    
+    
     private String label;
 
+    
     /**
      *  <p>Key of the value used as a programmatic identifier.</p>
      * @param key value to be set
      * @return Builder
      */
-
-    public CustomFieldEnumValueBuilder key(final String key) {
+    
+    public CustomFieldEnumValueBuilder key( final String key) {
         this.key = key;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Descriptive label of the value.</p>
      * @param label value to be set
      * @return Builder
      */
-
-    public CustomFieldEnumValueBuilder label(final String label) {
+    
+    public CustomFieldEnumValueBuilder label( final String label) {
         this.label = label;
         return this;
     }
+    
+    
 
     /**
      *  <p>Key of the value used as a programmatic identifier.</p>
      * @return key
      */
-
-    public String getKey() {
+    
+    
+    public String getKey(){
         return this.key;
     }
-
+    
     /**
      *  <p>Descriptive label of the value.</p>
      * @return label
      */
-
-    public String getLabel() {
+    
+    
+    public String getLabel(){
         return this.label;
     }
 
@@ -75,7 +93,7 @@ public class CustomFieldEnumValueBuilder implements Builder<CustomFieldEnumValue
         Objects.requireNonNull(label, CustomFieldEnumValue.class + ": label is missing");
         return new CustomFieldEnumValueImpl(key, label);
     }
-
+    
     /**
      * builds CustomFieldEnumValue without checking for non-null required values
      * @return CustomFieldEnumValue
@@ -86,7 +104,7 @@ public class CustomFieldEnumValueBuilder implements Builder<CustomFieldEnumValue
 
     /**
      * factory method for an instance of CustomFieldEnumValueBuilder
-     * @return builder
+     * @return builder 
      */
     public static CustomFieldEnumValueBuilder of() {
         return new CustomFieldEnumValueBuilder();

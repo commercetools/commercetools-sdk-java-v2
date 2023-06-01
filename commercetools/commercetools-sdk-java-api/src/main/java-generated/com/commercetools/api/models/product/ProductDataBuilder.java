@@ -1,11 +1,15 @@
-
 package com.commercetools.api.models.product;
 
+import com.commercetools.api.models.category.CategoryReference;
+import com.commercetools.api.models.common.LocalizedString;
+import com.commercetools.api.models.product.CategoryOrderHints;
+import com.commercetools.api.models.product.ProductVariant;
+import com.commercetools.api.models.product.SearchKeywords;
+import com.commercetools.api.models.product.ProductData;
+import javax.annotation.Nullable;
 import java.util.*;
 import java.util.function.Function;
-
-import javax.annotation.Nullable;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -24,634 +28,659 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .searchKeywords(searchKeywordsBuilder -> searchKeywordsBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class ProductDataBuilder implements Builder<ProductData> {
 
+    
+    
     private com.commercetools.api.models.common.LocalizedString name;
-
+    
+    
+    
     private java.util.List<com.commercetools.api.models.category.CategoryReference> categories;
-
+    
+    
     @Nullable
     private com.commercetools.api.models.product.CategoryOrderHints categoryOrderHints;
-
+    
+    
     @Nullable
     private com.commercetools.api.models.common.LocalizedString description;
-
+    
+    
+    
     private com.commercetools.api.models.common.LocalizedString slug;
-
+    
+    
     @Nullable
     private com.commercetools.api.models.common.LocalizedString metaTitle;
-
+    
+    
     @Nullable
     private com.commercetools.api.models.common.LocalizedString metaDescription;
-
+    
+    
     @Nullable
     private com.commercetools.api.models.common.LocalizedString metaKeywords;
-
+    
+    
+    
     private com.commercetools.api.models.product.ProductVariant masterVariant;
-
+    
+    
+    
     private java.util.List<com.commercetools.api.models.product.ProductVariant> variants;
-
+    
+    
+    
     private com.commercetools.api.models.product.SearchKeywords searchKeywords;
 
+    
     /**
      *  <p>Name of the Product.</p>
      * @param builder function to build the name value
      * @return Builder
      */
-
-    public ProductDataBuilder name(
-            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
+    
+    public ProductDataBuilder name(Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
         this.name = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of()).build();
         return this;
     }
-
+    
     /**
      *  <p>Name of the Product.</p>
      * @param builder function to build the name value
      * @return Builder
      */
-
-    public ProductDataBuilder withName(
-            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedString> builder) {
+    
+    public ProductDataBuilder withName(Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedString> builder) {
         this.name = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of());
         return this;
     }
-
+                    
     /**
      *  <p>Name of the Product.</p>
      * @param name value to be set
      * @return Builder
      */
-
-    public ProductDataBuilder name(final com.commercetools.api.models.common.LocalizedString name) {
+    
+    public ProductDataBuilder name( final com.commercetools.api.models.common.LocalizedString name) {
         this.name = name;
         return this;
     }
-
+    
+    
+    
     /**
      *  <p>Categories assigned to the Product.</p>
      * @param categories value to be set
      * @return Builder
      */
-
-    public ProductDataBuilder categories(final com.commercetools.api.models.category.CategoryReference... categories) {
+    
+    public ProductDataBuilder categories( final com.commercetools.api.models.category.CategoryReference ...categories) {
         this.categories = new ArrayList<>(Arrays.asList(categories));
         return this;
     }
-
+    
     /**
      *  <p>Categories assigned to the Product.</p>
      * @param categories value to be set
      * @return Builder
      */
-
-    public ProductDataBuilder categories(
-            final java.util.List<com.commercetools.api.models.category.CategoryReference> categories) {
+    
+    public ProductDataBuilder categories( final java.util.List<com.commercetools.api.models.category.CategoryReference> categories) {
         this.categories = categories;
         return this;
     }
-
+    
     /**
      *  <p>Categories assigned to the Product.</p>
      * @param categories value to be set
      * @return Builder
      */
-
-    public ProductDataBuilder plusCategories(
-            final com.commercetools.api.models.category.CategoryReference... categories) {
+    
+    public ProductDataBuilder plusCategories( final com.commercetools.api.models.category.CategoryReference ...categories) {
         if (this.categories == null) {
             this.categories = new ArrayList<>();
         }
         this.categories.addAll(Arrays.asList(categories));
         return this;
     }
-
+    
+    
+    
     /**
      *  <p>Categories assigned to the Product.</p>
      * @param builder function to build the categories value
      * @return Builder
      */
-
-    public ProductDataBuilder plusCategories(
-            Function<com.commercetools.api.models.category.CategoryReferenceBuilder, com.commercetools.api.models.category.CategoryReferenceBuilder> builder) {
+    
+    public ProductDataBuilder plusCategories(Function<com.commercetools.api.models.category.CategoryReferenceBuilder, com.commercetools.api.models.category.CategoryReferenceBuilder> builder) {
         if (this.categories == null) {
             this.categories = new ArrayList<>();
         }
         this.categories.add(builder.apply(com.commercetools.api.models.category.CategoryReferenceBuilder.of()).build());
         return this;
     }
-
+    
     /**
      *  <p>Categories assigned to the Product.</p>
      * @param builder function to build the categories value
      * @return Builder
      */
-
-    public ProductDataBuilder withCategories(
-            Function<com.commercetools.api.models.category.CategoryReferenceBuilder, com.commercetools.api.models.category.CategoryReferenceBuilder> builder) {
+    
+    public ProductDataBuilder withCategories(Function<com.commercetools.api.models.category.CategoryReferenceBuilder, com.commercetools.api.models.category.CategoryReferenceBuilder> builder) {
         this.categories = new ArrayList<>();
         this.categories.add(builder.apply(com.commercetools.api.models.category.CategoryReferenceBuilder.of()).build());
         return this;
     }
-
+    
     /**
      *  <p>Categories assigned to the Product.</p>
      * @param builder function to build the categories value
      * @return Builder
      */
-
-    public ProductDataBuilder addCategories(
-            Function<com.commercetools.api.models.category.CategoryReferenceBuilder, com.commercetools.api.models.category.CategoryReference> builder) {
+    
+    public ProductDataBuilder addCategories(Function<com.commercetools.api.models.category.CategoryReferenceBuilder, com.commercetools.api.models.category.CategoryReference> builder) {
         return plusCategories(builder.apply(com.commercetools.api.models.category.CategoryReferenceBuilder.of()));
     }
-
+    
     /**
      *  <p>Categories assigned to the Product.</p>
      * @param builder function to build the categories value
      * @return Builder
      */
-
-    public ProductDataBuilder setCategories(
-            Function<com.commercetools.api.models.category.CategoryReferenceBuilder, com.commercetools.api.models.category.CategoryReference> builder) {
+    
+    public ProductDataBuilder setCategories(Function<com.commercetools.api.models.category.CategoryReferenceBuilder, com.commercetools.api.models.category.CategoryReference> builder) {
         return categories(builder.apply(com.commercetools.api.models.category.CategoryReferenceBuilder.of()));
     }
-
+                    
+    
+    
     /**
      *  <p>Numerical values to allow ordering of Products within a specified Category.</p>
      * @param builder function to build the categoryOrderHints value
      * @return Builder
      */
-
-    public ProductDataBuilder categoryOrderHints(
-            Function<com.commercetools.api.models.product.CategoryOrderHintsBuilder, com.commercetools.api.models.product.CategoryOrderHintsBuilder> builder) {
-        this.categoryOrderHints = builder.apply(com.commercetools.api.models.product.CategoryOrderHintsBuilder.of())
-                .build();
+    
+    public ProductDataBuilder categoryOrderHints(Function<com.commercetools.api.models.product.CategoryOrderHintsBuilder, com.commercetools.api.models.product.CategoryOrderHintsBuilder> builder) {
+        this.categoryOrderHints = builder.apply(com.commercetools.api.models.product.CategoryOrderHintsBuilder.of()).build();
         return this;
     }
-
+    
     /**
      *  <p>Numerical values to allow ordering of Products within a specified Category.</p>
      * @param builder function to build the categoryOrderHints value
      * @return Builder
      */
-
-    public ProductDataBuilder withCategoryOrderHints(
-            Function<com.commercetools.api.models.product.CategoryOrderHintsBuilder, com.commercetools.api.models.product.CategoryOrderHints> builder) {
+    
+    public ProductDataBuilder withCategoryOrderHints(Function<com.commercetools.api.models.product.CategoryOrderHintsBuilder, com.commercetools.api.models.product.CategoryOrderHints> builder) {
         this.categoryOrderHints = builder.apply(com.commercetools.api.models.product.CategoryOrderHintsBuilder.of());
         return this;
     }
-
+                    
     /**
      *  <p>Numerical values to allow ordering of Products within a specified Category.</p>
      * @param categoryOrderHints value to be set
      * @return Builder
      */
-
-    public ProductDataBuilder categoryOrderHints(
-            @Nullable final com.commercetools.api.models.product.CategoryOrderHints categoryOrderHints) {
+    
+    public ProductDataBuilder categoryOrderHints(@Nullable final com.commercetools.api.models.product.CategoryOrderHints categoryOrderHints) {
         this.categoryOrderHints = categoryOrderHints;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Description of the Product.</p>
      * @param builder function to build the description value
      * @return Builder
      */
-
-    public ProductDataBuilder description(
-            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
+    
+    public ProductDataBuilder description(Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
         this.description = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of()).build();
         return this;
     }
-
+    
     /**
      *  <p>Description of the Product.</p>
      * @param builder function to build the description value
      * @return Builder
      */
-
-    public ProductDataBuilder withDescription(
-            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedString> builder) {
+    
+    public ProductDataBuilder withDescription(Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedString> builder) {
         this.description = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of());
         return this;
     }
-
+                    
     /**
      *  <p>Description of the Product.</p>
      * @param description value to be set
      * @return Builder
      */
-
-    public ProductDataBuilder description(
-            @Nullable final com.commercetools.api.models.common.LocalizedString description) {
+    
+    public ProductDataBuilder description(@Nullable final com.commercetools.api.models.common.LocalizedString description) {
         this.description = description;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>User-defined identifier used in a deep-link URL for the Product. Must be unique across a Project, but can be the same for Products in different Locales. Matches the pattern <code>[a-zA-Z0-9_\\-]{2,256}</code>.</p>
      * @param builder function to build the slug value
      * @return Builder
      */
-
-    public ProductDataBuilder slug(
-            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
+    
+    public ProductDataBuilder slug(Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
         this.slug = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of()).build();
         return this;
     }
-
+    
     /**
      *  <p>User-defined identifier used in a deep-link URL for the Product. Must be unique across a Project, but can be the same for Products in different Locales. Matches the pattern <code>[a-zA-Z0-9_\\-]{2,256}</code>.</p>
      * @param builder function to build the slug value
      * @return Builder
      */
-
-    public ProductDataBuilder withSlug(
-            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedString> builder) {
+    
+    public ProductDataBuilder withSlug(Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedString> builder) {
         this.slug = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of());
         return this;
     }
-
+                    
     /**
      *  <p>User-defined identifier used in a deep-link URL for the Product. Must be unique across a Project, but can be the same for Products in different Locales. Matches the pattern <code>[a-zA-Z0-9_\\-]{2,256}</code>.</p>
      * @param slug value to be set
      * @return Builder
      */
-
-    public ProductDataBuilder slug(final com.commercetools.api.models.common.LocalizedString slug) {
+    
+    public ProductDataBuilder slug( final com.commercetools.api.models.common.LocalizedString slug) {
         this.slug = slug;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Title of the Product displayed in search results.</p>
      * @param builder function to build the metaTitle value
      * @return Builder
      */
-
-    public ProductDataBuilder metaTitle(
-            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
+    
+    public ProductDataBuilder metaTitle(Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
         this.metaTitle = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of()).build();
         return this;
     }
-
+    
     /**
      *  <p>Title of the Product displayed in search results.</p>
      * @param builder function to build the metaTitle value
      * @return Builder
      */
-
-    public ProductDataBuilder withMetaTitle(
-            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedString> builder) {
+    
+    public ProductDataBuilder withMetaTitle(Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedString> builder) {
         this.metaTitle = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of());
         return this;
     }
-
+                    
     /**
      *  <p>Title of the Product displayed in search results.</p>
      * @param metaTitle value to be set
      * @return Builder
      */
-
+    
     public ProductDataBuilder metaTitle(@Nullable final com.commercetools.api.models.common.LocalizedString metaTitle) {
         this.metaTitle = metaTitle;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Description of the Product displayed in search results below the meta title.</p>
      * @param builder function to build the metaDescription value
      * @return Builder
      */
-
-    public ProductDataBuilder metaDescription(
-            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
+    
+    public ProductDataBuilder metaDescription(Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
         this.metaDescription = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of()).build();
         return this;
     }
-
+    
     /**
      *  <p>Description of the Product displayed in search results below the meta title.</p>
      * @param builder function to build the metaDescription value
      * @return Builder
      */
-
-    public ProductDataBuilder withMetaDescription(
-            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedString> builder) {
+    
+    public ProductDataBuilder withMetaDescription(Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedString> builder) {
         this.metaDescription = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of());
         return this;
     }
-
+                    
     /**
      *  <p>Description of the Product displayed in search results below the meta title.</p>
      * @param metaDescription value to be set
      * @return Builder
      */
-
-    public ProductDataBuilder metaDescription(
-            @Nullable final com.commercetools.api.models.common.LocalizedString metaDescription) {
+    
+    public ProductDataBuilder metaDescription(@Nullable final com.commercetools.api.models.common.LocalizedString metaDescription) {
         this.metaDescription = metaDescription;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Keywords that give additional information about the Product to search engines.</p>
      * @param builder function to build the metaKeywords value
      * @return Builder
      */
-
-    public ProductDataBuilder metaKeywords(
-            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
+    
+    public ProductDataBuilder metaKeywords(Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
         this.metaKeywords = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of()).build();
         return this;
     }
-
+    
     /**
      *  <p>Keywords that give additional information about the Product to search engines.</p>
      * @param builder function to build the metaKeywords value
      * @return Builder
      */
-
-    public ProductDataBuilder withMetaKeywords(
-            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedString> builder) {
+    
+    public ProductDataBuilder withMetaKeywords(Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedString> builder) {
         this.metaKeywords = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of());
         return this;
     }
-
+                    
     /**
      *  <p>Keywords that give additional information about the Product to search engines.</p>
      * @param metaKeywords value to be set
      * @return Builder
      */
-
-    public ProductDataBuilder metaKeywords(
-            @Nullable final com.commercetools.api.models.common.LocalizedString metaKeywords) {
+    
+    public ProductDataBuilder metaKeywords(@Nullable final com.commercetools.api.models.common.LocalizedString metaKeywords) {
         this.metaKeywords = metaKeywords;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>The Master Variant of the Product.</p>
      * @param builder function to build the masterVariant value
      * @return Builder
      */
-
-    public ProductDataBuilder masterVariant(
-            Function<com.commercetools.api.models.product.ProductVariantBuilder, com.commercetools.api.models.product.ProductVariantBuilder> builder) {
+    
+    public ProductDataBuilder masterVariant(Function<com.commercetools.api.models.product.ProductVariantBuilder, com.commercetools.api.models.product.ProductVariantBuilder> builder) {
         this.masterVariant = builder.apply(com.commercetools.api.models.product.ProductVariantBuilder.of()).build();
         return this;
     }
-
+    
     /**
      *  <p>The Master Variant of the Product.</p>
      * @param builder function to build the masterVariant value
      * @return Builder
      */
-
-    public ProductDataBuilder withMasterVariant(
-            Function<com.commercetools.api.models.product.ProductVariantBuilder, com.commercetools.api.models.product.ProductVariant> builder) {
+    
+    public ProductDataBuilder withMasterVariant(Function<com.commercetools.api.models.product.ProductVariantBuilder, com.commercetools.api.models.product.ProductVariant> builder) {
         this.masterVariant = builder.apply(com.commercetools.api.models.product.ProductVariantBuilder.of());
         return this;
     }
-
+                    
     /**
      *  <p>The Master Variant of the Product.</p>
      * @param masterVariant value to be set
      * @return Builder
      */
-
-    public ProductDataBuilder masterVariant(final com.commercetools.api.models.product.ProductVariant masterVariant) {
+    
+    public ProductDataBuilder masterVariant( final com.commercetools.api.models.product.ProductVariant masterVariant) {
         this.masterVariant = masterVariant;
         return this;
     }
-
+    
+    
+    
     /**
      *  <p>Additional Product Variants.</p>
      * @param variants value to be set
      * @return Builder
      */
-
-    public ProductDataBuilder variants(final com.commercetools.api.models.product.ProductVariant... variants) {
+    
+    public ProductDataBuilder variants( final com.commercetools.api.models.product.ProductVariant ...variants) {
         this.variants = new ArrayList<>(Arrays.asList(variants));
         return this;
     }
-
+    
     /**
      *  <p>Additional Product Variants.</p>
      * @param variants value to be set
      * @return Builder
      */
-
-    public ProductDataBuilder variants(
-            final java.util.List<com.commercetools.api.models.product.ProductVariant> variants) {
+    
+    public ProductDataBuilder variants( final java.util.List<com.commercetools.api.models.product.ProductVariant> variants) {
         this.variants = variants;
         return this;
     }
-
+    
     /**
      *  <p>Additional Product Variants.</p>
      * @param variants value to be set
      * @return Builder
      */
-
-    public ProductDataBuilder plusVariants(final com.commercetools.api.models.product.ProductVariant... variants) {
+    
+    public ProductDataBuilder plusVariants( final com.commercetools.api.models.product.ProductVariant ...variants) {
         if (this.variants == null) {
             this.variants = new ArrayList<>();
         }
         this.variants.addAll(Arrays.asList(variants));
         return this;
     }
-
+    
+    
+    
     /**
      *  <p>Additional Product Variants.</p>
      * @param builder function to build the variants value
      * @return Builder
      */
-
-    public ProductDataBuilder plusVariants(
-            Function<com.commercetools.api.models.product.ProductVariantBuilder, com.commercetools.api.models.product.ProductVariantBuilder> builder) {
+    
+    public ProductDataBuilder plusVariants(Function<com.commercetools.api.models.product.ProductVariantBuilder, com.commercetools.api.models.product.ProductVariantBuilder> builder) {
         if (this.variants == null) {
             this.variants = new ArrayList<>();
         }
         this.variants.add(builder.apply(com.commercetools.api.models.product.ProductVariantBuilder.of()).build());
         return this;
     }
-
+    
     /**
      *  <p>Additional Product Variants.</p>
      * @param builder function to build the variants value
      * @return Builder
      */
-
-    public ProductDataBuilder withVariants(
-            Function<com.commercetools.api.models.product.ProductVariantBuilder, com.commercetools.api.models.product.ProductVariantBuilder> builder) {
+    
+    public ProductDataBuilder withVariants(Function<com.commercetools.api.models.product.ProductVariantBuilder, com.commercetools.api.models.product.ProductVariantBuilder> builder) {
         this.variants = new ArrayList<>();
         this.variants.add(builder.apply(com.commercetools.api.models.product.ProductVariantBuilder.of()).build());
         return this;
     }
-
+    
     /**
      *  <p>Additional Product Variants.</p>
      * @param builder function to build the variants value
      * @return Builder
      */
-
-    public ProductDataBuilder addVariants(
-            Function<com.commercetools.api.models.product.ProductVariantBuilder, com.commercetools.api.models.product.ProductVariant> builder) {
+    
+    public ProductDataBuilder addVariants(Function<com.commercetools.api.models.product.ProductVariantBuilder, com.commercetools.api.models.product.ProductVariant> builder) {
         return plusVariants(builder.apply(com.commercetools.api.models.product.ProductVariantBuilder.of()));
     }
-
+    
     /**
      *  <p>Additional Product Variants.</p>
      * @param builder function to build the variants value
      * @return Builder
      */
-
-    public ProductDataBuilder setVariants(
-            Function<com.commercetools.api.models.product.ProductVariantBuilder, com.commercetools.api.models.product.ProductVariant> builder) {
+    
+    public ProductDataBuilder setVariants(Function<com.commercetools.api.models.product.ProductVariantBuilder, com.commercetools.api.models.product.ProductVariant> builder) {
         return variants(builder.apply(com.commercetools.api.models.product.ProductVariantBuilder.of()));
     }
-
+                    
+    
+    
     /**
      *  <p>Used by Product Suggestions, but is also considered for a full text search.</p>
      * @param builder function to build the searchKeywords value
      * @return Builder
      */
-
-    public ProductDataBuilder searchKeywords(
-            Function<com.commercetools.api.models.product.SearchKeywordsBuilder, com.commercetools.api.models.product.SearchKeywordsBuilder> builder) {
+    
+    public ProductDataBuilder searchKeywords(Function<com.commercetools.api.models.product.SearchKeywordsBuilder, com.commercetools.api.models.product.SearchKeywordsBuilder> builder) {
         this.searchKeywords = builder.apply(com.commercetools.api.models.product.SearchKeywordsBuilder.of()).build();
         return this;
     }
-
+    
     /**
      *  <p>Used by Product Suggestions, but is also considered for a full text search.</p>
      * @param builder function to build the searchKeywords value
      * @return Builder
      */
-
-    public ProductDataBuilder withSearchKeywords(
-            Function<com.commercetools.api.models.product.SearchKeywordsBuilder, com.commercetools.api.models.product.SearchKeywords> builder) {
+    
+    public ProductDataBuilder withSearchKeywords(Function<com.commercetools.api.models.product.SearchKeywordsBuilder, com.commercetools.api.models.product.SearchKeywords> builder) {
         this.searchKeywords = builder.apply(com.commercetools.api.models.product.SearchKeywordsBuilder.of());
         return this;
     }
-
+                    
     /**
      *  <p>Used by Product Suggestions, but is also considered for a full text search.</p>
      * @param searchKeywords value to be set
      * @return Builder
      */
-
-    public ProductDataBuilder searchKeywords(final com.commercetools.api.models.product.SearchKeywords searchKeywords) {
+    
+    public ProductDataBuilder searchKeywords( final com.commercetools.api.models.product.SearchKeywords searchKeywords) {
         this.searchKeywords = searchKeywords;
         return this;
     }
+    
+    
 
     /**
      *  <p>Name of the Product.</p>
      * @return name
      */
-
-    public com.commercetools.api.models.common.LocalizedString getName() {
+    
+    
+    public com.commercetools.api.models.common.LocalizedString getName(){
         return this.name;
     }
-
+    
     /**
      *  <p>Categories assigned to the Product.</p>
      * @return categories
      */
-
-    public java.util.List<com.commercetools.api.models.category.CategoryReference> getCategories() {
+    
+    
+    public java.util.List<com.commercetools.api.models.category.CategoryReference> getCategories(){
         return this.categories;
     }
-
+    
     /**
      *  <p>Numerical values to allow ordering of Products within a specified Category.</p>
      * @return categoryOrderHints
      */
-
+    
     @Nullable
-    public com.commercetools.api.models.product.CategoryOrderHints getCategoryOrderHints() {
+    public com.commercetools.api.models.product.CategoryOrderHints getCategoryOrderHints(){
         return this.categoryOrderHints;
     }
-
+    
     /**
      *  <p>Description of the Product.</p>
      * @return description
      */
-
+    
     @Nullable
-    public com.commercetools.api.models.common.LocalizedString getDescription() {
+    public com.commercetools.api.models.common.LocalizedString getDescription(){
         return this.description;
     }
-
+    
     /**
      *  <p>User-defined identifier used in a deep-link URL for the Product. Must be unique across a Project, but can be the same for Products in different Locales. Matches the pattern <code>[a-zA-Z0-9_\\-]{2,256}</code>.</p>
      * @return slug
      */
-
-    public com.commercetools.api.models.common.LocalizedString getSlug() {
+    
+    
+    public com.commercetools.api.models.common.LocalizedString getSlug(){
         return this.slug;
     }
-
+    
     /**
      *  <p>Title of the Product displayed in search results.</p>
      * @return metaTitle
      */
-
+    
     @Nullable
-    public com.commercetools.api.models.common.LocalizedString getMetaTitle() {
+    public com.commercetools.api.models.common.LocalizedString getMetaTitle(){
         return this.metaTitle;
     }
-
+    
     /**
      *  <p>Description of the Product displayed in search results below the meta title.</p>
      * @return metaDescription
      */
-
+    
     @Nullable
-    public com.commercetools.api.models.common.LocalizedString getMetaDescription() {
+    public com.commercetools.api.models.common.LocalizedString getMetaDescription(){
         return this.metaDescription;
     }
-
+    
     /**
      *  <p>Keywords that give additional information about the Product to search engines.</p>
      * @return metaKeywords
      */
-
+    
     @Nullable
-    public com.commercetools.api.models.common.LocalizedString getMetaKeywords() {
+    public com.commercetools.api.models.common.LocalizedString getMetaKeywords(){
         return this.metaKeywords;
     }
-
+    
     /**
      *  <p>The Master Variant of the Product.</p>
      * @return masterVariant
      */
-
-    public com.commercetools.api.models.product.ProductVariant getMasterVariant() {
+    
+    
+    public com.commercetools.api.models.product.ProductVariant getMasterVariant(){
         return this.masterVariant;
     }
-
+    
     /**
      *  <p>Additional Product Variants.</p>
      * @return variants
      */
-
-    public java.util.List<com.commercetools.api.models.product.ProductVariant> getVariants() {
+    
+    
+    public java.util.List<com.commercetools.api.models.product.ProductVariant> getVariants(){
         return this.variants;
     }
-
+    
     /**
      *  <p>Used by Product Suggestions, but is also considered for a full text search.</p>
      * @return searchKeywords
      */
-
-    public com.commercetools.api.models.product.SearchKeywords getSearchKeywords() {
+    
+    
+    public com.commercetools.api.models.product.SearchKeywords getSearchKeywords(){
         return this.searchKeywords;
     }
 
@@ -666,22 +695,20 @@ public class ProductDataBuilder implements Builder<ProductData> {
         Objects.requireNonNull(masterVariant, ProductData.class + ": masterVariant is missing");
         Objects.requireNonNull(variants, ProductData.class + ": variants is missing");
         Objects.requireNonNull(searchKeywords, ProductData.class + ": searchKeywords is missing");
-        return new ProductDataImpl(name, categories, categoryOrderHints, description, slug, metaTitle, metaDescription,
-            metaKeywords, masterVariant, variants, searchKeywords);
+        return new ProductDataImpl(name, categories, categoryOrderHints, description, slug, metaTitle, metaDescription, metaKeywords, masterVariant, variants, searchKeywords);
     }
-
+    
     /**
      * builds ProductData without checking for non-null required values
      * @return ProductData
      */
     public ProductData buildUnchecked() {
-        return new ProductDataImpl(name, categories, categoryOrderHints, description, slug, metaTitle, metaDescription,
-            metaKeywords, masterVariant, variants, searchKeywords);
+        return new ProductDataImpl(name, categories, categoryOrderHints, description, slug, metaTitle, metaDescription, metaKeywords, masterVariant, variants, searchKeywords);
     }
 
     /**
      * factory method for an instance of ProductDataBuilder
-     * @return builder
+     * @return builder 
      */
     public static ProductDataBuilder of() {
         return new ProductDataBuilder();

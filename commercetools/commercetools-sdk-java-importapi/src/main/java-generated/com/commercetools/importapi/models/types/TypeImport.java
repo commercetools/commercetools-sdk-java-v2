@@ -1,21 +1,23 @@
-
 package com.commercetools.importapi.models.types;
-
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-import java.util.stream.Collectors;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.importapi.models.common.ImportResource;
 import com.commercetools.importapi.models.common.LocalizedString;
+import com.commercetools.importapi.models.types.FieldDefinition;
+import com.commercetools.importapi.models.types.ResourceTypeId;
+import com.commercetools.importapi.models.types.TypeImportImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>The data representation for a Type to be imported that is persisted as a Type in the Project.</p>
@@ -30,11 +32,15 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .plusResourceTypeIds(resourceTypeIdsBuilder -> resourceTypeIdsBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = TypeImportImpl.class)
 public interface TypeImport extends ImportResource {
+
 
     /**
      *  <p>User-defined unique identifier for the Type.</p>
@@ -43,7 +49,6 @@ public interface TypeImport extends ImportResource {
     @NotNull
     @JsonProperty("key")
     public String getKey();
-
     /**
      *  <p>Maps to <code>Type.name</code>.</p>
      * @return name
@@ -52,7 +57,6 @@ public interface TypeImport extends ImportResource {
     @Valid
     @JsonProperty("name")
     public LocalizedString getName();
-
     /**
      *  <p>Maps to <code>Type.description</code>.</p>
      * @return description
@@ -60,7 +64,6 @@ public interface TypeImport extends ImportResource {
     @Valid
     @JsonProperty("description")
     public LocalizedString getDescription();
-
     /**
      *  <p>Maps to <code>Type.resourceTypeIds</code>. This value cannot be changed after the Type is imported.</p>
      * @return resourceTypeIds
@@ -68,7 +71,6 @@ public interface TypeImport extends ImportResource {
     @NotNull
     @JsonProperty("resourceTypeIds")
     public List<ResourceTypeId> getResourceTypeIds();
-
     /**
      *  <p>Maps to <code>Type.fieldDefinitions</code>.</p>
      * @return fieldDefinitions
@@ -81,60 +83,62 @@ public interface TypeImport extends ImportResource {
      *  <p>User-defined unique identifier for the Type.</p>
      * @param key value to be set
      */
-
+    
     public void setKey(final String key);
-
+    
+    
     /**
      *  <p>Maps to <code>Type.name</code>.</p>
      * @param name value to be set
      */
-
+    
     public void setName(final LocalizedString name);
-
+    
+    
     /**
      *  <p>Maps to <code>Type.description</code>.</p>
      * @param description value to be set
      */
-
+    
     public void setDescription(final LocalizedString description);
-
+    
+    
     /**
      *  <p>Maps to <code>Type.resourceTypeIds</code>. This value cannot be changed after the Type is imported.</p>
      * @param resourceTypeIds values to be set
      */
-
+    
     @JsonIgnore
-    public void setResourceTypeIds(final ResourceTypeId... resourceTypeIds);
-
+    public void setResourceTypeIds(final ResourceTypeId ...resourceTypeIds);
     /**
      *  <p>Maps to <code>Type.resourceTypeIds</code>. This value cannot be changed after the Type is imported.</p>
      * @param resourceTypeIds values to be set
      */
-
+    
     public void setResourceTypeIds(final List<ResourceTypeId> resourceTypeIds);
-
+    
     /**
      *  <p>Maps to <code>Type.fieldDefinitions</code>.</p>
      * @param fieldDefinitions values to be set
      */
-
+    
     @JsonIgnore
-    public void setFieldDefinitions(final FieldDefinition... fieldDefinitions);
-
+    public void setFieldDefinitions(final FieldDefinition ...fieldDefinitions);
     /**
      *  <p>Maps to <code>Type.fieldDefinitions</code>.</p>
      * @param fieldDefinitions values to be set
      */
-
+    
     public void setFieldDefinitions(final List<FieldDefinition> fieldDefinitions);
 
     /**
      * factory method
      * @return instance of TypeImport
      */
-    public static TypeImport of() {
+    public static TypeImport of(){
         return new TypeImportImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy TypeImport
@@ -164,14 +168,12 @@ public interface TypeImport extends ImportResource {
         TypeImportImpl instance = new TypeImportImpl();
         instance.setKey(template.getKey());
         instance.setName(com.commercetools.importapi.models.common.LocalizedString.deepCopy(template.getName()));
-        instance.setDescription(
-            com.commercetools.importapi.models.common.LocalizedString.deepCopy(template.getDescription()));
-        instance.setResourceTypeIds(
-            Optional.ofNullable(template.getResourceTypeIds()).map(ArrayList::new).orElse(null));
+        instance.setDescription(com.commercetools.importapi.models.common.LocalizedString.deepCopy(template.getDescription()));
+        instance.setResourceTypeIds(Optional.ofNullable(template.getResourceTypeIds())
+                .map(ArrayList::new)
+                .orElse(null));
         instance.setFieldDefinitions(Optional.ofNullable(template.getFieldDefinitions())
-                .map(t -> t.stream()
-                        .map(com.commercetools.importapi.models.types.FieldDefinition::deepCopy)
-                        .collect(Collectors.toList()))
+                .map(t -> t.stream().map(com.commercetools.importapi.models.types.FieldDefinition::deepCopy).collect(Collectors.toList()))
                 .orElse(null));
         return instance;
     }
@@ -183,7 +185,7 @@ public interface TypeImport extends ImportResource {
     public static TypeImportBuilder builder() {
         return TypeImportBuilder.of();
     }
-
+    
     /**
      * create builder for TypeImport instance
      * @param template instance with prefilled values for the builder
@@ -192,6 +194,7 @@ public interface TypeImport extends ImportResource {
     public static TypeImportBuilder builder(final TypeImport template) {
         return TypeImportBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -202,7 +205,7 @@ public interface TypeImport extends ImportResource {
     default <T> T withTypeImport(Function<TypeImport, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

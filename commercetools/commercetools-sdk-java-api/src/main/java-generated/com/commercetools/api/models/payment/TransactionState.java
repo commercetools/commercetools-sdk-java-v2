@@ -1,42 +1,43 @@
-
 package com.commercetools.api.models.payment;
-
-import java.util.Arrays;
-import java.util.Optional;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-
+import java.lang.String;
+import java.util.Arrays;
+import java.util.Optional;
 import io.vrap.rmf.base.client.JsonEnum;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
  *  <p>Transactions can be in one of the following States:</p>
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public interface TransactionState extends JsonEnum {
 
     /**
     	<p>Initial State. The payment service has not accepted the Transaction yet.</p>
-
+    	
     */
     TransactionState INITIAL = TransactionStateEnum.INITIAL;
     /**
     	<p>The payment service has accepted the Transaction, but it is not completed yet.</p>
-
+    	
     */
     TransactionState PENDING = TransactionStateEnum.PENDING;
     /**
     	<p>The payment service has confirmed the successful completion of the Transation.</p>
-
+    	
     */
     TransactionState SUCCESS = TransactionStateEnum.SUCCESS;
     /**
     	<p>Transaction has unrecoverably failed.</p>
-
+    	
     */
     TransactionState FAILURE = TransactionStateEnum.FAILURE;
-
+    
     /**
      * possible values of TransactionState
      */
@@ -45,17 +46,17 @@ public interface TransactionState extends JsonEnum {
          * Initial
          */
         INITIAL("Initial"),
-
+        
         /**
          * Pending
          */
         PENDING("Pending"),
-
+        
         /**
          * Success
          */
         SUCCESS("Success"),
-
+        
         /**
          * Failure
          */
@@ -112,7 +113,7 @@ public interface TransactionState extends JsonEnum {
             public String name() {
                 return value.toUpperCase();
             }
-
+            
             public String toString() {
                 return value;
             }
@@ -127,7 +128,7 @@ public interface TransactionState extends JsonEnum {
     public static Optional<TransactionState> findEnumViaJsonName(String jsonName) {
         return Arrays.stream(values()).filter(t -> t.getJsonName().equals(jsonName)).findFirst();
     }
-
+    
     /**
      * possible enum values
      * @return array of possible enum values
@@ -135,5 +136,5 @@ public interface TransactionState extends JsonEnum {
     public static TransactionState[] values() {
         return TransactionStateEnum.values();
     }
-
+    
 }

@@ -1,11 +1,12 @@
-
 package com.commercetools.api.models.order;
 
+import com.commercetools.api.models.order.OrderUpdateAction;
+import com.commercetools.api.models.store.StoreResourceIdentifier;
+import com.commercetools.api.models.order.OrderSetStoreAction;
+import javax.annotation.Nullable;
 import java.util.*;
 import java.util.function.Function;
-
-import javax.annotation.Nullable;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -18,57 +19,61 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     OrderSetStoreAction orderSetStoreAction = OrderSetStoreAction.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class OrderSetStoreActionBuilder implements Builder<OrderSetStoreAction> {
 
+    
     @Nullable
     private com.commercetools.api.models.store.StoreResourceIdentifier store;
 
+    
     /**
      *  <p>ResourceIdentifier to a Store.</p>
      * @param builder function to build the store value
      * @return Builder
      */
-
-    public OrderSetStoreActionBuilder store(
-            Function<com.commercetools.api.models.store.StoreResourceIdentifierBuilder, com.commercetools.api.models.store.StoreResourceIdentifierBuilder> builder) {
+    
+    public OrderSetStoreActionBuilder store(Function<com.commercetools.api.models.store.StoreResourceIdentifierBuilder, com.commercetools.api.models.store.StoreResourceIdentifierBuilder> builder) {
         this.store = builder.apply(com.commercetools.api.models.store.StoreResourceIdentifierBuilder.of()).build();
         return this;
     }
-
+    
     /**
      *  <p>ResourceIdentifier to a Store.</p>
      * @param builder function to build the store value
      * @return Builder
      */
-
-    public OrderSetStoreActionBuilder withStore(
-            Function<com.commercetools.api.models.store.StoreResourceIdentifierBuilder, com.commercetools.api.models.store.StoreResourceIdentifier> builder) {
+    
+    public OrderSetStoreActionBuilder withStore(Function<com.commercetools.api.models.store.StoreResourceIdentifierBuilder, com.commercetools.api.models.store.StoreResourceIdentifier> builder) {
         this.store = builder.apply(com.commercetools.api.models.store.StoreResourceIdentifierBuilder.of());
         return this;
     }
-
+                    
     /**
      *  <p>ResourceIdentifier to a Store.</p>
      * @param store value to be set
      * @return Builder
      */
-
-    public OrderSetStoreActionBuilder store(
-            @Nullable final com.commercetools.api.models.store.StoreResourceIdentifier store) {
+    
+    public OrderSetStoreActionBuilder store(@Nullable final com.commercetools.api.models.store.StoreResourceIdentifier store) {
         this.store = store;
         return this;
     }
+    
+    
 
     /**
      *  <p>ResourceIdentifier to a Store.</p>
      * @return store
      */
-
+    
     @Nullable
-    public com.commercetools.api.models.store.StoreResourceIdentifier getStore() {
+    public com.commercetools.api.models.store.StoreResourceIdentifier getStore(){
         return this.store;
     }
 
@@ -79,7 +84,7 @@ public class OrderSetStoreActionBuilder implements Builder<OrderSetStoreAction> 
     public OrderSetStoreAction build() {
         return new OrderSetStoreActionImpl(store);
     }
-
+    
     /**
      * builds OrderSetStoreAction without checking for non-null required values
      * @return OrderSetStoreAction
@@ -90,7 +95,7 @@ public class OrderSetStoreActionBuilder implements Builder<OrderSetStoreAction> 
 
     /**
      * factory method for an instance of OrderSetStoreActionBuilder
-     * @return builder
+     * @return builder 
      */
     public static OrderSetStoreActionBuilder of() {
         return new OrderSetStoreActionBuilder();

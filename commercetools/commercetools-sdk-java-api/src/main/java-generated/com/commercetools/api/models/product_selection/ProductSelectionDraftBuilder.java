@@ -1,11 +1,14 @@
-
 package com.commercetools.api.models.product_selection;
 
+import com.commercetools.api.models.common.LocalizedString;
+import com.commercetools.api.models.product_selection.ProductSelectionMode;
+import com.commercetools.api.models.product_selection.ProductSelectionTypeEnum;
+import com.commercetools.api.models.type.CustomFieldsDraft;
+import com.commercetools.api.models.product_selection.ProductSelectionDraft;
+import javax.annotation.Nullable;
 import java.util.*;
 import java.util.function.Function;
-
-import javax.annotation.Nullable;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -19,178 +22,195 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .name(nameBuilder -> nameBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class ProductSelectionDraftBuilder implements Builder<ProductSelectionDraft> {
 
+    
     @Nullable
     private String key;
-
+    
+    
+    
     private com.commercetools.api.models.common.LocalizedString name;
-
+    
+    
     @Nullable
     private com.commercetools.api.models.type.CustomFieldsDraft custom;
-
+    
     @Deprecated
     @Nullable
     private com.commercetools.api.models.product_selection.ProductSelectionTypeEnum type;
-
+    
+    
     @Nullable
     private com.commercetools.api.models.product_selection.ProductSelectionMode mode;
 
+    
     /**
      *  <p>User-defined unique identifier for the ProductSelection.</p>
      * @param key value to be set
      * @return Builder
      */
-
+    
     public ProductSelectionDraftBuilder key(@Nullable final String key) {
         this.key = key;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Name of the ProductSelection. Not checked for uniqueness, but distinct names are recommended.</p>
      * @param builder function to build the name value
      * @return Builder
      */
-
-    public ProductSelectionDraftBuilder name(
-            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
+    
+    public ProductSelectionDraftBuilder name(Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
         this.name = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of()).build();
         return this;
     }
-
+    
     /**
      *  <p>Name of the ProductSelection. Not checked for uniqueness, but distinct names are recommended.</p>
      * @param builder function to build the name value
      * @return Builder
      */
-
-    public ProductSelectionDraftBuilder withName(
-            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedString> builder) {
+    
+    public ProductSelectionDraftBuilder withName(Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedString> builder) {
         this.name = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of());
         return this;
     }
-
+                    
     /**
      *  <p>Name of the ProductSelection. Not checked for uniqueness, but distinct names are recommended.</p>
      * @param name value to be set
      * @return Builder
      */
-
-    public ProductSelectionDraftBuilder name(final com.commercetools.api.models.common.LocalizedString name) {
+    
+    public ProductSelectionDraftBuilder name( final com.commercetools.api.models.common.LocalizedString name) {
         this.name = name;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Custom Fields of this ProductSelection.</p>
      * @param builder function to build the custom value
      * @return Builder
      */
-
-    public ProductSelectionDraftBuilder custom(
-            Function<com.commercetools.api.models.type.CustomFieldsDraftBuilder, com.commercetools.api.models.type.CustomFieldsDraftBuilder> builder) {
+    
+    public ProductSelectionDraftBuilder custom(Function<com.commercetools.api.models.type.CustomFieldsDraftBuilder, com.commercetools.api.models.type.CustomFieldsDraftBuilder> builder) {
         this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsDraftBuilder.of()).build();
         return this;
     }
-
+    
     /**
      *  <p>Custom Fields of this ProductSelection.</p>
      * @param builder function to build the custom value
      * @return Builder
      */
-
-    public ProductSelectionDraftBuilder withCustom(
-            Function<com.commercetools.api.models.type.CustomFieldsDraftBuilder, com.commercetools.api.models.type.CustomFieldsDraft> builder) {
+    
+    public ProductSelectionDraftBuilder withCustom(Function<com.commercetools.api.models.type.CustomFieldsDraftBuilder, com.commercetools.api.models.type.CustomFieldsDraft> builder) {
         this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsDraftBuilder.of());
         return this;
     }
-
+                    
     /**
      *  <p>Custom Fields of this ProductSelection.</p>
      * @param custom value to be set
      * @return Builder
      */
-
-    public ProductSelectionDraftBuilder custom(
-            @Nullable final com.commercetools.api.models.type.CustomFieldsDraft custom) {
+    
+    public ProductSelectionDraftBuilder custom(@Nullable final com.commercetools.api.models.type.CustomFieldsDraft custom) {
         this.custom = custom;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Type of the Product Selection.</p>
      * @param type value to be set
      * @return Builder
      */
     @Deprecated
-    public ProductSelectionDraftBuilder type(
-            @Nullable final com.commercetools.api.models.product_selection.ProductSelectionTypeEnum type) {
+    public ProductSelectionDraftBuilder type(@Nullable final com.commercetools.api.models.product_selection.ProductSelectionTypeEnum type) {
         this.type = type;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Mode of the Product Selection.</p>
      * @param mode value to be set
      * @return Builder
      */
-
-    public ProductSelectionDraftBuilder mode(
-            @Nullable final com.commercetools.api.models.product_selection.ProductSelectionMode mode) {
+    
+    public ProductSelectionDraftBuilder mode(@Nullable final com.commercetools.api.models.product_selection.ProductSelectionMode mode) {
         this.mode = mode;
         return this;
     }
+    
+    
 
     /**
      *  <p>User-defined unique identifier for the ProductSelection.</p>
      * @return key
      */
-
+    
     @Nullable
-    public String getKey() {
+    public String getKey(){
         return this.key;
     }
-
+    
     /**
      *  <p>Name of the ProductSelection. Not checked for uniqueness, but distinct names are recommended.</p>
      * @return name
      */
-
-    public com.commercetools.api.models.common.LocalizedString getName() {
+    
+    
+    public com.commercetools.api.models.common.LocalizedString getName(){
         return this.name;
     }
-
+    
     /**
      *  <p>Custom Fields of this ProductSelection.</p>
      * @return custom
      */
-
+    
     @Nullable
-    public com.commercetools.api.models.type.CustomFieldsDraft getCustom() {
+    public com.commercetools.api.models.type.CustomFieldsDraft getCustom(){
         return this.custom;
     }
-
+    
     /**
      *  <p>Type of the Product Selection.</p>
      * @return type
      */
     @Deprecated
     @Nullable
-    public com.commercetools.api.models.product_selection.ProductSelectionTypeEnum getType() {
+    public com.commercetools.api.models.product_selection.ProductSelectionTypeEnum getType(){
         return this.type;
     }
-
+    
     /**
      *  <p>Mode of the Product Selection.</p>
      * @return mode
      */
-
+    
     @Nullable
-    public com.commercetools.api.models.product_selection.ProductSelectionMode getMode() {
+    public com.commercetools.api.models.product_selection.ProductSelectionMode getMode(){
         return this.mode;
     }
 
@@ -202,7 +222,7 @@ public class ProductSelectionDraftBuilder implements Builder<ProductSelectionDra
         Objects.requireNonNull(name, ProductSelectionDraft.class + ": name is missing");
         return new ProductSelectionDraftImpl(key, name, custom, type, mode);
     }
-
+    
     /**
      * builds ProductSelectionDraft without checking for non-null required values
      * @return ProductSelectionDraft
@@ -213,7 +233,7 @@ public class ProductSelectionDraftBuilder implements Builder<ProductSelectionDra
 
     /**
      * factory method for an instance of ProductSelectionDraftBuilder
-     * @return builder
+     * @return builder 
      */
     public static ProductSelectionDraftBuilder of() {
         return new ProductSelectionDraftBuilder();

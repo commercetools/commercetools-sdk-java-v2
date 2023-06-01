@@ -1,8 +1,11 @@
-
 package com.commercetools.api.models.message;
 
+import com.commercetools.api.models.message.MessagePayload;
+import com.commercetools.api.models.message.ProductSelectionDeletedMessagePayload;
+import javax.annotation.Nullable;
 import java.util.*;
-
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -15,10 +18,16 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     ProductSelectionDeletedMessagePayload productSelectionDeletedMessagePayload = ProductSelectionDeletedMessagePayload.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class ProductSelectionDeletedMessagePayloadBuilder implements Builder<ProductSelectionDeletedMessagePayload> {
+
+
+
 
     /**
      * builds ProductSelectionDeletedMessagePayload with checking for non-null required values
@@ -27,7 +36,7 @@ public class ProductSelectionDeletedMessagePayloadBuilder implements Builder<Pro
     public ProductSelectionDeletedMessagePayload build() {
         return new ProductSelectionDeletedMessagePayloadImpl();
     }
-
+    
     /**
      * builds ProductSelectionDeletedMessagePayload without checking for non-null required values
      * @return ProductSelectionDeletedMessagePayload
@@ -38,7 +47,7 @@ public class ProductSelectionDeletedMessagePayloadBuilder implements Builder<Pro
 
     /**
      * factory method for an instance of ProductSelectionDeletedMessagePayloadBuilder
-     * @return builder
+     * @return builder 
      */
     public static ProductSelectionDeletedMessagePayloadBuilder of() {
         return new ProductSelectionDeletedMessagePayloadBuilder();
@@ -49,8 +58,7 @@ public class ProductSelectionDeletedMessagePayloadBuilder implements Builder<Pro
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static ProductSelectionDeletedMessagePayloadBuilder of(
-            final ProductSelectionDeletedMessagePayload template) {
+    public static ProductSelectionDeletedMessagePayloadBuilder of(final ProductSelectionDeletedMessagePayload template) {
         ProductSelectionDeletedMessagePayloadBuilder builder = new ProductSelectionDeletedMessagePayloadBuilder();
         return builder;
     }

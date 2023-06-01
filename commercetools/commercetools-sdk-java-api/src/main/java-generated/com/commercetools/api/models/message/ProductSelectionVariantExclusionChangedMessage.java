@@ -1,20 +1,22 @@
-
 package com.commercetools.api.models.message;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
+import com.commercetools.api.models.message.Message;
 import com.commercetools.api.models.product.ProductReference;
 import com.commercetools.api.models.product_selection.ProductVariantExclusion;
+import com.commercetools.api.models.message.ProductSelectionVariantExclusionChangedMessageImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Generated after a successful Set Variant Exclusion update action.</p>
@@ -36,9 +38,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .newVariantExclusion(newVariantExclusionBuilder -> newVariantExclusionBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = ProductSelectionVariantExclusionChangedMessageImpl.class)
 public interface ProductSelectionVariantExclusionChangedMessage extends Message {
 
@@ -55,7 +60,6 @@ public interface ProductSelectionVariantExclusionChangedMessage extends Message 
     @Valid
     @JsonProperty("product")
     public ProductReference getProduct();
-
     /**
      *  <p>Product Variant Exclusion before the Set Variant Exclusion update action.</p>
      * @return oldVariantExclusion
@@ -64,7 +68,6 @@ public interface ProductSelectionVariantExclusionChangedMessage extends Message 
     @Valid
     @JsonProperty("oldVariantExclusion")
     public ProductVariantExclusion getOldVariantExclusion();
-
     /**
      *  <p>Product Variant Exclusion after the Set Variant Exclusion update action.</p>
      * @return newVariantExclusion
@@ -78,38 +81,41 @@ public interface ProductSelectionVariantExclusionChangedMessage extends Message 
      *  <p>Product for which the Product Variant Exclusion changed.</p>
      * @param product value to be set
      */
-
+    
     public void setProduct(final ProductReference product);
-
+    
+    
     /**
      *  <p>Product Variant Exclusion before the Set Variant Exclusion update action.</p>
      * @param oldVariantExclusion value to be set
      */
-
+    
     public void setOldVariantExclusion(final ProductVariantExclusion oldVariantExclusion);
-
+    
+    
     /**
      *  <p>Product Variant Exclusion after the Set Variant Exclusion update action.</p>
      * @param newVariantExclusion value to be set
      */
-
+    
     public void setNewVariantExclusion(final ProductVariantExclusion newVariantExclusion);
+    
 
     /**
      * factory method
      * @return instance of ProductSelectionVariantExclusionChangedMessage
      */
-    public static ProductSelectionVariantExclusionChangedMessage of() {
+    public static ProductSelectionVariantExclusionChangedMessage of(){
         return new ProductSelectionVariantExclusionChangedMessageImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy ProductSelectionVariantExclusionChangedMessage
      * @param template instance to be copied
      * @return copy instance
      */
-    public static ProductSelectionVariantExclusionChangedMessage of(
-            final ProductSelectionVariantExclusionChangedMessage template) {
+    public static ProductSelectionVariantExclusionChangedMessage of(final ProductSelectionVariantExclusionChangedMessage template) {
         ProductSelectionVariantExclusionChangedMessageImpl instance = new ProductSelectionVariantExclusionChangedMessageImpl();
         instance.setId(template.getId());
         instance.setVersion(template.getVersion());
@@ -133,8 +139,7 @@ public interface ProductSelectionVariantExclusionChangedMessage extends Message 
      * @return copy instance
      */
     @Nullable
-    public static ProductSelectionVariantExclusionChangedMessage deepCopy(
-            @Nullable final ProductSelectionVariantExclusionChangedMessage template) {
+    public static ProductSelectionVariantExclusionChangedMessage deepCopy(@Nullable final ProductSelectionVariantExclusionChangedMessage template) {
         if (template == null) {
             return null;
         }
@@ -143,19 +148,15 @@ public interface ProductSelectionVariantExclusionChangedMessage extends Message 
         instance.setVersion(template.getVersion());
         instance.setCreatedAt(template.getCreatedAt());
         instance.setLastModifiedAt(template.getLastModifiedAt());
-        instance.setLastModifiedBy(
-            com.commercetools.api.models.common.LastModifiedBy.deepCopy(template.getLastModifiedBy()));
+        instance.setLastModifiedBy(com.commercetools.api.models.common.LastModifiedBy.deepCopy(template.getLastModifiedBy()));
         instance.setCreatedBy(com.commercetools.api.models.common.CreatedBy.deepCopy(template.getCreatedBy()));
         instance.setSequenceNumber(template.getSequenceNumber());
         instance.setResource(com.commercetools.api.models.common.Reference.deepCopy(template.getResource()));
         instance.setResourceVersion(template.getResourceVersion());
-        instance.setResourceUserProvidedIdentifiers(com.commercetools.api.models.message.UserProvidedIdentifiers
-                .deepCopy(template.getResourceUserProvidedIdentifiers()));
+        instance.setResourceUserProvidedIdentifiers(com.commercetools.api.models.message.UserProvidedIdentifiers.deepCopy(template.getResourceUserProvidedIdentifiers()));
         instance.setProduct(com.commercetools.api.models.product.ProductReference.deepCopy(template.getProduct()));
-        instance.setOldVariantExclusion(com.commercetools.api.models.product_selection.ProductVariantExclusion
-                .deepCopy(template.getOldVariantExclusion()));
-        instance.setNewVariantExclusion(com.commercetools.api.models.product_selection.ProductVariantExclusion
-                .deepCopy(template.getNewVariantExclusion()));
+        instance.setOldVariantExclusion(com.commercetools.api.models.product_selection.ProductVariantExclusion.deepCopy(template.getOldVariantExclusion()));
+        instance.setNewVariantExclusion(com.commercetools.api.models.product_selection.ProductVariantExclusion.deepCopy(template.getNewVariantExclusion()));
         return instance;
     }
 
@@ -166,16 +167,16 @@ public interface ProductSelectionVariantExclusionChangedMessage extends Message 
     public static ProductSelectionVariantExclusionChangedMessageBuilder builder() {
         return ProductSelectionVariantExclusionChangedMessageBuilder.of();
     }
-
+    
     /**
      * create builder for ProductSelectionVariantExclusionChangedMessage instance
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static ProductSelectionVariantExclusionChangedMessageBuilder builder(
-            final ProductSelectionVariantExclusionChangedMessage template) {
+    public static ProductSelectionVariantExclusionChangedMessageBuilder builder(final ProductSelectionVariantExclusionChangedMessage template) {
         return ProductSelectionVariantExclusionChangedMessageBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -183,11 +184,10 @@ public interface ProductSelectionVariantExclusionChangedMessage extends Message 
      * @param helper function to map the object
      * @return mapped value
      */
-    default <T> T withProductSelectionVariantExclusionChangedMessage(
-            Function<ProductSelectionVariantExclusionChangedMessage, T> helper) {
+    default <T> T withProductSelectionVariantExclusionChangedMessage(Function<ProductSelectionVariantExclusionChangedMessage, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

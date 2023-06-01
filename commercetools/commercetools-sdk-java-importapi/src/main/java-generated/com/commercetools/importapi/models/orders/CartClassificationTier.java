@@ -1,20 +1,22 @@
-
 package com.commercetools.importapi.models.orders;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-import java.util.stream.Collectors;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
 import com.commercetools.importapi.models.common.Money;
+import com.commercetools.importapi.models.orders.ShippingRatePriceTier;
+import com.commercetools.importapi.models.orders.ShippingRateTierType;
+import com.commercetools.importapi.models.orders.CartClassificationTierImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * CartClassificationTier
@@ -29,9 +31,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .plusTiers(tiersBuilder -> tiersBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = CartClassificationTierImpl.class)
 public interface CartClassificationTier extends ShippingRatePriceTier {
 
@@ -47,7 +52,6 @@ public interface CartClassificationTier extends ShippingRatePriceTier {
     @NotNull
     @JsonProperty("value")
     public String getValue();
-
     /**
      *
      * @return price
@@ -56,7 +60,6 @@ public interface CartClassificationTier extends ShippingRatePriceTier {
     @Valid
     @JsonProperty("price")
     public Money getPrice();
-
     /**
      *
      * @return tiers
@@ -65,12 +68,11 @@ public interface CartClassificationTier extends ShippingRatePriceTier {
     @Valid
     @JsonProperty("tiers")
     public List<ShippingRatePriceTier> getTiers();
-
     /**
      *
      * @return isMatching
      */
-
+    
     @JsonProperty("isMatching")
     public Boolean getIsMatching();
 
@@ -78,45 +80,48 @@ public interface CartClassificationTier extends ShippingRatePriceTier {
      * set value
      * @param value value to be set
      */
-
+    
     public void setValue(final String value);
-
+    
+    
     /**
      * set price
      * @param price value to be set
      */
-
+    
     public void setPrice(final Money price);
-
+    
+    
     /**
      * set tiers
      * @param tiers values to be set
      */
-
+    
     @JsonIgnore
-    public void setTiers(final ShippingRatePriceTier... tiers);
-
+    public void setTiers(final ShippingRatePriceTier ...tiers);
     /**
      * set tiers
      * @param tiers values to be set
      */
-
+    
     public void setTiers(final List<ShippingRatePriceTier> tiers);
-
+    
     /**
      * set isMatching
      * @param isMatching value to be set
      */
-
+    
     public void setIsMatching(final Boolean isMatching);
+    
 
     /**
      * factory method
      * @return instance of CartClassificationTier
      */
-    public static CartClassificationTier of() {
+    public static CartClassificationTier of(){
         return new CartClassificationTierImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy CartClassificationTier
@@ -146,9 +151,7 @@ public interface CartClassificationTier extends ShippingRatePriceTier {
         instance.setValue(template.getValue());
         instance.setPrice(com.commercetools.importapi.models.common.Money.deepCopy(template.getPrice()));
         instance.setTiers(Optional.ofNullable(template.getTiers())
-                .map(t -> t.stream()
-                        .map(com.commercetools.importapi.models.orders.ShippingRatePriceTier::deepCopy)
-                        .collect(Collectors.toList()))
+                .map(t -> t.stream().map(com.commercetools.importapi.models.orders.ShippingRatePriceTier::deepCopy).collect(Collectors.toList()))
                 .orElse(null));
         instance.setIsMatching(template.getIsMatching());
         return instance;
@@ -161,7 +164,7 @@ public interface CartClassificationTier extends ShippingRatePriceTier {
     public static CartClassificationTierBuilder builder() {
         return CartClassificationTierBuilder.of();
     }
-
+    
     /**
      * create builder for CartClassificationTier instance
      * @param template instance with prefilled values for the builder
@@ -170,6 +173,7 @@ public interface CartClassificationTier extends ShippingRatePriceTier {
     public static CartClassificationTierBuilder builder(final CartClassificationTier template) {
         return CartClassificationTierBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -180,7 +184,7 @@ public interface CartClassificationTier extends ShippingRatePriceTier {
     default <T> T withCartClassificationTier(Function<CartClassificationTier, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

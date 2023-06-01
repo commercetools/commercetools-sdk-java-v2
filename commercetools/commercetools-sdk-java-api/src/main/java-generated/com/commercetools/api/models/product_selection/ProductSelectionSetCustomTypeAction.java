@@ -1,19 +1,22 @@
-
 package com.commercetools.api.models.product_selection;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-
+import com.commercetools.api.models.product_selection.ProductSelectionUpdateAction;
 import com.commercetools.api.models.type.FieldContainer;
 import com.commercetools.api.models.type.TypeResourceIdentifier;
+import com.commercetools.api.models.product_selection.ProductSelectionSetCustomTypeActionImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * ProductSelectionSetCustomTypeAction
@@ -25,9 +28,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     ProductSelectionSetCustomTypeAction productSelectionSetCustomTypeAction = ProductSelectionSetCustomTypeAction.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = ProductSelectionSetCustomTypeActionImpl.class)
 public interface ProductSelectionSetCustomTypeAction extends ProductSelectionUpdateAction {
 
@@ -43,7 +49,6 @@ public interface ProductSelectionSetCustomTypeAction extends ProductSelectionUpd
     @Valid
     @JsonProperty("type")
     public TypeResourceIdentifier getType();
-
     /**
      *  <p>Sets the Custom Fields fields for the ProductSelection.</p>
      * @return fields
@@ -56,23 +61,26 @@ public interface ProductSelectionSetCustomTypeAction extends ProductSelectionUpd
      *  <p>Defines the Type that extends the ProductSelection with Custom Fields. If absent, any existing Type and Custom Fields are removed from the ProductSelection.</p>
      * @param type value to be set
      */
-
+    
     public void setType(final TypeResourceIdentifier type);
-
+    
+    
     /**
      *  <p>Sets the Custom Fields fields for the ProductSelection.</p>
      * @param fields value to be set
      */
-
+    
     public void setFields(final FieldContainer fields);
+    
 
     /**
      * factory method
      * @return instance of ProductSelectionSetCustomTypeAction
      */
-    public static ProductSelectionSetCustomTypeAction of() {
+    public static ProductSelectionSetCustomTypeAction of(){
         return new ProductSelectionSetCustomTypeActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy ProductSelectionSetCustomTypeAction
@@ -92,8 +100,7 @@ public interface ProductSelectionSetCustomTypeAction extends ProductSelectionUpd
      * @return copy instance
      */
     @Nullable
-    public static ProductSelectionSetCustomTypeAction deepCopy(
-            @Nullable final ProductSelectionSetCustomTypeAction template) {
+    public static ProductSelectionSetCustomTypeAction deepCopy(@Nullable final ProductSelectionSetCustomTypeAction template) {
         if (template == null) {
             return null;
         }
@@ -110,16 +117,16 @@ public interface ProductSelectionSetCustomTypeAction extends ProductSelectionUpd
     public static ProductSelectionSetCustomTypeActionBuilder builder() {
         return ProductSelectionSetCustomTypeActionBuilder.of();
     }
-
+    
     /**
      * create builder for ProductSelectionSetCustomTypeAction instance
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static ProductSelectionSetCustomTypeActionBuilder builder(
-            final ProductSelectionSetCustomTypeAction template) {
+    public static ProductSelectionSetCustomTypeActionBuilder builder(final ProductSelectionSetCustomTypeAction template) {
         return ProductSelectionSetCustomTypeActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -130,7 +137,7 @@ public interface ProductSelectionSetCustomTypeAction extends ProductSelectionUpd
     default <T> T withProductSelectionSetCustomTypeAction(Function<ProductSelectionSetCustomTypeAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

@@ -1,22 +1,28 @@
-
 package com.commercetools.api.client;
 
+import java.util.ArrayList;
+import java.util.List;
+import java.util.function.Function;
 import java.util.function.UnaryOperator;
 
 import io.vrap.rmf.base.client.ApiHttpClient;
+import io.vrap.rmf.base.client.ApiMethod;
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
-public class ByProjectKeyAsAssociateByAssociateIdInBusinessUnitKeyByBusinessUnitKeyCartsRequestBuilder {
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
+public class ByProjectKeyAsAssociateByAssociateIdInBusinessUnitKeyByBusinessUnitKeyCartsRequestBuilder  {
 
     private final ApiHttpClient apiHttpClient;
     private final String projectKey;
     private final String associateId;
     private final String businessUnitKey;
+    
 
-    public ByProjectKeyAsAssociateByAssociateIdInBusinessUnitKeyByBusinessUnitKeyCartsRequestBuilder(
-            final ApiHttpClient apiHttpClient, final String projectKey, final String associateId,
-            final String businessUnitKey) {
+    public ByProjectKeyAsAssociateByAssociateIdInBusinessUnitKeyByBusinessUnitKeyCartsRequestBuilder (final ApiHttpClient apiHttpClient,final String projectKey,final String associateId,final String businessUnitKey) {
         this.apiHttpClient = apiHttpClient;
         this.projectKey = projectKey;
         this.associateId = associateId;
@@ -24,37 +30,34 @@ public class ByProjectKeyAsAssociateByAssociateIdInBusinessUnitKeyByBusinessUnit
     }
 
     public ByProjectKeyAsAssociateByAssociateIdInBusinessUnitKeyByBusinessUnitKeyCartsGet get() {
-        return new ByProjectKeyAsAssociateByAssociateIdInBusinessUnitKeyByBusinessUnitKeyCartsGet(apiHttpClient,
-            projectKey, associateId, businessUnitKey);
+        return new ByProjectKeyAsAssociateByAssociateIdInBusinessUnitKeyByBusinessUnitKeyCartsGet(apiHttpClient, projectKey, associateId, businessUnitKey);
     }
-
-    public ByProjectKeyAsAssociateByAssociateIdInBusinessUnitKeyByBusinessUnitKeyCartsPost post(
-            com.commercetools.api.models.cart.CartDraft cartDraft) {
-        return new ByProjectKeyAsAssociateByAssociateIdInBusinessUnitKeyByBusinessUnitKeyCartsPost(apiHttpClient,
-            projectKey, associateId, businessUnitKey, cartDraft);
+    
+    
+    
+    public ByProjectKeyAsAssociateByAssociateIdInBusinessUnitKeyByBusinessUnitKeyCartsPost post(com.commercetools.api.models.cart.CartDraft cartDraft) {
+        return new ByProjectKeyAsAssociateByAssociateIdInBusinessUnitKeyByBusinessUnitKeyCartsPost(apiHttpClient, projectKey, associateId, businessUnitKey, cartDraft);
     }
-
-    public ByProjectKeyAsAssociateByAssociateIdInBusinessUnitKeyByBusinessUnitKeyCartsPostString post(
-            final String cartDraft) {
-        return new ByProjectKeyAsAssociateByAssociateIdInBusinessUnitKeyByBusinessUnitKeyCartsPostString(apiHttpClient,
-            projectKey, associateId, businessUnitKey, cartDraft);
+    
+    
+    public ByProjectKeyAsAssociateByAssociateIdInBusinessUnitKeyByBusinessUnitKeyCartsPostString post(final String cartDraft) {
+        return new ByProjectKeyAsAssociateByAssociateIdInBusinessUnitKeyByBusinessUnitKeyCartsPostString(apiHttpClient, projectKey, associateId, businessUnitKey, cartDraft);
     }
-
-    public ByProjectKeyAsAssociateByAssociateIdInBusinessUnitKeyByBusinessUnitKeyCartsPost post(
-            UnaryOperator<com.commercetools.api.models.cart.CartDraftBuilder> op) {
+    public ByProjectKeyAsAssociateByAssociateIdInBusinessUnitKeyByBusinessUnitKeyCartsPost post(UnaryOperator<com.commercetools.api.models.cart.CartDraftBuilder> op) {
         return post(op.apply(com.commercetools.api.models.cart.CartDraftBuilder.of()).build());
     }
 
-    public ByProjectKeyAsAssociateByAssociateIdInBusinessUnitKeyByBusinessUnitKeyCartsKeyByKeyRequestBuilder withKey(
-            String key) {
-        return new ByProjectKeyAsAssociateByAssociateIdInBusinessUnitKeyByBusinessUnitKeyCartsKeyByKeyRequestBuilder(
-            apiHttpClient, projectKey, associateId, businessUnitKey, key);
+    
+    public ByProjectKeyAsAssociateByAssociateIdInBusinessUnitKeyByBusinessUnitKeyCartsKeyByKeyRequestBuilder withKey(String key) {
+        return new ByProjectKeyAsAssociateByAssociateIdInBusinessUnitKeyByBusinessUnitKeyCartsKeyByKeyRequestBuilder(apiHttpClient, projectKey, associateId, businessUnitKey, key);
     }
-
-    public ByProjectKeyAsAssociateByAssociateIdInBusinessUnitKeyByBusinessUnitKeyCartsByIDRequestBuilder withId(
-            String ID) {
-        return new ByProjectKeyAsAssociateByAssociateIdInBusinessUnitKeyByBusinessUnitKeyCartsByIDRequestBuilder(
-            apiHttpClient, projectKey, associateId, businessUnitKey, ID);
+    
+    public ByProjectKeyAsAssociateByAssociateIdInBusinessUnitKeyByBusinessUnitKeyCartsByIDRequestBuilder withId(String ID) {
+        return new ByProjectKeyAsAssociateByAssociateIdInBusinessUnitKeyByBusinessUnitKeyCartsByIDRequestBuilder(apiHttpClient, projectKey, associateId, businessUnitKey, ID);
     }
-
+    
+    public ByProjectKeyAsAssociateByAssociateIdInBusinessUnitKeyByBusinessUnitKeyCartsReplicateRequestBuilder replicate() {
+        return new ByProjectKeyAsAssociateByAssociateIdInBusinessUnitKeyByBusinessUnitKeyCartsReplicateRequestBuilder(apiHttpClient, projectKey, associateId, businessUnitKey);
+    }
+    
 }

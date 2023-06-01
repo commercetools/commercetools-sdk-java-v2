@@ -1,16 +1,20 @@
-
 package com.commercetools.api.models.order;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
+import com.commercetools.api.models.order.OrderUpdateAction;
+import com.commercetools.api.models.order.OrderSetPurchaseOrderNumberActionImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * OrderSetPurchaseOrderNumberAction
@@ -22,9 +26,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     OrderSetPurchaseOrderNumberAction orderSetPurchaseOrderNumberAction = OrderSetPurchaseOrderNumberAction.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = OrderSetPurchaseOrderNumberActionImpl.class)
 public interface OrderSetPurchaseOrderNumberAction extends OrderUpdateAction {
 
@@ -37,7 +44,7 @@ public interface OrderSetPurchaseOrderNumberAction extends OrderUpdateAction {
      *  <p>Identifier for a purchase order, usually in a B2B context. The Purchase Order Number is typically entered by the Buyer and can also be used with Quotes.</p>
      * @return purchaseOrderNumber
      */
-
+    
     @JsonProperty("purchaseOrderNumber")
     public String getPurchaseOrderNumber();
 
@@ -45,16 +52,18 @@ public interface OrderSetPurchaseOrderNumberAction extends OrderUpdateAction {
      *  <p>Identifier for a purchase order, usually in a B2B context. The Purchase Order Number is typically entered by the Buyer and can also be used with Quotes.</p>
      * @param purchaseOrderNumber value to be set
      */
-
+    
     public void setPurchaseOrderNumber(final String purchaseOrderNumber);
+    
 
     /**
      * factory method
      * @return instance of OrderSetPurchaseOrderNumberAction
      */
-    public static OrderSetPurchaseOrderNumberAction of() {
+    public static OrderSetPurchaseOrderNumberAction of(){
         return new OrderSetPurchaseOrderNumberActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy OrderSetPurchaseOrderNumberAction
@@ -73,8 +82,7 @@ public interface OrderSetPurchaseOrderNumberAction extends OrderUpdateAction {
      * @return copy instance
      */
     @Nullable
-    public static OrderSetPurchaseOrderNumberAction deepCopy(
-            @Nullable final OrderSetPurchaseOrderNumberAction template) {
+    public static OrderSetPurchaseOrderNumberAction deepCopy(@Nullable final OrderSetPurchaseOrderNumberAction template) {
         if (template == null) {
             return null;
         }
@@ -90,7 +98,7 @@ public interface OrderSetPurchaseOrderNumberAction extends OrderUpdateAction {
     public static OrderSetPurchaseOrderNumberActionBuilder builder() {
         return OrderSetPurchaseOrderNumberActionBuilder.of();
     }
-
+    
     /**
      * create builder for OrderSetPurchaseOrderNumberAction instance
      * @param template instance with prefilled values for the builder
@@ -99,6 +107,7 @@ public interface OrderSetPurchaseOrderNumberAction extends OrderUpdateAction {
     public static OrderSetPurchaseOrderNumberActionBuilder builder(final OrderSetPurchaseOrderNumberAction template) {
         return OrderSetPurchaseOrderNumberActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -109,7 +118,7 @@ public interface OrderSetPurchaseOrderNumberAction extends OrderUpdateAction {
     default <T> T withOrderSetPurchaseOrderNumberAction(Function<OrderSetPurchaseOrderNumberAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

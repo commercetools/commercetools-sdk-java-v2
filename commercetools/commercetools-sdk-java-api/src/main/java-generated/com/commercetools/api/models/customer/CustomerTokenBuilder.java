@@ -1,10 +1,11 @@
-
 package com.commercetools.api.models.customer;
 
-import java.util.*;
-
+import java.time.ZonedDateTime;
+import com.commercetools.api.models.customer.CustomerToken;
 import javax.annotation.Nullable;
-
+import java.util.*;
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -22,142 +23,179 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .value("{value}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class CustomerTokenBuilder implements Builder<CustomerToken> {
 
+    
+    
     private String id;
-
+    
+    
+    
     private java.time.ZonedDateTime createdAt;
-
+    
+    
     @Nullable
     private java.time.ZonedDateTime lastModifiedAt;
-
+    
+    
+    
     private String customerId;
-
+    
+    
+    
     private java.time.ZonedDateTime expiresAt;
-
+    
+    
+    
     private String value;
 
+    
     /**
      *  <p>Unique identifier of the token.</p>
      * @param id value to be set
      * @return Builder
      */
-
-    public CustomerTokenBuilder id(final String id) {
+    
+    public CustomerTokenBuilder id( final String id) {
         this.id = id;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Date and time (UTC) the token was initially created.</p>
      * @param createdAt value to be set
      * @return Builder
      */
-
-    public CustomerTokenBuilder createdAt(final java.time.ZonedDateTime createdAt) {
+    
+    public CustomerTokenBuilder createdAt( final java.time.ZonedDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>When the token is created, <code>lastModifiedAt</code> is set to <code>createdAt</code>.</p>
      * @param lastModifiedAt value to be set
      * @return Builder
      */
-
+    
     public CustomerTokenBuilder lastModifiedAt(@Nullable final java.time.ZonedDateTime lastModifiedAt) {
         this.lastModifiedAt = lastModifiedAt;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>The <code>id</code> of the Customer.</p>
      * @param customerId value to be set
      * @return Builder
      */
-
-    public CustomerTokenBuilder customerId(final String customerId) {
+    
+    public CustomerTokenBuilder customerId( final String customerId) {
         this.customerId = customerId;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Date and time (UTC) the token expires.</p>
      * @param expiresAt value to be set
      * @return Builder
      */
-
-    public CustomerTokenBuilder expiresAt(final java.time.ZonedDateTime expiresAt) {
+    
+    public CustomerTokenBuilder expiresAt( final java.time.ZonedDateTime expiresAt) {
         this.expiresAt = expiresAt;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Value of the token.</p>
      * @param value value to be set
      * @return Builder
      */
-
-    public CustomerTokenBuilder value(final String value) {
+    
+    public CustomerTokenBuilder value( final String value) {
         this.value = value;
         return this;
     }
+    
+    
 
     /**
      *  <p>Unique identifier of the token.</p>
      * @return id
      */
-
-    public String getId() {
+    
+    
+    public String getId(){
         return this.id;
     }
-
+    
     /**
      *  <p>Date and time (UTC) the token was initially created.</p>
      * @return createdAt
      */
-
-    public java.time.ZonedDateTime getCreatedAt() {
+    
+    
+    public java.time.ZonedDateTime getCreatedAt(){
         return this.createdAt;
     }
-
+    
     /**
      *  <p>When the token is created, <code>lastModifiedAt</code> is set to <code>createdAt</code>.</p>
      * @return lastModifiedAt
      */
-
+    
     @Nullable
-    public java.time.ZonedDateTime getLastModifiedAt() {
+    public java.time.ZonedDateTime getLastModifiedAt(){
         return this.lastModifiedAt;
     }
-
+    
     /**
      *  <p>The <code>id</code> of the Customer.</p>
      * @return customerId
      */
-
-    public String getCustomerId() {
+    
+    
+    public String getCustomerId(){
         return this.customerId;
     }
-
+    
     /**
      *  <p>Date and time (UTC) the token expires.</p>
      * @return expiresAt
      */
-
-    public java.time.ZonedDateTime getExpiresAt() {
+    
+    
+    public java.time.ZonedDateTime getExpiresAt(){
         return this.expiresAt;
     }
-
+    
     /**
      *  <p>Value of the token.</p>
      * @return value
      */
-
-    public String getValue() {
+    
+    
+    public String getValue(){
         return this.value;
     }
 
@@ -173,7 +211,7 @@ public class CustomerTokenBuilder implements Builder<CustomerToken> {
         Objects.requireNonNull(value, CustomerToken.class + ": value is missing");
         return new CustomerTokenImpl(id, createdAt, lastModifiedAt, customerId, expiresAt, value);
     }
-
+    
     /**
      * builds CustomerToken without checking for non-null required values
      * @return CustomerToken
@@ -184,7 +222,7 @@ public class CustomerTokenBuilder implements Builder<CustomerToken> {
 
     /**
      * factory method for an instance of CustomerTokenBuilder
-     * @return builder
+     * @return builder 
      */
     public static CustomerTokenBuilder of() {
         return new CustomerTokenBuilder();

@@ -1,9 +1,11 @@
-
 package com.commercetools.api.models.cart;
 
+import com.commercetools.api.models.common.Money;
+import com.commercetools.api.models.cart.ExternalLineItemTotalPrice;
+import javax.annotation.Nullable;
 import java.util.*;
 import java.util.function.Function;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -18,104 +20,115 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .totalPrice(totalPriceBuilder -> totalPriceBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class ExternalLineItemTotalPriceBuilder implements Builder<ExternalLineItemTotalPrice> {
 
+    
+    
     private com.commercetools.api.models.common.Money price;
-
+    
+    
+    
     private com.commercetools.api.models.common.Money totalPrice;
 
+    
     /**
      *  <p>Price of the Line Item.</p>
      *  <p>The value is selected from the Product Variant according to the Product <code>priceMode</code>.</p>
      * @param builder function to build the price value
      * @return Builder
      */
-
-    public ExternalLineItemTotalPriceBuilder price(
-            Function<com.commercetools.api.models.common.MoneyBuilder, com.commercetools.api.models.common.MoneyBuilder> builder) {
+    
+    public ExternalLineItemTotalPriceBuilder price(Function<com.commercetools.api.models.common.MoneyBuilder, com.commercetools.api.models.common.MoneyBuilder> builder) {
         this.price = builder.apply(com.commercetools.api.models.common.MoneyBuilder.of()).build();
         return this;
     }
-
+    
     /**
      *  <p>Price of the Line Item.</p>
      *  <p>The value is selected from the Product Variant according to the Product <code>priceMode</code>.</p>
      * @param builder function to build the price value
      * @return Builder
      */
-
-    public ExternalLineItemTotalPriceBuilder withPrice(
-            Function<com.commercetools.api.models.common.MoneyBuilder, com.commercetools.api.models.common.Money> builder) {
+    
+    public ExternalLineItemTotalPriceBuilder withPrice(Function<com.commercetools.api.models.common.MoneyBuilder, com.commercetools.api.models.common.Money> builder) {
         this.price = builder.apply(com.commercetools.api.models.common.MoneyBuilder.of());
         return this;
     }
-
+                    
     /**
      *  <p>Price of the Line Item.</p>
      *  <p>The value is selected from the Product Variant according to the Product <code>priceMode</code>.</p>
      * @param price value to be set
      * @return Builder
      */
-
-    public ExternalLineItemTotalPriceBuilder price(final com.commercetools.api.models.common.Money price) {
+    
+    public ExternalLineItemTotalPriceBuilder price( final com.commercetools.api.models.common.Money price) {
         this.price = price;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Total price of the Line Item.</p>
      * @param builder function to build the totalPrice value
      * @return Builder
      */
-
-    public ExternalLineItemTotalPriceBuilder totalPrice(
-            Function<com.commercetools.api.models.common.MoneyBuilder, com.commercetools.api.models.common.MoneyBuilder> builder) {
+    
+    public ExternalLineItemTotalPriceBuilder totalPrice(Function<com.commercetools.api.models.common.MoneyBuilder, com.commercetools.api.models.common.MoneyBuilder> builder) {
         this.totalPrice = builder.apply(com.commercetools.api.models.common.MoneyBuilder.of()).build();
         return this;
     }
-
+    
     /**
      *  <p>Total price of the Line Item.</p>
      * @param builder function to build the totalPrice value
      * @return Builder
      */
-
-    public ExternalLineItemTotalPriceBuilder withTotalPrice(
-            Function<com.commercetools.api.models.common.MoneyBuilder, com.commercetools.api.models.common.Money> builder) {
+    
+    public ExternalLineItemTotalPriceBuilder withTotalPrice(Function<com.commercetools.api.models.common.MoneyBuilder, com.commercetools.api.models.common.Money> builder) {
         this.totalPrice = builder.apply(com.commercetools.api.models.common.MoneyBuilder.of());
         return this;
     }
-
+                    
     /**
      *  <p>Total price of the Line Item.</p>
      * @param totalPrice value to be set
      * @return Builder
      */
-
-    public ExternalLineItemTotalPriceBuilder totalPrice(final com.commercetools.api.models.common.Money totalPrice) {
+    
+    public ExternalLineItemTotalPriceBuilder totalPrice( final com.commercetools.api.models.common.Money totalPrice) {
         this.totalPrice = totalPrice;
         return this;
     }
+    
+    
 
     /**
      *  <p>Price of the Line Item.</p>
      *  <p>The value is selected from the Product Variant according to the Product <code>priceMode</code>.</p>
      * @return price
      */
-
-    public com.commercetools.api.models.common.Money getPrice() {
+    
+    
+    public com.commercetools.api.models.common.Money getPrice(){
         return this.price;
     }
-
+    
     /**
      *  <p>Total price of the Line Item.</p>
      * @return totalPrice
      */
-
-    public com.commercetools.api.models.common.Money getTotalPrice() {
+    
+    
+    public com.commercetools.api.models.common.Money getTotalPrice(){
         return this.totalPrice;
     }
 
@@ -128,7 +141,7 @@ public class ExternalLineItemTotalPriceBuilder implements Builder<ExternalLineIt
         Objects.requireNonNull(totalPrice, ExternalLineItemTotalPrice.class + ": totalPrice is missing");
         return new ExternalLineItemTotalPriceImpl(price, totalPrice);
     }
-
+    
     /**
      * builds ExternalLineItemTotalPrice without checking for non-null required values
      * @return ExternalLineItemTotalPrice
@@ -139,7 +152,7 @@ public class ExternalLineItemTotalPriceBuilder implements Builder<ExternalLineIt
 
     /**
      * factory method for an instance of ExternalLineItemTotalPriceBuilder
-     * @return builder
+     * @return builder 
      */
     public static ExternalLineItemTotalPriceBuilder of() {
         return new ExternalLineItemTotalPriceBuilder();

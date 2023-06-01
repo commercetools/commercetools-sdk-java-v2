@@ -1,19 +1,21 @@
-
 package com.commercetools.api.models.cart;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
+import com.commercetools.api.models.cart.CartUpdateAction;
 import com.commercetools.api.models.common.BaseAddress;
+import com.commercetools.api.models.cart.CartAddItemShippingAddressActionImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Adds an address to a Cart when shipping to multiple addresses is desired.</p>
@@ -26,9 +28,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .address(addressBuilder -> addressBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = CartAddItemShippingAddressActionImpl.class)
 public interface CartAddItemShippingAddressAction extends CartUpdateAction {
 
@@ -52,16 +57,18 @@ public interface CartAddItemShippingAddressAction extends CartUpdateAction {
      *  <p>The new Address must have a <code>key</code> that is unique accross this Cart.</p>
      * @param address value to be set
      */
-
+    
     public void setAddress(final BaseAddress address);
+    
 
     /**
      * factory method
      * @return instance of CartAddItemShippingAddressAction
      */
-    public static CartAddItemShippingAddressAction of() {
+    public static CartAddItemShippingAddressAction of(){
         return new CartAddItemShippingAddressActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy CartAddItemShippingAddressAction
@@ -96,7 +103,7 @@ public interface CartAddItemShippingAddressAction extends CartUpdateAction {
     public static CartAddItemShippingAddressActionBuilder builder() {
         return CartAddItemShippingAddressActionBuilder.of();
     }
-
+    
     /**
      * create builder for CartAddItemShippingAddressAction instance
      * @param template instance with prefilled values for the builder
@@ -105,6 +112,7 @@ public interface CartAddItemShippingAddressAction extends CartUpdateAction {
     public static CartAddItemShippingAddressActionBuilder builder(final CartAddItemShippingAddressAction template) {
         return CartAddItemShippingAddressActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -115,7 +123,7 @@ public interface CartAddItemShippingAddressAction extends CartUpdateAction {
     default <T> T withCartAddItemShippingAddressAction(Function<CartAddItemShippingAddressAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

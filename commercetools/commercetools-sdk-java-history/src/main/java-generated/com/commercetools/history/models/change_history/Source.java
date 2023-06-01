@@ -1,27 +1,29 @@
-
 package com.commercetools.history.models.change_history;
-
-import java.util.Arrays;
-import java.util.Optional;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-
+import java.lang.String;
+import java.util.Arrays;
+import java.util.Optional;
 import io.vrap.rmf.base.client.JsonEnum;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
  *  <p>Values for the Source enumeration.</p>
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public interface Source extends JsonEnum {
 
+    
     Source MERCHANT_CENTER = SourceEnum.MERCHANT_CENTER;
-
+    
     Source IMP_EX = SourceEnum.IMP_EX;
-
+    
     Source API_CLIENT = SourceEnum.API_CLIENT;
-
+    
     /**
      * possible values of Source
      */
@@ -30,12 +32,12 @@ public interface Source extends JsonEnum {
          * MerchantCenter
          */
         MERCHANT_CENTER("MerchantCenter"),
-
+        
         /**
          * ImpEx
          */
         IMP_EX("ImpEx"),
-
+        
         /**
          * ApiClient
          */
@@ -92,7 +94,7 @@ public interface Source extends JsonEnum {
             public String name() {
                 return value.toUpperCase();
             }
-
+            
             public String toString() {
                 return value;
             }
@@ -107,7 +109,7 @@ public interface Source extends JsonEnum {
     public static Optional<Source> findEnumViaJsonName(String jsonName) {
         return Arrays.stream(values()).filter(t -> t.getJsonName().equals(jsonName)).findFirst();
     }
-
+    
     /**
      * possible enum values
      * @return array of possible enum values
@@ -115,5 +117,5 @@ public interface Source extends JsonEnum {
     public static Source[] values() {
         return SourceEnum.values();
     }
-
+    
 }

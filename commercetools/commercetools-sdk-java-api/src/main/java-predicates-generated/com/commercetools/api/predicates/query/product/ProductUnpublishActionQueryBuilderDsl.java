@@ -1,9 +1,11 @@
-
 package com.commercetools.api.predicates.query.product;
 
 import com.commercetools.api.predicates.query.*;
 
-public class ProductUnpublishActionQueryBuilderDsl {
+import java.util.function.Function;
+
+
+public class ProductUnpublishActionQueryBuilderDsl  {
     public ProductUnpublishActionQueryBuilderDsl() {
     }
 
@@ -12,9 +14,8 @@ public class ProductUnpublishActionQueryBuilderDsl {
     }
 
     public StringComparisonPredicateBuilder<ProductUnpublishActionQueryBuilderDsl> action() {
-        return new StringComparisonPredicateBuilder<>(
-            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("action")),
-            p -> new CombinationQueryPredicate<>(p, ProductUnpublishActionQueryBuilderDsl::of));
+        return new StringComparisonPredicateBuilder<>(BinaryQueryPredicate.of().left(new ConstantQueryPredicate("action")),
+        p -> new CombinationQueryPredicate<>(p, ProductUnpublishActionQueryBuilderDsl::of));
     }
-
+    
 }

@@ -1,17 +1,20 @@
-
 package com.commercetools.api.models.graph_ql;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
+import java.lang.Object;
+import com.commercetools.api.models.graph_ql.GraphQLVariablesMapImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * GraphQLVariablesMap
@@ -23,11 +26,15 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     GraphQLVariablesMap graphQLVariablesMap = GraphQLVariablesMap.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = GraphQLVariablesMapImpl.class)
-public interface GraphQLVariablesMap {
+public interface GraphQLVariablesMap  {
+
 
     /**
      *
@@ -42,7 +49,7 @@ public interface GraphQLVariablesMap {
      * @param key property name
      * @param value property value
      */
-
+    
     @JsonAnySetter
     public void setValue(String key, Object value);
 
@@ -50,9 +57,10 @@ public interface GraphQLVariablesMap {
      * factory method
      * @return instance of GraphQLVariablesMap
      */
-    public static GraphQLVariablesMap of() {
+    public static GraphQLVariablesMap of(){
         return new GraphQLVariablesMapImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy GraphQLVariablesMap
@@ -87,7 +95,7 @@ public interface GraphQLVariablesMap {
     public static GraphQLVariablesMapBuilder builder() {
         return GraphQLVariablesMapBuilder.of();
     }
-
+    
     /**
      * create builder for GraphQLVariablesMap instance
      * @param template instance with prefilled values for the builder
@@ -96,6 +104,7 @@ public interface GraphQLVariablesMap {
     public static GraphQLVariablesMapBuilder builder(final GraphQLVariablesMap template) {
         return GraphQLVariablesMapBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -106,7 +115,7 @@ public interface GraphQLVariablesMap {
     default <T> T withGraphQLVariablesMap(Function<GraphQLVariablesMap, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

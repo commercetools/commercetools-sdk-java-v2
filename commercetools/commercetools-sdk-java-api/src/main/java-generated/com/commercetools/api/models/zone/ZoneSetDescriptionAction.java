@@ -1,16 +1,20 @@
-
 package com.commercetools.api.models.zone;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
+import com.commercetools.api.models.zone.ZoneUpdateAction;
+import com.commercetools.api.models.zone.ZoneSetDescriptionActionImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * ZoneSetDescriptionAction
@@ -22,9 +26,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     ZoneSetDescriptionAction zoneSetDescriptionAction = ZoneSetDescriptionAction.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = ZoneSetDescriptionActionImpl.class)
 public interface ZoneSetDescriptionAction extends ZoneUpdateAction {
 
@@ -37,7 +44,7 @@ public interface ZoneSetDescriptionAction extends ZoneUpdateAction {
      *  <p>Description of the Zone.</p>
      * @return description
      */
-
+    
     @JsonProperty("description")
     public String getDescription();
 
@@ -45,16 +52,18 @@ public interface ZoneSetDescriptionAction extends ZoneUpdateAction {
      *  <p>Description of the Zone.</p>
      * @param description value to be set
      */
-
+    
     public void setDescription(final String description);
+    
 
     /**
      * factory method
      * @return instance of ZoneSetDescriptionAction
      */
-    public static ZoneSetDescriptionAction of() {
+    public static ZoneSetDescriptionAction of(){
         return new ZoneSetDescriptionActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy ZoneSetDescriptionAction
@@ -89,7 +98,7 @@ public interface ZoneSetDescriptionAction extends ZoneUpdateAction {
     public static ZoneSetDescriptionActionBuilder builder() {
         return ZoneSetDescriptionActionBuilder.of();
     }
-
+    
     /**
      * create builder for ZoneSetDescriptionAction instance
      * @param template instance with prefilled values for the builder
@@ -98,6 +107,7 @@ public interface ZoneSetDescriptionAction extends ZoneUpdateAction {
     public static ZoneSetDescriptionActionBuilder builder(final ZoneSetDescriptionAction template) {
         return ZoneSetDescriptionActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -108,7 +118,7 @@ public interface ZoneSetDescriptionAction extends ZoneUpdateAction {
     default <T> T withZoneSetDescriptionAction(Function<ZoneSetDescriptionAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

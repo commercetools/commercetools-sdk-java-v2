@@ -1,18 +1,20 @@
-
 package com.commercetools.importapi.models.types;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
+import com.commercetools.importapi.models.types.FieldType;
+import com.commercetools.importapi.models.types.CustomFieldSetTypeImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Values of a SetType Custom Field are sets of values of the specified <code>elementType</code> (without duplicate elements).</p>
@@ -25,9 +27,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .elementType(elementTypeBuilder -> elementTypeBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = CustomFieldSetTypeImpl.class)
 public interface CustomFieldSetType extends FieldType {
 
@@ -49,16 +54,18 @@ public interface CustomFieldSetType extends FieldType {
      *  <p>Field type of the elements in the set.</p>
      * @param elementType value to be set
      */
-
+    
     public void setElementType(final FieldType elementType);
+    
 
     /**
      * factory method
      * @return instance of CustomFieldSetType
      */
-    public static CustomFieldSetType of() {
+    public static CustomFieldSetType of(){
         return new CustomFieldSetTypeImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy CustomFieldSetType
@@ -93,7 +100,7 @@ public interface CustomFieldSetType extends FieldType {
     public static CustomFieldSetTypeBuilder builder() {
         return CustomFieldSetTypeBuilder.of();
     }
-
+    
     /**
      * create builder for CustomFieldSetType instance
      * @param template instance with prefilled values for the builder
@@ -102,6 +109,7 @@ public interface CustomFieldSetType extends FieldType {
     public static CustomFieldSetTypeBuilder builder(final CustomFieldSetType template) {
         return CustomFieldSetTypeBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -112,7 +120,7 @@ public interface CustomFieldSetType extends FieldType {
     default <T> T withCustomFieldSetType(Function<CustomFieldSetType, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

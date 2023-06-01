@@ -1,17 +1,20 @@
-
 package com.commercetools.api.models.error;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
+import com.commercetools.api.models.error.GraphQLErrorObject;
+import com.commercetools.api.models.error.GraphQLSearchFacetPathNotFoundErrorImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Returned when a search facet path could not be found.</p>
@@ -23,9 +26,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     GraphQLSearchFacetPathNotFoundError graphQLSearchFacetPathNotFoundError = GraphQLSearchFacetPathNotFoundError.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = GraphQLSearchFacetPathNotFoundErrorImpl.class)
 public interface GraphQLSearchFacetPathNotFoundError extends GraphQLErrorObject {
 
@@ -42,13 +48,15 @@ public interface GraphQLSearchFacetPathNotFoundError extends GraphQLErrorObject 
     @JsonProperty("code")
     public String getCode();
 
+
     /**
      * factory method
      * @return instance of GraphQLSearchFacetPathNotFoundError
      */
-    public static GraphQLSearchFacetPathNotFoundError of() {
+    public static GraphQLSearchFacetPathNotFoundError of(){
         return new GraphQLSearchFacetPathNotFoundErrorImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy GraphQLSearchFacetPathNotFoundError
@@ -67,8 +75,7 @@ public interface GraphQLSearchFacetPathNotFoundError extends GraphQLErrorObject 
      * @return copy instance
      */
     @Nullable
-    public static GraphQLSearchFacetPathNotFoundError deepCopy(
-            @Nullable final GraphQLSearchFacetPathNotFoundError template) {
+    public static GraphQLSearchFacetPathNotFoundError deepCopy(@Nullable final GraphQLSearchFacetPathNotFoundError template) {
         if (template == null) {
             return null;
         }
@@ -84,16 +91,16 @@ public interface GraphQLSearchFacetPathNotFoundError extends GraphQLErrorObject 
     public static GraphQLSearchFacetPathNotFoundErrorBuilder builder() {
         return GraphQLSearchFacetPathNotFoundErrorBuilder.of();
     }
-
+    
     /**
      * create builder for GraphQLSearchFacetPathNotFoundError instance
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static GraphQLSearchFacetPathNotFoundErrorBuilder builder(
-            final GraphQLSearchFacetPathNotFoundError template) {
+    public static GraphQLSearchFacetPathNotFoundErrorBuilder builder(final GraphQLSearchFacetPathNotFoundError template) {
         return GraphQLSearchFacetPathNotFoundErrorBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -104,7 +111,7 @@ public interface GraphQLSearchFacetPathNotFoundError extends GraphQLErrorObject 
     default <T> T withGraphQLSearchFacetPathNotFoundError(Function<GraphQLSearchFacetPathNotFoundError, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

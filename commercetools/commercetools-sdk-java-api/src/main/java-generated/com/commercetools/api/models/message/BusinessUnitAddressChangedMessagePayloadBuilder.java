@@ -1,9 +1,12 @@
-
 package com.commercetools.api.models.message;
 
+import com.commercetools.api.models.common.Address;
+import com.commercetools.api.models.message.MessagePayload;
+import com.commercetools.api.models.message.BusinessUnitAddressChangedMessagePayload;
+import javax.annotation.Nullable;
 import java.util.*;
 import java.util.function.Function;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -17,56 +20,61 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .address(addressBuilder -> addressBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
-public class BusinessUnitAddressChangedMessagePayloadBuilder
-        implements Builder<BusinessUnitAddressChangedMessagePayload> {
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
+public class BusinessUnitAddressChangedMessagePayloadBuilder implements Builder<BusinessUnitAddressChangedMessagePayload> {
 
+    
+    
     private com.commercetools.api.models.common.Address address;
 
+    
     /**
      *  <p>Updated address of the Business Unit.</p>
      * @param builder function to build the address value
      * @return Builder
      */
-
-    public BusinessUnitAddressChangedMessagePayloadBuilder address(
-            Function<com.commercetools.api.models.common.AddressBuilder, com.commercetools.api.models.common.AddressBuilder> builder) {
+    
+    public BusinessUnitAddressChangedMessagePayloadBuilder address(Function<com.commercetools.api.models.common.AddressBuilder, com.commercetools.api.models.common.AddressBuilder> builder) {
         this.address = builder.apply(com.commercetools.api.models.common.AddressBuilder.of()).build();
         return this;
     }
-
+    
     /**
      *  <p>Updated address of the Business Unit.</p>
      * @param builder function to build the address value
      * @return Builder
      */
-
-    public BusinessUnitAddressChangedMessagePayloadBuilder withAddress(
-            Function<com.commercetools.api.models.common.AddressBuilder, com.commercetools.api.models.common.Address> builder) {
+    
+    public BusinessUnitAddressChangedMessagePayloadBuilder withAddress(Function<com.commercetools.api.models.common.AddressBuilder, com.commercetools.api.models.common.Address> builder) {
         this.address = builder.apply(com.commercetools.api.models.common.AddressBuilder.of());
         return this;
     }
-
+                    
     /**
      *  <p>Updated address of the Business Unit.</p>
      * @param address value to be set
      * @return Builder
      */
-
-    public BusinessUnitAddressChangedMessagePayloadBuilder address(
-            final com.commercetools.api.models.common.Address address) {
+    
+    public BusinessUnitAddressChangedMessagePayloadBuilder address( final com.commercetools.api.models.common.Address address) {
         this.address = address;
         return this;
     }
+    
+    
 
     /**
      *  <p>Updated address of the Business Unit.</p>
      * @return address
      */
-
-    public com.commercetools.api.models.common.Address getAddress() {
+    
+    
+    public com.commercetools.api.models.common.Address getAddress(){
         return this.address;
     }
 
@@ -78,7 +86,7 @@ public class BusinessUnitAddressChangedMessagePayloadBuilder
         Objects.requireNonNull(address, BusinessUnitAddressChangedMessagePayload.class + ": address is missing");
         return new BusinessUnitAddressChangedMessagePayloadImpl(address);
     }
-
+    
     /**
      * builds BusinessUnitAddressChangedMessagePayload without checking for non-null required values
      * @return BusinessUnitAddressChangedMessagePayload
@@ -89,7 +97,7 @@ public class BusinessUnitAddressChangedMessagePayloadBuilder
 
     /**
      * factory method for an instance of BusinessUnitAddressChangedMessagePayloadBuilder
-     * @return builder
+     * @return builder 
      */
     public static BusinessUnitAddressChangedMessagePayloadBuilder of() {
         return new BusinessUnitAddressChangedMessagePayloadBuilder();
@@ -100,8 +108,7 @@ public class BusinessUnitAddressChangedMessagePayloadBuilder
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static BusinessUnitAddressChangedMessagePayloadBuilder of(
-            final BusinessUnitAddressChangedMessagePayload template) {
+    public static BusinessUnitAddressChangedMessagePayloadBuilder of(final BusinessUnitAddressChangedMessagePayload template) {
         BusinessUnitAddressChangedMessagePayloadBuilder builder = new BusinessUnitAddressChangedMessagePayloadBuilder();
         builder.address = template.getAddress();
         return builder;

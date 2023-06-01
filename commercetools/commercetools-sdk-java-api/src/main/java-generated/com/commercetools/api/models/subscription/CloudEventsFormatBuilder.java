@@ -1,8 +1,11 @@
-
 package com.commercetools.api.models.subscription;
 
+import com.commercetools.api.models.subscription.DeliveryFormat;
+import com.commercetools.api.models.subscription.CloudEventsFormat;
+import javax.annotation.Nullable;
 import java.util.*;
-
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -16,30 +19,39 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .cloudEventsVersion("{cloudEventsVersion}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class CloudEventsFormatBuilder implements Builder<CloudEventsFormat> {
 
+    
+    
     private String cloudEventsVersion;
 
+    
     /**
      * set the value to the cloudEventsVersion
      * @param cloudEventsVersion value to be set
      * @return Builder
      */
-
-    public CloudEventsFormatBuilder cloudEventsVersion(final String cloudEventsVersion) {
+    
+    public CloudEventsFormatBuilder cloudEventsVersion( final String cloudEventsVersion) {
         this.cloudEventsVersion = cloudEventsVersion;
         return this;
     }
+    
+    
 
     /**
      * value of cloudEventsVersion}
      * @return cloudEventsVersion
      */
-
-    public String getCloudEventsVersion() {
+    
+    
+    public String getCloudEventsVersion(){
         return this.cloudEventsVersion;
     }
 
@@ -51,7 +63,7 @@ public class CloudEventsFormatBuilder implements Builder<CloudEventsFormat> {
         Objects.requireNonNull(cloudEventsVersion, CloudEventsFormat.class + ": cloudEventsVersion is missing");
         return new CloudEventsFormatImpl(cloudEventsVersion);
     }
-
+    
     /**
      * builds CloudEventsFormat without checking for non-null required values
      * @return CloudEventsFormat
@@ -62,7 +74,7 @@ public class CloudEventsFormatBuilder implements Builder<CloudEventsFormat> {
 
     /**
      * factory method for an instance of CloudEventsFormatBuilder
-     * @return builder
+     * @return builder 
      */
     public static CloudEventsFormatBuilder of() {
         return new CloudEventsFormatBuilder();

@@ -1,17 +1,20 @@
-
 package com.commercetools.history.models.common;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
 
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
+import com.commercetools.history.models.common.StoreCountryImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * StoreCountry
@@ -24,11 +27,15 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .code("{code}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = StoreCountryImpl.class)
-public interface StoreCountry {
+public interface StoreCountry  {
+
 
     /**
      *  <p>Two-digit country code as per ISO 3166-1 alpha-2.</p>
@@ -42,16 +49,18 @@ public interface StoreCountry {
      *  <p>Two-digit country code as per ISO 3166-1 alpha-2.</p>
      * @param code value to be set
      */
-
+    
     public void setCode(final String code);
+    
 
     /**
      * factory method
      * @return instance of StoreCountry
      */
-    public static StoreCountry of() {
+    public static StoreCountry of(){
         return new StoreCountryImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy StoreCountry
@@ -86,7 +95,7 @@ public interface StoreCountry {
     public static StoreCountryBuilder builder() {
         return StoreCountryBuilder.of();
     }
-
+    
     /**
      * create builder for StoreCountry instance
      * @param template instance with prefilled values for the builder
@@ -95,6 +104,7 @@ public interface StoreCountry {
     public static StoreCountryBuilder builder(final StoreCountry template) {
         return StoreCountryBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -105,7 +115,7 @@ public interface StoreCountry {
     default <T> T withStoreCountry(Function<StoreCountry, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

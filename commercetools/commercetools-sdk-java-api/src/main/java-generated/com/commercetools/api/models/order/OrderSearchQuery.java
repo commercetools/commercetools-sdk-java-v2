@@ -1,16 +1,21 @@
-
 package com.commercetools.api.models.order;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
+import com.commercetools.api.models.order.OrderSearchCompoundExpression;
+import com.commercetools.api.models.order.OrderSearchQueryExpression;
+import com.commercetools.api.models.order.OrderSearchQueryImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * OrderSearchQuery
@@ -22,19 +27,26 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     OrderSearchQuery orderSearchQuery = OrderSearchQuery.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = OrderSearchQueryImpl.class)
-public interface OrderSearchQuery {
+public interface OrderSearchQuery  {
+
+
+
 
     /**
      * factory method
      * @return instance of OrderSearchQuery
      */
-    public static OrderSearchQuery of() {
+    public static OrderSearchQuery of(){
         return new OrderSearchQueryImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy OrderSearchQuery
@@ -57,12 +69,10 @@ public interface OrderSearchQuery {
             return null;
         }
         if (template instanceof com.commercetools.api.models.order.OrderSearchCompoundExpression) {
-            return com.commercetools.api.models.order.OrderSearchCompoundExpression
-                    .deepCopy((com.commercetools.api.models.order.OrderSearchCompoundExpression) template);
+            return com.commercetools.api.models.order.OrderSearchCompoundExpression.deepCopy((com.commercetools.api.models.order.OrderSearchCompoundExpression)template);
         }
         if (template instanceof com.commercetools.api.models.order.OrderSearchQueryExpression) {
-            return com.commercetools.api.models.order.OrderSearchQueryExpression
-                    .deepCopy((com.commercetools.api.models.order.OrderSearchQueryExpression) template);
+            return com.commercetools.api.models.order.OrderSearchQueryExpression.deepCopy((com.commercetools.api.models.order.OrderSearchQueryExpression)template);
         }
         OrderSearchQueryImpl instance = new OrderSearchQueryImpl();
         return instance;
@@ -75,7 +85,7 @@ public interface OrderSearchQuery {
     public static OrderSearchQueryBuilder builder() {
         return OrderSearchQueryBuilder.of();
     }
-
+    
     /**
      * create builder for OrderSearchQuery instance
      * @param template instance with prefilled values for the builder
@@ -84,6 +94,7 @@ public interface OrderSearchQuery {
     public static OrderSearchQueryBuilder builder(final OrderSearchQuery template) {
         return OrderSearchQueryBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -94,7 +105,7 @@ public interface OrderSearchQuery {
     default <T> T withOrderSearchQuery(Function<OrderSearchQuery, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

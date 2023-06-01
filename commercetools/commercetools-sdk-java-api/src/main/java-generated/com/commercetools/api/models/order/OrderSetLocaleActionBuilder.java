@@ -1,10 +1,11 @@
-
 package com.commercetools.api.models.order;
 
-import java.util.*;
-
+import com.commercetools.api.models.order.OrderUpdateAction;
+import com.commercetools.api.models.order.OrderSetLocaleAction;
 import javax.annotation.Nullable;
-
+import java.util.*;
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -17,32 +18,39 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     OrderSetLocaleAction orderSetLocaleAction = OrderSetLocaleAction.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class OrderSetLocaleActionBuilder implements Builder<OrderSetLocaleAction> {
 
+    
     @Nullable
     private String locale;
 
+    
     /**
      * set the value to the locale
      * @param locale value to be set
      * @return Builder
      */
-
+    
     public OrderSetLocaleActionBuilder locale(@Nullable final String locale) {
         this.locale = locale;
         return this;
     }
+    
+    
 
     /**
      * value of locale}
      * @return locale
      */
-
+    
     @Nullable
-    public String getLocale() {
+    public String getLocale(){
         return this.locale;
     }
 
@@ -53,7 +61,7 @@ public class OrderSetLocaleActionBuilder implements Builder<OrderSetLocaleAction
     public OrderSetLocaleAction build() {
         return new OrderSetLocaleActionImpl(locale);
     }
-
+    
     /**
      * builds OrderSetLocaleAction without checking for non-null required values
      * @return OrderSetLocaleAction
@@ -64,7 +72,7 @@ public class OrderSetLocaleActionBuilder implements Builder<OrderSetLocaleAction
 
     /**
      * factory method for an instance of OrderSetLocaleActionBuilder
-     * @return builder
+     * @return builder 
      */
     public static OrderSetLocaleActionBuilder of() {
         return new OrderSetLocaleActionBuilder();

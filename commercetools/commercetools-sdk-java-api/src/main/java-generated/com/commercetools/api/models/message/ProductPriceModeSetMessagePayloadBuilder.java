@@ -1,8 +1,12 @@
-
 package com.commercetools.api.models.message;
 
+import com.commercetools.api.models.message.MessagePayload;
+import com.commercetools.api.models.product.ProductPriceModeEnum;
+import com.commercetools.api.models.message.ProductPriceModeSetMessagePayload;
+import javax.annotation.Nullable;
 import java.util.*;
-
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -16,31 +20,39 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .to(ProductPriceModeEnum.EMBEDDED)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class ProductPriceModeSetMessagePayloadBuilder implements Builder<ProductPriceModeSetMessagePayload> {
 
+    
+    
     private com.commercetools.api.models.product.ProductPriceModeEnum to;
 
+    
     /**
      *  <p>The PriceMode that was set.</p>
      * @param to value to be set
      * @return Builder
      */
-
-    public ProductPriceModeSetMessagePayloadBuilder to(
-            final com.commercetools.api.models.product.ProductPriceModeEnum to) {
+    
+    public ProductPriceModeSetMessagePayloadBuilder to( final com.commercetools.api.models.product.ProductPriceModeEnum to) {
         this.to = to;
         return this;
     }
+    
+    
 
     /**
      *  <p>The PriceMode that was set.</p>
      * @return to
      */
-
-    public com.commercetools.api.models.product.ProductPriceModeEnum getTo() {
+    
+    
+    public com.commercetools.api.models.product.ProductPriceModeEnum getTo(){
         return this.to;
     }
 
@@ -52,7 +64,7 @@ public class ProductPriceModeSetMessagePayloadBuilder implements Builder<Product
         Objects.requireNonNull(to, ProductPriceModeSetMessagePayload.class + ": to is missing");
         return new ProductPriceModeSetMessagePayloadImpl(to);
     }
-
+    
     /**
      * builds ProductPriceModeSetMessagePayload without checking for non-null required values
      * @return ProductPriceModeSetMessagePayload
@@ -63,7 +75,7 @@ public class ProductPriceModeSetMessagePayloadBuilder implements Builder<Product
 
     /**
      * factory method for an instance of ProductPriceModeSetMessagePayloadBuilder
-     * @return builder
+     * @return builder 
      */
     public static ProductPriceModeSetMessagePayloadBuilder of() {
         return new ProductPriceModeSetMessagePayloadBuilder();

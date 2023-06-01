@@ -1,19 +1,21 @@
-
 package com.commercetools.api.models.error;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
+import com.commercetools.api.models.error.GraphQLErrorObject;
 import com.commercetools.api.models.order_edit.OrderEditPreviewFailure;
+import com.commercetools.api.models.error.GraphQLEditPreviewFailedErrorImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Returned when a preview to find an appropriate Shipping Method for an OrderEdit could not be generated.</p>
@@ -27,9 +29,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .result(resultBuilder -> resultBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = GraphQLEditPreviewFailedErrorImpl.class)
 public interface GraphQLEditPreviewFailedError extends GraphQLErrorObject {
 
@@ -45,7 +50,6 @@ public interface GraphQLEditPreviewFailedError extends GraphQLErrorObject {
     @NotNull
     @JsonProperty("code")
     public String getCode();
-
     /**
      *  <p>State of the OrderEdit where the <code>stagedActions</code> cannot be applied to the Order.</p>
      * @return result
@@ -59,16 +63,18 @@ public interface GraphQLEditPreviewFailedError extends GraphQLErrorObject {
      *  <p>State of the OrderEdit where the <code>stagedActions</code> cannot be applied to the Order.</p>
      * @param result value to be set
      */
-
+    
     public void setResult(final OrderEditPreviewFailure result);
+    
 
     /**
      * factory method
      * @return instance of GraphQLEditPreviewFailedError
      */
-    public static GraphQLEditPreviewFailedError of() {
+    public static GraphQLEditPreviewFailedError of(){
         return new GraphQLEditPreviewFailedErrorImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy GraphQLEditPreviewFailedError
@@ -94,8 +100,7 @@ public interface GraphQLEditPreviewFailedError extends GraphQLErrorObject {
         }
         GraphQLEditPreviewFailedErrorImpl instance = new GraphQLEditPreviewFailedErrorImpl();
         Optional.ofNullable(template.values()).ifPresent(t -> t.forEach(instance::setValue));
-        instance.setResult(
-            com.commercetools.api.models.order_edit.OrderEditPreviewFailure.deepCopy(template.getResult()));
+        instance.setResult(com.commercetools.api.models.order_edit.OrderEditPreviewFailure.deepCopy(template.getResult()));
         return instance;
     }
 
@@ -106,7 +111,7 @@ public interface GraphQLEditPreviewFailedError extends GraphQLErrorObject {
     public static GraphQLEditPreviewFailedErrorBuilder builder() {
         return GraphQLEditPreviewFailedErrorBuilder.of();
     }
-
+    
     /**
      * create builder for GraphQLEditPreviewFailedError instance
      * @param template instance with prefilled values for the builder
@@ -115,6 +120,7 @@ public interface GraphQLEditPreviewFailedError extends GraphQLErrorObject {
     public static GraphQLEditPreviewFailedErrorBuilder builder(final GraphQLEditPreviewFailedError template) {
         return GraphQLEditPreviewFailedErrorBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -125,7 +131,7 @@ public interface GraphQLEditPreviewFailedError extends GraphQLErrorObject {
     default <T> T withGraphQLEditPreviewFailedError(Function<GraphQLEditPreviewFailedError, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

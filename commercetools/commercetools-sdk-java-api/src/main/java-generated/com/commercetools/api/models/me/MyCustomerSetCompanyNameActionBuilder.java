@@ -1,10 +1,11 @@
-
 package com.commercetools.api.models.me;
 
-import java.util.*;
-
+import com.commercetools.api.models.me.MyCustomerUpdateAction;
+import com.commercetools.api.models.me.MyCustomerSetCompanyNameAction;
 import javax.annotation.Nullable;
-
+import java.util.*;
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -17,32 +18,39 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     MyCustomerSetCompanyNameAction myCustomerSetCompanyNameAction = MyCustomerSetCompanyNameAction.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class MyCustomerSetCompanyNameActionBuilder implements Builder<MyCustomerSetCompanyNameAction> {
 
+    
     @Nullable
     private String companyName;
 
+    
     /**
      *  <p>Value to set. If empty, any existing value is removed.</p>
      * @param companyName value to be set
      * @return Builder
      */
-
+    
     public MyCustomerSetCompanyNameActionBuilder companyName(@Nullable final String companyName) {
         this.companyName = companyName;
         return this;
     }
+    
+    
 
     /**
      *  <p>Value to set. If empty, any existing value is removed.</p>
      * @return companyName
      */
-
+    
     @Nullable
-    public String getCompanyName() {
+    public String getCompanyName(){
         return this.companyName;
     }
 
@@ -53,7 +61,7 @@ public class MyCustomerSetCompanyNameActionBuilder implements Builder<MyCustomer
     public MyCustomerSetCompanyNameAction build() {
         return new MyCustomerSetCompanyNameActionImpl(companyName);
     }
-
+    
     /**
      * builds MyCustomerSetCompanyNameAction without checking for non-null required values
      * @return MyCustomerSetCompanyNameAction
@@ -64,7 +72,7 @@ public class MyCustomerSetCompanyNameActionBuilder implements Builder<MyCustomer
 
     /**
      * factory method for an instance of MyCustomerSetCompanyNameActionBuilder
-     * @return builder
+     * @return builder 
      */
     public static MyCustomerSetCompanyNameActionBuilder of() {
         return new MyCustomerSetCompanyNameActionBuilder();

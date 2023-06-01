@@ -1,11 +1,12 @@
-
 package com.commercetools.api.models.order_edit;
 
+import com.commercetools.api.models.cart.ExternalTaxRateDraft;
+import com.commercetools.api.models.order.StagedOrderUpdateAction;
+import com.commercetools.api.models.order_edit.StagedOrderSetShippingMethodTaxRateAction;
+import javax.annotation.Nullable;
 import java.util.*;
 import java.util.function.Function;
-
-import javax.annotation.Nullable;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -18,59 +19,89 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     StagedOrderSetShippingMethodTaxRateAction stagedOrderSetShippingMethodTaxRateAction = StagedOrderSetShippingMethodTaxRateAction.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
-public class StagedOrderSetShippingMethodTaxRateActionBuilder
-        implements Builder<StagedOrderSetShippingMethodTaxRateAction> {
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
+public class StagedOrderSetShippingMethodTaxRateActionBuilder implements Builder<StagedOrderSetShippingMethodTaxRateAction> {
 
+    
+    @Nullable
+    private String shippingKey;
+    
+    
     @Nullable
     private com.commercetools.api.models.cart.ExternalTaxRateDraft externalTaxRate;
 
+    
     /**
-     *  <p>Controls calculation of taxed prices for Line Items, Custom Line Items, and Shipping Methods as explained in Cart tax calculation.</p>
-     * @param builder function to build the externalTaxRate value
+     *  <p><code>key</code> of the ShippingMethod to update. This is required for Orders with <code>Multiple</code> ShippingMode.</p>
+     * @param shippingKey value to be set
      * @return Builder
      */
-
-    public StagedOrderSetShippingMethodTaxRateActionBuilder externalTaxRate(
-            Function<com.commercetools.api.models.cart.ExternalTaxRateDraftBuilder, com.commercetools.api.models.cart.ExternalTaxRateDraftBuilder> builder) {
-        this.externalTaxRate = builder.apply(com.commercetools.api.models.cart.ExternalTaxRateDraftBuilder.of())
-                .build();
+    
+    public StagedOrderSetShippingMethodTaxRateActionBuilder shippingKey(@Nullable final String shippingKey) {
+        this.shippingKey = shippingKey;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Controls calculation of taxed prices for Line Items, Custom Line Items, and Shipping Methods as explained in Cart tax calculation.</p>
      * @param builder function to build the externalTaxRate value
      * @return Builder
      */
-
-    public StagedOrderSetShippingMethodTaxRateActionBuilder withExternalTaxRate(
-            Function<com.commercetools.api.models.cart.ExternalTaxRateDraftBuilder, com.commercetools.api.models.cart.ExternalTaxRateDraft> builder) {
+    
+    public StagedOrderSetShippingMethodTaxRateActionBuilder externalTaxRate(Function<com.commercetools.api.models.cart.ExternalTaxRateDraftBuilder, com.commercetools.api.models.cart.ExternalTaxRateDraftBuilder> builder) {
+        this.externalTaxRate = builder.apply(com.commercetools.api.models.cart.ExternalTaxRateDraftBuilder.of()).build();
+        return this;
+    }
+    
+    /**
+     *  <p>Controls calculation of taxed prices for Line Items, Custom Line Items, and Shipping Methods as explained in Cart tax calculation.</p>
+     * @param builder function to build the externalTaxRate value
+     * @return Builder
+     */
+    
+    public StagedOrderSetShippingMethodTaxRateActionBuilder withExternalTaxRate(Function<com.commercetools.api.models.cart.ExternalTaxRateDraftBuilder, com.commercetools.api.models.cart.ExternalTaxRateDraft> builder) {
         this.externalTaxRate = builder.apply(com.commercetools.api.models.cart.ExternalTaxRateDraftBuilder.of());
         return this;
     }
-
+                    
     /**
      *  <p>Controls calculation of taxed prices for Line Items, Custom Line Items, and Shipping Methods as explained in Cart tax calculation.</p>
      * @param externalTaxRate value to be set
      * @return Builder
      */
-
-    public StagedOrderSetShippingMethodTaxRateActionBuilder externalTaxRate(
-            @Nullable final com.commercetools.api.models.cart.ExternalTaxRateDraft externalTaxRate) {
+    
+    public StagedOrderSetShippingMethodTaxRateActionBuilder externalTaxRate(@Nullable final com.commercetools.api.models.cart.ExternalTaxRateDraft externalTaxRate) {
         this.externalTaxRate = externalTaxRate;
         return this;
     }
+    
+    
 
+    /**
+     *  <p><code>key</code> of the ShippingMethod to update. This is required for Orders with <code>Multiple</code> ShippingMode.</p>
+     * @return shippingKey
+     */
+    
+    @Nullable
+    public String getShippingKey(){
+        return this.shippingKey;
+    }
+    
     /**
      *  <p>Controls calculation of taxed prices for Line Items, Custom Line Items, and Shipping Methods as explained in Cart tax calculation.</p>
      * @return externalTaxRate
      */
-
+    
     @Nullable
-    public com.commercetools.api.models.cart.ExternalTaxRateDraft getExternalTaxRate() {
+    public com.commercetools.api.models.cart.ExternalTaxRateDraft getExternalTaxRate(){
         return this.externalTaxRate;
     }
 
@@ -79,20 +110,20 @@ public class StagedOrderSetShippingMethodTaxRateActionBuilder
      * @return StagedOrderSetShippingMethodTaxRateAction
      */
     public StagedOrderSetShippingMethodTaxRateAction build() {
-        return new StagedOrderSetShippingMethodTaxRateActionImpl(externalTaxRate);
+        return new StagedOrderSetShippingMethodTaxRateActionImpl(shippingKey, externalTaxRate);
     }
-
+    
     /**
      * builds StagedOrderSetShippingMethodTaxRateAction without checking for non-null required values
      * @return StagedOrderSetShippingMethodTaxRateAction
      */
     public StagedOrderSetShippingMethodTaxRateAction buildUnchecked() {
-        return new StagedOrderSetShippingMethodTaxRateActionImpl(externalTaxRate);
+        return new StagedOrderSetShippingMethodTaxRateActionImpl(shippingKey, externalTaxRate);
     }
 
     /**
      * factory method for an instance of StagedOrderSetShippingMethodTaxRateActionBuilder
-     * @return builder
+     * @return builder 
      */
     public static StagedOrderSetShippingMethodTaxRateActionBuilder of() {
         return new StagedOrderSetShippingMethodTaxRateActionBuilder();
@@ -103,9 +134,9 @@ public class StagedOrderSetShippingMethodTaxRateActionBuilder
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static StagedOrderSetShippingMethodTaxRateActionBuilder of(
-            final StagedOrderSetShippingMethodTaxRateAction template) {
+    public static StagedOrderSetShippingMethodTaxRateActionBuilder of(final StagedOrderSetShippingMethodTaxRateAction template) {
         StagedOrderSetShippingMethodTaxRateActionBuilder builder = new StagedOrderSetShippingMethodTaxRateActionBuilder();
+        builder.shippingKey = template.getShippingKey();
         builder.externalTaxRate = template.getExternalTaxRate();
         return builder;
     }

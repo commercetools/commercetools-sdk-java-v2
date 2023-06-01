@@ -1,17 +1,20 @@
-
 package com.commercetools.api.models.error;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
+import com.commercetools.api.models.error.GraphQLErrorObject;
+import com.commercetools.api.models.error.GraphQLInvalidInputErrorImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Returned when an invalid input has been sent.</p>
@@ -23,9 +26,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     GraphQLInvalidInputError graphQLInvalidInputError = GraphQLInvalidInputError.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = GraphQLInvalidInputErrorImpl.class)
 public interface GraphQLInvalidInputError extends GraphQLErrorObject {
 
@@ -42,13 +48,15 @@ public interface GraphQLInvalidInputError extends GraphQLErrorObject {
     @JsonProperty("code")
     public String getCode();
 
+
     /**
      * factory method
      * @return instance of GraphQLInvalidInputError
      */
-    public static GraphQLInvalidInputError of() {
+    public static GraphQLInvalidInputError of(){
         return new GraphQLInvalidInputErrorImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy GraphQLInvalidInputError
@@ -83,7 +91,7 @@ public interface GraphQLInvalidInputError extends GraphQLErrorObject {
     public static GraphQLInvalidInputErrorBuilder builder() {
         return GraphQLInvalidInputErrorBuilder.of();
     }
-
+    
     /**
      * create builder for GraphQLInvalidInputError instance
      * @param template instance with prefilled values for the builder
@@ -92,6 +100,7 @@ public interface GraphQLInvalidInputError extends GraphQLErrorObject {
     public static GraphQLInvalidInputErrorBuilder builder(final GraphQLInvalidInputError template) {
         return GraphQLInvalidInputErrorBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -102,7 +111,7 @@ public interface GraphQLInvalidInputError extends GraphQLErrorObject {
     default <T> T withGraphQLInvalidInputError(Function<GraphQLInvalidInputError, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

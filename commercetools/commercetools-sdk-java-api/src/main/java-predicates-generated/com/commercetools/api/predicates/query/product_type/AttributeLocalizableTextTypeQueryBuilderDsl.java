@@ -1,9 +1,11 @@
-
 package com.commercetools.api.predicates.query.product_type;
 
 import com.commercetools.api.predicates.query.*;
 
-public class AttributeLocalizableTextTypeQueryBuilderDsl {
+import java.util.function.Function;
+
+
+public class AttributeLocalizableTextTypeQueryBuilderDsl  {
     public AttributeLocalizableTextTypeQueryBuilderDsl() {
     }
 
@@ -12,9 +14,8 @@ public class AttributeLocalizableTextTypeQueryBuilderDsl {
     }
 
     public StringComparisonPredicateBuilder<AttributeLocalizableTextTypeQueryBuilderDsl> name() {
-        return new StringComparisonPredicateBuilder<>(
-            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("name")),
-            p -> new CombinationQueryPredicate<>(p, AttributeLocalizableTextTypeQueryBuilderDsl::of));
+        return new StringComparisonPredicateBuilder<>(BinaryQueryPredicate.of().left(new ConstantQueryPredicate("name")),
+        p -> new CombinationQueryPredicate<>(p, AttributeLocalizableTextTypeQueryBuilderDsl::of));
     }
-
+    
 }

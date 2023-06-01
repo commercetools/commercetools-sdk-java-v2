@@ -1,18 +1,21 @@
-
 package com.commercetools.api.models.project;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
+import com.commercetools.api.models.project.CartsConfiguration;
+import com.commercetools.api.models.project.ProjectUpdateAction;
+import com.commercetools.api.models.project.ProjectChangeCartsConfigurationActionImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * ProjectChangeCartsConfigurationAction
@@ -25,9 +28,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .cartsConfiguration(cartsConfigurationBuilder -> cartsConfigurationBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = ProjectChangeCartsConfigurationActionImpl.class)
 public interface ProjectChangeCartsConfigurationAction extends ProjectUpdateAction {
 
@@ -49,16 +55,18 @@ public interface ProjectChangeCartsConfigurationAction extends ProjectUpdateActi
      *  <p>Configuration for the Carts feature.</p>
      * @param cartsConfiguration value to be set
      */
-
+    
     public void setCartsConfiguration(final CartsConfiguration cartsConfiguration);
+    
 
     /**
      * factory method
      * @return instance of ProjectChangeCartsConfigurationAction
      */
-    public static ProjectChangeCartsConfigurationAction of() {
+    public static ProjectChangeCartsConfigurationAction of(){
         return new ProjectChangeCartsConfigurationActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy ProjectChangeCartsConfigurationAction
@@ -77,14 +85,12 @@ public interface ProjectChangeCartsConfigurationAction extends ProjectUpdateActi
      * @return copy instance
      */
     @Nullable
-    public static ProjectChangeCartsConfigurationAction deepCopy(
-            @Nullable final ProjectChangeCartsConfigurationAction template) {
+    public static ProjectChangeCartsConfigurationAction deepCopy(@Nullable final ProjectChangeCartsConfigurationAction template) {
         if (template == null) {
             return null;
         }
         ProjectChangeCartsConfigurationActionImpl instance = new ProjectChangeCartsConfigurationActionImpl();
-        instance.setCartsConfiguration(
-            com.commercetools.api.models.project.CartsConfiguration.deepCopy(template.getCartsConfiguration()));
+        instance.setCartsConfiguration(com.commercetools.api.models.project.CartsConfiguration.deepCopy(template.getCartsConfiguration()));
         return instance;
     }
 
@@ -95,16 +101,16 @@ public interface ProjectChangeCartsConfigurationAction extends ProjectUpdateActi
     public static ProjectChangeCartsConfigurationActionBuilder builder() {
         return ProjectChangeCartsConfigurationActionBuilder.of();
     }
-
+    
     /**
      * create builder for ProjectChangeCartsConfigurationAction instance
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static ProjectChangeCartsConfigurationActionBuilder builder(
-            final ProjectChangeCartsConfigurationAction template) {
+    public static ProjectChangeCartsConfigurationActionBuilder builder(final ProjectChangeCartsConfigurationAction template) {
         return ProjectChangeCartsConfigurationActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -115,7 +121,7 @@ public interface ProjectChangeCartsConfigurationAction extends ProjectUpdateActi
     default <T> T withProjectChangeCartsConfigurationAction(Function<ProjectChangeCartsConfigurationAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

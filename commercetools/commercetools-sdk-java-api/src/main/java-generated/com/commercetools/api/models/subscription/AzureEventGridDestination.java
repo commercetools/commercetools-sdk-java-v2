@@ -1,17 +1,20 @@
-
 package com.commercetools.api.models.subscription;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
+import com.commercetools.api.models.subscription.Destination;
+import com.commercetools.api.models.subscription.AzureEventGridDestinationImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Azure Event Grid can be used to push messages to Azure Functions, HTTP endpoints (webhooks), and several other Azure tools. Event Grid can only be used with the CloudEventsFormat. To set up a Subscription with Azure Event Grid, first create a topic in the Azure Portal. To allow Composable Commerce to push messages to your topic, provide an access key.</p>
@@ -25,9 +28,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .accessKey("{accessKey}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = AzureEventGridDestinationImpl.class)
 public interface AzureEventGridDestination extends Destination {
 
@@ -43,7 +49,6 @@ public interface AzureEventGridDestination extends Destination {
     @NotNull
     @JsonProperty("uri")
     public String getUri();
-
     /**
      *  <p>Partially hidden on retrieval for security reasons.</p>
      * @return accessKey
@@ -56,23 +61,26 @@ public interface AzureEventGridDestination extends Destination {
      *  <p>URI of the topic.</p>
      * @param uri value to be set
      */
-
+    
     public void setUri(final String uri);
-
+    
+    
     /**
      *  <p>Partially hidden on retrieval for security reasons.</p>
      * @param accessKey value to be set
      */
-
+    
     public void setAccessKey(final String accessKey);
+    
 
     /**
      * factory method
      * @return instance of AzureEventGridDestination
      */
-    public static AzureEventGridDestination of() {
+    public static AzureEventGridDestination of(){
         return new AzureEventGridDestinationImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy AzureEventGridDestination
@@ -109,7 +117,7 @@ public interface AzureEventGridDestination extends Destination {
     public static AzureEventGridDestinationBuilder builder() {
         return AzureEventGridDestinationBuilder.of();
     }
-
+    
     /**
      * create builder for AzureEventGridDestination instance
      * @param template instance with prefilled values for the builder
@@ -118,6 +126,7 @@ public interface AzureEventGridDestination extends Destination {
     public static AzureEventGridDestinationBuilder builder(final AzureEventGridDestination template) {
         return AzureEventGridDestinationBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -128,7 +137,7 @@ public interface AzureEventGridDestination extends Destination {
     default <T> T withAzureEventGridDestination(Function<AzureEventGridDestination, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

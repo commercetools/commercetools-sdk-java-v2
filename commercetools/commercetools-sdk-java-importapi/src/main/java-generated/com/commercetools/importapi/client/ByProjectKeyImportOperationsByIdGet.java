@@ -1,17 +1,38 @@
-
 package com.commercetools.importapi.client;
 
+import io.vrap.rmf.base.client.utils.Utils;
+
+import java.io.InputStream;
+import java.io.IOException;
+
 import java.net.URI;
+import java.net.URLConnection;
+import java.nio.charset.StandardCharsets;
+import java.nio.file.Files;
+
 import java.time.Duration;
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.List;
+import java.util.Map;
+import java.util.HashMap;
+import java.util.Optional;
+import java.util.function.Function;
+import java.util.function.Supplier;
+import java.util.stream.Collectors;
 import java.util.concurrent.CompletableFuture;
-
-import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.utils.Generated;
+
+import javax.annotation.Nullable;
+
+import java.io.UnsupportedEncodingException;
+import java.net.URLEncoder;
+import io.vrap.rmf.base.client.*;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+
+import static io.vrap.rmf.base.client.utils.ClientUtils.blockingWait;
 
 /**
  *  <p>Retrieves the ImportOperation of a given ID.</p>
@@ -28,14 +49,16 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
  * }</code></pre>
  * </div>
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
-public class ByProjectKeyImportOperationsByIdGet extends
-        ApiMethod<ByProjectKeyImportOperationsByIdGet, com.commercetools.importapi.models.importoperations.ImportOperation>
-        implements
-        com.commercetools.importapi.client.Secured_by_view_import_containersTrait<ByProjectKeyImportOperationsByIdGet> {
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
+public class ByProjectKeyImportOperationsByIdGet extends ApiMethod<ByProjectKeyImportOperationsByIdGet, com.commercetools.importapi.models.importoperations.ImportOperation> implements com.commercetools.importapi.client.Secured_by_view_import_containersTrait<ByProjectKeyImportOperationsByIdGet> {
 
+    
     private String projectKey;
     private String id;
+    
 
     public ByProjectKeyImportOperationsByIdGet(final ApiHttpClient apiHttpClient, String projectKey, String id) {
         super(apiHttpClient);
@@ -60,50 +83,47 @@ public class ByProjectKeyImportOperationsByIdGet extends
     }
 
     @Override
-    public ApiHttpResponse<com.commercetools.importapi.models.importoperations.ImportOperation> executeBlocking(
-            final ApiHttpClient client, final Duration timeout) {
-        return executeBlocking(client, timeout,
-            com.commercetools.importapi.models.importoperations.ImportOperation.class);
+    public ApiHttpResponse<com.commercetools.importapi.models.importoperations.ImportOperation> executeBlocking(final ApiHttpClient client, final Duration timeout) {
+        return executeBlocking(client, timeout, com.commercetools.importapi.models.importoperations.ImportOperation.class);
     }
 
     @Override
-    public CompletableFuture<ApiHttpResponse<com.commercetools.importapi.models.importoperations.ImportOperation>> execute(
-            final ApiHttpClient client) {
+    public CompletableFuture<ApiHttpResponse<com.commercetools.importapi.models.importoperations.ImportOperation>> execute(final ApiHttpClient client) {
         return execute(client, com.commercetools.importapi.models.importoperations.ImportOperation.class);
     }
 
-    public String getProjectKey() {
-        return this.projectKey;
-    }
+    public String getProjectKey() {return this.projectKey;}
+    public String getId() {return this.id;}
 
-    public String getId() {
-        return this.id;
-    }
 
-    public void setProjectKey(final String projectKey) {
-        this.projectKey = projectKey;
-    }
+    public void setProjectKey(final String projectKey) { this.projectKey = projectKey; }
+    
+    public void setId(final String id) { this.id = id; }
 
-    public void setId(final String id) {
-        this.id = id;
-    }
 
+    
+
+    
     @Override
     public boolean equals(Object o) {
-        if (this == o)
-            return true;
-
-        if (o == null || getClass() != o.getClass())
-            return false;
-
+        if (this == o) return true;
+    
+        if (o == null || getClass() != o.getClass()) return false;
+    
         ByProjectKeyImportOperationsByIdGet that = (ByProjectKeyImportOperationsByIdGet) o;
-
-        return new EqualsBuilder().append(projectKey, that.projectKey).append(id, that.id).isEquals();
+    
+        return new EqualsBuilder()
+                .append(projectKey, that.projectKey)
+                .append(id, that.id)
+                .isEquals();
     }
-
+    
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(projectKey).append(id).toHashCode();
+        return new HashCodeBuilder(17, 37)
+            .append(projectKey)
+            .append(id)
+            .toHashCode();
     }
 
     @Override

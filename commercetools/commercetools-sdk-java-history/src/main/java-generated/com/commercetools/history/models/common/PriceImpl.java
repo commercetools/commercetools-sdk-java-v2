@@ -1,39 +1,45 @@
-
 package com.commercetools.history.models.common;
 
-import java.time.*;
-import java.util.*;
-
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
-
-import io.vrap.rmf.base.client.ModelBase;
+import com.commercetools.history.models.common.Money;
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.ModelBase;
+import javax.validation.Valid;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.annotation.*;
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
  * Price
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class PriceImpl implements Price, ModelBase {
 
+    
     private String id;
-
+    
+    
     private com.commercetools.history.models.common.Money value;
 
     /**
      * create instance with all properties
      */
     @JsonCreator
-    PriceImpl(@JsonProperty("id") final String id,
-            @JsonProperty("value") final com.commercetools.history.models.common.Money value) {
+    PriceImpl(@JsonProperty("id") final String id, @JsonProperty("value") final com.commercetools.history.models.common.Money value) {
         this.id = id;
         this.value = value;
     }
-
     /**
      * create empty instance
      */
@@ -43,43 +49,49 @@ public class PriceImpl implements Price, ModelBase {
     /**
      *
      */
-
-    public String getId() {
+    
+    public String getId(){
         return this.id;
     }
-
+    
     /**
      *
      */
-
-    public com.commercetools.history.models.common.Money getValue() {
+    
+    public com.commercetools.history.models.common.Money getValue(){
         return this.value;
     }
 
-    public void setId(final String id) {
+    
+    public void setId(final String id){
         this.id = id;
     }
-
-    public void setValue(final com.commercetools.history.models.common.Money value) {
+    
+    
+    public void setValue(final com.commercetools.history.models.common.Money value){
         this.value = value;
     }
 
     @Override
     public boolean equals(Object o) {
-        if (this == o)
-            return true;
-
-        if (o == null || getClass() != o.getClass())
-            return false;
-
+        if (this == o) return true;
+    
+        if (o == null || getClass() != o.getClass()) return false;
+    
         PriceImpl that = (PriceImpl) o;
-
-        return new EqualsBuilder().append(id, that.id).append(value, that.value).isEquals();
+    
+        return new EqualsBuilder()
+                .append(id, that.id)
+                .append(value, that.value)
+                .isEquals();
     }
-
+    
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(id).append(value).toHashCode();
+        return new HashCodeBuilder(17, 37)
+            .append(id)
+            .append(value)
+            .toHashCode();
     }
 
 }

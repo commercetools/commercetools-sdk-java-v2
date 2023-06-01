@@ -1,9 +1,12 @@
-
 package com.commercetools.importapi.models.customfields;
 
+import com.commercetools.importapi.models.common.KeyReference;
+import com.commercetools.importapi.models.customfields.CustomField;
+import com.commercetools.importapi.models.customfields.ReferenceField;
+import javax.annotation.Nullable;
 import java.util.*;
 import java.util.function.Function;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -17,42 +20,50 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .value(valueBuilder -> valueBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class ReferenceFieldBuilder implements Builder<ReferenceField> {
 
+    
+    
     private com.commercetools.importapi.models.common.KeyReference value;
 
+    
     /**
      *  <p>References a resource by key</p>
      * @param value value to be set
      * @return Builder
      */
-
-    public ReferenceFieldBuilder value(final com.commercetools.importapi.models.common.KeyReference value) {
+    
+    public ReferenceFieldBuilder value( final com.commercetools.importapi.models.common.KeyReference value) {
         this.value = value;
         return this;
     }
-
+    
+    
     /**
      *  <p>References a resource by key</p>
      * @param builder function to build the value value
      * @return Builder
      */
-
-    public ReferenceFieldBuilder value(
-            Function<com.commercetools.importapi.models.common.KeyReferenceBuilder, Builder<? extends com.commercetools.importapi.models.common.KeyReference>> builder) {
+    
+    public ReferenceFieldBuilder value(Function<com.commercetools.importapi.models.common.KeyReferenceBuilder, Builder<? extends com.commercetools.importapi.models.common.KeyReference>> builder) {
         this.value = builder.apply(com.commercetools.importapi.models.common.KeyReferenceBuilder.of()).build();
         return this;
     }
+                    
 
     /**
      *  <p>References a resource by key</p>
      * @return value
      */
-
-    public com.commercetools.importapi.models.common.KeyReference getValue() {
+    
+    
+    public com.commercetools.importapi.models.common.KeyReference getValue(){
         return this.value;
     }
 
@@ -64,7 +75,7 @@ public class ReferenceFieldBuilder implements Builder<ReferenceField> {
         Objects.requireNonNull(value, ReferenceField.class + ": value is missing");
         return new ReferenceFieldImpl(value);
     }
-
+    
     /**
      * builds ReferenceField without checking for non-null required values
      * @return ReferenceField
@@ -75,7 +86,7 @@ public class ReferenceFieldBuilder implements Builder<ReferenceField> {
 
     /**
      * factory method for an instance of ReferenceFieldBuilder
-     * @return builder
+     * @return builder 
      */
     public static ReferenceFieldBuilder of() {
         return new ReferenceFieldBuilder();

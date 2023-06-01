@@ -1,8 +1,12 @@
-
 package com.commercetools.history.models.change;
 
+import com.commercetools.history.models.change.Change;
+import java.lang.Object;
+import com.commercetools.history.models.change.UnknownChange;
+import javax.annotation.Nullable;
 import java.util.*;
-
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -16,74 +20,95 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .change("{change}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class UnknownChangeBuilder implements Builder<UnknownChange> {
 
+    
+    
     private String change;
-
+    
+    
+    
     private java.lang.Object previousValue;
-
+    
+    
+    
     private java.lang.Object nextValue;
 
+    
     /**
      * set the value to the change
      * @param change value to be set
      * @return Builder
      */
-
-    public UnknownChangeBuilder change(final String change) {
+    
+    public UnknownChangeBuilder change( final String change) {
         this.change = change;
         return this;
     }
-
+    
+    
+    
+    
     /**
      * set the value to the previousValue
      * @param previousValue value to be set
      * @return Builder
      */
-
-    public UnknownChangeBuilder previousValue(final java.lang.Object previousValue) {
+    
+    public UnknownChangeBuilder previousValue( final java.lang.Object previousValue) {
         this.previousValue = previousValue;
         return this;
     }
-
+    
+    
+    
+    
     /**
      * set the value to the nextValue
      * @param nextValue value to be set
      * @return Builder
      */
-
-    public UnknownChangeBuilder nextValue(final java.lang.Object nextValue) {
+    
+    public UnknownChangeBuilder nextValue( final java.lang.Object nextValue) {
         this.nextValue = nextValue;
         return this;
     }
+    
+    
 
     /**
      * value of change}
      * @return change
      */
-
-    public String getChange() {
+    
+    
+    public String getChange(){
         return this.change;
     }
-
+    
     /**
      * value of previousValue}
      * @return previousValue
      */
-
-    public java.lang.Object getPreviousValue() {
+    
+    
+    public java.lang.Object getPreviousValue(){
         return this.previousValue;
     }
-
+    
     /**
      * value of nextValue}
      * @return nextValue
      */
-
-    public java.lang.Object getNextValue() {
+    
+    
+    public java.lang.Object getNextValue(){
         return this.nextValue;
     }
 
@@ -97,7 +122,7 @@ public class UnknownChangeBuilder implements Builder<UnknownChange> {
         Objects.requireNonNull(nextValue, UnknownChange.class + ": nextValue is missing");
         return new UnknownChangeImpl(change, previousValue, nextValue);
     }
-
+    
     /**
      * builds UnknownChange without checking for non-null required values
      * @return UnknownChange
@@ -108,7 +133,7 @@ public class UnknownChangeBuilder implements Builder<UnknownChange> {
 
     /**
      * factory method for an instance of UnknownChangeBuilder
-     * @return builder
+     * @return builder 
      */
     public static UnknownChangeBuilder of() {
         return new UnknownChangeBuilder();

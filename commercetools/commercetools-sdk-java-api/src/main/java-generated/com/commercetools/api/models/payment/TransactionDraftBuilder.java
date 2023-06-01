@@ -1,11 +1,15 @@
-
 package com.commercetools.api.models.payment;
 
+import com.commercetools.api.models.common.Money;
+import com.commercetools.api.models.payment.TransactionState;
+import com.commercetools.api.models.payment.TransactionType;
+import com.commercetools.api.models.type.CustomFieldsDraft;
+import java.time.ZonedDateTime;
+import com.commercetools.api.models.payment.TransactionDraft;
+import javax.annotation.Nullable;
 import java.util.*;
 import java.util.function.Function;
-
-import javax.annotation.Nullable;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -20,196 +24,223 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .amount(amountBuilder -> amountBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class TransactionDraftBuilder implements Builder<TransactionDraft> {
 
+    
     @Nullable
     private java.time.ZonedDateTime timestamp;
-
+    
+    
+    
     private com.commercetools.api.models.payment.TransactionType type;
-
+    
+    
+    
     private com.commercetools.api.models.common.Money amount;
-
+    
+    
     @Nullable
     private String interactionId;
-
+    
+    
     @Nullable
     private com.commercetools.api.models.payment.TransactionState state;
-
+    
+    
     @Nullable
     private com.commercetools.api.models.type.CustomFieldsDraft custom;
 
+    
     /**
      *  <p>Date and time (UTC) the Transaction took place.</p>
      * @param timestamp value to be set
      * @return Builder
      */
-
+    
     public TransactionDraftBuilder timestamp(@Nullable final java.time.ZonedDateTime timestamp) {
         this.timestamp = timestamp;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Type of the Transaction.</p>
      * @param type value to be set
      * @return Builder
      */
-
-    public TransactionDraftBuilder type(final com.commercetools.api.models.payment.TransactionType type) {
+    
+    public TransactionDraftBuilder type( final com.commercetools.api.models.payment.TransactionType type) {
         this.type = type;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Money value for the Transaction.</p>
      * @param builder function to build the amount value
      * @return Builder
      */
-
-    public TransactionDraftBuilder amount(
-            Function<com.commercetools.api.models.common.MoneyBuilder, com.commercetools.api.models.common.MoneyBuilder> builder) {
+    
+    public TransactionDraftBuilder amount(Function<com.commercetools.api.models.common.MoneyBuilder, com.commercetools.api.models.common.MoneyBuilder> builder) {
         this.amount = builder.apply(com.commercetools.api.models.common.MoneyBuilder.of()).build();
         return this;
     }
-
+    
     /**
      *  <p>Money value for the Transaction.</p>
      * @param builder function to build the amount value
      * @return Builder
      */
-
-    public TransactionDraftBuilder withAmount(
-            Function<com.commercetools.api.models.common.MoneyBuilder, com.commercetools.api.models.common.Money> builder) {
+    
+    public TransactionDraftBuilder withAmount(Function<com.commercetools.api.models.common.MoneyBuilder, com.commercetools.api.models.common.Money> builder) {
         this.amount = builder.apply(com.commercetools.api.models.common.MoneyBuilder.of());
         return this;
     }
-
+                    
     /**
      *  <p>Money value for the Transaction.</p>
      * @param amount value to be set
      * @return Builder
      */
-
-    public TransactionDraftBuilder amount(final com.commercetools.api.models.common.Money amount) {
+    
+    public TransactionDraftBuilder amount( final com.commercetools.api.models.common.Money amount) {
         this.amount = amount;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Identifier used by the payment service that manages the Transaction. Can be used to correlate the Transaction to an interface interaction.</p>
      * @param interactionId value to be set
      * @return Builder
      */
-
+    
     public TransactionDraftBuilder interactionId(@Nullable final String interactionId) {
         this.interactionId = interactionId;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>State of the Transaction.</p>
      * @param state value to be set
      * @return Builder
      */
-
+    
     public TransactionDraftBuilder state(@Nullable final com.commercetools.api.models.payment.TransactionState state) {
         this.state = state;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Custom Fields of the Transaction.</p>
      * @param builder function to build the custom value
      * @return Builder
      */
-
-    public TransactionDraftBuilder custom(
-            Function<com.commercetools.api.models.type.CustomFieldsDraftBuilder, com.commercetools.api.models.type.CustomFieldsDraftBuilder> builder) {
+    
+    public TransactionDraftBuilder custom(Function<com.commercetools.api.models.type.CustomFieldsDraftBuilder, com.commercetools.api.models.type.CustomFieldsDraftBuilder> builder) {
         this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsDraftBuilder.of()).build();
         return this;
     }
-
+    
     /**
      *  <p>Custom Fields of the Transaction.</p>
      * @param builder function to build the custom value
      * @return Builder
      */
-
-    public TransactionDraftBuilder withCustom(
-            Function<com.commercetools.api.models.type.CustomFieldsDraftBuilder, com.commercetools.api.models.type.CustomFieldsDraft> builder) {
+    
+    public TransactionDraftBuilder withCustom(Function<com.commercetools.api.models.type.CustomFieldsDraftBuilder, com.commercetools.api.models.type.CustomFieldsDraft> builder) {
         this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsDraftBuilder.of());
         return this;
     }
-
+                    
     /**
      *  <p>Custom Fields of the Transaction.</p>
      * @param custom value to be set
      * @return Builder
      */
-
+    
     public TransactionDraftBuilder custom(@Nullable final com.commercetools.api.models.type.CustomFieldsDraft custom) {
         this.custom = custom;
         return this;
     }
+    
+    
 
     /**
      *  <p>Date and time (UTC) the Transaction took place.</p>
      * @return timestamp
      */
-
+    
     @Nullable
-    public java.time.ZonedDateTime getTimestamp() {
+    public java.time.ZonedDateTime getTimestamp(){
         return this.timestamp;
     }
-
+    
     /**
      *  <p>Type of the Transaction.</p>
      * @return type
      */
-
-    public com.commercetools.api.models.payment.TransactionType getType() {
+    
+    
+    public com.commercetools.api.models.payment.TransactionType getType(){
         return this.type;
     }
-
+    
     /**
      *  <p>Money value for the Transaction.</p>
      * @return amount
      */
-
-    public com.commercetools.api.models.common.Money getAmount() {
+    
+    
+    public com.commercetools.api.models.common.Money getAmount(){
         return this.amount;
     }
-
+    
     /**
      *  <p>Identifier used by the payment service that manages the Transaction. Can be used to correlate the Transaction to an interface interaction.</p>
      * @return interactionId
      */
-
+    
     @Nullable
-    public String getInteractionId() {
+    public String getInteractionId(){
         return this.interactionId;
     }
-
+    
     /**
      *  <p>State of the Transaction.</p>
      * @return state
      */
-
+    
     @Nullable
-    public com.commercetools.api.models.payment.TransactionState getState() {
+    public com.commercetools.api.models.payment.TransactionState getState(){
         return this.state;
     }
-
+    
     /**
      *  <p>Custom Fields of the Transaction.</p>
      * @return custom
      */
-
+    
     @Nullable
-    public com.commercetools.api.models.type.CustomFieldsDraft getCustom() {
+    public com.commercetools.api.models.type.CustomFieldsDraft getCustom(){
         return this.custom;
     }
 
@@ -222,7 +253,7 @@ public class TransactionDraftBuilder implements Builder<TransactionDraft> {
         Objects.requireNonNull(amount, TransactionDraft.class + ": amount is missing");
         return new TransactionDraftImpl(timestamp, type, amount, interactionId, state, custom);
     }
-
+    
     /**
      * builds TransactionDraft without checking for non-null required values
      * @return TransactionDraft
@@ -233,7 +264,7 @@ public class TransactionDraftBuilder implements Builder<TransactionDraft> {
 
     /**
      * factory method for an instance of TransactionDraftBuilder
-     * @return builder
+     * @return builder 
      */
     public static TransactionDraftBuilder of() {
         return new TransactionDraftBuilder();

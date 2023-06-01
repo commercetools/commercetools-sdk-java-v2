@@ -1,8 +1,11 @@
-
 package com.commercetools.api.models.payment;
 
+import com.commercetools.api.models.payment.PaymentUpdateAction;
+import com.commercetools.api.models.payment.PaymentSetMethodInfoInterfaceAction;
+import javax.annotation.Nullable;
 import java.util.*;
-
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -16,30 +19,40 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .interface("{interface}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class PaymentSetMethodInfoInterfaceActionBuilder implements Builder<PaymentSetMethodInfoInterfaceAction> {
 
+    
+    
     private String _interface;
 
+    
     /**
      *  <p>Value to set. Once set, the <code>paymentInterface</code> of the <code>paymentMethodInfo</code> cannot be changed.</p>
      * @param _interface value to be set
      * @return Builder
      */
-
-    public PaymentSetMethodInfoInterfaceActionBuilder _interface(final String _interface) {
+    
+    public PaymentSetMethodInfoInterfaceActionBuilder _interface( final String _interface) {
         this._interface = _interface;
         return this;
     }
+    
+    
 
     /**
      *  <p>Value to set. Once set, the <code>paymentInterface</code> of the <code>paymentMethodInfo</code> cannot be changed.</p>
      * @return interface
      */
-
-    public String getInterface() {
+     
+    
+    
+    public String getInterface(){
         return this._interface;
     }
 
@@ -51,7 +64,7 @@ public class PaymentSetMethodInfoInterfaceActionBuilder implements Builder<Payme
         Objects.requireNonNull(_interface, PaymentSetMethodInfoInterfaceAction.class + ": interface is missing");
         return new PaymentSetMethodInfoInterfaceActionImpl(_interface);
     }
-
+    
     /**
      * builds PaymentSetMethodInfoInterfaceAction without checking for non-null required values
      * @return PaymentSetMethodInfoInterfaceAction
@@ -62,7 +75,7 @@ public class PaymentSetMethodInfoInterfaceActionBuilder implements Builder<Payme
 
     /**
      * factory method for an instance of PaymentSetMethodInfoInterfaceActionBuilder
-     * @return builder
+     * @return builder 
      */
     public static PaymentSetMethodInfoInterfaceActionBuilder of() {
         return new PaymentSetMethodInfoInterfaceActionBuilder();

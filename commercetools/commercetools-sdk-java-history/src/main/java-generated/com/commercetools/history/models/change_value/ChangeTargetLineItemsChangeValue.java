@@ -1,17 +1,20 @@
-
 package com.commercetools.history.models.change_value;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
+import com.commercetools.history.models.change_value.ChangeTargetChangeValue;
+import com.commercetools.history.models.change_value.ChangeTargetLineItemsChangeValueImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Shape of the value for cart discounts line item target.</p>
@@ -24,9 +27,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .predicate("{predicate}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = ChangeTargetLineItemsChangeValueImpl.class)
 public interface ChangeTargetLineItemsChangeValue extends ChangeTargetChangeValue {
 
@@ -42,7 +48,6 @@ public interface ChangeTargetLineItemsChangeValue extends ChangeTargetChangeValu
     @NotNull
     @JsonProperty("type")
     public String getType();
-
     /**
      *
      * @return predicate
@@ -55,16 +60,18 @@ public interface ChangeTargetLineItemsChangeValue extends ChangeTargetChangeValu
      * set predicate
      * @param predicate value to be set
      */
-
+    
     public void setPredicate(final String predicate);
+    
 
     /**
      * factory method
      * @return instance of ChangeTargetLineItemsChangeValue
      */
-    public static ChangeTargetLineItemsChangeValue of() {
+    public static ChangeTargetLineItemsChangeValue of(){
         return new ChangeTargetLineItemsChangeValueImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy ChangeTargetLineItemsChangeValue
@@ -99,7 +106,7 @@ public interface ChangeTargetLineItemsChangeValue extends ChangeTargetChangeValu
     public static ChangeTargetLineItemsChangeValueBuilder builder() {
         return ChangeTargetLineItemsChangeValueBuilder.of();
     }
-
+    
     /**
      * create builder for ChangeTargetLineItemsChangeValue instance
      * @param template instance with prefilled values for the builder
@@ -108,6 +115,7 @@ public interface ChangeTargetLineItemsChangeValue extends ChangeTargetChangeValu
     public static ChangeTargetLineItemsChangeValueBuilder builder(final ChangeTargetLineItemsChangeValue template) {
         return ChangeTargetLineItemsChangeValueBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -118,7 +126,7 @@ public interface ChangeTargetLineItemsChangeValue extends ChangeTargetChangeValu
     default <T> T withChangeTargetLineItemsChangeValue(Function<ChangeTargetLineItemsChangeValue, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

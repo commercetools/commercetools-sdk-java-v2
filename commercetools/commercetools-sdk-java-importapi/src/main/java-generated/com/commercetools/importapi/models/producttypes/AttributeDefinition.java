@@ -1,19 +1,23 @@
-
 package com.commercetools.importapi.models.producttypes;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
 import com.commercetools.importapi.models.common.LocalizedString;
+import com.commercetools.importapi.models.producttypes.AttributeConstraintEnum;
+import com.commercetools.importapi.models.producttypes.AttributeType;
+import com.commercetools.importapi.models.producttypes.TextInputHint;
+import com.commercetools.importapi.models.producttypes.AttributeDefinitionImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * AttributeDefinition
@@ -29,11 +33,15 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .isRequired(true)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = AttributeDefinitionImpl.class)
-public interface AttributeDefinition {
+public interface AttributeDefinition  {
+
 
     /**
      *
@@ -43,7 +51,6 @@ public interface AttributeDefinition {
     @Valid
     @JsonProperty("type")
     public AttributeType getType();
-
     /**
      *
      * @return name
@@ -51,7 +58,6 @@ public interface AttributeDefinition {
     @NotNull
     @JsonProperty("name")
     public String getName();
-
     /**
      *  <p>A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</p>
      *  <pre><code>{
@@ -65,7 +71,6 @@ public interface AttributeDefinition {
     @Valid
     @JsonProperty("label")
     public LocalizedString getLabel();
-
     /**
      *
      * @return isRequired
@@ -73,15 +78,13 @@ public interface AttributeDefinition {
     @NotNull
     @JsonProperty("isRequired")
     public Boolean getIsRequired();
-
     /**
      *
      * @return attributeConstraint
      */
-
+    
     @JsonProperty("attributeConstraint")
     public AttributeConstraintEnum getAttributeConstraint();
-
     /**
      *  <p>A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</p>
      *  <pre><code>{
@@ -94,20 +97,18 @@ public interface AttributeDefinition {
     @Valid
     @JsonProperty("inputTip")
     public LocalizedString getInputTip();
-
     /**
      *
      * @return inputHint
      */
-
+    
     @JsonProperty("inputHint")
     public TextInputHint getInputHint();
-
     /**
      *
      * @return isSearchable
      */
-
+    
     @JsonProperty("isSearchable")
     public Boolean getIsSearchable();
 
@@ -115,16 +116,18 @@ public interface AttributeDefinition {
      * set type
      * @param type value to be set
      */
-
+    
     public void setType(final AttributeType type);
-
+    
+    
     /**
      * set name
      * @param name value to be set
      */
-
+    
     public void setName(final String name);
-
+    
+    
     /**
      *  <p>A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</p>
      *  <pre><code>{
@@ -134,23 +137,26 @@ public interface AttributeDefinition {
      *  </code></pre>
      * @param label value to be set
      */
-
+    
     public void setLabel(final LocalizedString label);
-
+    
+    
     /**
      * set isRequired
      * @param isRequired value to be set
      */
-
+    
     public void setIsRequired(final Boolean isRequired);
-
+    
+    
     /**
      * set attributeConstraint
      * @param attributeConstraint value to be set
      */
-
+    
     public void setAttributeConstraint(final AttributeConstraintEnum attributeConstraint);
-
+    
+    
     /**
      *  <p>A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</p>
      *  <pre><code>{
@@ -160,30 +166,34 @@ public interface AttributeDefinition {
      *  </code></pre>
      * @param inputTip value to be set
      */
-
+    
     public void setInputTip(final LocalizedString inputTip);
-
+    
+    
     /**
      * set inputHint
      * @param inputHint value to be set
      */
-
+    
     public void setInputHint(final TextInputHint inputHint);
-
+    
+    
     /**
      * set isSearchable
      * @param isSearchable value to be set
      */
-
+    
     public void setIsSearchable(final Boolean isSearchable);
+    
 
     /**
      * factory method
      * @return instance of AttributeDefinition
      */
-    public static AttributeDefinition of() {
+    public static AttributeDefinition of(){
         return new AttributeDefinitionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy AttributeDefinition
@@ -219,8 +229,7 @@ public interface AttributeDefinition {
         instance.setLabel(com.commercetools.importapi.models.common.LocalizedString.deepCopy(template.getLabel()));
         instance.setIsRequired(template.getIsRequired());
         instance.setAttributeConstraint(template.getAttributeConstraint());
-        instance.setInputTip(
-            com.commercetools.importapi.models.common.LocalizedString.deepCopy(template.getInputTip()));
+        instance.setInputTip(com.commercetools.importapi.models.common.LocalizedString.deepCopy(template.getInputTip()));
         instance.setInputHint(template.getInputHint());
         instance.setIsSearchable(template.getIsSearchable());
         return instance;
@@ -233,7 +242,7 @@ public interface AttributeDefinition {
     public static AttributeDefinitionBuilder builder() {
         return AttributeDefinitionBuilder.of();
     }
-
+    
     /**
      * create builder for AttributeDefinition instance
      * @param template instance with prefilled values for the builder
@@ -242,6 +251,7 @@ public interface AttributeDefinition {
     public static AttributeDefinitionBuilder builder(final AttributeDefinition template) {
         return AttributeDefinitionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -252,7 +262,7 @@ public interface AttributeDefinition {
     default <T> T withAttributeDefinition(Function<AttributeDefinition, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

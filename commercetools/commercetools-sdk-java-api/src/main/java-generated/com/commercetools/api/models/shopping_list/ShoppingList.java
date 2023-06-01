@@ -1,27 +1,29 @@
-
 package com.commercetools.api.models.shopping_list;
-
-import java.time.*;
-import java.time.ZonedDateTime;
-import java.util.*;
-import java.util.function.Function;
-import java.util.stream.Collectors;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.common.BaseResource;
 import com.commercetools.api.models.common.CreatedBy;
 import com.commercetools.api.models.common.LastModifiedBy;
 import com.commercetools.api.models.common.LocalizedString;
 import com.commercetools.api.models.customer.CustomerReference;
+import com.commercetools.api.models.shopping_list.ShoppingListLineItem;
+import com.commercetools.api.models.shopping_list.TextLineItem;
 import com.commercetools.api.models.store.StoreKeyReference;
 import com.commercetools.api.models.type.CustomFields;
+import java.time.ZonedDateTime;
+import com.commercetools.api.models.shopping_list.ShoppingListImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * ShoppingList
@@ -40,15 +42,15 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .plusTextLineItems(textLineItemsBuilder -> textLineItemsBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = ShoppingListImpl.class)
-public interface ShoppingList
-        extends BaseResource, ShoppingListMixin, com.commercetools.api.models.DomainResource<ShoppingList>,
-        com.commercetools.api.models.Referencable<ShoppingList>,
-        com.commercetools.api.models.ResourceIdentifiable<ShoppingList>,
-        com.commercetools.api.models.Customizable<ShoppingList>, com.commercetools.api.models.WithKey {
+public interface ShoppingList extends BaseResource, ShoppingListMixin, com.commercetools.api.models.DomainResource<ShoppingList>, com.commercetools.api.models.Referencable<ShoppingList>, com.commercetools.api.models.ResourceIdentifiable<ShoppingList>, com.commercetools.api.models.Customizable<ShoppingList>, com.commercetools.api.models.WithKey {
+
 
     /**
      *  <p>Unique identifier of the ShoppingList.</p>
@@ -57,7 +59,6 @@ public interface ShoppingList
     @NotNull
     @JsonProperty("id")
     public String getId();
-
     /**
      *  <p>Current version of the ShoppingList.</p>
      * @return version
@@ -65,7 +66,6 @@ public interface ShoppingList
     @NotNull
     @JsonProperty("version")
     public Long getVersion();
-
     /**
      *  <p>Name of the ShoppingList.</p>
      * @return name
@@ -74,15 +74,13 @@ public interface ShoppingList
     @Valid
     @JsonProperty("name")
     public LocalizedString getName();
-
     /**
      *  <p>User-defined unique identifier of the ShoppingList.</p>
      * @return key
      */
-
+    
     @JsonProperty("key")
     public String getKey();
-
     /**
      *  <p>Reference to a Customer associated with the ShoppingList.</p>
      * @return customer
@@ -90,7 +88,6 @@ public interface ShoppingList
     @Valid
     @JsonProperty("customer")
     public CustomerReference getCustomer();
-
     /**
      *  <p>Human-readable identifiers usually used as deep-link URL to the related ShoppingList. Each slug is unique across a Project, but a ShoppingList can have the same slug for different languages. The slug must match the pattern <code>[a-zA-Z0-9_-]{2,256}</code>. For good performance, indexes are provided for the first 15 <code>languages</code> set on the Project.</p>
      * @return slug
@@ -98,7 +95,6 @@ public interface ShoppingList
     @Valid
     @JsonProperty("slug")
     public LocalizedString getSlug();
-
     /**
      *  <p>Description of the ShoppingList.</p>
      * @return description
@@ -106,7 +102,6 @@ public interface ShoppingList
     @Valid
     @JsonProperty("description")
     public LocalizedString getDescription();
-
     /**
      *  <p>Line Items (containing Products) of the ShoppingList.</p>
      * @return lineItems
@@ -115,7 +110,6 @@ public interface ShoppingList
     @Valid
     @JsonProperty("lineItems")
     public List<ShoppingListLineItem> getLineItems();
-
     /**
      *  <p>Line Items (containing text values) of the ShoppingList.</p>
      * @return textLineItems
@@ -124,23 +118,20 @@ public interface ShoppingList
     @Valid
     @JsonProperty("textLineItems")
     public List<TextLineItem> getTextLineItems();
-
     /**
      *  <p>Number of days after which the ShoppingList will be automatically deleted if it has not been modified.</p>
      * @return deleteDaysAfterLastModification
      */
-
+    
     @JsonProperty("deleteDaysAfterLastModification")
     public Long getDeleteDaysAfterLastModification();
-
     /**
      *  <p>Identifies ShoppingLists belonging to an anonymous session.</p>
      * @return anonymousId
      */
-
+    
     @JsonProperty("anonymousId")
     public String getAnonymousId();
-
     /**
      *  <p>Store to which the ShoppingList is assigned.</p>
      * @return store
@@ -148,7 +139,6 @@ public interface ShoppingList
     @Valid
     @JsonProperty("store")
     public StoreKeyReference getStore();
-
     /**
      *  <p>Custom Fields defined for the ShoppingList.</p>
      * @return custom
@@ -156,7 +146,6 @@ public interface ShoppingList
     @Valid
     @JsonProperty("custom")
     public CustomFields getCustom();
-
     /**
      *  <p>Date and time (UTC) the ShoppingList was initially created.</p>
      * @return createdAt
@@ -164,7 +153,6 @@ public interface ShoppingList
     @NotNull
     @JsonProperty("createdAt")
     public ZonedDateTime getCreatedAt();
-
     /**
      *  <p>Date and time (UTC) the ShoppingList was last updated.</p>
      * @return lastModifiedAt
@@ -172,7 +160,6 @@ public interface ShoppingList
     @NotNull
     @JsonProperty("lastModifiedAt")
     public ZonedDateTime getLastModifiedAt();
-
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      * @return lastModifiedBy
@@ -180,7 +167,6 @@ public interface ShoppingList
     @Valid
     @JsonProperty("lastModifiedBy")
     public LastModifiedBy getLastModifiedBy();
-
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      * @return createdBy
@@ -193,144 +179,158 @@ public interface ShoppingList
      *  <p>Unique identifier of the ShoppingList.</p>
      * @param id value to be set
      */
-
+    
     public void setId(final String id);
-
+    
+    
     /**
      *  <p>Current version of the ShoppingList.</p>
      * @param version value to be set
      */
-
+    
     public void setVersion(final Long version);
-
+    
+    
     /**
      *  <p>Name of the ShoppingList.</p>
      * @param name value to be set
      */
-
+    
     public void setName(final LocalizedString name);
-
+    
+    
     /**
      *  <p>User-defined unique identifier of the ShoppingList.</p>
      * @param key value to be set
      */
-
+    
     public void setKey(final String key);
-
+    
+    
     /**
      *  <p>Reference to a Customer associated with the ShoppingList.</p>
      * @param customer value to be set
      */
-
+    
     public void setCustomer(final CustomerReference customer);
-
+    
+    
     /**
      *  <p>Human-readable identifiers usually used as deep-link URL to the related ShoppingList. Each slug is unique across a Project, but a ShoppingList can have the same slug for different languages. The slug must match the pattern <code>[a-zA-Z0-9_-]{2,256}</code>. For good performance, indexes are provided for the first 15 <code>languages</code> set on the Project.</p>
      * @param slug value to be set
      */
-
+    
     public void setSlug(final LocalizedString slug);
-
+    
+    
     /**
      *  <p>Description of the ShoppingList.</p>
      * @param description value to be set
      */
-
+    
     public void setDescription(final LocalizedString description);
-
+    
+    
     /**
      *  <p>Line Items (containing Products) of the ShoppingList.</p>
      * @param lineItems values to be set
      */
-
+    
     @JsonIgnore
-    public void setLineItems(final ShoppingListLineItem... lineItems);
-
+    public void setLineItems(final ShoppingListLineItem ...lineItems);
     /**
      *  <p>Line Items (containing Products) of the ShoppingList.</p>
      * @param lineItems values to be set
      */
-
+    
     public void setLineItems(final List<ShoppingListLineItem> lineItems);
-
+    
     /**
      *  <p>Line Items (containing text values) of the ShoppingList.</p>
      * @param textLineItems values to be set
      */
-
+    
     @JsonIgnore
-    public void setTextLineItems(final TextLineItem... textLineItems);
-
+    public void setTextLineItems(final TextLineItem ...textLineItems);
     /**
      *  <p>Line Items (containing text values) of the ShoppingList.</p>
      * @param textLineItems values to be set
      */
-
+    
     public void setTextLineItems(final List<TextLineItem> textLineItems);
-
+    
     /**
      *  <p>Number of days after which the ShoppingList will be automatically deleted if it has not been modified.</p>
      * @param deleteDaysAfterLastModification value to be set
      */
-
+    
     public void setDeleteDaysAfterLastModification(final Long deleteDaysAfterLastModification);
-
+    
+    
     /**
      *  <p>Identifies ShoppingLists belonging to an anonymous session.</p>
      * @param anonymousId value to be set
      */
-
+    
     public void setAnonymousId(final String anonymousId);
-
+    
+    
     /**
      *  <p>Store to which the ShoppingList is assigned.</p>
      * @param store value to be set
      */
-
+    
     public void setStore(final StoreKeyReference store);
-
+    
+    
     /**
      *  <p>Custom Fields defined for the ShoppingList.</p>
      * @param custom value to be set
      */
-
+    
     public void setCustom(final CustomFields custom);
-
+    
+    
     /**
      *  <p>Date and time (UTC) the ShoppingList was initially created.</p>
      * @param createdAt value to be set
      */
-
+    
     public void setCreatedAt(final ZonedDateTime createdAt);
-
+    
+    
     /**
      *  <p>Date and time (UTC) the ShoppingList was last updated.</p>
      * @param lastModifiedAt value to be set
      */
-
+    
     public void setLastModifiedAt(final ZonedDateTime lastModifiedAt);
-
+    
+    
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      * @param lastModifiedBy value to be set
      */
-
+    
     public void setLastModifiedBy(final LastModifiedBy lastModifiedBy);
-
+    
+    
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      * @param createdBy value to be set
      */
-
+    
     public void setCreatedBy(final CreatedBy createdBy);
+    
 
     /**
      * factory method
      * @return instance of ShoppingList
      */
-    public static ShoppingList of() {
+    public static ShoppingList of(){
         return new ShoppingListImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy ShoppingList
@@ -378,24 +378,18 @@ public interface ShoppingList
         instance.setKey(template.getKey());
         instance.setCustomer(com.commercetools.api.models.customer.CustomerReference.deepCopy(template.getCustomer()));
         instance.setSlug(com.commercetools.api.models.common.LocalizedString.deepCopy(template.getSlug()));
-        instance.setDescription(
-            com.commercetools.api.models.common.LocalizedString.deepCopy(template.getDescription()));
+        instance.setDescription(com.commercetools.api.models.common.LocalizedString.deepCopy(template.getDescription()));
         instance.setLineItems(Optional.ofNullable(template.getLineItems())
-                .map(t -> t.stream()
-                        .map(com.commercetools.api.models.shopping_list.ShoppingListLineItem::deepCopy)
-                        .collect(Collectors.toList()))
+                .map(t -> t.stream().map(com.commercetools.api.models.shopping_list.ShoppingListLineItem::deepCopy).collect(Collectors.toList()))
                 .orElse(null));
         instance.setTextLineItems(Optional.ofNullable(template.getTextLineItems())
-                .map(t -> t.stream()
-                        .map(com.commercetools.api.models.shopping_list.TextLineItem::deepCopy)
-                        .collect(Collectors.toList()))
+                .map(t -> t.stream().map(com.commercetools.api.models.shopping_list.TextLineItem::deepCopy).collect(Collectors.toList()))
                 .orElse(null));
         instance.setDeleteDaysAfterLastModification(template.getDeleteDaysAfterLastModification());
         instance.setAnonymousId(template.getAnonymousId());
         instance.setStore(com.commercetools.api.models.store.StoreKeyReference.deepCopy(template.getStore()));
         instance.setCustom(com.commercetools.api.models.type.CustomFields.deepCopy(template.getCustom()));
-        instance.setLastModifiedBy(
-            com.commercetools.api.models.common.LastModifiedBy.deepCopy(template.getLastModifiedBy()));
+        instance.setLastModifiedBy(com.commercetools.api.models.common.LastModifiedBy.deepCopy(template.getLastModifiedBy()));
         instance.setCreatedBy(com.commercetools.api.models.common.CreatedBy.deepCopy(template.getCreatedBy()));
         return instance;
     }
@@ -407,7 +401,7 @@ public interface ShoppingList
     public static ShoppingListBuilder builder() {
         return ShoppingListBuilder.of();
     }
-
+    
     /**
      * create builder for ShoppingList instance
      * @param template instance with prefilled values for the builder
@@ -416,6 +410,7 @@ public interface ShoppingList
     public static ShoppingListBuilder builder(final ShoppingList template) {
         return ShoppingListBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -426,11 +421,11 @@ public interface ShoppingList
     default <T> T withShoppingList(Function<ShoppingList, T> helper) {
         return helper.apply(this);
     }
-
     public static com.commercetools.api.models.common.ReferenceTypeId referenceTypeId() {
         return com.commercetools.api.models.common.ReferenceTypeId.SHOPPING_LIST;
     }
-
+    
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

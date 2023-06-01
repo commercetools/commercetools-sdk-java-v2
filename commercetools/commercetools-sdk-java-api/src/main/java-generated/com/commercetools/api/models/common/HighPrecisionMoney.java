@@ -1,17 +1,21 @@
-
 package com.commercetools.api.models.common;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
+import com.commercetools.api.models.common.MoneyType;
+import com.commercetools.api.models.common.TypedMoney;
+import com.commercetools.api.models.common.HighPrecisionMoneyImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Money object that stores an amount of a fraction of the smallest indivisible unit of the specified currency.</p>
@@ -27,9 +31,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .preciseAmount(0.3)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = HighPrecisionMoneyImpl.class)
 public interface HighPrecisionMoney extends TypedMoney {
 
@@ -45,7 +52,6 @@ public interface HighPrecisionMoney extends TypedMoney {
     @NotNull
     @JsonProperty("preciseAmount")
     public Long getPreciseAmount();
-
     /**
      *  <p>Number of digits after the decimal separator, greater than the default number of fraction digits for a currency.</p>
      * @return fractionDigits
@@ -58,23 +64,26 @@ public interface HighPrecisionMoney extends TypedMoney {
      *  <p>Amount in 1 / (10 ^ <code>fractionDigits</code>) of a currency.</p>
      * @param preciseAmount value to be set
      */
-
+    
     public void setPreciseAmount(final Long preciseAmount);
-
+    
+    
     /**
      *  <p>Number of digits after the decimal separator, greater than the default number of fraction digits for a currency.</p>
      * @param fractionDigits value to be set
      */
-
+    
     public void setFractionDigits(final Integer fractionDigits);
+    
 
     /**
      * factory method
      * @return instance of HighPrecisionMoney
      */
-    public static HighPrecisionMoney of() {
+    public static HighPrecisionMoney of(){
         return new HighPrecisionMoneyImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy HighPrecisionMoney
@@ -115,7 +124,7 @@ public interface HighPrecisionMoney extends TypedMoney {
     public static HighPrecisionMoneyBuilder builder() {
         return HighPrecisionMoneyBuilder.of();
     }
-
+    
     /**
      * create builder for HighPrecisionMoney instance
      * @param template instance with prefilled values for the builder
@@ -124,6 +133,7 @@ public interface HighPrecisionMoney extends TypedMoney {
     public static HighPrecisionMoneyBuilder builder(final HighPrecisionMoney template) {
         return HighPrecisionMoneyBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -134,20 +144,20 @@ public interface HighPrecisionMoney extends TypedMoney {
     default <T> T withHighPrecisionMoney(Function<HighPrecisionMoney, T> helper) {
         return helper.apply(this);
     }
-
     public static HighPrecisionMoney of(final javax.money.MonetaryAmount monetaryAmount, final int fractionDigits) {
         return MoneyUtil.of(monetaryAmount, fractionDigits);
     }
-
+    
     public default HighPrecisionMoneyDraft toDraft() {
         return HighPrecisionMoneyDraft.of(this);
     }
-
+    
     @Override
     default javax.money.MonetaryOperator createMoneyOperator() {
         return amount -> MoneyUtil.of(amount, getFractionDigits());
     }
-
+    
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

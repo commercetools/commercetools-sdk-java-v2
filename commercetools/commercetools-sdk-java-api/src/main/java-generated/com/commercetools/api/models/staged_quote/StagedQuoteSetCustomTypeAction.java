@@ -1,19 +1,22 @@
-
 package com.commercetools.api.models.staged_quote;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-
+import com.commercetools.api.models.staged_quote.StagedQuoteUpdateAction;
 import com.commercetools.api.models.type.FieldContainer;
 import com.commercetools.api.models.type.TypeResourceIdentifier;
+import com.commercetools.api.models.staged_quote.StagedQuoteSetCustomTypeActionImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * StagedQuoteSetCustomTypeAction
@@ -25,9 +28,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     StagedQuoteSetCustomTypeAction stagedQuoteSetCustomTypeAction = StagedQuoteSetCustomTypeAction.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = StagedQuoteSetCustomTypeActionImpl.class)
 public interface StagedQuoteSetCustomTypeAction extends StagedQuoteUpdateAction {
 
@@ -43,7 +49,6 @@ public interface StagedQuoteSetCustomTypeAction extends StagedQuoteUpdateAction 
     @Valid
     @JsonProperty("type")
     public TypeResourceIdentifier getType();
-
     /**
      *  <p>Sets the Custom Fields fields for the StagedQuote.</p>
      * @return fields
@@ -56,23 +61,26 @@ public interface StagedQuoteSetCustomTypeAction extends StagedQuoteUpdateAction 
      *  <p>Defines the Type that extends the StagedQuote with Custom Fields. If absent, any existing Type and Custom Fields are removed from the StagedQuote.</p>
      * @param type value to be set
      */
-
+    
     public void setType(final TypeResourceIdentifier type);
-
+    
+    
     /**
      *  <p>Sets the Custom Fields fields for the StagedQuote.</p>
      * @param fields value to be set
      */
-
+    
     public void setFields(final FieldContainer fields);
+    
 
     /**
      * factory method
      * @return instance of StagedQuoteSetCustomTypeAction
      */
-    public static StagedQuoteSetCustomTypeAction of() {
+    public static StagedQuoteSetCustomTypeAction of(){
         return new StagedQuoteSetCustomTypeActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy StagedQuoteSetCustomTypeAction
@@ -109,7 +117,7 @@ public interface StagedQuoteSetCustomTypeAction extends StagedQuoteUpdateAction 
     public static StagedQuoteSetCustomTypeActionBuilder builder() {
         return StagedQuoteSetCustomTypeActionBuilder.of();
     }
-
+    
     /**
      * create builder for StagedQuoteSetCustomTypeAction instance
      * @param template instance with prefilled values for the builder
@@ -118,6 +126,7 @@ public interface StagedQuoteSetCustomTypeAction extends StagedQuoteUpdateAction 
     public static StagedQuoteSetCustomTypeActionBuilder builder(final StagedQuoteSetCustomTypeAction template) {
         return StagedQuoteSetCustomTypeActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -128,7 +137,7 @@ public interface StagedQuoteSetCustomTypeAction extends StagedQuoteUpdateAction 
     default <T> T withStagedQuoteSetCustomTypeAction(Function<StagedQuoteSetCustomTypeAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

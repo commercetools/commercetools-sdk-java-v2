@@ -1,17 +1,20 @@
-
 package com.commercetools.history.models.change;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
+import com.commercetools.history.models.change.Change;
+import com.commercetools.history.models.change.SetCountryChangeImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * SetCountryChange
@@ -26,9 +29,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .nextValue("{nextValue}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = SetCountryChangeImpl.class)
 public interface SetCountryChange extends Change {
 
@@ -44,7 +50,6 @@ public interface SetCountryChange extends Change {
     @NotNull
     @JsonProperty("type")
     public String getType();
-
     /**
      *  <p>Update action for <code>setCountry</code></p>
      * @return change
@@ -52,7 +57,6 @@ public interface SetCountryChange extends Change {
     @NotNull
     @JsonProperty("change")
     public String getChange();
-
     /**
      *  <p>Two-digit country code as per ISO 3166-1 alpha-2.</p>
      * @return previousValue
@@ -60,7 +64,6 @@ public interface SetCountryChange extends Change {
     @NotNull
     @JsonProperty("previousValue")
     public String getPreviousValue();
-
     /**
      *  <p>Two-digit country code as per ISO 3166-1 alpha-2.</p>
      * @return nextValue
@@ -73,30 +76,34 @@ public interface SetCountryChange extends Change {
      *  <p>Update action for <code>setCountry</code></p>
      * @param change value to be set
      */
-
+    
     public void setChange(final String change);
-
+    
+    
     /**
      *  <p>Two-digit country code as per ISO 3166-1 alpha-2.</p>
      * @param previousValue value to be set
      */
-
+    
     public void setPreviousValue(final String previousValue);
-
+    
+    
     /**
      *  <p>Two-digit country code as per ISO 3166-1 alpha-2.</p>
      * @param nextValue value to be set
      */
-
+    
     public void setNextValue(final String nextValue);
+    
 
     /**
      * factory method
      * @return instance of SetCountryChange
      */
-    public static SetCountryChange of() {
+    public static SetCountryChange of(){
         return new SetCountryChangeImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy SetCountryChange
@@ -135,7 +142,7 @@ public interface SetCountryChange extends Change {
     public static SetCountryChangeBuilder builder() {
         return SetCountryChangeBuilder.of();
     }
-
+    
     /**
      * create builder for SetCountryChange instance
      * @param template instance with prefilled values for the builder
@@ -144,6 +151,7 @@ public interface SetCountryChange extends Change {
     public static SetCountryChangeBuilder builder(final SetCountryChange template) {
         return SetCountryChangeBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -154,7 +162,7 @@ public interface SetCountryChange extends Change {
     default <T> T withSetCountryChange(Function<SetCountryChange, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

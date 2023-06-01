@@ -1,19 +1,21 @@
-
 package com.commercetools.api.models.store;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
 import com.commercetools.api.models.product_selection.ProductSelectionResourceIdentifier;
+import com.commercetools.api.models.store.StoreUpdateAction;
+import com.commercetools.api.models.store.StoreRemoveProductSelectionActionImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>This action has no effect if the given Product Selection is not in the Store.</p>
@@ -26,9 +28,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .productSelection(productSelectionBuilder -> productSelectionBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = StoreRemoveProductSelectionActionImpl.class)
 public interface StoreRemoveProductSelectionAction extends StoreUpdateAction {
 
@@ -50,16 +55,18 @@ public interface StoreRemoveProductSelectionAction extends StoreUpdateAction {
      *  <p>Value to remove. The removed Product Selection is made offline.</p>
      * @param productSelection value to be set
      */
-
+    
     public void setProductSelection(final ProductSelectionResourceIdentifier productSelection);
+    
 
     /**
      * factory method
      * @return instance of StoreRemoveProductSelectionAction
      */
-    public static StoreRemoveProductSelectionAction of() {
+    public static StoreRemoveProductSelectionAction of(){
         return new StoreRemoveProductSelectionActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy StoreRemoveProductSelectionAction
@@ -78,14 +85,12 @@ public interface StoreRemoveProductSelectionAction extends StoreUpdateAction {
      * @return copy instance
      */
     @Nullable
-    public static StoreRemoveProductSelectionAction deepCopy(
-            @Nullable final StoreRemoveProductSelectionAction template) {
+    public static StoreRemoveProductSelectionAction deepCopy(@Nullable final StoreRemoveProductSelectionAction template) {
         if (template == null) {
             return null;
         }
         StoreRemoveProductSelectionActionImpl instance = new StoreRemoveProductSelectionActionImpl();
-        instance.setProductSelection(com.commercetools.api.models.product_selection.ProductSelectionResourceIdentifier
-                .deepCopy(template.getProductSelection()));
+        instance.setProductSelection(com.commercetools.api.models.product_selection.ProductSelectionResourceIdentifier.deepCopy(template.getProductSelection()));
         return instance;
     }
 
@@ -96,7 +101,7 @@ public interface StoreRemoveProductSelectionAction extends StoreUpdateAction {
     public static StoreRemoveProductSelectionActionBuilder builder() {
         return StoreRemoveProductSelectionActionBuilder.of();
     }
-
+    
     /**
      * create builder for StoreRemoveProductSelectionAction instance
      * @param template instance with prefilled values for the builder
@@ -105,6 +110,7 @@ public interface StoreRemoveProductSelectionAction extends StoreUpdateAction {
     public static StoreRemoveProductSelectionActionBuilder builder(final StoreRemoveProductSelectionAction template) {
         return StoreRemoveProductSelectionActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -115,7 +121,7 @@ public interface StoreRemoveProductSelectionAction extends StoreUpdateAction {
     default <T> T withStoreRemoveProductSelectionAction(Function<StoreRemoveProductSelectionAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

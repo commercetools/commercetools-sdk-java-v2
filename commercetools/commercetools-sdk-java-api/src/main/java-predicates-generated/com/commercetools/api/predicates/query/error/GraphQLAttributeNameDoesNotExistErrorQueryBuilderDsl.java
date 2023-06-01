@@ -1,9 +1,11 @@
-
 package com.commercetools.api.predicates.query.error;
 
 import com.commercetools.api.predicates.query.*;
 
-public class GraphQLAttributeNameDoesNotExistErrorQueryBuilderDsl {
+import java.util.function.Function;
+
+
+public class GraphQLAttributeNameDoesNotExistErrorQueryBuilderDsl  {
     public GraphQLAttributeNameDoesNotExistErrorQueryBuilderDsl() {
     }
 
@@ -12,15 +14,12 @@ public class GraphQLAttributeNameDoesNotExistErrorQueryBuilderDsl {
     }
 
     public StringComparisonPredicateBuilder<GraphQLAttributeNameDoesNotExistErrorQueryBuilderDsl> code() {
-        return new StringComparisonPredicateBuilder<>(
-            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("code")),
-            p -> new CombinationQueryPredicate<>(p, GraphQLAttributeNameDoesNotExistErrorQueryBuilderDsl::of));
+        return new StringComparisonPredicateBuilder<>(BinaryQueryPredicate.of().left(new ConstantQueryPredicate("code")),
+        p -> new CombinationQueryPredicate<>(p, GraphQLAttributeNameDoesNotExistErrorQueryBuilderDsl::of));
     }
-
     public StringComparisonPredicateBuilder<GraphQLAttributeNameDoesNotExistErrorQueryBuilderDsl> invalidAttributeName() {
-        return new StringComparisonPredicateBuilder<>(
-            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("invalidAttributeName")),
-            p -> new CombinationQueryPredicate<>(p, GraphQLAttributeNameDoesNotExistErrorQueryBuilderDsl::of));
+        return new StringComparisonPredicateBuilder<>(BinaryQueryPredicate.of().left(new ConstantQueryPredicate("invalidAttributeName")),
+        p -> new CombinationQueryPredicate<>(p, GraphQLAttributeNameDoesNotExistErrorQueryBuilderDsl::of));
     }
-
+    
 }

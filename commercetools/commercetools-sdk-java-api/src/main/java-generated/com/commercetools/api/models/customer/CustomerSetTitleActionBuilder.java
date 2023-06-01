@@ -1,10 +1,11 @@
-
 package com.commercetools.api.models.customer;
 
-import java.util.*;
-
+import com.commercetools.api.models.customer.CustomerUpdateAction;
+import com.commercetools.api.models.customer.CustomerSetTitleAction;
 import javax.annotation.Nullable;
-
+import java.util.*;
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -17,32 +18,39 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     CustomerSetTitleAction customerSetTitleAction = CustomerSetTitleAction.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class CustomerSetTitleActionBuilder implements Builder<CustomerSetTitleAction> {
 
+    
     @Nullable
     private String title;
 
+    
     /**
      *  <p>Value to set. If empty, any existing value is removed.</p>
      * @param title value to be set
      * @return Builder
      */
-
+    
     public CustomerSetTitleActionBuilder title(@Nullable final String title) {
         this.title = title;
         return this;
     }
+    
+    
 
     /**
      *  <p>Value to set. If empty, any existing value is removed.</p>
      * @return title
      */
-
+    
     @Nullable
-    public String getTitle() {
+    public String getTitle(){
         return this.title;
     }
 
@@ -53,7 +61,7 @@ public class CustomerSetTitleActionBuilder implements Builder<CustomerSetTitleAc
     public CustomerSetTitleAction build() {
         return new CustomerSetTitleActionImpl(title);
     }
-
+    
     /**
      * builds CustomerSetTitleAction without checking for non-null required values
      * @return CustomerSetTitleAction
@@ -64,7 +72,7 @@ public class CustomerSetTitleActionBuilder implements Builder<CustomerSetTitleAc
 
     /**
      * factory method for an instance of CustomerSetTitleActionBuilder
-     * @return builder
+     * @return builder 
      */
     public static CustomerSetTitleActionBuilder of() {
         return new CustomerSetTitleActionBuilder();

@@ -1,19 +1,21 @@
-
 package com.commercetools.api.models.quote;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
+import com.commercetools.api.models.quote.QuoteUpdateAction;
 import com.commercetools.api.models.state.StateResourceIdentifier;
+import com.commercetools.api.models.quote.QuoteTransitionStateActionImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>If the existing State has set <code>transitions</code>, there must be a direct transition to the new State. If <code>transitions</code> is not set, no validation is performed. This update action produces the Quote State Transition Message.</p>
@@ -26,9 +28,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .state(stateBuilder -> stateBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = QuoteTransitionStateActionImpl.class)
 public interface QuoteTransitionStateAction extends QuoteUpdateAction {
 
@@ -45,12 +50,11 @@ public interface QuoteTransitionStateAction extends QuoteUpdateAction {
     @Valid
     @JsonProperty("state")
     public StateResourceIdentifier getState();
-
     /**
      *  <p>Switch validations on or off.</p>
      * @return force
      */
-
+    
     @JsonProperty("force")
     public Boolean getForce();
 
@@ -58,23 +62,26 @@ public interface QuoteTransitionStateAction extends QuoteUpdateAction {
      *  <p>Value to set. If there is no State yet, this must be an initial State.</p>
      * @param state value to be set
      */
-
+    
     public void setState(final StateResourceIdentifier state);
-
+    
+    
     /**
      *  <p>Switch validations on or off.</p>
      * @param force value to be set
      */
-
+    
     public void setForce(final Boolean force);
+    
 
     /**
      * factory method
      * @return instance of QuoteTransitionStateAction
      */
-    public static QuoteTransitionStateAction of() {
+    public static QuoteTransitionStateAction of(){
         return new QuoteTransitionStateActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy QuoteTransitionStateAction
@@ -111,7 +118,7 @@ public interface QuoteTransitionStateAction extends QuoteUpdateAction {
     public static QuoteTransitionStateActionBuilder builder() {
         return QuoteTransitionStateActionBuilder.of();
     }
-
+    
     /**
      * create builder for QuoteTransitionStateAction instance
      * @param template instance with prefilled values for the builder
@@ -120,6 +127,7 @@ public interface QuoteTransitionStateAction extends QuoteUpdateAction {
     public static QuoteTransitionStateActionBuilder builder(final QuoteTransitionStateAction template) {
         return QuoteTransitionStateActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -130,7 +138,7 @@ public interface QuoteTransitionStateAction extends QuoteUpdateAction {
     default <T> T withQuoteTransitionStateAction(Function<QuoteTransitionStateAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

@@ -1,19 +1,21 @@
-
 package com.commercetools.api.models.message;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
 import com.commercetools.api.models.common.Reference;
+import com.commercetools.api.models.message.MessagePayload;
+import com.commercetools.api.models.message.ReviewRatingSetMessagePayloadImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Generated after a successful Set Rating update action.</p>
@@ -26,9 +28,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .includedInStatistics(true)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = ReviewRatingSetMessagePayloadImpl.class)
 public interface ReviewRatingSetMessagePayload extends MessagePayload {
 
@@ -41,18 +46,16 @@ public interface ReviewRatingSetMessagePayload extends MessagePayload {
      *  <p>The <code>rating</code> of the Review before the Set Rating update action.</p>
      * @return oldRating
      */
-
+    
     @JsonProperty("oldRating")
     public Double getOldRating();
-
     /**
      *  <p>The <code>rating</code> of the Review after the Set Rating update action.</p>
      * @return newRating
      */
-
+    
     @JsonProperty("newRating")
     public Double getNewRating();
-
     /**
      *  <p>Whether the Review was taken into account in the ratings statistics of the target.</p>
      * @return includedInStatistics
@@ -60,7 +63,6 @@ public interface ReviewRatingSetMessagePayload extends MessagePayload {
     @NotNull
     @JsonProperty("includedInStatistics")
     public Boolean getIncludedInStatistics();
-
     /**
      *  <p>Reference to the resource that the Review belongs to.</p>
      * @return target
@@ -73,37 +75,42 @@ public interface ReviewRatingSetMessagePayload extends MessagePayload {
      *  <p>The <code>rating</code> of the Review before the Set Rating update action.</p>
      * @param oldRating value to be set
      */
-
+    
     public void setOldRating(final Double oldRating);
-
+    
+    
     /**
      *  <p>The <code>rating</code> of the Review after the Set Rating update action.</p>
      * @param newRating value to be set
      */
-
+    
     public void setNewRating(final Double newRating);
-
+    
+    
     /**
      *  <p>Whether the Review was taken into account in the ratings statistics of the target.</p>
      * @param includedInStatistics value to be set
      */
-
+    
     public void setIncludedInStatistics(final Boolean includedInStatistics);
-
+    
+    
     /**
      *  <p>Reference to the resource that the Review belongs to.</p>
      * @param target value to be set
      */
-
+    
     public void setTarget(final Reference target);
+    
 
     /**
      * factory method
      * @return instance of ReviewRatingSetMessagePayload
      */
-    public static ReviewRatingSetMessagePayload of() {
+    public static ReviewRatingSetMessagePayload of(){
         return new ReviewRatingSetMessagePayloadImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy ReviewRatingSetMessagePayload
@@ -144,7 +151,7 @@ public interface ReviewRatingSetMessagePayload extends MessagePayload {
     public static ReviewRatingSetMessagePayloadBuilder builder() {
         return ReviewRatingSetMessagePayloadBuilder.of();
     }
-
+    
     /**
      * create builder for ReviewRatingSetMessagePayload instance
      * @param template instance with prefilled values for the builder
@@ -153,6 +160,7 @@ public interface ReviewRatingSetMessagePayload extends MessagePayload {
     public static ReviewRatingSetMessagePayloadBuilder builder(final ReviewRatingSetMessagePayload template) {
         return ReviewRatingSetMessagePayloadBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -163,7 +171,7 @@ public interface ReviewRatingSetMessagePayload extends MessagePayload {
     default <T> T withReviewRatingSetMessagePayload(Function<ReviewRatingSetMessagePayload, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

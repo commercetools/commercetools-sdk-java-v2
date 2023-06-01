@@ -1,19 +1,20 @@
-
 package com.commercetools.history.models.change_value;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
 import com.commercetools.history.models.common.LocalizedString;
+import com.commercetools.history.models.change_value.ShoppingListLineItemValueImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * ShoppingListLineItemValue
@@ -28,11 +29,15 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .variantId(1)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = ShoppingListLineItemValueImpl.class)
-public interface ShoppingListLineItemValue {
+public interface ShoppingListLineItemValue  {
+
 
     /**
      *
@@ -41,7 +46,6 @@ public interface ShoppingListLineItemValue {
     @NotNull
     @JsonProperty("id")
     public String getId();
-
     /**
      *
      * @return name
@@ -50,7 +54,6 @@ public interface ShoppingListLineItemValue {
     @Valid
     @JsonProperty("name")
     public LocalizedString getName();
-
     /**
      *
      * @return variantId
@@ -63,30 +66,34 @@ public interface ShoppingListLineItemValue {
      * set id
      * @param id value to be set
      */
-
+    
     public void setId(final String id);
-
+    
+    
     /**
      * set name
      * @param name value to be set
      */
-
+    
     public void setName(final LocalizedString name);
-
+    
+    
     /**
      * set variantId
      * @param variantId value to be set
      */
-
+    
     public void setVariantId(final Integer variantId);
+    
 
     /**
      * factory method
      * @return instance of ShoppingListLineItemValue
      */
-    public static ShoppingListLineItemValue of() {
+    public static ShoppingListLineItemValue of(){
         return new ShoppingListLineItemValueImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy ShoppingListLineItemValue
@@ -125,7 +132,7 @@ public interface ShoppingListLineItemValue {
     public static ShoppingListLineItemValueBuilder builder() {
         return ShoppingListLineItemValueBuilder.of();
     }
-
+    
     /**
      * create builder for ShoppingListLineItemValue instance
      * @param template instance with prefilled values for the builder
@@ -134,6 +141,7 @@ public interface ShoppingListLineItemValue {
     public static ShoppingListLineItemValueBuilder builder(final ShoppingListLineItemValue template) {
         return ShoppingListLineItemValueBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -144,7 +152,7 @@ public interface ShoppingListLineItemValue {
     default <T> T withShoppingListLineItemValue(Function<ShoppingListLineItemValue, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

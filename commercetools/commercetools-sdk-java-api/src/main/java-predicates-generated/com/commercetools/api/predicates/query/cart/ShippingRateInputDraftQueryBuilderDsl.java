@@ -1,11 +1,11 @@
-
 package com.commercetools.api.predicates.query.cart;
-
-import java.util.function.Function;
 
 import com.commercetools.api.predicates.query.*;
 
-public class ShippingRateInputDraftQueryBuilderDsl {
+import java.util.function.Function;
+
+
+public class ShippingRateInputDraftQueryBuilderDsl  {
     public ShippingRateInputDraftQueryBuilderDsl() {
     }
 
@@ -14,23 +14,18 @@ public class ShippingRateInputDraftQueryBuilderDsl {
     }
 
     public StringComparisonPredicateBuilder<ShippingRateInputDraftQueryBuilderDsl> type() {
-        return new StringComparisonPredicateBuilder<>(
-            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("type")),
-            p -> new CombinationQueryPredicate<>(p, ShippingRateInputDraftQueryBuilderDsl::of));
+        return new StringComparisonPredicateBuilder<>(BinaryQueryPredicate.of().left(new ConstantQueryPredicate("type")),
+        p -> new CombinationQueryPredicate<>(p, ShippingRateInputDraftQueryBuilderDsl::of));
     }
-
+    
     public CombinationQueryPredicate<ShippingRateInputDraftQueryBuilderDsl> asClassification(
-            Function<com.commercetools.api.predicates.query.cart.ClassificationShippingRateInputDraftQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.cart.ClassificationShippingRateInputDraftQueryBuilderDsl>> fn) {
-        return new CombinationQueryPredicate<>(
-            fn.apply(
-                com.commercetools.api.predicates.query.cart.ClassificationShippingRateInputDraftQueryBuilderDsl.of()),
+        Function<com.commercetools.api.predicates.query.cart.ClassificationShippingRateInputDraftQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.cart.ClassificationShippingRateInputDraftQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(fn.apply(com.commercetools.api.predicates.query.cart.ClassificationShippingRateInputDraftQueryBuilderDsl.of()),
             ShippingRateInputDraftQueryBuilderDsl::of);
     }
-
     public CombinationQueryPredicate<ShippingRateInputDraftQueryBuilderDsl> asScore(
-            Function<com.commercetools.api.predicates.query.cart.ScoreShippingRateInputDraftQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.cart.ScoreShippingRateInputDraftQueryBuilderDsl>> fn) {
-        return new CombinationQueryPredicate<>(
-            fn.apply(com.commercetools.api.predicates.query.cart.ScoreShippingRateInputDraftQueryBuilderDsl.of()),
+        Function<com.commercetools.api.predicates.query.cart.ScoreShippingRateInputDraftQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.cart.ScoreShippingRateInputDraftQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(fn.apply(com.commercetools.api.predicates.query.cart.ScoreShippingRateInputDraftQueryBuilderDsl.of()),
             ShippingRateInputDraftQueryBuilderDsl::of);
     }
 }

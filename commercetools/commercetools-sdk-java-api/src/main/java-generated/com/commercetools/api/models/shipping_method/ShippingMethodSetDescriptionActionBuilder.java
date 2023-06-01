@@ -1,10 +1,11 @@
-
 package com.commercetools.api.models.shipping_method;
 
-import java.util.*;
-
+import com.commercetools.api.models.shipping_method.ShippingMethodUpdateAction;
+import com.commercetools.api.models.shipping_method.ShippingMethodSetDescriptionAction;
 import javax.annotation.Nullable;
-
+import java.util.*;
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -17,33 +18,40 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     ShippingMethodSetDescriptionAction shippingMethodSetDescriptionAction = ShippingMethodSetDescriptionAction.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @Deprecated
 public class ShippingMethodSetDescriptionActionBuilder implements Builder<ShippingMethodSetDescriptionAction> {
 
+    
     @Nullable
     private String description;
 
+    
     /**
      *  <p>Value to set. If empty, any existing value will be removed.</p>
      * @param description value to be set
      * @return Builder
      */
-
+    
     public ShippingMethodSetDescriptionActionBuilder description(@Nullable final String description) {
         this.description = description;
         return this;
     }
+    
+    
 
     /**
      *  <p>Value to set. If empty, any existing value will be removed.</p>
      * @return description
      */
-
+    
     @Nullable
-    public String getDescription() {
+    public String getDescription(){
         return this.description;
     }
 
@@ -54,7 +62,7 @@ public class ShippingMethodSetDescriptionActionBuilder implements Builder<Shippi
     public ShippingMethodSetDescriptionAction build() {
         return new ShippingMethodSetDescriptionActionImpl(description);
     }
-
+    
     /**
      * builds ShippingMethodSetDescriptionAction without checking for non-null required values
      * @return ShippingMethodSetDescriptionAction
@@ -65,7 +73,7 @@ public class ShippingMethodSetDescriptionActionBuilder implements Builder<Shippi
 
     /**
      * factory method for an instance of ShippingMethodSetDescriptionActionBuilder
-     * @return builder
+     * @return builder 
      */
     public static ShippingMethodSetDescriptionActionBuilder of() {
         return new ShippingMethodSetDescriptionActionBuilder();

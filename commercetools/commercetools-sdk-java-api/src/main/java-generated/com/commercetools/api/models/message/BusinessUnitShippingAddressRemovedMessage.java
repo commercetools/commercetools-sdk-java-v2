@@ -1,19 +1,21 @@
-
 package com.commercetools.api.models.message;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
 import com.commercetools.api.models.common.Address;
+import com.commercetools.api.models.message.Message;
+import com.commercetools.api.models.message.BusinessUnitShippingAddressRemovedMessageImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Generated after a successful Remove Shipping Address Identifier update action.</p>
@@ -33,9 +35,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .address(addressBuilder -> addressBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = BusinessUnitShippingAddressRemovedMessageImpl.class)
 public interface BusinessUnitShippingAddressRemovedMessage extends Message {
 
@@ -57,24 +62,25 @@ public interface BusinessUnitShippingAddressRemovedMessage extends Message {
      *  <p>The address that was removed from shipping addresses of the Business Unit.</p>
      * @param address value to be set
      */
-
+    
     public void setAddress(final Address address);
+    
 
     /**
      * factory method
      * @return instance of BusinessUnitShippingAddressRemovedMessage
      */
-    public static BusinessUnitShippingAddressRemovedMessage of() {
+    public static BusinessUnitShippingAddressRemovedMessage of(){
         return new BusinessUnitShippingAddressRemovedMessageImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy BusinessUnitShippingAddressRemovedMessage
      * @param template instance to be copied
      * @return copy instance
      */
-    public static BusinessUnitShippingAddressRemovedMessage of(
-            final BusinessUnitShippingAddressRemovedMessage template) {
+    public static BusinessUnitShippingAddressRemovedMessage of(final BusinessUnitShippingAddressRemovedMessage template) {
         BusinessUnitShippingAddressRemovedMessageImpl instance = new BusinessUnitShippingAddressRemovedMessageImpl();
         instance.setId(template.getId());
         instance.setVersion(template.getVersion());
@@ -96,8 +102,7 @@ public interface BusinessUnitShippingAddressRemovedMessage extends Message {
      * @return copy instance
      */
     @Nullable
-    public static BusinessUnitShippingAddressRemovedMessage deepCopy(
-            @Nullable final BusinessUnitShippingAddressRemovedMessage template) {
+    public static BusinessUnitShippingAddressRemovedMessage deepCopy(@Nullable final BusinessUnitShippingAddressRemovedMessage template) {
         if (template == null) {
             return null;
         }
@@ -106,14 +111,12 @@ public interface BusinessUnitShippingAddressRemovedMessage extends Message {
         instance.setVersion(template.getVersion());
         instance.setCreatedAt(template.getCreatedAt());
         instance.setLastModifiedAt(template.getLastModifiedAt());
-        instance.setLastModifiedBy(
-            com.commercetools.api.models.common.LastModifiedBy.deepCopy(template.getLastModifiedBy()));
+        instance.setLastModifiedBy(com.commercetools.api.models.common.LastModifiedBy.deepCopy(template.getLastModifiedBy()));
         instance.setCreatedBy(com.commercetools.api.models.common.CreatedBy.deepCopy(template.getCreatedBy()));
         instance.setSequenceNumber(template.getSequenceNumber());
         instance.setResource(com.commercetools.api.models.common.Reference.deepCopy(template.getResource()));
         instance.setResourceVersion(template.getResourceVersion());
-        instance.setResourceUserProvidedIdentifiers(com.commercetools.api.models.message.UserProvidedIdentifiers
-                .deepCopy(template.getResourceUserProvidedIdentifiers()));
+        instance.setResourceUserProvidedIdentifiers(com.commercetools.api.models.message.UserProvidedIdentifiers.deepCopy(template.getResourceUserProvidedIdentifiers()));
         instance.setAddress(com.commercetools.api.models.common.Address.deepCopy(template.getAddress()));
         return instance;
     }
@@ -125,16 +128,16 @@ public interface BusinessUnitShippingAddressRemovedMessage extends Message {
     public static BusinessUnitShippingAddressRemovedMessageBuilder builder() {
         return BusinessUnitShippingAddressRemovedMessageBuilder.of();
     }
-
+    
     /**
      * create builder for BusinessUnitShippingAddressRemovedMessage instance
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static BusinessUnitShippingAddressRemovedMessageBuilder builder(
-            final BusinessUnitShippingAddressRemovedMessage template) {
+    public static BusinessUnitShippingAddressRemovedMessageBuilder builder(final BusinessUnitShippingAddressRemovedMessage template) {
         return BusinessUnitShippingAddressRemovedMessageBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -142,11 +145,10 @@ public interface BusinessUnitShippingAddressRemovedMessage extends Message {
      * @param helper function to map the object
      * @return mapped value
      */
-    default <T> T withBusinessUnitShippingAddressRemovedMessage(
-            Function<BusinessUnitShippingAddressRemovedMessage, T> helper) {
+    default <T> T withBusinessUnitShippingAddressRemovedMessage(Function<BusinessUnitShippingAddressRemovedMessage, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

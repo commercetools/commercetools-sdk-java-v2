@@ -1,8 +1,11 @@
-
 package com.commercetools.history.models.change;
 
+import com.commercetools.history.models.change.Change;
+import com.commercetools.history.models.change.SetProductCountChange;
+import javax.annotation.Nullable;
 import java.util.*;
-
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -18,74 +21,95 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .nextValue(1)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class SetProductCountChangeBuilder implements Builder<SetProductCountChange> {
 
+    
+    
     private String change;
-
+    
+    
+    
     private Integer previousValue;
-
+    
+    
+    
     private Integer nextValue;
 
+    
     /**
      *  <p>Update action for <code>setProductCount</code></p>
      * @param change value to be set
      * @return Builder
      */
-
-    public SetProductCountChangeBuilder change(final String change) {
+    
+    public SetProductCountChangeBuilder change( final String change) {
         this.change = change;
         return this;
     }
-
+    
+    
+    
+    
     /**
      * set the value to the previousValue
      * @param previousValue value to be set
      * @return Builder
      */
-
-    public SetProductCountChangeBuilder previousValue(final Integer previousValue) {
+    
+    public SetProductCountChangeBuilder previousValue( final Integer previousValue) {
         this.previousValue = previousValue;
         return this;
     }
-
+    
+    
+    
+    
     /**
      * set the value to the nextValue
      * @param nextValue value to be set
      * @return Builder
      */
-
-    public SetProductCountChangeBuilder nextValue(final Integer nextValue) {
+    
+    public SetProductCountChangeBuilder nextValue( final Integer nextValue) {
         this.nextValue = nextValue;
         return this;
     }
+    
+    
 
     /**
      *  <p>Update action for <code>setProductCount</code></p>
      * @return change
      */
-
-    public String getChange() {
+    
+    
+    public String getChange(){
         return this.change;
     }
-
+    
     /**
      * value of previousValue}
      * @return previousValue
      */
-
-    public Integer getPreviousValue() {
+    
+    
+    public Integer getPreviousValue(){
         return this.previousValue;
     }
-
+    
     /**
      * value of nextValue}
      * @return nextValue
      */
-
-    public Integer getNextValue() {
+    
+    
+    public Integer getNextValue(){
         return this.nextValue;
     }
 
@@ -99,7 +123,7 @@ public class SetProductCountChangeBuilder implements Builder<SetProductCountChan
         Objects.requireNonNull(nextValue, SetProductCountChange.class + ": nextValue is missing");
         return new SetProductCountChangeImpl(change, previousValue, nextValue);
     }
-
+    
     /**
      * builds SetProductCountChange without checking for non-null required values
      * @return SetProductCountChange
@@ -110,7 +134,7 @@ public class SetProductCountChangeBuilder implements Builder<SetProductCountChan
 
     /**
      * factory method for an instance of SetProductCountChangeBuilder
-     * @return builder
+     * @return builder 
      */
     public static SetProductCountChangeBuilder of() {
         return new SetProductCountChangeBuilder();

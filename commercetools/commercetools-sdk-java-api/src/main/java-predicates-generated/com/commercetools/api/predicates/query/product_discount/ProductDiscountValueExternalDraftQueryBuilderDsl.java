@@ -1,9 +1,11 @@
-
 package com.commercetools.api.predicates.query.product_discount;
 
 import com.commercetools.api.predicates.query.*;
 
-public class ProductDiscountValueExternalDraftQueryBuilderDsl {
+import java.util.function.Function;
+
+
+public class ProductDiscountValueExternalDraftQueryBuilderDsl  {
     public ProductDiscountValueExternalDraftQueryBuilderDsl() {
     }
 
@@ -12,9 +14,8 @@ public class ProductDiscountValueExternalDraftQueryBuilderDsl {
     }
 
     public StringComparisonPredicateBuilder<ProductDiscountValueExternalDraftQueryBuilderDsl> type() {
-        return new StringComparisonPredicateBuilder<>(
-            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("type")),
-            p -> new CombinationQueryPredicate<>(p, ProductDiscountValueExternalDraftQueryBuilderDsl::of));
+        return new StringComparisonPredicateBuilder<>(BinaryQueryPredicate.of().left(new ConstantQueryPredicate("type")),
+        p -> new CombinationQueryPredicate<>(p, ProductDiscountValueExternalDraftQueryBuilderDsl::of));
     }
-
+    
 }

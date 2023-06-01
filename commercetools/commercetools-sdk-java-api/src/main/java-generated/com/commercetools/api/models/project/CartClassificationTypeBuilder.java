@@ -1,9 +1,13 @@
-
 package com.commercetools.api.models.project;
 
+import com.commercetools.api.models.project.ShippingRateInputType;
+import com.commercetools.api.models.shipping_method.ShippingRateTierType;
+import com.commercetools.api.models.type.CustomFieldLocalizedEnumValue;
+import com.commercetools.api.models.project.CartClassificationType;
+import javax.annotation.Nullable;
 import java.util.*;
 import java.util.function.Function;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -17,11 +21,16 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .plusValues(valuesBuilder -> valuesBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class CartClassificationTypeBuilder implements Builder<CartClassificationType> {
 
+    
+    
     private java.util.List<com.commercetools.api.models.type.CustomFieldLocalizedEnumValue> values;
 
     /**
@@ -29,98 +38,93 @@ public class CartClassificationTypeBuilder implements Builder<CartClassification
      * @param values value to be set
      * @return Builder
      */
-
-    public CartClassificationTypeBuilder values(
-            final com.commercetools.api.models.type.CustomFieldLocalizedEnumValue... values) {
+    
+    public CartClassificationTypeBuilder values( final com.commercetools.api.models.type.CustomFieldLocalizedEnumValue ...values) {
         this.values = new ArrayList<>(Arrays.asList(values));
         return this;
     }
-
+    
     /**
      *  <p>The classification items that can be used for specifying any ShippingRatePriceTier.</p>
      * @param values value to be set
      * @return Builder
      */
-
-    public CartClassificationTypeBuilder values(
-            final java.util.List<com.commercetools.api.models.type.CustomFieldLocalizedEnumValue> values) {
+    
+    public CartClassificationTypeBuilder values( final java.util.List<com.commercetools.api.models.type.CustomFieldLocalizedEnumValue> values) {
         this.values = values;
         return this;
     }
-
+    
     /**
      *  <p>The classification items that can be used for specifying any ShippingRatePriceTier.</p>
      * @param values value to be set
      * @return Builder
      */
-
-    public CartClassificationTypeBuilder plusValues(
-            final com.commercetools.api.models.type.CustomFieldLocalizedEnumValue... values) {
+    
+    public CartClassificationTypeBuilder plusValues( final com.commercetools.api.models.type.CustomFieldLocalizedEnumValue ...values) {
         if (this.values == null) {
             this.values = new ArrayList<>();
         }
         this.values.addAll(Arrays.asList(values));
         return this;
     }
-
+    
+    
+    
     /**
      *  <p>The classification items that can be used for specifying any ShippingRatePriceTier.</p>
      * @param builder function to build the values value
      * @return Builder
      */
-
-    public CartClassificationTypeBuilder plusValues(
-            Function<com.commercetools.api.models.type.CustomFieldLocalizedEnumValueBuilder, com.commercetools.api.models.type.CustomFieldLocalizedEnumValueBuilder> builder) {
+    
+    public CartClassificationTypeBuilder plusValues(Function<com.commercetools.api.models.type.CustomFieldLocalizedEnumValueBuilder, com.commercetools.api.models.type.CustomFieldLocalizedEnumValueBuilder> builder) {
         if (this.values == null) {
             this.values = new ArrayList<>();
         }
-        this.values.add(
-            builder.apply(com.commercetools.api.models.type.CustomFieldLocalizedEnumValueBuilder.of()).build());
+        this.values.add(builder.apply(com.commercetools.api.models.type.CustomFieldLocalizedEnumValueBuilder.of()).build());
         return this;
     }
-
+    
     /**
      *  <p>The classification items that can be used for specifying any ShippingRatePriceTier.</p>
      * @param builder function to build the values value
      * @return Builder
      */
-
-    public CartClassificationTypeBuilder withValues(
-            Function<com.commercetools.api.models.type.CustomFieldLocalizedEnumValueBuilder, com.commercetools.api.models.type.CustomFieldLocalizedEnumValueBuilder> builder) {
+    
+    public CartClassificationTypeBuilder withValues(Function<com.commercetools.api.models.type.CustomFieldLocalizedEnumValueBuilder, com.commercetools.api.models.type.CustomFieldLocalizedEnumValueBuilder> builder) {
         this.values = new ArrayList<>();
-        this.values.add(
-            builder.apply(com.commercetools.api.models.type.CustomFieldLocalizedEnumValueBuilder.of()).build());
+        this.values.add(builder.apply(com.commercetools.api.models.type.CustomFieldLocalizedEnumValueBuilder.of()).build());
         return this;
     }
-
+    
     /**
      *  <p>The classification items that can be used for specifying any ShippingRatePriceTier.</p>
      * @param builder function to build the values value
      * @return Builder
      */
-
-    public CartClassificationTypeBuilder addValues(
-            Function<com.commercetools.api.models.type.CustomFieldLocalizedEnumValueBuilder, com.commercetools.api.models.type.CustomFieldLocalizedEnumValue> builder) {
+    
+    public CartClassificationTypeBuilder addValues(Function<com.commercetools.api.models.type.CustomFieldLocalizedEnumValueBuilder, com.commercetools.api.models.type.CustomFieldLocalizedEnumValue> builder) {
         return plusValues(builder.apply(com.commercetools.api.models.type.CustomFieldLocalizedEnumValueBuilder.of()));
     }
-
+    
     /**
      *  <p>The classification items that can be used for specifying any ShippingRatePriceTier.</p>
      * @param builder function to build the values value
      * @return Builder
      */
-
-    public CartClassificationTypeBuilder setValues(
-            Function<com.commercetools.api.models.type.CustomFieldLocalizedEnumValueBuilder, com.commercetools.api.models.type.CustomFieldLocalizedEnumValue> builder) {
+    
+    public CartClassificationTypeBuilder setValues(Function<com.commercetools.api.models.type.CustomFieldLocalizedEnumValueBuilder, com.commercetools.api.models.type.CustomFieldLocalizedEnumValue> builder) {
         return values(builder.apply(com.commercetools.api.models.type.CustomFieldLocalizedEnumValueBuilder.of()));
     }
+                    
 
     /**
      *  <p>The classification items that can be used for specifying any ShippingRatePriceTier.</p>
      * @return values
      */
-
-    public java.util.List<com.commercetools.api.models.type.CustomFieldLocalizedEnumValue> getValues() {
+    
+    
+    public java.util.List<com.commercetools.api.models.type.CustomFieldLocalizedEnumValue> getValues(){
         return this.values;
     }
 
@@ -132,7 +136,7 @@ public class CartClassificationTypeBuilder implements Builder<CartClassification
         Objects.requireNonNull(values, CartClassificationType.class + ": values is missing");
         return new CartClassificationTypeImpl(values);
     }
-
+    
     /**
      * builds CartClassificationType without checking for non-null required values
      * @return CartClassificationType
@@ -143,7 +147,7 @@ public class CartClassificationTypeBuilder implements Builder<CartClassification
 
     /**
      * factory method for an instance of CartClassificationTypeBuilder
-     * @return builder
+     * @return builder 
      */
     public static CartClassificationTypeBuilder of() {
         return new CartClassificationTypeBuilder();

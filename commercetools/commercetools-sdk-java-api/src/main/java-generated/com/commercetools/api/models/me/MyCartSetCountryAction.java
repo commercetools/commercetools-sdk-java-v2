@@ -1,16 +1,20 @@
-
 package com.commercetools.api.models.me;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
+import com.commercetools.api.models.me.MyCartUpdateAction;
+import com.commercetools.api.models.me.MyCartSetCountryActionImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Setting the country can lead to changes in the LineItem prices.</p>
@@ -22,9 +26,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     MyCartSetCountryAction myCartSetCountryAction = MyCartSetCountryAction.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = MyCartSetCountryActionImpl.class)
 public interface MyCartSetCountryAction extends MyCartUpdateAction {
 
@@ -38,7 +45,7 @@ public interface MyCartSetCountryAction extends MyCartUpdateAction {
      *  <p>If the Cart is bound to a <code>store</code>, the provided value must be included in the Store's <code>countries</code>. Otherwise a CountryNotConfiguredInStore error is returned.</p>
      * @return country
      */
-
+    
     @JsonProperty("country")
     public String getCountry();
 
@@ -47,16 +54,18 @@ public interface MyCartSetCountryAction extends MyCartUpdateAction {
      *  <p>If the Cart is bound to a <code>store</code>, the provided value must be included in the Store's <code>countries</code>. Otherwise a CountryNotConfiguredInStore error is returned.</p>
      * @param country value to be set
      */
-
+    
     public void setCountry(final String country);
+    
 
     /**
      * factory method
      * @return instance of MyCartSetCountryAction
      */
-    public static MyCartSetCountryAction of() {
+    public static MyCartSetCountryAction of(){
         return new MyCartSetCountryActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy MyCartSetCountryAction
@@ -91,7 +100,7 @@ public interface MyCartSetCountryAction extends MyCartUpdateAction {
     public static MyCartSetCountryActionBuilder builder() {
         return MyCartSetCountryActionBuilder.of();
     }
-
+    
     /**
      * create builder for MyCartSetCountryAction instance
      * @param template instance with prefilled values for the builder
@@ -100,6 +109,7 @@ public interface MyCartSetCountryAction extends MyCartUpdateAction {
     public static MyCartSetCountryActionBuilder builder(final MyCartSetCountryAction template) {
         return MyCartSetCountryActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -110,7 +120,7 @@ public interface MyCartSetCountryAction extends MyCartUpdateAction {
     default <T> T withMyCartSetCountryAction(Function<MyCartSetCountryAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

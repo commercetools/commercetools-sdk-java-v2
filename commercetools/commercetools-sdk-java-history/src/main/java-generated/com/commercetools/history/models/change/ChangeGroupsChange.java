@@ -1,17 +1,20 @@
-
 package com.commercetools.history.models.change;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
+import com.commercetools.history.models.change.Change;
+import com.commercetools.history.models.change.ChangeGroupsChangeImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * ChangeGroupsChange
@@ -26,9 +29,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .plusNextValue(nextValueBuilder -> nextValueBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = ChangeGroupsChangeImpl.class)
 public interface ChangeGroupsChange extends Change {
 
@@ -44,7 +50,6 @@ public interface ChangeGroupsChange extends Change {
     @NotNull
     @JsonProperty("type")
     public String getType();
-
     /**
      *  <p>Update action for <code>changeGroups</code> on stores</p>
      * @return change
@@ -52,7 +57,6 @@ public interface ChangeGroupsChange extends Change {
     @NotNull
     @JsonProperty("change")
     public String getChange();
-
     /**
      *
      * @return previousValue
@@ -60,7 +64,6 @@ public interface ChangeGroupsChange extends Change {
     @NotNull
     @JsonProperty("previousValue")
     public List<String> getPreviousValue();
-
     /**
      *
      * @return nextValue
@@ -73,46 +76,46 @@ public interface ChangeGroupsChange extends Change {
      *  <p>Update action for <code>changeGroups</code> on stores</p>
      * @param change value to be set
      */
-
+    
     public void setChange(final String change);
-
+    
+    
     /**
      * set previousValue
      * @param previousValue values to be set
      */
-
+    
     @JsonIgnore
-    public void setPreviousValue(final String... previousValue);
-
+    public void setPreviousValue(final String ...previousValue);
     /**
      * set previousValue
      * @param previousValue values to be set
      */
-
+    
     public void setPreviousValue(final List<String> previousValue);
-
+    
     /**
      * set nextValue
      * @param nextValue values to be set
      */
-
+    
     @JsonIgnore
-    public void setNextValue(final String... nextValue);
-
+    public void setNextValue(final String ...nextValue);
     /**
      * set nextValue
      * @param nextValue values to be set
      */
-
+    
     public void setNextValue(final List<String> nextValue);
 
     /**
      * factory method
      * @return instance of ChangeGroupsChange
      */
-    public static ChangeGroupsChange of() {
+    public static ChangeGroupsChange of(){
         return new ChangeGroupsChangeImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy ChangeGroupsChange
@@ -139,8 +142,12 @@ public interface ChangeGroupsChange extends Change {
         }
         ChangeGroupsChangeImpl instance = new ChangeGroupsChangeImpl();
         instance.setChange(template.getChange());
-        instance.setPreviousValue(Optional.ofNullable(template.getPreviousValue()).map(ArrayList::new).orElse(null));
-        instance.setNextValue(Optional.ofNullable(template.getNextValue()).map(ArrayList::new).orElse(null));
+        instance.setPreviousValue(Optional.ofNullable(template.getPreviousValue())
+                .map(ArrayList::new)
+                .orElse(null));
+        instance.setNextValue(Optional.ofNullable(template.getNextValue())
+                .map(ArrayList::new)
+                .orElse(null));
         return instance;
     }
 
@@ -151,7 +158,7 @@ public interface ChangeGroupsChange extends Change {
     public static ChangeGroupsChangeBuilder builder() {
         return ChangeGroupsChangeBuilder.of();
     }
-
+    
     /**
      * create builder for ChangeGroupsChange instance
      * @param template instance with prefilled values for the builder
@@ -160,6 +167,7 @@ public interface ChangeGroupsChange extends Change {
     public static ChangeGroupsChangeBuilder builder(final ChangeGroupsChange template) {
         return ChangeGroupsChangeBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -170,7 +178,7 @@ public interface ChangeGroupsChange extends Change {
     default <T> T withChangeGroupsChange(Function<ChangeGroupsChange, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

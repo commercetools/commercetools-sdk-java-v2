@@ -1,23 +1,23 @@
-
 package com.commercetools.importapi.models.importoperations;
-
-import java.time.*;
-import java.time.ZonedDateTime;
-import java.util.*;
-import java.util.function.Function;
-import java.util.stream.Collectors;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.importapi.models.common.ProcessingState;
 import com.commercetools.importapi.models.common.UnresolvedReferences;
 import com.commercetools.importapi.models.errors.ErrorObject;
+import java.time.ZonedDateTime;
+import com.commercetools.importapi.models.importoperations.ImportOperationImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Import Operation describes the import status of a specific resource.</p>
@@ -37,11 +37,15 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .expiresAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = ImportOperationImpl.class)
-public interface ImportOperation {
+public interface ImportOperation  {
+
 
     /**
      *  <p>The version of the ImportOperation.</p>
@@ -50,7 +54,6 @@ public interface ImportOperation {
     @NotNull
     @JsonProperty("version")
     public Long getVersion();
-
     /**
      *  <p>The key of the importContainer.</p>
      * @return importContainerKey
@@ -58,7 +61,6 @@ public interface ImportOperation {
     @NotNull
     @JsonProperty("importContainerKey")
     public String getImportContainerKey();
-
     /**
      *  <p>The key of the resource.</p>
      * @return resourceKey
@@ -66,7 +68,6 @@ public interface ImportOperation {
     @NotNull
     @JsonProperty("resourceKey")
     public String getResourceKey();
-
     /**
      *  <p>The ID of the ImportOperation.</p>
      * @return id
@@ -74,7 +75,6 @@ public interface ImportOperation {
     @NotNull
     @JsonProperty("id")
     public String getId();
-
     /**
      *  <p>The import status of the resource. Set to <code>rejected</code> or <code>validationFailed</code> if the import of the resource was not successful.</p>
      * @return state
@@ -82,15 +82,13 @@ public interface ImportOperation {
     @NotNull
     @JsonProperty("state")
     public ProcessingState getState();
-
     /**
      *  <p>The version of the imported resource when the import was successful.</p>
      * @return resourceVersion
      */
-
+    
     @JsonProperty("resourceVersion")
     public Long getResourceVersion();
-
     /**
      *  <p>Contains an error if the import of the resource was not successful. See Errors.</p>
      * @return errors
@@ -98,7 +96,6 @@ public interface ImportOperation {
     @Valid
     @JsonProperty("errors")
     public List<ErrorObject> getErrors();
-
     /**
      *  <p>In case of unresolved status this array will show the unresolved references</p>
      * @return unresolvedReferences
@@ -106,7 +103,6 @@ public interface ImportOperation {
     @Valid
     @JsonProperty("unresolvedReferences")
     public List<UnresolvedReferences> getUnresolvedReferences();
-
     /**
      *  <p>The time when the ImportOperation was created.</p>
      * @return createdAt
@@ -114,7 +110,6 @@ public interface ImportOperation {
     @NotNull
     @JsonProperty("createdAt")
     public ZonedDateTime getCreatedAt();
-
     /**
      *  <p>The last time When the ImportOperation was modified.</p>
      * @return lastModifiedAt
@@ -122,7 +117,6 @@ public interface ImportOperation {
     @NotNull
     @JsonProperty("lastModifiedAt")
     public ZonedDateTime getLastModifiedAt();
-
     /**
      *  <p>The expiration time of the ImportOperation.</p>
      * @return expiresAt
@@ -135,102 +129,110 @@ public interface ImportOperation {
      *  <p>The version of the ImportOperation.</p>
      * @param version value to be set
      */
-
+    
     public void setVersion(final Long version);
-
+    
+    
     /**
      *  <p>The key of the importContainer.</p>
      * @param importContainerKey value to be set
      */
-
+    
     public void setImportContainerKey(final String importContainerKey);
-
+    
+    
     /**
      *  <p>The key of the resource.</p>
      * @param resourceKey value to be set
      */
-
+    
     public void setResourceKey(final String resourceKey);
-
+    
+    
     /**
      *  <p>The ID of the ImportOperation.</p>
      * @param id value to be set
      */
-
+    
     public void setId(final String id);
-
+    
+    
     /**
      *  <p>The import status of the resource. Set to <code>rejected</code> or <code>validationFailed</code> if the import of the resource was not successful.</p>
      * @param state value to be set
      */
-
+    
     public void setState(final ProcessingState state);
-
+    
+    
     /**
      *  <p>The version of the imported resource when the import was successful.</p>
      * @param resourceVersion value to be set
      */
-
+    
     public void setResourceVersion(final Long resourceVersion);
-
+    
+    
     /**
      *  <p>Contains an error if the import of the resource was not successful. See Errors.</p>
      * @param errors values to be set
      */
-
+    
     @JsonIgnore
-    public void setErrors(final ErrorObject... errors);
-
+    public void setErrors(final ErrorObject ...errors);
     /**
      *  <p>Contains an error if the import of the resource was not successful. See Errors.</p>
      * @param errors values to be set
      */
-
+    
     public void setErrors(final List<ErrorObject> errors);
-
+    
     /**
      *  <p>In case of unresolved status this array will show the unresolved references</p>
      * @param unresolvedReferences values to be set
      */
-
+    
     @JsonIgnore
-    public void setUnresolvedReferences(final UnresolvedReferences... unresolvedReferences);
-
+    public void setUnresolvedReferences(final UnresolvedReferences ...unresolvedReferences);
     /**
      *  <p>In case of unresolved status this array will show the unresolved references</p>
      * @param unresolvedReferences values to be set
      */
-
+    
     public void setUnresolvedReferences(final List<UnresolvedReferences> unresolvedReferences);
-
+    
     /**
      *  <p>The time when the ImportOperation was created.</p>
      * @param createdAt value to be set
      */
-
+    
     public void setCreatedAt(final ZonedDateTime createdAt);
-
+    
+    
     /**
      *  <p>The last time When the ImportOperation was modified.</p>
      * @param lastModifiedAt value to be set
      */
-
+    
     public void setLastModifiedAt(final ZonedDateTime lastModifiedAt);
-
+    
+    
     /**
      *  <p>The expiration time of the ImportOperation.</p>
      * @param expiresAt value to be set
      */
-
+    
     public void setExpiresAt(final ZonedDateTime expiresAt);
+    
 
     /**
      * factory method
      * @return instance of ImportOperation
      */
-    public static ImportOperation of() {
+    public static ImportOperation of(){
         return new ImportOperationImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy ImportOperation
@@ -271,14 +273,10 @@ public interface ImportOperation {
         instance.setState(template.getState());
         instance.setResourceVersion(template.getResourceVersion());
         instance.setErrors(Optional.ofNullable(template.getErrors())
-                .map(t -> t.stream()
-                        .map(com.commercetools.importapi.models.errors.ErrorObject::deepCopy)
-                        .collect(Collectors.toList()))
+                .map(t -> t.stream().map(com.commercetools.importapi.models.errors.ErrorObject::deepCopy).collect(Collectors.toList()))
                 .orElse(null));
         instance.setUnresolvedReferences(Optional.ofNullable(template.getUnresolvedReferences())
-                .map(t -> t.stream()
-                        .map(com.commercetools.importapi.models.common.UnresolvedReferences::deepCopy)
-                        .collect(Collectors.toList()))
+                .map(t -> t.stream().map(com.commercetools.importapi.models.common.UnresolvedReferences::deepCopy).collect(Collectors.toList()))
                 .orElse(null));
         instance.setCreatedAt(template.getCreatedAt());
         instance.setLastModifiedAt(template.getLastModifiedAt());
@@ -293,7 +291,7 @@ public interface ImportOperation {
     public static ImportOperationBuilder builder() {
         return ImportOperationBuilder.of();
     }
-
+    
     /**
      * create builder for ImportOperation instance
      * @param template instance with prefilled values for the builder
@@ -302,6 +300,7 @@ public interface ImportOperation {
     public static ImportOperationBuilder builder(final ImportOperation template) {
         return ImportOperationBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -312,7 +311,7 @@ public interface ImportOperation {
     default <T> T withImportOperation(Function<ImportOperation, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

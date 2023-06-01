@@ -1,9 +1,11 @@
-
 package com.commercetools.api.predicates.query.error;
 
 import com.commercetools.api.predicates.query.*;
 
-public class GraphQLSearchFacetPathNotFoundErrorQueryBuilderDsl {
+import java.util.function.Function;
+
+
+public class GraphQLSearchFacetPathNotFoundErrorQueryBuilderDsl  {
     public GraphQLSearchFacetPathNotFoundErrorQueryBuilderDsl() {
     }
 
@@ -12,9 +14,8 @@ public class GraphQLSearchFacetPathNotFoundErrorQueryBuilderDsl {
     }
 
     public StringComparisonPredicateBuilder<GraphQLSearchFacetPathNotFoundErrorQueryBuilderDsl> code() {
-        return new StringComparisonPredicateBuilder<>(
-            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("code")),
-            p -> new CombinationQueryPredicate<>(p, GraphQLSearchFacetPathNotFoundErrorQueryBuilderDsl::of));
+        return new StringComparisonPredicateBuilder<>(BinaryQueryPredicate.of().left(new ConstantQueryPredicate("code")),
+        p -> new CombinationQueryPredicate<>(p, GraphQLSearchFacetPathNotFoundErrorQueryBuilderDsl::of));
     }
-
+    
 }

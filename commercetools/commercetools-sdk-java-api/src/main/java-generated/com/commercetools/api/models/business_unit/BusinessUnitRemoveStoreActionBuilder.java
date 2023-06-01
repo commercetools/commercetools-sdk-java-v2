@@ -1,9 +1,12 @@
-
 package com.commercetools.api.models.business_unit;
 
+import com.commercetools.api.models.business_unit.BusinessUnitUpdateAction;
+import com.commercetools.api.models.store.StoreResourceIdentifier;
+import com.commercetools.api.models.business_unit.BusinessUnitRemoveStoreAction;
+import javax.annotation.Nullable;
 import java.util.*;
 import java.util.function.Function;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -17,55 +20,61 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .store(storeBuilder -> storeBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class BusinessUnitRemoveStoreActionBuilder implements Builder<BusinessUnitRemoveStoreAction> {
 
+    
+    
     private com.commercetools.api.models.store.StoreResourceIdentifier store;
 
+    
     /**
      *  <p>Store to remove.</p>
      * @param builder function to build the store value
      * @return Builder
      */
-
-    public BusinessUnitRemoveStoreActionBuilder store(
-            Function<com.commercetools.api.models.store.StoreResourceIdentifierBuilder, com.commercetools.api.models.store.StoreResourceIdentifierBuilder> builder) {
+    
+    public BusinessUnitRemoveStoreActionBuilder store(Function<com.commercetools.api.models.store.StoreResourceIdentifierBuilder, com.commercetools.api.models.store.StoreResourceIdentifierBuilder> builder) {
         this.store = builder.apply(com.commercetools.api.models.store.StoreResourceIdentifierBuilder.of()).build();
         return this;
     }
-
+    
     /**
      *  <p>Store to remove.</p>
      * @param builder function to build the store value
      * @return Builder
      */
-
-    public BusinessUnitRemoveStoreActionBuilder withStore(
-            Function<com.commercetools.api.models.store.StoreResourceIdentifierBuilder, com.commercetools.api.models.store.StoreResourceIdentifier> builder) {
+    
+    public BusinessUnitRemoveStoreActionBuilder withStore(Function<com.commercetools.api.models.store.StoreResourceIdentifierBuilder, com.commercetools.api.models.store.StoreResourceIdentifier> builder) {
         this.store = builder.apply(com.commercetools.api.models.store.StoreResourceIdentifierBuilder.of());
         return this;
     }
-
+                    
     /**
      *  <p>Store to remove.</p>
      * @param store value to be set
      * @return Builder
      */
-
-    public BusinessUnitRemoveStoreActionBuilder store(
-            final com.commercetools.api.models.store.StoreResourceIdentifier store) {
+    
+    public BusinessUnitRemoveStoreActionBuilder store( final com.commercetools.api.models.store.StoreResourceIdentifier store) {
         this.store = store;
         return this;
     }
+    
+    
 
     /**
      *  <p>Store to remove.</p>
      * @return store
      */
-
-    public com.commercetools.api.models.store.StoreResourceIdentifier getStore() {
+    
+    
+    public com.commercetools.api.models.store.StoreResourceIdentifier getStore(){
         return this.store;
     }
 
@@ -77,7 +86,7 @@ public class BusinessUnitRemoveStoreActionBuilder implements Builder<BusinessUni
         Objects.requireNonNull(store, BusinessUnitRemoveStoreAction.class + ": store is missing");
         return new BusinessUnitRemoveStoreActionImpl(store);
     }
-
+    
     /**
      * builds BusinessUnitRemoveStoreAction without checking for non-null required values
      * @return BusinessUnitRemoveStoreAction
@@ -88,7 +97,7 @@ public class BusinessUnitRemoveStoreActionBuilder implements Builder<BusinessUni
 
     /**
      * factory method for an instance of BusinessUnitRemoveStoreActionBuilder
-     * @return builder
+     * @return builder 
      */
     public static BusinessUnitRemoveStoreActionBuilder of() {
         return new BusinessUnitRemoveStoreActionBuilder();

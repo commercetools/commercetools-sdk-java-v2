@@ -1,8 +1,11 @@
-
 package com.commercetools.api.models.extension;
 
+import com.commercetools.api.models.extension.HttpDestinationAuthentication;
+import com.commercetools.api.models.extension.AuthorizationHeaderAuthentication;
+import javax.annotation.Nullable;
 import java.util.*;
-
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -16,30 +19,39 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .headerValue("{headerValue}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class AuthorizationHeaderAuthenticationBuilder implements Builder<AuthorizationHeaderAuthentication> {
 
+    
+    
     private String headerValue;
 
+    
     /**
      *  <p>Partially hidden on retrieval for security reasons.</p>
      * @param headerValue value to be set
      * @return Builder
      */
-
-    public AuthorizationHeaderAuthenticationBuilder headerValue(final String headerValue) {
+    
+    public AuthorizationHeaderAuthenticationBuilder headerValue( final String headerValue) {
         this.headerValue = headerValue;
         return this;
     }
+    
+    
 
     /**
      *  <p>Partially hidden on retrieval for security reasons.</p>
      * @return headerValue
      */
-
-    public String getHeaderValue() {
+    
+    
+    public String getHeaderValue(){
         return this.headerValue;
     }
 
@@ -51,7 +63,7 @@ public class AuthorizationHeaderAuthenticationBuilder implements Builder<Authori
         Objects.requireNonNull(headerValue, AuthorizationHeaderAuthentication.class + ": headerValue is missing");
         return new AuthorizationHeaderAuthenticationImpl(headerValue);
     }
-
+    
     /**
      * builds AuthorizationHeaderAuthentication without checking for non-null required values
      * @return AuthorizationHeaderAuthentication
@@ -62,7 +74,7 @@ public class AuthorizationHeaderAuthenticationBuilder implements Builder<Authori
 
     /**
      * factory method for an instance of AuthorizationHeaderAuthenticationBuilder
-     * @return builder
+     * @return builder 
      */
     public static AuthorizationHeaderAuthenticationBuilder of() {
         return new AuthorizationHeaderAuthenticationBuilder();

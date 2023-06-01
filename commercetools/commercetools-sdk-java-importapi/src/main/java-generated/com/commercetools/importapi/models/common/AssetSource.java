@@ -1,18 +1,20 @@
-
 package com.commercetools.importapi.models.common;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
+import com.commercetools.importapi.models.common.AssetDimensions;
+import com.commercetools.importapi.models.common.AssetSourceImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>An AssetSource is a representation of an Asset in a specific format, for example, a video in a certain encoding or an image in a certain resolution.</p>
@@ -25,11 +27,15 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .uri("{uri}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = AssetSourceImpl.class)
-public interface AssetSource {
+public interface AssetSource  {
+
 
     /**
      *
@@ -38,15 +44,13 @@ public interface AssetSource {
     @NotNull
     @JsonProperty("uri")
     public String getUri();
-
     /**
      *
      * @return key
      */
-
+    
     @JsonProperty("key")
     public String getKey();
-
     /**
      *  <p>The width and height of the Asset Source.</p>
      * @return dimensions
@@ -54,12 +58,11 @@ public interface AssetSource {
     @Valid
     @JsonProperty("dimensions")
     public AssetDimensions getDimensions();
-
     /**
      *
      * @return contentType
      */
-
+    
     @JsonProperty("contentType")
     public String getContentType();
 
@@ -67,37 +70,42 @@ public interface AssetSource {
      * set uri
      * @param uri value to be set
      */
-
+    
     public void setUri(final String uri);
-
+    
+    
     /**
      * set key
      * @param key value to be set
      */
-
+    
     public void setKey(final String key);
-
+    
+    
     /**
      *  <p>The width and height of the Asset Source.</p>
      * @param dimensions value to be set
      */
-
+    
     public void setDimensions(final AssetDimensions dimensions);
-
+    
+    
     /**
      * set contentType
      * @param contentType value to be set
      */
-
+    
     public void setContentType(final String contentType);
+    
 
     /**
      * factory method
      * @return instance of AssetSource
      */
-    public static AssetSource of() {
+    public static AssetSource of(){
         return new AssetSourceImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy AssetSource
@@ -126,8 +134,7 @@ public interface AssetSource {
         AssetSourceImpl instance = new AssetSourceImpl();
         instance.setUri(template.getUri());
         instance.setKey(template.getKey());
-        instance.setDimensions(
-            com.commercetools.importapi.models.common.AssetDimensions.deepCopy(template.getDimensions()));
+        instance.setDimensions(com.commercetools.importapi.models.common.AssetDimensions.deepCopy(template.getDimensions()));
         instance.setContentType(template.getContentType());
         return instance;
     }
@@ -139,7 +146,7 @@ public interface AssetSource {
     public static AssetSourceBuilder builder() {
         return AssetSourceBuilder.of();
     }
-
+    
     /**
      * create builder for AssetSource instance
      * @param template instance with prefilled values for the builder
@@ -148,6 +155,7 @@ public interface AssetSource {
     public static AssetSourceBuilder builder(final AssetSource template) {
         return AssetSourceBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -158,7 +166,7 @@ public interface AssetSource {
     default <T> T withAssetSource(Function<AssetSource, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

@@ -1,9 +1,11 @@
-
 package com.commercetools.api.predicates.query.order_edit;
 
 import com.commercetools.api.predicates.query.*;
 
-public class OrderEditNotProcessedQueryBuilderDsl {
+import java.util.function.Function;
+
+
+public class OrderEditNotProcessedQueryBuilderDsl  {
     public OrderEditNotProcessedQueryBuilderDsl() {
     }
 
@@ -12,9 +14,8 @@ public class OrderEditNotProcessedQueryBuilderDsl {
     }
 
     public StringComparisonPredicateBuilder<OrderEditNotProcessedQueryBuilderDsl> type() {
-        return new StringComparisonPredicateBuilder<>(
-            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("type")),
-            p -> new CombinationQueryPredicate<>(p, OrderEditNotProcessedQueryBuilderDsl::of));
+        return new StringComparisonPredicateBuilder<>(BinaryQueryPredicate.of().left(new ConstantQueryPredicate("type")),
+        p -> new CombinationQueryPredicate<>(p, OrderEditNotProcessedQueryBuilderDsl::of));
     }
-
+    
 }

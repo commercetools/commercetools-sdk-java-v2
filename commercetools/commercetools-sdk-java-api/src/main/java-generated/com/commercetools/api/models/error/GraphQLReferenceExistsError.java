@@ -1,18 +1,21 @@
-
 package com.commercetools.api.models.error;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
-
 import com.commercetools.api.models.common.ReferenceTypeId;
+import com.commercetools.api.models.error.GraphQLErrorObject;
+import com.commercetools.api.models.error.GraphQLReferenceExistsErrorImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Returned when a resource cannot be deleted because it is being referenced by another resource.</p>
@@ -24,9 +27,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     GraphQLReferenceExistsError graphQLReferenceExistsError = GraphQLReferenceExistsError.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = GraphQLReferenceExistsErrorImpl.class)
 public interface GraphQLReferenceExistsError extends GraphQLErrorObject {
 
@@ -42,12 +48,11 @@ public interface GraphQLReferenceExistsError extends GraphQLErrorObject {
     @NotNull
     @JsonProperty("code")
     public String getCode();
-
     /**
      *  <p>Type of referenced resource.</p>
      * @return referencedBy
      */
-
+    
     @JsonProperty("referencedBy")
     public ReferenceTypeId getReferencedBy();
 
@@ -55,16 +60,18 @@ public interface GraphQLReferenceExistsError extends GraphQLErrorObject {
      *  <p>Type of referenced resource.</p>
      * @param referencedBy value to be set
      */
-
+    
     public void setReferencedBy(final ReferenceTypeId referencedBy);
+    
 
     /**
      * factory method
      * @return instance of GraphQLReferenceExistsError
      */
-    public static GraphQLReferenceExistsError of() {
+    public static GraphQLReferenceExistsError of(){
         return new GraphQLReferenceExistsErrorImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy GraphQLReferenceExistsError
@@ -101,7 +108,7 @@ public interface GraphQLReferenceExistsError extends GraphQLErrorObject {
     public static GraphQLReferenceExistsErrorBuilder builder() {
         return GraphQLReferenceExistsErrorBuilder.of();
     }
-
+    
     /**
      * create builder for GraphQLReferenceExistsError instance
      * @param template instance with prefilled values for the builder
@@ -110,6 +117,7 @@ public interface GraphQLReferenceExistsError extends GraphQLErrorObject {
     public static GraphQLReferenceExistsErrorBuilder builder(final GraphQLReferenceExistsError template) {
         return GraphQLReferenceExistsErrorBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -120,7 +128,7 @@ public interface GraphQLReferenceExistsError extends GraphQLErrorObject {
     default <T> T withGraphQLReferenceExistsError(Function<GraphQLReferenceExistsError, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

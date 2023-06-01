@@ -1,21 +1,22 @@
-
 package com.commercetools.api.models.staged_quote;
-
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.quote_request.QuoteRequestResourceIdentifier;
 import com.commercetools.api.models.state.StateReference;
 import com.commercetools.api.models.type.CustomFieldsDraft;
+import com.commercetools.api.models.staged_quote.StagedQuoteDraftImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * StagedQuoteDraft
@@ -29,12 +30,15 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .quoteRequestVersion(0.3)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = StagedQuoteDraftImpl.class)
-public interface StagedQuoteDraft
-        extends com.commercetools.api.models.WithKey, io.vrap.rmf.base.client.Draft<StagedQuoteDraft> {
+public interface StagedQuoteDraft extends com.commercetools.api.models.WithKey, io.vrap.rmf.base.client.Draft<StagedQuoteDraft> {
+
 
     /**
      *  <p>QuoteRequest from which the StagedQuote is created.</p>
@@ -44,7 +48,6 @@ public interface StagedQuoteDraft
     @Valid
     @JsonProperty("quoteRequest")
     public QuoteRequestResourceIdentifier getQuoteRequest();
-
     /**
      *  <p>Current version of the QuoteRequest.</p>
      * @return quoteRequestVersion
@@ -52,23 +55,20 @@ public interface StagedQuoteDraft
     @NotNull
     @JsonProperty("quoteRequestVersion")
     public Long getQuoteRequestVersion();
-
     /**
      *  <p>If <code>true</code>, the <code>quoteRequestState</code> of the referenced QuoteRequest will be set to <code>Accepted</code>.</p>
      * @return quoteRequestStateToAccepted
      */
-
+    
     @JsonProperty("quoteRequestStateToAccepted")
     public Boolean getQuoteRequestStateToAccepted();
-
     /**
      *  <p>User-defined unique identifier for the StagedQuote.</p>
      * @return key
      */
-
+    
     @JsonProperty("key")
     public String getKey();
-
     /**
      *  <p>Custom Fields to be added to the StagedQuote.</p>
      *  <ul>
@@ -80,7 +80,6 @@ public interface StagedQuoteDraft
     @Valid
     @JsonProperty("custom")
     public CustomFieldsDraft getCustom();
-
     /**
      *  <p>State of the Staged Quote. This reference can point to a State in a custom workflow.</p>
      * @return state
@@ -93,30 +92,34 @@ public interface StagedQuoteDraft
      *  <p>QuoteRequest from which the StagedQuote is created.</p>
      * @param quoteRequest value to be set
      */
-
+    
     public void setQuoteRequest(final QuoteRequestResourceIdentifier quoteRequest);
-
+    
+    
     /**
      *  <p>Current version of the QuoteRequest.</p>
      * @param quoteRequestVersion value to be set
      */
-
+    
     public void setQuoteRequestVersion(final Long quoteRequestVersion);
-
+    
+    
     /**
      *  <p>If <code>true</code>, the <code>quoteRequestState</code> of the referenced QuoteRequest will be set to <code>Accepted</code>.</p>
      * @param quoteRequestStateToAccepted value to be set
      */
-
+    
     public void setQuoteRequestStateToAccepted(final Boolean quoteRequestStateToAccepted);
-
+    
+    
     /**
      *  <p>User-defined unique identifier for the StagedQuote.</p>
      * @param key value to be set
      */
-
+    
     public void setKey(final String key);
-
+    
+    
     /**
      *  <p>Custom Fields to be added to the StagedQuote.</p>
      *  <ul>
@@ -125,23 +128,26 @@ public interface StagedQuoteDraft
      *  </ul>
      * @param custom value to be set
      */
-
+    
     public void setCustom(final CustomFieldsDraft custom);
-
+    
+    
     /**
      *  <p>State of the Staged Quote. This reference can point to a State in a custom workflow.</p>
      * @param state value to be set
      */
-
+    
     public void setState(final StateReference state);
+    
 
     /**
      * factory method
      * @return instance of StagedQuoteDraft
      */
-    public static StagedQuoteDraft of() {
+    public static StagedQuoteDraft of(){
         return new StagedQuoteDraftImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy StagedQuoteDraft
@@ -170,8 +176,7 @@ public interface StagedQuoteDraft
             return null;
         }
         StagedQuoteDraftImpl instance = new StagedQuoteDraftImpl();
-        instance.setQuoteRequest(com.commercetools.api.models.quote_request.QuoteRequestResourceIdentifier
-                .deepCopy(template.getQuoteRequest()));
+        instance.setQuoteRequest(com.commercetools.api.models.quote_request.QuoteRequestResourceIdentifier.deepCopy(template.getQuoteRequest()));
         instance.setQuoteRequestVersion(template.getQuoteRequestVersion());
         instance.setQuoteRequestStateToAccepted(template.getQuoteRequestStateToAccepted());
         instance.setKey(template.getKey());
@@ -187,7 +192,7 @@ public interface StagedQuoteDraft
     public static StagedQuoteDraftBuilder builder() {
         return StagedQuoteDraftBuilder.of();
     }
-
+    
     /**
      * create builder for StagedQuoteDraft instance
      * @param template instance with prefilled values for the builder
@@ -196,6 +201,7 @@ public interface StagedQuoteDraft
     public static StagedQuoteDraftBuilder builder(final StagedQuoteDraft template) {
         return StagedQuoteDraftBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -206,7 +212,7 @@ public interface StagedQuoteDraft
     default <T> T withStagedQuoteDraft(Function<StagedQuoteDraft, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

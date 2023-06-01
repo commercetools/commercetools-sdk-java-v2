@@ -1,19 +1,22 @@
-
 package com.commercetools.api.models.shipping_method;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
+import com.commercetools.api.models.shipping_method.ShippingMethodUpdateAction;
+import com.commercetools.api.models.shipping_method.ShippingRateDraft;
 import com.commercetools.api.models.zone.ZoneResourceIdentifier;
+import com.commercetools.api.models.shipping_method.ShippingMethodAddShippingRateActionImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * ShippingMethodAddShippingRateAction
@@ -27,9 +30,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .shippingRate(shippingRateBuilder -> shippingRateBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = ShippingMethodAddShippingRateActionImpl.class)
 public interface ShippingMethodAddShippingRateAction extends ShippingMethodUpdateAction {
 
@@ -46,7 +52,6 @@ public interface ShippingMethodAddShippingRateAction extends ShippingMethodUpdat
     @Valid
     @JsonProperty("zone")
     public ZoneResourceIdentifier getZone();
-
     /**
      *  <p>Value to add to <code>shippingRates</code>.</p>
      * @return shippingRate
@@ -60,23 +65,26 @@ public interface ShippingMethodAddShippingRateAction extends ShippingMethodUpdat
      *  <p>Zone to which the ShippingRate should be added.</p>
      * @param zone value to be set
      */
-
+    
     public void setZone(final ZoneResourceIdentifier zone);
-
+    
+    
     /**
      *  <p>Value to add to <code>shippingRates</code>.</p>
      * @param shippingRate value to be set
      */
-
+    
     public void setShippingRate(final ShippingRateDraft shippingRate);
+    
 
     /**
      * factory method
      * @return instance of ShippingMethodAddShippingRateAction
      */
-    public static ShippingMethodAddShippingRateAction of() {
+    public static ShippingMethodAddShippingRateAction of(){
         return new ShippingMethodAddShippingRateActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy ShippingMethodAddShippingRateAction
@@ -96,15 +104,13 @@ public interface ShippingMethodAddShippingRateAction extends ShippingMethodUpdat
      * @return copy instance
      */
     @Nullable
-    public static ShippingMethodAddShippingRateAction deepCopy(
-            @Nullable final ShippingMethodAddShippingRateAction template) {
+    public static ShippingMethodAddShippingRateAction deepCopy(@Nullable final ShippingMethodAddShippingRateAction template) {
         if (template == null) {
             return null;
         }
         ShippingMethodAddShippingRateActionImpl instance = new ShippingMethodAddShippingRateActionImpl();
         instance.setZone(com.commercetools.api.models.zone.ZoneResourceIdentifier.deepCopy(template.getZone()));
-        instance.setShippingRate(
-            com.commercetools.api.models.shipping_method.ShippingRateDraft.deepCopy(template.getShippingRate()));
+        instance.setShippingRate(com.commercetools.api.models.shipping_method.ShippingRateDraft.deepCopy(template.getShippingRate()));
         return instance;
     }
 
@@ -115,16 +121,16 @@ public interface ShippingMethodAddShippingRateAction extends ShippingMethodUpdat
     public static ShippingMethodAddShippingRateActionBuilder builder() {
         return ShippingMethodAddShippingRateActionBuilder.of();
     }
-
+    
     /**
      * create builder for ShippingMethodAddShippingRateAction instance
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static ShippingMethodAddShippingRateActionBuilder builder(
-            final ShippingMethodAddShippingRateAction template) {
+    public static ShippingMethodAddShippingRateActionBuilder builder(final ShippingMethodAddShippingRateAction template) {
         return ShippingMethodAddShippingRateActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -135,7 +141,7 @@ public interface ShippingMethodAddShippingRateAction extends ShippingMethodUpdat
     default <T> T withShippingMethodAddShippingRateAction(Function<ShippingMethodAddShippingRateAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

@@ -1,9 +1,11 @@
-
 package com.commercetools.api.models.type;
 
+import com.commercetools.api.models.type.TypeUpdateAction;
+import com.commercetools.api.models.type.TypeUpdate;
+import javax.annotation.Nullable;
 import java.util.*;
 import java.util.function.Function;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -18,105 +20,118 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .plusActions(actionsBuilder -> actionsBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class TypeUpdateBuilder implements Builder<TypeUpdate> {
 
+    
+    
     private Long version;
-
+    
+    
+    
     private java.util.List<com.commercetools.api.models.type.TypeUpdateAction> actions;
 
+    
     /**
      *  <p>Expected version of the type on which the changes should be applied. If the expected version does not match the actual version, a ConcurrentModification error is returned.</p>
      * @param version value to be set
      * @return Builder
      */
-
-    public TypeUpdateBuilder version(final Long version) {
+    
+    public TypeUpdateBuilder version( final Long version) {
         this.version = version;
         return this;
     }
-
+    
+    
+    
     /**
      *  <p>Update actions to be performed on the Type.</p>
      * @param actions value to be set
      * @return Builder
      */
-
-    public TypeUpdateBuilder actions(final com.commercetools.api.models.type.TypeUpdateAction... actions) {
+    
+    public TypeUpdateBuilder actions( final com.commercetools.api.models.type.TypeUpdateAction ...actions) {
         this.actions = new ArrayList<>(Arrays.asList(actions));
         return this;
     }
-
+    
     /**
      *  <p>Update actions to be performed on the Type.</p>
      * @param actions value to be set
      * @return Builder
      */
-
-    public TypeUpdateBuilder actions(final java.util.List<com.commercetools.api.models.type.TypeUpdateAction> actions) {
+    
+    public TypeUpdateBuilder actions( final java.util.List<com.commercetools.api.models.type.TypeUpdateAction> actions) {
         this.actions = actions;
         return this;
     }
-
+    
     /**
      *  <p>Update actions to be performed on the Type.</p>
      * @param actions value to be set
      * @return Builder
      */
-
-    public TypeUpdateBuilder plusActions(final com.commercetools.api.models.type.TypeUpdateAction... actions) {
+    
+    public TypeUpdateBuilder plusActions( final com.commercetools.api.models.type.TypeUpdateAction ...actions) {
         if (this.actions == null) {
             this.actions = new ArrayList<>();
         }
         this.actions.addAll(Arrays.asList(actions));
         return this;
     }
-
+    
+    
     /**
      *  <p>Update actions to be performed on the Type.</p>
      * @param builder function to build the actions value
      * @return Builder
      */
-
-    public TypeUpdateBuilder plusActions(
-            Function<com.commercetools.api.models.type.TypeUpdateActionBuilder, Builder<? extends com.commercetools.api.models.type.TypeUpdateAction>> builder) {
+    
+    public TypeUpdateBuilder plusActions(Function<com.commercetools.api.models.type.TypeUpdateActionBuilder, Builder<? extends com.commercetools.api.models.type.TypeUpdateAction>> builder) {
         if (this.actions == null) {
             this.actions = new ArrayList<>();
         }
         this.actions.add(builder.apply(com.commercetools.api.models.type.TypeUpdateActionBuilder.of()).build());
         return this;
     }
-
+    
     /**
      *  <p>Update actions to be performed on the Type.</p>
      * @param builder function to build the actions value
      * @return Builder
      */
-
-    public TypeUpdateBuilder withActions(
-            Function<com.commercetools.api.models.type.TypeUpdateActionBuilder, Builder<? extends com.commercetools.api.models.type.TypeUpdateAction>> builder) {
+    
+    public TypeUpdateBuilder withActions(Function<com.commercetools.api.models.type.TypeUpdateActionBuilder, Builder<? extends com.commercetools.api.models.type.TypeUpdateAction>> builder) {
         this.actions = new ArrayList<>();
         this.actions.add(builder.apply(com.commercetools.api.models.type.TypeUpdateActionBuilder.of()).build());
         return this;
     }
+                    
+    
 
     /**
      *  <p>Expected version of the type on which the changes should be applied. If the expected version does not match the actual version, a ConcurrentModification error is returned.</p>
      * @return version
      */
-
-    public Long getVersion() {
+    
+    
+    public Long getVersion(){
         return this.version;
     }
-
+    
     /**
      *  <p>Update actions to be performed on the Type.</p>
      * @return actions
      */
-
-    public java.util.List<com.commercetools.api.models.type.TypeUpdateAction> getActions() {
+    
+    
+    public java.util.List<com.commercetools.api.models.type.TypeUpdateAction> getActions(){
         return this.actions;
     }
 
@@ -129,7 +144,7 @@ public class TypeUpdateBuilder implements Builder<TypeUpdate> {
         Objects.requireNonNull(actions, TypeUpdate.class + ": actions is missing");
         return new TypeUpdateImpl(version, actions);
     }
-
+    
     /**
      * builds TypeUpdate without checking for non-null required values
      * @return TypeUpdate
@@ -140,7 +155,7 @@ public class TypeUpdateBuilder implements Builder<TypeUpdate> {
 
     /**
      * factory method for an instance of TypeUpdateBuilder
-     * @return builder
+     * @return builder 
      */
     public static TypeUpdateBuilder of() {
         return new TypeUpdateBuilder();

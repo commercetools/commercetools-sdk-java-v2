@@ -1,10 +1,11 @@
-
 package com.commercetools.api.models.order;
 
-import java.util.*;
 
+import com.commercetools.api.models.order.Hit;
 import javax.annotation.Nullable;
-
+import java.util.*;
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -19,76 +20,95 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .version(0.3)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class HitBuilder implements Builder<Hit> {
 
+    
+    
     private String id;
-
+    
+    
+    
     private Long version;
-
+    
+    
     @Nullable
     private Double relevance;
 
+    
     /**
      *  <p>Unique identifier of the Order.</p>
      * @param id value to be set
      * @return Builder
      */
-
-    public HitBuilder id(final String id) {
+    
+    public HitBuilder id( final String id) {
         this.id = id;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Current version of the Order.</p>
      * @param version value to be set
      * @return Builder
      */
-
-    public HitBuilder version(final Long version) {
+    
+    public HitBuilder version( final Long version) {
         this.version = version;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>The higher the value is, the more relevant the hit is for the search request.</p>
      * @param relevance value to be set
      * @return Builder
      */
-
+    
     public HitBuilder relevance(@Nullable final Double relevance) {
         this.relevance = relevance;
         return this;
     }
+    
+    
 
     /**
      *  <p>Unique identifier of the Order.</p>
      * @return id
      */
-
-    public String getId() {
+    
+    
+    public String getId(){
         return this.id;
     }
-
+    
     /**
      *  <p>Current version of the Order.</p>
      * @return version
      */
-
-    public Long getVersion() {
+    
+    
+    public Long getVersion(){
         return this.version;
     }
-
+    
     /**
      *  <p>The higher the value is, the more relevant the hit is for the search request.</p>
      * @return relevance
      */
-
+    
     @Nullable
-    public Double getRelevance() {
+    public Double getRelevance(){
         return this.relevance;
     }
 
@@ -101,7 +121,7 @@ public class HitBuilder implements Builder<Hit> {
         Objects.requireNonNull(version, Hit.class + ": version is missing");
         return new HitImpl(id, version, relevance);
     }
-
+    
     /**
      * builds Hit without checking for non-null required values
      * @return Hit
@@ -112,7 +132,7 @@ public class HitBuilder implements Builder<Hit> {
 
     /**
      * factory method for an instance of HitBuilder
-     * @return builder
+     * @return builder 
      */
     public static HitBuilder of() {
         return new HitBuilder();

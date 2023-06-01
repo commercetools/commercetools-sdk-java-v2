@@ -1,10 +1,11 @@
-
 package com.commercetools.api.models.order_edit;
 
-import java.util.*;
-
+import com.commercetools.api.models.order.StagedOrderUpdateAction;
+import com.commercetools.api.models.order_edit.StagedOrderSetCustomerIdAction;
 import javax.annotation.Nullable;
-
+import java.util.*;
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -17,32 +18,39 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     StagedOrderSetCustomerIdAction stagedOrderSetCustomerIdAction = StagedOrderSetCustomerIdAction.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class StagedOrderSetCustomerIdActionBuilder implements Builder<StagedOrderSetCustomerIdAction> {
 
+    
     @Nullable
     private String customerId;
 
+    
     /**
      * set the value to the customerId
      * @param customerId value to be set
      * @return Builder
      */
-
+    
     public StagedOrderSetCustomerIdActionBuilder customerId(@Nullable final String customerId) {
         this.customerId = customerId;
         return this;
     }
+    
+    
 
     /**
      * value of customerId}
      * @return customerId
      */
-
+    
     @Nullable
-    public String getCustomerId() {
+    public String getCustomerId(){
         return this.customerId;
     }
 
@@ -53,7 +61,7 @@ public class StagedOrderSetCustomerIdActionBuilder implements Builder<StagedOrde
     public StagedOrderSetCustomerIdAction build() {
         return new StagedOrderSetCustomerIdActionImpl(customerId);
     }
-
+    
     /**
      * builds StagedOrderSetCustomerIdAction without checking for non-null required values
      * @return StagedOrderSetCustomerIdAction
@@ -64,7 +72,7 @@ public class StagedOrderSetCustomerIdActionBuilder implements Builder<StagedOrde
 
     /**
      * factory method for an instance of StagedOrderSetCustomerIdActionBuilder
-     * @return builder
+     * @return builder 
      */
     public static StagedOrderSetCustomerIdActionBuilder of() {
         return new StagedOrderSetCustomerIdActionBuilder();

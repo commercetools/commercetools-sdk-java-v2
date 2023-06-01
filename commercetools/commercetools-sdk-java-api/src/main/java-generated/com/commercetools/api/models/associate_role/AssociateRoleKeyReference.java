@@ -1,18 +1,21 @@
-
 package com.commercetools.api.models.associate_role;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
-
 import com.commercetools.api.models.common.KeyReference;
+import com.commercetools.api.models.common.ReferenceTypeId;
+import com.commercetools.api.models.associate_role.AssociateRoleKeyReferenceImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Reference to an AssociateRole by its key.</p>
@@ -25,9 +28,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .key("{key}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = AssociateRoleKeyReferenceImpl.class)
 public interface AssociateRoleKeyReference extends KeyReference {
 
@@ -48,16 +54,18 @@ public interface AssociateRoleKeyReference extends KeyReference {
      *  <p>Unique and immutable key of the referenced AssociateRole.</p>
      * @param key value to be set
      */
-
+    
     public void setKey(final String key);
+    
 
     /**
      * factory method
      * @return instance of AssociateRoleKeyReference
      */
-    public static AssociateRoleKeyReference of() {
+    public static AssociateRoleKeyReference of(){
         return new AssociateRoleKeyReferenceImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy AssociateRoleKeyReference
@@ -92,7 +100,7 @@ public interface AssociateRoleKeyReference extends KeyReference {
     public static AssociateRoleKeyReferenceBuilder builder() {
         return AssociateRoleKeyReferenceBuilder.of();
     }
-
+    
     /**
      * create builder for AssociateRoleKeyReference instance
      * @param template instance with prefilled values for the builder
@@ -101,6 +109,7 @@ public interface AssociateRoleKeyReference extends KeyReference {
     public static AssociateRoleKeyReferenceBuilder builder(final AssociateRoleKeyReference template) {
         return AssociateRoleKeyReferenceBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -111,7 +120,7 @@ public interface AssociateRoleKeyReference extends KeyReference {
     default <T> T withAssociateRoleKeyReference(Function<AssociateRoleKeyReference, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

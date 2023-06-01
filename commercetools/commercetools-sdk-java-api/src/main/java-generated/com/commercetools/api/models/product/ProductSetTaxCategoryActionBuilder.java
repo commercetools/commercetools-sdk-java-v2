@@ -1,11 +1,12 @@
-
 package com.commercetools.api.models.product;
 
+import com.commercetools.api.models.product.ProductUpdateAction;
+import com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifier;
+import com.commercetools.api.models.product.ProductSetTaxCategoryAction;
+import javax.annotation.Nullable;
 import java.util.*;
 import java.util.function.Function;
-
-import javax.annotation.Nullable;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -18,60 +19,61 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     ProductSetTaxCategoryAction productSetTaxCategoryAction = ProductSetTaxCategoryAction.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class ProductSetTaxCategoryActionBuilder implements Builder<ProductSetTaxCategoryAction> {
 
+    
     @Nullable
     private com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifier taxCategory;
 
+    
     /**
      *  <p>The Tax Category to set. If empty, any existing value will be removed.</p>
      * @param builder function to build the taxCategory value
      * @return Builder
      */
-
-    public ProductSetTaxCategoryActionBuilder taxCategory(
-            Function<com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifierBuilder, com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifierBuilder> builder) {
-        this.taxCategory = builder
-                .apply(com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifierBuilder.of())
-                .build();
+    
+    public ProductSetTaxCategoryActionBuilder taxCategory(Function<com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifierBuilder, com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifierBuilder> builder) {
+        this.taxCategory = builder.apply(com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifierBuilder.of()).build();
         return this;
     }
-
+    
     /**
      *  <p>The Tax Category to set. If empty, any existing value will be removed.</p>
      * @param builder function to build the taxCategory value
      * @return Builder
      */
-
-    public ProductSetTaxCategoryActionBuilder withTaxCategory(
-            Function<com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifierBuilder, com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifier> builder) {
-        this.taxCategory = builder
-                .apply(com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifierBuilder.of());
+    
+    public ProductSetTaxCategoryActionBuilder withTaxCategory(Function<com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifierBuilder, com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifier> builder) {
+        this.taxCategory = builder.apply(com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifierBuilder.of());
         return this;
     }
-
+                    
     /**
      *  <p>The Tax Category to set. If empty, any existing value will be removed.</p>
      * @param taxCategory value to be set
      * @return Builder
      */
-
-    public ProductSetTaxCategoryActionBuilder taxCategory(
-            @Nullable final com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifier taxCategory) {
+    
+    public ProductSetTaxCategoryActionBuilder taxCategory(@Nullable final com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifier taxCategory) {
         this.taxCategory = taxCategory;
         return this;
     }
+    
+    
 
     /**
      *  <p>The Tax Category to set. If empty, any existing value will be removed.</p>
      * @return taxCategory
      */
-
+    
     @Nullable
-    public com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifier getTaxCategory() {
+    public com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifier getTaxCategory(){
         return this.taxCategory;
     }
 
@@ -82,7 +84,7 @@ public class ProductSetTaxCategoryActionBuilder implements Builder<ProductSetTax
     public ProductSetTaxCategoryAction build() {
         return new ProductSetTaxCategoryActionImpl(taxCategory);
     }
-
+    
     /**
      * builds ProductSetTaxCategoryAction without checking for non-null required values
      * @return ProductSetTaxCategoryAction
@@ -93,7 +95,7 @@ public class ProductSetTaxCategoryActionBuilder implements Builder<ProductSetTax
 
     /**
      * factory method for an instance of ProductSetTaxCategoryActionBuilder
-     * @return builder
+     * @return builder 
      */
     public static ProductSetTaxCategoryActionBuilder of() {
         return new ProductSetTaxCategoryActionBuilder();

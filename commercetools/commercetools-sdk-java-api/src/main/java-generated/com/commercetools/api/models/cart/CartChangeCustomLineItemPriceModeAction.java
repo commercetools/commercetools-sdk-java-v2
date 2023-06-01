@@ -1,17 +1,21 @@
-
 package com.commercetools.api.models.cart;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
+import com.commercetools.api.models.cart.CartUpdateAction;
+import com.commercetools.api.models.cart.CustomLineItemPriceMode;
+import com.commercetools.api.models.cart.CartChangeCustomLineItemPriceModeActionImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * CartChangeCustomLineItemPriceModeAction
@@ -25,9 +29,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .mode(CustomLineItemPriceMode.STANDARD)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = CartChangeCustomLineItemPriceModeActionImpl.class)
 public interface CartChangeCustomLineItemPriceModeAction extends CartUpdateAction {
 
@@ -43,7 +50,6 @@ public interface CartChangeCustomLineItemPriceModeAction extends CartUpdateActio
     @NotNull
     @JsonProperty("customLineItemId")
     public String getCustomLineItemId();
-
     /**
      *  <p>New value to set. Must not be empty.</p>
      * @return mode
@@ -56,23 +62,26 @@ public interface CartChangeCustomLineItemPriceModeAction extends CartUpdateActio
      *  <p><code>id</code> of the CustomLineItem to update.</p>
      * @param customLineItemId value to be set
      */
-
+    
     public void setCustomLineItemId(final String customLineItemId);
-
+    
+    
     /**
      *  <p>New value to set. Must not be empty.</p>
      * @param mode value to be set
      */
-
+    
     public void setMode(final CustomLineItemPriceMode mode);
+    
 
     /**
      * factory method
      * @return instance of CartChangeCustomLineItemPriceModeAction
      */
-    public static CartChangeCustomLineItemPriceModeAction of() {
+    public static CartChangeCustomLineItemPriceModeAction of(){
         return new CartChangeCustomLineItemPriceModeActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy CartChangeCustomLineItemPriceModeAction
@@ -92,8 +101,7 @@ public interface CartChangeCustomLineItemPriceModeAction extends CartUpdateActio
      * @return copy instance
      */
     @Nullable
-    public static CartChangeCustomLineItemPriceModeAction deepCopy(
-            @Nullable final CartChangeCustomLineItemPriceModeAction template) {
+    public static CartChangeCustomLineItemPriceModeAction deepCopy(@Nullable final CartChangeCustomLineItemPriceModeAction template) {
         if (template == null) {
             return null;
         }
@@ -110,16 +118,16 @@ public interface CartChangeCustomLineItemPriceModeAction extends CartUpdateActio
     public static CartChangeCustomLineItemPriceModeActionBuilder builder() {
         return CartChangeCustomLineItemPriceModeActionBuilder.of();
     }
-
+    
     /**
      * create builder for CartChangeCustomLineItemPriceModeAction instance
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static CartChangeCustomLineItemPriceModeActionBuilder builder(
-            final CartChangeCustomLineItemPriceModeAction template) {
+    public static CartChangeCustomLineItemPriceModeActionBuilder builder(final CartChangeCustomLineItemPriceModeAction template) {
         return CartChangeCustomLineItemPriceModeActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -127,11 +135,10 @@ public interface CartChangeCustomLineItemPriceModeAction extends CartUpdateActio
      * @param helper function to map the object
      * @return mapped value
      */
-    default <T> T withCartChangeCustomLineItemPriceModeAction(
-            Function<CartChangeCustomLineItemPriceModeAction, T> helper) {
+    default <T> T withCartChangeCustomLineItemPriceModeAction(Function<CartChangeCustomLineItemPriceModeAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

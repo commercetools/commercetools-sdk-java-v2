@@ -1,20 +1,22 @@
-
 package com.commercetools.api.models.business_unit;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-import java.util.stream.Collectors;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
+import com.commercetools.api.models.business_unit.BusinessUnitStoreMode;
+import com.commercetools.api.models.business_unit.BusinessUnitUpdateAction;
 import com.commercetools.api.models.store.StoreResourceIdentifier;
+import com.commercetools.api.models.business_unit.BusinessUnitSetStoreModeActionImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Only Business Units of type <code>Division</code> can be have a store mode of <code>FromParent</code>. Changing the <code>storeMode</code> to <code>FromParent</code> empties the <code>stores</code> array on the BusinessUnit. This update action generates a BusinessUnitStoreModeChanged Message.</p>
@@ -27,9 +29,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .storeMode(BusinessUnitStoreMode.EXPLICIT)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = BusinessUnitSetStoreModeActionImpl.class)
 public interface BusinessUnitSetStoreModeAction extends BusinessUnitUpdateAction {
 
@@ -45,7 +50,6 @@ public interface BusinessUnitSetStoreModeAction extends BusinessUnitUpdateAction
     @NotNull
     @JsonProperty("storeMode")
     public BusinessUnitStoreMode getStoreMode();
-
     /**
      *  <p>Set the Stores the Business Unit is associated with. Can only be set if <code>storeMode</code> is <code>Explicit</code>.</p>
      * @return stores
@@ -58,31 +62,32 @@ public interface BusinessUnitSetStoreModeAction extends BusinessUnitUpdateAction
      *  <p>Set to <code>Explicit</code> to specify Stores for the Business Unit. Set to <code>FromParent</code> to inherit Stores from a parent.</p>
      * @param storeMode value to be set
      */
-
+    
     public void setStoreMode(final BusinessUnitStoreMode storeMode);
-
+    
+    
     /**
      *  <p>Set the Stores the Business Unit is associated with. Can only be set if <code>storeMode</code> is <code>Explicit</code>.</p>
      * @param stores values to be set
      */
-
+    
     @JsonIgnore
-    public void setStores(final StoreResourceIdentifier... stores);
-
+    public void setStores(final StoreResourceIdentifier ...stores);
     /**
      *  <p>Set the Stores the Business Unit is associated with. Can only be set if <code>storeMode</code> is <code>Explicit</code>.</p>
      * @param stores values to be set
      */
-
+    
     public void setStores(final List<StoreResourceIdentifier> stores);
 
     /**
      * factory method
      * @return instance of BusinessUnitSetStoreModeAction
      */
-    public static BusinessUnitSetStoreModeAction of() {
+    public static BusinessUnitSetStoreModeAction of(){
         return new BusinessUnitSetStoreModeActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy BusinessUnitSetStoreModeAction
@@ -109,9 +114,7 @@ public interface BusinessUnitSetStoreModeAction extends BusinessUnitUpdateAction
         BusinessUnitSetStoreModeActionImpl instance = new BusinessUnitSetStoreModeActionImpl();
         instance.setStoreMode(template.getStoreMode());
         instance.setStores(Optional.ofNullable(template.getStores())
-                .map(t -> t.stream()
-                        .map(com.commercetools.api.models.store.StoreResourceIdentifier::deepCopy)
-                        .collect(Collectors.toList()))
+                .map(t -> t.stream().map(com.commercetools.api.models.store.StoreResourceIdentifier::deepCopy).collect(Collectors.toList()))
                 .orElse(null));
         return instance;
     }
@@ -123,7 +126,7 @@ public interface BusinessUnitSetStoreModeAction extends BusinessUnitUpdateAction
     public static BusinessUnitSetStoreModeActionBuilder builder() {
         return BusinessUnitSetStoreModeActionBuilder.of();
     }
-
+    
     /**
      * create builder for BusinessUnitSetStoreModeAction instance
      * @param template instance with prefilled values for the builder
@@ -132,6 +135,7 @@ public interface BusinessUnitSetStoreModeAction extends BusinessUnitUpdateAction
     public static BusinessUnitSetStoreModeActionBuilder builder(final BusinessUnitSetStoreModeAction template) {
         return BusinessUnitSetStoreModeActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -142,7 +146,7 @@ public interface BusinessUnitSetStoreModeAction extends BusinessUnitUpdateAction
     default <T> T withBusinessUnitSetStoreModeAction(Function<BusinessUnitSetStoreModeAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

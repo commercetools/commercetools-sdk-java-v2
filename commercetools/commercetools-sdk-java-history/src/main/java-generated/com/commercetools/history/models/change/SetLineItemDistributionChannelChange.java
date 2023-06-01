@@ -1,20 +1,22 @@
-
 package com.commercetools.history.models.change;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
+import com.commercetools.history.models.change.Change;
 import com.commercetools.history.models.common.LocalizedString;
 import com.commercetools.history.models.common.Reference;
+import com.commercetools.history.models.change.SetLineItemDistributionChannelChangeImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * SetLineItemDistributionChannelChange
@@ -31,9 +33,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .previousValue(previousValueBuilder -> previousValueBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = SetLineItemDistributionChannelChangeImpl.class)
 public interface SetLineItemDistributionChannelChange extends Change {
 
@@ -49,7 +54,6 @@ public interface SetLineItemDistributionChannelChange extends Change {
     @NotNull
     @JsonProperty("type")
     public String getType();
-
     /**
      *  <p>Update action for <code>setLineItemDistributionChannel</code></p>
      * @return change
@@ -57,7 +61,6 @@ public interface SetLineItemDistributionChannelChange extends Change {
     @NotNull
     @JsonProperty("change")
     public String getChange();
-
     /**
      *
      * @return lineItem
@@ -66,7 +69,6 @@ public interface SetLineItemDistributionChannelChange extends Change {
     @Valid
     @JsonProperty("lineItem")
     public LocalizedString getLineItem();
-
     /**
      *
      * @return variant
@@ -74,7 +76,6 @@ public interface SetLineItemDistributionChannelChange extends Change {
     @NotNull
     @JsonProperty("variant")
     public String getVariant();
-
     /**
      *
      * @return nextValue
@@ -83,7 +84,6 @@ public interface SetLineItemDistributionChannelChange extends Change {
     @Valid
     @JsonProperty("nextValue")
     public Reference getNextValue();
-
     /**
      *
      * @return previousValue
@@ -97,44 +97,50 @@ public interface SetLineItemDistributionChannelChange extends Change {
      *  <p>Update action for <code>setLineItemDistributionChannel</code></p>
      * @param change value to be set
      */
-
+    
     public void setChange(final String change);
-
+    
+    
     /**
      * set lineItem
      * @param lineItem value to be set
      */
-
+    
     public void setLineItem(final LocalizedString lineItem);
-
+    
+    
     /**
      * set variant
      * @param variant value to be set
      */
-
+    
     public void setVariant(final String variant);
-
+    
+    
     /**
      * set nextValue
      * @param nextValue value to be set
      */
-
+    
     public void setNextValue(final Reference nextValue);
-
+    
+    
     /**
      * set previousValue
      * @param previousValue value to be set
      */
-
+    
     public void setPreviousValue(final Reference previousValue);
+    
 
     /**
      * factory method
      * @return instance of SetLineItemDistributionChannelChange
      */
-    public static SetLineItemDistributionChannelChange of() {
+    public static SetLineItemDistributionChannelChange of(){
         return new SetLineItemDistributionChannelChangeImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy SetLineItemDistributionChannelChange
@@ -157,8 +163,7 @@ public interface SetLineItemDistributionChannelChange extends Change {
      * @return copy instance
      */
     @Nullable
-    public static SetLineItemDistributionChannelChange deepCopy(
-            @Nullable final SetLineItemDistributionChannelChange template) {
+    public static SetLineItemDistributionChannelChange deepCopy(@Nullable final SetLineItemDistributionChannelChange template) {
         if (template == null) {
             return null;
         }
@@ -167,8 +172,7 @@ public interface SetLineItemDistributionChannelChange extends Change {
         instance.setLineItem(com.commercetools.history.models.common.LocalizedString.deepCopy(template.getLineItem()));
         instance.setVariant(template.getVariant());
         instance.setNextValue(com.commercetools.history.models.common.Reference.deepCopy(template.getNextValue()));
-        instance.setPreviousValue(
-            com.commercetools.history.models.common.Reference.deepCopy(template.getPreviousValue()));
+        instance.setPreviousValue(com.commercetools.history.models.common.Reference.deepCopy(template.getPreviousValue()));
         return instance;
     }
 
@@ -179,16 +183,16 @@ public interface SetLineItemDistributionChannelChange extends Change {
     public static SetLineItemDistributionChannelChangeBuilder builder() {
         return SetLineItemDistributionChannelChangeBuilder.of();
     }
-
+    
     /**
      * create builder for SetLineItemDistributionChannelChange instance
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static SetLineItemDistributionChannelChangeBuilder builder(
-            final SetLineItemDistributionChannelChange template) {
+    public static SetLineItemDistributionChannelChangeBuilder builder(final SetLineItemDistributionChannelChange template) {
         return SetLineItemDistributionChannelChangeBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -199,7 +203,7 @@ public interface SetLineItemDistributionChannelChange extends Change {
     default <T> T withSetLineItemDistributionChannelChange(Function<SetLineItemDistributionChannelChange, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

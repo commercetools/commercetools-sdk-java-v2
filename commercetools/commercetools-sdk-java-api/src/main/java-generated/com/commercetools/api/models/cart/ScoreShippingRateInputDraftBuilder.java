@@ -1,8 +1,11 @@
-
 package com.commercetools.api.models.cart;
 
+import com.commercetools.api.models.cart.ShippingRateInputDraft;
+import com.commercetools.api.models.cart.ScoreShippingRateInputDraft;
+import javax.annotation.Nullable;
 import java.util.*;
-
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -16,30 +19,39 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .score(0.3)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class ScoreShippingRateInputDraftBuilder implements Builder<ScoreShippingRateInputDraft> {
 
+    
+    
     private Long score;
 
+    
     /**
      *  <p>Abstract value for categorizing a Cart.</p>
      * @param score value to be set
      * @return Builder
      */
-
-    public ScoreShippingRateInputDraftBuilder score(final Long score) {
+    
+    public ScoreShippingRateInputDraftBuilder score( final Long score) {
         this.score = score;
         return this;
     }
+    
+    
 
     /**
      *  <p>Abstract value for categorizing a Cart.</p>
      * @return score
      */
-
-    public Long getScore() {
+    
+    
+    public Long getScore(){
         return this.score;
     }
 
@@ -51,7 +63,7 @@ public class ScoreShippingRateInputDraftBuilder implements Builder<ScoreShipping
         Objects.requireNonNull(score, ScoreShippingRateInputDraft.class + ": score is missing");
         return new ScoreShippingRateInputDraftImpl(score);
     }
-
+    
     /**
      * builds ScoreShippingRateInputDraft without checking for non-null required values
      * @return ScoreShippingRateInputDraft
@@ -62,7 +74,7 @@ public class ScoreShippingRateInputDraftBuilder implements Builder<ScoreShipping
 
     /**
      * factory method for an instance of ScoreShippingRateInputDraftBuilder
-     * @return builder
+     * @return builder 
      */
     public static ScoreShippingRateInputDraftBuilder of() {
         return new ScoreShippingRateInputDraftBuilder();

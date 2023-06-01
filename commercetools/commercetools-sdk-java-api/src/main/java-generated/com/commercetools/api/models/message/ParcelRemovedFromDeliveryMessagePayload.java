@@ -1,19 +1,21 @@
-
 package com.commercetools.api.models.message;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
+import com.commercetools.api.models.message.OrderMessagePayload;
 import com.commercetools.api.models.order.Parcel;
+import com.commercetools.api.models.message.ParcelRemovedFromDeliveryMessagePayloadImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Generated after a successful Remove Parcel From Delivery update action.</p>
@@ -27,9 +29,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .parcel(parcelBuilder -> parcelBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = ParcelRemovedFromDeliveryMessagePayloadImpl.class)
 public interface ParcelRemovedFromDeliveryMessagePayload extends OrderMessagePayload {
 
@@ -45,7 +50,6 @@ public interface ParcelRemovedFromDeliveryMessagePayload extends OrderMessagePay
     @NotNull
     @JsonProperty("deliveryId")
     public String getDeliveryId();
-
     /**
      *  <p>Parcel that was removed from the Delivery.</p>
      * @return parcel
@@ -54,12 +58,11 @@ public interface ParcelRemovedFromDeliveryMessagePayload extends OrderMessagePay
     @Valid
     @JsonProperty("parcel")
     public Parcel getParcel();
-
     /**
      *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multi</code> ShippingMode.</p>
      * @return shippingKey
      */
-
+    
     @JsonProperty("shippingKey")
     public String getShippingKey();
 
@@ -67,30 +70,34 @@ public interface ParcelRemovedFromDeliveryMessagePayload extends OrderMessagePay
      *  <p>Unique identifier of the Delivery.</p>
      * @param deliveryId value to be set
      */
-
+    
     public void setDeliveryId(final String deliveryId);
-
+    
+    
     /**
      *  <p>Parcel that was removed from the Delivery.</p>
      * @param parcel value to be set
      */
-
+    
     public void setParcel(final Parcel parcel);
-
+    
+    
     /**
      *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multi</code> ShippingMode.</p>
      * @param shippingKey value to be set
      */
-
+    
     public void setShippingKey(final String shippingKey);
+    
 
     /**
      * factory method
      * @return instance of ParcelRemovedFromDeliveryMessagePayload
      */
-    public static ParcelRemovedFromDeliveryMessagePayload of() {
+    public static ParcelRemovedFromDeliveryMessagePayload of(){
         return new ParcelRemovedFromDeliveryMessagePayloadImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy ParcelRemovedFromDeliveryMessagePayload
@@ -111,8 +118,7 @@ public interface ParcelRemovedFromDeliveryMessagePayload extends OrderMessagePay
      * @return copy instance
      */
     @Nullable
-    public static ParcelRemovedFromDeliveryMessagePayload deepCopy(
-            @Nullable final ParcelRemovedFromDeliveryMessagePayload template) {
+    public static ParcelRemovedFromDeliveryMessagePayload deepCopy(@Nullable final ParcelRemovedFromDeliveryMessagePayload template) {
         if (template == null) {
             return null;
         }
@@ -130,16 +136,16 @@ public interface ParcelRemovedFromDeliveryMessagePayload extends OrderMessagePay
     public static ParcelRemovedFromDeliveryMessagePayloadBuilder builder() {
         return ParcelRemovedFromDeliveryMessagePayloadBuilder.of();
     }
-
+    
     /**
      * create builder for ParcelRemovedFromDeliveryMessagePayload instance
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static ParcelRemovedFromDeliveryMessagePayloadBuilder builder(
-            final ParcelRemovedFromDeliveryMessagePayload template) {
+    public static ParcelRemovedFromDeliveryMessagePayloadBuilder builder(final ParcelRemovedFromDeliveryMessagePayload template) {
         return ParcelRemovedFromDeliveryMessagePayloadBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -147,11 +153,10 @@ public interface ParcelRemovedFromDeliveryMessagePayload extends OrderMessagePay
      * @param helper function to map the object
      * @return mapped value
      */
-    default <T> T withParcelRemovedFromDeliveryMessagePayload(
-            Function<ParcelRemovedFromDeliveryMessagePayload, T> helper) {
+    default <T> T withParcelRemovedFromDeliveryMessagePayload(Function<ParcelRemovedFromDeliveryMessagePayload, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

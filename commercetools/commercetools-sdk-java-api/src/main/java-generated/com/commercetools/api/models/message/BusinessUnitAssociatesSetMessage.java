@@ -1,20 +1,21 @@
-
 package com.commercetools.api.models.message;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-import java.util.stream.Collectors;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
 import com.commercetools.api.models.business_unit.Associate;
+import com.commercetools.api.models.message.Message;
+import com.commercetools.api.models.message.BusinessUnitAssociatesSetMessageImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Generated after a successful Set Associates update action.</p>
@@ -34,9 +35,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .plusAssociates(associatesBuilder -> associatesBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = BusinessUnitAssociatesSetMessageImpl.class)
 public interface BusinessUnitAssociatesSetMessage extends Message {
 
@@ -58,24 +62,24 @@ public interface BusinessUnitAssociatesSetMessage extends Message {
      *  <p>The list of Associates that was updated on the Business Unit.</p>
      * @param associates values to be set
      */
-
+    
     @JsonIgnore
-    public void setAssociates(final Associate... associates);
-
+    public void setAssociates(final Associate ...associates);
     /**
      *  <p>The list of Associates that was updated on the Business Unit.</p>
      * @param associates values to be set
      */
-
+    
     public void setAssociates(final List<Associate> associates);
 
     /**
      * factory method
      * @return instance of BusinessUnitAssociatesSetMessage
      */
-    public static BusinessUnitAssociatesSetMessage of() {
+    public static BusinessUnitAssociatesSetMessage of(){
         return new BusinessUnitAssociatesSetMessageImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy BusinessUnitAssociatesSetMessage
@@ -113,18 +117,14 @@ public interface BusinessUnitAssociatesSetMessage extends Message {
         instance.setVersion(template.getVersion());
         instance.setCreatedAt(template.getCreatedAt());
         instance.setLastModifiedAt(template.getLastModifiedAt());
-        instance.setLastModifiedBy(
-            com.commercetools.api.models.common.LastModifiedBy.deepCopy(template.getLastModifiedBy()));
+        instance.setLastModifiedBy(com.commercetools.api.models.common.LastModifiedBy.deepCopy(template.getLastModifiedBy()));
         instance.setCreatedBy(com.commercetools.api.models.common.CreatedBy.deepCopy(template.getCreatedBy()));
         instance.setSequenceNumber(template.getSequenceNumber());
         instance.setResource(com.commercetools.api.models.common.Reference.deepCopy(template.getResource()));
         instance.setResourceVersion(template.getResourceVersion());
-        instance.setResourceUserProvidedIdentifiers(com.commercetools.api.models.message.UserProvidedIdentifiers
-                .deepCopy(template.getResourceUserProvidedIdentifiers()));
+        instance.setResourceUserProvidedIdentifiers(com.commercetools.api.models.message.UserProvidedIdentifiers.deepCopy(template.getResourceUserProvidedIdentifiers()));
         instance.setAssociates(Optional.ofNullable(template.getAssociates())
-                .map(t -> t.stream()
-                        .map(com.commercetools.api.models.business_unit.Associate::deepCopy)
-                        .collect(Collectors.toList()))
+                .map(t -> t.stream().map(com.commercetools.api.models.business_unit.Associate::deepCopy).collect(Collectors.toList()))
                 .orElse(null));
         return instance;
     }
@@ -136,7 +136,7 @@ public interface BusinessUnitAssociatesSetMessage extends Message {
     public static BusinessUnitAssociatesSetMessageBuilder builder() {
         return BusinessUnitAssociatesSetMessageBuilder.of();
     }
-
+    
     /**
      * create builder for BusinessUnitAssociatesSetMessage instance
      * @param template instance with prefilled values for the builder
@@ -145,6 +145,7 @@ public interface BusinessUnitAssociatesSetMessage extends Message {
     public static BusinessUnitAssociatesSetMessageBuilder builder(final BusinessUnitAssociatesSetMessage template) {
         return BusinessUnitAssociatesSetMessageBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -155,7 +156,7 @@ public interface BusinessUnitAssociatesSetMessage extends Message {
     default <T> T withBusinessUnitAssociatesSetMessage(Function<BusinessUnitAssociatesSetMessage, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

@@ -1,17 +1,20 @@
-
 package com.commercetools.api.models.error;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
+import com.commercetools.api.models.error.ErrorObject;
+import com.commercetools.api.models.error.AnonymousIdAlreadyInUseErrorImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Returned when the anonymous ID is being used by another resource.</p>
@@ -25,9 +28,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .message("{message}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = AnonymousIdAlreadyInUseErrorImpl.class)
 public interface AnonymousIdAlreadyInUseError extends ErrorObject {
 
@@ -43,7 +49,6 @@ public interface AnonymousIdAlreadyInUseError extends ErrorObject {
     @NotNull
     @JsonProperty("code")
     public String getCode();
-
     /**
      *  <p><code>"The given anonymous ID is already in use."</code></p>
      * @return message
@@ -56,16 +61,18 @@ public interface AnonymousIdAlreadyInUseError extends ErrorObject {
      *  <p><code>"The given anonymous ID is already in use."</code></p>
      * @param message value to be set
      */
-
+    
     public void setMessage(final String message);
+    
 
     /**
      * factory method
      * @return instance of AnonymousIdAlreadyInUseError
      */
-    public static AnonymousIdAlreadyInUseError of() {
+    public static AnonymousIdAlreadyInUseError of(){
         return new AnonymousIdAlreadyInUseErrorImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy AnonymousIdAlreadyInUseError
@@ -102,7 +109,7 @@ public interface AnonymousIdAlreadyInUseError extends ErrorObject {
     public static AnonymousIdAlreadyInUseErrorBuilder builder() {
         return AnonymousIdAlreadyInUseErrorBuilder.of();
     }
-
+    
     /**
      * create builder for AnonymousIdAlreadyInUseError instance
      * @param template instance with prefilled values for the builder
@@ -111,6 +118,7 @@ public interface AnonymousIdAlreadyInUseError extends ErrorObject {
     public static AnonymousIdAlreadyInUseErrorBuilder builder(final AnonymousIdAlreadyInUseError template) {
         return AnonymousIdAlreadyInUseErrorBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -121,7 +129,7 @@ public interface AnonymousIdAlreadyInUseError extends ErrorObject {
     default <T> T withAnonymousIdAlreadyInUseError(Function<AnonymousIdAlreadyInUseError, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

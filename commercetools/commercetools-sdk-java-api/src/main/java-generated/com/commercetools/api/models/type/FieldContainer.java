@@ -1,17 +1,20 @@
-
 package com.commercetools.api.models.type;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
+import java.lang.Object;
+import com.commercetools.api.models.type.FieldContainerImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * FieldContainer
@@ -23,11 +26,15 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     FieldContainer fieldContainer = FieldContainer.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = FieldContainerImpl.class)
-public interface FieldContainer {
+public interface FieldContainer  {
+
 
     /**
      *  <p>JSON object with keys matching the names of Custom Fields (that is, <code>name</code>s in the FieldDefinitions) and values given by CustomFieldValue.</p>
@@ -42,7 +49,7 @@ public interface FieldContainer {
      * @param key property name
      * @param value property value
      */
-
+    
     @JsonAnySetter
     public void setValue(String key, Object value);
 
@@ -50,9 +57,10 @@ public interface FieldContainer {
      * factory method
      * @return instance of FieldContainer
      */
-    public static FieldContainer of() {
+    public static FieldContainer of(){
         return new FieldContainerImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy FieldContainer
@@ -87,7 +95,7 @@ public interface FieldContainer {
     public static FieldContainerBuilder builder() {
         return FieldContainerBuilder.of();
     }
-
+    
     /**
      * create builder for FieldContainer instance
      * @param template instance with prefilled values for the builder
@@ -96,6 +104,7 @@ public interface FieldContainer {
     public static FieldContainerBuilder builder(final FieldContainer template) {
         return FieldContainerBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -106,7 +115,7 @@ public interface FieldContainer {
     default <T> T withFieldContainer(Function<FieldContainer, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

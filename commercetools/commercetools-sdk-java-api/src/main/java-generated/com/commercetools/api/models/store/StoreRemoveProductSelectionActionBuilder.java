@@ -1,9 +1,12 @@
-
 package com.commercetools.api.models.store;
 
+import com.commercetools.api.models.product_selection.ProductSelectionResourceIdentifier;
+import com.commercetools.api.models.store.StoreUpdateAction;
+import com.commercetools.api.models.store.StoreRemoveProductSelectionAction;
+import javax.annotation.Nullable;
 import java.util.*;
 import java.util.function.Function;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -17,58 +20,61 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .productSelection(productSelectionBuilder -> productSelectionBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class StoreRemoveProductSelectionActionBuilder implements Builder<StoreRemoveProductSelectionAction> {
 
+    
+    
     private com.commercetools.api.models.product_selection.ProductSelectionResourceIdentifier productSelection;
 
+    
     /**
      *  <p>Value to remove. The removed Product Selection is made offline.</p>
      * @param builder function to build the productSelection value
      * @return Builder
      */
-
-    public StoreRemoveProductSelectionActionBuilder productSelection(
-            Function<com.commercetools.api.models.product_selection.ProductSelectionResourceIdentifierBuilder, com.commercetools.api.models.product_selection.ProductSelectionResourceIdentifierBuilder> builder) {
-        this.productSelection = builder
-                .apply(com.commercetools.api.models.product_selection.ProductSelectionResourceIdentifierBuilder.of())
-                .build();
+    
+    public StoreRemoveProductSelectionActionBuilder productSelection(Function<com.commercetools.api.models.product_selection.ProductSelectionResourceIdentifierBuilder, com.commercetools.api.models.product_selection.ProductSelectionResourceIdentifierBuilder> builder) {
+        this.productSelection = builder.apply(com.commercetools.api.models.product_selection.ProductSelectionResourceIdentifierBuilder.of()).build();
         return this;
     }
-
+    
     /**
      *  <p>Value to remove. The removed Product Selection is made offline.</p>
      * @param builder function to build the productSelection value
      * @return Builder
      */
-
-    public StoreRemoveProductSelectionActionBuilder withProductSelection(
-            Function<com.commercetools.api.models.product_selection.ProductSelectionResourceIdentifierBuilder, com.commercetools.api.models.product_selection.ProductSelectionResourceIdentifier> builder) {
-        this.productSelection = builder
-                .apply(com.commercetools.api.models.product_selection.ProductSelectionResourceIdentifierBuilder.of());
+    
+    public StoreRemoveProductSelectionActionBuilder withProductSelection(Function<com.commercetools.api.models.product_selection.ProductSelectionResourceIdentifierBuilder, com.commercetools.api.models.product_selection.ProductSelectionResourceIdentifier> builder) {
+        this.productSelection = builder.apply(com.commercetools.api.models.product_selection.ProductSelectionResourceIdentifierBuilder.of());
         return this;
     }
-
+                    
     /**
      *  <p>Value to remove. The removed Product Selection is made offline.</p>
      * @param productSelection value to be set
      * @return Builder
      */
-
-    public StoreRemoveProductSelectionActionBuilder productSelection(
-            final com.commercetools.api.models.product_selection.ProductSelectionResourceIdentifier productSelection) {
+    
+    public StoreRemoveProductSelectionActionBuilder productSelection( final com.commercetools.api.models.product_selection.ProductSelectionResourceIdentifier productSelection) {
         this.productSelection = productSelection;
         return this;
     }
+    
+    
 
     /**
      *  <p>Value to remove. The removed Product Selection is made offline.</p>
      * @return productSelection
      */
-
-    public com.commercetools.api.models.product_selection.ProductSelectionResourceIdentifier getProductSelection() {
+    
+    
+    public com.commercetools.api.models.product_selection.ProductSelectionResourceIdentifier getProductSelection(){
         return this.productSelection;
     }
 
@@ -77,11 +83,10 @@ public class StoreRemoveProductSelectionActionBuilder implements Builder<StoreRe
      * @return StoreRemoveProductSelectionAction
      */
     public StoreRemoveProductSelectionAction build() {
-        Objects.requireNonNull(productSelection,
-            StoreRemoveProductSelectionAction.class + ": productSelection is missing");
+        Objects.requireNonNull(productSelection, StoreRemoveProductSelectionAction.class + ": productSelection is missing");
         return new StoreRemoveProductSelectionActionImpl(productSelection);
     }
-
+    
     /**
      * builds StoreRemoveProductSelectionAction without checking for non-null required values
      * @return StoreRemoveProductSelectionAction
@@ -92,7 +97,7 @@ public class StoreRemoveProductSelectionActionBuilder implements Builder<StoreRe
 
     /**
      * factory method for an instance of StoreRemoveProductSelectionActionBuilder
-     * @return builder
+     * @return builder 
      */
     public static StoreRemoveProductSelectionActionBuilder of() {
         return new StoreRemoveProductSelectionActionBuilder();

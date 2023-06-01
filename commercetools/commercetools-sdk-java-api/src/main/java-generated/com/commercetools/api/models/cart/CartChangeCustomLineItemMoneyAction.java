@@ -1,19 +1,21 @@
-
 package com.commercetools.api.models.cart;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
+import com.commercetools.api.models.cart.CartUpdateAction;
 import com.commercetools.api.models.common.Money;
+import com.commercetools.api.models.cart.CartChangeCustomLineItemMoneyActionImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * CartChangeCustomLineItemMoneyAction
@@ -27,9 +29,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .money(moneyBuilder -> moneyBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = CartChangeCustomLineItemMoneyActionImpl.class)
 public interface CartChangeCustomLineItemMoneyAction extends CartUpdateAction {
 
@@ -45,7 +50,6 @@ public interface CartChangeCustomLineItemMoneyAction extends CartUpdateAction {
     @NotNull
     @JsonProperty("customLineItemId")
     public String getCustomLineItemId();
-
     /**
      *  <p>Value to set. Must not be empty. Can be a negative amount.</p>
      * @return money
@@ -59,23 +63,26 @@ public interface CartChangeCustomLineItemMoneyAction extends CartUpdateAction {
      *  <p><code>id</code> of the CustomLineItem to update.</p>
      * @param customLineItemId value to be set
      */
-
+    
     public void setCustomLineItemId(final String customLineItemId);
-
+    
+    
     /**
      *  <p>Value to set. Must not be empty. Can be a negative amount.</p>
      * @param money value to be set
      */
-
+    
     public void setMoney(final Money money);
+    
 
     /**
      * factory method
      * @return instance of CartChangeCustomLineItemMoneyAction
      */
-    public static CartChangeCustomLineItemMoneyAction of() {
+    public static CartChangeCustomLineItemMoneyAction of(){
         return new CartChangeCustomLineItemMoneyActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy CartChangeCustomLineItemMoneyAction
@@ -95,8 +102,7 @@ public interface CartChangeCustomLineItemMoneyAction extends CartUpdateAction {
      * @return copy instance
      */
     @Nullable
-    public static CartChangeCustomLineItemMoneyAction deepCopy(
-            @Nullable final CartChangeCustomLineItemMoneyAction template) {
+    public static CartChangeCustomLineItemMoneyAction deepCopy(@Nullable final CartChangeCustomLineItemMoneyAction template) {
         if (template == null) {
             return null;
         }
@@ -113,16 +119,16 @@ public interface CartChangeCustomLineItemMoneyAction extends CartUpdateAction {
     public static CartChangeCustomLineItemMoneyActionBuilder builder() {
         return CartChangeCustomLineItemMoneyActionBuilder.of();
     }
-
+    
     /**
      * create builder for CartChangeCustomLineItemMoneyAction instance
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static CartChangeCustomLineItemMoneyActionBuilder builder(
-            final CartChangeCustomLineItemMoneyAction template) {
+    public static CartChangeCustomLineItemMoneyActionBuilder builder(final CartChangeCustomLineItemMoneyAction template) {
         return CartChangeCustomLineItemMoneyActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -133,7 +139,7 @@ public interface CartChangeCustomLineItemMoneyAction extends CartUpdateAction {
     default <T> T withCartChangeCustomLineItemMoneyAction(Function<CartChangeCustomLineItemMoneyAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

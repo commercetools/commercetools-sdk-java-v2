@@ -1,130 +1,142 @@
-
 package com.commercetools.history.models.change;
 
-import java.time.*;
-import java.util.*;
-
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
-
-import io.vrap.rmf.base.client.ModelBase;
+import com.commercetools.history.models.change.Change;
+import com.commercetools.history.models.common.Reservation;
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.ModelBase;
+import javax.validation.Valid;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.annotation.*;
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
  * SetReservationsChange
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class SetReservationsChangeImpl implements SetReservationsChange, ModelBase {
 
+    
     private String type;
-
+    
+    
     private String change;
-
+    
+    
     private java.util.List<com.commercetools.history.models.common.Reservation> nextValue;
-
+    
+    
     private java.util.List<com.commercetools.history.models.common.Reservation> previousValue;
 
     /**
      * create instance with all properties
      */
     @JsonCreator
-    SetReservationsChangeImpl(@JsonProperty("change") final String change,
-            @JsonProperty("nextValue") final java.util.List<com.commercetools.history.models.common.Reservation> nextValue,
-            @JsonProperty("previousValue") final java.util.List<com.commercetools.history.models.common.Reservation> previousValue) {
+    SetReservationsChangeImpl(@JsonProperty("change") final String change, @JsonProperty("nextValue") final java.util.List<com.commercetools.history.models.common.Reservation> nextValue, @JsonProperty("previousValue") final java.util.List<com.commercetools.history.models.common.Reservation> previousValue) {
         this.change = change;
         this.nextValue = nextValue;
         this.previousValue = previousValue;
-        this.type = SET_RESERVATIONS_CHANGE;
+        this.type =  SET_RESERVATIONS_CHANGE;
     }
-
     /**
      * create empty instance
      */
     public SetReservationsChangeImpl() {
-        this.type = SET_RESERVATIONS_CHANGE;
+        this.type =  SET_RESERVATIONS_CHANGE;
     }
 
     /**
      *
      */
-
-    public String getType() {
+    
+    public String getType(){
         return this.type;
     }
-
+    
     /**
      *  <p>Update action for <code>setReservations</code> on inventories</p>
      */
-
-    public String getChange() {
+    
+    public String getChange(){
         return this.change;
     }
-
+    
     /**
      *
      */
-
-    public java.util.List<com.commercetools.history.models.common.Reservation> getNextValue() {
+    
+    public java.util.List<com.commercetools.history.models.common.Reservation> getNextValue(){
         return this.nextValue;
     }
-
+    
     /**
      *
      */
-
-    public java.util.List<com.commercetools.history.models.common.Reservation> getPreviousValue() {
+    
+    public java.util.List<com.commercetools.history.models.common.Reservation> getPreviousValue(){
         return this.previousValue;
     }
 
-    public void setChange(final String change) {
+    
+    public void setChange(final String change){
         this.change = change;
     }
-
-    public void setNextValue(final com.commercetools.history.models.common.Reservation... nextValue) {
-        this.nextValue = new ArrayList<>(Arrays.asList(nextValue));
+    
+    
+    public void setNextValue(final com.commercetools.history.models.common.Reservation ...nextValue){
+       this.nextValue = new ArrayList<>(Arrays.asList(nextValue));
     }
-
-    public void setNextValue(final java.util.List<com.commercetools.history.models.common.Reservation> nextValue) {
-        this.nextValue = nextValue;
+    
+    
+    public void setNextValue(final java.util.List<com.commercetools.history.models.common.Reservation> nextValue){
+       this.nextValue = nextValue;
     }
-
-    public void setPreviousValue(final com.commercetools.history.models.common.Reservation... previousValue) {
-        this.previousValue = new ArrayList<>(Arrays.asList(previousValue));
+    
+    
+    public void setPreviousValue(final com.commercetools.history.models.common.Reservation ...previousValue){
+       this.previousValue = new ArrayList<>(Arrays.asList(previousValue));
     }
-
-    public void setPreviousValue(
-            final java.util.List<com.commercetools.history.models.common.Reservation> previousValue) {
-        this.previousValue = previousValue;
+    
+    
+    public void setPreviousValue(final java.util.List<com.commercetools.history.models.common.Reservation> previousValue){
+       this.previousValue = previousValue;
     }
 
     @Override
     public boolean equals(Object o) {
-        if (this == o)
-            return true;
-
-        if (o == null || getClass() != o.getClass())
-            return false;
-
+        if (this == o) return true;
+    
+        if (o == null || getClass() != o.getClass()) return false;
+    
         SetReservationsChangeImpl that = (SetReservationsChangeImpl) o;
-
-        return new EqualsBuilder().append(type, that.type)
+    
+        return new EqualsBuilder()
+                .append(type, that.type)
                 .append(change, that.change)
                 .append(nextValue, that.nextValue)
                 .append(previousValue, that.previousValue)
                 .isEquals();
     }
-
+    
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(type)
-                .append(change)
-                .append(nextValue)
-                .append(previousValue)
-                .toHashCode();
+        return new HashCodeBuilder(17, 37)
+            .append(type)
+            .append(change)
+            .append(nextValue)
+            .append(previousValue)
+            .toHashCode();
     }
 
 }

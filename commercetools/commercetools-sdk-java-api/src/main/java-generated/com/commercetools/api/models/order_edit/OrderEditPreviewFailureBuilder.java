@@ -1,9 +1,12 @@
-
 package com.commercetools.api.models.order_edit;
 
+import com.commercetools.api.models.error.ErrorObject;
+import com.commercetools.api.models.order_edit.OrderEditResult;
+import com.commercetools.api.models.order_edit.OrderEditPreviewFailure;
+import javax.annotation.Nullable;
 import java.util.*;
 import java.util.function.Function;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -17,11 +20,16 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .plusErrors(errorsBuilder -> errorsBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class OrderEditPreviewFailureBuilder implements Builder<OrderEditPreviewFailure> {
 
+    
+    
     private java.util.List<com.commercetools.api.models.error.ErrorObject> errors;
 
     /**
@@ -29,72 +37,73 @@ public class OrderEditPreviewFailureBuilder implements Builder<OrderEditPreviewF
      * @param errors value to be set
      * @return Builder
      */
-
-    public OrderEditPreviewFailureBuilder errors(final com.commercetools.api.models.error.ErrorObject... errors) {
+    
+    public OrderEditPreviewFailureBuilder errors( final com.commercetools.api.models.error.ErrorObject ...errors) {
         this.errors = new ArrayList<>(Arrays.asList(errors));
         return this;
     }
-
+    
     /**
      * set value to the errors
      * @param errors value to be set
      * @return Builder
      */
-
-    public OrderEditPreviewFailureBuilder errors(
-            final java.util.List<com.commercetools.api.models.error.ErrorObject> errors) {
+    
+    public OrderEditPreviewFailureBuilder errors( final java.util.List<com.commercetools.api.models.error.ErrorObject> errors) {
         this.errors = errors;
         return this;
     }
-
+    
     /**
      * add values to the errors
      * @param errors value to be set
      * @return Builder
      */
-
-    public OrderEditPreviewFailureBuilder plusErrors(final com.commercetools.api.models.error.ErrorObject... errors) {
+    
+    public OrderEditPreviewFailureBuilder plusErrors( final com.commercetools.api.models.error.ErrorObject ...errors) {
         if (this.errors == null) {
             this.errors = new ArrayList<>();
         }
         this.errors.addAll(Arrays.asList(errors));
         return this;
     }
-
+    
+    
     /**
      * add a value to the errors using the builder function
      * @param builder function to build the errors value
      * @return Builder
      */
-
-    public OrderEditPreviewFailureBuilder plusErrors(
-            Function<com.commercetools.api.models.error.ErrorObjectBuilder, Builder<? extends com.commercetools.api.models.error.ErrorObject>> builder) {
+    
+    public OrderEditPreviewFailureBuilder plusErrors(Function<com.commercetools.api.models.error.ErrorObjectBuilder, Builder<? extends com.commercetools.api.models.error.ErrorObject>> builder) {
         if (this.errors == null) {
             this.errors = new ArrayList<>();
         }
         this.errors.add(builder.apply(com.commercetools.api.models.error.ErrorObjectBuilder.of()).build());
         return this;
     }
-
+    
     /**
      * set the value to the errors using the builder function
      * @param builder function to build the errors value
      * @return Builder
      */
-
-    public OrderEditPreviewFailureBuilder withErrors(
-            Function<com.commercetools.api.models.error.ErrorObjectBuilder, Builder<? extends com.commercetools.api.models.error.ErrorObject>> builder) {
+    
+    public OrderEditPreviewFailureBuilder withErrors(Function<com.commercetools.api.models.error.ErrorObjectBuilder, Builder<? extends com.commercetools.api.models.error.ErrorObject>> builder) {
         this.errors = new ArrayList<>();
         this.errors.add(builder.apply(com.commercetools.api.models.error.ErrorObjectBuilder.of()).build());
         return this;
     }
+                    
+    
 
     /**
      * value of errors}
      * @return errors
      */
-
-    public java.util.List<com.commercetools.api.models.error.ErrorObject> getErrors() {
+    
+    
+    public java.util.List<com.commercetools.api.models.error.ErrorObject> getErrors(){
         return this.errors;
     }
 
@@ -106,7 +115,7 @@ public class OrderEditPreviewFailureBuilder implements Builder<OrderEditPreviewF
         Objects.requireNonNull(errors, OrderEditPreviewFailure.class + ": errors is missing");
         return new OrderEditPreviewFailureImpl(errors);
     }
-
+    
     /**
      * builds OrderEditPreviewFailure without checking for non-null required values
      * @return OrderEditPreviewFailure
@@ -117,7 +126,7 @@ public class OrderEditPreviewFailureBuilder implements Builder<OrderEditPreviewF
 
     /**
      * factory method for an instance of OrderEditPreviewFailureBuilder
-     * @return builder
+     * @return builder 
      */
     public static OrderEditPreviewFailureBuilder of() {
         return new OrderEditPreviewFailureBuilder();

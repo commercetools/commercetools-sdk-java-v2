@@ -1,9 +1,13 @@
-
 package com.commercetools.history.models.change;
 
+import com.commercetools.history.models.change.Change;
+import com.commercetools.history.models.common.DiscountedLineItemPrice;
+import com.commercetools.history.models.common.LocalizedString;
+import com.commercetools.history.models.change.SetLineItemDiscountedPriceChange;
+import javax.annotation.Nullable;
 import java.util.*;
 import java.util.function.Function;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -21,195 +25,217 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .previousValue(previousValueBuilder -> previousValueBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class SetLineItemDiscountedPriceChangeBuilder implements Builder<SetLineItemDiscountedPriceChange> {
 
+    
+    
     private String change;
-
+    
+    
+    
     private com.commercetools.history.models.common.LocalizedString lineItem;
-
+    
+    
+    
     private String variant;
-
+    
+    
+    
     private com.commercetools.history.models.common.DiscountedLineItemPrice nextValue;
-
+    
+    
+    
     private com.commercetools.history.models.common.DiscountedLineItemPrice previousValue;
 
+    
     /**
      *  <p>Update action for <code>setLineItemDiscountedPrice</code></p>
      * @param change value to be set
      * @return Builder
      */
-
-    public SetLineItemDiscountedPriceChangeBuilder change(final String change) {
+    
+    public SetLineItemDiscountedPriceChangeBuilder change( final String change) {
         this.change = change;
         return this;
     }
-
+    
+    
+    
+    
     /**
      * set the value to the lineItem using the builder function
      * @param builder function to build the lineItem value
      * @return Builder
      */
-
-    public SetLineItemDiscountedPriceChangeBuilder lineItem(
-            Function<com.commercetools.history.models.common.LocalizedStringBuilder, com.commercetools.history.models.common.LocalizedStringBuilder> builder) {
+    
+    public SetLineItemDiscountedPriceChangeBuilder lineItem(Function<com.commercetools.history.models.common.LocalizedStringBuilder, com.commercetools.history.models.common.LocalizedStringBuilder> builder) {
         this.lineItem = builder.apply(com.commercetools.history.models.common.LocalizedStringBuilder.of()).build();
         return this;
     }
-
+    
     /**
      * set the value to the lineItem using the builder function
      * @param builder function to build the lineItem value
      * @return Builder
      */
-
-    public SetLineItemDiscountedPriceChangeBuilder withLineItem(
-            Function<com.commercetools.history.models.common.LocalizedStringBuilder, com.commercetools.history.models.common.LocalizedString> builder) {
+    
+    public SetLineItemDiscountedPriceChangeBuilder withLineItem(Function<com.commercetools.history.models.common.LocalizedStringBuilder, com.commercetools.history.models.common.LocalizedString> builder) {
         this.lineItem = builder.apply(com.commercetools.history.models.common.LocalizedStringBuilder.of());
         return this;
     }
-
+                    
     /**
      * set the value to the lineItem
      * @param lineItem value to be set
      * @return Builder
      */
-
-    public SetLineItemDiscountedPriceChangeBuilder lineItem(
-            final com.commercetools.history.models.common.LocalizedString lineItem) {
+    
+    public SetLineItemDiscountedPriceChangeBuilder lineItem( final com.commercetools.history.models.common.LocalizedString lineItem) {
         this.lineItem = lineItem;
         return this;
     }
-
+    
+    
+    
+    
     /**
      * set the value to the variant
      * @param variant value to be set
      * @return Builder
      */
-
-    public SetLineItemDiscountedPriceChangeBuilder variant(final String variant) {
+    
+    public SetLineItemDiscountedPriceChangeBuilder variant( final String variant) {
         this.variant = variant;
         return this;
     }
-
+    
+    
+    
+    
     /**
      * set the value to the nextValue using the builder function
      * @param builder function to build the nextValue value
      * @return Builder
      */
-
-    public SetLineItemDiscountedPriceChangeBuilder nextValue(
-            Function<com.commercetools.history.models.common.DiscountedLineItemPriceBuilder, com.commercetools.history.models.common.DiscountedLineItemPriceBuilder> builder) {
-        this.nextValue = builder.apply(com.commercetools.history.models.common.DiscountedLineItemPriceBuilder.of())
-                .build();
+    
+    public SetLineItemDiscountedPriceChangeBuilder nextValue(Function<com.commercetools.history.models.common.DiscountedLineItemPriceBuilder, com.commercetools.history.models.common.DiscountedLineItemPriceBuilder> builder) {
+        this.nextValue = builder.apply(com.commercetools.history.models.common.DiscountedLineItemPriceBuilder.of()).build();
         return this;
     }
-
+    
     /**
      * set the value to the nextValue using the builder function
      * @param builder function to build the nextValue value
      * @return Builder
      */
-
-    public SetLineItemDiscountedPriceChangeBuilder withNextValue(
-            Function<com.commercetools.history.models.common.DiscountedLineItemPriceBuilder, com.commercetools.history.models.common.DiscountedLineItemPrice> builder) {
+    
+    public SetLineItemDiscountedPriceChangeBuilder withNextValue(Function<com.commercetools.history.models.common.DiscountedLineItemPriceBuilder, com.commercetools.history.models.common.DiscountedLineItemPrice> builder) {
         this.nextValue = builder.apply(com.commercetools.history.models.common.DiscountedLineItemPriceBuilder.of());
         return this;
     }
-
+                    
     /**
      * set the value to the nextValue
      * @param nextValue value to be set
      * @return Builder
      */
-
-    public SetLineItemDiscountedPriceChangeBuilder nextValue(
-            final com.commercetools.history.models.common.DiscountedLineItemPrice nextValue) {
+    
+    public SetLineItemDiscountedPriceChangeBuilder nextValue( final com.commercetools.history.models.common.DiscountedLineItemPrice nextValue) {
         this.nextValue = nextValue;
         return this;
     }
-
+    
+    
+    
+    
     /**
      * set the value to the previousValue using the builder function
      * @param builder function to build the previousValue value
      * @return Builder
      */
-
-    public SetLineItemDiscountedPriceChangeBuilder previousValue(
-            Function<com.commercetools.history.models.common.DiscountedLineItemPriceBuilder, com.commercetools.history.models.common.DiscountedLineItemPriceBuilder> builder) {
-        this.previousValue = builder.apply(com.commercetools.history.models.common.DiscountedLineItemPriceBuilder.of())
-                .build();
+    
+    public SetLineItemDiscountedPriceChangeBuilder previousValue(Function<com.commercetools.history.models.common.DiscountedLineItemPriceBuilder, com.commercetools.history.models.common.DiscountedLineItemPriceBuilder> builder) {
+        this.previousValue = builder.apply(com.commercetools.history.models.common.DiscountedLineItemPriceBuilder.of()).build();
         return this;
     }
-
+    
     /**
      * set the value to the previousValue using the builder function
      * @param builder function to build the previousValue value
      * @return Builder
      */
-
-    public SetLineItemDiscountedPriceChangeBuilder withPreviousValue(
-            Function<com.commercetools.history.models.common.DiscountedLineItemPriceBuilder, com.commercetools.history.models.common.DiscountedLineItemPrice> builder) {
+    
+    public SetLineItemDiscountedPriceChangeBuilder withPreviousValue(Function<com.commercetools.history.models.common.DiscountedLineItemPriceBuilder, com.commercetools.history.models.common.DiscountedLineItemPrice> builder) {
         this.previousValue = builder.apply(com.commercetools.history.models.common.DiscountedLineItemPriceBuilder.of());
         return this;
     }
-
+                    
     /**
      * set the value to the previousValue
      * @param previousValue value to be set
      * @return Builder
      */
-
-    public SetLineItemDiscountedPriceChangeBuilder previousValue(
-            final com.commercetools.history.models.common.DiscountedLineItemPrice previousValue) {
+    
+    public SetLineItemDiscountedPriceChangeBuilder previousValue( final com.commercetools.history.models.common.DiscountedLineItemPrice previousValue) {
         this.previousValue = previousValue;
         return this;
     }
+    
+    
 
     /**
      *  <p>Update action for <code>setLineItemDiscountedPrice</code></p>
      * @return change
      */
-
-    public String getChange() {
+    
+    
+    public String getChange(){
         return this.change;
     }
-
+    
     /**
      * value of lineItem}
      * @return lineItem
      */
-
-    public com.commercetools.history.models.common.LocalizedString getLineItem() {
+    
+    
+    public com.commercetools.history.models.common.LocalizedString getLineItem(){
         return this.lineItem;
     }
-
+    
     /**
      * value of variant}
      * @return variant
      */
-
-    public String getVariant() {
+    
+    
+    public String getVariant(){
         return this.variant;
     }
-
+    
     /**
      * value of nextValue}
      * @return nextValue
      */
-
-    public com.commercetools.history.models.common.DiscountedLineItemPrice getNextValue() {
+    
+    
+    public com.commercetools.history.models.common.DiscountedLineItemPrice getNextValue(){
         return this.nextValue;
     }
-
+    
     /**
      * value of previousValue}
      * @return previousValue
      */
-
-    public com.commercetools.history.models.common.DiscountedLineItemPrice getPreviousValue() {
+    
+    
+    public com.commercetools.history.models.common.DiscountedLineItemPrice getPreviousValue(){
         return this.previousValue;
     }
 
@@ -225,7 +251,7 @@ public class SetLineItemDiscountedPriceChangeBuilder implements Builder<SetLineI
         Objects.requireNonNull(previousValue, SetLineItemDiscountedPriceChange.class + ": previousValue is missing");
         return new SetLineItemDiscountedPriceChangeImpl(change, lineItem, variant, nextValue, previousValue);
     }
-
+    
     /**
      * builds SetLineItemDiscountedPriceChange without checking for non-null required values
      * @return SetLineItemDiscountedPriceChange
@@ -236,7 +262,7 @@ public class SetLineItemDiscountedPriceChangeBuilder implements Builder<SetLineI
 
     /**
      * factory method for an instance of SetLineItemDiscountedPriceChangeBuilder
-     * @return builder
+     * @return builder 
      */
     public static SetLineItemDiscountedPriceChangeBuilder of() {
         return new SetLineItemDiscountedPriceChangeBuilder();

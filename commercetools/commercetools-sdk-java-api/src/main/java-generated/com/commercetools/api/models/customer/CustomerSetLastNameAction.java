@@ -1,16 +1,20 @@
-
 package com.commercetools.api.models.customer;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
+import com.commercetools.api.models.customer.CustomerUpdateAction;
+import com.commercetools.api.models.customer.CustomerSetLastNameActionImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Setting the last name of the Customer produces the CustomerLastNameSetMessage.</p>
@@ -22,9 +26,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     CustomerSetLastNameAction customerSetLastNameAction = CustomerSetLastNameAction.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = CustomerSetLastNameActionImpl.class)
 public interface CustomerSetLastNameAction extends CustomerUpdateAction {
 
@@ -37,7 +44,7 @@ public interface CustomerSetLastNameAction extends CustomerUpdateAction {
      *  <p>Value to set. If empty, any existing value is removed.</p>
      * @return lastName
      */
-
+    
     @JsonProperty("lastName")
     public String getLastName();
 
@@ -45,16 +52,18 @@ public interface CustomerSetLastNameAction extends CustomerUpdateAction {
      *  <p>Value to set. If empty, any existing value is removed.</p>
      * @param lastName value to be set
      */
-
+    
     public void setLastName(final String lastName);
+    
 
     /**
      * factory method
      * @return instance of CustomerSetLastNameAction
      */
-    public static CustomerSetLastNameAction of() {
+    public static CustomerSetLastNameAction of(){
         return new CustomerSetLastNameActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy CustomerSetLastNameAction
@@ -89,7 +98,7 @@ public interface CustomerSetLastNameAction extends CustomerUpdateAction {
     public static CustomerSetLastNameActionBuilder builder() {
         return CustomerSetLastNameActionBuilder.of();
     }
-
+    
     /**
      * create builder for CustomerSetLastNameAction instance
      * @param template instance with prefilled values for the builder
@@ -98,6 +107,7 @@ public interface CustomerSetLastNameAction extends CustomerUpdateAction {
     public static CustomerSetLastNameActionBuilder builder(final CustomerSetLastNameAction template) {
         return CustomerSetLastNameActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -108,7 +118,7 @@ public interface CustomerSetLastNameAction extends CustomerUpdateAction {
     default <T> T withCustomerSetLastNameAction(Function<CustomerSetLastNameAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

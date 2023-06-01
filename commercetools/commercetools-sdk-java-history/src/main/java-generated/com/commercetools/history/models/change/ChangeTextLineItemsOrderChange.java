@@ -1,20 +1,21 @@
-
 package com.commercetools.history.models.change;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-import java.util.stream.Collectors;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
+import com.commercetools.history.models.change.Change;
 import com.commercetools.history.models.change_value.TextLineItemValue;
+import com.commercetools.history.models.change.ChangeTextLineItemsOrderChangeImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * ChangeTextLineItemsOrderChange
@@ -29,9 +30,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .plusNextValue(nextValueBuilder -> nextValueBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = ChangeTextLineItemsOrderChangeImpl.class)
 public interface ChangeTextLineItemsOrderChange extends Change {
 
@@ -47,7 +51,6 @@ public interface ChangeTextLineItemsOrderChange extends Change {
     @NotNull
     @JsonProperty("type")
     public String getType();
-
     /**
      *
      * @return change
@@ -55,7 +58,6 @@ public interface ChangeTextLineItemsOrderChange extends Change {
     @NotNull
     @JsonProperty("change")
     public String getChange();
-
     /**
      *
      * @return previousValue
@@ -64,7 +66,6 @@ public interface ChangeTextLineItemsOrderChange extends Change {
     @Valid
     @JsonProperty("previousValue")
     public List<TextLineItemValue> getPreviousValue();
-
     /**
      *
      * @return nextValue
@@ -78,46 +79,46 @@ public interface ChangeTextLineItemsOrderChange extends Change {
      * set change
      * @param change value to be set
      */
-
+    
     public void setChange(final String change);
-
+    
+    
     /**
      * set previousValue
      * @param previousValue values to be set
      */
-
+    
     @JsonIgnore
-    public void setPreviousValue(final TextLineItemValue... previousValue);
-
+    public void setPreviousValue(final TextLineItemValue ...previousValue);
     /**
      * set previousValue
      * @param previousValue values to be set
      */
-
+    
     public void setPreviousValue(final List<TextLineItemValue> previousValue);
-
+    
     /**
      * set nextValue
      * @param nextValue values to be set
      */
-
+    
     @JsonIgnore
-    public void setNextValue(final TextLineItemValue... nextValue);
-
+    public void setNextValue(final TextLineItemValue ...nextValue);
     /**
      * set nextValue
      * @param nextValue values to be set
      */
-
+    
     public void setNextValue(final List<TextLineItemValue> nextValue);
 
     /**
      * factory method
      * @return instance of ChangeTextLineItemsOrderChange
      */
-    public static ChangeTextLineItemsOrderChange of() {
+    public static ChangeTextLineItemsOrderChange of(){
         return new ChangeTextLineItemsOrderChangeImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy ChangeTextLineItemsOrderChange
@@ -145,14 +146,10 @@ public interface ChangeTextLineItemsOrderChange extends Change {
         ChangeTextLineItemsOrderChangeImpl instance = new ChangeTextLineItemsOrderChangeImpl();
         instance.setChange(template.getChange());
         instance.setPreviousValue(Optional.ofNullable(template.getPreviousValue())
-                .map(t -> t.stream()
-                        .map(com.commercetools.history.models.change_value.TextLineItemValue::deepCopy)
-                        .collect(Collectors.toList()))
+                .map(t -> t.stream().map(com.commercetools.history.models.change_value.TextLineItemValue::deepCopy).collect(Collectors.toList()))
                 .orElse(null));
         instance.setNextValue(Optional.ofNullable(template.getNextValue())
-                .map(t -> t.stream()
-                        .map(com.commercetools.history.models.change_value.TextLineItemValue::deepCopy)
-                        .collect(Collectors.toList()))
+                .map(t -> t.stream().map(com.commercetools.history.models.change_value.TextLineItemValue::deepCopy).collect(Collectors.toList()))
                 .orElse(null));
         return instance;
     }
@@ -164,7 +161,7 @@ public interface ChangeTextLineItemsOrderChange extends Change {
     public static ChangeTextLineItemsOrderChangeBuilder builder() {
         return ChangeTextLineItemsOrderChangeBuilder.of();
     }
-
+    
     /**
      * create builder for ChangeTextLineItemsOrderChange instance
      * @param template instance with prefilled values for the builder
@@ -173,6 +170,7 @@ public interface ChangeTextLineItemsOrderChange extends Change {
     public static ChangeTextLineItemsOrderChangeBuilder builder(final ChangeTextLineItemsOrderChange template) {
         return ChangeTextLineItemsOrderChangeBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -183,7 +181,7 @@ public interface ChangeTextLineItemsOrderChange extends Change {
     default <T> T withChangeTextLineItemsOrderChange(Function<ChangeTextLineItemsOrderChange, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

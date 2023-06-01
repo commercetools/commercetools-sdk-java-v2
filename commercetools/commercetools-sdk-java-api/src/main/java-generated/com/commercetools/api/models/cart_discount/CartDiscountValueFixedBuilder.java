@@ -1,9 +1,12 @@
-
 package com.commercetools.api.models.cart_discount;
 
+import com.commercetools.api.models.cart_discount.CartDiscountValue;
+import com.commercetools.api.models.common.CentPrecisionMoney;
+import com.commercetools.api.models.cart_discount.CartDiscountValueFixed;
+import javax.annotation.Nullable;
 import java.util.*;
 import java.util.function.Function;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -17,11 +20,16 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .plusMoney(moneyBuilder -> moneyBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class CartDiscountValueFixedBuilder implements Builder<CartDiscountValueFixed> {
 
+    
+    
     private java.util.List<com.commercetools.api.models.common.CentPrecisionMoney> money;
 
     /**
@@ -29,95 +37,93 @@ public class CartDiscountValueFixedBuilder implements Builder<CartDiscountValueF
      * @param money value to be set
      * @return Builder
      */
-
-    public CartDiscountValueFixedBuilder money(final com.commercetools.api.models.common.CentPrecisionMoney... money) {
+    
+    public CartDiscountValueFixedBuilder money( final com.commercetools.api.models.common.CentPrecisionMoney ...money) {
         this.money = new ArrayList<>(Arrays.asList(money));
         return this;
     }
-
+    
     /**
      *  <p>Cent precision money values in different currencies.</p>
      * @param money value to be set
      * @return Builder
      */
-
-    public CartDiscountValueFixedBuilder money(
-            final java.util.List<com.commercetools.api.models.common.CentPrecisionMoney> money) {
+    
+    public CartDiscountValueFixedBuilder money( final java.util.List<com.commercetools.api.models.common.CentPrecisionMoney> money) {
         this.money = money;
         return this;
     }
-
+    
     /**
      *  <p>Cent precision money values in different currencies.</p>
      * @param money value to be set
      * @return Builder
      */
-
-    public CartDiscountValueFixedBuilder plusMoney(
-            final com.commercetools.api.models.common.CentPrecisionMoney... money) {
+    
+    public CartDiscountValueFixedBuilder plusMoney( final com.commercetools.api.models.common.CentPrecisionMoney ...money) {
         if (this.money == null) {
             this.money = new ArrayList<>();
         }
         this.money.addAll(Arrays.asList(money));
         return this;
     }
-
+    
+    
+    
     /**
      *  <p>Cent precision money values in different currencies.</p>
      * @param builder function to build the money value
      * @return Builder
      */
-
-    public CartDiscountValueFixedBuilder plusMoney(
-            Function<com.commercetools.api.models.common.CentPrecisionMoneyBuilder, com.commercetools.api.models.common.CentPrecisionMoneyBuilder> builder) {
+    
+    public CartDiscountValueFixedBuilder plusMoney(Function<com.commercetools.api.models.common.CentPrecisionMoneyBuilder, com.commercetools.api.models.common.CentPrecisionMoneyBuilder> builder) {
         if (this.money == null) {
             this.money = new ArrayList<>();
         }
         this.money.add(builder.apply(com.commercetools.api.models.common.CentPrecisionMoneyBuilder.of()).build());
         return this;
     }
-
+    
     /**
      *  <p>Cent precision money values in different currencies.</p>
      * @param builder function to build the money value
      * @return Builder
      */
-
-    public CartDiscountValueFixedBuilder withMoney(
-            Function<com.commercetools.api.models.common.CentPrecisionMoneyBuilder, com.commercetools.api.models.common.CentPrecisionMoneyBuilder> builder) {
+    
+    public CartDiscountValueFixedBuilder withMoney(Function<com.commercetools.api.models.common.CentPrecisionMoneyBuilder, com.commercetools.api.models.common.CentPrecisionMoneyBuilder> builder) {
         this.money = new ArrayList<>();
         this.money.add(builder.apply(com.commercetools.api.models.common.CentPrecisionMoneyBuilder.of()).build());
         return this;
     }
-
+    
     /**
      *  <p>Cent precision money values in different currencies.</p>
      * @param builder function to build the money value
      * @return Builder
      */
-
-    public CartDiscountValueFixedBuilder addMoney(
-            Function<com.commercetools.api.models.common.CentPrecisionMoneyBuilder, com.commercetools.api.models.common.CentPrecisionMoney> builder) {
+    
+    public CartDiscountValueFixedBuilder addMoney(Function<com.commercetools.api.models.common.CentPrecisionMoneyBuilder, com.commercetools.api.models.common.CentPrecisionMoney> builder) {
         return plusMoney(builder.apply(com.commercetools.api.models.common.CentPrecisionMoneyBuilder.of()));
     }
-
+    
     /**
      *  <p>Cent precision money values in different currencies.</p>
      * @param builder function to build the money value
      * @return Builder
      */
-
-    public CartDiscountValueFixedBuilder setMoney(
-            Function<com.commercetools.api.models.common.CentPrecisionMoneyBuilder, com.commercetools.api.models.common.CentPrecisionMoney> builder) {
+    
+    public CartDiscountValueFixedBuilder setMoney(Function<com.commercetools.api.models.common.CentPrecisionMoneyBuilder, com.commercetools.api.models.common.CentPrecisionMoney> builder) {
         return money(builder.apply(com.commercetools.api.models.common.CentPrecisionMoneyBuilder.of()));
     }
+                    
 
     /**
      *  <p>Cent precision money values in different currencies.</p>
      * @return money
      */
-
-    public java.util.List<com.commercetools.api.models.common.CentPrecisionMoney> getMoney() {
+    
+    
+    public java.util.List<com.commercetools.api.models.common.CentPrecisionMoney> getMoney(){
         return this.money;
     }
 
@@ -129,7 +135,7 @@ public class CartDiscountValueFixedBuilder implements Builder<CartDiscountValueF
         Objects.requireNonNull(money, CartDiscountValueFixed.class + ": money is missing");
         return new CartDiscountValueFixedImpl(money);
     }
-
+    
     /**
      * builds CartDiscountValueFixed without checking for non-null required values
      * @return CartDiscountValueFixed
@@ -140,7 +146,7 @@ public class CartDiscountValueFixedBuilder implements Builder<CartDiscountValueF
 
     /**
      * factory method for an instance of CartDiscountValueFixedBuilder
-     * @return builder
+     * @return builder 
      */
     public static CartDiscountValueFixedBuilder of() {
         return new CartDiscountValueFixedBuilder();

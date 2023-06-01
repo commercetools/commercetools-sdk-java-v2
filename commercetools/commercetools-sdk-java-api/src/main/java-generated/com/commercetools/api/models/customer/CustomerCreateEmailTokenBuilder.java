@@ -1,10 +1,11 @@
-
 package com.commercetools.api.models.customer;
 
-import java.util.*;
 
+import com.commercetools.api.models.customer.CustomerCreateEmailToken;
 import javax.annotation.Nullable;
-
+import java.util.*;
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -19,76 +20,95 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .ttlMinutes(0.3)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class CustomerCreateEmailTokenBuilder implements Builder<CustomerCreateEmailToken> {
 
+    
+    
     private String id;
-
+    
+    
     @Nullable
     private Long version;
-
+    
+    
+    
     private Long ttlMinutes;
 
+    
     /**
      *  <p>Unique identifier of the Customer.</p>
      * @param id value to be set
      * @return Builder
      */
-
-    public CustomerCreateEmailTokenBuilder id(final String id) {
+    
+    public CustomerCreateEmailTokenBuilder id( final String id) {
         this.id = id;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Expected version of the Customer.</p>
      * @param version value to be set
      * @return Builder
      */
-
+    
     public CustomerCreateEmailTokenBuilder version(@Nullable final Long version) {
         this.version = version;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Validity period of the generated token in minutes.</p>
      * @param ttlMinutes value to be set
      * @return Builder
      */
-
-    public CustomerCreateEmailTokenBuilder ttlMinutes(final Long ttlMinutes) {
+    
+    public CustomerCreateEmailTokenBuilder ttlMinutes( final Long ttlMinutes) {
         this.ttlMinutes = ttlMinutes;
         return this;
     }
+    
+    
 
     /**
      *  <p>Unique identifier of the Customer.</p>
      * @return id
      */
-
-    public String getId() {
+    
+    
+    public String getId(){
         return this.id;
     }
-
+    
     /**
      *  <p>Expected version of the Customer.</p>
      * @return version
      */
-
+    
     @Nullable
-    public Long getVersion() {
+    public Long getVersion(){
         return this.version;
     }
-
+    
     /**
      *  <p>Validity period of the generated token in minutes.</p>
      * @return ttlMinutes
      */
-
-    public Long getTtlMinutes() {
+    
+    
+    public Long getTtlMinutes(){
         return this.ttlMinutes;
     }
 
@@ -101,7 +121,7 @@ public class CustomerCreateEmailTokenBuilder implements Builder<CustomerCreateEm
         Objects.requireNonNull(ttlMinutes, CustomerCreateEmailToken.class + ": ttlMinutes is missing");
         return new CustomerCreateEmailTokenImpl(id, version, ttlMinutes);
     }
-
+    
     /**
      * builds CustomerCreateEmailToken without checking for non-null required values
      * @return CustomerCreateEmailToken
@@ -112,7 +132,7 @@ public class CustomerCreateEmailTokenBuilder implements Builder<CustomerCreateEm
 
     /**
      * factory method for an instance of CustomerCreateEmailTokenBuilder
-     * @return builder
+     * @return builder 
      */
     public static CustomerCreateEmailTokenBuilder of() {
         return new CustomerCreateEmailTokenBuilder();

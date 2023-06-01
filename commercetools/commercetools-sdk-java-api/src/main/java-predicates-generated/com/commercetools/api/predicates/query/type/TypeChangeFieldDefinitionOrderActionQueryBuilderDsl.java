@@ -1,9 +1,11 @@
-
 package com.commercetools.api.predicates.query.type;
 
 import com.commercetools.api.predicates.query.*;
 
-public class TypeChangeFieldDefinitionOrderActionQueryBuilderDsl {
+import java.util.function.Function;
+
+
+public class TypeChangeFieldDefinitionOrderActionQueryBuilderDsl  {
     public TypeChangeFieldDefinitionOrderActionQueryBuilderDsl() {
     }
 
@@ -12,15 +14,12 @@ public class TypeChangeFieldDefinitionOrderActionQueryBuilderDsl {
     }
 
     public StringComparisonPredicateBuilder<TypeChangeFieldDefinitionOrderActionQueryBuilderDsl> action() {
-        return new StringComparisonPredicateBuilder<>(
-            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("action")),
-            p -> new CombinationQueryPredicate<>(p, TypeChangeFieldDefinitionOrderActionQueryBuilderDsl::of));
+        return new StringComparisonPredicateBuilder<>(BinaryQueryPredicate.of().left(new ConstantQueryPredicate("action")),
+        p -> new CombinationQueryPredicate<>(p, TypeChangeFieldDefinitionOrderActionQueryBuilderDsl::of));
     }
-
     public StringCollectionPredicateBuilder<TypeChangeFieldDefinitionOrderActionQueryBuilderDsl> fieldNames() {
-        return new StringCollectionPredicateBuilder<>(
-            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("fieldNames")),
-            p -> new CombinationQueryPredicate<>(p, TypeChangeFieldDefinitionOrderActionQueryBuilderDsl::of));
+        return new StringCollectionPredicateBuilder<>(BinaryQueryPredicate.of().left(new ConstantQueryPredicate("fieldNames")),
+        p -> new CombinationQueryPredicate<>(p, TypeChangeFieldDefinitionOrderActionQueryBuilderDsl::of));
     }
-
+    
 }

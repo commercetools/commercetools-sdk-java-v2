@@ -1,9 +1,11 @@
-
 package com.commercetools.api.predicates.query.customer;
 
 import com.commercetools.api.predicates.query.*;
 
-public class CustomerChangePasswordQueryBuilderDsl {
+import java.util.function.Function;
+
+
+public class CustomerChangePasswordQueryBuilderDsl  {
     public CustomerChangePasswordQueryBuilderDsl() {
     }
 
@@ -13,25 +15,19 @@ public class CustomerChangePasswordQueryBuilderDsl {
 
     public StringComparisonPredicateBuilder<CustomerChangePasswordQueryBuilderDsl> id() {
         return new StringComparisonPredicateBuilder<>(BinaryQueryPredicate.of().left(new ConstantQueryPredicate("id")),
-            p -> new CombinationQueryPredicate<>(p, CustomerChangePasswordQueryBuilderDsl::of));
+        p -> new CombinationQueryPredicate<>(p, CustomerChangePasswordQueryBuilderDsl::of));
     }
-
     public LongComparisonPredicateBuilder<CustomerChangePasswordQueryBuilderDsl> version() {
-        return new LongComparisonPredicateBuilder<>(
-            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("version")),
-            p -> new CombinationQueryPredicate<>(p, CustomerChangePasswordQueryBuilderDsl::of));
+        return new LongComparisonPredicateBuilder<>(BinaryQueryPredicate.of().left(new ConstantQueryPredicate("version")),
+        p -> new CombinationQueryPredicate<>(p, CustomerChangePasswordQueryBuilderDsl::of));
     }
-
     public StringComparisonPredicateBuilder<CustomerChangePasswordQueryBuilderDsl> currentPassword() {
-        return new StringComparisonPredicateBuilder<>(
-            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("currentPassword")),
-            p -> new CombinationQueryPredicate<>(p, CustomerChangePasswordQueryBuilderDsl::of));
+        return new StringComparisonPredicateBuilder<>(BinaryQueryPredicate.of().left(new ConstantQueryPredicate("currentPassword")),
+        p -> new CombinationQueryPredicate<>(p, CustomerChangePasswordQueryBuilderDsl::of));
     }
-
     public StringComparisonPredicateBuilder<CustomerChangePasswordQueryBuilderDsl> newPassword() {
-        return new StringComparisonPredicateBuilder<>(
-            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("newPassword")),
-            p -> new CombinationQueryPredicate<>(p, CustomerChangePasswordQueryBuilderDsl::of));
+        return new StringComparisonPredicateBuilder<>(BinaryQueryPredicate.of().left(new ConstantQueryPredicate("newPassword")),
+        p -> new CombinationQueryPredicate<>(p, CustomerChangePasswordQueryBuilderDsl::of));
     }
-
+    
 }

@@ -1,17 +1,21 @@
-
 package com.commercetools.api.models.cart_discount;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
+import com.commercetools.api.models.cart_discount.CartDiscountTarget;
+import com.commercetools.api.models.cart_discount.SelectionMode;
+import com.commercetools.api.models.cart_discount.MultiBuyLineItemsTargetImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * MultiBuyLineItemsTarget
@@ -27,9 +31,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .selectionMode(SelectionMode.CHEAPEST)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = MultiBuyLineItemsTargetImpl.class)
 public interface MultiBuyLineItemsTarget extends CartDiscountTarget {
 
@@ -45,7 +52,6 @@ public interface MultiBuyLineItemsTarget extends CartDiscountTarget {
     @NotNull
     @JsonProperty("predicate")
     public String getPredicate();
-
     /**
      *  <p>Number of Line Items to be present in order to trigger an application of this Discount.</p>
      * @return triggerQuantity
@@ -53,7 +59,6 @@ public interface MultiBuyLineItemsTarget extends CartDiscountTarget {
     @NotNull
     @JsonProperty("triggerQuantity")
     public Integer getTriggerQuantity();
-
     /**
      *  <p>Number of Line Items that are discounted per application of this Discount.</p>
      * @return discountedQuantity
@@ -61,15 +66,13 @@ public interface MultiBuyLineItemsTarget extends CartDiscountTarget {
     @NotNull
     @JsonProperty("discountedQuantity")
     public Integer getDiscountedQuantity();
-
     /**
      *  <p>Maximum number of times this Discount can be applied.</p>
      * @return maxOccurrence
      */
-
+    
     @JsonProperty("maxOccurrence")
     public Integer getMaxOccurrence();
-
     /**
      *  <p>Discounts particular Line Items only according to the SelectionMode.</p>
      * @return selectionMode
@@ -82,44 +85,50 @@ public interface MultiBuyLineItemsTarget extends CartDiscountTarget {
      *  <p>Valid LineItem target predicate. The Discount will be applied to Line Items that are matched by the predicate.</p>
      * @param predicate value to be set
      */
-
+    
     public void setPredicate(final String predicate);
-
+    
+    
     /**
      *  <p>Number of Line Items to be present in order to trigger an application of this Discount.</p>
      * @param triggerQuantity value to be set
      */
-
+    
     public void setTriggerQuantity(final Integer triggerQuantity);
-
+    
+    
     /**
      *  <p>Number of Line Items that are discounted per application of this Discount.</p>
      * @param discountedQuantity value to be set
      */
-
+    
     public void setDiscountedQuantity(final Integer discountedQuantity);
-
+    
+    
     /**
      *  <p>Maximum number of times this Discount can be applied.</p>
      * @param maxOccurrence value to be set
      */
-
+    
     public void setMaxOccurrence(final Integer maxOccurrence);
-
+    
+    
     /**
      *  <p>Discounts particular Line Items only according to the SelectionMode.</p>
      * @param selectionMode value to be set
      */
-
+    
     public void setSelectionMode(final SelectionMode selectionMode);
+    
 
     /**
      * factory method
      * @return instance of MultiBuyLineItemsTarget
      */
-    public static MultiBuyLineItemsTarget of() {
+    public static MultiBuyLineItemsTarget of(){
         return new MultiBuyLineItemsTargetImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy MultiBuyLineItemsTarget
@@ -162,7 +171,7 @@ public interface MultiBuyLineItemsTarget extends CartDiscountTarget {
     public static MultiBuyLineItemsTargetBuilder builder() {
         return MultiBuyLineItemsTargetBuilder.of();
     }
-
+    
     /**
      * create builder for MultiBuyLineItemsTarget instance
      * @param template instance with prefilled values for the builder
@@ -171,6 +180,7 @@ public interface MultiBuyLineItemsTarget extends CartDiscountTarget {
     public static MultiBuyLineItemsTargetBuilder builder(final MultiBuyLineItemsTarget template) {
         return MultiBuyLineItemsTargetBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -181,7 +191,7 @@ public interface MultiBuyLineItemsTarget extends CartDiscountTarget {
     default <T> T withMultiBuyLineItemsTarget(Function<MultiBuyLineItemsTarget, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

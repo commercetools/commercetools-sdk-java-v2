@@ -1,9 +1,12 @@
-
 package com.commercetools.api.models.message;
 
+import com.commercetools.api.models.message.MessagePayload;
+import com.commercetools.api.models.product_selection.ProductSelection;
+import com.commercetools.api.models.message.ProductSelectionCreatedMessagePayload;
+import javax.annotation.Nullable;
 import java.util.*;
 import java.util.function.Function;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -17,58 +20,61 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .productSelection(productSelectionBuilder -> productSelectionBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class ProductSelectionCreatedMessagePayloadBuilder implements Builder<ProductSelectionCreatedMessagePayload> {
 
+    
+    
     private com.commercetools.api.models.product_selection.ProductSelection productSelection;
 
+    
     /**
      *  <p>Product Selection that was created.</p>
      * @param builder function to build the productSelection value
      * @return Builder
      */
-
-    public ProductSelectionCreatedMessagePayloadBuilder productSelection(
-            Function<com.commercetools.api.models.product_selection.ProductSelectionBuilder, com.commercetools.api.models.product_selection.ProductSelectionBuilder> builder) {
-        this.productSelection = builder
-                .apply(com.commercetools.api.models.product_selection.ProductSelectionBuilder.of())
-                .build();
+    
+    public ProductSelectionCreatedMessagePayloadBuilder productSelection(Function<com.commercetools.api.models.product_selection.ProductSelectionBuilder, com.commercetools.api.models.product_selection.ProductSelectionBuilder> builder) {
+        this.productSelection = builder.apply(com.commercetools.api.models.product_selection.ProductSelectionBuilder.of()).build();
         return this;
     }
-
+    
     /**
      *  <p>Product Selection that was created.</p>
      * @param builder function to build the productSelection value
      * @return Builder
      */
-
-    public ProductSelectionCreatedMessagePayloadBuilder withProductSelection(
-            Function<com.commercetools.api.models.product_selection.ProductSelectionBuilder, com.commercetools.api.models.product_selection.ProductSelection> builder) {
-        this.productSelection = builder
-                .apply(com.commercetools.api.models.product_selection.ProductSelectionBuilder.of());
+    
+    public ProductSelectionCreatedMessagePayloadBuilder withProductSelection(Function<com.commercetools.api.models.product_selection.ProductSelectionBuilder, com.commercetools.api.models.product_selection.ProductSelection> builder) {
+        this.productSelection = builder.apply(com.commercetools.api.models.product_selection.ProductSelectionBuilder.of());
         return this;
     }
-
+                    
     /**
      *  <p>Product Selection that was created.</p>
      * @param productSelection value to be set
      * @return Builder
      */
-
-    public ProductSelectionCreatedMessagePayloadBuilder productSelection(
-            final com.commercetools.api.models.product_selection.ProductSelection productSelection) {
+    
+    public ProductSelectionCreatedMessagePayloadBuilder productSelection( final com.commercetools.api.models.product_selection.ProductSelection productSelection) {
         this.productSelection = productSelection;
         return this;
     }
+    
+    
 
     /**
      *  <p>Product Selection that was created.</p>
      * @return productSelection
      */
-
-    public com.commercetools.api.models.product_selection.ProductSelection getProductSelection() {
+    
+    
+    public com.commercetools.api.models.product_selection.ProductSelection getProductSelection(){
         return this.productSelection;
     }
 
@@ -77,11 +83,10 @@ public class ProductSelectionCreatedMessagePayloadBuilder implements Builder<Pro
      * @return ProductSelectionCreatedMessagePayload
      */
     public ProductSelectionCreatedMessagePayload build() {
-        Objects.requireNonNull(productSelection,
-            ProductSelectionCreatedMessagePayload.class + ": productSelection is missing");
+        Objects.requireNonNull(productSelection, ProductSelectionCreatedMessagePayload.class + ": productSelection is missing");
         return new ProductSelectionCreatedMessagePayloadImpl(productSelection);
     }
-
+    
     /**
      * builds ProductSelectionCreatedMessagePayload without checking for non-null required values
      * @return ProductSelectionCreatedMessagePayload
@@ -92,7 +97,7 @@ public class ProductSelectionCreatedMessagePayloadBuilder implements Builder<Pro
 
     /**
      * factory method for an instance of ProductSelectionCreatedMessagePayloadBuilder
-     * @return builder
+     * @return builder 
      */
     public static ProductSelectionCreatedMessagePayloadBuilder of() {
         return new ProductSelectionCreatedMessagePayloadBuilder();
@@ -103,8 +108,7 @@ public class ProductSelectionCreatedMessagePayloadBuilder implements Builder<Pro
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static ProductSelectionCreatedMessagePayloadBuilder of(
-            final ProductSelectionCreatedMessagePayload template) {
+    public static ProductSelectionCreatedMessagePayloadBuilder of(final ProductSelectionCreatedMessagePayload template) {
         ProductSelectionCreatedMessagePayloadBuilder builder = new ProductSelectionCreatedMessagePayloadBuilder();
         builder.productSelection = template.getProductSelection();
         return builder;

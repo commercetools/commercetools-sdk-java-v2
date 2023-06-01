@@ -1,18 +1,21 @@
-
 package com.commercetools.api.models.payment;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
+import com.commercetools.api.models.payment.PaymentUpdateAction;
+import com.commercetools.api.models.payment.TransactionDraft;
+import com.commercetools.api.models.payment.PaymentAddTransactionActionImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Adding a Transaction to a Payment generates the PaymentTransactionAdded Message.</p>
@@ -25,9 +28,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .transaction(transactionBuilder -> transactionBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = PaymentAddTransactionActionImpl.class)
 public interface PaymentAddTransactionAction extends PaymentUpdateAction {
 
@@ -49,16 +55,18 @@ public interface PaymentAddTransactionAction extends PaymentUpdateAction {
      *  <p>Value to append to the <code>transactions</code> array.</p>
      * @param transaction value to be set
      */
-
+    
     public void setTransaction(final TransactionDraft transaction);
+    
 
     /**
      * factory method
      * @return instance of PaymentAddTransactionAction
      */
-    public static PaymentAddTransactionAction of() {
+    public static PaymentAddTransactionAction of(){
         return new PaymentAddTransactionActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy PaymentAddTransactionAction
@@ -82,8 +90,7 @@ public interface PaymentAddTransactionAction extends PaymentUpdateAction {
             return null;
         }
         PaymentAddTransactionActionImpl instance = new PaymentAddTransactionActionImpl();
-        instance.setTransaction(
-            com.commercetools.api.models.payment.TransactionDraft.deepCopy(template.getTransaction()));
+        instance.setTransaction(com.commercetools.api.models.payment.TransactionDraft.deepCopy(template.getTransaction()));
         return instance;
     }
 
@@ -94,7 +101,7 @@ public interface PaymentAddTransactionAction extends PaymentUpdateAction {
     public static PaymentAddTransactionActionBuilder builder() {
         return PaymentAddTransactionActionBuilder.of();
     }
-
+    
     /**
      * create builder for PaymentAddTransactionAction instance
      * @param template instance with prefilled values for the builder
@@ -103,6 +110,7 @@ public interface PaymentAddTransactionAction extends PaymentUpdateAction {
     public static PaymentAddTransactionActionBuilder builder(final PaymentAddTransactionAction template) {
         return PaymentAddTransactionActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -113,7 +121,7 @@ public interface PaymentAddTransactionAction extends PaymentUpdateAction {
     default <T> T withPaymentAddTransactionAction(Function<PaymentAddTransactionAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

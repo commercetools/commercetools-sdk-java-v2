@@ -1,16 +1,20 @@
-
 package com.commercetools.ml.models.similar_products;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
 
-import javax.annotation.Nullable;
+import com.commercetools.ml.models.similar_products.SimilarityMeasuresImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Specify which ProductData attributes to use for estimating similarity and how to weigh them. An attribute's weight can be any whole positive integer, starting with 0. The larger the integer, the higher its weight.</p>
@@ -22,49 +26,49 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     SimilarityMeasures similarityMeasures = SimilarityMeasures.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = SimilarityMeasuresImpl.class)
-public interface SimilarityMeasures {
+public interface SimilarityMeasures  {
+
 
     /**
      *  <p>Importance of the <code>name</code> attribute in overall similarity.</p>
      * @return name
      */
-
+    
     @JsonProperty("name")
     public Long getName();
-
     /**
      *  <p>Importance of the <code>description</code> attribute in overall similarity.</p>
      * @return description
      */
-
+    
     @JsonProperty("description")
     public Long getDescription();
-
     /**
      *  <p>Importance of the <code>description</code> attribute in overall similarity.</p>
      * @return attribute
      */
-
+    
     @JsonProperty("attribute")
     public Long getAttribute();
-
     /**
      *  <p>Importance of the number of product variants in overall similarity.</p>
      * @return variantCount
      */
-
+    
     @JsonProperty("variantCount")
     public Long getVariantCount();
-
     /**
      *  <p>Importance of the <code>price</code> attribute in overall similarity.</p>
      * @return price
      */
-
+    
     @JsonProperty("price")
     public Long getPrice();
 
@@ -72,44 +76,50 @@ public interface SimilarityMeasures {
      *  <p>Importance of the <code>name</code> attribute in overall similarity.</p>
      * @param name value to be set
      */
-
+    
     public void setName(final Long name);
-
+    
+    
     /**
      *  <p>Importance of the <code>description</code> attribute in overall similarity.</p>
      * @param description value to be set
      */
-
+    
     public void setDescription(final Long description);
-
+    
+    
     /**
      *  <p>Importance of the <code>description</code> attribute in overall similarity.</p>
      * @param attribute value to be set
      */
-
+    
     public void setAttribute(final Long attribute);
-
+    
+    
     /**
      *  <p>Importance of the number of product variants in overall similarity.</p>
      * @param variantCount value to be set
      */
-
+    
     public void setVariantCount(final Long variantCount);
-
+    
+    
     /**
      *  <p>Importance of the <code>price</code> attribute in overall similarity.</p>
      * @param price value to be set
      */
-
+    
     public void setPrice(final Long price);
+    
 
     /**
      * factory method
      * @return instance of SimilarityMeasures
      */
-    public static SimilarityMeasures of() {
+    public static SimilarityMeasures of(){
         return new SimilarityMeasuresImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy SimilarityMeasures
@@ -152,7 +162,7 @@ public interface SimilarityMeasures {
     public static SimilarityMeasuresBuilder builder() {
         return SimilarityMeasuresBuilder.of();
     }
-
+    
     /**
      * create builder for SimilarityMeasures instance
      * @param template instance with prefilled values for the builder
@@ -161,6 +171,7 @@ public interface SimilarityMeasures {
     public static SimilarityMeasuresBuilder builder(final SimilarityMeasures template) {
         return SimilarityMeasuresBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -171,7 +182,7 @@ public interface SimilarityMeasures {
     default <T> T withSimilarityMeasures(Function<SimilarityMeasures, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

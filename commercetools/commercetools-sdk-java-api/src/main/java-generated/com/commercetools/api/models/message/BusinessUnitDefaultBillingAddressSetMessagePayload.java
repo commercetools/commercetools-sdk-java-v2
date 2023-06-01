@@ -1,18 +1,21 @@
-
 package com.commercetools.api.models.message;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-
 import com.commercetools.api.models.common.Address;
+import com.commercetools.api.models.message.MessagePayload;
+import com.commercetools.api.models.message.BusinessUnitDefaultBillingAddressSetMessagePayloadImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Generated after a successful Set Default Billing Address update action.</p>
@@ -24,9 +27,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     BusinessUnitDefaultBillingAddressSetMessagePayload businessUnitDefaultBillingAddressSetMessagePayload = BusinessUnitDefaultBillingAddressSetMessagePayload.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = BusinessUnitDefaultBillingAddressSetMessagePayloadImpl.class)
 public interface BusinessUnitDefaultBillingAddressSetMessagePayload extends MessagePayload {
 
@@ -47,24 +53,25 @@ public interface BusinessUnitDefaultBillingAddressSetMessagePayload extends Mess
      *  <p>The address that was set as the default billing address.</p>
      * @param address value to be set
      */
-
+    
     public void setAddress(final Address address);
+    
 
     /**
      * factory method
      * @return instance of BusinessUnitDefaultBillingAddressSetMessagePayload
      */
-    public static BusinessUnitDefaultBillingAddressSetMessagePayload of() {
+    public static BusinessUnitDefaultBillingAddressSetMessagePayload of(){
         return new BusinessUnitDefaultBillingAddressSetMessagePayloadImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy BusinessUnitDefaultBillingAddressSetMessagePayload
      * @param template instance to be copied
      * @return copy instance
      */
-    public static BusinessUnitDefaultBillingAddressSetMessagePayload of(
-            final BusinessUnitDefaultBillingAddressSetMessagePayload template) {
+    public static BusinessUnitDefaultBillingAddressSetMessagePayload of(final BusinessUnitDefaultBillingAddressSetMessagePayload template) {
         BusinessUnitDefaultBillingAddressSetMessagePayloadImpl instance = new BusinessUnitDefaultBillingAddressSetMessagePayloadImpl();
         instance.setAddress(template.getAddress());
         return instance;
@@ -76,8 +83,7 @@ public interface BusinessUnitDefaultBillingAddressSetMessagePayload extends Mess
      * @return copy instance
      */
     @Nullable
-    public static BusinessUnitDefaultBillingAddressSetMessagePayload deepCopy(
-            @Nullable final BusinessUnitDefaultBillingAddressSetMessagePayload template) {
+    public static BusinessUnitDefaultBillingAddressSetMessagePayload deepCopy(@Nullable final BusinessUnitDefaultBillingAddressSetMessagePayload template) {
         if (template == null) {
             return null;
         }
@@ -93,16 +99,16 @@ public interface BusinessUnitDefaultBillingAddressSetMessagePayload extends Mess
     public static BusinessUnitDefaultBillingAddressSetMessagePayloadBuilder builder() {
         return BusinessUnitDefaultBillingAddressSetMessagePayloadBuilder.of();
     }
-
+    
     /**
      * create builder for BusinessUnitDefaultBillingAddressSetMessagePayload instance
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static BusinessUnitDefaultBillingAddressSetMessagePayloadBuilder builder(
-            final BusinessUnitDefaultBillingAddressSetMessagePayload template) {
+    public static BusinessUnitDefaultBillingAddressSetMessagePayloadBuilder builder(final BusinessUnitDefaultBillingAddressSetMessagePayload template) {
         return BusinessUnitDefaultBillingAddressSetMessagePayloadBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -110,11 +116,10 @@ public interface BusinessUnitDefaultBillingAddressSetMessagePayload extends Mess
      * @param helper function to map the object
      * @return mapped value
      */
-    default <T> T withBusinessUnitDefaultBillingAddressSetMessagePayload(
-            Function<BusinessUnitDefaultBillingAddressSetMessagePayload, T> helper) {
+    default <T> T withBusinessUnitDefaultBillingAddressSetMessagePayload(Function<BusinessUnitDefaultBillingAddressSetMessagePayload, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

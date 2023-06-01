@@ -1,8 +1,11 @@
-
 package com.commercetools.api.models.type;
 
+import com.commercetools.api.models.type.TypeUpdateAction;
+import com.commercetools.api.models.type.TypeChangeFieldDefinitionOrderAction;
+import javax.annotation.Nullable;
 import java.util.*;
-
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -16,11 +19,16 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .plusFieldNames(fieldNamesBuilder -> fieldNamesBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class TypeChangeFieldDefinitionOrderActionBuilder implements Builder<TypeChangeFieldDefinitionOrderAction> {
 
+    
+    
     private java.util.List<String> fieldNames;
 
     /**
@@ -28,43 +36,47 @@ public class TypeChangeFieldDefinitionOrderActionBuilder implements Builder<Type
      * @param fieldNames value to be set
      * @return Builder
      */
-
-    public TypeChangeFieldDefinitionOrderActionBuilder fieldNames(final String... fieldNames) {
+    
+    public TypeChangeFieldDefinitionOrderActionBuilder fieldNames( final String ...fieldNames) {
         this.fieldNames = new ArrayList<>(Arrays.asList(fieldNames));
         return this;
     }
-
+    
     /**
      *  <p>Must match the set of <code>name</code>s of FieldDefinitions (up to order).</p>
      * @param fieldNames value to be set
      * @return Builder
      */
-
-    public TypeChangeFieldDefinitionOrderActionBuilder fieldNames(final java.util.List<String> fieldNames) {
+    
+    public TypeChangeFieldDefinitionOrderActionBuilder fieldNames( final java.util.List<String> fieldNames) {
         this.fieldNames = fieldNames;
         return this;
     }
-
+    
     /**
      *  <p>Must match the set of <code>name</code>s of FieldDefinitions (up to order).</p>
      * @param fieldNames value to be set
      * @return Builder
      */
-
-    public TypeChangeFieldDefinitionOrderActionBuilder plusFieldNames(final String... fieldNames) {
+    
+    public TypeChangeFieldDefinitionOrderActionBuilder plusFieldNames( final String ...fieldNames) {
         if (this.fieldNames == null) {
             this.fieldNames = new ArrayList<>();
         }
         this.fieldNames.addAll(Arrays.asList(fieldNames));
         return this;
     }
+    
+    
+    
 
     /**
      *  <p>Must match the set of <code>name</code>s of FieldDefinitions (up to order).</p>
      * @return fieldNames
      */
-
-    public java.util.List<String> getFieldNames() {
+    
+    
+    public java.util.List<String> getFieldNames(){
         return this.fieldNames;
     }
 
@@ -76,7 +88,7 @@ public class TypeChangeFieldDefinitionOrderActionBuilder implements Builder<Type
         Objects.requireNonNull(fieldNames, TypeChangeFieldDefinitionOrderAction.class + ": fieldNames is missing");
         return new TypeChangeFieldDefinitionOrderActionImpl(fieldNames);
     }
-
+    
     /**
      * builds TypeChangeFieldDefinitionOrderAction without checking for non-null required values
      * @return TypeChangeFieldDefinitionOrderAction
@@ -87,7 +99,7 @@ public class TypeChangeFieldDefinitionOrderActionBuilder implements Builder<Type
 
     /**
      * factory method for an instance of TypeChangeFieldDefinitionOrderActionBuilder
-     * @return builder
+     * @return builder 
      */
     public static TypeChangeFieldDefinitionOrderActionBuilder of() {
         return new TypeChangeFieldDefinitionOrderActionBuilder();

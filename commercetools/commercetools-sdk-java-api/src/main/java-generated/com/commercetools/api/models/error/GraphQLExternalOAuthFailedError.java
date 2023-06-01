@@ -1,17 +1,20 @@
-
 package com.commercetools.api.models.error;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
+import com.commercetools.api.models.error.GraphQLErrorObject;
+import com.commercetools.api.models.error.GraphQLExternalOAuthFailedErrorImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Returned when an external OAuth Introspection endpoint does not return a response within the time limit, or the response isn't compliant with RFC 7662 (for example, an HTTP status code like <code>500</code>).</p>
@@ -23,9 +26,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     GraphQLExternalOAuthFailedError graphQLExternalOAuthFailedError = GraphQLExternalOAuthFailedError.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = GraphQLExternalOAuthFailedErrorImpl.class)
 public interface GraphQLExternalOAuthFailedError extends GraphQLErrorObject {
 
@@ -42,13 +48,15 @@ public interface GraphQLExternalOAuthFailedError extends GraphQLErrorObject {
     @JsonProperty("code")
     public String getCode();
 
+
     /**
      * factory method
      * @return instance of GraphQLExternalOAuthFailedError
      */
-    public static GraphQLExternalOAuthFailedError of() {
+    public static GraphQLExternalOAuthFailedError of(){
         return new GraphQLExternalOAuthFailedErrorImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy GraphQLExternalOAuthFailedError
@@ -83,7 +91,7 @@ public interface GraphQLExternalOAuthFailedError extends GraphQLErrorObject {
     public static GraphQLExternalOAuthFailedErrorBuilder builder() {
         return GraphQLExternalOAuthFailedErrorBuilder.of();
     }
-
+    
     /**
      * create builder for GraphQLExternalOAuthFailedError instance
      * @param template instance with prefilled values for the builder
@@ -92,6 +100,7 @@ public interface GraphQLExternalOAuthFailedError extends GraphQLErrorObject {
     public static GraphQLExternalOAuthFailedErrorBuilder builder(final GraphQLExternalOAuthFailedError template) {
         return GraphQLExternalOAuthFailedErrorBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -102,7 +111,7 @@ public interface GraphQLExternalOAuthFailedError extends GraphQLErrorObject {
     default <T> T withGraphQLExternalOAuthFailedError(Function<GraphQLExternalOAuthFailedError, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

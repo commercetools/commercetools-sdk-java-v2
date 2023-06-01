@@ -1,8 +1,11 @@
-
 package com.commercetools.importapi.models.errors;
 
+import com.commercetools.importapi.models.errors.ErrorObject;
+import com.commercetools.importapi.models.errors.InsufficientScopeError;
+import javax.annotation.Nullable;
 import java.util.*;
-
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -16,30 +19,39 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .message("{message}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class InsufficientScopeErrorBuilder implements Builder<InsufficientScopeError> {
 
+    
+    
     private String message;
 
+    
     /**
      * set the value to the message
      * @param message value to be set
      * @return Builder
      */
-
-    public InsufficientScopeErrorBuilder message(final String message) {
+    
+    public InsufficientScopeErrorBuilder message( final String message) {
         this.message = message;
         return this;
     }
+    
+    
 
     /**
      * value of message}
      * @return message
      */
-
-    public String getMessage() {
+    
+    
+    public String getMessage(){
         return this.message;
     }
 
@@ -51,7 +63,7 @@ public class InsufficientScopeErrorBuilder implements Builder<InsufficientScopeE
         Objects.requireNonNull(message, InsufficientScopeError.class + ": message is missing");
         return new InsufficientScopeErrorImpl(message);
     }
-
+    
     /**
      * builds InsufficientScopeError without checking for non-null required values
      * @return InsufficientScopeError
@@ -62,7 +74,7 @@ public class InsufficientScopeErrorBuilder implements Builder<InsufficientScopeE
 
     /**
      * factory method for an instance of InsufficientScopeErrorBuilder
-     * @return builder
+     * @return builder 
      */
     public static InsufficientScopeErrorBuilder of() {
         return new InsufficientScopeErrorBuilder();

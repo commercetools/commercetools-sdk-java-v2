@@ -1,8 +1,12 @@
-
 package com.commercetools.api.models.business_unit;
 
+import com.commercetools.api.models.common.KeyReference;
+import com.commercetools.api.models.common.ReferenceTypeId;
+import com.commercetools.api.models.business_unit.BusinessUnitKeyReference;
+import javax.annotation.Nullable;
 import java.util.*;
-
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -16,30 +20,39 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .key("{key}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class BusinessUnitKeyReferenceBuilder implements Builder<BusinessUnitKeyReference> {
 
+    
+    
     private String key;
 
+    
     /**
      *  <p>Unique and immutable key of the referenced BusinessUnit.</p>
      * @param key value to be set
      * @return Builder
      */
-
-    public BusinessUnitKeyReferenceBuilder key(final String key) {
+    
+    public BusinessUnitKeyReferenceBuilder key( final String key) {
         this.key = key;
         return this;
     }
+    
+    
 
     /**
      *  <p>Unique and immutable key of the referenced BusinessUnit.</p>
      * @return key
      */
-
-    public String getKey() {
+    
+    
+    public String getKey(){
         return this.key;
     }
 
@@ -51,7 +64,7 @@ public class BusinessUnitKeyReferenceBuilder implements Builder<BusinessUnitKeyR
         Objects.requireNonNull(key, BusinessUnitKeyReference.class + ": key is missing");
         return new BusinessUnitKeyReferenceImpl(key);
     }
-
+    
     /**
      * builds BusinessUnitKeyReference without checking for non-null required values
      * @return BusinessUnitKeyReference
@@ -62,7 +75,7 @@ public class BusinessUnitKeyReferenceBuilder implements Builder<BusinessUnitKeyR
 
     /**
      * factory method for an instance of BusinessUnitKeyReferenceBuilder
-     * @return builder
+     * @return builder 
      */
     public static BusinessUnitKeyReferenceBuilder of() {
         return new BusinessUnitKeyReferenceBuilder();

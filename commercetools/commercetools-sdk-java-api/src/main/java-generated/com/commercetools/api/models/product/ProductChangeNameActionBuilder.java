@@ -1,11 +1,12 @@
-
 package com.commercetools.api.models.product;
 
+import com.commercetools.api.models.common.LocalizedString;
+import com.commercetools.api.models.product.ProductUpdateAction;
+import com.commercetools.api.models.product.ProductChangeNameAction;
+import javax.annotation.Nullable;
 import java.util.*;
 import java.util.function.Function;
-
-import javax.annotation.Nullable;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -19,78 +20,89 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .name(nameBuilder -> nameBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class ProductChangeNameActionBuilder implements Builder<ProductChangeNameAction> {
 
+    
+    
     private com.commercetools.api.models.common.LocalizedString name;
-
+    
+    
     @Nullable
     private Boolean staged;
 
+    
     /**
      *  <p>Value to set. Must not be empty.</p>
      * @param builder function to build the name value
      * @return Builder
      */
-
-    public ProductChangeNameActionBuilder name(
-            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
+    
+    public ProductChangeNameActionBuilder name(Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
         this.name = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of()).build();
         return this;
     }
-
+    
     /**
      *  <p>Value to set. Must not be empty.</p>
      * @param builder function to build the name value
      * @return Builder
      */
-
-    public ProductChangeNameActionBuilder withName(
-            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedString> builder) {
+    
+    public ProductChangeNameActionBuilder withName(Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedString> builder) {
         this.name = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of());
         return this;
     }
-
+                    
     /**
      *  <p>Value to set. Must not be empty.</p>
      * @param name value to be set
      * @return Builder
      */
-
-    public ProductChangeNameActionBuilder name(final com.commercetools.api.models.common.LocalizedString name) {
+    
+    public ProductChangeNameActionBuilder name( final com.commercetools.api.models.common.LocalizedString name) {
         this.name = name;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>If <code>true</code>, only the staged <code>name</code> is updated. If <code>false</code>, both the current and staged <code>name</code> are updated.</p>
      * @param staged value to be set
      * @return Builder
      */
-
+    
     public ProductChangeNameActionBuilder staged(@Nullable final Boolean staged) {
         this.staged = staged;
         return this;
     }
+    
+    
 
     /**
      *  <p>Value to set. Must not be empty.</p>
      * @return name
      */
-
-    public com.commercetools.api.models.common.LocalizedString getName() {
+    
+    
+    public com.commercetools.api.models.common.LocalizedString getName(){
         return this.name;
     }
-
+    
     /**
      *  <p>If <code>true</code>, only the staged <code>name</code> is updated. If <code>false</code>, both the current and staged <code>name</code> are updated.</p>
      * @return staged
      */
-
+    
     @Nullable
-    public Boolean getStaged() {
+    public Boolean getStaged(){
         return this.staged;
     }
 
@@ -102,7 +114,7 @@ public class ProductChangeNameActionBuilder implements Builder<ProductChangeName
         Objects.requireNonNull(name, ProductChangeNameAction.class + ": name is missing");
         return new ProductChangeNameActionImpl(name, staged);
     }
-
+    
     /**
      * builds ProductChangeNameAction without checking for non-null required values
      * @return ProductChangeNameAction
@@ -113,7 +125,7 @@ public class ProductChangeNameActionBuilder implements Builder<ProductChangeName
 
     /**
      * factory method for an instance of ProductChangeNameActionBuilder
-     * @return builder
+     * @return builder 
      */
     public static ProductChangeNameActionBuilder of() {
         return new ProductChangeNameActionBuilder();

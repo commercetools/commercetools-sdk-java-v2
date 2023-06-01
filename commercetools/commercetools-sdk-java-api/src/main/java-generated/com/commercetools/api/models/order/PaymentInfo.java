@@ -1,20 +1,20 @@
-
 package com.commercetools.api.models.order;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-import java.util.stream.Collectors;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
 import com.commercetools.api.models.payment.PaymentReference;
+import com.commercetools.api.models.order.PaymentInfoImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * PaymentInfo
@@ -27,11 +27,15 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .plusPayments(paymentsBuilder -> paymentsBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = PaymentInfoImpl.class)
-public interface PaymentInfo {
+public interface PaymentInfo  {
+
 
     /**
      *
@@ -46,24 +50,24 @@ public interface PaymentInfo {
      * set payments
      * @param payments values to be set
      */
-
+    
     @JsonIgnore
-    public void setPayments(final PaymentReference... payments);
-
+    public void setPayments(final PaymentReference ...payments);
     /**
      * set payments
      * @param payments values to be set
      */
-
+    
     public void setPayments(final List<PaymentReference> payments);
 
     /**
      * factory method
      * @return instance of PaymentInfo
      */
-    public static PaymentInfo of() {
+    public static PaymentInfo of(){
         return new PaymentInfoImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy PaymentInfo
@@ -88,9 +92,7 @@ public interface PaymentInfo {
         }
         PaymentInfoImpl instance = new PaymentInfoImpl();
         instance.setPayments(Optional.ofNullable(template.getPayments())
-                .map(t -> t.stream()
-                        .map(com.commercetools.api.models.payment.PaymentReference::deepCopy)
-                        .collect(Collectors.toList()))
+                .map(t -> t.stream().map(com.commercetools.api.models.payment.PaymentReference::deepCopy).collect(Collectors.toList()))
                 .orElse(null));
         return instance;
     }
@@ -102,7 +104,7 @@ public interface PaymentInfo {
     public static PaymentInfoBuilder builder() {
         return PaymentInfoBuilder.of();
     }
-
+    
     /**
      * create builder for PaymentInfo instance
      * @param template instance with prefilled values for the builder
@@ -111,6 +113,7 @@ public interface PaymentInfo {
     public static PaymentInfoBuilder builder(final PaymentInfo template) {
         return PaymentInfoBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -121,7 +124,7 @@ public interface PaymentInfo {
     default <T> T withPaymentInfo(Function<PaymentInfo, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

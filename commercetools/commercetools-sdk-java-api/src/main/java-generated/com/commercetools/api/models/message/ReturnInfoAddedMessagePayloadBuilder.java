@@ -1,9 +1,12 @@
-
 package com.commercetools.api.models.message;
 
+import com.commercetools.api.models.message.OrderMessagePayload;
+import com.commercetools.api.models.order.ReturnInfo;
+import com.commercetools.api.models.message.ReturnInfoAddedMessagePayload;
+import javax.annotation.Nullable;
 import java.util.*;
 import java.util.function.Function;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -17,55 +20,61 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .returnInfo(returnInfoBuilder -> returnInfoBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class ReturnInfoAddedMessagePayloadBuilder implements Builder<ReturnInfoAddedMessagePayload> {
 
+    
+    
     private com.commercetools.api.models.order.ReturnInfo returnInfo;
 
+    
     /**
      *  <p>The ReturnInfo that was added to the Order.</p>
      * @param builder function to build the returnInfo value
      * @return Builder
      */
-
-    public ReturnInfoAddedMessagePayloadBuilder returnInfo(
-            Function<com.commercetools.api.models.order.ReturnInfoBuilder, com.commercetools.api.models.order.ReturnInfoBuilder> builder) {
+    
+    public ReturnInfoAddedMessagePayloadBuilder returnInfo(Function<com.commercetools.api.models.order.ReturnInfoBuilder, com.commercetools.api.models.order.ReturnInfoBuilder> builder) {
         this.returnInfo = builder.apply(com.commercetools.api.models.order.ReturnInfoBuilder.of()).build();
         return this;
     }
-
+    
     /**
      *  <p>The ReturnInfo that was added to the Order.</p>
      * @param builder function to build the returnInfo value
      * @return Builder
      */
-
-    public ReturnInfoAddedMessagePayloadBuilder withReturnInfo(
-            Function<com.commercetools.api.models.order.ReturnInfoBuilder, com.commercetools.api.models.order.ReturnInfo> builder) {
+    
+    public ReturnInfoAddedMessagePayloadBuilder withReturnInfo(Function<com.commercetools.api.models.order.ReturnInfoBuilder, com.commercetools.api.models.order.ReturnInfo> builder) {
         this.returnInfo = builder.apply(com.commercetools.api.models.order.ReturnInfoBuilder.of());
         return this;
     }
-
+                    
     /**
      *  <p>The ReturnInfo that was added to the Order.</p>
      * @param returnInfo value to be set
      * @return Builder
      */
-
-    public ReturnInfoAddedMessagePayloadBuilder returnInfo(
-            final com.commercetools.api.models.order.ReturnInfo returnInfo) {
+    
+    public ReturnInfoAddedMessagePayloadBuilder returnInfo( final com.commercetools.api.models.order.ReturnInfo returnInfo) {
         this.returnInfo = returnInfo;
         return this;
     }
+    
+    
 
     /**
      *  <p>The ReturnInfo that was added to the Order.</p>
      * @return returnInfo
      */
-
-    public com.commercetools.api.models.order.ReturnInfo getReturnInfo() {
+    
+    
+    public com.commercetools.api.models.order.ReturnInfo getReturnInfo(){
         return this.returnInfo;
     }
 
@@ -77,7 +86,7 @@ public class ReturnInfoAddedMessagePayloadBuilder implements Builder<ReturnInfoA
         Objects.requireNonNull(returnInfo, ReturnInfoAddedMessagePayload.class + ": returnInfo is missing");
         return new ReturnInfoAddedMessagePayloadImpl(returnInfo);
     }
-
+    
     /**
      * builds ReturnInfoAddedMessagePayload without checking for non-null required values
      * @return ReturnInfoAddedMessagePayload
@@ -88,7 +97,7 @@ public class ReturnInfoAddedMessagePayloadBuilder implements Builder<ReturnInfoA
 
     /**
      * factory method for an instance of ReturnInfoAddedMessagePayloadBuilder
-     * @return builder
+     * @return builder 
      */
     public static ReturnInfoAddedMessagePayloadBuilder of() {
         return new ReturnInfoAddedMessagePayloadBuilder();

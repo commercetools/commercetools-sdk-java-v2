@@ -1,9 +1,11 @@
-
 package com.commercetools.api.predicates.query.type;
 
 import com.commercetools.api.predicates.query.*;
 
-public class CustomFieldDateTypeQueryBuilderDsl {
+import java.util.function.Function;
+
+
+public class CustomFieldDateTypeQueryBuilderDsl  {
     public CustomFieldDateTypeQueryBuilderDsl() {
     }
 
@@ -12,9 +14,8 @@ public class CustomFieldDateTypeQueryBuilderDsl {
     }
 
     public StringComparisonPredicateBuilder<CustomFieldDateTypeQueryBuilderDsl> name() {
-        return new StringComparisonPredicateBuilder<>(
-            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("name")),
-            p -> new CombinationQueryPredicate<>(p, CustomFieldDateTypeQueryBuilderDsl::of));
+        return new StringComparisonPredicateBuilder<>(BinaryQueryPredicate.of().left(new ConstantQueryPredicate("name")),
+        p -> new CombinationQueryPredicate<>(p, CustomFieldDateTypeQueryBuilderDsl::of));
     }
-
+    
 }

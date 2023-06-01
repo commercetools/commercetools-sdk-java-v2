@@ -1,20 +1,21 @@
-
 package com.commercetools.api.models.shipping_method;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-import java.util.stream.Collectors;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
+import com.commercetools.api.models.shipping_method.ShippingRateDraft;
 import com.commercetools.api.models.zone.ZoneResourceIdentifier;
+import com.commercetools.api.models.shipping_method.ZoneRateDraftImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * ZoneRateDraft
@@ -28,11 +29,15 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .plusShippingRates(shippingRatesBuilder -> shippingRatesBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = ZoneRateDraftImpl.class)
 public interface ZoneRateDraft extends io.vrap.rmf.base.client.Draft<ZoneRateDraft> {
+
 
     /**
      *  <p>Sets the Zone for which the shippng rates are valid.</p>
@@ -42,7 +47,6 @@ public interface ZoneRateDraft extends io.vrap.rmf.base.client.Draft<ZoneRateDra
     @Valid
     @JsonProperty("zone")
     public ZoneResourceIdentifier getZone();
-
     /**
      *  <p>Shipping rates for the <code>currencies</code> configured in the Project. The array must not contain two ShippingRates with the same CurrencyCode.</p>
      * @return shippingRates
@@ -56,31 +60,32 @@ public interface ZoneRateDraft extends io.vrap.rmf.base.client.Draft<ZoneRateDra
      *  <p>Sets the Zone for which the shippng rates are valid.</p>
      * @param zone value to be set
      */
-
+    
     public void setZone(final ZoneResourceIdentifier zone);
-
+    
+    
     /**
      *  <p>Shipping rates for the <code>currencies</code> configured in the Project. The array must not contain two ShippingRates with the same CurrencyCode.</p>
      * @param shippingRates values to be set
      */
-
+    
     @JsonIgnore
-    public void setShippingRates(final ShippingRateDraft... shippingRates);
-
+    public void setShippingRates(final ShippingRateDraft ...shippingRates);
     /**
      *  <p>Shipping rates for the <code>currencies</code> configured in the Project. The array must not contain two ShippingRates with the same CurrencyCode.</p>
      * @param shippingRates values to be set
      */
-
+    
     public void setShippingRates(final List<ShippingRateDraft> shippingRates);
 
     /**
      * factory method
      * @return instance of ZoneRateDraft
      */
-    public static ZoneRateDraft of() {
+    public static ZoneRateDraft of(){
         return new ZoneRateDraftImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy ZoneRateDraft
@@ -107,9 +112,7 @@ public interface ZoneRateDraft extends io.vrap.rmf.base.client.Draft<ZoneRateDra
         ZoneRateDraftImpl instance = new ZoneRateDraftImpl();
         instance.setZone(com.commercetools.api.models.zone.ZoneResourceIdentifier.deepCopy(template.getZone()));
         instance.setShippingRates(Optional.ofNullable(template.getShippingRates())
-                .map(t -> t.stream()
-                        .map(com.commercetools.api.models.shipping_method.ShippingRateDraft::deepCopy)
-                        .collect(Collectors.toList()))
+                .map(t -> t.stream().map(com.commercetools.api.models.shipping_method.ShippingRateDraft::deepCopy).collect(Collectors.toList()))
                 .orElse(null));
         return instance;
     }
@@ -121,7 +124,7 @@ public interface ZoneRateDraft extends io.vrap.rmf.base.client.Draft<ZoneRateDra
     public static ZoneRateDraftBuilder builder() {
         return ZoneRateDraftBuilder.of();
     }
-
+    
     /**
      * create builder for ZoneRateDraft instance
      * @param template instance with prefilled values for the builder
@@ -130,6 +133,7 @@ public interface ZoneRateDraft extends io.vrap.rmf.base.client.Draft<ZoneRateDra
     public static ZoneRateDraftBuilder builder(final ZoneRateDraft template) {
         return ZoneRateDraftBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -140,7 +144,7 @@ public interface ZoneRateDraft extends io.vrap.rmf.base.client.Draft<ZoneRateDra
     default <T> T withZoneRateDraft(Function<ZoneRateDraft, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

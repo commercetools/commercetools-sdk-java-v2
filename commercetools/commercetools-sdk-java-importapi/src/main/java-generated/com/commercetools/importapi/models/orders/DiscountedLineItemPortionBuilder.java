@@ -1,9 +1,12 @@
-
 package com.commercetools.importapi.models.orders;
 
+import com.commercetools.importapi.models.common.CartDiscountKeyReference;
+import com.commercetools.importapi.models.common.Money;
+import com.commercetools.importapi.models.orders.DiscountedLineItemPortion;
+import javax.annotation.Nullable;
 import java.util.*;
 import java.util.function.Function;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -18,103 +21,111 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .discountedAmount(discountedAmountBuilder -> discountedAmountBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class DiscountedLineItemPortionBuilder implements Builder<DiscountedLineItemPortion> {
 
+    
+    
     private com.commercetools.importapi.models.common.CartDiscountKeyReference discount;
-
+    
+    
+    
     private com.commercetools.importapi.models.common.Money discountedAmount;
 
+    
     /**
      *  <p>References a cart discount by key.</p>
      * @param builder function to build the discount value
      * @return Builder
      */
-
-    public DiscountedLineItemPortionBuilder discount(
-            Function<com.commercetools.importapi.models.common.CartDiscountKeyReferenceBuilder, com.commercetools.importapi.models.common.CartDiscountKeyReferenceBuilder> builder) {
-        this.discount = builder.apply(com.commercetools.importapi.models.common.CartDiscountKeyReferenceBuilder.of())
-                .build();
+    
+    public DiscountedLineItemPortionBuilder discount(Function<com.commercetools.importapi.models.common.CartDiscountKeyReferenceBuilder, com.commercetools.importapi.models.common.CartDiscountKeyReferenceBuilder> builder) {
+        this.discount = builder.apply(com.commercetools.importapi.models.common.CartDiscountKeyReferenceBuilder.of()).build();
         return this;
     }
-
+    
     /**
      *  <p>References a cart discount by key.</p>
      * @param builder function to build the discount value
      * @return Builder
      */
-
-    public DiscountedLineItemPortionBuilder withDiscount(
-            Function<com.commercetools.importapi.models.common.CartDiscountKeyReferenceBuilder, com.commercetools.importapi.models.common.CartDiscountKeyReference> builder) {
+    
+    public DiscountedLineItemPortionBuilder withDiscount(Function<com.commercetools.importapi.models.common.CartDiscountKeyReferenceBuilder, com.commercetools.importapi.models.common.CartDiscountKeyReference> builder) {
         this.discount = builder.apply(com.commercetools.importapi.models.common.CartDiscountKeyReferenceBuilder.of());
         return this;
     }
-
+                    
     /**
      *  <p>References a cart discount by key.</p>
      * @param discount value to be set
      * @return Builder
      */
-
-    public DiscountedLineItemPortionBuilder discount(
-            final com.commercetools.importapi.models.common.CartDiscountKeyReference discount) {
+    
+    public DiscountedLineItemPortionBuilder discount( final com.commercetools.importapi.models.common.CartDiscountKeyReference discount) {
         this.discount = discount;
         return this;
     }
-
+    
+    
+    
+    
     /**
      * set the value to the discountedAmount using the builder function
      * @param builder function to build the discountedAmount value
      * @return Builder
      */
-
-    public DiscountedLineItemPortionBuilder discountedAmount(
-            Function<com.commercetools.importapi.models.common.MoneyBuilder, com.commercetools.importapi.models.common.MoneyBuilder> builder) {
+    
+    public DiscountedLineItemPortionBuilder discountedAmount(Function<com.commercetools.importapi.models.common.MoneyBuilder, com.commercetools.importapi.models.common.MoneyBuilder> builder) {
         this.discountedAmount = builder.apply(com.commercetools.importapi.models.common.MoneyBuilder.of()).build();
         return this;
     }
-
+    
     /**
      * set the value to the discountedAmount using the builder function
      * @param builder function to build the discountedAmount value
      * @return Builder
      */
-
-    public DiscountedLineItemPortionBuilder withDiscountedAmount(
-            Function<com.commercetools.importapi.models.common.MoneyBuilder, com.commercetools.importapi.models.common.Money> builder) {
+    
+    public DiscountedLineItemPortionBuilder withDiscountedAmount(Function<com.commercetools.importapi.models.common.MoneyBuilder, com.commercetools.importapi.models.common.Money> builder) {
         this.discountedAmount = builder.apply(com.commercetools.importapi.models.common.MoneyBuilder.of());
         return this;
     }
-
+                    
     /**
      * set the value to the discountedAmount
      * @param discountedAmount value to be set
      * @return Builder
      */
-
-    public DiscountedLineItemPortionBuilder discountedAmount(
-            final com.commercetools.importapi.models.common.Money discountedAmount) {
+    
+    public DiscountedLineItemPortionBuilder discountedAmount( final com.commercetools.importapi.models.common.Money discountedAmount) {
         this.discountedAmount = discountedAmount;
         return this;
     }
+    
+    
 
     /**
      *  <p>References a cart discount by key.</p>
      * @return discount
      */
-
-    public com.commercetools.importapi.models.common.CartDiscountKeyReference getDiscount() {
+    
+    
+    public com.commercetools.importapi.models.common.CartDiscountKeyReference getDiscount(){
         return this.discount;
     }
-
+    
     /**
      * value of discountedAmount}
      * @return discountedAmount
      */
-
-    public com.commercetools.importapi.models.common.Money getDiscountedAmount() {
+    
+    
+    public com.commercetools.importapi.models.common.Money getDiscountedAmount(){
         return this.discountedAmount;
     }
 
@@ -127,7 +138,7 @@ public class DiscountedLineItemPortionBuilder implements Builder<DiscountedLineI
         Objects.requireNonNull(discountedAmount, DiscountedLineItemPortion.class + ": discountedAmount is missing");
         return new DiscountedLineItemPortionImpl(discount, discountedAmount);
     }
-
+    
     /**
      * builds DiscountedLineItemPortion without checking for non-null required values
      * @return DiscountedLineItemPortion
@@ -138,7 +149,7 @@ public class DiscountedLineItemPortionBuilder implements Builder<DiscountedLineI
 
     /**
      * factory method for an instance of DiscountedLineItemPortionBuilder
-     * @return builder
+     * @return builder 
      */
     public static DiscountedLineItemPortionBuilder of() {
         return new DiscountedLineItemPortionBuilder();

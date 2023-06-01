@@ -1,23 +1,25 @@
-
 package com.commercetools.history.models.change_history;
-
-import java.util.Arrays;
-import java.util.Optional;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-
+import java.lang.String;
+import java.util.Arrays;
+import java.util.Optional;
 import io.vrap.rmf.base.client.JsonEnum;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
  *  <p>This type consists of one enum value:</p>
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public interface DateStringFilter extends JsonEnum {
 
+    
     DateStringFilter NOW = DateStringFilterEnum.NOW;
-
+    
     /**
      * possible values of DateStringFilter
      */
@@ -78,7 +80,7 @@ public interface DateStringFilter extends JsonEnum {
             public String name() {
                 return value.toUpperCase();
             }
-
+            
             public String toString() {
                 return value;
             }
@@ -93,7 +95,7 @@ public interface DateStringFilter extends JsonEnum {
     public static Optional<DateStringFilter> findEnumViaJsonName(String jsonName) {
         return Arrays.stream(values()).filter(t -> t.getJsonName().equals(jsonName)).findFirst();
     }
-
+    
     /**
      * possible enum values
      * @return array of possible enum values
@@ -101,5 +103,5 @@ public interface DateStringFilter extends JsonEnum {
     public static DateStringFilter[] values() {
         return DateStringFilterEnum.values();
     }
-
+    
 }

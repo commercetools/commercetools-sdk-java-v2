@@ -1,20 +1,22 @@
-
 package com.commercetools.api.models.order;
 
-import java.time.*;
-import java.time.ZonedDateTime;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
 import com.commercetools.api.models.channel.ChannelResourceIdentifier;
+import com.commercetools.api.models.order.OrderUpdateAction;
+import java.time.ZonedDateTime;
+import com.commercetools.api.models.order.OrderUpdateSyncInfoActionImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * OrderUpdateSyncInfoAction
@@ -27,9 +29,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .channel(channelBuilder -> channelBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = OrderUpdateSyncInfoActionImpl.class)
 public interface OrderUpdateSyncInfoAction extends OrderUpdateAction {
 
@@ -46,20 +51,18 @@ public interface OrderUpdateSyncInfoAction extends OrderUpdateAction {
     @Valid
     @JsonProperty("channel")
     public ChannelResourceIdentifier getChannel();
-
     /**
      *
      * @return externalId
      */
-
+    
     @JsonProperty("externalId")
     public String getExternalId();
-
     /**
      *
      * @return syncedAt
      */
-
+    
     @JsonProperty("syncedAt")
     public ZonedDateTime getSyncedAt();
 
@@ -67,30 +70,34 @@ public interface OrderUpdateSyncInfoAction extends OrderUpdateAction {
      *  <p>ResourceIdentifier to a Channel.</p>
      * @param channel value to be set
      */
-
+    
     public void setChannel(final ChannelResourceIdentifier channel);
-
+    
+    
     /**
      * set externalId
      * @param externalId value to be set
      */
-
+    
     public void setExternalId(final String externalId);
-
+    
+    
     /**
      * set syncedAt
      * @param syncedAt value to be set
      */
-
+    
     public void setSyncedAt(final ZonedDateTime syncedAt);
+    
 
     /**
      * factory method
      * @return instance of OrderUpdateSyncInfoAction
      */
-    public static OrderUpdateSyncInfoAction of() {
+    public static OrderUpdateSyncInfoAction of(){
         return new OrderUpdateSyncInfoActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy OrderUpdateSyncInfoAction
@@ -116,8 +123,7 @@ public interface OrderUpdateSyncInfoAction extends OrderUpdateAction {
             return null;
         }
         OrderUpdateSyncInfoActionImpl instance = new OrderUpdateSyncInfoActionImpl();
-        instance.setChannel(
-            com.commercetools.api.models.channel.ChannelResourceIdentifier.deepCopy(template.getChannel()));
+        instance.setChannel(com.commercetools.api.models.channel.ChannelResourceIdentifier.deepCopy(template.getChannel()));
         instance.setExternalId(template.getExternalId());
         instance.setSyncedAt(template.getSyncedAt());
         return instance;
@@ -130,7 +136,7 @@ public interface OrderUpdateSyncInfoAction extends OrderUpdateAction {
     public static OrderUpdateSyncInfoActionBuilder builder() {
         return OrderUpdateSyncInfoActionBuilder.of();
     }
-
+    
     /**
      * create builder for OrderUpdateSyncInfoAction instance
      * @param template instance with prefilled values for the builder
@@ -139,6 +145,7 @@ public interface OrderUpdateSyncInfoAction extends OrderUpdateAction {
     public static OrderUpdateSyncInfoActionBuilder builder(final OrderUpdateSyncInfoAction template) {
         return OrderUpdateSyncInfoActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -149,7 +156,7 @@ public interface OrderUpdateSyncInfoAction extends OrderUpdateAction {
     default <T> T withOrderUpdateSyncInfoAction(Function<OrderUpdateSyncInfoAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

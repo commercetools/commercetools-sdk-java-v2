@@ -1,17 +1,20 @@
-
 package com.commercetools.history.models.change_value;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
 
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
+import com.commercetools.history.models.change_value.SetCartScoreShippingRateInputValueImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Shape of the cart score shipping input rate value.</p>
@@ -25,11 +28,15 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .score(1)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = SetCartScoreShippingRateInputValueImpl.class)
-public interface SetCartScoreShippingRateInputValue {
+public interface SetCartScoreShippingRateInputValue  {
+
 
     /**
      *
@@ -38,7 +45,6 @@ public interface SetCartScoreShippingRateInputValue {
     @NotNull
     @JsonProperty("type")
     public String getType();
-
     /**
      *
      * @return score
@@ -51,23 +57,26 @@ public interface SetCartScoreShippingRateInputValue {
      * set type
      * @param type value to be set
      */
-
+    
     public void setType(final String type);
-
+    
+    
     /**
      * set score
      * @param score value to be set
      */
-
+    
     public void setScore(final Integer score);
+    
 
     /**
      * factory method
      * @return instance of SetCartScoreShippingRateInputValue
      */
-    public static SetCartScoreShippingRateInputValue of() {
+    public static SetCartScoreShippingRateInputValue of(){
         return new SetCartScoreShippingRateInputValueImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy SetCartScoreShippingRateInputValue
@@ -87,8 +96,7 @@ public interface SetCartScoreShippingRateInputValue {
      * @return copy instance
      */
     @Nullable
-    public static SetCartScoreShippingRateInputValue deepCopy(
-            @Nullable final SetCartScoreShippingRateInputValue template) {
+    public static SetCartScoreShippingRateInputValue deepCopy(@Nullable final SetCartScoreShippingRateInputValue template) {
         if (template == null) {
             return null;
         }
@@ -105,7 +113,7 @@ public interface SetCartScoreShippingRateInputValue {
     public static SetCartScoreShippingRateInputValueBuilder builder() {
         return SetCartScoreShippingRateInputValueBuilder.of();
     }
-
+    
     /**
      * create builder for SetCartScoreShippingRateInputValue instance
      * @param template instance with prefilled values for the builder
@@ -114,6 +122,7 @@ public interface SetCartScoreShippingRateInputValue {
     public static SetCartScoreShippingRateInputValueBuilder builder(final SetCartScoreShippingRateInputValue template) {
         return SetCartScoreShippingRateInputValueBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -124,7 +133,7 @@ public interface SetCartScoreShippingRateInputValue {
     default <T> T withSetCartScoreShippingRateInputValue(Function<SetCartScoreShippingRateInputValue, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

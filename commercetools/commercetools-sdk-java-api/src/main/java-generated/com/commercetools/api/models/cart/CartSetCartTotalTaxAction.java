@@ -1,20 +1,22 @@
-
 package com.commercetools.api.models.cart;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-import java.util.stream.Collectors;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
+import com.commercetools.api.models.cart.CartUpdateAction;
+import com.commercetools.api.models.cart.TaxPortionDraft;
 import com.commercetools.api.models.common.Money;
+import com.commercetools.api.models.cart.CartSetCartTotalTaxActionImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>This update action results in the <code>taxedPrice</code> field being added to the Cart when the <code>ExternalAmount</code> TaxMode is used.</p>
@@ -27,9 +29,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .externalTotalGross(externalTotalGrossBuilder -> externalTotalGrossBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = CartSetCartTotalTaxActionImpl.class)
 public interface CartSetCartTotalTaxAction extends CartUpdateAction {
 
@@ -46,7 +51,6 @@ public interface CartSetCartTotalTaxAction extends CartUpdateAction {
     @Valid
     @JsonProperty("externalTotalGross")
     public Money getExternalTotalGross();
-
     /**
      *  <p>Set if the <code>externalTotalGross</code> price is a sum of portions with different tax rates.</p>
      * @return externalTaxPortions
@@ -59,31 +63,32 @@ public interface CartSetCartTotalTaxAction extends CartUpdateAction {
      *  <p>The Cart's total gross price becoming the <code>totalGross</code> field (<code>totalNet</code> + taxes) on the Cart's <code>taxedPrice</code>.</p>
      * @param externalTotalGross value to be set
      */
-
+    
     public void setExternalTotalGross(final Money externalTotalGross);
-
+    
+    
     /**
      *  <p>Set if the <code>externalTotalGross</code> price is a sum of portions with different tax rates.</p>
      * @param externalTaxPortions values to be set
      */
-
+    
     @JsonIgnore
-    public void setExternalTaxPortions(final TaxPortionDraft... externalTaxPortions);
-
+    public void setExternalTaxPortions(final TaxPortionDraft ...externalTaxPortions);
     /**
      *  <p>Set if the <code>externalTotalGross</code> price is a sum of portions with different tax rates.</p>
      * @param externalTaxPortions values to be set
      */
-
+    
     public void setExternalTaxPortions(final List<TaxPortionDraft> externalTaxPortions);
 
     /**
      * factory method
      * @return instance of CartSetCartTotalTaxAction
      */
-    public static CartSetCartTotalTaxAction of() {
+    public static CartSetCartTotalTaxAction of(){
         return new CartSetCartTotalTaxActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy CartSetCartTotalTaxAction
@@ -108,12 +113,9 @@ public interface CartSetCartTotalTaxAction extends CartUpdateAction {
             return null;
         }
         CartSetCartTotalTaxActionImpl instance = new CartSetCartTotalTaxActionImpl();
-        instance.setExternalTotalGross(
-            com.commercetools.api.models.common.Money.deepCopy(template.getExternalTotalGross()));
+        instance.setExternalTotalGross(com.commercetools.api.models.common.Money.deepCopy(template.getExternalTotalGross()));
         instance.setExternalTaxPortions(Optional.ofNullable(template.getExternalTaxPortions())
-                .map(t -> t.stream()
-                        .map(com.commercetools.api.models.cart.TaxPortionDraft::deepCopy)
-                        .collect(Collectors.toList()))
+                .map(t -> t.stream().map(com.commercetools.api.models.cart.TaxPortionDraft::deepCopy).collect(Collectors.toList()))
                 .orElse(null));
         return instance;
     }
@@ -125,7 +127,7 @@ public interface CartSetCartTotalTaxAction extends CartUpdateAction {
     public static CartSetCartTotalTaxActionBuilder builder() {
         return CartSetCartTotalTaxActionBuilder.of();
     }
-
+    
     /**
      * create builder for CartSetCartTotalTaxAction instance
      * @param template instance with prefilled values for the builder
@@ -134,6 +136,7 @@ public interface CartSetCartTotalTaxAction extends CartUpdateAction {
     public static CartSetCartTotalTaxActionBuilder builder(final CartSetCartTotalTaxAction template) {
         return CartSetCartTotalTaxActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -144,7 +147,7 @@ public interface CartSetCartTotalTaxAction extends CartUpdateAction {
     default <T> T withCartSetCartTotalTaxAction(Function<CartSetCartTotalTaxAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

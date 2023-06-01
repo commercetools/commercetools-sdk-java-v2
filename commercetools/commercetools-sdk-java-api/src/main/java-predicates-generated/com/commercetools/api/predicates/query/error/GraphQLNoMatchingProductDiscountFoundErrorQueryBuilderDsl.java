@@ -1,9 +1,11 @@
-
 package com.commercetools.api.predicates.query.error;
 
 import com.commercetools.api.predicates.query.*;
 
-public class GraphQLNoMatchingProductDiscountFoundErrorQueryBuilderDsl {
+import java.util.function.Function;
+
+
+public class GraphQLNoMatchingProductDiscountFoundErrorQueryBuilderDsl  {
     public GraphQLNoMatchingProductDiscountFoundErrorQueryBuilderDsl() {
     }
 
@@ -12,9 +14,8 @@ public class GraphQLNoMatchingProductDiscountFoundErrorQueryBuilderDsl {
     }
 
     public StringComparisonPredicateBuilder<GraphQLNoMatchingProductDiscountFoundErrorQueryBuilderDsl> code() {
-        return new StringComparisonPredicateBuilder<>(
-            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("code")),
-            p -> new CombinationQueryPredicate<>(p, GraphQLNoMatchingProductDiscountFoundErrorQueryBuilderDsl::of));
+        return new StringComparisonPredicateBuilder<>(BinaryQueryPredicate.of().left(new ConstantQueryPredicate("code")),
+        p -> new CombinationQueryPredicate<>(p, GraphQLNoMatchingProductDiscountFoundErrorQueryBuilderDsl::of));
     }
-
+    
 }

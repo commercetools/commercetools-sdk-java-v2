@@ -1,18 +1,21 @@
-
 package com.commercetools.api.models.category;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-
+import com.commercetools.api.models.category.CategoryUpdateAction;
 import com.commercetools.api.models.common.LocalizedString;
+import com.commercetools.api.models.category.CategorySetMetaKeywordsActionImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * CategorySetMetaKeywordsAction
@@ -24,9 +27,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     CategorySetMetaKeywordsAction categorySetMetaKeywordsAction = CategorySetMetaKeywordsAction.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = CategorySetMetaKeywordsActionImpl.class)
 public interface CategorySetMetaKeywordsAction extends CategoryUpdateAction {
 
@@ -47,16 +53,18 @@ public interface CategorySetMetaKeywordsAction extends CategoryUpdateAction {
      *  <p>Value to set.</p>
      * @param metaKeywords value to be set
      */
-
+    
     public void setMetaKeywords(final LocalizedString metaKeywords);
+    
 
     /**
      * factory method
      * @return instance of CategorySetMetaKeywordsAction
      */
-    public static CategorySetMetaKeywordsAction of() {
+    public static CategorySetMetaKeywordsAction of(){
         return new CategorySetMetaKeywordsActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy CategorySetMetaKeywordsAction
@@ -80,8 +88,7 @@ public interface CategorySetMetaKeywordsAction extends CategoryUpdateAction {
             return null;
         }
         CategorySetMetaKeywordsActionImpl instance = new CategorySetMetaKeywordsActionImpl();
-        instance.setMetaKeywords(
-            com.commercetools.api.models.common.LocalizedString.deepCopy(template.getMetaKeywords()));
+        instance.setMetaKeywords(com.commercetools.api.models.common.LocalizedString.deepCopy(template.getMetaKeywords()));
         return instance;
     }
 
@@ -92,7 +99,7 @@ public interface CategorySetMetaKeywordsAction extends CategoryUpdateAction {
     public static CategorySetMetaKeywordsActionBuilder builder() {
         return CategorySetMetaKeywordsActionBuilder.of();
     }
-
+    
     /**
      * create builder for CategorySetMetaKeywordsAction instance
      * @param template instance with prefilled values for the builder
@@ -101,6 +108,7 @@ public interface CategorySetMetaKeywordsAction extends CategoryUpdateAction {
     public static CategorySetMetaKeywordsActionBuilder builder(final CategorySetMetaKeywordsAction template) {
         return CategorySetMetaKeywordsActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -111,7 +119,7 @@ public interface CategorySetMetaKeywordsAction extends CategoryUpdateAction {
     default <T> T withCategorySetMetaKeywordsAction(Function<CategorySetMetaKeywordsAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

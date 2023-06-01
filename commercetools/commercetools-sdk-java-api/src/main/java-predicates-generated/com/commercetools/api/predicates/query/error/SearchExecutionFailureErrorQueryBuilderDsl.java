@@ -1,9 +1,11 @@
-
 package com.commercetools.api.predicates.query.error;
 
 import com.commercetools.api.predicates.query.*;
 
-public class SearchExecutionFailureErrorQueryBuilderDsl {
+import java.util.function.Function;
+
+
+public class SearchExecutionFailureErrorQueryBuilderDsl  {
     public SearchExecutionFailureErrorQueryBuilderDsl() {
     }
 
@@ -12,15 +14,12 @@ public class SearchExecutionFailureErrorQueryBuilderDsl {
     }
 
     public StringComparisonPredicateBuilder<SearchExecutionFailureErrorQueryBuilderDsl> code() {
-        return new StringComparisonPredicateBuilder<>(
-            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("code")),
-            p -> new CombinationQueryPredicate<>(p, SearchExecutionFailureErrorQueryBuilderDsl::of));
+        return new StringComparisonPredicateBuilder<>(BinaryQueryPredicate.of().left(new ConstantQueryPredicate("code")),
+        p -> new CombinationQueryPredicate<>(p, SearchExecutionFailureErrorQueryBuilderDsl::of));
     }
-
     public StringComparisonPredicateBuilder<SearchExecutionFailureErrorQueryBuilderDsl> message() {
-        return new StringComparisonPredicateBuilder<>(
-            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("message")),
-            p -> new CombinationQueryPredicate<>(p, SearchExecutionFailureErrorQueryBuilderDsl::of));
+        return new StringComparisonPredicateBuilder<>(BinaryQueryPredicate.of().left(new ConstantQueryPredicate("message")),
+        p -> new CombinationQueryPredicate<>(p, SearchExecutionFailureErrorQueryBuilderDsl::of));
     }
-
+    
 }

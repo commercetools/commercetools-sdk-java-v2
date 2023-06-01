@@ -1,19 +1,21 @@
-
 package com.commercetools.history.models.change;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
+import com.commercetools.history.models.change.Change;
 import com.commercetools.history.models.common.Parcel;
+import com.commercetools.history.models.change.AddParcelToDeliveryChangeImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * AddParcelToDeliveryChange
@@ -28,9 +30,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .nextValue(nextValueBuilder -> nextValueBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = AddParcelToDeliveryChangeImpl.class)
 public interface AddParcelToDeliveryChange extends Change {
 
@@ -46,7 +51,6 @@ public interface AddParcelToDeliveryChange extends Change {
     @NotNull
     @JsonProperty("type")
     public String getType();
-
     /**
      *  <p>Update action for <code>addParcelToDelivery</code></p>
      * @return change
@@ -54,7 +58,6 @@ public interface AddParcelToDeliveryChange extends Change {
     @NotNull
     @JsonProperty("change")
     public String getChange();
-
     /**
      *
      * @return deliveryId
@@ -62,7 +65,6 @@ public interface AddParcelToDeliveryChange extends Change {
     @NotNull
     @JsonProperty("deliveryId")
     public String getDeliveryId();
-
     /**
      *
      * @return nextValue
@@ -76,30 +78,34 @@ public interface AddParcelToDeliveryChange extends Change {
      *  <p>Update action for <code>addParcelToDelivery</code></p>
      * @param change value to be set
      */
-
+    
     public void setChange(final String change);
-
+    
+    
     /**
      * set deliveryId
      * @param deliveryId value to be set
      */
-
+    
     public void setDeliveryId(final String deliveryId);
-
+    
+    
     /**
      * set nextValue
      * @param nextValue value to be set
      */
-
+    
     public void setNextValue(final Parcel nextValue);
+    
 
     /**
      * factory method
      * @return instance of AddParcelToDeliveryChange
      */
-    public static AddParcelToDeliveryChange of() {
+    public static AddParcelToDeliveryChange of(){
         return new AddParcelToDeliveryChangeImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy AddParcelToDeliveryChange
@@ -138,7 +144,7 @@ public interface AddParcelToDeliveryChange extends Change {
     public static AddParcelToDeliveryChangeBuilder builder() {
         return AddParcelToDeliveryChangeBuilder.of();
     }
-
+    
     /**
      * create builder for AddParcelToDeliveryChange instance
      * @param template instance with prefilled values for the builder
@@ -147,6 +153,7 @@ public interface AddParcelToDeliveryChange extends Change {
     public static AddParcelToDeliveryChangeBuilder builder(final AddParcelToDeliveryChange template) {
         return AddParcelToDeliveryChangeBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -157,7 +164,7 @@ public interface AddParcelToDeliveryChange extends Change {
     default <T> T withAddParcelToDeliveryChange(Function<AddParcelToDeliveryChange, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

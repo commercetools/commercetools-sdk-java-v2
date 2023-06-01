@@ -1,42 +1,49 @@
-
 package com.commercetools.api.models.customer_group;
 
-import java.time.*;
-import java.util.*;
-
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
-
-import io.vrap.rmf.base.client.ModelBase;
+import com.commercetools.api.models.type.CustomFieldsDraft;
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.ModelBase;
+import javax.validation.Valid;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.annotation.*;
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
  * CustomerGroupDraft
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class CustomerGroupDraftImpl implements CustomerGroupDraft, ModelBase {
 
+    
     private String key;
-
+    
+    
     private String groupName;
-
+    
+    
     private com.commercetools.api.models.type.CustomFieldsDraft custom;
 
     /**
      * create instance with all properties
      */
     @JsonCreator
-    CustomerGroupDraftImpl(@JsonProperty("key") final String key, @JsonProperty("groupName") final String groupName,
-            @JsonProperty("custom") final com.commercetools.api.models.type.CustomFieldsDraft custom) {
+    CustomerGroupDraftImpl(@JsonProperty("key") final String key, @JsonProperty("groupName") final String groupName, @JsonProperty("custom") final com.commercetools.api.models.type.CustomFieldsDraft custom) {
         this.key = key;
         this.groupName = groupName;
         this.custom = custom;
     }
-
     /**
      * create empty instance
      */
@@ -46,58 +53,64 @@ public class CustomerGroupDraftImpl implements CustomerGroupDraft, ModelBase {
     /**
      *  <p>User-defined unique identifier for the CustomerGroup.</p>
      */
-
-    public String getKey() {
+    
+    public String getKey(){
         return this.key;
     }
-
+    
     /**
      *  <p>Unique value which must be different from any value used for <code>name</code> in CustomerGroup in the Project. If not, a DuplicateField error is returned.</p>
      */
-
-    public String getGroupName() {
+    
+    public String getGroupName(){
         return this.groupName;
     }
-
+    
     /**
      *  <p>Custom Fields for the CustomerGroup.</p>
      */
-
-    public com.commercetools.api.models.type.CustomFieldsDraft getCustom() {
+    
+    public com.commercetools.api.models.type.CustomFieldsDraft getCustom(){
         return this.custom;
     }
 
-    public void setKey(final String key) {
+    
+    public void setKey(final String key){
         this.key = key;
     }
-
-    public void setGroupName(final String groupName) {
+    
+    
+    public void setGroupName(final String groupName){
         this.groupName = groupName;
     }
-
-    public void setCustom(final com.commercetools.api.models.type.CustomFieldsDraft custom) {
+    
+    
+    public void setCustom(final com.commercetools.api.models.type.CustomFieldsDraft custom){
         this.custom = custom;
     }
 
     @Override
     public boolean equals(Object o) {
-        if (this == o)
-            return true;
-
-        if (o == null || getClass() != o.getClass())
-            return false;
-
+        if (this == o) return true;
+    
+        if (o == null || getClass() != o.getClass()) return false;
+    
         CustomerGroupDraftImpl that = (CustomerGroupDraftImpl) o;
-
-        return new EqualsBuilder().append(key, that.key)
+    
+        return new EqualsBuilder()
+                .append(key, that.key)
                 .append(groupName, that.groupName)
                 .append(custom, that.custom)
                 .isEquals();
     }
-
+    
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(key).append(groupName).append(custom).toHashCode();
+        return new HashCodeBuilder(17, 37)
+            .append(key)
+            .append(groupName)
+            .append(custom)
+            .toHashCode();
     }
 
 }

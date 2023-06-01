@@ -1,152 +1,188 @@
-
 package com.commercetools.api.models.cart;
 
-import java.time.*;
-import java.util.*;
-
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
-
-import io.vrap.rmf.base.client.ModelBase;
+import com.commercetools.api.models.business_unit.BusinessUnitKeyReference;
+import com.commercetools.api.models.cart.CartOrigin;
+import com.commercetools.api.models.cart.CartState;
+import com.commercetools.api.models.cart.CustomLineItem;
+import com.commercetools.api.models.cart.DirectDiscount;
+import com.commercetools.api.models.cart.DiscountCodeInfo;
+import com.commercetools.api.models.cart.InventoryMode;
+import com.commercetools.api.models.cart.LineItem;
+import com.commercetools.api.models.cart.RoundingMode;
+import com.commercetools.api.models.cart.Shipping;
+import com.commercetools.api.models.cart.ShippingInfo;
+import com.commercetools.api.models.cart.ShippingMode;
+import com.commercetools.api.models.cart.ShippingRateInput;
+import com.commercetools.api.models.cart.TaxCalculationMode;
+import com.commercetools.api.models.cart.TaxMode;
+import com.commercetools.api.models.cart.TaxedPrice;
+import com.commercetools.api.models.cart_discount.CartDiscountReference;
+import com.commercetools.api.models.common.Address;
+import com.commercetools.api.models.common.BaseResource;
+import com.commercetools.api.models.common.CentPrecisionMoney;
+import com.commercetools.api.models.common.CreatedBy;
+import com.commercetools.api.models.common.LastModifiedBy;
+import com.commercetools.api.models.customer_group.CustomerGroupReference;
+import com.commercetools.api.models.order.PaymentInfo;
+import com.commercetools.api.models.store.StoreKeyReference;
+import com.commercetools.api.models.type.CustomFields;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.ModelBase;
+import javax.validation.Valid;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.annotation.*;
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
  * Cart
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class CartImpl implements Cart, ModelBase {
 
+    
     private String id;
-
+    
+    
     private Long version;
-
+    
+    
     private java.time.ZonedDateTime createdAt;
-
+    
+    
     private java.time.ZonedDateTime lastModifiedAt;
-
+    
+    
     private String key;
-
+    
+    
     private String customerId;
-
+    
+    
     private String customerEmail;
-
+    
+    
     private com.commercetools.api.models.customer_group.CustomerGroupReference customerGroup;
-
+    
+    
     private String anonymousId;
-
+    
+    
     private com.commercetools.api.models.business_unit.BusinessUnitKeyReference businessUnit;
-
+    
+    
     private com.commercetools.api.models.store.StoreKeyReference store;
-
+    
+    
     private java.util.List<com.commercetools.api.models.cart.LineItem> lineItems;
-
+    
+    
     private java.util.List<com.commercetools.api.models.cart.CustomLineItem> customLineItems;
-
+    
+    
     private Long totalLineItemQuantity;
-
+    
+    
     private com.commercetools.api.models.common.CentPrecisionMoney totalPrice;
-
+    
+    
     private com.commercetools.api.models.cart.TaxedPrice taxedPrice;
-
+    
+    
     private com.commercetools.api.models.cart.TaxedPrice taxedShippingPrice;
-
+    
+    
     private com.commercetools.api.models.cart.TaxMode taxMode;
-
+    
+    
     private com.commercetools.api.models.cart.RoundingMode taxRoundingMode;
-
+    
+    
     private com.commercetools.api.models.cart.TaxCalculationMode taxCalculationMode;
-
+    
+    
     private com.commercetools.api.models.cart.InventoryMode inventoryMode;
-
+    
+    
     private com.commercetools.api.models.cart.CartState cartState;
-
+    
+    
     private com.commercetools.api.models.common.Address billingAddress;
-
+    
+    
     private com.commercetools.api.models.common.Address shippingAddress;
-
+    
+    
     private com.commercetools.api.models.cart.ShippingMode shippingMode;
-
+    
+    
     private String shippingKey;
-
+    
+    
     private com.commercetools.api.models.cart.ShippingInfo shippingInfo;
-
+    
+    
     private com.commercetools.api.models.cart.ShippingRateInput shippingRateInput;
-
+    
+    
     private com.commercetools.api.models.type.CustomFields shippingCustomFields;
-
+    
+    
     private java.util.List<com.commercetools.api.models.cart.Shipping> shipping;
-
+    
+    
     private java.util.List<com.commercetools.api.models.common.Address> itemShippingAddresses;
-
+    
+    
     private java.util.List<com.commercetools.api.models.cart.DiscountCodeInfo> discountCodes;
-
+    
+    
     private java.util.List<com.commercetools.api.models.cart.DirectDiscount> directDiscounts;
-
+    
+    
     private java.util.List<com.commercetools.api.models.cart_discount.CartDiscountReference> refusedGifts;
-
+    
+    
     private com.commercetools.api.models.order.PaymentInfo paymentInfo;
-
+    
+    
     private String country;
-
+    
+    
     private String locale;
-
+    
+    
     private com.commercetools.api.models.cart.CartOrigin origin;
-
+    
+    
     private com.commercetools.api.models.type.CustomFields custom;
-
+    
+    
     private Integer deleteDaysAfterLastModification;
-
+    
+    
     private com.commercetools.api.models.common.LastModifiedBy lastModifiedBy;
-
+    
+    
     private com.commercetools.api.models.common.CreatedBy createdBy;
 
     /**
      * create instance with all properties
      */
     @JsonCreator
-    CartImpl(@JsonProperty("id") final String id, @JsonProperty("version") final Long version,
-            @JsonProperty("createdAt") final java.time.ZonedDateTime createdAt,
-            @JsonProperty("lastModifiedAt") final java.time.ZonedDateTime lastModifiedAt,
-            @JsonProperty("key") final String key, @JsonProperty("customerId") final String customerId,
-            @JsonProperty("customerEmail") final String customerEmail,
-            @JsonProperty("customerGroup") final com.commercetools.api.models.customer_group.CustomerGroupReference customerGroup,
-            @JsonProperty("anonymousId") final String anonymousId,
-            @JsonProperty("businessUnit") final com.commercetools.api.models.business_unit.BusinessUnitKeyReference businessUnit,
-            @JsonProperty("store") final com.commercetools.api.models.store.StoreKeyReference store,
-            @JsonProperty("lineItems") final java.util.List<com.commercetools.api.models.cart.LineItem> lineItems,
-            @JsonProperty("customLineItems") final java.util.List<com.commercetools.api.models.cart.CustomLineItem> customLineItems,
-            @JsonProperty("totalLineItemQuantity") final Long totalLineItemQuantity,
-            @JsonProperty("totalPrice") final com.commercetools.api.models.common.CentPrecisionMoney totalPrice,
-            @JsonProperty("taxedPrice") final com.commercetools.api.models.cart.TaxedPrice taxedPrice,
-            @JsonProperty("taxedShippingPrice") final com.commercetools.api.models.cart.TaxedPrice taxedShippingPrice,
-            @JsonProperty("taxMode") final com.commercetools.api.models.cart.TaxMode taxMode,
-            @JsonProperty("taxRoundingMode") final com.commercetools.api.models.cart.RoundingMode taxRoundingMode,
-            @JsonProperty("taxCalculationMode") final com.commercetools.api.models.cart.TaxCalculationMode taxCalculationMode,
-            @JsonProperty("inventoryMode") final com.commercetools.api.models.cart.InventoryMode inventoryMode,
-            @JsonProperty("cartState") final com.commercetools.api.models.cart.CartState cartState,
-            @JsonProperty("billingAddress") final com.commercetools.api.models.common.Address billingAddress,
-            @JsonProperty("shippingAddress") final com.commercetools.api.models.common.Address shippingAddress,
-            @JsonProperty("shippingMode") final com.commercetools.api.models.cart.ShippingMode shippingMode,
-            @JsonProperty("shippingKey") final String shippingKey,
-            @JsonProperty("shippingInfo") final com.commercetools.api.models.cart.ShippingInfo shippingInfo,
-            @JsonProperty("shippingRateInput") final com.commercetools.api.models.cart.ShippingRateInput shippingRateInput,
-            @JsonProperty("shippingCustomFields") final com.commercetools.api.models.type.CustomFields shippingCustomFields,
-            @JsonProperty("shipping") final java.util.List<com.commercetools.api.models.cart.Shipping> shipping,
-            @JsonProperty("itemShippingAddresses") final java.util.List<com.commercetools.api.models.common.Address> itemShippingAddresses,
-            @JsonProperty("discountCodes") final java.util.List<com.commercetools.api.models.cart.DiscountCodeInfo> discountCodes,
-            @JsonProperty("directDiscounts") final java.util.List<com.commercetools.api.models.cart.DirectDiscount> directDiscounts,
-            @JsonProperty("refusedGifts") final java.util.List<com.commercetools.api.models.cart_discount.CartDiscountReference> refusedGifts,
-            @JsonProperty("paymentInfo") final com.commercetools.api.models.order.PaymentInfo paymentInfo,
-            @JsonProperty("country") final String country, @JsonProperty("locale") final String locale,
-            @JsonProperty("origin") final com.commercetools.api.models.cart.CartOrigin origin,
-            @JsonProperty("custom") final com.commercetools.api.models.type.CustomFields custom,
-            @JsonProperty("deleteDaysAfterLastModification") final Integer deleteDaysAfterLastModification,
-            @JsonProperty("lastModifiedBy") final com.commercetools.api.models.common.LastModifiedBy lastModifiedBy,
-            @JsonProperty("createdBy") final com.commercetools.api.models.common.CreatedBy createdBy) {
+    CartImpl(@JsonProperty("id") final String id, @JsonProperty("version") final Long version, @JsonProperty("createdAt") final java.time.ZonedDateTime createdAt, @JsonProperty("lastModifiedAt") final java.time.ZonedDateTime lastModifiedAt, @JsonProperty("key") final String key, @JsonProperty("customerId") final String customerId, @JsonProperty("customerEmail") final String customerEmail, @JsonProperty("customerGroup") final com.commercetools.api.models.customer_group.CustomerGroupReference customerGroup, @JsonProperty("anonymousId") final String anonymousId, @JsonProperty("businessUnit") final com.commercetools.api.models.business_unit.BusinessUnitKeyReference businessUnit, @JsonProperty("store") final com.commercetools.api.models.store.StoreKeyReference store, @JsonProperty("lineItems") final java.util.List<com.commercetools.api.models.cart.LineItem> lineItems, @JsonProperty("customLineItems") final java.util.List<com.commercetools.api.models.cart.CustomLineItem> customLineItems, @JsonProperty("totalLineItemQuantity") final Long totalLineItemQuantity, @JsonProperty("totalPrice") final com.commercetools.api.models.common.CentPrecisionMoney totalPrice, @JsonProperty("taxedPrice") final com.commercetools.api.models.cart.TaxedPrice taxedPrice, @JsonProperty("taxedShippingPrice") final com.commercetools.api.models.cart.TaxedPrice taxedShippingPrice, @JsonProperty("taxMode") final com.commercetools.api.models.cart.TaxMode taxMode, @JsonProperty("taxRoundingMode") final com.commercetools.api.models.cart.RoundingMode taxRoundingMode, @JsonProperty("taxCalculationMode") final com.commercetools.api.models.cart.TaxCalculationMode taxCalculationMode, @JsonProperty("inventoryMode") final com.commercetools.api.models.cart.InventoryMode inventoryMode, @JsonProperty("cartState") final com.commercetools.api.models.cart.CartState cartState, @JsonProperty("billingAddress") final com.commercetools.api.models.common.Address billingAddress, @JsonProperty("shippingAddress") final com.commercetools.api.models.common.Address shippingAddress, @JsonProperty("shippingMode") final com.commercetools.api.models.cart.ShippingMode shippingMode, @JsonProperty("shippingKey") final String shippingKey, @JsonProperty("shippingInfo") final com.commercetools.api.models.cart.ShippingInfo shippingInfo, @JsonProperty("shippingRateInput") final com.commercetools.api.models.cart.ShippingRateInput shippingRateInput, @JsonProperty("shippingCustomFields") final com.commercetools.api.models.type.CustomFields shippingCustomFields, @JsonProperty("shipping") final java.util.List<com.commercetools.api.models.cart.Shipping> shipping, @JsonProperty("itemShippingAddresses") final java.util.List<com.commercetools.api.models.common.Address> itemShippingAddresses, @JsonProperty("discountCodes") final java.util.List<com.commercetools.api.models.cart.DiscountCodeInfo> discountCodes, @JsonProperty("directDiscounts") final java.util.List<com.commercetools.api.models.cart.DirectDiscount> directDiscounts, @JsonProperty("refusedGifts") final java.util.List<com.commercetools.api.models.cart_discount.CartDiscountReference> refusedGifts, @JsonProperty("paymentInfo") final com.commercetools.api.models.order.PaymentInfo paymentInfo, @JsonProperty("country") final String country, @JsonProperty("locale") final String locale, @JsonProperty("origin") final com.commercetools.api.models.cart.CartOrigin origin, @JsonProperty("custom") final com.commercetools.api.models.type.CustomFields custom, @JsonProperty("deleteDaysAfterLastModification") final Integer deleteDaysAfterLastModification, @JsonProperty("lastModifiedBy") final com.commercetools.api.models.common.LastModifiedBy lastModifiedBy, @JsonProperty("createdBy") final com.commercetools.api.models.common.CreatedBy createdBy) {
         this.id = id;
         this.version = version;
         this.createdAt = createdAt;
@@ -190,7 +226,6 @@ public class CartImpl implements Cart, ModelBase {
         this.lastModifiedBy = lastModifiedBy;
         this.createdBy = createdBy;
     }
-
     /**
      * create empty instance
      */
@@ -200,223 +235,223 @@ public class CartImpl implements Cart, ModelBase {
     /**
      *  <p>Unique identifier of the Cart.</p>
      */
-
-    public String getId() {
+    
+    public String getId(){
         return this.id;
     }
-
+    
     /**
      *  <p>Current version of the Cart.</p>
      */
-
-    public Long getVersion() {
+    
+    public Long getVersion(){
         return this.version;
     }
-
+    
     /**
      *  <p>Date and time (UTC) the Cart was initially created.</p>
      */
-
-    public java.time.ZonedDateTime getCreatedAt() {
+    
+    public java.time.ZonedDateTime getCreatedAt(){
         return this.createdAt;
     }
-
+    
     /**
      *  <p>Date and time (UTC) the Cart was last updated.</p>
      */
-
-    public java.time.ZonedDateTime getLastModifiedAt() {
+    
+    public java.time.ZonedDateTime getLastModifiedAt(){
         return this.lastModifiedAt;
     }
-
+    
     /**
      *  <p>User-defined unique identifier of the Cart.</p>
      */
-
-    public String getKey() {
+    
+    public String getKey(){
         return this.key;
     }
-
+    
     /**
      *  <p><code>id</code> of the Customer that the Cart belongs to.</p>
      */
-
-    public String getCustomerId() {
+    
+    public String getCustomerId(){
         return this.customerId;
     }
-
+    
     /**
      *  <p>Email address of the Customer that the Cart belongs to.</p>
      */
-
-    public String getCustomerEmail() {
+    
+    public String getCustomerEmail(){
         return this.customerEmail;
     }
-
+    
     /**
      *  <p>Reference to the Customer Group of the Customer that the Cart belongs to. Used for LineItem Price selection.</p>
      */
-
-    public com.commercetools.api.models.customer_group.CustomerGroupReference getCustomerGroup() {
+    
+    public com.commercetools.api.models.customer_group.CustomerGroupReference getCustomerGroup(){
         return this.customerGroup;
     }
-
+    
     /**
      *  <p>Anonymous session associated with the Cart.</p>
      */
-
-    public String getAnonymousId() {
+    
+    public String getAnonymousId(){
         return this.anonymousId;
     }
-
+    
     /**
      *  <p>Reference to a Business Unit the Cart belongs to.</p>
      */
-
-    public com.commercetools.api.models.business_unit.BusinessUnitKeyReference getBusinessUnit() {
+    
+    public com.commercetools.api.models.business_unit.BusinessUnitKeyReference getBusinessUnit(){
         return this.businessUnit;
     }
-
+    
     /**
      *  <p>Reference to a Store the Cart belongs to.</p>
      */
-
-    public com.commercetools.api.models.store.StoreKeyReference getStore() {
+    
+    public com.commercetools.api.models.store.StoreKeyReference getStore(){
         return this.store;
     }
-
+    
     /**
      *  <p>Line Items added to the Cart.</p>
      */
-
-    public java.util.List<com.commercetools.api.models.cart.LineItem> getLineItems() {
+    
+    public java.util.List<com.commercetools.api.models.cart.LineItem> getLineItems(){
         return this.lineItems;
     }
-
+    
     /**
      *  <p>Custom Line Items added to the Cart.</p>
      */
-
-    public java.util.List<com.commercetools.api.models.cart.CustomLineItem> getCustomLineItems() {
+    
+    public java.util.List<com.commercetools.api.models.cart.CustomLineItem> getCustomLineItems(){
         return this.customLineItems;
     }
-
+    
     /**
      *  <p>Sum of all LineItem quantities, excluding CustomLineItems. Only present when the Cart has at least one LineItem.</p>
      */
-
-    public Long getTotalLineItemQuantity() {
+    
+    public Long getTotalLineItemQuantity(){
         return this.totalLineItemQuantity;
     }
-
+    
     /**
      *  <p>Sum of the <code>totalPrice</code> field of all LineItems and CustomLineItems, and if available, the <code>price</code> field of ShippingInfo.</p>
      *  <p>Taxes are included if TaxRate <code>includedInPrice</code> is <code>true</code> for each price.</p>
      */
-
-    public com.commercetools.api.models.common.CentPrecisionMoney getTotalPrice() {
+    
+    public com.commercetools.api.models.common.CentPrecisionMoney getTotalPrice(){
         return this.totalPrice;
     }
-
+    
     /**
      *  <ul>
      *   <li>For a Cart with <code>Platform</code> TaxMode, it is automatically set when a shipping address is set.</li>
      *   <li>For a Cart with <code>External</code> TaxMode, it is automatically set when the external Tax Rate for all Line Items, Custom Line Items, and Shipping Methods in the Cart are set.</li>
      *  </ul>
      */
-
-    public com.commercetools.api.models.cart.TaxedPrice getTaxedPrice() {
+    
+    public com.commercetools.api.models.cart.TaxedPrice getTaxedPrice(){
         return this.taxedPrice;
     }
-
+    
     /**
      *  <p>Sum of the <code>taxedPrice</code> field of ShippingInfo across all Shipping Methods.</p>
      */
-
-    public com.commercetools.api.models.cart.TaxedPrice getTaxedShippingPrice() {
+    
+    public com.commercetools.api.models.cart.TaxedPrice getTaxedShippingPrice(){
         return this.taxedShippingPrice;
     }
-
+    
     /**
      *  <p>Indicates how Tax Rates are set.</p>
      */
-
-    public com.commercetools.api.models.cart.TaxMode getTaxMode() {
+    
+    public com.commercetools.api.models.cart.TaxMode getTaxMode(){
         return this.taxMode;
     }
-
+    
     /**
      *  <p>Indicates how monetary values are rounded when calculating taxes for <code>taxedPrice</code>.</p>
      */
-
-    public com.commercetools.api.models.cart.RoundingMode getTaxRoundingMode() {
+    
+    public com.commercetools.api.models.cart.RoundingMode getTaxRoundingMode(){
         return this.taxRoundingMode;
     }
-
+    
     /**
      *  <p>Indicates how taxes are calculated when calculating taxes for <code>taxedPrice</code>.</p>
      */
-
-    public com.commercetools.api.models.cart.TaxCalculationMode getTaxCalculationMode() {
+    
+    public com.commercetools.api.models.cart.TaxCalculationMode getTaxCalculationMode(){
         return this.taxCalculationMode;
     }
-
+    
     /**
      *  <p>Indicates how stock quantities are tracked for Line Items in the Cart.</p>
      */
-
-    public com.commercetools.api.models.cart.InventoryMode getInventoryMode() {
+    
+    public com.commercetools.api.models.cart.InventoryMode getInventoryMode(){
         return this.inventoryMode;
     }
-
+    
     /**
      *  <p>Current status of the Cart.</p>
      */
-
-    public com.commercetools.api.models.cart.CartState getCartState() {
+    
+    public com.commercetools.api.models.cart.CartState getCartState(){
         return this.cartState;
     }
-
+    
     /**
      *  <p>Billing address associated with the Cart.</p>
      */
-
-    public com.commercetools.api.models.common.Address getBillingAddress() {
+    
+    public com.commercetools.api.models.common.Address getBillingAddress(){
         return this.billingAddress;
     }
-
+    
     /**
      *  <p>Shipping address associated with the Cart. Determines eligible ShippingMethod rates and Tax Rates of Line Items.</p>
      */
-
-    public com.commercetools.api.models.common.Address getShippingAddress() {
+    
+    public com.commercetools.api.models.common.Address getShippingAddress(){
         return this.shippingAddress;
     }
-
+    
     /**
      *  <p>Indicates whether the Cart has one or multiple Shipping Methods.</p>
      */
-
-    public com.commercetools.api.models.cart.ShippingMode getShippingMode() {
+    
+    public com.commercetools.api.models.cart.ShippingMode getShippingMode(){
         return this.shippingMode;
     }
-
+    
     /**
      *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Single</code> ShippingMode.</p>
      */
-
-    public String getShippingKey() {
+    
+    public String getShippingKey(){
         return this.shippingKey;
     }
-
+    
     /**
      *  <p>Shipping-related information of a Cart with <code>Single</code> ShippingMode. Automatically set when a Shipping Method is set.</p>
      */
-
-    public com.commercetools.api.models.cart.ShippingInfo getShippingInfo() {
+    
+    public com.commercetools.api.models.cart.ShippingInfo getShippingInfo(){
         return this.shippingInfo;
     }
-
+    
     /**
      *  <p>Input used to select a ShippingRatePriceTier. The data type of this field depends on the <code>shippingRateInputType.type</code> configured in the Project:</p>
      *  <ul>
@@ -425,339 +460,379 @@ public class CartImpl implements Cart, ModelBase {
      *   <li>If <code>CartValue</code>, it cannot be used.</li>
      *  </ul>
      */
-
-    public com.commercetools.api.models.cart.ShippingRateInput getShippingRateInput() {
+    
+    public com.commercetools.api.models.cart.ShippingRateInput getShippingRateInput(){
         return this.shippingRateInput;
     }
-
+    
     /**
      *  <p>Custom Fields of the Shipping Method in a Cart with <code>Single</code> ShippingMode.</p>
      */
-
-    public com.commercetools.api.models.type.CustomFields getShippingCustomFields() {
+    
+    public com.commercetools.api.models.type.CustomFields getShippingCustomFields(){
         return this.shippingCustomFields;
     }
-
+    
     /**
      *  <p>Shipping-related information of a Cart with <code>Multiple</code> ShippingMode. Updated automatically each time a new Shipping Method is added.</p>
      */
-
-    public java.util.List<com.commercetools.api.models.cart.Shipping> getShipping() {
+    
+    public java.util.List<com.commercetools.api.models.cart.Shipping> getShipping(){
         return this.shipping;
     }
-
+    
     /**
      *  <p>Additional shipping addresses of the Cart as specified by LineItems using the <code>shippingDetails</code> field.</p>
      *  <p>Eligible Shipping Methods or applicable Tax Rates are determined by the address in <code>shippingAddress</code>, and not <code>itemShippingAddresses</code>.</p>
      */
-
-    public java.util.List<com.commercetools.api.models.common.Address> getItemShippingAddresses() {
+    
+    public java.util.List<com.commercetools.api.models.common.Address> getItemShippingAddresses(){
         return this.itemShippingAddresses;
     }
-
+    
     /**
      *  <p>Discount Codes applied to the Cart. A Cart that has <code>directDiscounts</code> cannot have <code>discountCodes</code>.</p>
      */
-
-    public java.util.List<com.commercetools.api.models.cart.DiscountCodeInfo> getDiscountCodes() {
+    
+    public java.util.List<com.commercetools.api.models.cart.DiscountCodeInfo> getDiscountCodes(){
         return this.discountCodes;
     }
-
+    
     /**
      *  <p>Direct Discounts added to the Cart. A Cart that has <code>discountCodes</code> cannot have <code>directDiscounts</code>.</p>
      */
-
-    public java.util.List<com.commercetools.api.models.cart.DirectDiscount> getDirectDiscounts() {
+    
+    public java.util.List<com.commercetools.api.models.cart.DirectDiscount> getDirectDiscounts(){
         return this.directDiscounts;
     }
-
+    
     /**
      *  <p>Automatically set when a Line Item with <code>GiftLineItem</code> LineItemMode is removed from the Cart.</p>
      */
-
-    public java.util.List<com.commercetools.api.models.cart_discount.CartDiscountReference> getRefusedGifts() {
+    
+    public java.util.List<com.commercetools.api.models.cart_discount.CartDiscountReference> getRefusedGifts(){
         return this.refusedGifts;
     }
-
+    
     /**
      *  <p>Payment information related to the Cart.</p>
      */
-
-    public com.commercetools.api.models.order.PaymentInfo getPaymentInfo() {
+    
+    public com.commercetools.api.models.order.PaymentInfo getPaymentInfo(){
         return this.paymentInfo;
     }
-
+    
     /**
      *  <p>Used for LineItem Price selection.</p>
      */
-
-    public String getCountry() {
+    
+    public String getCountry(){
         return this.country;
     }
-
+    
     /**
      *  <p>Languages of the Cart. Can only contain languages supported by the Project.</p>
      */
-
-    public String getLocale() {
+    
+    public String getLocale(){
         return this.locale;
     }
-
+    
     /**
      *  <p>Indicates how the Cart was created.</p>
      */
-
-    public com.commercetools.api.models.cart.CartOrigin getOrigin() {
+    
+    public com.commercetools.api.models.cart.CartOrigin getOrigin(){
         return this.origin;
     }
-
+    
     /**
      *  <p>Custom Fields of the Cart.</p>
      */
-
-    public com.commercetools.api.models.type.CustomFields getCustom() {
+    
+    public com.commercetools.api.models.type.CustomFields getCustom(){
         return this.custom;
     }
-
+    
     /**
      *  <p>Number of days after which an active Cart is deleted since its last modification. Configured in Project settings.</p>
      */
-
-    public Integer getDeleteDaysAfterLastModification() {
+    
+    public Integer getDeleteDaysAfterLastModification(){
         return this.deleteDaysAfterLastModification;
     }
-
+    
     /**
      *  <p>Present on resources updated after 1 February 2019 except for events not tracked.</p>
      */
-
-    public com.commercetools.api.models.common.LastModifiedBy getLastModifiedBy() {
+    
+    public com.commercetools.api.models.common.LastModifiedBy getLastModifiedBy(){
         return this.lastModifiedBy;
     }
-
+    
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      */
-
-    public com.commercetools.api.models.common.CreatedBy getCreatedBy() {
+    
+    public com.commercetools.api.models.common.CreatedBy getCreatedBy(){
         return this.createdBy;
     }
 
-    public void setId(final String id) {
+    
+    public void setId(final String id){
         this.id = id;
     }
-
-    public void setVersion(final Long version) {
+    
+    
+    public void setVersion(final Long version){
         this.version = version;
     }
-
-    public void setCreatedAt(final java.time.ZonedDateTime createdAt) {
+    
+    
+    public void setCreatedAt(final java.time.ZonedDateTime createdAt){
         this.createdAt = createdAt;
     }
-
-    public void setLastModifiedAt(final java.time.ZonedDateTime lastModifiedAt) {
+    
+    
+    public void setLastModifiedAt(final java.time.ZonedDateTime lastModifiedAt){
         this.lastModifiedAt = lastModifiedAt;
     }
-
-    public void setKey(final String key) {
+    
+    
+    public void setKey(final String key){
         this.key = key;
     }
-
-    public void setCustomerId(final String customerId) {
+    
+    
+    public void setCustomerId(final String customerId){
         this.customerId = customerId;
     }
-
-    public void setCustomerEmail(final String customerEmail) {
+    
+    
+    public void setCustomerEmail(final String customerEmail){
         this.customerEmail = customerEmail;
     }
-
-    public void setCustomerGroup(
-            final com.commercetools.api.models.customer_group.CustomerGroupReference customerGroup) {
+    
+    
+    public void setCustomerGroup(final com.commercetools.api.models.customer_group.CustomerGroupReference customerGroup){
         this.customerGroup = customerGroup;
     }
-
-    public void setAnonymousId(final String anonymousId) {
+    
+    
+    public void setAnonymousId(final String anonymousId){
         this.anonymousId = anonymousId;
     }
-
-    public void setBusinessUnit(
-            final com.commercetools.api.models.business_unit.BusinessUnitKeyReference businessUnit) {
+    
+    
+    public void setBusinessUnit(final com.commercetools.api.models.business_unit.BusinessUnitKeyReference businessUnit){
         this.businessUnit = businessUnit;
     }
-
-    public void setStore(final com.commercetools.api.models.store.StoreKeyReference store) {
+    
+    
+    public void setStore(final com.commercetools.api.models.store.StoreKeyReference store){
         this.store = store;
     }
-
-    public void setLineItems(final com.commercetools.api.models.cart.LineItem... lineItems) {
-        this.lineItems = new ArrayList<>(Arrays.asList(lineItems));
+    
+    
+    public void setLineItems(final com.commercetools.api.models.cart.LineItem ...lineItems){
+       this.lineItems = new ArrayList<>(Arrays.asList(lineItems));
     }
-
-    public void setLineItems(final java.util.List<com.commercetools.api.models.cart.LineItem> lineItems) {
-        this.lineItems = lineItems;
+    
+    
+    public void setLineItems(final java.util.List<com.commercetools.api.models.cart.LineItem> lineItems){
+       this.lineItems = lineItems;
     }
-
-    public void setCustomLineItems(final com.commercetools.api.models.cart.CustomLineItem... customLineItems) {
-        this.customLineItems = new ArrayList<>(Arrays.asList(customLineItems));
+    
+    
+    public void setCustomLineItems(final com.commercetools.api.models.cart.CustomLineItem ...customLineItems){
+       this.customLineItems = new ArrayList<>(Arrays.asList(customLineItems));
     }
-
-    public void setCustomLineItems(
-            final java.util.List<com.commercetools.api.models.cart.CustomLineItem> customLineItems) {
-        this.customLineItems = customLineItems;
+    
+    
+    public void setCustomLineItems(final java.util.List<com.commercetools.api.models.cart.CustomLineItem> customLineItems){
+       this.customLineItems = customLineItems;
     }
-
-    public void setTotalLineItemQuantity(final Long totalLineItemQuantity) {
+    
+    
+    public void setTotalLineItemQuantity(final Long totalLineItemQuantity){
         this.totalLineItemQuantity = totalLineItemQuantity;
     }
-
-    public void setTotalPrice(final com.commercetools.api.models.common.CentPrecisionMoney totalPrice) {
+    
+    
+    public void setTotalPrice(final com.commercetools.api.models.common.CentPrecisionMoney totalPrice){
         this.totalPrice = totalPrice;
     }
-
-    public void setTaxedPrice(final com.commercetools.api.models.cart.TaxedPrice taxedPrice) {
+    
+    
+    public void setTaxedPrice(final com.commercetools.api.models.cart.TaxedPrice taxedPrice){
         this.taxedPrice = taxedPrice;
     }
-
-    public void setTaxedShippingPrice(final com.commercetools.api.models.cart.TaxedPrice taxedShippingPrice) {
+    
+    
+    public void setTaxedShippingPrice(final com.commercetools.api.models.cart.TaxedPrice taxedShippingPrice){
         this.taxedShippingPrice = taxedShippingPrice;
     }
-
-    public void setTaxMode(final com.commercetools.api.models.cart.TaxMode taxMode) {
+    
+    
+    public void setTaxMode(final com.commercetools.api.models.cart.TaxMode taxMode){
         this.taxMode = taxMode;
     }
-
-    public void setTaxRoundingMode(final com.commercetools.api.models.cart.RoundingMode taxRoundingMode) {
+    
+    
+    public void setTaxRoundingMode(final com.commercetools.api.models.cart.RoundingMode taxRoundingMode){
         this.taxRoundingMode = taxRoundingMode;
     }
-
-    public void setTaxCalculationMode(final com.commercetools.api.models.cart.TaxCalculationMode taxCalculationMode) {
+    
+    
+    public void setTaxCalculationMode(final com.commercetools.api.models.cart.TaxCalculationMode taxCalculationMode){
         this.taxCalculationMode = taxCalculationMode;
     }
-
-    public void setInventoryMode(final com.commercetools.api.models.cart.InventoryMode inventoryMode) {
+    
+    
+    public void setInventoryMode(final com.commercetools.api.models.cart.InventoryMode inventoryMode){
         this.inventoryMode = inventoryMode;
     }
-
-    public void setCartState(final com.commercetools.api.models.cart.CartState cartState) {
+    
+    
+    public void setCartState(final com.commercetools.api.models.cart.CartState cartState){
         this.cartState = cartState;
     }
-
-    public void setBillingAddress(final com.commercetools.api.models.common.Address billingAddress) {
+    
+    
+    public void setBillingAddress(final com.commercetools.api.models.common.Address billingAddress){
         this.billingAddress = billingAddress;
     }
-
-    public void setShippingAddress(final com.commercetools.api.models.common.Address shippingAddress) {
+    
+    
+    public void setShippingAddress(final com.commercetools.api.models.common.Address shippingAddress){
         this.shippingAddress = shippingAddress;
     }
-
-    public void setShippingMode(final com.commercetools.api.models.cart.ShippingMode shippingMode) {
+    
+    
+    public void setShippingMode(final com.commercetools.api.models.cart.ShippingMode shippingMode){
         this.shippingMode = shippingMode;
     }
-
-    public void setShippingKey(final String shippingKey) {
+    
+    
+    public void setShippingKey(final String shippingKey){
         this.shippingKey = shippingKey;
     }
-
-    public void setShippingInfo(final com.commercetools.api.models.cart.ShippingInfo shippingInfo) {
+    
+    
+    public void setShippingInfo(final com.commercetools.api.models.cart.ShippingInfo shippingInfo){
         this.shippingInfo = shippingInfo;
     }
-
-    public void setShippingRateInput(final com.commercetools.api.models.cart.ShippingRateInput shippingRateInput) {
+    
+    
+    public void setShippingRateInput(final com.commercetools.api.models.cart.ShippingRateInput shippingRateInput){
         this.shippingRateInput = shippingRateInput;
     }
-
-    public void setShippingCustomFields(final com.commercetools.api.models.type.CustomFields shippingCustomFields) {
+    
+    
+    public void setShippingCustomFields(final com.commercetools.api.models.type.CustomFields shippingCustomFields){
         this.shippingCustomFields = shippingCustomFields;
     }
-
-    public void setShipping(final com.commercetools.api.models.cart.Shipping... shipping) {
-        this.shipping = new ArrayList<>(Arrays.asList(shipping));
+    
+    
+    public void setShipping(final com.commercetools.api.models.cart.Shipping ...shipping){
+       this.shipping = new ArrayList<>(Arrays.asList(shipping));
     }
-
-    public void setShipping(final java.util.List<com.commercetools.api.models.cart.Shipping> shipping) {
-        this.shipping = shipping;
+    
+    
+    public void setShipping(final java.util.List<com.commercetools.api.models.cart.Shipping> shipping){
+       this.shipping = shipping;
     }
-
-    public void setItemShippingAddresses(final com.commercetools.api.models.common.Address... itemShippingAddresses) {
-        this.itemShippingAddresses = new ArrayList<>(Arrays.asList(itemShippingAddresses));
+    
+    
+    public void setItemShippingAddresses(final com.commercetools.api.models.common.Address ...itemShippingAddresses){
+       this.itemShippingAddresses = new ArrayList<>(Arrays.asList(itemShippingAddresses));
     }
-
-    public void setItemShippingAddresses(
-            final java.util.List<com.commercetools.api.models.common.Address> itemShippingAddresses) {
-        this.itemShippingAddresses = itemShippingAddresses;
+    
+    
+    public void setItemShippingAddresses(final java.util.List<com.commercetools.api.models.common.Address> itemShippingAddresses){
+       this.itemShippingAddresses = itemShippingAddresses;
     }
-
-    public void setDiscountCodes(final com.commercetools.api.models.cart.DiscountCodeInfo... discountCodes) {
-        this.discountCodes = new ArrayList<>(Arrays.asList(discountCodes));
+    
+    
+    public void setDiscountCodes(final com.commercetools.api.models.cart.DiscountCodeInfo ...discountCodes){
+       this.discountCodes = new ArrayList<>(Arrays.asList(discountCodes));
     }
-
-    public void setDiscountCodes(
-            final java.util.List<com.commercetools.api.models.cart.DiscountCodeInfo> discountCodes) {
-        this.discountCodes = discountCodes;
+    
+    
+    public void setDiscountCodes(final java.util.List<com.commercetools.api.models.cart.DiscountCodeInfo> discountCodes){
+       this.discountCodes = discountCodes;
     }
-
-    public void setDirectDiscounts(final com.commercetools.api.models.cart.DirectDiscount... directDiscounts) {
-        this.directDiscounts = new ArrayList<>(Arrays.asList(directDiscounts));
+    
+    
+    public void setDirectDiscounts(final com.commercetools.api.models.cart.DirectDiscount ...directDiscounts){
+       this.directDiscounts = new ArrayList<>(Arrays.asList(directDiscounts));
     }
-
-    public void setDirectDiscounts(
-            final java.util.List<com.commercetools.api.models.cart.DirectDiscount> directDiscounts) {
-        this.directDiscounts = directDiscounts;
+    
+    
+    public void setDirectDiscounts(final java.util.List<com.commercetools.api.models.cart.DirectDiscount> directDiscounts){
+       this.directDiscounts = directDiscounts;
     }
-
-    public void setRefusedGifts(
-            final com.commercetools.api.models.cart_discount.CartDiscountReference... refusedGifts) {
-        this.refusedGifts = new ArrayList<>(Arrays.asList(refusedGifts));
+    
+    
+    public void setRefusedGifts(final com.commercetools.api.models.cart_discount.CartDiscountReference ...refusedGifts){
+       this.refusedGifts = new ArrayList<>(Arrays.asList(refusedGifts));
     }
-
-    public void setRefusedGifts(
-            final java.util.List<com.commercetools.api.models.cart_discount.CartDiscountReference> refusedGifts) {
-        this.refusedGifts = refusedGifts;
+    
+    
+    public void setRefusedGifts(final java.util.List<com.commercetools.api.models.cart_discount.CartDiscountReference> refusedGifts){
+       this.refusedGifts = refusedGifts;
     }
-
-    public void setPaymentInfo(final com.commercetools.api.models.order.PaymentInfo paymentInfo) {
+    
+    
+    public void setPaymentInfo(final com.commercetools.api.models.order.PaymentInfo paymentInfo){
         this.paymentInfo = paymentInfo;
     }
-
-    public void setCountry(final String country) {
+    
+    
+    public void setCountry(final String country){
         this.country = country;
     }
-
-    public void setLocale(final String locale) {
+    
+    
+    public void setLocale(final String locale){
         this.locale = locale;
     }
-
-    public void setOrigin(final com.commercetools.api.models.cart.CartOrigin origin) {
+    
+    
+    public void setOrigin(final com.commercetools.api.models.cart.CartOrigin origin){
         this.origin = origin;
     }
-
-    public void setCustom(final com.commercetools.api.models.type.CustomFields custom) {
+    
+    
+    public void setCustom(final com.commercetools.api.models.type.CustomFields custom){
         this.custom = custom;
     }
-
-    public void setDeleteDaysAfterLastModification(final Integer deleteDaysAfterLastModification) {
+    
+    
+    public void setDeleteDaysAfterLastModification(final Integer deleteDaysAfterLastModification){
         this.deleteDaysAfterLastModification = deleteDaysAfterLastModification;
     }
-
-    public void setLastModifiedBy(final com.commercetools.api.models.common.LastModifiedBy lastModifiedBy) {
+    
+    
+    public void setLastModifiedBy(final com.commercetools.api.models.common.LastModifiedBy lastModifiedBy){
         this.lastModifiedBy = lastModifiedBy;
     }
-
-    public void setCreatedBy(final com.commercetools.api.models.common.CreatedBy createdBy) {
+    
+    
+    public void setCreatedBy(final com.commercetools.api.models.common.CreatedBy createdBy){
         this.createdBy = createdBy;
     }
 
     @Override
     public boolean equals(Object o) {
-        if (this == o)
-            return true;
-
-        if (o == null || getClass() != o.getClass())
-            return false;
-
+        if (this == o) return true;
+    
+        if (o == null || getClass() != o.getClass()) return false;
+    
         CartImpl that = (CartImpl) o;
-
-        return new EqualsBuilder().append(id, that.id)
+    
+        return new EqualsBuilder()
+                .append(id, that.id)
                 .append(version, that.version)
                 .append(createdAt, that.createdAt)
                 .append(lastModifiedAt, that.lastModifiedAt)
@@ -801,52 +876,53 @@ public class CartImpl implements Cart, ModelBase {
                 .append(createdBy, that.createdBy)
                 .isEquals();
     }
-
+    
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(id)
-                .append(version)
-                .append(createdAt)
-                .append(lastModifiedAt)
-                .append(key)
-                .append(customerId)
-                .append(customerEmail)
-                .append(customerGroup)
-                .append(anonymousId)
-                .append(businessUnit)
-                .append(store)
-                .append(lineItems)
-                .append(customLineItems)
-                .append(totalLineItemQuantity)
-                .append(totalPrice)
-                .append(taxedPrice)
-                .append(taxedShippingPrice)
-                .append(taxMode)
-                .append(taxRoundingMode)
-                .append(taxCalculationMode)
-                .append(inventoryMode)
-                .append(cartState)
-                .append(billingAddress)
-                .append(shippingAddress)
-                .append(shippingMode)
-                .append(shippingKey)
-                .append(shippingInfo)
-                .append(shippingRateInput)
-                .append(shippingCustomFields)
-                .append(shipping)
-                .append(itemShippingAddresses)
-                .append(discountCodes)
-                .append(directDiscounts)
-                .append(refusedGifts)
-                .append(paymentInfo)
-                .append(country)
-                .append(locale)
-                .append(origin)
-                .append(custom)
-                .append(deleteDaysAfterLastModification)
-                .append(lastModifiedBy)
-                .append(createdBy)
-                .toHashCode();
+        return new HashCodeBuilder(17, 37)
+            .append(id)
+            .append(version)
+            .append(createdAt)
+            .append(lastModifiedAt)
+            .append(key)
+            .append(customerId)
+            .append(customerEmail)
+            .append(customerGroup)
+            .append(anonymousId)
+            .append(businessUnit)
+            .append(store)
+            .append(lineItems)
+            .append(customLineItems)
+            .append(totalLineItemQuantity)
+            .append(totalPrice)
+            .append(taxedPrice)
+            .append(taxedShippingPrice)
+            .append(taxMode)
+            .append(taxRoundingMode)
+            .append(taxCalculationMode)
+            .append(inventoryMode)
+            .append(cartState)
+            .append(billingAddress)
+            .append(shippingAddress)
+            .append(shippingMode)
+            .append(shippingKey)
+            .append(shippingInfo)
+            .append(shippingRateInput)
+            .append(shippingCustomFields)
+            .append(shipping)
+            .append(itemShippingAddresses)
+            .append(discountCodes)
+            .append(directDiscounts)
+            .append(refusedGifts)
+            .append(paymentInfo)
+            .append(country)
+            .append(locale)
+            .append(origin)
+            .append(custom)
+            .append(deleteDaysAfterLastModification)
+            .append(lastModifiedBy)
+            .append(createdBy)
+            .toHashCode();
     }
 
 }

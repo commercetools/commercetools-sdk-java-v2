@@ -1,17 +1,20 @@
-
 package com.commercetools.api.models.product_type;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
+import com.commercetools.api.models.product_type.ProductTypeUpdateAction;
+import com.commercetools.api.models.product_type.ProductTypeChangeIsSearchableActionImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Following this update the Products are reindexed asynchronously to reflect this change on the search endpoint. When enabling search on an existing Attribute type definition, the constraint regarding the maximum size of a searchable Attribute will not be enforced. Instead, Product AttributeDefinitions exceeding this limit will be treated as not searchable and will not be available for full-text search.</p>
@@ -25,9 +28,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .isSearchable(true)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = ProductTypeChangeIsSearchableActionImpl.class)
 public interface ProductTypeChangeIsSearchableAction extends ProductTypeUpdateAction {
 
@@ -43,7 +49,6 @@ public interface ProductTypeChangeIsSearchableAction extends ProductTypeUpdateAc
     @NotNull
     @JsonProperty("attributeName")
     public String getAttributeName();
-
     /**
      *  <p>Determines whether the Attribute's values can be used in full-text search queries, filters, and facets. See AttributeDefinition for details.</p>
      * @return isSearchable
@@ -56,23 +61,26 @@ public interface ProductTypeChangeIsSearchableAction extends ProductTypeUpdateAc
      *  <p>Name of the AttributeDefinition to update.</p>
      * @param attributeName value to be set
      */
-
+    
     public void setAttributeName(final String attributeName);
-
+    
+    
     /**
      *  <p>Determines whether the Attribute's values can be used in full-text search queries, filters, and facets. See AttributeDefinition for details.</p>
      * @param isSearchable value to be set
      */
-
+    
     public void setIsSearchable(final Boolean isSearchable);
+    
 
     /**
      * factory method
      * @return instance of ProductTypeChangeIsSearchableAction
      */
-    public static ProductTypeChangeIsSearchableAction of() {
+    public static ProductTypeChangeIsSearchableAction of(){
         return new ProductTypeChangeIsSearchableActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy ProductTypeChangeIsSearchableAction
@@ -92,8 +100,7 @@ public interface ProductTypeChangeIsSearchableAction extends ProductTypeUpdateAc
      * @return copy instance
      */
     @Nullable
-    public static ProductTypeChangeIsSearchableAction deepCopy(
-            @Nullable final ProductTypeChangeIsSearchableAction template) {
+    public static ProductTypeChangeIsSearchableAction deepCopy(@Nullable final ProductTypeChangeIsSearchableAction template) {
         if (template == null) {
             return null;
         }
@@ -110,16 +117,16 @@ public interface ProductTypeChangeIsSearchableAction extends ProductTypeUpdateAc
     public static ProductTypeChangeIsSearchableActionBuilder builder() {
         return ProductTypeChangeIsSearchableActionBuilder.of();
     }
-
+    
     /**
      * create builder for ProductTypeChangeIsSearchableAction instance
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static ProductTypeChangeIsSearchableActionBuilder builder(
-            final ProductTypeChangeIsSearchableAction template) {
+    public static ProductTypeChangeIsSearchableActionBuilder builder(final ProductTypeChangeIsSearchableAction template) {
         return ProductTypeChangeIsSearchableActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -130,7 +137,7 @@ public interface ProductTypeChangeIsSearchableAction extends ProductTypeUpdateAc
     default <T> T withProductTypeChangeIsSearchableAction(Function<ProductTypeChangeIsSearchableAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

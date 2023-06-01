@@ -1,8 +1,11 @@
-
 package com.commercetools.importapi.models.orders;
 
-import java.util.*;
 
+import com.commercetools.importapi.models.orders.ItemShippingTarget;
+import javax.annotation.Nullable;
+import java.util.*;
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -17,52 +20,67 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .quantity(0.3)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class ItemShippingTargetBuilder implements Builder<ItemShippingTarget> {
 
+    
+    
     private String addressKey;
-
+    
+    
+    
     private Double quantity;
 
+    
     /**
      *  <p>Maps to <code>ItemShippingTarget.addressKey</code>.</p>
      * @param addressKey value to be set
      * @return Builder
      */
-
-    public ItemShippingTargetBuilder addressKey(final String addressKey) {
+    
+    public ItemShippingTargetBuilder addressKey( final String addressKey) {
         this.addressKey = addressKey;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Maps to <code>ItemShippingTarget.quantity</code>.</p>
      * @param quantity value to be set
      * @return Builder
      */
-
-    public ItemShippingTargetBuilder quantity(final Double quantity) {
+    
+    public ItemShippingTargetBuilder quantity( final Double quantity) {
         this.quantity = quantity;
         return this;
     }
+    
+    
 
     /**
      *  <p>Maps to <code>ItemShippingTarget.addressKey</code>.</p>
      * @return addressKey
      */
-
-    public String getAddressKey() {
+    
+    
+    public String getAddressKey(){
         return this.addressKey;
     }
-
+    
     /**
      *  <p>Maps to <code>ItemShippingTarget.quantity</code>.</p>
      * @return quantity
      */
-
-    public Double getQuantity() {
+    
+    
+    public Double getQuantity(){
         return this.quantity;
     }
 
@@ -75,7 +93,7 @@ public class ItemShippingTargetBuilder implements Builder<ItemShippingTarget> {
         Objects.requireNonNull(quantity, ItemShippingTarget.class + ": quantity is missing");
         return new ItemShippingTargetImpl(addressKey, quantity);
     }
-
+    
     /**
      * builds ItemShippingTarget without checking for non-null required values
      * @return ItemShippingTarget
@@ -86,7 +104,7 @@ public class ItemShippingTargetBuilder implements Builder<ItemShippingTarget> {
 
     /**
      * factory method for an instance of ItemShippingTargetBuilder
-     * @return builder
+     * @return builder 
      */
     public static ItemShippingTargetBuilder of() {
         return new ItemShippingTargetBuilder();

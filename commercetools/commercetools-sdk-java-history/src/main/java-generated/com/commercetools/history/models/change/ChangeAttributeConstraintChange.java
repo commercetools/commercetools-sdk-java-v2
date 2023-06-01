@@ -1,18 +1,21 @@
-
 package com.commercetools.history.models.change;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
-
+import com.commercetools.history.models.change.Change;
 import com.commercetools.history.models.common.AttributeConstraintEnum;
+import com.commercetools.history.models.change.ChangeAttributeConstraintChangeImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * ChangeAttributeConstraintChange
@@ -28,9 +31,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .nextValue(AttributeConstraintEnum.NONE)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = ChangeAttributeConstraintChangeImpl.class)
 public interface ChangeAttributeConstraintChange extends Change {
 
@@ -46,7 +52,6 @@ public interface ChangeAttributeConstraintChange extends Change {
     @NotNull
     @JsonProperty("type")
     public String getType();
-
     /**
      *
      * @return change
@@ -54,7 +59,6 @@ public interface ChangeAttributeConstraintChange extends Change {
     @NotNull
     @JsonProperty("change")
     public String getChange();
-
     /**
      *  <p>name of the updated attribute</p>
      * @return attributeName
@@ -62,7 +66,6 @@ public interface ChangeAttributeConstraintChange extends Change {
     @NotNull
     @JsonProperty("attributeName")
     public String getAttributeName();
-
     /**
      *
      * @return previousValue
@@ -70,7 +73,6 @@ public interface ChangeAttributeConstraintChange extends Change {
     @NotNull
     @JsonProperty("previousValue")
     public AttributeConstraintEnum getPreviousValue();
-
     /**
      *
      * @return nextValue
@@ -83,37 +85,42 @@ public interface ChangeAttributeConstraintChange extends Change {
      * set change
      * @param change value to be set
      */
-
+    
     public void setChange(final String change);
-
+    
+    
     /**
      *  <p>name of the updated attribute</p>
      * @param attributeName value to be set
      */
-
+    
     public void setAttributeName(final String attributeName);
-
+    
+    
     /**
      * set previousValue
      * @param previousValue value to be set
      */
-
+    
     public void setPreviousValue(final AttributeConstraintEnum previousValue);
-
+    
+    
     /**
      * set nextValue
      * @param nextValue value to be set
      */
-
+    
     public void setNextValue(final AttributeConstraintEnum nextValue);
+    
 
     /**
      * factory method
      * @return instance of ChangeAttributeConstraintChange
      */
-    public static ChangeAttributeConstraintChange of() {
+    public static ChangeAttributeConstraintChange of(){
         return new ChangeAttributeConstraintChangeImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy ChangeAttributeConstraintChange
@@ -154,7 +161,7 @@ public interface ChangeAttributeConstraintChange extends Change {
     public static ChangeAttributeConstraintChangeBuilder builder() {
         return ChangeAttributeConstraintChangeBuilder.of();
     }
-
+    
     /**
      * create builder for ChangeAttributeConstraintChange instance
      * @param template instance with prefilled values for the builder
@@ -163,6 +170,7 @@ public interface ChangeAttributeConstraintChange extends Change {
     public static ChangeAttributeConstraintChangeBuilder builder(final ChangeAttributeConstraintChange template) {
         return ChangeAttributeConstraintChangeBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -173,7 +181,7 @@ public interface ChangeAttributeConstraintChange extends Change {
     default <T> T withChangeAttributeConstraintChange(Function<ChangeAttributeConstraintChange, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

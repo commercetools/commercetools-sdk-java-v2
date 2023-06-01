@@ -1,19 +1,21 @@
-
 package com.commercetools.api.models.message;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
+import com.commercetools.api.models.message.Message;
 import com.commercetools.api.models.product.ProductVariant;
+import com.commercetools.api.models.message.ProductVariantAddedMessageImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Generated after a successful Add Product Variant update action.</p>
@@ -34,9 +36,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .staged(true)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = ProductVariantAddedMessageImpl.class)
 public interface ProductVariantAddedMessage extends Message {
 
@@ -53,7 +58,6 @@ public interface ProductVariantAddedMessage extends Message {
     @Valid
     @JsonProperty("variant")
     public ProductVariant getVariant();
-
     /**
      *  <p>Whether the update was only applied to the staged Product Projection.</p>
      * @return staged
@@ -66,23 +70,26 @@ public interface ProductVariantAddedMessage extends Message {
      *  <p>Unique identifier of the Product Variant that was added.</p>
      * @param variant value to be set
      */
-
+    
     public void setVariant(final ProductVariant variant);
-
+    
+    
     /**
      *  <p>Whether the update was only applied to the staged Product Projection.</p>
      * @param staged value to be set
      */
-
+    
     public void setStaged(final Boolean staged);
+    
 
     /**
      * factory method
      * @return instance of ProductVariantAddedMessage
      */
-    public static ProductVariantAddedMessage of() {
+    public static ProductVariantAddedMessage of(){
         return new ProductVariantAddedMessageImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy ProductVariantAddedMessage
@@ -121,14 +128,12 @@ public interface ProductVariantAddedMessage extends Message {
         instance.setVersion(template.getVersion());
         instance.setCreatedAt(template.getCreatedAt());
         instance.setLastModifiedAt(template.getLastModifiedAt());
-        instance.setLastModifiedBy(
-            com.commercetools.api.models.common.LastModifiedBy.deepCopy(template.getLastModifiedBy()));
+        instance.setLastModifiedBy(com.commercetools.api.models.common.LastModifiedBy.deepCopy(template.getLastModifiedBy()));
         instance.setCreatedBy(com.commercetools.api.models.common.CreatedBy.deepCopy(template.getCreatedBy()));
         instance.setSequenceNumber(template.getSequenceNumber());
         instance.setResource(com.commercetools.api.models.common.Reference.deepCopy(template.getResource()));
         instance.setResourceVersion(template.getResourceVersion());
-        instance.setResourceUserProvidedIdentifiers(com.commercetools.api.models.message.UserProvidedIdentifiers
-                .deepCopy(template.getResourceUserProvidedIdentifiers()));
+        instance.setResourceUserProvidedIdentifiers(com.commercetools.api.models.message.UserProvidedIdentifiers.deepCopy(template.getResourceUserProvidedIdentifiers()));
         instance.setVariant(com.commercetools.api.models.product.ProductVariant.deepCopy(template.getVariant()));
         instance.setStaged(template.getStaged());
         return instance;
@@ -141,7 +146,7 @@ public interface ProductVariantAddedMessage extends Message {
     public static ProductVariantAddedMessageBuilder builder() {
         return ProductVariantAddedMessageBuilder.of();
     }
-
+    
     /**
      * create builder for ProductVariantAddedMessage instance
      * @param template instance with prefilled values for the builder
@@ -150,6 +155,7 @@ public interface ProductVariantAddedMessage extends Message {
     public static ProductVariantAddedMessageBuilder builder(final ProductVariantAddedMessage template) {
         return ProductVariantAddedMessageBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -160,7 +166,7 @@ public interface ProductVariantAddedMessage extends Message {
     default <T> T withProductVariantAddedMessage(Function<ProductVariantAddedMessage, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

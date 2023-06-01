@@ -1,19 +1,22 @@
-
 package com.commercetools.api.models.product;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-import java.util.stream.Collectors;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
+import com.commercetools.api.models.product.FacetRange;
+import com.commercetools.api.models.product.FacetResult;
+import com.commercetools.api.models.product.FacetTypes;
+import com.commercetools.api.models.product.RangeFacetResultImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * RangeFacetResult
@@ -26,9 +29,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .plusRanges(rangesBuilder -> rangesBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = RangeFacetResultImpl.class)
 public interface RangeFacetResult extends FacetResult {
 
@@ -50,24 +56,24 @@ public interface RangeFacetResult extends FacetResult {
      * set ranges
      * @param ranges values to be set
      */
-
+    
     @JsonIgnore
-    public void setRanges(final FacetRange... ranges);
-
+    public void setRanges(final FacetRange ...ranges);
     /**
      * set ranges
      * @param ranges values to be set
      */
-
+    
     public void setRanges(final List<FacetRange> ranges);
 
     /**
      * factory method
      * @return instance of RangeFacetResult
      */
-    public static RangeFacetResult of() {
+    public static RangeFacetResult of(){
         return new RangeFacetResultImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy RangeFacetResult
@@ -92,9 +98,7 @@ public interface RangeFacetResult extends FacetResult {
         }
         RangeFacetResultImpl instance = new RangeFacetResultImpl();
         instance.setRanges(Optional.ofNullable(template.getRanges())
-                .map(t -> t.stream()
-                        .map(com.commercetools.api.models.product.FacetRange::deepCopy)
-                        .collect(Collectors.toList()))
+                .map(t -> t.stream().map(com.commercetools.api.models.product.FacetRange::deepCopy).collect(Collectors.toList()))
                 .orElse(null));
         return instance;
     }
@@ -106,7 +110,7 @@ public interface RangeFacetResult extends FacetResult {
     public static RangeFacetResultBuilder builder() {
         return RangeFacetResultBuilder.of();
     }
-
+    
     /**
      * create builder for RangeFacetResult instance
      * @param template instance with prefilled values for the builder
@@ -115,6 +119,7 @@ public interface RangeFacetResult extends FacetResult {
     public static RangeFacetResultBuilder builder(final RangeFacetResult template) {
         return RangeFacetResultBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -125,7 +130,7 @@ public interface RangeFacetResult extends FacetResult {
     default <T> T withRangeFacetResult(Function<RangeFacetResult, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

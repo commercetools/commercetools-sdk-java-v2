@@ -1,19 +1,21 @@
-
 package com.commercetools.history.models.change;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
+import com.commercetools.history.models.change.Change;
 import com.commercetools.history.models.common.Money;
+import com.commercetools.history.models.change.ChangeAmountPlannedChangeImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * ChangeAmountPlannedChange
@@ -28,9 +30,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .nextValue(nextValueBuilder -> nextValueBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = ChangeAmountPlannedChangeImpl.class)
 public interface ChangeAmountPlannedChange extends Change {
 
@@ -46,7 +51,6 @@ public interface ChangeAmountPlannedChange extends Change {
     @NotNull
     @JsonProperty("type")
     public String getType();
-
     /**
      *
      * @return change
@@ -54,7 +58,6 @@ public interface ChangeAmountPlannedChange extends Change {
     @NotNull
     @JsonProperty("change")
     public String getChange();
-
     /**
      *
      * @return previousValue
@@ -63,7 +66,6 @@ public interface ChangeAmountPlannedChange extends Change {
     @Valid
     @JsonProperty("previousValue")
     public Money getPreviousValue();
-
     /**
      *
      * @return nextValue
@@ -77,30 +79,34 @@ public interface ChangeAmountPlannedChange extends Change {
      * set change
      * @param change value to be set
      */
-
+    
     public void setChange(final String change);
-
+    
+    
     /**
      * set previousValue
      * @param previousValue value to be set
      */
-
+    
     public void setPreviousValue(final Money previousValue);
-
+    
+    
     /**
      * set nextValue
      * @param nextValue value to be set
      */
-
+    
     public void setNextValue(final Money nextValue);
+    
 
     /**
      * factory method
      * @return instance of ChangeAmountPlannedChange
      */
-    public static ChangeAmountPlannedChange of() {
+    public static ChangeAmountPlannedChange of(){
         return new ChangeAmountPlannedChangeImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy ChangeAmountPlannedChange
@@ -139,7 +145,7 @@ public interface ChangeAmountPlannedChange extends Change {
     public static ChangeAmountPlannedChangeBuilder builder() {
         return ChangeAmountPlannedChangeBuilder.of();
     }
-
+    
     /**
      * create builder for ChangeAmountPlannedChange instance
      * @param template instance with prefilled values for the builder
@@ -148,6 +154,7 @@ public interface ChangeAmountPlannedChange extends Change {
     public static ChangeAmountPlannedChangeBuilder builder(final ChangeAmountPlannedChange template) {
         return ChangeAmountPlannedChangeBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -158,7 +165,7 @@ public interface ChangeAmountPlannedChange extends Change {
     default <T> T withChangeAmountPlannedChange(Function<ChangeAmountPlannedChange, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

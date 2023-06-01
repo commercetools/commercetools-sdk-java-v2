@@ -1,23 +1,25 @@
-
 package com.commercetools.api.models.associate_role;
 
-import java.time.*;
-import java.time.ZonedDateTime;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
+import com.commercetools.api.models.associate_role.Permission;
 import com.commercetools.api.models.common.BaseResource;
 import com.commercetools.api.models.common.CreatedBy;
 import com.commercetools.api.models.common.LastModifiedBy;
 import com.commercetools.api.models.type.CustomFields;
+import java.time.ZonedDateTime;
+import com.commercetools.api.models.associate_role.AssociateRoleImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * AssociateRole
@@ -36,11 +38,15 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .plusPermissions(permissionsBuilder -> permissionsBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = AssociateRoleImpl.class)
 public interface AssociateRole extends BaseResource {
+
 
     /**
      *  <p>Unique identifier of the AssociateRole.</p>
@@ -49,7 +55,6 @@ public interface AssociateRole extends BaseResource {
     @NotNull
     @JsonProperty("id")
     public String getId();
-
     /**
      *  <p>Current version of the AssociateRole.</p>
      * @return version
@@ -57,7 +62,6 @@ public interface AssociateRole extends BaseResource {
     @NotNull
     @JsonProperty("version")
     public Long getVersion();
-
     /**
      *  <p>Date and time (UTC) the AssociateRole was initially created.</p>
      * @return createdAt
@@ -65,7 +69,6 @@ public interface AssociateRole extends BaseResource {
     @NotNull
     @JsonProperty("createdAt")
     public ZonedDateTime getCreatedAt();
-
     /**
      *  <p>Date and time (UTC) the AssociateRole was last updated.</p>
      * @return lastModifiedAt
@@ -73,7 +76,6 @@ public interface AssociateRole extends BaseResource {
     @NotNull
     @JsonProperty("lastModifiedAt")
     public ZonedDateTime getLastModifiedAt();
-
     /**
      *  <p>Present on resources updated after 1 February 2019 except for events not tracked.</p>
      * @return lastModifiedBy
@@ -81,7 +83,6 @@ public interface AssociateRole extends BaseResource {
     @Valid
     @JsonProperty("lastModifiedBy")
     public LastModifiedBy getLastModifiedBy();
-
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      * @return createdBy
@@ -89,7 +90,6 @@ public interface AssociateRole extends BaseResource {
     @Valid
     @JsonProperty("createdBy")
     public CreatedBy getCreatedBy();
-
     /**
      *  <p>User-defined unique identifier of the AssociateRole.</p>
      * @return key
@@ -97,7 +97,6 @@ public interface AssociateRole extends BaseResource {
     @NotNull
     @JsonProperty("key")
     public String getKey();
-
     /**
      *  <p>Whether the AssociateRole can be assigned to an Associate by a buyer. If false, the AssociateRole can only be assigned using the general endpoint.</p>
      * @return buyerAssignable
@@ -105,15 +104,13 @@ public interface AssociateRole extends BaseResource {
     @NotNull
     @JsonProperty("buyerAssignable")
     public Boolean getBuyerAssignable();
-
     /**
      *  <p>Name of the AssociateRole.</p>
      * @return name
      */
-
+    
     @JsonProperty("name")
     public String getName();
-
     /**
      *  <p>List of Permissions for the AssociateRole.</p>
      * @return permissions
@@ -121,7 +118,6 @@ public interface AssociateRole extends BaseResource {
     @NotNull
     @JsonProperty("permissions")
     public List<Permission> getPermissions();
-
     /**
      *  <p>Custom Fields for the AssociateRole.</p>
      * @return custom
@@ -134,94 +130,104 @@ public interface AssociateRole extends BaseResource {
      *  <p>Unique identifier of the AssociateRole.</p>
      * @param id value to be set
      */
-
+    
     public void setId(final String id);
-
+    
+    
     /**
      *  <p>Current version of the AssociateRole.</p>
      * @param version value to be set
      */
-
+    
     public void setVersion(final Long version);
-
+    
+    
     /**
      *  <p>Date and time (UTC) the AssociateRole was initially created.</p>
      * @param createdAt value to be set
      */
-
+    
     public void setCreatedAt(final ZonedDateTime createdAt);
-
+    
+    
     /**
      *  <p>Date and time (UTC) the AssociateRole was last updated.</p>
      * @param lastModifiedAt value to be set
      */
-
+    
     public void setLastModifiedAt(final ZonedDateTime lastModifiedAt);
-
+    
+    
     /**
      *  <p>Present on resources updated after 1 February 2019 except for events not tracked.</p>
      * @param lastModifiedBy value to be set
      */
-
+    
     public void setLastModifiedBy(final LastModifiedBy lastModifiedBy);
-
+    
+    
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      * @param createdBy value to be set
      */
-
+    
     public void setCreatedBy(final CreatedBy createdBy);
-
+    
+    
     /**
      *  <p>User-defined unique identifier of the AssociateRole.</p>
      * @param key value to be set
      */
-
+    
     public void setKey(final String key);
-
+    
+    
     /**
      *  <p>Whether the AssociateRole can be assigned to an Associate by a buyer. If false, the AssociateRole can only be assigned using the general endpoint.</p>
      * @param buyerAssignable value to be set
      */
-
+    
     public void setBuyerAssignable(final Boolean buyerAssignable);
-
+    
+    
     /**
      *  <p>Name of the AssociateRole.</p>
      * @param name value to be set
      */
-
+    
     public void setName(final String name);
-
+    
+    
     /**
      *  <p>List of Permissions for the AssociateRole.</p>
      * @param permissions values to be set
      */
-
+    
     @JsonIgnore
-    public void setPermissions(final Permission... permissions);
-
+    public void setPermissions(final Permission ...permissions);
     /**
      *  <p>List of Permissions for the AssociateRole.</p>
      * @param permissions values to be set
      */
-
+    
     public void setPermissions(final List<Permission> permissions);
-
+    
     /**
      *  <p>Custom Fields for the AssociateRole.</p>
      * @param custom value to be set
      */
-
+    
     public void setCustom(final CustomFields custom);
+    
 
     /**
      * factory method
      * @return instance of AssociateRole
      */
-    public static AssociateRole of() {
+    public static AssociateRole of(){
         return new AssociateRoleImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy AssociateRole
@@ -259,13 +265,14 @@ public interface AssociateRole extends BaseResource {
         instance.setVersion(template.getVersion());
         instance.setCreatedAt(template.getCreatedAt());
         instance.setLastModifiedAt(template.getLastModifiedAt());
-        instance.setLastModifiedBy(
-            com.commercetools.api.models.common.LastModifiedBy.deepCopy(template.getLastModifiedBy()));
+        instance.setLastModifiedBy(com.commercetools.api.models.common.LastModifiedBy.deepCopy(template.getLastModifiedBy()));
         instance.setCreatedBy(com.commercetools.api.models.common.CreatedBy.deepCopy(template.getCreatedBy()));
         instance.setKey(template.getKey());
         instance.setBuyerAssignable(template.getBuyerAssignable());
         instance.setName(template.getName());
-        instance.setPermissions(Optional.ofNullable(template.getPermissions()).map(ArrayList::new).orElse(null));
+        instance.setPermissions(Optional.ofNullable(template.getPermissions())
+                .map(ArrayList::new)
+                .orElse(null));
         instance.setCustom(com.commercetools.api.models.type.CustomFields.deepCopy(template.getCustom()));
         return instance;
     }
@@ -277,7 +284,7 @@ public interface AssociateRole extends BaseResource {
     public static AssociateRoleBuilder builder() {
         return AssociateRoleBuilder.of();
     }
-
+    
     /**
      * create builder for AssociateRole instance
      * @param template instance with prefilled values for the builder
@@ -286,6 +293,7 @@ public interface AssociateRole extends BaseResource {
     public static AssociateRoleBuilder builder(final AssociateRole template) {
         return AssociateRoleBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -296,7 +304,7 @@ public interface AssociateRole extends BaseResource {
     default <T> T withAssociateRole(Function<AssociateRole, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

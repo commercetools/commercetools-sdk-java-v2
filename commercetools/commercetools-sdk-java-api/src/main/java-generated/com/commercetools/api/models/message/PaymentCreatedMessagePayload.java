@@ -1,19 +1,21 @@
-
 package com.commercetools.api.models.message;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
+import com.commercetools.api.models.message.MessagePayload;
 import com.commercetools.api.models.payment.Payment;
+import com.commercetools.api.models.message.PaymentCreatedMessagePayloadImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Generated after a successful Create Payment request.</p>
@@ -26,9 +28,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .payment(paymentBuilder -> paymentBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = PaymentCreatedMessagePayloadImpl.class)
 public interface PaymentCreatedMessagePayload extends MessagePayload {
 
@@ -50,16 +55,18 @@ public interface PaymentCreatedMessagePayload extends MessagePayload {
      *  <p>Payment that was created.</p>
      * @param payment value to be set
      */
-
+    
     public void setPayment(final Payment payment);
+    
 
     /**
      * factory method
      * @return instance of PaymentCreatedMessagePayload
      */
-    public static PaymentCreatedMessagePayload of() {
+    public static PaymentCreatedMessagePayload of(){
         return new PaymentCreatedMessagePayloadImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy PaymentCreatedMessagePayload
@@ -94,7 +101,7 @@ public interface PaymentCreatedMessagePayload extends MessagePayload {
     public static PaymentCreatedMessagePayloadBuilder builder() {
         return PaymentCreatedMessagePayloadBuilder.of();
     }
-
+    
     /**
      * create builder for PaymentCreatedMessagePayload instance
      * @param template instance with prefilled values for the builder
@@ -103,6 +110,7 @@ public interface PaymentCreatedMessagePayload extends MessagePayload {
     public static PaymentCreatedMessagePayloadBuilder builder(final PaymentCreatedMessagePayload template) {
         return PaymentCreatedMessagePayloadBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -113,7 +121,7 @@ public interface PaymentCreatedMessagePayload extends MessagePayload {
     default <T> T withPaymentCreatedMessagePayload(Function<PaymentCreatedMessagePayload, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

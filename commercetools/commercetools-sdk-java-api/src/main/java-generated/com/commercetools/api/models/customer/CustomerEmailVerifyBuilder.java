@@ -1,10 +1,11 @@
-
 package com.commercetools.api.models.customer;
 
-import java.util.*;
 
+import com.commercetools.api.models.customer.CustomerEmailVerify;
 import javax.annotation.Nullable;
-
+import java.util.*;
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -18,54 +19,67 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .tokenValue("{tokenValue}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class CustomerEmailVerifyBuilder implements Builder<CustomerEmailVerify> {
 
+    
     @Nullable
     private Long version;
-
+    
+    
+    
     private String tokenValue;
 
+    
     /**
      *  <p>Expected version of the Customer.</p>
      * @param version value to be set
      * @return Builder
      */
-
+    
     public CustomerEmailVerifyBuilder version(@Nullable final Long version) {
         this.version = version;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Value of the token to verify Customer email.</p>
      * @param tokenValue value to be set
      * @return Builder
      */
-
-    public CustomerEmailVerifyBuilder tokenValue(final String tokenValue) {
+    
+    public CustomerEmailVerifyBuilder tokenValue( final String tokenValue) {
         this.tokenValue = tokenValue;
         return this;
     }
+    
+    
 
     /**
      *  <p>Expected version of the Customer.</p>
      * @return version
      */
-
+    
     @Nullable
-    public Long getVersion() {
+    public Long getVersion(){
         return this.version;
     }
-
+    
     /**
      *  <p>Value of the token to verify Customer email.</p>
      * @return tokenValue
      */
-
-    public String getTokenValue() {
+    
+    
+    public String getTokenValue(){
         return this.tokenValue;
     }
 
@@ -77,7 +91,7 @@ public class CustomerEmailVerifyBuilder implements Builder<CustomerEmailVerify> 
         Objects.requireNonNull(tokenValue, CustomerEmailVerify.class + ": tokenValue is missing");
         return new CustomerEmailVerifyImpl(version, tokenValue);
     }
-
+    
     /**
      * builds CustomerEmailVerify without checking for non-null required values
      * @return CustomerEmailVerify
@@ -88,7 +102,7 @@ public class CustomerEmailVerifyBuilder implements Builder<CustomerEmailVerify> 
 
     /**
      * factory method for an instance of CustomerEmailVerifyBuilder
-     * @return builder
+     * @return builder 
      */
     public static CustomerEmailVerifyBuilder of() {
         return new CustomerEmailVerifyBuilder();

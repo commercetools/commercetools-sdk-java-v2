@@ -1,9 +1,11 @@
-
 package com.commercetools.api.predicates.query.order_edit;
 
 import com.commercetools.api.predicates.query.*;
 
-public class OrderEditApplyQueryBuilderDsl {
+import java.util.function.Function;
+
+
+public class OrderEditApplyQueryBuilderDsl  {
     public OrderEditApplyQueryBuilderDsl() {
     }
 
@@ -12,15 +14,12 @@ public class OrderEditApplyQueryBuilderDsl {
     }
 
     public LongComparisonPredicateBuilder<OrderEditApplyQueryBuilderDsl> editVersion() {
-        return new LongComparisonPredicateBuilder<>(
-            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("editVersion")),
-            p -> new CombinationQueryPredicate<>(p, OrderEditApplyQueryBuilderDsl::of));
+        return new LongComparisonPredicateBuilder<>(BinaryQueryPredicate.of().left(new ConstantQueryPredicate("editVersion")),
+        p -> new CombinationQueryPredicate<>(p, OrderEditApplyQueryBuilderDsl::of));
     }
-
     public LongComparisonPredicateBuilder<OrderEditApplyQueryBuilderDsl> resourceVersion() {
-        return new LongComparisonPredicateBuilder<>(
-            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("resourceVersion")),
-            p -> new CombinationQueryPredicate<>(p, OrderEditApplyQueryBuilderDsl::of));
+        return new LongComparisonPredicateBuilder<>(BinaryQueryPredicate.of().left(new ConstantQueryPredicate("resourceVersion")),
+        p -> new CombinationQueryPredicate<>(p, OrderEditApplyQueryBuilderDsl::of));
     }
-
+    
 }

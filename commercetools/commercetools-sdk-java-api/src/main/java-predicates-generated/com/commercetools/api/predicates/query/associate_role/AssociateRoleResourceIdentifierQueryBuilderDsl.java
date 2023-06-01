@@ -1,9 +1,11 @@
-
 package com.commercetools.api.predicates.query.associate_role;
 
 import com.commercetools.api.predicates.query.*;
 
-public class AssociateRoleResourceIdentifierQueryBuilderDsl {
+import java.util.function.Function;
+
+
+public class AssociateRoleResourceIdentifierQueryBuilderDsl  {
     public AssociateRoleResourceIdentifierQueryBuilderDsl() {
     }
 
@@ -12,19 +14,16 @@ public class AssociateRoleResourceIdentifierQueryBuilderDsl {
     }
 
     public StringComparisonPredicateBuilder<AssociateRoleResourceIdentifierQueryBuilderDsl> typeId() {
-        return new StringComparisonPredicateBuilder<>(
-            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("typeId")),
-            p -> new CombinationQueryPredicate<>(p, AssociateRoleResourceIdentifierQueryBuilderDsl::of));
+        return new StringComparisonPredicateBuilder<>(BinaryQueryPredicate.of().left(new ConstantQueryPredicate("typeId")),
+        p -> new CombinationQueryPredicate<>(p, AssociateRoleResourceIdentifierQueryBuilderDsl::of));
     }
-
     public StringComparisonPredicateBuilder<AssociateRoleResourceIdentifierQueryBuilderDsl> id() {
         return new StringComparisonPredicateBuilder<>(BinaryQueryPredicate.of().left(new ConstantQueryPredicate("id")),
-            p -> new CombinationQueryPredicate<>(p, AssociateRoleResourceIdentifierQueryBuilderDsl::of));
+        p -> new CombinationQueryPredicate<>(p, AssociateRoleResourceIdentifierQueryBuilderDsl::of));
     }
-
     public StringComparisonPredicateBuilder<AssociateRoleResourceIdentifierQueryBuilderDsl> key() {
         return new StringComparisonPredicateBuilder<>(BinaryQueryPredicate.of().left(new ConstantQueryPredicate("key")),
-            p -> new CombinationQueryPredicate<>(p, AssociateRoleResourceIdentifierQueryBuilderDsl::of));
+        p -> new CombinationQueryPredicate<>(p, AssociateRoleResourceIdentifierQueryBuilderDsl::of));
     }
-
+    
 }

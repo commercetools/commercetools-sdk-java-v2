@@ -1,9 +1,11 @@
-
 package com.commercetools.api.predicates.query.message;
 
 import com.commercetools.api.predicates.query.*;
 
-public class AssociateRolePermissionAddedMessagePayloadQueryBuilderDsl {
+import java.util.function.Function;
+
+
+public class AssociateRolePermissionAddedMessagePayloadQueryBuilderDsl  {
     public AssociateRolePermissionAddedMessagePayloadQueryBuilderDsl() {
     }
 
@@ -12,15 +14,12 @@ public class AssociateRolePermissionAddedMessagePayloadQueryBuilderDsl {
     }
 
     public StringComparisonPredicateBuilder<AssociateRolePermissionAddedMessagePayloadQueryBuilderDsl> type() {
-        return new StringComparisonPredicateBuilder<>(
-            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("type")),
-            p -> new CombinationQueryPredicate<>(p, AssociateRolePermissionAddedMessagePayloadQueryBuilderDsl::of));
+        return new StringComparisonPredicateBuilder<>(BinaryQueryPredicate.of().left(new ConstantQueryPredicate("type")),
+        p -> new CombinationQueryPredicate<>(p, AssociateRolePermissionAddedMessagePayloadQueryBuilderDsl::of));
     }
-
     public StringComparisonPredicateBuilder<AssociateRolePermissionAddedMessagePayloadQueryBuilderDsl> permission() {
-        return new StringComparisonPredicateBuilder<>(
-            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("permission")),
-            p -> new CombinationQueryPredicate<>(p, AssociateRolePermissionAddedMessagePayloadQueryBuilderDsl::of));
+        return new StringComparisonPredicateBuilder<>(BinaryQueryPredicate.of().left(new ConstantQueryPredicate("permission")),
+        p -> new CombinationQueryPredicate<>(p, AssociateRolePermissionAddedMessagePayloadQueryBuilderDsl::of));
     }
-
+    
 }

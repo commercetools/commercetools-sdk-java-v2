@@ -1,9 +1,11 @@
-
 package com.commercetools.api.predicates.query.error;
 
 import com.commercetools.api.predicates.query.*;
 
-public class GraphQLResourceSizeLimitExceededErrorQueryBuilderDsl {
+import java.util.function.Function;
+
+
+public class GraphQLResourceSizeLimitExceededErrorQueryBuilderDsl  {
     public GraphQLResourceSizeLimitExceededErrorQueryBuilderDsl() {
     }
 
@@ -12,9 +14,8 @@ public class GraphQLResourceSizeLimitExceededErrorQueryBuilderDsl {
     }
 
     public StringComparisonPredicateBuilder<GraphQLResourceSizeLimitExceededErrorQueryBuilderDsl> code() {
-        return new StringComparisonPredicateBuilder<>(
-            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("code")),
-            p -> new CombinationQueryPredicate<>(p, GraphQLResourceSizeLimitExceededErrorQueryBuilderDsl::of));
+        return new StringComparisonPredicateBuilder<>(BinaryQueryPredicate.of().left(new ConstantQueryPredicate("code")),
+        p -> new CombinationQueryPredicate<>(p, GraphQLResourceSizeLimitExceededErrorQueryBuilderDsl::of));
     }
-
+    
 }

@@ -1,18 +1,21 @@
-
 package com.commercetools.api.models.attribute_group;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
+import com.commercetools.api.models.attribute_group.AttributeGroupUpdateAction;
+import com.commercetools.api.models.attribute_group.AttributeReference;
+import com.commercetools.api.models.attribute_group.AttributeGroupRemoveAttributeActionImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * AttributeGroupRemoveAttributeAction
@@ -25,9 +28,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .attribute(attributeBuilder -> attributeBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = AttributeGroupRemoveAttributeActionImpl.class)
 public interface AttributeGroupRemoveAttributeAction extends AttributeGroupUpdateAction {
 
@@ -49,16 +55,18 @@ public interface AttributeGroupRemoveAttributeAction extends AttributeGroupUpdat
      *  <p>Value to remove.</p>
      * @param attribute value to be set
      */
-
+    
     public void setAttribute(final AttributeReference attribute);
+    
 
     /**
      * factory method
      * @return instance of AttributeGroupRemoveAttributeAction
      */
-    public static AttributeGroupRemoveAttributeAction of() {
+    public static AttributeGroupRemoveAttributeAction of(){
         return new AttributeGroupRemoveAttributeActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy AttributeGroupRemoveAttributeAction
@@ -77,14 +85,12 @@ public interface AttributeGroupRemoveAttributeAction extends AttributeGroupUpdat
      * @return copy instance
      */
     @Nullable
-    public static AttributeGroupRemoveAttributeAction deepCopy(
-            @Nullable final AttributeGroupRemoveAttributeAction template) {
+    public static AttributeGroupRemoveAttributeAction deepCopy(@Nullable final AttributeGroupRemoveAttributeAction template) {
         if (template == null) {
             return null;
         }
         AttributeGroupRemoveAttributeActionImpl instance = new AttributeGroupRemoveAttributeActionImpl();
-        instance.setAttribute(
-            com.commercetools.api.models.attribute_group.AttributeReference.deepCopy(template.getAttribute()));
+        instance.setAttribute(com.commercetools.api.models.attribute_group.AttributeReference.deepCopy(template.getAttribute()));
         return instance;
     }
 
@@ -95,16 +101,16 @@ public interface AttributeGroupRemoveAttributeAction extends AttributeGroupUpdat
     public static AttributeGroupRemoveAttributeActionBuilder builder() {
         return AttributeGroupRemoveAttributeActionBuilder.of();
     }
-
+    
     /**
      * create builder for AttributeGroupRemoveAttributeAction instance
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static AttributeGroupRemoveAttributeActionBuilder builder(
-            final AttributeGroupRemoveAttributeAction template) {
+    public static AttributeGroupRemoveAttributeActionBuilder builder(final AttributeGroupRemoveAttributeAction template) {
         return AttributeGroupRemoveAttributeActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -115,7 +121,7 @@ public interface AttributeGroupRemoveAttributeAction extends AttributeGroupUpdat
     default <T> T withAttributeGroupRemoveAttributeAction(Function<AttributeGroupRemoveAttributeAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

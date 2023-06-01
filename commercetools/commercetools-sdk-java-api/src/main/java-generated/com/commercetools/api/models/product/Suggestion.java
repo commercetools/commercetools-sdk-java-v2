@@ -1,17 +1,20 @@
-
 package com.commercetools.api.models.product;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
 
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
+import com.commercetools.api.models.product.SuggestionImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * Suggestion
@@ -24,11 +27,15 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .text("{text}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = SuggestionImpl.class)
-public interface Suggestion {
+public interface Suggestion  {
+
 
     /**
      *  <p>The suggested text.</p>
@@ -42,16 +49,18 @@ public interface Suggestion {
      *  <p>The suggested text.</p>
      * @param text value to be set
      */
-
+    
     public void setText(final String text);
+    
 
     /**
      * factory method
      * @return instance of Suggestion
      */
-    public static Suggestion of() {
+    public static Suggestion of(){
         return new SuggestionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy Suggestion
@@ -86,7 +95,7 @@ public interface Suggestion {
     public static SuggestionBuilder builder() {
         return SuggestionBuilder.of();
     }
-
+    
     /**
      * create builder for Suggestion instance
      * @param template instance with prefilled values for the builder
@@ -95,6 +104,7 @@ public interface Suggestion {
     public static SuggestionBuilder builder(final Suggestion template) {
         return SuggestionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -105,7 +115,7 @@ public interface Suggestion {
     default <T> T withSuggestion(Function<Suggestion, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

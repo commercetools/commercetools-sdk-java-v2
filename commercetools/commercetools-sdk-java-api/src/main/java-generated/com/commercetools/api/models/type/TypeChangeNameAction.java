@@ -1,19 +1,21 @@
-
 package com.commercetools.api.models.type;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
 import com.commercetools.api.models.common.LocalizedString;
+import com.commercetools.api.models.type.TypeUpdateAction;
+import com.commercetools.api.models.type.TypeChangeNameActionImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * TypeChangeNameAction
@@ -26,9 +28,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .name(nameBuilder -> nameBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = TypeChangeNameActionImpl.class)
 public interface TypeChangeNameAction extends TypeUpdateAction {
 
@@ -50,16 +55,18 @@ public interface TypeChangeNameAction extends TypeUpdateAction {
      *  <p>New value to set. Must not be empty.</p>
      * @param name value to be set
      */
-
+    
     public void setName(final LocalizedString name);
+    
 
     /**
      * factory method
      * @return instance of TypeChangeNameAction
      */
-    public static TypeChangeNameAction of() {
+    public static TypeChangeNameAction of(){
         return new TypeChangeNameActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy TypeChangeNameAction
@@ -94,7 +101,7 @@ public interface TypeChangeNameAction extends TypeUpdateAction {
     public static TypeChangeNameActionBuilder builder() {
         return TypeChangeNameActionBuilder.of();
     }
-
+    
     /**
      * create builder for TypeChangeNameAction instance
      * @param template instance with prefilled values for the builder
@@ -103,6 +110,7 @@ public interface TypeChangeNameAction extends TypeUpdateAction {
     public static TypeChangeNameActionBuilder builder(final TypeChangeNameAction template) {
         return TypeChangeNameActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -113,7 +121,7 @@ public interface TypeChangeNameAction extends TypeUpdateAction {
     default <T> T withTypeChangeNameAction(Function<TypeChangeNameAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

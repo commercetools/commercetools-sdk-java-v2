@@ -1,19 +1,21 @@
-
 package com.commercetools.history.models.change;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
+import com.commercetools.history.models.change.Change;
 import com.commercetools.history.models.common.SearchKeywords;
+import com.commercetools.history.models.change.SetSearchKeywordsChangeImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * SetSearchKeywordsChange
@@ -29,9 +31,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .nextValue(nextValueBuilder -> nextValueBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = SetSearchKeywordsChangeImpl.class)
 public interface SetSearchKeywordsChange extends Change {
 
@@ -47,7 +52,6 @@ public interface SetSearchKeywordsChange extends Change {
     @NotNull
     @JsonProperty("type")
     public String getType();
-
     /**
      *  <p>Update action for <code>setSearchKeywords</code></p>
      * @return change
@@ -55,7 +59,6 @@ public interface SetSearchKeywordsChange extends Change {
     @NotNull
     @JsonProperty("change")
     public String getChange();
-
     /**
      *
      * @return catalogData
@@ -63,7 +66,6 @@ public interface SetSearchKeywordsChange extends Change {
     @NotNull
     @JsonProperty("catalogData")
     public String getCatalogData();
-
     /**
      *
      * @return previousValue
@@ -72,7 +74,6 @@ public interface SetSearchKeywordsChange extends Change {
     @Valid
     @JsonProperty("previousValue")
     public SearchKeywords getPreviousValue();
-
     /**
      *
      * @return nextValue
@@ -86,37 +87,42 @@ public interface SetSearchKeywordsChange extends Change {
      *  <p>Update action for <code>setSearchKeywords</code></p>
      * @param change value to be set
      */
-
+    
     public void setChange(final String change);
-
+    
+    
     /**
      * set catalogData
      * @param catalogData value to be set
      */
-
+    
     public void setCatalogData(final String catalogData);
-
+    
+    
     /**
      * set previousValue
      * @param previousValue value to be set
      */
-
+    
     public void setPreviousValue(final SearchKeywords previousValue);
-
+    
+    
     /**
      * set nextValue
      * @param nextValue value to be set
      */
-
+    
     public void setNextValue(final SearchKeywords nextValue);
+    
 
     /**
      * factory method
      * @return instance of SetSearchKeywordsChange
      */
-    public static SetSearchKeywordsChange of() {
+    public static SetSearchKeywordsChange of(){
         return new SetSearchKeywordsChangeImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy SetSearchKeywordsChange
@@ -145,8 +151,7 @@ public interface SetSearchKeywordsChange extends Change {
         SetSearchKeywordsChangeImpl instance = new SetSearchKeywordsChangeImpl();
         instance.setChange(template.getChange());
         instance.setCatalogData(template.getCatalogData());
-        instance.setPreviousValue(
-            com.commercetools.history.models.common.SearchKeywords.deepCopy(template.getPreviousValue()));
+        instance.setPreviousValue(com.commercetools.history.models.common.SearchKeywords.deepCopy(template.getPreviousValue()));
         instance.setNextValue(com.commercetools.history.models.common.SearchKeywords.deepCopy(template.getNextValue()));
         return instance;
     }
@@ -158,7 +163,7 @@ public interface SetSearchKeywordsChange extends Change {
     public static SetSearchKeywordsChangeBuilder builder() {
         return SetSearchKeywordsChangeBuilder.of();
     }
-
+    
     /**
      * create builder for SetSearchKeywordsChange instance
      * @param template instance with prefilled values for the builder
@@ -167,6 +172,7 @@ public interface SetSearchKeywordsChange extends Change {
     public static SetSearchKeywordsChangeBuilder builder(final SetSearchKeywordsChange template) {
         return SetSearchKeywordsChangeBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -177,7 +183,7 @@ public interface SetSearchKeywordsChange extends Change {
     default <T> T withSetSearchKeywordsChange(Function<SetSearchKeywordsChange, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

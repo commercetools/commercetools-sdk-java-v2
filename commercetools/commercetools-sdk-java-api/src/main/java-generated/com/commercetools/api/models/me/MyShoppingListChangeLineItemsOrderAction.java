@@ -1,17 +1,20 @@
-
 package com.commercetools.api.models.me;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
+import com.commercetools.api.models.me.MyShoppingListUpdateAction;
+import com.commercetools.api.models.me.MyShoppingListChangeLineItemsOrderActionImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * MyShoppingListChangeLineItemsOrderAction
@@ -24,9 +27,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .plusLineItemOrder(lineItemOrderBuilder -> lineItemOrderBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = MyShoppingListChangeLineItemsOrderActionImpl.class)
 public interface MyShoppingListChangeLineItemsOrderAction extends MyShoppingListUpdateAction {
 
@@ -47,24 +53,24 @@ public interface MyShoppingListChangeLineItemsOrderAction extends MyShoppingList
      *  <p>All existing ShoppingListLineItem <code>id</code>s of the ShoppingList in the desired new order.</p>
      * @param lineItemOrder values to be set
      */
-
+    
     @JsonIgnore
-    public void setLineItemOrder(final String... lineItemOrder);
-
+    public void setLineItemOrder(final String ...lineItemOrder);
     /**
      *  <p>All existing ShoppingListLineItem <code>id</code>s of the ShoppingList in the desired new order.</p>
      * @param lineItemOrder values to be set
      */
-
+    
     public void setLineItemOrder(final List<String> lineItemOrder);
 
     /**
      * factory method
      * @return instance of MyShoppingListChangeLineItemsOrderAction
      */
-    public static MyShoppingListChangeLineItemsOrderAction of() {
+    public static MyShoppingListChangeLineItemsOrderAction of(){
         return new MyShoppingListChangeLineItemsOrderActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy MyShoppingListChangeLineItemsOrderAction
@@ -83,13 +89,14 @@ public interface MyShoppingListChangeLineItemsOrderAction extends MyShoppingList
      * @return copy instance
      */
     @Nullable
-    public static MyShoppingListChangeLineItemsOrderAction deepCopy(
-            @Nullable final MyShoppingListChangeLineItemsOrderAction template) {
+    public static MyShoppingListChangeLineItemsOrderAction deepCopy(@Nullable final MyShoppingListChangeLineItemsOrderAction template) {
         if (template == null) {
             return null;
         }
         MyShoppingListChangeLineItemsOrderActionImpl instance = new MyShoppingListChangeLineItemsOrderActionImpl();
-        instance.setLineItemOrder(Optional.ofNullable(template.getLineItemOrder()).map(ArrayList::new).orElse(null));
+        instance.setLineItemOrder(Optional.ofNullable(template.getLineItemOrder())
+                .map(ArrayList::new)
+                .orElse(null));
         return instance;
     }
 
@@ -100,16 +107,16 @@ public interface MyShoppingListChangeLineItemsOrderAction extends MyShoppingList
     public static MyShoppingListChangeLineItemsOrderActionBuilder builder() {
         return MyShoppingListChangeLineItemsOrderActionBuilder.of();
     }
-
+    
     /**
      * create builder for MyShoppingListChangeLineItemsOrderAction instance
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static MyShoppingListChangeLineItemsOrderActionBuilder builder(
-            final MyShoppingListChangeLineItemsOrderAction template) {
+    public static MyShoppingListChangeLineItemsOrderActionBuilder builder(final MyShoppingListChangeLineItemsOrderAction template) {
         return MyShoppingListChangeLineItemsOrderActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -117,11 +124,10 @@ public interface MyShoppingListChangeLineItemsOrderAction extends MyShoppingList
      * @param helper function to map the object
      * @return mapped value
      */
-    default <T> T withMyShoppingListChangeLineItemsOrderAction(
-            Function<MyShoppingListChangeLineItemsOrderAction, T> helper) {
+    default <T> T withMyShoppingListChangeLineItemsOrderAction(Function<MyShoppingListChangeLineItemsOrderAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

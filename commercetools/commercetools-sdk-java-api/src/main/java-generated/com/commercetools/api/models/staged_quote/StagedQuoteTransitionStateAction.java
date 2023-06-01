@@ -1,19 +1,21 @@
-
 package com.commercetools.api.models.staged_quote;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
+import com.commercetools.api.models.staged_quote.StagedQuoteUpdateAction;
 import com.commercetools.api.models.state.StateResourceIdentifier;
+import com.commercetools.api.models.staged_quote.StagedQuoteTransitionStateActionImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>If the existing State has set <code>transitions</code>, there must be a direct transition to the new State. If <code>transitions</code> is not set, no validation is performed. This update action produces the Staged Quote State Transition Message.</p>
@@ -26,9 +28,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .state(stateBuilder -> stateBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = StagedQuoteTransitionStateActionImpl.class)
 public interface StagedQuoteTransitionStateAction extends StagedQuoteUpdateAction {
 
@@ -45,12 +50,11 @@ public interface StagedQuoteTransitionStateAction extends StagedQuoteUpdateActio
     @Valid
     @JsonProperty("state")
     public StateResourceIdentifier getState();
-
     /**
      *  <p>Switch validations on or off.</p>
      * @return force
      */
-
+    
     @JsonProperty("force")
     public Boolean getForce();
 
@@ -58,23 +62,26 @@ public interface StagedQuoteTransitionStateAction extends StagedQuoteUpdateActio
      *  <p>Value to set. If there is no State yet, the new State must be an initial State.</p>
      * @param state value to be set
      */
-
+    
     public void setState(final StateResourceIdentifier state);
-
+    
+    
     /**
      *  <p>Switch validations on or off.</p>
      * @param force value to be set
      */
-
+    
     public void setForce(final Boolean force);
+    
 
     /**
      * factory method
      * @return instance of StagedQuoteTransitionStateAction
      */
-    public static StagedQuoteTransitionStateAction of() {
+    public static StagedQuoteTransitionStateAction of(){
         return new StagedQuoteTransitionStateActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy StagedQuoteTransitionStateAction
@@ -111,7 +118,7 @@ public interface StagedQuoteTransitionStateAction extends StagedQuoteUpdateActio
     public static StagedQuoteTransitionStateActionBuilder builder() {
         return StagedQuoteTransitionStateActionBuilder.of();
     }
-
+    
     /**
      * create builder for StagedQuoteTransitionStateAction instance
      * @param template instance with prefilled values for the builder
@@ -120,6 +127,7 @@ public interface StagedQuoteTransitionStateAction extends StagedQuoteUpdateActio
     public static StagedQuoteTransitionStateActionBuilder builder(final StagedQuoteTransitionStateAction template) {
         return StagedQuoteTransitionStateActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -130,7 +138,7 @@ public interface StagedQuoteTransitionStateAction extends StagedQuoteUpdateActio
     default <T> T withStagedQuoteTransitionStateAction(Function<StagedQuoteTransitionStateAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

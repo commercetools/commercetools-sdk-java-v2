@@ -1,8 +1,11 @@
-
 package com.commercetools.importapi.models.order_patches;
 
-import java.util.*;
 
+import com.commercetools.importapi.models.order_patches.RemoveParcelFromDeliveryDraft;
+import javax.annotation.Nullable;
+import java.util.*;
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -16,30 +19,39 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .parcelId("{parcelId}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class RemoveParcelFromDeliveryDraftBuilder implements Builder<RemoveParcelFromDeliveryDraft> {
 
+    
+    
     private String parcelId;
 
+    
     /**
      * set the value to the parcelId
      * @param parcelId value to be set
      * @return Builder
      */
-
-    public RemoveParcelFromDeliveryDraftBuilder parcelId(final String parcelId) {
+    
+    public RemoveParcelFromDeliveryDraftBuilder parcelId( final String parcelId) {
         this.parcelId = parcelId;
         return this;
     }
+    
+    
 
     /**
      * value of parcelId}
      * @return parcelId
      */
-
-    public String getParcelId() {
+    
+    
+    public String getParcelId(){
         return this.parcelId;
     }
 
@@ -51,7 +63,7 @@ public class RemoveParcelFromDeliveryDraftBuilder implements Builder<RemoveParce
         Objects.requireNonNull(parcelId, RemoveParcelFromDeliveryDraft.class + ": parcelId is missing");
         return new RemoveParcelFromDeliveryDraftImpl(parcelId);
     }
-
+    
     /**
      * builds RemoveParcelFromDeliveryDraft without checking for non-null required values
      * @return RemoveParcelFromDeliveryDraft
@@ -62,7 +74,7 @@ public class RemoveParcelFromDeliveryDraftBuilder implements Builder<RemoveParce
 
     /**
      * factory method for an instance of RemoveParcelFromDeliveryDraftBuilder
-     * @return builder
+     * @return builder 
      */
     public static RemoveParcelFromDeliveryDraftBuilder of() {
         return new RemoveParcelFromDeliveryDraftBuilder();

@@ -1,19 +1,21 @@
-
 package com.commercetools.api.models.business_unit;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-import java.util.stream.Collectors;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
+import com.commercetools.api.models.business_unit.AssociateDraft;
+import com.commercetools.api.models.business_unit.BusinessUnitUpdateAction;
+import com.commercetools.api.models.business_unit.BusinessUnitSetAssociatesActionImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Changes the Associates of a Business Unit, generates a BusinessUnitAssociatesSet Message.</p>
@@ -26,9 +28,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .plusAssociates(associatesBuilder -> associatesBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = BusinessUnitSetAssociatesActionImpl.class)
 public interface BusinessUnitSetAssociatesAction extends BusinessUnitUpdateAction {
 
@@ -50,24 +55,24 @@ public interface BusinessUnitSetAssociatesAction extends BusinessUnitUpdateActio
      *  <p>The new list of Associates. If not provided, any existing list is removed.</p>
      * @param associates values to be set
      */
-
+    
     @JsonIgnore
-    public void setAssociates(final AssociateDraft... associates);
-
+    public void setAssociates(final AssociateDraft ...associates);
     /**
      *  <p>The new list of Associates. If not provided, any existing list is removed.</p>
      * @param associates values to be set
      */
-
+    
     public void setAssociates(final List<AssociateDraft> associates);
 
     /**
      * factory method
      * @return instance of BusinessUnitSetAssociatesAction
      */
-    public static BusinessUnitSetAssociatesAction of() {
+    public static BusinessUnitSetAssociatesAction of(){
         return new BusinessUnitSetAssociatesActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy BusinessUnitSetAssociatesAction
@@ -92,9 +97,7 @@ public interface BusinessUnitSetAssociatesAction extends BusinessUnitUpdateActio
         }
         BusinessUnitSetAssociatesActionImpl instance = new BusinessUnitSetAssociatesActionImpl();
         instance.setAssociates(Optional.ofNullable(template.getAssociates())
-                .map(t -> t.stream()
-                        .map(com.commercetools.api.models.business_unit.AssociateDraft::deepCopy)
-                        .collect(Collectors.toList()))
+                .map(t -> t.stream().map(com.commercetools.api.models.business_unit.AssociateDraft::deepCopy).collect(Collectors.toList()))
                 .orElse(null));
         return instance;
     }
@@ -106,7 +109,7 @@ public interface BusinessUnitSetAssociatesAction extends BusinessUnitUpdateActio
     public static BusinessUnitSetAssociatesActionBuilder builder() {
         return BusinessUnitSetAssociatesActionBuilder.of();
     }
-
+    
     /**
      * create builder for BusinessUnitSetAssociatesAction instance
      * @param template instance with prefilled values for the builder
@@ -115,6 +118,7 @@ public interface BusinessUnitSetAssociatesAction extends BusinessUnitUpdateActio
     public static BusinessUnitSetAssociatesActionBuilder builder(final BusinessUnitSetAssociatesAction template) {
         return BusinessUnitSetAssociatesActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -125,7 +129,7 @@ public interface BusinessUnitSetAssociatesAction extends BusinessUnitUpdateActio
     default <T> T withBusinessUnitSetAssociatesAction(Function<BusinessUnitSetAssociatesAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

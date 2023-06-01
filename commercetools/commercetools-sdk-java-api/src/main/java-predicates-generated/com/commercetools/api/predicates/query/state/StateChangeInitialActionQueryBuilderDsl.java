@@ -1,9 +1,11 @@
-
 package com.commercetools.api.predicates.query.state;
 
 import com.commercetools.api.predicates.query.*;
 
-public class StateChangeInitialActionQueryBuilderDsl {
+import java.util.function.Function;
+
+
+public class StateChangeInitialActionQueryBuilderDsl  {
     public StateChangeInitialActionQueryBuilderDsl() {
     }
 
@@ -12,15 +14,12 @@ public class StateChangeInitialActionQueryBuilderDsl {
     }
 
     public StringComparisonPredicateBuilder<StateChangeInitialActionQueryBuilderDsl> action() {
-        return new StringComparisonPredicateBuilder<>(
-            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("action")),
-            p -> new CombinationQueryPredicate<>(p, StateChangeInitialActionQueryBuilderDsl::of));
+        return new StringComparisonPredicateBuilder<>(BinaryQueryPredicate.of().left(new ConstantQueryPredicate("action")),
+        p -> new CombinationQueryPredicate<>(p, StateChangeInitialActionQueryBuilderDsl::of));
     }
-
     public BooleanComparisonPredicateBuilder<StateChangeInitialActionQueryBuilderDsl> initial() {
-        return new BooleanComparisonPredicateBuilder<>(
-            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("initial")),
-            p -> new CombinationQueryPredicate<>(p, StateChangeInitialActionQueryBuilderDsl::of));
+        return new BooleanComparisonPredicateBuilder<>(BinaryQueryPredicate.of().left(new ConstantQueryPredicate("initial")),
+        p -> new CombinationQueryPredicate<>(p, StateChangeInitialActionQueryBuilderDsl::of));
     }
-
+    
 }

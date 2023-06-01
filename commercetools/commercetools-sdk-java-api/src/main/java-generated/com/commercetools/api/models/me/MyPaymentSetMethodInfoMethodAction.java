@@ -1,16 +1,20 @@
-
 package com.commercetools.api.models.me;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
+import com.commercetools.api.models.me.MyPaymentUpdateAction;
+import com.commercetools.api.models.me.MyPaymentSetMethodInfoMethodActionImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * MyPaymentSetMethodInfoMethodAction
@@ -22,9 +26,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     MyPaymentSetMethodInfoMethodAction myPaymentSetMethodInfoMethodAction = MyPaymentSetMethodInfoMethodAction.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = MyPaymentSetMethodInfoMethodActionImpl.class)
 public interface MyPaymentSetMethodInfoMethodAction extends MyPaymentUpdateAction {
 
@@ -37,7 +44,7 @@ public interface MyPaymentSetMethodInfoMethodAction extends MyPaymentUpdateActio
      *  <p>Value to set. If empty, any existing value will be removed.</p>
      * @return method
      */
-
+    
     @JsonProperty("method")
     public String getMethod();
 
@@ -45,16 +52,18 @@ public interface MyPaymentSetMethodInfoMethodAction extends MyPaymentUpdateActio
      *  <p>Value to set. If empty, any existing value will be removed.</p>
      * @param method value to be set
      */
-
+    
     public void setMethod(final String method);
+    
 
     /**
      * factory method
      * @return instance of MyPaymentSetMethodInfoMethodAction
      */
-    public static MyPaymentSetMethodInfoMethodAction of() {
+    public static MyPaymentSetMethodInfoMethodAction of(){
         return new MyPaymentSetMethodInfoMethodActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy MyPaymentSetMethodInfoMethodAction
@@ -73,8 +82,7 @@ public interface MyPaymentSetMethodInfoMethodAction extends MyPaymentUpdateActio
      * @return copy instance
      */
     @Nullable
-    public static MyPaymentSetMethodInfoMethodAction deepCopy(
-            @Nullable final MyPaymentSetMethodInfoMethodAction template) {
+    public static MyPaymentSetMethodInfoMethodAction deepCopy(@Nullable final MyPaymentSetMethodInfoMethodAction template) {
         if (template == null) {
             return null;
         }
@@ -90,7 +98,7 @@ public interface MyPaymentSetMethodInfoMethodAction extends MyPaymentUpdateActio
     public static MyPaymentSetMethodInfoMethodActionBuilder builder() {
         return MyPaymentSetMethodInfoMethodActionBuilder.of();
     }
-
+    
     /**
      * create builder for MyPaymentSetMethodInfoMethodAction instance
      * @param template instance with prefilled values for the builder
@@ -99,6 +107,7 @@ public interface MyPaymentSetMethodInfoMethodAction extends MyPaymentUpdateActio
     public static MyPaymentSetMethodInfoMethodActionBuilder builder(final MyPaymentSetMethodInfoMethodAction template) {
         return MyPaymentSetMethodInfoMethodActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -109,7 +118,7 @@ public interface MyPaymentSetMethodInfoMethodAction extends MyPaymentUpdateActio
     default <T> T withMyPaymentSetMethodInfoMethodAction(Function<MyPaymentSetMethodInfoMethodAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

@@ -1,17 +1,21 @@
-
 package com.commercetools.api.models.product_discount;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-
+import com.commercetools.api.models.common.ReferenceTypeId;
 import com.commercetools.api.models.common.ResourceIdentifier;
+import com.commercetools.api.models.product_discount.ProductDiscountResourceIdentifierImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>ResourceIdentifier to a ProductDiscount.</p>
@@ -23,12 +27,14 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     ProductDiscountResourceIdentifier productDiscountResourceIdentifier = ProductDiscountResourceIdentifier.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = ProductDiscountResourceIdentifierImpl.class)
-public interface ProductDiscountResourceIdentifier
-        extends ResourceIdentifier, com.commercetools.api.models.Identifiable<ProductDiscount> {
+public interface ProductDiscountResourceIdentifier extends ResourceIdentifier, com.commercetools.api.models.Identifiable<ProductDiscount> {
 
     /**
      * discriminator value for ProductDiscountResourceIdentifier
@@ -39,15 +45,14 @@ public interface ProductDiscountResourceIdentifier
      *  <p>Unique identifier of the referenced ProductDiscount. Either <code>id</code> or <code>key</code> is required.</p>
      * @return id
      */
-
+    
     @JsonProperty("id")
     public String getId();
-
     /**
      *  <p>User-defined unique identifier of the referenced ProductDiscount. Either <code>id</code> or <code>key</code> is required.</p>
      * @return key
      */
-
+    
     @JsonProperty("key")
     public String getKey();
 
@@ -55,23 +60,26 @@ public interface ProductDiscountResourceIdentifier
      *  <p>Unique identifier of the referenced ProductDiscount. Either <code>id</code> or <code>key</code> is required.</p>
      * @param id value to be set
      */
-
+    
     public void setId(final String id);
-
+    
+    
     /**
      *  <p>User-defined unique identifier of the referenced ProductDiscount. Either <code>id</code> or <code>key</code> is required.</p>
      * @param key value to be set
      */
-
+    
     public void setKey(final String key);
+    
 
     /**
      * factory method
      * @return instance of ProductDiscountResourceIdentifier
      */
-    public static ProductDiscountResourceIdentifier of() {
+    public static ProductDiscountResourceIdentifier of(){
         return new ProductDiscountResourceIdentifierImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy ProductDiscountResourceIdentifier
@@ -91,8 +99,7 @@ public interface ProductDiscountResourceIdentifier
      * @return copy instance
      */
     @Nullable
-    public static ProductDiscountResourceIdentifier deepCopy(
-            @Nullable final ProductDiscountResourceIdentifier template) {
+    public static ProductDiscountResourceIdentifier deepCopy(@Nullable final ProductDiscountResourceIdentifier template) {
         if (template == null) {
             return null;
         }
@@ -109,7 +116,7 @@ public interface ProductDiscountResourceIdentifier
     public static ProductDiscountResourceIdentifierBuilder builder() {
         return ProductDiscountResourceIdentifierBuilder.of();
     }
-
+    
     /**
      * create builder for ProductDiscountResourceIdentifier instance
      * @param template instance with prefilled values for the builder
@@ -118,6 +125,7 @@ public interface ProductDiscountResourceIdentifier
     public static ProductDiscountResourceIdentifierBuilder builder(final ProductDiscountResourceIdentifier template) {
         return ProductDiscountResourceIdentifierBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -128,7 +136,7 @@ public interface ProductDiscountResourceIdentifier
     default <T> T withProductDiscountResourceIdentifier(Function<ProductDiscountResourceIdentifier, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

@@ -1,16 +1,20 @@
-
 package com.commercetools.api.models.message;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
+import com.commercetools.api.models.message.MessagePayload;
+import com.commercetools.api.models.message.QuoteRequestDeletedMessagePayloadImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Generated after a successful Delete Quote Request request.</p>
@@ -22,9 +26,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     QuoteRequestDeletedMessagePayload quoteRequestDeletedMessagePayload = QuoteRequestDeletedMessagePayload.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = QuoteRequestDeletedMessagePayloadImpl.class)
 public interface QuoteRequestDeletedMessagePayload extends MessagePayload {
 
@@ -33,13 +40,16 @@ public interface QuoteRequestDeletedMessagePayload extends MessagePayload {
      */
     String QUOTE_REQUEST_DELETED = "QuoteRequestDeleted";
 
+
+
     /**
      * factory method
      * @return instance of QuoteRequestDeletedMessagePayload
      */
-    public static QuoteRequestDeletedMessagePayload of() {
+    public static QuoteRequestDeletedMessagePayload of(){
         return new QuoteRequestDeletedMessagePayloadImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy QuoteRequestDeletedMessagePayload
@@ -57,8 +67,7 @@ public interface QuoteRequestDeletedMessagePayload extends MessagePayload {
      * @return copy instance
      */
     @Nullable
-    public static QuoteRequestDeletedMessagePayload deepCopy(
-            @Nullable final QuoteRequestDeletedMessagePayload template) {
+    public static QuoteRequestDeletedMessagePayload deepCopy(@Nullable final QuoteRequestDeletedMessagePayload template) {
         if (template == null) {
             return null;
         }
@@ -73,7 +82,7 @@ public interface QuoteRequestDeletedMessagePayload extends MessagePayload {
     public static QuoteRequestDeletedMessagePayloadBuilder builder() {
         return QuoteRequestDeletedMessagePayloadBuilder.of();
     }
-
+    
     /**
      * create builder for QuoteRequestDeletedMessagePayload instance
      * @param template instance with prefilled values for the builder
@@ -82,6 +91,7 @@ public interface QuoteRequestDeletedMessagePayload extends MessagePayload {
     public static QuoteRequestDeletedMessagePayloadBuilder builder(final QuoteRequestDeletedMessagePayload template) {
         return QuoteRequestDeletedMessagePayloadBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -92,7 +102,7 @@ public interface QuoteRequestDeletedMessagePayload extends MessagePayload {
     default <T> T withQuoteRequestDeletedMessagePayload(Function<QuoteRequestDeletedMessagePayload, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

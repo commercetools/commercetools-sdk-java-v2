@@ -1,19 +1,21 @@
-
 package com.commercetools.api.models.error;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
+import com.commercetools.api.models.error.GraphQLErrorObject;
 import com.commercetools.api.models.product.ProductReference;
+import com.commercetools.api.models.error.GraphQLProductAssignmentMissingErrorImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Returned when a Product is not assigned to the Product Selection. The error is returned as a failed response either to the Set Variant Selection or to the Set Variant Exclusion update action.</p>
@@ -26,9 +28,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .product(productBuilder -> productBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = GraphQLProductAssignmentMissingErrorImpl.class)
 public interface GraphQLProductAssignmentMissingError extends GraphQLErrorObject {
 
@@ -44,7 +49,6 @@ public interface GraphQLProductAssignmentMissingError extends GraphQLErrorObject
     @NotNull
     @JsonProperty("code")
     public String getCode();
-
     /**
      *  <p>Reference to the Product for which the error was returned.</p>
      * @return product
@@ -58,16 +62,18 @@ public interface GraphQLProductAssignmentMissingError extends GraphQLErrorObject
      *  <p>Reference to the Product for which the error was returned.</p>
      * @param product value to be set
      */
-
+    
     public void setProduct(final ProductReference product);
+    
 
     /**
      * factory method
      * @return instance of GraphQLProductAssignmentMissingError
      */
-    public static GraphQLProductAssignmentMissingError of() {
+    public static GraphQLProductAssignmentMissingError of(){
         return new GraphQLProductAssignmentMissingErrorImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy GraphQLProductAssignmentMissingError
@@ -87,8 +93,7 @@ public interface GraphQLProductAssignmentMissingError extends GraphQLErrorObject
      * @return copy instance
      */
     @Nullable
-    public static GraphQLProductAssignmentMissingError deepCopy(
-            @Nullable final GraphQLProductAssignmentMissingError template) {
+    public static GraphQLProductAssignmentMissingError deepCopy(@Nullable final GraphQLProductAssignmentMissingError template) {
         if (template == null) {
             return null;
         }
@@ -105,16 +110,16 @@ public interface GraphQLProductAssignmentMissingError extends GraphQLErrorObject
     public static GraphQLProductAssignmentMissingErrorBuilder builder() {
         return GraphQLProductAssignmentMissingErrorBuilder.of();
     }
-
+    
     /**
      * create builder for GraphQLProductAssignmentMissingError instance
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static GraphQLProductAssignmentMissingErrorBuilder builder(
-            final GraphQLProductAssignmentMissingError template) {
+    public static GraphQLProductAssignmentMissingErrorBuilder builder(final GraphQLProductAssignmentMissingError template) {
         return GraphQLProductAssignmentMissingErrorBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -125,7 +130,7 @@ public interface GraphQLProductAssignmentMissingError extends GraphQLErrorObject
     default <T> T withGraphQLProductAssignmentMissingError(Function<GraphQLProductAssignmentMissingError, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

@@ -1,19 +1,20 @@
-
 package com.commercetools.api.models.me;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-import java.util.stream.Collectors;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
+import com.commercetools.api.models.me.MyCartUpdateAction;
+import com.commercetools.api.models.me.MyCartUpdateImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * MyCartUpdate
@@ -27,12 +28,15 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .plusActions(actionsBuilder -> actionsBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = MyCartUpdateImpl.class)
-public interface MyCartUpdate
-        extends com.commercetools.api.models.ResourceUpdate<MyCartUpdate, MyCartUpdateAction, MyCartUpdateBuilder> {
+public interface MyCartUpdate extends com.commercetools.api.models.ResourceUpdate<MyCartUpdate, MyCartUpdateAction, MyCartUpdateBuilder> {
+
 
     /**
      *  <p>Expected version of the Cart on which the changes apply. If it does not match the actual version, a 409 Conflict error is returned.</p>
@@ -41,7 +45,6 @@ public interface MyCartUpdate
     @NotNull
     @JsonProperty("version")
     public Long getVersion();
-
     /**
      *  <p>Update actions to be performed on the Cart.</p>
      * @return actions
@@ -55,31 +58,32 @@ public interface MyCartUpdate
      *  <p>Expected version of the Cart on which the changes apply. If it does not match the actual version, a 409 Conflict error is returned.</p>
      * @param version value to be set
      */
-
+    
     public void setVersion(final Long version);
-
+    
+    
     /**
      *  <p>Update actions to be performed on the Cart.</p>
      * @param actions values to be set
      */
-
+    
     @JsonIgnore
-    public void setActions(final MyCartUpdateAction... actions);
-
+    public void setActions(final MyCartUpdateAction ...actions);
     /**
      *  <p>Update actions to be performed on the Cart.</p>
      * @param actions values to be set
      */
-
+    
     public void setActions(final List<MyCartUpdateAction> actions);
 
     /**
      * factory method
      * @return instance of MyCartUpdate
      */
-    public static MyCartUpdate of() {
+    public static MyCartUpdate of(){
         return new MyCartUpdateImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy MyCartUpdate
@@ -106,9 +110,7 @@ public interface MyCartUpdate
         MyCartUpdateImpl instance = new MyCartUpdateImpl();
         instance.setVersion(template.getVersion());
         instance.setActions(Optional.ofNullable(template.getActions())
-                .map(t -> t.stream()
-                        .map(com.commercetools.api.models.me.MyCartUpdateAction::deepCopy)
-                        .collect(Collectors.toList()))
+                .map(t -> t.stream().map(com.commercetools.api.models.me.MyCartUpdateAction::deepCopy).collect(Collectors.toList()))
                 .orElse(null));
         return instance;
     }
@@ -120,7 +122,7 @@ public interface MyCartUpdate
     public static MyCartUpdateBuilder builder() {
         return MyCartUpdateBuilder.of();
     }
-
+    
     /**
      * create builder for MyCartUpdate instance
      * @param template instance with prefilled values for the builder
@@ -129,6 +131,7 @@ public interface MyCartUpdate
     public static MyCartUpdateBuilder builder(final MyCartUpdate template) {
         return MyCartUpdateBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -139,7 +142,7 @@ public interface MyCartUpdate
     default <T> T withMyCartUpdate(Function<MyCartUpdate, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

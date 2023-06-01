@@ -1,8 +1,12 @@
-
 package com.commercetools.ml.models.image_search_config;
 
+import com.commercetools.ml.models.image_search_config.ImageSearchConfigStatus;
+import com.commercetools.ml.models.image_search_config.ImageSearchConfigUpdateAction;
+import com.commercetools.ml.models.image_search_config.ChangeStatusUpdateAction;
+import javax.annotation.Nullable;
 import java.util.*;
-
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -16,31 +20,39 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .status(ImageSearchConfigStatus.ON)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class ChangeStatusUpdateActionBuilder implements Builder<ChangeStatusUpdateAction> {
 
+    
+    
     private com.commercetools.ml.models.image_search_config.ImageSearchConfigStatus status;
 
+    
     /**
      * set the value to the status
      * @param status value to be set
      * @return Builder
      */
-
-    public ChangeStatusUpdateActionBuilder status(
-            final com.commercetools.ml.models.image_search_config.ImageSearchConfigStatus status) {
+    
+    public ChangeStatusUpdateActionBuilder status( final com.commercetools.ml.models.image_search_config.ImageSearchConfigStatus status) {
         this.status = status;
         return this;
     }
+    
+    
 
     /**
      * value of status}
      * @return status
      */
-
-    public com.commercetools.ml.models.image_search_config.ImageSearchConfigStatus getStatus() {
+    
+    
+    public com.commercetools.ml.models.image_search_config.ImageSearchConfigStatus getStatus(){
         return this.status;
     }
 
@@ -52,7 +64,7 @@ public class ChangeStatusUpdateActionBuilder implements Builder<ChangeStatusUpda
         Objects.requireNonNull(status, ChangeStatusUpdateAction.class + ": status is missing");
         return new ChangeStatusUpdateActionImpl(status);
     }
-
+    
     /**
      * builds ChangeStatusUpdateAction without checking for non-null required values
      * @return ChangeStatusUpdateAction
@@ -63,7 +75,7 @@ public class ChangeStatusUpdateActionBuilder implements Builder<ChangeStatusUpda
 
     /**
      * factory method for an instance of ChangeStatusUpdateActionBuilder
-     * @return builder
+     * @return builder 
      */
     public static ChangeStatusUpdateActionBuilder of() {
         return new ChangeStatusUpdateActionBuilder();

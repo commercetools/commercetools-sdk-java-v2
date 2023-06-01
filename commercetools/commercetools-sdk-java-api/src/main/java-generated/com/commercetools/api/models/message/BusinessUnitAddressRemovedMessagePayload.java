@@ -1,19 +1,21 @@
-
 package com.commercetools.api.models.message;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
 import com.commercetools.api.models.common.Address;
+import com.commercetools.api.models.message.MessagePayload;
+import com.commercetools.api.models.message.BusinessUnitAddressRemovedMessagePayloadImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Generated after a successful Remove Address update action.</p>
@@ -26,9 +28,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .address(addressBuilder -> addressBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = BusinessUnitAddressRemovedMessagePayloadImpl.class)
 public interface BusinessUnitAddressRemovedMessagePayload extends MessagePayload {
 
@@ -50,16 +55,18 @@ public interface BusinessUnitAddressRemovedMessagePayload extends MessagePayload
      *  <p>The address that was removed from the Business Unit.</p>
      * @param address value to be set
      */
-
+    
     public void setAddress(final Address address);
+    
 
     /**
      * factory method
      * @return instance of BusinessUnitAddressRemovedMessagePayload
      */
-    public static BusinessUnitAddressRemovedMessagePayload of() {
+    public static BusinessUnitAddressRemovedMessagePayload of(){
         return new BusinessUnitAddressRemovedMessagePayloadImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy BusinessUnitAddressRemovedMessagePayload
@@ -78,8 +85,7 @@ public interface BusinessUnitAddressRemovedMessagePayload extends MessagePayload
      * @return copy instance
      */
     @Nullable
-    public static BusinessUnitAddressRemovedMessagePayload deepCopy(
-            @Nullable final BusinessUnitAddressRemovedMessagePayload template) {
+    public static BusinessUnitAddressRemovedMessagePayload deepCopy(@Nullable final BusinessUnitAddressRemovedMessagePayload template) {
         if (template == null) {
             return null;
         }
@@ -95,16 +101,16 @@ public interface BusinessUnitAddressRemovedMessagePayload extends MessagePayload
     public static BusinessUnitAddressRemovedMessagePayloadBuilder builder() {
         return BusinessUnitAddressRemovedMessagePayloadBuilder.of();
     }
-
+    
     /**
      * create builder for BusinessUnitAddressRemovedMessagePayload instance
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static BusinessUnitAddressRemovedMessagePayloadBuilder builder(
-            final BusinessUnitAddressRemovedMessagePayload template) {
+    public static BusinessUnitAddressRemovedMessagePayloadBuilder builder(final BusinessUnitAddressRemovedMessagePayload template) {
         return BusinessUnitAddressRemovedMessagePayloadBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -112,11 +118,10 @@ public interface BusinessUnitAddressRemovedMessagePayload extends MessagePayload
      * @param helper function to map the object
      * @return mapped value
      */
-    default <T> T withBusinessUnitAddressRemovedMessagePayload(
-            Function<BusinessUnitAddressRemovedMessagePayload, T> helper) {
+    default <T> T withBusinessUnitAddressRemovedMessagePayload(Function<BusinessUnitAddressRemovedMessagePayload, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

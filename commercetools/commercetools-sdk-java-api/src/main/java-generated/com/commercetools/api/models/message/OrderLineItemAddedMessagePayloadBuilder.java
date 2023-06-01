@@ -1,9 +1,12 @@
-
 package com.commercetools.api.models.message;
 
+import com.commercetools.api.models.cart.LineItem;
+import com.commercetools.api.models.message.OrderMessagePayload;
+import com.commercetools.api.models.message.OrderLineItemAddedMessagePayload;
+import javax.annotation.Nullable;
 import java.util.*;
 import java.util.function.Function;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -18,76 +21,89 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .addedQuantity(0.3)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class OrderLineItemAddedMessagePayloadBuilder implements Builder<OrderLineItemAddedMessagePayload> {
 
+    
+    
     private com.commercetools.api.models.cart.LineItem lineItem;
-
+    
+    
+    
     private Long addedQuantity;
 
+    
     /**
      *  <p>Line Item that was added to the Order.</p>
      * @param builder function to build the lineItem value
      * @return Builder
      */
-
-    public OrderLineItemAddedMessagePayloadBuilder lineItem(
-            Function<com.commercetools.api.models.cart.LineItemBuilder, com.commercetools.api.models.cart.LineItemBuilder> builder) {
+    
+    public OrderLineItemAddedMessagePayloadBuilder lineItem(Function<com.commercetools.api.models.cart.LineItemBuilder, com.commercetools.api.models.cart.LineItemBuilder> builder) {
         this.lineItem = builder.apply(com.commercetools.api.models.cart.LineItemBuilder.of()).build();
         return this;
     }
-
+    
     /**
      *  <p>Line Item that was added to the Order.</p>
      * @param builder function to build the lineItem value
      * @return Builder
      */
-
-    public OrderLineItemAddedMessagePayloadBuilder withLineItem(
-            Function<com.commercetools.api.models.cart.LineItemBuilder, com.commercetools.api.models.cart.LineItem> builder) {
+    
+    public OrderLineItemAddedMessagePayloadBuilder withLineItem(Function<com.commercetools.api.models.cart.LineItemBuilder, com.commercetools.api.models.cart.LineItem> builder) {
         this.lineItem = builder.apply(com.commercetools.api.models.cart.LineItemBuilder.of());
         return this;
     }
-
+                    
     /**
      *  <p>Line Item that was added to the Order.</p>
      * @param lineItem value to be set
      * @return Builder
      */
-
-    public OrderLineItemAddedMessagePayloadBuilder lineItem(final com.commercetools.api.models.cart.LineItem lineItem) {
+    
+    public OrderLineItemAddedMessagePayloadBuilder lineItem( final com.commercetools.api.models.cart.LineItem lineItem) {
         this.lineItem = lineItem;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Quantity of Line Items that were added to the Order.</p>
      * @param addedQuantity value to be set
      * @return Builder
      */
-
-    public OrderLineItemAddedMessagePayloadBuilder addedQuantity(final Long addedQuantity) {
+    
+    public OrderLineItemAddedMessagePayloadBuilder addedQuantity( final Long addedQuantity) {
         this.addedQuantity = addedQuantity;
         return this;
     }
+    
+    
 
     /**
      *  <p>Line Item that was added to the Order.</p>
      * @return lineItem
      */
-
-    public com.commercetools.api.models.cart.LineItem getLineItem() {
+    
+    
+    public com.commercetools.api.models.cart.LineItem getLineItem(){
         return this.lineItem;
     }
-
+    
     /**
      *  <p>Quantity of Line Items that were added to the Order.</p>
      * @return addedQuantity
      */
-
-    public Long getAddedQuantity() {
+    
+    
+    public Long getAddedQuantity(){
         return this.addedQuantity;
     }
 
@@ -100,7 +116,7 @@ public class OrderLineItemAddedMessagePayloadBuilder implements Builder<OrderLin
         Objects.requireNonNull(addedQuantity, OrderLineItemAddedMessagePayload.class + ": addedQuantity is missing");
         return new OrderLineItemAddedMessagePayloadImpl(lineItem, addedQuantity);
     }
-
+    
     /**
      * builds OrderLineItemAddedMessagePayload without checking for non-null required values
      * @return OrderLineItemAddedMessagePayload
@@ -111,7 +127,7 @@ public class OrderLineItemAddedMessagePayloadBuilder implements Builder<OrderLin
 
     /**
      * factory method for an instance of OrderLineItemAddedMessagePayloadBuilder
-     * @return builder
+     * @return builder 
      */
     public static OrderLineItemAddedMessagePayloadBuilder of() {
         return new OrderLineItemAddedMessagePayloadBuilder();

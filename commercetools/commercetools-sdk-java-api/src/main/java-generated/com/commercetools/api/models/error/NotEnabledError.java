@@ -1,17 +1,20 @@
-
 package com.commercetools.api.models.error;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
+import com.commercetools.api.models.error.ErrorObject;
+import com.commercetools.api.models.error.NotEnabledErrorImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Returned when the Project-specific category recommendations feature is not enabled for the Project.</p>
@@ -24,9 +27,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .message("{message}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = NotEnabledErrorImpl.class)
 public interface NotEnabledError extends ErrorObject {
 
@@ -42,7 +48,6 @@ public interface NotEnabledError extends ErrorObject {
     @NotNull
     @JsonProperty("code")
     public String getCode();
-
     /**
      *  <p><code>"The category recommendations API is not yet enabled for your project."</code></p>
      * @return message
@@ -55,16 +60,18 @@ public interface NotEnabledError extends ErrorObject {
      *  <p><code>"The category recommendations API is not yet enabled for your project."</code></p>
      * @param message value to be set
      */
-
+    
     public void setMessage(final String message);
+    
 
     /**
      * factory method
      * @return instance of NotEnabledError
      */
-    public static NotEnabledError of() {
+    public static NotEnabledError of(){
         return new NotEnabledErrorImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy NotEnabledError
@@ -101,7 +108,7 @@ public interface NotEnabledError extends ErrorObject {
     public static NotEnabledErrorBuilder builder() {
         return NotEnabledErrorBuilder.of();
     }
-
+    
     /**
      * create builder for NotEnabledError instance
      * @param template instance with prefilled values for the builder
@@ -110,6 +117,7 @@ public interface NotEnabledError extends ErrorObject {
     public static NotEnabledErrorBuilder builder(final NotEnabledError template) {
         return NotEnabledErrorBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -120,7 +128,7 @@ public interface NotEnabledError extends ErrorObject {
     default <T> T withNotEnabledError(Function<NotEnabledError, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

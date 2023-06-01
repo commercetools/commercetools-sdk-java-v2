@@ -1,18 +1,20 @@
-
 package com.commercetools.api.models.common;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
+import com.commercetools.api.models.common.Money;
+import com.commercetools.api.models.common.PriceTierDraftImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Specifies a Price tier that applies when the minimum quantity for the LineItem of a ProductVariant with the related Price is reached in a Cart.</p>
@@ -26,11 +28,15 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .value(valueBuilder -> valueBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = PriceTierDraftImpl.class)
 public interface PriceTierDraft extends io.vrap.rmf.base.client.Draft<PriceTierDraft> {
+
 
     /**
      *  <p>Minimum quantity this Price tier is valid for.</p>
@@ -40,7 +46,6 @@ public interface PriceTierDraft extends io.vrap.rmf.base.client.Draft<PriceTierD
     @NotNull
     @JsonProperty("minimumQuantity")
     public Long getMinimumQuantity();
-
     /**
      *  <p>Money value that applies when the <code>minimumQuantity</code> is greater than or equal to the LineItem <code>quantity</code>.</p>
      *  <p>The <code>currencyCode</code> of a Price tier must be the same as the <code>currencyCode</code> in the <code>value</code> of the related Price.</p>
@@ -56,24 +61,27 @@ public interface PriceTierDraft extends io.vrap.rmf.base.client.Draft<PriceTierD
      *  <p>The minimum quantity is always greater than or equal to 2. The base Price is interpreted as valid for a minimum quantity equal to 1.</p>
      * @param minimumQuantity value to be set
      */
-
+    
     public void setMinimumQuantity(final Long minimumQuantity);
-
+    
+    
     /**
      *  <p>Money value that applies when the <code>minimumQuantity</code> is greater than or equal to the LineItem <code>quantity</code>.</p>
      *  <p>The <code>currencyCode</code> of a Price tier must be the same as the <code>currencyCode</code> in the <code>value</code> of the related Price.</p>
      * @param value value to be set
      */
-
+    
     public void setValue(final Money value);
+    
 
     /**
      * factory method
      * @return instance of PriceTierDraft
      */
-    public static PriceTierDraft of() {
+    public static PriceTierDraft of(){
         return new PriceTierDraftImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy PriceTierDraft
@@ -110,7 +118,7 @@ public interface PriceTierDraft extends io.vrap.rmf.base.client.Draft<PriceTierD
     public static PriceTierDraftBuilder builder() {
         return PriceTierDraftBuilder.of();
     }
-
+    
     /**
      * create builder for PriceTierDraft instance
      * @param template instance with prefilled values for the builder
@@ -119,6 +127,7 @@ public interface PriceTierDraft extends io.vrap.rmf.base.client.Draft<PriceTierD
     public static PriceTierDraftBuilder builder(final PriceTierDraft template) {
         return PriceTierDraftBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -129,7 +138,7 @@ public interface PriceTierDraft extends io.vrap.rmf.base.client.Draft<PriceTierD
     default <T> T withPriceTierDraft(Function<PriceTierDraft, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

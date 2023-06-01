@@ -1,9 +1,12 @@
-
 package com.commercetools.api.models.message;
 
+import com.commercetools.api.models.common.Address;
+import com.commercetools.api.models.message.MessagePayload;
+import com.commercetools.api.models.message.BusinessUnitBillingAddressRemovedMessagePayload;
+import javax.annotation.Nullable;
 import java.util.*;
 import java.util.function.Function;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -17,56 +20,61 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .address(addressBuilder -> addressBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
-public class BusinessUnitBillingAddressRemovedMessagePayloadBuilder
-        implements Builder<BusinessUnitBillingAddressRemovedMessagePayload> {
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
+public class BusinessUnitBillingAddressRemovedMessagePayloadBuilder implements Builder<BusinessUnitBillingAddressRemovedMessagePayload> {
 
+    
+    
     private com.commercetools.api.models.common.Address address;
 
+    
     /**
      *  <p>The address that was removed from the billing addresses of the Business Unit.</p>
      * @param builder function to build the address value
      * @return Builder
      */
-
-    public BusinessUnitBillingAddressRemovedMessagePayloadBuilder address(
-            Function<com.commercetools.api.models.common.AddressBuilder, com.commercetools.api.models.common.AddressBuilder> builder) {
+    
+    public BusinessUnitBillingAddressRemovedMessagePayloadBuilder address(Function<com.commercetools.api.models.common.AddressBuilder, com.commercetools.api.models.common.AddressBuilder> builder) {
         this.address = builder.apply(com.commercetools.api.models.common.AddressBuilder.of()).build();
         return this;
     }
-
+    
     /**
      *  <p>The address that was removed from the billing addresses of the Business Unit.</p>
      * @param builder function to build the address value
      * @return Builder
      */
-
-    public BusinessUnitBillingAddressRemovedMessagePayloadBuilder withAddress(
-            Function<com.commercetools.api.models.common.AddressBuilder, com.commercetools.api.models.common.Address> builder) {
+    
+    public BusinessUnitBillingAddressRemovedMessagePayloadBuilder withAddress(Function<com.commercetools.api.models.common.AddressBuilder, com.commercetools.api.models.common.Address> builder) {
         this.address = builder.apply(com.commercetools.api.models.common.AddressBuilder.of());
         return this;
     }
-
+                    
     /**
      *  <p>The address that was removed from the billing addresses of the Business Unit.</p>
      * @param address value to be set
      * @return Builder
      */
-
-    public BusinessUnitBillingAddressRemovedMessagePayloadBuilder address(
-            final com.commercetools.api.models.common.Address address) {
+    
+    public BusinessUnitBillingAddressRemovedMessagePayloadBuilder address( final com.commercetools.api.models.common.Address address) {
         this.address = address;
         return this;
     }
+    
+    
 
     /**
      *  <p>The address that was removed from the billing addresses of the Business Unit.</p>
      * @return address
      */
-
-    public com.commercetools.api.models.common.Address getAddress() {
+    
+    
+    public com.commercetools.api.models.common.Address getAddress(){
         return this.address;
     }
 
@@ -78,7 +86,7 @@ public class BusinessUnitBillingAddressRemovedMessagePayloadBuilder
         Objects.requireNonNull(address, BusinessUnitBillingAddressRemovedMessagePayload.class + ": address is missing");
         return new BusinessUnitBillingAddressRemovedMessagePayloadImpl(address);
     }
-
+    
     /**
      * builds BusinessUnitBillingAddressRemovedMessagePayload without checking for non-null required values
      * @return BusinessUnitBillingAddressRemovedMessagePayload
@@ -89,7 +97,7 @@ public class BusinessUnitBillingAddressRemovedMessagePayloadBuilder
 
     /**
      * factory method for an instance of BusinessUnitBillingAddressRemovedMessagePayloadBuilder
-     * @return builder
+     * @return builder 
      */
     public static BusinessUnitBillingAddressRemovedMessagePayloadBuilder of() {
         return new BusinessUnitBillingAddressRemovedMessagePayloadBuilder();
@@ -100,8 +108,7 @@ public class BusinessUnitBillingAddressRemovedMessagePayloadBuilder
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static BusinessUnitBillingAddressRemovedMessagePayloadBuilder of(
-            final BusinessUnitBillingAddressRemovedMessagePayload template) {
+    public static BusinessUnitBillingAddressRemovedMessagePayloadBuilder of(final BusinessUnitBillingAddressRemovedMessagePayload template) {
         BusinessUnitBillingAddressRemovedMessagePayloadBuilder builder = new BusinessUnitBillingAddressRemovedMessagePayloadBuilder();
         builder.address = template.getAddress();
         return builder;

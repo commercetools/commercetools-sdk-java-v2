@@ -1,9 +1,11 @@
-
 package com.commercetools.api.predicates.query.product;
 
 import com.commercetools.api.predicates.query.*;
 
-public class SuggestionQueryBuilderDsl {
+import java.util.function.Function;
+
+
+public class SuggestionQueryBuilderDsl  {
     public SuggestionQueryBuilderDsl() {
     }
 
@@ -12,9 +14,8 @@ public class SuggestionQueryBuilderDsl {
     }
 
     public StringComparisonPredicateBuilder<SuggestionQueryBuilderDsl> text() {
-        return new StringComparisonPredicateBuilder<>(
-            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("text")),
-            p -> new CombinationQueryPredicate<>(p, SuggestionQueryBuilderDsl::of));
+        return new StringComparisonPredicateBuilder<>(BinaryQueryPredicate.of().left(new ConstantQueryPredicate("text")),
+        p -> new CombinationQueryPredicate<>(p, SuggestionQueryBuilderDsl::of));
     }
-
+    
 }

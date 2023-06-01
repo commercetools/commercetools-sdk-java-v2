@@ -1,10 +1,11 @@
-
 package com.commercetools.api.models.me;
 
-import java.util.*;
-
+import com.commercetools.api.models.me.MyBusinessUnitUpdateAction;
+import com.commercetools.api.models.me.MyBusinessUnitRemoveAddressAction;
 import javax.annotation.Nullable;
-
+import java.util.*;
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -17,56 +18,67 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     MyBusinessUnitRemoveAddressAction myBusinessUnitRemoveAddressAction = MyBusinessUnitRemoveAddressAction.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class MyBusinessUnitRemoveAddressActionBuilder implements Builder<MyBusinessUnitRemoveAddressAction> {
 
+    
     @Nullable
     private String addressId;
-
+    
+    
     @Nullable
     private String addressKey;
 
+    
     /**
      *  <p>ID of the address to be removed. Either <code>addressId</code> or <code>addressKey</code> is required.</p>
      * @param addressId value to be set
      * @return Builder
      */
-
+    
     public MyBusinessUnitRemoveAddressActionBuilder addressId(@Nullable final String addressId) {
         this.addressId = addressId;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Key of the address to be removed. Either <code>addressId</code> or <code>addressKey</code> is required.</p>
      * @param addressKey value to be set
      * @return Builder
      */
-
+    
     public MyBusinessUnitRemoveAddressActionBuilder addressKey(@Nullable final String addressKey) {
         this.addressKey = addressKey;
         return this;
     }
+    
+    
 
     /**
      *  <p>ID of the address to be removed. Either <code>addressId</code> or <code>addressKey</code> is required.</p>
      * @return addressId
      */
-
+    
     @Nullable
-    public String getAddressId() {
+    public String getAddressId(){
         return this.addressId;
     }
-
+    
     /**
      *  <p>Key of the address to be removed. Either <code>addressId</code> or <code>addressKey</code> is required.</p>
      * @return addressKey
      */
-
+    
     @Nullable
-    public String getAddressKey() {
+    public String getAddressKey(){
         return this.addressKey;
     }
 
@@ -77,7 +89,7 @@ public class MyBusinessUnitRemoveAddressActionBuilder implements Builder<MyBusin
     public MyBusinessUnitRemoveAddressAction build() {
         return new MyBusinessUnitRemoveAddressActionImpl(addressId, addressKey);
     }
-
+    
     /**
      * builds MyBusinessUnitRemoveAddressAction without checking for non-null required values
      * @return MyBusinessUnitRemoveAddressAction
@@ -88,7 +100,7 @@ public class MyBusinessUnitRemoveAddressActionBuilder implements Builder<MyBusin
 
     /**
      * factory method for an instance of MyBusinessUnitRemoveAddressActionBuilder
-     * @return builder
+     * @return builder 
      */
     public static MyBusinessUnitRemoveAddressActionBuilder of() {
         return new MyBusinessUnitRemoveAddressActionBuilder();

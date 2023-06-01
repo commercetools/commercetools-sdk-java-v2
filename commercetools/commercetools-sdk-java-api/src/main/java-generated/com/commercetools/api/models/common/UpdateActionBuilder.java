@@ -1,8 +1,11 @@
-
 package com.commercetools.api.models.common;
 
-import java.util.*;
 
+import com.commercetools.api.models.common.UpdateAction;
+import javax.annotation.Nullable;
+import java.util.*;
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -16,30 +19,39 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .action("{action}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class UpdateActionBuilder implements Builder<UpdateAction> {
 
+    
+    
     private String action;
 
+    
     /**
      * set the value to the action
      * @param action value to be set
      * @return Builder
      */
-
-    public UpdateActionBuilder action(final String action) {
+    
+    public UpdateActionBuilder action( final String action) {
         this.action = action;
         return this;
     }
+    
+    
 
     /**
      * value of action}
      * @return action
      */
-
-    public String getAction() {
+    
+    
+    public String getAction(){
         return this.action;
     }
 
@@ -51,7 +63,7 @@ public class UpdateActionBuilder implements Builder<UpdateAction> {
         Objects.requireNonNull(action, UpdateAction.class + ": action is missing");
         return new UpdateActionImpl(action);
     }
-
+    
     /**
      * builds UpdateAction without checking for non-null required values
      * @return UpdateAction
@@ -62,7 +74,7 @@ public class UpdateActionBuilder implements Builder<UpdateAction> {
 
     /**
      * factory method for an instance of UpdateActionBuilder
-     * @return builder
+     * @return builder 
      */
     public static UpdateActionBuilder of() {
         return new UpdateActionBuilder();

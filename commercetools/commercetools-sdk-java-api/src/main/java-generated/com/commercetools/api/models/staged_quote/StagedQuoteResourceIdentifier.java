@@ -1,17 +1,21 @@
-
 package com.commercetools.api.models.staged_quote;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-
+import com.commercetools.api.models.common.ReferenceTypeId;
 import com.commercetools.api.models.common.ResourceIdentifier;
+import com.commercetools.api.models.staged_quote.StagedQuoteResourceIdentifierImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>ResourceIdentifier to a StagedQuote.</p>
@@ -23,25 +27,30 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     StagedQuoteResourceIdentifier stagedQuoteResourceIdentifier = StagedQuoteResourceIdentifier.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = StagedQuoteResourceIdentifierImpl.class)
-public interface StagedQuoteResourceIdentifier
-        extends ResourceIdentifier, com.commercetools.api.models.Identifiable<StagedQuote> {
+public interface StagedQuoteResourceIdentifier extends ResourceIdentifier, com.commercetools.api.models.Identifiable<StagedQuote> {
 
     /**
      * discriminator value for StagedQuoteResourceIdentifier
      */
     String STAGED_QUOTE = "staged-quote";
 
+
+
     /**
      * factory method
      * @return instance of StagedQuoteResourceIdentifier
      */
-    public static StagedQuoteResourceIdentifier of() {
+    public static StagedQuoteResourceIdentifier of(){
         return new StagedQuoteResourceIdentifierImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy StagedQuoteResourceIdentifier
@@ -78,7 +87,7 @@ public interface StagedQuoteResourceIdentifier
     public static StagedQuoteResourceIdentifierBuilder builder() {
         return StagedQuoteResourceIdentifierBuilder.of();
     }
-
+    
     /**
      * create builder for StagedQuoteResourceIdentifier instance
      * @param template instance with prefilled values for the builder
@@ -87,6 +96,7 @@ public interface StagedQuoteResourceIdentifier
     public static StagedQuoteResourceIdentifierBuilder builder(final StagedQuoteResourceIdentifier template) {
         return StagedQuoteResourceIdentifierBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -97,7 +107,7 @@ public interface StagedQuoteResourceIdentifier
     default <T> T withStagedQuoteResourceIdentifier(Function<StagedQuoteResourceIdentifier, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

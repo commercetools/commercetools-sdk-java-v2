@@ -1,9 +1,13 @@
-
 package com.commercetools.importapi.models.importrequests;
 
+import com.commercetools.importapi.models.common.ImportResourceType;
+import com.commercetools.importapi.models.importrequests.ImportRequest;
+import com.commercetools.importapi.models.order_patches.OrderPatchImport;
+import com.commercetools.importapi.models.importrequests.OrderPatchImportRequest;
+import javax.annotation.Nullable;
 import java.util.*;
 import java.util.function.Function;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -17,11 +21,16 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .plusPatches(patchesBuilder -> patchesBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class OrderPatchImportRequestBuilder implements Builder<OrderPatchImportRequest> {
 
+    
+    
     private java.util.List<com.commercetools.importapi.models.order_patches.OrderPatchImport> patches;
 
     /**
@@ -29,99 +38,93 @@ public class OrderPatchImportRequestBuilder implements Builder<OrderPatchImportR
      * @param patches value to be set
      * @return Builder
      */
-
-    public OrderPatchImportRequestBuilder patches(
-            final com.commercetools.importapi.models.order_patches.OrderPatchImport... patches) {
+    
+    public OrderPatchImportRequestBuilder patches( final com.commercetools.importapi.models.order_patches.OrderPatchImport ...patches) {
         this.patches = new ArrayList<>(Arrays.asList(patches));
         return this;
     }
-
+    
     /**
      *  <p>The order patches of this request</p>
      * @param patches value to be set
      * @return Builder
      */
-
-    public OrderPatchImportRequestBuilder patches(
-            final java.util.List<com.commercetools.importapi.models.order_patches.OrderPatchImport> patches) {
+    
+    public OrderPatchImportRequestBuilder patches( final java.util.List<com.commercetools.importapi.models.order_patches.OrderPatchImport> patches) {
         this.patches = patches;
         return this;
     }
-
+    
     /**
      *  <p>The order patches of this request</p>
      * @param patches value to be set
      * @return Builder
      */
-
-    public OrderPatchImportRequestBuilder plusPatches(
-            final com.commercetools.importapi.models.order_patches.OrderPatchImport... patches) {
+    
+    public OrderPatchImportRequestBuilder plusPatches( final com.commercetools.importapi.models.order_patches.OrderPatchImport ...patches) {
         if (this.patches == null) {
             this.patches = new ArrayList<>();
         }
         this.patches.addAll(Arrays.asList(patches));
         return this;
     }
-
+    
+    
+    
     /**
      *  <p>The order patches of this request</p>
      * @param builder function to build the patches value
      * @return Builder
      */
-
-    public OrderPatchImportRequestBuilder plusPatches(
-            Function<com.commercetools.importapi.models.order_patches.OrderPatchImportBuilder, com.commercetools.importapi.models.order_patches.OrderPatchImportBuilder> builder) {
+    
+    public OrderPatchImportRequestBuilder plusPatches(Function<com.commercetools.importapi.models.order_patches.OrderPatchImportBuilder, com.commercetools.importapi.models.order_patches.OrderPatchImportBuilder> builder) {
         if (this.patches == null) {
             this.patches = new ArrayList<>();
         }
-        this.patches.add(
-            builder.apply(com.commercetools.importapi.models.order_patches.OrderPatchImportBuilder.of()).build());
+        this.patches.add(builder.apply(com.commercetools.importapi.models.order_patches.OrderPatchImportBuilder.of()).build());
         return this;
     }
-
+    
     /**
      *  <p>The order patches of this request</p>
      * @param builder function to build the patches value
      * @return Builder
      */
-
-    public OrderPatchImportRequestBuilder withPatches(
-            Function<com.commercetools.importapi.models.order_patches.OrderPatchImportBuilder, com.commercetools.importapi.models.order_patches.OrderPatchImportBuilder> builder) {
+    
+    public OrderPatchImportRequestBuilder withPatches(Function<com.commercetools.importapi.models.order_patches.OrderPatchImportBuilder, com.commercetools.importapi.models.order_patches.OrderPatchImportBuilder> builder) {
         this.patches = new ArrayList<>();
-        this.patches.add(
-            builder.apply(com.commercetools.importapi.models.order_patches.OrderPatchImportBuilder.of()).build());
+        this.patches.add(builder.apply(com.commercetools.importapi.models.order_patches.OrderPatchImportBuilder.of()).build());
         return this;
     }
-
+    
     /**
      *  <p>The order patches of this request</p>
      * @param builder function to build the patches value
      * @return Builder
      */
-
-    public OrderPatchImportRequestBuilder addPatches(
-            Function<com.commercetools.importapi.models.order_patches.OrderPatchImportBuilder, com.commercetools.importapi.models.order_patches.OrderPatchImport> builder) {
-        return plusPatches(
-            builder.apply(com.commercetools.importapi.models.order_patches.OrderPatchImportBuilder.of()));
+    
+    public OrderPatchImportRequestBuilder addPatches(Function<com.commercetools.importapi.models.order_patches.OrderPatchImportBuilder, com.commercetools.importapi.models.order_patches.OrderPatchImport> builder) {
+        return plusPatches(builder.apply(com.commercetools.importapi.models.order_patches.OrderPatchImportBuilder.of()));
     }
-
+    
     /**
      *  <p>The order patches of this request</p>
      * @param builder function to build the patches value
      * @return Builder
      */
-
-    public OrderPatchImportRequestBuilder setPatches(
-            Function<com.commercetools.importapi.models.order_patches.OrderPatchImportBuilder, com.commercetools.importapi.models.order_patches.OrderPatchImport> builder) {
+    
+    public OrderPatchImportRequestBuilder setPatches(Function<com.commercetools.importapi.models.order_patches.OrderPatchImportBuilder, com.commercetools.importapi.models.order_patches.OrderPatchImport> builder) {
         return patches(builder.apply(com.commercetools.importapi.models.order_patches.OrderPatchImportBuilder.of()));
     }
+                    
 
     /**
      *  <p>The order patches of this request</p>
      * @return patches
      */
-
-    public java.util.List<com.commercetools.importapi.models.order_patches.OrderPatchImport> getPatches() {
+    
+    
+    public java.util.List<com.commercetools.importapi.models.order_patches.OrderPatchImport> getPatches(){
         return this.patches;
     }
 
@@ -133,7 +136,7 @@ public class OrderPatchImportRequestBuilder implements Builder<OrderPatchImportR
         Objects.requireNonNull(patches, OrderPatchImportRequest.class + ": patches is missing");
         return new OrderPatchImportRequestImpl(patches);
     }
-
+    
     /**
      * builds OrderPatchImportRequest without checking for non-null required values
      * @return OrderPatchImportRequest
@@ -144,7 +147,7 @@ public class OrderPatchImportRequestBuilder implements Builder<OrderPatchImportR
 
     /**
      * factory method for an instance of OrderPatchImportRequestBuilder
-     * @return builder
+     * @return builder 
      */
     public static OrderPatchImportRequestBuilder of() {
         return new OrderPatchImportRequestBuilder();

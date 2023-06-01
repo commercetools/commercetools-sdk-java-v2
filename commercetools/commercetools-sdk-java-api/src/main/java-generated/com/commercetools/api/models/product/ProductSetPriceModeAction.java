@@ -1,16 +1,21 @@
-
 package com.commercetools.api.models.product;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
+import com.commercetools.api.models.product.ProductPriceModeEnum;
+import com.commercetools.api.models.product.ProductUpdateAction;
+import com.commercetools.api.models.product.ProductSetPriceModeActionImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Controls whether the Prices of a Product Variant are embedded into the Product or standalone.</p>
@@ -22,9 +27,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     ProductSetPriceModeAction productSetPriceModeAction = ProductSetPriceModeAction.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = ProductSetPriceModeActionImpl.class)
 public interface ProductSetPriceModeAction extends ProductUpdateAction {
 
@@ -37,7 +45,7 @@ public interface ProductSetPriceModeAction extends ProductUpdateAction {
      *  <p>Specifies which type of Prices should be used when looking up a price for the Product.</p>
      * @return priceMode
      */
-
+    
     @JsonProperty("priceMode")
     public ProductPriceModeEnum getPriceMode();
 
@@ -45,16 +53,18 @@ public interface ProductSetPriceModeAction extends ProductUpdateAction {
      *  <p>Specifies which type of Prices should be used when looking up a price for the Product.</p>
      * @param priceMode value to be set
      */
-
+    
     public void setPriceMode(final ProductPriceModeEnum priceMode);
+    
 
     /**
      * factory method
      * @return instance of ProductSetPriceModeAction
      */
-    public static ProductSetPriceModeAction of() {
+    public static ProductSetPriceModeAction of(){
         return new ProductSetPriceModeActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy ProductSetPriceModeAction
@@ -89,7 +99,7 @@ public interface ProductSetPriceModeAction extends ProductUpdateAction {
     public static ProductSetPriceModeActionBuilder builder() {
         return ProductSetPriceModeActionBuilder.of();
     }
-
+    
     /**
      * create builder for ProductSetPriceModeAction instance
      * @param template instance with prefilled values for the builder
@@ -98,6 +108,7 @@ public interface ProductSetPriceModeAction extends ProductUpdateAction {
     public static ProductSetPriceModeActionBuilder builder(final ProductSetPriceModeAction template) {
         return ProductSetPriceModeActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -108,7 +119,7 @@ public interface ProductSetPriceModeAction extends ProductUpdateAction {
     default <T> T withProductSetPriceModeAction(Function<ProductSetPriceModeAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

@@ -1,19 +1,21 @@
-
 package com.commercetools.api.models.channel;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
+import com.commercetools.api.models.channel.ChannelUpdateAction;
 import com.commercetools.api.models.common.LocalizedString;
+import com.commercetools.api.models.channel.ChannelChangeNameActionImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * ChannelChangeNameAction
@@ -26,9 +28,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .name(nameBuilder -> nameBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = ChannelChangeNameActionImpl.class)
 public interface ChannelChangeNameAction extends ChannelUpdateAction {
 
@@ -50,16 +55,18 @@ public interface ChannelChangeNameAction extends ChannelUpdateAction {
      *  <p>New value to set. Must not be empty.</p>
      * @param name value to be set
      */
-
+    
     public void setName(final LocalizedString name);
+    
 
     /**
      * factory method
      * @return instance of ChannelChangeNameAction
      */
-    public static ChannelChangeNameAction of() {
+    public static ChannelChangeNameAction of(){
         return new ChannelChangeNameActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy ChannelChangeNameAction
@@ -94,7 +101,7 @@ public interface ChannelChangeNameAction extends ChannelUpdateAction {
     public static ChannelChangeNameActionBuilder builder() {
         return ChannelChangeNameActionBuilder.of();
     }
-
+    
     /**
      * create builder for ChannelChangeNameAction instance
      * @param template instance with prefilled values for the builder
@@ -103,6 +110,7 @@ public interface ChannelChangeNameAction extends ChannelUpdateAction {
     public static ChannelChangeNameActionBuilder builder(final ChannelChangeNameAction template) {
         return ChannelChangeNameActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -113,7 +121,7 @@ public interface ChannelChangeNameAction extends ChannelUpdateAction {
     default <T> T withChannelChangeNameAction(Function<ChannelChangeNameAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

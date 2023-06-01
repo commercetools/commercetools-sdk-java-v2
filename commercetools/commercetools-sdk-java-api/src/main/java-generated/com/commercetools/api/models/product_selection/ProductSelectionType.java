@@ -1,17 +1,22 @@
-
 package com.commercetools.api.models.product_selection;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
+import com.commercetools.api.models.product_selection.IndividualExclusionProductSelectionType;
+import com.commercetools.api.models.product_selection.IndividualProductSelectionType;
+import com.commercetools.api.models.product_selection.ProductSelectionTypeEnum;
 
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * ProductSelectionType
@@ -24,16 +29,27 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             name(nameBuilder -> nameBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
 @JsonSubTypes({
-        @JsonSubTypes.Type(value = com.commercetools.api.models.product_selection.IndividualExclusionProductSelectionTypeImpl.class, name = IndividualExclusionProductSelectionType.INDIVIDUAL_EXCLUSION),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.product_selection.IndividualProductSelectionTypeImpl.class, name = IndividualProductSelectionType.INDIVIDUAL) })
-@JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.EXISTING_PROPERTY, property = "type", defaultImpl = ProductSelectionTypeImpl.class, visible = true)
+   @JsonSubTypes.Type(value = com.commercetools.api.models.product_selection.IndividualExclusionProductSelectionTypeImpl.class, name = IndividualExclusionProductSelectionType.INDIVIDUAL_EXCLUSION),
+   @JsonSubTypes.Type(value = com.commercetools.api.models.product_selection.IndividualProductSelectionTypeImpl.class, name = IndividualProductSelectionType.INDIVIDUAL)
+})
+@JsonTypeInfo(
+    use = JsonTypeInfo.Id.NAME,
+    include = JsonTypeInfo.As.EXISTING_PROPERTY,
+    property = "type",
+    defaultImpl = ProductSelectionTypeImpl.class,
+    visible = true
+)
 @JsonDeserialize(as = ProductSelectionTypeImpl.class)
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @Deprecated
-public interface ProductSelectionType {
+public interface ProductSelectionType  {
+
 
     /**
      *  <p>The following types of Product Selections are supported:</p>
@@ -43,6 +59,9 @@ public interface ProductSelectionType {
     @Deprecated
     @JsonProperty("type")
     public ProductSelectionTypeEnum getType();
+
+
+
 
     /**
      * factory method to create a deep copy of ProductSelectionType
@@ -55,31 +74,29 @@ public interface ProductSelectionType {
             return null;
         }
         if (template instanceof com.commercetools.api.models.product_selection.IndividualExclusionProductSelectionType) {
-            return com.commercetools.api.models.product_selection.IndividualExclusionProductSelectionType.deepCopy(
-                (com.commercetools.api.models.product_selection.IndividualExclusionProductSelectionType) template);
+            return com.commercetools.api.models.product_selection.IndividualExclusionProductSelectionType.deepCopy((com.commercetools.api.models.product_selection.IndividualExclusionProductSelectionType)template);
         }
         if (template instanceof com.commercetools.api.models.product_selection.IndividualProductSelectionType) {
-            return com.commercetools.api.models.product_selection.IndividualProductSelectionType
-                    .deepCopy((com.commercetools.api.models.product_selection.IndividualProductSelectionType) template);
+            return com.commercetools.api.models.product_selection.IndividualProductSelectionType.deepCopy((com.commercetools.api.models.product_selection.IndividualProductSelectionType)template);
         }
         ProductSelectionTypeImpl instance = new ProductSelectionTypeImpl();
         return instance;
     }
+
 
     /**
      * builder for individualExclusion subtype
      * @return builder
      */
     public static com.commercetools.api.models.product_selection.IndividualExclusionProductSelectionTypeBuilder individualExclusionBuilder() {
-        return com.commercetools.api.models.product_selection.IndividualExclusionProductSelectionTypeBuilder.of();
+       return com.commercetools.api.models.product_selection.IndividualExclusionProductSelectionTypeBuilder.of();
     }
-
     /**
      * builder for individual subtype
      * @return builder
      */
     public static com.commercetools.api.models.product_selection.IndividualProductSelectionTypeBuilder individualBuilder() {
-        return com.commercetools.api.models.product_selection.IndividualProductSelectionTypeBuilder.of();
+       return com.commercetools.api.models.product_selection.IndividualProductSelectionTypeBuilder.of();
     }
 
     /**
@@ -91,7 +108,7 @@ public interface ProductSelectionType {
     default <T> T withProductSelectionType(Function<ProductSelectionType, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

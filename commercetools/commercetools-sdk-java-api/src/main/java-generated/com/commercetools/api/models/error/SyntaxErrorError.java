@@ -1,17 +1,20 @@
-
 package com.commercetools.api.models.error;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
+import com.commercetools.api.models.error.ErrorObject;
+import com.commercetools.api.models.error.SyntaxErrorErrorImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Returned when a Discount predicate, API Extension predicate, or search query does not have the correct syntax.</p>
@@ -24,9 +27,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .message("{message}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = SyntaxErrorErrorImpl.class)
 public interface SyntaxErrorError extends ErrorObject {
 
@@ -42,7 +48,6 @@ public interface SyntaxErrorError extends ErrorObject {
     @NotNull
     @JsonProperty("code")
     public String getCode();
-
     /**
      *  <p><code>"Syntax error while parsing $fieldDefinition."</code></p>
      * @return message
@@ -55,16 +60,18 @@ public interface SyntaxErrorError extends ErrorObject {
      *  <p><code>"Syntax error while parsing $fieldDefinition."</code></p>
      * @param message value to be set
      */
-
+    
     public void setMessage(final String message);
+    
 
     /**
      * factory method
      * @return instance of SyntaxErrorError
      */
-    public static SyntaxErrorError of() {
+    public static SyntaxErrorError of(){
         return new SyntaxErrorErrorImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy SyntaxErrorError
@@ -101,7 +108,7 @@ public interface SyntaxErrorError extends ErrorObject {
     public static SyntaxErrorErrorBuilder builder() {
         return SyntaxErrorErrorBuilder.of();
     }
-
+    
     /**
      * create builder for SyntaxErrorError instance
      * @param template instance with prefilled values for the builder
@@ -110,6 +117,7 @@ public interface SyntaxErrorError extends ErrorObject {
     public static SyntaxErrorErrorBuilder builder(final SyntaxErrorError template) {
         return SyntaxErrorErrorBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -120,7 +128,7 @@ public interface SyntaxErrorError extends ErrorObject {
     default <T> T withSyntaxErrorError(Function<SyntaxErrorError, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

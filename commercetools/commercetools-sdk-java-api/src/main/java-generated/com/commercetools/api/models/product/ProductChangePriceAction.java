@@ -1,19 +1,21 @@
-
 package com.commercetools.api.models.product;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
 import com.commercetools.api.models.common.PriceDraft;
+import com.commercetools.api.models.product.ProductUpdateAction;
+import com.commercetools.api.models.product.ProductChangePriceActionImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * ProductChangePriceAction
@@ -27,9 +29,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .price(priceBuilder -> priceBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = ProductChangePriceActionImpl.class)
 public interface ProductChangePriceAction extends ProductUpdateAction {
 
@@ -45,7 +50,6 @@ public interface ProductChangePriceAction extends ProductUpdateAction {
     @NotNull
     @JsonProperty("priceId")
     public String getPriceId();
-
     /**
      *  <p>Value to set.</p>
      * @return price
@@ -54,12 +58,11 @@ public interface ProductChangePriceAction extends ProductUpdateAction {
     @Valid
     @JsonProperty("price")
     public PriceDraft getPrice();
-
     /**
      *  <p>If <code>true</code>, only the staged Embedded Price is updated. If <code>false</code>, both the current and staged Embedded Price are updated.</p>
      * @return staged
      */
-
+    
     @JsonProperty("staged")
     public Boolean getStaged();
 
@@ -67,30 +70,34 @@ public interface ProductChangePriceAction extends ProductUpdateAction {
      *  <p>The <code>id</code> of the Embedded Price to update.</p>
      * @param priceId value to be set
      */
-
+    
     public void setPriceId(final String priceId);
-
+    
+    
     /**
      *  <p>Value to set.</p>
      * @param price value to be set
      */
-
+    
     public void setPrice(final PriceDraft price);
-
+    
+    
     /**
      *  <p>If <code>true</code>, only the staged Embedded Price is updated. If <code>false</code>, both the current and staged Embedded Price are updated.</p>
      * @param staged value to be set
      */
-
+    
     public void setStaged(final Boolean staged);
+    
 
     /**
      * factory method
      * @return instance of ProductChangePriceAction
      */
-    public static ProductChangePriceAction of() {
+    public static ProductChangePriceAction of(){
         return new ProductChangePriceActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy ProductChangePriceAction
@@ -129,7 +136,7 @@ public interface ProductChangePriceAction extends ProductUpdateAction {
     public static ProductChangePriceActionBuilder builder() {
         return ProductChangePriceActionBuilder.of();
     }
-
+    
     /**
      * create builder for ProductChangePriceAction instance
      * @param template instance with prefilled values for the builder
@@ -138,6 +145,7 @@ public interface ProductChangePriceAction extends ProductUpdateAction {
     public static ProductChangePriceActionBuilder builder(final ProductChangePriceAction template) {
         return ProductChangePriceActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -148,7 +156,7 @@ public interface ProductChangePriceAction extends ProductUpdateAction {
     default <T> T withProductChangePriceAction(Function<ProductChangePriceAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

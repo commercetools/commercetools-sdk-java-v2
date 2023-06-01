@@ -1,11 +1,11 @@
-
 package com.commercetools.api.predicates.query.message;
-
-import java.util.function.Function;
 
 import com.commercetools.api.predicates.query.*;
 
-public class BusinessUnitAddressAddedMessagePayloadQueryBuilderDsl {
+import java.util.function.Function;
+
+
+public class BusinessUnitAddressAddedMessagePayloadQueryBuilderDsl  {
     public BusinessUnitAddressAddedMessagePayloadQueryBuilderDsl() {
     }
 
@@ -14,18 +14,16 @@ public class BusinessUnitAddressAddedMessagePayloadQueryBuilderDsl {
     }
 
     public StringComparisonPredicateBuilder<BusinessUnitAddressAddedMessagePayloadQueryBuilderDsl> type() {
-        return new StringComparisonPredicateBuilder<>(
-            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("type")),
-            p -> new CombinationQueryPredicate<>(p, BusinessUnitAddressAddedMessagePayloadQueryBuilderDsl::of));
+        return new StringComparisonPredicateBuilder<>(BinaryQueryPredicate.of().left(new ConstantQueryPredicate("type")),
+        p -> new CombinationQueryPredicate<>(p, BusinessUnitAddressAddedMessagePayloadQueryBuilderDsl::of));
     }
-
     public CombinationQueryPredicate<BusinessUnitAddressAddedMessagePayloadQueryBuilderDsl> address(
-            Function<com.commercetools.api.predicates.query.common.AddressQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.common.AddressQueryBuilderDsl>> fn) {
-        return new CombinationQueryPredicate<>(
-            ContainerQueryPredicate.of()
-                    .parent(ConstantQueryPredicate.of().constant("address"))
-                    .inner(fn.apply(com.commercetools.api.predicates.query.common.AddressQueryBuilderDsl.of())),
+        Function<com.commercetools.api.predicates.query.common.AddressQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.common.AddressQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(ContainerQueryPredicate.of()
+            .parent(ConstantQueryPredicate.of().constant("address"))
+            .inner(fn.apply(com.commercetools.api.predicates.query.common.AddressQueryBuilderDsl.of())),
             BusinessUnitAddressAddedMessagePayloadQueryBuilderDsl::of);
     }
-
+    
+    
 }

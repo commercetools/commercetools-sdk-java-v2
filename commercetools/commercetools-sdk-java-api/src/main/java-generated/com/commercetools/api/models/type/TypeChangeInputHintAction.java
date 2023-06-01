@@ -1,17 +1,21 @@
-
 package com.commercetools.api.models.type;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
+import com.commercetools.api.models.type.TypeTextInputHint;
+import com.commercetools.api.models.type.TypeUpdateAction;
+import com.commercetools.api.models.type.TypeChangeInputHintActionImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Changes the <code>inputHint</code> of CustomFieldStringType FieldDefinition, a CustomFieldLocalizedStringType FieldDefinition, and CustomFieldSetType FieldDefinition of these string-based FieldTypes.</p>
@@ -25,9 +29,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .inputHint(TypeTextInputHint.SINGLE_LINE)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = TypeChangeInputHintActionImpl.class)
 public interface TypeChangeInputHintAction extends TypeUpdateAction {
 
@@ -43,7 +50,6 @@ public interface TypeChangeInputHintAction extends TypeUpdateAction {
     @NotNull
     @JsonProperty("fieldName")
     public String getFieldName();
-
     /**
      *  <p>New value to set. Must not be empty.</p>
      * @return inputHint
@@ -56,23 +62,26 @@ public interface TypeChangeInputHintAction extends TypeUpdateAction {
      *  <p><code>name</code> of the Field Definition to update.</p>
      * @param fieldName value to be set
      */
-
+    
     public void setFieldName(final String fieldName);
-
+    
+    
     /**
      *  <p>New value to set. Must not be empty.</p>
      * @param inputHint value to be set
      */
-
+    
     public void setInputHint(final TypeTextInputHint inputHint);
+    
 
     /**
      * factory method
      * @return instance of TypeChangeInputHintAction
      */
-    public static TypeChangeInputHintAction of() {
+    public static TypeChangeInputHintAction of(){
         return new TypeChangeInputHintActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy TypeChangeInputHintAction
@@ -109,7 +118,7 @@ public interface TypeChangeInputHintAction extends TypeUpdateAction {
     public static TypeChangeInputHintActionBuilder builder() {
         return TypeChangeInputHintActionBuilder.of();
     }
-
+    
     /**
      * create builder for TypeChangeInputHintAction instance
      * @param template instance with prefilled values for the builder
@@ -118,6 +127,7 @@ public interface TypeChangeInputHintAction extends TypeUpdateAction {
     public static TypeChangeInputHintActionBuilder builder(final TypeChangeInputHintAction template) {
         return TypeChangeInputHintActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -128,7 +138,7 @@ public interface TypeChangeInputHintAction extends TypeUpdateAction {
     default <T> T withTypeChangeInputHintAction(Function<TypeChangeInputHintAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

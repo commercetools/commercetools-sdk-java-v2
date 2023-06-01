@@ -1,11 +1,11 @@
-
 package com.commercetools.api.models.order;
 
+import com.commercetools.api.models.order.Hit;
+import com.commercetools.api.models.order.OrderPagedSearchResponse;
+import javax.annotation.Nullable;
 import java.util.*;
 import java.util.function.Function;
-
-import javax.annotation.Nullable;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -20,175 +20,194 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .plusHits(hitsBuilder -> hitsBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class OrderPagedSearchResponseBuilder implements Builder<OrderPagedSearchResponse> {
 
+    
+    
     private Long total;
-
+    
+    
     @Nullable
     private Long offset;
-
+    
+    
     @Nullable
     private Long limit;
-
+    
+    
+    
     private java.util.List<com.commercetools.api.models.order.Hit> hits;
 
+    
     /**
      *  <p>Total number of results matching the query.</p>
      * @param total value to be set
      * @return Builder
      */
-
-    public OrderPagedSearchResponseBuilder total(final Long total) {
+    
+    public OrderPagedSearchResponseBuilder total( final Long total) {
         this.total = total;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Number of elements skipped.</p>
      * @param offset value to be set
      * @return Builder
      */
-
+    
     public OrderPagedSearchResponseBuilder offset(@Nullable final Long offset) {
         this.offset = offset;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Number of results requested.</p>
      * @param limit value to be set
      * @return Builder
      */
-
+    
     public OrderPagedSearchResponseBuilder limit(@Nullable final Long limit) {
         this.limit = limit;
         return this;
     }
-
+    
+    
+    
     /**
      *  <p>Actual results.</p>
      * @param hits value to be set
      * @return Builder
      */
-
-    public OrderPagedSearchResponseBuilder hits(final com.commercetools.api.models.order.Hit... hits) {
+    
+    public OrderPagedSearchResponseBuilder hits( final com.commercetools.api.models.order.Hit ...hits) {
         this.hits = new ArrayList<>(Arrays.asList(hits));
         return this;
     }
-
+    
     /**
      *  <p>Actual results.</p>
      * @param hits value to be set
      * @return Builder
      */
-
-    public OrderPagedSearchResponseBuilder hits(final java.util.List<com.commercetools.api.models.order.Hit> hits) {
+    
+    public OrderPagedSearchResponseBuilder hits( final java.util.List<com.commercetools.api.models.order.Hit> hits) {
         this.hits = hits;
         return this;
     }
-
+    
     /**
      *  <p>Actual results.</p>
      * @param hits value to be set
      * @return Builder
      */
-
-    public OrderPagedSearchResponseBuilder plusHits(final com.commercetools.api.models.order.Hit... hits) {
+    
+    public OrderPagedSearchResponseBuilder plusHits( final com.commercetools.api.models.order.Hit ...hits) {
         if (this.hits == null) {
             this.hits = new ArrayList<>();
         }
         this.hits.addAll(Arrays.asList(hits));
         return this;
     }
-
+    
+    
+    
     /**
      *  <p>Actual results.</p>
      * @param builder function to build the hits value
      * @return Builder
      */
-
-    public OrderPagedSearchResponseBuilder plusHits(
-            Function<com.commercetools.api.models.order.HitBuilder, com.commercetools.api.models.order.HitBuilder> builder) {
+    
+    public OrderPagedSearchResponseBuilder plusHits(Function<com.commercetools.api.models.order.HitBuilder, com.commercetools.api.models.order.HitBuilder> builder) {
         if (this.hits == null) {
             this.hits = new ArrayList<>();
         }
         this.hits.add(builder.apply(com.commercetools.api.models.order.HitBuilder.of()).build());
         return this;
     }
-
+    
     /**
      *  <p>Actual results.</p>
      * @param builder function to build the hits value
      * @return Builder
      */
-
-    public OrderPagedSearchResponseBuilder withHits(
-            Function<com.commercetools.api.models.order.HitBuilder, com.commercetools.api.models.order.HitBuilder> builder) {
+    
+    public OrderPagedSearchResponseBuilder withHits(Function<com.commercetools.api.models.order.HitBuilder, com.commercetools.api.models.order.HitBuilder> builder) {
         this.hits = new ArrayList<>();
         this.hits.add(builder.apply(com.commercetools.api.models.order.HitBuilder.of()).build());
         return this;
     }
-
+    
     /**
      *  <p>Actual results.</p>
      * @param builder function to build the hits value
      * @return Builder
      */
-
-    public OrderPagedSearchResponseBuilder addHits(
-            Function<com.commercetools.api.models.order.HitBuilder, com.commercetools.api.models.order.Hit> builder) {
+    
+    public OrderPagedSearchResponseBuilder addHits(Function<com.commercetools.api.models.order.HitBuilder, com.commercetools.api.models.order.Hit> builder) {
         return plusHits(builder.apply(com.commercetools.api.models.order.HitBuilder.of()));
     }
-
+    
     /**
      *  <p>Actual results.</p>
      * @param builder function to build the hits value
      * @return Builder
      */
-
-    public OrderPagedSearchResponseBuilder setHits(
-            Function<com.commercetools.api.models.order.HitBuilder, com.commercetools.api.models.order.Hit> builder) {
+    
+    public OrderPagedSearchResponseBuilder setHits(Function<com.commercetools.api.models.order.HitBuilder, com.commercetools.api.models.order.Hit> builder) {
         return hits(builder.apply(com.commercetools.api.models.order.HitBuilder.of()));
     }
+                    
 
     /**
      *  <p>Total number of results matching the query.</p>
      * @return total
      */
-
-    public Long getTotal() {
+    
+    
+    public Long getTotal(){
         return this.total;
     }
-
+    
     /**
      *  <p>Number of elements skipped.</p>
      * @return offset
      */
-
+    
     @Nullable
-    public Long getOffset() {
+    public Long getOffset(){
         return this.offset;
     }
-
+    
     /**
      *  <p>Number of results requested.</p>
      * @return limit
      */
-
+    
     @Nullable
-    public Long getLimit() {
+    public Long getLimit(){
         return this.limit;
     }
-
+    
     /**
      *  <p>Actual results.</p>
      * @return hits
      */
-
-    public java.util.List<com.commercetools.api.models.order.Hit> getHits() {
+    
+    
+    public java.util.List<com.commercetools.api.models.order.Hit> getHits(){
         return this.hits;
     }
 
@@ -201,7 +220,7 @@ public class OrderPagedSearchResponseBuilder implements Builder<OrderPagedSearch
         Objects.requireNonNull(hits, OrderPagedSearchResponse.class + ": hits is missing");
         return new OrderPagedSearchResponseImpl(total, offset, limit, hits);
     }
-
+    
     /**
      * builds OrderPagedSearchResponse without checking for non-null required values
      * @return OrderPagedSearchResponse
@@ -212,7 +231,7 @@ public class OrderPagedSearchResponseBuilder implements Builder<OrderPagedSearch
 
     /**
      * factory method for an instance of OrderPagedSearchResponseBuilder
-     * @return builder
+     * @return builder 
      */
     public static OrderPagedSearchResponseBuilder of() {
         return new OrderPagedSearchResponseBuilder();

@@ -1,19 +1,21 @@
-
 package com.commercetools.api.models.message;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
 import com.commercetools.api.models.business_unit.Associate;
+import com.commercetools.api.models.message.Message;
+import com.commercetools.api.models.message.BusinessUnitAssociateRemovedMessageImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Generated after a successful Remove Associate update action.</p>
@@ -33,9 +35,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .associate(associateBuilder -> associateBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = BusinessUnitAssociateRemovedMessageImpl.class)
 public interface BusinessUnitAssociateRemovedMessage extends Message {
 
@@ -57,16 +62,18 @@ public interface BusinessUnitAssociateRemovedMessage extends Message {
      *  <p>The Associate that was removed from the Business Unit.</p>
      * @param associate value to be set
      */
-
+    
     public void setAssociate(final Associate associate);
+    
 
     /**
      * factory method
      * @return instance of BusinessUnitAssociateRemovedMessage
      */
-    public static BusinessUnitAssociateRemovedMessage of() {
+    public static BusinessUnitAssociateRemovedMessage of(){
         return new BusinessUnitAssociateRemovedMessageImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy BusinessUnitAssociateRemovedMessage
@@ -95,8 +102,7 @@ public interface BusinessUnitAssociateRemovedMessage extends Message {
      * @return copy instance
      */
     @Nullable
-    public static BusinessUnitAssociateRemovedMessage deepCopy(
-            @Nullable final BusinessUnitAssociateRemovedMessage template) {
+    public static BusinessUnitAssociateRemovedMessage deepCopy(@Nullable final BusinessUnitAssociateRemovedMessage template) {
         if (template == null) {
             return null;
         }
@@ -105,14 +111,12 @@ public interface BusinessUnitAssociateRemovedMessage extends Message {
         instance.setVersion(template.getVersion());
         instance.setCreatedAt(template.getCreatedAt());
         instance.setLastModifiedAt(template.getLastModifiedAt());
-        instance.setLastModifiedBy(
-            com.commercetools.api.models.common.LastModifiedBy.deepCopy(template.getLastModifiedBy()));
+        instance.setLastModifiedBy(com.commercetools.api.models.common.LastModifiedBy.deepCopy(template.getLastModifiedBy()));
         instance.setCreatedBy(com.commercetools.api.models.common.CreatedBy.deepCopy(template.getCreatedBy()));
         instance.setSequenceNumber(template.getSequenceNumber());
         instance.setResource(com.commercetools.api.models.common.Reference.deepCopy(template.getResource()));
         instance.setResourceVersion(template.getResourceVersion());
-        instance.setResourceUserProvidedIdentifiers(com.commercetools.api.models.message.UserProvidedIdentifiers
-                .deepCopy(template.getResourceUserProvidedIdentifiers()));
+        instance.setResourceUserProvidedIdentifiers(com.commercetools.api.models.message.UserProvidedIdentifiers.deepCopy(template.getResourceUserProvidedIdentifiers()));
         instance.setAssociate(com.commercetools.api.models.business_unit.Associate.deepCopy(template.getAssociate()));
         return instance;
     }
@@ -124,16 +128,16 @@ public interface BusinessUnitAssociateRemovedMessage extends Message {
     public static BusinessUnitAssociateRemovedMessageBuilder builder() {
         return BusinessUnitAssociateRemovedMessageBuilder.of();
     }
-
+    
     /**
      * create builder for BusinessUnitAssociateRemovedMessage instance
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static BusinessUnitAssociateRemovedMessageBuilder builder(
-            final BusinessUnitAssociateRemovedMessage template) {
+    public static BusinessUnitAssociateRemovedMessageBuilder builder(final BusinessUnitAssociateRemovedMessage template) {
         return BusinessUnitAssociateRemovedMessageBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -144,7 +148,7 @@ public interface BusinessUnitAssociateRemovedMessage extends Message {
     default <T> T withBusinessUnitAssociateRemovedMessage(Function<BusinessUnitAssociateRemovedMessage, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

@@ -1,9 +1,12 @@
-
 package com.commercetools.api.models.error;
 
+import com.commercetools.api.models.error.GraphQLErrorObject;
+import com.commercetools.api.models.order_edit.OrderEditPreviewFailure;
+import com.commercetools.api.models.error.GraphQLEditPreviewFailedError;
+import javax.annotation.Nullable;
 import java.util.*;
 import java.util.function.Function;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -17,13 +20,20 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .result(resultBuilder -> resultBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class GraphQLEditPreviewFailedErrorBuilder implements Builder<GraphQLEditPreviewFailedError> {
 
+    
+    
     private Map<String, java.lang.Object> values = new HashMap<>();
-
+    
+    
+    
     private com.commercetools.api.models.order_edit.OrderEditPreviewFailure result;
 
     /**
@@ -31,19 +41,19 @@ public class GraphQLEditPreviewFailedErrorBuilder implements Builder<GraphQLEdit
      * @param values properties to be set
      * @return Builder
      */
-
-    public GraphQLEditPreviewFailedErrorBuilder values(final Map<String, java.lang.Object> values) {
+    
+    public GraphQLEditPreviewFailedErrorBuilder values( final Map<String, java.lang.Object> values){
         this.values = values;
         return this;
     }
-
+    
     /**
      *  <p>Error-specific additional fields.</p>
      * @param key property name
      * @param value property value
      * @return Builder
      */
-
+    
     public GraphQLEditPreviewFailedErrorBuilder addValue(final String key, final java.lang.Object value) {
         if (this.values == null) {
             values = new HashMap<>();
@@ -51,59 +61,61 @@ public class GraphQLEditPreviewFailedErrorBuilder implements Builder<GraphQLEdit
         values.put(key, value);
         return this;
     }
-
+    
+    
+    
     /**
      *  <p>State of the OrderEdit where the <code>stagedActions</code> cannot be applied to the Order.</p>
      * @param builder function to build the result value
      * @return Builder
      */
-
-    public GraphQLEditPreviewFailedErrorBuilder result(
-            Function<com.commercetools.api.models.order_edit.OrderEditPreviewFailureBuilder, com.commercetools.api.models.order_edit.OrderEditPreviewFailureBuilder> builder) {
-        this.result = builder.apply(com.commercetools.api.models.order_edit.OrderEditPreviewFailureBuilder.of())
-                .build();
+    
+    public GraphQLEditPreviewFailedErrorBuilder result(Function<com.commercetools.api.models.order_edit.OrderEditPreviewFailureBuilder, com.commercetools.api.models.order_edit.OrderEditPreviewFailureBuilder> builder) {
+        this.result = builder.apply(com.commercetools.api.models.order_edit.OrderEditPreviewFailureBuilder.of()).build();
         return this;
     }
-
+    
     /**
      *  <p>State of the OrderEdit where the <code>stagedActions</code> cannot be applied to the Order.</p>
      * @param builder function to build the result value
      * @return Builder
      */
-
-    public GraphQLEditPreviewFailedErrorBuilder withResult(
-            Function<com.commercetools.api.models.order_edit.OrderEditPreviewFailureBuilder, com.commercetools.api.models.order_edit.OrderEditPreviewFailure> builder) {
+    
+    public GraphQLEditPreviewFailedErrorBuilder withResult(Function<com.commercetools.api.models.order_edit.OrderEditPreviewFailureBuilder, com.commercetools.api.models.order_edit.OrderEditPreviewFailure> builder) {
         this.result = builder.apply(com.commercetools.api.models.order_edit.OrderEditPreviewFailureBuilder.of());
         return this;
     }
-
+                    
     /**
      *  <p>State of the OrderEdit where the <code>stagedActions</code> cannot be applied to the Order.</p>
      * @param result value to be set
      * @return Builder
      */
-
-    public GraphQLEditPreviewFailedErrorBuilder result(
-            final com.commercetools.api.models.order_edit.OrderEditPreviewFailure result) {
+    
+    public GraphQLEditPreviewFailedErrorBuilder result( final com.commercetools.api.models.order_edit.OrderEditPreviewFailure result) {
         this.result = result;
         return this;
     }
+    
+    
 
     /**
      *  <p>Error-specific additional fields.</p>
      * @return pattern properties
      */
-
-    public Map<String, java.lang.Object> getValues() {
+    
+    
+    public Map<String, java.lang.Object> getValues(){
         return this.values;
     }
-
+    
     /**
      *  <p>State of the OrderEdit where the <code>stagedActions</code> cannot be applied to the Order.</p>
      * @return result
      */
-
-    public com.commercetools.api.models.order_edit.OrderEditPreviewFailure getResult() {
+    
+    
+    public com.commercetools.api.models.order_edit.OrderEditPreviewFailure getResult(){
         return this.result;
     }
 
@@ -115,7 +127,7 @@ public class GraphQLEditPreviewFailedErrorBuilder implements Builder<GraphQLEdit
         Objects.requireNonNull(result, GraphQLEditPreviewFailedError.class + ": result is missing");
         return new GraphQLEditPreviewFailedErrorImpl(values, result);
     }
-
+    
     /**
      * builds GraphQLEditPreviewFailedError without checking for non-null required values
      * @return GraphQLEditPreviewFailedError
@@ -126,7 +138,7 @@ public class GraphQLEditPreviewFailedErrorBuilder implements Builder<GraphQLEdit
 
     /**
      * factory method for an instance of GraphQLEditPreviewFailedErrorBuilder
-     * @return builder
+     * @return builder 
      */
     public static GraphQLEditPreviewFailedErrorBuilder of() {
         return new GraphQLEditPreviewFailedErrorBuilder();

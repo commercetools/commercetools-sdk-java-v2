@@ -1,17 +1,20 @@
-
 package com.commercetools.api.models.extension;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
+import com.commercetools.api.models.extension.HttpDestinationAuthentication;
+import com.commercetools.api.models.extension.AzureFunctionsAuthenticationImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>To protect your Azure Function, set its <code>authLevel</code> to <code>function</code> and provide the function's key to be used inside the <code>x-functions-key</code> header. For more information, see the Azure Functions documentation.</p>
@@ -25,9 +28,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .key("{key}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = AzureFunctionsAuthenticationImpl.class)
 public interface AzureFunctionsAuthentication extends HttpDestinationAuthentication {
 
@@ -48,16 +54,18 @@ public interface AzureFunctionsAuthentication extends HttpDestinationAuthenticat
      *  <p>Partially hidden on retrieval for security reasons.</p>
      * @param key value to be set
      */
-
+    
     public void setKey(final String key);
+    
 
     /**
      * factory method
      * @return instance of AzureFunctionsAuthentication
      */
-    public static AzureFunctionsAuthentication of() {
+    public static AzureFunctionsAuthentication of(){
         return new AzureFunctionsAuthenticationImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy AzureFunctionsAuthentication
@@ -92,7 +100,7 @@ public interface AzureFunctionsAuthentication extends HttpDestinationAuthenticat
     public static AzureFunctionsAuthenticationBuilder builder() {
         return AzureFunctionsAuthenticationBuilder.of();
     }
-
+    
     /**
      * create builder for AzureFunctionsAuthentication instance
      * @param template instance with prefilled values for the builder
@@ -101,6 +109,7 @@ public interface AzureFunctionsAuthentication extends HttpDestinationAuthenticat
     public static AzureFunctionsAuthenticationBuilder builder(final AzureFunctionsAuthentication template) {
         return AzureFunctionsAuthenticationBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -111,7 +120,7 @@ public interface AzureFunctionsAuthentication extends HttpDestinationAuthenticat
     default <T> T withAzureFunctionsAuthentication(Function<AzureFunctionsAuthentication, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

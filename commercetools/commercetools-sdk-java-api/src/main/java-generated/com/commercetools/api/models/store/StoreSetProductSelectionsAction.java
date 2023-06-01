@@ -1,18 +1,21 @@
-
 package com.commercetools.api.models.store;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-import java.util.stream.Collectors;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
+import com.commercetools.api.models.store.ProductSelectionSettingDraft;
+import com.commercetools.api.models.store.StoreUpdateAction;
+import com.commercetools.api.models.store.StoreSetProductSelectionsActionImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Instead of adding or removing Product Selections individually, you can also change all the Store's Product Selections in one go using this update action. The Store will only contain the Product Selections specified in the request.</p>
@@ -24,9 +27,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     StoreSetProductSelectionsAction storeSetProductSelectionsAction = StoreSetProductSelectionsAction.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = StoreSetProductSelectionsActionImpl.class)
 public interface StoreSetProductSelectionsAction extends StoreUpdateAction {
 
@@ -55,10 +61,9 @@ public interface StoreSetProductSelectionsAction extends StoreUpdateAction {
      *  </ul>
      * @param productSelections values to be set
      */
-
+    
     @JsonIgnore
-    public void setProductSelections(final ProductSelectionSettingDraft... productSelections);
-
+    public void setProductSelections(final ProductSelectionSettingDraft ...productSelections);
     /**
      *  <p>Value to set.</p>
      *  <ul>
@@ -67,16 +72,17 @@ public interface StoreSetProductSelectionsAction extends StoreUpdateAction {
      *  </ul>
      * @param productSelections values to be set
      */
-
+    
     public void setProductSelections(final List<ProductSelectionSettingDraft> productSelections);
 
     /**
      * factory method
      * @return instance of StoreSetProductSelectionsAction
      */
-    public static StoreSetProductSelectionsAction of() {
+    public static StoreSetProductSelectionsAction of(){
         return new StoreSetProductSelectionsActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy StoreSetProductSelectionsAction
@@ -101,9 +107,7 @@ public interface StoreSetProductSelectionsAction extends StoreUpdateAction {
         }
         StoreSetProductSelectionsActionImpl instance = new StoreSetProductSelectionsActionImpl();
         instance.setProductSelections(Optional.ofNullable(template.getProductSelections())
-                .map(t -> t.stream()
-                        .map(com.commercetools.api.models.store.ProductSelectionSettingDraft::deepCopy)
-                        .collect(Collectors.toList()))
+                .map(t -> t.stream().map(com.commercetools.api.models.store.ProductSelectionSettingDraft::deepCopy).collect(Collectors.toList()))
                 .orElse(null));
         return instance;
     }
@@ -115,7 +119,7 @@ public interface StoreSetProductSelectionsAction extends StoreUpdateAction {
     public static StoreSetProductSelectionsActionBuilder builder() {
         return StoreSetProductSelectionsActionBuilder.of();
     }
-
+    
     /**
      * create builder for StoreSetProductSelectionsAction instance
      * @param template instance with prefilled values for the builder
@@ -124,6 +128,7 @@ public interface StoreSetProductSelectionsAction extends StoreUpdateAction {
     public static StoreSetProductSelectionsActionBuilder builder(final StoreSetProductSelectionsAction template) {
         return StoreSetProductSelectionsActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -134,7 +139,7 @@ public interface StoreSetProductSelectionsAction extends StoreUpdateAction {
     default <T> T withStoreSetProductSelectionsAction(Function<StoreSetProductSelectionsAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

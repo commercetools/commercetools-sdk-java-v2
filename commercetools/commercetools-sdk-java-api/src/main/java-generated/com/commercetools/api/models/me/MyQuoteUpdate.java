@@ -1,19 +1,20 @@
-
 package com.commercetools.api.models.me;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-import java.util.stream.Collectors;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
+import com.commercetools.api.models.me.MyQuoteUpdateAction;
+import com.commercetools.api.models.me.MyQuoteUpdateImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * MyQuoteUpdate
@@ -27,12 +28,15 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .plusActions(actionsBuilder -> actionsBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = MyQuoteUpdateImpl.class)
-public interface MyQuoteUpdate
-        extends com.commercetools.api.models.ResourceUpdate<MyQuoteUpdate, MyQuoteUpdateAction, MyQuoteUpdateBuilder> {
+public interface MyQuoteUpdate extends com.commercetools.api.models.ResourceUpdate<MyQuoteUpdate, MyQuoteUpdateAction, MyQuoteUpdateBuilder> {
+
 
     /**
      *  <p>Expected version of the Quote to which the changes should be applied. If the expected version does not match the actual version, a 409 Conflict error will be returned.</p>
@@ -41,7 +45,6 @@ public interface MyQuoteUpdate
     @NotNull
     @JsonProperty("version")
     public Long getVersion();
-
     /**
      *  <p>Update actions to be performed on the Quote.</p>
      * @return actions
@@ -55,31 +58,32 @@ public interface MyQuoteUpdate
      *  <p>Expected version of the Quote to which the changes should be applied. If the expected version does not match the actual version, a 409 Conflict error will be returned.</p>
      * @param version value to be set
      */
-
+    
     public void setVersion(final Long version);
-
+    
+    
     /**
      *  <p>Update actions to be performed on the Quote.</p>
      * @param actions values to be set
      */
-
+    
     @JsonIgnore
-    public void setActions(final MyQuoteUpdateAction... actions);
-
+    public void setActions(final MyQuoteUpdateAction ...actions);
     /**
      *  <p>Update actions to be performed on the Quote.</p>
      * @param actions values to be set
      */
-
+    
     public void setActions(final List<MyQuoteUpdateAction> actions);
 
     /**
      * factory method
      * @return instance of MyQuoteUpdate
      */
-    public static MyQuoteUpdate of() {
+    public static MyQuoteUpdate of(){
         return new MyQuoteUpdateImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy MyQuoteUpdate
@@ -106,9 +110,7 @@ public interface MyQuoteUpdate
         MyQuoteUpdateImpl instance = new MyQuoteUpdateImpl();
         instance.setVersion(template.getVersion());
         instance.setActions(Optional.ofNullable(template.getActions())
-                .map(t -> t.stream()
-                        .map(com.commercetools.api.models.me.MyQuoteUpdateAction::deepCopy)
-                        .collect(Collectors.toList()))
+                .map(t -> t.stream().map(com.commercetools.api.models.me.MyQuoteUpdateAction::deepCopy).collect(Collectors.toList()))
                 .orElse(null));
         return instance;
     }
@@ -120,7 +122,7 @@ public interface MyQuoteUpdate
     public static MyQuoteUpdateBuilder builder() {
         return MyQuoteUpdateBuilder.of();
     }
-
+    
     /**
      * create builder for MyQuoteUpdate instance
      * @param template instance with prefilled values for the builder
@@ -129,6 +131,7 @@ public interface MyQuoteUpdate
     public static MyQuoteUpdateBuilder builder(final MyQuoteUpdate template) {
         return MyQuoteUpdateBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -139,7 +142,7 @@ public interface MyQuoteUpdate
     default <T> T withMyQuoteUpdate(Function<MyQuoteUpdate, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

@@ -1,19 +1,21 @@
-
 package com.commercetools.history.models.change;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
+import com.commercetools.history.models.change.Change;
 import com.commercetools.history.models.common.CategoryOrderHints;
+import com.commercetools.history.models.change.SetCategoryOrderHintChangeImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * SetCategoryOrderHintChange
@@ -30,9 +32,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .nextValue(nextValueBuilder -> nextValueBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = SetCategoryOrderHintChangeImpl.class)
 public interface SetCategoryOrderHintChange extends Change {
 
@@ -48,7 +53,6 @@ public interface SetCategoryOrderHintChange extends Change {
     @NotNull
     @JsonProperty("type")
     public String getType();
-
     /**
      *  <p>Update action for <code>setCategoryOrderHint</code></p>
      * @return change
@@ -56,7 +60,6 @@ public interface SetCategoryOrderHintChange extends Change {
     @NotNull
     @JsonProperty("change")
     public String getChange();
-
     /**
      *
      * @return catalogData
@@ -64,7 +67,6 @@ public interface SetCategoryOrderHintChange extends Change {
     @NotNull
     @JsonProperty("catalogData")
     public String getCatalogData();
-
     /**
      *
      * @return categoryId
@@ -72,7 +74,6 @@ public interface SetCategoryOrderHintChange extends Change {
     @NotNull
     @JsonProperty("categoryId")
     public String getCategoryId();
-
     /**
      *
      * @return previousValue
@@ -81,7 +82,6 @@ public interface SetCategoryOrderHintChange extends Change {
     @Valid
     @JsonProperty("previousValue")
     public CategoryOrderHints getPreviousValue();
-
     /**
      *
      * @return nextValue
@@ -95,44 +95,50 @@ public interface SetCategoryOrderHintChange extends Change {
      *  <p>Update action for <code>setCategoryOrderHint</code></p>
      * @param change value to be set
      */
-
+    
     public void setChange(final String change);
-
+    
+    
     /**
      * set catalogData
      * @param catalogData value to be set
      */
-
+    
     public void setCatalogData(final String catalogData);
-
+    
+    
     /**
      * set categoryId
      * @param categoryId value to be set
      */
-
+    
     public void setCategoryId(final String categoryId);
-
+    
+    
     /**
      * set previousValue
      * @param previousValue value to be set
      */
-
+    
     public void setPreviousValue(final CategoryOrderHints previousValue);
-
+    
+    
     /**
      * set nextValue
      * @param nextValue value to be set
      */
-
+    
     public void setNextValue(final CategoryOrderHints nextValue);
+    
 
     /**
      * factory method
      * @return instance of SetCategoryOrderHintChange
      */
-    public static SetCategoryOrderHintChange of() {
+    public static SetCategoryOrderHintChange of(){
         return new SetCategoryOrderHintChangeImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy SetCategoryOrderHintChange
@@ -163,10 +169,8 @@ public interface SetCategoryOrderHintChange extends Change {
         instance.setChange(template.getChange());
         instance.setCatalogData(template.getCatalogData());
         instance.setCategoryId(template.getCategoryId());
-        instance.setPreviousValue(
-            com.commercetools.history.models.common.CategoryOrderHints.deepCopy(template.getPreviousValue()));
-        instance.setNextValue(
-            com.commercetools.history.models.common.CategoryOrderHints.deepCopy(template.getNextValue()));
+        instance.setPreviousValue(com.commercetools.history.models.common.CategoryOrderHints.deepCopy(template.getPreviousValue()));
+        instance.setNextValue(com.commercetools.history.models.common.CategoryOrderHints.deepCopy(template.getNextValue()));
         return instance;
     }
 
@@ -177,7 +181,7 @@ public interface SetCategoryOrderHintChange extends Change {
     public static SetCategoryOrderHintChangeBuilder builder() {
         return SetCategoryOrderHintChangeBuilder.of();
     }
-
+    
     /**
      * create builder for SetCategoryOrderHintChange instance
      * @param template instance with prefilled values for the builder
@@ -186,6 +190,7 @@ public interface SetCategoryOrderHintChange extends Change {
     public static SetCategoryOrderHintChangeBuilder builder(final SetCategoryOrderHintChange template) {
         return SetCategoryOrderHintChangeBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -196,7 +201,7 @@ public interface SetCategoryOrderHintChange extends Change {
     default <T> T withSetCategoryOrderHintChange(Function<SetCategoryOrderHintChange, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

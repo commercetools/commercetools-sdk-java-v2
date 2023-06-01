@@ -1,19 +1,22 @@
-
 package com.commercetools.api.models.product_selection;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
 import com.commercetools.api.models.common.LocalizedString;
+import com.commercetools.api.models.product_selection.ProductSelectionType;
+import com.commercetools.api.models.product_selection.ProductSelectionTypeEnum;
+import com.commercetools.api.models.product_selection.IndividualProductSelectionTypeImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * IndividualProductSelectionType
@@ -26,9 +29,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .name(nameBuilder -> nameBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = IndividualProductSelectionTypeImpl.class)
 @Deprecated
 public interface IndividualProductSelectionType extends ProductSelectionType {
@@ -51,16 +57,18 @@ public interface IndividualProductSelectionType extends ProductSelectionType {
      *  <p>The name of the ProductSelection which is recommended to be unique.</p>
      * @param name value to be set
      */
-
+    
     public void setName(final LocalizedString name);
+    
 
     /**
      * factory method
      * @return instance of IndividualProductSelectionType
      */
-    public static IndividualProductSelectionType of() {
+    public static IndividualProductSelectionType of(){
         return new IndividualProductSelectionTypeImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy IndividualProductSelectionType
@@ -95,7 +103,7 @@ public interface IndividualProductSelectionType extends ProductSelectionType {
     public static IndividualProductSelectionTypeBuilder builder() {
         return IndividualProductSelectionTypeBuilder.of();
     }
-
+    
     /**
      * create builder for IndividualProductSelectionType instance
      * @param template instance with prefilled values for the builder
@@ -104,6 +112,7 @@ public interface IndividualProductSelectionType extends ProductSelectionType {
     public static IndividualProductSelectionTypeBuilder builder(final IndividualProductSelectionType template) {
         return IndividualProductSelectionTypeBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -114,7 +123,7 @@ public interface IndividualProductSelectionType extends ProductSelectionType {
     default <T> T withIndividualProductSelectionType(Function<IndividualProductSelectionType, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

@@ -1,8 +1,11 @@
-
 package com.commercetools.api.models.product_discount;
 
+import com.commercetools.api.models.product_discount.ProductDiscountUpdateAction;
+import com.commercetools.api.models.product_discount.ProductDiscountChangePredicateAction;
+import javax.annotation.Nullable;
 import java.util.*;
-
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -16,30 +19,39 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .predicate("{predicate}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class ProductDiscountChangePredicateActionBuilder implements Builder<ProductDiscountChangePredicateAction> {
 
+    
+    
     private String predicate;
 
+    
     /**
      *  <p>New value to set. Must be a valid ProductDiscount predicate.</p>
      * @param predicate value to be set
      * @return Builder
      */
-
-    public ProductDiscountChangePredicateActionBuilder predicate(final String predicate) {
+    
+    public ProductDiscountChangePredicateActionBuilder predicate( final String predicate) {
         this.predicate = predicate;
         return this;
     }
+    
+    
 
     /**
      *  <p>New value to set. Must be a valid ProductDiscount predicate.</p>
      * @return predicate
      */
-
-    public String getPredicate() {
+    
+    
+    public String getPredicate(){
         return this.predicate;
     }
 
@@ -51,7 +63,7 @@ public class ProductDiscountChangePredicateActionBuilder implements Builder<Prod
         Objects.requireNonNull(predicate, ProductDiscountChangePredicateAction.class + ": predicate is missing");
         return new ProductDiscountChangePredicateActionImpl(predicate);
     }
-
+    
     /**
      * builds ProductDiscountChangePredicateAction without checking for non-null required values
      * @return ProductDiscountChangePredicateAction
@@ -62,7 +74,7 @@ public class ProductDiscountChangePredicateActionBuilder implements Builder<Prod
 
     /**
      * factory method for an instance of ProductDiscountChangePredicateActionBuilder
-     * @return builder
+     * @return builder 
      */
     public static ProductDiscountChangePredicateActionBuilder of() {
         return new ProductDiscountChangePredicateActionBuilder();

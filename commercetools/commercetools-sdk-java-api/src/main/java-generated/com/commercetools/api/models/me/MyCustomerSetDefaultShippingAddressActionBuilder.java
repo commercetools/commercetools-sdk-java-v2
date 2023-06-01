@@ -1,10 +1,11 @@
-
 package com.commercetools.api.models.me;
 
-import java.util.*;
-
+import com.commercetools.api.models.me.MyCustomerUpdateAction;
+import com.commercetools.api.models.me.MyCustomerSetDefaultShippingAddressAction;
 import javax.annotation.Nullable;
-
+import java.util.*;
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -17,57 +18,67 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     MyCustomerSetDefaultShippingAddressAction myCustomerSetDefaultShippingAddressAction = MyCustomerSetDefaultShippingAddressAction.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
-public class MyCustomerSetDefaultShippingAddressActionBuilder
-        implements Builder<MyCustomerSetDefaultShippingAddressAction> {
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
+public class MyCustomerSetDefaultShippingAddressActionBuilder implements Builder<MyCustomerSetDefaultShippingAddressAction> {
 
+    
     @Nullable
     private String addressId;
-
+    
+    
     @Nullable
     private String addressKey;
 
+    
     /**
      *  <p><code>id</code> of the Address to become the default shipping address.</p>
      * @param addressId value to be set
      * @return Builder
      */
-
+    
     public MyCustomerSetDefaultShippingAddressActionBuilder addressId(@Nullable final String addressId) {
         this.addressId = addressId;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p><code>key</code> of the Address to become the default shipping address.</p>
      * @param addressKey value to be set
      * @return Builder
      */
-
+    
     public MyCustomerSetDefaultShippingAddressActionBuilder addressKey(@Nullable final String addressKey) {
         this.addressKey = addressKey;
         return this;
     }
+    
+    
 
     /**
      *  <p><code>id</code> of the Address to become the default shipping address.</p>
      * @return addressId
      */
-
+    
     @Nullable
-    public String getAddressId() {
+    public String getAddressId(){
         return this.addressId;
     }
-
+    
     /**
      *  <p><code>key</code> of the Address to become the default shipping address.</p>
      * @return addressKey
      */
-
+    
     @Nullable
-    public String getAddressKey() {
+    public String getAddressKey(){
         return this.addressKey;
     }
 
@@ -78,7 +89,7 @@ public class MyCustomerSetDefaultShippingAddressActionBuilder
     public MyCustomerSetDefaultShippingAddressAction build() {
         return new MyCustomerSetDefaultShippingAddressActionImpl(addressId, addressKey);
     }
-
+    
     /**
      * builds MyCustomerSetDefaultShippingAddressAction without checking for non-null required values
      * @return MyCustomerSetDefaultShippingAddressAction
@@ -89,7 +100,7 @@ public class MyCustomerSetDefaultShippingAddressActionBuilder
 
     /**
      * factory method for an instance of MyCustomerSetDefaultShippingAddressActionBuilder
-     * @return builder
+     * @return builder 
      */
     public static MyCustomerSetDefaultShippingAddressActionBuilder of() {
         return new MyCustomerSetDefaultShippingAddressActionBuilder();
@@ -100,8 +111,7 @@ public class MyCustomerSetDefaultShippingAddressActionBuilder
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static MyCustomerSetDefaultShippingAddressActionBuilder of(
-            final MyCustomerSetDefaultShippingAddressAction template) {
+    public static MyCustomerSetDefaultShippingAddressActionBuilder of(final MyCustomerSetDefaultShippingAddressAction template) {
         MyCustomerSetDefaultShippingAddressActionBuilder builder = new MyCustomerSetDefaultShippingAddressActionBuilder();
         builder.addressId = template.getAddressId();
         builder.addressKey = template.getAddressKey();

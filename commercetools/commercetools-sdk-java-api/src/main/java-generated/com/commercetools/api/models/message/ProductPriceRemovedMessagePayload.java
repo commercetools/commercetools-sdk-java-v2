@@ -1,19 +1,21 @@
-
 package com.commercetools.api.models.message;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
 import com.commercetools.api.models.common.Price;
+import com.commercetools.api.models.message.MessagePayload;
+import com.commercetools.api.models.message.ProductPriceRemovedMessagePayloadImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Generated after a successful Remove Embedded Price update action.</p>
@@ -28,9 +30,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .staged(true)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = ProductPriceRemovedMessagePayloadImpl.class)
 public interface ProductPriceRemovedMessagePayload extends MessagePayload {
 
@@ -46,7 +51,6 @@ public interface ProductPriceRemovedMessagePayload extends MessagePayload {
     @NotNull
     @JsonProperty("variantId")
     public Long getVariantId();
-
     /**
      *  <p>The Embedded Price that was removed from the ProductVariant.</p>
      * @return price
@@ -55,7 +59,6 @@ public interface ProductPriceRemovedMessagePayload extends MessagePayload {
     @Valid
     @JsonProperty("price")
     public Price getPrice();
-
     /**
      *  <p>Whether the update was only applied to the staged Product Projection.</p>
      * @return staged
@@ -68,30 +71,34 @@ public interface ProductPriceRemovedMessagePayload extends MessagePayload {
      *  <p>Unique identifier of the ProductVariant for which the Price was removed.</p>
      * @param variantId value to be set
      */
-
+    
     public void setVariantId(final Long variantId);
-
+    
+    
     /**
      *  <p>The Embedded Price that was removed from the ProductVariant.</p>
      * @param price value to be set
      */
-
+    
     public void setPrice(final Price price);
-
+    
+    
     /**
      *  <p>Whether the update was only applied to the staged Product Projection.</p>
      * @param staged value to be set
      */
-
+    
     public void setStaged(final Boolean staged);
+    
 
     /**
      * factory method
      * @return instance of ProductPriceRemovedMessagePayload
      */
-    public static ProductPriceRemovedMessagePayload of() {
+    public static ProductPriceRemovedMessagePayload of(){
         return new ProductPriceRemovedMessagePayloadImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy ProductPriceRemovedMessagePayload
@@ -112,8 +119,7 @@ public interface ProductPriceRemovedMessagePayload extends MessagePayload {
      * @return copy instance
      */
     @Nullable
-    public static ProductPriceRemovedMessagePayload deepCopy(
-            @Nullable final ProductPriceRemovedMessagePayload template) {
+    public static ProductPriceRemovedMessagePayload deepCopy(@Nullable final ProductPriceRemovedMessagePayload template) {
         if (template == null) {
             return null;
         }
@@ -131,7 +137,7 @@ public interface ProductPriceRemovedMessagePayload extends MessagePayload {
     public static ProductPriceRemovedMessagePayloadBuilder builder() {
         return ProductPriceRemovedMessagePayloadBuilder.of();
     }
-
+    
     /**
      * create builder for ProductPriceRemovedMessagePayload instance
      * @param template instance with prefilled values for the builder
@@ -140,6 +146,7 @@ public interface ProductPriceRemovedMessagePayload extends MessagePayload {
     public static ProductPriceRemovedMessagePayloadBuilder builder(final ProductPriceRemovedMessagePayload template) {
         return ProductPriceRemovedMessagePayloadBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -150,7 +157,7 @@ public interface ProductPriceRemovedMessagePayload extends MessagePayload {
     default <T> T withProductPriceRemovedMessagePayload(Function<ProductPriceRemovedMessagePayload, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

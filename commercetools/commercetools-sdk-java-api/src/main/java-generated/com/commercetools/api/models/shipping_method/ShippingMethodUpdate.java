@@ -1,19 +1,20 @@
-
 package com.commercetools.api.models.shipping_method;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-import java.util.stream.Collectors;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
+import com.commercetools.api.models.shipping_method.ShippingMethodUpdateAction;
+import com.commercetools.api.models.shipping_method.ShippingMethodUpdateImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * ShippingMethodUpdate
@@ -27,12 +28,15 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .plusActions(actionsBuilder -> actionsBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = ShippingMethodUpdateImpl.class)
-public interface ShippingMethodUpdate extends
-        com.commercetools.api.models.ResourceUpdate<ShippingMethodUpdate, ShippingMethodUpdateAction, ShippingMethodUpdateBuilder> {
+public interface ShippingMethodUpdate extends com.commercetools.api.models.ResourceUpdate<ShippingMethodUpdate, ShippingMethodUpdateAction, ShippingMethodUpdateBuilder> {
+
 
     /**
      *  <p>Expected version of the ShippingMethod on which the changes should be applied. If the expected version does not match the actual version, a 409 Conflict will be returned.</p>
@@ -41,7 +45,6 @@ public interface ShippingMethodUpdate extends
     @NotNull
     @JsonProperty("version")
     public Long getVersion();
-
     /**
      *  <p>Update actions to be performed on the ShippingMethod.</p>
      * @return actions
@@ -55,31 +58,32 @@ public interface ShippingMethodUpdate extends
      *  <p>Expected version of the ShippingMethod on which the changes should be applied. If the expected version does not match the actual version, a 409 Conflict will be returned.</p>
      * @param version value to be set
      */
-
+    
     public void setVersion(final Long version);
-
+    
+    
     /**
      *  <p>Update actions to be performed on the ShippingMethod.</p>
      * @param actions values to be set
      */
-
+    
     @JsonIgnore
-    public void setActions(final ShippingMethodUpdateAction... actions);
-
+    public void setActions(final ShippingMethodUpdateAction ...actions);
     /**
      *  <p>Update actions to be performed on the ShippingMethod.</p>
      * @param actions values to be set
      */
-
+    
     public void setActions(final List<ShippingMethodUpdateAction> actions);
 
     /**
      * factory method
      * @return instance of ShippingMethodUpdate
      */
-    public static ShippingMethodUpdate of() {
+    public static ShippingMethodUpdate of(){
         return new ShippingMethodUpdateImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy ShippingMethodUpdate
@@ -106,9 +110,7 @@ public interface ShippingMethodUpdate extends
         ShippingMethodUpdateImpl instance = new ShippingMethodUpdateImpl();
         instance.setVersion(template.getVersion());
         instance.setActions(Optional.ofNullable(template.getActions())
-                .map(t -> t.stream()
-                        .map(com.commercetools.api.models.shipping_method.ShippingMethodUpdateAction::deepCopy)
-                        .collect(Collectors.toList()))
+                .map(t -> t.stream().map(com.commercetools.api.models.shipping_method.ShippingMethodUpdateAction::deepCopy).collect(Collectors.toList()))
                 .orElse(null));
         return instance;
     }
@@ -120,7 +122,7 @@ public interface ShippingMethodUpdate extends
     public static ShippingMethodUpdateBuilder builder() {
         return ShippingMethodUpdateBuilder.of();
     }
-
+    
     /**
      * create builder for ShippingMethodUpdate instance
      * @param template instance with prefilled values for the builder
@@ -129,6 +131,7 @@ public interface ShippingMethodUpdate extends
     public static ShippingMethodUpdateBuilder builder(final ShippingMethodUpdate template) {
         return ShippingMethodUpdateBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -139,7 +142,7 @@ public interface ShippingMethodUpdate extends
     default <T> T withShippingMethodUpdate(Function<ShippingMethodUpdate, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

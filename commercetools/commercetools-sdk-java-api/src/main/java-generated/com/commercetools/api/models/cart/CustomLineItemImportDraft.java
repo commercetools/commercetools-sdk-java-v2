@@ -1,25 +1,27 @@
-
 package com.commercetools.api.models.cart;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-import java.util.stream.Collectors;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
+import com.commercetools.api.models.cart.CustomLineItemPriceMode;
+import com.commercetools.api.models.cart.ItemShippingDetailsDraft;
 import com.commercetools.api.models.common.LocalizedString;
 import com.commercetools.api.models.common.Money;
 import com.commercetools.api.models.order.ItemState;
 import com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifier;
 import com.commercetools.api.models.tax_category.TaxRate;
 import com.commercetools.api.models.type.CustomFieldsDraft;
+import com.commercetools.api.models.cart.CustomLineItemImportDraftImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * CustomLineItemImportDraft
@@ -36,13 +38,15 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .priceMode(CustomLineItemPriceMode.STANDARD)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = CustomLineItemImportDraftImpl.class)
-public interface CustomLineItemImportDraft
-        extends com.commercetools.api.models.CustomizableDraft<CustomLineItemImportDraft>,
-        io.vrap.rmf.base.client.Draft<CustomLineItemImportDraft> {
+public interface CustomLineItemImportDraft extends com.commercetools.api.models.CustomizableDraft<CustomLineItemImportDraft>, io.vrap.rmf.base.client.Draft<CustomLineItemImportDraft> {
+
 
     /**
      *
@@ -52,7 +56,6 @@ public interface CustomLineItemImportDraft
     @Valid
     @JsonProperty("name")
     public LocalizedString getName();
-
     /**
      *  <p>The amount of a CustomLineItem in the cart. Must be a positive integer.</p>
      * @return quantity
@@ -60,7 +63,6 @@ public interface CustomLineItemImportDraft
     @NotNull
     @JsonProperty("quantity")
     public Long getQuantity();
-
     /**
      *  <p>The cost to add to the cart. The amount can be negative.</p>
      * @return money
@@ -69,7 +71,6 @@ public interface CustomLineItemImportDraft
     @Valid
     @JsonProperty("money")
     public Money getMoney();
-
     /**
      *
      * @return slug
@@ -77,7 +78,6 @@ public interface CustomLineItemImportDraft
     @NotNull
     @JsonProperty("slug")
     public String getSlug();
-
     /**
      *
      * @return state
@@ -85,7 +85,6 @@ public interface CustomLineItemImportDraft
     @Valid
     @JsonProperty("state")
     public List<ItemState> getState();
-
     /**
      *
      * @return taxRate
@@ -93,7 +92,6 @@ public interface CustomLineItemImportDraft
     @Valid
     @JsonProperty("taxRate")
     public TaxRate getTaxRate();
-
     /**
      *
      * @return taxCategory
@@ -101,7 +99,6 @@ public interface CustomLineItemImportDraft
     @Valid
     @JsonProperty("taxCategory")
     public TaxCategoryResourceIdentifier getTaxCategory();
-
     /**
      *  <p>The custom fields.</p>
      * @return custom
@@ -109,7 +106,6 @@ public interface CustomLineItemImportDraft
     @Valid
     @JsonProperty("custom")
     public CustomFieldsDraft getCustom();
-
     /**
      *
      * @return shippingDetails
@@ -117,7 +113,6 @@ public interface CustomLineItemImportDraft
     @Valid
     @JsonProperty("shippingDetails")
     public ItemShippingDetailsDraft getShippingDetails();
-
     /**
      *  <ul>
      *   <li>If <code>Standard</code>, Cart Discounts with a matching CartDiscountCustomLineItemsTarget are applied to the Custom Line Item.</li>
@@ -133,73 +128,80 @@ public interface CustomLineItemImportDraft
      * set name
      * @param name value to be set
      */
-
+    
     public void setName(final LocalizedString name);
-
+    
+    
     /**
      *  <p>The amount of a CustomLineItem in the cart. Must be a positive integer.</p>
      * @param quantity value to be set
      */
-
+    
     public void setQuantity(final Long quantity);
-
+    
+    
     /**
      *  <p>The cost to add to the cart. The amount can be negative.</p>
      * @param money value to be set
      */
-
+    
     public void setMoney(final Money money);
-
+    
+    
     /**
      * set slug
      * @param slug value to be set
      */
-
+    
     public void setSlug(final String slug);
-
+    
+    
     /**
      * set state
      * @param state values to be set
      */
-
+    
     @JsonIgnore
-    public void setState(final ItemState... state);
-
+    public void setState(final ItemState ...state);
     /**
      * set state
      * @param state values to be set
      */
-
+    
     public void setState(final List<ItemState> state);
-
+    
     /**
      * set taxRate
      * @param taxRate value to be set
      */
-
+    
     public void setTaxRate(final TaxRate taxRate);
-
+    
+    
     /**
      * set taxCategory
      * @param taxCategory value to be set
      */
-
+    
     public void setTaxCategory(final TaxCategoryResourceIdentifier taxCategory);
-
+    
+    
     /**
      *  <p>The custom fields.</p>
      * @param custom value to be set
      */
-
+    
     public void setCustom(final CustomFieldsDraft custom);
-
+    
+    
     /**
      * set shippingDetails
      * @param shippingDetails value to be set
      */
-
+    
     public void setShippingDetails(final ItemShippingDetailsDraft shippingDetails);
-
+    
+    
     /**
      *  <ul>
      *   <li>If <code>Standard</code>, Cart Discounts with a matching CartDiscountCustomLineItemsTarget are applied to the Custom Line Item.</li>
@@ -207,16 +209,18 @@ public interface CustomLineItemImportDraft
      *  </ul>
      * @param priceMode value to be set
      */
-
+    
     public void setPriceMode(final CustomLineItemPriceMode priceMode);
+    
 
     /**
      * factory method
      * @return instance of CustomLineItemImportDraft
      */
-    public static CustomLineItemImportDraft of() {
+    public static CustomLineItemImportDraft of(){
         return new CustomLineItemImportDraftImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy CustomLineItemImportDraft
@@ -254,16 +258,12 @@ public interface CustomLineItemImportDraft
         instance.setMoney(com.commercetools.api.models.common.Money.deepCopy(template.getMoney()));
         instance.setSlug(template.getSlug());
         instance.setState(Optional.ofNullable(template.getState())
-                .map(t -> t.stream()
-                        .map(com.commercetools.api.models.order.ItemState::deepCopy)
-                        .collect(Collectors.toList()))
+                .map(t -> t.stream().map(com.commercetools.api.models.order.ItemState::deepCopy).collect(Collectors.toList()))
                 .orElse(null));
         instance.setTaxRate(com.commercetools.api.models.tax_category.TaxRate.deepCopy(template.getTaxRate()));
-        instance.setTaxCategory(com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifier
-                .deepCopy(template.getTaxCategory()));
+        instance.setTaxCategory(com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifier.deepCopy(template.getTaxCategory()));
         instance.setCustom(com.commercetools.api.models.type.CustomFieldsDraft.deepCopy(template.getCustom()));
-        instance.setShippingDetails(
-            com.commercetools.api.models.cart.ItemShippingDetailsDraft.deepCopy(template.getShippingDetails()));
+        instance.setShippingDetails(com.commercetools.api.models.cart.ItemShippingDetailsDraft.deepCopy(template.getShippingDetails()));
         instance.setPriceMode(template.getPriceMode());
         return instance;
     }
@@ -275,7 +275,7 @@ public interface CustomLineItemImportDraft
     public static CustomLineItemImportDraftBuilder builder() {
         return CustomLineItemImportDraftBuilder.of();
     }
-
+    
     /**
      * create builder for CustomLineItemImportDraft instance
      * @param template instance with prefilled values for the builder
@@ -284,6 +284,7 @@ public interface CustomLineItemImportDraft
     public static CustomLineItemImportDraftBuilder builder(final CustomLineItemImportDraft template) {
         return CustomLineItemImportDraftBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -294,7 +295,7 @@ public interface CustomLineItemImportDraft
     default <T> T withCustomLineItemImportDraft(Function<CustomLineItemImportDraft, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

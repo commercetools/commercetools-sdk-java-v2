@@ -1,19 +1,21 @@
-
 package com.commercetools.api.models.cart;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
+import com.commercetools.api.models.cart.CartUpdateAction;
 import com.commercetools.api.models.common.BaseAddress;
+import com.commercetools.api.models.cart.CartUpdateItemShippingAddressActionImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Updates an address in <code>itemShippingAddresses</code> by keeping the Address <code>key</code>.</p>
@@ -26,9 +28,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .address(addressBuilder -> addressBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = CartUpdateItemShippingAddressActionImpl.class)
 public interface CartUpdateItemShippingAddressAction extends CartUpdateAction {
 
@@ -50,16 +55,18 @@ public interface CartUpdateItemShippingAddressAction extends CartUpdateAction {
      *  <p>The new Address with the same <code>key</code> as the Address it will replace.</p>
      * @param address value to be set
      */
-
+    
     public void setAddress(final BaseAddress address);
+    
 
     /**
      * factory method
      * @return instance of CartUpdateItemShippingAddressAction
      */
-    public static CartUpdateItemShippingAddressAction of() {
+    public static CartUpdateItemShippingAddressAction of(){
         return new CartUpdateItemShippingAddressActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy CartUpdateItemShippingAddressAction
@@ -78,8 +85,7 @@ public interface CartUpdateItemShippingAddressAction extends CartUpdateAction {
      * @return copy instance
      */
     @Nullable
-    public static CartUpdateItemShippingAddressAction deepCopy(
-            @Nullable final CartUpdateItemShippingAddressAction template) {
+    public static CartUpdateItemShippingAddressAction deepCopy(@Nullable final CartUpdateItemShippingAddressAction template) {
         if (template == null) {
             return null;
         }
@@ -95,16 +101,16 @@ public interface CartUpdateItemShippingAddressAction extends CartUpdateAction {
     public static CartUpdateItemShippingAddressActionBuilder builder() {
         return CartUpdateItemShippingAddressActionBuilder.of();
     }
-
+    
     /**
      * create builder for CartUpdateItemShippingAddressAction instance
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static CartUpdateItemShippingAddressActionBuilder builder(
-            final CartUpdateItemShippingAddressAction template) {
+    public static CartUpdateItemShippingAddressActionBuilder builder(final CartUpdateItemShippingAddressAction template) {
         return CartUpdateItemShippingAddressActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -115,7 +121,7 @@ public interface CartUpdateItemShippingAddressAction extends CartUpdateAction {
     default <T> T withCartUpdateItemShippingAddressAction(Function<CartUpdateItemShippingAddressAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

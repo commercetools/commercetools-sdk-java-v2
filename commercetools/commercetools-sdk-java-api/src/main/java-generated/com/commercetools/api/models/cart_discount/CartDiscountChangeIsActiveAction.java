@@ -1,17 +1,20 @@
-
 package com.commercetools.api.models.cart_discount;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
+import com.commercetools.api.models.cart_discount.CartDiscountUpdateAction;
+import com.commercetools.api.models.cart_discount.CartDiscountChangeIsActiveActionImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * CartDiscountChangeIsActiveAction
@@ -24,9 +27,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .isActive(true)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = CartDiscountChangeIsActiveActionImpl.class)
 public interface CartDiscountChangeIsActiveAction extends CartDiscountUpdateAction {
 
@@ -47,16 +53,18 @@ public interface CartDiscountChangeIsActiveAction extends CartDiscountUpdateActi
      *  <p>New value to set. If set to <code>true</code>, the Discount will be applied to the Cart.</p>
      * @param isActive value to be set
      */
-
+    
     public void setIsActive(final Boolean isActive);
+    
 
     /**
      * factory method
      * @return instance of CartDiscountChangeIsActiveAction
      */
-    public static CartDiscountChangeIsActiveAction of() {
+    public static CartDiscountChangeIsActiveAction of(){
         return new CartDiscountChangeIsActiveActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy CartDiscountChangeIsActiveAction
@@ -91,7 +99,7 @@ public interface CartDiscountChangeIsActiveAction extends CartDiscountUpdateActi
     public static CartDiscountChangeIsActiveActionBuilder builder() {
         return CartDiscountChangeIsActiveActionBuilder.of();
     }
-
+    
     /**
      * create builder for CartDiscountChangeIsActiveAction instance
      * @param template instance with prefilled values for the builder
@@ -100,6 +108,7 @@ public interface CartDiscountChangeIsActiveAction extends CartDiscountUpdateActi
     public static CartDiscountChangeIsActiveActionBuilder builder(final CartDiscountChangeIsActiveAction template) {
         return CartDiscountChangeIsActiveActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -110,7 +119,7 @@ public interface CartDiscountChangeIsActiveAction extends CartDiscountUpdateActi
     default <T> T withCartDiscountChangeIsActiveAction(Function<CartDiscountChangeIsActiveAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

@@ -1,17 +1,20 @@
-
 package com.commercetools.api.models.error;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
+import com.commercetools.api.models.error.GraphQLErrorObject;
+import com.commercetools.api.models.error.GraphQLOverCapacityErrorImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Returned when the service is having trouble handling the load.</p>
@@ -24,9 +27,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     GraphQLOverCapacityError graphQLOverCapacityError = GraphQLOverCapacityError.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = GraphQLOverCapacityErrorImpl.class)
 public interface GraphQLOverCapacityError extends GraphQLErrorObject {
 
@@ -43,13 +49,15 @@ public interface GraphQLOverCapacityError extends GraphQLErrorObject {
     @JsonProperty("code")
     public String getCode();
 
+
     /**
      * factory method
      * @return instance of GraphQLOverCapacityError
      */
-    public static GraphQLOverCapacityError of() {
+    public static GraphQLOverCapacityError of(){
         return new GraphQLOverCapacityErrorImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy GraphQLOverCapacityError
@@ -84,7 +92,7 @@ public interface GraphQLOverCapacityError extends GraphQLErrorObject {
     public static GraphQLOverCapacityErrorBuilder builder() {
         return GraphQLOverCapacityErrorBuilder.of();
     }
-
+    
     /**
      * create builder for GraphQLOverCapacityError instance
      * @param template instance with prefilled values for the builder
@@ -93,6 +101,7 @@ public interface GraphQLOverCapacityError extends GraphQLErrorObject {
     public static GraphQLOverCapacityErrorBuilder builder(final GraphQLOverCapacityError template) {
         return GraphQLOverCapacityErrorBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -103,7 +112,7 @@ public interface GraphQLOverCapacityError extends GraphQLErrorObject {
     default <T> T withGraphQLOverCapacityError(Function<GraphQLOverCapacityError, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

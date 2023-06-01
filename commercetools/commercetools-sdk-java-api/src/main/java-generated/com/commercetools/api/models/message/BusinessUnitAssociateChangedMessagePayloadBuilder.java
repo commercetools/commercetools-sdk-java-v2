@@ -1,9 +1,12 @@
-
 package com.commercetools.api.models.message;
 
+import com.commercetools.api.models.business_unit.Associate;
+import com.commercetools.api.models.message.MessagePayload;
+import com.commercetools.api.models.message.BusinessUnitAssociateChangedMessagePayload;
+import javax.annotation.Nullable;
 import java.util.*;
 import java.util.function.Function;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -17,56 +20,61 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .associate(associateBuilder -> associateBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
-public class BusinessUnitAssociateChangedMessagePayloadBuilder
-        implements Builder<BusinessUnitAssociateChangedMessagePayload> {
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
+public class BusinessUnitAssociateChangedMessagePayloadBuilder implements Builder<BusinessUnitAssociateChangedMessagePayload> {
 
+    
+    
     private com.commercetools.api.models.business_unit.Associate associate;
 
+    
     /**
      *  <p>The Associate that was updated.</p>
      * @param builder function to build the associate value
      * @return Builder
      */
-
-    public BusinessUnitAssociateChangedMessagePayloadBuilder associate(
-            Function<com.commercetools.api.models.business_unit.AssociateBuilder, com.commercetools.api.models.business_unit.AssociateBuilder> builder) {
+    
+    public BusinessUnitAssociateChangedMessagePayloadBuilder associate(Function<com.commercetools.api.models.business_unit.AssociateBuilder, com.commercetools.api.models.business_unit.AssociateBuilder> builder) {
         this.associate = builder.apply(com.commercetools.api.models.business_unit.AssociateBuilder.of()).build();
         return this;
     }
-
+    
     /**
      *  <p>The Associate that was updated.</p>
      * @param builder function to build the associate value
      * @return Builder
      */
-
-    public BusinessUnitAssociateChangedMessagePayloadBuilder withAssociate(
-            Function<com.commercetools.api.models.business_unit.AssociateBuilder, com.commercetools.api.models.business_unit.Associate> builder) {
+    
+    public BusinessUnitAssociateChangedMessagePayloadBuilder withAssociate(Function<com.commercetools.api.models.business_unit.AssociateBuilder, com.commercetools.api.models.business_unit.Associate> builder) {
         this.associate = builder.apply(com.commercetools.api.models.business_unit.AssociateBuilder.of());
         return this;
     }
-
+                    
     /**
      *  <p>The Associate that was updated.</p>
      * @param associate value to be set
      * @return Builder
      */
-
-    public BusinessUnitAssociateChangedMessagePayloadBuilder associate(
-            final com.commercetools.api.models.business_unit.Associate associate) {
+    
+    public BusinessUnitAssociateChangedMessagePayloadBuilder associate( final com.commercetools.api.models.business_unit.Associate associate) {
         this.associate = associate;
         return this;
     }
+    
+    
 
     /**
      *  <p>The Associate that was updated.</p>
      * @return associate
      */
-
-    public com.commercetools.api.models.business_unit.Associate getAssociate() {
+    
+    
+    public com.commercetools.api.models.business_unit.Associate getAssociate(){
         return this.associate;
     }
 
@@ -78,7 +86,7 @@ public class BusinessUnitAssociateChangedMessagePayloadBuilder
         Objects.requireNonNull(associate, BusinessUnitAssociateChangedMessagePayload.class + ": associate is missing");
         return new BusinessUnitAssociateChangedMessagePayloadImpl(associate);
     }
-
+    
     /**
      * builds BusinessUnitAssociateChangedMessagePayload without checking for non-null required values
      * @return BusinessUnitAssociateChangedMessagePayload
@@ -89,7 +97,7 @@ public class BusinessUnitAssociateChangedMessagePayloadBuilder
 
     /**
      * factory method for an instance of BusinessUnitAssociateChangedMessagePayloadBuilder
-     * @return builder
+     * @return builder 
      */
     public static BusinessUnitAssociateChangedMessagePayloadBuilder of() {
         return new BusinessUnitAssociateChangedMessagePayloadBuilder();
@@ -100,8 +108,7 @@ public class BusinessUnitAssociateChangedMessagePayloadBuilder
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static BusinessUnitAssociateChangedMessagePayloadBuilder of(
-            final BusinessUnitAssociateChangedMessagePayload template) {
+    public static BusinessUnitAssociateChangedMessagePayloadBuilder of(final BusinessUnitAssociateChangedMessagePayload template) {
         BusinessUnitAssociateChangedMessagePayloadBuilder builder = new BusinessUnitAssociateChangedMessagePayloadBuilder();
         builder.associate = template.getAssociate();
         return builder;

@@ -1,17 +1,20 @@
-
 package com.commercetools.api.models.error;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
+import com.commercetools.api.models.error.GraphQLErrorObject;
+import com.commercetools.api.models.error.GraphQLGeneralErrorImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Returned when a server-side problem occurs.</p>
@@ -24,9 +27,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     GraphQLGeneralError graphQLGeneralError = GraphQLGeneralError.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = GraphQLGeneralErrorImpl.class)
 public interface GraphQLGeneralError extends GraphQLErrorObject {
 
@@ -43,13 +49,15 @@ public interface GraphQLGeneralError extends GraphQLErrorObject {
     @JsonProperty("code")
     public String getCode();
 
+
     /**
      * factory method
      * @return instance of GraphQLGeneralError
      */
-    public static GraphQLGeneralError of() {
+    public static GraphQLGeneralError of(){
         return new GraphQLGeneralErrorImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy GraphQLGeneralError
@@ -84,7 +92,7 @@ public interface GraphQLGeneralError extends GraphQLErrorObject {
     public static GraphQLGeneralErrorBuilder builder() {
         return GraphQLGeneralErrorBuilder.of();
     }
-
+    
     /**
      * create builder for GraphQLGeneralError instance
      * @param template instance with prefilled values for the builder
@@ -93,6 +101,7 @@ public interface GraphQLGeneralError extends GraphQLErrorObject {
     public static GraphQLGeneralErrorBuilder builder(final GraphQLGeneralError template) {
         return GraphQLGeneralErrorBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -103,7 +112,7 @@ public interface GraphQLGeneralError extends GraphQLErrorObject {
     default <T> T withGraphQLGeneralError(Function<GraphQLGeneralError, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

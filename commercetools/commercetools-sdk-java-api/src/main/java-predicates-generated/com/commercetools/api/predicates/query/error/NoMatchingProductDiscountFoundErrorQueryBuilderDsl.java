@@ -1,9 +1,11 @@
-
 package com.commercetools.api.predicates.query.error;
 
 import com.commercetools.api.predicates.query.*;
 
-public class NoMatchingProductDiscountFoundErrorQueryBuilderDsl {
+import java.util.function.Function;
+
+
+public class NoMatchingProductDiscountFoundErrorQueryBuilderDsl  {
     public NoMatchingProductDiscountFoundErrorQueryBuilderDsl() {
     }
 
@@ -12,15 +14,12 @@ public class NoMatchingProductDiscountFoundErrorQueryBuilderDsl {
     }
 
     public StringComparisonPredicateBuilder<NoMatchingProductDiscountFoundErrorQueryBuilderDsl> code() {
-        return new StringComparisonPredicateBuilder<>(
-            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("code")),
-            p -> new CombinationQueryPredicate<>(p, NoMatchingProductDiscountFoundErrorQueryBuilderDsl::of));
+        return new StringComparisonPredicateBuilder<>(BinaryQueryPredicate.of().left(new ConstantQueryPredicate("code")),
+        p -> new CombinationQueryPredicate<>(p, NoMatchingProductDiscountFoundErrorQueryBuilderDsl::of));
     }
-
     public StringComparisonPredicateBuilder<NoMatchingProductDiscountFoundErrorQueryBuilderDsl> message() {
-        return new StringComparisonPredicateBuilder<>(
-            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("message")),
-            p -> new CombinationQueryPredicate<>(p, NoMatchingProductDiscountFoundErrorQueryBuilderDsl::of));
+        return new StringComparisonPredicateBuilder<>(BinaryQueryPredicate.of().left(new ConstantQueryPredicate("message")),
+        p -> new CombinationQueryPredicate<>(p, NoMatchingProductDiscountFoundErrorQueryBuilderDsl::of));
     }
-
+    
 }

@@ -1,9 +1,12 @@
-
 package com.commercetools.api.models.message;
 
+import com.commercetools.api.models.message.MessagePayload;
+import com.commercetools.api.models.product.ProductReference;
+import com.commercetools.api.models.message.ProductSelectionProductRemovedMessagePayload;
+import javax.annotation.Nullable;
 import java.util.*;
 import java.util.function.Function;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -17,56 +20,61 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .product(productBuilder -> productBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
-public class ProductSelectionProductRemovedMessagePayloadBuilder
-        implements Builder<ProductSelectionProductRemovedMessagePayload> {
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
+public class ProductSelectionProductRemovedMessagePayloadBuilder implements Builder<ProductSelectionProductRemovedMessagePayload> {
 
+    
+    
     private com.commercetools.api.models.product.ProductReference product;
 
+    
     /**
      *  <p>Product that was removed from the Product Selection.</p>
      * @param builder function to build the product value
      * @return Builder
      */
-
-    public ProductSelectionProductRemovedMessagePayloadBuilder product(
-            Function<com.commercetools.api.models.product.ProductReferenceBuilder, com.commercetools.api.models.product.ProductReferenceBuilder> builder) {
+    
+    public ProductSelectionProductRemovedMessagePayloadBuilder product(Function<com.commercetools.api.models.product.ProductReferenceBuilder, com.commercetools.api.models.product.ProductReferenceBuilder> builder) {
         this.product = builder.apply(com.commercetools.api.models.product.ProductReferenceBuilder.of()).build();
         return this;
     }
-
+    
     /**
      *  <p>Product that was removed from the Product Selection.</p>
      * @param builder function to build the product value
      * @return Builder
      */
-
-    public ProductSelectionProductRemovedMessagePayloadBuilder withProduct(
-            Function<com.commercetools.api.models.product.ProductReferenceBuilder, com.commercetools.api.models.product.ProductReference> builder) {
+    
+    public ProductSelectionProductRemovedMessagePayloadBuilder withProduct(Function<com.commercetools.api.models.product.ProductReferenceBuilder, com.commercetools.api.models.product.ProductReference> builder) {
         this.product = builder.apply(com.commercetools.api.models.product.ProductReferenceBuilder.of());
         return this;
     }
-
+                    
     /**
      *  <p>Product that was removed from the Product Selection.</p>
      * @param product value to be set
      * @return Builder
      */
-
-    public ProductSelectionProductRemovedMessagePayloadBuilder product(
-            final com.commercetools.api.models.product.ProductReference product) {
+    
+    public ProductSelectionProductRemovedMessagePayloadBuilder product( final com.commercetools.api.models.product.ProductReference product) {
         this.product = product;
         return this;
     }
+    
+    
 
     /**
      *  <p>Product that was removed from the Product Selection.</p>
      * @return product
      */
-
-    public com.commercetools.api.models.product.ProductReference getProduct() {
+    
+    
+    public com.commercetools.api.models.product.ProductReference getProduct(){
         return this.product;
     }
 
@@ -78,7 +86,7 @@ public class ProductSelectionProductRemovedMessagePayloadBuilder
         Objects.requireNonNull(product, ProductSelectionProductRemovedMessagePayload.class + ": product is missing");
         return new ProductSelectionProductRemovedMessagePayloadImpl(product);
     }
-
+    
     /**
      * builds ProductSelectionProductRemovedMessagePayload without checking for non-null required values
      * @return ProductSelectionProductRemovedMessagePayload
@@ -89,7 +97,7 @@ public class ProductSelectionProductRemovedMessagePayloadBuilder
 
     /**
      * factory method for an instance of ProductSelectionProductRemovedMessagePayloadBuilder
-     * @return builder
+     * @return builder 
      */
     public static ProductSelectionProductRemovedMessagePayloadBuilder of() {
         return new ProductSelectionProductRemovedMessagePayloadBuilder();
@@ -100,8 +108,7 @@ public class ProductSelectionProductRemovedMessagePayloadBuilder
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static ProductSelectionProductRemovedMessagePayloadBuilder of(
-            final ProductSelectionProductRemovedMessagePayload template) {
+    public static ProductSelectionProductRemovedMessagePayloadBuilder of(final ProductSelectionProductRemovedMessagePayload template) {
         ProductSelectionProductRemovedMessagePayloadBuilder builder = new ProductSelectionProductRemovedMessagePayloadBuilder();
         builder.product = template.getProduct();
         return builder;

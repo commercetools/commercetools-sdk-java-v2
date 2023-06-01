@@ -1,9 +1,11 @@
-
 package com.commercetools.api.predicates.query.product;
 
 import com.commercetools.api.predicates.query.*;
 
-public class SearchKeywordsQueryBuilderDsl {
+import java.util.function.Function;
+
+
+public class SearchKeywordsQueryBuilderDsl  {
     public SearchKeywordsQueryBuilderDsl() {
     }
 
@@ -11,4 +13,5 @@ public class SearchKeywordsQueryBuilderDsl {
         return new SearchKeywordsQueryBuilderDsl();
     }
 
+    
 }

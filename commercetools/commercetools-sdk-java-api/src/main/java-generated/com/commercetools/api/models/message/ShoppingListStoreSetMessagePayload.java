@@ -1,19 +1,21 @@
-
 package com.commercetools.api.models.message;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
+import com.commercetools.api.models.message.MessagePayload;
 import com.commercetools.api.models.store.StoreKeyReference;
+import com.commercetools.api.models.message.ShoppingListStoreSetMessagePayloadImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * ShoppingListStoreSetMessagePayload
@@ -26,9 +28,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .store(storeBuilder -> storeBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = ShoppingListStoreSetMessagePayloadImpl.class)
 public interface ShoppingListStoreSetMessagePayload extends MessagePayload {
 
@@ -50,16 +55,18 @@ public interface ShoppingListStoreSetMessagePayload extends MessagePayload {
      *  <p>Reference to a Store by its key.</p>
      * @param store value to be set
      */
-
+    
     public void setStore(final StoreKeyReference store);
+    
 
     /**
      * factory method
      * @return instance of ShoppingListStoreSetMessagePayload
      */
-    public static ShoppingListStoreSetMessagePayload of() {
+    public static ShoppingListStoreSetMessagePayload of(){
         return new ShoppingListStoreSetMessagePayloadImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy ShoppingListStoreSetMessagePayload
@@ -78,8 +85,7 @@ public interface ShoppingListStoreSetMessagePayload extends MessagePayload {
      * @return copy instance
      */
     @Nullable
-    public static ShoppingListStoreSetMessagePayload deepCopy(
-            @Nullable final ShoppingListStoreSetMessagePayload template) {
+    public static ShoppingListStoreSetMessagePayload deepCopy(@Nullable final ShoppingListStoreSetMessagePayload template) {
         if (template == null) {
             return null;
         }
@@ -95,7 +101,7 @@ public interface ShoppingListStoreSetMessagePayload extends MessagePayload {
     public static ShoppingListStoreSetMessagePayloadBuilder builder() {
         return ShoppingListStoreSetMessagePayloadBuilder.of();
     }
-
+    
     /**
      * create builder for ShoppingListStoreSetMessagePayload instance
      * @param template instance with prefilled values for the builder
@@ -104,6 +110,7 @@ public interface ShoppingListStoreSetMessagePayload extends MessagePayload {
     public static ShoppingListStoreSetMessagePayloadBuilder builder(final ShoppingListStoreSetMessagePayload template) {
         return ShoppingListStoreSetMessagePayloadBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -114,7 +121,7 @@ public interface ShoppingListStoreSetMessagePayload extends MessagePayload {
     default <T> T withShoppingListStoreSetMessagePayload(Function<ShoppingListStoreSetMessagePayload, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

@@ -1,11 +1,11 @@
-
 package com.commercetools.api.models.state;
 
+import com.commercetools.api.models.state.State;
+import com.commercetools.api.models.state.StatePagedQueryResponse;
+import javax.annotation.Nullable;
 import java.util.*;
 import java.util.function.Function;
-
-import javax.annotation.Nullable;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -22,196 +22,222 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .plusResults(resultsBuilder -> resultsBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class StatePagedQueryResponseBuilder implements Builder<StatePagedQueryResponse> {
 
+    
+    
     private Long limit;
-
+    
+    
+    
     private Long offset;
-
+    
+    
+    
     private Long count;
-
+    
+    
     @Nullable
     private Long total;
-
+    
+    
+    
     private java.util.List<com.commercetools.api.models.state.State> results;
 
+    
     /**
      *  <p>Number of results requested.</p>
      * @param limit value to be set
      * @return Builder
      */
-
-    public StatePagedQueryResponseBuilder limit(final Long limit) {
+    
+    public StatePagedQueryResponseBuilder limit( final Long limit) {
         this.limit = limit;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Number of elements skipped.</p>
      * @param offset value to be set
      * @return Builder
      */
-
-    public StatePagedQueryResponseBuilder offset(final Long offset) {
+    
+    public StatePagedQueryResponseBuilder offset( final Long offset) {
         this.offset = offset;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Actual number of results returned.</p>
      * @param count value to be set
      * @return Builder
      */
-
-    public StatePagedQueryResponseBuilder count(final Long count) {
+    
+    public StatePagedQueryResponseBuilder count( final Long count) {
         this.count = count;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Total number of results matching the query. This number is an estimation that is not strongly consistent. This field is returned by default. For improved performance, calculating this field can be deactivated by using the query parameter <code>withTotal=false</code>. When the results are filtered with a Query Predicate, <code>total</code> is subject to a limit.</p>
      * @param total value to be set
      * @return Builder
      */
-
+    
     public StatePagedQueryResponseBuilder total(@Nullable final Long total) {
         this.total = total;
         return this;
     }
-
+    
+    
+    
     /**
      *  <p>States matching the query.</p>
      * @param results value to be set
      * @return Builder
      */
-
-    public StatePagedQueryResponseBuilder results(final com.commercetools.api.models.state.State... results) {
+    
+    public StatePagedQueryResponseBuilder results( final com.commercetools.api.models.state.State ...results) {
         this.results = new ArrayList<>(Arrays.asList(results));
         return this;
     }
-
+    
     /**
      *  <p>States matching the query.</p>
      * @param results value to be set
      * @return Builder
      */
-
-    public StatePagedQueryResponseBuilder results(
-            final java.util.List<com.commercetools.api.models.state.State> results) {
+    
+    public StatePagedQueryResponseBuilder results( final java.util.List<com.commercetools.api.models.state.State> results) {
         this.results = results;
         return this;
     }
-
+    
     /**
      *  <p>States matching the query.</p>
      * @param results value to be set
      * @return Builder
      */
-
-    public StatePagedQueryResponseBuilder plusResults(final com.commercetools.api.models.state.State... results) {
+    
+    public StatePagedQueryResponseBuilder plusResults( final com.commercetools.api.models.state.State ...results) {
         if (this.results == null) {
             this.results = new ArrayList<>();
         }
         this.results.addAll(Arrays.asList(results));
         return this;
     }
-
+    
+    
+    
     /**
      *  <p>States matching the query.</p>
      * @param builder function to build the results value
      * @return Builder
      */
-
-    public StatePagedQueryResponseBuilder plusResults(
-            Function<com.commercetools.api.models.state.StateBuilder, com.commercetools.api.models.state.StateBuilder> builder) {
+    
+    public StatePagedQueryResponseBuilder plusResults(Function<com.commercetools.api.models.state.StateBuilder, com.commercetools.api.models.state.StateBuilder> builder) {
         if (this.results == null) {
             this.results = new ArrayList<>();
         }
         this.results.add(builder.apply(com.commercetools.api.models.state.StateBuilder.of()).build());
         return this;
     }
-
+    
     /**
      *  <p>States matching the query.</p>
      * @param builder function to build the results value
      * @return Builder
      */
-
-    public StatePagedQueryResponseBuilder withResults(
-            Function<com.commercetools.api.models.state.StateBuilder, com.commercetools.api.models.state.StateBuilder> builder) {
+    
+    public StatePagedQueryResponseBuilder withResults(Function<com.commercetools.api.models.state.StateBuilder, com.commercetools.api.models.state.StateBuilder> builder) {
         this.results = new ArrayList<>();
         this.results.add(builder.apply(com.commercetools.api.models.state.StateBuilder.of()).build());
         return this;
     }
-
+    
     /**
      *  <p>States matching the query.</p>
      * @param builder function to build the results value
      * @return Builder
      */
-
-    public StatePagedQueryResponseBuilder addResults(
-            Function<com.commercetools.api.models.state.StateBuilder, com.commercetools.api.models.state.State> builder) {
+    
+    public StatePagedQueryResponseBuilder addResults(Function<com.commercetools.api.models.state.StateBuilder, com.commercetools.api.models.state.State> builder) {
         return plusResults(builder.apply(com.commercetools.api.models.state.StateBuilder.of()));
     }
-
+    
     /**
      *  <p>States matching the query.</p>
      * @param builder function to build the results value
      * @return Builder
      */
-
-    public StatePagedQueryResponseBuilder setResults(
-            Function<com.commercetools.api.models.state.StateBuilder, com.commercetools.api.models.state.State> builder) {
+    
+    public StatePagedQueryResponseBuilder setResults(Function<com.commercetools.api.models.state.StateBuilder, com.commercetools.api.models.state.State> builder) {
         return results(builder.apply(com.commercetools.api.models.state.StateBuilder.of()));
     }
+                    
 
     /**
      *  <p>Number of results requested.</p>
      * @return limit
      */
-
-    public Long getLimit() {
+    
+    
+    public Long getLimit(){
         return this.limit;
     }
-
+    
     /**
      *  <p>Number of elements skipped.</p>
      * @return offset
      */
-
-    public Long getOffset() {
+    
+    
+    public Long getOffset(){
         return this.offset;
     }
-
+    
     /**
      *  <p>Actual number of results returned.</p>
      * @return count
      */
-
-    public Long getCount() {
+    
+    
+    public Long getCount(){
         return this.count;
     }
-
+    
     /**
      *  <p>Total number of results matching the query. This number is an estimation that is not strongly consistent. This field is returned by default. For improved performance, calculating this field can be deactivated by using the query parameter <code>withTotal=false</code>. When the results are filtered with a Query Predicate, <code>total</code> is subject to a limit.</p>
      * @return total
      */
-
+    
     @Nullable
-    public Long getTotal() {
+    public Long getTotal(){
         return this.total;
     }
-
+    
     /**
      *  <p>States matching the query.</p>
      * @return results
      */
-
-    public java.util.List<com.commercetools.api.models.state.State> getResults() {
+    
+    
+    public java.util.List<com.commercetools.api.models.state.State> getResults(){
         return this.results;
     }
 
@@ -226,7 +252,7 @@ public class StatePagedQueryResponseBuilder implements Builder<StatePagedQueryRe
         Objects.requireNonNull(results, StatePagedQueryResponse.class + ": results is missing");
         return new StatePagedQueryResponseImpl(limit, offset, count, total, results);
     }
-
+    
     /**
      * builds StatePagedQueryResponse without checking for non-null required values
      * @return StatePagedQueryResponse
@@ -237,7 +263,7 @@ public class StatePagedQueryResponseBuilder implements Builder<StatePagedQueryRe
 
     /**
      * factory method for an instance of StatePagedQueryResponseBuilder
-     * @return builder
+     * @return builder 
      */
     public static StatePagedQueryResponseBuilder of() {
         return new StatePagedQueryResponseBuilder();

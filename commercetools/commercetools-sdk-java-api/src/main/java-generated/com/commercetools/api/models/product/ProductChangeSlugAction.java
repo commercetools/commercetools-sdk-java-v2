@@ -1,19 +1,21 @@
-
 package com.commercetools.api.models.product;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
 import com.commercetools.api.models.common.LocalizedString;
+import com.commercetools.api.models.product.ProductUpdateAction;
+import com.commercetools.api.models.product.ProductChangeSlugActionImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Produces the ProductSlugChanged Message.</p>
@@ -26,9 +28,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .slug(slugBuilder -> slugBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = ProductChangeSlugActionImpl.class)
 public interface ProductChangeSlugAction extends ProductUpdateAction {
 
@@ -45,12 +50,11 @@ public interface ProductChangeSlugAction extends ProductUpdateAction {
     @Valid
     @JsonProperty("slug")
     public LocalizedString getSlug();
-
     /**
      *  <p>If <code>true</code>, only the staged <code>slug</code> is updated. If <code>false</code>, both the current and staged <code>slug</code> are updated.</p>
      * @return staged
      */
-
+    
     @JsonProperty("staged")
     public Boolean getStaged();
 
@@ -58,23 +62,26 @@ public interface ProductChangeSlugAction extends ProductUpdateAction {
      *  <p>Value to set. Must not be empty. A Product can have the same slug for different Locales, but it must be unique across the Project. Must match the pattern <code>^[A-Za-z0-9_-]{2,256}+$</code>.</p>
      * @param slug value to be set
      */
-
+    
     public void setSlug(final LocalizedString slug);
-
+    
+    
     /**
      *  <p>If <code>true</code>, only the staged <code>slug</code> is updated. If <code>false</code>, both the current and staged <code>slug</code> are updated.</p>
      * @param staged value to be set
      */
-
+    
     public void setStaged(final Boolean staged);
+    
 
     /**
      * factory method
      * @return instance of ProductChangeSlugAction
      */
-    public static ProductChangeSlugAction of() {
+    public static ProductChangeSlugAction of(){
         return new ProductChangeSlugActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy ProductChangeSlugAction
@@ -111,7 +118,7 @@ public interface ProductChangeSlugAction extends ProductUpdateAction {
     public static ProductChangeSlugActionBuilder builder() {
         return ProductChangeSlugActionBuilder.of();
     }
-
+    
     /**
      * create builder for ProductChangeSlugAction instance
      * @param template instance with prefilled values for the builder
@@ -120,6 +127,7 @@ public interface ProductChangeSlugAction extends ProductUpdateAction {
     public static ProductChangeSlugActionBuilder builder(final ProductChangeSlugAction template) {
         return ProductChangeSlugActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -130,7 +138,7 @@ public interface ProductChangeSlugAction extends ProductUpdateAction {
     default <T> T withProductChangeSlugAction(Function<ProductChangeSlugAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

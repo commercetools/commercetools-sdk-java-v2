@@ -1,8 +1,11 @@
-
 package com.commercetools.history.models.common;
 
-import java.util.*;
 
+import com.commercetools.history.models.common.ItemShippingTarget;
+import javax.annotation.Nullable;
+import java.util.*;
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -17,52 +20,67 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .quantity(1)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class ItemShippingTargetBuilder implements Builder<ItemShippingTarget> {
 
+    
+    
     private String addressKey;
-
+    
+    
+    
     private Integer quantity;
 
+    
     /**
      *  <p>The key of the address in the cart's <code>itemShippingAddresses</code></p>
      * @param addressKey value to be set
      * @return Builder
      */
-
-    public ItemShippingTargetBuilder addressKey(final String addressKey) {
+    
+    public ItemShippingTargetBuilder addressKey( final String addressKey) {
         this.addressKey = addressKey;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>The quantity of items that should go to the address with the specified <code>addressKey</code>. Only positive values are allowed. Using <code>0</code> as quantity is also possible in a draft object, but the element will not be present in the resulting ItemShippingDetails.</p>
      * @param quantity value to be set
      * @return Builder
      */
-
-    public ItemShippingTargetBuilder quantity(final Integer quantity) {
+    
+    public ItemShippingTargetBuilder quantity( final Integer quantity) {
         this.quantity = quantity;
         return this;
     }
+    
+    
 
     /**
      *  <p>The key of the address in the cart's <code>itemShippingAddresses</code></p>
      * @return addressKey
      */
-
-    public String getAddressKey() {
+    
+    
+    public String getAddressKey(){
         return this.addressKey;
     }
-
+    
     /**
      *  <p>The quantity of items that should go to the address with the specified <code>addressKey</code>. Only positive values are allowed. Using <code>0</code> as quantity is also possible in a draft object, but the element will not be present in the resulting ItemShippingDetails.</p>
      * @return quantity
      */
-
-    public Integer getQuantity() {
+    
+    
+    public Integer getQuantity(){
         return this.quantity;
     }
 
@@ -75,7 +93,7 @@ public class ItemShippingTargetBuilder implements Builder<ItemShippingTarget> {
         Objects.requireNonNull(quantity, ItemShippingTarget.class + ": quantity is missing");
         return new ItemShippingTargetImpl(addressKey, quantity);
     }
-
+    
     /**
      * builds ItemShippingTarget without checking for non-null required values
      * @return ItemShippingTarget
@@ -86,7 +104,7 @@ public class ItemShippingTargetBuilder implements Builder<ItemShippingTarget> {
 
     /**
      * factory method for an instance of ItemShippingTargetBuilder
-     * @return builder
+     * @return builder 
      */
     public static ItemShippingTargetBuilder of() {
         return new ItemShippingTargetBuilder();

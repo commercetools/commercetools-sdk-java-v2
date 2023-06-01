@@ -1,32 +1,33 @@
-
 package com.commercetools.importapi.models.importoperations;
-
-import java.util.Arrays;
-import java.util.Optional;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-
+import java.lang.String;
+import java.util.Arrays;
+import java.util.Optional;
 import io.vrap.rmf.base.client.JsonEnum;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
  *  <p>Describes the validation state of a newly created ImportOperation.</p>
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public interface ImportOperationState extends JsonEnum {
 
     /**
     	<p>This is an initial state of import resource and is currently processing.</p>
-
+    	
     */
     ImportOperationState PROCESSING = ImportOperationStateEnum.PROCESSING;
     /**
     	<p>The validation of the import resource failed.</p>
-
+    	
     */
     ImportOperationState VALIDATION_FAILED = ImportOperationStateEnum.VALIDATION_FAILED;
-
+    
     /**
      * possible values of ImportOperationState
      */
@@ -35,7 +36,7 @@ public interface ImportOperationState extends JsonEnum {
          * processing
          */
         PROCESSING("processing"),
-
+        
         /**
          * validationFailed
          */
@@ -92,7 +93,7 @@ public interface ImportOperationState extends JsonEnum {
             public String name() {
                 return value.toUpperCase();
             }
-
+            
             public String toString() {
                 return value;
             }
@@ -107,7 +108,7 @@ public interface ImportOperationState extends JsonEnum {
     public static Optional<ImportOperationState> findEnumViaJsonName(String jsonName) {
         return Arrays.stream(values()).filter(t -> t.getJsonName().equals(jsonName)).findFirst();
     }
-
+    
     /**
      * possible enum values
      * @return array of possible enum values
@@ -115,5 +116,5 @@ public interface ImportOperationState extends JsonEnum {
     public static ImportOperationState[] values() {
         return ImportOperationStateEnum.values();
     }
-
+    
 }

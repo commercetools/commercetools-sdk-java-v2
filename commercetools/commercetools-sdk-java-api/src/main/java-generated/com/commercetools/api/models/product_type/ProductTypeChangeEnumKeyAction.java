@@ -1,17 +1,20 @@
-
 package com.commercetools.api.models.product_type;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
+import com.commercetools.api.models.product_type.ProductTypeUpdateAction;
+import com.commercetools.api.models.product_type.ProductTypeChangeEnumKeyActionImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Updates the key of a single enum <code>value</code> in an AttributeEnumType AttributeDefinition, AttributeLocalizedEnumType AttributeDefinition, AttributeSetType of AttributeEnumType AttributeDefinition, or AttributeSetType of AttributeLocalizedEnumType AttributeDefinition.</p>
@@ -28,9 +31,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .newKey("{newKey}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = ProductTypeChangeEnumKeyActionImpl.class)
 public interface ProductTypeChangeEnumKeyAction extends ProductTypeUpdateAction {
 
@@ -46,7 +52,6 @@ public interface ProductTypeChangeEnumKeyAction extends ProductTypeUpdateAction 
     @NotNull
     @JsonProperty("attributeName")
     public String getAttributeName();
-
     /**
      *  <p>Existing key to be changed.</p>
      * @return key
@@ -54,7 +59,6 @@ public interface ProductTypeChangeEnumKeyAction extends ProductTypeUpdateAction 
     @NotNull
     @JsonProperty("key")
     public String getKey();
-
     /**
      *  <p>New key to be set.</p>
      * @return newKey
@@ -67,30 +71,34 @@ public interface ProductTypeChangeEnumKeyAction extends ProductTypeUpdateAction 
      *  <p>Name of the AttributeDefinition to update.</p>
      * @param attributeName value to be set
      */
-
+    
     public void setAttributeName(final String attributeName);
-
+    
+    
     /**
      *  <p>Existing key to be changed.</p>
      * @param key value to be set
      */
-
+    
     public void setKey(final String key);
-
+    
+    
     /**
      *  <p>New key to be set.</p>
      * @param newKey value to be set
      */
-
+    
     public void setNewKey(final String newKey);
+    
 
     /**
      * factory method
      * @return instance of ProductTypeChangeEnumKeyAction
      */
-    public static ProductTypeChangeEnumKeyAction of() {
+    public static ProductTypeChangeEnumKeyAction of(){
         return new ProductTypeChangeEnumKeyActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy ProductTypeChangeEnumKeyAction
@@ -129,7 +137,7 @@ public interface ProductTypeChangeEnumKeyAction extends ProductTypeUpdateAction 
     public static ProductTypeChangeEnumKeyActionBuilder builder() {
         return ProductTypeChangeEnumKeyActionBuilder.of();
     }
-
+    
     /**
      * create builder for ProductTypeChangeEnumKeyAction instance
      * @param template instance with prefilled values for the builder
@@ -138,6 +146,7 @@ public interface ProductTypeChangeEnumKeyAction extends ProductTypeUpdateAction 
     public static ProductTypeChangeEnumKeyActionBuilder builder(final ProductTypeChangeEnumKeyAction template) {
         return ProductTypeChangeEnumKeyActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -148,7 +157,7 @@ public interface ProductTypeChangeEnumKeyAction extends ProductTypeUpdateAction 
     default <T> T withProductTypeChangeEnumKeyAction(Function<ProductTypeChangeEnumKeyAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

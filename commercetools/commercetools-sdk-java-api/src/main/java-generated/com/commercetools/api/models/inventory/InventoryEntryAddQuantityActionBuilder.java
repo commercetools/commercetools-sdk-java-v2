@@ -1,8 +1,11 @@
-
 package com.commercetools.api.models.inventory;
 
+import com.commercetools.api.models.inventory.InventoryEntryUpdateAction;
+import com.commercetools.api.models.inventory.InventoryEntryAddQuantityAction;
+import javax.annotation.Nullable;
 import java.util.*;
-
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -16,30 +19,39 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .quantity(0.3)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class InventoryEntryAddQuantityActionBuilder implements Builder<InventoryEntryAddQuantityAction> {
 
+    
+    
     private Long quantity;
 
+    
     /**
      *  <p>Value to add to <code>quantityOnStock</code>.</p>
      * @param quantity value to be set
      * @return Builder
      */
-
-    public InventoryEntryAddQuantityActionBuilder quantity(final Long quantity) {
+    
+    public InventoryEntryAddQuantityActionBuilder quantity( final Long quantity) {
         this.quantity = quantity;
         return this;
     }
+    
+    
 
     /**
      *  <p>Value to add to <code>quantityOnStock</code>.</p>
      * @return quantity
      */
-
-    public Long getQuantity() {
+    
+    
+    public Long getQuantity(){
         return this.quantity;
     }
 
@@ -51,7 +63,7 @@ public class InventoryEntryAddQuantityActionBuilder implements Builder<Inventory
         Objects.requireNonNull(quantity, InventoryEntryAddQuantityAction.class + ": quantity is missing");
         return new InventoryEntryAddQuantityActionImpl(quantity);
     }
-
+    
     /**
      * builds InventoryEntryAddQuantityAction without checking for non-null required values
      * @return InventoryEntryAddQuantityAction
@@ -62,7 +74,7 @@ public class InventoryEntryAddQuantityActionBuilder implements Builder<Inventory
 
     /**
      * factory method for an instance of InventoryEntryAddQuantityActionBuilder
-     * @return builder
+     * @return builder 
      */
     public static InventoryEntryAddQuantityActionBuilder of() {
         return new InventoryEntryAddQuantityActionBuilder();

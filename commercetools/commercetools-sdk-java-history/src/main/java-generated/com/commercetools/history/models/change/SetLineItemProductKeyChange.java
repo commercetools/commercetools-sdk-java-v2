@@ -1,19 +1,21 @@
-
 package com.commercetools.history.models.change;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
+import com.commercetools.history.models.change.Change;
 import com.commercetools.history.models.common.LocalizedString;
+import com.commercetools.history.models.change.SetLineItemProductKeyChangeImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * SetLineItemProductKeyChange
@@ -31,9 +33,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .nextValue("{nextValue}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = SetLineItemProductKeyChangeImpl.class)
 public interface SetLineItemProductKeyChange extends Change {
 
@@ -49,7 +54,6 @@ public interface SetLineItemProductKeyChange extends Change {
     @NotNull
     @JsonProperty("type")
     public String getType();
-
     /**
      *  <p>Update action for <code>setLineItemProductKey</code></p>
      * @return change
@@ -57,7 +61,6 @@ public interface SetLineItemProductKeyChange extends Change {
     @NotNull
     @JsonProperty("change")
     public String getChange();
-
     /**
      *
      * @return lineItem
@@ -66,7 +69,6 @@ public interface SetLineItemProductKeyChange extends Change {
     @Valid
     @JsonProperty("lineItem")
     public LocalizedString getLineItem();
-
     /**
      *
      * @return lineItemId
@@ -74,7 +76,6 @@ public interface SetLineItemProductKeyChange extends Change {
     @NotNull
     @JsonProperty("lineItemId")
     public String getLineItemId();
-
     /**
      *
      * @return variant
@@ -82,7 +83,6 @@ public interface SetLineItemProductKeyChange extends Change {
     @NotNull
     @JsonProperty("variant")
     public String getVariant();
-
     /**
      *
      * @return previousValue
@@ -90,7 +90,6 @@ public interface SetLineItemProductKeyChange extends Change {
     @NotNull
     @JsonProperty("previousValue")
     public String getPreviousValue();
-
     /**
      *
      * @return nextValue
@@ -103,51 +102,58 @@ public interface SetLineItemProductKeyChange extends Change {
      *  <p>Update action for <code>setLineItemProductKey</code></p>
      * @param change value to be set
      */
-
+    
     public void setChange(final String change);
-
+    
+    
     /**
      * set lineItem
      * @param lineItem value to be set
      */
-
+    
     public void setLineItem(final LocalizedString lineItem);
-
+    
+    
     /**
      * set lineItemId
      * @param lineItemId value to be set
      */
-
+    
     public void setLineItemId(final String lineItemId);
-
+    
+    
     /**
      * set variant
      * @param variant value to be set
      */
-
+    
     public void setVariant(final String variant);
-
+    
+    
     /**
      * set previousValue
      * @param previousValue value to be set
      */
-
+    
     public void setPreviousValue(final String previousValue);
-
+    
+    
     /**
      * set nextValue
      * @param nextValue value to be set
      */
-
+    
     public void setNextValue(final String nextValue);
+    
 
     /**
      * factory method
      * @return instance of SetLineItemProductKeyChange
      */
-    public static SetLineItemProductKeyChange of() {
+    public static SetLineItemProductKeyChange of(){
         return new SetLineItemProductKeyChangeImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy SetLineItemProductKeyChange
@@ -192,7 +198,7 @@ public interface SetLineItemProductKeyChange extends Change {
     public static SetLineItemProductKeyChangeBuilder builder() {
         return SetLineItemProductKeyChangeBuilder.of();
     }
-
+    
     /**
      * create builder for SetLineItemProductKeyChange instance
      * @param template instance with prefilled values for the builder
@@ -201,6 +207,7 @@ public interface SetLineItemProductKeyChange extends Change {
     public static SetLineItemProductKeyChangeBuilder builder(final SetLineItemProductKeyChange template) {
         return SetLineItemProductKeyChangeBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -211,7 +218,7 @@ public interface SetLineItemProductKeyChange extends Change {
     default <T> T withSetLineItemProductKeyChange(Function<SetLineItemProductKeyChange, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

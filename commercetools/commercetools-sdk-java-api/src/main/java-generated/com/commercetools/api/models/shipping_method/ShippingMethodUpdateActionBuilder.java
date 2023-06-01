@@ -1,75 +1,82 @@
-
 package com.commercetools.api.models.shipping_method;
 
+import com.commercetools.api.models.shipping_method.ShippingMethodAddShippingRateAction;
+import com.commercetools.api.models.shipping_method.ShippingMethodAddZoneAction;
+import com.commercetools.api.models.shipping_method.ShippingMethodChangeIsDefaultAction;
+import com.commercetools.api.models.shipping_method.ShippingMethodChangeNameAction;
+import com.commercetools.api.models.shipping_method.ShippingMethodChangeTaxCategoryAction;
+import com.commercetools.api.models.shipping_method.ShippingMethodRemoveShippingRateAction;
+import com.commercetools.api.models.shipping_method.ShippingMethodRemoveZoneAction;
+import com.commercetools.api.models.shipping_method.ShippingMethodSetCustomFieldAction;
+import com.commercetools.api.models.shipping_method.ShippingMethodSetCustomTypeAction;
+import com.commercetools.api.models.shipping_method.ShippingMethodSetDescriptionAction;
+import com.commercetools.api.models.shipping_method.ShippingMethodSetKeyAction;
+import com.commercetools.api.models.shipping_method.ShippingMethodSetLocalizedDescriptionAction;
+import com.commercetools.api.models.shipping_method.ShippingMethodSetLocalizedNameAction;
+import com.commercetools.api.models.shipping_method.ShippingMethodSetPredicateAction;
+import com.commercetools.api.models.shipping_method.ShippingMethodUpdateAction;
+import javax.annotation.Nullable;
 import java.util.*;
-
+import java.util.function.Function;
+import java.time.ZonedDateTime;
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
  * ShippingMethodUpdateActionBuilder
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class ShippingMethodUpdateActionBuilder {
 
     public com.commercetools.api.models.shipping_method.ShippingMethodAddShippingRateActionBuilder addShippingRateBuilder() {
-        return com.commercetools.api.models.shipping_method.ShippingMethodAddShippingRateActionBuilder.of();
+       return com.commercetools.api.models.shipping_method.ShippingMethodAddShippingRateActionBuilder.of();
     }
-
     public com.commercetools.api.models.shipping_method.ShippingMethodAddZoneActionBuilder addZoneBuilder() {
-        return com.commercetools.api.models.shipping_method.ShippingMethodAddZoneActionBuilder.of();
+       return com.commercetools.api.models.shipping_method.ShippingMethodAddZoneActionBuilder.of();
     }
-
     public com.commercetools.api.models.shipping_method.ShippingMethodChangeIsDefaultActionBuilder changeIsDefaultBuilder() {
-        return com.commercetools.api.models.shipping_method.ShippingMethodChangeIsDefaultActionBuilder.of();
+       return com.commercetools.api.models.shipping_method.ShippingMethodChangeIsDefaultActionBuilder.of();
     }
-
     public com.commercetools.api.models.shipping_method.ShippingMethodChangeNameActionBuilder changeNameBuilder() {
-        return com.commercetools.api.models.shipping_method.ShippingMethodChangeNameActionBuilder.of();
+       return com.commercetools.api.models.shipping_method.ShippingMethodChangeNameActionBuilder.of();
     }
-
     public com.commercetools.api.models.shipping_method.ShippingMethodChangeTaxCategoryActionBuilder changeTaxCategoryBuilder() {
-        return com.commercetools.api.models.shipping_method.ShippingMethodChangeTaxCategoryActionBuilder.of();
+       return com.commercetools.api.models.shipping_method.ShippingMethodChangeTaxCategoryActionBuilder.of();
     }
-
     public com.commercetools.api.models.shipping_method.ShippingMethodRemoveShippingRateActionBuilder removeShippingRateBuilder() {
-        return com.commercetools.api.models.shipping_method.ShippingMethodRemoveShippingRateActionBuilder.of();
+       return com.commercetools.api.models.shipping_method.ShippingMethodRemoveShippingRateActionBuilder.of();
     }
-
     public com.commercetools.api.models.shipping_method.ShippingMethodRemoveZoneActionBuilder removeZoneBuilder() {
-        return com.commercetools.api.models.shipping_method.ShippingMethodRemoveZoneActionBuilder.of();
+       return com.commercetools.api.models.shipping_method.ShippingMethodRemoveZoneActionBuilder.of();
     }
-
     public com.commercetools.api.models.shipping_method.ShippingMethodSetCustomFieldActionBuilder setCustomFieldBuilder() {
-        return com.commercetools.api.models.shipping_method.ShippingMethodSetCustomFieldActionBuilder.of();
+       return com.commercetools.api.models.shipping_method.ShippingMethodSetCustomFieldActionBuilder.of();
     }
-
     public com.commercetools.api.models.shipping_method.ShippingMethodSetCustomTypeActionBuilder setCustomTypeBuilder() {
-        return com.commercetools.api.models.shipping_method.ShippingMethodSetCustomTypeActionBuilder.of();
+       return com.commercetools.api.models.shipping_method.ShippingMethodSetCustomTypeActionBuilder.of();
     }
-
     public com.commercetools.api.models.shipping_method.ShippingMethodSetDescriptionActionBuilder setDescriptionBuilder() {
-        return com.commercetools.api.models.shipping_method.ShippingMethodSetDescriptionActionBuilder.of();
+       return com.commercetools.api.models.shipping_method.ShippingMethodSetDescriptionActionBuilder.of();
     }
-
     public com.commercetools.api.models.shipping_method.ShippingMethodSetKeyActionBuilder setKeyBuilder() {
-        return com.commercetools.api.models.shipping_method.ShippingMethodSetKeyActionBuilder.of();
+       return com.commercetools.api.models.shipping_method.ShippingMethodSetKeyActionBuilder.of();
     }
-
     public com.commercetools.api.models.shipping_method.ShippingMethodSetLocalizedDescriptionActionBuilder setLocalizedDescriptionBuilder() {
-        return com.commercetools.api.models.shipping_method.ShippingMethodSetLocalizedDescriptionActionBuilder.of();
+       return com.commercetools.api.models.shipping_method.ShippingMethodSetLocalizedDescriptionActionBuilder.of();
     }
-
     public com.commercetools.api.models.shipping_method.ShippingMethodSetLocalizedNameActionBuilder setLocalizedNameBuilder() {
-        return com.commercetools.api.models.shipping_method.ShippingMethodSetLocalizedNameActionBuilder.of();
+       return com.commercetools.api.models.shipping_method.ShippingMethodSetLocalizedNameActionBuilder.of();
     }
-
     public com.commercetools.api.models.shipping_method.ShippingMethodSetPredicateActionBuilder setPredicateBuilder() {
-        return com.commercetools.api.models.shipping_method.ShippingMethodSetPredicateActionBuilder.of();
+       return com.commercetools.api.models.shipping_method.ShippingMethodSetPredicateActionBuilder.of();
     }
 
     /**
      * factory method for an instance of ShippingMethodUpdateActionBuilder
-     * @return builder
+     * @return builder 
      */
     public static ShippingMethodUpdateActionBuilder of() {
         return new ShippingMethodUpdateActionBuilder();

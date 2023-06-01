@@ -1,19 +1,22 @@
-
 package com.commercetools.api.models.channel;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-
+import com.commercetools.api.models.channel.ChannelUpdateAction;
 import com.commercetools.api.models.type.FieldContainer;
 import com.commercetools.api.models.type.TypeResourceIdentifier;
+import com.commercetools.api.models.channel.ChannelSetAddressCustomTypeActionImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * ChannelSetAddressCustomTypeAction
@@ -25,9 +28,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     ChannelSetAddressCustomTypeAction channelSetAddressCustomTypeAction = ChannelSetAddressCustomTypeAction.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = ChannelSetAddressCustomTypeActionImpl.class)
 public interface ChannelSetAddressCustomTypeAction extends ChannelUpdateAction {
 
@@ -43,7 +49,6 @@ public interface ChannelSetAddressCustomTypeAction extends ChannelUpdateAction {
     @Valid
     @JsonProperty("type")
     public TypeResourceIdentifier getType();
-
     /**
      *  <p>Sets the Custom Fields fields for the <code>address</code>.</p>
      * @return fields
@@ -56,23 +61,26 @@ public interface ChannelSetAddressCustomTypeAction extends ChannelUpdateAction {
      *  <p>Defines the Type that extends the <code>address</code> with Custom Fields. If absent, any existing Type and Custom Fields are removed from the <code>address</code>.</p>
      * @param type value to be set
      */
-
+    
     public void setType(final TypeResourceIdentifier type);
-
+    
+    
     /**
      *  <p>Sets the Custom Fields fields for the <code>address</code>.</p>
      * @param fields value to be set
      */
-
+    
     public void setFields(final FieldContainer fields);
+    
 
     /**
      * factory method
      * @return instance of ChannelSetAddressCustomTypeAction
      */
-    public static ChannelSetAddressCustomTypeAction of() {
+    public static ChannelSetAddressCustomTypeAction of(){
         return new ChannelSetAddressCustomTypeActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy ChannelSetAddressCustomTypeAction
@@ -92,8 +100,7 @@ public interface ChannelSetAddressCustomTypeAction extends ChannelUpdateAction {
      * @return copy instance
      */
     @Nullable
-    public static ChannelSetAddressCustomTypeAction deepCopy(
-            @Nullable final ChannelSetAddressCustomTypeAction template) {
+    public static ChannelSetAddressCustomTypeAction deepCopy(@Nullable final ChannelSetAddressCustomTypeAction template) {
         if (template == null) {
             return null;
         }
@@ -110,7 +117,7 @@ public interface ChannelSetAddressCustomTypeAction extends ChannelUpdateAction {
     public static ChannelSetAddressCustomTypeActionBuilder builder() {
         return ChannelSetAddressCustomTypeActionBuilder.of();
     }
-
+    
     /**
      * create builder for ChannelSetAddressCustomTypeAction instance
      * @param template instance with prefilled values for the builder
@@ -119,6 +126,7 @@ public interface ChannelSetAddressCustomTypeAction extends ChannelUpdateAction {
     public static ChannelSetAddressCustomTypeActionBuilder builder(final ChannelSetAddressCustomTypeAction template) {
         return ChannelSetAddressCustomTypeActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -129,7 +137,7 @@ public interface ChannelSetAddressCustomTypeAction extends ChannelUpdateAction {
     default <T> T withChannelSetAddressCustomTypeAction(Function<ChannelSetAddressCustomTypeAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

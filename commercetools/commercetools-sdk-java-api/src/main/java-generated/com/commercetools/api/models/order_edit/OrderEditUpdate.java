@@ -1,19 +1,20 @@
-
 package com.commercetools.api.models.order_edit;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-import java.util.stream.Collectors;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
+import com.commercetools.api.models.order_edit.OrderEditUpdateAction;
+import com.commercetools.api.models.order_edit.OrderEditUpdateImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * OrderEditUpdate
@@ -27,12 +28,15 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .plusActions(actionsBuilder -> actionsBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = OrderEditUpdateImpl.class)
-public interface OrderEditUpdate extends
-        com.commercetools.api.models.ResourceUpdate<OrderEditUpdate, OrderEditUpdateAction, OrderEditUpdateBuilder> {
+public interface OrderEditUpdate extends com.commercetools.api.models.ResourceUpdate<OrderEditUpdate, OrderEditUpdateAction, OrderEditUpdateBuilder> {
+
 
     /**
      *
@@ -41,7 +45,6 @@ public interface OrderEditUpdate extends
     @NotNull
     @JsonProperty("version")
     public Long getVersion();
-
     /**
      *
      * @return actions
@@ -50,12 +53,11 @@ public interface OrderEditUpdate extends
     @Valid
     @JsonProperty("actions")
     public List<OrderEditUpdateAction> getActions();
-
     /**
      *
      * @return dryRun
      */
-
+    
     @JsonProperty("dryRun")
     public Boolean getDryRun();
 
@@ -63,38 +65,40 @@ public interface OrderEditUpdate extends
      * set version
      * @param version value to be set
      */
-
+    
     public void setVersion(final Long version);
-
+    
+    
     /**
      * set actions
      * @param actions values to be set
      */
-
+    
     @JsonIgnore
-    public void setActions(final OrderEditUpdateAction... actions);
-
+    public void setActions(final OrderEditUpdateAction ...actions);
     /**
      * set actions
      * @param actions values to be set
      */
-
+    
     public void setActions(final List<OrderEditUpdateAction> actions);
-
+    
     /**
      * set dryRun
      * @param dryRun value to be set
      */
-
+    
     public void setDryRun(final Boolean dryRun);
+    
 
     /**
      * factory method
      * @return instance of OrderEditUpdate
      */
-    public static OrderEditUpdate of() {
+    public static OrderEditUpdate of(){
         return new OrderEditUpdateImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy OrderEditUpdate
@@ -122,9 +126,7 @@ public interface OrderEditUpdate extends
         OrderEditUpdateImpl instance = new OrderEditUpdateImpl();
         instance.setVersion(template.getVersion());
         instance.setActions(Optional.ofNullable(template.getActions())
-                .map(t -> t.stream()
-                        .map(com.commercetools.api.models.order_edit.OrderEditUpdateAction::deepCopy)
-                        .collect(Collectors.toList()))
+                .map(t -> t.stream().map(com.commercetools.api.models.order_edit.OrderEditUpdateAction::deepCopy).collect(Collectors.toList()))
                 .orElse(null));
         instance.setDryRun(template.getDryRun());
         return instance;
@@ -137,7 +139,7 @@ public interface OrderEditUpdate extends
     public static OrderEditUpdateBuilder builder() {
         return OrderEditUpdateBuilder.of();
     }
-
+    
     /**
      * create builder for OrderEditUpdate instance
      * @param template instance with prefilled values for the builder
@@ -146,6 +148,7 @@ public interface OrderEditUpdate extends
     public static OrderEditUpdateBuilder builder(final OrderEditUpdate template) {
         return OrderEditUpdateBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -156,7 +159,7 @@ public interface OrderEditUpdate extends
     default <T> T withOrderEditUpdate(Function<OrderEditUpdate, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

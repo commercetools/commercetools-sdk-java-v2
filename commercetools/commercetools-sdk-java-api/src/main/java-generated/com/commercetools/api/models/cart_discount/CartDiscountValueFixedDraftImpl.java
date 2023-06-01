@@ -1,86 +1,99 @@
-
 package com.commercetools.api.models.cart_discount;
 
-import java.time.*;
-import java.util.*;
-
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
-
-import io.vrap.rmf.base.client.ModelBase;
+import com.commercetools.api.models.cart_discount.CartDiscountValueDraft;
+import com.commercetools.api.models.common.Money;
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.ModelBase;
+import javax.validation.Valid;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.annotation.*;
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
  *  <p>Sets the DiscountedLineItemPrice of the CartDiscountLineItemsTarget or CartDiscountCustomLineItemsTarget to the value specified in the <code>money</code> field, if it is lower than the current Line Item price for the same currency. If the Line Item price is already discounted to a price equal to or lower than the respective price in the <code>money</code> field, this Discount is not applied.</p>
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class CartDiscountValueFixedDraftImpl implements CartDiscountValueFixedDraft, ModelBase {
 
+    
     private String type;
-
+    
+    
     private java.util.List<com.commercetools.api.models.common.Money> money;
 
     /**
      * create instance with all properties
      */
     @JsonCreator
-    CartDiscountValueFixedDraftImpl(
-            @JsonProperty("money") final java.util.List<com.commercetools.api.models.common.Money> money) {
+    CartDiscountValueFixedDraftImpl(@JsonProperty("money") final java.util.List<com.commercetools.api.models.common.Money> money) {
         this.money = money;
-        this.type = FIXED;
+        this.type =  FIXED;
     }
-
     /**
      * create empty instance
      */
     public CartDiscountValueFixedDraftImpl() {
-        this.type = FIXED;
+        this.type =  FIXED;
     }
 
     /**
      *
      */
-
-    public String getType() {
+    
+    public String getType(){
         return this.type;
     }
-
+    
     /**
      *  <p>Money values in different currencies. A fixed Cart Discount will only match a price if this array contains a value with the same currency. If it contains 10&euro; and 15$, the matching &euro; price will be discounted by 10&euro; and the matching $ price will be discounted to 15$.</p>
      */
-
-    public java.util.List<com.commercetools.api.models.common.Money> getMoney() {
+    
+    public java.util.List<com.commercetools.api.models.common.Money> getMoney(){
         return this.money;
     }
 
-    public void setMoney(final com.commercetools.api.models.common.Money... money) {
-        this.money = new ArrayList<>(Arrays.asList(money));
+    
+    public void setMoney(final com.commercetools.api.models.common.Money ...money){
+       this.money = new ArrayList<>(Arrays.asList(money));
     }
-
-    public void setMoney(final java.util.List<com.commercetools.api.models.common.Money> money) {
-        this.money = money;
+    
+    
+    public void setMoney(final java.util.List<com.commercetools.api.models.common.Money> money){
+       this.money = money;
     }
 
     @Override
     public boolean equals(Object o) {
-        if (this == o)
-            return true;
-
-        if (o == null || getClass() != o.getClass())
-            return false;
-
+        if (this == o) return true;
+    
+        if (o == null || getClass() != o.getClass()) return false;
+    
         CartDiscountValueFixedDraftImpl that = (CartDiscountValueFixedDraftImpl) o;
-
-        return new EqualsBuilder().append(type, that.type).append(money, that.money).isEquals();
+    
+        return new EqualsBuilder()
+                .append(type, that.type)
+                .append(money, that.money)
+                .isEquals();
     }
-
+    
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(type).append(money).toHashCode();
+        return new HashCodeBuilder(17, 37)
+            .append(type)
+            .append(money)
+            .toHashCode();
     }
 
 }

@@ -1,17 +1,20 @@
-
 package com.commercetools.api.models.message;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
+import com.commercetools.api.models.message.MessagePayload;
+import com.commercetools.api.models.message.CustomerPasswordUpdatedMessagePayloadImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Generated after a successful Reset Customer's Password, Reset Customer's Password in a Store, Change Customer's Password, or Change Customer's Password in a Store request. This Message is also produced during equivalent requests to the My Customer Profile endpoint.</p>
@@ -24,9 +27,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .reset(true)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = CustomerPasswordUpdatedMessagePayloadImpl.class)
 public interface CustomerPasswordUpdatedMessagePayload extends MessagePayload {
 
@@ -47,16 +53,18 @@ public interface CustomerPasswordUpdatedMessagePayload extends MessagePayload {
      *  <p>Whether the Customer's password was updated during the Reset password or Change password flow.</p>
      * @param reset value to be set
      */
-
+    
     public void setReset(final Boolean reset);
+    
 
     /**
      * factory method
      * @return instance of CustomerPasswordUpdatedMessagePayload
      */
-    public static CustomerPasswordUpdatedMessagePayload of() {
+    public static CustomerPasswordUpdatedMessagePayload of(){
         return new CustomerPasswordUpdatedMessagePayloadImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy CustomerPasswordUpdatedMessagePayload
@@ -75,8 +83,7 @@ public interface CustomerPasswordUpdatedMessagePayload extends MessagePayload {
      * @return copy instance
      */
     @Nullable
-    public static CustomerPasswordUpdatedMessagePayload deepCopy(
-            @Nullable final CustomerPasswordUpdatedMessagePayload template) {
+    public static CustomerPasswordUpdatedMessagePayload deepCopy(@Nullable final CustomerPasswordUpdatedMessagePayload template) {
         if (template == null) {
             return null;
         }
@@ -92,16 +99,16 @@ public interface CustomerPasswordUpdatedMessagePayload extends MessagePayload {
     public static CustomerPasswordUpdatedMessagePayloadBuilder builder() {
         return CustomerPasswordUpdatedMessagePayloadBuilder.of();
     }
-
+    
     /**
      * create builder for CustomerPasswordUpdatedMessagePayload instance
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static CustomerPasswordUpdatedMessagePayloadBuilder builder(
-            final CustomerPasswordUpdatedMessagePayload template) {
+    public static CustomerPasswordUpdatedMessagePayloadBuilder builder(final CustomerPasswordUpdatedMessagePayload template) {
         return CustomerPasswordUpdatedMessagePayloadBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -112,7 +119,7 @@ public interface CustomerPasswordUpdatedMessagePayload extends MessagePayload {
     default <T> T withCustomerPasswordUpdatedMessagePayload(Function<CustomerPasswordUpdatedMessagePayload, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

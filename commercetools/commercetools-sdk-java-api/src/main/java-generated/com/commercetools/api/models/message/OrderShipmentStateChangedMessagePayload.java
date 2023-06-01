@@ -1,18 +1,21 @@
-
 package com.commercetools.api.models.message;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
-
+import com.commercetools.api.models.message.OrderMessagePayload;
 import com.commercetools.api.models.order.ShipmentState;
+import com.commercetools.api.models.message.OrderShipmentStateChangedMessagePayloadImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Generated after a successful Change Shipment State update action.</p>
@@ -26,9 +29,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .oldShipmentState(ShipmentState.SHIPPED)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = OrderShipmentStateChangedMessagePayloadImpl.class)
 public interface OrderShipmentStateChangedMessagePayload extends OrderMessagePayload {
 
@@ -44,7 +50,6 @@ public interface OrderShipmentStateChangedMessagePayload extends OrderMessagePay
     @NotNull
     @JsonProperty("shipmentState")
     public ShipmentState getShipmentState();
-
     /**
      *  <p>ShipmentState before the Change Shipment State update action.</p>
      * @return oldShipmentState
@@ -57,23 +62,26 @@ public interface OrderShipmentStateChangedMessagePayload extends OrderMessagePay
      *  <p>ShipmentState after the Change Shipment State update action.</p>
      * @param shipmentState value to be set
      */
-
+    
     public void setShipmentState(final ShipmentState shipmentState);
-
+    
+    
     /**
      *  <p>ShipmentState before the Change Shipment State update action.</p>
      * @param oldShipmentState value to be set
      */
-
+    
     public void setOldShipmentState(final ShipmentState oldShipmentState);
+    
 
     /**
      * factory method
      * @return instance of OrderShipmentStateChangedMessagePayload
      */
-    public static OrderShipmentStateChangedMessagePayload of() {
+    public static OrderShipmentStateChangedMessagePayload of(){
         return new OrderShipmentStateChangedMessagePayloadImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy OrderShipmentStateChangedMessagePayload
@@ -93,8 +101,7 @@ public interface OrderShipmentStateChangedMessagePayload extends OrderMessagePay
      * @return copy instance
      */
     @Nullable
-    public static OrderShipmentStateChangedMessagePayload deepCopy(
-            @Nullable final OrderShipmentStateChangedMessagePayload template) {
+    public static OrderShipmentStateChangedMessagePayload deepCopy(@Nullable final OrderShipmentStateChangedMessagePayload template) {
         if (template == null) {
             return null;
         }
@@ -111,16 +118,16 @@ public interface OrderShipmentStateChangedMessagePayload extends OrderMessagePay
     public static OrderShipmentStateChangedMessagePayloadBuilder builder() {
         return OrderShipmentStateChangedMessagePayloadBuilder.of();
     }
-
+    
     /**
      * create builder for OrderShipmentStateChangedMessagePayload instance
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static OrderShipmentStateChangedMessagePayloadBuilder builder(
-            final OrderShipmentStateChangedMessagePayload template) {
+    public static OrderShipmentStateChangedMessagePayloadBuilder builder(final OrderShipmentStateChangedMessagePayload template) {
         return OrderShipmentStateChangedMessagePayloadBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -128,11 +135,10 @@ public interface OrderShipmentStateChangedMessagePayload extends OrderMessagePay
      * @param helper function to map the object
      * @return mapped value
      */
-    default <T> T withOrderShipmentStateChangedMessagePayload(
-            Function<OrderShipmentStateChangedMessagePayload, T> helper) {
+    default <T> T withOrderShipmentStateChangedMessagePayload(Function<OrderShipmentStateChangedMessagePayload, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

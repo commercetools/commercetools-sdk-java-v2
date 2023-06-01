@@ -1,19 +1,21 @@
-
 package com.commercetools.api.models.order;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
 import com.commercetools.api.models.cart.ItemShippingDetailsDraft;
+import com.commercetools.api.models.order.OrderUpdateAction;
+import com.commercetools.api.models.order.OrderSetLineItemShippingDetailsActionImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * OrderSetLineItemShippingDetailsAction
@@ -26,9 +28,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .lineItemId("{lineItemId}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = OrderSetLineItemShippingDetailsActionImpl.class)
 public interface OrderSetLineItemShippingDetailsAction extends OrderUpdateAction {
 
@@ -44,7 +49,6 @@ public interface OrderSetLineItemShippingDetailsAction extends OrderUpdateAction
     @NotNull
     @JsonProperty("lineItemId")
     public String getLineItemId();
-
     /**
      *  <p>For order creation and updates, the sum of the <code>targets</code> must match the quantity of the Line Items or Custom Line Items.</p>
      * @return shippingDetails
@@ -57,23 +61,26 @@ public interface OrderSetLineItemShippingDetailsAction extends OrderUpdateAction
      * set lineItemId
      * @param lineItemId value to be set
      */
-
+    
     public void setLineItemId(final String lineItemId);
-
+    
+    
     /**
      *  <p>For order creation and updates, the sum of the <code>targets</code> must match the quantity of the Line Items or Custom Line Items.</p>
      * @param shippingDetails value to be set
      */
-
+    
     public void setShippingDetails(final ItemShippingDetailsDraft shippingDetails);
+    
 
     /**
      * factory method
      * @return instance of OrderSetLineItemShippingDetailsAction
      */
-    public static OrderSetLineItemShippingDetailsAction of() {
+    public static OrderSetLineItemShippingDetailsAction of(){
         return new OrderSetLineItemShippingDetailsActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy OrderSetLineItemShippingDetailsAction
@@ -93,15 +100,13 @@ public interface OrderSetLineItemShippingDetailsAction extends OrderUpdateAction
      * @return copy instance
      */
     @Nullable
-    public static OrderSetLineItemShippingDetailsAction deepCopy(
-            @Nullable final OrderSetLineItemShippingDetailsAction template) {
+    public static OrderSetLineItemShippingDetailsAction deepCopy(@Nullable final OrderSetLineItemShippingDetailsAction template) {
         if (template == null) {
             return null;
         }
         OrderSetLineItemShippingDetailsActionImpl instance = new OrderSetLineItemShippingDetailsActionImpl();
         instance.setLineItemId(template.getLineItemId());
-        instance.setShippingDetails(
-            com.commercetools.api.models.cart.ItemShippingDetailsDraft.deepCopy(template.getShippingDetails()));
+        instance.setShippingDetails(com.commercetools.api.models.cart.ItemShippingDetailsDraft.deepCopy(template.getShippingDetails()));
         return instance;
     }
 
@@ -112,16 +117,16 @@ public interface OrderSetLineItemShippingDetailsAction extends OrderUpdateAction
     public static OrderSetLineItemShippingDetailsActionBuilder builder() {
         return OrderSetLineItemShippingDetailsActionBuilder.of();
     }
-
+    
     /**
      * create builder for OrderSetLineItemShippingDetailsAction instance
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static OrderSetLineItemShippingDetailsActionBuilder builder(
-            final OrderSetLineItemShippingDetailsAction template) {
+    public static OrderSetLineItemShippingDetailsActionBuilder builder(final OrderSetLineItemShippingDetailsAction template) {
         return OrderSetLineItemShippingDetailsActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -132,7 +137,7 @@ public interface OrderSetLineItemShippingDetailsAction extends OrderUpdateAction
     default <T> T withOrderSetLineItemShippingDetailsAction(Function<OrderSetLineItemShippingDetailsAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

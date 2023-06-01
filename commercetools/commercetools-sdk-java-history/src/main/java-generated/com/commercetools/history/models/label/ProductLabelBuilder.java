@@ -1,9 +1,12 @@
-
 package com.commercetools.history.models.label;
 
+import com.commercetools.history.models.common.LocalizedString;
+import com.commercetools.history.models.label.Label;
+import com.commercetools.history.models.label.ProductLabel;
+import javax.annotation.Nullable;
 import java.util.*;
 import java.util.function.Function;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -18,100 +21,111 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .name(nameBuilder -> nameBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class ProductLabelBuilder implements Builder<ProductLabel> {
 
+    
+    
     private com.commercetools.history.models.common.LocalizedString slug;
-
+    
+    
+    
     private com.commercetools.history.models.common.LocalizedString name;
 
+    
     /**
      * set the value to the slug using the builder function
      * @param builder function to build the slug value
      * @return Builder
      */
-
-    public ProductLabelBuilder slug(
-            Function<com.commercetools.history.models.common.LocalizedStringBuilder, com.commercetools.history.models.common.LocalizedStringBuilder> builder) {
+    
+    public ProductLabelBuilder slug(Function<com.commercetools.history.models.common.LocalizedStringBuilder, com.commercetools.history.models.common.LocalizedStringBuilder> builder) {
         this.slug = builder.apply(com.commercetools.history.models.common.LocalizedStringBuilder.of()).build();
         return this;
     }
-
+    
     /**
      * set the value to the slug using the builder function
      * @param builder function to build the slug value
      * @return Builder
      */
-
-    public ProductLabelBuilder withSlug(
-            Function<com.commercetools.history.models.common.LocalizedStringBuilder, com.commercetools.history.models.common.LocalizedString> builder) {
+    
+    public ProductLabelBuilder withSlug(Function<com.commercetools.history.models.common.LocalizedStringBuilder, com.commercetools.history.models.common.LocalizedString> builder) {
         this.slug = builder.apply(com.commercetools.history.models.common.LocalizedStringBuilder.of());
         return this;
     }
-
+                    
     /**
      * set the value to the slug
      * @param slug value to be set
      * @return Builder
      */
-
-    public ProductLabelBuilder slug(final com.commercetools.history.models.common.LocalizedString slug) {
+    
+    public ProductLabelBuilder slug( final com.commercetools.history.models.common.LocalizedString slug) {
         this.slug = slug;
         return this;
     }
-
+    
+    
+    
+    
     /**
      * set the value to the name using the builder function
      * @param builder function to build the name value
      * @return Builder
      */
-
-    public ProductLabelBuilder name(
-            Function<com.commercetools.history.models.common.LocalizedStringBuilder, com.commercetools.history.models.common.LocalizedStringBuilder> builder) {
+    
+    public ProductLabelBuilder name(Function<com.commercetools.history.models.common.LocalizedStringBuilder, com.commercetools.history.models.common.LocalizedStringBuilder> builder) {
         this.name = builder.apply(com.commercetools.history.models.common.LocalizedStringBuilder.of()).build();
         return this;
     }
-
+    
     /**
      * set the value to the name using the builder function
      * @param builder function to build the name value
      * @return Builder
      */
-
-    public ProductLabelBuilder withName(
-            Function<com.commercetools.history.models.common.LocalizedStringBuilder, com.commercetools.history.models.common.LocalizedString> builder) {
+    
+    public ProductLabelBuilder withName(Function<com.commercetools.history.models.common.LocalizedStringBuilder, com.commercetools.history.models.common.LocalizedString> builder) {
         this.name = builder.apply(com.commercetools.history.models.common.LocalizedStringBuilder.of());
         return this;
     }
-
+                    
     /**
      * set the value to the name
      * @param name value to be set
      * @return Builder
      */
-
-    public ProductLabelBuilder name(final com.commercetools.history.models.common.LocalizedString name) {
+    
+    public ProductLabelBuilder name( final com.commercetools.history.models.common.LocalizedString name) {
         this.name = name;
         return this;
     }
+    
+    
 
     /**
      * value of slug}
      * @return slug
      */
-
-    public com.commercetools.history.models.common.LocalizedString getSlug() {
+    
+    
+    public com.commercetools.history.models.common.LocalizedString getSlug(){
         return this.slug;
     }
-
+    
     /**
      * value of name}
      * @return name
      */
-
-    public com.commercetools.history.models.common.LocalizedString getName() {
+    
+    
+    public com.commercetools.history.models.common.LocalizedString getName(){
         return this.name;
     }
 
@@ -124,7 +138,7 @@ public class ProductLabelBuilder implements Builder<ProductLabel> {
         Objects.requireNonNull(name, ProductLabel.class + ": name is missing");
         return new ProductLabelImpl(slug, name);
     }
-
+    
     /**
      * builds ProductLabel without checking for non-null required values
      * @return ProductLabel
@@ -135,7 +149,7 @@ public class ProductLabelBuilder implements Builder<ProductLabel> {
 
     /**
      * factory method for an instance of ProductLabelBuilder
-     * @return builder
+     * @return builder 
      */
     public static ProductLabelBuilder of() {
         return new ProductLabelBuilder();

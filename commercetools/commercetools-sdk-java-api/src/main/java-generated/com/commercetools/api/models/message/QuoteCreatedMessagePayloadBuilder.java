@@ -1,9 +1,12 @@
-
 package com.commercetools.api.models.message;
 
+import com.commercetools.api.models.message.MessagePayload;
+import com.commercetools.api.models.quote.Quote;
+import com.commercetools.api.models.message.QuoteCreatedMessagePayload;
+import javax.annotation.Nullable;
 import java.util.*;
 import java.util.function.Function;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -17,54 +20,61 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .quote(quoteBuilder -> quoteBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class QuoteCreatedMessagePayloadBuilder implements Builder<QuoteCreatedMessagePayload> {
 
+    
+    
     private com.commercetools.api.models.quote.Quote quote;
 
+    
     /**
      *  <p>Quote that was created.</p>
      * @param builder function to build the quote value
      * @return Builder
      */
-
-    public QuoteCreatedMessagePayloadBuilder quote(
-            Function<com.commercetools.api.models.quote.QuoteBuilder, com.commercetools.api.models.quote.QuoteBuilder> builder) {
+    
+    public QuoteCreatedMessagePayloadBuilder quote(Function<com.commercetools.api.models.quote.QuoteBuilder, com.commercetools.api.models.quote.QuoteBuilder> builder) {
         this.quote = builder.apply(com.commercetools.api.models.quote.QuoteBuilder.of()).build();
         return this;
     }
-
+    
     /**
      *  <p>Quote that was created.</p>
      * @param builder function to build the quote value
      * @return Builder
      */
-
-    public QuoteCreatedMessagePayloadBuilder withQuote(
-            Function<com.commercetools.api.models.quote.QuoteBuilder, com.commercetools.api.models.quote.Quote> builder) {
+    
+    public QuoteCreatedMessagePayloadBuilder withQuote(Function<com.commercetools.api.models.quote.QuoteBuilder, com.commercetools.api.models.quote.Quote> builder) {
         this.quote = builder.apply(com.commercetools.api.models.quote.QuoteBuilder.of());
         return this;
     }
-
+                    
     /**
      *  <p>Quote that was created.</p>
      * @param quote value to be set
      * @return Builder
      */
-
-    public QuoteCreatedMessagePayloadBuilder quote(final com.commercetools.api.models.quote.Quote quote) {
+    
+    public QuoteCreatedMessagePayloadBuilder quote( final com.commercetools.api.models.quote.Quote quote) {
         this.quote = quote;
         return this;
     }
+    
+    
 
     /**
      *  <p>Quote that was created.</p>
      * @return quote
      */
-
-    public com.commercetools.api.models.quote.Quote getQuote() {
+    
+    
+    public com.commercetools.api.models.quote.Quote getQuote(){
         return this.quote;
     }
 
@@ -76,7 +86,7 @@ public class QuoteCreatedMessagePayloadBuilder implements Builder<QuoteCreatedMe
         Objects.requireNonNull(quote, QuoteCreatedMessagePayload.class + ": quote is missing");
         return new QuoteCreatedMessagePayloadImpl(quote);
     }
-
+    
     /**
      * builds QuoteCreatedMessagePayload without checking for non-null required values
      * @return QuoteCreatedMessagePayload
@@ -87,7 +97,7 @@ public class QuoteCreatedMessagePayloadBuilder implements Builder<QuoteCreatedMe
 
     /**
      * factory method for an instance of QuoteCreatedMessagePayloadBuilder
-     * @return builder
+     * @return builder 
      */
     public static QuoteCreatedMessagePayloadBuilder of() {
         return new QuoteCreatedMessagePayloadBuilder();

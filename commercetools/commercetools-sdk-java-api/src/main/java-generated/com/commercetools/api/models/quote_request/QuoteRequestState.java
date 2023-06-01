@@ -1,47 +1,48 @@
-
 package com.commercetools.api.models.quote_request;
-
-import java.util.Arrays;
-import java.util.Optional;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-
+import java.lang.String;
+import java.util.Arrays;
+import java.util.Optional;
 import io.vrap.rmf.base.client.JsonEnum;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
  *  <p>Predefined states tracking the status of the Quote Request in the negotiation process.</p>
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public interface QuoteRequestState extends JsonEnum {
 
     /**
     	<p>Initial state of the negotiation process. Indicates that the Quote Request has been submitted by the Buyer, but the Seller has not yet decided whether to accept or to reject the request.</p>
-
+    	
     */
     QuoteRequestState SUBMITTED = QuoteRequestStateEnum.SUBMITTED;
     /**
     	<p>Indicates that the Quote Request has been accepted by the Seller and the negotiation process continues with preparing a Staged Quote for the Buyer.</p>
-
+    	
     */
     QuoteRequestState ACCEPTED = QuoteRequestStateEnum.ACCEPTED;
     /**
     	<p>Final state of the negotiation process. Indicates that the Quote Request had been accepted by the Seller and there is no further action that can be performed by any party.</p>
-
+    	
     */
     QuoteRequestState CLOSED = QuoteRequestStateEnum.CLOSED;
     /**
     	<p>Indicates that the Quote Request has been rejected by the Seller and the negotiation process terminated.</p>
-
+    	
     */
     QuoteRequestState REJECTED = QuoteRequestStateEnum.REJECTED;
     /**
     	<p>Indicates that the Buyer has withdrawn the Quote Request.</p>
-
+    	
     */
     QuoteRequestState CANCELLED = QuoteRequestStateEnum.CANCELLED;
-
+    
     /**
      * possible values of QuoteRequestState
      */
@@ -50,22 +51,22 @@ public interface QuoteRequestState extends JsonEnum {
          * Submitted
          */
         SUBMITTED("Submitted"),
-
+        
         /**
          * Accepted
          */
         ACCEPTED("Accepted"),
-
+        
         /**
          * Closed
          */
         CLOSED("Closed"),
-
+        
         /**
          * Rejected
          */
         REJECTED("Rejected"),
-
+        
         /**
          * Cancelled
          */
@@ -122,7 +123,7 @@ public interface QuoteRequestState extends JsonEnum {
             public String name() {
                 return value.toUpperCase();
             }
-
+            
             public String toString() {
                 return value;
             }
@@ -137,7 +138,7 @@ public interface QuoteRequestState extends JsonEnum {
     public static Optional<QuoteRequestState> findEnumViaJsonName(String jsonName) {
         return Arrays.stream(values()).filter(t -> t.getJsonName().equals(jsonName)).findFirst();
     }
-
+    
     /**
      * possible enum values
      * @return array of possible enum values
@@ -145,5 +146,5 @@ public interface QuoteRequestState extends JsonEnum {
     public static QuoteRequestState[] values() {
         return QuoteRequestStateEnum.values();
     }
-
+    
 }

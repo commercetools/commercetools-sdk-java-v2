@@ -1,17 +1,20 @@
-
 package com.commercetools.api.models.me;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
 
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
+import com.commercetools.api.models.me.MyQuoteRequestDraftImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * MyQuoteRequestDraft
@@ -26,11 +29,15 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .comment("{comment}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = MyQuoteRequestDraftImpl.class)
 public interface MyQuoteRequestDraft extends io.vrap.rmf.base.client.Draft<MyQuoteRequestDraft> {
+
 
     /**
      *  <p><code>id</code> of the Cart from which the Quote Request is created.</p>
@@ -39,7 +46,6 @@ public interface MyQuoteRequestDraft extends io.vrap.rmf.base.client.Draft<MyQuo
     @NotNull
     @JsonProperty("cartId")
     public String getCartId();
-
     /**
      *  <p>Current version of the Cart.</p>
      * @return cartVersion
@@ -47,7 +53,6 @@ public interface MyQuoteRequestDraft extends io.vrap.rmf.base.client.Draft<MyQuo
     @NotNull
     @JsonProperty("cartVersion")
     public Long getCartVersion();
-
     /**
      *  <p>Message from the Buyer included in the Quote Request.</p>
      * @return comment
@@ -60,30 +65,34 @@ public interface MyQuoteRequestDraft extends io.vrap.rmf.base.client.Draft<MyQuo
      *  <p><code>id</code> of the Cart from which the Quote Request is created.</p>
      * @param cartId value to be set
      */
-
+    
     public void setCartId(final String cartId);
-
+    
+    
     /**
      *  <p>Current version of the Cart.</p>
      * @param cartVersion value to be set
      */
-
+    
     public void setCartVersion(final Long cartVersion);
-
+    
+    
     /**
      *  <p>Message from the Buyer included in the Quote Request.</p>
      * @param comment value to be set
      */
-
+    
     public void setComment(final String comment);
+    
 
     /**
      * factory method
      * @return instance of MyQuoteRequestDraft
      */
-    public static MyQuoteRequestDraft of() {
+    public static MyQuoteRequestDraft of(){
         return new MyQuoteRequestDraftImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy MyQuoteRequestDraft
@@ -122,7 +131,7 @@ public interface MyQuoteRequestDraft extends io.vrap.rmf.base.client.Draft<MyQuo
     public static MyQuoteRequestDraftBuilder builder() {
         return MyQuoteRequestDraftBuilder.of();
     }
-
+    
     /**
      * create builder for MyQuoteRequestDraft instance
      * @param template instance with prefilled values for the builder
@@ -131,6 +140,7 @@ public interface MyQuoteRequestDraft extends io.vrap.rmf.base.client.Draft<MyQuo
     public static MyQuoteRequestDraftBuilder builder(final MyQuoteRequestDraft template) {
         return MyQuoteRequestDraftBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -141,7 +151,7 @@ public interface MyQuoteRequestDraft extends io.vrap.rmf.base.client.Draft<MyQuo
     default <T> T withMyQuoteRequestDraft(Function<MyQuoteRequestDraft, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

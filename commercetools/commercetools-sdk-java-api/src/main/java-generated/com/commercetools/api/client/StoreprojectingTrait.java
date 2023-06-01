@@ -1,16 +1,17 @@
-
 package com.commercetools.api.client;
 
-import java.util.List;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import java.util.List;
 
 /**
  * StoreprojectingTrait
  * @param <T> type of extending interface
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
-public interface StoreprojectingTrait<T extends StoreprojectingTrait<T>> {
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
+public interface StoreprojectingTrait<T extends StoreprojectingTrait<T>>  {
     List<String> getStoreProjection();
 
     /**
@@ -20,7 +21,7 @@ public interface StoreprojectingTrait<T extends StoreprojectingTrait<T>> {
      * @return StoreprojectingTrait
      */
     <TValue> StoreprojectingTrait<T> withStoreProjection(final TValue storeProjection);
-
+    
     /**
      * add additional storeProjection query parameter
      * @param storeProjection value to be added
@@ -29,13 +30,14 @@ public interface StoreprojectingTrait<T extends StoreprojectingTrait<T>> {
      */
     <TValue> StoreprojectingTrait<T> addStoreProjection(final TValue storeProjection);
 
+    
     default StoreprojectingTrait<T> asStoreprojectingTrait() {
         return this;
     }
-
+    
     @SuppressWarnings("unchecked")
     default T asStoreprojectingTraitToBaseType() {
-        return (T) this;
+        return (T)this;
     }
-
+    
 }

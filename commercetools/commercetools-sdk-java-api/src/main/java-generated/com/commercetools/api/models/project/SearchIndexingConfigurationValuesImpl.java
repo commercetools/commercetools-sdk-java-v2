@@ -1,44 +1,51 @@
-
 package com.commercetools.api.models.project;
 
-import java.time.*;
-import java.util.*;
-
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
-
-import io.vrap.rmf.base.client.ModelBase;
+import com.commercetools.api.models.common.LastModifiedBy;
+import com.commercetools.api.models.project.SearchIndexingConfigurationStatus;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.ModelBase;
+import javax.validation.Valid;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.annotation.*;
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
  * SearchIndexingConfigurationValues
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class SearchIndexingConfigurationValuesImpl implements SearchIndexingConfigurationValues, ModelBase {
 
+    
     private com.commercetools.api.models.project.SearchIndexingConfigurationStatus status;
-
+    
+    
     private java.time.ZonedDateTime lastModifiedAt;
-
+    
+    
     private com.commercetools.api.models.common.LastModifiedBy lastModifiedBy;
 
     /**
      * create instance with all properties
      */
     @JsonCreator
-    SearchIndexingConfigurationValuesImpl(
-            @JsonProperty("status") final com.commercetools.api.models.project.SearchIndexingConfigurationStatus status,
-            @JsonProperty("lastModifiedAt") final java.time.ZonedDateTime lastModifiedAt,
-            @JsonProperty("lastModifiedBy") final com.commercetools.api.models.common.LastModifiedBy lastModifiedBy) {
+    SearchIndexingConfigurationValuesImpl(@JsonProperty("status") final com.commercetools.api.models.project.SearchIndexingConfigurationStatus status, @JsonProperty("lastModifiedAt") final java.time.ZonedDateTime lastModifiedAt, @JsonProperty("lastModifiedBy") final com.commercetools.api.models.common.LastModifiedBy lastModifiedBy) {
         this.status = status;
         this.lastModifiedAt = lastModifiedAt;
         this.lastModifiedBy = lastModifiedBy;
     }
-
     /**
      * create empty instance
      */
@@ -48,58 +55,64 @@ public class SearchIndexingConfigurationValuesImpl implements SearchIndexingConf
     /**
      *  <p>Current status of resource indexing. Present on Projects from 1 February 2019.</p>
      */
-
-    public com.commercetools.api.models.project.SearchIndexingConfigurationStatus getStatus() {
+    
+    public com.commercetools.api.models.project.SearchIndexingConfigurationStatus getStatus(){
         return this.status;
     }
-
+    
     /**
      *  <p>Date and time (UTC) the Project was last updated. Only present on Projects last modified after 1 February 2019.</p>
      */
-
-    public java.time.ZonedDateTime getLastModifiedAt() {
+    
+    public java.time.ZonedDateTime getLastModifiedAt(){
         return this.lastModifiedAt;
     }
-
+    
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      */
-
-    public com.commercetools.api.models.common.LastModifiedBy getLastModifiedBy() {
+    
+    public com.commercetools.api.models.common.LastModifiedBy getLastModifiedBy(){
         return this.lastModifiedBy;
     }
 
-    public void setStatus(final com.commercetools.api.models.project.SearchIndexingConfigurationStatus status) {
+    
+    public void setStatus(final com.commercetools.api.models.project.SearchIndexingConfigurationStatus status){
         this.status = status;
     }
-
-    public void setLastModifiedAt(final java.time.ZonedDateTime lastModifiedAt) {
+    
+    
+    public void setLastModifiedAt(final java.time.ZonedDateTime lastModifiedAt){
         this.lastModifiedAt = lastModifiedAt;
     }
-
-    public void setLastModifiedBy(final com.commercetools.api.models.common.LastModifiedBy lastModifiedBy) {
+    
+    
+    public void setLastModifiedBy(final com.commercetools.api.models.common.LastModifiedBy lastModifiedBy){
         this.lastModifiedBy = lastModifiedBy;
     }
 
     @Override
     public boolean equals(Object o) {
-        if (this == o)
-            return true;
-
-        if (o == null || getClass() != o.getClass())
-            return false;
-
+        if (this == o) return true;
+    
+        if (o == null || getClass() != o.getClass()) return false;
+    
         SearchIndexingConfigurationValuesImpl that = (SearchIndexingConfigurationValuesImpl) o;
-
-        return new EqualsBuilder().append(status, that.status)
+    
+        return new EqualsBuilder()
+                .append(status, that.status)
                 .append(lastModifiedAt, that.lastModifiedAt)
                 .append(lastModifiedBy, that.lastModifiedBy)
                 .isEquals();
     }
-
+    
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(status).append(lastModifiedAt).append(lastModifiedBy).toHashCode();
+        return new HashCodeBuilder(17, 37)
+            .append(status)
+            .append(lastModifiedAt)
+            .append(lastModifiedBy)
+            .toHashCode();
     }
 
 }

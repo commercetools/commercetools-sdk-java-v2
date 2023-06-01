@@ -1,9 +1,12 @@
-
 package com.commercetools.history.models.change;
 
+import com.commercetools.history.models.change.Change;
+import com.commercetools.history.models.common.Address;
+import com.commercetools.history.models.change.AddBillingAddressIdChange;
+import javax.annotation.Nullable;
 import java.util.*;
 import java.util.function.Function;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -20,170 +23,195 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .address(addressBuilder -> addressBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class AddBillingAddressIdChangeBuilder implements Builder<AddBillingAddressIdChange> {
 
+    
+    
     private String change;
-
+    
+    
+    
     private java.util.List<String> nextValue;
-
+    
+    
+    
     private java.util.List<String> previousValue;
-
+    
+    
+    
     private com.commercetools.history.models.common.Address address;
 
+    
     /**
      *  <p>Update action for <code>addBillingAddressId</code> action on customers.</p>
      * @param change value to be set
      * @return Builder
      */
-
-    public AddBillingAddressIdChangeBuilder change(final String change) {
+    
+    public AddBillingAddressIdChangeBuilder change( final String change) {
         this.change = change;
         return this;
     }
-
+    
+    
+    
     /**
      * set values to the nextValue
      * @param nextValue value to be set
      * @return Builder
      */
-
-    public AddBillingAddressIdChangeBuilder nextValue(final String... nextValue) {
+    
+    public AddBillingAddressIdChangeBuilder nextValue( final String ...nextValue) {
         this.nextValue = new ArrayList<>(Arrays.asList(nextValue));
         return this;
     }
-
+    
     /**
      * set value to the nextValue
      * @param nextValue value to be set
      * @return Builder
      */
-
-    public AddBillingAddressIdChangeBuilder nextValue(final java.util.List<String> nextValue) {
+    
+    public AddBillingAddressIdChangeBuilder nextValue( final java.util.List<String> nextValue) {
         this.nextValue = nextValue;
         return this;
     }
-
+    
     /**
      * add values to the nextValue
      * @param nextValue value to be set
      * @return Builder
      */
-
-    public AddBillingAddressIdChangeBuilder plusNextValue(final String... nextValue) {
+    
+    public AddBillingAddressIdChangeBuilder plusNextValue( final String ...nextValue) {
         if (this.nextValue == null) {
             this.nextValue = new ArrayList<>();
         }
         this.nextValue.addAll(Arrays.asList(nextValue));
         return this;
     }
-
+    
+    
+    
+    
     /**
      * set values to the previousValue
      * @param previousValue value to be set
      * @return Builder
      */
-
-    public AddBillingAddressIdChangeBuilder previousValue(final String... previousValue) {
+    
+    public AddBillingAddressIdChangeBuilder previousValue( final String ...previousValue) {
         this.previousValue = new ArrayList<>(Arrays.asList(previousValue));
         return this;
     }
-
+    
     /**
      * set value to the previousValue
      * @param previousValue value to be set
      * @return Builder
      */
-
-    public AddBillingAddressIdChangeBuilder previousValue(final java.util.List<String> previousValue) {
+    
+    public AddBillingAddressIdChangeBuilder previousValue( final java.util.List<String> previousValue) {
         this.previousValue = previousValue;
         return this;
     }
-
+    
     /**
      * add values to the previousValue
      * @param previousValue value to be set
      * @return Builder
      */
-
-    public AddBillingAddressIdChangeBuilder plusPreviousValue(final String... previousValue) {
+    
+    public AddBillingAddressIdChangeBuilder plusPreviousValue( final String ...previousValue) {
         if (this.previousValue == null) {
             this.previousValue = new ArrayList<>();
         }
         this.previousValue.addAll(Arrays.asList(previousValue));
         return this;
     }
-
+    
+    
+    
+    
+    
     /**
      * set the value to the address using the builder function
      * @param builder function to build the address value
      * @return Builder
      */
-
-    public AddBillingAddressIdChangeBuilder address(
-            Function<com.commercetools.history.models.common.AddressBuilder, com.commercetools.history.models.common.AddressBuilder> builder) {
+    
+    public AddBillingAddressIdChangeBuilder address(Function<com.commercetools.history.models.common.AddressBuilder, com.commercetools.history.models.common.AddressBuilder> builder) {
         this.address = builder.apply(com.commercetools.history.models.common.AddressBuilder.of()).build();
         return this;
     }
-
+    
     /**
      * set the value to the address using the builder function
      * @param builder function to build the address value
      * @return Builder
      */
-
-    public AddBillingAddressIdChangeBuilder withAddress(
-            Function<com.commercetools.history.models.common.AddressBuilder, com.commercetools.history.models.common.Address> builder) {
+    
+    public AddBillingAddressIdChangeBuilder withAddress(Function<com.commercetools.history.models.common.AddressBuilder, com.commercetools.history.models.common.Address> builder) {
         this.address = builder.apply(com.commercetools.history.models.common.AddressBuilder.of());
         return this;
     }
-
+                    
     /**
      * set the value to the address
      * @param address value to be set
      * @return Builder
      */
-
-    public AddBillingAddressIdChangeBuilder address(final com.commercetools.history.models.common.Address address) {
+    
+    public AddBillingAddressIdChangeBuilder address( final com.commercetools.history.models.common.Address address) {
         this.address = address;
         return this;
     }
+    
+    
 
     /**
      *  <p>Update action for <code>addBillingAddressId</code> action on customers.</p>
      * @return change
      */
-
-    public String getChange() {
+    
+    
+    public String getChange(){
         return this.change;
     }
-
+    
     /**
      * value of nextValue}
      * @return nextValue
      */
-
-    public java.util.List<String> getNextValue() {
+    
+    
+    public java.util.List<String> getNextValue(){
         return this.nextValue;
     }
-
+    
     /**
      * value of previousValue}
      * @return previousValue
      */
-
-    public java.util.List<String> getPreviousValue() {
+    
+    
+    public java.util.List<String> getPreviousValue(){
         return this.previousValue;
     }
-
+    
     /**
      * value of address}
      * @return address
      */
-
-    public com.commercetools.history.models.common.Address getAddress() {
+    
+    
+    public com.commercetools.history.models.common.Address getAddress(){
         return this.address;
     }
 
@@ -198,7 +226,7 @@ public class AddBillingAddressIdChangeBuilder implements Builder<AddBillingAddre
         Objects.requireNonNull(address, AddBillingAddressIdChange.class + ": address is missing");
         return new AddBillingAddressIdChangeImpl(change, nextValue, previousValue, address);
     }
-
+    
     /**
      * builds AddBillingAddressIdChange without checking for non-null required values
      * @return AddBillingAddressIdChange
@@ -209,7 +237,7 @@ public class AddBillingAddressIdChangeBuilder implements Builder<AddBillingAddre
 
     /**
      * factory method for an instance of AddBillingAddressIdChangeBuilder
-     * @return builder
+     * @return builder 
      */
     public static AddBillingAddressIdChangeBuilder of() {
         return new AddBillingAddressIdChangeBuilder();

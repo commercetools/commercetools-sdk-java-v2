@@ -1,8 +1,11 @@
-
 package com.commercetools.api.models.message;
 
-import java.util.*;
 
+import com.commercetools.api.models.message.MessagesConfigurationDraft;
+import javax.annotation.Nullable;
+import java.util.*;
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -17,52 +20,67 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .deleteDaysAfterCreation(0.3)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class MessagesConfigurationDraftBuilder implements Builder<MessagesConfigurationDraft> {
 
+    
+    
     private Boolean enabled;
-
+    
+    
+    
     private Integer deleteDaysAfterCreation;
 
+    
     /**
      *  <p>Setting to <code>true</code> activates the Messages Query feature.</p>
      * @param enabled value to be set
      * @return Builder
      */
-
-    public MessagesConfigurationDraftBuilder enabled(final Boolean enabled) {
+    
+    public MessagesConfigurationDraftBuilder enabled( final Boolean enabled) {
         this.enabled = enabled;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Specifies the number of days each Message should be available via the Messages Query API. For Messages older than the specified period, it is not guaranteed that they are still accessible via the API.</p>
      * @param deleteDaysAfterCreation value to be set
      * @return Builder
      */
-
-    public MessagesConfigurationDraftBuilder deleteDaysAfterCreation(final Integer deleteDaysAfterCreation) {
+    
+    public MessagesConfigurationDraftBuilder deleteDaysAfterCreation( final Integer deleteDaysAfterCreation) {
         this.deleteDaysAfterCreation = deleteDaysAfterCreation;
         return this;
     }
+    
+    
 
     /**
      *  <p>Setting to <code>true</code> activates the Messages Query feature.</p>
      * @return enabled
      */
-
-    public Boolean getEnabled() {
+    
+    
+    public Boolean getEnabled(){
         return this.enabled;
     }
-
+    
     /**
      *  <p>Specifies the number of days each Message should be available via the Messages Query API. For Messages older than the specified period, it is not guaranteed that they are still accessible via the API.</p>
      * @return deleteDaysAfterCreation
      */
-
-    public Integer getDeleteDaysAfterCreation() {
+    
+    
+    public Integer getDeleteDaysAfterCreation(){
         return this.deleteDaysAfterCreation;
     }
 
@@ -72,11 +90,10 @@ public class MessagesConfigurationDraftBuilder implements Builder<MessagesConfig
      */
     public MessagesConfigurationDraft build() {
         Objects.requireNonNull(enabled, MessagesConfigurationDraft.class + ": enabled is missing");
-        Objects.requireNonNull(deleteDaysAfterCreation,
-            MessagesConfigurationDraft.class + ": deleteDaysAfterCreation is missing");
+        Objects.requireNonNull(deleteDaysAfterCreation, MessagesConfigurationDraft.class + ": deleteDaysAfterCreation is missing");
         return new MessagesConfigurationDraftImpl(enabled, deleteDaysAfterCreation);
     }
-
+    
     /**
      * builds MessagesConfigurationDraft without checking for non-null required values
      * @return MessagesConfigurationDraft
@@ -87,7 +104,7 @@ public class MessagesConfigurationDraftBuilder implements Builder<MessagesConfig
 
     /**
      * factory method for an instance of MessagesConfigurationDraftBuilder
-     * @return builder
+     * @return builder 
      */
     public static MessagesConfigurationDraftBuilder of() {
         return new MessagesConfigurationDraftBuilder();

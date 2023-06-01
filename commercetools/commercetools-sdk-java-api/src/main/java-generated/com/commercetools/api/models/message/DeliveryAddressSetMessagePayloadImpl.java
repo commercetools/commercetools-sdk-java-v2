@@ -1,139 +1,151 @@
-
 package com.commercetools.api.models.message;
 
-import java.time.*;
-import java.util.*;
-
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
-
-import io.vrap.rmf.base.client.ModelBase;
+import com.commercetools.api.models.common.Address;
+import com.commercetools.api.models.message.OrderMessagePayload;
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.ModelBase;
+import javax.validation.Valid;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.annotation.*;
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
  *  <p>Generated after a successful Set Delivery Address update action.</p>
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class DeliveryAddressSetMessagePayloadImpl implements DeliveryAddressSetMessagePayload, ModelBase {
 
+    
     private String type;
-
+    
+    
     private String deliveryId;
-
+    
+    
     private com.commercetools.api.models.common.Address address;
-
+    
+    
     private com.commercetools.api.models.common.Address oldAddress;
-
+    
+    
     private String shippingKey;
 
     /**
      * create instance with all properties
      */
     @JsonCreator
-    DeliveryAddressSetMessagePayloadImpl(@JsonProperty("deliveryId") final String deliveryId,
-            @JsonProperty("address") final com.commercetools.api.models.common.Address address,
-            @JsonProperty("oldAddress") final com.commercetools.api.models.common.Address oldAddress,
-            @JsonProperty("shippingKey") final String shippingKey) {
+    DeliveryAddressSetMessagePayloadImpl(@JsonProperty("deliveryId") final String deliveryId, @JsonProperty("address") final com.commercetools.api.models.common.Address address, @JsonProperty("oldAddress") final com.commercetools.api.models.common.Address oldAddress, @JsonProperty("shippingKey") final String shippingKey) {
         this.deliveryId = deliveryId;
         this.address = address;
         this.oldAddress = oldAddress;
         this.shippingKey = shippingKey;
-        this.type = DELIVERY_ADDRESS_SET;
+        this.type =  DELIVERY_ADDRESS_SET;
     }
-
     /**
      * create empty instance
      */
     public DeliveryAddressSetMessagePayloadImpl() {
-        this.type = DELIVERY_ADDRESS_SET;
+        this.type =  DELIVERY_ADDRESS_SET;
     }
 
     /**
      *
      */
-
-    public String getType() {
+    
+    public String getType(){
         return this.type;
     }
-
+    
     /**
      *  <p>Unique identifier of the Parcel.</p>
      */
-
-    public String getDeliveryId() {
+    
+    public String getDeliveryId(){
         return this.deliveryId;
     }
-
+    
     /**
      *  <p>Address after the Set Delivery Address update action.</p>
      */
-
-    public com.commercetools.api.models.common.Address getAddress() {
+    
+    public com.commercetools.api.models.common.Address getAddress(){
         return this.address;
     }
-
+    
     /**
      *  <p>Address before the Set Delivery Address update action.</p>
      */
-
-    public com.commercetools.api.models.common.Address getOldAddress() {
+    
+    public com.commercetools.api.models.common.Address getOldAddress(){
         return this.oldAddress;
     }
-
+    
     /**
      *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multi</code> ShippingMode.</p>
      */
-
-    public String getShippingKey() {
+    
+    public String getShippingKey(){
         return this.shippingKey;
     }
 
-    public void setDeliveryId(final String deliveryId) {
+    
+    public void setDeliveryId(final String deliveryId){
         this.deliveryId = deliveryId;
     }
-
-    public void setAddress(final com.commercetools.api.models.common.Address address) {
+    
+    
+    public void setAddress(final com.commercetools.api.models.common.Address address){
         this.address = address;
     }
-
-    public void setOldAddress(final com.commercetools.api.models.common.Address oldAddress) {
+    
+    
+    public void setOldAddress(final com.commercetools.api.models.common.Address oldAddress){
         this.oldAddress = oldAddress;
     }
-
-    public void setShippingKey(final String shippingKey) {
+    
+    
+    public void setShippingKey(final String shippingKey){
         this.shippingKey = shippingKey;
     }
 
     @Override
     public boolean equals(Object o) {
-        if (this == o)
-            return true;
-
-        if (o == null || getClass() != o.getClass())
-            return false;
-
+        if (this == o) return true;
+    
+        if (o == null || getClass() != o.getClass()) return false;
+    
         DeliveryAddressSetMessagePayloadImpl that = (DeliveryAddressSetMessagePayloadImpl) o;
-
-        return new EqualsBuilder().append(type, that.type)
+    
+        return new EqualsBuilder()
+                .append(type, that.type)
                 .append(deliveryId, that.deliveryId)
                 .append(address, that.address)
                 .append(oldAddress, that.oldAddress)
                 .append(shippingKey, that.shippingKey)
                 .isEquals();
     }
-
+    
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(type)
-                .append(deliveryId)
-                .append(address)
-                .append(oldAddress)
-                .append(shippingKey)
-                .toHashCode();
+        return new HashCodeBuilder(17, 37)
+            .append(type)
+            .append(deliveryId)
+            .append(address)
+            .append(oldAddress)
+            .append(shippingKey)
+            .toHashCode();
     }
 
 }

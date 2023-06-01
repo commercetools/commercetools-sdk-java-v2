@@ -1,10 +1,11 @@
-
 package com.commercetools.api.models.customer;
 
-import java.util.*;
-
+import com.commercetools.api.models.customer.CustomerUpdateAction;
+import com.commercetools.api.models.customer.CustomerSetExternalIdAction;
 import javax.annotation.Nullable;
-
+import java.util.*;
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -17,32 +18,39 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     CustomerSetExternalIdAction customerSetExternalIdAction = CustomerSetExternalIdAction.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class CustomerSetExternalIdActionBuilder implements Builder<CustomerSetExternalIdAction> {
 
+    
     @Nullable
     private String externalId;
 
+    
     /**
      *  <p>Value to set. If empty, any existing value is removed.</p>
      * @param externalId value to be set
      * @return Builder
      */
-
+    
     public CustomerSetExternalIdActionBuilder externalId(@Nullable final String externalId) {
         this.externalId = externalId;
         return this;
     }
+    
+    
 
     /**
      *  <p>Value to set. If empty, any existing value is removed.</p>
      * @return externalId
      */
-
+    
     @Nullable
-    public String getExternalId() {
+    public String getExternalId(){
         return this.externalId;
     }
 
@@ -53,7 +61,7 @@ public class CustomerSetExternalIdActionBuilder implements Builder<CustomerSetEx
     public CustomerSetExternalIdAction build() {
         return new CustomerSetExternalIdActionImpl(externalId);
     }
-
+    
     /**
      * builds CustomerSetExternalIdAction without checking for non-null required values
      * @return CustomerSetExternalIdAction
@@ -64,7 +72,7 @@ public class CustomerSetExternalIdActionBuilder implements Builder<CustomerSetEx
 
     /**
      * factory method for an instance of CustomerSetExternalIdActionBuilder
-     * @return builder
+     * @return builder 
      */
     public static CustomerSetExternalIdActionBuilder of() {
         return new CustomerSetExternalIdActionBuilder();

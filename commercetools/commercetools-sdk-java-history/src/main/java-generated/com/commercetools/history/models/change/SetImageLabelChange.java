@@ -1,19 +1,21 @@
-
 package com.commercetools.history.models.change;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
+import com.commercetools.history.models.change.Change;
 import com.commercetools.history.models.common.Image;
+import com.commercetools.history.models.change.SetImageLabelChangeImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * SetImageLabelChange
@@ -29,9 +31,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .nextValue(nextValueBuilder -> nextValueBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = SetImageLabelChangeImpl.class)
 public interface SetImageLabelChange extends Change {
 
@@ -47,7 +52,6 @@ public interface SetImageLabelChange extends Change {
     @NotNull
     @JsonProperty("type")
     public String getType();
-
     /**
      *  <p>Update action for <code>setImageLabel</code></p>
      * @return change
@@ -55,7 +59,6 @@ public interface SetImageLabelChange extends Change {
     @NotNull
     @JsonProperty("change")
     public String getChange();
-
     /**
      *
      * @return catalogData
@@ -63,7 +66,6 @@ public interface SetImageLabelChange extends Change {
     @NotNull
     @JsonProperty("catalogData")
     public String getCatalogData();
-
     /**
      *
      * @return previousValue
@@ -72,7 +74,6 @@ public interface SetImageLabelChange extends Change {
     @Valid
     @JsonProperty("previousValue")
     public Image getPreviousValue();
-
     /**
      *
      * @return nextValue
@@ -86,37 +87,42 @@ public interface SetImageLabelChange extends Change {
      *  <p>Update action for <code>setImageLabel</code></p>
      * @param change value to be set
      */
-
+    
     public void setChange(final String change);
-
+    
+    
     /**
      * set catalogData
      * @param catalogData value to be set
      */
-
+    
     public void setCatalogData(final String catalogData);
-
+    
+    
     /**
      * set previousValue
      * @param previousValue value to be set
      */
-
+    
     public void setPreviousValue(final Image previousValue);
-
+    
+    
     /**
      * set nextValue
      * @param nextValue value to be set
      */
-
+    
     public void setNextValue(final Image nextValue);
+    
 
     /**
      * factory method
      * @return instance of SetImageLabelChange
      */
-    public static SetImageLabelChange of() {
+    public static SetImageLabelChange of(){
         return new SetImageLabelChangeImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy SetImageLabelChange
@@ -157,7 +163,7 @@ public interface SetImageLabelChange extends Change {
     public static SetImageLabelChangeBuilder builder() {
         return SetImageLabelChangeBuilder.of();
     }
-
+    
     /**
      * create builder for SetImageLabelChange instance
      * @param template instance with prefilled values for the builder
@@ -166,6 +172,7 @@ public interface SetImageLabelChange extends Change {
     public static SetImageLabelChangeBuilder builder(final SetImageLabelChange template) {
         return SetImageLabelChangeBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -176,7 +183,7 @@ public interface SetImageLabelChange extends Change {
     default <T> T withSetImageLabelChange(Function<SetImageLabelChange, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

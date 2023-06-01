@@ -1,19 +1,21 @@
-
 package com.commercetools.api.models.message;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
+import com.commercetools.api.models.message.MessagePayload;
 import com.commercetools.api.models.standalone_price.StagedStandalonePrice;
+import com.commercetools.api.models.message.StandalonePriceStagedChangesAppliedMessagePayloadImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Generated after a successful Apply Staged Changes update action.</p>
@@ -26,9 +28,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .stagedChanges(stagedChangesBuilder -> stagedChangesBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = StandalonePriceStagedChangesAppliedMessagePayloadImpl.class)
 public interface StandalonePriceStagedChangesAppliedMessagePayload extends MessagePayload {
 
@@ -50,24 +55,25 @@ public interface StandalonePriceStagedChangesAppliedMessagePayload extends Messa
      *  <p>Applied changes of the StandalonePrice after the Apply Staged Changes update action.</p>
      * @param stagedChanges value to be set
      */
-
+    
     public void setStagedChanges(final StagedStandalonePrice stagedChanges);
+    
 
     /**
      * factory method
      * @return instance of StandalonePriceStagedChangesAppliedMessagePayload
      */
-    public static StandalonePriceStagedChangesAppliedMessagePayload of() {
+    public static StandalonePriceStagedChangesAppliedMessagePayload of(){
         return new StandalonePriceStagedChangesAppliedMessagePayloadImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy StandalonePriceStagedChangesAppliedMessagePayload
      * @param template instance to be copied
      * @return copy instance
      */
-    public static StandalonePriceStagedChangesAppliedMessagePayload of(
-            final StandalonePriceStagedChangesAppliedMessagePayload template) {
+    public static StandalonePriceStagedChangesAppliedMessagePayload of(final StandalonePriceStagedChangesAppliedMessagePayload template) {
         StandalonePriceStagedChangesAppliedMessagePayloadImpl instance = new StandalonePriceStagedChangesAppliedMessagePayloadImpl();
         instance.setStagedChanges(template.getStagedChanges());
         return instance;
@@ -79,14 +85,12 @@ public interface StandalonePriceStagedChangesAppliedMessagePayload extends Messa
      * @return copy instance
      */
     @Nullable
-    public static StandalonePriceStagedChangesAppliedMessagePayload deepCopy(
-            @Nullable final StandalonePriceStagedChangesAppliedMessagePayload template) {
+    public static StandalonePriceStagedChangesAppliedMessagePayload deepCopy(@Nullable final StandalonePriceStagedChangesAppliedMessagePayload template) {
         if (template == null) {
             return null;
         }
         StandalonePriceStagedChangesAppliedMessagePayloadImpl instance = new StandalonePriceStagedChangesAppliedMessagePayloadImpl();
-        instance.setStagedChanges(
-            com.commercetools.api.models.standalone_price.StagedStandalonePrice.deepCopy(template.getStagedChanges()));
+        instance.setStagedChanges(com.commercetools.api.models.standalone_price.StagedStandalonePrice.deepCopy(template.getStagedChanges()));
         return instance;
     }
 
@@ -97,16 +101,16 @@ public interface StandalonePriceStagedChangesAppliedMessagePayload extends Messa
     public static StandalonePriceStagedChangesAppliedMessagePayloadBuilder builder() {
         return StandalonePriceStagedChangesAppliedMessagePayloadBuilder.of();
     }
-
+    
     /**
      * create builder for StandalonePriceStagedChangesAppliedMessagePayload instance
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static StandalonePriceStagedChangesAppliedMessagePayloadBuilder builder(
-            final StandalonePriceStagedChangesAppliedMessagePayload template) {
+    public static StandalonePriceStagedChangesAppliedMessagePayloadBuilder builder(final StandalonePriceStagedChangesAppliedMessagePayload template) {
         return StandalonePriceStagedChangesAppliedMessagePayloadBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -114,11 +118,10 @@ public interface StandalonePriceStagedChangesAppliedMessagePayload extends Messa
      * @param helper function to map the object
      * @return mapped value
      */
-    default <T> T withStandalonePriceStagedChangesAppliedMessagePayload(
-            Function<StandalonePriceStagedChangesAppliedMessagePayload, T> helper) {
+    default <T> T withStandalonePriceStagedChangesAppliedMessagePayload(Function<StandalonePriceStagedChangesAppliedMessagePayload, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

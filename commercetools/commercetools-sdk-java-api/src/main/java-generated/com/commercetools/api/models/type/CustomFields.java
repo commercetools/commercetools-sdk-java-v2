@@ -1,18 +1,21 @@
-
 package com.commercetools.api.models.type;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
+import com.commercetools.api.models.type.FieldContainer;
+import com.commercetools.api.models.type.TypeReference;
+import com.commercetools.api.models.type.CustomFieldsImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Serves as value of the <code>custom</code> field on a resource or data type customized with a Type.</p>
@@ -26,11 +29,15 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .fields(fieldsBuilder -> fieldsBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = CustomFieldsImpl.class)
 public interface CustomFields extends CustomFieldsMixin {
+
 
     /**
      *  <p>Reference to the Type that holds the FieldDefinitions for the Custom Fields.</p>
@@ -40,7 +47,6 @@ public interface CustomFields extends CustomFieldsMixin {
     @Valid
     @JsonProperty("type")
     public TypeReference getType();
-
     /**
      *  <p>Object containing the Custom Fields for the customized resource or data type.</p>
      * @return fields
@@ -54,23 +60,26 @@ public interface CustomFields extends CustomFieldsMixin {
      *  <p>Reference to the Type that holds the FieldDefinitions for the Custom Fields.</p>
      * @param type value to be set
      */
-
+    
     public void setType(final TypeReference type);
-
+    
+    
     /**
      *  <p>Object containing the Custom Fields for the customized resource or data type.</p>
      * @param fields value to be set
      */
-
+    
     public void setFields(final FieldContainer fields);
+    
 
     /**
      * factory method
      * @return instance of CustomFields
      */
-    public static CustomFields of() {
+    public static CustomFields of(){
         return new CustomFieldsImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy CustomFields
@@ -107,7 +116,7 @@ public interface CustomFields extends CustomFieldsMixin {
     public static CustomFieldsBuilder builder() {
         return CustomFieldsBuilder.of();
     }
-
+    
     /**
      * create builder for CustomFields instance
      * @param template instance with prefilled values for the builder
@@ -116,6 +125,7 @@ public interface CustomFields extends CustomFieldsMixin {
     public static CustomFieldsBuilder builder(final CustomFields template) {
         return CustomFieldsBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -126,7 +136,7 @@ public interface CustomFields extends CustomFieldsMixin {
     default <T> T withCustomFields(Function<CustomFields, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

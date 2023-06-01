@@ -1,17 +1,38 @@
-
 package com.commercetools.importapi.client;
 
+import io.vrap.rmf.base.client.utils.Utils;
+
+import java.io.InputStream;
+import java.io.IOException;
+
 import java.net.URI;
+import java.net.URLConnection;
+import java.nio.charset.StandardCharsets;
+import java.nio.file.Files;
+
 import java.time.Duration;
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.List;
+import java.util.Map;
+import java.util.HashMap;
+import java.util.Optional;
+import java.util.function.Function;
+import java.util.function.Supplier;
+import java.util.stream.Collectors;
 import java.util.concurrent.CompletableFuture;
-
-import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.utils.Generated;
+
+import javax.annotation.Nullable;
+
+import java.io.UnsupportedEncodingException;
+import java.net.URLEncoder;
+import io.vrap.rmf.base.client.*;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+
+import static io.vrap.rmf.base.client.utils.ClientUtils.blockingWait;
 
 /**
  *  <p>Creates a new import container.</p>
@@ -27,18 +48,18 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
  * }</code></pre>
  * </div>
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
-public class ByProjectKeyImportContainersPost extends
-        BodyApiMethod<ByProjectKeyImportContainersPost, com.commercetools.importapi.models.importcontainers.ImportContainer, com.commercetools.importapi.models.importcontainers.ImportContainerDraft>
-        implements
-        com.commercetools.importapi.client.Secured_by_manage_import_containersTrait<ByProjectKeyImportContainersPost> {
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
+public class ByProjectKeyImportContainersPost extends BodyApiMethod<ByProjectKeyImportContainersPost, com.commercetools.importapi.models.importcontainers.ImportContainer, com.commercetools.importapi.models.importcontainers.ImportContainerDraft> implements com.commercetools.importapi.client.Secured_by_manage_import_containersTrait<ByProjectKeyImportContainersPost> {
 
+    
     private String projectKey;
-
+    
     private com.commercetools.importapi.models.importcontainers.ImportContainerDraft importContainerDraft;
 
-    public ByProjectKeyImportContainersPost(final ApiHttpClient apiHttpClient, String projectKey,
-            com.commercetools.importapi.models.importcontainers.ImportContainerDraft importContainerDraft) {
+    public ByProjectKeyImportContainersPost(final ApiHttpClient apiHttpClient, String projectKey, com.commercetools.importapi.models.importcontainers.ImportContainerDraft importContainerDraft) {
         super(apiHttpClient);
         this.projectKey = projectKey;
         this.importContainerDraft = importContainerDraft;
@@ -57,62 +78,58 @@ public class ByProjectKeyImportContainersPost extends
         if (!params.isEmpty()) {
             httpRequestPath += "?" + String.join("&", params);
         }
-        return new ApiHttpRequest(ApiHttpMethod.POST, URI.create(httpRequestPath), getHeaders(),
-            io.vrap.rmf.base.client.utils.json.JsonUtils
-                    .executing(() -> apiHttpClient().getSerializerService().toJsonByteArray(importContainerDraft)));
-
+        return new ApiHttpRequest(ApiHttpMethod.POST, URI.create(httpRequestPath), getHeaders(), io.vrap.rmf.base.client.utils.json.JsonUtils.executing(() -> apiHttpClient().getSerializerService().toJsonByteArray(importContainerDraft)));
+    
     }
 
     @Override
-    public ApiHttpResponse<com.commercetools.importapi.models.importcontainers.ImportContainer> executeBlocking(
-            final ApiHttpClient client, final Duration timeout) {
-        return executeBlocking(client, timeout,
-            com.commercetools.importapi.models.importcontainers.ImportContainer.class);
+    public ApiHttpResponse<com.commercetools.importapi.models.importcontainers.ImportContainer> executeBlocking(final ApiHttpClient client, final Duration timeout) {
+        return executeBlocking(client, timeout, com.commercetools.importapi.models.importcontainers.ImportContainer.class);
     }
 
     @Override
-    public CompletableFuture<ApiHttpResponse<com.commercetools.importapi.models.importcontainers.ImportContainer>> execute(
-            final ApiHttpClient client) {
+    public CompletableFuture<ApiHttpResponse<com.commercetools.importapi.models.importcontainers.ImportContainer>> execute(final ApiHttpClient client) {
         return execute(client, com.commercetools.importapi.models.importcontainers.ImportContainer.class);
     }
 
-    public String getProjectKey() {
-        return this.projectKey;
-    }
+    public String getProjectKey() {return this.projectKey;}
 
-    public void setProjectKey(final String projectKey) {
-        this.projectKey = projectKey;
-    }
 
+    public void setProjectKey(final String projectKey) { this.projectKey = projectKey; }
+
+
+    
     public com.commercetools.importapi.models.importcontainers.ImportContainerDraft getBody() {
         return importContainerDraft;
     }
-
-    public ByProjectKeyImportContainersPost withBody(
-            com.commercetools.importapi.models.importcontainers.ImportContainerDraft importContainerDraft) {
+    
+    public ByProjectKeyImportContainersPost withBody(com.commercetools.importapi.models.importcontainers.ImportContainerDraft importContainerDraft) {
         ByProjectKeyImportContainersPost t = copy();
         t.importContainerDraft = importContainerDraft;
         return t;
     }
 
+    
     @Override
     public boolean equals(Object o) {
-        if (this == o)
-            return true;
-
-        if (o == null || getClass() != o.getClass())
-            return false;
-
+        if (this == o) return true;
+    
+        if (o == null || getClass() != o.getClass()) return false;
+    
         ByProjectKeyImportContainersPost that = (ByProjectKeyImportContainersPost) o;
-
-        return new EqualsBuilder().append(projectKey, that.projectKey)
+    
+        return new EqualsBuilder()
+                .append(projectKey, that.projectKey)
                 .append(importContainerDraft, that.importContainerDraft)
                 .isEquals();
     }
-
+    
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(projectKey).append(importContainerDraft).toHashCode();
+        return new HashCodeBuilder(17, 37)
+            .append(projectKey)
+            .append(importContainerDraft)
+            .toHashCode();
     }
 
     @Override

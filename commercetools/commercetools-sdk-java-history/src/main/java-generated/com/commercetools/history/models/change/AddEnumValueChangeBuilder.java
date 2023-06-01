@@ -1,9 +1,12 @@
-
 package com.commercetools.history.models.change;
 
+import com.commercetools.history.models.change.Change;
+import com.commercetools.history.models.change_value.EnumValue;
+import com.commercetools.history.models.change.AddEnumValueChange;
+import javax.annotation.Nullable;
 import java.util.*;
 import java.util.function.Function;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -19,99 +22,117 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .nextValue(nextValueBuilder -> nextValueBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class AddEnumValueChangeBuilder implements Builder<AddEnumValueChange> {
 
+    
+    
     private String change;
-
+    
+    
+    
     private String fieldName;
-
+    
+    
+    
     private com.commercetools.history.models.change_value.EnumValue nextValue;
 
+    
     /**
      *  <p>Update action for <code>addEnumValue</code> on types</p>
      * @param change value to be set
      * @return Builder
      */
-
-    public AddEnumValueChangeBuilder change(final String change) {
+    
+    public AddEnumValueChangeBuilder change( final String change) {
         this.change = change;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>The name of the field/attribute definition updated.</p>
      * @param fieldName value to be set
      * @return Builder
      */
-
-    public AddEnumValueChangeBuilder fieldName(final String fieldName) {
+    
+    public AddEnumValueChangeBuilder fieldName( final String fieldName) {
         this.fieldName = fieldName;
         return this;
     }
-
+    
+    
+    
+    
     /**
      * set the value to the nextValue using the builder function
      * @param builder function to build the nextValue value
      * @return Builder
      */
-
-    public AddEnumValueChangeBuilder nextValue(
-            Function<com.commercetools.history.models.change_value.EnumValueBuilder, com.commercetools.history.models.change_value.EnumValueBuilder> builder) {
+    
+    public AddEnumValueChangeBuilder nextValue(Function<com.commercetools.history.models.change_value.EnumValueBuilder, com.commercetools.history.models.change_value.EnumValueBuilder> builder) {
         this.nextValue = builder.apply(com.commercetools.history.models.change_value.EnumValueBuilder.of()).build();
         return this;
     }
-
+    
     /**
      * set the value to the nextValue using the builder function
      * @param builder function to build the nextValue value
      * @return Builder
      */
-
-    public AddEnumValueChangeBuilder withNextValue(
-            Function<com.commercetools.history.models.change_value.EnumValueBuilder, com.commercetools.history.models.change_value.EnumValue> builder) {
+    
+    public AddEnumValueChangeBuilder withNextValue(Function<com.commercetools.history.models.change_value.EnumValueBuilder, com.commercetools.history.models.change_value.EnumValue> builder) {
         this.nextValue = builder.apply(com.commercetools.history.models.change_value.EnumValueBuilder.of());
         return this;
     }
-
+                    
     /**
      * set the value to the nextValue
      * @param nextValue value to be set
      * @return Builder
      */
-
-    public AddEnumValueChangeBuilder nextValue(
-            final com.commercetools.history.models.change_value.EnumValue nextValue) {
+    
+    public AddEnumValueChangeBuilder nextValue( final com.commercetools.history.models.change_value.EnumValue nextValue) {
         this.nextValue = nextValue;
         return this;
     }
+    
+    
 
     /**
      *  <p>Update action for <code>addEnumValue</code> on types</p>
      * @return change
      */
-
-    public String getChange() {
+    
+    
+    public String getChange(){
         return this.change;
     }
-
+    
     /**
      *  <p>The name of the field/attribute definition updated.</p>
      * @return fieldName
      */
-
-    public String getFieldName() {
+    
+    
+    public String getFieldName(){
         return this.fieldName;
     }
-
+    
     /**
      * value of nextValue}
      * @return nextValue
      */
-
-    public com.commercetools.history.models.change_value.EnumValue getNextValue() {
+    
+    
+    public com.commercetools.history.models.change_value.EnumValue getNextValue(){
         return this.nextValue;
     }
 
@@ -125,7 +146,7 @@ public class AddEnumValueChangeBuilder implements Builder<AddEnumValueChange> {
         Objects.requireNonNull(nextValue, AddEnumValueChange.class + ": nextValue is missing");
         return new AddEnumValueChangeImpl(change, fieldName, nextValue);
     }
-
+    
     /**
      * builds AddEnumValueChange without checking for non-null required values
      * @return AddEnumValueChange
@@ -136,7 +157,7 @@ public class AddEnumValueChangeBuilder implements Builder<AddEnumValueChange> {
 
     /**
      * factory method for an instance of AddEnumValueChangeBuilder
-     * @return builder
+     * @return builder 
      */
     public static AddEnumValueChangeBuilder of() {
         return new AddEnumValueChangeBuilder();

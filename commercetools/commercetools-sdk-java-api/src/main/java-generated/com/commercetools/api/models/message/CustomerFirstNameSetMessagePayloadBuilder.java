@@ -1,10 +1,11 @@
-
 package com.commercetools.api.models.message;
 
-import java.util.*;
-
+import com.commercetools.api.models.message.MessagePayload;
+import com.commercetools.api.models.message.CustomerFirstNameSetMessagePayload;
 import javax.annotation.Nullable;
-
+import java.util.*;
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -17,32 +18,39 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     CustomerFirstNameSetMessagePayload customerFirstNameSetMessagePayload = CustomerFirstNameSetMessagePayload.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class CustomerFirstNameSetMessagePayloadBuilder implements Builder<CustomerFirstNameSetMessagePayload> {
 
+    
     @Nullable
     private String firstName;
 
+    
     /**
      *  <p>The <code>firstName</code> that was set during the Set First Name update action.</p>
      * @param firstName value to be set
      * @return Builder
      */
-
+    
     public CustomerFirstNameSetMessagePayloadBuilder firstName(@Nullable final String firstName) {
         this.firstName = firstName;
         return this;
     }
+    
+    
 
     /**
      *  <p>The <code>firstName</code> that was set during the Set First Name update action.</p>
      * @return firstName
      */
-
+    
     @Nullable
-    public String getFirstName() {
+    public String getFirstName(){
         return this.firstName;
     }
 
@@ -53,7 +61,7 @@ public class CustomerFirstNameSetMessagePayloadBuilder implements Builder<Custom
     public CustomerFirstNameSetMessagePayload build() {
         return new CustomerFirstNameSetMessagePayloadImpl(firstName);
     }
-
+    
     /**
      * builds CustomerFirstNameSetMessagePayload without checking for non-null required values
      * @return CustomerFirstNameSetMessagePayload
@@ -64,7 +72,7 @@ public class CustomerFirstNameSetMessagePayloadBuilder implements Builder<Custom
 
     /**
      * factory method for an instance of CustomerFirstNameSetMessagePayloadBuilder
-     * @return builder
+     * @return builder 
      */
     public static CustomerFirstNameSetMessagePayloadBuilder of() {
         return new CustomerFirstNameSetMessagePayloadBuilder();

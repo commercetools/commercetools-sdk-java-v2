@@ -1,48 +1,57 @@
-
 package com.commercetools.history.models.common;
 
-import java.time.*;
-import java.util.*;
-
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
-
-import io.vrap.rmf.base.client.ModelBase;
+import com.commercetools.history.models.common.SubRate;
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.ModelBase;
+import javax.validation.Valid;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.annotation.*;
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
  *  <p>Shape of the value for <code>addTaxRate</code> and <code>removeTaxRate</code> actions</p>
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class TaxRateImpl implements TaxRate, ModelBase {
 
+    
     private String id;
-
+    
+    
     private String name;
-
+    
+    
     private Integer amount;
-
+    
+    
     private Boolean includedInPrice;
-
+    
+    
     private String country;
-
+    
+    
     private String state;
-
+    
+    
     private java.util.List<com.commercetools.history.models.common.SubRate> subRates;
 
     /**
      * create instance with all properties
      */
     @JsonCreator
-    TaxRateImpl(@JsonProperty("id") final String id, @JsonProperty("name") final String name,
-            @JsonProperty("amount") final Integer amount,
-            @JsonProperty("includedInPrice") final Boolean includedInPrice,
-            @JsonProperty("country") final String country, @JsonProperty("state") final String state,
-            @JsonProperty("subRates") final java.util.List<com.commercetools.history.models.common.SubRate> subRates) {
+    TaxRateImpl(@JsonProperty("id") final String id, @JsonProperty("name") final String name, @JsonProperty("amount") final Integer amount, @JsonProperty("includedInPrice") final Boolean includedInPrice, @JsonProperty("country") final String country, @JsonProperty("state") final String state, @JsonProperty("subRates") final java.util.List<com.commercetools.history.models.common.SubRate> subRates) {
         this.id = id;
         this.name = name;
         this.amount = amount;
@@ -51,7 +60,6 @@ public class TaxRateImpl implements TaxRate, ModelBase {
         this.state = state;
         this.subRates = subRates;
     }
-
     /**
      * create empty instance
      */
@@ -61,102 +69,109 @@ public class TaxRateImpl implements TaxRate, ModelBase {
     /**
      *  <p>The ID is always set if the tax rate is part of a TaxCategory. The external tax rates in a Cart do not contain an <code>id</code>.</p>
      */
-
-    public String getId() {
+    
+    public String getId(){
         return this.id;
     }
-
+    
     /**
      *
      */
-
-    public String getName() {
+    
+    public String getName(){
         return this.name;
     }
-
+    
     /**
      *  <p>Percentage in the range of [0..1]. The sum of the amounts of all <code>subRates</code>, if there are any.</p>
      */
-
-    public Integer getAmount() {
+    
+    public Integer getAmount(){
         return this.amount;
     }
-
+    
     /**
      *
      */
-
-    public Boolean getIncludedInPrice() {
+    
+    public Boolean getIncludedInPrice(){
         return this.includedInPrice;
     }
-
+    
     /**
      *  <p>Two-digit country code as per ISO 3166-1 alpha-2.</p>
      */
-
-    public String getCountry() {
+    
+    public String getCountry(){
         return this.country;
     }
-
+    
     /**
      *  <p>The state in the country</p>
      */
-
-    public String getState() {
+    
+    public String getState(){
         return this.state;
     }
-
+    
     /**
      *
      */
-
-    public java.util.List<com.commercetools.history.models.common.SubRate> getSubRates() {
+    
+    public java.util.List<com.commercetools.history.models.common.SubRate> getSubRates(){
         return this.subRates;
     }
 
-    public void setId(final String id) {
+    
+    public void setId(final String id){
         this.id = id;
     }
-
-    public void setName(final String name) {
+    
+    
+    public void setName(final String name){
         this.name = name;
     }
-
-    public void setAmount(final Integer amount) {
+    
+    
+    public void setAmount(final Integer amount){
         this.amount = amount;
     }
-
-    public void setIncludedInPrice(final Boolean includedInPrice) {
+    
+    
+    public void setIncludedInPrice(final Boolean includedInPrice){
         this.includedInPrice = includedInPrice;
     }
-
-    public void setCountry(final String country) {
+    
+    
+    public void setCountry(final String country){
         this.country = country;
     }
-
-    public void setState(final String state) {
+    
+    
+    public void setState(final String state){
         this.state = state;
     }
-
-    public void setSubRates(final com.commercetools.history.models.common.SubRate... subRates) {
-        this.subRates = new ArrayList<>(Arrays.asList(subRates));
+    
+    
+    public void setSubRates(final com.commercetools.history.models.common.SubRate ...subRates){
+       this.subRates = new ArrayList<>(Arrays.asList(subRates));
     }
-
-    public void setSubRates(final java.util.List<com.commercetools.history.models.common.SubRate> subRates) {
-        this.subRates = subRates;
+    
+    
+    public void setSubRates(final java.util.List<com.commercetools.history.models.common.SubRate> subRates){
+       this.subRates = subRates;
     }
 
     @Override
     public boolean equals(Object o) {
-        if (this == o)
-            return true;
-
-        if (o == null || getClass() != o.getClass())
-            return false;
-
+        if (this == o) return true;
+    
+        if (o == null || getClass() != o.getClass()) return false;
+    
         TaxRateImpl that = (TaxRateImpl) o;
-
-        return new EqualsBuilder().append(id, that.id)
+    
+        return new EqualsBuilder()
+                .append(id, that.id)
                 .append(name, that.name)
                 .append(amount, that.amount)
                 .append(includedInPrice, that.includedInPrice)
@@ -165,17 +180,18 @@ public class TaxRateImpl implements TaxRate, ModelBase {
                 .append(subRates, that.subRates)
                 .isEquals();
     }
-
+    
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(id)
-                .append(name)
-                .append(amount)
-                .append(includedInPrice)
-                .append(country)
-                .append(state)
-                .append(subRates)
-                .toHashCode();
+        return new HashCodeBuilder(17, 37)
+            .append(id)
+            .append(name)
+            .append(amount)
+            .append(includedInPrice)
+            .append(country)
+            .append(state)
+            .append(subRates)
+            .toHashCode();
     }
 
 }

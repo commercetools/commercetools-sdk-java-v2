@@ -1,8 +1,11 @@
-
 package com.commercetools.api.models.order_edit;
 
+import com.commercetools.api.models.order.StagedOrderUpdateAction;
+import com.commercetools.api.models.order_edit.StagedOrderRemoveParcelFromDeliveryAction;
+import javax.annotation.Nullable;
 import java.util.*;
-
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -16,31 +19,39 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .parcelId("{parcelId}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
-public class StagedOrderRemoveParcelFromDeliveryActionBuilder
-        implements Builder<StagedOrderRemoveParcelFromDeliveryAction> {
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
+public class StagedOrderRemoveParcelFromDeliveryActionBuilder implements Builder<StagedOrderRemoveParcelFromDeliveryAction> {
 
+    
+    
     private String parcelId;
 
+    
     /**
      * set the value to the parcelId
      * @param parcelId value to be set
      * @return Builder
      */
-
-    public StagedOrderRemoveParcelFromDeliveryActionBuilder parcelId(final String parcelId) {
+    
+    public StagedOrderRemoveParcelFromDeliveryActionBuilder parcelId( final String parcelId) {
         this.parcelId = parcelId;
         return this;
     }
+    
+    
 
     /**
      * value of parcelId}
      * @return parcelId
      */
-
-    public String getParcelId() {
+    
+    
+    public String getParcelId(){
         return this.parcelId;
     }
 
@@ -52,7 +63,7 @@ public class StagedOrderRemoveParcelFromDeliveryActionBuilder
         Objects.requireNonNull(parcelId, StagedOrderRemoveParcelFromDeliveryAction.class + ": parcelId is missing");
         return new StagedOrderRemoveParcelFromDeliveryActionImpl(parcelId);
     }
-
+    
     /**
      * builds StagedOrderRemoveParcelFromDeliveryAction without checking for non-null required values
      * @return StagedOrderRemoveParcelFromDeliveryAction
@@ -63,7 +74,7 @@ public class StagedOrderRemoveParcelFromDeliveryActionBuilder
 
     /**
      * factory method for an instance of StagedOrderRemoveParcelFromDeliveryActionBuilder
-     * @return builder
+     * @return builder 
      */
     public static StagedOrderRemoveParcelFromDeliveryActionBuilder of() {
         return new StagedOrderRemoveParcelFromDeliveryActionBuilder();
@@ -74,8 +85,7 @@ public class StagedOrderRemoveParcelFromDeliveryActionBuilder
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static StagedOrderRemoveParcelFromDeliveryActionBuilder of(
-            final StagedOrderRemoveParcelFromDeliveryAction template) {
+    public static StagedOrderRemoveParcelFromDeliveryActionBuilder of(final StagedOrderRemoveParcelFromDeliveryAction template) {
         StagedOrderRemoveParcelFromDeliveryActionBuilder builder = new StagedOrderRemoveParcelFromDeliveryActionBuilder();
         builder.parcelId = template.getParcelId();
         return builder;

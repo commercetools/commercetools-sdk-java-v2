@@ -1,19 +1,21 @@
-
 package com.commercetools.api.models.product_selection;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
 import com.commercetools.api.models.product.ProductResourceIdentifier;
+import com.commercetools.api.models.product_selection.ProductSelectionUpdateAction;
+import com.commercetools.api.models.product_selection.ProductSelectionRemoveProductActionImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * ProductSelectionRemoveProductAction
@@ -26,9 +28,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .product(productBuilder -> productBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = ProductSelectionRemoveProductActionImpl.class)
 public interface ProductSelectionRemoveProductAction extends ProductSelectionUpdateAction {
 
@@ -50,16 +55,18 @@ public interface ProductSelectionRemoveProductAction extends ProductSelectionUpd
      *  <p>ResourceIdentifier of the Product</p>
      * @param product value to be set
      */
-
+    
     public void setProduct(final ProductResourceIdentifier product);
+    
 
     /**
      * factory method
      * @return instance of ProductSelectionRemoveProductAction
      */
-    public static ProductSelectionRemoveProductAction of() {
+    public static ProductSelectionRemoveProductAction of(){
         return new ProductSelectionRemoveProductActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy ProductSelectionRemoveProductAction
@@ -78,14 +85,12 @@ public interface ProductSelectionRemoveProductAction extends ProductSelectionUpd
      * @return copy instance
      */
     @Nullable
-    public static ProductSelectionRemoveProductAction deepCopy(
-            @Nullable final ProductSelectionRemoveProductAction template) {
+    public static ProductSelectionRemoveProductAction deepCopy(@Nullable final ProductSelectionRemoveProductAction template) {
         if (template == null) {
             return null;
         }
         ProductSelectionRemoveProductActionImpl instance = new ProductSelectionRemoveProductActionImpl();
-        instance.setProduct(
-            com.commercetools.api.models.product.ProductResourceIdentifier.deepCopy(template.getProduct()));
+        instance.setProduct(com.commercetools.api.models.product.ProductResourceIdentifier.deepCopy(template.getProduct()));
         return instance;
     }
 
@@ -96,16 +101,16 @@ public interface ProductSelectionRemoveProductAction extends ProductSelectionUpd
     public static ProductSelectionRemoveProductActionBuilder builder() {
         return ProductSelectionRemoveProductActionBuilder.of();
     }
-
+    
     /**
      * create builder for ProductSelectionRemoveProductAction instance
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static ProductSelectionRemoveProductActionBuilder builder(
-            final ProductSelectionRemoveProductAction template) {
+    public static ProductSelectionRemoveProductActionBuilder builder(final ProductSelectionRemoveProductAction template) {
         return ProductSelectionRemoveProductActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -116,7 +121,7 @@ public interface ProductSelectionRemoveProductAction extends ProductSelectionUpd
     default <T> T withProductSelectionRemoveProductAction(Function<ProductSelectionRemoveProductAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

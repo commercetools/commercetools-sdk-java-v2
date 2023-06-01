@@ -1,114 +1,140 @@
-
 package com.commercetools.api.models.cart;
 
-import java.time.*;
-import java.util.*;
-
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
-
-import io.vrap.rmf.base.client.ModelBase;
+import com.commercetools.api.models.business_unit.BusinessUnitResourceIdentifier;
+import com.commercetools.api.models.cart.CartOrigin;
+import com.commercetools.api.models.cart.CustomLineItemDraft;
+import com.commercetools.api.models.cart.CustomShippingDraft;
+import com.commercetools.api.models.cart.ExternalTaxRateDraft;
+import com.commercetools.api.models.cart.InventoryMode;
+import com.commercetools.api.models.cart.LineItemDraft;
+import com.commercetools.api.models.cart.RoundingMode;
+import com.commercetools.api.models.cart.ShippingDraft;
+import com.commercetools.api.models.cart.ShippingMode;
+import com.commercetools.api.models.cart.ShippingRateInputDraft;
+import com.commercetools.api.models.cart.TaxCalculationMode;
+import com.commercetools.api.models.cart.TaxMode;
+import com.commercetools.api.models.common.BaseAddress;
+import com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifier;
+import com.commercetools.api.models.shipping_method.ShippingMethodResourceIdentifier;
+import com.commercetools.api.models.store.StoreResourceIdentifier;
+import com.commercetools.api.models.type.CustomFieldsDraft;
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.ModelBase;
+import javax.validation.Valid;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.annotation.*;
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
  * CartDraft
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class CartDraftImpl implements CartDraft, ModelBase {
 
+    
     private String currency;
-
+    
+    
     private String key;
-
+    
+    
     private String customerId;
-
+    
+    
     private String customerEmail;
-
+    
+    
     private com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifier customerGroup;
-
+    
+    
     private String anonymousId;
-
+    
+    
     private com.commercetools.api.models.business_unit.BusinessUnitResourceIdentifier businessUnit;
-
+    
+    
     private com.commercetools.api.models.store.StoreResourceIdentifier store;
-
+    
+    
     private java.util.List<com.commercetools.api.models.cart.LineItemDraft> lineItems;
-
+    
+    
     private java.util.List<com.commercetools.api.models.cart.CustomLineItemDraft> customLineItems;
-
+    
+    
     private com.commercetools.api.models.cart.TaxMode taxMode;
-
+    
+    
     private com.commercetools.api.models.cart.ExternalTaxRateDraft externalTaxRateForShippingMethod;
-
+    
+    
     private com.commercetools.api.models.cart.RoundingMode taxRoundingMode;
-
+    
+    
     private com.commercetools.api.models.cart.TaxCalculationMode taxCalculationMode;
-
+    
+    
     private com.commercetools.api.models.cart.InventoryMode inventoryMode;
-
+    
+    
     private com.commercetools.api.models.common.BaseAddress billingAddress;
-
+    
+    
     private com.commercetools.api.models.common.BaseAddress shippingAddress;
-
+    
+    
     private com.commercetools.api.models.shipping_method.ShippingMethodResourceIdentifier shippingMethod;
-
+    
+    
     private com.commercetools.api.models.cart.ShippingRateInputDraft shippingRateInput;
-
+    
+    
     private com.commercetools.api.models.cart.ShippingMode shippingMode;
-
+    
+    
     private java.util.List<com.commercetools.api.models.cart.CustomShippingDraft> customShipping;
-
+    
+    
     private java.util.List<com.commercetools.api.models.cart.ShippingDraft> shipping;
-
+    
+    
     private java.util.List<com.commercetools.api.models.common.BaseAddress> itemShippingAddresses;
-
+    
+    
     private java.util.List<String> discountCodes;
-
+    
+    
     private String country;
-
+    
+    
     private String locale;
-
+    
+    
     private com.commercetools.api.models.cart.CartOrigin origin;
-
+    
+    
     private Long deleteDaysAfterLastModification;
-
+    
+    
     private com.commercetools.api.models.type.CustomFieldsDraft custom;
 
     /**
      * create instance with all properties
      */
     @JsonCreator
-    CartDraftImpl(@JsonProperty("currency") final String currency, @JsonProperty("key") final String key,
-            @JsonProperty("customerId") final String customerId,
-            @JsonProperty("customerEmail") final String customerEmail,
-            @JsonProperty("customerGroup") final com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifier customerGroup,
-            @JsonProperty("anonymousId") final String anonymousId,
-            @JsonProperty("businessUnit") final com.commercetools.api.models.business_unit.BusinessUnitResourceIdentifier businessUnit,
-            @JsonProperty("store") final com.commercetools.api.models.store.StoreResourceIdentifier store,
-            @JsonProperty("lineItems") final java.util.List<com.commercetools.api.models.cart.LineItemDraft> lineItems,
-            @JsonProperty("customLineItems") final java.util.List<com.commercetools.api.models.cart.CustomLineItemDraft> customLineItems,
-            @JsonProperty("taxMode") final com.commercetools.api.models.cart.TaxMode taxMode,
-            @JsonProperty("externalTaxRateForShippingMethod") final com.commercetools.api.models.cart.ExternalTaxRateDraft externalTaxRateForShippingMethod,
-            @JsonProperty("taxRoundingMode") final com.commercetools.api.models.cart.RoundingMode taxRoundingMode,
-            @JsonProperty("taxCalculationMode") final com.commercetools.api.models.cart.TaxCalculationMode taxCalculationMode,
-            @JsonProperty("inventoryMode") final com.commercetools.api.models.cart.InventoryMode inventoryMode,
-            @JsonProperty("billingAddress") final com.commercetools.api.models.common.BaseAddress billingAddress,
-            @JsonProperty("shippingAddress") final com.commercetools.api.models.common.BaseAddress shippingAddress,
-            @JsonProperty("shippingMethod") final com.commercetools.api.models.shipping_method.ShippingMethodResourceIdentifier shippingMethod,
-            @JsonProperty("shippingRateInput") final com.commercetools.api.models.cart.ShippingRateInputDraft shippingRateInput,
-            @JsonProperty("shippingMode") final com.commercetools.api.models.cart.ShippingMode shippingMode,
-            @JsonProperty("customShipping") final java.util.List<com.commercetools.api.models.cart.CustomShippingDraft> customShipping,
-            @JsonProperty("shipping") final java.util.List<com.commercetools.api.models.cart.ShippingDraft> shipping,
-            @JsonProperty("itemShippingAddresses") final java.util.List<com.commercetools.api.models.common.BaseAddress> itemShippingAddresses,
-            @JsonProperty("discountCodes") final java.util.List<String> discountCodes,
-            @JsonProperty("country") final String country, @JsonProperty("locale") final String locale,
-            @JsonProperty("origin") final com.commercetools.api.models.cart.CartOrigin origin,
-            @JsonProperty("deleteDaysAfterLastModification") final Long deleteDaysAfterLastModification,
-            @JsonProperty("custom") final com.commercetools.api.models.type.CustomFieldsDraft custom) {
+    CartDraftImpl(@JsonProperty("currency") final String currency, @JsonProperty("key") final String key, @JsonProperty("customerId") final String customerId, @JsonProperty("customerEmail") final String customerEmail, @JsonProperty("customerGroup") final com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifier customerGroup, @JsonProperty("anonymousId") final String anonymousId, @JsonProperty("businessUnit") final com.commercetools.api.models.business_unit.BusinessUnitResourceIdentifier businessUnit, @JsonProperty("store") final com.commercetools.api.models.store.StoreResourceIdentifier store, @JsonProperty("lineItems") final java.util.List<com.commercetools.api.models.cart.LineItemDraft> lineItems, @JsonProperty("customLineItems") final java.util.List<com.commercetools.api.models.cart.CustomLineItemDraft> customLineItems, @JsonProperty("taxMode") final com.commercetools.api.models.cart.TaxMode taxMode, @JsonProperty("externalTaxRateForShippingMethod") final com.commercetools.api.models.cart.ExternalTaxRateDraft externalTaxRateForShippingMethod, @JsonProperty("taxRoundingMode") final com.commercetools.api.models.cart.RoundingMode taxRoundingMode, @JsonProperty("taxCalculationMode") final com.commercetools.api.models.cart.TaxCalculationMode taxCalculationMode, @JsonProperty("inventoryMode") final com.commercetools.api.models.cart.InventoryMode inventoryMode, @JsonProperty("billingAddress") final com.commercetools.api.models.common.BaseAddress billingAddress, @JsonProperty("shippingAddress") final com.commercetools.api.models.common.BaseAddress shippingAddress, @JsonProperty("shippingMethod") final com.commercetools.api.models.shipping_method.ShippingMethodResourceIdentifier shippingMethod, @JsonProperty("shippingRateInput") final com.commercetools.api.models.cart.ShippingRateInputDraft shippingRateInput, @JsonProperty("shippingMode") final com.commercetools.api.models.cart.ShippingMode shippingMode, @JsonProperty("customShipping") final java.util.List<com.commercetools.api.models.cart.CustomShippingDraft> customShipping, @JsonProperty("shipping") final java.util.List<com.commercetools.api.models.cart.ShippingDraft> shipping, @JsonProperty("itemShippingAddresses") final java.util.List<com.commercetools.api.models.common.BaseAddress> itemShippingAddresses, @JsonProperty("discountCodes") final java.util.List<String> discountCodes, @JsonProperty("country") final String country, @JsonProperty("locale") final String locale, @JsonProperty("origin") final com.commercetools.api.models.cart.CartOrigin origin, @JsonProperty("deleteDaysAfterLastModification") final Long deleteDaysAfterLastModification, @JsonProperty("custom") final com.commercetools.api.models.type.CustomFieldsDraft custom) {
         this.currency = currency;
         this.key = key;
         this.customerId = customerId;
@@ -139,7 +165,6 @@ public class CartDraftImpl implements CartDraft, ModelBase {
         this.deleteDaysAfterLastModification = deleteDaysAfterLastModification;
         this.custom = custom;
     }
-
     /**
      * create empty instance
      */
@@ -149,148 +174,148 @@ public class CartDraftImpl implements CartDraft, ModelBase {
     /**
      *  <p>Currency the Cart uses.</p>
      */
-
-    public String getCurrency() {
+    
+    public String getCurrency(){
         return this.currency;
     }
-
+    
     /**
      *  <p>User-defined unique identifier for the Cart.</p>
      */
-
-    public String getKey() {
+    
+    public String getKey(){
         return this.key;
     }
-
+    
     /**
      *  <p><code>id</code> of the Customer that the Cart belongs to.</p>
      */
-
-    public String getCustomerId() {
+    
+    public String getCustomerId(){
         return this.customerId;
     }
-
+    
     /**
      *  <p>Email address of the Customer that the Cart belongs to.</p>
      */
-
-    public String getCustomerEmail() {
+    
+    public String getCustomerEmail(){
         return this.customerEmail;
     }
-
+    
     /**
      *  <p>ResourceIdentifier to the Customer Group of the Customer that the Cart belongs to. Used for LineItem Price selection.</p>
      *  <p>It is automatically set if the Customer referenced in <code>customerId</code> belongs to a Customer Group. It can also be set explicitly when no <code>customerId</code> is present.</p>
      */
-
-    public com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifier getCustomerGroup() {
+    
+    public com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifier getCustomerGroup(){
         return this.customerGroup;
     }
-
+    
     /**
      *  <p>Anonymous session associated with the Cart.</p>
      */
-
-    public String getAnonymousId() {
+    
+    public String getAnonymousId(){
         return this.anonymousId;
     }
-
+    
     /**
      *  <p>ResourceIdentifier to the Business Unit the Cart should belong to. When the <code>customerId</code> of the Cart is also set, the Customer must be an Associate of the Business Unit.</p>
      */
-
-    public com.commercetools.api.models.business_unit.BusinessUnitResourceIdentifier getBusinessUnit() {
+    
+    public com.commercetools.api.models.business_unit.BusinessUnitResourceIdentifier getBusinessUnit(){
         return this.businessUnit;
     }
-
+    
     /**
      *  <p>ResourceIdentifier to the Store the Cart should belong to. Once set, it cannot be updated.</p>
      */
-
-    public com.commercetools.api.models.store.StoreResourceIdentifier getStore() {
+    
+    public com.commercetools.api.models.store.StoreResourceIdentifier getStore(){
         return this.store;
     }
-
+    
     /**
      *  <p>Line Items to add to the Cart.</p>
      */
-
-    public java.util.List<com.commercetools.api.models.cart.LineItemDraft> getLineItems() {
+    
+    public java.util.List<com.commercetools.api.models.cart.LineItemDraft> getLineItems(){
         return this.lineItems;
     }
-
+    
     /**
      *  <p>Custom Line Items to add to the Cart.</p>
      */
-
-    public java.util.List<com.commercetools.api.models.cart.CustomLineItemDraft> getCustomLineItems() {
+    
+    public java.util.List<com.commercetools.api.models.cart.CustomLineItemDraft> getCustomLineItems(){
         return this.customLineItems;
     }
-
+    
     /**
      *  <p>Determines how Tax Rates are set.</p>
      */
-
-    public com.commercetools.api.models.cart.TaxMode getTaxMode() {
+    
+    public com.commercetools.api.models.cart.TaxMode getTaxMode(){
         return this.taxMode;
     }
-
+    
     /**
      *  <p>External Tax Rate for the <code>shippingMethod</code> if the Cart has <code>External</code> TaxMode.</p>
      */
-
-    public com.commercetools.api.models.cart.ExternalTaxRateDraft getExternalTaxRateForShippingMethod() {
+    
+    public com.commercetools.api.models.cart.ExternalTaxRateDraft getExternalTaxRateForShippingMethod(){
         return this.externalTaxRateForShippingMethod;
     }
-
+    
     /**
      *  <p>Determines how monetary values are rounded when calculating taxes for <code>taxedPrice</code>.</p>
      */
-
-    public com.commercetools.api.models.cart.RoundingMode getTaxRoundingMode() {
+    
+    public com.commercetools.api.models.cart.RoundingMode getTaxRoundingMode(){
         return this.taxRoundingMode;
     }
-
+    
     /**
      *  <p>Determines how taxes are calculated when calculating taxes for <code>taxedPrice</code>.</p>
      */
-
-    public com.commercetools.api.models.cart.TaxCalculationMode getTaxCalculationMode() {
+    
+    public com.commercetools.api.models.cart.TaxCalculationMode getTaxCalculationMode(){
         return this.taxCalculationMode;
     }
-
+    
     /**
      *  <p>Determines how stock quantities are tracked for Line Items in the Cart.</p>
      */
-
-    public com.commercetools.api.models.cart.InventoryMode getInventoryMode() {
+    
+    public com.commercetools.api.models.cart.InventoryMode getInventoryMode(){
         return this.inventoryMode;
     }
-
+    
     /**
      *  <p>Billing address associated with the Cart.</p>
      */
-
-    public com.commercetools.api.models.common.BaseAddress getBillingAddress() {
+    
+    public com.commercetools.api.models.common.BaseAddress getBillingAddress(){
         return this.billingAddress;
     }
-
+    
     /**
      *  <p>Shipping address associated with the Cart. Determines eligible ShippingMethod rates and Tax Rates of Line Items.</p>
      */
-
-    public com.commercetools.api.models.common.BaseAddress getShippingAddress() {
+    
+    public com.commercetools.api.models.common.BaseAddress getShippingAddress(){
         return this.shippingAddress;
     }
-
+    
     /**
      *  <p>Shipping Method for a Cart with <code>Single</code> ShippingMode. If the referenced ShippingMethod has a <code>predicate</code> that does not match the Cart, an InvalidOperation error is returned when creating a Cart.</p>
      */
-
-    public com.commercetools.api.models.shipping_method.ShippingMethodResourceIdentifier getShippingMethod() {
+    
+    public com.commercetools.api.models.shipping_method.ShippingMethodResourceIdentifier getShippingMethod(){
         return this.shippingMethod;
     }
-
+    
     /**
      *  <p>Used as an input to select a ShippingRatePriceTier. The data type of this field depends on the <code>shippingRateInputType.type</code> configured in the Project:</p>
      *  <ul>
@@ -299,255 +324,281 @@ public class CartDraftImpl implements CartDraft, ModelBase {
      *   <li>If <code>CartValue</code>, it cannot be set.</li>
      *  </ul>
      */
-
-    public com.commercetools.api.models.cart.ShippingRateInputDraft getShippingRateInput() {
+    
+    public com.commercetools.api.models.cart.ShippingRateInputDraft getShippingRateInput(){
         return this.shippingRateInput;
     }
-
+    
     /**
      *  <ul>
      *   <li>If set to <code>Single</code>, only a single Shipping Method can be added to the Cart.</li>
      *   <li>If set to <code>Multiple</code>, multiple Shipping Methods can be added to the Cart.</li>
      *  </ul>
      */
-
-    public com.commercetools.api.models.cart.ShippingMode getShippingMode() {
+    
+    public com.commercetools.api.models.cart.ShippingMode getShippingMode(){
         return this.shippingMode;
     }
-
+    
     /**
      *  <p>Custom Shipping Methods for a Cart with <code>Multiple</code> ShippingMode.</p>
      */
-
-    public java.util.List<com.commercetools.api.models.cart.CustomShippingDraft> getCustomShipping() {
+    
+    public java.util.List<com.commercetools.api.models.cart.CustomShippingDraft> getCustomShipping(){
         return this.customShipping;
     }
-
+    
     /**
      *  <p>Shipping Methods for a Cart with <code>Multiple</code> ShippingMode.</p>
      */
-
-    public java.util.List<com.commercetools.api.models.cart.ShippingDraft> getShipping() {
+    
+    public java.util.List<com.commercetools.api.models.cart.ShippingDraft> getShipping(){
         return this.shipping;
     }
-
+    
     /**
      *  <p>Multiple shipping addresses of the Cart. Each address must contain a <code>key</code> that is unique in this Cart. The keys are used by LineItems to reference these addresses under their <code>shippingDetails</code>.</p>
      *  <p>Eligible Shipping Methods or applicable Tax Rates are determined by the address <code>shippingAddress</code>, and not <code>itemShippingAddresses</code>.</p>
      */
-
-    public java.util.List<com.commercetools.api.models.common.BaseAddress> getItemShippingAddresses() {
+    
+    public java.util.List<com.commercetools.api.models.common.BaseAddress> getItemShippingAddresses(){
         return this.itemShippingAddresses;
     }
-
+    
     /**
      *  <p><code>code</code> of the existing DiscountCodes to add to the Cart.</p>
      */
-
-    public java.util.List<String> getDiscountCodes() {
+    
+    public java.util.List<String> getDiscountCodes(){
         return this.discountCodes;
     }
-
+    
     /**
      *  <p>Used for LineItem Price selection. If used for Create Cart in Store, the provided country must be one of the Store's <code>countries</code>.</p>
      */
-
-    public String getCountry() {
+    
+    public String getCountry(){
         return this.country;
     }
-
+    
     /**
      *  <p>Languages of the Cart. Can only contain languages supported by the Project.</p>
      */
-
-    public String getLocale() {
+    
+    public String getLocale(){
         return this.locale;
     }
-
+    
     /**
      *  <p>Indicates how the Cart was created.</p>
      */
-
-    public com.commercetools.api.models.cart.CartOrigin getOrigin() {
+    
+    public com.commercetools.api.models.cart.CartOrigin getOrigin(){
         return this.origin;
     }
-
+    
     /**
      *  <p>Number of days after which an active Cart is deleted since its last modification. If not provided, the default value for this field configured in Project settings is assigned.</p>
      *  <p>Create a ChangeSubscription for Carts to receive a ResourceDeletedDeliveryPayload upon deletion of the Cart.</p>
      */
-
-    public Long getDeleteDaysAfterLastModification() {
+    
+    public Long getDeleteDaysAfterLastModification(){
         return this.deleteDaysAfterLastModification;
     }
-
+    
     /**
      *  <p>Custom Fields for the Cart.</p>
      */
-
-    public com.commercetools.api.models.type.CustomFieldsDraft getCustom() {
+    
+    public com.commercetools.api.models.type.CustomFieldsDraft getCustom(){
         return this.custom;
     }
 
-    public void setCurrency(final String currency) {
+    
+    public void setCurrency(final String currency){
         this.currency = currency;
     }
-
-    public void setKey(final String key) {
+    
+    
+    public void setKey(final String key){
         this.key = key;
     }
-
-    public void setCustomerId(final String customerId) {
+    
+    
+    public void setCustomerId(final String customerId){
         this.customerId = customerId;
     }
-
-    public void setCustomerEmail(final String customerEmail) {
+    
+    
+    public void setCustomerEmail(final String customerEmail){
         this.customerEmail = customerEmail;
     }
-
-    public void setCustomerGroup(
-            final com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifier customerGroup) {
+    
+    
+    public void setCustomerGroup(final com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifier customerGroup){
         this.customerGroup = customerGroup;
     }
-
-    public void setAnonymousId(final String anonymousId) {
+    
+    
+    public void setAnonymousId(final String anonymousId){
         this.anonymousId = anonymousId;
     }
-
-    public void setBusinessUnit(
-            final com.commercetools.api.models.business_unit.BusinessUnitResourceIdentifier businessUnit) {
+    
+    
+    public void setBusinessUnit(final com.commercetools.api.models.business_unit.BusinessUnitResourceIdentifier businessUnit){
         this.businessUnit = businessUnit;
     }
-
-    public void setStore(final com.commercetools.api.models.store.StoreResourceIdentifier store) {
+    
+    
+    public void setStore(final com.commercetools.api.models.store.StoreResourceIdentifier store){
         this.store = store;
     }
-
-    public void setLineItems(final com.commercetools.api.models.cart.LineItemDraft... lineItems) {
-        this.lineItems = new ArrayList<>(Arrays.asList(lineItems));
+    
+    
+    public void setLineItems(final com.commercetools.api.models.cart.LineItemDraft ...lineItems){
+       this.lineItems = new ArrayList<>(Arrays.asList(lineItems));
     }
-
-    public void setLineItems(final java.util.List<com.commercetools.api.models.cart.LineItemDraft> lineItems) {
-        this.lineItems = lineItems;
+    
+    
+    public void setLineItems(final java.util.List<com.commercetools.api.models.cart.LineItemDraft> lineItems){
+       this.lineItems = lineItems;
     }
-
-    public void setCustomLineItems(final com.commercetools.api.models.cart.CustomLineItemDraft... customLineItems) {
-        this.customLineItems = new ArrayList<>(Arrays.asList(customLineItems));
+    
+    
+    public void setCustomLineItems(final com.commercetools.api.models.cart.CustomLineItemDraft ...customLineItems){
+       this.customLineItems = new ArrayList<>(Arrays.asList(customLineItems));
     }
-
-    public void setCustomLineItems(
-            final java.util.List<com.commercetools.api.models.cart.CustomLineItemDraft> customLineItems) {
-        this.customLineItems = customLineItems;
+    
+    
+    public void setCustomLineItems(final java.util.List<com.commercetools.api.models.cart.CustomLineItemDraft> customLineItems){
+       this.customLineItems = customLineItems;
     }
-
-    public void setTaxMode(final com.commercetools.api.models.cart.TaxMode taxMode) {
+    
+    
+    public void setTaxMode(final com.commercetools.api.models.cart.TaxMode taxMode){
         this.taxMode = taxMode;
     }
-
-    public void setExternalTaxRateForShippingMethod(
-            final com.commercetools.api.models.cart.ExternalTaxRateDraft externalTaxRateForShippingMethod) {
+    
+    
+    public void setExternalTaxRateForShippingMethod(final com.commercetools.api.models.cart.ExternalTaxRateDraft externalTaxRateForShippingMethod){
         this.externalTaxRateForShippingMethod = externalTaxRateForShippingMethod;
     }
-
-    public void setTaxRoundingMode(final com.commercetools.api.models.cart.RoundingMode taxRoundingMode) {
+    
+    
+    public void setTaxRoundingMode(final com.commercetools.api.models.cart.RoundingMode taxRoundingMode){
         this.taxRoundingMode = taxRoundingMode;
     }
-
-    public void setTaxCalculationMode(final com.commercetools.api.models.cart.TaxCalculationMode taxCalculationMode) {
+    
+    
+    public void setTaxCalculationMode(final com.commercetools.api.models.cart.TaxCalculationMode taxCalculationMode){
         this.taxCalculationMode = taxCalculationMode;
     }
-
-    public void setInventoryMode(final com.commercetools.api.models.cart.InventoryMode inventoryMode) {
+    
+    
+    public void setInventoryMode(final com.commercetools.api.models.cart.InventoryMode inventoryMode){
         this.inventoryMode = inventoryMode;
     }
-
-    public void setBillingAddress(final com.commercetools.api.models.common.BaseAddress billingAddress) {
+    
+    
+    public void setBillingAddress(final com.commercetools.api.models.common.BaseAddress billingAddress){
         this.billingAddress = billingAddress;
     }
-
-    public void setShippingAddress(final com.commercetools.api.models.common.BaseAddress shippingAddress) {
+    
+    
+    public void setShippingAddress(final com.commercetools.api.models.common.BaseAddress shippingAddress){
         this.shippingAddress = shippingAddress;
     }
-
-    public void setShippingMethod(
-            final com.commercetools.api.models.shipping_method.ShippingMethodResourceIdentifier shippingMethod) {
+    
+    
+    public void setShippingMethod(final com.commercetools.api.models.shipping_method.ShippingMethodResourceIdentifier shippingMethod){
         this.shippingMethod = shippingMethod;
     }
-
-    public void setShippingRateInput(final com.commercetools.api.models.cart.ShippingRateInputDraft shippingRateInput) {
+    
+    
+    public void setShippingRateInput(final com.commercetools.api.models.cart.ShippingRateInputDraft shippingRateInput){
         this.shippingRateInput = shippingRateInput;
     }
-
-    public void setShippingMode(final com.commercetools.api.models.cart.ShippingMode shippingMode) {
+    
+    
+    public void setShippingMode(final com.commercetools.api.models.cart.ShippingMode shippingMode){
         this.shippingMode = shippingMode;
     }
-
-    public void setCustomShipping(final com.commercetools.api.models.cart.CustomShippingDraft... customShipping) {
-        this.customShipping = new ArrayList<>(Arrays.asList(customShipping));
+    
+    
+    public void setCustomShipping(final com.commercetools.api.models.cart.CustomShippingDraft ...customShipping){
+       this.customShipping = new ArrayList<>(Arrays.asList(customShipping));
     }
-
-    public void setCustomShipping(
-            final java.util.List<com.commercetools.api.models.cart.CustomShippingDraft> customShipping) {
-        this.customShipping = customShipping;
+    
+    
+    public void setCustomShipping(final java.util.List<com.commercetools.api.models.cart.CustomShippingDraft> customShipping){
+       this.customShipping = customShipping;
     }
-
-    public void setShipping(final com.commercetools.api.models.cart.ShippingDraft... shipping) {
-        this.shipping = new ArrayList<>(Arrays.asList(shipping));
+    
+    
+    public void setShipping(final com.commercetools.api.models.cart.ShippingDraft ...shipping){
+       this.shipping = new ArrayList<>(Arrays.asList(shipping));
     }
-
-    public void setShipping(final java.util.List<com.commercetools.api.models.cart.ShippingDraft> shipping) {
-        this.shipping = shipping;
+    
+    
+    public void setShipping(final java.util.List<com.commercetools.api.models.cart.ShippingDraft> shipping){
+       this.shipping = shipping;
     }
-
-    public void setItemShippingAddresses(
-            final com.commercetools.api.models.common.BaseAddress... itemShippingAddresses) {
-        this.itemShippingAddresses = new ArrayList<>(Arrays.asList(itemShippingAddresses));
+    
+    
+    public void setItemShippingAddresses(final com.commercetools.api.models.common.BaseAddress ...itemShippingAddresses){
+       this.itemShippingAddresses = new ArrayList<>(Arrays.asList(itemShippingAddresses));
     }
-
-    public void setItemShippingAddresses(
-            final java.util.List<com.commercetools.api.models.common.BaseAddress> itemShippingAddresses) {
-        this.itemShippingAddresses = itemShippingAddresses;
+    
+    
+    public void setItemShippingAddresses(final java.util.List<com.commercetools.api.models.common.BaseAddress> itemShippingAddresses){
+       this.itemShippingAddresses = itemShippingAddresses;
     }
-
-    public void setDiscountCodes(final String... discountCodes) {
-        this.discountCodes = new ArrayList<>(Arrays.asList(discountCodes));
+    
+    
+    public void setDiscountCodes(final String ...discountCodes){
+       this.discountCodes = new ArrayList<>(Arrays.asList(discountCodes));
     }
-
-    public void setDiscountCodes(final java.util.List<String> discountCodes) {
-        this.discountCodes = discountCodes;
+    
+    
+    public void setDiscountCodes(final java.util.List<String> discountCodes){
+       this.discountCodes = discountCodes;
     }
-
-    public void setCountry(final String country) {
+    
+    
+    public void setCountry(final String country){
         this.country = country;
     }
-
-    public void setLocale(final String locale) {
+    
+    
+    public void setLocale(final String locale){
         this.locale = locale;
     }
-
-    public void setOrigin(final com.commercetools.api.models.cart.CartOrigin origin) {
+    
+    
+    public void setOrigin(final com.commercetools.api.models.cart.CartOrigin origin){
         this.origin = origin;
     }
-
-    public void setDeleteDaysAfterLastModification(final Long deleteDaysAfterLastModification) {
+    
+    
+    public void setDeleteDaysAfterLastModification(final Long deleteDaysAfterLastModification){
         this.deleteDaysAfterLastModification = deleteDaysAfterLastModification;
     }
-
-    public void setCustom(final com.commercetools.api.models.type.CustomFieldsDraft custom) {
+    
+    
+    public void setCustom(final com.commercetools.api.models.type.CustomFieldsDraft custom){
         this.custom = custom;
     }
 
     @Override
     public boolean equals(Object o) {
-        if (this == o)
-            return true;
-
-        if (o == null || getClass() != o.getClass())
-            return false;
-
+        if (this == o) return true;
+    
+        if (o == null || getClass() != o.getClass()) return false;
+    
         CartDraftImpl that = (CartDraftImpl) o;
-
-        return new EqualsBuilder().append(currency, that.currency)
+    
+        return new EqualsBuilder()
+                .append(currency, that.currency)
                 .append(key, that.key)
                 .append(customerId, that.customerId)
                 .append(customerEmail, that.customerEmail)
@@ -578,39 +629,40 @@ public class CartDraftImpl implements CartDraft, ModelBase {
                 .append(custom, that.custom)
                 .isEquals();
     }
-
+    
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(currency)
-                .append(key)
-                .append(customerId)
-                .append(customerEmail)
-                .append(customerGroup)
-                .append(anonymousId)
-                .append(businessUnit)
-                .append(store)
-                .append(lineItems)
-                .append(customLineItems)
-                .append(taxMode)
-                .append(externalTaxRateForShippingMethod)
-                .append(taxRoundingMode)
-                .append(taxCalculationMode)
-                .append(inventoryMode)
-                .append(billingAddress)
-                .append(shippingAddress)
-                .append(shippingMethod)
-                .append(shippingRateInput)
-                .append(shippingMode)
-                .append(customShipping)
-                .append(shipping)
-                .append(itemShippingAddresses)
-                .append(discountCodes)
-                .append(country)
-                .append(locale)
-                .append(origin)
-                .append(deleteDaysAfterLastModification)
-                .append(custom)
-                .toHashCode();
+        return new HashCodeBuilder(17, 37)
+            .append(currency)
+            .append(key)
+            .append(customerId)
+            .append(customerEmail)
+            .append(customerGroup)
+            .append(anonymousId)
+            .append(businessUnit)
+            .append(store)
+            .append(lineItems)
+            .append(customLineItems)
+            .append(taxMode)
+            .append(externalTaxRateForShippingMethod)
+            .append(taxRoundingMode)
+            .append(taxCalculationMode)
+            .append(inventoryMode)
+            .append(billingAddress)
+            .append(shippingAddress)
+            .append(shippingMethod)
+            .append(shippingRateInput)
+            .append(shippingMode)
+            .append(customShipping)
+            .append(shipping)
+            .append(itemShippingAddresses)
+            .append(discountCodes)
+            .append(country)
+            .append(locale)
+            .append(origin)
+            .append(deleteDaysAfterLastModification)
+            .append(custom)
+            .toHashCode();
     }
 
 }

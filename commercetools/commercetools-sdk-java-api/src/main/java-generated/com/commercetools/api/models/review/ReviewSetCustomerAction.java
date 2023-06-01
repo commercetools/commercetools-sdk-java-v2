@@ -1,18 +1,21 @@
-
 package com.commercetools.api.models.review;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-
 import com.commercetools.api.models.customer.CustomerResourceIdentifier;
+import com.commercetools.api.models.review.ReviewUpdateAction;
+import com.commercetools.api.models.review.ReviewSetCustomerActionImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * ReviewSetCustomerAction
@@ -24,9 +27,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     ReviewSetCustomerAction reviewSetCustomerAction = ReviewSetCustomerAction.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = ReviewSetCustomerActionImpl.class)
 public interface ReviewSetCustomerAction extends ReviewUpdateAction {
 
@@ -47,16 +53,18 @@ public interface ReviewSetCustomerAction extends ReviewUpdateAction {
      *  <p>Value to set. If empty, any existing value will be removed.</p>
      * @param customer value to be set
      */
-
+    
     public void setCustomer(final CustomerResourceIdentifier customer);
+    
 
     /**
      * factory method
      * @return instance of ReviewSetCustomerAction
      */
-    public static ReviewSetCustomerAction of() {
+    public static ReviewSetCustomerAction of(){
         return new ReviewSetCustomerActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy ReviewSetCustomerAction
@@ -80,8 +88,7 @@ public interface ReviewSetCustomerAction extends ReviewUpdateAction {
             return null;
         }
         ReviewSetCustomerActionImpl instance = new ReviewSetCustomerActionImpl();
-        instance.setCustomer(
-            com.commercetools.api.models.customer.CustomerResourceIdentifier.deepCopy(template.getCustomer()));
+        instance.setCustomer(com.commercetools.api.models.customer.CustomerResourceIdentifier.deepCopy(template.getCustomer()));
         return instance;
     }
 
@@ -92,7 +99,7 @@ public interface ReviewSetCustomerAction extends ReviewUpdateAction {
     public static ReviewSetCustomerActionBuilder builder() {
         return ReviewSetCustomerActionBuilder.of();
     }
-
+    
     /**
      * create builder for ReviewSetCustomerAction instance
      * @param template instance with prefilled values for the builder
@@ -101,6 +108,7 @@ public interface ReviewSetCustomerAction extends ReviewUpdateAction {
     public static ReviewSetCustomerActionBuilder builder(final ReviewSetCustomerAction template) {
         return ReviewSetCustomerActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -111,11 +119,11 @@ public interface ReviewSetCustomerAction extends ReviewUpdateAction {
     default <T> T withReviewSetCustomerAction(Function<ReviewSetCustomerAction, T> helper) {
         return helper.apply(this);
     }
-
     public static ReviewSetCustomerAction ofUnset() {
         return ReviewSetCustomerAction.of();
     }
-
+    
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

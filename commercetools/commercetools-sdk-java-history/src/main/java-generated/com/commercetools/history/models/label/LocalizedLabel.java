@@ -1,19 +1,21 @@
-
 package com.commercetools.history.models.label;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
 import com.commercetools.history.models.common.LocalizedString;
+import com.commercetools.history.models.label.Label;
+import com.commercetools.history.models.label.LocalizedLabelImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * LocalizedLabel
@@ -26,9 +28,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .value(valueBuilder -> valueBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = LocalizedLabelImpl.class)
 public interface LocalizedLabel extends Label {
 
@@ -44,7 +49,6 @@ public interface LocalizedLabel extends Label {
     @NotNull
     @JsonProperty("type")
     public String getType();
-
     /**
      *
      * @return value
@@ -58,16 +62,18 @@ public interface LocalizedLabel extends Label {
      * set value
      * @param value value to be set
      */
-
+    
     public void setValue(final LocalizedString value);
+    
 
     /**
      * factory method
      * @return instance of LocalizedLabel
      */
-    public static LocalizedLabel of() {
+    public static LocalizedLabel of(){
         return new LocalizedLabelImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy LocalizedLabel
@@ -102,7 +108,7 @@ public interface LocalizedLabel extends Label {
     public static LocalizedLabelBuilder builder() {
         return LocalizedLabelBuilder.of();
     }
-
+    
     /**
      * create builder for LocalizedLabel instance
      * @param template instance with prefilled values for the builder
@@ -111,6 +117,7 @@ public interface LocalizedLabel extends Label {
     public static LocalizedLabelBuilder builder(final LocalizedLabel template) {
         return LocalizedLabelBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -121,7 +128,7 @@ public interface LocalizedLabel extends Label {
     default <T> T withLocalizedLabel(Function<LocalizedLabel, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

@@ -1,9 +1,11 @@
-
 package com.commercetools.api.predicates.query.me;
 
 import com.commercetools.api.predicates.query.*;
 
-public class MyCustomerChangeEmailActionQueryBuilderDsl {
+import java.util.function.Function;
+
+
+public class MyCustomerChangeEmailActionQueryBuilderDsl  {
     public MyCustomerChangeEmailActionQueryBuilderDsl() {
     }
 
@@ -12,15 +14,12 @@ public class MyCustomerChangeEmailActionQueryBuilderDsl {
     }
 
     public StringComparisonPredicateBuilder<MyCustomerChangeEmailActionQueryBuilderDsl> action() {
-        return new StringComparisonPredicateBuilder<>(
-            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("action")),
-            p -> new CombinationQueryPredicate<>(p, MyCustomerChangeEmailActionQueryBuilderDsl::of));
+        return new StringComparisonPredicateBuilder<>(BinaryQueryPredicate.of().left(new ConstantQueryPredicate("action")),
+        p -> new CombinationQueryPredicate<>(p, MyCustomerChangeEmailActionQueryBuilderDsl::of));
     }
-
     public StringComparisonPredicateBuilder<MyCustomerChangeEmailActionQueryBuilderDsl> email() {
-        return new StringComparisonPredicateBuilder<>(
-            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("email")),
-            p -> new CombinationQueryPredicate<>(p, MyCustomerChangeEmailActionQueryBuilderDsl::of));
+        return new StringComparisonPredicateBuilder<>(BinaryQueryPredicate.of().left(new ConstantQueryPredicate("email")),
+        p -> new CombinationQueryPredicate<>(p, MyCustomerChangeEmailActionQueryBuilderDsl::of));
     }
-
+    
 }

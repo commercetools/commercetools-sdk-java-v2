@@ -1,8 +1,12 @@
-
 package com.commercetools.api.models.type;
 
+import com.commercetools.api.models.type.TypeTextInputHint;
+import com.commercetools.api.models.type.TypeUpdateAction;
+import com.commercetools.api.models.type.TypeChangeInputHintAction;
+import javax.annotation.Nullable;
 import java.util.*;
-
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -17,53 +21,67 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .inputHint(TypeTextInputHint.SINGLE_LINE)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class TypeChangeInputHintActionBuilder implements Builder<TypeChangeInputHintAction> {
 
+    
+    
     private String fieldName;
-
+    
+    
+    
     private com.commercetools.api.models.type.TypeTextInputHint inputHint;
 
+    
     /**
      *  <p><code>name</code> of the Field Definition to update.</p>
      * @param fieldName value to be set
      * @return Builder
      */
-
-    public TypeChangeInputHintActionBuilder fieldName(final String fieldName) {
+    
+    public TypeChangeInputHintActionBuilder fieldName( final String fieldName) {
         this.fieldName = fieldName;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>New value to set. Must not be empty.</p>
      * @param inputHint value to be set
      * @return Builder
      */
-
-    public TypeChangeInputHintActionBuilder inputHint(
-            final com.commercetools.api.models.type.TypeTextInputHint inputHint) {
+    
+    public TypeChangeInputHintActionBuilder inputHint( final com.commercetools.api.models.type.TypeTextInputHint inputHint) {
         this.inputHint = inputHint;
         return this;
     }
+    
+    
 
     /**
      *  <p><code>name</code> of the Field Definition to update.</p>
      * @return fieldName
      */
-
-    public String getFieldName() {
+    
+    
+    public String getFieldName(){
         return this.fieldName;
     }
-
+    
     /**
      *  <p>New value to set. Must not be empty.</p>
      * @return inputHint
      */
-
-    public com.commercetools.api.models.type.TypeTextInputHint getInputHint() {
+    
+    
+    public com.commercetools.api.models.type.TypeTextInputHint getInputHint(){
         return this.inputHint;
     }
 
@@ -76,7 +94,7 @@ public class TypeChangeInputHintActionBuilder implements Builder<TypeChangeInput
         Objects.requireNonNull(inputHint, TypeChangeInputHintAction.class + ": inputHint is missing");
         return new TypeChangeInputHintActionImpl(fieldName, inputHint);
     }
-
+    
     /**
      * builds TypeChangeInputHintAction without checking for non-null required values
      * @return TypeChangeInputHintAction
@@ -87,7 +105,7 @@ public class TypeChangeInputHintActionBuilder implements Builder<TypeChangeInput
 
     /**
      * factory method for an instance of TypeChangeInputHintActionBuilder
-     * @return builder
+     * @return builder 
      */
     public static TypeChangeInputHintActionBuilder of() {
         return new TypeChangeInputHintActionBuilder();

@@ -1,18 +1,21 @@
-
 package com.commercetools.api.models.message;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
-
+import com.commercetools.api.models.message.MessagePayload;
 import com.commercetools.api.models.staged_quote.StagedQuoteState;
+import com.commercetools.api.models.message.StagedQuoteStateChangedMessagePayloadImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Generated after a successful Change Staged Quote State update action.</p>
@@ -26,9 +29,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .oldStagedQuoteState(StagedQuoteState.IN_PROGRESS)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = StagedQuoteStateChangedMessagePayloadImpl.class)
 public interface StagedQuoteStateChangedMessagePayload extends MessagePayload {
 
@@ -44,7 +50,6 @@ public interface StagedQuoteStateChangedMessagePayload extends MessagePayload {
     @NotNull
     @JsonProperty("stagedQuoteState")
     public StagedQuoteState getStagedQuoteState();
-
     /**
      *  <p>State of the Staged Quote before the Change Staged Quote State update action.</p>
      * @return oldStagedQuoteState
@@ -57,23 +62,26 @@ public interface StagedQuoteStateChangedMessagePayload extends MessagePayload {
      *  <p>State of the Staged Quote after the Change Staged Quote State update action.</p>
      * @param stagedQuoteState value to be set
      */
-
+    
     public void setStagedQuoteState(final StagedQuoteState stagedQuoteState);
-
+    
+    
     /**
      *  <p>State of the Staged Quote before the Change Staged Quote State update action.</p>
      * @param oldStagedQuoteState value to be set
      */
-
+    
     public void setOldStagedQuoteState(final StagedQuoteState oldStagedQuoteState);
+    
 
     /**
      * factory method
      * @return instance of StagedQuoteStateChangedMessagePayload
      */
-    public static StagedQuoteStateChangedMessagePayload of() {
+    public static StagedQuoteStateChangedMessagePayload of(){
         return new StagedQuoteStateChangedMessagePayloadImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy StagedQuoteStateChangedMessagePayload
@@ -93,8 +101,7 @@ public interface StagedQuoteStateChangedMessagePayload extends MessagePayload {
      * @return copy instance
      */
     @Nullable
-    public static StagedQuoteStateChangedMessagePayload deepCopy(
-            @Nullable final StagedQuoteStateChangedMessagePayload template) {
+    public static StagedQuoteStateChangedMessagePayload deepCopy(@Nullable final StagedQuoteStateChangedMessagePayload template) {
         if (template == null) {
             return null;
         }
@@ -111,16 +118,16 @@ public interface StagedQuoteStateChangedMessagePayload extends MessagePayload {
     public static StagedQuoteStateChangedMessagePayloadBuilder builder() {
         return StagedQuoteStateChangedMessagePayloadBuilder.of();
     }
-
+    
     /**
      * create builder for StagedQuoteStateChangedMessagePayload instance
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static StagedQuoteStateChangedMessagePayloadBuilder builder(
-            final StagedQuoteStateChangedMessagePayload template) {
+    public static StagedQuoteStateChangedMessagePayloadBuilder builder(final StagedQuoteStateChangedMessagePayload template) {
         return StagedQuoteStateChangedMessagePayloadBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -131,7 +138,7 @@ public interface StagedQuoteStateChangedMessagePayload extends MessagePayload {
     default <T> T withStagedQuoteStateChangedMessagePayload(Function<StagedQuoteStateChangedMessagePayload, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

@@ -1,17 +1,20 @@
-
 package com.commercetools.history.models.change;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
+import com.commercetools.history.models.change.Change;
+import com.commercetools.history.models.change.SetMiddleNameChangeImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * SetMiddleNameChange
@@ -26,9 +29,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .nextValue("{nextValue}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = SetMiddleNameChangeImpl.class)
 public interface SetMiddleNameChange extends Change {
 
@@ -44,7 +50,6 @@ public interface SetMiddleNameChange extends Change {
     @NotNull
     @JsonProperty("type")
     public String getType();
-
     /**
      *  <p>Shape of the action for <code>setMiddleName</code></p>
      * @return change
@@ -52,7 +57,6 @@ public interface SetMiddleNameChange extends Change {
     @NotNull
     @JsonProperty("change")
     public String getChange();
-
     /**
      *
      * @return previousValue
@@ -60,7 +64,6 @@ public interface SetMiddleNameChange extends Change {
     @NotNull
     @JsonProperty("previousValue")
     public String getPreviousValue();
-
     /**
      *
      * @return nextValue
@@ -73,30 +76,34 @@ public interface SetMiddleNameChange extends Change {
      *  <p>Shape of the action for <code>setMiddleName</code></p>
      * @param change value to be set
      */
-
+    
     public void setChange(final String change);
-
+    
+    
     /**
      * set previousValue
      * @param previousValue value to be set
      */
-
+    
     public void setPreviousValue(final String previousValue);
-
+    
+    
     /**
      * set nextValue
      * @param nextValue value to be set
      */
-
+    
     public void setNextValue(final String nextValue);
+    
 
     /**
      * factory method
      * @return instance of SetMiddleNameChange
      */
-    public static SetMiddleNameChange of() {
+    public static SetMiddleNameChange of(){
         return new SetMiddleNameChangeImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy SetMiddleNameChange
@@ -135,7 +142,7 @@ public interface SetMiddleNameChange extends Change {
     public static SetMiddleNameChangeBuilder builder() {
         return SetMiddleNameChangeBuilder.of();
     }
-
+    
     /**
      * create builder for SetMiddleNameChange instance
      * @param template instance with prefilled values for the builder
@@ -144,6 +151,7 @@ public interface SetMiddleNameChange extends Change {
     public static SetMiddleNameChangeBuilder builder(final SetMiddleNameChange template) {
         return SetMiddleNameChangeBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -154,7 +162,7 @@ public interface SetMiddleNameChange extends Change {
     default <T> T withSetMiddleNameChange(Function<SetMiddleNameChange, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

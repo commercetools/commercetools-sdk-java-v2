@@ -1,17 +1,20 @@
-
 package com.commercetools.api.models.error;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
+import com.commercetools.api.models.error.GraphQLErrorObject;
+import com.commercetools.api.models.error.GraphQLPriceChangedErrorImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Returned when the Price, Tax Rate, or Shipping Rate of some Line Items changed since they were last added to the Cart.</p>
@@ -30,9 +33,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .shipping(true)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = GraphQLPriceChangedErrorImpl.class)
 public interface GraphQLPriceChangedError extends GraphQLErrorObject {
 
@@ -48,7 +54,6 @@ public interface GraphQLPriceChangedError extends GraphQLErrorObject {
     @NotNull
     @JsonProperty("code")
     public String getCode();
-
     /**
      *  <p>Unique identifiers of the Line Items for which the Price or TaxRate has changed.</p>
      * @return lineItems
@@ -56,7 +61,6 @@ public interface GraphQLPriceChangedError extends GraphQLErrorObject {
     @NotNull
     @JsonProperty("lineItems")
     public List<String> getLineItems();
-
     /**
      *  <p><code>true</code> if the ShippingRate has changed.</p>
      * @return shipping
@@ -69,31 +73,32 @@ public interface GraphQLPriceChangedError extends GraphQLErrorObject {
      *  <p>Unique identifiers of the Line Items for which the Price or TaxRate has changed.</p>
      * @param lineItems values to be set
      */
-
+    
     @JsonIgnore
-    public void setLineItems(final String... lineItems);
-
+    public void setLineItems(final String ...lineItems);
     /**
      *  <p>Unique identifiers of the Line Items for which the Price or TaxRate has changed.</p>
      * @param lineItems values to be set
      */
-
+    
     public void setLineItems(final List<String> lineItems);
-
+    
     /**
      *  <p><code>true</code> if the ShippingRate has changed.</p>
      * @param shipping value to be set
      */
-
+    
     public void setShipping(final Boolean shipping);
+    
 
     /**
      * factory method
      * @return instance of GraphQLPriceChangedError
      */
-    public static GraphQLPriceChangedError of() {
+    public static GraphQLPriceChangedError of(){
         return new GraphQLPriceChangedErrorImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy GraphQLPriceChangedError
@@ -120,7 +125,9 @@ public interface GraphQLPriceChangedError extends GraphQLErrorObject {
         }
         GraphQLPriceChangedErrorImpl instance = new GraphQLPriceChangedErrorImpl();
         Optional.ofNullable(template.values()).ifPresent(t -> t.forEach(instance::setValue));
-        instance.setLineItems(Optional.ofNullable(template.getLineItems()).map(ArrayList::new).orElse(null));
+        instance.setLineItems(Optional.ofNullable(template.getLineItems())
+                .map(ArrayList::new)
+                .orElse(null));
         instance.setShipping(template.getShipping());
         return instance;
     }
@@ -132,7 +139,7 @@ public interface GraphQLPriceChangedError extends GraphQLErrorObject {
     public static GraphQLPriceChangedErrorBuilder builder() {
         return GraphQLPriceChangedErrorBuilder.of();
     }
-
+    
     /**
      * create builder for GraphQLPriceChangedError instance
      * @param template instance with prefilled values for the builder
@@ -141,6 +148,7 @@ public interface GraphQLPriceChangedError extends GraphQLErrorObject {
     public static GraphQLPriceChangedErrorBuilder builder(final GraphQLPriceChangedError template) {
         return GraphQLPriceChangedErrorBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -151,7 +159,7 @@ public interface GraphQLPriceChangedError extends GraphQLErrorObject {
     default <T> T withGraphQLPriceChangedError(Function<GraphQLPriceChangedError, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

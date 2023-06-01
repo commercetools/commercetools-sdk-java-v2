@@ -1,17 +1,21 @@
-
 package com.commercetools.api.models.cart;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
+import com.commercetools.api.models.cart.CartUpdateAction;
+import com.commercetools.api.models.cart.TaxCalculationMode;
+import com.commercetools.api.models.cart.CartChangeTaxCalculationModeActionImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Changing the tax calculation mode leads to recalculation of taxes.</p>
@@ -24,9 +28,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .taxCalculationMode(TaxCalculationMode.LINE_ITEM_LEVEL)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = CartChangeTaxCalculationModeActionImpl.class)
 public interface CartChangeTaxCalculationModeAction extends CartUpdateAction {
 
@@ -47,16 +54,18 @@ public interface CartChangeTaxCalculationModeAction extends CartUpdateAction {
      *  <p>New value to set.</p>
      * @param taxCalculationMode value to be set
      */
-
+    
     public void setTaxCalculationMode(final TaxCalculationMode taxCalculationMode);
+    
 
     /**
      * factory method
      * @return instance of CartChangeTaxCalculationModeAction
      */
-    public static CartChangeTaxCalculationModeAction of() {
+    public static CartChangeTaxCalculationModeAction of(){
         return new CartChangeTaxCalculationModeActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy CartChangeTaxCalculationModeAction
@@ -75,8 +84,7 @@ public interface CartChangeTaxCalculationModeAction extends CartUpdateAction {
      * @return copy instance
      */
     @Nullable
-    public static CartChangeTaxCalculationModeAction deepCopy(
-            @Nullable final CartChangeTaxCalculationModeAction template) {
+    public static CartChangeTaxCalculationModeAction deepCopy(@Nullable final CartChangeTaxCalculationModeAction template) {
         if (template == null) {
             return null;
         }
@@ -92,7 +100,7 @@ public interface CartChangeTaxCalculationModeAction extends CartUpdateAction {
     public static CartChangeTaxCalculationModeActionBuilder builder() {
         return CartChangeTaxCalculationModeActionBuilder.of();
     }
-
+    
     /**
      * create builder for CartChangeTaxCalculationModeAction instance
      * @param template instance with prefilled values for the builder
@@ -101,6 +109,7 @@ public interface CartChangeTaxCalculationModeAction extends CartUpdateAction {
     public static CartChangeTaxCalculationModeActionBuilder builder(final CartChangeTaxCalculationModeAction template) {
         return CartChangeTaxCalculationModeActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -111,7 +120,7 @@ public interface CartChangeTaxCalculationModeAction extends CartUpdateAction {
     default <T> T withCartChangeTaxCalculationModeAction(Function<CartChangeTaxCalculationModeAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

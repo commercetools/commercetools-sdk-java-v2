@@ -1,17 +1,20 @@
-
 package com.commercetools.api.models.order_edit;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-
 import com.commercetools.api.models.order.StagedOrderUpdateAction;
+import com.commercetools.api.models.order_edit.StagedOrderRemoveDeliveryActionImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * StagedOrderRemoveDeliveryAction
@@ -23,9 +26,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     StagedOrderRemoveDeliveryAction stagedOrderRemoveDeliveryAction = StagedOrderRemoveDeliveryAction.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = StagedOrderRemoveDeliveryActionImpl.class)
 public interface StagedOrderRemoveDeliveryAction extends StagedOrderUpdateAction {
 
@@ -38,15 +44,14 @@ public interface StagedOrderRemoveDeliveryAction extends StagedOrderUpdateAction
      *  <p>Either <code>deliveryId</code> or <code>deliveryKey</code> is required for this update action.</p>
      * @return deliveryId
      */
-
+    
     @JsonProperty("deliveryId")
     public String getDeliveryId();
-
     /**
      *  <p>Either <code>deliveryId</code> or <code>deliveryKey</code> is required for this update action.</p>
      * @return deliveryKey
      */
-
+    
     @JsonProperty("deliveryKey")
     public String getDeliveryKey();
 
@@ -54,23 +59,26 @@ public interface StagedOrderRemoveDeliveryAction extends StagedOrderUpdateAction
      *  <p>Either <code>deliveryId</code> or <code>deliveryKey</code> is required for this update action.</p>
      * @param deliveryId value to be set
      */
-
+    
     public void setDeliveryId(final String deliveryId);
-
+    
+    
     /**
      *  <p>Either <code>deliveryId</code> or <code>deliveryKey</code> is required for this update action.</p>
      * @param deliveryKey value to be set
      */
-
+    
     public void setDeliveryKey(final String deliveryKey);
+    
 
     /**
      * factory method
      * @return instance of StagedOrderRemoveDeliveryAction
      */
-    public static StagedOrderRemoveDeliveryAction of() {
+    public static StagedOrderRemoveDeliveryAction of(){
         return new StagedOrderRemoveDeliveryActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy StagedOrderRemoveDeliveryAction
@@ -107,7 +115,7 @@ public interface StagedOrderRemoveDeliveryAction extends StagedOrderUpdateAction
     public static StagedOrderRemoveDeliveryActionBuilder builder() {
         return StagedOrderRemoveDeliveryActionBuilder.of();
     }
-
+    
     /**
      * create builder for StagedOrderRemoveDeliveryAction instance
      * @param template instance with prefilled values for the builder
@@ -116,6 +124,7 @@ public interface StagedOrderRemoveDeliveryAction extends StagedOrderUpdateAction
     public static StagedOrderRemoveDeliveryActionBuilder builder(final StagedOrderRemoveDeliveryAction template) {
         return StagedOrderRemoveDeliveryActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -126,7 +135,7 @@ public interface StagedOrderRemoveDeliveryAction extends StagedOrderUpdateAction
     default <T> T withStagedOrderRemoveDeliveryAction(Function<StagedOrderRemoveDeliveryAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

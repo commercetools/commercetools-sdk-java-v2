@@ -1,20 +1,22 @@
-
 package com.commercetools.api.models.cart;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
+import com.commercetools.api.models.cart.CartUpdateAction;
 import com.commercetools.api.models.channel.ChannelResourceIdentifier;
 import com.commercetools.api.models.shopping_list.ShoppingListResourceIdentifier;
+import com.commercetools.api.models.cart.CartAddShoppingListActionImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Adds all LineItems of a ShoppingList to the Cart.</p>
@@ -27,9 +29,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .shoppingList(shoppingListBuilder -> shoppingListBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = CartAddShoppingListActionImpl.class)
 public interface CartAddShoppingListAction extends CartUpdateAction {
 
@@ -46,7 +51,6 @@ public interface CartAddShoppingListAction extends CartUpdateAction {
     @Valid
     @JsonProperty("shoppingList")
     public ShoppingListResourceIdentifier getShoppingList();
-
     /**
      *  <p><code>distributionChannel</code> to set for all LineItems that are added to the Cart. The Channel must have the <code>ProductDistribution</code> ChannelRoleEnum.</p>
      * @return distributionChannel
@@ -54,7 +58,6 @@ public interface CartAddShoppingListAction extends CartUpdateAction {
     @Valid
     @JsonProperty("distributionChannel")
     public ChannelResourceIdentifier getDistributionChannel();
-
     /**
      *  <p><code>supplyChannel</code> to set for all LineItems that are added to the Cart. The Channel must have the <code>InventorySupply</code> ChannelRoleEnum.</p>
      * @return supplyChannel
@@ -67,30 +70,34 @@ public interface CartAddShoppingListAction extends CartUpdateAction {
      *  <p>Shopping List that contains the Line Items to be added.</p>
      * @param shoppingList value to be set
      */
-
+    
     public void setShoppingList(final ShoppingListResourceIdentifier shoppingList);
-
+    
+    
     /**
      *  <p><code>distributionChannel</code> to set for all LineItems that are added to the Cart. The Channel must have the <code>ProductDistribution</code> ChannelRoleEnum.</p>
      * @param distributionChannel value to be set
      */
-
+    
     public void setDistributionChannel(final ChannelResourceIdentifier distributionChannel);
-
+    
+    
     /**
      *  <p><code>supplyChannel</code> to set for all LineItems that are added to the Cart. The Channel must have the <code>InventorySupply</code> ChannelRoleEnum.</p>
      * @param supplyChannel value to be set
      */
-
+    
     public void setSupplyChannel(final ChannelResourceIdentifier supplyChannel);
+    
 
     /**
      * factory method
      * @return instance of CartAddShoppingListAction
      */
-    public static CartAddShoppingListAction of() {
+    public static CartAddShoppingListAction of(){
         return new CartAddShoppingListActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy CartAddShoppingListAction
@@ -116,12 +123,9 @@ public interface CartAddShoppingListAction extends CartUpdateAction {
             return null;
         }
         CartAddShoppingListActionImpl instance = new CartAddShoppingListActionImpl();
-        instance.setShoppingList(com.commercetools.api.models.shopping_list.ShoppingListResourceIdentifier
-                .deepCopy(template.getShoppingList()));
-        instance.setDistributionChannel(
-            com.commercetools.api.models.channel.ChannelResourceIdentifier.deepCopy(template.getDistributionChannel()));
-        instance.setSupplyChannel(
-            com.commercetools.api.models.channel.ChannelResourceIdentifier.deepCopy(template.getSupplyChannel()));
+        instance.setShoppingList(com.commercetools.api.models.shopping_list.ShoppingListResourceIdentifier.deepCopy(template.getShoppingList()));
+        instance.setDistributionChannel(com.commercetools.api.models.channel.ChannelResourceIdentifier.deepCopy(template.getDistributionChannel()));
+        instance.setSupplyChannel(com.commercetools.api.models.channel.ChannelResourceIdentifier.deepCopy(template.getSupplyChannel()));
         return instance;
     }
 
@@ -132,7 +136,7 @@ public interface CartAddShoppingListAction extends CartUpdateAction {
     public static CartAddShoppingListActionBuilder builder() {
         return CartAddShoppingListActionBuilder.of();
     }
-
+    
     /**
      * create builder for CartAddShoppingListAction instance
      * @param template instance with prefilled values for the builder
@@ -141,6 +145,7 @@ public interface CartAddShoppingListAction extends CartUpdateAction {
     public static CartAddShoppingListActionBuilder builder(final CartAddShoppingListAction template) {
         return CartAddShoppingListActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -151,7 +156,7 @@ public interface CartAddShoppingListAction extends CartUpdateAction {
     default <T> T withCartAddShoppingListAction(Function<CartAddShoppingListAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

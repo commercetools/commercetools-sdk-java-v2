@@ -1,11 +1,12 @@
-
 package com.commercetools.importapi.models.productvariants;
 
+import com.commercetools.importapi.models.common.LocalizedString;
+import com.commercetools.importapi.models.productvariants.Attribute;
+import com.commercetools.importapi.models.productvariants.LocalizableTextAttribute;
+import javax.annotation.Nullable;
 import java.util.*;
 import java.util.function.Function;
-
-import javax.annotation.Nullable;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -19,27 +20,37 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .value(valueBuilder -> valueBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class LocalizableTextAttributeBuilder implements Builder<LocalizableTextAttribute> {
 
+    
     @Nullable
     private String name;
-
+    
+    
+    
     private com.commercetools.importapi.models.common.LocalizedString value;
 
+    
     /**
      *  <p>The name of this attribute must match a name of the product types attribute definitions. The name is required if this type is used in a product variant and must not be set when used in a product variant patch.</p>
      * @param name value to be set
      * @return Builder
      */
-
+    
     public LocalizableTextAttributeBuilder name(@Nullable final String name) {
         this.name = name;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</p>
      *  <pre><code>{
@@ -50,13 +61,12 @@ public class LocalizableTextAttributeBuilder implements Builder<LocalizableTextA
      * @param builder function to build the value value
      * @return Builder
      */
-
-    public LocalizableTextAttributeBuilder value(
-            Function<com.commercetools.importapi.models.common.LocalizedStringBuilder, com.commercetools.importapi.models.common.LocalizedStringBuilder> builder) {
+    
+    public LocalizableTextAttributeBuilder value(Function<com.commercetools.importapi.models.common.LocalizedStringBuilder, com.commercetools.importapi.models.common.LocalizedStringBuilder> builder) {
         this.value = builder.apply(com.commercetools.importapi.models.common.LocalizedStringBuilder.of()).build();
         return this;
     }
-
+    
     /**
      *  <p>A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</p>
      *  <pre><code>{
@@ -67,13 +77,12 @@ public class LocalizableTextAttributeBuilder implements Builder<LocalizableTextA
      * @param builder function to build the value value
      * @return Builder
      */
-
-    public LocalizableTextAttributeBuilder withValue(
-            Function<com.commercetools.importapi.models.common.LocalizedStringBuilder, com.commercetools.importapi.models.common.LocalizedString> builder) {
+    
+    public LocalizableTextAttributeBuilder withValue(Function<com.commercetools.importapi.models.common.LocalizedStringBuilder, com.commercetools.importapi.models.common.LocalizedString> builder) {
         this.value = builder.apply(com.commercetools.importapi.models.common.LocalizedStringBuilder.of());
         return this;
     }
-
+                    
     /**
      *  <p>A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</p>
      *  <pre><code>{
@@ -84,23 +93,24 @@ public class LocalizableTextAttributeBuilder implements Builder<LocalizableTextA
      * @param value value to be set
      * @return Builder
      */
-
-    public LocalizableTextAttributeBuilder value(
-            final com.commercetools.importapi.models.common.LocalizedString value) {
+    
+    public LocalizableTextAttributeBuilder value( final com.commercetools.importapi.models.common.LocalizedString value) {
         this.value = value;
         return this;
     }
+    
+    
 
     /**
      *  <p>The name of this attribute must match a name of the product types attribute definitions. The name is required if this type is used in a product variant and must not be set when used in a product variant patch.</p>
      * @return name
      */
-
+    
     @Nullable
-    public String getName() {
+    public String getName(){
         return this.name;
     }
-
+    
     /**
      *  <p>A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</p>
      *  <pre><code>{
@@ -110,8 +120,9 @@ public class LocalizableTextAttributeBuilder implements Builder<LocalizableTextA
      *  </code></pre>
      * @return value
      */
-
-    public com.commercetools.importapi.models.common.LocalizedString getValue() {
+    
+    
+    public com.commercetools.importapi.models.common.LocalizedString getValue(){
         return this.value;
     }
 
@@ -123,7 +134,7 @@ public class LocalizableTextAttributeBuilder implements Builder<LocalizableTextA
         Objects.requireNonNull(value, LocalizableTextAttribute.class + ": value is missing");
         return new LocalizableTextAttributeImpl(name, value);
     }
-
+    
     /**
      * builds LocalizableTextAttribute without checking for non-null required values
      * @return LocalizableTextAttribute
@@ -134,7 +145,7 @@ public class LocalizableTextAttributeBuilder implements Builder<LocalizableTextA
 
     /**
      * factory method for an instance of LocalizableTextAttributeBuilder
-     * @return builder
+     * @return builder 
      */
     public static LocalizableTextAttributeBuilder of() {
         return new LocalizableTextAttributeBuilder();

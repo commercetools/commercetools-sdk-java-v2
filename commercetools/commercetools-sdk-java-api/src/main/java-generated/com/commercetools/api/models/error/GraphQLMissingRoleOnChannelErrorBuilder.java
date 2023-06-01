@@ -1,11 +1,13 @@
-
 package com.commercetools.api.models.error;
 
+import com.commercetools.api.models.channel.ChannelResourceIdentifier;
+import com.commercetools.api.models.channel.ChannelRoleEnum;
+import com.commercetools.api.models.error.GraphQLErrorObject;
+import com.commercetools.api.models.error.GraphQLMissingRoleOnChannelError;
+import javax.annotation.Nullable;
 import java.util.*;
 import java.util.function.Function;
-
-import javax.annotation.Nullable;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -19,16 +21,24 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .missingRole(ChannelRoleEnum.INVENTORY_SUPPLY)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class GraphQLMissingRoleOnChannelErrorBuilder implements Builder<GraphQLMissingRoleOnChannelError> {
 
+    
+    
     private Map<String, java.lang.Object> values = new HashMap<>();
-
+    
+    
     @Nullable
     private com.commercetools.api.models.channel.ChannelResourceIdentifier channel;
-
+    
+    
+    
     private com.commercetools.api.models.channel.ChannelRoleEnum missingRole;
 
     /**
@@ -36,19 +46,19 @@ public class GraphQLMissingRoleOnChannelErrorBuilder implements Builder<GraphQLM
      * @param values properties to be set
      * @return Builder
      */
-
-    public GraphQLMissingRoleOnChannelErrorBuilder values(final Map<String, java.lang.Object> values) {
+    
+    public GraphQLMissingRoleOnChannelErrorBuilder values( final Map<String, java.lang.Object> values){
         this.values = values;
         return this;
     }
-
+    
     /**
      *  <p>Error-specific additional fields.</p>
      * @param key property name
      * @param value property value
      * @return Builder
      */
-
+    
     public GraphQLMissingRoleOnChannelErrorBuilder addValue(final String key, final java.lang.Object value) {
         if (this.values == null) {
             values = new HashMap<>();
@@ -56,44 +66,45 @@ public class GraphQLMissingRoleOnChannelErrorBuilder implements Builder<GraphQLM
         values.put(key, value);
         return this;
     }
-
+    
+    
+    
     /**
      *  <p>ResourceIdentifier to a given Channel.</p>
      * @param builder function to build the channel value
      * @return Builder
      */
-
-    public GraphQLMissingRoleOnChannelErrorBuilder channel(
-            Function<com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder, com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder> builder) {
-        this.channel = builder.apply(com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder.of())
-                .build();
+    
+    public GraphQLMissingRoleOnChannelErrorBuilder channel(Function<com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder, com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder> builder) {
+        this.channel = builder.apply(com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder.of()).build();
         return this;
     }
-
+    
     /**
      *  <p>ResourceIdentifier to a given Channel.</p>
      * @param builder function to build the channel value
      * @return Builder
      */
-
-    public GraphQLMissingRoleOnChannelErrorBuilder withChannel(
-            Function<com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder, com.commercetools.api.models.channel.ChannelResourceIdentifier> builder) {
+    
+    public GraphQLMissingRoleOnChannelErrorBuilder withChannel(Function<com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder, com.commercetools.api.models.channel.ChannelResourceIdentifier> builder) {
         this.channel = builder.apply(com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder.of());
         return this;
     }
-
+                    
     /**
      *  <p>ResourceIdentifier to a given Channel.</p>
      * @param channel value to be set
      * @return Builder
      */
-
-    public GraphQLMissingRoleOnChannelErrorBuilder channel(
-            @Nullable final com.commercetools.api.models.channel.ChannelResourceIdentifier channel) {
+    
+    public GraphQLMissingRoleOnChannelErrorBuilder channel(@Nullable final com.commercetools.api.models.channel.ChannelResourceIdentifier channel) {
         this.channel = channel;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <ul>
      *   <li><code>ProductDistribution</code> for Product Distribution Channels allowed for the Store. Also required for Standalone Prices.</li>
@@ -102,32 +113,34 @@ public class GraphQLMissingRoleOnChannelErrorBuilder implements Builder<GraphQLM
      * @param missingRole value to be set
      * @return Builder
      */
-
-    public GraphQLMissingRoleOnChannelErrorBuilder missingRole(
-            final com.commercetools.api.models.channel.ChannelRoleEnum missingRole) {
+    
+    public GraphQLMissingRoleOnChannelErrorBuilder missingRole( final com.commercetools.api.models.channel.ChannelRoleEnum missingRole) {
         this.missingRole = missingRole;
         return this;
     }
+    
+    
 
     /**
      *  <p>Error-specific additional fields.</p>
      * @return pattern properties
      */
-
-    public Map<String, java.lang.Object> getValues() {
+    
+    
+    public Map<String, java.lang.Object> getValues(){
         return this.values;
     }
-
+    
     /**
      *  <p>ResourceIdentifier to a given Channel.</p>
      * @return channel
      */
-
+    
     @Nullable
-    public com.commercetools.api.models.channel.ChannelResourceIdentifier getChannel() {
+    public com.commercetools.api.models.channel.ChannelResourceIdentifier getChannel(){
         return this.channel;
     }
-
+    
     /**
      *  <ul>
      *   <li><code>ProductDistribution</code> for Product Distribution Channels allowed for the Store. Also required for Standalone Prices.</li>
@@ -135,8 +148,9 @@ public class GraphQLMissingRoleOnChannelErrorBuilder implements Builder<GraphQLM
      *  </ul>
      * @return missingRole
      */
-
-    public com.commercetools.api.models.channel.ChannelRoleEnum getMissingRole() {
+    
+    
+    public com.commercetools.api.models.channel.ChannelRoleEnum getMissingRole(){
         return this.missingRole;
     }
 
@@ -148,7 +162,7 @@ public class GraphQLMissingRoleOnChannelErrorBuilder implements Builder<GraphQLM
         Objects.requireNonNull(missingRole, GraphQLMissingRoleOnChannelError.class + ": missingRole is missing");
         return new GraphQLMissingRoleOnChannelErrorImpl(values, channel, missingRole);
     }
-
+    
     /**
      * builds GraphQLMissingRoleOnChannelError without checking for non-null required values
      * @return GraphQLMissingRoleOnChannelError
@@ -159,7 +173,7 @@ public class GraphQLMissingRoleOnChannelErrorBuilder implements Builder<GraphQLM
 
     /**
      * factory method for an instance of GraphQLMissingRoleOnChannelErrorBuilder
-     * @return builder
+     * @return builder 
      */
     public static GraphQLMissingRoleOnChannelErrorBuilder of() {
         return new GraphQLMissingRoleOnChannelErrorBuilder();

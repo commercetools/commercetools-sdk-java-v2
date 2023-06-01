@@ -1,19 +1,22 @@
-
 package com.commercetools.api.models.order;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-
+import com.commercetools.api.models.order.OrderUpdateAction;
 import com.commercetools.api.models.type.FieldContainer;
 import com.commercetools.api.models.type.TypeResourceIdentifier;
+import com.commercetools.api.models.order.OrderSetCustomTypeActionImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * OrderSetCustomTypeAction
@@ -25,9 +28,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     OrderSetCustomTypeAction orderSetCustomTypeAction = OrderSetCustomTypeAction.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = OrderSetCustomTypeActionImpl.class)
 public interface OrderSetCustomTypeAction extends OrderUpdateAction {
 
@@ -43,7 +49,6 @@ public interface OrderSetCustomTypeAction extends OrderUpdateAction {
     @Valid
     @JsonProperty("type")
     public TypeResourceIdentifier getType();
-
     /**
      *  <p>Sets the Custom Fields fields for the Order.</p>
      * @return fields
@@ -56,23 +61,26 @@ public interface OrderSetCustomTypeAction extends OrderUpdateAction {
      *  <p>Defines the Type that extends the Order with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Order.</p>
      * @param type value to be set
      */
-
+    
     public void setType(final TypeResourceIdentifier type);
-
+    
+    
     /**
      *  <p>Sets the Custom Fields fields for the Order.</p>
      * @param fields value to be set
      */
-
+    
     public void setFields(final FieldContainer fields);
+    
 
     /**
      * factory method
      * @return instance of OrderSetCustomTypeAction
      */
-    public static OrderSetCustomTypeAction of() {
+    public static OrderSetCustomTypeAction of(){
         return new OrderSetCustomTypeActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy OrderSetCustomTypeAction
@@ -109,7 +117,7 @@ public interface OrderSetCustomTypeAction extends OrderUpdateAction {
     public static OrderSetCustomTypeActionBuilder builder() {
         return OrderSetCustomTypeActionBuilder.of();
     }
-
+    
     /**
      * create builder for OrderSetCustomTypeAction instance
      * @param template instance with prefilled values for the builder
@@ -118,6 +126,7 @@ public interface OrderSetCustomTypeAction extends OrderUpdateAction {
     public static OrderSetCustomTypeActionBuilder builder(final OrderSetCustomTypeAction template) {
         return OrderSetCustomTypeActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -128,7 +137,7 @@ public interface OrderSetCustomTypeAction extends OrderUpdateAction {
     default <T> T withOrderSetCustomTypeAction(Function<OrderSetCustomTypeAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

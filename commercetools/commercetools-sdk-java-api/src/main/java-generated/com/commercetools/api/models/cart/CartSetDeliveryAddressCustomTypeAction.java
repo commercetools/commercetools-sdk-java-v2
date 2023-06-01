@@ -1,20 +1,22 @@
-
 package com.commercetools.api.models.cart;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
+import com.commercetools.api.models.cart.CartUpdateAction;
 import com.commercetools.api.models.type.FieldContainer;
 import com.commercetools.api.models.type.TypeResourceIdentifier;
+import com.commercetools.api.models.cart.CartSetDeliveryAddressCustomTypeActionImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * CartSetDeliveryAddressCustomTypeAction
@@ -27,9 +29,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .deliveryId("{deliveryId}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = CartSetDeliveryAddressCustomTypeActionImpl.class)
 public interface CartSetDeliveryAddressCustomTypeAction extends CartUpdateAction {
 
@@ -45,7 +50,6 @@ public interface CartSetDeliveryAddressCustomTypeAction extends CartUpdateAction
     @NotNull
     @JsonProperty("deliveryId")
     public String getDeliveryId();
-
     /**
      *  <p>Defines the Type that extends the Delivery <code>address</code> with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Delivery <code>address</code>.</p>
      * @return type
@@ -53,7 +57,6 @@ public interface CartSetDeliveryAddressCustomTypeAction extends CartUpdateAction
     @Valid
     @JsonProperty("type")
     public TypeResourceIdentifier getType();
-
     /**
      *  <p>Sets the Custom Fields fields for the Delivery <code>address</code>.</p>
      * @return fields
@@ -66,30 +69,34 @@ public interface CartSetDeliveryAddressCustomTypeAction extends CartUpdateAction
      *  <p><code>id</code> of the Delivery.</p>
      * @param deliveryId value to be set
      */
-
+    
     public void setDeliveryId(final String deliveryId);
-
+    
+    
     /**
      *  <p>Defines the Type that extends the Delivery <code>address</code> with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Delivery <code>address</code>.</p>
      * @param type value to be set
      */
-
+    
     public void setType(final TypeResourceIdentifier type);
-
+    
+    
     /**
      *  <p>Sets the Custom Fields fields for the Delivery <code>address</code>.</p>
      * @param fields value to be set
      */
-
+    
     public void setFields(final FieldContainer fields);
+    
 
     /**
      * factory method
      * @return instance of CartSetDeliveryAddressCustomTypeAction
      */
-    public static CartSetDeliveryAddressCustomTypeAction of() {
+    public static CartSetDeliveryAddressCustomTypeAction of(){
         return new CartSetDeliveryAddressCustomTypeActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy CartSetDeliveryAddressCustomTypeAction
@@ -110,8 +117,7 @@ public interface CartSetDeliveryAddressCustomTypeAction extends CartUpdateAction
      * @return copy instance
      */
     @Nullable
-    public static CartSetDeliveryAddressCustomTypeAction deepCopy(
-            @Nullable final CartSetDeliveryAddressCustomTypeAction template) {
+    public static CartSetDeliveryAddressCustomTypeAction deepCopy(@Nullable final CartSetDeliveryAddressCustomTypeAction template) {
         if (template == null) {
             return null;
         }
@@ -129,16 +135,16 @@ public interface CartSetDeliveryAddressCustomTypeAction extends CartUpdateAction
     public static CartSetDeliveryAddressCustomTypeActionBuilder builder() {
         return CartSetDeliveryAddressCustomTypeActionBuilder.of();
     }
-
+    
     /**
      * create builder for CartSetDeliveryAddressCustomTypeAction instance
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static CartSetDeliveryAddressCustomTypeActionBuilder builder(
-            final CartSetDeliveryAddressCustomTypeAction template) {
+    public static CartSetDeliveryAddressCustomTypeActionBuilder builder(final CartSetDeliveryAddressCustomTypeAction template) {
         return CartSetDeliveryAddressCustomTypeActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -146,11 +152,10 @@ public interface CartSetDeliveryAddressCustomTypeAction extends CartUpdateAction
      * @param helper function to map the object
      * @return mapped value
      */
-    default <T> T withCartSetDeliveryAddressCustomTypeAction(
-            Function<CartSetDeliveryAddressCustomTypeAction, T> helper) {
+    default <T> T withCartSetDeliveryAddressCustomTypeAction(Function<CartSetDeliveryAddressCustomTypeAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

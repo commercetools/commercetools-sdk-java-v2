@@ -1,9 +1,11 @@
-
 package com.commercetools.importapi.models.common;
 
+import com.commercetools.importapi.models.common.TypedMoney;
+import com.commercetools.importapi.models.common.PriceTier;
+import javax.annotation.Nullable;
 import java.util.*;
 import java.util.function.Function;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -18,64 +20,78 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .value(valueBuilder -> valueBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class PriceTierBuilder implements Builder<PriceTier> {
 
+    
+    
     private Long minimumQuantity;
-
+    
+    
+    
     private com.commercetools.importapi.models.common.TypedMoney value;
 
+    
     /**
      *  <p>The minimum quantity this price tier is valid for.</p>
      * @param minimumQuantity value to be set
      * @return Builder
      */
-
-    public PriceTierBuilder minimumQuantity(final Long minimumQuantity) {
+    
+    public PriceTierBuilder minimumQuantity( final Long minimumQuantity) {
         this.minimumQuantity = minimumQuantity;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>The currency of a price tier is always the same as the currency of the base Price.</p>
      * @param value value to be set
      * @return Builder
      */
-
-    public PriceTierBuilder value(final com.commercetools.importapi.models.common.TypedMoney value) {
+    
+    public PriceTierBuilder value( final com.commercetools.importapi.models.common.TypedMoney value) {
         this.value = value;
         return this;
     }
-
+    
+    
     /**
      *  <p>The currency of a price tier is always the same as the currency of the base Price.</p>
      * @param builder function to build the value value
      * @return Builder
      */
-
-    public PriceTierBuilder value(
-            Function<com.commercetools.importapi.models.common.TypedMoneyBuilder, Builder<? extends com.commercetools.importapi.models.common.TypedMoney>> builder) {
+    
+    public PriceTierBuilder value(Function<com.commercetools.importapi.models.common.TypedMoneyBuilder, Builder<? extends com.commercetools.importapi.models.common.TypedMoney>> builder) {
         this.value = builder.apply(com.commercetools.importapi.models.common.TypedMoneyBuilder.of()).build();
         return this;
     }
+                    
 
     /**
      *  <p>The minimum quantity this price tier is valid for.</p>
      * @return minimumQuantity
      */
-
-    public Long getMinimumQuantity() {
+    
+    
+    public Long getMinimumQuantity(){
         return this.minimumQuantity;
     }
-
+    
     /**
      *  <p>The currency of a price tier is always the same as the currency of the base Price.</p>
      * @return value
      */
-
-    public com.commercetools.importapi.models.common.TypedMoney getValue() {
+    
+    
+    public com.commercetools.importapi.models.common.TypedMoney getValue(){
         return this.value;
     }
 
@@ -88,7 +104,7 @@ public class PriceTierBuilder implements Builder<PriceTier> {
         Objects.requireNonNull(value, PriceTier.class + ": value is missing");
         return new PriceTierImpl(minimumQuantity, value);
     }
-
+    
     /**
      * builds PriceTier without checking for non-null required values
      * @return PriceTier
@@ -99,7 +115,7 @@ public class PriceTierBuilder implements Builder<PriceTier> {
 
     /**
      * factory method for an instance of PriceTierBuilder
-     * @return builder
+     * @return builder 
      */
     public static PriceTierBuilder of() {
         return new PriceTierBuilder();

@@ -1,8 +1,11 @@
-
 package com.commercetools.api.models.associate_role;
 
+import com.commercetools.api.models.associate_role.AssociateRoleUpdateAction;
+import com.commercetools.api.models.associate_role.AssociateRoleChangeBuyerAssignableAction;
+import javax.annotation.Nullable;
 import java.util.*;
-
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -16,31 +19,39 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .buyerAssignable(true)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
-public class AssociateRoleChangeBuyerAssignableActionBuilder
-        implements Builder<AssociateRoleChangeBuyerAssignableAction> {
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
+public class AssociateRoleChangeBuyerAssignableActionBuilder implements Builder<AssociateRoleChangeBuyerAssignableAction> {
 
+    
+    
     private Boolean buyerAssignable;
 
+    
     /**
      *  <p>The new value of the <code>buyerAssignable</code> field of the AssociateRole.</p>
      * @param buyerAssignable value to be set
      * @return Builder
      */
-
-    public AssociateRoleChangeBuyerAssignableActionBuilder buyerAssignable(final Boolean buyerAssignable) {
+    
+    public AssociateRoleChangeBuyerAssignableActionBuilder buyerAssignable( final Boolean buyerAssignable) {
         this.buyerAssignable = buyerAssignable;
         return this;
     }
+    
+    
 
     /**
      *  <p>The new value of the <code>buyerAssignable</code> field of the AssociateRole.</p>
      * @return buyerAssignable
      */
-
-    public Boolean getBuyerAssignable() {
+    
+    
+    public Boolean getBuyerAssignable(){
         return this.buyerAssignable;
     }
 
@@ -49,11 +60,10 @@ public class AssociateRoleChangeBuyerAssignableActionBuilder
      * @return AssociateRoleChangeBuyerAssignableAction
      */
     public AssociateRoleChangeBuyerAssignableAction build() {
-        Objects.requireNonNull(buyerAssignable,
-            AssociateRoleChangeBuyerAssignableAction.class + ": buyerAssignable is missing");
+        Objects.requireNonNull(buyerAssignable, AssociateRoleChangeBuyerAssignableAction.class + ": buyerAssignable is missing");
         return new AssociateRoleChangeBuyerAssignableActionImpl(buyerAssignable);
     }
-
+    
     /**
      * builds AssociateRoleChangeBuyerAssignableAction without checking for non-null required values
      * @return AssociateRoleChangeBuyerAssignableAction
@@ -64,7 +74,7 @@ public class AssociateRoleChangeBuyerAssignableActionBuilder
 
     /**
      * factory method for an instance of AssociateRoleChangeBuyerAssignableActionBuilder
-     * @return builder
+     * @return builder 
      */
     public static AssociateRoleChangeBuyerAssignableActionBuilder of() {
         return new AssociateRoleChangeBuyerAssignableActionBuilder();
@@ -75,8 +85,7 @@ public class AssociateRoleChangeBuyerAssignableActionBuilder
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static AssociateRoleChangeBuyerAssignableActionBuilder of(
-            final AssociateRoleChangeBuyerAssignableAction template) {
+    public static AssociateRoleChangeBuyerAssignableActionBuilder of(final AssociateRoleChangeBuyerAssignableAction template) {
         AssociateRoleChangeBuyerAssignableActionBuilder builder = new AssociateRoleChangeBuyerAssignableActionBuilder();
         builder.buyerAssignable = template.getBuyerAssignable();
         return builder;

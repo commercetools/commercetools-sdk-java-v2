@@ -1,32 +1,33 @@
-
 package com.commercetools.api.models.project;
-
-import java.util.Arrays;
-import java.util.Optional;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-
+import java.lang.String;
+import java.util.Arrays;
+import java.util.Optional;
 import io.vrap.rmf.base.client.JsonEnum;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
  *  <p>Specifies the status of the Order Search index.</p>
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public interface OrderSearchStatus extends JsonEnum {
 
     /**
     	<p>indicates that the <a href="/../api/projects/order-search#search-orders">Search Orders</a> endpoint is fully operational.</p>
-
+    	
     */
     OrderSearchStatus ACTIVATED = OrderSearchStatusEnum.ACTIVATED;
     /**
     	<p>indicates that the Order Search feature is currently not active, but can be activated by <a href="#change-order-search-status">update action</a>.</p>
-
+    	
     */
     OrderSearchStatus DEACTIVATED = OrderSearchStatusEnum.DEACTIVATED;
-
+    
     /**
      * possible values of OrderSearchStatus
      */
@@ -35,7 +36,7 @@ public interface OrderSearchStatus extends JsonEnum {
          * Activated
          */
         ACTIVATED("Activated"),
-
+        
         /**
          * Deactivated
          */
@@ -92,7 +93,7 @@ public interface OrderSearchStatus extends JsonEnum {
             public String name() {
                 return value.toUpperCase();
             }
-
+            
             public String toString() {
                 return value;
             }
@@ -107,7 +108,7 @@ public interface OrderSearchStatus extends JsonEnum {
     public static Optional<OrderSearchStatus> findEnumViaJsonName(String jsonName) {
         return Arrays.stream(values()).filter(t -> t.getJsonName().equals(jsonName)).findFirst();
     }
-
+    
     /**
      * possible enum values
      * @return array of possible enum values
@@ -115,5 +116,5 @@ public interface OrderSearchStatus extends JsonEnum {
     public static OrderSearchStatus[] values() {
         return OrderSearchStatusEnum.values();
     }
-
+    
 }

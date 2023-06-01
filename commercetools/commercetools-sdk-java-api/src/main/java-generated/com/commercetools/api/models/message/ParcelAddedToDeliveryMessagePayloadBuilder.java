@@ -1,11 +1,13 @@
-
 package com.commercetools.api.models.message;
 
+import com.commercetools.api.models.message.OrderMessagePayload;
+import com.commercetools.api.models.order.Delivery;
+import com.commercetools.api.models.order.Parcel;
+import com.commercetools.api.models.message.ParcelAddedToDeliveryMessagePayload;
+import javax.annotation.Nullable;
 import java.util.*;
 import java.util.function.Function;
-
-import javax.annotation.Nullable;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -20,125 +22,139 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .parcel(parcelBuilder -> parcelBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class ParcelAddedToDeliveryMessagePayloadBuilder implements Builder<ParcelAddedToDeliveryMessagePayload> {
 
+    
+    
     private com.commercetools.api.models.order.Delivery delivery;
-
+    
+    
+    
     private com.commercetools.api.models.order.Parcel parcel;
-
+    
+    
     @Nullable
     private String shippingKey;
 
+    
     /**
      *  <p>Unique identifier of the Delivery.</p>
      * @param builder function to build the delivery value
      * @return Builder
      */
-
-    public ParcelAddedToDeliveryMessagePayloadBuilder delivery(
-            Function<com.commercetools.api.models.order.DeliveryBuilder, com.commercetools.api.models.order.DeliveryBuilder> builder) {
+    
+    public ParcelAddedToDeliveryMessagePayloadBuilder delivery(Function<com.commercetools.api.models.order.DeliveryBuilder, com.commercetools.api.models.order.DeliveryBuilder> builder) {
         this.delivery = builder.apply(com.commercetools.api.models.order.DeliveryBuilder.of()).build();
         return this;
     }
-
+    
     /**
      *  <p>Unique identifier of the Delivery.</p>
      * @param builder function to build the delivery value
      * @return Builder
      */
-
-    public ParcelAddedToDeliveryMessagePayloadBuilder withDelivery(
-            Function<com.commercetools.api.models.order.DeliveryBuilder, com.commercetools.api.models.order.Delivery> builder) {
+    
+    public ParcelAddedToDeliveryMessagePayloadBuilder withDelivery(Function<com.commercetools.api.models.order.DeliveryBuilder, com.commercetools.api.models.order.Delivery> builder) {
         this.delivery = builder.apply(com.commercetools.api.models.order.DeliveryBuilder.of());
         return this;
     }
-
+                    
     /**
      *  <p>Unique identifier of the Delivery.</p>
      * @param delivery value to be set
      * @return Builder
      */
-
-    public ParcelAddedToDeliveryMessagePayloadBuilder delivery(
-            final com.commercetools.api.models.order.Delivery delivery) {
+    
+    public ParcelAddedToDeliveryMessagePayloadBuilder delivery( final com.commercetools.api.models.order.Delivery delivery) {
         this.delivery = delivery;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Parcel that was added to the Delivery.</p>
      * @param builder function to build the parcel value
      * @return Builder
      */
-
-    public ParcelAddedToDeliveryMessagePayloadBuilder parcel(
-            Function<com.commercetools.api.models.order.ParcelBuilder, com.commercetools.api.models.order.ParcelBuilder> builder) {
+    
+    public ParcelAddedToDeliveryMessagePayloadBuilder parcel(Function<com.commercetools.api.models.order.ParcelBuilder, com.commercetools.api.models.order.ParcelBuilder> builder) {
         this.parcel = builder.apply(com.commercetools.api.models.order.ParcelBuilder.of()).build();
         return this;
     }
-
+    
     /**
      *  <p>Parcel that was added to the Delivery.</p>
      * @param builder function to build the parcel value
      * @return Builder
      */
-
-    public ParcelAddedToDeliveryMessagePayloadBuilder withParcel(
-            Function<com.commercetools.api.models.order.ParcelBuilder, com.commercetools.api.models.order.Parcel> builder) {
+    
+    public ParcelAddedToDeliveryMessagePayloadBuilder withParcel(Function<com.commercetools.api.models.order.ParcelBuilder, com.commercetools.api.models.order.Parcel> builder) {
         this.parcel = builder.apply(com.commercetools.api.models.order.ParcelBuilder.of());
         return this;
     }
-
+                    
     /**
      *  <p>Parcel that was added to the Delivery.</p>
      * @param parcel value to be set
      * @return Builder
      */
-
-    public ParcelAddedToDeliveryMessagePayloadBuilder parcel(final com.commercetools.api.models.order.Parcel parcel) {
+    
+    public ParcelAddedToDeliveryMessagePayloadBuilder parcel( final com.commercetools.api.models.order.Parcel parcel) {
         this.parcel = parcel;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multi</code> ShippingMode.</p>
      * @param shippingKey value to be set
      * @return Builder
      */
-
+    
     public ParcelAddedToDeliveryMessagePayloadBuilder shippingKey(@Nullable final String shippingKey) {
         this.shippingKey = shippingKey;
         return this;
     }
+    
+    
 
     /**
      *  <p>Unique identifier of the Delivery.</p>
      * @return delivery
      */
-
-    public com.commercetools.api.models.order.Delivery getDelivery() {
+    
+    
+    public com.commercetools.api.models.order.Delivery getDelivery(){
         return this.delivery;
     }
-
+    
     /**
      *  <p>Parcel that was added to the Delivery.</p>
      * @return parcel
      */
-
-    public com.commercetools.api.models.order.Parcel getParcel() {
+    
+    
+    public com.commercetools.api.models.order.Parcel getParcel(){
         return this.parcel;
     }
-
+    
     /**
      *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multi</code> ShippingMode.</p>
      * @return shippingKey
      */
-
+    
     @Nullable
-    public String getShippingKey() {
+    public String getShippingKey(){
         return this.shippingKey;
     }
 
@@ -151,7 +167,7 @@ public class ParcelAddedToDeliveryMessagePayloadBuilder implements Builder<Parce
         Objects.requireNonNull(parcel, ParcelAddedToDeliveryMessagePayload.class + ": parcel is missing");
         return new ParcelAddedToDeliveryMessagePayloadImpl(delivery, parcel, shippingKey);
     }
-
+    
     /**
      * builds ParcelAddedToDeliveryMessagePayload without checking for non-null required values
      * @return ParcelAddedToDeliveryMessagePayload
@@ -162,7 +178,7 @@ public class ParcelAddedToDeliveryMessagePayloadBuilder implements Builder<Parce
 
     /**
      * factory method for an instance of ParcelAddedToDeliveryMessagePayloadBuilder
-     * @return builder
+     * @return builder 
      */
     public static ParcelAddedToDeliveryMessagePayloadBuilder of() {
         return new ParcelAddedToDeliveryMessagePayloadBuilder();

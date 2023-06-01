@@ -1,17 +1,20 @@
-
 package com.commercetools.api.models.project;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
+import com.commercetools.api.models.project.ProjectUpdateAction;
+import com.commercetools.api.models.project.ProjectChangeNameActionImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * ProjectChangeNameAction
@@ -24,9 +27,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .name("{name}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = ProjectChangeNameActionImpl.class)
 public interface ProjectChangeNameAction extends ProjectUpdateAction {
 
@@ -47,16 +53,18 @@ public interface ProjectChangeNameAction extends ProjectUpdateAction {
      *  <p>New value to set. Must not be empty.</p>
      * @param name value to be set
      */
-
+    
     public void setName(final String name);
+    
 
     /**
      * factory method
      * @return instance of ProjectChangeNameAction
      */
-    public static ProjectChangeNameAction of() {
+    public static ProjectChangeNameAction of(){
         return new ProjectChangeNameActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy ProjectChangeNameAction
@@ -91,7 +99,7 @@ public interface ProjectChangeNameAction extends ProjectUpdateAction {
     public static ProjectChangeNameActionBuilder builder() {
         return ProjectChangeNameActionBuilder.of();
     }
-
+    
     /**
      * create builder for ProjectChangeNameAction instance
      * @param template instance with prefilled values for the builder
@@ -100,6 +108,7 @@ public interface ProjectChangeNameAction extends ProjectUpdateAction {
     public static ProjectChangeNameActionBuilder builder(final ProjectChangeNameAction template) {
         return ProjectChangeNameActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -110,7 +119,7 @@ public interface ProjectChangeNameAction extends ProjectUpdateAction {
     default <T> T withProjectChangeNameAction(Function<ProjectChangeNameAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

@@ -1,17 +1,20 @@
-
 package com.commercetools.history.models.change_value;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
+import com.commercetools.history.models.change_value.ChangeTargetChangeValue;
+import com.commercetools.history.models.change_value.ChangeTargetCustomLineItemsChangeValueImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Shape of the value for cart discounts line item and custom line items target.</p>
@@ -24,9 +27,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .predicate("{predicate}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = ChangeTargetCustomLineItemsChangeValueImpl.class)
 public interface ChangeTargetCustomLineItemsChangeValue extends ChangeTargetChangeValue {
 
@@ -42,7 +48,6 @@ public interface ChangeTargetCustomLineItemsChangeValue extends ChangeTargetChan
     @NotNull
     @JsonProperty("type")
     public String getType();
-
     /**
      *
      * @return predicate
@@ -55,16 +60,18 @@ public interface ChangeTargetCustomLineItemsChangeValue extends ChangeTargetChan
      * set predicate
      * @param predicate value to be set
      */
-
+    
     public void setPredicate(final String predicate);
+    
 
     /**
      * factory method
      * @return instance of ChangeTargetCustomLineItemsChangeValue
      */
-    public static ChangeTargetCustomLineItemsChangeValue of() {
+    public static ChangeTargetCustomLineItemsChangeValue of(){
         return new ChangeTargetCustomLineItemsChangeValueImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy ChangeTargetCustomLineItemsChangeValue
@@ -83,8 +90,7 @@ public interface ChangeTargetCustomLineItemsChangeValue extends ChangeTargetChan
      * @return copy instance
      */
     @Nullable
-    public static ChangeTargetCustomLineItemsChangeValue deepCopy(
-            @Nullable final ChangeTargetCustomLineItemsChangeValue template) {
+    public static ChangeTargetCustomLineItemsChangeValue deepCopy(@Nullable final ChangeTargetCustomLineItemsChangeValue template) {
         if (template == null) {
             return null;
         }
@@ -100,16 +106,16 @@ public interface ChangeTargetCustomLineItemsChangeValue extends ChangeTargetChan
     public static ChangeTargetCustomLineItemsChangeValueBuilder builder() {
         return ChangeTargetCustomLineItemsChangeValueBuilder.of();
     }
-
+    
     /**
      * create builder for ChangeTargetCustomLineItemsChangeValue instance
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static ChangeTargetCustomLineItemsChangeValueBuilder builder(
-            final ChangeTargetCustomLineItemsChangeValue template) {
+    public static ChangeTargetCustomLineItemsChangeValueBuilder builder(final ChangeTargetCustomLineItemsChangeValue template) {
         return ChangeTargetCustomLineItemsChangeValueBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -117,11 +123,10 @@ public interface ChangeTargetCustomLineItemsChangeValue extends ChangeTargetChan
      * @param helper function to map the object
      * @return mapped value
      */
-    default <T> T withChangeTargetCustomLineItemsChangeValue(
-            Function<ChangeTargetCustomLineItemsChangeValue, T> helper) {
+    default <T> T withChangeTargetCustomLineItemsChangeValue(Function<ChangeTargetCustomLineItemsChangeValue, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

@@ -1,20 +1,22 @@
-
 package com.commercetools.api.models.cart_discount;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
+import com.commercetools.api.models.cart_discount.CartDiscountValue;
 import com.commercetools.api.models.channel.ChannelReference;
 import com.commercetools.api.models.product.ProductReference;
+import com.commercetools.api.models.cart_discount.CartDiscountValueGiftLineItemImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * CartDiscountValueGiftLineItem
@@ -28,9 +30,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .variantId(0.3)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = CartDiscountValueGiftLineItemImpl.class)
 public interface CartDiscountValueGiftLineItem extends CartDiscountValue {
 
@@ -47,7 +52,6 @@ public interface CartDiscountValueGiftLineItem extends CartDiscountValue {
     @Valid
     @JsonProperty("product")
     public ProductReference getProduct();
-
     /**
      *  <p>ProductVariant of the Product.</p>
      * @return variantId
@@ -55,7 +59,6 @@ public interface CartDiscountValueGiftLineItem extends CartDiscountValue {
     @NotNull
     @JsonProperty("variantId")
     public Long getVariantId();
-
     /**
      *  <p>Channel must have the ChannelRoleEnum <code>InventorySupply</code>.</p>
      * @return supplyChannel
@@ -63,7 +66,6 @@ public interface CartDiscountValueGiftLineItem extends CartDiscountValue {
     @Valid
     @JsonProperty("supplyChannel")
     public ChannelReference getSupplyChannel();
-
     /**
      *  <p>Channel must have the ChannelRoleEnum <code>ProductDistribution</code>.</p>
      * @return distributionChannel
@@ -76,37 +78,42 @@ public interface CartDiscountValueGiftLineItem extends CartDiscountValue {
      *  <p>Reference to a Product.</p>
      * @param product value to be set
      */
-
+    
     public void setProduct(final ProductReference product);
-
+    
+    
     /**
      *  <p>ProductVariant of the Product.</p>
      * @param variantId value to be set
      */
-
+    
     public void setVariantId(final Long variantId);
-
+    
+    
     /**
      *  <p>Channel must have the ChannelRoleEnum <code>InventorySupply</code>.</p>
      * @param supplyChannel value to be set
      */
-
+    
     public void setSupplyChannel(final ChannelReference supplyChannel);
-
+    
+    
     /**
      *  <p>Channel must have the ChannelRoleEnum <code>ProductDistribution</code>.</p>
      * @param distributionChannel value to be set
      */
-
+    
     public void setDistributionChannel(final ChannelReference distributionChannel);
+    
 
     /**
      * factory method
      * @return instance of CartDiscountValueGiftLineItem
      */
-    public static CartDiscountValueGiftLineItem of() {
+    public static CartDiscountValueGiftLineItem of(){
         return new CartDiscountValueGiftLineItemImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy CartDiscountValueGiftLineItem
@@ -135,10 +142,8 @@ public interface CartDiscountValueGiftLineItem extends CartDiscountValue {
         CartDiscountValueGiftLineItemImpl instance = new CartDiscountValueGiftLineItemImpl();
         instance.setProduct(com.commercetools.api.models.product.ProductReference.deepCopy(template.getProduct()));
         instance.setVariantId(template.getVariantId());
-        instance.setSupplyChannel(
-            com.commercetools.api.models.channel.ChannelReference.deepCopy(template.getSupplyChannel()));
-        instance.setDistributionChannel(
-            com.commercetools.api.models.channel.ChannelReference.deepCopy(template.getDistributionChannel()));
+        instance.setSupplyChannel(com.commercetools.api.models.channel.ChannelReference.deepCopy(template.getSupplyChannel()));
+        instance.setDistributionChannel(com.commercetools.api.models.channel.ChannelReference.deepCopy(template.getDistributionChannel()));
         return instance;
     }
 
@@ -149,7 +154,7 @@ public interface CartDiscountValueGiftLineItem extends CartDiscountValue {
     public static CartDiscountValueGiftLineItemBuilder builder() {
         return CartDiscountValueGiftLineItemBuilder.of();
     }
-
+    
     /**
      * create builder for CartDiscountValueGiftLineItem instance
      * @param template instance with prefilled values for the builder
@@ -158,6 +163,7 @@ public interface CartDiscountValueGiftLineItem extends CartDiscountValue {
     public static CartDiscountValueGiftLineItemBuilder builder(final CartDiscountValueGiftLineItem template) {
         return CartDiscountValueGiftLineItemBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -168,7 +174,7 @@ public interface CartDiscountValueGiftLineItem extends CartDiscountValue {
     default <T> T withCartDiscountValueGiftLineItem(Function<CartDiscountValueGiftLineItem, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

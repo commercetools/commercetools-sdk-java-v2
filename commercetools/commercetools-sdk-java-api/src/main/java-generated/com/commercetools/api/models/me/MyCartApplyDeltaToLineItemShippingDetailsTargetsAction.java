@@ -1,20 +1,21 @@
-
 package com.commercetools.api.models.me;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-import java.util.stream.Collectors;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
 import com.commercetools.api.models.cart.ItemShippingTarget;
+import com.commercetools.api.models.me.MyCartUpdateAction;
+import com.commercetools.api.models.me.MyCartApplyDeltaToLineItemShippingDetailsTargetsActionImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>To override the shipping details, see Set LineItemShippingDetails.</p>
@@ -28,9 +29,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .plusTargetsDelta(targetsDeltaBuilder -> targetsDeltaBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = MyCartApplyDeltaToLineItemShippingDetailsTargetsActionImpl.class)
 public interface MyCartApplyDeltaToLineItemShippingDetailsTargetsAction extends MyCartUpdateAction {
 
@@ -46,7 +50,6 @@ public interface MyCartApplyDeltaToLineItemShippingDetailsTargetsAction extends 
     @NotNull
     @JsonProperty("lineItemId")
     public String getLineItemId();
-
     /**
      *  <p>Using positive or negative quantities increases or decreases the number of items shipped to an address.</p>
      * @return targetsDelta
@@ -60,39 +63,39 @@ public interface MyCartApplyDeltaToLineItemShippingDetailsTargetsAction extends 
      *  <p><code>id</code> of the LineItem to update.</p>
      * @param lineItemId value to be set
      */
-
+    
     public void setLineItemId(final String lineItemId);
-
+    
+    
     /**
      *  <p>Using positive or negative quantities increases or decreases the number of items shipped to an address.</p>
      * @param targetsDelta values to be set
      */
-
+    
     @JsonIgnore
-    public void setTargetsDelta(final ItemShippingTarget... targetsDelta);
-
+    public void setTargetsDelta(final ItemShippingTarget ...targetsDelta);
     /**
      *  <p>Using positive or negative quantities increases or decreases the number of items shipped to an address.</p>
      * @param targetsDelta values to be set
      */
-
+    
     public void setTargetsDelta(final List<ItemShippingTarget> targetsDelta);
 
     /**
      * factory method
      * @return instance of MyCartApplyDeltaToLineItemShippingDetailsTargetsAction
      */
-    public static MyCartApplyDeltaToLineItemShippingDetailsTargetsAction of() {
+    public static MyCartApplyDeltaToLineItemShippingDetailsTargetsAction of(){
         return new MyCartApplyDeltaToLineItemShippingDetailsTargetsActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy MyCartApplyDeltaToLineItemShippingDetailsTargetsAction
      * @param template instance to be copied
      * @return copy instance
      */
-    public static MyCartApplyDeltaToLineItemShippingDetailsTargetsAction of(
-            final MyCartApplyDeltaToLineItemShippingDetailsTargetsAction template) {
+    public static MyCartApplyDeltaToLineItemShippingDetailsTargetsAction of(final MyCartApplyDeltaToLineItemShippingDetailsTargetsAction template) {
         MyCartApplyDeltaToLineItemShippingDetailsTargetsActionImpl instance = new MyCartApplyDeltaToLineItemShippingDetailsTargetsActionImpl();
         instance.setLineItemId(template.getLineItemId());
         instance.setTargetsDelta(template.getTargetsDelta());
@@ -105,17 +108,14 @@ public interface MyCartApplyDeltaToLineItemShippingDetailsTargetsAction extends 
      * @return copy instance
      */
     @Nullable
-    public static MyCartApplyDeltaToLineItemShippingDetailsTargetsAction deepCopy(
-            @Nullable final MyCartApplyDeltaToLineItemShippingDetailsTargetsAction template) {
+    public static MyCartApplyDeltaToLineItemShippingDetailsTargetsAction deepCopy(@Nullable final MyCartApplyDeltaToLineItemShippingDetailsTargetsAction template) {
         if (template == null) {
             return null;
         }
         MyCartApplyDeltaToLineItemShippingDetailsTargetsActionImpl instance = new MyCartApplyDeltaToLineItemShippingDetailsTargetsActionImpl();
         instance.setLineItemId(template.getLineItemId());
         instance.setTargetsDelta(Optional.ofNullable(template.getTargetsDelta())
-                .map(t -> t.stream()
-                        .map(com.commercetools.api.models.cart.ItemShippingTarget::deepCopy)
-                        .collect(Collectors.toList()))
+                .map(t -> t.stream().map(com.commercetools.api.models.cart.ItemShippingTarget::deepCopy).collect(Collectors.toList()))
                 .orElse(null));
         return instance;
     }
@@ -127,16 +127,16 @@ public interface MyCartApplyDeltaToLineItemShippingDetailsTargetsAction extends 
     public static MyCartApplyDeltaToLineItemShippingDetailsTargetsActionBuilder builder() {
         return MyCartApplyDeltaToLineItemShippingDetailsTargetsActionBuilder.of();
     }
-
+    
     /**
      * create builder for MyCartApplyDeltaToLineItemShippingDetailsTargetsAction instance
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static MyCartApplyDeltaToLineItemShippingDetailsTargetsActionBuilder builder(
-            final MyCartApplyDeltaToLineItemShippingDetailsTargetsAction template) {
+    public static MyCartApplyDeltaToLineItemShippingDetailsTargetsActionBuilder builder(final MyCartApplyDeltaToLineItemShippingDetailsTargetsAction template) {
         return MyCartApplyDeltaToLineItemShippingDetailsTargetsActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -144,11 +144,10 @@ public interface MyCartApplyDeltaToLineItemShippingDetailsTargetsAction extends 
      * @param helper function to map the object
      * @return mapped value
      */
-    default <T> T withMyCartApplyDeltaToLineItemShippingDetailsTargetsAction(
-            Function<MyCartApplyDeltaToLineItemShippingDetailsTargetsAction, T> helper) {
+    default <T> T withMyCartApplyDeltaToLineItemShippingDetailsTargetsAction(Function<MyCartApplyDeltaToLineItemShippingDetailsTargetsAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

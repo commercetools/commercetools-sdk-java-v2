@@ -1,9 +1,11 @@
-
 package com.commercetools.api.predicates.query.error;
 
 import com.commercetools.api.predicates.query.*;
 
-public class GraphQLExternalOAuthFailedErrorQueryBuilderDsl {
+import java.util.function.Function;
+
+
+public class GraphQLExternalOAuthFailedErrorQueryBuilderDsl  {
     public GraphQLExternalOAuthFailedErrorQueryBuilderDsl() {
     }
 
@@ -12,9 +14,8 @@ public class GraphQLExternalOAuthFailedErrorQueryBuilderDsl {
     }
 
     public StringComparisonPredicateBuilder<GraphQLExternalOAuthFailedErrorQueryBuilderDsl> code() {
-        return new StringComparisonPredicateBuilder<>(
-            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("code")),
-            p -> new CombinationQueryPredicate<>(p, GraphQLExternalOAuthFailedErrorQueryBuilderDsl::of));
+        return new StringComparisonPredicateBuilder<>(BinaryQueryPredicate.of().left(new ConstantQueryPredicate("code")),
+        p -> new CombinationQueryPredicate<>(p, GraphQLExternalOAuthFailedErrorQueryBuilderDsl::of));
     }
-
+    
 }

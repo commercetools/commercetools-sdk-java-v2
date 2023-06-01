@@ -1,20 +1,22 @@
-
 package com.commercetools.api.models.message;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
+import com.commercetools.api.models.message.OrderMessagePayload;
 import com.commercetools.api.models.order_edit.OrderEdit;
 import com.commercetools.api.models.order_edit.OrderEditApplied;
+import com.commercetools.api.models.message.OrderEditAppliedMessagePayloadImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Generated after a successfully applying an OrderEdit.</p>
@@ -28,9 +30,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .result(resultBuilder -> resultBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = OrderEditAppliedMessagePayloadImpl.class)
 public interface OrderEditAppliedMessagePayload extends OrderMessagePayload {
 
@@ -47,7 +52,6 @@ public interface OrderEditAppliedMessagePayload extends OrderMessagePayload {
     @Valid
     @JsonProperty("edit")
     public OrderEdit getEdit();
-
     /**
      *  <p>Information about a successfully applied OrderEdit.</p>
      * @return result
@@ -61,23 +65,26 @@ public interface OrderEditAppliedMessagePayload extends OrderMessagePayload {
      *  <p>OrderEdit that was applied.</p>
      * @param edit value to be set
      */
-
+    
     public void setEdit(final OrderEdit edit);
-
+    
+    
     /**
      *  <p>Information about a successfully applied OrderEdit.</p>
      * @param result value to be set
      */
-
+    
     public void setResult(final OrderEditApplied result);
+    
 
     /**
      * factory method
      * @return instance of OrderEditAppliedMessagePayload
      */
-    public static OrderEditAppliedMessagePayload of() {
+    public static OrderEditAppliedMessagePayload of(){
         return new OrderEditAppliedMessagePayloadImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy OrderEditAppliedMessagePayload
@@ -114,7 +121,7 @@ public interface OrderEditAppliedMessagePayload extends OrderMessagePayload {
     public static OrderEditAppliedMessagePayloadBuilder builder() {
         return OrderEditAppliedMessagePayloadBuilder.of();
     }
-
+    
     /**
      * create builder for OrderEditAppliedMessagePayload instance
      * @param template instance with prefilled values for the builder
@@ -123,6 +130,7 @@ public interface OrderEditAppliedMessagePayload extends OrderMessagePayload {
     public static OrderEditAppliedMessagePayloadBuilder builder(final OrderEditAppliedMessagePayload template) {
         return OrderEditAppliedMessagePayloadBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -133,7 +141,7 @@ public interface OrderEditAppliedMessagePayload extends OrderMessagePayload {
     default <T> T withOrderEditAppliedMessagePayload(Function<OrderEditAppliedMessagePayload, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

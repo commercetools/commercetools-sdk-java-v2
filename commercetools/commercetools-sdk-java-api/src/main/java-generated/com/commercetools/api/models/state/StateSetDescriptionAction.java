@@ -1,19 +1,21 @@
-
 package com.commercetools.api.models.state;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
 import com.commercetools.api.models.common.LocalizedString;
+import com.commercetools.api.models.state.StateUpdateAction;
+import com.commercetools.api.models.state.StateSetDescriptionActionImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * StateSetDescriptionAction
@@ -26,9 +28,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .description(descriptionBuilder -> descriptionBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = StateSetDescriptionActionImpl.class)
 public interface StateSetDescriptionAction extends StateUpdateAction {
 
@@ -50,16 +55,18 @@ public interface StateSetDescriptionAction extends StateUpdateAction {
      *  <p>Value to set. If empty, any existing value will be removed.</p>
      * @param description value to be set
      */
-
+    
     public void setDescription(final LocalizedString description);
+    
 
     /**
      * factory method
      * @return instance of StateSetDescriptionAction
      */
-    public static StateSetDescriptionAction of() {
+    public static StateSetDescriptionAction of(){
         return new StateSetDescriptionActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy StateSetDescriptionAction
@@ -83,8 +90,7 @@ public interface StateSetDescriptionAction extends StateUpdateAction {
             return null;
         }
         StateSetDescriptionActionImpl instance = new StateSetDescriptionActionImpl();
-        instance.setDescription(
-            com.commercetools.api.models.common.LocalizedString.deepCopy(template.getDescription()));
+        instance.setDescription(com.commercetools.api.models.common.LocalizedString.deepCopy(template.getDescription()));
         return instance;
     }
 
@@ -95,7 +101,7 @@ public interface StateSetDescriptionAction extends StateUpdateAction {
     public static StateSetDescriptionActionBuilder builder() {
         return StateSetDescriptionActionBuilder.of();
     }
-
+    
     /**
      * create builder for StateSetDescriptionAction instance
      * @param template instance with prefilled values for the builder
@@ -104,6 +110,7 @@ public interface StateSetDescriptionAction extends StateUpdateAction {
     public static StateSetDescriptionActionBuilder builder(final StateSetDescriptionAction template) {
         return StateSetDescriptionActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -114,7 +121,7 @@ public interface StateSetDescriptionAction extends StateUpdateAction {
     default <T> T withStateSetDescriptionAction(Function<StateSetDescriptionAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

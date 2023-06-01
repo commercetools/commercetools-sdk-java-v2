@@ -1,18 +1,21 @@
-
 package com.commercetools.history.models.change;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
-
+import com.commercetools.history.models.change.Change;
 import com.commercetools.history.models.common.TaxCalculationMode;
+import com.commercetools.history.models.change.ChangeTaxCalculationModeChangeImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * ChangeTaxCalculationModeChange
@@ -27,9 +30,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .nextValue(TaxCalculationMode.LINE_ITEM_LEVEL)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = ChangeTaxCalculationModeChangeImpl.class)
 public interface ChangeTaxCalculationModeChange extends Change {
 
@@ -45,7 +51,6 @@ public interface ChangeTaxCalculationModeChange extends Change {
     @NotNull
     @JsonProperty("type")
     public String getType();
-
     /**
      *  <p>Shape of the action for <code>changeTaxCalculationMode</code></p>
      * @return change
@@ -53,7 +58,6 @@ public interface ChangeTaxCalculationModeChange extends Change {
     @NotNull
     @JsonProperty("change")
     public String getChange();
-
     /**
      *
      * @return previousValue
@@ -61,7 +65,6 @@ public interface ChangeTaxCalculationModeChange extends Change {
     @NotNull
     @JsonProperty("previousValue")
     public TaxCalculationMode getPreviousValue();
-
     /**
      *
      * @return nextValue
@@ -74,30 +77,34 @@ public interface ChangeTaxCalculationModeChange extends Change {
      *  <p>Shape of the action for <code>changeTaxCalculationMode</code></p>
      * @param change value to be set
      */
-
+    
     public void setChange(final String change);
-
+    
+    
     /**
      * set previousValue
      * @param previousValue value to be set
      */
-
+    
     public void setPreviousValue(final TaxCalculationMode previousValue);
-
+    
+    
     /**
      * set nextValue
      * @param nextValue value to be set
      */
-
+    
     public void setNextValue(final TaxCalculationMode nextValue);
+    
 
     /**
      * factory method
      * @return instance of ChangeTaxCalculationModeChange
      */
-    public static ChangeTaxCalculationModeChange of() {
+    public static ChangeTaxCalculationModeChange of(){
         return new ChangeTaxCalculationModeChangeImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy ChangeTaxCalculationModeChange
@@ -136,7 +143,7 @@ public interface ChangeTaxCalculationModeChange extends Change {
     public static ChangeTaxCalculationModeChangeBuilder builder() {
         return ChangeTaxCalculationModeChangeBuilder.of();
     }
-
+    
     /**
      * create builder for ChangeTaxCalculationModeChange instance
      * @param template instance with prefilled values for the builder
@@ -145,6 +152,7 @@ public interface ChangeTaxCalculationModeChange extends Change {
     public static ChangeTaxCalculationModeChangeBuilder builder(final ChangeTaxCalculationModeChange template) {
         return ChangeTaxCalculationModeChangeBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -155,7 +163,7 @@ public interface ChangeTaxCalculationModeChange extends Change {
     default <T> T withChangeTaxCalculationModeChange(Function<ChangeTaxCalculationModeChange, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

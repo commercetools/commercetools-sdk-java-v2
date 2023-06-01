@@ -1,17 +1,20 @@
-
 package com.commercetools.api.models.order_edit;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
 
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
+import com.commercetools.api.models.order_edit.OrderEditApplyImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * OrderEditApply
@@ -25,11 +28,15 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .resourceVersion(0.3)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = OrderEditApplyImpl.class)
-public interface OrderEditApply {
+public interface OrderEditApply  {
+
 
     /**
      *
@@ -38,7 +45,6 @@ public interface OrderEditApply {
     @NotNull
     @JsonProperty("editVersion")
     public Long getEditVersion();
-
     /**
      *
      * @return resourceVersion
@@ -51,23 +57,26 @@ public interface OrderEditApply {
      * set editVersion
      * @param editVersion value to be set
      */
-
+    
     public void setEditVersion(final Long editVersion);
-
+    
+    
     /**
      * set resourceVersion
      * @param resourceVersion value to be set
      */
-
+    
     public void setResourceVersion(final Long resourceVersion);
+    
 
     /**
      * factory method
      * @return instance of OrderEditApply
      */
-    public static OrderEditApply of() {
+    public static OrderEditApply of(){
         return new OrderEditApplyImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy OrderEditApply
@@ -104,7 +113,7 @@ public interface OrderEditApply {
     public static OrderEditApplyBuilder builder() {
         return OrderEditApplyBuilder.of();
     }
-
+    
     /**
      * create builder for OrderEditApply instance
      * @param template instance with prefilled values for the builder
@@ -113,6 +122,7 @@ public interface OrderEditApply {
     public static OrderEditApplyBuilder builder(final OrderEditApply template) {
         return OrderEditApplyBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -123,7 +133,7 @@ public interface OrderEditApply {
     default <T> T withOrderEditApply(Function<OrderEditApply, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

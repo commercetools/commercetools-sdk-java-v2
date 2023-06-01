@@ -1,8 +1,11 @@
-
 package com.commercetools.api.models.error;
 
+import com.commercetools.api.models.error.GraphQLErrorObject;
+import com.commercetools.api.models.error.GraphQLEnumValuesMustMatchError;
+import javax.annotation.Nullable;
 import java.util.*;
-
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -15,11 +18,16 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     GraphQLEnumValuesMustMatchError graphQLEnumValuesMustMatchError = GraphQLEnumValuesMustMatchError.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class GraphQLEnumValuesMustMatchErrorBuilder implements Builder<GraphQLEnumValuesMustMatchError> {
 
+    
+    
     private Map<String, java.lang.Object> values = new HashMap<>();
 
     /**
@@ -27,19 +35,19 @@ public class GraphQLEnumValuesMustMatchErrorBuilder implements Builder<GraphQLEn
      * @param values properties to be set
      * @return Builder
      */
-
-    public GraphQLEnumValuesMustMatchErrorBuilder values(final Map<String, java.lang.Object> values) {
+    
+    public GraphQLEnumValuesMustMatchErrorBuilder values( final Map<String, java.lang.Object> values){
         this.values = values;
         return this;
     }
-
+    
     /**
      *  <p>Error-specific additional fields.</p>
      * @param key property name
      * @param value property value
      * @return Builder
      */
-
+    
     public GraphQLEnumValuesMustMatchErrorBuilder addValue(final String key, final java.lang.Object value) {
         if (this.values == null) {
             values = new HashMap<>();
@@ -47,13 +55,15 @@ public class GraphQLEnumValuesMustMatchErrorBuilder implements Builder<GraphQLEn
         values.put(key, value);
         return this;
     }
+    
 
     /**
      *  <p>Error-specific additional fields.</p>
      * @return pattern properties
      */
-
-    public Map<String, java.lang.Object> getValues() {
+    
+    
+    public Map<String, java.lang.Object> getValues(){
         return this.values;
     }
 
@@ -64,7 +74,7 @@ public class GraphQLEnumValuesMustMatchErrorBuilder implements Builder<GraphQLEn
     public GraphQLEnumValuesMustMatchError build() {
         return new GraphQLEnumValuesMustMatchErrorImpl(values);
     }
-
+    
     /**
      * builds GraphQLEnumValuesMustMatchError without checking for non-null required values
      * @return GraphQLEnumValuesMustMatchError
@@ -75,7 +85,7 @@ public class GraphQLEnumValuesMustMatchErrorBuilder implements Builder<GraphQLEn
 
     /**
      * factory method for an instance of GraphQLEnumValuesMustMatchErrorBuilder
-     * @return builder
+     * @return builder 
      */
     public static GraphQLEnumValuesMustMatchErrorBuilder of() {
         return new GraphQLEnumValuesMustMatchErrorBuilder();

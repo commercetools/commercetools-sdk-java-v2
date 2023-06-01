@@ -1,17 +1,21 @@
-
 package com.commercetools.api.models.state;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
+import com.commercetools.api.models.state.StateRoleEnum;
+import com.commercetools.api.models.state.StateUpdateAction;
+import com.commercetools.api.models.state.StateSetRolesActionImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * StateSetRolesAction
@@ -24,9 +28,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .plusRoles(rolesBuilder -> rolesBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = StateSetRolesActionImpl.class)
 public interface StateSetRolesAction extends StateUpdateAction {
 
@@ -47,24 +54,24 @@ public interface StateSetRolesAction extends StateUpdateAction {
      *  <p>Value to set. If empty, any existing value will be removed.</p>
      * @param roles values to be set
      */
-
+    
     @JsonIgnore
-    public void setRoles(final StateRoleEnum... roles);
-
+    public void setRoles(final StateRoleEnum ...roles);
     /**
      *  <p>Value to set. If empty, any existing value will be removed.</p>
      * @param roles values to be set
      */
-
+    
     public void setRoles(final List<StateRoleEnum> roles);
 
     /**
      * factory method
      * @return instance of StateSetRolesAction
      */
-    public static StateSetRolesAction of() {
+    public static StateSetRolesAction of(){
         return new StateSetRolesActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy StateSetRolesAction
@@ -88,7 +95,9 @@ public interface StateSetRolesAction extends StateUpdateAction {
             return null;
         }
         StateSetRolesActionImpl instance = new StateSetRolesActionImpl();
-        instance.setRoles(Optional.ofNullable(template.getRoles()).map(ArrayList::new).orElse(null));
+        instance.setRoles(Optional.ofNullable(template.getRoles())
+                .map(ArrayList::new)
+                .orElse(null));
         return instance;
     }
 
@@ -99,7 +108,7 @@ public interface StateSetRolesAction extends StateUpdateAction {
     public static StateSetRolesActionBuilder builder() {
         return StateSetRolesActionBuilder.of();
     }
-
+    
     /**
      * create builder for StateSetRolesAction instance
      * @param template instance with prefilled values for the builder
@@ -108,6 +117,7 @@ public interface StateSetRolesAction extends StateUpdateAction {
     public static StateSetRolesActionBuilder builder(final StateSetRolesAction template) {
         return StateSetRolesActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -118,7 +128,7 @@ public interface StateSetRolesAction extends StateUpdateAction {
     default <T> T withStateSetRolesAction(Function<StateSetRolesAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

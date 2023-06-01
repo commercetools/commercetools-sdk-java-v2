@@ -1,19 +1,21 @@
-
 package com.commercetools.history.models.change;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
+import com.commercetools.history.models.change.Change;
 import com.commercetools.history.models.common.Money;
+import com.commercetools.history.models.change.ChangeAmountAuthorizedChangeImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * ChangeAmountAuthorizedChange
@@ -28,9 +30,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .nextValue(nextValueBuilder -> nextValueBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = ChangeAmountAuthorizedChangeImpl.class)
 public interface ChangeAmountAuthorizedChange extends Change {
 
@@ -46,7 +51,6 @@ public interface ChangeAmountAuthorizedChange extends Change {
     @NotNull
     @JsonProperty("type")
     public String getType();
-
     /**
      *  <p>Internal Update action for <code>changeAmountAuthorized</code></p>
      * @return change
@@ -54,7 +58,6 @@ public interface ChangeAmountAuthorizedChange extends Change {
     @NotNull
     @JsonProperty("change")
     public String getChange();
-
     /**
      *
      * @return previousValue
@@ -63,7 +66,6 @@ public interface ChangeAmountAuthorizedChange extends Change {
     @Valid
     @JsonProperty("previousValue")
     public Money getPreviousValue();
-
     /**
      *
      * @return nextValue
@@ -77,30 +79,34 @@ public interface ChangeAmountAuthorizedChange extends Change {
      *  <p>Internal Update action for <code>changeAmountAuthorized</code></p>
      * @param change value to be set
      */
-
+    
     public void setChange(final String change);
-
+    
+    
     /**
      * set previousValue
      * @param previousValue value to be set
      */
-
+    
     public void setPreviousValue(final Money previousValue);
-
+    
+    
     /**
      * set nextValue
      * @param nextValue value to be set
      */
-
+    
     public void setNextValue(final Money nextValue);
+    
 
     /**
      * factory method
      * @return instance of ChangeAmountAuthorizedChange
      */
-    public static ChangeAmountAuthorizedChange of() {
+    public static ChangeAmountAuthorizedChange of(){
         return new ChangeAmountAuthorizedChangeImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy ChangeAmountAuthorizedChange
@@ -139,7 +145,7 @@ public interface ChangeAmountAuthorizedChange extends Change {
     public static ChangeAmountAuthorizedChangeBuilder builder() {
         return ChangeAmountAuthorizedChangeBuilder.of();
     }
-
+    
     /**
      * create builder for ChangeAmountAuthorizedChange instance
      * @param template instance with prefilled values for the builder
@@ -148,6 +154,7 @@ public interface ChangeAmountAuthorizedChange extends Change {
     public static ChangeAmountAuthorizedChangeBuilder builder(final ChangeAmountAuthorizedChange template) {
         return ChangeAmountAuthorizedChangeBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -158,7 +165,7 @@ public interface ChangeAmountAuthorizedChange extends Change {
     default <T> T withChangeAmountAuthorizedChange(Function<ChangeAmountAuthorizedChange, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

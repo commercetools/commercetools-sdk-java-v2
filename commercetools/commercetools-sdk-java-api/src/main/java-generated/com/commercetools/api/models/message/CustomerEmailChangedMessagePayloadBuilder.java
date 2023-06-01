@@ -1,8 +1,11 @@
-
 package com.commercetools.api.models.message;
 
+import com.commercetools.api.models.message.MessagePayload;
+import com.commercetools.api.models.message.CustomerEmailChangedMessagePayload;
+import javax.annotation.Nullable;
 import java.util.*;
-
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -16,30 +19,39 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .email("{email}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class CustomerEmailChangedMessagePayloadBuilder implements Builder<CustomerEmailChangedMessagePayload> {
 
+    
+    
     private String email;
 
+    
     /**
      *  <p>The <code>email</code> that was set during the Change Email update action.</p>
      * @param email value to be set
      * @return Builder
      */
-
-    public CustomerEmailChangedMessagePayloadBuilder email(final String email) {
+    
+    public CustomerEmailChangedMessagePayloadBuilder email( final String email) {
         this.email = email;
         return this;
     }
+    
+    
 
     /**
      *  <p>The <code>email</code> that was set during the Change Email update action.</p>
      * @return email
      */
-
-    public String getEmail() {
+    
+    
+    public String getEmail(){
         return this.email;
     }
 
@@ -51,7 +63,7 @@ public class CustomerEmailChangedMessagePayloadBuilder implements Builder<Custom
         Objects.requireNonNull(email, CustomerEmailChangedMessagePayload.class + ": email is missing");
         return new CustomerEmailChangedMessagePayloadImpl(email);
     }
-
+    
     /**
      * builds CustomerEmailChangedMessagePayload without checking for non-null required values
      * @return CustomerEmailChangedMessagePayload
@@ -62,7 +74,7 @@ public class CustomerEmailChangedMessagePayloadBuilder implements Builder<Custom
 
     /**
      * factory method for an instance of CustomerEmailChangedMessagePayloadBuilder
-     * @return builder
+     * @return builder 
      */
     public static CustomerEmailChangedMessagePayloadBuilder of() {
         return new CustomerEmailChangedMessagePayloadBuilder();

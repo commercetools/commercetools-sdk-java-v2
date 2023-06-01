@@ -1,10 +1,12 @@
-
 package com.commercetools.api.models.shopping_list;
 
-import java.util.*;
-
+import com.commercetools.api.models.common.ReferenceTypeId;
+import com.commercetools.api.models.common.ResourceIdentifier;
+import com.commercetools.api.models.shopping_list.ShoppingListResourceIdentifier;
 import javax.annotation.Nullable;
-
+import java.util.*;
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -17,56 +19,67 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     ShoppingListResourceIdentifier shoppingListResourceIdentifier = ShoppingListResourceIdentifier.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class ShoppingListResourceIdentifierBuilder implements Builder<ShoppingListResourceIdentifier> {
 
+    
     @Nullable
     private String id;
-
+    
+    
     @Nullable
     private String key;
 
+    
     /**
      *  <p>Unique identifier of the referenced ShoppingList. Either <code>id</code> or <code>key</code> is required.</p>
      * @param id value to be set
      * @return Builder
      */
-
+    
     public ShoppingListResourceIdentifierBuilder id(@Nullable final String id) {
         this.id = id;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>User-defined unique identifier of the referenced ShoppingList. Either <code>id</code> or <code>key</code> is required.</p>
      * @param key value to be set
      * @return Builder
      */
-
+    
     public ShoppingListResourceIdentifierBuilder key(@Nullable final String key) {
         this.key = key;
         return this;
     }
+    
+    
 
     /**
      *  <p>Unique identifier of the referenced ShoppingList. Either <code>id</code> or <code>key</code> is required.</p>
      * @return id
      */
-
+    
     @Nullable
-    public String getId() {
+    public String getId(){
         return this.id;
     }
-
+    
     /**
      *  <p>User-defined unique identifier of the referenced ShoppingList. Either <code>id</code> or <code>key</code> is required.</p>
      * @return key
      */
-
+    
     @Nullable
-    public String getKey() {
+    public String getKey(){
         return this.key;
     }
 
@@ -77,7 +90,7 @@ public class ShoppingListResourceIdentifierBuilder implements Builder<ShoppingLi
     public ShoppingListResourceIdentifier build() {
         return new ShoppingListResourceIdentifierImpl(id, key);
     }
-
+    
     /**
      * builds ShoppingListResourceIdentifier without checking for non-null required values
      * @return ShoppingListResourceIdentifier
@@ -88,7 +101,7 @@ public class ShoppingListResourceIdentifierBuilder implements Builder<ShoppingLi
 
     /**
      * factory method for an instance of ShoppingListResourceIdentifierBuilder
-     * @return builder
+     * @return builder 
      */
     public static ShoppingListResourceIdentifierBuilder of() {
         return new ShoppingListResourceIdentifierBuilder();

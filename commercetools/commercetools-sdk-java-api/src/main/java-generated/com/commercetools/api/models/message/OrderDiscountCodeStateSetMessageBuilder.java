@@ -1,11 +1,13 @@
-
 package com.commercetools.api.models.message;
 
+import com.commercetools.api.models.cart.DiscountCodeState;
+import com.commercetools.api.models.discount_code.DiscountCodeReference;
+import com.commercetools.api.models.message.OrderMessage;
+import com.commercetools.api.models.message.OrderDiscountCodeStateSetMessage;
+import javax.annotation.Nullable;
 import java.util.*;
 import java.util.function.Function;
-
-import javax.annotation.Nullable;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -27,421 +29,474 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .state(DiscountCodeState.NOT_ACTIVE)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class OrderDiscountCodeStateSetMessageBuilder implements Builder<OrderDiscountCodeStateSetMessage> {
 
+    
+    
     private String id;
-
+    
+    
+    
     private Long version;
-
+    
+    
+    
     private java.time.ZonedDateTime createdAt;
-
+    
+    
+    
     private java.time.ZonedDateTime lastModifiedAt;
-
+    
+    
     @Nullable
     private com.commercetools.api.models.common.LastModifiedBy lastModifiedBy;
-
+    
+    
     @Nullable
     private com.commercetools.api.models.common.CreatedBy createdBy;
-
+    
+    
+    
     private Long sequenceNumber;
-
+    
+    
+    
     private com.commercetools.api.models.common.Reference resource;
-
+    
+    
+    
     private Long resourceVersion;
-
+    
+    
     @Nullable
     private com.commercetools.api.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers;
-
+    
+    
+    
     private com.commercetools.api.models.discount_code.DiscountCodeReference discountCode;
-
+    
+    
+    
     private com.commercetools.api.models.cart.DiscountCodeState state;
-
+    
+    
     @Nullable
     private com.commercetools.api.models.cart.DiscountCodeState oldState;
 
+    
     /**
      *  <p>Unique identifier of the Message. Can be used to track which Messages have been processed.</p>
      * @param id value to be set
      * @return Builder
      */
-
-    public OrderDiscountCodeStateSetMessageBuilder id(final String id) {
+    
+    public OrderDiscountCodeStateSetMessageBuilder id( final String id) {
         this.id = id;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Version of a resource. In case of Messages, this is always <code>1</code>.</p>
      * @param version value to be set
      * @return Builder
      */
-
-    public OrderDiscountCodeStateSetMessageBuilder version(final Long version) {
+    
+    public OrderDiscountCodeStateSetMessageBuilder version( final Long version) {
         this.version = version;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Date and time (UTC) the Message was generated.</p>
      * @param createdAt value to be set
      * @return Builder
      */
-
-    public OrderDiscountCodeStateSetMessageBuilder createdAt(final java.time.ZonedDateTime createdAt) {
+    
+    public OrderDiscountCodeStateSetMessageBuilder createdAt( final java.time.ZonedDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Value of <code>createdAt</code>.</p>
      * @param lastModifiedAt value to be set
      * @return Builder
      */
-
-    public OrderDiscountCodeStateSetMessageBuilder lastModifiedAt(final java.time.ZonedDateTime lastModifiedAt) {
+    
+    public OrderDiscountCodeStateSetMessageBuilder lastModifiedAt( final java.time.ZonedDateTime lastModifiedAt) {
         this.lastModifiedAt = lastModifiedAt;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Value of <code>createdBy</code>.</p>
      * @param builder function to build the lastModifiedBy value
      * @return Builder
      */
-
-    public OrderDiscountCodeStateSetMessageBuilder lastModifiedBy(
-            Function<com.commercetools.api.models.common.LastModifiedByBuilder, com.commercetools.api.models.common.LastModifiedByBuilder> builder) {
+    
+    public OrderDiscountCodeStateSetMessageBuilder lastModifiedBy(Function<com.commercetools.api.models.common.LastModifiedByBuilder, com.commercetools.api.models.common.LastModifiedByBuilder> builder) {
         this.lastModifiedBy = builder.apply(com.commercetools.api.models.common.LastModifiedByBuilder.of()).build();
         return this;
     }
-
+    
     /**
      *  <p>Value of <code>createdBy</code>.</p>
      * @param builder function to build the lastModifiedBy value
      * @return Builder
      */
-
-    public OrderDiscountCodeStateSetMessageBuilder withLastModifiedBy(
-            Function<com.commercetools.api.models.common.LastModifiedByBuilder, com.commercetools.api.models.common.LastModifiedBy> builder) {
+    
+    public OrderDiscountCodeStateSetMessageBuilder withLastModifiedBy(Function<com.commercetools.api.models.common.LastModifiedByBuilder, com.commercetools.api.models.common.LastModifiedBy> builder) {
         this.lastModifiedBy = builder.apply(com.commercetools.api.models.common.LastModifiedByBuilder.of());
         return this;
     }
-
+                    
     /**
      *  <p>Value of <code>createdBy</code>.</p>
      * @param lastModifiedBy value to be set
      * @return Builder
      */
-
-    public OrderDiscountCodeStateSetMessageBuilder lastModifiedBy(
-            @Nullable final com.commercetools.api.models.common.LastModifiedBy lastModifiedBy) {
+    
+    public OrderDiscountCodeStateSetMessageBuilder lastModifiedBy(@Nullable final com.commercetools.api.models.common.LastModifiedBy lastModifiedBy) {
         this.lastModifiedBy = lastModifiedBy;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      * @param builder function to build the createdBy value
      * @return Builder
      */
-
-    public OrderDiscountCodeStateSetMessageBuilder createdBy(
-            Function<com.commercetools.api.models.common.CreatedByBuilder, com.commercetools.api.models.common.CreatedByBuilder> builder) {
+    
+    public OrderDiscountCodeStateSetMessageBuilder createdBy(Function<com.commercetools.api.models.common.CreatedByBuilder, com.commercetools.api.models.common.CreatedByBuilder> builder) {
         this.createdBy = builder.apply(com.commercetools.api.models.common.CreatedByBuilder.of()).build();
         return this;
     }
-
+    
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      * @param builder function to build the createdBy value
      * @return Builder
      */
-
-    public OrderDiscountCodeStateSetMessageBuilder withCreatedBy(
-            Function<com.commercetools.api.models.common.CreatedByBuilder, com.commercetools.api.models.common.CreatedBy> builder) {
+    
+    public OrderDiscountCodeStateSetMessageBuilder withCreatedBy(Function<com.commercetools.api.models.common.CreatedByBuilder, com.commercetools.api.models.common.CreatedBy> builder) {
         this.createdBy = builder.apply(com.commercetools.api.models.common.CreatedByBuilder.of());
         return this;
     }
-
+                    
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      * @param createdBy value to be set
      * @return Builder
      */
-
-    public OrderDiscountCodeStateSetMessageBuilder createdBy(
-            @Nullable final com.commercetools.api.models.common.CreatedBy createdBy) {
+    
+    public OrderDiscountCodeStateSetMessageBuilder createdBy(@Nullable final com.commercetools.api.models.common.CreatedBy createdBy) {
         this.createdBy = createdBy;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Message number in relation to other Messages for a given resource. The <code>sequenceNumber</code> of the next Message for the resource is the successor of the <code>sequenceNumber</code> of the current Message. Meaning, the <code>sequenceNumber</code> of the next Message equals the <code>sequenceNumber</code> of the current Message + 1. <code>sequenceNumber</code> can be used to ensure that Messages are processed in the correct order for a particular resource.</p>
      * @param sequenceNumber value to be set
      * @return Builder
      */
-
-    public OrderDiscountCodeStateSetMessageBuilder sequenceNumber(final Long sequenceNumber) {
+    
+    public OrderDiscountCodeStateSetMessageBuilder sequenceNumber( final Long sequenceNumber) {
         this.sequenceNumber = sequenceNumber;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Reference to the resource on which the change or action was performed.</p>
      * @param resource value to be set
      * @return Builder
      */
-
-    public OrderDiscountCodeStateSetMessageBuilder resource(
-            final com.commercetools.api.models.common.Reference resource) {
+    
+    public OrderDiscountCodeStateSetMessageBuilder resource( final com.commercetools.api.models.common.Reference resource) {
         this.resource = resource;
         return this;
     }
-
+    
+    
     /**
      *  <p>Reference to the resource on which the change or action was performed.</p>
      * @param builder function to build the resource value
      * @return Builder
      */
-
-    public OrderDiscountCodeStateSetMessageBuilder resource(
-            Function<com.commercetools.api.models.common.ReferenceBuilder, Builder<? extends com.commercetools.api.models.common.Reference>> builder) {
+    
+    public OrderDiscountCodeStateSetMessageBuilder resource(Function<com.commercetools.api.models.common.ReferenceBuilder, Builder<? extends com.commercetools.api.models.common.Reference>> builder) {
         this.resource = builder.apply(com.commercetools.api.models.common.ReferenceBuilder.of()).build();
         return this;
     }
-
+                    
+    
+    
     /**
      *  <p>Version of the resource on which the change or action was performed.</p>
      * @param resourceVersion value to be set
      * @return Builder
      */
-
-    public OrderDiscountCodeStateSetMessageBuilder resourceVersion(final Long resourceVersion) {
+    
+    public OrderDiscountCodeStateSetMessageBuilder resourceVersion( final Long resourceVersion) {
         this.resourceVersion = resourceVersion;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>User-provided identifiers of the resource, such as <code>key</code> or <code>externalId</code>. Only present if the resource has such identifiers.</p>
      * @param builder function to build the resourceUserProvidedIdentifiers value
      * @return Builder
      */
-
-    public OrderDiscountCodeStateSetMessageBuilder resourceUserProvidedIdentifiers(
-            Function<com.commercetools.api.models.message.UserProvidedIdentifiersBuilder, com.commercetools.api.models.message.UserProvidedIdentifiersBuilder> builder) {
-        this.resourceUserProvidedIdentifiers = builder
-                .apply(com.commercetools.api.models.message.UserProvidedIdentifiersBuilder.of())
-                .build();
+    
+    public OrderDiscountCodeStateSetMessageBuilder resourceUserProvidedIdentifiers(Function<com.commercetools.api.models.message.UserProvidedIdentifiersBuilder, com.commercetools.api.models.message.UserProvidedIdentifiersBuilder> builder) {
+        this.resourceUserProvidedIdentifiers = builder.apply(com.commercetools.api.models.message.UserProvidedIdentifiersBuilder.of()).build();
         return this;
     }
-
+    
     /**
      *  <p>User-provided identifiers of the resource, such as <code>key</code> or <code>externalId</code>. Only present if the resource has such identifiers.</p>
      * @param builder function to build the resourceUserProvidedIdentifiers value
      * @return Builder
      */
-
-    public OrderDiscountCodeStateSetMessageBuilder withResourceUserProvidedIdentifiers(
-            Function<com.commercetools.api.models.message.UserProvidedIdentifiersBuilder, com.commercetools.api.models.message.UserProvidedIdentifiers> builder) {
-        this.resourceUserProvidedIdentifiers = builder
-                .apply(com.commercetools.api.models.message.UserProvidedIdentifiersBuilder.of());
+    
+    public OrderDiscountCodeStateSetMessageBuilder withResourceUserProvidedIdentifiers(Function<com.commercetools.api.models.message.UserProvidedIdentifiersBuilder, com.commercetools.api.models.message.UserProvidedIdentifiers> builder) {
+        this.resourceUserProvidedIdentifiers = builder.apply(com.commercetools.api.models.message.UserProvidedIdentifiersBuilder.of());
         return this;
     }
-
+                    
     /**
      *  <p>User-provided identifiers of the resource, such as <code>key</code> or <code>externalId</code>. Only present if the resource has such identifiers.</p>
      * @param resourceUserProvidedIdentifiers value to be set
      * @return Builder
      */
-
-    public OrderDiscountCodeStateSetMessageBuilder resourceUserProvidedIdentifiers(
-            @Nullable final com.commercetools.api.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers) {
+    
+    public OrderDiscountCodeStateSetMessageBuilder resourceUserProvidedIdentifiers(@Nullable final com.commercetools.api.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers) {
         this.resourceUserProvidedIdentifiers = resourceUserProvidedIdentifiers;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>DiscountCode that changed due to the recalculation.</p>
      * @param builder function to build the discountCode value
      * @return Builder
      */
-
-    public OrderDiscountCodeStateSetMessageBuilder discountCode(
-            Function<com.commercetools.api.models.discount_code.DiscountCodeReferenceBuilder, com.commercetools.api.models.discount_code.DiscountCodeReferenceBuilder> builder) {
-        this.discountCode = builder.apply(com.commercetools.api.models.discount_code.DiscountCodeReferenceBuilder.of())
-                .build();
+    
+    public OrderDiscountCodeStateSetMessageBuilder discountCode(Function<com.commercetools.api.models.discount_code.DiscountCodeReferenceBuilder, com.commercetools.api.models.discount_code.DiscountCodeReferenceBuilder> builder) {
+        this.discountCode = builder.apply(com.commercetools.api.models.discount_code.DiscountCodeReferenceBuilder.of()).build();
         return this;
     }
-
+    
     /**
      *  <p>DiscountCode that changed due to the recalculation.</p>
      * @param builder function to build the discountCode value
      * @return Builder
      */
-
-    public OrderDiscountCodeStateSetMessageBuilder withDiscountCode(
-            Function<com.commercetools.api.models.discount_code.DiscountCodeReferenceBuilder, com.commercetools.api.models.discount_code.DiscountCodeReference> builder) {
+    
+    public OrderDiscountCodeStateSetMessageBuilder withDiscountCode(Function<com.commercetools.api.models.discount_code.DiscountCodeReferenceBuilder, com.commercetools.api.models.discount_code.DiscountCodeReference> builder) {
         this.discountCode = builder.apply(com.commercetools.api.models.discount_code.DiscountCodeReferenceBuilder.of());
         return this;
     }
-
+                    
     /**
      *  <p>DiscountCode that changed due to the recalculation.</p>
      * @param discountCode value to be set
      * @return Builder
      */
-
-    public OrderDiscountCodeStateSetMessageBuilder discountCode(
-            final com.commercetools.api.models.discount_code.DiscountCodeReference discountCode) {
+    
+    public OrderDiscountCodeStateSetMessageBuilder discountCode( final com.commercetools.api.models.discount_code.DiscountCodeReference discountCode) {
         this.discountCode = discountCode;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>DiscountCodeState after the recalculation.</p>
      * @param state value to be set
      * @return Builder
      */
-
-    public OrderDiscountCodeStateSetMessageBuilder state(
-            final com.commercetools.api.models.cart.DiscountCodeState state) {
+    
+    public OrderDiscountCodeStateSetMessageBuilder state( final com.commercetools.api.models.cart.DiscountCodeState state) {
         this.state = state;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>DiscountCodeState before the recalculation.</p>
      * @param oldState value to be set
      * @return Builder
      */
-
-    public OrderDiscountCodeStateSetMessageBuilder oldState(
-            @Nullable final com.commercetools.api.models.cart.DiscountCodeState oldState) {
+    
+    public OrderDiscountCodeStateSetMessageBuilder oldState(@Nullable final com.commercetools.api.models.cart.DiscountCodeState oldState) {
         this.oldState = oldState;
         return this;
     }
+    
+    
 
     /**
      *  <p>Unique identifier of the Message. Can be used to track which Messages have been processed.</p>
      * @return id
      */
-
-    public String getId() {
+    
+    
+    public String getId(){
         return this.id;
     }
-
+    
     /**
      *  <p>Version of a resource. In case of Messages, this is always <code>1</code>.</p>
      * @return version
      */
-
-    public Long getVersion() {
+    
+    
+    public Long getVersion(){
         return this.version;
     }
-
+    
     /**
      *  <p>Date and time (UTC) the Message was generated.</p>
      * @return createdAt
      */
-
-    public java.time.ZonedDateTime getCreatedAt() {
+    
+    
+    public java.time.ZonedDateTime getCreatedAt(){
         return this.createdAt;
     }
-
+    
     /**
      *  <p>Value of <code>createdAt</code>.</p>
      * @return lastModifiedAt
      */
-
-    public java.time.ZonedDateTime getLastModifiedAt() {
+    
+    
+    public java.time.ZonedDateTime getLastModifiedAt(){
         return this.lastModifiedAt;
     }
-
+    
     /**
      *  <p>Value of <code>createdBy</code>.</p>
      * @return lastModifiedBy
      */
-
+    
     @Nullable
-    public com.commercetools.api.models.common.LastModifiedBy getLastModifiedBy() {
+    public com.commercetools.api.models.common.LastModifiedBy getLastModifiedBy(){
         return this.lastModifiedBy;
     }
-
+    
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      * @return createdBy
      */
-
+    
     @Nullable
-    public com.commercetools.api.models.common.CreatedBy getCreatedBy() {
+    public com.commercetools.api.models.common.CreatedBy getCreatedBy(){
         return this.createdBy;
     }
-
+    
     /**
      *  <p>Message number in relation to other Messages for a given resource. The <code>sequenceNumber</code> of the next Message for the resource is the successor of the <code>sequenceNumber</code> of the current Message. Meaning, the <code>sequenceNumber</code> of the next Message equals the <code>sequenceNumber</code> of the current Message + 1. <code>sequenceNumber</code> can be used to ensure that Messages are processed in the correct order for a particular resource.</p>
      * @return sequenceNumber
      */
-
-    public Long getSequenceNumber() {
+    
+    
+    public Long getSequenceNumber(){
         return this.sequenceNumber;
     }
-
+    
     /**
      *  <p>Reference to the resource on which the change or action was performed.</p>
      * @return resource
      */
-
-    public com.commercetools.api.models.common.Reference getResource() {
+    
+    
+    public com.commercetools.api.models.common.Reference getResource(){
         return this.resource;
     }
-
+    
     /**
      *  <p>Version of the resource on which the change or action was performed.</p>
      * @return resourceVersion
      */
-
-    public Long getResourceVersion() {
+    
+    
+    public Long getResourceVersion(){
         return this.resourceVersion;
     }
-
+    
     /**
      *  <p>User-provided identifiers of the resource, such as <code>key</code> or <code>externalId</code>. Only present if the resource has such identifiers.</p>
      * @return resourceUserProvidedIdentifiers
      */
-
+    
     @Nullable
-    public com.commercetools.api.models.message.UserProvidedIdentifiers getResourceUserProvidedIdentifiers() {
+    public com.commercetools.api.models.message.UserProvidedIdentifiers getResourceUserProvidedIdentifiers(){
         return this.resourceUserProvidedIdentifiers;
     }
-
+    
     /**
      *  <p>DiscountCode that changed due to the recalculation.</p>
      * @return discountCode
      */
-
-    public com.commercetools.api.models.discount_code.DiscountCodeReference getDiscountCode() {
+    
+    
+    public com.commercetools.api.models.discount_code.DiscountCodeReference getDiscountCode(){
         return this.discountCode;
     }
-
+    
     /**
      *  <p>DiscountCodeState after the recalculation.</p>
      * @return state
      */
-
-    public com.commercetools.api.models.cart.DiscountCodeState getState() {
+    
+    
+    public com.commercetools.api.models.cart.DiscountCodeState getState(){
         return this.state;
     }
-
+    
     /**
      *  <p>DiscountCodeState before the recalculation.</p>
      * @return oldState
      */
-
+    
     @Nullable
-    public com.commercetools.api.models.cart.DiscountCodeState getOldState() {
+    public com.commercetools.api.models.cart.DiscountCodeState getOldState(){
         return this.oldState;
     }
 
@@ -456,28 +511,23 @@ public class OrderDiscountCodeStateSetMessageBuilder implements Builder<OrderDis
         Objects.requireNonNull(lastModifiedAt, OrderDiscountCodeStateSetMessage.class + ": lastModifiedAt is missing");
         Objects.requireNonNull(sequenceNumber, OrderDiscountCodeStateSetMessage.class + ": sequenceNumber is missing");
         Objects.requireNonNull(resource, OrderDiscountCodeStateSetMessage.class + ": resource is missing");
-        Objects.requireNonNull(resourceVersion,
-            OrderDiscountCodeStateSetMessage.class + ": resourceVersion is missing");
+        Objects.requireNonNull(resourceVersion, OrderDiscountCodeStateSetMessage.class + ": resourceVersion is missing");
         Objects.requireNonNull(discountCode, OrderDiscountCodeStateSetMessage.class + ": discountCode is missing");
         Objects.requireNonNull(state, OrderDiscountCodeStateSetMessage.class + ": state is missing");
-        return new OrderDiscountCodeStateSetMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy,
-            createdBy, sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, discountCode, state,
-            oldState);
+        return new OrderDiscountCodeStateSetMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, discountCode, state, oldState);
     }
-
+    
     /**
      * builds OrderDiscountCodeStateSetMessage without checking for non-null required values
      * @return OrderDiscountCodeStateSetMessage
      */
     public OrderDiscountCodeStateSetMessage buildUnchecked() {
-        return new OrderDiscountCodeStateSetMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy,
-            createdBy, sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, discountCode, state,
-            oldState);
+        return new OrderDiscountCodeStateSetMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, discountCode, state, oldState);
     }
 
     /**
      * factory method for an instance of OrderDiscountCodeStateSetMessageBuilder
-     * @return builder
+     * @return builder 
      */
     public static OrderDiscountCodeStateSetMessageBuilder of() {
         return new OrderDiscountCodeStateSetMessageBuilder();

@@ -1,19 +1,21 @@
-
 package com.commercetools.api.models.me;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
 import com.commercetools.api.models.business_unit.BusinessUnitResourceIdentifier;
+import com.commercetools.api.models.me.MyBusinessUnitUpdateAction;
+import com.commercetools.api.models.me.MyBusinessUnitChangeParentUnitActionImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Changing the parent of a Business Unit generates a BusinessUnitParentUnitChanged Message.</p>
@@ -26,9 +28,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .parentUnit(parentUnitBuilder -> parentUnitBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = MyBusinessUnitChangeParentUnitActionImpl.class)
 public interface MyBusinessUnitChangeParentUnitAction extends MyBusinessUnitUpdateAction {
 
@@ -50,16 +55,18 @@ public interface MyBusinessUnitChangeParentUnitAction extends MyBusinessUnitUpda
      *  <p>New parent unit of the Business Unit.</p>
      * @param parentUnit value to be set
      */
-
+    
     public void setParentUnit(final BusinessUnitResourceIdentifier parentUnit);
+    
 
     /**
      * factory method
      * @return instance of MyBusinessUnitChangeParentUnitAction
      */
-    public static MyBusinessUnitChangeParentUnitAction of() {
+    public static MyBusinessUnitChangeParentUnitAction of(){
         return new MyBusinessUnitChangeParentUnitActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy MyBusinessUnitChangeParentUnitAction
@@ -78,14 +85,12 @@ public interface MyBusinessUnitChangeParentUnitAction extends MyBusinessUnitUpda
      * @return copy instance
      */
     @Nullable
-    public static MyBusinessUnitChangeParentUnitAction deepCopy(
-            @Nullable final MyBusinessUnitChangeParentUnitAction template) {
+    public static MyBusinessUnitChangeParentUnitAction deepCopy(@Nullable final MyBusinessUnitChangeParentUnitAction template) {
         if (template == null) {
             return null;
         }
         MyBusinessUnitChangeParentUnitActionImpl instance = new MyBusinessUnitChangeParentUnitActionImpl();
-        instance.setParentUnit(com.commercetools.api.models.business_unit.BusinessUnitResourceIdentifier
-                .deepCopy(template.getParentUnit()));
+        instance.setParentUnit(com.commercetools.api.models.business_unit.BusinessUnitResourceIdentifier.deepCopy(template.getParentUnit()));
         return instance;
     }
 
@@ -96,16 +101,16 @@ public interface MyBusinessUnitChangeParentUnitAction extends MyBusinessUnitUpda
     public static MyBusinessUnitChangeParentUnitActionBuilder builder() {
         return MyBusinessUnitChangeParentUnitActionBuilder.of();
     }
-
+    
     /**
      * create builder for MyBusinessUnitChangeParentUnitAction instance
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static MyBusinessUnitChangeParentUnitActionBuilder builder(
-            final MyBusinessUnitChangeParentUnitAction template) {
+    public static MyBusinessUnitChangeParentUnitActionBuilder builder(final MyBusinessUnitChangeParentUnitAction template) {
         return MyBusinessUnitChangeParentUnitActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -116,7 +121,7 @@ public interface MyBusinessUnitChangeParentUnitAction extends MyBusinessUnitUpda
     default <T> T withMyBusinessUnitChangeParentUnitAction(Function<MyBusinessUnitChangeParentUnitAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

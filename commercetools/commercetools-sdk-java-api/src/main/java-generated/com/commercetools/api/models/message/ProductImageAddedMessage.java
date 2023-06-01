@@ -1,19 +1,21 @@
-
 package com.commercetools.api.models.message;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
 import com.commercetools.api.models.common.Image;
+import com.commercetools.api.models.message.Message;
+import com.commercetools.api.models.message.ProductImageAddedMessageImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Generated after a successful Add External Image update action or after the successful upload of an image.</p>
@@ -35,9 +37,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .staged(true)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = ProductImageAddedMessageImpl.class)
 public interface ProductImageAddedMessage extends Message {
 
@@ -53,7 +58,6 @@ public interface ProductImageAddedMessage extends Message {
     @NotNull
     @JsonProperty("variantId")
     public Long getVariantId();
-
     /**
      *  <p>Image that was added.</p>
      * @return image
@@ -62,7 +66,6 @@ public interface ProductImageAddedMessage extends Message {
     @Valid
     @JsonProperty("image")
     public Image getImage();
-
     /**
      *  <p>Whether the update was only applied to the staged Product Projection.</p>
      * @return staged
@@ -75,30 +78,34 @@ public interface ProductImageAddedMessage extends Message {
      *  <p>Unique identifier of the Product Variant to which the Image was added.</p>
      * @param variantId value to be set
      */
-
+    
     public void setVariantId(final Long variantId);
-
+    
+    
     /**
      *  <p>Image that was added.</p>
      * @param image value to be set
      */
-
+    
     public void setImage(final Image image);
-
+    
+    
     /**
      *  <p>Whether the update was only applied to the staged Product Projection.</p>
      * @param staged value to be set
      */
-
+    
     public void setStaged(final Boolean staged);
+    
 
     /**
      * factory method
      * @return instance of ProductImageAddedMessage
      */
-    public static ProductImageAddedMessage of() {
+    public static ProductImageAddedMessage of(){
         return new ProductImageAddedMessageImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy ProductImageAddedMessage
@@ -138,14 +145,12 @@ public interface ProductImageAddedMessage extends Message {
         instance.setVersion(template.getVersion());
         instance.setCreatedAt(template.getCreatedAt());
         instance.setLastModifiedAt(template.getLastModifiedAt());
-        instance.setLastModifiedBy(
-            com.commercetools.api.models.common.LastModifiedBy.deepCopy(template.getLastModifiedBy()));
+        instance.setLastModifiedBy(com.commercetools.api.models.common.LastModifiedBy.deepCopy(template.getLastModifiedBy()));
         instance.setCreatedBy(com.commercetools.api.models.common.CreatedBy.deepCopy(template.getCreatedBy()));
         instance.setSequenceNumber(template.getSequenceNumber());
         instance.setResource(com.commercetools.api.models.common.Reference.deepCopy(template.getResource()));
         instance.setResourceVersion(template.getResourceVersion());
-        instance.setResourceUserProvidedIdentifiers(com.commercetools.api.models.message.UserProvidedIdentifiers
-                .deepCopy(template.getResourceUserProvidedIdentifiers()));
+        instance.setResourceUserProvidedIdentifiers(com.commercetools.api.models.message.UserProvidedIdentifiers.deepCopy(template.getResourceUserProvidedIdentifiers()));
         instance.setVariantId(template.getVariantId());
         instance.setImage(com.commercetools.api.models.common.Image.deepCopy(template.getImage()));
         instance.setStaged(template.getStaged());
@@ -159,7 +164,7 @@ public interface ProductImageAddedMessage extends Message {
     public static ProductImageAddedMessageBuilder builder() {
         return ProductImageAddedMessageBuilder.of();
     }
-
+    
     /**
      * create builder for ProductImageAddedMessage instance
      * @param template instance with prefilled values for the builder
@@ -168,6 +173,7 @@ public interface ProductImageAddedMessage extends Message {
     public static ProductImageAddedMessageBuilder builder(final ProductImageAddedMessage template) {
         return ProductImageAddedMessageBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -178,7 +184,7 @@ public interface ProductImageAddedMessage extends Message {
     default <T> T withProductImageAddedMessage(Function<ProductImageAddedMessage, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

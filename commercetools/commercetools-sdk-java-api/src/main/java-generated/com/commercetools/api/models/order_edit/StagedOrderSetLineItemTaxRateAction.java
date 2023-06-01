@@ -1,20 +1,21 @@
-
 package com.commercetools.api.models.order_edit;
-
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.cart.ExternalTaxRateDraft;
 import com.commercetools.api.models.order.StagedOrderUpdateAction;
+import com.commercetools.api.models.order_edit.StagedOrderSetLineItemTaxRateActionImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * StagedOrderSetLineItemTaxRateAction
@@ -27,9 +28,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .lineItemId("{lineItemId}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = StagedOrderSetLineItemTaxRateActionImpl.class)
 public interface StagedOrderSetLineItemTaxRateAction extends StagedOrderUpdateAction {
 
@@ -45,7 +49,6 @@ public interface StagedOrderSetLineItemTaxRateAction extends StagedOrderUpdateAc
     @NotNull
     @JsonProperty("lineItemId")
     public String getLineItemId();
-
     /**
      *  <p>Controls calculation of taxed prices for Line Items, Custom Line Items, and Shipping Methods as explained in Cart tax calculation.</p>
      * @return externalTaxRate
@@ -53,12 +56,11 @@ public interface StagedOrderSetLineItemTaxRateAction extends StagedOrderUpdateAc
     @Valid
     @JsonProperty("externalTaxRate")
     public ExternalTaxRateDraft getExternalTaxRate();
-
     /**
      *  <p><code>key</code> of the ShippingMethod used for this Line Item. This is required for Carts with <code>Multiple</code> ShippingMode.</p>
      * @return shippingKey
      */
-
+    
     @JsonProperty("shippingKey")
     public String getShippingKey();
 
@@ -66,30 +68,34 @@ public interface StagedOrderSetLineItemTaxRateAction extends StagedOrderUpdateAc
      * set lineItemId
      * @param lineItemId value to be set
      */
-
+    
     public void setLineItemId(final String lineItemId);
-
+    
+    
     /**
      *  <p>Controls calculation of taxed prices for Line Items, Custom Line Items, and Shipping Methods as explained in Cart tax calculation.</p>
      * @param externalTaxRate value to be set
      */
-
+    
     public void setExternalTaxRate(final ExternalTaxRateDraft externalTaxRate);
-
+    
+    
     /**
      *  <p><code>key</code> of the ShippingMethod used for this Line Item. This is required for Carts with <code>Multiple</code> ShippingMode.</p>
      * @param shippingKey value to be set
      */
-
+    
     public void setShippingKey(final String shippingKey);
+    
 
     /**
      * factory method
      * @return instance of StagedOrderSetLineItemTaxRateAction
      */
-    public static StagedOrderSetLineItemTaxRateAction of() {
+    public static StagedOrderSetLineItemTaxRateAction of(){
         return new StagedOrderSetLineItemTaxRateActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy StagedOrderSetLineItemTaxRateAction
@@ -110,15 +116,13 @@ public interface StagedOrderSetLineItemTaxRateAction extends StagedOrderUpdateAc
      * @return copy instance
      */
     @Nullable
-    public static StagedOrderSetLineItemTaxRateAction deepCopy(
-            @Nullable final StagedOrderSetLineItemTaxRateAction template) {
+    public static StagedOrderSetLineItemTaxRateAction deepCopy(@Nullable final StagedOrderSetLineItemTaxRateAction template) {
         if (template == null) {
             return null;
         }
         StagedOrderSetLineItemTaxRateActionImpl instance = new StagedOrderSetLineItemTaxRateActionImpl();
         instance.setLineItemId(template.getLineItemId());
-        instance.setExternalTaxRate(
-            com.commercetools.api.models.cart.ExternalTaxRateDraft.deepCopy(template.getExternalTaxRate()));
+        instance.setExternalTaxRate(com.commercetools.api.models.cart.ExternalTaxRateDraft.deepCopy(template.getExternalTaxRate()));
         instance.setShippingKey(template.getShippingKey());
         return instance;
     }
@@ -130,16 +134,16 @@ public interface StagedOrderSetLineItemTaxRateAction extends StagedOrderUpdateAc
     public static StagedOrderSetLineItemTaxRateActionBuilder builder() {
         return StagedOrderSetLineItemTaxRateActionBuilder.of();
     }
-
+    
     /**
      * create builder for StagedOrderSetLineItemTaxRateAction instance
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static StagedOrderSetLineItemTaxRateActionBuilder builder(
-            final StagedOrderSetLineItemTaxRateAction template) {
+    public static StagedOrderSetLineItemTaxRateActionBuilder builder(final StagedOrderSetLineItemTaxRateAction template) {
         return StagedOrderSetLineItemTaxRateActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -150,7 +154,7 @@ public interface StagedOrderSetLineItemTaxRateAction extends StagedOrderUpdateAc
     default <T> T withStagedOrderSetLineItemTaxRateAction(Function<StagedOrderSetLineItemTaxRateAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

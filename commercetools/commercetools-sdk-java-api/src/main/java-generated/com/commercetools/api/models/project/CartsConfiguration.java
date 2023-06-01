@@ -1,16 +1,20 @@
-
 package com.commercetools.api.models.project;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
 
-import javax.annotation.Nullable;
+import com.commercetools.api.models.project.CartsConfigurationImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * CartsConfiguration
@@ -22,26 +26,29 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     CartsConfiguration cartsConfiguration = CartsConfiguration.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = CartsConfigurationImpl.class)
-public interface CartsConfiguration {
+public interface CartsConfiguration  {
+
 
     /**
      *  <p>Default value for the <code>deleteDaysAfterLastModification</code> parameter of the CartDraft and MyCartDraft. If a ChangeSubscription for Carts exists, a ResourceDeletedDeliveryPayload is sent upon deletion of a Cart.</p>
      *  <p>This field may not be present on Projects created before January 2020.</p>
      * @return deleteDaysAfterLastModification
      */
-
+    
     @JsonProperty("deleteDaysAfterLastModification")
     public Long getDeleteDaysAfterLastModification();
-
     /**
      *  <p>Indicates if country <em>- no state</em> Tax Rate fallback should be used when a shipping address state is not explicitly covered in the rates lists of all Tax Categories of a Cart Line Items. This field may not be present on Projects created before June 2020.</p>
      * @return countryTaxRateFallbackEnabled
      */
-
+    
     @JsonProperty("countryTaxRateFallbackEnabled")
     public Boolean getCountryTaxRateFallbackEnabled();
 
@@ -50,23 +57,26 @@ public interface CartsConfiguration {
      *  <p>This field may not be present on Projects created before January 2020.</p>
      * @param deleteDaysAfterLastModification value to be set
      */
-
+    
     public void setDeleteDaysAfterLastModification(final Long deleteDaysAfterLastModification);
-
+    
+    
     /**
      *  <p>Indicates if country <em>- no state</em> Tax Rate fallback should be used when a shipping address state is not explicitly covered in the rates lists of all Tax Categories of a Cart Line Items. This field may not be present on Projects created before June 2020.</p>
      * @param countryTaxRateFallbackEnabled value to be set
      */
-
+    
     public void setCountryTaxRateFallbackEnabled(final Boolean countryTaxRateFallbackEnabled);
+    
 
     /**
      * factory method
      * @return instance of CartsConfiguration
      */
-    public static CartsConfiguration of() {
+    public static CartsConfiguration of(){
         return new CartsConfigurationImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy CartsConfiguration
@@ -103,7 +113,7 @@ public interface CartsConfiguration {
     public static CartsConfigurationBuilder builder() {
         return CartsConfigurationBuilder.of();
     }
-
+    
     /**
      * create builder for CartsConfiguration instance
      * @param template instance with prefilled values for the builder
@@ -112,6 +122,7 @@ public interface CartsConfiguration {
     public static CartsConfigurationBuilder builder(final CartsConfiguration template) {
         return CartsConfigurationBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -122,7 +133,7 @@ public interface CartsConfiguration {
     default <T> T withCartsConfiguration(Function<CartsConfiguration, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

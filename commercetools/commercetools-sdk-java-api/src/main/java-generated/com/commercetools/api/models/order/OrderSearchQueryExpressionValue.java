@@ -1,17 +1,25 @@
-
 package com.commercetools.api.models.order;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
+import com.commercetools.api.models.order.OrderSearchAnyValue;
+import com.commercetools.api.models.order.OrderSearchDateRangeValue;
+import com.commercetools.api.models.order.OrderSearchFullTextValue;
+import com.commercetools.api.models.order.OrderSearchLongRangeValue;
+import com.commercetools.api.models.order.OrderSearchNumberRangeValue;
+import com.commercetools.api.models.order.OrderSearchStringValue;
+import com.commercetools.api.models.order.OrderSearchQueryExpressionValueImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * OrderSearchQueryExpressionValue
@@ -24,11 +32,15 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .field("{field}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = OrderSearchQueryExpressionValueImpl.class)
-public interface OrderSearchQueryExpressionValue {
+public interface OrderSearchQueryExpressionValue  {
+
 
     /**
      *
@@ -37,20 +49,18 @@ public interface OrderSearchQueryExpressionValue {
     @NotNull
     @JsonProperty("field")
     public String getField();
-
     /**
      *
      * @return boost
      */
-
+    
     @JsonProperty("boost")
     public Integer getBoost();
-
     /**
      *
      * @return customType
      */
-
+    
     @JsonProperty("customType")
     public String getCustomType();
 
@@ -58,30 +68,34 @@ public interface OrderSearchQueryExpressionValue {
      * set field
      * @param field value to be set
      */
-
+    
     public void setField(final String field);
-
+    
+    
     /**
      * set boost
      * @param boost value to be set
      */
-
+    
     public void setBoost(final Integer boost);
-
+    
+    
     /**
      * set customType
      * @param customType value to be set
      */
-
+    
     public void setCustomType(final String customType);
+    
 
     /**
      * factory method
      * @return instance of OrderSearchQueryExpressionValue
      */
-    public static OrderSearchQueryExpressionValue of() {
+    public static OrderSearchQueryExpressionValue of(){
         return new OrderSearchQueryExpressionValueImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy OrderSearchQueryExpressionValue
@@ -107,28 +121,22 @@ public interface OrderSearchQueryExpressionValue {
             return null;
         }
         if (template instanceof com.commercetools.api.models.order.OrderSearchAnyValue) {
-            return com.commercetools.api.models.order.OrderSearchAnyValue
-                    .deepCopy((com.commercetools.api.models.order.OrderSearchAnyValue) template);
+            return com.commercetools.api.models.order.OrderSearchAnyValue.deepCopy((com.commercetools.api.models.order.OrderSearchAnyValue)template);
         }
         if (template instanceof com.commercetools.api.models.order.OrderSearchDateRangeValue) {
-            return com.commercetools.api.models.order.OrderSearchDateRangeValue
-                    .deepCopy((com.commercetools.api.models.order.OrderSearchDateRangeValue) template);
+            return com.commercetools.api.models.order.OrderSearchDateRangeValue.deepCopy((com.commercetools.api.models.order.OrderSearchDateRangeValue)template);
         }
         if (template instanceof com.commercetools.api.models.order.OrderSearchFullTextValue) {
-            return com.commercetools.api.models.order.OrderSearchFullTextValue
-                    .deepCopy((com.commercetools.api.models.order.OrderSearchFullTextValue) template);
+            return com.commercetools.api.models.order.OrderSearchFullTextValue.deepCopy((com.commercetools.api.models.order.OrderSearchFullTextValue)template);
         }
         if (template instanceof com.commercetools.api.models.order.OrderSearchLongRangeValue) {
-            return com.commercetools.api.models.order.OrderSearchLongRangeValue
-                    .deepCopy((com.commercetools.api.models.order.OrderSearchLongRangeValue) template);
+            return com.commercetools.api.models.order.OrderSearchLongRangeValue.deepCopy((com.commercetools.api.models.order.OrderSearchLongRangeValue)template);
         }
         if (template instanceof com.commercetools.api.models.order.OrderSearchNumberRangeValue) {
-            return com.commercetools.api.models.order.OrderSearchNumberRangeValue
-                    .deepCopy((com.commercetools.api.models.order.OrderSearchNumberRangeValue) template);
+            return com.commercetools.api.models.order.OrderSearchNumberRangeValue.deepCopy((com.commercetools.api.models.order.OrderSearchNumberRangeValue)template);
         }
         if (template instanceof com.commercetools.api.models.order.OrderSearchStringValue) {
-            return com.commercetools.api.models.order.OrderSearchStringValue
-                    .deepCopy((com.commercetools.api.models.order.OrderSearchStringValue) template);
+            return com.commercetools.api.models.order.OrderSearchStringValue.deepCopy((com.commercetools.api.models.order.OrderSearchStringValue)template);
         }
         OrderSearchQueryExpressionValueImpl instance = new OrderSearchQueryExpressionValueImpl();
         instance.setField(template.getField());
@@ -144,7 +152,7 @@ public interface OrderSearchQueryExpressionValue {
     public static OrderSearchQueryExpressionValueBuilder builder() {
         return OrderSearchQueryExpressionValueBuilder.of();
     }
-
+    
     /**
      * create builder for OrderSearchQueryExpressionValue instance
      * @param template instance with prefilled values for the builder
@@ -153,6 +161,7 @@ public interface OrderSearchQueryExpressionValue {
     public static OrderSearchQueryExpressionValueBuilder builder(final OrderSearchQueryExpressionValue template) {
         return OrderSearchQueryExpressionValueBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -163,7 +172,7 @@ public interface OrderSearchQueryExpressionValue {
     default <T> T withOrderSearchQueryExpressionValue(Function<OrderSearchQueryExpressionValue, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

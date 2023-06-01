@@ -1,19 +1,21 @@
-
 package com.commercetools.api.models.message;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
 import com.commercetools.api.models.inventory.InventoryEntry;
+import com.commercetools.api.models.message.MessagePayload;
+import com.commercetools.api.models.message.InventoryEntryCreatedMessagePayloadImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Generated after a successful Create InventoryEntry request.</p>
@@ -26,9 +28,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .inventoryEntry(inventoryEntryBuilder -> inventoryEntryBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = InventoryEntryCreatedMessagePayloadImpl.class)
 public interface InventoryEntryCreatedMessagePayload extends MessagePayload {
 
@@ -50,16 +55,18 @@ public interface InventoryEntryCreatedMessagePayload extends MessagePayload {
      *  <p>InventoryEntry that was created.</p>
      * @param inventoryEntry value to be set
      */
-
+    
     public void setInventoryEntry(final InventoryEntry inventoryEntry);
+    
 
     /**
      * factory method
      * @return instance of InventoryEntryCreatedMessagePayload
      */
-    public static InventoryEntryCreatedMessagePayload of() {
+    public static InventoryEntryCreatedMessagePayload of(){
         return new InventoryEntryCreatedMessagePayloadImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy InventoryEntryCreatedMessagePayload
@@ -78,14 +85,12 @@ public interface InventoryEntryCreatedMessagePayload extends MessagePayload {
      * @return copy instance
      */
     @Nullable
-    public static InventoryEntryCreatedMessagePayload deepCopy(
-            @Nullable final InventoryEntryCreatedMessagePayload template) {
+    public static InventoryEntryCreatedMessagePayload deepCopy(@Nullable final InventoryEntryCreatedMessagePayload template) {
         if (template == null) {
             return null;
         }
         InventoryEntryCreatedMessagePayloadImpl instance = new InventoryEntryCreatedMessagePayloadImpl();
-        instance.setInventoryEntry(
-            com.commercetools.api.models.inventory.InventoryEntry.deepCopy(template.getInventoryEntry()));
+        instance.setInventoryEntry(com.commercetools.api.models.inventory.InventoryEntry.deepCopy(template.getInventoryEntry()));
         return instance;
     }
 
@@ -96,16 +101,16 @@ public interface InventoryEntryCreatedMessagePayload extends MessagePayload {
     public static InventoryEntryCreatedMessagePayloadBuilder builder() {
         return InventoryEntryCreatedMessagePayloadBuilder.of();
     }
-
+    
     /**
      * create builder for InventoryEntryCreatedMessagePayload instance
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static InventoryEntryCreatedMessagePayloadBuilder builder(
-            final InventoryEntryCreatedMessagePayload template) {
+    public static InventoryEntryCreatedMessagePayloadBuilder builder(final InventoryEntryCreatedMessagePayload template) {
         return InventoryEntryCreatedMessagePayloadBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -116,7 +121,7 @@ public interface InventoryEntryCreatedMessagePayload extends MessagePayload {
     default <T> T withInventoryEntryCreatedMessagePayload(Function<InventoryEntryCreatedMessagePayload, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

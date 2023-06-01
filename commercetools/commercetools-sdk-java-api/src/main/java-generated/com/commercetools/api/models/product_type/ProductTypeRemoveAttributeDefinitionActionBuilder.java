@@ -1,8 +1,11 @@
-
 package com.commercetools.api.models.product_type;
 
+import com.commercetools.api.models.product_type.ProductTypeUpdateAction;
+import com.commercetools.api.models.product_type.ProductTypeRemoveAttributeDefinitionAction;
+import javax.annotation.Nullable;
 import java.util.*;
-
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -16,31 +19,39 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .name("{name}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
-public class ProductTypeRemoveAttributeDefinitionActionBuilder
-        implements Builder<ProductTypeRemoveAttributeDefinitionAction> {
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
+public class ProductTypeRemoveAttributeDefinitionActionBuilder implements Builder<ProductTypeRemoveAttributeDefinitionAction> {
 
+    
+    
     private String name;
 
+    
     /**
      *  <p>Name of the Attribute to remove.</p>
      * @param name value to be set
      * @return Builder
      */
-
-    public ProductTypeRemoveAttributeDefinitionActionBuilder name(final String name) {
+    
+    public ProductTypeRemoveAttributeDefinitionActionBuilder name( final String name) {
         this.name = name;
         return this;
     }
+    
+    
 
     /**
      *  <p>Name of the Attribute to remove.</p>
      * @return name
      */
-
-    public String getName() {
+    
+    
+    public String getName(){
         return this.name;
     }
 
@@ -52,7 +63,7 @@ public class ProductTypeRemoveAttributeDefinitionActionBuilder
         Objects.requireNonNull(name, ProductTypeRemoveAttributeDefinitionAction.class + ": name is missing");
         return new ProductTypeRemoveAttributeDefinitionActionImpl(name);
     }
-
+    
     /**
      * builds ProductTypeRemoveAttributeDefinitionAction without checking for non-null required values
      * @return ProductTypeRemoveAttributeDefinitionAction
@@ -63,7 +74,7 @@ public class ProductTypeRemoveAttributeDefinitionActionBuilder
 
     /**
      * factory method for an instance of ProductTypeRemoveAttributeDefinitionActionBuilder
-     * @return builder
+     * @return builder 
      */
     public static ProductTypeRemoveAttributeDefinitionActionBuilder of() {
         return new ProductTypeRemoveAttributeDefinitionActionBuilder();
@@ -74,8 +85,7 @@ public class ProductTypeRemoveAttributeDefinitionActionBuilder
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static ProductTypeRemoveAttributeDefinitionActionBuilder of(
-            final ProductTypeRemoveAttributeDefinitionAction template) {
+    public static ProductTypeRemoveAttributeDefinitionActionBuilder of(final ProductTypeRemoveAttributeDefinitionAction template) {
         ProductTypeRemoveAttributeDefinitionActionBuilder builder = new ProductTypeRemoveAttributeDefinitionActionBuilder();
         builder.name = template.getName();
         return builder;

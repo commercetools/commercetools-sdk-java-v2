@@ -1,16 +1,20 @@
-
 package com.commercetools.api.models.customer;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
+import com.commercetools.api.models.customer.CustomerUpdateAction;
+import com.commercetools.api.models.customer.CustomerAddBillingAddressIdActionImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Adds an Address from the <code>addresses</code> array to <code>billingAddressIds</code>. Either <code>addressId</code> or <code>addressKey</code> is required.</p>
@@ -22,9 +26,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     CustomerAddBillingAddressIdAction customerAddBillingAddressIdAction = CustomerAddBillingAddressIdAction.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = CustomerAddBillingAddressIdActionImpl.class)
 public interface CustomerAddBillingAddressIdAction extends CustomerUpdateAction {
 
@@ -37,15 +44,14 @@ public interface CustomerAddBillingAddressIdAction extends CustomerUpdateAction 
      *  <p><code>id</code> of the Address to become a billing address.</p>
      * @return addressId
      */
-
+    
     @JsonProperty("addressId")
     public String getAddressId();
-
     /**
      *  <p><code>key</code> of the Address to become a billing address.</p>
      * @return addressKey
      */
-
+    
     @JsonProperty("addressKey")
     public String getAddressKey();
 
@@ -53,23 +59,26 @@ public interface CustomerAddBillingAddressIdAction extends CustomerUpdateAction 
      *  <p><code>id</code> of the Address to become a billing address.</p>
      * @param addressId value to be set
      */
-
+    
     public void setAddressId(final String addressId);
-
+    
+    
     /**
      *  <p><code>key</code> of the Address to become a billing address.</p>
      * @param addressKey value to be set
      */
-
+    
     public void setAddressKey(final String addressKey);
+    
 
     /**
      * factory method
      * @return instance of CustomerAddBillingAddressIdAction
      */
-    public static CustomerAddBillingAddressIdAction of() {
+    public static CustomerAddBillingAddressIdAction of(){
         return new CustomerAddBillingAddressIdActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy CustomerAddBillingAddressIdAction
@@ -89,8 +98,7 @@ public interface CustomerAddBillingAddressIdAction extends CustomerUpdateAction 
      * @return copy instance
      */
     @Nullable
-    public static CustomerAddBillingAddressIdAction deepCopy(
-            @Nullable final CustomerAddBillingAddressIdAction template) {
+    public static CustomerAddBillingAddressIdAction deepCopy(@Nullable final CustomerAddBillingAddressIdAction template) {
         if (template == null) {
             return null;
         }
@@ -107,7 +115,7 @@ public interface CustomerAddBillingAddressIdAction extends CustomerUpdateAction 
     public static CustomerAddBillingAddressIdActionBuilder builder() {
         return CustomerAddBillingAddressIdActionBuilder.of();
     }
-
+    
     /**
      * create builder for CustomerAddBillingAddressIdAction instance
      * @param template instance with prefilled values for the builder
@@ -116,6 +124,7 @@ public interface CustomerAddBillingAddressIdAction extends CustomerUpdateAction 
     public static CustomerAddBillingAddressIdActionBuilder builder(final CustomerAddBillingAddressIdAction template) {
         return CustomerAddBillingAddressIdActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -126,7 +135,7 @@ public interface CustomerAddBillingAddressIdAction extends CustomerUpdateAction 
     default <T> T withCustomerAddBillingAddressIdAction(Function<CustomerAddBillingAddressIdAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

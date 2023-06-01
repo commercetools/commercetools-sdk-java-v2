@@ -1,9 +1,11 @@
-
 package com.commercetools.importapi.models.orders;
 
+import com.commercetools.importapi.models.common.StateKeyReference;
+import com.commercetools.importapi.models.orders.ItemState;
+import javax.annotation.Nullable;
 import java.util.*;
 import java.util.function.Function;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -18,76 +20,89 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .state(stateBuilder -> stateBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class ItemStateBuilder implements Builder<ItemState> {
 
+    
+    
     private Double quantity;
-
+    
+    
+    
     private com.commercetools.importapi.models.common.StateKeyReference state;
 
+    
     /**
      * set the value to the quantity
      * @param quantity value to be set
      * @return Builder
      */
-
-    public ItemStateBuilder quantity(final Double quantity) {
+    
+    public ItemStateBuilder quantity( final Double quantity) {
         this.quantity = quantity;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Maps to <code>ItemState.state</code>.</p>
      * @param builder function to build the state value
      * @return Builder
      */
-
-    public ItemStateBuilder state(
-            Function<com.commercetools.importapi.models.common.StateKeyReferenceBuilder, com.commercetools.importapi.models.common.StateKeyReferenceBuilder> builder) {
+    
+    public ItemStateBuilder state(Function<com.commercetools.importapi.models.common.StateKeyReferenceBuilder, com.commercetools.importapi.models.common.StateKeyReferenceBuilder> builder) {
         this.state = builder.apply(com.commercetools.importapi.models.common.StateKeyReferenceBuilder.of()).build();
         return this;
     }
-
+    
     /**
      *  <p>Maps to <code>ItemState.state</code>.</p>
      * @param builder function to build the state value
      * @return Builder
      */
-
-    public ItemStateBuilder withState(
-            Function<com.commercetools.importapi.models.common.StateKeyReferenceBuilder, com.commercetools.importapi.models.common.StateKeyReference> builder) {
+    
+    public ItemStateBuilder withState(Function<com.commercetools.importapi.models.common.StateKeyReferenceBuilder, com.commercetools.importapi.models.common.StateKeyReference> builder) {
         this.state = builder.apply(com.commercetools.importapi.models.common.StateKeyReferenceBuilder.of());
         return this;
     }
-
+                    
     /**
      *  <p>Maps to <code>ItemState.state</code>.</p>
      * @param state value to be set
      * @return Builder
      */
-
-    public ItemStateBuilder state(final com.commercetools.importapi.models.common.StateKeyReference state) {
+    
+    public ItemStateBuilder state( final com.commercetools.importapi.models.common.StateKeyReference state) {
         this.state = state;
         return this;
     }
+    
+    
 
     /**
      * value of quantity}
      * @return quantity
      */
-
-    public Double getQuantity() {
+    
+    
+    public Double getQuantity(){
         return this.quantity;
     }
-
+    
     /**
      *  <p>Maps to <code>ItemState.state</code>.</p>
      * @return state
      */
-
-    public com.commercetools.importapi.models.common.StateKeyReference getState() {
+    
+    
+    public com.commercetools.importapi.models.common.StateKeyReference getState(){
         return this.state;
     }
 
@@ -100,7 +115,7 @@ public class ItemStateBuilder implements Builder<ItemState> {
         Objects.requireNonNull(state, ItemState.class + ": state is missing");
         return new ItemStateImpl(quantity, state);
     }
-
+    
     /**
      * builds ItemState without checking for non-null required values
      * @return ItemState
@@ -111,7 +126,7 @@ public class ItemStateBuilder implements Builder<ItemState> {
 
     /**
      * factory method for an instance of ItemStateBuilder
-     * @return builder
+     * @return builder 
      */
     public static ItemStateBuilder of() {
         return new ItemStateBuilder();

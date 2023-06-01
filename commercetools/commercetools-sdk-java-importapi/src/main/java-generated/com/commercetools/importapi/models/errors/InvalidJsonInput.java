@@ -1,16 +1,20 @@
-
 package com.commercetools.importapi.models.errors;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
+import com.commercetools.importapi.models.errors.ErrorObject;
+import com.commercetools.importapi.models.errors.InvalidJsonInputImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>An invalid JSON input has been sent to the service. Either the JSON is syntactically incorrect or the JSON has an unexpected shape, for example, a required field is missing. The client application should validate the input according to the constraints described in the error message before sending the request again.</p>
@@ -23,9 +27,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .message("{message}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = InvalidJsonInputImpl.class)
 public interface InvalidJsonInput extends ErrorObject {
 
@@ -34,13 +41,16 @@ public interface InvalidJsonInput extends ErrorObject {
      */
     String INVALID_JSON_INPUT = "InvalidJsonInput";
 
+
+
     /**
      * factory method
      * @return instance of InvalidJsonInput
      */
-    public static InvalidJsonInput of() {
+    public static InvalidJsonInput of(){
         return new InvalidJsonInputImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy InvalidJsonInput
@@ -75,7 +85,7 @@ public interface InvalidJsonInput extends ErrorObject {
     public static InvalidJsonInputBuilder builder() {
         return InvalidJsonInputBuilder.of();
     }
-
+    
     /**
      * create builder for InvalidJsonInput instance
      * @param template instance with prefilled values for the builder
@@ -84,6 +94,7 @@ public interface InvalidJsonInput extends ErrorObject {
     public static InvalidJsonInputBuilder builder(final InvalidJsonInput template) {
         return InvalidJsonInputBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -94,7 +105,7 @@ public interface InvalidJsonInput extends ErrorObject {
     default <T> T withInvalidJsonInput(Function<InvalidJsonInput, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

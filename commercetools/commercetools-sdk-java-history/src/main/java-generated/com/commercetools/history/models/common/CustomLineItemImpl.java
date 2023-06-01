@@ -1,49 +1,59 @@
-
 package com.commercetools.history.models.common;
 
-import java.time.*;
-import java.util.*;
-
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
-
-import io.vrap.rmf.base.client.ModelBase;
+import com.commercetools.history.models.common.LocalizedString;
+import com.commercetools.history.models.common.Money;
+import com.commercetools.history.models.common.TaxedItemPrice;
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.ModelBase;
+import javax.validation.Valid;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.annotation.*;
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
  * CustomLineItem
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class CustomLineItemImpl implements CustomLineItem, ModelBase {
 
+    
     private String id;
-
+    
+    
     private com.commercetools.history.models.common.LocalizedString name;
-
+    
+    
     private com.commercetools.history.models.common.Money money;
-
+    
+    
     private com.commercetools.history.models.common.TaxedItemPrice taxedPrice;
-
+    
+    
     private com.commercetools.history.models.common.Money totalPrice;
-
+    
+    
     private String slug;
-
+    
+    
     private Integer quantity;
 
     /**
      * create instance with all properties
      */
     @JsonCreator
-    CustomLineItemImpl(@JsonProperty("id") final String id,
-            @JsonProperty("name") final com.commercetools.history.models.common.LocalizedString name,
-            @JsonProperty("money") final com.commercetools.history.models.common.Money money,
-            @JsonProperty("taxedPrice") final com.commercetools.history.models.common.TaxedItemPrice taxedPrice,
-            @JsonProperty("totalPrice") final com.commercetools.history.models.common.Money totalPrice,
-            @JsonProperty("slug") final String slug, @JsonProperty("quantity") final Integer quantity) {
+    CustomLineItemImpl(@JsonProperty("id") final String id, @JsonProperty("name") final com.commercetools.history.models.common.LocalizedString name, @JsonProperty("money") final com.commercetools.history.models.common.Money money, @JsonProperty("taxedPrice") final com.commercetools.history.models.common.TaxedItemPrice taxedPrice, @JsonProperty("totalPrice") final com.commercetools.history.models.common.Money totalPrice, @JsonProperty("slug") final String slug, @JsonProperty("quantity") final Integer quantity) {
         this.id = id;
         this.name = name;
         this.money = money;
@@ -52,7 +62,6 @@ public class CustomLineItemImpl implements CustomLineItem, ModelBase {
         this.slug = slug;
         this.quantity = quantity;
     }
-
     /**
      * create empty instance
      */
@@ -62,98 +71,104 @@ public class CustomLineItemImpl implements CustomLineItem, ModelBase {
     /**
      *  <p>The unique ID of this CustomLineItem.</p>
      */
-
-    public String getId() {
+    
+    public String getId(){
         return this.id;
     }
-
+    
     /**
      *
      */
-
-    public com.commercetools.history.models.common.LocalizedString getName() {
+    
+    public com.commercetools.history.models.common.LocalizedString getName(){
         return this.name;
     }
-
+    
     /**
      *
      */
-
-    public com.commercetools.history.models.common.Money getMoney() {
+    
+    public com.commercetools.history.models.common.Money getMoney(){
         return this.money;
     }
-
+    
     /**
      *
      */
-
-    public com.commercetools.history.models.common.TaxedItemPrice getTaxedPrice() {
+    
+    public com.commercetools.history.models.common.TaxedItemPrice getTaxedPrice(){
         return this.taxedPrice;
     }
-
+    
     /**
      *
      */
-
-    public com.commercetools.history.models.common.Money getTotalPrice() {
+    
+    public com.commercetools.history.models.common.Money getTotalPrice(){
         return this.totalPrice;
     }
-
+    
     /**
      *  <p>A unique String in the cart to identify this CustomLineItem.</p>
      */
-
-    public String getSlug() {
+    
+    public String getSlug(){
         return this.slug;
     }
-
+    
     /**
      *  <p>The amount of a CustomLineItem in the cart. Must be a positive integer.</p>
      */
-
-    public Integer getQuantity() {
+    
+    public Integer getQuantity(){
         return this.quantity;
     }
 
-    public void setId(final String id) {
+    
+    public void setId(final String id){
         this.id = id;
     }
-
-    public void setName(final com.commercetools.history.models.common.LocalizedString name) {
+    
+    
+    public void setName(final com.commercetools.history.models.common.LocalizedString name){
         this.name = name;
     }
-
-    public void setMoney(final com.commercetools.history.models.common.Money money) {
+    
+    
+    public void setMoney(final com.commercetools.history.models.common.Money money){
         this.money = money;
     }
-
-    public void setTaxedPrice(final com.commercetools.history.models.common.TaxedItemPrice taxedPrice) {
+    
+    
+    public void setTaxedPrice(final com.commercetools.history.models.common.TaxedItemPrice taxedPrice){
         this.taxedPrice = taxedPrice;
     }
-
-    public void setTotalPrice(final com.commercetools.history.models.common.Money totalPrice) {
+    
+    
+    public void setTotalPrice(final com.commercetools.history.models.common.Money totalPrice){
         this.totalPrice = totalPrice;
     }
-
-    public void setSlug(final String slug) {
+    
+    
+    public void setSlug(final String slug){
         this.slug = slug;
     }
-
-    public void setQuantity(final Integer quantity) {
+    
+    
+    public void setQuantity(final Integer quantity){
         this.quantity = quantity;
     }
 
     @Override
     public boolean equals(Object o) {
-        if (this == o)
-            return true;
-
-        if (o == null || getClass() != o.getClass())
-            return false;
-
+        if (this == o) return true;
+    
+        if (o == null || getClass() != o.getClass()) return false;
+    
         CustomLineItemImpl that = (CustomLineItemImpl) o;
-
-        return new EqualsBuilder().append(id, that.id)
+    
+        return new EqualsBuilder()
+                .append(id, that.id)
                 .append(name, that.name)
                 .append(money, that.money)
                 .append(taxedPrice, that.taxedPrice)
@@ -162,17 +177,18 @@ public class CustomLineItemImpl implements CustomLineItem, ModelBase {
                 .append(quantity, that.quantity)
                 .isEquals();
     }
-
+    
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(id)
-                .append(name)
-                .append(money)
-                .append(taxedPrice)
-                .append(totalPrice)
-                .append(slug)
-                .append(quantity)
-                .toHashCode();
+        return new HashCodeBuilder(17, 37)
+            .append(id)
+            .append(name)
+            .append(money)
+            .append(taxedPrice)
+            .append(totalPrice)
+            .append(slug)
+            .append(quantity)
+            .toHashCode();
     }
 
 }

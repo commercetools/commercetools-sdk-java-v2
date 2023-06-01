@@ -1,9 +1,12 @@
-
 package com.commercetools.api.models.message;
 
+import com.commercetools.api.models.common.Price;
+import com.commercetools.api.models.message.MessagePayload;
+import com.commercetools.api.models.message.ProductPricesSetMessagePayload;
+import javax.annotation.Nullable;
 import java.util.*;
 import java.util.function.Function;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -19,150 +22,166 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .staged(true)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class ProductPricesSetMessagePayloadBuilder implements Builder<ProductPricesSetMessagePayload> {
 
+    
+    
     private Long variantId;
-
+    
+    
+    
     private java.util.List<com.commercetools.api.models.common.Price> prices;
-
+    
+    
+    
     private Boolean staged;
 
+    
     /**
      *  <p>Unique identifier of the ProductVariant for which the Price was set.</p>
      * @param variantId value to be set
      * @return Builder
      */
-
-    public ProductPricesSetMessagePayloadBuilder variantId(final Long variantId) {
+    
+    public ProductPricesSetMessagePayloadBuilder variantId( final Long variantId) {
         this.variantId = variantId;
         return this;
     }
-
+    
+    
+    
     /**
      *  <p>The Embedded Prices that were set on the ProductVariant.</p>
      * @param prices value to be set
      * @return Builder
      */
-
-    public ProductPricesSetMessagePayloadBuilder prices(final com.commercetools.api.models.common.Price... prices) {
+    
+    public ProductPricesSetMessagePayloadBuilder prices( final com.commercetools.api.models.common.Price ...prices) {
         this.prices = new ArrayList<>(Arrays.asList(prices));
         return this;
     }
-
+    
     /**
      *  <p>The Embedded Prices that were set on the ProductVariant.</p>
      * @param prices value to be set
      * @return Builder
      */
-
-    public ProductPricesSetMessagePayloadBuilder prices(
-            final java.util.List<com.commercetools.api.models.common.Price> prices) {
+    
+    public ProductPricesSetMessagePayloadBuilder prices( final java.util.List<com.commercetools.api.models.common.Price> prices) {
         this.prices = prices;
         return this;
     }
-
+    
     /**
      *  <p>The Embedded Prices that were set on the ProductVariant.</p>
      * @param prices value to be set
      * @return Builder
      */
-
-    public ProductPricesSetMessagePayloadBuilder plusPrices(final com.commercetools.api.models.common.Price... prices) {
+    
+    public ProductPricesSetMessagePayloadBuilder plusPrices( final com.commercetools.api.models.common.Price ...prices) {
         if (this.prices == null) {
             this.prices = new ArrayList<>();
         }
         this.prices.addAll(Arrays.asList(prices));
         return this;
     }
-
+    
+    
+    
     /**
      *  <p>The Embedded Prices that were set on the ProductVariant.</p>
      * @param builder function to build the prices value
      * @return Builder
      */
-
-    public ProductPricesSetMessagePayloadBuilder plusPrices(
-            Function<com.commercetools.api.models.common.PriceBuilder, com.commercetools.api.models.common.PriceBuilder> builder) {
+    
+    public ProductPricesSetMessagePayloadBuilder plusPrices(Function<com.commercetools.api.models.common.PriceBuilder, com.commercetools.api.models.common.PriceBuilder> builder) {
         if (this.prices == null) {
             this.prices = new ArrayList<>();
         }
         this.prices.add(builder.apply(com.commercetools.api.models.common.PriceBuilder.of()).build());
         return this;
     }
-
+    
     /**
      *  <p>The Embedded Prices that were set on the ProductVariant.</p>
      * @param builder function to build the prices value
      * @return Builder
      */
-
-    public ProductPricesSetMessagePayloadBuilder withPrices(
-            Function<com.commercetools.api.models.common.PriceBuilder, com.commercetools.api.models.common.PriceBuilder> builder) {
+    
+    public ProductPricesSetMessagePayloadBuilder withPrices(Function<com.commercetools.api.models.common.PriceBuilder, com.commercetools.api.models.common.PriceBuilder> builder) {
         this.prices = new ArrayList<>();
         this.prices.add(builder.apply(com.commercetools.api.models.common.PriceBuilder.of()).build());
         return this;
     }
-
+    
     /**
      *  <p>The Embedded Prices that were set on the ProductVariant.</p>
      * @param builder function to build the prices value
      * @return Builder
      */
-
-    public ProductPricesSetMessagePayloadBuilder addPrices(
-            Function<com.commercetools.api.models.common.PriceBuilder, com.commercetools.api.models.common.Price> builder) {
+    
+    public ProductPricesSetMessagePayloadBuilder addPrices(Function<com.commercetools.api.models.common.PriceBuilder, com.commercetools.api.models.common.Price> builder) {
         return plusPrices(builder.apply(com.commercetools.api.models.common.PriceBuilder.of()));
     }
-
+    
     /**
      *  <p>The Embedded Prices that were set on the ProductVariant.</p>
      * @param builder function to build the prices value
      * @return Builder
      */
-
-    public ProductPricesSetMessagePayloadBuilder setPrices(
-            Function<com.commercetools.api.models.common.PriceBuilder, com.commercetools.api.models.common.Price> builder) {
+    
+    public ProductPricesSetMessagePayloadBuilder setPrices(Function<com.commercetools.api.models.common.PriceBuilder, com.commercetools.api.models.common.Price> builder) {
         return prices(builder.apply(com.commercetools.api.models.common.PriceBuilder.of()));
     }
-
+                    
+    
+    
     /**
      *  <p>Whether the update was only applied to the staged Product Projection.</p>
      * @param staged value to be set
      * @return Builder
      */
-
-    public ProductPricesSetMessagePayloadBuilder staged(final Boolean staged) {
+    
+    public ProductPricesSetMessagePayloadBuilder staged( final Boolean staged) {
         this.staged = staged;
         return this;
     }
+    
+    
 
     /**
      *  <p>Unique identifier of the ProductVariant for which the Price was set.</p>
      * @return variantId
      */
-
-    public Long getVariantId() {
+    
+    
+    public Long getVariantId(){
         return this.variantId;
     }
-
+    
     /**
      *  <p>The Embedded Prices that were set on the ProductVariant.</p>
      * @return prices
      */
-
-    public java.util.List<com.commercetools.api.models.common.Price> getPrices() {
+    
+    
+    public java.util.List<com.commercetools.api.models.common.Price> getPrices(){
         return this.prices;
     }
-
+    
     /**
      *  <p>Whether the update was only applied to the staged Product Projection.</p>
      * @return staged
      */
-
-    public Boolean getStaged() {
+    
+    
+    public Boolean getStaged(){
         return this.staged;
     }
 
@@ -176,7 +195,7 @@ public class ProductPricesSetMessagePayloadBuilder implements Builder<ProductPri
         Objects.requireNonNull(staged, ProductPricesSetMessagePayload.class + ": staged is missing");
         return new ProductPricesSetMessagePayloadImpl(variantId, prices, staged);
     }
-
+    
     /**
      * builds ProductPricesSetMessagePayload without checking for non-null required values
      * @return ProductPricesSetMessagePayload
@@ -187,7 +206,7 @@ public class ProductPricesSetMessagePayloadBuilder implements Builder<ProductPri
 
     /**
      * factory method for an instance of ProductPricesSetMessagePayloadBuilder
-     * @return builder
+     * @return builder 
      */
     public static ProductPricesSetMessagePayloadBuilder of() {
         return new ProductPricesSetMessagePayloadBuilder();

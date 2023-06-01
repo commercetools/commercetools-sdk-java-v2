@@ -1,20 +1,24 @@
-
 package com.commercetools.api.models.order;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
+import com.commercetools.api.models.order.OrderState;
+import com.commercetools.api.models.order.PaymentState;
+import com.commercetools.api.models.order.ShipmentState;
 import com.commercetools.api.models.quote.QuoteResourceIdentifier;
 import com.commercetools.api.models.state.StateResourceIdentifier;
+import com.commercetools.api.models.order.OrderFromQuoteDraftImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * OrderFromQuoteDraft
@@ -28,11 +32,15 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .version(0.3)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = OrderFromQuoteDraftImpl.class)
 public interface OrderFromQuoteDraft extends io.vrap.rmf.base.client.Draft<OrderFromQuoteDraft> {
+
 
     /**
      *  <p>ResourceIdentifier of the Quote from which this Order is created. If the Quote has <code>QuoteState</code> in <code>Accepted</code>, <code>Declined</code> or <code>Withdrawn</code> then the order creation will fail. The creation will also fail if the <code>Quote</code> has expired (<code>validTo</code> check).</p>
@@ -42,7 +50,6 @@ public interface OrderFromQuoteDraft extends io.vrap.rmf.base.client.Draft<Order
     @Valid
     @JsonProperty("quote")
     public QuoteResourceIdentifier getQuote();
-
     /**
      *  <p><code>version</code> of the Quote from which an Order is created.</p>
      * @return version
@@ -50,47 +57,41 @@ public interface OrderFromQuoteDraft extends io.vrap.rmf.base.client.Draft<Order
     @NotNull
     @JsonProperty("version")
     public Long getVersion();
-
     /**
      *  <p>If <code>true</code>, the <code>quoteState</code> of the referenced Quote will be set to <code>Accepted</code>.</p>
      * @return quoteStateToAccepted
      */
-
+    
     @JsonProperty("quoteStateToAccepted")
     public Boolean getQuoteStateToAccepted();
-
     /**
      *  <p>String that uniquely identifies an order. It can be used to create more human-readable (in contrast to ID) identifier for the order. It should be unique across a project. Once it's set it cannot be changed. For easier use on Get, Update and Delete actions we suggest assigning order numbers that match the regular expression <code>[a-z0-9_\-]{2,36}</code>.</p>
      * @return orderNumber
      */
-
+    
     @JsonProperty("orderNumber")
     public String getOrderNumber();
-
     /**
      *  <p>Payment state of the Order.</p>
      * @return paymentState
      */
-
+    
     @JsonProperty("paymentState")
     public PaymentState getPaymentState();
-
     /**
      *  <p>Shipment state of the Order.</p>
      * @return shipmentState
      */
-
+    
     @JsonProperty("shipmentState")
     public ShipmentState getShipmentState();
-
     /**
      *  <p>Order will be created with <code>Open</code> status by default.</p>
      * @return orderState
      */
-
+    
     @JsonProperty("orderState")
     public OrderState getOrderState();
-
     /**
      *  <p>Reference to a State indicating the Order's state.</p>
      * @return state
@@ -103,65 +104,74 @@ public interface OrderFromQuoteDraft extends io.vrap.rmf.base.client.Draft<Order
      *  <p>ResourceIdentifier of the Quote from which this Order is created. If the Quote has <code>QuoteState</code> in <code>Accepted</code>, <code>Declined</code> or <code>Withdrawn</code> then the order creation will fail. The creation will also fail if the <code>Quote</code> has expired (<code>validTo</code> check).</p>
      * @param quote value to be set
      */
-
+    
     public void setQuote(final QuoteResourceIdentifier quote);
-
+    
+    
     /**
      *  <p><code>version</code> of the Quote from which an Order is created.</p>
      * @param version value to be set
      */
-
+    
     public void setVersion(final Long version);
-
+    
+    
     /**
      *  <p>If <code>true</code>, the <code>quoteState</code> of the referenced Quote will be set to <code>Accepted</code>.</p>
      * @param quoteStateToAccepted value to be set
      */
-
+    
     public void setQuoteStateToAccepted(final Boolean quoteStateToAccepted);
-
+    
+    
     /**
      *  <p>String that uniquely identifies an order. It can be used to create more human-readable (in contrast to ID) identifier for the order. It should be unique across a project. Once it's set it cannot be changed. For easier use on Get, Update and Delete actions we suggest assigning order numbers that match the regular expression <code>[a-z0-9_\-]{2,36}</code>.</p>
      * @param orderNumber value to be set
      */
-
+    
     public void setOrderNumber(final String orderNumber);
-
+    
+    
     /**
      *  <p>Payment state of the Order.</p>
      * @param paymentState value to be set
      */
-
+    
     public void setPaymentState(final PaymentState paymentState);
-
+    
+    
     /**
      *  <p>Shipment state of the Order.</p>
      * @param shipmentState value to be set
      */
-
+    
     public void setShipmentState(final ShipmentState shipmentState);
-
+    
+    
     /**
      *  <p>Order will be created with <code>Open</code> status by default.</p>
      * @param orderState value to be set
      */
-
+    
     public void setOrderState(final OrderState orderState);
-
+    
+    
     /**
      *  <p>Reference to a State indicating the Order's state.</p>
      * @param state value to be set
      */
-
+    
     public void setState(final StateResourceIdentifier state);
+    
 
     /**
      * factory method
      * @return instance of OrderFromQuoteDraft
      */
-    public static OrderFromQuoteDraft of() {
+    public static OrderFromQuoteDraft of(){
         return new OrderFromQuoteDraftImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy OrderFromQuoteDraft
@@ -210,7 +220,7 @@ public interface OrderFromQuoteDraft extends io.vrap.rmf.base.client.Draft<Order
     public static OrderFromQuoteDraftBuilder builder() {
         return OrderFromQuoteDraftBuilder.of();
     }
-
+    
     /**
      * create builder for OrderFromQuoteDraft instance
      * @param template instance with prefilled values for the builder
@@ -219,6 +229,7 @@ public interface OrderFromQuoteDraft extends io.vrap.rmf.base.client.Draft<Order
     public static OrderFromQuoteDraftBuilder builder(final OrderFromQuoteDraft template) {
         return OrderFromQuoteDraftBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -229,7 +240,7 @@ public interface OrderFromQuoteDraft extends io.vrap.rmf.base.client.Draft<Order
     default <T> T withOrderFromQuoteDraft(Function<OrderFromQuoteDraft, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

@@ -1,18 +1,21 @@
-
 package com.commercetools.api.models.business_unit;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
-
 import com.commercetools.api.models.common.KeyReference;
+import com.commercetools.api.models.common.ReferenceTypeId;
+import com.commercetools.api.models.business_unit.BusinessUnitKeyReferenceImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Reference to a BusinessUnit by its key.</p>
@@ -25,9 +28,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .key("{key}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = BusinessUnitKeyReferenceImpl.class)
 public interface BusinessUnitKeyReference extends KeyReference {
 
@@ -48,16 +54,18 @@ public interface BusinessUnitKeyReference extends KeyReference {
      *  <p>Unique and immutable key of the referenced BusinessUnit.</p>
      * @param key value to be set
      */
-
+    
     public void setKey(final String key);
+    
 
     /**
      * factory method
      * @return instance of BusinessUnitKeyReference
      */
-    public static BusinessUnitKeyReference of() {
+    public static BusinessUnitKeyReference of(){
         return new BusinessUnitKeyReferenceImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy BusinessUnitKeyReference
@@ -92,7 +100,7 @@ public interface BusinessUnitKeyReference extends KeyReference {
     public static BusinessUnitKeyReferenceBuilder builder() {
         return BusinessUnitKeyReferenceBuilder.of();
     }
-
+    
     /**
      * create builder for BusinessUnitKeyReference instance
      * @param template instance with prefilled values for the builder
@@ -101,6 +109,7 @@ public interface BusinessUnitKeyReference extends KeyReference {
     public static BusinessUnitKeyReferenceBuilder builder(final BusinessUnitKeyReference template) {
         return BusinessUnitKeyReferenceBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -111,7 +120,7 @@ public interface BusinessUnitKeyReference extends KeyReference {
     default <T> T withBusinessUnitKeyReference(Function<BusinessUnitKeyReference, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

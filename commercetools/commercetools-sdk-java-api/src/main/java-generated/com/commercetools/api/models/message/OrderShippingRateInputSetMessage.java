@@ -1,18 +1,21 @@
-
 package com.commercetools.api.models.message;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-
 import com.commercetools.api.models.cart.ShippingRateInput;
+import com.commercetools.api.models.message.OrderMessage;
+import com.commercetools.api.models.message.OrderShippingRateInputSetMessageImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Generated after a successful Set ShippingRateInput update action.</p>
@@ -31,9 +34,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .resourceVersion(0.3)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = OrderShippingRateInputSetMessageImpl.class)
 public interface OrderShippingRateInputSetMessage extends OrderMessage {
 
@@ -49,7 +55,6 @@ public interface OrderShippingRateInputSetMessage extends OrderMessage {
     @Valid
     @JsonProperty("shippingRateInput")
     public ShippingRateInput getShippingRateInput();
-
     /**
      *  <p>ShippingRateInput before the Set ShippingRateInput update action.</p>
      * @return oldShippingRateInput
@@ -62,23 +67,26 @@ public interface OrderShippingRateInputSetMessage extends OrderMessage {
      *  <p>ShippingRateInput after the Set ShippingRateInput update action.</p>
      * @param shippingRateInput value to be set
      */
-
+    
     public void setShippingRateInput(final ShippingRateInput shippingRateInput);
-
+    
+    
     /**
      *  <p>ShippingRateInput before the Set ShippingRateInput update action.</p>
      * @param oldShippingRateInput value to be set
      */
-
+    
     public void setOldShippingRateInput(final ShippingRateInput oldShippingRateInput);
+    
 
     /**
      * factory method
      * @return instance of OrderShippingRateInputSetMessage
      */
-    public static OrderShippingRateInputSetMessage of() {
+    public static OrderShippingRateInputSetMessage of(){
         return new OrderShippingRateInputSetMessageImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy OrderShippingRateInputSetMessage
@@ -117,18 +125,14 @@ public interface OrderShippingRateInputSetMessage extends OrderMessage {
         instance.setVersion(template.getVersion());
         instance.setCreatedAt(template.getCreatedAt());
         instance.setLastModifiedAt(template.getLastModifiedAt());
-        instance.setLastModifiedBy(
-            com.commercetools.api.models.common.LastModifiedBy.deepCopy(template.getLastModifiedBy()));
+        instance.setLastModifiedBy(com.commercetools.api.models.common.LastModifiedBy.deepCopy(template.getLastModifiedBy()));
         instance.setCreatedBy(com.commercetools.api.models.common.CreatedBy.deepCopy(template.getCreatedBy()));
         instance.setSequenceNumber(template.getSequenceNumber());
         instance.setResource(com.commercetools.api.models.common.Reference.deepCopy(template.getResource()));
         instance.setResourceVersion(template.getResourceVersion());
-        instance.setResourceUserProvidedIdentifiers(com.commercetools.api.models.message.UserProvidedIdentifiers
-                .deepCopy(template.getResourceUserProvidedIdentifiers()));
-        instance.setShippingRateInput(
-            com.commercetools.api.models.cart.ShippingRateInput.deepCopy(template.getShippingRateInput()));
-        instance.setOldShippingRateInput(
-            com.commercetools.api.models.cart.ShippingRateInput.deepCopy(template.getOldShippingRateInput()));
+        instance.setResourceUserProvidedIdentifiers(com.commercetools.api.models.message.UserProvidedIdentifiers.deepCopy(template.getResourceUserProvidedIdentifiers()));
+        instance.setShippingRateInput(com.commercetools.api.models.cart.ShippingRateInput.deepCopy(template.getShippingRateInput()));
+        instance.setOldShippingRateInput(com.commercetools.api.models.cart.ShippingRateInput.deepCopy(template.getOldShippingRateInput()));
         return instance;
     }
 
@@ -139,7 +143,7 @@ public interface OrderShippingRateInputSetMessage extends OrderMessage {
     public static OrderShippingRateInputSetMessageBuilder builder() {
         return OrderShippingRateInputSetMessageBuilder.of();
     }
-
+    
     /**
      * create builder for OrderShippingRateInputSetMessage instance
      * @param template instance with prefilled values for the builder
@@ -148,6 +152,7 @@ public interface OrderShippingRateInputSetMessage extends OrderMessage {
     public static OrderShippingRateInputSetMessageBuilder builder(final OrderShippingRateInputSetMessage template) {
         return OrderShippingRateInputSetMessageBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -158,7 +163,7 @@ public interface OrderShippingRateInputSetMessage extends OrderMessage {
     default <T> T withOrderShippingRateInputSetMessage(Function<OrderShippingRateInputSetMessage, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

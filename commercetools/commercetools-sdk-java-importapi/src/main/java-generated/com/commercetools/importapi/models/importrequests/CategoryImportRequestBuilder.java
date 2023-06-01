@@ -1,9 +1,13 @@
-
 package com.commercetools.importapi.models.importrequests;
 
+import com.commercetools.importapi.models.categories.CategoryImport;
+import com.commercetools.importapi.models.common.ImportResourceType;
+import com.commercetools.importapi.models.importrequests.ImportRequest;
+import com.commercetools.importapi.models.importrequests.CategoryImportRequest;
+import javax.annotation.Nullable;
 import java.util.*;
 import java.util.function.Function;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -17,11 +21,16 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .plusResources(resourcesBuilder -> resourcesBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class CategoryImportRequestBuilder implements Builder<CategoryImportRequest> {
 
+    
+    
     private java.util.List<com.commercetools.importapi.models.categories.CategoryImport> resources;
 
     /**
@@ -29,98 +38,93 @@ public class CategoryImportRequestBuilder implements Builder<CategoryImportReque
      * @param resources value to be set
      * @return Builder
      */
-
-    public CategoryImportRequestBuilder resources(
-            final com.commercetools.importapi.models.categories.CategoryImport... resources) {
+    
+    public CategoryImportRequestBuilder resources( final com.commercetools.importapi.models.categories.CategoryImport ...resources) {
         this.resources = new ArrayList<>(Arrays.asList(resources));
         return this;
     }
-
+    
     /**
      *  <p>The category import resources of this request.</p>
      * @param resources value to be set
      * @return Builder
      */
-
-    public CategoryImportRequestBuilder resources(
-            final java.util.List<com.commercetools.importapi.models.categories.CategoryImport> resources) {
+    
+    public CategoryImportRequestBuilder resources( final java.util.List<com.commercetools.importapi.models.categories.CategoryImport> resources) {
         this.resources = resources;
         return this;
     }
-
+    
     /**
      *  <p>The category import resources of this request.</p>
      * @param resources value to be set
      * @return Builder
      */
-
-    public CategoryImportRequestBuilder plusResources(
-            final com.commercetools.importapi.models.categories.CategoryImport... resources) {
+    
+    public CategoryImportRequestBuilder plusResources( final com.commercetools.importapi.models.categories.CategoryImport ...resources) {
         if (this.resources == null) {
             this.resources = new ArrayList<>();
         }
         this.resources.addAll(Arrays.asList(resources));
         return this;
     }
-
+    
+    
+    
     /**
      *  <p>The category import resources of this request.</p>
      * @param builder function to build the resources value
      * @return Builder
      */
-
-    public CategoryImportRequestBuilder plusResources(
-            Function<com.commercetools.importapi.models.categories.CategoryImportBuilder, com.commercetools.importapi.models.categories.CategoryImportBuilder> builder) {
+    
+    public CategoryImportRequestBuilder plusResources(Function<com.commercetools.importapi.models.categories.CategoryImportBuilder, com.commercetools.importapi.models.categories.CategoryImportBuilder> builder) {
         if (this.resources == null) {
             this.resources = new ArrayList<>();
         }
-        this.resources
-                .add(builder.apply(com.commercetools.importapi.models.categories.CategoryImportBuilder.of()).build());
+        this.resources.add(builder.apply(com.commercetools.importapi.models.categories.CategoryImportBuilder.of()).build());
         return this;
     }
-
+    
     /**
      *  <p>The category import resources of this request.</p>
      * @param builder function to build the resources value
      * @return Builder
      */
-
-    public CategoryImportRequestBuilder withResources(
-            Function<com.commercetools.importapi.models.categories.CategoryImportBuilder, com.commercetools.importapi.models.categories.CategoryImportBuilder> builder) {
+    
+    public CategoryImportRequestBuilder withResources(Function<com.commercetools.importapi.models.categories.CategoryImportBuilder, com.commercetools.importapi.models.categories.CategoryImportBuilder> builder) {
         this.resources = new ArrayList<>();
-        this.resources
-                .add(builder.apply(com.commercetools.importapi.models.categories.CategoryImportBuilder.of()).build());
+        this.resources.add(builder.apply(com.commercetools.importapi.models.categories.CategoryImportBuilder.of()).build());
         return this;
     }
-
+    
     /**
      *  <p>The category import resources of this request.</p>
      * @param builder function to build the resources value
      * @return Builder
      */
-
-    public CategoryImportRequestBuilder addResources(
-            Function<com.commercetools.importapi.models.categories.CategoryImportBuilder, com.commercetools.importapi.models.categories.CategoryImport> builder) {
+    
+    public CategoryImportRequestBuilder addResources(Function<com.commercetools.importapi.models.categories.CategoryImportBuilder, com.commercetools.importapi.models.categories.CategoryImport> builder) {
         return plusResources(builder.apply(com.commercetools.importapi.models.categories.CategoryImportBuilder.of()));
     }
-
+    
     /**
      *  <p>The category import resources of this request.</p>
      * @param builder function to build the resources value
      * @return Builder
      */
-
-    public CategoryImportRequestBuilder setResources(
-            Function<com.commercetools.importapi.models.categories.CategoryImportBuilder, com.commercetools.importapi.models.categories.CategoryImport> builder) {
+    
+    public CategoryImportRequestBuilder setResources(Function<com.commercetools.importapi.models.categories.CategoryImportBuilder, com.commercetools.importapi.models.categories.CategoryImport> builder) {
         return resources(builder.apply(com.commercetools.importapi.models.categories.CategoryImportBuilder.of()));
     }
+                    
 
     /**
      *  <p>The category import resources of this request.</p>
      * @return resources
      */
-
-    public java.util.List<com.commercetools.importapi.models.categories.CategoryImport> getResources() {
+    
+    
+    public java.util.List<com.commercetools.importapi.models.categories.CategoryImport> getResources(){
         return this.resources;
     }
 
@@ -132,7 +136,7 @@ public class CategoryImportRequestBuilder implements Builder<CategoryImportReque
         Objects.requireNonNull(resources, CategoryImportRequest.class + ": resources is missing");
         return new CategoryImportRequestImpl(resources);
     }
-
+    
     /**
      * builds CategoryImportRequest without checking for non-null required values
      * @return CategoryImportRequest
@@ -143,7 +147,7 @@ public class CategoryImportRequestBuilder implements Builder<CategoryImportReque
 
     /**
      * factory method for an instance of CategoryImportRequestBuilder
-     * @return builder
+     * @return builder 
      */
     public static CategoryImportRequestBuilder of() {
         return new CategoryImportRequestBuilder();

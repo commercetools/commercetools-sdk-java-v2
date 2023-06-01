@@ -1,17 +1,20 @@
-
 package com.commercetools.importapi.models.productvariants;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
+import com.commercetools.importapi.models.productvariants.Attribute;
+import com.commercetools.importapi.models.productvariants.BooleanAttributeImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>This type represents an attribute whose value is either "true" or "false".</p>
@@ -24,9 +27,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .value(true)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = BooleanAttributeImpl.class)
 public interface BooleanAttribute extends Attribute {
 
@@ -47,16 +53,18 @@ public interface BooleanAttribute extends Attribute {
      * set value
      * @param value value to be set
      */
-
+    
     public void setValue(final Boolean value);
+    
 
     /**
      * factory method
      * @return instance of BooleanAttribute
      */
-    public static BooleanAttribute of() {
+    public static BooleanAttribute of(){
         return new BooleanAttributeImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy BooleanAttribute
@@ -93,7 +101,7 @@ public interface BooleanAttribute extends Attribute {
     public static BooleanAttributeBuilder builder() {
         return BooleanAttributeBuilder.of();
     }
-
+    
     /**
      * create builder for BooleanAttribute instance
      * @param template instance with prefilled values for the builder
@@ -102,6 +110,7 @@ public interface BooleanAttribute extends Attribute {
     public static BooleanAttributeBuilder builder(final BooleanAttribute template) {
         return BooleanAttributeBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -112,7 +121,7 @@ public interface BooleanAttribute extends Attribute {
     default <T> T withBooleanAttribute(Function<BooleanAttribute, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

@@ -1,19 +1,21 @@
-
 package com.commercetools.api.models.message;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
+import com.commercetools.api.models.message.OrderMessagePayload;
 import com.commercetools.api.models.order.ReturnInfo;
+import com.commercetools.api.models.message.ReturnInfoAddedMessagePayloadImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Generated after a successful Add Return Info update action.</p>
@@ -26,9 +28,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .returnInfo(returnInfoBuilder -> returnInfoBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = ReturnInfoAddedMessagePayloadImpl.class)
 public interface ReturnInfoAddedMessagePayload extends OrderMessagePayload {
 
@@ -50,16 +55,18 @@ public interface ReturnInfoAddedMessagePayload extends OrderMessagePayload {
      *  <p>The ReturnInfo that was added to the Order.</p>
      * @param returnInfo value to be set
      */
-
+    
     public void setReturnInfo(final ReturnInfo returnInfo);
+    
 
     /**
      * factory method
      * @return instance of ReturnInfoAddedMessagePayload
      */
-    public static ReturnInfoAddedMessagePayload of() {
+    public static ReturnInfoAddedMessagePayload of(){
         return new ReturnInfoAddedMessagePayloadImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy ReturnInfoAddedMessagePayload
@@ -94,7 +101,7 @@ public interface ReturnInfoAddedMessagePayload extends OrderMessagePayload {
     public static ReturnInfoAddedMessagePayloadBuilder builder() {
         return ReturnInfoAddedMessagePayloadBuilder.of();
     }
-
+    
     /**
      * create builder for ReturnInfoAddedMessagePayload instance
      * @param template instance with prefilled values for the builder
@@ -103,6 +110,7 @@ public interface ReturnInfoAddedMessagePayload extends OrderMessagePayload {
     public static ReturnInfoAddedMessagePayloadBuilder builder(final ReturnInfoAddedMessagePayload template) {
         return ReturnInfoAddedMessagePayloadBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -113,7 +121,7 @@ public interface ReturnInfoAddedMessagePayload extends OrderMessagePayload {
     default <T> T withReturnInfoAddedMessagePayload(Function<ReturnInfoAddedMessagePayload, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

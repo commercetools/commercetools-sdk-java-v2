@@ -1,16 +1,20 @@
-
 package com.commercetools.api.models.me;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
+import com.commercetools.api.models.me.MyCustomerUpdateAction;
+import com.commercetools.api.models.me.MyCustomerSetLocaleActionImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * MyCustomerSetLocaleAction
@@ -22,9 +26,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     MyCustomerSetLocaleAction myCustomerSetLocaleAction = MyCustomerSetLocaleAction.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = MyCustomerSetLocaleActionImpl.class)
 public interface MyCustomerSetLocaleAction extends MyCustomerUpdateAction {
 
@@ -37,7 +44,7 @@ public interface MyCustomerSetLocaleAction extends MyCustomerUpdateAction {
      *  <p>Value to set. Must be one of the languages supported by the Project.</p>
      * @return locale
      */
-
+    
     @JsonProperty("locale")
     public String getLocale();
 
@@ -45,16 +52,18 @@ public interface MyCustomerSetLocaleAction extends MyCustomerUpdateAction {
      *  <p>Value to set. Must be one of the languages supported by the Project.</p>
      * @param locale value to be set
      */
-
+    
     public void setLocale(final String locale);
+    
 
     /**
      * factory method
      * @return instance of MyCustomerSetLocaleAction
      */
-    public static MyCustomerSetLocaleAction of() {
+    public static MyCustomerSetLocaleAction of(){
         return new MyCustomerSetLocaleActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy MyCustomerSetLocaleAction
@@ -89,7 +98,7 @@ public interface MyCustomerSetLocaleAction extends MyCustomerUpdateAction {
     public static MyCustomerSetLocaleActionBuilder builder() {
         return MyCustomerSetLocaleActionBuilder.of();
     }
-
+    
     /**
      * create builder for MyCustomerSetLocaleAction instance
      * @param template instance with prefilled values for the builder
@@ -98,6 +107,7 @@ public interface MyCustomerSetLocaleAction extends MyCustomerUpdateAction {
     public static MyCustomerSetLocaleActionBuilder builder(final MyCustomerSetLocaleAction template) {
         return MyCustomerSetLocaleActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -108,7 +118,7 @@ public interface MyCustomerSetLocaleAction extends MyCustomerUpdateAction {
     default <T> T withMyCustomerSetLocaleAction(Function<MyCustomerSetLocaleAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

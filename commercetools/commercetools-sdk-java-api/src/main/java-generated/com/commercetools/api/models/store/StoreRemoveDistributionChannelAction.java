@@ -1,19 +1,21 @@
-
 package com.commercetools.api.models.store;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
 import com.commercetools.api.models.channel.ChannelResourceIdentifier;
+import com.commercetools.api.models.store.StoreUpdateAction;
+import com.commercetools.api.models.store.StoreRemoveDistributionChannelActionImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>This update action produces the StoreDistributionChannelsChanged Message.</p>
@@ -26,9 +28,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .distributionChannel(distributionChannelBuilder -> distributionChannelBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = StoreRemoveDistributionChannelActionImpl.class)
 public interface StoreRemoveDistributionChannelAction extends StoreUpdateAction {
 
@@ -50,16 +55,18 @@ public interface StoreRemoveDistributionChannelAction extends StoreUpdateAction 
      *  <p>Value to remove. ResourceIdentifier of a Channel with the <code>ProductDistribution</code> ChannelRoleEnum.</p>
      * @param distributionChannel value to be set
      */
-
+    
     public void setDistributionChannel(final ChannelResourceIdentifier distributionChannel);
+    
 
     /**
      * factory method
      * @return instance of StoreRemoveDistributionChannelAction
      */
-    public static StoreRemoveDistributionChannelAction of() {
+    public static StoreRemoveDistributionChannelAction of(){
         return new StoreRemoveDistributionChannelActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy StoreRemoveDistributionChannelAction
@@ -78,14 +85,12 @@ public interface StoreRemoveDistributionChannelAction extends StoreUpdateAction 
      * @return copy instance
      */
     @Nullable
-    public static StoreRemoveDistributionChannelAction deepCopy(
-            @Nullable final StoreRemoveDistributionChannelAction template) {
+    public static StoreRemoveDistributionChannelAction deepCopy(@Nullable final StoreRemoveDistributionChannelAction template) {
         if (template == null) {
             return null;
         }
         StoreRemoveDistributionChannelActionImpl instance = new StoreRemoveDistributionChannelActionImpl();
-        instance.setDistributionChannel(
-            com.commercetools.api.models.channel.ChannelResourceIdentifier.deepCopy(template.getDistributionChannel()));
+        instance.setDistributionChannel(com.commercetools.api.models.channel.ChannelResourceIdentifier.deepCopy(template.getDistributionChannel()));
         return instance;
     }
 
@@ -96,16 +101,16 @@ public interface StoreRemoveDistributionChannelAction extends StoreUpdateAction 
     public static StoreRemoveDistributionChannelActionBuilder builder() {
         return StoreRemoveDistributionChannelActionBuilder.of();
     }
-
+    
     /**
      * create builder for StoreRemoveDistributionChannelAction instance
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static StoreRemoveDistributionChannelActionBuilder builder(
-            final StoreRemoveDistributionChannelAction template) {
+    public static StoreRemoveDistributionChannelActionBuilder builder(final StoreRemoveDistributionChannelAction template) {
         return StoreRemoveDistributionChannelActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -116,7 +121,7 @@ public interface StoreRemoveDistributionChannelAction extends StoreUpdateAction 
     default <T> T withStoreRemoveDistributionChannelAction(Function<StoreRemoveDistributionChannelAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

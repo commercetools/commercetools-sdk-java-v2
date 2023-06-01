@@ -1,17 +1,21 @@
-
 package com.commercetools.api.models.discount_code;
 
-import java.time.*;
+import com.commercetools.api.models.discount_code.DiscountCodeUpdateAction;
 import java.time.ZonedDateTime;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
+import com.commercetools.api.models.discount_code.DiscountCodeSetValidFromActionImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * DiscountCodeSetValidFromAction
@@ -23,9 +27,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     DiscountCodeSetValidFromAction discountCodeSetValidFromAction = DiscountCodeSetValidFromAction.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = DiscountCodeSetValidFromActionImpl.class)
 public interface DiscountCodeSetValidFromAction extends DiscountCodeUpdateAction {
 
@@ -38,7 +45,7 @@ public interface DiscountCodeSetValidFromAction extends DiscountCodeUpdateAction
      *  <p>Value to set that must be earlier than <code>validUntil</code>. If empty, any existing value will be removed.</p>
      * @return validFrom
      */
-
+    
     @JsonProperty("validFrom")
     public ZonedDateTime getValidFrom();
 
@@ -46,16 +53,18 @@ public interface DiscountCodeSetValidFromAction extends DiscountCodeUpdateAction
      *  <p>Value to set that must be earlier than <code>validUntil</code>. If empty, any existing value will be removed.</p>
      * @param validFrom value to be set
      */
-
+    
     public void setValidFrom(final ZonedDateTime validFrom);
+    
 
     /**
      * factory method
      * @return instance of DiscountCodeSetValidFromAction
      */
-    public static DiscountCodeSetValidFromAction of() {
+    public static DiscountCodeSetValidFromAction of(){
         return new DiscountCodeSetValidFromActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy DiscountCodeSetValidFromAction
@@ -90,7 +99,7 @@ public interface DiscountCodeSetValidFromAction extends DiscountCodeUpdateAction
     public static DiscountCodeSetValidFromActionBuilder builder() {
         return DiscountCodeSetValidFromActionBuilder.of();
     }
-
+    
     /**
      * create builder for DiscountCodeSetValidFromAction instance
      * @param template instance with prefilled values for the builder
@@ -99,6 +108,7 @@ public interface DiscountCodeSetValidFromAction extends DiscountCodeUpdateAction
     public static DiscountCodeSetValidFromActionBuilder builder(final DiscountCodeSetValidFromAction template) {
         return DiscountCodeSetValidFromActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -109,7 +119,7 @@ public interface DiscountCodeSetValidFromAction extends DiscountCodeUpdateAction
     default <T> T withDiscountCodeSetValidFromAction(Function<DiscountCodeSetValidFromAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

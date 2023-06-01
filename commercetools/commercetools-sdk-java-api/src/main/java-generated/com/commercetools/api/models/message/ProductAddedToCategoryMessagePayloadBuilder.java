@@ -1,9 +1,12 @@
-
 package com.commercetools.api.models.message;
 
+import com.commercetools.api.models.category.CategoryReference;
+import com.commercetools.api.models.message.MessagePayload;
+import com.commercetools.api.models.message.ProductAddedToCategoryMessagePayload;
+import javax.annotation.Nullable;
 import java.util.*;
 import java.util.function.Function;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -18,77 +21,89 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .staged(true)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class ProductAddedToCategoryMessagePayloadBuilder implements Builder<ProductAddedToCategoryMessagePayload> {
 
+    
+    
     private com.commercetools.api.models.category.CategoryReference category;
-
+    
+    
+    
     private Boolean staged;
 
+    
     /**
      *  <p>Category the Product was added to.</p>
      * @param builder function to build the category value
      * @return Builder
      */
-
-    public ProductAddedToCategoryMessagePayloadBuilder category(
-            Function<com.commercetools.api.models.category.CategoryReferenceBuilder, com.commercetools.api.models.category.CategoryReferenceBuilder> builder) {
+    
+    public ProductAddedToCategoryMessagePayloadBuilder category(Function<com.commercetools.api.models.category.CategoryReferenceBuilder, com.commercetools.api.models.category.CategoryReferenceBuilder> builder) {
         this.category = builder.apply(com.commercetools.api.models.category.CategoryReferenceBuilder.of()).build();
         return this;
     }
-
+    
     /**
      *  <p>Category the Product was added to.</p>
      * @param builder function to build the category value
      * @return Builder
      */
-
-    public ProductAddedToCategoryMessagePayloadBuilder withCategory(
-            Function<com.commercetools.api.models.category.CategoryReferenceBuilder, com.commercetools.api.models.category.CategoryReference> builder) {
+    
+    public ProductAddedToCategoryMessagePayloadBuilder withCategory(Function<com.commercetools.api.models.category.CategoryReferenceBuilder, com.commercetools.api.models.category.CategoryReference> builder) {
         this.category = builder.apply(com.commercetools.api.models.category.CategoryReferenceBuilder.of());
         return this;
     }
-
+                    
     /**
      *  <p>Category the Product was added to.</p>
      * @param category value to be set
      * @return Builder
      */
-
-    public ProductAddedToCategoryMessagePayloadBuilder category(
-            final com.commercetools.api.models.category.CategoryReference category) {
+    
+    public ProductAddedToCategoryMessagePayloadBuilder category( final com.commercetools.api.models.category.CategoryReference category) {
         this.category = category;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Whether the update was only applied to the staged Product Projection.</p>
      * @param staged value to be set
      * @return Builder
      */
-
-    public ProductAddedToCategoryMessagePayloadBuilder staged(final Boolean staged) {
+    
+    public ProductAddedToCategoryMessagePayloadBuilder staged( final Boolean staged) {
         this.staged = staged;
         return this;
     }
+    
+    
 
     /**
      *  <p>Category the Product was added to.</p>
      * @return category
      */
-
-    public com.commercetools.api.models.category.CategoryReference getCategory() {
+    
+    
+    public com.commercetools.api.models.category.CategoryReference getCategory(){
         return this.category;
     }
-
+    
     /**
      *  <p>Whether the update was only applied to the staged Product Projection.</p>
      * @return staged
      */
-
-    public Boolean getStaged() {
+    
+    
+    public Boolean getStaged(){
         return this.staged;
     }
 
@@ -101,7 +116,7 @@ public class ProductAddedToCategoryMessagePayloadBuilder implements Builder<Prod
         Objects.requireNonNull(staged, ProductAddedToCategoryMessagePayload.class + ": staged is missing");
         return new ProductAddedToCategoryMessagePayloadImpl(category, staged);
     }
-
+    
     /**
      * builds ProductAddedToCategoryMessagePayload without checking for non-null required values
      * @return ProductAddedToCategoryMessagePayload
@@ -112,7 +127,7 @@ public class ProductAddedToCategoryMessagePayloadBuilder implements Builder<Prod
 
     /**
      * factory method for an instance of ProductAddedToCategoryMessagePayloadBuilder
-     * @return builder
+     * @return builder 
      */
     public static ProductAddedToCategoryMessagePayloadBuilder of() {
         return new ProductAddedToCategoryMessagePayloadBuilder();

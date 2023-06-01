@@ -1,19 +1,21 @@
-
 package com.commercetools.history.models.label;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
 import com.commercetools.history.models.common.LocalizedString;
+import com.commercetools.history.models.label.Label;
+import com.commercetools.history.models.label.ProductLabelImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * ProductLabel
@@ -27,9 +29,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .name(nameBuilder -> nameBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = ProductLabelImpl.class)
 public interface ProductLabel extends Label {
 
@@ -45,7 +50,6 @@ public interface ProductLabel extends Label {
     @NotNull
     @JsonProperty("type")
     public String getType();
-
     /**
      *
      * @return slug
@@ -54,7 +58,6 @@ public interface ProductLabel extends Label {
     @Valid
     @JsonProperty("slug")
     public LocalizedString getSlug();
-
     /**
      *
      * @return name
@@ -68,23 +71,26 @@ public interface ProductLabel extends Label {
      * set slug
      * @param slug value to be set
      */
-
+    
     public void setSlug(final LocalizedString slug);
-
+    
+    
     /**
      * set name
      * @param name value to be set
      */
-
+    
     public void setName(final LocalizedString name);
+    
 
     /**
      * factory method
      * @return instance of ProductLabel
      */
-    public static ProductLabel of() {
+    public static ProductLabel of(){
         return new ProductLabelImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy ProductLabel
@@ -121,7 +127,7 @@ public interface ProductLabel extends Label {
     public static ProductLabelBuilder builder() {
         return ProductLabelBuilder.of();
     }
-
+    
     /**
      * create builder for ProductLabel instance
      * @param template instance with prefilled values for the builder
@@ -130,6 +136,7 @@ public interface ProductLabel extends Label {
     public static ProductLabelBuilder builder(final ProductLabel template) {
         return ProductLabelBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -140,7 +147,7 @@ public interface ProductLabel extends Label {
     default <T> T withProductLabel(Function<ProductLabel, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

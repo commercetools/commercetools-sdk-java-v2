@@ -1,9 +1,12 @@
-
 package com.commercetools.history.models.change;
 
+import com.commercetools.history.models.change.Change;
+import com.commercetools.history.models.change_value.AttributeValue;
+import com.commercetools.history.models.change.SetAttributeChange;
+import javax.annotation.Nullable;
 import java.util.*;
 import java.util.function.Function;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -20,148 +23,167 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .nextValue(nextValueBuilder -> nextValueBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class SetAttributeChangeBuilder implements Builder<SetAttributeChange> {
 
+    
+    
     private String change;
-
+    
+    
+    
     private String catalogData;
-
+    
+    
+    
     private com.commercetools.history.models.change_value.AttributeValue previousValue;
-
+    
+    
+    
     private com.commercetools.history.models.change_value.AttributeValue nextValue;
 
+    
     /**
      *  <p>Update action for <code>setAttribute</code></p>
      * @param change value to be set
      * @return Builder
      */
-
-    public SetAttributeChangeBuilder change(final String change) {
+    
+    public SetAttributeChangeBuilder change( final String change) {
         this.change = change;
         return this;
     }
-
+    
+    
+    
+    
     /**
      * set the value to the catalogData
      * @param catalogData value to be set
      * @return Builder
      */
-
-    public SetAttributeChangeBuilder catalogData(final String catalogData) {
+    
+    public SetAttributeChangeBuilder catalogData( final String catalogData) {
         this.catalogData = catalogData;
         return this;
     }
-
+    
+    
+    
+    
     /**
      * set the value to the previousValue using the builder function
      * @param builder function to build the previousValue value
      * @return Builder
      */
-
-    public SetAttributeChangeBuilder previousValue(
-            Function<com.commercetools.history.models.change_value.AttributeValueBuilder, com.commercetools.history.models.change_value.AttributeValueBuilder> builder) {
-        this.previousValue = builder.apply(com.commercetools.history.models.change_value.AttributeValueBuilder.of())
-                .build();
+    
+    public SetAttributeChangeBuilder previousValue(Function<com.commercetools.history.models.change_value.AttributeValueBuilder, com.commercetools.history.models.change_value.AttributeValueBuilder> builder) {
+        this.previousValue = builder.apply(com.commercetools.history.models.change_value.AttributeValueBuilder.of()).build();
         return this;
     }
-
+    
     /**
      * set the value to the previousValue using the builder function
      * @param builder function to build the previousValue value
      * @return Builder
      */
-
-    public SetAttributeChangeBuilder withPreviousValue(
-            Function<com.commercetools.history.models.change_value.AttributeValueBuilder, com.commercetools.history.models.change_value.AttributeValue> builder) {
+    
+    public SetAttributeChangeBuilder withPreviousValue(Function<com.commercetools.history.models.change_value.AttributeValueBuilder, com.commercetools.history.models.change_value.AttributeValue> builder) {
         this.previousValue = builder.apply(com.commercetools.history.models.change_value.AttributeValueBuilder.of());
         return this;
     }
-
+                    
     /**
      * set the value to the previousValue
      * @param previousValue value to be set
      * @return Builder
      */
-
-    public SetAttributeChangeBuilder previousValue(
-            final com.commercetools.history.models.change_value.AttributeValue previousValue) {
+    
+    public SetAttributeChangeBuilder previousValue( final com.commercetools.history.models.change_value.AttributeValue previousValue) {
         this.previousValue = previousValue;
         return this;
     }
-
+    
+    
+    
+    
     /**
      * set the value to the nextValue using the builder function
      * @param builder function to build the nextValue value
      * @return Builder
      */
-
-    public SetAttributeChangeBuilder nextValue(
-            Function<com.commercetools.history.models.change_value.AttributeValueBuilder, com.commercetools.history.models.change_value.AttributeValueBuilder> builder) {
-        this.nextValue = builder.apply(com.commercetools.history.models.change_value.AttributeValueBuilder.of())
-                .build();
+    
+    public SetAttributeChangeBuilder nextValue(Function<com.commercetools.history.models.change_value.AttributeValueBuilder, com.commercetools.history.models.change_value.AttributeValueBuilder> builder) {
+        this.nextValue = builder.apply(com.commercetools.history.models.change_value.AttributeValueBuilder.of()).build();
         return this;
     }
-
+    
     /**
      * set the value to the nextValue using the builder function
      * @param builder function to build the nextValue value
      * @return Builder
      */
-
-    public SetAttributeChangeBuilder withNextValue(
-            Function<com.commercetools.history.models.change_value.AttributeValueBuilder, com.commercetools.history.models.change_value.AttributeValue> builder) {
+    
+    public SetAttributeChangeBuilder withNextValue(Function<com.commercetools.history.models.change_value.AttributeValueBuilder, com.commercetools.history.models.change_value.AttributeValue> builder) {
         this.nextValue = builder.apply(com.commercetools.history.models.change_value.AttributeValueBuilder.of());
         return this;
     }
-
+                    
     /**
      * set the value to the nextValue
      * @param nextValue value to be set
      * @return Builder
      */
-
-    public SetAttributeChangeBuilder nextValue(
-            final com.commercetools.history.models.change_value.AttributeValue nextValue) {
+    
+    public SetAttributeChangeBuilder nextValue( final com.commercetools.history.models.change_value.AttributeValue nextValue) {
         this.nextValue = nextValue;
         return this;
     }
+    
+    
 
     /**
      *  <p>Update action for <code>setAttribute</code></p>
      * @return change
      */
-
-    public String getChange() {
+    
+    
+    public String getChange(){
         return this.change;
     }
-
+    
     /**
      * value of catalogData}
      * @return catalogData
      */
-
-    public String getCatalogData() {
+    
+    
+    public String getCatalogData(){
         return this.catalogData;
     }
-
+    
     /**
      * value of previousValue}
      * @return previousValue
      */
-
-    public com.commercetools.history.models.change_value.AttributeValue getPreviousValue() {
+    
+    
+    public com.commercetools.history.models.change_value.AttributeValue getPreviousValue(){
         return this.previousValue;
     }
-
+    
     /**
      * value of nextValue}
      * @return nextValue
      */
-
-    public com.commercetools.history.models.change_value.AttributeValue getNextValue() {
+    
+    
+    public com.commercetools.history.models.change_value.AttributeValue getNextValue(){
         return this.nextValue;
     }
 
@@ -176,7 +198,7 @@ public class SetAttributeChangeBuilder implements Builder<SetAttributeChange> {
         Objects.requireNonNull(nextValue, SetAttributeChange.class + ": nextValue is missing");
         return new SetAttributeChangeImpl(change, catalogData, previousValue, nextValue);
     }
-
+    
     /**
      * builds SetAttributeChange without checking for non-null required values
      * @return SetAttributeChange
@@ -187,7 +209,7 @@ public class SetAttributeChangeBuilder implements Builder<SetAttributeChange> {
 
     /**
      * factory method for an instance of SetAttributeChangeBuilder
-     * @return builder
+     * @return builder 
      */
     public static SetAttributeChangeBuilder of() {
         return new SetAttributeChangeBuilder();

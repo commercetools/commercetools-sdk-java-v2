@@ -1,8 +1,12 @@
-
 package com.commercetools.api.models.message;
 
+import com.commercetools.api.models.message.MessagePayload;
+import com.commercetools.api.models.quote.QuoteState;
+import com.commercetools.api.models.message.QuoteStateChangedMessagePayload;
+import javax.annotation.Nullable;
 import java.util.*;
-
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -17,54 +21,67 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .oldQuoteState(QuoteState.PENDING)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class QuoteStateChangedMessagePayloadBuilder implements Builder<QuoteStateChangedMessagePayload> {
 
+    
+    
     private com.commercetools.api.models.quote.QuoteState quoteState;
-
+    
+    
+    
     private com.commercetools.api.models.quote.QuoteState oldQuoteState;
 
+    
     /**
      *  <p>State of the Quote after the Change Quote State update action.</p>
      * @param quoteState value to be set
      * @return Builder
      */
-
-    public QuoteStateChangedMessagePayloadBuilder quoteState(
-            final com.commercetools.api.models.quote.QuoteState quoteState) {
+    
+    public QuoteStateChangedMessagePayloadBuilder quoteState( final com.commercetools.api.models.quote.QuoteState quoteState) {
         this.quoteState = quoteState;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>State of the Quote before the Change Quote State update action.</p>
      * @param oldQuoteState value to be set
      * @return Builder
      */
-
-    public QuoteStateChangedMessagePayloadBuilder oldQuoteState(
-            final com.commercetools.api.models.quote.QuoteState oldQuoteState) {
+    
+    public QuoteStateChangedMessagePayloadBuilder oldQuoteState( final com.commercetools.api.models.quote.QuoteState oldQuoteState) {
         this.oldQuoteState = oldQuoteState;
         return this;
     }
+    
+    
 
     /**
      *  <p>State of the Quote after the Change Quote State update action.</p>
      * @return quoteState
      */
-
-    public com.commercetools.api.models.quote.QuoteState getQuoteState() {
+    
+    
+    public com.commercetools.api.models.quote.QuoteState getQuoteState(){
         return this.quoteState;
     }
-
+    
     /**
      *  <p>State of the Quote before the Change Quote State update action.</p>
      * @return oldQuoteState
      */
-
-    public com.commercetools.api.models.quote.QuoteState getOldQuoteState() {
+    
+    
+    public com.commercetools.api.models.quote.QuoteState getOldQuoteState(){
         return this.oldQuoteState;
     }
 
@@ -77,7 +94,7 @@ public class QuoteStateChangedMessagePayloadBuilder implements Builder<QuoteStat
         Objects.requireNonNull(oldQuoteState, QuoteStateChangedMessagePayload.class + ": oldQuoteState is missing");
         return new QuoteStateChangedMessagePayloadImpl(quoteState, oldQuoteState);
     }
-
+    
     /**
      * builds QuoteStateChangedMessagePayload without checking for non-null required values
      * @return QuoteStateChangedMessagePayload
@@ -88,7 +105,7 @@ public class QuoteStateChangedMessagePayloadBuilder implements Builder<QuoteStat
 
     /**
      * factory method for an instance of QuoteStateChangedMessagePayloadBuilder
-     * @return builder
+     * @return builder 
      */
     public static QuoteStateChangedMessagePayloadBuilder of() {
         return new QuoteStateChangedMessagePayloadBuilder();

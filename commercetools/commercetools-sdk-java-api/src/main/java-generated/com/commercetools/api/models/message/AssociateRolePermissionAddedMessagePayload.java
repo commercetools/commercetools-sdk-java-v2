@@ -1,18 +1,21 @@
-
 package com.commercetools.api.models.message;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
-
 import com.commercetools.api.models.associate_role.Permission;
+import com.commercetools.api.models.message.MessagePayload;
+import com.commercetools.api.models.message.AssociateRolePermissionAddedMessagePayloadImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Generated after a successful Add Permissions update action.</p>
@@ -25,9 +28,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .permission(Permission.ADD_CHILD_UNITS)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = AssociateRolePermissionAddedMessagePayloadImpl.class)
 public interface AssociateRolePermissionAddedMessagePayload extends MessagePayload {
 
@@ -48,24 +54,25 @@ public interface AssociateRolePermissionAddedMessagePayload extends MessagePaylo
      *  <p>The Permission that was added to the AssociateRole.</p>
      * @param permission value to be set
      */
-
+    
     public void setPermission(final Permission permission);
+    
 
     /**
      * factory method
      * @return instance of AssociateRolePermissionAddedMessagePayload
      */
-    public static AssociateRolePermissionAddedMessagePayload of() {
+    public static AssociateRolePermissionAddedMessagePayload of(){
         return new AssociateRolePermissionAddedMessagePayloadImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy AssociateRolePermissionAddedMessagePayload
      * @param template instance to be copied
      * @return copy instance
      */
-    public static AssociateRolePermissionAddedMessagePayload of(
-            final AssociateRolePermissionAddedMessagePayload template) {
+    public static AssociateRolePermissionAddedMessagePayload of(final AssociateRolePermissionAddedMessagePayload template) {
         AssociateRolePermissionAddedMessagePayloadImpl instance = new AssociateRolePermissionAddedMessagePayloadImpl();
         instance.setPermission(template.getPermission());
         return instance;
@@ -77,8 +84,7 @@ public interface AssociateRolePermissionAddedMessagePayload extends MessagePaylo
      * @return copy instance
      */
     @Nullable
-    public static AssociateRolePermissionAddedMessagePayload deepCopy(
-            @Nullable final AssociateRolePermissionAddedMessagePayload template) {
+    public static AssociateRolePermissionAddedMessagePayload deepCopy(@Nullable final AssociateRolePermissionAddedMessagePayload template) {
         if (template == null) {
             return null;
         }
@@ -94,16 +100,16 @@ public interface AssociateRolePermissionAddedMessagePayload extends MessagePaylo
     public static AssociateRolePermissionAddedMessagePayloadBuilder builder() {
         return AssociateRolePermissionAddedMessagePayloadBuilder.of();
     }
-
+    
     /**
      * create builder for AssociateRolePermissionAddedMessagePayload instance
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static AssociateRolePermissionAddedMessagePayloadBuilder builder(
-            final AssociateRolePermissionAddedMessagePayload template) {
+    public static AssociateRolePermissionAddedMessagePayloadBuilder builder(final AssociateRolePermissionAddedMessagePayload template) {
         return AssociateRolePermissionAddedMessagePayloadBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -111,11 +117,10 @@ public interface AssociateRolePermissionAddedMessagePayload extends MessagePaylo
      * @param helper function to map the object
      * @return mapped value
      */
-    default <T> T withAssociateRolePermissionAddedMessagePayload(
-            Function<AssociateRolePermissionAddedMessagePayload, T> helper) {
+    default <T> T withAssociateRolePermissionAddedMessagePayload(Function<AssociateRolePermissionAddedMessagePayload, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

@@ -1,9 +1,12 @@
-
 package com.commercetools.api.models.error;
 
+import com.commercetools.api.models.error.ErrorByExtension;
+import com.commercetools.api.models.error.GraphQLErrorObject;
+import com.commercetools.api.models.error.GraphQLExtensionPredicateEvaluationFailedError;
+import javax.annotation.Nullable;
 import java.util.*;
 import java.util.function.Function;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -17,14 +20,20 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .errorByExtension(errorByExtensionBuilder -> errorByExtensionBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
-public class GraphQLExtensionPredicateEvaluationFailedErrorBuilder
-        implements Builder<GraphQLExtensionPredicateEvaluationFailedError> {
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
+public class GraphQLExtensionPredicateEvaluationFailedErrorBuilder implements Builder<GraphQLExtensionPredicateEvaluationFailedError> {
 
+    
+    
     private Map<String, java.lang.Object> values = new HashMap<>();
-
+    
+    
+    
     private com.commercetools.api.models.error.ErrorByExtension errorByExtension;
 
     /**
@@ -32,79 +41,81 @@ public class GraphQLExtensionPredicateEvaluationFailedErrorBuilder
      * @param values properties to be set
      * @return Builder
      */
-
-    public GraphQLExtensionPredicateEvaluationFailedErrorBuilder values(final Map<String, java.lang.Object> values) {
+    
+    public GraphQLExtensionPredicateEvaluationFailedErrorBuilder values( final Map<String, java.lang.Object> values){
         this.values = values;
         return this;
     }
-
+    
     /**
      *  <p>Error-specific additional fields.</p>
      * @param key property name
      * @param value property value
      * @return Builder
      */
-
-    public GraphQLExtensionPredicateEvaluationFailedErrorBuilder addValue(final String key,
-            final java.lang.Object value) {
+    
+    public GraphQLExtensionPredicateEvaluationFailedErrorBuilder addValue(final String key, final java.lang.Object value) {
         if (this.values == null) {
             values = new HashMap<>();
         }
         values.put(key, value);
         return this;
     }
-
+    
+    
+    
     /**
      *  <p>Details about the API Extension that was involved in the error.</p>
      * @param builder function to build the errorByExtension value
      * @return Builder
      */
-
-    public GraphQLExtensionPredicateEvaluationFailedErrorBuilder errorByExtension(
-            Function<com.commercetools.api.models.error.ErrorByExtensionBuilder, com.commercetools.api.models.error.ErrorByExtensionBuilder> builder) {
+    
+    public GraphQLExtensionPredicateEvaluationFailedErrorBuilder errorByExtension(Function<com.commercetools.api.models.error.ErrorByExtensionBuilder, com.commercetools.api.models.error.ErrorByExtensionBuilder> builder) {
         this.errorByExtension = builder.apply(com.commercetools.api.models.error.ErrorByExtensionBuilder.of()).build();
         return this;
     }
-
+    
     /**
      *  <p>Details about the API Extension that was involved in the error.</p>
      * @param builder function to build the errorByExtension value
      * @return Builder
      */
-
-    public GraphQLExtensionPredicateEvaluationFailedErrorBuilder withErrorByExtension(
-            Function<com.commercetools.api.models.error.ErrorByExtensionBuilder, com.commercetools.api.models.error.ErrorByExtension> builder) {
+    
+    public GraphQLExtensionPredicateEvaluationFailedErrorBuilder withErrorByExtension(Function<com.commercetools.api.models.error.ErrorByExtensionBuilder, com.commercetools.api.models.error.ErrorByExtension> builder) {
         this.errorByExtension = builder.apply(com.commercetools.api.models.error.ErrorByExtensionBuilder.of());
         return this;
     }
-
+                    
     /**
      *  <p>Details about the API Extension that was involved in the error.</p>
      * @param errorByExtension value to be set
      * @return Builder
      */
-
-    public GraphQLExtensionPredicateEvaluationFailedErrorBuilder errorByExtension(
-            final com.commercetools.api.models.error.ErrorByExtension errorByExtension) {
+    
+    public GraphQLExtensionPredicateEvaluationFailedErrorBuilder errorByExtension( final com.commercetools.api.models.error.ErrorByExtension errorByExtension) {
         this.errorByExtension = errorByExtension;
         return this;
     }
+    
+    
 
     /**
      *  <p>Error-specific additional fields.</p>
      * @return pattern properties
      */
-
-    public Map<String, java.lang.Object> getValues() {
+    
+    
+    public Map<String, java.lang.Object> getValues(){
         return this.values;
     }
-
+    
     /**
      *  <p>Details about the API Extension that was involved in the error.</p>
      * @return errorByExtension
      */
-
-    public com.commercetools.api.models.error.ErrorByExtension getErrorByExtension() {
+    
+    
+    public com.commercetools.api.models.error.ErrorByExtension getErrorByExtension(){
         return this.errorByExtension;
     }
 
@@ -113,11 +124,10 @@ public class GraphQLExtensionPredicateEvaluationFailedErrorBuilder
      * @return GraphQLExtensionPredicateEvaluationFailedError
      */
     public GraphQLExtensionPredicateEvaluationFailedError build() {
-        Objects.requireNonNull(errorByExtension,
-            GraphQLExtensionPredicateEvaluationFailedError.class + ": errorByExtension is missing");
+        Objects.requireNonNull(errorByExtension, GraphQLExtensionPredicateEvaluationFailedError.class + ": errorByExtension is missing");
         return new GraphQLExtensionPredicateEvaluationFailedErrorImpl(values, errorByExtension);
     }
-
+    
     /**
      * builds GraphQLExtensionPredicateEvaluationFailedError without checking for non-null required values
      * @return GraphQLExtensionPredicateEvaluationFailedError
@@ -128,7 +138,7 @@ public class GraphQLExtensionPredicateEvaluationFailedErrorBuilder
 
     /**
      * factory method for an instance of GraphQLExtensionPredicateEvaluationFailedErrorBuilder
-     * @return builder
+     * @return builder 
      */
     public static GraphQLExtensionPredicateEvaluationFailedErrorBuilder of() {
         return new GraphQLExtensionPredicateEvaluationFailedErrorBuilder();
@@ -139,8 +149,7 @@ public class GraphQLExtensionPredicateEvaluationFailedErrorBuilder
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static GraphQLExtensionPredicateEvaluationFailedErrorBuilder of(
-            final GraphQLExtensionPredicateEvaluationFailedError template) {
+    public static GraphQLExtensionPredicateEvaluationFailedErrorBuilder of(final GraphQLExtensionPredicateEvaluationFailedError template) {
         GraphQLExtensionPredicateEvaluationFailedErrorBuilder builder = new GraphQLExtensionPredicateEvaluationFailedErrorBuilder();
         builder.values = template.values();
         builder.errorByExtension = template.getErrorByExtension();

@@ -1,18 +1,21 @@
-
 package com.commercetools.api.models.shopping_list;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-
 import com.commercetools.api.models.common.LocalizedString;
+import com.commercetools.api.models.shopping_list.ShoppingListUpdateAction;
+import com.commercetools.api.models.shopping_list.ShoppingListSetDescriptionActionImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * ShoppingListSetDescriptionAction
@@ -24,9 +27,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     ShoppingListSetDescriptionAction shoppingListSetDescriptionAction = ShoppingListSetDescriptionAction.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = ShoppingListSetDescriptionActionImpl.class)
 public interface ShoppingListSetDescriptionAction extends ShoppingListUpdateAction {
 
@@ -47,16 +53,18 @@ public interface ShoppingListSetDescriptionAction extends ShoppingListUpdateActi
      *  <p>Value to set. If empty, any existing value will be removed.</p>
      * @param description value to be set
      */
-
+    
     public void setDescription(final LocalizedString description);
+    
 
     /**
      * factory method
      * @return instance of ShoppingListSetDescriptionAction
      */
-    public static ShoppingListSetDescriptionAction of() {
+    public static ShoppingListSetDescriptionAction of(){
         return new ShoppingListSetDescriptionActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy ShoppingListSetDescriptionAction
@@ -80,8 +88,7 @@ public interface ShoppingListSetDescriptionAction extends ShoppingListUpdateActi
             return null;
         }
         ShoppingListSetDescriptionActionImpl instance = new ShoppingListSetDescriptionActionImpl();
-        instance.setDescription(
-            com.commercetools.api.models.common.LocalizedString.deepCopy(template.getDescription()));
+        instance.setDescription(com.commercetools.api.models.common.LocalizedString.deepCopy(template.getDescription()));
         return instance;
     }
 
@@ -92,7 +99,7 @@ public interface ShoppingListSetDescriptionAction extends ShoppingListUpdateActi
     public static ShoppingListSetDescriptionActionBuilder builder() {
         return ShoppingListSetDescriptionActionBuilder.of();
     }
-
+    
     /**
      * create builder for ShoppingListSetDescriptionAction instance
      * @param template instance with prefilled values for the builder
@@ -101,6 +108,7 @@ public interface ShoppingListSetDescriptionAction extends ShoppingListUpdateActi
     public static ShoppingListSetDescriptionActionBuilder builder(final ShoppingListSetDescriptionAction template) {
         return ShoppingListSetDescriptionActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -111,7 +119,7 @@ public interface ShoppingListSetDescriptionAction extends ShoppingListUpdateActi
     default <T> T withShoppingListSetDescriptionAction(Function<ShoppingListSetDescriptionAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

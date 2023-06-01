@@ -1,19 +1,21 @@
-
 package com.commercetools.history.models.change;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
+import com.commercetools.history.models.change.Change;
 import com.commercetools.history.models.common.CustomFields;
+import com.commercetools.history.models.change.SetCustomTypeChangeImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * SetCustomTypeChange
@@ -28,9 +30,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .previousValue(previousValueBuilder -> previousValueBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = SetCustomTypeChangeImpl.class)
 public interface SetCustomTypeChange extends Change {
 
@@ -46,7 +51,6 @@ public interface SetCustomTypeChange extends Change {
     @NotNull
     @JsonProperty("type")
     public String getType();
-
     /**
      *  <p>Update action for setting a custom type</p>
      * @return change
@@ -54,7 +58,6 @@ public interface SetCustomTypeChange extends Change {
     @NotNull
     @JsonProperty("change")
     public String getChange();
-
     /**
      *
      * @return nextValue
@@ -63,7 +66,6 @@ public interface SetCustomTypeChange extends Change {
     @Valid
     @JsonProperty("nextValue")
     public CustomFields getNextValue();
-
     /**
      *
      * @return previousValue
@@ -77,30 +79,34 @@ public interface SetCustomTypeChange extends Change {
      *  <p>Update action for setting a custom type</p>
      * @param change value to be set
      */
-
+    
     public void setChange(final String change);
-
+    
+    
     /**
      * set nextValue
      * @param nextValue value to be set
      */
-
+    
     public void setNextValue(final CustomFields nextValue);
-
+    
+    
     /**
      * set previousValue
      * @param previousValue value to be set
      */
-
+    
     public void setPreviousValue(final CustomFields previousValue);
+    
 
     /**
      * factory method
      * @return instance of SetCustomTypeChange
      */
-    public static SetCustomTypeChange of() {
+    public static SetCustomTypeChange of(){
         return new SetCustomTypeChangeImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy SetCustomTypeChange
@@ -128,8 +134,7 @@ public interface SetCustomTypeChange extends Change {
         SetCustomTypeChangeImpl instance = new SetCustomTypeChangeImpl();
         instance.setChange(template.getChange());
         instance.setNextValue(com.commercetools.history.models.common.CustomFields.deepCopy(template.getNextValue()));
-        instance.setPreviousValue(
-            com.commercetools.history.models.common.CustomFields.deepCopy(template.getPreviousValue()));
+        instance.setPreviousValue(com.commercetools.history.models.common.CustomFields.deepCopy(template.getPreviousValue()));
         return instance;
     }
 
@@ -140,7 +145,7 @@ public interface SetCustomTypeChange extends Change {
     public static SetCustomTypeChangeBuilder builder() {
         return SetCustomTypeChangeBuilder.of();
     }
-
+    
     /**
      * create builder for SetCustomTypeChange instance
      * @param template instance with prefilled values for the builder
@@ -149,6 +154,7 @@ public interface SetCustomTypeChange extends Change {
     public static SetCustomTypeChangeBuilder builder(final SetCustomTypeChange template) {
         return SetCustomTypeChangeBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -159,7 +165,7 @@ public interface SetCustomTypeChange extends Change {
     default <T> T withSetCustomTypeChange(Function<SetCustomTypeChange, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

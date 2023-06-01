@@ -1,8 +1,12 @@
-
 package com.commercetools.api.models.message;
 
+import com.commercetools.api.models.business_unit.BusinessUnitAssociateMode;
+import com.commercetools.api.models.message.MessagePayload;
+import com.commercetools.api.models.message.BusinessUnitAssociateModeChangedMessagePayload;
+import javax.annotation.Nullable;
 import java.util.*;
-
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -17,55 +21,67 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .oldAssociateMode(BusinessUnitAssociateMode.EXPLICIT)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
-public class BusinessUnitAssociateModeChangedMessagePayloadBuilder
-        implements Builder<BusinessUnitAssociateModeChangedMessagePayload> {
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
+public class BusinessUnitAssociateModeChangedMessagePayloadBuilder implements Builder<BusinessUnitAssociateModeChangedMessagePayload> {
 
+    
+    
     private com.commercetools.api.models.business_unit.BusinessUnitAssociateMode associateMode;
-
+    
+    
+    
     private com.commercetools.api.models.business_unit.BusinessUnitAssociateMode oldAssociateMode;
 
+    
     /**
      *  <p>BusinessUnitAssociateMode of the Business Unit after the Change Associate Mode update action.</p>
      * @param associateMode value to be set
      * @return Builder
      */
-
-    public BusinessUnitAssociateModeChangedMessagePayloadBuilder associateMode(
-            final com.commercetools.api.models.business_unit.BusinessUnitAssociateMode associateMode) {
+    
+    public BusinessUnitAssociateModeChangedMessagePayloadBuilder associateMode( final com.commercetools.api.models.business_unit.BusinessUnitAssociateMode associateMode) {
         this.associateMode = associateMode;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>BusinessUnitAssociateMode of the Business Unit before the Change Associate Mode update action.</p>
      * @param oldAssociateMode value to be set
      * @return Builder
      */
-
-    public BusinessUnitAssociateModeChangedMessagePayloadBuilder oldAssociateMode(
-            final com.commercetools.api.models.business_unit.BusinessUnitAssociateMode oldAssociateMode) {
+    
+    public BusinessUnitAssociateModeChangedMessagePayloadBuilder oldAssociateMode( final com.commercetools.api.models.business_unit.BusinessUnitAssociateMode oldAssociateMode) {
         this.oldAssociateMode = oldAssociateMode;
         return this;
     }
+    
+    
 
     /**
      *  <p>BusinessUnitAssociateMode of the Business Unit after the Change Associate Mode update action.</p>
      * @return associateMode
      */
-
-    public com.commercetools.api.models.business_unit.BusinessUnitAssociateMode getAssociateMode() {
+    
+    
+    public com.commercetools.api.models.business_unit.BusinessUnitAssociateMode getAssociateMode(){
         return this.associateMode;
     }
-
+    
     /**
      *  <p>BusinessUnitAssociateMode of the Business Unit before the Change Associate Mode update action.</p>
      * @return oldAssociateMode
      */
-
-    public com.commercetools.api.models.business_unit.BusinessUnitAssociateMode getOldAssociateMode() {
+    
+    
+    public com.commercetools.api.models.business_unit.BusinessUnitAssociateMode getOldAssociateMode(){
         return this.oldAssociateMode;
     }
 
@@ -74,13 +90,11 @@ public class BusinessUnitAssociateModeChangedMessagePayloadBuilder
      * @return BusinessUnitAssociateModeChangedMessagePayload
      */
     public BusinessUnitAssociateModeChangedMessagePayload build() {
-        Objects.requireNonNull(associateMode,
-            BusinessUnitAssociateModeChangedMessagePayload.class + ": associateMode is missing");
-        Objects.requireNonNull(oldAssociateMode,
-            BusinessUnitAssociateModeChangedMessagePayload.class + ": oldAssociateMode is missing");
+        Objects.requireNonNull(associateMode, BusinessUnitAssociateModeChangedMessagePayload.class + ": associateMode is missing");
+        Objects.requireNonNull(oldAssociateMode, BusinessUnitAssociateModeChangedMessagePayload.class + ": oldAssociateMode is missing");
         return new BusinessUnitAssociateModeChangedMessagePayloadImpl(associateMode, oldAssociateMode);
     }
-
+    
     /**
      * builds BusinessUnitAssociateModeChangedMessagePayload without checking for non-null required values
      * @return BusinessUnitAssociateModeChangedMessagePayload
@@ -91,7 +105,7 @@ public class BusinessUnitAssociateModeChangedMessagePayloadBuilder
 
     /**
      * factory method for an instance of BusinessUnitAssociateModeChangedMessagePayloadBuilder
-     * @return builder
+     * @return builder 
      */
     public static BusinessUnitAssociateModeChangedMessagePayloadBuilder of() {
         return new BusinessUnitAssociateModeChangedMessagePayloadBuilder();
@@ -102,8 +116,7 @@ public class BusinessUnitAssociateModeChangedMessagePayloadBuilder
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static BusinessUnitAssociateModeChangedMessagePayloadBuilder of(
-            final BusinessUnitAssociateModeChangedMessagePayload template) {
+    public static BusinessUnitAssociateModeChangedMessagePayloadBuilder of(final BusinessUnitAssociateModeChangedMessagePayload template) {
         BusinessUnitAssociateModeChangedMessagePayloadBuilder builder = new BusinessUnitAssociateModeChangedMessagePayloadBuilder();
         builder.associateMode = template.getAssociateMode();
         builder.oldAssociateMode = template.getOldAssociateMode();

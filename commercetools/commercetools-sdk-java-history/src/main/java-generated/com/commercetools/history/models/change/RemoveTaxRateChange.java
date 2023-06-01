@@ -1,19 +1,21 @@
-
 package com.commercetools.history.models.change;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
+import com.commercetools.history.models.change.Change;
 import com.commercetools.history.models.common.TaxRate;
+import com.commercetools.history.models.change.RemoveTaxRateChangeImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * RemoveTaxRateChange
@@ -28,9 +30,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .nextValue(nextValueBuilder -> nextValueBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = RemoveTaxRateChangeImpl.class)
 public interface RemoveTaxRateChange extends Change {
 
@@ -46,7 +51,6 @@ public interface RemoveTaxRateChange extends Change {
     @NotNull
     @JsonProperty("type")
     public String getType();
-
     /**
      *  <p>Update action for <code>removeTaxRate</code> on tax categories</p>
      * @return change
@@ -54,7 +58,6 @@ public interface RemoveTaxRateChange extends Change {
     @NotNull
     @JsonProperty("change")
     public String getChange();
-
     /**
      *  <p>Shape of the value for <code>addTaxRate</code> and <code>removeTaxRate</code> actions</p>
      * @return previousValue
@@ -63,7 +66,6 @@ public interface RemoveTaxRateChange extends Change {
     @Valid
     @JsonProperty("previousValue")
     public TaxRate getPreviousValue();
-
     /**
      *  <p>Shape of the value for <code>addTaxRate</code> and <code>removeTaxRate</code> actions</p>
      * @return nextValue
@@ -77,30 +79,34 @@ public interface RemoveTaxRateChange extends Change {
      *  <p>Update action for <code>removeTaxRate</code> on tax categories</p>
      * @param change value to be set
      */
-
+    
     public void setChange(final String change);
-
+    
+    
     /**
      *  <p>Shape of the value for <code>addTaxRate</code> and <code>removeTaxRate</code> actions</p>
      * @param previousValue value to be set
      */
-
+    
     public void setPreviousValue(final TaxRate previousValue);
-
+    
+    
     /**
      *  <p>Shape of the value for <code>addTaxRate</code> and <code>removeTaxRate</code> actions</p>
      * @param nextValue value to be set
      */
-
+    
     public void setNextValue(final TaxRate nextValue);
+    
 
     /**
      * factory method
      * @return instance of RemoveTaxRateChange
      */
-    public static RemoveTaxRateChange of() {
+    public static RemoveTaxRateChange of(){
         return new RemoveTaxRateChangeImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy RemoveTaxRateChange
@@ -127,8 +133,7 @@ public interface RemoveTaxRateChange extends Change {
         }
         RemoveTaxRateChangeImpl instance = new RemoveTaxRateChangeImpl();
         instance.setChange(template.getChange());
-        instance.setPreviousValue(
-            com.commercetools.history.models.common.TaxRate.deepCopy(template.getPreviousValue()));
+        instance.setPreviousValue(com.commercetools.history.models.common.TaxRate.deepCopy(template.getPreviousValue()));
         instance.setNextValue(com.commercetools.history.models.common.TaxRate.deepCopy(template.getNextValue()));
         return instance;
     }
@@ -140,7 +145,7 @@ public interface RemoveTaxRateChange extends Change {
     public static RemoveTaxRateChangeBuilder builder() {
         return RemoveTaxRateChangeBuilder.of();
     }
-
+    
     /**
      * create builder for RemoveTaxRateChange instance
      * @param template instance with prefilled values for the builder
@@ -149,6 +154,7 @@ public interface RemoveTaxRateChange extends Change {
     public static RemoveTaxRateChangeBuilder builder(final RemoveTaxRateChange template) {
         return RemoveTaxRateChangeBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -159,7 +165,7 @@ public interface RemoveTaxRateChange extends Change {
     default <T> T withRemoveTaxRateChange(Function<RemoveTaxRateChange, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

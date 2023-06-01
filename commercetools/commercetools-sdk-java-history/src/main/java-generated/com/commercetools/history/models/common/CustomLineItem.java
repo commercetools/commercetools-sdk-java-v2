@@ -1,18 +1,22 @@
-
 package com.commercetools.history.models.common;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
+import com.commercetools.history.models.common.LocalizedString;
+import com.commercetools.history.models.common.Money;
+import com.commercetools.history.models.common.TaxedItemPrice;
+import com.commercetools.history.models.common.CustomLineItemImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * CustomLineItem
@@ -31,11 +35,15 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .quantity(1)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = CustomLineItemImpl.class)
-public interface CustomLineItem {
+public interface CustomLineItem  {
+
 
     /**
      *  <p>The unique ID of this CustomLineItem.</p>
@@ -44,7 +52,6 @@ public interface CustomLineItem {
     @NotNull
     @JsonProperty("id")
     public String getId();
-
     /**
      *
      * @return name
@@ -53,7 +60,6 @@ public interface CustomLineItem {
     @Valid
     @JsonProperty("name")
     public LocalizedString getName();
-
     /**
      *
      * @return money
@@ -62,7 +68,6 @@ public interface CustomLineItem {
     @Valid
     @JsonProperty("money")
     public Money getMoney();
-
     /**
      *
      * @return taxedPrice
@@ -71,7 +76,6 @@ public interface CustomLineItem {
     @Valid
     @JsonProperty("taxedPrice")
     public TaxedItemPrice getTaxedPrice();
-
     /**
      *
      * @return totalPrice
@@ -80,7 +84,6 @@ public interface CustomLineItem {
     @Valid
     @JsonProperty("totalPrice")
     public Money getTotalPrice();
-
     /**
      *  <p>A unique String in the cart to identify this CustomLineItem.</p>
      * @return slug
@@ -88,7 +91,6 @@ public interface CustomLineItem {
     @NotNull
     @JsonProperty("slug")
     public String getSlug();
-
     /**
      *  <p>The amount of a CustomLineItem in the cart. Must be a positive integer.</p>
      * @return quantity
@@ -101,58 +103,66 @@ public interface CustomLineItem {
      *  <p>The unique ID of this CustomLineItem.</p>
      * @param id value to be set
      */
-
+    
     public void setId(final String id);
-
+    
+    
     /**
      * set name
      * @param name value to be set
      */
-
+    
     public void setName(final LocalizedString name);
-
+    
+    
     /**
      * set money
      * @param money value to be set
      */
-
+    
     public void setMoney(final Money money);
-
+    
+    
     /**
      * set taxedPrice
      * @param taxedPrice value to be set
      */
-
+    
     public void setTaxedPrice(final TaxedItemPrice taxedPrice);
-
+    
+    
     /**
      * set totalPrice
      * @param totalPrice value to be set
      */
-
+    
     public void setTotalPrice(final Money totalPrice);
-
+    
+    
     /**
      *  <p>A unique String in the cart to identify this CustomLineItem.</p>
      * @param slug value to be set
      */
-
+    
     public void setSlug(final String slug);
-
+    
+    
     /**
      *  <p>The amount of a CustomLineItem in the cart. Must be a positive integer.</p>
      * @param quantity value to be set
      */
-
+    
     public void setQuantity(final Integer quantity);
+    
 
     /**
      * factory method
      * @return instance of CustomLineItem
      */
-    public static CustomLineItem of() {
+    public static CustomLineItem of(){
         return new CustomLineItemImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy CustomLineItem
@@ -185,8 +195,7 @@ public interface CustomLineItem {
         instance.setId(template.getId());
         instance.setName(com.commercetools.history.models.common.LocalizedString.deepCopy(template.getName()));
         instance.setMoney(com.commercetools.history.models.common.Money.deepCopy(template.getMoney()));
-        instance.setTaxedPrice(
-            com.commercetools.history.models.common.TaxedItemPrice.deepCopy(template.getTaxedPrice()));
+        instance.setTaxedPrice(com.commercetools.history.models.common.TaxedItemPrice.deepCopy(template.getTaxedPrice()));
         instance.setTotalPrice(com.commercetools.history.models.common.Money.deepCopy(template.getTotalPrice()));
         instance.setSlug(template.getSlug());
         instance.setQuantity(template.getQuantity());
@@ -200,7 +209,7 @@ public interface CustomLineItem {
     public static CustomLineItemBuilder builder() {
         return CustomLineItemBuilder.of();
     }
-
+    
     /**
      * create builder for CustomLineItem instance
      * @param template instance with prefilled values for the builder
@@ -209,6 +218,7 @@ public interface CustomLineItem {
     public static CustomLineItemBuilder builder(final CustomLineItem template) {
         return CustomLineItemBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -219,7 +229,7 @@ public interface CustomLineItem {
     default <T> T withCustomLineItem(Function<CustomLineItem, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

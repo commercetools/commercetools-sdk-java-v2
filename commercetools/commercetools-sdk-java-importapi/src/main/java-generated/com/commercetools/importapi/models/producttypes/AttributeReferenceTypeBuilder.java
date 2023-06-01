@@ -1,8 +1,12 @@
-
 package com.commercetools.importapi.models.producttypes;
 
+import com.commercetools.importapi.models.common.ReferenceType;
+import com.commercetools.importapi.models.producttypes.AttributeType;
+import com.commercetools.importapi.models.producttypes.AttributeReferenceType;
+import javax.annotation.Nullable;
 import java.util.*;
-
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -16,31 +20,39 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .referenceTypeId(ReferenceType.CART)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class AttributeReferenceTypeBuilder implements Builder<AttributeReferenceType> {
 
+    
+    
     private com.commercetools.importapi.models.common.ReferenceType referenceTypeId;
 
+    
     /**
      *  <p>The type of the referenced resource.</p>
      * @param referenceTypeId value to be set
      * @return Builder
      */
-
-    public AttributeReferenceTypeBuilder referenceTypeId(
-            final com.commercetools.importapi.models.common.ReferenceType referenceTypeId) {
+    
+    public AttributeReferenceTypeBuilder referenceTypeId( final com.commercetools.importapi.models.common.ReferenceType referenceTypeId) {
         this.referenceTypeId = referenceTypeId;
         return this;
     }
+    
+    
 
     /**
      *  <p>The type of the referenced resource.</p>
      * @return referenceTypeId
      */
-
-    public com.commercetools.importapi.models.common.ReferenceType getReferenceTypeId() {
+    
+    
+    public com.commercetools.importapi.models.common.ReferenceType getReferenceTypeId(){
         return this.referenceTypeId;
     }
 
@@ -52,7 +64,7 @@ public class AttributeReferenceTypeBuilder implements Builder<AttributeReference
         Objects.requireNonNull(referenceTypeId, AttributeReferenceType.class + ": referenceTypeId is missing");
         return new AttributeReferenceTypeImpl(referenceTypeId);
     }
-
+    
     /**
      * builds AttributeReferenceType without checking for non-null required values
      * @return AttributeReferenceType
@@ -63,7 +75,7 @@ public class AttributeReferenceTypeBuilder implements Builder<AttributeReference
 
     /**
      * factory method for an instance of AttributeReferenceTypeBuilder
-     * @return builder
+     * @return builder 
      */
     public static AttributeReferenceTypeBuilder of() {
         return new AttributeReferenceTypeBuilder();

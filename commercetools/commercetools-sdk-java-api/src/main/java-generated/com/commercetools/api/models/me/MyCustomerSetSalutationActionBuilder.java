@@ -1,10 +1,11 @@
-
 package com.commercetools.api.models.me;
 
-import java.util.*;
-
+import com.commercetools.api.models.me.MyCustomerUpdateAction;
+import com.commercetools.api.models.me.MyCustomerSetSalutationAction;
 import javax.annotation.Nullable;
-
+import java.util.*;
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -17,32 +18,39 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     MyCustomerSetSalutationAction myCustomerSetSalutationAction = MyCustomerSetSalutationAction.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class MyCustomerSetSalutationActionBuilder implements Builder<MyCustomerSetSalutationAction> {
 
+    
     @Nullable
     private String salutation;
 
+    
     /**
      *  <p>Value to set. If empty, any existing value is removed.</p>
      * @param salutation value to be set
      * @return Builder
      */
-
+    
     public MyCustomerSetSalutationActionBuilder salutation(@Nullable final String salutation) {
         this.salutation = salutation;
         return this;
     }
+    
+    
 
     /**
      *  <p>Value to set. If empty, any existing value is removed.</p>
      * @return salutation
      */
-
+    
     @Nullable
-    public String getSalutation() {
+    public String getSalutation(){
         return this.salutation;
     }
 
@@ -53,7 +61,7 @@ public class MyCustomerSetSalutationActionBuilder implements Builder<MyCustomerS
     public MyCustomerSetSalutationAction build() {
         return new MyCustomerSetSalutationActionImpl(salutation);
     }
-
+    
     /**
      * builds MyCustomerSetSalutationAction without checking for non-null required values
      * @return MyCustomerSetSalutationAction
@@ -64,7 +72,7 @@ public class MyCustomerSetSalutationActionBuilder implements Builder<MyCustomerS
 
     /**
      * factory method for an instance of MyCustomerSetSalutationActionBuilder
-     * @return builder
+     * @return builder 
      */
     public static MyCustomerSetSalutationActionBuilder of() {
         return new MyCustomerSetSalutationActionBuilder();

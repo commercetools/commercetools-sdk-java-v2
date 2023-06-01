@@ -1,8 +1,12 @@
-
 package com.commercetools.history.models.change;
 
+import com.commercetools.history.models.change.Change;
+import com.commercetools.history.models.common.TaxMode;
+import com.commercetools.history.models.change.ChangeTaxModeChange;
+import javax.annotation.Nullable;
 import java.util.*;
-
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -18,75 +22,95 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .nextValue(TaxMode.PLATFORM)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class ChangeTaxModeChangeBuilder implements Builder<ChangeTaxModeChange> {
 
+    
+    
     private String change;
-
+    
+    
+    
     private com.commercetools.history.models.common.TaxMode previousValue;
-
+    
+    
+    
     private com.commercetools.history.models.common.TaxMode nextValue;
 
+    
     /**
      *  <p>Shape of the action for <code>changeTaxMode</code></p>
      * @param change value to be set
      * @return Builder
      */
-
-    public ChangeTaxModeChangeBuilder change(final String change) {
+    
+    public ChangeTaxModeChangeBuilder change( final String change) {
         this.change = change;
         return this;
     }
-
+    
+    
+    
+    
     /**
      * set the value to the previousValue
      * @param previousValue value to be set
      * @return Builder
      */
-
-    public ChangeTaxModeChangeBuilder previousValue(
-            final com.commercetools.history.models.common.TaxMode previousValue) {
+    
+    public ChangeTaxModeChangeBuilder previousValue( final com.commercetools.history.models.common.TaxMode previousValue) {
         this.previousValue = previousValue;
         return this;
     }
-
+    
+    
+    
+    
     /**
      * set the value to the nextValue
      * @param nextValue value to be set
      * @return Builder
      */
-
-    public ChangeTaxModeChangeBuilder nextValue(final com.commercetools.history.models.common.TaxMode nextValue) {
+    
+    public ChangeTaxModeChangeBuilder nextValue( final com.commercetools.history.models.common.TaxMode nextValue) {
         this.nextValue = nextValue;
         return this;
     }
+    
+    
 
     /**
      *  <p>Shape of the action for <code>changeTaxMode</code></p>
      * @return change
      */
-
-    public String getChange() {
+    
+    
+    public String getChange(){
         return this.change;
     }
-
+    
     /**
      * value of previousValue}
      * @return previousValue
      */
-
-    public com.commercetools.history.models.common.TaxMode getPreviousValue() {
+    
+    
+    public com.commercetools.history.models.common.TaxMode getPreviousValue(){
         return this.previousValue;
     }
-
+    
     /**
      * value of nextValue}
      * @return nextValue
      */
-
-    public com.commercetools.history.models.common.TaxMode getNextValue() {
+    
+    
+    public com.commercetools.history.models.common.TaxMode getNextValue(){
         return this.nextValue;
     }
 
@@ -100,7 +124,7 @@ public class ChangeTaxModeChangeBuilder implements Builder<ChangeTaxModeChange> 
         Objects.requireNonNull(nextValue, ChangeTaxModeChange.class + ": nextValue is missing");
         return new ChangeTaxModeChangeImpl(change, previousValue, nextValue);
     }
-
+    
     /**
      * builds ChangeTaxModeChange without checking for non-null required values
      * @return ChangeTaxModeChange
@@ -111,7 +135,7 @@ public class ChangeTaxModeChangeBuilder implements Builder<ChangeTaxModeChange> 
 
     /**
      * factory method for an instance of ChangeTaxModeChangeBuilder
-     * @return builder
+     * @return builder 
      */
     public static ChangeTaxModeChangeBuilder of() {
         return new ChangeTaxModeChangeBuilder();

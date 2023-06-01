@@ -1,9 +1,11 @@
-
 package com.commercetools.api.predicates.query.cart;
 
 import com.commercetools.api.predicates.query.*;
 
-public class CartFreezeCartActionQueryBuilderDsl {
+import java.util.function.Function;
+
+
+public class CartFreezeCartActionQueryBuilderDsl  {
     public CartFreezeCartActionQueryBuilderDsl() {
     }
 
@@ -12,9 +14,8 @@ public class CartFreezeCartActionQueryBuilderDsl {
     }
 
     public StringComparisonPredicateBuilder<CartFreezeCartActionQueryBuilderDsl> action() {
-        return new StringComparisonPredicateBuilder<>(
-            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("action")),
-            p -> new CombinationQueryPredicate<>(p, CartFreezeCartActionQueryBuilderDsl::of));
+        return new StringComparisonPredicateBuilder<>(BinaryQueryPredicate.of().left(new ConstantQueryPredicate("action")),
+        p -> new CombinationQueryPredicate<>(p, CartFreezeCartActionQueryBuilderDsl::of));
     }
-
+    
 }

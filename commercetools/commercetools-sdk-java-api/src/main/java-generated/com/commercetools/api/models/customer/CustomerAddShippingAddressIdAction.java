@@ -1,16 +1,20 @@
-
 package com.commercetools.api.models.customer;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
+import com.commercetools.api.models.customer.CustomerUpdateAction;
+import com.commercetools.api.models.customer.CustomerAddShippingAddressIdActionImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Adds an Address from the <code>addresses</code> array to <code>shippingAddressIds</code>. Either <code>addressId</code> or <code>addressKey</code> is required.</p>
@@ -22,9 +26,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     CustomerAddShippingAddressIdAction customerAddShippingAddressIdAction = CustomerAddShippingAddressIdAction.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = CustomerAddShippingAddressIdActionImpl.class)
 public interface CustomerAddShippingAddressIdAction extends CustomerUpdateAction {
 
@@ -37,15 +44,14 @@ public interface CustomerAddShippingAddressIdAction extends CustomerUpdateAction
      *  <p><code>id</code> of the Address to become a shipping address.</p>
      * @return addressId
      */
-
+    
     @JsonProperty("addressId")
     public String getAddressId();
-
     /**
      *  <p><code>key</code> of the Address to become a shipping address.</p>
      * @return addressKey
      */
-
+    
     @JsonProperty("addressKey")
     public String getAddressKey();
 
@@ -53,23 +59,26 @@ public interface CustomerAddShippingAddressIdAction extends CustomerUpdateAction
      *  <p><code>id</code> of the Address to become a shipping address.</p>
      * @param addressId value to be set
      */
-
+    
     public void setAddressId(final String addressId);
-
+    
+    
     /**
      *  <p><code>key</code> of the Address to become a shipping address.</p>
      * @param addressKey value to be set
      */
-
+    
     public void setAddressKey(final String addressKey);
+    
 
     /**
      * factory method
      * @return instance of CustomerAddShippingAddressIdAction
      */
-    public static CustomerAddShippingAddressIdAction of() {
+    public static CustomerAddShippingAddressIdAction of(){
         return new CustomerAddShippingAddressIdActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy CustomerAddShippingAddressIdAction
@@ -89,8 +98,7 @@ public interface CustomerAddShippingAddressIdAction extends CustomerUpdateAction
      * @return copy instance
      */
     @Nullable
-    public static CustomerAddShippingAddressIdAction deepCopy(
-            @Nullable final CustomerAddShippingAddressIdAction template) {
+    public static CustomerAddShippingAddressIdAction deepCopy(@Nullable final CustomerAddShippingAddressIdAction template) {
         if (template == null) {
             return null;
         }
@@ -107,7 +115,7 @@ public interface CustomerAddShippingAddressIdAction extends CustomerUpdateAction
     public static CustomerAddShippingAddressIdActionBuilder builder() {
         return CustomerAddShippingAddressIdActionBuilder.of();
     }
-
+    
     /**
      * create builder for CustomerAddShippingAddressIdAction instance
      * @param template instance with prefilled values for the builder
@@ -116,6 +124,7 @@ public interface CustomerAddShippingAddressIdAction extends CustomerUpdateAction
     public static CustomerAddShippingAddressIdActionBuilder builder(final CustomerAddShippingAddressIdAction template) {
         return CustomerAddShippingAddressIdActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -126,7 +135,7 @@ public interface CustomerAddShippingAddressIdAction extends CustomerUpdateAction
     default <T> T withCustomerAddShippingAddressIdAction(Function<CustomerAddShippingAddressIdAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

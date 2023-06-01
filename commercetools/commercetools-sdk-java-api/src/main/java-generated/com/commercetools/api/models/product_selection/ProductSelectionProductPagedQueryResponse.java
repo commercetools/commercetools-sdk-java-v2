@@ -1,19 +1,20 @@
-
 package com.commercetools.api.models.product_selection;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-import java.util.stream.Collectors;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
+import com.commercetools.api.models.product_selection.AssignedProductReference;
+import com.commercetools.api.models.product_selection.ProductSelectionProductPagedQueryResponseImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>PagedQueryResult containing an array of AssignedProductReference.</p>
@@ -29,12 +30,15 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .plusResults(resultsBuilder -> resultsBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = ProductSelectionProductPagedQueryResponseImpl.class)
-public interface ProductSelectionProductPagedQueryResponse
-        extends com.commercetools.api.models.ResourcePagedQueryResponse<AssignedProductReference> {
+public interface ProductSelectionProductPagedQueryResponse extends com.commercetools.api.models.ResourcePagedQueryResponse<AssignedProductReference> {
+
 
     /**
      *  <p>Number of results requested.</p>
@@ -43,7 +47,6 @@ public interface ProductSelectionProductPagedQueryResponse
     @NotNull
     @JsonProperty("limit")
     public Long getLimit();
-
     /**
      *  <p>Number of elements skipped.</p>
      * @return offset
@@ -51,7 +54,6 @@ public interface ProductSelectionProductPagedQueryResponse
     @NotNull
     @JsonProperty("offset")
     public Long getOffset();
-
     /**
      *  <p>Actual number of results returned.</p>
      * @return count
@@ -59,15 +61,13 @@ public interface ProductSelectionProductPagedQueryResponse
     @NotNull
     @JsonProperty("count")
     public Long getCount();
-
     /**
      *  <p>Total number of results matching the query. This number is an estimation that is not strongly consistent. Unlike other endpoints, the Product Selection endpoint does not return this field by default. To get <code>total</code>, pass the query parameter <code>withTotal</code> set to <code>true</code>. When the results are filtered with a Query Predicate, <code>total</code> is subject to a limit.</p>
      * @return total
      */
-
+    
     @JsonProperty("total")
     public Long getTotal();
-
     /**
      *  <p>References to Products that are assigned to the ProductSelection.</p>
      * @return results
@@ -81,60 +81,63 @@ public interface ProductSelectionProductPagedQueryResponse
      *  <p>Number of results requested.</p>
      * @param limit value to be set
      */
-
+    
     public void setLimit(final Long limit);
-
+    
+    
     /**
      *  <p>Number of elements skipped.</p>
      * @param offset value to be set
      */
-
+    
     public void setOffset(final Long offset);
-
+    
+    
     /**
      *  <p>Actual number of results returned.</p>
      * @param count value to be set
      */
-
+    
     public void setCount(final Long count);
-
+    
+    
     /**
      *  <p>Total number of results matching the query. This number is an estimation that is not strongly consistent. Unlike other endpoints, the Product Selection endpoint does not return this field by default. To get <code>total</code>, pass the query parameter <code>withTotal</code> set to <code>true</code>. When the results are filtered with a Query Predicate, <code>total</code> is subject to a limit.</p>
      * @param total value to be set
      */
-
+    
     public void setTotal(final Long total);
-
+    
+    
     /**
      *  <p>References to Products that are assigned to the ProductSelection.</p>
      * @param results values to be set
      */
-
+    
     @JsonIgnore
-    public void setResults(final AssignedProductReference... results);
-
+    public void setResults(final AssignedProductReference ...results);
     /**
      *  <p>References to Products that are assigned to the ProductSelection.</p>
      * @param results values to be set
      */
-
+    
     public void setResults(final List<AssignedProductReference> results);
 
     /**
      * factory method
      * @return instance of ProductSelectionProductPagedQueryResponse
      */
-    public static ProductSelectionProductPagedQueryResponse of() {
+    public static ProductSelectionProductPagedQueryResponse of(){
         return new ProductSelectionProductPagedQueryResponseImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy ProductSelectionProductPagedQueryResponse
      * @param template instance to be copied
      * @return copy instance
      */
-    public static ProductSelectionProductPagedQueryResponse of(
-            final ProductSelectionProductPagedQueryResponse template) {
+    public static ProductSelectionProductPagedQueryResponse of(final ProductSelectionProductPagedQueryResponse template) {
         ProductSelectionProductPagedQueryResponseImpl instance = new ProductSelectionProductPagedQueryResponseImpl();
         instance.setLimit(template.getLimit());
         instance.setOffset(template.getOffset());
@@ -150,8 +153,7 @@ public interface ProductSelectionProductPagedQueryResponse
      * @return copy instance
      */
     @Nullable
-    public static ProductSelectionProductPagedQueryResponse deepCopy(
-            @Nullable final ProductSelectionProductPagedQueryResponse template) {
+    public static ProductSelectionProductPagedQueryResponse deepCopy(@Nullable final ProductSelectionProductPagedQueryResponse template) {
         if (template == null) {
             return null;
         }
@@ -161,9 +163,7 @@ public interface ProductSelectionProductPagedQueryResponse
         instance.setCount(template.getCount());
         instance.setTotal(template.getTotal());
         instance.setResults(Optional.ofNullable(template.getResults())
-                .map(t -> t.stream()
-                        .map(com.commercetools.api.models.product_selection.AssignedProductReference::deepCopy)
-                        .collect(Collectors.toList()))
+                .map(t -> t.stream().map(com.commercetools.api.models.product_selection.AssignedProductReference::deepCopy).collect(Collectors.toList()))
                 .orElse(null));
         return instance;
     }
@@ -175,16 +175,16 @@ public interface ProductSelectionProductPagedQueryResponse
     public static ProductSelectionProductPagedQueryResponseBuilder builder() {
         return ProductSelectionProductPagedQueryResponseBuilder.of();
     }
-
+    
     /**
      * create builder for ProductSelectionProductPagedQueryResponse instance
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static ProductSelectionProductPagedQueryResponseBuilder builder(
-            final ProductSelectionProductPagedQueryResponse template) {
+    public static ProductSelectionProductPagedQueryResponseBuilder builder(final ProductSelectionProductPagedQueryResponse template) {
         return ProductSelectionProductPagedQueryResponseBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -192,11 +192,10 @@ public interface ProductSelectionProductPagedQueryResponse
      * @param helper function to map the object
      * @return mapped value
      */
-    default <T> T withProductSelectionProductPagedQueryResponse(
-            Function<ProductSelectionProductPagedQueryResponse, T> helper) {
+    default <T> T withProductSelectionProductPagedQueryResponse(Function<ProductSelectionProductPagedQueryResponse, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

@@ -1,17 +1,20 @@
-
 package com.commercetools.api.models.channel;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
+import com.commercetools.api.models.channel.ChannelUpdateAction;
+import com.commercetools.api.models.channel.ChannelChangeKeyActionImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * ChannelChangeKeyAction
@@ -24,9 +27,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .key("{key}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = ChannelChangeKeyActionImpl.class)
 public interface ChannelChangeKeyAction extends ChannelUpdateAction {
 
@@ -47,16 +53,18 @@ public interface ChannelChangeKeyAction extends ChannelUpdateAction {
      *  <p>New value to set. Must not be empty.</p>
      * @param key value to be set
      */
-
+    
     public void setKey(final String key);
+    
 
     /**
      * factory method
      * @return instance of ChannelChangeKeyAction
      */
-    public static ChannelChangeKeyAction of() {
+    public static ChannelChangeKeyAction of(){
         return new ChannelChangeKeyActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy ChannelChangeKeyAction
@@ -91,7 +99,7 @@ public interface ChannelChangeKeyAction extends ChannelUpdateAction {
     public static ChannelChangeKeyActionBuilder builder() {
         return ChannelChangeKeyActionBuilder.of();
     }
-
+    
     /**
      * create builder for ChannelChangeKeyAction instance
      * @param template instance with prefilled values for the builder
@@ -100,6 +108,7 @@ public interface ChannelChangeKeyAction extends ChannelUpdateAction {
     public static ChannelChangeKeyActionBuilder builder(final ChannelChangeKeyAction template) {
         return ChannelChangeKeyActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -110,7 +119,7 @@ public interface ChannelChangeKeyAction extends ChannelUpdateAction {
     default <T> T withChannelChangeKeyAction(Function<ChannelChangeKeyAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

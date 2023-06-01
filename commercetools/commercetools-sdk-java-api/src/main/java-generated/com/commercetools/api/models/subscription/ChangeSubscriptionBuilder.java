@@ -1,8 +1,11 @@
-
 package com.commercetools.api.models.subscription;
 
+import com.commercetools.api.models.subscription.ChangeSubscriptionResourceTypeId;
+import com.commercetools.api.models.subscription.ChangeSubscription;
+import javax.annotation.Nullable;
 import java.util.*;
-
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -16,31 +19,39 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .resourceTypeId(ChangeSubscriptionResourceTypeId.BUSINESS_UNIT)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class ChangeSubscriptionBuilder implements Builder<ChangeSubscription> {
 
+    
+    
     private com.commercetools.api.models.subscription.ChangeSubscriptionResourceTypeId resourceTypeId;
 
+    
     /**
      *  <p>Unique identifier for the type of resource, for example, <code>cart</code>.</p>
      * @param resourceTypeId value to be set
      * @return Builder
      */
-
-    public ChangeSubscriptionBuilder resourceTypeId(
-            final com.commercetools.api.models.subscription.ChangeSubscriptionResourceTypeId resourceTypeId) {
+    
+    public ChangeSubscriptionBuilder resourceTypeId( final com.commercetools.api.models.subscription.ChangeSubscriptionResourceTypeId resourceTypeId) {
         this.resourceTypeId = resourceTypeId;
         return this;
     }
+    
+    
 
     /**
      *  <p>Unique identifier for the type of resource, for example, <code>cart</code>.</p>
      * @return resourceTypeId
      */
-
-    public com.commercetools.api.models.subscription.ChangeSubscriptionResourceTypeId getResourceTypeId() {
+    
+    
+    public com.commercetools.api.models.subscription.ChangeSubscriptionResourceTypeId getResourceTypeId(){
         return this.resourceTypeId;
     }
 
@@ -52,7 +63,7 @@ public class ChangeSubscriptionBuilder implements Builder<ChangeSubscription> {
         Objects.requireNonNull(resourceTypeId, ChangeSubscription.class + ": resourceTypeId is missing");
         return new ChangeSubscriptionImpl(resourceTypeId);
     }
-
+    
     /**
      * builds ChangeSubscription without checking for non-null required values
      * @return ChangeSubscription
@@ -63,7 +74,7 @@ public class ChangeSubscriptionBuilder implements Builder<ChangeSubscription> {
 
     /**
      * factory method for an instance of ChangeSubscriptionBuilder
-     * @return builder
+     * @return builder 
      */
     public static ChangeSubscriptionBuilder of() {
         return new ChangeSubscriptionBuilder();

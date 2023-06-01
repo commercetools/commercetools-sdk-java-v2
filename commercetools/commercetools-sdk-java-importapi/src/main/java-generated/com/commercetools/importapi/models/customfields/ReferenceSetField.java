@@ -1,20 +1,21 @@
-
 package com.commercetools.importapi.models.customfields;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-import java.util.stream.Collectors;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
 import com.commercetools.importapi.models.common.KeyReference;
+import com.commercetools.importapi.models.customfields.CustomField;
+import com.commercetools.importapi.models.customfields.ReferenceSetFieldImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>A field with a reference set value.</p>
@@ -27,9 +28,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .plusValue(valueBuilder -> valueBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = ReferenceSetFieldImpl.class)
 public interface ReferenceSetField extends CustomField {
 
@@ -51,24 +55,24 @@ public interface ReferenceSetField extends CustomField {
      * set value
      * @param value values to be set
      */
-
+    
     @JsonIgnore
-    public void setValue(final KeyReference... value);
-
+    public void setValue(final KeyReference ...value);
     /**
      * set value
      * @param value values to be set
      */
-
+    
     public void setValue(final List<KeyReference> value);
 
     /**
      * factory method
      * @return instance of ReferenceSetField
      */
-    public static ReferenceSetField of() {
+    public static ReferenceSetField of(){
         return new ReferenceSetFieldImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy ReferenceSetField
@@ -93,9 +97,7 @@ public interface ReferenceSetField extends CustomField {
         }
         ReferenceSetFieldImpl instance = new ReferenceSetFieldImpl();
         instance.setValue(Optional.ofNullable(template.getValue())
-                .map(t -> t.stream()
-                        .map(com.commercetools.importapi.models.common.KeyReference::deepCopy)
-                        .collect(Collectors.toList()))
+                .map(t -> t.stream().map(com.commercetools.importapi.models.common.KeyReference::deepCopy).collect(Collectors.toList()))
                 .orElse(null));
         return instance;
     }
@@ -107,7 +109,7 @@ public interface ReferenceSetField extends CustomField {
     public static ReferenceSetFieldBuilder builder() {
         return ReferenceSetFieldBuilder.of();
     }
-
+    
     /**
      * create builder for ReferenceSetField instance
      * @param template instance with prefilled values for the builder
@@ -116,6 +118,7 @@ public interface ReferenceSetField extends CustomField {
     public static ReferenceSetFieldBuilder builder(final ReferenceSetField template) {
         return ReferenceSetFieldBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -126,7 +129,7 @@ public interface ReferenceSetField extends CustomField {
     default <T> T withReferenceSetField(Function<ReferenceSetField, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

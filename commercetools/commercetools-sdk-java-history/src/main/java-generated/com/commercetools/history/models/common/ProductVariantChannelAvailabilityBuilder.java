@@ -1,8 +1,11 @@
-
 package com.commercetools.history.models.common;
 
-import java.util.*;
 
+import com.commercetools.history.models.common.ProductVariantChannelAvailability;
+import javax.annotation.Nullable;
+import java.util.*;
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -18,74 +21,95 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .availableQuantity(1)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class ProductVariantChannelAvailabilityBuilder implements Builder<ProductVariantChannelAvailability> {
 
+    
+    
     private Boolean isOnStock;
-
+    
+    
+    
     private Integer restockableInDays;
-
+    
+    
+    
     private Integer availableQuantity;
 
+    
     /**
      * set the value to the isOnStock
      * @param isOnStock value to be set
      * @return Builder
      */
-
-    public ProductVariantChannelAvailabilityBuilder isOnStock(final Boolean isOnStock) {
+    
+    public ProductVariantChannelAvailabilityBuilder isOnStock( final Boolean isOnStock) {
         this.isOnStock = isOnStock;
         return this;
     }
-
+    
+    
+    
+    
     /**
      * set the value to the restockableInDays
      * @param restockableInDays value to be set
      * @return Builder
      */
-
-    public ProductVariantChannelAvailabilityBuilder restockableInDays(final Integer restockableInDays) {
+    
+    public ProductVariantChannelAvailabilityBuilder restockableInDays( final Integer restockableInDays) {
         this.restockableInDays = restockableInDays;
         return this;
     }
-
+    
+    
+    
+    
     /**
      * set the value to the availableQuantity
      * @param availableQuantity value to be set
      * @return Builder
      */
-
-    public ProductVariantChannelAvailabilityBuilder availableQuantity(final Integer availableQuantity) {
+    
+    public ProductVariantChannelAvailabilityBuilder availableQuantity( final Integer availableQuantity) {
         this.availableQuantity = availableQuantity;
         return this;
     }
+    
+    
 
     /**
      * value of isOnStock}
      * @return isOnStock
      */
-
-    public Boolean getIsOnStock() {
+    
+    
+    public Boolean getIsOnStock(){
         return this.isOnStock;
     }
-
+    
     /**
      * value of restockableInDays}
      * @return restockableInDays
      */
-
-    public Integer getRestockableInDays() {
+    
+    
+    public Integer getRestockableInDays(){
         return this.restockableInDays;
     }
-
+    
     /**
      * value of availableQuantity}
      * @return availableQuantity
      */
-
-    public Integer getAvailableQuantity() {
+    
+    
+    public Integer getAvailableQuantity(){
         return this.availableQuantity;
     }
 
@@ -95,13 +119,11 @@ public class ProductVariantChannelAvailabilityBuilder implements Builder<Product
      */
     public ProductVariantChannelAvailability build() {
         Objects.requireNonNull(isOnStock, ProductVariantChannelAvailability.class + ": isOnStock is missing");
-        Objects.requireNonNull(restockableInDays,
-            ProductVariantChannelAvailability.class + ": restockableInDays is missing");
-        Objects.requireNonNull(availableQuantity,
-            ProductVariantChannelAvailability.class + ": availableQuantity is missing");
+        Objects.requireNonNull(restockableInDays, ProductVariantChannelAvailability.class + ": restockableInDays is missing");
+        Objects.requireNonNull(availableQuantity, ProductVariantChannelAvailability.class + ": availableQuantity is missing");
         return new ProductVariantChannelAvailabilityImpl(isOnStock, restockableInDays, availableQuantity);
     }
-
+    
     /**
      * builds ProductVariantChannelAvailability without checking for non-null required values
      * @return ProductVariantChannelAvailability
@@ -112,7 +134,7 @@ public class ProductVariantChannelAvailabilityBuilder implements Builder<Product
 
     /**
      * factory method for an instance of ProductVariantChannelAvailabilityBuilder
-     * @return builder
+     * @return builder 
      */
     public static ProductVariantChannelAvailabilityBuilder of() {
         return new ProductVariantChannelAvailabilityBuilder();

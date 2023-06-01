@@ -1,17 +1,20 @@
-
 package com.commercetools.api.models.product;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
+import com.commercetools.api.models.product.ProductUpdateAction;
+import com.commercetools.api.models.product.ProductRemoveImageActionImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Removes a Product image and deletes it from the Content Delivery Network (external images are not deleted). Deletion from the CDN is not instant, which means the image file itself will stay available for some time after the deletion. Either <code>variantId</code> or <code>sku</code> is required.</p>
@@ -24,9 +27,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .imageUrl("{imageUrl}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = ProductRemoveImageActionImpl.class)
 public interface ProductRemoveImageAction extends ProductUpdateAction {
 
@@ -39,18 +45,16 @@ public interface ProductRemoveImageAction extends ProductUpdateAction {
      *  <p>The <code>id</code> of the ProductVariant to update.</p>
      * @return variantId
      */
-
+    
     @JsonProperty("variantId")
     public Long getVariantId();
-
     /**
      *  <p>The <code>sku</code> of the ProductVariant to update.</p>
      * @return sku
      */
-
+    
     @JsonProperty("sku")
     public String getSku();
-
     /**
      *  <p>The URL of the image to remove.</p>
      * @return imageUrl
@@ -58,12 +62,11 @@ public interface ProductRemoveImageAction extends ProductUpdateAction {
     @NotNull
     @JsonProperty("imageUrl")
     public String getImageUrl();
-
     /**
      *  <p>If <code>true</code>, only the staged image is removed. If <code>false</code>, both the current and staged image is removed.</p>
      * @return staged
      */
-
+    
     @JsonProperty("staged")
     public Boolean getStaged();
 
@@ -71,37 +74,42 @@ public interface ProductRemoveImageAction extends ProductUpdateAction {
      *  <p>The <code>id</code> of the ProductVariant to update.</p>
      * @param variantId value to be set
      */
-
+    
     public void setVariantId(final Long variantId);
-
+    
+    
     /**
      *  <p>The <code>sku</code> of the ProductVariant to update.</p>
      * @param sku value to be set
      */
-
+    
     public void setSku(final String sku);
-
+    
+    
     /**
      *  <p>The URL of the image to remove.</p>
      * @param imageUrl value to be set
      */
-
+    
     public void setImageUrl(final String imageUrl);
-
+    
+    
     /**
      *  <p>If <code>true</code>, only the staged image is removed. If <code>false</code>, both the current and staged image is removed.</p>
      * @param staged value to be set
      */
-
+    
     public void setStaged(final Boolean staged);
+    
 
     /**
      * factory method
      * @return instance of ProductRemoveImageAction
      */
-    public static ProductRemoveImageAction of() {
+    public static ProductRemoveImageAction of(){
         return new ProductRemoveImageActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy ProductRemoveImageAction
@@ -142,7 +150,7 @@ public interface ProductRemoveImageAction extends ProductUpdateAction {
     public static ProductRemoveImageActionBuilder builder() {
         return ProductRemoveImageActionBuilder.of();
     }
-
+    
     /**
      * create builder for ProductRemoveImageAction instance
      * @param template instance with prefilled values for the builder
@@ -151,6 +159,7 @@ public interface ProductRemoveImageAction extends ProductUpdateAction {
     public static ProductRemoveImageActionBuilder builder(final ProductRemoveImageAction template) {
         return ProductRemoveImageActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -161,7 +170,7 @@ public interface ProductRemoveImageAction extends ProductUpdateAction {
     default <T> T withProductRemoveImageAction(Function<ProductRemoveImageAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

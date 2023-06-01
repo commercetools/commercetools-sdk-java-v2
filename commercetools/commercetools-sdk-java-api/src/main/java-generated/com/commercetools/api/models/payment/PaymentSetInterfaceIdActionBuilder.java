@@ -1,8 +1,11 @@
-
 package com.commercetools.api.models.payment;
 
+import com.commercetools.api.models.payment.PaymentUpdateAction;
+import com.commercetools.api.models.payment.PaymentSetInterfaceIdAction;
+import javax.annotation.Nullable;
 import java.util.*;
-
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -16,30 +19,39 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .interfaceId("{interfaceId}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class PaymentSetInterfaceIdActionBuilder implements Builder<PaymentSetInterfaceIdAction> {
 
+    
+    
     private String interfaceId;
 
+    
     /**
      *  <p>Value to set. Once set, the <code>interfaceId</code> cannot be changed.</p>
      * @param interfaceId value to be set
      * @return Builder
      */
-
-    public PaymentSetInterfaceIdActionBuilder interfaceId(final String interfaceId) {
+    
+    public PaymentSetInterfaceIdActionBuilder interfaceId( final String interfaceId) {
         this.interfaceId = interfaceId;
         return this;
     }
+    
+    
 
     /**
      *  <p>Value to set. Once set, the <code>interfaceId</code> cannot be changed.</p>
      * @return interfaceId
      */
-
-    public String getInterfaceId() {
+    
+    
+    public String getInterfaceId(){
         return this.interfaceId;
     }
 
@@ -51,7 +63,7 @@ public class PaymentSetInterfaceIdActionBuilder implements Builder<PaymentSetInt
         Objects.requireNonNull(interfaceId, PaymentSetInterfaceIdAction.class + ": interfaceId is missing");
         return new PaymentSetInterfaceIdActionImpl(interfaceId);
     }
-
+    
     /**
      * builds PaymentSetInterfaceIdAction without checking for non-null required values
      * @return PaymentSetInterfaceIdAction
@@ -62,7 +74,7 @@ public class PaymentSetInterfaceIdActionBuilder implements Builder<PaymentSetInt
 
     /**
      * factory method for an instance of PaymentSetInterfaceIdActionBuilder
-     * @return builder
+     * @return builder 
      */
     public static PaymentSetInterfaceIdActionBuilder of() {
         return new PaymentSetInterfaceIdActionBuilder();

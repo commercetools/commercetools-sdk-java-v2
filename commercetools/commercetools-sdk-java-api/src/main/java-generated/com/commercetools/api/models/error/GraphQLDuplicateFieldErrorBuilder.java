@@ -1,8 +1,12 @@
-
 package com.commercetools.api.models.error;
 
+import com.commercetools.api.models.error.GraphQLErrorObject;
+import java.lang.Object;
+import com.commercetools.api.models.error.GraphQLDuplicateFieldError;
+import javax.annotation.Nullable;
 import java.util.*;
-
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -16,15 +20,24 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .field("{field}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class GraphQLDuplicateFieldErrorBuilder implements Builder<GraphQLDuplicateFieldError> {
 
+    
+    
     private Map<String, java.lang.Object> values = new HashMap<>();
-
+    
+    
+    
     private String field;
-
+    
+    
+    
     private java.lang.Object duplicateValue;
 
     /**
@@ -32,19 +45,19 @@ public class GraphQLDuplicateFieldErrorBuilder implements Builder<GraphQLDuplica
      * @param values properties to be set
      * @return Builder
      */
-
-    public GraphQLDuplicateFieldErrorBuilder values(final Map<String, java.lang.Object> values) {
+    
+    public GraphQLDuplicateFieldErrorBuilder values( final Map<String, java.lang.Object> values){
         this.values = values;
         return this;
     }
-
+    
     /**
      *  <p>Error-specific additional fields.</p>
      * @param key property name
      * @param value property value
      * @return Builder
      */
-
+    
     public GraphQLDuplicateFieldErrorBuilder addValue(final String key, final java.lang.Object value) {
         if (this.values == null) {
             values = new HashMap<>();
@@ -52,53 +65,63 @@ public class GraphQLDuplicateFieldErrorBuilder implements Builder<GraphQLDuplica
         values.put(key, value);
         return this;
     }
-
+    
+    
+    
     /**
      *  <p>Name of the conflicting field.</p>
      * @param field value to be set
      * @return Builder
      */
-
-    public GraphQLDuplicateFieldErrorBuilder field(final String field) {
+    
+    public GraphQLDuplicateFieldErrorBuilder field( final String field) {
         this.field = field;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Conflicting duplicate value.</p>
      * @param duplicateValue value to be set
      * @return Builder
      */
-
-    public GraphQLDuplicateFieldErrorBuilder duplicateValue(final java.lang.Object duplicateValue) {
+    
+    public GraphQLDuplicateFieldErrorBuilder duplicateValue( final java.lang.Object duplicateValue) {
         this.duplicateValue = duplicateValue;
         return this;
     }
+    
+    
 
     /**
      *  <p>Error-specific additional fields.</p>
      * @return pattern properties
      */
-
-    public Map<String, java.lang.Object> getValues() {
+    
+    
+    public Map<String, java.lang.Object> getValues(){
         return this.values;
     }
-
+    
     /**
      *  <p>Name of the conflicting field.</p>
      * @return field
      */
-
-    public String getField() {
+    
+    
+    public String getField(){
         return this.field;
     }
-
+    
     /**
      *  <p>Conflicting duplicate value.</p>
      * @return duplicateValue
      */
-
-    public java.lang.Object getDuplicateValue() {
+    
+    
+    public java.lang.Object getDuplicateValue(){
         return this.duplicateValue;
     }
 
@@ -111,7 +134,7 @@ public class GraphQLDuplicateFieldErrorBuilder implements Builder<GraphQLDuplica
         Objects.requireNonNull(duplicateValue, GraphQLDuplicateFieldError.class + ": duplicateValue is missing");
         return new GraphQLDuplicateFieldErrorImpl(values, field, duplicateValue);
     }
-
+    
     /**
      * builds GraphQLDuplicateFieldError without checking for non-null required values
      * @return GraphQLDuplicateFieldError
@@ -122,7 +145,7 @@ public class GraphQLDuplicateFieldErrorBuilder implements Builder<GraphQLDuplica
 
     /**
      * factory method for an instance of GraphQLDuplicateFieldErrorBuilder
-     * @return builder
+     * @return builder 
      */
     public static GraphQLDuplicateFieldErrorBuilder of() {
         return new GraphQLDuplicateFieldErrorBuilder();

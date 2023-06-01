@@ -1,10 +1,11 @@
-
 package com.commercetools.api.models.tax_category;
 
-import java.util.*;
-
+import com.commercetools.api.models.tax_category.TaxCategoryUpdateAction;
+import com.commercetools.api.models.tax_category.TaxCategorySetDescriptionAction;
 import javax.annotation.Nullable;
-
+import java.util.*;
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -17,32 +18,39 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     TaxCategorySetDescriptionAction taxCategorySetDescriptionAction = TaxCategorySetDescriptionAction.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class TaxCategorySetDescriptionActionBuilder implements Builder<TaxCategorySetDescriptionAction> {
 
+    
     @Nullable
     private String description;
 
+    
     /**
      *  <p>Value to set. If empty, any existing value will be removed.</p>
      * @param description value to be set
      * @return Builder
      */
-
+    
     public TaxCategorySetDescriptionActionBuilder description(@Nullable final String description) {
         this.description = description;
         return this;
     }
+    
+    
 
     /**
      *  <p>Value to set. If empty, any existing value will be removed.</p>
      * @return description
      */
-
+    
     @Nullable
-    public String getDescription() {
+    public String getDescription(){
         return this.description;
     }
 
@@ -53,7 +61,7 @@ public class TaxCategorySetDescriptionActionBuilder implements Builder<TaxCatego
     public TaxCategorySetDescriptionAction build() {
         return new TaxCategorySetDescriptionActionImpl(description);
     }
-
+    
     /**
      * builds TaxCategorySetDescriptionAction without checking for non-null required values
      * @return TaxCategorySetDescriptionAction
@@ -64,7 +72,7 @@ public class TaxCategorySetDescriptionActionBuilder implements Builder<TaxCatego
 
     /**
      * factory method for an instance of TaxCategorySetDescriptionActionBuilder
-     * @return builder
+     * @return builder 
      */
     public static TaxCategorySetDescriptionActionBuilder of() {
         return new TaxCategorySetDescriptionActionBuilder();

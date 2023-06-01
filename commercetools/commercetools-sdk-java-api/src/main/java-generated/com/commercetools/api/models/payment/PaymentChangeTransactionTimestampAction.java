@@ -1,18 +1,21 @@
-
 package com.commercetools.api.models.payment;
 
-import java.time.*;
+import com.commercetools.api.models.payment.PaymentUpdateAction;
 import java.time.ZonedDateTime;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
+import com.commercetools.api.models.payment.PaymentChangeTransactionTimestampActionImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * PaymentChangeTransactionTimestampAction
@@ -26,9 +29,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .timestamp(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = PaymentChangeTransactionTimestampActionImpl.class)
 public interface PaymentChangeTransactionTimestampAction extends PaymentUpdateAction {
 
@@ -44,7 +50,6 @@ public interface PaymentChangeTransactionTimestampAction extends PaymentUpdateAc
     @NotNull
     @JsonProperty("transactionId")
     public String getTransactionId();
-
     /**
      *  <p>Timestamp of the Transaction as reported by the payment service.</p>
      * @return timestamp
@@ -57,23 +62,26 @@ public interface PaymentChangeTransactionTimestampAction extends PaymentUpdateAc
      *  <p>Unique identifier of the Transaction.</p>
      * @param transactionId value to be set
      */
-
+    
     public void setTransactionId(final String transactionId);
-
+    
+    
     /**
      *  <p>Timestamp of the Transaction as reported by the payment service.</p>
      * @param timestamp value to be set
      */
-
+    
     public void setTimestamp(final ZonedDateTime timestamp);
+    
 
     /**
      * factory method
      * @return instance of PaymentChangeTransactionTimestampAction
      */
-    public static PaymentChangeTransactionTimestampAction of() {
+    public static PaymentChangeTransactionTimestampAction of(){
         return new PaymentChangeTransactionTimestampActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy PaymentChangeTransactionTimestampAction
@@ -93,8 +101,7 @@ public interface PaymentChangeTransactionTimestampAction extends PaymentUpdateAc
      * @return copy instance
      */
     @Nullable
-    public static PaymentChangeTransactionTimestampAction deepCopy(
-            @Nullable final PaymentChangeTransactionTimestampAction template) {
+    public static PaymentChangeTransactionTimestampAction deepCopy(@Nullable final PaymentChangeTransactionTimestampAction template) {
         if (template == null) {
             return null;
         }
@@ -111,16 +118,16 @@ public interface PaymentChangeTransactionTimestampAction extends PaymentUpdateAc
     public static PaymentChangeTransactionTimestampActionBuilder builder() {
         return PaymentChangeTransactionTimestampActionBuilder.of();
     }
-
+    
     /**
      * create builder for PaymentChangeTransactionTimestampAction instance
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static PaymentChangeTransactionTimestampActionBuilder builder(
-            final PaymentChangeTransactionTimestampAction template) {
+    public static PaymentChangeTransactionTimestampActionBuilder builder(final PaymentChangeTransactionTimestampAction template) {
         return PaymentChangeTransactionTimestampActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -128,11 +135,10 @@ public interface PaymentChangeTransactionTimestampAction extends PaymentUpdateAc
      * @param helper function to map the object
      * @return mapped value
      */
-    default <T> T withPaymentChangeTransactionTimestampAction(
-            Function<PaymentChangeTransactionTimestampAction, T> helper) {
+    default <T> T withPaymentChangeTransactionTimestampAction(Function<PaymentChangeTransactionTimestampAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

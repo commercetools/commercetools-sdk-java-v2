@@ -1,20 +1,21 @@
-
 package com.commercetools.api.models.message;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-import java.util.stream.Collectors;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
 import com.commercetools.api.models.business_unit.Associate;
+import com.commercetools.api.models.message.MessagePayload;
+import com.commercetools.api.models.message.BusinessUnitAssociatesSetMessagePayloadImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Generated after a successful Set Associates update action.</p>
@@ -27,9 +28,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .plusAssociates(associatesBuilder -> associatesBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = BusinessUnitAssociatesSetMessagePayloadImpl.class)
 public interface BusinessUnitAssociatesSetMessagePayload extends MessagePayload {
 
@@ -51,24 +55,24 @@ public interface BusinessUnitAssociatesSetMessagePayload extends MessagePayload 
      *  <p>The list of Associates that was updated on the Business Unit.</p>
      * @param associates values to be set
      */
-
+    
     @JsonIgnore
-    public void setAssociates(final Associate... associates);
-
+    public void setAssociates(final Associate ...associates);
     /**
      *  <p>The list of Associates that was updated on the Business Unit.</p>
      * @param associates values to be set
      */
-
+    
     public void setAssociates(final List<Associate> associates);
 
     /**
      * factory method
      * @return instance of BusinessUnitAssociatesSetMessagePayload
      */
-    public static BusinessUnitAssociatesSetMessagePayload of() {
+    public static BusinessUnitAssociatesSetMessagePayload of(){
         return new BusinessUnitAssociatesSetMessagePayloadImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy BusinessUnitAssociatesSetMessagePayload
@@ -87,16 +91,13 @@ public interface BusinessUnitAssociatesSetMessagePayload extends MessagePayload 
      * @return copy instance
      */
     @Nullable
-    public static BusinessUnitAssociatesSetMessagePayload deepCopy(
-            @Nullable final BusinessUnitAssociatesSetMessagePayload template) {
+    public static BusinessUnitAssociatesSetMessagePayload deepCopy(@Nullable final BusinessUnitAssociatesSetMessagePayload template) {
         if (template == null) {
             return null;
         }
         BusinessUnitAssociatesSetMessagePayloadImpl instance = new BusinessUnitAssociatesSetMessagePayloadImpl();
         instance.setAssociates(Optional.ofNullable(template.getAssociates())
-                .map(t -> t.stream()
-                        .map(com.commercetools.api.models.business_unit.Associate::deepCopy)
-                        .collect(Collectors.toList()))
+                .map(t -> t.stream().map(com.commercetools.api.models.business_unit.Associate::deepCopy).collect(Collectors.toList()))
                 .orElse(null));
         return instance;
     }
@@ -108,16 +109,16 @@ public interface BusinessUnitAssociatesSetMessagePayload extends MessagePayload 
     public static BusinessUnitAssociatesSetMessagePayloadBuilder builder() {
         return BusinessUnitAssociatesSetMessagePayloadBuilder.of();
     }
-
+    
     /**
      * create builder for BusinessUnitAssociatesSetMessagePayload instance
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static BusinessUnitAssociatesSetMessagePayloadBuilder builder(
-            final BusinessUnitAssociatesSetMessagePayload template) {
+    public static BusinessUnitAssociatesSetMessagePayloadBuilder builder(final BusinessUnitAssociatesSetMessagePayload template) {
         return BusinessUnitAssociatesSetMessagePayloadBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -125,11 +126,10 @@ public interface BusinessUnitAssociatesSetMessagePayload extends MessagePayload 
      * @param helper function to map the object
      * @return mapped value
      */
-    default <T> T withBusinessUnitAssociatesSetMessagePayload(
-            Function<BusinessUnitAssociatesSetMessagePayload, T> helper) {
+    default <T> T withBusinessUnitAssociatesSetMessagePayload(Function<BusinessUnitAssociatesSetMessagePayload, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

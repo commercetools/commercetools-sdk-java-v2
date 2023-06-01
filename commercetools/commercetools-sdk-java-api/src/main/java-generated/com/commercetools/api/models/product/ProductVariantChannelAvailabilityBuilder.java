@@ -1,10 +1,11 @@
-
 package com.commercetools.api.models.product;
 
-import java.util.*;
 
+import com.commercetools.api.models.product.ProductVariantChannelAvailability;
 import javax.annotation.Nullable;
-
+import java.util.*;
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -19,124 +20,151 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .version(0.3)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class ProductVariantChannelAvailabilityBuilder implements Builder<ProductVariantChannelAvailability> {
 
+    
     @Nullable
     private Boolean isOnStock;
-
+    
+    
     @Nullable
     private Long restockableInDays;
-
+    
+    
     @Nullable
     private Long availableQuantity;
-
+    
+    
+    
     private String id;
-
+    
+    
+    
     private Long version;
 
+    
     /**
      *  <p>Indicates whether a Product Variant is in stock in a specified Channel.</p>
      * @param isOnStock value to be set
      * @return Builder
      */
-
+    
     public ProductVariantChannelAvailabilityBuilder isOnStock(@Nullable final Boolean isOnStock) {
         this.isOnStock = isOnStock;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Number of days to restock a Product Variant once it is out of stock in a specified Channel.</p>
      * @param restockableInDays value to be set
      * @return Builder
      */
-
+    
     public ProductVariantChannelAvailabilityBuilder restockableInDays(@Nullable final Long restockableInDays) {
         this.restockableInDays = restockableInDays;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Number of items of this Product Variant that are in stock in a specified Channel.</p>
      * @param availableQuantity value to be set
      * @return Builder
      */
-
+    
     public ProductVariantChannelAvailabilityBuilder availableQuantity(@Nullable final Long availableQuantity) {
         this.availableQuantity = availableQuantity;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Unique identifier of the InventoryEntry.</p>
      * @param id value to be set
      * @return Builder
      */
-
-    public ProductVariantChannelAvailabilityBuilder id(final String id) {
+    
+    public ProductVariantChannelAvailabilityBuilder id( final String id) {
         this.id = id;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Current version of the InventoryEntry.</p>
      * @param version value to be set
      * @return Builder
      */
-
-    public ProductVariantChannelAvailabilityBuilder version(final Long version) {
+    
+    public ProductVariantChannelAvailabilityBuilder version( final Long version) {
         this.version = version;
         return this;
     }
+    
+    
 
     /**
      *  <p>Indicates whether a Product Variant is in stock in a specified Channel.</p>
      * @return isOnStock
      */
-
+    
     @Nullable
-    public Boolean getIsOnStock() {
+    public Boolean getIsOnStock(){
         return this.isOnStock;
     }
-
+    
     /**
      *  <p>Number of days to restock a Product Variant once it is out of stock in a specified Channel.</p>
      * @return restockableInDays
      */
-
+    
     @Nullable
-    public Long getRestockableInDays() {
+    public Long getRestockableInDays(){
         return this.restockableInDays;
     }
-
+    
     /**
      *  <p>Number of items of this Product Variant that are in stock in a specified Channel.</p>
      * @return availableQuantity
      */
-
+    
     @Nullable
-    public Long getAvailableQuantity() {
+    public Long getAvailableQuantity(){
         return this.availableQuantity;
     }
-
+    
     /**
      *  <p>Unique identifier of the InventoryEntry.</p>
      * @return id
      */
-
-    public String getId() {
+    
+    
+    public String getId(){
         return this.id;
     }
-
+    
     /**
      *  <p>Current version of the InventoryEntry.</p>
      * @return version
      */
-
-    public Long getVersion() {
+    
+    
+    public Long getVersion(){
         return this.version;
     }
 
@@ -149,7 +177,7 @@ public class ProductVariantChannelAvailabilityBuilder implements Builder<Product
         Objects.requireNonNull(version, ProductVariantChannelAvailability.class + ": version is missing");
         return new ProductVariantChannelAvailabilityImpl(isOnStock, restockableInDays, availableQuantity, id, version);
     }
-
+    
     /**
      * builds ProductVariantChannelAvailability without checking for non-null required values
      * @return ProductVariantChannelAvailability
@@ -160,7 +188,7 @@ public class ProductVariantChannelAvailabilityBuilder implements Builder<Product
 
     /**
      * factory method for an instance of ProductVariantChannelAvailabilityBuilder
-     * @return builder
+     * @return builder 
      */
     public static ProductVariantChannelAvailabilityBuilder of() {
         return new ProductVariantChannelAvailabilityBuilder();

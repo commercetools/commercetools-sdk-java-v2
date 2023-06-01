@@ -1,17 +1,20 @@
-
 package com.commercetools.history.models.change_value;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
 
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
+import com.commercetools.history.models.change_value.TransactionChangeValueImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * TransactionChangeValue
@@ -26,11 +29,15 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .timestamp("{timestamp}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = TransactionChangeValueImpl.class)
-public interface TransactionChangeValue {
+public interface TransactionChangeValue  {
+
 
     /**
      *
@@ -39,7 +46,6 @@ public interface TransactionChangeValue {
     @NotNull
     @JsonProperty("id")
     public String getId();
-
     /**
      *
      * @return interactionId
@@ -47,7 +53,6 @@ public interface TransactionChangeValue {
     @NotNull
     @JsonProperty("interactionId")
     public String getInteractionId();
-
     /**
      *
      * @return timestamp
@@ -60,30 +65,34 @@ public interface TransactionChangeValue {
      * set id
      * @param id value to be set
      */
-
+    
     public void setId(final String id);
-
+    
+    
     /**
      * set interactionId
      * @param interactionId value to be set
      */
-
+    
     public void setInteractionId(final String interactionId);
-
+    
+    
     /**
      * set timestamp
      * @param timestamp value to be set
      */
-
+    
     public void setTimestamp(final String timestamp);
+    
 
     /**
      * factory method
      * @return instance of TransactionChangeValue
      */
-    public static TransactionChangeValue of() {
+    public static TransactionChangeValue of(){
         return new TransactionChangeValueImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy TransactionChangeValue
@@ -122,7 +131,7 @@ public interface TransactionChangeValue {
     public static TransactionChangeValueBuilder builder() {
         return TransactionChangeValueBuilder.of();
     }
-
+    
     /**
      * create builder for TransactionChangeValue instance
      * @param template instance with prefilled values for the builder
@@ -131,6 +140,7 @@ public interface TransactionChangeValue {
     public static TransactionChangeValueBuilder builder(final TransactionChangeValue template) {
         return TransactionChangeValueBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -141,7 +151,7 @@ public interface TransactionChangeValue {
     default <T> T withTransactionChangeValue(Function<TransactionChangeValue, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

@@ -1,19 +1,21 @@
-
 package com.commercetools.api.models.cart;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
+import com.commercetools.api.models.cart.CartUpdateAction;
 import com.commercetools.api.models.common.Money;
+import com.commercetools.api.models.cart.CartSetLineItemPriceActionImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Sets the LineItem <code>price</code> and changes the <code>priceMode</code> to <code>ExternalPrice</code> LineItemPriceMode.</p>
@@ -26,9 +28,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .lineItemId("{lineItemId}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = CartSetLineItemPriceActionImpl.class)
 public interface CartSetLineItemPriceAction extends CartUpdateAction {
 
@@ -44,7 +49,6 @@ public interface CartSetLineItemPriceAction extends CartUpdateAction {
     @NotNull
     @JsonProperty("lineItemId")
     public String getLineItemId();
-
     /**
      *  <p>Value to set. If <code>externalPrice</code> is not given and the <code>priceMode</code> is <code>ExternalPrice</code>, the external price is unset and the <code>priceMode</code> is set to <code>Platform</code>.</p>
      * @return externalPrice
@@ -57,23 +61,26 @@ public interface CartSetLineItemPriceAction extends CartUpdateAction {
      *  <p><code>id</code> of the LineItem to update.</p>
      * @param lineItemId value to be set
      */
-
+    
     public void setLineItemId(final String lineItemId);
-
+    
+    
     /**
      *  <p>Value to set. If <code>externalPrice</code> is not given and the <code>priceMode</code> is <code>ExternalPrice</code>, the external price is unset and the <code>priceMode</code> is set to <code>Platform</code>.</p>
      * @param externalPrice value to be set
      */
-
+    
     public void setExternalPrice(final Money externalPrice);
+    
 
     /**
      * factory method
      * @return instance of CartSetLineItemPriceAction
      */
-    public static CartSetLineItemPriceAction of() {
+    public static CartSetLineItemPriceAction of(){
         return new CartSetLineItemPriceActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy CartSetLineItemPriceAction
@@ -110,7 +117,7 @@ public interface CartSetLineItemPriceAction extends CartUpdateAction {
     public static CartSetLineItemPriceActionBuilder builder() {
         return CartSetLineItemPriceActionBuilder.of();
     }
-
+    
     /**
      * create builder for CartSetLineItemPriceAction instance
      * @param template instance with prefilled values for the builder
@@ -119,6 +126,7 @@ public interface CartSetLineItemPriceAction extends CartUpdateAction {
     public static CartSetLineItemPriceActionBuilder builder(final CartSetLineItemPriceAction template) {
         return CartSetLineItemPriceActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -129,7 +137,7 @@ public interface CartSetLineItemPriceAction extends CartUpdateAction {
     default <T> T withCartSetLineItemPriceAction(Function<CartSetLineItemPriceAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

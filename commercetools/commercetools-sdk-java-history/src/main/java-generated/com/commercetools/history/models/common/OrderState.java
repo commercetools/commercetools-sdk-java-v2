@@ -1,29 +1,31 @@
-
 package com.commercetools.history.models.common;
-
-import java.util.Arrays;
-import java.util.Optional;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-
+import java.lang.String;
+import java.util.Arrays;
+import java.util.Optional;
 import io.vrap.rmf.base.client.JsonEnum;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
  * OrderState
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public interface OrderState extends JsonEnum {
 
+    
     OrderState OPEN = OrderStateEnum.OPEN;
-
+    
     OrderState CONFIRMED = OrderStateEnum.CONFIRMED;
-
+    
     OrderState COMPLETE = OrderStateEnum.COMPLETE;
-
+    
     OrderState CANCELLED = OrderStateEnum.CANCELLED;
-
+    
     /**
      * possible values of OrderState
      */
@@ -32,17 +34,17 @@ public interface OrderState extends JsonEnum {
          * Open
          */
         OPEN("Open"),
-
+        
         /**
          * Confirmed
          */
         CONFIRMED("Confirmed"),
-
+        
         /**
          * Complete
          */
         COMPLETE("Complete"),
-
+        
         /**
          * Cancelled
          */
@@ -99,7 +101,7 @@ public interface OrderState extends JsonEnum {
             public String name() {
                 return value.toUpperCase();
             }
-
+            
             public String toString() {
                 return value;
             }
@@ -114,7 +116,7 @@ public interface OrderState extends JsonEnum {
     public static Optional<OrderState> findEnumViaJsonName(String jsonName) {
         return Arrays.stream(values()).filter(t -> t.getJsonName().equals(jsonName)).findFirst();
     }
-
+    
     /**
      * possible enum values
      * @return array of possible enum values
@@ -122,5 +124,5 @@ public interface OrderState extends JsonEnum {
     public static OrderState[] values() {
         return OrderStateEnum.values();
     }
-
+    
 }

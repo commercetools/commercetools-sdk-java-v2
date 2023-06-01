@@ -1,19 +1,20 @@
-
 package com.commercetools.importapi.models.orders;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-import java.util.stream.Collectors;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
+import com.commercetools.importapi.models.orders.ItemShippingTarget;
+import com.commercetools.importapi.models.orders.ItemShippingDetailsDraftImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * ItemShippingDetailsDraft
@@ -26,11 +27,15 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .plusTargets(targetsBuilder -> targetsBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = ItemShippingDetailsDraftImpl.class)
 public interface ItemShippingDetailsDraft extends io.vrap.rmf.base.client.Draft<ItemShippingDetailsDraft> {
+
 
     /**
      *  <p>Maps to <code>ItemShippingDetailsDraft.targets</code>.</p>
@@ -45,24 +50,24 @@ public interface ItemShippingDetailsDraft extends io.vrap.rmf.base.client.Draft<
      *  <p>Maps to <code>ItemShippingDetailsDraft.targets</code>.</p>
      * @param targets values to be set
      */
-
+    
     @JsonIgnore
-    public void setTargets(final ItemShippingTarget... targets);
-
+    public void setTargets(final ItemShippingTarget ...targets);
     /**
      *  <p>Maps to <code>ItemShippingDetailsDraft.targets</code>.</p>
      * @param targets values to be set
      */
-
+    
     public void setTargets(final List<ItemShippingTarget> targets);
 
     /**
      * factory method
      * @return instance of ItemShippingDetailsDraft
      */
-    public static ItemShippingDetailsDraft of() {
+    public static ItemShippingDetailsDraft of(){
         return new ItemShippingDetailsDraftImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy ItemShippingDetailsDraft
@@ -87,9 +92,7 @@ public interface ItemShippingDetailsDraft extends io.vrap.rmf.base.client.Draft<
         }
         ItemShippingDetailsDraftImpl instance = new ItemShippingDetailsDraftImpl();
         instance.setTargets(Optional.ofNullable(template.getTargets())
-                .map(t -> t.stream()
-                        .map(com.commercetools.importapi.models.orders.ItemShippingTarget::deepCopy)
-                        .collect(Collectors.toList()))
+                .map(t -> t.stream().map(com.commercetools.importapi.models.orders.ItemShippingTarget::deepCopy).collect(Collectors.toList()))
                 .orElse(null));
         return instance;
     }
@@ -101,7 +104,7 @@ public interface ItemShippingDetailsDraft extends io.vrap.rmf.base.client.Draft<
     public static ItemShippingDetailsDraftBuilder builder() {
         return ItemShippingDetailsDraftBuilder.of();
     }
-
+    
     /**
      * create builder for ItemShippingDetailsDraft instance
      * @param template instance with prefilled values for the builder
@@ -110,6 +113,7 @@ public interface ItemShippingDetailsDraft extends io.vrap.rmf.base.client.Draft<
     public static ItemShippingDetailsDraftBuilder builder(final ItemShippingDetailsDraft template) {
         return ItemShippingDetailsDraftBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -120,7 +124,7 @@ public interface ItemShippingDetailsDraft extends io.vrap.rmf.base.client.Draft<
     default <T> T withItemShippingDetailsDraft(Function<ItemShippingDetailsDraft, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

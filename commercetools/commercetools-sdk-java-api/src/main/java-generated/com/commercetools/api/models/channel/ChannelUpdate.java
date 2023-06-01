@@ -1,19 +1,20 @@
-
 package com.commercetools.api.models.channel;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-import java.util.stream.Collectors;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
+import com.commercetools.api.models.channel.ChannelUpdateAction;
+import com.commercetools.api.models.channel.ChannelUpdateImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * ChannelUpdate
@@ -27,12 +28,15 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .plusActions(actionsBuilder -> actionsBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = ChannelUpdateImpl.class)
-public interface ChannelUpdate
-        extends com.commercetools.api.models.ResourceUpdate<ChannelUpdate, ChannelUpdateAction, ChannelUpdateBuilder> {
+public interface ChannelUpdate extends com.commercetools.api.models.ResourceUpdate<ChannelUpdate, ChannelUpdateAction, ChannelUpdateBuilder> {
+
 
     /**
      *  <p>Expected version of the Channel on which the changes should be applied. If the expected version does not match the actual version, a ConcurrentModification error is returned.</p>
@@ -41,7 +45,6 @@ public interface ChannelUpdate
     @NotNull
     @JsonProperty("version")
     public Long getVersion();
-
     /**
      *  <p>Update actions to be performed on the Channel.</p>
      * @return actions
@@ -55,31 +58,32 @@ public interface ChannelUpdate
      *  <p>Expected version of the Channel on which the changes should be applied. If the expected version does not match the actual version, a ConcurrentModification error is returned.</p>
      * @param version value to be set
      */
-
+    
     public void setVersion(final Long version);
-
+    
+    
     /**
      *  <p>Update actions to be performed on the Channel.</p>
      * @param actions values to be set
      */
-
+    
     @JsonIgnore
-    public void setActions(final ChannelUpdateAction... actions);
-
+    public void setActions(final ChannelUpdateAction ...actions);
     /**
      *  <p>Update actions to be performed on the Channel.</p>
      * @param actions values to be set
      */
-
+    
     public void setActions(final List<ChannelUpdateAction> actions);
 
     /**
      * factory method
      * @return instance of ChannelUpdate
      */
-    public static ChannelUpdate of() {
+    public static ChannelUpdate of(){
         return new ChannelUpdateImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy ChannelUpdate
@@ -106,9 +110,7 @@ public interface ChannelUpdate
         ChannelUpdateImpl instance = new ChannelUpdateImpl();
         instance.setVersion(template.getVersion());
         instance.setActions(Optional.ofNullable(template.getActions())
-                .map(t -> t.stream()
-                        .map(com.commercetools.api.models.channel.ChannelUpdateAction::deepCopy)
-                        .collect(Collectors.toList()))
+                .map(t -> t.stream().map(com.commercetools.api.models.channel.ChannelUpdateAction::deepCopy).collect(Collectors.toList()))
                 .orElse(null));
         return instance;
     }
@@ -120,7 +122,7 @@ public interface ChannelUpdate
     public static ChannelUpdateBuilder builder() {
         return ChannelUpdateBuilder.of();
     }
-
+    
     /**
      * create builder for ChannelUpdate instance
      * @param template instance with prefilled values for the builder
@@ -129,6 +131,7 @@ public interface ChannelUpdate
     public static ChannelUpdateBuilder builder(final ChannelUpdate template) {
         return ChannelUpdateBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -139,7 +142,7 @@ public interface ChannelUpdate
     default <T> T withChannelUpdate(Function<ChannelUpdate, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

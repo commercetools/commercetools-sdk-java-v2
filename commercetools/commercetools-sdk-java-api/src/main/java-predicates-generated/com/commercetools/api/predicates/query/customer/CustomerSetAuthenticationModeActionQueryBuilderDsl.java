@@ -1,9 +1,11 @@
-
 package com.commercetools.api.predicates.query.customer;
 
 import com.commercetools.api.predicates.query.*;
 
-public class CustomerSetAuthenticationModeActionQueryBuilderDsl {
+import java.util.function.Function;
+
+
+public class CustomerSetAuthenticationModeActionQueryBuilderDsl  {
     public CustomerSetAuthenticationModeActionQueryBuilderDsl() {
     }
 
@@ -12,21 +14,16 @@ public class CustomerSetAuthenticationModeActionQueryBuilderDsl {
     }
 
     public StringComparisonPredicateBuilder<CustomerSetAuthenticationModeActionQueryBuilderDsl> action() {
-        return new StringComparisonPredicateBuilder<>(
-            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("action")),
-            p -> new CombinationQueryPredicate<>(p, CustomerSetAuthenticationModeActionQueryBuilderDsl::of));
+        return new StringComparisonPredicateBuilder<>(BinaryQueryPredicate.of().left(new ConstantQueryPredicate("action")),
+        p -> new CombinationQueryPredicate<>(p, CustomerSetAuthenticationModeActionQueryBuilderDsl::of));
     }
-
     public StringComparisonPredicateBuilder<CustomerSetAuthenticationModeActionQueryBuilderDsl> authMode() {
-        return new StringComparisonPredicateBuilder<>(
-            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("authMode")),
-            p -> new CombinationQueryPredicate<>(p, CustomerSetAuthenticationModeActionQueryBuilderDsl::of));
+        return new StringComparisonPredicateBuilder<>(BinaryQueryPredicate.of().left(new ConstantQueryPredicate("authMode")),
+        p -> new CombinationQueryPredicate<>(p, CustomerSetAuthenticationModeActionQueryBuilderDsl::of));
     }
-
     public StringComparisonPredicateBuilder<CustomerSetAuthenticationModeActionQueryBuilderDsl> password() {
-        return new StringComparisonPredicateBuilder<>(
-            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("password")),
-            p -> new CombinationQueryPredicate<>(p, CustomerSetAuthenticationModeActionQueryBuilderDsl::of));
+        return new StringComparisonPredicateBuilder<>(BinaryQueryPredicate.of().left(new ConstantQueryPredicate("password")),
+        p -> new CombinationQueryPredicate<>(p, CustomerSetAuthenticationModeActionQueryBuilderDsl::of));
     }
-
+    
 }

@@ -1,18 +1,21 @@
-
 package com.commercetools.api.models.shopping_list;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-
+import com.commercetools.api.models.shopping_list.ShoppingListUpdateAction;
 import com.commercetools.api.models.store.StoreResourceIdentifier;
+import com.commercetools.api.models.shopping_list.ShoppingListSetStoreActionImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * ShoppingListSetStoreAction
@@ -24,9 +27,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     ShoppingListSetStoreAction shoppingListSetStoreAction = ShoppingListSetStoreAction.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = ShoppingListSetStoreActionImpl.class)
 public interface ShoppingListSetStoreAction extends ShoppingListUpdateAction {
 
@@ -47,16 +53,18 @@ public interface ShoppingListSetStoreAction extends ShoppingListUpdateAction {
      *  <p>The Store the ShoppingList should be assigned to. If empty, any existing value will be removed.</p>
      * @param store value to be set
      */
-
+    
     public void setStore(final StoreResourceIdentifier store);
+    
 
     /**
      * factory method
      * @return instance of ShoppingListSetStoreAction
      */
-    public static ShoppingListSetStoreAction of() {
+    public static ShoppingListSetStoreAction of(){
         return new ShoppingListSetStoreActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy ShoppingListSetStoreAction
@@ -91,7 +99,7 @@ public interface ShoppingListSetStoreAction extends ShoppingListUpdateAction {
     public static ShoppingListSetStoreActionBuilder builder() {
         return ShoppingListSetStoreActionBuilder.of();
     }
-
+    
     /**
      * create builder for ShoppingListSetStoreAction instance
      * @param template instance with prefilled values for the builder
@@ -100,6 +108,7 @@ public interface ShoppingListSetStoreAction extends ShoppingListUpdateAction {
     public static ShoppingListSetStoreActionBuilder builder(final ShoppingListSetStoreAction template) {
         return ShoppingListSetStoreActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -110,7 +119,7 @@ public interface ShoppingListSetStoreAction extends ShoppingListUpdateAction {
     default <T> T withShoppingListSetStoreAction(Function<ShoppingListSetStoreAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

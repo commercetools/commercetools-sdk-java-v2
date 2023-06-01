@@ -1,17 +1,21 @@
-
 package com.commercetools.api.models.customer_group;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-
+import com.commercetools.api.models.common.ReferenceTypeId;
 import com.commercetools.api.models.common.ResourceIdentifier;
+import com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifierImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>ResourceIdentifier to a CustomerGroup.</p>
@@ -23,12 +27,14 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     CustomerGroupResourceIdentifier customerGroupResourceIdentifier = CustomerGroupResourceIdentifier.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = CustomerGroupResourceIdentifierImpl.class)
-public interface CustomerGroupResourceIdentifier
-        extends ResourceIdentifier, com.commercetools.api.models.Identifiable<CustomerGroup> {
+public interface CustomerGroupResourceIdentifier extends ResourceIdentifier, com.commercetools.api.models.Identifiable<CustomerGroup> {
 
     /**
      * discriminator value for CustomerGroupResourceIdentifier
@@ -39,15 +45,14 @@ public interface CustomerGroupResourceIdentifier
      *  <p>Unique identifier of the referenced CustomerGroup. Either <code>id</code> or <code>key</code> is required.</p>
      * @return id
      */
-
+    
     @JsonProperty("id")
     public String getId();
-
     /**
      *  <p>User-defined unique identifier of the referenced CustomerGroup. Either <code>id</code> or <code>key</code> is required.</p>
      * @return key
      */
-
+    
     @JsonProperty("key")
     public String getKey();
 
@@ -55,23 +60,26 @@ public interface CustomerGroupResourceIdentifier
      *  <p>Unique identifier of the referenced CustomerGroup. Either <code>id</code> or <code>key</code> is required.</p>
      * @param id value to be set
      */
-
+    
     public void setId(final String id);
-
+    
+    
     /**
      *  <p>User-defined unique identifier of the referenced CustomerGroup. Either <code>id</code> or <code>key</code> is required.</p>
      * @param key value to be set
      */
-
+    
     public void setKey(final String key);
+    
 
     /**
      * factory method
      * @return instance of CustomerGroupResourceIdentifier
      */
-    public static CustomerGroupResourceIdentifier of() {
+    public static CustomerGroupResourceIdentifier of(){
         return new CustomerGroupResourceIdentifierImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy CustomerGroupResourceIdentifier
@@ -108,7 +116,7 @@ public interface CustomerGroupResourceIdentifier
     public static CustomerGroupResourceIdentifierBuilder builder() {
         return CustomerGroupResourceIdentifierBuilder.of();
     }
-
+    
     /**
      * create builder for CustomerGroupResourceIdentifier instance
      * @param template instance with prefilled values for the builder
@@ -117,6 +125,7 @@ public interface CustomerGroupResourceIdentifier
     public static CustomerGroupResourceIdentifierBuilder builder(final CustomerGroupResourceIdentifier template) {
         return CustomerGroupResourceIdentifierBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -127,7 +136,7 @@ public interface CustomerGroupResourceIdentifier
     default <T> T withCustomerGroupResourceIdentifier(Function<CustomerGroupResourceIdentifier, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

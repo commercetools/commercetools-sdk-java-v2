@@ -1,16 +1,20 @@
-
 package com.commercetools.api.models.subscription;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
+import com.commercetools.api.models.subscription.DeliveryFormat;
+import com.commercetools.api.models.subscription.PlatformFormatImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>The PlatformFormat uses constructs that are similar to the ones used in the REST API, for example, on the Messages Query HTTP API.</p>
@@ -22,9 +26,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     PlatformFormat platformFormat = PlatformFormat.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = PlatformFormatImpl.class)
 public interface PlatformFormat extends DeliveryFormat {
 
@@ -33,13 +40,16 @@ public interface PlatformFormat extends DeliveryFormat {
      */
     String PLATFORM = "Platform";
 
+
+
     /**
      * factory method
      * @return instance of PlatformFormat
      */
-    public static PlatformFormat of() {
+    public static PlatformFormat of(){
         return new PlatformFormatImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy PlatformFormat
@@ -72,7 +82,7 @@ public interface PlatformFormat extends DeliveryFormat {
     public static PlatformFormatBuilder builder() {
         return PlatformFormatBuilder.of();
     }
-
+    
     /**
      * create builder for PlatformFormat instance
      * @param template instance with prefilled values for the builder
@@ -81,6 +91,7 @@ public interface PlatformFormat extends DeliveryFormat {
     public static PlatformFormatBuilder builder(final PlatformFormat template) {
         return PlatformFormatBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -91,7 +102,7 @@ public interface PlatformFormat extends DeliveryFormat {
     default <T> T withPlatformFormat(Function<PlatformFormat, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

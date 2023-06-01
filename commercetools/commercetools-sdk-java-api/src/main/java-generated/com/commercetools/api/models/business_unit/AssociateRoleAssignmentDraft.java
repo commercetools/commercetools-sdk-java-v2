@@ -1,19 +1,21 @@
-
 package com.commercetools.api.models.business_unit;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
 import com.commercetools.api.models.associate_role.AssociateRoleResourceIdentifier;
+import com.commercetools.api.models.business_unit.AssociateRoleInheritanceMode;
+import com.commercetools.api.models.business_unit.AssociateRoleAssignmentDraftImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * AssociateRoleAssignmentDraft
@@ -26,11 +28,15 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .associateRole(associateRoleBuilder -> associateRoleBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = AssociateRoleAssignmentDraftImpl.class)
 public interface AssociateRoleAssignmentDraft extends io.vrap.rmf.base.client.Draft<AssociateRoleAssignmentDraft> {
+
 
     /**
      *  <p>Role the Associate holds within a Business Unit.</p>
@@ -40,12 +46,11 @@ public interface AssociateRoleAssignmentDraft extends io.vrap.rmf.base.client.Dr
     @Valid
     @JsonProperty("associateRole")
     public AssociateRoleResourceIdentifier getAssociateRole();
-
     /**
      *  <p>Determines whether the AssociateRoleAssignment can be inherited by child Business Units.</p>
      * @return inheritance
      */
-
+    
     @JsonProperty("inheritance")
     public AssociateRoleInheritanceMode getInheritance();
 
@@ -53,23 +58,26 @@ public interface AssociateRoleAssignmentDraft extends io.vrap.rmf.base.client.Dr
      *  <p>Role the Associate holds within a Business Unit.</p>
      * @param associateRole value to be set
      */
-
+    
     public void setAssociateRole(final AssociateRoleResourceIdentifier associateRole);
-
+    
+    
     /**
      *  <p>Determines whether the AssociateRoleAssignment can be inherited by child Business Units.</p>
      * @param inheritance value to be set
      */
-
+    
     public void setInheritance(final AssociateRoleInheritanceMode inheritance);
+    
 
     /**
      * factory method
      * @return instance of AssociateRoleAssignmentDraft
      */
-    public static AssociateRoleAssignmentDraft of() {
+    public static AssociateRoleAssignmentDraft of(){
         return new AssociateRoleAssignmentDraftImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy AssociateRoleAssignmentDraft
@@ -94,8 +102,7 @@ public interface AssociateRoleAssignmentDraft extends io.vrap.rmf.base.client.Dr
             return null;
         }
         AssociateRoleAssignmentDraftImpl instance = new AssociateRoleAssignmentDraftImpl();
-        instance.setAssociateRole(com.commercetools.api.models.associate_role.AssociateRoleResourceIdentifier
-                .deepCopy(template.getAssociateRole()));
+        instance.setAssociateRole(com.commercetools.api.models.associate_role.AssociateRoleResourceIdentifier.deepCopy(template.getAssociateRole()));
         instance.setInheritance(template.getInheritance());
         return instance;
     }
@@ -107,7 +114,7 @@ public interface AssociateRoleAssignmentDraft extends io.vrap.rmf.base.client.Dr
     public static AssociateRoleAssignmentDraftBuilder builder() {
         return AssociateRoleAssignmentDraftBuilder.of();
     }
-
+    
     /**
      * create builder for AssociateRoleAssignmentDraft instance
      * @param template instance with prefilled values for the builder
@@ -116,6 +123,7 @@ public interface AssociateRoleAssignmentDraft extends io.vrap.rmf.base.client.Dr
     public static AssociateRoleAssignmentDraftBuilder builder(final AssociateRoleAssignmentDraft template) {
         return AssociateRoleAssignmentDraftBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -126,7 +134,7 @@ public interface AssociateRoleAssignmentDraft extends io.vrap.rmf.base.client.Dr
     default <T> T withAssociateRoleAssignmentDraft(Function<AssociateRoleAssignmentDraft, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

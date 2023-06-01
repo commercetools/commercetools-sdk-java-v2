@@ -1,9 +1,12 @@
-
 package com.commercetools.api.models.common;
 
+import com.commercetools.api.models.common.TypedMoney;
+import com.commercetools.api.models.product_discount.ProductDiscountReference;
+import com.commercetools.api.models.common.DiscountedPrice;
+import javax.annotation.Nullable;
 import java.util.*;
 import java.util.function.Function;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -18,92 +21,100 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .discount(discountBuilder -> discountBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class DiscountedPriceBuilder implements Builder<DiscountedPrice> {
 
+    
+    
     private com.commercetools.api.models.common.TypedMoney value;
-
+    
+    
+    
     private com.commercetools.api.models.product_discount.ProductDiscountReference discount;
 
+    
     /**
      *  <p>Money value of the discounted price.</p>
      * @param value value to be set
      * @return Builder
      */
-
-    public DiscountedPriceBuilder value(final com.commercetools.api.models.common.TypedMoney value) {
+    
+    public DiscountedPriceBuilder value( final com.commercetools.api.models.common.TypedMoney value) {
         this.value = value;
         return this;
     }
-
+    
+    
     /**
      *  <p>Money value of the discounted price.</p>
      * @param builder function to build the value value
      * @return Builder
      */
-
-    public DiscountedPriceBuilder value(
-            Function<com.commercetools.api.models.common.TypedMoneyBuilder, Builder<? extends com.commercetools.api.models.common.TypedMoney>> builder) {
+    
+    public DiscountedPriceBuilder value(Function<com.commercetools.api.models.common.TypedMoneyBuilder, Builder<? extends com.commercetools.api.models.common.TypedMoney>> builder) {
         this.value = builder.apply(com.commercetools.api.models.common.TypedMoneyBuilder.of()).build();
         return this;
     }
-
+                    
+    
+    
     /**
      *  <p>ProductDiscount related to the discounted price.</p>
      * @param builder function to build the discount value
      * @return Builder
      */
-
-    public DiscountedPriceBuilder discount(
-            Function<com.commercetools.api.models.product_discount.ProductDiscountReferenceBuilder, com.commercetools.api.models.product_discount.ProductDiscountReferenceBuilder> builder) {
-        this.discount = builder
-                .apply(com.commercetools.api.models.product_discount.ProductDiscountReferenceBuilder.of())
-                .build();
+    
+    public DiscountedPriceBuilder discount(Function<com.commercetools.api.models.product_discount.ProductDiscountReferenceBuilder, com.commercetools.api.models.product_discount.ProductDiscountReferenceBuilder> builder) {
+        this.discount = builder.apply(com.commercetools.api.models.product_discount.ProductDiscountReferenceBuilder.of()).build();
         return this;
     }
-
+    
     /**
      *  <p>ProductDiscount related to the discounted price.</p>
      * @param builder function to build the discount value
      * @return Builder
      */
-
-    public DiscountedPriceBuilder withDiscount(
-            Function<com.commercetools.api.models.product_discount.ProductDiscountReferenceBuilder, com.commercetools.api.models.product_discount.ProductDiscountReference> builder) {
-        this.discount = builder
-                .apply(com.commercetools.api.models.product_discount.ProductDiscountReferenceBuilder.of());
+    
+    public DiscountedPriceBuilder withDiscount(Function<com.commercetools.api.models.product_discount.ProductDiscountReferenceBuilder, com.commercetools.api.models.product_discount.ProductDiscountReference> builder) {
+        this.discount = builder.apply(com.commercetools.api.models.product_discount.ProductDiscountReferenceBuilder.of());
         return this;
     }
-
+                    
     /**
      *  <p>ProductDiscount related to the discounted price.</p>
      * @param discount value to be set
      * @return Builder
      */
-
-    public DiscountedPriceBuilder discount(
-            final com.commercetools.api.models.product_discount.ProductDiscountReference discount) {
+    
+    public DiscountedPriceBuilder discount( final com.commercetools.api.models.product_discount.ProductDiscountReference discount) {
         this.discount = discount;
         return this;
     }
+    
+    
 
     /**
      *  <p>Money value of the discounted price.</p>
      * @return value
      */
-
-    public com.commercetools.api.models.common.TypedMoney getValue() {
+    
+    
+    public com.commercetools.api.models.common.TypedMoney getValue(){
         return this.value;
     }
-
+    
     /**
      *  <p>ProductDiscount related to the discounted price.</p>
      * @return discount
      */
-
-    public com.commercetools.api.models.product_discount.ProductDiscountReference getDiscount() {
+    
+    
+    public com.commercetools.api.models.product_discount.ProductDiscountReference getDiscount(){
         return this.discount;
     }
 
@@ -116,7 +127,7 @@ public class DiscountedPriceBuilder implements Builder<DiscountedPrice> {
         Objects.requireNonNull(discount, DiscountedPrice.class + ": discount is missing");
         return new DiscountedPriceImpl(value, discount);
     }
-
+    
     /**
      * builds DiscountedPrice without checking for non-null required values
      * @return DiscountedPrice
@@ -127,7 +138,7 @@ public class DiscountedPriceBuilder implements Builder<DiscountedPrice> {
 
     /**
      * factory method for an instance of DiscountedPriceBuilder
-     * @return builder
+     * @return builder 
      */
     public static DiscountedPriceBuilder of() {
         return new DiscountedPriceBuilder();

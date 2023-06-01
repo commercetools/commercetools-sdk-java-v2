@@ -1,19 +1,21 @@
-
 package com.commercetools.api.models.product;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
 import com.commercetools.api.models.common.LocalizedString;
+import com.commercetools.api.models.product.ProductUpdateAction;
+import com.commercetools.api.models.product.ProductChangeNameActionImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * ProductChangeNameAction
@@ -26,9 +28,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .name(nameBuilder -> nameBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = ProductChangeNameActionImpl.class)
 public interface ProductChangeNameAction extends ProductUpdateAction {
 
@@ -45,12 +50,11 @@ public interface ProductChangeNameAction extends ProductUpdateAction {
     @Valid
     @JsonProperty("name")
     public LocalizedString getName();
-
     /**
      *  <p>If <code>true</code>, only the staged <code>name</code> is updated. If <code>false</code>, both the current and staged <code>name</code> are updated.</p>
      * @return staged
      */
-
+    
     @JsonProperty("staged")
     public Boolean getStaged();
 
@@ -58,23 +62,26 @@ public interface ProductChangeNameAction extends ProductUpdateAction {
      *  <p>Value to set. Must not be empty.</p>
      * @param name value to be set
      */
-
+    
     public void setName(final LocalizedString name);
-
+    
+    
     /**
      *  <p>If <code>true</code>, only the staged <code>name</code> is updated. If <code>false</code>, both the current and staged <code>name</code> are updated.</p>
      * @param staged value to be set
      */
-
+    
     public void setStaged(final Boolean staged);
+    
 
     /**
      * factory method
      * @return instance of ProductChangeNameAction
      */
-    public static ProductChangeNameAction of() {
+    public static ProductChangeNameAction of(){
         return new ProductChangeNameActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy ProductChangeNameAction
@@ -111,7 +118,7 @@ public interface ProductChangeNameAction extends ProductUpdateAction {
     public static ProductChangeNameActionBuilder builder() {
         return ProductChangeNameActionBuilder.of();
     }
-
+    
     /**
      * create builder for ProductChangeNameAction instance
      * @param template instance with prefilled values for the builder
@@ -120,6 +127,7 @@ public interface ProductChangeNameAction extends ProductUpdateAction {
     public static ProductChangeNameActionBuilder builder(final ProductChangeNameAction template) {
         return ProductChangeNameActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -130,7 +138,7 @@ public interface ProductChangeNameAction extends ProductUpdateAction {
     default <T> T withProductChangeNameAction(Function<ProductChangeNameAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

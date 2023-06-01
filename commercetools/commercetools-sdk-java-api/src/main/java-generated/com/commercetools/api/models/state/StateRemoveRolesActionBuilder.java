@@ -1,8 +1,12 @@
-
 package com.commercetools.api.models.state;
 
+import com.commercetools.api.models.state.StateRoleEnum;
+import com.commercetools.api.models.state.StateUpdateAction;
+import com.commercetools.api.models.state.StateRemoveRolesAction;
+import javax.annotation.Nullable;
 import java.util.*;
-
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -16,11 +20,16 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .plusRoles(rolesBuilder -> rolesBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class StateRemoveRolesActionBuilder implements Builder<StateRemoveRolesAction> {
 
+    
+    
     private java.util.List<com.commercetools.api.models.state.StateRoleEnum> roles;
 
     /**
@@ -28,44 +37,47 @@ public class StateRemoveRolesActionBuilder implements Builder<StateRemoveRolesAc
      * @param roles value to be set
      * @return Builder
      */
-
-    public StateRemoveRolesActionBuilder roles(final com.commercetools.api.models.state.StateRoleEnum... roles) {
+    
+    public StateRemoveRolesActionBuilder roles( final com.commercetools.api.models.state.StateRoleEnum ...roles) {
         this.roles = new ArrayList<>(Arrays.asList(roles));
         return this;
     }
-
+    
     /**
      *  <p>Roles to remove from the State.</p>
      * @param roles value to be set
      * @return Builder
      */
-
-    public StateRemoveRolesActionBuilder roles(
-            final java.util.List<com.commercetools.api.models.state.StateRoleEnum> roles) {
+    
+    public StateRemoveRolesActionBuilder roles( final java.util.List<com.commercetools.api.models.state.StateRoleEnum> roles) {
         this.roles = roles;
         return this;
     }
-
+    
     /**
      *  <p>Roles to remove from the State.</p>
      * @param roles value to be set
      * @return Builder
      */
-
-    public StateRemoveRolesActionBuilder plusRoles(final com.commercetools.api.models.state.StateRoleEnum... roles) {
+    
+    public StateRemoveRolesActionBuilder plusRoles( final com.commercetools.api.models.state.StateRoleEnum ...roles) {
         if (this.roles == null) {
             this.roles = new ArrayList<>();
         }
         this.roles.addAll(Arrays.asList(roles));
         return this;
     }
+    
+    
+    
 
     /**
      *  <p>Roles to remove from the State.</p>
      * @return roles
      */
-
-    public java.util.List<com.commercetools.api.models.state.StateRoleEnum> getRoles() {
+    
+    
+    public java.util.List<com.commercetools.api.models.state.StateRoleEnum> getRoles(){
         return this.roles;
     }
 
@@ -77,7 +89,7 @@ public class StateRemoveRolesActionBuilder implements Builder<StateRemoveRolesAc
         Objects.requireNonNull(roles, StateRemoveRolesAction.class + ": roles is missing");
         return new StateRemoveRolesActionImpl(roles);
     }
-
+    
     /**
      * builds StateRemoveRolesAction without checking for non-null required values
      * @return StateRemoveRolesAction
@@ -88,7 +100,7 @@ public class StateRemoveRolesActionBuilder implements Builder<StateRemoveRolesAc
 
     /**
      * factory method for an instance of StateRemoveRolesActionBuilder
-     * @return builder
+     * @return builder 
      */
     public static StateRemoveRolesActionBuilder of() {
         return new StateRemoveRolesActionBuilder();

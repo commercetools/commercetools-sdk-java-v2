@@ -1,10 +1,12 @@
-
 package com.commercetools.importapi.models.errors;
 
-import java.util.*;
-
+import com.commercetools.importapi.models.errors.ErrorObject;
+import java.lang.Object;
+import com.commercetools.importapi.models.errors.ConcurrentModificationError;
 import javax.annotation.Nullable;
-
+import java.util.*;
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -19,100 +21,123 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .currentVersion(1)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class ConcurrentModificationErrorBuilder implements Builder<ConcurrentModificationError> {
 
+    
+    
     private String message;
-
+    
+    
     @Nullable
     private Long specifiedVersion;
-
+    
+    
+    
     private Long currentVersion;
-
+    
+    
     @Nullable
     private java.lang.Object conflictedResource;
 
+    
     /**
      * set the value to the message
      * @param message value to be set
      * @return Builder
      */
-
-    public ConcurrentModificationErrorBuilder message(final String message) {
+    
+    public ConcurrentModificationErrorBuilder message( final String message) {
         this.message = message;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>The version specified in the failed request.</p>
      * @param specifiedVersion value to be set
      * @return Builder
      */
-
+    
     public ConcurrentModificationErrorBuilder specifiedVersion(@Nullable final Long specifiedVersion) {
         this.specifiedVersion = specifiedVersion;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>The current version of the resource.</p>
      * @param currentVersion value to be set
      * @return Builder
      */
-
-    public ConcurrentModificationErrorBuilder currentVersion(final Long currentVersion) {
+    
+    public ConcurrentModificationErrorBuilder currentVersion( final Long currentVersion) {
         this.currentVersion = currentVersion;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>The resource in conflict.</p>
      * @param conflictedResource value to be set
      * @return Builder
      */
-
+    
     public ConcurrentModificationErrorBuilder conflictedResource(@Nullable final java.lang.Object conflictedResource) {
         this.conflictedResource = conflictedResource;
         return this;
     }
+    
+    
 
     /**
      * value of message}
      * @return message
      */
-
-    public String getMessage() {
+    
+    
+    public String getMessage(){
         return this.message;
     }
-
+    
     /**
      *  <p>The version specified in the failed request.</p>
      * @return specifiedVersion
      */
-
+    
     @Nullable
-    public Long getSpecifiedVersion() {
+    public Long getSpecifiedVersion(){
         return this.specifiedVersion;
     }
-
+    
     /**
      *  <p>The current version of the resource.</p>
      * @return currentVersion
      */
-
-    public Long getCurrentVersion() {
+    
+    
+    public Long getCurrentVersion(){
         return this.currentVersion;
     }
-
+    
     /**
      *  <p>The resource in conflict.</p>
      * @return conflictedResource
      */
-
+    
     @Nullable
-    public java.lang.Object getConflictedResource() {
+    public java.lang.Object getConflictedResource(){
         return this.conflictedResource;
     }
 
@@ -125,7 +150,7 @@ public class ConcurrentModificationErrorBuilder implements Builder<ConcurrentMod
         Objects.requireNonNull(currentVersion, ConcurrentModificationError.class + ": currentVersion is missing");
         return new ConcurrentModificationErrorImpl(message, specifiedVersion, currentVersion, conflictedResource);
     }
-
+    
     /**
      * builds ConcurrentModificationError without checking for non-null required values
      * @return ConcurrentModificationError
@@ -136,7 +161,7 @@ public class ConcurrentModificationErrorBuilder implements Builder<ConcurrentMod
 
     /**
      * factory method for an instance of ConcurrentModificationErrorBuilder
-     * @return builder
+     * @return builder 
      */
     public static ConcurrentModificationErrorBuilder of() {
         return new ConcurrentModificationErrorBuilder();

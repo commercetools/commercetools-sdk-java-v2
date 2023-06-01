@@ -1,18 +1,21 @@
-
 package com.commercetools.api.models.subscription;
 
-import java.time.*;
+import com.commercetools.api.models.subscription.DeliveryPayload;
 import java.time.ZonedDateTime;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
+import com.commercetools.api.models.subscription.ResourceCreatedDeliveryPayloadImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>This payload is sent for a ChangeSubscription when a resource is created.</p>
@@ -28,9 +31,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .modifiedAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = ResourceCreatedDeliveryPayloadImpl.class)
 public interface ResourceCreatedDeliveryPayload extends DeliveryPayload {
 
@@ -46,7 +52,6 @@ public interface ResourceCreatedDeliveryPayload extends DeliveryPayload {
     @NotNull
     @JsonProperty("version")
     public Long getVersion();
-
     /**
      *  <p>Date and time (UTC) the resource was last modified.</p>
      * @return modifiedAt
@@ -59,23 +64,26 @@ public interface ResourceCreatedDeliveryPayload extends DeliveryPayload {
      *  <p>Last seen version of the resource.</p>
      * @param version value to be set
      */
-
+    
     public void setVersion(final Long version);
-
+    
+    
     /**
      *  <p>Date and time (UTC) the resource was last modified.</p>
      * @param modifiedAt value to be set
      */
-
+    
     public void setModifiedAt(final ZonedDateTime modifiedAt);
+    
 
     /**
      * factory method
      * @return instance of ResourceCreatedDeliveryPayload
      */
-    public static ResourceCreatedDeliveryPayload of() {
+    public static ResourceCreatedDeliveryPayload of(){
         return new ResourceCreatedDeliveryPayloadImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy ResourceCreatedDeliveryPayload
@@ -105,8 +113,7 @@ public interface ResourceCreatedDeliveryPayload extends DeliveryPayload {
         ResourceCreatedDeliveryPayloadImpl instance = new ResourceCreatedDeliveryPayloadImpl();
         instance.setProjectKey(template.getProjectKey());
         instance.setResource(com.commercetools.api.models.common.Reference.deepCopy(template.getResource()));
-        instance.setResourceUserProvidedIdentifiers(com.commercetools.api.models.message.UserProvidedIdentifiers
-                .deepCopy(template.getResourceUserProvidedIdentifiers()));
+        instance.setResourceUserProvidedIdentifiers(com.commercetools.api.models.message.UserProvidedIdentifiers.deepCopy(template.getResourceUserProvidedIdentifiers()));
         instance.setVersion(template.getVersion());
         instance.setModifiedAt(template.getModifiedAt());
         return instance;
@@ -119,7 +126,7 @@ public interface ResourceCreatedDeliveryPayload extends DeliveryPayload {
     public static ResourceCreatedDeliveryPayloadBuilder builder() {
         return ResourceCreatedDeliveryPayloadBuilder.of();
     }
-
+    
     /**
      * create builder for ResourceCreatedDeliveryPayload instance
      * @param template instance with prefilled values for the builder
@@ -128,6 +135,7 @@ public interface ResourceCreatedDeliveryPayload extends DeliveryPayload {
     public static ResourceCreatedDeliveryPayloadBuilder builder(final ResourceCreatedDeliveryPayload template) {
         return ResourceCreatedDeliveryPayloadBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -138,7 +146,7 @@ public interface ResourceCreatedDeliveryPayload extends DeliveryPayload {
     default <T> T withResourceCreatedDeliveryPayload(Function<ResourceCreatedDeliveryPayload, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

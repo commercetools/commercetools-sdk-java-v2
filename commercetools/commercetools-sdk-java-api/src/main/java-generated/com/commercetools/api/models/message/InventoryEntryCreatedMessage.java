@@ -1,19 +1,21 @@
-
 package com.commercetools.api.models.message;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
 import com.commercetools.api.models.inventory.InventoryEntry;
+import com.commercetools.api.models.message.Message;
+import com.commercetools.api.models.message.InventoryEntryCreatedMessageImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Generated after a successful Create InventoryEntry request.</p>
@@ -33,9 +35,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .inventoryEntry(inventoryEntryBuilder -> inventoryEntryBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = InventoryEntryCreatedMessageImpl.class)
 public interface InventoryEntryCreatedMessage extends Message {
 
@@ -57,16 +62,18 @@ public interface InventoryEntryCreatedMessage extends Message {
      *  <p>InventoryEntry that was created.</p>
      * @param inventoryEntry value to be set
      */
-
+    
     public void setInventoryEntry(final InventoryEntry inventoryEntry);
+    
 
     /**
      * factory method
      * @return instance of InventoryEntryCreatedMessage
      */
-    public static InventoryEntryCreatedMessage of() {
+    public static InventoryEntryCreatedMessage of(){
         return new InventoryEntryCreatedMessageImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy InventoryEntryCreatedMessage
@@ -104,16 +111,13 @@ public interface InventoryEntryCreatedMessage extends Message {
         instance.setVersion(template.getVersion());
         instance.setCreatedAt(template.getCreatedAt());
         instance.setLastModifiedAt(template.getLastModifiedAt());
-        instance.setLastModifiedBy(
-            com.commercetools.api.models.common.LastModifiedBy.deepCopy(template.getLastModifiedBy()));
+        instance.setLastModifiedBy(com.commercetools.api.models.common.LastModifiedBy.deepCopy(template.getLastModifiedBy()));
         instance.setCreatedBy(com.commercetools.api.models.common.CreatedBy.deepCopy(template.getCreatedBy()));
         instance.setSequenceNumber(template.getSequenceNumber());
         instance.setResource(com.commercetools.api.models.common.Reference.deepCopy(template.getResource()));
         instance.setResourceVersion(template.getResourceVersion());
-        instance.setResourceUserProvidedIdentifiers(com.commercetools.api.models.message.UserProvidedIdentifiers
-                .deepCopy(template.getResourceUserProvidedIdentifiers()));
-        instance.setInventoryEntry(
-            com.commercetools.api.models.inventory.InventoryEntry.deepCopy(template.getInventoryEntry()));
+        instance.setResourceUserProvidedIdentifiers(com.commercetools.api.models.message.UserProvidedIdentifiers.deepCopy(template.getResourceUserProvidedIdentifiers()));
+        instance.setInventoryEntry(com.commercetools.api.models.inventory.InventoryEntry.deepCopy(template.getInventoryEntry()));
         return instance;
     }
 
@@ -124,7 +128,7 @@ public interface InventoryEntryCreatedMessage extends Message {
     public static InventoryEntryCreatedMessageBuilder builder() {
         return InventoryEntryCreatedMessageBuilder.of();
     }
-
+    
     /**
      * create builder for InventoryEntryCreatedMessage instance
      * @param template instance with prefilled values for the builder
@@ -133,6 +137,7 @@ public interface InventoryEntryCreatedMessage extends Message {
     public static InventoryEntryCreatedMessageBuilder builder(final InventoryEntryCreatedMessage template) {
         return InventoryEntryCreatedMessageBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -143,7 +148,7 @@ public interface InventoryEntryCreatedMessage extends Message {
     default <T> T withInventoryEntryCreatedMessage(Function<InventoryEntryCreatedMessage, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

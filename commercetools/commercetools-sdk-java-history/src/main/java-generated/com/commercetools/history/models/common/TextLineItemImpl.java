@@ -1,47 +1,55 @@
-
 package com.commercetools.history.models.common;
 
-import java.time.*;
-import java.util.*;
-
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
-
-import io.vrap.rmf.base.client.ModelBase;
+import com.commercetools.history.models.common.CustomFields;
+import com.commercetools.history.models.common.LocalizedString;
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.ModelBase;
+import javax.validation.Valid;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.annotation.*;
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
  * TextLineItem
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class TextLineItemImpl implements TextLineItem, ModelBase {
 
+    
     private String addedAt;
-
+    
+    
     private com.commercetools.history.models.common.CustomFields custom;
-
+    
+    
     private com.commercetools.history.models.common.LocalizedString description;
-
+    
+    
     private String id;
-
+    
+    
     private com.commercetools.history.models.common.LocalizedString name;
-
+    
+    
     private Integer quantity;
 
     /**
      * create instance with all properties
      */
     @JsonCreator
-    TextLineItemImpl(@JsonProperty("addedAt") final String addedAt,
-            @JsonProperty("custom") final com.commercetools.history.models.common.CustomFields custom,
-            @JsonProperty("description") final com.commercetools.history.models.common.LocalizedString description,
-            @JsonProperty("id") final String id,
-            @JsonProperty("name") final com.commercetools.history.models.common.LocalizedString name,
-            @JsonProperty("quantity") final Integer quantity) {
+    TextLineItemImpl(@JsonProperty("addedAt") final String addedAt, @JsonProperty("custom") final com.commercetools.history.models.common.CustomFields custom, @JsonProperty("description") final com.commercetools.history.models.common.LocalizedString description, @JsonProperty("id") final String id, @JsonProperty("name") final com.commercetools.history.models.common.LocalizedString name, @JsonProperty("quantity") final Integer quantity) {
         this.addedAt = addedAt;
         this.custom = custom;
         this.description = description;
@@ -49,7 +57,6 @@ public class TextLineItemImpl implements TextLineItem, ModelBase {
         this.name = name;
         this.quantity = quantity;
     }
-
     /**
      * create empty instance
      */
@@ -59,86 +66,91 @@ public class TextLineItemImpl implements TextLineItem, ModelBase {
     /**
      *
      */
-
-    public String getAddedAt() {
+    
+    public String getAddedAt(){
         return this.addedAt;
     }
-
+    
     /**
      *
      */
-
-    public com.commercetools.history.models.common.CustomFields getCustom() {
+    
+    public com.commercetools.history.models.common.CustomFields getCustom(){
         return this.custom;
     }
-
+    
     /**
      *
      */
-
-    public com.commercetools.history.models.common.LocalizedString getDescription() {
+    
+    public com.commercetools.history.models.common.LocalizedString getDescription(){
         return this.description;
     }
-
+    
     /**
      *
      */
-
-    public String getId() {
+    
+    public String getId(){
         return this.id;
     }
-
+    
     /**
      *
      */
-
-    public com.commercetools.history.models.common.LocalizedString getName() {
+    
+    public com.commercetools.history.models.common.LocalizedString getName(){
         return this.name;
     }
-
+    
     /**
      *
      */
-
-    public Integer getQuantity() {
+    
+    public Integer getQuantity(){
         return this.quantity;
     }
 
-    public void setAddedAt(final String addedAt) {
+    
+    public void setAddedAt(final String addedAt){
         this.addedAt = addedAt;
     }
-
-    public void setCustom(final com.commercetools.history.models.common.CustomFields custom) {
+    
+    
+    public void setCustom(final com.commercetools.history.models.common.CustomFields custom){
         this.custom = custom;
     }
-
-    public void setDescription(final com.commercetools.history.models.common.LocalizedString description) {
+    
+    
+    public void setDescription(final com.commercetools.history.models.common.LocalizedString description){
         this.description = description;
     }
-
-    public void setId(final String id) {
+    
+    
+    public void setId(final String id){
         this.id = id;
     }
-
-    public void setName(final com.commercetools.history.models.common.LocalizedString name) {
+    
+    
+    public void setName(final com.commercetools.history.models.common.LocalizedString name){
         this.name = name;
     }
-
-    public void setQuantity(final Integer quantity) {
+    
+    
+    public void setQuantity(final Integer quantity){
         this.quantity = quantity;
     }
 
     @Override
     public boolean equals(Object o) {
-        if (this == o)
-            return true;
-
-        if (o == null || getClass() != o.getClass())
-            return false;
-
+        if (this == o) return true;
+    
+        if (o == null || getClass() != o.getClass()) return false;
+    
         TextLineItemImpl that = (TextLineItemImpl) o;
-
-        return new EqualsBuilder().append(addedAt, that.addedAt)
+    
+        return new EqualsBuilder()
+                .append(addedAt, that.addedAt)
                 .append(custom, that.custom)
                 .append(description, that.description)
                 .append(id, that.id)
@@ -146,16 +158,17 @@ public class TextLineItemImpl implements TextLineItem, ModelBase {
                 .append(quantity, that.quantity)
                 .isEquals();
     }
-
+    
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(addedAt)
-                .append(custom)
-                .append(description)
-                .append(id)
-                .append(name)
-                .append(quantity)
-                .toHashCode();
+        return new HashCodeBuilder(17, 37)
+            .append(addedAt)
+            .append(custom)
+            .append(description)
+            .append(id)
+            .append(name)
+            .append(quantity)
+            .toHashCode();
     }
 
 }

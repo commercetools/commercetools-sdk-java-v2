@@ -1,9 +1,12 @@
-
 package com.commercetools.api.models.message;
 
+import com.commercetools.api.models.category.CategoryReference;
+import com.commercetools.api.models.message.MessagePayload;
+import com.commercetools.api.models.message.ProductRemovedFromCategoryMessagePayload;
+import javax.annotation.Nullable;
 import java.util.*;
 import java.util.function.Function;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -18,78 +21,89 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .staged(true)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
-public class ProductRemovedFromCategoryMessagePayloadBuilder
-        implements Builder<ProductRemovedFromCategoryMessagePayload> {
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
+public class ProductRemovedFromCategoryMessagePayloadBuilder implements Builder<ProductRemovedFromCategoryMessagePayload> {
 
+    
+    
     private com.commercetools.api.models.category.CategoryReference category;
-
+    
+    
+    
     private Boolean staged;
 
+    
     /**
      *  <p>Category the Product was removed from.</p>
      * @param builder function to build the category value
      * @return Builder
      */
-
-    public ProductRemovedFromCategoryMessagePayloadBuilder category(
-            Function<com.commercetools.api.models.category.CategoryReferenceBuilder, com.commercetools.api.models.category.CategoryReferenceBuilder> builder) {
+    
+    public ProductRemovedFromCategoryMessagePayloadBuilder category(Function<com.commercetools.api.models.category.CategoryReferenceBuilder, com.commercetools.api.models.category.CategoryReferenceBuilder> builder) {
         this.category = builder.apply(com.commercetools.api.models.category.CategoryReferenceBuilder.of()).build();
         return this;
     }
-
+    
     /**
      *  <p>Category the Product was removed from.</p>
      * @param builder function to build the category value
      * @return Builder
      */
-
-    public ProductRemovedFromCategoryMessagePayloadBuilder withCategory(
-            Function<com.commercetools.api.models.category.CategoryReferenceBuilder, com.commercetools.api.models.category.CategoryReference> builder) {
+    
+    public ProductRemovedFromCategoryMessagePayloadBuilder withCategory(Function<com.commercetools.api.models.category.CategoryReferenceBuilder, com.commercetools.api.models.category.CategoryReference> builder) {
         this.category = builder.apply(com.commercetools.api.models.category.CategoryReferenceBuilder.of());
         return this;
     }
-
+                    
     /**
      *  <p>Category the Product was removed from.</p>
      * @param category value to be set
      * @return Builder
      */
-
-    public ProductRemovedFromCategoryMessagePayloadBuilder category(
-            final com.commercetools.api.models.category.CategoryReference category) {
+    
+    public ProductRemovedFromCategoryMessagePayloadBuilder category( final com.commercetools.api.models.category.CategoryReference category) {
         this.category = category;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Whether the update was only applied to the staged Product Projection.</p>
      * @param staged value to be set
      * @return Builder
      */
-
-    public ProductRemovedFromCategoryMessagePayloadBuilder staged(final Boolean staged) {
+    
+    public ProductRemovedFromCategoryMessagePayloadBuilder staged( final Boolean staged) {
         this.staged = staged;
         return this;
     }
+    
+    
 
     /**
      *  <p>Category the Product was removed from.</p>
      * @return category
      */
-
-    public com.commercetools.api.models.category.CategoryReference getCategory() {
+    
+    
+    public com.commercetools.api.models.category.CategoryReference getCategory(){
         return this.category;
     }
-
+    
     /**
      *  <p>Whether the update was only applied to the staged Product Projection.</p>
      * @return staged
      */
-
-    public Boolean getStaged() {
+    
+    
+    public Boolean getStaged(){
         return this.staged;
     }
 
@@ -102,7 +116,7 @@ public class ProductRemovedFromCategoryMessagePayloadBuilder
         Objects.requireNonNull(staged, ProductRemovedFromCategoryMessagePayload.class + ": staged is missing");
         return new ProductRemovedFromCategoryMessagePayloadImpl(category, staged);
     }
-
+    
     /**
      * builds ProductRemovedFromCategoryMessagePayload without checking for non-null required values
      * @return ProductRemovedFromCategoryMessagePayload
@@ -113,7 +127,7 @@ public class ProductRemovedFromCategoryMessagePayloadBuilder
 
     /**
      * factory method for an instance of ProductRemovedFromCategoryMessagePayloadBuilder
-     * @return builder
+     * @return builder 
      */
     public static ProductRemovedFromCategoryMessagePayloadBuilder of() {
         return new ProductRemovedFromCategoryMessagePayloadBuilder();
@@ -124,8 +138,7 @@ public class ProductRemovedFromCategoryMessagePayloadBuilder
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static ProductRemovedFromCategoryMessagePayloadBuilder of(
-            final ProductRemovedFromCategoryMessagePayload template) {
+    public static ProductRemovedFromCategoryMessagePayloadBuilder of(final ProductRemovedFromCategoryMessagePayload template) {
         ProductRemovedFromCategoryMessagePayloadBuilder builder = new ProductRemovedFromCategoryMessagePayloadBuilder();
         builder.category = template.getCategory();
         builder.staged = template.getStaged();

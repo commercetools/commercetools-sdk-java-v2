@@ -1,8 +1,12 @@
-
 package com.commercetools.history.models.change;
 
+import com.commercetools.history.models.change.Change;
+import com.commercetools.history.models.common.AuthenticationMode;
+import com.commercetools.history.models.change.SetAuthenticationModeChange;
+import javax.annotation.Nullable;
 import java.util.*;
-
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -18,76 +22,95 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .nextValue(AuthenticationMode.PASSWORD)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class SetAuthenticationModeChangeBuilder implements Builder<SetAuthenticationModeChange> {
 
+    
+    
     private String change;
-
+    
+    
+    
     private com.commercetools.history.models.common.AuthenticationMode previousValue;
-
+    
+    
+    
     private com.commercetools.history.models.common.AuthenticationMode nextValue;
 
+    
     /**
      *  <p>Update action for <code>setAuthenticationMode</code></p>
      * @param change value to be set
      * @return Builder
      */
-
-    public SetAuthenticationModeChangeBuilder change(final String change) {
+    
+    public SetAuthenticationModeChangeBuilder change( final String change) {
         this.change = change;
         return this;
     }
-
+    
+    
+    
+    
     /**
      * set the value to the previousValue
      * @param previousValue value to be set
      * @return Builder
      */
-
-    public SetAuthenticationModeChangeBuilder previousValue(
-            final com.commercetools.history.models.common.AuthenticationMode previousValue) {
+    
+    public SetAuthenticationModeChangeBuilder previousValue( final com.commercetools.history.models.common.AuthenticationMode previousValue) {
         this.previousValue = previousValue;
         return this;
     }
-
+    
+    
+    
+    
     /**
      * set the value to the nextValue
      * @param nextValue value to be set
      * @return Builder
      */
-
-    public SetAuthenticationModeChangeBuilder nextValue(
-            final com.commercetools.history.models.common.AuthenticationMode nextValue) {
+    
+    public SetAuthenticationModeChangeBuilder nextValue( final com.commercetools.history.models.common.AuthenticationMode nextValue) {
         this.nextValue = nextValue;
         return this;
     }
+    
+    
 
     /**
      *  <p>Update action for <code>setAuthenticationMode</code></p>
      * @return change
      */
-
-    public String getChange() {
+    
+    
+    public String getChange(){
         return this.change;
     }
-
+    
     /**
      * value of previousValue}
      * @return previousValue
      */
-
-    public com.commercetools.history.models.common.AuthenticationMode getPreviousValue() {
+    
+    
+    public com.commercetools.history.models.common.AuthenticationMode getPreviousValue(){
         return this.previousValue;
     }
-
+    
     /**
      * value of nextValue}
      * @return nextValue
      */
-
-    public com.commercetools.history.models.common.AuthenticationMode getNextValue() {
+    
+    
+    public com.commercetools.history.models.common.AuthenticationMode getNextValue(){
         return this.nextValue;
     }
 
@@ -101,7 +124,7 @@ public class SetAuthenticationModeChangeBuilder implements Builder<SetAuthentica
         Objects.requireNonNull(nextValue, SetAuthenticationModeChange.class + ": nextValue is missing");
         return new SetAuthenticationModeChangeImpl(change, previousValue, nextValue);
     }
-
+    
     /**
      * builds SetAuthenticationModeChange without checking for non-null required values
      * @return SetAuthenticationModeChange
@@ -112,7 +135,7 @@ public class SetAuthenticationModeChangeBuilder implements Builder<SetAuthentica
 
     /**
      * factory method for an instance of SetAuthenticationModeChangeBuilder
-     * @return builder
+     * @return builder 
      */
     public static SetAuthenticationModeChangeBuilder of() {
         return new SetAuthenticationModeChangeBuilder();

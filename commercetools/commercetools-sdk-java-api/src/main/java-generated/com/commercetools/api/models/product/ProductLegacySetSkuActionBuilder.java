@@ -1,10 +1,11 @@
-
 package com.commercetools.api.models.product;
 
-import java.util.*;
-
+import com.commercetools.api.models.product.ProductUpdateAction;
+import com.commercetools.api.models.product.ProductLegacySetSkuAction;
 import javax.annotation.Nullable;
-
+import java.util.*;
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -18,54 +19,67 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .variantId(1)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class ProductLegacySetSkuActionBuilder implements Builder<ProductLegacySetSkuAction> {
 
+    
     @Nullable
     private String sku;
-
+    
+    
+    
     private Integer variantId;
 
+    
     /**
      * set the value to the sku
      * @param sku value to be set
      * @return Builder
      */
-
+    
     public ProductLegacySetSkuActionBuilder sku(@Nullable final String sku) {
         this.sku = sku;
         return this;
     }
-
+    
+    
+    
+    
     /**
      * set the value to the variantId
      * @param variantId value to be set
      * @return Builder
      */
-
-    public ProductLegacySetSkuActionBuilder variantId(final Integer variantId) {
+    
+    public ProductLegacySetSkuActionBuilder variantId( final Integer variantId) {
         this.variantId = variantId;
         return this;
     }
+    
+    
 
     /**
      * value of sku}
      * @return sku
      */
-
+    
     @Nullable
-    public String getSku() {
+    public String getSku(){
         return this.sku;
     }
-
+    
     /**
      * value of variantId}
      * @return variantId
      */
-
-    public Integer getVariantId() {
+    
+    
+    public Integer getVariantId(){
         return this.variantId;
     }
 
@@ -77,7 +91,7 @@ public class ProductLegacySetSkuActionBuilder implements Builder<ProductLegacySe
         Objects.requireNonNull(variantId, ProductLegacySetSkuAction.class + ": variantId is missing");
         return new ProductLegacySetSkuActionImpl(sku, variantId);
     }
-
+    
     /**
      * builds ProductLegacySetSkuAction without checking for non-null required values
      * @return ProductLegacySetSkuAction
@@ -88,7 +102,7 @@ public class ProductLegacySetSkuActionBuilder implements Builder<ProductLegacySe
 
     /**
      * factory method for an instance of ProductLegacySetSkuActionBuilder
-     * @return builder
+     * @return builder 
      */
     public static ProductLegacySetSkuActionBuilder of() {
         return new ProductLegacySetSkuActionBuilder();

@@ -1,18 +1,22 @@
-
 package com.commercetools.history.models.common;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
+import com.commercetools.history.models.common.FieldType;
+import com.commercetools.history.models.common.LocalizedString;
+import com.commercetools.history.models.common.TextInputHint;
+import com.commercetools.history.models.common.FieldDefinitionImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * FieldDefinition
@@ -28,11 +32,15 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .inputHint(TextInputHint.SINGLE_LINE)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = FieldDefinitionImpl.class)
-public interface FieldDefinition {
+public interface FieldDefinition  {
+
 
     /**
      *
@@ -42,7 +50,6 @@ public interface FieldDefinition {
     @Valid
     @JsonProperty("type")
     public FieldType getType();
-
     /**
      *  <p>The name of the field. The name must be between two and 36 characters long and can contain the ASCII letters A to Z in lowercase or uppercase, digits, underscores (<code>_</code>) and the hyphen-minus (<code>-</code>). The name must be unique for a given resource type ID. In case there is a field with the same name in another type it has to have the same FieldType also.</p>
      * @return name
@@ -50,7 +57,6 @@ public interface FieldDefinition {
     @NotNull
     @JsonProperty("name")
     public String getName();
-
     /**
      *
      * @return label
@@ -59,7 +65,6 @@ public interface FieldDefinition {
     @Valid
     @JsonProperty("label")
     public LocalizedString getLabel();
-
     /**
      *
      * @return inputHint
@@ -72,37 +77,42 @@ public interface FieldDefinition {
      * set type
      * @param type value to be set
      */
-
+    
     public void setType(final FieldType type);
-
+    
+    
     /**
      *  <p>The name of the field. The name must be between two and 36 characters long and can contain the ASCII letters A to Z in lowercase or uppercase, digits, underscores (<code>_</code>) and the hyphen-minus (<code>-</code>). The name must be unique for a given resource type ID. In case there is a field with the same name in another type it has to have the same FieldType also.</p>
      * @param name value to be set
      */
-
+    
     public void setName(final String name);
-
+    
+    
     /**
      * set label
      * @param label value to be set
      */
-
+    
     public void setLabel(final LocalizedString label);
-
+    
+    
     /**
      * set inputHint
      * @param inputHint value to be set
      */
-
+    
     public void setInputHint(final TextInputHint inputHint);
+    
 
     /**
      * factory method
      * @return instance of FieldDefinition
      */
-    public static FieldDefinition of() {
+    public static FieldDefinition of(){
         return new FieldDefinitionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy FieldDefinition
@@ -143,7 +153,7 @@ public interface FieldDefinition {
     public static FieldDefinitionBuilder builder() {
         return FieldDefinitionBuilder.of();
     }
-
+    
     /**
      * create builder for FieldDefinition instance
      * @param template instance with prefilled values for the builder
@@ -152,6 +162,7 @@ public interface FieldDefinition {
     public static FieldDefinitionBuilder builder(final FieldDefinition template) {
         return FieldDefinitionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -162,7 +173,7 @@ public interface FieldDefinition {
     default <T> T withFieldDefinition(Function<FieldDefinition, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

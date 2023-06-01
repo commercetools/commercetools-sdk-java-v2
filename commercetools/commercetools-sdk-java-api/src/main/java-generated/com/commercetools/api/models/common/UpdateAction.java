@@ -1,17 +1,20 @@
-
 package com.commercetools.api.models.common;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
 
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
+import com.commercetools.api.models.common.UpdateActionImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * UpdateAction
@@ -24,11 +27,15 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .action("{action}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = UpdateActionImpl.class)
 public interface UpdateAction extends com.commercetools.api.models.ResourceUpdateAction<UpdateAction> {
+
 
     /**
      *
@@ -42,16 +49,18 @@ public interface UpdateAction extends com.commercetools.api.models.ResourceUpdat
      * set action
      * @param action value to be set
      */
-
+    
     public void setAction(final String action);
+    
 
     /**
      * factory method
      * @return instance of UpdateAction
      */
-    public static UpdateAction of() {
+    public static UpdateAction of(){
         return new UpdateActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy UpdateAction
@@ -86,7 +95,7 @@ public interface UpdateAction extends com.commercetools.api.models.ResourceUpdat
     public static UpdateActionBuilder builder() {
         return UpdateActionBuilder.of();
     }
-
+    
     /**
      * create builder for UpdateAction instance
      * @param template instance with prefilled values for the builder
@@ -95,6 +104,7 @@ public interface UpdateAction extends com.commercetools.api.models.ResourceUpdat
     public static UpdateActionBuilder builder(final UpdateAction template) {
         return UpdateActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -105,7 +115,7 @@ public interface UpdateAction extends com.commercetools.api.models.ResourceUpdat
     default <T> T withUpdateAction(Function<UpdateAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

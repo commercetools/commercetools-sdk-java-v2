@@ -1,17 +1,20 @@
-
 package com.commercetools.api.models.product;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
+import com.commercetools.api.models.product.SuggestTokenizer;
+import com.commercetools.api.models.product.CustomTokenizerImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Define arbitrary tokens that are used to match the input.</p>
@@ -24,9 +27,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .plusInputs(inputsBuilder -> inputsBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = CustomTokenizerImpl.class)
 public interface CustomTokenizer extends SuggestTokenizer {
 
@@ -47,24 +53,24 @@ public interface CustomTokenizer extends SuggestTokenizer {
      *  <p>Contains custom tokens.</p>
      * @param inputs values to be set
      */
-
+    
     @JsonIgnore
-    public void setInputs(final String... inputs);
-
+    public void setInputs(final String ...inputs);
     /**
      *  <p>Contains custom tokens.</p>
      * @param inputs values to be set
      */
-
+    
     public void setInputs(final List<String> inputs);
 
     /**
      * factory method
      * @return instance of CustomTokenizer
      */
-    public static CustomTokenizer of() {
+    public static CustomTokenizer of(){
         return new CustomTokenizerImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy CustomTokenizer
@@ -88,7 +94,9 @@ public interface CustomTokenizer extends SuggestTokenizer {
             return null;
         }
         CustomTokenizerImpl instance = new CustomTokenizerImpl();
-        instance.setInputs(Optional.ofNullable(template.getInputs()).map(ArrayList::new).orElse(null));
+        instance.setInputs(Optional.ofNullable(template.getInputs())
+                .map(ArrayList::new)
+                .orElse(null));
         return instance;
     }
 
@@ -99,7 +107,7 @@ public interface CustomTokenizer extends SuggestTokenizer {
     public static CustomTokenizerBuilder builder() {
         return CustomTokenizerBuilder.of();
     }
-
+    
     /**
      * create builder for CustomTokenizer instance
      * @param template instance with prefilled values for the builder
@@ -108,6 +116,7 @@ public interface CustomTokenizer extends SuggestTokenizer {
     public static CustomTokenizerBuilder builder(final CustomTokenizer template) {
         return CustomTokenizerBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -118,7 +127,7 @@ public interface CustomTokenizer extends SuggestTokenizer {
     default <T> T withCustomTokenizer(Function<CustomTokenizer, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

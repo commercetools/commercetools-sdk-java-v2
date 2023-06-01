@@ -1,50 +1,61 @@
-
 package com.commercetools.api.models.payment;
 
-import java.time.*;
-import java.util.*;
-
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
-
-import io.vrap.rmf.base.client.ModelBase;
+import com.commercetools.api.models.common.CentPrecisionMoney;
+import com.commercetools.api.models.payment.TransactionState;
+import com.commercetools.api.models.payment.TransactionType;
+import com.commercetools.api.models.type.CustomFields;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.ModelBase;
+import javax.validation.Valid;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.annotation.*;
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
  *  <p>Represents a financial transaction typically created as a result of a notification from the payment service.</p>
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class TransactionImpl implements Transaction, ModelBase {
 
+    
     private String id;
-
+    
+    
     private java.time.ZonedDateTime timestamp;
-
+    
+    
     private com.commercetools.api.models.payment.TransactionType type;
-
+    
+    
     private com.commercetools.api.models.common.CentPrecisionMoney amount;
-
+    
+    
     private String interactionId;
-
+    
+    
     private com.commercetools.api.models.payment.TransactionState state;
-
+    
+    
     private com.commercetools.api.models.type.CustomFields custom;
 
     /**
      * create instance with all properties
      */
     @JsonCreator
-    TransactionImpl(@JsonProperty("id") final String id,
-            @JsonProperty("timestamp") final java.time.ZonedDateTime timestamp,
-            @JsonProperty("type") final com.commercetools.api.models.payment.TransactionType type,
-            @JsonProperty("amount") final com.commercetools.api.models.common.CentPrecisionMoney amount,
-            @JsonProperty("interactionId") final String interactionId,
-            @JsonProperty("state") final com.commercetools.api.models.payment.TransactionState state,
-            @JsonProperty("custom") final com.commercetools.api.models.type.CustomFields custom) {
+    TransactionImpl(@JsonProperty("id") final String id, @JsonProperty("timestamp") final java.time.ZonedDateTime timestamp, @JsonProperty("type") final com.commercetools.api.models.payment.TransactionType type, @JsonProperty("amount") final com.commercetools.api.models.common.CentPrecisionMoney amount, @JsonProperty("interactionId") final String interactionId, @JsonProperty("state") final com.commercetools.api.models.payment.TransactionState state, @JsonProperty("custom") final com.commercetools.api.models.type.CustomFields custom) {
         this.id = id;
         this.timestamp = timestamp;
         this.type = type;
@@ -53,7 +64,6 @@ public class TransactionImpl implements Transaction, ModelBase {
         this.state = state;
         this.custom = custom;
     }
-
     /**
      * create empty instance
      */
@@ -63,98 +73,104 @@ public class TransactionImpl implements Transaction, ModelBase {
     /**
      *  <p>Unique identifier of the Transaction.</p>
      */
-
-    public String getId() {
+    
+    public String getId(){
         return this.id;
     }
-
+    
     /**
      *  <p>Date and time (UTC) the Transaction took place.</p>
      */
-
-    public java.time.ZonedDateTime getTimestamp() {
+    
+    public java.time.ZonedDateTime getTimestamp(){
         return this.timestamp;
     }
-
+    
     /**
      *  <p>Type of the Transaction. For example, <code>Authorization</code>.</p>
      */
-
-    public com.commercetools.api.models.payment.TransactionType getType() {
+    
+    public com.commercetools.api.models.payment.TransactionType getType(){
         return this.type;
     }
-
+    
     /**
      *  <p>Money value of the Transaction.</p>
      */
-
-    public com.commercetools.api.models.common.CentPrecisionMoney getAmount() {
+    
+    public com.commercetools.api.models.common.CentPrecisionMoney getAmount(){
         return this.amount;
     }
-
+    
     /**
      *  <p>Identifier used by the interface that manages the Transaction (usually the PSP). If a matching interaction was logged in the <code>interfaceInteractions</code> array, the corresponding interaction can be found with this ID.</p>
      */
-
-    public String getInteractionId() {
+    
+    public String getInteractionId(){
         return this.interactionId;
     }
-
+    
     /**
      *  <p>State of the Transaction.</p>
      */
-
-    public com.commercetools.api.models.payment.TransactionState getState() {
+    
+    public com.commercetools.api.models.payment.TransactionState getState(){
         return this.state;
     }
-
+    
     /**
      *  <p>Custom Fields defined for the Transaction.</p>
      */
-
-    public com.commercetools.api.models.type.CustomFields getCustom() {
+    
+    public com.commercetools.api.models.type.CustomFields getCustom(){
         return this.custom;
     }
 
-    public void setId(final String id) {
+    
+    public void setId(final String id){
         this.id = id;
     }
-
-    public void setTimestamp(final java.time.ZonedDateTime timestamp) {
+    
+    
+    public void setTimestamp(final java.time.ZonedDateTime timestamp){
         this.timestamp = timestamp;
     }
-
-    public void setType(final com.commercetools.api.models.payment.TransactionType type) {
+    
+    
+    public void setType(final com.commercetools.api.models.payment.TransactionType type){
         this.type = type;
     }
-
-    public void setAmount(final com.commercetools.api.models.common.CentPrecisionMoney amount) {
+    
+    
+    public void setAmount(final com.commercetools.api.models.common.CentPrecisionMoney amount){
         this.amount = amount;
     }
-
-    public void setInteractionId(final String interactionId) {
+    
+    
+    public void setInteractionId(final String interactionId){
         this.interactionId = interactionId;
     }
-
-    public void setState(final com.commercetools.api.models.payment.TransactionState state) {
+    
+    
+    public void setState(final com.commercetools.api.models.payment.TransactionState state){
         this.state = state;
     }
-
-    public void setCustom(final com.commercetools.api.models.type.CustomFields custom) {
+    
+    
+    public void setCustom(final com.commercetools.api.models.type.CustomFields custom){
         this.custom = custom;
     }
 
     @Override
     public boolean equals(Object o) {
-        if (this == o)
-            return true;
-
-        if (o == null || getClass() != o.getClass())
-            return false;
-
+        if (this == o) return true;
+    
+        if (o == null || getClass() != o.getClass()) return false;
+    
         TransactionImpl that = (TransactionImpl) o;
-
-        return new EqualsBuilder().append(id, that.id)
+    
+        return new EqualsBuilder()
+                .append(id, that.id)
                 .append(timestamp, that.timestamp)
                 .append(type, that.type)
                 .append(amount, that.amount)
@@ -163,17 +179,18 @@ public class TransactionImpl implements Transaction, ModelBase {
                 .append(custom, that.custom)
                 .isEquals();
     }
-
+    
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(id)
-                .append(timestamp)
-                .append(type)
-                .append(amount)
-                .append(interactionId)
-                .append(state)
-                .append(custom)
-                .toHashCode();
+        return new HashCodeBuilder(17, 37)
+            .append(id)
+            .append(timestamp)
+            .append(type)
+            .append(amount)
+            .append(interactionId)
+            .append(state)
+            .append(custom)
+            .toHashCode();
     }
 
 }

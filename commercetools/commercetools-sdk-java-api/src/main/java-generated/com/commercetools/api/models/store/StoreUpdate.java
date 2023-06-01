@@ -1,19 +1,20 @@
-
 package com.commercetools.api.models.store;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-import java.util.stream.Collectors;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
+import com.commercetools.api.models.store.StoreUpdateAction;
+import com.commercetools.api.models.store.StoreUpdateImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * StoreUpdate
@@ -27,12 +28,15 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .plusActions(actionsBuilder -> actionsBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = StoreUpdateImpl.class)
-public interface StoreUpdate
-        extends com.commercetools.api.models.ResourceUpdate<StoreUpdate, StoreUpdateAction, StoreUpdateBuilder> {
+public interface StoreUpdate extends com.commercetools.api.models.ResourceUpdate<StoreUpdate, StoreUpdateAction, StoreUpdateBuilder> {
+
 
     /**
      *  <p>Expected version of the Store on which the changes should be applied. If the expected version does not match the actual version, a ConcurrentModification error is returned.</p>
@@ -41,7 +45,6 @@ public interface StoreUpdate
     @NotNull
     @JsonProperty("version")
     public Long getVersion();
-
     /**
      *  <p>Update actions to be performed on the Store.</p>
      * @return actions
@@ -55,31 +58,32 @@ public interface StoreUpdate
      *  <p>Expected version of the Store on which the changes should be applied. If the expected version does not match the actual version, a ConcurrentModification error is returned.</p>
      * @param version value to be set
      */
-
+    
     public void setVersion(final Long version);
-
+    
+    
     /**
      *  <p>Update actions to be performed on the Store.</p>
      * @param actions values to be set
      */
-
+    
     @JsonIgnore
-    public void setActions(final StoreUpdateAction... actions);
-
+    public void setActions(final StoreUpdateAction ...actions);
     /**
      *  <p>Update actions to be performed on the Store.</p>
      * @param actions values to be set
      */
-
+    
     public void setActions(final List<StoreUpdateAction> actions);
 
     /**
      * factory method
      * @return instance of StoreUpdate
      */
-    public static StoreUpdate of() {
+    public static StoreUpdate of(){
         return new StoreUpdateImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy StoreUpdate
@@ -106,9 +110,7 @@ public interface StoreUpdate
         StoreUpdateImpl instance = new StoreUpdateImpl();
         instance.setVersion(template.getVersion());
         instance.setActions(Optional.ofNullable(template.getActions())
-                .map(t -> t.stream()
-                        .map(com.commercetools.api.models.store.StoreUpdateAction::deepCopy)
-                        .collect(Collectors.toList()))
+                .map(t -> t.stream().map(com.commercetools.api.models.store.StoreUpdateAction::deepCopy).collect(Collectors.toList()))
                 .orElse(null));
         return instance;
     }
@@ -120,7 +122,7 @@ public interface StoreUpdate
     public static StoreUpdateBuilder builder() {
         return StoreUpdateBuilder.of();
     }
-
+    
     /**
      * create builder for StoreUpdate instance
      * @param template instance with prefilled values for the builder
@@ -129,6 +131,7 @@ public interface StoreUpdate
     public static StoreUpdateBuilder builder(final StoreUpdate template) {
         return StoreUpdateBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -139,7 +142,7 @@ public interface StoreUpdate
     default <T> T withStoreUpdate(Function<StoreUpdate, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

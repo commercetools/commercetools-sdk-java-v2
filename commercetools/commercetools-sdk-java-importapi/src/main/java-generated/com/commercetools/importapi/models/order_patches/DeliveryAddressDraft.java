@@ -1,19 +1,20 @@
-
 package com.commercetools.importapi.models.order_patches;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
 import com.commercetools.importapi.models.common.Address;
+import com.commercetools.importapi.models.order_patches.DeliveryAddressDraftImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * DeliveryAddressDraft
@@ -26,11 +27,15 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .deliveryId("{deliveryId}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = DeliveryAddressDraftImpl.class)
 public interface DeliveryAddressDraft extends io.vrap.rmf.base.client.Draft<DeliveryAddressDraft> {
+
 
     /**
      *
@@ -39,7 +44,6 @@ public interface DeliveryAddressDraft extends io.vrap.rmf.base.client.Draft<Deli
     @NotNull
     @JsonProperty("deliveryId")
     public String getDeliveryId();
-
     /**
      *
      * @return address
@@ -52,23 +56,26 @@ public interface DeliveryAddressDraft extends io.vrap.rmf.base.client.Draft<Deli
      * set deliveryId
      * @param deliveryId value to be set
      */
-
+    
     public void setDeliveryId(final String deliveryId);
-
+    
+    
     /**
      * set address
      * @param address value to be set
      */
-
+    
     public void setAddress(final Address address);
+    
 
     /**
      * factory method
      * @return instance of DeliveryAddressDraft
      */
-    public static DeliveryAddressDraft of() {
+    public static DeliveryAddressDraft of(){
         return new DeliveryAddressDraftImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy DeliveryAddressDraft
@@ -105,7 +112,7 @@ public interface DeliveryAddressDraft extends io.vrap.rmf.base.client.Draft<Deli
     public static DeliveryAddressDraftBuilder builder() {
         return DeliveryAddressDraftBuilder.of();
     }
-
+    
     /**
      * create builder for DeliveryAddressDraft instance
      * @param template instance with prefilled values for the builder
@@ -114,6 +121,7 @@ public interface DeliveryAddressDraft extends io.vrap.rmf.base.client.Draft<Deli
     public static DeliveryAddressDraftBuilder builder(final DeliveryAddressDraft template) {
         return DeliveryAddressDraftBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -124,7 +132,7 @@ public interface DeliveryAddressDraft extends io.vrap.rmf.base.client.Draft<Deli
     default <T> T withDeliveryAddressDraft(Function<DeliveryAddressDraft, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

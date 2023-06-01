@@ -1,19 +1,21 @@
-
 package com.commercetools.api.models.channel;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
+import com.commercetools.api.models.channel.ChannelUpdateAction;
 import com.commercetools.api.models.common.LocalizedString;
+import com.commercetools.api.models.channel.ChannelChangeDescriptionActionImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * ChannelChangeDescriptionAction
@@ -26,9 +28,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .description(descriptionBuilder -> descriptionBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = ChannelChangeDescriptionActionImpl.class)
 public interface ChannelChangeDescriptionAction extends ChannelUpdateAction {
 
@@ -50,16 +55,18 @@ public interface ChannelChangeDescriptionAction extends ChannelUpdateAction {
      *  <p>New value to set. Must not be empty.</p>
      * @param description value to be set
      */
-
+    
     public void setDescription(final LocalizedString description);
+    
 
     /**
      * factory method
      * @return instance of ChannelChangeDescriptionAction
      */
-    public static ChannelChangeDescriptionAction of() {
+    public static ChannelChangeDescriptionAction of(){
         return new ChannelChangeDescriptionActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy ChannelChangeDescriptionAction
@@ -83,8 +90,7 @@ public interface ChannelChangeDescriptionAction extends ChannelUpdateAction {
             return null;
         }
         ChannelChangeDescriptionActionImpl instance = new ChannelChangeDescriptionActionImpl();
-        instance.setDescription(
-            com.commercetools.api.models.common.LocalizedString.deepCopy(template.getDescription()));
+        instance.setDescription(com.commercetools.api.models.common.LocalizedString.deepCopy(template.getDescription()));
         return instance;
     }
 
@@ -95,7 +101,7 @@ public interface ChannelChangeDescriptionAction extends ChannelUpdateAction {
     public static ChannelChangeDescriptionActionBuilder builder() {
         return ChannelChangeDescriptionActionBuilder.of();
     }
-
+    
     /**
      * create builder for ChannelChangeDescriptionAction instance
      * @param template instance with prefilled values for the builder
@@ -104,6 +110,7 @@ public interface ChannelChangeDescriptionAction extends ChannelUpdateAction {
     public static ChannelChangeDescriptionActionBuilder builder(final ChannelChangeDescriptionAction template) {
         return ChannelChangeDescriptionActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -114,7 +121,7 @@ public interface ChannelChangeDescriptionAction extends ChannelUpdateAction {
     default <T> T withChannelChangeDescriptionAction(Function<ChannelChangeDescriptionAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

@@ -1,11 +1,12 @@
-
 package com.commercetools.api.models.me;
 
+import com.commercetools.api.models.channel.ChannelResourceIdentifier;
+import com.commercetools.api.models.me.MyCartUpdateAction;
+import com.commercetools.api.models.me.MyCartSetLineItemDistributionChannelAction;
+import javax.annotation.Nullable;
 import java.util.*;
 import java.util.function.Function;
-
-import javax.annotation.Nullable;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -19,28 +20,37 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .lineItemId("{lineItemId}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
-public class MyCartSetLineItemDistributionChannelActionBuilder
-        implements Builder<MyCartSetLineItemDistributionChannelAction> {
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
+public class MyCartSetLineItemDistributionChannelActionBuilder implements Builder<MyCartSetLineItemDistributionChannelAction> {
 
+    
+    
     private String lineItemId;
-
+    
+    
     @Nullable
     private com.commercetools.api.models.channel.ChannelResourceIdentifier distributionChannel;
 
+    
     /**
      *  <p><code>id</code> of the LineItem to update.</p>
      * @param lineItemId value to be set
      * @return Builder
      */
-
-    public MyCartSetLineItemDistributionChannelActionBuilder lineItemId(final String lineItemId) {
+    
+    public MyCartSetLineItemDistributionChannelActionBuilder lineItemId( final String lineItemId) {
         this.lineItemId = lineItemId;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <ul>
      *   <li>If present, a Reference to the Channel is set for the LineItem specified by <code>lineItemId</code>.</li>
@@ -49,15 +59,12 @@ public class MyCartSetLineItemDistributionChannelActionBuilder
      * @param builder function to build the distributionChannel value
      * @return Builder
      */
-
-    public MyCartSetLineItemDistributionChannelActionBuilder distributionChannel(
-            Function<com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder, com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder> builder) {
-        this.distributionChannel = builder
-                .apply(com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder.of())
-                .build();
+    
+    public MyCartSetLineItemDistributionChannelActionBuilder distributionChannel(Function<com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder, com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder> builder) {
+        this.distributionChannel = builder.apply(com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder.of()).build();
         return this;
     }
-
+    
     /**
      *  <ul>
      *   <li>If present, a Reference to the Channel is set for the LineItem specified by <code>lineItemId</code>.</li>
@@ -66,14 +73,12 @@ public class MyCartSetLineItemDistributionChannelActionBuilder
      * @param builder function to build the distributionChannel value
      * @return Builder
      */
-
-    public MyCartSetLineItemDistributionChannelActionBuilder withDistributionChannel(
-            Function<com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder, com.commercetools.api.models.channel.ChannelResourceIdentifier> builder) {
-        this.distributionChannel = builder
-                .apply(com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder.of());
+    
+    public MyCartSetLineItemDistributionChannelActionBuilder withDistributionChannel(Function<com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder, com.commercetools.api.models.channel.ChannelResourceIdentifier> builder) {
+        this.distributionChannel = builder.apply(com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder.of());
         return this;
     }
-
+                    
     /**
      *  <ul>
      *   <li>If present, a Reference to the Channel is set for the LineItem specified by <code>lineItemId</code>.</li>
@@ -82,22 +87,24 @@ public class MyCartSetLineItemDistributionChannelActionBuilder
      * @param distributionChannel value to be set
      * @return Builder
      */
-
-    public MyCartSetLineItemDistributionChannelActionBuilder distributionChannel(
-            @Nullable final com.commercetools.api.models.channel.ChannelResourceIdentifier distributionChannel) {
+    
+    public MyCartSetLineItemDistributionChannelActionBuilder distributionChannel(@Nullable final com.commercetools.api.models.channel.ChannelResourceIdentifier distributionChannel) {
         this.distributionChannel = distributionChannel;
         return this;
     }
+    
+    
 
     /**
      *  <p><code>id</code> of the LineItem to update.</p>
      * @return lineItemId
      */
-
-    public String getLineItemId() {
+    
+    
+    public String getLineItemId(){
         return this.lineItemId;
     }
-
+    
     /**
      *  <ul>
      *   <li>If present, a Reference to the Channel is set for the LineItem specified by <code>lineItemId</code>.</li>
@@ -105,9 +112,9 @@ public class MyCartSetLineItemDistributionChannelActionBuilder
      *  </ul>
      * @return distributionChannel
      */
-
+    
     @Nullable
-    public com.commercetools.api.models.channel.ChannelResourceIdentifier getDistributionChannel() {
+    public com.commercetools.api.models.channel.ChannelResourceIdentifier getDistributionChannel(){
         return this.distributionChannel;
     }
 
@@ -116,11 +123,10 @@ public class MyCartSetLineItemDistributionChannelActionBuilder
      * @return MyCartSetLineItemDistributionChannelAction
      */
     public MyCartSetLineItemDistributionChannelAction build() {
-        Objects.requireNonNull(lineItemId,
-            MyCartSetLineItemDistributionChannelAction.class + ": lineItemId is missing");
+        Objects.requireNonNull(lineItemId, MyCartSetLineItemDistributionChannelAction.class + ": lineItemId is missing");
         return new MyCartSetLineItemDistributionChannelActionImpl(lineItemId, distributionChannel);
     }
-
+    
     /**
      * builds MyCartSetLineItemDistributionChannelAction without checking for non-null required values
      * @return MyCartSetLineItemDistributionChannelAction
@@ -131,7 +137,7 @@ public class MyCartSetLineItemDistributionChannelActionBuilder
 
     /**
      * factory method for an instance of MyCartSetLineItemDistributionChannelActionBuilder
-     * @return builder
+     * @return builder 
      */
     public static MyCartSetLineItemDistributionChannelActionBuilder of() {
         return new MyCartSetLineItemDistributionChannelActionBuilder();
@@ -142,8 +148,7 @@ public class MyCartSetLineItemDistributionChannelActionBuilder
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static MyCartSetLineItemDistributionChannelActionBuilder of(
-            final MyCartSetLineItemDistributionChannelAction template) {
+    public static MyCartSetLineItemDistributionChannelActionBuilder of(final MyCartSetLineItemDistributionChannelAction template) {
         MyCartSetLineItemDistributionChannelActionBuilder builder = new MyCartSetLineItemDistributionChannelActionBuilder();
         builder.lineItemId = template.getLineItemId();
         builder.distributionChannel = template.getDistributionChannel();

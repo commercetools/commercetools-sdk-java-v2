@@ -1,17 +1,23 @@
-
 package com.commercetools.ml.models.common;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
+import com.commercetools.ml.models.common.CategoryReference;
+import com.commercetools.ml.models.common.ProductReference;
+import com.commercetools.ml.models.common.ProductTypeReference;
+import com.commercetools.ml.models.common.ReferenceTypeId;
 
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * Reference
@@ -24,16 +30,27 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             id("{id}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
 @JsonSubTypes({
-        @JsonSubTypes.Type(value = com.commercetools.ml.models.common.CategoryReferenceImpl.class, name = CategoryReference.CATEGORY),
-        @JsonSubTypes.Type(value = com.commercetools.ml.models.common.ProductReferenceImpl.class, name = ProductReference.PRODUCT),
-        @JsonSubTypes.Type(value = com.commercetools.ml.models.common.ProductTypeReferenceImpl.class, name = ProductTypeReference.PRODUCT_TYPE) })
-@JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.EXISTING_PROPERTY, property = "typeId", defaultImpl = ReferenceImpl.class, visible = true)
+   @JsonSubTypes.Type(value = com.commercetools.ml.models.common.CategoryReferenceImpl.class, name = CategoryReference.CATEGORY),
+   @JsonSubTypes.Type(value = com.commercetools.ml.models.common.ProductReferenceImpl.class, name = ProductReference.PRODUCT),
+   @JsonSubTypes.Type(value = com.commercetools.ml.models.common.ProductTypeReferenceImpl.class, name = ProductTypeReference.PRODUCT_TYPE)
+})
+@JsonTypeInfo(
+    use = JsonTypeInfo.Id.NAME,
+    include = JsonTypeInfo.As.EXISTING_PROPERTY,
+    property = "typeId",
+    defaultImpl = ReferenceImpl.class,
+    visible = true
+)
 @JsonDeserialize(as = ReferenceImpl.class)
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
-public interface Reference {
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
+public interface Reference  {
+
 
     /**
      *
@@ -42,7 +59,6 @@ public interface Reference {
     @NotNull
     @JsonProperty("typeId")
     public ReferenceTypeId getTypeId();
-
     /**
      *
      * @return id
@@ -55,8 +71,11 @@ public interface Reference {
      * set id
      * @param id value to be set
      */
-
+    
     public void setId(final String id);
+    
+
+
 
     /**
      * factory method to create a deep copy of Reference
@@ -69,44 +88,40 @@ public interface Reference {
             return null;
         }
         if (template instanceof com.commercetools.ml.models.common.CategoryReference) {
-            return com.commercetools.ml.models.common.CategoryReference
-                    .deepCopy((com.commercetools.ml.models.common.CategoryReference) template);
+            return com.commercetools.ml.models.common.CategoryReference.deepCopy((com.commercetools.ml.models.common.CategoryReference)template);
         }
         if (template instanceof com.commercetools.ml.models.common.ProductReference) {
-            return com.commercetools.ml.models.common.ProductReference
-                    .deepCopy((com.commercetools.ml.models.common.ProductReference) template);
+            return com.commercetools.ml.models.common.ProductReference.deepCopy((com.commercetools.ml.models.common.ProductReference)template);
         }
         if (template instanceof com.commercetools.ml.models.common.ProductTypeReference) {
-            return com.commercetools.ml.models.common.ProductTypeReference
-                    .deepCopy((com.commercetools.ml.models.common.ProductTypeReference) template);
+            return com.commercetools.ml.models.common.ProductTypeReference.deepCopy((com.commercetools.ml.models.common.ProductTypeReference)template);
         }
         ReferenceImpl instance = new ReferenceImpl();
         instance.setId(template.getId());
         return instance;
     }
 
+
     /**
      * builder for category subtype
      * @return builder
      */
     public static com.commercetools.ml.models.common.CategoryReferenceBuilder categoryBuilder() {
-        return com.commercetools.ml.models.common.CategoryReferenceBuilder.of();
+       return com.commercetools.ml.models.common.CategoryReferenceBuilder.of();
     }
-
     /**
      * builder for product subtype
      * @return builder
      */
     public static com.commercetools.ml.models.common.ProductReferenceBuilder productBuilder() {
-        return com.commercetools.ml.models.common.ProductReferenceBuilder.of();
+       return com.commercetools.ml.models.common.ProductReferenceBuilder.of();
     }
-
     /**
      * builder for productType subtype
      * @return builder
      */
     public static com.commercetools.ml.models.common.ProductTypeReferenceBuilder productTypeBuilder() {
-        return com.commercetools.ml.models.common.ProductTypeReferenceBuilder.of();
+       return com.commercetools.ml.models.common.ProductTypeReferenceBuilder.of();
     }
 
     /**
@@ -118,7 +133,7 @@ public interface Reference {
     default <T> T withReference(Function<Reference, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

@@ -1,20 +1,22 @@
-
 package com.commercetools.history.models.change;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
+import com.commercetools.history.models.change.Change;
 import com.commercetools.history.models.change_value.TextLineItemValue;
 import com.commercetools.history.models.common.CustomFields;
+import com.commercetools.history.models.change.SetTextLineItemCustomTypeChangeImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * SetTextLineItemCustomTypeChange
@@ -30,9 +32,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .previousValue(previousValueBuilder -> previousValueBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = SetTextLineItemCustomTypeChangeImpl.class)
 public interface SetTextLineItemCustomTypeChange extends Change {
 
@@ -48,7 +53,6 @@ public interface SetTextLineItemCustomTypeChange extends Change {
     @NotNull
     @JsonProperty("type")
     public String getType();
-
     /**
      *  <p>Update action for <code>setTextLineItemCustomType</code></p>
      * @return change
@@ -56,7 +60,6 @@ public interface SetTextLineItemCustomTypeChange extends Change {
     @NotNull
     @JsonProperty("change")
     public String getChange();
-
     /**
      *
      * @return textLineItem
@@ -65,7 +68,6 @@ public interface SetTextLineItemCustomTypeChange extends Change {
     @Valid
     @JsonProperty("textLineItem")
     public TextLineItemValue getTextLineItem();
-
     /**
      *
      * @return nextValue
@@ -74,7 +76,6 @@ public interface SetTextLineItemCustomTypeChange extends Change {
     @Valid
     @JsonProperty("nextValue")
     public CustomFields getNextValue();
-
     /**
      *
      * @return previousValue
@@ -88,37 +89,42 @@ public interface SetTextLineItemCustomTypeChange extends Change {
      *  <p>Update action for <code>setTextLineItemCustomType</code></p>
      * @param change value to be set
      */
-
+    
     public void setChange(final String change);
-
+    
+    
     /**
      * set textLineItem
      * @param textLineItem value to be set
      */
-
+    
     public void setTextLineItem(final TextLineItemValue textLineItem);
-
+    
+    
     /**
      * set nextValue
      * @param nextValue value to be set
      */
-
+    
     public void setNextValue(final CustomFields nextValue);
-
+    
+    
     /**
      * set previousValue
      * @param previousValue value to be set
      */
-
+    
     public void setPreviousValue(final CustomFields previousValue);
+    
 
     /**
      * factory method
      * @return instance of SetTextLineItemCustomTypeChange
      */
-    public static SetTextLineItemCustomTypeChange of() {
+    public static SetTextLineItemCustomTypeChange of(){
         return new SetTextLineItemCustomTypeChangeImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy SetTextLineItemCustomTypeChange
@@ -146,11 +152,9 @@ public interface SetTextLineItemCustomTypeChange extends Change {
         }
         SetTextLineItemCustomTypeChangeImpl instance = new SetTextLineItemCustomTypeChangeImpl();
         instance.setChange(template.getChange());
-        instance.setTextLineItem(
-            com.commercetools.history.models.change_value.TextLineItemValue.deepCopy(template.getTextLineItem()));
+        instance.setTextLineItem(com.commercetools.history.models.change_value.TextLineItemValue.deepCopy(template.getTextLineItem()));
         instance.setNextValue(com.commercetools.history.models.common.CustomFields.deepCopy(template.getNextValue()));
-        instance.setPreviousValue(
-            com.commercetools.history.models.common.CustomFields.deepCopy(template.getPreviousValue()));
+        instance.setPreviousValue(com.commercetools.history.models.common.CustomFields.deepCopy(template.getPreviousValue()));
         return instance;
     }
 
@@ -161,7 +165,7 @@ public interface SetTextLineItemCustomTypeChange extends Change {
     public static SetTextLineItemCustomTypeChangeBuilder builder() {
         return SetTextLineItemCustomTypeChangeBuilder.of();
     }
-
+    
     /**
      * create builder for SetTextLineItemCustomTypeChange instance
      * @param template instance with prefilled values for the builder
@@ -170,6 +174,7 @@ public interface SetTextLineItemCustomTypeChange extends Change {
     public static SetTextLineItemCustomTypeChangeBuilder builder(final SetTextLineItemCustomTypeChange template) {
         return SetTextLineItemCustomTypeChangeBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -180,7 +185,7 @@ public interface SetTextLineItemCustomTypeChange extends Change {
     default <T> T withSetTextLineItemCustomTypeChange(Function<SetTextLineItemCustomTypeChange, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

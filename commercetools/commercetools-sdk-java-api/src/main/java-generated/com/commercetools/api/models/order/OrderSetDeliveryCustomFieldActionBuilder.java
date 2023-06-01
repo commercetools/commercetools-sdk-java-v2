@@ -1,10 +1,12 @@
-
 package com.commercetools.api.models.order;
 
-import java.util.*;
-
+import com.commercetools.api.models.order.OrderUpdateAction;
+import java.lang.Object;
+import com.commercetools.api.models.order.OrderSetDeliveryCustomFieldAction;
 import javax.annotation.Nullable;
-
+import java.util.*;
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -18,102 +20,123 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .name("{name}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class OrderSetDeliveryCustomFieldActionBuilder implements Builder<OrderSetDeliveryCustomFieldAction> {
 
+    
     @Nullable
     private String deliveryId;
-
+    
+    
     @Nullable
     private String deliveryKey;
-
+    
+    
+    
     private String name;
-
+    
+    
     @Nullable
     private java.lang.Object value;
 
+    
     /**
      *  <p>Either <code>deliveryId</code> or <code>deliveryKey</code> is required for this update action.</p>
      * @param deliveryId value to be set
      * @return Builder
      */
-
+    
     public OrderSetDeliveryCustomFieldActionBuilder deliveryId(@Nullable final String deliveryId) {
         this.deliveryId = deliveryId;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Either <code>deliveryId</code> or <code>deliveryKey</code> is required for this update action.</p>
      * @param deliveryKey value to be set
      * @return Builder
      */
-
+    
     public OrderSetDeliveryCustomFieldActionBuilder deliveryKey(@Nullable final String deliveryKey) {
         this.deliveryKey = deliveryKey;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Name of the Custom Field.</p>
      * @param name value to be set
      * @return Builder
      */
-
-    public OrderSetDeliveryCustomFieldActionBuilder name(final String name) {
+    
+    public OrderSetDeliveryCustomFieldActionBuilder name( final String name) {
         this.name = name;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>If <code>value</code> is absent or <code>null</code>, this field will be removed if it exists. Removing a field that does not exist returns an InvalidOperation error. If <code>value</code> is provided, it is set for the field defined by <code>name</code>.</p>
      * @param value value to be set
      * @return Builder
      */
-
+    
     public OrderSetDeliveryCustomFieldActionBuilder value(@Nullable final java.lang.Object value) {
         this.value = value;
         return this;
     }
+    
+    
 
     /**
      *  <p>Either <code>deliveryId</code> or <code>deliveryKey</code> is required for this update action.</p>
      * @return deliveryId
      */
-
+    
     @Nullable
-    public String getDeliveryId() {
+    public String getDeliveryId(){
         return this.deliveryId;
     }
-
+    
     /**
      *  <p>Either <code>deliveryId</code> or <code>deliveryKey</code> is required for this update action.</p>
      * @return deliveryKey
      */
-
+    
     @Nullable
-    public String getDeliveryKey() {
+    public String getDeliveryKey(){
         return this.deliveryKey;
     }
-
+    
     /**
      *  <p>Name of the Custom Field.</p>
      * @return name
      */
-
-    public String getName() {
+    
+    
+    public String getName(){
         return this.name;
     }
-
+    
     /**
      *  <p>If <code>value</code> is absent or <code>null</code>, this field will be removed if it exists. Removing a field that does not exist returns an InvalidOperation error. If <code>value</code> is provided, it is set for the field defined by <code>name</code>.</p>
      * @return value
      */
-
+    
     @Nullable
-    public java.lang.Object getValue() {
+    public java.lang.Object getValue(){
         return this.value;
     }
 
@@ -125,7 +148,7 @@ public class OrderSetDeliveryCustomFieldActionBuilder implements Builder<OrderSe
         Objects.requireNonNull(name, OrderSetDeliveryCustomFieldAction.class + ": name is missing");
         return new OrderSetDeliveryCustomFieldActionImpl(deliveryId, deliveryKey, name, value);
     }
-
+    
     /**
      * builds OrderSetDeliveryCustomFieldAction without checking for non-null required values
      * @return OrderSetDeliveryCustomFieldAction
@@ -136,7 +159,7 @@ public class OrderSetDeliveryCustomFieldActionBuilder implements Builder<OrderSe
 
     /**
      * factory method for an instance of OrderSetDeliveryCustomFieldActionBuilder
-     * @return builder
+     * @return builder 
      */
     public static OrderSetDeliveryCustomFieldActionBuilder of() {
         return new OrderSetDeliveryCustomFieldActionBuilder();

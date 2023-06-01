@@ -1,17 +1,20 @@
-
 package com.commercetools.api.models.message;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
+import com.commercetools.api.models.message.MessagePayload;
+import com.commercetools.api.models.message.StagedQuoteSellerCommentSetMessagePayloadImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Generated after a successful Set Seller Comment update action.</p>
@@ -24,9 +27,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .sellerComment("{sellerComment}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = StagedQuoteSellerCommentSetMessagePayloadImpl.class)
 public interface StagedQuoteSellerCommentSetMessagePayload extends MessagePayload {
 
@@ -47,24 +53,25 @@ public interface StagedQuoteSellerCommentSetMessagePayload extends MessagePayloa
      *  <p><code>sellerComment</code> on the StagedQuote after a successful Set Seller Comment update action.</p>
      * @param sellerComment value to be set
      */
-
+    
     public void setSellerComment(final String sellerComment);
+    
 
     /**
      * factory method
      * @return instance of StagedQuoteSellerCommentSetMessagePayload
      */
-    public static StagedQuoteSellerCommentSetMessagePayload of() {
+    public static StagedQuoteSellerCommentSetMessagePayload of(){
         return new StagedQuoteSellerCommentSetMessagePayloadImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy StagedQuoteSellerCommentSetMessagePayload
      * @param template instance to be copied
      * @return copy instance
      */
-    public static StagedQuoteSellerCommentSetMessagePayload of(
-            final StagedQuoteSellerCommentSetMessagePayload template) {
+    public static StagedQuoteSellerCommentSetMessagePayload of(final StagedQuoteSellerCommentSetMessagePayload template) {
         StagedQuoteSellerCommentSetMessagePayloadImpl instance = new StagedQuoteSellerCommentSetMessagePayloadImpl();
         instance.setSellerComment(template.getSellerComment());
         return instance;
@@ -76,8 +83,7 @@ public interface StagedQuoteSellerCommentSetMessagePayload extends MessagePayloa
      * @return copy instance
      */
     @Nullable
-    public static StagedQuoteSellerCommentSetMessagePayload deepCopy(
-            @Nullable final StagedQuoteSellerCommentSetMessagePayload template) {
+    public static StagedQuoteSellerCommentSetMessagePayload deepCopy(@Nullable final StagedQuoteSellerCommentSetMessagePayload template) {
         if (template == null) {
             return null;
         }
@@ -93,16 +99,16 @@ public interface StagedQuoteSellerCommentSetMessagePayload extends MessagePayloa
     public static StagedQuoteSellerCommentSetMessagePayloadBuilder builder() {
         return StagedQuoteSellerCommentSetMessagePayloadBuilder.of();
     }
-
+    
     /**
      * create builder for StagedQuoteSellerCommentSetMessagePayload instance
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static StagedQuoteSellerCommentSetMessagePayloadBuilder builder(
-            final StagedQuoteSellerCommentSetMessagePayload template) {
+    public static StagedQuoteSellerCommentSetMessagePayloadBuilder builder(final StagedQuoteSellerCommentSetMessagePayload template) {
         return StagedQuoteSellerCommentSetMessagePayloadBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -110,11 +116,10 @@ public interface StagedQuoteSellerCommentSetMessagePayload extends MessagePayloa
      * @param helper function to map the object
      * @return mapped value
      */
-    default <T> T withStagedQuoteSellerCommentSetMessagePayload(
-            Function<StagedQuoteSellerCommentSetMessagePayload, T> helper) {
+    default <T> T withStagedQuoteSellerCommentSetMessagePayload(Function<StagedQuoteSellerCommentSetMessagePayload, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

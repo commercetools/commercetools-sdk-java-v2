@@ -1,17 +1,21 @@
-
 package com.commercetools.api.models.channel;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
+import com.commercetools.api.models.channel.ChannelUpdateAction;
+import java.lang.Object;
+import com.commercetools.api.models.channel.ChannelSetAddressCustomFieldActionImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * ChannelSetAddressCustomFieldAction
@@ -24,9 +28,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .name("{name}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = ChannelSetAddressCustomFieldActionImpl.class)
 public interface ChannelSetAddressCustomFieldAction extends ChannelUpdateAction {
 
@@ -42,12 +49,11 @@ public interface ChannelSetAddressCustomFieldAction extends ChannelUpdateAction 
     @NotNull
     @JsonProperty("name")
     public String getName();
-
     /**
      *  <p>Specifies the format of the value of the Custom Field defined by <code>name</code>. If <code>value</code> is absent or <code>null</code>, this field will be removed, if it exists. Removing a field that does not exist returns an InvalidOperation error.</p>
      * @return value
      */
-
+    
     @JsonProperty("value")
     public Object getValue();
 
@@ -55,23 +61,26 @@ public interface ChannelSetAddressCustomFieldAction extends ChannelUpdateAction 
      *  <p>Name of the Custom Field.</p>
      * @param name value to be set
      */
-
+    
     public void setName(final String name);
-
+    
+    
     /**
      *  <p>Specifies the format of the value of the Custom Field defined by <code>name</code>. If <code>value</code> is absent or <code>null</code>, this field will be removed, if it exists. Removing a field that does not exist returns an InvalidOperation error.</p>
      * @param value value to be set
      */
-
+    
     public void setValue(final Object value);
+    
 
     /**
      * factory method
      * @return instance of ChannelSetAddressCustomFieldAction
      */
-    public static ChannelSetAddressCustomFieldAction of() {
+    public static ChannelSetAddressCustomFieldAction of(){
         return new ChannelSetAddressCustomFieldActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy ChannelSetAddressCustomFieldAction
@@ -91,8 +100,7 @@ public interface ChannelSetAddressCustomFieldAction extends ChannelUpdateAction 
      * @return copy instance
      */
     @Nullable
-    public static ChannelSetAddressCustomFieldAction deepCopy(
-            @Nullable final ChannelSetAddressCustomFieldAction template) {
+    public static ChannelSetAddressCustomFieldAction deepCopy(@Nullable final ChannelSetAddressCustomFieldAction template) {
         if (template == null) {
             return null;
         }
@@ -109,7 +117,7 @@ public interface ChannelSetAddressCustomFieldAction extends ChannelUpdateAction 
     public static ChannelSetAddressCustomFieldActionBuilder builder() {
         return ChannelSetAddressCustomFieldActionBuilder.of();
     }
-
+    
     /**
      * create builder for ChannelSetAddressCustomFieldAction instance
      * @param template instance with prefilled values for the builder
@@ -118,6 +126,7 @@ public interface ChannelSetAddressCustomFieldAction extends ChannelUpdateAction 
     public static ChannelSetAddressCustomFieldActionBuilder builder(final ChannelSetAddressCustomFieldAction template) {
         return ChannelSetAddressCustomFieldActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -128,11 +137,11 @@ public interface ChannelSetAddressCustomFieldAction extends ChannelUpdateAction 
     default <T> T withChannelSetAddressCustomFieldAction(Function<ChannelSetAddressCustomFieldAction, T> helper) {
         return helper.apply(this);
     }
-
     public static ChannelSetAddressCustomFieldAction ofUnset(final String name) {
         return ChannelSetAddressCustomFieldActionBuilder.of().name(name).build();
     }
-
+    
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

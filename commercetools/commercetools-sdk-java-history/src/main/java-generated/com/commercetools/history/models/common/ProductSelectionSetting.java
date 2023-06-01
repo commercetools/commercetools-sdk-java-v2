@@ -1,18 +1,20 @@
-
 package com.commercetools.history.models.common;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
+import com.commercetools.history.models.common.Reference;
+import com.commercetools.history.models.common.ProductSelectionSettingImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * ProductSelectionSetting
@@ -26,11 +28,15 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .active(true)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = ProductSelectionSettingImpl.class)
-public interface ProductSelectionSetting {
+public interface ProductSelectionSetting  {
+
 
     /**
      *
@@ -40,7 +46,6 @@ public interface ProductSelectionSetting {
     @Valid
     @JsonProperty("productSelection")
     public Reference getProductSelection();
-
     /**
      *
      * @return active
@@ -53,23 +58,26 @@ public interface ProductSelectionSetting {
      * set productSelection
      * @param productSelection value to be set
      */
-
+    
     public void setProductSelection(final Reference productSelection);
-
+    
+    
     /**
      * set active
      * @param active value to be set
      */
-
+    
     public void setActive(final Boolean active);
+    
 
     /**
      * factory method
      * @return instance of ProductSelectionSetting
      */
-    public static ProductSelectionSetting of() {
+    public static ProductSelectionSetting of(){
         return new ProductSelectionSettingImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy ProductSelectionSetting
@@ -94,8 +102,7 @@ public interface ProductSelectionSetting {
             return null;
         }
         ProductSelectionSettingImpl instance = new ProductSelectionSettingImpl();
-        instance.setProductSelection(
-            com.commercetools.history.models.common.Reference.deepCopy(template.getProductSelection()));
+        instance.setProductSelection(com.commercetools.history.models.common.Reference.deepCopy(template.getProductSelection()));
         instance.setActive(template.getActive());
         return instance;
     }
@@ -107,7 +114,7 @@ public interface ProductSelectionSetting {
     public static ProductSelectionSettingBuilder builder() {
         return ProductSelectionSettingBuilder.of();
     }
-
+    
     /**
      * create builder for ProductSelectionSetting instance
      * @param template instance with prefilled values for the builder
@@ -116,6 +123,7 @@ public interface ProductSelectionSetting {
     public static ProductSelectionSettingBuilder builder(final ProductSelectionSetting template) {
         return ProductSelectionSettingBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -126,7 +134,7 @@ public interface ProductSelectionSetting {
     default <T> T withProductSelectionSetting(Function<ProductSelectionSetting, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

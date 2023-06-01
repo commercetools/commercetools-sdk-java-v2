@@ -1,51 +1,60 @@
-
 package com.commercetools.api.models.order;
 
-import java.time.*;
-import java.util.*;
-
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
-
-import io.vrap.rmf.base.client.ModelBase;
+import com.commercetools.api.models.common.AddressDraft;
+import com.commercetools.api.models.order.DeliveryItem;
+import com.commercetools.api.models.order.ParcelDraft;
+import com.commercetools.api.models.type.CustomFieldsDraft;
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.ModelBase;
+import javax.validation.Valid;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.annotation.*;
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
  * DeliveryDraft
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class DeliveryDraftImpl implements DeliveryDraft, ModelBase {
 
+    
     private String key;
-
+    
+    
     private java.util.List<com.commercetools.api.models.order.DeliveryItem> items;
-
+    
+    
     private java.util.List<com.commercetools.api.models.order.ParcelDraft> parcels;
-
+    
+    
     private com.commercetools.api.models.common.AddressDraft address;
-
+    
+    
     private com.commercetools.api.models.type.CustomFieldsDraft custom;
 
     /**
      * create instance with all properties
      */
     @JsonCreator
-    DeliveryDraftImpl(@JsonProperty("key") final String key,
-            @JsonProperty("items") final java.util.List<com.commercetools.api.models.order.DeliveryItem> items,
-            @JsonProperty("parcels") final java.util.List<com.commercetools.api.models.order.ParcelDraft> parcels,
-            @JsonProperty("address") final com.commercetools.api.models.common.AddressDraft address,
-            @JsonProperty("custom") final com.commercetools.api.models.type.CustomFieldsDraft custom) {
+    DeliveryDraftImpl(@JsonProperty("key") final String key, @JsonProperty("items") final java.util.List<com.commercetools.api.models.order.DeliveryItem> items, @JsonProperty("parcels") final java.util.List<com.commercetools.api.models.order.ParcelDraft> parcels, @JsonProperty("address") final com.commercetools.api.models.common.AddressDraft address, @JsonProperty("custom") final com.commercetools.api.models.type.CustomFieldsDraft custom) {
         this.key = key;
         this.items = items;
         this.parcels = parcels;
         this.address = address;
         this.custom = custom;
     }
-
     /**
      * create empty instance
      */
@@ -55,97 +64,104 @@ public class DeliveryDraftImpl implements DeliveryDraft, ModelBase {
     /**
      *  <p>User-defined unique identifier of the Delivery.</p>
      */
-
-    public String getKey() {
+    
+    public String getKey(){
         return this.key;
     }
-
+    
     /**
      *  <p>Items which are shipped in this delivery regardless their distribution over several parcels. Can also be specified individually for each Parcel.</p>
      */
-
-    public java.util.List<com.commercetools.api.models.order.DeliveryItem> getItems() {
+    
+    public java.util.List<com.commercetools.api.models.order.DeliveryItem> getItems(){
         return this.items;
     }
-
+    
     /**
      *
      */
-
-    public java.util.List<com.commercetools.api.models.order.ParcelDraft> getParcels() {
+    
+    public java.util.List<com.commercetools.api.models.order.ParcelDraft> getParcels(){
         return this.parcels;
     }
-
+    
     /**
      *
      */
-
-    public com.commercetools.api.models.common.AddressDraft getAddress() {
+    
+    public com.commercetools.api.models.common.AddressDraft getAddress(){
         return this.address;
     }
-
+    
     /**
      *  <p>Custom Fields for the Transaction.</p>
      */
-
-    public com.commercetools.api.models.type.CustomFieldsDraft getCustom() {
+    
+    public com.commercetools.api.models.type.CustomFieldsDraft getCustom(){
         return this.custom;
     }
 
-    public void setKey(final String key) {
+    
+    public void setKey(final String key){
         this.key = key;
     }
-
-    public void setItems(final com.commercetools.api.models.order.DeliveryItem... items) {
-        this.items = new ArrayList<>(Arrays.asList(items));
+    
+    
+    public void setItems(final com.commercetools.api.models.order.DeliveryItem ...items){
+       this.items = new ArrayList<>(Arrays.asList(items));
     }
-
-    public void setItems(final java.util.List<com.commercetools.api.models.order.DeliveryItem> items) {
-        this.items = items;
+    
+    
+    public void setItems(final java.util.List<com.commercetools.api.models.order.DeliveryItem> items){
+       this.items = items;
     }
-
-    public void setParcels(final com.commercetools.api.models.order.ParcelDraft... parcels) {
-        this.parcels = new ArrayList<>(Arrays.asList(parcels));
+    
+    
+    public void setParcels(final com.commercetools.api.models.order.ParcelDraft ...parcels){
+       this.parcels = new ArrayList<>(Arrays.asList(parcels));
     }
-
-    public void setParcels(final java.util.List<com.commercetools.api.models.order.ParcelDraft> parcels) {
-        this.parcels = parcels;
+    
+    
+    public void setParcels(final java.util.List<com.commercetools.api.models.order.ParcelDraft> parcels){
+       this.parcels = parcels;
     }
-
-    public void setAddress(final com.commercetools.api.models.common.AddressDraft address) {
+    
+    
+    public void setAddress(final com.commercetools.api.models.common.AddressDraft address){
         this.address = address;
     }
-
-    public void setCustom(final com.commercetools.api.models.type.CustomFieldsDraft custom) {
+    
+    
+    public void setCustom(final com.commercetools.api.models.type.CustomFieldsDraft custom){
         this.custom = custom;
     }
 
     @Override
     public boolean equals(Object o) {
-        if (this == o)
-            return true;
-
-        if (o == null || getClass() != o.getClass())
-            return false;
-
+        if (this == o) return true;
+    
+        if (o == null || getClass() != o.getClass()) return false;
+    
         DeliveryDraftImpl that = (DeliveryDraftImpl) o;
-
-        return new EqualsBuilder().append(key, that.key)
+    
+        return new EqualsBuilder()
+                .append(key, that.key)
                 .append(items, that.items)
                 .append(parcels, that.parcels)
                 .append(address, that.address)
                 .append(custom, that.custom)
                 .isEquals();
     }
-
+    
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(key)
-                .append(items)
-                .append(parcels)
-                .append(address)
-                .append(custom)
-                .toHashCode();
+        return new HashCodeBuilder(17, 37)
+            .append(key)
+            .append(items)
+            .append(parcels)
+            .append(address)
+            .append(custom)
+            .toHashCode();
     }
 
 }

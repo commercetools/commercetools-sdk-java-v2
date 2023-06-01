@@ -1,17 +1,24 @@
-
 package com.commercetools.api.models.zone;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
+import com.commercetools.api.models.zone.ZoneAddLocationAction;
+import com.commercetools.api.models.zone.ZoneChangeNameAction;
+import com.commercetools.api.models.zone.ZoneRemoveLocationAction;
+import com.commercetools.api.models.zone.ZoneSetDescriptionAction;
+import com.commercetools.api.models.zone.ZoneSetKeyAction;
 
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * ZoneUpdateAction
@@ -24,18 +31,29 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             location(locationBuilder -> locationBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
 @JsonSubTypes({
-        @JsonSubTypes.Type(value = com.commercetools.api.models.zone.ZoneAddLocationActionImpl.class, name = ZoneAddLocationAction.ADD_LOCATION),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.zone.ZoneChangeNameActionImpl.class, name = ZoneChangeNameAction.CHANGE_NAME),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.zone.ZoneRemoveLocationActionImpl.class, name = ZoneRemoveLocationAction.REMOVE_LOCATION),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.zone.ZoneSetDescriptionActionImpl.class, name = ZoneSetDescriptionAction.SET_DESCRIPTION),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.zone.ZoneSetKeyActionImpl.class, name = ZoneSetKeyAction.SET_KEY) })
-@JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.EXISTING_PROPERTY, property = "action", defaultImpl = ZoneUpdateActionImpl.class, visible = true)
+   @JsonSubTypes.Type(value = com.commercetools.api.models.zone.ZoneAddLocationActionImpl.class, name = ZoneAddLocationAction.ADD_LOCATION),
+   @JsonSubTypes.Type(value = com.commercetools.api.models.zone.ZoneChangeNameActionImpl.class, name = ZoneChangeNameAction.CHANGE_NAME),
+   @JsonSubTypes.Type(value = com.commercetools.api.models.zone.ZoneRemoveLocationActionImpl.class, name = ZoneRemoveLocationAction.REMOVE_LOCATION),
+   @JsonSubTypes.Type(value = com.commercetools.api.models.zone.ZoneSetDescriptionActionImpl.class, name = ZoneSetDescriptionAction.SET_DESCRIPTION),
+   @JsonSubTypes.Type(value = com.commercetools.api.models.zone.ZoneSetKeyActionImpl.class, name = ZoneSetKeyAction.SET_KEY)
+})
+@JsonTypeInfo(
+    use = JsonTypeInfo.Id.NAME,
+    include = JsonTypeInfo.As.EXISTING_PROPERTY,
+    property = "action",
+    defaultImpl = ZoneUpdateActionImpl.class,
+    visible = true
+)
 @JsonDeserialize(as = ZoneUpdateActionImpl.class)
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public interface ZoneUpdateAction extends com.commercetools.api.models.ResourceUpdateAction<ZoneUpdateAction> {
+
 
     /**
      *
@@ -44,6 +62,9 @@ public interface ZoneUpdateAction extends com.commercetools.api.models.ResourceU
     @NotNull
     @JsonProperty("action")
     public String getAction();
+
+
+
 
     /**
      * factory method to create a deep copy of ZoneUpdateAction
@@ -56,67 +77,59 @@ public interface ZoneUpdateAction extends com.commercetools.api.models.ResourceU
             return null;
         }
         if (template instanceof com.commercetools.api.models.zone.ZoneAddLocationAction) {
-            return com.commercetools.api.models.zone.ZoneAddLocationAction
-                    .deepCopy((com.commercetools.api.models.zone.ZoneAddLocationAction) template);
+            return com.commercetools.api.models.zone.ZoneAddLocationAction.deepCopy((com.commercetools.api.models.zone.ZoneAddLocationAction)template);
         }
         if (template instanceof com.commercetools.api.models.zone.ZoneChangeNameAction) {
-            return com.commercetools.api.models.zone.ZoneChangeNameAction
-                    .deepCopy((com.commercetools.api.models.zone.ZoneChangeNameAction) template);
+            return com.commercetools.api.models.zone.ZoneChangeNameAction.deepCopy((com.commercetools.api.models.zone.ZoneChangeNameAction)template);
         }
         if (template instanceof com.commercetools.api.models.zone.ZoneRemoveLocationAction) {
-            return com.commercetools.api.models.zone.ZoneRemoveLocationAction
-                    .deepCopy((com.commercetools.api.models.zone.ZoneRemoveLocationAction) template);
+            return com.commercetools.api.models.zone.ZoneRemoveLocationAction.deepCopy((com.commercetools.api.models.zone.ZoneRemoveLocationAction)template);
         }
         if (template instanceof com.commercetools.api.models.zone.ZoneSetDescriptionAction) {
-            return com.commercetools.api.models.zone.ZoneSetDescriptionAction
-                    .deepCopy((com.commercetools.api.models.zone.ZoneSetDescriptionAction) template);
+            return com.commercetools.api.models.zone.ZoneSetDescriptionAction.deepCopy((com.commercetools.api.models.zone.ZoneSetDescriptionAction)template);
         }
         if (template instanceof com.commercetools.api.models.zone.ZoneSetKeyAction) {
-            return com.commercetools.api.models.zone.ZoneSetKeyAction
-                    .deepCopy((com.commercetools.api.models.zone.ZoneSetKeyAction) template);
+            return com.commercetools.api.models.zone.ZoneSetKeyAction.deepCopy((com.commercetools.api.models.zone.ZoneSetKeyAction)template);
         }
         ZoneUpdateActionImpl instance = new ZoneUpdateActionImpl();
         return instance;
     }
+
 
     /**
      * builder for addLocation subtype
      * @return builder
      */
     public static com.commercetools.api.models.zone.ZoneAddLocationActionBuilder addLocationBuilder() {
-        return com.commercetools.api.models.zone.ZoneAddLocationActionBuilder.of();
+       return com.commercetools.api.models.zone.ZoneAddLocationActionBuilder.of();
     }
-
     /**
      * builder for changeName subtype
      * @return builder
      */
     public static com.commercetools.api.models.zone.ZoneChangeNameActionBuilder changeNameBuilder() {
-        return com.commercetools.api.models.zone.ZoneChangeNameActionBuilder.of();
+       return com.commercetools.api.models.zone.ZoneChangeNameActionBuilder.of();
     }
-
     /**
      * builder for removeLocation subtype
      * @return builder
      */
     public static com.commercetools.api.models.zone.ZoneRemoveLocationActionBuilder removeLocationBuilder() {
-        return com.commercetools.api.models.zone.ZoneRemoveLocationActionBuilder.of();
+       return com.commercetools.api.models.zone.ZoneRemoveLocationActionBuilder.of();
     }
-
     /**
      * builder for setDescription subtype
      * @return builder
      */
     public static com.commercetools.api.models.zone.ZoneSetDescriptionActionBuilder setDescriptionBuilder() {
-        return com.commercetools.api.models.zone.ZoneSetDescriptionActionBuilder.of();
+       return com.commercetools.api.models.zone.ZoneSetDescriptionActionBuilder.of();
     }
-
     /**
      * builder for setKey subtype
      * @return builder
      */
     public static com.commercetools.api.models.zone.ZoneSetKeyActionBuilder setKeyBuilder() {
-        return com.commercetools.api.models.zone.ZoneSetKeyActionBuilder.of();
+       return com.commercetools.api.models.zone.ZoneSetKeyActionBuilder.of();
     }
 
     /**
@@ -128,7 +141,7 @@ public interface ZoneUpdateAction extends com.commercetools.api.models.ResourceU
     default <T> T withZoneUpdateAction(Function<ZoneUpdateAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

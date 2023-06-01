@@ -1,17 +1,20 @@
-
 package com.commercetools.api.models.order;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
+import com.commercetools.api.models.order.OrderUpdateAction;
+import com.commercetools.api.models.order.OrderRemoveParcelFromDeliveryActionImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * OrderRemoveParcelFromDeliveryAction
@@ -24,9 +27,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .parcelId("{parcelId}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = OrderRemoveParcelFromDeliveryActionImpl.class)
 public interface OrderRemoveParcelFromDeliveryAction extends OrderUpdateAction {
 
@@ -47,16 +53,18 @@ public interface OrderRemoveParcelFromDeliveryAction extends OrderUpdateAction {
      * set parcelId
      * @param parcelId value to be set
      */
-
+    
     public void setParcelId(final String parcelId);
+    
 
     /**
      * factory method
      * @return instance of OrderRemoveParcelFromDeliveryAction
      */
-    public static OrderRemoveParcelFromDeliveryAction of() {
+    public static OrderRemoveParcelFromDeliveryAction of(){
         return new OrderRemoveParcelFromDeliveryActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy OrderRemoveParcelFromDeliveryAction
@@ -75,8 +83,7 @@ public interface OrderRemoveParcelFromDeliveryAction extends OrderUpdateAction {
      * @return copy instance
      */
     @Nullable
-    public static OrderRemoveParcelFromDeliveryAction deepCopy(
-            @Nullable final OrderRemoveParcelFromDeliveryAction template) {
+    public static OrderRemoveParcelFromDeliveryAction deepCopy(@Nullable final OrderRemoveParcelFromDeliveryAction template) {
         if (template == null) {
             return null;
         }
@@ -92,16 +99,16 @@ public interface OrderRemoveParcelFromDeliveryAction extends OrderUpdateAction {
     public static OrderRemoveParcelFromDeliveryActionBuilder builder() {
         return OrderRemoveParcelFromDeliveryActionBuilder.of();
     }
-
+    
     /**
      * create builder for OrderRemoveParcelFromDeliveryAction instance
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static OrderRemoveParcelFromDeliveryActionBuilder builder(
-            final OrderRemoveParcelFromDeliveryAction template) {
+    public static OrderRemoveParcelFromDeliveryActionBuilder builder(final OrderRemoveParcelFromDeliveryAction template) {
         return OrderRemoveParcelFromDeliveryActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -112,7 +119,7 @@ public interface OrderRemoveParcelFromDeliveryAction extends OrderUpdateAction {
     default <T> T withOrderRemoveParcelFromDeliveryAction(Function<OrderRemoveParcelFromDeliveryAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

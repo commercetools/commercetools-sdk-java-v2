@@ -1,18 +1,21 @@
-
 package com.commercetools.api.models.category;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
+import com.commercetools.api.models.category.CategoryResourceIdentifier;
+import com.commercetools.api.models.category.CategoryUpdateAction;
+import com.commercetools.api.models.category.CategoryChangeParentActionImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * CategoryChangeParentAction
@@ -25,9 +28,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .parent(parentBuilder -> parentBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = CategoryChangeParentActionImpl.class)
 public interface CategoryChangeParentAction extends CategoryUpdateAction {
 
@@ -49,16 +55,18 @@ public interface CategoryChangeParentAction extends CategoryUpdateAction {
      *  <p>New value to set as parent.</p>
      * @param parent value to be set
      */
-
+    
     public void setParent(final CategoryResourceIdentifier parent);
+    
 
     /**
      * factory method
      * @return instance of CategoryChangeParentAction
      */
-    public static CategoryChangeParentAction of() {
+    public static CategoryChangeParentAction of(){
         return new CategoryChangeParentActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy CategoryChangeParentAction
@@ -82,8 +90,7 @@ public interface CategoryChangeParentAction extends CategoryUpdateAction {
             return null;
         }
         CategoryChangeParentActionImpl instance = new CategoryChangeParentActionImpl();
-        instance.setParent(
-            com.commercetools.api.models.category.CategoryResourceIdentifier.deepCopy(template.getParent()));
+        instance.setParent(com.commercetools.api.models.category.CategoryResourceIdentifier.deepCopy(template.getParent()));
         return instance;
     }
 
@@ -94,7 +101,7 @@ public interface CategoryChangeParentAction extends CategoryUpdateAction {
     public static CategoryChangeParentActionBuilder builder() {
         return CategoryChangeParentActionBuilder.of();
     }
-
+    
     /**
      * create builder for CategoryChangeParentAction instance
      * @param template instance with prefilled values for the builder
@@ -103,6 +110,7 @@ public interface CategoryChangeParentAction extends CategoryUpdateAction {
     public static CategoryChangeParentActionBuilder builder(final CategoryChangeParentAction template) {
         return CategoryChangeParentActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -113,7 +121,7 @@ public interface CategoryChangeParentAction extends CategoryUpdateAction {
     default <T> T withCategoryChangeParentAction(Function<CategoryChangeParentAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

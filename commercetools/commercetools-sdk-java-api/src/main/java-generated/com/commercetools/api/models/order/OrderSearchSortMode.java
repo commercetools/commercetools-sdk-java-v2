@@ -1,29 +1,31 @@
-
 package com.commercetools.api.models.order;
-
-import java.util.Arrays;
-import java.util.Optional;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-
+import java.lang.String;
+import java.util.Arrays;
+import java.util.Optional;
 import io.vrap.rmf.base.client.JsonEnum;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
  * OrderSearchSortMode
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public interface OrderSearchSortMode extends JsonEnum {
 
+    
     OrderSearchSortMode MIN = OrderSearchSortModeEnum.MIN;
-
+    
     OrderSearchSortMode MAX = OrderSearchSortModeEnum.MAX;
-
+    
     OrderSearchSortMode AVG = OrderSearchSortModeEnum.AVG;
-
+    
     OrderSearchSortMode SUM = OrderSearchSortModeEnum.SUM;
-
+    
     /**
      * possible values of OrderSearchSortMode
      */
@@ -32,17 +34,17 @@ public interface OrderSearchSortMode extends JsonEnum {
          * min
          */
         MIN("min"),
-
+        
         /**
          * max
          */
         MAX("max"),
-
+        
         /**
          * avg
          */
         AVG("avg"),
-
+        
         /**
          * sum
          */
@@ -99,7 +101,7 @@ public interface OrderSearchSortMode extends JsonEnum {
             public String name() {
                 return value.toUpperCase();
             }
-
+            
             public String toString() {
                 return value;
             }
@@ -114,7 +116,7 @@ public interface OrderSearchSortMode extends JsonEnum {
     public static Optional<OrderSearchSortMode> findEnumViaJsonName(String jsonName) {
         return Arrays.stream(values()).filter(t -> t.getJsonName().equals(jsonName)).findFirst();
     }
-
+    
     /**
      * possible enum values
      * @return array of possible enum values
@@ -122,5 +124,5 @@ public interface OrderSearchSortMode extends JsonEnum {
     public static OrderSearchSortMode[] values() {
         return OrderSearchSortModeEnum.values();
     }
-
+    
 }

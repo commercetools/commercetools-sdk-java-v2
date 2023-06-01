@@ -1,41 +1,43 @@
-
 package com.commercetools.importapi.client;
 
+import java.util.ArrayList;
+import java.util.List;
+import java.util.function.Function;
 import java.util.function.UnaryOperator;
 
 import io.vrap.rmf.base.client.ApiHttpClient;
+import io.vrap.rmf.base.client.ApiMethod;
+import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
-public class ByProjectKeyStandalonePricesImportContainersByImportContainerKeyRequestBuilder {
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
+public class ByProjectKeyStandalonePricesImportContainersByImportContainerKeyRequestBuilder  {
 
     private final ApiHttpClient apiHttpClient;
     private final String projectKey;
     private final String importContainerKey;
+    
 
-    public ByProjectKeyStandalonePricesImportContainersByImportContainerKeyRequestBuilder(
-            final ApiHttpClient apiHttpClient, final String projectKey, final String importContainerKey) {
+    public ByProjectKeyStandalonePricesImportContainersByImportContainerKeyRequestBuilder (final ApiHttpClient apiHttpClient,final String projectKey,final String importContainerKey) {
         this.apiHttpClient = apiHttpClient;
         this.projectKey = projectKey;
         this.importContainerKey = importContainerKey;
     }
 
-    public ByProjectKeyStandalonePricesImportContainersByImportContainerKeyPost post(
-            com.commercetools.importapi.models.importrequests.StandalonePriceImportRequest standalonePriceImportRequest) {
-        return new ByProjectKeyStandalonePricesImportContainersByImportContainerKeyPost(apiHttpClient, projectKey,
-            importContainerKey, standalonePriceImportRequest);
+    public ByProjectKeyStandalonePricesImportContainersByImportContainerKeyPost post(com.commercetools.importapi.models.importrequests.StandalonePriceImportRequest standalonePriceImportRequest) {
+        return new ByProjectKeyStandalonePricesImportContainersByImportContainerKeyPost(apiHttpClient, projectKey, importContainerKey, standalonePriceImportRequest);
+    }
+    
+    
+    public ByProjectKeyStandalonePricesImportContainersByImportContainerKeyPostString post(final String standalonePriceImportRequest) {
+        return new ByProjectKeyStandalonePricesImportContainersByImportContainerKeyPostString(apiHttpClient, projectKey, importContainerKey, standalonePriceImportRequest);
+    }
+    public ByProjectKeyStandalonePricesImportContainersByImportContainerKeyPost post(UnaryOperator<com.commercetools.importapi.models.importrequests.StandalonePriceImportRequestBuilder> op) {
+        return post(op.apply(com.commercetools.importapi.models.importrequests.StandalonePriceImportRequestBuilder.of()).build());
     }
 
-    public ByProjectKeyStandalonePricesImportContainersByImportContainerKeyPostString post(
-            final String standalonePriceImportRequest) {
-        return new ByProjectKeyStandalonePricesImportContainersByImportContainerKeyPostString(apiHttpClient, projectKey,
-            importContainerKey, standalonePriceImportRequest);
-    }
-
-    public ByProjectKeyStandalonePricesImportContainersByImportContainerKeyPost post(
-            UnaryOperator<com.commercetools.importapi.models.importrequests.StandalonePriceImportRequestBuilder> op) {
-        return post(op.apply(com.commercetools.importapi.models.importrequests.StandalonePriceImportRequestBuilder.of())
-                .build());
-    }
-
+    
 }

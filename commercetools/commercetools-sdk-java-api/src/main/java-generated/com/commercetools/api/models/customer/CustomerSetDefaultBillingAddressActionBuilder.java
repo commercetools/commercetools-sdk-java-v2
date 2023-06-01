@@ -1,10 +1,11 @@
-
 package com.commercetools.api.models.customer;
 
-import java.util.*;
-
+import com.commercetools.api.models.customer.CustomerUpdateAction;
+import com.commercetools.api.models.customer.CustomerSetDefaultBillingAddressAction;
 import javax.annotation.Nullable;
-
+import java.util.*;
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -17,56 +18,67 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     CustomerSetDefaultBillingAddressAction customerSetDefaultBillingAddressAction = CustomerSetDefaultBillingAddressAction.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class CustomerSetDefaultBillingAddressActionBuilder implements Builder<CustomerSetDefaultBillingAddressAction> {
 
+    
     @Nullable
     private String addressId;
-
+    
+    
     @Nullable
     private String addressKey;
 
+    
     /**
      *  <p><code>id</code> of the Address to become the default billing address.</p>
      * @param addressId value to be set
      * @return Builder
      */
-
+    
     public CustomerSetDefaultBillingAddressActionBuilder addressId(@Nullable final String addressId) {
         this.addressId = addressId;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p><code>key</code> of the Address to become the default billing address.</p>
      * @param addressKey value to be set
      * @return Builder
      */
-
+    
     public CustomerSetDefaultBillingAddressActionBuilder addressKey(@Nullable final String addressKey) {
         this.addressKey = addressKey;
         return this;
     }
+    
+    
 
     /**
      *  <p><code>id</code> of the Address to become the default billing address.</p>
      * @return addressId
      */
-
+    
     @Nullable
-    public String getAddressId() {
+    public String getAddressId(){
         return this.addressId;
     }
-
+    
     /**
      *  <p><code>key</code> of the Address to become the default billing address.</p>
      * @return addressKey
      */
-
+    
     @Nullable
-    public String getAddressKey() {
+    public String getAddressKey(){
         return this.addressKey;
     }
 
@@ -77,7 +89,7 @@ public class CustomerSetDefaultBillingAddressActionBuilder implements Builder<Cu
     public CustomerSetDefaultBillingAddressAction build() {
         return new CustomerSetDefaultBillingAddressActionImpl(addressId, addressKey);
     }
-
+    
     /**
      * builds CustomerSetDefaultBillingAddressAction without checking for non-null required values
      * @return CustomerSetDefaultBillingAddressAction
@@ -88,7 +100,7 @@ public class CustomerSetDefaultBillingAddressActionBuilder implements Builder<Cu
 
     /**
      * factory method for an instance of CustomerSetDefaultBillingAddressActionBuilder
-     * @return builder
+     * @return builder 
      */
     public static CustomerSetDefaultBillingAddressActionBuilder of() {
         return new CustomerSetDefaultBillingAddressActionBuilder();
@@ -99,8 +111,7 @@ public class CustomerSetDefaultBillingAddressActionBuilder implements Builder<Cu
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static CustomerSetDefaultBillingAddressActionBuilder of(
-            final CustomerSetDefaultBillingAddressAction template) {
+    public static CustomerSetDefaultBillingAddressActionBuilder of(final CustomerSetDefaultBillingAddressAction template) {
         CustomerSetDefaultBillingAddressActionBuilder builder = new CustomerSetDefaultBillingAddressActionBuilder();
         builder.addressId = template.getAddressId();
         builder.addressKey = template.getAddressKey();

@@ -1,9 +1,11 @@
-
 package com.commercetools.api.predicates.query.customer;
 
 import com.commercetools.api.predicates.query.*;
 
-public class CustomerSetDateOfBirthActionQueryBuilderDsl {
+import java.util.function.Function;
+
+
+public class CustomerSetDateOfBirthActionQueryBuilderDsl  {
     public CustomerSetDateOfBirthActionQueryBuilderDsl() {
     }
 
@@ -12,15 +14,12 @@ public class CustomerSetDateOfBirthActionQueryBuilderDsl {
     }
 
     public StringComparisonPredicateBuilder<CustomerSetDateOfBirthActionQueryBuilderDsl> action() {
-        return new StringComparisonPredicateBuilder<>(
-            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("action")),
-            p -> new CombinationQueryPredicate<>(p, CustomerSetDateOfBirthActionQueryBuilderDsl::of));
+        return new StringComparisonPredicateBuilder<>(BinaryQueryPredicate.of().left(new ConstantQueryPredicate("action")),
+        p -> new CombinationQueryPredicate<>(p, CustomerSetDateOfBirthActionQueryBuilderDsl::of));
     }
-
     public DateComparisonPredicateBuilder<CustomerSetDateOfBirthActionQueryBuilderDsl> dateOfBirth() {
-        return new DateComparisonPredicateBuilder<>(
-            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("dateOfBirth")),
-            p -> new CombinationQueryPredicate<>(p, CustomerSetDateOfBirthActionQueryBuilderDsl::of));
+        return new DateComparisonPredicateBuilder<>(BinaryQueryPredicate.of().left(new ConstantQueryPredicate("dateOfBirth")),
+        p -> new CombinationQueryPredicate<>(p, CustomerSetDateOfBirthActionQueryBuilderDsl::of));
     }
-
+    
 }

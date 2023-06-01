@@ -1,10 +1,11 @@
-
 package com.commercetools.api.models.order;
 
-import java.util.*;
-
+import com.commercetools.api.models.order.OrderUpdateAction;
+import com.commercetools.api.models.order.OrderSetPurchaseOrderNumberAction;
 import javax.annotation.Nullable;
-
+import java.util.*;
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -17,32 +18,39 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     OrderSetPurchaseOrderNumberAction orderSetPurchaseOrderNumberAction = OrderSetPurchaseOrderNumberAction.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class OrderSetPurchaseOrderNumberActionBuilder implements Builder<OrderSetPurchaseOrderNumberAction> {
 
+    
     @Nullable
     private String purchaseOrderNumber;
 
+    
     /**
      *  <p>Identifier for a purchase order, usually in a B2B context. The Purchase Order Number is typically entered by the Buyer and can also be used with Quotes.</p>
      * @param purchaseOrderNumber value to be set
      * @return Builder
      */
-
+    
     public OrderSetPurchaseOrderNumberActionBuilder purchaseOrderNumber(@Nullable final String purchaseOrderNumber) {
         this.purchaseOrderNumber = purchaseOrderNumber;
         return this;
     }
+    
+    
 
     /**
      *  <p>Identifier for a purchase order, usually in a B2B context. The Purchase Order Number is typically entered by the Buyer and can also be used with Quotes.</p>
      * @return purchaseOrderNumber
      */
-
+    
     @Nullable
-    public String getPurchaseOrderNumber() {
+    public String getPurchaseOrderNumber(){
         return this.purchaseOrderNumber;
     }
 
@@ -53,7 +61,7 @@ public class OrderSetPurchaseOrderNumberActionBuilder implements Builder<OrderSe
     public OrderSetPurchaseOrderNumberAction build() {
         return new OrderSetPurchaseOrderNumberActionImpl(purchaseOrderNumber);
     }
-
+    
     /**
      * builds OrderSetPurchaseOrderNumberAction without checking for non-null required values
      * @return OrderSetPurchaseOrderNumberAction
@@ -64,7 +72,7 @@ public class OrderSetPurchaseOrderNumberActionBuilder implements Builder<OrderSe
 
     /**
      * factory method for an instance of OrderSetPurchaseOrderNumberActionBuilder
-     * @return builder
+     * @return builder 
      */
     public static OrderSetPurchaseOrderNumberActionBuilder of() {
         return new OrderSetPurchaseOrderNumberActionBuilder();

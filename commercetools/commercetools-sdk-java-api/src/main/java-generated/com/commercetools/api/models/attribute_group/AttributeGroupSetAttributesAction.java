@@ -1,19 +1,21 @@
-
 package com.commercetools.api.models.attribute_group;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-import java.util.stream.Collectors;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
+import com.commercetools.api.models.attribute_group.AttributeGroupUpdateAction;
+import com.commercetools.api.models.attribute_group.AttributeReference;
+import com.commercetools.api.models.attribute_group.AttributeGroupSetAttributesActionImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * AttributeGroupSetAttributesAction
@@ -26,9 +28,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .plusAttributes(attributesBuilder -> attributesBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = AttributeGroupSetAttributesActionImpl.class)
 public interface AttributeGroupSetAttributesAction extends AttributeGroupUpdateAction {
 
@@ -50,24 +55,24 @@ public interface AttributeGroupSetAttributesAction extends AttributeGroupUpdateA
      *  <p>New unique values to set.</p>
      * @param attributes values to be set
      */
-
+    
     @JsonIgnore
-    public void setAttributes(final AttributeReference... attributes);
-
+    public void setAttributes(final AttributeReference ...attributes);
     /**
      *  <p>New unique values to set.</p>
      * @param attributes values to be set
      */
-
+    
     public void setAttributes(final List<AttributeReference> attributes);
 
     /**
      * factory method
      * @return instance of AttributeGroupSetAttributesAction
      */
-    public static AttributeGroupSetAttributesAction of() {
+    public static AttributeGroupSetAttributesAction of(){
         return new AttributeGroupSetAttributesActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy AttributeGroupSetAttributesAction
@@ -86,16 +91,13 @@ public interface AttributeGroupSetAttributesAction extends AttributeGroupUpdateA
      * @return copy instance
      */
     @Nullable
-    public static AttributeGroupSetAttributesAction deepCopy(
-            @Nullable final AttributeGroupSetAttributesAction template) {
+    public static AttributeGroupSetAttributesAction deepCopy(@Nullable final AttributeGroupSetAttributesAction template) {
         if (template == null) {
             return null;
         }
         AttributeGroupSetAttributesActionImpl instance = new AttributeGroupSetAttributesActionImpl();
         instance.setAttributes(Optional.ofNullable(template.getAttributes())
-                .map(t -> t.stream()
-                        .map(com.commercetools.api.models.attribute_group.AttributeReference::deepCopy)
-                        .collect(Collectors.toList()))
+                .map(t -> t.stream().map(com.commercetools.api.models.attribute_group.AttributeReference::deepCopy).collect(Collectors.toList()))
                 .orElse(null));
         return instance;
     }
@@ -107,7 +109,7 @@ public interface AttributeGroupSetAttributesAction extends AttributeGroupUpdateA
     public static AttributeGroupSetAttributesActionBuilder builder() {
         return AttributeGroupSetAttributesActionBuilder.of();
     }
-
+    
     /**
      * create builder for AttributeGroupSetAttributesAction instance
      * @param template instance with prefilled values for the builder
@@ -116,6 +118,7 @@ public interface AttributeGroupSetAttributesAction extends AttributeGroupUpdateA
     public static AttributeGroupSetAttributesActionBuilder builder(final AttributeGroupSetAttributesAction template) {
         return AttributeGroupSetAttributesActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -126,7 +129,7 @@ public interface AttributeGroupSetAttributesAction extends AttributeGroupUpdateA
     default <T> T withAttributeGroupSetAttributesAction(Function<AttributeGroupSetAttributesAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

@@ -1,9 +1,11 @@
-
 package com.commercetools.api.models.attribute_group;
 
+import com.commercetools.api.models.attribute_group.AttributeGroupUpdateAction;
+import com.commercetools.api.models.attribute_group.AttributeGroupUpdate;
+import javax.annotation.Nullable;
 import java.util.*;
 import java.util.function.Function;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -18,110 +20,118 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .plusActions(actionsBuilder -> actionsBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class AttributeGroupUpdateBuilder implements Builder<AttributeGroupUpdate> {
 
+    
+    
     private Long version;
-
+    
+    
+    
     private java.util.List<com.commercetools.api.models.attribute_group.AttributeGroupUpdateAction> actions;
 
+    
     /**
      *  <p>Expected version of the AttributeGroup on which the changes should be applied. If the expected version does not match the actual version, a 409 Conflict will be returned.</p>
      * @param version value to be set
      * @return Builder
      */
-
-    public AttributeGroupUpdateBuilder version(final Long version) {
+    
+    public AttributeGroupUpdateBuilder version( final Long version) {
         this.version = version;
         return this;
     }
-
+    
+    
+    
     /**
      *  <p>Update actions to be performed on the AttributeGroup.</p>
      * @param actions value to be set
      * @return Builder
      */
-
-    public AttributeGroupUpdateBuilder actions(
-            final com.commercetools.api.models.attribute_group.AttributeGroupUpdateAction... actions) {
+    
+    public AttributeGroupUpdateBuilder actions( final com.commercetools.api.models.attribute_group.AttributeGroupUpdateAction ...actions) {
         this.actions = new ArrayList<>(Arrays.asList(actions));
         return this;
     }
-
+    
     /**
      *  <p>Update actions to be performed on the AttributeGroup.</p>
      * @param actions value to be set
      * @return Builder
      */
-
-    public AttributeGroupUpdateBuilder actions(
-            final java.util.List<com.commercetools.api.models.attribute_group.AttributeGroupUpdateAction> actions) {
+    
+    public AttributeGroupUpdateBuilder actions( final java.util.List<com.commercetools.api.models.attribute_group.AttributeGroupUpdateAction> actions) {
         this.actions = actions;
         return this;
     }
-
+    
     /**
      *  <p>Update actions to be performed on the AttributeGroup.</p>
      * @param actions value to be set
      * @return Builder
      */
-
-    public AttributeGroupUpdateBuilder plusActions(
-            final com.commercetools.api.models.attribute_group.AttributeGroupUpdateAction... actions) {
+    
+    public AttributeGroupUpdateBuilder plusActions( final com.commercetools.api.models.attribute_group.AttributeGroupUpdateAction ...actions) {
         if (this.actions == null) {
             this.actions = new ArrayList<>();
         }
         this.actions.addAll(Arrays.asList(actions));
         return this;
     }
-
+    
+    
     /**
      *  <p>Update actions to be performed on the AttributeGroup.</p>
      * @param builder function to build the actions value
      * @return Builder
      */
-
-    public AttributeGroupUpdateBuilder plusActions(
-            Function<com.commercetools.api.models.attribute_group.AttributeGroupUpdateActionBuilder, Builder<? extends com.commercetools.api.models.attribute_group.AttributeGroupUpdateAction>> builder) {
+    
+    public AttributeGroupUpdateBuilder plusActions(Function<com.commercetools.api.models.attribute_group.AttributeGroupUpdateActionBuilder, Builder<? extends com.commercetools.api.models.attribute_group.AttributeGroupUpdateAction>> builder) {
         if (this.actions == null) {
             this.actions = new ArrayList<>();
         }
-        this.actions.add(
-            builder.apply(com.commercetools.api.models.attribute_group.AttributeGroupUpdateActionBuilder.of()).build());
+        this.actions.add(builder.apply(com.commercetools.api.models.attribute_group.AttributeGroupUpdateActionBuilder.of()).build());
         return this;
     }
-
+    
     /**
      *  <p>Update actions to be performed on the AttributeGroup.</p>
      * @param builder function to build the actions value
      * @return Builder
      */
-
-    public AttributeGroupUpdateBuilder withActions(
-            Function<com.commercetools.api.models.attribute_group.AttributeGroupUpdateActionBuilder, Builder<? extends com.commercetools.api.models.attribute_group.AttributeGroupUpdateAction>> builder) {
+    
+    public AttributeGroupUpdateBuilder withActions(Function<com.commercetools.api.models.attribute_group.AttributeGroupUpdateActionBuilder, Builder<? extends com.commercetools.api.models.attribute_group.AttributeGroupUpdateAction>> builder) {
         this.actions = new ArrayList<>();
-        this.actions.add(
-            builder.apply(com.commercetools.api.models.attribute_group.AttributeGroupUpdateActionBuilder.of()).build());
+        this.actions.add(builder.apply(com.commercetools.api.models.attribute_group.AttributeGroupUpdateActionBuilder.of()).build());
         return this;
     }
+                    
+    
 
     /**
      *  <p>Expected version of the AttributeGroup on which the changes should be applied. If the expected version does not match the actual version, a 409 Conflict will be returned.</p>
      * @return version
      */
-
-    public Long getVersion() {
+    
+    
+    public Long getVersion(){
         return this.version;
     }
-
+    
     /**
      *  <p>Update actions to be performed on the AttributeGroup.</p>
      * @return actions
      */
-
-    public java.util.List<com.commercetools.api.models.attribute_group.AttributeGroupUpdateAction> getActions() {
+    
+    
+    public java.util.List<com.commercetools.api.models.attribute_group.AttributeGroupUpdateAction> getActions(){
         return this.actions;
     }
 
@@ -134,7 +144,7 @@ public class AttributeGroupUpdateBuilder implements Builder<AttributeGroupUpdate
         Objects.requireNonNull(actions, AttributeGroupUpdate.class + ": actions is missing");
         return new AttributeGroupUpdateImpl(version, actions);
     }
-
+    
     /**
      * builds AttributeGroupUpdate without checking for non-null required values
      * @return AttributeGroupUpdate
@@ -145,7 +155,7 @@ public class AttributeGroupUpdateBuilder implements Builder<AttributeGroupUpdate
 
     /**
      * factory method for an instance of AttributeGroupUpdateBuilder
-     * @return builder
+     * @return builder 
      */
     public static AttributeGroupUpdateBuilder of() {
         return new AttributeGroupUpdateBuilder();

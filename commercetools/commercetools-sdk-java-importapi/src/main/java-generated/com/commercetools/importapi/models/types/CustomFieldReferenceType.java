@@ -1,17 +1,21 @@
-
 package com.commercetools.importapi.models.types;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
+import com.commercetools.importapi.models.types.CustomFieldReferenceValue;
+import com.commercetools.importapi.models.types.FieldType;
+import com.commercetools.importapi.models.types.CustomFieldReferenceTypeImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Field type for Reference values.</p>
@@ -24,9 +28,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .referenceTypeId(CustomFieldReferenceValue.CART)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = CustomFieldReferenceTypeImpl.class)
 public interface CustomFieldReferenceType extends FieldType {
 
@@ -47,16 +54,18 @@ public interface CustomFieldReferenceType extends FieldType {
      *  <p>Resource type the Custom Field can reference.</p>
      * @param referenceTypeId value to be set
      */
-
+    
     public void setReferenceTypeId(final CustomFieldReferenceValue referenceTypeId);
+    
 
     /**
      * factory method
      * @return instance of CustomFieldReferenceType
      */
-    public static CustomFieldReferenceType of() {
+    public static CustomFieldReferenceType of(){
         return new CustomFieldReferenceTypeImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy CustomFieldReferenceType
@@ -91,7 +100,7 @@ public interface CustomFieldReferenceType extends FieldType {
     public static CustomFieldReferenceTypeBuilder builder() {
         return CustomFieldReferenceTypeBuilder.of();
     }
-
+    
     /**
      * create builder for CustomFieldReferenceType instance
      * @param template instance with prefilled values for the builder
@@ -100,6 +109,7 @@ public interface CustomFieldReferenceType extends FieldType {
     public static CustomFieldReferenceTypeBuilder builder(final CustomFieldReferenceType template) {
         return CustomFieldReferenceTypeBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -110,7 +120,7 @@ public interface CustomFieldReferenceType extends FieldType {
     default <T> T withCustomFieldReferenceType(Function<CustomFieldReferenceType, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

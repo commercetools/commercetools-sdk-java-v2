@@ -1,19 +1,21 @@
-
 package com.commercetools.api.models.message;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
+import com.commercetools.api.models.message.OrderMessage;
 import com.commercetools.api.models.order.ParcelMeasurements;
+import com.commercetools.api.models.message.ParcelMeasurementsUpdatedMessageImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Generated after a successful Set Parcel Measurements update action.</p>
@@ -34,9 +36,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .parcelId("{parcelId}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = ParcelMeasurementsUpdatedMessageImpl.class)
 public interface ParcelMeasurementsUpdatedMessage extends OrderMessage {
 
@@ -52,7 +57,6 @@ public interface ParcelMeasurementsUpdatedMessage extends OrderMessage {
     @NotNull
     @JsonProperty("deliveryId")
     public String getDeliveryId();
-
     /**
      *  <p>Unique identifier of the Parcel.</p>
      * @return parcelId
@@ -60,7 +64,6 @@ public interface ParcelMeasurementsUpdatedMessage extends OrderMessage {
     @NotNull
     @JsonProperty("parcelId")
     public String getParcelId();
-
     /**
      *  <p>The Parcel Measurements that were set on the Parcel.</p>
      * @return measurements
@@ -68,12 +71,11 @@ public interface ParcelMeasurementsUpdatedMessage extends OrderMessage {
     @Valid
     @JsonProperty("measurements")
     public ParcelMeasurements getMeasurements();
-
     /**
      *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multi</code> ShippingMode.</p>
      * @return shippingKey
      */
-
+    
     @JsonProperty("shippingKey")
     public String getShippingKey();
 
@@ -81,37 +83,42 @@ public interface ParcelMeasurementsUpdatedMessage extends OrderMessage {
      *  <p>Unique identifier of the Delivery.</p>
      * @param deliveryId value to be set
      */
-
+    
     public void setDeliveryId(final String deliveryId);
-
+    
+    
     /**
      *  <p>Unique identifier of the Parcel.</p>
      * @param parcelId value to be set
      */
-
+    
     public void setParcelId(final String parcelId);
-
+    
+    
     /**
      *  <p>The Parcel Measurements that were set on the Parcel.</p>
      * @param measurements value to be set
      */
-
+    
     public void setMeasurements(final ParcelMeasurements measurements);
-
+    
+    
     /**
      *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multi</code> ShippingMode.</p>
      * @param shippingKey value to be set
      */
-
+    
     public void setShippingKey(final String shippingKey);
+    
 
     /**
      * factory method
      * @return instance of ParcelMeasurementsUpdatedMessage
      */
-    public static ParcelMeasurementsUpdatedMessage of() {
+    public static ParcelMeasurementsUpdatedMessage of(){
         return new ParcelMeasurementsUpdatedMessageImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy ParcelMeasurementsUpdatedMessage
@@ -152,18 +159,15 @@ public interface ParcelMeasurementsUpdatedMessage extends OrderMessage {
         instance.setVersion(template.getVersion());
         instance.setCreatedAt(template.getCreatedAt());
         instance.setLastModifiedAt(template.getLastModifiedAt());
-        instance.setLastModifiedBy(
-            com.commercetools.api.models.common.LastModifiedBy.deepCopy(template.getLastModifiedBy()));
+        instance.setLastModifiedBy(com.commercetools.api.models.common.LastModifiedBy.deepCopy(template.getLastModifiedBy()));
         instance.setCreatedBy(com.commercetools.api.models.common.CreatedBy.deepCopy(template.getCreatedBy()));
         instance.setSequenceNumber(template.getSequenceNumber());
         instance.setResource(com.commercetools.api.models.common.Reference.deepCopy(template.getResource()));
         instance.setResourceVersion(template.getResourceVersion());
-        instance.setResourceUserProvidedIdentifiers(com.commercetools.api.models.message.UserProvidedIdentifiers
-                .deepCopy(template.getResourceUserProvidedIdentifiers()));
+        instance.setResourceUserProvidedIdentifiers(com.commercetools.api.models.message.UserProvidedIdentifiers.deepCopy(template.getResourceUserProvidedIdentifiers()));
         instance.setDeliveryId(template.getDeliveryId());
         instance.setParcelId(template.getParcelId());
-        instance.setMeasurements(
-            com.commercetools.api.models.order.ParcelMeasurements.deepCopy(template.getMeasurements()));
+        instance.setMeasurements(com.commercetools.api.models.order.ParcelMeasurements.deepCopy(template.getMeasurements()));
         instance.setShippingKey(template.getShippingKey());
         return instance;
     }
@@ -175,7 +179,7 @@ public interface ParcelMeasurementsUpdatedMessage extends OrderMessage {
     public static ParcelMeasurementsUpdatedMessageBuilder builder() {
         return ParcelMeasurementsUpdatedMessageBuilder.of();
     }
-
+    
     /**
      * create builder for ParcelMeasurementsUpdatedMessage instance
      * @param template instance with prefilled values for the builder
@@ -184,6 +188,7 @@ public interface ParcelMeasurementsUpdatedMessage extends OrderMessage {
     public static ParcelMeasurementsUpdatedMessageBuilder builder(final ParcelMeasurementsUpdatedMessage template) {
         return ParcelMeasurementsUpdatedMessageBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -194,7 +199,7 @@ public interface ParcelMeasurementsUpdatedMessage extends OrderMessage {
     default <T> T withParcelMeasurementsUpdatedMessage(Function<ParcelMeasurementsUpdatedMessage, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

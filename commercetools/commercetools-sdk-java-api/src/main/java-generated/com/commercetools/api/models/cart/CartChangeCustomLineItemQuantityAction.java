@@ -1,17 +1,20 @@
-
 package com.commercetools.api.models.cart;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
+import com.commercetools.api.models.cart.CartUpdateAction;
+import com.commercetools.api.models.cart.CartChangeCustomLineItemQuantityActionImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>When multiple shipping addresses are set for a Custom Line Item, use the Add CustomLineItem update action to change the shipping details. Since it is not possible for the API to infer how the overall change in the Custom Line Item quantity should be distributed over the sub-quantities, the <code>shippingDetails</code> field is kept in its current state to avoid data loss.</p>
@@ -26,9 +29,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .quantity(0.3)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = CartChangeCustomLineItemQuantityActionImpl.class)
 public interface CartChangeCustomLineItemQuantityAction extends CartUpdateAction {
 
@@ -44,7 +50,6 @@ public interface CartChangeCustomLineItemQuantityAction extends CartUpdateAction
     @NotNull
     @JsonProperty("customLineItemId")
     public String getCustomLineItemId();
-
     /**
      *  <p>New value to set.</p>
      *  <p>If <code>0</code>, the Custom Line Item is removed from the Cart.</p>
@@ -58,24 +63,27 @@ public interface CartChangeCustomLineItemQuantityAction extends CartUpdateAction
      *  <p><code>id</code> of the CustomLineItem to update.</p>
      * @param customLineItemId value to be set
      */
-
+    
     public void setCustomLineItemId(final String customLineItemId);
-
+    
+    
     /**
      *  <p>New value to set.</p>
      *  <p>If <code>0</code>, the Custom Line Item is removed from the Cart.</p>
      * @param quantity value to be set
      */
-
+    
     public void setQuantity(final Long quantity);
+    
 
     /**
      * factory method
      * @return instance of CartChangeCustomLineItemQuantityAction
      */
-    public static CartChangeCustomLineItemQuantityAction of() {
+    public static CartChangeCustomLineItemQuantityAction of(){
         return new CartChangeCustomLineItemQuantityActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy CartChangeCustomLineItemQuantityAction
@@ -95,8 +103,7 @@ public interface CartChangeCustomLineItemQuantityAction extends CartUpdateAction
      * @return copy instance
      */
     @Nullable
-    public static CartChangeCustomLineItemQuantityAction deepCopy(
-            @Nullable final CartChangeCustomLineItemQuantityAction template) {
+    public static CartChangeCustomLineItemQuantityAction deepCopy(@Nullable final CartChangeCustomLineItemQuantityAction template) {
         if (template == null) {
             return null;
         }
@@ -113,16 +120,16 @@ public interface CartChangeCustomLineItemQuantityAction extends CartUpdateAction
     public static CartChangeCustomLineItemQuantityActionBuilder builder() {
         return CartChangeCustomLineItemQuantityActionBuilder.of();
     }
-
+    
     /**
      * create builder for CartChangeCustomLineItemQuantityAction instance
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static CartChangeCustomLineItemQuantityActionBuilder builder(
-            final CartChangeCustomLineItemQuantityAction template) {
+    public static CartChangeCustomLineItemQuantityActionBuilder builder(final CartChangeCustomLineItemQuantityAction template) {
         return CartChangeCustomLineItemQuantityActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -130,11 +137,10 @@ public interface CartChangeCustomLineItemQuantityAction extends CartUpdateAction
      * @param helper function to map the object
      * @return mapped value
      */
-    default <T> T withCartChangeCustomLineItemQuantityAction(
-            Function<CartChangeCustomLineItemQuantityAction, T> helper) {
+    default <T> T withCartChangeCustomLineItemQuantityAction(Function<CartChangeCustomLineItemQuantityAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

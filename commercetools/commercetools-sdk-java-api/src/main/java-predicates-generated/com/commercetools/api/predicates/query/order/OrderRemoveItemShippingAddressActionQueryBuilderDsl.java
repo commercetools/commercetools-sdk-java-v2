@@ -1,9 +1,11 @@
-
 package com.commercetools.api.predicates.query.order;
 
 import com.commercetools.api.predicates.query.*;
 
-public class OrderRemoveItemShippingAddressActionQueryBuilderDsl {
+import java.util.function.Function;
+
+
+public class OrderRemoveItemShippingAddressActionQueryBuilderDsl  {
     public OrderRemoveItemShippingAddressActionQueryBuilderDsl() {
     }
 
@@ -12,15 +14,12 @@ public class OrderRemoveItemShippingAddressActionQueryBuilderDsl {
     }
 
     public StringComparisonPredicateBuilder<OrderRemoveItemShippingAddressActionQueryBuilderDsl> action() {
-        return new StringComparisonPredicateBuilder<>(
-            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("action")),
-            p -> new CombinationQueryPredicate<>(p, OrderRemoveItemShippingAddressActionQueryBuilderDsl::of));
+        return new StringComparisonPredicateBuilder<>(BinaryQueryPredicate.of().left(new ConstantQueryPredicate("action")),
+        p -> new CombinationQueryPredicate<>(p, OrderRemoveItemShippingAddressActionQueryBuilderDsl::of));
     }
-
     public StringComparisonPredicateBuilder<OrderRemoveItemShippingAddressActionQueryBuilderDsl> addressKey() {
-        return new StringComparisonPredicateBuilder<>(
-            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("addressKey")),
-            p -> new CombinationQueryPredicate<>(p, OrderRemoveItemShippingAddressActionQueryBuilderDsl::of));
+        return new StringComparisonPredicateBuilder<>(BinaryQueryPredicate.of().left(new ConstantQueryPredicate("addressKey")),
+        p -> new CombinationQueryPredicate<>(p, OrderRemoveItemShippingAddressActionQueryBuilderDsl::of));
     }
-
+    
 }

@@ -1,9 +1,12 @@
-
 package com.commercetools.history.models.change;
 
+import com.commercetools.history.models.change.Change;
+import com.commercetools.history.models.change_value.CustomFieldExpandedValue;
+import com.commercetools.history.models.change.AddInterfaceInteractionChange;
+import javax.annotation.Nullable;
 import java.util.*;
 import java.util.function.Function;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -18,80 +21,89 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .nextValue(nextValueBuilder -> nextValueBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class AddInterfaceInteractionChangeBuilder implements Builder<AddInterfaceInteractionChange> {
 
+    
+    
     private String change;
-
+    
+    
+    
     private com.commercetools.history.models.change_value.CustomFieldExpandedValue nextValue;
 
+    
     /**
      *  <p>Update action for <code>addInterfaceInteraction</code> on payments</p>
      * @param change value to be set
      * @return Builder
      */
-
-    public AddInterfaceInteractionChangeBuilder change(final String change) {
+    
+    public AddInterfaceInteractionChangeBuilder change( final String change) {
         this.change = change;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Only available if <code>expand</code> is set to true</p>
      * @param builder function to build the nextValue value
      * @return Builder
      */
-
-    public AddInterfaceInteractionChangeBuilder nextValue(
-            Function<com.commercetools.history.models.change_value.CustomFieldExpandedValueBuilder, com.commercetools.history.models.change_value.CustomFieldExpandedValueBuilder> builder) {
-        this.nextValue = builder
-                .apply(com.commercetools.history.models.change_value.CustomFieldExpandedValueBuilder.of())
-                .build();
+    
+    public AddInterfaceInteractionChangeBuilder nextValue(Function<com.commercetools.history.models.change_value.CustomFieldExpandedValueBuilder, com.commercetools.history.models.change_value.CustomFieldExpandedValueBuilder> builder) {
+        this.nextValue = builder.apply(com.commercetools.history.models.change_value.CustomFieldExpandedValueBuilder.of()).build();
         return this;
     }
-
+    
     /**
      *  <p>Only available if <code>expand</code> is set to true</p>
      * @param builder function to build the nextValue value
      * @return Builder
      */
-
-    public AddInterfaceInteractionChangeBuilder withNextValue(
-            Function<com.commercetools.history.models.change_value.CustomFieldExpandedValueBuilder, com.commercetools.history.models.change_value.CustomFieldExpandedValue> builder) {
-        this.nextValue = builder
-                .apply(com.commercetools.history.models.change_value.CustomFieldExpandedValueBuilder.of());
+    
+    public AddInterfaceInteractionChangeBuilder withNextValue(Function<com.commercetools.history.models.change_value.CustomFieldExpandedValueBuilder, com.commercetools.history.models.change_value.CustomFieldExpandedValue> builder) {
+        this.nextValue = builder.apply(com.commercetools.history.models.change_value.CustomFieldExpandedValueBuilder.of());
         return this;
     }
-
+                    
     /**
      *  <p>Only available if <code>expand</code> is set to true</p>
      * @param nextValue value to be set
      * @return Builder
      */
-
-    public AddInterfaceInteractionChangeBuilder nextValue(
-            final com.commercetools.history.models.change_value.CustomFieldExpandedValue nextValue) {
+    
+    public AddInterfaceInteractionChangeBuilder nextValue( final com.commercetools.history.models.change_value.CustomFieldExpandedValue nextValue) {
         this.nextValue = nextValue;
         return this;
     }
+    
+    
 
     /**
      *  <p>Update action for <code>addInterfaceInteraction</code> on payments</p>
      * @return change
      */
-
-    public String getChange() {
+    
+    
+    public String getChange(){
         return this.change;
     }
-
+    
     /**
      *  <p>Only available if <code>expand</code> is set to true</p>
      * @return nextValue
      */
-
-    public com.commercetools.history.models.change_value.CustomFieldExpandedValue getNextValue() {
+    
+    
+    public com.commercetools.history.models.change_value.CustomFieldExpandedValue getNextValue(){
         return this.nextValue;
     }
 
@@ -104,7 +116,7 @@ public class AddInterfaceInteractionChangeBuilder implements Builder<AddInterfac
         Objects.requireNonNull(nextValue, AddInterfaceInteractionChange.class + ": nextValue is missing");
         return new AddInterfaceInteractionChangeImpl(change, nextValue);
     }
-
+    
     /**
      * builds AddInterfaceInteractionChange without checking for non-null required values
      * @return AddInterfaceInteractionChange
@@ -115,7 +127,7 @@ public class AddInterfaceInteractionChangeBuilder implements Builder<AddInterfac
 
     /**
      * factory method for an instance of AddInterfaceInteractionChangeBuilder
-     * @return builder
+     * @return builder 
      */
     public static AddInterfaceInteractionChangeBuilder of() {
         return new AddInterfaceInteractionChangeBuilder();

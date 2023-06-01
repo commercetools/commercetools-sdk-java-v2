@@ -1,9 +1,11 @@
-
 package com.commercetools.api.predicates.query.custom_object;
 
 import com.commercetools.api.predicates.query.*;
 
-public class CustomObjectDraftQueryBuilderDsl {
+import java.util.function.Function;
+
+
+public class CustomObjectDraftQueryBuilderDsl  {
     public CustomObjectDraftQueryBuilderDsl() {
     }
 
@@ -12,26 +14,20 @@ public class CustomObjectDraftQueryBuilderDsl {
     }
 
     public StringComparisonPredicateBuilder<CustomObjectDraftQueryBuilderDsl> container() {
-        return new StringComparisonPredicateBuilder<>(
-            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("container")),
-            p -> new CombinationQueryPredicate<>(p, CustomObjectDraftQueryBuilderDsl::of));
+        return new StringComparisonPredicateBuilder<>(BinaryQueryPredicate.of().left(new ConstantQueryPredicate("container")),
+        p -> new CombinationQueryPredicate<>(p, CustomObjectDraftQueryBuilderDsl::of));
     }
-
     public StringComparisonPredicateBuilder<CustomObjectDraftQueryBuilderDsl> key() {
         return new StringComparisonPredicateBuilder<>(BinaryQueryPredicate.of().left(new ConstantQueryPredicate("key")),
-            p -> new CombinationQueryPredicate<>(p, CustomObjectDraftQueryBuilderDsl::of));
+        p -> new CombinationQueryPredicate<>(p, CustomObjectDraftQueryBuilderDsl::of));
     }
-
     public StringComparisonPredicateBuilder<CustomObjectDraftQueryBuilderDsl> value() {
-        return new StringComparisonPredicateBuilder<>(
-            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("value")),
-            p -> new CombinationQueryPredicate<>(p, CustomObjectDraftQueryBuilderDsl::of));
+        return new StringComparisonPredicateBuilder<>(BinaryQueryPredicate.of().left(new ConstantQueryPredicate("value")),
+        p -> new CombinationQueryPredicate<>(p, CustomObjectDraftQueryBuilderDsl::of));
     }
-
     public LongComparisonPredicateBuilder<CustomObjectDraftQueryBuilderDsl> version() {
-        return new LongComparisonPredicateBuilder<>(
-            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("version")),
-            p -> new CombinationQueryPredicate<>(p, CustomObjectDraftQueryBuilderDsl::of));
+        return new LongComparisonPredicateBuilder<>(BinaryQueryPredicate.of().left(new ConstantQueryPredicate("version")),
+        p -> new CombinationQueryPredicate<>(p, CustomObjectDraftQueryBuilderDsl::of));
     }
-
+    
 }

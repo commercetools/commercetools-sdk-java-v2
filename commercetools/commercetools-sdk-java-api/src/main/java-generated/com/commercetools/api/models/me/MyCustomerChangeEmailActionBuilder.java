@@ -1,8 +1,11 @@
-
 package com.commercetools.api.models.me;
 
+import com.commercetools.api.models.me.MyCustomerUpdateAction;
+import com.commercetools.api.models.me.MyCustomerChangeEmailAction;
+import javax.annotation.Nullable;
 import java.util.*;
-
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -16,30 +19,39 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .email("{email}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class MyCustomerChangeEmailActionBuilder implements Builder<MyCustomerChangeEmailAction> {
 
+    
+    
     private String email;
 
+    
     /**
      *  <p>New value to set.</p>
      * @param email value to be set
      * @return Builder
      */
-
-    public MyCustomerChangeEmailActionBuilder email(final String email) {
+    
+    public MyCustomerChangeEmailActionBuilder email( final String email) {
         this.email = email;
         return this;
     }
+    
+    
 
     /**
      *  <p>New value to set.</p>
      * @return email
      */
-
-    public String getEmail() {
+    
+    
+    public String getEmail(){
         return this.email;
     }
 
@@ -51,7 +63,7 @@ public class MyCustomerChangeEmailActionBuilder implements Builder<MyCustomerCha
         Objects.requireNonNull(email, MyCustomerChangeEmailAction.class + ": email is missing");
         return new MyCustomerChangeEmailActionImpl(email);
     }
-
+    
     /**
      * builds MyCustomerChangeEmailAction without checking for non-null required values
      * @return MyCustomerChangeEmailAction
@@ -62,7 +74,7 @@ public class MyCustomerChangeEmailActionBuilder implements Builder<MyCustomerCha
 
     /**
      * factory method for an instance of MyCustomerChangeEmailActionBuilder
-     * @return builder
+     * @return builder 
      */
     public static MyCustomerChangeEmailActionBuilder of() {
         return new MyCustomerChangeEmailActionBuilder();

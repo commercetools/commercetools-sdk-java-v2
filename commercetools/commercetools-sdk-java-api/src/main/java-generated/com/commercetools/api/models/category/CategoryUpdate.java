@@ -1,19 +1,20 @@
-
 package com.commercetools.api.models.category;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-import java.util.stream.Collectors;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
+import com.commercetools.api.models.category.CategoryUpdateAction;
+import com.commercetools.api.models.category.CategoryUpdateImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * CategoryUpdate
@@ -27,12 +28,15 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .plusActions(actionsBuilder -> actionsBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = CategoryUpdateImpl.class)
-public interface CategoryUpdate extends
-        com.commercetools.api.models.ResourceUpdate<CategoryUpdate, CategoryUpdateAction, CategoryUpdateBuilder> {
+public interface CategoryUpdate extends com.commercetools.api.models.ResourceUpdate<CategoryUpdate, CategoryUpdateAction, CategoryUpdateBuilder> {
+
 
     /**
      *  <p>Expected version of the Category on which the changes should be applied. If the expected version does not match the actual version, a ConcurrentModification error is returned.</p>
@@ -41,7 +45,6 @@ public interface CategoryUpdate extends
     @NotNull
     @JsonProperty("version")
     public Long getVersion();
-
     /**
      *  <p>Update actions to be performed on the Category.</p>
      * @return actions
@@ -55,31 +58,32 @@ public interface CategoryUpdate extends
      *  <p>Expected version of the Category on which the changes should be applied. If the expected version does not match the actual version, a ConcurrentModification error is returned.</p>
      * @param version value to be set
      */
-
+    
     public void setVersion(final Long version);
-
+    
+    
     /**
      *  <p>Update actions to be performed on the Category.</p>
      * @param actions values to be set
      */
-
+    
     @JsonIgnore
-    public void setActions(final CategoryUpdateAction... actions);
-
+    public void setActions(final CategoryUpdateAction ...actions);
     /**
      *  <p>Update actions to be performed on the Category.</p>
      * @param actions values to be set
      */
-
+    
     public void setActions(final List<CategoryUpdateAction> actions);
 
     /**
      * factory method
      * @return instance of CategoryUpdate
      */
-    public static CategoryUpdate of() {
+    public static CategoryUpdate of(){
         return new CategoryUpdateImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy CategoryUpdate
@@ -106,9 +110,7 @@ public interface CategoryUpdate extends
         CategoryUpdateImpl instance = new CategoryUpdateImpl();
         instance.setVersion(template.getVersion());
         instance.setActions(Optional.ofNullable(template.getActions())
-                .map(t -> t.stream()
-                        .map(com.commercetools.api.models.category.CategoryUpdateAction::deepCopy)
-                        .collect(Collectors.toList()))
+                .map(t -> t.stream().map(com.commercetools.api.models.category.CategoryUpdateAction::deepCopy).collect(Collectors.toList()))
                 .orElse(null));
         return instance;
     }
@@ -120,7 +122,7 @@ public interface CategoryUpdate extends
     public static CategoryUpdateBuilder builder() {
         return CategoryUpdateBuilder.of();
     }
-
+    
     /**
      * create builder for CategoryUpdate instance
      * @param template instance with prefilled values for the builder
@@ -129,6 +131,7 @@ public interface CategoryUpdate extends
     public static CategoryUpdateBuilder builder(final CategoryUpdate template) {
         return CategoryUpdateBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -139,7 +142,7 @@ public interface CategoryUpdate extends
     default <T> T withCategoryUpdate(Function<CategoryUpdate, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

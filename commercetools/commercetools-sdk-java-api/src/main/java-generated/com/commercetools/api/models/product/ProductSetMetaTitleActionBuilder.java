@@ -1,11 +1,12 @@
-
 package com.commercetools.api.models.product;
 
+import com.commercetools.api.models.common.LocalizedString;
+import com.commercetools.api.models.product.ProductUpdateAction;
+import com.commercetools.api.models.product.ProductSetMetaTitleAction;
+import javax.annotation.Nullable;
 import java.util.*;
 import java.util.function.Function;
-
-import javax.annotation.Nullable;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -18,81 +19,89 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     ProductSetMetaTitleAction productSetMetaTitleAction = ProductSetMetaTitleAction.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class ProductSetMetaTitleActionBuilder implements Builder<ProductSetMetaTitleAction> {
 
+    
     @Nullable
     private com.commercetools.api.models.common.LocalizedString metaTitle;
-
+    
+    
     @Nullable
     private Boolean staged;
 
+    
     /**
      *  <p>Value to set. If empty, any existing value will be removed.</p>
      * @param builder function to build the metaTitle value
      * @return Builder
      */
-
-    public ProductSetMetaTitleActionBuilder metaTitle(
-            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
+    
+    public ProductSetMetaTitleActionBuilder metaTitle(Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
         this.metaTitle = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of()).build();
         return this;
     }
-
+    
     /**
      *  <p>Value to set. If empty, any existing value will be removed.</p>
      * @param builder function to build the metaTitle value
      * @return Builder
      */
-
-    public ProductSetMetaTitleActionBuilder withMetaTitle(
-            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedString> builder) {
+    
+    public ProductSetMetaTitleActionBuilder withMetaTitle(Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedString> builder) {
         this.metaTitle = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of());
         return this;
     }
-
+                    
     /**
      *  <p>Value to set. If empty, any existing value will be removed.</p>
      * @param metaTitle value to be set
      * @return Builder
      */
-
-    public ProductSetMetaTitleActionBuilder metaTitle(
-            @Nullable final com.commercetools.api.models.common.LocalizedString metaTitle) {
+    
+    public ProductSetMetaTitleActionBuilder metaTitle(@Nullable final com.commercetools.api.models.common.LocalizedString metaTitle) {
         this.metaTitle = metaTitle;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>If <code>true</code>, only the staged <code>metaTitle</code> is updated. If <code>false</code>, both the current and staged <code>metaTitle</code> are updated.</p>
      * @param staged value to be set
      * @return Builder
      */
-
+    
     public ProductSetMetaTitleActionBuilder staged(@Nullable final Boolean staged) {
         this.staged = staged;
         return this;
     }
+    
+    
 
     /**
      *  <p>Value to set. If empty, any existing value will be removed.</p>
      * @return metaTitle
      */
-
+    
     @Nullable
-    public com.commercetools.api.models.common.LocalizedString getMetaTitle() {
+    public com.commercetools.api.models.common.LocalizedString getMetaTitle(){
         return this.metaTitle;
     }
-
+    
     /**
      *  <p>If <code>true</code>, only the staged <code>metaTitle</code> is updated. If <code>false</code>, both the current and staged <code>metaTitle</code> are updated.</p>
      * @return staged
      */
-
+    
     @Nullable
-    public Boolean getStaged() {
+    public Boolean getStaged(){
         return this.staged;
     }
 
@@ -103,7 +112,7 @@ public class ProductSetMetaTitleActionBuilder implements Builder<ProductSetMetaT
     public ProductSetMetaTitleAction build() {
         return new ProductSetMetaTitleActionImpl(metaTitle, staged);
     }
-
+    
     /**
      * builds ProductSetMetaTitleAction without checking for non-null required values
      * @return ProductSetMetaTitleAction
@@ -114,7 +123,7 @@ public class ProductSetMetaTitleActionBuilder implements Builder<ProductSetMetaT
 
     /**
      * factory method for an instance of ProductSetMetaTitleActionBuilder
-     * @return builder
+     * @return builder 
      */
     public static ProductSetMetaTitleActionBuilder of() {
         return new ProductSetMetaTitleActionBuilder();

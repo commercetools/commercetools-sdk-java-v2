@@ -1,21 +1,23 @@
-
 package com.commercetools.api.models.error;
-
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.associate_role.Permission;
 import com.commercetools.api.models.business_unit.BusinessUnitResourceIdentifier;
 import com.commercetools.api.models.customer.CustomerResourceIdentifier;
+import com.commercetools.api.models.error.ErrorObject;
+import com.commercetools.api.models.error.AssociateMissingPermissionErrorImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Returned when an Associate is missing a Permission on a B2B resource.</p>
@@ -31,9 +33,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .plusPermissions(permissionsBuilder -> permissionsBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = AssociateMissingPermissionErrorImpl.class)
 public interface AssociateMissingPermissionError extends ErrorObject {
 
@@ -49,7 +54,6 @@ public interface AssociateMissingPermissionError extends ErrorObject {
     @NotNull
     @JsonProperty("code")
     public String getCode();
-
     /**
      *  <ul>
      *   <li>When an action is performed by an Associate: <code>"Associate '$idOfAssociate' has no rights to $action in business-unit '$idOrKeyOfBusinessUnit'. Needs '$requiredPermission'."</code></li>
@@ -61,7 +65,6 @@ public interface AssociateMissingPermissionError extends ErrorObject {
     @NotNull
     @JsonProperty("message")
     public String getMessage();
-
     /**
      *  <p>ResourceIdentifier to the Associate that tried to perform the action.</p>
      * @return associate
@@ -70,7 +73,6 @@ public interface AssociateMissingPermissionError extends ErrorObject {
     @Valid
     @JsonProperty("associate")
     public CustomerResourceIdentifier getAssociate();
-
     /**
      *  <p>ResourceIdentifier to the BusinessUnit.</p>
      * @return businessUnit
@@ -79,7 +81,6 @@ public interface AssociateMissingPermissionError extends ErrorObject {
     @Valid
     @JsonProperty("businessUnit")
     public BusinessUnitResourceIdentifier getBusinessUnit();
-
     /**
      *  <p>ResourceIdentifier of the Associate on whose behalf the action is performed.</p>
      * @return associateOnBehalf
@@ -87,7 +88,6 @@ public interface AssociateMissingPermissionError extends ErrorObject {
     @Valid
     @JsonProperty("associateOnBehalf")
     public CustomerResourceIdentifier getAssociateOnBehalf();
-
     /**
      *  <p>The Permissions that the Associate performing the action lacks. At least one of these Permissions is needed.</p>
      * @return permissions
@@ -104,52 +104,56 @@ public interface AssociateMissingPermissionError extends ErrorObject {
      *  </ul>
      * @param message value to be set
      */
-
+    
     public void setMessage(final String message);
-
+    
+    
     /**
      *  <p>ResourceIdentifier to the Associate that tried to perform the action.</p>
      * @param associate value to be set
      */
-
+    
     public void setAssociate(final CustomerResourceIdentifier associate);
-
+    
+    
     /**
      *  <p>ResourceIdentifier to the BusinessUnit.</p>
      * @param businessUnit value to be set
      */
-
+    
     public void setBusinessUnit(final BusinessUnitResourceIdentifier businessUnit);
-
+    
+    
     /**
      *  <p>ResourceIdentifier of the Associate on whose behalf the action is performed.</p>
      * @param associateOnBehalf value to be set
      */
-
+    
     public void setAssociateOnBehalf(final CustomerResourceIdentifier associateOnBehalf);
-
+    
+    
     /**
      *  <p>The Permissions that the Associate performing the action lacks. At least one of these Permissions is needed.</p>
      * @param permissions values to be set
      */
-
+    
     @JsonIgnore
-    public void setPermissions(final Permission... permissions);
-
+    public void setPermissions(final Permission ...permissions);
     /**
      *  <p>The Permissions that the Associate performing the action lacks. At least one of these Permissions is needed.</p>
      * @param permissions values to be set
      */
-
+    
     public void setPermissions(final List<Permission> permissions);
 
     /**
      * factory method
      * @return instance of AssociateMissingPermissionError
      */
-    public static AssociateMissingPermissionError of() {
+    public static AssociateMissingPermissionError of(){
         return new AssociateMissingPermissionErrorImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy AssociateMissingPermissionError
@@ -180,13 +184,12 @@ public interface AssociateMissingPermissionError extends ErrorObject {
         AssociateMissingPermissionErrorImpl instance = new AssociateMissingPermissionErrorImpl();
         instance.setMessage(template.getMessage());
         Optional.ofNullable(template.values()).ifPresent(t -> t.forEach(instance::setValue));
-        instance.setAssociate(
-            com.commercetools.api.models.customer.CustomerResourceIdentifier.deepCopy(template.getAssociate()));
-        instance.setBusinessUnit(com.commercetools.api.models.business_unit.BusinessUnitResourceIdentifier
-                .deepCopy(template.getBusinessUnit()));
-        instance.setAssociateOnBehalf(
-            com.commercetools.api.models.customer.CustomerResourceIdentifier.deepCopy(template.getAssociateOnBehalf()));
-        instance.setPermissions(Optional.ofNullable(template.getPermissions()).map(ArrayList::new).orElse(null));
+        instance.setAssociate(com.commercetools.api.models.customer.CustomerResourceIdentifier.deepCopy(template.getAssociate()));
+        instance.setBusinessUnit(com.commercetools.api.models.business_unit.BusinessUnitResourceIdentifier.deepCopy(template.getBusinessUnit()));
+        instance.setAssociateOnBehalf(com.commercetools.api.models.customer.CustomerResourceIdentifier.deepCopy(template.getAssociateOnBehalf()));
+        instance.setPermissions(Optional.ofNullable(template.getPermissions())
+                .map(ArrayList::new)
+                .orElse(null));
         return instance;
     }
 
@@ -197,7 +200,7 @@ public interface AssociateMissingPermissionError extends ErrorObject {
     public static AssociateMissingPermissionErrorBuilder builder() {
         return AssociateMissingPermissionErrorBuilder.of();
     }
-
+    
     /**
      * create builder for AssociateMissingPermissionError instance
      * @param template instance with prefilled values for the builder
@@ -206,6 +209,7 @@ public interface AssociateMissingPermissionError extends ErrorObject {
     public static AssociateMissingPermissionErrorBuilder builder(final AssociateMissingPermissionError template) {
         return AssociateMissingPermissionErrorBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -216,7 +220,7 @@ public interface AssociateMissingPermissionError extends ErrorObject {
     default <T> T withAssociateMissingPermissionError(Function<AssociateMissingPermissionError, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

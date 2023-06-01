@@ -1,11 +1,12 @@
-
 package com.commercetools.api.models.message;
 
+import com.commercetools.api.models.cart.ShippingRateInput;
+import com.commercetools.api.models.message.OrderMessagePayload;
+import com.commercetools.api.models.message.OrderShippingRateInputSetMessagePayload;
+import javax.annotation.Nullable;
 import java.util.*;
 import java.util.function.Function;
-
-import javax.annotation.Nullable;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -18,84 +19,89 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     OrderShippingRateInputSetMessagePayload orderShippingRateInputSetMessagePayload = OrderShippingRateInputSetMessagePayload.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
-public class OrderShippingRateInputSetMessagePayloadBuilder
-        implements Builder<OrderShippingRateInputSetMessagePayload> {
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
+public class OrderShippingRateInputSetMessagePayloadBuilder implements Builder<OrderShippingRateInputSetMessagePayload> {
 
+    
     @Nullable
     private com.commercetools.api.models.cart.ShippingRateInput shippingRateInput;
-
+    
+    
     @Nullable
     private com.commercetools.api.models.cart.ShippingRateInput oldShippingRateInput;
 
+    
     /**
      *  <p>ShippingRateInput after the Set ShippingRateInput update action.</p>
      * @param shippingRateInput value to be set
      * @return Builder
      */
-
-    public OrderShippingRateInputSetMessagePayloadBuilder shippingRateInput(
-            @Nullable final com.commercetools.api.models.cart.ShippingRateInput shippingRateInput) {
+    
+    public OrderShippingRateInputSetMessagePayloadBuilder shippingRateInput(@Nullable final com.commercetools.api.models.cart.ShippingRateInput shippingRateInput) {
         this.shippingRateInput = shippingRateInput;
         return this;
     }
-
+    
+    
     /**
      *  <p>ShippingRateInput after the Set ShippingRateInput update action.</p>
      * @param builder function to build the shippingRateInput value
      * @return Builder
      */
-
-    public OrderShippingRateInputSetMessagePayloadBuilder shippingRateInput(
-            Function<com.commercetools.api.models.cart.ShippingRateInputBuilder, Builder<? extends com.commercetools.api.models.cart.ShippingRateInput>> builder) {
+    
+    public OrderShippingRateInputSetMessagePayloadBuilder shippingRateInput(Function<com.commercetools.api.models.cart.ShippingRateInputBuilder, Builder<? extends com.commercetools.api.models.cart.ShippingRateInput>> builder) {
         this.shippingRateInput = builder.apply(com.commercetools.api.models.cart.ShippingRateInputBuilder.of()).build();
         return this;
     }
-
+                    
+    
+    
     /**
      *  <p>ShippingRateInput before the Set ShippingRateInput update action.</p>
      * @param oldShippingRateInput value to be set
      * @return Builder
      */
-
-    public OrderShippingRateInputSetMessagePayloadBuilder oldShippingRateInput(
-            @Nullable final com.commercetools.api.models.cart.ShippingRateInput oldShippingRateInput) {
+    
+    public OrderShippingRateInputSetMessagePayloadBuilder oldShippingRateInput(@Nullable final com.commercetools.api.models.cart.ShippingRateInput oldShippingRateInput) {
         this.oldShippingRateInput = oldShippingRateInput;
         return this;
     }
-
+    
+    
     /**
      *  <p>ShippingRateInput before the Set ShippingRateInput update action.</p>
      * @param builder function to build the oldShippingRateInput value
      * @return Builder
      */
-
-    public OrderShippingRateInputSetMessagePayloadBuilder oldShippingRateInput(
-            Function<com.commercetools.api.models.cart.ShippingRateInputBuilder, Builder<? extends com.commercetools.api.models.cart.ShippingRateInput>> builder) {
-        this.oldShippingRateInput = builder.apply(com.commercetools.api.models.cart.ShippingRateInputBuilder.of())
-                .build();
+    
+    public OrderShippingRateInputSetMessagePayloadBuilder oldShippingRateInput(Function<com.commercetools.api.models.cart.ShippingRateInputBuilder, Builder<? extends com.commercetools.api.models.cart.ShippingRateInput>> builder) {
+        this.oldShippingRateInput = builder.apply(com.commercetools.api.models.cart.ShippingRateInputBuilder.of()).build();
         return this;
     }
+                    
 
     /**
      *  <p>ShippingRateInput after the Set ShippingRateInput update action.</p>
      * @return shippingRateInput
      */
-
+    
     @Nullable
-    public com.commercetools.api.models.cart.ShippingRateInput getShippingRateInput() {
+    public com.commercetools.api.models.cart.ShippingRateInput getShippingRateInput(){
         return this.shippingRateInput;
     }
-
+    
     /**
      *  <p>ShippingRateInput before the Set ShippingRateInput update action.</p>
      * @return oldShippingRateInput
      */
-
+    
     @Nullable
-    public com.commercetools.api.models.cart.ShippingRateInput getOldShippingRateInput() {
+    public com.commercetools.api.models.cart.ShippingRateInput getOldShippingRateInput(){
         return this.oldShippingRateInput;
     }
 
@@ -106,7 +112,7 @@ public class OrderShippingRateInputSetMessagePayloadBuilder
     public OrderShippingRateInputSetMessagePayload build() {
         return new OrderShippingRateInputSetMessagePayloadImpl(shippingRateInput, oldShippingRateInput);
     }
-
+    
     /**
      * builds OrderShippingRateInputSetMessagePayload without checking for non-null required values
      * @return OrderShippingRateInputSetMessagePayload
@@ -117,7 +123,7 @@ public class OrderShippingRateInputSetMessagePayloadBuilder
 
     /**
      * factory method for an instance of OrderShippingRateInputSetMessagePayloadBuilder
-     * @return builder
+     * @return builder 
      */
     public static OrderShippingRateInputSetMessagePayloadBuilder of() {
         return new OrderShippingRateInputSetMessagePayloadBuilder();
@@ -128,8 +134,7 @@ public class OrderShippingRateInputSetMessagePayloadBuilder
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static OrderShippingRateInputSetMessagePayloadBuilder of(
-            final OrderShippingRateInputSetMessagePayload template) {
+    public static OrderShippingRateInputSetMessagePayloadBuilder of(final OrderShippingRateInputSetMessagePayload template) {
         OrderShippingRateInputSetMessagePayloadBuilder builder = new OrderShippingRateInputSetMessagePayloadBuilder();
         builder.shippingRateInput = template.getShippingRateInput();
         builder.oldShippingRateInput = template.getOldShippingRateInput();

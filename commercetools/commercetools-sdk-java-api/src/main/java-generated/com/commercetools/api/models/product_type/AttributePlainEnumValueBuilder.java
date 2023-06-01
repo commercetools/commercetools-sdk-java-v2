@@ -1,8 +1,11 @@
-
 package com.commercetools.api.models.product_type;
 
-import java.util.*;
 
+import com.commercetools.api.models.product_type.AttributePlainEnumValue;
+import javax.annotation.Nullable;
+import java.util.*;
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -17,52 +20,67 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .label("{label}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class AttributePlainEnumValueBuilder implements Builder<AttributePlainEnumValue> {
 
+    
+    
     private String key;
-
+    
+    
+    
     private String label;
 
+    
     /**
      *  <p>Key of the value used as a programmatic identifier, for example in facets &amp; filters.</p>
      * @param key value to be set
      * @return Builder
      */
-
-    public AttributePlainEnumValueBuilder key(final String key) {
+    
+    public AttributePlainEnumValueBuilder key( final String key) {
         this.key = key;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Descriptive label of the value.</p>
      * @param label value to be set
      * @return Builder
      */
-
-    public AttributePlainEnumValueBuilder label(final String label) {
+    
+    public AttributePlainEnumValueBuilder label( final String label) {
         this.label = label;
         return this;
     }
+    
+    
 
     /**
      *  <p>Key of the value used as a programmatic identifier, for example in facets &amp; filters.</p>
      * @return key
      */
-
-    public String getKey() {
+    
+    
+    public String getKey(){
         return this.key;
     }
-
+    
     /**
      *  <p>Descriptive label of the value.</p>
      * @return label
      */
-
-    public String getLabel() {
+    
+    
+    public String getLabel(){
         return this.label;
     }
 
@@ -75,7 +93,7 @@ public class AttributePlainEnumValueBuilder implements Builder<AttributePlainEnu
         Objects.requireNonNull(label, AttributePlainEnumValue.class + ": label is missing");
         return new AttributePlainEnumValueImpl(key, label);
     }
-
+    
     /**
      * builds AttributePlainEnumValue without checking for non-null required values
      * @return AttributePlainEnumValue
@@ -86,7 +104,7 @@ public class AttributePlainEnumValueBuilder implements Builder<AttributePlainEnu
 
     /**
      * factory method for an instance of AttributePlainEnumValueBuilder
-     * @return builder
+     * @return builder 
      */
     public static AttributePlainEnumValueBuilder of() {
         return new AttributePlainEnumValueBuilder();

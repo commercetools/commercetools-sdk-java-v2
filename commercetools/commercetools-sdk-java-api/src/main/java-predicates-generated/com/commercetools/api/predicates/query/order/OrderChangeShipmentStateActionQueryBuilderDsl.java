@@ -1,9 +1,11 @@
-
 package com.commercetools.api.predicates.query.order;
 
 import com.commercetools.api.predicates.query.*;
 
-public class OrderChangeShipmentStateActionQueryBuilderDsl {
+import java.util.function.Function;
+
+
+public class OrderChangeShipmentStateActionQueryBuilderDsl  {
     public OrderChangeShipmentStateActionQueryBuilderDsl() {
     }
 
@@ -12,15 +14,12 @@ public class OrderChangeShipmentStateActionQueryBuilderDsl {
     }
 
     public StringComparisonPredicateBuilder<OrderChangeShipmentStateActionQueryBuilderDsl> action() {
-        return new StringComparisonPredicateBuilder<>(
-            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("action")),
-            p -> new CombinationQueryPredicate<>(p, OrderChangeShipmentStateActionQueryBuilderDsl::of));
+        return new StringComparisonPredicateBuilder<>(BinaryQueryPredicate.of().left(new ConstantQueryPredicate("action")),
+        p -> new CombinationQueryPredicate<>(p, OrderChangeShipmentStateActionQueryBuilderDsl::of));
     }
-
     public StringComparisonPredicateBuilder<OrderChangeShipmentStateActionQueryBuilderDsl> shipmentState() {
-        return new StringComparisonPredicateBuilder<>(
-            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("shipmentState")),
-            p -> new CombinationQueryPredicate<>(p, OrderChangeShipmentStateActionQueryBuilderDsl::of));
+        return new StringComparisonPredicateBuilder<>(BinaryQueryPredicate.of().left(new ConstantQueryPredicate("shipmentState")),
+        p -> new CombinationQueryPredicate<>(p, OrderChangeShipmentStateActionQueryBuilderDsl::of));
     }
-
+    
 }

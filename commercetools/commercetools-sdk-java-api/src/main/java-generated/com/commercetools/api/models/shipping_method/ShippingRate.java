@@ -1,20 +1,21 @@
-
 package com.commercetools.api.models.shipping_method;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-import java.util.stream.Collectors;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
 import com.commercetools.api.models.common.TypedMoney;
+import com.commercetools.api.models.shipping_method.ShippingRatePriceTier;
+import com.commercetools.api.models.shipping_method.ShippingRateImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * ShippingRate
@@ -28,11 +29,15 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .plusTiers(tiersBuilder -> tiersBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = ShippingRateImpl.class)
-public interface ShippingRate {
+public interface ShippingRate  {
+
 
     /**
      *  <p>Currency amount of the ShippingRate.</p>
@@ -42,7 +47,6 @@ public interface ShippingRate {
     @Valid
     @JsonProperty("price")
     public TypedMoney getPrice();
-
     /**
      *  <p>Shipping is free if the sum of the (Custom) Line Item Prices reaches the specified value.</p>
      * @return freeAbove
@@ -50,15 +54,13 @@ public interface ShippingRate {
     @Valid
     @JsonProperty("freeAbove")
     public TypedMoney getFreeAbove();
-
     /**
      *  <p><code>true</code> if the ShippingRate matches given Cart or Location. Only appears in response to requests for Get ShippingMethods for a Cart or Get ShippingMethods for a Location.</p>
      * @return isMatching
      */
-
+    
     @JsonProperty("isMatching")
     public Boolean getIsMatching();
-
     /**
      *  <p>Price tiers for the ShippingRate.</p>
      * @return tiers
@@ -72,45 +74,48 @@ public interface ShippingRate {
      *  <p>Currency amount of the ShippingRate.</p>
      * @param price value to be set
      */
-
+    
     public void setPrice(final TypedMoney price);
-
+    
+    
     /**
      *  <p>Shipping is free if the sum of the (Custom) Line Item Prices reaches the specified value.</p>
      * @param freeAbove value to be set
      */
-
+    
     public void setFreeAbove(final TypedMoney freeAbove);
-
+    
+    
     /**
      *  <p><code>true</code> if the ShippingRate matches given Cart or Location. Only appears in response to requests for Get ShippingMethods for a Cart or Get ShippingMethods for a Location.</p>
      * @param isMatching value to be set
      */
-
+    
     public void setIsMatching(final Boolean isMatching);
-
+    
+    
     /**
      *  <p>Price tiers for the ShippingRate.</p>
      * @param tiers values to be set
      */
-
+    
     @JsonIgnore
-    public void setTiers(final ShippingRatePriceTier... tiers);
-
+    public void setTiers(final ShippingRatePriceTier ...tiers);
     /**
      *  <p>Price tiers for the ShippingRate.</p>
      * @param tiers values to be set
      */
-
+    
     public void setTiers(final List<ShippingRatePriceTier> tiers);
 
     /**
      * factory method
      * @return instance of ShippingRate
      */
-    public static ShippingRate of() {
+    public static ShippingRate of(){
         return new ShippingRateImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy ShippingRate
@@ -141,9 +146,7 @@ public interface ShippingRate {
         instance.setFreeAbove(com.commercetools.api.models.common.TypedMoney.deepCopy(template.getFreeAbove()));
         instance.setIsMatching(template.getIsMatching());
         instance.setTiers(Optional.ofNullable(template.getTiers())
-                .map(t -> t.stream()
-                        .map(com.commercetools.api.models.shipping_method.ShippingRatePriceTier::deepCopy)
-                        .collect(Collectors.toList()))
+                .map(t -> t.stream().map(com.commercetools.api.models.shipping_method.ShippingRatePriceTier::deepCopy).collect(Collectors.toList()))
                 .orElse(null));
         return instance;
     }
@@ -155,7 +158,7 @@ public interface ShippingRate {
     public static ShippingRateBuilder builder() {
         return ShippingRateBuilder.of();
     }
-
+    
     /**
      * create builder for ShippingRate instance
      * @param template instance with prefilled values for the builder
@@ -164,6 +167,7 @@ public interface ShippingRate {
     public static ShippingRateBuilder builder(final ShippingRate template) {
         return ShippingRateBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -174,7 +178,7 @@ public interface ShippingRate {
     default <T> T withShippingRate(Function<ShippingRate, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

@@ -1,21 +1,22 @@
-
 package com.commercetools.api.models.order_edit;
-
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.order.StagedOrderUpdateAction;
 import com.commercetools.api.models.type.FieldContainer;
 import com.commercetools.api.models.type.TypeResourceIdentifier;
+import com.commercetools.api.models.order_edit.StagedOrderSetLineItemCustomTypeActionImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * StagedOrderSetLineItemCustomTypeAction
@@ -28,9 +29,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .lineItemId("{lineItemId}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = StagedOrderSetLineItemCustomTypeActionImpl.class)
 public interface StagedOrderSetLineItemCustomTypeAction extends StagedOrderUpdateAction {
 
@@ -46,7 +50,6 @@ public interface StagedOrderSetLineItemCustomTypeAction extends StagedOrderUpdat
     @NotNull
     @JsonProperty("lineItemId")
     public String getLineItemId();
-
     /**
      *  <p>Defines the Type that extends the LineItem with Custom Fields. If absent, any existing Type and Custom Fields are removed from the LineItem.</p>
      * @return type
@@ -54,7 +57,6 @@ public interface StagedOrderSetLineItemCustomTypeAction extends StagedOrderUpdat
     @Valid
     @JsonProperty("type")
     public TypeResourceIdentifier getType();
-
     /**
      *  <p>Sets the Custom Fields fields for the LineItem.</p>
      * @return fields
@@ -67,30 +69,34 @@ public interface StagedOrderSetLineItemCustomTypeAction extends StagedOrderUpdat
      * set lineItemId
      * @param lineItemId value to be set
      */
-
+    
     public void setLineItemId(final String lineItemId);
-
+    
+    
     /**
      *  <p>Defines the Type that extends the LineItem with Custom Fields. If absent, any existing Type and Custom Fields are removed from the LineItem.</p>
      * @param type value to be set
      */
-
+    
     public void setType(final TypeResourceIdentifier type);
-
+    
+    
     /**
      *  <p>Sets the Custom Fields fields for the LineItem.</p>
      * @param fields value to be set
      */
-
+    
     public void setFields(final FieldContainer fields);
+    
 
     /**
      * factory method
      * @return instance of StagedOrderSetLineItemCustomTypeAction
      */
-    public static StagedOrderSetLineItemCustomTypeAction of() {
+    public static StagedOrderSetLineItemCustomTypeAction of(){
         return new StagedOrderSetLineItemCustomTypeActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy StagedOrderSetLineItemCustomTypeAction
@@ -111,8 +117,7 @@ public interface StagedOrderSetLineItemCustomTypeAction extends StagedOrderUpdat
      * @return copy instance
      */
     @Nullable
-    public static StagedOrderSetLineItemCustomTypeAction deepCopy(
-            @Nullable final StagedOrderSetLineItemCustomTypeAction template) {
+    public static StagedOrderSetLineItemCustomTypeAction deepCopy(@Nullable final StagedOrderSetLineItemCustomTypeAction template) {
         if (template == null) {
             return null;
         }
@@ -130,16 +135,16 @@ public interface StagedOrderSetLineItemCustomTypeAction extends StagedOrderUpdat
     public static StagedOrderSetLineItemCustomTypeActionBuilder builder() {
         return StagedOrderSetLineItemCustomTypeActionBuilder.of();
     }
-
+    
     /**
      * create builder for StagedOrderSetLineItemCustomTypeAction instance
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static StagedOrderSetLineItemCustomTypeActionBuilder builder(
-            final StagedOrderSetLineItemCustomTypeAction template) {
+    public static StagedOrderSetLineItemCustomTypeActionBuilder builder(final StagedOrderSetLineItemCustomTypeAction template) {
         return StagedOrderSetLineItemCustomTypeActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -147,11 +152,10 @@ public interface StagedOrderSetLineItemCustomTypeAction extends StagedOrderUpdat
      * @param helper function to map the object
      * @return mapped value
      */
-    default <T> T withStagedOrderSetLineItemCustomTypeAction(
-            Function<StagedOrderSetLineItemCustomTypeAction, T> helper) {
+    default <T> T withStagedOrderSetLineItemCustomTypeAction(Function<StagedOrderSetLineItemCustomTypeAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

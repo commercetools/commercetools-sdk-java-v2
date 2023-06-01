@@ -1,17 +1,20 @@
-
 package com.commercetools.api.models.error;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
+import com.commercetools.api.models.error.GraphQLErrorObject;
+import com.commercetools.api.models.error.GraphQLEnumValuesMustMatchErrorImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Returned when during an order update of AttributeEnumType or AttributeLocalizedEnumType the new enum values do not match the existing ones.</p>
@@ -24,9 +27,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     GraphQLEnumValuesMustMatchError graphQLEnumValuesMustMatchError = GraphQLEnumValuesMustMatchError.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = GraphQLEnumValuesMustMatchErrorImpl.class)
 public interface GraphQLEnumValuesMustMatchError extends GraphQLErrorObject {
 
@@ -43,13 +49,15 @@ public interface GraphQLEnumValuesMustMatchError extends GraphQLErrorObject {
     @JsonProperty("code")
     public String getCode();
 
+
     /**
      * factory method
      * @return instance of GraphQLEnumValuesMustMatchError
      */
-    public static GraphQLEnumValuesMustMatchError of() {
+    public static GraphQLEnumValuesMustMatchError of(){
         return new GraphQLEnumValuesMustMatchErrorImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy GraphQLEnumValuesMustMatchError
@@ -84,7 +92,7 @@ public interface GraphQLEnumValuesMustMatchError extends GraphQLErrorObject {
     public static GraphQLEnumValuesMustMatchErrorBuilder builder() {
         return GraphQLEnumValuesMustMatchErrorBuilder.of();
     }
-
+    
     /**
      * create builder for GraphQLEnumValuesMustMatchError instance
      * @param template instance with prefilled values for the builder
@@ -93,6 +101,7 @@ public interface GraphQLEnumValuesMustMatchError extends GraphQLErrorObject {
     public static GraphQLEnumValuesMustMatchErrorBuilder builder(final GraphQLEnumValuesMustMatchError template) {
         return GraphQLEnumValuesMustMatchErrorBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -103,7 +112,7 @@ public interface GraphQLEnumValuesMustMatchError extends GraphQLErrorObject {
     default <T> T withGraphQLEnumValuesMustMatchError(Function<GraphQLEnumValuesMustMatchError, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

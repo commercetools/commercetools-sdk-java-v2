@@ -1,18 +1,21 @@
-
 package com.commercetools.api.models.common;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-
+import com.commercetools.api.models.common.BaseAddress;
 import com.commercetools.api.models.type.CustomFieldsDraft;
+import com.commercetools.api.models.common.AddressDraftImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Address type to be used on write methods. Optionally, use the <code>custom</code> field in addition to the fields of a BaseAddress.</p>
@@ -25,12 +28,15 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .country("{country}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = AddressDraftImpl.class)
-public interface AddressDraft extends BaseAddress, com.commercetools.api.models.CustomizableDraft<AddressDraft>,
-        io.vrap.rmf.base.client.Draft<AddressDraft> {
+public interface AddressDraft extends BaseAddress, com.commercetools.api.models.CustomizableDraft<AddressDraft>, io.vrap.rmf.base.client.Draft<AddressDraft> {
+
 
     /**
      *  <p>Custom Fields defined for the Address.</p>
@@ -44,16 +50,18 @@ public interface AddressDraft extends BaseAddress, com.commercetools.api.models.
      *  <p>Custom Fields defined for the Address.</p>
      * @param custom value to be set
      */
-
+    
     public void setCustom(final CustomFieldsDraft custom);
+    
 
     /**
      * factory method
      * @return instance of AddressDraft
      */
-    public static AddressDraft of() {
+    public static AddressDraft of(){
         return new AddressDraftImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy AddressDraft
@@ -138,7 +146,7 @@ public interface AddressDraft extends BaseAddress, com.commercetools.api.models.
     public static AddressDraftBuilder builder() {
         return AddressDraftBuilder.of();
     }
-
+    
     /**
      * create builder for AddressDraft instance
      * @param template instance with prefilled values for the builder
@@ -147,6 +155,7 @@ public interface AddressDraft extends BaseAddress, com.commercetools.api.models.
     public static AddressDraftBuilder builder(final AddressDraft template) {
         return AddressDraftBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -157,7 +166,7 @@ public interface AddressDraft extends BaseAddress, com.commercetools.api.models.
     default <T> T withAddressDraft(Function<AddressDraft, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

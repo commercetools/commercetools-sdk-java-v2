@@ -1,10 +1,12 @@
-
 package com.commercetools.api.models.product;
 
-import java.util.*;
-
+import com.commercetools.api.models.cart.ProductPublishScope;
+import com.commercetools.api.models.product.ProductUpdateAction;
+import com.commercetools.api.models.product.ProductPublishAction;
 import javax.annotation.Nullable;
-
+import java.util.*;
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -17,33 +19,39 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     ProductPublishAction productPublishAction = ProductPublishAction.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class ProductPublishActionBuilder implements Builder<ProductPublishAction> {
 
+    
     @Nullable
     private com.commercetools.api.models.cart.ProductPublishScope scope;
 
+    
     /**
      *  <p><code>All</code> or <code>Prices</code></p>
      * @param scope value to be set
      * @return Builder
      */
-
-    public ProductPublishActionBuilder scope(
-            @Nullable final com.commercetools.api.models.cart.ProductPublishScope scope) {
+    
+    public ProductPublishActionBuilder scope(@Nullable final com.commercetools.api.models.cart.ProductPublishScope scope) {
         this.scope = scope;
         return this;
     }
+    
+    
 
     /**
      *  <p><code>All</code> or <code>Prices</code></p>
      * @return scope
      */
-
+    
     @Nullable
-    public com.commercetools.api.models.cart.ProductPublishScope getScope() {
+    public com.commercetools.api.models.cart.ProductPublishScope getScope(){
         return this.scope;
     }
 
@@ -54,7 +62,7 @@ public class ProductPublishActionBuilder implements Builder<ProductPublishAction
     public ProductPublishAction build() {
         return new ProductPublishActionImpl(scope);
     }
-
+    
     /**
      * builds ProductPublishAction without checking for non-null required values
      * @return ProductPublishAction
@@ -65,7 +73,7 @@ public class ProductPublishActionBuilder implements Builder<ProductPublishAction
 
     /**
      * factory method for an instance of ProductPublishActionBuilder
-     * @return builder
+     * @return builder 
      */
     public static ProductPublishActionBuilder of() {
         return new ProductPublishActionBuilder();

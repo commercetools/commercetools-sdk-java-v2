@@ -1,8 +1,11 @@
-
 package com.commercetools.api.models.discount_code;
 
+import com.commercetools.api.models.discount_code.DiscountCodeUpdateAction;
+import com.commercetools.api.models.discount_code.DiscountCodeChangeGroupsAction;
+import javax.annotation.Nullable;
 import java.util.*;
-
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -16,11 +19,16 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .plusGroups(groupsBuilder -> groupsBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class DiscountCodeChangeGroupsActionBuilder implements Builder<DiscountCodeChangeGroupsAction> {
 
+    
+    
     private java.util.List<String> groups;
 
     /**
@@ -28,43 +36,47 @@ public class DiscountCodeChangeGroupsActionBuilder implements Builder<DiscountCo
      * @param groups value to be set
      * @return Builder
      */
-
-    public DiscountCodeChangeGroupsActionBuilder groups(final String... groups) {
+    
+    public DiscountCodeChangeGroupsActionBuilder groups( final String ...groups) {
         this.groups = new ArrayList<>(Arrays.asList(groups));
         return this;
     }
-
+    
     /**
      *  <p>New value to set. An empty array removes the DiscountCode from all groups.</p>
      * @param groups value to be set
      * @return Builder
      */
-
-    public DiscountCodeChangeGroupsActionBuilder groups(final java.util.List<String> groups) {
+    
+    public DiscountCodeChangeGroupsActionBuilder groups( final java.util.List<String> groups) {
         this.groups = groups;
         return this;
     }
-
+    
     /**
      *  <p>New value to set. An empty array removes the DiscountCode from all groups.</p>
      * @param groups value to be set
      * @return Builder
      */
-
-    public DiscountCodeChangeGroupsActionBuilder plusGroups(final String... groups) {
+    
+    public DiscountCodeChangeGroupsActionBuilder plusGroups( final String ...groups) {
         if (this.groups == null) {
             this.groups = new ArrayList<>();
         }
         this.groups.addAll(Arrays.asList(groups));
         return this;
     }
+    
+    
+    
 
     /**
      *  <p>New value to set. An empty array removes the DiscountCode from all groups.</p>
      * @return groups
      */
-
-    public java.util.List<String> getGroups() {
+    
+    
+    public java.util.List<String> getGroups(){
         return this.groups;
     }
 
@@ -76,7 +88,7 @@ public class DiscountCodeChangeGroupsActionBuilder implements Builder<DiscountCo
         Objects.requireNonNull(groups, DiscountCodeChangeGroupsAction.class + ": groups is missing");
         return new DiscountCodeChangeGroupsActionImpl(groups);
     }
-
+    
     /**
      * builds DiscountCodeChangeGroupsAction without checking for non-null required values
      * @return DiscountCodeChangeGroupsAction
@@ -87,7 +99,7 @@ public class DiscountCodeChangeGroupsActionBuilder implements Builder<DiscountCo
 
     /**
      * factory method for an instance of DiscountCodeChangeGroupsActionBuilder
-     * @return builder
+     * @return builder 
      */
     public static DiscountCodeChangeGroupsActionBuilder of() {
         return new DiscountCodeChangeGroupsActionBuilder();

@@ -1,18 +1,21 @@
-
 package com.commercetools.api.models.message;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-
 import com.commercetools.api.models.customer_group.CustomerGroupReference;
+import com.commercetools.api.models.message.Message;
+import com.commercetools.api.models.message.CustomerGroupSetMessageImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Generated after a successful Set Customer Group update action.</p>
@@ -31,9 +34,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .resourceVersion(0.3)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = CustomerGroupSetMessageImpl.class)
 public interface CustomerGroupSetMessage extends Message {
 
@@ -54,16 +60,18 @@ public interface CustomerGroupSetMessage extends Message {
      *  <p>Customer Group that was set during the Set Customer Group update action.</p>
      * @param customerGroup value to be set
      */
-
+    
     public void setCustomerGroup(final CustomerGroupReference customerGroup);
+    
 
     /**
      * factory method
      * @return instance of CustomerGroupSetMessage
      */
-    public static CustomerGroupSetMessage of() {
+    public static CustomerGroupSetMessage of(){
         return new CustomerGroupSetMessageImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy CustomerGroupSetMessage
@@ -101,16 +109,13 @@ public interface CustomerGroupSetMessage extends Message {
         instance.setVersion(template.getVersion());
         instance.setCreatedAt(template.getCreatedAt());
         instance.setLastModifiedAt(template.getLastModifiedAt());
-        instance.setLastModifiedBy(
-            com.commercetools.api.models.common.LastModifiedBy.deepCopy(template.getLastModifiedBy()));
+        instance.setLastModifiedBy(com.commercetools.api.models.common.LastModifiedBy.deepCopy(template.getLastModifiedBy()));
         instance.setCreatedBy(com.commercetools.api.models.common.CreatedBy.deepCopy(template.getCreatedBy()));
         instance.setSequenceNumber(template.getSequenceNumber());
         instance.setResource(com.commercetools.api.models.common.Reference.deepCopy(template.getResource()));
         instance.setResourceVersion(template.getResourceVersion());
-        instance.setResourceUserProvidedIdentifiers(com.commercetools.api.models.message.UserProvidedIdentifiers
-                .deepCopy(template.getResourceUserProvidedIdentifiers()));
-        instance.setCustomerGroup(
-            com.commercetools.api.models.customer_group.CustomerGroupReference.deepCopy(template.getCustomerGroup()));
+        instance.setResourceUserProvidedIdentifiers(com.commercetools.api.models.message.UserProvidedIdentifiers.deepCopy(template.getResourceUserProvidedIdentifiers()));
+        instance.setCustomerGroup(com.commercetools.api.models.customer_group.CustomerGroupReference.deepCopy(template.getCustomerGroup()));
         return instance;
     }
 
@@ -121,7 +126,7 @@ public interface CustomerGroupSetMessage extends Message {
     public static CustomerGroupSetMessageBuilder builder() {
         return CustomerGroupSetMessageBuilder.of();
     }
-
+    
     /**
      * create builder for CustomerGroupSetMessage instance
      * @param template instance with prefilled values for the builder
@@ -130,6 +135,7 @@ public interface CustomerGroupSetMessage extends Message {
     public static CustomerGroupSetMessageBuilder builder(final CustomerGroupSetMessage template) {
         return CustomerGroupSetMessageBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -140,7 +146,7 @@ public interface CustomerGroupSetMessage extends Message {
     default <T> T withCustomerGroupSetMessage(Function<CustomerGroupSetMessage, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

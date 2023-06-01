@@ -1,8 +1,11 @@
-
 package com.commercetools.api.models.me;
 
+import com.commercetools.api.models.me.MyShoppingListUpdateAction;
+import com.commercetools.api.models.me.MyShoppingListChangeLineItemsOrderAction;
+import javax.annotation.Nullable;
 import java.util.*;
-
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -16,12 +19,16 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .plusLineItemOrder(lineItemOrderBuilder -> lineItemOrderBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
-public class MyShoppingListChangeLineItemsOrderActionBuilder
-        implements Builder<MyShoppingListChangeLineItemsOrderAction> {
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
+public class MyShoppingListChangeLineItemsOrderActionBuilder implements Builder<MyShoppingListChangeLineItemsOrderAction> {
 
+    
+    
     private java.util.List<String> lineItemOrder;
 
     /**
@@ -29,43 +36,47 @@ public class MyShoppingListChangeLineItemsOrderActionBuilder
      * @param lineItemOrder value to be set
      * @return Builder
      */
-
-    public MyShoppingListChangeLineItemsOrderActionBuilder lineItemOrder(final String... lineItemOrder) {
+    
+    public MyShoppingListChangeLineItemsOrderActionBuilder lineItemOrder( final String ...lineItemOrder) {
         this.lineItemOrder = new ArrayList<>(Arrays.asList(lineItemOrder));
         return this;
     }
-
+    
     /**
      *  <p>All existing ShoppingListLineItem <code>id</code>s of the ShoppingList in the desired new order.</p>
      * @param lineItemOrder value to be set
      * @return Builder
      */
-
-    public MyShoppingListChangeLineItemsOrderActionBuilder lineItemOrder(final java.util.List<String> lineItemOrder) {
+    
+    public MyShoppingListChangeLineItemsOrderActionBuilder lineItemOrder( final java.util.List<String> lineItemOrder) {
         this.lineItemOrder = lineItemOrder;
         return this;
     }
-
+    
     /**
      *  <p>All existing ShoppingListLineItem <code>id</code>s of the ShoppingList in the desired new order.</p>
      * @param lineItemOrder value to be set
      * @return Builder
      */
-
-    public MyShoppingListChangeLineItemsOrderActionBuilder plusLineItemOrder(final String... lineItemOrder) {
+    
+    public MyShoppingListChangeLineItemsOrderActionBuilder plusLineItemOrder( final String ...lineItemOrder) {
         if (this.lineItemOrder == null) {
             this.lineItemOrder = new ArrayList<>();
         }
         this.lineItemOrder.addAll(Arrays.asList(lineItemOrder));
         return this;
     }
+    
+    
+    
 
     /**
      *  <p>All existing ShoppingListLineItem <code>id</code>s of the ShoppingList in the desired new order.</p>
      * @return lineItemOrder
      */
-
-    public java.util.List<String> getLineItemOrder() {
+    
+    
+    public java.util.List<String> getLineItemOrder(){
         return this.lineItemOrder;
     }
 
@@ -74,11 +85,10 @@ public class MyShoppingListChangeLineItemsOrderActionBuilder
      * @return MyShoppingListChangeLineItemsOrderAction
      */
     public MyShoppingListChangeLineItemsOrderAction build() {
-        Objects.requireNonNull(lineItemOrder,
-            MyShoppingListChangeLineItemsOrderAction.class + ": lineItemOrder is missing");
+        Objects.requireNonNull(lineItemOrder, MyShoppingListChangeLineItemsOrderAction.class + ": lineItemOrder is missing");
         return new MyShoppingListChangeLineItemsOrderActionImpl(lineItemOrder);
     }
-
+    
     /**
      * builds MyShoppingListChangeLineItemsOrderAction without checking for non-null required values
      * @return MyShoppingListChangeLineItemsOrderAction
@@ -89,7 +99,7 @@ public class MyShoppingListChangeLineItemsOrderActionBuilder
 
     /**
      * factory method for an instance of MyShoppingListChangeLineItemsOrderActionBuilder
-     * @return builder
+     * @return builder 
      */
     public static MyShoppingListChangeLineItemsOrderActionBuilder of() {
         return new MyShoppingListChangeLineItemsOrderActionBuilder();
@@ -100,8 +110,7 @@ public class MyShoppingListChangeLineItemsOrderActionBuilder
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static MyShoppingListChangeLineItemsOrderActionBuilder of(
-            final MyShoppingListChangeLineItemsOrderAction template) {
+    public static MyShoppingListChangeLineItemsOrderActionBuilder of(final MyShoppingListChangeLineItemsOrderAction template) {
         MyShoppingListChangeLineItemsOrderActionBuilder builder = new MyShoppingListChangeLineItemsOrderActionBuilder();
         builder.lineItemOrder = template.getLineItemOrder();
         return builder;

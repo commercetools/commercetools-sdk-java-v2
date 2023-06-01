@@ -1,19 +1,21 @@
-
 package com.commercetools.api.models.order;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
+import com.commercetools.api.models.order.OrderUpdateAction;
 import com.commercetools.api.models.state.StateResourceIdentifier;
+import com.commercetools.api.models.order.OrderTransitionStateActionImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * OrderTransitionStateAction
@@ -26,9 +28,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .state(stateBuilder -> stateBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = OrderTransitionStateActionImpl.class)
 public interface OrderTransitionStateAction extends OrderUpdateAction {
 
@@ -45,12 +50,11 @@ public interface OrderTransitionStateAction extends OrderUpdateAction {
     @Valid
     @JsonProperty("state")
     public StateResourceIdentifier getState();
-
     /**
      *
      * @return force
      */
-
+    
     @JsonProperty("force")
     public Boolean getForce();
 
@@ -58,23 +62,26 @@ public interface OrderTransitionStateAction extends OrderUpdateAction {
      *  <p>ResourceIdentifier to a State.</p>
      * @param state value to be set
      */
-
+    
     public void setState(final StateResourceIdentifier state);
-
+    
+    
     /**
      * set force
      * @param force value to be set
      */
-
+    
     public void setForce(final Boolean force);
+    
 
     /**
      * factory method
      * @return instance of OrderTransitionStateAction
      */
-    public static OrderTransitionStateAction of() {
+    public static OrderTransitionStateAction of(){
         return new OrderTransitionStateActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy OrderTransitionStateAction
@@ -111,7 +118,7 @@ public interface OrderTransitionStateAction extends OrderUpdateAction {
     public static OrderTransitionStateActionBuilder builder() {
         return OrderTransitionStateActionBuilder.of();
     }
-
+    
     /**
      * create builder for OrderTransitionStateAction instance
      * @param template instance with prefilled values for the builder
@@ -120,6 +127,7 @@ public interface OrderTransitionStateAction extends OrderUpdateAction {
     public static OrderTransitionStateActionBuilder builder(final OrderTransitionStateAction template) {
         return OrderTransitionStateActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -130,7 +138,7 @@ public interface OrderTransitionStateAction extends OrderUpdateAction {
     default <T> T withOrderTransitionStateAction(Function<OrderTransitionStateAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

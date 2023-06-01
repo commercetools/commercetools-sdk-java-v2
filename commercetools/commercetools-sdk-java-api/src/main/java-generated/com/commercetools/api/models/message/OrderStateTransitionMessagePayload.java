@@ -1,19 +1,21 @@
-
 package com.commercetools.api.models.message;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
+import com.commercetools.api.models.message.OrderMessagePayload;
 import com.commercetools.api.models.state.StateReference;
+import com.commercetools.api.models.message.OrderStateTransitionMessagePayloadImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Generated after a successful Transition State update action.</p>
@@ -27,9 +29,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .force(true)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = OrderStateTransitionMessagePayloadImpl.class)
 public interface OrderStateTransitionMessagePayload extends OrderMessagePayload {
 
@@ -46,7 +51,6 @@ public interface OrderStateTransitionMessagePayload extends OrderMessagePayload 
     @Valid
     @JsonProperty("state")
     public StateReference getState();
-
     /**
      *  <p>OrderState before the Transition State update action.</p>
      * @return oldState
@@ -54,7 +58,6 @@ public interface OrderStateTransitionMessagePayload extends OrderMessagePayload 
     @Valid
     @JsonProperty("oldState")
     public StateReference getOldState();
-
     /**
      *  <p>Whether State transition validations were turned off during the Transition State update action.</p>
      * @return force
@@ -67,30 +70,34 @@ public interface OrderStateTransitionMessagePayload extends OrderMessagePayload 
      *  <p>OrderState after the Transition State update action.</p>
      * @param state value to be set
      */
-
+    
     public void setState(final StateReference state);
-
+    
+    
     /**
      *  <p>OrderState before the Transition State update action.</p>
      * @param oldState value to be set
      */
-
+    
     public void setOldState(final StateReference oldState);
-
+    
+    
     /**
      *  <p>Whether State transition validations were turned off during the Transition State update action.</p>
      * @param force value to be set
      */
-
+    
     public void setForce(final Boolean force);
+    
 
     /**
      * factory method
      * @return instance of OrderStateTransitionMessagePayload
      */
-    public static OrderStateTransitionMessagePayload of() {
+    public static OrderStateTransitionMessagePayload of(){
         return new OrderStateTransitionMessagePayloadImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy OrderStateTransitionMessagePayload
@@ -111,8 +118,7 @@ public interface OrderStateTransitionMessagePayload extends OrderMessagePayload 
      * @return copy instance
      */
     @Nullable
-    public static OrderStateTransitionMessagePayload deepCopy(
-            @Nullable final OrderStateTransitionMessagePayload template) {
+    public static OrderStateTransitionMessagePayload deepCopy(@Nullable final OrderStateTransitionMessagePayload template) {
         if (template == null) {
             return null;
         }
@@ -130,7 +136,7 @@ public interface OrderStateTransitionMessagePayload extends OrderMessagePayload 
     public static OrderStateTransitionMessagePayloadBuilder builder() {
         return OrderStateTransitionMessagePayloadBuilder.of();
     }
-
+    
     /**
      * create builder for OrderStateTransitionMessagePayload instance
      * @param template instance with prefilled values for the builder
@@ -139,6 +145,7 @@ public interface OrderStateTransitionMessagePayload extends OrderMessagePayload 
     public static OrderStateTransitionMessagePayloadBuilder builder(final OrderStateTransitionMessagePayload template) {
         return OrderStateTransitionMessagePayloadBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -149,7 +156,7 @@ public interface OrderStateTransitionMessagePayload extends OrderMessagePayload 
     default <T> T withOrderStateTransitionMessagePayload(Function<OrderStateTransitionMessagePayload, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

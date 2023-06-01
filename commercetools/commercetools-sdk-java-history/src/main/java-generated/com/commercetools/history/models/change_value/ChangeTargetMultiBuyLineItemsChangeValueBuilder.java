@@ -1,8 +1,12 @@
-
 package com.commercetools.history.models.change_value;
 
+import com.commercetools.history.models.change_value.ChangeTargetChangeValue;
+import com.commercetools.history.models.common.SelectionMode;
+import com.commercetools.history.models.change_value.ChangeTargetMultiBuyLineItemsChangeValue;
+import javax.annotation.Nullable;
 import java.util.*;
-
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -20,120 +24,151 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .selectionMode(SelectionMode.CHEAPEST)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
-public class ChangeTargetMultiBuyLineItemsChangeValueBuilder
-        implements Builder<ChangeTargetMultiBuyLineItemsChangeValue> {
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
+public class ChangeTargetMultiBuyLineItemsChangeValueBuilder implements Builder<ChangeTargetMultiBuyLineItemsChangeValue> {
 
+    
+    
     private String predicate;
-
+    
+    
+    
     private Integer triggerQuantity;
-
+    
+    
+    
     private Integer discountedQuantity;
-
+    
+    
+    
     private Integer maxOccurrence;
-
+    
+    
+    
     private com.commercetools.history.models.common.SelectionMode selectionMode;
 
+    
     /**
      * set the value to the predicate
      * @param predicate value to be set
      * @return Builder
      */
-
-    public ChangeTargetMultiBuyLineItemsChangeValueBuilder predicate(final String predicate) {
+    
+    public ChangeTargetMultiBuyLineItemsChangeValueBuilder predicate( final String predicate) {
         this.predicate = predicate;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Quantity of line items that need to be present in order to trigger an application of this discount.</p>
      * @param triggerQuantity value to be set
      * @return Builder
      */
-
-    public ChangeTargetMultiBuyLineItemsChangeValueBuilder triggerQuantity(final Integer triggerQuantity) {
+    
+    public ChangeTargetMultiBuyLineItemsChangeValueBuilder triggerQuantity( final Integer triggerQuantity) {
         this.triggerQuantity = triggerQuantity;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Quantity of line items that are discounted per application of this discount.</p>
      * @param discountedQuantity value to be set
      * @return Builder
      */
-
-    public ChangeTargetMultiBuyLineItemsChangeValueBuilder discountedQuantity(final Integer discountedQuantity) {
+    
+    public ChangeTargetMultiBuyLineItemsChangeValueBuilder discountedQuantity( final Integer discountedQuantity) {
         this.discountedQuantity = discountedQuantity;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Maximum number of applications of this discount.</p>
      * @param maxOccurrence value to be set
      * @return Builder
      */
-
-    public ChangeTargetMultiBuyLineItemsChangeValueBuilder maxOccurrence(final Integer maxOccurrence) {
+    
+    public ChangeTargetMultiBuyLineItemsChangeValueBuilder maxOccurrence( final Integer maxOccurrence) {
         this.maxOccurrence = maxOccurrence;
         return this;
     }
-
+    
+    
+    
+    
     /**
      * set the value to the selectionMode
      * @param selectionMode value to be set
      * @return Builder
      */
-
-    public ChangeTargetMultiBuyLineItemsChangeValueBuilder selectionMode(
-            final com.commercetools.history.models.common.SelectionMode selectionMode) {
+    
+    public ChangeTargetMultiBuyLineItemsChangeValueBuilder selectionMode( final com.commercetools.history.models.common.SelectionMode selectionMode) {
         this.selectionMode = selectionMode;
         return this;
     }
+    
+    
 
     /**
      * value of predicate}
      * @return predicate
      */
-
-    public String getPredicate() {
+    
+    
+    public String getPredicate(){
         return this.predicate;
     }
-
+    
     /**
      *  <p>Quantity of line items that need to be present in order to trigger an application of this discount.</p>
      * @return triggerQuantity
      */
-
-    public Integer getTriggerQuantity() {
+    
+    
+    public Integer getTriggerQuantity(){
         return this.triggerQuantity;
     }
-
+    
     /**
      *  <p>Quantity of line items that are discounted per application of this discount.</p>
      * @return discountedQuantity
      */
-
-    public Integer getDiscountedQuantity() {
+    
+    
+    public Integer getDiscountedQuantity(){
         return this.discountedQuantity;
     }
-
+    
     /**
      *  <p>Maximum number of applications of this discount.</p>
      * @return maxOccurrence
      */
-
-    public Integer getMaxOccurrence() {
+    
+    
+    public Integer getMaxOccurrence(){
         return this.maxOccurrence;
     }
-
+    
     /**
      * value of selectionMode}
      * @return selectionMode
      */
-
-    public com.commercetools.history.models.common.SelectionMode getSelectionMode() {
+    
+    
+    public com.commercetools.history.models.common.SelectionMode getSelectionMode(){
         return this.selectionMode;
     }
 
@@ -143,30 +178,24 @@ public class ChangeTargetMultiBuyLineItemsChangeValueBuilder
      */
     public ChangeTargetMultiBuyLineItemsChangeValue build() {
         Objects.requireNonNull(predicate, ChangeTargetMultiBuyLineItemsChangeValue.class + ": predicate is missing");
-        Objects.requireNonNull(triggerQuantity,
-            ChangeTargetMultiBuyLineItemsChangeValue.class + ": triggerQuantity is missing");
-        Objects.requireNonNull(discountedQuantity,
-            ChangeTargetMultiBuyLineItemsChangeValue.class + ": discountedQuantity is missing");
-        Objects.requireNonNull(maxOccurrence,
-            ChangeTargetMultiBuyLineItemsChangeValue.class + ": maxOccurrence is missing");
-        Objects.requireNonNull(selectionMode,
-            ChangeTargetMultiBuyLineItemsChangeValue.class + ": selectionMode is missing");
-        return new ChangeTargetMultiBuyLineItemsChangeValueImpl(predicate, triggerQuantity, discountedQuantity,
-            maxOccurrence, selectionMode);
+        Objects.requireNonNull(triggerQuantity, ChangeTargetMultiBuyLineItemsChangeValue.class + ": triggerQuantity is missing");
+        Objects.requireNonNull(discountedQuantity, ChangeTargetMultiBuyLineItemsChangeValue.class + ": discountedQuantity is missing");
+        Objects.requireNonNull(maxOccurrence, ChangeTargetMultiBuyLineItemsChangeValue.class + ": maxOccurrence is missing");
+        Objects.requireNonNull(selectionMode, ChangeTargetMultiBuyLineItemsChangeValue.class + ": selectionMode is missing");
+        return new ChangeTargetMultiBuyLineItemsChangeValueImpl(predicate, triggerQuantity, discountedQuantity, maxOccurrence, selectionMode);
     }
-
+    
     /**
      * builds ChangeTargetMultiBuyLineItemsChangeValue without checking for non-null required values
      * @return ChangeTargetMultiBuyLineItemsChangeValue
      */
     public ChangeTargetMultiBuyLineItemsChangeValue buildUnchecked() {
-        return new ChangeTargetMultiBuyLineItemsChangeValueImpl(predicate, triggerQuantity, discountedQuantity,
-            maxOccurrence, selectionMode);
+        return new ChangeTargetMultiBuyLineItemsChangeValueImpl(predicate, triggerQuantity, discountedQuantity, maxOccurrence, selectionMode);
     }
 
     /**
      * factory method for an instance of ChangeTargetMultiBuyLineItemsChangeValueBuilder
-     * @return builder
+     * @return builder 
      */
     public static ChangeTargetMultiBuyLineItemsChangeValueBuilder of() {
         return new ChangeTargetMultiBuyLineItemsChangeValueBuilder();
@@ -177,8 +206,7 @@ public class ChangeTargetMultiBuyLineItemsChangeValueBuilder
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static ChangeTargetMultiBuyLineItemsChangeValueBuilder of(
-            final ChangeTargetMultiBuyLineItemsChangeValue template) {
+    public static ChangeTargetMultiBuyLineItemsChangeValueBuilder of(final ChangeTargetMultiBuyLineItemsChangeValue template) {
         ChangeTargetMultiBuyLineItemsChangeValueBuilder builder = new ChangeTargetMultiBuyLineItemsChangeValueBuilder();
         builder.predicate = template.getPredicate();
         builder.triggerQuantity = template.getTriggerQuantity();

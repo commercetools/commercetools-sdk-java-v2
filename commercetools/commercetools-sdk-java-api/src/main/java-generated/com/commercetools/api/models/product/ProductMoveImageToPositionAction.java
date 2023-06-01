@@ -1,17 +1,20 @@
-
 package com.commercetools.api.models.product;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
+import com.commercetools.api.models.product.ProductUpdateAction;
+import com.commercetools.api.models.product.ProductMoveImageToPositionActionImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Either <code>variantId</code> or <code>sku</code> is required.</p>
@@ -25,9 +28,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .position(0.3)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = ProductMoveImageToPositionActionImpl.class)
 public interface ProductMoveImageToPositionAction extends ProductUpdateAction {
 
@@ -40,18 +46,16 @@ public interface ProductMoveImageToPositionAction extends ProductUpdateAction {
      *  <p>The <code>id</code> of the ProductVariant to update.</p>
      * @return variantId
      */
-
+    
     @JsonProperty("variantId")
     public Long getVariantId();
-
     /**
      *  <p>The <code>sku</code> of the ProductVariant to update.</p>
      * @return sku
      */
-
+    
     @JsonProperty("sku")
     public String getSku();
-
     /**
      *  <p>The URL of the image to update.</p>
      * @return imageUrl
@@ -59,7 +63,6 @@ public interface ProductMoveImageToPositionAction extends ProductUpdateAction {
     @NotNull
     @JsonProperty("imageUrl")
     public String getImageUrl();
-
     /**
      *  <p>Position in <code>images</code> where the image should be moved. Must be between <code>0</code> and the total number of images minus <code>1</code>.</p>
      * @return position
@@ -67,12 +70,11 @@ public interface ProductMoveImageToPositionAction extends ProductUpdateAction {
     @NotNull
     @JsonProperty("position")
     public Long getPosition();
-
     /**
      *  <p>If <code>true</code>, only the staged <code>images</code> is updated. If <code>false</code>, both the current and staged <code>images</code> is updated.</p>
      * @return staged
      */
-
+    
     @JsonProperty("staged")
     public Boolean getStaged();
 
@@ -80,44 +82,50 @@ public interface ProductMoveImageToPositionAction extends ProductUpdateAction {
      *  <p>The <code>id</code> of the ProductVariant to update.</p>
      * @param variantId value to be set
      */
-
+    
     public void setVariantId(final Long variantId);
-
+    
+    
     /**
      *  <p>The <code>sku</code> of the ProductVariant to update.</p>
      * @param sku value to be set
      */
-
+    
     public void setSku(final String sku);
-
+    
+    
     /**
      *  <p>The URL of the image to update.</p>
      * @param imageUrl value to be set
      */
-
+    
     public void setImageUrl(final String imageUrl);
-
+    
+    
     /**
      *  <p>Position in <code>images</code> where the image should be moved. Must be between <code>0</code> and the total number of images minus <code>1</code>.</p>
      * @param position value to be set
      */
-
+    
     public void setPosition(final Long position);
-
+    
+    
     /**
      *  <p>If <code>true</code>, only the staged <code>images</code> is updated. If <code>false</code>, both the current and staged <code>images</code> is updated.</p>
      * @param staged value to be set
      */
-
+    
     public void setStaged(final Boolean staged);
+    
 
     /**
      * factory method
      * @return instance of ProductMoveImageToPositionAction
      */
-    public static ProductMoveImageToPositionAction of() {
+    public static ProductMoveImageToPositionAction of(){
         return new ProductMoveImageToPositionActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy ProductMoveImageToPositionAction
@@ -160,7 +168,7 @@ public interface ProductMoveImageToPositionAction extends ProductUpdateAction {
     public static ProductMoveImageToPositionActionBuilder builder() {
         return ProductMoveImageToPositionActionBuilder.of();
     }
-
+    
     /**
      * create builder for ProductMoveImageToPositionAction instance
      * @param template instance with prefilled values for the builder
@@ -169,6 +177,7 @@ public interface ProductMoveImageToPositionAction extends ProductUpdateAction {
     public static ProductMoveImageToPositionActionBuilder builder(final ProductMoveImageToPositionAction template) {
         return ProductMoveImageToPositionActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -179,7 +188,7 @@ public interface ProductMoveImageToPositionAction extends ProductUpdateAction {
     default <T> T withProductMoveImageToPositionAction(Function<ProductMoveImageToPositionAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

@@ -1,16 +1,20 @@
-
 package com.commercetools.api.models.order_edit;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
+import com.commercetools.api.models.order_edit.OrderEditUpdateAction;
+import com.commercetools.api.models.order_edit.OrderEditSetKeyActionImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * OrderEditSetKeyAction
@@ -22,9 +26,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     OrderEditSetKeyAction orderEditSetKeyAction = OrderEditSetKeyAction.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = OrderEditSetKeyActionImpl.class)
 public interface OrderEditSetKeyAction extends OrderEditUpdateAction {
 
@@ -37,7 +44,7 @@ public interface OrderEditSetKeyAction extends OrderEditUpdateAction {
      *  <p>If <code>key</code> is absent or <code>null</code>, this field will be removed if it exists.</p>
      * @return key
      */
-
+    
     @JsonProperty("key")
     public String getKey();
 
@@ -45,16 +52,18 @@ public interface OrderEditSetKeyAction extends OrderEditUpdateAction {
      *  <p>If <code>key</code> is absent or <code>null</code>, this field will be removed if it exists.</p>
      * @param key value to be set
      */
-
+    
     public void setKey(final String key);
+    
 
     /**
      * factory method
      * @return instance of OrderEditSetKeyAction
      */
-    public static OrderEditSetKeyAction of() {
+    public static OrderEditSetKeyAction of(){
         return new OrderEditSetKeyActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy OrderEditSetKeyAction
@@ -89,7 +98,7 @@ public interface OrderEditSetKeyAction extends OrderEditUpdateAction {
     public static OrderEditSetKeyActionBuilder builder() {
         return OrderEditSetKeyActionBuilder.of();
     }
-
+    
     /**
      * create builder for OrderEditSetKeyAction instance
      * @param template instance with prefilled values for the builder
@@ -98,6 +107,7 @@ public interface OrderEditSetKeyAction extends OrderEditUpdateAction {
     public static OrderEditSetKeyActionBuilder builder(final OrderEditSetKeyAction template) {
         return OrderEditSetKeyActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -108,11 +118,11 @@ public interface OrderEditSetKeyAction extends OrderEditUpdateAction {
     default <T> T withOrderEditSetKeyAction(Function<OrderEditSetKeyAction, T> helper) {
         return helper.apply(this);
     }
-
     public static OrderEditSetKeyAction ofUnset() {
         return OrderEditSetKeyAction.of();
     }
-
+    
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

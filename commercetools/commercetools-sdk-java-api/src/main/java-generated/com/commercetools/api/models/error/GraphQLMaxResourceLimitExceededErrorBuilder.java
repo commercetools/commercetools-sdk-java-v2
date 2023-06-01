@@ -1,8 +1,12 @@
-
 package com.commercetools.api.models.error;
 
+import com.commercetools.api.models.common.ReferenceTypeId;
+import com.commercetools.api.models.error.GraphQLErrorObject;
+import com.commercetools.api.models.error.GraphQLMaxResourceLimitExceededError;
+import javax.annotation.Nullable;
 import java.util.*;
-
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -16,13 +20,20 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .exceededResource(ReferenceTypeId.ASSOCIATE_ROLE)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class GraphQLMaxResourceLimitExceededErrorBuilder implements Builder<GraphQLMaxResourceLimitExceededError> {
 
+    
+    
     private Map<String, java.lang.Object> values = new HashMap<>();
-
+    
+    
+    
     private com.commercetools.api.models.common.ReferenceTypeId exceededResource;
 
     /**
@@ -30,19 +41,19 @@ public class GraphQLMaxResourceLimitExceededErrorBuilder implements Builder<Grap
      * @param values properties to be set
      * @return Builder
      */
-
-    public GraphQLMaxResourceLimitExceededErrorBuilder values(final Map<String, java.lang.Object> values) {
+    
+    public GraphQLMaxResourceLimitExceededErrorBuilder values( final Map<String, java.lang.Object> values){
         this.values = values;
         return this;
     }
-
+    
     /**
      *  <p>Error-specific additional fields.</p>
      * @param key property name
      * @param value property value
      * @return Builder
      */
-
+    
     public GraphQLMaxResourceLimitExceededErrorBuilder addValue(final String key, final java.lang.Object value) {
         if (this.values == null) {
             values = new HashMap<>();
@@ -50,34 +61,39 @@ public class GraphQLMaxResourceLimitExceededErrorBuilder implements Builder<Grap
         values.put(key, value);
         return this;
     }
-
+    
+    
+    
     /**
      *  <p>Resource type that reached its maximum limit of configured elements (for example, 100 Zones per Project).</p>
      * @param exceededResource value to be set
      * @return Builder
      */
-
-    public GraphQLMaxResourceLimitExceededErrorBuilder exceededResource(
-            final com.commercetools.api.models.common.ReferenceTypeId exceededResource) {
+    
+    public GraphQLMaxResourceLimitExceededErrorBuilder exceededResource( final com.commercetools.api.models.common.ReferenceTypeId exceededResource) {
         this.exceededResource = exceededResource;
         return this;
     }
+    
+    
 
     /**
      *  <p>Error-specific additional fields.</p>
      * @return pattern properties
      */
-
-    public Map<String, java.lang.Object> getValues() {
+    
+    
+    public Map<String, java.lang.Object> getValues(){
         return this.values;
     }
-
+    
     /**
      *  <p>Resource type that reached its maximum limit of configured elements (for example, 100 Zones per Project).</p>
      * @return exceededResource
      */
-
-    public com.commercetools.api.models.common.ReferenceTypeId getExceededResource() {
+    
+    
+    public com.commercetools.api.models.common.ReferenceTypeId getExceededResource(){
         return this.exceededResource;
     }
 
@@ -86,11 +102,10 @@ public class GraphQLMaxResourceLimitExceededErrorBuilder implements Builder<Grap
      * @return GraphQLMaxResourceLimitExceededError
      */
     public GraphQLMaxResourceLimitExceededError build() {
-        Objects.requireNonNull(exceededResource,
-            GraphQLMaxResourceLimitExceededError.class + ": exceededResource is missing");
+        Objects.requireNonNull(exceededResource, GraphQLMaxResourceLimitExceededError.class + ": exceededResource is missing");
         return new GraphQLMaxResourceLimitExceededErrorImpl(values, exceededResource);
     }
-
+    
     /**
      * builds GraphQLMaxResourceLimitExceededError without checking for non-null required values
      * @return GraphQLMaxResourceLimitExceededError
@@ -101,7 +116,7 @@ public class GraphQLMaxResourceLimitExceededErrorBuilder implements Builder<Grap
 
     /**
      * factory method for an instance of GraphQLMaxResourceLimitExceededErrorBuilder
-     * @return builder
+     * @return builder 
      */
     public static GraphQLMaxResourceLimitExceededErrorBuilder of() {
         return new GraphQLMaxResourceLimitExceededErrorBuilder();

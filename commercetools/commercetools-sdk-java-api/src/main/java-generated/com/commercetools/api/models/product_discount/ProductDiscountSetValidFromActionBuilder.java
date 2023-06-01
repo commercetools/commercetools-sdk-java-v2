@@ -1,10 +1,12 @@
-
 package com.commercetools.api.models.product_discount;
 
-import java.util.*;
-
+import com.commercetools.api.models.product_discount.ProductDiscountUpdateAction;
+import java.time.ZonedDateTime;
+import com.commercetools.api.models.product_discount.ProductDiscountSetValidFromAction;
 import javax.annotation.Nullable;
-
+import java.util.*;
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -17,32 +19,39 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     ProductDiscountSetValidFromAction productDiscountSetValidFromAction = ProductDiscountSetValidFromAction.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class ProductDiscountSetValidFromActionBuilder implements Builder<ProductDiscountSetValidFromAction> {
 
+    
     @Nullable
     private java.time.ZonedDateTime validFrom;
 
+    
     /**
      *  <p>Value to set. If empty, any existing value will be removed. Take Eventual Consistency into account for calculated discount values.</p>
      * @param validFrom value to be set
      * @return Builder
      */
-
+    
     public ProductDiscountSetValidFromActionBuilder validFrom(@Nullable final java.time.ZonedDateTime validFrom) {
         this.validFrom = validFrom;
         return this;
     }
+    
+    
 
     /**
      *  <p>Value to set. If empty, any existing value will be removed. Take Eventual Consistency into account for calculated discount values.</p>
      * @return validFrom
      */
-
+    
     @Nullable
-    public java.time.ZonedDateTime getValidFrom() {
+    public java.time.ZonedDateTime getValidFrom(){
         return this.validFrom;
     }
 
@@ -53,7 +62,7 @@ public class ProductDiscountSetValidFromActionBuilder implements Builder<Product
     public ProductDiscountSetValidFromAction build() {
         return new ProductDiscountSetValidFromActionImpl(validFrom);
     }
-
+    
     /**
      * builds ProductDiscountSetValidFromAction without checking for non-null required values
      * @return ProductDiscountSetValidFromAction
@@ -64,7 +73,7 @@ public class ProductDiscountSetValidFromActionBuilder implements Builder<Product
 
     /**
      * factory method for an instance of ProductDiscountSetValidFromActionBuilder
-     * @return builder
+     * @return builder 
      */
     public static ProductDiscountSetValidFromActionBuilder of() {
         return new ProductDiscountSetValidFromActionBuilder();

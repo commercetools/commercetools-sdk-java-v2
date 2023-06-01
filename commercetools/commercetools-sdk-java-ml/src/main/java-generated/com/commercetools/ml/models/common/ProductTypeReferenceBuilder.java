@@ -1,8 +1,12 @@
-
 package com.commercetools.ml.models.common;
 
+import com.commercetools.ml.models.common.Reference;
+import com.commercetools.ml.models.common.ReferenceTypeId;
+import com.commercetools.ml.models.common.ProductTypeReference;
+import javax.annotation.Nullable;
 import java.util.*;
-
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -16,30 +20,39 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .id("{id}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class ProductTypeReferenceBuilder implements Builder<ProductTypeReference> {
 
+    
+    
     private String id;
 
+    
     /**
      * set the value to the id
      * @param id value to be set
      * @return Builder
      */
-
-    public ProductTypeReferenceBuilder id(final String id) {
+    
+    public ProductTypeReferenceBuilder id( final String id) {
         this.id = id;
         return this;
     }
+    
+    
 
     /**
      * value of id}
      * @return id
      */
-
-    public String getId() {
+    
+    
+    public String getId(){
         return this.id;
     }
 
@@ -51,7 +64,7 @@ public class ProductTypeReferenceBuilder implements Builder<ProductTypeReference
         Objects.requireNonNull(id, ProductTypeReference.class + ": id is missing");
         return new ProductTypeReferenceImpl(id);
     }
-
+    
     /**
      * builds ProductTypeReference without checking for non-null required values
      * @return ProductTypeReference
@@ -62,7 +75,7 @@ public class ProductTypeReferenceBuilder implements Builder<ProductTypeReference
 
     /**
      * factory method for an instance of ProductTypeReferenceBuilder
-     * @return builder
+     * @return builder 
      */
     public static ProductTypeReferenceBuilder of() {
         return new ProductTypeReferenceBuilder();

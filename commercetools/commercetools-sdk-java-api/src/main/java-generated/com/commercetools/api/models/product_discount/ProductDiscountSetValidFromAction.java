@@ -1,17 +1,21 @@
-
 package com.commercetools.api.models.product_discount;
 
-import java.time.*;
+import com.commercetools.api.models.product_discount.ProductDiscountUpdateAction;
 import java.time.ZonedDateTime;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
+import com.commercetools.api.models.product_discount.ProductDiscountSetValidFromActionImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * ProductDiscountSetValidFromAction
@@ -23,9 +27,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     ProductDiscountSetValidFromAction productDiscountSetValidFromAction = ProductDiscountSetValidFromAction.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = ProductDiscountSetValidFromActionImpl.class)
 public interface ProductDiscountSetValidFromAction extends ProductDiscountUpdateAction {
 
@@ -38,7 +45,7 @@ public interface ProductDiscountSetValidFromAction extends ProductDiscountUpdate
      *  <p>Value to set. If empty, any existing value will be removed. Take Eventual Consistency into account for calculated discount values.</p>
      * @return validFrom
      */
-
+    
     @JsonProperty("validFrom")
     public ZonedDateTime getValidFrom();
 
@@ -46,16 +53,18 @@ public interface ProductDiscountSetValidFromAction extends ProductDiscountUpdate
      *  <p>Value to set. If empty, any existing value will be removed. Take Eventual Consistency into account for calculated discount values.</p>
      * @param validFrom value to be set
      */
-
+    
     public void setValidFrom(final ZonedDateTime validFrom);
+    
 
     /**
      * factory method
      * @return instance of ProductDiscountSetValidFromAction
      */
-    public static ProductDiscountSetValidFromAction of() {
+    public static ProductDiscountSetValidFromAction of(){
         return new ProductDiscountSetValidFromActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy ProductDiscountSetValidFromAction
@@ -74,8 +83,7 @@ public interface ProductDiscountSetValidFromAction extends ProductDiscountUpdate
      * @return copy instance
      */
     @Nullable
-    public static ProductDiscountSetValidFromAction deepCopy(
-            @Nullable final ProductDiscountSetValidFromAction template) {
+    public static ProductDiscountSetValidFromAction deepCopy(@Nullable final ProductDiscountSetValidFromAction template) {
         if (template == null) {
             return null;
         }
@@ -91,7 +99,7 @@ public interface ProductDiscountSetValidFromAction extends ProductDiscountUpdate
     public static ProductDiscountSetValidFromActionBuilder builder() {
         return ProductDiscountSetValidFromActionBuilder.of();
     }
-
+    
     /**
      * create builder for ProductDiscountSetValidFromAction instance
      * @param template instance with prefilled values for the builder
@@ -100,6 +108,7 @@ public interface ProductDiscountSetValidFromAction extends ProductDiscountUpdate
     public static ProductDiscountSetValidFromActionBuilder builder(final ProductDiscountSetValidFromAction template) {
         return ProductDiscountSetValidFromActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -110,7 +119,7 @@ public interface ProductDiscountSetValidFromAction extends ProductDiscountUpdate
     default <T> T withProductDiscountSetValidFromAction(Function<ProductDiscountSetValidFromAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

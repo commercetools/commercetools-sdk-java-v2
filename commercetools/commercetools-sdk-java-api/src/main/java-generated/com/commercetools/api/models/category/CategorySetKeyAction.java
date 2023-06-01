@@ -1,16 +1,20 @@
-
 package com.commercetools.api.models.category;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
+import com.commercetools.api.models.category.CategoryUpdateAction;
+import com.commercetools.api.models.category.CategorySetKeyActionImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * CategorySetKeyAction
@@ -22,9 +26,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     CategorySetKeyAction categorySetKeyAction = CategorySetKeyAction.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = CategorySetKeyActionImpl.class)
 public interface CategorySetKeyAction extends CategoryUpdateAction {
 
@@ -37,7 +44,7 @@ public interface CategorySetKeyAction extends CategoryUpdateAction {
      *  <p>Value to set. If empty, any existing value will be removed.</p>
      * @return key
      */
-
+    
     @JsonProperty("key")
     public String getKey();
 
@@ -45,16 +52,18 @@ public interface CategorySetKeyAction extends CategoryUpdateAction {
      *  <p>Value to set. If empty, any existing value will be removed.</p>
      * @param key value to be set
      */
-
+    
     public void setKey(final String key);
+    
 
     /**
      * factory method
      * @return instance of CategorySetKeyAction
      */
-    public static CategorySetKeyAction of() {
+    public static CategorySetKeyAction of(){
         return new CategorySetKeyActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy CategorySetKeyAction
@@ -89,7 +98,7 @@ public interface CategorySetKeyAction extends CategoryUpdateAction {
     public static CategorySetKeyActionBuilder builder() {
         return CategorySetKeyActionBuilder.of();
     }
-
+    
     /**
      * create builder for CategorySetKeyAction instance
      * @param template instance with prefilled values for the builder
@@ -98,6 +107,7 @@ public interface CategorySetKeyAction extends CategoryUpdateAction {
     public static CategorySetKeyActionBuilder builder(final CategorySetKeyAction template) {
         return CategorySetKeyActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -108,11 +118,11 @@ public interface CategorySetKeyAction extends CategoryUpdateAction {
     default <T> T withCategorySetKeyAction(Function<CategorySetKeyAction, T> helper) {
         return helper.apply(this);
     }
-
     public static CategorySetKeyAction ofUnset() {
         return CategorySetKeyAction.of();
     }
-
+    
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

@@ -1,17 +1,21 @@
-
 package com.commercetools.api.models.subscription;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
+import com.commercetools.api.models.subscription.AwsAuthenticationMode;
+import com.commercetools.api.models.subscription.Destination;
+import com.commercetools.api.models.subscription.SnsDestinationImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>AWS SNS can be used to push messages to AWS Lambda, HTTP endpoints (webhooks), or fan-out messages to SQS queues. The SQS queue must be a Standard queue type.</p>
@@ -27,9 +31,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .topicArn("{topicArn}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = SnsDestinationImpl.class)
 public interface SnsDestination extends Destination {
 
@@ -42,18 +49,16 @@ public interface SnsDestination extends Destination {
      *  <p>Only present if <code>authenticationMode</code> is set to <code>Credentials</code>.</p>
      * @return accessKey
      */
-
+    
     @JsonProperty("accessKey")
     public String getAccessKey();
-
     /**
      *  <p>Only present if <code>authenticationMode</code> is set to <code>Credentials</code>.</p>
      * @return accessSecret
      */
-
+    
     @JsonProperty("accessSecret")
     public String getAccessSecret();
-
     /**
      *  <p>Amazon Resource Name (ARN) of the topic.</p>
      * @return topicArn
@@ -61,12 +66,11 @@ public interface SnsDestination extends Destination {
     @NotNull
     @JsonProperty("topicArn")
     public String getTopicArn();
-
     /**
      *  <p>Defines the method of authentication for the SNS topic.</p>
      * @return authenticationMode
      */
-
+    
     @JsonProperty("authenticationMode")
     public AwsAuthenticationMode getAuthenticationMode();
 
@@ -74,37 +78,42 @@ public interface SnsDestination extends Destination {
      *  <p>Only present if <code>authenticationMode</code> is set to <code>Credentials</code>.</p>
      * @param accessKey value to be set
      */
-
+    
     public void setAccessKey(final String accessKey);
-
+    
+    
     /**
      *  <p>Only present if <code>authenticationMode</code> is set to <code>Credentials</code>.</p>
      * @param accessSecret value to be set
      */
-
+    
     public void setAccessSecret(final String accessSecret);
-
+    
+    
     /**
      *  <p>Amazon Resource Name (ARN) of the topic.</p>
      * @param topicArn value to be set
      */
-
+    
     public void setTopicArn(final String topicArn);
-
+    
+    
     /**
      *  <p>Defines the method of authentication for the SNS topic.</p>
      * @param authenticationMode value to be set
      */
-
+    
     public void setAuthenticationMode(final AwsAuthenticationMode authenticationMode);
+    
 
     /**
      * factory method
      * @return instance of SnsDestination
      */
-    public static SnsDestination of() {
+    public static SnsDestination of(){
         return new SnsDestinationImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy SnsDestination
@@ -145,7 +154,7 @@ public interface SnsDestination extends Destination {
     public static SnsDestinationBuilder builder() {
         return SnsDestinationBuilder.of();
     }
-
+    
     /**
      * create builder for SnsDestination instance
      * @param template instance with prefilled values for the builder
@@ -154,6 +163,7 @@ public interface SnsDestination extends Destination {
     public static SnsDestinationBuilder builder(final SnsDestination template) {
         return SnsDestinationBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -164,7 +174,7 @@ public interface SnsDestination extends Destination {
     default <T> T withSnsDestination(Function<SnsDestination, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

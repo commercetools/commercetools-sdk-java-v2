@@ -1,19 +1,20 @@
-
 package com.commercetools.api.models.cart;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
 import com.commercetools.api.models.common.Money;
+import com.commercetools.api.models.cart.ExternalLineItemTotalPriceImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * ExternalLineItemTotalPrice
@@ -27,11 +28,15 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .totalPrice(totalPriceBuilder -> totalPriceBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = ExternalLineItemTotalPriceImpl.class)
-public interface ExternalLineItemTotalPrice {
+public interface ExternalLineItemTotalPrice  {
+
 
     /**
      *  <p>Price of the Line Item.</p>
@@ -42,7 +47,6 @@ public interface ExternalLineItemTotalPrice {
     @Valid
     @JsonProperty("price")
     public Money getPrice();
-
     /**
      *  <p>Total price of the Line Item.</p>
      * @return totalPrice
@@ -57,23 +61,26 @@ public interface ExternalLineItemTotalPrice {
      *  <p>The value is selected from the Product Variant according to the Product <code>priceMode</code>.</p>
      * @param price value to be set
      */
-
+    
     public void setPrice(final Money price);
-
+    
+    
     /**
      *  <p>Total price of the Line Item.</p>
      * @param totalPrice value to be set
      */
-
+    
     public void setTotalPrice(final Money totalPrice);
+    
 
     /**
      * factory method
      * @return instance of ExternalLineItemTotalPrice
      */
-    public static ExternalLineItemTotalPrice of() {
+    public static ExternalLineItemTotalPrice of(){
         return new ExternalLineItemTotalPriceImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy ExternalLineItemTotalPrice
@@ -110,7 +117,7 @@ public interface ExternalLineItemTotalPrice {
     public static ExternalLineItemTotalPriceBuilder builder() {
         return ExternalLineItemTotalPriceBuilder.of();
     }
-
+    
     /**
      * create builder for ExternalLineItemTotalPrice instance
      * @param template instance with prefilled values for the builder
@@ -119,6 +126,7 @@ public interface ExternalLineItemTotalPrice {
     public static ExternalLineItemTotalPriceBuilder builder(final ExternalLineItemTotalPrice template) {
         return ExternalLineItemTotalPriceBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -129,7 +137,7 @@ public interface ExternalLineItemTotalPrice {
     default <T> T withExternalLineItemTotalPrice(Function<ExternalLineItemTotalPrice, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

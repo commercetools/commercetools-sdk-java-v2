@@ -1,18 +1,21 @@
-
 package com.commercetools.api.models.type;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
+import com.commercetools.api.models.type.CustomFieldEnumValue;
+import com.commercetools.api.models.type.TypeUpdateAction;
+import com.commercetools.api.models.type.TypeAddEnumValueActionImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Adds a value to an EnumType. This update action can be used to update an EnumType FieldDefinition and a SetType FieldDefinition of EnumType.</p>
@@ -26,9 +29,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .value(valueBuilder -> valueBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = TypeAddEnumValueActionImpl.class)
 public interface TypeAddEnumValueAction extends TypeUpdateAction {
 
@@ -44,7 +50,6 @@ public interface TypeAddEnumValueAction extends TypeUpdateAction {
     @NotNull
     @JsonProperty("fieldName")
     public String getFieldName();
-
     /**
      *  <p>Value to append to the array.</p>
      * @return value
@@ -58,23 +63,26 @@ public interface TypeAddEnumValueAction extends TypeUpdateAction {
      *  <p><code>name</code> of the Field Definition to update.</p>
      * @param fieldName value to be set
      */
-
+    
     public void setFieldName(final String fieldName);
-
+    
+    
     /**
      *  <p>Value to append to the array.</p>
      * @param value value to be set
      */
-
+    
     public void setValue(final CustomFieldEnumValue value);
+    
 
     /**
      * factory method
      * @return instance of TypeAddEnumValueAction
      */
-    public static TypeAddEnumValueAction of() {
+    public static TypeAddEnumValueAction of(){
         return new TypeAddEnumValueActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy TypeAddEnumValueAction
@@ -111,7 +119,7 @@ public interface TypeAddEnumValueAction extends TypeUpdateAction {
     public static TypeAddEnumValueActionBuilder builder() {
         return TypeAddEnumValueActionBuilder.of();
     }
-
+    
     /**
      * create builder for TypeAddEnumValueAction instance
      * @param template instance with prefilled values for the builder
@@ -120,6 +128,7 @@ public interface TypeAddEnumValueAction extends TypeUpdateAction {
     public static TypeAddEnumValueActionBuilder builder(final TypeAddEnumValueAction template) {
         return TypeAddEnumValueActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -130,7 +139,7 @@ public interface TypeAddEnumValueAction extends TypeUpdateAction {
     default <T> T withTypeAddEnumValueAction(Function<TypeAddEnumValueAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

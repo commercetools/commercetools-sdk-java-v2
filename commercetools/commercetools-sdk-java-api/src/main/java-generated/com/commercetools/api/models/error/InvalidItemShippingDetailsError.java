@@ -1,17 +1,20 @@
-
 package com.commercetools.api.models.error;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
+import com.commercetools.api.models.error.ErrorObject;
+import com.commercetools.api.models.error.InvalidItemShippingDetailsErrorImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Returned when Line Item or Custom Line Item quantities set under ItemShippingDetails do not match the sum of the quantities in their respective shipping details.</p>
@@ -27,9 +30,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .itemId("{itemId}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = InvalidItemShippingDetailsErrorImpl.class)
 public interface InvalidItemShippingDetailsError extends ErrorObject {
 
@@ -45,7 +51,6 @@ public interface InvalidItemShippingDetailsError extends ErrorObject {
     @NotNull
     @JsonProperty("code")
     public String getCode();
-
     /**
      *  <p><code>"Inconsistent shipping details for $subject with ID $itemId. $subject quantity is $itemQuantity and shippingTargets quantity sum is $quantitySum."</code></p>
      * @return message
@@ -53,7 +58,6 @@ public interface InvalidItemShippingDetailsError extends ErrorObject {
     @NotNull
     @JsonProperty("message")
     public String getMessage();
-
     /**
      *  <p><code>"LineItem"</code> or <code>"CustomLineItem"</code></p>
      * @return subject
@@ -61,7 +65,6 @@ public interface InvalidItemShippingDetailsError extends ErrorObject {
     @NotNull
     @JsonProperty("subject")
     public String getSubject();
-
     /**
      *  <p>Unique identifier of the Line Item or Custom Line Item.</p>
      * @return itemId
@@ -74,30 +77,34 @@ public interface InvalidItemShippingDetailsError extends ErrorObject {
      *  <p><code>"Inconsistent shipping details for $subject with ID $itemId. $subject quantity is $itemQuantity and shippingTargets quantity sum is $quantitySum."</code></p>
      * @param message value to be set
      */
-
+    
     public void setMessage(final String message);
-
+    
+    
     /**
      *  <p><code>"LineItem"</code> or <code>"CustomLineItem"</code></p>
      * @param subject value to be set
      */
-
+    
     public void setSubject(final String subject);
-
+    
+    
     /**
      *  <p>Unique identifier of the Line Item or Custom Line Item.</p>
      * @param itemId value to be set
      */
-
+    
     public void setItemId(final String itemId);
+    
 
     /**
      * factory method
      * @return instance of InvalidItemShippingDetailsError
      */
-    public static InvalidItemShippingDetailsError of() {
+    public static InvalidItemShippingDetailsError of(){
         return new InvalidItemShippingDetailsErrorImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy InvalidItemShippingDetailsError
@@ -138,7 +145,7 @@ public interface InvalidItemShippingDetailsError extends ErrorObject {
     public static InvalidItemShippingDetailsErrorBuilder builder() {
         return InvalidItemShippingDetailsErrorBuilder.of();
     }
-
+    
     /**
      * create builder for InvalidItemShippingDetailsError instance
      * @param template instance with prefilled values for the builder
@@ -147,6 +154,7 @@ public interface InvalidItemShippingDetailsError extends ErrorObject {
     public static InvalidItemShippingDetailsErrorBuilder builder(final InvalidItemShippingDetailsError template) {
         return InvalidItemShippingDetailsErrorBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -157,7 +165,7 @@ public interface InvalidItemShippingDetailsError extends ErrorObject {
     default <T> T withInvalidItemShippingDetailsError(Function<InvalidItemShippingDetailsError, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

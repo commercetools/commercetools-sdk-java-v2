@@ -1,10 +1,11 @@
-
 package com.commercetools.api.models.order_edit;
 
-import java.util.*;
-
+import com.commercetools.api.models.order.StagedOrderUpdateAction;
+import com.commercetools.api.models.order_edit.StagedOrderSetCountryAction;
 import javax.annotation.Nullable;
-
+import java.util.*;
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -17,32 +18,39 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     StagedOrderSetCountryAction stagedOrderSetCountryAction = StagedOrderSetCountryAction.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class StagedOrderSetCountryActionBuilder implements Builder<StagedOrderSetCountryAction> {
 
+    
     @Nullable
     private String country;
 
+    
     /**
      * set the value to the country
      * @param country value to be set
      * @return Builder
      */
-
+    
     public StagedOrderSetCountryActionBuilder country(@Nullable final String country) {
         this.country = country;
         return this;
     }
+    
+    
 
     /**
      * value of country}
      * @return country
      */
-
+    
     @Nullable
-    public String getCountry() {
+    public String getCountry(){
         return this.country;
     }
 
@@ -53,7 +61,7 @@ public class StagedOrderSetCountryActionBuilder implements Builder<StagedOrderSe
     public StagedOrderSetCountryAction build() {
         return new StagedOrderSetCountryActionImpl(country);
     }
-
+    
     /**
      * builds StagedOrderSetCountryAction without checking for non-null required values
      * @return StagedOrderSetCountryAction
@@ -64,7 +72,7 @@ public class StagedOrderSetCountryActionBuilder implements Builder<StagedOrderSe
 
     /**
      * factory method for an instance of StagedOrderSetCountryActionBuilder
-     * @return builder
+     * @return builder 
      */
     public static StagedOrderSetCountryActionBuilder of() {
         return new StagedOrderSetCountryActionBuilder();

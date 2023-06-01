@@ -1,9 +1,12 @@
-
 package com.commercetools.api.models.cart_discount;
 
+import com.commercetools.api.models.cart_discount.CartDiscountUpdateAction;
+import com.commercetools.api.models.common.LocalizedString;
+import com.commercetools.api.models.cart_discount.CartDiscountChangeNameAction;
+import javax.annotation.Nullable;
 import java.util.*;
 import java.util.function.Function;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -17,54 +20,61 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .name(nameBuilder -> nameBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class CartDiscountChangeNameActionBuilder implements Builder<CartDiscountChangeNameAction> {
 
+    
+    
     private com.commercetools.api.models.common.LocalizedString name;
 
+    
     /**
      *  <p>New value to set.</p>
      * @param builder function to build the name value
      * @return Builder
      */
-
-    public CartDiscountChangeNameActionBuilder name(
-            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
+    
+    public CartDiscountChangeNameActionBuilder name(Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
         this.name = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of()).build();
         return this;
     }
-
+    
     /**
      *  <p>New value to set.</p>
      * @param builder function to build the name value
      * @return Builder
      */
-
-    public CartDiscountChangeNameActionBuilder withName(
-            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedString> builder) {
+    
+    public CartDiscountChangeNameActionBuilder withName(Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedString> builder) {
         this.name = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of());
         return this;
     }
-
+                    
     /**
      *  <p>New value to set.</p>
      * @param name value to be set
      * @return Builder
      */
-
-    public CartDiscountChangeNameActionBuilder name(final com.commercetools.api.models.common.LocalizedString name) {
+    
+    public CartDiscountChangeNameActionBuilder name( final com.commercetools.api.models.common.LocalizedString name) {
         this.name = name;
         return this;
     }
+    
+    
 
     /**
      *  <p>New value to set.</p>
      * @return name
      */
-
-    public com.commercetools.api.models.common.LocalizedString getName() {
+    
+    
+    public com.commercetools.api.models.common.LocalizedString getName(){
         return this.name;
     }
 
@@ -76,7 +86,7 @@ public class CartDiscountChangeNameActionBuilder implements Builder<CartDiscount
         Objects.requireNonNull(name, CartDiscountChangeNameAction.class + ": name is missing");
         return new CartDiscountChangeNameActionImpl(name);
     }
-
+    
     /**
      * builds CartDiscountChangeNameAction without checking for non-null required values
      * @return CartDiscountChangeNameAction
@@ -87,7 +97,7 @@ public class CartDiscountChangeNameActionBuilder implements Builder<CartDiscount
 
     /**
      * factory method for an instance of CartDiscountChangeNameActionBuilder
-     * @return builder
+     * @return builder 
      */
     public static CartDiscountChangeNameActionBuilder of() {
         return new CartDiscountChangeNameActionBuilder();

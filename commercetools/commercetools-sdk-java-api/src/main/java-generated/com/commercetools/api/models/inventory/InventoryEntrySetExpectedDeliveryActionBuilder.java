@@ -1,10 +1,12 @@
-
 package com.commercetools.api.models.inventory;
 
-import java.util.*;
-
+import com.commercetools.api.models.inventory.InventoryEntryUpdateAction;
+import java.time.ZonedDateTime;
+import com.commercetools.api.models.inventory.InventoryEntrySetExpectedDeliveryAction;
 import javax.annotation.Nullable;
-
+import java.util.*;
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -17,34 +19,39 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     InventoryEntrySetExpectedDeliveryAction inventoryEntrySetExpectedDeliveryAction = InventoryEntrySetExpectedDeliveryAction.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
-public class InventoryEntrySetExpectedDeliveryActionBuilder
-        implements Builder<InventoryEntrySetExpectedDeliveryAction> {
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
+public class InventoryEntrySetExpectedDeliveryActionBuilder implements Builder<InventoryEntrySetExpectedDeliveryAction> {
 
+    
     @Nullable
     private java.time.ZonedDateTime expectedDelivery;
 
+    
     /**
      *  <p>Value to set. If empty, any existing value will be removed.</p>
      * @param expectedDelivery value to be set
      * @return Builder
      */
-
-    public InventoryEntrySetExpectedDeliveryActionBuilder expectedDelivery(
-            @Nullable final java.time.ZonedDateTime expectedDelivery) {
+    
+    public InventoryEntrySetExpectedDeliveryActionBuilder expectedDelivery(@Nullable final java.time.ZonedDateTime expectedDelivery) {
         this.expectedDelivery = expectedDelivery;
         return this;
     }
+    
+    
 
     /**
      *  <p>Value to set. If empty, any existing value will be removed.</p>
      * @return expectedDelivery
      */
-
+    
     @Nullable
-    public java.time.ZonedDateTime getExpectedDelivery() {
+    public java.time.ZonedDateTime getExpectedDelivery(){
         return this.expectedDelivery;
     }
 
@@ -55,7 +62,7 @@ public class InventoryEntrySetExpectedDeliveryActionBuilder
     public InventoryEntrySetExpectedDeliveryAction build() {
         return new InventoryEntrySetExpectedDeliveryActionImpl(expectedDelivery);
     }
-
+    
     /**
      * builds InventoryEntrySetExpectedDeliveryAction without checking for non-null required values
      * @return InventoryEntrySetExpectedDeliveryAction
@@ -66,7 +73,7 @@ public class InventoryEntrySetExpectedDeliveryActionBuilder
 
     /**
      * factory method for an instance of InventoryEntrySetExpectedDeliveryActionBuilder
-     * @return builder
+     * @return builder 
      */
     public static InventoryEntrySetExpectedDeliveryActionBuilder of() {
         return new InventoryEntrySetExpectedDeliveryActionBuilder();
@@ -77,8 +84,7 @@ public class InventoryEntrySetExpectedDeliveryActionBuilder
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static InventoryEntrySetExpectedDeliveryActionBuilder of(
-            final InventoryEntrySetExpectedDeliveryAction template) {
+    public static InventoryEntrySetExpectedDeliveryActionBuilder of(final InventoryEntrySetExpectedDeliveryAction template) {
         InventoryEntrySetExpectedDeliveryActionBuilder builder = new InventoryEntrySetExpectedDeliveryActionBuilder();
         builder.expectedDelivery = template.getExpectedDelivery();
         return builder;

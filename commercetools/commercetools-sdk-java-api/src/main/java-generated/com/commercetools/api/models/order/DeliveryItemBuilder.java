@@ -1,8 +1,11 @@
-
 package com.commercetools.api.models.order;
 
-import java.util.*;
 
+import com.commercetools.api.models.order.DeliveryItem;
+import javax.annotation.Nullable;
+import java.util.*;
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -17,52 +20,67 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .quantity(0.3)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class DeliveryItemBuilder implements Builder<DeliveryItem> {
 
+    
+    
     private String id;
-
+    
+    
+    
     private Long quantity;
 
+    
     /**
      *  <p>Unique identifier of the DeliveryItem.</p>
      * @param id value to be set
      * @return Builder
      */
-
-    public DeliveryItemBuilder id(final String id) {
+    
+    public DeliveryItemBuilder id( final String id) {
         this.id = id;
         return this;
     }
-
+    
+    
+    
+    
     /**
      * set the value to the quantity
      * @param quantity value to be set
      * @return Builder
      */
-
-    public DeliveryItemBuilder quantity(final Long quantity) {
+    
+    public DeliveryItemBuilder quantity( final Long quantity) {
         this.quantity = quantity;
         return this;
     }
+    
+    
 
     /**
      *  <p>Unique identifier of the DeliveryItem.</p>
      * @return id
      */
-
-    public String getId() {
+    
+    
+    public String getId(){
         return this.id;
     }
-
+    
     /**
      * value of quantity}
      * @return quantity
      */
-
-    public Long getQuantity() {
+    
+    
+    public Long getQuantity(){
         return this.quantity;
     }
 
@@ -75,7 +93,7 @@ public class DeliveryItemBuilder implements Builder<DeliveryItem> {
         Objects.requireNonNull(quantity, DeliveryItem.class + ": quantity is missing");
         return new DeliveryItemImpl(id, quantity);
     }
-
+    
     /**
      * builds DeliveryItem without checking for non-null required values
      * @return DeliveryItem
@@ -86,7 +104,7 @@ public class DeliveryItemBuilder implements Builder<DeliveryItem> {
 
     /**
      * factory method for an instance of DeliveryItemBuilder
-     * @return builder
+     * @return builder 
      */
     public static DeliveryItemBuilder of() {
         return new DeliveryItemBuilder();

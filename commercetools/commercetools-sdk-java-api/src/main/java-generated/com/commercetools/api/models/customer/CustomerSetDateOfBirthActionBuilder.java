@@ -1,10 +1,12 @@
-
 package com.commercetools.api.models.customer;
 
-import java.util.*;
-
+import com.commercetools.api.models.customer.CustomerUpdateAction;
+import java.time.LocalDate;
+import com.commercetools.api.models.customer.CustomerSetDateOfBirthAction;
 import javax.annotation.Nullable;
-
+import java.util.*;
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -17,32 +19,39 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     CustomerSetDateOfBirthAction customerSetDateOfBirthAction = CustomerSetDateOfBirthAction.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class CustomerSetDateOfBirthActionBuilder implements Builder<CustomerSetDateOfBirthAction> {
 
+    
     @Nullable
     private java.time.LocalDate dateOfBirth;
 
+    
     /**
      *  <p>Value to set. If empty, any existing value is removed.</p>
      * @param dateOfBirth value to be set
      * @return Builder
      */
-
+    
     public CustomerSetDateOfBirthActionBuilder dateOfBirth(@Nullable final java.time.LocalDate dateOfBirth) {
         this.dateOfBirth = dateOfBirth;
         return this;
     }
+    
+    
 
     /**
      *  <p>Value to set. If empty, any existing value is removed.</p>
      * @return dateOfBirth
      */
-
+    
     @Nullable
-    public java.time.LocalDate getDateOfBirth() {
+    public java.time.LocalDate getDateOfBirth(){
         return this.dateOfBirth;
     }
 
@@ -53,7 +62,7 @@ public class CustomerSetDateOfBirthActionBuilder implements Builder<CustomerSetD
     public CustomerSetDateOfBirthAction build() {
         return new CustomerSetDateOfBirthActionImpl(dateOfBirth);
     }
-
+    
     /**
      * builds CustomerSetDateOfBirthAction without checking for non-null required values
      * @return CustomerSetDateOfBirthAction
@@ -64,7 +73,7 @@ public class CustomerSetDateOfBirthActionBuilder implements Builder<CustomerSetD
 
     /**
      * factory method for an instance of CustomerSetDateOfBirthActionBuilder
-     * @return builder
+     * @return builder 
      */
     public static CustomerSetDateOfBirthActionBuilder of() {
         return new CustomerSetDateOfBirthActionBuilder();

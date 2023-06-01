@@ -1,8 +1,12 @@
-
 package com.commercetools.api.models.associate_role;
 
+import com.commercetools.api.models.common.KeyReference;
+import com.commercetools.api.models.common.ReferenceTypeId;
+import com.commercetools.api.models.associate_role.AssociateRoleKeyReference;
+import javax.annotation.Nullable;
 import java.util.*;
-
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -16,30 +20,39 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .key("{key}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class AssociateRoleKeyReferenceBuilder implements Builder<AssociateRoleKeyReference> {
 
+    
+    
     private String key;
 
+    
     /**
      *  <p>Unique and immutable key of the referenced AssociateRole.</p>
      * @param key value to be set
      * @return Builder
      */
-
-    public AssociateRoleKeyReferenceBuilder key(final String key) {
+    
+    public AssociateRoleKeyReferenceBuilder key( final String key) {
         this.key = key;
         return this;
     }
+    
+    
 
     /**
      *  <p>Unique and immutable key of the referenced AssociateRole.</p>
      * @return key
      */
-
-    public String getKey() {
+    
+    
+    public String getKey(){
         return this.key;
     }
 
@@ -51,7 +64,7 @@ public class AssociateRoleKeyReferenceBuilder implements Builder<AssociateRoleKe
         Objects.requireNonNull(key, AssociateRoleKeyReference.class + ": key is missing");
         return new AssociateRoleKeyReferenceImpl(key);
     }
-
+    
     /**
      * builds AssociateRoleKeyReference without checking for non-null required values
      * @return AssociateRoleKeyReference
@@ -62,7 +75,7 @@ public class AssociateRoleKeyReferenceBuilder implements Builder<AssociateRoleKe
 
     /**
      * factory method for an instance of AssociateRoleKeyReferenceBuilder
-     * @return builder
+     * @return builder 
      */
     public static AssociateRoleKeyReferenceBuilder of() {
         return new AssociateRoleKeyReferenceBuilder();

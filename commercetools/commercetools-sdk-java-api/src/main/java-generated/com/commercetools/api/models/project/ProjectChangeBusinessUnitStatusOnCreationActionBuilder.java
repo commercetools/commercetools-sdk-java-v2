@@ -1,8 +1,12 @@
-
 package com.commercetools.api.models.project;
 
+import com.commercetools.api.models.project.BusinessUnitConfigurationStatus;
+import com.commercetools.api.models.project.ProjectUpdateAction;
+import com.commercetools.api.models.project.ProjectChangeBusinessUnitStatusOnCreationAction;
+import javax.annotation.Nullable;
 import java.util.*;
-
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -16,32 +20,39 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .status(BusinessUnitConfigurationStatus.ACTIVE)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
-public class ProjectChangeBusinessUnitStatusOnCreationActionBuilder
-        implements Builder<ProjectChangeBusinessUnitStatusOnCreationAction> {
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
+public class ProjectChangeBusinessUnitStatusOnCreationActionBuilder implements Builder<ProjectChangeBusinessUnitStatusOnCreationAction> {
 
+    
+    
     private com.commercetools.api.models.project.BusinessUnitConfigurationStatus status;
 
+    
     /**
      *  <p>Status for Business Units created using the My Business Unit endpoint.</p>
      * @param status value to be set
      * @return Builder
      */
-
-    public ProjectChangeBusinessUnitStatusOnCreationActionBuilder status(
-            final com.commercetools.api.models.project.BusinessUnitConfigurationStatus status) {
+    
+    public ProjectChangeBusinessUnitStatusOnCreationActionBuilder status( final com.commercetools.api.models.project.BusinessUnitConfigurationStatus status) {
         this.status = status;
         return this;
     }
+    
+    
 
     /**
      *  <p>Status for Business Units created using the My Business Unit endpoint.</p>
      * @return status
      */
-
-    public com.commercetools.api.models.project.BusinessUnitConfigurationStatus getStatus() {
+    
+    
+    public com.commercetools.api.models.project.BusinessUnitConfigurationStatus getStatus(){
         return this.status;
     }
 
@@ -53,7 +64,7 @@ public class ProjectChangeBusinessUnitStatusOnCreationActionBuilder
         Objects.requireNonNull(status, ProjectChangeBusinessUnitStatusOnCreationAction.class + ": status is missing");
         return new ProjectChangeBusinessUnitStatusOnCreationActionImpl(status);
     }
-
+    
     /**
      * builds ProjectChangeBusinessUnitStatusOnCreationAction without checking for non-null required values
      * @return ProjectChangeBusinessUnitStatusOnCreationAction
@@ -64,7 +75,7 @@ public class ProjectChangeBusinessUnitStatusOnCreationActionBuilder
 
     /**
      * factory method for an instance of ProjectChangeBusinessUnitStatusOnCreationActionBuilder
-     * @return builder
+     * @return builder 
      */
     public static ProjectChangeBusinessUnitStatusOnCreationActionBuilder of() {
         return new ProjectChangeBusinessUnitStatusOnCreationActionBuilder();
@@ -75,8 +86,7 @@ public class ProjectChangeBusinessUnitStatusOnCreationActionBuilder
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static ProjectChangeBusinessUnitStatusOnCreationActionBuilder of(
-            final ProjectChangeBusinessUnitStatusOnCreationAction template) {
+    public static ProjectChangeBusinessUnitStatusOnCreationActionBuilder of(final ProjectChangeBusinessUnitStatusOnCreationAction template) {
         ProjectChangeBusinessUnitStatusOnCreationActionBuilder builder = new ProjectChangeBusinessUnitStatusOnCreationActionBuilder();
         builder.status = template.getStatus();
         return builder;

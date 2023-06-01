@@ -1,19 +1,20 @@
-
 package com.commercetools.api.models.cart;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
 import com.commercetools.api.models.common.Reference;
+import com.commercetools.api.models.cart.ReplicaCartDraftImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Used for replicating an existing Cart or Order.</p>
@@ -26,12 +27,15 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .reference(referenceBuilder -> referenceBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = ReplicaCartDraftImpl.class)
-public interface ReplicaCartDraft
-        extends com.commercetools.api.models.WithKey, io.vrap.rmf.base.client.Draft<ReplicaCartDraft> {
+public interface ReplicaCartDraft extends com.commercetools.api.models.WithKey, io.vrap.rmf.base.client.Draft<ReplicaCartDraft> {
+
 
     /**
      *  <p>A Reference represents a loose reference to another resource in the same Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>
@@ -41,12 +45,11 @@ public interface ReplicaCartDraft
     @Valid
     @JsonProperty("reference")
     public Reference getReference();
-
     /**
      *  <p>User-defined unique identifier for the Cart.</p>
      * @return key
      */
-
+    
     @JsonProperty("key")
     public String getKey();
 
@@ -54,23 +57,26 @@ public interface ReplicaCartDraft
      *  <p>A Reference represents a loose reference to another resource in the same Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>
      * @param reference value to be set
      */
-
+    
     public void setReference(final Reference reference);
-
+    
+    
     /**
      *  <p>User-defined unique identifier for the Cart.</p>
      * @param key value to be set
      */
-
+    
     public void setKey(final String key);
+    
 
     /**
      * factory method
      * @return instance of ReplicaCartDraft
      */
-    public static ReplicaCartDraft of() {
+    public static ReplicaCartDraft of(){
         return new ReplicaCartDraftImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy ReplicaCartDraft
@@ -107,7 +113,7 @@ public interface ReplicaCartDraft
     public static ReplicaCartDraftBuilder builder() {
         return ReplicaCartDraftBuilder.of();
     }
-
+    
     /**
      * create builder for ReplicaCartDraft instance
      * @param template instance with prefilled values for the builder
@@ -116,6 +122,7 @@ public interface ReplicaCartDraft
     public static ReplicaCartDraftBuilder builder(final ReplicaCartDraft template) {
         return ReplicaCartDraftBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -126,13 +133,13 @@ public interface ReplicaCartDraft
     default <T> T withReplicaCartDraft(Function<ReplicaCartDraft, T> helper) {
         return helper.apply(this);
     }
-
     @JsonIgnore
     @Deprecated
     public default void setReference(final Object reference) {
-        setReference((Reference) reference);
+        setReference((Reference)reference);
     };
-
+    
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

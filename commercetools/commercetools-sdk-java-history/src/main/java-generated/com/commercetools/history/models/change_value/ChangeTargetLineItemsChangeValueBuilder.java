@@ -1,8 +1,11 @@
-
 package com.commercetools.history.models.change_value;
 
+import com.commercetools.history.models.change_value.ChangeTargetChangeValue;
+import com.commercetools.history.models.change_value.ChangeTargetLineItemsChangeValue;
+import javax.annotation.Nullable;
 import java.util.*;
-
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -16,30 +19,39 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .predicate("{predicate}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class ChangeTargetLineItemsChangeValueBuilder implements Builder<ChangeTargetLineItemsChangeValue> {
 
+    
+    
     private String predicate;
 
+    
     /**
      * set the value to the predicate
      * @param predicate value to be set
      * @return Builder
      */
-
-    public ChangeTargetLineItemsChangeValueBuilder predicate(final String predicate) {
+    
+    public ChangeTargetLineItemsChangeValueBuilder predicate( final String predicate) {
         this.predicate = predicate;
         return this;
     }
+    
+    
 
     /**
      * value of predicate}
      * @return predicate
      */
-
-    public String getPredicate() {
+    
+    
+    public String getPredicate(){
         return this.predicate;
     }
 
@@ -51,7 +63,7 @@ public class ChangeTargetLineItemsChangeValueBuilder implements Builder<ChangeTa
         Objects.requireNonNull(predicate, ChangeTargetLineItemsChangeValue.class + ": predicate is missing");
         return new ChangeTargetLineItemsChangeValueImpl(predicate);
     }
-
+    
     /**
      * builds ChangeTargetLineItemsChangeValue without checking for non-null required values
      * @return ChangeTargetLineItemsChangeValue
@@ -62,7 +74,7 @@ public class ChangeTargetLineItemsChangeValueBuilder implements Builder<ChangeTa
 
     /**
      * factory method for an instance of ChangeTargetLineItemsChangeValueBuilder
-     * @return builder
+     * @return builder 
      */
     public static ChangeTargetLineItemsChangeValueBuilder of() {
         return new ChangeTargetLineItemsChangeValueBuilder();

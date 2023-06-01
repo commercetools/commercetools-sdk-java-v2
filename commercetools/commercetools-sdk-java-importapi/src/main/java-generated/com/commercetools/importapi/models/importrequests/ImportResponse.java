@@ -1,20 +1,20 @@
-
 package com.commercetools.importapi.models.importrequests;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-import java.util.stream.Collectors;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
 import com.commercetools.importapi.models.importoperations.ImportOperationStatus;
+import com.commercetools.importapi.models.importrequests.ImportResponseImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>A list of the ID's and validation statuses of newly created ImportOperations. Used as a response at each resource-specific import endpoint, for example, at Import Categories and Import ProductTypes.</p>
@@ -27,11 +27,15 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .plusOperationStatus(operationStatusBuilder -> operationStatusBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = ImportResponseImpl.class)
-public interface ImportResponse {
+public interface ImportResponse  {
+
 
     /**
      *
@@ -46,24 +50,24 @@ public interface ImportResponse {
      * set operationStatus
      * @param operationStatus values to be set
      */
-
+    
     @JsonIgnore
-    public void setOperationStatus(final ImportOperationStatus... operationStatus);
-
+    public void setOperationStatus(final ImportOperationStatus ...operationStatus);
     /**
      * set operationStatus
      * @param operationStatus values to be set
      */
-
+    
     public void setOperationStatus(final List<ImportOperationStatus> operationStatus);
 
     /**
      * factory method
      * @return instance of ImportResponse
      */
-    public static ImportResponse of() {
+    public static ImportResponse of(){
         return new ImportResponseImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy ImportResponse
@@ -88,9 +92,7 @@ public interface ImportResponse {
         }
         ImportResponseImpl instance = new ImportResponseImpl();
         instance.setOperationStatus(Optional.ofNullable(template.getOperationStatus())
-                .map(t -> t.stream()
-                        .map(com.commercetools.importapi.models.importoperations.ImportOperationStatus::deepCopy)
-                        .collect(Collectors.toList()))
+                .map(t -> t.stream().map(com.commercetools.importapi.models.importoperations.ImportOperationStatus::deepCopy).collect(Collectors.toList()))
                 .orElse(null));
         return instance;
     }
@@ -102,7 +104,7 @@ public interface ImportResponse {
     public static ImportResponseBuilder builder() {
         return ImportResponseBuilder.of();
     }
-
+    
     /**
      * create builder for ImportResponse instance
      * @param template instance with prefilled values for the builder
@@ -111,6 +113,7 @@ public interface ImportResponse {
     public static ImportResponseBuilder builder(final ImportResponse template) {
         return ImportResponseBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -121,7 +124,7 @@ public interface ImportResponse {
     default <T> T withImportResponse(Function<ImportResponse, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

@@ -1,19 +1,22 @@
-
 package com.commercetools.history.models.change;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
+import com.commercetools.history.models.change.Change;
 import com.commercetools.history.models.common.LocalizedString;
+import java.lang.Object;
+import com.commercetools.history.models.change.SetOrderLineItemCustomFieldChangeImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * SetOrderLineItemCustomFieldChange
@@ -30,9 +33,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .lineItem(lineItemBuilder -> lineItemBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = SetOrderLineItemCustomFieldChangeImpl.class)
 public interface SetOrderLineItemCustomFieldChange extends Change {
 
@@ -48,7 +54,6 @@ public interface SetOrderLineItemCustomFieldChange extends Change {
     @NotNull
     @JsonProperty("type")
     public String getType();
-
     /**
      *  <p>Update action for <code>setLineItemCustomField</code></p>
      * @return change
@@ -56,7 +61,6 @@ public interface SetOrderLineItemCustomFieldChange extends Change {
     @NotNull
     @JsonProperty("change")
     public String getChange();
-
     /**
      *
      * @return customTypeId
@@ -64,7 +68,6 @@ public interface SetOrderLineItemCustomFieldChange extends Change {
     @NotNull
     @JsonProperty("customTypeId")
     public String getCustomTypeId();
-
     /**
      *
      * @return name
@@ -72,7 +75,6 @@ public interface SetOrderLineItemCustomFieldChange extends Change {
     @NotNull
     @JsonProperty("name")
     public String getName();
-
     /**
      *
      * @return variant
@@ -80,7 +82,6 @@ public interface SetOrderLineItemCustomFieldChange extends Change {
     @NotNull
     @JsonProperty("variant")
     public String getVariant();
-
     /**
      *
      * @return lineItem
@@ -89,7 +90,6 @@ public interface SetOrderLineItemCustomFieldChange extends Change {
     @Valid
     @JsonProperty("lineItem")
     public LocalizedString getLineItem();
-
     /**
      *
      * @return nextValue
@@ -97,7 +97,6 @@ public interface SetOrderLineItemCustomFieldChange extends Change {
     @NotNull
     @JsonProperty("nextValue")
     public Object getNextValue();
-
     /**
      *
      * @return previousValue
@@ -110,58 +109,66 @@ public interface SetOrderLineItemCustomFieldChange extends Change {
      *  <p>Update action for <code>setLineItemCustomField</code></p>
      * @param change value to be set
      */
-
+    
     public void setChange(final String change);
-
+    
+    
     /**
      * set customTypeId
      * @param customTypeId value to be set
      */
-
+    
     public void setCustomTypeId(final String customTypeId);
-
+    
+    
     /**
      * set name
      * @param name value to be set
      */
-
+    
     public void setName(final String name);
-
+    
+    
     /**
      * set variant
      * @param variant value to be set
      */
-
+    
     public void setVariant(final String variant);
-
+    
+    
     /**
      * set lineItem
      * @param lineItem value to be set
      */
-
+    
     public void setLineItem(final LocalizedString lineItem);
-
+    
+    
     /**
      * set nextValue
      * @param nextValue value to be set
      */
-
+    
     public void setNextValue(final Object nextValue);
-
+    
+    
     /**
      * set previousValue
      * @param previousValue value to be set
      */
-
+    
     public void setPreviousValue(final Object previousValue);
+    
 
     /**
      * factory method
      * @return instance of SetOrderLineItemCustomFieldChange
      */
-    public static SetOrderLineItemCustomFieldChange of() {
+    public static SetOrderLineItemCustomFieldChange of(){
         return new SetOrderLineItemCustomFieldChangeImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy SetOrderLineItemCustomFieldChange
@@ -186,8 +193,7 @@ public interface SetOrderLineItemCustomFieldChange extends Change {
      * @return copy instance
      */
     @Nullable
-    public static SetOrderLineItemCustomFieldChange deepCopy(
-            @Nullable final SetOrderLineItemCustomFieldChange template) {
+    public static SetOrderLineItemCustomFieldChange deepCopy(@Nullable final SetOrderLineItemCustomFieldChange template) {
         if (template == null) {
             return null;
         }
@@ -209,7 +215,7 @@ public interface SetOrderLineItemCustomFieldChange extends Change {
     public static SetOrderLineItemCustomFieldChangeBuilder builder() {
         return SetOrderLineItemCustomFieldChangeBuilder.of();
     }
-
+    
     /**
      * create builder for SetOrderLineItemCustomFieldChange instance
      * @param template instance with prefilled values for the builder
@@ -218,6 +224,7 @@ public interface SetOrderLineItemCustomFieldChange extends Change {
     public static SetOrderLineItemCustomFieldChangeBuilder builder(final SetOrderLineItemCustomFieldChange template) {
         return SetOrderLineItemCustomFieldChangeBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -228,7 +235,7 @@ public interface SetOrderLineItemCustomFieldChange extends Change {
     default <T> T withSetOrderLineItemCustomFieldChange(Function<SetOrderLineItemCustomFieldChange, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

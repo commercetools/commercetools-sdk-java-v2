@@ -1,22 +1,22 @@
-
 package com.commercetools.api.models.order_edit;
-
-import java.time.*;
-import java.time.ZonedDateTime;
-import java.util.*;
-import java.util.function.Function;
-import java.util.stream.Collectors;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.order.ReturnItemDraft;
 import com.commercetools.api.models.order.StagedOrderUpdateAction;
+import java.time.ZonedDateTime;
+import com.commercetools.api.models.order_edit.StagedOrderAddReturnInfoActionImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * StagedOrderAddReturnInfoAction
@@ -29,9 +29,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .plusItems(itemsBuilder -> itemsBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = StagedOrderAddReturnInfoActionImpl.class)
 public interface StagedOrderAddReturnInfoAction extends StagedOrderUpdateAction {
 
@@ -44,10 +47,9 @@ public interface StagedOrderAddReturnInfoAction extends StagedOrderUpdateAction 
      *
      * @return returnTrackingId
      */
-
+    
     @JsonProperty("returnTrackingId")
     public String getReturnTrackingId();
-
     /**
      *
      * @return items
@@ -56,12 +58,11 @@ public interface StagedOrderAddReturnInfoAction extends StagedOrderUpdateAction 
     @Valid
     @JsonProperty("items")
     public List<ReturnItemDraft> getItems();
-
     /**
      *
      * @return returnDate
      */
-
+    
     @JsonProperty("returnDate")
     public ZonedDateTime getReturnDate();
 
@@ -69,38 +70,40 @@ public interface StagedOrderAddReturnInfoAction extends StagedOrderUpdateAction 
      * set returnTrackingId
      * @param returnTrackingId value to be set
      */
-
+    
     public void setReturnTrackingId(final String returnTrackingId);
-
+    
+    
     /**
      * set items
      * @param items values to be set
      */
-
+    
     @JsonIgnore
-    public void setItems(final ReturnItemDraft... items);
-
+    public void setItems(final ReturnItemDraft ...items);
     /**
      * set items
      * @param items values to be set
      */
-
+    
     public void setItems(final List<ReturnItemDraft> items);
-
+    
     /**
      * set returnDate
      * @param returnDate value to be set
      */
-
+    
     public void setReturnDate(final ZonedDateTime returnDate);
+    
 
     /**
      * factory method
      * @return instance of StagedOrderAddReturnInfoAction
      */
-    public static StagedOrderAddReturnInfoAction of() {
+    public static StagedOrderAddReturnInfoAction of(){
         return new StagedOrderAddReturnInfoActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy StagedOrderAddReturnInfoAction
@@ -128,9 +131,7 @@ public interface StagedOrderAddReturnInfoAction extends StagedOrderUpdateAction 
         StagedOrderAddReturnInfoActionImpl instance = new StagedOrderAddReturnInfoActionImpl();
         instance.setReturnTrackingId(template.getReturnTrackingId());
         instance.setItems(Optional.ofNullable(template.getItems())
-                .map(t -> t.stream()
-                        .map(com.commercetools.api.models.order.ReturnItemDraft::deepCopy)
-                        .collect(Collectors.toList()))
+                .map(t -> t.stream().map(com.commercetools.api.models.order.ReturnItemDraft::deepCopy).collect(Collectors.toList()))
                 .orElse(null));
         instance.setReturnDate(template.getReturnDate());
         return instance;
@@ -143,7 +144,7 @@ public interface StagedOrderAddReturnInfoAction extends StagedOrderUpdateAction 
     public static StagedOrderAddReturnInfoActionBuilder builder() {
         return StagedOrderAddReturnInfoActionBuilder.of();
     }
-
+    
     /**
      * create builder for StagedOrderAddReturnInfoAction instance
      * @param template instance with prefilled values for the builder
@@ -152,6 +153,7 @@ public interface StagedOrderAddReturnInfoAction extends StagedOrderUpdateAction 
     public static StagedOrderAddReturnInfoActionBuilder builder(final StagedOrderAddReturnInfoAction template) {
         return StagedOrderAddReturnInfoActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -162,7 +164,7 @@ public interface StagedOrderAddReturnInfoAction extends StagedOrderUpdateAction 
     default <T> T withStagedOrderAddReturnInfoAction(Function<StagedOrderAddReturnInfoAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

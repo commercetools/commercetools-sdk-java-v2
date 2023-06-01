@@ -1,16 +1,62 @@
-
 package com.commercetools.api.models.message;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
+import com.commercetools.api.models.message.CustomLineItemStateTransitionMessagePayload;
+import com.commercetools.api.models.message.DeliveryAddedMessagePayload;
+import com.commercetools.api.models.message.DeliveryAddressSetMessagePayload;
+import com.commercetools.api.models.message.DeliveryItemsUpdatedMessagePayload;
+import com.commercetools.api.models.message.DeliveryRemovedMessagePayload;
+import com.commercetools.api.models.message.LineItemStateTransitionMessagePayload;
+import com.commercetools.api.models.message.MessagePayload;
+import com.commercetools.api.models.message.OrderBillingAddressSetMessagePayload;
+import com.commercetools.api.models.message.OrderCreatedMessagePayload;
+import com.commercetools.api.models.message.OrderCustomLineItemAddedMessagePayload;
+import com.commercetools.api.models.message.OrderCustomLineItemDiscountSetMessagePayload;
+import com.commercetools.api.models.message.OrderCustomLineItemQuantityChangedMessagePayload;
+import com.commercetools.api.models.message.OrderCustomLineItemRemovedMessagePayload;
+import com.commercetools.api.models.message.OrderCustomerEmailSetMessagePayload;
+import com.commercetools.api.models.message.OrderCustomerGroupSetMessagePayload;
+import com.commercetools.api.models.message.OrderCustomerSetMessagePayload;
+import com.commercetools.api.models.message.OrderDeletedMessagePayload;
+import com.commercetools.api.models.message.OrderDiscountCodeAddedMessagePayload;
+import com.commercetools.api.models.message.OrderDiscountCodeRemovedMessagePayload;
+import com.commercetools.api.models.message.OrderDiscountCodeStateSetMessagePayload;
+import com.commercetools.api.models.message.OrderEditAppliedMessagePayload;
+import com.commercetools.api.models.message.OrderImportedMessagePayload;
+import com.commercetools.api.models.message.OrderLineItemAddedMessagePayload;
+import com.commercetools.api.models.message.OrderLineItemDiscountSetMessagePayload;
+import com.commercetools.api.models.message.OrderLineItemDistributionChannelSetMessagePayload;
+import com.commercetools.api.models.message.OrderLineItemRemovedMessagePayload;
+import com.commercetools.api.models.message.OrderPaymentStateChangedMessagePayload;
+import com.commercetools.api.models.message.OrderPurchaseOrderNumberSetMessagePayload;
+import com.commercetools.api.models.message.OrderReturnShipmentStateChangedMessagePayload;
+import com.commercetools.api.models.message.OrderShipmentStateChangedMessagePayload;
+import com.commercetools.api.models.message.OrderShippingAddressSetMessagePayload;
+import com.commercetools.api.models.message.OrderShippingInfoSetMessagePayload;
+import com.commercetools.api.models.message.OrderShippingRateInputSetMessagePayload;
+import com.commercetools.api.models.message.OrderStateChangedMessagePayload;
+import com.commercetools.api.models.message.OrderStateTransitionMessagePayload;
+import com.commercetools.api.models.message.OrderStoreSetMessagePayload;
+import com.commercetools.api.models.message.ParcelAddedToDeliveryMessagePayload;
+import com.commercetools.api.models.message.ParcelItemsUpdatedMessagePayload;
+import com.commercetools.api.models.message.ParcelMeasurementsUpdatedMessagePayload;
+import com.commercetools.api.models.message.ParcelRemovedFromDeliveryMessagePayload;
+import com.commercetools.api.models.message.ParcelTrackingDataUpdatedMessagePayload;
+import com.commercetools.api.models.message.ReturnInfoAddedMessagePayload;
+import com.commercetools.api.models.message.ReturnInfoSetMessagePayload;
 
-import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * OrderMessagePayload
@@ -22,10 +68,18 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     OrderMessagePayload orderMessagePayload = OrderMessagePayload.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public interface OrderMessagePayload extends MessagePayload {
+
+
+
+
+
 
     /**
      * factory method to create a deep copy of OrderMessagePayload
@@ -38,176 +92,136 @@ public interface OrderMessagePayload extends MessagePayload {
             return null;
         }
         if (template instanceof com.commercetools.api.models.message.CustomLineItemStateTransitionMessagePayload) {
-            return com.commercetools.api.models.message.CustomLineItemStateTransitionMessagePayload.deepCopy(
-                (com.commercetools.api.models.message.CustomLineItemStateTransitionMessagePayload) template);
+            return com.commercetools.api.models.message.CustomLineItemStateTransitionMessagePayload.deepCopy((com.commercetools.api.models.message.CustomLineItemStateTransitionMessagePayload)template);
         }
         if (template instanceof com.commercetools.api.models.message.DeliveryAddedMessagePayload) {
-            return com.commercetools.api.models.message.DeliveryAddedMessagePayload
-                    .deepCopy((com.commercetools.api.models.message.DeliveryAddedMessagePayload) template);
+            return com.commercetools.api.models.message.DeliveryAddedMessagePayload.deepCopy((com.commercetools.api.models.message.DeliveryAddedMessagePayload)template);
         }
         if (template instanceof com.commercetools.api.models.message.DeliveryAddressSetMessagePayload) {
-            return com.commercetools.api.models.message.DeliveryAddressSetMessagePayload
-                    .deepCopy((com.commercetools.api.models.message.DeliveryAddressSetMessagePayload) template);
+            return com.commercetools.api.models.message.DeliveryAddressSetMessagePayload.deepCopy((com.commercetools.api.models.message.DeliveryAddressSetMessagePayload)template);
         }
         if (template instanceof com.commercetools.api.models.message.DeliveryItemsUpdatedMessagePayload) {
-            return com.commercetools.api.models.message.DeliveryItemsUpdatedMessagePayload
-                    .deepCopy((com.commercetools.api.models.message.DeliveryItemsUpdatedMessagePayload) template);
+            return com.commercetools.api.models.message.DeliveryItemsUpdatedMessagePayload.deepCopy((com.commercetools.api.models.message.DeliveryItemsUpdatedMessagePayload)template);
         }
         if (template instanceof com.commercetools.api.models.message.DeliveryRemovedMessagePayload) {
-            return com.commercetools.api.models.message.DeliveryRemovedMessagePayload
-                    .deepCopy((com.commercetools.api.models.message.DeliveryRemovedMessagePayload) template);
+            return com.commercetools.api.models.message.DeliveryRemovedMessagePayload.deepCopy((com.commercetools.api.models.message.DeliveryRemovedMessagePayload)template);
         }
         if (template instanceof com.commercetools.api.models.message.LineItemStateTransitionMessagePayload) {
-            return com.commercetools.api.models.message.LineItemStateTransitionMessagePayload
-                    .deepCopy((com.commercetools.api.models.message.LineItemStateTransitionMessagePayload) template);
+            return com.commercetools.api.models.message.LineItemStateTransitionMessagePayload.deepCopy((com.commercetools.api.models.message.LineItemStateTransitionMessagePayload)template);
         }
         if (template instanceof com.commercetools.api.models.message.OrderBillingAddressSetMessagePayload) {
-            return com.commercetools.api.models.message.OrderBillingAddressSetMessagePayload
-                    .deepCopy((com.commercetools.api.models.message.OrderBillingAddressSetMessagePayload) template);
+            return com.commercetools.api.models.message.OrderBillingAddressSetMessagePayload.deepCopy((com.commercetools.api.models.message.OrderBillingAddressSetMessagePayload)template);
         }
         if (template instanceof com.commercetools.api.models.message.OrderCreatedMessagePayload) {
-            return com.commercetools.api.models.message.OrderCreatedMessagePayload
-                    .deepCopy((com.commercetools.api.models.message.OrderCreatedMessagePayload) template);
+            return com.commercetools.api.models.message.OrderCreatedMessagePayload.deepCopy((com.commercetools.api.models.message.OrderCreatedMessagePayload)template);
         }
         if (template instanceof com.commercetools.api.models.message.OrderCustomLineItemAddedMessagePayload) {
-            return com.commercetools.api.models.message.OrderCustomLineItemAddedMessagePayload
-                    .deepCopy((com.commercetools.api.models.message.OrderCustomLineItemAddedMessagePayload) template);
+            return com.commercetools.api.models.message.OrderCustomLineItemAddedMessagePayload.deepCopy((com.commercetools.api.models.message.OrderCustomLineItemAddedMessagePayload)template);
         }
         if (template instanceof com.commercetools.api.models.message.OrderCustomLineItemDiscountSetMessagePayload) {
-            return com.commercetools.api.models.message.OrderCustomLineItemDiscountSetMessagePayload.deepCopy(
-                (com.commercetools.api.models.message.OrderCustomLineItemDiscountSetMessagePayload) template);
+            return com.commercetools.api.models.message.OrderCustomLineItemDiscountSetMessagePayload.deepCopy((com.commercetools.api.models.message.OrderCustomLineItemDiscountSetMessagePayload)template);
         }
         if (template instanceof com.commercetools.api.models.message.OrderCustomLineItemQuantityChangedMessagePayload) {
-            return com.commercetools.api.models.message.OrderCustomLineItemQuantityChangedMessagePayload.deepCopy(
-                (com.commercetools.api.models.message.OrderCustomLineItemQuantityChangedMessagePayload) template);
+            return com.commercetools.api.models.message.OrderCustomLineItemQuantityChangedMessagePayload.deepCopy((com.commercetools.api.models.message.OrderCustomLineItemQuantityChangedMessagePayload)template);
         }
         if (template instanceof com.commercetools.api.models.message.OrderCustomLineItemRemovedMessagePayload) {
-            return com.commercetools.api.models.message.OrderCustomLineItemRemovedMessagePayload
-                    .deepCopy((com.commercetools.api.models.message.OrderCustomLineItemRemovedMessagePayload) template);
+            return com.commercetools.api.models.message.OrderCustomLineItemRemovedMessagePayload.deepCopy((com.commercetools.api.models.message.OrderCustomLineItemRemovedMessagePayload)template);
         }
         if (template instanceof com.commercetools.api.models.message.OrderCustomerEmailSetMessagePayload) {
-            return com.commercetools.api.models.message.OrderCustomerEmailSetMessagePayload
-                    .deepCopy((com.commercetools.api.models.message.OrderCustomerEmailSetMessagePayload) template);
+            return com.commercetools.api.models.message.OrderCustomerEmailSetMessagePayload.deepCopy((com.commercetools.api.models.message.OrderCustomerEmailSetMessagePayload)template);
         }
         if (template instanceof com.commercetools.api.models.message.OrderCustomerGroupSetMessagePayload) {
-            return com.commercetools.api.models.message.OrderCustomerGroupSetMessagePayload
-                    .deepCopy((com.commercetools.api.models.message.OrderCustomerGroupSetMessagePayload) template);
+            return com.commercetools.api.models.message.OrderCustomerGroupSetMessagePayload.deepCopy((com.commercetools.api.models.message.OrderCustomerGroupSetMessagePayload)template);
         }
         if (template instanceof com.commercetools.api.models.message.OrderCustomerSetMessagePayload) {
-            return com.commercetools.api.models.message.OrderCustomerSetMessagePayload
-                    .deepCopy((com.commercetools.api.models.message.OrderCustomerSetMessagePayload) template);
+            return com.commercetools.api.models.message.OrderCustomerSetMessagePayload.deepCopy((com.commercetools.api.models.message.OrderCustomerSetMessagePayload)template);
         }
         if (template instanceof com.commercetools.api.models.message.OrderDeletedMessagePayload) {
-            return com.commercetools.api.models.message.OrderDeletedMessagePayload
-                    .deepCopy((com.commercetools.api.models.message.OrderDeletedMessagePayload) template);
+            return com.commercetools.api.models.message.OrderDeletedMessagePayload.deepCopy((com.commercetools.api.models.message.OrderDeletedMessagePayload)template);
         }
         if (template instanceof com.commercetools.api.models.message.OrderDiscountCodeAddedMessagePayload) {
-            return com.commercetools.api.models.message.OrderDiscountCodeAddedMessagePayload
-                    .deepCopy((com.commercetools.api.models.message.OrderDiscountCodeAddedMessagePayload) template);
+            return com.commercetools.api.models.message.OrderDiscountCodeAddedMessagePayload.deepCopy((com.commercetools.api.models.message.OrderDiscountCodeAddedMessagePayload)template);
         }
         if (template instanceof com.commercetools.api.models.message.OrderDiscountCodeRemovedMessagePayload) {
-            return com.commercetools.api.models.message.OrderDiscountCodeRemovedMessagePayload
-                    .deepCopy((com.commercetools.api.models.message.OrderDiscountCodeRemovedMessagePayload) template);
+            return com.commercetools.api.models.message.OrderDiscountCodeRemovedMessagePayload.deepCopy((com.commercetools.api.models.message.OrderDiscountCodeRemovedMessagePayload)template);
         }
         if (template instanceof com.commercetools.api.models.message.OrderDiscountCodeStateSetMessagePayload) {
-            return com.commercetools.api.models.message.OrderDiscountCodeStateSetMessagePayload
-                    .deepCopy((com.commercetools.api.models.message.OrderDiscountCodeStateSetMessagePayload) template);
+            return com.commercetools.api.models.message.OrderDiscountCodeStateSetMessagePayload.deepCopy((com.commercetools.api.models.message.OrderDiscountCodeStateSetMessagePayload)template);
         }
         if (template instanceof com.commercetools.api.models.message.OrderEditAppliedMessagePayload) {
-            return com.commercetools.api.models.message.OrderEditAppliedMessagePayload
-                    .deepCopy((com.commercetools.api.models.message.OrderEditAppliedMessagePayload) template);
+            return com.commercetools.api.models.message.OrderEditAppliedMessagePayload.deepCopy((com.commercetools.api.models.message.OrderEditAppliedMessagePayload)template);
         }
         if (template instanceof com.commercetools.api.models.message.OrderImportedMessagePayload) {
-            return com.commercetools.api.models.message.OrderImportedMessagePayload
-                    .deepCopy((com.commercetools.api.models.message.OrderImportedMessagePayload) template);
+            return com.commercetools.api.models.message.OrderImportedMessagePayload.deepCopy((com.commercetools.api.models.message.OrderImportedMessagePayload)template);
         }
         if (template instanceof com.commercetools.api.models.message.OrderLineItemAddedMessagePayload) {
-            return com.commercetools.api.models.message.OrderLineItemAddedMessagePayload
-                    .deepCopy((com.commercetools.api.models.message.OrderLineItemAddedMessagePayload) template);
+            return com.commercetools.api.models.message.OrderLineItemAddedMessagePayload.deepCopy((com.commercetools.api.models.message.OrderLineItemAddedMessagePayload)template);
         }
         if (template instanceof com.commercetools.api.models.message.OrderLineItemDiscountSetMessagePayload) {
-            return com.commercetools.api.models.message.OrderLineItemDiscountSetMessagePayload
-                    .deepCopy((com.commercetools.api.models.message.OrderLineItemDiscountSetMessagePayload) template);
+            return com.commercetools.api.models.message.OrderLineItemDiscountSetMessagePayload.deepCopy((com.commercetools.api.models.message.OrderLineItemDiscountSetMessagePayload)template);
         }
         if (template instanceof com.commercetools.api.models.message.OrderLineItemDistributionChannelSetMessagePayload) {
-            return com.commercetools.api.models.message.OrderLineItemDistributionChannelSetMessagePayload.deepCopy(
-                (com.commercetools.api.models.message.OrderLineItemDistributionChannelSetMessagePayload) template);
+            return com.commercetools.api.models.message.OrderLineItemDistributionChannelSetMessagePayload.deepCopy((com.commercetools.api.models.message.OrderLineItemDistributionChannelSetMessagePayload)template);
         }
         if (template instanceof com.commercetools.api.models.message.OrderLineItemRemovedMessagePayload) {
-            return com.commercetools.api.models.message.OrderLineItemRemovedMessagePayload
-                    .deepCopy((com.commercetools.api.models.message.OrderLineItemRemovedMessagePayload) template);
+            return com.commercetools.api.models.message.OrderLineItemRemovedMessagePayload.deepCopy((com.commercetools.api.models.message.OrderLineItemRemovedMessagePayload)template);
         }
         if (template instanceof com.commercetools.api.models.message.OrderPaymentStateChangedMessagePayload) {
-            return com.commercetools.api.models.message.OrderPaymentStateChangedMessagePayload
-                    .deepCopy((com.commercetools.api.models.message.OrderPaymentStateChangedMessagePayload) template);
+            return com.commercetools.api.models.message.OrderPaymentStateChangedMessagePayload.deepCopy((com.commercetools.api.models.message.OrderPaymentStateChangedMessagePayload)template);
         }
         if (template instanceof com.commercetools.api.models.message.OrderPurchaseOrderNumberSetMessagePayload) {
-            return com.commercetools.api.models.message.OrderPurchaseOrderNumberSetMessagePayload.deepCopy(
-                (com.commercetools.api.models.message.OrderPurchaseOrderNumberSetMessagePayload) template);
+            return com.commercetools.api.models.message.OrderPurchaseOrderNumberSetMessagePayload.deepCopy((com.commercetools.api.models.message.OrderPurchaseOrderNumberSetMessagePayload)template);
         }
         if (template instanceof com.commercetools.api.models.message.OrderReturnShipmentStateChangedMessagePayload) {
-            return com.commercetools.api.models.message.OrderReturnShipmentStateChangedMessagePayload.deepCopy(
-                (com.commercetools.api.models.message.OrderReturnShipmentStateChangedMessagePayload) template);
+            return com.commercetools.api.models.message.OrderReturnShipmentStateChangedMessagePayload.deepCopy((com.commercetools.api.models.message.OrderReturnShipmentStateChangedMessagePayload)template);
         }
         if (template instanceof com.commercetools.api.models.message.OrderShipmentStateChangedMessagePayload) {
-            return com.commercetools.api.models.message.OrderShipmentStateChangedMessagePayload
-                    .deepCopy((com.commercetools.api.models.message.OrderShipmentStateChangedMessagePayload) template);
+            return com.commercetools.api.models.message.OrderShipmentStateChangedMessagePayload.deepCopy((com.commercetools.api.models.message.OrderShipmentStateChangedMessagePayload)template);
         }
         if (template instanceof com.commercetools.api.models.message.OrderShippingAddressSetMessagePayload) {
-            return com.commercetools.api.models.message.OrderShippingAddressSetMessagePayload
-                    .deepCopy((com.commercetools.api.models.message.OrderShippingAddressSetMessagePayload) template);
+            return com.commercetools.api.models.message.OrderShippingAddressSetMessagePayload.deepCopy((com.commercetools.api.models.message.OrderShippingAddressSetMessagePayload)template);
         }
         if (template instanceof com.commercetools.api.models.message.OrderShippingInfoSetMessagePayload) {
-            return com.commercetools.api.models.message.OrderShippingInfoSetMessagePayload
-                    .deepCopy((com.commercetools.api.models.message.OrderShippingInfoSetMessagePayload) template);
+            return com.commercetools.api.models.message.OrderShippingInfoSetMessagePayload.deepCopy((com.commercetools.api.models.message.OrderShippingInfoSetMessagePayload)template);
         }
         if (template instanceof com.commercetools.api.models.message.OrderShippingRateInputSetMessagePayload) {
-            return com.commercetools.api.models.message.OrderShippingRateInputSetMessagePayload
-                    .deepCopy((com.commercetools.api.models.message.OrderShippingRateInputSetMessagePayload) template);
+            return com.commercetools.api.models.message.OrderShippingRateInputSetMessagePayload.deepCopy((com.commercetools.api.models.message.OrderShippingRateInputSetMessagePayload)template);
         }
         if (template instanceof com.commercetools.api.models.message.OrderStateChangedMessagePayload) {
-            return com.commercetools.api.models.message.OrderStateChangedMessagePayload
-                    .deepCopy((com.commercetools.api.models.message.OrderStateChangedMessagePayload) template);
+            return com.commercetools.api.models.message.OrderStateChangedMessagePayload.deepCopy((com.commercetools.api.models.message.OrderStateChangedMessagePayload)template);
         }
         if (template instanceof com.commercetools.api.models.message.OrderStateTransitionMessagePayload) {
-            return com.commercetools.api.models.message.OrderStateTransitionMessagePayload
-                    .deepCopy((com.commercetools.api.models.message.OrderStateTransitionMessagePayload) template);
+            return com.commercetools.api.models.message.OrderStateTransitionMessagePayload.deepCopy((com.commercetools.api.models.message.OrderStateTransitionMessagePayload)template);
         }
         if (template instanceof com.commercetools.api.models.message.OrderStoreSetMessagePayload) {
-            return com.commercetools.api.models.message.OrderStoreSetMessagePayload
-                    .deepCopy((com.commercetools.api.models.message.OrderStoreSetMessagePayload) template);
+            return com.commercetools.api.models.message.OrderStoreSetMessagePayload.deepCopy((com.commercetools.api.models.message.OrderStoreSetMessagePayload)template);
         }
         if (template instanceof com.commercetools.api.models.message.ParcelAddedToDeliveryMessagePayload) {
-            return com.commercetools.api.models.message.ParcelAddedToDeliveryMessagePayload
-                    .deepCopy((com.commercetools.api.models.message.ParcelAddedToDeliveryMessagePayload) template);
+            return com.commercetools.api.models.message.ParcelAddedToDeliveryMessagePayload.deepCopy((com.commercetools.api.models.message.ParcelAddedToDeliveryMessagePayload)template);
         }
         if (template instanceof com.commercetools.api.models.message.ParcelItemsUpdatedMessagePayload) {
-            return com.commercetools.api.models.message.ParcelItemsUpdatedMessagePayload
-                    .deepCopy((com.commercetools.api.models.message.ParcelItemsUpdatedMessagePayload) template);
+            return com.commercetools.api.models.message.ParcelItemsUpdatedMessagePayload.deepCopy((com.commercetools.api.models.message.ParcelItemsUpdatedMessagePayload)template);
         }
         if (template instanceof com.commercetools.api.models.message.ParcelMeasurementsUpdatedMessagePayload) {
-            return com.commercetools.api.models.message.ParcelMeasurementsUpdatedMessagePayload
-                    .deepCopy((com.commercetools.api.models.message.ParcelMeasurementsUpdatedMessagePayload) template);
+            return com.commercetools.api.models.message.ParcelMeasurementsUpdatedMessagePayload.deepCopy((com.commercetools.api.models.message.ParcelMeasurementsUpdatedMessagePayload)template);
         }
         if (template instanceof com.commercetools.api.models.message.ParcelRemovedFromDeliveryMessagePayload) {
-            return com.commercetools.api.models.message.ParcelRemovedFromDeliveryMessagePayload
-                    .deepCopy((com.commercetools.api.models.message.ParcelRemovedFromDeliveryMessagePayload) template);
+            return com.commercetools.api.models.message.ParcelRemovedFromDeliveryMessagePayload.deepCopy((com.commercetools.api.models.message.ParcelRemovedFromDeliveryMessagePayload)template);
         }
         if (template instanceof com.commercetools.api.models.message.ParcelTrackingDataUpdatedMessagePayload) {
-            return com.commercetools.api.models.message.ParcelTrackingDataUpdatedMessagePayload
-                    .deepCopy((com.commercetools.api.models.message.ParcelTrackingDataUpdatedMessagePayload) template);
+            return com.commercetools.api.models.message.ParcelTrackingDataUpdatedMessagePayload.deepCopy((com.commercetools.api.models.message.ParcelTrackingDataUpdatedMessagePayload)template);
         }
         if (template instanceof com.commercetools.api.models.message.ReturnInfoAddedMessagePayload) {
-            return com.commercetools.api.models.message.ReturnInfoAddedMessagePayload
-                    .deepCopy((com.commercetools.api.models.message.ReturnInfoAddedMessagePayload) template);
+            return com.commercetools.api.models.message.ReturnInfoAddedMessagePayload.deepCopy((com.commercetools.api.models.message.ReturnInfoAddedMessagePayload)template);
         }
         if (template instanceof com.commercetools.api.models.message.ReturnInfoSetMessagePayload) {
-            return com.commercetools.api.models.message.ReturnInfoSetMessagePayload
-                    .deepCopy((com.commercetools.api.models.message.ReturnInfoSetMessagePayload) template);
+            return com.commercetools.api.models.message.ReturnInfoSetMessagePayload.deepCopy((com.commercetools.api.models.message.ReturnInfoSetMessagePayload)template);
         }
         OrderMessagePayloadImpl instance = new OrderMessagePayloadImpl();
         return instance;
     }
+
+
 
     /**
      * accessor map function
@@ -218,7 +232,7 @@ public interface OrderMessagePayload extends MessagePayload {
     default <T> T withOrderMessagePayload(Function<OrderMessagePayload, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

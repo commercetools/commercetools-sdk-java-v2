@@ -1,18 +1,21 @@
-
 package com.commercetools.ml.models.similar_products;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-
 import com.commercetools.ml.models.common.ProductReference;
+import com.commercetools.ml.models.similar_products.SimilarProductMeta;
+import com.commercetools.ml.models.similar_products.SimilarProductImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>One part of a SimilarProductPair. Refers to a specific ProductVariant.</p>
@@ -24,11 +27,15 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     SimilarProduct similarProduct = SimilarProduct.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = SimilarProductImpl.class)
-public interface SimilarProduct {
+public interface SimilarProduct  {
+
 
     /**
      *  <p>Reference to Product</p>
@@ -37,15 +44,13 @@ public interface SimilarProduct {
     @Valid
     @JsonProperty("product")
     public ProductReference getProduct();
-
     /**
      *  <p>ID of the ProductVariant that was compared.</p>
      * @return variantId
      */
-
+    
     @JsonProperty("variantId")
     public Long getVariantId();
-
     /**
      *  <p>Supplementary information about the data used for similarity estimation. This information helps you understand the estimated confidence score, but it should not be used to identify a product.</p>
      * @return meta
@@ -58,30 +63,34 @@ public interface SimilarProduct {
      *  <p>Reference to Product</p>
      * @param product value to be set
      */
-
+    
     public void setProduct(final ProductReference product);
-
+    
+    
     /**
      *  <p>ID of the ProductVariant that was compared.</p>
      * @param variantId value to be set
      */
-
+    
     public void setVariantId(final Long variantId);
-
+    
+    
     /**
      *  <p>Supplementary information about the data used for similarity estimation. This information helps you understand the estimated confidence score, but it should not be used to identify a product.</p>
      * @param meta value to be set
      */
-
+    
     public void setMeta(final SimilarProductMeta meta);
+    
 
     /**
      * factory method
      * @return instance of SimilarProduct
      */
-    public static SimilarProduct of() {
+    public static SimilarProduct of(){
         return new SimilarProductImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy SimilarProduct
@@ -120,7 +129,7 @@ public interface SimilarProduct {
     public static SimilarProductBuilder builder() {
         return SimilarProductBuilder.of();
     }
-
+    
     /**
      * create builder for SimilarProduct instance
      * @param template instance with prefilled values for the builder
@@ -129,6 +138,7 @@ public interface SimilarProduct {
     public static SimilarProductBuilder builder(final SimilarProduct template) {
         return SimilarProductBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -139,7 +149,7 @@ public interface SimilarProduct {
     default <T> T withSimilarProduct(Function<SimilarProduct, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

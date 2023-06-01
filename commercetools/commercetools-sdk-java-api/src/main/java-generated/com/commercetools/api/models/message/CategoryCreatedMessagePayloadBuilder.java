@@ -1,9 +1,12 @@
-
 package com.commercetools.api.models.message;
 
+import com.commercetools.api.models.category.Category;
+import com.commercetools.api.models.message.MessagePayload;
+import com.commercetools.api.models.message.CategoryCreatedMessagePayload;
+import javax.annotation.Nullable;
 import java.util.*;
 import java.util.function.Function;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -17,55 +20,61 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .category(categoryBuilder -> categoryBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class CategoryCreatedMessagePayloadBuilder implements Builder<CategoryCreatedMessagePayload> {
 
+    
+    
     private com.commercetools.api.models.category.Category category;
 
+    
     /**
      *  <p>Category that was created.</p>
      * @param builder function to build the category value
      * @return Builder
      */
-
-    public CategoryCreatedMessagePayloadBuilder category(
-            Function<com.commercetools.api.models.category.CategoryBuilder, com.commercetools.api.models.category.CategoryBuilder> builder) {
+    
+    public CategoryCreatedMessagePayloadBuilder category(Function<com.commercetools.api.models.category.CategoryBuilder, com.commercetools.api.models.category.CategoryBuilder> builder) {
         this.category = builder.apply(com.commercetools.api.models.category.CategoryBuilder.of()).build();
         return this;
     }
-
+    
     /**
      *  <p>Category that was created.</p>
      * @param builder function to build the category value
      * @return Builder
      */
-
-    public CategoryCreatedMessagePayloadBuilder withCategory(
-            Function<com.commercetools.api.models.category.CategoryBuilder, com.commercetools.api.models.category.Category> builder) {
+    
+    public CategoryCreatedMessagePayloadBuilder withCategory(Function<com.commercetools.api.models.category.CategoryBuilder, com.commercetools.api.models.category.Category> builder) {
         this.category = builder.apply(com.commercetools.api.models.category.CategoryBuilder.of());
         return this;
     }
-
+                    
     /**
      *  <p>Category that was created.</p>
      * @param category value to be set
      * @return Builder
      */
-
-    public CategoryCreatedMessagePayloadBuilder category(
-            final com.commercetools.api.models.category.Category category) {
+    
+    public CategoryCreatedMessagePayloadBuilder category( final com.commercetools.api.models.category.Category category) {
         this.category = category;
         return this;
     }
+    
+    
 
     /**
      *  <p>Category that was created.</p>
      * @return category
      */
-
-    public com.commercetools.api.models.category.Category getCategory() {
+    
+    
+    public com.commercetools.api.models.category.Category getCategory(){
         return this.category;
     }
 
@@ -77,7 +86,7 @@ public class CategoryCreatedMessagePayloadBuilder implements Builder<CategoryCre
         Objects.requireNonNull(category, CategoryCreatedMessagePayload.class + ": category is missing");
         return new CategoryCreatedMessagePayloadImpl(category);
     }
-
+    
     /**
      * builds CategoryCreatedMessagePayload without checking for non-null required values
      * @return CategoryCreatedMessagePayload
@@ -88,7 +97,7 @@ public class CategoryCreatedMessagePayloadBuilder implements Builder<CategoryCre
 
     /**
      * factory method for an instance of CategoryCreatedMessagePayloadBuilder
-     * @return builder
+     * @return builder 
      */
     public static CategoryCreatedMessagePayloadBuilder of() {
         return new CategoryCreatedMessagePayloadBuilder();

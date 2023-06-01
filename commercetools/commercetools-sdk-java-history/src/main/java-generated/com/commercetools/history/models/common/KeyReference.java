@@ -1,17 +1,20 @@
-
 package com.commercetools.history.models.common;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
+import com.commercetools.history.models.common.ReferenceTypeId;
+import com.commercetools.history.models.common.KeyReferenceImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * KeyReference
@@ -25,11 +28,15 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .typeId(ReferenceTypeId.CART)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = KeyReferenceImpl.class)
-public interface KeyReference {
+public interface KeyReference  {
+
 
     /**
      *
@@ -38,7 +45,6 @@ public interface KeyReference {
     @NotNull
     @JsonProperty("key")
     public String getKey();
-
     /**
      *
      * @return typeId
@@ -51,23 +57,26 @@ public interface KeyReference {
      * set key
      * @param key value to be set
      */
-
+    
     public void setKey(final String key);
-
+    
+    
     /**
      * set typeId
      * @param typeId value to be set
      */
-
+    
     public void setTypeId(final ReferenceTypeId typeId);
+    
 
     /**
      * factory method
      * @return instance of KeyReference
      */
-    public static KeyReference of() {
+    public static KeyReference of(){
         return new KeyReferenceImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy KeyReference
@@ -104,7 +113,7 @@ public interface KeyReference {
     public static KeyReferenceBuilder builder() {
         return KeyReferenceBuilder.of();
     }
-
+    
     /**
      * create builder for KeyReference instance
      * @param template instance with prefilled values for the builder
@@ -113,6 +122,7 @@ public interface KeyReference {
     public static KeyReferenceBuilder builder(final KeyReference template) {
         return KeyReferenceBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -123,7 +133,7 @@ public interface KeyReference {
     default <T> T withKeyReference(Function<KeyReference, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

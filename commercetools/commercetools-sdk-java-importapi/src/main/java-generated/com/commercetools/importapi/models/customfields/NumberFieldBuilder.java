@@ -1,8 +1,11 @@
-
 package com.commercetools.importapi.models.customfields;
 
+import com.commercetools.importapi.models.customfields.CustomField;
+import com.commercetools.importapi.models.customfields.NumberField;
+import javax.annotation.Nullable;
 import java.util.*;
-
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -16,30 +19,39 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .value(0.3)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class NumberFieldBuilder implements Builder<NumberField> {
 
+    
+    
     private Double value;
 
+    
     /**
      * set the value to the value
      * @param value value to be set
      * @return Builder
      */
-
-    public NumberFieldBuilder value(final Double value) {
+    
+    public NumberFieldBuilder value( final Double value) {
         this.value = value;
         return this;
     }
+    
+    
 
     /**
      * value of value}
      * @return value
      */
-
-    public Double getValue() {
+    
+    
+    public Double getValue(){
         return this.value;
     }
 
@@ -51,7 +63,7 @@ public class NumberFieldBuilder implements Builder<NumberField> {
         Objects.requireNonNull(value, NumberField.class + ": value is missing");
         return new NumberFieldImpl(value);
     }
-
+    
     /**
      * builds NumberField without checking for non-null required values
      * @return NumberField
@@ -62,7 +74,7 @@ public class NumberFieldBuilder implements Builder<NumberField> {
 
     /**
      * factory method for an instance of NumberFieldBuilder
-     * @return builder
+     * @return builder 
      */
     public static NumberFieldBuilder of() {
         return new NumberFieldBuilder();

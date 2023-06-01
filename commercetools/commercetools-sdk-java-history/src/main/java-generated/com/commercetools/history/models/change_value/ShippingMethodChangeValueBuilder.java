@@ -1,8 +1,11 @@
-
 package com.commercetools.history.models.change_value;
 
-import java.util.*;
 
+import com.commercetools.history.models.change_value.ShippingMethodChangeValue;
+import javax.annotation.Nullable;
+import java.util.*;
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -17,52 +20,67 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .name("{name}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class ShippingMethodChangeValueBuilder implements Builder<ShippingMethodChangeValue> {
 
+    
+    
     private String id;
-
+    
+    
+    
     private String name;
 
+    
     /**
      * set the value to the id
      * @param id value to be set
      * @return Builder
      */
-
-    public ShippingMethodChangeValueBuilder id(final String id) {
+    
+    public ShippingMethodChangeValueBuilder id( final String id) {
         this.id = id;
         return this;
     }
-
+    
+    
+    
+    
     /**
      * set the value to the name
      * @param name value to be set
      * @return Builder
      */
-
-    public ShippingMethodChangeValueBuilder name(final String name) {
+    
+    public ShippingMethodChangeValueBuilder name( final String name) {
         this.name = name;
         return this;
     }
+    
+    
 
     /**
      * value of id}
      * @return id
      */
-
-    public String getId() {
+    
+    
+    public String getId(){
         return this.id;
     }
-
+    
     /**
      * value of name}
      * @return name
      */
-
-    public String getName() {
+    
+    
+    public String getName(){
         return this.name;
     }
 
@@ -75,7 +93,7 @@ public class ShippingMethodChangeValueBuilder implements Builder<ShippingMethodC
         Objects.requireNonNull(name, ShippingMethodChangeValue.class + ": name is missing");
         return new ShippingMethodChangeValueImpl(id, name);
     }
-
+    
     /**
      * builds ShippingMethodChangeValue without checking for non-null required values
      * @return ShippingMethodChangeValue
@@ -86,7 +104,7 @@ public class ShippingMethodChangeValueBuilder implements Builder<ShippingMethodC
 
     /**
      * factory method for an instance of ShippingMethodChangeValueBuilder
-     * @return builder
+     * @return builder 
      */
     public static ShippingMethodChangeValueBuilder of() {
         return new ShippingMethodChangeValueBuilder();

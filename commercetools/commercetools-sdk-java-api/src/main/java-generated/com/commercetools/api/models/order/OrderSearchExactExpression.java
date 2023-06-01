@@ -1,18 +1,21 @@
-
 package com.commercetools.api.models.order;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
+import com.commercetools.api.models.order.OrderSearchAnyValue;
+import com.commercetools.api.models.order.OrderSearchQueryExpression;
+import com.commercetools.api.models.order.OrderSearchExactExpressionImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * OrderSearchExactExpression
@@ -25,11 +28,15 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .exact(exactBuilder -> exactBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = OrderSearchExactExpressionImpl.class)
 public interface OrderSearchExactExpression extends OrderSearchQueryExpression {
+
 
     /**
      *
@@ -44,16 +51,18 @@ public interface OrderSearchExactExpression extends OrderSearchQueryExpression {
      * set exact
      * @param exact value to be set
      */
-
+    
     public void setExact(final OrderSearchAnyValue exact);
+    
 
     /**
      * factory method
      * @return instance of OrderSearchExactExpression
      */
-    public static OrderSearchExactExpression of() {
+    public static OrderSearchExactExpression of(){
         return new OrderSearchExactExpressionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy OrderSearchExactExpression
@@ -88,7 +97,7 @@ public interface OrderSearchExactExpression extends OrderSearchQueryExpression {
     public static OrderSearchExactExpressionBuilder builder() {
         return OrderSearchExactExpressionBuilder.of();
     }
-
+    
     /**
      * create builder for OrderSearchExactExpression instance
      * @param template instance with prefilled values for the builder
@@ -97,6 +106,7 @@ public interface OrderSearchExactExpression extends OrderSearchQueryExpression {
     public static OrderSearchExactExpressionBuilder builder(final OrderSearchExactExpression template) {
         return OrderSearchExactExpressionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -107,7 +117,7 @@ public interface OrderSearchExactExpression extends OrderSearchQueryExpression {
     default <T> T withOrderSearchExactExpression(Function<OrderSearchExactExpression, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

@@ -1,9 +1,11 @@
-
 package com.commercetools.api.predicates.query.shipping_method;
 
 import com.commercetools.api.predicates.query.*;
 
-public class PriceFunctionQueryBuilderDsl {
+import java.util.function.Function;
+
+
+public class PriceFunctionQueryBuilderDsl  {
     public PriceFunctionQueryBuilderDsl() {
     }
 
@@ -12,15 +14,12 @@ public class PriceFunctionQueryBuilderDsl {
     }
 
     public StringComparisonPredicateBuilder<PriceFunctionQueryBuilderDsl> currencyCode() {
-        return new StringComparisonPredicateBuilder<>(
-            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("currencyCode")),
-            p -> new CombinationQueryPredicate<>(p, PriceFunctionQueryBuilderDsl::of));
+        return new StringComparisonPredicateBuilder<>(BinaryQueryPredicate.of().left(new ConstantQueryPredicate("currencyCode")),
+        p -> new CombinationQueryPredicate<>(p, PriceFunctionQueryBuilderDsl::of));
     }
-
     public StringComparisonPredicateBuilder<PriceFunctionQueryBuilderDsl> function() {
-        return new StringComparisonPredicateBuilder<>(
-            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("function")),
-            p -> new CombinationQueryPredicate<>(p, PriceFunctionQueryBuilderDsl::of));
+        return new StringComparisonPredicateBuilder<>(BinaryQueryPredicate.of().left(new ConstantQueryPredicate("function")),
+        p -> new CombinationQueryPredicate<>(p, PriceFunctionQueryBuilderDsl::of));
     }
-
+    
 }

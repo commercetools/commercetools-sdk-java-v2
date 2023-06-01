@@ -1,17 +1,21 @@
-
 package com.commercetools.api.models.staged_quote;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
+import com.commercetools.api.models.staged_quote.StagedQuoteState;
+import com.commercetools.api.models.staged_quote.StagedQuoteUpdateAction;
+import com.commercetools.api.models.staged_quote.StagedQuoteChangeStagedQuoteStateActionImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * StagedQuoteChangeStagedQuoteStateAction
@@ -24,9 +28,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .stagedQuoteState(StagedQuoteState.IN_PROGRESS)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = StagedQuoteChangeStagedQuoteStateActionImpl.class)
 public interface StagedQuoteChangeStagedQuoteStateAction extends StagedQuoteUpdateAction {
 
@@ -47,16 +54,18 @@ public interface StagedQuoteChangeStagedQuoteStateAction extends StagedQuoteUpda
      *  <p>New state to be set for the Staged Quote.</p>
      * @param stagedQuoteState value to be set
      */
-
+    
     public void setStagedQuoteState(final StagedQuoteState stagedQuoteState);
+    
 
     /**
      * factory method
      * @return instance of StagedQuoteChangeStagedQuoteStateAction
      */
-    public static StagedQuoteChangeStagedQuoteStateAction of() {
+    public static StagedQuoteChangeStagedQuoteStateAction of(){
         return new StagedQuoteChangeStagedQuoteStateActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy StagedQuoteChangeStagedQuoteStateAction
@@ -75,8 +84,7 @@ public interface StagedQuoteChangeStagedQuoteStateAction extends StagedQuoteUpda
      * @return copy instance
      */
     @Nullable
-    public static StagedQuoteChangeStagedQuoteStateAction deepCopy(
-            @Nullable final StagedQuoteChangeStagedQuoteStateAction template) {
+    public static StagedQuoteChangeStagedQuoteStateAction deepCopy(@Nullable final StagedQuoteChangeStagedQuoteStateAction template) {
         if (template == null) {
             return null;
         }
@@ -92,16 +100,16 @@ public interface StagedQuoteChangeStagedQuoteStateAction extends StagedQuoteUpda
     public static StagedQuoteChangeStagedQuoteStateActionBuilder builder() {
         return StagedQuoteChangeStagedQuoteStateActionBuilder.of();
     }
-
+    
     /**
      * create builder for StagedQuoteChangeStagedQuoteStateAction instance
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static StagedQuoteChangeStagedQuoteStateActionBuilder builder(
-            final StagedQuoteChangeStagedQuoteStateAction template) {
+    public static StagedQuoteChangeStagedQuoteStateActionBuilder builder(final StagedQuoteChangeStagedQuoteStateAction template) {
         return StagedQuoteChangeStagedQuoteStateActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -109,11 +117,10 @@ public interface StagedQuoteChangeStagedQuoteStateAction extends StagedQuoteUpda
      * @param helper function to map the object
      * @return mapped value
      */
-    default <T> T withStagedQuoteChangeStagedQuoteStateAction(
-            Function<StagedQuoteChangeStagedQuoteStateAction, T> helper) {
+    default <T> T withStagedQuoteChangeStagedQuoteStateAction(Function<StagedQuoteChangeStagedQuoteStateAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

@@ -1,16 +1,20 @@
-
 package com.commercetools.api.models.category;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
+import com.commercetools.api.models.category.CategoryUpdateAction;
+import com.commercetools.api.models.category.CategorySetExternalIdActionImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>This update action sets a new ID that can be used as an additional identifier for external systems like Customer Relationship Management (CRM) or Enterprise Resource Planning (ERP).</p>
@@ -22,9 +26,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     CategorySetExternalIdAction categorySetExternalIdAction = CategorySetExternalIdAction.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = CategorySetExternalIdActionImpl.class)
 public interface CategorySetExternalIdAction extends CategoryUpdateAction {
 
@@ -37,7 +44,7 @@ public interface CategorySetExternalIdAction extends CategoryUpdateAction {
      *  <p>Value to set. If empty, any existing value will be removed.</p>
      * @return externalId
      */
-
+    
     @JsonProperty("externalId")
     public String getExternalId();
 
@@ -45,16 +52,18 @@ public interface CategorySetExternalIdAction extends CategoryUpdateAction {
      *  <p>Value to set. If empty, any existing value will be removed.</p>
      * @param externalId value to be set
      */
-
+    
     public void setExternalId(final String externalId);
+    
 
     /**
      * factory method
      * @return instance of CategorySetExternalIdAction
      */
-    public static CategorySetExternalIdAction of() {
+    public static CategorySetExternalIdAction of(){
         return new CategorySetExternalIdActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy CategorySetExternalIdAction
@@ -89,7 +98,7 @@ public interface CategorySetExternalIdAction extends CategoryUpdateAction {
     public static CategorySetExternalIdActionBuilder builder() {
         return CategorySetExternalIdActionBuilder.of();
     }
-
+    
     /**
      * create builder for CategorySetExternalIdAction instance
      * @param template instance with prefilled values for the builder
@@ -98,6 +107,7 @@ public interface CategorySetExternalIdAction extends CategoryUpdateAction {
     public static CategorySetExternalIdActionBuilder builder(final CategorySetExternalIdAction template) {
         return CategorySetExternalIdActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -108,7 +118,7 @@ public interface CategorySetExternalIdAction extends CategoryUpdateAction {
     default <T> T withCategorySetExternalIdAction(Function<CategorySetExternalIdAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

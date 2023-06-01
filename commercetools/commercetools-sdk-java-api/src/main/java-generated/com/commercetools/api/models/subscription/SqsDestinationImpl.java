@@ -1,16 +1,20 @@
-
 package com.commercetools.api.models.subscription;
 
-import java.time.*;
-import java.util.*;
-
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
-
-import io.vrap.rmf.base.client.ModelBase;
+import com.commercetools.api.models.subscription.AwsAuthenticationMode;
+import com.commercetools.api.models.subscription.Destination;
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.ModelBase;
+import javax.validation.Valid;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.annotation.*;
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
@@ -20,124 +24,132 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
  *  <p>If you prefer to use <code>Credentials</code> for authentication, we recommend creating an IAM user with an <code>accessKey</code> and <code>accessSecret</code> pair specifically for each Subscription.</p>
  *  <p>The IAM user should only have the <code>sqs:SendMessage</code> permission on this queue.</p>
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class SqsDestinationImpl implements SqsDestination, ModelBase {
 
+    
     private String type;
-
+    
+    
     private String accessKey;
-
+    
+    
     private String accessSecret;
-
+    
+    
     private String queueUrl;
-
+    
+    
     private String region;
-
+    
+    
     private com.commercetools.api.models.subscription.AwsAuthenticationMode authenticationMode;
 
     /**
      * create instance with all properties
      */
     @JsonCreator
-    SqsDestinationImpl(@JsonProperty("accessKey") final String accessKey,
-            @JsonProperty("accessSecret") final String accessSecret, @JsonProperty("queueUrl") final String queueUrl,
-            @JsonProperty("region") final String region,
-            @JsonProperty("authenticationMode") final com.commercetools.api.models.subscription.AwsAuthenticationMode authenticationMode) {
+    SqsDestinationImpl(@JsonProperty("accessKey") final String accessKey, @JsonProperty("accessSecret") final String accessSecret, @JsonProperty("queueUrl") final String queueUrl, @JsonProperty("region") final String region, @JsonProperty("authenticationMode") final com.commercetools.api.models.subscription.AwsAuthenticationMode authenticationMode) {
         this.accessKey = accessKey;
         this.accessSecret = accessSecret;
         this.queueUrl = queueUrl;
         this.region = region;
         this.authenticationMode = authenticationMode;
-        this.type = SQS;
+        this.type =  SQS;
     }
-
     /**
      * create empty instance
      */
     public SqsDestinationImpl() {
-        this.type = SQS;
+        this.type =  SQS;
     }
 
     /**
      *
      */
-
-    public String getType() {
+    
+    public String getType(){
         return this.type;
     }
-
+    
     /**
      *  <p>Only present if <code>authenticationMode</code> is set to <code>Credentials</code>.</p>
      */
-
-    public String getAccessKey() {
+    
+    public String getAccessKey(){
         return this.accessKey;
     }
-
+    
     /**
      *  <p>Only present if <code>authenticationMode</code> is set to <code>Credentials</code>.</p>
      */
-
-    public String getAccessSecret() {
+    
+    public String getAccessSecret(){
         return this.accessSecret;
     }
-
+    
     /**
      *  <p>URL of the Amazon SQS queue.</p>
      */
-
-    public String getQueueUrl() {
+    
+    public String getQueueUrl(){
         return this.queueUrl;
     }
-
+    
     /**
      *  <p>AWS Region the message queue is located in.</p>
      */
-
-    public String getRegion() {
+    
+    public String getRegion(){
         return this.region;
     }
-
+    
     /**
      *  <p>Defines the method of authentication for the SQS queue.</p>
      */
-
-    public com.commercetools.api.models.subscription.AwsAuthenticationMode getAuthenticationMode() {
+    
+    public com.commercetools.api.models.subscription.AwsAuthenticationMode getAuthenticationMode(){
         return this.authenticationMode;
     }
 
-    public void setAccessKey(final String accessKey) {
+    
+    public void setAccessKey(final String accessKey){
         this.accessKey = accessKey;
     }
-
-    public void setAccessSecret(final String accessSecret) {
+    
+    
+    public void setAccessSecret(final String accessSecret){
         this.accessSecret = accessSecret;
     }
-
-    public void setQueueUrl(final String queueUrl) {
+    
+    
+    public void setQueueUrl(final String queueUrl){
         this.queueUrl = queueUrl;
     }
-
-    public void setRegion(final String region) {
+    
+    
+    public void setRegion(final String region){
         this.region = region;
     }
-
-    public void setAuthenticationMode(
-            final com.commercetools.api.models.subscription.AwsAuthenticationMode authenticationMode) {
+    
+    
+    public void setAuthenticationMode(final com.commercetools.api.models.subscription.AwsAuthenticationMode authenticationMode){
         this.authenticationMode = authenticationMode;
     }
 
     @Override
     public boolean equals(Object o) {
-        if (this == o)
-            return true;
-
-        if (o == null || getClass() != o.getClass())
-            return false;
-
+        if (this == o) return true;
+    
+        if (o == null || getClass() != o.getClass()) return false;
+    
         SqsDestinationImpl that = (SqsDestinationImpl) o;
-
-        return new EqualsBuilder().append(type, that.type)
+    
+        return new EqualsBuilder()
+                .append(type, that.type)
                 .append(accessKey, that.accessKey)
                 .append(accessSecret, that.accessSecret)
                 .append(queueUrl, that.queueUrl)
@@ -145,16 +157,17 @@ public class SqsDestinationImpl implements SqsDestination, ModelBase {
                 .append(authenticationMode, that.authenticationMode)
                 .isEquals();
     }
-
+    
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(type)
-                .append(accessKey)
-                .append(accessSecret)
-                .append(queueUrl)
-                .append(region)
-                .append(authenticationMode)
-                .toHashCode();
+        return new HashCodeBuilder(17, 37)
+            .append(type)
+            .append(accessKey)
+            .append(accessSecret)
+            .append(queueUrl)
+            .append(region)
+            .append(authenticationMode)
+            .toHashCode();
     }
 
 }

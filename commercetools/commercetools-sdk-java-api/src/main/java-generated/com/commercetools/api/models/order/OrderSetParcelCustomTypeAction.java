@@ -1,20 +1,22 @@
-
 package com.commercetools.api.models.order;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
+import com.commercetools.api.models.order.OrderUpdateAction;
 import com.commercetools.api.models.type.FieldContainer;
 import com.commercetools.api.models.type.TypeResourceIdentifier;
+import com.commercetools.api.models.order.OrderSetParcelCustomTypeActionImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * OrderSetParcelCustomTypeAction
@@ -27,9 +29,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .parcelId("{parcelId}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = OrderSetParcelCustomTypeActionImpl.class)
 public interface OrderSetParcelCustomTypeAction extends OrderUpdateAction {
 
@@ -45,7 +50,6 @@ public interface OrderSetParcelCustomTypeAction extends OrderUpdateAction {
     @NotNull
     @JsonProperty("parcelId")
     public String getParcelId();
-
     /**
      *  <p>Defines the Type that extends the Parcel with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Parcel.</p>
      * @return type
@@ -53,7 +57,6 @@ public interface OrderSetParcelCustomTypeAction extends OrderUpdateAction {
     @Valid
     @JsonProperty("type")
     public TypeResourceIdentifier getType();
-
     /**
      *  <p>Sets the Custom Fields fields for the Parcel.</p>
      * @return fields
@@ -66,30 +69,34 @@ public interface OrderSetParcelCustomTypeAction extends OrderUpdateAction {
      * set parcelId
      * @param parcelId value to be set
      */
-
+    
     public void setParcelId(final String parcelId);
-
+    
+    
     /**
      *  <p>Defines the Type that extends the Parcel with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Parcel.</p>
      * @param type value to be set
      */
-
+    
     public void setType(final TypeResourceIdentifier type);
-
+    
+    
     /**
      *  <p>Sets the Custom Fields fields for the Parcel.</p>
      * @param fields value to be set
      */
-
+    
     public void setFields(final FieldContainer fields);
+    
 
     /**
      * factory method
      * @return instance of OrderSetParcelCustomTypeAction
      */
-    public static OrderSetParcelCustomTypeAction of() {
+    public static OrderSetParcelCustomTypeAction of(){
         return new OrderSetParcelCustomTypeActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy OrderSetParcelCustomTypeAction
@@ -128,7 +135,7 @@ public interface OrderSetParcelCustomTypeAction extends OrderUpdateAction {
     public static OrderSetParcelCustomTypeActionBuilder builder() {
         return OrderSetParcelCustomTypeActionBuilder.of();
     }
-
+    
     /**
      * create builder for OrderSetParcelCustomTypeAction instance
      * @param template instance with prefilled values for the builder
@@ -137,6 +144,7 @@ public interface OrderSetParcelCustomTypeAction extends OrderUpdateAction {
     public static OrderSetParcelCustomTypeActionBuilder builder(final OrderSetParcelCustomTypeAction template) {
         return OrderSetParcelCustomTypeActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -147,7 +155,7 @@ public interface OrderSetParcelCustomTypeAction extends OrderUpdateAction {
     default <T> T withOrderSetParcelCustomTypeAction(Function<OrderSetParcelCustomTypeAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

@@ -1,16 +1,21 @@
-
 package com.commercetools.importapi.models.errors;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
+import com.commercetools.importapi.models.errors.ErrorObject;
+import java.lang.Object;
+import com.commercetools.importapi.models.errors.ResourceUpdateErrorImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * ResourceUpdateError
@@ -23,9 +28,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .message("{message}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = ResourceUpdateErrorImpl.class)
 public interface ResourceUpdateError extends ErrorObject {
 
@@ -38,7 +46,7 @@ public interface ResourceUpdateError extends ErrorObject {
      *
      * @return resource
      */
-
+    
     @JsonProperty("resource")
     public Object getResource();
 
@@ -46,16 +54,18 @@ public interface ResourceUpdateError extends ErrorObject {
      * set resource
      * @param resource value to be set
      */
-
+    
     public void setResource(final Object resource);
+    
 
     /**
      * factory method
      * @return instance of ResourceUpdateError
      */
-    public static ResourceUpdateError of() {
+    public static ResourceUpdateError of(){
         return new ResourceUpdateErrorImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy ResourceUpdateError
@@ -92,7 +102,7 @@ public interface ResourceUpdateError extends ErrorObject {
     public static ResourceUpdateErrorBuilder builder() {
         return ResourceUpdateErrorBuilder.of();
     }
-
+    
     /**
      * create builder for ResourceUpdateError instance
      * @param template instance with prefilled values for the builder
@@ -101,6 +111,7 @@ public interface ResourceUpdateError extends ErrorObject {
     public static ResourceUpdateErrorBuilder builder(final ResourceUpdateError template) {
         return ResourceUpdateErrorBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -111,7 +122,7 @@ public interface ResourceUpdateError extends ErrorObject {
     default <T> T withResourceUpdateError(Function<ResourceUpdateError, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

@@ -1,11 +1,11 @@
-
 package com.commercetools.api.predicates.query.order;
-
-import java.util.function.Function;
 
 import com.commercetools.api.predicates.query.*;
 
-public class OrderSearchPrefixExpressionQueryBuilderDsl {
+import java.util.function.Function;
+
+
+public class OrderSearchPrefixExpressionQueryBuilderDsl  {
     public OrderSearchPrefixExpressionQueryBuilderDsl() {
     }
 
@@ -14,13 +14,12 @@ public class OrderSearchPrefixExpressionQueryBuilderDsl {
     }
 
     public CombinationQueryPredicate<OrderSearchPrefixExpressionQueryBuilderDsl> prefix(
-            Function<com.commercetools.api.predicates.query.order.OrderSearchStringValueQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.order.OrderSearchStringValueQueryBuilderDsl>> fn) {
-        return new CombinationQueryPredicate<>(
-            ContainerQueryPredicate.of()
-                    .parent(ConstantQueryPredicate.of().constant("prefix"))
-                    .inner(fn.apply(
-                        com.commercetools.api.predicates.query.order.OrderSearchStringValueQueryBuilderDsl.of())),
+        Function<com.commercetools.api.predicates.query.order.OrderSearchStringValueQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.order.OrderSearchStringValueQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(ContainerQueryPredicate.of()
+            .parent(ConstantQueryPredicate.of().constant("prefix"))
+            .inner(fn.apply(com.commercetools.api.predicates.query.order.OrderSearchStringValueQueryBuilderDsl.of())),
             OrderSearchPrefixExpressionQueryBuilderDsl::of);
     }
-
+    
+    
 }

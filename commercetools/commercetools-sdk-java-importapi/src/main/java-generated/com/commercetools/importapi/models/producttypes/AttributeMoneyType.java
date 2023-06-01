@@ -1,16 +1,20 @@
-
 package com.commercetools.importapi.models.producttypes;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
+import com.commercetools.importapi.models.producttypes.AttributeType;
+import com.commercetools.importapi.models.producttypes.AttributeMoneyTypeImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * AttributeMoneyType
@@ -22,9 +26,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     AttributeMoneyType attributeMoneyType = AttributeMoneyType.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = AttributeMoneyTypeImpl.class)
 public interface AttributeMoneyType extends AttributeType {
 
@@ -33,13 +40,16 @@ public interface AttributeMoneyType extends AttributeType {
      */
     String MONEY = "money";
 
+
+
     /**
      * factory method
      * @return instance of AttributeMoneyType
      */
-    public static AttributeMoneyType of() {
+    public static AttributeMoneyType of(){
         return new AttributeMoneyTypeImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy AttributeMoneyType
@@ -72,7 +82,7 @@ public interface AttributeMoneyType extends AttributeType {
     public static AttributeMoneyTypeBuilder builder() {
         return AttributeMoneyTypeBuilder.of();
     }
-
+    
     /**
      * create builder for AttributeMoneyType instance
      * @param template instance with prefilled values for the builder
@@ -81,6 +91,7 @@ public interface AttributeMoneyType extends AttributeType {
     public static AttributeMoneyTypeBuilder builder(final AttributeMoneyType template) {
         return AttributeMoneyTypeBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -91,7 +102,7 @@ public interface AttributeMoneyType extends AttributeType {
     default <T> T withAttributeMoneyType(Function<AttributeMoneyType, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

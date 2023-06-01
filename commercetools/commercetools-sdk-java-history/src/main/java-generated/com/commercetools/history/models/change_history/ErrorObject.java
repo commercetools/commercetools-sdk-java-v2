@@ -1,17 +1,20 @@
-
 package com.commercetools.history.models.change_history;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
 
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
+import com.commercetools.history.models.change_history.ErrorObjectImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * ErrorObject
@@ -25,11 +28,15 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .message("{message}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = ErrorObjectImpl.class)
-public interface ErrorObject {
+public interface ErrorObject  {
+
 
     /**
      *
@@ -38,7 +45,6 @@ public interface ErrorObject {
     @NotNull
     @JsonProperty("code")
     public String getCode();
-
     /**
      *
      * @return message
@@ -51,23 +57,26 @@ public interface ErrorObject {
      * set code
      * @param code value to be set
      */
-
+    
     public void setCode(final String code);
-
+    
+    
     /**
      * set message
      * @param message value to be set
      */
-
+    
     public void setMessage(final String message);
+    
 
     /**
      * factory method
      * @return instance of ErrorObject
      */
-    public static ErrorObject of() {
+    public static ErrorObject of(){
         return new ErrorObjectImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy ErrorObject
@@ -104,7 +113,7 @@ public interface ErrorObject {
     public static ErrorObjectBuilder builder() {
         return ErrorObjectBuilder.of();
     }
-
+    
     /**
      * create builder for ErrorObject instance
      * @param template instance with prefilled values for the builder
@@ -113,6 +122,7 @@ public interface ErrorObject {
     public static ErrorObjectBuilder builder(final ErrorObject template) {
         return ErrorObjectBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -123,7 +133,7 @@ public interface ErrorObject {
     default <T> T withErrorObject(Function<ErrorObject, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

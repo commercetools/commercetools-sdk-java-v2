@@ -1,17 +1,20 @@
-
 package com.commercetools.importapi.models.order_patches;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
+import com.commercetools.importapi.models.order_patches.ReturnShipmentState;
+import com.commercetools.importapi.models.order_patches.ReturnItemDraftImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * ReturnItemDraft
@@ -25,11 +28,15 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .shipmentState(ReturnShipmentState.ADVISED)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = ReturnItemDraftImpl.class)
 public interface ReturnItemDraft extends io.vrap.rmf.base.client.Draft<ReturnItemDraft> {
+
 
     /**
      *
@@ -38,31 +45,27 @@ public interface ReturnItemDraft extends io.vrap.rmf.base.client.Draft<ReturnIte
     @NotNull
     @JsonProperty("quantity")
     public Double getQuantity();
-
     /**
      *
      * @return lineItemId
      */
-
+    
     @JsonProperty("lineItemId")
     public String getLineItemId();
-
     /**
      *
      * @return customLineItemId
      */
-
+    
     @JsonProperty("customLineItemId")
     public String getCustomLineItemId();
-
     /**
      *
      * @return comment
      */
-
+    
     @JsonProperty("comment")
     public String getComment();
-
     /**
      *  <p>Maps to <code>ReturnItem.shipmentState</code></p>
      * @return shipmentState
@@ -75,44 +78,50 @@ public interface ReturnItemDraft extends io.vrap.rmf.base.client.Draft<ReturnIte
      * set quantity
      * @param quantity value to be set
      */
-
+    
     public void setQuantity(final Double quantity);
-
+    
+    
     /**
      * set lineItemId
      * @param lineItemId value to be set
      */
-
+    
     public void setLineItemId(final String lineItemId);
-
+    
+    
     /**
      * set customLineItemId
      * @param customLineItemId value to be set
      */
-
+    
     public void setCustomLineItemId(final String customLineItemId);
-
+    
+    
     /**
      * set comment
      * @param comment value to be set
      */
-
+    
     public void setComment(final String comment);
-
+    
+    
     /**
      *  <p>Maps to <code>ReturnItem.shipmentState</code></p>
      * @param shipmentState value to be set
      */
-
+    
     public void setShipmentState(final ReturnShipmentState shipmentState);
+    
 
     /**
      * factory method
      * @return instance of ReturnItemDraft
      */
-    public static ReturnItemDraft of() {
+    public static ReturnItemDraft of(){
         return new ReturnItemDraftImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy ReturnItemDraft
@@ -155,7 +164,7 @@ public interface ReturnItemDraft extends io.vrap.rmf.base.client.Draft<ReturnIte
     public static ReturnItemDraftBuilder builder() {
         return ReturnItemDraftBuilder.of();
     }
-
+    
     /**
      * create builder for ReturnItemDraft instance
      * @param template instance with prefilled values for the builder
@@ -164,6 +173,7 @@ public interface ReturnItemDraft extends io.vrap.rmf.base.client.Draft<ReturnIte
     public static ReturnItemDraftBuilder builder(final ReturnItemDraft template) {
         return ReturnItemDraftBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -174,7 +184,7 @@ public interface ReturnItemDraft extends io.vrap.rmf.base.client.Draft<ReturnIte
     default <T> T withReturnItemDraft(Function<ReturnItemDraft, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

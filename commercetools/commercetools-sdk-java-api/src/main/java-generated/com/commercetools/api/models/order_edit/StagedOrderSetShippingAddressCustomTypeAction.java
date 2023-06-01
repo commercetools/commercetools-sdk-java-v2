@@ -1,20 +1,22 @@
-
 package com.commercetools.api.models.order_edit;
-
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
 
 import com.commercetools.api.models.order.StagedOrderUpdateAction;
 import com.commercetools.api.models.type.FieldContainer;
 import com.commercetools.api.models.type.TypeResourceIdentifier;
+import com.commercetools.api.models.order_edit.StagedOrderSetShippingAddressCustomTypeActionImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * StagedOrderSetShippingAddressCustomTypeAction
@@ -26,9 +28,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     StagedOrderSetShippingAddressCustomTypeAction stagedOrderSetShippingAddressCustomTypeAction = StagedOrderSetShippingAddressCustomTypeAction.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = StagedOrderSetShippingAddressCustomTypeActionImpl.class)
 public interface StagedOrderSetShippingAddressCustomTypeAction extends StagedOrderUpdateAction {
 
@@ -44,7 +49,6 @@ public interface StagedOrderSetShippingAddressCustomTypeAction extends StagedOrd
     @Valid
     @JsonProperty("type")
     public TypeResourceIdentifier getType();
-
     /**
      *  <p>Sets the Custom Fields fields for the <code>shippingAddress</code>.</p>
      * @return fields
@@ -57,31 +61,33 @@ public interface StagedOrderSetShippingAddressCustomTypeAction extends StagedOrd
      *  <p>Defines the Type that extends the <code>shippingAddress</code> with Custom Fields. If absent, any existing Type and Custom Fields are removed from the <code>shippingAddress</code>.</p>
      * @param type value to be set
      */
-
+    
     public void setType(final TypeResourceIdentifier type);
-
+    
+    
     /**
      *  <p>Sets the Custom Fields fields for the <code>shippingAddress</code>.</p>
      * @param fields value to be set
      */
-
+    
     public void setFields(final FieldContainer fields);
+    
 
     /**
      * factory method
      * @return instance of StagedOrderSetShippingAddressCustomTypeAction
      */
-    public static StagedOrderSetShippingAddressCustomTypeAction of() {
+    public static StagedOrderSetShippingAddressCustomTypeAction of(){
         return new StagedOrderSetShippingAddressCustomTypeActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy StagedOrderSetShippingAddressCustomTypeAction
      * @param template instance to be copied
      * @return copy instance
      */
-    public static StagedOrderSetShippingAddressCustomTypeAction of(
-            final StagedOrderSetShippingAddressCustomTypeAction template) {
+    public static StagedOrderSetShippingAddressCustomTypeAction of(final StagedOrderSetShippingAddressCustomTypeAction template) {
         StagedOrderSetShippingAddressCustomTypeActionImpl instance = new StagedOrderSetShippingAddressCustomTypeActionImpl();
         instance.setType(template.getType());
         instance.setFields(template.getFields());
@@ -94,8 +100,7 @@ public interface StagedOrderSetShippingAddressCustomTypeAction extends StagedOrd
      * @return copy instance
      */
     @Nullable
-    public static StagedOrderSetShippingAddressCustomTypeAction deepCopy(
-            @Nullable final StagedOrderSetShippingAddressCustomTypeAction template) {
+    public static StagedOrderSetShippingAddressCustomTypeAction deepCopy(@Nullable final StagedOrderSetShippingAddressCustomTypeAction template) {
         if (template == null) {
             return null;
         }
@@ -112,16 +117,16 @@ public interface StagedOrderSetShippingAddressCustomTypeAction extends StagedOrd
     public static StagedOrderSetShippingAddressCustomTypeActionBuilder builder() {
         return StagedOrderSetShippingAddressCustomTypeActionBuilder.of();
     }
-
+    
     /**
      * create builder for StagedOrderSetShippingAddressCustomTypeAction instance
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static StagedOrderSetShippingAddressCustomTypeActionBuilder builder(
-            final StagedOrderSetShippingAddressCustomTypeAction template) {
+    public static StagedOrderSetShippingAddressCustomTypeActionBuilder builder(final StagedOrderSetShippingAddressCustomTypeAction template) {
         return StagedOrderSetShippingAddressCustomTypeActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -129,11 +134,10 @@ public interface StagedOrderSetShippingAddressCustomTypeAction extends StagedOrd
      * @param helper function to map the object
      * @return mapped value
      */
-    default <T> T withStagedOrderSetShippingAddressCustomTypeAction(
-            Function<StagedOrderSetShippingAddressCustomTypeAction, T> helper) {
+    default <T> T withStagedOrderSetShippingAddressCustomTypeAction(Function<StagedOrderSetShippingAddressCustomTypeAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

@@ -1,19 +1,21 @@
-
 package com.commercetools.api.models.message;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
+import com.commercetools.api.models.message.MessagePayload;
 import com.commercetools.api.models.product.ProductProjection;
+import com.commercetools.api.models.message.ProductDeletedMessagePayloadImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Generated after a successful Delete Product request.</p>
@@ -26,9 +28,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .plusRemovedImageUrls(removedImageUrlsBuilder -> removedImageUrlsBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = ProductDeletedMessagePayloadImpl.class)
 public interface ProductDeletedMessagePayload extends MessagePayload {
 
@@ -44,7 +49,6 @@ public interface ProductDeletedMessagePayload extends MessagePayload {
     @NotNull
     @JsonProperty("removedImageUrls")
     public List<String> getRemovedImageUrls();
-
     /**
      *  <p>Current Product Projection of the deleted Product.</p>
      * @return currentProjection
@@ -57,31 +61,32 @@ public interface ProductDeletedMessagePayload extends MessagePayload {
      *  <p>List of image URLs that were removed during the Delete Product request.</p>
      * @param removedImageUrls values to be set
      */
-
+    
     @JsonIgnore
-    public void setRemovedImageUrls(final String... removedImageUrls);
-
+    public void setRemovedImageUrls(final String ...removedImageUrls);
     /**
      *  <p>List of image URLs that were removed during the Delete Product request.</p>
      * @param removedImageUrls values to be set
      */
-
+    
     public void setRemovedImageUrls(final List<String> removedImageUrls);
-
+    
     /**
      *  <p>Current Product Projection of the deleted Product.</p>
      * @param currentProjection value to be set
      */
-
+    
     public void setCurrentProjection(final ProductProjection currentProjection);
+    
 
     /**
      * factory method
      * @return instance of ProductDeletedMessagePayload
      */
-    public static ProductDeletedMessagePayload of() {
+    public static ProductDeletedMessagePayload of(){
         return new ProductDeletedMessagePayloadImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy ProductDeletedMessagePayload
@@ -106,10 +111,10 @@ public interface ProductDeletedMessagePayload extends MessagePayload {
             return null;
         }
         ProductDeletedMessagePayloadImpl instance = new ProductDeletedMessagePayloadImpl();
-        instance.setRemovedImageUrls(
-            Optional.ofNullable(template.getRemovedImageUrls()).map(ArrayList::new).orElse(null));
-        instance.setCurrentProjection(
-            com.commercetools.api.models.product.ProductProjection.deepCopy(template.getCurrentProjection()));
+        instance.setRemovedImageUrls(Optional.ofNullable(template.getRemovedImageUrls())
+                .map(ArrayList::new)
+                .orElse(null));
+        instance.setCurrentProjection(com.commercetools.api.models.product.ProductProjection.deepCopy(template.getCurrentProjection()));
         return instance;
     }
 
@@ -120,7 +125,7 @@ public interface ProductDeletedMessagePayload extends MessagePayload {
     public static ProductDeletedMessagePayloadBuilder builder() {
         return ProductDeletedMessagePayloadBuilder.of();
     }
-
+    
     /**
      * create builder for ProductDeletedMessagePayload instance
      * @param template instance with prefilled values for the builder
@@ -129,6 +134,7 @@ public interface ProductDeletedMessagePayload extends MessagePayload {
     public static ProductDeletedMessagePayloadBuilder builder(final ProductDeletedMessagePayload template) {
         return ProductDeletedMessagePayloadBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -139,7 +145,7 @@ public interface ProductDeletedMessagePayload extends MessagePayload {
     default <T> T withProductDeletedMessagePayload(Function<ProductDeletedMessagePayload, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

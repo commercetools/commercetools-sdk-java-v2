@@ -1,17 +1,20 @@
-
 package com.commercetools.api.models.error;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
+import com.commercetools.api.models.error.GraphQLErrorObject;
+import com.commercetools.api.models.error.GraphQLInvalidOperationErrorImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Returned when the resources involved in the request are not in a valid state for the operation.</p>
@@ -24,9 +27,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     GraphQLInvalidOperationError graphQLInvalidOperationError = GraphQLInvalidOperationError.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = GraphQLInvalidOperationErrorImpl.class)
 public interface GraphQLInvalidOperationError extends GraphQLErrorObject {
 
@@ -43,13 +49,15 @@ public interface GraphQLInvalidOperationError extends GraphQLErrorObject {
     @JsonProperty("code")
     public String getCode();
 
+
     /**
      * factory method
      * @return instance of GraphQLInvalidOperationError
      */
-    public static GraphQLInvalidOperationError of() {
+    public static GraphQLInvalidOperationError of(){
         return new GraphQLInvalidOperationErrorImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy GraphQLInvalidOperationError
@@ -84,7 +92,7 @@ public interface GraphQLInvalidOperationError extends GraphQLErrorObject {
     public static GraphQLInvalidOperationErrorBuilder builder() {
         return GraphQLInvalidOperationErrorBuilder.of();
     }
-
+    
     /**
      * create builder for GraphQLInvalidOperationError instance
      * @param template instance with prefilled values for the builder
@@ -93,6 +101,7 @@ public interface GraphQLInvalidOperationError extends GraphQLErrorObject {
     public static GraphQLInvalidOperationErrorBuilder builder(final GraphQLInvalidOperationError template) {
         return GraphQLInvalidOperationErrorBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -103,7 +112,7 @@ public interface GraphQLInvalidOperationError extends GraphQLErrorObject {
     default <T> T withGraphQLInvalidOperationError(Function<GraphQLInvalidOperationError, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

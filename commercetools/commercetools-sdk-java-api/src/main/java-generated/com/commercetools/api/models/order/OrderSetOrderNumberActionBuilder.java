@@ -1,10 +1,11 @@
-
 package com.commercetools.api.models.order;
 
-import java.util.*;
-
+import com.commercetools.api.models.order.OrderUpdateAction;
+import com.commercetools.api.models.order.OrderSetOrderNumberAction;
 import javax.annotation.Nullable;
-
+import java.util.*;
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -17,32 +18,39 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     OrderSetOrderNumberAction orderSetOrderNumberAction = OrderSetOrderNumberAction.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class OrderSetOrderNumberActionBuilder implements Builder<OrderSetOrderNumberAction> {
 
+    
     @Nullable
     private String orderNumber;
 
+    
     /**
      * set the value to the orderNumber
      * @param orderNumber value to be set
      * @return Builder
      */
-
+    
     public OrderSetOrderNumberActionBuilder orderNumber(@Nullable final String orderNumber) {
         this.orderNumber = orderNumber;
         return this;
     }
+    
+    
 
     /**
      * value of orderNumber}
      * @return orderNumber
      */
-
+    
     @Nullable
-    public String getOrderNumber() {
+    public String getOrderNumber(){
         return this.orderNumber;
     }
 
@@ -53,7 +61,7 @@ public class OrderSetOrderNumberActionBuilder implements Builder<OrderSetOrderNu
     public OrderSetOrderNumberAction build() {
         return new OrderSetOrderNumberActionImpl(orderNumber);
     }
-
+    
     /**
      * builds OrderSetOrderNumberAction without checking for non-null required values
      * @return OrderSetOrderNumberAction
@@ -64,7 +72,7 @@ public class OrderSetOrderNumberActionBuilder implements Builder<OrderSetOrderNu
 
     /**
      * factory method for an instance of OrderSetOrderNumberActionBuilder
-     * @return builder
+     * @return builder 
      */
     public static OrderSetOrderNumberActionBuilder of() {
         return new OrderSetOrderNumberActionBuilder();

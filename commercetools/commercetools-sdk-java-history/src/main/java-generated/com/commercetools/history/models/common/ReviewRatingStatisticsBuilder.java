@@ -1,8 +1,11 @@
-
 package com.commercetools.history.models.common;
 
+import java.lang.Object;
+import com.commercetools.history.models.common.ReviewRatingStatistics;
+import javax.annotation.Nullable;
 import java.util.*;
-
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -20,118 +23,151 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .ratingsDistribution(ratingsDistributionBuilder -> ratingsDistributionBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class ReviewRatingStatisticsBuilder implements Builder<ReviewRatingStatistics> {
 
+    
+    
     private Integer averageRating;
-
+    
+    
+    
     private Integer highestRating;
-
+    
+    
+    
     private Integer lowestRating;
-
+    
+    
+    
     private Integer count;
-
+    
+    
+    
     private java.lang.Object ratingsDistribution;
 
+    
     /**
      *  <p>Average rating of one target This number is rounded with 5 decimals.</p>
      * @param averageRating value to be set
      * @return Builder
      */
-
-    public ReviewRatingStatisticsBuilder averageRating(final Integer averageRating) {
+    
+    public ReviewRatingStatisticsBuilder averageRating( final Integer averageRating) {
         this.averageRating = averageRating;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Highest rating of one target</p>
      * @param highestRating value to be set
      * @return Builder
      */
-
-    public ReviewRatingStatisticsBuilder highestRating(final Integer highestRating) {
+    
+    public ReviewRatingStatisticsBuilder highestRating( final Integer highestRating) {
         this.highestRating = highestRating;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Lowest rating of one target</p>
      * @param lowestRating value to be set
      * @return Builder
      */
-
-    public ReviewRatingStatisticsBuilder lowestRating(final Integer lowestRating) {
+    
+    public ReviewRatingStatisticsBuilder lowestRating( final Integer lowestRating) {
         this.lowestRating = lowestRating;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Number of ratings taken into account</p>
      * @param count value to be set
      * @return Builder
      */
-
-    public ReviewRatingStatisticsBuilder count(final Integer count) {
+    
+    public ReviewRatingStatisticsBuilder count( final Integer count) {
         this.count = count;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>The full distribution of the ratings. The keys are the different ratings and the values are the count of reviews having this rating. Only the used ratings appear in this object.</p>
      * @param ratingsDistribution value to be set
      * @return Builder
      */
-
-    public ReviewRatingStatisticsBuilder ratingsDistribution(final java.lang.Object ratingsDistribution) {
+    
+    public ReviewRatingStatisticsBuilder ratingsDistribution( final java.lang.Object ratingsDistribution) {
         this.ratingsDistribution = ratingsDistribution;
         return this;
     }
+    
+    
 
     /**
      *  <p>Average rating of one target This number is rounded with 5 decimals.</p>
      * @return averageRating
      */
-
-    public Integer getAverageRating() {
+    
+    
+    public Integer getAverageRating(){
         return this.averageRating;
     }
-
+    
     /**
      *  <p>Highest rating of one target</p>
      * @return highestRating
      */
-
-    public Integer getHighestRating() {
+    
+    
+    public Integer getHighestRating(){
         return this.highestRating;
     }
-
+    
     /**
      *  <p>Lowest rating of one target</p>
      * @return lowestRating
      */
-
-    public Integer getLowestRating() {
+    
+    
+    public Integer getLowestRating(){
         return this.lowestRating;
     }
-
+    
     /**
      *  <p>Number of ratings taken into account</p>
      * @return count
      */
-
-    public Integer getCount() {
+    
+    
+    public Integer getCount(){
         return this.count;
     }
-
+    
     /**
      *  <p>The full distribution of the ratings. The keys are the different ratings and the values are the count of reviews having this rating. Only the used ratings appear in this object.</p>
      * @return ratingsDistribution
      */
-
-    public java.lang.Object getRatingsDistribution() {
+    
+    
+    public java.lang.Object getRatingsDistribution(){
         return this.ratingsDistribution;
     }
 
@@ -147,7 +183,7 @@ public class ReviewRatingStatisticsBuilder implements Builder<ReviewRatingStatis
         Objects.requireNonNull(ratingsDistribution, ReviewRatingStatistics.class + ": ratingsDistribution is missing");
         return new ReviewRatingStatisticsImpl(averageRating, highestRating, lowestRating, count, ratingsDistribution);
     }
-
+    
     /**
      * builds ReviewRatingStatistics without checking for non-null required values
      * @return ReviewRatingStatistics
@@ -158,7 +194,7 @@ public class ReviewRatingStatisticsBuilder implements Builder<ReviewRatingStatis
 
     /**
      * factory method for an instance of ReviewRatingStatisticsBuilder
-     * @return builder
+     * @return builder 
      */
     public static ReviewRatingStatisticsBuilder of() {
         return new ReviewRatingStatisticsBuilder();

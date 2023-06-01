@@ -1,20 +1,23 @@
-
 package com.commercetools.api.models.common;
-
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.associate_role.AssociateRoleKeyReference;
 import com.commercetools.api.models.business_unit.BusinessUnitKeyReference;
+import com.commercetools.api.models.common.ReferenceTypeId;
 import com.commercetools.api.models.store.StoreKeyReference;
+
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>A KeyReference represents a loose reference to another resource in the same Project identified by the resource's <code>key</code> field. If available, the <code>key</code> is immutable and mandatory. KeyReferences do not support Reference Expansion.</p>
@@ -27,16 +30,27 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             key("{key}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
 @JsonSubTypes({
-        @JsonSubTypes.Type(value = com.commercetools.api.models.associate_role.AssociateRoleKeyReferenceImpl.class, name = AssociateRoleKeyReference.ASSOCIATE_ROLE),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.business_unit.BusinessUnitKeyReferenceImpl.class, name = BusinessUnitKeyReference.BUSINESS_UNIT),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.store.StoreKeyReferenceImpl.class, name = StoreKeyReference.STORE) })
-@JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.EXISTING_PROPERTY, property = "typeId", defaultImpl = KeyReferenceImpl.class, visible = true)
+   @JsonSubTypes.Type(value = com.commercetools.api.models.associate_role.AssociateRoleKeyReferenceImpl.class, name = AssociateRoleKeyReference.ASSOCIATE_ROLE),
+   @JsonSubTypes.Type(value = com.commercetools.api.models.business_unit.BusinessUnitKeyReferenceImpl.class, name = BusinessUnitKeyReference.BUSINESS_UNIT),
+   @JsonSubTypes.Type(value = com.commercetools.api.models.store.StoreKeyReferenceImpl.class, name = StoreKeyReference.STORE)
+})
+@JsonTypeInfo(
+    use = JsonTypeInfo.Id.NAME,
+    include = JsonTypeInfo.As.EXISTING_PROPERTY,
+    property = "typeId",
+    defaultImpl = KeyReferenceImpl.class,
+    visible = true
+)
 @JsonDeserialize(as = KeyReferenceImpl.class)
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public interface KeyReference extends com.commercetools.api.models.WithKey {
+
 
     /**
      *  <p>Type of referenced resource.</p>
@@ -45,7 +59,6 @@ public interface KeyReference extends com.commercetools.api.models.WithKey {
     @NotNull
     @JsonProperty("typeId")
     public ReferenceTypeId getTypeId();
-
     /**
      *  <p>User-defined unique and immutable key of the referenced resource.</p>
      * @return key
@@ -58,8 +71,11 @@ public interface KeyReference extends com.commercetools.api.models.WithKey {
      *  <p>User-defined unique and immutable key of the referenced resource.</p>
      * @param key value to be set
      */
-
+    
     public void setKey(final String key);
+    
+
+
 
     /**
      * factory method to create a deep copy of KeyReference
@@ -72,44 +88,40 @@ public interface KeyReference extends com.commercetools.api.models.WithKey {
             return null;
         }
         if (template instanceof com.commercetools.api.models.associate_role.AssociateRoleKeyReference) {
-            return com.commercetools.api.models.associate_role.AssociateRoleKeyReference
-                    .deepCopy((com.commercetools.api.models.associate_role.AssociateRoleKeyReference) template);
+            return com.commercetools.api.models.associate_role.AssociateRoleKeyReference.deepCopy((com.commercetools.api.models.associate_role.AssociateRoleKeyReference)template);
         }
         if (template instanceof com.commercetools.api.models.business_unit.BusinessUnitKeyReference) {
-            return com.commercetools.api.models.business_unit.BusinessUnitKeyReference
-                    .deepCopy((com.commercetools.api.models.business_unit.BusinessUnitKeyReference) template);
+            return com.commercetools.api.models.business_unit.BusinessUnitKeyReference.deepCopy((com.commercetools.api.models.business_unit.BusinessUnitKeyReference)template);
         }
         if (template instanceof com.commercetools.api.models.store.StoreKeyReference) {
-            return com.commercetools.api.models.store.StoreKeyReference
-                    .deepCopy((com.commercetools.api.models.store.StoreKeyReference) template);
+            return com.commercetools.api.models.store.StoreKeyReference.deepCopy((com.commercetools.api.models.store.StoreKeyReference)template);
         }
         KeyReferenceImpl instance = new KeyReferenceImpl();
         instance.setKey(template.getKey());
         return instance;
     }
 
+
     /**
      * builder for associateRole subtype
      * @return builder
      */
     public static com.commercetools.api.models.associate_role.AssociateRoleKeyReferenceBuilder associateRoleBuilder() {
-        return com.commercetools.api.models.associate_role.AssociateRoleKeyReferenceBuilder.of();
+       return com.commercetools.api.models.associate_role.AssociateRoleKeyReferenceBuilder.of();
     }
-
     /**
      * builder for businessUnit subtype
      * @return builder
      */
     public static com.commercetools.api.models.business_unit.BusinessUnitKeyReferenceBuilder businessUnitBuilder() {
-        return com.commercetools.api.models.business_unit.BusinessUnitKeyReferenceBuilder.of();
+       return com.commercetools.api.models.business_unit.BusinessUnitKeyReferenceBuilder.of();
     }
-
     /**
      * builder for store subtype
      * @return builder
      */
     public static com.commercetools.api.models.store.StoreKeyReferenceBuilder storeBuilder() {
-        return com.commercetools.api.models.store.StoreKeyReferenceBuilder.of();
+       return com.commercetools.api.models.store.StoreKeyReferenceBuilder.of();
     }
 
     /**
@@ -121,7 +133,7 @@ public interface KeyReference extends com.commercetools.api.models.WithKey {
     default <T> T withKeyReference(Function<KeyReference, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

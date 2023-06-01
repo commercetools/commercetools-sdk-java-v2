@@ -1,18 +1,21 @@
-
 package com.commercetools.api.models.store;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-
 import com.commercetools.api.models.common.LocalizedString;
+import com.commercetools.api.models.store.StoreUpdateAction;
+import com.commercetools.api.models.store.StoreSetNameActionImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>This update action produces the StoreNameSet Message.</p>
@@ -24,9 +27,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     StoreSetNameAction storeSetNameAction = StoreSetNameAction.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = StoreSetNameActionImpl.class)
 public interface StoreSetNameAction extends StoreUpdateAction {
 
@@ -47,16 +53,18 @@ public interface StoreSetNameAction extends StoreUpdateAction {
      *  <p>Value to set.</p>
      * @param name value to be set
      */
-
+    
     public void setName(final LocalizedString name);
+    
 
     /**
      * factory method
      * @return instance of StoreSetNameAction
      */
-    public static StoreSetNameAction of() {
+    public static StoreSetNameAction of(){
         return new StoreSetNameActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy StoreSetNameAction
@@ -91,7 +99,7 @@ public interface StoreSetNameAction extends StoreUpdateAction {
     public static StoreSetNameActionBuilder builder() {
         return StoreSetNameActionBuilder.of();
     }
-
+    
     /**
      * create builder for StoreSetNameAction instance
      * @param template instance with prefilled values for the builder
@@ -100,6 +108,7 @@ public interface StoreSetNameAction extends StoreUpdateAction {
     public static StoreSetNameActionBuilder builder(final StoreSetNameAction template) {
         return StoreSetNameActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -110,7 +119,7 @@ public interface StoreSetNameAction extends StoreUpdateAction {
     default <T> T withStoreSetNameAction(Function<StoreSetNameAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

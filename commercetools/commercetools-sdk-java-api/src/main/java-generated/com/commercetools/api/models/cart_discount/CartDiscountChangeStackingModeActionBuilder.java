@@ -1,8 +1,12 @@
-
 package com.commercetools.api.models.cart_discount;
 
+import com.commercetools.api.models.cart_discount.CartDiscountUpdateAction;
+import com.commercetools.api.models.cart_discount.StackingMode;
+import com.commercetools.api.models.cart_discount.CartDiscountChangeStackingModeAction;
+import javax.annotation.Nullable;
 import java.util.*;
-
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -16,31 +20,39 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .stackingMode(StackingMode.STACKING)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class CartDiscountChangeStackingModeActionBuilder implements Builder<CartDiscountChangeStackingModeAction> {
 
+    
+    
     private com.commercetools.api.models.cart_discount.StackingMode stackingMode;
 
+    
     /**
      *  <p>New value to set.</p>
      * @param stackingMode value to be set
      * @return Builder
      */
-
-    public CartDiscountChangeStackingModeActionBuilder stackingMode(
-            final com.commercetools.api.models.cart_discount.StackingMode stackingMode) {
+    
+    public CartDiscountChangeStackingModeActionBuilder stackingMode( final com.commercetools.api.models.cart_discount.StackingMode stackingMode) {
         this.stackingMode = stackingMode;
         return this;
     }
+    
+    
 
     /**
      *  <p>New value to set.</p>
      * @return stackingMode
      */
-
-    public com.commercetools.api.models.cart_discount.StackingMode getStackingMode() {
+    
+    
+    public com.commercetools.api.models.cart_discount.StackingMode getStackingMode(){
         return this.stackingMode;
     }
 
@@ -52,7 +64,7 @@ public class CartDiscountChangeStackingModeActionBuilder implements Builder<Cart
         Objects.requireNonNull(stackingMode, CartDiscountChangeStackingModeAction.class + ": stackingMode is missing");
         return new CartDiscountChangeStackingModeActionImpl(stackingMode);
     }
-
+    
     /**
      * builds CartDiscountChangeStackingModeAction without checking for non-null required values
      * @return CartDiscountChangeStackingModeAction
@@ -63,7 +75,7 @@ public class CartDiscountChangeStackingModeActionBuilder implements Builder<Cart
 
     /**
      * factory method for an instance of CartDiscountChangeStackingModeActionBuilder
-     * @return builder
+     * @return builder 
      */
     public static CartDiscountChangeStackingModeActionBuilder of() {
         return new CartDiscountChangeStackingModeActionBuilder();

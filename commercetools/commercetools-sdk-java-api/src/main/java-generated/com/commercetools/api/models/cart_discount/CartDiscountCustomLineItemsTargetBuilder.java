@@ -1,8 +1,11 @@
-
 package com.commercetools.api.models.cart_discount;
 
+import com.commercetools.api.models.cart_discount.CartDiscountTarget;
+import com.commercetools.api.models.cart_discount.CartDiscountCustomLineItemsTarget;
+import javax.annotation.Nullable;
 import java.util.*;
-
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -16,30 +19,39 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .predicate("{predicate}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class CartDiscountCustomLineItemsTargetBuilder implements Builder<CartDiscountCustomLineItemsTarget> {
 
+    
+    
     private String predicate;
 
+    
     /**
      *  <p>Valid CustomLineItem target predicate.</p>
      * @param predicate value to be set
      * @return Builder
      */
-
-    public CartDiscountCustomLineItemsTargetBuilder predicate(final String predicate) {
+    
+    public CartDiscountCustomLineItemsTargetBuilder predicate( final String predicate) {
         this.predicate = predicate;
         return this;
     }
+    
+    
 
     /**
      *  <p>Valid CustomLineItem target predicate.</p>
      * @return predicate
      */
-
-    public String getPredicate() {
+    
+    
+    public String getPredicate(){
         return this.predicate;
     }
 
@@ -51,7 +63,7 @@ public class CartDiscountCustomLineItemsTargetBuilder implements Builder<CartDis
         Objects.requireNonNull(predicate, CartDiscountCustomLineItemsTarget.class + ": predicate is missing");
         return new CartDiscountCustomLineItemsTargetImpl(predicate);
     }
-
+    
     /**
      * builds CartDiscountCustomLineItemsTarget without checking for non-null required values
      * @return CartDiscountCustomLineItemsTarget
@@ -62,7 +74,7 @@ public class CartDiscountCustomLineItemsTargetBuilder implements Builder<CartDis
 
     /**
      * factory method for an instance of CartDiscountCustomLineItemsTargetBuilder
-     * @return builder
+     * @return builder 
      */
     public static CartDiscountCustomLineItemsTargetBuilder of() {
         return new CartDiscountCustomLineItemsTargetBuilder();

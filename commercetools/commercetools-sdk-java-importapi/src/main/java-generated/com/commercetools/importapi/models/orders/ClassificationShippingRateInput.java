@@ -1,19 +1,22 @@
-
 package com.commercetools.importapi.models.orders;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
 import com.commercetools.importapi.models.common.LocalizedString;
+import com.commercetools.importapi.models.orders.ShippingRateInput;
+import com.commercetools.importapi.models.orders.ShippingRateInputType;
+import com.commercetools.importapi.models.orders.ClassificationShippingRateInputImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * ClassificationShippingRateInput
@@ -27,9 +30,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .label(labelBuilder -> labelBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = ClassificationShippingRateInputImpl.class)
 public interface ClassificationShippingRateInput extends ShippingRateInput {
 
@@ -45,7 +51,6 @@ public interface ClassificationShippingRateInput extends ShippingRateInput {
     @NotNull
     @JsonProperty("key")
     public String getKey();
-
     /**
      *  <p>A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</p>
      *  <pre><code>{
@@ -64,9 +69,10 @@ public interface ClassificationShippingRateInput extends ShippingRateInput {
      * set key
      * @param key value to be set
      */
-
+    
     public void setKey(final String key);
-
+    
+    
     /**
      *  <p>A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</p>
      *  <pre><code>{
@@ -76,16 +82,18 @@ public interface ClassificationShippingRateInput extends ShippingRateInput {
      *  </code></pre>
      * @param label value to be set
      */
-
+    
     public void setLabel(final LocalizedString label);
+    
 
     /**
      * factory method
      * @return instance of ClassificationShippingRateInput
      */
-    public static ClassificationShippingRateInput of() {
+    public static ClassificationShippingRateInput of(){
         return new ClassificationShippingRateInputImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy ClassificationShippingRateInput
@@ -122,7 +130,7 @@ public interface ClassificationShippingRateInput extends ShippingRateInput {
     public static ClassificationShippingRateInputBuilder builder() {
         return ClassificationShippingRateInputBuilder.of();
     }
-
+    
     /**
      * create builder for ClassificationShippingRateInput instance
      * @param template instance with prefilled values for the builder
@@ -131,6 +139,7 @@ public interface ClassificationShippingRateInput extends ShippingRateInput {
     public static ClassificationShippingRateInputBuilder builder(final ClassificationShippingRateInput template) {
         return ClassificationShippingRateInputBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -141,7 +150,7 @@ public interface ClassificationShippingRateInput extends ShippingRateInput {
     default <T> T withClassificationShippingRateInput(Function<ClassificationShippingRateInput, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

@@ -1,8 +1,11 @@
-
 package com.commercetools.history.models.change_value;
 
+import com.commercetools.history.models.change_value.ChangeTargetChangeValue;
+import com.commercetools.history.models.change_value.ChangeTargetShippingChangeValue;
+import javax.annotation.Nullable;
 import java.util.*;
-
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -15,10 +18,16 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     ChangeTargetShippingChangeValue changeTargetShippingChangeValue = ChangeTargetShippingChangeValue.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class ChangeTargetShippingChangeValueBuilder implements Builder<ChangeTargetShippingChangeValue> {
+
+
+
 
     /**
      * builds ChangeTargetShippingChangeValue with checking for non-null required values
@@ -27,7 +36,7 @@ public class ChangeTargetShippingChangeValueBuilder implements Builder<ChangeTar
     public ChangeTargetShippingChangeValue build() {
         return new ChangeTargetShippingChangeValueImpl();
     }
-
+    
     /**
      * builds ChangeTargetShippingChangeValue without checking for non-null required values
      * @return ChangeTargetShippingChangeValue
@@ -38,7 +47,7 @@ public class ChangeTargetShippingChangeValueBuilder implements Builder<ChangeTar
 
     /**
      * factory method for an instance of ChangeTargetShippingChangeValueBuilder
-     * @return builder
+     * @return builder 
      */
     public static ChangeTargetShippingChangeValueBuilder of() {
         return new ChangeTargetShippingChangeValueBuilder();

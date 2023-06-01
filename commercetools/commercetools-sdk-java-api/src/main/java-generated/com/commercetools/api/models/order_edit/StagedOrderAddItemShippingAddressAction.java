@@ -1,20 +1,21 @@
-
 package com.commercetools.api.models.order_edit;
-
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.common.BaseAddress;
 import com.commercetools.api.models.order.StagedOrderUpdateAction;
+import com.commercetools.api.models.order_edit.StagedOrderAddItemShippingAddressActionImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * StagedOrderAddItemShippingAddressAction
@@ -27,9 +28,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .address(addressBuilder -> addressBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = StagedOrderAddItemShippingAddressActionImpl.class)
 public interface StagedOrderAddItemShippingAddressAction extends StagedOrderUpdateAction {
 
@@ -51,16 +55,18 @@ public interface StagedOrderAddItemShippingAddressAction extends StagedOrderUpda
      *  <p>Polymorphic base type that represents a postal address and contact details. Depending on the read or write action, it can be either Address or AddressDraft that only differ in the data type for the optional <code>custom</code> field.</p>
      * @param address value to be set
      */
-
+    
     public void setAddress(final BaseAddress address);
+    
 
     /**
      * factory method
      * @return instance of StagedOrderAddItemShippingAddressAction
      */
-    public static StagedOrderAddItemShippingAddressAction of() {
+    public static StagedOrderAddItemShippingAddressAction of(){
         return new StagedOrderAddItemShippingAddressActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy StagedOrderAddItemShippingAddressAction
@@ -79,8 +85,7 @@ public interface StagedOrderAddItemShippingAddressAction extends StagedOrderUpda
      * @return copy instance
      */
     @Nullable
-    public static StagedOrderAddItemShippingAddressAction deepCopy(
-            @Nullable final StagedOrderAddItemShippingAddressAction template) {
+    public static StagedOrderAddItemShippingAddressAction deepCopy(@Nullable final StagedOrderAddItemShippingAddressAction template) {
         if (template == null) {
             return null;
         }
@@ -96,16 +101,16 @@ public interface StagedOrderAddItemShippingAddressAction extends StagedOrderUpda
     public static StagedOrderAddItemShippingAddressActionBuilder builder() {
         return StagedOrderAddItemShippingAddressActionBuilder.of();
     }
-
+    
     /**
      * create builder for StagedOrderAddItemShippingAddressAction instance
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static StagedOrderAddItemShippingAddressActionBuilder builder(
-            final StagedOrderAddItemShippingAddressAction template) {
+    public static StagedOrderAddItemShippingAddressActionBuilder builder(final StagedOrderAddItemShippingAddressAction template) {
         return StagedOrderAddItemShippingAddressActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -113,11 +118,10 @@ public interface StagedOrderAddItemShippingAddressAction extends StagedOrderUpda
      * @param helper function to map the object
      * @return mapped value
      */
-    default <T> T withStagedOrderAddItemShippingAddressAction(
-            Function<StagedOrderAddItemShippingAddressAction, T> helper) {
+    default <T> T withStagedOrderAddItemShippingAddressAction(Function<StagedOrderAddItemShippingAddressAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

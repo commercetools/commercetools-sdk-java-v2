@@ -1,9 +1,11 @@
-
 package com.commercetools.api.predicates.query.error;
 
 import com.commercetools.api.predicates.query.*;
 
-public class GraphQLInternalConstraintViolatedErrorQueryBuilderDsl {
+import java.util.function.Function;
+
+
+public class GraphQLInternalConstraintViolatedErrorQueryBuilderDsl  {
     public GraphQLInternalConstraintViolatedErrorQueryBuilderDsl() {
     }
 
@@ -12,9 +14,8 @@ public class GraphQLInternalConstraintViolatedErrorQueryBuilderDsl {
     }
 
     public StringComparisonPredicateBuilder<GraphQLInternalConstraintViolatedErrorQueryBuilderDsl> code() {
-        return new StringComparisonPredicateBuilder<>(
-            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("code")),
-            p -> new CombinationQueryPredicate<>(p, GraphQLInternalConstraintViolatedErrorQueryBuilderDsl::of));
+        return new StringComparisonPredicateBuilder<>(BinaryQueryPredicate.of().left(new ConstantQueryPredicate("code")),
+        p -> new CombinationQueryPredicate<>(p, GraphQLInternalConstraintViolatedErrorQueryBuilderDsl::of));
     }
-
+    
 }

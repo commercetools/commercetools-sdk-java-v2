@@ -1,19 +1,21 @@
-
 package com.commercetools.api.models.project;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
 import com.commercetools.api.models.message.MessagesConfigurationDraft;
+import com.commercetools.api.models.project.ProjectUpdateAction;
+import com.commercetools.api.models.project.ProjectChangeMessagesConfigurationActionImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * ProjectChangeMessagesConfigurationAction
@@ -26,9 +28,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .messagesConfiguration(messagesConfigurationBuilder -> messagesConfigurationBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = ProjectChangeMessagesConfigurationActionImpl.class)
 public interface ProjectChangeMessagesConfigurationAction extends ProjectUpdateAction {
 
@@ -50,16 +55,18 @@ public interface ProjectChangeMessagesConfigurationAction extends ProjectUpdateA
      *  <p>Configuration for the Messages Query feature.</p>
      * @param messagesConfiguration value to be set
      */
-
+    
     public void setMessagesConfiguration(final MessagesConfigurationDraft messagesConfiguration);
+    
 
     /**
      * factory method
      * @return instance of ProjectChangeMessagesConfigurationAction
      */
-    public static ProjectChangeMessagesConfigurationAction of() {
+    public static ProjectChangeMessagesConfigurationAction of(){
         return new ProjectChangeMessagesConfigurationActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy ProjectChangeMessagesConfigurationAction
@@ -78,14 +85,12 @@ public interface ProjectChangeMessagesConfigurationAction extends ProjectUpdateA
      * @return copy instance
      */
     @Nullable
-    public static ProjectChangeMessagesConfigurationAction deepCopy(
-            @Nullable final ProjectChangeMessagesConfigurationAction template) {
+    public static ProjectChangeMessagesConfigurationAction deepCopy(@Nullable final ProjectChangeMessagesConfigurationAction template) {
         if (template == null) {
             return null;
         }
         ProjectChangeMessagesConfigurationActionImpl instance = new ProjectChangeMessagesConfigurationActionImpl();
-        instance.setMessagesConfiguration(com.commercetools.api.models.message.MessagesConfigurationDraft
-                .deepCopy(template.getMessagesConfiguration()));
+        instance.setMessagesConfiguration(com.commercetools.api.models.message.MessagesConfigurationDraft.deepCopy(template.getMessagesConfiguration()));
         return instance;
     }
 
@@ -96,16 +101,16 @@ public interface ProjectChangeMessagesConfigurationAction extends ProjectUpdateA
     public static ProjectChangeMessagesConfigurationActionBuilder builder() {
         return ProjectChangeMessagesConfigurationActionBuilder.of();
     }
-
+    
     /**
      * create builder for ProjectChangeMessagesConfigurationAction instance
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static ProjectChangeMessagesConfigurationActionBuilder builder(
-            final ProjectChangeMessagesConfigurationAction template) {
+    public static ProjectChangeMessagesConfigurationActionBuilder builder(final ProjectChangeMessagesConfigurationAction template) {
         return ProjectChangeMessagesConfigurationActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -113,11 +118,10 @@ public interface ProjectChangeMessagesConfigurationAction extends ProjectUpdateA
      * @param helper function to map the object
      * @return mapped value
      */
-    default <T> T withProjectChangeMessagesConfigurationAction(
-            Function<ProjectChangeMessagesConfigurationAction, T> helper) {
+    default <T> T withProjectChangeMessagesConfigurationAction(Function<ProjectChangeMessagesConfigurationAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

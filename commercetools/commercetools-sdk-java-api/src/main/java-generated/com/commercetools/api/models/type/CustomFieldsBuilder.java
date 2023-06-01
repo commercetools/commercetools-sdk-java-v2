@@ -1,9 +1,12 @@
-
 package com.commercetools.api.models.type;
 
+import com.commercetools.api.models.type.FieldContainer;
+import com.commercetools.api.models.type.TypeReference;
+import com.commercetools.api.models.type.CustomFields;
+import javax.annotation.Nullable;
 import java.util.*;
 import java.util.function.Function;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -18,100 +21,111 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .fields(fieldsBuilder -> fieldsBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class CustomFieldsBuilder implements Builder<CustomFields> {
 
+    
+    
     private com.commercetools.api.models.type.TypeReference type;
-
+    
+    
+    
     private com.commercetools.api.models.type.FieldContainer fields;
 
+    
     /**
      *  <p>Reference to the Type that holds the FieldDefinitions for the Custom Fields.</p>
      * @param builder function to build the type value
      * @return Builder
      */
-
-    public CustomFieldsBuilder type(
-            Function<com.commercetools.api.models.type.TypeReferenceBuilder, com.commercetools.api.models.type.TypeReferenceBuilder> builder) {
+    
+    public CustomFieldsBuilder type(Function<com.commercetools.api.models.type.TypeReferenceBuilder, com.commercetools.api.models.type.TypeReferenceBuilder> builder) {
         this.type = builder.apply(com.commercetools.api.models.type.TypeReferenceBuilder.of()).build();
         return this;
     }
-
+    
     /**
      *  <p>Reference to the Type that holds the FieldDefinitions for the Custom Fields.</p>
      * @param builder function to build the type value
      * @return Builder
      */
-
-    public CustomFieldsBuilder withType(
-            Function<com.commercetools.api.models.type.TypeReferenceBuilder, com.commercetools.api.models.type.TypeReference> builder) {
+    
+    public CustomFieldsBuilder withType(Function<com.commercetools.api.models.type.TypeReferenceBuilder, com.commercetools.api.models.type.TypeReference> builder) {
         this.type = builder.apply(com.commercetools.api.models.type.TypeReferenceBuilder.of());
         return this;
     }
-
+                    
     /**
      *  <p>Reference to the Type that holds the FieldDefinitions for the Custom Fields.</p>
      * @param type value to be set
      * @return Builder
      */
-
-    public CustomFieldsBuilder type(final com.commercetools.api.models.type.TypeReference type) {
+    
+    public CustomFieldsBuilder type( final com.commercetools.api.models.type.TypeReference type) {
         this.type = type;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Object containing the Custom Fields for the customized resource or data type.</p>
      * @param builder function to build the fields value
      * @return Builder
      */
-
-    public CustomFieldsBuilder fields(
-            Function<com.commercetools.api.models.type.FieldContainerBuilder, com.commercetools.api.models.type.FieldContainerBuilder> builder) {
+    
+    public CustomFieldsBuilder fields(Function<com.commercetools.api.models.type.FieldContainerBuilder, com.commercetools.api.models.type.FieldContainerBuilder> builder) {
         this.fields = builder.apply(com.commercetools.api.models.type.FieldContainerBuilder.of()).build();
         return this;
     }
-
+    
     /**
      *  <p>Object containing the Custom Fields for the customized resource or data type.</p>
      * @param builder function to build the fields value
      * @return Builder
      */
-
-    public CustomFieldsBuilder withFields(
-            Function<com.commercetools.api.models.type.FieldContainerBuilder, com.commercetools.api.models.type.FieldContainer> builder) {
+    
+    public CustomFieldsBuilder withFields(Function<com.commercetools.api.models.type.FieldContainerBuilder, com.commercetools.api.models.type.FieldContainer> builder) {
         this.fields = builder.apply(com.commercetools.api.models.type.FieldContainerBuilder.of());
         return this;
     }
-
+                    
     /**
      *  <p>Object containing the Custom Fields for the customized resource or data type.</p>
      * @param fields value to be set
      * @return Builder
      */
-
-    public CustomFieldsBuilder fields(final com.commercetools.api.models.type.FieldContainer fields) {
+    
+    public CustomFieldsBuilder fields( final com.commercetools.api.models.type.FieldContainer fields) {
         this.fields = fields;
         return this;
     }
+    
+    
 
     /**
      *  <p>Reference to the Type that holds the FieldDefinitions for the Custom Fields.</p>
      * @return type
      */
-
-    public com.commercetools.api.models.type.TypeReference getType() {
+    
+    
+    public com.commercetools.api.models.type.TypeReference getType(){
         return this.type;
     }
-
+    
     /**
      *  <p>Object containing the Custom Fields for the customized resource or data type.</p>
      * @return fields
      */
-
-    public com.commercetools.api.models.type.FieldContainer getFields() {
+    
+    
+    public com.commercetools.api.models.type.FieldContainer getFields(){
         return this.fields;
     }
 
@@ -124,7 +138,7 @@ public class CustomFieldsBuilder implements Builder<CustomFields> {
         Objects.requireNonNull(fields, CustomFields.class + ": fields is missing");
         return new CustomFieldsImpl(type, fields);
     }
-
+    
     /**
      * builds CustomFields without checking for non-null required values
      * @return CustomFields
@@ -135,7 +149,7 @@ public class CustomFieldsBuilder implements Builder<CustomFields> {
 
     /**
      * factory method for an instance of CustomFieldsBuilder
-     * @return builder
+     * @return builder 
      */
     public static CustomFieldsBuilder of() {
         return new CustomFieldsBuilder();

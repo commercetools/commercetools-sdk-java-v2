@@ -1,21 +1,21 @@
-
 package com.commercetools.api.models.order;
-
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-import java.util.stream.Collectors;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.cart.DiscountedLineItemPortion;
 import com.commercetools.api.models.common.Money;
+import com.commercetools.api.models.order.DiscountedLineItemPriceDraftImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * DiscountedLineItemPriceDraft
@@ -29,11 +29,15 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .plusIncludedDiscounts(includedDiscountsBuilder -> includedDiscountsBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = DiscountedLineItemPriceDraftImpl.class)
 public interface DiscountedLineItemPriceDraft extends io.vrap.rmf.base.client.Draft<DiscountedLineItemPriceDraft> {
+
 
     /**
      *  <p>Draft type that stores amounts only in cent precision for the specified currency.</p>
@@ -43,7 +47,6 @@ public interface DiscountedLineItemPriceDraft extends io.vrap.rmf.base.client.Dr
     @Valid
     @JsonProperty("value")
     public Money getValue();
-
     /**
      *
      * @return includedDiscounts
@@ -57,31 +60,32 @@ public interface DiscountedLineItemPriceDraft extends io.vrap.rmf.base.client.Dr
      *  <p>Draft type that stores amounts only in cent precision for the specified currency.</p>
      * @param value value to be set
      */
-
+    
     public void setValue(final Money value);
-
+    
+    
     /**
      * set includedDiscounts
      * @param includedDiscounts values to be set
      */
-
+    
     @JsonIgnore
-    public void setIncludedDiscounts(final DiscountedLineItemPortion... includedDiscounts);
-
+    public void setIncludedDiscounts(final DiscountedLineItemPortion ...includedDiscounts);
     /**
      * set includedDiscounts
      * @param includedDiscounts values to be set
      */
-
+    
     public void setIncludedDiscounts(final List<DiscountedLineItemPortion> includedDiscounts);
 
     /**
      * factory method
      * @return instance of DiscountedLineItemPriceDraft
      */
-    public static DiscountedLineItemPriceDraft of() {
+    public static DiscountedLineItemPriceDraft of(){
         return new DiscountedLineItemPriceDraftImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy DiscountedLineItemPriceDraft
@@ -108,9 +112,7 @@ public interface DiscountedLineItemPriceDraft extends io.vrap.rmf.base.client.Dr
         DiscountedLineItemPriceDraftImpl instance = new DiscountedLineItemPriceDraftImpl();
         instance.setValue(com.commercetools.api.models.common.Money.deepCopy(template.getValue()));
         instance.setIncludedDiscounts(Optional.ofNullable(template.getIncludedDiscounts())
-                .map(t -> t.stream()
-                        .map(com.commercetools.api.models.cart.DiscountedLineItemPortion::deepCopy)
-                        .collect(Collectors.toList()))
+                .map(t -> t.stream().map(com.commercetools.api.models.cart.DiscountedLineItemPortion::deepCopy).collect(Collectors.toList()))
                 .orElse(null));
         return instance;
     }
@@ -122,7 +124,7 @@ public interface DiscountedLineItemPriceDraft extends io.vrap.rmf.base.client.Dr
     public static DiscountedLineItemPriceDraftBuilder builder() {
         return DiscountedLineItemPriceDraftBuilder.of();
     }
-
+    
     /**
      * create builder for DiscountedLineItemPriceDraft instance
      * @param template instance with prefilled values for the builder
@@ -131,6 +133,7 @@ public interface DiscountedLineItemPriceDraft extends io.vrap.rmf.base.client.Dr
     public static DiscountedLineItemPriceDraftBuilder builder(final DiscountedLineItemPriceDraft template) {
         return DiscountedLineItemPriceDraftBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -141,7 +144,7 @@ public interface DiscountedLineItemPriceDraft extends io.vrap.rmf.base.client.Dr
     default <T> T withDiscountedLineItemPriceDraft(Function<DiscountedLineItemPriceDraft, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

@@ -1,8 +1,11 @@
-
 package com.commercetools.api.models.standalone_price;
 
+import com.commercetools.api.models.standalone_price.StandalonePriceUpdateAction;
+import com.commercetools.api.models.standalone_price.StandalonePriceChangeActiveAction;
+import javax.annotation.Nullable;
 import java.util.*;
-
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -16,30 +19,39 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .active(true)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class StandalonePriceChangeActiveActionBuilder implements Builder<StandalonePriceChangeActiveAction> {
 
+    
+    
     private Boolean active;
 
+    
     /**
      *  <p>New value to set for the <code>active</code> field of the StandalonePrice.</p>
      * @param active value to be set
      * @return Builder
      */
-
-    public StandalonePriceChangeActiveActionBuilder active(final Boolean active) {
+    
+    public StandalonePriceChangeActiveActionBuilder active( final Boolean active) {
         this.active = active;
         return this;
     }
+    
+    
 
     /**
      *  <p>New value to set for the <code>active</code> field of the StandalonePrice.</p>
      * @return active
      */
-
-    public Boolean getActive() {
+    
+    
+    public Boolean getActive(){
         return this.active;
     }
 
@@ -51,7 +63,7 @@ public class StandalonePriceChangeActiveActionBuilder implements Builder<Standal
         Objects.requireNonNull(active, StandalonePriceChangeActiveAction.class + ": active is missing");
         return new StandalonePriceChangeActiveActionImpl(active);
     }
-
+    
     /**
      * builds StandalonePriceChangeActiveAction without checking for non-null required values
      * @return StandalonePriceChangeActiveAction
@@ -62,7 +74,7 @@ public class StandalonePriceChangeActiveActionBuilder implements Builder<Standal
 
     /**
      * factory method for an instance of StandalonePriceChangeActiveActionBuilder
-     * @return builder
+     * @return builder 
      */
     public static StandalonePriceChangeActiveActionBuilder of() {
         return new StandalonePriceChangeActiveActionBuilder();

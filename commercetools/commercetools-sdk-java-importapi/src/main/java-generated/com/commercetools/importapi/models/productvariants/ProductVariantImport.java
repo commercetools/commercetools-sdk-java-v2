@@ -1,23 +1,24 @@
-
 package com.commercetools.importapi.models.productvariants;
-
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-import java.util.stream.Collectors;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.importapi.models.common.Asset;
 import com.commercetools.importapi.models.common.Image;
 import com.commercetools.importapi.models.common.ImportResource;
 import com.commercetools.importapi.models.common.ProductKeyReference;
+import com.commercetools.importapi.models.productvariants.Attribute;
+import com.commercetools.importapi.models.productvariants.ProductVariantImportImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>The data representation for a ProductVariant to be imported that is persisted as a ProductVariant in the Project.</p>
@@ -32,20 +33,23 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .product(productBuilder -> productBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = ProductVariantImportImpl.class)
 public interface ProductVariantImport extends ImportResource {
+
 
     /**
      *  <p>Maps to <code>ProductVariant.sku</code>.</p>
      * @return sku
      */
-
+    
     @JsonProperty("sku")
     public String getSku();
-
     /**
      *  <p>Maps to <code>ProductVariant.isMasterVariant</code>.</p>
      * @return isMasterVariant
@@ -53,7 +57,6 @@ public interface ProductVariantImport extends ImportResource {
     @NotNull
     @JsonProperty("isMasterVariant")
     public Boolean getIsMasterVariant();
-
     /**
      *  <p>Maps to <code>ProductVariant.attributes</code>. The referenced attribute must be defined in an already existing ProductType in the project, or the <code>state</code> of the ImportOperation will be <code>unresolved</code>.</p>
      * @return attributes
@@ -61,7 +64,6 @@ public interface ProductVariantImport extends ImportResource {
     @Valid
     @JsonProperty("attributes")
     public List<Attribute> getAttributes();
-
     /**
      *  <p>Maps to <code>ProductVariant.images</code>.</p>
      * @return images
@@ -69,7 +71,6 @@ public interface ProductVariantImport extends ImportResource {
     @Valid
     @JsonProperty("images")
     public List<Image> getImages();
-
     /**
      *  <p>Maps to <code>ProductVariant.assets</code>.</p>
      * @return assets
@@ -77,15 +78,13 @@ public interface ProductVariantImport extends ImportResource {
     @Valid
     @JsonProperty("assets")
     public List<Asset> getAssets();
-
     /**
      *  <p>If <code>publish</code> is set to either <code>true</code> or <code>false</code>, both staged and current projections are set to the same value provided by the import data. If <code>publish</code> is not set, the staged projection is set to the provided import data, but the current projection stays unchanged. However, if the import data contains no update, that is, if it matches the staged projection of the existing Product, the import induces no change in the existing Product whether <code>publish</code> is set or not.</p>
      * @return publish
      */
-
+    
     @JsonProperty("publish")
     public Boolean getPublish();
-
     /**
      *  <p>The Product to which this Product Variant belongs. Maps to <code>ProductVariant.product</code>. The Reference to the Product with which the ProductVariant is associated. If referenced Product does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary Product is created.</p>
      * @return product
@@ -99,82 +98,84 @@ public interface ProductVariantImport extends ImportResource {
      *  <p>Maps to <code>ProductVariant.sku</code>.</p>
      * @param sku value to be set
      */
-
+    
     public void setSku(final String sku);
-
+    
+    
     /**
      *  <p>Maps to <code>ProductVariant.isMasterVariant</code>.</p>
      * @param isMasterVariant value to be set
      */
-
+    
     public void setIsMasterVariant(final Boolean isMasterVariant);
-
+    
+    
     /**
      *  <p>Maps to <code>ProductVariant.attributes</code>. The referenced attribute must be defined in an already existing ProductType in the project, or the <code>state</code> of the ImportOperation will be <code>unresolved</code>.</p>
      * @param attributes values to be set
      */
-
+    
     @JsonIgnore
-    public void setAttributes(final Attribute... attributes);
-
+    public void setAttributes(final Attribute ...attributes);
     /**
      *  <p>Maps to <code>ProductVariant.attributes</code>. The referenced attribute must be defined in an already existing ProductType in the project, or the <code>state</code> of the ImportOperation will be <code>unresolved</code>.</p>
      * @param attributes values to be set
      */
-
+    
     public void setAttributes(final List<Attribute> attributes);
-
+    
     /**
      *  <p>Maps to <code>ProductVariant.images</code>.</p>
      * @param images values to be set
      */
-
+    
     @JsonIgnore
-    public void setImages(final Image... images);
-
+    public void setImages(final Image ...images);
     /**
      *  <p>Maps to <code>ProductVariant.images</code>.</p>
      * @param images values to be set
      */
-
+    
     public void setImages(final List<Image> images);
-
+    
     /**
      *  <p>Maps to <code>ProductVariant.assets</code>.</p>
      * @param assets values to be set
      */
-
+    
     @JsonIgnore
-    public void setAssets(final Asset... assets);
-
+    public void setAssets(final Asset ...assets);
     /**
      *  <p>Maps to <code>ProductVariant.assets</code>.</p>
      * @param assets values to be set
      */
-
+    
     public void setAssets(final List<Asset> assets);
-
+    
     /**
      *  <p>If <code>publish</code> is set to either <code>true</code> or <code>false</code>, both staged and current projections are set to the same value provided by the import data. If <code>publish</code> is not set, the staged projection is set to the provided import data, but the current projection stays unchanged. However, if the import data contains no update, that is, if it matches the staged projection of the existing Product, the import induces no change in the existing Product whether <code>publish</code> is set or not.</p>
      * @param publish value to be set
      */
-
+    
     public void setPublish(final Boolean publish);
-
+    
+    
     /**
      *  <p>The Product to which this Product Variant belongs. Maps to <code>ProductVariant.product</code>. The Reference to the Product with which the ProductVariant is associated. If referenced Product does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary Product is created.</p>
      * @param product value to be set
      */
-
+    
     public void setProduct(final ProductKeyReference product);
+    
 
     /**
      * factory method
      * @return instance of ProductVariantImport
      */
-    public static ProductVariantImport of() {
+    public static ProductVariantImport of(){
         return new ProductVariantImportImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy ProductVariantImport
@@ -209,23 +210,16 @@ public interface ProductVariantImport extends ImportResource {
         instance.setSku(template.getSku());
         instance.setIsMasterVariant(template.getIsMasterVariant());
         instance.setAttributes(Optional.ofNullable(template.getAttributes())
-                .map(t -> t.stream()
-                        .map(com.commercetools.importapi.models.productvariants.Attribute::deepCopy)
-                        .collect(Collectors.toList()))
+                .map(t -> t.stream().map(com.commercetools.importapi.models.productvariants.Attribute::deepCopy).collect(Collectors.toList()))
                 .orElse(null));
         instance.setImages(Optional.ofNullable(template.getImages())
-                .map(t -> t.stream()
-                        .map(com.commercetools.importapi.models.common.Image::deepCopy)
-                        .collect(Collectors.toList()))
+                .map(t -> t.stream().map(com.commercetools.importapi.models.common.Image::deepCopy).collect(Collectors.toList()))
                 .orElse(null));
         instance.setAssets(Optional.ofNullable(template.getAssets())
-                .map(t -> t.stream()
-                        .map(com.commercetools.importapi.models.common.Asset::deepCopy)
-                        .collect(Collectors.toList()))
+                .map(t -> t.stream().map(com.commercetools.importapi.models.common.Asset::deepCopy).collect(Collectors.toList()))
                 .orElse(null));
         instance.setPublish(template.getPublish());
-        instance.setProduct(
-            com.commercetools.importapi.models.common.ProductKeyReference.deepCopy(template.getProduct()));
+        instance.setProduct(com.commercetools.importapi.models.common.ProductKeyReference.deepCopy(template.getProduct()));
         return instance;
     }
 
@@ -236,7 +230,7 @@ public interface ProductVariantImport extends ImportResource {
     public static ProductVariantImportBuilder builder() {
         return ProductVariantImportBuilder.of();
     }
-
+    
     /**
      * create builder for ProductVariantImport instance
      * @param template instance with prefilled values for the builder
@@ -245,6 +239,7 @@ public interface ProductVariantImport extends ImportResource {
     public static ProductVariantImportBuilder builder(final ProductVariantImport template) {
         return ProductVariantImportBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -255,7 +250,7 @@ public interface ProductVariantImport extends ImportResource {
     default <T> T withProductVariantImport(Function<ProductVariantImport, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

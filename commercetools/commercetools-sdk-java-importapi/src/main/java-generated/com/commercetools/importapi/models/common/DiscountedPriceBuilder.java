@@ -1,9 +1,12 @@
-
 package com.commercetools.importapi.models.common;
 
+import com.commercetools.importapi.models.common.ProductDiscountKeyReference;
+import com.commercetools.importapi.models.common.TypedMoney;
+import com.commercetools.importapi.models.common.DiscountedPrice;
+import javax.annotation.Nullable;
 import java.util.*;
 import java.util.function.Function;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -18,91 +21,100 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .discount(discountBuilder -> discountBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class DiscountedPriceBuilder implements Builder<DiscountedPrice> {
 
+    
+    
     private com.commercetools.importapi.models.common.TypedMoney value;
-
+    
+    
+    
     private com.commercetools.importapi.models.common.ProductDiscountKeyReference discount;
 
+    
     /**
      * set the value to the value
      * @param value value to be set
      * @return Builder
      */
-
-    public DiscountedPriceBuilder value(final com.commercetools.importapi.models.common.TypedMoney value) {
+    
+    public DiscountedPriceBuilder value( final com.commercetools.importapi.models.common.TypedMoney value) {
         this.value = value;
         return this;
     }
-
+    
+    
     /**
      * set the value to the value using the builder function
      * @param builder function to build the value value
      * @return Builder
      */
-
-    public DiscountedPriceBuilder value(
-            Function<com.commercetools.importapi.models.common.TypedMoneyBuilder, Builder<? extends com.commercetools.importapi.models.common.TypedMoney>> builder) {
+    
+    public DiscountedPriceBuilder value(Function<com.commercetools.importapi.models.common.TypedMoneyBuilder, Builder<? extends com.commercetools.importapi.models.common.TypedMoney>> builder) {
         this.value = builder.apply(com.commercetools.importapi.models.common.TypedMoneyBuilder.of()).build();
         return this;
     }
-
+                    
+    
+    
     /**
      *  <p>Reference to a ProductDiscount.</p>
      * @param builder function to build the discount value
      * @return Builder
      */
-
-    public DiscountedPriceBuilder discount(
-            Function<com.commercetools.importapi.models.common.ProductDiscountKeyReferenceBuilder, com.commercetools.importapi.models.common.ProductDiscountKeyReferenceBuilder> builder) {
-        this.discount = builder.apply(com.commercetools.importapi.models.common.ProductDiscountKeyReferenceBuilder.of())
-                .build();
+    
+    public DiscountedPriceBuilder discount(Function<com.commercetools.importapi.models.common.ProductDiscountKeyReferenceBuilder, com.commercetools.importapi.models.common.ProductDiscountKeyReferenceBuilder> builder) {
+        this.discount = builder.apply(com.commercetools.importapi.models.common.ProductDiscountKeyReferenceBuilder.of()).build();
         return this;
     }
-
+    
     /**
      *  <p>Reference to a ProductDiscount.</p>
      * @param builder function to build the discount value
      * @return Builder
      */
-
-    public DiscountedPriceBuilder withDiscount(
-            Function<com.commercetools.importapi.models.common.ProductDiscountKeyReferenceBuilder, com.commercetools.importapi.models.common.ProductDiscountKeyReference> builder) {
-        this.discount = builder
-                .apply(com.commercetools.importapi.models.common.ProductDiscountKeyReferenceBuilder.of());
+    
+    public DiscountedPriceBuilder withDiscount(Function<com.commercetools.importapi.models.common.ProductDiscountKeyReferenceBuilder, com.commercetools.importapi.models.common.ProductDiscountKeyReference> builder) {
+        this.discount = builder.apply(com.commercetools.importapi.models.common.ProductDiscountKeyReferenceBuilder.of());
         return this;
     }
-
+                    
     /**
      *  <p>Reference to a ProductDiscount.</p>
      * @param discount value to be set
      * @return Builder
      */
-
-    public DiscountedPriceBuilder discount(
-            final com.commercetools.importapi.models.common.ProductDiscountKeyReference discount) {
+    
+    public DiscountedPriceBuilder discount( final com.commercetools.importapi.models.common.ProductDiscountKeyReference discount) {
         this.discount = discount;
         return this;
     }
+    
+    
 
     /**
      * value of value}
      * @return value
      */
-
-    public com.commercetools.importapi.models.common.TypedMoney getValue() {
+    
+    
+    public com.commercetools.importapi.models.common.TypedMoney getValue(){
         return this.value;
     }
-
+    
     /**
      *  <p>Reference to a ProductDiscount.</p>
      * @return discount
      */
-
-    public com.commercetools.importapi.models.common.ProductDiscountKeyReference getDiscount() {
+    
+    
+    public com.commercetools.importapi.models.common.ProductDiscountKeyReference getDiscount(){
         return this.discount;
     }
 
@@ -115,7 +127,7 @@ public class DiscountedPriceBuilder implements Builder<DiscountedPrice> {
         Objects.requireNonNull(discount, DiscountedPrice.class + ": discount is missing");
         return new DiscountedPriceImpl(value, discount);
     }
-
+    
     /**
      * builds DiscountedPrice without checking for non-null required values
      * @return DiscountedPrice
@@ -126,7 +138,7 @@ public class DiscountedPriceBuilder implements Builder<DiscountedPrice> {
 
     /**
      * factory method for an instance of DiscountedPriceBuilder
-     * @return builder
+     * @return builder 
      */
     public static DiscountedPriceBuilder of() {
         return new DiscountedPriceBuilder();

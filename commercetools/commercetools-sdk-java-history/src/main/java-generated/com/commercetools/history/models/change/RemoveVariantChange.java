@@ -1,19 +1,21 @@
-
 package com.commercetools.history.models.change;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
+import com.commercetools.history.models.change.Change;
 import com.commercetools.history.models.common.Variant;
+import com.commercetools.history.models.change.RemoveVariantChangeImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * RemoveVariantChange
@@ -29,9 +31,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .nextValue(nextValueBuilder -> nextValueBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = RemoveVariantChangeImpl.class)
 public interface RemoveVariantChange extends Change {
 
@@ -47,7 +52,6 @@ public interface RemoveVariantChange extends Change {
     @NotNull
     @JsonProperty("type")
     public String getType();
-
     /**
      *  <p>Update action for <code>removeVariant</code></p>
      * @return change
@@ -55,7 +59,6 @@ public interface RemoveVariantChange extends Change {
     @NotNull
     @JsonProperty("change")
     public String getChange();
-
     /**
      *
      * @return catalogData
@@ -63,7 +66,6 @@ public interface RemoveVariantChange extends Change {
     @NotNull
     @JsonProperty("catalogData")
     public String getCatalogData();
-
     /**
      *
      * @return previousValue
@@ -72,7 +74,6 @@ public interface RemoveVariantChange extends Change {
     @Valid
     @JsonProperty("previousValue")
     public Variant getPreviousValue();
-
     /**
      *
      * @return nextValue
@@ -86,37 +87,42 @@ public interface RemoveVariantChange extends Change {
      *  <p>Update action for <code>removeVariant</code></p>
      * @param change value to be set
      */
-
+    
     public void setChange(final String change);
-
+    
+    
     /**
      * set catalogData
      * @param catalogData value to be set
      */
-
+    
     public void setCatalogData(final String catalogData);
-
+    
+    
     /**
      * set previousValue
      * @param previousValue value to be set
      */
-
+    
     public void setPreviousValue(final Variant previousValue);
-
+    
+    
     /**
      * set nextValue
      * @param nextValue value to be set
      */
-
+    
     public void setNextValue(final Variant nextValue);
+    
 
     /**
      * factory method
      * @return instance of RemoveVariantChange
      */
-    public static RemoveVariantChange of() {
+    public static RemoveVariantChange of(){
         return new RemoveVariantChangeImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy RemoveVariantChange
@@ -145,8 +151,7 @@ public interface RemoveVariantChange extends Change {
         RemoveVariantChangeImpl instance = new RemoveVariantChangeImpl();
         instance.setChange(template.getChange());
         instance.setCatalogData(template.getCatalogData());
-        instance.setPreviousValue(
-            com.commercetools.history.models.common.Variant.deepCopy(template.getPreviousValue()));
+        instance.setPreviousValue(com.commercetools.history.models.common.Variant.deepCopy(template.getPreviousValue()));
         instance.setNextValue(com.commercetools.history.models.common.Variant.deepCopy(template.getNextValue()));
         return instance;
     }
@@ -158,7 +163,7 @@ public interface RemoveVariantChange extends Change {
     public static RemoveVariantChangeBuilder builder() {
         return RemoveVariantChangeBuilder.of();
     }
-
+    
     /**
      * create builder for RemoveVariantChange instance
      * @param template instance with prefilled values for the builder
@@ -167,6 +172,7 @@ public interface RemoveVariantChange extends Change {
     public static RemoveVariantChangeBuilder builder(final RemoveVariantChange template) {
         return RemoveVariantChangeBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -177,7 +183,7 @@ public interface RemoveVariantChange extends Change {
     default <T> T withRemoveVariantChange(Function<RemoveVariantChange, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

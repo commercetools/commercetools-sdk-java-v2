@@ -1,20 +1,22 @@
-
 package com.commercetools.api.models.message;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
+import com.commercetools.api.models.message.Message;
 import com.commercetools.api.models.product.ProductReference;
 import com.commercetools.api.models.product_selection.ProductVariantSelection;
+import com.commercetools.api.models.message.ProductSelectionVariantSelectionChangedMessageImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Generated after a successful Set Variant Selection update action.</p>
@@ -36,9 +38,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .newVariantSelection(newVariantSelectionBuilder -> newVariantSelectionBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = ProductSelectionVariantSelectionChangedMessageImpl.class)
 public interface ProductSelectionVariantSelectionChangedMessage extends Message {
 
@@ -55,7 +60,6 @@ public interface ProductSelectionVariantSelectionChangedMessage extends Message 
     @Valid
     @JsonProperty("product")
     public ProductReference getProduct();
-
     /**
      *  <p>Product Variant Selection before the Set Variant Selection update action.</p>
      * @return oldVariantSelection
@@ -64,7 +68,6 @@ public interface ProductSelectionVariantSelectionChangedMessage extends Message 
     @Valid
     @JsonProperty("oldVariantSelection")
     public ProductVariantSelection getOldVariantSelection();
-
     /**
      *  <p>Product Variant Selection after the Set Variant Selection update action.</p>
      * @return newVariantSelection
@@ -78,38 +81,41 @@ public interface ProductSelectionVariantSelectionChangedMessage extends Message 
      *  <p>Product for which the Product Variant Selection changed.</p>
      * @param product value to be set
      */
-
+    
     public void setProduct(final ProductReference product);
-
+    
+    
     /**
      *  <p>Product Variant Selection before the Set Variant Selection update action.</p>
      * @param oldVariantSelection value to be set
      */
-
+    
     public void setOldVariantSelection(final ProductVariantSelection oldVariantSelection);
-
+    
+    
     /**
      *  <p>Product Variant Selection after the Set Variant Selection update action.</p>
      * @param newVariantSelection value to be set
      */
-
+    
     public void setNewVariantSelection(final ProductVariantSelection newVariantSelection);
+    
 
     /**
      * factory method
      * @return instance of ProductSelectionVariantSelectionChangedMessage
      */
-    public static ProductSelectionVariantSelectionChangedMessage of() {
+    public static ProductSelectionVariantSelectionChangedMessage of(){
         return new ProductSelectionVariantSelectionChangedMessageImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy ProductSelectionVariantSelectionChangedMessage
      * @param template instance to be copied
      * @return copy instance
      */
-    public static ProductSelectionVariantSelectionChangedMessage of(
-            final ProductSelectionVariantSelectionChangedMessage template) {
+    public static ProductSelectionVariantSelectionChangedMessage of(final ProductSelectionVariantSelectionChangedMessage template) {
         ProductSelectionVariantSelectionChangedMessageImpl instance = new ProductSelectionVariantSelectionChangedMessageImpl();
         instance.setId(template.getId());
         instance.setVersion(template.getVersion());
@@ -133,8 +139,7 @@ public interface ProductSelectionVariantSelectionChangedMessage extends Message 
      * @return copy instance
      */
     @Nullable
-    public static ProductSelectionVariantSelectionChangedMessage deepCopy(
-            @Nullable final ProductSelectionVariantSelectionChangedMessage template) {
+    public static ProductSelectionVariantSelectionChangedMessage deepCopy(@Nullable final ProductSelectionVariantSelectionChangedMessage template) {
         if (template == null) {
             return null;
         }
@@ -143,19 +148,15 @@ public interface ProductSelectionVariantSelectionChangedMessage extends Message 
         instance.setVersion(template.getVersion());
         instance.setCreatedAt(template.getCreatedAt());
         instance.setLastModifiedAt(template.getLastModifiedAt());
-        instance.setLastModifiedBy(
-            com.commercetools.api.models.common.LastModifiedBy.deepCopy(template.getLastModifiedBy()));
+        instance.setLastModifiedBy(com.commercetools.api.models.common.LastModifiedBy.deepCopy(template.getLastModifiedBy()));
         instance.setCreatedBy(com.commercetools.api.models.common.CreatedBy.deepCopy(template.getCreatedBy()));
         instance.setSequenceNumber(template.getSequenceNumber());
         instance.setResource(com.commercetools.api.models.common.Reference.deepCopy(template.getResource()));
         instance.setResourceVersion(template.getResourceVersion());
-        instance.setResourceUserProvidedIdentifiers(com.commercetools.api.models.message.UserProvidedIdentifiers
-                .deepCopy(template.getResourceUserProvidedIdentifiers()));
+        instance.setResourceUserProvidedIdentifiers(com.commercetools.api.models.message.UserProvidedIdentifiers.deepCopy(template.getResourceUserProvidedIdentifiers()));
         instance.setProduct(com.commercetools.api.models.product.ProductReference.deepCopy(template.getProduct()));
-        instance.setOldVariantSelection(com.commercetools.api.models.product_selection.ProductVariantSelection
-                .deepCopy(template.getOldVariantSelection()));
-        instance.setNewVariantSelection(com.commercetools.api.models.product_selection.ProductVariantSelection
-                .deepCopy(template.getNewVariantSelection()));
+        instance.setOldVariantSelection(com.commercetools.api.models.product_selection.ProductVariantSelection.deepCopy(template.getOldVariantSelection()));
+        instance.setNewVariantSelection(com.commercetools.api.models.product_selection.ProductVariantSelection.deepCopy(template.getNewVariantSelection()));
         return instance;
     }
 
@@ -166,16 +167,16 @@ public interface ProductSelectionVariantSelectionChangedMessage extends Message 
     public static ProductSelectionVariantSelectionChangedMessageBuilder builder() {
         return ProductSelectionVariantSelectionChangedMessageBuilder.of();
     }
-
+    
     /**
      * create builder for ProductSelectionVariantSelectionChangedMessage instance
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static ProductSelectionVariantSelectionChangedMessageBuilder builder(
-            final ProductSelectionVariantSelectionChangedMessage template) {
+    public static ProductSelectionVariantSelectionChangedMessageBuilder builder(final ProductSelectionVariantSelectionChangedMessage template) {
         return ProductSelectionVariantSelectionChangedMessageBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -183,11 +184,10 @@ public interface ProductSelectionVariantSelectionChangedMessage extends Message 
      * @param helper function to map the object
      * @return mapped value
      */
-    default <T> T withProductSelectionVariantSelectionChangedMessage(
-            Function<ProductSelectionVariantSelectionChangedMessage, T> helper) {
+    default <T> T withProductSelectionVariantSelectionChangedMessage(Function<ProductSelectionVariantSelectionChangedMessage, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

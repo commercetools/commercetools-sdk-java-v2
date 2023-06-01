@@ -1,11 +1,11 @@
-
 package com.commercetools.api.predicates.query.project;
-
-import java.util.function.Function;
 
 import com.commercetools.api.predicates.query.*;
 
-public class ProjectChangeCartsConfigurationActionQueryBuilderDsl {
+import java.util.function.Function;
+
+
+public class ProjectChangeCartsConfigurationActionQueryBuilderDsl  {
     public ProjectChangeCartsConfigurationActionQueryBuilderDsl() {
     }
 
@@ -14,19 +14,16 @@ public class ProjectChangeCartsConfigurationActionQueryBuilderDsl {
     }
 
     public StringComparisonPredicateBuilder<ProjectChangeCartsConfigurationActionQueryBuilderDsl> action() {
-        return new StringComparisonPredicateBuilder<>(
-            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("action")),
-            p -> new CombinationQueryPredicate<>(p, ProjectChangeCartsConfigurationActionQueryBuilderDsl::of));
+        return new StringComparisonPredicateBuilder<>(BinaryQueryPredicate.of().left(new ConstantQueryPredicate("action")),
+        p -> new CombinationQueryPredicate<>(p, ProjectChangeCartsConfigurationActionQueryBuilderDsl::of));
     }
-
     public CombinationQueryPredicate<ProjectChangeCartsConfigurationActionQueryBuilderDsl> cartsConfiguration(
-            Function<com.commercetools.api.predicates.query.project.CartsConfigurationQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.project.CartsConfigurationQueryBuilderDsl>> fn) {
-        return new CombinationQueryPredicate<>(
-            ContainerQueryPredicate.of()
-                    .parent(ConstantQueryPredicate.of().constant("cartsConfiguration"))
-                    .inner(fn.apply(
-                        com.commercetools.api.predicates.query.project.CartsConfigurationQueryBuilderDsl.of())),
+        Function<com.commercetools.api.predicates.query.project.CartsConfigurationQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.project.CartsConfigurationQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(ContainerQueryPredicate.of()
+            .parent(ConstantQueryPredicate.of().constant("cartsConfiguration"))
+            .inner(fn.apply(com.commercetools.api.predicates.query.project.CartsConfigurationQueryBuilderDsl.of())),
             ProjectChangeCartsConfigurationActionQueryBuilderDsl::of);
     }
-
+    
+    
 }

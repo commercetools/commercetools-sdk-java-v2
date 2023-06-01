@@ -1,8 +1,12 @@
-
 package com.commercetools.api.models.cart;
 
+import com.commercetools.api.models.cart.CartUpdateAction;
+import com.commercetools.api.models.cart.TaxCalculationMode;
+import com.commercetools.api.models.cart.CartChangeTaxCalculationModeAction;
+import javax.annotation.Nullable;
 import java.util.*;
-
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -16,31 +20,39 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .taxCalculationMode(TaxCalculationMode.LINE_ITEM_LEVEL)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class CartChangeTaxCalculationModeActionBuilder implements Builder<CartChangeTaxCalculationModeAction> {
 
+    
+    
     private com.commercetools.api.models.cart.TaxCalculationMode taxCalculationMode;
 
+    
     /**
      *  <p>New value to set.</p>
      * @param taxCalculationMode value to be set
      * @return Builder
      */
-
-    public CartChangeTaxCalculationModeActionBuilder taxCalculationMode(
-            final com.commercetools.api.models.cart.TaxCalculationMode taxCalculationMode) {
+    
+    public CartChangeTaxCalculationModeActionBuilder taxCalculationMode( final com.commercetools.api.models.cart.TaxCalculationMode taxCalculationMode) {
         this.taxCalculationMode = taxCalculationMode;
         return this;
     }
+    
+    
 
     /**
      *  <p>New value to set.</p>
      * @return taxCalculationMode
      */
-
-    public com.commercetools.api.models.cart.TaxCalculationMode getTaxCalculationMode() {
+    
+    
+    public com.commercetools.api.models.cart.TaxCalculationMode getTaxCalculationMode(){
         return this.taxCalculationMode;
     }
 
@@ -49,11 +61,10 @@ public class CartChangeTaxCalculationModeActionBuilder implements Builder<CartCh
      * @return CartChangeTaxCalculationModeAction
      */
     public CartChangeTaxCalculationModeAction build() {
-        Objects.requireNonNull(taxCalculationMode,
-            CartChangeTaxCalculationModeAction.class + ": taxCalculationMode is missing");
+        Objects.requireNonNull(taxCalculationMode, CartChangeTaxCalculationModeAction.class + ": taxCalculationMode is missing");
         return new CartChangeTaxCalculationModeActionImpl(taxCalculationMode);
     }
-
+    
     /**
      * builds CartChangeTaxCalculationModeAction without checking for non-null required values
      * @return CartChangeTaxCalculationModeAction
@@ -64,7 +75,7 @@ public class CartChangeTaxCalculationModeActionBuilder implements Builder<CartCh
 
     /**
      * factory method for an instance of CartChangeTaxCalculationModeActionBuilder
-     * @return builder
+     * @return builder 
      */
     public static CartChangeTaxCalculationModeActionBuilder of() {
         return new CartChangeTaxCalculationModeActionBuilder();

@@ -1,17 +1,20 @@
-
 package com.commercetools.history.models.label;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
+import com.commercetools.history.models.label.Label;
+import com.commercetools.history.models.label.CustomerLabelImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * CustomerLabel
@@ -26,9 +29,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .customerNumber("{customerNumber}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = CustomerLabelImpl.class)
 public interface CustomerLabel extends Label {
 
@@ -44,7 +50,6 @@ public interface CustomerLabel extends Label {
     @NotNull
     @JsonProperty("type")
     public String getType();
-
     /**
      *
      * @return firstName
@@ -52,7 +57,6 @@ public interface CustomerLabel extends Label {
     @NotNull
     @JsonProperty("firstName")
     public String getFirstName();
-
     /**
      *
      * @return lastName
@@ -60,7 +64,6 @@ public interface CustomerLabel extends Label {
     @NotNull
     @JsonProperty("lastName")
     public String getLastName();
-
     /**
      *
      * @return customerNumber
@@ -73,30 +76,34 @@ public interface CustomerLabel extends Label {
      * set firstName
      * @param firstName value to be set
      */
-
+    
     public void setFirstName(final String firstName);
-
+    
+    
     /**
      * set lastName
      * @param lastName value to be set
      */
-
+    
     public void setLastName(final String lastName);
-
+    
+    
     /**
      * set customerNumber
      * @param customerNumber value to be set
      */
-
+    
     public void setCustomerNumber(final String customerNumber);
+    
 
     /**
      * factory method
      * @return instance of CustomerLabel
      */
-    public static CustomerLabel of() {
+    public static CustomerLabel of(){
         return new CustomerLabelImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy CustomerLabel
@@ -135,7 +142,7 @@ public interface CustomerLabel extends Label {
     public static CustomerLabelBuilder builder() {
         return CustomerLabelBuilder.of();
     }
-
+    
     /**
      * create builder for CustomerLabel instance
      * @param template instance with prefilled values for the builder
@@ -144,6 +151,7 @@ public interface CustomerLabel extends Label {
     public static CustomerLabelBuilder builder(final CustomerLabel template) {
         return CustomerLabelBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -154,7 +162,7 @@ public interface CustomerLabel extends Label {
     default <T> T withCustomerLabel(Function<CustomerLabel, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

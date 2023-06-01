@@ -1,18 +1,21 @@
-
 package com.commercetools.api.models.cart;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
+import com.commercetools.api.models.cart.CartUpdateAction;
+import com.commercetools.api.models.cart.ExternalLineItemTotalPrice;
+import com.commercetools.api.models.cart.CartSetLineItemTotalPriceActionImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Sets the LineItem <code>totalPrice</code> and <code>price</code>, and changes the <code>priceMode</code> to <code>ExternalTotal</code> LineItemPriceMode.</p>
@@ -25,9 +28,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .lineItemId("{lineItemId}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = CartSetLineItemTotalPriceActionImpl.class)
 public interface CartSetLineItemTotalPriceAction extends CartUpdateAction {
 
@@ -43,7 +49,6 @@ public interface CartSetLineItemTotalPriceAction extends CartUpdateAction {
     @NotNull
     @JsonProperty("lineItemId")
     public String getLineItemId();
-
     /**
      *  <p>Value to set. If <code>externalTotalPrice</code> is not given and the <code>priceMode</code> is <code>ExternalTotal</code>, the external price is unset and the <code>priceMode</code> is set to <code>Platform</code>.</p>
      * @return externalTotalPrice
@@ -56,23 +61,26 @@ public interface CartSetLineItemTotalPriceAction extends CartUpdateAction {
      *  <p><code>id</code> of the LineItem to update.</p>
      * @param lineItemId value to be set
      */
-
+    
     public void setLineItemId(final String lineItemId);
-
+    
+    
     /**
      *  <p>Value to set. If <code>externalTotalPrice</code> is not given and the <code>priceMode</code> is <code>ExternalTotal</code>, the external price is unset and the <code>priceMode</code> is set to <code>Platform</code>.</p>
      * @param externalTotalPrice value to be set
      */
-
+    
     public void setExternalTotalPrice(final ExternalLineItemTotalPrice externalTotalPrice);
+    
 
     /**
      * factory method
      * @return instance of CartSetLineItemTotalPriceAction
      */
-    public static CartSetLineItemTotalPriceAction of() {
+    public static CartSetLineItemTotalPriceAction of(){
         return new CartSetLineItemTotalPriceActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy CartSetLineItemTotalPriceAction
@@ -98,8 +106,7 @@ public interface CartSetLineItemTotalPriceAction extends CartUpdateAction {
         }
         CartSetLineItemTotalPriceActionImpl instance = new CartSetLineItemTotalPriceActionImpl();
         instance.setLineItemId(template.getLineItemId());
-        instance.setExternalTotalPrice(
-            com.commercetools.api.models.cart.ExternalLineItemTotalPrice.deepCopy(template.getExternalTotalPrice()));
+        instance.setExternalTotalPrice(com.commercetools.api.models.cart.ExternalLineItemTotalPrice.deepCopy(template.getExternalTotalPrice()));
         return instance;
     }
 
@@ -110,7 +117,7 @@ public interface CartSetLineItemTotalPriceAction extends CartUpdateAction {
     public static CartSetLineItemTotalPriceActionBuilder builder() {
         return CartSetLineItemTotalPriceActionBuilder.of();
     }
-
+    
     /**
      * create builder for CartSetLineItemTotalPriceAction instance
      * @param template instance with prefilled values for the builder
@@ -119,6 +126,7 @@ public interface CartSetLineItemTotalPriceAction extends CartUpdateAction {
     public static CartSetLineItemTotalPriceActionBuilder builder(final CartSetLineItemTotalPriceAction template) {
         return CartSetLineItemTotalPriceActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -129,7 +137,7 @@ public interface CartSetLineItemTotalPriceAction extends CartUpdateAction {
     default <T> T withCartSetLineItemTotalPriceAction(Function<CartSetLineItemTotalPriceAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

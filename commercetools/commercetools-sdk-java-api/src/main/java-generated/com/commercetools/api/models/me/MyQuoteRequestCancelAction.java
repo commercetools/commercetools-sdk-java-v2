@@ -1,16 +1,20 @@
-
 package com.commercetools.api.models.me;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
+import com.commercetools.api.models.me.MyQuoteRequestUpdateAction;
+import com.commercetools.api.models.me.MyQuoteRequestCancelActionImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Transitions the <code>quoteRequestState</code> of the Quote Request to <code>Cancelled</code>. Can only be used when the Quote Request is in state <code>Submitted</code>.</p>
@@ -22,9 +26,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     MyQuoteRequestCancelAction myQuoteRequestCancelAction = MyQuoteRequestCancelAction.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = MyQuoteRequestCancelActionImpl.class)
 public interface MyQuoteRequestCancelAction extends MyQuoteRequestUpdateAction {
 
@@ -33,13 +40,16 @@ public interface MyQuoteRequestCancelAction extends MyQuoteRequestUpdateAction {
      */
     String CANCEL_QUOTE_REQUEST = "cancelQuoteRequest";
 
+
+
     /**
      * factory method
      * @return instance of MyQuoteRequestCancelAction
      */
-    public static MyQuoteRequestCancelAction of() {
+    public static MyQuoteRequestCancelAction of(){
         return new MyQuoteRequestCancelActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy MyQuoteRequestCancelAction
@@ -72,7 +82,7 @@ public interface MyQuoteRequestCancelAction extends MyQuoteRequestUpdateAction {
     public static MyQuoteRequestCancelActionBuilder builder() {
         return MyQuoteRequestCancelActionBuilder.of();
     }
-
+    
     /**
      * create builder for MyQuoteRequestCancelAction instance
      * @param template instance with prefilled values for the builder
@@ -81,6 +91,7 @@ public interface MyQuoteRequestCancelAction extends MyQuoteRequestUpdateAction {
     public static MyQuoteRequestCancelActionBuilder builder(final MyQuoteRequestCancelAction template) {
         return MyQuoteRequestCancelActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -91,7 +102,7 @@ public interface MyQuoteRequestCancelAction extends MyQuoteRequestUpdateAction {
     default <T> T withMyQuoteRequestCancelAction(Function<MyQuoteRequestCancelAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

@@ -1,11 +1,12 @@
-
 package com.commercetools.api.models.store;
 
+import com.commercetools.api.models.product_selection.ProductSelectionResourceIdentifier;
+import com.commercetools.api.models.store.StoreUpdateAction;
+import com.commercetools.api.models.store.StoreChangeProductSelectionAction;
+import javax.annotation.Nullable;
 import java.util.*;
 import java.util.function.Function;
-
-import javax.annotation.Nullable;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -19,82 +20,89 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .productSelection(productSelectionBuilder -> productSelectionBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class StoreChangeProductSelectionActionBuilder implements Builder<StoreChangeProductSelectionAction> {
 
+    
+    
     private com.commercetools.api.models.product_selection.ProductSelectionResourceIdentifier productSelection;
-
+    
+    
     @Nullable
     private Boolean active;
 
+    
     /**
      *  <p>Current Product Selection of the Store to be activated or deactivated.</p>
      * @param builder function to build the productSelection value
      * @return Builder
      */
-
-    public StoreChangeProductSelectionActionBuilder productSelection(
-            Function<com.commercetools.api.models.product_selection.ProductSelectionResourceIdentifierBuilder, com.commercetools.api.models.product_selection.ProductSelectionResourceIdentifierBuilder> builder) {
-        this.productSelection = builder
-                .apply(com.commercetools.api.models.product_selection.ProductSelectionResourceIdentifierBuilder.of())
-                .build();
+    
+    public StoreChangeProductSelectionActionBuilder productSelection(Function<com.commercetools.api.models.product_selection.ProductSelectionResourceIdentifierBuilder, com.commercetools.api.models.product_selection.ProductSelectionResourceIdentifierBuilder> builder) {
+        this.productSelection = builder.apply(com.commercetools.api.models.product_selection.ProductSelectionResourceIdentifierBuilder.of()).build();
         return this;
     }
-
+    
     /**
      *  <p>Current Product Selection of the Store to be activated or deactivated.</p>
      * @param builder function to build the productSelection value
      * @return Builder
      */
-
-    public StoreChangeProductSelectionActionBuilder withProductSelection(
-            Function<com.commercetools.api.models.product_selection.ProductSelectionResourceIdentifierBuilder, com.commercetools.api.models.product_selection.ProductSelectionResourceIdentifier> builder) {
-        this.productSelection = builder
-                .apply(com.commercetools.api.models.product_selection.ProductSelectionResourceIdentifierBuilder.of());
+    
+    public StoreChangeProductSelectionActionBuilder withProductSelection(Function<com.commercetools.api.models.product_selection.ProductSelectionResourceIdentifierBuilder, com.commercetools.api.models.product_selection.ProductSelectionResourceIdentifier> builder) {
+        this.productSelection = builder.apply(com.commercetools.api.models.product_selection.ProductSelectionResourceIdentifierBuilder.of());
         return this;
     }
-
+                    
     /**
      *  <p>Current Product Selection of the Store to be activated or deactivated.</p>
      * @param productSelection value to be set
      * @return Builder
      */
-
-    public StoreChangeProductSelectionActionBuilder productSelection(
-            final com.commercetools.api.models.product_selection.ProductSelectionResourceIdentifier productSelection) {
+    
+    public StoreChangeProductSelectionActionBuilder productSelection( final com.commercetools.api.models.product_selection.ProductSelectionResourceIdentifier productSelection) {
         this.productSelection = productSelection;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Set to <code>true</code> if all Products assigned to the Product Selection should become part of the Store's assortment.</p>
      * @param active value to be set
      * @return Builder
      */
-
+    
     public StoreChangeProductSelectionActionBuilder active(@Nullable final Boolean active) {
         this.active = active;
         return this;
     }
+    
+    
 
     /**
      *  <p>Current Product Selection of the Store to be activated or deactivated.</p>
      * @return productSelection
      */
-
-    public com.commercetools.api.models.product_selection.ProductSelectionResourceIdentifier getProductSelection() {
+    
+    
+    public com.commercetools.api.models.product_selection.ProductSelectionResourceIdentifier getProductSelection(){
         return this.productSelection;
     }
-
+    
     /**
      *  <p>Set to <code>true</code> if all Products assigned to the Product Selection should become part of the Store's assortment.</p>
      * @return active
      */
-
+    
     @Nullable
-    public Boolean getActive() {
+    public Boolean getActive(){
         return this.active;
     }
 
@@ -103,11 +111,10 @@ public class StoreChangeProductSelectionActionBuilder implements Builder<StoreCh
      * @return StoreChangeProductSelectionAction
      */
     public StoreChangeProductSelectionAction build() {
-        Objects.requireNonNull(productSelection,
-            StoreChangeProductSelectionAction.class + ": productSelection is missing");
+        Objects.requireNonNull(productSelection, StoreChangeProductSelectionAction.class + ": productSelection is missing");
         return new StoreChangeProductSelectionActionImpl(productSelection, active);
     }
-
+    
     /**
      * builds StoreChangeProductSelectionAction without checking for non-null required values
      * @return StoreChangeProductSelectionAction
@@ -118,7 +125,7 @@ public class StoreChangeProductSelectionActionBuilder implements Builder<StoreCh
 
     /**
      * factory method for an instance of StoreChangeProductSelectionActionBuilder
-     * @return builder
+     * @return builder 
      */
     public static StoreChangeProductSelectionActionBuilder of() {
         return new StoreChangeProductSelectionActionBuilder();

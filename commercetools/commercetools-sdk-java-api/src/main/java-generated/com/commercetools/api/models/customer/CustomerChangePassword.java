@@ -1,17 +1,20 @@
-
 package com.commercetools.api.models.customer;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
 
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
+import com.commercetools.api.models.customer.CustomerChangePasswordImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * CustomerChangePassword
@@ -27,11 +30,15 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .newPassword("{newPassword}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = CustomerChangePasswordImpl.class)
-public interface CustomerChangePassword {
+public interface CustomerChangePassword  {
+
 
     /**
      *  <p>Unique identifier of the Customer.</p>
@@ -40,7 +47,6 @@ public interface CustomerChangePassword {
     @NotNull
     @JsonProperty("id")
     public String getId();
-
     /**
      *  <p>Expected version of the Customer on which the changes should be applied.</p>
      * @return version
@@ -48,7 +54,6 @@ public interface CustomerChangePassword {
     @NotNull
     @JsonProperty("version")
     public Long getVersion();
-
     /**
      *  <p>Current password of the Customer.</p>
      *  <p>If the current password does not match, an InvalidCurrentPassword error is returned.</p>
@@ -57,7 +62,6 @@ public interface CustomerChangePassword {
     @NotNull
     @JsonProperty("currentPassword")
     public String getCurrentPassword();
-
     /**
      *  <p>New password to be set.</p>
      * @return newPassword
@@ -70,38 +74,43 @@ public interface CustomerChangePassword {
      *  <p>Unique identifier of the Customer.</p>
      * @param id value to be set
      */
-
+    
     public void setId(final String id);
-
+    
+    
     /**
      *  <p>Expected version of the Customer on which the changes should be applied.</p>
      * @param version value to be set
      */
-
+    
     public void setVersion(final Long version);
-
+    
+    
     /**
      *  <p>Current password of the Customer.</p>
      *  <p>If the current password does not match, an InvalidCurrentPassword error is returned.</p>
      * @param currentPassword value to be set
      */
-
+    
     public void setCurrentPassword(final String currentPassword);
-
+    
+    
     /**
      *  <p>New password to be set.</p>
      * @param newPassword value to be set
      */
-
+    
     public void setNewPassword(final String newPassword);
+    
 
     /**
      * factory method
      * @return instance of CustomerChangePassword
      */
-    public static CustomerChangePassword of() {
+    public static CustomerChangePassword of(){
         return new CustomerChangePasswordImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy CustomerChangePassword
@@ -142,7 +151,7 @@ public interface CustomerChangePassword {
     public static CustomerChangePasswordBuilder builder() {
         return CustomerChangePasswordBuilder.of();
     }
-
+    
     /**
      * create builder for CustomerChangePassword instance
      * @param template instance with prefilled values for the builder
@@ -151,6 +160,7 @@ public interface CustomerChangePassword {
     public static CustomerChangePasswordBuilder builder(final CustomerChangePassword template) {
         return CustomerChangePasswordBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -161,7 +171,7 @@ public interface CustomerChangePassword {
     default <T> T withCustomerChangePassword(Function<CustomerChangePassword, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

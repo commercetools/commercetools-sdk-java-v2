@@ -1,11 +1,13 @@
-
 package com.commercetools.ml.models.similar_products;
 
+import com.commercetools.ml.models.common.TaskStatusEnum;
+import com.commercetools.ml.models.similar_products.SimilarProductsPagedQueryResult;
+import java.time.ZonedDateTime;
+import com.commercetools.ml.models.similar_products.SimilarProductsTaskStatus;
+import javax.annotation.Nullable;
 import java.util.*;
 import java.util.function.Function;
-
-import javax.annotation.Nullable;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -20,104 +22,117 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .result(resultBuilder -> resultBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class SimilarProductsTaskStatusBuilder implements Builder<SimilarProductsTaskStatus> {
 
+    
+    
     private com.commercetools.ml.models.common.TaskStatusEnum state;
-
+    
+    
     @Nullable
     private java.time.ZonedDateTime expires;
-
+    
+    
+    
     private com.commercetools.ml.models.similar_products.SimilarProductsPagedQueryResult result;
 
+    
     /**
      * set the value to the state
      * @param state value to be set
      * @return Builder
      */
-
-    public SimilarProductsTaskStatusBuilder state(final com.commercetools.ml.models.common.TaskStatusEnum state) {
+    
+    public SimilarProductsTaskStatusBuilder state( final com.commercetools.ml.models.common.TaskStatusEnum state) {
         this.state = state;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>The expiry date of the result. You cannot access the result after the expiry date. Default: 1 day after the result first becomes available. This is only available when the TaskStatus state is SUCCESS.</p>
      * @param expires value to be set
      * @return Builder
      */
-
+    
     public SimilarProductsTaskStatusBuilder expires(@Nullable final java.time.ZonedDateTime expires) {
         this.expires = expires;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>The response to an asynchronous request. The type depends on the request initiated. Only populated when the status is <code>SUCCESS</code>.</p>
      * @param builder function to build the result value
      * @return Builder
      */
-
-    public SimilarProductsTaskStatusBuilder result(
-            Function<com.commercetools.ml.models.similar_products.SimilarProductsPagedQueryResultBuilder, com.commercetools.ml.models.similar_products.SimilarProductsPagedQueryResultBuilder> builder) {
-        this.result = builder
-                .apply(com.commercetools.ml.models.similar_products.SimilarProductsPagedQueryResultBuilder.of())
-                .build();
+    
+    public SimilarProductsTaskStatusBuilder result(Function<com.commercetools.ml.models.similar_products.SimilarProductsPagedQueryResultBuilder, com.commercetools.ml.models.similar_products.SimilarProductsPagedQueryResultBuilder> builder) {
+        this.result = builder.apply(com.commercetools.ml.models.similar_products.SimilarProductsPagedQueryResultBuilder.of()).build();
         return this;
     }
-
+    
     /**
      *  <p>The response to an asynchronous request. The type depends on the request initiated. Only populated when the status is <code>SUCCESS</code>.</p>
      * @param builder function to build the result value
      * @return Builder
      */
-
-    public SimilarProductsTaskStatusBuilder withResult(
-            Function<com.commercetools.ml.models.similar_products.SimilarProductsPagedQueryResultBuilder, com.commercetools.ml.models.similar_products.SimilarProductsPagedQueryResult> builder) {
-        this.result = builder
-                .apply(com.commercetools.ml.models.similar_products.SimilarProductsPagedQueryResultBuilder.of());
+    
+    public SimilarProductsTaskStatusBuilder withResult(Function<com.commercetools.ml.models.similar_products.SimilarProductsPagedQueryResultBuilder, com.commercetools.ml.models.similar_products.SimilarProductsPagedQueryResult> builder) {
+        this.result = builder.apply(com.commercetools.ml.models.similar_products.SimilarProductsPagedQueryResultBuilder.of());
         return this;
     }
-
+                    
     /**
      *  <p>The response to an asynchronous request. The type depends on the request initiated. Only populated when the status is <code>SUCCESS</code>.</p>
      * @param result value to be set
      * @return Builder
      */
-
-    public SimilarProductsTaskStatusBuilder result(
-            final com.commercetools.ml.models.similar_products.SimilarProductsPagedQueryResult result) {
+    
+    public SimilarProductsTaskStatusBuilder result( final com.commercetools.ml.models.similar_products.SimilarProductsPagedQueryResult result) {
         this.result = result;
         return this;
     }
+    
+    
 
     /**
      * value of state}
      * @return state
      */
-
-    public com.commercetools.ml.models.common.TaskStatusEnum getState() {
+    
+    
+    public com.commercetools.ml.models.common.TaskStatusEnum getState(){
         return this.state;
     }
-
+    
     /**
      *  <p>The expiry date of the result. You cannot access the result after the expiry date. Default: 1 day after the result first becomes available. This is only available when the TaskStatus state is SUCCESS.</p>
      * @return expires
      */
-
+    
     @Nullable
-    public java.time.ZonedDateTime getExpires() {
+    public java.time.ZonedDateTime getExpires(){
         return this.expires;
     }
-
+    
     /**
      *  <p>The response to an asynchronous request. The type depends on the request initiated. Only populated when the status is <code>SUCCESS</code>.</p>
      * @return result
      */
-
-    public com.commercetools.ml.models.similar_products.SimilarProductsPagedQueryResult getResult() {
+    
+    
+    public com.commercetools.ml.models.similar_products.SimilarProductsPagedQueryResult getResult(){
         return this.result;
     }
 
@@ -130,7 +145,7 @@ public class SimilarProductsTaskStatusBuilder implements Builder<SimilarProducts
         Objects.requireNonNull(result, SimilarProductsTaskStatus.class + ": result is missing");
         return new SimilarProductsTaskStatusImpl(state, expires, result);
     }
-
+    
     /**
      * builds SimilarProductsTaskStatus without checking for non-null required values
      * @return SimilarProductsTaskStatus
@@ -141,7 +156,7 @@ public class SimilarProductsTaskStatusBuilder implements Builder<SimilarProducts
 
     /**
      * factory method for an instance of SimilarProductsTaskStatusBuilder
-     * @return builder
+     * @return builder 
      */
     public static SimilarProductsTaskStatusBuilder of() {
         return new SimilarProductsTaskStatusBuilder();

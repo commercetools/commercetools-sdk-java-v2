@@ -1,21 +1,22 @@
-
 package com.commercetools.api.models.order_edit;
-
-import java.time.*;
-import java.time.ZonedDateTime;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.channel.ChannelResourceIdentifier;
 import com.commercetools.api.models.order.StagedOrderUpdateAction;
+import java.time.ZonedDateTime;
+import com.commercetools.api.models.order_edit.StagedOrderUpdateSyncInfoActionImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * StagedOrderUpdateSyncInfoAction
@@ -28,9 +29,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .channel(channelBuilder -> channelBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = StagedOrderUpdateSyncInfoActionImpl.class)
 public interface StagedOrderUpdateSyncInfoAction extends StagedOrderUpdateAction {
 
@@ -47,20 +51,18 @@ public interface StagedOrderUpdateSyncInfoAction extends StagedOrderUpdateAction
     @Valid
     @JsonProperty("channel")
     public ChannelResourceIdentifier getChannel();
-
     /**
      *
      * @return externalId
      */
-
+    
     @JsonProperty("externalId")
     public String getExternalId();
-
     /**
      *
      * @return syncedAt
      */
-
+    
     @JsonProperty("syncedAt")
     public ZonedDateTime getSyncedAt();
 
@@ -68,30 +70,34 @@ public interface StagedOrderUpdateSyncInfoAction extends StagedOrderUpdateAction
      *  <p>ResourceIdentifier to a Channel.</p>
      * @param channel value to be set
      */
-
+    
     public void setChannel(final ChannelResourceIdentifier channel);
-
+    
+    
     /**
      * set externalId
      * @param externalId value to be set
      */
-
+    
     public void setExternalId(final String externalId);
-
+    
+    
     /**
      * set syncedAt
      * @param syncedAt value to be set
      */
-
+    
     public void setSyncedAt(final ZonedDateTime syncedAt);
+    
 
     /**
      * factory method
      * @return instance of StagedOrderUpdateSyncInfoAction
      */
-    public static StagedOrderUpdateSyncInfoAction of() {
+    public static StagedOrderUpdateSyncInfoAction of(){
         return new StagedOrderUpdateSyncInfoActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy StagedOrderUpdateSyncInfoAction
@@ -117,8 +123,7 @@ public interface StagedOrderUpdateSyncInfoAction extends StagedOrderUpdateAction
             return null;
         }
         StagedOrderUpdateSyncInfoActionImpl instance = new StagedOrderUpdateSyncInfoActionImpl();
-        instance.setChannel(
-            com.commercetools.api.models.channel.ChannelResourceIdentifier.deepCopy(template.getChannel()));
+        instance.setChannel(com.commercetools.api.models.channel.ChannelResourceIdentifier.deepCopy(template.getChannel()));
         instance.setExternalId(template.getExternalId());
         instance.setSyncedAt(template.getSyncedAt());
         return instance;
@@ -131,7 +136,7 @@ public interface StagedOrderUpdateSyncInfoAction extends StagedOrderUpdateAction
     public static StagedOrderUpdateSyncInfoActionBuilder builder() {
         return StagedOrderUpdateSyncInfoActionBuilder.of();
     }
-
+    
     /**
      * create builder for StagedOrderUpdateSyncInfoAction instance
      * @param template instance with prefilled values for the builder
@@ -140,6 +145,7 @@ public interface StagedOrderUpdateSyncInfoAction extends StagedOrderUpdateAction
     public static StagedOrderUpdateSyncInfoActionBuilder builder(final StagedOrderUpdateSyncInfoAction template) {
         return StagedOrderUpdateSyncInfoActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -150,7 +156,7 @@ public interface StagedOrderUpdateSyncInfoAction extends StagedOrderUpdateAction
     default <T> T withStagedOrderUpdateSyncInfoAction(Function<StagedOrderUpdateSyncInfoAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

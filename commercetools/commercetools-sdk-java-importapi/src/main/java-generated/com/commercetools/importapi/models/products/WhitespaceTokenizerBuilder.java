@@ -1,8 +1,11 @@
-
 package com.commercetools.importapi.models.products;
 
+import com.commercetools.importapi.models.products.SuggestTokenizer;
+import com.commercetools.importapi.models.products.WhitespaceTokenizer;
+import javax.annotation.Nullable;
 import java.util.*;
-
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -15,10 +18,16 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     WhitespaceTokenizer whitespaceTokenizer = WhitespaceTokenizer.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class WhitespaceTokenizerBuilder implements Builder<WhitespaceTokenizer> {
+
+
+
 
     /**
      * builds WhitespaceTokenizer with checking for non-null required values
@@ -27,7 +36,7 @@ public class WhitespaceTokenizerBuilder implements Builder<WhitespaceTokenizer> 
     public WhitespaceTokenizer build() {
         return new WhitespaceTokenizerImpl();
     }
-
+    
     /**
      * builds WhitespaceTokenizer without checking for non-null required values
      * @return WhitespaceTokenizer
@@ -38,7 +47,7 @@ public class WhitespaceTokenizerBuilder implements Builder<WhitespaceTokenizer> 
 
     /**
      * factory method for an instance of WhitespaceTokenizerBuilder
-     * @return builder
+     * @return builder 
      */
     public static WhitespaceTokenizerBuilder of() {
         return new WhitespaceTokenizerBuilder();

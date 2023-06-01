@@ -1,19 +1,21 @@
-
 package com.commercetools.api.models.product_discount;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
 import com.commercetools.api.models.common.LocalizedString;
+import com.commercetools.api.models.product_discount.ProductDiscountUpdateAction;
+import com.commercetools.api.models.product_discount.ProductDiscountChangeNameActionImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * ProductDiscountChangeNameAction
@@ -26,9 +28,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .name(nameBuilder -> nameBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = ProductDiscountChangeNameActionImpl.class)
 public interface ProductDiscountChangeNameAction extends ProductDiscountUpdateAction {
 
@@ -50,16 +55,18 @@ public interface ProductDiscountChangeNameAction extends ProductDiscountUpdateAc
      *  <p>New value to set. Must not be empty.</p>
      * @param name value to be set
      */
-
+    
     public void setName(final LocalizedString name);
+    
 
     /**
      * factory method
      * @return instance of ProductDiscountChangeNameAction
      */
-    public static ProductDiscountChangeNameAction of() {
+    public static ProductDiscountChangeNameAction of(){
         return new ProductDiscountChangeNameActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy ProductDiscountChangeNameAction
@@ -94,7 +101,7 @@ public interface ProductDiscountChangeNameAction extends ProductDiscountUpdateAc
     public static ProductDiscountChangeNameActionBuilder builder() {
         return ProductDiscountChangeNameActionBuilder.of();
     }
-
+    
     /**
      * create builder for ProductDiscountChangeNameAction instance
      * @param template instance with prefilled values for the builder
@@ -103,6 +110,7 @@ public interface ProductDiscountChangeNameAction extends ProductDiscountUpdateAc
     public static ProductDiscountChangeNameActionBuilder builder(final ProductDiscountChangeNameAction template) {
         return ProductDiscountChangeNameActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -113,7 +121,7 @@ public interface ProductDiscountChangeNameAction extends ProductDiscountUpdateAc
     default <T> T withProductDiscountChangeNameAction(Function<ProductDiscountChangeNameAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

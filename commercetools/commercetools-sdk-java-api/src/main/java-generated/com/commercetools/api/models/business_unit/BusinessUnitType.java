@@ -1,32 +1,33 @@
-
 package com.commercetools.api.models.business_unit;
-
-import java.util.Arrays;
-import java.util.Optional;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-
+import java.lang.String;
+import java.util.Arrays;
+import java.util.Optional;
 import io.vrap.rmf.base.client.JsonEnum;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
  *  <p>The type of the Business Unit indicating its position in a hierarchy.</p>
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public interface BusinessUnitType extends JsonEnum {
 
     /**
     	<p>Top-level Business Unit. Must not have a <code>parentUnit</code> defined.</p>
-
+    	
     */
     BusinessUnitType COMPANY = BusinessUnitTypeEnum.COMPANY;
     /**
     	<p>Business Unit with a <code>parentUnit</code> reference to a <a href="ctp:api:type:Division">Company</a> or another Division.</p>
-
+    	
     */
     BusinessUnitType DIVISION = BusinessUnitTypeEnum.DIVISION;
-
+    
     /**
      * possible values of BusinessUnitType
      */
@@ -35,7 +36,7 @@ public interface BusinessUnitType extends JsonEnum {
          * Company
          */
         COMPANY("Company"),
-
+        
         /**
          * Division
          */
@@ -92,7 +93,7 @@ public interface BusinessUnitType extends JsonEnum {
             public String name() {
                 return value.toUpperCase();
             }
-
+            
             public String toString() {
                 return value;
             }
@@ -107,7 +108,7 @@ public interface BusinessUnitType extends JsonEnum {
     public static Optional<BusinessUnitType> findEnumViaJsonName(String jsonName) {
         return Arrays.stream(values()).filter(t -> t.getJsonName().equals(jsonName)).findFirst();
     }
-
+    
     /**
      * possible enum values
      * @return array of possible enum values
@@ -115,5 +116,5 @@ public interface BusinessUnitType extends JsonEnum {
     public static BusinessUnitType[] values() {
         return BusinessUnitTypeEnum.values();
     }
-
+    
 }

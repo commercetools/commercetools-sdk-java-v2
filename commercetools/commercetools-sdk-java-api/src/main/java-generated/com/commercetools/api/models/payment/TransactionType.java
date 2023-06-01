@@ -1,47 +1,48 @@
-
 package com.commercetools.api.models.payment;
-
-import java.util.Arrays;
-import java.util.Optional;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-
+import java.lang.String;
+import java.util.Arrays;
+import java.util.Optional;
 import io.vrap.rmf.base.client.JsonEnum;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
  * TransactionType
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public interface TransactionType extends JsonEnum {
 
     /**
     	<p>Financially reliable reservation of an amount. Typically does not indicate an actual transfer of money.</p>
-
+    	
     */
     TransactionType AUTHORIZATION = TransactionTypeEnum.AUTHORIZATION;
     /**
     	<p>Explicit cancellation of an authorized amount before its expiry.</p>
-
+    	
     */
     TransactionType CANCEL_AUTHORIZATION = TransactionTypeEnum.CANCEL_AUTHORIZATION;
     /**
     	<p>Collection of money from the customer. Can use an authorized amount or be directly executed.</p>
-
+    	
     */
     TransactionType CHARGE = TransactionTypeEnum.CHARGE;
     /**
     	<p>Explicit transfer of money back to the customer.</p>
-
+    	
     */
     TransactionType REFUND = TransactionTypeEnum.REFUND;
     /**
     	<p>Customer-initiated transfer of money back to the customer.</p>
-
+    	
     */
     TransactionType CHARGEBACK = TransactionTypeEnum.CHARGEBACK;
-
+    
     /**
      * possible values of TransactionType
      */
@@ -50,22 +51,22 @@ public interface TransactionType extends JsonEnum {
          * Authorization
          */
         AUTHORIZATION("Authorization"),
-
+        
         /**
          * CancelAuthorization
          */
         CANCEL_AUTHORIZATION("CancelAuthorization"),
-
+        
         /**
          * Charge
          */
         CHARGE("Charge"),
-
+        
         /**
          * Refund
          */
         REFUND("Refund"),
-
+        
         /**
          * Chargeback
          */
@@ -122,7 +123,7 @@ public interface TransactionType extends JsonEnum {
             public String name() {
                 return value.toUpperCase();
             }
-
+            
             public String toString() {
                 return value;
             }
@@ -137,7 +138,7 @@ public interface TransactionType extends JsonEnum {
     public static Optional<TransactionType> findEnumViaJsonName(String jsonName) {
         return Arrays.stream(values()).filter(t -> t.getJsonName().equals(jsonName)).findFirst();
     }
-
+    
     /**
      * possible enum values
      * @return array of possible enum values
@@ -145,5 +146,5 @@ public interface TransactionType extends JsonEnum {
     public static TransactionType[] values() {
         return TransactionTypeEnum.values();
     }
-
+    
 }

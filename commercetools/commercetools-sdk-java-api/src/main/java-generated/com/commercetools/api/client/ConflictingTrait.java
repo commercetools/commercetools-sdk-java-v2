@@ -1,22 +1,27 @@
-
 package com.commercetools.api.client;
 
 import io.vrap.rmf.base.client.utils.Generated;
+import java.util.List;
 
 /**
  * ConflictingTrait
  * @param <T> type of extending interface
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
-public interface ConflictingTrait<T extends ConflictingTrait<T>> {
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
+public interface ConflictingTrait<T extends ConflictingTrait<T>>  {
 
+
+    
     default ConflictingTrait<T> asConflictingTrait() {
         return this;
     }
-
+    
     @SuppressWarnings("unchecked")
     default T asConflictingTraitToBaseType() {
-        return (T) this;
+        return (T)this;
     }
-
+    
 }

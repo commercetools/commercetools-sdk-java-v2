@@ -1,17 +1,21 @@
-
 package com.commercetools.importapi.models.orders;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
+import com.commercetools.importapi.models.orders.CartClassificationTier;
+import com.commercetools.importapi.models.orders.ShippingRateTierType;
 
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * ShippingRatePriceTier
@@ -26,14 +30,25 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             plusTiers(tiersBuilder -> tiersBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
 @JsonSubTypes({
-        @JsonSubTypes.Type(value = com.commercetools.importapi.models.orders.CartClassificationTierImpl.class, name = CartClassificationTier.CART_CLASSIFICATION) })
-@JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.EXISTING_PROPERTY, property = "type", defaultImpl = ShippingRatePriceTierImpl.class, visible = true)
+   @JsonSubTypes.Type(value = com.commercetools.importapi.models.orders.CartClassificationTierImpl.class, name = CartClassificationTier.CART_CLASSIFICATION)
+})
+@JsonTypeInfo(
+    use = JsonTypeInfo.Id.NAME,
+    include = JsonTypeInfo.As.EXISTING_PROPERTY,
+    property = "type",
+    defaultImpl = ShippingRatePriceTierImpl.class,
+    visible = true
+)
 @JsonDeserialize(as = ShippingRatePriceTierImpl.class)
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
-public interface ShippingRatePriceTier {
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
+public interface ShippingRatePriceTier  {
+
 
     /**
      *
@@ -42,6 +57,9 @@ public interface ShippingRatePriceTier {
     @NotNull
     @JsonProperty("type")
     public ShippingRateTierType getType();
+
+
+
 
     /**
      * factory method to create a deep copy of ShippingRatePriceTier
@@ -54,19 +72,19 @@ public interface ShippingRatePriceTier {
             return null;
         }
         if (template instanceof com.commercetools.importapi.models.orders.CartClassificationTier) {
-            return com.commercetools.importapi.models.orders.CartClassificationTier
-                    .deepCopy((com.commercetools.importapi.models.orders.CartClassificationTier) template);
+            return com.commercetools.importapi.models.orders.CartClassificationTier.deepCopy((com.commercetools.importapi.models.orders.CartClassificationTier)template);
         }
         ShippingRatePriceTierImpl instance = new ShippingRatePriceTierImpl();
         return instance;
     }
+
 
     /**
      * builder for cartClassification subtype
      * @return builder
      */
     public static com.commercetools.importapi.models.orders.CartClassificationTierBuilder cartClassificationBuilder() {
-        return com.commercetools.importapi.models.orders.CartClassificationTierBuilder.of();
+       return com.commercetools.importapi.models.orders.CartClassificationTierBuilder.of();
     }
 
     /**
@@ -78,7 +96,7 @@ public interface ShippingRatePriceTier {
     default <T> T withShippingRatePriceTier(Function<ShippingRatePriceTier, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

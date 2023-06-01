@@ -1,19 +1,21 @@
-
 package com.commercetools.api.models.order_edit;
-
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.order.ReturnShipmentState;
 import com.commercetools.api.models.order.StagedOrderUpdateAction;
+import com.commercetools.api.models.order_edit.StagedOrderSetReturnShipmentStateActionImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * StagedOrderSetReturnShipmentStateAction
@@ -27,9 +29,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .shipmentState(ReturnShipmentState.ADVISED)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = StagedOrderSetReturnShipmentStateActionImpl.class)
 public interface StagedOrderSetReturnShipmentStateAction extends StagedOrderUpdateAction {
 
@@ -45,7 +50,6 @@ public interface StagedOrderSetReturnShipmentStateAction extends StagedOrderUpda
     @NotNull
     @JsonProperty("returnItemId")
     public String getReturnItemId();
-
     /**
      *
      * @return shipmentState
@@ -58,23 +62,26 @@ public interface StagedOrderSetReturnShipmentStateAction extends StagedOrderUpda
      * set returnItemId
      * @param returnItemId value to be set
      */
-
+    
     public void setReturnItemId(final String returnItemId);
-
+    
+    
     /**
      * set shipmentState
      * @param shipmentState value to be set
      */
-
+    
     public void setShipmentState(final ReturnShipmentState shipmentState);
+    
 
     /**
      * factory method
      * @return instance of StagedOrderSetReturnShipmentStateAction
      */
-    public static StagedOrderSetReturnShipmentStateAction of() {
+    public static StagedOrderSetReturnShipmentStateAction of(){
         return new StagedOrderSetReturnShipmentStateActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy StagedOrderSetReturnShipmentStateAction
@@ -94,8 +101,7 @@ public interface StagedOrderSetReturnShipmentStateAction extends StagedOrderUpda
      * @return copy instance
      */
     @Nullable
-    public static StagedOrderSetReturnShipmentStateAction deepCopy(
-            @Nullable final StagedOrderSetReturnShipmentStateAction template) {
+    public static StagedOrderSetReturnShipmentStateAction deepCopy(@Nullable final StagedOrderSetReturnShipmentStateAction template) {
         if (template == null) {
             return null;
         }
@@ -112,16 +118,16 @@ public interface StagedOrderSetReturnShipmentStateAction extends StagedOrderUpda
     public static StagedOrderSetReturnShipmentStateActionBuilder builder() {
         return StagedOrderSetReturnShipmentStateActionBuilder.of();
     }
-
+    
     /**
      * create builder for StagedOrderSetReturnShipmentStateAction instance
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static StagedOrderSetReturnShipmentStateActionBuilder builder(
-            final StagedOrderSetReturnShipmentStateAction template) {
+    public static StagedOrderSetReturnShipmentStateActionBuilder builder(final StagedOrderSetReturnShipmentStateAction template) {
         return StagedOrderSetReturnShipmentStateActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -129,11 +135,10 @@ public interface StagedOrderSetReturnShipmentStateAction extends StagedOrderUpda
      * @param helper function to map the object
      * @return mapped value
      */
-    default <T> T withStagedOrderSetReturnShipmentStateAction(
-            Function<StagedOrderSetReturnShipmentStateAction, T> helper) {
+    default <T> T withStagedOrderSetReturnShipmentStateAction(Function<StagedOrderSetReturnShipmentStateAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

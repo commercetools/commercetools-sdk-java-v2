@@ -1,18 +1,21 @@
-
 package com.commercetools.api.models.extension;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
+import com.commercetools.api.models.extension.ExtensionDestination;
+import com.commercetools.api.models.extension.ExtensionUpdateAction;
+import com.commercetools.api.models.extension.ExtensionChangeDestinationActionImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * ExtensionChangeDestinationAction
@@ -25,9 +28,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .destination(destinationBuilder -> destinationBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = ExtensionChangeDestinationActionImpl.class)
 public interface ExtensionChangeDestinationAction extends ExtensionUpdateAction {
 
@@ -49,16 +55,18 @@ public interface ExtensionChangeDestinationAction extends ExtensionUpdateAction 
      *  <p>New value to set. Must not be empty.</p>
      * @param destination value to be set
      */
-
+    
     public void setDestination(final ExtensionDestination destination);
+    
 
     /**
      * factory method
      * @return instance of ExtensionChangeDestinationAction
      */
-    public static ExtensionChangeDestinationAction of() {
+    public static ExtensionChangeDestinationAction of(){
         return new ExtensionChangeDestinationActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy ExtensionChangeDestinationAction
@@ -82,8 +90,7 @@ public interface ExtensionChangeDestinationAction extends ExtensionUpdateAction 
             return null;
         }
         ExtensionChangeDestinationActionImpl instance = new ExtensionChangeDestinationActionImpl();
-        instance.setDestination(
-            com.commercetools.api.models.extension.ExtensionDestination.deepCopy(template.getDestination()));
+        instance.setDestination(com.commercetools.api.models.extension.ExtensionDestination.deepCopy(template.getDestination()));
         return instance;
     }
 
@@ -94,7 +101,7 @@ public interface ExtensionChangeDestinationAction extends ExtensionUpdateAction 
     public static ExtensionChangeDestinationActionBuilder builder() {
         return ExtensionChangeDestinationActionBuilder.of();
     }
-
+    
     /**
      * create builder for ExtensionChangeDestinationAction instance
      * @param template instance with prefilled values for the builder
@@ -103,6 +110,7 @@ public interface ExtensionChangeDestinationAction extends ExtensionUpdateAction 
     public static ExtensionChangeDestinationActionBuilder builder(final ExtensionChangeDestinationAction template) {
         return ExtensionChangeDestinationActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -113,7 +121,7 @@ public interface ExtensionChangeDestinationAction extends ExtensionUpdateAction 
     default <T> T withExtensionChangeDestinationAction(Function<ExtensionChangeDestinationAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

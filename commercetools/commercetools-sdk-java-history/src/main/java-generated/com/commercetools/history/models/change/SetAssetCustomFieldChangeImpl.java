@@ -1,155 +1,170 @@
-
 package com.commercetools.history.models.change;
 
-import java.time.*;
-import java.util.*;
-
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
-
-import io.vrap.rmf.base.client.ModelBase;
+import com.commercetools.history.models.change.Change;
+import com.commercetools.history.models.change_value.AssetChangeValue;
+import java.lang.Object;
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.ModelBase;
+import javax.validation.Valid;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.annotation.*;
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
  * SetAssetCustomFieldChange
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class SetAssetCustomFieldChangeImpl implements SetAssetCustomFieldChange, ModelBase {
 
+    
     private String type;
-
+    
+    
     private String change;
-
+    
+    
     private String name;
-
+    
+    
     private String customTypeId;
-
+    
+    
     private com.commercetools.history.models.change_value.AssetChangeValue asset;
-
+    
+    
     private java.lang.Object nextValue;
-
+    
+    
     private java.lang.Object previousValue;
 
     /**
      * create instance with all properties
      */
     @JsonCreator
-    SetAssetCustomFieldChangeImpl(@JsonProperty("change") final String change, @JsonProperty("name") final String name,
-            @JsonProperty("customTypeId") final String customTypeId,
-            @JsonProperty("asset") final com.commercetools.history.models.change_value.AssetChangeValue asset,
-            @JsonProperty("nextValue") final java.lang.Object nextValue,
-            @JsonProperty("previousValue") final java.lang.Object previousValue) {
+    SetAssetCustomFieldChangeImpl(@JsonProperty("change") final String change, @JsonProperty("name") final String name, @JsonProperty("customTypeId") final String customTypeId, @JsonProperty("asset") final com.commercetools.history.models.change_value.AssetChangeValue asset, @JsonProperty("nextValue") final java.lang.Object nextValue, @JsonProperty("previousValue") final java.lang.Object previousValue) {
         this.change = change;
         this.name = name;
         this.customTypeId = customTypeId;
         this.asset = asset;
         this.nextValue = nextValue;
         this.previousValue = previousValue;
-        this.type = SET_ASSET_CUSTOM_FIELD_CHANGE;
+        this.type =  SET_ASSET_CUSTOM_FIELD_CHANGE;
     }
-
     /**
      * create empty instance
      */
     public SetAssetCustomFieldChangeImpl() {
-        this.type = SET_ASSET_CUSTOM_FIELD_CHANGE;
+        this.type =  SET_ASSET_CUSTOM_FIELD_CHANGE;
     }
 
     /**
      *
      */
-
-    public String getType() {
+    
+    public String getType(){
         return this.type;
     }
-
+    
     /**
      *  <p>Update action for <code>setAssetCustomField</code></p>
      */
-
-    public String getChange() {
+    
+    public String getChange(){
         return this.change;
     }
-
+    
     /**
      *
      */
-
-    public String getName() {
+    
+    public String getName(){
         return this.name;
     }
-
+    
     /**
      *
      */
-
-    public String getCustomTypeId() {
+    
+    public String getCustomTypeId(){
         return this.customTypeId;
     }
-
+    
     /**
      *
      */
-
-    public com.commercetools.history.models.change_value.AssetChangeValue getAsset() {
+    
+    public com.commercetools.history.models.change_value.AssetChangeValue getAsset(){
         return this.asset;
     }
-
+    
     /**
      *
      */
-
-    public java.lang.Object getNextValue() {
+    
+    public java.lang.Object getNextValue(){
         return this.nextValue;
     }
-
+    
     /**
      *
      */
-
-    public java.lang.Object getPreviousValue() {
+    
+    public java.lang.Object getPreviousValue(){
         return this.previousValue;
     }
 
-    public void setChange(final String change) {
+    
+    public void setChange(final String change){
         this.change = change;
     }
-
-    public void setName(final String name) {
+    
+    
+    public void setName(final String name){
         this.name = name;
     }
-
-    public void setCustomTypeId(final String customTypeId) {
+    
+    
+    public void setCustomTypeId(final String customTypeId){
         this.customTypeId = customTypeId;
     }
-
-    public void setAsset(final com.commercetools.history.models.change_value.AssetChangeValue asset) {
+    
+    
+    public void setAsset(final com.commercetools.history.models.change_value.AssetChangeValue asset){
         this.asset = asset;
     }
-
-    public void setNextValue(final java.lang.Object nextValue) {
+    
+    
+    public void setNextValue(final java.lang.Object nextValue){
         this.nextValue = nextValue;
     }
-
-    public void setPreviousValue(final java.lang.Object previousValue) {
+    
+    
+    public void setPreviousValue(final java.lang.Object previousValue){
         this.previousValue = previousValue;
     }
 
     @Override
     public boolean equals(Object o) {
-        if (this == o)
-            return true;
-
-        if (o == null || getClass() != o.getClass())
-            return false;
-
+        if (this == o) return true;
+    
+        if (o == null || getClass() != o.getClass()) return false;
+    
         SetAssetCustomFieldChangeImpl that = (SetAssetCustomFieldChangeImpl) o;
-
-        return new EqualsBuilder().append(type, that.type)
+    
+        return new EqualsBuilder()
+                .append(type, that.type)
                 .append(change, that.change)
                 .append(name, that.name)
                 .append(customTypeId, that.customTypeId)
@@ -158,17 +173,18 @@ public class SetAssetCustomFieldChangeImpl implements SetAssetCustomFieldChange,
                 .append(previousValue, that.previousValue)
                 .isEquals();
     }
-
+    
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(type)
-                .append(change)
-                .append(name)
-                .append(customTypeId)
-                .append(asset)
-                .append(nextValue)
-                .append(previousValue)
-                .toHashCode();
+        return new HashCodeBuilder(17, 37)
+            .append(type)
+            .append(change)
+            .append(name)
+            .append(customTypeId)
+            .append(asset)
+            .append(nextValue)
+            .append(previousValue)
+            .toHashCode();
     }
 
 }

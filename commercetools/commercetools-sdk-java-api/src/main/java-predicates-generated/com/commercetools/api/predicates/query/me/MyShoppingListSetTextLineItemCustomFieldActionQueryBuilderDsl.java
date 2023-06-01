@@ -1,9 +1,11 @@
-
 package com.commercetools.api.predicates.query.me;
 
 import com.commercetools.api.predicates.query.*;
 
-public class MyShoppingListSetTextLineItemCustomFieldActionQueryBuilderDsl {
+import java.util.function.Function;
+
+
+public class MyShoppingListSetTextLineItemCustomFieldActionQueryBuilderDsl  {
     public MyShoppingListSetTextLineItemCustomFieldActionQueryBuilderDsl() {
     }
 
@@ -12,27 +14,20 @@ public class MyShoppingListSetTextLineItemCustomFieldActionQueryBuilderDsl {
     }
 
     public StringComparisonPredicateBuilder<MyShoppingListSetTextLineItemCustomFieldActionQueryBuilderDsl> action() {
-        return new StringComparisonPredicateBuilder<>(
-            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("action")),
-            p -> new CombinationQueryPredicate<>(p, MyShoppingListSetTextLineItemCustomFieldActionQueryBuilderDsl::of));
+        return new StringComparisonPredicateBuilder<>(BinaryQueryPredicate.of().left(new ConstantQueryPredicate("action")),
+        p -> new CombinationQueryPredicate<>(p, MyShoppingListSetTextLineItemCustomFieldActionQueryBuilderDsl::of));
     }
-
     public StringComparisonPredicateBuilder<MyShoppingListSetTextLineItemCustomFieldActionQueryBuilderDsl> textLineItemId() {
-        return new StringComparisonPredicateBuilder<>(
-            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("textLineItemId")),
-            p -> new CombinationQueryPredicate<>(p, MyShoppingListSetTextLineItemCustomFieldActionQueryBuilderDsl::of));
+        return new StringComparisonPredicateBuilder<>(BinaryQueryPredicate.of().left(new ConstantQueryPredicate("textLineItemId")),
+        p -> new CombinationQueryPredicate<>(p, MyShoppingListSetTextLineItemCustomFieldActionQueryBuilderDsl::of));
     }
-
     public StringComparisonPredicateBuilder<MyShoppingListSetTextLineItemCustomFieldActionQueryBuilderDsl> name() {
-        return new StringComparisonPredicateBuilder<>(
-            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("name")),
-            p -> new CombinationQueryPredicate<>(p, MyShoppingListSetTextLineItemCustomFieldActionQueryBuilderDsl::of));
+        return new StringComparisonPredicateBuilder<>(BinaryQueryPredicate.of().left(new ConstantQueryPredicate("name")),
+        p -> new CombinationQueryPredicate<>(p, MyShoppingListSetTextLineItemCustomFieldActionQueryBuilderDsl::of));
     }
-
     public StringComparisonPredicateBuilder<MyShoppingListSetTextLineItemCustomFieldActionQueryBuilderDsl> value() {
-        return new StringComparisonPredicateBuilder<>(
-            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("value")),
-            p -> new CombinationQueryPredicate<>(p, MyShoppingListSetTextLineItemCustomFieldActionQueryBuilderDsl::of));
+        return new StringComparisonPredicateBuilder<>(BinaryQueryPredicate.of().left(new ConstantQueryPredicate("value")),
+        p -> new CombinationQueryPredicate<>(p, MyShoppingListSetTextLineItemCustomFieldActionQueryBuilderDsl::of));
     }
-
+    
 }

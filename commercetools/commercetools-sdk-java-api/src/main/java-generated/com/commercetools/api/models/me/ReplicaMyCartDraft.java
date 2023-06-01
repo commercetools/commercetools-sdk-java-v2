@@ -1,19 +1,22 @@
-
 package com.commercetools.api.models.me;
-
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.cart.CartReference;
 import com.commercetools.api.models.order.OrderReference;
+import java.lang.Object;
+import com.commercetools.api.models.me.ReplicaMyCartDraftImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * ReplicaMyCartDraft
@@ -25,11 +28,15 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     ReplicaMyCartDraft replicaMyCartDraft = ReplicaMyCartDraft.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = ReplicaMyCartDraftImpl.class)
 public interface ReplicaMyCartDraft extends io.vrap.rmf.base.client.Draft<ReplicaMyCartDraft> {
+
 
     /**
      *  <p>Reference to a Cart or Order that is replicated.</p>
@@ -43,30 +50,29 @@ public interface ReplicaMyCartDraft extends io.vrap.rmf.base.client.Draft<Replic
      *  <p>Reference to a Cart or Order that is replicated.</p>
      * @param reference value to be set
      */
-
+    
     public void setReference(final CartReference reference);
-
     /**
      *  <p>Reference to a Cart or Order that is replicated.</p>
      * @param reference value to be set
      */
-
+    
     public void setReference(final OrderReference reference);
-
     /**
      *  <p>Reference to a Cart or Order that is replicated.</p>
      * @param reference value to be set
      */
-
+    
     public void setReference(final Object reference);
 
     /**
      * factory method
      * @return instance of ReplicaMyCartDraft
      */
-    public static ReplicaMyCartDraft of() {
+    public static ReplicaMyCartDraft of(){
         return new ReplicaMyCartDraftImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy ReplicaMyCartDraft
@@ -101,7 +107,7 @@ public interface ReplicaMyCartDraft extends io.vrap.rmf.base.client.Draft<Replic
     public static ReplicaMyCartDraftBuilder builder() {
         return ReplicaMyCartDraftBuilder.of();
     }
-
+    
     /**
      * create builder for ReplicaMyCartDraft instance
      * @param template instance with prefilled values for the builder
@@ -110,6 +116,7 @@ public interface ReplicaMyCartDraft extends io.vrap.rmf.base.client.Draft<Replic
     public static ReplicaMyCartDraftBuilder builder(final ReplicaMyCartDraft template) {
         return ReplicaMyCartDraftBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -120,7 +127,7 @@ public interface ReplicaMyCartDraft extends io.vrap.rmf.base.client.Draft<Replic
     default <T> T withReplicaMyCartDraft(Function<ReplicaMyCartDraft, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

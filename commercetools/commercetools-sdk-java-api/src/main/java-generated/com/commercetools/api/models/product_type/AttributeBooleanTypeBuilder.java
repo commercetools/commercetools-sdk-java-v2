@@ -1,8 +1,11 @@
-
 package com.commercetools.api.models.product_type;
 
+import com.commercetools.api.models.product_type.AttributeType;
+import com.commercetools.api.models.product_type.AttributeBooleanType;
+import javax.annotation.Nullable;
 import java.util.*;
-
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -15,10 +18,16 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     AttributeBooleanType attributeBooleanType = AttributeBooleanType.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class AttributeBooleanTypeBuilder implements Builder<AttributeBooleanType> {
+
+
+
 
     /**
      * builds AttributeBooleanType with checking for non-null required values
@@ -27,7 +36,7 @@ public class AttributeBooleanTypeBuilder implements Builder<AttributeBooleanType
     public AttributeBooleanType build() {
         return new AttributeBooleanTypeImpl();
     }
-
+    
     /**
      * builds AttributeBooleanType without checking for non-null required values
      * @return AttributeBooleanType
@@ -38,7 +47,7 @@ public class AttributeBooleanTypeBuilder implements Builder<AttributeBooleanType
 
     /**
      * factory method for an instance of AttributeBooleanTypeBuilder
-     * @return builder
+     * @return builder 
      */
     public static AttributeBooleanTypeBuilder of() {
         return new AttributeBooleanTypeBuilder();

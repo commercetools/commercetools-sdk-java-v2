@@ -1,17 +1,20 @@
-
 package com.commercetools.history.models.change;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
+import com.commercetools.history.models.change.Change;
+import com.commercetools.history.models.change.PublishChangeImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * PublishChange
@@ -24,9 +27,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .change("{change}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = PublishChangeImpl.class)
 public interface PublishChange extends Change {
 
@@ -42,7 +48,6 @@ public interface PublishChange extends Change {
     @NotNull
     @JsonProperty("type")
     public String getType();
-
     /**
      *
      * @return change
@@ -55,16 +60,18 @@ public interface PublishChange extends Change {
      * set change
      * @param change value to be set
      */
-
+    
     public void setChange(final String change);
+    
 
     /**
      * factory method
      * @return instance of PublishChange
      */
-    public static PublishChange of() {
+    public static PublishChange of(){
         return new PublishChangeImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy PublishChange
@@ -99,7 +106,7 @@ public interface PublishChange extends Change {
     public static PublishChangeBuilder builder() {
         return PublishChangeBuilder.of();
     }
-
+    
     /**
      * create builder for PublishChange instance
      * @param template instance with prefilled values for the builder
@@ -108,6 +115,7 @@ public interface PublishChange extends Change {
     public static PublishChangeBuilder builder(final PublishChange template) {
         return PublishChangeBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -118,7 +126,7 @@ public interface PublishChange extends Change {
     default <T> T withPublishChange(Function<PublishChange, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

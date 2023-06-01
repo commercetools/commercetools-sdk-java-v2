@@ -1,19 +1,20 @@
-
 package com.commercetools.history.models.common;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-import java.util.stream.Collectors;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
+import com.commercetools.history.models.common.SubRate;
+import com.commercetools.history.models.common.TaxRateImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Shape of the value for <code>addTaxRate</code> and <code>removeTaxRate</code> actions</p>
@@ -32,11 +33,15 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .plusSubRates(subRatesBuilder -> subRatesBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = TaxRateImpl.class)
-public interface TaxRate {
+public interface TaxRate  {
+
 
     /**
      *  <p>The ID is always set if the tax rate is part of a TaxCategory. The external tax rates in a Cart do not contain an <code>id</code>.</p>
@@ -45,7 +50,6 @@ public interface TaxRate {
     @NotNull
     @JsonProperty("id")
     public String getId();
-
     /**
      *
      * @return name
@@ -53,7 +57,6 @@ public interface TaxRate {
     @NotNull
     @JsonProperty("name")
     public String getName();
-
     /**
      *  <p>Percentage in the range of [0..1]. The sum of the amounts of all <code>subRates</code>, if there are any.</p>
      * @return amount
@@ -61,7 +64,6 @@ public interface TaxRate {
     @NotNull
     @JsonProperty("amount")
     public Integer getAmount();
-
     /**
      *
      * @return includedInPrice
@@ -69,7 +71,6 @@ public interface TaxRate {
     @NotNull
     @JsonProperty("includedInPrice")
     public Boolean getIncludedInPrice();
-
     /**
      *  <p>Two-digit country code as per ISO 3166-1 alpha-2.</p>
      * @return country
@@ -77,7 +78,6 @@ public interface TaxRate {
     @NotNull
     @JsonProperty("country")
     public String getCountry();
-
     /**
      *  <p>The state in the country</p>
      * @return state
@@ -85,7 +85,6 @@ public interface TaxRate {
     @NotNull
     @JsonProperty("state")
     public String getState();
-
     /**
      *
      * @return subRates
@@ -99,66 +98,72 @@ public interface TaxRate {
      *  <p>The ID is always set if the tax rate is part of a TaxCategory. The external tax rates in a Cart do not contain an <code>id</code>.</p>
      * @param id value to be set
      */
-
+    
     public void setId(final String id);
-
+    
+    
     /**
      * set name
      * @param name value to be set
      */
-
+    
     public void setName(final String name);
-
+    
+    
     /**
      *  <p>Percentage in the range of [0..1]. The sum of the amounts of all <code>subRates</code>, if there are any.</p>
      * @param amount value to be set
      */
-
+    
     public void setAmount(final Integer amount);
-
+    
+    
     /**
      * set includedInPrice
      * @param includedInPrice value to be set
      */
-
+    
     public void setIncludedInPrice(final Boolean includedInPrice);
-
+    
+    
     /**
      *  <p>Two-digit country code as per ISO 3166-1 alpha-2.</p>
      * @param country value to be set
      */
-
+    
     public void setCountry(final String country);
-
+    
+    
     /**
      *  <p>The state in the country</p>
      * @param state value to be set
      */
-
+    
     public void setState(final String state);
-
+    
+    
     /**
      * set subRates
      * @param subRates values to be set
      */
-
+    
     @JsonIgnore
-    public void setSubRates(final SubRate... subRates);
-
+    public void setSubRates(final SubRate ...subRates);
     /**
      * set subRates
      * @param subRates values to be set
      */
-
+    
     public void setSubRates(final List<SubRate> subRates);
 
     /**
      * factory method
      * @return instance of TaxRate
      */
-    public static TaxRate of() {
+    public static TaxRate of(){
         return new TaxRateImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy TaxRate
@@ -195,9 +200,7 @@ public interface TaxRate {
         instance.setCountry(template.getCountry());
         instance.setState(template.getState());
         instance.setSubRates(Optional.ofNullable(template.getSubRates())
-                .map(t -> t.stream()
-                        .map(com.commercetools.history.models.common.SubRate::deepCopy)
-                        .collect(Collectors.toList()))
+                .map(t -> t.stream().map(com.commercetools.history.models.common.SubRate::deepCopy).collect(Collectors.toList()))
                 .orElse(null));
         return instance;
     }
@@ -209,7 +212,7 @@ public interface TaxRate {
     public static TaxRateBuilder builder() {
         return TaxRateBuilder.of();
     }
-
+    
     /**
      * create builder for TaxRate instance
      * @param template instance with prefilled values for the builder
@@ -218,6 +221,7 @@ public interface TaxRate {
     public static TaxRateBuilder builder(final TaxRate template) {
         return TaxRateBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -228,7 +232,7 @@ public interface TaxRate {
     default <T> T withTaxRate(Function<TaxRate, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

@@ -1,9 +1,12 @@
-
 package com.commercetools.history.models.change;
 
+import com.commercetools.history.models.change.Change;
+import com.commercetools.history.models.change_value.ChangeValueChangeValue;
+import com.commercetools.history.models.change.ChangeValueChange;
+import javax.annotation.Nullable;
 import java.util.*;
 import java.util.function.Function;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -19,103 +22,117 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .previousValue(previousValueBuilder -> previousValueBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class ChangeValueChangeBuilder implements Builder<ChangeValueChange> {
 
+    
+    
     private String change;
-
+    
+    
+    
     private com.commercetools.history.models.change_value.ChangeValueChangeValue nextValue;
-
+    
+    
+    
     private com.commercetools.history.models.change_value.ChangeValueChangeValue previousValue;
 
+    
     /**
      *  <p>Update action for <code>changeValue</code> on cart discounts and product discounts</p>
      * @param change value to be set
      * @return Builder
      */
-
-    public ChangeValueChangeBuilder change(final String change) {
+    
+    public ChangeValueChangeBuilder change( final String change) {
         this.change = change;
         return this;
     }
-
+    
+    
+    
+    
     /**
      * set the value to the nextValue
      * @param nextValue value to be set
      * @return Builder
      */
-
-    public ChangeValueChangeBuilder nextValue(
-            final com.commercetools.history.models.change_value.ChangeValueChangeValue nextValue) {
+    
+    public ChangeValueChangeBuilder nextValue( final com.commercetools.history.models.change_value.ChangeValueChangeValue nextValue) {
         this.nextValue = nextValue;
         return this;
     }
-
+    
+    
     /**
      * set the value to the nextValue using the builder function
      * @param builder function to build the nextValue value
      * @return Builder
      */
-
-    public ChangeValueChangeBuilder nextValue(
-            Function<com.commercetools.history.models.change_value.ChangeValueChangeValueBuilder, Builder<? extends com.commercetools.history.models.change_value.ChangeValueChangeValue>> builder) {
-        this.nextValue = builder.apply(com.commercetools.history.models.change_value.ChangeValueChangeValueBuilder.of())
-                .build();
+    
+    public ChangeValueChangeBuilder nextValue(Function<com.commercetools.history.models.change_value.ChangeValueChangeValueBuilder, Builder<? extends com.commercetools.history.models.change_value.ChangeValueChangeValue>> builder) {
+        this.nextValue = builder.apply(com.commercetools.history.models.change_value.ChangeValueChangeValueBuilder.of()).build();
         return this;
     }
-
+                    
+    
+    
     /**
      * set the value to the previousValue
      * @param previousValue value to be set
      * @return Builder
      */
-
-    public ChangeValueChangeBuilder previousValue(
-            final com.commercetools.history.models.change_value.ChangeValueChangeValue previousValue) {
+    
+    public ChangeValueChangeBuilder previousValue( final com.commercetools.history.models.change_value.ChangeValueChangeValue previousValue) {
         this.previousValue = previousValue;
         return this;
     }
-
+    
+    
     /**
      * set the value to the previousValue using the builder function
      * @param builder function to build the previousValue value
      * @return Builder
      */
-
-    public ChangeValueChangeBuilder previousValue(
-            Function<com.commercetools.history.models.change_value.ChangeValueChangeValueBuilder, Builder<? extends com.commercetools.history.models.change_value.ChangeValueChangeValue>> builder) {
-        this.previousValue = builder
-                .apply(com.commercetools.history.models.change_value.ChangeValueChangeValueBuilder.of())
-                .build();
+    
+    public ChangeValueChangeBuilder previousValue(Function<com.commercetools.history.models.change_value.ChangeValueChangeValueBuilder, Builder<? extends com.commercetools.history.models.change_value.ChangeValueChangeValue>> builder) {
+        this.previousValue = builder.apply(com.commercetools.history.models.change_value.ChangeValueChangeValueBuilder.of()).build();
         return this;
     }
+                    
 
     /**
      *  <p>Update action for <code>changeValue</code> on cart discounts and product discounts</p>
      * @return change
      */
-
-    public String getChange() {
+    
+    
+    public String getChange(){
         return this.change;
     }
-
+    
     /**
      * value of nextValue}
      * @return nextValue
      */
-
-    public com.commercetools.history.models.change_value.ChangeValueChangeValue getNextValue() {
+    
+    
+    public com.commercetools.history.models.change_value.ChangeValueChangeValue getNextValue(){
         return this.nextValue;
     }
-
+    
     /**
      * value of previousValue}
      * @return previousValue
      */
-
-    public com.commercetools.history.models.change_value.ChangeValueChangeValue getPreviousValue() {
+    
+    
+    public com.commercetools.history.models.change_value.ChangeValueChangeValue getPreviousValue(){
         return this.previousValue;
     }
 
@@ -129,7 +146,7 @@ public class ChangeValueChangeBuilder implements Builder<ChangeValueChange> {
         Objects.requireNonNull(previousValue, ChangeValueChange.class + ": previousValue is missing");
         return new ChangeValueChangeImpl(change, nextValue, previousValue);
     }
-
+    
     /**
      * builds ChangeValueChange without checking for non-null required values
      * @return ChangeValueChange
@@ -140,7 +157,7 @@ public class ChangeValueChangeBuilder implements Builder<ChangeValueChange> {
 
     /**
      * factory method for an instance of ChangeValueChangeBuilder
-     * @return builder
+     * @return builder 
      */
     public static ChangeValueChangeBuilder of() {
         return new ChangeValueChangeBuilder();

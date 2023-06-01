@@ -1,20 +1,22 @@
-
 package com.commercetools.api.models.order;
 
-import java.time.*;
+import com.commercetools.api.models.order.OrderUpdateAction;
+import com.commercetools.api.models.order.ReturnItemDraft;
 import java.time.ZonedDateTime;
-import java.util.*;
-import java.util.function.Function;
-import java.util.stream.Collectors;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
+import com.commercetools.api.models.order.OrderAddReturnInfoActionImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * OrderAddReturnInfoAction
@@ -27,9 +29,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .plusItems(itemsBuilder -> itemsBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = OrderAddReturnInfoActionImpl.class)
 public interface OrderAddReturnInfoAction extends OrderUpdateAction {
 
@@ -42,10 +47,9 @@ public interface OrderAddReturnInfoAction extends OrderUpdateAction {
      *
      * @return returnTrackingId
      */
-
+    
     @JsonProperty("returnTrackingId")
     public String getReturnTrackingId();
-
     /**
      *
      * @return items
@@ -54,12 +58,11 @@ public interface OrderAddReturnInfoAction extends OrderUpdateAction {
     @Valid
     @JsonProperty("items")
     public List<ReturnItemDraft> getItems();
-
     /**
      *
      * @return returnDate
      */
-
+    
     @JsonProperty("returnDate")
     public ZonedDateTime getReturnDate();
 
@@ -67,38 +70,40 @@ public interface OrderAddReturnInfoAction extends OrderUpdateAction {
      * set returnTrackingId
      * @param returnTrackingId value to be set
      */
-
+    
     public void setReturnTrackingId(final String returnTrackingId);
-
+    
+    
     /**
      * set items
      * @param items values to be set
      */
-
+    
     @JsonIgnore
-    public void setItems(final ReturnItemDraft... items);
-
+    public void setItems(final ReturnItemDraft ...items);
     /**
      * set items
      * @param items values to be set
      */
-
+    
     public void setItems(final List<ReturnItemDraft> items);
-
+    
     /**
      * set returnDate
      * @param returnDate value to be set
      */
-
+    
     public void setReturnDate(final ZonedDateTime returnDate);
+    
 
     /**
      * factory method
      * @return instance of OrderAddReturnInfoAction
      */
-    public static OrderAddReturnInfoAction of() {
+    public static OrderAddReturnInfoAction of(){
         return new OrderAddReturnInfoActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy OrderAddReturnInfoAction
@@ -126,9 +131,7 @@ public interface OrderAddReturnInfoAction extends OrderUpdateAction {
         OrderAddReturnInfoActionImpl instance = new OrderAddReturnInfoActionImpl();
         instance.setReturnTrackingId(template.getReturnTrackingId());
         instance.setItems(Optional.ofNullable(template.getItems())
-                .map(t -> t.stream()
-                        .map(com.commercetools.api.models.order.ReturnItemDraft::deepCopy)
-                        .collect(Collectors.toList()))
+                .map(t -> t.stream().map(com.commercetools.api.models.order.ReturnItemDraft::deepCopy).collect(Collectors.toList()))
                 .orElse(null));
         instance.setReturnDate(template.getReturnDate());
         return instance;
@@ -141,7 +144,7 @@ public interface OrderAddReturnInfoAction extends OrderUpdateAction {
     public static OrderAddReturnInfoActionBuilder builder() {
         return OrderAddReturnInfoActionBuilder.of();
     }
-
+    
     /**
      * create builder for OrderAddReturnInfoAction instance
      * @param template instance with prefilled values for the builder
@@ -150,6 +153,7 @@ public interface OrderAddReturnInfoAction extends OrderUpdateAction {
     public static OrderAddReturnInfoActionBuilder builder(final OrderAddReturnInfoAction template) {
         return OrderAddReturnInfoActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -160,7 +164,7 @@ public interface OrderAddReturnInfoAction extends OrderUpdateAction {
     default <T> T withOrderAddReturnInfoAction(Function<OrderAddReturnInfoAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

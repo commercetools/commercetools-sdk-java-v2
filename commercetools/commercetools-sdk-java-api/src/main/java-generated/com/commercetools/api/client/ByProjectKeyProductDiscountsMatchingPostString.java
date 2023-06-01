@@ -1,18 +1,38 @@
-
 package com.commercetools.api.client;
 
+import io.vrap.rmf.base.client.utils.Utils;
+
+import java.io.InputStream;
+import java.io.IOException;
+
 import java.net.URI;
+import java.net.URLConnection;
 import java.nio.charset.StandardCharsets;
+import java.nio.file.Files;
+
 import java.time.Duration;
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.List;
+import java.util.Map;
+import java.util.HashMap;
+import java.util.Optional;
+import java.util.function.Function;
+import java.util.function.Supplier;
+import java.util.stream.Collectors;
 import java.util.concurrent.CompletableFuture;
-
-import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.utils.Generated;
+
+import javax.annotation.Nullable;
+
+import java.io.UnsupportedEncodingException;
+import java.net.URLEncoder;
+import io.vrap.rmf.base.client.*;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+
+import static io.vrap.rmf.base.client.utils.ClientUtils.blockingWait;
 
 /**
  *  <p>This endpoint can be used to simulate which Product Discounts would be applied if a specified Product Variant had a specified Price. Given Product and Product Variant IDs and a Price, this endpoint will return the ProductDiscount that would have been applied to that Price.</p>
@@ -30,17 +50,18 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
  * }</code></pre>
  * </div>
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
-public class ByProjectKeyProductDiscountsMatchingPostString extends
-        StringBodyApiMethod<ByProjectKeyProductDiscountsMatchingPostString, com.commercetools.api.models.product_discount.ProductDiscount>
-        implements com.commercetools.api.client.ErrorableTrait<ByProjectKeyProductDiscountsMatchingPostString> {
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
+public class ByProjectKeyProductDiscountsMatchingPostString extends StringBodyApiMethod<ByProjectKeyProductDiscountsMatchingPostString, com.commercetools.api.models.product_discount.ProductDiscount> implements com.commercetools.api.client.ErrorableTrait<ByProjectKeyProductDiscountsMatchingPostString> {
 
+    
     private String projectKey;
-
+    
     private String productDiscountMatchQuery;
 
-    public ByProjectKeyProductDiscountsMatchingPostString(final ApiHttpClient apiHttpClient, String projectKey,
-            String productDiscountMatchQuery) {
+    public ByProjectKeyProductDiscountsMatchingPostString(final ApiHttpClient apiHttpClient, String projectKey, String productDiscountMatchQuery) {
         super(apiHttpClient);
         this.projectKey = projectKey;
         this.productDiscountMatchQuery = productDiscountMatchQuery;
@@ -59,35 +80,31 @@ public class ByProjectKeyProductDiscountsMatchingPostString extends
         if (!params.isEmpty()) {
             httpRequestPath += "?" + String.join("&", params);
         }
-        return new ApiHttpRequest(ApiHttpMethod.POST, URI.create(httpRequestPath), getHeaders(),
-            productDiscountMatchQuery.getBytes(StandardCharsets.UTF_8));
-
+        return new ApiHttpRequest(ApiHttpMethod.POST, URI.create(httpRequestPath), getHeaders(), productDiscountMatchQuery.getBytes(StandardCharsets.UTF_8));
+    
     }
 
     @Override
-    public ApiHttpResponse<com.commercetools.api.models.product_discount.ProductDiscount> executeBlocking(
-            final ApiHttpClient client, final Duration timeout) {
+    public ApiHttpResponse<com.commercetools.api.models.product_discount.ProductDiscount> executeBlocking(final ApiHttpClient client, final Duration timeout) {
         return executeBlocking(client, timeout, com.commercetools.api.models.product_discount.ProductDiscount.class);
     }
 
     @Override
-    public CompletableFuture<ApiHttpResponse<com.commercetools.api.models.product_discount.ProductDiscount>> execute(
-            final ApiHttpClient client) {
+    public CompletableFuture<ApiHttpResponse<com.commercetools.api.models.product_discount.ProductDiscount>> execute(final ApiHttpClient client) {
         return execute(client, com.commercetools.api.models.product_discount.ProductDiscount.class);
     }
 
-    public String getProjectKey() {
-        return this.projectKey;
-    }
+    public String getProjectKey() {return this.projectKey;}
 
-    public void setProjectKey(final String projectKey) {
-        this.projectKey = projectKey;
-    }
 
+    public void setProjectKey(final String projectKey) { this.projectKey = projectKey; }
+
+
+    
     public String getBody() {
         return productDiscountMatchQuery;
     }
-
+    
     public ByProjectKeyProductDiscountsMatchingPostString withBody(String productDiscountMatchQuery) {
         ByProjectKeyProductDiscountsMatchingPostString t = copy();
         t.productDiscountMatchQuery = productDiscountMatchQuery;
@@ -96,22 +113,24 @@ public class ByProjectKeyProductDiscountsMatchingPostString extends
 
     @Override
     public boolean equals(Object o) {
-        if (this == o)
-            return true;
-
-        if (o == null || getClass() != o.getClass())
-            return false;
-
+        if (this == o) return true;
+    
+        if (o == null || getClass() != o.getClass()) return false;
+    
         ByProjectKeyProductDiscountsMatchingPostString that = (ByProjectKeyProductDiscountsMatchingPostString) o;
-
-        return new EqualsBuilder().append(projectKey, that.projectKey)
+    
+        return new EqualsBuilder()
+                .append(projectKey, that.projectKey)
                 .append(productDiscountMatchQuery, that.productDiscountMatchQuery)
                 .isEquals();
     }
-
+    
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(projectKey).append(productDiscountMatchQuery).toHashCode();
+        return new HashCodeBuilder(17, 37)
+            .append(projectKey)
+            .append(productDiscountMatchQuery)
+            .toHashCode();
     }
 
     @Override

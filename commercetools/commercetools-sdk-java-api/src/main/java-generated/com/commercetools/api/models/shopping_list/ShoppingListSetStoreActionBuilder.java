@@ -1,11 +1,12 @@
-
 package com.commercetools.api.models.shopping_list;
 
+import com.commercetools.api.models.shopping_list.ShoppingListUpdateAction;
+import com.commercetools.api.models.store.StoreResourceIdentifier;
+import com.commercetools.api.models.shopping_list.ShoppingListSetStoreAction;
+import javax.annotation.Nullable;
 import java.util.*;
 import java.util.function.Function;
-
-import javax.annotation.Nullable;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -18,57 +19,61 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     ShoppingListSetStoreAction shoppingListSetStoreAction = ShoppingListSetStoreAction.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class ShoppingListSetStoreActionBuilder implements Builder<ShoppingListSetStoreAction> {
 
+    
     @Nullable
     private com.commercetools.api.models.store.StoreResourceIdentifier store;
 
+    
     /**
      *  <p>The Store the ShoppingList should be assigned to. If empty, any existing value will be removed.</p>
      * @param builder function to build the store value
      * @return Builder
      */
-
-    public ShoppingListSetStoreActionBuilder store(
-            Function<com.commercetools.api.models.store.StoreResourceIdentifierBuilder, com.commercetools.api.models.store.StoreResourceIdentifierBuilder> builder) {
+    
+    public ShoppingListSetStoreActionBuilder store(Function<com.commercetools.api.models.store.StoreResourceIdentifierBuilder, com.commercetools.api.models.store.StoreResourceIdentifierBuilder> builder) {
         this.store = builder.apply(com.commercetools.api.models.store.StoreResourceIdentifierBuilder.of()).build();
         return this;
     }
-
+    
     /**
      *  <p>The Store the ShoppingList should be assigned to. If empty, any existing value will be removed.</p>
      * @param builder function to build the store value
      * @return Builder
      */
-
-    public ShoppingListSetStoreActionBuilder withStore(
-            Function<com.commercetools.api.models.store.StoreResourceIdentifierBuilder, com.commercetools.api.models.store.StoreResourceIdentifier> builder) {
+    
+    public ShoppingListSetStoreActionBuilder withStore(Function<com.commercetools.api.models.store.StoreResourceIdentifierBuilder, com.commercetools.api.models.store.StoreResourceIdentifier> builder) {
         this.store = builder.apply(com.commercetools.api.models.store.StoreResourceIdentifierBuilder.of());
         return this;
     }
-
+                    
     /**
      *  <p>The Store the ShoppingList should be assigned to. If empty, any existing value will be removed.</p>
      * @param store value to be set
      * @return Builder
      */
-
-    public ShoppingListSetStoreActionBuilder store(
-            @Nullable final com.commercetools.api.models.store.StoreResourceIdentifier store) {
+    
+    public ShoppingListSetStoreActionBuilder store(@Nullable final com.commercetools.api.models.store.StoreResourceIdentifier store) {
         this.store = store;
         return this;
     }
+    
+    
 
     /**
      *  <p>The Store the ShoppingList should be assigned to. If empty, any existing value will be removed.</p>
      * @return store
      */
-
+    
     @Nullable
-    public com.commercetools.api.models.store.StoreResourceIdentifier getStore() {
+    public com.commercetools.api.models.store.StoreResourceIdentifier getStore(){
         return this.store;
     }
 
@@ -79,7 +84,7 @@ public class ShoppingListSetStoreActionBuilder implements Builder<ShoppingListSe
     public ShoppingListSetStoreAction build() {
         return new ShoppingListSetStoreActionImpl(store);
     }
-
+    
     /**
      * builds ShoppingListSetStoreAction without checking for non-null required values
      * @return ShoppingListSetStoreAction
@@ -90,7 +95,7 @@ public class ShoppingListSetStoreActionBuilder implements Builder<ShoppingListSe
 
     /**
      * factory method for an instance of ShoppingListSetStoreActionBuilder
-     * @return builder
+     * @return builder 
      */
     public static ShoppingListSetStoreActionBuilder of() {
         return new ShoppingListSetStoreActionBuilder();

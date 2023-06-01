@@ -1,11 +1,11 @@
-
 package com.commercetools.api.predicates.query.me;
-
-import java.util.function.Function;
 
 import com.commercetools.api.predicates.query.*;
 
-public class MyPaymentAddTransactionActionQueryBuilderDsl {
+import java.util.function.Function;
+
+
+public class MyPaymentAddTransactionActionQueryBuilderDsl  {
     public MyPaymentAddTransactionActionQueryBuilderDsl() {
     }
 
@@ -14,17 +14,16 @@ public class MyPaymentAddTransactionActionQueryBuilderDsl {
     }
 
     public StringComparisonPredicateBuilder<MyPaymentAddTransactionActionQueryBuilderDsl> action() {
-        return new StringComparisonPredicateBuilder<>(
-            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("action")),
-            p -> new CombinationQueryPredicate<>(p, MyPaymentAddTransactionActionQueryBuilderDsl::of));
+        return new StringComparisonPredicateBuilder<>(BinaryQueryPredicate.of().left(new ConstantQueryPredicate("action")),
+        p -> new CombinationQueryPredicate<>(p, MyPaymentAddTransactionActionQueryBuilderDsl::of));
     }
-
     public CombinationQueryPredicate<MyPaymentAddTransactionActionQueryBuilderDsl> transaction(
-            Function<com.commercetools.api.predicates.query.payment.TransactionDraftQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.payment.TransactionDraftQueryBuilderDsl>> fn) {
+        Function<com.commercetools.api.predicates.query.payment.TransactionDraftQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.payment.TransactionDraftQueryBuilderDsl>> fn) {
         return new CombinationQueryPredicate<>(ContainerQueryPredicate.of()
-                .parent(ConstantQueryPredicate.of().constant("transaction"))
-                .inner(fn.apply(com.commercetools.api.predicates.query.payment.TransactionDraftQueryBuilderDsl.of())),
+            .parent(ConstantQueryPredicate.of().constant("transaction"))
+            .inner(fn.apply(com.commercetools.api.predicates.query.payment.TransactionDraftQueryBuilderDsl.of())),
             MyPaymentAddTransactionActionQueryBuilderDsl::of);
     }
-
+    
+    
 }

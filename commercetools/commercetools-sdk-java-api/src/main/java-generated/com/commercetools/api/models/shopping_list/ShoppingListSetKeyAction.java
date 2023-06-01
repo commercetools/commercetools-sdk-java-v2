@@ -1,16 +1,20 @@
-
 package com.commercetools.api.models.shopping_list;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
+import com.commercetools.api.models.shopping_list.ShoppingListUpdateAction;
+import com.commercetools.api.models.shopping_list.ShoppingListSetKeyActionImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * ShoppingListSetKeyAction
@@ -22,9 +26,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     ShoppingListSetKeyAction shoppingListSetKeyAction = ShoppingListSetKeyAction.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = ShoppingListSetKeyActionImpl.class)
 public interface ShoppingListSetKeyAction extends ShoppingListUpdateAction {
 
@@ -37,7 +44,7 @@ public interface ShoppingListSetKeyAction extends ShoppingListUpdateAction {
      *  <p>Value to set. If empty, any existing value will be removed.</p>
      * @return key
      */
-
+    
     @JsonProperty("key")
     public String getKey();
 
@@ -45,16 +52,18 @@ public interface ShoppingListSetKeyAction extends ShoppingListUpdateAction {
      *  <p>Value to set. If empty, any existing value will be removed.</p>
      * @param key value to be set
      */
-
+    
     public void setKey(final String key);
+    
 
     /**
      * factory method
      * @return instance of ShoppingListSetKeyAction
      */
-    public static ShoppingListSetKeyAction of() {
+    public static ShoppingListSetKeyAction of(){
         return new ShoppingListSetKeyActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy ShoppingListSetKeyAction
@@ -89,7 +98,7 @@ public interface ShoppingListSetKeyAction extends ShoppingListUpdateAction {
     public static ShoppingListSetKeyActionBuilder builder() {
         return ShoppingListSetKeyActionBuilder.of();
     }
-
+    
     /**
      * create builder for ShoppingListSetKeyAction instance
      * @param template instance with prefilled values for the builder
@@ -98,6 +107,7 @@ public interface ShoppingListSetKeyAction extends ShoppingListUpdateAction {
     public static ShoppingListSetKeyActionBuilder builder(final ShoppingListSetKeyAction template) {
         return ShoppingListSetKeyActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -108,11 +118,11 @@ public interface ShoppingListSetKeyAction extends ShoppingListUpdateAction {
     default <T> T withShoppingListSetKeyAction(Function<ShoppingListSetKeyAction, T> helper) {
         return helper.apply(this);
     }
-
     public static ShoppingListSetKeyAction ofUnset() {
         return ShoppingListSetKeyAction.of();
     }
-
+    
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

@@ -1,10 +1,11 @@
-
 package com.commercetools.api.models.business_unit;
 
-import java.util.*;
-
+import com.commercetools.api.models.business_unit.BusinessUnitUpdateAction;
+import com.commercetools.api.models.business_unit.BusinessUnitAddBillingAddressIdAction;
 import javax.annotation.Nullable;
-
+import java.util.*;
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -17,56 +18,67 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     BusinessUnitAddBillingAddressIdAction businessUnitAddBillingAddressIdAction = BusinessUnitAddBillingAddressIdAction.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class BusinessUnitAddBillingAddressIdActionBuilder implements Builder<BusinessUnitAddBillingAddressIdAction> {
 
+    
     @Nullable
     private String addressId;
-
+    
+    
     @Nullable
     private String addressKey;
 
+    
     /**
      *  <p>ID of the address to add as a billing address. Either <code>addressId</code> or <code>addressKey</code> is required.</p>
      * @param addressId value to be set
      * @return Builder
      */
-
+    
     public BusinessUnitAddBillingAddressIdActionBuilder addressId(@Nullable final String addressId) {
         this.addressId = addressId;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Key of the address to add as a billing address. Either <code>addressId</code> or <code>addressKey</code> is required.</p>
      * @param addressKey value to be set
      * @return Builder
      */
-
+    
     public BusinessUnitAddBillingAddressIdActionBuilder addressKey(@Nullable final String addressKey) {
         this.addressKey = addressKey;
         return this;
     }
+    
+    
 
     /**
      *  <p>ID of the address to add as a billing address. Either <code>addressId</code> or <code>addressKey</code> is required.</p>
      * @return addressId
      */
-
+    
     @Nullable
-    public String getAddressId() {
+    public String getAddressId(){
         return this.addressId;
     }
-
+    
     /**
      *  <p>Key of the address to add as a billing address. Either <code>addressId</code> or <code>addressKey</code> is required.</p>
      * @return addressKey
      */
-
+    
     @Nullable
-    public String getAddressKey() {
+    public String getAddressKey(){
         return this.addressKey;
     }
 
@@ -77,7 +89,7 @@ public class BusinessUnitAddBillingAddressIdActionBuilder implements Builder<Bus
     public BusinessUnitAddBillingAddressIdAction build() {
         return new BusinessUnitAddBillingAddressIdActionImpl(addressId, addressKey);
     }
-
+    
     /**
      * builds BusinessUnitAddBillingAddressIdAction without checking for non-null required values
      * @return BusinessUnitAddBillingAddressIdAction
@@ -88,7 +100,7 @@ public class BusinessUnitAddBillingAddressIdActionBuilder implements Builder<Bus
 
     /**
      * factory method for an instance of BusinessUnitAddBillingAddressIdActionBuilder
-     * @return builder
+     * @return builder 
      */
     public static BusinessUnitAddBillingAddressIdActionBuilder of() {
         return new BusinessUnitAddBillingAddressIdActionBuilder();
@@ -99,8 +111,7 @@ public class BusinessUnitAddBillingAddressIdActionBuilder implements Builder<Bus
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static BusinessUnitAddBillingAddressIdActionBuilder of(
-            final BusinessUnitAddBillingAddressIdAction template) {
+    public static BusinessUnitAddBillingAddressIdActionBuilder of(final BusinessUnitAddBillingAddressIdAction template) {
         BusinessUnitAddBillingAddressIdActionBuilder builder = new BusinessUnitAddBillingAddressIdActionBuilder();
         builder.addressId = template.getAddressId();
         builder.addressKey = template.getAddressKey();

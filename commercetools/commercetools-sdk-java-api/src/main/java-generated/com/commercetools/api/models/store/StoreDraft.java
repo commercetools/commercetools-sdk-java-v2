@@ -1,23 +1,24 @@
-
 package com.commercetools.api.models.store;
-
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-import java.util.stream.Collectors;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.channel.ChannelResourceIdentifier;
 import com.commercetools.api.models.common.LocalizedString;
+import com.commercetools.api.models.store.ProductSelectionSettingDraft;
 import com.commercetools.api.models.store_country.StoreCountry;
 import com.commercetools.api.models.type.CustomFieldsDraft;
+import com.commercetools.api.models.store.StoreDraftImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * StoreDraft
@@ -30,12 +31,15 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .key("{key}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = StoreDraftImpl.class)
-public interface StoreDraft extends com.commercetools.api.models.CustomizableDraft<StoreDraft>,
-        com.commercetools.api.models.WithKey, io.vrap.rmf.base.client.Draft<StoreDraft> {
+public interface StoreDraft extends com.commercetools.api.models.CustomizableDraft<StoreDraft>, com.commercetools.api.models.WithKey, io.vrap.rmf.base.client.Draft<StoreDraft> {
+
 
     /**
      *  <p>User-defined unique and immutable identifier for the Store. Keys can only contain alphanumeric characters, underscores, and hyphens.</p>
@@ -44,7 +48,6 @@ public interface StoreDraft extends com.commercetools.api.models.CustomizableDra
     @NotNull
     @JsonProperty("key")
     public String getKey();
-
     /**
      *  <p>Name of the Store.</p>
      * @return name
@@ -52,15 +55,13 @@ public interface StoreDraft extends com.commercetools.api.models.CustomizableDra
     @Valid
     @JsonProperty("name")
     public LocalizedString getName();
-
     /**
      *  <p>Languages defined in Project. Only languages defined in the Project can be used.</p>
      * @return languages
      */
-
+    
     @JsonProperty("languages")
     public List<String> getLanguages();
-
     /**
      *  <p>Countries defined for the Store.</p>
      * @return countries
@@ -68,7 +69,6 @@ public interface StoreDraft extends com.commercetools.api.models.CustomizableDra
     @Valid
     @JsonProperty("countries")
     public List<StoreCountry> getCountries();
-
     /**
      *  <p>ResourceIdentifier of a Channel with <code>ProductDistribution</code> ChannelRoleEnum.</p>
      * @return distributionChannels
@@ -76,7 +76,6 @@ public interface StoreDraft extends com.commercetools.api.models.CustomizableDra
     @Valid
     @JsonProperty("distributionChannels")
     public List<ChannelResourceIdentifier> getDistributionChannels();
-
     /**
      *  <p>ResourceIdentifier of a Channel with <code>InventorySupply</code> ChannelRoleEnum.</p>
      * @return supplyChannels
@@ -84,7 +83,6 @@ public interface StoreDraft extends com.commercetools.api.models.CustomizableDra
     @Valid
     @JsonProperty("supplyChannels")
     public List<ChannelResourceIdentifier> getSupplyChannels();
-
     /**
      *  <p>Controls availability of Products for this Store via active/inactive Product Selections:</p>
      *  <ul>
@@ -98,7 +96,6 @@ public interface StoreDraft extends com.commercetools.api.models.CustomizableDra
     @Valid
     @JsonProperty("productSelections")
     public List<ProductSelectionSettingDraft> getProductSelections();
-
     /**
      *  <p>Custom fields for the Store.</p>
      * @return custom
@@ -111,76 +108,74 @@ public interface StoreDraft extends com.commercetools.api.models.CustomizableDra
      *  <p>User-defined unique and immutable identifier for the Store. Keys can only contain alphanumeric characters, underscores, and hyphens.</p>
      * @param key value to be set
      */
-
+    
     public void setKey(final String key);
-
+    
+    
     /**
      *  <p>Name of the Store.</p>
      * @param name value to be set
      */
-
+    
     public void setName(final LocalizedString name);
-
+    
+    
     /**
      *  <p>Languages defined in Project. Only languages defined in the Project can be used.</p>
      * @param languages values to be set
      */
-
+    
     @JsonIgnore
-    public void setLanguages(final String... languages);
-
+    public void setLanguages(final String ...languages);
     /**
      *  <p>Languages defined in Project. Only languages defined in the Project can be used.</p>
      * @param languages values to be set
      */
-
+    
     public void setLanguages(final List<String> languages);
-
+    
     /**
      *  <p>Countries defined for the Store.</p>
      * @param countries values to be set
      */
-
+    
     @JsonIgnore
-    public void setCountries(final StoreCountry... countries);
-
+    public void setCountries(final StoreCountry ...countries);
     /**
      *  <p>Countries defined for the Store.</p>
      * @param countries values to be set
      */
-
+    
     public void setCountries(final List<StoreCountry> countries);
-
+    
     /**
      *  <p>ResourceIdentifier of a Channel with <code>ProductDistribution</code> ChannelRoleEnum.</p>
      * @param distributionChannels values to be set
      */
-
+    
     @JsonIgnore
-    public void setDistributionChannels(final ChannelResourceIdentifier... distributionChannels);
-
+    public void setDistributionChannels(final ChannelResourceIdentifier ...distributionChannels);
     /**
      *  <p>ResourceIdentifier of a Channel with <code>ProductDistribution</code> ChannelRoleEnum.</p>
      * @param distributionChannels values to be set
      */
-
+    
     public void setDistributionChannels(final List<ChannelResourceIdentifier> distributionChannels);
-
+    
     /**
      *  <p>ResourceIdentifier of a Channel with <code>InventorySupply</code> ChannelRoleEnum.</p>
      * @param supplyChannels values to be set
      */
-
+    
     @JsonIgnore
-    public void setSupplyChannels(final ChannelResourceIdentifier... supplyChannels);
-
+    public void setSupplyChannels(final ChannelResourceIdentifier ...supplyChannels);
     /**
      *  <p>ResourceIdentifier of a Channel with <code>InventorySupply</code> ChannelRoleEnum.</p>
      * @param supplyChannels values to be set
      */
-
+    
     public void setSupplyChannels(final List<ChannelResourceIdentifier> supplyChannels);
-
+    
     /**
      *  <p>Controls availability of Products for this Store via active/inactive Product Selections:</p>
      *  <ul>
@@ -191,10 +186,9 @@ public interface StoreDraft extends com.commercetools.api.models.CustomizableDra
      *  </ul>
      * @param productSelections values to be set
      */
-
+    
     @JsonIgnore
-    public void setProductSelections(final ProductSelectionSettingDraft... productSelections);
-
+    public void setProductSelections(final ProductSelectionSettingDraft ...productSelections);
     /**
      *  <p>Controls availability of Products for this Store via active/inactive Product Selections:</p>
      *  <ul>
@@ -205,23 +199,25 @@ public interface StoreDraft extends com.commercetools.api.models.CustomizableDra
      *  </ul>
      * @param productSelections values to be set
      */
-
+    
     public void setProductSelections(final List<ProductSelectionSettingDraft> productSelections);
-
+    
     /**
      *  <p>Custom fields for the Store.</p>
      * @param custom value to be set
      */
-
+    
     public void setCustom(final CustomFieldsDraft custom);
+    
 
     /**
      * factory method
      * @return instance of StoreDraft
      */
-    public static StoreDraft of() {
+    public static StoreDraft of(){
         return new StoreDraftImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy StoreDraft
@@ -254,26 +250,20 @@ public interface StoreDraft extends com.commercetools.api.models.CustomizableDra
         StoreDraftImpl instance = new StoreDraftImpl();
         instance.setKey(template.getKey());
         instance.setName(com.commercetools.api.models.common.LocalizedString.deepCopy(template.getName()));
-        instance.setLanguages(Optional.ofNullable(template.getLanguages()).map(ArrayList::new).orElse(null));
+        instance.setLanguages(Optional.ofNullable(template.getLanguages())
+                .map(ArrayList::new)
+                .orElse(null));
         instance.setCountries(Optional.ofNullable(template.getCountries())
-                .map(t -> t.stream()
-                        .map(com.commercetools.api.models.store_country.StoreCountry::deepCopy)
-                        .collect(Collectors.toList()))
+                .map(t -> t.stream().map(com.commercetools.api.models.store_country.StoreCountry::deepCopy).collect(Collectors.toList()))
                 .orElse(null));
         instance.setDistributionChannels(Optional.ofNullable(template.getDistributionChannels())
-                .map(t -> t.stream()
-                        .map(com.commercetools.api.models.channel.ChannelResourceIdentifier::deepCopy)
-                        .collect(Collectors.toList()))
+                .map(t -> t.stream().map(com.commercetools.api.models.channel.ChannelResourceIdentifier::deepCopy).collect(Collectors.toList()))
                 .orElse(null));
         instance.setSupplyChannels(Optional.ofNullable(template.getSupplyChannels())
-                .map(t -> t.stream()
-                        .map(com.commercetools.api.models.channel.ChannelResourceIdentifier::deepCopy)
-                        .collect(Collectors.toList()))
+                .map(t -> t.stream().map(com.commercetools.api.models.channel.ChannelResourceIdentifier::deepCopy).collect(Collectors.toList()))
                 .orElse(null));
         instance.setProductSelections(Optional.ofNullable(template.getProductSelections())
-                .map(t -> t.stream()
-                        .map(com.commercetools.api.models.store.ProductSelectionSettingDraft::deepCopy)
-                        .collect(Collectors.toList()))
+                .map(t -> t.stream().map(com.commercetools.api.models.store.ProductSelectionSettingDraft::deepCopy).collect(Collectors.toList()))
                 .orElse(null));
         instance.setCustom(com.commercetools.api.models.type.CustomFieldsDraft.deepCopy(template.getCustom()));
         return instance;
@@ -286,7 +276,7 @@ public interface StoreDraft extends com.commercetools.api.models.CustomizableDra
     public static StoreDraftBuilder builder() {
         return StoreDraftBuilder.of();
     }
-
+    
     /**
      * create builder for StoreDraft instance
      * @param template instance with prefilled values for the builder
@@ -295,6 +285,7 @@ public interface StoreDraft extends com.commercetools.api.models.CustomizableDra
     public static StoreDraftBuilder builder(final StoreDraft template) {
         return StoreDraftBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -305,7 +296,7 @@ public interface StoreDraft extends com.commercetools.api.models.CustomizableDra
     default <T> T withStoreDraft(Function<StoreDraft, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

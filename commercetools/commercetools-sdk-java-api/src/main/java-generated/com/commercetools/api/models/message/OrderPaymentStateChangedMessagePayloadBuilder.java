@@ -1,10 +1,12 @@
-
 package com.commercetools.api.models.message;
 
-import java.util.*;
-
+import com.commercetools.api.models.message.OrderMessagePayload;
+import com.commercetools.api.models.order.PaymentState;
+import com.commercetools.api.models.message.OrderPaymentStateChangedMessagePayload;
 import javax.annotation.Nullable;
-
+import java.util.*;
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -18,56 +20,67 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .paymentState(PaymentState.BALANCE_DUE)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class OrderPaymentStateChangedMessagePayloadBuilder implements Builder<OrderPaymentStateChangedMessagePayload> {
 
+    
+    
     private com.commercetools.api.models.order.PaymentState paymentState;
-
+    
+    
     @Nullable
     private com.commercetools.api.models.order.PaymentState oldPaymentState;
 
+    
     /**
      *  <p>PaymentState after the Change Payment State update action.</p>
      * @param paymentState value to be set
      * @return Builder
      */
-
-    public OrderPaymentStateChangedMessagePayloadBuilder paymentState(
-            final com.commercetools.api.models.order.PaymentState paymentState) {
+    
+    public OrderPaymentStateChangedMessagePayloadBuilder paymentState( final com.commercetools.api.models.order.PaymentState paymentState) {
         this.paymentState = paymentState;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>PaymentState before the Change Payment State update action.</p>
      * @param oldPaymentState value to be set
      * @return Builder
      */
-
-    public OrderPaymentStateChangedMessagePayloadBuilder oldPaymentState(
-            @Nullable final com.commercetools.api.models.order.PaymentState oldPaymentState) {
+    
+    public OrderPaymentStateChangedMessagePayloadBuilder oldPaymentState(@Nullable final com.commercetools.api.models.order.PaymentState oldPaymentState) {
         this.oldPaymentState = oldPaymentState;
         return this;
     }
+    
+    
 
     /**
      *  <p>PaymentState after the Change Payment State update action.</p>
      * @return paymentState
      */
-
-    public com.commercetools.api.models.order.PaymentState getPaymentState() {
+    
+    
+    public com.commercetools.api.models.order.PaymentState getPaymentState(){
         return this.paymentState;
     }
-
+    
     /**
      *  <p>PaymentState before the Change Payment State update action.</p>
      * @return oldPaymentState
      */
-
+    
     @Nullable
-    public com.commercetools.api.models.order.PaymentState getOldPaymentState() {
+    public com.commercetools.api.models.order.PaymentState getOldPaymentState(){
         return this.oldPaymentState;
     }
 
@@ -76,11 +89,10 @@ public class OrderPaymentStateChangedMessagePayloadBuilder implements Builder<Or
      * @return OrderPaymentStateChangedMessagePayload
      */
     public OrderPaymentStateChangedMessagePayload build() {
-        Objects.requireNonNull(paymentState,
-            OrderPaymentStateChangedMessagePayload.class + ": paymentState is missing");
+        Objects.requireNonNull(paymentState, OrderPaymentStateChangedMessagePayload.class + ": paymentState is missing");
         return new OrderPaymentStateChangedMessagePayloadImpl(paymentState, oldPaymentState);
     }
-
+    
     /**
      * builds OrderPaymentStateChangedMessagePayload without checking for non-null required values
      * @return OrderPaymentStateChangedMessagePayload
@@ -91,7 +103,7 @@ public class OrderPaymentStateChangedMessagePayloadBuilder implements Builder<Or
 
     /**
      * factory method for an instance of OrderPaymentStateChangedMessagePayloadBuilder
-     * @return builder
+     * @return builder 
      */
     public static OrderPaymentStateChangedMessagePayloadBuilder of() {
         return new OrderPaymentStateChangedMessagePayloadBuilder();
@@ -102,8 +114,7 @@ public class OrderPaymentStateChangedMessagePayloadBuilder implements Builder<Or
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static OrderPaymentStateChangedMessagePayloadBuilder of(
-            final OrderPaymentStateChangedMessagePayload template) {
+    public static OrderPaymentStateChangedMessagePayloadBuilder of(final OrderPaymentStateChangedMessagePayload template) {
         OrderPaymentStateChangedMessagePayloadBuilder builder = new OrderPaymentStateChangedMessagePayloadBuilder();
         builder.paymentState = template.getPaymentState();
         builder.oldPaymentState = template.getOldPaymentState();

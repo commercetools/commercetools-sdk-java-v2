@@ -1,17 +1,20 @@
-
 package com.commercetools.api.models.product_discount;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
+import com.commercetools.api.models.product_discount.ProductDiscountUpdateAction;
+import com.commercetools.api.models.product_discount.ProductDiscountChangeSortOrderActionImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * ProductDiscountChangeSortOrderAction
@@ -24,9 +27,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .sortOrder("{sortOrder}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = ProductDiscountChangeSortOrderActionImpl.class)
 public interface ProductDiscountChangeSortOrderAction extends ProductDiscountUpdateAction {
 
@@ -47,16 +53,18 @@ public interface ProductDiscountChangeSortOrderAction extends ProductDiscountUpd
      *  <p>New value to set. Must not be empty. The string value must be a number between <code>0</code> and <code>1</code>. A Discount with a higher sortOrder is prioritized.</p>
      * @param sortOrder value to be set
      */
-
+    
     public void setSortOrder(final String sortOrder);
+    
 
     /**
      * factory method
      * @return instance of ProductDiscountChangeSortOrderAction
      */
-    public static ProductDiscountChangeSortOrderAction of() {
+    public static ProductDiscountChangeSortOrderAction of(){
         return new ProductDiscountChangeSortOrderActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy ProductDiscountChangeSortOrderAction
@@ -75,8 +83,7 @@ public interface ProductDiscountChangeSortOrderAction extends ProductDiscountUpd
      * @return copy instance
      */
     @Nullable
-    public static ProductDiscountChangeSortOrderAction deepCopy(
-            @Nullable final ProductDiscountChangeSortOrderAction template) {
+    public static ProductDiscountChangeSortOrderAction deepCopy(@Nullable final ProductDiscountChangeSortOrderAction template) {
         if (template == null) {
             return null;
         }
@@ -92,16 +99,16 @@ public interface ProductDiscountChangeSortOrderAction extends ProductDiscountUpd
     public static ProductDiscountChangeSortOrderActionBuilder builder() {
         return ProductDiscountChangeSortOrderActionBuilder.of();
     }
-
+    
     /**
      * create builder for ProductDiscountChangeSortOrderAction instance
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static ProductDiscountChangeSortOrderActionBuilder builder(
-            final ProductDiscountChangeSortOrderAction template) {
+    public static ProductDiscountChangeSortOrderActionBuilder builder(final ProductDiscountChangeSortOrderAction template) {
         return ProductDiscountChangeSortOrderActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -112,7 +119,7 @@ public interface ProductDiscountChangeSortOrderAction extends ProductDiscountUpd
     default <T> T withProductDiscountChangeSortOrderAction(Function<ProductDiscountChangeSortOrderAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

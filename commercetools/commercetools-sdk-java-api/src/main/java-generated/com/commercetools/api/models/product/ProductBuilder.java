@@ -1,11 +1,20 @@
-
 package com.commercetools.api.models.product;
 
+import com.commercetools.api.models.common.BaseResource;
+import com.commercetools.api.models.common.CreatedBy;
+import com.commercetools.api.models.common.LastModifiedBy;
+import com.commercetools.api.models.product.ProductCatalogData;
+import com.commercetools.api.models.product.ProductPriceModeEnum;
+import com.commercetools.api.models.product_type.ProductTypeReference;
+import com.commercetools.api.models.review.ReviewRatingStatistics;
+import com.commercetools.api.models.state.StateReference;
+import com.commercetools.api.models.tax_category.TaxCategoryReference;
+import java.time.ZonedDateTime;
+import com.commercetools.api.models.product.Product;
+import javax.annotation.Nullable;
 import java.util.*;
 import java.util.function.Function;
-
-import javax.annotation.Nullable;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -24,488 +33,531 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .masterData(masterDataBuilder -> masterDataBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class ProductBuilder implements Builder<Product> {
 
+    
+    
     private String id;
-
+    
+    
+    
     private Long version;
-
+    
+    
+    
     private java.time.ZonedDateTime createdAt;
-
+    
+    
+    
     private java.time.ZonedDateTime lastModifiedAt;
-
+    
+    
     @Nullable
     private com.commercetools.api.models.common.LastModifiedBy lastModifiedBy;
-
+    
+    
     @Nullable
     private com.commercetools.api.models.common.CreatedBy createdBy;
-
+    
+    
     @Nullable
     private String key;
-
+    
+    
+    
     private com.commercetools.api.models.product_type.ProductTypeReference productType;
-
+    
+    
+    
     private com.commercetools.api.models.product.ProductCatalogData masterData;
-
+    
+    
     @Nullable
     private com.commercetools.api.models.tax_category.TaxCategoryReference taxCategory;
-
+    
+    
     @Nullable
     private com.commercetools.api.models.state.StateReference state;
-
+    
+    
     @Nullable
     private com.commercetools.api.models.review.ReviewRatingStatistics reviewRatingStatistics;
-
+    
+    
     @Nullable
     private com.commercetools.api.models.product.ProductPriceModeEnum priceMode;
 
+    
     /**
      *  <p>Unique identifier of the Product.</p>
      * @param id value to be set
      * @return Builder
      */
-
-    public ProductBuilder id(final String id) {
+    
+    public ProductBuilder id( final String id) {
         this.id = id;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Current version of the Product.</p>
      * @param version value to be set
      * @return Builder
      */
-
-    public ProductBuilder version(final Long version) {
+    
+    public ProductBuilder version( final Long version) {
         this.version = version;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Date and time (UTC) the Product was initially created.</p>
      * @param createdAt value to be set
      * @return Builder
      */
-
-    public ProductBuilder createdAt(final java.time.ZonedDateTime createdAt) {
+    
+    public ProductBuilder createdAt( final java.time.ZonedDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Date and time (UTC) the Product was last updated.</p>
      * @param lastModifiedAt value to be set
      * @return Builder
      */
-
-    public ProductBuilder lastModifiedAt(final java.time.ZonedDateTime lastModifiedAt) {
+    
+    public ProductBuilder lastModifiedAt( final java.time.ZonedDateTime lastModifiedAt) {
         this.lastModifiedAt = lastModifiedAt;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      * @param builder function to build the lastModifiedBy value
      * @return Builder
      */
-
-    public ProductBuilder lastModifiedBy(
-            Function<com.commercetools.api.models.common.LastModifiedByBuilder, com.commercetools.api.models.common.LastModifiedByBuilder> builder) {
+    
+    public ProductBuilder lastModifiedBy(Function<com.commercetools.api.models.common.LastModifiedByBuilder, com.commercetools.api.models.common.LastModifiedByBuilder> builder) {
         this.lastModifiedBy = builder.apply(com.commercetools.api.models.common.LastModifiedByBuilder.of()).build();
         return this;
     }
-
+    
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      * @param builder function to build the lastModifiedBy value
      * @return Builder
      */
-
-    public ProductBuilder withLastModifiedBy(
-            Function<com.commercetools.api.models.common.LastModifiedByBuilder, com.commercetools.api.models.common.LastModifiedBy> builder) {
+    
+    public ProductBuilder withLastModifiedBy(Function<com.commercetools.api.models.common.LastModifiedByBuilder, com.commercetools.api.models.common.LastModifiedBy> builder) {
         this.lastModifiedBy = builder.apply(com.commercetools.api.models.common.LastModifiedByBuilder.of());
         return this;
     }
-
+                    
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      * @param lastModifiedBy value to be set
      * @return Builder
      */
-
-    public ProductBuilder lastModifiedBy(
-            @Nullable final com.commercetools.api.models.common.LastModifiedBy lastModifiedBy) {
+    
+    public ProductBuilder lastModifiedBy(@Nullable final com.commercetools.api.models.common.LastModifiedBy lastModifiedBy) {
         this.lastModifiedBy = lastModifiedBy;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      * @param builder function to build the createdBy value
      * @return Builder
      */
-
-    public ProductBuilder createdBy(
-            Function<com.commercetools.api.models.common.CreatedByBuilder, com.commercetools.api.models.common.CreatedByBuilder> builder) {
+    
+    public ProductBuilder createdBy(Function<com.commercetools.api.models.common.CreatedByBuilder, com.commercetools.api.models.common.CreatedByBuilder> builder) {
         this.createdBy = builder.apply(com.commercetools.api.models.common.CreatedByBuilder.of()).build();
         return this;
     }
-
+    
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      * @param builder function to build the createdBy value
      * @return Builder
      */
-
-    public ProductBuilder withCreatedBy(
-            Function<com.commercetools.api.models.common.CreatedByBuilder, com.commercetools.api.models.common.CreatedBy> builder) {
+    
+    public ProductBuilder withCreatedBy(Function<com.commercetools.api.models.common.CreatedByBuilder, com.commercetools.api.models.common.CreatedBy> builder) {
         this.createdBy = builder.apply(com.commercetools.api.models.common.CreatedByBuilder.of());
         return this;
     }
-
+                    
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      * @param createdBy value to be set
      * @return Builder
      */
-
+    
     public ProductBuilder createdBy(@Nullable final com.commercetools.api.models.common.CreatedBy createdBy) {
         this.createdBy = createdBy;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>User-defined unique identifier of the Product.</p>
      *  <p>This is different from the <code>key</code> of a ProductVariant.</p>
      * @param key value to be set
      * @return Builder
      */
-
+    
     public ProductBuilder key(@Nullable final String key) {
         this.key = key;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>The Product Type defining the Attributes of the Product. Cannot be changed.</p>
      * @param builder function to build the productType value
      * @return Builder
      */
-
-    public ProductBuilder productType(
-            Function<com.commercetools.api.models.product_type.ProductTypeReferenceBuilder, com.commercetools.api.models.product_type.ProductTypeReferenceBuilder> builder) {
-        this.productType = builder.apply(com.commercetools.api.models.product_type.ProductTypeReferenceBuilder.of())
-                .build();
+    
+    public ProductBuilder productType(Function<com.commercetools.api.models.product_type.ProductTypeReferenceBuilder, com.commercetools.api.models.product_type.ProductTypeReferenceBuilder> builder) {
+        this.productType = builder.apply(com.commercetools.api.models.product_type.ProductTypeReferenceBuilder.of()).build();
         return this;
     }
-
+    
     /**
      *  <p>The Product Type defining the Attributes of the Product. Cannot be changed.</p>
      * @param builder function to build the productType value
      * @return Builder
      */
-
-    public ProductBuilder withProductType(
-            Function<com.commercetools.api.models.product_type.ProductTypeReferenceBuilder, com.commercetools.api.models.product_type.ProductTypeReference> builder) {
+    
+    public ProductBuilder withProductType(Function<com.commercetools.api.models.product_type.ProductTypeReferenceBuilder, com.commercetools.api.models.product_type.ProductTypeReference> builder) {
         this.productType = builder.apply(com.commercetools.api.models.product_type.ProductTypeReferenceBuilder.of());
         return this;
     }
-
+                    
     /**
      *  <p>The Product Type defining the Attributes of the Product. Cannot be changed.</p>
      * @param productType value to be set
      * @return Builder
      */
-
-    public ProductBuilder productType(
-            final com.commercetools.api.models.product_type.ProductTypeReference productType) {
+    
+    public ProductBuilder productType( final com.commercetools.api.models.product_type.ProductTypeReference productType) {
         this.productType = productType;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Contains the current and the staged representation of the product information.</p>
      * @param builder function to build the masterData value
      * @return Builder
      */
-
-    public ProductBuilder masterData(
-            Function<com.commercetools.api.models.product.ProductCatalogDataBuilder, com.commercetools.api.models.product.ProductCatalogDataBuilder> builder) {
+    
+    public ProductBuilder masterData(Function<com.commercetools.api.models.product.ProductCatalogDataBuilder, com.commercetools.api.models.product.ProductCatalogDataBuilder> builder) {
         this.masterData = builder.apply(com.commercetools.api.models.product.ProductCatalogDataBuilder.of()).build();
         return this;
     }
-
+    
     /**
      *  <p>Contains the current and the staged representation of the product information.</p>
      * @param builder function to build the masterData value
      * @return Builder
      */
-
-    public ProductBuilder withMasterData(
-            Function<com.commercetools.api.models.product.ProductCatalogDataBuilder, com.commercetools.api.models.product.ProductCatalogData> builder) {
+    
+    public ProductBuilder withMasterData(Function<com.commercetools.api.models.product.ProductCatalogDataBuilder, com.commercetools.api.models.product.ProductCatalogData> builder) {
         this.masterData = builder.apply(com.commercetools.api.models.product.ProductCatalogDataBuilder.of());
         return this;
     }
-
+                    
     /**
      *  <p>Contains the current and the staged representation of the product information.</p>
      * @param masterData value to be set
      * @return Builder
      */
-
-    public ProductBuilder masterData(final com.commercetools.api.models.product.ProductCatalogData masterData) {
+    
+    public ProductBuilder masterData( final com.commercetools.api.models.product.ProductCatalogData masterData) {
         this.masterData = masterData;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>The TaxCategory of the Product.</p>
      * @param builder function to build the taxCategory value
      * @return Builder
      */
-
-    public ProductBuilder taxCategory(
-            Function<com.commercetools.api.models.tax_category.TaxCategoryReferenceBuilder, com.commercetools.api.models.tax_category.TaxCategoryReferenceBuilder> builder) {
-        this.taxCategory = builder.apply(com.commercetools.api.models.tax_category.TaxCategoryReferenceBuilder.of())
-                .build();
+    
+    public ProductBuilder taxCategory(Function<com.commercetools.api.models.tax_category.TaxCategoryReferenceBuilder, com.commercetools.api.models.tax_category.TaxCategoryReferenceBuilder> builder) {
+        this.taxCategory = builder.apply(com.commercetools.api.models.tax_category.TaxCategoryReferenceBuilder.of()).build();
         return this;
     }
-
+    
     /**
      *  <p>The TaxCategory of the Product.</p>
      * @param builder function to build the taxCategory value
      * @return Builder
      */
-
-    public ProductBuilder withTaxCategory(
-            Function<com.commercetools.api.models.tax_category.TaxCategoryReferenceBuilder, com.commercetools.api.models.tax_category.TaxCategoryReference> builder) {
+    
+    public ProductBuilder withTaxCategory(Function<com.commercetools.api.models.tax_category.TaxCategoryReferenceBuilder, com.commercetools.api.models.tax_category.TaxCategoryReference> builder) {
         this.taxCategory = builder.apply(com.commercetools.api.models.tax_category.TaxCategoryReferenceBuilder.of());
         return this;
     }
-
+                    
     /**
      *  <p>The TaxCategory of the Product.</p>
      * @param taxCategory value to be set
      * @return Builder
      */
-
-    public ProductBuilder taxCategory(
-            @Nullable final com.commercetools.api.models.tax_category.TaxCategoryReference taxCategory) {
+    
+    public ProductBuilder taxCategory(@Nullable final com.commercetools.api.models.tax_category.TaxCategoryReference taxCategory) {
         this.taxCategory = taxCategory;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>State of the Product.</p>
      * @param builder function to build the state value
      * @return Builder
      */
-
-    public ProductBuilder state(
-            Function<com.commercetools.api.models.state.StateReferenceBuilder, com.commercetools.api.models.state.StateReferenceBuilder> builder) {
+    
+    public ProductBuilder state(Function<com.commercetools.api.models.state.StateReferenceBuilder, com.commercetools.api.models.state.StateReferenceBuilder> builder) {
         this.state = builder.apply(com.commercetools.api.models.state.StateReferenceBuilder.of()).build();
         return this;
     }
-
+    
     /**
      *  <p>State of the Product.</p>
      * @param builder function to build the state value
      * @return Builder
      */
-
-    public ProductBuilder withState(
-            Function<com.commercetools.api.models.state.StateReferenceBuilder, com.commercetools.api.models.state.StateReference> builder) {
+    
+    public ProductBuilder withState(Function<com.commercetools.api.models.state.StateReferenceBuilder, com.commercetools.api.models.state.StateReference> builder) {
         this.state = builder.apply(com.commercetools.api.models.state.StateReferenceBuilder.of());
         return this;
     }
-
+                    
     /**
      *  <p>State of the Product.</p>
      * @param state value to be set
      * @return Builder
      */
-
+    
     public ProductBuilder state(@Nullable final com.commercetools.api.models.state.StateReference state) {
         this.state = state;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Review statistics of the Product.</p>
      * @param builder function to build the reviewRatingStatistics value
      * @return Builder
      */
-
-    public ProductBuilder reviewRatingStatistics(
-            Function<com.commercetools.api.models.review.ReviewRatingStatisticsBuilder, com.commercetools.api.models.review.ReviewRatingStatisticsBuilder> builder) {
-        this.reviewRatingStatistics = builder
-                .apply(com.commercetools.api.models.review.ReviewRatingStatisticsBuilder.of())
-                .build();
+    
+    public ProductBuilder reviewRatingStatistics(Function<com.commercetools.api.models.review.ReviewRatingStatisticsBuilder, com.commercetools.api.models.review.ReviewRatingStatisticsBuilder> builder) {
+        this.reviewRatingStatistics = builder.apply(com.commercetools.api.models.review.ReviewRatingStatisticsBuilder.of()).build();
         return this;
     }
-
+    
     /**
      *  <p>Review statistics of the Product.</p>
      * @param builder function to build the reviewRatingStatistics value
      * @return Builder
      */
-
-    public ProductBuilder withReviewRatingStatistics(
-            Function<com.commercetools.api.models.review.ReviewRatingStatisticsBuilder, com.commercetools.api.models.review.ReviewRatingStatistics> builder) {
-        this.reviewRatingStatistics = builder
-                .apply(com.commercetools.api.models.review.ReviewRatingStatisticsBuilder.of());
+    
+    public ProductBuilder withReviewRatingStatistics(Function<com.commercetools.api.models.review.ReviewRatingStatisticsBuilder, com.commercetools.api.models.review.ReviewRatingStatistics> builder) {
+        this.reviewRatingStatistics = builder.apply(com.commercetools.api.models.review.ReviewRatingStatisticsBuilder.of());
         return this;
     }
-
+                    
     /**
      *  <p>Review statistics of the Product.</p>
      * @param reviewRatingStatistics value to be set
      * @return Builder
      */
-
-    public ProductBuilder reviewRatingStatistics(
-            @Nullable final com.commercetools.api.models.review.ReviewRatingStatistics reviewRatingStatistics) {
+    
+    public ProductBuilder reviewRatingStatistics(@Nullable final com.commercetools.api.models.review.ReviewRatingStatistics reviewRatingStatistics) {
         this.reviewRatingStatistics = reviewRatingStatistics;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Type of Price to be used when looking up a price for the Product.</p>
      * @param priceMode value to be set
      * @return Builder
      */
-
-    public ProductBuilder priceMode(
-            @Nullable final com.commercetools.api.models.product.ProductPriceModeEnum priceMode) {
+    
+    public ProductBuilder priceMode(@Nullable final com.commercetools.api.models.product.ProductPriceModeEnum priceMode) {
         this.priceMode = priceMode;
         return this;
     }
+    
+    
 
     /**
      *  <p>Unique identifier of the Product.</p>
      * @return id
      */
-
-    public String getId() {
+    
+    
+    public String getId(){
         return this.id;
     }
-
+    
     /**
      *  <p>Current version of the Product.</p>
      * @return version
      */
-
-    public Long getVersion() {
+    
+    
+    public Long getVersion(){
         return this.version;
     }
-
+    
     /**
      *  <p>Date and time (UTC) the Product was initially created.</p>
      * @return createdAt
      */
-
-    public java.time.ZonedDateTime getCreatedAt() {
+    
+    
+    public java.time.ZonedDateTime getCreatedAt(){
         return this.createdAt;
     }
-
+    
     /**
      *  <p>Date and time (UTC) the Product was last updated.</p>
      * @return lastModifiedAt
      */
-
-    public java.time.ZonedDateTime getLastModifiedAt() {
+    
+    
+    public java.time.ZonedDateTime getLastModifiedAt(){
         return this.lastModifiedAt;
     }
-
+    
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      * @return lastModifiedBy
      */
-
+    
     @Nullable
-    public com.commercetools.api.models.common.LastModifiedBy getLastModifiedBy() {
+    public com.commercetools.api.models.common.LastModifiedBy getLastModifiedBy(){
         return this.lastModifiedBy;
     }
-
+    
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      * @return createdBy
      */
-
+    
     @Nullable
-    public com.commercetools.api.models.common.CreatedBy getCreatedBy() {
+    public com.commercetools.api.models.common.CreatedBy getCreatedBy(){
         return this.createdBy;
     }
-
+    
     /**
      *  <p>User-defined unique identifier of the Product.</p>
      *  <p>This is different from the <code>key</code> of a ProductVariant.</p>
      * @return key
      */
-
+    
     @Nullable
-    public String getKey() {
+    public String getKey(){
         return this.key;
     }
-
+    
     /**
      *  <p>The Product Type defining the Attributes of the Product. Cannot be changed.</p>
      * @return productType
      */
-
-    public com.commercetools.api.models.product_type.ProductTypeReference getProductType() {
+    
+    
+    public com.commercetools.api.models.product_type.ProductTypeReference getProductType(){
         return this.productType;
     }
-
+    
     /**
      *  <p>Contains the current and the staged representation of the product information.</p>
      * @return masterData
      */
-
-    public com.commercetools.api.models.product.ProductCatalogData getMasterData() {
+    
+    
+    public com.commercetools.api.models.product.ProductCatalogData getMasterData(){
         return this.masterData;
     }
-
+    
     /**
      *  <p>The TaxCategory of the Product.</p>
      * @return taxCategory
      */
-
+    
     @Nullable
-    public com.commercetools.api.models.tax_category.TaxCategoryReference getTaxCategory() {
+    public com.commercetools.api.models.tax_category.TaxCategoryReference getTaxCategory(){
         return this.taxCategory;
     }
-
+    
     /**
      *  <p>State of the Product.</p>
      * @return state
      */
-
+    
     @Nullable
-    public com.commercetools.api.models.state.StateReference getState() {
+    public com.commercetools.api.models.state.StateReference getState(){
         return this.state;
     }
-
+    
     /**
      *  <p>Review statistics of the Product.</p>
      * @return reviewRatingStatistics
      */
-
+    
     @Nullable
-    public com.commercetools.api.models.review.ReviewRatingStatistics getReviewRatingStatistics() {
+    public com.commercetools.api.models.review.ReviewRatingStatistics getReviewRatingStatistics(){
         return this.reviewRatingStatistics;
     }
-
+    
     /**
      *  <p>Type of Price to be used when looking up a price for the Product.</p>
      * @return priceMode
      */
-
+    
     @Nullable
-    public com.commercetools.api.models.product.ProductPriceModeEnum getPriceMode() {
+    public com.commercetools.api.models.product.ProductPriceModeEnum getPriceMode(){
         return this.priceMode;
     }
 
@@ -520,22 +572,20 @@ public class ProductBuilder implements Builder<Product> {
         Objects.requireNonNull(lastModifiedAt, Product.class + ": lastModifiedAt is missing");
         Objects.requireNonNull(productType, Product.class + ": productType is missing");
         Objects.requireNonNull(masterData, Product.class + ": masterData is missing");
-        return new ProductImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, key, productType,
-            masterData, taxCategory, state, reviewRatingStatistics, priceMode);
+        return new ProductImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, key, productType, masterData, taxCategory, state, reviewRatingStatistics, priceMode);
     }
-
+    
     /**
      * builds Product without checking for non-null required values
      * @return Product
      */
     public Product buildUnchecked() {
-        return new ProductImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, key, productType,
-            masterData, taxCategory, state, reviewRatingStatistics, priceMode);
+        return new ProductImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, key, productType, masterData, taxCategory, state, reviewRatingStatistics, priceMode);
     }
 
     /**
      * factory method for an instance of ProductBuilder
-     * @return builder
+     * @return builder 
      */
     public static ProductBuilder of() {
         return new ProductBuilder();

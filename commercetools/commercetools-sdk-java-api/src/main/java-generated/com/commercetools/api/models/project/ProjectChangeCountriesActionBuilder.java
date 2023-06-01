@@ -1,8 +1,11 @@
-
 package com.commercetools.api.models.project;
 
+import com.commercetools.api.models.project.ProjectUpdateAction;
+import com.commercetools.api.models.project.ProjectChangeCountriesAction;
+import javax.annotation.Nullable;
 import java.util.*;
-
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -16,11 +19,16 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .plusCountries(countriesBuilder -> countriesBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class ProjectChangeCountriesActionBuilder implements Builder<ProjectChangeCountriesAction> {
 
+    
+    
     private java.util.List<String> countries;
 
     /**
@@ -28,43 +36,47 @@ public class ProjectChangeCountriesActionBuilder implements Builder<ProjectChang
      * @param countries value to be set
      * @return Builder
      */
-
-    public ProjectChangeCountriesActionBuilder countries(final String... countries) {
+    
+    public ProjectChangeCountriesActionBuilder countries( final String ...countries) {
         this.countries = new ArrayList<>(Arrays.asList(countries));
         return this;
     }
-
+    
     /**
      *  <p>New value to set. Must not be empty.</p>
      * @param countries value to be set
      * @return Builder
      */
-
-    public ProjectChangeCountriesActionBuilder countries(final java.util.List<String> countries) {
+    
+    public ProjectChangeCountriesActionBuilder countries( final java.util.List<String> countries) {
         this.countries = countries;
         return this;
     }
-
+    
     /**
      *  <p>New value to set. Must not be empty.</p>
      * @param countries value to be set
      * @return Builder
      */
-
-    public ProjectChangeCountriesActionBuilder plusCountries(final String... countries) {
+    
+    public ProjectChangeCountriesActionBuilder plusCountries( final String ...countries) {
         if (this.countries == null) {
             this.countries = new ArrayList<>();
         }
         this.countries.addAll(Arrays.asList(countries));
         return this;
     }
+    
+    
+    
 
     /**
      *  <p>New value to set. Must not be empty.</p>
      * @return countries
      */
-
-    public java.util.List<String> getCountries() {
+    
+    
+    public java.util.List<String> getCountries(){
         return this.countries;
     }
 
@@ -76,7 +88,7 @@ public class ProjectChangeCountriesActionBuilder implements Builder<ProjectChang
         Objects.requireNonNull(countries, ProjectChangeCountriesAction.class + ": countries is missing");
         return new ProjectChangeCountriesActionImpl(countries);
     }
-
+    
     /**
      * builds ProjectChangeCountriesAction without checking for non-null required values
      * @return ProjectChangeCountriesAction
@@ -87,7 +99,7 @@ public class ProjectChangeCountriesActionBuilder implements Builder<ProjectChang
 
     /**
      * factory method for an instance of ProjectChangeCountriesActionBuilder
-     * @return builder
+     * @return builder 
      */
     public static ProjectChangeCountriesActionBuilder of() {
         return new ProjectChangeCountriesActionBuilder();

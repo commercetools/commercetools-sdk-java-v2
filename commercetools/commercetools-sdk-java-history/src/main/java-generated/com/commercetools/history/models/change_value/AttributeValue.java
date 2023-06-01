@@ -1,17 +1,20 @@
-
 package com.commercetools.history.models.change_value;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
+import java.lang.Object;
+import com.commercetools.history.models.change_value.AttributeValueImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * AttributeValue
@@ -24,11 +27,15 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .name("{name}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = AttributeValueImpl.class)
-public interface AttributeValue {
+public interface AttributeValue  {
+
 
     /**
      *
@@ -37,7 +44,6 @@ public interface AttributeValue {
     @NotNull
     @JsonProperty("name")
     public String getName();
-
     /**
      *
      * @return value
@@ -50,23 +56,26 @@ public interface AttributeValue {
      * set name
      * @param name value to be set
      */
-
+    
     public void setName(final String name);
-
+    
+    
     /**
      * set value
      * @param value value to be set
      */
-
+    
     public void setValue(final Object value);
+    
 
     /**
      * factory method
      * @return instance of AttributeValue
      */
-    public static AttributeValue of() {
+    public static AttributeValue of(){
         return new AttributeValueImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy AttributeValue
@@ -103,7 +112,7 @@ public interface AttributeValue {
     public static AttributeValueBuilder builder() {
         return AttributeValueBuilder.of();
     }
-
+    
     /**
      * create builder for AttributeValue instance
      * @param template instance with prefilled values for the builder
@@ -112,6 +121,7 @@ public interface AttributeValue {
     public static AttributeValueBuilder builder(final AttributeValue template) {
         return AttributeValueBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -122,7 +132,7 @@ public interface AttributeValue {
     default <T> T withAttributeValue(Function<AttributeValue, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

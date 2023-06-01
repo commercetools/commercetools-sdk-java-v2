@@ -1,19 +1,21 @@
-
 package com.commercetools.api.models.cart;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
+import com.commercetools.api.models.cart.CartUpdateAction;
 import com.commercetools.api.models.channel.ChannelResourceIdentifier;
+import com.commercetools.api.models.cart.CartSetLineItemSupplyChannelActionImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Performing this action has no impact on inventory that should be reserved.</p>
@@ -26,9 +28,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .lineItemId("{lineItemId}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = CartSetLineItemSupplyChannelActionImpl.class)
 public interface CartSetLineItemSupplyChannelAction extends CartUpdateAction {
 
@@ -44,7 +49,6 @@ public interface CartSetLineItemSupplyChannelAction extends CartUpdateAction {
     @NotNull
     @JsonProperty("lineItemId")
     public String getLineItemId();
-
     /**
      *  <ul>
      *   <li>If present, a Reference to the Channel is set for the LineItem specified by <code>lineItemId</code>.</li>
@@ -60,9 +64,10 @@ public interface CartSetLineItemSupplyChannelAction extends CartUpdateAction {
      *  <p><code>id</code> of the LineItem to update.</p>
      * @param lineItemId value to be set
      */
-
+    
     public void setLineItemId(final String lineItemId);
-
+    
+    
     /**
      *  <ul>
      *   <li>If present, a Reference to the Channel is set for the LineItem specified by <code>lineItemId</code>.</li>
@@ -70,16 +75,18 @@ public interface CartSetLineItemSupplyChannelAction extends CartUpdateAction {
      *  </ul>
      * @param supplyChannel value to be set
      */
-
+    
     public void setSupplyChannel(final ChannelResourceIdentifier supplyChannel);
+    
 
     /**
      * factory method
      * @return instance of CartSetLineItemSupplyChannelAction
      */
-    public static CartSetLineItemSupplyChannelAction of() {
+    public static CartSetLineItemSupplyChannelAction of(){
         return new CartSetLineItemSupplyChannelActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy CartSetLineItemSupplyChannelAction
@@ -99,15 +106,13 @@ public interface CartSetLineItemSupplyChannelAction extends CartUpdateAction {
      * @return copy instance
      */
     @Nullable
-    public static CartSetLineItemSupplyChannelAction deepCopy(
-            @Nullable final CartSetLineItemSupplyChannelAction template) {
+    public static CartSetLineItemSupplyChannelAction deepCopy(@Nullable final CartSetLineItemSupplyChannelAction template) {
         if (template == null) {
             return null;
         }
         CartSetLineItemSupplyChannelActionImpl instance = new CartSetLineItemSupplyChannelActionImpl();
         instance.setLineItemId(template.getLineItemId());
-        instance.setSupplyChannel(
-            com.commercetools.api.models.channel.ChannelResourceIdentifier.deepCopy(template.getSupplyChannel()));
+        instance.setSupplyChannel(com.commercetools.api.models.channel.ChannelResourceIdentifier.deepCopy(template.getSupplyChannel()));
         return instance;
     }
 
@@ -118,7 +123,7 @@ public interface CartSetLineItemSupplyChannelAction extends CartUpdateAction {
     public static CartSetLineItemSupplyChannelActionBuilder builder() {
         return CartSetLineItemSupplyChannelActionBuilder.of();
     }
-
+    
     /**
      * create builder for CartSetLineItemSupplyChannelAction instance
      * @param template instance with prefilled values for the builder
@@ -127,6 +132,7 @@ public interface CartSetLineItemSupplyChannelAction extends CartUpdateAction {
     public static CartSetLineItemSupplyChannelActionBuilder builder(final CartSetLineItemSupplyChannelAction template) {
         return CartSetLineItemSupplyChannelActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -137,7 +143,7 @@ public interface CartSetLineItemSupplyChannelAction extends CartUpdateAction {
     default <T> T withCartSetLineItemSupplyChannelAction(Function<CartSetLineItemSupplyChannelAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

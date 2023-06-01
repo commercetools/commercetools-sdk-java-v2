@@ -1,18 +1,21 @@
-
 package com.commercetools.api.models.message;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
-
+import com.commercetools.api.models.message.OrderMessagePayload;
 import com.commercetools.api.models.order.ReturnShipmentState;
+import com.commercetools.api.models.message.OrderReturnShipmentStateChangedMessagePayloadImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Generated after a successful Set Return Shipment State update action.</p>
@@ -26,9 +29,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .returnShipmentState(ReturnShipmentState.ADVISED)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = OrderReturnShipmentStateChangedMessagePayloadImpl.class)
 public interface OrderReturnShipmentStateChangedMessagePayload extends OrderMessagePayload {
 
@@ -44,7 +50,6 @@ public interface OrderReturnShipmentStateChangedMessagePayload extends OrderMess
     @NotNull
     @JsonProperty("returnItemId")
     public String getReturnItemId();
-
     /**
      *  <p>State of the ReturnItem after the Set Return Shipment State update action.</p>
      * @return returnShipmentState
@@ -57,31 +62,33 @@ public interface OrderReturnShipmentStateChangedMessagePayload extends OrderMess
      *  <p>Unique identifier of the ReturnItem.</p>
      * @param returnItemId value to be set
      */
-
+    
     public void setReturnItemId(final String returnItemId);
-
+    
+    
     /**
      *  <p>State of the ReturnItem after the Set Return Shipment State update action.</p>
      * @param returnShipmentState value to be set
      */
-
+    
     public void setReturnShipmentState(final ReturnShipmentState returnShipmentState);
+    
 
     /**
      * factory method
      * @return instance of OrderReturnShipmentStateChangedMessagePayload
      */
-    public static OrderReturnShipmentStateChangedMessagePayload of() {
+    public static OrderReturnShipmentStateChangedMessagePayload of(){
         return new OrderReturnShipmentStateChangedMessagePayloadImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy OrderReturnShipmentStateChangedMessagePayload
      * @param template instance to be copied
      * @return copy instance
      */
-    public static OrderReturnShipmentStateChangedMessagePayload of(
-            final OrderReturnShipmentStateChangedMessagePayload template) {
+    public static OrderReturnShipmentStateChangedMessagePayload of(final OrderReturnShipmentStateChangedMessagePayload template) {
         OrderReturnShipmentStateChangedMessagePayloadImpl instance = new OrderReturnShipmentStateChangedMessagePayloadImpl();
         instance.setReturnItemId(template.getReturnItemId());
         instance.setReturnShipmentState(template.getReturnShipmentState());
@@ -94,8 +101,7 @@ public interface OrderReturnShipmentStateChangedMessagePayload extends OrderMess
      * @return copy instance
      */
     @Nullable
-    public static OrderReturnShipmentStateChangedMessagePayload deepCopy(
-            @Nullable final OrderReturnShipmentStateChangedMessagePayload template) {
+    public static OrderReturnShipmentStateChangedMessagePayload deepCopy(@Nullable final OrderReturnShipmentStateChangedMessagePayload template) {
         if (template == null) {
             return null;
         }
@@ -112,16 +118,16 @@ public interface OrderReturnShipmentStateChangedMessagePayload extends OrderMess
     public static OrderReturnShipmentStateChangedMessagePayloadBuilder builder() {
         return OrderReturnShipmentStateChangedMessagePayloadBuilder.of();
     }
-
+    
     /**
      * create builder for OrderReturnShipmentStateChangedMessagePayload instance
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static OrderReturnShipmentStateChangedMessagePayloadBuilder builder(
-            final OrderReturnShipmentStateChangedMessagePayload template) {
+    public static OrderReturnShipmentStateChangedMessagePayloadBuilder builder(final OrderReturnShipmentStateChangedMessagePayload template) {
         return OrderReturnShipmentStateChangedMessagePayloadBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -129,11 +135,10 @@ public interface OrderReturnShipmentStateChangedMessagePayload extends OrderMess
      * @param helper function to map the object
      * @return mapped value
      */
-    default <T> T withOrderReturnShipmentStateChangedMessagePayload(
-            Function<OrderReturnShipmentStateChangedMessagePayload, T> helper) {
+    default <T> T withOrderReturnShipmentStateChangedMessagePayload(Function<OrderReturnShipmentStateChangedMessagePayload, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

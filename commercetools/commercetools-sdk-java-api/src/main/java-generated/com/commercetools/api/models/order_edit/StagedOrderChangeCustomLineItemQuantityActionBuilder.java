@@ -1,8 +1,11 @@
-
 package com.commercetools.api.models.order_edit;
 
+import com.commercetools.api.models.order.StagedOrderUpdateAction;
+import com.commercetools.api.models.order_edit.StagedOrderChangeCustomLineItemQuantityAction;
+import javax.annotation.Nullable;
 import java.util.*;
-
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -17,53 +20,67 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .quantity(0.3)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
-public class StagedOrderChangeCustomLineItemQuantityActionBuilder
-        implements Builder<StagedOrderChangeCustomLineItemQuantityAction> {
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
+public class StagedOrderChangeCustomLineItemQuantityActionBuilder implements Builder<StagedOrderChangeCustomLineItemQuantityAction> {
 
+    
+    
     private String customLineItemId;
-
+    
+    
+    
     private Long quantity;
 
+    
     /**
      * set the value to the customLineItemId
      * @param customLineItemId value to be set
      * @return Builder
      */
-
-    public StagedOrderChangeCustomLineItemQuantityActionBuilder customLineItemId(final String customLineItemId) {
+    
+    public StagedOrderChangeCustomLineItemQuantityActionBuilder customLineItemId( final String customLineItemId) {
         this.customLineItemId = customLineItemId;
         return this;
     }
-
+    
+    
+    
+    
     /**
      * set the value to the quantity
      * @param quantity value to be set
      * @return Builder
      */
-
-    public StagedOrderChangeCustomLineItemQuantityActionBuilder quantity(final Long quantity) {
+    
+    public StagedOrderChangeCustomLineItemQuantityActionBuilder quantity( final Long quantity) {
         this.quantity = quantity;
         return this;
     }
+    
+    
 
     /**
      * value of customLineItemId}
      * @return customLineItemId
      */
-
-    public String getCustomLineItemId() {
+    
+    
+    public String getCustomLineItemId(){
         return this.customLineItemId;
     }
-
+    
     /**
      * value of quantity}
      * @return quantity
      */
-
-    public Long getQuantity() {
+    
+    
+    public Long getQuantity(){
         return this.quantity;
     }
 
@@ -72,12 +89,11 @@ public class StagedOrderChangeCustomLineItemQuantityActionBuilder
      * @return StagedOrderChangeCustomLineItemQuantityAction
      */
     public StagedOrderChangeCustomLineItemQuantityAction build() {
-        Objects.requireNonNull(customLineItemId,
-            StagedOrderChangeCustomLineItemQuantityAction.class + ": customLineItemId is missing");
+        Objects.requireNonNull(customLineItemId, StagedOrderChangeCustomLineItemQuantityAction.class + ": customLineItemId is missing");
         Objects.requireNonNull(quantity, StagedOrderChangeCustomLineItemQuantityAction.class + ": quantity is missing");
         return new StagedOrderChangeCustomLineItemQuantityActionImpl(customLineItemId, quantity);
     }
-
+    
     /**
      * builds StagedOrderChangeCustomLineItemQuantityAction without checking for non-null required values
      * @return StagedOrderChangeCustomLineItemQuantityAction
@@ -88,7 +104,7 @@ public class StagedOrderChangeCustomLineItemQuantityActionBuilder
 
     /**
      * factory method for an instance of StagedOrderChangeCustomLineItemQuantityActionBuilder
-     * @return builder
+     * @return builder 
      */
     public static StagedOrderChangeCustomLineItemQuantityActionBuilder of() {
         return new StagedOrderChangeCustomLineItemQuantityActionBuilder();
@@ -99,8 +115,7 @@ public class StagedOrderChangeCustomLineItemQuantityActionBuilder
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static StagedOrderChangeCustomLineItemQuantityActionBuilder of(
-            final StagedOrderChangeCustomLineItemQuantityAction template) {
+    public static StagedOrderChangeCustomLineItemQuantityActionBuilder of(final StagedOrderChangeCustomLineItemQuantityAction template) {
         StagedOrderChangeCustomLineItemQuantityActionBuilder builder = new StagedOrderChangeCustomLineItemQuantityActionBuilder();
         builder.customLineItemId = template.getCustomLineItemId();
         builder.quantity = template.getQuantity();

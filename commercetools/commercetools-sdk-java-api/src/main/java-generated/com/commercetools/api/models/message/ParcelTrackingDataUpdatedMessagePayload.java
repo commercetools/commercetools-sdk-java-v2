@@ -1,19 +1,21 @@
-
 package com.commercetools.api.models.message;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
+import com.commercetools.api.models.message.OrderMessagePayload;
 import com.commercetools.api.models.order.TrackingData;
+import com.commercetools.api.models.message.ParcelTrackingDataUpdatedMessagePayloadImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Generated after a successful Set Parcel TrackingData update action.</p>
@@ -27,9 +29,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .parcelId("{parcelId}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = ParcelTrackingDataUpdatedMessagePayloadImpl.class)
 public interface ParcelTrackingDataUpdatedMessagePayload extends OrderMessagePayload {
 
@@ -45,7 +50,6 @@ public interface ParcelTrackingDataUpdatedMessagePayload extends OrderMessagePay
     @NotNull
     @JsonProperty("deliveryId")
     public String getDeliveryId();
-
     /**
      *  <p>Unique identifier of the Parcel.</p>
      * @return parcelId
@@ -53,7 +57,6 @@ public interface ParcelTrackingDataUpdatedMessagePayload extends OrderMessagePay
     @NotNull
     @JsonProperty("parcelId")
     public String getParcelId();
-
     /**
      *  <p>The Tracking Data that was added to the Parcel.</p>
      * @return trackingData
@@ -61,12 +64,11 @@ public interface ParcelTrackingDataUpdatedMessagePayload extends OrderMessagePay
     @Valid
     @JsonProperty("trackingData")
     public TrackingData getTrackingData();
-
     /**
      *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multi</code> ShippingMode.</p>
      * @return shippingKey
      */
-
+    
     @JsonProperty("shippingKey")
     public String getShippingKey();
 
@@ -74,37 +76,42 @@ public interface ParcelTrackingDataUpdatedMessagePayload extends OrderMessagePay
      *  <p>Unique identifier of the Delivery.</p>
      * @param deliveryId value to be set
      */
-
+    
     public void setDeliveryId(final String deliveryId);
-
+    
+    
     /**
      *  <p>Unique identifier of the Parcel.</p>
      * @param parcelId value to be set
      */
-
+    
     public void setParcelId(final String parcelId);
-
+    
+    
     /**
      *  <p>The Tracking Data that was added to the Parcel.</p>
      * @param trackingData value to be set
      */
-
+    
     public void setTrackingData(final TrackingData trackingData);
-
+    
+    
     /**
      *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multi</code> ShippingMode.</p>
      * @param shippingKey value to be set
      */
-
+    
     public void setShippingKey(final String shippingKey);
+    
 
     /**
      * factory method
      * @return instance of ParcelTrackingDataUpdatedMessagePayload
      */
-    public static ParcelTrackingDataUpdatedMessagePayload of() {
+    public static ParcelTrackingDataUpdatedMessagePayload of(){
         return new ParcelTrackingDataUpdatedMessagePayloadImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy ParcelTrackingDataUpdatedMessagePayload
@@ -126,8 +133,7 @@ public interface ParcelTrackingDataUpdatedMessagePayload extends OrderMessagePay
      * @return copy instance
      */
     @Nullable
-    public static ParcelTrackingDataUpdatedMessagePayload deepCopy(
-            @Nullable final ParcelTrackingDataUpdatedMessagePayload template) {
+    public static ParcelTrackingDataUpdatedMessagePayload deepCopy(@Nullable final ParcelTrackingDataUpdatedMessagePayload template) {
         if (template == null) {
             return null;
         }
@@ -146,16 +152,16 @@ public interface ParcelTrackingDataUpdatedMessagePayload extends OrderMessagePay
     public static ParcelTrackingDataUpdatedMessagePayloadBuilder builder() {
         return ParcelTrackingDataUpdatedMessagePayloadBuilder.of();
     }
-
+    
     /**
      * create builder for ParcelTrackingDataUpdatedMessagePayload instance
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static ParcelTrackingDataUpdatedMessagePayloadBuilder builder(
-            final ParcelTrackingDataUpdatedMessagePayload template) {
+    public static ParcelTrackingDataUpdatedMessagePayloadBuilder builder(final ParcelTrackingDataUpdatedMessagePayload template) {
         return ParcelTrackingDataUpdatedMessagePayloadBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -163,11 +169,10 @@ public interface ParcelTrackingDataUpdatedMessagePayload extends OrderMessagePay
      * @param helper function to map the object
      * @return mapped value
      */
-    default <T> T withParcelTrackingDataUpdatedMessagePayload(
-            Function<ParcelTrackingDataUpdatedMessagePayload, T> helper) {
+    default <T> T withParcelTrackingDataUpdatedMessagePayload(Function<ParcelTrackingDataUpdatedMessagePayload, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

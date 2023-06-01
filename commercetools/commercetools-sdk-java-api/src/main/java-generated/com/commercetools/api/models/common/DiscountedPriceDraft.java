@@ -1,19 +1,21 @@
-
 package com.commercetools.api.models.common;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
+import com.commercetools.api.models.common.Money;
 import com.commercetools.api.models.product_discount.ProductDiscountReference;
+import com.commercetools.api.models.common.DiscountedPriceDraftImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * DiscountedPriceDraft
@@ -27,11 +29,15 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .discount(discountBuilder -> discountBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = DiscountedPriceDraftImpl.class)
 public interface DiscountedPriceDraft extends io.vrap.rmf.base.client.Draft<DiscountedPriceDraft> {
+
 
     /**
      *  <p>Sets the money value for the discounted price.</p>
@@ -41,7 +47,6 @@ public interface DiscountedPriceDraft extends io.vrap.rmf.base.client.Draft<Disc
     @Valid
     @JsonProperty("value")
     public Money getValue();
-
     /**
      *  <p>Relates the referenced ProductDiscount to the discounted price.</p>
      * @return discount
@@ -55,23 +60,26 @@ public interface DiscountedPriceDraft extends io.vrap.rmf.base.client.Draft<Disc
      *  <p>Sets the money value for the discounted price.</p>
      * @param value value to be set
      */
-
+    
     public void setValue(final Money value);
-
+    
+    
     /**
      *  <p>Relates the referenced ProductDiscount to the discounted price.</p>
      * @param discount value to be set
      */
-
+    
     public void setDiscount(final ProductDiscountReference discount);
+    
 
     /**
      * factory method
      * @return instance of DiscountedPriceDraft
      */
-    public static DiscountedPriceDraft of() {
+    public static DiscountedPriceDraft of(){
         return new DiscountedPriceDraftImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy DiscountedPriceDraft
@@ -97,8 +105,7 @@ public interface DiscountedPriceDraft extends io.vrap.rmf.base.client.Draft<Disc
         }
         DiscountedPriceDraftImpl instance = new DiscountedPriceDraftImpl();
         instance.setValue(com.commercetools.api.models.common.Money.deepCopy(template.getValue()));
-        instance.setDiscount(
-            com.commercetools.api.models.product_discount.ProductDiscountReference.deepCopy(template.getDiscount()));
+        instance.setDiscount(com.commercetools.api.models.product_discount.ProductDiscountReference.deepCopy(template.getDiscount()));
         return instance;
     }
 
@@ -109,7 +116,7 @@ public interface DiscountedPriceDraft extends io.vrap.rmf.base.client.Draft<Disc
     public static DiscountedPriceDraftBuilder builder() {
         return DiscountedPriceDraftBuilder.of();
     }
-
+    
     /**
      * create builder for DiscountedPriceDraft instance
      * @param template instance with prefilled values for the builder
@@ -118,6 +125,7 @@ public interface DiscountedPriceDraft extends io.vrap.rmf.base.client.Draft<Disc
     public static DiscountedPriceDraftBuilder builder(final DiscountedPriceDraft template) {
         return DiscountedPriceDraftBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -128,7 +136,7 @@ public interface DiscountedPriceDraft extends io.vrap.rmf.base.client.Draft<Disc
     default <T> T withDiscountedPriceDraft(Function<DiscountedPriceDraft, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

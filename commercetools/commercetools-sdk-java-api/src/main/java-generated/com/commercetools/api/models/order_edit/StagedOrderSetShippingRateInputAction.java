@@ -1,19 +1,21 @@
-
 package com.commercetools.api.models.order_edit;
-
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
 
 import com.commercetools.api.models.cart.ShippingRateInputDraft;
 import com.commercetools.api.models.order.StagedOrderUpdateAction;
+import com.commercetools.api.models.order_edit.StagedOrderSetShippingRateInputActionImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * StagedOrderSetShippingRateInputAction
@@ -25,9 +27,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     StagedOrderSetShippingRateInputAction stagedOrderSetShippingRateInputAction = StagedOrderSetShippingRateInputAction.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = StagedOrderSetShippingRateInputActionImpl.class)
 public interface StagedOrderSetShippingRateInputAction extends StagedOrderUpdateAction {
 
@@ -48,16 +53,18 @@ public interface StagedOrderSetShippingRateInputAction extends StagedOrderUpdate
      *  <p>Generic type holding specifc ShippingRateInputDraft types.</p>
      * @param shippingRateInput value to be set
      */
-
+    
     public void setShippingRateInput(final ShippingRateInputDraft shippingRateInput);
+    
 
     /**
      * factory method
      * @return instance of StagedOrderSetShippingRateInputAction
      */
-    public static StagedOrderSetShippingRateInputAction of() {
+    public static StagedOrderSetShippingRateInputAction of(){
         return new StagedOrderSetShippingRateInputActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy StagedOrderSetShippingRateInputAction
@@ -76,14 +83,12 @@ public interface StagedOrderSetShippingRateInputAction extends StagedOrderUpdate
      * @return copy instance
      */
     @Nullable
-    public static StagedOrderSetShippingRateInputAction deepCopy(
-            @Nullable final StagedOrderSetShippingRateInputAction template) {
+    public static StagedOrderSetShippingRateInputAction deepCopy(@Nullable final StagedOrderSetShippingRateInputAction template) {
         if (template == null) {
             return null;
         }
         StagedOrderSetShippingRateInputActionImpl instance = new StagedOrderSetShippingRateInputActionImpl();
-        instance.setShippingRateInput(
-            com.commercetools.api.models.cart.ShippingRateInputDraft.deepCopy(template.getShippingRateInput()));
+        instance.setShippingRateInput(com.commercetools.api.models.cart.ShippingRateInputDraft.deepCopy(template.getShippingRateInput()));
         return instance;
     }
 
@@ -94,16 +99,16 @@ public interface StagedOrderSetShippingRateInputAction extends StagedOrderUpdate
     public static StagedOrderSetShippingRateInputActionBuilder builder() {
         return StagedOrderSetShippingRateInputActionBuilder.of();
     }
-
+    
     /**
      * create builder for StagedOrderSetShippingRateInputAction instance
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static StagedOrderSetShippingRateInputActionBuilder builder(
-            final StagedOrderSetShippingRateInputAction template) {
+    public static StagedOrderSetShippingRateInputActionBuilder builder(final StagedOrderSetShippingRateInputAction template) {
         return StagedOrderSetShippingRateInputActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -114,11 +119,11 @@ public interface StagedOrderSetShippingRateInputAction extends StagedOrderUpdate
     default <T> T withStagedOrderSetShippingRateInputAction(Function<StagedOrderSetShippingRateInputAction, T> helper) {
         return helper.apply(this);
     }
-
     public static StagedOrderSetShippingRateInputAction ofUnset() {
         return StagedOrderSetShippingRateInputAction.of();
     }
-
+    
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

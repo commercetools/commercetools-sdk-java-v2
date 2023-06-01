@@ -1,19 +1,21 @@
-
 package com.commercetools.api.models.attribute_group;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
+import com.commercetools.api.models.attribute_group.AttributeGroupUpdateAction;
 import com.commercetools.api.models.common.LocalizedString;
+import com.commercetools.api.models.attribute_group.AttributeGroupChangeNameActionImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * AttributeGroupChangeNameAction
@@ -26,9 +28,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .name(nameBuilder -> nameBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = AttributeGroupChangeNameActionImpl.class)
 public interface AttributeGroupChangeNameAction extends AttributeGroupUpdateAction {
 
@@ -50,16 +55,18 @@ public interface AttributeGroupChangeNameAction extends AttributeGroupUpdateActi
      *  <p>New value to set. Must not be empty.</p>
      * @param name value to be set
      */
-
+    
     public void setName(final LocalizedString name);
+    
 
     /**
      * factory method
      * @return instance of AttributeGroupChangeNameAction
      */
-    public static AttributeGroupChangeNameAction of() {
+    public static AttributeGroupChangeNameAction of(){
         return new AttributeGroupChangeNameActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy AttributeGroupChangeNameAction
@@ -94,7 +101,7 @@ public interface AttributeGroupChangeNameAction extends AttributeGroupUpdateActi
     public static AttributeGroupChangeNameActionBuilder builder() {
         return AttributeGroupChangeNameActionBuilder.of();
     }
-
+    
     /**
      * create builder for AttributeGroupChangeNameAction instance
      * @param template instance with prefilled values for the builder
@@ -103,6 +110,7 @@ public interface AttributeGroupChangeNameAction extends AttributeGroupUpdateActi
     public static AttributeGroupChangeNameActionBuilder builder(final AttributeGroupChangeNameAction template) {
         return AttributeGroupChangeNameActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -113,7 +121,7 @@ public interface AttributeGroupChangeNameAction extends AttributeGroupUpdateActi
     default <T> T withAttributeGroupChangeNameAction(Function<AttributeGroupChangeNameAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

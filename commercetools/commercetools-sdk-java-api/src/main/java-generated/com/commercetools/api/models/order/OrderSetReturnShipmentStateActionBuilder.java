@@ -1,8 +1,12 @@
-
 package com.commercetools.api.models.order;
 
+import com.commercetools.api.models.order.OrderUpdateAction;
+import com.commercetools.api.models.order.ReturnShipmentState;
+import com.commercetools.api.models.order.OrderSetReturnShipmentStateAction;
+import javax.annotation.Nullable;
 import java.util.*;
-
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -17,53 +21,67 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .shipmentState(ReturnShipmentState.ADVISED)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class OrderSetReturnShipmentStateActionBuilder implements Builder<OrderSetReturnShipmentStateAction> {
 
+    
+    
     private String returnItemId;
-
+    
+    
+    
     private com.commercetools.api.models.order.ReturnShipmentState shipmentState;
 
+    
     /**
      * set the value to the returnItemId
      * @param returnItemId value to be set
      * @return Builder
      */
-
-    public OrderSetReturnShipmentStateActionBuilder returnItemId(final String returnItemId) {
+    
+    public OrderSetReturnShipmentStateActionBuilder returnItemId( final String returnItemId) {
         this.returnItemId = returnItemId;
         return this;
     }
-
+    
+    
+    
+    
     /**
      * set the value to the shipmentState
      * @param shipmentState value to be set
      * @return Builder
      */
-
-    public OrderSetReturnShipmentStateActionBuilder shipmentState(
-            final com.commercetools.api.models.order.ReturnShipmentState shipmentState) {
+    
+    public OrderSetReturnShipmentStateActionBuilder shipmentState( final com.commercetools.api.models.order.ReturnShipmentState shipmentState) {
         this.shipmentState = shipmentState;
         return this;
     }
+    
+    
 
     /**
      * value of returnItemId}
      * @return returnItemId
      */
-
-    public String getReturnItemId() {
+    
+    
+    public String getReturnItemId(){
         return this.returnItemId;
     }
-
+    
     /**
      * value of shipmentState}
      * @return shipmentState
      */
-
-    public com.commercetools.api.models.order.ReturnShipmentState getShipmentState() {
+    
+    
+    public com.commercetools.api.models.order.ReturnShipmentState getShipmentState(){
         return this.shipmentState;
     }
 
@@ -76,7 +94,7 @@ public class OrderSetReturnShipmentStateActionBuilder implements Builder<OrderSe
         Objects.requireNonNull(shipmentState, OrderSetReturnShipmentStateAction.class + ": shipmentState is missing");
         return new OrderSetReturnShipmentStateActionImpl(returnItemId, shipmentState);
     }
-
+    
     /**
      * builds OrderSetReturnShipmentStateAction without checking for non-null required values
      * @return OrderSetReturnShipmentStateAction
@@ -87,7 +105,7 @@ public class OrderSetReturnShipmentStateActionBuilder implements Builder<OrderSe
 
     /**
      * factory method for an instance of OrderSetReturnShipmentStateActionBuilder
-     * @return builder
+     * @return builder 
      */
     public static OrderSetReturnShipmentStateActionBuilder of() {
         return new OrderSetReturnShipmentStateActionBuilder();

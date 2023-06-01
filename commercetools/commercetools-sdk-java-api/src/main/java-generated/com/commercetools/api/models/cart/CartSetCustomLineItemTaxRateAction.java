@@ -1,18 +1,21 @@
-
 package com.commercetools.api.models.cart;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
+import com.commercetools.api.models.cart.CartUpdateAction;
+import com.commercetools.api.models.cart.ExternalTaxRateDraft;
+import com.commercetools.api.models.cart.CartSetCustomLineItemTaxRateActionImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Can be used if the Cart has the <code>External</code> TaxMode.</p>
@@ -25,9 +28,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .customLineItemId("{customLineItemId}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = CartSetCustomLineItemTaxRateActionImpl.class)
 public interface CartSetCustomLineItemTaxRateAction extends CartUpdateAction {
 
@@ -43,7 +49,6 @@ public interface CartSetCustomLineItemTaxRateAction extends CartUpdateAction {
     @NotNull
     @JsonProperty("customLineItemId")
     public String getCustomLineItemId();
-
     /**
      *  <p>Value to set. If empty, an existing value is removed.</p>
      * @return externalTaxRate
@@ -56,23 +61,26 @@ public interface CartSetCustomLineItemTaxRateAction extends CartUpdateAction {
      *  <p><code>id</code> of the CustomLineItem to update.</p>
      * @param customLineItemId value to be set
      */
-
+    
     public void setCustomLineItemId(final String customLineItemId);
-
+    
+    
     /**
      *  <p>Value to set. If empty, an existing value is removed.</p>
      * @param externalTaxRate value to be set
      */
-
+    
     public void setExternalTaxRate(final ExternalTaxRateDraft externalTaxRate);
+    
 
     /**
      * factory method
      * @return instance of CartSetCustomLineItemTaxRateAction
      */
-    public static CartSetCustomLineItemTaxRateAction of() {
+    public static CartSetCustomLineItemTaxRateAction of(){
         return new CartSetCustomLineItemTaxRateActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy CartSetCustomLineItemTaxRateAction
@@ -92,15 +100,13 @@ public interface CartSetCustomLineItemTaxRateAction extends CartUpdateAction {
      * @return copy instance
      */
     @Nullable
-    public static CartSetCustomLineItemTaxRateAction deepCopy(
-            @Nullable final CartSetCustomLineItemTaxRateAction template) {
+    public static CartSetCustomLineItemTaxRateAction deepCopy(@Nullable final CartSetCustomLineItemTaxRateAction template) {
         if (template == null) {
             return null;
         }
         CartSetCustomLineItemTaxRateActionImpl instance = new CartSetCustomLineItemTaxRateActionImpl();
         instance.setCustomLineItemId(template.getCustomLineItemId());
-        instance.setExternalTaxRate(
-            com.commercetools.api.models.cart.ExternalTaxRateDraft.deepCopy(template.getExternalTaxRate()));
+        instance.setExternalTaxRate(com.commercetools.api.models.cart.ExternalTaxRateDraft.deepCopy(template.getExternalTaxRate()));
         return instance;
     }
 
@@ -111,7 +117,7 @@ public interface CartSetCustomLineItemTaxRateAction extends CartUpdateAction {
     public static CartSetCustomLineItemTaxRateActionBuilder builder() {
         return CartSetCustomLineItemTaxRateActionBuilder.of();
     }
-
+    
     /**
      * create builder for CartSetCustomLineItemTaxRateAction instance
      * @param template instance with prefilled values for the builder
@@ -120,6 +126,7 @@ public interface CartSetCustomLineItemTaxRateAction extends CartUpdateAction {
     public static CartSetCustomLineItemTaxRateActionBuilder builder(final CartSetCustomLineItemTaxRateAction template) {
         return CartSetCustomLineItemTaxRateActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -130,7 +137,7 @@ public interface CartSetCustomLineItemTaxRateAction extends CartUpdateAction {
     default <T> T withCartSetCustomLineItemTaxRateAction(Function<CartSetCustomLineItemTaxRateAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

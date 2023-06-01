@@ -1,18 +1,21 @@
-
 package com.commercetools.importapi.models.customfields;
 
-import java.time.*;
+import com.commercetools.importapi.models.customfields.CustomField;
 import java.time.LocalTime;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
+import com.commercetools.importapi.models.customfields.TimeFieldImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>A field with a time value.</p>
@@ -25,9 +28,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .value(LocalTime.parse("12:00:00.301"))
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = TimeFieldImpl.class)
 public interface TimeField extends CustomField {
 
@@ -48,16 +54,18 @@ public interface TimeField extends CustomField {
      * set value
      * @param value value to be set
      */
-
+    
     public void setValue(final LocalTime value);
+    
 
     /**
      * factory method
      * @return instance of TimeField
      */
-    public static TimeField of() {
+    public static TimeField of(){
         return new TimeFieldImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy TimeField
@@ -92,7 +100,7 @@ public interface TimeField extends CustomField {
     public static TimeFieldBuilder builder() {
         return TimeFieldBuilder.of();
     }
-
+    
     /**
      * create builder for TimeField instance
      * @param template instance with prefilled values for the builder
@@ -101,6 +109,7 @@ public interface TimeField extends CustomField {
     public static TimeFieldBuilder builder(final TimeField template) {
         return TimeFieldBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -111,7 +120,7 @@ public interface TimeField extends CustomField {
     default <T> T withTimeField(Function<TimeField, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

@@ -1,11 +1,12 @@
-
 package com.commercetools.api.models.message;
 
+import com.commercetools.api.models.channel.ChannelReference;
+import com.commercetools.api.models.message.MessagePayload;
+import com.commercetools.api.models.message.InventoryEntryQuantitySetMessagePayload;
+import javax.annotation.Nullable;
 import java.util.*;
 import java.util.function.Function;
-
-import javax.annotation.Nullable;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -22,146 +23,173 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .newAvailableQuantity(0.3)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
-public class InventoryEntryQuantitySetMessagePayloadBuilder
-        implements Builder<InventoryEntryQuantitySetMessagePayload> {
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
+public class InventoryEntryQuantitySetMessagePayloadBuilder implements Builder<InventoryEntryQuantitySetMessagePayload> {
 
+    
+    
     private Long oldQuantityOnStock;
-
+    
+    
+    
     private Long newQuantityOnStock;
-
+    
+    
+    
     private Long oldAvailableQuantity;
-
+    
+    
+    
     private Long newAvailableQuantity;
-
+    
+    
     @Nullable
     private com.commercetools.api.models.channel.ChannelReference supplyChannel;
 
+    
     /**
      *  <p>Quantity on stock for the InventoryEntry before the quantity was updated.</p>
      * @param oldQuantityOnStock value to be set
      * @return Builder
      */
-
-    public InventoryEntryQuantitySetMessagePayloadBuilder oldQuantityOnStock(final Long oldQuantityOnStock) {
+    
+    public InventoryEntryQuantitySetMessagePayloadBuilder oldQuantityOnStock( final Long oldQuantityOnStock) {
         this.oldQuantityOnStock = oldQuantityOnStock;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Quantity on stock for the InventoryEntry after the quantity was updated.</p>
      * @param newQuantityOnStock value to be set
      * @return Builder
      */
-
-    public InventoryEntryQuantitySetMessagePayloadBuilder newQuantityOnStock(final Long newQuantityOnStock) {
+    
+    public InventoryEntryQuantitySetMessagePayloadBuilder newQuantityOnStock( final Long newQuantityOnStock) {
         this.newQuantityOnStock = newQuantityOnStock;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Available quantity for the InventoryEntry before the quantity was updated.</p>
      * @param oldAvailableQuantity value to be set
      * @return Builder
      */
-
-    public InventoryEntryQuantitySetMessagePayloadBuilder oldAvailableQuantity(final Long oldAvailableQuantity) {
+    
+    public InventoryEntryQuantitySetMessagePayloadBuilder oldAvailableQuantity( final Long oldAvailableQuantity) {
         this.oldAvailableQuantity = oldAvailableQuantity;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Available quantity for the InventoryEntry after the quantity was updated.</p>
      * @param newAvailableQuantity value to be set
      * @return Builder
      */
-
-    public InventoryEntryQuantitySetMessagePayloadBuilder newAvailableQuantity(final Long newAvailableQuantity) {
+    
+    public InventoryEntryQuantitySetMessagePayloadBuilder newAvailableQuantity( final Long newAvailableQuantity) {
         this.newAvailableQuantity = newAvailableQuantity;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Reference to the Channel where the InventoryEntry quantity was set.</p>
      * @param builder function to build the supplyChannel value
      * @return Builder
      */
-
-    public InventoryEntryQuantitySetMessagePayloadBuilder supplyChannel(
-            Function<com.commercetools.api.models.channel.ChannelReferenceBuilder, com.commercetools.api.models.channel.ChannelReferenceBuilder> builder) {
+    
+    public InventoryEntryQuantitySetMessagePayloadBuilder supplyChannel(Function<com.commercetools.api.models.channel.ChannelReferenceBuilder, com.commercetools.api.models.channel.ChannelReferenceBuilder> builder) {
         this.supplyChannel = builder.apply(com.commercetools.api.models.channel.ChannelReferenceBuilder.of()).build();
         return this;
     }
-
+    
     /**
      *  <p>Reference to the Channel where the InventoryEntry quantity was set.</p>
      * @param builder function to build the supplyChannel value
      * @return Builder
      */
-
-    public InventoryEntryQuantitySetMessagePayloadBuilder withSupplyChannel(
-            Function<com.commercetools.api.models.channel.ChannelReferenceBuilder, com.commercetools.api.models.channel.ChannelReference> builder) {
+    
+    public InventoryEntryQuantitySetMessagePayloadBuilder withSupplyChannel(Function<com.commercetools.api.models.channel.ChannelReferenceBuilder, com.commercetools.api.models.channel.ChannelReference> builder) {
         this.supplyChannel = builder.apply(com.commercetools.api.models.channel.ChannelReferenceBuilder.of());
         return this;
     }
-
+                    
     /**
      *  <p>Reference to the Channel where the InventoryEntry quantity was set.</p>
      * @param supplyChannel value to be set
      * @return Builder
      */
-
-    public InventoryEntryQuantitySetMessagePayloadBuilder supplyChannel(
-            @Nullable final com.commercetools.api.models.channel.ChannelReference supplyChannel) {
+    
+    public InventoryEntryQuantitySetMessagePayloadBuilder supplyChannel(@Nullable final com.commercetools.api.models.channel.ChannelReference supplyChannel) {
         this.supplyChannel = supplyChannel;
         return this;
     }
+    
+    
 
     /**
      *  <p>Quantity on stock for the InventoryEntry before the quantity was updated.</p>
      * @return oldQuantityOnStock
      */
-
-    public Long getOldQuantityOnStock() {
+    
+    
+    public Long getOldQuantityOnStock(){
         return this.oldQuantityOnStock;
     }
-
+    
     /**
      *  <p>Quantity on stock for the InventoryEntry after the quantity was updated.</p>
      * @return newQuantityOnStock
      */
-
-    public Long getNewQuantityOnStock() {
+    
+    
+    public Long getNewQuantityOnStock(){
         return this.newQuantityOnStock;
     }
-
+    
     /**
      *  <p>Available quantity for the InventoryEntry before the quantity was updated.</p>
      * @return oldAvailableQuantity
      */
-
-    public Long getOldAvailableQuantity() {
+    
+    
+    public Long getOldAvailableQuantity(){
         return this.oldAvailableQuantity;
     }
-
+    
     /**
      *  <p>Available quantity for the InventoryEntry after the quantity was updated.</p>
      * @return newAvailableQuantity
      */
-
-    public Long getNewAvailableQuantity() {
+    
+    
+    public Long getNewAvailableQuantity(){
         return this.newAvailableQuantity;
     }
-
+    
     /**
      *  <p>Reference to the Channel where the InventoryEntry quantity was set.</p>
      * @return supplyChannel
      */
-
+    
     @Nullable
-    public com.commercetools.api.models.channel.ChannelReference getSupplyChannel() {
+    public com.commercetools.api.models.channel.ChannelReference getSupplyChannel(){
         return this.supplyChannel;
     }
 
@@ -170,30 +198,24 @@ public class InventoryEntryQuantitySetMessagePayloadBuilder
      * @return InventoryEntryQuantitySetMessagePayload
      */
     public InventoryEntryQuantitySetMessagePayload build() {
-        Objects.requireNonNull(oldQuantityOnStock,
-            InventoryEntryQuantitySetMessagePayload.class + ": oldQuantityOnStock is missing");
-        Objects.requireNonNull(newQuantityOnStock,
-            InventoryEntryQuantitySetMessagePayload.class + ": newQuantityOnStock is missing");
-        Objects.requireNonNull(oldAvailableQuantity,
-            InventoryEntryQuantitySetMessagePayload.class + ": oldAvailableQuantity is missing");
-        Objects.requireNonNull(newAvailableQuantity,
-            InventoryEntryQuantitySetMessagePayload.class + ": newAvailableQuantity is missing");
-        return new InventoryEntryQuantitySetMessagePayloadImpl(oldQuantityOnStock, newQuantityOnStock,
-            oldAvailableQuantity, newAvailableQuantity, supplyChannel);
+        Objects.requireNonNull(oldQuantityOnStock, InventoryEntryQuantitySetMessagePayload.class + ": oldQuantityOnStock is missing");
+        Objects.requireNonNull(newQuantityOnStock, InventoryEntryQuantitySetMessagePayload.class + ": newQuantityOnStock is missing");
+        Objects.requireNonNull(oldAvailableQuantity, InventoryEntryQuantitySetMessagePayload.class + ": oldAvailableQuantity is missing");
+        Objects.requireNonNull(newAvailableQuantity, InventoryEntryQuantitySetMessagePayload.class + ": newAvailableQuantity is missing");
+        return new InventoryEntryQuantitySetMessagePayloadImpl(oldQuantityOnStock, newQuantityOnStock, oldAvailableQuantity, newAvailableQuantity, supplyChannel);
     }
-
+    
     /**
      * builds InventoryEntryQuantitySetMessagePayload without checking for non-null required values
      * @return InventoryEntryQuantitySetMessagePayload
      */
     public InventoryEntryQuantitySetMessagePayload buildUnchecked() {
-        return new InventoryEntryQuantitySetMessagePayloadImpl(oldQuantityOnStock, newQuantityOnStock,
-            oldAvailableQuantity, newAvailableQuantity, supplyChannel);
+        return new InventoryEntryQuantitySetMessagePayloadImpl(oldQuantityOnStock, newQuantityOnStock, oldAvailableQuantity, newAvailableQuantity, supplyChannel);
     }
 
     /**
      * factory method for an instance of InventoryEntryQuantitySetMessagePayloadBuilder
-     * @return builder
+     * @return builder 
      */
     public static InventoryEntryQuantitySetMessagePayloadBuilder of() {
         return new InventoryEntryQuantitySetMessagePayloadBuilder();
@@ -204,8 +226,7 @@ public class InventoryEntryQuantitySetMessagePayloadBuilder
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static InventoryEntryQuantitySetMessagePayloadBuilder of(
-            final InventoryEntryQuantitySetMessagePayload template) {
+    public static InventoryEntryQuantitySetMessagePayloadBuilder of(final InventoryEntryQuantitySetMessagePayload template) {
         InventoryEntryQuantitySetMessagePayloadBuilder builder = new InventoryEntryQuantitySetMessagePayloadBuilder();
         builder.oldQuantityOnStock = template.getOldQuantityOnStock();
         builder.newQuantityOnStock = template.getNewQuantityOnStock();

@@ -1,17 +1,20 @@
-
 package com.commercetools.importapi.models.productvariants;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
+import com.commercetools.importapi.models.productvariants.Attribute;
+import com.commercetools.importapi.models.productvariants.NumberAttributeImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>This type represents an attribute whose value is a number.</p>
@@ -24,9 +27,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .value(0.3)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = NumberAttributeImpl.class)
 public interface NumberAttribute extends Attribute {
 
@@ -47,16 +53,18 @@ public interface NumberAttribute extends Attribute {
      * set value
      * @param value value to be set
      */
-
+    
     public void setValue(final Double value);
+    
 
     /**
      * factory method
      * @return instance of NumberAttribute
      */
-    public static NumberAttribute of() {
+    public static NumberAttribute of(){
         return new NumberAttributeImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy NumberAttribute
@@ -93,7 +101,7 @@ public interface NumberAttribute extends Attribute {
     public static NumberAttributeBuilder builder() {
         return NumberAttributeBuilder.of();
     }
-
+    
     /**
      * create builder for NumberAttribute instance
      * @param template instance with prefilled values for the builder
@@ -102,6 +110,7 @@ public interface NumberAttribute extends Attribute {
     public static NumberAttributeBuilder builder(final NumberAttribute template) {
         return NumberAttributeBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -112,7 +121,7 @@ public interface NumberAttribute extends Attribute {
     default <T> T withNumberAttribute(Function<NumberAttribute, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

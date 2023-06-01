@@ -1,20 +1,21 @@
-
 package com.commercetools.history.models.change_value;
-
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.history.models.common.TaxRate;
 import com.commercetools.history.models.common.TaxedPrice;
+import com.commercetools.history.models.change_value.ShippingMethodTaxAmountChangeValueImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * ShippingMethodTaxAmountChangeValue
@@ -28,11 +29,15 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .taxRate(taxRateBuilder -> taxRateBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = ShippingMethodTaxAmountChangeValueImpl.class)
-public interface ShippingMethodTaxAmountChangeValue {
+public interface ShippingMethodTaxAmountChangeValue  {
+
 
     /**
      *
@@ -42,7 +47,6 @@ public interface ShippingMethodTaxAmountChangeValue {
     @Valid
     @JsonProperty("taxedPrice")
     public TaxedPrice getTaxedPrice();
-
     /**
      *  <p>Shape of the value for <code>addTaxRate</code> and <code>removeTaxRate</code> actions</p>
      * @return taxRate
@@ -56,23 +60,26 @@ public interface ShippingMethodTaxAmountChangeValue {
      * set taxedPrice
      * @param taxedPrice value to be set
      */
-
+    
     public void setTaxedPrice(final TaxedPrice taxedPrice);
-
+    
+    
     /**
      *  <p>Shape of the value for <code>addTaxRate</code> and <code>removeTaxRate</code> actions</p>
      * @param taxRate value to be set
      */
-
+    
     public void setTaxRate(final TaxRate taxRate);
+    
 
     /**
      * factory method
      * @return instance of ShippingMethodTaxAmountChangeValue
      */
-    public static ShippingMethodTaxAmountChangeValue of() {
+    public static ShippingMethodTaxAmountChangeValue of(){
         return new ShippingMethodTaxAmountChangeValueImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy ShippingMethodTaxAmountChangeValue
@@ -92,8 +99,7 @@ public interface ShippingMethodTaxAmountChangeValue {
      * @return copy instance
      */
     @Nullable
-    public static ShippingMethodTaxAmountChangeValue deepCopy(
-            @Nullable final ShippingMethodTaxAmountChangeValue template) {
+    public static ShippingMethodTaxAmountChangeValue deepCopy(@Nullable final ShippingMethodTaxAmountChangeValue template) {
         if (template == null) {
             return null;
         }
@@ -110,7 +116,7 @@ public interface ShippingMethodTaxAmountChangeValue {
     public static ShippingMethodTaxAmountChangeValueBuilder builder() {
         return ShippingMethodTaxAmountChangeValueBuilder.of();
     }
-
+    
     /**
      * create builder for ShippingMethodTaxAmountChangeValue instance
      * @param template instance with prefilled values for the builder
@@ -119,6 +125,7 @@ public interface ShippingMethodTaxAmountChangeValue {
     public static ShippingMethodTaxAmountChangeValueBuilder builder(final ShippingMethodTaxAmountChangeValue template) {
         return ShippingMethodTaxAmountChangeValueBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -129,7 +136,7 @@ public interface ShippingMethodTaxAmountChangeValue {
     default <T> T withShippingMethodTaxAmountChangeValue(Function<ShippingMethodTaxAmountChangeValue, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

@@ -1,19 +1,22 @@
-
 package com.commercetools.api.models.category;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
+import com.commercetools.api.models.category.Category;
 import com.commercetools.api.models.common.Reference;
+import com.commercetools.api.models.common.ReferenceTypeId;
+import com.commercetools.api.models.category.CategoryReferenceImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Reference to a Category.</p>
@@ -26,9 +29,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .id("{id}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = CategoryReferenceImpl.class)
 public interface CategoryReference extends Reference, com.commercetools.api.models.Identifiable<Category> {
 
@@ -44,7 +50,6 @@ public interface CategoryReference extends Reference, com.commercetools.api.mode
     @Valid
     @JsonProperty("obj")
     public Category getObj();
-
     /**
      *  <p>Unique identifier of the referenced Category.</p>
      * @return id
@@ -57,23 +62,26 @@ public interface CategoryReference extends Reference, com.commercetools.api.mode
      *  <p>Contains the representation of the expanded Category. Only present in responses to requests with Reference Expansion for Categories.</p>
      * @param obj value to be set
      */
-
+    
     public void setObj(final Category obj);
-
+    
+    
     /**
      *  <p>Unique identifier of the referenced Category.</p>
      * @param id value to be set
      */
-
+    
     public void setId(final String id);
+    
 
     /**
      * factory method
      * @return instance of CategoryReference
      */
-    public static CategoryReference of() {
+    public static CategoryReference of(){
         return new CategoryReferenceImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy CategoryReference
@@ -110,7 +118,7 @@ public interface CategoryReference extends Reference, com.commercetools.api.mode
     public static CategoryReferenceBuilder builder() {
         return CategoryReferenceBuilder.of();
     }
-
+    
     /**
      * create builder for CategoryReference instance
      * @param template instance with prefilled values for the builder
@@ -119,6 +127,7 @@ public interface CategoryReference extends Reference, com.commercetools.api.mode
     public static CategoryReferenceBuilder builder(final CategoryReference template) {
         return CategoryReferenceBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -129,7 +138,7 @@ public interface CategoryReference extends Reference, com.commercetools.api.mode
     default <T> T withCategoryReference(Function<CategoryReference, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

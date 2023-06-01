@@ -1,19 +1,21 @@
-
 package com.commercetools.api.models.error;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
+import com.commercetools.api.models.error.ErrorObject;
 import com.commercetools.api.models.product.ProductReference;
+import com.commercetools.api.models.error.ProductAssignmentMissingErrorImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Returned when a Product is not assigned to the Product Selection. The error is returned as a failed response either to the Set Variant Selection or to the Set Variant Exclusion update action.</p>
@@ -27,9 +29,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .product(productBuilder -> productBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = ProductAssignmentMissingErrorImpl.class)
 public interface ProductAssignmentMissingError extends ErrorObject {
 
@@ -45,7 +50,6 @@ public interface ProductAssignmentMissingError extends ErrorObject {
     @NotNull
     @JsonProperty("code")
     public String getCode();
-
     /**
      *  <p>For Product Selection of mode Individual, the message is: <code>"A Product Variant Selection can only be set for a Product that has previously been added to the Product Selection."</code> For Product Selection of mode IndividualExclusion, the message is: <code>"A Variant Exclusion can only be set for a Product that has previously been added to the Product Selection of type Individual Exclusion."</code></p>
      * @return message
@@ -53,7 +57,6 @@ public interface ProductAssignmentMissingError extends ErrorObject {
     @NotNull
     @JsonProperty("message")
     public String getMessage();
-
     /**
      *  <p>Reference to the Product for which the error was returned.</p>
      * @return product
@@ -67,23 +70,26 @@ public interface ProductAssignmentMissingError extends ErrorObject {
      *  <p>For Product Selection of mode Individual, the message is: <code>"A Product Variant Selection can only be set for a Product that has previously been added to the Product Selection."</code> For Product Selection of mode IndividualExclusion, the message is: <code>"A Variant Exclusion can only be set for a Product that has previously been added to the Product Selection of type Individual Exclusion."</code></p>
      * @param message value to be set
      */
-
+    
     public void setMessage(final String message);
-
+    
+    
     /**
      *  <p>Reference to the Product for which the error was returned.</p>
      * @param product value to be set
      */
-
+    
     public void setProduct(final ProductReference product);
+    
 
     /**
      * factory method
      * @return instance of ProductAssignmentMissingError
      */
-    public static ProductAssignmentMissingError of() {
+    public static ProductAssignmentMissingError of(){
         return new ProductAssignmentMissingErrorImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy ProductAssignmentMissingError
@@ -122,7 +128,7 @@ public interface ProductAssignmentMissingError extends ErrorObject {
     public static ProductAssignmentMissingErrorBuilder builder() {
         return ProductAssignmentMissingErrorBuilder.of();
     }
-
+    
     /**
      * create builder for ProductAssignmentMissingError instance
      * @param template instance with prefilled values for the builder
@@ -131,6 +137,7 @@ public interface ProductAssignmentMissingError extends ErrorObject {
     public static ProductAssignmentMissingErrorBuilder builder(final ProductAssignmentMissingError template) {
         return ProductAssignmentMissingErrorBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -141,7 +148,7 @@ public interface ProductAssignmentMissingError extends ErrorObject {
     default <T> T withProductAssignmentMissingError(Function<ProductAssignmentMissingError, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

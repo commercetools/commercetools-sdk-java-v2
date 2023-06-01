@@ -1,19 +1,20 @@
-
 package com.commercetools.api.models.review;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-import java.util.stream.Collectors;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
+import com.commercetools.api.models.review.Review;
+import com.commercetools.api.models.review.ReviewPagedQueryResponseImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * ReviewPagedQueryResponse
@@ -29,11 +30,15 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .plusResults(resultsBuilder -> resultsBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = ReviewPagedQueryResponseImpl.class)
 public interface ReviewPagedQueryResponse extends com.commercetools.api.models.ResourcePagedQueryResponse<Review> {
+
 
     /**
      *  <p>Number of results requested.</p>
@@ -42,7 +47,6 @@ public interface ReviewPagedQueryResponse extends com.commercetools.api.models.R
     @NotNull
     @JsonProperty("limit")
     public Long getLimit();
-
     /**
      *  <p>Actual number of results returned.</p>
      * @return count
@@ -50,15 +54,13 @@ public interface ReviewPagedQueryResponse extends com.commercetools.api.models.R
     @NotNull
     @JsonProperty("count")
     public Long getCount();
-
     /**
      *  <p>Total number of results matching the query. This number is an estimation that is not strongly consistent. This field is returned by default. For improved performance, calculating this field can be deactivated by using the query parameter <code>withTotal=false</code>. When the results are filtered with a Query Predicate, <code>total</code> is subject to a limit.</p>
      * @return total
      */
-
+    
     @JsonProperty("total")
     public Long getTotal();
-
     /**
      *  <p>Number of elements skipped.</p>
      * @return offset
@@ -66,7 +68,6 @@ public interface ReviewPagedQueryResponse extends com.commercetools.api.models.R
     @NotNull
     @JsonProperty("offset")
     public Long getOffset();
-
     /**
      *  <p>Reviews matching the query.</p>
      * @return results
@@ -80,52 +81,56 @@ public interface ReviewPagedQueryResponse extends com.commercetools.api.models.R
      *  <p>Number of results requested.</p>
      * @param limit value to be set
      */
-
+    
     public void setLimit(final Long limit);
-
+    
+    
     /**
      *  <p>Actual number of results returned.</p>
      * @param count value to be set
      */
-
+    
     public void setCount(final Long count);
-
+    
+    
     /**
      *  <p>Total number of results matching the query. This number is an estimation that is not strongly consistent. This field is returned by default. For improved performance, calculating this field can be deactivated by using the query parameter <code>withTotal=false</code>. When the results are filtered with a Query Predicate, <code>total</code> is subject to a limit.</p>
      * @param total value to be set
      */
-
+    
     public void setTotal(final Long total);
-
+    
+    
     /**
      *  <p>Number of elements skipped.</p>
      * @param offset value to be set
      */
-
+    
     public void setOffset(final Long offset);
-
+    
+    
     /**
      *  <p>Reviews matching the query.</p>
      * @param results values to be set
      */
-
+    
     @JsonIgnore
-    public void setResults(final Review... results);
-
+    public void setResults(final Review ...results);
     /**
      *  <p>Reviews matching the query.</p>
      * @param results values to be set
      */
-
+    
     public void setResults(final List<Review> results);
 
     /**
      * factory method
      * @return instance of ReviewPagedQueryResponse
      */
-    public static ReviewPagedQueryResponse of() {
+    public static ReviewPagedQueryResponse of(){
         return new ReviewPagedQueryResponseImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy ReviewPagedQueryResponse
@@ -158,9 +163,7 @@ public interface ReviewPagedQueryResponse extends com.commercetools.api.models.R
         instance.setTotal(template.getTotal());
         instance.setOffset(template.getOffset());
         instance.setResults(Optional.ofNullable(template.getResults())
-                .map(t -> t.stream()
-                        .map(com.commercetools.api.models.review.Review::deepCopy)
-                        .collect(Collectors.toList()))
+                .map(t -> t.stream().map(com.commercetools.api.models.review.Review::deepCopy).collect(Collectors.toList()))
                 .orElse(null));
         return instance;
     }
@@ -172,7 +175,7 @@ public interface ReviewPagedQueryResponse extends com.commercetools.api.models.R
     public static ReviewPagedQueryResponseBuilder builder() {
         return ReviewPagedQueryResponseBuilder.of();
     }
-
+    
     /**
      * create builder for ReviewPagedQueryResponse instance
      * @param template instance with prefilled values for the builder
@@ -181,6 +184,7 @@ public interface ReviewPagedQueryResponse extends com.commercetools.api.models.R
     public static ReviewPagedQueryResponseBuilder builder(final ReviewPagedQueryResponse template) {
         return ReviewPagedQueryResponseBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -191,7 +195,7 @@ public interface ReviewPagedQueryResponse extends com.commercetools.api.models.R
     default <T> T withReviewPagedQueryResponse(Function<ReviewPagedQueryResponse, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

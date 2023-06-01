@@ -1,16 +1,20 @@
-
 package com.commercetools.api.models.me;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
+import com.commercetools.api.models.me.MyCustomerUpdateAction;
+import com.commercetools.api.models.me.MyCustomerSetTitleActionImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Setting the title of the Customer produces the CustomerTitleSetMessage.</p>
@@ -22,9 +26,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     MyCustomerSetTitleAction myCustomerSetTitleAction = MyCustomerSetTitleAction.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = MyCustomerSetTitleActionImpl.class)
 public interface MyCustomerSetTitleAction extends MyCustomerUpdateAction {
 
@@ -37,7 +44,7 @@ public interface MyCustomerSetTitleAction extends MyCustomerUpdateAction {
      *  <p>Value to set. If empty, any existing value is removed.</p>
      * @return title
      */
-
+    
     @JsonProperty("title")
     public String getTitle();
 
@@ -45,16 +52,18 @@ public interface MyCustomerSetTitleAction extends MyCustomerUpdateAction {
      *  <p>Value to set. If empty, any existing value is removed.</p>
      * @param title value to be set
      */
-
+    
     public void setTitle(final String title);
+    
 
     /**
      * factory method
      * @return instance of MyCustomerSetTitleAction
      */
-    public static MyCustomerSetTitleAction of() {
+    public static MyCustomerSetTitleAction of(){
         return new MyCustomerSetTitleActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy MyCustomerSetTitleAction
@@ -89,7 +98,7 @@ public interface MyCustomerSetTitleAction extends MyCustomerUpdateAction {
     public static MyCustomerSetTitleActionBuilder builder() {
         return MyCustomerSetTitleActionBuilder.of();
     }
-
+    
     /**
      * create builder for MyCustomerSetTitleAction instance
      * @param template instance with prefilled values for the builder
@@ -98,6 +107,7 @@ public interface MyCustomerSetTitleAction extends MyCustomerUpdateAction {
     public static MyCustomerSetTitleActionBuilder builder(final MyCustomerSetTitleAction template) {
         return MyCustomerSetTitleActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -108,7 +118,7 @@ public interface MyCustomerSetTitleAction extends MyCustomerUpdateAction {
     default <T> T withMyCustomerSetTitleAction(Function<MyCustomerSetTitleAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

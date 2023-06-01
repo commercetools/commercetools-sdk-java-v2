@@ -1,11 +1,12 @@
-
 package com.commercetools.api.models.order_edit;
 
+import com.commercetools.api.models.cart.ExternalLineItemTotalPrice;
+import com.commercetools.api.models.order.StagedOrderUpdateAction;
+import com.commercetools.api.models.order_edit.StagedOrderSetLineItemTotalPriceAction;
+import javax.annotation.Nullable;
 import java.util.*;
 import java.util.function.Function;
-
-import javax.annotation.Nullable;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -19,82 +20,89 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .lineItemId("{lineItemId}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class StagedOrderSetLineItemTotalPriceActionBuilder implements Builder<StagedOrderSetLineItemTotalPriceAction> {
 
+    
+    
     private String lineItemId;
-
+    
+    
     @Nullable
     private com.commercetools.api.models.cart.ExternalLineItemTotalPrice externalTotalPrice;
 
+    
     /**
      * set the value to the lineItemId
      * @param lineItemId value to be set
      * @return Builder
      */
-
-    public StagedOrderSetLineItemTotalPriceActionBuilder lineItemId(final String lineItemId) {
+    
+    public StagedOrderSetLineItemTotalPriceActionBuilder lineItemId( final String lineItemId) {
         this.lineItemId = lineItemId;
         return this;
     }
-
+    
+    
+    
+    
     /**
      * set the value to the externalTotalPrice using the builder function
      * @param builder function to build the externalTotalPrice value
      * @return Builder
      */
-
-    public StagedOrderSetLineItemTotalPriceActionBuilder externalTotalPrice(
-            Function<com.commercetools.api.models.cart.ExternalLineItemTotalPriceBuilder, com.commercetools.api.models.cart.ExternalLineItemTotalPriceBuilder> builder) {
-        this.externalTotalPrice = builder
-                .apply(com.commercetools.api.models.cart.ExternalLineItemTotalPriceBuilder.of())
-                .build();
+    
+    public StagedOrderSetLineItemTotalPriceActionBuilder externalTotalPrice(Function<com.commercetools.api.models.cart.ExternalLineItemTotalPriceBuilder, com.commercetools.api.models.cart.ExternalLineItemTotalPriceBuilder> builder) {
+        this.externalTotalPrice = builder.apply(com.commercetools.api.models.cart.ExternalLineItemTotalPriceBuilder.of()).build();
         return this;
     }
-
+    
     /**
      * set the value to the externalTotalPrice using the builder function
      * @param builder function to build the externalTotalPrice value
      * @return Builder
      */
-
-    public StagedOrderSetLineItemTotalPriceActionBuilder withExternalTotalPrice(
-            Function<com.commercetools.api.models.cart.ExternalLineItemTotalPriceBuilder, com.commercetools.api.models.cart.ExternalLineItemTotalPrice> builder) {
-        this.externalTotalPrice = builder
-                .apply(com.commercetools.api.models.cart.ExternalLineItemTotalPriceBuilder.of());
+    
+    public StagedOrderSetLineItemTotalPriceActionBuilder withExternalTotalPrice(Function<com.commercetools.api.models.cart.ExternalLineItemTotalPriceBuilder, com.commercetools.api.models.cart.ExternalLineItemTotalPrice> builder) {
+        this.externalTotalPrice = builder.apply(com.commercetools.api.models.cart.ExternalLineItemTotalPriceBuilder.of());
         return this;
     }
-
+                    
     /**
      * set the value to the externalTotalPrice
      * @param externalTotalPrice value to be set
      * @return Builder
      */
-
-    public StagedOrderSetLineItemTotalPriceActionBuilder externalTotalPrice(
-            @Nullable final com.commercetools.api.models.cart.ExternalLineItemTotalPrice externalTotalPrice) {
+    
+    public StagedOrderSetLineItemTotalPriceActionBuilder externalTotalPrice(@Nullable final com.commercetools.api.models.cart.ExternalLineItemTotalPrice externalTotalPrice) {
         this.externalTotalPrice = externalTotalPrice;
         return this;
     }
+    
+    
 
     /**
      * value of lineItemId}
      * @return lineItemId
      */
-
-    public String getLineItemId() {
+    
+    
+    public String getLineItemId(){
         return this.lineItemId;
     }
-
+    
     /**
      * value of externalTotalPrice}
      * @return externalTotalPrice
      */
-
+    
     @Nullable
-    public com.commercetools.api.models.cart.ExternalLineItemTotalPrice getExternalTotalPrice() {
+    public com.commercetools.api.models.cart.ExternalLineItemTotalPrice getExternalTotalPrice(){
         return this.externalTotalPrice;
     }
 
@@ -106,7 +114,7 @@ public class StagedOrderSetLineItemTotalPriceActionBuilder implements Builder<St
         Objects.requireNonNull(lineItemId, StagedOrderSetLineItemTotalPriceAction.class + ": lineItemId is missing");
         return new StagedOrderSetLineItemTotalPriceActionImpl(lineItemId, externalTotalPrice);
     }
-
+    
     /**
      * builds StagedOrderSetLineItemTotalPriceAction without checking for non-null required values
      * @return StagedOrderSetLineItemTotalPriceAction
@@ -117,7 +125,7 @@ public class StagedOrderSetLineItemTotalPriceActionBuilder implements Builder<St
 
     /**
      * factory method for an instance of StagedOrderSetLineItemTotalPriceActionBuilder
-     * @return builder
+     * @return builder 
      */
     public static StagedOrderSetLineItemTotalPriceActionBuilder of() {
         return new StagedOrderSetLineItemTotalPriceActionBuilder();
@@ -128,8 +136,7 @@ public class StagedOrderSetLineItemTotalPriceActionBuilder implements Builder<St
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static StagedOrderSetLineItemTotalPriceActionBuilder of(
-            final StagedOrderSetLineItemTotalPriceAction template) {
+    public static StagedOrderSetLineItemTotalPriceActionBuilder of(final StagedOrderSetLineItemTotalPriceAction template) {
         StagedOrderSetLineItemTotalPriceActionBuilder builder = new StagedOrderSetLineItemTotalPriceActionBuilder();
         builder.lineItemId = template.getLineItemId();
         builder.externalTotalPrice = template.getExternalTotalPrice();

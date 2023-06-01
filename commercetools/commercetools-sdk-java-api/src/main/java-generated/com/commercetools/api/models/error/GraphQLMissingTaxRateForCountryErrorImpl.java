@@ -1,16 +1,19 @@
-
 package com.commercetools.api.models.error;
 
-import java.time.*;
-import java.util.*;
-
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
-
-import io.vrap.rmf.base.client.ModelBase;
+import com.commercetools.api.models.error.GraphQLErrorObject;
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.ModelBase;
+import javax.validation.Valid;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.annotation.*;
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
@@ -22,125 +25,134 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
  *   <li>Create Order from Cart and Create Order in Store from Cart requests.</li>
  *  </ul>
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class GraphQLMissingTaxRateForCountryErrorImpl implements GraphQLMissingTaxRateForCountryError, ModelBase {
 
+    
     private String code;
-
+    
+    
     private Map<String, java.lang.Object> values;
-
+    
+    
     private String taxCategoryId;
-
+    
+    
     private String country;
-
+    
+    
     private String state;
 
     /**
      * create instance with all properties
      */
     @JsonCreator
-    GraphQLMissingTaxRateForCountryErrorImpl(@JsonProperty("values") final Map<String, java.lang.Object> values,
-            @JsonProperty("taxCategoryId") final String taxCategoryId, @JsonProperty("country") final String country,
-            @JsonProperty("state") final String state) {
+    GraphQLMissingTaxRateForCountryErrorImpl(@JsonProperty("values") final Map<String, java.lang.Object> values, @JsonProperty("taxCategoryId") final String taxCategoryId, @JsonProperty("country") final String country, @JsonProperty("state") final String state) {
         this.values = values;
         this.taxCategoryId = taxCategoryId;
         this.country = country;
         this.state = state;
-        this.code = MISSING_TAX_RATE_FOR_COUNTRY;
+        this.code =  MISSING_TAX_RATE_FOR_COUNTRY;
     }
-
     /**
      * create empty instance
      */
     public GraphQLMissingTaxRateForCountryErrorImpl() {
-        this.code = MISSING_TAX_RATE_FOR_COUNTRY;
+        this.code =  MISSING_TAX_RATE_FOR_COUNTRY;
     }
 
     /**
      *
      */
-
-    public String getCode() {
+    
+    public String getCode(){
         return this.code;
     }
-
+    
     /**
      *  <p>Error-specific additional fields.</p>
      */
-
-    public Map<String, java.lang.Object> values() {
+    
+    public Map<String,java.lang.Object> values() {
         return values;
     }
-
+    
     /**
      *  <p>Unique identifier of the TaxCategory.</p>
      */
-
-    public String getTaxCategoryId() {
+    
+    public String getTaxCategoryId(){
         return this.taxCategoryId;
     }
-
+    
     /**
      *  <p>Country code of the geographic location.</p>
      */
-
-    public String getCountry() {
+    
+    public String getCountry(){
         return this.country;
     }
-
+    
     /**
      *  <p>State within the country, such as Texas in the United States.</p>
      */
-
-    public String getState() {
+    
+    public String getState(){
         return this.state;
     }
 
+    
     public void setValue(String key, java.lang.Object value) {
         if (values == null) {
             values = new HashMap<>();
         }
         values.put(key, value);
     }
-
-    public void setTaxCategoryId(final String taxCategoryId) {
+    
+    
+    public void setTaxCategoryId(final String taxCategoryId){
         this.taxCategoryId = taxCategoryId;
     }
-
-    public void setCountry(final String country) {
+    
+    
+    public void setCountry(final String country){
         this.country = country;
     }
-
-    public void setState(final String state) {
+    
+    
+    public void setState(final String state){
         this.state = state;
     }
 
     @Override
     public boolean equals(Object o) {
-        if (this == o)
-            return true;
-
-        if (o == null || getClass() != o.getClass())
-            return false;
-
+        if (this == o) return true;
+    
+        if (o == null || getClass() != o.getClass()) return false;
+    
         GraphQLMissingTaxRateForCountryErrorImpl that = (GraphQLMissingTaxRateForCountryErrorImpl) o;
-
-        return new EqualsBuilder().append(code, that.code)
+    
+        return new EqualsBuilder()
+                .append(code, that.code)
                 .append(values, that.values)
                 .append(taxCategoryId, that.taxCategoryId)
                 .append(country, that.country)
                 .append(state, that.state)
                 .isEquals();
     }
-
+    
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(code)
-                .append(values)
-                .append(taxCategoryId)
-                .append(country)
-                .append(state)
-                .toHashCode();
+        return new HashCodeBuilder(17, 37)
+            .append(code)
+            .append(values)
+            .append(taxCategoryId)
+            .append(country)
+            .append(state)
+            .toHashCode();
     }
 
 }

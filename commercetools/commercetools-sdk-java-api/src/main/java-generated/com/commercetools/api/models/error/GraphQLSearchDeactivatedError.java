@@ -1,17 +1,20 @@
-
 package com.commercetools.api.models.error;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
+import com.commercetools.api.models.error.GraphQLErrorObject;
+import com.commercetools.api.models.error.GraphQLSearchDeactivatedErrorImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Returned when the indexing of Product information is deactivated in a Project.</p>
@@ -24,9 +27,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     GraphQLSearchDeactivatedError graphQLSearchDeactivatedError = GraphQLSearchDeactivatedError.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = GraphQLSearchDeactivatedErrorImpl.class)
 public interface GraphQLSearchDeactivatedError extends GraphQLErrorObject {
 
@@ -43,13 +49,15 @@ public interface GraphQLSearchDeactivatedError extends GraphQLErrorObject {
     @JsonProperty("code")
     public String getCode();
 
+
     /**
      * factory method
      * @return instance of GraphQLSearchDeactivatedError
      */
-    public static GraphQLSearchDeactivatedError of() {
+    public static GraphQLSearchDeactivatedError of(){
         return new GraphQLSearchDeactivatedErrorImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy GraphQLSearchDeactivatedError
@@ -84,7 +92,7 @@ public interface GraphQLSearchDeactivatedError extends GraphQLErrorObject {
     public static GraphQLSearchDeactivatedErrorBuilder builder() {
         return GraphQLSearchDeactivatedErrorBuilder.of();
     }
-
+    
     /**
      * create builder for GraphQLSearchDeactivatedError instance
      * @param template instance with prefilled values for the builder
@@ -93,6 +101,7 @@ public interface GraphQLSearchDeactivatedError extends GraphQLErrorObject {
     public static GraphQLSearchDeactivatedErrorBuilder builder(final GraphQLSearchDeactivatedError template) {
         return GraphQLSearchDeactivatedErrorBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -103,7 +112,7 @@ public interface GraphQLSearchDeactivatedError extends GraphQLErrorObject {
     default <T> T withGraphQLSearchDeactivatedError(Function<GraphQLSearchDeactivatedError, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

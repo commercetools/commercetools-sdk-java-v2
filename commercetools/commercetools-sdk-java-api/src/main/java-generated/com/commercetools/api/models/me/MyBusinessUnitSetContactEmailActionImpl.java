@@ -1,27 +1,35 @@
-
 package com.commercetools.api.models.me;
 
-import java.time.*;
-import java.util.*;
-
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
-
-import io.vrap.rmf.base.client.ModelBase;
+import com.commercetools.api.models.me.MyBusinessUnitUpdateAction;
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.ModelBase;
+import javax.validation.Valid;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.annotation.*;
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
  *  <p>Setting the contact email on a Business Unit generates a BusinessUnitContactEmailSet Message.</p>
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class MyBusinessUnitSetContactEmailActionImpl implements MyBusinessUnitSetContactEmailAction, ModelBase {
 
+    
     private String action;
-
+    
+    
     private String contactEmail;
 
     /**
@@ -30,52 +38,56 @@ public class MyBusinessUnitSetContactEmailActionImpl implements MyBusinessUnitSe
     @JsonCreator
     MyBusinessUnitSetContactEmailActionImpl(@JsonProperty("contactEmail") final String contactEmail) {
         this.contactEmail = contactEmail;
-        this.action = SET_CONTACT_EMAIL;
+        this.action =  SET_CONTACT_EMAIL;
     }
-
     /**
      * create empty instance
      */
     public MyBusinessUnitSetContactEmailActionImpl() {
-        this.action = SET_CONTACT_EMAIL;
+        this.action =  SET_CONTACT_EMAIL;
     }
 
     /**
      *
      */
-
-    public String getAction() {
+    
+    public String getAction(){
         return this.action;
     }
-
+    
     /**
      *  <p>Email to set. If <code>contactEmail</code> is absent or <code>null</code>, the existing contact email, if any, will be removed.</p>
      */
-
-    public String getContactEmail() {
+    
+    public String getContactEmail(){
         return this.contactEmail;
     }
 
-    public void setContactEmail(final String contactEmail) {
+    
+    public void setContactEmail(final String contactEmail){
         this.contactEmail = contactEmail;
     }
 
     @Override
     public boolean equals(Object o) {
-        if (this == o)
-            return true;
-
-        if (o == null || getClass() != o.getClass())
-            return false;
-
+        if (this == o) return true;
+    
+        if (o == null || getClass() != o.getClass()) return false;
+    
         MyBusinessUnitSetContactEmailActionImpl that = (MyBusinessUnitSetContactEmailActionImpl) o;
-
-        return new EqualsBuilder().append(action, that.action).append(contactEmail, that.contactEmail).isEquals();
+    
+        return new EqualsBuilder()
+                .append(action, that.action)
+                .append(contactEmail, that.contactEmail)
+                .isEquals();
     }
-
+    
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(action).append(contactEmail).toHashCode();
+        return new HashCodeBuilder(17, 37)
+            .append(action)
+            .append(contactEmail)
+            .toHashCode();
     }
 
 }

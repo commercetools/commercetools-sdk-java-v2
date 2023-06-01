@@ -1,19 +1,20 @@
-
 package com.commercetools.importapi.models.orders;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
 import com.commercetools.importapi.models.common.TypedMoney;
+import com.commercetools.importapi.models.orders.CustomLineItemTaxedPriceImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * CustomLineItemTaxedPrice
@@ -27,11 +28,15 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .totalGross(totalGrossBuilder -> totalGrossBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = CustomLineItemTaxedPriceImpl.class)
-public interface CustomLineItemTaxedPrice {
+public interface CustomLineItemTaxedPrice  {
+
 
     /**
      *
@@ -41,7 +46,6 @@ public interface CustomLineItemTaxedPrice {
     @Valid
     @JsonProperty("totalNet")
     public TypedMoney getTotalNet();
-
     /**
      *
      * @return totalGross
@@ -55,23 +59,26 @@ public interface CustomLineItemTaxedPrice {
      * set totalNet
      * @param totalNet value to be set
      */
-
+    
     public void setTotalNet(final TypedMoney totalNet);
-
+    
+    
     /**
      * set totalGross
      * @param totalGross value to be set
      */
-
+    
     public void setTotalGross(final TypedMoney totalGross);
+    
 
     /**
      * factory method
      * @return instance of CustomLineItemTaxedPrice
      */
-    public static CustomLineItemTaxedPrice of() {
+    public static CustomLineItemTaxedPrice of(){
         return new CustomLineItemTaxedPriceImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy CustomLineItemTaxedPrice
@@ -108,7 +115,7 @@ public interface CustomLineItemTaxedPrice {
     public static CustomLineItemTaxedPriceBuilder builder() {
         return CustomLineItemTaxedPriceBuilder.of();
     }
-
+    
     /**
      * create builder for CustomLineItemTaxedPrice instance
      * @param template instance with prefilled values for the builder
@@ -117,6 +124,7 @@ public interface CustomLineItemTaxedPrice {
     public static CustomLineItemTaxedPriceBuilder builder(final CustomLineItemTaxedPrice template) {
         return CustomLineItemTaxedPriceBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -127,7 +135,7 @@ public interface CustomLineItemTaxedPrice {
     default <T> T withCustomLineItemTaxedPrice(Function<CustomLineItemTaxedPrice, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

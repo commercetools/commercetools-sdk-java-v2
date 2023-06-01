@@ -1,18 +1,20 @@
-
 package com.commercetools.importapi.models.producttypes;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
+import com.commercetools.importapi.models.producttypes.AttributeType;
+import com.commercetools.importapi.models.producttypes.AttributeSetTypeImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * AttributeSetType
@@ -25,9 +27,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .elementType(elementTypeBuilder -> elementTypeBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = AttributeSetTypeImpl.class)
 public interface AttributeSetType extends AttributeType {
 
@@ -49,16 +54,18 @@ public interface AttributeSetType extends AttributeType {
      * set elementType
      * @param elementType value to be set
      */
-
+    
     public void setElementType(final AttributeType elementType);
+    
 
     /**
      * factory method
      * @return instance of AttributeSetType
      */
-    public static AttributeSetType of() {
+    public static AttributeSetType of(){
         return new AttributeSetTypeImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy AttributeSetType
@@ -82,8 +89,7 @@ public interface AttributeSetType extends AttributeType {
             return null;
         }
         AttributeSetTypeImpl instance = new AttributeSetTypeImpl();
-        instance.setElementType(
-            com.commercetools.importapi.models.producttypes.AttributeType.deepCopy(template.getElementType()));
+        instance.setElementType(com.commercetools.importapi.models.producttypes.AttributeType.deepCopy(template.getElementType()));
         return instance;
     }
 
@@ -94,7 +100,7 @@ public interface AttributeSetType extends AttributeType {
     public static AttributeSetTypeBuilder builder() {
         return AttributeSetTypeBuilder.of();
     }
-
+    
     /**
      * create builder for AttributeSetType instance
      * @param template instance with prefilled values for the builder
@@ -103,6 +109,7 @@ public interface AttributeSetType extends AttributeType {
     public static AttributeSetTypeBuilder builder(final AttributeSetType template) {
         return AttributeSetTypeBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -113,7 +120,7 @@ public interface AttributeSetType extends AttributeType {
     default <T> T withAttributeSetType(Function<AttributeSetType, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

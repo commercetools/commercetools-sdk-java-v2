@@ -1,16 +1,20 @@
-
 package com.commercetools.api.models.discount_code;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
+import com.commercetools.api.models.discount_code.DiscountCodeUpdateAction;
+import com.commercetools.api.models.discount_code.DiscountCodeSetMaxApplicationsActionImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * DiscountCodeSetMaxApplicationsAction
@@ -22,9 +26,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     DiscountCodeSetMaxApplicationsAction discountCodeSetMaxApplicationsAction = DiscountCodeSetMaxApplicationsAction.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = DiscountCodeSetMaxApplicationsActionImpl.class)
 public interface DiscountCodeSetMaxApplicationsAction extends DiscountCodeUpdateAction {
 
@@ -37,7 +44,7 @@ public interface DiscountCodeSetMaxApplicationsAction extends DiscountCodeUpdate
      *  <p>Value to set. If empty, any existing value will be removed.</p>
      * @return maxApplications
      */
-
+    
     @JsonProperty("maxApplications")
     public Long getMaxApplications();
 
@@ -45,16 +52,18 @@ public interface DiscountCodeSetMaxApplicationsAction extends DiscountCodeUpdate
      *  <p>Value to set. If empty, any existing value will be removed.</p>
      * @param maxApplications value to be set
      */
-
+    
     public void setMaxApplications(final Long maxApplications);
+    
 
     /**
      * factory method
      * @return instance of DiscountCodeSetMaxApplicationsAction
      */
-    public static DiscountCodeSetMaxApplicationsAction of() {
+    public static DiscountCodeSetMaxApplicationsAction of(){
         return new DiscountCodeSetMaxApplicationsActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy DiscountCodeSetMaxApplicationsAction
@@ -73,8 +82,7 @@ public interface DiscountCodeSetMaxApplicationsAction extends DiscountCodeUpdate
      * @return copy instance
      */
     @Nullable
-    public static DiscountCodeSetMaxApplicationsAction deepCopy(
-            @Nullable final DiscountCodeSetMaxApplicationsAction template) {
+    public static DiscountCodeSetMaxApplicationsAction deepCopy(@Nullable final DiscountCodeSetMaxApplicationsAction template) {
         if (template == null) {
             return null;
         }
@@ -90,16 +98,16 @@ public interface DiscountCodeSetMaxApplicationsAction extends DiscountCodeUpdate
     public static DiscountCodeSetMaxApplicationsActionBuilder builder() {
         return DiscountCodeSetMaxApplicationsActionBuilder.of();
     }
-
+    
     /**
      * create builder for DiscountCodeSetMaxApplicationsAction instance
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static DiscountCodeSetMaxApplicationsActionBuilder builder(
-            final DiscountCodeSetMaxApplicationsAction template) {
+    public static DiscountCodeSetMaxApplicationsActionBuilder builder(final DiscountCodeSetMaxApplicationsAction template) {
         return DiscountCodeSetMaxApplicationsActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -110,7 +118,7 @@ public interface DiscountCodeSetMaxApplicationsAction extends DiscountCodeUpdate
     default <T> T withDiscountCodeSetMaxApplicationsAction(Function<DiscountCodeSetMaxApplicationsAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

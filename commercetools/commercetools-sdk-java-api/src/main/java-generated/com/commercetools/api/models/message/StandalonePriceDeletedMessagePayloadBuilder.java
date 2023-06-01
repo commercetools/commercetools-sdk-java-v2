@@ -1,8 +1,11 @@
-
 package com.commercetools.api.models.message;
 
+import com.commercetools.api.models.message.MessagePayload;
+import com.commercetools.api.models.message.StandalonePriceDeletedMessagePayload;
+import javax.annotation.Nullable;
 import java.util.*;
-
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -15,10 +18,16 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     StandalonePriceDeletedMessagePayload standalonePriceDeletedMessagePayload = StandalonePriceDeletedMessagePayload.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class StandalonePriceDeletedMessagePayloadBuilder implements Builder<StandalonePriceDeletedMessagePayload> {
+
+
+
 
     /**
      * builds StandalonePriceDeletedMessagePayload with checking for non-null required values
@@ -27,7 +36,7 @@ public class StandalonePriceDeletedMessagePayloadBuilder implements Builder<Stan
     public StandalonePriceDeletedMessagePayload build() {
         return new StandalonePriceDeletedMessagePayloadImpl();
     }
-
+    
     /**
      * builds StandalonePriceDeletedMessagePayload without checking for non-null required values
      * @return StandalonePriceDeletedMessagePayload
@@ -38,7 +47,7 @@ public class StandalonePriceDeletedMessagePayloadBuilder implements Builder<Stan
 
     /**
      * factory method for an instance of StandalonePriceDeletedMessagePayloadBuilder
-     * @return builder
+     * @return builder 
      */
     public static StandalonePriceDeletedMessagePayloadBuilder of() {
         return new StandalonePriceDeletedMessagePayloadBuilder();

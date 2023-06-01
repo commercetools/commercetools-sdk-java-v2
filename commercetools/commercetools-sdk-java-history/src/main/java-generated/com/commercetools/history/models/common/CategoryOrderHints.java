@@ -1,17 +1,20 @@
-
 package com.commercetools.history.models.common;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
 
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
+import com.commercetools.history.models.common.CategoryOrderHintsImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * CategoryOrderHints
@@ -24,11 +27,15 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             ./^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$/("{/^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$/}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = CategoryOrderHintsImpl.class)
-public interface CategoryOrderHints {
+public interface CategoryOrderHints  {
+
 
     /**
      *
@@ -43,7 +50,7 @@ public interface CategoryOrderHints {
      * @param key property name
      * @param value property value
      */
-
+    
     @JsonAnySetter
     public void setValue(String key, String value);
 
@@ -51,9 +58,10 @@ public interface CategoryOrderHints {
      * factory method
      * @return instance of CategoryOrderHints
      */
-    public static CategoryOrderHints of() {
+    public static CategoryOrderHints of(){
         return new CategoryOrderHintsImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy CategoryOrderHints
@@ -88,7 +96,7 @@ public interface CategoryOrderHints {
     public static CategoryOrderHintsBuilder builder() {
         return CategoryOrderHintsBuilder.of();
     }
-
+    
     /**
      * create builder for CategoryOrderHints instance
      * @param template instance with prefilled values for the builder
@@ -97,6 +105,7 @@ public interface CategoryOrderHints {
     public static CategoryOrderHintsBuilder builder(final CategoryOrderHints template) {
         return CategoryOrderHintsBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -107,7 +116,7 @@ public interface CategoryOrderHints {
     default <T> T withCategoryOrderHints(Function<CategoryOrderHints, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

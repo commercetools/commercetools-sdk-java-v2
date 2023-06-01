@@ -1,17 +1,20 @@
-
 package com.commercetools.api.models.error;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
+import com.commercetools.api.models.error.ErrorObject;
+import com.commercetools.api.models.error.SearchExecutionFailureErrorImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Returned when a search query could not be completed due to an unexpected failure.</p>
@@ -24,9 +27,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .message("{message}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = SearchExecutionFailureErrorImpl.class)
 public interface SearchExecutionFailureError extends ErrorObject {
 
@@ -42,7 +48,6 @@ public interface SearchExecutionFailureError extends ErrorObject {
     @NotNull
     @JsonProperty("code")
     public String getCode();
-
     /**
      *  <p><code>"Something went wrong during the search query execution. In most case this happens due to usage of non-existing fields and custom product attributes. Please verify all filters and facets in your search query and make sure that all paths are correct."</code></p>
      * @return message
@@ -55,16 +60,18 @@ public interface SearchExecutionFailureError extends ErrorObject {
      *  <p><code>"Something went wrong during the search query execution. In most case this happens due to usage of non-existing fields and custom product attributes. Please verify all filters and facets in your search query and make sure that all paths are correct."</code></p>
      * @param message value to be set
      */
-
+    
     public void setMessage(final String message);
+    
 
     /**
      * factory method
      * @return instance of SearchExecutionFailureError
      */
-    public static SearchExecutionFailureError of() {
+    public static SearchExecutionFailureError of(){
         return new SearchExecutionFailureErrorImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy SearchExecutionFailureError
@@ -101,7 +108,7 @@ public interface SearchExecutionFailureError extends ErrorObject {
     public static SearchExecutionFailureErrorBuilder builder() {
         return SearchExecutionFailureErrorBuilder.of();
     }
-
+    
     /**
      * create builder for SearchExecutionFailureError instance
      * @param template instance with prefilled values for the builder
@@ -110,6 +117,7 @@ public interface SearchExecutionFailureError extends ErrorObject {
     public static SearchExecutionFailureErrorBuilder builder(final SearchExecutionFailureError template) {
         return SearchExecutionFailureErrorBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -120,7 +128,7 @@ public interface SearchExecutionFailureError extends ErrorObject {
     default <T> T withSearchExecutionFailureError(Function<SearchExecutionFailureError, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

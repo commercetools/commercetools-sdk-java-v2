@@ -1,11 +1,11 @@
-
 package com.commercetools.api.predicates.query.message;
-
-import java.util.function.Function;
 
 import com.commercetools.api.predicates.query.*;
 
-public class ProductPublishedMessagePayloadQueryBuilderDsl {
+import java.util.function.Function;
+
+
+public class ProductPublishedMessagePayloadQueryBuilderDsl  {
     public ProductPublishedMessagePayloadQueryBuilderDsl() {
     }
 
@@ -14,29 +14,24 @@ public class ProductPublishedMessagePayloadQueryBuilderDsl {
     }
 
     public StringComparisonPredicateBuilder<ProductPublishedMessagePayloadQueryBuilderDsl> type() {
-        return new StringComparisonPredicateBuilder<>(
-            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("type")),
-            p -> new CombinationQueryPredicate<>(p, ProductPublishedMessagePayloadQueryBuilderDsl::of));
+        return new StringComparisonPredicateBuilder<>(BinaryQueryPredicate.of().left(new ConstantQueryPredicate("type")),
+        p -> new CombinationQueryPredicate<>(p, ProductPublishedMessagePayloadQueryBuilderDsl::of));
     }
-
     public StringCollectionPredicateBuilder<ProductPublishedMessagePayloadQueryBuilderDsl> removedImageUrls() {
-        return new StringCollectionPredicateBuilder<>(
-            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("removedImageUrls")),
-            p -> new CombinationQueryPredicate<>(p, ProductPublishedMessagePayloadQueryBuilderDsl::of));
+        return new StringCollectionPredicateBuilder<>(BinaryQueryPredicate.of().left(new ConstantQueryPredicate("removedImageUrls")),
+        p -> new CombinationQueryPredicate<>(p, ProductPublishedMessagePayloadQueryBuilderDsl::of));
     }
-
     public CombinationQueryPredicate<ProductPublishedMessagePayloadQueryBuilderDsl> productProjection(
-            Function<com.commercetools.api.predicates.query.product.ProductProjectionQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.product.ProductProjectionQueryBuilderDsl>> fn) {
+        Function<com.commercetools.api.predicates.query.product.ProductProjectionQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.product.ProductProjectionQueryBuilderDsl>> fn) {
         return new CombinationQueryPredicate<>(ContainerQueryPredicate.of()
-                .parent(ConstantQueryPredicate.of().constant("productProjection"))
-                .inner(fn.apply(com.commercetools.api.predicates.query.product.ProductProjectionQueryBuilderDsl.of())),
+            .parent(ConstantQueryPredicate.of().constant("productProjection"))
+            .inner(fn.apply(com.commercetools.api.predicates.query.product.ProductProjectionQueryBuilderDsl.of())),
             ProductPublishedMessagePayloadQueryBuilderDsl::of);
     }
-
+    
     public StringComparisonPredicateBuilder<ProductPublishedMessagePayloadQueryBuilderDsl> scope() {
-        return new StringComparisonPredicateBuilder<>(
-            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("scope")),
-            p -> new CombinationQueryPredicate<>(p, ProductPublishedMessagePayloadQueryBuilderDsl::of));
+        return new StringComparisonPredicateBuilder<>(BinaryQueryPredicate.of().left(new ConstantQueryPredicate("scope")),
+        p -> new CombinationQueryPredicate<>(p, ProductPublishedMessagePayloadQueryBuilderDsl::of));
     }
-
+    
 }

@@ -1,16 +1,20 @@
-
 package com.commercetools.api.models.associate_role;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
+import com.commercetools.api.models.associate_role.AssociateRoleUpdateAction;
+import com.commercetools.api.models.associate_role.AssociateRoleSetNameActionImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Updating the name of an AssociateRole generates an AssociateRoleNameSet Message.</p>
@@ -22,9 +26,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     AssociateRoleSetNameAction associateRoleSetNameAction = AssociateRoleSetNameAction.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = AssociateRoleSetNameActionImpl.class)
 public interface AssociateRoleSetNameAction extends AssociateRoleUpdateAction {
 
@@ -37,7 +44,7 @@ public interface AssociateRoleSetNameAction extends AssociateRoleUpdateAction {
      *  <p>New name to set. If <code>name</code> is absent or <code>null</code>, the existing name, if any, will be removed.</p>
      * @return name
      */
-
+    
     @JsonProperty("name")
     public String getName();
 
@@ -45,16 +52,18 @@ public interface AssociateRoleSetNameAction extends AssociateRoleUpdateAction {
      *  <p>New name to set. If <code>name</code> is absent or <code>null</code>, the existing name, if any, will be removed.</p>
      * @param name value to be set
      */
-
+    
     public void setName(final String name);
+    
 
     /**
      * factory method
      * @return instance of AssociateRoleSetNameAction
      */
-    public static AssociateRoleSetNameAction of() {
+    public static AssociateRoleSetNameAction of(){
         return new AssociateRoleSetNameActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy AssociateRoleSetNameAction
@@ -89,7 +98,7 @@ public interface AssociateRoleSetNameAction extends AssociateRoleUpdateAction {
     public static AssociateRoleSetNameActionBuilder builder() {
         return AssociateRoleSetNameActionBuilder.of();
     }
-
+    
     /**
      * create builder for AssociateRoleSetNameAction instance
      * @param template instance with prefilled values for the builder
@@ -98,6 +107,7 @@ public interface AssociateRoleSetNameAction extends AssociateRoleUpdateAction {
     public static AssociateRoleSetNameActionBuilder builder(final AssociateRoleSetNameAction template) {
         return AssociateRoleSetNameActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -108,7 +118,7 @@ public interface AssociateRoleSetNameAction extends AssociateRoleUpdateAction {
     default <T> T withAssociateRoleSetNameAction(Function<AssociateRoleSetNameAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

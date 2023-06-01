@@ -1,17 +1,20 @@
-
 package com.commercetools.api.models.error;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
+import com.commercetools.api.models.error.GraphQLErrorObject;
+import com.commercetools.api.models.error.GraphQLSearchExecutionFailureErrorImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Returned when a search query could not be completed due to an unexpected failure.</p>
@@ -23,9 +26,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     GraphQLSearchExecutionFailureError graphQLSearchExecutionFailureError = GraphQLSearchExecutionFailureError.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = GraphQLSearchExecutionFailureErrorImpl.class)
 public interface GraphQLSearchExecutionFailureError extends GraphQLErrorObject {
 
@@ -42,13 +48,15 @@ public interface GraphQLSearchExecutionFailureError extends GraphQLErrorObject {
     @JsonProperty("code")
     public String getCode();
 
+
     /**
      * factory method
      * @return instance of GraphQLSearchExecutionFailureError
      */
-    public static GraphQLSearchExecutionFailureError of() {
+    public static GraphQLSearchExecutionFailureError of(){
         return new GraphQLSearchExecutionFailureErrorImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy GraphQLSearchExecutionFailureError
@@ -67,8 +75,7 @@ public interface GraphQLSearchExecutionFailureError extends GraphQLErrorObject {
      * @return copy instance
      */
     @Nullable
-    public static GraphQLSearchExecutionFailureError deepCopy(
-            @Nullable final GraphQLSearchExecutionFailureError template) {
+    public static GraphQLSearchExecutionFailureError deepCopy(@Nullable final GraphQLSearchExecutionFailureError template) {
         if (template == null) {
             return null;
         }
@@ -84,7 +91,7 @@ public interface GraphQLSearchExecutionFailureError extends GraphQLErrorObject {
     public static GraphQLSearchExecutionFailureErrorBuilder builder() {
         return GraphQLSearchExecutionFailureErrorBuilder.of();
     }
-
+    
     /**
      * create builder for GraphQLSearchExecutionFailureError instance
      * @param template instance with prefilled values for the builder
@@ -93,6 +100,7 @@ public interface GraphQLSearchExecutionFailureError extends GraphQLErrorObject {
     public static GraphQLSearchExecutionFailureErrorBuilder builder(final GraphQLSearchExecutionFailureError template) {
         return GraphQLSearchExecutionFailureErrorBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -103,7 +111,7 @@ public interface GraphQLSearchExecutionFailureError extends GraphQLErrorObject {
     default <T> T withGraphQLSearchExecutionFailureError(Function<GraphQLSearchExecutionFailureError, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

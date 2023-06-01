@@ -1,11 +1,12 @@
-
 package com.commercetools.api.models.channel;
 
+import com.commercetools.api.models.channel.ChannelUpdateAction;
+import com.commercetools.api.models.common.BaseAddress;
+import com.commercetools.api.models.channel.ChannelSetAddressAction;
+import javax.annotation.Nullable;
 import java.util.*;
 import java.util.function.Function;
-
-import javax.annotation.Nullable;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -18,57 +19,61 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     ChannelSetAddressAction channelSetAddressAction = ChannelSetAddressAction.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class ChannelSetAddressActionBuilder implements Builder<ChannelSetAddressAction> {
 
+    
     @Nullable
     private com.commercetools.api.models.common.BaseAddress address;
 
+    
     /**
      *  <p>Value to set. If empty, any existing value will be removed.</p>
      * @param builder function to build the address value
      * @return Builder
      */
-
-    public ChannelSetAddressActionBuilder address(
-            Function<com.commercetools.api.models.common.BaseAddressBuilder, com.commercetools.api.models.common.BaseAddressBuilder> builder) {
+    
+    public ChannelSetAddressActionBuilder address(Function<com.commercetools.api.models.common.BaseAddressBuilder, com.commercetools.api.models.common.BaseAddressBuilder> builder) {
         this.address = builder.apply(com.commercetools.api.models.common.BaseAddressBuilder.of()).build();
         return this;
     }
-
+    
     /**
      *  <p>Value to set. If empty, any existing value will be removed.</p>
      * @param builder function to build the address value
      * @return Builder
      */
-
-    public ChannelSetAddressActionBuilder withAddress(
-            Function<com.commercetools.api.models.common.BaseAddressBuilder, com.commercetools.api.models.common.BaseAddress> builder) {
+    
+    public ChannelSetAddressActionBuilder withAddress(Function<com.commercetools.api.models.common.BaseAddressBuilder, com.commercetools.api.models.common.BaseAddress> builder) {
         this.address = builder.apply(com.commercetools.api.models.common.BaseAddressBuilder.of());
         return this;
     }
-
+                    
     /**
      *  <p>Value to set. If empty, any existing value will be removed.</p>
      * @param address value to be set
      * @return Builder
      */
-
-    public ChannelSetAddressActionBuilder address(
-            @Nullable final com.commercetools.api.models.common.BaseAddress address) {
+    
+    public ChannelSetAddressActionBuilder address(@Nullable final com.commercetools.api.models.common.BaseAddress address) {
         this.address = address;
         return this;
     }
+    
+    
 
     /**
      *  <p>Value to set. If empty, any existing value will be removed.</p>
      * @return address
      */
-
+    
     @Nullable
-    public com.commercetools.api.models.common.BaseAddress getAddress() {
+    public com.commercetools.api.models.common.BaseAddress getAddress(){
         return this.address;
     }
 
@@ -79,7 +84,7 @@ public class ChannelSetAddressActionBuilder implements Builder<ChannelSetAddress
     public ChannelSetAddressAction build() {
         return new ChannelSetAddressActionImpl(address);
     }
-
+    
     /**
      * builds ChannelSetAddressAction without checking for non-null required values
      * @return ChannelSetAddressAction
@@ -90,7 +95,7 @@ public class ChannelSetAddressActionBuilder implements Builder<ChannelSetAddress
 
     /**
      * factory method for an instance of ChannelSetAddressActionBuilder
-     * @return builder
+     * @return builder 
      */
     public static ChannelSetAddressActionBuilder of() {
         return new ChannelSetAddressActionBuilder();

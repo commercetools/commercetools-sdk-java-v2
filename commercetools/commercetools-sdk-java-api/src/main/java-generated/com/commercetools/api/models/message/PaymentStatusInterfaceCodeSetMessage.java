@@ -1,17 +1,20 @@
-
 package com.commercetools.api.models.message;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
+import com.commercetools.api.models.message.Message;
+import com.commercetools.api.models.message.PaymentStatusInterfaceCodeSetMessageImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Generated after a successful Set StatusInterfaceCode update action.</p>
@@ -31,9 +34,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .paymentId("{paymentId}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = PaymentStatusInterfaceCodeSetMessageImpl.class)
 public interface PaymentStatusInterfaceCodeSetMessage extends Message {
 
@@ -49,12 +55,11 @@ public interface PaymentStatusInterfaceCodeSetMessage extends Message {
     @NotNull
     @JsonProperty("paymentId")
     public String getPaymentId();
-
     /**
      *  <p>The <code>interfaceCode</code> that was set during the Set StatusInterfaceCode update action.</p>
      * @return interfaceCode
      */
-
+    
     @JsonProperty("interfaceCode")
     public String getInterfaceCode();
 
@@ -62,23 +67,26 @@ public interface PaymentStatusInterfaceCodeSetMessage extends Message {
      *  <p>Unique identifier for the Payment for which the Set StatusInterfaceCode update action was applied.</p>
      * @param paymentId value to be set
      */
-
+    
     public void setPaymentId(final String paymentId);
-
+    
+    
     /**
      *  <p>The <code>interfaceCode</code> that was set during the Set StatusInterfaceCode update action.</p>
      * @param interfaceCode value to be set
      */
-
+    
     public void setInterfaceCode(final String interfaceCode);
+    
 
     /**
      * factory method
      * @return instance of PaymentStatusInterfaceCodeSetMessage
      */
-    public static PaymentStatusInterfaceCodeSetMessage of() {
+    public static PaymentStatusInterfaceCodeSetMessage of(){
         return new PaymentStatusInterfaceCodeSetMessageImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy PaymentStatusInterfaceCodeSetMessage
@@ -108,8 +116,7 @@ public interface PaymentStatusInterfaceCodeSetMessage extends Message {
      * @return copy instance
      */
     @Nullable
-    public static PaymentStatusInterfaceCodeSetMessage deepCopy(
-            @Nullable final PaymentStatusInterfaceCodeSetMessage template) {
+    public static PaymentStatusInterfaceCodeSetMessage deepCopy(@Nullable final PaymentStatusInterfaceCodeSetMessage template) {
         if (template == null) {
             return null;
         }
@@ -118,14 +125,12 @@ public interface PaymentStatusInterfaceCodeSetMessage extends Message {
         instance.setVersion(template.getVersion());
         instance.setCreatedAt(template.getCreatedAt());
         instance.setLastModifiedAt(template.getLastModifiedAt());
-        instance.setLastModifiedBy(
-            com.commercetools.api.models.common.LastModifiedBy.deepCopy(template.getLastModifiedBy()));
+        instance.setLastModifiedBy(com.commercetools.api.models.common.LastModifiedBy.deepCopy(template.getLastModifiedBy()));
         instance.setCreatedBy(com.commercetools.api.models.common.CreatedBy.deepCopy(template.getCreatedBy()));
         instance.setSequenceNumber(template.getSequenceNumber());
         instance.setResource(com.commercetools.api.models.common.Reference.deepCopy(template.getResource()));
         instance.setResourceVersion(template.getResourceVersion());
-        instance.setResourceUserProvidedIdentifiers(com.commercetools.api.models.message.UserProvidedIdentifiers
-                .deepCopy(template.getResourceUserProvidedIdentifiers()));
+        instance.setResourceUserProvidedIdentifiers(com.commercetools.api.models.message.UserProvidedIdentifiers.deepCopy(template.getResourceUserProvidedIdentifiers()));
         instance.setPaymentId(template.getPaymentId());
         instance.setInterfaceCode(template.getInterfaceCode());
         return instance;
@@ -138,16 +143,16 @@ public interface PaymentStatusInterfaceCodeSetMessage extends Message {
     public static PaymentStatusInterfaceCodeSetMessageBuilder builder() {
         return PaymentStatusInterfaceCodeSetMessageBuilder.of();
     }
-
+    
     /**
      * create builder for PaymentStatusInterfaceCodeSetMessage instance
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static PaymentStatusInterfaceCodeSetMessageBuilder builder(
-            final PaymentStatusInterfaceCodeSetMessage template) {
+    public static PaymentStatusInterfaceCodeSetMessageBuilder builder(final PaymentStatusInterfaceCodeSetMessage template) {
         return PaymentStatusInterfaceCodeSetMessageBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -158,7 +163,7 @@ public interface PaymentStatusInterfaceCodeSetMessage extends Message {
     default <T> T withPaymentStatusInterfaceCodeSetMessage(Function<PaymentStatusInterfaceCodeSetMessage, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

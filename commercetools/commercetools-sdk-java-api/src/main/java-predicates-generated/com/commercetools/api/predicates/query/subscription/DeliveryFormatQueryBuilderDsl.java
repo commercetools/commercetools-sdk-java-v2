@@ -1,11 +1,11 @@
-
 package com.commercetools.api.predicates.query.subscription;
-
-import java.util.function.Function;
 
 import com.commercetools.api.predicates.query.*;
 
-public class DeliveryFormatQueryBuilderDsl {
+import java.util.function.Function;
+
+
+public class DeliveryFormatQueryBuilderDsl  {
     public DeliveryFormatQueryBuilderDsl() {
     }
 
@@ -14,22 +14,18 @@ public class DeliveryFormatQueryBuilderDsl {
     }
 
     public StringComparisonPredicateBuilder<DeliveryFormatQueryBuilderDsl> type() {
-        return new StringComparisonPredicateBuilder<>(
-            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("type")),
-            p -> new CombinationQueryPredicate<>(p, DeliveryFormatQueryBuilderDsl::of));
+        return new StringComparisonPredicateBuilder<>(BinaryQueryPredicate.of().left(new ConstantQueryPredicate("type")),
+        p -> new CombinationQueryPredicate<>(p, DeliveryFormatQueryBuilderDsl::of));
     }
-
+    
     public CombinationQueryPredicate<DeliveryFormatQueryBuilderDsl> asCloudEvents(
-            Function<com.commercetools.api.predicates.query.subscription.CloudEventsFormatQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.subscription.CloudEventsFormatQueryBuilderDsl>> fn) {
-        return new CombinationQueryPredicate<>(
-            fn.apply(com.commercetools.api.predicates.query.subscription.CloudEventsFormatQueryBuilderDsl.of()),
+        Function<com.commercetools.api.predicates.query.subscription.CloudEventsFormatQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.subscription.CloudEventsFormatQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(fn.apply(com.commercetools.api.predicates.query.subscription.CloudEventsFormatQueryBuilderDsl.of()),
             DeliveryFormatQueryBuilderDsl::of);
     }
-
     public CombinationQueryPredicate<DeliveryFormatQueryBuilderDsl> asPlatform(
-            Function<com.commercetools.api.predicates.query.subscription.PlatformFormatQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.subscription.PlatformFormatQueryBuilderDsl>> fn) {
-        return new CombinationQueryPredicate<>(
-            fn.apply(com.commercetools.api.predicates.query.subscription.PlatformFormatQueryBuilderDsl.of()),
+        Function<com.commercetools.api.predicates.query.subscription.PlatformFormatQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.subscription.PlatformFormatQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(fn.apply(com.commercetools.api.predicates.query.subscription.PlatformFormatQueryBuilderDsl.of()),
             DeliveryFormatQueryBuilderDsl::of);
     }
 }

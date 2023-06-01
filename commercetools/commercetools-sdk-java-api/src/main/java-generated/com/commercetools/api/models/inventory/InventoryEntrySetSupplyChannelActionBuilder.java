@@ -1,11 +1,12 @@
-
 package com.commercetools.api.models.inventory;
 
+import com.commercetools.api.models.channel.ChannelResourceIdentifier;
+import com.commercetools.api.models.inventory.InventoryEntryUpdateAction;
+import com.commercetools.api.models.inventory.InventoryEntrySetSupplyChannelAction;
+import javax.annotation.Nullable;
 import java.util.*;
 import java.util.function.Function;
-
-import javax.annotation.Nullable;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -18,58 +19,61 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     InventoryEntrySetSupplyChannelAction inventoryEntrySetSupplyChannelAction = InventoryEntrySetSupplyChannelAction.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class InventoryEntrySetSupplyChannelActionBuilder implements Builder<InventoryEntrySetSupplyChannelAction> {
 
+    
     @Nullable
     private com.commercetools.api.models.channel.ChannelResourceIdentifier supplyChannel;
 
+    
     /**
      *  <p>Value to set. If empty, any existing value will be removed.</p>
      * @param builder function to build the supplyChannel value
      * @return Builder
      */
-
-    public InventoryEntrySetSupplyChannelActionBuilder supplyChannel(
-            Function<com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder, com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder> builder) {
-        this.supplyChannel = builder.apply(com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder.of())
-                .build();
+    
+    public InventoryEntrySetSupplyChannelActionBuilder supplyChannel(Function<com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder, com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder> builder) {
+        this.supplyChannel = builder.apply(com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder.of()).build();
         return this;
     }
-
+    
     /**
      *  <p>Value to set. If empty, any existing value will be removed.</p>
      * @param builder function to build the supplyChannel value
      * @return Builder
      */
-
-    public InventoryEntrySetSupplyChannelActionBuilder withSupplyChannel(
-            Function<com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder, com.commercetools.api.models.channel.ChannelResourceIdentifier> builder) {
+    
+    public InventoryEntrySetSupplyChannelActionBuilder withSupplyChannel(Function<com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder, com.commercetools.api.models.channel.ChannelResourceIdentifier> builder) {
         this.supplyChannel = builder.apply(com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder.of());
         return this;
     }
-
+                    
     /**
      *  <p>Value to set. If empty, any existing value will be removed.</p>
      * @param supplyChannel value to be set
      * @return Builder
      */
-
-    public InventoryEntrySetSupplyChannelActionBuilder supplyChannel(
-            @Nullable final com.commercetools.api.models.channel.ChannelResourceIdentifier supplyChannel) {
+    
+    public InventoryEntrySetSupplyChannelActionBuilder supplyChannel(@Nullable final com.commercetools.api.models.channel.ChannelResourceIdentifier supplyChannel) {
         this.supplyChannel = supplyChannel;
         return this;
     }
+    
+    
 
     /**
      *  <p>Value to set. If empty, any existing value will be removed.</p>
      * @return supplyChannel
      */
-
+    
     @Nullable
-    public com.commercetools.api.models.channel.ChannelResourceIdentifier getSupplyChannel() {
+    public com.commercetools.api.models.channel.ChannelResourceIdentifier getSupplyChannel(){
         return this.supplyChannel;
     }
 
@@ -80,7 +84,7 @@ public class InventoryEntrySetSupplyChannelActionBuilder implements Builder<Inve
     public InventoryEntrySetSupplyChannelAction build() {
         return new InventoryEntrySetSupplyChannelActionImpl(supplyChannel);
     }
-
+    
     /**
      * builds InventoryEntrySetSupplyChannelAction without checking for non-null required values
      * @return InventoryEntrySetSupplyChannelAction
@@ -91,7 +95,7 @@ public class InventoryEntrySetSupplyChannelActionBuilder implements Builder<Inve
 
     /**
      * factory method for an instance of InventoryEntrySetSupplyChannelActionBuilder
-     * @return builder
+     * @return builder 
      */
     public static InventoryEntrySetSupplyChannelActionBuilder of() {
         return new InventoryEntrySetSupplyChannelActionBuilder();

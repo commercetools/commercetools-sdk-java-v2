@@ -1,9 +1,12 @@
-
 package com.commercetools.api.models.message;
 
+import com.commercetools.api.models.message.MessagePayload;
+import com.commercetools.api.models.product.ProductVariant;
+import com.commercetools.api.models.message.ProductVariantAddedMessagePayload;
+import javax.annotation.Nullable;
 import java.util.*;
 import java.util.function.Function;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -18,77 +21,89 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .staged(true)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class ProductVariantAddedMessagePayloadBuilder implements Builder<ProductVariantAddedMessagePayload> {
 
+    
+    
     private com.commercetools.api.models.product.ProductVariant variant;
-
+    
+    
+    
     private Boolean staged;
 
+    
     /**
      *  <p>Unique identifier of the Product Variant that was added.</p>
      * @param builder function to build the variant value
      * @return Builder
      */
-
-    public ProductVariantAddedMessagePayloadBuilder variant(
-            Function<com.commercetools.api.models.product.ProductVariantBuilder, com.commercetools.api.models.product.ProductVariantBuilder> builder) {
+    
+    public ProductVariantAddedMessagePayloadBuilder variant(Function<com.commercetools.api.models.product.ProductVariantBuilder, com.commercetools.api.models.product.ProductVariantBuilder> builder) {
         this.variant = builder.apply(com.commercetools.api.models.product.ProductVariantBuilder.of()).build();
         return this;
     }
-
+    
     /**
      *  <p>Unique identifier of the Product Variant that was added.</p>
      * @param builder function to build the variant value
      * @return Builder
      */
-
-    public ProductVariantAddedMessagePayloadBuilder withVariant(
-            Function<com.commercetools.api.models.product.ProductVariantBuilder, com.commercetools.api.models.product.ProductVariant> builder) {
+    
+    public ProductVariantAddedMessagePayloadBuilder withVariant(Function<com.commercetools.api.models.product.ProductVariantBuilder, com.commercetools.api.models.product.ProductVariant> builder) {
         this.variant = builder.apply(com.commercetools.api.models.product.ProductVariantBuilder.of());
         return this;
     }
-
+                    
     /**
      *  <p>Unique identifier of the Product Variant that was added.</p>
      * @param variant value to be set
      * @return Builder
      */
-
-    public ProductVariantAddedMessagePayloadBuilder variant(
-            final com.commercetools.api.models.product.ProductVariant variant) {
+    
+    public ProductVariantAddedMessagePayloadBuilder variant( final com.commercetools.api.models.product.ProductVariant variant) {
         this.variant = variant;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Whether the update was only applied to the staged Product Projection.</p>
      * @param staged value to be set
      * @return Builder
      */
-
-    public ProductVariantAddedMessagePayloadBuilder staged(final Boolean staged) {
+    
+    public ProductVariantAddedMessagePayloadBuilder staged( final Boolean staged) {
         this.staged = staged;
         return this;
     }
+    
+    
 
     /**
      *  <p>Unique identifier of the Product Variant that was added.</p>
      * @return variant
      */
-
-    public com.commercetools.api.models.product.ProductVariant getVariant() {
+    
+    
+    public com.commercetools.api.models.product.ProductVariant getVariant(){
         return this.variant;
     }
-
+    
     /**
      *  <p>Whether the update was only applied to the staged Product Projection.</p>
      * @return staged
      */
-
-    public Boolean getStaged() {
+    
+    
+    public Boolean getStaged(){
         return this.staged;
     }
 
@@ -101,7 +116,7 @@ public class ProductVariantAddedMessagePayloadBuilder implements Builder<Product
         Objects.requireNonNull(staged, ProductVariantAddedMessagePayload.class + ": staged is missing");
         return new ProductVariantAddedMessagePayloadImpl(variant, staged);
     }
-
+    
     /**
      * builds ProductVariantAddedMessagePayload without checking for non-null required values
      * @return ProductVariantAddedMessagePayload
@@ -112,7 +127,7 @@ public class ProductVariantAddedMessagePayloadBuilder implements Builder<Product
 
     /**
      * factory method for an instance of ProductVariantAddedMessagePayloadBuilder
-     * @return builder
+     * @return builder 
      */
     public static ProductVariantAddedMessagePayloadBuilder of() {
         return new ProductVariantAddedMessagePayloadBuilder();

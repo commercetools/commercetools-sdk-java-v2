@@ -1,10 +1,11 @@
-
 package com.commercetools.api.models.order_edit;
 
-import java.util.*;
-
+import com.commercetools.api.models.order_edit.OrderEditUpdateAction;
+import com.commercetools.api.models.order_edit.OrderEditSetCommentAction;
 import javax.annotation.Nullable;
-
+import java.util.*;
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -17,32 +18,39 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     OrderEditSetCommentAction orderEditSetCommentAction = OrderEditSetCommentAction.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class OrderEditSetCommentActionBuilder implements Builder<OrderEditSetCommentAction> {
 
+    
     @Nullable
     private String comment;
 
+    
     /**
      * set the value to the comment
      * @param comment value to be set
      * @return Builder
      */
-
+    
     public OrderEditSetCommentActionBuilder comment(@Nullable final String comment) {
         this.comment = comment;
         return this;
     }
+    
+    
 
     /**
      * value of comment}
      * @return comment
      */
-
+    
     @Nullable
-    public String getComment() {
+    public String getComment(){
         return this.comment;
     }
 
@@ -53,7 +61,7 @@ public class OrderEditSetCommentActionBuilder implements Builder<OrderEditSetCom
     public OrderEditSetCommentAction build() {
         return new OrderEditSetCommentActionImpl(comment);
     }
-
+    
     /**
      * builds OrderEditSetCommentAction without checking for non-null required values
      * @return OrderEditSetCommentAction
@@ -64,7 +72,7 @@ public class OrderEditSetCommentActionBuilder implements Builder<OrderEditSetCom
 
     /**
      * factory method for an instance of OrderEditSetCommentActionBuilder
-     * @return builder
+     * @return builder 
      */
     public static OrderEditSetCommentActionBuilder of() {
         return new OrderEditSetCommentActionBuilder();

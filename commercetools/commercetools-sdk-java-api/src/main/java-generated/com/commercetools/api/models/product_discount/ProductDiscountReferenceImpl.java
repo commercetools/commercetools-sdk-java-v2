@@ -1,43 +1,51 @@
-
 package com.commercetools.api.models.product_discount;
 
-import java.time.*;
-import java.util.*;
-
+import com.commercetools.api.models.common.Reference;
 import com.commercetools.api.models.common.ReferenceTypeId;
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
-
-import io.vrap.rmf.base.client.ModelBase;
+import com.commercetools.api.models.product_discount.ProductDiscount;
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.ModelBase;
+import javax.validation.Valid;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.annotation.*;
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
  *  <p>Reference to a ProductDiscount.</p>
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class ProductDiscountReferenceImpl implements ProductDiscountReference, ModelBase {
 
+    
     private com.commercetools.api.models.common.ReferenceTypeId typeId;
-
+    
+    
     private String id;
-
+    
+    
     private com.commercetools.api.models.product_discount.ProductDiscount obj;
 
     /**
      * create instance with all properties
      */
     @JsonCreator
-    ProductDiscountReferenceImpl(@JsonProperty("id") final String id,
-            @JsonProperty("obj") final com.commercetools.api.models.product_discount.ProductDiscount obj) {
+    ProductDiscountReferenceImpl(@JsonProperty("id") final String id, @JsonProperty("obj") final com.commercetools.api.models.product_discount.ProductDiscount obj) {
         this.id = id;
         this.obj = obj;
         this.typeId = ReferenceTypeId.findEnum("product-discount");
     }
-
     /**
      * create empty instance
      */
@@ -48,51 +56,59 @@ public class ProductDiscountReferenceImpl implements ProductDiscountReference, M
     /**
      *  <p>Type of referenced resource.</p>
      */
-
-    public com.commercetools.api.models.common.ReferenceTypeId getTypeId() {
+    
+    public com.commercetools.api.models.common.ReferenceTypeId getTypeId(){
         return this.typeId;
     }
-
+    
     /**
      *  <p>Unique identifier of the referenced ProductDiscount.</p>
      */
-
-    public String getId() {
+    
+    public String getId(){
         return this.id;
     }
-
+    
     /**
      *  <p>Contains the representation of the expanded ProductDiscount. Only present in responses to requests with Reference Expansion for ProductDiscounts.</p>
      */
-
-    public com.commercetools.api.models.product_discount.ProductDiscount getObj() {
+    
+    public com.commercetools.api.models.product_discount.ProductDiscount getObj(){
         return this.obj;
     }
 
-    public void setId(final String id) {
+    
+    public void setId(final String id){
         this.id = id;
     }
-
-    public void setObj(final com.commercetools.api.models.product_discount.ProductDiscount obj) {
+    
+    
+    public void setObj(final com.commercetools.api.models.product_discount.ProductDiscount obj){
         this.obj = obj;
     }
 
     @Override
     public boolean equals(Object o) {
-        if (this == o)
-            return true;
-
-        if (o == null || getClass() != o.getClass())
-            return false;
-
+        if (this == o) return true;
+    
+        if (o == null || getClass() != o.getClass()) return false;
+    
         ProductDiscountReferenceImpl that = (ProductDiscountReferenceImpl) o;
-
-        return new EqualsBuilder().append(typeId, that.typeId).append(id, that.id).append(obj, that.obj).isEquals();
+    
+        return new EqualsBuilder()
+                .append(typeId, that.typeId)
+                .append(id, that.id)
+                .append(obj, that.obj)
+                .isEquals();
     }
-
+    
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(typeId).append(id).append(obj).toHashCode();
+        return new HashCodeBuilder(17, 37)
+            .append(typeId)
+            .append(id)
+            .append(obj)
+            .toHashCode();
     }
 
 }

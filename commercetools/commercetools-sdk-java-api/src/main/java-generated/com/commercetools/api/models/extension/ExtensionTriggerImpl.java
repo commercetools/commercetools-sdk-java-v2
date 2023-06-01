@@ -1,44 +1,50 @@
-
 package com.commercetools.api.models.extension;
 
-import java.time.*;
-import java.util.*;
-
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
-
-import io.vrap.rmf.base.client.ModelBase;
+import com.commercetools.api.models.extension.ExtensionAction;
+import com.commercetools.api.models.extension.ExtensionResourceTypeId;
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.ModelBase;
+import javax.validation.Valid;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.annotation.*;
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
  * ExtensionTrigger
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class ExtensionTriggerImpl implements ExtensionTrigger, ModelBase {
 
+    
     private com.commercetools.api.models.extension.ExtensionResourceTypeId resourceTypeId;
-
+    
+    
     private java.util.List<com.commercetools.api.models.extension.ExtensionAction> actions;
-
+    
+    
     private String condition;
 
     /**
      * create instance with all properties
      */
     @JsonCreator
-    ExtensionTriggerImpl(
-            @JsonProperty("resourceTypeId") final com.commercetools.api.models.extension.ExtensionResourceTypeId resourceTypeId,
-            @JsonProperty("actions") final java.util.List<com.commercetools.api.models.extension.ExtensionAction> actions,
-            @JsonProperty("condition") final String condition) {
+    ExtensionTriggerImpl(@JsonProperty("resourceTypeId") final com.commercetools.api.models.extension.ExtensionResourceTypeId resourceTypeId, @JsonProperty("actions") final java.util.List<com.commercetools.api.models.extension.ExtensionAction> actions, @JsonProperty("condition") final String condition) {
         this.resourceTypeId = resourceTypeId;
         this.actions = actions;
         this.condition = condition;
     }
-
     /**
      * create empty instance
      */
@@ -48,62 +54,69 @@ public class ExtensionTriggerImpl implements ExtensionTrigger, ModelBase {
     /**
      *  <p><code>cart</code>, <code>order</code>, <code>payment</code>, <code>customer</code>, <code>quote-request</code>, <code>staged-quote</code>, <code>quote</code>, and <code>business-unit</code> are supported.</p>
      */
-
-    public com.commercetools.api.models.extension.ExtensionResourceTypeId getResourceTypeId() {
+    
+    public com.commercetools.api.models.extension.ExtensionResourceTypeId getResourceTypeId(){
         return this.resourceTypeId;
     }
-
+    
     /**
      *  <p><code>Create</code> and <code>Update</code> requests are supported.</p>
      */
-
-    public java.util.List<com.commercetools.api.models.extension.ExtensionAction> getActions() {
+    
+    public java.util.List<com.commercetools.api.models.extension.ExtensionAction> getActions(){
         return this.actions;
     }
-
+    
     /**
      *  <p>Valid predicate that controls the conditions under which the API Extension is called. The Extension is not triggered when the specified condition is not fulfilled.</p>
      */
-
-    public String getCondition() {
+    
+    public String getCondition(){
         return this.condition;
     }
 
-    public void setResourceTypeId(final com.commercetools.api.models.extension.ExtensionResourceTypeId resourceTypeId) {
+    
+    public void setResourceTypeId(final com.commercetools.api.models.extension.ExtensionResourceTypeId resourceTypeId){
         this.resourceTypeId = resourceTypeId;
     }
-
-    public void setActions(final com.commercetools.api.models.extension.ExtensionAction... actions) {
-        this.actions = new ArrayList<>(Arrays.asList(actions));
+    
+    
+    public void setActions(final com.commercetools.api.models.extension.ExtensionAction ...actions){
+       this.actions = new ArrayList<>(Arrays.asList(actions));
     }
-
-    public void setActions(final java.util.List<com.commercetools.api.models.extension.ExtensionAction> actions) {
-        this.actions = actions;
+    
+    
+    public void setActions(final java.util.List<com.commercetools.api.models.extension.ExtensionAction> actions){
+       this.actions = actions;
     }
-
-    public void setCondition(final String condition) {
+    
+    
+    public void setCondition(final String condition){
         this.condition = condition;
     }
 
     @Override
     public boolean equals(Object o) {
-        if (this == o)
-            return true;
-
-        if (o == null || getClass() != o.getClass())
-            return false;
-
+        if (this == o) return true;
+    
+        if (o == null || getClass() != o.getClass()) return false;
+    
         ExtensionTriggerImpl that = (ExtensionTriggerImpl) o;
-
-        return new EqualsBuilder().append(resourceTypeId, that.resourceTypeId)
+    
+        return new EqualsBuilder()
+                .append(resourceTypeId, that.resourceTypeId)
                 .append(actions, that.actions)
                 .append(condition, that.condition)
                 .isEquals();
     }
-
+    
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(resourceTypeId).append(actions).append(condition).toHashCode();
+        return new HashCodeBuilder(17, 37)
+            .append(resourceTypeId)
+            .append(actions)
+            .append(condition)
+            .toHashCode();
     }
 
 }

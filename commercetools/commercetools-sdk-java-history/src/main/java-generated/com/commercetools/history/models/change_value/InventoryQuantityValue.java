@@ -1,17 +1,20 @@
-
 package com.commercetools.history.models.change_value;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
 
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
+import com.commercetools.history.models.change_value.InventoryQuantityValueImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * InventoryQuantityValue
@@ -25,11 +28,15 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .availableQuantity(1)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = InventoryQuantityValueImpl.class)
-public interface InventoryQuantityValue {
+public interface InventoryQuantityValue  {
+
 
     /**
      *
@@ -38,7 +45,6 @@ public interface InventoryQuantityValue {
     @NotNull
     @JsonProperty("quantityOnStock")
     public Integer getQuantityOnStock();
-
     /**
      *
      * @return availableQuantity
@@ -51,23 +57,26 @@ public interface InventoryQuantityValue {
      * set quantityOnStock
      * @param quantityOnStock value to be set
      */
-
+    
     public void setQuantityOnStock(final Integer quantityOnStock);
-
+    
+    
     /**
      * set availableQuantity
      * @param availableQuantity value to be set
      */
-
+    
     public void setAvailableQuantity(final Integer availableQuantity);
+    
 
     /**
      * factory method
      * @return instance of InventoryQuantityValue
      */
-    public static InventoryQuantityValue of() {
+    public static InventoryQuantityValue of(){
         return new InventoryQuantityValueImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy InventoryQuantityValue
@@ -104,7 +113,7 @@ public interface InventoryQuantityValue {
     public static InventoryQuantityValueBuilder builder() {
         return InventoryQuantityValueBuilder.of();
     }
-
+    
     /**
      * create builder for InventoryQuantityValue instance
      * @param template instance with prefilled values for the builder
@@ -113,6 +122,7 @@ public interface InventoryQuantityValue {
     public static InventoryQuantityValueBuilder builder(final InventoryQuantityValue template) {
         return InventoryQuantityValueBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -123,7 +133,7 @@ public interface InventoryQuantityValue {
     default <T> T withInventoryQuantityValue(Function<InventoryQuantityValue, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

@@ -1,20 +1,23 @@
-
 package com.commercetools.api.models.error;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-import java.util.stream.Collectors;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
 import com.commercetools.api.models.common.LocalizedString;
+import com.commercetools.api.models.error.ErrorObject;
+import com.commercetools.api.models.error.ExtensionError;
+import java.lang.Object;
+import com.commercetools.api.models.error.ExtensionBadResponseErrorImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Returned when the response from the API Extension could not be parsed successfully (such as a <code>500</code> HTTP status code, or an invalid JSON response).</p>
@@ -29,9 +32,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .extensionId("{extensionId}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = ExtensionBadResponseErrorImpl.class)
 public interface ExtensionBadResponseError extends ErrorObject {
 
@@ -47,7 +53,6 @@ public interface ExtensionBadResponseError extends ErrorObject {
     @NotNull
     @JsonProperty("code")
     public String getCode();
-
     /**
      *  <p>Description of the invalid Extension response. For example, <code>"The extension did not return the expected JSON."</code>.</p>
      * @return message
@@ -55,7 +60,6 @@ public interface ExtensionBadResponseError extends ErrorObject {
     @NotNull
     @JsonProperty("message")
     public String getMessage();
-
     /**
      *  <p>User-defined localized description of the error.</p>
      * @return localizedMessage
@@ -63,7 +67,6 @@ public interface ExtensionBadResponseError extends ErrorObject {
     @Valid
     @JsonProperty("localizedMessage")
     public LocalizedString getLocalizedMessage();
-
     /**
      *  <p>Any information that should be returned to the API caller.</p>
      * @return extensionExtraInfo
@@ -71,7 +74,6 @@ public interface ExtensionBadResponseError extends ErrorObject {
     @Valid
     @JsonProperty("extensionExtraInfo")
     public Object getExtensionExtraInfo();
-
     /**
      *  <p>Additional errors related to the API Extension.</p>
      * @return extensionErrors
@@ -80,23 +82,20 @@ public interface ExtensionBadResponseError extends ErrorObject {
     @Valid
     @JsonProperty("extensionErrors")
     public List<ExtensionError> getExtensionErrors();
-
     /**
      *  <p>The response body returned by the Extension.</p>
      * @return extensionBody
      */
-
+    
     @JsonProperty("extensionBody")
     public String getExtensionBody();
-
     /**
      *  <p>Http status code returned by the Extension.</p>
      * @return extensionStatusCode
      */
-
+    
     @JsonProperty("extensionStatusCode")
     public Integer getExtensionStatusCode();
-
     /**
      *  <p>Unique identifier of the Extension.</p>
      * @return extensionId
@@ -104,12 +103,11 @@ public interface ExtensionBadResponseError extends ErrorObject {
     @NotNull
     @JsonProperty("extensionId")
     public String getExtensionId();
-
     /**
      *  <p>User-defined unique identifier of the Extension.</p>
      * @return extensionKey
      */
-
+    
     @JsonProperty("extensionKey")
     public String getExtensionKey();
 
@@ -117,73 +115,80 @@ public interface ExtensionBadResponseError extends ErrorObject {
      *  <p>Description of the invalid Extension response. For example, <code>"The extension did not return the expected JSON."</code>.</p>
      * @param message value to be set
      */
-
+    
     public void setMessage(final String message);
-
+    
+    
     /**
      *  <p>User-defined localized description of the error.</p>
      * @param localizedMessage value to be set
      */
-
+    
     public void setLocalizedMessage(final LocalizedString localizedMessage);
-
+    
+    
     /**
      *  <p>Any information that should be returned to the API caller.</p>
      * @param extensionExtraInfo value to be set
      */
-
+    
     public void setExtensionExtraInfo(final Object extensionExtraInfo);
-
+    
+    
     /**
      *  <p>Additional errors related to the API Extension.</p>
      * @param extensionErrors values to be set
      */
-
+    
     @JsonIgnore
-    public void setExtensionErrors(final ExtensionError... extensionErrors);
-
+    public void setExtensionErrors(final ExtensionError ...extensionErrors);
     /**
      *  <p>Additional errors related to the API Extension.</p>
      * @param extensionErrors values to be set
      */
-
+    
     public void setExtensionErrors(final List<ExtensionError> extensionErrors);
-
+    
     /**
      *  <p>The response body returned by the Extension.</p>
      * @param extensionBody value to be set
      */
-
+    
     public void setExtensionBody(final String extensionBody);
-
+    
+    
     /**
      *  <p>Http status code returned by the Extension.</p>
      * @param extensionStatusCode value to be set
      */
-
+    
     public void setExtensionStatusCode(final Integer extensionStatusCode);
-
+    
+    
     /**
      *  <p>Unique identifier of the Extension.</p>
      * @param extensionId value to be set
      */
-
+    
     public void setExtensionId(final String extensionId);
-
+    
+    
     /**
      *  <p>User-defined unique identifier of the Extension.</p>
      * @param extensionKey value to be set
      */
-
+    
     public void setExtensionKey(final String extensionKey);
+    
 
     /**
      * factory method
      * @return instance of ExtensionBadResponseError
      */
-    public static ExtensionBadResponseError of() {
+    public static ExtensionBadResponseError of(){
         return new ExtensionBadResponseErrorImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy ExtensionBadResponseError
@@ -217,13 +222,10 @@ public interface ExtensionBadResponseError extends ErrorObject {
         ExtensionBadResponseErrorImpl instance = new ExtensionBadResponseErrorImpl();
         instance.setMessage(template.getMessage());
         Optional.ofNullable(template.values()).ifPresent(t -> t.forEach(instance::setValue));
-        instance.setLocalizedMessage(
-            com.commercetools.api.models.common.LocalizedString.deepCopy(template.getLocalizedMessage()));
+        instance.setLocalizedMessage(com.commercetools.api.models.common.LocalizedString.deepCopy(template.getLocalizedMessage()));
         instance.setExtensionExtraInfo(template.getExtensionExtraInfo());
         instance.setExtensionErrors(Optional.ofNullable(template.getExtensionErrors())
-                .map(t -> t.stream()
-                        .map(com.commercetools.api.models.error.ExtensionError::deepCopy)
-                        .collect(Collectors.toList()))
+                .map(t -> t.stream().map(com.commercetools.api.models.error.ExtensionError::deepCopy).collect(Collectors.toList()))
                 .orElse(null));
         instance.setExtensionBody(template.getExtensionBody());
         instance.setExtensionStatusCode(template.getExtensionStatusCode());
@@ -239,7 +241,7 @@ public interface ExtensionBadResponseError extends ErrorObject {
     public static ExtensionBadResponseErrorBuilder builder() {
         return ExtensionBadResponseErrorBuilder.of();
     }
-
+    
     /**
      * create builder for ExtensionBadResponseError instance
      * @param template instance with prefilled values for the builder
@@ -248,6 +250,7 @@ public interface ExtensionBadResponseError extends ErrorObject {
     public static ExtensionBadResponseErrorBuilder builder(final ExtensionBadResponseError template) {
         return ExtensionBadResponseErrorBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -258,7 +261,7 @@ public interface ExtensionBadResponseError extends ErrorObject {
     default <T> T withExtensionBadResponseError(Function<ExtensionBadResponseError, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

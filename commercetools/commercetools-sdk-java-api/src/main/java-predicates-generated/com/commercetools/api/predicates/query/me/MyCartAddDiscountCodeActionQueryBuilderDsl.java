@@ -1,9 +1,11 @@
-
 package com.commercetools.api.predicates.query.me;
 
 import com.commercetools.api.predicates.query.*;
 
-public class MyCartAddDiscountCodeActionQueryBuilderDsl {
+import java.util.function.Function;
+
+
+public class MyCartAddDiscountCodeActionQueryBuilderDsl  {
     public MyCartAddDiscountCodeActionQueryBuilderDsl() {
     }
 
@@ -12,15 +14,12 @@ public class MyCartAddDiscountCodeActionQueryBuilderDsl {
     }
 
     public StringComparisonPredicateBuilder<MyCartAddDiscountCodeActionQueryBuilderDsl> action() {
-        return new StringComparisonPredicateBuilder<>(
-            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("action")),
-            p -> new CombinationQueryPredicate<>(p, MyCartAddDiscountCodeActionQueryBuilderDsl::of));
+        return new StringComparisonPredicateBuilder<>(BinaryQueryPredicate.of().left(new ConstantQueryPredicate("action")),
+        p -> new CombinationQueryPredicate<>(p, MyCartAddDiscountCodeActionQueryBuilderDsl::of));
     }
-
     public StringComparisonPredicateBuilder<MyCartAddDiscountCodeActionQueryBuilderDsl> code() {
-        return new StringComparisonPredicateBuilder<>(
-            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("code")),
-            p -> new CombinationQueryPredicate<>(p, MyCartAddDiscountCodeActionQueryBuilderDsl::of));
+        return new StringComparisonPredicateBuilder<>(BinaryQueryPredicate.of().left(new ConstantQueryPredicate("code")),
+        p -> new CombinationQueryPredicate<>(p, MyCartAddDiscountCodeActionQueryBuilderDsl::of));
     }
-
+    
 }

@@ -1,8 +1,11 @@
-
 package com.commercetools.api.models.subscription;
 
+import com.commercetools.api.models.subscription.Destination;
+import com.commercetools.api.models.subscription.AzureServiceBusDestination;
+import javax.annotation.Nullable;
 import java.util.*;
-
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -16,30 +19,39 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .connectionString("{connectionString}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class AzureServiceBusDestinationBuilder implements Builder<AzureServiceBusDestination> {
 
+    
+    
     private String connectionString;
 
+    
     /**
      *  <p>SharedAccessKey is partially hidden on retrieval for security reasons.</p>
      * @param connectionString value to be set
      * @return Builder
      */
-
-    public AzureServiceBusDestinationBuilder connectionString(final String connectionString) {
+    
+    public AzureServiceBusDestinationBuilder connectionString( final String connectionString) {
         this.connectionString = connectionString;
         return this;
     }
+    
+    
 
     /**
      *  <p>SharedAccessKey is partially hidden on retrieval for security reasons.</p>
      * @return connectionString
      */
-
-    public String getConnectionString() {
+    
+    
+    public String getConnectionString(){
         return this.connectionString;
     }
 
@@ -51,7 +63,7 @@ public class AzureServiceBusDestinationBuilder implements Builder<AzureServiceBu
         Objects.requireNonNull(connectionString, AzureServiceBusDestination.class + ": connectionString is missing");
         return new AzureServiceBusDestinationImpl(connectionString);
     }
-
+    
     /**
      * builds AzureServiceBusDestination without checking for non-null required values
      * @return AzureServiceBusDestination
@@ -62,7 +74,7 @@ public class AzureServiceBusDestinationBuilder implements Builder<AzureServiceBu
 
     /**
      * factory method for an instance of AzureServiceBusDestinationBuilder
-     * @return builder
+     * @return builder 
      */
     public static AzureServiceBusDestinationBuilder of() {
         return new AzureServiceBusDestinationBuilder();

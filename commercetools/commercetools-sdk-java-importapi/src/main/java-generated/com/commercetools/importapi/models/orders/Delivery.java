@@ -1,21 +1,23 @@
-
 package com.commercetools.importapi.models.orders;
 
-import java.time.*;
-import java.time.ZonedDateTime;
-import java.util.*;
-import java.util.function.Function;
-import java.util.stream.Collectors;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
 import com.commercetools.importapi.models.common.Address;
+import com.commercetools.importapi.models.orders.DeliveryItem;
+import com.commercetools.importapi.models.orders.Parcel;
+import java.time.ZonedDateTime;
+import com.commercetools.importapi.models.orders.DeliveryImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * Delivery
@@ -31,11 +33,15 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .plusParcels(parcelsBuilder -> parcelsBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = DeliveryImpl.class)
-public interface Delivery {
+public interface Delivery  {
+
 
     /**
      *
@@ -44,7 +50,6 @@ public interface Delivery {
     @NotNull
     @JsonProperty("id")
     public String getId();
-
     /**
      *
      * @return createdAt
@@ -52,7 +57,6 @@ public interface Delivery {
     @NotNull
     @JsonProperty("createdAt")
     public ZonedDateTime getCreatedAt();
-
     /**
      *
      * @return items
@@ -61,7 +65,6 @@ public interface Delivery {
     @Valid
     @JsonProperty("items")
     public List<DeliveryItem> getItems();
-
     /**
      *
      * @return parcels
@@ -70,7 +73,6 @@ public interface Delivery {
     @Valid
     @JsonProperty("parcels")
     public List<Parcel> getParcels();
-
     /**
      *
      * @return address
@@ -83,60 +85,62 @@ public interface Delivery {
      * set id
      * @param id value to be set
      */
-
+    
     public void setId(final String id);
-
+    
+    
     /**
      * set createdAt
      * @param createdAt value to be set
      */
-
+    
     public void setCreatedAt(final ZonedDateTime createdAt);
-
+    
+    
     /**
      * set items
      * @param items values to be set
      */
-
+    
     @JsonIgnore
-    public void setItems(final DeliveryItem... items);
-
+    public void setItems(final DeliveryItem ...items);
     /**
      * set items
      * @param items values to be set
      */
-
+    
     public void setItems(final List<DeliveryItem> items);
-
+    
     /**
      * set parcels
      * @param parcels values to be set
      */
-
+    
     @JsonIgnore
-    public void setParcels(final Parcel... parcels);
-
+    public void setParcels(final Parcel ...parcels);
     /**
      * set parcels
      * @param parcels values to be set
      */
-
+    
     public void setParcels(final List<Parcel> parcels);
-
+    
     /**
      * set address
      * @param address value to be set
      */
-
+    
     public void setAddress(final Address address);
+    
 
     /**
      * factory method
      * @return instance of Delivery
      */
-    public static Delivery of() {
+    public static Delivery of(){
         return new DeliveryImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy Delivery
@@ -167,14 +171,10 @@ public interface Delivery {
         instance.setId(template.getId());
         instance.setCreatedAt(template.getCreatedAt());
         instance.setItems(Optional.ofNullable(template.getItems())
-                .map(t -> t.stream()
-                        .map(com.commercetools.importapi.models.orders.DeliveryItem::deepCopy)
-                        .collect(Collectors.toList()))
+                .map(t -> t.stream().map(com.commercetools.importapi.models.orders.DeliveryItem::deepCopy).collect(Collectors.toList()))
                 .orElse(null));
         instance.setParcels(Optional.ofNullable(template.getParcels())
-                .map(t -> t.stream()
-                        .map(com.commercetools.importapi.models.orders.Parcel::deepCopy)
-                        .collect(Collectors.toList()))
+                .map(t -> t.stream().map(com.commercetools.importapi.models.orders.Parcel::deepCopy).collect(Collectors.toList()))
                 .orElse(null));
         instance.setAddress(com.commercetools.importapi.models.common.Address.deepCopy(template.getAddress()));
         return instance;
@@ -187,7 +187,7 @@ public interface Delivery {
     public static DeliveryBuilder builder() {
         return DeliveryBuilder.of();
     }
-
+    
     /**
      * create builder for Delivery instance
      * @param template instance with prefilled values for the builder
@@ -196,6 +196,7 @@ public interface Delivery {
     public static DeliveryBuilder builder(final Delivery template) {
         return DeliveryBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -206,7 +207,7 @@ public interface Delivery {
     default <T> T withDelivery(Function<Delivery, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

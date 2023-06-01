@@ -1,18 +1,20 @@
-
 package com.commercetools.history.models.common;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
+import com.commercetools.history.models.common.ProductVariantChannelAvailabilityMap;
+import com.commercetools.history.models.common.ProductVariantAvailabilityImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * ProductVariantAvailability
@@ -28,11 +30,15 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .channels(channelsBuilder -> channelsBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = ProductVariantAvailabilityImpl.class)
-public interface ProductVariantAvailability {
+public interface ProductVariantAvailability  {
+
 
     /**
      *
@@ -41,7 +47,6 @@ public interface ProductVariantAvailability {
     @NotNull
     @JsonProperty("isOnStock")
     public Boolean getIsOnStock();
-
     /**
      *
      * @return restockableInDays
@@ -49,7 +54,6 @@ public interface ProductVariantAvailability {
     @NotNull
     @JsonProperty("restockableInDays")
     public Integer getRestockableInDays();
-
     /**
      *
      * @return availableQuantity
@@ -57,7 +61,6 @@ public interface ProductVariantAvailability {
     @NotNull
     @JsonProperty("availableQuantity")
     public Integer getAvailableQuantity();
-
     /**
      *
      * @return channels
@@ -71,37 +74,42 @@ public interface ProductVariantAvailability {
      * set isOnStock
      * @param isOnStock value to be set
      */
-
+    
     public void setIsOnStock(final Boolean isOnStock);
-
+    
+    
     /**
      * set restockableInDays
      * @param restockableInDays value to be set
      */
-
+    
     public void setRestockableInDays(final Integer restockableInDays);
-
+    
+    
     /**
      * set availableQuantity
      * @param availableQuantity value to be set
      */
-
+    
     public void setAvailableQuantity(final Integer availableQuantity);
-
+    
+    
     /**
      * set channels
      * @param channels value to be set
      */
-
+    
     public void setChannels(final ProductVariantChannelAvailabilityMap channels);
+    
 
     /**
      * factory method
      * @return instance of ProductVariantAvailability
      */
-    public static ProductVariantAvailability of() {
+    public static ProductVariantAvailability of(){
         return new ProductVariantAvailabilityImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy ProductVariantAvailability
@@ -131,8 +139,7 @@ public interface ProductVariantAvailability {
         instance.setIsOnStock(template.getIsOnStock());
         instance.setRestockableInDays(template.getRestockableInDays());
         instance.setAvailableQuantity(template.getAvailableQuantity());
-        instance.setChannels(com.commercetools.history.models.common.ProductVariantChannelAvailabilityMap
-                .deepCopy(template.getChannels()));
+        instance.setChannels(com.commercetools.history.models.common.ProductVariantChannelAvailabilityMap.deepCopy(template.getChannels()));
         return instance;
     }
 
@@ -143,7 +150,7 @@ public interface ProductVariantAvailability {
     public static ProductVariantAvailabilityBuilder builder() {
         return ProductVariantAvailabilityBuilder.of();
     }
-
+    
     /**
      * create builder for ProductVariantAvailability instance
      * @param template instance with prefilled values for the builder
@@ -152,6 +159,7 @@ public interface ProductVariantAvailability {
     public static ProductVariantAvailabilityBuilder builder(final ProductVariantAvailability template) {
         return ProductVariantAvailabilityBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -162,7 +170,7 @@ public interface ProductVariantAvailability {
     default <T> T withProductVariantAvailability(Function<ProductVariantAvailability, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

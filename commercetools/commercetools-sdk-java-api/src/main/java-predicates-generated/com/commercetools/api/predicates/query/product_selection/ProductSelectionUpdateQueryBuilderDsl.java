@@ -1,11 +1,11 @@
-
 package com.commercetools.api.predicates.query.product_selection;
-
-import java.util.function.Function;
 
 import com.commercetools.api.predicates.query.*;
 
-public class ProductSelectionUpdateQueryBuilderDsl {
+import java.util.function.Function;
+
+
+public class ProductSelectionUpdateQueryBuilderDsl  {
     public ProductSelectionUpdateQueryBuilderDsl() {
     }
 
@@ -14,24 +14,19 @@ public class ProductSelectionUpdateQueryBuilderDsl {
     }
 
     public LongComparisonPredicateBuilder<ProductSelectionUpdateQueryBuilderDsl> version() {
-        return new LongComparisonPredicateBuilder<>(
-            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("version")),
-            p -> new CombinationQueryPredicate<>(p, ProductSelectionUpdateQueryBuilderDsl::of));
+        return new LongComparisonPredicateBuilder<>(BinaryQueryPredicate.of().left(new ConstantQueryPredicate("version")),
+        p -> new CombinationQueryPredicate<>(p, ProductSelectionUpdateQueryBuilderDsl::of));
     }
-
     public CombinationQueryPredicate<ProductSelectionUpdateQueryBuilderDsl> actions(
-            Function<com.commercetools.api.predicates.query.product_selection.ProductSelectionUpdateActionQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.product_selection.ProductSelectionUpdateActionQueryBuilderDsl>> fn) {
+        Function<com.commercetools.api.predicates.query.product_selection.ProductSelectionUpdateActionQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.product_selection.ProductSelectionUpdateActionQueryBuilderDsl>> fn) {
         return new CombinationQueryPredicate<>(ContainerQueryPredicate.of()
-                .parent(ConstantQueryPredicate.of().constant("actions"))
-                .inner(fn.apply(
-                    com.commercetools.api.predicates.query.product_selection.ProductSelectionUpdateActionQueryBuilderDsl
-                            .of())),
+            .parent(ConstantQueryPredicate.of().constant("actions"))
+            .inner(fn.apply(com.commercetools.api.predicates.query.product_selection.ProductSelectionUpdateActionQueryBuilderDsl.of())),
             ProductSelectionUpdateQueryBuilderDsl::of);
     }
-
     public CollectionPredicateBuilder<ProductSelectionUpdateQueryBuilderDsl> actions() {
         return new CollectionPredicateBuilder<>(BinaryQueryPredicate.of().left(new ConstantQueryPredicate("actions")),
-            p -> new CombinationQueryPredicate<>(p, ProductSelectionUpdateQueryBuilderDsl::of));
+                p -> new CombinationQueryPredicate<>(p, ProductSelectionUpdateQueryBuilderDsl::of));
     }
-
+    
 }

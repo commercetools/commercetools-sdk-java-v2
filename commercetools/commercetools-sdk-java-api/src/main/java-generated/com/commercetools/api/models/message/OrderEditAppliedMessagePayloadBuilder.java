@@ -1,9 +1,13 @@
-
 package com.commercetools.api.models.message;
 
+import com.commercetools.api.models.message.OrderMessagePayload;
+import com.commercetools.api.models.order_edit.OrderEdit;
+import com.commercetools.api.models.order_edit.OrderEditApplied;
+import com.commercetools.api.models.message.OrderEditAppliedMessagePayload;
+import javax.annotation.Nullable;
 import java.util.*;
 import java.util.function.Function;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -18,101 +22,111 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .result(resultBuilder -> resultBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class OrderEditAppliedMessagePayloadBuilder implements Builder<OrderEditAppliedMessagePayload> {
 
+    
+    
     private com.commercetools.api.models.order_edit.OrderEdit edit;
-
+    
+    
+    
     private com.commercetools.api.models.order_edit.OrderEditApplied result;
 
+    
     /**
      *  <p>OrderEdit that was applied.</p>
      * @param builder function to build the edit value
      * @return Builder
      */
-
-    public OrderEditAppliedMessagePayloadBuilder edit(
-            Function<com.commercetools.api.models.order_edit.OrderEditBuilder, com.commercetools.api.models.order_edit.OrderEditBuilder> builder) {
+    
+    public OrderEditAppliedMessagePayloadBuilder edit(Function<com.commercetools.api.models.order_edit.OrderEditBuilder, com.commercetools.api.models.order_edit.OrderEditBuilder> builder) {
         this.edit = builder.apply(com.commercetools.api.models.order_edit.OrderEditBuilder.of()).build();
         return this;
     }
-
+    
     /**
      *  <p>OrderEdit that was applied.</p>
      * @param builder function to build the edit value
      * @return Builder
      */
-
-    public OrderEditAppliedMessagePayloadBuilder withEdit(
-            Function<com.commercetools.api.models.order_edit.OrderEditBuilder, com.commercetools.api.models.order_edit.OrderEdit> builder) {
+    
+    public OrderEditAppliedMessagePayloadBuilder withEdit(Function<com.commercetools.api.models.order_edit.OrderEditBuilder, com.commercetools.api.models.order_edit.OrderEdit> builder) {
         this.edit = builder.apply(com.commercetools.api.models.order_edit.OrderEditBuilder.of());
         return this;
     }
-
+                    
     /**
      *  <p>OrderEdit that was applied.</p>
      * @param edit value to be set
      * @return Builder
      */
-
-    public OrderEditAppliedMessagePayloadBuilder edit(final com.commercetools.api.models.order_edit.OrderEdit edit) {
+    
+    public OrderEditAppliedMessagePayloadBuilder edit( final com.commercetools.api.models.order_edit.OrderEdit edit) {
         this.edit = edit;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Information about a successfully applied OrderEdit.</p>
      * @param builder function to build the result value
      * @return Builder
      */
-
-    public OrderEditAppliedMessagePayloadBuilder result(
-            Function<com.commercetools.api.models.order_edit.OrderEditAppliedBuilder, com.commercetools.api.models.order_edit.OrderEditAppliedBuilder> builder) {
+    
+    public OrderEditAppliedMessagePayloadBuilder result(Function<com.commercetools.api.models.order_edit.OrderEditAppliedBuilder, com.commercetools.api.models.order_edit.OrderEditAppliedBuilder> builder) {
         this.result = builder.apply(com.commercetools.api.models.order_edit.OrderEditAppliedBuilder.of()).build();
         return this;
     }
-
+    
     /**
      *  <p>Information about a successfully applied OrderEdit.</p>
      * @param builder function to build the result value
      * @return Builder
      */
-
-    public OrderEditAppliedMessagePayloadBuilder withResult(
-            Function<com.commercetools.api.models.order_edit.OrderEditAppliedBuilder, com.commercetools.api.models.order_edit.OrderEditApplied> builder) {
+    
+    public OrderEditAppliedMessagePayloadBuilder withResult(Function<com.commercetools.api.models.order_edit.OrderEditAppliedBuilder, com.commercetools.api.models.order_edit.OrderEditApplied> builder) {
         this.result = builder.apply(com.commercetools.api.models.order_edit.OrderEditAppliedBuilder.of());
         return this;
     }
-
+                    
     /**
      *  <p>Information about a successfully applied OrderEdit.</p>
      * @param result value to be set
      * @return Builder
      */
-
-    public OrderEditAppliedMessagePayloadBuilder result(
-            final com.commercetools.api.models.order_edit.OrderEditApplied result) {
+    
+    public OrderEditAppliedMessagePayloadBuilder result( final com.commercetools.api.models.order_edit.OrderEditApplied result) {
         this.result = result;
         return this;
     }
+    
+    
 
     /**
      *  <p>OrderEdit that was applied.</p>
      * @return edit
      */
-
-    public com.commercetools.api.models.order_edit.OrderEdit getEdit() {
+    
+    
+    public com.commercetools.api.models.order_edit.OrderEdit getEdit(){
         return this.edit;
     }
-
+    
     /**
      *  <p>Information about a successfully applied OrderEdit.</p>
      * @return result
      */
-
-    public com.commercetools.api.models.order_edit.OrderEditApplied getResult() {
+    
+    
+    public com.commercetools.api.models.order_edit.OrderEditApplied getResult(){
         return this.result;
     }
 
@@ -125,7 +139,7 @@ public class OrderEditAppliedMessagePayloadBuilder implements Builder<OrderEditA
         Objects.requireNonNull(result, OrderEditAppliedMessagePayload.class + ": result is missing");
         return new OrderEditAppliedMessagePayloadImpl(edit, result);
     }
-
+    
     /**
      * builds OrderEditAppliedMessagePayload without checking for non-null required values
      * @return OrderEditAppliedMessagePayload
@@ -136,7 +150,7 @@ public class OrderEditAppliedMessagePayloadBuilder implements Builder<OrderEditA
 
     /**
      * factory method for an instance of OrderEditAppliedMessagePayloadBuilder
-     * @return builder
+     * @return builder 
      */
     public static OrderEditAppliedMessagePayloadBuilder of() {
         return new OrderEditAppliedMessagePayloadBuilder();

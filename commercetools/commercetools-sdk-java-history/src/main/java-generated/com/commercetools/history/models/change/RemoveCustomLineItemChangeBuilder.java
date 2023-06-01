@@ -1,9 +1,12 @@
-
 package com.commercetools.history.models.change;
 
+import com.commercetools.history.models.change.Change;
+import com.commercetools.history.models.common.CustomLineItem;
+import com.commercetools.history.models.change.RemoveCustomLineItemChange;
+import javax.annotation.Nullable;
 import java.util.*;
 import java.util.function.Function;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -19,124 +22,139 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .previousValue(previousValueBuilder -> previousValueBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class RemoveCustomLineItemChangeBuilder implements Builder<RemoveCustomLineItemChange> {
 
+    
+    
     private String change;
-
+    
+    
+    
     private com.commercetools.history.models.common.CustomLineItem nextValue;
-
+    
+    
+    
     private com.commercetools.history.models.common.CustomLineItem previousValue;
 
+    
     /**
      *  <p>Update action for adding and removing custom line items</p>
      * @param change value to be set
      * @return Builder
      */
-
-    public RemoveCustomLineItemChangeBuilder change(final String change) {
+    
+    public RemoveCustomLineItemChangeBuilder change( final String change) {
         this.change = change;
         return this;
     }
-
+    
+    
+    
+    
     /**
      * set the value to the nextValue using the builder function
      * @param builder function to build the nextValue value
      * @return Builder
      */
-
-    public RemoveCustomLineItemChangeBuilder nextValue(
-            Function<com.commercetools.history.models.common.CustomLineItemBuilder, com.commercetools.history.models.common.CustomLineItemBuilder> builder) {
+    
+    public RemoveCustomLineItemChangeBuilder nextValue(Function<com.commercetools.history.models.common.CustomLineItemBuilder, com.commercetools.history.models.common.CustomLineItemBuilder> builder) {
         this.nextValue = builder.apply(com.commercetools.history.models.common.CustomLineItemBuilder.of()).build();
         return this;
     }
-
+    
     /**
      * set the value to the nextValue using the builder function
      * @param builder function to build the nextValue value
      * @return Builder
      */
-
-    public RemoveCustomLineItemChangeBuilder withNextValue(
-            Function<com.commercetools.history.models.common.CustomLineItemBuilder, com.commercetools.history.models.common.CustomLineItem> builder) {
+    
+    public RemoveCustomLineItemChangeBuilder withNextValue(Function<com.commercetools.history.models.common.CustomLineItemBuilder, com.commercetools.history.models.common.CustomLineItem> builder) {
         this.nextValue = builder.apply(com.commercetools.history.models.common.CustomLineItemBuilder.of());
         return this;
     }
-
+                    
     /**
      * set the value to the nextValue
      * @param nextValue value to be set
      * @return Builder
      */
-
-    public RemoveCustomLineItemChangeBuilder nextValue(
-            final com.commercetools.history.models.common.CustomLineItem nextValue) {
+    
+    public RemoveCustomLineItemChangeBuilder nextValue( final com.commercetools.history.models.common.CustomLineItem nextValue) {
         this.nextValue = nextValue;
         return this;
     }
-
+    
+    
+    
+    
     /**
      * set the value to the previousValue using the builder function
      * @param builder function to build the previousValue value
      * @return Builder
      */
-
-    public RemoveCustomLineItemChangeBuilder previousValue(
-            Function<com.commercetools.history.models.common.CustomLineItemBuilder, com.commercetools.history.models.common.CustomLineItemBuilder> builder) {
+    
+    public RemoveCustomLineItemChangeBuilder previousValue(Function<com.commercetools.history.models.common.CustomLineItemBuilder, com.commercetools.history.models.common.CustomLineItemBuilder> builder) {
         this.previousValue = builder.apply(com.commercetools.history.models.common.CustomLineItemBuilder.of()).build();
         return this;
     }
-
+    
     /**
      * set the value to the previousValue using the builder function
      * @param builder function to build the previousValue value
      * @return Builder
      */
-
-    public RemoveCustomLineItemChangeBuilder withPreviousValue(
-            Function<com.commercetools.history.models.common.CustomLineItemBuilder, com.commercetools.history.models.common.CustomLineItem> builder) {
+    
+    public RemoveCustomLineItemChangeBuilder withPreviousValue(Function<com.commercetools.history.models.common.CustomLineItemBuilder, com.commercetools.history.models.common.CustomLineItem> builder) {
         this.previousValue = builder.apply(com.commercetools.history.models.common.CustomLineItemBuilder.of());
         return this;
     }
-
+                    
     /**
      * set the value to the previousValue
      * @param previousValue value to be set
      * @return Builder
      */
-
-    public RemoveCustomLineItemChangeBuilder previousValue(
-            final com.commercetools.history.models.common.CustomLineItem previousValue) {
+    
+    public RemoveCustomLineItemChangeBuilder previousValue( final com.commercetools.history.models.common.CustomLineItem previousValue) {
         this.previousValue = previousValue;
         return this;
     }
+    
+    
 
     /**
      *  <p>Update action for adding and removing custom line items</p>
      * @return change
      */
-
-    public String getChange() {
+    
+    
+    public String getChange(){
         return this.change;
     }
-
+    
     /**
      * value of nextValue}
      * @return nextValue
      */
-
-    public com.commercetools.history.models.common.CustomLineItem getNextValue() {
+    
+    
+    public com.commercetools.history.models.common.CustomLineItem getNextValue(){
         return this.nextValue;
     }
-
+    
     /**
      * value of previousValue}
      * @return previousValue
      */
-
-    public com.commercetools.history.models.common.CustomLineItem getPreviousValue() {
+    
+    
+    public com.commercetools.history.models.common.CustomLineItem getPreviousValue(){
         return this.previousValue;
     }
 
@@ -150,7 +168,7 @@ public class RemoveCustomLineItemChangeBuilder implements Builder<RemoveCustomLi
         Objects.requireNonNull(previousValue, RemoveCustomLineItemChange.class + ": previousValue is missing");
         return new RemoveCustomLineItemChangeImpl(change, nextValue, previousValue);
     }
-
+    
     /**
      * builds RemoveCustomLineItemChange without checking for non-null required values
      * @return RemoveCustomLineItemChange
@@ -161,7 +179,7 @@ public class RemoveCustomLineItemChangeBuilder implements Builder<RemoveCustomLi
 
     /**
      * factory method for an instance of RemoveCustomLineItemChangeBuilder
-     * @return builder
+     * @return builder 
      */
     public static RemoveCustomLineItemChangeBuilder of() {
         return new RemoveCustomLineItemChangeBuilder();

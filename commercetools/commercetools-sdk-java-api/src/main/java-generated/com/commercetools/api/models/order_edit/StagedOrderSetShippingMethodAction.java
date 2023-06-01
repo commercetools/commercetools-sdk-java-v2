@@ -1,20 +1,22 @@
-
 package com.commercetools.api.models.order_edit;
-
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
 
 import com.commercetools.api.models.cart.ExternalTaxRateDraft;
 import com.commercetools.api.models.order.StagedOrderUpdateAction;
 import com.commercetools.api.models.shipping_method.ShippingMethodResourceIdentifier;
+import com.commercetools.api.models.order_edit.StagedOrderSetShippingMethodActionImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * StagedOrderSetShippingMethodAction
@@ -26,9 +28,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     StagedOrderSetShippingMethodAction stagedOrderSetShippingMethodAction = StagedOrderSetShippingMethodAction.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = StagedOrderSetShippingMethodActionImpl.class)
 public interface StagedOrderSetShippingMethodAction extends StagedOrderUpdateAction {
 
@@ -44,7 +49,6 @@ public interface StagedOrderSetShippingMethodAction extends StagedOrderUpdateAct
     @Valid
     @JsonProperty("shippingMethod")
     public ShippingMethodResourceIdentifier getShippingMethod();
-
     /**
      *  <p>Controls calculation of taxed prices for Line Items, Custom Line Items, and Shipping Methods as explained in Cart tax calculation.</p>
      * @return externalTaxRate
@@ -57,23 +61,26 @@ public interface StagedOrderSetShippingMethodAction extends StagedOrderUpdateAct
      *  <p>ResourceIdentifier to a ShippingMethod.</p>
      * @param shippingMethod value to be set
      */
-
+    
     public void setShippingMethod(final ShippingMethodResourceIdentifier shippingMethod);
-
+    
+    
     /**
      *  <p>Controls calculation of taxed prices for Line Items, Custom Line Items, and Shipping Methods as explained in Cart tax calculation.</p>
      * @param externalTaxRate value to be set
      */
-
+    
     public void setExternalTaxRate(final ExternalTaxRateDraft externalTaxRate);
+    
 
     /**
      * factory method
      * @return instance of StagedOrderSetShippingMethodAction
      */
-    public static StagedOrderSetShippingMethodAction of() {
+    public static StagedOrderSetShippingMethodAction of(){
         return new StagedOrderSetShippingMethodActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy StagedOrderSetShippingMethodAction
@@ -93,16 +100,13 @@ public interface StagedOrderSetShippingMethodAction extends StagedOrderUpdateAct
      * @return copy instance
      */
     @Nullable
-    public static StagedOrderSetShippingMethodAction deepCopy(
-            @Nullable final StagedOrderSetShippingMethodAction template) {
+    public static StagedOrderSetShippingMethodAction deepCopy(@Nullable final StagedOrderSetShippingMethodAction template) {
         if (template == null) {
             return null;
         }
         StagedOrderSetShippingMethodActionImpl instance = new StagedOrderSetShippingMethodActionImpl();
-        instance.setShippingMethod(com.commercetools.api.models.shipping_method.ShippingMethodResourceIdentifier
-                .deepCopy(template.getShippingMethod()));
-        instance.setExternalTaxRate(
-            com.commercetools.api.models.cart.ExternalTaxRateDraft.deepCopy(template.getExternalTaxRate()));
+        instance.setShippingMethod(com.commercetools.api.models.shipping_method.ShippingMethodResourceIdentifier.deepCopy(template.getShippingMethod()));
+        instance.setExternalTaxRate(com.commercetools.api.models.cart.ExternalTaxRateDraft.deepCopy(template.getExternalTaxRate()));
         return instance;
     }
 
@@ -113,7 +117,7 @@ public interface StagedOrderSetShippingMethodAction extends StagedOrderUpdateAct
     public static StagedOrderSetShippingMethodActionBuilder builder() {
         return StagedOrderSetShippingMethodActionBuilder.of();
     }
-
+    
     /**
      * create builder for StagedOrderSetShippingMethodAction instance
      * @param template instance with prefilled values for the builder
@@ -122,6 +126,7 @@ public interface StagedOrderSetShippingMethodAction extends StagedOrderUpdateAct
     public static StagedOrderSetShippingMethodActionBuilder builder(final StagedOrderSetShippingMethodAction template) {
         return StagedOrderSetShippingMethodActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -132,7 +137,7 @@ public interface StagedOrderSetShippingMethodAction extends StagedOrderUpdateAct
     default <T> T withStagedOrderSetShippingMethodAction(Function<StagedOrderSetShippingMethodAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

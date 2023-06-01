@@ -1,19 +1,21 @@
-
 package com.commercetools.api.models.message;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
+import com.commercetools.api.models.message.Message;
 import com.commercetools.api.models.store.StoreKeyReference;
+import com.commercetools.api.models.message.BusinessUnitStoreRemovedMessageImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * BusinessUnitStoreRemovedMessage
@@ -33,9 +35,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .store(storeBuilder -> storeBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = BusinessUnitStoreRemovedMessageImpl.class)
 public interface BusinessUnitStoreRemovedMessage extends Message {
 
@@ -57,16 +62,18 @@ public interface BusinessUnitStoreRemovedMessage extends Message {
      *  <p>The Store that was removed from the Business Unit.</p>
      * @param store value to be set
      */
-
+    
     public void setStore(final StoreKeyReference store);
+    
 
     /**
      * factory method
      * @return instance of BusinessUnitStoreRemovedMessage
      */
-    public static BusinessUnitStoreRemovedMessage of() {
+    public static BusinessUnitStoreRemovedMessage of(){
         return new BusinessUnitStoreRemovedMessageImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy BusinessUnitStoreRemovedMessage
@@ -104,14 +111,12 @@ public interface BusinessUnitStoreRemovedMessage extends Message {
         instance.setVersion(template.getVersion());
         instance.setCreatedAt(template.getCreatedAt());
         instance.setLastModifiedAt(template.getLastModifiedAt());
-        instance.setLastModifiedBy(
-            com.commercetools.api.models.common.LastModifiedBy.deepCopy(template.getLastModifiedBy()));
+        instance.setLastModifiedBy(com.commercetools.api.models.common.LastModifiedBy.deepCopy(template.getLastModifiedBy()));
         instance.setCreatedBy(com.commercetools.api.models.common.CreatedBy.deepCopy(template.getCreatedBy()));
         instance.setSequenceNumber(template.getSequenceNumber());
         instance.setResource(com.commercetools.api.models.common.Reference.deepCopy(template.getResource()));
         instance.setResourceVersion(template.getResourceVersion());
-        instance.setResourceUserProvidedIdentifiers(com.commercetools.api.models.message.UserProvidedIdentifiers
-                .deepCopy(template.getResourceUserProvidedIdentifiers()));
+        instance.setResourceUserProvidedIdentifiers(com.commercetools.api.models.message.UserProvidedIdentifiers.deepCopy(template.getResourceUserProvidedIdentifiers()));
         instance.setStore(com.commercetools.api.models.store.StoreKeyReference.deepCopy(template.getStore()));
         return instance;
     }
@@ -123,7 +128,7 @@ public interface BusinessUnitStoreRemovedMessage extends Message {
     public static BusinessUnitStoreRemovedMessageBuilder builder() {
         return BusinessUnitStoreRemovedMessageBuilder.of();
     }
-
+    
     /**
      * create builder for BusinessUnitStoreRemovedMessage instance
      * @param template instance with prefilled values for the builder
@@ -132,6 +137,7 @@ public interface BusinessUnitStoreRemovedMessage extends Message {
     public static BusinessUnitStoreRemovedMessageBuilder builder(final BusinessUnitStoreRemovedMessage template) {
         return BusinessUnitStoreRemovedMessageBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -142,7 +148,7 @@ public interface BusinessUnitStoreRemovedMessage extends Message {
     default <T> T withBusinessUnitStoreRemovedMessage(Function<BusinessUnitStoreRemovedMessage, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

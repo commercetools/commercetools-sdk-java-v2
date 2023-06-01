@@ -1,20 +1,22 @@
-
 package com.commercetools.api.models.graph_ql;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-import java.util.stream.Collectors;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
 import com.commercetools.api.models.error.GraphQLErrorObject;
+import com.commercetools.api.models.graph_ql.GraphQLErrorLocation;
+import java.lang.Object;
+import com.commercetools.api.models.graph_ql.GraphQLErrorImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * GraphQLError
@@ -29,11 +31,15 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .extensions(extensionsBuilder -> extensionsBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = GraphQLErrorImpl.class)
-public interface GraphQLError {
+public interface GraphQLError  {
+
 
     /**
      *
@@ -42,7 +48,6 @@ public interface GraphQLError {
     @NotNull
     @JsonProperty("message")
     public String getMessage();
-
     /**
      *
      * @return locations
@@ -51,15 +56,13 @@ public interface GraphQLError {
     @Valid
     @JsonProperty("locations")
     public List<GraphQLErrorLocation> getLocations();
-
     /**
      *
      * @return path
      */
-
+    
     @JsonProperty("path")
     public List<Object> getPath();
-
     /**
      *  <p>Represents a single error.</p>
      * @return extensions
@@ -73,53 +76,54 @@ public interface GraphQLError {
      * set message
      * @param message value to be set
      */
-
+    
     public void setMessage(final String message);
-
+    
+    
     /**
      * set locations
      * @param locations values to be set
      */
-
+    
     @JsonIgnore
-    public void setLocations(final GraphQLErrorLocation... locations);
-
+    public void setLocations(final GraphQLErrorLocation ...locations);
     /**
      * set locations
      * @param locations values to be set
      */
-
+    
     public void setLocations(final List<GraphQLErrorLocation> locations);
-
+    
     /**
      * set path
      * @param path values to be set
      */
-
+    
     @JsonIgnore
-    public void setPath(final Object... path);
-
+    public void setPath(final Object ...path);
     /**
      * set path
      * @param path values to be set
      */
-
+    
     public void setPath(final List<Object> path);
-
+    
     /**
      *  <p>Represents a single error.</p>
      * @param extensions value to be set
      */
-
+    
     public void setExtensions(final GraphQLErrorObject extensions);
+    
 
     /**
      * factory method
      * @return instance of GraphQLError
      */
-    public static GraphQLError of() {
+    public static GraphQLError of(){
         return new GraphQLErrorImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy GraphQLError
@@ -148,13 +152,12 @@ public interface GraphQLError {
         GraphQLErrorImpl instance = new GraphQLErrorImpl();
         instance.setMessage(template.getMessage());
         instance.setLocations(Optional.ofNullable(template.getLocations())
-                .map(t -> t.stream()
-                        .map(com.commercetools.api.models.graph_ql.GraphQLErrorLocation::deepCopy)
-                        .collect(Collectors.toList()))
+                .map(t -> t.stream().map(com.commercetools.api.models.graph_ql.GraphQLErrorLocation::deepCopy).collect(Collectors.toList()))
                 .orElse(null));
-        instance.setPath(Optional.ofNullable(template.getPath()).map(ArrayList::new).orElse(null));
-        instance.setExtensions(
-            com.commercetools.api.models.error.GraphQLErrorObject.deepCopy(template.getExtensions()));
+        instance.setPath(Optional.ofNullable(template.getPath())
+                .map(ArrayList::new)
+                .orElse(null));
+        instance.setExtensions(com.commercetools.api.models.error.GraphQLErrorObject.deepCopy(template.getExtensions()));
         return instance;
     }
 
@@ -165,7 +168,7 @@ public interface GraphQLError {
     public static GraphQLErrorBuilder builder() {
         return GraphQLErrorBuilder.of();
     }
-
+    
     /**
      * create builder for GraphQLError instance
      * @param template instance with prefilled values for the builder
@@ -174,6 +177,7 @@ public interface GraphQLError {
     public static GraphQLErrorBuilder builder(final GraphQLError template) {
         return GraphQLErrorBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -184,7 +188,7 @@ public interface GraphQLError {
     default <T> T withGraphQLError(Function<GraphQLError, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

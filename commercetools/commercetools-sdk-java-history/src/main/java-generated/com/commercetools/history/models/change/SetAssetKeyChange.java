@@ -1,19 +1,21 @@
-
 package com.commercetools.history.models.change;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
+import com.commercetools.history.models.change.Change;
 import com.commercetools.history.models.change_value.AssetChangeValue;
+import com.commercetools.history.models.change.SetAssetKeyChangeImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * SetAssetKeyChange
@@ -29,9 +31,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .previousValue("{previousValue}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = SetAssetKeyChangeImpl.class)
 public interface SetAssetKeyChange extends Change {
 
@@ -47,7 +52,6 @@ public interface SetAssetKeyChange extends Change {
     @NotNull
     @JsonProperty("change")
     public String getChange();
-
     /**
      *
      * @return type
@@ -55,7 +59,6 @@ public interface SetAssetKeyChange extends Change {
     @NotNull
     @JsonProperty("type")
     public String getType();
-
     /**
      *
      * @return asset
@@ -64,7 +67,6 @@ public interface SetAssetKeyChange extends Change {
     @Valid
     @JsonProperty("asset")
     public AssetChangeValue getAsset();
-
     /**
      *
      * @return nextValue
@@ -72,7 +74,6 @@ public interface SetAssetKeyChange extends Change {
     @NotNull
     @JsonProperty("nextValue")
     public String getNextValue();
-
     /**
      *
      * @return previousValue
@@ -85,37 +86,42 @@ public interface SetAssetKeyChange extends Change {
      *  <p>Update action for <code>setAssetKey</code></p>
      * @param change value to be set
      */
-
+    
     public void setChange(final String change);
-
+    
+    
     /**
      * set asset
      * @param asset value to be set
      */
-
+    
     public void setAsset(final AssetChangeValue asset);
-
+    
+    
     /**
      * set nextValue
      * @param nextValue value to be set
      */
-
+    
     public void setNextValue(final String nextValue);
-
+    
+    
     /**
      * set previousValue
      * @param previousValue value to be set
      */
-
+    
     public void setPreviousValue(final String previousValue);
+    
 
     /**
      * factory method
      * @return instance of SetAssetKeyChange
      */
-    public static SetAssetKeyChange of() {
+    public static SetAssetKeyChange of(){
         return new SetAssetKeyChangeImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy SetAssetKeyChange
@@ -156,7 +162,7 @@ public interface SetAssetKeyChange extends Change {
     public static SetAssetKeyChangeBuilder builder() {
         return SetAssetKeyChangeBuilder.of();
     }
-
+    
     /**
      * create builder for SetAssetKeyChange instance
      * @param template instance with prefilled values for the builder
@@ -165,6 +171,7 @@ public interface SetAssetKeyChange extends Change {
     public static SetAssetKeyChangeBuilder builder(final SetAssetKeyChange template) {
         return SetAssetKeyChangeBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -175,7 +182,7 @@ public interface SetAssetKeyChange extends Change {
     default <T> T withSetAssetKeyChange(Function<SetAssetKeyChange, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

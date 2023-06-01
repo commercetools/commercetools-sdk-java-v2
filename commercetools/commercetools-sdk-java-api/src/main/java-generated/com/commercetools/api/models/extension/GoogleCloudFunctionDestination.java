@@ -1,17 +1,20 @@
-
 package com.commercetools.api.models.extension;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
+import com.commercetools.api.models.extension.ExtensionDestination;
+import com.commercetools.api.models.extension.GoogleCloudFunctionDestinationImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>For GoogleCloudFunction destinations, you need to grant permissions to the <code>extensions@commercetools-platform.iam.gserviceaccount.com</code> service account to invoke your function. If your function's version is 1st gen, grant the service account the IAM role <code>Cloud Functions Invoker</code>. For version 2nd gen, assign the IAM role <code>Cloud Run Invoker</code> using the Cloud Run console.</p>
@@ -24,9 +27,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .url("{url}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = GoogleCloudFunctionDestinationImpl.class)
 public interface GoogleCloudFunctionDestination extends ExtensionDestination {
 
@@ -47,16 +53,18 @@ public interface GoogleCloudFunctionDestination extends ExtensionDestination {
      *  <p>URL to the target function.</p>
      * @param url value to be set
      */
-
+    
     public void setUrl(final String url);
+    
 
     /**
      * factory method
      * @return instance of GoogleCloudFunctionDestination
      */
-    public static GoogleCloudFunctionDestination of() {
+    public static GoogleCloudFunctionDestination of(){
         return new GoogleCloudFunctionDestinationImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy GoogleCloudFunctionDestination
@@ -91,7 +99,7 @@ public interface GoogleCloudFunctionDestination extends ExtensionDestination {
     public static GoogleCloudFunctionDestinationBuilder builder() {
         return GoogleCloudFunctionDestinationBuilder.of();
     }
-
+    
     /**
      * create builder for GoogleCloudFunctionDestination instance
      * @param template instance with prefilled values for the builder
@@ -100,6 +108,7 @@ public interface GoogleCloudFunctionDestination extends ExtensionDestination {
     public static GoogleCloudFunctionDestinationBuilder builder(final GoogleCloudFunctionDestination template) {
         return GoogleCloudFunctionDestinationBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -110,7 +119,7 @@ public interface GoogleCloudFunctionDestination extends ExtensionDestination {
     default <T> T withGoogleCloudFunctionDestination(Function<GoogleCloudFunctionDestination, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

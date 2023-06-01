@@ -1,7 +1,9 @@
-
 package com.commercetools.api.predicates.query.product;
 
 import com.commercetools.api.predicates.query.*;
+
+import java.util.function.Function;
+
 
 public class AttributeQueryBuilderDsl implements AttributeQueryBuilderMixin {
     public AttributeQueryBuilderDsl() {
@@ -12,15 +14,12 @@ public class AttributeQueryBuilderDsl implements AttributeQueryBuilderMixin {
     }
 
     public StringComparisonPredicateBuilder<AttributeQueryBuilderDsl> name() {
-        return new StringComparisonPredicateBuilder<>(
-            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("name")),
-            p -> new CombinationQueryPredicate<>(p, AttributeQueryBuilderDsl::of));
+        return new StringComparisonPredicateBuilder<>(BinaryQueryPredicate.of().left(new ConstantQueryPredicate("name")),
+        p -> new CombinationQueryPredicate<>(p, AttributeQueryBuilderDsl::of));
     }
-
     public StringComparisonPredicateBuilder<AttributeQueryBuilderDsl> value() {
-        return new StringComparisonPredicateBuilder<>(
-            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("value")),
-            p -> new CombinationQueryPredicate<>(p, AttributeQueryBuilderDsl::of));
+        return new StringComparisonPredicateBuilder<>(BinaryQueryPredicate.of().left(new ConstantQueryPredicate("value")),
+        p -> new CombinationQueryPredicate<>(p, AttributeQueryBuilderDsl::of));
     }
-
+    
 }

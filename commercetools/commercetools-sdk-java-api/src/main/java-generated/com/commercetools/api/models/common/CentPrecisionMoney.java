@@ -1,17 +1,21 @@
-
 package com.commercetools.api.models.common;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
+import com.commercetools.api.models.common.MoneyType;
+import com.commercetools.api.models.common.TypedMoney;
+import com.commercetools.api.models.common.CentPrecisionMoneyImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Object that stores cent amounts in a specific currency.</p>
@@ -26,9 +30,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .fractionDigits(0.3)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = CentPrecisionMoneyImpl.class)
 public interface CentPrecisionMoney extends TypedMoney {
 
@@ -49,16 +56,18 @@ public interface CentPrecisionMoney extends TypedMoney {
      *  <p>The number of default fraction digits for the given currency, like <code>2</code> for EUR or <code>0</code> for JPY.</p>
      * @param fractionDigits value to be set
      */
-
+    
     public void setFractionDigits(final Integer fractionDigits);
+    
 
     /**
      * factory method
      * @return instance of CentPrecisionMoney
      */
-    public static CentPrecisionMoney of() {
+    public static CentPrecisionMoney of(){
         return new CentPrecisionMoneyImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy CentPrecisionMoney
@@ -97,7 +106,7 @@ public interface CentPrecisionMoney extends TypedMoney {
     public static CentPrecisionMoneyBuilder builder() {
         return CentPrecisionMoneyBuilder.of();
     }
-
+    
     /**
      * create builder for CentPrecisionMoney instance
      * @param template instance with prefilled values for the builder
@@ -106,6 +115,7 @@ public interface CentPrecisionMoney extends TypedMoney {
     public static CentPrecisionMoneyBuilder builder(final CentPrecisionMoney template) {
         return CentPrecisionMoneyBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -116,15 +126,15 @@ public interface CentPrecisionMoney extends TypedMoney {
     default <T> T withCentPrecisionMoney(Function<CentPrecisionMoney, T> helper) {
         return helper.apply(this);
     }
-
     public static CentPrecisionMoney of(final javax.money.MonetaryAmount monetaryAmount) {
         return MoneyUtil.of(monetaryAmount);
     }
-
+    
     public default CentPrecisionMoneyDraft toDraft() {
         return CentPrecisionMoneyDraft.of(this);
     }
-
+    
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

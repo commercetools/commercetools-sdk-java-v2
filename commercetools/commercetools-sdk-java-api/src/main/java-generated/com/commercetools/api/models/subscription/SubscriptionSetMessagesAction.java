@@ -1,18 +1,21 @@
-
 package com.commercetools.api.models.subscription;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-import java.util.stream.Collectors;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
+import com.commercetools.api.models.subscription.MessageSubscription;
+import com.commercetools.api.models.subscription.SubscriptionUpdateAction;
+import com.commercetools.api.models.subscription.SubscriptionSetMessagesActionImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * SubscriptionSetMessagesAction
@@ -24,9 +27,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     SubscriptionSetMessagesAction subscriptionSetMessagesAction = SubscriptionSetMessagesAction.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = SubscriptionSetMessagesActionImpl.class)
 public interface SubscriptionSetMessagesAction extends SubscriptionUpdateAction {
 
@@ -47,24 +53,24 @@ public interface SubscriptionSetMessagesAction extends SubscriptionUpdateAction 
      *  <p>Value to set. Can only be unset if <code>changes</code> is set.</p>
      * @param messages values to be set
      */
-
+    
     @JsonIgnore
-    public void setMessages(final MessageSubscription... messages);
-
+    public void setMessages(final MessageSubscription ...messages);
     /**
      *  <p>Value to set. Can only be unset if <code>changes</code> is set.</p>
      * @param messages values to be set
      */
-
+    
     public void setMessages(final List<MessageSubscription> messages);
 
     /**
      * factory method
      * @return instance of SubscriptionSetMessagesAction
      */
-    public static SubscriptionSetMessagesAction of() {
+    public static SubscriptionSetMessagesAction of(){
         return new SubscriptionSetMessagesActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy SubscriptionSetMessagesAction
@@ -89,9 +95,7 @@ public interface SubscriptionSetMessagesAction extends SubscriptionUpdateAction 
         }
         SubscriptionSetMessagesActionImpl instance = new SubscriptionSetMessagesActionImpl();
         instance.setMessages(Optional.ofNullable(template.getMessages())
-                .map(t -> t.stream()
-                        .map(com.commercetools.api.models.subscription.MessageSubscription::deepCopy)
-                        .collect(Collectors.toList()))
+                .map(t -> t.stream().map(com.commercetools.api.models.subscription.MessageSubscription::deepCopy).collect(Collectors.toList()))
                 .orElse(null));
         return instance;
     }
@@ -103,7 +107,7 @@ public interface SubscriptionSetMessagesAction extends SubscriptionUpdateAction 
     public static SubscriptionSetMessagesActionBuilder builder() {
         return SubscriptionSetMessagesActionBuilder.of();
     }
-
+    
     /**
      * create builder for SubscriptionSetMessagesAction instance
      * @param template instance with prefilled values for the builder
@@ -112,6 +116,7 @@ public interface SubscriptionSetMessagesAction extends SubscriptionUpdateAction 
     public static SubscriptionSetMessagesActionBuilder builder(final SubscriptionSetMessagesAction template) {
         return SubscriptionSetMessagesActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -122,11 +127,11 @@ public interface SubscriptionSetMessagesAction extends SubscriptionUpdateAction 
     default <T> T withSubscriptionSetMessagesAction(Function<SubscriptionSetMessagesAction, T> helper) {
         return helper.apply(this);
     }
-
     public static SubscriptionSetMessagesAction ofUnset() {
         return SubscriptionSetMessagesAction.of();
     }
-
+    
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

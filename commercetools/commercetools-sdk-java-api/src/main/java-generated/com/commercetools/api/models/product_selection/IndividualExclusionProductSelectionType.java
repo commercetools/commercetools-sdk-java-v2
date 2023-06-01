@@ -1,19 +1,22 @@
-
 package com.commercetools.api.models.product_selection;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
 import com.commercetools.api.models.common.LocalizedString;
+import com.commercetools.api.models.product_selection.ProductSelectionType;
+import com.commercetools.api.models.product_selection.ProductSelectionTypeEnum;
+import com.commercetools.api.models.product_selection.IndividualExclusionProductSelectionTypeImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * IndividualExclusionProductSelectionType
@@ -26,9 +29,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .name(nameBuilder -> nameBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = IndividualExclusionProductSelectionTypeImpl.class)
 @Deprecated
 public interface IndividualExclusionProductSelectionType extends ProductSelectionType {
@@ -51,16 +57,18 @@ public interface IndividualExclusionProductSelectionType extends ProductSelectio
      *  <p>The name of the ProductSelection which is recommended to be unique.</p>
      * @param name value to be set
      */
-
+    
     public void setName(final LocalizedString name);
+    
 
     /**
      * factory method
      * @return instance of IndividualExclusionProductSelectionType
      */
-    public static IndividualExclusionProductSelectionType of() {
+    public static IndividualExclusionProductSelectionType of(){
         return new IndividualExclusionProductSelectionTypeImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy IndividualExclusionProductSelectionType
@@ -79,8 +87,7 @@ public interface IndividualExclusionProductSelectionType extends ProductSelectio
      * @return copy instance
      */
     @Nullable
-    public static IndividualExclusionProductSelectionType deepCopy(
-            @Nullable final IndividualExclusionProductSelectionType template) {
+    public static IndividualExclusionProductSelectionType deepCopy(@Nullable final IndividualExclusionProductSelectionType template) {
         if (template == null) {
             return null;
         }
@@ -96,16 +103,16 @@ public interface IndividualExclusionProductSelectionType extends ProductSelectio
     public static IndividualExclusionProductSelectionTypeBuilder builder() {
         return IndividualExclusionProductSelectionTypeBuilder.of();
     }
-
+    
     /**
      * create builder for IndividualExclusionProductSelectionType instance
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static IndividualExclusionProductSelectionTypeBuilder builder(
-            final IndividualExclusionProductSelectionType template) {
+    public static IndividualExclusionProductSelectionTypeBuilder builder(final IndividualExclusionProductSelectionType template) {
         return IndividualExclusionProductSelectionTypeBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -113,11 +120,10 @@ public interface IndividualExclusionProductSelectionType extends ProductSelectio
      * @param helper function to map the object
      * @return mapped value
      */
-    default <T> T withIndividualExclusionProductSelectionType(
-            Function<IndividualExclusionProductSelectionType, T> helper) {
+    default <T> T withIndividualExclusionProductSelectionType(Function<IndividualExclusionProductSelectionType, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

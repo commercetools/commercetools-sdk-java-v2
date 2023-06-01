@@ -1,19 +1,21 @@
-
 package com.commercetools.importapi.models.customfields;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
 import com.commercetools.importapi.models.common.TypeKeyReference;
+import com.commercetools.importapi.models.customfields.FieldContainer;
+import com.commercetools.importapi.models.customfields.CustomImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>The representation to be sent to the server when creating a resource with custom fields.</p>
@@ -26,11 +28,15 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .type(typeBuilder -> typeBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = CustomImpl.class)
-public interface Custom {
+public interface Custom  {
+
 
     /**
      *  <p>The type that provides the field definitions for this object.</p>
@@ -40,7 +46,6 @@ public interface Custom {
     @Valid
     @JsonProperty("type")
     public TypeKeyReference getType();
-
     /**
      *  <p>The custom fields of this object.</p>
      * @return fields
@@ -53,23 +58,26 @@ public interface Custom {
      *  <p>The type that provides the field definitions for this object.</p>
      * @param type value to be set
      */
-
+    
     public void setType(final TypeKeyReference type);
-
+    
+    
     /**
      *  <p>The custom fields of this object.</p>
      * @param fields value to be set
      */
-
+    
     public void setFields(final FieldContainer fields);
+    
 
     /**
      * factory method
      * @return instance of Custom
      */
-    public static Custom of() {
+    public static Custom of(){
         return new CustomImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy Custom
@@ -95,8 +103,7 @@ public interface Custom {
         }
         CustomImpl instance = new CustomImpl();
         instance.setType(com.commercetools.importapi.models.common.TypeKeyReference.deepCopy(template.getType()));
-        instance.setFields(
-            com.commercetools.importapi.models.customfields.FieldContainer.deepCopy(template.getFields()));
+        instance.setFields(com.commercetools.importapi.models.customfields.FieldContainer.deepCopy(template.getFields()));
         return instance;
     }
 
@@ -107,7 +114,7 @@ public interface Custom {
     public static CustomBuilder builder() {
         return CustomBuilder.of();
     }
-
+    
     /**
      * create builder for Custom instance
      * @param template instance with prefilled values for the builder
@@ -116,6 +123,7 @@ public interface Custom {
     public static CustomBuilder builder(final Custom template) {
         return CustomBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -126,7 +134,7 @@ public interface Custom {
     default <T> T withCustom(Function<Custom, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

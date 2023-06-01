@@ -1,19 +1,20 @@
-
 package com.commercetools.api.models.standalone_price;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-import java.util.stream.Collectors;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
+import com.commercetools.api.models.standalone_price.StandalonePrice;
+import com.commercetools.api.models.standalone_price.StandalonePricePagedQueryResponseImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * StandalonePricePagedQueryResponse
@@ -29,12 +30,15 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .plusResults(resultsBuilder -> resultsBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = StandalonePricePagedQueryResponseImpl.class)
-public interface StandalonePricePagedQueryResponse
-        extends com.commercetools.api.models.ResourcePagedQueryResponse<StandalonePrice> {
+public interface StandalonePricePagedQueryResponse extends com.commercetools.api.models.ResourcePagedQueryResponse<StandalonePrice> {
+
 
     /**
      *  <p>Number of requested results.</p>
@@ -43,7 +47,6 @@ public interface StandalonePricePagedQueryResponse
     @NotNull
     @JsonProperty("limit")
     public Long getLimit();
-
     /**
      *  <p>Offset supplied by the client or server default. It is the number of elements skipped, not a page number.</p>
      * @return offset
@@ -51,7 +54,6 @@ public interface StandalonePricePagedQueryResponse
     @NotNull
     @JsonProperty("offset")
     public Long getOffset();
-
     /**
      *  <p>Actual number of results returned.</p>
      * @return count
@@ -59,15 +61,13 @@ public interface StandalonePricePagedQueryResponse
     @NotNull
     @JsonProperty("count")
     public Long getCount();
-
     /**
      *  <p>Total number of results matching the query. This number is an estimation that is not strongly consistent. This field is returned by default. For improved performance, calculating this field can be deactivated by using the query parameter <code>withTotal=false</code>. When the results are filtered with a Query Predicate, <code>total</code> is subject to a limit.</p>
      * @return total
      */
-
+    
     @JsonProperty("total")
     public Long getTotal();
-
     /**
      *  <p>StandalonePrices matching the query.</p>
      * @return results
@@ -81,52 +81,56 @@ public interface StandalonePricePagedQueryResponse
      *  <p>Number of requested results.</p>
      * @param limit value to be set
      */
-
+    
     public void setLimit(final Long limit);
-
+    
+    
     /**
      *  <p>Offset supplied by the client or server default. It is the number of elements skipped, not a page number.</p>
      * @param offset value to be set
      */
-
+    
     public void setOffset(final Long offset);
-
+    
+    
     /**
      *  <p>Actual number of results returned.</p>
      * @param count value to be set
      */
-
+    
     public void setCount(final Long count);
-
+    
+    
     /**
      *  <p>Total number of results matching the query. This number is an estimation that is not strongly consistent. This field is returned by default. For improved performance, calculating this field can be deactivated by using the query parameter <code>withTotal=false</code>. When the results are filtered with a Query Predicate, <code>total</code> is subject to a limit.</p>
      * @param total value to be set
      */
-
+    
     public void setTotal(final Long total);
-
+    
+    
     /**
      *  <p>StandalonePrices matching the query.</p>
      * @param results values to be set
      */
-
+    
     @JsonIgnore
-    public void setResults(final StandalonePrice... results);
-
+    public void setResults(final StandalonePrice ...results);
     /**
      *  <p>StandalonePrices matching the query.</p>
      * @param results values to be set
      */
-
+    
     public void setResults(final List<StandalonePrice> results);
 
     /**
      * factory method
      * @return instance of StandalonePricePagedQueryResponse
      */
-    public static StandalonePricePagedQueryResponse of() {
+    public static StandalonePricePagedQueryResponse of(){
         return new StandalonePricePagedQueryResponseImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy StandalonePricePagedQueryResponse
@@ -149,8 +153,7 @@ public interface StandalonePricePagedQueryResponse
      * @return copy instance
      */
     @Nullable
-    public static StandalonePricePagedQueryResponse deepCopy(
-            @Nullable final StandalonePricePagedQueryResponse template) {
+    public static StandalonePricePagedQueryResponse deepCopy(@Nullable final StandalonePricePagedQueryResponse template) {
         if (template == null) {
             return null;
         }
@@ -160,9 +163,7 @@ public interface StandalonePricePagedQueryResponse
         instance.setCount(template.getCount());
         instance.setTotal(template.getTotal());
         instance.setResults(Optional.ofNullable(template.getResults())
-                .map(t -> t.stream()
-                        .map(com.commercetools.api.models.standalone_price.StandalonePrice::deepCopy)
-                        .collect(Collectors.toList()))
+                .map(t -> t.stream().map(com.commercetools.api.models.standalone_price.StandalonePrice::deepCopy).collect(Collectors.toList()))
                 .orElse(null));
         return instance;
     }
@@ -174,7 +175,7 @@ public interface StandalonePricePagedQueryResponse
     public static StandalonePricePagedQueryResponseBuilder builder() {
         return StandalonePricePagedQueryResponseBuilder.of();
     }
-
+    
     /**
      * create builder for StandalonePricePagedQueryResponse instance
      * @param template instance with prefilled values for the builder
@@ -183,6 +184,7 @@ public interface StandalonePricePagedQueryResponse
     public static StandalonePricePagedQueryResponseBuilder builder(final StandalonePricePagedQueryResponse template) {
         return StandalonePricePagedQueryResponseBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -193,7 +195,7 @@ public interface StandalonePricePagedQueryResponse
     default <T> T withStandalonePricePagedQueryResponse(Function<StandalonePricePagedQueryResponse, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

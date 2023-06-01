@@ -1,16 +1,20 @@
-
 package com.commercetools.api.models.product;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
+import com.commercetools.api.models.product.ProductUpdateAction;
+import com.commercetools.api.models.product.ProductRemoveVariantActionImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Either <code>id</code> or <code>sku</code> is required. Produces the ProductVariantDeleted Message. If the Product Variant to remove is part of a ProductSelectionAssignment its SKU will be automatically removed from the respective ProductVariantSelection.</p>
@@ -22,9 +26,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     ProductRemoveVariantAction productRemoveVariantAction = ProductRemoveVariantAction.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = ProductRemoveVariantActionImpl.class)
 public interface ProductRemoveVariantAction extends ProductUpdateAction {
 
@@ -37,23 +44,21 @@ public interface ProductRemoveVariantAction extends ProductUpdateAction {
      *  <p>The <code>id</code> of the ProductVariant to remove.</p>
      * @return id
      */
-
+    
     @JsonProperty("id")
     public Long getId();
-
     /**
      *  <p>The <code>sku</code> of the ProductVariant to remove.</p>
      * @return sku
      */
-
+    
     @JsonProperty("sku")
     public String getSku();
-
     /**
      *  <p>If <code>true</code>, only the staged ProductVariant is removed. If <code>false</code>, both the current and staged ProductVariant is removed.</p>
      * @return staged
      */
-
+    
     @JsonProperty("staged")
     public Boolean getStaged();
 
@@ -61,30 +66,34 @@ public interface ProductRemoveVariantAction extends ProductUpdateAction {
      *  <p>The <code>id</code> of the ProductVariant to remove.</p>
      * @param id value to be set
      */
-
+    
     public void setId(final Long id);
-
+    
+    
     /**
      *  <p>The <code>sku</code> of the ProductVariant to remove.</p>
      * @param sku value to be set
      */
-
+    
     public void setSku(final String sku);
-
+    
+    
     /**
      *  <p>If <code>true</code>, only the staged ProductVariant is removed. If <code>false</code>, both the current and staged ProductVariant is removed.</p>
      * @param staged value to be set
      */
-
+    
     public void setStaged(final Boolean staged);
+    
 
     /**
      * factory method
      * @return instance of ProductRemoveVariantAction
      */
-    public static ProductRemoveVariantAction of() {
+    public static ProductRemoveVariantAction of(){
         return new ProductRemoveVariantActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy ProductRemoveVariantAction
@@ -123,7 +132,7 @@ public interface ProductRemoveVariantAction extends ProductUpdateAction {
     public static ProductRemoveVariantActionBuilder builder() {
         return ProductRemoveVariantActionBuilder.of();
     }
-
+    
     /**
      * create builder for ProductRemoveVariantAction instance
      * @param template instance with prefilled values for the builder
@@ -132,6 +141,7 @@ public interface ProductRemoveVariantAction extends ProductUpdateAction {
     public static ProductRemoveVariantActionBuilder builder(final ProductRemoveVariantAction template) {
         return ProductRemoveVariantActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -142,7 +152,7 @@ public interface ProductRemoveVariantAction extends ProductUpdateAction {
     default <T> T withProductRemoveVariantAction(Function<ProductRemoveVariantAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

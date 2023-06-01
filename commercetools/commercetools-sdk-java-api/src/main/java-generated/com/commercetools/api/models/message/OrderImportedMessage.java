@@ -1,19 +1,21 @@
-
 package com.commercetools.api.models.message;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
+import com.commercetools.api.models.message.OrderMessage;
 import com.commercetools.api.models.order.Order;
+import com.commercetools.api.models.message.OrderImportedMessageImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Generated after a successful Order Import.</p>
@@ -33,9 +35,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .order(orderBuilder -> orderBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = OrderImportedMessageImpl.class)
 public interface OrderImportedMessage extends OrderMessage {
 
@@ -57,16 +62,18 @@ public interface OrderImportedMessage extends OrderMessage {
      *  <p>Order that was imported.</p>
      * @param order value to be set
      */
-
+    
     public void setOrder(final Order order);
+    
 
     /**
      * factory method
      * @return instance of OrderImportedMessage
      */
-    public static OrderImportedMessage of() {
+    public static OrderImportedMessage of(){
         return new OrderImportedMessageImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy OrderImportedMessage
@@ -104,14 +111,12 @@ public interface OrderImportedMessage extends OrderMessage {
         instance.setVersion(template.getVersion());
         instance.setCreatedAt(template.getCreatedAt());
         instance.setLastModifiedAt(template.getLastModifiedAt());
-        instance.setLastModifiedBy(
-            com.commercetools.api.models.common.LastModifiedBy.deepCopy(template.getLastModifiedBy()));
+        instance.setLastModifiedBy(com.commercetools.api.models.common.LastModifiedBy.deepCopy(template.getLastModifiedBy()));
         instance.setCreatedBy(com.commercetools.api.models.common.CreatedBy.deepCopy(template.getCreatedBy()));
         instance.setSequenceNumber(template.getSequenceNumber());
         instance.setResource(com.commercetools.api.models.common.Reference.deepCopy(template.getResource()));
         instance.setResourceVersion(template.getResourceVersion());
-        instance.setResourceUserProvidedIdentifiers(com.commercetools.api.models.message.UserProvidedIdentifiers
-                .deepCopy(template.getResourceUserProvidedIdentifiers()));
+        instance.setResourceUserProvidedIdentifiers(com.commercetools.api.models.message.UserProvidedIdentifiers.deepCopy(template.getResourceUserProvidedIdentifiers()));
         instance.setOrder(com.commercetools.api.models.order.Order.deepCopy(template.getOrder()));
         return instance;
     }
@@ -123,7 +128,7 @@ public interface OrderImportedMessage extends OrderMessage {
     public static OrderImportedMessageBuilder builder() {
         return OrderImportedMessageBuilder.of();
     }
-
+    
     /**
      * create builder for OrderImportedMessage instance
      * @param template instance with prefilled values for the builder
@@ -132,6 +137,7 @@ public interface OrderImportedMessage extends OrderMessage {
     public static OrderImportedMessageBuilder builder(final OrderImportedMessage template) {
         return OrderImportedMessageBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -142,7 +148,7 @@ public interface OrderImportedMessage extends OrderMessage {
     default <T> T withOrderImportedMessage(Function<OrderImportedMessage, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

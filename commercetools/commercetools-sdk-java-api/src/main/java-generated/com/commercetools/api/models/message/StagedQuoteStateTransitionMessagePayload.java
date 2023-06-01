@@ -1,19 +1,21 @@
-
 package com.commercetools.api.models.message;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
+import com.commercetools.api.models.message.MessagePayload;
 import com.commercetools.api.models.state.StateReference;
+import com.commercetools.api.models.message.StagedQuoteStateTransitionMessagePayloadImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Generated after a successful Transition State update action.</p>
@@ -27,9 +29,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .force(true)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = StagedQuoteStateTransitionMessagePayloadImpl.class)
 public interface StagedQuoteStateTransitionMessagePayload extends MessagePayload {
 
@@ -46,7 +51,6 @@ public interface StagedQuoteStateTransitionMessagePayload extends MessagePayload
     @Valid
     @JsonProperty("state")
     public StateReference getState();
-
     /**
      *  <p>State of the Quote before the Transition State update action.</p>
      * @return oldState
@@ -54,7 +58,6 @@ public interface StagedQuoteStateTransitionMessagePayload extends MessagePayload
     @Valid
     @JsonProperty("oldState")
     public StateReference getOldState();
-
     /**
      *  <p>Whether State transition validations were turned off during the Transition State update action.</p>
      * @return force
@@ -67,30 +70,34 @@ public interface StagedQuoteStateTransitionMessagePayload extends MessagePayload
      *  <p>State of the Quote after the Transition State update action.</p>
      * @param state value to be set
      */
-
+    
     public void setState(final StateReference state);
-
+    
+    
     /**
      *  <p>State of the Quote before the Transition State update action.</p>
      * @param oldState value to be set
      */
-
+    
     public void setOldState(final StateReference oldState);
-
+    
+    
     /**
      *  <p>Whether State transition validations were turned off during the Transition State update action.</p>
      * @param force value to be set
      */
-
+    
     public void setForce(final Boolean force);
+    
 
     /**
      * factory method
      * @return instance of StagedQuoteStateTransitionMessagePayload
      */
-    public static StagedQuoteStateTransitionMessagePayload of() {
+    public static StagedQuoteStateTransitionMessagePayload of(){
         return new StagedQuoteStateTransitionMessagePayloadImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy StagedQuoteStateTransitionMessagePayload
@@ -111,8 +118,7 @@ public interface StagedQuoteStateTransitionMessagePayload extends MessagePayload
      * @return copy instance
      */
     @Nullable
-    public static StagedQuoteStateTransitionMessagePayload deepCopy(
-            @Nullable final StagedQuoteStateTransitionMessagePayload template) {
+    public static StagedQuoteStateTransitionMessagePayload deepCopy(@Nullable final StagedQuoteStateTransitionMessagePayload template) {
         if (template == null) {
             return null;
         }
@@ -130,16 +136,16 @@ public interface StagedQuoteStateTransitionMessagePayload extends MessagePayload
     public static StagedQuoteStateTransitionMessagePayloadBuilder builder() {
         return StagedQuoteStateTransitionMessagePayloadBuilder.of();
     }
-
+    
     /**
      * create builder for StagedQuoteStateTransitionMessagePayload instance
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static StagedQuoteStateTransitionMessagePayloadBuilder builder(
-            final StagedQuoteStateTransitionMessagePayload template) {
+    public static StagedQuoteStateTransitionMessagePayloadBuilder builder(final StagedQuoteStateTransitionMessagePayload template) {
         return StagedQuoteStateTransitionMessagePayloadBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -147,11 +153,10 @@ public interface StagedQuoteStateTransitionMessagePayload extends MessagePayload
      * @param helper function to map the object
      * @return mapped value
      */
-    default <T> T withStagedQuoteStateTransitionMessagePayload(
-            Function<StagedQuoteStateTransitionMessagePayload, T> helper) {
+    default <T> T withStagedQuoteStateTransitionMessagePayload(Function<StagedQuoteStateTransitionMessagePayload, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

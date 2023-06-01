@@ -1,8 +1,11 @@
-
 package com.commercetools.api.models.extension;
 
+import com.commercetools.api.models.extension.ExtensionDestination;
+import com.commercetools.api.models.extension.AWSLambdaDestination;
+import javax.annotation.Nullable;
 import java.util.*;
-
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -18,74 +21,95 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .accessSecret("{accessSecret}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class AWSLambdaDestinationBuilder implements Builder<AWSLambdaDestination> {
 
+    
+    
     private String arn;
-
+    
+    
+    
     private String accessKey;
-
+    
+    
+    
     private String accessSecret;
 
+    
     /**
      *  <p>Amazon Resource Name (ARN) of the Lambda function in the format <code>arn:aws:lambda:&lt;region&gt;:&lt;accountid&gt;:function:&lt;functionName&gt;</code>. Use the format <code>arn:aws:lambda:&lt;region&gt;:&lt;accountid&gt;:function:&lt;functionName&gt;:&lt;functionAlias/version&gt;</code> to point to a specific version of the function.</p>
      * @param arn value to be set
      * @return Builder
      */
-
-    public AWSLambdaDestinationBuilder arn(final String arn) {
+    
+    public AWSLambdaDestinationBuilder arn( final String arn) {
         this.arn = arn;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Partially hidden on retrieval for security reasons.</p>
      * @param accessKey value to be set
      * @return Builder
      */
-
-    public AWSLambdaDestinationBuilder accessKey(final String accessKey) {
+    
+    public AWSLambdaDestinationBuilder accessKey( final String accessKey) {
         this.accessKey = accessKey;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Partially hidden on retrieval for security reasons.</p>
      * @param accessSecret value to be set
      * @return Builder
      */
-
-    public AWSLambdaDestinationBuilder accessSecret(final String accessSecret) {
+    
+    public AWSLambdaDestinationBuilder accessSecret( final String accessSecret) {
         this.accessSecret = accessSecret;
         return this;
     }
+    
+    
 
     /**
      *  <p>Amazon Resource Name (ARN) of the Lambda function in the format <code>arn:aws:lambda:&lt;region&gt;:&lt;accountid&gt;:function:&lt;functionName&gt;</code>. Use the format <code>arn:aws:lambda:&lt;region&gt;:&lt;accountid&gt;:function:&lt;functionName&gt;:&lt;functionAlias/version&gt;</code> to point to a specific version of the function.</p>
      * @return arn
      */
-
-    public String getArn() {
+    
+    
+    public String getArn(){
         return this.arn;
     }
-
+    
     /**
      *  <p>Partially hidden on retrieval for security reasons.</p>
      * @return accessKey
      */
-
-    public String getAccessKey() {
+    
+    
+    public String getAccessKey(){
         return this.accessKey;
     }
-
+    
     /**
      *  <p>Partially hidden on retrieval for security reasons.</p>
      * @return accessSecret
      */
-
-    public String getAccessSecret() {
+    
+    
+    public String getAccessSecret(){
         return this.accessSecret;
     }
 
@@ -99,7 +123,7 @@ public class AWSLambdaDestinationBuilder implements Builder<AWSLambdaDestination
         Objects.requireNonNull(accessSecret, AWSLambdaDestination.class + ": accessSecret is missing");
         return new AWSLambdaDestinationImpl(arn, accessKey, accessSecret);
     }
-
+    
     /**
      * builds AWSLambdaDestination without checking for non-null required values
      * @return AWSLambdaDestination
@@ -110,7 +134,7 @@ public class AWSLambdaDestinationBuilder implements Builder<AWSLambdaDestination
 
     /**
      * factory method for an instance of AWSLambdaDestinationBuilder
-     * @return builder
+     * @return builder 
      */
     public static AWSLambdaDestinationBuilder of() {
         return new AWSLambdaDestinationBuilder();

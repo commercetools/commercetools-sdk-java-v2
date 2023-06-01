@@ -1,20 +1,21 @@
-
 package com.commercetools.importapi.models.productvariants;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-import java.util.stream.Collectors;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
 import com.commercetools.importapi.models.common.KeyReference;
+import com.commercetools.importapi.models.productvariants.Attribute;
+import com.commercetools.importapi.models.productvariants.ReferenceSetAttributeImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>This type represents an attribute whose value is a set of references.</p>
@@ -27,9 +28,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .plusValue(valueBuilder -> valueBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = ReferenceSetAttributeImpl.class)
 public interface ReferenceSetAttribute extends Attribute {
 
@@ -51,24 +55,24 @@ public interface ReferenceSetAttribute extends Attribute {
      * set value
      * @param value values to be set
      */
-
+    
     @JsonIgnore
-    public void setValue(final KeyReference... value);
-
+    public void setValue(final KeyReference ...value);
     /**
      * set value
      * @param value values to be set
      */
-
+    
     public void setValue(final List<KeyReference> value);
 
     /**
      * factory method
      * @return instance of ReferenceSetAttribute
      */
-    public static ReferenceSetAttribute of() {
+    public static ReferenceSetAttribute of(){
         return new ReferenceSetAttributeImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy ReferenceSetAttribute
@@ -95,9 +99,7 @@ public interface ReferenceSetAttribute extends Attribute {
         ReferenceSetAttributeImpl instance = new ReferenceSetAttributeImpl();
         instance.setName(template.getName());
         instance.setValue(Optional.ofNullable(template.getValue())
-                .map(t -> t.stream()
-                        .map(com.commercetools.importapi.models.common.KeyReference::deepCopy)
-                        .collect(Collectors.toList()))
+                .map(t -> t.stream().map(com.commercetools.importapi.models.common.KeyReference::deepCopy).collect(Collectors.toList()))
                 .orElse(null));
         return instance;
     }
@@ -109,7 +111,7 @@ public interface ReferenceSetAttribute extends Attribute {
     public static ReferenceSetAttributeBuilder builder() {
         return ReferenceSetAttributeBuilder.of();
     }
-
+    
     /**
      * create builder for ReferenceSetAttribute instance
      * @param template instance with prefilled values for the builder
@@ -118,6 +120,7 @@ public interface ReferenceSetAttribute extends Attribute {
     public static ReferenceSetAttributeBuilder builder(final ReferenceSetAttribute template) {
         return ReferenceSetAttributeBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -128,7 +131,7 @@ public interface ReferenceSetAttribute extends Attribute {
     default <T> T withReferenceSetAttribute(Function<ReferenceSetAttribute, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

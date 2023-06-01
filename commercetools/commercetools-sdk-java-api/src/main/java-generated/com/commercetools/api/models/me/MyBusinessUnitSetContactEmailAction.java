@@ -1,16 +1,20 @@
-
 package com.commercetools.api.models.me;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
+import com.commercetools.api.models.me.MyBusinessUnitUpdateAction;
+import com.commercetools.api.models.me.MyBusinessUnitSetContactEmailActionImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Setting the contact email on a Business Unit generates a BusinessUnitContactEmailSet Message.</p>
@@ -22,9 +26,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     MyBusinessUnitSetContactEmailAction myBusinessUnitSetContactEmailAction = MyBusinessUnitSetContactEmailAction.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = MyBusinessUnitSetContactEmailActionImpl.class)
 public interface MyBusinessUnitSetContactEmailAction extends MyBusinessUnitUpdateAction {
 
@@ -37,7 +44,7 @@ public interface MyBusinessUnitSetContactEmailAction extends MyBusinessUnitUpdat
      *  <p>Email to set. If <code>contactEmail</code> is absent or <code>null</code>, the existing contact email, if any, will be removed.</p>
      * @return contactEmail
      */
-
+    
     @JsonProperty("contactEmail")
     public String getContactEmail();
 
@@ -45,16 +52,18 @@ public interface MyBusinessUnitSetContactEmailAction extends MyBusinessUnitUpdat
      *  <p>Email to set. If <code>contactEmail</code> is absent or <code>null</code>, the existing contact email, if any, will be removed.</p>
      * @param contactEmail value to be set
      */
-
+    
     public void setContactEmail(final String contactEmail);
+    
 
     /**
      * factory method
      * @return instance of MyBusinessUnitSetContactEmailAction
      */
-    public static MyBusinessUnitSetContactEmailAction of() {
+    public static MyBusinessUnitSetContactEmailAction of(){
         return new MyBusinessUnitSetContactEmailActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy MyBusinessUnitSetContactEmailAction
@@ -73,8 +82,7 @@ public interface MyBusinessUnitSetContactEmailAction extends MyBusinessUnitUpdat
      * @return copy instance
      */
     @Nullable
-    public static MyBusinessUnitSetContactEmailAction deepCopy(
-            @Nullable final MyBusinessUnitSetContactEmailAction template) {
+    public static MyBusinessUnitSetContactEmailAction deepCopy(@Nullable final MyBusinessUnitSetContactEmailAction template) {
         if (template == null) {
             return null;
         }
@@ -90,16 +98,16 @@ public interface MyBusinessUnitSetContactEmailAction extends MyBusinessUnitUpdat
     public static MyBusinessUnitSetContactEmailActionBuilder builder() {
         return MyBusinessUnitSetContactEmailActionBuilder.of();
     }
-
+    
     /**
      * create builder for MyBusinessUnitSetContactEmailAction instance
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static MyBusinessUnitSetContactEmailActionBuilder builder(
-            final MyBusinessUnitSetContactEmailAction template) {
+    public static MyBusinessUnitSetContactEmailActionBuilder builder(final MyBusinessUnitSetContactEmailAction template) {
         return MyBusinessUnitSetContactEmailActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -110,7 +118,7 @@ public interface MyBusinessUnitSetContactEmailAction extends MyBusinessUnitUpdat
     default <T> T withMyBusinessUnitSetContactEmailAction(Function<MyBusinessUnitSetContactEmailAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

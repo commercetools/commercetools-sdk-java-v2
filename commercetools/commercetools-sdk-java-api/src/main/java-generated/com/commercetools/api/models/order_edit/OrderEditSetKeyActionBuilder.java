@@ -1,10 +1,11 @@
-
 package com.commercetools.api.models.order_edit;
 
-import java.util.*;
-
+import com.commercetools.api.models.order_edit.OrderEditUpdateAction;
+import com.commercetools.api.models.order_edit.OrderEditSetKeyAction;
 import javax.annotation.Nullable;
-
+import java.util.*;
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -17,32 +18,39 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     OrderEditSetKeyAction orderEditSetKeyAction = OrderEditSetKeyAction.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class OrderEditSetKeyActionBuilder implements Builder<OrderEditSetKeyAction> {
 
+    
     @Nullable
     private String key;
 
+    
     /**
      *  <p>If <code>key</code> is absent or <code>null</code>, this field will be removed if it exists.</p>
      * @param key value to be set
      * @return Builder
      */
-
+    
     public OrderEditSetKeyActionBuilder key(@Nullable final String key) {
         this.key = key;
         return this;
     }
+    
+    
 
     /**
      *  <p>If <code>key</code> is absent or <code>null</code>, this field will be removed if it exists.</p>
      * @return key
      */
-
+    
     @Nullable
-    public String getKey() {
+    public String getKey(){
         return this.key;
     }
 
@@ -53,7 +61,7 @@ public class OrderEditSetKeyActionBuilder implements Builder<OrderEditSetKeyActi
     public OrderEditSetKeyAction build() {
         return new OrderEditSetKeyActionImpl(key);
     }
-
+    
     /**
      * builds OrderEditSetKeyAction without checking for non-null required values
      * @return OrderEditSetKeyAction
@@ -64,7 +72,7 @@ public class OrderEditSetKeyActionBuilder implements Builder<OrderEditSetKeyActi
 
     /**
      * factory method for an instance of OrderEditSetKeyActionBuilder
-     * @return builder
+     * @return builder 
      */
     public static OrderEditSetKeyActionBuilder of() {
         return new OrderEditSetKeyActionBuilder();

@@ -1,8 +1,11 @@
-
 package com.commercetools.api.models.product;
 
-import java.util.*;
 
+import com.commercetools.api.models.product.Suggestion;
+import javax.annotation.Nullable;
+import java.util.*;
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -16,30 +19,39 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .text("{text}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class SuggestionBuilder implements Builder<Suggestion> {
 
+    
+    
     private String text;
 
+    
     /**
      *  <p>The suggested text.</p>
      * @param text value to be set
      * @return Builder
      */
-
-    public SuggestionBuilder text(final String text) {
+    
+    public SuggestionBuilder text( final String text) {
         this.text = text;
         return this;
     }
+    
+    
 
     /**
      *  <p>The suggested text.</p>
      * @return text
      */
-
-    public String getText() {
+    
+    
+    public String getText(){
         return this.text;
     }
 
@@ -51,7 +63,7 @@ public class SuggestionBuilder implements Builder<Suggestion> {
         Objects.requireNonNull(text, Suggestion.class + ": text is missing");
         return new SuggestionImpl(text);
     }
-
+    
     /**
      * builds Suggestion without checking for non-null required values
      * @return Suggestion
@@ -62,7 +74,7 @@ public class SuggestionBuilder implements Builder<Suggestion> {
 
     /**
      * factory method for an instance of SuggestionBuilder
-     * @return builder
+     * @return builder 
      */
     public static SuggestionBuilder of() {
         return new SuggestionBuilder();

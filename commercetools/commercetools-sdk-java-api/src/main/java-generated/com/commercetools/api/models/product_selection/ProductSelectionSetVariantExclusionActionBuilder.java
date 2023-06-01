@@ -1,11 +1,13 @@
-
 package com.commercetools.api.models.product_selection;
 
+import com.commercetools.api.models.product.ProductResourceIdentifier;
+import com.commercetools.api.models.product_selection.ProductSelectionUpdateAction;
+import com.commercetools.api.models.product_selection.ProductVariantExclusion;
+import com.commercetools.api.models.product_selection.ProductSelectionSetVariantExclusionAction;
+import javax.annotation.Nullable;
 import java.util.*;
 import java.util.function.Function;
-
-import javax.annotation.Nullable;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -19,109 +21,111 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .product(productBuilder -> productBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
-public class ProductSelectionSetVariantExclusionActionBuilder
-        implements Builder<ProductSelectionSetVariantExclusionAction> {
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
+public class ProductSelectionSetVariantExclusionActionBuilder implements Builder<ProductSelectionSetVariantExclusionAction> {
 
+    
+    
     private com.commercetools.api.models.product.ProductResourceIdentifier product;
-
+    
+    
     @Nullable
     private com.commercetools.api.models.product_selection.ProductVariantExclusion variantExclusion;
 
+    
     /**
      *  <p>ResourceIdentifier of the Product</p>
      * @param builder function to build the product value
      * @return Builder
      */
-
-    public ProductSelectionSetVariantExclusionActionBuilder product(
-            Function<com.commercetools.api.models.product.ProductResourceIdentifierBuilder, com.commercetools.api.models.product.ProductResourceIdentifierBuilder> builder) {
-        this.product = builder.apply(com.commercetools.api.models.product.ProductResourceIdentifierBuilder.of())
-                .build();
+    
+    public ProductSelectionSetVariantExclusionActionBuilder product(Function<com.commercetools.api.models.product.ProductResourceIdentifierBuilder, com.commercetools.api.models.product.ProductResourceIdentifierBuilder> builder) {
+        this.product = builder.apply(com.commercetools.api.models.product.ProductResourceIdentifierBuilder.of()).build();
         return this;
     }
-
+    
     /**
      *  <p>ResourceIdentifier of the Product</p>
      * @param builder function to build the product value
      * @return Builder
      */
-
-    public ProductSelectionSetVariantExclusionActionBuilder withProduct(
-            Function<com.commercetools.api.models.product.ProductResourceIdentifierBuilder, com.commercetools.api.models.product.ProductResourceIdentifier> builder) {
+    
+    public ProductSelectionSetVariantExclusionActionBuilder withProduct(Function<com.commercetools.api.models.product.ProductResourceIdentifierBuilder, com.commercetools.api.models.product.ProductResourceIdentifier> builder) {
         this.product = builder.apply(com.commercetools.api.models.product.ProductResourceIdentifierBuilder.of());
         return this;
     }
-
+                    
     /**
      *  <p>ResourceIdentifier of the Product</p>
      * @param product value to be set
      * @return Builder
      */
-
-    public ProductSelectionSetVariantExclusionActionBuilder product(
-            final com.commercetools.api.models.product.ProductResourceIdentifier product) {
+    
+    public ProductSelectionSetVariantExclusionActionBuilder product( final com.commercetools.api.models.product.ProductResourceIdentifier product) {
         this.product = product;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Determines which Variants of the previously excluded Product are to be included in the Product Selection with <code>IndividualExclusion</code> ProductSelectionMode. Leave it empty to unset an existing Variant Exclusion.</p>
      * @param builder function to build the variantExclusion value
      * @return Builder
      */
-
-    public ProductSelectionSetVariantExclusionActionBuilder variantExclusion(
-            Function<com.commercetools.api.models.product_selection.ProductVariantExclusionBuilder, com.commercetools.api.models.product_selection.ProductVariantExclusionBuilder> builder) {
-        this.variantExclusion = builder
-                .apply(com.commercetools.api.models.product_selection.ProductVariantExclusionBuilder.of())
-                .build();
+    
+    public ProductSelectionSetVariantExclusionActionBuilder variantExclusion(Function<com.commercetools.api.models.product_selection.ProductVariantExclusionBuilder, com.commercetools.api.models.product_selection.ProductVariantExclusionBuilder> builder) {
+        this.variantExclusion = builder.apply(com.commercetools.api.models.product_selection.ProductVariantExclusionBuilder.of()).build();
         return this;
     }
-
+    
     /**
      *  <p>Determines which Variants of the previously excluded Product are to be included in the Product Selection with <code>IndividualExclusion</code> ProductSelectionMode. Leave it empty to unset an existing Variant Exclusion.</p>
      * @param builder function to build the variantExclusion value
      * @return Builder
      */
-
-    public ProductSelectionSetVariantExclusionActionBuilder withVariantExclusion(
-            Function<com.commercetools.api.models.product_selection.ProductVariantExclusionBuilder, com.commercetools.api.models.product_selection.ProductVariantExclusion> builder) {
-        this.variantExclusion = builder
-                .apply(com.commercetools.api.models.product_selection.ProductVariantExclusionBuilder.of());
+    
+    public ProductSelectionSetVariantExclusionActionBuilder withVariantExclusion(Function<com.commercetools.api.models.product_selection.ProductVariantExclusionBuilder, com.commercetools.api.models.product_selection.ProductVariantExclusion> builder) {
+        this.variantExclusion = builder.apply(com.commercetools.api.models.product_selection.ProductVariantExclusionBuilder.of());
         return this;
     }
-
+                    
     /**
      *  <p>Determines which Variants of the previously excluded Product are to be included in the Product Selection with <code>IndividualExclusion</code> ProductSelectionMode. Leave it empty to unset an existing Variant Exclusion.</p>
      * @param variantExclusion value to be set
      * @return Builder
      */
-
-    public ProductSelectionSetVariantExclusionActionBuilder variantExclusion(
-            @Nullable final com.commercetools.api.models.product_selection.ProductVariantExclusion variantExclusion) {
+    
+    public ProductSelectionSetVariantExclusionActionBuilder variantExclusion(@Nullable final com.commercetools.api.models.product_selection.ProductVariantExclusion variantExclusion) {
         this.variantExclusion = variantExclusion;
         return this;
     }
+    
+    
 
     /**
      *  <p>ResourceIdentifier of the Product</p>
      * @return product
      */
-
-    public com.commercetools.api.models.product.ProductResourceIdentifier getProduct() {
+    
+    
+    public com.commercetools.api.models.product.ProductResourceIdentifier getProduct(){
         return this.product;
     }
-
+    
     /**
      *  <p>Determines which Variants of the previously excluded Product are to be included in the Product Selection with <code>IndividualExclusion</code> ProductSelectionMode. Leave it empty to unset an existing Variant Exclusion.</p>
      * @return variantExclusion
      */
-
+    
     @Nullable
-    public com.commercetools.api.models.product_selection.ProductVariantExclusion getVariantExclusion() {
+    public com.commercetools.api.models.product_selection.ProductVariantExclusion getVariantExclusion(){
         return this.variantExclusion;
     }
 
@@ -133,7 +137,7 @@ public class ProductSelectionSetVariantExclusionActionBuilder
         Objects.requireNonNull(product, ProductSelectionSetVariantExclusionAction.class + ": product is missing");
         return new ProductSelectionSetVariantExclusionActionImpl(product, variantExclusion);
     }
-
+    
     /**
      * builds ProductSelectionSetVariantExclusionAction without checking for non-null required values
      * @return ProductSelectionSetVariantExclusionAction
@@ -144,7 +148,7 @@ public class ProductSelectionSetVariantExclusionActionBuilder
 
     /**
      * factory method for an instance of ProductSelectionSetVariantExclusionActionBuilder
-     * @return builder
+     * @return builder 
      */
     public static ProductSelectionSetVariantExclusionActionBuilder of() {
         return new ProductSelectionSetVariantExclusionActionBuilder();
@@ -155,8 +159,7 @@ public class ProductSelectionSetVariantExclusionActionBuilder
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static ProductSelectionSetVariantExclusionActionBuilder of(
-            final ProductSelectionSetVariantExclusionAction template) {
+    public static ProductSelectionSetVariantExclusionActionBuilder of(final ProductSelectionSetVariantExclusionAction template) {
         ProductSelectionSetVariantExclusionActionBuilder builder = new ProductSelectionSetVariantExclusionActionBuilder();
         builder.product = template.getProduct();
         builder.variantExclusion = template.getVariantExclusion();

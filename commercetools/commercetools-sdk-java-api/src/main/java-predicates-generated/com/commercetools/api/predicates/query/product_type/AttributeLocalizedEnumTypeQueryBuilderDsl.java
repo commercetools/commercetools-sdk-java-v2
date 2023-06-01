@@ -1,11 +1,11 @@
-
 package com.commercetools.api.predicates.query.product_type;
-
-import java.util.function.Function;
 
 import com.commercetools.api.predicates.query.*;
 
-public class AttributeLocalizedEnumTypeQueryBuilderDsl {
+import java.util.function.Function;
+
+
+public class AttributeLocalizedEnumTypeQueryBuilderDsl  {
     public AttributeLocalizedEnumTypeQueryBuilderDsl() {
     }
 
@@ -14,24 +14,19 @@ public class AttributeLocalizedEnumTypeQueryBuilderDsl {
     }
 
     public StringComparisonPredicateBuilder<AttributeLocalizedEnumTypeQueryBuilderDsl> name() {
-        return new StringComparisonPredicateBuilder<>(
-            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("name")),
-            p -> new CombinationQueryPredicate<>(p, AttributeLocalizedEnumTypeQueryBuilderDsl::of));
+        return new StringComparisonPredicateBuilder<>(BinaryQueryPredicate.of().left(new ConstantQueryPredicate("name")),
+        p -> new CombinationQueryPredicate<>(p, AttributeLocalizedEnumTypeQueryBuilderDsl::of));
     }
-
     public CombinationQueryPredicate<AttributeLocalizedEnumTypeQueryBuilderDsl> values(
-            Function<com.commercetools.api.predicates.query.product_type.AttributeLocalizedEnumValueQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.product_type.AttributeLocalizedEnumValueQueryBuilderDsl>> fn) {
+        Function<com.commercetools.api.predicates.query.product_type.AttributeLocalizedEnumValueQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.product_type.AttributeLocalizedEnumValueQueryBuilderDsl>> fn) {
         return new CombinationQueryPredicate<>(ContainerQueryPredicate.of()
-                .parent(ConstantQueryPredicate.of().constant("values"))
-                .inner(fn.apply(
-                    com.commercetools.api.predicates.query.product_type.AttributeLocalizedEnumValueQueryBuilderDsl
-                            .of())),
+            .parent(ConstantQueryPredicate.of().constant("values"))
+            .inner(fn.apply(com.commercetools.api.predicates.query.product_type.AttributeLocalizedEnumValueQueryBuilderDsl.of())),
             AttributeLocalizedEnumTypeQueryBuilderDsl::of);
     }
-
     public CollectionPredicateBuilder<AttributeLocalizedEnumTypeQueryBuilderDsl> values() {
         return new CollectionPredicateBuilder<>(BinaryQueryPredicate.of().left(new ConstantQueryPredicate("values")),
-            p -> new CombinationQueryPredicate<>(p, AttributeLocalizedEnumTypeQueryBuilderDsl::of));
+                p -> new CombinationQueryPredicate<>(p, AttributeLocalizedEnumTypeQueryBuilderDsl::of));
     }
-
+    
 }

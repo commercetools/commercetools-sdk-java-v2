@@ -1,50 +1,57 @@
-
 package com.commercetools.api.models.product_selection;
 
-import java.time.*;
-import java.util.*;
-
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
-
-import io.vrap.rmf.base.client.ModelBase;
+import com.commercetools.api.models.product_selection.ProductSelection;
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.ModelBase;
+import javax.validation.Valid;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.annotation.*;
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
  *  <p>PagedQueryResult containing an array of ProductSelection.</p>
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class ProductSelectionPagedQueryResponseImpl implements ProductSelectionPagedQueryResponse, ModelBase {
 
+    
     private Long limit;
-
+    
+    
     private Long offset;
-
+    
+    
     private Long count;
-
+    
+    
     private Long total;
-
+    
+    
     private java.util.List<com.commercetools.api.models.product_selection.ProductSelection> results;
 
     /**
      * create instance with all properties
      */
     @JsonCreator
-    ProductSelectionPagedQueryResponseImpl(@JsonProperty("limit") final Long limit,
-            @JsonProperty("offset") final Long offset, @JsonProperty("count") final Long count,
-            @JsonProperty("total") final Long total,
-            @JsonProperty("results") final java.util.List<com.commercetools.api.models.product_selection.ProductSelection> results) {
+    ProductSelectionPagedQueryResponseImpl(@JsonProperty("limit") final Long limit, @JsonProperty("offset") final Long offset, @JsonProperty("count") final Long count, @JsonProperty("total") final Long total, @JsonProperty("results") final java.util.List<com.commercetools.api.models.product_selection.ProductSelection> results) {
         this.limit = limit;
         this.offset = offset;
         this.count = count;
         this.total = total;
         this.results = results;
     }
-
     /**
      * create empty instance
      */
@@ -54,94 +61,99 @@ public class ProductSelectionPagedQueryResponseImpl implements ProductSelectionP
     /**
      *  <p>Number of results requested.</p>
      */
-
-    public Long getLimit() {
+    
+    public Long getLimit(){
         return this.limit;
     }
-
+    
     /**
      *  <p>Number of elements skipped.</p>
      */
-
-    public Long getOffset() {
+    
+    public Long getOffset(){
         return this.offset;
     }
-
+    
     /**
      *  <p>Actual number of results returned.</p>
      */
-
-    public Long getCount() {
+    
+    public Long getCount(){
         return this.count;
     }
-
+    
     /**
      *  <p>Total number of results matching the query. This number is an estimation that is not strongly consistent. Unlike other endpoints, the Product Selection endpoint does not return this field by default. To get <code>total</code>, pass the query parameter <code>withTotal</code> set to <code>true</code>. When the results are filtered with a Query Predicate, <code>total</code> is subject to a limit.</p>
      */
-
-    public Long getTotal() {
+    
+    public Long getTotal(){
         return this.total;
     }
-
+    
     /**
      *  <p>ProductSelections matching the query.</p>
      */
-
-    public java.util.List<com.commercetools.api.models.product_selection.ProductSelection> getResults() {
+    
+    public java.util.List<com.commercetools.api.models.product_selection.ProductSelection> getResults(){
         return this.results;
     }
 
-    public void setLimit(final Long limit) {
+    
+    public void setLimit(final Long limit){
         this.limit = limit;
     }
-
-    public void setOffset(final Long offset) {
+    
+    
+    public void setOffset(final Long offset){
         this.offset = offset;
     }
-
-    public void setCount(final Long count) {
+    
+    
+    public void setCount(final Long count){
         this.count = count;
     }
-
-    public void setTotal(final Long total) {
+    
+    
+    public void setTotal(final Long total){
         this.total = total;
     }
-
-    public void setResults(final com.commercetools.api.models.product_selection.ProductSelection... results) {
-        this.results = new ArrayList<>(Arrays.asList(results));
+    
+    
+    public void setResults(final com.commercetools.api.models.product_selection.ProductSelection ...results){
+       this.results = new ArrayList<>(Arrays.asList(results));
     }
-
-    public void setResults(
-            final java.util.List<com.commercetools.api.models.product_selection.ProductSelection> results) {
-        this.results = results;
+    
+    
+    public void setResults(final java.util.List<com.commercetools.api.models.product_selection.ProductSelection> results){
+       this.results = results;
     }
 
     @Override
     public boolean equals(Object o) {
-        if (this == o)
-            return true;
-
-        if (o == null || getClass() != o.getClass())
-            return false;
-
+        if (this == o) return true;
+    
+        if (o == null || getClass() != o.getClass()) return false;
+    
         ProductSelectionPagedQueryResponseImpl that = (ProductSelectionPagedQueryResponseImpl) o;
-
-        return new EqualsBuilder().append(limit, that.limit)
+    
+        return new EqualsBuilder()
+                .append(limit, that.limit)
                 .append(offset, that.offset)
                 .append(count, that.count)
                 .append(total, that.total)
                 .append(results, that.results)
                 .isEquals();
     }
-
+    
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(limit)
-                .append(offset)
-                .append(count)
-                .append(total)
-                .append(results)
-                .toHashCode();
+        return new HashCodeBuilder(17, 37)
+            .append(limit)
+            .append(offset)
+            .append(count)
+            .append(total)
+            .append(results)
+            .toHashCode();
     }
 
 }

@@ -1,11 +1,13 @@
-
 package com.commercetools.api.models.custom_object;
 
+import com.commercetools.api.models.common.Reference;
+import com.commercetools.api.models.common.ReferenceTypeId;
+import com.commercetools.api.models.custom_object.CustomObject;
+import com.commercetools.api.models.custom_object.CustomObjectReference;
+import javax.annotation.Nullable;
 import java.util.*;
 import java.util.function.Function;
-
-import javax.annotation.Nullable;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -19,79 +21,89 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .id("{id}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class CustomObjectReferenceBuilder implements Builder<CustomObjectReference> {
 
+    
+    
     private String id;
-
+    
+    
     @Nullable
     private com.commercetools.api.models.custom_object.CustomObject obj;
 
+    
     /**
      *  <p>Unique identifier of the referenced CustomObject.</p>
      * @param id value to be set
      * @return Builder
      */
-
-    public CustomObjectReferenceBuilder id(final String id) {
+    
+    public CustomObjectReferenceBuilder id( final String id) {
         this.id = id;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Contains the representation of the expanded CustomObject. Only present in responses to requests with Reference Expansion for CustomObjects.</p>
      * @param builder function to build the obj value
      * @return Builder
      */
-
-    public CustomObjectReferenceBuilder obj(
-            Function<com.commercetools.api.models.custom_object.CustomObjectBuilder, com.commercetools.api.models.custom_object.CustomObjectBuilder> builder) {
+    
+    public CustomObjectReferenceBuilder obj(Function<com.commercetools.api.models.custom_object.CustomObjectBuilder, com.commercetools.api.models.custom_object.CustomObjectBuilder> builder) {
         this.obj = builder.apply(com.commercetools.api.models.custom_object.CustomObjectBuilder.of()).build();
         return this;
     }
-
+    
     /**
      *  <p>Contains the representation of the expanded CustomObject. Only present in responses to requests with Reference Expansion for CustomObjects.</p>
      * @param builder function to build the obj value
      * @return Builder
      */
-
-    public CustomObjectReferenceBuilder withObj(
-            Function<com.commercetools.api.models.custom_object.CustomObjectBuilder, com.commercetools.api.models.custom_object.CustomObject> builder) {
+    
+    public CustomObjectReferenceBuilder withObj(Function<com.commercetools.api.models.custom_object.CustomObjectBuilder, com.commercetools.api.models.custom_object.CustomObject> builder) {
         this.obj = builder.apply(com.commercetools.api.models.custom_object.CustomObjectBuilder.of());
         return this;
     }
-
+                    
     /**
      *  <p>Contains the representation of the expanded CustomObject. Only present in responses to requests with Reference Expansion for CustomObjects.</p>
      * @param obj value to be set
      * @return Builder
      */
-
-    public CustomObjectReferenceBuilder obj(
-            @Nullable final com.commercetools.api.models.custom_object.CustomObject obj) {
+    
+    public CustomObjectReferenceBuilder obj(@Nullable final com.commercetools.api.models.custom_object.CustomObject obj) {
         this.obj = obj;
         return this;
     }
+    
+    
 
     /**
      *  <p>Unique identifier of the referenced CustomObject.</p>
      * @return id
      */
-
-    public String getId() {
+    
+    
+    public String getId(){
         return this.id;
     }
-
+    
     /**
      *  <p>Contains the representation of the expanded CustomObject. Only present in responses to requests with Reference Expansion for CustomObjects.</p>
      * @return obj
      */
-
+    
     @Nullable
-    public com.commercetools.api.models.custom_object.CustomObject getObj() {
+    public com.commercetools.api.models.custom_object.CustomObject getObj(){
         return this.obj;
     }
 
@@ -103,7 +115,7 @@ public class CustomObjectReferenceBuilder implements Builder<CustomObjectReferen
         Objects.requireNonNull(id, CustomObjectReference.class + ": id is missing");
         return new CustomObjectReferenceImpl(id, obj);
     }
-
+    
     /**
      * builds CustomObjectReference without checking for non-null required values
      * @return CustomObjectReference
@@ -114,7 +126,7 @@ public class CustomObjectReferenceBuilder implements Builder<CustomObjectReferen
 
     /**
      * factory method for an instance of CustomObjectReferenceBuilder
-     * @return builder
+     * @return builder 
      */
     public static CustomObjectReferenceBuilder of() {
         return new CustomObjectReferenceBuilder();

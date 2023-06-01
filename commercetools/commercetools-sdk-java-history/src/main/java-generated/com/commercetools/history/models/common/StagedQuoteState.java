@@ -1,27 +1,29 @@
-
 package com.commercetools.history.models.common;
-
-import java.util.Arrays;
-import java.util.Optional;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-
+import java.lang.String;
+import java.util.Arrays;
+import java.util.Optional;
 import io.vrap.rmf.base.client.JsonEnum;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
  * StagedQuoteState
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public interface StagedQuoteState extends JsonEnum {
 
+    
     StagedQuoteState IN_PROGRESS = StagedQuoteStateEnum.IN_PROGRESS;
-
+    
     StagedQuoteState SENT = StagedQuoteStateEnum.SENT;
-
+    
     StagedQuoteState CLOSED = StagedQuoteStateEnum.CLOSED;
-
+    
     /**
      * possible values of StagedQuoteState
      */
@@ -30,12 +32,12 @@ public interface StagedQuoteState extends JsonEnum {
          * InProgress
          */
         IN_PROGRESS("InProgress"),
-
+        
         /**
          * Sent
          */
         SENT("Sent"),
-
+        
         /**
          * Closed
          */
@@ -92,7 +94,7 @@ public interface StagedQuoteState extends JsonEnum {
             public String name() {
                 return value.toUpperCase();
             }
-
+            
             public String toString() {
                 return value;
             }
@@ -107,7 +109,7 @@ public interface StagedQuoteState extends JsonEnum {
     public static Optional<StagedQuoteState> findEnumViaJsonName(String jsonName) {
         return Arrays.stream(values()).filter(t -> t.getJsonName().equals(jsonName)).findFirst();
     }
-
+    
     /**
      * possible enum values
      * @return array of possible enum values
@@ -115,5 +117,5 @@ public interface StagedQuoteState extends JsonEnum {
     public static StagedQuoteState[] values() {
         return StagedQuoteStateEnum.values();
     }
-
+    
 }

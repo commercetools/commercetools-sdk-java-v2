@@ -1,16 +1,20 @@
-
 package com.commercetools.api.models.payment;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
+import com.commercetools.api.models.payment.PaymentUpdateAction;
+import com.commercetools.api.models.payment.PaymentSetKeyActionImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * PaymentSetKeyAction
@@ -22,9 +26,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     PaymentSetKeyAction paymentSetKeyAction = PaymentSetKeyAction.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = PaymentSetKeyActionImpl.class)
 public interface PaymentSetKeyAction extends PaymentUpdateAction {
 
@@ -37,7 +44,7 @@ public interface PaymentSetKeyAction extends PaymentUpdateAction {
      *  <p>Value to set. If <code>key</code> is absent or <code>null</code>, the existing key, if any, will be removed.</p>
      * @return key
      */
-
+    
     @JsonProperty("key")
     public String getKey();
 
@@ -45,16 +52,18 @@ public interface PaymentSetKeyAction extends PaymentUpdateAction {
      *  <p>Value to set. If <code>key</code> is absent or <code>null</code>, the existing key, if any, will be removed.</p>
      * @param key value to be set
      */
-
+    
     public void setKey(final String key);
+    
 
     /**
      * factory method
      * @return instance of PaymentSetKeyAction
      */
-    public static PaymentSetKeyAction of() {
+    public static PaymentSetKeyAction of(){
         return new PaymentSetKeyActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy PaymentSetKeyAction
@@ -89,7 +98,7 @@ public interface PaymentSetKeyAction extends PaymentUpdateAction {
     public static PaymentSetKeyActionBuilder builder() {
         return PaymentSetKeyActionBuilder.of();
     }
-
+    
     /**
      * create builder for PaymentSetKeyAction instance
      * @param template instance with prefilled values for the builder
@@ -98,6 +107,7 @@ public interface PaymentSetKeyAction extends PaymentUpdateAction {
     public static PaymentSetKeyActionBuilder builder(final PaymentSetKeyAction template) {
         return PaymentSetKeyActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -108,11 +118,11 @@ public interface PaymentSetKeyAction extends PaymentUpdateAction {
     default <T> T withPaymentSetKeyAction(Function<PaymentSetKeyAction, T> helper) {
         return helper.apply(this);
     }
-
     public static PaymentSetKeyAction ofUnset() {
         return PaymentSetKeyAction.of();
     }
-
+    
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

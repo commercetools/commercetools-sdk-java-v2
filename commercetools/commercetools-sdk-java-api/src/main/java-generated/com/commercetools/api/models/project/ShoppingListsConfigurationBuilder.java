@@ -1,10 +1,11 @@
-
 package com.commercetools.api.models.project;
 
-import java.util.*;
 
+import com.commercetools.api.models.project.ShoppingListsConfiguration;
 import javax.annotation.Nullable;
-
+import java.util.*;
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -17,33 +18,39 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     ShoppingListsConfiguration shoppingListsConfiguration = ShoppingListsConfiguration.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class ShoppingListsConfigurationBuilder implements Builder<ShoppingListsConfiguration> {
 
+    
     @Nullable
     private Long deleteDaysAfterLastModification;
 
+    
     /**
      *  <p>Default value for the <code>deleteDaysAfterLastModification</code> parameter of the ShoppingListDraft. This field may not be present on Projects created before January 2020.</p>
      * @param deleteDaysAfterLastModification value to be set
      * @return Builder
      */
-
-    public ShoppingListsConfigurationBuilder deleteDaysAfterLastModification(
-            @Nullable final Long deleteDaysAfterLastModification) {
+    
+    public ShoppingListsConfigurationBuilder deleteDaysAfterLastModification(@Nullable final Long deleteDaysAfterLastModification) {
         this.deleteDaysAfterLastModification = deleteDaysAfterLastModification;
         return this;
     }
+    
+    
 
     /**
      *  <p>Default value for the <code>deleteDaysAfterLastModification</code> parameter of the ShoppingListDraft. This field may not be present on Projects created before January 2020.</p>
      * @return deleteDaysAfterLastModification
      */
-
+    
     @Nullable
-    public Long getDeleteDaysAfterLastModification() {
+    public Long getDeleteDaysAfterLastModification(){
         return this.deleteDaysAfterLastModification;
     }
 
@@ -54,7 +61,7 @@ public class ShoppingListsConfigurationBuilder implements Builder<ShoppingListsC
     public ShoppingListsConfiguration build() {
         return new ShoppingListsConfigurationImpl(deleteDaysAfterLastModification);
     }
-
+    
     /**
      * builds ShoppingListsConfiguration without checking for non-null required values
      * @return ShoppingListsConfiguration
@@ -65,7 +72,7 @@ public class ShoppingListsConfigurationBuilder implements Builder<ShoppingListsC
 
     /**
      * factory method for an instance of ShoppingListsConfigurationBuilder
-     * @return builder
+     * @return builder 
      */
     public static ShoppingListsConfigurationBuilder of() {
         return new ShoppingListsConfigurationBuilder();

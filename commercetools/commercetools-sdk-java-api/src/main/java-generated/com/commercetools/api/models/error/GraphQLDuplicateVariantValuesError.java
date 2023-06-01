@@ -1,18 +1,21 @@
-
 package com.commercetools.api.models.error;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
+import com.commercetools.api.models.error.GraphQLErrorObject;
+import com.commercetools.api.models.error.VariantValues;
+import com.commercetools.api.models.error.GraphQLDuplicateVariantValuesErrorImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Returned when a Product Variant value conflicts with an existing one during an Update Product request.</p>
@@ -25,9 +28,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .variantValues(variantValuesBuilder -> variantValuesBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = GraphQLDuplicateVariantValuesErrorImpl.class)
 public interface GraphQLDuplicateVariantValuesError extends GraphQLErrorObject {
 
@@ -43,7 +49,6 @@ public interface GraphQLDuplicateVariantValuesError extends GraphQLErrorObject {
     @NotNull
     @JsonProperty("code")
     public String getCode();
-
     /**
      *  <p>Every Product Variant must have a distinct combination of SKU, prices, and custom Attribute values.</p>
      * @return variantValues
@@ -57,16 +62,18 @@ public interface GraphQLDuplicateVariantValuesError extends GraphQLErrorObject {
      *  <p>Every Product Variant must have a distinct combination of SKU, prices, and custom Attribute values.</p>
      * @param variantValues value to be set
      */
-
+    
     public void setVariantValues(final VariantValues variantValues);
+    
 
     /**
      * factory method
      * @return instance of GraphQLDuplicateVariantValuesError
      */
-    public static GraphQLDuplicateVariantValuesError of() {
+    public static GraphQLDuplicateVariantValuesError of(){
         return new GraphQLDuplicateVariantValuesErrorImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy GraphQLDuplicateVariantValuesError
@@ -86,15 +93,13 @@ public interface GraphQLDuplicateVariantValuesError extends GraphQLErrorObject {
      * @return copy instance
      */
     @Nullable
-    public static GraphQLDuplicateVariantValuesError deepCopy(
-            @Nullable final GraphQLDuplicateVariantValuesError template) {
+    public static GraphQLDuplicateVariantValuesError deepCopy(@Nullable final GraphQLDuplicateVariantValuesError template) {
         if (template == null) {
             return null;
         }
         GraphQLDuplicateVariantValuesErrorImpl instance = new GraphQLDuplicateVariantValuesErrorImpl();
         Optional.ofNullable(template.values()).ifPresent(t -> t.forEach(instance::setValue));
-        instance.setVariantValues(
-            com.commercetools.api.models.error.VariantValues.deepCopy(template.getVariantValues()));
+        instance.setVariantValues(com.commercetools.api.models.error.VariantValues.deepCopy(template.getVariantValues()));
         return instance;
     }
 
@@ -105,7 +110,7 @@ public interface GraphQLDuplicateVariantValuesError extends GraphQLErrorObject {
     public static GraphQLDuplicateVariantValuesErrorBuilder builder() {
         return GraphQLDuplicateVariantValuesErrorBuilder.of();
     }
-
+    
     /**
      * create builder for GraphQLDuplicateVariantValuesError instance
      * @param template instance with prefilled values for the builder
@@ -114,6 +119,7 @@ public interface GraphQLDuplicateVariantValuesError extends GraphQLErrorObject {
     public static GraphQLDuplicateVariantValuesErrorBuilder builder(final GraphQLDuplicateVariantValuesError template) {
         return GraphQLDuplicateVariantValuesErrorBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -124,7 +130,7 @@ public interface GraphQLDuplicateVariantValuesError extends GraphQLErrorObject {
     default <T> T withGraphQLDuplicateVariantValuesError(Function<GraphQLDuplicateVariantValuesError, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

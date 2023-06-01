@@ -1,17 +1,20 @@
-
 package com.commercetools.api.models.product;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
+import com.commercetools.api.models.product.ProductUpdateAction;
+import com.commercetools.api.models.product.ProductRevertStagedVariantChangesActionImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Reverts the staged version of a ProductVariant to the current version.</p>
@@ -24,9 +27,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .variantId(0.3)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = ProductRevertStagedVariantChangesActionImpl.class)
 public interface ProductRevertStagedVariantChangesAction extends ProductUpdateAction {
 
@@ -47,16 +53,18 @@ public interface ProductRevertStagedVariantChangesAction extends ProductUpdateAc
      *  <p>The <code>id</code> of the ProductVariant to revert.</p>
      * @param variantId value to be set
      */
-
+    
     public void setVariantId(final Long variantId);
+    
 
     /**
      * factory method
      * @return instance of ProductRevertStagedVariantChangesAction
      */
-    public static ProductRevertStagedVariantChangesAction of() {
+    public static ProductRevertStagedVariantChangesAction of(){
         return new ProductRevertStagedVariantChangesActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy ProductRevertStagedVariantChangesAction
@@ -75,8 +83,7 @@ public interface ProductRevertStagedVariantChangesAction extends ProductUpdateAc
      * @return copy instance
      */
     @Nullable
-    public static ProductRevertStagedVariantChangesAction deepCopy(
-            @Nullable final ProductRevertStagedVariantChangesAction template) {
+    public static ProductRevertStagedVariantChangesAction deepCopy(@Nullable final ProductRevertStagedVariantChangesAction template) {
         if (template == null) {
             return null;
         }
@@ -92,16 +99,16 @@ public interface ProductRevertStagedVariantChangesAction extends ProductUpdateAc
     public static ProductRevertStagedVariantChangesActionBuilder builder() {
         return ProductRevertStagedVariantChangesActionBuilder.of();
     }
-
+    
     /**
      * create builder for ProductRevertStagedVariantChangesAction instance
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static ProductRevertStagedVariantChangesActionBuilder builder(
-            final ProductRevertStagedVariantChangesAction template) {
+    public static ProductRevertStagedVariantChangesActionBuilder builder(final ProductRevertStagedVariantChangesAction template) {
         return ProductRevertStagedVariantChangesActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -109,11 +116,10 @@ public interface ProductRevertStagedVariantChangesAction extends ProductUpdateAc
      * @param helper function to map the object
      * @return mapped value
      */
-    default <T> T withProductRevertStagedVariantChangesAction(
-            Function<ProductRevertStagedVariantChangesAction, T> helper) {
+    default <T> T withProductRevertStagedVariantChangesAction(Function<ProductRevertStagedVariantChangesAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

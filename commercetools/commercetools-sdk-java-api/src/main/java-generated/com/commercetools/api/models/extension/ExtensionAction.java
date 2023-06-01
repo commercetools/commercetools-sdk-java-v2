@@ -1,32 +1,33 @@
-
 package com.commercetools.api.models.extension;
-
-import java.util.Arrays;
-import java.util.Optional;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-
+import java.lang.String;
+import java.util.Arrays;
+import java.util.Optional;
 import io.vrap.rmf.base.client.JsonEnum;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
  *  <p>An Extension gets called during any of the following requests of an API call, but before the result is persisted.</p>
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public interface ExtensionAction extends JsonEnum {
 
     /**
     	<p>An Extension gets called during a Create request.</p>
-
+    	
     */
     ExtensionAction CREATE = ExtensionActionEnum.CREATE;
     /**
     	<p>An Extension gets called during an Update request.</p>
-
+    	
     */
     ExtensionAction UPDATE = ExtensionActionEnum.UPDATE;
-
+    
     /**
      * possible values of ExtensionAction
      */
@@ -35,7 +36,7 @@ public interface ExtensionAction extends JsonEnum {
          * Create
          */
         CREATE("Create"),
-
+        
         /**
          * Update
          */
@@ -92,7 +93,7 @@ public interface ExtensionAction extends JsonEnum {
             public String name() {
                 return value.toUpperCase();
             }
-
+            
             public String toString() {
                 return value;
             }
@@ -107,7 +108,7 @@ public interface ExtensionAction extends JsonEnum {
     public static Optional<ExtensionAction> findEnumViaJsonName(String jsonName) {
         return Arrays.stream(values()).filter(t -> t.getJsonName().equals(jsonName)).findFirst();
     }
-
+    
     /**
      * possible enum values
      * @return array of possible enum values
@@ -115,5 +116,5 @@ public interface ExtensionAction extends JsonEnum {
     public static ExtensionAction[] values() {
         return ExtensionActionEnum.values();
     }
-
+    
 }

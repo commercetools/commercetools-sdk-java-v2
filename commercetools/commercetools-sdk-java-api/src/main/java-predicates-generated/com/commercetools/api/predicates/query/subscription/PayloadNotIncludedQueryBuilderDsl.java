@@ -1,9 +1,11 @@
-
 package com.commercetools.api.predicates.query.subscription;
 
 import com.commercetools.api.predicates.query.*;
 
-public class PayloadNotIncludedQueryBuilderDsl {
+import java.util.function.Function;
+
+
+public class PayloadNotIncludedQueryBuilderDsl  {
     public PayloadNotIncludedQueryBuilderDsl() {
     }
 
@@ -12,15 +14,12 @@ public class PayloadNotIncludedQueryBuilderDsl {
     }
 
     public StringComparisonPredicateBuilder<PayloadNotIncludedQueryBuilderDsl> reason() {
-        return new StringComparisonPredicateBuilder<>(
-            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("reason")),
-            p -> new CombinationQueryPredicate<>(p, PayloadNotIncludedQueryBuilderDsl::of));
+        return new StringComparisonPredicateBuilder<>(BinaryQueryPredicate.of().left(new ConstantQueryPredicate("reason")),
+        p -> new CombinationQueryPredicate<>(p, PayloadNotIncludedQueryBuilderDsl::of));
     }
-
     public StringComparisonPredicateBuilder<PayloadNotIncludedQueryBuilderDsl> payloadType() {
-        return new StringComparisonPredicateBuilder<>(
-            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("payloadType")),
-            p -> new CombinationQueryPredicate<>(p, PayloadNotIncludedQueryBuilderDsl::of));
+        return new StringComparisonPredicateBuilder<>(BinaryQueryPredicate.of().left(new ConstantQueryPredicate("payloadType")),
+        p -> new CombinationQueryPredicate<>(p, PayloadNotIncludedQueryBuilderDsl::of));
     }
-
+    
 }

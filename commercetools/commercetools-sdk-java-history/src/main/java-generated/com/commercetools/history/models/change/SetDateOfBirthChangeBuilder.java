@@ -1,8 +1,11 @@
-
 package com.commercetools.history.models.change;
 
+import com.commercetools.history.models.change.Change;
+import com.commercetools.history.models.change.SetDateOfBirthChange;
+import javax.annotation.Nullable;
 import java.util.*;
-
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -18,74 +21,95 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .nextValue("{nextValue}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class SetDateOfBirthChangeBuilder implements Builder<SetDateOfBirthChange> {
 
+    
+    
     private String change;
-
+    
+    
+    
     private String previousValue;
-
+    
+    
+    
     private String nextValue;
 
+    
     /**
      *  <p>Shape of the action for <code>setDateOfBirth</code></p>
      * @param change value to be set
      * @return Builder
      */
-
-    public SetDateOfBirthChangeBuilder change(final String change) {
+    
+    public SetDateOfBirthChangeBuilder change( final String change) {
         this.change = change;
         return this;
     }
-
+    
+    
+    
+    
     /**
      * set the value to the previousValue
      * @param previousValue value to be set
      * @return Builder
      */
-
-    public SetDateOfBirthChangeBuilder previousValue(final String previousValue) {
+    
+    public SetDateOfBirthChangeBuilder previousValue( final String previousValue) {
         this.previousValue = previousValue;
         return this;
     }
-
+    
+    
+    
+    
     /**
      * set the value to the nextValue
      * @param nextValue value to be set
      * @return Builder
      */
-
-    public SetDateOfBirthChangeBuilder nextValue(final String nextValue) {
+    
+    public SetDateOfBirthChangeBuilder nextValue( final String nextValue) {
         this.nextValue = nextValue;
         return this;
     }
+    
+    
 
     /**
      *  <p>Shape of the action for <code>setDateOfBirth</code></p>
      * @return change
      */
-
-    public String getChange() {
+    
+    
+    public String getChange(){
         return this.change;
     }
-
+    
     /**
      * value of previousValue}
      * @return previousValue
      */
-
-    public String getPreviousValue() {
+    
+    
+    public String getPreviousValue(){
         return this.previousValue;
     }
-
+    
     /**
      * value of nextValue}
      * @return nextValue
      */
-
-    public String getNextValue() {
+    
+    
+    public String getNextValue(){
         return this.nextValue;
     }
 
@@ -99,7 +123,7 @@ public class SetDateOfBirthChangeBuilder implements Builder<SetDateOfBirthChange
         Objects.requireNonNull(nextValue, SetDateOfBirthChange.class + ": nextValue is missing");
         return new SetDateOfBirthChangeImpl(change, previousValue, nextValue);
     }
-
+    
     /**
      * builds SetDateOfBirthChange without checking for non-null required values
      * @return SetDateOfBirthChange
@@ -110,7 +134,7 @@ public class SetDateOfBirthChangeBuilder implements Builder<SetDateOfBirthChange
 
     /**
      * factory method for an instance of SetDateOfBirthChangeBuilder
-     * @return builder
+     * @return builder 
      */
     public static SetDateOfBirthChangeBuilder of() {
         return new SetDateOfBirthChangeBuilder();

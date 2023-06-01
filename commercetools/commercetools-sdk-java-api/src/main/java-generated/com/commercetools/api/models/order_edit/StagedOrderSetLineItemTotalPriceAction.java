@@ -1,20 +1,21 @@
-
 package com.commercetools.api.models.order_edit;
-
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.cart.ExternalLineItemTotalPrice;
 import com.commercetools.api.models.order.StagedOrderUpdateAction;
+import com.commercetools.api.models.order_edit.StagedOrderSetLineItemTotalPriceActionImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * StagedOrderSetLineItemTotalPriceAction
@@ -27,9 +28,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .lineItemId("{lineItemId}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = StagedOrderSetLineItemTotalPriceActionImpl.class)
 public interface StagedOrderSetLineItemTotalPriceAction extends StagedOrderUpdateAction {
 
@@ -45,7 +49,6 @@ public interface StagedOrderSetLineItemTotalPriceAction extends StagedOrderUpdat
     @NotNull
     @JsonProperty("lineItemId")
     public String getLineItemId();
-
     /**
      *
      * @return externalTotalPrice
@@ -58,23 +61,26 @@ public interface StagedOrderSetLineItemTotalPriceAction extends StagedOrderUpdat
      * set lineItemId
      * @param lineItemId value to be set
      */
-
+    
     public void setLineItemId(final String lineItemId);
-
+    
+    
     /**
      * set externalTotalPrice
      * @param externalTotalPrice value to be set
      */
-
+    
     public void setExternalTotalPrice(final ExternalLineItemTotalPrice externalTotalPrice);
+    
 
     /**
      * factory method
      * @return instance of StagedOrderSetLineItemTotalPriceAction
      */
-    public static StagedOrderSetLineItemTotalPriceAction of() {
+    public static StagedOrderSetLineItemTotalPriceAction of(){
         return new StagedOrderSetLineItemTotalPriceActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy StagedOrderSetLineItemTotalPriceAction
@@ -94,15 +100,13 @@ public interface StagedOrderSetLineItemTotalPriceAction extends StagedOrderUpdat
      * @return copy instance
      */
     @Nullable
-    public static StagedOrderSetLineItemTotalPriceAction deepCopy(
-            @Nullable final StagedOrderSetLineItemTotalPriceAction template) {
+    public static StagedOrderSetLineItemTotalPriceAction deepCopy(@Nullable final StagedOrderSetLineItemTotalPriceAction template) {
         if (template == null) {
             return null;
         }
         StagedOrderSetLineItemTotalPriceActionImpl instance = new StagedOrderSetLineItemTotalPriceActionImpl();
         instance.setLineItemId(template.getLineItemId());
-        instance.setExternalTotalPrice(
-            com.commercetools.api.models.cart.ExternalLineItemTotalPrice.deepCopy(template.getExternalTotalPrice()));
+        instance.setExternalTotalPrice(com.commercetools.api.models.cart.ExternalLineItemTotalPrice.deepCopy(template.getExternalTotalPrice()));
         return instance;
     }
 
@@ -113,16 +117,16 @@ public interface StagedOrderSetLineItemTotalPriceAction extends StagedOrderUpdat
     public static StagedOrderSetLineItemTotalPriceActionBuilder builder() {
         return StagedOrderSetLineItemTotalPriceActionBuilder.of();
     }
-
+    
     /**
      * create builder for StagedOrderSetLineItemTotalPriceAction instance
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static StagedOrderSetLineItemTotalPriceActionBuilder builder(
-            final StagedOrderSetLineItemTotalPriceAction template) {
+    public static StagedOrderSetLineItemTotalPriceActionBuilder builder(final StagedOrderSetLineItemTotalPriceAction template) {
         return StagedOrderSetLineItemTotalPriceActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -130,11 +134,10 @@ public interface StagedOrderSetLineItemTotalPriceAction extends StagedOrderUpdat
      * @param helper function to map the object
      * @return mapped value
      */
-    default <T> T withStagedOrderSetLineItemTotalPriceAction(
-            Function<StagedOrderSetLineItemTotalPriceAction, T> helper) {
+    default <T> T withStagedOrderSetLineItemTotalPriceAction(Function<StagedOrderSetLineItemTotalPriceAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

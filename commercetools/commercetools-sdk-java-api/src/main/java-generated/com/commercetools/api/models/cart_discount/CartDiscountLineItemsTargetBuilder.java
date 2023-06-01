@@ -1,8 +1,11 @@
-
 package com.commercetools.api.models.cart_discount;
 
+import com.commercetools.api.models.cart_discount.CartDiscountTarget;
+import com.commercetools.api.models.cart_discount.CartDiscountLineItemsTarget;
+import javax.annotation.Nullable;
 import java.util.*;
-
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -16,30 +19,39 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .predicate("{predicate}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class CartDiscountLineItemsTargetBuilder implements Builder<CartDiscountLineItemsTarget> {
 
+    
+    
     private String predicate;
 
+    
     /**
      *  <p>Valid LineItem target predicate.</p>
      * @param predicate value to be set
      * @return Builder
      */
-
-    public CartDiscountLineItemsTargetBuilder predicate(final String predicate) {
+    
+    public CartDiscountLineItemsTargetBuilder predicate( final String predicate) {
         this.predicate = predicate;
         return this;
     }
+    
+    
 
     /**
      *  <p>Valid LineItem target predicate.</p>
      * @return predicate
      */
-
-    public String getPredicate() {
+    
+    
+    public String getPredicate(){
         return this.predicate;
     }
 
@@ -51,7 +63,7 @@ public class CartDiscountLineItemsTargetBuilder implements Builder<CartDiscountL
         Objects.requireNonNull(predicate, CartDiscountLineItemsTarget.class + ": predicate is missing");
         return new CartDiscountLineItemsTargetImpl(predicate);
     }
-
+    
     /**
      * builds CartDiscountLineItemsTarget without checking for non-null required values
      * @return CartDiscountLineItemsTarget
@@ -62,7 +74,7 @@ public class CartDiscountLineItemsTargetBuilder implements Builder<CartDiscountL
 
     /**
      * factory method for an instance of CartDiscountLineItemsTargetBuilder
-     * @return builder
+     * @return builder 
      */
     public static CartDiscountLineItemsTargetBuilder of() {
         return new CartDiscountLineItemsTargetBuilder();

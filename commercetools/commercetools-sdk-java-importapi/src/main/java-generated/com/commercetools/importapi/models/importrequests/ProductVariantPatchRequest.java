@@ -1,20 +1,22 @@
-
 package com.commercetools.importapi.models.importrequests;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-import java.util.stream.Collectors;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
+import com.commercetools.importapi.models.common.ImportResourceType;
+import com.commercetools.importapi.models.importrequests.ImportRequest;
 import com.commercetools.importapi.models.productvariants.ProductVariantPatch;
+import com.commercetools.importapi.models.importrequests.ProductVariantPatchRequestImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>The request body to import ProductVariantPatches. The data to be imported are represented by ProductVariantPatch.</p>
@@ -27,9 +29,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .plusPatches(patchesBuilder -> patchesBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = ProductVariantPatchRequestImpl.class)
 public interface ProductVariantPatchRequest extends ImportRequest {
 
@@ -51,24 +56,24 @@ public interface ProductVariantPatchRequest extends ImportRequest {
      *  <p>The product variant patches of this request.</p>
      * @param patches values to be set
      */
-
+    
     @JsonIgnore
-    public void setPatches(final ProductVariantPatch... patches);
-
+    public void setPatches(final ProductVariantPatch ...patches);
     /**
      *  <p>The product variant patches of this request.</p>
      * @param patches values to be set
      */
-
+    
     public void setPatches(final List<ProductVariantPatch> patches);
 
     /**
      * factory method
      * @return instance of ProductVariantPatchRequest
      */
-    public static ProductVariantPatchRequest of() {
+    public static ProductVariantPatchRequest of(){
         return new ProductVariantPatchRequestImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy ProductVariantPatchRequest
@@ -93,9 +98,7 @@ public interface ProductVariantPatchRequest extends ImportRequest {
         }
         ProductVariantPatchRequestImpl instance = new ProductVariantPatchRequestImpl();
         instance.setPatches(Optional.ofNullable(template.getPatches())
-                .map(t -> t.stream()
-                        .map(com.commercetools.importapi.models.productvariants.ProductVariantPatch::deepCopy)
-                        .collect(Collectors.toList()))
+                .map(t -> t.stream().map(com.commercetools.importapi.models.productvariants.ProductVariantPatch::deepCopy).collect(Collectors.toList()))
                 .orElse(null));
         return instance;
     }
@@ -107,7 +110,7 @@ public interface ProductVariantPatchRequest extends ImportRequest {
     public static ProductVariantPatchRequestBuilder builder() {
         return ProductVariantPatchRequestBuilder.of();
     }
-
+    
     /**
      * create builder for ProductVariantPatchRequest instance
      * @param template instance with prefilled values for the builder
@@ -116,6 +119,7 @@ public interface ProductVariantPatchRequest extends ImportRequest {
     public static ProductVariantPatchRequestBuilder builder(final ProductVariantPatchRequest template) {
         return ProductVariantPatchRequestBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -126,7 +130,7 @@ public interface ProductVariantPatchRequest extends ImportRequest {
     default <T> T withProductVariantPatchRequest(Function<ProductVariantPatchRequest, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

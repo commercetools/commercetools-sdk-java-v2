@@ -1,34 +1,35 @@
-
 package com.commercetools.api.models.cart;
-
-import java.util.Arrays;
-import java.util.Optional;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-
+import java.lang.String;
+import java.util.Arrays;
+import java.util.Optional;
 import io.vrap.rmf.base.client.JsonEnum;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
  *  <p>Indicates the current status of a Cart.</p>
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public interface CartState extends JsonEnum {
 
     /**
     	<p>The default state where a Cart can be updated and ordered.</p>
-
+    	
     */
     CartState ACTIVE = CartStateEnum.ACTIVE;
     /**
     	<p>An anonymous Cart was merged into a Customer's Cart on <a href="/../api/projects/customers#authenticate-sign-in-customer">sign-in</a>, and no further operations are allowed on the Cart.</p>
-
+    	
     */
     CartState MERGED = CartStateEnum.MERGED;
     /**
     	<p>A Cart was <a href="/../api/projects/orders#create-order-from-cart">ordered</a>, and no further operations are allowed on the Cart.</p>
-
+    	
     */
     CartState ORDERED = CartStateEnum.ORDERED;
     /**
@@ -46,10 +47,10 @@ public interface CartState extends JsonEnum {
     	<li><a href="ctp:api:type:CartSetLineItemPriceAction">Set LineItem Price</a></li>
     	<li><a href="ctp:api:type:CartSetLineItemTotalPriceAction">Set LineItem TotalPrice</a></li>
     	</ul>
-
+    	
     */
     CartState FROZEN = CartStateEnum.FROZEN;
-
+    
     /**
      * possible values of CartState
      */
@@ -58,17 +59,17 @@ public interface CartState extends JsonEnum {
          * Active
          */
         ACTIVE("Active"),
-
+        
         /**
          * Merged
          */
         MERGED("Merged"),
-
+        
         /**
          * Ordered
          */
         ORDERED("Ordered"),
-
+        
         /**
          * Frozen
          */
@@ -125,7 +126,7 @@ public interface CartState extends JsonEnum {
             public String name() {
                 return value.toUpperCase();
             }
-
+            
             public String toString() {
                 return value;
             }
@@ -140,7 +141,7 @@ public interface CartState extends JsonEnum {
     public static Optional<CartState> findEnumViaJsonName(String jsonName) {
         return Arrays.stream(values()).filter(t -> t.getJsonName().equals(jsonName)).findFirst();
     }
-
+    
     /**
      * possible enum values
      * @return array of possible enum values
@@ -148,5 +149,5 @@ public interface CartState extends JsonEnum {
     public static CartState[] values() {
         return CartStateEnum.values();
     }
-
+    
 }

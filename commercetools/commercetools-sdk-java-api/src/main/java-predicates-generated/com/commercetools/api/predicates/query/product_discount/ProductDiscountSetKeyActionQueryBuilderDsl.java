@@ -1,9 +1,11 @@
-
 package com.commercetools.api.predicates.query.product_discount;
 
 import com.commercetools.api.predicates.query.*;
 
-public class ProductDiscountSetKeyActionQueryBuilderDsl {
+import java.util.function.Function;
+
+
+public class ProductDiscountSetKeyActionQueryBuilderDsl  {
     public ProductDiscountSetKeyActionQueryBuilderDsl() {
     }
 
@@ -12,14 +14,12 @@ public class ProductDiscountSetKeyActionQueryBuilderDsl {
     }
 
     public StringComparisonPredicateBuilder<ProductDiscountSetKeyActionQueryBuilderDsl> action() {
-        return new StringComparisonPredicateBuilder<>(
-            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("action")),
-            p -> new CombinationQueryPredicate<>(p, ProductDiscountSetKeyActionQueryBuilderDsl::of));
+        return new StringComparisonPredicateBuilder<>(BinaryQueryPredicate.of().left(new ConstantQueryPredicate("action")),
+        p -> new CombinationQueryPredicate<>(p, ProductDiscountSetKeyActionQueryBuilderDsl::of));
     }
-
     public StringComparisonPredicateBuilder<ProductDiscountSetKeyActionQueryBuilderDsl> key() {
         return new StringComparisonPredicateBuilder<>(BinaryQueryPredicate.of().left(new ConstantQueryPredicate("key")),
-            p -> new CombinationQueryPredicate<>(p, ProductDiscountSetKeyActionQueryBuilderDsl::of));
+        p -> new CombinationQueryPredicate<>(p, ProductDiscountSetKeyActionQueryBuilderDsl::of));
     }
-
+    
 }

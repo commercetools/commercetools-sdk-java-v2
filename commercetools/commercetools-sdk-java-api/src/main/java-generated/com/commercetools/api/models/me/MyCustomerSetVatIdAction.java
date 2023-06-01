@@ -1,16 +1,20 @@
-
 package com.commercetools.api.models.me;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
+import com.commercetools.api.models.me.MyCustomerUpdateAction;
+import com.commercetools.api.models.me.MyCustomerSetVatIdActionImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * MyCustomerSetVatIdAction
@@ -22,9 +26,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     MyCustomerSetVatIdAction myCustomerSetVatIdAction = MyCustomerSetVatIdAction.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = MyCustomerSetVatIdActionImpl.class)
 public interface MyCustomerSetVatIdAction extends MyCustomerUpdateAction {
 
@@ -37,7 +44,7 @@ public interface MyCustomerSetVatIdAction extends MyCustomerUpdateAction {
      *  <p>Value to set. If empty, any existing value is removed.</p>
      * @return vatId
      */
-
+    
     @JsonProperty("vatId")
     public String getVatId();
 
@@ -45,16 +52,18 @@ public interface MyCustomerSetVatIdAction extends MyCustomerUpdateAction {
      *  <p>Value to set. If empty, any existing value is removed.</p>
      * @param vatId value to be set
      */
-
+    
     public void setVatId(final String vatId);
+    
 
     /**
      * factory method
      * @return instance of MyCustomerSetVatIdAction
      */
-    public static MyCustomerSetVatIdAction of() {
+    public static MyCustomerSetVatIdAction of(){
         return new MyCustomerSetVatIdActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy MyCustomerSetVatIdAction
@@ -89,7 +98,7 @@ public interface MyCustomerSetVatIdAction extends MyCustomerUpdateAction {
     public static MyCustomerSetVatIdActionBuilder builder() {
         return MyCustomerSetVatIdActionBuilder.of();
     }
-
+    
     /**
      * create builder for MyCustomerSetVatIdAction instance
      * @param template instance with prefilled values for the builder
@@ -98,6 +107,7 @@ public interface MyCustomerSetVatIdAction extends MyCustomerUpdateAction {
     public static MyCustomerSetVatIdActionBuilder builder(final MyCustomerSetVatIdAction template) {
         return MyCustomerSetVatIdActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -108,7 +118,7 @@ public interface MyCustomerSetVatIdAction extends MyCustomerUpdateAction {
     default <T> T withMyCustomerSetVatIdAction(Function<MyCustomerSetVatIdAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

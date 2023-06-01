@@ -1,8 +1,11 @@
-
 package com.commercetools.api.models.tax_category;
 
+import com.commercetools.api.models.tax_category.TaxCategoryUpdateAction;
+import com.commercetools.api.models.tax_category.TaxCategoryChangeNameAction;
+import javax.annotation.Nullable;
 import java.util.*;
-
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -16,30 +19,39 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .name("{name}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class TaxCategoryChangeNameActionBuilder implements Builder<TaxCategoryChangeNameAction> {
 
+    
+    
     private String name;
 
+    
     /**
      *  <p>New value to set. Must not be empty.</p>
      * @param name value to be set
      * @return Builder
      */
-
-    public TaxCategoryChangeNameActionBuilder name(final String name) {
+    
+    public TaxCategoryChangeNameActionBuilder name( final String name) {
         this.name = name;
         return this;
     }
+    
+    
 
     /**
      *  <p>New value to set. Must not be empty.</p>
      * @return name
      */
-
-    public String getName() {
+    
+    
+    public String getName(){
         return this.name;
     }
 
@@ -51,7 +63,7 @@ public class TaxCategoryChangeNameActionBuilder implements Builder<TaxCategoryCh
         Objects.requireNonNull(name, TaxCategoryChangeNameAction.class + ": name is missing");
         return new TaxCategoryChangeNameActionImpl(name);
     }
-
+    
     /**
      * builds TaxCategoryChangeNameAction without checking for non-null required values
      * @return TaxCategoryChangeNameAction
@@ -62,7 +74,7 @@ public class TaxCategoryChangeNameActionBuilder implements Builder<TaxCategoryCh
 
     /**
      * factory method for an instance of TaxCategoryChangeNameActionBuilder
-     * @return builder
+     * @return builder 
      */
     public static TaxCategoryChangeNameActionBuilder of() {
         return new TaxCategoryChangeNameActionBuilder();

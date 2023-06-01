@@ -1,17 +1,20 @@
-
 package com.commercetools.api.models.cart_discount;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
+import com.commercetools.api.models.cart_discount.CartDiscountTarget;
+import com.commercetools.api.models.cart_discount.CartDiscountLineItemsTargetImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Discount is applied to LineItems matching the <code>predicate</code>.</p>
@@ -24,9 +27,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .predicate("{predicate}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = CartDiscountLineItemsTargetImpl.class)
 public interface CartDiscountLineItemsTarget extends CartDiscountTarget {
 
@@ -47,16 +53,18 @@ public interface CartDiscountLineItemsTarget extends CartDiscountTarget {
      *  <p>Valid LineItem target predicate.</p>
      * @param predicate value to be set
      */
-
+    
     public void setPredicate(final String predicate);
+    
 
     /**
      * factory method
      * @return instance of CartDiscountLineItemsTarget
      */
-    public static CartDiscountLineItemsTarget of() {
+    public static CartDiscountLineItemsTarget of(){
         return new CartDiscountLineItemsTargetImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy CartDiscountLineItemsTarget
@@ -91,7 +99,7 @@ public interface CartDiscountLineItemsTarget extends CartDiscountTarget {
     public static CartDiscountLineItemsTargetBuilder builder() {
         return CartDiscountLineItemsTargetBuilder.of();
     }
-
+    
     /**
      * create builder for CartDiscountLineItemsTarget instance
      * @param template instance with prefilled values for the builder
@@ -100,6 +108,7 @@ public interface CartDiscountLineItemsTarget extends CartDiscountTarget {
     public static CartDiscountLineItemsTargetBuilder builder(final CartDiscountLineItemsTarget template) {
         return CartDiscountLineItemsTargetBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -110,7 +119,7 @@ public interface CartDiscountLineItemsTarget extends CartDiscountTarget {
     default <T> T withCartDiscountLineItemsTarget(Function<CartDiscountLineItemsTarget, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

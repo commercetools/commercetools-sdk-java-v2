@@ -1,17 +1,20 @@
-
 package com.commercetools.api.models.error;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
+import com.commercetools.api.models.error.ErrorObject;
+import com.commercetools.api.models.error.FeatureRemovedErrorImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Returned when the requested feature was removed.</p>
@@ -24,9 +27,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .message("{message}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = FeatureRemovedErrorImpl.class)
 public interface FeatureRemovedError extends ErrorObject {
 
@@ -42,7 +48,6 @@ public interface FeatureRemovedError extends ErrorObject {
     @NotNull
     @JsonProperty("code")
     public String getCode();
-
     /**
      *  <p>Description of the feature that is removed.</p>
      * @return message
@@ -55,16 +60,18 @@ public interface FeatureRemovedError extends ErrorObject {
      *  <p>Description of the feature that is removed.</p>
      * @param message value to be set
      */
-
+    
     public void setMessage(final String message);
+    
 
     /**
      * factory method
      * @return instance of FeatureRemovedError
      */
-    public static FeatureRemovedError of() {
+    public static FeatureRemovedError of(){
         return new FeatureRemovedErrorImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy FeatureRemovedError
@@ -101,7 +108,7 @@ public interface FeatureRemovedError extends ErrorObject {
     public static FeatureRemovedErrorBuilder builder() {
         return FeatureRemovedErrorBuilder.of();
     }
-
+    
     /**
      * create builder for FeatureRemovedError instance
      * @param template instance with prefilled values for the builder
@@ -110,6 +117,7 @@ public interface FeatureRemovedError extends ErrorObject {
     public static FeatureRemovedErrorBuilder builder(final FeatureRemovedError template) {
         return FeatureRemovedErrorBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -120,7 +128,7 @@ public interface FeatureRemovedError extends ErrorObject {
     default <T> T withFeatureRemovedError(Function<FeatureRemovedError, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

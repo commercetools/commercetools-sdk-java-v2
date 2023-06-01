@@ -1,17 +1,20 @@
-
 package com.commercetools.api.models.product_selection;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
 
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
+import com.commercetools.api.models.product_selection.ProductVariantExclusionImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Only Product Variants with the explicitly listed SKUs are part of a Product Selection with <code>IndividualExclusion</code> ProductSelectionMode.</p>
@@ -24,11 +27,15 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .plusSkus(skusBuilder -> skusBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = ProductVariantExclusionImpl.class)
-public interface ProductVariantExclusion {
+public interface ProductVariantExclusion  {
+
 
     /**
      *  <p>Non-empty array of SKUs representing Product Variants to be included in the Product Selection with <code>IndividualExclusion</code> ProductSelectionMode.</p>
@@ -42,24 +49,24 @@ public interface ProductVariantExclusion {
      *  <p>Non-empty array of SKUs representing Product Variants to be included in the Product Selection with <code>IndividualExclusion</code> ProductSelectionMode.</p>
      * @param skus values to be set
      */
-
+    
     @JsonIgnore
-    public void setSkus(final String... skus);
-
+    public void setSkus(final String ...skus);
     /**
      *  <p>Non-empty array of SKUs representing Product Variants to be included in the Product Selection with <code>IndividualExclusion</code> ProductSelectionMode.</p>
      * @param skus values to be set
      */
-
+    
     public void setSkus(final List<String> skus);
 
     /**
      * factory method
      * @return instance of ProductVariantExclusion
      */
-    public static ProductVariantExclusion of() {
+    public static ProductVariantExclusion of(){
         return new ProductVariantExclusionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy ProductVariantExclusion
@@ -83,7 +90,9 @@ public interface ProductVariantExclusion {
             return null;
         }
         ProductVariantExclusionImpl instance = new ProductVariantExclusionImpl();
-        instance.setSkus(Optional.ofNullable(template.getSkus()).map(ArrayList::new).orElse(null));
+        instance.setSkus(Optional.ofNullable(template.getSkus())
+                .map(ArrayList::new)
+                .orElse(null));
         return instance;
     }
 
@@ -94,7 +103,7 @@ public interface ProductVariantExclusion {
     public static ProductVariantExclusionBuilder builder() {
         return ProductVariantExclusionBuilder.of();
     }
-
+    
     /**
      * create builder for ProductVariantExclusion instance
      * @param template instance with prefilled values for the builder
@@ -103,6 +112,7 @@ public interface ProductVariantExclusion {
     public static ProductVariantExclusionBuilder builder(final ProductVariantExclusion template) {
         return ProductVariantExclusionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -113,7 +123,7 @@ public interface ProductVariantExclusion {
     default <T> T withProductVariantExclusion(Function<ProductVariantExclusion, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

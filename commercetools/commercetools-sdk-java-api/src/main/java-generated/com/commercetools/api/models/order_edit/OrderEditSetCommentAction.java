@@ -1,16 +1,20 @@
-
 package com.commercetools.api.models.order_edit;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
+import com.commercetools.api.models.order_edit.OrderEditUpdateAction;
+import com.commercetools.api.models.order_edit.OrderEditSetCommentActionImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * OrderEditSetCommentAction
@@ -22,9 +26,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     OrderEditSetCommentAction orderEditSetCommentAction = OrderEditSetCommentAction.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = OrderEditSetCommentActionImpl.class)
 public interface OrderEditSetCommentAction extends OrderEditUpdateAction {
 
@@ -37,7 +44,7 @@ public interface OrderEditSetCommentAction extends OrderEditUpdateAction {
      *
      * @return comment
      */
-
+    
     @JsonProperty("comment")
     public String getComment();
 
@@ -45,16 +52,18 @@ public interface OrderEditSetCommentAction extends OrderEditUpdateAction {
      * set comment
      * @param comment value to be set
      */
-
+    
     public void setComment(final String comment);
+    
 
     /**
      * factory method
      * @return instance of OrderEditSetCommentAction
      */
-    public static OrderEditSetCommentAction of() {
+    public static OrderEditSetCommentAction of(){
         return new OrderEditSetCommentActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy OrderEditSetCommentAction
@@ -89,7 +98,7 @@ public interface OrderEditSetCommentAction extends OrderEditUpdateAction {
     public static OrderEditSetCommentActionBuilder builder() {
         return OrderEditSetCommentActionBuilder.of();
     }
-
+    
     /**
      * create builder for OrderEditSetCommentAction instance
      * @param template instance with prefilled values for the builder
@@ -98,6 +107,7 @@ public interface OrderEditSetCommentAction extends OrderEditUpdateAction {
     public static OrderEditSetCommentActionBuilder builder(final OrderEditSetCommentAction template) {
         return OrderEditSetCommentActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -108,7 +118,7 @@ public interface OrderEditSetCommentAction extends OrderEditUpdateAction {
     default <T> T withOrderEditSetCommentAction(Function<OrderEditSetCommentAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

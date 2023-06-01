@@ -1,17 +1,21 @@
-
 package com.commercetools.api.models.business_unit;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
+import com.commercetools.api.models.business_unit.BusinessUnitAssociateMode;
+import com.commercetools.api.models.business_unit.BusinessUnitUpdateAction;
+import com.commercetools.api.models.business_unit.BusinessUnitChangeAssociateModeActionImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Only Business Units of type <code>Division</code> can be changed to <code>ExplicitAndFromParent</code>. This update action generates a BusinessUnitAssociateModeChanged Message.</p>
@@ -24,9 +28,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .associateMode(BusinessUnitAssociateMode.EXPLICIT)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = BusinessUnitChangeAssociateModeActionImpl.class)
 public interface BusinessUnitChangeAssociateModeAction extends BusinessUnitUpdateAction {
 
@@ -47,16 +54,18 @@ public interface BusinessUnitChangeAssociateModeAction extends BusinessUnitUpdat
      *  <p>The new value for <code>associateMode</code>.</p>
      * @param associateMode value to be set
      */
-
+    
     public void setAssociateMode(final BusinessUnitAssociateMode associateMode);
+    
 
     /**
      * factory method
      * @return instance of BusinessUnitChangeAssociateModeAction
      */
-    public static BusinessUnitChangeAssociateModeAction of() {
+    public static BusinessUnitChangeAssociateModeAction of(){
         return new BusinessUnitChangeAssociateModeActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy BusinessUnitChangeAssociateModeAction
@@ -75,8 +84,7 @@ public interface BusinessUnitChangeAssociateModeAction extends BusinessUnitUpdat
      * @return copy instance
      */
     @Nullable
-    public static BusinessUnitChangeAssociateModeAction deepCopy(
-            @Nullable final BusinessUnitChangeAssociateModeAction template) {
+    public static BusinessUnitChangeAssociateModeAction deepCopy(@Nullable final BusinessUnitChangeAssociateModeAction template) {
         if (template == null) {
             return null;
         }
@@ -92,16 +100,16 @@ public interface BusinessUnitChangeAssociateModeAction extends BusinessUnitUpdat
     public static BusinessUnitChangeAssociateModeActionBuilder builder() {
         return BusinessUnitChangeAssociateModeActionBuilder.of();
     }
-
+    
     /**
      * create builder for BusinessUnitChangeAssociateModeAction instance
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static BusinessUnitChangeAssociateModeActionBuilder builder(
-            final BusinessUnitChangeAssociateModeAction template) {
+    public static BusinessUnitChangeAssociateModeActionBuilder builder(final BusinessUnitChangeAssociateModeAction template) {
         return BusinessUnitChangeAssociateModeActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -112,7 +120,7 @@ public interface BusinessUnitChangeAssociateModeAction extends BusinessUnitUpdat
     default <T> T withBusinessUnitChangeAssociateModeAction(Function<BusinessUnitChangeAssociateModeAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

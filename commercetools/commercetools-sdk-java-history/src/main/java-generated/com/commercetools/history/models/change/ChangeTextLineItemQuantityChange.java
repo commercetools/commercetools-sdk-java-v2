@@ -1,19 +1,21 @@
-
 package com.commercetools.history.models.change;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
+import com.commercetools.history.models.change.Change;
 import com.commercetools.history.models.change_value.TextLineItemValue;
+import com.commercetools.history.models.change.ChangeTextLineItemQuantityChangeImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * ChangeTextLineItemQuantityChange
@@ -29,9 +31,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .nextValue(1)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = ChangeTextLineItemQuantityChangeImpl.class)
 public interface ChangeTextLineItemQuantityChange extends Change {
 
@@ -47,7 +52,6 @@ public interface ChangeTextLineItemQuantityChange extends Change {
     @NotNull
     @JsonProperty("type")
     public String getType();
-
     /**
      *
      * @return change
@@ -55,7 +59,6 @@ public interface ChangeTextLineItemQuantityChange extends Change {
     @NotNull
     @JsonProperty("change")
     public String getChange();
-
     /**
      *
      * @return textLineItem
@@ -64,7 +67,6 @@ public interface ChangeTextLineItemQuantityChange extends Change {
     @Valid
     @JsonProperty("textLineItem")
     public TextLineItemValue getTextLineItem();
-
     /**
      *
      * @return previousValue
@@ -72,7 +74,6 @@ public interface ChangeTextLineItemQuantityChange extends Change {
     @NotNull
     @JsonProperty("previousValue")
     public Integer getPreviousValue();
-
     /**
      *
      * @return nextValue
@@ -85,37 +86,42 @@ public interface ChangeTextLineItemQuantityChange extends Change {
      * set change
      * @param change value to be set
      */
-
+    
     public void setChange(final String change);
-
+    
+    
     /**
      * set textLineItem
      * @param textLineItem value to be set
      */
-
+    
     public void setTextLineItem(final TextLineItemValue textLineItem);
-
+    
+    
     /**
      * set previousValue
      * @param previousValue value to be set
      */
-
+    
     public void setPreviousValue(final Integer previousValue);
-
+    
+    
     /**
      * set nextValue
      * @param nextValue value to be set
      */
-
+    
     public void setNextValue(final Integer nextValue);
+    
 
     /**
      * factory method
      * @return instance of ChangeTextLineItemQuantityChange
      */
-    public static ChangeTextLineItemQuantityChange of() {
+    public static ChangeTextLineItemQuantityChange of(){
         return new ChangeTextLineItemQuantityChangeImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy ChangeTextLineItemQuantityChange
@@ -143,8 +149,7 @@ public interface ChangeTextLineItemQuantityChange extends Change {
         }
         ChangeTextLineItemQuantityChangeImpl instance = new ChangeTextLineItemQuantityChangeImpl();
         instance.setChange(template.getChange());
-        instance.setTextLineItem(
-            com.commercetools.history.models.change_value.TextLineItemValue.deepCopy(template.getTextLineItem()));
+        instance.setTextLineItem(com.commercetools.history.models.change_value.TextLineItemValue.deepCopy(template.getTextLineItem()));
         instance.setPreviousValue(template.getPreviousValue());
         instance.setNextValue(template.getNextValue());
         return instance;
@@ -157,7 +162,7 @@ public interface ChangeTextLineItemQuantityChange extends Change {
     public static ChangeTextLineItemQuantityChangeBuilder builder() {
         return ChangeTextLineItemQuantityChangeBuilder.of();
     }
-
+    
     /**
      * create builder for ChangeTextLineItemQuantityChange instance
      * @param template instance with prefilled values for the builder
@@ -166,6 +171,7 @@ public interface ChangeTextLineItemQuantityChange extends Change {
     public static ChangeTextLineItemQuantityChangeBuilder builder(final ChangeTextLineItemQuantityChange template) {
         return ChangeTextLineItemQuantityChangeBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -176,7 +182,7 @@ public interface ChangeTextLineItemQuantityChange extends Change {
     default <T> T withChangeTextLineItemQuantityChange(Function<ChangeTextLineItemQuantityChange, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

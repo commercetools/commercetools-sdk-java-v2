@@ -1,9 +1,11 @@
-
 package com.commercetools.api.predicates.query.type;
 
 import com.commercetools.api.predicates.query.*;
 
-public class FieldContainerQueryBuilderDsl {
+import java.util.function.Function;
+
+
+public class FieldContainerQueryBuilderDsl  {
     public FieldContainerQueryBuilderDsl() {
     }
 
@@ -11,4 +13,5 @@ public class FieldContainerQueryBuilderDsl {
         return new FieldContainerQueryBuilderDsl();
     }
 
+    
 }

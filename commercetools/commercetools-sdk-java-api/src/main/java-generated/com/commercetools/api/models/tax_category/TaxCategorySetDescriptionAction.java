@@ -1,16 +1,20 @@
-
 package com.commercetools.api.models.tax_category;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
+import com.commercetools.api.models.tax_category.TaxCategoryUpdateAction;
+import com.commercetools.api.models.tax_category.TaxCategorySetDescriptionActionImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * TaxCategorySetDescriptionAction
@@ -22,9 +26,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     TaxCategorySetDescriptionAction taxCategorySetDescriptionAction = TaxCategorySetDescriptionAction.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = TaxCategorySetDescriptionActionImpl.class)
 public interface TaxCategorySetDescriptionAction extends TaxCategoryUpdateAction {
 
@@ -37,7 +44,7 @@ public interface TaxCategorySetDescriptionAction extends TaxCategoryUpdateAction
      *  <p>Value to set. If empty, any existing value will be removed.</p>
      * @return description
      */
-
+    
     @JsonProperty("description")
     public String getDescription();
 
@@ -45,16 +52,18 @@ public interface TaxCategorySetDescriptionAction extends TaxCategoryUpdateAction
      *  <p>Value to set. If empty, any existing value will be removed.</p>
      * @param description value to be set
      */
-
+    
     public void setDescription(final String description);
+    
 
     /**
      * factory method
      * @return instance of TaxCategorySetDescriptionAction
      */
-    public static TaxCategorySetDescriptionAction of() {
+    public static TaxCategorySetDescriptionAction of(){
         return new TaxCategorySetDescriptionActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy TaxCategorySetDescriptionAction
@@ -89,7 +98,7 @@ public interface TaxCategorySetDescriptionAction extends TaxCategoryUpdateAction
     public static TaxCategorySetDescriptionActionBuilder builder() {
         return TaxCategorySetDescriptionActionBuilder.of();
     }
-
+    
     /**
      * create builder for TaxCategorySetDescriptionAction instance
      * @param template instance with prefilled values for the builder
@@ -98,6 +107,7 @@ public interface TaxCategorySetDescriptionAction extends TaxCategoryUpdateAction
     public static TaxCategorySetDescriptionActionBuilder builder(final TaxCategorySetDescriptionAction template) {
         return TaxCategorySetDescriptionActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -108,7 +118,7 @@ public interface TaxCategorySetDescriptionAction extends TaxCategoryUpdateAction
     default <T> T withTaxCategorySetDescriptionAction(Function<TaxCategorySetDescriptionAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

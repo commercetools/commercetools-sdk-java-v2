@@ -1,17 +1,21 @@
-
 package com.commercetools.api.models.shipping_method;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
+import com.commercetools.api.models.shipping_method.ShippingMethodUpdateAction;
+import java.lang.Object;
+import com.commercetools.api.models.shipping_method.ShippingMethodSetCustomFieldActionImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>This action sets, overwrites, or removes any existing Custom Field for an existing ShippingMethod.</p>
@@ -24,9 +28,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .name("{name}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = ShippingMethodSetCustomFieldActionImpl.class)
 public interface ShippingMethodSetCustomFieldAction extends ShippingMethodUpdateAction {
 
@@ -42,12 +49,11 @@ public interface ShippingMethodSetCustomFieldAction extends ShippingMethodUpdate
     @NotNull
     @JsonProperty("name")
     public String getName();
-
     /**
      *  <p>If <code>value</code> is absent or <code>null</code>, this field will be removed if it exists. Removing a field that does not exist returns an InvalidOperation error. If <code>value</code> is provided, it is set for the field defined by <code>name</code>.</p>
      * @return value
      */
-
+    
     @JsonProperty("value")
     public Object getValue();
 
@@ -55,23 +61,26 @@ public interface ShippingMethodSetCustomFieldAction extends ShippingMethodUpdate
      *  <p>Name of the Custom Field.</p>
      * @param name value to be set
      */
-
+    
     public void setName(final String name);
-
+    
+    
     /**
      *  <p>If <code>value</code> is absent or <code>null</code>, this field will be removed if it exists. Removing a field that does not exist returns an InvalidOperation error. If <code>value</code> is provided, it is set for the field defined by <code>name</code>.</p>
      * @param value value to be set
      */
-
+    
     public void setValue(final Object value);
+    
 
     /**
      * factory method
      * @return instance of ShippingMethodSetCustomFieldAction
      */
-    public static ShippingMethodSetCustomFieldAction of() {
+    public static ShippingMethodSetCustomFieldAction of(){
         return new ShippingMethodSetCustomFieldActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy ShippingMethodSetCustomFieldAction
@@ -91,8 +100,7 @@ public interface ShippingMethodSetCustomFieldAction extends ShippingMethodUpdate
      * @return copy instance
      */
     @Nullable
-    public static ShippingMethodSetCustomFieldAction deepCopy(
-            @Nullable final ShippingMethodSetCustomFieldAction template) {
+    public static ShippingMethodSetCustomFieldAction deepCopy(@Nullable final ShippingMethodSetCustomFieldAction template) {
         if (template == null) {
             return null;
         }
@@ -109,7 +117,7 @@ public interface ShippingMethodSetCustomFieldAction extends ShippingMethodUpdate
     public static ShippingMethodSetCustomFieldActionBuilder builder() {
         return ShippingMethodSetCustomFieldActionBuilder.of();
     }
-
+    
     /**
      * create builder for ShippingMethodSetCustomFieldAction instance
      * @param template instance with prefilled values for the builder
@@ -118,6 +126,7 @@ public interface ShippingMethodSetCustomFieldAction extends ShippingMethodUpdate
     public static ShippingMethodSetCustomFieldActionBuilder builder(final ShippingMethodSetCustomFieldAction template) {
         return ShippingMethodSetCustomFieldActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -128,11 +137,11 @@ public interface ShippingMethodSetCustomFieldAction extends ShippingMethodUpdate
     default <T> T withShippingMethodSetCustomFieldAction(Function<ShippingMethodSetCustomFieldAction, T> helper) {
         return helper.apply(this);
     }
-
     public static ShippingMethodSetCustomFieldAction ofUnset(final String name) {
         return ShippingMethodSetCustomFieldActionBuilder.of().name(name).build();
     }
-
+    
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

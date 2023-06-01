@@ -1,16 +1,20 @@
-
 package com.commercetools.api.models.cart;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
+import com.commercetools.api.models.cart.CartUpdateAction;
+import com.commercetools.api.models.cart.CartSetCustomerIdActionImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Setting the Cart's <code>customerId</code> can lead to updates on all its LineItem <code>prices</code>.</p>
@@ -23,9 +27,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     CartSetCustomerIdAction cartSetCustomerIdAction = CartSetCustomerIdAction.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = CartSetCustomerIdActionImpl.class)
 public interface CartSetCustomerIdAction extends CartUpdateAction {
 
@@ -38,7 +45,7 @@ public interface CartSetCustomerIdAction extends CartUpdateAction {
      *  <p><code>id</code> of an existing Customer. If empty, any value is removed.</p>
      * @return customerId
      */
-
+    
     @JsonProperty("customerId")
     public String getCustomerId();
 
@@ -46,16 +53,18 @@ public interface CartSetCustomerIdAction extends CartUpdateAction {
      *  <p><code>id</code> of an existing Customer. If empty, any value is removed.</p>
      * @param customerId value to be set
      */
-
+    
     public void setCustomerId(final String customerId);
+    
 
     /**
      * factory method
      * @return instance of CartSetCustomerIdAction
      */
-    public static CartSetCustomerIdAction of() {
+    public static CartSetCustomerIdAction of(){
         return new CartSetCustomerIdActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy CartSetCustomerIdAction
@@ -90,7 +99,7 @@ public interface CartSetCustomerIdAction extends CartUpdateAction {
     public static CartSetCustomerIdActionBuilder builder() {
         return CartSetCustomerIdActionBuilder.of();
     }
-
+    
     /**
      * create builder for CartSetCustomerIdAction instance
      * @param template instance with prefilled values for the builder
@@ -99,6 +108,7 @@ public interface CartSetCustomerIdAction extends CartUpdateAction {
     public static CartSetCustomerIdActionBuilder builder(final CartSetCustomerIdAction template) {
         return CartSetCustomerIdActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -109,7 +119,7 @@ public interface CartSetCustomerIdAction extends CartUpdateAction {
     default <T> T withCartSetCustomerIdAction(Function<CartSetCustomerIdAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

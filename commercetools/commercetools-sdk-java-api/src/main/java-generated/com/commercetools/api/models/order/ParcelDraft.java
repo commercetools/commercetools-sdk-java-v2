@@ -1,19 +1,23 @@
-
 package com.commercetools.api.models.order;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-import java.util.stream.Collectors;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-
+import com.commercetools.api.models.order.DeliveryItem;
+import com.commercetools.api.models.order.ParcelMeasurements;
+import com.commercetools.api.models.order.TrackingData;
 import com.commercetools.api.models.type.CustomFieldsDraft;
+import com.commercetools.api.models.order.ParcelDraftImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * ParcelDraft
@@ -25,12 +29,15 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     ParcelDraft parcelDraft = ParcelDraft.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = ParcelDraftImpl.class)
-public interface ParcelDraft extends com.commercetools.api.models.CustomizableDraft<ParcelDraft>,
-        io.vrap.rmf.base.client.Draft<ParcelDraft> {
+public interface ParcelDraft extends com.commercetools.api.models.CustomizableDraft<ParcelDraft>, io.vrap.rmf.base.client.Draft<ParcelDraft> {
+
 
     /**
      *
@@ -39,7 +46,6 @@ public interface ParcelDraft extends com.commercetools.api.models.CustomizableDr
     @Valid
     @JsonProperty("measurements")
     public ParcelMeasurements getMeasurements();
-
     /**
      *
      * @return trackingData
@@ -47,7 +53,6 @@ public interface ParcelDraft extends com.commercetools.api.models.CustomizableDr
     @Valid
     @JsonProperty("trackingData")
     public TrackingData getTrackingData();
-
     /**
      *  <p>The delivery items contained in this parcel.</p>
      * @return items
@@ -55,7 +60,6 @@ public interface ParcelDraft extends com.commercetools.api.models.CustomizableDr
     @Valid
     @JsonProperty("items")
     public List<DeliveryItem> getItems();
-
     /**
      *  <p>Custom Fields of this parcel.</p>
      * @return custom
@@ -68,45 +72,48 @@ public interface ParcelDraft extends com.commercetools.api.models.CustomizableDr
      * set measurements
      * @param measurements value to be set
      */
-
+    
     public void setMeasurements(final ParcelMeasurements measurements);
-
+    
+    
     /**
      * set trackingData
      * @param trackingData value to be set
      */
-
+    
     public void setTrackingData(final TrackingData trackingData);
-
+    
+    
     /**
      *  <p>The delivery items contained in this parcel.</p>
      * @param items values to be set
      */
-
+    
     @JsonIgnore
-    public void setItems(final DeliveryItem... items);
-
+    public void setItems(final DeliveryItem ...items);
     /**
      *  <p>The delivery items contained in this parcel.</p>
      * @param items values to be set
      */
-
+    
     public void setItems(final List<DeliveryItem> items);
-
+    
     /**
      *  <p>Custom Fields of this parcel.</p>
      * @param custom value to be set
      */
-
+    
     public void setCustom(final CustomFieldsDraft custom);
+    
 
     /**
      * factory method
      * @return instance of ParcelDraft
      */
-    public static ParcelDraft of() {
+    public static ParcelDraft of(){
         return new ParcelDraftImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy ParcelDraft
@@ -133,13 +140,10 @@ public interface ParcelDraft extends com.commercetools.api.models.CustomizableDr
             return null;
         }
         ParcelDraftImpl instance = new ParcelDraftImpl();
-        instance.setMeasurements(
-            com.commercetools.api.models.order.ParcelMeasurements.deepCopy(template.getMeasurements()));
+        instance.setMeasurements(com.commercetools.api.models.order.ParcelMeasurements.deepCopy(template.getMeasurements()));
         instance.setTrackingData(com.commercetools.api.models.order.TrackingData.deepCopy(template.getTrackingData()));
         instance.setItems(Optional.ofNullable(template.getItems())
-                .map(t -> t.stream()
-                        .map(com.commercetools.api.models.order.DeliveryItem::deepCopy)
-                        .collect(Collectors.toList()))
+                .map(t -> t.stream().map(com.commercetools.api.models.order.DeliveryItem::deepCopy).collect(Collectors.toList()))
                 .orElse(null));
         instance.setCustom(com.commercetools.api.models.type.CustomFieldsDraft.deepCopy(template.getCustom()));
         return instance;
@@ -152,7 +156,7 @@ public interface ParcelDraft extends com.commercetools.api.models.CustomizableDr
     public static ParcelDraftBuilder builder() {
         return ParcelDraftBuilder.of();
     }
-
+    
     /**
      * create builder for ParcelDraft instance
      * @param template instance with prefilled values for the builder
@@ -161,6 +165,7 @@ public interface ParcelDraft extends com.commercetools.api.models.CustomizableDr
     public static ParcelDraftBuilder builder(final ParcelDraft template) {
         return ParcelDraftBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -171,7 +176,7 @@ public interface ParcelDraft extends com.commercetools.api.models.CustomizableDr
     default <T> T withParcelDraft(Function<ParcelDraft, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

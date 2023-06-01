@@ -1,17 +1,20 @@
-
 package com.commercetools.api.models.order;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
 
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
+import com.commercetools.api.models.order.DeliveryItemImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * DeliveryItem
@@ -25,11 +28,15 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .quantity(0.3)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = DeliveryItemImpl.class)
-public interface DeliveryItem {
+public interface DeliveryItem  {
+
 
     /**
      *  <p>Unique identifier of the DeliveryItem.</p>
@@ -38,7 +45,6 @@ public interface DeliveryItem {
     @NotNull
     @JsonProperty("id")
     public String getId();
-
     /**
      *
      * @return quantity
@@ -51,23 +57,26 @@ public interface DeliveryItem {
      *  <p>Unique identifier of the DeliveryItem.</p>
      * @param id value to be set
      */
-
+    
     public void setId(final String id);
-
+    
+    
     /**
      * set quantity
      * @param quantity value to be set
      */
-
+    
     public void setQuantity(final Long quantity);
+    
 
     /**
      * factory method
      * @return instance of DeliveryItem
      */
-    public static DeliveryItem of() {
+    public static DeliveryItem of(){
         return new DeliveryItemImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy DeliveryItem
@@ -104,7 +113,7 @@ public interface DeliveryItem {
     public static DeliveryItemBuilder builder() {
         return DeliveryItemBuilder.of();
     }
-
+    
     /**
      * create builder for DeliveryItem instance
      * @param template instance with prefilled values for the builder
@@ -113,6 +122,7 @@ public interface DeliveryItem {
     public static DeliveryItemBuilder builder(final DeliveryItem template) {
         return DeliveryItemBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -123,7 +133,7 @@ public interface DeliveryItem {
     default <T> T withDeliveryItem(Function<DeliveryItem, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

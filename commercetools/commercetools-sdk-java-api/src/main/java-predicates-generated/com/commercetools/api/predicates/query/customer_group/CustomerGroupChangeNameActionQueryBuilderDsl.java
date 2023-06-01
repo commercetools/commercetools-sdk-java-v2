@@ -1,9 +1,11 @@
-
 package com.commercetools.api.predicates.query.customer_group;
 
 import com.commercetools.api.predicates.query.*;
 
-public class CustomerGroupChangeNameActionQueryBuilderDsl {
+import java.util.function.Function;
+
+
+public class CustomerGroupChangeNameActionQueryBuilderDsl  {
     public CustomerGroupChangeNameActionQueryBuilderDsl() {
     }
 
@@ -12,15 +14,12 @@ public class CustomerGroupChangeNameActionQueryBuilderDsl {
     }
 
     public StringComparisonPredicateBuilder<CustomerGroupChangeNameActionQueryBuilderDsl> action() {
-        return new StringComparisonPredicateBuilder<>(
-            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("action")),
-            p -> new CombinationQueryPredicate<>(p, CustomerGroupChangeNameActionQueryBuilderDsl::of));
+        return new StringComparisonPredicateBuilder<>(BinaryQueryPredicate.of().left(new ConstantQueryPredicate("action")),
+        p -> new CombinationQueryPredicate<>(p, CustomerGroupChangeNameActionQueryBuilderDsl::of));
     }
-
     public StringComparisonPredicateBuilder<CustomerGroupChangeNameActionQueryBuilderDsl> name() {
-        return new StringComparisonPredicateBuilder<>(
-            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("name")),
-            p -> new CombinationQueryPredicate<>(p, CustomerGroupChangeNameActionQueryBuilderDsl::of));
+        return new StringComparisonPredicateBuilder<>(BinaryQueryPredicate.of().left(new ConstantQueryPredicate("name")),
+        p -> new CombinationQueryPredicate<>(p, CustomerGroupChangeNameActionQueryBuilderDsl::of));
     }
-
+    
 }

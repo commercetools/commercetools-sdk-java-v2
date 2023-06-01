@@ -1,19 +1,21 @@
-
 package com.commercetools.history.models.change;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
+import com.commercetools.history.models.change.Change;
 import com.commercetools.history.models.change_value.LocalizedEnumValue;
+import com.commercetools.history.models.change.RemoveLocalizedEnumValuesChangeImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * RemoveLocalizedEnumValuesChange
@@ -28,9 +30,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .previousValue(previousValueBuilder -> previousValueBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = RemoveLocalizedEnumValuesChangeImpl.class)
 public interface RemoveLocalizedEnumValuesChange extends Change {
 
@@ -46,7 +51,6 @@ public interface RemoveLocalizedEnumValuesChange extends Change {
     @NotNull
     @JsonProperty("type")
     public String getType();
-
     /**
      *  <p>Update action for <code>removeEnumValues</code> on product types</p>
      * @return change
@@ -54,7 +58,6 @@ public interface RemoveLocalizedEnumValuesChange extends Change {
     @NotNull
     @JsonProperty("change")
     public String getChange();
-
     /**
      *  <p>The name of the attribute updated.</p>
      * @return attributeName
@@ -62,7 +65,6 @@ public interface RemoveLocalizedEnumValuesChange extends Change {
     @NotNull
     @JsonProperty("attributeName")
     public String getAttributeName();
-
     /**
      *
      * @return previousValue
@@ -76,30 +78,34 @@ public interface RemoveLocalizedEnumValuesChange extends Change {
      *  <p>Update action for <code>removeEnumValues</code> on product types</p>
      * @param change value to be set
      */
-
+    
     public void setChange(final String change);
-
+    
+    
     /**
      *  <p>The name of the attribute updated.</p>
      * @param attributeName value to be set
      */
-
+    
     public void setAttributeName(final String attributeName);
-
+    
+    
     /**
      * set previousValue
      * @param previousValue value to be set
      */
-
+    
     public void setPreviousValue(final LocalizedEnumValue previousValue);
+    
 
     /**
      * factory method
      * @return instance of RemoveLocalizedEnumValuesChange
      */
-    public static RemoveLocalizedEnumValuesChange of() {
+    public static RemoveLocalizedEnumValuesChange of(){
         return new RemoveLocalizedEnumValuesChangeImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy RemoveLocalizedEnumValuesChange
@@ -127,8 +133,7 @@ public interface RemoveLocalizedEnumValuesChange extends Change {
         RemoveLocalizedEnumValuesChangeImpl instance = new RemoveLocalizedEnumValuesChangeImpl();
         instance.setChange(template.getChange());
         instance.setAttributeName(template.getAttributeName());
-        instance.setPreviousValue(
-            com.commercetools.history.models.change_value.LocalizedEnumValue.deepCopy(template.getPreviousValue()));
+        instance.setPreviousValue(com.commercetools.history.models.change_value.LocalizedEnumValue.deepCopy(template.getPreviousValue()));
         return instance;
     }
 
@@ -139,7 +144,7 @@ public interface RemoveLocalizedEnumValuesChange extends Change {
     public static RemoveLocalizedEnumValuesChangeBuilder builder() {
         return RemoveLocalizedEnumValuesChangeBuilder.of();
     }
-
+    
     /**
      * create builder for RemoveLocalizedEnumValuesChange instance
      * @param template instance with prefilled values for the builder
@@ -148,6 +153,7 @@ public interface RemoveLocalizedEnumValuesChange extends Change {
     public static RemoveLocalizedEnumValuesChangeBuilder builder(final RemoveLocalizedEnumValuesChange template) {
         return RemoveLocalizedEnumValuesChangeBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -158,7 +164,7 @@ public interface RemoveLocalizedEnumValuesChange extends Change {
     default <T> T withRemoveLocalizedEnumValuesChange(Function<RemoveLocalizedEnumValuesChange, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

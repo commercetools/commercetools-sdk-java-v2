@@ -1,17 +1,20 @@
-
 package com.commercetools.api.models.cart;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
+import com.commercetools.api.models.cart.ShippingRateInputDraft;
+import com.commercetools.api.models.cart.ScoreShippingRateInputDraftImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * ScoreShippingRateInputDraft
@@ -24,12 +27,14 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .score(0.3)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = ScoreShippingRateInputDraftImpl.class)
-public interface ScoreShippingRateInputDraft
-        extends ShippingRateInputDraft, io.vrap.rmf.base.client.Draft<ScoreShippingRateInputDraft> {
+public interface ScoreShippingRateInputDraft extends ShippingRateInputDraft, io.vrap.rmf.base.client.Draft<ScoreShippingRateInputDraft> {
 
     /**
      * discriminator value for ScoreShippingRateInputDraft
@@ -48,16 +53,18 @@ public interface ScoreShippingRateInputDraft
      *  <p>Abstract value for categorizing a Cart.</p>
      * @param score value to be set
      */
-
+    
     public void setScore(final Long score);
+    
 
     /**
      * factory method
      * @return instance of ScoreShippingRateInputDraft
      */
-    public static ScoreShippingRateInputDraft of() {
+    public static ScoreShippingRateInputDraft of(){
         return new ScoreShippingRateInputDraftImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy ScoreShippingRateInputDraft
@@ -92,7 +99,7 @@ public interface ScoreShippingRateInputDraft
     public static ScoreShippingRateInputDraftBuilder builder() {
         return ScoreShippingRateInputDraftBuilder.of();
     }
-
+    
     /**
      * create builder for ScoreShippingRateInputDraft instance
      * @param template instance with prefilled values for the builder
@@ -101,6 +108,7 @@ public interface ScoreShippingRateInputDraft
     public static ScoreShippingRateInputDraftBuilder builder(final ScoreShippingRateInputDraft template) {
         return ScoreShippingRateInputDraftBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -111,7 +119,7 @@ public interface ScoreShippingRateInputDraft
     default <T> T withScoreShippingRateInputDraft(Function<ScoreShippingRateInputDraft, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

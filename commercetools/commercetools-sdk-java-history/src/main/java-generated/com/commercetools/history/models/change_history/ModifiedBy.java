@@ -1,19 +1,20 @@
-
 package com.commercetools.history.models.change_history;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
 import com.commercetools.history.models.common.Reference;
+import com.commercetools.history.models.change_history.ModifiedByImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Information about the user or the API client who performed the change. This is a variant of LastModifiedBy.</p>
@@ -28,11 +29,15 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .isPlatformClient(true)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = ModifiedByImpl.class)
-public interface ModifiedBy {
+public interface ModifiedBy  {
+
 
     /**
      *  <p>ID of the Merchant Center user who made the change. Present only if the change was made in the Merchant Center.</p>
@@ -41,7 +46,6 @@ public interface ModifiedBy {
     @NotNull
     @JsonProperty("id")
     public String getId();
-
     /**
      *  <p>Indicates whether the change was made by a user or the API client with or without an External user ID.</p>
      * @return type
@@ -49,7 +53,6 @@ public interface ModifiedBy {
     @NotNull
     @JsonProperty("type")
     public String getType();
-
     /**
      *  <p>Reference to the Customer who made the change. Present only if the change was made using a token from the Password Flow.</p>
      * @return customer
@@ -57,23 +60,20 @@ public interface ModifiedBy {
     @Valid
     @JsonProperty("customer")
     public Reference getCustomer();
-
     /**
      *  <p>Present only if the change was made using a token from an Anonymous Session.</p>
      * @return anonymousId
      */
-
+    
     @JsonProperty("anonymousId")
     public String getAnonymousId();
-
     /**
      *  <p>ID of the API Client that made the change. Present only if the change was made using an API Client.</p>
      * @return clientId
      */
-
+    
     @JsonProperty("clientId")
     public String getClientId();
-
     /**
      *  <p><code>true</code> if the change was made via Merchant Center or ImpEx.</p>
      * @return isPlatformClient
@@ -86,51 +86,58 @@ public interface ModifiedBy {
      *  <p>ID of the Merchant Center user who made the change. Present only if the change was made in the Merchant Center.</p>
      * @param id value to be set
      */
-
+    
     public void setId(final String id);
-
+    
+    
     /**
      *  <p>Indicates whether the change was made by a user or the API client with or without an External user ID.</p>
      * @param type value to be set
      */
-
+    
     public void setType(final String type);
-
+    
+    
     /**
      *  <p>Reference to the Customer who made the change. Present only if the change was made using a token from the Password Flow.</p>
      * @param customer value to be set
      */
-
+    
     public void setCustomer(final Reference customer);
-
+    
+    
     /**
      *  <p>Present only if the change was made using a token from an Anonymous Session.</p>
      * @param anonymousId value to be set
      */
-
+    
     public void setAnonymousId(final String anonymousId);
-
+    
+    
     /**
      *  <p>ID of the API Client that made the change. Present only if the change was made using an API Client.</p>
      * @param clientId value to be set
      */
-
+    
     public void setClientId(final String clientId);
-
+    
+    
     /**
      *  <p><code>true</code> if the change was made via Merchant Center or ImpEx.</p>
      * @param isPlatformClient value to be set
      */
-
+    
     public void setIsPlatformClient(final Boolean isPlatformClient);
+    
 
     /**
      * factory method
      * @return instance of ModifiedBy
      */
-    public static ModifiedBy of() {
+    public static ModifiedBy of(){
         return new ModifiedByImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy ModifiedBy
@@ -175,7 +182,7 @@ public interface ModifiedBy {
     public static ModifiedByBuilder builder() {
         return ModifiedByBuilder.of();
     }
-
+    
     /**
      * create builder for ModifiedBy instance
      * @param template instance with prefilled values for the builder
@@ -184,6 +191,7 @@ public interface ModifiedBy {
     public static ModifiedByBuilder builder(final ModifiedBy template) {
         return ModifiedByBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -194,7 +202,7 @@ public interface ModifiedBy {
     default <T> T withModifiedBy(Function<ModifiedBy, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

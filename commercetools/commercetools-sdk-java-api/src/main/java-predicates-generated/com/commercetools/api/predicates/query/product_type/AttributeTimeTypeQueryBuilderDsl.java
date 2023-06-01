@@ -1,9 +1,11 @@
-
 package com.commercetools.api.predicates.query.product_type;
 
 import com.commercetools.api.predicates.query.*;
 
-public class AttributeTimeTypeQueryBuilderDsl {
+import java.util.function.Function;
+
+
+public class AttributeTimeTypeQueryBuilderDsl  {
     public AttributeTimeTypeQueryBuilderDsl() {
     }
 
@@ -12,9 +14,8 @@ public class AttributeTimeTypeQueryBuilderDsl {
     }
 
     public StringComparisonPredicateBuilder<AttributeTimeTypeQueryBuilderDsl> name() {
-        return new StringComparisonPredicateBuilder<>(
-            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("name")),
-            p -> new CombinationQueryPredicate<>(p, AttributeTimeTypeQueryBuilderDsl::of));
+        return new StringComparisonPredicateBuilder<>(BinaryQueryPredicate.of().left(new ConstantQueryPredicate("name")),
+        p -> new CombinationQueryPredicate<>(p, AttributeTimeTypeQueryBuilderDsl::of));
     }
-
+    
 }

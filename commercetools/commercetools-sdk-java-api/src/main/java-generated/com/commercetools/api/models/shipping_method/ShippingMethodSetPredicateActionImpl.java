@@ -1,27 +1,35 @@
-
 package com.commercetools.api.models.shipping_method;
 
-import java.time.*;
-import java.util.*;
-
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
-
-import io.vrap.rmf.base.client.ModelBase;
+import com.commercetools.api.models.shipping_method.ShippingMethodUpdateAction;
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.ModelBase;
+import javax.validation.Valid;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.annotation.*;
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
  * ShippingMethodSetPredicateAction
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class ShippingMethodSetPredicateActionImpl implements ShippingMethodSetPredicateAction, ModelBase {
 
+    
     private String action;
-
+    
+    
     private String predicate;
 
     /**
@@ -30,52 +38,56 @@ public class ShippingMethodSetPredicateActionImpl implements ShippingMethodSetPr
     @JsonCreator
     ShippingMethodSetPredicateActionImpl(@JsonProperty("predicate") final String predicate) {
         this.predicate = predicate;
-        this.action = SET_PREDICATE;
+        this.action =  SET_PREDICATE;
     }
-
     /**
      * create empty instance
      */
     public ShippingMethodSetPredicateActionImpl() {
-        this.action = SET_PREDICATE;
+        this.action =  SET_PREDICATE;
     }
 
     /**
      *
      */
-
-    public String getAction() {
+    
+    public String getAction(){
         return this.action;
     }
-
+    
     /**
      *  <p>A valid Cart predicate. If <code>predicate</code> is absent or <code>null</code>, it is removed if it exists.</p>
      */
-
-    public String getPredicate() {
+    
+    public String getPredicate(){
         return this.predicate;
     }
 
-    public void setPredicate(final String predicate) {
+    
+    public void setPredicate(final String predicate){
         this.predicate = predicate;
     }
 
     @Override
     public boolean equals(Object o) {
-        if (this == o)
-            return true;
-
-        if (o == null || getClass() != o.getClass())
-            return false;
-
+        if (this == o) return true;
+    
+        if (o == null || getClass() != o.getClass()) return false;
+    
         ShippingMethodSetPredicateActionImpl that = (ShippingMethodSetPredicateActionImpl) o;
-
-        return new EqualsBuilder().append(action, that.action).append(predicate, that.predicate).isEquals();
+    
+        return new EqualsBuilder()
+                .append(action, that.action)
+                .append(predicate, that.predicate)
+                .isEquals();
     }
-
+    
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(action).append(predicate).toHashCode();
+        return new HashCodeBuilder(17, 37)
+            .append(action)
+            .append(predicate)
+            .toHashCode();
     }
 
 }

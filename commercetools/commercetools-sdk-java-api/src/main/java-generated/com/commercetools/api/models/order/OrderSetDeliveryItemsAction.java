@@ -1,19 +1,21 @@
-
 package com.commercetools.api.models.order;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-import java.util.stream.Collectors;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
+import com.commercetools.api.models.order.DeliveryItem;
+import com.commercetools.api.models.order.OrderUpdateAction;
+import com.commercetools.api.models.order.OrderSetDeliveryItemsActionImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * OrderSetDeliveryItemsAction
@@ -26,9 +28,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .plusItems(itemsBuilder -> itemsBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = OrderSetDeliveryItemsActionImpl.class)
 public interface OrderSetDeliveryItemsAction extends OrderUpdateAction {
 
@@ -41,18 +46,16 @@ public interface OrderSetDeliveryItemsAction extends OrderUpdateAction {
      *  <p>Either <code>deliveryId</code> or <code>deliveryKey</code> is required for this update action.</p>
      * @return deliveryId
      */
-
+    
     @JsonProperty("deliveryId")
     public String getDeliveryId();
-
     /**
      *  <p>Either <code>deliveryId</code> or <code>deliveryKey</code> is required for this update action.</p>
      * @return deliveryKey
      */
-
+    
     @JsonProperty("deliveryKey")
     public String getDeliveryKey();
-
     /**
      *
      * @return items
@@ -66,38 +69,40 @@ public interface OrderSetDeliveryItemsAction extends OrderUpdateAction {
      *  <p>Either <code>deliveryId</code> or <code>deliveryKey</code> is required for this update action.</p>
      * @param deliveryId value to be set
      */
-
+    
     public void setDeliveryId(final String deliveryId);
-
+    
+    
     /**
      *  <p>Either <code>deliveryId</code> or <code>deliveryKey</code> is required for this update action.</p>
      * @param deliveryKey value to be set
      */
-
+    
     public void setDeliveryKey(final String deliveryKey);
-
+    
+    
     /**
      * set items
      * @param items values to be set
      */
-
+    
     @JsonIgnore
-    public void setItems(final DeliveryItem... items);
-
+    public void setItems(final DeliveryItem ...items);
     /**
      * set items
      * @param items values to be set
      */
-
+    
     public void setItems(final List<DeliveryItem> items);
 
     /**
      * factory method
      * @return instance of OrderSetDeliveryItemsAction
      */
-    public static OrderSetDeliveryItemsAction of() {
+    public static OrderSetDeliveryItemsAction of(){
         return new OrderSetDeliveryItemsActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy OrderSetDeliveryItemsAction
@@ -126,9 +131,7 @@ public interface OrderSetDeliveryItemsAction extends OrderUpdateAction {
         instance.setDeliveryId(template.getDeliveryId());
         instance.setDeliveryKey(template.getDeliveryKey());
         instance.setItems(Optional.ofNullable(template.getItems())
-                .map(t -> t.stream()
-                        .map(com.commercetools.api.models.order.DeliveryItem::deepCopy)
-                        .collect(Collectors.toList()))
+                .map(t -> t.stream().map(com.commercetools.api.models.order.DeliveryItem::deepCopy).collect(Collectors.toList()))
                 .orElse(null));
         return instance;
     }
@@ -140,7 +143,7 @@ public interface OrderSetDeliveryItemsAction extends OrderUpdateAction {
     public static OrderSetDeliveryItemsActionBuilder builder() {
         return OrderSetDeliveryItemsActionBuilder.of();
     }
-
+    
     /**
      * create builder for OrderSetDeliveryItemsAction instance
      * @param template instance with prefilled values for the builder
@@ -149,6 +152,7 @@ public interface OrderSetDeliveryItemsAction extends OrderUpdateAction {
     public static OrderSetDeliveryItemsActionBuilder builder(final OrderSetDeliveryItemsAction template) {
         return OrderSetDeliveryItemsActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -159,7 +163,7 @@ public interface OrderSetDeliveryItemsAction extends OrderUpdateAction {
     default <T> T withOrderSetDeliveryItemsAction(Function<OrderSetDeliveryItemsAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

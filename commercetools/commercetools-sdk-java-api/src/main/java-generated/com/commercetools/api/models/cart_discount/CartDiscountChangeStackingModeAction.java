@@ -1,17 +1,21 @@
-
 package com.commercetools.api.models.cart_discount;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
+import com.commercetools.api.models.cart_discount.CartDiscountUpdateAction;
+import com.commercetools.api.models.cart_discount.StackingMode;
+import com.commercetools.api.models.cart_discount.CartDiscountChangeStackingModeActionImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * CartDiscountChangeStackingModeAction
@@ -24,9 +28,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .stackingMode(StackingMode.STACKING)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = CartDiscountChangeStackingModeActionImpl.class)
 public interface CartDiscountChangeStackingModeAction extends CartDiscountUpdateAction {
 
@@ -47,16 +54,18 @@ public interface CartDiscountChangeStackingModeAction extends CartDiscountUpdate
      *  <p>New value to set.</p>
      * @param stackingMode value to be set
      */
-
+    
     public void setStackingMode(final StackingMode stackingMode);
+    
 
     /**
      * factory method
      * @return instance of CartDiscountChangeStackingModeAction
      */
-    public static CartDiscountChangeStackingModeAction of() {
+    public static CartDiscountChangeStackingModeAction of(){
         return new CartDiscountChangeStackingModeActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy CartDiscountChangeStackingModeAction
@@ -75,8 +84,7 @@ public interface CartDiscountChangeStackingModeAction extends CartDiscountUpdate
      * @return copy instance
      */
     @Nullable
-    public static CartDiscountChangeStackingModeAction deepCopy(
-            @Nullable final CartDiscountChangeStackingModeAction template) {
+    public static CartDiscountChangeStackingModeAction deepCopy(@Nullable final CartDiscountChangeStackingModeAction template) {
         if (template == null) {
             return null;
         }
@@ -92,16 +100,16 @@ public interface CartDiscountChangeStackingModeAction extends CartDiscountUpdate
     public static CartDiscountChangeStackingModeActionBuilder builder() {
         return CartDiscountChangeStackingModeActionBuilder.of();
     }
-
+    
     /**
      * create builder for CartDiscountChangeStackingModeAction instance
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static CartDiscountChangeStackingModeActionBuilder builder(
-            final CartDiscountChangeStackingModeAction template) {
+    public static CartDiscountChangeStackingModeActionBuilder builder(final CartDiscountChangeStackingModeAction template) {
         return CartDiscountChangeStackingModeActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -112,7 +120,7 @@ public interface CartDiscountChangeStackingModeAction extends CartDiscountUpdate
     default <T> T withCartDiscountChangeStackingModeAction(Function<CartDiscountChangeStackingModeAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

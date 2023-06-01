@@ -1,8 +1,11 @@
-
 package com.commercetools.history.models.change;
 
+import com.commercetools.history.models.change.Change;
+import com.commercetools.history.models.change.UnpublishChange;
+import javax.annotation.Nullable;
 import java.util.*;
-
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -16,30 +19,39 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .change("{change}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class UnpublishChangeBuilder implements Builder<UnpublishChange> {
 
+    
+    
     private String change;
 
+    
     /**
      * set the value to the change
      * @param change value to be set
      * @return Builder
      */
-
-    public UnpublishChangeBuilder change(final String change) {
+    
+    public UnpublishChangeBuilder change( final String change) {
         this.change = change;
         return this;
     }
+    
+    
 
     /**
      * value of change}
      * @return change
      */
-
-    public String getChange() {
+    
+    
+    public String getChange(){
         return this.change;
     }
 
@@ -51,7 +63,7 @@ public class UnpublishChangeBuilder implements Builder<UnpublishChange> {
         Objects.requireNonNull(change, UnpublishChange.class + ": change is missing");
         return new UnpublishChangeImpl(change);
     }
-
+    
     /**
      * builds UnpublishChange without checking for non-null required values
      * @return UnpublishChange
@@ -62,7 +74,7 @@ public class UnpublishChangeBuilder implements Builder<UnpublishChange> {
 
     /**
      * factory method for an instance of UnpublishChangeBuilder
-     * @return builder
+     * @return builder 
      */
     public static UnpublishChangeBuilder of() {
         return new UnpublishChangeBuilder();

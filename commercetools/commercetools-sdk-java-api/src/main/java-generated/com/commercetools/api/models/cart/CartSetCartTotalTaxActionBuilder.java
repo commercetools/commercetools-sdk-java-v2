@@ -1,11 +1,13 @@
-
 package com.commercetools.api.models.cart;
 
+import com.commercetools.api.models.cart.CartUpdateAction;
+import com.commercetools.api.models.cart.TaxPortionDraft;
+import com.commercetools.api.models.common.Money;
+import com.commercetools.api.models.cart.CartSetCartTotalTaxAction;
+import javax.annotation.Nullable;
 import java.util.*;
 import java.util.function.Function;
-
-import javax.annotation.Nullable;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -19,159 +21,160 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .externalTotalGross(externalTotalGrossBuilder -> externalTotalGrossBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class CartSetCartTotalTaxActionBuilder implements Builder<CartSetCartTotalTaxAction> {
 
+    
+    
     private com.commercetools.api.models.common.Money externalTotalGross;
-
+    
+    
     @Nullable
     private java.util.List<com.commercetools.api.models.cart.TaxPortionDraft> externalTaxPortions;
 
+    
     /**
      *  <p>The Cart's total gross price becoming the <code>totalGross</code> field (<code>totalNet</code> + taxes) on the Cart's <code>taxedPrice</code>.</p>
      * @param builder function to build the externalTotalGross value
      * @return Builder
      */
-
-    public CartSetCartTotalTaxActionBuilder externalTotalGross(
-            Function<com.commercetools.api.models.common.MoneyBuilder, com.commercetools.api.models.common.MoneyBuilder> builder) {
+    
+    public CartSetCartTotalTaxActionBuilder externalTotalGross(Function<com.commercetools.api.models.common.MoneyBuilder, com.commercetools.api.models.common.MoneyBuilder> builder) {
         this.externalTotalGross = builder.apply(com.commercetools.api.models.common.MoneyBuilder.of()).build();
         return this;
     }
-
+    
     /**
      *  <p>The Cart's total gross price becoming the <code>totalGross</code> field (<code>totalNet</code> + taxes) on the Cart's <code>taxedPrice</code>.</p>
      * @param builder function to build the externalTotalGross value
      * @return Builder
      */
-
-    public CartSetCartTotalTaxActionBuilder withExternalTotalGross(
-            Function<com.commercetools.api.models.common.MoneyBuilder, com.commercetools.api.models.common.Money> builder) {
+    
+    public CartSetCartTotalTaxActionBuilder withExternalTotalGross(Function<com.commercetools.api.models.common.MoneyBuilder, com.commercetools.api.models.common.Money> builder) {
         this.externalTotalGross = builder.apply(com.commercetools.api.models.common.MoneyBuilder.of());
         return this;
     }
-
+                    
     /**
      *  <p>The Cart's total gross price becoming the <code>totalGross</code> field (<code>totalNet</code> + taxes) on the Cart's <code>taxedPrice</code>.</p>
      * @param externalTotalGross value to be set
      * @return Builder
      */
-
-    public CartSetCartTotalTaxActionBuilder externalTotalGross(
-            final com.commercetools.api.models.common.Money externalTotalGross) {
+    
+    public CartSetCartTotalTaxActionBuilder externalTotalGross( final com.commercetools.api.models.common.Money externalTotalGross) {
         this.externalTotalGross = externalTotalGross;
         return this;
     }
-
+    
+    
+    
     /**
      *  <p>Set if the <code>externalTotalGross</code> price is a sum of portions with different tax rates.</p>
      * @param externalTaxPortions value to be set
      * @return Builder
      */
-
-    public CartSetCartTotalTaxActionBuilder externalTaxPortions(
-            @Nullable final com.commercetools.api.models.cart.TaxPortionDraft... externalTaxPortions) {
+    
+    public CartSetCartTotalTaxActionBuilder externalTaxPortions(@Nullable final com.commercetools.api.models.cart.TaxPortionDraft ...externalTaxPortions) {
         this.externalTaxPortions = new ArrayList<>(Arrays.asList(externalTaxPortions));
         return this;
     }
-
+    
     /**
      *  <p>Set if the <code>externalTotalGross</code> price is a sum of portions with different tax rates.</p>
      * @param externalTaxPortions value to be set
      * @return Builder
      */
-
-    public CartSetCartTotalTaxActionBuilder externalTaxPortions(
-            @Nullable final java.util.List<com.commercetools.api.models.cart.TaxPortionDraft> externalTaxPortions) {
+    
+    public CartSetCartTotalTaxActionBuilder externalTaxPortions(@Nullable final java.util.List<com.commercetools.api.models.cart.TaxPortionDraft> externalTaxPortions) {
         this.externalTaxPortions = externalTaxPortions;
         return this;
     }
-
+    
     /**
      *  <p>Set if the <code>externalTotalGross</code> price is a sum of portions with different tax rates.</p>
      * @param externalTaxPortions value to be set
      * @return Builder
      */
-
-    public CartSetCartTotalTaxActionBuilder plusExternalTaxPortions(
-            @Nullable final com.commercetools.api.models.cart.TaxPortionDraft... externalTaxPortions) {
+    
+    public CartSetCartTotalTaxActionBuilder plusExternalTaxPortions(@Nullable final com.commercetools.api.models.cart.TaxPortionDraft ...externalTaxPortions) {
         if (this.externalTaxPortions == null) {
             this.externalTaxPortions = new ArrayList<>();
         }
         this.externalTaxPortions.addAll(Arrays.asList(externalTaxPortions));
         return this;
     }
-
+    
+    
+    
     /**
      *  <p>Set if the <code>externalTotalGross</code> price is a sum of portions with different tax rates.</p>
      * @param builder function to build the externalTaxPortions value
      * @return Builder
      */
-
-    public CartSetCartTotalTaxActionBuilder plusExternalTaxPortions(
-            Function<com.commercetools.api.models.cart.TaxPortionDraftBuilder, com.commercetools.api.models.cart.TaxPortionDraftBuilder> builder) {
+    
+    public CartSetCartTotalTaxActionBuilder plusExternalTaxPortions(Function<com.commercetools.api.models.cart.TaxPortionDraftBuilder, com.commercetools.api.models.cart.TaxPortionDraftBuilder> builder) {
         if (this.externalTaxPortions == null) {
             this.externalTaxPortions = new ArrayList<>();
         }
-        this.externalTaxPortions
-                .add(builder.apply(com.commercetools.api.models.cart.TaxPortionDraftBuilder.of()).build());
+        this.externalTaxPortions.add(builder.apply(com.commercetools.api.models.cart.TaxPortionDraftBuilder.of()).build());
         return this;
     }
-
+    
     /**
      *  <p>Set if the <code>externalTotalGross</code> price is a sum of portions with different tax rates.</p>
      * @param builder function to build the externalTaxPortions value
      * @return Builder
      */
-
-    public CartSetCartTotalTaxActionBuilder withExternalTaxPortions(
-            Function<com.commercetools.api.models.cart.TaxPortionDraftBuilder, com.commercetools.api.models.cart.TaxPortionDraftBuilder> builder) {
+    
+    public CartSetCartTotalTaxActionBuilder withExternalTaxPortions(Function<com.commercetools.api.models.cart.TaxPortionDraftBuilder, com.commercetools.api.models.cart.TaxPortionDraftBuilder> builder) {
         this.externalTaxPortions = new ArrayList<>();
-        this.externalTaxPortions
-                .add(builder.apply(com.commercetools.api.models.cart.TaxPortionDraftBuilder.of()).build());
+        this.externalTaxPortions.add(builder.apply(com.commercetools.api.models.cart.TaxPortionDraftBuilder.of()).build());
         return this;
     }
-
+    
     /**
      *  <p>Set if the <code>externalTotalGross</code> price is a sum of portions with different tax rates.</p>
      * @param builder function to build the externalTaxPortions value
      * @return Builder
      */
-
-    public CartSetCartTotalTaxActionBuilder addExternalTaxPortions(
-            Function<com.commercetools.api.models.cart.TaxPortionDraftBuilder, com.commercetools.api.models.cart.TaxPortionDraft> builder) {
+    
+    public CartSetCartTotalTaxActionBuilder addExternalTaxPortions(Function<com.commercetools.api.models.cart.TaxPortionDraftBuilder, com.commercetools.api.models.cart.TaxPortionDraft> builder) {
         return plusExternalTaxPortions(builder.apply(com.commercetools.api.models.cart.TaxPortionDraftBuilder.of()));
     }
-
+    
     /**
      *  <p>Set if the <code>externalTotalGross</code> price is a sum of portions with different tax rates.</p>
      * @param builder function to build the externalTaxPortions value
      * @return Builder
      */
-
-    public CartSetCartTotalTaxActionBuilder setExternalTaxPortions(
-            Function<com.commercetools.api.models.cart.TaxPortionDraftBuilder, com.commercetools.api.models.cart.TaxPortionDraft> builder) {
+    
+    public CartSetCartTotalTaxActionBuilder setExternalTaxPortions(Function<com.commercetools.api.models.cart.TaxPortionDraftBuilder, com.commercetools.api.models.cart.TaxPortionDraft> builder) {
         return externalTaxPortions(builder.apply(com.commercetools.api.models.cart.TaxPortionDraftBuilder.of()));
     }
+                    
 
     /**
      *  <p>The Cart's total gross price becoming the <code>totalGross</code> field (<code>totalNet</code> + taxes) on the Cart's <code>taxedPrice</code>.</p>
      * @return externalTotalGross
      */
-
-    public com.commercetools.api.models.common.Money getExternalTotalGross() {
+    
+    
+    public com.commercetools.api.models.common.Money getExternalTotalGross(){
         return this.externalTotalGross;
     }
-
+    
     /**
      *  <p>Set if the <code>externalTotalGross</code> price is a sum of portions with different tax rates.</p>
      * @return externalTaxPortions
      */
-
+    
     @Nullable
-    public java.util.List<com.commercetools.api.models.cart.TaxPortionDraft> getExternalTaxPortions() {
+    public java.util.List<com.commercetools.api.models.cart.TaxPortionDraft> getExternalTaxPortions(){
         return this.externalTaxPortions;
     }
 
@@ -183,7 +186,7 @@ public class CartSetCartTotalTaxActionBuilder implements Builder<CartSetCartTota
         Objects.requireNonNull(externalTotalGross, CartSetCartTotalTaxAction.class + ": externalTotalGross is missing");
         return new CartSetCartTotalTaxActionImpl(externalTotalGross, externalTaxPortions);
     }
-
+    
     /**
      * builds CartSetCartTotalTaxAction without checking for non-null required values
      * @return CartSetCartTotalTaxAction
@@ -194,7 +197,7 @@ public class CartSetCartTotalTaxActionBuilder implements Builder<CartSetCartTota
 
     /**
      * factory method for an instance of CartSetCartTotalTaxActionBuilder
-     * @return builder
+     * @return builder 
      */
     public static CartSetCartTotalTaxActionBuilder of() {
         return new CartSetCartTotalTaxActionBuilder();

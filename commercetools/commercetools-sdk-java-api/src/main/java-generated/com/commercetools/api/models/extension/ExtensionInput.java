@@ -1,19 +1,21 @@
-
 package com.commercetools.api.models.extension;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
 import com.commercetools.api.models.common.Reference;
+import com.commercetools.api.models.extension.ExtensionAction;
+import com.commercetools.api.models.extension.ExtensionInputImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * ExtensionInput
@@ -27,11 +29,15 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .resource(resourceBuilder -> resourceBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = ExtensionInputImpl.class)
-public interface ExtensionInput {
+public interface ExtensionInput  {
+
 
     /**
      *  <p><code>Create</code> or <code>Update</code> request.</p>
@@ -40,7 +46,6 @@ public interface ExtensionInput {
     @NotNull
     @JsonProperty("action")
     public ExtensionAction getAction();
-
     /**
      *  <p>Expanded reference to the resource that triggered the Extension.</p>
      * @return resource
@@ -54,23 +59,26 @@ public interface ExtensionInput {
      *  <p><code>Create</code> or <code>Update</code> request.</p>
      * @param action value to be set
      */
-
+    
     public void setAction(final ExtensionAction action);
-
+    
+    
     /**
      *  <p>Expanded reference to the resource that triggered the Extension.</p>
      * @param resource value to be set
      */
-
+    
     public void setResource(final Reference resource);
+    
 
     /**
      * factory method
      * @return instance of ExtensionInput
      */
-    public static ExtensionInput of() {
+    public static ExtensionInput of(){
         return new ExtensionInputImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy ExtensionInput
@@ -107,7 +115,7 @@ public interface ExtensionInput {
     public static ExtensionInputBuilder builder() {
         return ExtensionInputBuilder.of();
     }
-
+    
     /**
      * create builder for ExtensionInput instance
      * @param template instance with prefilled values for the builder
@@ -116,6 +124,7 @@ public interface ExtensionInput {
     public static ExtensionInputBuilder builder(final ExtensionInput template) {
         return ExtensionInputBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -126,7 +135,7 @@ public interface ExtensionInput {
     default <T> T withExtensionInput(Function<ExtensionInput, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

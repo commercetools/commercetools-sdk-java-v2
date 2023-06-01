@@ -1,8 +1,11 @@
-
 package com.commercetools.api.models.error;
 
+import com.commercetools.api.models.error.GraphQLErrorObject;
+import com.commercetools.api.models.error.GraphQLSyntaxErrorError;
+import javax.annotation.Nullable;
 import java.util.*;
-
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -15,11 +18,16 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     GraphQLSyntaxErrorError graphQLSyntaxErrorError = GraphQLSyntaxErrorError.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class GraphQLSyntaxErrorErrorBuilder implements Builder<GraphQLSyntaxErrorError> {
 
+    
+    
     private Map<String, java.lang.Object> values = new HashMap<>();
 
     /**
@@ -27,19 +35,19 @@ public class GraphQLSyntaxErrorErrorBuilder implements Builder<GraphQLSyntaxErro
      * @param values properties to be set
      * @return Builder
      */
-
-    public GraphQLSyntaxErrorErrorBuilder values(final Map<String, java.lang.Object> values) {
+    
+    public GraphQLSyntaxErrorErrorBuilder values( final Map<String, java.lang.Object> values){
         this.values = values;
         return this;
     }
-
+    
     /**
      *  <p>Error-specific additional fields.</p>
      * @param key property name
      * @param value property value
      * @return Builder
      */
-
+    
     public GraphQLSyntaxErrorErrorBuilder addValue(final String key, final java.lang.Object value) {
         if (this.values == null) {
             values = new HashMap<>();
@@ -47,13 +55,15 @@ public class GraphQLSyntaxErrorErrorBuilder implements Builder<GraphQLSyntaxErro
         values.put(key, value);
         return this;
     }
+    
 
     /**
      *  <p>Error-specific additional fields.</p>
      * @return pattern properties
      */
-
-    public Map<String, java.lang.Object> getValues() {
+    
+    
+    public Map<String, java.lang.Object> getValues(){
         return this.values;
     }
 
@@ -64,7 +74,7 @@ public class GraphQLSyntaxErrorErrorBuilder implements Builder<GraphQLSyntaxErro
     public GraphQLSyntaxErrorError build() {
         return new GraphQLSyntaxErrorErrorImpl(values);
     }
-
+    
     /**
      * builds GraphQLSyntaxErrorError without checking for non-null required values
      * @return GraphQLSyntaxErrorError
@@ -75,7 +85,7 @@ public class GraphQLSyntaxErrorErrorBuilder implements Builder<GraphQLSyntaxErro
 
     /**
      * factory method for an instance of GraphQLSyntaxErrorErrorBuilder
-     * @return builder
+     * @return builder 
      */
     public static GraphQLSyntaxErrorErrorBuilder of() {
         return new GraphQLSyntaxErrorErrorBuilder();

@@ -1,19 +1,21 @@
-
 package com.commercetools.history.models.change;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
+import com.commercetools.history.models.change.Change;
 import com.commercetools.history.models.common.LocalizedString;
+import com.commercetools.history.models.change.ChangeCustomLineItemQuantityChangeImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * ChangeCustomLineItemQuantityChange
@@ -30,9 +32,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .previousValue(1)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = ChangeCustomLineItemQuantityChangeImpl.class)
 public interface ChangeCustomLineItemQuantityChange extends Change {
 
@@ -48,7 +53,6 @@ public interface ChangeCustomLineItemQuantityChange extends Change {
     @NotNull
     @JsonProperty("type")
     public String getType();
-
     /**
      *  <p>Update action for <code>changeCustomLineItemQuantity</code></p>
      * @return change
@@ -56,7 +60,6 @@ public interface ChangeCustomLineItemQuantityChange extends Change {
     @NotNull
     @JsonProperty("change")
     public String getChange();
-
     /**
      *
      * @return customLineItem
@@ -65,7 +68,6 @@ public interface ChangeCustomLineItemQuantityChange extends Change {
     @Valid
     @JsonProperty("customLineItem")
     public LocalizedString getCustomLineItem();
-
     /**
      *
      * @return customLineItemId
@@ -73,7 +75,6 @@ public interface ChangeCustomLineItemQuantityChange extends Change {
     @NotNull
     @JsonProperty("customLineItemId")
     public String getCustomLineItemId();
-
     /**
      *
      * @return nextValue
@@ -81,7 +82,6 @@ public interface ChangeCustomLineItemQuantityChange extends Change {
     @NotNull
     @JsonProperty("nextValue")
     public Integer getNextValue();
-
     /**
      *
      * @return previousValue
@@ -94,44 +94,50 @@ public interface ChangeCustomLineItemQuantityChange extends Change {
      *  <p>Update action for <code>changeCustomLineItemQuantity</code></p>
      * @param change value to be set
      */
-
+    
     public void setChange(final String change);
-
+    
+    
     /**
      * set customLineItem
      * @param customLineItem value to be set
      */
-
+    
     public void setCustomLineItem(final LocalizedString customLineItem);
-
+    
+    
     /**
      * set customLineItemId
      * @param customLineItemId value to be set
      */
-
+    
     public void setCustomLineItemId(final String customLineItemId);
-
+    
+    
     /**
      * set nextValue
      * @param nextValue value to be set
      */
-
+    
     public void setNextValue(final Integer nextValue);
-
+    
+    
     /**
      * set previousValue
      * @param previousValue value to be set
      */
-
+    
     public void setPreviousValue(final Integer previousValue);
+    
 
     /**
      * factory method
      * @return instance of ChangeCustomLineItemQuantityChange
      */
-    public static ChangeCustomLineItemQuantityChange of() {
+    public static ChangeCustomLineItemQuantityChange of(){
         return new ChangeCustomLineItemQuantityChangeImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy ChangeCustomLineItemQuantityChange
@@ -154,15 +160,13 @@ public interface ChangeCustomLineItemQuantityChange extends Change {
      * @return copy instance
      */
     @Nullable
-    public static ChangeCustomLineItemQuantityChange deepCopy(
-            @Nullable final ChangeCustomLineItemQuantityChange template) {
+    public static ChangeCustomLineItemQuantityChange deepCopy(@Nullable final ChangeCustomLineItemQuantityChange template) {
         if (template == null) {
             return null;
         }
         ChangeCustomLineItemQuantityChangeImpl instance = new ChangeCustomLineItemQuantityChangeImpl();
         instance.setChange(template.getChange());
-        instance.setCustomLineItem(
-            com.commercetools.history.models.common.LocalizedString.deepCopy(template.getCustomLineItem()));
+        instance.setCustomLineItem(com.commercetools.history.models.common.LocalizedString.deepCopy(template.getCustomLineItem()));
         instance.setCustomLineItemId(template.getCustomLineItemId());
         instance.setNextValue(template.getNextValue());
         instance.setPreviousValue(template.getPreviousValue());
@@ -176,7 +180,7 @@ public interface ChangeCustomLineItemQuantityChange extends Change {
     public static ChangeCustomLineItemQuantityChangeBuilder builder() {
         return ChangeCustomLineItemQuantityChangeBuilder.of();
     }
-
+    
     /**
      * create builder for ChangeCustomLineItemQuantityChange instance
      * @param template instance with prefilled values for the builder
@@ -185,6 +189,7 @@ public interface ChangeCustomLineItemQuantityChange extends Change {
     public static ChangeCustomLineItemQuantityChangeBuilder builder(final ChangeCustomLineItemQuantityChange template) {
         return ChangeCustomLineItemQuantityChangeBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -195,7 +200,7 @@ public interface ChangeCustomLineItemQuantityChange extends Change {
     default <T> T withChangeCustomLineItemQuantityChange(Function<ChangeCustomLineItemQuantityChange, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

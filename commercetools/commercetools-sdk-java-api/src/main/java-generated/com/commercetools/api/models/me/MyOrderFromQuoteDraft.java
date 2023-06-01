@@ -1,17 +1,20 @@
-
 package com.commercetools.api.models.me;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
 
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
+import com.commercetools.api.models.me.MyOrderFromQuoteDraftImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>When creating B2B Orders, the Customer must have the <code>MyOrderFromQuoteDraft</code> Permission.</p>
@@ -25,11 +28,15 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .version(0.3)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = MyOrderFromQuoteDraftImpl.class)
 public interface MyOrderFromQuoteDraft extends io.vrap.rmf.base.client.Draft<MyOrderFromQuoteDraft> {
+
 
     /**
      *  <p>Unique identifier of the Quote from which the Order is created.</p>
@@ -38,7 +45,6 @@ public interface MyOrderFromQuoteDraft extends io.vrap.rmf.base.client.Draft<MyO
     @NotNull
     @JsonProperty("id")
     public String getId();
-
     /**
      *  <p><code>version</code> of the Quote from which the Order is created.</p>
      * @return version
@@ -46,12 +52,11 @@ public interface MyOrderFromQuoteDraft extends io.vrap.rmf.base.client.Draft<MyO
     @NotNull
     @JsonProperty("version")
     public Long getVersion();
-
     /**
      *  <p>Set to <code>true</code>, if the <code>quoteState</code> of the referenced Quote should be set to <code>Accepted</code>.</p>
      * @return quoteStateToAccepted
      */
-
+    
     @JsonProperty("quoteStateToAccepted")
     public Boolean getQuoteStateToAccepted();
 
@@ -59,30 +64,34 @@ public interface MyOrderFromQuoteDraft extends io.vrap.rmf.base.client.Draft<MyO
      *  <p>Unique identifier of the Quote from which the Order is created.</p>
      * @param id value to be set
      */
-
+    
     public void setId(final String id);
-
+    
+    
     /**
      *  <p><code>version</code> of the Quote from which the Order is created.</p>
      * @param version value to be set
      */
-
+    
     public void setVersion(final Long version);
-
+    
+    
     /**
      *  <p>Set to <code>true</code>, if the <code>quoteState</code> of the referenced Quote should be set to <code>Accepted</code>.</p>
      * @param quoteStateToAccepted value to be set
      */
-
+    
     public void setQuoteStateToAccepted(final Boolean quoteStateToAccepted);
+    
 
     /**
      * factory method
      * @return instance of MyOrderFromQuoteDraft
      */
-    public static MyOrderFromQuoteDraft of() {
+    public static MyOrderFromQuoteDraft of(){
         return new MyOrderFromQuoteDraftImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy MyOrderFromQuoteDraft
@@ -121,7 +130,7 @@ public interface MyOrderFromQuoteDraft extends io.vrap.rmf.base.client.Draft<MyO
     public static MyOrderFromQuoteDraftBuilder builder() {
         return MyOrderFromQuoteDraftBuilder.of();
     }
-
+    
     /**
      * create builder for MyOrderFromQuoteDraft instance
      * @param template instance with prefilled values for the builder
@@ -130,6 +139,7 @@ public interface MyOrderFromQuoteDraft extends io.vrap.rmf.base.client.Draft<MyO
     public static MyOrderFromQuoteDraftBuilder builder(final MyOrderFromQuoteDraft template) {
         return MyOrderFromQuoteDraftBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -140,7 +150,7 @@ public interface MyOrderFromQuoteDraft extends io.vrap.rmf.base.client.Draft<MyO
     default <T> T withMyOrderFromQuoteDraft(Function<MyOrderFromQuoteDraft, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

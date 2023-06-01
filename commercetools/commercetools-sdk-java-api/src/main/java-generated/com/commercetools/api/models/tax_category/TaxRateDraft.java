@@ -1,19 +1,20 @@
-
 package com.commercetools.api.models.tax_category;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-import java.util.stream.Collectors;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
+import com.commercetools.api.models.tax_category.SubRate;
+import com.commercetools.api.models.tax_category.TaxRateDraftImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * TaxRateDraft
@@ -28,11 +29,15 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .country("{country}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = TaxRateDraftImpl.class)
 public interface TaxRateDraft extends io.vrap.rmf.base.client.Draft<TaxRateDraft> {
+
 
     /**
      *  <p>Name of the TaxRate.</p>
@@ -41,15 +46,13 @@ public interface TaxRateDraft extends io.vrap.rmf.base.client.Draft<TaxRateDraft
     @NotNull
     @JsonProperty("name")
     public String getName();
-
     /**
      *  <p>Tax rate. Must be supplied if no <code>subRates</code> are specified. If <code>subRates</code> are specified, this field can be omitted or it must be the sum of amounts of all <code>subRates</code>.</p>
      * @return amount
      */
-
+    
     @JsonProperty("amount")
     public Double getAmount();
-
     /**
      *  <p>If <code>true</code>, tax is included in Embedded Prices or Standalone Prices, and the <code>taxedPrice</code> is present on LineItems. In this case, the <code>totalNet</code> price on TaxedPrice includes the TaxRate.</p>
      * @return includedInPrice
@@ -57,7 +60,6 @@ public interface TaxRateDraft extends io.vrap.rmf.base.client.Draft<TaxRateDraft
     @NotNull
     @JsonProperty("includedInPrice")
     public Boolean getIncludedInPrice();
-
     /**
      *  <p>Country in which the tax rate is applied in ISO 3166-1 alpha-2 format.</p>
      * @return country
@@ -65,15 +67,13 @@ public interface TaxRateDraft extends io.vrap.rmf.base.client.Draft<TaxRateDraft
     @NotNull
     @JsonProperty("country")
     public String getCountry();
-
     /**
      *  <p>State within the country, such as Texas in the United States.</p>
      * @return state
      */
-
+    
     @JsonProperty("state")
     public String getState();
-
     /**
      *  <p>Used to calculate the taxPortions field in a Cart or Order. It is useful if the total tax of a country (such as the US) is a combination of multiple taxes (such as state and local taxes).</p>
      * @return subRates
@@ -81,12 +81,11 @@ public interface TaxRateDraft extends io.vrap.rmf.base.client.Draft<TaxRateDraft
     @Valid
     @JsonProperty("subRates")
     public List<SubRate> getSubRates();
-
     /**
      *  <p>User-defined unique identifier of the TaxRate.</p>
      * @return key
      */
-
+    
     @JsonProperty("key")
     public String getKey();
 
@@ -94,66 +93,72 @@ public interface TaxRateDraft extends io.vrap.rmf.base.client.Draft<TaxRateDraft
      *  <p>Name of the TaxRate.</p>
      * @param name value to be set
      */
-
+    
     public void setName(final String name);
-
+    
+    
     /**
      *  <p>Tax rate. Must be supplied if no <code>subRates</code> are specified. If <code>subRates</code> are specified, this field can be omitted or it must be the sum of amounts of all <code>subRates</code>.</p>
      * @param amount value to be set
      */
-
+    
     public void setAmount(final Double amount);
-
+    
+    
     /**
      *  <p>If <code>true</code>, tax is included in Embedded Prices or Standalone Prices, and the <code>taxedPrice</code> is present on LineItems. In this case, the <code>totalNet</code> price on TaxedPrice includes the TaxRate.</p>
      * @param includedInPrice value to be set
      */
-
+    
     public void setIncludedInPrice(final Boolean includedInPrice);
-
+    
+    
     /**
      *  <p>Country in which the tax rate is applied in ISO 3166-1 alpha-2 format.</p>
      * @param country value to be set
      */
-
+    
     public void setCountry(final String country);
-
+    
+    
     /**
      *  <p>State within the country, such as Texas in the United States.</p>
      * @param state value to be set
      */
-
+    
     public void setState(final String state);
-
+    
+    
     /**
      *  <p>Used to calculate the taxPortions field in a Cart or Order. It is useful if the total tax of a country (such as the US) is a combination of multiple taxes (such as state and local taxes).</p>
      * @param subRates values to be set
      */
-
+    
     @JsonIgnore
-    public void setSubRates(final SubRate... subRates);
-
+    public void setSubRates(final SubRate ...subRates);
     /**
      *  <p>Used to calculate the taxPortions field in a Cart or Order. It is useful if the total tax of a country (such as the US) is a combination of multiple taxes (such as state and local taxes).</p>
      * @param subRates values to be set
      */
-
+    
     public void setSubRates(final List<SubRate> subRates);
-
+    
     /**
      *  <p>User-defined unique identifier of the TaxRate.</p>
      * @param key value to be set
      */
-
+    
     public void setKey(final String key);
+    
 
     /**
      * factory method
      * @return instance of TaxRateDraft
      */
-    public static TaxRateDraft of() {
+    public static TaxRateDraft of(){
         return new TaxRateDraftImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy TaxRateDraft
@@ -189,9 +194,7 @@ public interface TaxRateDraft extends io.vrap.rmf.base.client.Draft<TaxRateDraft
         instance.setCountry(template.getCountry());
         instance.setState(template.getState());
         instance.setSubRates(Optional.ofNullable(template.getSubRates())
-                .map(t -> t.stream()
-                        .map(com.commercetools.api.models.tax_category.SubRate::deepCopy)
-                        .collect(Collectors.toList()))
+                .map(t -> t.stream().map(com.commercetools.api.models.tax_category.SubRate::deepCopy).collect(Collectors.toList()))
                 .orElse(null));
         instance.setKey(template.getKey());
         return instance;
@@ -204,7 +207,7 @@ public interface TaxRateDraft extends io.vrap.rmf.base.client.Draft<TaxRateDraft
     public static TaxRateDraftBuilder builder() {
         return TaxRateDraftBuilder.of();
     }
-
+    
     /**
      * create builder for TaxRateDraft instance
      * @param template instance with prefilled values for the builder
@@ -213,6 +216,7 @@ public interface TaxRateDraft extends io.vrap.rmf.base.client.Draft<TaxRateDraft
     public static TaxRateDraftBuilder builder(final TaxRateDraft template) {
         return TaxRateDraftBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -223,7 +227,7 @@ public interface TaxRateDraft extends io.vrap.rmf.base.client.Draft<TaxRateDraft
     default <T> T withTaxRateDraft(Function<TaxRateDraft, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

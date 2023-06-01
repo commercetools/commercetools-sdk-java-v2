@@ -1,16 +1,20 @@
-
 package com.commercetools.api.models.business_unit;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
+import com.commercetools.api.models.business_unit.BusinessUnitUpdateAction;
+import com.commercetools.api.models.business_unit.BusinessUnitRemoveAddressActionImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Removing the address from a Business Unit generates the BusinessUnitAddressRemoved Message.</p>
@@ -22,9 +26,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     BusinessUnitRemoveAddressAction businessUnitRemoveAddressAction = BusinessUnitRemoveAddressAction.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = BusinessUnitRemoveAddressActionImpl.class)
 public interface BusinessUnitRemoveAddressAction extends BusinessUnitUpdateAction {
 
@@ -37,15 +44,14 @@ public interface BusinessUnitRemoveAddressAction extends BusinessUnitUpdateActio
      *  <p>ID of the address to be removed. Either <code>addressId</code> or <code>addressKey</code> is required.</p>
      * @return addressId
      */
-
+    
     @JsonProperty("addressId")
     public String getAddressId();
-
     /**
      *  <p>Key of the address to be removed. Either <code>addressId</code> or <code>addressKey</code> is required.</p>
      * @return addressKey
      */
-
+    
     @JsonProperty("addressKey")
     public String getAddressKey();
 
@@ -53,23 +59,26 @@ public interface BusinessUnitRemoveAddressAction extends BusinessUnitUpdateActio
      *  <p>ID of the address to be removed. Either <code>addressId</code> or <code>addressKey</code> is required.</p>
      * @param addressId value to be set
      */
-
+    
     public void setAddressId(final String addressId);
-
+    
+    
     /**
      *  <p>Key of the address to be removed. Either <code>addressId</code> or <code>addressKey</code> is required.</p>
      * @param addressKey value to be set
      */
-
+    
     public void setAddressKey(final String addressKey);
+    
 
     /**
      * factory method
      * @return instance of BusinessUnitRemoveAddressAction
      */
-    public static BusinessUnitRemoveAddressAction of() {
+    public static BusinessUnitRemoveAddressAction of(){
         return new BusinessUnitRemoveAddressActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy BusinessUnitRemoveAddressAction
@@ -106,7 +115,7 @@ public interface BusinessUnitRemoveAddressAction extends BusinessUnitUpdateActio
     public static BusinessUnitRemoveAddressActionBuilder builder() {
         return BusinessUnitRemoveAddressActionBuilder.of();
     }
-
+    
     /**
      * create builder for BusinessUnitRemoveAddressAction instance
      * @param template instance with prefilled values for the builder
@@ -115,6 +124,7 @@ public interface BusinessUnitRemoveAddressAction extends BusinessUnitUpdateActio
     public static BusinessUnitRemoveAddressActionBuilder builder(final BusinessUnitRemoveAddressAction template) {
         return BusinessUnitRemoveAddressActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -125,7 +135,7 @@ public interface BusinessUnitRemoveAddressAction extends BusinessUnitUpdateActio
     default <T> T withBusinessUnitRemoveAddressAction(Function<BusinessUnitRemoveAddressAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

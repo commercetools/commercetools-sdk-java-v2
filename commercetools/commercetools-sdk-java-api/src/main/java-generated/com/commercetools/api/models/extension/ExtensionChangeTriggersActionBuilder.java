@@ -1,9 +1,12 @@
-
 package com.commercetools.api.models.extension;
 
+import com.commercetools.api.models.extension.ExtensionTrigger;
+import com.commercetools.api.models.extension.ExtensionUpdateAction;
+import com.commercetools.api.models.extension.ExtensionChangeTriggersAction;
+import javax.annotation.Nullable;
 import java.util.*;
 import java.util.function.Function;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -17,11 +20,16 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .plusTriggers(triggersBuilder -> triggersBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class ExtensionChangeTriggersActionBuilder implements Builder<ExtensionChangeTriggersAction> {
 
+    
+    
     private java.util.List<com.commercetools.api.models.extension.ExtensionTrigger> triggers;
 
     /**
@@ -29,96 +37,93 @@ public class ExtensionChangeTriggersActionBuilder implements Builder<ExtensionCh
      * @param triggers value to be set
      * @return Builder
      */
-
-    public ExtensionChangeTriggersActionBuilder triggers(
-            final com.commercetools.api.models.extension.ExtensionTrigger... triggers) {
+    
+    public ExtensionChangeTriggersActionBuilder triggers( final com.commercetools.api.models.extension.ExtensionTrigger ...triggers) {
         this.triggers = new ArrayList<>(Arrays.asList(triggers));
         return this;
     }
-
+    
     /**
      *  <p>New value to set. Must not be empty.</p>
      * @param triggers value to be set
      * @return Builder
      */
-
-    public ExtensionChangeTriggersActionBuilder triggers(
-            final java.util.List<com.commercetools.api.models.extension.ExtensionTrigger> triggers) {
+    
+    public ExtensionChangeTriggersActionBuilder triggers( final java.util.List<com.commercetools.api.models.extension.ExtensionTrigger> triggers) {
         this.triggers = triggers;
         return this;
     }
-
+    
     /**
      *  <p>New value to set. Must not be empty.</p>
      * @param triggers value to be set
      * @return Builder
      */
-
-    public ExtensionChangeTriggersActionBuilder plusTriggers(
-            final com.commercetools.api.models.extension.ExtensionTrigger... triggers) {
+    
+    public ExtensionChangeTriggersActionBuilder plusTriggers( final com.commercetools.api.models.extension.ExtensionTrigger ...triggers) {
         if (this.triggers == null) {
             this.triggers = new ArrayList<>();
         }
         this.triggers.addAll(Arrays.asList(triggers));
         return this;
     }
-
+    
+    
+    
     /**
      *  <p>New value to set. Must not be empty.</p>
      * @param builder function to build the triggers value
      * @return Builder
      */
-
-    public ExtensionChangeTriggersActionBuilder plusTriggers(
-            Function<com.commercetools.api.models.extension.ExtensionTriggerBuilder, com.commercetools.api.models.extension.ExtensionTriggerBuilder> builder) {
+    
+    public ExtensionChangeTriggersActionBuilder plusTriggers(Function<com.commercetools.api.models.extension.ExtensionTriggerBuilder, com.commercetools.api.models.extension.ExtensionTriggerBuilder> builder) {
         if (this.triggers == null) {
             this.triggers = new ArrayList<>();
         }
         this.triggers.add(builder.apply(com.commercetools.api.models.extension.ExtensionTriggerBuilder.of()).build());
         return this;
     }
-
+    
     /**
      *  <p>New value to set. Must not be empty.</p>
      * @param builder function to build the triggers value
      * @return Builder
      */
-
-    public ExtensionChangeTriggersActionBuilder withTriggers(
-            Function<com.commercetools.api.models.extension.ExtensionTriggerBuilder, com.commercetools.api.models.extension.ExtensionTriggerBuilder> builder) {
+    
+    public ExtensionChangeTriggersActionBuilder withTriggers(Function<com.commercetools.api.models.extension.ExtensionTriggerBuilder, com.commercetools.api.models.extension.ExtensionTriggerBuilder> builder) {
         this.triggers = new ArrayList<>();
         this.triggers.add(builder.apply(com.commercetools.api.models.extension.ExtensionTriggerBuilder.of()).build());
         return this;
     }
-
+    
     /**
      *  <p>New value to set. Must not be empty.</p>
      * @param builder function to build the triggers value
      * @return Builder
      */
-
-    public ExtensionChangeTriggersActionBuilder addTriggers(
-            Function<com.commercetools.api.models.extension.ExtensionTriggerBuilder, com.commercetools.api.models.extension.ExtensionTrigger> builder) {
+    
+    public ExtensionChangeTriggersActionBuilder addTriggers(Function<com.commercetools.api.models.extension.ExtensionTriggerBuilder, com.commercetools.api.models.extension.ExtensionTrigger> builder) {
         return plusTriggers(builder.apply(com.commercetools.api.models.extension.ExtensionTriggerBuilder.of()));
     }
-
+    
     /**
      *  <p>New value to set. Must not be empty.</p>
      * @param builder function to build the triggers value
      * @return Builder
      */
-
-    public ExtensionChangeTriggersActionBuilder setTriggers(
-            Function<com.commercetools.api.models.extension.ExtensionTriggerBuilder, com.commercetools.api.models.extension.ExtensionTrigger> builder) {
+    
+    public ExtensionChangeTriggersActionBuilder setTriggers(Function<com.commercetools.api.models.extension.ExtensionTriggerBuilder, com.commercetools.api.models.extension.ExtensionTrigger> builder) {
         return triggers(builder.apply(com.commercetools.api.models.extension.ExtensionTriggerBuilder.of()));
     }
+                    
 
     /**
      *  <p>New value to set. Must not be empty.</p>
      * @return triggers
      */
-
-    public java.util.List<com.commercetools.api.models.extension.ExtensionTrigger> getTriggers() {
+    
+    
+    public java.util.List<com.commercetools.api.models.extension.ExtensionTrigger> getTriggers(){
         return this.triggers;
     }
 
@@ -130,7 +135,7 @@ public class ExtensionChangeTriggersActionBuilder implements Builder<ExtensionCh
         Objects.requireNonNull(triggers, ExtensionChangeTriggersAction.class + ": triggers is missing");
         return new ExtensionChangeTriggersActionImpl(triggers);
     }
-
+    
     /**
      * builds ExtensionChangeTriggersAction without checking for non-null required values
      * @return ExtensionChangeTriggersAction
@@ -141,7 +146,7 @@ public class ExtensionChangeTriggersActionBuilder implements Builder<ExtensionCh
 
     /**
      * factory method for an instance of ExtensionChangeTriggersActionBuilder
-     * @return builder
+     * @return builder 
      */
     public static ExtensionChangeTriggersActionBuilder of() {
         return new ExtensionChangeTriggersActionBuilder();

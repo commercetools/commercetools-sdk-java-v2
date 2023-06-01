@@ -1,17 +1,20 @@
-
 package com.commercetools.api.models.customer;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
 
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
+import com.commercetools.api.models.customer.MyCustomerEmailVerifyImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * MyCustomerEmailVerify
@@ -24,11 +27,15 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .tokenValue("{tokenValue}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = MyCustomerEmailVerifyImpl.class)
-public interface MyCustomerEmailVerify {
+public interface MyCustomerEmailVerify  {
+
 
     /**
      *  <p>Value of the token to verify Customer email.</p>
@@ -42,16 +49,18 @@ public interface MyCustomerEmailVerify {
      *  <p>Value of the token to verify Customer email.</p>
      * @param tokenValue value to be set
      */
-
+    
     public void setTokenValue(final String tokenValue);
+    
 
     /**
      * factory method
      * @return instance of MyCustomerEmailVerify
      */
-    public static MyCustomerEmailVerify of() {
+    public static MyCustomerEmailVerify of(){
         return new MyCustomerEmailVerifyImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy MyCustomerEmailVerify
@@ -86,7 +95,7 @@ public interface MyCustomerEmailVerify {
     public static MyCustomerEmailVerifyBuilder builder() {
         return MyCustomerEmailVerifyBuilder.of();
     }
-
+    
     /**
      * create builder for MyCustomerEmailVerify instance
      * @param template instance with prefilled values for the builder
@@ -95,6 +104,7 @@ public interface MyCustomerEmailVerify {
     public static MyCustomerEmailVerifyBuilder builder(final MyCustomerEmailVerify template) {
         return MyCustomerEmailVerifyBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -105,7 +115,7 @@ public interface MyCustomerEmailVerify {
     default <T> T withMyCustomerEmailVerify(Function<MyCustomerEmailVerify, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

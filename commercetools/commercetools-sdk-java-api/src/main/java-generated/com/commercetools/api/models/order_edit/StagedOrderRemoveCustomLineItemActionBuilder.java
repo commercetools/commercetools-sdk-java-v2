@@ -1,8 +1,11 @@
-
 package com.commercetools.api.models.order_edit;
 
+import com.commercetools.api.models.order.StagedOrderUpdateAction;
+import com.commercetools.api.models.order_edit.StagedOrderRemoveCustomLineItemAction;
+import javax.annotation.Nullable;
 import java.util.*;
-
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -16,30 +19,39 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .customLineItemId("{customLineItemId}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class StagedOrderRemoveCustomLineItemActionBuilder implements Builder<StagedOrderRemoveCustomLineItemAction> {
 
+    
+    
     private String customLineItemId;
 
+    
     /**
      * set the value to the customLineItemId
      * @param customLineItemId value to be set
      * @return Builder
      */
-
-    public StagedOrderRemoveCustomLineItemActionBuilder customLineItemId(final String customLineItemId) {
+    
+    public StagedOrderRemoveCustomLineItemActionBuilder customLineItemId( final String customLineItemId) {
         this.customLineItemId = customLineItemId;
         return this;
     }
+    
+    
 
     /**
      * value of customLineItemId}
      * @return customLineItemId
      */
-
-    public String getCustomLineItemId() {
+    
+    
+    public String getCustomLineItemId(){
         return this.customLineItemId;
     }
 
@@ -48,11 +60,10 @@ public class StagedOrderRemoveCustomLineItemActionBuilder implements Builder<Sta
      * @return StagedOrderRemoveCustomLineItemAction
      */
     public StagedOrderRemoveCustomLineItemAction build() {
-        Objects.requireNonNull(customLineItemId,
-            StagedOrderRemoveCustomLineItemAction.class + ": customLineItemId is missing");
+        Objects.requireNonNull(customLineItemId, StagedOrderRemoveCustomLineItemAction.class + ": customLineItemId is missing");
         return new StagedOrderRemoveCustomLineItemActionImpl(customLineItemId);
     }
-
+    
     /**
      * builds StagedOrderRemoveCustomLineItemAction without checking for non-null required values
      * @return StagedOrderRemoveCustomLineItemAction
@@ -63,7 +74,7 @@ public class StagedOrderRemoveCustomLineItemActionBuilder implements Builder<Sta
 
     /**
      * factory method for an instance of StagedOrderRemoveCustomLineItemActionBuilder
-     * @return builder
+     * @return builder 
      */
     public static StagedOrderRemoveCustomLineItemActionBuilder of() {
         return new StagedOrderRemoveCustomLineItemActionBuilder();
@@ -74,8 +85,7 @@ public class StagedOrderRemoveCustomLineItemActionBuilder implements Builder<Sta
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static StagedOrderRemoveCustomLineItemActionBuilder of(
-            final StagedOrderRemoveCustomLineItemAction template) {
+    public static StagedOrderRemoveCustomLineItemActionBuilder of(final StagedOrderRemoveCustomLineItemAction template) {
         StagedOrderRemoveCustomLineItemActionBuilder builder = new StagedOrderRemoveCustomLineItemActionBuilder();
         builder.customLineItemId = template.getCustomLineItemId();
         return builder;

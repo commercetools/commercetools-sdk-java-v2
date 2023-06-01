@@ -1,10 +1,12 @@
-
 package com.commercetools.api.models.error;
 
-import java.util.*;
-
+import com.commercetools.api.models.error.GraphQLErrorObject;
+import java.lang.Object;
+import com.commercetools.api.models.error.GraphQLInvalidFieldError;
 import javax.annotation.Nullable;
-
+import java.util.*;
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -18,17 +20,27 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .field("{field}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class GraphQLInvalidFieldErrorBuilder implements Builder<GraphQLInvalidFieldError> {
 
+    
+    
     private Map<String, java.lang.Object> values = new HashMap<>();
-
+    
+    
+    
     private String field;
-
+    
+    
+    
     private java.lang.Object invalidValue;
-
+    
+    
     @Nullable
     private java.util.List<java.lang.Object> allowedValues;
 
@@ -37,19 +49,19 @@ public class GraphQLInvalidFieldErrorBuilder implements Builder<GraphQLInvalidFi
      * @param values properties to be set
      * @return Builder
      */
-
-    public GraphQLInvalidFieldErrorBuilder values(final Map<String, java.lang.Object> values) {
+    
+    public GraphQLInvalidFieldErrorBuilder values( final Map<String, java.lang.Object> values){
         this.values = values;
         return this;
     }
-
+    
     /**
      *  <p>Error-specific additional fields.</p>
      * @param key property name
      * @param value property value
      * @return Builder
      */
-
+    
     public GraphQLInvalidFieldErrorBuilder addValue(final String key, final java.lang.Object value) {
         if (this.values == null) {
             values = new HashMap<>();
@@ -57,100 +69,112 @@ public class GraphQLInvalidFieldErrorBuilder implements Builder<GraphQLInvalidFi
         values.put(key, value);
         return this;
     }
-
+    
+    
+    
     /**
      *  <p>Name of the field with the invalid value.</p>
      * @param field value to be set
      * @return Builder
      */
-
-    public GraphQLInvalidFieldErrorBuilder field(final String field) {
+    
+    public GraphQLInvalidFieldErrorBuilder field( final String field) {
         this.field = field;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Value invalid for the field.</p>
      * @param invalidValue value to be set
      * @return Builder
      */
-
-    public GraphQLInvalidFieldErrorBuilder invalidValue(final java.lang.Object invalidValue) {
+    
+    public GraphQLInvalidFieldErrorBuilder invalidValue( final java.lang.Object invalidValue) {
         this.invalidValue = invalidValue;
         return this;
     }
-
+    
+    
+    
     /**
      *  <p>Fixed set of allowed values for the field, if any.</p>
      * @param allowedValues value to be set
      * @return Builder
      */
-
-    public GraphQLInvalidFieldErrorBuilder allowedValues(@Nullable final java.lang.Object... allowedValues) {
+    
+    public GraphQLInvalidFieldErrorBuilder allowedValues(@Nullable final java.lang.Object ...allowedValues) {
         this.allowedValues = new ArrayList<>(Arrays.asList(allowedValues));
         return this;
     }
-
+    
     /**
      *  <p>Fixed set of allowed values for the field, if any.</p>
      * @param allowedValues value to be set
      * @return Builder
      */
-
-    public GraphQLInvalidFieldErrorBuilder allowedValues(
-            @Nullable final java.util.List<java.lang.Object> allowedValues) {
+    
+    public GraphQLInvalidFieldErrorBuilder allowedValues(@Nullable final java.util.List<java.lang.Object> allowedValues) {
         this.allowedValues = allowedValues;
         return this;
     }
-
+    
     /**
      *  <p>Fixed set of allowed values for the field, if any.</p>
      * @param allowedValues value to be set
      * @return Builder
      */
-
-    public GraphQLInvalidFieldErrorBuilder plusAllowedValues(@Nullable final java.lang.Object... allowedValues) {
+    
+    public GraphQLInvalidFieldErrorBuilder plusAllowedValues(@Nullable final java.lang.Object ...allowedValues) {
         if (this.allowedValues == null) {
             this.allowedValues = new ArrayList<>();
         }
         this.allowedValues.addAll(Arrays.asList(allowedValues));
         return this;
     }
+    
+    
+    
 
     /**
      *  <p>Error-specific additional fields.</p>
      * @return pattern properties
      */
-
-    public Map<String, java.lang.Object> getValues() {
+    
+    
+    public Map<String, java.lang.Object> getValues(){
         return this.values;
     }
-
+    
     /**
      *  <p>Name of the field with the invalid value.</p>
      * @return field
      */
-
-    public String getField() {
+    
+    
+    public String getField(){
         return this.field;
     }
-
+    
     /**
      *  <p>Value invalid for the field.</p>
      * @return invalidValue
      */
-
-    public java.lang.Object getInvalidValue() {
+    
+    
+    public java.lang.Object getInvalidValue(){
         return this.invalidValue;
     }
-
+    
     /**
      *  <p>Fixed set of allowed values for the field, if any.</p>
      * @return allowedValues
      */
-
+    
     @Nullable
-    public java.util.List<java.lang.Object> getAllowedValues() {
+    public java.util.List<java.lang.Object> getAllowedValues(){
         return this.allowedValues;
     }
 
@@ -163,7 +187,7 @@ public class GraphQLInvalidFieldErrorBuilder implements Builder<GraphQLInvalidFi
         Objects.requireNonNull(invalidValue, GraphQLInvalidFieldError.class + ": invalidValue is missing");
         return new GraphQLInvalidFieldErrorImpl(values, field, invalidValue, allowedValues);
     }
-
+    
     /**
      * builds GraphQLInvalidFieldError without checking for non-null required values
      * @return GraphQLInvalidFieldError
@@ -174,7 +198,7 @@ public class GraphQLInvalidFieldErrorBuilder implements Builder<GraphQLInvalidFi
 
     /**
      * factory method for an instance of GraphQLInvalidFieldErrorBuilder
-     * @return builder
+     * @return builder 
      */
     public static GraphQLInvalidFieldErrorBuilder of() {
         return new GraphQLInvalidFieldErrorBuilder();

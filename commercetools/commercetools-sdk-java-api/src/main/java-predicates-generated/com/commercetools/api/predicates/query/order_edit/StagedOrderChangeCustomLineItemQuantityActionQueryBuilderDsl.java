@@ -1,9 +1,11 @@
-
 package com.commercetools.api.predicates.query.order_edit;
 
 import com.commercetools.api.predicates.query.*;
 
-public class StagedOrderChangeCustomLineItemQuantityActionQueryBuilderDsl {
+import java.util.function.Function;
+
+
+public class StagedOrderChangeCustomLineItemQuantityActionQueryBuilderDsl  {
     public StagedOrderChangeCustomLineItemQuantityActionQueryBuilderDsl() {
     }
 
@@ -12,21 +14,16 @@ public class StagedOrderChangeCustomLineItemQuantityActionQueryBuilderDsl {
     }
 
     public StringComparisonPredicateBuilder<StagedOrderChangeCustomLineItemQuantityActionQueryBuilderDsl> action() {
-        return new StringComparisonPredicateBuilder<>(
-            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("action")),
-            p -> new CombinationQueryPredicate<>(p, StagedOrderChangeCustomLineItemQuantityActionQueryBuilderDsl::of));
+        return new StringComparisonPredicateBuilder<>(BinaryQueryPredicate.of().left(new ConstantQueryPredicate("action")),
+        p -> new CombinationQueryPredicate<>(p, StagedOrderChangeCustomLineItemQuantityActionQueryBuilderDsl::of));
     }
-
     public StringComparisonPredicateBuilder<StagedOrderChangeCustomLineItemQuantityActionQueryBuilderDsl> customLineItemId() {
-        return new StringComparisonPredicateBuilder<>(
-            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("customLineItemId")),
-            p -> new CombinationQueryPredicate<>(p, StagedOrderChangeCustomLineItemQuantityActionQueryBuilderDsl::of));
+        return new StringComparisonPredicateBuilder<>(BinaryQueryPredicate.of().left(new ConstantQueryPredicate("customLineItemId")),
+        p -> new CombinationQueryPredicate<>(p, StagedOrderChangeCustomLineItemQuantityActionQueryBuilderDsl::of));
     }
-
     public LongComparisonPredicateBuilder<StagedOrderChangeCustomLineItemQuantityActionQueryBuilderDsl> quantity() {
-        return new LongComparisonPredicateBuilder<>(
-            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("quantity")),
-            p -> new CombinationQueryPredicate<>(p, StagedOrderChangeCustomLineItemQuantityActionQueryBuilderDsl::of));
+        return new LongComparisonPredicateBuilder<>(BinaryQueryPredicate.of().left(new ConstantQueryPredicate("quantity")),
+        p -> new CombinationQueryPredicate<>(p, StagedOrderChangeCustomLineItemQuantityActionQueryBuilderDsl::of));
     }
-
+    
 }

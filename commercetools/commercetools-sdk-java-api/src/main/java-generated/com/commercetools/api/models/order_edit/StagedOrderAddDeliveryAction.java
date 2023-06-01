@@ -1,23 +1,24 @@
-
 package com.commercetools.api.models.order_edit;
-
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-import java.util.stream.Collectors;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
 
 import com.commercetools.api.models.common.BaseAddress;
 import com.commercetools.api.models.order.DeliveryItem;
 import com.commercetools.api.models.order.ParcelDraft;
 import com.commercetools.api.models.order.StagedOrderUpdateAction;
 import com.commercetools.api.models.type.CustomFieldsDraft;
+import com.commercetools.api.models.order_edit.StagedOrderAddDeliveryActionImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * StagedOrderAddDeliveryAction
@@ -29,12 +30,14 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     StagedOrderAddDeliveryAction stagedOrderAddDeliveryAction = StagedOrderAddDeliveryAction.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = StagedOrderAddDeliveryActionImpl.class)
-public interface StagedOrderAddDeliveryAction
-        extends StagedOrderUpdateAction, com.commercetools.api.models.CustomizableDraft<StagedOrderAddDeliveryAction> {
+public interface StagedOrderAddDeliveryAction extends StagedOrderUpdateAction, com.commercetools.api.models.CustomizableDraft<StagedOrderAddDeliveryAction> {
 
     /**
      * discriminator value for StagedOrderAddDeliveryAction
@@ -45,10 +48,9 @@ public interface StagedOrderAddDeliveryAction
      *  <p>User-defined unique identifier of a Delivery.</p>
      * @return deliveryKey
      */
-
+    
     @JsonProperty("deliveryKey")
     public String getDeliveryKey();
-
     /**
      *
      * @return items
@@ -56,7 +58,6 @@ public interface StagedOrderAddDeliveryAction
     @Valid
     @JsonProperty("items")
     public List<DeliveryItem> getItems();
-
     /**
      *  <p>Polymorphic base type that represents a postal address and contact details. Depending on the read or write action, it can be either Address or AddressDraft that only differ in the data type for the optional <code>custom</code> field.</p>
      * @return address
@@ -64,7 +65,6 @@ public interface StagedOrderAddDeliveryAction
     @Valid
     @JsonProperty("address")
     public BaseAddress getAddress();
-
     /**
      *
      * @return parcels
@@ -72,7 +72,6 @@ public interface StagedOrderAddDeliveryAction
     @Valid
     @JsonProperty("parcels")
     public List<ParcelDraft> getParcels();
-
     /**
      *  <p>Custom Fields for the Transaction.</p>
      * @return custom
@@ -85,60 +84,62 @@ public interface StagedOrderAddDeliveryAction
      *  <p>User-defined unique identifier of a Delivery.</p>
      * @param deliveryKey value to be set
      */
-
+    
     public void setDeliveryKey(final String deliveryKey);
-
+    
+    
     /**
      * set items
      * @param items values to be set
      */
-
+    
     @JsonIgnore
-    public void setItems(final DeliveryItem... items);
-
+    public void setItems(final DeliveryItem ...items);
     /**
      * set items
      * @param items values to be set
      */
-
+    
     public void setItems(final List<DeliveryItem> items);
-
+    
     /**
      *  <p>Polymorphic base type that represents a postal address and contact details. Depending on the read or write action, it can be either Address or AddressDraft that only differ in the data type for the optional <code>custom</code> field.</p>
      * @param address value to be set
      */
-
+    
     public void setAddress(final BaseAddress address);
-
+    
+    
     /**
      * set parcels
      * @param parcels values to be set
      */
-
+    
     @JsonIgnore
-    public void setParcels(final ParcelDraft... parcels);
-
+    public void setParcels(final ParcelDraft ...parcels);
     /**
      * set parcels
      * @param parcels values to be set
      */
-
+    
     public void setParcels(final List<ParcelDraft> parcels);
-
+    
     /**
      *  <p>Custom Fields for the Transaction.</p>
      * @param custom value to be set
      */
-
+    
     public void setCustom(final CustomFieldsDraft custom);
+    
 
     /**
      * factory method
      * @return instance of StagedOrderAddDeliveryAction
      */
-    public static StagedOrderAddDeliveryAction of() {
+    public static StagedOrderAddDeliveryAction of(){
         return new StagedOrderAddDeliveryActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy StagedOrderAddDeliveryAction
@@ -168,15 +169,11 @@ public interface StagedOrderAddDeliveryAction
         StagedOrderAddDeliveryActionImpl instance = new StagedOrderAddDeliveryActionImpl();
         instance.setDeliveryKey(template.getDeliveryKey());
         instance.setItems(Optional.ofNullable(template.getItems())
-                .map(t -> t.stream()
-                        .map(com.commercetools.api.models.order.DeliveryItem::deepCopy)
-                        .collect(Collectors.toList()))
+                .map(t -> t.stream().map(com.commercetools.api.models.order.DeliveryItem::deepCopy).collect(Collectors.toList()))
                 .orElse(null));
         instance.setAddress(com.commercetools.api.models.common.BaseAddress.deepCopy(template.getAddress()));
         instance.setParcels(Optional.ofNullable(template.getParcels())
-                .map(t -> t.stream()
-                        .map(com.commercetools.api.models.order.ParcelDraft::deepCopy)
-                        .collect(Collectors.toList()))
+                .map(t -> t.stream().map(com.commercetools.api.models.order.ParcelDraft::deepCopy).collect(Collectors.toList()))
                 .orElse(null));
         instance.setCustom(com.commercetools.api.models.type.CustomFieldsDraft.deepCopy(template.getCustom()));
         return instance;
@@ -189,7 +186,7 @@ public interface StagedOrderAddDeliveryAction
     public static StagedOrderAddDeliveryActionBuilder builder() {
         return StagedOrderAddDeliveryActionBuilder.of();
     }
-
+    
     /**
      * create builder for StagedOrderAddDeliveryAction instance
      * @param template instance with prefilled values for the builder
@@ -198,6 +195,7 @@ public interface StagedOrderAddDeliveryAction
     public static StagedOrderAddDeliveryActionBuilder builder(final StagedOrderAddDeliveryAction template) {
         return StagedOrderAddDeliveryActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -208,7 +206,7 @@ public interface StagedOrderAddDeliveryAction
     default <T> T withStagedOrderAddDeliveryAction(Function<StagedOrderAddDeliveryAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

@@ -1,18 +1,21 @@
-
 package com.commercetools.api.models.product_type;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
+import com.commercetools.api.models.product_type.AttributePlainEnumValue;
+import com.commercetools.api.models.product_type.ProductTypeUpdateAction;
+import com.commercetools.api.models.product_type.ProductTypeAddPlainEnumValueActionImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Adds an enum to the values of AttributeEnumType AttributeDefinition, or AttributeSetType of AttributeEnumType AttributeDefinition.</p>
@@ -26,9 +29,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .value(valueBuilder -> valueBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = ProductTypeAddPlainEnumValueActionImpl.class)
 public interface ProductTypeAddPlainEnumValueAction extends ProductTypeUpdateAction {
 
@@ -44,7 +50,6 @@ public interface ProductTypeAddPlainEnumValueAction extends ProductTypeUpdateAct
     @NotNull
     @JsonProperty("attributeName")
     public String getAttributeName();
-
     /**
      *  <p>Value to append to the array.</p>
      * @return value
@@ -58,23 +63,26 @@ public interface ProductTypeAddPlainEnumValueAction extends ProductTypeUpdateAct
      *  <p>Name of the AttributeDefinition to update.</p>
      * @param attributeName value to be set
      */
-
+    
     public void setAttributeName(final String attributeName);
-
+    
+    
     /**
      *  <p>Value to append to the array.</p>
      * @param value value to be set
      */
-
+    
     public void setValue(final AttributePlainEnumValue value);
+    
 
     /**
      * factory method
      * @return instance of ProductTypeAddPlainEnumValueAction
      */
-    public static ProductTypeAddPlainEnumValueAction of() {
+    public static ProductTypeAddPlainEnumValueAction of(){
         return new ProductTypeAddPlainEnumValueActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy ProductTypeAddPlainEnumValueAction
@@ -94,15 +102,13 @@ public interface ProductTypeAddPlainEnumValueAction extends ProductTypeUpdateAct
      * @return copy instance
      */
     @Nullable
-    public static ProductTypeAddPlainEnumValueAction deepCopy(
-            @Nullable final ProductTypeAddPlainEnumValueAction template) {
+    public static ProductTypeAddPlainEnumValueAction deepCopy(@Nullable final ProductTypeAddPlainEnumValueAction template) {
         if (template == null) {
             return null;
         }
         ProductTypeAddPlainEnumValueActionImpl instance = new ProductTypeAddPlainEnumValueActionImpl();
         instance.setAttributeName(template.getAttributeName());
-        instance.setValue(
-            com.commercetools.api.models.product_type.AttributePlainEnumValue.deepCopy(template.getValue()));
+        instance.setValue(com.commercetools.api.models.product_type.AttributePlainEnumValue.deepCopy(template.getValue()));
         return instance;
     }
 
@@ -113,7 +119,7 @@ public interface ProductTypeAddPlainEnumValueAction extends ProductTypeUpdateAct
     public static ProductTypeAddPlainEnumValueActionBuilder builder() {
         return ProductTypeAddPlainEnumValueActionBuilder.of();
     }
-
+    
     /**
      * create builder for ProductTypeAddPlainEnumValueAction instance
      * @param template instance with prefilled values for the builder
@@ -122,6 +128,7 @@ public interface ProductTypeAddPlainEnumValueAction extends ProductTypeUpdateAct
     public static ProductTypeAddPlainEnumValueActionBuilder builder(final ProductTypeAddPlainEnumValueAction template) {
         return ProductTypeAddPlainEnumValueActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -132,7 +139,7 @@ public interface ProductTypeAddPlainEnumValueAction extends ProductTypeUpdateAct
     default <T> T withProductTypeAddPlainEnumValueAction(Function<ProductTypeAddPlainEnumValueAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

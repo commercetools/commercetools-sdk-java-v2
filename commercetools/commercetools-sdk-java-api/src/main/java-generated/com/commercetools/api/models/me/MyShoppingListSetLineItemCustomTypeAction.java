@@ -1,20 +1,22 @@
-
 package com.commercetools.api.models.me;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
+import com.commercetools.api.models.me.MyShoppingListUpdateAction;
 import com.commercetools.api.models.type.FieldContainer;
 import com.commercetools.api.models.type.TypeResourceIdentifier;
+import com.commercetools.api.models.me.MyShoppingListSetLineItemCustomTypeActionImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * MyShoppingListSetLineItemCustomTypeAction
@@ -27,9 +29,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .lineItemId("{lineItemId}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = MyShoppingListSetLineItemCustomTypeActionImpl.class)
 public interface MyShoppingListSetLineItemCustomTypeAction extends MyShoppingListUpdateAction {
 
@@ -45,7 +50,6 @@ public interface MyShoppingListSetLineItemCustomTypeAction extends MyShoppingLis
     @NotNull
     @JsonProperty("lineItemId")
     public String getLineItemId();
-
     /**
      *  <p>Defines the Type that extends the ShoppingListLineItem with Custom Fields. If absent, any existing Type and Custom Fields are removed from the ShoppingListLineItem.</p>
      * @return type
@@ -53,7 +57,6 @@ public interface MyShoppingListSetLineItemCustomTypeAction extends MyShoppingLis
     @Valid
     @JsonProperty("type")
     public TypeResourceIdentifier getType();
-
     /**
      *  <p>Sets the Custom Fields fields for the ShoppingListLineItem.</p>
      * @return fields
@@ -66,38 +69,41 @@ public interface MyShoppingListSetLineItemCustomTypeAction extends MyShoppingLis
      *  <p>Unique identifier of an existing ShoppingListLineItem in the ShoppingList.</p>
      * @param lineItemId value to be set
      */
-
+    
     public void setLineItemId(final String lineItemId);
-
+    
+    
     /**
      *  <p>Defines the Type that extends the ShoppingListLineItem with Custom Fields. If absent, any existing Type and Custom Fields are removed from the ShoppingListLineItem.</p>
      * @param type value to be set
      */
-
+    
     public void setType(final TypeResourceIdentifier type);
-
+    
+    
     /**
      *  <p>Sets the Custom Fields fields for the ShoppingListLineItem.</p>
      * @param fields value to be set
      */
-
+    
     public void setFields(final FieldContainer fields);
+    
 
     /**
      * factory method
      * @return instance of MyShoppingListSetLineItemCustomTypeAction
      */
-    public static MyShoppingListSetLineItemCustomTypeAction of() {
+    public static MyShoppingListSetLineItemCustomTypeAction of(){
         return new MyShoppingListSetLineItemCustomTypeActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy MyShoppingListSetLineItemCustomTypeAction
      * @param template instance to be copied
      * @return copy instance
      */
-    public static MyShoppingListSetLineItemCustomTypeAction of(
-            final MyShoppingListSetLineItemCustomTypeAction template) {
+    public static MyShoppingListSetLineItemCustomTypeAction of(final MyShoppingListSetLineItemCustomTypeAction template) {
         MyShoppingListSetLineItemCustomTypeActionImpl instance = new MyShoppingListSetLineItemCustomTypeActionImpl();
         instance.setLineItemId(template.getLineItemId());
         instance.setType(template.getType());
@@ -111,8 +117,7 @@ public interface MyShoppingListSetLineItemCustomTypeAction extends MyShoppingLis
      * @return copy instance
      */
     @Nullable
-    public static MyShoppingListSetLineItemCustomTypeAction deepCopy(
-            @Nullable final MyShoppingListSetLineItemCustomTypeAction template) {
+    public static MyShoppingListSetLineItemCustomTypeAction deepCopy(@Nullable final MyShoppingListSetLineItemCustomTypeAction template) {
         if (template == null) {
             return null;
         }
@@ -130,16 +135,16 @@ public interface MyShoppingListSetLineItemCustomTypeAction extends MyShoppingLis
     public static MyShoppingListSetLineItemCustomTypeActionBuilder builder() {
         return MyShoppingListSetLineItemCustomTypeActionBuilder.of();
     }
-
+    
     /**
      * create builder for MyShoppingListSetLineItemCustomTypeAction instance
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static MyShoppingListSetLineItemCustomTypeActionBuilder builder(
-            final MyShoppingListSetLineItemCustomTypeAction template) {
+    public static MyShoppingListSetLineItemCustomTypeActionBuilder builder(final MyShoppingListSetLineItemCustomTypeAction template) {
         return MyShoppingListSetLineItemCustomTypeActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -147,11 +152,10 @@ public interface MyShoppingListSetLineItemCustomTypeAction extends MyShoppingLis
      * @param helper function to map the object
      * @return mapped value
      */
-    default <T> T withMyShoppingListSetLineItemCustomTypeAction(
-            Function<MyShoppingListSetLineItemCustomTypeAction, T> helper) {
+    default <T> T withMyShoppingListSetLineItemCustomTypeAction(Function<MyShoppingListSetLineItemCustomTypeAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

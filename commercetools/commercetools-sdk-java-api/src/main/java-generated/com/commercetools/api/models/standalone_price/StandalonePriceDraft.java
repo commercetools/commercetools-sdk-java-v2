@@ -1,15 +1,4 @@
-
 package com.commercetools.api.models.standalone_price;
-
-import java.time.*;
-import java.time.ZonedDateTime;
-import java.util.*;
-import java.util.function.Function;
-import java.util.stream.Collectors;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.channel.ChannelResourceIdentifier;
 import com.commercetools.api.models.common.DiscountedPriceDraft;
@@ -17,10 +6,21 @@ import com.commercetools.api.models.common.Money;
 import com.commercetools.api.models.common.PriceTierDraft;
 import com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifier;
 import com.commercetools.api.models.type.CustomFieldsDraft;
+import java.time.ZonedDateTime;
+import com.commercetools.api.models.standalone_price.StandalonePriceDraftImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Standalone Prices are defined with a scope consisting of <code>currency</code> and optionally <code>country</code>, <code>customerGroup</code>, and <code>channel</code> and/or a validity period (<code>validFrom</code> and/or <code>validTo</code>). For more information see price selection.</p>
@@ -35,21 +35,23 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .value(valueBuilder -> valueBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = StandalonePriceDraftImpl.class)
-public interface StandalonePriceDraft extends com.commercetools.api.models.CustomizableDraft<StandalonePriceDraft>,
-        com.commercetools.api.models.WithKey, io.vrap.rmf.base.client.Draft<StandalonePriceDraft> {
+public interface StandalonePriceDraft extends com.commercetools.api.models.CustomizableDraft<StandalonePriceDraft>, com.commercetools.api.models.WithKey, io.vrap.rmf.base.client.Draft<StandalonePriceDraft> {
+
 
     /**
      *  <p>User-defined unique identifier for the StandalonePrice.</p>
      * @return key
      */
-
+    
     @JsonProperty("key")
     public String getKey();
-
     /**
      *  <p>Specifies to which ProductVariant the API associates this Price. It is not validated to exist in product variants.</p>
      * @return sku
@@ -57,7 +59,6 @@ public interface StandalonePriceDraft extends com.commercetools.api.models.Custo
     @NotNull
     @JsonProperty("sku")
     public String getSku();
-
     /**
      *  <p>Sets the money value of this Price.</p>
      * @return value
@@ -66,15 +67,13 @@ public interface StandalonePriceDraft extends com.commercetools.api.models.Custo
     @Valid
     @JsonProperty("value")
     public Money getValue();
-
     /**
      *  <p>Sets the country for which this Price is valid.</p>
      * @return country
      */
-
+    
     @JsonProperty("country")
     public String getCountry();
-
     /**
      *  <p>Sets the CustomerGroup for which this Price is valid.</p>
      * @return customerGroup
@@ -82,7 +81,6 @@ public interface StandalonePriceDraft extends com.commercetools.api.models.Custo
     @Valid
     @JsonProperty("customerGroup")
     public CustomerGroupResourceIdentifier getCustomerGroup();
-
     /**
      *  <p>Sets the product distribution Channel for which this Price is valid.</p>
      * @return channel
@@ -90,23 +88,20 @@ public interface StandalonePriceDraft extends com.commercetools.api.models.Custo
     @Valid
     @JsonProperty("channel")
     public ChannelResourceIdentifier getChannel();
-
     /**
      *  <p>Sets the date from which the Price is valid. Must be at least 1 ms earlier than <code>validUntil</code>.</p>
      * @return validFrom
      */
-
+    
     @JsonProperty("validFrom")
     public ZonedDateTime getValidFrom();
-
     /**
      *  <p>Sets the date until the Price is valid. Must be at least 1 ms later than <code>validFrom</code>. Standalone Prices that are no longer valid are not automatically deleted, but they can be deleted if necessary.</p>
      * @return validUntil
      */
-
+    
     @JsonProperty("validUntil")
     public ZonedDateTime getValidUntil();
-
     /**
      *  <p>Sets price tiers.</p>
      * @return tiers
@@ -114,7 +109,6 @@ public interface StandalonePriceDraft extends com.commercetools.api.models.Custo
     @Valid
     @JsonProperty("tiers")
     public List<PriceTierDraft> getTiers();
-
     /**
      *  <p>Sets a discounted price for this Price that is different from the base price with <code>value</code>.</p>
      * @return discounted
@@ -122,7 +116,6 @@ public interface StandalonePriceDraft extends com.commercetools.api.models.Custo
     @Valid
     @JsonProperty("discounted")
     public DiscountedPriceDraft getDiscounted();
-
     /**
      *  <p>Custom Fields for the StandalonePrice.</p>
      * @return custom
@@ -130,12 +123,11 @@ public interface StandalonePriceDraft extends com.commercetools.api.models.Custo
     @Valid
     @JsonProperty("custom")
     public CustomFieldsDraft getCustom();
-
     /**
      *  <p>If set to <code>true</code>, the StandalonePrice is considered during price selection. If set to <code>false</code>, the StandalonePrice is not considered during price selection.</p>
      * @return active
      */
-
+    
     @JsonProperty("active")
     public Boolean getActive();
 
@@ -143,101 +135,112 @@ public interface StandalonePriceDraft extends com.commercetools.api.models.Custo
      *  <p>User-defined unique identifier for the StandalonePrice.</p>
      * @param key value to be set
      */
-
+    
     public void setKey(final String key);
-
+    
+    
     /**
      *  <p>Specifies to which ProductVariant the API associates this Price. It is not validated to exist in product variants.</p>
      * @param sku value to be set
      */
-
+    
     public void setSku(final String sku);
-
+    
+    
     /**
      *  <p>Sets the money value of this Price.</p>
      * @param value value to be set
      */
-
+    
     public void setValue(final Money value);
-
+    
+    
     /**
      *  <p>Sets the country for which this Price is valid.</p>
      * @param country value to be set
      */
-
+    
     public void setCountry(final String country);
-
+    
+    
     /**
      *  <p>Sets the CustomerGroup for which this Price is valid.</p>
      * @param customerGroup value to be set
      */
-
+    
     public void setCustomerGroup(final CustomerGroupResourceIdentifier customerGroup);
-
+    
+    
     /**
      *  <p>Sets the product distribution Channel for which this Price is valid.</p>
      * @param channel value to be set
      */
-
+    
     public void setChannel(final ChannelResourceIdentifier channel);
-
+    
+    
     /**
      *  <p>Sets the date from which the Price is valid. Must be at least 1 ms earlier than <code>validUntil</code>.</p>
      * @param validFrom value to be set
      */
-
+    
     public void setValidFrom(final ZonedDateTime validFrom);
-
+    
+    
     /**
      *  <p>Sets the date until the Price is valid. Must be at least 1 ms later than <code>validFrom</code>. Standalone Prices that are no longer valid are not automatically deleted, but they can be deleted if necessary.</p>
      * @param validUntil value to be set
      */
-
+    
     public void setValidUntil(final ZonedDateTime validUntil);
-
+    
+    
     /**
      *  <p>Sets price tiers.</p>
      * @param tiers values to be set
      */
-
+    
     @JsonIgnore
-    public void setTiers(final PriceTierDraft... tiers);
-
+    public void setTiers(final PriceTierDraft ...tiers);
     /**
      *  <p>Sets price tiers.</p>
      * @param tiers values to be set
      */
-
+    
     public void setTiers(final List<PriceTierDraft> tiers);
-
+    
     /**
      *  <p>Sets a discounted price for this Price that is different from the base price with <code>value</code>.</p>
      * @param discounted value to be set
      */
-
+    
     public void setDiscounted(final DiscountedPriceDraft discounted);
-
+    
+    
     /**
      *  <p>Custom Fields for the StandalonePrice.</p>
      * @param custom value to be set
      */
-
+    
     public void setCustom(final CustomFieldsDraft custom);
-
+    
+    
     /**
      *  <p>If set to <code>true</code>, the StandalonePrice is considered during price selection. If set to <code>false</code>, the StandalonePrice is not considered during price selection.</p>
      * @param active value to be set
      */
-
+    
     public void setActive(final Boolean active);
+    
 
     /**
      * factory method
      * @return instance of StandalonePriceDraft
      */
-    public static StandalonePriceDraft of() {
+    public static StandalonePriceDraft of(){
         return new StandalonePriceDraftImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy StandalonePriceDraft
@@ -276,19 +279,14 @@ public interface StandalonePriceDraft extends com.commercetools.api.models.Custo
         instance.setSku(template.getSku());
         instance.setValue(com.commercetools.api.models.common.Money.deepCopy(template.getValue()));
         instance.setCountry(template.getCountry());
-        instance.setCustomerGroup(com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifier
-                .deepCopy(template.getCustomerGroup()));
-        instance.setChannel(
-            com.commercetools.api.models.channel.ChannelResourceIdentifier.deepCopy(template.getChannel()));
+        instance.setCustomerGroup(com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifier.deepCopy(template.getCustomerGroup()));
+        instance.setChannel(com.commercetools.api.models.channel.ChannelResourceIdentifier.deepCopy(template.getChannel()));
         instance.setValidFrom(template.getValidFrom());
         instance.setValidUntil(template.getValidUntil());
         instance.setTiers(Optional.ofNullable(template.getTiers())
-                .map(t -> t.stream()
-                        .map(com.commercetools.api.models.common.PriceTierDraft::deepCopy)
-                        .collect(Collectors.toList()))
+                .map(t -> t.stream().map(com.commercetools.api.models.common.PriceTierDraft::deepCopy).collect(Collectors.toList()))
                 .orElse(null));
-        instance.setDiscounted(
-            com.commercetools.api.models.common.DiscountedPriceDraft.deepCopy(template.getDiscounted()));
+        instance.setDiscounted(com.commercetools.api.models.common.DiscountedPriceDraft.deepCopy(template.getDiscounted()));
         instance.setCustom(com.commercetools.api.models.type.CustomFieldsDraft.deepCopy(template.getCustom()));
         instance.setActive(template.getActive());
         return instance;
@@ -301,7 +299,7 @@ public interface StandalonePriceDraft extends com.commercetools.api.models.Custo
     public static StandalonePriceDraftBuilder builder() {
         return StandalonePriceDraftBuilder.of();
     }
-
+    
     /**
      * create builder for StandalonePriceDraft instance
      * @param template instance with prefilled values for the builder
@@ -310,6 +308,7 @@ public interface StandalonePriceDraft extends com.commercetools.api.models.Custo
     public static StandalonePriceDraftBuilder builder(final StandalonePriceDraft template) {
         return StandalonePriceDraftBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -320,7 +319,7 @@ public interface StandalonePriceDraft extends com.commercetools.api.models.Custo
     default <T> T withStandalonePriceDraft(Function<StandalonePriceDraft, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

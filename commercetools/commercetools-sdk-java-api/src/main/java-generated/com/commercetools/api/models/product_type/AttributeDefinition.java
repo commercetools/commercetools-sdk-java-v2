@@ -1,19 +1,23 @@
-
 package com.commercetools.api.models.product_type;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
 import com.commercetools.api.models.common.LocalizedString;
+import com.commercetools.api.models.product_type.AttributeConstraintEnum;
+import com.commercetools.api.models.product_type.AttributeType;
+import com.commercetools.api.models.product_type.TextInputHint;
+import com.commercetools.api.models.product_type.AttributeDefinitionImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Describes a Product Attribute and allows you to define meta-information associated with the Attribute (like whether it should be searchable, or its constraints).</p>
@@ -32,11 +36,15 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .isSearchable(true)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = AttributeDefinitionImpl.class)
-public interface AttributeDefinition {
+public interface AttributeDefinition  {
+
 
     /**
      *  <p>Describes the Type of the Attribute.</p>
@@ -46,7 +54,6 @@ public interface AttributeDefinition {
     @Valid
     @JsonProperty("type")
     public AttributeType getType();
-
     /**
      *  <p>User-defined name of the Attribute that is unique within the Project.</p>
      * @return name
@@ -54,7 +61,6 @@ public interface AttributeDefinition {
     @NotNull
     @JsonProperty("name")
     public String getName();
-
     /**
      *  <p>Human-readable label for the Attribute.</p>
      * @return label
@@ -63,7 +69,6 @@ public interface AttributeDefinition {
     @Valid
     @JsonProperty("label")
     public LocalizedString getLabel();
-
     /**
      *  <p>If <code>true</code>, the Attribute must have a value on a ProductVariant.</p>
      * @return isRequired
@@ -71,7 +76,6 @@ public interface AttributeDefinition {
     @NotNull
     @JsonProperty("isRequired")
     public Boolean getIsRequired();
-
     /**
      *  <p>Specifies how Attributes are validated across all variants of a Product.</p>
      * @return attributeConstraint
@@ -79,7 +83,6 @@ public interface AttributeDefinition {
     @NotNull
     @JsonProperty("attributeConstraint")
     public AttributeConstraintEnum getAttributeConstraint();
-
     /**
      *  <p>Provides additional Attribute information to aid content managers configure Product details.</p>
      * @return inputTip
@@ -87,7 +90,6 @@ public interface AttributeDefinition {
     @Valid
     @JsonProperty("inputTip")
     public LocalizedString getInputTip();
-
     /**
      *  <p>Provides a visual representation directive for values of this Attribute (only relevant for AttributeTextType and AttributeLocalizableTextType).</p>
      * @return inputHint
@@ -95,7 +97,6 @@ public interface AttributeDefinition {
     @NotNull
     @JsonProperty("inputHint")
     public TextInputHint getInputHint();
-
     /**
      *  <p>If <code>true</code>, the Attribute's values are available for the Product Projections Search API for use in full-text search queries, filters, and facets.</p>
      *  <p>Which exact features are available with this flag depends on the specific AttributeType. The maximum size of a searchable field is <strong>restricted</strong> by the Field content size limit. This constraint is enforced at both Product creation and Product update. If the length of the input exceeds the maximum size, an InvalidField error is returned.</p>
@@ -109,66 +110,75 @@ public interface AttributeDefinition {
      *  <p>Describes the Type of the Attribute.</p>
      * @param type value to be set
      */
-
+    
     public void setType(final AttributeType type);
-
+    
+    
     /**
      *  <p>User-defined name of the Attribute that is unique within the Project.</p>
      * @param name value to be set
      */
-
+    
     public void setName(final String name);
-
+    
+    
     /**
      *  <p>Human-readable label for the Attribute.</p>
      * @param label value to be set
      */
-
+    
     public void setLabel(final LocalizedString label);
-
+    
+    
     /**
      *  <p>If <code>true</code>, the Attribute must have a value on a ProductVariant.</p>
      * @param isRequired value to be set
      */
-
+    
     public void setIsRequired(final Boolean isRequired);
-
+    
+    
     /**
      *  <p>Specifies how Attributes are validated across all variants of a Product.</p>
      * @param attributeConstraint value to be set
      */
-
+    
     public void setAttributeConstraint(final AttributeConstraintEnum attributeConstraint);
-
+    
+    
     /**
      *  <p>Provides additional Attribute information to aid content managers configure Product details.</p>
      * @param inputTip value to be set
      */
-
+    
     public void setInputTip(final LocalizedString inputTip);
-
+    
+    
     /**
      *  <p>Provides a visual representation directive for values of this Attribute (only relevant for AttributeTextType and AttributeLocalizableTextType).</p>
      * @param inputHint value to be set
      */
-
+    
     public void setInputHint(final TextInputHint inputHint);
-
+    
+    
     /**
      *  <p>If <code>true</code>, the Attribute's values are available for the Product Projections Search API for use in full-text search queries, filters, and facets.</p>
      *  <p>Which exact features are available with this flag depends on the specific AttributeType. The maximum size of a searchable field is <strong>restricted</strong> by the Field content size limit. This constraint is enforced at both Product creation and Product update. If the length of the input exceeds the maximum size, an InvalidField error is returned.</p>
      * @param isSearchable value to be set
      */
-
+    
     public void setIsSearchable(final Boolean isSearchable);
+    
 
     /**
      * factory method
      * @return instance of AttributeDefinition
      */
-    public static AttributeDefinition of() {
+    public static AttributeDefinition of(){
         return new AttributeDefinitionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy AttributeDefinition
@@ -217,7 +227,7 @@ public interface AttributeDefinition {
     public static AttributeDefinitionBuilder builder() {
         return AttributeDefinitionBuilder.of();
     }
-
+    
     /**
      * create builder for AttributeDefinition instance
      * @param template instance with prefilled values for the builder
@@ -226,6 +236,7 @@ public interface AttributeDefinition {
     public static AttributeDefinitionBuilder builder(final AttributeDefinition template) {
         return AttributeDefinitionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -236,7 +247,7 @@ public interface AttributeDefinition {
     default <T> T withAttributeDefinition(Function<AttributeDefinition, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

@@ -1,11 +1,16 @@
-
 package com.commercetools.api.models.inventory;
 
+import com.commercetools.api.models.channel.ChannelReference;
+import com.commercetools.api.models.common.BaseResource;
+import com.commercetools.api.models.common.CreatedBy;
+import com.commercetools.api.models.common.LastModifiedBy;
+import com.commercetools.api.models.type.CustomFields;
+import java.time.ZonedDateTime;
+import com.commercetools.api.models.inventory.InventoryEntry;
+import javax.annotation.Nullable;
 import java.util.*;
 import java.util.function.Function;
-
-import javax.annotation.Nullable;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -25,428 +30,491 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .availableQuantity(0.3)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class InventoryEntryBuilder implements Builder<InventoryEntry> {
 
+    
+    
     private String id;
-
+    
+    
+    
     private Long version;
-
+    
+    
+    
     private java.time.ZonedDateTime createdAt;
-
+    
+    
+    
     private java.time.ZonedDateTime lastModifiedAt;
-
+    
+    
     @Nullable
     private com.commercetools.api.models.common.LastModifiedBy lastModifiedBy;
-
+    
+    
     @Nullable
     private com.commercetools.api.models.common.CreatedBy createdBy;
-
+    
+    
     @Nullable
     private String key;
-
+    
+    
+    
     private String sku;
-
+    
+    
     @Nullable
     private com.commercetools.api.models.channel.ChannelReference supplyChannel;
-
+    
+    
+    
     private Long quantityOnStock;
-
+    
+    
+    
     private Long availableQuantity;
-
+    
+    
     @Nullable
     private Long restockableInDays;
-
+    
+    
     @Nullable
     private java.time.ZonedDateTime expectedDelivery;
-
+    
+    
     @Nullable
     private com.commercetools.api.models.type.CustomFields custom;
 
+    
     /**
      *  <p>Unique identifier of the InventoryEntry.</p>
      * @param id value to be set
      * @return Builder
      */
-
-    public InventoryEntryBuilder id(final String id) {
+    
+    public InventoryEntryBuilder id( final String id) {
         this.id = id;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Current version of the InventoryEntry.</p>
      * @param version value to be set
      * @return Builder
      */
-
-    public InventoryEntryBuilder version(final Long version) {
+    
+    public InventoryEntryBuilder version( final Long version) {
         this.version = version;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Date and time (UTC) the InventoryEntry was initially created.</p>
      * @param createdAt value to be set
      * @return Builder
      */
-
-    public InventoryEntryBuilder createdAt(final java.time.ZonedDateTime createdAt) {
+    
+    public InventoryEntryBuilder createdAt( final java.time.ZonedDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Date and time (UTC) the InventoryEntry was last updated.</p>
      * @param lastModifiedAt value to be set
      * @return Builder
      */
-
-    public InventoryEntryBuilder lastModifiedAt(final java.time.ZonedDateTime lastModifiedAt) {
+    
+    public InventoryEntryBuilder lastModifiedAt( final java.time.ZonedDateTime lastModifiedAt) {
         this.lastModifiedAt = lastModifiedAt;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      * @param builder function to build the lastModifiedBy value
      * @return Builder
      */
-
-    public InventoryEntryBuilder lastModifiedBy(
-            Function<com.commercetools.api.models.common.LastModifiedByBuilder, com.commercetools.api.models.common.LastModifiedByBuilder> builder) {
+    
+    public InventoryEntryBuilder lastModifiedBy(Function<com.commercetools.api.models.common.LastModifiedByBuilder, com.commercetools.api.models.common.LastModifiedByBuilder> builder) {
         this.lastModifiedBy = builder.apply(com.commercetools.api.models.common.LastModifiedByBuilder.of()).build();
         return this;
     }
-
+    
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      * @param builder function to build the lastModifiedBy value
      * @return Builder
      */
-
-    public InventoryEntryBuilder withLastModifiedBy(
-            Function<com.commercetools.api.models.common.LastModifiedByBuilder, com.commercetools.api.models.common.LastModifiedBy> builder) {
+    
+    public InventoryEntryBuilder withLastModifiedBy(Function<com.commercetools.api.models.common.LastModifiedByBuilder, com.commercetools.api.models.common.LastModifiedBy> builder) {
         this.lastModifiedBy = builder.apply(com.commercetools.api.models.common.LastModifiedByBuilder.of());
         return this;
     }
-
+                    
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      * @param lastModifiedBy value to be set
      * @return Builder
      */
-
-    public InventoryEntryBuilder lastModifiedBy(
-            @Nullable final com.commercetools.api.models.common.LastModifiedBy lastModifiedBy) {
+    
+    public InventoryEntryBuilder lastModifiedBy(@Nullable final com.commercetools.api.models.common.LastModifiedBy lastModifiedBy) {
         this.lastModifiedBy = lastModifiedBy;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      * @param builder function to build the createdBy value
      * @return Builder
      */
-
-    public InventoryEntryBuilder createdBy(
-            Function<com.commercetools.api.models.common.CreatedByBuilder, com.commercetools.api.models.common.CreatedByBuilder> builder) {
+    
+    public InventoryEntryBuilder createdBy(Function<com.commercetools.api.models.common.CreatedByBuilder, com.commercetools.api.models.common.CreatedByBuilder> builder) {
         this.createdBy = builder.apply(com.commercetools.api.models.common.CreatedByBuilder.of()).build();
         return this;
     }
-
+    
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      * @param builder function to build the createdBy value
      * @return Builder
      */
-
-    public InventoryEntryBuilder withCreatedBy(
-            Function<com.commercetools.api.models.common.CreatedByBuilder, com.commercetools.api.models.common.CreatedBy> builder) {
+    
+    public InventoryEntryBuilder withCreatedBy(Function<com.commercetools.api.models.common.CreatedByBuilder, com.commercetools.api.models.common.CreatedBy> builder) {
         this.createdBy = builder.apply(com.commercetools.api.models.common.CreatedByBuilder.of());
         return this;
     }
-
+                    
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      * @param createdBy value to be set
      * @return Builder
      */
-
+    
     public InventoryEntryBuilder createdBy(@Nullable final com.commercetools.api.models.common.CreatedBy createdBy) {
         this.createdBy = createdBy;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>User-defined unique identifier of the InventoryEntry.</p>
      * @param key value to be set
      * @return Builder
      */
-
+    
     public InventoryEntryBuilder key(@Nullable final String key) {
         this.key = key;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>ProductVariant <code>sku</code> of the InventoryEntry.</p>
      * @param sku value to be set
      * @return Builder
      */
-
-    public InventoryEntryBuilder sku(final String sku) {
+    
+    public InventoryEntryBuilder sku( final String sku) {
         this.sku = sku;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Channel that supplies this InventoryEntry.</p>
      * @param builder function to build the supplyChannel value
      * @return Builder
      */
-
-    public InventoryEntryBuilder supplyChannel(
-            Function<com.commercetools.api.models.channel.ChannelReferenceBuilder, com.commercetools.api.models.channel.ChannelReferenceBuilder> builder) {
+    
+    public InventoryEntryBuilder supplyChannel(Function<com.commercetools.api.models.channel.ChannelReferenceBuilder, com.commercetools.api.models.channel.ChannelReferenceBuilder> builder) {
         this.supplyChannel = builder.apply(com.commercetools.api.models.channel.ChannelReferenceBuilder.of()).build();
         return this;
     }
-
+    
     /**
      *  <p>Channel that supplies this InventoryEntry.</p>
      * @param builder function to build the supplyChannel value
      * @return Builder
      */
-
-    public InventoryEntryBuilder withSupplyChannel(
-            Function<com.commercetools.api.models.channel.ChannelReferenceBuilder, com.commercetools.api.models.channel.ChannelReference> builder) {
+    
+    public InventoryEntryBuilder withSupplyChannel(Function<com.commercetools.api.models.channel.ChannelReferenceBuilder, com.commercetools.api.models.channel.ChannelReference> builder) {
         this.supplyChannel = builder.apply(com.commercetools.api.models.channel.ChannelReferenceBuilder.of());
         return this;
     }
-
+                    
     /**
      *  <p>Channel that supplies this InventoryEntry.</p>
      * @param supplyChannel value to be set
      * @return Builder
      */
-
-    public InventoryEntryBuilder supplyChannel(
-            @Nullable final com.commercetools.api.models.channel.ChannelReference supplyChannel) {
+    
+    public InventoryEntryBuilder supplyChannel(@Nullable final com.commercetools.api.models.channel.ChannelReference supplyChannel) {
         this.supplyChannel = supplyChannel;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Overall amount of stock (<code>availableQuantity</code> + reserved).</p>
      * @param quantityOnStock value to be set
      * @return Builder
      */
-
-    public InventoryEntryBuilder quantityOnStock(final Long quantityOnStock) {
+    
+    public InventoryEntryBuilder quantityOnStock( final Long quantityOnStock) {
         this.quantityOnStock = quantityOnStock;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Available amount of stock (<code>quantityOnStock</code> - reserved).</p>
      * @param availableQuantity value to be set
      * @return Builder
      */
-
-    public InventoryEntryBuilder availableQuantity(final Long availableQuantity) {
+    
+    public InventoryEntryBuilder availableQuantity( final Long availableQuantity) {
         this.availableQuantity = availableQuantity;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>How often the InventoryEntry is restocked (in days).</p>
      * @param restockableInDays value to be set
      * @return Builder
      */
-
+    
     public InventoryEntryBuilder restockableInDays(@Nullable final Long restockableInDays) {
         this.restockableInDays = restockableInDays;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Date and time of the next restock.</p>
      * @param expectedDelivery value to be set
      * @return Builder
      */
-
+    
     public InventoryEntryBuilder expectedDelivery(@Nullable final java.time.ZonedDateTime expectedDelivery) {
         this.expectedDelivery = expectedDelivery;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Custom Fields of the InventoryEntry.</p>
      * @param builder function to build the custom value
      * @return Builder
      */
-
-    public InventoryEntryBuilder custom(
-            Function<com.commercetools.api.models.type.CustomFieldsBuilder, com.commercetools.api.models.type.CustomFieldsBuilder> builder) {
+    
+    public InventoryEntryBuilder custom(Function<com.commercetools.api.models.type.CustomFieldsBuilder, com.commercetools.api.models.type.CustomFieldsBuilder> builder) {
         this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsBuilder.of()).build();
         return this;
     }
-
+    
     /**
      *  <p>Custom Fields of the InventoryEntry.</p>
      * @param builder function to build the custom value
      * @return Builder
      */
-
-    public InventoryEntryBuilder withCustom(
-            Function<com.commercetools.api.models.type.CustomFieldsBuilder, com.commercetools.api.models.type.CustomFields> builder) {
+    
+    public InventoryEntryBuilder withCustom(Function<com.commercetools.api.models.type.CustomFieldsBuilder, com.commercetools.api.models.type.CustomFields> builder) {
         this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsBuilder.of());
         return this;
     }
-
+                    
     /**
      *  <p>Custom Fields of the InventoryEntry.</p>
      * @param custom value to be set
      * @return Builder
      */
-
+    
     public InventoryEntryBuilder custom(@Nullable final com.commercetools.api.models.type.CustomFields custom) {
         this.custom = custom;
         return this;
     }
+    
+    
 
     /**
      *  <p>Unique identifier of the InventoryEntry.</p>
      * @return id
      */
-
-    public String getId() {
+    
+    
+    public String getId(){
         return this.id;
     }
-
+    
     /**
      *  <p>Current version of the InventoryEntry.</p>
      * @return version
      */
-
-    public Long getVersion() {
+    
+    
+    public Long getVersion(){
         return this.version;
     }
-
+    
     /**
      *  <p>Date and time (UTC) the InventoryEntry was initially created.</p>
      * @return createdAt
      */
-
-    public java.time.ZonedDateTime getCreatedAt() {
+    
+    
+    public java.time.ZonedDateTime getCreatedAt(){
         return this.createdAt;
     }
-
+    
     /**
      *  <p>Date and time (UTC) the InventoryEntry was last updated.</p>
      * @return lastModifiedAt
      */
-
-    public java.time.ZonedDateTime getLastModifiedAt() {
+    
+    
+    public java.time.ZonedDateTime getLastModifiedAt(){
         return this.lastModifiedAt;
     }
-
+    
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      * @return lastModifiedBy
      */
-
+    
     @Nullable
-    public com.commercetools.api.models.common.LastModifiedBy getLastModifiedBy() {
+    public com.commercetools.api.models.common.LastModifiedBy getLastModifiedBy(){
         return this.lastModifiedBy;
     }
-
+    
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      * @return createdBy
      */
-
+    
     @Nullable
-    public com.commercetools.api.models.common.CreatedBy getCreatedBy() {
+    public com.commercetools.api.models.common.CreatedBy getCreatedBy(){
         return this.createdBy;
     }
-
+    
     /**
      *  <p>User-defined unique identifier of the InventoryEntry.</p>
      * @return key
      */
-
+    
     @Nullable
-    public String getKey() {
+    public String getKey(){
         return this.key;
     }
-
+    
     /**
      *  <p>ProductVariant <code>sku</code> of the InventoryEntry.</p>
      * @return sku
      */
-
-    public String getSku() {
+    
+    
+    public String getSku(){
         return this.sku;
     }
-
+    
     /**
      *  <p>Channel that supplies this InventoryEntry.</p>
      * @return supplyChannel
      */
-
+    
     @Nullable
-    public com.commercetools.api.models.channel.ChannelReference getSupplyChannel() {
+    public com.commercetools.api.models.channel.ChannelReference getSupplyChannel(){
         return this.supplyChannel;
     }
-
+    
     /**
      *  <p>Overall amount of stock (<code>availableQuantity</code> + reserved).</p>
      * @return quantityOnStock
      */
-
-    public Long getQuantityOnStock() {
+    
+    
+    public Long getQuantityOnStock(){
         return this.quantityOnStock;
     }
-
+    
     /**
      *  <p>Available amount of stock (<code>quantityOnStock</code> - reserved).</p>
      * @return availableQuantity
      */
-
-    public Long getAvailableQuantity() {
+    
+    
+    public Long getAvailableQuantity(){
         return this.availableQuantity;
     }
-
+    
     /**
      *  <p>How often the InventoryEntry is restocked (in days).</p>
      * @return restockableInDays
      */
-
+    
     @Nullable
-    public Long getRestockableInDays() {
+    public Long getRestockableInDays(){
         return this.restockableInDays;
     }
-
+    
     /**
      *  <p>Date and time of the next restock.</p>
      * @return expectedDelivery
      */
-
+    
     @Nullable
-    public java.time.ZonedDateTime getExpectedDelivery() {
+    public java.time.ZonedDateTime getExpectedDelivery(){
         return this.expectedDelivery;
     }
-
+    
     /**
      *  <p>Custom Fields of the InventoryEntry.</p>
      * @return custom
      */
-
+    
     @Nullable
-    public com.commercetools.api.models.type.CustomFields getCustom() {
+    public com.commercetools.api.models.type.CustomFields getCustom(){
         return this.custom;
     }
 
@@ -462,22 +530,20 @@ public class InventoryEntryBuilder implements Builder<InventoryEntry> {
         Objects.requireNonNull(sku, InventoryEntry.class + ": sku is missing");
         Objects.requireNonNull(quantityOnStock, InventoryEntry.class + ": quantityOnStock is missing");
         Objects.requireNonNull(availableQuantity, InventoryEntry.class + ": availableQuantity is missing");
-        return new InventoryEntryImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, key, sku,
-            supplyChannel, quantityOnStock, availableQuantity, restockableInDays, expectedDelivery, custom);
+        return new InventoryEntryImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, key, sku, supplyChannel, quantityOnStock, availableQuantity, restockableInDays, expectedDelivery, custom);
     }
-
+    
     /**
      * builds InventoryEntry without checking for non-null required values
      * @return InventoryEntry
      */
     public InventoryEntry buildUnchecked() {
-        return new InventoryEntryImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, key, sku,
-            supplyChannel, quantityOnStock, availableQuantity, restockableInDays, expectedDelivery, custom);
+        return new InventoryEntryImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, key, sku, supplyChannel, quantityOnStock, availableQuantity, restockableInDays, expectedDelivery, custom);
     }
 
     /**
      * factory method for an instance of InventoryEntryBuilder
-     * @return builder
+     * @return builder 
      */
     public static InventoryEntryBuilder of() {
         return new InventoryEntryBuilder();

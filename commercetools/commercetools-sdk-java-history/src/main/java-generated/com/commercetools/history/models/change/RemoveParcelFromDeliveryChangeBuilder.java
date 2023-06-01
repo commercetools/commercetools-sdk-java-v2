@@ -1,9 +1,12 @@
-
 package com.commercetools.history.models.change;
 
+import com.commercetools.history.models.change.Change;
+import com.commercetools.history.models.common.Parcel;
+import com.commercetools.history.models.change.RemoveParcelFromDeliveryChange;
+import javax.annotation.Nullable;
 import java.util.*;
 import java.util.function.Function;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -19,99 +22,117 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .previousValue(previousValueBuilder -> previousValueBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class RemoveParcelFromDeliveryChangeBuilder implements Builder<RemoveParcelFromDeliveryChange> {
 
+    
+    
     private String change;
-
+    
+    
+    
     private String deliveryId;
-
+    
+    
+    
     private com.commercetools.history.models.common.Parcel previousValue;
 
+    
     /**
      *  <p>Update action for <code>removeParcelFromDelivery</code></p>
      * @param change value to be set
      * @return Builder
      */
-
-    public RemoveParcelFromDeliveryChangeBuilder change(final String change) {
+    
+    public RemoveParcelFromDeliveryChangeBuilder change( final String change) {
         this.change = change;
         return this;
     }
-
+    
+    
+    
+    
     /**
      * set the value to the deliveryId
      * @param deliveryId value to be set
      * @return Builder
      */
-
-    public RemoveParcelFromDeliveryChangeBuilder deliveryId(final String deliveryId) {
+    
+    public RemoveParcelFromDeliveryChangeBuilder deliveryId( final String deliveryId) {
         this.deliveryId = deliveryId;
         return this;
     }
-
+    
+    
+    
+    
     /**
      * set the value to the previousValue using the builder function
      * @param builder function to build the previousValue value
      * @return Builder
      */
-
-    public RemoveParcelFromDeliveryChangeBuilder previousValue(
-            Function<com.commercetools.history.models.common.ParcelBuilder, com.commercetools.history.models.common.ParcelBuilder> builder) {
+    
+    public RemoveParcelFromDeliveryChangeBuilder previousValue(Function<com.commercetools.history.models.common.ParcelBuilder, com.commercetools.history.models.common.ParcelBuilder> builder) {
         this.previousValue = builder.apply(com.commercetools.history.models.common.ParcelBuilder.of()).build();
         return this;
     }
-
+    
     /**
      * set the value to the previousValue using the builder function
      * @param builder function to build the previousValue value
      * @return Builder
      */
-
-    public RemoveParcelFromDeliveryChangeBuilder withPreviousValue(
-            Function<com.commercetools.history.models.common.ParcelBuilder, com.commercetools.history.models.common.Parcel> builder) {
+    
+    public RemoveParcelFromDeliveryChangeBuilder withPreviousValue(Function<com.commercetools.history.models.common.ParcelBuilder, com.commercetools.history.models.common.Parcel> builder) {
         this.previousValue = builder.apply(com.commercetools.history.models.common.ParcelBuilder.of());
         return this;
     }
-
+                    
     /**
      * set the value to the previousValue
      * @param previousValue value to be set
      * @return Builder
      */
-
-    public RemoveParcelFromDeliveryChangeBuilder previousValue(
-            final com.commercetools.history.models.common.Parcel previousValue) {
+    
+    public RemoveParcelFromDeliveryChangeBuilder previousValue( final com.commercetools.history.models.common.Parcel previousValue) {
         this.previousValue = previousValue;
         return this;
     }
+    
+    
 
     /**
      *  <p>Update action for <code>removeParcelFromDelivery</code></p>
      * @return change
      */
-
-    public String getChange() {
+    
+    
+    public String getChange(){
         return this.change;
     }
-
+    
     /**
      * value of deliveryId}
      * @return deliveryId
      */
-
-    public String getDeliveryId() {
+    
+    
+    public String getDeliveryId(){
         return this.deliveryId;
     }
-
+    
     /**
      * value of previousValue}
      * @return previousValue
      */
-
-    public com.commercetools.history.models.common.Parcel getPreviousValue() {
+    
+    
+    public com.commercetools.history.models.common.Parcel getPreviousValue(){
         return this.previousValue;
     }
 
@@ -125,7 +146,7 @@ public class RemoveParcelFromDeliveryChangeBuilder implements Builder<RemoveParc
         Objects.requireNonNull(previousValue, RemoveParcelFromDeliveryChange.class + ": previousValue is missing");
         return new RemoveParcelFromDeliveryChangeImpl(change, deliveryId, previousValue);
     }
-
+    
     /**
      * builds RemoveParcelFromDeliveryChange without checking for non-null required values
      * @return RemoveParcelFromDeliveryChange
@@ -136,7 +157,7 @@ public class RemoveParcelFromDeliveryChangeBuilder implements Builder<RemoveParc
 
     /**
      * factory method for an instance of RemoveParcelFromDeliveryChangeBuilder
-     * @return builder
+     * @return builder 
      */
     public static RemoveParcelFromDeliveryChangeBuilder of() {
         return new RemoveParcelFromDeliveryChangeBuilder();

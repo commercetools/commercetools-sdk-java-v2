@@ -1,19 +1,21 @@
-
 package com.commercetools.api.models.message;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
 import com.commercetools.api.models.common.LocalizedString;
+import com.commercetools.api.models.message.Message;
+import com.commercetools.api.models.message.ProductSlugChangedMessageImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Generated after a successful Change Slug update action.</p>
@@ -33,9 +35,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .slug(slugBuilder -> slugBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = ProductSlugChangedMessageImpl.class)
 public interface ProductSlugChangedMessage extends Message {
 
@@ -52,7 +57,6 @@ public interface ProductSlugChangedMessage extends Message {
     @Valid
     @JsonProperty("slug")
     public LocalizedString getSlug();
-
     /**
      *  <p>The slug of the Product before the Change Slug update action.</p>
      * @return oldSlug
@@ -65,23 +69,26 @@ public interface ProductSlugChangedMessage extends Message {
      *  <p>The slug of the Product after the Change Slug update action.</p>
      * @param slug value to be set
      */
-
+    
     public void setSlug(final LocalizedString slug);
-
+    
+    
     /**
      *  <p>The slug of the Product before the Change Slug update action.</p>
      * @param oldSlug value to be set
      */
-
+    
     public void setOldSlug(final LocalizedString oldSlug);
+    
 
     /**
      * factory method
      * @return instance of ProductSlugChangedMessage
      */
-    public static ProductSlugChangedMessage of() {
+    public static ProductSlugChangedMessage of(){
         return new ProductSlugChangedMessageImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy ProductSlugChangedMessage
@@ -120,14 +127,12 @@ public interface ProductSlugChangedMessage extends Message {
         instance.setVersion(template.getVersion());
         instance.setCreatedAt(template.getCreatedAt());
         instance.setLastModifiedAt(template.getLastModifiedAt());
-        instance.setLastModifiedBy(
-            com.commercetools.api.models.common.LastModifiedBy.deepCopy(template.getLastModifiedBy()));
+        instance.setLastModifiedBy(com.commercetools.api.models.common.LastModifiedBy.deepCopy(template.getLastModifiedBy()));
         instance.setCreatedBy(com.commercetools.api.models.common.CreatedBy.deepCopy(template.getCreatedBy()));
         instance.setSequenceNumber(template.getSequenceNumber());
         instance.setResource(com.commercetools.api.models.common.Reference.deepCopy(template.getResource()));
         instance.setResourceVersion(template.getResourceVersion());
-        instance.setResourceUserProvidedIdentifiers(com.commercetools.api.models.message.UserProvidedIdentifiers
-                .deepCopy(template.getResourceUserProvidedIdentifiers()));
+        instance.setResourceUserProvidedIdentifiers(com.commercetools.api.models.message.UserProvidedIdentifiers.deepCopy(template.getResourceUserProvidedIdentifiers()));
         instance.setSlug(com.commercetools.api.models.common.LocalizedString.deepCopy(template.getSlug()));
         instance.setOldSlug(com.commercetools.api.models.common.LocalizedString.deepCopy(template.getOldSlug()));
         return instance;
@@ -140,7 +145,7 @@ public interface ProductSlugChangedMessage extends Message {
     public static ProductSlugChangedMessageBuilder builder() {
         return ProductSlugChangedMessageBuilder.of();
     }
-
+    
     /**
      * create builder for ProductSlugChangedMessage instance
      * @param template instance with prefilled values for the builder
@@ -149,6 +154,7 @@ public interface ProductSlugChangedMessage extends Message {
     public static ProductSlugChangedMessageBuilder builder(final ProductSlugChangedMessage template) {
         return ProductSlugChangedMessageBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -159,7 +165,7 @@ public interface ProductSlugChangedMessage extends Message {
     default <T> T withProductSlugChangedMessage(Function<ProductSlugChangedMessage, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

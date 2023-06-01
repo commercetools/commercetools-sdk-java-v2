@@ -1,18 +1,21 @@
-
 package com.commercetools.api.models.type;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-
 import com.commercetools.api.models.common.LocalizedString;
+import com.commercetools.api.models.type.TypeUpdateAction;
+import com.commercetools.api.models.type.TypeSetDescriptionActionImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * TypeSetDescriptionAction
@@ -24,9 +27,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     TypeSetDescriptionAction typeSetDescriptionAction = TypeSetDescriptionAction.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = TypeSetDescriptionActionImpl.class)
 public interface TypeSetDescriptionAction extends TypeUpdateAction {
 
@@ -47,16 +53,18 @@ public interface TypeSetDescriptionAction extends TypeUpdateAction {
      *  <p>Value to set. If empty, any existing value will be removed.</p>
      * @param description value to be set
      */
-
+    
     public void setDescription(final LocalizedString description);
+    
 
     /**
      * factory method
      * @return instance of TypeSetDescriptionAction
      */
-    public static TypeSetDescriptionAction of() {
+    public static TypeSetDescriptionAction of(){
         return new TypeSetDescriptionActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy TypeSetDescriptionAction
@@ -80,8 +88,7 @@ public interface TypeSetDescriptionAction extends TypeUpdateAction {
             return null;
         }
         TypeSetDescriptionActionImpl instance = new TypeSetDescriptionActionImpl();
-        instance.setDescription(
-            com.commercetools.api.models.common.LocalizedString.deepCopy(template.getDescription()));
+        instance.setDescription(com.commercetools.api.models.common.LocalizedString.deepCopy(template.getDescription()));
         return instance;
     }
 
@@ -92,7 +99,7 @@ public interface TypeSetDescriptionAction extends TypeUpdateAction {
     public static TypeSetDescriptionActionBuilder builder() {
         return TypeSetDescriptionActionBuilder.of();
     }
-
+    
     /**
      * create builder for TypeSetDescriptionAction instance
      * @param template instance with prefilled values for the builder
@@ -101,6 +108,7 @@ public interface TypeSetDescriptionAction extends TypeUpdateAction {
     public static TypeSetDescriptionActionBuilder builder(final TypeSetDescriptionAction template) {
         return TypeSetDescriptionActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -111,7 +119,7 @@ public interface TypeSetDescriptionAction extends TypeUpdateAction {
     default <T> T withTypeSetDescriptionAction(Function<TypeSetDescriptionAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

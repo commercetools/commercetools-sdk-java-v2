@@ -1,18 +1,20 @@
-
 package com.commercetools.api.models.customer;
 
-import java.time.*;
 import java.time.ZonedDateTime;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
+import com.commercetools.api.models.customer.CustomerTokenImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * CustomerToken
@@ -29,11 +31,15 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .value("{value}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = CustomerTokenImpl.class)
-public interface CustomerToken {
+public interface CustomerToken  {
+
 
     /**
      *  <p>Unique identifier of the token.</p>
@@ -42,7 +48,6 @@ public interface CustomerToken {
     @NotNull
     @JsonProperty("id")
     public String getId();
-
     /**
      *  <p>Date and time (UTC) the token was initially created.</p>
      * @return createdAt
@@ -50,15 +55,13 @@ public interface CustomerToken {
     @NotNull
     @JsonProperty("createdAt")
     public ZonedDateTime getCreatedAt();
-
     /**
      *  <p>When the token is created, <code>lastModifiedAt</code> is set to <code>createdAt</code>.</p>
      * @return lastModifiedAt
      */
-
+    
     @JsonProperty("lastModifiedAt")
     public ZonedDateTime getLastModifiedAt();
-
     /**
      *  <p>The <code>id</code> of the Customer.</p>
      * @return customerId
@@ -66,7 +69,6 @@ public interface CustomerToken {
     @NotNull
     @JsonProperty("customerId")
     public String getCustomerId();
-
     /**
      *  <p>Date and time (UTC) the token expires.</p>
      * @return expiresAt
@@ -74,7 +76,6 @@ public interface CustomerToken {
     @NotNull
     @JsonProperty("expiresAt")
     public ZonedDateTime getExpiresAt();
-
     /**
      *  <p>Value of the token.</p>
      * @return value
@@ -87,51 +88,58 @@ public interface CustomerToken {
      *  <p>Unique identifier of the token.</p>
      * @param id value to be set
      */
-
+    
     public void setId(final String id);
-
+    
+    
     /**
      *  <p>Date and time (UTC) the token was initially created.</p>
      * @param createdAt value to be set
      */
-
+    
     public void setCreatedAt(final ZonedDateTime createdAt);
-
+    
+    
     /**
      *  <p>When the token is created, <code>lastModifiedAt</code> is set to <code>createdAt</code>.</p>
      * @param lastModifiedAt value to be set
      */
-
+    
     public void setLastModifiedAt(final ZonedDateTime lastModifiedAt);
-
+    
+    
     /**
      *  <p>The <code>id</code> of the Customer.</p>
      * @param customerId value to be set
      */
-
+    
     public void setCustomerId(final String customerId);
-
+    
+    
     /**
      *  <p>Date and time (UTC) the token expires.</p>
      * @param expiresAt value to be set
      */
-
+    
     public void setExpiresAt(final ZonedDateTime expiresAt);
-
+    
+    
     /**
      *  <p>Value of the token.</p>
      * @param value value to be set
      */
-
+    
     public void setValue(final String value);
+    
 
     /**
      * factory method
      * @return instance of CustomerToken
      */
-    public static CustomerToken of() {
+    public static CustomerToken of(){
         return new CustomerTokenImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy CustomerToken
@@ -176,7 +184,7 @@ public interface CustomerToken {
     public static CustomerTokenBuilder builder() {
         return CustomerTokenBuilder.of();
     }
-
+    
     /**
      * create builder for CustomerToken instance
      * @param template instance with prefilled values for the builder
@@ -185,6 +193,7 @@ public interface CustomerToken {
     public static CustomerTokenBuilder builder(final CustomerToken template) {
         return CustomerTokenBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -195,7 +204,7 @@ public interface CustomerToken {
     default <T> T withCustomerToken(Function<CustomerToken, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

@@ -1,19 +1,21 @@
-
 package com.commercetools.api.models.order;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-import java.util.stream.Collectors;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
+import com.commercetools.api.models.order.OrderSearchCompoundExpression;
+import com.commercetools.api.models.order.OrderSearchQuery;
+import com.commercetools.api.models.order.OrderSearchAndExpressionImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * OrderSearchAndExpression
@@ -26,11 +28,15 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .plusAnd(andBuilder -> andBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = OrderSearchAndExpressionImpl.class)
 public interface OrderSearchAndExpression extends OrderSearchCompoundExpression {
+
 
     /**
      *
@@ -45,24 +51,24 @@ public interface OrderSearchAndExpression extends OrderSearchCompoundExpression 
      * set and
      * @param and values to be set
      */
-
+    
     @JsonIgnore
-    public void setAnd(final OrderSearchQuery... and);
-
+    public void setAnd(final OrderSearchQuery ...and);
     /**
      * set and
      * @param and values to be set
      */
-
+    
     public void setAnd(final List<OrderSearchQuery> and);
 
     /**
      * factory method
      * @return instance of OrderSearchAndExpression
      */
-    public static OrderSearchAndExpression of() {
+    public static OrderSearchAndExpression of(){
         return new OrderSearchAndExpressionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy OrderSearchAndExpression
@@ -87,9 +93,7 @@ public interface OrderSearchAndExpression extends OrderSearchCompoundExpression 
         }
         OrderSearchAndExpressionImpl instance = new OrderSearchAndExpressionImpl();
         instance.setAnd(Optional.ofNullable(template.getAnd())
-                .map(t -> t.stream()
-                        .map(com.commercetools.api.models.order.OrderSearchQuery::deepCopy)
-                        .collect(Collectors.toList()))
+                .map(t -> t.stream().map(com.commercetools.api.models.order.OrderSearchQuery::deepCopy).collect(Collectors.toList()))
                 .orElse(null));
         return instance;
     }
@@ -101,7 +105,7 @@ public interface OrderSearchAndExpression extends OrderSearchCompoundExpression 
     public static OrderSearchAndExpressionBuilder builder() {
         return OrderSearchAndExpressionBuilder.of();
     }
-
+    
     /**
      * create builder for OrderSearchAndExpression instance
      * @param template instance with prefilled values for the builder
@@ -110,6 +114,7 @@ public interface OrderSearchAndExpression extends OrderSearchCompoundExpression 
     public static OrderSearchAndExpressionBuilder builder(final OrderSearchAndExpression template) {
         return OrderSearchAndExpressionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -120,7 +125,7 @@ public interface OrderSearchAndExpression extends OrderSearchCompoundExpression 
     default <T> T withOrderSearchAndExpression(Function<OrderSearchAndExpression, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

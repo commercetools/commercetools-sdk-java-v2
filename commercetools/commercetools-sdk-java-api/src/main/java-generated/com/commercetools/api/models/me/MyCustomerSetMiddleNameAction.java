@@ -1,16 +1,20 @@
-
 package com.commercetools.api.models.me;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
+import com.commercetools.api.models.me.MyCustomerUpdateAction;
+import com.commercetools.api.models.me.MyCustomerSetMiddleNameActionImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * MyCustomerSetMiddleNameAction
@@ -22,9 +26,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     MyCustomerSetMiddleNameAction myCustomerSetMiddleNameAction = MyCustomerSetMiddleNameAction.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = MyCustomerSetMiddleNameActionImpl.class)
 public interface MyCustomerSetMiddleNameAction extends MyCustomerUpdateAction {
 
@@ -37,7 +44,7 @@ public interface MyCustomerSetMiddleNameAction extends MyCustomerUpdateAction {
      *  <p>Value to set. If empty, any existing value is removed.</p>
      * @return middleName
      */
-
+    
     @JsonProperty("middleName")
     public String getMiddleName();
 
@@ -45,16 +52,18 @@ public interface MyCustomerSetMiddleNameAction extends MyCustomerUpdateAction {
      *  <p>Value to set. If empty, any existing value is removed.</p>
      * @param middleName value to be set
      */
-
+    
     public void setMiddleName(final String middleName);
+    
 
     /**
      * factory method
      * @return instance of MyCustomerSetMiddleNameAction
      */
-    public static MyCustomerSetMiddleNameAction of() {
+    public static MyCustomerSetMiddleNameAction of(){
         return new MyCustomerSetMiddleNameActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy MyCustomerSetMiddleNameAction
@@ -89,7 +98,7 @@ public interface MyCustomerSetMiddleNameAction extends MyCustomerUpdateAction {
     public static MyCustomerSetMiddleNameActionBuilder builder() {
         return MyCustomerSetMiddleNameActionBuilder.of();
     }
-
+    
     /**
      * create builder for MyCustomerSetMiddleNameAction instance
      * @param template instance with prefilled values for the builder
@@ -98,6 +107,7 @@ public interface MyCustomerSetMiddleNameAction extends MyCustomerUpdateAction {
     public static MyCustomerSetMiddleNameActionBuilder builder(final MyCustomerSetMiddleNameAction template) {
         return MyCustomerSetMiddleNameActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -108,7 +118,7 @@ public interface MyCustomerSetMiddleNameAction extends MyCustomerUpdateAction {
     default <T> T withMyCustomerSetMiddleNameAction(Function<MyCustomerSetMiddleNameAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

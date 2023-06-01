@@ -1,19 +1,21 @@
-
 package com.commercetools.api.models.message;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
 import com.commercetools.api.models.cart.LineItem;
+import com.commercetools.api.models.message.OrderMessage;
+import com.commercetools.api.models.message.OrderLineItemAddedMessageImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Generated after a successful Add Line Item update action.</p>
@@ -34,9 +36,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .addedQuantity(0.3)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = OrderLineItemAddedMessageImpl.class)
 public interface OrderLineItemAddedMessage extends OrderMessage {
 
@@ -53,7 +58,6 @@ public interface OrderLineItemAddedMessage extends OrderMessage {
     @Valid
     @JsonProperty("lineItem")
     public LineItem getLineItem();
-
     /**
      *  <p>Quantity of Line Items that were added to the Order.</p>
      * @return addedQuantity
@@ -66,23 +70,26 @@ public interface OrderLineItemAddedMessage extends OrderMessage {
      *  <p>Line Item that was added to the Order.</p>
      * @param lineItem value to be set
      */
-
+    
     public void setLineItem(final LineItem lineItem);
-
+    
+    
     /**
      *  <p>Quantity of Line Items that were added to the Order.</p>
      * @param addedQuantity value to be set
      */
-
+    
     public void setAddedQuantity(final Long addedQuantity);
+    
 
     /**
      * factory method
      * @return instance of OrderLineItemAddedMessage
      */
-    public static OrderLineItemAddedMessage of() {
+    public static OrderLineItemAddedMessage of(){
         return new OrderLineItemAddedMessageImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy OrderLineItemAddedMessage
@@ -121,14 +128,12 @@ public interface OrderLineItemAddedMessage extends OrderMessage {
         instance.setVersion(template.getVersion());
         instance.setCreatedAt(template.getCreatedAt());
         instance.setLastModifiedAt(template.getLastModifiedAt());
-        instance.setLastModifiedBy(
-            com.commercetools.api.models.common.LastModifiedBy.deepCopy(template.getLastModifiedBy()));
+        instance.setLastModifiedBy(com.commercetools.api.models.common.LastModifiedBy.deepCopy(template.getLastModifiedBy()));
         instance.setCreatedBy(com.commercetools.api.models.common.CreatedBy.deepCopy(template.getCreatedBy()));
         instance.setSequenceNumber(template.getSequenceNumber());
         instance.setResource(com.commercetools.api.models.common.Reference.deepCopy(template.getResource()));
         instance.setResourceVersion(template.getResourceVersion());
-        instance.setResourceUserProvidedIdentifiers(com.commercetools.api.models.message.UserProvidedIdentifiers
-                .deepCopy(template.getResourceUserProvidedIdentifiers()));
+        instance.setResourceUserProvidedIdentifiers(com.commercetools.api.models.message.UserProvidedIdentifiers.deepCopy(template.getResourceUserProvidedIdentifiers()));
         instance.setLineItem(com.commercetools.api.models.cart.LineItem.deepCopy(template.getLineItem()));
         instance.setAddedQuantity(template.getAddedQuantity());
         return instance;
@@ -141,7 +146,7 @@ public interface OrderLineItemAddedMessage extends OrderMessage {
     public static OrderLineItemAddedMessageBuilder builder() {
         return OrderLineItemAddedMessageBuilder.of();
     }
-
+    
     /**
      * create builder for OrderLineItemAddedMessage instance
      * @param template instance with prefilled values for the builder
@@ -150,6 +155,7 @@ public interface OrderLineItemAddedMessage extends OrderMessage {
     public static OrderLineItemAddedMessageBuilder builder(final OrderLineItemAddedMessage template) {
         return OrderLineItemAddedMessageBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -160,7 +166,7 @@ public interface OrderLineItemAddedMessage extends OrderMessage {
     default <T> T withOrderLineItemAddedMessage(Function<OrderLineItemAddedMessage, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

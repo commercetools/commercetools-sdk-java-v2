@@ -1,20 +1,22 @@
-
 package com.commercetools.api.models.message;
 
-import java.time.*;
-import java.time.ZonedDateTime;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
+import com.commercetools.api.models.message.OrderMessagePayload;
 import com.commercetools.api.models.state.StateReference;
+import java.time.ZonedDateTime;
+import com.commercetools.api.models.message.LineItemStateTransitionMessagePayloadImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Generated after a successful Transition Line Item State update action.</p>
@@ -31,9 +33,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .toState(toStateBuilder -> toStateBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = LineItemStateTransitionMessagePayloadImpl.class)
 public interface LineItemStateTransitionMessagePayload extends OrderMessagePayload {
 
@@ -49,7 +54,6 @@ public interface LineItemStateTransitionMessagePayload extends OrderMessagePaylo
     @NotNull
     @JsonProperty("lineItemId")
     public String getLineItemId();
-
     /**
      *  <p>Date and time (UTC) when the transition of the Line Item State was performed.</p>
      * @return transitionDate
@@ -57,7 +61,6 @@ public interface LineItemStateTransitionMessagePayload extends OrderMessagePaylo
     @NotNull
     @JsonProperty("transitionDate")
     public ZonedDateTime getTransitionDate();
-
     /**
      *  <p>Number of Line Items for which the State was transitioned.</p>
      * @return quantity
@@ -65,7 +68,6 @@ public interface LineItemStateTransitionMessagePayload extends OrderMessagePaylo
     @NotNull
     @JsonProperty("quantity")
     public Long getQuantity();
-
     /**
      *  <p>State the Line Item was transitioned from.</p>
      * @return fromState
@@ -74,7 +76,6 @@ public interface LineItemStateTransitionMessagePayload extends OrderMessagePaylo
     @Valid
     @JsonProperty("fromState")
     public StateReference getFromState();
-
     /**
      *  <p>State the Line Item was transitioned to.</p>
      * @return toState
@@ -88,44 +89,50 @@ public interface LineItemStateTransitionMessagePayload extends OrderMessagePaylo
      *  <p>Unique identifier of the Line Item.</p>
      * @param lineItemId value to be set
      */
-
+    
     public void setLineItemId(final String lineItemId);
-
+    
+    
     /**
      *  <p>Date and time (UTC) when the transition of the Line Item State was performed.</p>
      * @param transitionDate value to be set
      */
-
+    
     public void setTransitionDate(final ZonedDateTime transitionDate);
-
+    
+    
     /**
      *  <p>Number of Line Items for which the State was transitioned.</p>
      * @param quantity value to be set
      */
-
+    
     public void setQuantity(final Long quantity);
-
+    
+    
     /**
      *  <p>State the Line Item was transitioned from.</p>
      * @param fromState value to be set
      */
-
+    
     public void setFromState(final StateReference fromState);
-
+    
+    
     /**
      *  <p>State the Line Item was transitioned to.</p>
      * @param toState value to be set
      */
-
+    
     public void setToState(final StateReference toState);
+    
 
     /**
      * factory method
      * @return instance of LineItemStateTransitionMessagePayload
      */
-    public static LineItemStateTransitionMessagePayload of() {
+    public static LineItemStateTransitionMessagePayload of(){
         return new LineItemStateTransitionMessagePayloadImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy LineItemStateTransitionMessagePayload
@@ -148,8 +155,7 @@ public interface LineItemStateTransitionMessagePayload extends OrderMessagePaylo
      * @return copy instance
      */
     @Nullable
-    public static LineItemStateTransitionMessagePayload deepCopy(
-            @Nullable final LineItemStateTransitionMessagePayload template) {
+    public static LineItemStateTransitionMessagePayload deepCopy(@Nullable final LineItemStateTransitionMessagePayload template) {
         if (template == null) {
             return null;
         }
@@ -169,16 +175,16 @@ public interface LineItemStateTransitionMessagePayload extends OrderMessagePaylo
     public static LineItemStateTransitionMessagePayloadBuilder builder() {
         return LineItemStateTransitionMessagePayloadBuilder.of();
     }
-
+    
     /**
      * create builder for LineItemStateTransitionMessagePayload instance
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static LineItemStateTransitionMessagePayloadBuilder builder(
-            final LineItemStateTransitionMessagePayload template) {
+    public static LineItemStateTransitionMessagePayloadBuilder builder(final LineItemStateTransitionMessagePayload template) {
         return LineItemStateTransitionMessagePayloadBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -189,7 +195,7 @@ public interface LineItemStateTransitionMessagePayload extends OrderMessagePaylo
     default <T> T withLineItemStateTransitionMessagePayload(Function<LineItemStateTransitionMessagePayload, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

@@ -1,11 +1,11 @@
-
 package com.commercetools.api.models.message;
 
+import com.commercetools.api.models.common.DiscountedPrice;
+import com.commercetools.api.models.message.ProductPriceDiscountsSetUpdatedPrice;
+import javax.annotation.Nullable;
 import java.util.*;
 import java.util.function.Function;
-
-import javax.annotation.Nullable;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -21,171 +21,201 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .staged(true)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class ProductPriceDiscountsSetUpdatedPriceBuilder implements Builder<ProductPriceDiscountsSetUpdatedPrice> {
 
+    
+    
     private Integer variantId;
-
+    
+    
     @Nullable
     private String variantKey;
-
+    
+    
     @Nullable
     private String sku;
-
+    
+    
+    
     private String priceId;
-
+    
+    
     @Nullable
     private com.commercetools.api.models.common.DiscountedPrice discounted;
-
+    
+    
+    
     private Boolean staged;
 
+    
     /**
      *  <p>Unique identifier of the ProductVariant for which the Discount was set.</p>
      * @param variantId value to be set
      * @return Builder
      */
-
-    public ProductPriceDiscountsSetUpdatedPriceBuilder variantId(final Integer variantId) {
+    
+    public ProductPriceDiscountsSetUpdatedPriceBuilder variantId( final Integer variantId) {
         this.variantId = variantId;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Key of the ProductVariant for which Discount was set.</p>
      * @param variantKey value to be set
      * @return Builder
      */
-
+    
     public ProductPriceDiscountsSetUpdatedPriceBuilder variantKey(@Nullable final String variantKey) {
         this.variantKey = variantKey;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>SKU of the ProductVariant for which Discount was set.</p>
      * @param sku value to be set
      * @return Builder
      */
-
+    
     public ProductPriceDiscountsSetUpdatedPriceBuilder sku(@Nullable final String sku) {
         this.sku = sku;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Unique identifier of the Price.</p>
      * @param priceId value to be set
      * @return Builder
      */
-
-    public ProductPriceDiscountsSetUpdatedPriceBuilder priceId(final String priceId) {
+    
+    public ProductPriceDiscountsSetUpdatedPriceBuilder priceId( final String priceId) {
         this.priceId = priceId;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Discounted Price for the ProductVariant for which Discount was set.</p>
      * @param builder function to build the discounted value
      * @return Builder
      */
-
-    public ProductPriceDiscountsSetUpdatedPriceBuilder discounted(
-            Function<com.commercetools.api.models.common.DiscountedPriceBuilder, com.commercetools.api.models.common.DiscountedPriceBuilder> builder) {
+    
+    public ProductPriceDiscountsSetUpdatedPriceBuilder discounted(Function<com.commercetools.api.models.common.DiscountedPriceBuilder, com.commercetools.api.models.common.DiscountedPriceBuilder> builder) {
         this.discounted = builder.apply(com.commercetools.api.models.common.DiscountedPriceBuilder.of()).build();
         return this;
     }
-
+    
     /**
      *  <p>Discounted Price for the ProductVariant for which Discount was set.</p>
      * @param builder function to build the discounted value
      * @return Builder
      */
-
-    public ProductPriceDiscountsSetUpdatedPriceBuilder withDiscounted(
-            Function<com.commercetools.api.models.common.DiscountedPriceBuilder, com.commercetools.api.models.common.DiscountedPrice> builder) {
+    
+    public ProductPriceDiscountsSetUpdatedPriceBuilder withDiscounted(Function<com.commercetools.api.models.common.DiscountedPriceBuilder, com.commercetools.api.models.common.DiscountedPrice> builder) {
         this.discounted = builder.apply(com.commercetools.api.models.common.DiscountedPriceBuilder.of());
         return this;
     }
-
+                    
     /**
      *  <p>Discounted Price for the ProductVariant for which Discount was set.</p>
      * @param discounted value to be set
      * @return Builder
      */
-
-    public ProductPriceDiscountsSetUpdatedPriceBuilder discounted(
-            @Nullable final com.commercetools.api.models.common.DiscountedPrice discounted) {
+    
+    public ProductPriceDiscountsSetUpdatedPriceBuilder discounted(@Nullable final com.commercetools.api.models.common.DiscountedPrice discounted) {
         this.discounted = discounted;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Whether the update was only applied to the staged ProductProjection.</p>
      * @param staged value to be set
      * @return Builder
      */
-
-    public ProductPriceDiscountsSetUpdatedPriceBuilder staged(final Boolean staged) {
+    
+    public ProductPriceDiscountsSetUpdatedPriceBuilder staged( final Boolean staged) {
         this.staged = staged;
         return this;
     }
+    
+    
 
     /**
      *  <p>Unique identifier of the ProductVariant for which the Discount was set.</p>
      * @return variantId
      */
-
-    public Integer getVariantId() {
+    
+    
+    public Integer getVariantId(){
         return this.variantId;
     }
-
+    
     /**
      *  <p>Key of the ProductVariant for which Discount was set.</p>
      * @return variantKey
      */
-
+    
     @Nullable
-    public String getVariantKey() {
+    public String getVariantKey(){
         return this.variantKey;
     }
-
+    
     /**
      *  <p>SKU of the ProductVariant for which Discount was set.</p>
      * @return sku
      */
-
+    
     @Nullable
-    public String getSku() {
+    public String getSku(){
         return this.sku;
     }
-
+    
     /**
      *  <p>Unique identifier of the Price.</p>
      * @return priceId
      */
-
-    public String getPriceId() {
+    
+    
+    public String getPriceId(){
         return this.priceId;
     }
-
+    
     /**
      *  <p>Discounted Price for the ProductVariant for which Discount was set.</p>
      * @return discounted
      */
-
+    
     @Nullable
-    public com.commercetools.api.models.common.DiscountedPrice getDiscounted() {
+    public com.commercetools.api.models.common.DiscountedPrice getDiscounted(){
         return this.discounted;
     }
-
+    
     /**
      *  <p>Whether the update was only applied to the staged ProductProjection.</p>
      * @return staged
      */
-
-    public Boolean getStaged() {
+    
+    
+    public Boolean getStaged(){
         return this.staged;
     }
 
@@ -199,7 +229,7 @@ public class ProductPriceDiscountsSetUpdatedPriceBuilder implements Builder<Prod
         Objects.requireNonNull(staged, ProductPriceDiscountsSetUpdatedPrice.class + ": staged is missing");
         return new ProductPriceDiscountsSetUpdatedPriceImpl(variantId, variantKey, sku, priceId, discounted, staged);
     }
-
+    
     /**
      * builds ProductPriceDiscountsSetUpdatedPrice without checking for non-null required values
      * @return ProductPriceDiscountsSetUpdatedPrice
@@ -210,7 +240,7 @@ public class ProductPriceDiscountsSetUpdatedPriceBuilder implements Builder<Prod
 
     /**
      * factory method for an instance of ProductPriceDiscountsSetUpdatedPriceBuilder
-     * @return builder
+     * @return builder 
      */
     public static ProductPriceDiscountsSetUpdatedPriceBuilder of() {
         return new ProductPriceDiscountsSetUpdatedPriceBuilder();

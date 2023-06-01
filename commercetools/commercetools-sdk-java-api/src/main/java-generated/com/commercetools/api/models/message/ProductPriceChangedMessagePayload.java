@@ -1,19 +1,21 @@
-
 package com.commercetools.api.models.message;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
 import com.commercetools.api.models.common.Price;
+import com.commercetools.api.models.message.MessagePayload;
+import com.commercetools.api.models.message.ProductPriceChangedMessagePayloadImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Generated after a successful Change Embedded Price update action.</p>
@@ -29,9 +31,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .staged(true)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = ProductPriceChangedMessagePayloadImpl.class)
 public interface ProductPriceChangedMessagePayload extends MessagePayload {
 
@@ -47,7 +52,6 @@ public interface ProductPriceChangedMessagePayload extends MessagePayload {
     @NotNull
     @JsonProperty("variantId")
     public Long getVariantId();
-
     /**
      *  <p>The current Embedded Price before the Change Embedded Price update action.</p>
      * @return oldPrice
@@ -56,7 +60,6 @@ public interface ProductPriceChangedMessagePayload extends MessagePayload {
     @Valid
     @JsonProperty("oldPrice")
     public Price getOldPrice();
-
     /**
      *  <p>The Embedded Price after the Change Embedded Price update action.</p>
      * @return newPrice
@@ -65,7 +68,6 @@ public interface ProductPriceChangedMessagePayload extends MessagePayload {
     @Valid
     @JsonProperty("newPrice")
     public Price getNewPrice();
-
     /**
      *  <p>Whether the update was only applied to the staged Product Projection.</p>
      * @return staged
@@ -73,7 +75,6 @@ public interface ProductPriceChangedMessagePayload extends MessagePayload {
     @NotNull
     @JsonProperty("staged")
     public Boolean getStaged();
-
     /**
      *  <p>The staged Embedded Price before the Change Embedded Price update action.</p>
      * @return oldStagedPrice
@@ -86,44 +87,50 @@ public interface ProductPriceChangedMessagePayload extends MessagePayload {
      *  <p>Unique identifier of the ProductVariant for which the Price was changed.</p>
      * @param variantId value to be set
      */
-
+    
     public void setVariantId(final Long variantId);
-
+    
+    
     /**
      *  <p>The current Embedded Price before the Change Embedded Price update action.</p>
      * @param oldPrice value to be set
      */
-
+    
     public void setOldPrice(final Price oldPrice);
-
+    
+    
     /**
      *  <p>The Embedded Price after the Change Embedded Price update action.</p>
      * @param newPrice value to be set
      */
-
+    
     public void setNewPrice(final Price newPrice);
-
+    
+    
     /**
      *  <p>Whether the update was only applied to the staged Product Projection.</p>
      * @param staged value to be set
      */
-
+    
     public void setStaged(final Boolean staged);
-
+    
+    
     /**
      *  <p>The staged Embedded Price before the Change Embedded Price update action.</p>
      * @param oldStagedPrice value to be set
      */
-
+    
     public void setOldStagedPrice(final Price oldStagedPrice);
+    
 
     /**
      * factory method
      * @return instance of ProductPriceChangedMessagePayload
      */
-    public static ProductPriceChangedMessagePayload of() {
+    public static ProductPriceChangedMessagePayload of(){
         return new ProductPriceChangedMessagePayloadImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy ProductPriceChangedMessagePayload
@@ -146,8 +153,7 @@ public interface ProductPriceChangedMessagePayload extends MessagePayload {
      * @return copy instance
      */
     @Nullable
-    public static ProductPriceChangedMessagePayload deepCopy(
-            @Nullable final ProductPriceChangedMessagePayload template) {
+    public static ProductPriceChangedMessagePayload deepCopy(@Nullable final ProductPriceChangedMessagePayload template) {
         if (template == null) {
             return null;
         }
@@ -167,7 +173,7 @@ public interface ProductPriceChangedMessagePayload extends MessagePayload {
     public static ProductPriceChangedMessagePayloadBuilder builder() {
         return ProductPriceChangedMessagePayloadBuilder.of();
     }
-
+    
     /**
      * create builder for ProductPriceChangedMessagePayload instance
      * @param template instance with prefilled values for the builder
@@ -176,6 +182,7 @@ public interface ProductPriceChangedMessagePayload extends MessagePayload {
     public static ProductPriceChangedMessagePayloadBuilder builder(final ProductPriceChangedMessagePayload template) {
         return ProductPriceChangedMessagePayloadBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -186,7 +193,7 @@ public interface ProductPriceChangedMessagePayload extends MessagePayload {
     default <T> T withProductPriceChangedMessagePayload(Function<ProductPriceChangedMessagePayload, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

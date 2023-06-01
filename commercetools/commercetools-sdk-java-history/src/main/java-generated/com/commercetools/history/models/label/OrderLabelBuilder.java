@@ -1,8 +1,11 @@
-
 package com.commercetools.history.models.label;
 
+import com.commercetools.history.models.label.Label;
+import com.commercetools.history.models.label.OrderLabel;
+import javax.annotation.Nullable;
 import java.util.*;
-
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -17,52 +20,67 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .orderNumber("{orderNumber}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class OrderLabelBuilder implements Builder<OrderLabel> {
 
+    
+    
     private String customerEmail;
-
+    
+    
+    
     private String orderNumber;
 
+    
     /**
      * set the value to the customerEmail
      * @param customerEmail value to be set
      * @return Builder
      */
-
-    public OrderLabelBuilder customerEmail(final String customerEmail) {
+    
+    public OrderLabelBuilder customerEmail( final String customerEmail) {
         this.customerEmail = customerEmail;
         return this;
     }
-
+    
+    
+    
+    
     /**
      * set the value to the orderNumber
      * @param orderNumber value to be set
      * @return Builder
      */
-
-    public OrderLabelBuilder orderNumber(final String orderNumber) {
+    
+    public OrderLabelBuilder orderNumber( final String orderNumber) {
         this.orderNumber = orderNumber;
         return this;
     }
+    
+    
 
     /**
      * value of customerEmail}
      * @return customerEmail
      */
-
-    public String getCustomerEmail() {
+    
+    
+    public String getCustomerEmail(){
         return this.customerEmail;
     }
-
+    
     /**
      * value of orderNumber}
      * @return orderNumber
      */
-
-    public String getOrderNumber() {
+    
+    
+    public String getOrderNumber(){
         return this.orderNumber;
     }
 
@@ -75,7 +93,7 @@ public class OrderLabelBuilder implements Builder<OrderLabel> {
         Objects.requireNonNull(orderNumber, OrderLabel.class + ": orderNumber is missing");
         return new OrderLabelImpl(customerEmail, orderNumber);
     }
-
+    
     /**
      * builds OrderLabel without checking for non-null required values
      * @return OrderLabel
@@ -86,7 +104,7 @@ public class OrderLabelBuilder implements Builder<OrderLabel> {
 
     /**
      * factory method for an instance of OrderLabelBuilder
-     * @return builder
+     * @return builder 
      */
     public static OrderLabelBuilder of() {
         return new OrderLabelBuilder();

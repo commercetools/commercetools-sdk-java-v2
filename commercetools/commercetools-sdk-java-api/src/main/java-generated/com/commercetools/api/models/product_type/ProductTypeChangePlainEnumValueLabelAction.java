@@ -1,18 +1,21 @@
-
 package com.commercetools.api.models.product_type;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
+import com.commercetools.api.models.product_type.AttributePlainEnumValue;
+import com.commercetools.api.models.product_type.ProductTypeUpdateAction;
+import com.commercetools.api.models.product_type.ProductTypeChangePlainEnumValueLabelActionImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Updates the label of a single enum <code>value</code> in an AttributeEnumType AttributeDefinition, or AttributeSetType of AttributeEnumType AttributeDefinition.</p>
@@ -27,9 +30,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .newValue(newValueBuilder -> newValueBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = ProductTypeChangePlainEnumValueLabelActionImpl.class)
 public interface ProductTypeChangePlainEnumValueLabelAction extends ProductTypeUpdateAction {
 
@@ -45,7 +51,6 @@ public interface ProductTypeChangePlainEnumValueLabelAction extends ProductTypeU
     @NotNull
     @JsonProperty("attributeName")
     public String getAttributeName();
-
     /**
      *  <p>New value to set. Must be different from the existing value.</p>
      * @return newValue
@@ -59,31 +64,33 @@ public interface ProductTypeChangePlainEnumValueLabelAction extends ProductTypeU
      *  <p>Name of the AttributeDefinition to update.</p>
      * @param attributeName value to be set
      */
-
+    
     public void setAttributeName(final String attributeName);
-
+    
+    
     /**
      *  <p>New value to set. Must be different from the existing value.</p>
      * @param newValue value to be set
      */
-
+    
     public void setNewValue(final AttributePlainEnumValue newValue);
+    
 
     /**
      * factory method
      * @return instance of ProductTypeChangePlainEnumValueLabelAction
      */
-    public static ProductTypeChangePlainEnumValueLabelAction of() {
+    public static ProductTypeChangePlainEnumValueLabelAction of(){
         return new ProductTypeChangePlainEnumValueLabelActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy ProductTypeChangePlainEnumValueLabelAction
      * @param template instance to be copied
      * @return copy instance
      */
-    public static ProductTypeChangePlainEnumValueLabelAction of(
-            final ProductTypeChangePlainEnumValueLabelAction template) {
+    public static ProductTypeChangePlainEnumValueLabelAction of(final ProductTypeChangePlainEnumValueLabelAction template) {
         ProductTypeChangePlainEnumValueLabelActionImpl instance = new ProductTypeChangePlainEnumValueLabelActionImpl();
         instance.setAttributeName(template.getAttributeName());
         instance.setNewValue(template.getNewValue());
@@ -96,15 +103,13 @@ public interface ProductTypeChangePlainEnumValueLabelAction extends ProductTypeU
      * @return copy instance
      */
     @Nullable
-    public static ProductTypeChangePlainEnumValueLabelAction deepCopy(
-            @Nullable final ProductTypeChangePlainEnumValueLabelAction template) {
+    public static ProductTypeChangePlainEnumValueLabelAction deepCopy(@Nullable final ProductTypeChangePlainEnumValueLabelAction template) {
         if (template == null) {
             return null;
         }
         ProductTypeChangePlainEnumValueLabelActionImpl instance = new ProductTypeChangePlainEnumValueLabelActionImpl();
         instance.setAttributeName(template.getAttributeName());
-        instance.setNewValue(
-            com.commercetools.api.models.product_type.AttributePlainEnumValue.deepCopy(template.getNewValue()));
+        instance.setNewValue(com.commercetools.api.models.product_type.AttributePlainEnumValue.deepCopy(template.getNewValue()));
         return instance;
     }
 
@@ -115,16 +120,16 @@ public interface ProductTypeChangePlainEnumValueLabelAction extends ProductTypeU
     public static ProductTypeChangePlainEnumValueLabelActionBuilder builder() {
         return ProductTypeChangePlainEnumValueLabelActionBuilder.of();
     }
-
+    
     /**
      * create builder for ProductTypeChangePlainEnumValueLabelAction instance
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static ProductTypeChangePlainEnumValueLabelActionBuilder builder(
-            final ProductTypeChangePlainEnumValueLabelAction template) {
+    public static ProductTypeChangePlainEnumValueLabelActionBuilder builder(final ProductTypeChangePlainEnumValueLabelAction template) {
         return ProductTypeChangePlainEnumValueLabelActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -132,11 +137,10 @@ public interface ProductTypeChangePlainEnumValueLabelAction extends ProductTypeU
      * @param helper function to map the object
      * @return mapped value
      */
-    default <T> T withProductTypeChangePlainEnumValueLabelAction(
-            Function<ProductTypeChangePlainEnumValueLabelAction, T> helper) {
+    default <T> T withProductTypeChangePlainEnumValueLabelAction(Function<ProductTypeChangePlainEnumValueLabelAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

@@ -1,8 +1,11 @@
-
 package com.commercetools.api.models.order;
 
+import com.commercetools.api.models.order.OrderUpdateAction;
+import com.commercetools.api.models.order.OrderRemoveParcelFromDeliveryAction;
+import javax.annotation.Nullable;
 import java.util.*;
-
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -16,30 +19,39 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .parcelId("{parcelId}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class OrderRemoveParcelFromDeliveryActionBuilder implements Builder<OrderRemoveParcelFromDeliveryAction> {
 
+    
+    
     private String parcelId;
 
+    
     /**
      * set the value to the parcelId
      * @param parcelId value to be set
      * @return Builder
      */
-
-    public OrderRemoveParcelFromDeliveryActionBuilder parcelId(final String parcelId) {
+    
+    public OrderRemoveParcelFromDeliveryActionBuilder parcelId( final String parcelId) {
         this.parcelId = parcelId;
         return this;
     }
+    
+    
 
     /**
      * value of parcelId}
      * @return parcelId
      */
-
-    public String getParcelId() {
+    
+    
+    public String getParcelId(){
         return this.parcelId;
     }
 
@@ -51,7 +63,7 @@ public class OrderRemoveParcelFromDeliveryActionBuilder implements Builder<Order
         Objects.requireNonNull(parcelId, OrderRemoveParcelFromDeliveryAction.class + ": parcelId is missing");
         return new OrderRemoveParcelFromDeliveryActionImpl(parcelId);
     }
-
+    
     /**
      * builds OrderRemoveParcelFromDeliveryAction without checking for non-null required values
      * @return OrderRemoveParcelFromDeliveryAction
@@ -62,7 +74,7 @@ public class OrderRemoveParcelFromDeliveryActionBuilder implements Builder<Order
 
     /**
      * factory method for an instance of OrderRemoveParcelFromDeliveryActionBuilder
-     * @return builder
+     * @return builder 
      */
     public static OrderRemoveParcelFromDeliveryActionBuilder of() {
         return new OrderRemoveParcelFromDeliveryActionBuilder();

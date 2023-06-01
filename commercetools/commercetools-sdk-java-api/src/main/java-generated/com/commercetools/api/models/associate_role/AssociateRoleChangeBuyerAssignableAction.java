@@ -1,17 +1,20 @@
-
 package com.commercetools.api.models.associate_role;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
+import com.commercetools.api.models.associate_role.AssociateRoleUpdateAction;
+import com.commercetools.api.models.associate_role.AssociateRoleChangeBuyerAssignableActionImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Changing the <code>buyerAssignable</code> value of an AssociateRole generates an AssociateRoleBuyerAssignableChanged Message.</p>
@@ -24,9 +27,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .buyerAssignable(true)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = AssociateRoleChangeBuyerAssignableActionImpl.class)
 public interface AssociateRoleChangeBuyerAssignableAction extends AssociateRoleUpdateAction {
 
@@ -47,16 +53,18 @@ public interface AssociateRoleChangeBuyerAssignableAction extends AssociateRoleU
      *  <p>The new value of the <code>buyerAssignable</code> field of the AssociateRole.</p>
      * @param buyerAssignable value to be set
      */
-
+    
     public void setBuyerAssignable(final Boolean buyerAssignable);
+    
 
     /**
      * factory method
      * @return instance of AssociateRoleChangeBuyerAssignableAction
      */
-    public static AssociateRoleChangeBuyerAssignableAction of() {
+    public static AssociateRoleChangeBuyerAssignableAction of(){
         return new AssociateRoleChangeBuyerAssignableActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy AssociateRoleChangeBuyerAssignableAction
@@ -75,8 +83,7 @@ public interface AssociateRoleChangeBuyerAssignableAction extends AssociateRoleU
      * @return copy instance
      */
     @Nullable
-    public static AssociateRoleChangeBuyerAssignableAction deepCopy(
-            @Nullable final AssociateRoleChangeBuyerAssignableAction template) {
+    public static AssociateRoleChangeBuyerAssignableAction deepCopy(@Nullable final AssociateRoleChangeBuyerAssignableAction template) {
         if (template == null) {
             return null;
         }
@@ -92,16 +99,16 @@ public interface AssociateRoleChangeBuyerAssignableAction extends AssociateRoleU
     public static AssociateRoleChangeBuyerAssignableActionBuilder builder() {
         return AssociateRoleChangeBuyerAssignableActionBuilder.of();
     }
-
+    
     /**
      * create builder for AssociateRoleChangeBuyerAssignableAction instance
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static AssociateRoleChangeBuyerAssignableActionBuilder builder(
-            final AssociateRoleChangeBuyerAssignableAction template) {
+    public static AssociateRoleChangeBuyerAssignableActionBuilder builder(final AssociateRoleChangeBuyerAssignableAction template) {
         return AssociateRoleChangeBuyerAssignableActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -109,11 +116,10 @@ public interface AssociateRoleChangeBuyerAssignableAction extends AssociateRoleU
      * @param helper function to map the object
      * @return mapped value
      */
-    default <T> T withAssociateRoleChangeBuyerAssignableAction(
-            Function<AssociateRoleChangeBuyerAssignableAction, T> helper) {
+    default <T> T withAssociateRoleChangeBuyerAssignableAction(Function<AssociateRoleChangeBuyerAssignableAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

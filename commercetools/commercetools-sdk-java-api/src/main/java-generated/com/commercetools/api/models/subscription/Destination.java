@@ -1,17 +1,25 @@
-
 package com.commercetools.api.models.subscription;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
+import com.commercetools.api.models.subscription.AzureEventGridDestination;
+import com.commercetools.api.models.subscription.AzureServiceBusDestination;
+import com.commercetools.api.models.subscription.EventBridgeDestination;
+import com.commercetools.api.models.subscription.GoogleCloudPubSubDestination;
+import com.commercetools.api.models.subscription.SnsDestination;
+import com.commercetools.api.models.subscription.SqsDestination;
 
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * Destination
@@ -25,19 +33,30 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             accessKey("{accessKey}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
 @JsonSubTypes({
-        @JsonSubTypes.Type(value = com.commercetools.api.models.subscription.AzureEventGridDestinationImpl.class, name = AzureEventGridDestination.EVENT_GRID),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.subscription.AzureServiceBusDestinationImpl.class, name = AzureServiceBusDestination.AZURE_SERVICE_BUS),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.subscription.EventBridgeDestinationImpl.class, name = EventBridgeDestination.EVENT_BRIDGE),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.subscription.GoogleCloudPubSubDestinationImpl.class, name = GoogleCloudPubSubDestination.GOOGLE_CLOUD_PUB_SUB),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.subscription.SnsDestinationImpl.class, name = SnsDestination.SNS),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.subscription.SqsDestinationImpl.class, name = SqsDestination.SQS) })
-@JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.EXISTING_PROPERTY, property = "type", defaultImpl = DestinationImpl.class, visible = true)
+   @JsonSubTypes.Type(value = com.commercetools.api.models.subscription.AzureEventGridDestinationImpl.class, name = AzureEventGridDestination.EVENT_GRID),
+   @JsonSubTypes.Type(value = com.commercetools.api.models.subscription.AzureServiceBusDestinationImpl.class, name = AzureServiceBusDestination.AZURE_SERVICE_BUS),
+   @JsonSubTypes.Type(value = com.commercetools.api.models.subscription.EventBridgeDestinationImpl.class, name = EventBridgeDestination.EVENT_BRIDGE),
+   @JsonSubTypes.Type(value = com.commercetools.api.models.subscription.GoogleCloudPubSubDestinationImpl.class, name = GoogleCloudPubSubDestination.GOOGLE_CLOUD_PUB_SUB),
+   @JsonSubTypes.Type(value = com.commercetools.api.models.subscription.SnsDestinationImpl.class, name = SnsDestination.SNS),
+   @JsonSubTypes.Type(value = com.commercetools.api.models.subscription.SqsDestinationImpl.class, name = SqsDestination.SQS)
+})
+@JsonTypeInfo(
+    use = JsonTypeInfo.Id.NAME,
+    include = JsonTypeInfo.As.EXISTING_PROPERTY,
+    property = "type",
+    defaultImpl = DestinationImpl.class,
+    visible = true
+)
 @JsonDeserialize(as = DestinationImpl.class)
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
-public interface Destination {
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
+public interface Destination  {
+
 
     /**
      *
@@ -46,6 +65,9 @@ public interface Destination {
     @NotNull
     @JsonProperty("type")
     public String getType();
+
+
+
 
     /**
      * factory method to create a deep copy of Destination
@@ -58,79 +80,69 @@ public interface Destination {
             return null;
         }
         if (template instanceof com.commercetools.api.models.subscription.AzureEventGridDestination) {
-            return com.commercetools.api.models.subscription.AzureEventGridDestination
-                    .deepCopy((com.commercetools.api.models.subscription.AzureEventGridDestination) template);
+            return com.commercetools.api.models.subscription.AzureEventGridDestination.deepCopy((com.commercetools.api.models.subscription.AzureEventGridDestination)template);
         }
         if (template instanceof com.commercetools.api.models.subscription.AzureServiceBusDestination) {
-            return com.commercetools.api.models.subscription.AzureServiceBusDestination
-                    .deepCopy((com.commercetools.api.models.subscription.AzureServiceBusDestination) template);
+            return com.commercetools.api.models.subscription.AzureServiceBusDestination.deepCopy((com.commercetools.api.models.subscription.AzureServiceBusDestination)template);
         }
         if (template instanceof com.commercetools.api.models.subscription.EventBridgeDestination) {
-            return com.commercetools.api.models.subscription.EventBridgeDestination
-                    .deepCopy((com.commercetools.api.models.subscription.EventBridgeDestination) template);
+            return com.commercetools.api.models.subscription.EventBridgeDestination.deepCopy((com.commercetools.api.models.subscription.EventBridgeDestination)template);
         }
         if (template instanceof com.commercetools.api.models.subscription.GoogleCloudPubSubDestination) {
-            return com.commercetools.api.models.subscription.GoogleCloudPubSubDestination
-                    .deepCopy((com.commercetools.api.models.subscription.GoogleCloudPubSubDestination) template);
+            return com.commercetools.api.models.subscription.GoogleCloudPubSubDestination.deepCopy((com.commercetools.api.models.subscription.GoogleCloudPubSubDestination)template);
         }
         if (template instanceof com.commercetools.api.models.subscription.SnsDestination) {
-            return com.commercetools.api.models.subscription.SnsDestination
-                    .deepCopy((com.commercetools.api.models.subscription.SnsDestination) template);
+            return com.commercetools.api.models.subscription.SnsDestination.deepCopy((com.commercetools.api.models.subscription.SnsDestination)template);
         }
         if (template instanceof com.commercetools.api.models.subscription.SqsDestination) {
-            return com.commercetools.api.models.subscription.SqsDestination
-                    .deepCopy((com.commercetools.api.models.subscription.SqsDestination) template);
+            return com.commercetools.api.models.subscription.SqsDestination.deepCopy((com.commercetools.api.models.subscription.SqsDestination)template);
         }
         DestinationImpl instance = new DestinationImpl();
         return instance;
     }
+
 
     /**
      * builder for eventGrid subtype
      * @return builder
      */
     public static com.commercetools.api.models.subscription.AzureEventGridDestinationBuilder eventGridBuilder() {
-        return com.commercetools.api.models.subscription.AzureEventGridDestinationBuilder.of();
+       return com.commercetools.api.models.subscription.AzureEventGridDestinationBuilder.of();
     }
-
     /**
      * builder for azureServiceBus subtype
      * @return builder
      */
     public static com.commercetools.api.models.subscription.AzureServiceBusDestinationBuilder azureServiceBusBuilder() {
-        return com.commercetools.api.models.subscription.AzureServiceBusDestinationBuilder.of();
+       return com.commercetools.api.models.subscription.AzureServiceBusDestinationBuilder.of();
     }
-
     /**
      * builder for eventBridge subtype
      * @return builder
      */
     public static com.commercetools.api.models.subscription.EventBridgeDestinationBuilder eventBridgeBuilder() {
-        return com.commercetools.api.models.subscription.EventBridgeDestinationBuilder.of();
+       return com.commercetools.api.models.subscription.EventBridgeDestinationBuilder.of();
     }
-
     /**
      * builder for googleCloudPubSub subtype
      * @return builder
      */
     public static com.commercetools.api.models.subscription.GoogleCloudPubSubDestinationBuilder googleCloudPubSubBuilder() {
-        return com.commercetools.api.models.subscription.GoogleCloudPubSubDestinationBuilder.of();
+       return com.commercetools.api.models.subscription.GoogleCloudPubSubDestinationBuilder.of();
     }
-
     /**
      * builder for sns subtype
      * @return builder
      */
     public static com.commercetools.api.models.subscription.SnsDestinationBuilder snsBuilder() {
-        return com.commercetools.api.models.subscription.SnsDestinationBuilder.of();
+       return com.commercetools.api.models.subscription.SnsDestinationBuilder.of();
     }
-
     /**
      * builder for sqs subtype
      * @return builder
      */
     public static com.commercetools.api.models.subscription.SqsDestinationBuilder sqsBuilder() {
-        return com.commercetools.api.models.subscription.SqsDestinationBuilder.of();
+       return com.commercetools.api.models.subscription.SqsDestinationBuilder.of();
     }
 
     /**
@@ -142,7 +154,7 @@ public interface Destination {
     default <T> T withDestination(Function<Destination, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

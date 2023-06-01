@@ -1,11 +1,12 @@
-
 package com.commercetools.api.models.message;
 
+import com.commercetools.api.models.message.OrderMessagePayload;
+import com.commercetools.api.models.order.ParcelMeasurements;
+import com.commercetools.api.models.message.ParcelMeasurementsUpdatedMessagePayload;
+import javax.annotation.Nullable;
 import java.util.*;
 import java.util.function.Function;
-
-import javax.annotation.Nullable;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -20,126 +21,145 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .parcelId("{parcelId}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
-public class ParcelMeasurementsUpdatedMessagePayloadBuilder
-        implements Builder<ParcelMeasurementsUpdatedMessagePayload> {
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
+public class ParcelMeasurementsUpdatedMessagePayloadBuilder implements Builder<ParcelMeasurementsUpdatedMessagePayload> {
 
+    
+    
     private String deliveryId;
-
+    
+    
+    
     private String parcelId;
-
+    
+    
     @Nullable
     private com.commercetools.api.models.order.ParcelMeasurements measurements;
-
+    
+    
     @Nullable
     private String shippingKey;
 
+    
     /**
      *  <p>Unique identifier of the Delivery.</p>
      * @param deliveryId value to be set
      * @return Builder
      */
-
-    public ParcelMeasurementsUpdatedMessagePayloadBuilder deliveryId(final String deliveryId) {
+    
+    public ParcelMeasurementsUpdatedMessagePayloadBuilder deliveryId( final String deliveryId) {
         this.deliveryId = deliveryId;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Unique identifier of the Parcel.</p>
      * @param parcelId value to be set
      * @return Builder
      */
-
-    public ParcelMeasurementsUpdatedMessagePayloadBuilder parcelId(final String parcelId) {
+    
+    public ParcelMeasurementsUpdatedMessagePayloadBuilder parcelId( final String parcelId) {
         this.parcelId = parcelId;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>The Parcel Measurements that were set on the Parcel.</p>
      * @param builder function to build the measurements value
      * @return Builder
      */
-
-    public ParcelMeasurementsUpdatedMessagePayloadBuilder measurements(
-            Function<com.commercetools.api.models.order.ParcelMeasurementsBuilder, com.commercetools.api.models.order.ParcelMeasurementsBuilder> builder) {
+    
+    public ParcelMeasurementsUpdatedMessagePayloadBuilder measurements(Function<com.commercetools.api.models.order.ParcelMeasurementsBuilder, com.commercetools.api.models.order.ParcelMeasurementsBuilder> builder) {
         this.measurements = builder.apply(com.commercetools.api.models.order.ParcelMeasurementsBuilder.of()).build();
         return this;
     }
-
+    
     /**
      *  <p>The Parcel Measurements that were set on the Parcel.</p>
      * @param builder function to build the measurements value
      * @return Builder
      */
-
-    public ParcelMeasurementsUpdatedMessagePayloadBuilder withMeasurements(
-            Function<com.commercetools.api.models.order.ParcelMeasurementsBuilder, com.commercetools.api.models.order.ParcelMeasurements> builder) {
+    
+    public ParcelMeasurementsUpdatedMessagePayloadBuilder withMeasurements(Function<com.commercetools.api.models.order.ParcelMeasurementsBuilder, com.commercetools.api.models.order.ParcelMeasurements> builder) {
         this.measurements = builder.apply(com.commercetools.api.models.order.ParcelMeasurementsBuilder.of());
         return this;
     }
-
+                    
     /**
      *  <p>The Parcel Measurements that were set on the Parcel.</p>
      * @param measurements value to be set
      * @return Builder
      */
-
-    public ParcelMeasurementsUpdatedMessagePayloadBuilder measurements(
-            @Nullable final com.commercetools.api.models.order.ParcelMeasurements measurements) {
+    
+    public ParcelMeasurementsUpdatedMessagePayloadBuilder measurements(@Nullable final com.commercetools.api.models.order.ParcelMeasurements measurements) {
         this.measurements = measurements;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multi</code> ShippingMode.</p>
      * @param shippingKey value to be set
      * @return Builder
      */
-
+    
     public ParcelMeasurementsUpdatedMessagePayloadBuilder shippingKey(@Nullable final String shippingKey) {
         this.shippingKey = shippingKey;
         return this;
     }
+    
+    
 
     /**
      *  <p>Unique identifier of the Delivery.</p>
      * @return deliveryId
      */
-
-    public String getDeliveryId() {
+    
+    
+    public String getDeliveryId(){
         return this.deliveryId;
     }
-
+    
     /**
      *  <p>Unique identifier of the Parcel.</p>
      * @return parcelId
      */
-
-    public String getParcelId() {
+    
+    
+    public String getParcelId(){
         return this.parcelId;
     }
-
+    
     /**
      *  <p>The Parcel Measurements that were set on the Parcel.</p>
      * @return measurements
      */
-
+    
     @Nullable
-    public com.commercetools.api.models.order.ParcelMeasurements getMeasurements() {
+    public com.commercetools.api.models.order.ParcelMeasurements getMeasurements(){
         return this.measurements;
     }
-
+    
     /**
      *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multi</code> ShippingMode.</p>
      * @return shippingKey
      */
-
+    
     @Nullable
-    public String getShippingKey() {
+    public String getShippingKey(){
         return this.shippingKey;
     }
 
@@ -152,7 +172,7 @@ public class ParcelMeasurementsUpdatedMessagePayloadBuilder
         Objects.requireNonNull(parcelId, ParcelMeasurementsUpdatedMessagePayload.class + ": parcelId is missing");
         return new ParcelMeasurementsUpdatedMessagePayloadImpl(deliveryId, parcelId, measurements, shippingKey);
     }
-
+    
     /**
      * builds ParcelMeasurementsUpdatedMessagePayload without checking for non-null required values
      * @return ParcelMeasurementsUpdatedMessagePayload
@@ -163,7 +183,7 @@ public class ParcelMeasurementsUpdatedMessagePayloadBuilder
 
     /**
      * factory method for an instance of ParcelMeasurementsUpdatedMessagePayloadBuilder
-     * @return builder
+     * @return builder 
      */
     public static ParcelMeasurementsUpdatedMessagePayloadBuilder of() {
         return new ParcelMeasurementsUpdatedMessagePayloadBuilder();
@@ -174,8 +194,7 @@ public class ParcelMeasurementsUpdatedMessagePayloadBuilder
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static ParcelMeasurementsUpdatedMessagePayloadBuilder of(
-            final ParcelMeasurementsUpdatedMessagePayload template) {
+    public static ParcelMeasurementsUpdatedMessagePayloadBuilder of(final ParcelMeasurementsUpdatedMessagePayload template) {
         ParcelMeasurementsUpdatedMessagePayloadBuilder builder = new ParcelMeasurementsUpdatedMessagePayloadBuilder();
         builder.deliveryId = template.getDeliveryId();
         builder.parcelId = template.getParcelId();

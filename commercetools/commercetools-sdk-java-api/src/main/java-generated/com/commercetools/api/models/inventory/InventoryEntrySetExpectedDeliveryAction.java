@@ -1,17 +1,21 @@
-
 package com.commercetools.api.models.inventory;
 
-import java.time.*;
+import com.commercetools.api.models.inventory.InventoryEntryUpdateAction;
 import java.time.ZonedDateTime;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
+import com.commercetools.api.models.inventory.InventoryEntrySetExpectedDeliveryActionImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * InventoryEntrySetExpectedDeliveryAction
@@ -23,9 +27,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     InventoryEntrySetExpectedDeliveryAction inventoryEntrySetExpectedDeliveryAction = InventoryEntrySetExpectedDeliveryAction.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = InventoryEntrySetExpectedDeliveryActionImpl.class)
 public interface InventoryEntrySetExpectedDeliveryAction extends InventoryEntryUpdateAction {
 
@@ -38,7 +45,7 @@ public interface InventoryEntrySetExpectedDeliveryAction extends InventoryEntryU
      *  <p>Value to set. If empty, any existing value will be removed.</p>
      * @return expectedDelivery
      */
-
+    
     @JsonProperty("expectedDelivery")
     public ZonedDateTime getExpectedDelivery();
 
@@ -46,16 +53,18 @@ public interface InventoryEntrySetExpectedDeliveryAction extends InventoryEntryU
      *  <p>Value to set. If empty, any existing value will be removed.</p>
      * @param expectedDelivery value to be set
      */
-
+    
     public void setExpectedDelivery(final ZonedDateTime expectedDelivery);
+    
 
     /**
      * factory method
      * @return instance of InventoryEntrySetExpectedDeliveryAction
      */
-    public static InventoryEntrySetExpectedDeliveryAction of() {
+    public static InventoryEntrySetExpectedDeliveryAction of(){
         return new InventoryEntrySetExpectedDeliveryActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy InventoryEntrySetExpectedDeliveryAction
@@ -74,8 +83,7 @@ public interface InventoryEntrySetExpectedDeliveryAction extends InventoryEntryU
      * @return copy instance
      */
     @Nullable
-    public static InventoryEntrySetExpectedDeliveryAction deepCopy(
-            @Nullable final InventoryEntrySetExpectedDeliveryAction template) {
+    public static InventoryEntrySetExpectedDeliveryAction deepCopy(@Nullable final InventoryEntrySetExpectedDeliveryAction template) {
         if (template == null) {
             return null;
         }
@@ -91,16 +99,16 @@ public interface InventoryEntrySetExpectedDeliveryAction extends InventoryEntryU
     public static InventoryEntrySetExpectedDeliveryActionBuilder builder() {
         return InventoryEntrySetExpectedDeliveryActionBuilder.of();
     }
-
+    
     /**
      * create builder for InventoryEntrySetExpectedDeliveryAction instance
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static InventoryEntrySetExpectedDeliveryActionBuilder builder(
-            final InventoryEntrySetExpectedDeliveryAction template) {
+    public static InventoryEntrySetExpectedDeliveryActionBuilder builder(final InventoryEntrySetExpectedDeliveryAction template) {
         return InventoryEntrySetExpectedDeliveryActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -108,11 +116,10 @@ public interface InventoryEntrySetExpectedDeliveryAction extends InventoryEntryU
      * @param helper function to map the object
      * @return mapped value
      */
-    default <T> T withInventoryEntrySetExpectedDeliveryAction(
-            Function<InventoryEntrySetExpectedDeliveryAction, T> helper) {
+    default <T> T withInventoryEntrySetExpectedDeliveryAction(Function<InventoryEntrySetExpectedDeliveryAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

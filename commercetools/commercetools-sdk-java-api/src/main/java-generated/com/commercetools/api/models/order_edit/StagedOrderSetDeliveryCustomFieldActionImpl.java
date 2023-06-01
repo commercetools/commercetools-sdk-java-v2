@@ -1,138 +1,151 @@
-
 package com.commercetools.api.models.order_edit;
 
-import java.time.*;
-import java.util.*;
-
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
-
-import io.vrap.rmf.base.client.ModelBase;
+import com.commercetools.api.models.order.StagedOrderUpdateAction;
+import java.lang.Object;
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.ModelBase;
+import javax.validation.Valid;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.annotation.*;
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
  * StagedOrderSetDeliveryCustomFieldAction
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class StagedOrderSetDeliveryCustomFieldActionImpl implements StagedOrderSetDeliveryCustomFieldAction, ModelBase {
 
+    
     private String action;
-
+    
+    
     private String deliveryId;
-
+    
+    
     private String deliveryKey;
-
+    
+    
     private String name;
-
+    
+    
     private java.lang.Object value;
 
     /**
      * create instance with all properties
      */
     @JsonCreator
-    StagedOrderSetDeliveryCustomFieldActionImpl(@JsonProperty("deliveryId") final String deliveryId,
-            @JsonProperty("deliveryKey") final String deliveryKey, @JsonProperty("name") final String name,
-            @JsonProperty("value") final java.lang.Object value) {
+    StagedOrderSetDeliveryCustomFieldActionImpl(@JsonProperty("deliveryId") final String deliveryId, @JsonProperty("deliveryKey") final String deliveryKey, @JsonProperty("name") final String name, @JsonProperty("value") final java.lang.Object value) {
         this.deliveryId = deliveryId;
         this.deliveryKey = deliveryKey;
         this.name = name;
         this.value = value;
-        this.action = SET_DELIVERY_CUSTOM_FIELD;
+        this.action =  SET_DELIVERY_CUSTOM_FIELD;
     }
-
     /**
      * create empty instance
      */
     public StagedOrderSetDeliveryCustomFieldActionImpl() {
-        this.action = SET_DELIVERY_CUSTOM_FIELD;
+        this.action =  SET_DELIVERY_CUSTOM_FIELD;
     }
 
     /**
      *
      */
-
-    public String getAction() {
+    
+    public String getAction(){
         return this.action;
     }
-
+    
     /**
      *  <p>Either <code>deliveryId</code> or <code>deliveryKey</code> is required for this update action.</p>
      */
-
-    public String getDeliveryId() {
+    
+    public String getDeliveryId(){
         return this.deliveryId;
     }
-
+    
     /**
      *  <p>Either <code>deliveryId</code> or <code>deliveryKey</code> is required for this update action.</p>
      */
-
-    public String getDeliveryKey() {
+    
+    public String getDeliveryKey(){
         return this.deliveryKey;
     }
-
+    
     /**
      *  <p>Name of the Custom Field.</p>
      */
-
-    public String getName() {
+    
+    public String getName(){
         return this.name;
     }
-
+    
     /**
      *  <p>If <code>value</code> is absent or <code>null</code>, this field will be removed if it exists. Removing a field that does not exist returns an InvalidOperation error. If <code>value</code> is provided, it is set for the field defined by <code>name</code>.</p>
      */
-
-    public java.lang.Object getValue() {
+    
+    public java.lang.Object getValue(){
         return this.value;
     }
 
-    public void setDeliveryId(final String deliveryId) {
+    
+    public void setDeliveryId(final String deliveryId){
         this.deliveryId = deliveryId;
     }
-
-    public void setDeliveryKey(final String deliveryKey) {
+    
+    
+    public void setDeliveryKey(final String deliveryKey){
         this.deliveryKey = deliveryKey;
     }
-
-    public void setName(final String name) {
+    
+    
+    public void setName(final String name){
         this.name = name;
     }
-
-    public void setValue(final java.lang.Object value) {
+    
+    
+    public void setValue(final java.lang.Object value){
         this.value = value;
     }
 
     @Override
     public boolean equals(Object o) {
-        if (this == o)
-            return true;
-
-        if (o == null || getClass() != o.getClass())
-            return false;
-
+        if (this == o) return true;
+    
+        if (o == null || getClass() != o.getClass()) return false;
+    
         StagedOrderSetDeliveryCustomFieldActionImpl that = (StagedOrderSetDeliveryCustomFieldActionImpl) o;
-
-        return new EqualsBuilder().append(action, that.action)
+    
+        return new EqualsBuilder()
+                .append(action, that.action)
                 .append(deliveryId, that.deliveryId)
                 .append(deliveryKey, that.deliveryKey)
                 .append(name, that.name)
                 .append(value, that.value)
                 .isEquals();
     }
-
+    
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(action)
-                .append(deliveryId)
-                .append(deliveryKey)
-                .append(name)
-                .append(value)
-                .toHashCode();
+        return new HashCodeBuilder(17, 37)
+            .append(action)
+            .append(deliveryId)
+            .append(deliveryKey)
+            .append(name)
+            .append(value)
+            .toHashCode();
     }
 
 }

@@ -1,17 +1,21 @@
-
 package com.commercetools.api.models.cart;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
+import com.commercetools.api.models.cart.CartUpdateAction;
+import com.commercetools.api.models.cart.ShippingRateInputDraft;
+import com.commercetools.api.models.cart.CartSetShippingRateInputActionImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Input used to select a ShippingRatePriceTier. If no matching tier can be found, or the input is not set, the default price for the shipping rate is used.</p>
@@ -23,9 +27,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     CartSetShippingRateInputAction cartSetShippingRateInputAction = CartSetShippingRateInputAction.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = CartSetShippingRateInputActionImpl.class)
 public interface CartSetShippingRateInputAction extends CartUpdateAction {
 
@@ -56,16 +63,18 @@ public interface CartSetShippingRateInputAction extends CartUpdateAction {
      *  </ul>
      * @param shippingRateInput value to be set
      */
-
+    
     public void setShippingRateInput(final ShippingRateInputDraft shippingRateInput);
+    
 
     /**
      * factory method
      * @return instance of CartSetShippingRateInputAction
      */
-    public static CartSetShippingRateInputAction of() {
+    public static CartSetShippingRateInputAction of(){
         return new CartSetShippingRateInputActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy CartSetShippingRateInputAction
@@ -89,8 +98,7 @@ public interface CartSetShippingRateInputAction extends CartUpdateAction {
             return null;
         }
         CartSetShippingRateInputActionImpl instance = new CartSetShippingRateInputActionImpl();
-        instance.setShippingRateInput(
-            com.commercetools.api.models.cart.ShippingRateInputDraft.deepCopy(template.getShippingRateInput()));
+        instance.setShippingRateInput(com.commercetools.api.models.cart.ShippingRateInputDraft.deepCopy(template.getShippingRateInput()));
         return instance;
     }
 
@@ -101,7 +109,7 @@ public interface CartSetShippingRateInputAction extends CartUpdateAction {
     public static CartSetShippingRateInputActionBuilder builder() {
         return CartSetShippingRateInputActionBuilder.of();
     }
-
+    
     /**
      * create builder for CartSetShippingRateInputAction instance
      * @param template instance with prefilled values for the builder
@@ -110,6 +118,7 @@ public interface CartSetShippingRateInputAction extends CartUpdateAction {
     public static CartSetShippingRateInputActionBuilder builder(final CartSetShippingRateInputAction template) {
         return CartSetShippingRateInputActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -120,11 +129,11 @@ public interface CartSetShippingRateInputAction extends CartUpdateAction {
     default <T> T withCartSetShippingRateInputAction(Function<CartSetShippingRateInputAction, T> helper) {
         return helper.apply(this);
     }
-
     public static CartSetShippingRateInputAction ofUnset() {
         return CartSetShippingRateInputAction.of();
     }
-
+    
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

@@ -1,9 +1,11 @@
-
 package com.commercetools.api.predicates.query.product;
 
 import com.commercetools.api.predicates.query.*;
 
-public class CategoryOrderHintsQueryBuilderDsl {
+import java.util.function.Function;
+
+
+public class CategoryOrderHintsQueryBuilderDsl  {
     public CategoryOrderHintsQueryBuilderDsl() {
     }
 
@@ -11,4 +13,5 @@ public class CategoryOrderHintsQueryBuilderDsl {
         return new CategoryOrderHintsQueryBuilderDsl();
     }
 
+    
 }

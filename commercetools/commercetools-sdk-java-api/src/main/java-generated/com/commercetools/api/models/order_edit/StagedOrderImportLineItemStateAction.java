@@ -1,21 +1,21 @@
-
 package com.commercetools.api.models.order_edit;
-
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-import java.util.stream.Collectors;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.order.ItemState;
 import com.commercetools.api.models.order.StagedOrderUpdateAction;
+import com.commercetools.api.models.order_edit.StagedOrderImportLineItemStateActionImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * StagedOrderImportLineItemStateAction
@@ -29,9 +29,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .plusState(stateBuilder -> stateBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = StagedOrderImportLineItemStateActionImpl.class)
 public interface StagedOrderImportLineItemStateAction extends StagedOrderUpdateAction {
 
@@ -47,7 +50,6 @@ public interface StagedOrderImportLineItemStateAction extends StagedOrderUpdateA
     @NotNull
     @JsonProperty("lineItemId")
     public String getLineItemId();
-
     /**
      *
      * @return state
@@ -61,31 +63,32 @@ public interface StagedOrderImportLineItemStateAction extends StagedOrderUpdateA
      * set lineItemId
      * @param lineItemId value to be set
      */
-
+    
     public void setLineItemId(final String lineItemId);
-
+    
+    
     /**
      * set state
      * @param state values to be set
      */
-
+    
     @JsonIgnore
-    public void setState(final ItemState... state);
-
+    public void setState(final ItemState ...state);
     /**
      * set state
      * @param state values to be set
      */
-
+    
     public void setState(final List<ItemState> state);
 
     /**
      * factory method
      * @return instance of StagedOrderImportLineItemStateAction
      */
-    public static StagedOrderImportLineItemStateAction of() {
+    public static StagedOrderImportLineItemStateAction of(){
         return new StagedOrderImportLineItemStateActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy StagedOrderImportLineItemStateAction
@@ -105,17 +108,14 @@ public interface StagedOrderImportLineItemStateAction extends StagedOrderUpdateA
      * @return copy instance
      */
     @Nullable
-    public static StagedOrderImportLineItemStateAction deepCopy(
-            @Nullable final StagedOrderImportLineItemStateAction template) {
+    public static StagedOrderImportLineItemStateAction deepCopy(@Nullable final StagedOrderImportLineItemStateAction template) {
         if (template == null) {
             return null;
         }
         StagedOrderImportLineItemStateActionImpl instance = new StagedOrderImportLineItemStateActionImpl();
         instance.setLineItemId(template.getLineItemId());
         instance.setState(Optional.ofNullable(template.getState())
-                .map(t -> t.stream()
-                        .map(com.commercetools.api.models.order.ItemState::deepCopy)
-                        .collect(Collectors.toList()))
+                .map(t -> t.stream().map(com.commercetools.api.models.order.ItemState::deepCopy).collect(Collectors.toList()))
                 .orElse(null));
         return instance;
     }
@@ -127,16 +127,16 @@ public interface StagedOrderImportLineItemStateAction extends StagedOrderUpdateA
     public static StagedOrderImportLineItemStateActionBuilder builder() {
         return StagedOrderImportLineItemStateActionBuilder.of();
     }
-
+    
     /**
      * create builder for StagedOrderImportLineItemStateAction instance
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static StagedOrderImportLineItemStateActionBuilder builder(
-            final StagedOrderImportLineItemStateAction template) {
+    public static StagedOrderImportLineItemStateActionBuilder builder(final StagedOrderImportLineItemStateAction template) {
         return StagedOrderImportLineItemStateActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -147,7 +147,7 @@ public interface StagedOrderImportLineItemStateAction extends StagedOrderUpdateA
     default <T> T withStagedOrderImportLineItemStateAction(Function<StagedOrderImportLineItemStateAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

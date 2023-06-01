@@ -1,10 +1,11 @@
-
 package com.commercetools.api.models.me;
 
-import java.util.*;
-
+import com.commercetools.api.models.me.MyCustomerUpdateAction;
+import com.commercetools.api.models.me.MyCustomerSetFirstNameAction;
 import javax.annotation.Nullable;
-
+import java.util.*;
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -17,32 +18,39 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     MyCustomerSetFirstNameAction myCustomerSetFirstNameAction = MyCustomerSetFirstNameAction.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class MyCustomerSetFirstNameActionBuilder implements Builder<MyCustomerSetFirstNameAction> {
 
+    
     @Nullable
     private String firstName;
 
+    
     /**
      *  <p>Value to set. If empty, any existing value is removed.</p>
      * @param firstName value to be set
      * @return Builder
      */
-
+    
     public MyCustomerSetFirstNameActionBuilder firstName(@Nullable final String firstName) {
         this.firstName = firstName;
         return this;
     }
+    
+    
 
     /**
      *  <p>Value to set. If empty, any existing value is removed.</p>
      * @return firstName
      */
-
+    
     @Nullable
-    public String getFirstName() {
+    public String getFirstName(){
         return this.firstName;
     }
 
@@ -53,7 +61,7 @@ public class MyCustomerSetFirstNameActionBuilder implements Builder<MyCustomerSe
     public MyCustomerSetFirstNameAction build() {
         return new MyCustomerSetFirstNameActionImpl(firstName);
     }
-
+    
     /**
      * builds MyCustomerSetFirstNameAction without checking for non-null required values
      * @return MyCustomerSetFirstNameAction
@@ -64,7 +72,7 @@ public class MyCustomerSetFirstNameActionBuilder implements Builder<MyCustomerSe
 
     /**
      * factory method for an instance of MyCustomerSetFirstNameActionBuilder
-     * @return builder
+     * @return builder 
      */
     public static MyCustomerSetFirstNameActionBuilder of() {
         return new MyCustomerSetFirstNameActionBuilder();

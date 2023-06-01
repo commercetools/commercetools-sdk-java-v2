@@ -1,17 +1,21 @@
-
 package com.commercetools.api.models.business_unit;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
+import com.commercetools.api.models.business_unit.BusinessUnitUpdateAction;
+import java.lang.Object;
+import com.commercetools.api.models.business_unit.BusinessUnitSetCustomFieldActionImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * BusinessUnitSetCustomFieldAction
@@ -24,9 +28,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .name("{name}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = BusinessUnitSetCustomFieldActionImpl.class)
 public interface BusinessUnitSetCustomFieldAction extends BusinessUnitUpdateAction {
 
@@ -42,12 +49,11 @@ public interface BusinessUnitSetCustomFieldAction extends BusinessUnitUpdateActi
     @NotNull
     @JsonProperty("name")
     public String getName();
-
     /**
      *  <p>If <code>value</code> is absent or <code>null</code>, this field will be removed if it exists. Trying to remove a field that does not exist will fail with an InvalidOperation error. If <code>value</code> is provided, it is set for the field defined by <code>name</code>.</p>
      * @return value
      */
-
+    
     @JsonProperty("value")
     public Object getValue();
 
@@ -55,23 +61,26 @@ public interface BusinessUnitSetCustomFieldAction extends BusinessUnitUpdateActi
      *  <p>Name of the Custom Field.</p>
      * @param name value to be set
      */
-
+    
     public void setName(final String name);
-
+    
+    
     /**
      *  <p>If <code>value</code> is absent or <code>null</code>, this field will be removed if it exists. Trying to remove a field that does not exist will fail with an InvalidOperation error. If <code>value</code> is provided, it is set for the field defined by <code>name</code>.</p>
      * @param value value to be set
      */
-
+    
     public void setValue(final Object value);
+    
 
     /**
      * factory method
      * @return instance of BusinessUnitSetCustomFieldAction
      */
-    public static BusinessUnitSetCustomFieldAction of() {
+    public static BusinessUnitSetCustomFieldAction of(){
         return new BusinessUnitSetCustomFieldActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy BusinessUnitSetCustomFieldAction
@@ -108,7 +117,7 @@ public interface BusinessUnitSetCustomFieldAction extends BusinessUnitUpdateActi
     public static BusinessUnitSetCustomFieldActionBuilder builder() {
         return BusinessUnitSetCustomFieldActionBuilder.of();
     }
-
+    
     /**
      * create builder for BusinessUnitSetCustomFieldAction instance
      * @param template instance with prefilled values for the builder
@@ -117,6 +126,7 @@ public interface BusinessUnitSetCustomFieldAction extends BusinessUnitUpdateActi
     public static BusinessUnitSetCustomFieldActionBuilder builder(final BusinessUnitSetCustomFieldAction template) {
         return BusinessUnitSetCustomFieldActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -127,11 +137,11 @@ public interface BusinessUnitSetCustomFieldAction extends BusinessUnitUpdateActi
     default <T> T withBusinessUnitSetCustomFieldAction(Function<BusinessUnitSetCustomFieldAction, T> helper) {
         return helper.apply(this);
     }
-
     public static BusinessUnitSetCustomFieldAction ofUnset(final String name) {
         return BusinessUnitSetCustomFieldActionBuilder.of().name(name).build();
     }
-
+    
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

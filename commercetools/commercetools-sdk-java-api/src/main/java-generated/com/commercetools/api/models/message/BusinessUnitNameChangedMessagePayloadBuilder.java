@@ -1,8 +1,11 @@
-
 package com.commercetools.api.models.message;
 
+import com.commercetools.api.models.message.MessagePayload;
+import com.commercetools.api.models.message.BusinessUnitNameChangedMessagePayload;
+import javax.annotation.Nullable;
 import java.util.*;
-
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -16,30 +19,39 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .name("{name}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class BusinessUnitNameChangedMessagePayloadBuilder implements Builder<BusinessUnitNameChangedMessagePayload> {
 
+    
+    
     private String name;
 
+    
     /**
      *  <p>Updated name of the Business Unit.</p>
      * @param name value to be set
      * @return Builder
      */
-
-    public BusinessUnitNameChangedMessagePayloadBuilder name(final String name) {
+    
+    public BusinessUnitNameChangedMessagePayloadBuilder name( final String name) {
         this.name = name;
         return this;
     }
+    
+    
 
     /**
      *  <p>Updated name of the Business Unit.</p>
      * @return name
      */
-
-    public String getName() {
+    
+    
+    public String getName(){
         return this.name;
     }
 
@@ -51,7 +63,7 @@ public class BusinessUnitNameChangedMessagePayloadBuilder implements Builder<Bus
         Objects.requireNonNull(name, BusinessUnitNameChangedMessagePayload.class + ": name is missing");
         return new BusinessUnitNameChangedMessagePayloadImpl(name);
     }
-
+    
     /**
      * builds BusinessUnitNameChangedMessagePayload without checking for non-null required values
      * @return BusinessUnitNameChangedMessagePayload
@@ -62,7 +74,7 @@ public class BusinessUnitNameChangedMessagePayloadBuilder implements Builder<Bus
 
     /**
      * factory method for an instance of BusinessUnitNameChangedMessagePayloadBuilder
-     * @return builder
+     * @return builder 
      */
     public static BusinessUnitNameChangedMessagePayloadBuilder of() {
         return new BusinessUnitNameChangedMessagePayloadBuilder();
@@ -73,8 +85,7 @@ public class BusinessUnitNameChangedMessagePayloadBuilder implements Builder<Bus
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static BusinessUnitNameChangedMessagePayloadBuilder of(
-            final BusinessUnitNameChangedMessagePayload template) {
+    public static BusinessUnitNameChangedMessagePayloadBuilder of(final BusinessUnitNameChangedMessagePayload template) {
         BusinessUnitNameChangedMessagePayloadBuilder builder = new BusinessUnitNameChangedMessagePayloadBuilder();
         builder.name = template.getName();
         return builder;

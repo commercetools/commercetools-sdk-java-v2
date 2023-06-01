@@ -1,19 +1,21 @@
-
 package com.commercetools.api.models.message;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
 import com.commercetools.api.models.cart.CustomLineItem;
+import com.commercetools.api.models.message.OrderMessage;
+import com.commercetools.api.models.message.OrderCustomLineItemRemovedMessageImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Generated after a successful Remove Custom Line Item update action.</p>
@@ -34,9 +36,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .customLineItem(customLineItemBuilder -> customLineItemBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = OrderCustomLineItemRemovedMessageImpl.class)
 public interface OrderCustomLineItemRemovedMessage extends OrderMessage {
 
@@ -52,7 +57,6 @@ public interface OrderCustomLineItemRemovedMessage extends OrderMessage {
     @NotNull
     @JsonProperty("customLineItemId")
     public String getCustomLineItemId();
-
     /**
      *  <p>Custom Line Item that was removed from the Order.</p>
      * @return customLineItem
@@ -66,23 +70,26 @@ public interface OrderCustomLineItemRemovedMessage extends OrderMessage {
      *  <p>Unique identifier of the Custom Line Item.</p>
      * @param customLineItemId value to be set
      */
-
+    
     public void setCustomLineItemId(final String customLineItemId);
-
+    
+    
     /**
      *  <p>Custom Line Item that was removed from the Order.</p>
      * @param customLineItem value to be set
      */
-
+    
     public void setCustomLineItem(final CustomLineItem customLineItem);
+    
 
     /**
      * factory method
      * @return instance of OrderCustomLineItemRemovedMessage
      */
-    public static OrderCustomLineItemRemovedMessage of() {
+    public static OrderCustomLineItemRemovedMessage of(){
         return new OrderCustomLineItemRemovedMessageImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy OrderCustomLineItemRemovedMessage
@@ -112,8 +119,7 @@ public interface OrderCustomLineItemRemovedMessage extends OrderMessage {
      * @return copy instance
      */
     @Nullable
-    public static OrderCustomLineItemRemovedMessage deepCopy(
-            @Nullable final OrderCustomLineItemRemovedMessage template) {
+    public static OrderCustomLineItemRemovedMessage deepCopy(@Nullable final OrderCustomLineItemRemovedMessage template) {
         if (template == null) {
             return null;
         }
@@ -122,17 +128,14 @@ public interface OrderCustomLineItemRemovedMessage extends OrderMessage {
         instance.setVersion(template.getVersion());
         instance.setCreatedAt(template.getCreatedAt());
         instance.setLastModifiedAt(template.getLastModifiedAt());
-        instance.setLastModifiedBy(
-            com.commercetools.api.models.common.LastModifiedBy.deepCopy(template.getLastModifiedBy()));
+        instance.setLastModifiedBy(com.commercetools.api.models.common.LastModifiedBy.deepCopy(template.getLastModifiedBy()));
         instance.setCreatedBy(com.commercetools.api.models.common.CreatedBy.deepCopy(template.getCreatedBy()));
         instance.setSequenceNumber(template.getSequenceNumber());
         instance.setResource(com.commercetools.api.models.common.Reference.deepCopy(template.getResource()));
         instance.setResourceVersion(template.getResourceVersion());
-        instance.setResourceUserProvidedIdentifiers(com.commercetools.api.models.message.UserProvidedIdentifiers
-                .deepCopy(template.getResourceUserProvidedIdentifiers()));
+        instance.setResourceUserProvidedIdentifiers(com.commercetools.api.models.message.UserProvidedIdentifiers.deepCopy(template.getResourceUserProvidedIdentifiers()));
         instance.setCustomLineItemId(template.getCustomLineItemId());
-        instance.setCustomLineItem(
-            com.commercetools.api.models.cart.CustomLineItem.deepCopy(template.getCustomLineItem()));
+        instance.setCustomLineItem(com.commercetools.api.models.cart.CustomLineItem.deepCopy(template.getCustomLineItem()));
         return instance;
     }
 
@@ -143,7 +146,7 @@ public interface OrderCustomLineItemRemovedMessage extends OrderMessage {
     public static OrderCustomLineItemRemovedMessageBuilder builder() {
         return OrderCustomLineItemRemovedMessageBuilder.of();
     }
-
+    
     /**
      * create builder for OrderCustomLineItemRemovedMessage instance
      * @param template instance with prefilled values for the builder
@@ -152,6 +155,7 @@ public interface OrderCustomLineItemRemovedMessage extends OrderMessage {
     public static OrderCustomLineItemRemovedMessageBuilder builder(final OrderCustomLineItemRemovedMessage template) {
         return OrderCustomLineItemRemovedMessageBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -162,7 +166,7 @@ public interface OrderCustomLineItemRemovedMessage extends OrderMessage {
     default <T> T withOrderCustomLineItemRemovedMessage(Function<OrderCustomLineItemRemovedMessage, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

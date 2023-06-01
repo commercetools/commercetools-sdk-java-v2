@@ -1,9 +1,11 @@
-
 package com.commercetools.api.predicates.query.order_edit;
 
 import com.commercetools.api.predicates.query.*;
 
-public class StagedOrderSetReturnShipmentStateActionQueryBuilderDsl {
+import java.util.function.Function;
+
+
+public class StagedOrderSetReturnShipmentStateActionQueryBuilderDsl  {
     public StagedOrderSetReturnShipmentStateActionQueryBuilderDsl() {
     }
 
@@ -12,21 +14,16 @@ public class StagedOrderSetReturnShipmentStateActionQueryBuilderDsl {
     }
 
     public StringComparisonPredicateBuilder<StagedOrderSetReturnShipmentStateActionQueryBuilderDsl> action() {
-        return new StringComparisonPredicateBuilder<>(
-            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("action")),
-            p -> new CombinationQueryPredicate<>(p, StagedOrderSetReturnShipmentStateActionQueryBuilderDsl::of));
+        return new StringComparisonPredicateBuilder<>(BinaryQueryPredicate.of().left(new ConstantQueryPredicate("action")),
+        p -> new CombinationQueryPredicate<>(p, StagedOrderSetReturnShipmentStateActionQueryBuilderDsl::of));
     }
-
     public StringComparisonPredicateBuilder<StagedOrderSetReturnShipmentStateActionQueryBuilderDsl> returnItemId() {
-        return new StringComparisonPredicateBuilder<>(
-            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("returnItemId")),
-            p -> new CombinationQueryPredicate<>(p, StagedOrderSetReturnShipmentStateActionQueryBuilderDsl::of));
+        return new StringComparisonPredicateBuilder<>(BinaryQueryPredicate.of().left(new ConstantQueryPredicate("returnItemId")),
+        p -> new CombinationQueryPredicate<>(p, StagedOrderSetReturnShipmentStateActionQueryBuilderDsl::of));
     }
-
     public StringComparisonPredicateBuilder<StagedOrderSetReturnShipmentStateActionQueryBuilderDsl> shipmentState() {
-        return new StringComparisonPredicateBuilder<>(
-            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("shipmentState")),
-            p -> new CombinationQueryPredicate<>(p, StagedOrderSetReturnShipmentStateActionQueryBuilderDsl::of));
+        return new StringComparisonPredicateBuilder<>(BinaryQueryPredicate.of().left(new ConstantQueryPredicate("shipmentState")),
+        p -> new CombinationQueryPredicate<>(p, StagedOrderSetReturnShipmentStateActionQueryBuilderDsl::of));
     }
-
+    
 }

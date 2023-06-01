@@ -1,9 +1,12 @@
-
 package com.commercetools.api.models.product_discount;
 
+import com.commercetools.api.models.common.Money;
+import com.commercetools.api.models.product_discount.ProductDiscountValueDraft;
+import com.commercetools.api.models.product_discount.ProductDiscountValueAbsoluteDraft;
+import javax.annotation.Nullable;
 import java.util.*;
 import java.util.function.Function;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -17,11 +20,16 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .plusMoney(moneyBuilder -> moneyBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class ProductDiscountValueAbsoluteDraftBuilder implements Builder<ProductDiscountValueAbsoluteDraft> {
 
+    
+    
     private java.util.List<com.commercetools.api.models.common.Money> money;
 
     /**
@@ -29,95 +37,93 @@ public class ProductDiscountValueAbsoluteDraftBuilder implements Builder<Product
      * @param money value to be set
      * @return Builder
      */
-
-    public ProductDiscountValueAbsoluteDraftBuilder money(final com.commercetools.api.models.common.Money... money) {
+    
+    public ProductDiscountValueAbsoluteDraftBuilder money( final com.commercetools.api.models.common.Money ...money) {
         this.money = new ArrayList<>(Arrays.asList(money));
         return this;
     }
-
+    
     /**
      *  <p>Money values in different currencies. An absolute ProductDiscount will only match a price if this array contains a value with the same currency. For example, if it contains 10&euro; and 15$, the matching &euro; price will be decreased by 10&euro; and the matching $ price will be decreased by 15$.</p>
      * @param money value to be set
      * @return Builder
      */
-
-    public ProductDiscountValueAbsoluteDraftBuilder money(
-            final java.util.List<com.commercetools.api.models.common.Money> money) {
+    
+    public ProductDiscountValueAbsoluteDraftBuilder money( final java.util.List<com.commercetools.api.models.common.Money> money) {
         this.money = money;
         return this;
     }
-
+    
     /**
      *  <p>Money values in different currencies. An absolute ProductDiscount will only match a price if this array contains a value with the same currency. For example, if it contains 10&euro; and 15$, the matching &euro; price will be decreased by 10&euro; and the matching $ price will be decreased by 15$.</p>
      * @param money value to be set
      * @return Builder
      */
-
-    public ProductDiscountValueAbsoluteDraftBuilder plusMoney(
-            final com.commercetools.api.models.common.Money... money) {
+    
+    public ProductDiscountValueAbsoluteDraftBuilder plusMoney( final com.commercetools.api.models.common.Money ...money) {
         if (this.money == null) {
             this.money = new ArrayList<>();
         }
         this.money.addAll(Arrays.asList(money));
         return this;
     }
-
+    
+    
+    
     /**
      *  <p>Money values in different currencies. An absolute ProductDiscount will only match a price if this array contains a value with the same currency. For example, if it contains 10&euro; and 15$, the matching &euro; price will be decreased by 10&euro; and the matching $ price will be decreased by 15$.</p>
      * @param builder function to build the money value
      * @return Builder
      */
-
-    public ProductDiscountValueAbsoluteDraftBuilder plusMoney(
-            Function<com.commercetools.api.models.common.MoneyBuilder, com.commercetools.api.models.common.MoneyBuilder> builder) {
+    
+    public ProductDiscountValueAbsoluteDraftBuilder plusMoney(Function<com.commercetools.api.models.common.MoneyBuilder, com.commercetools.api.models.common.MoneyBuilder> builder) {
         if (this.money == null) {
             this.money = new ArrayList<>();
         }
         this.money.add(builder.apply(com.commercetools.api.models.common.MoneyBuilder.of()).build());
         return this;
     }
-
+    
     /**
      *  <p>Money values in different currencies. An absolute ProductDiscount will only match a price if this array contains a value with the same currency. For example, if it contains 10&euro; and 15$, the matching &euro; price will be decreased by 10&euro; and the matching $ price will be decreased by 15$.</p>
      * @param builder function to build the money value
      * @return Builder
      */
-
-    public ProductDiscountValueAbsoluteDraftBuilder withMoney(
-            Function<com.commercetools.api.models.common.MoneyBuilder, com.commercetools.api.models.common.MoneyBuilder> builder) {
+    
+    public ProductDiscountValueAbsoluteDraftBuilder withMoney(Function<com.commercetools.api.models.common.MoneyBuilder, com.commercetools.api.models.common.MoneyBuilder> builder) {
         this.money = new ArrayList<>();
         this.money.add(builder.apply(com.commercetools.api.models.common.MoneyBuilder.of()).build());
         return this;
     }
-
+    
     /**
      *  <p>Money values in different currencies. An absolute ProductDiscount will only match a price if this array contains a value with the same currency. For example, if it contains 10&euro; and 15$, the matching &euro; price will be decreased by 10&euro; and the matching $ price will be decreased by 15$.</p>
      * @param builder function to build the money value
      * @return Builder
      */
-
-    public ProductDiscountValueAbsoluteDraftBuilder addMoney(
-            Function<com.commercetools.api.models.common.MoneyBuilder, com.commercetools.api.models.common.Money> builder) {
+    
+    public ProductDiscountValueAbsoluteDraftBuilder addMoney(Function<com.commercetools.api.models.common.MoneyBuilder, com.commercetools.api.models.common.Money> builder) {
         return plusMoney(builder.apply(com.commercetools.api.models.common.MoneyBuilder.of()));
     }
-
+    
     /**
      *  <p>Money values in different currencies. An absolute ProductDiscount will only match a price if this array contains a value with the same currency. For example, if it contains 10&euro; and 15$, the matching &euro; price will be decreased by 10&euro; and the matching $ price will be decreased by 15$.</p>
      * @param builder function to build the money value
      * @return Builder
      */
-
-    public ProductDiscountValueAbsoluteDraftBuilder setMoney(
-            Function<com.commercetools.api.models.common.MoneyBuilder, com.commercetools.api.models.common.Money> builder) {
+    
+    public ProductDiscountValueAbsoluteDraftBuilder setMoney(Function<com.commercetools.api.models.common.MoneyBuilder, com.commercetools.api.models.common.Money> builder) {
         return money(builder.apply(com.commercetools.api.models.common.MoneyBuilder.of()));
     }
+                    
 
     /**
      *  <p>Money values in different currencies. An absolute ProductDiscount will only match a price if this array contains a value with the same currency. For example, if it contains 10&euro; and 15$, the matching &euro; price will be decreased by 10&euro; and the matching $ price will be decreased by 15$.</p>
      * @return money
      */
-
-    public java.util.List<com.commercetools.api.models.common.Money> getMoney() {
+    
+    
+    public java.util.List<com.commercetools.api.models.common.Money> getMoney(){
         return this.money;
     }
 
@@ -129,7 +135,7 @@ public class ProductDiscountValueAbsoluteDraftBuilder implements Builder<Product
         Objects.requireNonNull(money, ProductDiscountValueAbsoluteDraft.class + ": money is missing");
         return new ProductDiscountValueAbsoluteDraftImpl(money);
     }
-
+    
     /**
      * builds ProductDiscountValueAbsoluteDraft without checking for non-null required values
      * @return ProductDiscountValueAbsoluteDraft
@@ -140,7 +146,7 @@ public class ProductDiscountValueAbsoluteDraftBuilder implements Builder<Product
 
     /**
      * factory method for an instance of ProductDiscountValueAbsoluteDraftBuilder
-     * @return builder
+     * @return builder 
      */
     public static ProductDiscountValueAbsoluteDraftBuilder of() {
         return new ProductDiscountValueAbsoluteDraftBuilder();

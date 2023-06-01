@@ -1,9 +1,11 @@
-
 package com.commercetools.api.models.order;
 
+import com.commercetools.api.models.common.Money;
+import com.commercetools.api.models.order.TaxedItemPriceDraft;
+import javax.annotation.Nullable;
 import java.util.*;
 import java.util.function.Function;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -18,100 +20,111 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .totalGross(totalGrossBuilder -> totalGrossBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class TaxedItemPriceDraftBuilder implements Builder<TaxedItemPriceDraft> {
 
+    
+    
     private com.commercetools.api.models.common.Money totalNet;
-
+    
+    
+    
     private com.commercetools.api.models.common.Money totalGross;
 
+    
     /**
      *  <p>Draft type that stores amounts only in cent precision for the specified currency.</p>
      * @param builder function to build the totalNet value
      * @return Builder
      */
-
-    public TaxedItemPriceDraftBuilder totalNet(
-            Function<com.commercetools.api.models.common.MoneyBuilder, com.commercetools.api.models.common.MoneyBuilder> builder) {
+    
+    public TaxedItemPriceDraftBuilder totalNet(Function<com.commercetools.api.models.common.MoneyBuilder, com.commercetools.api.models.common.MoneyBuilder> builder) {
         this.totalNet = builder.apply(com.commercetools.api.models.common.MoneyBuilder.of()).build();
         return this;
     }
-
+    
     /**
      *  <p>Draft type that stores amounts only in cent precision for the specified currency.</p>
      * @param builder function to build the totalNet value
      * @return Builder
      */
-
-    public TaxedItemPriceDraftBuilder withTotalNet(
-            Function<com.commercetools.api.models.common.MoneyBuilder, com.commercetools.api.models.common.Money> builder) {
+    
+    public TaxedItemPriceDraftBuilder withTotalNet(Function<com.commercetools.api.models.common.MoneyBuilder, com.commercetools.api.models.common.Money> builder) {
         this.totalNet = builder.apply(com.commercetools.api.models.common.MoneyBuilder.of());
         return this;
     }
-
+                    
     /**
      *  <p>Draft type that stores amounts only in cent precision for the specified currency.</p>
      * @param totalNet value to be set
      * @return Builder
      */
-
-    public TaxedItemPriceDraftBuilder totalNet(final com.commercetools.api.models.common.Money totalNet) {
+    
+    public TaxedItemPriceDraftBuilder totalNet( final com.commercetools.api.models.common.Money totalNet) {
         this.totalNet = totalNet;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Draft type that stores amounts only in cent precision for the specified currency.</p>
      * @param builder function to build the totalGross value
      * @return Builder
      */
-
-    public TaxedItemPriceDraftBuilder totalGross(
-            Function<com.commercetools.api.models.common.MoneyBuilder, com.commercetools.api.models.common.MoneyBuilder> builder) {
+    
+    public TaxedItemPriceDraftBuilder totalGross(Function<com.commercetools.api.models.common.MoneyBuilder, com.commercetools.api.models.common.MoneyBuilder> builder) {
         this.totalGross = builder.apply(com.commercetools.api.models.common.MoneyBuilder.of()).build();
         return this;
     }
-
+    
     /**
      *  <p>Draft type that stores amounts only in cent precision for the specified currency.</p>
      * @param builder function to build the totalGross value
      * @return Builder
      */
-
-    public TaxedItemPriceDraftBuilder withTotalGross(
-            Function<com.commercetools.api.models.common.MoneyBuilder, com.commercetools.api.models.common.Money> builder) {
+    
+    public TaxedItemPriceDraftBuilder withTotalGross(Function<com.commercetools.api.models.common.MoneyBuilder, com.commercetools.api.models.common.Money> builder) {
         this.totalGross = builder.apply(com.commercetools.api.models.common.MoneyBuilder.of());
         return this;
     }
-
+                    
     /**
      *  <p>Draft type that stores amounts only in cent precision for the specified currency.</p>
      * @param totalGross value to be set
      * @return Builder
      */
-
-    public TaxedItemPriceDraftBuilder totalGross(final com.commercetools.api.models.common.Money totalGross) {
+    
+    public TaxedItemPriceDraftBuilder totalGross( final com.commercetools.api.models.common.Money totalGross) {
         this.totalGross = totalGross;
         return this;
     }
+    
+    
 
     /**
      *  <p>Draft type that stores amounts only in cent precision for the specified currency.</p>
      * @return totalNet
      */
-
-    public com.commercetools.api.models.common.Money getTotalNet() {
+    
+    
+    public com.commercetools.api.models.common.Money getTotalNet(){
         return this.totalNet;
     }
-
+    
     /**
      *  <p>Draft type that stores amounts only in cent precision for the specified currency.</p>
      * @return totalGross
      */
-
-    public com.commercetools.api.models.common.Money getTotalGross() {
+    
+    
+    public com.commercetools.api.models.common.Money getTotalGross(){
         return this.totalGross;
     }
 
@@ -124,7 +137,7 @@ public class TaxedItemPriceDraftBuilder implements Builder<TaxedItemPriceDraft> 
         Objects.requireNonNull(totalGross, TaxedItemPriceDraft.class + ": totalGross is missing");
         return new TaxedItemPriceDraftImpl(totalNet, totalGross);
     }
-
+    
     /**
      * builds TaxedItemPriceDraft without checking for non-null required values
      * @return TaxedItemPriceDraft
@@ -135,7 +148,7 @@ public class TaxedItemPriceDraftBuilder implements Builder<TaxedItemPriceDraft> 
 
     /**
      * factory method for an instance of TaxedItemPriceDraftBuilder
-     * @return builder
+     * @return builder 
      */
     public static TaxedItemPriceDraftBuilder of() {
         return new TaxedItemPriceDraftBuilder();

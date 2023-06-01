@@ -1,8 +1,11 @@
-
 package com.commercetools.api.models.product;
 
+import com.commercetools.api.models.product.ProductUpdateAction;
+import com.commercetools.api.models.product.ProductUnpublishAction;
+import javax.annotation.Nullable;
 import java.util.*;
-
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -15,10 +18,16 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     ProductUnpublishAction productUnpublishAction = ProductUnpublishAction.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class ProductUnpublishActionBuilder implements Builder<ProductUnpublishAction> {
+
+
+
 
     /**
      * builds ProductUnpublishAction with checking for non-null required values
@@ -27,7 +36,7 @@ public class ProductUnpublishActionBuilder implements Builder<ProductUnpublishAc
     public ProductUnpublishAction build() {
         return new ProductUnpublishActionImpl();
     }
-
+    
     /**
      * builds ProductUnpublishAction without checking for non-null required values
      * @return ProductUnpublishAction
@@ -38,7 +47,7 @@ public class ProductUnpublishActionBuilder implements Builder<ProductUnpublishAc
 
     /**
      * factory method for an instance of ProductUnpublishActionBuilder
-     * @return builder
+     * @return builder 
      */
     public static ProductUnpublishActionBuilder of() {
         return new ProductUnpublishActionBuilder();

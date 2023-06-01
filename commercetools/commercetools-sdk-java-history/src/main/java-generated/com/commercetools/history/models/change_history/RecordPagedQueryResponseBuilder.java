@@ -1,9 +1,11 @@
-
 package com.commercetools.history.models.change_history;
 
+import com.commercetools.history.models.change_history.Record;
+import com.commercetools.history.models.change_history.RecordPagedQueryResponse;
+import javax.annotation.Nullable;
 import java.util.*;
 import java.util.function.Function;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -21,196 +23,222 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .plusResults(resultsBuilder -> resultsBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class RecordPagedQueryResponseBuilder implements Builder<RecordPagedQueryResponse> {
 
+    
+    
     private Integer limit;
-
+    
+    
+    
     private Integer count;
-
+    
+    
+    
     private Integer total;
-
+    
+    
+    
     private Integer offset;
-
+    
+    
+    
     private java.util.List<com.commercetools.history.models.change_history.Record> results;
 
+    
     /**
      *  <p>Number of results requested.</p>
      * @param limit value to be set
      * @return Builder
      */
-
-    public RecordPagedQueryResponseBuilder limit(final Integer limit) {
+    
+    public RecordPagedQueryResponseBuilder limit( final Integer limit) {
         this.limit = limit;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Actual number of results returned.</p>
      * @param count value to be set
      * @return Builder
      */
-
-    public RecordPagedQueryResponseBuilder count(final Integer count) {
+    
+    public RecordPagedQueryResponseBuilder count( final Integer count) {
         this.count = count;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Total number of results matching the query. This number is an estimation and not strongly consistent.</p>
      * @param total value to be set
      * @return Builder
      */
-
-    public RecordPagedQueryResponseBuilder total(final Integer total) {
+    
+    public RecordPagedQueryResponseBuilder total( final Integer total) {
         this.total = total;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Number of elements skipped.</p>
      * @param offset value to be set
      * @return Builder
      */
-
-    public RecordPagedQueryResponseBuilder offset(final Integer offset) {
+    
+    public RecordPagedQueryResponseBuilder offset( final Integer offset) {
         this.offset = offset;
         return this;
     }
-
+    
+    
+    
     /**
      * set values to the results
      * @param results value to be set
      * @return Builder
      */
-
-    public RecordPagedQueryResponseBuilder results(
-            final com.commercetools.history.models.change_history.Record... results) {
+    
+    public RecordPagedQueryResponseBuilder results( final com.commercetools.history.models.change_history.Record ...results) {
         this.results = new ArrayList<>(Arrays.asList(results));
         return this;
     }
-
+    
     /**
      * set value to the results
      * @param results value to be set
      * @return Builder
      */
-
-    public RecordPagedQueryResponseBuilder results(
-            final java.util.List<com.commercetools.history.models.change_history.Record> results) {
+    
+    public RecordPagedQueryResponseBuilder results( final java.util.List<com.commercetools.history.models.change_history.Record> results) {
         this.results = results;
         return this;
     }
-
+    
     /**
      * add values to the results
      * @param results value to be set
      * @return Builder
      */
-
-    public RecordPagedQueryResponseBuilder plusResults(
-            final com.commercetools.history.models.change_history.Record... results) {
+    
+    public RecordPagedQueryResponseBuilder plusResults( final com.commercetools.history.models.change_history.Record ...results) {
         if (this.results == null) {
             this.results = new ArrayList<>();
         }
         this.results.addAll(Arrays.asList(results));
         return this;
     }
-
+    
+    
+    
     /**
      * add the value to the results using the builder function
      * @param builder function to build the results value
      * @return Builder
      */
-
-    public RecordPagedQueryResponseBuilder plusResults(
-            Function<com.commercetools.history.models.change_history.RecordBuilder, com.commercetools.history.models.change_history.RecordBuilder> builder) {
+    
+    public RecordPagedQueryResponseBuilder plusResults(Function<com.commercetools.history.models.change_history.RecordBuilder, com.commercetools.history.models.change_history.RecordBuilder> builder) {
         if (this.results == null) {
             this.results = new ArrayList<>();
         }
         this.results.add(builder.apply(com.commercetools.history.models.change_history.RecordBuilder.of()).build());
         return this;
     }
-
+    
     /**
      * set the value to the results using the builder function
      * @param builder function to build the results value
      * @return Builder
      */
-
-    public RecordPagedQueryResponseBuilder withResults(
-            Function<com.commercetools.history.models.change_history.RecordBuilder, com.commercetools.history.models.change_history.RecordBuilder> builder) {
+    
+    public RecordPagedQueryResponseBuilder withResults(Function<com.commercetools.history.models.change_history.RecordBuilder, com.commercetools.history.models.change_history.RecordBuilder> builder) {
         this.results = new ArrayList<>();
         this.results.add(builder.apply(com.commercetools.history.models.change_history.RecordBuilder.of()).build());
         return this;
     }
-
+    
     /**
      * add the value to the results using the builder function
      * @param builder function to build the results value
      * @return Builder
      */
-
-    public RecordPagedQueryResponseBuilder addResults(
-            Function<com.commercetools.history.models.change_history.RecordBuilder, com.commercetools.history.models.change_history.Record> builder) {
+    
+    public RecordPagedQueryResponseBuilder addResults(Function<com.commercetools.history.models.change_history.RecordBuilder, com.commercetools.history.models.change_history.Record> builder) {
         return plusResults(builder.apply(com.commercetools.history.models.change_history.RecordBuilder.of()));
     }
-
+    
     /**
      * set the value to the results using the builder function
      * @param builder function to build the results value
      * @return Builder
      */
-
-    public RecordPagedQueryResponseBuilder setResults(
-            Function<com.commercetools.history.models.change_history.RecordBuilder, com.commercetools.history.models.change_history.Record> builder) {
+    
+    public RecordPagedQueryResponseBuilder setResults(Function<com.commercetools.history.models.change_history.RecordBuilder, com.commercetools.history.models.change_history.Record> builder) {
         return results(builder.apply(com.commercetools.history.models.change_history.RecordBuilder.of()));
     }
+                    
 
     /**
      *  <p>Number of results requested.</p>
      * @return limit
      */
-
-    public Integer getLimit() {
+    
+    
+    public Integer getLimit(){
         return this.limit;
     }
-
+    
     /**
      *  <p>Actual number of results returned.</p>
      * @return count
      */
-
-    public Integer getCount() {
+    
+    
+    public Integer getCount(){
         return this.count;
     }
-
+    
     /**
      *  <p>Total number of results matching the query. This number is an estimation and not strongly consistent.</p>
      * @return total
      */
-
-    public Integer getTotal() {
+    
+    
+    public Integer getTotal(){
         return this.total;
     }
-
+    
     /**
      *  <p>Number of elements skipped.</p>
      * @return offset
      */
-
-    public Integer getOffset() {
+    
+    
+    public Integer getOffset(){
         return this.offset;
     }
-
+    
     /**
      * value of results}
      * @return results
      */
-
-    public java.util.List<com.commercetools.history.models.change_history.Record> getResults() {
+    
+    
+    public java.util.List<com.commercetools.history.models.change_history.Record> getResults(){
         return this.results;
     }
 
@@ -226,7 +254,7 @@ public class RecordPagedQueryResponseBuilder implements Builder<RecordPagedQuery
         Objects.requireNonNull(results, RecordPagedQueryResponse.class + ": results is missing");
         return new RecordPagedQueryResponseImpl(limit, count, total, offset, results);
     }
-
+    
     /**
      * builds RecordPagedQueryResponse without checking for non-null required values
      * @return RecordPagedQueryResponse
@@ -237,7 +265,7 @@ public class RecordPagedQueryResponseBuilder implements Builder<RecordPagedQuery
 
     /**
      * factory method for an instance of RecordPagedQueryResponseBuilder
-     * @return builder
+     * @return builder 
      */
     public static RecordPagedQueryResponseBuilder of() {
         return new RecordPagedQueryResponseBuilder();

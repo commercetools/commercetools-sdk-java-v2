@@ -1,10 +1,12 @@
-
 package com.commercetools.api.models.customer;
 
-import java.util.*;
-
+import com.commercetools.api.models.customer.AuthenticationMode;
+import com.commercetools.api.models.customer.CustomerUpdateAction;
+import com.commercetools.api.models.customer.CustomerSetAuthenticationModeAction;
 import javax.annotation.Nullable;
-
+import java.util.*;
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -18,55 +20,67 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .authMode(AuthenticationMode.PASSWORD)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class CustomerSetAuthenticationModeActionBuilder implements Builder<CustomerSetAuthenticationModeAction> {
 
+    
+    
     private com.commercetools.api.models.customer.AuthenticationMode authMode;
-
+    
+    
     @Nullable
     private String password;
 
+    
     /**
      *  <p>Value to set. Changing a Customer's <code>authMode</code> from <code>Password</code> to <code>ExternalAuth</code> deletes the Customer's password.</p>
      * @param authMode value to be set
      * @return Builder
      */
-
-    public CustomerSetAuthenticationModeActionBuilder authMode(
-            final com.commercetools.api.models.customer.AuthenticationMode authMode) {
+    
+    public CustomerSetAuthenticationModeActionBuilder authMode( final com.commercetools.api.models.customer.AuthenticationMode authMode) {
         this.authMode = authMode;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Required when <code>authMode</code> is <code>Password</code>.</p>
      * @param password value to be set
      * @return Builder
      */
-
+    
     public CustomerSetAuthenticationModeActionBuilder password(@Nullable final String password) {
         this.password = password;
         return this;
     }
+    
+    
 
     /**
      *  <p>Value to set. Changing a Customer's <code>authMode</code> from <code>Password</code> to <code>ExternalAuth</code> deletes the Customer's password.</p>
      * @return authMode
      */
-
-    public com.commercetools.api.models.customer.AuthenticationMode getAuthMode() {
+    
+    
+    public com.commercetools.api.models.customer.AuthenticationMode getAuthMode(){
         return this.authMode;
     }
-
+    
     /**
      *  <p>Required when <code>authMode</code> is <code>Password</code>.</p>
      * @return password
      */
-
+    
     @Nullable
-    public String getPassword() {
+    public String getPassword(){
         return this.password;
     }
 
@@ -78,7 +92,7 @@ public class CustomerSetAuthenticationModeActionBuilder implements Builder<Custo
         Objects.requireNonNull(authMode, CustomerSetAuthenticationModeAction.class + ": authMode is missing");
         return new CustomerSetAuthenticationModeActionImpl(authMode, password);
     }
-
+    
     /**
      * builds CustomerSetAuthenticationModeAction without checking for non-null required values
      * @return CustomerSetAuthenticationModeAction
@@ -89,7 +103,7 @@ public class CustomerSetAuthenticationModeActionBuilder implements Builder<Custo
 
     /**
      * factory method for an instance of CustomerSetAuthenticationModeActionBuilder
-     * @return builder
+     * @return builder 
      */
     public static CustomerSetAuthenticationModeActionBuilder of() {
         return new CustomerSetAuthenticationModeActionBuilder();

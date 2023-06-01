@@ -1,121 +1,132 @@
-
 package com.commercetools.history.models.change;
 
-import java.time.*;
-import java.util.*;
-
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
-
-import io.vrap.rmf.base.client.ModelBase;
+import com.commercetools.history.models.change.Change;
+import java.lang.Object;
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.ModelBase;
+import javax.validation.Valid;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.annotation.*;
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
  * UnknownChange
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class UnknownChangeImpl implements UnknownChange, ModelBase {
 
+    
     private String type;
-
+    
+    
     private String change;
-
+    
+    
     private java.lang.Object previousValue;
-
+    
+    
     private java.lang.Object nextValue;
 
     /**
      * create instance with all properties
      */
     @JsonCreator
-    UnknownChangeImpl(@JsonProperty("change") final String change,
-            @JsonProperty("previousValue") final java.lang.Object previousValue,
-            @JsonProperty("nextValue") final java.lang.Object nextValue) {
+    UnknownChangeImpl(@JsonProperty("change") final String change, @JsonProperty("previousValue") final java.lang.Object previousValue, @JsonProperty("nextValue") final java.lang.Object nextValue) {
         this.change = change;
         this.previousValue = previousValue;
         this.nextValue = nextValue;
-        this.type = UNKNOWN_CHANGE;
+        this.type =  UNKNOWN_CHANGE;
     }
-
     /**
      * create empty instance
      */
     public UnknownChangeImpl() {
-        this.type = UNKNOWN_CHANGE;
+        this.type =  UNKNOWN_CHANGE;
     }
 
     /**
      *
      */
-
-    public String getType() {
+    
+    public String getType(){
         return this.type;
     }
-
+    
     /**
      *
      */
-
-    public String getChange() {
+    
+    public String getChange(){
         return this.change;
     }
-
+    
     /**
      *
      */
-
-    public java.lang.Object getPreviousValue() {
+    
+    public java.lang.Object getPreviousValue(){
         return this.previousValue;
     }
-
+    
     /**
      *
      */
-
-    public java.lang.Object getNextValue() {
+    
+    public java.lang.Object getNextValue(){
         return this.nextValue;
     }
 
-    public void setChange(final String change) {
+    
+    public void setChange(final String change){
         this.change = change;
     }
-
-    public void setPreviousValue(final java.lang.Object previousValue) {
+    
+    
+    public void setPreviousValue(final java.lang.Object previousValue){
         this.previousValue = previousValue;
     }
-
-    public void setNextValue(final java.lang.Object nextValue) {
+    
+    
+    public void setNextValue(final java.lang.Object nextValue){
         this.nextValue = nextValue;
     }
 
     @Override
     public boolean equals(Object o) {
-        if (this == o)
-            return true;
-
-        if (o == null || getClass() != o.getClass())
-            return false;
-
+        if (this == o) return true;
+    
+        if (o == null || getClass() != o.getClass()) return false;
+    
         UnknownChangeImpl that = (UnknownChangeImpl) o;
-
-        return new EqualsBuilder().append(type, that.type)
+    
+        return new EqualsBuilder()
+                .append(type, that.type)
                 .append(change, that.change)
                 .append(previousValue, that.previousValue)
                 .append(nextValue, that.nextValue)
                 .isEquals();
     }
-
+    
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(type)
-                .append(change)
-                .append(previousValue)
-                .append(nextValue)
-                .toHashCode();
+        return new HashCodeBuilder(17, 37)
+            .append(type)
+            .append(change)
+            .append(previousValue)
+            .append(nextValue)
+            .toHashCode();
     }
 
 }

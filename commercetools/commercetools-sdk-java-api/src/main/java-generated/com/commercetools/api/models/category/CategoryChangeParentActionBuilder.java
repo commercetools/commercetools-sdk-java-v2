@@ -1,9 +1,12 @@
-
 package com.commercetools.api.models.category;
 
+import com.commercetools.api.models.category.CategoryResourceIdentifier;
+import com.commercetools.api.models.category.CategoryUpdateAction;
+import com.commercetools.api.models.category.CategoryChangeParentAction;
+import javax.annotation.Nullable;
 import java.util.*;
 import java.util.function.Function;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -17,56 +20,61 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .parent(parentBuilder -> parentBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class CategoryChangeParentActionBuilder implements Builder<CategoryChangeParentAction> {
 
+    
+    
     private com.commercetools.api.models.category.CategoryResourceIdentifier parent;
 
+    
     /**
      *  <p>New value to set as parent.</p>
      * @param builder function to build the parent value
      * @return Builder
      */
-
-    public CategoryChangeParentActionBuilder parent(
-            Function<com.commercetools.api.models.category.CategoryResourceIdentifierBuilder, com.commercetools.api.models.category.CategoryResourceIdentifierBuilder> builder) {
-        this.parent = builder.apply(com.commercetools.api.models.category.CategoryResourceIdentifierBuilder.of())
-                .build();
+    
+    public CategoryChangeParentActionBuilder parent(Function<com.commercetools.api.models.category.CategoryResourceIdentifierBuilder, com.commercetools.api.models.category.CategoryResourceIdentifierBuilder> builder) {
+        this.parent = builder.apply(com.commercetools.api.models.category.CategoryResourceIdentifierBuilder.of()).build();
         return this;
     }
-
+    
     /**
      *  <p>New value to set as parent.</p>
      * @param builder function to build the parent value
      * @return Builder
      */
-
-    public CategoryChangeParentActionBuilder withParent(
-            Function<com.commercetools.api.models.category.CategoryResourceIdentifierBuilder, com.commercetools.api.models.category.CategoryResourceIdentifier> builder) {
+    
+    public CategoryChangeParentActionBuilder withParent(Function<com.commercetools.api.models.category.CategoryResourceIdentifierBuilder, com.commercetools.api.models.category.CategoryResourceIdentifier> builder) {
         this.parent = builder.apply(com.commercetools.api.models.category.CategoryResourceIdentifierBuilder.of());
         return this;
     }
-
+                    
     /**
      *  <p>New value to set as parent.</p>
      * @param parent value to be set
      * @return Builder
      */
-
-    public CategoryChangeParentActionBuilder parent(
-            final com.commercetools.api.models.category.CategoryResourceIdentifier parent) {
+    
+    public CategoryChangeParentActionBuilder parent( final com.commercetools.api.models.category.CategoryResourceIdentifier parent) {
         this.parent = parent;
         return this;
     }
+    
+    
 
     /**
      *  <p>New value to set as parent.</p>
      * @return parent
      */
-
-    public com.commercetools.api.models.category.CategoryResourceIdentifier getParent() {
+    
+    
+    public com.commercetools.api.models.category.CategoryResourceIdentifier getParent(){
         return this.parent;
     }
 
@@ -78,7 +86,7 @@ public class CategoryChangeParentActionBuilder implements Builder<CategoryChange
         Objects.requireNonNull(parent, CategoryChangeParentAction.class + ": parent is missing");
         return new CategoryChangeParentActionImpl(parent);
     }
-
+    
     /**
      * builds CategoryChangeParentAction without checking for non-null required values
      * @return CategoryChangeParentAction
@@ -89,7 +97,7 @@ public class CategoryChangeParentActionBuilder implements Builder<CategoryChange
 
     /**
      * factory method for an instance of CategoryChangeParentActionBuilder
-     * @return builder
+     * @return builder 
      */
     public static CategoryChangeParentActionBuilder of() {
         return new CategoryChangeParentActionBuilder();

@@ -1,9 +1,13 @@
-
 package com.commercetools.history.models.change;
 
+import com.commercetools.history.models.change.Change;
+import com.commercetools.history.models.common.LocalizedString;
+import java.lang.Object;
+import com.commercetools.history.models.change.SetOrderLineItemCustomFieldChange;
+import javax.annotation.Nullable;
 import java.util.*;
 import java.util.function.Function;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -21,187 +25,229 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .lineItem(lineItemBuilder -> lineItemBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class SetOrderLineItemCustomFieldChangeBuilder implements Builder<SetOrderLineItemCustomFieldChange> {
 
+    
+    
     private String change;
-
+    
+    
+    
     private String customTypeId;
-
+    
+    
+    
     private String name;
-
+    
+    
+    
     private String variant;
-
+    
+    
+    
     private com.commercetools.history.models.common.LocalizedString lineItem;
-
+    
+    
+    
     private java.lang.Object nextValue;
-
+    
+    
+    
     private java.lang.Object previousValue;
 
+    
     /**
      *  <p>Update action for <code>setLineItemCustomField</code></p>
      * @param change value to be set
      * @return Builder
      */
-
-    public SetOrderLineItemCustomFieldChangeBuilder change(final String change) {
+    
+    public SetOrderLineItemCustomFieldChangeBuilder change( final String change) {
         this.change = change;
         return this;
     }
-
+    
+    
+    
+    
     /**
      * set the value to the customTypeId
      * @param customTypeId value to be set
      * @return Builder
      */
-
-    public SetOrderLineItemCustomFieldChangeBuilder customTypeId(final String customTypeId) {
+    
+    public SetOrderLineItemCustomFieldChangeBuilder customTypeId( final String customTypeId) {
         this.customTypeId = customTypeId;
         return this;
     }
-
+    
+    
+    
+    
     /**
      * set the value to the name
      * @param name value to be set
      * @return Builder
      */
-
-    public SetOrderLineItemCustomFieldChangeBuilder name(final String name) {
+    
+    public SetOrderLineItemCustomFieldChangeBuilder name( final String name) {
         this.name = name;
         return this;
     }
-
+    
+    
+    
+    
     /**
      * set the value to the variant
      * @param variant value to be set
      * @return Builder
      */
-
-    public SetOrderLineItemCustomFieldChangeBuilder variant(final String variant) {
+    
+    public SetOrderLineItemCustomFieldChangeBuilder variant( final String variant) {
         this.variant = variant;
         return this;
     }
-
+    
+    
+    
+    
     /**
      * set the value to the lineItem using the builder function
      * @param builder function to build the lineItem value
      * @return Builder
      */
-
-    public SetOrderLineItemCustomFieldChangeBuilder lineItem(
-            Function<com.commercetools.history.models.common.LocalizedStringBuilder, com.commercetools.history.models.common.LocalizedStringBuilder> builder) {
+    
+    public SetOrderLineItemCustomFieldChangeBuilder lineItem(Function<com.commercetools.history.models.common.LocalizedStringBuilder, com.commercetools.history.models.common.LocalizedStringBuilder> builder) {
         this.lineItem = builder.apply(com.commercetools.history.models.common.LocalizedStringBuilder.of()).build();
         return this;
     }
-
+    
     /**
      * set the value to the lineItem using the builder function
      * @param builder function to build the lineItem value
      * @return Builder
      */
-
-    public SetOrderLineItemCustomFieldChangeBuilder withLineItem(
-            Function<com.commercetools.history.models.common.LocalizedStringBuilder, com.commercetools.history.models.common.LocalizedString> builder) {
+    
+    public SetOrderLineItemCustomFieldChangeBuilder withLineItem(Function<com.commercetools.history.models.common.LocalizedStringBuilder, com.commercetools.history.models.common.LocalizedString> builder) {
         this.lineItem = builder.apply(com.commercetools.history.models.common.LocalizedStringBuilder.of());
         return this;
     }
-
+                    
     /**
      * set the value to the lineItem
      * @param lineItem value to be set
      * @return Builder
      */
-
-    public SetOrderLineItemCustomFieldChangeBuilder lineItem(
-            final com.commercetools.history.models.common.LocalizedString lineItem) {
+    
+    public SetOrderLineItemCustomFieldChangeBuilder lineItem( final com.commercetools.history.models.common.LocalizedString lineItem) {
         this.lineItem = lineItem;
         return this;
     }
-
+    
+    
+    
+    
     /**
      * set the value to the nextValue
      * @param nextValue value to be set
      * @return Builder
      */
-
-    public SetOrderLineItemCustomFieldChangeBuilder nextValue(final java.lang.Object nextValue) {
+    
+    public SetOrderLineItemCustomFieldChangeBuilder nextValue( final java.lang.Object nextValue) {
         this.nextValue = nextValue;
         return this;
     }
-
+    
+    
+    
+    
     /**
      * set the value to the previousValue
      * @param previousValue value to be set
      * @return Builder
      */
-
-    public SetOrderLineItemCustomFieldChangeBuilder previousValue(final java.lang.Object previousValue) {
+    
+    public SetOrderLineItemCustomFieldChangeBuilder previousValue( final java.lang.Object previousValue) {
         this.previousValue = previousValue;
         return this;
     }
+    
+    
 
     /**
      *  <p>Update action for <code>setLineItemCustomField</code></p>
      * @return change
      */
-
-    public String getChange() {
+    
+    
+    public String getChange(){
         return this.change;
     }
-
+    
     /**
      * value of customTypeId}
      * @return customTypeId
      */
-
-    public String getCustomTypeId() {
+    
+    
+    public String getCustomTypeId(){
         return this.customTypeId;
     }
-
+    
     /**
      * value of name}
      * @return name
      */
-
-    public String getName() {
+    
+    
+    public String getName(){
         return this.name;
     }
-
+    
     /**
      * value of variant}
      * @return variant
      */
-
-    public String getVariant() {
+    
+    
+    public String getVariant(){
         return this.variant;
     }
-
+    
     /**
      * value of lineItem}
      * @return lineItem
      */
-
-    public com.commercetools.history.models.common.LocalizedString getLineItem() {
+    
+    
+    public com.commercetools.history.models.common.LocalizedString getLineItem(){
         return this.lineItem;
     }
-
+    
     /**
      * value of nextValue}
      * @return nextValue
      */
-
-    public java.lang.Object getNextValue() {
+    
+    
+    public java.lang.Object getNextValue(){
         return this.nextValue;
     }
-
+    
     /**
      * value of previousValue}
      * @return previousValue
      */
-
-    public java.lang.Object getPreviousValue() {
+    
+    
+    public java.lang.Object getPreviousValue(){
         return this.previousValue;
     }
 
@@ -217,22 +263,20 @@ public class SetOrderLineItemCustomFieldChangeBuilder implements Builder<SetOrde
         Objects.requireNonNull(lineItem, SetOrderLineItemCustomFieldChange.class + ": lineItem is missing");
         Objects.requireNonNull(nextValue, SetOrderLineItemCustomFieldChange.class + ": nextValue is missing");
         Objects.requireNonNull(previousValue, SetOrderLineItemCustomFieldChange.class + ": previousValue is missing");
-        return new SetOrderLineItemCustomFieldChangeImpl(change, customTypeId, name, variant, lineItem, nextValue,
-            previousValue);
+        return new SetOrderLineItemCustomFieldChangeImpl(change, customTypeId, name, variant, lineItem, nextValue, previousValue);
     }
-
+    
     /**
      * builds SetOrderLineItemCustomFieldChange without checking for non-null required values
      * @return SetOrderLineItemCustomFieldChange
      */
     public SetOrderLineItemCustomFieldChange buildUnchecked() {
-        return new SetOrderLineItemCustomFieldChangeImpl(change, customTypeId, name, variant, lineItem, nextValue,
-            previousValue);
+        return new SetOrderLineItemCustomFieldChangeImpl(change, customTypeId, name, variant, lineItem, nextValue, previousValue);
     }
 
     /**
      * factory method for an instance of SetOrderLineItemCustomFieldChangeBuilder
-     * @return builder
+     * @return builder 
      */
     public static SetOrderLineItemCustomFieldChangeBuilder of() {
         return new SetOrderLineItemCustomFieldChangeBuilder();

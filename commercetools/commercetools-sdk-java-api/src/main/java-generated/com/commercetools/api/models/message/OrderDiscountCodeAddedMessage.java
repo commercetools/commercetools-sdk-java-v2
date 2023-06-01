@@ -1,19 +1,21 @@
-
 package com.commercetools.api.models.message;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
 import com.commercetools.api.models.discount_code.DiscountCodeReference;
+import com.commercetools.api.models.message.OrderMessage;
+import com.commercetools.api.models.message.OrderDiscountCodeAddedMessageImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Generated after a successful Add Discount Code update action.</p>
@@ -33,9 +35,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .discountCode(discountCodeBuilder -> discountCodeBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = OrderDiscountCodeAddedMessageImpl.class)
 public interface OrderDiscountCodeAddedMessage extends OrderMessage {
 
@@ -57,16 +62,18 @@ public interface OrderDiscountCodeAddedMessage extends OrderMessage {
      *  <p>DiscountCode that was added.</p>
      * @param discountCode value to be set
      */
-
+    
     public void setDiscountCode(final DiscountCodeReference discountCode);
+    
 
     /**
      * factory method
      * @return instance of OrderDiscountCodeAddedMessage
      */
-    public static OrderDiscountCodeAddedMessage of() {
+    public static OrderDiscountCodeAddedMessage of(){
         return new OrderDiscountCodeAddedMessageImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy OrderDiscountCodeAddedMessage
@@ -104,16 +111,13 @@ public interface OrderDiscountCodeAddedMessage extends OrderMessage {
         instance.setVersion(template.getVersion());
         instance.setCreatedAt(template.getCreatedAt());
         instance.setLastModifiedAt(template.getLastModifiedAt());
-        instance.setLastModifiedBy(
-            com.commercetools.api.models.common.LastModifiedBy.deepCopy(template.getLastModifiedBy()));
+        instance.setLastModifiedBy(com.commercetools.api.models.common.LastModifiedBy.deepCopy(template.getLastModifiedBy()));
         instance.setCreatedBy(com.commercetools.api.models.common.CreatedBy.deepCopy(template.getCreatedBy()));
         instance.setSequenceNumber(template.getSequenceNumber());
         instance.setResource(com.commercetools.api.models.common.Reference.deepCopy(template.getResource()));
         instance.setResourceVersion(template.getResourceVersion());
-        instance.setResourceUserProvidedIdentifiers(com.commercetools.api.models.message.UserProvidedIdentifiers
-                .deepCopy(template.getResourceUserProvidedIdentifiers()));
-        instance.setDiscountCode(
-            com.commercetools.api.models.discount_code.DiscountCodeReference.deepCopy(template.getDiscountCode()));
+        instance.setResourceUserProvidedIdentifiers(com.commercetools.api.models.message.UserProvidedIdentifiers.deepCopy(template.getResourceUserProvidedIdentifiers()));
+        instance.setDiscountCode(com.commercetools.api.models.discount_code.DiscountCodeReference.deepCopy(template.getDiscountCode()));
         return instance;
     }
 
@@ -124,7 +128,7 @@ public interface OrderDiscountCodeAddedMessage extends OrderMessage {
     public static OrderDiscountCodeAddedMessageBuilder builder() {
         return OrderDiscountCodeAddedMessageBuilder.of();
     }
-
+    
     /**
      * create builder for OrderDiscountCodeAddedMessage instance
      * @param template instance with prefilled values for the builder
@@ -133,6 +137,7 @@ public interface OrderDiscountCodeAddedMessage extends OrderMessage {
     public static OrderDiscountCodeAddedMessageBuilder builder(final OrderDiscountCodeAddedMessage template) {
         return OrderDiscountCodeAddedMessageBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -143,7 +148,7 @@ public interface OrderDiscountCodeAddedMessage extends OrderMessage {
     default <T> T withOrderDiscountCodeAddedMessage(Function<OrderDiscountCodeAddedMessage, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

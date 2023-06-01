@@ -1,8 +1,12 @@
-
 package com.commercetools.api.models.order;
 
+import com.commercetools.api.models.order.OrderUpdateAction;
+import com.commercetools.api.models.order.ReturnPaymentState;
+import com.commercetools.api.models.order.OrderSetReturnPaymentStateAction;
+import javax.annotation.Nullable;
 import java.util.*;
-
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -17,53 +21,67 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .paymentState(ReturnPaymentState.NON_REFUNDABLE)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class OrderSetReturnPaymentStateActionBuilder implements Builder<OrderSetReturnPaymentStateAction> {
 
+    
+    
     private String returnItemId;
-
+    
+    
+    
     private com.commercetools.api.models.order.ReturnPaymentState paymentState;
 
+    
     /**
      * set the value to the returnItemId
      * @param returnItemId value to be set
      * @return Builder
      */
-
-    public OrderSetReturnPaymentStateActionBuilder returnItemId(final String returnItemId) {
+    
+    public OrderSetReturnPaymentStateActionBuilder returnItemId( final String returnItemId) {
         this.returnItemId = returnItemId;
         return this;
     }
-
+    
+    
+    
+    
     /**
      * set the value to the paymentState
      * @param paymentState value to be set
      * @return Builder
      */
-
-    public OrderSetReturnPaymentStateActionBuilder paymentState(
-            final com.commercetools.api.models.order.ReturnPaymentState paymentState) {
+    
+    public OrderSetReturnPaymentStateActionBuilder paymentState( final com.commercetools.api.models.order.ReturnPaymentState paymentState) {
         this.paymentState = paymentState;
         return this;
     }
+    
+    
 
     /**
      * value of returnItemId}
      * @return returnItemId
      */
-
-    public String getReturnItemId() {
+    
+    
+    public String getReturnItemId(){
         return this.returnItemId;
     }
-
+    
     /**
      * value of paymentState}
      * @return paymentState
      */
-
-    public com.commercetools.api.models.order.ReturnPaymentState getPaymentState() {
+    
+    
+    public com.commercetools.api.models.order.ReturnPaymentState getPaymentState(){
         return this.paymentState;
     }
 
@@ -76,7 +94,7 @@ public class OrderSetReturnPaymentStateActionBuilder implements Builder<OrderSet
         Objects.requireNonNull(paymentState, OrderSetReturnPaymentStateAction.class + ": paymentState is missing");
         return new OrderSetReturnPaymentStateActionImpl(returnItemId, paymentState);
     }
-
+    
     /**
      * builds OrderSetReturnPaymentStateAction without checking for non-null required values
      * @return OrderSetReturnPaymentStateAction
@@ -87,7 +105,7 @@ public class OrderSetReturnPaymentStateActionBuilder implements Builder<OrderSet
 
     /**
      * factory method for an instance of OrderSetReturnPaymentStateActionBuilder
-     * @return builder
+     * @return builder 
      */
     public static OrderSetReturnPaymentStateActionBuilder of() {
         return new OrderSetReturnPaymentStateActionBuilder();

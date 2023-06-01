@@ -1,18 +1,21 @@
-
 package com.commercetools.api.models.error;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
-
 import com.commercetools.api.models.common.ReferenceTypeId;
+import com.commercetools.api.models.error.ErrorObject;
+import com.commercetools.api.models.error.MaxResourceLimitExceededErrorImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Returned when a resource type cannot be created as it has reached its limits.</p>
@@ -27,9 +30,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .exceededResource(ReferenceTypeId.ASSOCIATE_ROLE)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = MaxResourceLimitExceededErrorImpl.class)
 public interface MaxResourceLimitExceededError extends ErrorObject {
 
@@ -45,7 +51,6 @@ public interface MaxResourceLimitExceededError extends ErrorObject {
     @NotNull
     @JsonProperty("code")
     public String getCode();
-
     /**
      *  <p><code>"You have exceeded the limit of $limit resources of type $resourceTypeId."</code></p>
      * @return message
@@ -53,7 +58,6 @@ public interface MaxResourceLimitExceededError extends ErrorObject {
     @NotNull
     @JsonProperty("message")
     public String getMessage();
-
     /**
      *  <p>Resource type that reached its maximum limit of configured elements (for example, 100 Zones per Project).</p>
      * @return exceededResource
@@ -66,23 +70,26 @@ public interface MaxResourceLimitExceededError extends ErrorObject {
      *  <p><code>"You have exceeded the limit of $limit resources of type $resourceTypeId."</code></p>
      * @param message value to be set
      */
-
+    
     public void setMessage(final String message);
-
+    
+    
     /**
      *  <p>Resource type that reached its maximum limit of configured elements (for example, 100 Zones per Project).</p>
      * @param exceededResource value to be set
      */
-
+    
     public void setExceededResource(final ReferenceTypeId exceededResource);
+    
 
     /**
      * factory method
      * @return instance of MaxResourceLimitExceededError
      */
-    public static MaxResourceLimitExceededError of() {
+    public static MaxResourceLimitExceededError of(){
         return new MaxResourceLimitExceededErrorImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy MaxResourceLimitExceededError
@@ -121,7 +128,7 @@ public interface MaxResourceLimitExceededError extends ErrorObject {
     public static MaxResourceLimitExceededErrorBuilder builder() {
         return MaxResourceLimitExceededErrorBuilder.of();
     }
-
+    
     /**
      * create builder for MaxResourceLimitExceededError instance
      * @param template instance with prefilled values for the builder
@@ -130,6 +137,7 @@ public interface MaxResourceLimitExceededError extends ErrorObject {
     public static MaxResourceLimitExceededErrorBuilder builder(final MaxResourceLimitExceededError template) {
         return MaxResourceLimitExceededErrorBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -140,7 +148,7 @@ public interface MaxResourceLimitExceededError extends ErrorObject {
     default <T> T withMaxResourceLimitExceededError(Function<MaxResourceLimitExceededError, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

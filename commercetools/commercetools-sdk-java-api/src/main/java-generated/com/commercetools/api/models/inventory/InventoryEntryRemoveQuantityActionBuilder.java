@@ -1,8 +1,11 @@
-
 package com.commercetools.api.models.inventory;
 
+import com.commercetools.api.models.inventory.InventoryEntryUpdateAction;
+import com.commercetools.api.models.inventory.InventoryEntryRemoveQuantityAction;
+import javax.annotation.Nullable;
 import java.util.*;
-
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -16,30 +19,39 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .quantity(0.3)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class InventoryEntryRemoveQuantityActionBuilder implements Builder<InventoryEntryRemoveQuantityAction> {
 
+    
+    
     private Long quantity;
 
+    
     /**
      *  <p>Value to remove from <code>quantityOnStock</code>.</p>
      * @param quantity value to be set
      * @return Builder
      */
-
-    public InventoryEntryRemoveQuantityActionBuilder quantity(final Long quantity) {
+    
+    public InventoryEntryRemoveQuantityActionBuilder quantity( final Long quantity) {
         this.quantity = quantity;
         return this;
     }
+    
+    
 
     /**
      *  <p>Value to remove from <code>quantityOnStock</code>.</p>
      * @return quantity
      */
-
-    public Long getQuantity() {
+    
+    
+    public Long getQuantity(){
         return this.quantity;
     }
 
@@ -51,7 +63,7 @@ public class InventoryEntryRemoveQuantityActionBuilder implements Builder<Invent
         Objects.requireNonNull(quantity, InventoryEntryRemoveQuantityAction.class + ": quantity is missing");
         return new InventoryEntryRemoveQuantityActionImpl(quantity);
     }
-
+    
     /**
      * builds InventoryEntryRemoveQuantityAction without checking for non-null required values
      * @return InventoryEntryRemoveQuantityAction
@@ -62,7 +74,7 @@ public class InventoryEntryRemoveQuantityActionBuilder implements Builder<Invent
 
     /**
      * factory method for an instance of InventoryEntryRemoveQuantityActionBuilder
-     * @return builder
+     * @return builder 
      */
     public static InventoryEntryRemoveQuantityActionBuilder of() {
         return new InventoryEntryRemoveQuantityActionBuilder();

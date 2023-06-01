@@ -1,18 +1,21 @@
-
 package com.commercetools.api.models.product_type;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
+import com.commercetools.api.models.product_type.AttributeLocalizedEnumValue;
+import com.commercetools.api.models.product_type.ProductTypeUpdateAction;
+import com.commercetools.api.models.product_type.ProductTypeAddLocalizedEnumValueActionImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Adds a localizable enum to the values of AttributeLocalizedEnumType. It can update an AttributeLocalizedEnumType AttributeDefinition or an AttributeSetType of AttributeLocalizedEnumType AttributeDefinition.</p>
@@ -26,9 +29,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .value(valueBuilder -> valueBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = ProductTypeAddLocalizedEnumValueActionImpl.class)
 public interface ProductTypeAddLocalizedEnumValueAction extends ProductTypeUpdateAction {
 
@@ -44,7 +50,6 @@ public interface ProductTypeAddLocalizedEnumValueAction extends ProductTypeUpdat
     @NotNull
     @JsonProperty("attributeName")
     public String getAttributeName();
-
     /**
      *  <p>Value to append to the array.</p>
      * @return value
@@ -58,23 +63,26 @@ public interface ProductTypeAddLocalizedEnumValueAction extends ProductTypeUpdat
      *  <p>Name of the AttributeDefinition to update.</p>
      * @param attributeName value to be set
      */
-
+    
     public void setAttributeName(final String attributeName);
-
+    
+    
     /**
      *  <p>Value to append to the array.</p>
      * @param value value to be set
      */
-
+    
     public void setValue(final AttributeLocalizedEnumValue value);
+    
 
     /**
      * factory method
      * @return instance of ProductTypeAddLocalizedEnumValueAction
      */
-    public static ProductTypeAddLocalizedEnumValueAction of() {
+    public static ProductTypeAddLocalizedEnumValueAction of(){
         return new ProductTypeAddLocalizedEnumValueActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy ProductTypeAddLocalizedEnumValueAction
@@ -94,15 +102,13 @@ public interface ProductTypeAddLocalizedEnumValueAction extends ProductTypeUpdat
      * @return copy instance
      */
     @Nullable
-    public static ProductTypeAddLocalizedEnumValueAction deepCopy(
-            @Nullable final ProductTypeAddLocalizedEnumValueAction template) {
+    public static ProductTypeAddLocalizedEnumValueAction deepCopy(@Nullable final ProductTypeAddLocalizedEnumValueAction template) {
         if (template == null) {
             return null;
         }
         ProductTypeAddLocalizedEnumValueActionImpl instance = new ProductTypeAddLocalizedEnumValueActionImpl();
         instance.setAttributeName(template.getAttributeName());
-        instance.setValue(
-            com.commercetools.api.models.product_type.AttributeLocalizedEnumValue.deepCopy(template.getValue()));
+        instance.setValue(com.commercetools.api.models.product_type.AttributeLocalizedEnumValue.deepCopy(template.getValue()));
         return instance;
     }
 
@@ -113,16 +119,16 @@ public interface ProductTypeAddLocalizedEnumValueAction extends ProductTypeUpdat
     public static ProductTypeAddLocalizedEnumValueActionBuilder builder() {
         return ProductTypeAddLocalizedEnumValueActionBuilder.of();
     }
-
+    
     /**
      * create builder for ProductTypeAddLocalizedEnumValueAction instance
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static ProductTypeAddLocalizedEnumValueActionBuilder builder(
-            final ProductTypeAddLocalizedEnumValueAction template) {
+    public static ProductTypeAddLocalizedEnumValueActionBuilder builder(final ProductTypeAddLocalizedEnumValueAction template) {
         return ProductTypeAddLocalizedEnumValueActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -130,11 +136,10 @@ public interface ProductTypeAddLocalizedEnumValueAction extends ProductTypeUpdat
      * @param helper function to map the object
      * @return mapped value
      */
-    default <T> T withProductTypeAddLocalizedEnumValueAction(
-            Function<ProductTypeAddLocalizedEnumValueAction, T> helper) {
+    default <T> T withProductTypeAddLocalizedEnumValueAction(Function<ProductTypeAddLocalizedEnumValueAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

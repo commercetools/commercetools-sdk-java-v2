@@ -1,16 +1,20 @@
-
 package com.commercetools.api.models.cart_discount;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
+import com.commercetools.api.models.cart_discount.CartDiscountUpdateAction;
+import com.commercetools.api.models.cart_discount.CartDiscountSetKeyActionImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * CartDiscountSetKeyAction
@@ -22,9 +26,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     CartDiscountSetKeyAction cartDiscountSetKeyAction = CartDiscountSetKeyAction.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = CartDiscountSetKeyActionImpl.class)
 public interface CartDiscountSetKeyAction extends CartDiscountUpdateAction {
 
@@ -37,7 +44,7 @@ public interface CartDiscountSetKeyAction extends CartDiscountUpdateAction {
      *  <p>Value to set. If empty, any existing value will be removed.</p>
      * @return key
      */
-
+    
     @JsonProperty("key")
     public String getKey();
 
@@ -45,16 +52,18 @@ public interface CartDiscountSetKeyAction extends CartDiscountUpdateAction {
      *  <p>Value to set. If empty, any existing value will be removed.</p>
      * @param key value to be set
      */
-
+    
     public void setKey(final String key);
+    
 
     /**
      * factory method
      * @return instance of CartDiscountSetKeyAction
      */
-    public static CartDiscountSetKeyAction of() {
+    public static CartDiscountSetKeyAction of(){
         return new CartDiscountSetKeyActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy CartDiscountSetKeyAction
@@ -89,7 +98,7 @@ public interface CartDiscountSetKeyAction extends CartDiscountUpdateAction {
     public static CartDiscountSetKeyActionBuilder builder() {
         return CartDiscountSetKeyActionBuilder.of();
     }
-
+    
     /**
      * create builder for CartDiscountSetKeyAction instance
      * @param template instance with prefilled values for the builder
@@ -98,6 +107,7 @@ public interface CartDiscountSetKeyAction extends CartDiscountUpdateAction {
     public static CartDiscountSetKeyActionBuilder builder(final CartDiscountSetKeyAction template) {
         return CartDiscountSetKeyActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -108,11 +118,11 @@ public interface CartDiscountSetKeyAction extends CartDiscountUpdateAction {
     default <T> T withCartDiscountSetKeyAction(Function<CartDiscountSetKeyAction, T> helper) {
         return helper.apply(this);
     }
-
     public static CartDiscountSetKeyAction ofUnset() {
         return CartDiscountSetKeyAction.of();
     }
-
+    
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

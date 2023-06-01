@@ -1,18 +1,21 @@
-
 package com.commercetools.api.models.message;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
-
 import com.commercetools.api.models.business_unit.BusinessUnitAssociateMode;
+import com.commercetools.api.models.message.MessagePayload;
+import com.commercetools.api.models.message.BusinessUnitAssociateModeChangedMessagePayloadImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>Generated after a successful Change Associate Mode update action.</p>
@@ -26,9 +29,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .oldAssociateMode(BusinessUnitAssociateMode.EXPLICIT)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = BusinessUnitAssociateModeChangedMessagePayloadImpl.class)
 public interface BusinessUnitAssociateModeChangedMessagePayload extends MessagePayload {
 
@@ -44,7 +50,6 @@ public interface BusinessUnitAssociateModeChangedMessagePayload extends MessageP
     @NotNull
     @JsonProperty("associateMode")
     public BusinessUnitAssociateMode getAssociateMode();
-
     /**
      *  <p>BusinessUnitAssociateMode of the Business Unit before the Change Associate Mode update action.</p>
      * @return oldAssociateMode
@@ -57,31 +62,33 @@ public interface BusinessUnitAssociateModeChangedMessagePayload extends MessageP
      *  <p>BusinessUnitAssociateMode of the Business Unit after the Change Associate Mode update action.</p>
      * @param associateMode value to be set
      */
-
+    
     public void setAssociateMode(final BusinessUnitAssociateMode associateMode);
-
+    
+    
     /**
      *  <p>BusinessUnitAssociateMode of the Business Unit before the Change Associate Mode update action.</p>
      * @param oldAssociateMode value to be set
      */
-
+    
     public void setOldAssociateMode(final BusinessUnitAssociateMode oldAssociateMode);
+    
 
     /**
      * factory method
      * @return instance of BusinessUnitAssociateModeChangedMessagePayload
      */
-    public static BusinessUnitAssociateModeChangedMessagePayload of() {
+    public static BusinessUnitAssociateModeChangedMessagePayload of(){
         return new BusinessUnitAssociateModeChangedMessagePayloadImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy BusinessUnitAssociateModeChangedMessagePayload
      * @param template instance to be copied
      * @return copy instance
      */
-    public static BusinessUnitAssociateModeChangedMessagePayload of(
-            final BusinessUnitAssociateModeChangedMessagePayload template) {
+    public static BusinessUnitAssociateModeChangedMessagePayload of(final BusinessUnitAssociateModeChangedMessagePayload template) {
         BusinessUnitAssociateModeChangedMessagePayloadImpl instance = new BusinessUnitAssociateModeChangedMessagePayloadImpl();
         instance.setAssociateMode(template.getAssociateMode());
         instance.setOldAssociateMode(template.getOldAssociateMode());
@@ -94,8 +101,7 @@ public interface BusinessUnitAssociateModeChangedMessagePayload extends MessageP
      * @return copy instance
      */
     @Nullable
-    public static BusinessUnitAssociateModeChangedMessagePayload deepCopy(
-            @Nullable final BusinessUnitAssociateModeChangedMessagePayload template) {
+    public static BusinessUnitAssociateModeChangedMessagePayload deepCopy(@Nullable final BusinessUnitAssociateModeChangedMessagePayload template) {
         if (template == null) {
             return null;
         }
@@ -112,16 +118,16 @@ public interface BusinessUnitAssociateModeChangedMessagePayload extends MessageP
     public static BusinessUnitAssociateModeChangedMessagePayloadBuilder builder() {
         return BusinessUnitAssociateModeChangedMessagePayloadBuilder.of();
     }
-
+    
     /**
      * create builder for BusinessUnitAssociateModeChangedMessagePayload instance
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static BusinessUnitAssociateModeChangedMessagePayloadBuilder builder(
-            final BusinessUnitAssociateModeChangedMessagePayload template) {
+    public static BusinessUnitAssociateModeChangedMessagePayloadBuilder builder(final BusinessUnitAssociateModeChangedMessagePayload template) {
         return BusinessUnitAssociateModeChangedMessagePayloadBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -129,11 +135,10 @@ public interface BusinessUnitAssociateModeChangedMessagePayload extends MessageP
      * @param helper function to map the object
      * @return mapped value
      */
-    default <T> T withBusinessUnitAssociateModeChangedMessagePayload(
-            Function<BusinessUnitAssociateModeChangedMessagePayload, T> helper) {
+    default <T> T withBusinessUnitAssociateModeChangedMessagePayload(Function<BusinessUnitAssociateModeChangedMessagePayload, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

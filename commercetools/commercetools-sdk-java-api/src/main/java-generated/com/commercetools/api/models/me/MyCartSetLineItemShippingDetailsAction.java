@@ -1,19 +1,21 @@
-
 package com.commercetools.api.models.me;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
 import com.commercetools.api.models.cart.ItemShippingDetailsDraft;
+import com.commercetools.api.models.me.MyCartUpdateAction;
+import com.commercetools.api.models.me.MyCartSetLineItemShippingDetailsActionImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * MyCartSetLineItemShippingDetailsAction
@@ -26,9 +28,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .lineItemId("{lineItemId}")
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = MyCartSetLineItemShippingDetailsActionImpl.class)
 public interface MyCartSetLineItemShippingDetailsAction extends MyCartUpdateAction {
 
@@ -44,7 +49,6 @@ public interface MyCartSetLineItemShippingDetailsAction extends MyCartUpdateActi
     @NotNull
     @JsonProperty("lineItemId")
     public String getLineItemId();
-
     /**
      *  <p>Value to set. If empty, the existing value is removed.</p>
      * @return shippingDetails
@@ -57,23 +61,26 @@ public interface MyCartSetLineItemShippingDetailsAction extends MyCartUpdateActi
      *  <p><code>id</code> of the LineItem to update.</p>
      * @param lineItemId value to be set
      */
-
+    
     public void setLineItemId(final String lineItemId);
-
+    
+    
     /**
      *  <p>Value to set. If empty, the existing value is removed.</p>
      * @param shippingDetails value to be set
      */
-
+    
     public void setShippingDetails(final ItemShippingDetailsDraft shippingDetails);
+    
 
     /**
      * factory method
      * @return instance of MyCartSetLineItemShippingDetailsAction
      */
-    public static MyCartSetLineItemShippingDetailsAction of() {
+    public static MyCartSetLineItemShippingDetailsAction of(){
         return new MyCartSetLineItemShippingDetailsActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy MyCartSetLineItemShippingDetailsAction
@@ -93,15 +100,13 @@ public interface MyCartSetLineItemShippingDetailsAction extends MyCartUpdateActi
      * @return copy instance
      */
     @Nullable
-    public static MyCartSetLineItemShippingDetailsAction deepCopy(
-            @Nullable final MyCartSetLineItemShippingDetailsAction template) {
+    public static MyCartSetLineItemShippingDetailsAction deepCopy(@Nullable final MyCartSetLineItemShippingDetailsAction template) {
         if (template == null) {
             return null;
         }
         MyCartSetLineItemShippingDetailsActionImpl instance = new MyCartSetLineItemShippingDetailsActionImpl();
         instance.setLineItemId(template.getLineItemId());
-        instance.setShippingDetails(
-            com.commercetools.api.models.cart.ItemShippingDetailsDraft.deepCopy(template.getShippingDetails()));
+        instance.setShippingDetails(com.commercetools.api.models.cart.ItemShippingDetailsDraft.deepCopy(template.getShippingDetails()));
         return instance;
     }
 
@@ -112,16 +117,16 @@ public interface MyCartSetLineItemShippingDetailsAction extends MyCartUpdateActi
     public static MyCartSetLineItemShippingDetailsActionBuilder builder() {
         return MyCartSetLineItemShippingDetailsActionBuilder.of();
     }
-
+    
     /**
      * create builder for MyCartSetLineItemShippingDetailsAction instance
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static MyCartSetLineItemShippingDetailsActionBuilder builder(
-            final MyCartSetLineItemShippingDetailsAction template) {
+    public static MyCartSetLineItemShippingDetailsActionBuilder builder(final MyCartSetLineItemShippingDetailsAction template) {
         return MyCartSetLineItemShippingDetailsActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -129,11 +134,10 @@ public interface MyCartSetLineItemShippingDetailsAction extends MyCartUpdateActi
      * @param helper function to map the object
      * @return mapped value
      */
-    default <T> T withMyCartSetLineItemShippingDetailsAction(
-            Function<MyCartSetLineItemShippingDetailsAction, T> helper) {
+    default <T> T withMyCartSetLineItemShippingDetailsAction(Function<MyCartSetLineItemShippingDetailsAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

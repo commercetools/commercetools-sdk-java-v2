@@ -1,8 +1,12 @@
-
 package com.commercetools.api.models.message;
 
+import com.commercetools.api.models.associate_role.Permission;
+import com.commercetools.api.models.message.MessagePayload;
+import com.commercetools.api.models.message.AssociateRolePermissionRemovedMessagePayload;
+import javax.annotation.Nullable;
 import java.util.*;
-
+import java.util.function.Function;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -16,32 +20,39 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .permission(Permission.ADD_CHILD_UNITS)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
-public class AssociateRolePermissionRemovedMessagePayloadBuilder
-        implements Builder<AssociateRolePermissionRemovedMessagePayload> {
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
+public class AssociateRolePermissionRemovedMessagePayloadBuilder implements Builder<AssociateRolePermissionRemovedMessagePayload> {
 
+    
+    
     private com.commercetools.api.models.associate_role.Permission permission;
 
+    
     /**
      *  <p>The Permission that was removed from the AssociateRole.</p>
      * @param permission value to be set
      * @return Builder
      */
-
-    public AssociateRolePermissionRemovedMessagePayloadBuilder permission(
-            final com.commercetools.api.models.associate_role.Permission permission) {
+    
+    public AssociateRolePermissionRemovedMessagePayloadBuilder permission( final com.commercetools.api.models.associate_role.Permission permission) {
         this.permission = permission;
         return this;
     }
+    
+    
 
     /**
      *  <p>The Permission that was removed from the AssociateRole.</p>
      * @return permission
      */
-
-    public com.commercetools.api.models.associate_role.Permission getPermission() {
+    
+    
+    public com.commercetools.api.models.associate_role.Permission getPermission(){
         return this.permission;
     }
 
@@ -50,11 +61,10 @@ public class AssociateRolePermissionRemovedMessagePayloadBuilder
      * @return AssociateRolePermissionRemovedMessagePayload
      */
     public AssociateRolePermissionRemovedMessagePayload build() {
-        Objects.requireNonNull(permission,
-            AssociateRolePermissionRemovedMessagePayload.class + ": permission is missing");
+        Objects.requireNonNull(permission, AssociateRolePermissionRemovedMessagePayload.class + ": permission is missing");
         return new AssociateRolePermissionRemovedMessagePayloadImpl(permission);
     }
-
+    
     /**
      * builds AssociateRolePermissionRemovedMessagePayload without checking for non-null required values
      * @return AssociateRolePermissionRemovedMessagePayload
@@ -65,7 +75,7 @@ public class AssociateRolePermissionRemovedMessagePayloadBuilder
 
     /**
      * factory method for an instance of AssociateRolePermissionRemovedMessagePayloadBuilder
-     * @return builder
+     * @return builder 
      */
     public static AssociateRolePermissionRemovedMessagePayloadBuilder of() {
         return new AssociateRolePermissionRemovedMessagePayloadBuilder();
@@ -76,8 +86,7 @@ public class AssociateRolePermissionRemovedMessagePayloadBuilder
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static AssociateRolePermissionRemovedMessagePayloadBuilder of(
-            final AssociateRolePermissionRemovedMessagePayload template) {
+    public static AssociateRolePermissionRemovedMessagePayloadBuilder of(final AssociateRolePermissionRemovedMessagePayload template) {
         AssociateRolePermissionRemovedMessagePayloadBuilder builder = new AssociateRolePermissionRemovedMessagePayloadBuilder();
         builder.permission = template.getPermission();
         return builder;

@@ -1,11 +1,11 @@
-
 package com.commercetools.importapi.models.common;
 
+import com.commercetools.importapi.models.common.AssetDimensions;
+import com.commercetools.importapi.models.common.Image;
+import javax.annotation.Nullable;
 import java.util.*;
 import java.util.function.Function;
-
-import javax.annotation.Nullable;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -20,100 +20,117 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .dimensions(dimensionsBuilder -> dimensionsBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 public class ImageBuilder implements Builder<Image> {
 
+    
+    
     private String url;
-
+    
+    
+    
     private com.commercetools.importapi.models.common.AssetDimensions dimensions;
-
+    
+    
     @Nullable
     private String label;
 
+    
     /**
      *  <p>URL of the image in its original size. The URL must be unique within a single variant. It can be used to obtain the image in different sizes.</p>
      * @param url value to be set
      * @return Builder
      */
-
-    public ImageBuilder url(final String url) {
+    
+    public ImageBuilder url( final String url) {
         this.url = url;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Dimensions of the original image. This can be used by your application, for example, to determine whether the image is large enough to display a zoom view.</p>
      * @param builder function to build the dimensions value
      * @return Builder
      */
-
-    public ImageBuilder dimensions(
-            Function<com.commercetools.importapi.models.common.AssetDimensionsBuilder, com.commercetools.importapi.models.common.AssetDimensionsBuilder> builder) {
+    
+    public ImageBuilder dimensions(Function<com.commercetools.importapi.models.common.AssetDimensionsBuilder, com.commercetools.importapi.models.common.AssetDimensionsBuilder> builder) {
         this.dimensions = builder.apply(com.commercetools.importapi.models.common.AssetDimensionsBuilder.of()).build();
         return this;
     }
-
+    
     /**
      *  <p>Dimensions of the original image. This can be used by your application, for example, to determine whether the image is large enough to display a zoom view.</p>
      * @param builder function to build the dimensions value
      * @return Builder
      */
-
-    public ImageBuilder withDimensions(
-            Function<com.commercetools.importapi.models.common.AssetDimensionsBuilder, com.commercetools.importapi.models.common.AssetDimensions> builder) {
+    
+    public ImageBuilder withDimensions(Function<com.commercetools.importapi.models.common.AssetDimensionsBuilder, com.commercetools.importapi.models.common.AssetDimensions> builder) {
         this.dimensions = builder.apply(com.commercetools.importapi.models.common.AssetDimensionsBuilder.of());
         return this;
     }
-
+                    
     /**
      *  <p>Dimensions of the original image. This can be used by your application, for example, to determine whether the image is large enough to display a zoom view.</p>
      * @param dimensions value to be set
      * @return Builder
      */
-
-    public ImageBuilder dimensions(final com.commercetools.importapi.models.common.AssetDimensions dimensions) {
+    
+    public ImageBuilder dimensions( final com.commercetools.importapi.models.common.AssetDimensions dimensions) {
         this.dimensions = dimensions;
         return this;
     }
-
+    
+    
+    
+    
     /**
      *  <p>Custom label that can be used, for example, as an image description.</p>
      * @param label value to be set
      * @return Builder
      */
-
+    
     public ImageBuilder label(@Nullable final String label) {
         this.label = label;
         return this;
     }
+    
+    
 
     /**
      *  <p>URL of the image in its original size. The URL must be unique within a single variant. It can be used to obtain the image in different sizes.</p>
      * @return url
      */
-
-    public String getUrl() {
+    
+    
+    public String getUrl(){
         return this.url;
     }
-
+    
     /**
      *  <p>Dimensions of the original image. This can be used by your application, for example, to determine whether the image is large enough to display a zoom view.</p>
      * @return dimensions
      */
-
-    public com.commercetools.importapi.models.common.AssetDimensions getDimensions() {
+    
+    
+    public com.commercetools.importapi.models.common.AssetDimensions getDimensions(){
         return this.dimensions;
     }
-
+    
     /**
      *  <p>Custom label that can be used, for example, as an image description.</p>
      * @return label
      */
-
+    
     @Nullable
-    public String getLabel() {
+    public String getLabel(){
         return this.label;
     }
 
@@ -126,7 +143,7 @@ public class ImageBuilder implements Builder<Image> {
         Objects.requireNonNull(dimensions, Image.class + ": dimensions is missing");
         return new ImageImpl(url, dimensions, label);
     }
-
+    
     /**
      * builds Image without checking for non-null required values
      * @return Image
@@ -137,7 +154,7 @@ public class ImageBuilder implements Builder<Image> {
 
     /**
      * factory method for an instance of ImageBuilder
-     * @return builder
+     * @return builder 
      */
     public static ImageBuilder of() {
         return new ImageBuilder();

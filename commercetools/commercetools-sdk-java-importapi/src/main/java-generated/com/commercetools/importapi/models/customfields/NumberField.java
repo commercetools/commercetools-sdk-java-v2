@@ -1,17 +1,20 @@
-
 package com.commercetools.importapi.models.customfields;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
+import com.commercetools.importapi.models.customfields.CustomField;
+import com.commercetools.importapi.models.customfields.NumberFieldImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  *  <p>A field with a number value.</p>
@@ -24,9 +27,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .value(0.3)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = NumberFieldImpl.class)
 public interface NumberField extends CustomField {
 
@@ -47,16 +53,18 @@ public interface NumberField extends CustomField {
      * set value
      * @param value value to be set
      */
-
+    
     public void setValue(final Double value);
+    
 
     /**
      * factory method
      * @return instance of NumberField
      */
-    public static NumberField of() {
+    public static NumberField of(){
         return new NumberFieldImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy NumberField
@@ -91,7 +99,7 @@ public interface NumberField extends CustomField {
     public static NumberFieldBuilder builder() {
         return NumberFieldBuilder.of();
     }
-
+    
     /**
      * create builder for NumberField instance
      * @param template instance with prefilled values for the builder
@@ -100,6 +108,7 @@ public interface NumberField extends CustomField {
     public static NumberFieldBuilder builder(final NumberField template) {
         return NumberFieldBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -110,7 +119,7 @@ public interface NumberField extends CustomField {
     default <T> T withNumberField(Function<NumberField, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

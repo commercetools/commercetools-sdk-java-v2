@@ -1,20 +1,22 @@
-
 package com.commercetools.history.models.change;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
+import com.commercetools.history.models.change.Change;
 import com.commercetools.history.models.common.CustomFields;
 import com.commercetools.history.models.common.LocalizedString;
+import com.commercetools.history.models.change.SetOrderLineItemCustomTypeChangeImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * SetOrderLineItemCustomTypeChange
@@ -31,9 +33,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .previousValue(previousValueBuilder -> previousValueBuilder)
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = SetOrderLineItemCustomTypeChangeImpl.class)
 public interface SetOrderLineItemCustomTypeChange extends Change {
 
@@ -49,7 +54,6 @@ public interface SetOrderLineItemCustomTypeChange extends Change {
     @NotNull
     @JsonProperty("type")
     public String getType();
-
     /**
      *  <p>Update action for <code>setLineItemCustomType</code></p>
      * @return change
@@ -57,7 +61,6 @@ public interface SetOrderLineItemCustomTypeChange extends Change {
     @NotNull
     @JsonProperty("change")
     public String getChange();
-
     /**
      *
      * @return lineItem
@@ -66,7 +69,6 @@ public interface SetOrderLineItemCustomTypeChange extends Change {
     @Valid
     @JsonProperty("lineItem")
     public LocalizedString getLineItem();
-
     /**
      *
      * @return variant
@@ -74,7 +76,6 @@ public interface SetOrderLineItemCustomTypeChange extends Change {
     @NotNull
     @JsonProperty("variant")
     public String getVariant();
-
     /**
      *
      * @return nextValue
@@ -83,7 +84,6 @@ public interface SetOrderLineItemCustomTypeChange extends Change {
     @Valid
     @JsonProperty("nextValue")
     public CustomFields getNextValue();
-
     /**
      *
      * @return previousValue
@@ -97,44 +97,50 @@ public interface SetOrderLineItemCustomTypeChange extends Change {
      *  <p>Update action for <code>setLineItemCustomType</code></p>
      * @param change value to be set
      */
-
+    
     public void setChange(final String change);
-
+    
+    
     /**
      * set lineItem
      * @param lineItem value to be set
      */
-
+    
     public void setLineItem(final LocalizedString lineItem);
-
+    
+    
     /**
      * set variant
      * @param variant value to be set
      */
-
+    
     public void setVariant(final String variant);
-
+    
+    
     /**
      * set nextValue
      * @param nextValue value to be set
      */
-
+    
     public void setNextValue(final CustomFields nextValue);
-
+    
+    
     /**
      * set previousValue
      * @param previousValue value to be set
      */
-
+    
     public void setPreviousValue(final CustomFields previousValue);
+    
 
     /**
      * factory method
      * @return instance of SetOrderLineItemCustomTypeChange
      */
-    public static SetOrderLineItemCustomTypeChange of() {
+    public static SetOrderLineItemCustomTypeChange of(){
         return new SetOrderLineItemCustomTypeChangeImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy SetOrderLineItemCustomTypeChange
@@ -166,8 +172,7 @@ public interface SetOrderLineItemCustomTypeChange extends Change {
         instance.setLineItem(com.commercetools.history.models.common.LocalizedString.deepCopy(template.getLineItem()));
         instance.setVariant(template.getVariant());
         instance.setNextValue(com.commercetools.history.models.common.CustomFields.deepCopy(template.getNextValue()));
-        instance.setPreviousValue(
-            com.commercetools.history.models.common.CustomFields.deepCopy(template.getPreviousValue()));
+        instance.setPreviousValue(com.commercetools.history.models.common.CustomFields.deepCopy(template.getPreviousValue()));
         return instance;
     }
 
@@ -178,7 +183,7 @@ public interface SetOrderLineItemCustomTypeChange extends Change {
     public static SetOrderLineItemCustomTypeChangeBuilder builder() {
         return SetOrderLineItemCustomTypeChangeBuilder.of();
     }
-
+    
     /**
      * create builder for SetOrderLineItemCustomTypeChange instance
      * @param template instance with prefilled values for the builder
@@ -187,6 +192,7 @@ public interface SetOrderLineItemCustomTypeChange extends Change {
     public static SetOrderLineItemCustomTypeChangeBuilder builder(final SetOrderLineItemCustomTypeChange template) {
         return SetOrderLineItemCustomTypeChangeBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -197,7 +203,7 @@ public interface SetOrderLineItemCustomTypeChange extends Change {
     default <T> T withSetOrderLineItemCustomTypeChange(Function<SetOrderLineItemCustomTypeChange, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference

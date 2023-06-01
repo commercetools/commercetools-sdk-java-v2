@@ -1,18 +1,21 @@
-
 package com.commercetools.api.models.product_discount;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.annotation.Nullable;
-import javax.validation.Valid;
-
 import com.commercetools.api.models.common.LocalizedString;
+import com.commercetools.api.models.product_discount.ProductDiscountUpdateAction;
+import com.commercetools.api.models.product_discount.ProductDiscountSetDescriptionActionImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.io.IOException;
 
 /**
  * ProductDiscountSetDescriptionAction
@@ -24,9 +27,12 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     ProductDiscountSetDescriptionAction productDiscountSetDescriptionAction = ProductDiscountSetDescriptionAction.builder()
  *             .build()
  * </code></pre>
- * </div>
+ * </div> 
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator",
+    comments = "https://github.com/commercetools/rmf-codegen"
+)
 @JsonDeserialize(as = ProductDiscountSetDescriptionActionImpl.class)
 public interface ProductDiscountSetDescriptionAction extends ProductDiscountUpdateAction {
 
@@ -47,16 +53,18 @@ public interface ProductDiscountSetDescriptionAction extends ProductDiscountUpda
      *  <p>Value to set. If empty, any existing value will be removed.</p>
      * @param description value to be set
      */
-
+    
     public void setDescription(final LocalizedString description);
+    
 
     /**
      * factory method
      * @return instance of ProductDiscountSetDescriptionAction
      */
-    public static ProductDiscountSetDescriptionAction of() {
+    public static ProductDiscountSetDescriptionAction of(){
         return new ProductDiscountSetDescriptionActionImpl();
     }
+    
 
     /**
      * factory method to create a shallow copy ProductDiscountSetDescriptionAction
@@ -75,14 +83,12 @@ public interface ProductDiscountSetDescriptionAction extends ProductDiscountUpda
      * @return copy instance
      */
     @Nullable
-    public static ProductDiscountSetDescriptionAction deepCopy(
-            @Nullable final ProductDiscountSetDescriptionAction template) {
+    public static ProductDiscountSetDescriptionAction deepCopy(@Nullable final ProductDiscountSetDescriptionAction template) {
         if (template == null) {
             return null;
         }
         ProductDiscountSetDescriptionActionImpl instance = new ProductDiscountSetDescriptionActionImpl();
-        instance.setDescription(
-            com.commercetools.api.models.common.LocalizedString.deepCopy(template.getDescription()));
+        instance.setDescription(com.commercetools.api.models.common.LocalizedString.deepCopy(template.getDescription()));
         return instance;
     }
 
@@ -93,16 +99,16 @@ public interface ProductDiscountSetDescriptionAction extends ProductDiscountUpda
     public static ProductDiscountSetDescriptionActionBuilder builder() {
         return ProductDiscountSetDescriptionActionBuilder.of();
     }
-
+    
     /**
      * create builder for ProductDiscountSetDescriptionAction instance
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static ProductDiscountSetDescriptionActionBuilder builder(
-            final ProductDiscountSetDescriptionAction template) {
+    public static ProductDiscountSetDescriptionActionBuilder builder(final ProductDiscountSetDescriptionAction template) {
         return ProductDiscountSetDescriptionActionBuilder.of(template);
     }
+
 
     /**
      * accessor map function
@@ -113,7 +119,7 @@ public interface ProductDiscountSetDescriptionAction extends ProductDiscountUpda
     default <T> T withProductDiscountSetDescriptionAction(Function<ProductDiscountSetDescriptionAction, T> helper) {
         return helper.apply(this);
     }
-
+    
     /**
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
